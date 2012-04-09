@@ -1,0 +1,13 @@
+const string TOPIC_MOD_FERCO_SCHATTI	=	"Die Verwandlungsmagier";
+const string TOPIC_MOD_FERCO_WANZE	=	"Verwandlung Fleischwanze";
+const string TOPIC_MOD_FERCO_GOBLIN	=	"Goblinplage";
+const string TOPIC_MOD_FAICE_HARPIE	=	"Harpien";
+const string TOPIC_MOD_FERCO_MUD	=	"Mud";
+const string TOPIC_MOD_FAICE_HEILUNG	=	"Schnelle Heilung";
+const string TOPIC_MOD_ANOR_NICK	=	"Der kopflose Nick";
+const string TOPIC_MOD_FAICE_GIFT	=	"Gift";
+const string TOPIC_MOD_VMG_AUFNAHME	=	"Aufnahme Verwandlungsmagier";
+const string TOPIC_MOD_PER_ASKO	=	"Paket für Asko";
+const string TOPIC_MOD_DEVER_DEAN	=	"Devers Frage";
+const string TOPIC_MOD_TURENDIL_GOLEM	=	"Teleport";
+const string TOPIC_MOD_FAICE_PRUEFUNG	=	"Die Prüfung";

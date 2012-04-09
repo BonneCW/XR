@@ -1,0 +1,192 @@
+// Baltram
+
+var int Mod_Anschlagtafel_Khorinis_Baltram;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Cooldown;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Gold;
+
+var int	Mod_Anschlagtafel_Khorinis_Baltram_Milch;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Kaese;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Brot;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Wasser;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Bier;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Wacholder;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Wein;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Wurst;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Grog;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Rum;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Kuerbis;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Melone;
+var int Mod_Anschlagtafel_Khorinis_Baltram_Fleisch;
+
+// Bosper
+
+var int Mod_Anschlagtafel_Khorinis_Bosper;
+var int Mod_Anschlagtafel_Khorinis_Bosper_Cooldown;
+var int Mod_Anschlagtafel_Khorinis_Bosper_Gold;
+
+var int	Mod_Anschlagtafel_Khorinis_Bosper_Wolffell;
+var int Mod_Anschlagtafel_Khorinis_Bosper_Zaehne;
+var int Mod_Anschlagtafel_Khorinis_Bosper_Krallen;
+var int Mod_Anschlagtafel_Khorinis_Bosper_Wargfell;
+var int Mod_Anschlagtafel_Khorinis_Bosper_Schattenlaeuferfell;
+var int Mod_Anschlagtafel_Khorinis_Bosper_Reptilienhaut;
+var int Mod_Anschlagtafel_Khorinis_Bosper_Trollfell;
+var int Mod_Anschlagtafel_Khorinis_Bosper_Minecrawlerplatte;
+var int Mod_Anschlagtafel_Khorinis_Bosper_Schattenlaeuferhorn;
+var int Mod_Anschlagtafel_Khorinis_Bosper_Ast;
+
+// Constantino
+
+var int Mod_Anschlagtafel_Khorinis_Constantino;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Cooldown;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Gold;
+
+var int	Mod_Anschlagtafel_Khorinis_Constantino_Feuernessel;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Blauflieder;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Flasche;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Heilkraut;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Heilwurzel;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Feuerkraut;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Feuerwurzel;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Feldknoeterich;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Buddlerfleisch;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Dunkelpilz;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Fliegenpilz;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Sumpfkraut;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Heilknospe;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Unkraut;
+var int Mod_Anschlagtafel_Khorinis_Constantino_Heilpflanze;
+
+// Hakon
+
+var int Mod_Anschlagtafel_Khorinis_Hakon;
+var int Mod_Anschlagtafel_Khorinis_Hakon_Cooldown;
+var int Mod_Anschlagtafel_Khorinis_Hakon_Gold;
+
+var int	Mod_Anschlagtafel_Khorinis_Hakon_MilizKurzchwert;
+var int Mod_Anschlagtafel_Khorinis_Hakon_Degen;
+var int Mod_Anschlagtafel_Khorinis_Hakon_Kurzschwert;
+var int Mod_Anschlagtafel_Khorinis_Hakon_AmulettEichenhaut;
+var int Mod_Anschlagtafel_Khorinis_Hakon_RingEisenhaut;
+var int Mod_Anschlagtafel_Khorinis_Hakon_RingKraft;
+var int Mod_Anschlagtafel_Khorinis_Hakon_Schwert;
+
+// Harad
+
+var int Mod_Anschlagtafel_Khorinis_Harad;
+var int Mod_Anschlagtafel_Khorinis_Harad_Cooldown;
+var int Mod_Anschlagtafel_Khorinis_Harad_Gold;
+
+var int	Mod_Anschlagtafel_Khorinis_Harad_RostigesSchwert;
+var int Mod_Anschlagtafel_Khorinis_Harad_RostigerZweihaender;
+var int Mod_Anschlagtafel_Khorinis_Harad_Rohstahl;
+var int Mod_Anschlagtafel_Khorinis_Harad_Goldbrocken;
+var int Mod_Anschlagtafel_Khorinis_Harad_Erzbrocken;
+var int Mod_Anschlagtafel_Khorinis_Harad_Schmiedehammer;
+var int Mod_Anschlagtafel_Khorinis_Harad_Zange;
+var int Mod_Anschlagtafel_Khorinis_Harad_Schuerhaken;
+
+// Ignaz
+
+var int Mod_Anschlagtafel_Khorinis_Ignaz;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Cooldown;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Gold;
+
+var int	Mod_Anschlagtafel_Khorinis_Ignaz_Pech;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Kohle;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Quartz;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Bergkristall;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Papier;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Blutfliegenstachel;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Minecrawlerzangen;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Spinnenzangen;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Feldraeuberzangen;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Goblinknochen;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Skelettknochen;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Schlafzauber;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Vergessenszauber;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Angstzauber;
+var int Mod_Anschlagtafel_Khorinis_Ignaz_Schwefel;
+
+// Jora
+
+var int Mod_Anschlagtafel_Khorinis_Jora;
+var int Mod_Anschlagtafel_Khorinis_Jora_Cooldown;
+var int Mod_Anschlagtafel_Khorinis_Jora_Gold;
+
+var int	Mod_Anschlagtafel_Khorinis_Jora_Bolzen;
+var int Mod_Anschlagtafel_Khorinis_Jora_Kurzbogen;
+var int Mod_Anschlagtafel_Khorinis_Jora_Weidenbogen;
+var int Mod_Anschlagtafel_Khorinis_Jora_Fackel;
+var int Mod_Anschlagtafel_Khorinis_Jora_Spitzhacke;
+var int Mod_Anschlagtafel_Khorinis_Jora_Laute;
+var int Mod_Anschlagtafel_Khorinis_Jora_Harnischamulett;
+var int Mod_Anschlagtafel_Khorinis_Jora_Klosterwein;
+var int Mod_Anschlagtafel_Khorinis_Jora_Schafswurst;
+var int Mod_Anschlagtafel_Khorinis_Jora_Pfeil;
+
+// Lobart
+
+var int Mod_Anschlagtafel_Khorinis_Lobart;
+var int Mod_Anschlagtafel_Khorinis_Lobart_Cooldown;
+var int Mod_Anschlagtafel_Khorinis_Lobart_Gold;
+
+var int	Mod_Anschlagtafel_Khorinis_Lobart_Sense;
+var int Mod_Anschlagtafel_Khorinis_Lobart_KleineSense;
+var int Mod_Anschlagtafel_Khorinis_Lobart_Rasiermesser;
+var int Mod_Anschlagtafel_Khorinis_Lobart_Pfanne;
+var int Mod_Anschlagtafel_Khorinis_Lobart_Beil;
+var int Mod_Anschlagtafel_Khorinis_Lobart_Kerze;
+var int Mod_Anschlagtafel_Khorinis_Lobart_Harke;
+var int Mod_Anschlagtafel_Khorinis_Lobart_Kochloeffel;
+var int Mod_Anschlagtafel_Khorinis_Lobart_Sichel;
+
+// Lutero
+
+var int Mod_Anschlagtafel_Khorinis_Lutero;
+var int Mod_Anschlagtafel_Khorinis_Lutero_Cooldown;
+var int Mod_Anschlagtafel_Khorinis_Lutero_Gold;
+
+var int	Mod_Anschlagtafel_Khorinis_Lutero_Silberkelch;
+var int Mod_Anschlagtafel_Khorinis_Lutero_Silberteller;
+var int Mod_Anschlagtafel_Khorinis_Lutero_SilbernerKerzenstaender;
+var int Mod_Anschlagtafel_Khorinis_Lutero_Goldkelch;
+var int Mod_Anschlagtafel_Khorinis_Lutero_Trollhauer;
+var int Mod_Anschlagtafel_Khorinis_Lutero_Drachensnapperhorn;
+var int Mod_Anschlagtafel_Khorinis_Lutero_Sumpfhaizahn;
+var int Mod_Anschlagtafel_Khorinis_Lutero_Sumpfhaihaut;
+var int Mod_Anschlagtafel_Khorinis_Lutero_FlammenAmulett;
+var int Mod_Anschlagtafel_Khorinis_Lutero_Runenstein;
+var int Mod_Anschlagtafel_Khorinis_Lutero_Steingolemherz;
+var int Mod_Anschlagtafel_Khorinis_Lutero_Daemonenherz;
+var int Mod_Anschlagtafel_Khorinis_Lutero_Goldring;
+
+// Thorben
+
+var int Mod_Anschlagtafel_Khorinis_Thorben;
+var int Mod_Anschlagtafel_Khorinis_Thorben_Cooldown;
+var int Mod_Anschlagtafel_Khorinis_Thorben_Gold;
+
+var int	Mod_Anschlagtafel_Khorinis_Thorben_Ast;
+var int Mod_Anschlagtafel_Khorinis_Thorben_Beil;
+var int Mod_Anschlagtafel_Khorinis_Thorben_Hammer;
+var int Mod_Anschlagtafel_Khorinis_Thorben_SchwererAst;
+var int Mod_Anschlagtafel_Khorinis_Thorben_Dolch;
+var int Mod_Anschlagtafel_Khorinis_Thorben_Besen;
+var int Mod_Anschlagtafel_Khorinis_Thorben_Buerste;
+var int Mod_Anschlagtafel_Khorinis_Thorben_Saege;
+
+// Zuris
+
+var int Mod_Anschlagtafel_Khorinis_Zuris;
+var int Mod_Anschlagtafel_Khorinis_Zuris_Cooldown;
+var int Mod_Anschlagtafel_Khorinis_Zuris_Gold;
+
+var int	Mod_Anschlagtafel_Khorinis_Zuris_Manaessenz;
+var int Mod_Anschlagtafel_Khorinis_Zuris_ManaExtrakt;
+var int Mod_Anschlagtafel_Khorinis_Zuris_HPExtrakt;
+var int Mod_Anschlagtafel_Khorinis_Zuris_HPElixier;
+var int Mod_Anschlagtafel_Khorinis_Zuris_ManaElixier;
+var int Mod_Anschlagtafel_Khorinis_Zuris_Feuerball;
+var int Mod_Anschlagtafel_Khorinis_Zuris_Feuerpfeil;
+var int Mod_Anschlagtafel_Khorinis_Zuris_HPEssenz;

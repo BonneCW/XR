@@ -1,0 +1,27 @@
+const string TOPIC_MOD_SÖLDNER	=	"Aufnahme Söldner";
+const string TOPIC_MOD_TORLOFSPIONAGE	=	"Spionieren bei den Paladinen";
+const string TOPIC_MOD_TORLOF_NEUERANWÄRTER	=	"Ein neuer Anwärter";
+const string TOPIC_MOD_SLD_LEFTYBAUERN	=	"Bauern verprügeln";
+const string TOPIC_MOD_SLD_RUFUS	=	"Der flüchtige Bauer";
+const string TOPIC_MOD_SLD_SPY	=	"Spionieren im Alten Lager";
+const string TOPIC_MOD_SLD_PATRICK	=	"Training bei Patrick";
+const string TOPIC_MOD_SLD_FESTER	=	"Jagd mit Fester";
+const string TOPIC_MOD_SLD_ENGARDO	=	"Bote für Engardo";
+const string TOPIC_MOD_SLD_BULLCO	=	"Frauenraub";
+const string TOPIC_MOD_SLD_ORKJAEGER	=	"Aufnahme Orkjäger";
+const string TOPIC_MOD_SLD_JEREMIAHKRAUT	=	"Kraut für den Alchemisten";
+const string TOPIC_MOD_SLD_JEREMIAHLURKER	=	"Den Lurkern keine Ruhe lassen ...";
+const string TOPIC_MOD_SLD_FRIEDHOF	=	"Ein Ort ewiger Ruhe";
+const string TOPIC_MOD_NL_SIEGELBUCH	=	"Gebunden und verborgen";
+const string TOPIC_MOD_NL_DRACHEN	=	"Kerker und Drachen";
+const string TOPIC_MOD_NL_KAKOS	=	"Gesöff für den Riesen";
+const string TOPIC_MOD_NL_CRAWLER	=	"Ursprung der stinkenden Crawler";
+const string TOPIC_MOD_NL_DRAGON	=	"Den Drachen zum Reden bringen";
+const string TOPIC_MOD_NL_MOORHEXE	=	"Was sich nicht jedem offenbart ...";
+const string TOPIC_MOD_NL_STAB	=	"Stab gegen Spruchrollen";
+const string TOPIC_MOD_NL_GORN	=	"Abenteuer mit Gorn im dunklen Wald";
+const string TOPIC_MOD_NL_ERZKISTE	=	"Kiste Erz für Thofeistos";
+const string TOPIC_MOD_NL_KRISTALL	=	"Bote des Kristalles";
+const string TOPIC_MOD_NL_PLAGE	=	"Morastwürmer und Sumpfkrabben";
+
+const string TOPIC_MOD_NL_DJGEQUIP	=	"Ausrüstung eines Drachenjägers";

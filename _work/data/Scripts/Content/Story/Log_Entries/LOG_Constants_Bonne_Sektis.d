@@ -1,0 +1,12 @@
+const string TOPIC_MOD_SEKTE_AUFNAHME	=	"Aufnahme Bruderschaft";
+const string TOPIC_MOD_SEKTE_DEALER	=	"Sumpfkrautlieferung";
+const string TOPIC_MOD_SEKTE_FREUDENSPENDER	=	"Das Geheimnis von Freudenspender";
+const string TOPIC_MOD_SEKTE_ENTSCHEIDUNG	=	"Eine schicksalhafte Entscheidung";
+const string TOPIC_MOD_SEKTE_KING	=	"Königlicher Spezialauftrag";
+const string TOPIC_MOD_SL_FLUFFY	=	"Fluffy ernüchtern";
+const string TOPIC_MOD_SL_LOCHGRAEBER	=	"Den Lochgräber übertrumpfen";
+const string TOPIC_MOD_SL_GELIEBTE	=	"Die Geliebte verführen";
+const string TOPIC_MOD_SL_BLIND	=	"Freudenspender macht blind";
+const string TOPIC_MOD_SL_BRUNNEN	=	"Den Freudenspender-Brunnen mit Wasser füllen";
+const string TOPIC_MOD_SL_LEICHENGASE	=	"Leichengase";
+const string TOPIC_MOD_SL_SCHMIEDEFEUERN	=	"Eine Hüterklinge";

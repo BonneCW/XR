@@ -1,0 +1,19 @@
+var int HAUBTEINGANG;
+
+// Der Haubteingang.
+// 
+
+
+FUNC VOID HAUBTEINGANGFUNK ()
+{
+	if (HAUBTEINGANG ==  FALSE)
+	{
+	        Wld_SendTrigger( "HALLE1_TOR1" );
+
+		PODESTSCHALTER3 = TRUE;
+		PODESTSCHALTER2 = TRUE;
+
+		PODESTSCHALTERSUCSES = TRUE;
+		Wld_InsertNpc 	(DUNGEONFireGolem, 	"FEUERGOLEM");
+	};
+};

@@ -1,0 +1,11 @@
+const string TOPIC_MOD_WASSERMAGIER	=	"Aufnahme Ring des Wassers";
+const string TOPIC_MOD_VERMISSTE	=	"Die Vermissten";
+const string TOPIC_MOD_ADANOS_BOEDEN	=	"Reinigung der Böden";
+const string TOPIC_MOD_ADANOS_NOVIZE	=	"Der verfluchte Novize";
+const string TOPIC_MOD_ADANOS_UNHEIL	=	"Großes Unheil";
+const string TOPIC_MOD_ADANOS_WASILI	=	"Wasilis Verbannung";
+const string TOPIC_MOD_ADANOS_ETHAN	=	"Merkwürdige Höhlengeräusche";
+const string TOPIC_MOD_ADANOS_PLAGE	=	"Eine Plage kommt selten allein";
+const string TOPIC_MOD_ADANOS_DRECKSVIECHER	=	"Drecksviecher";
+const string TOPIC_MOD_ADANOS_RASEND	=	"Rasend";
+const string TOPIC_MOD_JOE_WASSERSNAPPER	=	"Behüter der Schöpfung";

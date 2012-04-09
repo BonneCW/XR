@@ -1,0 +1,31 @@
+// Teleport-Obelisk
+
+var int Mod_TeleportOldcamp;
+var int Mod_TeleportFarm;
+var int Mod_TeleportMonastery;
+var int Mod_TeleportNewcamp;
+var int Mod_TeleportPassOW;
+var int Mod_TeleportPassNW;
+var int Mod_TeleportSonnenkreis;
+var int Mod_TeleportPsicamp;
+var int Mod_TeleportBergfestung;
+var int Mod_TeleportSeaport;
+var int Mod_TeleportKlosterruine;
+var int Mod_TeleportTaverne;
+var int Mod_TeleportXardas;
+var int Mod_TeleportKhorata;
+var int Mod_TeleportOWDemonTower;
+var int Mod_TeleportRELBauernhof;
+var int Mod_TeleportRELPass;
+var int Mod_TeleportRELRaeuber;
+var int Mod_TeleportRELSee;
+var int Mod_TeleportRELHofstaat;
+var int Mod_TeleportRELMoor;
+var int Mod_TeleportWaldis;
+var int Mod_TeleportToPatherion;
+var int Mod_TeleportFromPatherion;
+var int Mod_TeleportPatherionKapelle;
+var int Mod_TeleportPatherionKloster;
+var int Mod_TeleportBanditenlager;
+var int Mod_TeleportGelato;
+var int Mod_TeleportObelisk_Funzt;

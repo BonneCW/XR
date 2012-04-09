@@ -1,0 +1,56 @@
+// Nahkampf - AI
+// Nahkampf - AI
+INSTANCE FA_ENEMY_PREHIT_57 (C_FightAI)
+{
+	move[0] = MOVE_ATTACK;
+};
+
+INSTANCE FA_ENEMY_STORMPREHIT_57 (C_FightAI)
+{
+	move[0] = MOVE_ATTACK;
+};
+
+INSTANCE FA_MY_W_RUNTO_57 (C_FightAI)
+{
+	move[0] = MOVE_ATTACK;
+};
+
+INSTANCE FA_MY_W_STRAFE_57 (C_FightAI)
+{
+	move[0] = MOVE_ATTACK;
+};
+
+INSTANCE FA_MY_W_FOCUS_57 (C_FightAI)
+{
+	move[0] = MOVE_ATTACK;
+};
+
+INSTANCE FA_MY_W_NOFOCUS_57 (C_FightAI)
+{
+	move[0] = MOVE_ATTACK;
+};
+
+INSTANCE FA_MY_G_RUNTO_57 (C_FightAI)
+{
+	move[0] = MOVE_ATTACK;
+};
+
+INSTANCE FA_MY_G_STRAFE_57 (C_FightAI)
+{
+	move[0] = MOVE_ATTACK;
+};
+
+INSTANCE FA_MY_G_FOCUS_57 (C_FightAI)
+{
+	move[0] = MOVE_ATTACK;
+};
+
+INSTANCE FA_MY_FK_FOCUS_57 (C_FightAI)
+{
+	move[0] = MOVE_ATTACK;
+};
+
+INSTANCE FA_MY_G_FK_NOFOCUS_57 (C_FightAI)
+{
+	move[0] = MOVE_ATTACK;
+};

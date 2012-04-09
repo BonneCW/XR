@@ -1,0 +1,26 @@
+// ******************************************************************
+// C_NpcIsUndead
+// -------------
+// checkt ob der übergebene NSC ein untoter ist
+// ******************************************************************
+
+func int C_NpcIsUndead(var C_NPC slf)
+{
+     if (slf.guild == GIL_GOBBO_SKELETON)
+     || (slf.guild == GIL_SUMMONED_GOBBO_SKELETON)
+     || (slf.guild == GIL_SKELETON)
+     || (slf.guild == GIL_SUMMONED_SKELETON)
+     || (slf.guild == GIL_SKELETON_MAGE)
+     || (slf.guild == GIL_ZOMBIE)
+     || (slf.guild == GIL_SHADOWBEAST_SKELETON)
+     || (slf.guild == GIL_UNDEADORC)
+     || (slf.npctype == Npctype_UNTOTERNOVIZE)
+     || (slf.npctype == Npctype_UNTOTERMAGIER)
+     //|| (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_UNDEAD) // wegen Untote vernichten
+     {
+     	return TRUE;
+     };
+     
+     return FALSE;
+};
+

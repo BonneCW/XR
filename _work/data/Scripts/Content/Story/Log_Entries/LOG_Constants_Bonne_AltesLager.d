@@ -1,0 +1,17 @@
+const string TOPIC_MOD_ALTESLAGER	=	"Altes Lager";
+const string TOPIC_MOD_PDV	=	"Prüfung des Vertrauens";
+const string TOPIC_MOD_AL_ARENA	=	"Die Arena";
+const string TOPIC_MOD_AL_ORIK	=	"Entführung aus dem Neuen Lager";
+const string TOPIC_MOD_AL_SCHMUGGLER	=	"Die Schmuggler";
+const string TOPIC_MOD_AL_BOTSCHAFTER	=	"Tod des Botschafters";
+const string TOPIC_MOD_AL_Karte	=	"Diebstahl von Bartholo";
+const string TOPIC_MOD_AL_KillMission	=	"Heimlicher Mord";
+const string TOPIC_MOD_AL_WhereAlissandro	=	"Wo ist Alissandro?";
+const string TOPIC_MOD_AL_EROBERUNG	=	"Eroberung des alten Lagers";
+const string TOPIC_MOD_AL_AUSBREITUNGK	=	"Ausbreitung nach Khorinis";
+const string TOPIC_MOD_AL_MORGAHARD	=	"Morgahards Unschuld";
+const string TOPIC_MOD_AL_LAGERHAUS	=	"Lagerhaus am Hafen";
+const string TOPIC_MOD_AL_MINE	=	"Angebot an die Dämonenritter";
+const string TOPIC_MOD_AL_FLUCHT	=	"Flucht";
+const string TOPIC_MOD_AL_ERSTERSCHRITT	=	"Der erste Schritt";
+const string TOPIC_MOD_AL_LOCKVOGEL	=	"Der Lockvogel";

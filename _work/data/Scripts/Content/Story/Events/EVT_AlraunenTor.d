@@ -1,0 +1,4 @@
+FUNC VOID EVT_ALRAUNENTOR_SCRIPT_FUNC ()
+{
+	Mod_HQ_AlraunenTor = 1;
+};
