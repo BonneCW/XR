@@ -8735,7 +8735,7 @@ FUNC VOID INIT_Relendel()
 	{
 		Mod_Kimon_REL = 1;
 
-		//Wld_InsertNpc	(Mod_7771_FH_Kimon_REL, "TOT");
+		Wld_InsertNpc	(Mod_7771_FH_Kimon_REL, "TOT");
 	};
 
 	if (Mod_WM_UnheilFertig == 1)
