@@ -150,6 +150,36 @@ FUNC VOID Info_Mod_Rudolf_Kissen_Info()
 	AI_Output(self, hero, "Info_Mod_Rudolf_Kissen_09_05"); //Wenn du meinst ...
 };
 
+INSTANCE Info_Mod_Rudolf_Kimon (C_INFO)
+{
+	npc		= Mod_7338_OUT_Lebensmittelhaendler_REL;
+	nr		= 1;
+	condition	= Info_Mod_Rudolf_Kimon_Condition;
+	information	= Info_Mod_Rudolf_Kimon_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Hast du noch was anderes außer Lebensmitteln?";
+};
+
+FUNC INT Info_Mod_Rudolf_Kimon_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Rudolf_Hi))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Penner_Kimon))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Morpheus_Kimon))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Rudolf_Kimon_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Rudolf_Kimon_15_00"); //Hast du noch was anderes außer Lebensmitteln?
+	AI_Output(self, hero, "Info_Mod_Rudolf_Kimon_09_01"); //Eigentlich nichts.
+	AI_Output(hero, self, "Info_Mod_Rudolf_Kimon_15_02"); //Eigentlich? Vielleicht doch? Freudenspender vielleicht?
+	AI_Output(self, hero, "Info_Mod_Rudolf_Kimon_09_03"); //Ich wollte, ich hätte! Soll noch besser sein, als der Schnaps von der Erika.
+	AI_Output(hero, self, "Info_Mod_Rudolf_Kimon_15_04"); //War ja nur eine Frage. Nichts für ungut.
+};
+
 INSTANCE Info_Mod_Rudolf_Trade (C_INFO)
 {
 	npc		= Mod_7338_OUT_Lebensmittelhaendler_REL;

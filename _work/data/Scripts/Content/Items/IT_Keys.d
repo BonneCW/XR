@@ -110,6 +110,23 @@ INSTANCE ItKe_XeresKnast (C_Item)
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
+INSTANCE ItKe_PennerVaterFreudenspender (C_Item)
+{
+	name 				=	"Schlüssel";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	0;
+
+	value 				=	Value_Key_02;
+
+	visual 				=	"ItKe_Key_02.3ds";
+	material 			=	MAT_METAL;
+
+	description			= 	name;
+	TEXT[1]				=	"von Penners Vater";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
 INSTANCE ItKe_SekobScheune (C_Item)
 {
 	name 				=	"Schlüssel";

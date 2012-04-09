@@ -219,6 +219,36 @@ FUNC VOID Info_Mod_Daniel_Kissen_Info()
 	AI_Output(hero, self, "Info_Mod_Daniel_Kissen_15_04"); //Danke.
 };
 
+INSTANCE Info_Mod_Daniel_Kimon (C_INFO)
+{
+	npc		= Mod_7378_OUT_Daniel_REL;
+	nr		= 1;
+	condition	= Info_Mod_Daniel_Kimon_Condition;
+	information	= Info_Mod_Daniel_Kimon_Info;
+	permanent	= 0;
+	important	= 0;
+	description 	= "Du hast allerlei Tränke und Pflanzen.";
+};                       
+
+FUNC INT Info_Mod_Daniel_Kimon_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Daniel_Hi))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Penner_Kimon))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Morpheus_Kimon))
+	{
+		return TRUE;
+	};
+};
+
+FUNC VOID Info_Mod_Daniel_Kimon_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Daniel_Kimon_15_00"); //Du hast allerlei Tränke und Pflanzen. Da ist sicher auch Freudenspender dabei.
+	AI_Output(self, hero, "Info_Mod_Daniel_Kimon_11_01"); //Da denkst du falsch. Ich führe nur, was ehrliche Alchemie herstellt. Nicht dieses monströse Gepansche. Da musst du schon zu den Hofstaatlern gehen.
+	AI_Output(hero, self, "Info_Mod_Daniel_Kimon_15_02"); //Da komme ich nicht rein.
+	AI_Output(self, hero, "Info_Mod_Daniel_Kimon_11_03"); //Ist auch gut so. Ich kann dir jedenfalls nicht helfen.
+	AI_Output(hero, self, "Info_Mod_Daniel_Kimon_15_04"); //Hätte ja sein können. Bis ein andermal.
+};
+
 INSTANCE Info_Mod_Daniel_Freudenspender (C_INFO)
 {
 	npc		= Mod_7378_OUT_Daniel_REL;

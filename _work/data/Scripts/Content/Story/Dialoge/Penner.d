@@ -202,6 +202,96 @@ FUNC VOID Info_Mod_Penner_Infos_A()
 	Info_Mod_Penner_Infos_Choices();
 };
 
+INSTANCE Info_Mod_Penner_Kimon (C_INFO)
+{
+	npc		= Mod_7540_OUT_Penner_REL;
+	nr		= 1;
+	condition	= Info_Mod_Penner_Kimon_Condition;
+	information	= Info_Mod_Penner_Kimon_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Hallo! Ich brauche eine Information.";
+};
+
+FUNC INT Info_Mod_Penner_Kimon_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Kimon_REL_Freudenspender))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Penner_Kimon_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Penner_Kimon_15_00"); //Hallo! Ich brauche eine Information.
+	AI_Output(self, hero, "Info_Mod_Penner_Kimon_03_01"); //Dafür bin ich ja da. Was willst du wissen?
+	AI_Output(hero, self, "Info_Mod_Penner_Kimon_15_02"); //Ich suchen jemanden, der Freudenspender liefert. Du vielleicht?
+	AI_Output(self, hero, "Info_Mod_Penner_Kimon_03_03"); //Wo denkst du hin. Damit habe ich nichts zu tun. Und du wirst hier wohl keinen finden, der dir weiterhelfen kann.
+	AI_Output(hero, self, "Info_Mod_Penner_Kimon_15_04"); //Dann werde ich mich mal bei den Händlern umhören.
+};
+
+INSTANCE Info_Mod_Penner_Kimon2 (C_INFO)
+{
+	npc		= Mod_7540_OUT_Penner_REL;
+	nr		= 1;
+	condition	= Info_Mod_Penner_Kimon2_Condition;
+	information	= Info_Mod_Penner_Kimon2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich schon wieder. Habe nichts gefunden.";
+};
+
+FUNC INT Info_Mod_Penner_Kimon2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Morpheus_Kimon))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Penner_Kimon2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Penner_Kimon2_15_00"); //Ich schon wieder. Habe nichts gefunden. Aber der Morpheus behauptet, du wüsstest was.
+	AI_Output(self, hero, "Info_Mod_Penner_Kimon2_03_01"); //So, sagt er? Hmm, ich weiß nicht ...
+	AI_Output(hero, self, "Info_Mod_Penner_Kimon2_15_02"); //Nun rück schon raus. Es soll dein Schaden nicht sein.
+	AI_Output(self, hero, "Info_Mod_Penner_Kimon2_03_03"); //Hmm ... Erstens: Das wird teuer für dich. Zweites: Du erzählst niemand ein Sterbeswörtchen, darüber, sonst verpfeife ich dich beim Gericht.
+	AI_Output(hero, self, "Info_Mod_Penner_Kimon2_15_04"); //Abgemacht. Ich halte dicht. Was willst du?
+	AI_Output(self, hero, "Info_Mod_Penner_Kimon2_03_05"); //Erst mal 300 Gold für die Info.
+};
+
+INSTANCE Info_Mod_Penner_Kimon3 (C_INFO)
+{
+	npc		= Mod_7540_OUT_Penner_REL;
+	nr		= 1;
+	condition	= Info_Mod_Penner_Kimon3_Condition;
+	information	= Info_Mod_Penner_Kimon3_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Was kannst du mir darüber sagen? (300 Gold gegeben)";
+};
+
+FUNC INT Info_Mod_Penner_Kimon3_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Penner_Kimon2))
+	&& (Npc_HasItems(hero, ItMi_Gold) >= 300)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Penner_Kimon3_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Penner_Kimon3_15_00"); //Was kannst du mir darüber sagen?
+	AI_Output(self, hero, "Info_Mod_Penner_Kimon3_03_01"); //Also Pass auf: Mein alter Herr lebt auch hier in Relendel. Aber er ist nicht mehr richtig im Kopf. Hat sich in eine Höhle zurückgezogen.
+	AI_Output(self, hero, "Info_Mod_Penner_Kimon3_03_02"); //Ich kann ihn heute nicht mehr  verstehn. Der redet nur noch in Rätsel. Vielleicht wirst du ja daraus schlau.
+	AI_Output(hero, self, "Info_Mod_Penner_Kimon3_15_03"); //Doch. Hört sich interessant an. Den besuche ich mal. Wo ist diese Höhle?
+	AI_Output(self, hero, "Info_Mod_Penner_Kimon3_03_04"); //Du kennst den Rundweg, wenn du zum Tal reinkommst?
+	AI_Output(hero, self, "Info_Mod_Penner_Kimon3_15_05"); //Ich denke ja.
+	AI_Output(self, hero, "Info_Mod_Penner_Kimon3_03_06"); //Also du gehst links rum, immer an der Felswand lang. Da kommst du zu der Höhle, wo mein Alter haust.
+
+	B_LogEntry	(TOPIC_MOD_KIMON_FREUDENSPENDER, "Der Penner erzählt von seinem Vater, der unverständlich redet. Er haust in einer Höhle in der Felswand links vom Taleingang. Mal schaun ...");
+};
+
 INSTANCE Info_Mod_Penner_Hi (C_INFO)
 {
 	npc		= Mod_7540_OUT_Penner_REL;

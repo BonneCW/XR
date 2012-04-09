@@ -36,11 +36,11 @@ FUNC VOID DAUERFUNC_01()
 		Offline_Modus = 1;
 	};
 
-	if (!Mod_RespawnFix)
+	if (Mod_RespawnFix < 1)
 	{
 		CleanRespawns();
 
-		Mod_RespawnFix = TRUE;
+		Mod_RespawnFix = 1;
 	};
 
 	LogState_PosY = 0;

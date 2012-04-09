@@ -187,6 +187,38 @@ FUNC VOID Info_Mod_Hans_Kissen_Info()
 	AI_Output(hero, self, "Info_Mod_Hans_Kissen_15_02"); //Moleratfett? Hmm ... Nein, das stinkt. Wiedersehen.
 };
 
+INSTANCE Info_Mod_Hans_Kimon (C_INFO)
+{
+	npc		= Mod_7377_OUT_Hans_REL;
+	nr		= 1;
+	condition	= Info_Mod_Hans_Kimon_Condition;
+	information	= Info_Mod_Hans_Kimon_Info;
+	permanent	= 0;
+	important	= 0;
+	description 	= "Wie geht es dir?";
+};                       
+
+FUNC INT Info_Mod_Hans_Kimon_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Hans_Hi))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Penner_Kimon))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Morpheus_Kimon))
+	{
+		return TRUE;
+	};
+};
+
+FUNC VOID Info_Mod_Hans_Kimon_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Hans_Kimon_15_00"); //Wie geht es dir?
+	AI_Output(self, hero, "Info_Mod_Hans_Kimon_06_01"); //Schlecht wie immer.
+	AI_Output(hero, self, "Info_Mod_Hans_Kimon_15_02"); //Dann solltest du mal den Freudenspender trinken.
+	AI_Output(self, hero, "Info_Mod_Hans_Kimon_06_03"); //Bei Adanos! Ich hasse das Zeug! Macht die Leute hier verrückt. Aber nicht mit mir.
+	AI_Output(hero, self, "Info_Mod_Hans_Kimon_15_04"); //Weißt du, wo ich welchen bekommen kann?
+	AI_Output(self, hero, "Info_Mod_Hans_Kimon_06_05"); //Nein. Und mach dich fort. Auf deine Ratschläge kann ich verzichten.
+	AI_Output(hero, self, "Info_Mod_Hans_Kimon_15_06"); //Entschuldigung.
+};
+
 INSTANCE Info_Mod_Hans_Theodorus (C_INFO)
 {
 	npc		= Mod_7377_OUT_Hans_REL;

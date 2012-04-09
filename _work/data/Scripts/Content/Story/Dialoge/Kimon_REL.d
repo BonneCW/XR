@@ -59,6 +59,44 @@ FUNC VOID Info_Mod_Kimon_REL_Freudenspender_Info()
 	B_LogEntry	(TOPIC_MOD_KIMON_FREUDENSPENDER, "Der Händler Kimon will drei Mal Freudenspender weiterverkaufen. Ich soll in Khorata einen Lieferanten finden. Ich glaube, der Penner ist die richtige Adresse.");
 };
 
+INSTANCE Info_Mod_Kimon_REL_Freudenspender2 (C_INFO)
+{
+	npc		= Mod_7771_FH_Kimon_REL;
+	nr		= 1;
+	condition	= Info_Mod_Kimon_REL_Freudenspender2_Condition;
+	information	= Info_Mod_Kimon_REL_Freudenspender2_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Kimon_REL_Freudenspender2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_PennerVater_Kimon2))
+	&& (Npc_HasItems(hero, ItMi_Freudenspender) >= 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Kimon_REL_Freudenspender2_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Kimon_REL_Freudenspender2_04_00"); //Hast du was erreicht?
+	AI_Output(hero, self, "Info_Mod_Kimon_REL_Freudenspender2_15_01"); //Aber ja. Nicht nur den Lieferant, sondern gleich die Ware. Hier.
+
+	B_GiveInvItems	(hero, self, ItMi_Freudenspender, 3);
+
+	AI_Output(self, hero, "Info_Mod_Kimon_REL_Freudenspender2_04_02"); //Phantastisch! Hattest du Auslagen?
+	AI_Output(hero, self, "Info_Mod_Kimon_REL_Freudenspender2_15_03"); //Ja, ungefähr 350 Gold.
+	AI_Output(self, hero, "Info_Mod_Kimon_REL_Freudenspender2_04_04"); //Hier, hast du zurück und noch mal 350 für deine Mühe.
+	AI_Output(hero, self, "Info_Mod_Kimon_REL_Freudenspender2_15_05"); //Bis ein andermal.
+
+	B_SetTopicStatus	(TOPIC_MOD_KIMON_FREUDENSPENDER, LOG_RUNNING);
+
+	CurrentNQ += 1;
+
+	B_GivePlayerXP	(150);
+};
+
 INSTANCE Info_Mod_Kimon_REL_HabPakete (C_INFO)
 {
 	npc		= Mod_7771_FH_Kimon_REL;

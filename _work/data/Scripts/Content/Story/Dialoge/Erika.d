@@ -193,6 +193,35 @@ FUNC VOID Info_Mod_Erika_Kissen_Info()
 	AI_Output(hero, self, "Info_Mod_Erika_Kissen_15_07"); //Danke trotzdem.
 };
 
+INSTANCE Info_Mod_Erika_Kimon (C_INFO)
+{
+	npc		= Mod_7381_OUT_Erika_REL;
+	nr		= 1;
+	condition	= Info_Mod_Erika_Kimon_Condition;
+	information	= Info_Mod_Erika_Kimon_Info;
+	permanent	= 0;
+	important	= 0;
+	description 	= "Gute Frau, kannst du mir Freude spenden?";
+};                       
+
+FUNC INT Info_Mod_Erika_Kimon_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Erika_Hi))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Penner_Kimon))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Morpheus_Kimon))
+	{
+		return TRUE;
+	};
+};
+
+FUNC VOID Info_Mod_Erika_Kimon_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Erika_Kimon_15_00"); //Gute Frau, kannst du mir Freude spenden?
+	AI_Output(self, hero, "Info_Mod_Erika_Kimon_16_01"); //Mach dich fort, du Schwein! Ich bin eine ehrbare Frau.
+	AI_Output(hero, self, "Info_Mod_Erika_Kimon_15_02"); //Da habe ich mich wohl falsch ausgedrückt. Ich suche Freudenspender.
+	AI_Output(self, hero, "Info_Mod_Erika_Kimon_16_03"); //Nicht bei mir, du Lümmel.
+};
+
 INSTANCE Info_Mod_Erika_WendelS (C_INFO)
 {
 	npc		= Mod_7381_OUT_Erika_REL;

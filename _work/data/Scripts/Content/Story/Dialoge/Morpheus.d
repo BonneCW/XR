@@ -40,7 +40,6 @@ FUNC INT Info_Mod_Morpheus_Kissen_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Morpheus_Hi))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Malik_Aufgabe))
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Morpheus_Kissen))
 	{
 		return 1;
 	};
@@ -98,6 +97,37 @@ FUNC VOID Info_Mod_Morpheus_Kissen02_Info()
 	Wld_InsertItem	(ItMi_Heu, "FP_ITEM_HEU_01");
 
 	B_LogEntry	(TOPIC_MOD_ASS_KISSEN, "Morpheus meint ich soll mir ein Leinenkissen von Versage machen lassen. Füllen soll ich es neben den Federn noch mit etwas Heu für den Geruch. Das finde ich beim See bei der Wasserleitung.");
+};
+
+INSTANCE Info_Mod_Morpheus_Kimon (C_INFO)
+{
+	npc		= Mod_7581_OUT_Morpheus_REL;
+	nr		= 1;
+	condition	= Info_Mod_Morpheus_Kimon_Condition;
+	information	= Info_Mod_Morpheus_Kimon_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Hast du Freudenspender?";
+};
+
+FUNC INT Info_Mod_Morpheus_Kimon_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Morpheus_Hi))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Penner_Kimon))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Morpheus_Kimon_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Morpheus_Kimon_15_00"); //Hast du Freudenspender?
+	AI_Output(self, hero, "Info_Mod_Morpheus_Kimon_04_01"); //Natürlich nicht. Man darf damit nicht öffentlich handeln. Verbot vom Stadthalter.
+	AI_Output(hero, self, "Info_Mod_Morpheus_Kimon_15_02"); //Und inoffiziell?
+	AI_Output(self, hero, "Info_Mod_Morpheus_Kimon_04_03"); //Auch nicht. Der Penner da drüben kann dir wahrscheinlich weiterhelfen.
+	AI_Output(hero, self, "Info_Mod_Morpheus_Kimon_15_04"); //Kann er nicht. Den habe ich schon gefragt.
+	AI_Output(self, hero, "Info_Mod_Morpheus_Kimon_04_05"); //Dann lügt er. Ich bin sicher, dass er was weiß.
+	AI_Output(hero, self, "Info_Mod_Morpheus_Kimon_15_06"); //Dann probier ich's noch mal.
 };
 
 INSTANCE Info_Mod_Morpheus_Blutkelch (C_INFO)
