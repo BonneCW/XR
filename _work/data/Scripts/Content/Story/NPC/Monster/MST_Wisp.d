@@ -122,3 +122,93 @@ INSTANCE Wisp_Helper (Mst_Default_Wisp)
 	Npc_SetToFistMode(self);
 	start_aistate				= ZS_MM_Rtn_Summoned;
 };
+
+INSTANCE RuheloseSeele_01 (Mst_Default_Wisp)
+{
+	name		= "Ruhelose Seele";
+	level				=	0;
+	B_SetVisuals_Wisp();
+	senses_range	=	0;
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_Rtn_Rest;
+};
+
+INSTANCE RuheloseSeele_02 (Mst_Default_Wisp)
+{
+	name		= "Ruhelose Seele";
+	level				=	0;
+	B_SetVisuals_Wisp();
+	senses_range	=	0;
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_Rtn_Rest;
+};
+
+INSTANCE RuheloseSeele_03 (Mst_Default_Wisp)
+{
+	name		= "Ruhelose Seele";
+	level				=	0;
+	B_SetVisuals_Wisp();
+	senses_range	=	0;
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_Rtn_Rest;
+};
+
+INSTANCE RuheloseSeele_04 (Mst_Default_Wisp)
+{
+	name		= "Ruhelose Seele";
+	level				=	0;
+	B_SetVisuals_Wisp();
+	senses_range	=	0;
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_Rtn_Rest;
+};
+
+INSTANCE RuheloseSeele_05 (Mst_Default_Wisp)
+{
+	name		= "Ruhelose Seele";
+	level				=	0;
+	B_SetVisuals_Wisp();
+	senses_range	=	0;
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_Rtn_Rest;
+};
+
+INSTANCE RuheloseSeele_06 (Mst_Default_Wisp)
+{
+	name		= "Ruhelose Seele";
+	level				=	0;
+	B_SetVisuals_Wisp();
+	senses_range	=	0;
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_Rtn_Rest;
+};
+
+INSTANCE RuheloseSeele_07 (Mst_Default_Wisp)
+{
+	name		= "Ruhelose Seele";
+	level				=	0;
+	B_SetVisuals_Wisp();
+	senses_range	=	0;
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_Rtn_Rest;
+};
+
+INSTANCE RuheloseSeele_08 (Mst_Default_Wisp)
+{
+	name		= "Ruhelose Seele";
+	level				=	0;
+	B_SetVisuals_Wisp();
+	senses_range	=	0;
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_Rtn_Rest;
+};
+
+INSTANCE RuheloseSeele_09 (Mst_Default_Wisp)
+{
+	name		= "Ruhelose Seele";
+	level				=	0;
+	B_SetVisuals_Wisp();
+	senses_range	=	0;
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_Rtn_Rest;
+};

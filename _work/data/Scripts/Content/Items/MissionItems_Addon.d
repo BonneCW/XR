@@ -2293,7 +2293,7 @@ func void Use_GregsBottle ()
 };
 
 /******************************************************************************************/
-INSTANCE itmi_erolskelch (C_Item)
+INSTANCE ItMi_ErolsKelch (C_Item)
 {
 	name 				=	"Zerkratzte silberne Schale";
 

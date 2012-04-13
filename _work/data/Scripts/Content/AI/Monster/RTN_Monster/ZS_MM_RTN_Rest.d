@@ -42,9 +42,7 @@ func int ZS_MM_Rtn_Rest_Loop ()
 	&& (RavenIsDead == TRUE)
 	{	
 		B_KillNpc (self);
-	};
-	//ADDON<
-	
+	};	
 	
 	if ((!Wld_IsTime (self.aivar[AIV_MM_RestStart],00,self.aivar[AIV_MM_RestEnd],00)) && (self.aivar[AIV_MM_RestStart] != OnlyRoutine))
 	{
@@ -54,7 +52,7 @@ func int ZS_MM_Rtn_Rest_Loop ()
 	
 	if (self.aivar[AIV_TAPOSITION] == NOTINPOS)
 	{
-		if (Wld_IsFPAvailable(self,	"ROAM"))
+		if (Wld_IsFPAvailable(self, "ROAM"))
 		{
 			AI_GotoFP (self, "ROAM");
 		};
@@ -66,7 +64,7 @@ func int ZS_MM_Rtn_Rest_Loop ()
 	}
 	else if (self.aivar[AIV_TAPOSITION] == NOTINPOS)
 	{
-		if (Wld_IsFPAvailable(self,	"FP"))
+		if (Wld_IsFPAvailable(self, "FP"))
 		{
 			AI_GotoFP (self, "FP");
 		};
@@ -95,10 +93,3 @@ func void ZS_MM_Rtn_Rest_End ()
 {
 
 };
-
-
-
-
-
-
-

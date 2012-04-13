@@ -64,6 +64,12 @@ FUNC VOID Rtn_Start_9002 ()
 	TA_Smalltalk 	(22,00,06,50,"ADW_ENTRANCE_BUILDING2_03");
 };
 
+FUNC VOID Rtn_Plagegeister_9002 ()
+{	
+	TA_Smalltalk 	(06,50,22,00,"ADW_ENTRANCE_BUILDING2_03");
+	TA_Smalltalk 	(22,00,06,50,"ADW_ENTRANCE_BUILDING2_03");
+};
+
 FUNC VOID Rtn_InTempel_9002 ()
 {	
 	TA_Study_WP	(12,50,13,50,"ADW_PORTALTEMPEL_03B");

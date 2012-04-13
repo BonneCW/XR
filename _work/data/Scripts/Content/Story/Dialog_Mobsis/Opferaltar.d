@@ -8,8 +8,8 @@ FUNC VOID Opferaltar_S1 ()
 		&& (Npc_KnowsInfo(hero, Info_Mod_Cronos_AW_Artefakt_04))
 		&& (!Npc_KnowsInfo(hero, Info_Mod_AdanosDog_Kristall))
 		{
-			self.aivar[AIV_INVINCIBLE]=TRUE;
-			PLAYER_MOBSI_PRODUCTION	=	MOBSI_Opferaltar;
+			self.aivar[AIV_INVINCIBLE] = TRUE;
+			PLAYER_MOBSI_PRODUCTION	= MOBSI_Opferaltar;
 			Ai_ProcessInfos (her);
 		}
 		else if (Assassinen_Dabei == TRUE)
@@ -23,8 +23,14 @@ FUNC VOID Opferaltar_S1 ()
 		&& (Mod_ASS_Waechter_08 == 1)
 		&& (Mod_ASS_Waechter_09 == 1)
 		{
-			self.aivar[AIV_INVINCIBLE]=TRUE;
-			PLAYER_MOBSI_PRODUCTION	=	MOBSI_Opferaltar;
+			self.aivar[AIV_INVINCIBLE] = TRUE;
+			PLAYER_MOBSI_PRODUCTION	= MOBSI_Opferaltar;
+			Ai_ProcessInfos (her);
+		}
+		else if (Mod_Riordian_Geister == 1)
+		{
+			self.aivar[AIV_INVINCIBLE] = TRUE;
+			PLAYER_MOBSI_PRODUCTION	= MOBSI_Opferaltar;
 			Ai_ProcessInfos (her);
 		}
 		else
@@ -138,6 +144,65 @@ FUNC VOID PC_Opferaltar_Zeremoniendolch_Info()
 	B_LogEntry	(TOPIC_MOD_ASS_ZEREMONIENDOLCH, "Was ein Akt! Aber den Dolch habe ich endlich. Nochmal mit dem Eremiten reden und dann ab zu Mustafa.");
 
 	B_GivePlayerXP	(300);
+
+	B_ENDPRODUCTIONDIALOG();
+};
+
+INSTANCE PC_Opferaltar_Plagegeister (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Opferaltar_Plagegeister_Condition;
+	information	= PC_Opferaltar_Plagegeister_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Geister besänftigen";
+};
+
+FUNC INT PC_Opferaltar_Plagegeister_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Opferaltar)
+	&& (Mod_Riordian_Geister == 1)
+	&& (Npc_HasItems(hero, ItWr_PlagegeisterFormel) == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Opferaltar_Plagegeister_Info()
+{
+	if (Npc_HasItems(hero, ItSc_Sleep) >= 1)
+	&& (Npc_HasItems(hero, ItSc_Charm) >= 1)
+	&& (Npc_HasItems(hero, ItPl_SwampHerb) >= 3)
+	{
+		AI_Output(hero, hero, "PC_Opferaltar_Plagegeister_15_00"); //Ighoriat Thorul. Kehrt ins Totenreich zurück, ihr ruhelosen Geister!
+
+		Wld_PlayEffect	("spellFX_Sleep_TARGET", hero, hero, 0, 0, 0, FALSE);
+		Wld_PlayEffect	("FX_EARTHQUAKE", hero, hero, 0, 0, 0, FALSE);
+		Wld_PlayEffect	("spellFX_LIGHTSTAR_RingRitual", hero, hero, 0, 0, 0, FALSE);
+		Snd_Play	("MFX_GhostVoice");
+
+		Npc_RemoveInvItems	(hero, ItSc_Sleep, 1);
+		Npc_RemoveInvItems	(hero, ItSc_Charm, 1);
+		Npc_RemoveInvItems	(hero, ItPl_SwampHerb, 3);
+		Npc_RemoveInvItems	(hero, ItWr_PlagegeisterFormel, 1);
+
+		Mod_Riordian_Geister = 2;
+
+		B_RemoveNpc	(RuheloseSeele_01);
+		B_RemoveNpc	(RuheloseSeele_02);
+		B_RemoveNpc	(RuheloseSeele_03);
+		B_RemoveNpc	(RuheloseSeele_04);
+		B_RemoveNpc	(RuheloseSeele_05);
+		B_RemoveNpc	(RuheloseSeele_06);
+		B_RemoveNpc	(RuheloseSeele_07);
+		B_RemoveNpc	(RuheloseSeele_08);
+		B_RemoveNpc	(RuheloseSeele_09);
+	}
+	else
+	{
+		Print	("Mir fehlen die nötigen Gegenstände!");
+	};
 
 	B_ENDPRODUCTIONDIALOG();
 };

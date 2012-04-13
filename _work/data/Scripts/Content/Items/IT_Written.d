@@ -35,6 +35,21 @@ func void UseStandardBrief ()
 
 };
 
+INSTANCE ItWr_PlagegeisterFormel		(C_Item)
+{
+	name 				=	"Zettel";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	ITEM_MISSION|ITEM_SHOW;
+
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[0]				=	"enthält die Formel zum Besänftigen der Geister";
+};
+
 INSTANCE ItWr_LandstreicherSiegelring		(C_Item)
 {
 	name 				=	"Zettel";

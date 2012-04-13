@@ -1337,6 +1337,30 @@ FUNC VOID NEBENQUESTS()
 				B_LogEntry	(TOPIC_MOD_EREMIT_HARPIEN, "Das sollten wohl alle Flattermänner ... oder Flatterfrauen ... wie auch immer gewesen sein.");
 			};
 		};
+
+		// Plagegeister
+
+		if (Mod_Riordian_Geister == 0)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Riordian_AW_SteinkreisTafel))
+		&& (Wld_GetDay()-2 >= Mod_Riordian_Geister_Tag)
+		{
+			Mod_Riordian_Geister = 1;
+
+			B_StartOtherRoutine	(Mod_9003_KDW_Riordian_AW, "PLAGEGEISTER");
+			B_StartOtherRoutine	(Mod_9004_KDW_Merdarion_AW, "PLAGEGEISTER");
+			B_StartOtherRoutine	(Mod_9001_KDW_Cronos_AW, "PLAGEGEISTER");
+			B_StartOtherRoutine	(Mod_9002_KDW_Nefarius_AW, "PLAGEGEISTER");
+
+			Wld_InsertNpc	(RuheloseSeele_01, "ADW_ENTRANCE_PLATEAU_11");
+			Wld_InsertNpc	(RuheloseSeele_02, "ADW_ENTRANCE_PLATEAU_10A");
+			Wld_InsertNpc	(RuheloseSeele_03, "ADW_ENTRANCE_02");
+			Wld_InsertNpc	(RuheloseSeele_04, "ADW_ENTRANCE_PLATEAU_07A");
+			Wld_InsertNpc	(RuheloseSeele_05, "ADW_ENTRANCE_PLATEAU_14");
+			Wld_InsertNpc	(RuheloseSeele_06, "ADW_ENTRANCE_BUILDING1_02");
+			Wld_InsertNpc	(RuheloseSeele_07, "ADW_ANCIENTGHOST");
+			Wld_InsertNpc	(RuheloseSeele_08, "ADW_ANCIENTGHOST");
+			Wld_InsertNpc	(RuheloseSeele_09, "ADW_VALLEY_BIGCAVE_18");
+		};
 	};
 
 	if (CurrentLevel == RELENDEL_ZEN)
