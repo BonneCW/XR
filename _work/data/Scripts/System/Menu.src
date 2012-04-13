@@ -1,0 +1,32 @@
+// Menue-Definitionen (Texturen, Fonts etc.)
+menu\menu_defines.d
+
+// Deklarationen
+_intern\menu.d
+
+// Menue (Spielmenue)
+menu\menu_main.d
+menu\menu_team.d
+menu\menu_credits_01.d
+menu\menu_credits_02.d
+menu\menu_credits_03.d
+menu\menu_credits_04.d
+menu\menu_credits_05.d
+menu\menu_credits_06.d
+menu\menu_opt.d
+menu\menu_opt_game.d
+menu\menu_opt_graphics.d
+menu\menu_opt_video.d
+menu\menu_opt_audio.d
+menu\menu_opt_controls.d
+menu\menu_opt_ext.d
+menu\menu_opt_XR.d
+menu\menu_opt_XR2.d
+menu\menu_misc.d
+menu\menu_savegame.d
+
+// Log-Screen
+menu\menu_log.d
+
+// Status-Screen
+menu\menu_status.d
