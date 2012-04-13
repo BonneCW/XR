@@ -2,7 +2,7 @@ instance Mod_743_NONE_Nagur_NW (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Nagur"; 
-	guild 		= GIL_NONE;
+	guild 		= GIL_OUT;
 	id 			= 743;
 	voice 		= 8;
 	flags       = 0;																
@@ -26,8 +26,8 @@ instance Mod_743_NONE_Nagur_NW (Npc_Default)
 
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal17, BodyTex_N,ITAR_Vlk_L);	
-	Mdl_SetModelFatness	(self,0);
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal17, BodyTex_N, ITAR_Vlk_L);	
+	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 	
 	// ------ NSC-relevante Talente vergeben ------
@@ -43,11 +43,23 @@ instance Mod_743_NONE_Nagur_NW (Npc_Default)
 FUNC VOID Rtn_Start_743()
 {	
 	TA_Sit_Chair		(08,00,23,00,"NW_CITY_HABOUR_TAVERN01_02");
-    TA_Sit_Chair		(23,00,08,00,"NW_CITY_HABOUR_TAVERN01_02"); 
+	TA_Sit_Chair		(23,00,08,00,"NW_CITY_HABOUR_TAVERN01_02"); 
 };
 
 FUNC VOID Rtn_Gefangen_743()
 {
-	TA_Sit_Campfire	(08,00,20,00,"NW_CITY_HABOUR_KASERN_HALVOR");
-	TA_Sit_Campfire	(20,00,08,00,"NW_CITY_HABOUR_KASERN_HALVOR");
+	TA_Sit_Campfire		(08,00,20,00,"NW_CITY_HABOUR_KASERN_HALVOR");
+	TA_Sit_Campfire		(20,00,08,00,"NW_CITY_HABOUR_KASERN_HALVOR");
+};
+
+FUNC VOID Rtn_Rache_743()
+{
+	TA_Stand_Guarding	(08,00,20,00,"NW_TAVERN_TO_FOREST_05_03");
+	TA_Stand_Guarding	(20,00,08,00,"NW_TAVERN_TO_FOREST_05_03");
+};
+
+FUNC VOID Rtn_Tot_743()
+{
+	TA_Sit_Campfire		(08,00,20,00,"TOT");
+	TA_Sit_Campfire		(20,00,08,00,"TOT");
 };

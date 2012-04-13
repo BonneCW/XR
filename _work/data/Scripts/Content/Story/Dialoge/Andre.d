@@ -3009,6 +3009,10 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Info()
 	{
 		Info_AddChoice	(Info_Mod_Andre_Kopfgeld, "Der Bürger Wilfried war ein Betrüger.", Info_Mod_Andre_Kopfgeld_Wilfried);
 	};
+	if (Nagur_KillAkahasch == 6)
+	{
+		Info_AddChoice	(Info_Mod_Andre_Kopfgeld, "Kardif hat Nagur und seiner Bande dabei geholfen mir eine Falle zu stellen.", Info_Mod_Andre_Kopfgeld_Kardif2);
+	};
 };
 
 FUNC VOID Info_Mod_Andre_Kopfgeld_Zurück()
@@ -3021,7 +3025,6 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Tom()
 	AI_Output(hero, self, "Info_Mod_Andre_Kopfgeld_Tom_15_00"); //Tom versucht einen Freund vor einem Miliztrupp zu warnen.
 	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Tom_08_01"); //Gut, dass du mir bescheid gesagt hast. Hier hast du deine Belohnung.
 
-	CreateInvItems	(self, ItMi_Gold, 100);
 	B_GiveInvITems	(self, hero, ItMi_Gold, 100);
 
 	B_GivePlayerXP	(100);
@@ -3047,7 +3050,6 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Nagur()
 	AI_Output(hero, self, "Info_Mod_Andre_Kopfgeld_Nagur_15_00"); //Nagur will den Novizen Akahasch tot sehen und hat einen Auftragsmörder geschickt.
 	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Nagur_08_01"); //Das werden wir zu verhindern wissen. Danke für deine Hilfe.
 
-	CreateInvItems	(self, ItMi_Gold, 100);
 	B_GiveInvITems	(self, hero, ItMi_Gold, 100);
 
 	B_GivePlayerXP	(100);
@@ -3078,7 +3080,6 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Meldor()
 
 	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Meldor_08_03"); //Das ist ausreichend. Hier hast du deine Belohnung.
 
-	CreateInvItems	(self, ItMi_Gold, 100);
 	B_GiveInvITems	(self, hero, ItMi_Gold, 100);
 
 	B_GivePlayerXP	(100);
@@ -3109,7 +3110,6 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Gerbrandt()
 	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Gerbrandt_08_01"); //Gut, wir werden sie sofort festnehmen.
 	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Gerbrandt_08_02"); //Hier hast du deine Belohnung.
 
-	CreateInvItems	(self, ItMi_Gold, 300);
 	B_GiveInvITems	(self, hero, ItMi_Gold, 300);
 
 	B_GivePlayerXP	(300);
@@ -3151,7 +3151,6 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Kardif()
 
 	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Kardif_08_03"); //Gut, wir werden die Verhaftung veranlassen. Hier hast du das Kopfgeld.
 
-	CreateInvItems	(self, ItMi_Gold, 100);
 	B_GiveInvITems	(self, hero, ItMi_Gold, 100);
 
 	B_GivePlayerXP	(100);
@@ -3171,6 +3170,35 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Kardif()
 	Mod_AlvaresAndre_Taeter = 1;
 };
 
+FUNC VOID Info_Mod_Andre_Kopfgeld_Kardif2()
+{
+	AI_Output(hero, self, "Info_Mod_Andre_Kopfgeld_Kardif2_15_00"); //Kardif hat Nagur und seiner Bande dabei geholfen mir eine Falle zu stellen.
+	AI_Output(hero, self, "Info_Mod_Andre_Kopfgeld_Kardif2_15_01"); //Nagur hatte schon den Novizen Akahasch auf dem Gewissen und ich konnte mich nur mit Mühe meines Lebens erwehren.
+	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Kardif2_08_02"); //Was?! Wo ist dieser Verbrecher jetzt?
+	AI_Output(hero, self, "Info_Mod_Andre_Kopfgeld_Kardif2_15_03"); //Nagur hat sich mit dem Falschen angelegt. Er wird keinen Ärger mehr machen.
+	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Kardif2_08_04"); //Da bin ich erleichtert. Ich hatte doch geahnt, dass es keine gute Idee war ihn laufen zu lassen ... aber die Gesetze der Stadt haben es nun mal verlangt, nachdem er seine Strafe verbüßt hatte.
+	AI_Output(hero, self, "Info_Mod_Andre_Kopfgeld_Kardif2_15_05"); //Kardif scheint außerdem mit Schmugglern gemeinsame Sache zu machen, die ihre Sachen in den Kisten und Fässern im Hafenviertel verstecken.
+	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Kardif2_08_06"); //So ist das also. Ich werde meine Männer sofort alle Kisten durchsuchen lassen. Und dieser delinquente Kardif wird seine gerechte Strafe bekommen.
+	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Kardif2_08_07"); //Jedenfalls hast du dabei geholfen, dem Verbrechen in dieser Stadt einen empfindlichen Schlag zu verpassen.
+	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Kardif2_08_08"); //Dir steht damit eine größere Belohnung aus unserer Stadtkasse zu.
+
+	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
+
+	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Kardif2_08_09"); //Innos begleite dich auf deinen weiteren Wegen.
+
+	AI_Teleport	(Mod_590_NONE_Kardif_NW, "NW_CITY_HABOUR_KASERN_HALVOR");
+
+	B_StartOtherRoutine	(Mod_590_NONE_Kardif_NW, "GEFANGEN");
+
+	Info_ClearChoices	(Info_Mod_Andre_Kopfgeld);
+
+	B_Göttergefallen(1, 1);
+
+	Mod_AlvaresAndre_Taeter = 1;
+
+	Nagur_KillAkahasch = 7;
+};
+
 FUNC VOID Info_Mod_Andre_Kopfgeld_Den()
 {
 	AI_Output(hero, self, "Info_Mod_Andre_Kopfgeld_Den_15_00"); //Den will Rangar in Verruf bringen. Er scheint eifersüchtig auf ihn zu sein.
@@ -3179,7 +3207,6 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Den()
 	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Den_08_03"); //So ein Verhalten kann ich bei der Miliz nicht dulden. Ich werde ihn rauswerfen.
 	AI_Output(self, hero, "Info_Mod_Andre_Kopfgeld_Den_08_04"); //Hier ist eine kleine Belohnung für dich.
 
-	CreateInvItems	(self, ItMi_Gold, 50);
 	B_GiveInvITems	(self, hero, ItMi_Gold, 50);
 
 	B_GivePlayerXP	(50);

@@ -1,31 +1,4 @@
 //************************************************
-//   UTIL
-//************************************************
-
-func void SetPositionWorld(var int vobPtr, var int x, var int y, var int z) {
-    const int zCVob_SetPositionWorld = 6404976; //0x61BB70
-
-    const int mem = 0;
-    if (!mem) { mem = MEM_Alloc(12); };
-    MEM_WriteInt(mem, x);
-    MEM_WriteInt(mem + 4, y);
-    MEM_WriteInt(mem + 8, z);
-    
-    CALL_PtrParam(mem);
-    CALL__thiscall(vobPtr, zCVob_SetPositionWorld);
-};
-
-//Wenn manuell an der Position rumgeschmiert wird, werden Bounding Box usw. nicht angepasst.
-//Vobs flackern oder haben Fokusnamen an der falschen Stelle etc.
-func void VobPositionUpdated(var int vobPtr) {
-    var zCVob vob;
-    vob = MEM_PtrToInst(vobPtr);
-    SetPositionWorld(vobPtr, vob.trafoObjToWorld[zCVob_trafoObjToWorld_X],
-                             vob.trafoObjToWorld[zCVob_trafoObjToWorld_Y],
-                             vob.trafoObjToWorld[zCVob_trafoObjToWorld_Z]);
-};
-
-//************************************************
 //   Pfeile sollen von Npcs abprallen 
 //************************************************
 

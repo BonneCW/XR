@@ -79,6 +79,50 @@ FUNC VOID Info_Mod_Nagur_AkahaschTot_Info()
 	B_GivePlayerXP	(200);
 };
 
+INSTANCE Info_Mod_Nagur_Rache (C_INFO)
+{
+	npc		= Mod_743_NONE_Nagur_NW;
+	nr		= 1;
+	condition	= Info_Mod_Nagur_Rache_Condition;
+	information	= Info_Mod_Nagur_Rache_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Nagur_Rache_Condition()
+{
+	if (Nagur_KillAkahasch == 4)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Nagur_Rache_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Nagur_Rache_08_00"); //(höhnisch) Na, hast du gefunden, was du gesucht hast?
+	AI_Output(hero, self, "Info_Mod_Nagur_Rache_15_01"); //Nagur?!
+	AI_Output(self, hero, "Info_Mod_Nagur_Rache_08_02"); //Überrascht mich zu sehen?
+	AI_Output(self, hero, "Info_Mod_Nagur_Rache_08_03"); //Ja, man hat mich eine ganze Weile aus dem Verkehr gezogen, habe lange im Kerker geschmort ... und ich hatte viel Zeit zum Nachdenken, wie ich mich bei demjenigen revanchiere, dem ich das zu verdanken habe.
+	AI_Output(self, hero, "Info_Mod_Nagur_Rache_08_04"); //Ich hoffe das Ergebnis gefällt dir ... das nette Wiedersehen mit deinem Kollegen.
+
+	AI_TurnToNpc	(self, Mod_7780_SNOV_Novize_NW);
+
+	AI_Output(self, hero, "Info_Mod_Nagur_Rache_08_05"); //(zu den beiden anderen) Jungs, dasselbe mit ihm, wie mit Akahasch!
+
+	AI_TurnToNpc	(self, hero);
+
+	AI_StopProcessInfos	(self);
+
+	self.guild = GIL_STRF;
+	Npc_SetTrueGuild (self, GIL_STRF);
+
+	Mod_7780_SNOV_Novize_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild (Mod_7780_SNOV_Novize_NW, GIL_STRF);
+
+	Mod_7779_ASS_Assassine_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild (Mod_7779_ASS_Assassine_NW, GIL_STRF);
+};
+
 INSTANCE Info_Mod_Nagur_Pickpocket (C_INFO)
 {
 	npc		= Mod_743_NONE_Nagur_NW;

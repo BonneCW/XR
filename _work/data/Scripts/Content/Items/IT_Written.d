@@ -189,6 +189,44 @@ func void UseKrautruestungListe ()
 
 };
 
+INSTANCE ItWr_Akahasch		(C_Item)
+{
+	name 				=	"Zettel";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	ITEM_MISSION|ITEM_SHOW;
+
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseAkahasch;
+	scemeName			=	"MAP";
+	description			= 	name;
+	TEXT[0]				=	"Nachricht von Akahasch";
+};
+
+func void UseAkahasch ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		()			  ;							// DocManager
+					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline  			); 	// -1 -> all pages
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
+					Doc_PrintLines	( nDocID,  0, ""					);
+					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Hallo mein Freund. Du hast mir damals in meiner misslichen Lage sehr geholfen und ich glaube jetzt endlich eine Möglichkeit gefunden zu haben, mich dafür angemessen zu bedanken. Kurz vor Orlans Taverne befindet sich unter der Brücke eine Höhle, in welcher die Truhe zu dem Schlüssel steht. In ihr habe ich einige Dinge verstaut, die dir sicher gefallen werden."					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Grüße,"					);
+					Doc_PrintLines	( nDocID,  0, "Akahasch"					);
+					
+					Doc_Show		( nDocID );
+
+};
+
 INSTANCE ItWr_AkahaschNagur		(C_Item)
 {
 	name 				=	"Zettel";
@@ -7220,6 +7258,3 @@ INSTANCE ItWr_ZweihandBuch (C_ITEM)
 					
 					Doc_Show		( nDocID );
 };
-
-
-

@@ -2229,6 +2229,28 @@ INSTANCE ItAt_IwansKopf (C_Item)
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
+//-----------------------------------------------------------------------
+//	Iwans Kopf
+//-----------------------------------------------------------------------
+INSTANCE ItMi_AkahaschKopf (C_Item)
+{
+	name 				=	"Akahaschs Kopf";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MISSION;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Head_Bloodwyn_01.3ds";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+	
+	TEXT[2]				=	"";
+	TEXT[3]				=   "";
+	
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
 //------------------------------------------------------------------------
 
 instance ItWR_Addon_TreasureMap (C_Item)

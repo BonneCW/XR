@@ -160,6 +160,22 @@ INSTANCE ItKe_Elena(C_Item)
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
+INSTANCE ItKe_Akahasch(C_Item)
+{
+	name 				=	"Akahaschs Schlüssel";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	0;
+
+	value 				=	Value_Key_02;
+
+	visual 				=	"ItKe_Key_02.3ds";
+	material 			=	MAT_METAL;
+
+	description			= 	name;
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
 INSTANCE ItKe_RitualsinselDoor(C_Item)
 {
 	name 				=	"Schlüssel";

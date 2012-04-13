@@ -125,7 +125,6 @@ FUNC VOID Info_Mod_Kardif_KnowsRukhar_D()
 	AI_Output(hero, self, "Info_Mod_Kardif_KnowsRukhar_D_15_00"); //Na gut, ich werde nicht verpetzen.
 	AI_Output(self, hero, "Info_Mod_Kardif_KnowsRukhar_D_14_01"); //Vielen Dank. Nimm dieses Gold als Dank von mir.
 
-	CreateInvItems	(self, ItMi_Gold, 100);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 100);
 
 	B_Göttergefallen(1, 1);
@@ -142,7 +141,6 @@ FUNC VOID Info_Mod_Kardif_KnowsRukhar_B()
 	AI_Output(hero, self, "Info_Mod_Kardif_KnowsRukhar_B_15_00"); //Wenn du mir Gold gibst, dann lass ich dich laufen.
 	AI_Output(self, hero, "Info_Mod_Kardif_KnowsRukhar_B_14_01"); //Gut, ich gebe dir 400 Goldmünzen.
 
-	CreateInvItems	(self, ItMi_Gold, 400);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 400);
 
 	AI_Output(hero, self, "Info_Mod_Kardif_KnowsRukhar_B_15_02"); //Danke.
@@ -376,6 +374,286 @@ FUNC VOID Info_Mod_Kardif_Paddel_Info()
 	AI_Output(self, hero, "Info_Mod_Kardif_Paddel_14_01"); //Wie kommst du da drauf? Ich handle doch nicht mit Restposten. Wieso frägst du nicht einen Fischer?
 
 	B_LogEntry	(TOPIC_MOD_SKIP_PADDEL, "Kardif hat keine Paddel. Er erwähnte den Fischer ... ich sollte mal bei Farim vorbei sehen.");
+};
+
+INSTANCE Info_Mod_Kardif_NagurFrei (C_INFO)
+{
+	npc		= Mod_590_NONE_Kardif_NW;
+	nr		= 1;
+	condition	= Info_Mod_Kardif_NagurFrei_Condition;
+	information	= Info_Mod_Kardif_NagurFrei_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Kardif_NagurFrei_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Kardif_Hi))
+	&& (Nagur_KillAkahasch == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Kardif_NagurFrei_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei_14_00"); //He, warte mal. Ich habe hier eine Botschaft und einen Schlüssel für dich ...
+
+	B_ShowGivenThings	("Nachricht und Schlüssel von Akahasch erhalten");
+
+	CreateInvItems	(hero, ItKe_Akahasch, 1);
+	CreateInvItems	(hero, ItWr_Akahasch, 1);
+
+	AI_Output(hero, self, "Info_Mod_Kardif_NagurFrei_15_01"); //Von wem sind die Sachen?
+	AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei_14_02"); //Ein Novize hat sie mir gegeben.
+
+	B_RemoveNpc	(Mod_4016_NOV_Akahasch_NW);
+};
+
+INSTANCE Info_Mod_Kardif_NagurFrei2 (C_INFO)
+{
+	npc		= Mod_590_NONE_Kardif_NW;
+	nr		= 1;
+	condition	= Info_Mod_Kardif_NagurFrei2_Condition;
+	information	= Info_Mod_Kardif_NagurFrei2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Du Schwein hast also dabei geholfen mir eine Falle zu stellen!";
+};
+
+FUNC INT Info_Mod_Kardif_NagurFrei2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Nagur_Rache))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Kardif_NagurFrei2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Kardif_NagurFrei2_15_00"); //Du Schwein hast also dabei geholfen mir eine Falle zu stellen!
+	AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei2_14_01"); //(erschrocken) He, ich weiß nicht, was du meinst ...
+	AI_Output(hero, self, "Info_Mod_Kardif_NagurFrei2_15_02"); //Der Brief der mich in diese Höhle locken sollte ...
+	AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei2_14_03"); //Man ... man hat mir nur die Sachen gegeben und gesagt, dass ich sie an dich weiterzugeben soll ...
+	AI_Output(hero, self, "Info_Mod_Kardif_NagurFrei2_15_04"); //Du hast gesagt, ein Novize hätte sie dir gegeben ...
+	AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei2_14_05"); //Ja, das stimmt auch. So ein Dunkelnovize.
+	AI_Output(hero, self, "Info_Mod_Kardif_NagurFrei2_15_06"); //Du wusstest genau, dass es nicht Akahasch war ... denn der ist tot.
+	AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei2_14_07"); //Aber ... aber ich konnte doch nicht wissen, was da läuft. He, man, mach keine Dummheiten, wir können uns doch bestimmt irgendwie einigen ...
+	AI_Output(hero, self, "Info_Mod_Kardif_NagurFrei2_15_08"); //Was meinst du?
+	AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei2_14_09"); //Ich ... ich bekomme als Wirt so einiges mit. Ich könnte dir zum Beispiel sagen, in welchen der Kisten und Fässer am Hafen du heiße Ware findest ...
+
+	Info_ClearChoices	(Info_Mod_Kardif_NagurFrei2);
+
+	Info_AddChoice	(Info_Mod_Kardif_NagurFrei2, "Einverstanden.", Info_Mod_Kardif_NagurFrei2_B);
+	Info_AddChoice	(Info_Mod_Kardif_NagurFrei2, "Dafür wanderst du in den Knast.", Info_Mod_Kardif_NagurFrei2_A);
+};
+
+FUNC VOID Info_Mod_Kardif_NagurFrei2_B()
+{
+	AI_Output(hero, self, "Info_Mod_Kardif_NagurFrei2_B_15_00"); //Einverstanden.
+	AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei2_B_14_01"); //(erleichtert) Puh ... ich wusste doch, das wir uns einigen können.
+
+	Info_ClearChoices	(Info_Mod_Kardif_NagurFrei2);
+
+	Nagur_KillAkahasch = 5;
+
+	B_Göttergefallen(3, 1);
+};
+
+FUNC VOID Info_Mod_Kardif_NagurFrei2_A()
+{
+	AI_Output(hero, self, "Info_Mod_Kardif_NagurFrei2_A_15_00"); //Dafür wanderst du in den Knast.
+	AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei2_A_14_01"); //Nein ... das ist mein Ende.
+
+	Info_ClearChoices	(Info_Mod_Kardif_NagurFrei2);
+
+	Nagur_KillAkahasch = 6;
+
+	B_Göttergefallen(1, 1);
+};
+
+var int KardifInfos[14];
+
+FUNC INT B_GetKardifInfoIndex()
+{
+	var int loop; loop = MEM_StackPos.position;
+
+	var int rnd; rnd = r_max(13);
+
+	if (MEM_ReadStatArr(KardifInfos, rnd) == 1)
+	{
+		MEM_StackPos.position = loop;
+	};
+
+	MEM_WriteStatArr(KardifInfos, rnd, 1);
+
+	return rnd;
+};
+
+INSTANCE Info_Mod_Kardif_NagurFrei3 (C_INFO)
+{
+	npc		= Mod_590_NONE_Kardif_NW;
+	nr		= 1;
+	condition	= Info_Mod_Kardif_NagurFrei3_Condition;
+	information	= Info_Mod_Kardif_NagurFrei3_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wo finde ich heiße Ware?";
+};
+
+FUNC INT Info_Mod_Kardif_NagurFrei3_Condition()
+{
+	if (Nagur_KillAkahasch == 5)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Kardif_NagurFrei3_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Kardif_NagurFrei3_15_00"); //Wo finde ich heiße Ware?
+
+	if (Mod_Kardif_Info < 2)
+	&& (Mod_Kardif_InfoTruhe == 0)
+	{
+		var int nextIndex; nextIndex = B_GetKardifInfoIndex();
+
+		var int ptr; ptr = MEM_SearchVobByName("KARDIFINFOTRUHE");
+
+		var zCVob vob; vob = MEM_PtrToInst(ptr);
+
+		AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_01"); //So weit ich mitbekommen habe, solltest du in den ...
+
+		if (nextIndex == 0)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_02"); //... Kisten gegenüber Lehmar ...
+
+			vob.trafoObjToWorld[3] = mkf(3534);
+			vob.trafoObjToWorld[7] = mkf(-154);
+			vob.trafoObjToWorld[11] = mkf(-1211);
+		}
+		else if (nextIndex == 1)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_03"); //... Fässern hinter der Taverne ...
+
+			vob.trafoObjToWorld[3] = mkf(2581);
+			vob.trafoObjToWorld[7] = mkf(-187);
+			vob.trafoObjToWorld[11] = mkf(-1163);
+		}
+		else if (nextIndex == 2)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_04"); //... Kisten beim Kartenzeichner ...
+
+			vob.trafoObjToWorld[3] = mkf(1193);
+			vob.trafoObjToWorld[7] = mkf(-86);
+			vob.trafoObjToWorld[11] = mkf(572);
+		}
+		else if (nextIndex == 3)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_05"); //... Fässern beim Schiffsbauer ...
+
+			vob.trafoObjToWorld[3] = mkf(777);
+			vob.trafoObjToWorld[7] = mkf(-190);
+			vob.trafoObjToWorld[11] = mkf(883);
+		}
+		else if (nextIndex == 4)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_06"); //... Kisten bei Alrik ...
+
+			vob.trafoObjToWorld[3] = mkf(3532);
+			vob.trafoObjToWorld[7] = mkf(-188);
+			vob.trafoObjToWorld[11] = mkf(3071);
+		}
+		else if (nextIndex == 5)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_07"); //... Fässern im Lagerhaus ...
+
+			vob.trafoObjToWorld[3] = mkf(2065);
+			vob.trafoObjToWorld[7] = mkf(-189);
+			vob.trafoObjToWorld[11] = mkf(2579);
+		}
+		else if (nextIndex == 6)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_08"); //... Kisten oben im Lagerhaus ...
+
+			vob.trafoObjToWorld[3] = mkf(2790);
+			vob.trafoObjToWorld[7] = mkf(109);
+			vob.trafoObjToWorld[11] = mkf(2740);
+		}
+		else if (nextIndex == 7)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_09"); //... Kisten zwischen Lagerhaus und Lastenkran ...
+
+			vob.trafoObjToWorld[3] = mkf(-289);
+			vob.trafoObjToWorld[7] = mkf(-181);
+			vob.trafoObjToWorld[11] = mkf(3551);
+		}
+		else if (nextIndex == 8)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_10"); //... Kisten beim Baum überm Lagerhaus ...
+
+			vob.trafoObjToWorld[3] = mkf(1138);
+			vob.trafoObjToWorld[7] = mkf(299);
+			vob.trafoObjToWorld[11] = mkf(3476);
+		}
+		else if (nextIndex == 9)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_11"); //... Fässern neben der roten Laterne ...
+
+			vob.trafoObjToWorld[3] = mkf(567);
+			vob.trafoObjToWorld[7] = mkf(-192);
+			vob.trafoObjToWorld[11] = mkf(-2433);
+		}
+		else if (nextIndex == 10)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_12"); //... Kisten neben der roten Laterne ...
+
+			vob.trafoObjToWorld[3] = mkf(1103);
+			vob.trafoObjToWorld[7] = mkf(-194);
+			vob.trafoObjToWorld[11] = mkf(-3766);
+		}
+		else if (nextIndex == 11)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_13"); //... Kisten gegenüber dem Schiffsbauer ...
+
+			vob.trafoObjToWorld[3] = mkf(-142);
+			vob.trafoObjToWorld[7] = mkf(-146);
+			vob.trafoObjToWorld[11] = mkf(1253);
+		}
+		else if (nextIndex == 12)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_14"); //... Kisten neben Anlegestelle für Bote ...
+
+			vob.trafoObjToWorld[3] = mkf(-1364);
+			vob.trafoObjToWorld[7] = mkf(-82);
+			vob.trafoObjToWorld[11] = mkf(-1676);
+		}
+		else if (nextIndex == 13)
+		{
+			AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_15"); //... Fässern bei Diego ...
+
+			vob.trafoObjToWorld[3] = mkf(-304);
+			vob.trafoObjToWorld[7] = mkf(-173);
+			vob.trafoObjToWorld[11] = mkf(-1182);
+		};
+
+		AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_16"); //... was Nettes finden.
+
+		Mob_CreateItems	("KARDIFINFOTRUHE", ItMi_Joint, r_max(9));
+		Mob_CreateItems	("KARDIFINFOTRUHE", ItFo_Booze, r_max(9));
+		Mob_CreateItems	("KARDIFINFOTRUHE", ItFo_Wine, r_max(9));
+		Mob_CreateItems	("KARDIFINFOTRUHE", ItFo_Beer, r_max(9));
+		Mob_CreateItems	("KARDIFINFOTRUHE", ItPo_Tiergift, r_max(3));
+		Mob_CreateItems	("KARDIFINFOTRUHE", ItPo_Pflanzengift, r_max(3));
+
+		VobPositionUpdated(ptr);
+
+		Mod_Kardif_InfoTruhe = 1;
+	}
+	else
+	{
+		AI_Output(self, hero, "Info_Mod_Kardif_NagurFrei3_14_17"); //Im Moment weiß ich leider noch von nichts weiter. Frag in paar Tagen noch mal nach ...
+	};
 };
 
 INSTANCE Info_Mod_Kardif_Trade (C_INFO)

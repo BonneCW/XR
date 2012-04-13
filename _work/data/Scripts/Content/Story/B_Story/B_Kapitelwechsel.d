@@ -6,6 +6,8 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 {
 	Kapitel = neues_Kapitel;
 
+	Mod_Kardif_Info = 0;
+
 	var string sendText;
 
 	sendText = ConcatStrings("http://www.teutonicteam.de/gomon/tauschen/kapitel_XR.php?name=", username);

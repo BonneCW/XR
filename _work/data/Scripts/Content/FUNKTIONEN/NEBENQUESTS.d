@@ -1215,6 +1215,51 @@ FUNC VOID NEBENQUESTS()
 
 			B_LogEntry	(TOPIC_MOD_GILDO_UNKRAUT, "So, die Felder sind vom Unkraut befreit.");
 		};
+
+		// Nagur kommt wieder frei
+
+		if (Nagur_KillAkahasch == 2)
+		&& (Kapitel >= 3)
+		{
+			Nagur_KillAkahasch = 3;
+
+			B_StartOtherRoutine	(Mod_743_NONE_Nagur_NW, "TOT");
+		};
+
+		if (Nagur_KillAkahasch == 3)
+		&& (Npc_HasItems(hero, ItMi_AkahaschKopf) == 1)
+		{
+			Nagur_KillAkahasch = 4;
+
+			AI_Teleport	(Mod_743_NONE_Nagur_NW, "NW_TAVERN_TO_FOREST_05_02");
+			B_StartOtherRoutine	(Mod_743_NONE_Nagur_NW, "RACHE");
+
+			Wld_InsertNpc	(Mod_7779_ASS_Assassine_NW, "NW_TAVERN_TO_FOREST_05_02");
+			Wld_InsertNpc	(Mod_7780_SNOV_Novize_NW, "NW_TAVERN_TO_FOREST_05_02");
+		};
+
+		if (Mod_Kardif_InfoTruhe == 1)
+		{
+			if (Mob_HasItems("KARDIFINFOTRUHE", ItMi_Joint) == 0)
+			&& (Mob_HasItems("KARDIFINFOTRUHE", ItFo_Booze) == 0)
+			&& (Mob_HasItems("KARDIFINFOTRUHE", ItFo_Wine) == 0)
+			&& (Mob_HasItems("KARDIFINFOTRUHE", ItFo_Beer) == 0)
+			&& (Mob_HasItems("KARDIFINFOTRUHE", ItPo_Tiergift) == 0)
+			&& (Mob_HasItems("KARDIFINFOTRUHE", ItPo_Pflanzengift) == 0)
+			{
+				Mod_Kardif_InfoTruhe = 0;
+
+				var int ptr; ptr = MEM_SearchVobByName("KARDIFINFOTRUHE");
+
+				var zCVob vob; vob = MEM_PtrToInst(ptr);
+
+				vob.trafoObjToWorld[3] = mkf(55);
+				vob.trafoObjToWorld[7] = mkf(650);
+				vob.trafoObjToWorld[11] = mkf(-1440);
+
+				VobPositionUpdated(ptr);
+			};
+		};
 	};
 
 	if (CurrentLevel == ADDONWORLD_ZEN)
