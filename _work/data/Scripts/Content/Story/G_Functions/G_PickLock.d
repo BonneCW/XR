@@ -26,7 +26,7 @@ func void G_PickLock (var int bSuccess, var int bBrokenOpen)
 			if (Dietrich_Perk == TRUE)
 			&& (Hlp_Random(100) < 50)
 			{
-				CreateInvItems	(self, ItKe_Lockpick, 1);
+				CreateInvItems	(hero, ItKe_Lockpick, 1);
 
 				Print	("Noch mal Glück gehabt!");
 

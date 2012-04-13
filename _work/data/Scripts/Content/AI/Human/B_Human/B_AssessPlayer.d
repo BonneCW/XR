@@ -603,7 +603,7 @@ func void B_AssessPlayer ()
 	};
 	
 	// ------ SC schleicht -------
-	if (C_BodyStateContains(other,BS_SNEAK))
+	if (C_BodyStateContains(other, BS_SNEAK))
 	{
 		if (!Npc_IsInState(self, ZS_ObservePlayer))
 		&& (C_WantToReactToSneaker(self, other))
@@ -623,7 +623,7 @@ func void B_AssessPlayer ()
 	};
 	
 	// FLAG freimachen
-	if (!C_BodyStateContains(other,BS_LIE))
+	if (!C_BodyStateContains(other, BS_LIE))
 	{
 		Player_GetOutOfMyBedComment = FALSE;
 	};
@@ -651,9 +651,9 @@ func void B_AssessPlayer ()
 		else //alle anderen NSCs
 		{
 			// ------- Spieler fällt, schwimmt und taucht NICHT ------
-			if (!C_BodyStateContains(other,BS_FALL))
-			&& (!C_BodyStateContains(other,BS_SWIM))
-			&& (!C_BodyStateContains(other,BS_DIVE))
+			if (!C_BodyStateContains(other, BS_FALL))
+			&& (!C_BodyStateContains(other, BS_SWIM))
+			&& (!C_BodyStateContains(other, BS_DIVE))
 			// ------- und NUR, wenn keine CRIME vorliegt -------
 			&& (B_GetPlayerCrime(self) == CRIME_NONE)
 			// ------- und NUR, wenn NSC KEINEN RefuseTalk hat ------

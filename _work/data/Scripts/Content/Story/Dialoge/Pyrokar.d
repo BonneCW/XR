@@ -839,7 +839,6 @@ FUNC VOID Info_Mod_Pyrokar_KimonGeld_Info()
 	AI_Output(hero, self, "Info_Mod_Pyrokar_KimonGeld_15_01"); //Nach myrthanischer Verordnung müssen Waren für das Doppelte ihres Wertes verkauft werden.
 	AI_Output(self, hero, "Info_Mod_Pyrokar_KimonGeld_11_02"); //Gut, dann nimm das Gold und geh.
 
-	CreateInvItems	(self, ItMi_Gold, 1000);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 1000);
 
 	B_GivePlayerXP	(50);

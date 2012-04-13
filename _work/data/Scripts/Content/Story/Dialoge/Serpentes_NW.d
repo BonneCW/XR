@@ -186,6 +186,7 @@ FUNC INT Info_Mod_Serpentes_KimonsGold_Condition()
 {
 	if (Mod_Kimons_Traubenquest == TRUE)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Serpentes_Kimon))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Pyrokar_KimonGeld))
 	{
 		return 1;
 	};

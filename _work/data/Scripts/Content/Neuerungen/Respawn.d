@@ -279,4 +279,4 @@ FUNC VOID CleanRespawns()
 	};
 };
 
-const string RespawnObject_Struct = "auto auto auto|3";
+const string RespawnObject_Struct = "auto|5";

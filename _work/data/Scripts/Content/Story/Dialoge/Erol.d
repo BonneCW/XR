@@ -211,12 +211,11 @@ FUNC VOID Info_Mod_Erol_Fahrender2_Info()
 	AI_Output(hero, self, "Info_Mod_Erol_Fahrender2_15_02"); //Ja?
 	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_03"); //Ich hab in der Stadt einen der Feuermagier getroffen.
 	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_04"); //Denen ihre Anführer sind an einem Teil interessiert, das im Minental zu finden sein soll.
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_05"); //Denen ihre Anführer sind an einem Teil interessiert, das im Minental zu finden sein soll.
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_06"); //Nun kenn ich mich da gar nicht aus.
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_07"); //Als ich auf die Insel kam, gab's die Barriere schon. Kannst du mir vielleicht helfen?
-	AI_Output(hero, self, "Info_Mod_Erol_Fahrender2_15_08"); //Ich denke schon. Im Hafenviertel ist ein Händler, der Karten verkauft. Der sollte was für dich haben.
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_09"); //Danke für den Tip. Ich denke, wir sind quitt.
-	AI_Output(hero, self, "Info_Mod_Erol_Fahrender2_15_10"); //So muss es sein. Viel Erfolg.
+	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_05"); //Nun kenn ich mich da gar nicht aus.
+	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_06"); //Als ich auf die Insel kam, gab's die Barriere schon. Kannst du mir vielleicht helfen?
+	AI_Output(hero, self, "Info_Mod_Erol_Fahrender2_15_07"); //Ich denke schon. Im Hafenviertel ist ein Händler, der Karten verkauft. Der sollte was für dich haben.
+	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_08"); //Danke für den Tip. Ich denke, wir sind quitt.
+	AI_Output(hero, self, "Info_Mod_Erol_Fahrender2_15_09"); //So muss es sein. Viel Erfolg.
 
 	Mod_Erol_Unterwegs_Day = Wld_GetDay();
 };

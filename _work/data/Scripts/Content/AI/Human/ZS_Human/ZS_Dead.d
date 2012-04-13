@@ -424,7 +424,7 @@ func void ZS_Dead ()
 		CreateInvItems	(Mod_783_BAU_Elena_NW, ItKe_Elena, 1);
 	};
 	
-	if Seele_unterwegs==TRUE
+	if (Seele_unterwegs==TRUE)
 	&& (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(PC_Hero))
 	{
 		B_KillNpc (PC_seele);
@@ -995,7 +995,7 @@ func void ZS_Dead ()
 	|| (self.guild == GIL_SUMMONED_GOBBO_SKELETON)
 	|| (self.guild == GIL_SKELETON)
 	{
-		Npc_SetToFightMode (self, 0);
+		//Npc_SetToFightMode (self, 0);
 
 		Npc_RemoveInvItems	(self, ItMw_1h_Bau_Mace, 1);
 		Npc_RemoveInvItems	(self, ItMw_1h_MISC_Sword, 1);

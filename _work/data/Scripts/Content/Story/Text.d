@@ -187,6 +187,7 @@ CONST STRING MOBNAME_Steinsarg		= "Steinsarg";
 CONST STRING MOBNAME_Buch		= "Buch";				
 CONST STRING MOBNAME_Opferschale	= "Opferschale";
 CONST STRING MOBNAME_Mumie		= "Mumie";
+CONST STRING MOBNAME_Werkbank		= "Werkbank";
 
 // XR - Ladenschilder
 

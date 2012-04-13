@@ -153,7 +153,7 @@ const int ITEM_DRINK		= 1 << 27;  // (OBSOLETE!)
 const int ITEM_TORCH		= 1 << 28;  // Fackel
 const int ITEM_THROW		= 1 << 29;  // (OBSOLETE!)
 const int ITEM_ACTIVE		= 1 << 30;  // (INTERNAL!)
-const int ITEM_SHOW		= 1 << 31;  // (QUESTITEMS)
+const int ITEM_SHOW		= 1 << 32;  // (QUESTITEMS)
 
 //
 //	DAMAGE TYPES v2.0

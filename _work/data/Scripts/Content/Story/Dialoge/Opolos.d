@@ -94,9 +94,9 @@ FUNC VOID Info_Mod_Opolos_Unkraut_Info()
 
 	AI_Output(self, hero, "Info_Mod_Opolos_Unkraut_12_06"); //Super.
 
-	AI_GotoNpc	(self, Sheep);
+	AI_GotoNpc	(self, Sheep_Opolos_01);
 
-	AI_TurnToNpc	(self, Sheep);
+	AI_TurnToNpc	(self, Sheep_Opolos_01);
 
 	AI_PlayAni	(self, "T_PLUNDER");
 
