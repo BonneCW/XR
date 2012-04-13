@@ -46,6 +46,7 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_Cavalorn_Banditen;
 var int Mod_Kimon_REL;
 var int Mod_Bloodsplats;
 var int Mod_Gildo_Unkraut;

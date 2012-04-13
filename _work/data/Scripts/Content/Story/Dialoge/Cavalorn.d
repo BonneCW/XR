@@ -96,6 +96,7 @@ INSTANCE Info_Mod_Cavalorn_Banditen (C_INFO)
 FUNC INT Info_Mod_Cavalorn_Banditen_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Cavalorn_Hi))
+	&& (Mod_Cavalorn_Banditen == 0)
 	{
 		return 1;
 	};
@@ -122,6 +123,7 @@ INSTANCE Info_Mod_Cavalorn_Banditen2 (C_INFO)
 FUNC INT Info_Mod_Cavalorn_Banditen2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Cavalorn_Banditen))
+	&& (Mod_Cavalorn_Banditen == 0)
 	{
 		return 1;
 	};
@@ -148,6 +150,7 @@ INSTANCE Info_Mod_Cavalorn_Banditen3 (C_INFO)
 FUNC INT Info_Mod_Cavalorn_Banditen3_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Cavalorn_Banditen2))
+	&& (Mod_Cavalorn_Banditen == 0)
 	{
 		return 1;
 	};
@@ -161,6 +164,54 @@ FUNC VOID Info_Mod_Cavalorn_Banditen3_Info()
 	Log_CreateTopic	(TOPIC_MOD_CAVALORN_BANDITEN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_CAVALORN_BANDITEN, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_CAVALORN_BANDITEN, "Im Talkessel bei Xardas' Turm lauert eine Horde Banditen. Cavalorn hat mir zwar eindringlich davon abgeraten, mich mit ihnen anzulegen, aber er würde sich auch freuen, sie los zu sein.");
+};
+
+INSTANCE Info_Mod_Cavalorn_Banditen4 (C_INFO)
+{
+	npc		= Mod_512_RDW_Cavalorn_NW;
+	nr		= 1;
+	condition	= Info_Mod_Cavalorn_Banditen4_Condition;
+	information	= Info_Mod_Cavalorn_Banditen4_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Du erinnerst dich an die Banditen?";
+};
+
+FUNC INT Info_Mod_Cavalorn_Banditen4_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Cavalorn_Banditen3))
+	&& (Mod_Cavalorn_Banditen == 0)
+	&& (Npc_IsDead(Mod_7772_BDT_Bandit_NW))
+	&& (Npc_IsDead(Mod_7773_BDT_Bandit_NW))
+	&& (Npc_IsDead(Mod_7774_BDT_Bandit_NW))
+	&& (Npc_IsDead(Mod_7775_BDT_Bandit_NW))
+	&& (Npc_IsDead(Mod_7776_BDT_Bandit_NW))
+	&& (Npc_IsDead(Mod_7777_BDT_Bandit_NW))
+	&& (Npc_IsDead(Mod_7778_BDT_Bandit_NW))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Cavalorn_Banditen4_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Cavalorn_Banditen4_15_00"); //Du erinnerst dich an die Banditen?
+	AI_Output(self, hero, "Info_Mod_Cavalorn_Banditen4_08_01"); //Na klar. Ohne sie könnte ich besser schlafen.
+	AI_Output(hero, self, "Info_Mod_Cavalorn_Banditen4_15_02"); //Dein Schlaf wird nun nicht mehr gestört werden.
+	AI_Output(self, hero, "Info_Mod_Cavalorn_Banditen4_08_03"); //(verblüfft) Wie...? Heiliger Strohsack... du meinst doch nicht etwa...
+	AI_Output(hero, self, "Info_Mod_Cavalorn_Banditen4_15_04"); //Doch. Aber sie hatten keine Entführten aus Khorinis dabei.
+	AI_Output(self, hero, "Info_Mod_Cavalorn_Banditen4_08_05"); //Verdammt, sie waren so eine gute Spur. Dann wird hier wohl nicht mehr viel passieren und ich kann mal eine Weile ausspannen.
+	AI_Output(self, hero, "Info_Mod_Cavalorn_Banditen4_08_06"); //Warte, nimm noch das hier.
+
+	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
+
+	AI_Output(self, hero, "Info_Mod_Cavalorn_Banditen4_08_01"); //Reife Leistung, echt.
+
+	B_SetTopicStatus	(TOPIC_MOD_CAVALORN_BANDITEN, LOG_SUCCESS);
+
+	B_GivePlayerXP	(200);
+
+	CurrentNQ += 1;
 };
 
 INSTANCE Info_Mod_Cavalorn_DunklerPilger (C_INFO)

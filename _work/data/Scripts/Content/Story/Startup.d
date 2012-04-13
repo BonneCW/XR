@@ -1501,6 +1501,13 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 	Wld_InsertNpc	(Mod_513_DMB_Xardas_NW,		"NW_XARDAS_START");
 	Wld_InsertNpc	(Mod_7036_NONE_Pilger_NW,		"NW_XARDAS_START");
 	Wld_InsertNpc	(Mod_557_PSINOV_Lester_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7772_BDT_Bandit_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7773_BDT_Bandit_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7774_BDT_Bandit_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7775_BDT_Bandit_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7776_BDT_Bandit_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7777_BDT_Bandit_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7778_BDT_Bandit_NW,	"NW_XARDAS_START");
 
 	// Monster
 
@@ -3074,6 +3081,13 @@ FUNC VOID INIT_NewWorld()
 		B_StartOtherRoutine	(Mod_758_KDW_Cronos_NW, "TOT");
 		B_StartOtherRoutine	(Mod_512_RDW_Cavalorn_NW, "MAGIERWEG");
 		B_StartOtherRoutine	(Mod_766_NONE_Grom_NW, "ATLAGER");
+
+		Mod_Cavalorn_Banditen = 1;
+
+		if (Npc_KnowsInfo(hero, Info_Mod_Cavalorn_Banditen3))
+		{
+			B_SetTopicStatus	(TOPIC_MOD_CAVALORN_BANDITEN, LOG_FAILED);
+		};
 
 		B_StartOtherRoutine	(Mod_1723_MIL_Gidan_NW, "ANDRE");
 		B_StartOtherRoutine	(PC_Friend_NW, "TOT");
