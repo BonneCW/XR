@@ -202,7 +202,6 @@ FUNC VOID Info_Mod_Edda_Wanzen_Info()
 	AI_Output(self, hero, "Info_Mod_Edda_Wanzen_17_01"); //Endlich kann ich zurück in meine Hütte.
 	AI_Output(self, hero, "Info_Mod_Edda_Wanzen_17_02"); //Vielen Dank. Hier hast du eine kleine Belohnung
 
-	CreateInvItems	(self, ItMi_Gold, 10);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 10);
 
 	B_GivePlayerXP	(50);
@@ -455,7 +454,7 @@ FUNC INT Info_Mod_Edda_SuppeKochenLernen2_Condition()
 	if (Mod_Edda_Lernen == 1)
 	{
 		if (Mod_Schwierigkeit != 4)
-		&& (hero.lp < 5)
+		&& (hero.lp < 3)
 		{
 			return 0;
 		};
@@ -476,7 +475,7 @@ FUNC VOID Info_Mod_Edda_SuppeKochenLernen2_Info()
 
 	if (Mod_Schwierigkeit != 4)
 	{
-		hero.lp -= 5;
+		hero.lp -= 3;
 	}
 	else
 	{

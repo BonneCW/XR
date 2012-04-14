@@ -3343,6 +3343,7 @@ INSTANCE ItWr_Paper		(C_Item)
 
 	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
 	material 			=	MAT_LEATHER;
+	TEXT[5]		= Name_Value;		COUNT[5]		= value;
 };
 
 INSTANCE ItWr_HSAufzeichnung		(C_Item)
