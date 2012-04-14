@@ -1420,6 +1420,7 @@ func void Use_SteinkreisTafel ()
 	|| (Npc_GetDistToWP(hero, "WP_STEINKREIS_06") < 500)
 	|| (Npc_GetDistToWP(hero, "WP_STEINKREIS_07") < 500)
 	|| (Npc_GetDistToWP(hero, "WP_STEINKREIS_08") < 500)
+	|| (Npc_GetDistToWP(hero, "OLDWORLDBERGE_50") < 500)
 	|| (Npc_GetDistToWP(hero, "EIS_01") < 800)
 	{
 		if (Mod_TeleportSteinkreis_Funzt == 0)

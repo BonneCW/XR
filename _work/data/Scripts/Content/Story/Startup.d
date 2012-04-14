@@ -4729,6 +4729,7 @@ FUNC VOID STARTUP_MinentalSurface ()
 	Wld_InsertNpc	(Mod_1517_SNOV_Novize_MT,	"OC1");
 	Wld_InsertNpc	(Mod_1030_SNOV_Abdi_MT,	"OC1");
 	Wld_InsertNpc	(Mod_7358_DMR_Daemonenritter_MT, "OC1");
+	Wld_InsertNpc	(Mod_7784_SNOV_Novize_MT, "OC1");
 
 	// Monster in Stollen in Felsenfestung
 
@@ -5588,7 +5589,7 @@ FUNC VOID STARTUP_MinentalSurface ()
 	Wld_InsertNpc	(Snapper,	"OW_MONSTER_NAVIGATE_02");
 	Wld_InsertNpc	(Snapper,	"OW_MONSTER_NAVIGATE_02");
 
-	// H?hle unter Klosterruine
+	// Höhle unter Klosterruine
 
 	Wld_InsertNpc	(Waran,	"OW_ABYSS_SPAWN_WARAN");
 	Wld_InsertNpc	(Waran,	"OW_ABYSS_SPAWN_WARAN");
@@ -5596,7 +5597,7 @@ FUNC VOID STARTUP_MinentalSurface ()
 	Wld_InsertNpc	(Waran,	"SPAWN_ABYSS_TO_CAVE_MOVE");
 	Wld_InsertNpc	(Waran,	"SPAWN_ABYSS_TO_CAVE_MOVE");
 
-	// Xardas versunkener Turm
+	// Xardas' versunkener Turm
 
 	Wld_InsertNpc	(ZombieRandom,	"MAGICTOWER_STAIRS");
 	Wld_InsertNpc	(ZombieRandom,	"MAGICTOWER_STAIRS");

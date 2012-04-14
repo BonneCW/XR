@@ -104,7 +104,7 @@ func void Spell_Cast_TeleportOT()
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
 	};
 
-	Npc_RemoveInvItems	(hero, ItWr_ZombieToHuman, 1);
+	//Npc_RemoveInvItems	(hero, ItWr_ZombieToHuman, 1);
 	Npc_RemoveInvItems	(hero, ItFoMuttonZombie, Npc_HasItems(hero, ItFoMuttonZombie));
 	Npc_RemoveInvItems	(hero, ItLsTorch, Npc_HasItems(hero, ItLsTorch));
 

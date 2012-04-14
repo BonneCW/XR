@@ -15,13 +15,13 @@ func void ZS_Stand_Sweeping ()
 	AI_SetWalkmode 	(self,NPC_WALK);
 		
 	if (Npc_GetDistToWP (self,self.wp) > TA_DIST_SELFWP_MAX) 
-    {
+	{
 		AI_GotoWP	(self, self.wp);
 	};
 
-	if (Npc_HasItems (self,ItMi_Broom) == 0)
+	if (Npc_HasItems (self, ItMi_Broom) == 0)
 	{
-		CreateInvItem (self,ItMi_Broom);
+		CreateInvItem (self, ItMi_Broom);
 	};	
 	self.aivar[AIV_TAPOSITION] = NOTINPOS;
 };

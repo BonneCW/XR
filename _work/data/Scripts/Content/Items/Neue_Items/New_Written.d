@@ -266,7 +266,7 @@ INSTANCE ItWr_ZombieToHuman (C_ITEM)
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
-	value 					=	5000;
+	value 					=	500;
 
 	visual 					=	"ItWr_Book_02_03.3ds";  					
 	material 				=	MAT_LEATHER;
