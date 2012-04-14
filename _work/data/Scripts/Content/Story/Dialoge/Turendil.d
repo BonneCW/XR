@@ -11,6 +11,7 @@ INSTANCE Info_Mod_Turendil_Hi (C_INFO)
 FUNC INT Info_Mod_Turendil_Hi_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Ferco_QuestThree))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Turendil_WerBistDu))
 	{
 		return 1;
 	};
@@ -768,6 +769,81 @@ FUNC VOID Info_Mod_Turendil_TradorTot_C()
 
 	B_LogEntry	(TOPIC_MOD_TURENDIL_GOLEM, "Der Auftrag ist beendet. Turendil sagte mir, dass Faice etwas von mir wollte.");
 	B_SetTopicStatus	(TOPIC_MOD_TURENDIL_GOLEM, LOG_SUCCESS);
+};
+
+INSTANCE Info_Mod_Turendil_WerBistDu (C_INFO)
+{
+	npc		= Mod_1955_VMG_Turendil_MT;
+	nr		= 1;
+	condition	= Info_Mod_Turendil_WerBistDu_Condition;
+	information	= Info_Mod_Turendil_WerBistDu_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wer bist du?";
+};
+
+FUNC INT Info_Mod_Turendil_WerBistDu_Condition()
+{
+	return 1;
+};
+
+FUNC VOID Info_Mod_Turendil_WerBistDu_Info()
+{
+	B_Say	(hero, self, "$WHOAREYOU");
+
+	AI_Output(self, hero, "Info_Mod_Turendil_WerBistDu_05_00"); //Mein Name ist Turendil. Ich bin der Stellvertreter von Faice, unserem Oberhaupt. Er ist zur Zeit sehr beschäftigt.
+	AI_Output(self, hero, "Info_Mod_Turendil_WerBistDu_05_01"); //Wie kann ich dir helfen?
+};
+
+INSTANCE Info_Mod_Turendil_Woher (C_INFO)
+{
+	npc		= Mod_1955_VMG_Turendil_MT;
+	nr		= 1;
+	condition	= Info_Mod_Turendil_Woher_Condition;
+	information	= Info_Mod_Turendil_Woher_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wo kommt ihr her?";
+};
+
+FUNC INT Info_Mod_Turendil_Woher_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Turendil_WerBistDu))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Turendil_Woher_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Turendil_Woher_15_00"); //Wo kommt ihr her?
+	AI_Output(self, hero, "Info_Mod_Turendil_Woher_05_01"); //Wir kommen aus einem kleinen Tal namens Tugettso. Dieses Tal ist Natur pur.
+	AI_Output(self, hero, "Info_Mod_Turendil_Woher_05_02"); //Wenn es soweit ist, wirst du vielleicht mal dort hin gelangen.
+};
+
+INSTANCE Info_Mod_Turendil_WasHier (C_INFO)
+{
+	npc		= Mod_1955_VMG_Turendil_MT;
+	nr		= 1;
+	condition	= Info_Mod_Turendil_WasHier_Condition;
+	information	= Info_Mod_Turendil_WasHier_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Was macht ihr hier?";
+};
+
+FUNC INT Info_Mod_Turendil_WasHier_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Turendil_WerBistDu))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Turendil_WasHier_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Turendil_WasHier_15_00"); //Was macht ihr hier?
+	AI_Output(self, hero, "Info_Mod_Turendil_WasHier_05_01"); //Wir erforschen dieses Tal und das alte Wissen, das sich hier finden lässt.
 };
 
 INSTANCE Info_Mod_Turendil_BACK (C_INFO)
