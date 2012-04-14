@@ -4,6 +4,8 @@ FUNC VOID NEBENQUESTS()
 	var int loopStart;
 	var C_Npc temp;
 	var int npcPtr;
+	var int ptr;
+	var zCVob vob;
 
 	// Nebenquests
 
@@ -1249,9 +1251,9 @@ FUNC VOID NEBENQUESTS()
 			{
 				Mod_Kardif_InfoTruhe = 0;
 
-				var int ptr; ptr = MEM_SearchVobByName("KARDIFINFOTRUHE");
+				ptr = MEM_SearchVobByName("KARDIFINFOTRUHE");
 
-				var zCVob vob; vob = MEM_PtrToInst(ptr);
+				vob = MEM_PtrToInst(ptr);
 
 				vob.trafoObjToWorld[3] = mkf(55);
 				vob.trafoObjToWorld[7] = mkf(650);
@@ -1259,6 +1261,61 @@ FUNC VOID NEBENQUESTS()
 
 				VobPositionUpdated(ptr);
 			};
+		};
+
+		// Es geht nur ums Geschäft
+
+		if (Npc_KnowsInfo(hero, Info_Mod_Nagur_Geschaeft))
+		&& (Mob_HasItems("KARDIFINFOTRUHE", ItMi_NagurPaket) == 1)
+		&& (Mod_Nagur_Geschaeft == 0)
+		{
+			Mod_Nagur_Geschaeft = 1;
+
+			B_LogEntry	(TOPIC_MOD_NAGUR_GESCHAEFT, "Ich habe das Paket in den Kisten verstaut.");
+		};
+
+		if (Mod_Nagur_Geschaeft == 1)
+		&& (Npc_GetDistToWP(hero, "NW_CITY_HABOUR_KASERN_05_01") < 500)
+		{
+			Mod_Nagur_Geschaeft = 2;
+
+			ptr = MEM_SearchVobByName("KARDIFINFOTRUHE");
+
+			vob = MEM_PtrToInst(ptr);
+
+			vob.trafoObjToWorld[3] = mkf(55);
+			vob.trafoObjToWorld[7] = mkf(650);
+			vob.trafoObjToWorld[11] = mkf(-1440);
+
+			VobPositionUpdated(ptr);
+		};
+
+		if (Mod_Nagur_Geschaeft == 2)
+		{
+			NagurGeschaefte_Scene();
+		};
+
+		if (Mod_Nagur_Geschaeft == 5)
+		&& (Npc_IsDead(Mod_7782_ASS_Assassine_NW))
+		&& (Npc_IsDead(Mod_7781_SNOV_Novize_NW))
+		&& (Npc_IsDead(Mod_7783_OUT_Schmuggler_NW))
+		{
+			Mod_Nagur_Geschaeft = 6;
+
+			B_LogEntry	(TOPIC_MOD_NAGUR_GESCHAEFT, "Ich kann jetzt Nagur davon berichten, dass seine Konkurrenten beseitigt wurden.");
+		};
+
+		if (Mod_Nagur_Geschaeft == 6)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Nagur_Geschaeft2))
+		&& (Wld_GetDay()-2 >= Mod_Nagur_Geschaeft_Tag)
+		{
+			Mod_Nagur_Geschaeft = 7;
+
+			B_RemoveNpc	(Mod_7782_ASS_Assassine_NW);
+			B_RemoveNpc	(Mod_7781_SNOV_Novize_NW);
+			B_RemoveNpc	(Mod_743_NONE_Nagur_NW);
+
+			B_StartOtherRoutine	(Mod_7783_OUT_Schmuggler_NW, "ATNAGUR");
 		};
 	};
 

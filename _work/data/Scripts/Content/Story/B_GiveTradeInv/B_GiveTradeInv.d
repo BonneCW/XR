@@ -82,6 +82,7 @@ func void B_GiveTradeInv (var C_NPC slf)
 	var C_NPC Trd_Hermy_MT;	Trd_Hermy_MT		= Hlp_GetNpc (Mod_4020_VMG_Hermy_MT);
 	var C_NPC Trd_Genn_TUG;	Trd_Genn_TUG		= Hlp_GetNpc (Mod_1959_VMG_Genn_TUG);
 	var C_NPC Trd_Gestath_EIS;	Trd_Gestath_EIS		= Hlp_GetNpc (Mod_974_OUT_Gestath_EIS);
+	var C_NPC Trd_Schmuggler_NW;	Trd_Schmuggler_NW		= Hlp_GetNpc (Mod_7783_OUT_Schmuggler_NW);
 	
 	
 //********************************************************************
@@ -165,6 +166,7 @@ func void B_GiveTradeInv (var C_NPC slf)
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Hermy_MT)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Hermy_MT	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Genn_TUG)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Genn_TUG	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Gestath_EIS)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Gestath_EIS	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Schmuggler_NW)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Schmuggler_NW	(slf);};
 		
 		slf.aivar[AIV_ChapterInv] = (Kapitel +1);
 	};		
@@ -248,6 +250,7 @@ func void B_GiveTradeInv (var C_NPC slf)
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Anor_MT)		{B_ClearDeadTrader	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Hermy_MT)		{B_ClearDeadTrader	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Genn_TUG)		{B_ClearDeadTrader	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Gestath_EIS)		{B_ClearDeadTrader	(slf);};		
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Gestath_EIS)		{B_ClearDeadTrader	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Schmuggler_NW)		{B_ClearDeadTrader	(slf);};		
 	};
 };

@@ -1,13 +1,13 @@
-var int Aabid_ItemsGiven_Chapter_1;
-var int Aabid_ItemsGiven_Chapter_2;
-var int Aabid_ItemsGiven_Chapter_3;
-var int Aabid_ItemsGiven_Chapter_4;
-var int Aabid_ItemsGiven_Chapter_5;
+var int Schmuggler_ItemsGiven_Chapter_1;
+var int Schmuggler_ItemsGiven_Chapter_2;
+var int Schmuggler_ItemsGiven_Chapter_3;
+var int Schmuggler_ItemsGiven_Chapter_4;
+var int Schmuggler_ItemsGiven_Chapter_5;
 
-FUNC VOID B_GiveTradeInv_Mod_Aabid_NW (var C_NPC slf)
+FUNC VOID B_GiveTradeInv_Mod_Schmuggler_NW (var C_NPC slf)
 {
 	if ((Kapitel >= 1)
-	&& (Aabid_ItemsGiven_Chapter_1 == FALSE))
+	&& (Schmuggler_ItemsGiven_Chapter_1 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 100); 
 		CreateInvItems (slf, ItMi_GoldNugget_Addon, 2); 
@@ -23,11 +23,11 @@ FUNC VOID B_GiveTradeInv_Mod_Aabid_NW (var C_NPC slf)
 		
 		CreateInvItems (slf,ItAm_Prot_Point_01 , 1);
 				
-		Aabid_ItemsGiven_Chapter_1 = TRUE;
+		Schmuggler_ItemsGiven_Chapter_1 = TRUE;
 	};
 	
 	if ((Kapitel >= 2)
-	&& (Aabid_ItemsGiven_Chapter_2 == FALSE))
+	&& (Schmuggler_ItemsGiven_Chapter_2 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 100); 
 		CreateInvItems (slf,ItMiSwordraw,1); 
@@ -37,11 +37,11 @@ FUNC VOID B_GiveTradeInv_Mod_Aabid_NW (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Arrow, 60);
 		CreateInvItems (slf, ItRw_Bolt,  60);
 			
-		Aabid_ItemsGiven_Chapter_2 = TRUE;
+		Schmuggler_ItemsGiven_Chapter_2 = TRUE;
 	};
 
 	if ((Kapitel >= 3)
-	&& (Aabid_ItemsGiven_Chapter_3 == FALSE))
+	&& (Schmuggler_ItemsGiven_Chapter_3 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 100); 
 		CreateInvItems (slf,ItFo_Wine,1); 
@@ -50,11 +50,11 @@ FUNC VOID B_GiveTradeInv_Mod_Aabid_NW (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Arrow, 60);
 		CreateInvItems (slf, ItRw_Bolt,  60);
 			
-		Aabid_ItemsGiven_Chapter_3 = TRUE;
+		Schmuggler_ItemsGiven_Chapter_3 = TRUE;
 	};
 
 	if ((Kapitel >= 4)
-	&& (Aabid_ItemsGiven_Chapter_4 == FALSE))
+	&& (Schmuggler_ItemsGiven_Chapter_4 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 150); 
 		CreateInvItems (slf,ItMi_Rockcrystal,1); 
@@ -62,11 +62,11 @@ FUNC VOID B_GiveTradeInv_Mod_Aabid_NW (var C_NPC slf)
 		CreateInvItems (slf,ItPl_Health_Herb_03 , 5);
 		CreateInvItems (slf, ItRw_Arrow, 60);
 		CreateInvItems (slf, ItRw_Bolt,  60);	
-		Aabid_ItemsGiven_Chapter_4 = TRUE;
+		Schmuggler_ItemsGiven_Chapter_4 = TRUE;
 	};
 
 	if ((Kapitel >= 5)
-	&& (Aabid_ItemsGiven_Chapter_5 == FALSE))
+	&& (Schmuggler_ItemsGiven_Chapter_5 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 200); 
 		CreateInvItems (slf,ItMi_Coal,3); 
@@ -76,6 +76,6 @@ FUNC VOID B_GiveTradeInv_Mod_Aabid_NW (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Arrow, 160);
 		CreateInvItems (slf, ItRw_Bolt,  160);	
 		
-		Aabid_ItemsGiven_Chapter_5 = TRUE;
+		Schmuggler_ItemsGiven_Chapter_5 = TRUE;
 	};
 };

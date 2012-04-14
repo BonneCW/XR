@@ -47,6 +47,9 @@ FUNC VOID ChangeStatusMenu (var string field, var string text)
 
 FUNC VOID FRAMEFUNC ()
 {
+	// Es wird gleich MEM_Timer genutzt, der muss initialisiert sein
+	MEM_InitGlobalInst();
+
 	// Triggernachricht senden
 	Wld_SendTrigger ("FRAMETRIGGER"); //ruft meineSchleifenFunktion auf
 
@@ -154,6 +157,8 @@ FUNC VOID FRAMEFUNC ()
 		{
 			Offline_Modus = FALSE;
 			ValidateUserPasswort = 1;
+
+			PrintScreen	("Oh JE", -1, -1, FONT_SCREEN, 20);
 
 			Mod_OnlineMode = 0;
 
@@ -438,8 +443,6 @@ FUNC VOID FRAMEFUNC ()
 	// Pfeile bleiben in Welt stecken
 
 	ZaphodPfeilExchange();
-
-	//FDL_FRAMEUPDATE();
 
 	// Triggerscript holen:
 	var int ptr; ptr = MEM_SearchVobByName ("FRAMETRIGGER");

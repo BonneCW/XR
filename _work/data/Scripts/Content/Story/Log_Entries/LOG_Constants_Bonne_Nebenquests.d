@@ -122,3 +122,4 @@ const string TOPIC_MOD_GILDO_UNKRAUT	= "Zurück zu den Wurzeln";
 const string TOPIC_MOD_KIMON_FREUDENSPENDER	= "Freudenspender gesucht";
 const string TOPIC_MOD_CAVALORN_BANDITEN	= "Ein nicht gegebener Auftrag";
 const string TOPIC_MOD_RIORDIAN_PLAGEGEISTER	= "Plagegeister";
+const string TOPIC_MOD_NAGUR_GESCHAEFT	= "Es geht nur ums Geschäft";

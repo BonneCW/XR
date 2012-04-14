@@ -46,6 +46,8 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_Nagur_Geschaeft;
+var int Mod_Nagur_Geschaeft_Tag;
 var int Mod_Kardif_InfoTruhe;
 var int Mod_Kardif_Info;
 var int Mod_Riordian_Geister;

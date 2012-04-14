@@ -79,6 +79,100 @@ FUNC VOID Info_Mod_Nagur_AkahaschTot_Info()
 	B_GivePlayerXP	(200);
 };
 
+INSTANCE Info_Mod_Nagur_Geschaeft (C_INFO)
+{
+	npc		= Mod_743_NONE_Nagur_NW;
+	nr		= 1;
+	condition	= Info_Mod_Nagur_Geschaeft_Condition;
+	information	= Info_Mod_Nagur_Geschaeft_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Nagur_Geschaeft_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Nagur_AkahaschTot))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Nagur_Geschaeft_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_00"); //Gut, dass jetzt hier auftauchst. Ich habe mal wieder einen Job für dich.
+	AI_Output(hero, self, "Info_Mod_Nagur_Geschaeft_15_01"); //Wen soll ich diesmal umbringen?
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_02"); //Den verräterischen Abschaum, der mal für mich gearbeitet hat.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_03"); //Zwei von meinen Jungs machen nämlich seit kurzem gemeinsame Sache mit dem Schmugglerpack, das sich hier im Hafenviertel breit gemacht hat.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_04"); //Jetzt glauben sie, mir die Preise diktieren zu können und versuchen mich Stück für Stück aus den Geschäften zu verdrängen.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_05"); //Das wird aber nicht passieren ... denn du wirst ein Exempel an ihnen statuieren.
+	AI_Output(hero, self, "Info_Mod_Nagur_Geschaeft_15_06"); //Und was springt für mich dabei heraus?
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_07"); //Nun, ich gebe dir zum einen 200 Goldmünzen, zum anderen darfst du alles behalten, was du bei diesen Bastarden findest.
+	AI_Output(hero, self, "Info_Mod_Nagur_Geschaeft_15_08"); //Und wo finde ich sie?
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_09"); //Die Frage lautet in dem Fall wie. Du wirst in den Kisten zwischen Lagerhaus und Lastenkran ein Paket deponieren und anschließend zum Baum über dem Lagerhaus gehen, um von dort aus alles im Blick zu haben.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_10"); //Einer von den Bastarden sollte kurz danach das Paket holen und in ihr Versteck gehen.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_11"); //Du wirst ihm folgen und dort die Mistkerle alle machen. Noch Fragen? Nein? Dann hast du hier das Paket.
+
+	B_GiveInvItems	(self, hero, ItMi_NagurPaket, 1);
+
+	Log_CreateTopic	(TOPIC_MOD_NAGUR_GESCHAEFT, LOG_MISSION);
+	B_SetTopicStatus	(TOPIC_MOD_NAGUR_GESCHAEFT, LOG_RUNNING);
+	B_LogEntry	(TOPIC_MOD_NAGUR_GESCHAEFT, "Nagur hat Ärger mit einigen Konkurrenten im Hafenviertel. Um das Problem zu beheben, soll ich ein Paket in den Kisten zwischen Lagerhaus und Lastenkran deponieren, zu dem Baum über dem Lagerhaus gehen und alles im Blick behalten. Sobald einer von denen das Paket holt, soll ich ihm zum Versteck folgen und sie dort alle erledigen.");
+
+	var int ptr; ptr = MEM_SearchVobByName("KARDIFINFOTRUHE");
+
+	var zCVob vob; vob = MEM_PtrToInst(ptr);
+
+	vob.trafoObjToWorld[3] = mkf(-289);
+	vob.trafoObjToWorld[7] = mkf(-181);
+	vob.trafoObjToWorld[11] = mkf(3551);
+
+	VobPositionUpdated(ptr);
+};
+
+INSTANCE Info_Mod_Nagur_Geschaeft2 (C_INFO)
+{
+	npc		= Mod_743_NONE_Nagur_NW;
+	nr		= 1;
+	condition	= Info_Mod_Nagur_Geschaeft2_Condition;
+	information	= Info_Mod_Nagur_Geschaeft2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Die Verräter und Schmuggler werden keinen Ärger mehr machen.";
+};
+
+FUNC INT Info_Mod_Nagur_Geschaeft2_Condition()
+{
+	if (Mod_Nagur_Geschaeft == 4)
+	|| (Mod_Nagur_Geschaeft == 6)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Nagur_Geschaeft2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Nagur_Geschaeft2_15_00"); //Die Verräter und Schmuggler werden keinen Ärger mehr machen.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft2_08_01"); //Ausgezeichnet. Das wird allen anderen eine Warnung sein, sich besser nicht mit mir anzulegen.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft2_08_02"); //Du hast deinen Job wieder mal gut gemacht. Hier ist dein Gold.
+
+	B_GiveInvItems	(self, hero, ItMi_Gold, 200);
+
+	if (Mod_Nagur_Geschaeft == 4)
+	{
+		B_LogEntry	(TOPIC_MOD_NAGUR_GESCHAEFT, "Ich habe gegenüber Nagur behauptet, dass ich die Jungs beseitigt hätte. Jetzt muss ich nur noch in den nächsten Tagen in der Hafenkneipe vorbeischauen.");
+
+		B_GivePlayerXP	(150);
+
+		Mod_Nagur_Geschaeft_Tag = Wld_GetDay();
+	}
+	else
+	{
+		B_SetTopicStatus	(TOPIC_MOD_NAGUR_GESCHAEFT, LOG_SUCCESS);
+
+		B_GivePlayerXP	(350);
+	};
+};
+
 INSTANCE Info_Mod_Nagur_Rache (C_INFO)
 {
 	npc		= Mod_743_NONE_Nagur_NW;

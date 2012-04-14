@@ -34,6 +34,7 @@ INSTANCE Info_Mod_Edda_SuppeKochenLernen (C_INFO)
 FUNC INT Info_Mod_Edda_SuppeKochenLernen_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Edda_Hi))
+	&& (!Mod_Edda_Lernen)
 	{
 		return 1;
 	};

@@ -1534,6 +1534,21 @@ INSTANCE ItMi_Nagelpaket (C_Item)
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
+INSTANCE ItMi_NagurPaket (C_Item)
+{
+	name 				=	"Paket";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI|ITEM_SHOW;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Packet.3ds";
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
 INSTANCE ItMi_SekobSagitta (C_Item)
 {
 	name 				=	"Paket für Sagitta";

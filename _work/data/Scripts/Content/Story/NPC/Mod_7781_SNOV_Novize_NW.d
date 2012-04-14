@@ -1,9 +1,9 @@
-INSTANCE Mod_7780_SNOV_Novize_NW (Npc_Default)
+INSTANCE Mod_7781_SNOV_Novize_NW (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= Name_Novize;
 	guild 		= GIL_OUT;
-	id 			= 7780;
+	id 			= 7781;
 	voice 		= 11;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
@@ -36,11 +36,23 @@ INSTANCE Mod_7780_SNOV_Novize_NW (Npc_Default)
 	B_SetFightSkills (self, 25); 
 	
 	// ------ TA anmelden ------
-	daily_routine 		= Rtn_Start_7780;
+	daily_routine 		= Rtn_Start_7781;
 };
 
-FUNC VOID Rtn_Start_7780 ()
+FUNC VOID Rtn_Start_7781 ()
 {
-	TA_Stand_Guarding 	(07,20,01,20,"NW_TAVERN_TO_FOREST_05_02");
-	TA_Stand_Guarding	(01,20,07,20,"NW_TAVERN_TO_FOREST_05_02");
+	TA_Smalltalk_Plaudern 	(07,20,01,20,"NW_CITY_HABOUR_13");
+	TA_Smalltalk_Plaudern	(01,20,07,20,"NW_CITY_HABOUR_13");
+};
+
+FUNC VOID Rtn_Lagerhaus_7781 ()
+{
+	TA_RunToWP	 	(07,20,01,20,"NW_CITY_HABOUR_HUT_03_IN_07");
+	TA_RunToWP		(01,20,07,20,"NW_CITY_HABOUR_HUT_03_IN_07");
+};
+
+FUNC VOID Rtn_Tot_7781 ()
+{
+	TA_RunToWP	 	(07,20,01,20,"TOT");
+	TA_RunToWP		(01,20,07,20,"TOT");
 };
