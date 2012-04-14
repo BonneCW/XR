@@ -3786,7 +3786,7 @@ INSTANCE ItMi_TugettsoStein (C_Item)
 //-------------------------------------------------------------
 INSTANCE ItMi_ApfelTabak(C_Item)
 {
-	name 				=	"Apfel Tabak";
+	name 				=	"Apfeltabak";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -3825,7 +3825,7 @@ INSTANCE ItMi_StarkerTabak(C_Item)
 //-------------------------------------------------------------
 INSTANCE ItMi_PilzTabak(C_Item)
 {
-	name 				=	"Pilz Tabak";
+	name 				=	"Pilztabak";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -3869,7 +3869,7 @@ INSTANCE ItMi_DoppelTabak(C_Item)
 //-------------------------------------------------------------
 INSTANCE ItMi_Honigtabak(C_Item)
 {
-	name 				=	"Honig Tabak";
+	name 				=	"Honigtabak";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -3890,7 +3890,7 @@ INSTANCE ItMi_Honigtabak(C_Item)
 //-------------------------------------------------------------
 INSTANCE ItMi_SumpfTabak(C_Item)
 {
-	name 				=	"Krautabak";
+	name 				=	"Krauttabak";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -3929,7 +3929,7 @@ INSTANCE ItMi_Stuff_Pipe_01 (C_Item)
 };
 INSTANCE ItMi_LeePipe (C_Item)
 {
-	name 				=	"Lee's Pfeife";
+	name 				=	"Lees Pfeife";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI|ITEM_SHOW;

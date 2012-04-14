@@ -37,7 +37,7 @@ FUNC VOID PC_WaterpipeAbuyin_Tabak_Info()
 	
 	Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, "Pilztabak (250 Gold)", PC_WaterpipeAbuyin_Tabak_Mushroom_01);
 	Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, "Krauttabak (250 Gold)", PC_WaterpipeAbuyin_Tabak_Swampherb);
-	Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, "Honig Tabak (250 Gold)", PC_WaterpipeAbuyin_Tabak_Honey);
+	Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, "Honigtabak (250 Gold)", PC_WaterpipeAbuyin_Tabak_Honey);
 	if (Kapitel >= 3)
 	{
 		//Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, "Doppeltabak", PC_WaterpipeAbuyin_Tabak_Doppel);
