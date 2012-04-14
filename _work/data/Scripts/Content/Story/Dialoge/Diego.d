@@ -843,7 +843,7 @@ INSTANCE Info_Mod_Diego_Joe (C_INFO)
 FUNC INT Info_Mod_Diego_Joe_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Joe_Diego))
-	&& (Npc_HasItems(hero, ItKe_Lockpick) > 4)
+	&& (Npc_HasItems(hero, ItKe_Lockpick) >= 5)
 	&& (Mod_PalaKristall == 0)
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Diego_Treffen))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen)))
@@ -862,7 +862,7 @@ FUNC VOID Info_Mod_Diego_Joe_Info()
 
 	B_LogEntry	(TOPIC_MOD_DIEGO_KRISTALL, "Diego ist unterwegs. Morgen kann ich mir den Kristall bei ihm abholen.");
 
-	Mod_DiegoHoltKristall	= Wld_GetDay();
+	Mod_DiegoHoltKristall = Wld_GetDay();
 
 	Mod_PalaKristall = 2;
 
@@ -968,13 +968,14 @@ FUNC VOID Info_Mod_Diego_HabBeweise_Info()
 	AI_Output(hero, self, "Info_Mod_Diego_HabBeweise_15_00"); //Ich die Beweise.
 
 	B_GiveInvItems	(hero, self, ItWr_AL_GebrandtDokumente, 1);
+
 	B_UseFakeScroll ();
 
 	AI_Output(self, hero, "Info_Mod_Diego_HabBeweise_11_01"); //Sehr gut, zeig Lord Andre diese Beweise. Wir treffen uns danach vor Gerbrandts Haus.
 
 	B_GiveInvItems	(self, hero, ItWr_AL_GebrandtDokumente, 1);
 
-	B_LogEntry	(TOPIC_MOD_AL_MORGAHARD, "Diego hat die Beweise gesehen, ich soll sie Lord Andre geben und ihn dann vor Gerbrandts Haus treffen.");
+	B_LogEntry	(TOPIC_MOD_AL_MORGAHARD, "Diego hat die Beweise gesehen. Ich soll sie Lord Andre geben und ihn dann vor Gerbrandts Haus treffen.");
 
 	B_StartOtherRoutine	(self, "GERBRANDT");
 };
@@ -1004,7 +1005,6 @@ FUNC VOID Info_Mod_Diego_GerbrandtGefangen_Info()
 	AI_Output(hero, self, "Info_Mod_Diego_GerbrandtGefangen_15_00"); //Sie wurden festgenommen.
 	AI_Output(self, hero, "Info_Mod_Diego_GerbrandtGefangen_11_01"); //Gut, Gerbrandts Haus gehört jetzt mir. Ich habe noch etwas von Gerbrandts Geld gefunden. Ich glaube, du kannst es brauchen.
 
-	CreateInvItems	(self, ItMi_Gold, 1000);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 1000);
 
 	B_LogEntry	(TOPIC_MOD_AL_MORGAHARD, "Diego gab mir das Geld von Gerbrandt als Lohn. Jetzt sollte ich Esteban berichten, dass Morgahard in die Stadt darf.");
@@ -1034,7 +1034,8 @@ FUNC INT Info_Mod_Diego_Lehrer_Condition()
 FUNC VOID Info_Mod_Diego_Lehrer_Info()
 {
 	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
-		AI_Output(self, hero, "Info_Mod_Diego_Lehrer_11_00"); //Ich kann dir beibringen wie du Schlösser knackst.
+
+	AI_Output(self, hero, "Info_Mod_Diego_Lehrer_11_00"); //Ich kann dir beibringen wie du Schlösser knackst.
 
 	if (Mod_Schwierigkeit != 4)
 	{
@@ -1085,7 +1086,7 @@ FUNC VOID Info_Mod_Diego_Flugblatt_Info()
 
 	AI_Output(self, hero, "Info_Mod_Alrik_Flugblätter_11_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
 
-	Mod_Flugblätter	=	Mod_Flugblätter + 1;
+	Mod_Flugblätter += 1;
 };
 
 INSTANCE Info_Mod_Diego_RDW (C_INFO)

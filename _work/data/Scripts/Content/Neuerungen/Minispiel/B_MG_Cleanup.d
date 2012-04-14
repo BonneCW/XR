@@ -42,6 +42,4 @@ FUNC VOID B_MG_Cleanup()
 	};
 
 	Cursor_Hide();
-
-	delete(Hero_Troll);
 };

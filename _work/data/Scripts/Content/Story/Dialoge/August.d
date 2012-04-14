@@ -108,6 +108,9 @@ FUNC INT Info_Mod_August_EssenGeholt_Condition()
 FUNC VOID Info_Mod_August_EssenGeholt_Info()
 {
 	AI_Output(hero, self, "Info_Mod_August_EssenGeholt_15_00"); //Hier hast du dein Essen.
+
+	B_GiveInvItems	(hero, self, ItFo_LammPoekelfleisch, 2);
+
 	AI_Output(self, hero, "Info_Mod_August_EssenGeholt_13_01"); //Dank dir! Nimm das!
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);

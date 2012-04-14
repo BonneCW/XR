@@ -205,7 +205,7 @@ INSTANCE Info_Mod_Vatras_Novize (C_INFO)
 FUNC INT Info_Mod_Vatras_Novize_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Vatras_Hi))
-	&& (Mod_Gilde	==	0)
+	&& (Mod_Gilde == 0)
 	{
 		return 1;
 	};
@@ -235,7 +235,7 @@ INSTANCE Info_Mod_Vatras_Aufgabe (C_INFO)
 FUNC INT Info_Mod_Vatras_Aufgabe_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Vatras_Novize))
-	&& (Mod_Gilde	==	0)
+	&& (Mod_Gilde == 0)
 	{
 		return 1;
 	};
@@ -261,6 +261,8 @@ FUNC VOID Info_Mod_Vatras_Aufgabe_Wo()
 	AI_Output(self, hero, "Info_Mod_Vatras_Aufgabe_Wo_05_01"); //Geh in den Hafen und sprich dort mit einem unserer Mitglieder. Sein Name ist Diego.
 	AI_Output(self, hero, "Info_Mod_Vatras_Aufgabe_Wo_05_02"); //Sag ihm, dass ich dich schicke, dann wird er dir alles erzählen was er weiß.
 
+	Info_ClearChoices	(Info_Mod_Vatras_Aufgabe);
+
 	B_LogEntry	(TOPIC_MOD_VERMISSTE, "Ich soll in den Hafen und dort mit Diego sprechen. Er wird mir alles erzählen was sie über die Vermissten wissen.");
 };
 
@@ -278,7 +280,7 @@ INSTANCE Info_Mod_Vatras_ErsteInfos (C_INFO)
 FUNC INT Info_Mod_Vatras_ErsteInfos_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Gerbrandt_Da))
-	&& (Sklavenliste_OneTime	==	TRUE)
+	&& (Sklavenliste_OneTime == TRUE)
 	&& (Npc_HasItems(hero, Mod_Sklavenliste_DMR) == 1)
 	{
 		return 1;
@@ -396,7 +398,7 @@ FUNC VOID Info_Mod_Vatras_RealInfos_Info()
 	AI_Output(self, hero, "Info_Mod_Vatras_RealInfos_05_11"); //Wie dem auch sei, du hast deine Sache mehr als gut gemacht und mir bewiesen, dass du unserer Gemeinschaft ein würdiger Mitbruder sein wirst.
 	AI_Output(self, hero, "Info_Mod_Vatras_RealInfos_05_12"); //Deiner Aufnahme in unsere Reihen steht nun nichts mehr im Wege.
 
-	if (Mod_Gilde	==	0)
+	if (Mod_Gilde == 0)
 	{
 		AI_Output(self, hero, "Info_Mod_Vatras_RealInfos_05_13"); //Du kannst dich uns nun anschließen.
 	}
@@ -427,7 +429,7 @@ INSTANCE Info_Mod_Vatras_Aufnahme (C_INFO)
 
 FUNC INT Info_Mod_vatras_Aufnahme_Condition()
 {
-	if (Mod_Gilde	==	0)
+	if (Mod_Gilde == 0)
 	&& ((Npc_KnowsInfo(hero, Info_Mod_vatras_RealInfos))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Vatras_Kristall)))
 	{
@@ -439,7 +441,7 @@ FUNC VOID Info_Mod_vatras_Aufnahme_Info()
 {
 	AI_Output(hero, self, "Info_Mod_vatras_Aufnahme_15_00"); //Ich bin bereit mich euch anzuschließen.
 	
-	if (hero.level	>=	5)
+	if (hero.level >= 5)
 	{
 		AI_Output(self, hero, "Info_Mod_vatras_Aufnahme_05_01"); //Du bist bereit dich uns anzuschließen.
 		AI_Output(self, hero, "Info_Mod_vatras_Aufnahme_05_02"); //Doch wenn du einmal eine unserer Rüstungen trägst, dann gibt es kein zurück mehr.
@@ -510,9 +512,7 @@ FUNC VOID Info_Mod_vatras_Aufnahme_Ja()
 	B_SetTopicStatus	(TOPIC_MOD_DÄMONENBESCHWÖRER, LOG_FAILED);
 	B_SetTopicStatus	(TOPIC_MOD_SÖLDNER, LOG_FAILED);
 
-	Monster_Max += 6;
-
-	Mod_Gilde	=	9;
+	Mod_Gilde = 9;
 
 	hero.guild = GIL_NOV;
 	Npc_SetTrueGuild	(hero, GIL_NOV);
@@ -607,7 +607,7 @@ FUNC VOID Info_Mod_Vatras_Hexenfluch_Info()
 
 	if (Mod_AttraktiveFrau == 2)
 	{
-		Info_AddChoice	(Info_Mod_Vatras_Hexenfluch, "Ähh,… sie sprach mich an und machte mir anzügliche Angebote.", Info_Mod_Vatras_Hexenfluch_C);
+		Info_AddChoice	(Info_Mod_Vatras_Hexenfluch, "Ähh ... sie sprach mich an und machte mir anzügliche Angebote.", Info_Mod_Vatras_Hexenfluch_C);
 	};
 	Info_AddChoice	(Info_Mod_Vatras_Hexenfluch, "Sie sprach mich an und ich war ihr plötzlich verfallen.", Info_Mod_Vatras_Hexenfluch_B);
 	Info_AddChoice	(Info_Mod_Vatras_Hexenfluch, "Nicht viel. Sie sprach mir nur an und ich war plötzlich in diesem Zustand.", Info_Mod_Vatras_Hexenfluch_A);
@@ -615,7 +615,7 @@ FUNC VOID Info_Mod_Vatras_Hexenfluch_Info()
 
 FUNC VOID Info_Mod_Vatras_Hexenfluch_C()
 {
-	AI_Output(hero, self, "Info_Mod_Vatras_Hexenfluch_C_15_00"); //Ähh,… sie sprach mich an und machte mir anzügliche Angebote. Es tut mir leid. Ich war töricht mich darauf einzulassen.
+	AI_Output(hero, self, "Info_Mod_Vatras_Hexenfluch_C_15_00"); //Ähh ... sie sprach mich an und machte mir anzügliche Angebote. Es tut mir leid. Ich war töricht mich darauf einzulassen.
 	AI_Output(self, hero, "Info_Mod_Vatras_Hexenfluch_C_05_01"); //Was?! Ja, wirklich unwürdig hast du dich gebärdet. (Etwas ruhiger) Aber ich halte dir zu gute, dass du mir die Wahrheit sagst.
 	AI_Output(self, hero, "Info_Mod_Vatras_Hexenfluch_C_05_02"); //Ich hoffe, dass du aus deinem Fehler gelernt hast. Begib dich jetzt ins Kloster zu Pyrokar, da ich dir bei diesem Anliegen leider nicht helfen kann.
 
@@ -716,7 +716,6 @@ FUNC VOID Info_Mod_Vatras_NovizenTrank_Info()
 	AI_Output(hero, self, "Info_Mod_Vatras_NovizenTrank_15_03"); //Die Magie Innos reicht nicht aus, die Novizen zu heilen, deshalb wird deine Heilkunst benötigt.
 	AI_Output(self, hero, "Info_Mod_Vatras_NovizenTrank_05_04"); //Ah, das schwarze Fieber. Nimm diesen Trank, er sollte helfen.
 
-	CreateInvItems	(self, VatrasNovizenTrunk, 1);
 	B_GiveInvItems	(self, hero, VatrasNovizenTrunk, 1);
 
 	B_LogEntry	(TOPIC_MOD_DARONSGEFALLEN, "Vatras hat mir die Medizin gegeben.");

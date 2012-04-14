@@ -41,7 +41,7 @@ func void Spell_Cast_Shrink()
 	
 	if (other.flags != NPC_FLAG_IMMORTAL)		//nicht auf Immortals
 	&& (other.guild > GIL_SEPERATOR_HUM)		//nicht auf Humans
-	&& (other.aivar[AIV_MM_ShrinkState]==0)		//nur auf bisher ungeschrumpfte Monster!
+	&& (other.aivar[AIV_MM_ShrinkState] == 0)	//nur auf bisher ungeschrumpfte Monster!
 	{		
 		Npc_ClearAIQueue	(other);
 		B_ClearPerceptions	(other);

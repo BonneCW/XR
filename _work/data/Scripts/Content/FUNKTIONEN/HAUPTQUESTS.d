@@ -1505,7 +1505,7 @@ FUNC VOID HAUPTQUESTS()
 
 				B_LogEntry	(TOPIC_MOD_DUNKLEMAGIE, "Die Vision hat Argez gezeigt, als er seinen ungeplanten Zauber ausstieß. Ungeplant? Oder spielt er die ganze Zeit über nur mit uns?");
 
-				PlayVideo ("Xeres' Rückkehr\XR_ArgezVision.bik");
+				PlayVideo ("Xeres\XR_ArgezVision.bik");
 			};
 		};
 
@@ -1674,20 +1674,6 @@ FUNC VOID HAUPTQUESTS()
 
 		if (XardasLetterForHeroOT == TRUE)
 		&& (TooLessMana == 1)
-		&& (Mod_OT_Monolog_01 == FALSE)
-		{
-			Npc_ClearAIQueue	(hero);
-
-			AI_StandUp	(hero);
-
-			AI_Output(hero, NULL, "Info_Mod_Hero_OT_Start_15_00"); //Na prima, als Untoter kann ich mich nicht teleportieren. Ich muss zuerst einen Weg zurück ins Leben finden. Aber wie? Ich habe schon alles mitgenommen, was der Tempel zu bieten hat, bevor ich dem Schläfer gegenübergetreten bin. (überlegt) Hmm, vielleicht kann ich durch die Erdbeben an Orte gelangen, die mir vorher verwehrt geblieben sind...?
-
-			B_LogEntry	(TOPIC_MOD_ANFANG, "Na prima, als Untoter kann ich mich nicht teleportieren. Ich muss zuerst einen Weg zurück ins Leben finden. Aber wie? Ich habe schon alles mitgenommen, was der Tempel zu bieten hat, bevor ich dem Schläfer gegenübergetreten bin. (überlegt) Hmm, vielleicht kann ich durch die Erdbeben an Orte gelangen, die mir vorher verwehrt geblieben sind...?");
-
-			Mod_OT_Monolog_01 = TRUE;
-		};
-
-		if (TooLessMana == 1)
 		{
 			OTTeleportScene();
 		};

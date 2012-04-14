@@ -4,7 +4,6 @@
 
 FUNC void B_AssessFollowPlayer ()
 {
-
 	//FUNC
 	
 	if (Npc_GetDistToNpc(self, hero) < self.aivar[AIV_FollowDist])
@@ -32,12 +31,6 @@ func void B_AssessFollowFightSound()
 	};
 };
 
-// ---------------------------------
-func void B_MoveFollowNpc()
-{
-	//zuckelt nur
-};
-
 // --------------------------
 func void ZS_Follow_Player ()
 {
@@ -61,11 +54,10 @@ func void ZS_Follow_Player ()
 	Npc_PercEnable (self, PERC_ASSESSPLAYER	, B_AssessFollowPlayer); 
 	Npc_PercEnable (self, PERC_ASSESSENEMY	, B_AssessEnemy); 
 	Npc_PercEnable (self, PERC_ASSESSTALK	, B_AssessTalk); 
-	Npc_PercEnable (self, PERC_MOVEMOB		, B_MoveMob); 
+	Npc_PercEnable (self, PERC_MOVEMOB	, B_MoveMob); 
 	
 	//lokale Wahrnehmungen
 	Npc_PercEnable (self, PERC_ASSESSFIGHTSOUND , B_AssessFollowFightSound);
-	//Npc_PercEnable (self, PERC_MOVENPC, B_MoveFollowNpc);
 
 	B_ResetAll (self);
 	
@@ -135,7 +127,7 @@ func int ZS_Follow_Player_Loop ()
 			|| (Npc_GetDistToWP(hero, "ARGEZ_WAY_TO_CITY_14") < 500)
 			|| (Npc_GetDistToWP(hero, "ARGEZ_WAY_TO_CITY_15") < 500)
 			|| (Npc_GetDistToWP(hero, "ARGEZ_WAY_TO_CITY_16") < 500)
-			|| (Npc_GetDistToWP(hero, "WP_SEQUENZ_ARGEZ") < 500)
+			|| (Npc_GetDistToWP(hero, "WP_SEQUENZ_ARGEZ") < 1000)
 			|| (Npc_GetDistToWP(hero, "NW_CITYFOREST_01") < 500)
 			|| (Npc_GetDistToWP(hero, "NW_CITY_TO_FOREST_STAIRS03") < 500)
 			|| (Npc_GetDistToWP(hero, "NW_CITY_TO_FOREST_STAIRS02") < 500)
@@ -195,13 +187,9 @@ func int ZS_Follow_Player_Loop ()
 
 func void ZS_Follow_Player_End ()
 {
-
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(HeroBot_NW))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(HeroBot_REL))
 	{
 		Mdl_RemoveOverlayMDS	(self, "HUMANS_SPRINT.MDS");
 	};
 };
-
-
-

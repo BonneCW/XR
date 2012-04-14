@@ -36,6 +36,8 @@ FUNC VOID OTTeleportScene()
 	{
 		TooLessMana = 2;
 
+		B_LogEntry	(TOPIC_MOD_ANFANG, "Na prima, als Untoter kann ich mich nicht teleportieren. Ich muss zuerst einen Weg zurück ins Leben finden. Aber wie? Ich habe schon alles mitgenommen, was der Tempel zu bieten hat, bevor ich dem Schläfer gegenübergetreten bin. (überlegt) Hmm, vielleicht kann ich durch die Erdbeben an Orte gelangen, die mir vorher verwehrt geblieben sind...?");
+
 		CutsceneAn = FALSE;
 	};
 
