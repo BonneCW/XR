@@ -3226,6 +3226,24 @@ FUNC VOID NEBENQUESTS()
 
 			B_StartOtherRoutine	(Mod_801_STT_Sly_MT, "TRAINING4");
 		};
+
+		if (Mod_Sly_Arena == 3)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Scatty_SlyArena))
+		&& (Wld_IsTime(18,00,19,00))
+		&& (Npc_GetDistToWP(hero, "OCR_ARENABATTLE") < 1000)
+		{
+			B_StartOtherRoutine	(Mod_801_STT_Sly_MT, "ARENAFIGHT");
+			B_StartOtherRoutine	(Mod_1871_TPL_GorKaranto_MT, "ARENAFIGHT");
+
+			Mod_Sly_Arena = 4;
+		};
+
+		if (Mod_Sly_Arena == 4)
+		&& (Npc_GetDistToWP(Mod_801_STT_Sly_MT, "OCR_ARENABATTLE") < 500)
+		&& (Npc_GetDistToWP(Mod_1871_TPL_GorKaranto_MT, "OCR_ARENABATTLE") < 500)
+		{
+			SlyKaranto_KampfScene();
+		};
 	};
 
 	// Eisgebiet

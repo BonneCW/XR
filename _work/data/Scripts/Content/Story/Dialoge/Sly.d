@@ -249,6 +249,8 @@ FUNC VOID Info_Mod_Sly_Arena5_C()
 	Info_ClearChoices	(Info_Mod_Sly_Arena5);
 
 	B_LogEntry	(TOPIC_MOD_SLY_ARENA, "Sly will sich nun bei Scatty für Arenakämpfe bewerben. Ich sollte also demnächst mal bei ihm vorbeischauen und fragen, wann Sly kämpft. Sollte Sly gewinnen, hat er mir die Hälfte seiner Bezahlung versprochen.");
+
+	B_StartOtherRoutine	(self, "ATARENA");
 };
 
 FUNC VOID Info_Mod_Sly_Arena5_B()
@@ -266,7 +268,56 @@ FUNC VOID Info_Mod_Sly_Arena5_A()
 
 	B_LogEntry	(TOPIC_MOD_SLY_ARENA, "Ich habe Sly in einem Schnellprogramm auf die Kämpfe in der Arena vorbereitet und ihm noch einen Vorschlag mitgegeben.");
 
+	Mod_Sly_Tipp = 1;
+
 	Info_Mod_Sly_Arena5_C();
+};
+
+INSTANCE Info_Mod_Sly_Arena6 (C_INFO)
+{
+	npc		= Mod_801_STT_Sly_MT;
+	nr		= 1;
+	condition	= Info_Mod_Sly_Arena6_Condition;
+	information	= Info_Mod_Sly_Arena6_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Sly_Arena6_Condition()
+{
+	if (Mod_Sly_Arena == 5)
+	|| (Mod_Sly_Arena == 6)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Sly_Arena6_Info()
+{
+	if (Mod_Sly_Arena == 5)
+	{
+		AI_Output(self, hero, "Info_Mod_Sly_Arena6_10_00"); //Schade, ich hätte diesen Karanto fast besiegt. Das schreit nach einer Revanche!
+		AI_Output(hero, self, "Info_Mod_Sly_Arena6_15_01"); //Du bleibst also dabei?
+		AI_Output(self, hero, "Info_Mod_Sly_Arena6_10_02"); //Na klar! Der soll sich nur warm anziehen!
+
+		B_GivePlayerXP	(50);
+	}
+	else
+	{
+		AI_Output(self, hero, "Info_Mod_Sly_Arena6_10_03"); //Mann, ohne deinen Hinweis mit der Defensive hätte ich Gor Karanto nicht geknackt. Knapp, aber verdient, würde ich sagen.
+		AI_Output(hero, self, "Info_Mod_Sly_Arena6_15_04"); //Glückwunsch.
+		AI_Output(self, hero, "Info_Mod_Sly_Arena6_10_05"); //Hier hast du deinen Anteil.
+
+		B_GiveInvItems	(self, hero, ItMi_Gold, 150);
+
+		AI_Output(self, hero, "Info_Mod_Sly_Arena6_10_06"); //Ich fiebere schon meinen nächsten Duell entgegen.
+
+		B_GivePlayerXP	(100);
+	};
+
+	B_SetTopicStatus	(TOPIC_MOD_SLY_ARENA, LOG_SUCCESS);
+
+	CurrentNQ += 1;
 };
 
 INSTANCE Info_Mod_Sly_SLDSpy (C_INFO)
