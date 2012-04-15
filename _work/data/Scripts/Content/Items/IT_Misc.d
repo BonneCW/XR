@@ -2179,6 +2179,230 @@ INSTANCE ItMi_Sumpfkraeuter_Molerat (C_Item)//steht drin, weil auch in Welt vert
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
+INSTANCE ItMi_JackalTabak (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_01 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_02 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_03 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_04 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_05 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_06 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_07 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_08 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_09 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_10 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_11 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_12 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_13 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
 //******************************************************************************************
 //	Wertvolle Gegenstände
 //******************************************************************************************

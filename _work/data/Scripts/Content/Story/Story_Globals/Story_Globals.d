@@ -46,6 +46,21 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_Jackal_Tabak_1;
+var int Mod_Jackal_Tabak_7;
+var int Mod_JackalTabak_01;
+var int Mod_JackalTabak_02;
+var int Mod_JackalTabak_03;
+var int Mod_JackalTabak_04;
+var int Mod_JackalTabak_05;
+var int Mod_JackalTabak_06;
+var int Mod_JackalTabak_07;
+var int Mod_JackalTabak_08;
+var int Mod_JackalTabak_09;
+var int Mod_JackalTabak_10;
+var int Mod_JackalTabak_11;
+var int Mod_JackalTabak_12;
+var int Mod_JackalTabak_13;
 var int Mod_Sly_Tipp;
 var int Mod_Nagur_Geschaeft;
 var int Mod_Nagur_Geschaeft_Tag;

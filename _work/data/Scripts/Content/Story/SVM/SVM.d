@@ -635,6 +635,10 @@ CLASS C_SVM
 	// Held kennt Chromanin-Rätsel aus Vorgänger
 
 	var string KNOWSRIDDLER;
+
+	// Held riecht den Tabak von Jackal
+
+	var string SMELLTABAK;
 };     
 
 

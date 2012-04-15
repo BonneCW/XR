@@ -3244,6 +3244,190 @@ FUNC VOID NEBENQUESTS()
 		{
 			SlyKaranto_KampfScene();
 		};
+
+		// Vanille mit einem Hauch Safran
+
+		if (Mod_JackalTabak_01 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_01) < 500)
+		{
+			Mod_JackalTabak_01 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_01) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_01, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_02 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_02) < 500)
+		{
+			Mod_JackalTabak_02 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_02) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_02, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_03 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_03) < 500)
+		{
+			Mod_JackalTabak_03 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_03) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_03, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_04 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_04) < 500)
+		{
+			Mod_JackalTabak_04 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_04) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_04, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_05 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_05) < 500)
+		{
+			Mod_JackalTabak_05 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_05) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_05, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_06 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_06) < 500)
+		{
+			Mod_JackalTabak_06 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_06) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_06, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_07 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_07) < 500)
+		{
+			Mod_JackalTabak_07 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_07) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_07, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_08 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_08) < 500)
+		{
+			Mod_JackalTabak_08 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_08) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_08, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_09 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_09) < 500)
+		{
+			Mod_JackalTabak_09 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_09) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_09, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_10 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_10) < 500)
+		{
+			Mod_JackalTabak_10 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_10) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_10, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_11 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_11) < 500)
+		{
+			Mod_JackalTabak_11 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_11) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_11, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_12 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_12) < 500)
+		{
+			Mod_JackalTabak_12 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_12) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_12, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_13 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_13) < 500)
+		{
+			Mod_JackalTabak_13 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_13) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_13, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
 	};
 
 	// Eisgebiet

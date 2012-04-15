@@ -1,3 +1,196 @@
+INSTANCE Info_Mod_Jackal_Hi (C_INFO)
+{
+	npc		= Mod_1107_GRD_Jackal_MT;
+	nr		= 1;
+	condition	= Info_Mod_Jackal_Hi_Condition;
+	information	= Info_Mod_Jackal_Hi_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Jackal_Hi_Condition()
+{
+	return 1;
+};
+
+FUNC VOID Info_Mod_Jackal_Hi_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Jackal_Hi_07_00"); //(schlecht gelaunt) Na, sieht mal einer an. Da hat man schon einen schlechten Tag, und dann kommst auch noch du.
+};
+
+INSTANCE Info_Mod_Jackal_WoProblem (C_INFO)
+{
+	npc		= Mod_1107_GRD_Jackal_MT;
+	nr		= 1;
+	condition	= Info_Mod_Jackal_WoProblem_Condition;
+	information	= Info_Mod_Jackal_WoProblem_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wo ist das Problem?";
+};
+
+FUNC INT Info_Mod_Jackal_WoProblem_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Jackal_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Jackal_WoProblem_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Jackal_WoProblem_15_00"); //Wo ist das Problem?
+	AI_Output(self, hero, "Info_Mod_Jackal_WoProblem_07_01"); //Ich kann dich einfach nicht leiden.
+	AI_Output(hero, self, "Info_Mod_Jackal_WoProblem_15_02"); //Nein, ich meine, abgesehen von mir.
+	AI_Output(self, hero, "Info_Mod_Jackal_WoProblem_07_03"); //Ach, ist halt scheiße. Ich könnte mir in den Arsch beißen.
+	AI_Output(self, hero, "Info_Mod_Jackal_WoProblem_07_04"); //Gestern Abend hab ich mit den Jungs am Lagerfeuer in der Burg gesoffen, und als sie dann ihre Sumpfkrautstängel ausgepackt haben, hab ich angefangen, von meinem Kästchen mit Varant-Tabak zu schwärmen.
+	AI_Output(self, hero, "Info_Mod_Jackal_WoProblem_07_05"); //Das ist wirklich eine der besten Sorten, die es gibt, und natürlich wollten alle das Kästchen sehen.
+	AI_Output(self, hero, "Info_Mod_Jackal_WoProblem_07_06"); //Betrunken wie ich war, hab ich es geholt und gezeigt, und eh ich mich versah, hatte ich den ganzen Tabak verschenkt, bis auf den letzten Krümel.
+	AI_Output(self, hero, "Info_Mod_Jackal_WoProblem_07_07"); //Heute morgen wusste natürlich niemand mehr was davon, und ich hab auch keine Ahnung, wem ich alles was gegeben habe.
+	AI_Output(self, hero, "Info_Mod_Jackal_WoProblem_07_08"); //Der Tabak ist jetzt sicher in der ganzen Burg und im ganzen Lager verteilt.
+
+	Info_ClearChoices	(Info_Mod_Jackal_WoProblem);
+
+	Info_AddChoice	(Info_Mod_Jackal_WoProblem, "Den Tabak wirst du wohl nie wiedersehen.", Info_Mod_Jackal_WoProblem_B);
+	Info_AddChoice	(Info_Mod_Jackal_WoProblem, "Ich könnte ja mal die Augen offen halten.", Info_Mod_Jackal_WoProblem_A);
+};
+
+FUNC VOID Info_Mod_Jackal_WoProblem_B()
+{
+	AI_Output(hero, self, "Info_Mod_Jackal_WoProblem_B_15_00"); //(übertrieben mitfühlend) Den Tabak wirst du wohl nie wiedersehen.
+	AI_Output(self, hero, "Info_Mod_Jackal_WoProblem_B_07_01"); //Deswegen wäre ich auch gerade in der richtigen Laune, dir mit meinem Schwert ein zweites Arschloch zu stechen.
+
+	Info_ClearChoices	(Info_Mod_Jackal_WoProblem);
+};
+
+FUNC VOID Info_Mod_Jackal_WoProblem_A()
+{
+	AI_Output(hero, self, "Info_Mod_Jackal_WoProblem_A_15_00"); //Ich könnte ja mal die Augen offen halten.
+	AI_Output(self, hero, "Info_Mod_Jackal_WoProblem_A_07_01"); //Das wird dir nichts bringen. Den Tabak findest du nur mit deiner Nase. Er riecht durchdringend nach herber Vanille mit einem Hauch Safran.
+	AI_Output(self, hero, "Info_Mod_Jackal_WoProblem_A_07_02"); //Wenn du tatsächlich auf Reste meines Tabaks stößt, bring sie sofort zu mir!
+
+	Info_ClearChoices	(Info_Mod_Jackal_WoProblem);
+
+	Log_CreateTopic	(TOPIC_MOD_JACKAL_TABAK, LOG_MISSION);
+	B_SetTopicStatus	(TOPIC_MOD_JACKAL_TABAK, LOG_RUNNING);
+	B_LogEntry	(TOPIC_MOD_JACKAL_TABAK, "Jackal hat bei einem Besäufnis seinen ganzen Vorrat an Varant-Tabak verschenkt, will ihn jetzt aber um jeden Preis zurückhaben. Mittlerweile ist er sicher in der ganzen Burg verstreut. Ich erkenne ihn an seinem markanten Duft aus Vanille und Safran.");
+
+	Wld_InsertItem	(ItMi_JackalTabak_01, "FP_ITEM_JACKALTABAK_01");
+	Wld_InsertItem	(ItMi_JackalTabak_02, "FP_ITEM_JACKALTABAK_02");
+	Wld_InsertItem	(ItMi_JackalTabak_03, "FP_ITEM_JACKALTABAK_03");
+	Wld_InsertItem	(ItMi_JackalTabak_04, "FP_ITEM_JACKALTABAK_04");
+	Wld_InsertItem	(ItMi_JackalTabak_05, "FP_ITEM_JACKALTABAK_05");
+	Wld_InsertItem	(ItMi_JackalTabak_06, "FP_ITEM_JACKALTABAK_06");
+	Wld_InsertItem	(ItMi_JackalTabak_07, "FP_ITEM_JACKALTABAK_07");
+	Wld_InsertItem	(ItMi_JackalTabak_08, "FP_ITEM_JACKALTABAK_08");
+	Wld_InsertItem	(ItMi_JackalTabak_09, "FP_ITEM_JACKALTABAK_09");
+	Wld_InsertItem	(ItMi_JackalTabak_10, "FP_ITEM_JACKALTABAK_10");
+	Wld_InsertItem	(ItMi_JackalTabak_11, "FP_ITEM_JACKALTABAK_11");
+	Wld_InsertItem	(ItMi_JackalTabak_12, "FP_ITEM_JACKALTABAK_12");
+	Wld_InsertItem	(ItMi_JackalTabak_13, "FP_ITEM_JACKALTABAK_13");
+};
+
+INSTANCE Info_Mod_Jackal_HabTabak (C_INFO)
+{
+	npc		= Mod_1107_GRD_Jackal_MT;
+	nr		= 1;
+	condition	= Info_Mod_Jackal_HabTabak_Condition;
+	information	= Info_Mod_Jackal_HabTabak_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Ich habe hier etwas für dich ...";
+};
+
+FUNC INT Info_Mod_Jackal_HabTabak_Condition()
+{
+	if (Npc_HasItems(hero, ItMi_JackalTabak) > 0)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Jackal_HabTabak_Info()
+{
+	var int goldamount; goldamount = Npc_HasItems(hero, ItMi_JackalTAbak);
+	var int epamount; epamount = goldamount;
+
+	AI_Output(hero, self, "Info_Mod_Jackal_HabTabak_15_00"); //Ich habe hier etwas für dich ...
+
+	B_GiveInvItems	(hero, self, ItMi_JackalTabak, goldamount);
+
+	if (Npc_HasItems(self, ItMi_JackalTabak) == 13)
+	{
+		AI_Output(self, hero, "Info_Mod_Jackal_HabTabak_07_01"); //Ich fass es nicht! Das Kästchen ist wieder voll! Du hast mir meinen ganzen Tabak zurückgebracht.
+		AI_Output(self, hero, "Info_Mod_Jackal_HabTabak_07_02"); //Ich ... weiß gar nicht, was ich sagen soll. Aber dafür lass ich noch was springen.
+
+		if (Mod_Jackal_Tabak_1 == FALSE)
+		&& (Mod_Jackal_Tabak_7 == FALSE)
+		{
+			goldamount += 6;
+
+			Mod_Jackal_Tabak_1 = TRUE;
+		}
+		else if (Mod_Jackal_Tabak_1 == TRUE)
+		&& (Mod_Jackal_Tabak_7 == FALSE)
+		{
+			goldamount += 5;
+
+			Mod_Jackal_Tabak_1 = TRUE;
+		}
+		else if (Mod_Jackal_Tabak_1 == FALSE)
+		&& (Mod_Jackal_Tabak_7 == TRUE)
+		{
+			goldamount += 1;
+
+			Mod_Jackal_Tabak_1 = TRUE;
+		};
+
+		goldamount += 12;
+
+		epamount += 10;
+
+		CurrentNQ += 1;
+
+		B_SetTopicStatus	(TOPIC_MOD_JACKAL_TABAK, LOG_SUCCESS);
+	}
+	else if (Npc_HasItems(self, ItMi_JackalTabak) >= 7)
+	&& (Mod_Jackal_Tabak_7 == FALSE)
+	{
+		AI_Output(self, hero, "Info_Mod_Jackal_HabTabak_07_03"); //Das müsste mittlerweile schon mehr als Hälfte des Tabaks sein. Gute Arbeit. Das gibt einen kleinen Bonus.
+
+		if (Mod_Jackal_Tabak_1 == FALSE)
+		{
+			goldamount += 6;
+
+			Mod_Jackal_Tabak_1 = TRUE;
+		}
+		else
+		{
+			goldamount += 5;
+		};
+
+		Mod_Jackal_Tabak_7 = TRUE;
+	}
+	else if (Npc_HasItems(self, ItMi_JackalTabak) >= 1)
+	&& (Mod_Jackal_Tabak_1 == FALSE)
+	{
+		AI_Output(self, hero, "Info_Mod_Jackal_HabTabak_07_04"); //Du hast ja tatsächlich was von meinem Tabak gefunden. Jetzt hab ich wenigstens ein bisschen zurück.
+		AI_Output(self, hero, "Info_Mod_Jackal_HabTabak_07_05"); //Hier, das ist mir was wert.
+
+		goldamount += 1;
+
+		Mod_Jackal_Tabak_1 = TRUE;
+	}
+	else
+	{
+		AI_Output(self, hero, "Info_Mod_Jackal_HabTabak_07_06"); //Du hast noch mehr? Danke, Mann.
+	};
+
+	B_GiveInvItems	(self, hero, ItMi_Gold, goldamount*20);
+
+	B_GivePlayerXP	(epamount*30);
+};
+
 INSTANCE Info_Mod_Jackal_Dieb (C_INFO)
 {
 	npc		= Mod_1107_GRD_Jackal_MT;

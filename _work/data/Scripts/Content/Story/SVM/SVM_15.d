@@ -216,4 +216,8 @@ INSTANCE SVM_15	(C_SVM)		//	PLAYER	trocken,ernst
 	// Held kennt Chromanin-Rätsel aus Vorgänger
 
 	KNOWSRIDDLER	=	"SVM_15_KNOWSRIDDLER";	//Irgendwie kommt mir das bekannt vor ...
+
+	// Held riecht Tabak von Jackal
+
+	SMELLTABAK	=	"SVM_15_SMELLTABAK";	//Hier riecht es doch nach Vanille und Safran.
 };

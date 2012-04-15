@@ -37,6 +37,9 @@ FUNC VOID SlyKaranto_KampfScene()
 			Mod_801_STT_Sly_MT.flags = 0;
 		};
 
+		B_StartOtherRoutine	(Mod_1871_TPL_GorKaranto_MT, "START");
+		B_StartOtherRoutine	(Mod_801_STT_Sly_MT, "ATARENA");
+
 		Wld_SendUnTrigger	("ARENAKAMERA");
 
 		CutsceneAn = FALSE;
