@@ -13,8 +13,8 @@ PROTOTYPE Mst_Default_Troll_Black(C_Npc)
 	//----- Attribute ----	
 	attribute	[ATR_STRENGTH]		=	300;
 	attribute	[ATR_DEXTERITY]		=	50;
-	attribute	[ATR_HITPOINTS_MAX]	=	1000;
-	attribute	[ATR_HITPOINTS]		=	1000;
+	attribute	[ATR_HITPOINTS_MAX]	=	4000;
+	attribute	[ATR_HITPOINTS]		=	4000;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_Troll_Black(C_Npc)
 	protection	[PROT_POINT]		=	IMMUNE;	
 	protection	[PROT_FIRE]			=	200;
 	protection	[PROT_FLY]			=	IMMUNE;	
-	protection	[PROT_MAGIC]		=	150;
+	protection	[PROT_MAGIC]		=	IMMUNE;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	
@@ -94,20 +94,14 @@ func void B_SetVisuals_Troll_Silber()
 //************************
 INSTANCE Troll_Black	(Mst_Default_Troll_Black)
 {
-	//aivar[AIV_MaxDistToWp]			= 500;
-	//aivar[AIV_OriginalFightTactic] 	= FAI_TROLL;
+	aivar[AIV_MaxDistToWp]			= 2500;
 	B_SetVisuals_Troll_Black();
 	Npc_SetToFistMode(self);
-
-	protection	[PROT_POINT]		=	IMMUNE;	
-	protection	[PROT_FLY]			=	IMMUNE;	
 };
 
 INSTANCE BlackTrollTransform	(Mst_Default_Troll_Black)
 {
 	Npc_PercEnable (self, PERC_ASSESSSURPRISE , B_StopMagicTransform);
-	//aivar[AIV_MaxDistToWp]			= 1000;
-	//aivar[AIV_OriginalFightTactic] 	= FAI_TROLL;
 	B_SetVisuals_Troll_Black();
 	Npc_SetToFistMode(self);
 };
