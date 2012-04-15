@@ -249,6 +249,31 @@ FUNC VOID Info_Mod_Costa_Jesse2_Info()
 	B_GivePlayerXP	(50);
 };
 
+INSTANCE Info_Mod_Costa_Lagermusik (C_INFO)
+{
+	npc		= Mod_1442_BUD_Costa_MT;
+	nr		= 1;
+	condition	= Info_Mod_Costa_Lagermusik_Condition;
+	information	= Info_Mod_Costa_Lagermusik_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Willst du bei Gravos Musikgruppe mitmachen?";
+};
+
+FUNC INT Info_Mod_Costa_Lagermusik_Condition()
+{
+	if (Mod_Gravo_Schatz == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Costa_Lagermusik_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Costa_Lagermusik_15_00"); //Willst du bei Gravos Musikgruppe mitmachen?
+	AI_Output(self, hero, "Info_Mod_Costa_Lagermusik_02_01"); //(abschätzig) Was der Musik nennt, hört meine Oma vielleicht gern. Ich brauch harte Sachen, Mann. Bei seiner Dudelmusik mach ich nicht mit. Keine Chance.
+};
+
 INSTANCE Info_Mod_Costa_WarumNichtWeg (C_INFO)
 {
 	npc		= Mod_1442_BUD_Costa_MT;

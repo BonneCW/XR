@@ -46,6 +46,66 @@ FUNC VOID Info_Mod_Kyle_WarumArbeit_Info()
 	AI_Output(self, hero, "Info_Mod_Kyle_WarumArbeit_10_02"); //Wird sich schon noch zeigen, ob es so eine gute Idee war, mich so nah an seinem Thron arbeiten zu lassen ...
 };
 
+INSTANCE Info_Mod_Kyle_SchatzImSchlammsee (C_INFO)
+{
+	npc		= Mod_1428_BUD_Kyle_MT;
+	nr		= 1;
+	condition	= Info_Mod_Kyle_SchatzImSchlammsee_Condition;
+	information	= Info_Mod_Kyle_SchatzImSchlammsee_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Hör mal. Diese Sache mit dem Schatz ...";
+};
+
+FUNC INT Info_Mod_Kyle_SchatzImSchlammsee_Condition()
+{
+	if (Mod_Gravo_Schatz == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Kyle_SchatzImSchlammsee_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Kyle_SchatzImSchlammsee_15_00"); //Hör mal. Diese Sache mit dem Schatz ...
+	AI_Output(self, hero, "Info_Mod_Kyle_SchatzImSchlammsee_10_01"); //(schnauzt) Den gibt's nicht, das sollte doch klar sein!
+	AI_Output(self, hero, "Info_Mod_Kyle_SchatzImSchlammsee_10_02"); //Das hab ich Gravo nur geflüstert, damit er was zu tun hat und nicht tausend Mal pro Tag durch meine Hütte rennt.
+	AI_Output(self, hero, "Info_Mod_Kyle_SchatzImSchlammsee_10_03"); //Den anderen konnte ich das ja verklickern, aber bei Gravo hat's nichts geholfen, dass ich meinen Nachttopf in die eine Tür gestellt hab.
+	AI_Output(self, hero, "Info_Mod_Kyle_SchatzImSchlammsee_10_04"); //Soll er jetzt schön lange nach irgendwas buddeln. Wer weiß, vielleicht findet er ja irgendwann 'ne Wasserader!
+
+	B_LogEntry	(TOPIC_MOD_GRAVO_SCHATZ, "Kyle hat sich den Schatz ausgedacht, um Gravo loszuwerden.");
+};
+
+INSTANCE Info_Mod_Kyle_Lagermusik (C_INFO)
+{
+	npc		= Mod_1428_BUD_Kyle_MT;
+	nr		= 1;
+	condition	= Info_Mod_Kyle_Lagermusik_Condition;
+	information	= Info_Mod_Kyle_Lagermusik_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Gravo hat wirklich etwas gefunden. An der Stelle, zu der du ihn geschickt hast.";
+};
+
+FUNC INT Info_Mod_Kyle_Lagermusik_Condition()
+{
+	if (Mod_Gravo_Schatz == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Kyle_Lagermusik_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Kyle_Lagermusik_15_00"); //Gravo hat wirklich etwas gefunden. An der Stelle, zu der du ihn geschickt hast.
+	AI_Output(self, hero, "Info_Mod_Kyle_Lagermusik_10_01"); //(verdutzt) Ne alte Münze oder was?
+	AI_Output(hero, self, "Info_Mod_Kyle_Lagermusik_15_02"); //Nein. Garaz und Pacho haben ihre Musikinstrumente dort gelagert.
+	AI_Output(self, hero, "Info_Mod_Kyle_Lagermusik_10_03"); //(verblüfft) Vielleicht sollte ich als Wahrsager arbeiten?
+	AI_Output(self, hero, "Info_Mod_Kyle_Lagermusik_10_04"); //Hier mal meine nächste Voraussage: Gravo wird wieder wie früher tagtäglich durch meine Hütte latschen.
+	AI_Output(hero, self, "Info_Mod_Kyle_Lagermusik_15_05"); //Glaube ich kaum. Er will jetzt aufs Musikmachen umsteigen.
+	AI_Output(self, hero, "Info_Mod_Kyle_Lagermusik_10_06"); //Ja? Das wäre ja wirklich fantastisch. Hoffentlich schön weit weg von mir.
+};
+
 INSTANCE Info_Mod_Kyle_KGBuddler (C_INFO)
 {
 	npc		= Mod_1428_BUD_Kyle_MT;

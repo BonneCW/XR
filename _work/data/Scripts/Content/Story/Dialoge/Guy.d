@@ -42,6 +42,41 @@ FUNC VOID Info_Mod_Guy_AllesKlar_Info()
 	AI_Output(self, hero, "Info_Mod_Guy_AllesKlar_03_01"); //Ja, mir geht's bestens. Solange mich alle in Ruhe lassen, geht's mir bestens.
 };
 
+INSTANCE Info_Mod_Guy_Lagermusik (C_INFO)
+{
+	npc		= Mod_1427_BUD_Guy_MT;
+	nr		= 1;
+	condition	= Info_Mod_Guy_Lagermusik_Condition;
+	information	= Info_Mod_Guy_Lagermusik_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Willst du Mitglied in Gravos neuer Musikgruppe werden?";
+};
+
+FUNC INT Info_Mod_Guy_Lagermusik_Condition()
+{
+	if (Mod_Gravo_Schatz == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Guy_Lagermusik_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Guy_Lagermusik_15_00"); //Willst du Mitglied in Gravos neuer Musikgruppe werden?
+	AI_Output(self, hero, "Info_Mod_Guy_Lagermusik_03_01"); //Ich würde schon gern.
+	AI_Output(hero, self, "Info_Mod_Guy_Lagermusik_15_02"); //Aber?
+	AI_Output(self, hero, "Info_Mod_Guy_Lagermusik_03_03"); //Ich kann kein Instrument spielen. Und singen - na ja. Und auftreten schon gar nicht.
+	AI_Output(hero, self, "Info_Mod_Guy_Lagermusik_15_04"); //Das ist jetzt erst mal nicht das Problem. Gravo wird schon was für dich finden. Geh einfach zu ihm.
+	AI_Output(self, hero, "Info_Mod_Guy_Lagermusik_03_05"); //Na gut, wenn du meinst.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "ATGRAVO");
+
+	B_GivePlayerXP	(50);
+};
+
 INSTANCE Info_Mod_Guy_KGBuddler (C_INFO)
 {
 	npc		= Mod_1427_BUD_Guy_MT;

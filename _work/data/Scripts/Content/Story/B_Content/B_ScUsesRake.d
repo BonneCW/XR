@@ -465,3 +465,16 @@ FUNC VOID B_Grabraub_14_S1()
 		PrintScreen	("2 Rostige Schwerter und Silberkette gefunden", -1, YPOS_XPGained, FONT_ScreenSmall, 2);
 	};
 };
+
+FUNC VOID B_GravoSchatz_S1()
+{
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(hero))
+	&& (Mod_Gravo_Schatz == 1)
+	{
+		Mod_Gravo_Schatz = 2;
+
+		B_StartOtherRoutine	(Mod_1430_BUD_Gravo_MT, "PRESTART");
+
+		AI_GotoNpc	(Mod_1430_BUD_Gravo_MT, hero);
+	};
+};

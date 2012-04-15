@@ -40,13 +40,14 @@ FUNC VOID Rtn_start_1622 ()
 	TA_Dance		(08,30,00,01,"OCC_BARONS_GREATHALL_BERATER");
 };
 
+FUNC VOID Rtn_AtGravo_1622 ()
+{
+	TA_Stand_Eating		(11,00,07,00,"OCR_OUTSIDE_HUT_4_INSERT");
+	TA_Stand_Eating		(07,00,11,00,"OCR_OUTSIDE_HUT_4_INSERT");
+};
 
-
-
-
-
-
-
-
-
-
+FUNC VOID Rtn_Auftritt_1622 ()
+{
+	TA_Dance	(08,00,20,00,"OCR_AUDIENCE_03");
+	TA_Dance	(20,00,08,00,"OCR_AUDIENCE_03");
+};

@@ -55,6 +55,35 @@ FUNC VOID Info_Mod_Snaf_WoherZutaten_Info()
 	AI_Output(self, hero, "Info_Mod_Snaf_WoherZutaten_01_02"); //Und sonst ... was man so findet. Manchmal ist es besser, nicht zu viel drüber nachzudenken, was drin ist.
 };
 
+INSTANCE Info_Mod_Snaf_Lagermusik (C_INFO)
+{
+	npc		= Mod_965_STT_Snaf_MT;
+	nr		= 1;
+	condition	= Info_Mod_Snaf_Lagermusik_Condition;
+	information	= Info_Mod_Snaf_Lagermusik_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Was hältst du von Lagermusik?";
+};
+
+FUNC INT Info_Mod_Snaf_Lagermusik_Condition()
+{
+	if (Mod_Gravo_Schatz == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Snaf_Lagermusik_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Snaf_Lagermusik_15_00"); //Was hältst du von Lagermusik?
+	AI_Output(self, hero, "Info_Mod_Snaf_Lagermusik_01_01"); //(wollüstig) Oh, du weißt ja gar nicht, wie ich so etwas vermisse.
+	AI_Output(self, hero, "Info_Mod_Snaf_Lagermusik_01_02"); //Abends am Marktplatz zusammenkommen, einer schlägt die Saiten, einer die Trommel, und alle singen was Melancholisches vom heiteren Leben am Hof des Königs.
+	AI_Output(hero, self, "Info_Mod_Snaf_Lagermusik_15_03"); //Gravo will eine ganze Gruppe aufbauen. Willst du teilnehmen?
+	AI_Output(self, hero, "Info_Mod_Snaf_Lagermusik_01_04"); //Er will richtig auftreten? Nee, dazu fehlt mir die Zeit. Ich kann doch meinen Kochtopf nicht außer Acht lassen.
+	AI_Output(self, hero, "Info_Mod_Snaf_Lagermusik_01_05"); //Aber er kann sich sicher sein, wer der erste Besucher seiner Auftritte sein wird!
+};
+
 INSTANCE Info_Mod_Snaf_Trade (C_INFO)
 {
 	npc		= Mod_965_STT_Snaf_MT;

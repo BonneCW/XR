@@ -103,6 +103,52 @@ FUNC VOID Info_Mod_Grim_Nacht_Info()
 	AI_Output(self, hero, "Info_Mod_Grim_Nacht_06_01"); //Ach, ich ... ich vertrete mir ein wenig die Beine. Sonst kriege ich immer diese Alpträume. Ja, genau.
 };
 
+INSTANCE Info_Mod_Grim_Lagermusik (C_INFO)
+{
+	npc		= Mod_1426_BUD_Grim_MT;
+	nr		= 1;
+	condition	= Info_Mod_Grim_Lagermusik_Condition;
+	information	= Info_Mod_Grim_Lagermusik_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Gravo will eine Musikgruppe gründen. Interesse?";
+};
+
+FUNC INT Info_Mod_Grim_Lagermusik_Condition()
+{
+	if (Mod_Gravo_Schatz == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Grim_Lagermusik_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Grim_Lagermusik_15_00"); //Gravo will eine Musikgruppe gründen. Interesse?
+	AI_Output(self, hero, "Info_Mod_Grim_Lagermusik_06_01"); //(nervös) Wieso fragst du das?
+
+	Info_ClearChoices	(Info_Mod_Grim_Lagermusik);
+
+	Info_AddChoice	(Info_Mod_Grim_Lagermusik, "Vielleicht kannst du ihn ja unterstützen.", Info_Mod_Grim_Lagermusik_B);
+	Info_AddChoice	(Info_Mod_Grim_Lagermusik, "Ich will dir Angst einjagen.", Info_Mod_Grim_Lagermusik_A);
+};
+
+FUNC VOID Info_Mod_Grim_Lagermusik_B()
+{
+	AI_Output(hero, self, "Info_Mod_Grim_Lagermusik_B_15_00"); //Vielleicht kannst du ihn ja unterstützen.
+	AI_Output(self, hero, "Info_Mod_Grim_Lagermusik_B_06_01"); //(abweisend) Nein, das glaube ich nicht. Muss eh nachdenken.
+
+	Info_ClearChoices	(Info_Mod_Grim_Lagermusik);
+};
+
+FUNC VOID Info_Mod_Grim_Lagermusik_A()
+{
+	AI_Output(hero, self, "Info_Mod_Grim_Lagermusik_A_15_00"); //Ich will dir Angst einjagen.
+	AI_Output(self, hero, "Info_Mod_Grim_Lagermusik_A_06_01"); //D-das ist dir aber nicht g-g-gelungen!
+
+	Info_ClearChoices	(Info_Mod_Grim_Lagermusik);
+};
+
 INSTANCE Info_Mod_Grim_Pickpocket (C_INFO)
 {
 	npc		= Mod_1426_BUD_Grim_MT;

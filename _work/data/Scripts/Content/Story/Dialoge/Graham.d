@@ -82,6 +82,42 @@ FUNC VOID Info_Mod_Graham_WasGibts_Info()
 	AI_Output(self, hero, "Info_Mod_Graham_WasGibts_02_06"); //Die meisten wissen sich nur mit Alkohol, Sumpfkrautstängeln oder den Kämpfen in der Arena abzulenken.
 };
 
+INSTANCE Info_Mod_Graham_Lagermusik (C_INFO)
+{
+	npc		= Mod_1469_BUD_Graham_MT;
+	nr		= 1;
+	condition	= Info_Mod_Graham_Lagermusik_Condition;
+	information	= Info_Mod_Graham_Lagermusik_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Kannst du ein Instrument spielen?";
+};
+
+FUNC INT Info_Mod_Graham_Lagermusik_Condition()
+{
+	if (Mod_Gravo_Schatz == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Graham_Lagermusik_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Graham_Lagermusik_15_00"); //Kannst du ein Instrument spielen?
+	AI_Output(self, hero, "Info_Mod_Graham_Lagermusik_02_01"); //Na ja, ich bin kein Virtuose oder so... aber ein bisschen kann ich auf der Laute klimpern.
+	AI_Output(hero, self, "Info_Mod_Graham_Lagermusik_15_02"); //Gravo sucht Mitglieder für seine Gruppe. Du solltest dich mal bei ihm melden.
+	AI_Output(self, hero, "Info_Mod_Graham_Lagermusik_02_03"); //Eigentlich gern. Aber warum ausgerechnet bei Gravo?
+	AI_Output(hero, self, "Info_Mod_Graham_Lagermusik_15_04"); //Er beißt schon nicht.
+	AI_Output(self, hero, "Info_Mod_Graham_Lagermusik_02_05"); //Nicht, solange er sich an seine gute Erziehung erinnert...
+	AI_Output(self, hero, "Info_Mod_Graham_Lagermusik_02_06"); //Na gut, ich werd mal schauen, ob das was für mich ist.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "ATGRAVO");
+
+	B_GivePlayerXP	(50);
+};
+
 INSTANCE Info_Mod_Graham_Trade (C_INFO)
 {
 	npc		= Mod_1469_BUD_Graham_MT;

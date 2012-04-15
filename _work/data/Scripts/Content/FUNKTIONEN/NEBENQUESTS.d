@@ -3428,6 +3428,25 @@ FUNC VOID NEBENQUESTS()
 			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_13, 1);
 			CreateInvItems	(hero, ItMi_JackalTabak, 1);
 		};
+
+		// Lagermusik
+
+		if (Mod_Gravo_Schatz == 4)
+		&& (Wld_GetDay() > Mod_Gravo_Auftritt_Tag)
+		&& (Wld_IsTime(19,00,00,00))
+		{
+			Mod_Gravo_Schatz = 5;
+
+			B_StartOtherRoutine	(Mod_1469_BUD_Graham_MT, "AUFTRITT");
+			B_StartOtherRoutine	(Mod_1430_BUD_Gravo_MT, "AUFTRITT");
+			B_StartOtherRoutine	(Mod_1427_BUD_Guy_MT, "AUFTRITT");
+			B_StartOtherRoutine	(Mod_803_STT_Mud_MT, "AUFTRITT");
+
+			if (Npc_KnowsInfo(hero, Info_Mod_Seraphia_Lagermusik))
+			{
+				B_StartOtherRoutine	(Mod_1469_BUD_Graham_MT, "AUFTRITT");
+			};
+		};
 	};
 
 	// Eisgebiet

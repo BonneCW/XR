@@ -90,3 +90,15 @@ FUNC VOID Rtn_Safety_803 ()
 	TA_Sit_Bench		(23,00,06,00,"TOT");
 	TA_Sit_Bench		(23,00,06,00,"TOT");
 };
+
+FUNC VOID Rtn_AtGravo_803 ()
+{
+	TA_Stand_Eating		(11,00,07,00,"OCR_OUTSIDE_HUT_4_INSERT");
+	TA_Stand_Eating		(07,00,11,00,"OCR_OUTSIDE_HUT_4_INSERT");
+};
+
+FUNC VOID Rtn_Auftritt_803 ()
+{
+	TA_Concert	(05,00,20,00,"OCR_IE_UNICORN");
+	TA_Concert	(20,00,05,00,"OCR_IE_UNICORN");
+};

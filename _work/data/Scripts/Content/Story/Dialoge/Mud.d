@@ -411,6 +411,41 @@ func void Info_Mod_Mud_OrkJagd_Komm()
 	Mud_Nerve2 = 0;
 };
 
+INSTANCE Info_Mod_Mud_Lagermusik (C_INFO)
+{
+	npc		= Mod_803_STT_Mud_MT;
+	nr 		= 1;
+	condition	= Info_Mod_Mud_Lagermusik_Condition;
+	information	= Info_Mod_Mud_Lagermusik_Info;
+	permanent	= 0;
+	important 	= 0;
+	description	= "Du hast nicht zufällig Lust, berühmt zu werden?";
+};                       
+
+FUNC INT Info_Mod_Mud_Lagermusik_Condition()
+{
+	if (Mod_Gravo_Schatz == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Mud_Lagermusik_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Mud_Lagermusik_15_00"); //Du hast nicht zufällig Lust, berühmt zu werden?
+	AI_Output(self, hero, "Info_Mod_Mud_Lagermusik_03_01"); //Kommt drauf an, was ich dafür tun muss. Dich würde ich dafür natürlich nicht verlassen.
+	AI_Output(hero, self, "Info_Mod_Mud_Lagermusik_15_02"); //Du müsstest ein Instrument spielen. Gravo will eine Gruppe ins Leben rufen.
+	AI_Output(self, hero, "Info_Mod_Mud_Lagermusik_03_03"); //Die Trommel hat mir schon immer gefallen. Solange ich den Schlägel in der Hand hatte, wurden mir nicht so viele böse Dinge zugerufen.
+	AI_Output(hero, self, "Info_Mod_Mud_Lagermusik_15_04"); //Perfekt! Geh am besten gleich zu Gravo.
+	AI_Output(self, hero, "Info_Mod_Mud_Lagermusik_03_05"); //Ich lasse dich ungern im Stich, aber ich muss meiner Karriere eine Chance geben. Man sieht sich bestimmt bald wieder!
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "ATGRAVO");
+
+	B_GivePlayerXP	(50);
+};
+
 INSTANCE Info_Mod_Mud_Nerve2_0 (C_INFO)
 {
 	npc			= Mod_803_STT_Mud_MT;
