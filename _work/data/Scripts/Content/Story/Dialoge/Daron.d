@@ -60,10 +60,6 @@ FUNC VOID Info_Mod_Daron_ZugangZumKloster_Witz()
 	AI_Output(hero, self, "Info_Mod_Daron_ZugangZumKloster_Witz_15_00"); //Ich soll für die Dämonenbeschwörer euren Heiligen Hammer stehlen.
 	AI_Output(self, hero, "Info_Mod_Daron_ZugangZumKloster_Witz_10_01"); //Wie ich sehe hast du Humor. Aber wir Magier sind ernste Leute und wollen nicht lachen.
 	AI_Output(self, hero, "Info_Mod_Daron_ZugangZumKloster_Witz_10_02"); //Nun sage mir weshalb du Einlass in unser Kloster erbittest.
-
-	Info_ClearChoices	(Info_Mod_Daron_ZugangZumKloster);
-
-	Info_AddChoice	(Info_Mod_Daron_ZugangZumKloster, "Ich will ein Feuer Novize werden.", Info_Mod_Daron_ZugangZumKloster_Novize);
 };
 
 FUNC VOID Info_Mod_Daron_ZugangZumKloster_Novize()
@@ -140,7 +136,7 @@ FUNC VOID Info_Mod_Daron_HabTrank_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_ASS_AUFNAHME, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_ASS_AUFNAHME, LOG_RUNNING);
-	B_LogEntry_More	(TOPIC_MOD_DARONSGEFALLEN, TOPIC_MOD_ASS_AUFNAHME, "Ich habe Daron den Trank gegeben. Er kann mich jetzt zum Kloster bringen.", "Damit Daron mich zum Kloster begleitet, muss ich erst den Verbleib des Novizen Akahasch in Erfahrung bringen. Zuletzt wurde er bei der Taverne im Hafenviertel gesehen. Sobald ich ihn gefunden habe, soll ich ihn zu Daron geleiten.");
+	B_LogEntry_More	(TOPIC_MOD_DARONSGEFALLEN, TOPIC_MOD_ASS_AUFNAHME, "Ich habe Daron den Trank gegeben.", "Damit Daron mich zum Kloster begleitet, muss ich erst den Verbleib des Novizen Akahasch in Erfahrung bringen. Zuletzt wurde er bei der Taverne im Hafenviertel gesehen. Sobald ich ihn gefunden habe, soll ich ihn zu Daron geleiten.");
 
 	B_Göttergefallen(1, 1);
 };

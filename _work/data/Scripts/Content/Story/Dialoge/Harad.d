@@ -1999,21 +1999,17 @@ FUNC VOID Info_Mod_Harad_Verkaufen_Info()
 		Npc_RemoveInvItems (other, ItMw_Rubinklinge, anzahl_Rubinklinge);
 		Npc_RemoveInvItems (other, ItMw_ElBastardo, anzahl_ElBastardo);
 		
-				var string concatText;
-				concatText = ConcatStrings(IntToString(gesamt), PRINT_ItemsGegeben);		// "x Gegenstände gegeben"
-				AI_PrintScreen (concatText, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
+		var string concatText;
+		concatText = ConcatStrings(IntToString(gesamt), PRINT_ItemsGegeben);		// "x Gegenstände gegeben"
+		AI_PrintScreen (concatText, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 				
 		AI_Output (self, other, "Info_Mod_Harad_Verkaufen_12_03"); //So, und hier hast du deinen Lohn.
 		var int lohn;
-		lohn 	= (anzahl_common * Value_Common1)
-				+ (anzahl_schwert1 * Value_Schwert1)
-				+ (anzahl_schwert4 * Value_Schwert4)
-				+ (anzahl_rubinklinge * Value_Rubinklinge)
-				+ (anzahl_elbastardo * Value_ElBastardo);
+		lohn = (anzahl_common * Value_Common1) + (anzahl_schwert1 * Value_Schwert1) + (anzahl_schwert4 * Value_Schwert4) + (anzahl_rubinklinge * Value_Rubinklinge) + (anzahl_elbastardo * Value_ElBastardo);
 				
-		lohn 	= (lohn / 3);
+		lohn = (lohn / 3);
 		
-		B_GiveInvItems (self, other, itmi_gold, lohn);
+		B_GiveInvItems (self, hero, ItMi_Gold, lohn);
 	};
 };
 

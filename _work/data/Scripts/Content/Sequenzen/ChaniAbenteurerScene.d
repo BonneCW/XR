@@ -29,7 +29,7 @@ FUNC VOID ChaniAbenteurerScene()
 
 	if (Mod_ChaniAbenteurerScene_Counter == 10)
 	{
-		AI_PlayAni	(Mod_7655_OUT_Abenteurer_REL, "t_Stand_2_Wounded");
+		AI_PlayAni	(Mod_7655_OUT_Abenteurer_REL, "T_STAND_2_WOUNDED");
 	};
 
 	if (Mod_ChaniAbenteurerScene_Counter == 12)

@@ -341,7 +341,7 @@ FUNC VOID Info_Mod_Vatras_Fertig_Info()
 	AI_Output(self, hero, "Info_Mod_Vatras_Fertig_05_08"); //Und vieles bleibt in der Schwärze der Nacht verborgen.
 	AI_Output(self, hero, "Info_Mod_Vatras_Fertig_05_09"); //Gewissheit werden wir erst haben, wenn du die Entführten auch gefunden hast.
 	AI_Output(self, hero, "Info_Mod_Vatras_Fertig_05_10"); //Dir wurde die Richtung gewiesen. Mach dich auf den Weg und Versuch bei den Dämonenkriegern mehr herauszufinden.
-	AI_Output(self, hero, "Info_Mod_Vatras_Fertig_05_11"); //Du findest ihr Lager in der Nähe von Omar’s Hof in den Bergen.
+	AI_Output(self, hero, "Info_Mod_Vatras_Fertig_05_11"); //Du findest ihr Lager irgendwo im Minental in den Bergen.
 	AI_Output(self, hero, "Info_Mod_Vatras_Fertig_05_12"); //Ich hörte auch, sie sollen eine Mine besitzen. Vielleicht ist das auch ein wichtiger Anhaltspunkt ...
 
 	B_LogEntry	(TOPIC_MOD_VERMISSTE, "Vatras gab mir den Auftrag, bei den Dämonenkriegern Nachforschungen über die Vermissten anzustellen. Er nannte dabei eine Mine als mögliche Anlaufstelle.");

@@ -52,11 +52,6 @@ PROTOTYPE Mst_Default_Icewolf(C_Npc)
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
 
-	aivar[AIV_MM_RoamStart] 	= 6;	
-	aivar[AIV_MM_RoamEnd]		= 22;
-	aivar[AIV_MM_SleepStart]	= 22;
-	aivar[AIV_MM_SleepEnd]		= 6;
-
 	if (Hlp_Random(100) < 5)
 	{
 		CreateInvItems (self, ItAt_GoblinBone, 1);

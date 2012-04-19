@@ -1021,8 +1021,17 @@ INSTANCE Info_Mod_Bosper_Schnitzen (C_INFO)
 
 FUNC INT Info_Mod_Bosper_Schnitzen_Condition()
 {
+	if (Mod_Schwierigkeit == 4)
+	{
+		Info_Mod_Bosper_Schnitzen.description = "Bring mir bei Pfeile zu schnitzen (200 Gold)";
+	}
+	else
+	{
+		Info_Mod_Bosper_Schnitzen.description = "Bring mir bei Pfeile zu schnitzen (2 LP)";
+	};
+
 	if (Npc_KnowsInfo(hero, Info_Mod_Bosper_Job))
-	&& (hero.lp	>=	2)
+	&& (((hero.lp >= 2) && (Mod_Schwierigkeit != 4)) || ((Npc_HasItems(hero, ItMi_Gold) >= 200) && (Mod_Schwierigkeit == 4)))
 	&& (Mod_PfeileSchnitzen	== 0)
 	{
 		return 1;
@@ -1035,7 +1044,14 @@ FUNC VOID Info_Mod_Bosper_Schnitzen_Info()
 	AI_Output(self, hero, "Info_Mod_Bosper_Schnitzen_11_01"); //Ok. Zuerst solltest du dir ein Holzstück bei Thorben kaufen. Dieses nimmst du dann mit an eine Baumsäge und schnitzt es zu etwa 10 Pfeilen.
 	AI_Output(self, hero, "Info_Mod_Bosper_Schnitzen_11_02"); //Dann fügst du den Pfeil mit einer Pfeilspitze an einem Amboss zusammen und fertig ist dein Pfeil.
 
-	hero.lp	-= 2;
+	if (Mod_Schwierigkeit != 4)
+	{
+		hero.lp -= 2;
+	}
+	else
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Gold, 200);
+	};
 
 	Mod_PfeileSchnitzen	=	1;
 

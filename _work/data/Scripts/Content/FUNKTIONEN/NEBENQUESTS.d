@@ -2764,7 +2764,7 @@ FUNC VOID NEBENQUESTS()
 		if (Mod_BaroAtWillingham == 0)
 		{
 			if (Npc_KnowsInfo(hero, Info_Mod_Brendan_Hi))
-			&& (Npc_GetDistToWP(hero, "") < 500)
+			&& (Npc_GetDistToWP(hero, "EISFESTUNG_18") < 500)
 			{
 				Mod_BaroAtWillingham = 1;
 

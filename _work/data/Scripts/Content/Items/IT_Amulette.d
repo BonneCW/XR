@@ -666,7 +666,7 @@ INSTANCE  ItAm_Dam (C_Item) // Waffen Schutz Amulett
 	description		= "Amulett der Eichenhaut";
 	
 	TEXT[2]			= NAME_Prot_Point;
-	COUNT[2]		= Am_ProtPoint;
+	COUNT[2]		= Am_ProtPoint/1000;
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
@@ -917,6 +917,7 @@ INSTANCE  ItAm_Dam (C_Item) // Waffen Schutz Amulett
 	FUNC VOID UnEquip_ItAm_Hp_01()
 	{
 		self.attribute [ATR_HITPOINTS_MAX] = self.attribute [ATR_HITPOINTS_MAX] -Am_Hp;
+
 		if (self.attribute[ATR_HITPOINTS] > (Am_Hp + 2))
 		{
 			self.attribute [ATR_HITPOINTS] = self.attribute [ATR_HITPOINTS] -Am_Hp;

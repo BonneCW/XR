@@ -94,7 +94,7 @@ FUNC VOID Info_Mod_Hilda_Argez2_Info()
 
 	CurrentNQ += 1;
 
-	B_SetTopicStatus	(TOPIC_MOD_HILDA_ARGEZ, LOG_RUNNING);
+	B_SetTopicStatus	(TOPIC_MOD_HILDA_ARGEZ, LOG_SUCCESS);
 };
 
 INSTANCE Info_Mod_Hilda_Wein (C_INFO)

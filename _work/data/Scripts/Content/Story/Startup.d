@@ -3862,19 +3862,11 @@ FUNC VOID INIT_MinentalFreeMineCamp ()
 
 FUNC VOID STARTUP_MinentalOldCamp ()
 {
-	Wld_InsertNpc	(PIR_1390_Addon_InExtremo_DrPymonte,	"OC1");
-	Wld_InsertNpc	(PIR_1391_Addon_InExtremo_TheFlail,	"OC1");
-	Wld_InsertNpc	(PIR_1392_Addon_InExtremo_ThomasTheForger,	"OC1");
-	Wld_InsertNpc	(PIR_1393_Addon_InExtremo_Unicorn,	"OC1");
-	Wld_InsertNpc	(PIR_1394_Addon_InExtremo_YellowPfeiffer,	"OC1");
-	Wld_InsertNpc	(PIR_1395_Addon_InExtremo_Lutter,	"OC1");
-	Wld_InsertNpc	(PIR_1396_Addon_InExtremo_Flex,		"OC1");	
 	Wld_InsertNpc	(Mod_943_GRD_Bloodwyn_MT,		"OC1");
 	Wld_InsertNpc	(Mod_950_STT_Fisk_MT,			"OC1");
 	Wld_InsertNpc	(Mod_954_STT_Huno_MT,			"OC1");
 	Wld_InsertNpc	(Mod_962_STT_Scatty_MT,			"OC1");
 	Wld_InsertNpc	(Mod_965_STT_Snaf_MT,			"OC1");
-	Wld_InsertNpc	(Mod_800_GRD_Stone_MT,			"OC1");
 	Wld_InsertNpc	(Mod_801_STT_Sly_MT,			"OC1");
 	Wld_InsertNpc	(Mod_802_STT_Herek_MT,			"OC1");
 	Wld_InsertNpc	(Mod_803_STT_Mud_MT,			"OC1");
