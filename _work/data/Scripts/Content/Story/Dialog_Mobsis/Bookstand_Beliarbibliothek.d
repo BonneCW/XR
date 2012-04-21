@@ -22,45 +22,43 @@ FUNC VOID BOOKSTAND_BELIARBIBLIOTHEK_01_S1()
 	
 	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	{	
-		var int nDocID;
-		
+		var int nDocID;		
 
 		nDocID = 	Doc_Create		()			  ;								// DocManager 
-					Doc_SetPages	( nDocID,  2 );                         //wieviel Pages
+		Doc_SetPages	( nDocID,  2 );                         //wieviel Pages
 
-					Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga", 	0 		); 
-					Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0		);
+		Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga", 	0 		); 
+		Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0		);
 					
-					//1.Seite
+		//1.Seite
   					
-  					Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 	// -1 -> all pages 
-  					Doc_PrintLine	( nDocID,  0, "Magie");
-  					Doc_PrintLine	( nDocID,  0, "");
-					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
-					Doc_PrintLine	( nDocID,  0, " "			);
-					Doc_SetFont 	( nDocID, -1, "font_10_book.TGA"	   			); 	// -1 -> all pages 
-					Doc_PrintLine	( nDocID,  0, "Die Gabe der Götter");
-					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "Seit Jahrhunderten versucht man das Wesen und den Ursprung der Magie zu ergründen. Doch wo soll man suchen? Wie kann man sie beschreiben? Sie ist die widersprüchlichste Kraft, die wir kennen. Sie kann töten und gleichzeitig heilen, Sie kann formen und zerstören.");
+		Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 	// -1 -> all pages 
+		Doc_PrintLine	( nDocID,  0, "Magie");
+		Doc_PrintLine	( nDocID,  0, "");
+		Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
+		Doc_PrintLine	( nDocID,  0, " "			);
+		Doc_SetFont 	( nDocID, -1, "font_10_book.TGA"	   			); 	// -1 -> all pages 
+		Doc_PrintLine	( nDocID,  0, "Die Gabe der Götter");
+		Doc_PrintLine	( nDocID,  0, "");
+		Doc_PrintLines	( nDocID,  0, "Seit Jahrhunderten versucht man das Wesen und den Ursprung der Magie zu ergründen. Doch wo soll man suchen? Wie kann man sie beschreiben? Sie ist die widersprüchlichste Kraft, die wir kennen. Sie kann töten und gleichzeitig heilen, Sie kann formen und zerstören.");
 					
-
-					//2.Seite
-					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
-					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLines	( nDocID,  1, "Wie sieht eine solche Kraft aus ? Wo kann man diese unsichtbare und doch so mächtige Kraft finden? Die Magie ist das, was sie ist. Das herrlichste und zugleich mächtigste Geschenk der Götter. Dem Nutzer und Wirker dieser Kraft ist damit auch ein göttliches Geschenk gegeben. Eine heilige Kraft, die nur wenige Auserwählte in der Lage sind zu kontrollieren.");	
-					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1, "Barthos von Laran");
-					Doc_Show		( nDocID );
+		//2.Seite
+		Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
+		Doc_PrintLine	( nDocID,  1, "");
+		Doc_PrintLine	( nDocID,  1, "");
+		Doc_PrintLine	( nDocID,  1, "");
+		Doc_PrintLine	( nDocID,  1, "");
+		Doc_PrintLines	( nDocID,  1, "Wie sieht eine solche Kraft aus ? Wo kann man diese unsichtbare und doch so mächtige Kraft finden? Die Magie ist das, was sie ist. Das herrlichste und zugleich mächtigste Geschenk der Götter. Dem Nutzer und Wirker dieser Kraft ist damit auch ein göttliches Geschenk gegeben. Eine heilige Kraft, die nur wenige Auserwählte in der Lage sind zu kontrollieren.");	
+		Doc_PrintLine	( nDocID,  1, "");
+		Doc_PrintLine	( nDocID,  1, "Barthos von Laran");
+		Doc_Show		( nDocID );
 					
-					if (BeliarBibliothek_01 == FALSE)
-					{
-						B_GivePlayerXP (XP_Bookstand);
+		if (BeliarBibliothek_01 == FALSE)
+		{
+			B_GivePlayerXP (XP_Bookstand);
 
-						BeliarBibliothek_01 = TRUE;
-					};
+			BeliarBibliothek_01 = TRUE;
+		};
 	};
 };
 
@@ -71,43 +69,42 @@ FUNC VOID BOOKSTAND_BELIARBIBLIOTHEK_02_S1()
 	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	{	
 		var int nDocID;
-		
 
 		nDocID = 	Doc_Create		()			  ;								// DocManager 
-					Doc_SetPages	( nDocID,  2 );                         //wieviel Pages
+		Doc_SetPages	( nDocID,  2 );                         //wieviel Pages
 
-					Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga"  , 0 		); 
-					Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga" , 0		);
+		Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga"  , 0 		); 
+		Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga" , 0		);
 					
-					//1.Seite
+		//1.Seite
   					
-  					Doc_SetFont 	( nDocID, -1, "font_10_book.tga"); 	// -1 -> all pages 
-					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1);  //  0 -> margins are in pixels
-					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLine	( nDocID,  0, "Geheimnisse der Zauberei");
+		Doc_SetFont 	( nDocID, -1, "font_10_book.tga"); 	// -1 -> all pages 
+		Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1);  //  0 -> margins are in pixels
+		Doc_PrintLine	( nDocID,  0, "");
+		Doc_PrintLine	( nDocID,  0, "");
+		Doc_PrintLine	( nDocID,  0, "Geheimnisse der Zauberei");
 					
-					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "Dem Magus selbst wohnt wohl keine Magie inne, er ist vielmehr in der Lage sich ihrer zu bedienen. Er selbst hat ausschließlich die Fähigkeit die Magie zu beeinflussen und zu lenken. Der in der Hohen Kunst der Magie eingeweihte Adept muss in der Lage sein, seinen Geist als Werkzeug zu benutzen");
+		Doc_PrintLine	( nDocID,  0, "");
+		Doc_PrintLines	( nDocID,  0, "Dem Magus selbst wohnt wohl keine Magie inne, er ist vielmehr in der Lage sich ihrer zu bedienen. Er selbst hat ausschließlich die Fähigkeit die Magie zu beeinflussen und zu lenken. Der in der Hohen Kunst der Magie eingeweihte Adept muss in der Lage sein, seinen Geist als Werkzeug zu benutzen");
 					
-					//2.Seite
-					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
-					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLines	( nDocID,  1, "Sein Geist ist es, der die allumgebene Arkane Kraft sammelt, sie formt, bündelt und letztendlich in die uns zugängliche Welt entlässt. Während dieser Zeit höchster Konzentration gelingt es dem Magus mit seinem Geist unsere Sphäre zu durchdringen und auf die Andere Seite zu blicken, von dort kommt die Kraft, der Magus selbst ist nur Leiter und Former dieser Kraft.");
-					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1, "Barthos von Laran");
-					Doc_Show		( nDocID );
+		//2.Seite
+		Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
+		Doc_PrintLine	( nDocID,  1, "");
+		Doc_PrintLine	( nDocID,  1, "");
+		Doc_PrintLine	( nDocID,  1, "");
+		Doc_PrintLine	( nDocID,  1, "");
+		Doc_PrintLines	( nDocID,  1, "Sein Geist ist es, der die allumgebene Arkane Kraft sammelt, sie formt, bündelt und letztendlich in die uns zugängliche Welt entlässt. Während dieser Zeit höchster Konzentration gelingt es dem Magus mit seinem Geist unsere Sphäre zu durchdringen und auf die Andere Seite zu blicken, von dort kommt die Kraft, der Magus selbst ist nur Leiter und Former dieser Kraft.");
+		Doc_PrintLine	( nDocID,  1, "");
+		Doc_PrintLine	( nDocID,  1, "");
+		Doc_PrintLine	( nDocID,  1, "Barthos von Laran");
+		Doc_Show		( nDocID );
 					
-					if (BeliarBibliothek_02 == FALSE)
-					{
-						B_GivePlayerXP (XP_Bookstand);
+		if (BeliarBibliothek_02 == FALSE)
+		{
+			B_GivePlayerXP (XP_Bookstand);
 
-						BeliarBibliothek_02 = TRUE;
-					};
+			BeliarBibliothek_02 = TRUE;
+		};
 	};
 };
 

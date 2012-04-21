@@ -205,7 +205,7 @@ FUNC VOID Info_Mod_Cavalorn_Banditen4_Info()
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
-	AI_Output(self, hero, "Info_Mod_Cavalorn_Banditen4_08_01"); //Reife Leistung, echt.
+	AI_Output(self, hero, "Info_Mod_Cavalorn_Banditen4_08_07"); //Reife Leistung, echt.
 
 	B_SetTopicStatus	(TOPIC_MOD_CAVALORN_BANDITEN, LOG_SUCCESS);
 

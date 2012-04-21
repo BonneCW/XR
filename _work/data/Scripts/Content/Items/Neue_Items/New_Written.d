@@ -271,6 +271,9 @@ INSTANCE ItWr_ZombieToHuman (C_ITEM)
 	visual 					=	"ItWr_Book_02_03.3ds";  					
 	material 				=	MAT_LEATHER;
 
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
+
 	on_state[0]	=	Use_ZombieToHuman;
 	scemeName	=	"MAP";
 

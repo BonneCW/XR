@@ -8281,7 +8281,41 @@ FUNC VOID INIT_Eisgebiet()
 	//---Laternen---
 	Wld_SetMobRoutine (00,00, "FIREPLACE", 1);
 	Wld_SetMobRoutine (20,00, "FIREPLACE", 1);
-	Wld_SetMobRoutine (05,00, "FIREPLACE", 0);
+	Wld_SetMobRoutine (07,00, "FIREPLACE", 0);
+
+	// Morgens
+
+	Wld_SetMobRoutine(05, 10, "LIGHTSPAWNERONE", 1);
+	Wld_SetMobRoutine(06, 10, "LIGHTSPAWNERONE", 0);
+	Wld_SetMobRoutine(06, 10, "LIGHTSPAWNERTWO", 1);
+	Wld_SetMobRoutine(07, 10, "LIGHTSPAWNERTWO", 0);
+	Wld_SetMobRoutine(07, 10, "LIGHTSPAWNERTHREE", 1);
+	Wld_SetMobRoutine(08, 10, "LIGHTSPAWNERTHREE", 0);
+
+	// Mittags
+
+	Wld_SetMobRoutine(08, 10, "LIGHTSPAWNERFOUR", 1);
+	Wld_SetMobRoutine(09, 10, "LIGHTSPAWNERFOUR", 0);
+	Wld_SetMobRoutine(09, 10, "LIGHTSPAWNERFIVE", 1);
+	Wld_SetMobRoutine( 15, 10, "LIGHTSPAWNERFIVE", 0);
+	Wld_SetMobRoutine(15, 10, "LIGHTSPAWNERSIX", 1);
+	Wld_SetMobRoutine( 16, 10, "LIGHTSPAWNERSIX", 0);
+
+	// Nachmittags
+
+	Wld_SetMobRoutine(16, 10, "LIGHTSPAWNERSEVEN", 1);
+	Wld_SetMobRoutine(17, 10, "LIGHTSPAWNERSEVEN", 0);
+	Wld_SetMobRoutine(17, 10, "LIGHTSPAWNEREIGHT", 1);
+	Wld_SetMobRoutine(18, 10, "LIGHTSPAWNEREIGHT", 0);
+
+	// Abends
+
+	Wld_SetMobRoutine(18, 10, "LIGHTSPAWNERNINE", 1);
+	Wld_SetMobRoutine(18, 50, "LIGHTSPAWNERNINE", 0);
+	Wld_SetMobRoutine(18, 50, "LIGHTSPAWNERTEN", 1);
+	Wld_SetMobRoutine(19, 30, "LIGHTSPAWNERTEN", 0);
+	Wld_SetMobRoutine(19, 30, "LIGHTSPAWNERELEVEN", 1);
+	Wld_SetMobRoutine(20, 10, "LIGHTSPAWNERELEVEN", 0);
 
 	B_InitMonsterAttitudes();
 	B_InitGuildAttitudes();
