@@ -30,6 +30,8 @@ FUNC VOID Info_Mod_Ruga_Hi_Info()
 
 		B_RaiseFightTalent (hero, NPC_TALENT_CROSSBOW, 5);
 
+		PrintScreen	(PRINT_LearnCrossbow, -1, -1, FONT_Screen, 2);
+
 		Log_CreateTopic	(TOPIC_MOD_LEHRER_KHORINIS, LOG_NOTE);
 		B_LogEntry	(TOPIC_MOD_LEHRER_KHORINIS, "Ruga kann mir den Umgang mit der Armbrust zeigen.");
 	}
