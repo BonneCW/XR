@@ -414,15 +414,15 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 
 			B_ReadySpell (slf, SPL_LightHeal, SPL_Cost_LightHeal);
 		}
-		else if (slf.attribute[ATR_MANA] >= SPL_Cost_Windfist)
+		else if (slf.attribute[ATR_MANA] >= SPL_Cost_Waterfist)
 		&& (slf.attribute[ATR_HITPOINTS] >= (self.attribute[ATR_HITPOINTS_MAX] / 4))
 		{
-			if (Npc_HasItems (slf, ItRu_Windfist) == 0)
+			if (Npc_HasItems (slf, ItRu_Waterfist) == 0)
 			{
-				CreateInvItems (slf, ItRu_Windfist, 1);
+				CreateInvItems (slf, ItRu_Waterfist, 1);
 			};
 
-			B_ReadySpell (slf, SPL_Windfist, SPL_Cost_Windfist);
+			B_ReadySpell (slf, SPL_Waterfist, SPL_Cost_Waterfist);
 		}
 		else
 		{
