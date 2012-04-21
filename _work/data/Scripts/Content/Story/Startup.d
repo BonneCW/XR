@@ -6996,7 +6996,7 @@ FUNC VOID STARTUP_OrcGraveyard()
 
 	// Irgendwo vorher
 
-	Wld_InsertNpc	(Mod_7770_PSINOV_Nyras_OGY,	"GRYD_082");
+	//Wld_InsertNpc	(Mod_7770_PSINOV_Nyras_OGY,	"GRYD_082");
 };
 
 FUNC VOID INIT_OrcGraveyard ()
