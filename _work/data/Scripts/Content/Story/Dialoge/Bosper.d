@@ -1477,8 +1477,8 @@ FUNC VOID Info_Mod_Bosper_HandelstJetzt_Info()
 	AI_Output(hero, self, "Info_Mod_Bosper_HandelstJetzt_15_00"); //Handelst du jetzt mit mir?
 	AI_Output(self, hero, "Info_Mod_Bosper_HandelstJetzt_11_01"); //Meinetwegen.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Bosper verkauft Bögen und Armbrüste.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Bosper verkauft Bögen und Armbrüste.");
 };
 
 INSTANCE Info_Mod_Bosper_Trade (C_INFO)

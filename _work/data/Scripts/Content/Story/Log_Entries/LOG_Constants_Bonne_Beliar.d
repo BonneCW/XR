@@ -1,4 +1,4 @@
-const string TOPIC_MOD_DÄMONENBESCHWÖRER	=	"Aufnahme Schwarzer Novize";
+const string TOPIC_MOD_DAEMONENBESCHWOERER	=	"Aufnahme Schwarzer Novize";
 const string TOPIC_MOD_GIFTPFLANZEN	=	"Pflanzen für Myxir";
 const string TOPIC_MOD_GOMEZHORN	=	"Jagd mit Gomez";
 const string TOPIC_MOD_FAULERJÄGER	=	"Der faule Jäger";

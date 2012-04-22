@@ -252,6 +252,6 @@ FUNC VOID EVT_BIBENTDECKT_FUNC()
 	{
 		Mod_BibEntdeckt = 1;
 
-		B_LogEntry	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Na, das sieht doch aus, als wäre ich erfolgreich gewesen. Wirklich beeindruckend. Da hat jemand lange gesammelt. Andokai wird es freuen, davon zu erfahren.");
+		B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Na, das sieht doch aus, als wäre ich erfolgreich gewesen. Wirklich beeindruckend. Da hat jemand lange gesammelt. Andokai wird es freuen, davon zu erfahren.");
 	};
 };

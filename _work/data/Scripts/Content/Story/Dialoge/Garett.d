@@ -17,8 +17,8 @@ FUNC VOID Info_Mod_Garett_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Garett_Hi_09_00"); //Hey Neuer, brauchst 'ne Waffe?
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_PIRATEN, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_PIRATEN, "Garett scheint Waffen zu verkaufen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_PIRATEN, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_PIRATEN, "Garett scheint Waffen zu verkaufen.");
 };
 
 INSTANCE Info_Mod_Garett_Befreiung (C_INFO)

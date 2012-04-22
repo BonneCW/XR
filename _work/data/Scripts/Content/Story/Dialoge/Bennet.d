@@ -21,8 +21,8 @@ FUNC VOID Info_Mod_Bennet_Hi_Info()
 	B_Say (hero, self, "$WHOAREYOU");
 	AI_Output(self, hero, "Info_Mod_Bennet_Hi_06_01"); //Ich bin Bennet, der Schmied auf diesem Hof.
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_ONAR, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_ONAR, "Bennet ist Schmied auf dem Hof und kann mir sicher was verkaufen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_ONAR, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_ONAR, "Bennet ist Schmied auf dem Hof und kann mir sicher was verkaufen.");
 };
 
 INSTANCE Info_Mod_Bennet_Irdorath (C_INFO)

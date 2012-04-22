@@ -2,7 +2,7 @@ FUNC INT ENTER_KLOSTERKELLERDOOR ()
 {
 	var int KLOSTERKELLER_DOOR_OPENED;
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Götterschwerter))
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Goetterschwerter))
 	&& (KLOSTERKELLER_DOOR_OPENED == FALSE)
 	{
 		KLOSTERKELLER_DOOR_OPENED == TRUE;

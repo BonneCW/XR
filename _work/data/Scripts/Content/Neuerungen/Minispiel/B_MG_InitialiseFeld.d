@@ -4,6 +4,12 @@
 
 FUNC VOID B_MG_InitialiseFeld()
 {
+	Print_GetScreenSize();
+
+	MG_Spielbrett = View_CreatePxl(0, 0, Print_Screen[PS_X], Print_Screen[PS_Y]);
+	View_SetTexture(MG_Spielbrett, "SPIELBRETT.TGA");
+	View_Open(MG_Spielbrett);
+
 	var int i; i = 0;
 	var int ptr; ptr = MEM_StackPos.position;
 
@@ -21,8 +27,6 @@ FUNC VOID B_MG_InitialiseFeld()
 
 	MG_Opp_Counter = 0;
 	MG_Own_Counter = 0;
-
-	Print_GetScreenSize();
 
 	var int xy; // x/y-Größe der Felder, da quadratisch
 

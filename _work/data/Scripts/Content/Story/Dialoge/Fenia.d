@@ -17,8 +17,8 @@ FUNC VOID Info_Mod_Fenia_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Fenia_Hi_17_00"); //Hallo, ich bin Fenia. Brauchst du was zu essen?
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Fenia scheint mit Lebensmitteln zu handeln.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Fenia scheint mit Lebensmitteln zu handeln.");
 };
 
 INSTANCE Info_Mod_Fenia_MatteoLehrling1 (C_INFO)

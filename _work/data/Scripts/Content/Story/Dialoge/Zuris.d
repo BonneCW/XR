@@ -20,8 +20,8 @@ FUNC VOID Info_Mod_Zuris_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Zuris_Hi_14_00"); //Willkommen in Khorinis, Fremder. Solltest du je den Drang verspüren etwas Magie ausüben zu wollen oder dich der heilenden Wirkung eines Trankes zu unterziehen, dann komm zu mir.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Zuris handelt mit Spruchrollen und Tränken.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Zuris handelt mit Spruchrollen und Tränken.");
 };
 
 INSTANCE Info_Mod_Zuris_Scorpio (C_INFO)

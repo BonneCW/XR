@@ -21,8 +21,8 @@ FUNC VOID Info_Mod_Baltram_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Baltram_Hi_01_00"); //Hallo, Fremder. Ich bin Baltram und handle mit Lebensmitteln.
 	AI_Output(self, hero, "Info_Mod_Baltram_Hi_01_01"); //Solltest du jemals den Drang nach frischem Brot und Obst verspüren, dann kannst du zu mir kommen.
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Baltram handelt mit Lebensmitteln.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Baltram handelt mit Lebensmitteln.");
 };
 
 INSTANCE Info_Mod_Baltram_WieLaeufts (C_INFO)

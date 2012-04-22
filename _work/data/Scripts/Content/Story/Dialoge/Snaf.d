@@ -28,8 +28,8 @@ FUNC VOID Info_Mod_Snaf_Hi_Info()
 		AI_Output(self, hero, "Info_Mod_Snaf_Hi_01_05"); //Unter anderem mein berühmtes Fleischwanzenragout.
 	};
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_OLDCAMP, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_OLDCAMP, "Snaf verkauft mir verschiedene Lebensmittel. Und natürlich auch Fleischwanzenragout.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_OLDCAMP, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_OLDCAMP, "Snaf verkauft mir verschiedene Lebensmittel. Und natürlich auch Fleischwanzenragout.");
 };
 
 INSTANCE Info_Mod_Snaf_WoherZutaten (C_INFO)

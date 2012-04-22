@@ -104,8 +104,8 @@ FUNC VOID Info_Mod_Isgaroth_Trade_Info()
 {
 	if (Mod_IsgarothHaendler == 0)
 	{
-		Log_CreateTopic	(TOPIC_MOD_HÄNDLER_KLOSTER, LOG_NOTE);
-		B_LogEntry	(TOPIC_MOD_HÄNDLER_KLOSTER, "Isgaroth, welcher sich in einem Schrein vor dem Kloster Innos' befindet, kann mir Spruchrollen verkaufen.");
+		Log_CreateTopic	(TOPIC_MOD_HAENDLER_KLOSTER, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_HAENDLER_KLOSTER, "Isgaroth, welcher sich in einem Schrein vor dem Kloster Innos' befindet, kann mir Spruchrollen verkaufen.");
 
 		Mod_IsgarothHaendler = 1;
 	};

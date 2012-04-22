@@ -17,8 +17,8 @@ FUNC VOID Info_Mod_Coragon_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Coragon_Hi_09_00"); //Willkommen in meiner Kneipe, Fremder. Was kann ich für dich tun?
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Coragon ist Besitzer einer Kneipe in Khorinis. Er hat sicher was zu trinken für mich.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Coragon ist Besitzer einer Kneipe in Khorinis. Er hat sicher was zu trinken für mich.");
 };
 
 INSTANCE Info_Mod_Coragon_MatteoLehrling1 (C_INFO)

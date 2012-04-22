@@ -3,6 +3,8 @@ var int MG_Spielfeld_Texturen[80];
 var int MG_Spielfeld_Possibilities[80];
 var int MG_Spielfeld_Figur[80];
 
+var int MG_Spielbrett;
+
 var int MG_EigeneFiguren[5];
 var int MG_GegnerFiguren[5];
 

@@ -18,8 +18,8 @@ FUNC VOId Info_Mod_Salandril_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Salandril_Hi_13_00"); //Willkommen in meinem Laden, Fremder!
 	AI_Output(self, hero, "Info_Mod_Salandril_Hi_13_01"); //Bei mir kannst du Tränke kaufen.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Bei Salandril kann ich Tränke kaufen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Bei Salandril kann ich Tränke kaufen.");
 };
 
 INSTANCE Info_Mod_Salandril_Alkohol (C_INFO)

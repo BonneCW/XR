@@ -17,8 +17,8 @@ FUNC VOID Info_Mod_Fortuno_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Fortuno_Hi_13_00"); //Hallo, wenn du was brauchst, kannst du es bei mir bekommen.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_PSICAMP, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_PSICAMP, "Fortuno handelt mit allerlei Kleinkram.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_PSICAMP, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_PSICAMP, "Fortuno handelt mit allerlei Kleinkram.");
 };
 
 INSTANCE Info_Mod_Fortuno_Woher (C_INFO)

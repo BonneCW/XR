@@ -18,8 +18,8 @@ FUNC VOID Info_Mod_Darrion_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Darrion_Hi_11_00"); //Willkommen in meiner Schmiede.
 	AI_Output(self, hero, "Info_Mod_Darrion_Hi_11_01"); //Wenn du ein Schwert brauchst, kannst du es bei mir bekommen.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_PSICAMP, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_PSICAMP, "Darrion verkauft Waffen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_PSICAMP, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_PSICAMP, "Darrion verkauft Waffen.");
 };
 
 INSTANCE Info_Mod_Darrion_Urs (C_INFO)

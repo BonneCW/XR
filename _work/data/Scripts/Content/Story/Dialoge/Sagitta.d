@@ -17,9 +17,9 @@ FUNC VOID Info_Mod_Sagitta_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Sagitta_Hi_17_00"); //Hey, was machst du hier? Willst du meine Dienste als Alchemistin nutzen oder willst du einen meiner Tränke kaufen?
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_OHNELAGER, LOG_NOTE);
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_OHNELAGER, LOG_NOTE);
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_KHORINIS, LOG_NOTE);
-	B_LogEntry_More	(TOPIC_MOD_HÄNDLER_OHNELAGER, TOPIC_MOD_LEHRER_KHORINIS, "Sagitta verkauft Tränke.", "Sagitta kann mich in der Alchemie unterweisen.");
+	B_LogEntry_More	(TOPIC_MOD_HAENDLER_OHNELAGER, TOPIC_MOD_LEHRER_KHORINIS, "Sagitta verkauft Tränke.", "Sagitta kann mich in der Alchemie unterweisen.");
 };
 
 INSTANCE Info_Mod_Sagitta_AkilsHof (C_INFO)

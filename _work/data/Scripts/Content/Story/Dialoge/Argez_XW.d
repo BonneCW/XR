@@ -117,7 +117,10 @@ INSTANCE Info_Mod_Argez_XW_Ende (C_INFO)
 
 FUNC INT Info_Mod_Argez_XW_Ende_Condition()
 {
-	return 1;
+	if (Kapitel == 6)
+	{
+		return 1;
+	};
 };
 
 FUNC VOID Info_Mod_Argez_XW_Ende_Info()

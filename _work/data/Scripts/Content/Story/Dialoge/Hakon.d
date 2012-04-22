@@ -20,8 +20,8 @@ FUNC VOID Info_Mod_Hakon_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Hakon_Hi_12_00"); //Hallo Fremder, ich bin Hakon der Waffenhändler. Wenn du ein Schwert brauchst bist du bei mir richtig.
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Hakon verkauft am Marktplatz Waffen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Hakon verkauft am Marktplatz Waffen.");
 };
 
 INSTANCE Info_Mod_Hakon_Überfall (C_INFO)

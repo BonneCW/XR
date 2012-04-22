@@ -24,8 +24,8 @@ FUNC VOID Info_Mod_Samuel_Hi_Info()
 
 	AI_Output(self, hero, "Info_Mod_Samuel_Hi_14_02"); //Wenn du mehr willst, dann geh zu Skip, ich bring mein Zeug meistens zu ihm. Ich hab nicht viel, aber wenn du willst, kann ich dir auch etwas verkaufen.
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_PIRATEN, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_PIRATEN, "Samuel hat ein wenig Grog, den er mir verkaufen könnte.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_PIRATEN, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_PIRATEN, "Samuel hat ein wenig Grog, den er mir verkaufen könnte.");
 };
 
 INSTANCE Info_Mod_Samuel_Auftrag (C_INFO)

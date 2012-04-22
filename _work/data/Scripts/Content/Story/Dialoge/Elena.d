@@ -21,8 +21,8 @@ FUNC VOID Info_Mod_Elena_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_Elena_Hi_15_02"); //Was hast du denn für mich?
 	AI_Output(self, hero, "Info_Mod_Elena_Hi_16_03"); //Ich könnte dir ein paar Sachen verkaufen. Mehr ist aber nicht drin.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_ONAR, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_ONAR, "Elena kann mir ein paar Waren verkaufen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_ONAR, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_ONAR, "Elena kann mir ein paar Waren verkaufen.");
 };
 
 INSTANCE Info_Mod_Elena_Hexenparty_01 (C_INFO)

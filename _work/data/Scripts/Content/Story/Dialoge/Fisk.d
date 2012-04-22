@@ -17,8 +17,8 @@ FUNC VOID Info_Mod_Fisk_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Fisk_Hi_12_00"); //Hey, ich kann dir was verkaufen. Ich hab einige Waffen auf Lager.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_OLDCAMP, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_OLDCAMP, "Fisk verkauft Waffen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_OLDCAMP, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_OLDCAMP, "Fisk verkauft Waffen.");
 };
 
 INSTANCE Info_Mod_Fisk_Dieb (C_INFO)

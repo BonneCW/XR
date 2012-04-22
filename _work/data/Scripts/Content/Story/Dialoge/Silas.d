@@ -119,8 +119,8 @@ FUNC VOID Info_Mod_Silas_Trade_Info()
 	{
 		Mod_SilasTrader = 1;
 
-		Log_CreateTopic	(TOPIC_MOD_HÄNDLER_SOELDNER, LOG_NOTE);
-		B_LogEntry	(TOPIC_MOD_HÄNDLER_SOELDNER, "Bei Silas kann ich allerlei Lebensmittel kaufen.");
+		Log_CreateTopic	(TOPIC_MOD_HAENDLER_SOELDNER, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_HAENDLER_SOELDNER, "Bei Silas kann ich allerlei Lebensmittel kaufen.");
 	};
 
 	Backup_Questitems();

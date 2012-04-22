@@ -17,8 +17,8 @@ FUNC VOID Info_Mod_Rosi_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Rosi_Hi_17_00"); //Hey, suchst du was zu essen?
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_ONAR, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_ONAR, "Rosi kann mir Lebensmittel verkaufen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_ONAR, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_ONAR, "Rosi kann mir Lebensmittel verkaufen.");
 };
 
 INSTANCE Info_Mod_Rosi_Daemonisch (C_INFO)

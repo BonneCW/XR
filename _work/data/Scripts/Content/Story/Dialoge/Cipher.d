@@ -23,8 +23,8 @@ FUNC VOID Info_Mod_Cipher_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Cipher_Hi_07_04"); //Ähhm, du hast nicht zufällig wieder mal einige Sumpfkrautpflanzen oder einige Sumpfkrautstängel bei dir?
 	AI_Output(self, hero, "Info_Mod_Cipher_Hi_07_05"); //Je 10 würden mir echt weiterhelfen und ich würde dir einen guten Preis dafür geben.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_SOELDNER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_SOELDNER, "Cipher wird mit mir handeln.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_SOELDNER, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_SOELDNER, "Cipher wird mit mir handeln.");
 
 	if (Npc_HasItems(hero, ItMi_Joint) >= 10)
 	|| (Npc_HasItems(hero, ItPl_SwampHerb) >= 10)

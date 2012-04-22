@@ -79,8 +79,8 @@ FUNC VOID Info_Mod_Constantino_Alchemist_Info()
 	AI_Output(self, hero, "Info_Mod_Constantino_Alchemist_10_01"); //Siehst du nicht, dass ich gerade arbeite?
 	AI_Output(self, hero, "Info_Mod_Constantino_Alchemist_10_02"); //Wenn ich mit jedem quatschen würde, der hier angeschlichen kommt, würde ich jeden Tag sicher ... fünf Minuten oder mehr vergeuden!
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Constantino kann mir Tränke und Kräuter verkaufen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Constantino kann mir Tränke und Kräuter verkaufen.");
 };
 
 INSTANCE Info_Mod_Constantino_Lehrling (C_INFO)

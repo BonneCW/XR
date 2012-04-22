@@ -1,28 +1,28 @@
-INSTANCE Info_Mod_Erol_Händler (C_INFO)
+INSTANCE Info_Mod_Erol_Haendler (C_INFO)
 {
 	npc		= Mod_521_NONE_Erol_NW;
 	nr		= 1;
-	condition	= Info_Mod_Erol_Händler_Condition;
-	information	= Info_Mod_Erol_Händler_Info;
+	condition	= Info_Mod_Erol_Haendler_Condition;
+	information	= Info_Mod_Erol_Haendler_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Hier steht ja alles voll mit Krimskrams.";
 };
 
-FUNC INT Info_Mod_Erol_Händler_Condition()
+FUNC INT Info_Mod_Erol_Haendler_Condition()
 {
 	return 1;
 };
 
-FUNC VOID Info_Mod_Erol_Händler_Info()
+FUNC VOID Info_Mod_Erol_Haendler_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Erol_Händler_15_00"); //Hier steht ja alles voll mit Krimskrams.
-	AI_Output(self, hero, "Info_Mod_Erol_Händler_10_01"); //Ja, da sammelt sich im Laufe des Lebens einiges an.
-	AI_Output(self, hero, "Info_Mod_Erol_Händler_10_02"); //Sind ein paar echte Antiquitäten dabei.
-	AI_Output(self, hero, "Info_Mod_Erol_Händler_10_03"); //Willst du vielleicht was davon kaufen?
+	AI_Output(hero, self, "Info_Mod_Erol_Haendler_15_00"); //Hier steht ja alles voll mit Krimskrams.
+	AI_Output(self, hero, "Info_Mod_Erol_Haendler_10_01"); //Ja, da sammelt sich im Laufe des Lebens einiges an.
+	AI_Output(self, hero, "Info_Mod_Erol_Haendler_10_02"); //Sind ein paar echte Antiquitäten dabei.
+	AI_Output(self, hero, "Info_Mod_Erol_Haendler_10_03"); //Willst du vielleicht was davon kaufen?
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_OHNELAGER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_OHNELAGER, "Der Händler Erol verkauft Antiquitäten.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_OHNELAGER, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_OHNELAGER, "Der Händler Erol verkauft Antiquitäten.");
 };
 
 INSTANCE Info_Mod_Erol_DunklerPilger (C_INFO)
@@ -38,7 +38,7 @@ INSTANCE Info_Mod_Erol_DunklerPilger (C_INFO)
 
 FUNC INT Info_Mod_Erol_DunklerPilger_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Händler))
+	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Haendler))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Orlan_DunklerPilger))
 	{
 		return 1;
@@ -539,7 +539,7 @@ INSTANCE Info_Mod_Erol_Soeldner (C_INFO)
 
 FUNC INT Info_Mod_Erol_Soeldner_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Händler))
+	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Haendler))
 	{
 		return 1;
 	};
@@ -565,7 +565,7 @@ INSTANCE Info_Mod_Erol_Muenzen (C_INFO)
 
 FUNC INT Info_Mod_Erol_Muenzen_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Händler))
+	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Haendler))
 	{
 		return 1;
 	};
@@ -804,7 +804,7 @@ INSTANCE Info_Mod_Erol_Trade (C_INFO)
 
 FUNC INT Info_Mod_Erol_Trade_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Händler))
+	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Haendler))
 	{
 		return 1;
 	};

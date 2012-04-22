@@ -10,9 +10,16 @@ var int Mod_GottDamage;
 var int Mod_GottAdanos;
 var int Mod_GottInnos;
 var int Mod_GottBeliar;
+var int Segen_Handle;
 
 FUNC VOID Goetterbonus()
 {
+	if (!Hlp_IsValidHandle(Segen_Handle))
+	{
+		Segen_Handle = View_CreatePxl(Print_Screen[PS_X]-60, 50, Print_Screen[PS_X]-20, 90);
+		View_SetTexture(Segen_Handle, "SEGEN_INNOS.TGA");
+	};
+
 	if (Wld_IsTime(20,00,08,00))
 	&& (!Wld_IsRaining())
 	&& (Mod_GottCooldown == 0)
@@ -21,8 +28,6 @@ FUNC VOID Goetterbonus()
 		{
 			Mod_HatInnosBonus = FALSE;
 
-			AI_PrintScreen	("Innos nimmt dir seinen Segen!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
-
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
 			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
@@ -55,14 +60,14 @@ FUNC VOID Goetterbonus()
 			Mod_GottAdanos = 0;
 			Mod_GottInnos = 0;
 			Mod_GottBeliar = 0;
+
+			View_Close(Segen_Handle);
 		};
 
 		if (Mod_HatAdanosBonus == TRUE)
 		{
 			Mod_HatAdanosBonus = FALSE;
 
-			AI_PrintScreen	("Adanos nimmt dir seinen Segen!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
-
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
 			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
@@ -95,6 +100,8 @@ FUNC VOID Goetterbonus()
 			Mod_GottAdanos = 0;
 			Mod_GottInnos = 0;
 			Mod_GottBeliar = 0;
+
+			View_Close(Segen_Handle);
 		};
 
 		if ((Mod_Gottstatus == 1)
@@ -104,8 +111,6 @@ FUNC VOID Goetterbonus()
 		&& (Mod_HatBeliarBonus == FALSE)
 		{
 			Mod_HatBeliarBonus = TRUE;
-
-			AI_PrintScreen	("Beliar gibt dir seinen Segen!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 
 			if (Mod_Gottstatus == 1)
 			{
@@ -207,13 +212,15 @@ FUNC VOID Goetterbonus()
 			hero.protection[PROT_FIRE] += Mod_GottProtection;
 
 			hero.aivar[AIV_Damage] += Mod_GottHP;
+
+			View_SetTexture(Segen_Handle, "SEGEN_BELIAR.TGA");
+
+			View_Open(Segen_Handle);
 		}
 		else if (Mod_Gottstatus > 4)
 		&& (Mod_HatBeliarBonus == TRUE)
 		{
 			Mod_HatBeliarBonus = FALSE;
-
-			AI_PrintScreen	("Beliar nimmt dir seinen Segen!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
@@ -247,6 +254,8 @@ FUNC VOID Goetterbonus()
 			Mod_GottAdanos = 0;
 			Mod_GottInnos = 0;
 			Mod_GottBeliar = 0;
+
+			View_Close(Segen_Handle);
 		};
 	}
 	else if (Wld_IsTime(08,00,20,00))
@@ -257,8 +266,6 @@ FUNC VOID Goetterbonus()
 		{
 			Mod_HatBeliarBonus = FALSE;
 
-			AI_PrintScreen	("Beliar nimmt dir seinen Segen!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
-
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
 			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
@@ -291,14 +298,14 @@ FUNC VOID Goetterbonus()
 			Mod_GottAdanos = 0;
 			Mod_GottInnos = 0;
 			Mod_GottBeliar = 0;
+
+			View_Close(Segen_Handle);
 		};
 
 		if (Mod_HatAdanosBonus == TRUE)
 		{
 			Mod_HatAdanosBonus = FALSE;
 
-			AI_PrintScreen	("Adanos nimmt dir seinen Segen!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
-
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
 			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
@@ -331,6 +338,8 @@ FUNC VOID Goetterbonus()
 			Mod_GottAdanos = 0;
 			Mod_GottInnos = 0;
 			Mod_GottBeliar = 0;
+
+			View_Close(Segen_Handle);
 		};
 
 		if ((Mod_Gottstatus == 9)
@@ -340,8 +349,6 @@ FUNC VOID Goetterbonus()
 		&& (Mod_HatInnosBonus == FALSE)
 		{
 			Mod_HatInnosBonus = TRUE;
-
-			AI_PrintScreen	("Innos gibt dir seinen Segen!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 
 			if (Mod_Gottstatus == 9)
 			{
@@ -443,13 +450,15 @@ FUNC VOID Goetterbonus()
 			hero.protection[PROT_FIRE] += Mod_GottProtection;
 
 			hero.aivar[AIV_Damage] += Mod_GottHP;
+
+			View_SetTexture(Segen_Handle, "SEGEN_INNOS.TGA");
+
+			View_Open(Segen_Handle);
 		}
 		else if (Mod_Gottstatus < 9)
 		&& (Mod_HatInnosBonus == TRUE)
 		{
 			Mod_HatInnosBonus = FALSE;
-
-			AI_PrintScreen	("Innos nimmt dir seinen Segen!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
@@ -483,6 +492,8 @@ FUNC VOID Goetterbonus()
 			Mod_GottAdanos = 0;
 			Mod_GottInnos = 0;
 			Mod_GottBeliar = 0;
+
+			View_Close(Segen_Handle);
 		};
 	}
 	else if (Wld_IsRaining())
@@ -492,8 +503,6 @@ FUNC VOID Goetterbonus()
 		{
 			Mod_HatBeliarBonus = FALSE;
 
-			AI_PrintScreen	("Beliar nimmt dir seinen Segen!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
-
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
 			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
@@ -526,14 +535,14 @@ FUNC VOID Goetterbonus()
 			Mod_GottAdanos = 0;
 			Mod_GottInnos = 0;
 			Mod_GottBeliar = 0;
+
+			View_Close(Segen_Handle);
 		};
 
 		if (Mod_HatInnosBonus == TRUE)
 		{
 			Mod_HatInnosBonus = FALSE;
 
-			AI_PrintScreen	("Innos nimmt dir seinen Segen!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
-
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
 			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
@@ -566,6 +575,8 @@ FUNC VOID Goetterbonus()
 			Mod_GottAdanos = 0;
 			Mod_GottInnos = 0;
 			Mod_GottBeliar = 0;
+
+			View_Close(Segen_Handle);
 		};
 		if ((Mod_Gottstatus == 5)
 		|| (Mod_Gottstatus == 6)
@@ -574,8 +585,6 @@ FUNC VOID Goetterbonus()
 		&& (Mod_HatAdanosBonus == FALSE)
 		{
 			Mod_HatAdanosBonus = TRUE;
-
-			AI_PrintScreen	("Adanos gibt dir seinen Segen!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 
 			if (Mod_Gottstatus == 5)
 			{
@@ -677,14 +686,16 @@ FUNC VOID Goetterbonus()
 			hero.protection[PROT_FIRE] += Mod_GottProtection;
 
 			hero.aivar[AIV_Damage] += Mod_GottHP;
+
+			View_SetTexture(Segen_Handle, "SEGEN_ADANOS.TGA");
+
+			View_Open(Segen_Handle);
 		}
 		else if ((Mod_Gottstatus < 5)
 		|| (Mod_GottStatus > 8))
 		&& (Mod_HatAdanosBonus == TRUE)
 		{
 			Mod_HatAdanosBonus = FALSE;
-
-			AI_PrintScreen	("Adanos nimmt dir seinen Segen!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
@@ -718,6 +729,8 @@ FUNC VOID Goetterbonus()
 			Mod_GottAdanos = 0;
 			Mod_GottInnos = 0;
 			Mod_GottBeliar = 0;
+
+			View_Close(Segen_Handle);
 		};
 	};	
 };

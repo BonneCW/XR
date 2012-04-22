@@ -89,7 +89,7 @@ FUNC VOID Info_Mod_Bodo_WiePruefung_Info()
 	AI_Output(self, hero, "Info_Mod_Bodo_WiePruefung_12_05"); //Stimmt. Aber das ist nun mal meine Eitelkeit. (lacht)
 	AI_Output(self, hero, "Info_Mod_Bodo_WiePruefung_12_06"); //Was kann ich für dich tun?
 
-	B_LogEntry	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Bodo sagt, dass die Sachen, die ihm bei seiner Prüfung geholfen haben von Myxir stammen.");
+	B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Bodo sagt, dass die Sachen, die ihm bei seiner Prüfung geholfen haben von Myxir stammen.");
 };
 
 INSTANCE Info_Mod_Bodo_WieKloster (C_INFO)
@@ -125,7 +125,7 @@ FUNC VOID Info_Mod_Bodo_WieKloster_Info()
 	AI_Output(self, hero, "Info_Mod_Bodo_WieKloster_12_08"); //Du zauberst den Spruch auf die Wache, nimmst den Hammer - und teleportierst dich raus aus dem Kloster!
 	AI_Output(self, hero, "Info_Mod_Bodo_WieKloster_12_09"); //Und das Ganze, ohne dass du dem Wächter hast wehtun müssen.
 
-	B_LogEntry	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Bodo rät mir, einen Schlafzauber einzupacken für den Fall, dass ich der Wache des Hammers körperlich nicht beikommen kann.");
+	B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Bodo rät mir, einen Schlafzauber einzupacken für den Fall, dass ich der Wache des Hammers körperlich nicht beikommen kann.");
 };
 
 INSTANCE Info_Mod_Bodo_Novize (C_INFO)

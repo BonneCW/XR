@@ -117,18 +117,18 @@ FUNC VOID Info_Mod_Xardas_NW_Vorahnung_Info()
 	B_LogEntry_More	(TOPIC_MOD_GILDENAUFNAHME, TOPIC_MOD_DIEBEDROHUNG, "Xardas hat gesagt ich solle zuerst Kräfte sammeln und mich dazu einer Gilde anschließen.", "Xardas hat in letzter Zeit einige Visionen gehabt. Eine dunkle Gestalt wird Unheil über Khorinis verbreiten. Xardas forscht derzeit in seinen Büchern noch Informationen. Bis er etwas neues herausgefunden hat soll ich mich einer Gilde anschließen.");
 };
 
-INSTANCE Info_Mod_Xardas_NW_WasFürGilden (C_INFO)
+INSTANCE Info_Mod_Xardas_NW_WasFuerGilden (C_INFO)
 {
 	npc		= Mod_513_DMB_Xardas_NW;
 	nr		= 1;
-	condition	= Info_Mod_Xardas_NW_WasFürGilden_Condition;
-	information	= Info_Mod_Xardas_NW_WasFürGilden_Info;
+	condition	= Info_Mod_Xardas_NW_WasFuerGilden_Condition;
+	information	= Info_Mod_Xardas_NW_WasFuerGilden_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Was für Gilden gibt es?";
 };
 
-FUNC INT Info_Mod_Xardas_NW_WasFürGilden_Condition()
+FUNC INT Info_Mod_Xardas_NW_WasFuerGilden_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Vorahnung))
 	{
@@ -136,14 +136,14 @@ FUNC INT Info_Mod_Xardas_NW_WasFürGilden_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Xardas_NW_WasFürGilden_Info()
+FUNC VOID Info_Mod_Xardas_NW_WasFuerGilden_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Xardas_NW_WasFürGilden_15_00"); //Was für Gilden gibt es?
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_WasFürGilden_14_01"); //Es gibt in der Stadt die Miliz, welche sich gut aufs Kämpfen versteht.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_WasFürGilden_14_02"); //Ich habe gehört, dass auf einem Bauernhof ein paar Söldner sind. Ich glaube, dass du sie kennst.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_WasFürGilden_14_03"); //In einem Kloster leben Feuermagier. Auch ihnen kannst du dich anschließen.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_WasFürGilden_14_04"); //Außerdem gibt es noch die Wassermagier, die sich momentan an einer alten Ruine zu schaffen machen. Einer von ihnen soll sich jedoch in der Stadt aufhalten.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_WasFürGilden_14_05"); //Oder aber du entscheidest dich für den Weg Beliars.
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_WasFuerGilden_15_00"); //Was für Gilden gibt es?
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_WasFuerGilden_14_01"); //Es gibt in der Stadt die Miliz, welche sich gut aufs Kämpfen versteht.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_WasFuerGilden_14_02"); //Ich habe gehört, dass auf einem Bauernhof ein paar Söldner sind. Ich glaube, dass du sie kennst.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_WasFuerGilden_14_03"); //In einem Kloster leben Feuermagier. Auch ihnen kannst du dich anschließen.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_WasFuerGilden_14_04"); //Außerdem gibt es noch die Wassermagier, die sich momentan an einer alten Ruine zu schaffen machen. Einer von ihnen soll sich jedoch in der Stadt aufhalten.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_WasFuerGilden_14_05"); //Oder aber du entscheidest dich für den Weg Beliars.
 
 	Mod_Gilde	=	0;
 
@@ -155,8 +155,8 @@ FUNC VOID Info_Mod_Xardas_NW_WasFürGilden_Info()
 	B_SetTopicStatus	(TOPIC_MOD_MILIZ, LOG_RUNNING);
 	Log_CreateTopic	(TOPIC_MOD_SÖLDNER, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_SÖLDNER, LOG_RUNNING);
-	Log_CreateTopic	(TOPIC_MOD_DÄMONENBESCHWÖRER, LOG_MISSION);
-	B_SetTopicStatus	(TOPIC_MOD_DÄMONENBESCHWÖRER, LOG_RUNNING);
+	Log_CreateTopic	(TOPIC_MOD_DAEMONENBESCHWOERER, LOG_MISSION);
+	B_SetTopicStatus	(TOPIC_MOD_DAEMONENBESCHWOERER, LOG_RUNNING);
 	Log_CreateTopic	(TOPIC_MOD_FEUERMAGIER, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_FEUERMAGIER, LOG_RUNNING);
 	Log_CreateTopic	(TOPIC_MOD_WASSERMAGIER, LOG_MISSION);
@@ -164,7 +164,7 @@ FUNC VOID Info_Mod_Xardas_NW_WasFürGilden_Info()
 
 	B_LogEntry_NS	(TOPIC_MOD_MILIZ, "Ich kann mich der Miliz in der Stadt anschließen.");
 	B_LogEntry_NS	(TOPIC_MOD_SÖLDNER, "Die Söldner finde ich auf einem Bauernhof. Xardas meint, dass ich sie kenne.");
-	B_LogEntry_NS	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Bei Xardas kann mich den schwarzen Novizen anschließen.");
+	B_LogEntry_NS	(TOPIC_MOD_DAEMONENBESCHWOERER, "Bei Xardas kann mich den schwarzen Novizen anschließen.");
 	B_LogEntry_NS	(TOPIC_MOD_FEUERMAGIER, "In einem Kloster auf der Insel leben die Feuermagier, denen ich mich anschließen kann.");
 	B_LogEntry_NS	(TOPIC_MOD_WASSERMAGIER, "Die Wassermagier sind in einer alten Ruine im Norden der Insel. Jedoch soll einer in der Stadt Khorinis zu finden sein.");
 
@@ -220,7 +220,7 @@ INSTANCE Info_Mod_Xardas_NW_Urnol1 (C_INFO)
 FUNC INT Info_Mod_Xardas_NW_Urnol1_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Urnol_WerBistDu))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_WasFürGilden))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_WasFuerGilden))
 	{
 		return 1;
 	};
@@ -1170,18 +1170,18 @@ FUNC VOID Info_Mod_Xardas_NW_HolyHammer_Info()
 	B_LogEntry	(TOPIC_MOD_URIZIEL, "Xardas hat mit den heiligen Hammer gegeben.");
 };
 
-INSTANCE Info_Mod_Xardas_NW_Götterschwerter (C_INFO)
+INSTANCE Info_Mod_Xardas_NW_Goetterschwerter (C_INFO)
 {
 	npc		= Mod_513_DMB_Xardas_NW;
 	nr		= 1;
-	condition	= Info_Mod_Xardas_NW_Götterschwerter_Condition;
-	information	= Info_Mod_Xardas_NW_Götterschwerter_Info;
+	condition	= Info_Mod_Xardas_NW_Goetterschwerter_Condition;
+	information	= Info_Mod_Xardas_NW_Goetterschwerter_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab die drei Waffen.";
 };
 
-FUNC INT Info_Mod_Xardas_NW_Götterschwerter_Condition()
+FUNC INT Info_Mod_Xardas_NW_Goetterschwerter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_UrizielKaputt))
 	&& ((Npc_HasItems(hero, ItMw_Adanos_Stab_Magieteil) == 1)
@@ -1232,46 +1232,46 @@ FUNC INT Info_Mod_Xardas_NW_Götterschwerter_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Xardas_NW_Götterschwerter_Info()
+FUNC VOID Info_Mod_Xardas_NW_Goetterschwerter_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Xardas_NW_Götterschwerter_15_00"); //Ich hab die drei Waffen.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_01"); //Ausgezeichnet! Mit der Macht der drei Götter sollten wir prinzipiell dazu in der Lage sein, Uriziel wiederherzustellen.
-	AI_Output(hero, self, "Info_Mod_Xardas_NW_Götterschwerter_15_02"); //Gut. Wann werdet ihr das Ritual vollziehen?
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_03"); //Nun ... die Frage sollte viel eher lauten, "wo".
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_04"); //Wir haben intensiv nach einem geeigneten Ritualplatz gesucht ... sind jedoch nicht fündig geworden auf Khorinis.
-	AI_Output(hero, self, "Info_Mod_Xardas_NW_Götterschwerter_15_05"); //Was? Wie kann das sein? Jharkendar ist doch der Ursprung der alten Kultur.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_06"); //Ja, zweifelsohne gab es hier auch einst solche Ritualstätten ...
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_07"); //Während der Schreckensherrschaft von Xeres müssen diese jedoch zerstört worden sein ... oder von den Gezeiten abgetragen.
-	AI_Output(hero, self, "Info_Mod_Xardas_NW_Götterschwerter_15_08"); //Und wie wollen wir dann Uriziel wiederherstellen?
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_09"); //Darauf wollte ich gerade zu sprechen kommen.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_10"); //Quellen geben preis, dass viele Erbauer sich der Verfolgung durch Xeres entzogen, indem sie Portale zu anderen Regionen der Welt öffneten.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_11"); //Unter ihnen waren auch einige Priester und Gelehrte, welche dem Morden entkommen waren.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_12"); //Ohne sie wären die Teleportationsvorgänge über große Distanz so vieler Menschen auch nicht möglich gewesen.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_13"); //Wir konnten die Zielkoordinaten eines ihrer Portale entschlüsseln und glauben, dass es sich um eine Insel handeln muss, weitab vom Festland.
-	AI_Output(hero, self, "Info_Mod_Xardas_NW_Götterschwerter_15_14"); //Und ihr erhofft euch nun, dort die benötigte Ritualstätte zu finden?
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_15"); //Ja, so unsere Erwartung.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_16"); //Wir haben nun unter großem Aufwand Foki aus magischem Erz so justiert, dass sie den Teleport nachvollziehen sollten.
-	AI_Output(hero, self, "Info_Mod_Xardas_NW_Götterschwerter_15_17"); //Dann muss man also nur noch die Teleportflamme durchschreiten und sich dort umsehen.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_18"); //Genau. Vorerst kann jedoch nur eine Person hindurchgehen. Das magische Gefüge ist noch sehr instabil.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_19"); //Dieser Pionier müsste dann eine der Teleportplattformen aktivieren, die sich zweifelsohne auf der Insel befinden.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_20"); //Dann bestünde nämlich eine stabile magische Verbindung zwischen hier und dort.
-	AI_Output(hero, self, "Info_Mod_Xardas_NW_Götterschwerter_15_21"); //Ach so. Ich vermute mal, dass die Wahl auf mich gefallen ist?
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_22"); //Genau. Wir wissen nämlich nicht genau, was uns dort erwartet.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_23"); //Die Insel ist aller Voraussicht nach seit langem wieder verlassen.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_24"); //Es könnten dort viele Gefahren lauern, Kreaturen längst vergangener Zeit, magische Geschöpfe und Wächter.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_25"); //Auch heißt es, die Insel sei aus Feuer geboren, welches den Tiefen des Ozeans entsprang.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_26"); //Es könnte sich also als Umgebung herausstellen, der nicht jeder gewachsen ist.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_27"); //Da wir jedoch möglicherweise nur einen einzigen Versuch haben, fiel unsere Wahl auf den Mann, der sich schon oft durch seine Taten hervorgehoben hat, denjenigen, der dem Tode viele Male entrann und dem die Götter stets gewogen waren. Auf dich.
-	AI_Output(hero, self, "Info_Mod_Xardas_NW_Götterschwerter_15_28"); //Verstehe.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_29"); //Wir haben bereits einen magischen Fokus aus Erz durch die Teleportflamme geschickt.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_30"); //Sobald du dort bist, musst du nur noch eine Teleportplattform finden und sie mit dem Fokus aktivieren ...
-	AI_Output(hero, self, "Info_Mod_Xardas_NW_Götterschwerter_15_31"); //In Ordnung. Wann soll ich losgehen?
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_32"); //Die Teleportflamme steht für dich bereit und du kannst jederzeit durchgehen, wenn du dich so weit fühlst.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_33"); //Hier hast du den Schlüssel zur Tür, damit du den Teleporter erreichen kannst.
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_Goetterschwerter_15_00"); //Ich hab die drei Waffen.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_01"); //Ausgezeichnet! Mit der Macht der drei Götter sollten wir prinzipiell dazu in der Lage sein, Uriziel wiederherzustellen.
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_Goetterschwerter_15_02"); //Gut. Wann werdet ihr das Ritual vollziehen?
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_03"); //Nun ... die Frage sollte viel eher lauten, "wo".
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_04"); //Wir haben intensiv nach einem geeigneten Ritualplatz gesucht ... sind jedoch nicht fündig geworden auf Khorinis.
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_Goetterschwerter_15_05"); //Was? Wie kann das sein? Jharkendar ist doch der Ursprung der alten Kultur.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_06"); //Ja, zweifelsohne gab es hier auch einst solche Ritualstätten ...
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_07"); //Während der Schreckensherrschaft von Xeres müssen diese jedoch zerstört worden sein ... oder von den Gezeiten abgetragen.
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_Goetterschwerter_15_08"); //Und wie wollen wir dann Uriziel wiederherstellen?
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_09"); //Darauf wollte ich gerade zu sprechen kommen.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_10"); //Quellen geben preis, dass viele Erbauer sich der Verfolgung durch Xeres entzogen, indem sie Portale zu anderen Regionen der Welt öffneten.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_11"); //Unter ihnen waren auch einige Priester und Gelehrte, welche dem Morden entkommen waren.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_12"); //Ohne sie wären die Teleportationsvorgänge über große Distanz so vieler Menschen auch nicht möglich gewesen.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_13"); //Wir konnten die Zielkoordinaten eines ihrer Portale entschlüsseln und glauben, dass es sich um eine Insel handeln muss, weitab vom Festland.
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_Goetterschwerter_15_14"); //Und ihr erhofft euch nun, dort die benötigte Ritualstätte zu finden?
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_15"); //Ja, so unsere Erwartung.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_16"); //Wir haben nun unter großem Aufwand Foki aus magischem Erz so justiert, dass sie den Teleport nachvollziehen sollten.
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_Goetterschwerter_15_17"); //Dann muss man also nur noch die Teleportflamme durchschreiten und sich dort umsehen.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_18"); //Genau. Vorerst kann jedoch nur eine Person hindurchgehen. Das magische Gefüge ist noch sehr instabil.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_19"); //Dieser Pionier müsste dann eine der Teleportplattformen aktivieren, die sich zweifelsohne auf der Insel befinden.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_20"); //Dann bestünde nämlich eine stabile magische Verbindung zwischen hier und dort.
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_Goetterschwerter_15_21"); //Ach so. Ich vermute mal, dass die Wahl auf mich gefallen ist?
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_22"); //Genau. Wir wissen nämlich nicht genau, was uns dort erwartet.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_23"); //Die Insel ist aller Voraussicht nach seit langem wieder verlassen.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_24"); //Es könnten dort viele Gefahren lauern, Kreaturen längst vergangener Zeit, magische Geschöpfe und Wächter.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_25"); //Auch heißt es, die Insel sei aus Feuer geboren, welches den Tiefen des Ozeans entsprang.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_26"); //Es könnte sich also als Umgebung herausstellen, der nicht jeder gewachsen ist.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_27"); //Da wir jedoch möglicherweise nur einen einzigen Versuch haben, fiel unsere Wahl auf den Mann, der sich schon oft durch seine Taten hervorgehoben hat, denjenigen, der dem Tode viele Male entrann und dem die Götter stets gewogen waren. Auf dich.
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_Goetterschwerter_15_28"); //Verstehe.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_29"); //Wir haben bereits einen magischen Fokus aus Erz durch die Teleportflamme geschickt.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_30"); //Sobald du dort bist, musst du nur noch eine Teleportplattform finden und sie mit dem Fokus aktivieren ...
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_Goetterschwerter_15_31"); //In Ordnung. Wann soll ich losgehen?
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_32"); //Die Teleportflamme steht für dich bereit und du kannst jederzeit durchgehen, wenn du dich so weit fühlst.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_33"); //Hier hast du den Schlüssel zur Tür, damit du den Teleporter erreichen kannst.
 
 	B_GiveInvItems	(self, hero, ItKe_RitualsinselDoor, 1);
 
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Götterschwerter_14_34"); //Der Segen der Götter möge dich begleiten.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Goetterschwerter_14_34"); //Der Segen der Götter möge dich begleiten.
 
 	B_LogEntry	(TOPIC_MOD_URIZIEL, "Na schön, das Ritual soll auf einer fernen Insel erfolgen. Dazu muss ich jedoch durch die Teleportflamme im Klosterkeller und eine Teleportplattform auf der Insel aktivieren. Der magische Fokus dafür befindet sich bereits vor Ort.");
 
@@ -2232,7 +2232,7 @@ INSTANCE Info_Mod_Xardas_NW_WasMussIchTun (C_INFO)
 
 FUNC INT Info_Mod_Xardas_NW_WasMussIchTun_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_WasFürGilden))
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_WasFuerGilden))
 	&& (Mod_Gilde == 0)
 	{
 		return 1;
@@ -2309,7 +2309,7 @@ FUNC VOID Info_Mod_Xardas_NW_WarumNovize_Info()
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_WarumNovize_14_01"); //Wende dich an Andokai. Er ist der oberste Schwarzmagier der Festung und zuständig für die Rekrutierung.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_WarumNovize_14_02"); //Wenn du ihm sagst, dass ich dir vertraue, wird er dich gut behandeln.
 
-	B_LogEntry	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Wenn ich mich den Beliaranhängern anschließen will, soll ich mich an Andokai wenden, den obersten Schwarzmagier der alten Festung.");
+	B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Wenn ich mich den Beliaranhängern anschließen will, soll ich mich an Andokai wenden, den obersten Schwarzmagier der alten Festung.");
 };
 
 INSTANCE Info_Mod_Xardas_NW_WelcherVorteil (C_INFO)
@@ -2340,7 +2340,7 @@ FUNC VOID Info_Mod_Xardas_NW_WelcherVorteil_Info()
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_WelcherVorteil_14_03"); //Die Grundausbildung besteht aus den ersten beiden Kreisen der Magie.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_WelcherVorteil_14_04"); //Erst danach musst du dich für eine Spezialisierung entscheiden. Die mächtigen Kampfzauber kannst du aber nur als Magier erlernen.
 
-	B_LogEntry	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Bei den Beliaranhängern erlernt jeder Novize die zwei ersten Magiekreise, bevor er sich zu einem Krieger oder Magier spezialisiert.");
+	B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Bei den Beliaranhängern erlernt jeder Novize die zwei ersten Magiekreise, bevor er sich zu einem Krieger oder Magier spezialisiert.");
 };
 
 INSTANCE Info_Mod_Xardas_NW_WoSindAndere (C_INFO)
@@ -2372,7 +2372,7 @@ FUNC VOID Info_Mod_Xardas_NW_WoSindAndere_Info()
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_WoSindAndere_14_04"); //Wir benutzen die Beliarschreine als Teleporter. Du musst jeden Schrein aktivieren, um damit reisen zu können, aber dann kannst du zwischen ihnen wechseln, wie du willst.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_WoSindAndere_14_05"); //Mein Schrein ist bisher nur mit dem der Festung verbunden. Du kannst sie also gar nicht verfehlen.
 
-	B_LogEntry	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Die Festung der Beliaranhänger erreiche ich über den Beliarschrein in Xardas' Turm, der gleichzeitig als Teleporter funktioniert.");
+	B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Die Festung der Beliaranhänger erreiche ich über den Beliarschrein in Xardas' Turm, der gleichzeitig als Teleporter funktioniert.");
 
 	Mod_BeliarStatue_Krieger_Dabei = 1;
 };
@@ -2501,7 +2501,7 @@ FUNC VOID Info_Mod_Xardas_NW_LetzterTest_Info()
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_LetzterTest_14_11"); //Eine schreckliche Götterlästerung, nicht wahr? Mit diesem Stecken verhauen sich die notgeilen Spinner ihre Ärsche und rufen dabei Beliar an!
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_LetzterTest_14_12"); //Du musst dir also diesen Stab besorgen und Ryan damit beseitigen.
 
-	B_LogEntry	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Xardas hat mir einem abtrünnigen Magier namens Ryan erzählt, der in der Höhle der Feuerprüfung der Feuermagier dunkle Rituale abhält. Ich soll ihn aufhalten. Um ihn zu töten, benötige ich jedoch den sogenannten Drei-Götter-Stab. Diesen trägt laut Xardas der Priester der Gruppe bei sich.");
+	B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Xardas hat mir einem abtrünnigen Magier namens Ryan erzählt, der in der Höhle der Feuerprüfung der Feuermagier dunkle Rituale abhält. Ich soll ihn aufhalten. Um ihn zu töten, benötige ich jedoch den sogenannten Drei-Götter-Stab. Diesen trägt laut Xardas der Priester der Gruppe bei sich.");
 
 	Info_ClearChoices	(Info_Mod_Xardas_NW_LetzterTest);
 
@@ -2577,7 +2577,7 @@ FUNC VOID Info_Mod_Xardas_NW_LetzterTest_Success_Info()
 
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_LetzterTest_Success_14_03"); //Wie ich erwartet habe, hast du diese Prüfung mit Bravour bestanden. Deiner Aufnahme als Schwarzer Novize steht damit nichts mehr im Weg.
 
-	B_LogEntry_More	(TOPIC_MOD_GILDENAUFNAHME, TOPIC_MOD_DÄMONENBESCHWÖRER, "Ich kann jetzt Schwarzer Novize werden.", "Ich kann jetzt Schwarzer Novize werden.");
+	B_LogEntry_More	(TOPIC_MOD_GILDENAUFNAHME, TOPIC_MOD_DAEMONENBESCHWOERER, "Ich kann jetzt Schwarzer Novize werden.", "Ich kann jetzt Schwarzer Novize werden.");
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 200);
 
@@ -2852,9 +2852,9 @@ FUNC VOID Info_Mod_Xardas_NW_Aufnahme_Ja()
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Aufnahme_Ja_14_05"); //Zu deinen Rechten und Pflichten sprich aber wirklich besser mit Andokai.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Aufnahme_Ja_14_06"); //Ich werde dich nun in Magie unterweisen, wenn du wünschst.
 
-	B_LogEntry_More	(TOPIC_MOD_GILDENAUFNAHME, TOPIC_MOD_DÄMONENBESCHWÖRER, "Ich bin jetzt ein Schwarzer Novize.", "Ich bin jetzt ein Schwarzer Novize.");
+	B_LogEntry_More	(TOPIC_MOD_GILDENAUFNAHME, TOPIC_MOD_DAEMONENBESCHWOERER, "Ich bin jetzt ein Schwarzer Novize.", "Ich bin jetzt ein Schwarzer Novize.");
 	B_SetTopicStatus	(TOPIC_MOD_GILDENAUFNAHME, LOG_SUCCESS);
-	B_SetTopicStatus	(TOPIC_MOD_DÄMONENBESCHWÖRER, LOG_SUCCESS);
+	B_SetTopicStatus	(TOPIC_MOD_DAEMONENBESCHWOERER, LOG_SUCCESS);
 
 	B_SetTopicStatus	(TOPIC_MOD_FEUERMAGIER, LOG_FAILED);
 	B_SetTopicStatus	(TOPIC_MOD_MILIZ, LOG_FAILED);
@@ -3590,7 +3590,7 @@ INSTANCE Info_Mod_Xardas_NW_EXIT (C_INFO)
 
 FUNC INT Info_Mod_Xardas_NW_EXIT_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_WasFürGilden))
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_WasFuerGilden))
 	{
 		return 1;
 	};

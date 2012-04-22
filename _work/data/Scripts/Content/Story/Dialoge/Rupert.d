@@ -122,8 +122,8 @@ FUNC VOID Info_Mod_Rupert_Handelt_A()
 
 	Mod_RupertHandelt = 1;
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Rupert handelt jetzt mit mir.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Rupert handelt jetzt mit mir.");
 };
 
 INSTANCE Info_Mod_Rupert_MatteoLehrling1 (C_INFO)

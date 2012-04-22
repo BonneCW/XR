@@ -17,8 +17,8 @@ FUNC VOID Info_Mod_Thekla_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Thekla_Hi_17_00"); //Hallo Fremder. Wenn du einen Ort suchst an dem du etwas zu Essen bekommst, dann bist du hier richtig.
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_ONAR, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_ONAR, "Thekla kann mir etwas zu Essen verkaufen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_ONAR, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_ONAR, "Thekla kann mir etwas zu Essen verkaufen.");
 };
 
 INSTANCE Info_Mod_Thekla_Daemonisch (C_INFO)

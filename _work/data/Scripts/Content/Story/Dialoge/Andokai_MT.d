@@ -64,9 +64,9 @@ FUNC VOID Info_Mod_Andokai_Hi_A()
 
 	Log_CreateTopic	(TOPIC_MOD_ANDOKAI_WEIN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_ANDOKAI_WEIN, LOG_RUNNING);
-	B_LogEntry_More	(TOPIC_MOD_DÄMONENBESCHWÖRER, TOPIC_MOD_ANDOKAI_WEIN, "Mein erster Auftrag besteht darin, den Heiligen Hammer zu stehlen, den die Feuermagier irgendwo in den Gewölben ihres Klosters in Khorinis versteckt haben.", "Ich soll mich ins Kloster der Feuermagier begeben und dort Gorax davon überzeugen, mir eine Weinlieferung auszuhändigen, die ich dann zu Myxir bringe.");
+	B_LogEntry_More	(TOPIC_MOD_DAEMONENBESCHWOERER, TOPIC_MOD_ANDOKAI_WEIN, "Mein erster Auftrag besteht darin, den Heiligen Hammer zu stehlen, den die Feuermagier irgendwo in den Gewölben ihres Klosters in Khorinis versteckt haben.", "Ich soll mich ins Kloster der Feuermagier begeben und dort Gorax davon überzeugen, mir eine Weinlieferung auszuhändigen, die ich dann zu Myxir bringe.");
 	B_LogEntry_NS	(TOPIC_MOD_ANDOKAI_WEIN, "Ich falle im Kloster nicht auf, wenn ich eine Novizenrobe trage. Außerdem muss ich über die Mauer rechts neben dem Eingangstor zum Kloster klettern, um in den Innenhof gelangen zu können.");
-	B_LogEntry_NS	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Ich falle im Kloster nicht auf, wenn ich eine Novizenrobe trage. Außerdem muss ich über die Mauer rechts neben dem Eingangstor zum Kloster klettern, um in den Innenhof gelangen zu können. Wie ich den Hammer stehle, ohne dass es bemerkt wird, kann mir vielleicht Bodo in der Stadt sagen.");
+	B_LogEntry_NS	(TOPIC_MOD_DAEMONENBESCHWOERER, "Ich falle im Kloster nicht auf, wenn ich eine Novizenrobe trage. Außerdem muss ich über die Mauer rechts neben dem Eingangstor zum Kloster klettern, um in den Innenhof gelangen zu können. Wie ich den Hammer stehle, ohne dass es bemerkt wird, kann mir vielleicht Bodo in der Stadt sagen.");
 };
 
 INSTANCE Info_Mod_Andokai_Hammer (C_INFO)
@@ -110,7 +110,7 @@ FUNC VOID Info_Mod_Andokai_Hammer_Info()
 
 	B_Göttergefallen(3, 1);
 
-	B_LogEntry	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Hinter dem großen Tor auf dem Platz der Festung der Beliaranhänger verbirgt sich ein Irrgarten, der zu einer Bibliothek führen soll. Und ich muss den Weg finden.");
+	B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Hinter dem großen Tor auf dem Platz der Festung der Beliaranhänger verbirgt sich ein Irrgarten, der zu einer Bibliothek führen soll. Und ich muss den Weg finden.");
 };
 
 INSTANCE Info_Mod_Andokai_WarInBib (C_INFO)
@@ -160,7 +160,7 @@ FUNC VOID Info_Mod_Andokai_WarInBib_Info()
 
 	B_Göttergefallen(3, 1);
 
-	B_LogEntry	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Wenn Xardas sein Einverständnis erklärt, will Andokai mich als Novizen aufnehmen.");
+	B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Wenn Xardas sein Einverständnis erklärt, will Andokai mich als Novizen aufnehmen.");
 
 	Wld_InsertNpc	(Mod_7755_KDS_SchwarzerMagier_MT, "LABYRINTH_98");
 	Wld_InsertNpc	(Mod_7756_KDS_SchwarzerMagier_MT, "LABYRINTH_98");

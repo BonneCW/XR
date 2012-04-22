@@ -105,8 +105,8 @@ FUNC VOID Info_Mod_Ignaz_Handel_Info()
 	AI_Output(hero, self, "Info_Mod_Ignaz_Handel_15_00"); //Verkaufst du Alchemiezubehör?
 	AI_Output(self, hero, "Info_Mod_Ignaz_Handel_14_01"); //Ja, ja, steht doch alles hier rum. Oder sehe ich das falsch?
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Ignaz kann mir Tränke verkaufen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Ignaz kann mir Tränke verkaufen.");
 };
 
 INSTANCE Info_Mod_Ignaz_Lehrer (C_INFO)

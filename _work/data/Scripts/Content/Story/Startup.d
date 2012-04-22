@@ -3335,7 +3335,7 @@ FUNC VOID INIT_AddonWorld ()
 		Wld_InsertItem	(ItAt_DragonEgg_Giftdrache, "FP_ITEM_DRAGONEGG_04");
 	};
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Götterschwerter))
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Goetterschwerter))
 	&& (INSERT_FAKE_HERO_ONETIME == FALSE)
 	{
 		Wld_InsertNpc	(Fake_Hero,		"STRAND");

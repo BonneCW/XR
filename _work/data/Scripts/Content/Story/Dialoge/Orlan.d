@@ -20,8 +20,8 @@ FUNC VOID Info_Mod_Orlan_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Orlan_Hi_05_01"); //Willkommen in meiner Taverne, Fremder.
 	AI_Output(self, hero, "Info_Mod_Orlan_Hi_05_02"); //Was kann ich für dich tun? Brauchst du was zu trinken? Oder suchst du vielleicht ein Bett für die Nacht?
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_OHNELAGER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_OHNELAGER, "Orlan kann mir was zu trinken verkaufen und mir ein Zimmer vermieten.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_OHNELAGER, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_OHNELAGER, "Orlan kann mir was zu trinken verkaufen und mir ein Zimmer vermieten.");
 };
 
 INSTANCE Info_Mod_Orlan_DunklerPilger (C_INFO)

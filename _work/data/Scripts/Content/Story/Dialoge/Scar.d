@@ -410,8 +410,8 @@ FUNC VOID Info_Mod_Scar_VieleSchwerter_Info()
 	AI_Output(hero, self, "Info_Mod_Scar_VieleSchwerter_15_00"); //Du schleppst aber viele Schwerter mit dir rum!
 	AI_Output(self, hero, "Info_Mod_Scar_VieleSchwerter_10_01"); //Ja, sind ganz schön schwer. Aber Andokai hat gemeint, dass ich ja für irgendwas gut sein muss, deswegen verkaufe ich die jetzt.
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_DÄMONENRITTER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_DÄMONENRITTER, "Scar handelt mit Waffen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_DÄMONENRITTER, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_DÄMONENRITTER, "Scar handelt mit Waffen.");
 };
 
 INSTANCE Info_Mod_Scar_Befoerderung (C_INFO)

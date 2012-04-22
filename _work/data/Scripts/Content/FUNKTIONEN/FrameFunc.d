@@ -158,8 +158,6 @@ FUNC VOID FRAMEFUNC ()
 			Offline_Modus = FALSE;
 			ValidateUserPasswort = 1;
 
-			PrintScreen	("Oh JE", -1, -1, FONT_SCREEN, 20);
-
 			Mod_OnlineMode = 0;
 
 			if (STR_ToInt(online_playtime_s) > 0)

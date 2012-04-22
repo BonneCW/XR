@@ -48,8 +48,8 @@ FUNC VOID Info_Mod_Graham_Haendler_Info()
 	AI_Output(hero, self, "Info_Mod_Graham_Haendler_15_00"); //Verkaufst du immer noch Karten?
 	AI_Output(self, hero, "Info_Mod_Graham_Haendler_02_01"); //Klar. Ich fertige zwar keine mehr an, aber ich hab noch ein Restangebot. Kannst sie dir ja mal anschauen.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_OLDCAMP, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_OLDCAMP, "Graham verkauft Karten.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_OLDCAMP, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_OLDCAMP, "Graham verkauft Karten.");
 };
 
 INSTANCE Info_Mod_Graham_WasGibts (C_INFO)

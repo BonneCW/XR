@@ -543,7 +543,7 @@ FUNC VOID GILDENSTORY_FM()
 
 		if (AUFSUCHENACHSEELENSTEINE == 0)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Aaron_Party))
-		&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Götterschwerter))
+		&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Goetterschwerter))
 		{
 			AUFSUCHENACHSEELENSTEINE = 1;
 		};

@@ -20,8 +20,8 @@ FUNC VOID Info_Mod_Gorax_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Gorax_Hi_14_01"); //Ich bin Gorax und kümmere mich um die Versorgung mit Lebensmitteln hier im Kloster.
 	AI_Output(self, hero, "Info_Mod_Gorax_Hi_14_02"); //Ich verkaufe aber auch andere Sachen.
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_KLOSTER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_KLOSTER, "Gorax kann mir ein paar Sachen verkaufen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_KLOSTER, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_KLOSTER, "Gorax kann mir ein paar Sachen verkaufen.");
 };
 
 INSTANCE Info_Mod_Gorax_Andokai (C_INFO)

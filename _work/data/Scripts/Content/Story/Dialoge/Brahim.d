@@ -20,8 +20,8 @@ FUNC VOID Info_Mod_Brahim_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_Brahim_Hi_15_02"); //Du handelst also auch mit ehemaligen Sträflingen?
 	AI_Output(self, hero, "Info_Mod_Brahim_Hi_07_03"); //Klar doch. Du willst gar nicht wissen, wem ich schon Karten verkauft hab.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Brahim verkauft Karten.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Brahim verkauft Karten.");
 };
 
 INSTANCE Info_Mod_Brahim_ThorbenLehrling (C_INFO)

@@ -18,8 +18,8 @@ FUNC VOID Info_Mod_Peter_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Peter_Hi_14_00"); //Willkommen in meinem Gasthaus, dem besten und einzigen in Khorata.
 	AI_Output(self, hero, "Info_Mod_Peter_Hi_14_01"); //Bier und Essen kannst du hier bekommen.
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Peter verkauft Lebensmittel");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Peter verkauft Lebensmittel");
 };
 
 INSTANCE Info_Mod_Peter_Elvira (C_INFO)

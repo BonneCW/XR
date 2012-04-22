@@ -24,8 +24,8 @@ FUNC VOID Info_Mod_Miguel_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Miguel_Hi_11_03"); //Außerdem verwalte ich die überschüssige Hehlerware, die wir gerade nicht loswerden.
 	AI_Output(self, hero, "Info_Mod_Miguel_Hi_11_04"); //Du kannst also manch interessante Handelsgüter bei mir finden ... und viel günstiger, als bei den Wucherern die sich Händler nennen.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_BANDITEN, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_BANDITEN, "Miguel scheint mit Tränken zu handeln.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_BANDITEN, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_BANDITEN, "Miguel scheint mit Tränken zu handeln.");
 
 	Npc_SetRefuseTalk	(self, 240);
 };

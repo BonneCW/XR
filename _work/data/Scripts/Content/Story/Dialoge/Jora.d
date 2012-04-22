@@ -20,8 +20,8 @@ FUNC VOID Info_Mod_Jora_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Jora_Hi_08_00"); //Hey du. Brauchst du 'ne Waffe oder sonst was? Ich kann dir was verkaufen.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Jora verkauft Waffen und andere Sachen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Jora verkauft Waffen und andere Sachen.");
 };
 
 INSTANCE Info_Mod_Jora_MatteoLehrling1 (C_INFO)

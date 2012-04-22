@@ -21,8 +21,8 @@ FUNC VOID Info_Mod_Skip_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Skip_Hi_08_02"); //Solltest du irgendwelche Waren brauchen, dann kannst du zu mir kommen.
 	AI_Output(self, hero, "Info_Mod_Skip_Hi_08_03"); //Waffen gibt es aber nur bei Garrett.
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_PIRATEN, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_PIRATEN, "Skip handelt mit allem möglichen außer mit Waffen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_PIRATEN, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_PIRATEN, "Skip handelt mit allem möglichen außer mit Waffen.");
 };
 
 INSTANCE Info_Mod_Skip_Malcom (C_INFO)

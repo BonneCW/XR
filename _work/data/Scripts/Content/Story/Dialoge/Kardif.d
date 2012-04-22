@@ -18,8 +18,8 @@ FUNC VOID Info_Mod_Kardif_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Kardif_Hi_14_00"); //Willkommen Fremder, was kann ich für dich tun?
 	AI_Output(self, hero, "Info_Mod_Kardif_Hi_14_01"); //Solltest du etwas zu trinken suchen, dann bist du bei mir richtig.
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Kardif verkauft etwas zu trinken.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Kardif verkauft etwas zu trinken.");
 };
 
 INSTANCE Info_Mod_Kardif_Daemonisch (C_INFO)

@@ -19,8 +19,8 @@ FUNC VOID Info_Mod_Halvor_Hi_Info()
 	B_Say (hero, self, "$WHOAREYOU");
 	AI_Output(self, hero, "Info_Mod_Halvor_Hi_06_01"); //Ich bin Havlor, der Fischhändler.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Halvor im Hafenviertel ist Fischhändler.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Halvor im Hafenviertel ist Fischhändler.");
 };
 
 INSTANCE Info_Mod_Halvor_HolFische (C_INFO)

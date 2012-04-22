@@ -17,8 +17,8 @@ FUNC VOID Info_Mod_Lutero_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Lutero_Hi_13_00"); //Hey Fremder, suchst du was bestimmtest? Ich hab ein paar seltene Sachen hier.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Lutero verkauft seltene Sachen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Lutero verkauft seltene Sachen.");
 };
 
 INSTANCE Info_Mod_Lutero_Lutero (C_INFO)

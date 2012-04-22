@@ -34,7 +34,7 @@ FUNC INT Info_Mod_Pyrokar_Hammer_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Pyrokar_Hi))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_UrizielKaputt))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Andokai_Hammer))
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Götterschwerter))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Goetterschwerter))
 	&& (Npc_HasItems(hero, Holy_Hammer_MIS) == 0)
 	{
 		return 1;
@@ -368,7 +368,7 @@ FUNC VOID Info_Mod_Pyrokar_Aufnahme_Ja()
 	B_SetTopicStatus	(TOPIC_MOD_SÖLDNER, LOG_FAILED);
 	B_SetTopicStatus	(TOPIC_MOD_WASSERMAGIER, LOG_FAILED);
 	B_SetTopicStatus	(TOPIC_MOD_MILIZ, LOG_FAILED);
-	B_SetTopicStatus	(TOPIC_MOD_DÄMONENBESCHWÖRER, LOG_FAILED);
+	B_SetTopicStatus	(TOPIC_MOD_DAEMONENBESCHWOERER, LOG_FAILED);
 
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_KLOSTER, LOG_NOTE);
 	B_LogEntry_NS	(TOPIC_MOD_LEHRER_KLOSTER, "Marduk lehrt die magischen Kreise.");

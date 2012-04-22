@@ -2542,8 +2542,8 @@ INSTANCE ItAr_GewandDerMacht (C_Item)
 
  	value 					=	3000;
 
-	visual 					=	"gurh.3ds";
-	visual_change 			=	"Hum_GURS_ARMOR.asc";
+	visual 					=	"ItAr_GewandDerMacht.3ds";
+	visual_change 			=	"Armor_GewandDerMacht.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 

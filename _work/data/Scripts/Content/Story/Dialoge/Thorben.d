@@ -1234,8 +1234,8 @@ FUNC VOID Info_Mod_Thorben_Trade_Info()
 {
 	if (Mod_ThorbenTrader == FALSE)
 	{
-		Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-		B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Thorben verkauft Dietriche.");
+		Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Thorben verkauft Dietriche.");
 
 		Mod_ThorbenTrader = 1;
 	};

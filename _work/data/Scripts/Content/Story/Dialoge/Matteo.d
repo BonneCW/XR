@@ -19,8 +19,8 @@ FUNC VOID Info_Mod_Matteo_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_Matteo_Hi_15_01"); //Keine Vorurteile gegenüber einem ehemaligen Sträfling?
 	AI_Output(self, hero, "Info_Mod_Matteo_Hi_09_02"); //Ach was! Alles Kundschaft! Interessierte, zahlende Kundschaft!
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Matteo verkauft Lebensmittel.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Matteo verkauft Lebensmittel.");
 };
 
 INSTANCE Info_Mod_Matteo_Angebot_Kissen (C_INFO)
