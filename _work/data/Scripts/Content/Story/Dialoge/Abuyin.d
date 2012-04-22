@@ -45,39 +45,39 @@ FUNC VOID Info_Mod_Abuyin_NewTabak_Info()
 	AI_Output(self, hero, "Info_Mod_Abuyin_NewTabak_13_01"); //Mach eine Pause und genieße den neuen Tabak aus dem fernen Varant.
 };
 
-INSTANCE Info_Mod_Abuyin_Flugblätter (C_INFO)
+INSTANCE Info_Mod_Abuyin_Flugblaetter (C_INFO)
 {
 	npc		= Mod_558_NONE_Abuyin_NW;
 	nr		= 1;
-	condition	= Info_Mod_Abuyin_Flugblätter_Condition;
-	information	= Info_Mod_Abuyin_Flugblätter_Info;
+	condition	= Info_Mod_Abuyin_Flugblaetter_Condition;
+	information	= Info_Mod_Abuyin_Flugblaetter_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab hier ein Flugblatt für dich.";
 };
 
-FUNC INT Info_Mod_Abuyin_Flugblätter_Condition()
+FUNC INT Info_Mod_Abuyin_Flugblaetter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Auftrag_2))
-	&& (Npc_HasItems(hero, MatteoFlugblätter) >= 1)
-	&& (Mod_Flugblätter	<	20)
-	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+	&& (Npc_HasItems(hero, MatteoFlugblaetter) >= 1)
+	&& (Mod_Flugblaetter	<	20)
+	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Abuyin_Hi))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Abuyin_Flugblätter_Info()
+FUNC VOID Info_Mod_Abuyin_Flugblaetter_Info()
 {
 	B_Say (hero, self, "$MATTEOPAPER");
 
-	B_GiveInvItems	(hero, self, MatteoFlugblätter, 1);
+	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_Abuyin_Flugblätter_13_01"); //Ich habe vorausgesehen, dass du kommen würdest.
-	AI_Output(self, hero, "Info_Mod_Abuyin_Flugblätter_13_02"); //Vielleicht werd ich mal bei Matteo vorbeischauen.
+	AI_Output(self, hero, "Info_Mod_Abuyin_Flugblaetter_13_01"); //Ich habe vorausgesehen, dass du kommen würdest.
+	AI_Output(self, hero, "Info_Mod_Abuyin_Flugblaetter_13_02"); //Vielleicht werd ich mal bei Matteo vorbeischauen.
 
-	Mod_Flugblätter	=	Mod_Flugblätter + 1;
+	Mod_Flugblaetter += 1;
 };
 
 INSTANCE Info_Mod_Abuyin_Plagenquest (C_INFO)

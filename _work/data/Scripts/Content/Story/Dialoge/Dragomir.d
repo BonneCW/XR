@@ -835,14 +835,14 @@ INSTANCE Info_Mod_Dragomir_Pedro (C_INFO)
 	information	= Info_Mod_Dragomir_Pedro_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Hast du einen Feuermagier-Novizen gesehen?";
+	description	= "Hast du einen Feuer Novizen gesehen?";
 };
 
 FUNC INT Info_Mod_Dragomir_Pedro_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Isgaroth_Pedro))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Dragomir_Hi))
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Parlan_Ring_Zurück))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Parlan_Ring_Zurueck))
 	{
 		return 1;
 	};
@@ -850,8 +850,8 @@ FUNC INT Info_Mod_Dragomir_Pedro_Condition()
 
 FUNC VOID Info_Mod_Dragomir_Pedro_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_00"); //Hast du einen Feuermagier-Novizen gesehen?
-	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_01"); //Natürlich hab ich einen Feuermagier-Novizen gesehen. Ich seh jeden Tag einen.
+	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_00"); //Hast du einen Feuer Novizen gesehen?
+	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_01"); //Natürlich hab ich einen Feuer Novizen gesehen. Ich seh jeden Tag einen.
 	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_02"); //Hast du heute auch schon einen gesehen.
 	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_03"); //Klar, dich.
 	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_04"); //Und außer mir?

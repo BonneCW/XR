@@ -353,8 +353,8 @@ INSTANCE Info_Mod_Karras_MagierWerden (C_INFO)
 FUNC INT Info_Mod_Karras_MagierWerden_Condition()
 {
 	if (Kapitel >= 3)
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_Beförderung))
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Raven_Beförderung))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_Befoerderung))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Raven_Befoerderung))
 	&& (hero.guild == GIL_KDF)
 	{
 		return 1;

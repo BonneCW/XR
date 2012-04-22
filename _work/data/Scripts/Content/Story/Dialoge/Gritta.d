@@ -185,38 +185,38 @@ FUNC VOID Info_Mod_Gritta_Shakir3_Info()
 	B_StartOtherRoutine	(self, "ATSHAKIR");
 };
 
-INSTANCE Info_Mod_Gritta_Flugblätter (C_INFO)
+INSTANCE Info_Mod_Gritta_Flugblaetter (C_INFO)
 {
 	npc		= Mod_580_NONE_Gritta_NW;
 	nr		= 1;
-	condition	= Info_Mod_Gritta_Flugblätter_Condition;
-	information	= Info_Mod_Gritta_Flugblätter_Info;
+	condition	= Info_Mod_Gritta_Flugblaetter_Condition;
+	information	= Info_Mod_Gritta_Flugblaetter_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab hier ein Flugblatt für dich.";
 };
 
-FUNC INT Info_Mod_Gritta_Flugblätter_Condition()
+FUNC INT Info_Mod_Gritta_Flugblaetter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Auftrag_2))
-	&& (Npc_HasItems(hero, MatteoFlugblätter) >= 1)
-	&& (Mod_Flugblätter	<	20)
-	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+	&& (Npc_HasItems(hero, MatteoFlugblaetter) >= 1)
+	&& (Mod_Flugblaetter < 20)
+	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Gritta_Hi))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Gritta_Flugblätter_Info()
+FUNC VOID Info_Mod_Gritta_Flugblaetter_Info()
 {
 	B_Say (hero, self, "$MATTEOPAPER");
 
-	B_GiveInvItems	(hero, self, MatteoFlugblätter, 1);
+	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_Gritta_Flugblätter_16_01"); //(affektiert) Hmm, schöne Kleider hat Matteo aber glaube ich nicht.
+	AI_Output(self, hero, "Info_Mod_Gritta_Flugblaetter_16_01"); //(affektiert) Hmm, schöne Kleider hat Matteo aber glaube ich nicht.
 
-	Mod_Flugblätter	=	Mod_Flugblätter + 1;
+	Mod_Flugblaetter += 1;
 };
 
 INSTANCE Info_Mod_Gritta_Pickpocket (C_INFO)

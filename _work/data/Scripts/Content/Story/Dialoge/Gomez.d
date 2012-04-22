@@ -546,18 +546,18 @@ FUNC VOID Info_Mod_Gomez_DuHier_Info()
 	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_08"); //Scheint eine harte Zeit gewesen zu sein - zu Bewusstsein gekommen bin ich erst wieder hier, unter Xardas' Augen.
 };
 	
-INSTANCE Info_Mod_Gomez_Hörner (C_INFO)
+INSTANCE Info_Mod_Gomez_Hoerner (C_INFO)
 {
 	npc		= Mod_517_DMR_Gomez_MT;
 	nr		= 1;
-	condition	= Info_Mod_Gomez_Hörner_Condition;
-	information	= Info_Mod_Gomez_Hörner_Info;
+	condition	= Info_Mod_Gomez_Hoerner_Condition;
+	information	= Info_Mod_Gomez_Hoerner_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Ich hab Hörner für dich.";
 };
 
-FUNC INT Info_Mod_Gomez_Hörner_Condition()
+FUNC INT Info_Mod_Gomez_Hoerner_Condition()
 {
 	if (hero.guild == GIL_KDF)
 	&& (Npc_HasItems(hero, ItAt_ShadowHorn) >= 1)
@@ -566,9 +566,9 @@ FUNC INT Info_Mod_Gomez_Hörner_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Gomez_Hörner_Info()
+FUNC VOID Info_Mod_Gomez_Hoerner_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Gomez_Hörner_15_00"); //Ich hab Hörner für dich.
+	AI_Output(hero, self, "Info_Mod_Gomez_Hoerner_15_00"); //Ich hab Hörner für dich.
 
 	var int HornAmount;
 	HornAmount = Npc_HasItems(hero, ItAt_ShadowHorn);
@@ -576,7 +576,7 @@ FUNC VOID Info_Mod_Gomez_Hörner_Info()
 	B_GiveInvItems	(hero, self, ItAt_ShadowHorn, HornAmount);
 	B_GiveInvItems	(self, hero, ItMi_Gold, HornAmount * Value_ShadowHorn);	
 
-	AI_Output(self, hero, "Info_Mod_Gomez_Hörner_10_01"); //Sehr gut.
+	AI_Output(self, hero, "Info_Mod_Gomez_Hoerner_10_01"); //Sehr gut.
 };
 
 INSTANCE Info_Mod_Gomez_Angebot (C_INFO)

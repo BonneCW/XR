@@ -21,42 +21,42 @@ FUNC VOID Info_Mod_Carl_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Carl_Hi_05_00"); //Ich bin Carl, der Schmied.
 };
 
-INSTANCE Info_Mod_Carl_Flugblätter (C_INFO)
+INSTANCE Info_Mod_Carl_Flugblaetter (C_INFO)
 {
 	npc		= Mod_549_NONE_Carl_NW;
 	nr		= 1;
-	condition	= Info_Mod_Carl_Flugblätter_Condition;
-	information	= Info_Mod_Carl_Flugblätter_Info;
+	condition	= Info_Mod_Carl_Flugblaetter_Condition;
+	information	= Info_Mod_Carl_Flugblaetter_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab hier ein Flugblatt für dich.";
 };
 
-FUNC INT Info_Mod_Carl_Flugblätter_Condition()
+FUNC INT Info_Mod_Carl_Flugblaetter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Auftrag_2))
-	&& (Npc_HasItems(hero, MatteoFlugblätter) >= 1)
-	&& (Mod_Flugblätter	<	20)
-	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+	&& (Npc_HasItems(hero, MatteoFlugblaetter) >= 1)
+	&& (Mod_Flugblaetter < 20)
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Carl_Hi))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Carl_Flugblätter_Info()
+FUNC VOID Info_Mod_Carl_Flugblaetter_Info()
 {
 	B_Say (hero, self, "$MATTEOPAPER");
 
-	B_GiveInvItems	(hero, self, MatteoFlugblätter, 1);
+	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_Carl_Flugblätter_05_01"); //Oh danke. Mal sehen ...
+	AI_Output(self, hero, "Info_Mod_Carl_Flugblaetter_05_01"); //Oh danke. Mal sehen ...
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_Carl_Flugblätter_05_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
+	AI_Output(self, hero, "Info_Mod_Carl_Flugblaetter_05_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
 
-	Mod_Flugblätter	=	Mod_Flugblätter + 1;
+	Mod_Flugblaetter += 1;
 };
 
 INSTANCE Info_Mod_Carl_Lehrer (C_INFO)

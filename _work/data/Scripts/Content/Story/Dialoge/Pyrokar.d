@@ -49,18 +49,18 @@ FUNC VOID Info_Mod_Pyrokar_Hammer_Info()
 	B_LogEntry	(TOPIC_MOD_URIZIEL, "Pyrokar hat mir erlaubt den heiligen Hammer zu holen. Ich soll Garwig vorher Bescheid sagen.");
 };
 
-INSTANCE Info_Mod_Pyrokar_Götter (C_INFO)
+INSTANCE Info_Mod_Pyrokar_Goetter (C_INFO)
 {
 	npc		= Mod_551_KDF_Pyrokar_NW;
 	nr		= 1;
-	condition	= Info_Mod_Pyrokar_Götter_Condition;
-	information	= Info_Mod_Pyrokar_Götter_Info;
+	condition	= Info_Mod_Pyrokar_Goetter_Condition;
+	information	= Info_Mod_Pyrokar_Goetter_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Was weißt du über die Machtträger?";
 };
 
-FUNC INT Info_Mod_Pyrokar_Götter_Condition()
+FUNC INT Info_Mod_Pyrokar_Goetter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Pyrokar_Hi))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Trimedron))
@@ -69,55 +69,55 @@ FUNC INT Info_Mod_Pyrokar_Götter_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Pyrokar_Götter_Info()
+FUNC VOID Info_Mod_Pyrokar_Goetter_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Götter_15_00"); //Was weißt du über die Machtträger?
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Götter_11_01"); //Es gibt drei davon und wie die Götterwaffen befindet sich einer in jedem Gebiet. Desweiteren kann jeder von ihnen nur durch eine der Götterwaffen getötet werden.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Götter_11_02"); //Doch du solltest dich in acht nehmen, sie sind sehr mächtig.
+	AI_Output(hero, self, "Info_Mod_Pyrokar_Goetter_15_00"); //Was weißt du über die Machtträger?
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Goetter_11_01"); //Es gibt drei davon und wie die Götterwaffen befindet sich einer in jedem Gebiet. Desweiteren kann jeder von ihnen nur durch eine der Götterwaffen getötet werden.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Goetter_11_02"); //Doch du solltest dich in acht nehmen, sie sind sehr mächtig.
 
 	B_LogEntry	(TOPIC_MOD_URIZIEL, "Auch die Machtträger halten sich in unterschiedlichen Gebieten auf. Außerdem ist jeder von ihnen nur durch eine der Götterwaffen zu töten.");
 };
 
-INSTANCE Info_Mod_Pyrokar_Machtträger (C_INFO)
+INSTANCE Info_Mod_Pyrokar_Machttraeger (C_INFO)
 {
 	npc		= Mod_551_KDF_Pyrokar_NW;
 	nr		= 1;
-	condition	= Info_Mod_Pyrokar_Machtträger_Condition;
-	information	= Info_Mod_Pyrokar_Machtträger_Info;
+	condition	= Info_Mod_Pyrokar_Machttraeger_Condition;
+	information	= Info_Mod_Pyrokar_Machttraeger_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Was für Wesen sind die Machtträger?";
 };
 
-FUNC INT Info_Mod_Pyrokar_Machtträger_Condition()
+FUNC INT Info_Mod_Pyrokar_Machttraeger_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Pyrokar_Götter))
+	if (Npc_KnowsInfo(hero, Info_Mod_Pyrokar_Goetter))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Pyrokar_Machtträger_Info()
+FUNC VOID Info_Mod_Pyrokar_Machttraeger_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Machtträger_15_00"); //Was für Wesen sind die Machtträger?
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Machtträger_11_01"); //Das wissen wir nicht, doch wie bereits erwähnt sind sie sehr mächtig. Du wirst es selbst herausfinden müssen.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Machtträger_11_02"); //Doch wir haben etwas über die Aufenthaltsorte herausgefunden. Und wir glauben zu wissen wer der Machtträger im Minental ist.
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Machtträger_15_03"); //Was weißt du?
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Machtträger_11_04"); //Gut, ich werde dir erzählen, was wir herausgefunden haben.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Machtträger_11_05"); //Der Machtträger im Minental ist vermutlich ein Schattenlord Namens Urnol. Xardas hat davon berichtet, dass du ihm bereits begegnet bist.
+	AI_Output(hero, self, "Info_Mod_Pyrokar_Machttraeger_15_00"); //Was für Wesen sind die Machtträger?
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Machttraeger_11_01"); //Das wissen wir nicht, doch wie bereits erwähnt sind sie sehr mächtig. Du wirst es selbst herausfinden müssen.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Machttraeger_11_02"); //Doch wir haben etwas über die Aufenthaltsorte herausgefunden. Und wir glauben zu wissen wer der Machtträger im Minental ist.
+	AI_Output(hero, self, "Info_Mod_Pyrokar_Machttraeger_15_03"); //Was weißt du?
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Machttraeger_11_04"); //Gut, ich werde dir erzählen, was wir herausgefunden haben.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Machttraeger_11_05"); //Der Machtträger im Minental ist vermutlich ein Schattenlord Namens Urnol. Xardas hat davon berichtet, dass du ihm bereits begegnet bist.
 
 	if (!Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Daemonisch3))
 	{
-		AI_Output(self, hero, "Info_Mod_Pyrokar_Machtträger_11_06"); //Zur Zeit scheint er hier in Khorinis für Unruhe zu sorgen. Du musst ihn unbedingt stellen.
+		AI_Output(self, hero, "Info_Mod_Pyrokar_Machttraeger_11_06"); //Zur Zeit scheint er hier in Khorinis für Unruhe zu sorgen. Du musst ihn unbedingt stellen.
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Pyrokar_Machtträger_11_07"); //Nachdem du ihn gestellt hast, wird er wieder zurück ins Minental gegangen sein.
+		AI_Output(self, hero, "Info_Mod_Pyrokar_Machttraeger_11_07"); //Nachdem du ihn gestellt hast, wird er wieder zurück ins Minental gegangen sein.
 	};
 
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Machtträger_11_08"); //Der Machtträger von Khorinis scheint sich auf einer Insel zu befinden. Doch ohne Schiff wirst du dort wohl nicht hinkommen.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Machtträger_11_09"); //Der letzte Machtträger befindet sich in Jharkendar, dem Tal, das die Wassermagier entdeckt haben. Wie ich gehört habe warst du daran nicht ganz unbeteiligt. Dort gibt es mehrere Herrenhäuser.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Machtträger_11_10"); //In einem dieser Gebäude befindet er sich sicherlich.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Machttraeger_11_08"); //Der Machtträger von Khorinis scheint sich auf einer Insel zu befinden. Doch ohne Schiff wirst du dort wohl nicht hinkommen.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Machttraeger_11_09"); //Der letzte Machtträger befindet sich in Jharkendar, dem Tal, das die Wassermagier entdeckt haben. Wie ich gehört habe warst du daran nicht ganz unbeteiligt. Dort gibt es mehrere Herrenhäuser.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Machttraeger_11_10"); //In einem dieser Gebäude befindet er sich sicherlich.
 
 	B_LogEntry	(TOPIC_MOD_URIZIEL, "Der Machtträger im Minental ist der Schattenlord Urnol. Der wird vermutlich wieder im Minental sein. Der Machtträger von Khorinis soll sich auf einer etwas erntfernten Insel befinden. Ich werde ein Schiff brauchen, um dorthin zu gelangen. Und in Jharkendar sollte ich die Herrenhäuser abklappern. Das kann ja lustig werden.");
 };
@@ -434,18 +434,18 @@ FUNC VOID Info_Mod_Pyrokar_FeuerGegenEis_Info()
 	B_LogEntry	(TOPIC_MOD_FM_FEUEREIS, "Da steh ich also mit Hyglas. Von Sekobs Hof aus strömen durch ein mysteriöses Portal immer mehr Eiswesen nach Khorinis und unsere Jungs sind am See mit ihnen in Kämpfe verwickelt. Es bleibt keine Zeit zu verlieren ihnen zu Hilfe zu eilen.");
 };
 
-INSTANCE Info_Mod_Pyrokar_Beförderung (C_INFO)
+INSTANCE Info_Mod_Pyrokar_Befoerderung (C_INFO)
 {
 	npc		= Mod_551_KDF_Pyrokar_NW;
 	nr		= 1;
-	condition	= Info_Mod_Pyrokar_Beförderung_Condition;
-	information	= Info_Mod_Pyrokar_Beförderung_Info;
+	condition	= Info_Mod_Pyrokar_Befoerderung_Condition;
+	information	= Info_Mod_Pyrokar_Befoerderung_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich bin bereit Feuermagier werden.";
 };
 
-FUNC INT Info_Mod_Pyrokar_Beförderung_Condition()
+FUNC INT Info_Mod_Pyrokar_Befoerderung_Condition()
 {
 	if (Mod_Gilde == 6)
 	&& (Kapitel > 2)
@@ -454,21 +454,21 @@ FUNC INT Info_Mod_Pyrokar_Beförderung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Pyrokar_Beförderung_Info()
+FUNC VOID Info_Mod_Pyrokar_Befoerderung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Beförderung_15_00"); //Ich bin bereit Feuermagier zu werden.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Beförderung_11_01"); //Ja, die Zeit ist gekommen. Du bist nun ein Magier werden.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Beförderung_11_02"); //Hier ist deine neue Robe.
+	AI_Output(hero, self, "Info_Mod_Pyrokar_Befoerderung_15_00"); //Ich bin bereit Feuermagier zu werden.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_01"); //Ja, die Zeit ist gekommen. Du bist nun ein Magier werden.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_02"); //Hier ist deine neue Robe.
 
 	CreateInvItems	(self, ItAr_Kdf_L, 1);
 	B_GiveInvItems	(self, hero, ItAr_Kdf_L, 1);
 
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Beförderung_11_03"); //Und hier ist ein Schlüssel für dein neues Schlafgemach.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_03"); //Und hier ist ein Schlüssel für dein neues Schlafgemach.
 
 	CreateInvItems	(self, ItKe_KDFPlayer, 1);
 	B_GiveInvItems	(self, hero, ItKe_KDFPlayer, 1);
 
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Beförderung_11_04"); //Möge Innos dich auf deinen Wegen begleiten.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_04"); //Möge Innos dich auf deinen Wegen begleiten.
 
 	Mod_Gilde = 7;
 
@@ -493,7 +493,7 @@ INSTANCE Info_Mod_Pyrokar_Patherion (C_INFO)
 
 FUNC INT Info_Mod_Pyrokar_Patherion_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Pyrokar_Beförderung))
+	if (Npc_KnowsInfo(hero, Info_Mod_Pyrokar_Befoerderung))
 	&& (Mod_Gilde == 7)
 	{
 		return 1;

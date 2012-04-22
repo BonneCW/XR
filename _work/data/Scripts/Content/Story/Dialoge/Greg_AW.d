@@ -321,18 +321,18 @@ FUNC VOID Info_Mod_Greg_Aufgabe_Info()
 	B_LogEntry	(TOPIC_MOD_GREG_ROST, "Ich soll Greg's alten Piratensäbel bei einem Schmied reparieren lassen.");
 };
 
-INSTANCE Info_Mod_Greg_Säbel (C_INFO)
+INSTANCE Info_Mod_Greg_Saebel (C_INFO)
 {
 	npc		= Mod_764_PIR_Greg_AW;
 	nr		= 1;
-	condition	= Info_Mod_Greg_Säbel_Condition;
-	information	= Info_Mod_Greg_Säbel_Info;
+	condition	= Info_Mod_Greg_Saebel_Condition;
+	information	= Info_Mod_Greg_Saebel_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Bin zurück und hab dir was mitgebracht.";
 };
 
-FUNC INT Info_Mod_Greg_Säbel_Condition()
+FUNC INT Info_Mod_Greg_Saebel_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Bennet_Piraten))
 	&& (Npc_HasItems(hero, ItMw_BennetGreg) == 1)
@@ -341,23 +341,23 @@ FUNC INT Info_Mod_Greg_Säbel_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Greg_Säbel_Info()
+FUNC VOID Info_Mod_Greg_Saebel_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Greg_Säbel_15_00"); //Bin zurück und hab dir was mitgebracht.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_01"); //Meinen aufgepeppten Säbel?
-	AI_Output(hero, self, "Info_Mod_Greg_Säbel_15_02"); //Nein, was Besseres. Der Schmied Bennet möchte deinen Säbel behalten.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_03"); //Beim Klabautermann! Ein Erbstück! Von meinem Grossvater selbst!
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_04"); //Man nannte ihn den Freibeuter der Meere ...
-	AI_Output(hero, self, "Info_Mod_Greg_Säbel_15_05"); //Der Schmied hat mir dafür dieses Schwert mitgegeben.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_06"); //Dieser Säbel hat schon gallonenweise Blut getrunken!
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_07"); //Mein Ahn würde sich im Gra ... im Meer umdrehen!
-	AI_Output(hero, self, "Info_Mod_Greg_Säbel_15_08"); //Hier. Schau doch erst mal.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_09"); //Die Seelen aller gefallenen Piraten würden mir nachstellen.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_10"); //Hm ... Zeig mal her.
+	AI_Output(hero, self, "Info_Mod_Greg_Saebel_15_00"); //Bin zurück und hab dir was mitgebracht.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_01"); //Meinen aufgepeppten Säbel?
+	AI_Output(hero, self, "Info_Mod_Greg_Saebel_15_02"); //Nein, was Besseres. Der Schmied Bennet möchte deinen Säbel behalten.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_03"); //Beim Klabautermann! Ein Erbstück! Von meinem Grossvater selbst!
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_04"); //Man nannte ihn den Freibeuter der Meere ...
+	AI_Output(hero, self, "Info_Mod_Greg_Saebel_15_05"); //Der Schmied hat mir dafür dieses Schwert mitgegeben.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_06"); //Dieser Säbel hat schon gallonenweise Blut getrunken!
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_07"); //Mein Ahn würde sich im Gra ... im Meer umdrehen!
+	AI_Output(hero, self, "Info_Mod_Greg_Saebel_15_08"); //Hier. Schau doch erst mal.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_09"); //Die Seelen aller gefallenen Piraten würden mir nachstellen.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_10"); //Hm ... Zeig mal her.
 
 	B_GiveInvItems	(hero, self, ItMw_BennetGreg, 1);
 
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_11"); //Was soll das denn sein?
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_11"); //Was soll das denn sein?
 
 	AI_UnequipWeapons	(self);
 
@@ -367,11 +367,11 @@ FUNC VOID Info_Mod_Greg_Säbel_Info()
 	AI_PlayAni	(self, "T_1HSINSPECT");
 	AI_RemoveWeapon	(self);
 
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_12"); //Wieso ist das schwarz angemalt? Au! Das ist aber scharf.
-	AI_Output(hero, self, "Info_Mod_Greg_Säbel_15_13"); //Drei mal schärfer als jede Klinge und doppelt so stabil. Ganz neues Material, sagt Bennet.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_14"); //Das muss ich selber sehen. Ich gehe mal zu Bones die Klinge testen.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_15"); //Du fragst Skip, ob die Vorräte verladen sind.
-	AI_Output(hero, self, "Info_Mod_Greg_Säbel_15_16"); //Aye, Sir.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_12"); //Wieso ist das schwarz angemalt? Au! Das ist aber scharf.
+	AI_Output(hero, self, "Info_Mod_Greg_Saebel_15_13"); //Drei mal schärfer als jede Klinge und doppelt so stabil. Ganz neues Material, sagt Bennet.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_14"); //Das muss ich selber sehen. Ich gehe mal zu Bones die Klinge testen.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_15"); //Du fragst Skip, ob die Vorräte verladen sind.
+	AI_Output(hero, self, "Info_Mod_Greg_Saebel_15_16"); //Aye, Sir.
 
 	B_SetTopicStatus	(TOPIC_MOD_GREG_ROST, LOG_SUCCESS);
 

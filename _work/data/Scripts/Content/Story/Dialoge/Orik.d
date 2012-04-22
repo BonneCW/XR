@@ -135,18 +135,18 @@ FUNC VOID Info_Mod_Orik_Niedergeschlagen_Info()
 	B_LogEntry	(TOPIC_MOD_AL_ORIK, "Wir lauerten Orik vor der Höhle auf und haben ihn niedergeschlagen. Jetzt wird er erst mal mitkommen müssen.");
 };
 
-INSTANCE Info_Mod_Orik_Rüstung (C_INFO)
+INSTANCE Info_Mod_Orik_Ruestung (C_INFO)
 {
 	npc		= Mod_1266_SLD_Orik_MT;
 	nr		= 1;
-	condition	= Info_Mod_Orik_Rüstung_Condition;
-	information	= Info_Mod_Orik_Rüstung_Info;
+	condition	= Info_Mod_Orik_Ruestung_Condition;
+	information	= Info_Mod_Orik_Ruestung_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Kann ich bei dir eine bessere Rüstung bekommen?";
 };
 
-FUNC INT Info_Mod_Orik_Rüstung_Condition()
+FUNC INT Info_Mod_Orik_Ruestung_Condition()
 {
 	if ((Mod_Gilde == 4)
 	|| (Mod_Gilde == 19))
@@ -157,20 +157,20 @@ FUNC INT Info_Mod_Orik_Rüstung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Orik_Rüstung_Info()
+FUNC VOID Info_Mod_Orik_Ruestung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Orik_Rüstung_15_00"); //Kann ich bei dir eine bessere Rüstung bekommen?
+	AI_Output(hero, self, "Info_Mod_Orik_Ruestung_15_00"); //Kann ich bei dir eine bessere Rüstung bekommen?
 
 	if (Mod_Gilde == 4)
 	&& (Mod_HasSLDH == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Orik_Rüstung_08_01"); //Ich hab hier eine Schwere Söldnerrüstung.
+		AI_Output(self, hero, "Info_Mod_Orik_Ruestung_08_01"); //Ich hab hier eine Schwere Söldnerrüstung.
 	};
 
 	if (Kapitel > 1)
 	&& (Mod_ErsteVerbesserung == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Orik_Rüstung_08_02"); //Ich hab gehört, dass beim Pass im Minental ein besonders großer Orkhund sein soll. Mit dessen Fell könnte ich deine schwere Söldnerrüstung sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Orik_Ruestung_08_02"); //Ich hab gehört, dass beim Pass im Minental ein besonders großer Orkhund sein soll. Mit dessen Fell könnte ich deine schwere Söldnerrüstung sicher ein wenig verbessern.
 	
 		Mod_ErsteVerbesserung = TRUE;
 
@@ -180,7 +180,7 @@ FUNC VOID Info_Mod_Orik_Rüstung_Info()
 	if (Kapitel > 3)
 	&& (Mod_ZweiteVerbesserung == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Orik_Rüstung_08_03"); //Ich hab gehört, dass beim Stonehenge ein Wyvern sein soll. Mit dessen Schuppen könnte ich deine Orkjägerrüstung sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Orik_Ruestung_08_03"); //Ich hab gehört, dass beim Stonehenge ein Wyvern sein soll. Mit dessen Schuppen könnte ich deine Orkjägerrüstung sicher ein wenig verbessern.
 	
 		Mod_ZweiteVerbesserung = TRUE;
 
@@ -193,46 +193,46 @@ FUNC VOID Info_Mod_Orik_Rüstung_Info()
 	&& (Mod_ErsteVerbesserung == 2))
 	|| (Mod_ZweiteVerbesserung == 2))
 	{
-		AI_Output(self, hero, "Info_Mod_Orik_Rüstung_08_04"); //Zur Zeit nicht, komm später nochmal.
+		AI_Output(self, hero, "Info_Mod_Orik_Ruestung_08_04"); //Zur Zeit nicht, komm später nochmal.
 	};
 
-	Info_ClearChoices	(Info_Mod_Orik_Rüstung);
-	Info_AddChoice	(Info_Mod_Orik_Rüstung, DIALOG_BACK, Info_Mod_Orik_Rüstung_BACK);
+	Info_ClearChoices	(Info_Mod_Orik_Ruestung);
+	Info_AddChoice	(Info_Mod_Orik_Ruestung, DIALOG_BACK, Info_Mod_Orik_Ruestung_BACK);
 
 	if (Mod_ErsteVerbesserung == TRUE)
 	&& (Mod_Gilde == 4)
 	&& (Npc_HasItems(hero, ItAr_SLD_S) == 0)
 	{
-		Info_AddChoice	(Info_Mod_Orik_Rüstung, "Schwere Söldnerrüstung verbessern", Info_Mod_Orik_Rüstung_SLD_S);
+		Info_AddChoice	(Info_Mod_Orik_Ruestung, "Schwere Söldnerrüstung verbessern", Info_Mod_Orik_Ruestung_SLD_S);
 	};
 
 	if (Mod_ZweiteVerbesserung == TRUE)
 	&& (Mod_Gilde == 19)
 	&& (Npc_HasItems(hero, ItAr_OJG_S) == 0)
 	{
-		Info_AddChoice	(Info_Mod_Orik_Rüstung, "Orkjägerrüstung verbessern", Info_Mod_Orik_Rüstung_OJG_S);
+		Info_AddChoice	(Info_Mod_Orik_Ruestung, "Orkjägerrüstung verbessern", Info_Mod_Orik_Ruestung_OJG_S);
 	};
 
 	if (Mod_Gilde == 4)
 	&& (Mod_HasSLDH == FALSE)
 	{
-		Info_AddChoice	(Info_Mod_Orik_Rüstung, "Schwere Söldnerrüstung (Kosten: 2500)", Info_Mod_Orik_Rüstung_SLD_M);
+		Info_AddChoice	(Info_Mod_Orik_Ruestung, "Schwere Söldnerrüstung (Kosten: 2500)", Info_Mod_Orik_Ruestung_SLD_M);
 	};
 };
 
-FUNC VOID Info_Mod_Orik_Rüstung_BACK ()
+FUNC VOID Info_Mod_Orik_Ruestung_BACK ()
 {
-	Info_ClearChoices	(Info_Mod_Orik_Rüstung);
+	Info_ClearChoices	(Info_Mod_Orik_Ruestung);
 };
 
-FUNC VOID Info_Mod_Orik_Rüstung_SLD_S ()
+FUNC VOID Info_Mod_Orik_Ruestung_SLD_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Orik_Rüstung_SLD_S_15_00"); //Verbessere meine schwere Söldnerrüstung.
+	AI_Output(hero, self, "Info_Mod_Orik_Ruestung_SLD_S_15_00"); //Verbessere meine schwere Söldnerrüstung.
 
 	if (Npc_HasItems(hero, ItAt_BigOrcDogFur) == 1)
 	&& (Npc_HasItems(hero, ItAr_SLD_M) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Orik_Rüstung_SLD_S_08_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Orik_Ruestung_SLD_S_08_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_BigOrcDogFur, 1);
 		
@@ -251,24 +251,24 @@ FUNC VOID Info_Mod_Orik_Rüstung_SLD_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_SLD_M) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Orik_Rüstung_SLD_S_08_02"); //Du musst schon eine schwere Söldnerrüstung haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Orik_Ruestung_SLD_S_08_02"); //Du musst schon eine schwere Söldnerrüstung haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_BigOrcDogFur) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Orik_Rüstung_SLD_S_08_03"); //Wenn du nicht das Orkhundfell hast, kann ich deine Rüstung nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Orik_Ruestung_SLD_S_08_03"); //Wenn du nicht das Orkhundfell hast, kann ich deine Rüstung nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Orik_Rüstung);
+	Info_ClearChoices	(Info_Mod_Orik_Ruestung);
 };
 
-FUNC VOID Info_Mod_Orik_Rüstung_OJG_S ()
+FUNC VOID Info_Mod_Orik_Ruestung_OJG_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Orik_Rüstung_OJG_S_15_00"); //Verbessere meine Orkjägerrüstung.
+	AI_Output(hero, self, "Info_Mod_Orik_Ruestung_OJG_S_15_00"); //Verbessere meine Orkjägerrüstung.
 
 	if (Npc_HasItems(hero, ItAt_Wyverschuppen) == 5)
 	&& (Npc_HasItems(hero, ItAr_SLD_H) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Orik_Rüstung_OJG_S_08_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Orik_Ruestung_OJG_S_08_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_Wyverschuppen, 5);
 		
@@ -287,23 +287,23 @@ FUNC VOID Info_Mod_Orik_Rüstung_OJG_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_SLD_H) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Orik_Rüstung_OJG_S_08_02"); //Du musst schon eine Orkjägerrüstung haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Orik_Ruestung_OJG_S_08_02"); //Du musst schon eine Orkjägerrüstung haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_Wyverschuppen) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Orik_Rüstung_OJG_S_08_03"); //Wenn du nicht die Wyverschuppen hast, kann ich deine Rüstung nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Orik_Ruestung_OJG_S_08_03"); //Wenn du nicht die Wyverschuppen hast, kann ich deine Rüstung nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Orik_Rüstung);
+	Info_ClearChoices	(Info_Mod_Orik_Ruestung);
 };
 
-FUNC VOID Info_Mod_Orik_Rüstung_SLD_M ()
+FUNC VOID Info_Mod_Orik_Ruestung_SLD_M ()
 {
-	AI_Output(hero, self, "Info_Mod_Orik_Rüstung_SLD_M_15_00"); //Ich nehme die schwere Söldnerrüstung.
+	AI_Output(hero, self, "Info_Mod_Orik_Ruestung_SLD_M_15_00"); //Ich nehme die schwere Söldnerrüstung.
 
 	if (Npc_HasItems(hero, ItMi_Gold) >= 2500)
 	{
-		AI_Output(self, hero, "Info_Mod_Orik_Rüstung_SLD_M_08_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Orik_Ruestung_SLD_M_08_01"); //Alles klar.
 
 		B_GiveInvItems	(hero, self, ItMi_Gold, 2500);
 
@@ -318,10 +318,10 @@ FUNC VOID Info_Mod_Orik_Rüstung_SLD_M ()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Orik_Rüstung_SLD_M_08_02"); //Ohne Gold keine Rüstung.
+		AI_Output(self, hero, "Info_Mod_Orik_Ruestung_SLD_M_08_02"); //Ohne Gold keine Rüstung.
 	};
 
-	Info_ClearChoices	(Info_Mod_Orik_Rüstung);
+	Info_ClearChoices	(Info_Mod_Orik_Ruestung);
 };
 
 INSTANCE Info_Mod_Orik_Pickpocket (C_INFO)

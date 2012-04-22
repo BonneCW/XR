@@ -646,10 +646,10 @@ FUNC VOID NEBENQUESTS()
 
 		// Matteos Flugblätter
 
-		if (Mod_Flugblätter > Mod_FlugblattMeldung)
+		if (Mod_Flugblaetter > Mod_FlugblattMeldung)
 		&& (hero.aivar[AIV_INVINCIBLE] == FALSE)
 		{
-			if (Mod_Flugblätter == 20)
+			if (Mod_Flugblaetter == 20)
 			{
 				Print ("Alle Flugblätter verteilt!");
 
@@ -658,13 +658,13 @@ FUNC VOID NEBENQUESTS()
 			else
 			{
 				var string FlugblattMeldung;
-				FlugblattMeldung = ConcatStrings("Noch ", IntToString(20-Mod_Flugblätter));
+				FlugblattMeldung = ConcatStrings("Noch ", IntToString(20-Mod_Flugblaetter));
 				FlugblattMeldung = ConcatStrings(FlugblattMeldung, " Flugblätter zu verteilen!");
 
 				Print (FlugblattMeldung);
 			};
 
-			Mod_FlugblattMeldung = Mod_Flugblätter;
+			Mod_FlugblattMeldung = Mod_Flugblaetter;
 		};
 
 		// Topic für Kristall schließen

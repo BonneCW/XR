@@ -604,42 +604,42 @@ FUNC VOID Info_Mod_Moe_Sumpfkraut_Info()
 	AI_Output(self, hero, "Info_Mod_Moe_Sumpfkraut_01_03"); //Du musst dich nur bei den Leuten im Hafenviertel etwas umhören.
 };
 
-INSTANCE Info_Mod_Moe_Flugblätter (C_INFO)
+INSTANCE Info_Mod_Moe_Flugblaetter (C_INFO)
 {
 	npc		= Mod_599_NONE_Moe_NW;
 	nr		= 1;
-	condition	= Info_Mod_Moe_Flugblätter_Condition;
-	information	= Info_Mod_Moe_Flugblätter_Info;
+	condition	= Info_Mod_Moe_Flugblaetter_Condition;
+	information	= Info_Mod_Moe_Flugblaetter_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab hier ein Flugblatt für dich.";
 };
 
-FUNC INT Info_Mod_Moe_Flugblätter_Condition()
+FUNC INT Info_Mod_Moe_Flugblaetter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Auftrag_2))
-	&& (Npc_HasItems(hero, MatteoFlugblätter) >= 1)
-	&& (Mod_Flugblätter	<	20)
-	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+	&& (Npc_HasItems(hero, MatteoFlugblaetter) >= 1)
+	&& (Mod_Flugblaetter < 20)
+	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Moe_Hi))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Moe_Flugblätter_Info()
+FUNC VOID Info_Mod_Moe_Flugblaetter_Info()
 {
 	B_Say (hero, self, "$MATTEOPAPER");
 
-	B_GiveInvItems	(hero, self, MatteoFlugblätter, 1);
+	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_Moe_Flugblätter_01_01"); //Oh danke. Mal sehen ...
+	AI_Output(self, hero, "Info_Mod_Moe_Flugblaetter_01_01"); //Oh danke. Mal sehen ...
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_Moe_Flugblätter_01_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
+	AI_Output(self, hero, "Info_Mod_Moe_Flugblaetter_01_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
 
-	Mod_Flugblätter	=	Mod_Flugblätter + 1;
+	Mod_Flugblaetter += 1;
 };
 
 INSTANCE Info_Mod_Moe_Pickpocket (C_INFO)

@@ -541,18 +541,18 @@ FUNC VOID Info_Mod_Raven_ToteNovizen_Info()
 	B_LogEntry	(TOPIC_MOD_BEL_DAEMON, "Raven hält einen Dämon für äußerst unwahrscheinlich, es sei denn, er hat sich in einem von den Lagerangehörigen eingenistet. Ich soll mich nachts mal umsehen.");
 };
 
-INSTANCE Info_Mod_Raven_Beförderung (C_INFO)
+INSTANCE Info_Mod_Raven_Befoerderung (C_INFO)
 {
 	npc		= Mod_520_DMR_Raven_MT;
 	nr		= 1;
-	condition	= Info_Mod_Raven_Beförderung_Condition;
-	information	= Info_Mod_Raven_Beförderung_Info;
+	condition	= Info_Mod_Raven_Befoerderung_Condition;
+	information	= Info_Mod_Raven_Befoerderung_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich will Schwarzer Krieger werden.";
 };
 
-FUNC INT Info_Mod_Raven_Beförderung_Condition()
+FUNC INT Info_Mod_Raven_Befoerderung_Condition()
 {
 	if (Mod_Gilde == 12)
 	&& (Kapitel > 2)
@@ -561,12 +561,12 @@ FUNC INT Info_Mod_Raven_Beförderung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Raven_Beförderung_Info()
+FUNC VOID Info_Mod_Raven_Befoerderung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Raven_Beförderung_15_00"); //Ich will Schwarzer Krieger werden.
-	AI_Output(self, hero, "Info_Mod_Raven_Beförderung_10_01"); //Du wählst also den Weg des Kampfes. Das war die richtige Entscheidung.
-	AI_Output(self, hero, "Info_Mod_Raven_Beförderung_10_02"); //Ich werde dich in den Rang des Schwarzen Kriegers erheben.
-	AI_Output(self, hero, "Info_Mod_Raven_Beförderung_10_03"); //Hier ist deine Rüstung.
+	AI_Output(hero, self, "Info_Mod_Raven_Befoerderung_15_00"); //Ich will Schwarzer Krieger werden.
+	AI_Output(self, hero, "Info_Mod_Raven_Befoerderung_10_01"); //Du wählst also den Weg des Kampfes. Das war die richtige Entscheidung.
+	AI_Output(self, hero, "Info_Mod_Raven_Befoerderung_10_02"); //Ich werde dich in den Rang des Schwarzen Kriegers erheben.
+	AI_Output(self, hero, "Info_Mod_Raven_Befoerderung_10_03"); //Hier ist deine Rüstung.
 
 	CreateInvItems	(self, ITAR_SMK_L, 1);
 	B_GiveInvItems	(self, hero, ITAR_SMK_L, 1);
@@ -649,7 +649,7 @@ FUNC VOID Info_Mod_Raven_Lernen_Info()
 
 	Info_AddChoice	(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_BACK);
 	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Zweihandkampf)", Info_Mod_Raven_Lernen_Zweihand);
-	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Stärke)", Info_Mod_Raven_Lernen_Stärke);
+	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Stärke)", Info_Mod_Raven_Lernen_Staerke);
 };
 
 FUNC VOID Info_Mod_Raven_Lernen_BACK()
@@ -672,7 +672,7 @@ FUNC VOID Info_Mod_Raven_Lernen_Zweihand_BACK()
 
 	Info_AddChoice	(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_BACK);
 	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Zweihandkampf)", Info_Mod_Raven_Lernen_Zweihand);
-	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Stärke)", Info_Mod_Raven_Lernen_Stärke);
+	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Stärke)", Info_Mod_Raven_Lernen_Staerke);
 };
 
 FUNC VOID Info_Mod_Raven_Lernen_Zweihand_5()
@@ -699,44 +699,44 @@ FUNC VOID Info_Mod_Raven_Lernen_Zweihand_1()
 	};
 };	
 
-FUNC VOID Info_Mod_Raven_Lernen_Stärke()
+FUNC VOID Info_Mod_Raven_Lernen_Staerke()
 {
 	Info_ClearChoices	(Info_Mod_Raven_Lernen);
 
-	Info_AddChoice 		(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_Stärke_BACK);
-	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Stärke_5);
-	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Stärke_1);
+	Info_AddChoice 		(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_Staerke_BACK);
+	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Staerke_5);
+	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Staerke_1);
 };
 
-FUNC VOID Info_Mod_Raven_Lernen_Stärke_BACK()
+FUNC VOID Info_Mod_Raven_Lernen_Staerke_BACK()
 {
 	Info_ClearChoices	(Info_Mod_Raven_Lernen);
 
 	Info_AddChoice	(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_BACK);
 	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Zweihandkampf)", Info_Mod_Raven_Lernen_Zweihand);
-	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Stärke)", Info_Mod_Raven_Lernen_Stärke);
+	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Stärke)", Info_Mod_Raven_Lernen_Staerke);
 };
 
-FUNC VOID Info_Mod_Raven_Lernen_Stärke_5()
+FUNC VOID Info_Mod_Raven_Lernen_Staerke_5()
 {
 	B_TeachAttributePoints_New (self, hero, ATR_STRENGTH, 5, 200);
 	
 	Info_ClearChoices	(Info_Mod_Raven_Lernen);
 
-	Info_AddChoice 		(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_Stärke_BACK);
-	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Stärke_5);
-	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Stärke_1);
+	Info_AddChoice 		(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_Staerke_BACK);
+	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Staerke_5);
+	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Staerke_1);
 };
 
-FUNC VOID Info_Mod_Raven_Lernen_Stärke_1()
+FUNC VOID Info_Mod_Raven_Lernen_Staerke_1()
 {
 	B_TeachAttributePoints	(self, hero, ATR_STRENGTH, 1, 200);
 
 	Info_ClearChoices	(Info_Mod_Raven_Lernen);
 
-	Info_AddChoice 		(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_Stärke_BACK);
-	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Stärke_5);
-	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Stärke_1);
+	Info_AddChoice 		(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_Staerke_BACK);
+	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Staerke_5);
+	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Staerke_1);
 };
 
 INSTANCE Info_Mod_Raven_Pickpocket (C_INFO)

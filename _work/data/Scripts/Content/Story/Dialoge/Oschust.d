@@ -499,18 +499,18 @@ FUNC VOID Info_Mod_Oschust_Piraten_Info()
 	Mod_SäbelReparieren = Wld_GetDay();
 };
 
-INSTANCE Info_Mod_Oschust_Säbel (C_INFO)
+INSTANCE Info_Mod_Oschust_Saebel (C_INFO)
 {
 	npc		= Mod_7022_BDT_Oschust_MT;
 	nr		= 1;
-	condition	= Info_Mod_Oschust_Säbel_Condition;
-	information	= Info_Mod_Oschust_Säbel_Info;
+	condition	= Info_Mod_Oschust_Saebel_Condition;
+	information	= Info_Mod_Oschust_Saebel_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ist der Säbel fertig?";
 };
 
-FUNC INT Info_Mod_Oschust_Säbel_Condition()
+FUNC INT Info_Mod_Oschust_Saebel_Condition()
 {
 	if (Mod_MachtSäbel == 1)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Oschust_Piraten))
@@ -520,10 +520,10 @@ FUNC INT Info_Mod_Oschust_Säbel_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Oschust_Säbel_Info()
+FUNC VOID Info_Mod_Oschust_Saebel_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Oschust_Säbel_15_00"); //Ist der Säbel fertig?
-	AI_Output(self, hero, "Info_Mod_Oschust_Säbel_04_01"); //Ja, er ist wieder wie neu. Hier ist er.
+	AI_Output(hero, self, "Info_Mod_Oschust_Saebel_15_00"); //Ist der Säbel fertig?
+	AI_Output(self, hero, "Info_Mod_Oschust_Saebel_04_01"); //Ja, er ist wieder wie neu. Hier ist er.
 
 	CreateInvItems	(self, ItMw_Piratensaebel_Greg_Gut, 1);
 	B_GiveInvItems	(self, hero, ItMw_Piratensaebel_Greg_Gut, 1);

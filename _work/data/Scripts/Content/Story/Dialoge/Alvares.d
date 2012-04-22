@@ -45,18 +45,18 @@ FUNC VOID Info_Mod_Alvares_Knast_Info()
 	AI_Output(self, hero, "Info_Mod_Alvares_Knast_11_01"); //Ich hab mich mit einer Miliz rumgeschlagen. Daraufhin haben sie mich hier eingesperrt.
 };
 
-INSTANCE Info_Mod_Alvares_Söldner (C_INFO)
+INSTANCE Info_Mod_Alvares_Soeldner (C_INFO)
 {
 	npc		= Mod_200_NONE_Alvares_NW;
 	nr		= 1;
-	condition	= Info_Mod_Alvares_Söldner_Condition;
-	information	= Info_Mod_Alvares_Söldner_Info;
+	condition	= Info_Mod_Alvares_Soeldner_Condition;
+	information	= Info_Mod_Alvares_Soeldner_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Willst du dich den Söldnern anschließen?";
 };
 
-FUNC INT Info_Mod_Alvares_Söldner_Condition()
+FUNC INT Info_Mod_Alvares_Soeldner_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Alvares_Knast))
 	{
@@ -64,12 +64,12 @@ FUNC INT Info_Mod_Alvares_Söldner_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Alvares_Söldner_Info()
+FUNC VOID Info_Mod_Alvares_Soeldner_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Alvares_Söldner_15_00"); //Willst du dich den Söldnern anschließen?
-	AI_Output(self, hero, "Info_Mod_Alvares_Söldner_11_01"); //Mit dem Gedanken hab ich schon mal gespielt, aber wenn ich hier im Knast sitze kann ich mich ihnen wohl kaum anschließen.
-	AI_Output(hero, self, "Info_Mod_Alvares_Söldner_15_02"); //Ich könnte dich befreien.
-	AI_Output(self, hero, "Info_Mod_Alvares_Söldner_11_03"); //Das wäre sehr gut.
+	AI_Output(hero, self, "Info_Mod_Alvares_Soeldner_15_00"); //Willst du dich den Söldnern anschließen?
+	AI_Output(self, hero, "Info_Mod_Alvares_Soeldner_11_01"); //Mit dem Gedanken hab ich schon mal gespielt, aber wenn ich hier im Knast sitze kann ich mich ihnen wohl kaum anschließen.
+	AI_Output(hero, self, "Info_Mod_Alvares_Soeldner_15_02"); //Ich könnte dich befreien.
+	AI_Output(self, hero, "Info_Mod_Alvares_Soeldner_11_03"); //Das wäre sehr gut.
 
 	B_LogEntry	(TOPIC_MOD_TORLOF_NEUERANWÄRTER, "Alvares würde sich den Söldnern anschließen wenn ich ihn aus dem Gefängnis befreien würde.");
 };

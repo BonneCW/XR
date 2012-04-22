@@ -202,37 +202,37 @@ FUNC VOID Info_Mod_Namib_WarBeiLester_Info()
 	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Baal Namib will, dass ich das Paket von Constantino zu Balor bringe.");
 };
 
-INSTANCE Info_Mod_Namib_DüngerVerteilt (C_INFO)
+INSTANCE Info_Mod_Namib_DuengerVerteilt (C_INFO)
 {
 	npc		= Mod_2004_GUR_BaalNamib_MT;
 	nr		= 1;
-	condition	= Info_Mod_Namib_DüngerVerteilt_Condition;
-	information	= Info_Mod_Namib_DüngerVerteilt_Info;
+	condition	= Info_Mod_Namib_DuengerVerteilt_Condition;
+	information	= Info_Mod_Namib_DuengerVerteilt_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich war bei Balor und hab auch gleich das Feld gedüngt.";
 };
 
-FUNC INT Info_Mod_Namib_DüngerVerteilt_Condition()
+FUNC INT Info_Mod_Namib_DuengerVerteilt_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Balor_DüngerVerteilt))
+	if (Npc_KnowsInfo(hero, Info_Mod_Balor_DuengerVerteilt))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Namib_DüngerVerteilt_Info()
+FUNC VOID Info_Mod_Namib_DuengerVerteilt_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Namib_DüngerVerteilt_15_00"); //Ich war bei Balor und hab auch gleich das Feld gedüngt.
-	AI_Output(self, hero, "Info_Mod_Namib_DüngerVerteilt_02_01"); //Sehr gut. Ich hab gleich einen weiteren Auftrag für dich. Geh zu den Schwarzmagiern. Wir brauchen ihre Hilfe.
-	AI_Output(self, hero, "Info_Mod_Namib_DüngerVerteilt_02_02"); //Bring ihnen diesen Brief und dieses Paket Sumpfkraut als kleines Present.
+	AI_Output(hero, self, "Info_Mod_Namib_DuengerVerteilt_15_00"); //Ich war bei Balor und hab auch gleich das Feld gedüngt.
+	AI_Output(self, hero, "Info_Mod_Namib_DuengerVerteilt_02_01"); //Sehr gut. Ich hab gleich einen weiteren Auftrag für dich. Geh zu den Schwarzmagiern. Wir brauchen ihre Hilfe.
+	AI_Output(self, hero, "Info_Mod_Namib_DuengerVerteilt_02_02"); //Bring ihnen diesen Brief und dieses Paket Sumpfkraut als kleines Present.
 
 	B_ShowGivenThings	("2 Gegenstände erhalten");
 
 	CreateInvItems	(hero, ItWr_NamibForBeliar, 1);
 	CreateInvItems	(hero, ItMi_HerbPaket, 1);
 
-	AI_Output(self, hero, "Info_Mod_Namib_DüngerVerteilt_02_03"); //Und auf deinem Rückweg kannst du Lester wieder mitnehmen!
+	AI_Output(self, hero, "Info_Mod_Namib_DuengerVerteilt_02_03"); //Und auf deinem Rückweg kannst du Lester wieder mitnehmen!
 
 	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Ich soll einen Brief und ein Paket Sumpfkraut zu den Schwarzmagiern bringen. Auf dem Weg zurück ins Minental soll ich außerdem Lester mitnehmen.");
 };

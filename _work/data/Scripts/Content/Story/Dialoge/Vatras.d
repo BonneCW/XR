@@ -1328,18 +1328,18 @@ FUNC VOID Info_Mod_Vatras_Lernen_1()
 	Info_AddChoice		(Info_Mod_Vatras_Lernen, B_BuildLearnString_New(PRINT_LearnMANA1	, B_GetLearnCostAttribute(hero, ATR_MANA_MAX), ATR_MANA_MAX)		,Info_Mod_Vatras_Lernen_1);
 };
 
-INSTANCE Info_Mod_Vatras_Rüstung (C_INFO)
+INSTANCE Info_Mod_Vatras_Ruestung (C_INFO)
 {
 	npc		= Mod_524_KDW_Vatras_NW;
 	nr		= 1;
-	condition	= Info_Mod_Vatras_Rüstung_Condition;
-	information	= Info_Mod_Vatras_Rüstung_Info;
+	condition	= Info_Mod_Vatras_Ruestung_Condition;
+	information	= Info_Mod_Vatras_Ruestung_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Kann ich bei dir eine bessere Robe bekommen?";
 };
 
-FUNC INT Info_Mod_Vatras_Rüstung_Condition()
+FUNC INT Info_Mod_Vatras_Ruestung_Condition()
 {
 	if ((Mod_Gilde == 9)
 	|| (Mod_Gilde == 10))
@@ -1350,15 +1350,15 @@ FUNC INT Info_Mod_Vatras_Rüstung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Vatras_Rüstung_Info()
+FUNC VOID Info_Mod_Vatras_Ruestung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Vatras_Rüstung_15_00"); //Kann ich bei dir eine bessere Robe bekommen?
+	AI_Output(hero, self, "Info_Mod_Vatras_Ruestung_15_00"); //Kann ich bei dir eine bessere Robe bekommen?
 
 	if (Kapitel > 1)
 	&& (Mod_ErsteVerbesserung == FALSE)
 	&& (Mod_Gilde < 10)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_05_02"); //Ich hab gehört, dass beim See nordwestlich der Ausgrabungsstätte ein Rudel Wassersnapper hausen soll. Mit deren Haut könnte ich deine Wasser Novizenrobe sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_05_02"); //Ich hab gehört, dass beim See nordwestlich der Ausgrabungsstätte ein Rudel Wassersnapper hausen soll. Mit deren Haut könnte ich deine Wasser Novizenrobe sicher ein wenig verbessern.
 	
 		Mod_ErsteVerbesserung = TRUE;
 	
@@ -1370,15 +1370,15 @@ FUNC VOID Info_Mod_Vatras_Rüstung_Info()
 	if (Kapitel > 3)
 	&& (Mod_ZweiteVerbesserung == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_05_03"); //Ich hab gehört, dass beim Weg zur Ausgrabungsstätte ein Wasserläufer sein soll. Mit dessen Fell könnte ich deine Wassermagierrobe sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_05_03"); //Ich hab gehört, dass beim Weg zur Ausgrabungsstätte ein Wasserläufer sein soll. Mit dessen Fell könnte ich deine Wassermagierrobe sicher ein wenig verbessern.
 	
 		Mod_ZweiteVerbesserung = TRUE;
 	
 		Wld_InsertNpc	(Wasserläufer,	"FP_MAGICGOLEM");
 	};
 
-	Info_ClearChoices	(Info_Mod_Vatras_Rüstung);
-	Info_AddChoice	(Info_Mod_Vatras_Rüstung, DIALOG_BACK, Info_Mod_Vatras_Rüstung_BACK);
+	Info_ClearChoices	(Info_Mod_Vatras_Ruestung);
+	Info_AddChoice	(Info_Mod_Vatras_Ruestung, DIALOG_BACK, Info_Mod_Vatras_Ruestung_BACK);
 
 	if (Mod_ErsteVerbesserung == TRUE)
 	&& ((Mod_Gilde == 9)
@@ -1389,7 +1389,7 @@ FUNC VOID Info_Mod_Vatras_Rüstung_Info()
 	&& (Npc_HasItems(hero, ItAr_KDW_L_ADDON) == 0)
 	&& (Mod_Gilde < 10)
 	{
-		Info_AddChoice	(Info_Mod_Vatras_Rüstung, "Wasser Novizenrobe verbessern", Info_Mod_Vatras_Rüstung_WNOV_S);
+		Info_AddChoice	(Info_Mod_Vatras_Ruestung, "Wasser Novizenrobe verbessern", Info_Mod_Vatras_Ruestung_WNOV_S);
 	};
 
 	if (Mod_ZweiteVerbesserung == TRUE)
@@ -1399,23 +1399,23 @@ FUNC VOID Info_Mod_Vatras_Rüstung_Info()
 	|| (Mod_Gilde == 17)
 	|| (Mod_Gilde == 18))
 	{
-		Info_AddChoice	(Info_Mod_Vatras_Rüstung, "Wassermagierrobe verbessern", Info_Mod_Vatras_Rüstung_KDW_S);
+		Info_AddChoice	(Info_Mod_Vatras_Ruestung, "Wassermagierrobe verbessern", Info_Mod_Vatras_Ruestung_KDW_S);
 	};
 };
 
-FUNC VOID Info_Mod_Vatras_Rüstung_BACK ()
+FUNC VOID Info_Mod_Vatras_Ruestung_BACK ()
 {
-	Info_ClearChoices	(Info_Mod_Vatras_Rüstung);
+	Info_ClearChoices	(Info_Mod_Vatras_Ruestung);
 };
 
-FUNC VOID Info_Mod_Vatras_Rüstung_WNOV_S ()
+FUNC VOID Info_Mod_Vatras_Ruestung_WNOV_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Vatras_Rüstung_WNOV_S_15_00"); //Verbessere meine Wasser Novizenrobe.
+	AI_Output(hero, self, "Info_Mod_Vatras_Ruestung_WNOV_S_15_00"); //Verbessere meine Wasser Novizenrobe.
 
 	if (Npc_HasItems(hero, ItAt_WassersnapperHaut) >= 1)
 	&& (Npc_HasItems(hero, ItAr_Wassernovize1) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_WNOV_S_05_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_WNOV_S_05_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_WassersnapperHaut, 1);
 		
@@ -1434,24 +1434,24 @@ FUNC VOID Info_Mod_Vatras_Rüstung_WNOV_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_Wassernovize1) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_WNOV_S_05_02"); //Du musst schon eine Wasser Novizenrobe haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_WNOV_S_05_02"); //Du musst schon eine Wasser Novizenrobe haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_Wassersnapperhaut) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_WNOV_S_05_03"); //Wenn du nicht die Snapperhaut hast, kann ich deine Rüstung nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_WNOV_S_05_03"); //Wenn du nicht die Snapperhaut hast, kann ich deine Rüstung nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Vatras_Rüstung);
+	Info_ClearChoices	(Info_Mod_Vatras_Ruestung);
 };
 
-FUNC VOID Info_Mod_Vatras_Rüstung_KDW_S ()
+FUNC VOID Info_Mod_Vatras_Ruestung_KDW_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Vatras_Rüstung_KDW_S_15_00"); //Verbessere meine Wassermagierrobe.
+	AI_Output(hero, self, "Info_Mod_Vatras_Ruestung_KDW_S_15_00"); //Verbessere meine Wassermagierrobe.
 
 	if (Npc_HasItems(hero, ItAt_WaterShadowFur) == 1)
 	&& (Npc_HasItems(hero, ItAr_KDW_L_ADDON) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_KDW_S_05_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_KDW_S_05_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_WaterShadowFur, 1);
 		
@@ -1470,14 +1470,14 @@ FUNC VOID Info_Mod_Vatras_Rüstung_KDW_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_KDW_L_ADDON) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_RIT_S_05_02"); //Du musst schon eine Wassermagierrobe haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_RIT_S_05_02"); //Du musst schon eine Wassermagierrobe haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_WaterShadowFur) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_RIT_S_05_03"); //Wenn du nicht das Wasserläuferfell hast, kann ich deine Rüstung nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_RIT_S_05_03"); //Wenn du nicht das Wasserläuferfell hast, kann ich deine Rüstung nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Vatras_Rüstung);
+	Info_ClearChoices	(Info_Mod_Vatras_Ruestung);
 };
 
 INSTANCE Info_Mod_Vatras_Pickpocket (C_INFO)

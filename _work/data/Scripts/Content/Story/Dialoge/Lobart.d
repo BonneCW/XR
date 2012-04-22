@@ -186,18 +186,18 @@ FUNC VOID Info_Mod_Lobart_SheromeDa_A()
 	Mod_LobartRuebinator = 1;
 };
 
-INSTANCE Info_Mod_Lobart_Rüben (C_INFO)
+INSTANCE Info_Mod_Lobart_Rueben (C_INFO)
 {
 	npc		= Mod_910_BAU_Lobart_NW;
 	nr		= 1;
-	condition	= Info_Mod_Lobart_Rüben_Condition;
-	information	= Info_Mod_Lobart_Rüben_Info;
+	condition	= Info_Mod_Lobart_Rueben_Condition;
+	information	= Info_Mod_Lobart_Rueben_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Hier sind deine Rüben.";
 };
 
-FUNC INT Info_Mod_Lobart_Rüben_Condition()
+FUNC INT Info_Mod_Lobart_Rueben_Condition()
 {
 	if (Npc_HasItems(hero, ItPl_Beet) >= 20)
 	&& (Mod_LobartRuebinator == 2)
@@ -206,19 +206,19 @@ FUNC INT Info_Mod_Lobart_Rüben_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Lobart_Rüben_Info()
+FUNC VOID Info_Mod_Lobart_Rueben_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Lobart_Rüben_15_00"); //Hier sind deine Rüben.
+	AI_Output(hero, self, "Info_Mod_Lobart_Rueben_15_00"); //Hier sind deine Rüben.
 
 	B_GiveInvItems	(hero, self, ItPl_Beet, 20);
 
-	AI_Output(self, hero, "Info_Mod_Lobart_Rüben_05_01"); //Hätte nicht gedacht, dass du das schaffst. Vielen Dank! Nimm das als Lohn.
+	AI_Output(self, hero, "Info_Mod_Lobart_Rueben_05_01"); //Hätte nicht gedacht, dass du das schaffst. Vielen Dank! Nimm das als Lohn.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
-	AI_Output(hero, self, "Info_Mod_Lobart_Rüben_15_02"); //Gibt es noch mehr zu tun?
-	AI_Output(self, hero, "Info_Mod_Lobart_Rüben_05_03"); //Nichts, womit wir nicht selbst fertig werden. Ich könnte dich auch gar nicht weiter bezahlen.
-	AI_Output(self, hero, "Info_Mod_Lobart_Rüben_05_04"); //Du bist aber immer willkommen auf dem Hof! Mach's gut!
+	AI_Output(hero, self, "Info_Mod_Lobart_Rueben_15_02"); //Gibt es noch mehr zu tun?
+	AI_Output(self, hero, "Info_Mod_Lobart_Rueben_05_03"); //Nichts, womit wir nicht selbst fertig werden. Ich könnte dich auch gar nicht weiter bezahlen.
+	AI_Output(self, hero, "Info_Mod_Lobart_Rueben_05_04"); //Du bist aber immer willkommen auf dem Hof! Mach's gut!
 
 	B_LogEntry	(TOPIC_MOD_RUEBENZIEHEN, "Ich hab Lobart seine Rüben gegeben.");
 	B_SetTopicStatus	(TOPIC_MOD_RUEBENZIEHEN, LOG_SUCCESS);
@@ -252,7 +252,7 @@ FUNC VOID Info_Mod_Lobart_Warentransport_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Lobart_Warentransport_15_00"); //Du wolltest Baltram deine Rüben verkaufen.
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Lobart_Rüben))
+	if (Npc_KnowsInfo(hero, Info_Mod_Lobart_Rueben))
 	{
 		AI_Output(self, hero, "Info_Mod_Lobart_Warentransport_05_01"); //Ja? Oh, verdammt, das hab' ich ja schon wieder vergessen!
 		AI_Output(self, hero, "Info_Mod_Lobart_Warentransport_05_02"); //Wollte sie schon fast meiner Frau bringen, um Suppe daraus zu machen!

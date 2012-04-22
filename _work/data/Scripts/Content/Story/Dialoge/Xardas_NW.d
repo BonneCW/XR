@@ -1372,7 +1372,7 @@ INSTANCE Info_Mod_Xardas_NW_Irdorath (C_INFO)
 
 FUNC INT Info_Mod_Xardas_NW_Irdorath_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Pyrokar_Machtträger))
+	if (Npc_KnowsInfo(hero, Info_Mod_Pyrokar_Machttraeger))
 	{
 		return 1;
 	};
@@ -2013,7 +2013,7 @@ INSTANCE Info_Mod_Xardas_NW_Namib (C_INFO)
 
 FUNC INT Info_Mod_Xardas_NW_Namib_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Namib_DüngerVerteilt))
+	if (Npc_KnowsInfo(hero, Info_Mod_Namib_DuengerVerteilt))
 	&& (Npc_HasItems(hero, ItWr_NamibForBeliar) == 1)
 	&& (Npc_HasItems(hero, ItMi_HerbPaket) > 0)
 	{

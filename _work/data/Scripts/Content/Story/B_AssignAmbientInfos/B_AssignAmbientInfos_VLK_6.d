@@ -156,9 +156,9 @@ INSTANCE Info_VLK_06_Flugblätter (C_INFO) // E1
 
 FUNC INT Info_VLK_06_Flugblätter_Condition()
 {
-	if (Npc_HasItems(hero, MatteoFlugblätter) >= 1)
-	&& (Mod_Flugblätter	<	20)
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+	if (Npc_HasItems(hero, MatteoFlugblaetter) >= 1)
+	&& (Mod_Flugblaetter < 20)
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 	&& (self.aivar[AIV_FLUGBLATTVERTEILT] == 0)
 	{
 		return TRUE;
@@ -169,17 +169,17 @@ FUNC VOID Info_VLK_06_Flugblätter_Info()
 {
 	B_Say (hero, self, "$MATTEOPAPER");
 
-	B_GiveInvItems	(hero, self, MatteoFlugblätter, 1);
+	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_VLK_6_Flugblätter_06_01"); //(gelangweilt) Hmm ...
+	AI_Output(self, hero, "Info_Mod_VLK_6_Flugblaetter_06_01"); //(gelangweilt) Hmm ...
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_VLK_6_Flugblätter_06_02"); //Ja, danke, hört sich ganz nett an.
+	AI_Output(self, hero, "Info_Mod_VLK_6_Flugblaetter_06_02"); //Ja, danke, hört sich ganz nett an.
 
 	self.aivar[AIV_FLUGBLATTVERTEILT] = 1;
 
-	Mod_Flugblätter	=	Mod_Flugblätter + 1;
+	Mod_Flugblaetter += 1;
 };
 
 INSTANCE Info_VLK_6_Rangar (C_INFO) // E1

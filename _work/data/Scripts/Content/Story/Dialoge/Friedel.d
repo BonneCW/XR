@@ -324,7 +324,7 @@ FUNC VOID Info_Mod_Friedel_Lernen_Info()
 
 	Info_AddChoice	(Info_Mod_Friedel_Lernen, DIALOG_BACK, Info_Mod_Friedel_Lernen_BACK);
 	Info_AddChoice	(Info_Mod_Friedel_Lernen, "(Einhandkampf)", Info_Mod_Friedel_Lernen_Einhand);
-	Info_AddChoice	(Info_Mod_Friedel_Lernen, "(Stärke)", Info_Mod_Friedel_Lernen_Stärke);
+	Info_AddChoice	(Info_Mod_Friedel_Lernen, "(Stärke)", Info_Mod_Friedel_Lernen_Staerke);
 };
 
 FUNC VOID Info_Mod_Friedel_Lernen_BACK()
@@ -347,7 +347,7 @@ FUNC VOID Info_Mod_Friedel_Lernen_Einhand_BACK()
 
 	Info_AddChoice	(Info_Mod_Friedel_Lernen, DIALOG_BACK, Info_Mod_Friedel_Lernen_BACK);
 	Info_AddChoice	(Info_Mod_Friedel_Lernen, "(Einhandkampf)", Info_Mod_Friedel_Lernen_Einhand);
-	Info_AddChoice	(Info_Mod_Friedel_Lernen, "(Stärke)", Info_Mod_Friedel_Lernen_Stärke);
+	Info_AddChoice	(Info_Mod_Friedel_Lernen, "(Stärke)", Info_Mod_Friedel_Lernen_Staerke);
 };
 
 FUNC VOID Info_Mod_Friedel_Lernen_Einhand_5()
@@ -374,44 +374,44 @@ FUNC VOID Info_Mod_Friedel_Lernen_Einhand_1()
 	};
 };	
 
-FUNC VOID Info_Mod_Friedel_Lernen_Stärke()
+FUNC VOID Info_Mod_Friedel_Lernen_Staerke()
 {
 	Info_ClearChoices	(Info_Mod_Friedel_Lernen);
 
-	Info_AddChoice 		(Info_Mod_Friedel_Lernen, DIALOG_BACK, Info_Mod_Friedel_Lernen_Stärke_BACK);
-	Info_AddChoice		(Info_Mod_Friedel_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Friedel_Lernen_Stärke_5);
-	Info_AddChoice		(Info_Mod_Friedel_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Friedel_Lernen_Stärke_1);
+	Info_AddChoice 		(Info_Mod_Friedel_Lernen, DIALOG_BACK, Info_Mod_Friedel_Lernen_Staerke_BACK);
+	Info_AddChoice		(Info_Mod_Friedel_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Friedel_Lernen_Staerke_5);
+	Info_AddChoice		(Info_Mod_Friedel_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Friedel_Lernen_Staerke_1);
 };
 
-FUNC VOID Info_Mod_Friedel_Lernen_Stärke_BACK()
+FUNC VOID Info_Mod_Friedel_Lernen_Staerke_BACK()
 {
 	Info_ClearChoices	(Info_Mod_Friedel_Lernen);
 
 	Info_AddChoice	(Info_Mod_Friedel_Lernen, DIALOG_BACK, Info_Mod_Friedel_Lernen_BACK);
 	Info_AddChoice	(Info_Mod_Friedel_Lernen, "(Einhandkampf)", Info_Mod_Friedel_Lernen_Einhand);
-	Info_AddChoice	(Info_Mod_Friedel_Lernen, "(Stärke)", Info_Mod_Friedel_Lernen_Stärke);
+	Info_AddChoice	(Info_Mod_Friedel_Lernen, "(Stärke)", Info_Mod_Friedel_Lernen_Staerke);
 };
 
-FUNC VOID Info_Mod_Friedel_Lernen_Stärke_5()
+FUNC VOID Info_Mod_Friedel_Lernen_Staerke_5()
 {
 	B_TeachAttributePoints_New (self, hero, ATR_STRENGTH, 5, 200);
 	
 	Info_ClearChoices	(Info_Mod_Friedel_Lernen);
 
-	Info_AddChoice 		(Info_Mod_Friedel_Lernen, DIALOG_BACK, Info_Mod_Friedel_Lernen_Stärke_BACK);
-	Info_AddChoice		(Info_Mod_Friedel_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Friedel_Lernen_Stärke_5);
-	Info_AddChoice		(Info_Mod_Friedel_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Friedel_Lernen_Stärke_1);
+	Info_AddChoice 		(Info_Mod_Friedel_Lernen, DIALOG_BACK, Info_Mod_Friedel_Lernen_Staerke_BACK);
+	Info_AddChoice		(Info_Mod_Friedel_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Friedel_Lernen_Staerke_5);
+	Info_AddChoice		(Info_Mod_Friedel_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Friedel_Lernen_Staerke_1);
 };
 
-FUNC VOID Info_Mod_Friedel_Lernen_Stärke_1()
+FUNC VOID Info_Mod_Friedel_Lernen_Staerke_1()
 {
 	B_TeachAttributePoints	(self, hero, ATR_STRENGTH, 1, 200);
 
 	Info_ClearChoices	(Info_Mod_Friedel_Lernen);
 
-	Info_AddChoice 		(Info_Mod_Friedel_Lernen, DIALOG_BACK, Info_Mod_Friedel_Lernen_Stärke_BACK);
-	Info_AddChoice		(Info_Mod_Friedel_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Friedel_Lernen_Stärke_5);
-	Info_AddChoice		(Info_Mod_Friedel_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Friedel_Lernen_Stärke_1);
+	Info_AddChoice 		(Info_Mod_Friedel_Lernen, DIALOG_BACK, Info_Mod_Friedel_Lernen_Staerke_BACK);
+	Info_AddChoice		(Info_Mod_Friedel_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Friedel_Lernen_Staerke_5);
+	Info_AddChoice		(Info_Mod_Friedel_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Friedel_Lernen_Staerke_1);
 };
 
 INSTANCE Info_Mod_Friedel_Pickpocket (C_INFO)

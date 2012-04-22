@@ -34,7 +34,7 @@ INSTANCE Info_Mod_Torlof_Auftrag (C_INFO)
 
 FUNC INT Info_Mod_Torlof_Auftrag_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Lares_WillSöldner))
+	if (Npc_KnowsInfo(hero, Info_Mod_Lares_WillSoeldner))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Torlof_Hi))
 	&& (Mod_Gilde	==	0)
 	{
@@ -669,8 +669,8 @@ FUNC VOID Info_Mod_Torlof_Lernen_Info()
 	Info_ClearChoices	(Info_Mod_Torlof_Lernen);
 
 	Info_AddChoice 		(Info_Mod_Torlof_Lernen, DIALOG_BACK, Info_Mod_Torlof_Lernen_BACK);
-	Info_AddChoice		(Info_Mod_Torlof_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	, Info_Mod_Torlof_Lernen_Stärke_5);
-	Info_AddChoice		(Info_Mod_Torlof_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	, Info_Mod_Torlof_Lernen_Stärke_1);
+	Info_AddChoice		(Info_Mod_Torlof_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	, Info_Mod_Torlof_Lernen_Staerke_5);
+	Info_AddChoice		(Info_Mod_Torlof_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	, Info_Mod_Torlof_Lernen_Staerke_1);
 };
 
 FUNC VOID Info_Mod_Torlof_Lernen_BACK()
@@ -678,26 +678,26 @@ FUNC VOID Info_Mod_Torlof_Lernen_BACK()
 	Info_ClearChoices (Info_Mod_Torlof_Lernen);
 };
 
-FUNC VOID Info_Mod_Torlof_Lernen_Stärke_5()
+FUNC VOID Info_Mod_Torlof_Lernen_Staerke_5()
 {
 	B_TeachAttributePoints_New (self, hero, ATR_STRENGTH, 5, 200);
 	
 	Info_ClearChoices	(Info_Mod_Torlof_Lernen);
 
 	Info_AddChoice 		(Info_Mod_Torlof_Lernen, DIALOG_BACK, Info_Mod_Torlof_Lernen_BACK);
-	Info_AddChoice		(Info_Mod_Torlof_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	, Info_Mod_Torlof_Lernen_Stärke_5);
-	Info_AddChoice		(Info_Mod_Torlof_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	, Info_Mod_Torlof_Lernen_Stärke_1);
+	Info_AddChoice		(Info_Mod_Torlof_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	, Info_Mod_Torlof_Lernen_Staerke_5);
+	Info_AddChoice		(Info_Mod_Torlof_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	, Info_Mod_Torlof_Lernen_Staerke_1);
 };
 
-FUNC VOID Info_Mod_Torlof_Lernen_Stärke_1()
+FUNC VOID Info_Mod_Torlof_Lernen_Staerke_1()
 {
 	B_TeachAttributePoints (self, hero, ATR_STRENGTH, 1, 200);
 	
 	Info_ClearChoices	(Info_Mod_Torlof_Lernen);
 
 	Info_AddChoice 		(Info_Mod_Torlof_Lernen, DIALOG_BACK, Info_Mod_Torlof_Lernen_BACK);
-	Info_AddChoice		(Info_Mod_Torlof_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	, Info_Mod_Torlof_Lernen_Stärke_5);
-	Info_AddChoice		(Info_Mod_Torlof_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	, Info_Mod_Torlof_Lernen_Stärke_1);
+	Info_AddChoice		(Info_Mod_Torlof_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	, Info_Mod_Torlof_Lernen_Staerke_5);
+	Info_AddChoice		(Info_Mod_Torlof_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	, Info_Mod_Torlof_Lernen_Staerke_1);
 };
 
 INSTANCE Info_Mod_Torlof_Pickpocket (C_INFO)

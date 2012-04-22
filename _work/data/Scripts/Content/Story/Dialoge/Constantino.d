@@ -961,7 +961,7 @@ FUNC VOID Info_Mod_Constantino_PaketZauberwasser_ToDo()
 	Info_ClearChoices	(Info_Mod_Constantino_PaketZauberwasser);
 
 	Info_AddChoice	(Info_Mod_Constantino_PaketZauberwasser, "Zurück", Info_Mod_Constantino_PaketZauberwasser_BACK);
-	Info_AddChoice	(Info_Mod_Constantino_PaketZauberwasser, "Wo finde ich Feldknöterich?", Info_Mod_Constantino_PaketZauberwasser_Feldknöterich);
+	Info_AddChoice	(Info_Mod_Constantino_PaketZauberwasser, "Wo finde ich Feldknöterich?", Info_Mod_Constantino_PaketZauberwasser_Feldknoeterich);
 	Info_AddChoice	(Info_Mod_Constantino_PaketZauberwasser, "Wo finde ich Blauflieder?", Info_Mod_Constantino_PaketZauberwasser_Blauflieder);
 	Info_AddChoice	(Info_Mod_Constantino_PaketZauberwasser, "Wo finde ich Heilpflanzen?", Info_Mod_Constantino_PaketZauberwasser_Heilpflanzen);
 	Info_AddChoice	(Info_Mod_Constantino_PaketZauberwasser, "Wo finde ich Feuernesseln?", Info_Mod_Constantino_PaketZauberwasser_Feuernesseln);
@@ -987,10 +987,10 @@ FUNC VOID Info_Mod_Constantino_PaketZauberwasser_BACK()
 	Info_ClearChoices	(Info_Mod_Constantino_PaketZauberwasser);
 };
 
-FUNC VOID Info_Mod_Constantino_PaketZauberwasser_Feldknöterich()
+FUNC VOID Info_Mod_Constantino_PaketZauberwasser_Feldknoeterich()
 {
-	AI_Output(hero, self, "Info_Mod_Constantino_PaketZauberwasser_Feldknöterich_15_00"); //Wo finde ich Feldknöterich?
-	AI_Output(self, hero, "Info_Mod_Constantino_PaketZauberwasser_Feldknöterich_10_01"); //Hier in der Stadt wirst du keinen finden. Geh raus und schau dich um.
+	AI_Output(hero, self, "Info_Mod_Constantino_PaketZauberwasser_Feldknoeterich_15_00"); //Wo finde ich Feldknöterich?
+	AI_Output(self, hero, "Info_Mod_Constantino_PaketZauberwasser_Feldknoeterich_10_01"); //Hier in der Stadt wirst du keinen finden. Geh raus und schau dich um.
 };
 
 FUNC VOID Info_Mod_Constantino_PaketZauberwasser_Blauflieder()

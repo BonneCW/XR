@@ -566,18 +566,18 @@ FUNC VOID Info_Mod_Eduard_AlteMineQuest2_Info()
 	B_GivePlayerXP	(100);
 };
 
-INSTANCE Info_Mod_Eduard_Rüstung (C_INFO)
+INSTANCE Info_Mod_Eduard_Ruestung (C_INFO)
 {
 	npc		= Mod_1027_SMK_Eduard_MT;
 	nr		= 1;
-	condition	= Info_Mod_Eduard_Rüstung_Condition;
-	information	= Info_Mod_Eduard_Rüstung_Info;
+	condition	= Info_Mod_Eduard_Ruestung_Condition;
+	information	= Info_Mod_Eduard_Ruestung_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Kann ich bei dir eine bessere Rüstung bekommen?";
 };
 
-FUNC INT Info_Mod_Eduard_Rüstung_Condition()
+FUNC INT Info_Mod_Eduard_Ruestung_Condition()
 {
 	if ((Mod_Gilde == 15)
 	|| (Mod_Gilde == 12))
@@ -588,15 +588,15 @@ FUNC INT Info_Mod_Eduard_Rüstung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Eduard_Rüstung_Info()
+FUNC VOID Info_Mod_Eduard_Ruestung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Eduard_Rüstung_15_00"); //Kann ich bei dir eine bessere Rüstung bekommen?
+	AI_Output(hero, self, "Info_Mod_Eduard_Ruestung_15_00"); //Kann ich bei dir eine bessere Rüstung bekommen?
 
 	if (Kapitel > 3)
 	&& (Mod_ZweiteVerbesserung == FALSE)
 	&& (Mod_Gilde == 15)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_11_02"); //Ich hab gehört, dass auf dem Weg zur Ausgrabungsstätte der Wassermagier ein Nachtmahr sein soll. Mit dessen Fell könnte ich deine schwarze Kriegerrüstung sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_11_02"); //Ich hab gehört, dass auf dem Weg zur Ausgrabungsstätte der Wassermagier ein Nachtmahr sein soll. Mit dessen Fell könnte ich deine schwarze Kriegerrüstung sicher ein wenig verbessern.
 	
 		Mod_ZweiteVerbesserung = TRUE;
 	
@@ -607,42 +607,42 @@ FUNC VOID Info_Mod_Eduard_Rüstung_Info()
 	&& (Mod_ErsteVerbesserung == FALSE)
 	&& (Mod_Gilde == 12)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_11_03"); //Ich hab gehört, dass auf beim Pass ein Schattensnapper sein soll. Mit dessen Haut könnte ich deine schwarze Novizenrobe sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_11_03"); //Ich hab gehört, dass auf beim Pass ein Schattensnapper sein soll. Mit dessen Haut könnte ich deine schwarze Novizenrobe sicher ein wenig verbessern.
 	
 		Mod_ErsteVerbesserung = TRUE;
 	
 		Wld_InsertNpc	(Schattensnapper,	"NW_PASS_06");
 	};
 
-	Info_ClearChoices	(Info_Mod_Eduard_Rüstung);
-	Info_AddChoice	(Info_Mod_Eduard_Rüstung, DIALOG_BACK, Info_Mod_Eduard_Rüstung_BACK);
+	Info_ClearChoices	(Info_Mod_Eduard_Ruestung);
+	Info_AddChoice	(Info_Mod_Eduard_Ruestung, DIALOG_BACK, Info_Mod_Eduard_Ruestung_BACK);
 
 	if (Mod_ZweiteVerbesserung == TRUE)
 	&& (Mod_Gilde == 15)
 	{
-		Info_AddChoice	(Info_Mod_Eduard_Rüstung, "Schwarze Kriegerrüstung verbessern", Info_Mod_Eduard_Rüstung_SKR_S);
+		Info_AddChoice	(Info_Mod_Eduard_Ruestung, "Schwarze Kriegerrüstung verbessern", Info_Mod_Eduard_Ruestung_SKR_S);
 	};
 
 	if (Mod_ErsteVerbesserung == TRUE)
 	&& (Mod_Gilde == 12)
 	{
-		Info_AddChoice	(Info_Mod_Eduard_Rüstung, "Schwarze Novizenrobe verbessern", Info_Mod_Eduard_Rüstung_SNOV_S);
+		Info_AddChoice	(Info_Mod_Eduard_Ruestung, "Schwarze Novizenrobe verbessern", Info_Mod_Eduard_Ruestung_SNOV_S);
 	};
 };
 
-FUNC VOID Info_Mod_Eduard_Rüstung_BACK ()
+FUNC VOID Info_Mod_Eduard_Ruestung_BACK ()
 {
-	Info_ClearChoices	(Info_Mod_Eduard_Rüstung);
+	Info_ClearChoices	(Info_Mod_Eduard_Ruestung);
 };
 
-FUNC VOID Info_Mod_Eduard_Rüstung_SKR_S ()
+FUNC VOID Info_Mod_Eduard_Ruestung_SKR_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Eduard_Rüstung_SKR_S_15_00"); //Verbessere meine schwarze Kriegerrüstung.
+	AI_Output(hero, self, "Info_Mod_Eduard_Ruestung_SKR_S_15_00"); //Verbessere meine schwarze Kriegerrüstung.
 
 	if (Npc_HasItems(hero, ItAt_NightmareFur) == 1)
 	&& (Npc_HasItems(hero, ItAr_SMK_L) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_SKR_S_11_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_SKR_S_11_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_NightmareFur, 1);
 		
@@ -661,24 +661,24 @@ FUNC VOID Info_Mod_Eduard_Rüstung_SKR_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_SMK_L) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_SKR_S_11_02"); //Du musst schon eine schwarze Kriegerrüstung haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_SKR_S_11_02"); //Du musst schon eine schwarze Kriegerrüstung haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_NightmareFur) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_SKR_S_11_03"); //Wenn du das Nachtmahrfell nicht hast, kann ich deine Rüstung nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_SKR_S_11_03"); //Wenn du das Nachtmahrfell nicht hast, kann ich deine Rüstung nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Eduard_Rüstung);
+	Info_ClearChoices	(Info_Mod_Eduard_Ruestung);
 };
 
-FUNC VOID Info_Mod_Eduard_Rüstung_SNOV_S ()
+FUNC VOID Info_Mod_Eduard_Ruestung_SNOV_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Eduard_Rüstung_SNOV_S_15_00"); //Verbessere meine schwarze Novizenrobe.
+	AI_Output(hero, self, "Info_Mod_Eduard_Ruestung_SNOV_S_15_00"); //Verbessere meine schwarze Novizenrobe.
 
 	if (Npc_HasItems(hero, ItAt_Schattensnapperhaut) == 1)
 	&& (Npc_HasItems(hero, ItAr_NOV_DMB_01) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_SNOV_S_11_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_SNOV_S_11_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_Schattensnapperhaut, 1);
 		
@@ -697,14 +697,14 @@ FUNC VOID Info_Mod_Eduard_Rüstung_SNOV_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_NOV_DMB_01) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_SNOV_S_11_02"); //Du musst schon eine schwarze Novizenrobe haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_SNOV_S_11_02"); //Du musst schon eine schwarze Novizenrobe haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_Schattensnapperhaut) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_SNOV_S_11_03"); //Wenn du die Schattensnapperhaut nicht hast, kann ich deine Rüstung nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_SNOV_S_11_03"); //Wenn du die Schattensnapperhaut nicht hast, kann ich deine Rüstung nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Eduard_Rüstung);
+	Info_ClearChoices	(Info_Mod_Eduard_Ruestung);
 };
 
 INSTANCE Info_Mod_Eduard_Pickpocket (C_INFO)

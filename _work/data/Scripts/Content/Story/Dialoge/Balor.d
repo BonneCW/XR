@@ -21,18 +21,18 @@ FUNC VOID Info_Mod_Balor_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Balor_Hi_01_02"); //Das wird dann im Lager zu Stengeln verarbeitet und dann rauchen wir es oder verkaufen es weiter.
 };
 
-INSTANCE Info_Mod_Balor_Dünger (C_INFO)
+INSTANCE Info_Mod_Balor_Duenger (C_INFO)
 {
 	npc		= Mod_3001_PSINOV_Balor_MT;
 	nr		= 1;
-	condition	= Info_Mod_Balor_Dünger_Condition;
-	information	= Info_Mod_Balor_Dünger_Info;
+	condition	= Info_Mod_Balor_Duenger_Condition;
+	information	= Info_Mod_Balor_Duenger_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Baal Namib schickt mich.";
 };
 
-FUNC INT Info_Mod_Balor_Dünger_Condition()
+FUNC INT Info_Mod_Balor_Duenger_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Namib_WarBeiLester))
 	&& (Npc_HasItems(hero, ItMi_DuengerPaket) == 1)
@@ -42,53 +42,53 @@ FUNC INT Info_Mod_Balor_Dünger_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Balor_Dünger_Info()
+FUNC VOID Info_Mod_Balor_Duenger_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Balor_Dünger_15_00"); //Baal Namib schickt mich, ich soll dir dieses Paket bringen.
-	AI_Output(self, hero, "Info_Mod_Balor_Dünger_01_01"); //Ah, endlich. Der Dünger ist gekommen. Verteile ihn doch bitte auf dem Feld.
-	AI_Output(hero, self, "Info_Mod_Balor_Dünger_15_02"); //Ich soll es auf dem Feld verteilen?
-	AI_Output(self, hero, "Info_Mod_Balor_Dünger_01_03"); //Ja. Hier nimm diese Spitzhacke.
+	AI_Output(hero, self, "Info_Mod_Balor_Duenger_15_00"); //Baal Namib schickt mich, ich soll dir dieses Paket bringen.
+	AI_Output(self, hero, "Info_Mod_Balor_Duenger_01_01"); //Ah, endlich. Der Dünger ist gekommen. Verteile ihn doch bitte auf dem Feld.
+	AI_Output(hero, self, "Info_Mod_Balor_Duenger_15_02"); //Ich soll es auf dem Feld verteilen?
+	AI_Output(self, hero, "Info_Mod_Balor_Duenger_01_03"); //Ja. Hier nimm diese Spitzhacke.
 
 	CreateInvItems	(self, ItMw_2H_Axe_L_01, 1);
 	B_GiveInvItems	(self, hero, ItMw_2H_Axe_L_01, 1);
 
-	AI_Output(self, hero, "Info_Mod_Balor_Dünger_01_04"); //Ich habe den Ort, an dem du düngen musst, mit einem roten X gekennzeichnet. Grab einfach dort und dünge dann.
+	AI_Output(self, hero, "Info_Mod_Balor_Duenger_01_04"); //Ich habe den Ort, an dem du düngen musst, mit einem roten X gekennzeichnet. Grab einfach dort und dünge dann.
 
 	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Balor will, dass ich den Dünger auf dem Feld verteile. Er hat die Stelle mit einem roten X gekennzeichnet.");
 
 	Wld_SendTrigger	("EVT_MT_DUENGER");
 };
 
-INSTANCE Info_Mod_Balor_DüngerVerteilt (C_INFO)
+INSTANCE Info_Mod_Balor_DuengerVerteilt (C_INFO)
 {
 	npc		= Mod_3001_PSINOV_Balor_MT;
 	nr		= 1;
-	condition	= Info_Mod_Balor_DüngerVerteilt_Condition;
-	information	= Info_Mod_Balor_DüngerVerteilt_Info;
+	condition	= Info_Mod_Balor_DuengerVerteilt_Condition;
+	information	= Info_Mod_Balor_DuengerVerteilt_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab den Dünger verteilt.";
 };
 
-FUNC INT Info_Mod_Balor_DüngerVerteilt_Condition()
+FUNC INT Info_Mod_Balor_DuengerVerteilt_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Balor_Dünger))
+	if (Npc_KnowsInfo(hero, Info_Mod_Balor_Duenger))
 	&& (Npc_HasItems(hero, ItMi_DuengerPaket) == 0)
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Balor_DüngerVerteilt_Info()
+FUNC VOID Info_Mod_Balor_DuengerVerteilt_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Balor_DüngerVerteilt_15_00"); //Ich hab den Dünger verteilt.
-	AI_Output(self, hero, "Info_Mod_Balor_DüngerVerteilt_01_01"); //Gut, dann wird das Sumpfkraut nur so sprießen.
-	AI_Output(self, hero, "Info_Mod_Balor_DüngerVerteilt_01_02"); //Hier hast du ein paar Stängel.
+	AI_Output(hero, self, "Info_Mod_Balor_DuengerVerteilt_15_00"); //Ich hab den Dünger verteilt.
+	AI_Output(self, hero, "Info_Mod_Balor_DuengerVerteilt_01_01"); //Gut, dann wird das Sumpfkraut nur so sprießen.
+	AI_Output(self, hero, "Info_Mod_Balor_DuengerVerteilt_01_02"); //Hier hast du ein paar Stängel.
 
 	CreateInvItems	(self, ItMi_Joint, 6);
 	B_GiveInvItems	(self, hero, ItMi_Joint, 5);
 
-	AI_Output(self, hero, "Info_Mod_Balor_DüngerVerteilt_01_04"); //Ich zieh mir auch erst mal einen rein.
+	AI_Output(self, hero, "Info_Mod_Balor_DuengerVerteilt_01_04"); //Ich zieh mir auch erst mal einen rein.
 
 	B_UseItem	(self, ItMi_Joint);
 

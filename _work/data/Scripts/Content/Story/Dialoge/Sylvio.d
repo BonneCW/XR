@@ -181,18 +181,18 @@ FUNC VOID Info_Mod_Sylvio_VelayaDabei_Info()
 	B_StartOtherRoutine	(Mod_1621_EBR_Velaya_MT, "ATSYLVIO");
 };
 
-INSTANCE Info_Mod_Sylvio_Beförderung (C_INFO)
+INSTANCE Info_Mod_Sylvio_Befoerderung (C_INFO)
 {
 	npc		= Mod_797_SLD_Sylvio_MT;
 	nr		= 1;
-	condition	= Info_Mod_Sylvio_Beförderung_Condition;
-	information	= Info_Mod_Sylvio_Beförderung_Info;
+	condition	= Info_Mod_Sylvio_Befoerderung_Condition;
+	information	= Info_Mod_Sylvio_Befoerderung_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Bin ich bereit in die Reihen der Orkjäger aufgenommen zu werden?";
 };
 
-FUNC INT Info_Mod_Sylvio_Beförderung_Condition()
+FUNC INT Info_Mod_Sylvio_Befoerderung_Condition()
 {
 	if (Mod_Gilde == 4)
 	&& (Mod_SLD_Orkjaeger == 0)
@@ -201,21 +201,21 @@ FUNC INT Info_Mod_Sylvio_Beförderung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Sylvio_Beförderung_Info()
+FUNC VOID Info_Mod_Sylvio_Befoerderung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Sylvio_Beförderung_15_00"); //Bin ich bereit in die Reihen der Orkjäger aufgenommen zu werden?
+	AI_Output(hero, self, "Info_Mod_Sylvio_Befoerderung_15_00"); //Bin ich bereit in die Reihen der Orkjäger aufgenommen zu werden?
 
 	if (Kapitel == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_01"); //Was?! Ach die Aufnahme ... ich denke in ein paar Tagen darüber nach.
+		AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_01"); //Was?! Ach die Aufnahme ... ich denke in ein paar Tagen darüber nach.
 	}
 	else
 	{
 		if (Npc_KnowsInfo(hero, Info_Mod_Sylvio_VelayaDabei))
 		&& (Npc_KnowsInfo(hero, Info_Mod_Sentenza_Cutter))
 		{
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_02"); //Achja, deine Aufnahme. Du hast gezeigt, dass du auf der richtigen Seite stehst und deine Aufgaben zu meiner vollsten Zufriedenheit erfüllt.
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_03"); //Damit hast du dir deine Aufnahme mehr als verdient. Willkommen bei den Orkjägern. Hier ist deine neue Rüstung.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_02"); //Achja, deine Aufnahme. Du hast gezeigt, dass du auf der richtigen Seite stehst und deine Aufgaben zu meiner vollsten Zufriedenheit erfüllt.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_03"); //Damit hast du dir deine Aufnahme mehr als verdient. Willkommen bei den Orkjägern. Hier ist deine neue Rüstung.
 
 			B_ShowGivenThings	("Orkjägerrüstung erhalten");
 
@@ -224,7 +224,7 @@ FUNC VOID Info_Mod_Sylvio_Beförderung_Info()
 			AI_UnequipArmor	(hero);
 			AI_EquipArmor	(hero, ItAr_Sld_H);
 
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_04"); //Deine Waffe kannst du dir bei Thofeistos abholen.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_04"); //Deine Waffe kannst du dir bei Thofeistos abholen.
 
 			Snd_Play ("LEVELUP");
 
@@ -241,9 +241,9 @@ FUNC VOID Info_Mod_Sylvio_Beförderung_Info()
 		else if (Npc_KnowsInfo(hero, Info_Mod_Sylvio_VelayaWeg))
 		&& (Npc_KnowsInfo(hero, Info_Mod_Sylvio_InfosAnLee))
 		{
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_05"); //Achja, die Aufnahme. Du hast mir und meinen Jungs wirklich einigen Kummer gemacht, Bürschchen.
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_06"); //Sei froh, dass du ein ehemaliger Bekannter von Lee bist, sonst würde ich dich mit meiner Waffe in Stücke hacken.
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_07"); //Aufnahme? Bei den Bauern auf dem Reisfeld, aber nicht bei uns. Und jetzt geh mir aus den Augen, bevor ich mich doch noch vergesse.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_05"); //Achja, die Aufnahme. Du hast mir und meinen Jungs wirklich einigen Kummer gemacht, Bürschchen.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_06"); //Sei froh, dass du ein ehemaliger Bekannter von Lee bist, sonst würde ich dich mit meiner Waffe in Stücke hacken.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_07"); //Aufnahme? Bei den Bauern auf dem Reisfeld, aber nicht bei uns. Und jetzt geh mir aus den Augen, bevor ich mich doch noch vergesse.
 
 			Mod_SLD_Orkjaeger = 2;
 
@@ -257,8 +257,8 @@ FUNC VOID Info_Mod_Sylvio_Beförderung_Info()
 		&& (Npc_KnowsInfo(hero, Info_Mod_Fester_BackAtCamp))
 		&& (Mod_SLD_Engardo == 5)))
 		{
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_08"); //Manches hast du hinbekommen, einiges auch verhauen, jedoch alles in allem gute Arbeit geleistet.
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_09"); //Du hast dich zwar nicht mit Ruhm bekleckert, aber für eine Aufnahme bei uns reicht es trotzdem gerade so. Hier ist deine neue Rüstung.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_08"); //Manches hast du hinbekommen, einiges auch verhauen, jedoch alles in allem gute Arbeit geleistet.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_09"); //Du hast dich zwar nicht mit Ruhm bekleckert, aber für eine Aufnahme bei uns reicht es trotzdem gerade so. Hier ist deine neue Rüstung.
 
 			B_ShowGivenThings	("Orkjägerrüstung erhalten");
 
@@ -267,7 +267,7 @@ FUNC VOID Info_Mod_Sylvio_Beförderung_Info()
 			AI_UnequipArmor	(hero);
 			AI_EquipArmor	(hero, ItAr_Sld_H);
 
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_04"); //Deine Waffe kannst du dir bei Thofeistos abholen.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_04"); //Deine Waffe kannst du dir bei Thofeistos abholen.
 
 			Snd_Play ("LEVELUP");
 
@@ -283,8 +283,8 @@ FUNC VOID Info_Mod_Sylvio_Beförderung_Info()
 		}
 		else
 		{
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_10"); //Was, du hast du noch kaum etwas gemacht.
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_11"); //Ehe du dich nicht bewährt hast, lautet die Antwort nein.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_10"); //Was, du hast du noch kaum etwas gemacht.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_11"); //Ehe du dich nicht bewährt hast, lautet die Antwort nein.
 		};
 	};
 };

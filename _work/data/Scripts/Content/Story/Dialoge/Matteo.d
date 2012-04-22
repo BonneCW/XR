@@ -278,7 +278,7 @@ FUNC VOID Info_Mod_Matteo_Auftrag_2_Info()
 	AI_Output(self, hero, "Info_Mod_Matteo_Auftrag_2_09_02"); //Du musst wissen, ich bin momentan überglücklich, und muss mich um gewisse Vorbereitungen kümmern.
 	AI_Output(self, hero, "Info_Mod_Matteo_Auftrag_2_09_03"); //Da bleibt nicht viel Zeit, für mein Geschäft zu werben. Also wirst du diese Aufgabe übernehmen!
 	
-	B_GiveInvItems	(self, hero, MatteoFlugblätter, 20);
+	B_GiveInvItems	(self, hero, MatteoFlugblaetter, 20);
 
 	AI_Output(self, hero, "Info_Mod_Matteo_Auftrag_2_09_04"); //Verteil die Flugblätter unter den Bürgern dieser Stadt, und dem Herold kannst du auch Bescheid geben. Der hat doch eh nichts Sinnvolles zu quasseln!
 
@@ -316,32 +316,32 @@ FUNC VOID Info_Mod_Matteo_WieLehrling_Info()
 	AI_Output(self, hero, "Info_Mod_Matteo_WieLehrling_09_05"); //(unglücklich) Theoretisch, ja. Aber bestimmt nicht sinnvoll.
 };
 
-INSTANCE Info_Mod_Matteo_Flugblätter (C_INFO)
+INSTANCE Info_Mod_Matteo_Flugblaetter (C_INFO)
 {
 	npc		= Mod_529_NONE_Matteo_NW;
 	nr		= 1;
-	condition	= Info_Mod_Matteo_Flugblätter_Condition;
-	information	= Info_Mod_Matteo_Flugblätter_Info;
+	condition	= Info_Mod_Matteo_Flugblaetter_Condition;
+	information	= Info_Mod_Matteo_Flugblaetter_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab die Flugblätter verteilt.";
 };
 
-FUNC INT Info_Mod_Matteo_Flugblätter_Condition()
+FUNC INT Info_Mod_Matteo_Flugblaetter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Auftrag_2))
-	&& (Mod_Flugblätter	==	20)
+	&& (Mod_Flugblaetter == 20)
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Matteo_Flugblätter_Info()
+FUNC VOID Info_Mod_Matteo_Flugblaetter_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Matteo_Flugblätter_15_00"); //Ich hab die Flugblätter verteilt.
-	AI_Output(self, hero, "Info_Mod_Matteo_Flugblätter_09_01"); //Ich hab's gemerkt, der Laden war heute rammelvoll.
-	AI_Output(self, hero, "Info_Mod_Matteo_Flugblätter_09_02"); //Ich liebe es, den Menschen dabei zuzusehen, wie sie meine Nahrungsmittel betrachten und abwiegen.
-	AI_Output(self, hero, "Info_Mod_Matteo_Flugblätter_09_03"); //Damit hast du meinen Teil der Bedingung erfüllt. Komm zurück, wenn du die Zustimmung alles Meister hast.
+	AI_Output(hero, self, "Info_Mod_Matteo_Flugblaetter_15_00"); //Ich hab die Flugblätter verteilt.
+	AI_Output(self, hero, "Info_Mod_Matteo_Flugblaetter_09_01"); //Ich hab's gemerkt, der Laden war heute rammelvoll.
+	AI_Output(self, hero, "Info_Mod_Matteo_Flugblaetter_09_02"); //Ich liebe es, den Menschen dabei zuzusehen, wie sie meine Nahrungsmittel betrachten und abwiegen.
+	AI_Output(self, hero, "Info_Mod_Matteo_Flugblaetter_09_03"); //Damit hast du meinen Teil der Bedingung erfüllt. Komm zurück, wenn du die Zustimmung alles Meister hast.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 100);
 
@@ -368,7 +368,7 @@ INSTANCE Info_Mod_Matteo_Aufnahme (C_INFO)
 
 FUNC INT Info_Mod_Matteo_Aufnahme_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 	&& (Mod_IstLehrling == 0)
 	&& (Mod_LehrlingsStimmen == 5)
 	{
@@ -948,18 +948,18 @@ FUNC VOID Info_Mod_Matteo_LehrlingQuest8_Info()
 	AI_Output(self, hero, "Info_Mod_Matteo_LehrlingQuest8_09_03"); //Na, da hast du dir ja was vorgenommen! (lacht)
 };
 
-INSTANCE Info_Mod_Matteo_Einschätzung (C_INFO)
+INSTANCE Info_Mod_Matteo_Einschaetzung (C_INFO)
 {
 	npc		= Mod_529_NONE_Matteo_NW;
 	nr		= 1;
-	condition	= Info_Mod_Matteo_Einschätzung_Condition;
-	information	= Info_Mod_Matteo_Einschätzung_Info;
+	condition	= Info_Mod_Matteo_Einschaetzung_Condition;
+	information	= Info_Mod_Matteo_Einschaetzung_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Kannst mein Verhandlungsgeschick einschätzen?";
 };
 
-FUNC INT Info_Mod_Matteo_Einschätzung_Condition()
+FUNC INT Info_Mod_Matteo_Einschaetzung_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Hi))
 	{
@@ -967,45 +967,45 @@ FUNC INT Info_Mod_Matteo_Einschätzung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Matteo_Einschätzung_Info()
+FUNC VOID Info_Mod_Matteo_Einschaetzung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Matteo_Einschätzung_15_00"); //Kannst mein Verhandlungsgeschick einschätzen?
-	AI_Output(self, hero, "Info_Mod_Matteo_Einschätzung_09_01"); //Klar. Also ich würde sagen ...
+	AI_Output(hero, self, "Info_Mod_Matteo_Einschaetzung_15_00"); //Kannst mein Verhandlungsgeschick einschätzen?
+	AI_Output(self, hero, "Info_Mod_Matteo_Einschaetzung_09_01"); //Klar. Also ich würde sagen ...
 
 	if (Mod_Verhandlungsgeschick	<	30)
 	{
-		AI_Output(self, hero, "Info_Mod_Matteo_Einschätzung_09_02"); //... Händler-Lehrling.
+		AI_Output(self, hero, "Info_Mod_Matteo_Einschaetzung_09_02"); //... Händler-Lehrling.
 	}
 	else if (Mod_Verhandlungsgeschick	<	50)
 	{
-		AI_Output(self, hero, "Info_Mod_Matteo_Einschätzung_09_03"); //... Kleiner Händler.
+		AI_Output(self, hero, "Info_Mod_Matteo_Einschaetzung_09_03"); //... Kleiner Händler.
 	}
 	else if (Mod_Verhandlungsgeschick	<	75)
 	{
-		AI_Output(self, hero, "Info_Mod_Matteo_Einschätzung_09_04"); //... Händler.
+		AI_Output(self, hero, "Info_Mod_Matteo_Einschaetzung_09_04"); //... Händler.
 	}
 	else if (Mod_Verhandlungsgeschick	<	100)
 	{
-		AI_Output(self, hero, "Info_Mod_Matteo_Einschätzung_09_05"); //... Guter Händler.
+		AI_Output(self, hero, "Info_Mod_Matteo_Einschaetzung_09_05"); //... Guter Händler.
 	}
 	else if (Mod_Verhandlungsgeschick	==	100)
 	{
-		AI_Output(self, hero, "Info_Mod_Matteo_Einschätzung_09_06"); //... Perfekter Händler.
+		AI_Output(self, hero, "Info_Mod_Matteo_Einschaetzung_09_06"); //... Perfekter Händler.
 	};
 };
 
-INSTANCE Info_Mod_Matteo_Angebot_Käse (C_INFO)
+INSTANCE Info_Mod_Matteo_Angebot_Kaese (C_INFO)
 {
 	npc		= Mod_529_NONE_Matteo_NW;
 	nr		= 1;
-	condition	= Info_Mod_Matteo_Angebot_Käse_Condition;
-	information	= Info_Mod_Matteo_Angebot_Käse_Info;
+	condition	= Info_Mod_Matteo_Angebot_Kaese_Condition;
+	information	= Info_Mod_Matteo_Angebot_Kaese_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab was von deinem Angebot gelesen.";
 };
 
-FUNC INT Info_Mod_Matteo_Angebot_Käse_Condition()
+FUNC INT Info_Mod_Matteo_Angebot_Kaese_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Hi))
 	&& (Mod_AngebotMatteo	==	1)
@@ -1014,10 +1014,10 @@ FUNC INT Info_Mod_Matteo_Angebot_Käse_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Matteo_Angebot_Käse_Info()
+FUNC VOID Info_Mod_Matteo_Angebot_Kaese_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Matteo_Angebot_Käse_15_00"); //Ich hab was von deinem Angebot gelesen.
-	AI_Output(self, hero, "Info_Mod_Matteo_Angebot_Käse_09_01"); //Du meinst den Käse. Ja, der nur 10 Goldmünzen und ist bei mir auch nur in den nächsten Tagen erhältlich.
+	AI_Output(hero, self, "Info_Mod_Matteo_Angebot_Kaese_15_00"); //Ich hab was von deinem Angebot gelesen.
+	AI_Output(self, hero, "Info_Mod_Matteo_Angebot_Kaese_09_01"); //Du meinst den Käse. Ja, der nur 10 Goldmünzen und ist bei mir auch nur in den nächsten Tagen erhältlich.
 
 	Mod_MatteosKäseAngebot	=	Wld_GetDay();
 };
@@ -1034,7 +1034,7 @@ INSTANCE Info_Mod_Matteo_Angebot_Vorbei (C_INFO)
 
 FUNC INT Info_Mod_Matteo_Angebot_Vorbei_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Angebot_Käse))
+	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Angebot_Kaese))
 	&& ((Wld_GetDay() - Mod_MatteosKäseAngebot) >= 5)
 	{
 		return 1;
@@ -1046,33 +1046,33 @@ FUNC VOID Info_Mod_Matteo_Angebot_Vorbei_Info()
 	AI_Output(self, hero, "Info_Mod_Matteo_Angebot_Vorbei_09_00"); //Das Angebot ist ab jetzt nicht mehr gültig.
 };
 
-INSTANCE Info_Mod_Matteo_Käse (C_INFO)
+INSTANCE Info_Mod_Matteo_Kaese (C_INFO)
 {
 	npc		= Mod_529_NONE_Matteo_NW;
 	nr		= 1;
-	condition	= Info_Mod_Matteo_Käse_Condition;
-	information	= Info_Mod_Matteo_Käse_Info;
+	condition	= Info_Mod_Matteo_Kaese_Condition;
+	information	= Info_Mod_Matteo_Kaese_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Gib mir ein Stück Käse.";
 };
 
-FUNC INT Info_Mod_Matteo_Käse_Condition()
+FUNC INT Info_Mod_Matteo_Kaese_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Angebot_Käse))
+	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Angebot_Kaese))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Matteo_Angebot_Vorbei))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Matteo_Käse_Info()
+FUNC VOID Info_Mod_Matteo_Kaese_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Matteo_Käse_15_00"); //Gib mir ein Stück Käse.
+	AI_Output(hero, self, "Info_Mod_Matteo_Kaese_15_00"); //Gib mir ein Stück Käse.
 
 	if (Npc_HasItems(hero, ItMi_Gold) >= 10)
 	{
-		AI_Output(self, hero, "Info_Mod_Matteo_Käse_09_01"); //Hier ist dein Käse.
+		AI_Output(self, hero, "Info_Mod_Matteo_Kaese_09_01"); //Hier ist dein Käse.
 
 		B_GiveInvItems	(hero, self, ItMi_Gold, 10);
 
@@ -1081,7 +1081,7 @@ FUNC VOID Info_Mod_Matteo_Käse_Info()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Matteo_Käse_09_02"); //Komm wieder, wenn du genug Gold hast.
+		AI_Output(self, hero, "Info_Mod_Matteo_Kaese_09_02"); //Komm wieder, wenn du genug Gold hast.
 	};
 };
 

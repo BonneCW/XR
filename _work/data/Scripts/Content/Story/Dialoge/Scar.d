@@ -138,18 +138,18 @@ FUNC VOID Info_Mod_Scar_ToteNovizen_Info()
 	B_LogEntry	(TOPIC_MOD_BEL_DAEMON, "Scar hat ein Flattern gehört, als er jedoch nach draußen kam, war nicht mehr zu sehen.");
 };
 
-INSTANCE Info_Mod_Scar_Jagdtrophäen_SollIch (C_INFO)
+INSTANCE Info_Mod_Scar_Jagdtrophaeen_SollIch (C_INFO)
 {
 	npc		= Mod_518_SMK_Scar_MT;
 	nr		= 1;
-	condition	= Info_Mod_Scar_Jagdtrophäen_SollIch_Condition;
-	information	= Info_Mod_Scar_Jagdtrophäen_SollIch_Info;
+	condition	= Info_Mod_Scar_Jagdtrophaeen_SollIch_Condition;
+	information	= Info_Mod_Scar_Jagdtrophaeen_SollIch_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Myxir sagt, du hast Probleme mit einem Jäger.";
 };
 
-FUNC INT Info_Mod_Scar_Jagdtrophäen_SollIch_Condition()
+FUNC INT Info_Mod_Scar_Jagdtrophaeen_SollIch_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Myxir_Scar))
 	{
@@ -157,13 +157,13 @@ FUNC INT Info_Mod_Scar_Jagdtrophäen_SollIch_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Scar_Jagdtrophäen_SollIch_Info()
+FUNC VOID Info_Mod_Scar_Jagdtrophaeen_SollIch_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Scar_Jagdtrophäen_SollIch_15_00"); //Myxir sagt, du hast Probleme mit einem Jäger.
-	AI_Output(self, hero, "Info_Mod_Scar_Jagdtrophäen_SollIch_10_01"); //Mit Bartok, richtig. Gerüchteweise vergnügt er sich den ganzen Tag in der Roten Laterne.
-	AI_Output(self, hero, "Info_Mod_Scar_Jagdtrophäen_SollIch_10_02"); //Wer könnte es ihm schon verübeln? Hier im Lager ist ja mit Frauen tote Hose.
-	AI_Output(self, hero, "Info_Mod_Scar_Jagdtrophäen_SollIch_10_03"); //Ändert aber nix dran, dass mal wieder jemand den Schattenläufern die Hörner stutzen muss. Sonst sitz ich hier weiter auf dem Trockenen.
-	AI_Output(self, hero, "Info_Mod_Scar_Jagdtrophäen_SollIch_10_04"); //Wenn du ihn wieder zum Arbeiten kriegst, mach ich dir gute Preise, versprochen.
+	AI_Output(hero, self, "Info_Mod_Scar_Jagdtrophaeen_SollIch_15_00"); //Myxir sagt, du hast Probleme mit einem Jäger.
+	AI_Output(self, hero, "Info_Mod_Scar_Jagdtrophaeen_SollIch_10_01"); //Mit Bartok, richtig. Gerüchteweise vergnügt er sich den ganzen Tag in der Roten Laterne.
+	AI_Output(self, hero, "Info_Mod_Scar_Jagdtrophaeen_SollIch_10_02"); //Wer könnte es ihm schon verübeln? Hier im Lager ist ja mit Frauen tote Hose.
+	AI_Output(self, hero, "Info_Mod_Scar_Jagdtrophaeen_SollIch_10_03"); //Ändert aber nix dran, dass mal wieder jemand den Schattenläufern die Hörner stutzen muss. Sonst sitz ich hier weiter auf dem Trockenen.
+	AI_Output(self, hero, "Info_Mod_Scar_Jagdtrophaeen_SollIch_10_04"); //Wenn du ihn wieder zum Arbeiten kriegst, mach ich dir gute Preise, versprochen.
 
 	Log_CreateTopic	(TOPIC_MOD_FAULERJÄGER, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_FAULERJÄGER, LOG_RUNNING);

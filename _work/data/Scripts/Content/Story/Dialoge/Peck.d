@@ -20,18 +20,18 @@ FUNC VOID Info_Mod_Peck_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Peck_Hi_12_01"); //Ich bin Peck. Ich verkaufe den Milizen Rüstungen.
 };
 
-INSTANCE Info_Mod_Peck_Rüstung (C_INFO)
+INSTANCE Info_Mod_Peck_Ruestung (C_INFO)
 {
 	npc		= Mod_745_MIL_Peck_NW;
 	nr		= 1;
-	condition	= Info_Mod_Peck_Rüstung_Condition;
-	information	= Info_Mod_Peck_Rüstung_Info;
+	condition	= Info_Mod_Peck_Ruestung_Condition;
+	information	= Info_Mod_Peck_Ruestung_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Kann ich bei dir eine bessere Rüstung bekommen?";
 };
 
-FUNC INT Info_Mod_Peck_Rüstung_Condition()
+FUNC INT Info_Mod_Peck_Ruestung_Condition()
 {
 	if ((Mod_Gilde == 1)
 	|| (Mod_Gilde == 2))
@@ -41,19 +41,19 @@ FUNC INT Info_Mod_Peck_Rüstung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Peck_Rüstung_Info()
+FUNC VOID Info_Mod_Peck_Ruestung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Peck_Rüstung_15_00"); //Kann ich bei dir eine bessere Rüstung bekommen?
+	AI_Output(hero, self, "Info_Mod_Peck_Ruestung_15_00"); //Kann ich bei dir eine bessere Rüstung bekommen?
 
 	if (Mod_HasMILH == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Peck_Rüstung_12_01"); //Ich hab hier eine Schwere Milizrüstung.
+		AI_Output(self, hero, "Info_Mod_Peck_Ruestung_12_01"); //Ich hab hier eine Schwere Milizrüstung.
 	};
 
 	if (Kapitel > 1)
 	&& (Mod_ErsteVerbesserung == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Peck_Rüstung_12_02"); //Ich hab gehört, dass beim Pass zum Minental ein Feuersnapper sein soll. Mit dessen Haut könnte ich deine Schwere Milizrüstung sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Peck_Ruestung_12_02"); //Ich hab gehört, dass beim Pass zum Minental ein Feuersnapper sein soll. Mit dessen Haut könnte ich deine Schwere Milizrüstung sicher ein wenig verbessern.
 	
 		Mod_ErsteVerbesserung = TRUE;
 	
@@ -63,48 +63,48 @@ FUNC VOID Info_Mod_Peck_Rüstung_Info()
 	if (Kapitel > 3)
 	&& (Mod_ZweiteVerbesserung == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Peck_Rüstung_12_03"); //Ich hab gehört, dass beim Weg zur Ausgrabungsstätte der Wassermagier ein Feuerläufer sein soll. Mit dessen Fell könnte ich deine Ritterrüstung sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Peck_Ruestung_12_03"); //Ich hab gehört, dass beim Weg zur Ausgrabungsstätte der Wassermagier ein Feuerläufer sein soll. Mit dessen Fell könnte ich deine Ritterrüstung sicher ein wenig verbessern.
 	
 		Mod_ZweiteVerbesserung = TRUE;
 	
 		Wld_InsertNpc	(Feuerläufer,	"FP_MAGICGOLEM");
 	};
 
-	Info_ClearChoices	(Info_Mod_Peck_Rüstung);
-	Info_AddChoice	(Info_Mod_Peck_Rüstung, DIALOG_BACK, Info_Mod_Peck_Rüstung_BACK);
+	Info_ClearChoices	(Info_Mod_Peck_Ruestung);
+	Info_AddChoice	(Info_Mod_Peck_Ruestung, DIALOG_BACK, Info_Mod_Peck_Ruestung_BACK);
 
 	if (Mod_ErsteVerbesserung == TRUE)
 	&& (Mod_Gilde == 1)
 	{
-		Info_AddChoice	(Info_Mod_Peck_Rüstung, "Schwere Milizrüstung verbessern", Info_Mod_Peck_Rüstung_MIL_S);
+		Info_AddChoice	(Info_Mod_Peck_Ruestung, "Schwere Milizrüstung verbessern", Info_Mod_Peck_Ruestung_MIL_S);
 	};
 
 	if (Mod_ZweiteVerbesserung == TRUE)
 	&& (Mod_Gilde == 2)
 	{
-		Info_AddChoice	(Info_Mod_Peck_Rüstung, "Ritterrüstung verbessern", Info_Mod_Peck_Rüstung_RIT_S);
+		Info_AddChoice	(Info_Mod_Peck_Ruestung, "Ritterrüstung verbessern", Info_Mod_Peck_Ruestung_RIT_S);
 	};
 
 	if (Mod_Gilde == 1)
 	&& (Mod_HasMILH == FALSE)
 	{
-		Info_AddChoice	(Info_Mod_Peck_Rüstung, "Schwere Milizrüstung (Kosten: 2500)", Info_Mod_Peck_Rüstung_MIL_M);
+		Info_AddChoice	(Info_Mod_Peck_Ruestung, "Schwere Milizrüstung (Kosten: 2500)", Info_Mod_Peck_Ruestung_MIL_M);
 	};
 };
 
-FUNC VOID Info_Mod_Peck_Rüstung_BACK ()
+FUNC VOID Info_Mod_Peck_Ruestung_BACK ()
 {
-	Info_ClearChoices	(Info_Mod_Peck_Rüstung);
+	Info_ClearChoices	(Info_Mod_Peck_Ruestung);
 };
 
-FUNC VOID Info_Mod_Peck_Rüstung_MIL_S ()
+FUNC VOID Info_Mod_Peck_Ruestung_MIL_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Peck_Rüstung_MIL_S_15_00"); //Verbessere meine schwere Milizrüstung.
+	AI_Output(hero, self, "Info_Mod_Peck_Ruestung_MIL_S_15_00"); //Verbessere meine schwere Milizrüstung.
 
 	if (Npc_HasItems(hero, ItAt_FeuersnapperHaut) == 1)
 	&& (Npc_HasItems(hero, ItAr_MIL_M) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Peck_Rüstung_MIL_S_12_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Peck_Ruestung_MIL_S_12_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_FeuersnapperHaut, 1);
 		
@@ -120,24 +120,24 @@ FUNC VOID Info_Mod_Peck_Rüstung_MIL_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_Mil_M) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Peck_Rüstung_MIL_S_12_02"); //Du musst schon eine schwere Milizrüstung haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Peck_Ruestung_MIL_S_12_02"); //Du musst schon eine schwere Milizrüstung haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_Feuersnapperhaut) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Peck_Rüstung_MIL_S_12_03"); //Wenn du nicht die Snapperhaut hast, kann ich deine Rüstung nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Peck_Ruestung_MIL_S_12_03"); //Wenn du nicht die Snapperhaut hast, kann ich deine Rüstung nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Peck_Rüstung);
+	Info_ClearChoices	(Info_Mod_Peck_Ruestung);
 };
 
-FUNC VOID Info_Mod_Peck_Rüstung_RIT_S ()
+FUNC VOID Info_Mod_Peck_Ruestung_RIT_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Peck_Rüstung_RIT_S_15_00"); //Verbessere meine Ritterrüstung.
+	AI_Output(hero, self, "Info_Mod_Peck_Ruestung_RIT_S_15_00"); //Verbessere meine Ritterrüstung.
 
 	if (Npc_HasItems(hero, ItAt_FireShadowFur) == 1)
 	&& (Npc_HasItems(hero, ItAr_PAL_M) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Peck_Rüstung_RIT_S_12_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Peck_Ruestung_RIT_S_12_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_FireShadowFur, 1);
 		
@@ -153,23 +153,23 @@ FUNC VOID Info_Mod_Peck_Rüstung_RIT_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_PAL_M) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Peck_Rüstung_RIT_S_12_02"); //Du musst schon eine Ritterrüstung haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Peck_Ruestung_RIT_S_12_02"); //Du musst schon eine Ritterrüstung haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_FireShadowFur) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Peck_Rüstung_RIT_S_12_03"); //Wenn du nicht das Feuerläuferfell hast, kann ich deine Rüstung nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Peck_Ruestung_RIT_S_12_03"); //Wenn du nicht das Feuerläuferfell hast, kann ich deine Rüstung nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Peck_Rüstung);
+	Info_ClearChoices	(Info_Mod_Peck_Ruestung);
 };
 
-FUNC VOID Info_Mod_Peck_Rüstung_MIL_M ()
+FUNC VOID Info_Mod_Peck_Ruestung_MIL_M ()
 {
-	AI_Output(hero, self, "Info_Mod_Peck_Rüstung_MIL_M_15_00"); //Ich nehme die schwere Milizrüstung.
+	AI_Output(hero, self, "Info_Mod_Peck_Ruestung_MIL_M_15_00"); //Ich nehme die schwere Milizrüstung.
 
 	if (Npc_HasItems(hero, ItMi_Gold) >= 2500)
 	{
-		AI_Output(self, hero, "Info_Mod_Peck_Rüstung_MIL_M_12_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Peck_Ruestung_MIL_M_12_01"); //Alles klar.
 
 		B_GiveInvItems	(hero, self, ItMi_Gold, 2500);
 
@@ -181,10 +181,10 @@ FUNC VOID Info_Mod_Peck_Rüstung_MIL_M ()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Peck_Rüstung_MIL_M_12_02"); //Ohne Gold keine Rüstung.
+		AI_Output(self, hero, "Info_Mod_Peck_Ruestung_MIL_M_12_02"); //Ohne Gold keine Rüstung.
 	};
 
-	Info_ClearChoices	(Info_Mod_Peck_Rüstung);
+	Info_ClearChoices	(Info_Mod_Peck_Ruestung);
 };
 
 INSTANCE Info_Mod_Peck_Pickpocket (C_INFO)

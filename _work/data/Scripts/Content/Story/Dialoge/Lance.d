@@ -74,18 +74,18 @@ FUNC VOID Info_Mod_Lance_KristallEntgelt_Info()
 	B_GivePlayerXP	(100);
 };
 
-INSTANCE Info_Mod_Lance_Söldner (C_INFO)
+INSTANCE Info_Mod_Lance_Soeldner (C_INFO)
 {
 	npc		= Mod_926_RDW_Lance_NW;
 	nr		= 1;
-	condition	= Info_Mod_Lance_Söldner_Condition;
-	information	= Info_Mod_Lance_Söldner_Info;
+	condition	= Info_Mod_Lance_Soeldner_Condition;
+	information	= Info_Mod_Lance_Soeldner_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Ich bin Söldner.";
 };
 
-FUNC INT Info_Mod_Lance_Söldner_Condition()
+FUNC INT Info_Mod_Lance_Soeldner_Condition()
 {
 	if (Mod_Gilde == 4)
 	&& (Mod_PortalLance == FALSE)
@@ -94,9 +94,9 @@ FUNC INT Info_Mod_Lance_Söldner_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Lance_Söldner_Info()
+FUNC VOID Info_Mod_Lance_Soeldner_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Lance_Söldner_15_00"); //Ich bin Söldner.
+	AI_Output(hero, self, "Info_Mod_Lance_Soeldner_15_00"); //Ich bin Söldner.
 
 	var C_ITEM SLDRuessi;
 	SLDRuessi = Npc_GetEquippedArmor(hero);
@@ -104,7 +104,7 @@ FUNC VOID Info_Mod_Lance_Söldner_Info()
 	if (Hlp_IsItem(SLDRuessi, ItAr_SLD_L) == TRUE)
 	|| (Hlp_IsItem(SLDRuessi, ItAr_SLD_M) == TRUE)
 	{
-		AI_Output(self, hero, "Info_Mod_Lance_Söldner_03_01"); //Die Söldner und Wassermagier haben damals im Minental zusammengearbeitet und einige der Wasserkrieger sind ehemalige Söldner. In Ordnung, du kannst rein.
+		AI_Output(self, hero, "Info_Mod_Lance_Soeldner_03_01"); //Die Söldner und Wassermagier haben damals im Minental zusammengearbeitet und einige der Wasserkrieger sind ehemalige Söldner. In Ordnung, du kannst rein.
 
 		Mod_PortalLance	= TRUE;
 
@@ -114,7 +114,7 @@ FUNC VOID Info_Mod_Lance_Söldner_Info()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Lance_Söldner_03_02"); //Ach ja, und woran soll man das bitte erkennen?
+		AI_Output(self, hero, "Info_Mod_Lance_Soeldner_03_02"); //Ach ja, und woran soll man das bitte erkennen?
 	};
 };
 
@@ -165,7 +165,7 @@ FUNC INT Info_Mod_Lance_Brief_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Saturas))
 	&& (Mod_LanceXardasBrief	==	FALSE)
 	&& ((Npc_HasItems(hero, XardasLetterForSaturas) == 1)
-	|| (Npc_HasItems(hero, XardasLetterForSaturas_Geöffnet) == 1))
+	|| (Npc_HasItems(hero, XardasLetterForSaturas_Geoeffnet) == 1))
 	{
 		return 1;
 	};
@@ -202,7 +202,7 @@ FUNC VOID Info_Mod_Lance_Brief_Ja()
 	}
 	else
 	{
-		B_GiveInvItems(hero, self, XardasLetterForSaturas_Geöffnet, 1);
+		B_GiveInvItems(hero, self, XardasLetterForSaturas_Geoeffnet, 1);
 
 		B_GivePlayerXP	(75);
 	};
@@ -211,8 +211,8 @@ FUNC VOID Info_Mod_Lance_Brief_Ja()
 
 	AI_Output(self, hero, "Info_Mod_Lance_Brief_Ja_03_01"); //Sieht wichtig aus. Hier ist der Brief wieder.
 
-	CreateInvItems	(self, XardasLetterForSaturas_Geöffnet, 1);
-	B_GiveInvItems	(self, hero, XardasLetterForSaturas_Geöffnet, 1);
+	CreateInvItems	(self, XardasLetterForSaturas_Geoeffnet, 1);
+	B_GiveInvItems	(self, hero, XardasLetterForSaturas_Geoeffnet, 1);
 
 	AI_Output(self, hero, "Info_Mod_Lance_Brief_Ja_03_02"); //Du kannst durch gehen.
 

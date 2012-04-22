@@ -71,18 +71,18 @@ FUNC VOID Info_Mod_Thorus_Schlecht_Ja()
 	Info_ClearChoices	(Info_Mod_Thorus_Schlecht);
 };
 
-INSTANCE Info_Mod_Thorus_Prüfung (C_INFO)
+INSTANCE Info_Mod_Thorus_Pruefung (C_INFO)
 {
 	npc		= Mod_966_GRD_Thorus_MT;
 	nr		= 1;
-	condition	= Info_Mod_Thorus_Prüfung_Condition;
-	information	= Info_Mod_Thorus_Prüfung_Info;
+	condition	= Info_Mod_Thorus_Pruefung_Condition;
+	information	= Info_Mod_Thorus_Pruefung_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Was soll ich für dich tun?";
 };
 
-FUNC INT Info_Mod_Thorus_Prüfung_Condition()
+FUNC INT Info_Mod_Thorus_Pruefung_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Thorus_Schlecht))
 	{
@@ -90,12 +90,12 @@ FUNC INT Info_Mod_Thorus_Prüfung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Thorus_Prüfung_Info()
+FUNC VOID Info_Mod_Thorus_Pruefung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Thorus_Prüfung_15_00"); //Was soll ich für dich tun?
-	AI_Output(self, hero, "Info_Mod_Thorus_Prüfung_12_01"); //Irgendjemand stiehlt Güter aus dem Haus der Erzbarone, und ich will, dass du denjenigen findest und mir einen Beweis gegen ihn vorlegst.
-	AI_Output(hero, self, "Info_Mod_Thorus_Prüfung_15_02"); //Gut, gibt es Informationen über ihn?
-	AI_Output(self, hero, "Info_Mod_Thorus_Prüfung_12_03"); //Frag Alissandro, er hat alle Informationen dazu gesammelt.
+	AI_Output(hero, self, "Info_Mod_Thorus_Pruefung_15_00"); //Was soll ich für dich tun?
+	AI_Output(self, hero, "Info_Mod_Thorus_Pruefung_12_01"); //Irgendjemand stiehlt Güter aus dem Haus der Erzbarone, und ich will, dass du denjenigen findest und mir einen Beweis gegen ihn vorlegst.
+	AI_Output(hero, self, "Info_Mod_Thorus_Pruefung_15_02"); //Gut, gibt es Informationen über ihn?
+	AI_Output(self, hero, "Info_Mod_Thorus_Pruefung_12_03"); //Frag Alissandro, er hat alle Informationen dazu gesammelt.
 
 	Log_CreateTopic	(TOPIC_MOD_PDV, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_PDV, LOG_RUNNING);

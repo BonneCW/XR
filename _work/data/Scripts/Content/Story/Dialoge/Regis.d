@@ -74,38 +74,38 @@ FUNC VOID Info_Mod_Regis_MehrPaladine_Info()
 	AI_Output(self, hero, "Info_Mod_Regis_MehrPaladine_13_02"); //Wenn du mehr erfahren willst, dann solltest du mit den Paladinen im Oberen Viertel sprechen.
 };
 
-INSTANCE Info_Mod_Regis_Flugblätter (C_INFO)
+INSTANCE Info_Mod_Regis_Flugblaetter (C_INFO)
 {
 	npc		= Mod_530_NONE_Regis_NW;
 	nr		= 1;
-	condition	= Info_Mod_Regis_Flugblätter_Condition;
-	information	= Info_Mod_Regis_Flugblätter_Info;
+	condition	= Info_Mod_Regis_Flugblaetter_Condition;
+	information	= Info_Mod_Regis_Flugblaetter_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab hier ein Flugblatt für dich.";
 };
 
-FUNC INT Info_Mod_Regis_Flugblätter_Condition()
+FUNC INT Info_Mod_Regis_Flugblaetter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Auftrag_2))
-	&& (Npc_HasItems(hero, MatteoFlugblätter) >= 1)
-	&& (Mod_Flugblätter	<	10)
-	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+	&& (Npc_HasItems(hero, MatteoFlugblaetter) >= 1)
+	&& (Mod_Flugblaetter < 10)
+	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Regis_Hi))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Regis_Flugblätter_Info()
+FUNC VOID Info_Mod_Regis_Flugblaetter_Info()
 {
 	B_Say (hero, self, "$MATTEOPAPER");
 	
-	B_GiveInvItems	(hero, self, MatteoFlugblätter, 1);
+	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_Regis_Flugblätter_13_01"); //Danke, für das Blatt ... auch, wenn ich ja sowieso schon den ganzen Tag vor seinem Laden herumsitze.
+	AI_Output(self, hero, "Info_Mod_Regis_Flugblaetter_13_01"); //Danke, für das Blatt ... auch, wenn ich ja sowieso schon den ganzen Tag vor seinem Laden herumsitze.
 
-	Mod_Flugblätter	=	Mod_Flugblätter + 1;
+	Mod_Flugblaetter += 1;
 };
 
 INSTANCE Info_Mod_Regis_Pickpocket (C_INFO)

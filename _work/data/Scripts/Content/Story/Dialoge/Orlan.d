@@ -278,7 +278,7 @@ INSTANCE Info_Mod_Orlan_Pedro (C_INFO)
 FUNC INT Info_Mod_Orlan_Pedro_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Orlan_Hi))
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Parlan_Ring_Zurück))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Parlan_Ring_Zurueck))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Dragomir_Pedro))
 	{
 		return 1;

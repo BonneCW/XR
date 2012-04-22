@@ -265,18 +265,18 @@ FUNC VOID Info_Mod_Xardas_MT_HabSchwert_Info()
 	Npc_ExchangeRoutine	(self, "TOT");
 };
 
-INSTANCE Info_Mod_Xardas_MT_Beförderung (C_INFO)
+INSTANCE Info_Mod_Xardas_MT_Befoerderung (C_INFO)
 {
 	npc		= Mod_680_DMB_Xardas_MT;
 	nr		= 1;
-	condition	= Info_Mod_Xardas_MT_Beförderung_Condition;
-	information	= Info_Mod_Xardas_MT_Beförderung_Info;
+	condition	= Info_Mod_Xardas_MT_Befoerderung_Condition;
+	information	= Info_Mod_Xardas_MT_Befoerderung_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich will Schwarzmagier werden.";
 };
 
-FUNC INT Info_Mod_Xardas_MT_Beförderung_Condition()
+FUNC INT Info_Mod_Xardas_MT_Befoerderung_Condition()
 {
 	if (Mod_Gilde == 12)
 	&& (Kapitel > 2)
@@ -285,12 +285,12 @@ FUNC INT Info_Mod_Xardas_MT_Beförderung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Xardas_MT_Beförderung_Info()
+FUNC VOID Info_Mod_Xardas_MT_Befoerderung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Xardas_MT_Beförderung_15_00"); //Ich will Schwarzmagier werden.
-	AI_Output(self, hero, "Info_Mod_Xardas_MT_Beförderung_14_01"); //Du wählst also den Weg der Magie. Eine weise Entscheidung.
-	AI_Output(self, hero, "Info_Mod_Xardas_MT_Beförderung_14_02"); //Ich werde dich in den Rang des Schwarzmagiers erheben. Hoffentlich hilft das bei der Vernichtung von Xeres.
-	AI_Output(self, hero, "Info_Mod_Xardas_MT_Beförderung_14_03"); //Hier ist deine Robe.
+	AI_Output(hero, self, "Info_Mod_Xardas_MT_Befoerderung_15_00"); //Ich will Schwarzmagier werden.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Befoerderung_14_01"); //Du wählst also den Weg der Magie. Eine weise Entscheidung.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Befoerderung_14_02"); //Ich werde dich in den Rang des Schwarzmagiers erheben. Hoffentlich hilft das bei der Vernichtung von Xeres.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Befoerderung_14_03"); //Hier ist deine Robe.
 
 	CreateInvItems	(self, SCHWARZMAGIERROBE, 1);
 	B_GiveInvItems	(self, hero, SCHWARZMAGIERROBE, 1);

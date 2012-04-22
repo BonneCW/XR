@@ -155,34 +155,34 @@ FUNC VOID Info_Mod_Parlan_Ring_Info()
 	B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Der Novize Pedro hat dem Magier Parlan seinen Feuerring gestohlen und ich soll ihm den Ring wiederbeschaffen. Ich soll ein paar Leute fragen wohin er gerannt ist.");
 };
 
-INSTANCE Info_Mod_Parlan_Ring_Zurück (C_INFO)
+INSTANCE Info_Mod_Parlan_Ring_Zurueck (C_INFO)
 {
 	npc		= Mod_554_KDF_Parlan_NW;
 	nr		= 1;
-	condition	= Info_Mod_Parlan_Ring_Zurück_Condition;
-	information	= Info_Mod_Parlan_Ring_Zurück_Info;
+	condition	= Info_Mod_Parlan_Ring_Zurueck_Condition;
+	information	= Info_Mod_Parlan_Ring_Zurueck_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab den Ring.";
 };
 
-FUNC INT Info_Mod_Parlan_Ring_Zurück_Condition()
+FUNC INT Info_Mod_Parlan_Ring_Zurueck_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Pedro_Niederlage))
 	&& (Npc_HasItems(hero, ItRi_Feuerring_Parlan)	==	1)
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Parlan_Ring_Zurück))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Parlan_Ring_Zurueck))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Parlan_Ring_Zurück_Info()
+FUNC VOID Info_Mod_Parlan_Ring_Zurueck_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Parlan_Ring_Zurück_15_00"); //Ich hab den Ring.
+	AI_Output(hero, self, "Info_Mod_Parlan_Ring_Zurueck_15_00"); //Ich hab den Ring.
 
 	B_GiveInvItems	(hero, self, ItRi_Feuerring_Parlan, 1);
 
-	AI_Output(self, hero, "Info_Mod_Parlan_Ring_Zurück_05_01"); //Vielen Dank. Hier ist deine Belohnung.
+	AI_Output(self, hero, "Info_Mod_Parlan_Ring_Zurueck_05_01"); //Vielen Dank. Hier ist deine Belohnung.
 
 	CreateInvItems	(self, ItMi_Gold, 250);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 250);

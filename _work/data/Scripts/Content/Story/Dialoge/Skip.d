@@ -289,7 +289,7 @@ INSTANCE Info_Mod_Skip_AllesFertig (C_INFO)
 
 FUNC INT Info_Mod_Skip_AllesFertig_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Greg_Säbel))
+	if (Npc_KnowsInfo(hero, Info_Mod_Greg_Saebel))
 	{
 		return 1;
 	};

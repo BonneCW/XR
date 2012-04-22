@@ -61,7 +61,7 @@ FUNC VOID Use_XardasBriefAnKarras()
 
 FUNC VOID Use_XardasBriefAnKarras_Versiegelt()
 {
-	CreateInvItems	(self, Mod_XardasBriefAnKarras_Geöffnet, 1);
+	CreateInvItems	(self, Mod_XardasBriefAnKarras_Geoeffnet, 1);
 	XardasBriefAnKarrasOpened	=	TRUE;
 	Use_XardasBriefAnKarras();
 };
@@ -325,7 +325,7 @@ FUNC VOID Use_ZombieToHuman()
 
 };
 
-INSTANCE Mod_XardasBriefAnKarras_Geöffnet (C_ITEM)
+INSTANCE Mod_XardasBriefAnKarras_Geoeffnet (C_ITEM)
 {
 	name		=	"Xardas' Botschaft (geöffnet)";
 
@@ -811,12 +811,12 @@ FUNC VOID Use_XardasLetterForSaturas()
 
 FUNC VOID Use_XardasLetterForSaturas_Versiegelt()
 {
-	CreateInvItems	(self, XardasLetterForSaturas_Geöffnet, 1);
+	CreateInvItems	(self, XardasLetterForSaturas_Geoeffnet, 1);
 	XardasLetterForSaturasOpened	=	TRUE;
 	Use_XardasLetterForSaturas();
 };
 
-INSTANCE XardasLetterForSaturas_Geöffnet (C_ITEM)
+INSTANCE XardasLetterForSaturas_Geoeffnet (C_ITEM)
 {
 	name		=	"Xardas' Botschaft (geöffnet)";
 
@@ -876,9 +876,9 @@ FUNC VOID Use_Sklavenliste()
 	};
 };
 
-INSTANCE MatteoFlugblätter (C_ITEM)
+INSTANCE MatteoFlugblaetter (C_ITEM)
 {
-	name		=	"Matteo's Flugblatt";
+	name		=	"Matteos Flugblatt";
 
 	mainflag	=	ITEM_KAT_DOCS;
 	flags		=	ITEM_MISSION|ITEM_MULTI;

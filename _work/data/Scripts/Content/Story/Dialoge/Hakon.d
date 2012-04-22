@@ -24,18 +24,18 @@ FUNC VOID Info_Mod_Hakon_Hi_Info()
 	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Hakon verkauft am Marktplatz Waffen.");
 };
 
-INSTANCE Info_Mod_Hakon_‹berfall (C_INFO)
+INSTANCE Info_Mod_Hakon_Ueberfall (C_INFO)
 {
 	npc		= Mod_581_NONE_Hakon_NW;
 	nr		= 1;
-	condition	= Info_Mod_Hakon_‹berfall_Condition;
-	information	= Info_Mod_Hakon_‹berfall_Info;
+	condition	= Info_Mod_Hakon_Ueberfall_Condition;
+	information	= Info_Mod_Hakon_Ueberfall_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Das ist ein ‹berfall!";
 };
 
-FUNC INT Info_Mod_Hakon_‹berfall_Condition()
+FUNC INT Info_Mod_Hakon_Ueberfall_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Senyan_Edgor))
 	&& (Mod_Hakon‹berfall == 0)
@@ -44,9 +44,9 @@ FUNC INT Info_Mod_Hakon_‹berfall_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Hakon_‹berfall_Info()
+FUNC VOID Info_Mod_Hakon_Ueberfall_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Hakon_‹berfall_15_00"); //Das ist ein ‹berfall!
+	AI_Output(hero, self, "Info_Mod_Hakon_Ueberfall_15_00"); //Das ist ein ‹berfall!
 	
 	AI_ReadyMeleeWeapon		(hero);
 

@@ -232,18 +232,18 @@ FUNC VOID Info_Mod_Myxir_Wein_Info()
 	B_SetTopicStatus	(TOPIC_MOD_ANDOKAI_WEIN, LOG_SUCCESS);
 };
 
-INSTANCE Info_Mod_Myxir_HabDieKräuter (C_INFO)
+INSTANCE Info_Mod_Myxir_HabDieKraeuter (C_INFO)
 {
 	npc		= Mod_515_KDS_Myxir_MT;
 	nr		= 1;
-	condition	= Info_Mod_Myxir_HabDieKräuter_Condition;
-	information	= Info_Mod_Myxir_HabDieKräuter_Info;
+	condition	= Info_Mod_Myxir_HabDieKraeuter_Condition;
+	information	= Info_Mod_Myxir_HabDieKraeuter_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Mit freundlichen Grüßen von Bodo.";
 };
 
-FUNC INT Info_Mod_Myxir_HabDieKräuter_Condition()
+FUNC INT Info_Mod_Myxir_HabDieKraeuter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Bodo_Krautlieferung))
 	&& (Npc_HasItems(hero, MyxirsGiftpflanze) >= 20)
@@ -252,21 +252,21 @@ FUNC INT Info_Mod_Myxir_HabDieKräuter_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Myxir_HabDieKräuter_Info()
+FUNC VOID Info_Mod_Myxir_HabDieKraeuter_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Myxir_HabDieKräuter_15_00"); //Mit freundlichen Grüßen von Bodo.
+	AI_Output(hero, self, "Info_Mod_Myxir_HabDieKraeuter_15_00"); //Mit freundlichen Grüßen von Bodo.
 
 	B_GiveInvItems	(hero, self, MyxirsGiftpflanze, 20);
 
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKräuter_12_01"); //Die kann er sich sparen! Hauptsache, er hat alles gefunden, was ich brauche.
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKräuter_12_02"); //(kurze Pause, zornig) Hab ich's mir doch gedacht! Dieser Faulenzer hat es sich wieder leicht gemacht!
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKräuter_12_03"); //Ich habe ausdrücklich von zehn Heilknospen gesprochen, und er schickt mir Heilkraut!
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKräuter_12_04"); //Das hätte ich ja wohl noch selbst sammeln können. Außerdem hat er die fünf Zwillingsdorne vergessen!
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKräuter_12_05"); //Wie soll ich denn jetzt bei meinen Forschungen weiterkommen?
-	AI_Output(hero, self, "Info_Mod_Myxir_HabDieKräuter_15_06"); //Das tut mir Leid. Aber handelst du jetzt mit mir?
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKräuter_12_07"); //Nicht, bis ich die vermaledeiten Pflanzen habe!
-	AI_Output(hero, self, "Info_Mod_Myxir_HabDieKräuter_15_08"); //So lautete unsere Abmachung aber nicht.
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKräuter_12_09"); //Was interessiert mich irgendeine Abmachung, hä?
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_01"); //Die kann er sich sparen! Hauptsache, er hat alles gefunden, was ich brauche.
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_02"); //(kurze Pause, zornig) Hab ich's mir doch gedacht! Dieser Faulenzer hat es sich wieder leicht gemacht!
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_03"); //Ich habe ausdrücklich von zehn Heilknospen gesprochen, und er schickt mir Heilkraut!
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_04"); //Das hätte ich ja wohl noch selbst sammeln können. Außerdem hat er die fünf Zwillingsdorne vergessen!
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_05"); //Wie soll ich denn jetzt bei meinen Forschungen weiterkommen?
+	AI_Output(hero, self, "Info_Mod_Myxir_HabDieKraeuter_15_06"); //Das tut mir Leid. Aber handelst du jetzt mit mir?
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_07"); //Nicht, bis ich die vermaledeiten Pflanzen habe!
+	AI_Output(hero, self, "Info_Mod_Myxir_HabDieKraeuter_15_08"); //So lautete unsere Abmachung aber nicht.
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_09"); //Was interessiert mich irgendeine Abmachung, hä?
 
 	B_GivePlayerXP	(100);
 
@@ -290,7 +290,7 @@ INSTANCE Info_Mod_Myxir_RestPflanzen (C_INFO)
 
 FUNC INT Info_Mod_Myxir_RestPflanzen_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Myxir_HabDieKräuter))
+	if (Npc_KnowsInfo(hero, Info_Mod_Myxir_HabDieKraeuter))
 	&& (Npc_HasItems(hero, ItPl_Heilknospe) >= 10)
 	&& (Npc_HasItems(hero, ItPl_Zwillingsdorn) >= 5)
 	{
@@ -371,18 +371,18 @@ FUNC VOID Info_Mod_Myxir_Skinner_Info()
 	B_LogEntry	(TOPIC_MOD_BDT_SKINNER, "Myxir habe ich aufgesucht und die Spruchrollen erhalten.");
 };
 
-INSTANCE Info_Mod_Myxir_Beförderung (C_INFO)
+INSTANCE Info_Mod_Myxir_Befoerderung (C_INFO)
 {
 	npc		= Mod_515_KDS_Myxir_MT;
 	nr		= 1;
-	condition	= Info_Mod_Myxir_Beförderung_Condition;
-	information	= Info_Mod_Myxir_Beförderung_Info;
+	condition	= Info_Mod_Myxir_Befoerderung_Condition;
+	information	= Info_Mod_Myxir_Befoerderung_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich will Dämonenbeschwörer werden.";
 };
 
-FUNC INT Info_Mod_Myxir_Beförderung_Condition()
+FUNC INT Info_Mod_Myxir_Befoerderung_Condition()
 {
 	if (Mod_Gilde == 13)
 	&& ((Kapitel > 4)
@@ -392,12 +392,12 @@ FUNC INT Info_Mod_Myxir_Beförderung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Myxir_Beförderung_Info()
+FUNC VOID Info_Mod_Myxir_Befoerderung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Myxir_Beförderung_15_00"); //Ich will Dämonenbeschwörer werden.
-	AI_Output(self, hero, "Info_Mod_Myxir_Beförderung_12_01"); //(abschätzend) Meinetwegen. Du hast Beliar bereits gute Dienste geleistet. Du hast seine Gunst erworben.
-	AI_Output(self, hero, "Info_Mod_Myxir_Beförderung_12_02"); //Ich werde dich in den Rang des Dämonenbeschwörers erheben.
-	AI_Output(self, hero, "Info_Mod_Myxir_Beförderung_12_03"); //Hier ist deine Robe.
+	AI_Output(hero, self, "Info_Mod_Myxir_Befoerderung_15_00"); //Ich will Dämonenbeschwörer werden.
+	AI_Output(self, hero, "Info_Mod_Myxir_Befoerderung_12_01"); //(abschätzend) Meinetwegen. Du hast Beliar bereits gute Dienste geleistet. Du hast seine Gunst erworben.
+	AI_Output(self, hero, "Info_Mod_Myxir_Befoerderung_12_02"); //Ich werde dich in den Rang des Dämonenbeschwörers erheben.
+	AI_Output(self, hero, "Info_Mod_Myxir_Befoerderung_12_03"); //Hier ist deine Robe.
 
 	CreateInvItems	(self, ITAR_Xardas, 1);
 	B_GiveInvItems	(self, hero, ITAR_Xardas, 1);
@@ -496,18 +496,18 @@ FUNC VOID Info_Mod_Myxir_Haendler_A()
 	Mod_MyxirsAuftragOK = 1;
 };
 
-INSTANCE Info_Mod_Myxir_Schattenläuferhorn (C_INFO)
+INSTANCE Info_Mod_Myxir_Schattenlaeuferhorn (C_INFO)
 {
 	npc		= Mod_515_KDS_Myxir_MT;
 	nr		= 1;
-	condition	= Info_Mod_Myxir_Schattenläuferhorn_Condition;
-	information	= Info_Mod_Myxir_Schattenläuferhorn_Info;
+	condition	= Info_Mod_Myxir_Schattenlaeuferhorn_Condition;
+	information	= Info_Mod_Myxir_Schattenlaeuferhorn_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Du erwähntest früher mal, dass die Versorgung des Klosters stockt.";
 };
 
-FUNC INT Info_Mod_Myxir_Schattenläuferhorn_Condition()
+FUNC INT Info_Mod_Myxir_Schattenlaeuferhorn_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Myxir_RestPflanzen))
 	{
@@ -515,11 +515,11 @@ FUNC INT Info_Mod_Myxir_Schattenläuferhorn_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Myxir_Schattenläuferhorn_Info()
+FUNC VOID Info_Mod_Myxir_Schattenlaeuferhorn_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Myxir_Schattenläuferhorn_15_00"); //Du erwähntest früher mal, dass die Versorgung des Klosters stockt.
-	AI_Output(self, hero, "Info_Mod_Myxir_Schattenläuferhorn_12_01"); //Ja, das liegt hauptsächlich an unseren unzuverlässigen Boten.
-	AI_Output(self, hero, "Info_Mod_Myxir_Schattenläuferhorn_12_02"); //Scar kann ein Lied davon singen.
+	AI_Output(hero, self, "Info_Mod_Myxir_Schattenlaeuferhorn_15_00"); //Du erwähntest früher mal, dass die Versorgung des Klosters stockt.
+	AI_Output(self, hero, "Info_Mod_Myxir_Schattenlaeuferhorn_12_01"); //Ja, das liegt hauptsächlich an unseren unzuverlässigen Boten.
+	AI_Output(self, hero, "Info_Mod_Myxir_Schattenlaeuferhorn_12_02"); //Scar kann ein Lied davon singen.
 };
 
 INSTANCE Info_Mod_Myxir_Scar (C_INFO)
@@ -535,7 +535,7 @@ INSTANCE Info_Mod_Myxir_Scar (C_INFO)
 
 FUNC INT Info_Mod_Myxir_Scar_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Myxir_Schattenläuferhorn))
+	if (Npc_KnowsInfo(hero, Info_Mod_Myxir_Schattenlaeuferhorn))
 	{
 		return 1;
 	};
@@ -583,64 +583,64 @@ FUNC VOID Info_Mod_Myxir_Angebot_Info()
 	Npc_ExchangeRoutine	(self, "START");
 };	
 
-INSTANCE Info_Mod_Myxir_Rüstung (C_INFO)
+INSTANCE Info_Mod_Myxir_Ruestung (C_INFO)
 {
 	npc		= Mod_515_KDS_Myxir_MT;
 	nr		= 1;
-	condition	= Info_Mod_Myxir_Rüstung_Condition;
-	information	= Info_Mod_Myxir_Rüstung_Info;
+	condition	= Info_Mod_Myxir_Ruestung_Condition;
+	information	= Info_Mod_Myxir_Ruestung_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Kann ich bei dir eine bessere Rüstung bekommen?";
 };
 
-FUNC INT Info_Mod_Myxir_Rüstung_Condition()
+FUNC INT Info_Mod_Myxir_Ruestung_Condition()
 {
 	if (Mod_Gilde == 13)
-	&& (Npc_KnowsInfo(hero, Info_Mod_Myxir_HabDieKräuter))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Myxir_HabDieKraeuter))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Myxir_Rüstung_Info()
+FUNC VOID Info_Mod_Myxir_Ruestung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Myxir_Rüstung_15_00"); //Kann ich bei dir eine bessere Rüstung bekommen?
+	AI_Output(hero, self, "Info_Mod_Myxir_Ruestung_15_00"); //Kann ich bei dir eine bessere Rüstung bekommen?
 
 	if (Kapitel > 3)
 	&& (Mod_ZweiteVerbesserung == FALSE)
 	&& (Mod_Gilde == 13)
 	{
-		AI_Output(self, hero, "Info_Mod_Myxir_Rüstung_12_01"); //Ich hab gehört, dass auf dem Weg zur Ausgrabungsstätte der Wassermagier ein Nachtmahr sein soll. Mit dessen Fell könnte ich deine schwarze Magierrobe sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_12_01"); //Ich hab gehört, dass auf dem Weg zur Ausgrabungsstätte der Wassermagier ein Nachtmahr sein soll. Mit dessen Fell könnte ich deine schwarze Magierrobe sicher ein wenig verbessern.
 	
 		Mod_ZweiteVerbesserung = TRUE;
 	
 		//Wld_InsertNpc	(Nightmare,	"FP_MAGICGOLEM");
 	};
 
-	Info_ClearChoices	(Info_Mod_Myxir_Rüstung);
-	Info_AddChoice	(Info_Mod_Myxir_Rüstung, DIALOG_BACK, Info_Mod_Myxir_Rüstung_BACK);
+	Info_ClearChoices	(Info_Mod_Myxir_Ruestung);
+	Info_AddChoice	(Info_Mod_Myxir_Ruestung, DIALOG_BACK, Info_Mod_Myxir_Ruestung_BACK);
 
 	if (Mod_ZweiteVerbesserung == TRUE)
 	&& (Mod_Gilde == 13)
 	{
-		Info_AddChoice	(Info_Mod_Myxir_Rüstung, "Schwarze Magierrobe verbessern", Info_Mod_Myxir_Rüstung_KDS_S);
+		Info_AddChoice	(Info_Mod_Myxir_Ruestung, "Schwarze Magierrobe verbessern", Info_Mod_Myxir_Ruestung_KDS_S);
 	};
 };
 
-FUNC VOID Info_Mod_Myxir_Rüstung_BACK ()
+FUNC VOID Info_Mod_Myxir_Ruestung_BACK ()
 {
-	Info_ClearChoices	(Info_Mod_Myxir_Rüstung);
+	Info_ClearChoices	(Info_Mod_Myxir_Ruestung);
 };
 
-FUNC VOID Info_Mod_Myxir_Rüstung_KDS_S ()
+FUNC VOID Info_Mod_Myxir_Ruestung_KDS_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Myxir_Rüstung_KDS_S_15_00"); //Verbessere meine schwarze Magierrobe.
+	AI_Output(hero, self, "Info_Mod_Myxir_Ruestung_KDS_S_15_00"); //Verbessere meine schwarze Magierrobe.
 
 	if (Npc_HasItems(hero, ItAt_NightmareFur) == 1)
 	&& (Npc_HasItems(hero, SChwarzmagierrobe) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Myxir_Rüstung_KDS_S_12_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_KDS_S_12_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_NightmareFur, 1);
 		
@@ -659,14 +659,14 @@ FUNC VOID Info_Mod_Myxir_Rüstung_KDS_S ()
 	}
 	else if (Npc_HasItems(hero, SChwarzmagierrobe) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Myxir_Rüstung_SKR_S_12_02"); //Du musst schon eine schwarze Magierrobe haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_SKR_S_12_02"); //Du musst schon eine schwarze Magierrobe haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_NightmareFur) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Myxir_Rüstung_SKR_S_12_03"); //Wenn du das Nachtmahrfell nicht hast, kann ich deine Robe nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_SKR_S_12_03"); //Wenn du das Nachtmahrfell nicht hast, kann ich deine Robe nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Myxir_Rüstung);
+	Info_ClearChoices	(Info_Mod_Myxir_Ruestung);
 };
 
 INSTANCE Info_Mod_Myxir_Lehrer (C_INFO)

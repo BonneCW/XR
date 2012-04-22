@@ -85,7 +85,6 @@ FUNC VOID Info_Mod_Lares_Grog_Info()
 	AI_Output(self, hero, "Info_Mod_Lares_Grog_09_03"); //Wurde aber auch langsam Zeit. Endlich kann ich mit meinen Jungs mal wieder ein wenig feiern.
 	AI_Output(self, hero, "Info_Mod_Lares_Grog_09_04"); //Hier ist dein Gold.
 
-	CreateInvItems	(self, ItMi_Gold, 500);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 };
 
@@ -133,18 +132,18 @@ FUNC VOID Info_Mod_Lares_BronkoMehlsack_Info()
 	Mod_BronkoMehlsack = 3;
 };
 
-INSTANCE Info_Mod_Lares_WillSöldner (C_INFO)
+INSTANCE Info_Mod_Lares_WillSoeldner (C_INFO)
 {
 	npc		= Mod_526_SLD_Lares_NW;
 	nr		= 1;
-	condition	= Info_Mod_Lares_WillSöldner_Condition;
-	information	= Info_Mod_Lares_WillSöldner_Info;
+	condition	= Info_Mod_Lares_WillSoeldner_Condition;
+	information	= Info_Mod_Lares_WillSoeldner_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich will mich euch anschließen.";
 };
 
-FUNC INT Info_Mod_Lares_WillSöldner_Condition()
+FUNC INT Info_Mod_Lares_WillSoeldner_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Lares_Hi))
 	&& (Mod_Gilde	==	0)
@@ -153,27 +152,27 @@ FUNC INT Info_Mod_Lares_WillSöldner_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Lares_WillSöldner_Info()
+FUNC VOID Info_Mod_Lares_WillSoeldner_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Lares_WillSöldner_15_00"); //Ich will mich euch anschließen.
-	AI_Output(self, hero, "Info_Mod_Lares_WillSöldner_09_01"); //Das ist gut. Aber bevor ich dich aufnehmen kann, musst du uns deine Loyalität beweisen.
-	AI_Output(self, hero, "Info_Mod_Lares_WillSöldner_09_02"); //Geh zu Torlof und sage ihm, dass ich dich schicke.
+	AI_Output(hero, self, "Info_Mod_Lares_WillSoeldner_15_00"); //Ich will mich euch anschließen.
+	AI_Output(self, hero, "Info_Mod_Lares_WillSoeldner_09_01"); //Das ist gut. Aber bevor ich dich aufnehmen kann, musst du uns deine Loyalität beweisen.
+	AI_Output(self, hero, "Info_Mod_Lares_WillSoeldner_09_02"); //Geh zu Torlof und sage ihm, dass ich dich schicke.
 
 	B_LogEntry	(TOPIC_MOD_SÖLDNER, "Um bei den Söldner aufgenommen zu werden muss ich meine Loyalität beweisen. Ich soll mal mit Torlof sprechen.");
 };
 
-INSTANCE Info_Mod_Lares_AndereSöldner (C_INFO)
+INSTANCE Info_Mod_Lares_AndereSoeldner (C_INFO)
 {
 	npc		= Mod_526_SLD_Lares_NW;
 	nr		= 1;
-	condition	= Info_Mod_Lares_AndereSöldner_Condition;
-	information	= Info_Mod_Lares_AndereSöldner_Info;
+	condition	= Info_Mod_Lares_AndereSoeldner_Condition;
+	information	= Info_Mod_Lares_AndereSoeldner_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Wo sind eigentlich die anderen Söldner?";
 };
 
-FUNC INT Info_Mod_Lares_AndereSöldner_Condition()
+FUNC INT Info_Mod_Lares_AndereSoeldner_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Lares_Hi))
 	{
@@ -181,13 +180,13 @@ FUNC INT Info_Mod_Lares_AndereSöldner_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Lares_AndereSöldner_Info()
+FUNC VOID Info_Mod_Lares_AndereSoeldner_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Lares_AndereSöldner_15_00"); //Wo sind eigentlich die anderen Söldner?
-	AI_Output(self, hero, "Info_Mod_Lares_AndereSöldner_09_01"); //Die sind noch im Neuen Lager.
-	AI_Output(self, hero, "Info_Mod_Lares_AndereSöldner_09_02"); //Lee hat mich zusammen mit Torlof und Cord hierher geschickt, damit wir ein paar Leute aus Khorinis dazu überreden sich uns anzuschließen.
-	AI_Output(hero, self, "Info_Mod_Lares_AndereSöldner_15_03"); //Wieviele habt ihr schon überredet?
-	AI_Output(self, hero, "Info_Mod_Lares_AndereSöldner_09_04"); //Wir haben schon einige überzeugt.
+	AI_Output(hero, self, "Info_Mod_Lares_AndereSoeldner_15_00"); //Wo sind eigentlich die anderen Söldner?
+	AI_Output(self, hero, "Info_Mod_Lares_AndereSoeldner_09_01"); //Die sind noch im Neuen Lager.
+	AI_Output(self, hero, "Info_Mod_Lares_AndereSoeldner_09_02"); //Lee hat mich zusammen mit Torlof und Cord hierher geschickt, damit wir ein paar Leute aus Khorinis dazu überreden sich uns anzuschließen.
+	AI_Output(hero, self, "Info_Mod_Lares_AndereSoeldner_15_03"); //Wieviele habt ihr schon überredet?
+	AI_Output(self, hero, "Info_Mod_Lares_AndereSoeldner_09_04"); //Wir haben schon einige überzeugt.
 };
 
 INSTANCE Info_Mod_Lares_Lehrer (C_INFO)
@@ -705,7 +704,7 @@ FUNC INT Info_Mod_Lares_AndereGilde_Condition()
 {
 	if (Mod_Gilde > 0)
 	&& (hero.guild != GIL_MIL)
-	&& (Npc_KnowsInfo(hero, Info_Mod_Lares_WillSöldner))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Lares_WillSoeldner))
 	{
 		return 1;
 	};

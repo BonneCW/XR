@@ -35,7 +35,7 @@ INSTANCE Info_Mod_Alissandro_Dieb (C_INFO)
 FUNC INT Info_Mod_Alissandro_Dieb_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Alissandro_Hi))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Thorus_Prüfung))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Thorus_Pruefung))
 	{
 		return 1;
 	};

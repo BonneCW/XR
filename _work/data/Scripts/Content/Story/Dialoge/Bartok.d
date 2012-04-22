@@ -116,7 +116,7 @@ INSTANCE Info_Mod_Bartok_Arbeite (C_INFO)
 
 FUNC INT Info_Mod_Bartok_Arbeite_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Scar_Jagdtrophäen_SollIch))
+	if (Npc_KnowsInfo(hero, Info_Mod_Scar_Jagdtrophaeen_SollIch))
 	{
 		return 1;
 	};

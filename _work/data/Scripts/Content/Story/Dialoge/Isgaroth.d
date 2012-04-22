@@ -35,7 +35,7 @@ FUNC INT Info_Mod_Isgaroth_Pedro_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Parlan_Ring))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Isgaroth_Hi))
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Parlan_Ring_Zurück))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Parlan_Ring_Zurueck))
 	{
 		return 1;
 	};

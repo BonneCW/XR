@@ -1632,7 +1632,7 @@ var int Mod_SchreinEntweihen;
 var int Mod_EntweihteSchreine;
 var int Mod_BeliarGebet;
 var int Mod_Telbor_Hofbesetzt;
-var int Mod_Flugblätter;
+var int Mod_Flugblaetter;
 var int Mod_Hofstaat_Alex_Intro;
 var int Mod_Hofstaat_Alex_Intro_Counter;
 var int Mod_Verhandlungsgeschick;

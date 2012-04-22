@@ -1636,18 +1636,18 @@ FUNC VOID Info_Mod_Harad_Anschlagtafel_Info()
 	};
 };
 
-INSTANCE Info_Mod_Harad_Stärke (C_INFO)
+INSTANCE Info_Mod_Harad_Staerke (C_INFO)
 {
 	npc		= Mod_535_NONE_Harad_NW;
 	nr		= 1;
-	condition	= Info_Mod_Harad_Stärke_Condition;
-	information	= Info_Mod_Harad_Stärke_Info;
+	condition	= Info_Mod_Harad_Staerke_Condition;
+	information	= Info_Mod_Harad_Staerke_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Ich will stärker werden.";
 };
 
-FUNC INT Info_Mod_Harad_Stärke_Condition()
+FUNC INT Info_Mod_Harad_Staerke_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Harad_Job))
 	&& (hero.attribute[ATR_STRENGTH]	<	120)
@@ -1657,41 +1657,41 @@ FUNC INT Info_Mod_Harad_Stärke_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Harad_Stärke_Info()
+FUNC VOID Info_Mod_Harad_Staerke_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Harad_Stärke_15_00"); //Ich will stärker werden.
+	AI_Output(hero, self, "Info_Mod_Harad_Staerke_15_00"); //Ich will stärker werden.
 
-	Info_ClearChoices	(Info_Mod_Harad_Stärke);
+	Info_ClearChoices	(Info_Mod_Harad_Staerke);
 
-	Info_AddChoice 		(Info_Mod_Harad_Stärke, DIALOG_BACK, Info_Mod_Harad_Stärke_BACK);
-	Info_AddChoice		(Info_Mod_Harad_Stärke, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Harad_Stärke_5);
-	Info_AddChoice		(Info_Mod_Harad_Stärke, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Harad_Stärke_1);
+	Info_AddChoice 		(Info_Mod_Harad_Staerke, DIALOG_BACK, Info_Mod_Harad_Staerke_BACK);
+	Info_AddChoice		(Info_Mod_Harad_Staerke, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Harad_Staerke_5);
+	Info_AddChoice		(Info_Mod_Harad_Staerke, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Harad_Staerke_1);
 };
 
-FUNC VOID Info_Mod_Harad_Stärke_BACK()
+FUNC VOID Info_Mod_Harad_Staerke_BACK()
 {
-	Info_ClearChoices	(Info_Mod_Harad_Stärke);
+	Info_ClearChoices	(Info_Mod_Harad_Staerke);
 };
 
-func void Info_Mod_Harad_Stärke_1()
+func void Info_Mod_Harad_Staerke_1()
 {
 	B_TeachAttributePoints (self, other, ATR_STRENGTH, 1, 120);
 
-	Info_ClearChoices	(Info_Mod_Harad_Stärke);
-	Info_AddChoice		(Info_Mod_Harad_Stärke, DIALOG_BACK, Info_Mod_Harad_Stärke_BACK);
-	Info_AddChoice		(Info_Mod_Harad_Stärke, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Harad_Stärke_5);
-	Info_AddChoice		(Info_Mod_Harad_Stärke, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Harad_Stärke_1);
+	Info_ClearChoices	(Info_Mod_Harad_Staerke);
+	Info_AddChoice		(Info_Mod_Harad_Staerke, DIALOG_BACK, Info_Mod_Harad_Staerke_BACK);
+	Info_AddChoice		(Info_Mod_Harad_Staerke, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Harad_Staerke_5);
+	Info_AddChoice		(Info_Mod_Harad_Staerke, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Harad_Staerke_1);
 };
 
 // ------ 5 Stärke ------
-func void Info_Mod_Harad_Stärke_5()
+func void Info_Mod_Harad_Staerke_5()
 {
 	B_TeachAttributePoints_New (self, other, ATR_STRENGTH, 5, 120);
 	
-	Info_ClearChoices	(Info_Mod_Harad_Stärke);
-	Info_AddChoice		(Info_Mod_Harad_Stärke, DIALOG_BACK, Info_Mod_Harad_Stärke_BACK);
-	Info_AddChoice		(Info_Mod_Harad_Stärke, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Harad_Stärke_5);
-	Info_AddChoice		(Info_Mod_Harad_Stärke, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Harad_Stärke_1);
+	Info_ClearChoices	(Info_Mod_Harad_Staerke);
+	Info_AddChoice		(Info_Mod_Harad_Staerke, DIALOG_BACK, Info_Mod_Harad_Staerke_BACK);
+	Info_AddChoice		(Info_Mod_Harad_Staerke, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Harad_Staerke_5);
+	Info_AddChoice		(Info_Mod_Harad_Staerke, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Harad_Staerke_1);
 };
 
 INSTANCE Info_Mod_Harad_Schmieden (C_INFO)

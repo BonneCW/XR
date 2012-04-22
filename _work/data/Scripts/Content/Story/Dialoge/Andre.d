@@ -103,7 +103,7 @@ INSTANCE Info_Mod_Andre_Alvares (C_INFO)
 FUNC INT Info_Mod_Andre_Alvares_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Andre_Hi))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Alvares_Söldner))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Alvares_Soeldner))
 	{
 		return 1;
 	};
@@ -2966,7 +2966,7 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Info()
 
 	Info_ClearChoices	(Info_Mod_Andre_Kopfgeld);
 
-	Info_AddChoice	(Info_Mod_Andre_Kopfgeld, "Zurück.", Info_Mod_Andre_Kopfgeld_Zurück);
+	Info_AddChoice	(Info_Mod_Andre_Kopfgeld, "Zurück.", Info_Mod_Andre_Kopfgeld_Zurueck);
 	
 	if (Npc_KnowsInfo(hero, Info_Mod_Tom_Hi))
 	&& (Mod_Tom_Böse	==	TRUE)
@@ -3015,7 +3015,7 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Info()
 	};
 };
 
-FUNC VOID Info_Mod_Andre_Kopfgeld_Zurück()
+FUNC VOID Info_Mod_Andre_Kopfgeld_Zurueck()
 {
 	Info_ClearChoices	(Info_Mod_Andre_Kopfgeld);
 };

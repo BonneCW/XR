@@ -20,42 +20,42 @@ FUNC VOID Info_Mod_Herold_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Herold_Hi_04_01"); //Ich bin Herold. Meine Aufgabe ist es hier die Neuigkeiten zu verkünden.
 };
 
-INSTANCE Info_Mod_Herold_Flugblätter (C_INFO)
+INSTANCE Info_Mod_Herold_Flugblaetter (C_INFO)
 {
 	npc		= Mod_7238_OUT_Herold_NW;
 	nr		= 1;
-	condition	= Info_Mod_Herold_Flugblätter_Condition;
-	information	= Info_Mod_Herold_Flugblätter_Info;
+	condition	= Info_Mod_Herold_Flugblaetter_Condition;
+	information	= Info_Mod_Herold_Flugblaetter_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab hier ein Flugblatt. Könntest du nicht etwas Werbung dafür machen?";
 };
 
-FUNC INT Info_Mod_Herold_Flugblätter_Condition()
+FUNC INT Info_Mod_Herold_Flugblaetter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Auftrag_2))
-	&& (Npc_HasItems(hero, MatteoFlugblätter) >= 1)
-	&& (Mod_Flugblätter < 20)
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+	&& (Npc_HasItems(hero, MatteoFlugblaetter) >= 1)
+	&& (Mod_Flugblaetter < 20)
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Herold_Hi))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Herold_Flugblätter_Info()
+FUNC VOID Info_Mod_Herold_Flugblaetter_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Herold_Flugblätter_15_00"); //Ich hab hier ein Flugblatt. Könntest du nicht etwas Werbung dafür machen?
+	AI_Output(hero, self, "Info_Mod_Herold_Flugblaetter_15_00"); //Ich hab hier ein Flugblatt. Könntest du nicht etwas Werbung dafür machen?
 
-	B_GiveInvItems	(hero, self, MatteoFlugblätter, 1);
+	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_Herold_Flugblätter_04_01"); //Mal sehen ...
+	AI_Output(self, hero, "Info_Mod_Herold_Flugblaetter_04_01"); //Mal sehen ...
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_Herold_Flugblätter_04_02"); //Matteo hat Käse im Angebot? Nun gut, ich werde das Angebot eine Weile verkünden.
+	AI_Output(self, hero, "Info_Mod_Herold_Flugblaetter_04_02"); //Matteo hat Käse im Angebot? Nun gut, ich werde das Angebot eine Weile verkünden.
 
-	Mod_Flugblätter	=	Mod_Flugblätter + 1;
+	Mod_Flugblaetter += 1;
 };
 
 INSTANCE Info_Mod_Herold_Verbrecher (C_INFO)

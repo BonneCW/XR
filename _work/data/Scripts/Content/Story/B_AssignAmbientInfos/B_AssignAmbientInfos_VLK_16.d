@@ -71,41 +71,41 @@ FUNC VOID DIA_VLK_16_PEOPLE_Info()
 	AI_Output (self, hero, "DIA_VLK_16_PEOPLE_16_01"); //Die Paladine im oberen Viertel.
 };
 
-INSTANCE Info_VLK_16_Flugblätter (C_INFO) // E1
+INSTANCE Info_VLK_16_Flugblaetter (C_INFO) // E1
 {
 	nr			= 5;
-	condition	= Info_VLK_16_Flugblätter_Condition;
-	information	= Info_VLK_16_Flugblätter_Info;
+	condition	= Info_VLK_16_Flugblaetter_Condition;
+	information	= Info_VLK_16_Flugblaetter_Info;
 	permanent	= 1;
 	description = "Ich hab hier ein Flugblatt für dich.";
 };                       
 
-FUNC INT Info_VLK_16_Flugblätter_Condition()
+FUNC INT Info_VLK_16_Flugblaetter_Condition()
 {
-	if (Npc_HasItems(hero, MatteoFlugblätter) >= 1)
-	&& (Mod_Flugblätter	<	20)
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+	if (Npc_HasItems(hero, MatteoFlugblaetter) >= 1)
+	&& (Mod_Flugblaetter < 20)
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 	&& (self.aivar[AIV_FLUGBLATTVERTEILT] == 0)
 	{
 		return TRUE;
 	};
 };
 
-FUNC VOID Info_VLK_16_Flugblätter_Info()
+FUNC VOID Info_VLK_16_Flugblaetter_Info()
 {
 	B_Say (hero, self, "$MATTEOPAPER");
 
-	B_GiveInvItems	(hero, self, MatteoFlugblätter, 1);
+	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_VLK_16_Flugblätter_16_01"); //Oh danke. Mal sehen ...
+	AI_Output(self, hero, "Info_Mod_VLK_16_Flugblaetter_16_01"); //Oh danke. Mal sehen ...
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_VLK_16_Flugblätter_16_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
+	AI_Output(self, hero, "Info_Mod_VLK_16_Flugblaetter_16_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
 
 	self.aivar[AIV_FLUGBLATTVERTEILT] = 1;
 
-	Mod_Flugblätter	=	Mod_Flugblätter + 1;
+	Mod_Flugblaetter += 1;
 };
 
 INSTANCE Info_VLK_16_Rangar (C_INFO) // E1
@@ -209,7 +209,7 @@ FUNC VOID B_AssignAmbientInfos_VLK_16 (var c_NPC slf)
 	DIA_VLK_16_JOIN.npc					= Hlp_GetInstanceID(slf);
 	DIA_VLK_16_PEOPLE.npc				= Hlp_GetInstanceID(slf);
 	DIA_VLK_16_LOCATION.npc				= Hlp_GetInstanceID(slf);
-	Info_VLK_16_Flugblätter.npc				= Hlp_GetInstanceID(slf);
+	Info_VLK_16_Flugblaetter.npc				= Hlp_GetInstanceID(slf);
 	Info_VLK_16_Rangar.npc				= Hlp_GetInstanceID(slf);
 	Info_Mod_VLK_16_Pickpocket.npc	= Hlp_GetInstanceID(slf);
 };

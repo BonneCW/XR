@@ -171,9 +171,9 @@ INSTANCE Info_Mod_Bodo_Flugblatt (C_INFO)
 FUNC INT Info_Mod_Bodo_Flugblatt_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Auftrag_2))
-	&& (Npc_HasItems(hero, MatteoFlugblätter) >= 1)
-	&& (Mod_Flugblätter	<	10)
-	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+	&& (Npc_HasItems(hero, MatteoFlugblaetter) >= 1)
+	&& (Mod_Flugblaetter < 10)
+	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Bodo_Hi))
 	{
 		return 1;
@@ -184,7 +184,7 @@ FUNC VOID Info_Mod_Bodo_Flugblatt_Info()
 {
 	B_Say (hero, self, "$MATTEOPAPER");
 
-	B_GiveInvItems	(hero, self, MatteoFlugblätter, 1);
+	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
 	AI_Output(self, hero, "Info_Mod_Bodo_Flugblatt_12_01"); //Oh danke. Mal sehen ...
 
@@ -192,7 +192,7 @@ FUNC VOID Info_Mod_Bodo_Flugblatt_Info()
 
 	AI_Output(self, hero, "Info_Mod_Bodo_Flugblatt_12_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
 
-	Mod_Flugblätter	=	Mod_Flugblätter + 1;
+	Mod_Flugblaetter += 1;
 };
 
 INSTANCE Info_Mod_Bodo_Pickpocket (C_INFO)

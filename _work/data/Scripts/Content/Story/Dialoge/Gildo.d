@@ -10,7 +10,7 @@ INSTANCE Info_Mod_Gildo_Unkraut (C_INFO)
 
 FUNC INT Info_Mod_Gildo_Unkraut_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Lobart_Rüben))
+	if (Npc_KnowsInfo(hero, Info_Mod_Lobart_Rueben))
 	&& (Kapitel >= 5)
 	{
 		return 1;

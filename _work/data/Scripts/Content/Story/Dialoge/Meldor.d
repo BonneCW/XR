@@ -309,34 +309,34 @@ FUNC VOID Info_Mod_Meldor_Skinner_Info()
 	B_LogEntry	(TOPIC_MOD_BDT_SKINNER, "So, damit bin ich in der Stadt die ganzen grünen Novizen losgeworden.");
 };
 
-INSTANCE Info_Mod_Meldor_Flugblätter (C_INFO)
+INSTANCE Info_Mod_Meldor_Flugblaetter (C_INFO)
 {
 	npc		= Mod_597_NONE_Meldor_NW;
 	nr		= 1;
-	condition	= Info_Mod_Meldor_Flugblätter_Condition;
-	information	= Info_Mod_Meldor_Flugblätter_Info;
+	condition	= Info_Mod_Meldor_Flugblaetter_Condition;
+	information	= Info_Mod_Meldor_Flugblaetter_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab hier ein Flugblatt für dich.";
 };
 
-FUNC INT Info_Mod_Meldor_Flugblätter_Condition()
+FUNC INT Info_Mod_Meldor_Flugblaetter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Auftrag_2))
-	&& (Npc_HasItems(hero, MatteoFlugblätter) >= 1)
-	&& (Mod_Flugblätter	<	20)
-	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+	&& (Npc_HasItems(hero, MatteoFlugblaetter) >= 1)
+	&& (Mod_Flugblaetter < 20)
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Meldor_Hi))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Meldor_Flugblätter_Info()
+FUNC VOID Info_Mod_Meldor_Flugblaetter_Info()
 {
 	B_Say (hero, self, "$MATTEOPAPER");
 
-	AI_Output(self, hero, "Info_Mod_Meldor_Flugblätter_07_01"); //Was interessiert mich das? Kann sich seine Flugblätter sonst wohin stecken ...
+	AI_Output(self, hero, "Info_Mod_Meldor_Flugblaetter_07_01"); //Was interessiert mich das? Kann sich seine Flugblätter sonst wohin stecken ...
 };
 
 INSTANCE Info_Mod_Meldor_LobartAlwinScene (C_INFO)

@@ -304,17 +304,17 @@ FUNC VOID Info_Mod_Ethan_DungeonSounds_03_Info()
 	B_Göttergefallen(2, 1);
 };
 
-INSTANCE Info_Mod_Ethan_Beförderung (C_INFO)
+INSTANCE Info_Mod_Ethan_Befoerderung (C_INFO)
 {
 	npc		= Mod_1532_HTR_Ethan_NW;
 	nr		= 1;
-	condition	= Info_Mod_Ethan_Beförderung_Condition;
-	information	= Info_Mod_Ethan_Beförderung_Info;
+	condition	= Info_Mod_Ethan_Befoerderung_Condition;
+	information	= Info_Mod_Ethan_Befoerderung_Info;
 	permanent	= 0;
 	important	= 1;
 };
 
-FUNC INT Info_Mod_Ethan_Beförderung_Condition()
+FUNC INT Info_Mod_Ethan_Befoerderung_Condition()
 {
 	if (Mod_Gilde == 9)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_Member_08))
@@ -323,19 +323,19 @@ FUNC INT Info_Mod_Ethan_Beförderung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Ethan_Beförderung_Info()
+FUNC VOID Info_Mod_Ethan_Befoerderung_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_13_00"); //Wie ich vernommen habe kommst du zu mir, um in den Kreis der Wasserkrieger aufgenommen zu werden.
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_13_01"); //Es freut mich einen tatkräftigen Mann wie dich in unseren Reihen zu wissen.
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_13_02"); //So, aber nun zu allererst, leiste das Zeugnis zur Verbundenheit mit dem Wasser und sprich die Worte des Eides:
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_13_03"); //Ich schwöre bei den Mächten der Götter ... und bei der Kraft des heiligen Wassers ...
-	AI_Output(hero, self, "Info_Mod_Ethan_Beförderung_15_04"); //Ich schwöre bei den Mächten der Götter ... und bei der Kraft des heiligen Wassers ...
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_13_05"); //... dass mein Wissen und Handeln von nun an und auf ewig mit dem Wasser verbunden sei ...
-	AI_Output(hero, self, "Info_Mod_Ethan_Beförderung_15_06"); //... dass mein Wissen und Handeln von nun an und auf ewig mit dem Wasser verbunden sei ...
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_13_07"); //... bis ich einkehre in Beliars Reich und der Quell des Lebens versiegt.
-	AI_Output(hero, self, "Info_Mod_Ethan_Beförderung_15_08"); //... bis ich einkehre in Beliars Reich und der Quell des Lebens versiegt.
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_13_09"); //Es ist getan. Von nun an wirst du als Krieger des Wassers unserer Gemeinschaft dienen und dem Willen Adanos folgen.
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_13_10"); //Hier, ich übergebe dir deine Rüstung des Wassers und das Schwert eines Kriegers.
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_13_00"); //Wie ich vernommen habe kommst du zu mir, um in den Kreis der Wasserkrieger aufgenommen zu werden.
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_13_01"); //Es freut mich einen tatkräftigen Mann wie dich in unseren Reihen zu wissen.
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_13_02"); //So, aber nun zu allererst, leiste das Zeugnis zur Verbundenheit mit dem Wasser und sprich die Worte des Eides:
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_13_03"); //Ich schwöre bei den Mächten der Götter ... und bei der Kraft des heiligen Wassers ...
+	AI_Output(hero, self, "Info_Mod_Ethan_Befoerderung_15_04"); //Ich schwöre bei den Mächten der Götter ... und bei der Kraft des heiligen Wassers ...
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_13_05"); //... dass mein Wissen und Handeln von nun an und auf ewig mit dem Wasser verbunden sei ...
+	AI_Output(hero, self, "Info_Mod_Ethan_Befoerderung_15_06"); //... dass mein Wissen und Handeln von nun an und auf ewig mit dem Wasser verbunden sei ...
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_13_07"); //... bis ich einkehre in Beliars Reich und der Quell des Lebens versiegt.
+	AI_Output(hero, self, "Info_Mod_Ethan_Befoerderung_15_08"); //... bis ich einkehre in Beliars Reich und der Quell des Lebens versiegt.
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_13_09"); //Es ist getan. Von nun an wirst du als Krieger des Wassers unserer Gemeinschaft dienen und dem Willen Adanos folgen.
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_13_10"); //Hier, ich übergebe dir deine Rüstung des Wassers und das Schwert eines Kriegers.
 
 	CreateInvItems	(self, ItAr_WKR_H, 1);
 	B_GiveInvItems	(self, hero, ItAr_WKR_H, 1);
@@ -352,11 +352,11 @@ FUNC VOID Info_Mod_Ethan_Beförderung_Info()
 		CreateInvItems	(hero, ItMw_AdanosSchwert, 1);
 	};
 
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_13_11"); //Darüber hinaus wird dich diese Rune der Eisklinge im Nahkampf unterstützen.
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_13_11"); //Darüber hinaus wird dich diese Rune der Eisklinge im Nahkampf unterstützen.
 
 	B_GiveInvItems	(self, hero, ItRu_Eisklinge, 1);
 
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_13_12"); //Möge Adanos dir allzeit bei deinen Prüfungen beistehen und dich auch weiterhin den Weg des Gleichgewichtes verfolgen lassen.
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_13_12"); //Möge Adanos dir allzeit bei deinen Prüfungen beistehen und dich auch weiterhin den Weg des Gleichgewichtes verfolgen lassen.
 
 	Snd_Play ("LEVELUP");
 	
@@ -367,17 +367,17 @@ FUNC VOID Info_Mod_Ethan_Beförderung_Info()
 	B_Göttergefallen(2, 5);
 };
 
-INSTANCE Info_Mod_Ethan_Beförderung_2 (C_INFO)
+INSTANCE Info_Mod_Ethan_Befoerderung_2 (C_INFO)
 {
 	npc		= Mod_1532_HTR_Ethan_NW;
 	nr		= 1;
-	condition	= Info_Mod_Ethan_Beförderung_2_Condition;
-	information	= Info_Mod_Ethan_Beförderung_2_Info;
+	condition	= Info_Mod_Ethan_Befoerderung_2_Condition;
+	information	= Info_Mod_Ethan_Befoerderung_2_Info;
 	permanent	= 0;
 	important	= 1;
 };
 
-FUNC INT Info_Mod_Ethan_Beförderung_2_Condition()
+FUNC INT Info_Mod_Ethan_Befoerderung_2_Condition()
 {
 	if (Mod_Gilde == 17)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Saturas_NW_Rasend02))
@@ -386,12 +386,12 @@ FUNC INT Info_Mod_Ethan_Beförderung_2_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Ethan_Beförderung_2_Info()
+FUNC VOID Info_Mod_Ethan_Befoerderung_2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_2_13_00"); //Ahh, da bist du ja. Ich habe bereits von deinem Verdienst gehört und kann Saturas Willen nur voll unterstützen.
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_2_13_01"); //So richte ich die Frage an dich: Fühlst du dich dazu bereit, als Hüter des Wassers Adanos zu dienen?
-	AI_Output(hero, self, "Info_Mod_Ethan_Beförderung_2_15_02"); //Ja, mein Wunsch ist es Hüter des Wassers zu werden.
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_2_13_03"); //Dann nimm diese Rüstung und den Segen Adanos.
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_2_13_00"); //Ahh, da bist du ja. Ich habe bereits von deinem Verdienst gehört und kann Saturas Willen nur voll unterstützen.
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_2_13_01"); //So richte ich die Frage an dich: Fühlst du dich dazu bereit, als Hüter des Wassers Adanos zu dienen?
+	AI_Output(hero, self, "Info_Mod_Ethan_Befoerderung_2_15_02"); //Ja, mein Wunsch ist es Hüter des Wassers zu werden.
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_2_13_03"); //Dann nimm diese Rüstung und den Segen Adanos.
 
 	CreateInvItems	(hero, ItAr_Hueter, 1);
 	B_ShowGivenThings	("Hüterrüstung erhalten");
@@ -399,8 +399,8 @@ FUNC VOID Info_Mod_Ethan_Beförderung_2_Info()
 	AI_UnequipArmor	(hero);
 	AI_EquipArmor	(hero, ItAr_Hueter);
 
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_2_13_04"); //Du wirst auch feststellen, dass du deine Rune der Eisklinge nun noch wirkungsvoller einsetzen kannst.
-	AI_Output(self, hero, "Info_Mod_Ethan_Beförderung_2_13_05"); //Möge das Gleichgewicht durch dein Wirken auch weiterhin Bestand haben.
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_2_13_04"); //Du wirst auch feststellen, dass du deine Rune der Eisklinge nun noch wirkungsvoller einsetzen kannst.
+	AI_Output(self, hero, "Info_Mod_Ethan_Befoerderung_2_13_05"); //Möge das Gleichgewicht durch dein Wirken auch weiterhin Bestand haben.
 
 	Snd_Play ("LEVELUP");
 	
