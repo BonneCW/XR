@@ -109,6 +109,8 @@ FUNC VOID Info_Mod_Pilar_AtHut2_Info()
 	AI_Output(self, hero, "Info_Mod_Pilar_AtHut2_01_07"); //Ok, geh du vor.
 
 	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "FOLLOWTOCHAD");
 };
 
 INSTANCE Info_Mod_Pilar_AtHut3 (C_INFO)

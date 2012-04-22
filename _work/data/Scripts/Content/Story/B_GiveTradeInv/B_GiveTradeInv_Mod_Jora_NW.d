@@ -34,6 +34,7 @@ FUNC VOID B_GiveTradeInv_Mod_Jora_NW (var C_NPC slf)
 		CreateInvItems (slf, ItMw_Kriegskeule, 1);
 		CreateInvItems (slf, ItMw_1h_Sld_Sword, 1);
 		CreateInvItems (slf, ItMW_Addon_Knife01, 1);
+		CreateInvItems (slf, ItMw_1h_Vlk_Sword, 1);
 
 		CreateInvItems (slf, ItMW_Addon_Stab05, 1);
 		CreateInvItems (slf, ItMw_Stabkeule, 1);
