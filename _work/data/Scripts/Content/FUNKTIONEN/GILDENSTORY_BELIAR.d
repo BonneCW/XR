@@ -829,5 +829,55 @@ FUNC VOID GILDENSTORY_BELIAR()
 				AI_Teleport	(Mod_4015_SNOV_BesessenerNovize_MT, "TOT");
 			};
 		};
+
+		// Ungeheuer in der Bibliothek
+
+		if (Kapitel >= 5)
+		&& (Mod_BeliarBibScene == 0)
+		{
+			Mod_BeliarBibScene = 1;
+
+			B_StartOtherRoutine	(Mod_7755_KDS_SchwarzerMagier_MT, "BIBSCENE");
+			B_StartOtherRoutine	(Mod_7756_KDS_SchwarzerMagier_MT, "BIBSCENE");
+			B_StartOtherRoutine	(Mod_473_DMB_Andokai_MT, "BIBSCENE");
+
+			B_KillNpc	(Mod_7757_KDS_SchwarzerMagier_MT);
+			B_KillNpc	(Mod_7758_KDS_SchwarzerMagier_MT);
+			B_KillNpc	(Mod_7759_KDS_SchwarzerMagier_MT);
+
+			Wld_InsertItem	(ItWr_BeliarBibGruss,	"FP_ITEM_UNGEHEUERBELIARBIBBUCH");
+
+			Wld_InsertNpc	(Mod_7785_SNOV_Novize_MT, "LABYRINTH_69");
+
+			B_KillNpc	(Mod_7785_SNOV_Novize_MT);
+
+			Wld_InsertNpc	(RazorSkelett_Bib_01, "LABYRINTH_70");
+			Wld_InsertNpc	(RazorSkelett_Bib_02, "LABYRINTH_74");
+			Wld_InsertNpc	(RazorSkelett_Bib_03, "LABYRINTH_52");
+			Wld_InsertNpc	(RazorSkelett_Bib_04, "LABYRINTH_106");
+			Wld_InsertNpc	(RazorSkelett_Bib_05, "LABYRINTH_130");
+			Wld_InsertNpc	(RazorSkelett_Bib_06, "LABYRINTH_109");
+			Wld_InsertNpc	(RazorSkelett_Bib_07, "LABYRINTH_8");
+		};
+
+		if (Mod_BeliarBibScene == 1)
+		&& (Npc_GetDistToWP(hero, "LABYRINTH") < 750)
+		{
+			BeliarBibScene();
+		};
+
+		if (Mod_BeliarBibScene == 3)
+		&& (Npc_IsDead(RazorSkelett_Bib_01))
+		&& (Npc_IsDead(RazorSkelett_Bib_02))
+		&& (Npc_IsDead(RazorSkelett_Bib_03))
+		&& (Npc_IsDead(RazorSkelett_Bib_04))
+		&& (Npc_IsDead(RazorSkelett_Bib_05))
+		&& (Npc_IsDead(RazorSkelett_Bib_06))
+		&& (Npc_IsDead(RazorSkelett_Bib_07))
+		{
+			Mod_BeliarBibScene = 4;
+
+			B_LogEntry	(TOPIC_MOD_BELIAR_UNGEHEUER, "Die Bibliothek sollte wieder gesäubert sein. Andokai sollte davon erfahren.");
+		};
 	};
 };

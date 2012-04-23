@@ -4797,6 +4797,58 @@ INSTANCE ItWr_HofstaatGeschichte03 (C_ITEM)
 		Doc_Show		( nDocID );
 };
 
+INSTANCE ItWr_BeliarBibGruss (C_ITEM)
+{
+	name 					=	"Geburtstagsgruß";
+
+	mainflag 				=	ITEM_KAT_DOCS;
+	flags 					=	0;
+
+	value 					=	100;
+
+	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	material 				=	MAT_LEATHER;
+
+	scemeName				=	"MAP";
+	description				= 	name;
+	TEXT[5]					= 	NAME_Value;
+	COUNT[5]				= 	value;
+	on_state[0]				=	UseBeliarBibGruss;
+};
+
+	FUNC VOID UseBeliarBibGruss()
+	{
+		var int nDocID;
+		nDocID = 	Doc_Create		();
+
+		Doc_SetPages	( nDocID,  2 );                         //wieviel Pages
+
+		Doc_SetPage 	( nDocID,  0, "Book_Brown_L.tga"  , 0 	); // VARIATIONEN: BOOK_BROWN_L.tga , BOOK_MAGE_L.tga , BOOK_RED_L.tga
+		Doc_SetPage 	( nDocID,  1, "Book_Brown_R.tga" , 0	); // VARIATIONEN: BOOK_BROWN_R.tga , BOOK_MAGE_R.tga , BOOK_RED_R.tga
+
+		//1.Seite
+
+		Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
+		Doc_SetFont 	( nDocID,  0, FONT_BookHeadline	   			); 	// -1 -> all pages
+		Doc_PrintLines	( nDocID,  0, "Die Geschichte des Hofstaats Teil 3"					);
+		Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
+		Doc_PrintLine	( nDocID,  0, ""					);
+		Doc_PrintLines	( nDocID,  0, "Herzlichen Glückwunsch zum Geburtstag, du alte Ratte. Wenn du dieses Buch öffnest, wirst du wissen, warum ich dieses Jahr nicht zum Festessen erscheinen konnte. Ich habe lieber meine kleinen Schöpfungen vorausgeschickt, auf dass sie dich und deine unselige Sippe endgültig vom Antlitz dieser Welt tilgen mögen. Und dann wird deine Festung, die du so schändlich dem Verfall preisgibst, endlich mir gehören! Und wehe, du öffnest das Buch nicht!");
+		Doc_PrintLine	( nDocID,  0, ""					);
+		Doc_PrintLine	( nDocID,  0, ""					);
+
+		//2.Seite
+		Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
+		Doc_SetFont 	( nDocID,  1, FONT_BookHeadline	   			); 	// -1 -> all pages
+		Doc_PrintLine	( nDocID,  1, ""					);
+		Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 
+		Doc_PrintLine	( nDocID,  1, ""					);	// -1 -> all pages
+		Doc_PrintLines	( nDocID,  1, "");
+		Doc_PrintLine	( nDocID,  1, "");
+		Doc_PrintLines	( nDocID,  1, "");
+		Doc_Show		( nDocID );
+};
+
 INSTANCE ItWr_GeheimnisseDerJagd5 (C_ITEM)
 {
 	name 					=	"Geheimnisse der Jagd Band V – Gifte";

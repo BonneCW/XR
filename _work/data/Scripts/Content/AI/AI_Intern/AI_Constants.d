@@ -286,6 +286,7 @@ const int	ID_Truhe	= 106;
 const int	ID_Erzgolem	= 107;
 const int	ID_Summoned_Harpie	= 108;
 const int	ID_Minotaurus	= 109;
+const int	ID_RazorSkelett	= 110;
 
 
 

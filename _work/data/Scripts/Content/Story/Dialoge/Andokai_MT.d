@@ -290,6 +290,99 @@ FUNC VOID Info_Mod_Andokai_PyrmansStab_Info()
 	B_Göttergefallen(3, 1);
 };
 
+INSTANCE Info_Mod_Andokai_UngeheuerInBib (C_INFO)
+{
+	npc		= Mod_473_DMB_Andokai_MT;
+	nr		= 1;
+	condition	= Info_Mod_Andokai_UngeheuerInBib_Condition;
+	information	= Info_Mod_Andokai_UngeheuerInBib_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Andokai_UngeheuerInBib_Condition()
+{
+	if (Mod_BeliarBibScene == 2)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Andokai_UngeheuerInBib_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Andokai_UngeheuerInBib_12_00"); //(zum Helden) Würdest du mitgehen? Ich gebe nicht viel auf diesen Schwächling.
+
+	Info_ClearChoices	(Info_Mod_Andokai_UngeheuerInBib);
+
+	Info_AddChoice	(Info_Mod_Andokai_UngeheuerInBib, "Lass ihn allein gehen.", Info_Mod_Andokai_UngeheuerInBib_B);
+	Info_AddChoice	(Info_Mod_Andokai_UngeheuerInBib, "Kein Problem.", Info_Mod_Andokai_UngeheuerInBib_A);
+};
+
+FUNC VOID Info_Mod_Andokai_UngeheuerInBib_C()
+{
+	AI_Output(self, hero, "Info_Mod_Andokai_UngeheuerInBib_C_12_00"); //Dann ist es beschlossen. Ich werde mich nun wieder wichtigen Dingen zuwenden.
+
+	Info_ClearChoices	(Info_Mod_Andokai_UngeheuerInBib);
+};
+
+FUNC VOID Info_Mod_Andokai_UngeheuerInBib_B()
+{
+	AI_Output(hero, self, "Info_Mod_Andokai_UngeheuerInBib_B_15_00"); //Lass ihn allein gehen.
+
+	B_StartOtherRoutine	(Mod_7756_KDS_SchwarzerMagier_MT, "START");
+
+	Info_Mod_Andokai_UngeheuerInBib_C();
+};
+
+FUNC VOID Info_Mod_Andokai_UngeheuerInBib_A()
+{
+	AI_Output(hero, self, "Info_Mod_Andokai_UngeheuerInBib_A_15_00"); //Kein Problem.
+
+	Mod_BeliarBibScene = 3;
+
+	Log_CreateTopic	(TOPIC_MOD_BELIAR_UNGEHEUER, LOG_MISSION);
+	B_SetTopicStatus	(TOPIC_MOD_BELIAR_UNGEHEUER, LOG_RUNNING);
+	B_LogEntry	(TOPIC_MOD_BELIAR_UNGEHEUER, "Ich habe mich bereit erklärt, zusammen mit einem Magier in der Bibliothek nach dem Rechten zu sehen. Dort ist anscheinend etwas Seltsames vorgefallen.");
+
+	Info_Mod_Andokai_UngeheuerInBib_C();
+};
+
+INSTANCE Info_Mod_Andokai_UngeheuerInBib2 (C_INFO)
+{
+	npc		= Mod_473_DMB_Andokai_MT;
+	nr		= 1;
+	condition	= Info_Mod_Andokai_UngeheuerInBib2_Condition;
+	information	= Info_Mod_Andokai_UngeheuerInBib2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Die Bibliothek ist wieder sauber.";
+};
+
+FUNC INT Info_Mod_Andokai_UngeheuerInBib2_Condition()
+{
+	if (Mod_BeliarBibScene == 4)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Andokai_UngeheuerInBib2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Andokai_UngeheuerInBib2_15_00"); //Die Bibliothek ist wieder sauber.
+	AI_Output(self, hero, "Info_Mod_Andokai_UngeheuerInBib2_12_01"); //Gute Arbeit. Was hat der Novize angerichtet?
+	AI_Output(hero, self, "Info_Mod_Andokai_UngeheuerInBib2_15_02"); //Er hat ein paar sehr alte Kreaturen freigelassen. Aber die sind alle tot.
+	AI_Output(self, hero, "Info_Mod_Andokai_UngeheuerInBib2_12_03"); //Ich gebe mir schon so viel Mühe bei der Auswahl der Novizen. Wieso werde ich trotzdem mit solchen Dummköpfen gestraft?
+	AI_Output(hero, self, "Info_Mod_Andokai_UngeheuerInBib2_15_04"); //Das weiß allein Beliar.
+	AI_Output(self, hero, "Info_Mod_Andokai_UngeheuerInBib2_12_05"); //Recht hast du. Ich werde die Aufnahmebedingungen verschärfen.
+
+	B_GivePlayerXP	(400);
+
+	B_SetTopicStatus	(TOPIC_MOD_BELIAR_UNGEHEUER, LOG_SUCCESS);
+
+	B_StartOtherRoutine	(Mod_7755_KDS_SchwarzerMagier_MT, "START");
+	B_StartOtherRoutine	(self, "START");
+};
+
 INSTANCE Info_Mod_Andokai_Bibliothek1 (C_INFO)
 {
 	npc		= Mod_473_DMB_Andokai_MT;

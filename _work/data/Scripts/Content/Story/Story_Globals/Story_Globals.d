@@ -46,6 +46,7 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_BeliarBibScene;
 var int Mod_Gravo_Auftritt_Tag;
 var int Mod_Gravo_Schatz;
 var int Mod_Jackal_Tabak_1;

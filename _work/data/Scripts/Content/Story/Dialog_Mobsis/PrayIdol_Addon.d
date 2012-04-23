@@ -583,6 +583,8 @@ FUNC VOID PC_PrayIdol_Teleport_Info()
 	};
 
 	if (Mod_BeliarStatue_Bibliothek_Dabei == TRUE)
+	&& ((Kapitel < 5)
+	|| (Mod_BeliarBibScene == 4))
 	{
 		Info_AddChoice	(PC_PrayIdol_Teleport, "... der Bibliothek", PC_PrayIdol_Teleport_Bibliothek);
 	};

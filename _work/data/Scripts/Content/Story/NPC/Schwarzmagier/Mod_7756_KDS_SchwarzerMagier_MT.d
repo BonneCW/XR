@@ -44,3 +44,15 @@ FUNC VOID Rtn_start_7756 ()
 	TA_Read_Bookstand	(21,00,04,00,"LABYRINTH_98");
 	TA_Read_Bookstand	(04,00,21,00,"LABYRINTH_98");	
 };
+
+FUNC VOID Rtn_BibScene_7756()
+{
+	TA_Smalltalk_Plaudern	(08,00,20,00,"LABYRINTH");
+	TA_Smalltalk_Plaudern	(20,00,08,00,"LABYRINTH");
+};
+
+FUNC VOID Rtn_Follow_7756()
+{
+	TA_Follow_Player	(08,00,20,00,"LABYRINTH");
+	TA_Follow_Player	(20,00,08,00,"LABYRINTH");
+};
