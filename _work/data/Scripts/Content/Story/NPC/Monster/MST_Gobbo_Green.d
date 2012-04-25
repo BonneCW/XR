@@ -287,6 +287,7 @@ INSTANCE Gobbo_Matrone_04 (Mst_Default_Gobbo_Green)
 
 INSTANCE Gobbo_Matrone_Summoned (Mst_Default_Matrone)
 {
+	name		= "Beschworene Goblin-Matrone";
 	level = 0;
 
 	B_SetVisuals_Gobbo_Matrone();
