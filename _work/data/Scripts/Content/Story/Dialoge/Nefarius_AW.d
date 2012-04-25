@@ -49,6 +49,8 @@ FUNC VOID Info_Mod_Nefarius_AW_Fokussuche_Info()
 	Log_CreateTopic	(TOPIC_MOD_MAGIEPRISMA, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_MAGIEPRISMA, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_MAGIEPRISMA, "Laut dem alten Volk gibt es eine Möglichkeit, wie ich mehrere Magier vortäuschen kann. Ich brauche dafür eine schwarze Perle, die zu einem Prisma geschliffen ist. Nefarius ist auf der Suche nach einer Methode, wie dies zu bewerkstelligen ist. Ich kann mich so lange in den Ruinen umschauen.");
+
+	B_StartOtherRoutine	(self, "START");
 };
 
 INSTANCE Info_Mod_Nefarius_AW_Fokussuche2 (C_INFO)

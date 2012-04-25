@@ -293,6 +293,7 @@ INSTANCE Info_Mod_Gorax_Unkraut (C_INFO)
 FUNC INT Info_Mod_Gorax_Unkraut_Condition()
 {
 	if (hero.guild == GIL_VLK)
+	&& (Mod_Gilde == 6)
 	{
 		return 1;
 	};

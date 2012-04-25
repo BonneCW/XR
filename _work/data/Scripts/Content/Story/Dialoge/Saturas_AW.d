@@ -41,7 +41,7 @@ FUNC VOID Info_Mod_Saturas_AW_Hi_Info()
 
 	AI_StopProcessInfos	(self);
 
-	Npc_ExchangeRoutine	(self, "GUIDETOFOKUS");
+	B_StartOtherRoutine	(self, "GUIDETOFOKUS");
 
 	B_StartOtherRoutine	(Mod_9002_KDW_Nefarius_AW, "INTEMPEL");
 };

@@ -5921,6 +5921,11 @@ FUNC VOID INIT_Minental ()
 	Wld_SetMobRoutine(19, 30, "LIGHTSPAWNERELEVEN", 1);
 	Wld_SetMobRoutine(20, 10, "LIGHTSPAWNERELEVEN", 0);
 
+	if (Kapitel == 2)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_AW_Hi))
+	{
+		B_Kapitelwechsel	(3, MINENTAL_ZEN);
+	};
 
 	if (Mod_MinentalTor == 0)
 	&& ((Mod_WM_KurganAlarm < 4)

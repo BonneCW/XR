@@ -580,6 +580,8 @@ FUNC VOID GILDENSTORY_FM()
 				B_StartOtherRoutine	(Mod_776_NONE_Orlan_NW, "VORTAVERNE");
 
 				AI_Teleport	(hero, "NW_TAVERNE");
+
+				Mod_FM_FeuerEis = 1;
 			};
 		};
 	};

@@ -116,6 +116,7 @@ INSTANCE Info_Mod_Marduk_Nachtschicht (C_INFO)
 FUNC INT Info_Mod_Marduk_Nachtschicht_Condition()
 {
 	if (hero.guild == GIL_VLK)
+	&& (Mod_Gilde == 6)
 	{
 		return 1;
 	};

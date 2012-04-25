@@ -284,7 +284,14 @@ func void B_AssessPlayer ()
 
 	if (self.npctype == NPCTYPE_MT_GARDIST)
 	&& (C_NpcIsHero(other))
-	&& (Hlp_IsItem(RuessiCheck, ItAr_SLD_Logan) == TRUE)
+	&& ((Hlp_IsItem(RuessiCheck, ItAr_SLD_Logan) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_SLD_L) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_SLD_M) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_SLD_H) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_SLD_H2) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_DJG_L) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_DJG_M) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_DJG_H) == TRUE))
 	{
 		B_Attack (self, hero, AR_Kill, 0);
 		return;

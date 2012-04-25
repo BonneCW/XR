@@ -100,6 +100,7 @@ INSTANCE Info_Mod_Neoras_Mitgift (C_INFO)
 FUNC INT Info_Mod_Neoras_Mitgift_Condition()
 {
 	if (hero.guild == GIL_VLK)
+	&& (Mod_Gilde == 6)
 	{
 		return 1;
 	};
