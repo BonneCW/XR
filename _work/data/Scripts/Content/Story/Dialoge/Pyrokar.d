@@ -434,6 +434,53 @@ FUNC VOID Info_Mod_Pyrokar_FeuerGegenEis_Info()
 	B_LogEntry	(TOPIC_MOD_FM_FEUEREIS, "Da steh ich also mit Hyglas. Von Sekobs Hof aus strömen durch ein mysteriöses Portal immer mehr Eiswesen nach Khorinis und unsere Jungs sind am See mit ihnen in Kämpfe verwickelt. Es bleibt keine Zeit zu verlieren ihnen zu Hilfe zu eilen.");
 };
 
+INSTANCE Info_Mod_Pyrokar_FeuerGegenEis2 (C_INFO)
+{
+	npc		= Mod_551_KDF_Pyrokar_NW;
+	nr		= 1;
+	condition	= Info_Mod_Pyrokar_FeuerGegenEis2_Condition;
+	information	= Info_Mod_Pyrokar_FeuerGegenEis2_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Pyrokar_FeuerGegenEis2_Condition()
+{
+	if (Mod_FM_FeuerEis == 4)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Pyrokar_FeuerGegenEis2_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Pyrokar_FeuerGegenEis2_11_00"); //Endlich bist du wach geworden!
+	AI_Output(hero, self, "Info_Mod_Pyrokar_FeuerGegenEis2_15_01"); //(irritiert) Was ... was ist geschehen?
+	AI_Output(self, hero, "Info_Mod_Pyrokar_FeuerGegenEis2_11_02"); //Sergio hat dich bewusstlos auf dem Feld gefunden und ins Kloster gebracht.
+	AI_Output(hero, self, "Info_Mod_Pyrokar_FeuerGegenEis2_15_03"); //Das Portal ...
+	AI_Output(self, hero, "Info_Mod_Pyrokar_FeuerGegenEis2_11_04"); //Ja, ihr habt es geschafft, das Portal ist wieder verschlossen.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_FeuerGegenEis2_11_05"); //Über die genauren Umstände hatten wir allerdings gehofft mehr von dir zu erfahren. Umso mehr, da unser Bruder Hyglas verschollen ist.
+	AI_Output(hero, self, "Info_Mod_Pyrokar_FeuerGegenEis2_15_06"); //Hyglas ... er ist auf der anderen Seite geblieben.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_FeuerGegenEis2_11_07"); //Die andere Seite des Portals? Ihr wart dort?
+	AI_Output(hero, self, "Info_Mod_Pyrokar_FeuerGegenEis2_15_08"); //Ja ... wir fanden uns in einer Eishöhle mit einer Konstruktion vor, welche das Portal mit Energie speiste.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_FeuerGegenEis2_11_09"); //Jetzt beginne ich zu verstehen ... er blieb zurück um das Portal zu versiegeln.
+	AI_Output(hero, self, "Info_Mod_Pyrokar_FeuerGegenEis2_15_10"); //Ja, zum Wohle von ganz Khorinis hat er sich geopfert und die Höhle zum Einsturz gebracht.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_FeuerGegenEis2_11_11"); //Bei Innos, ein wahrer Akt er Selbstlosigkeit ... Hmm, nun muss ich mich mit meinen Brüdern zurückziehen, um uns zu beraten.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_FeuerGegenEis2_11_12"); //Ruh du dich derweil noch aus und suche uns in einigen Stunden auf.
+
+	B_SetTopicStatus	(TOPIC_MOD_FM_FEUEREIS, LOG_SUCCESS);
+
+	B_GivePlayerXP	(400);
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "START");
+	B_StartOtherRoutine	(Mod_552_KDF_Serpentes_NW, "START");
+	B_StartOtherRoutine	(Mod_553_KDF_Ulthar_NW, "START");
+
+	Npc_SetRefuseTalk	(self, 240);
+};
+
 INSTANCE Info_Mod_Pyrokar_Befoerderung (C_INFO)
 {
 	npc		= Mod_551_KDF_Pyrokar_NW;
@@ -441,14 +488,13 @@ INSTANCE Info_Mod_Pyrokar_Befoerderung (C_INFO)
 	condition	= Info_Mod_Pyrokar_Befoerderung_Condition;
 	information	= Info_Mod_Pyrokar_Befoerderung_Info;
 	permanent	= 0;
-	important	= 0;
-	description	= "Ich bin bereit Feuermagier werden.";
+	important	= 1;
 };
 
 FUNC INT Info_Mod_Pyrokar_Befoerderung_Condition()
 {
-	if (Mod_Gilde == 6)
-	&& (Kapitel > 2)
+	if (Npc_KnowsInfo(hero, Info_Mod_Pyrokar_FeuerGegenEis2))
+	&& (Npc_RefuseTalk(self) == FALSE)
 	{
 		return 1;
 	};
@@ -456,19 +502,34 @@ FUNC INT Info_Mod_Pyrokar_Befoerderung_Condition()
 
 FUNC VOID Info_Mod_Pyrokar_Befoerderung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Befoerderung_15_00"); //Ich bin bereit Feuermagier zu werden.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_01"); //Ja, die Zeit ist gekommen. Du bist nun ein Magier werden.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_02"); //Hier ist deine neue Robe.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_00"); //Gut, da bist du. Wir haben uns eingehend beraten.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_01"); //Durch deine Verdienste für das Kloster und ganz Khorinis hast du dich als würdig erwiesen in unserer Reihen einzutreten.
+	AI_Output(hero, self, "Info_Mod_Pyrokar_Befoerderung_15_02"); //Ich soll ein Magier des Feuers werden?
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_03"); //Ja, ein Priester des  heiligen Feuers, und ein treuer Bruder im heiligen Kampf für Innos gerechte Sache. Sprich den Schwur und tritt in unsere Reihen ein.
+	AI_Output(hero, self, "Info_Mod_Pyrokar_Befoerderung_15_04"); //Ich schwöre, vor dem allmächtigen Herrn Innos, seiner Diener und der heiligen Flamme ...
+	AI_Output(hero, self, "Info_Mod_Pyrokar_Befoerderung_15_05"); //... dass von nun an und auf ewig mein Leben mit dem Feuer verbunden ist ...
+	AI_Output(hero, self, "Info_Mod_Pyrokar_Befoerderung_15_06"); //... bis mein Körper und mein Geist Ruhe finden in seinen heiligen Hallen und das Feuer des Lebens erlischt.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_07"); //So, damit bist du nun ein Magier des Feuers.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_08"); //Hier ist deine neue Robe.
 
 	CreateInvItems	(self, ItAr_Kdf_L, 1);
 	B_GiveInvItems	(self, hero, ItAr_Kdf_L, 1);
 
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_03"); //Und hier ist ein Schlüssel für dein neues Schlafgemach.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_09"); //Und hier ist ein Schlüssel für dein neues Schlafgemach.
 
-	CreateInvItems	(self, ItKe_KDFPlayer, 1);
 	B_GiveInvItems	(self, hero, ItKe_KDFPlayer, 1);
 
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_04"); //Möge Innos dich auf deinen Wegen begleiten.
+	AI_Output(hero, self, "Info_Mod_Pyrokar_Befoerderung_15_10"); //Was ist mit Hyglas?
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_11"); //Wir werden sein großes Opfer ehren, wie es ihm gebührt, und ihn zu einem der Schutzheiligen dieser Insel erheben.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_12"); //Seine Aufgabe im Kloster als Lehrer der Feuermagie wird nun Ulthar übernehmen. Und da gibt es noch eine Sache ...
+	AI_Output(hero, self, "Info_Mod_Pyrokar_Befoerderung_15_13"); //Ja, was?
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_14"); //Es gab eine dringliche Aufgabe, die Hyglas eigentlich für uns erledigen sollte.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_15"); //Da er nun jedoch nicht unter uns weilt, haben wir entschieden sie an dich weiter zu geben.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_16"); //Ich weiß, dass es nach den letzten Ereignissen sehr schnell für dich kommt, Bruder, aber es ist wichtig.
+	AI_Output(hero, self, "Info_Mod_Pyrokar_Befoerderung_15_17"); //Worum geht es?
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_18"); //Um  eine heilige Stätte, die mitunter als das Zentrum unsere Glaubens bezeichnet wird.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_19"); //Parlan ist jedoch von allen Magiern im Kloster am besten mit dem Hintergrundwissen darum vertraut.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_Befoerderung_11_20"); //Geh also zu ihm, Bruder, und besprich alles weitere mit ihm. Innos behüte dich auf deinen Wegen.
 
 	Mod_Gilde = 7;
 
@@ -479,83 +540,10 @@ FUNC VOID Info_Mod_Pyrokar_Befoerderung_Info()
 	B_Göttergefallen(1, 5);
 
 	AI_StopProcessInfos	(self);
-};
-
-INSTANCE Info_Mod_Pyrokar_Patherion (C_INFO)
-{
-	npc		= Mod_551_KDF_Pyrokar_NW;
-	nr		= 1;
-	condition	= Info_Mod_Pyrokar_Patherion_Condition;
-	information	= Info_Mod_Pyrokar_Patherion_Info;
-	permanent	= 0;
-	important	= 1;
-};
-
-FUNC INT Info_Mod_Pyrokar_Patherion_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Pyrokar_Befoerderung))
-	&& (Mod_Gilde == 7)
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Pyrokar_Patherion_Info()
-{
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_00"); //Jetzt, da du einer von uns bist, ist es an der Zeit dir eine alte Geschichte zu erzählen.
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_01"); //Was meinst du damit?
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_02"); //Kennst du die Sage über die Tränen Innos'?
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_03"); //Tränen Innos'? Nein, lass hören.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_04"); //Es begann in der Zeit, als Innos seinen beiden Brüder gegenüberstand und ihm klar wurde, dass er Beliar bekämpfen musste. Als Innos dies erkannte füllte sich sein Herz mit Trauer und er begann zu weinen.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_05"); //13 Jahre lang weinte er und seine Tränen fielen herab auf die Welt. Trotz dieser langen Zeit hat Innos nur 6 Tränen vergossen.
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_06"); //Und was geschah dann mit ihnen?
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_07"); //Nun, ein Mensch, sein Name war Ragon, fand eine der Tränen. Er kostete von ihr und er wurde erfüllt von übernatürlicher Kraft und Weisheit.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_08"); //Er erkannte die Weisheit von Innos Schöpfung. So begann er Innos zu dienen. Als Buße für sein bisheriges leben beschloss er einen Bußgang zu machen.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_09"); //Er ging immer weiter geradeaus, weder Seen noch Berge konnten ihn aufhalten. Und irgendwann, mitten im Gebirge, fand er ein Tal. Nahezu unerreichbar. Dort begann er einen Tempel zu bauen.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_10"); //Als er ihn fertig gebaut hatte betete er 13 Tage lang zu Innos. Er hörte erst auf zu beten als ihn 4 Stimmen unterbrachen.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_11"); //Es waren vier Männer. Sie kamen aus allen Teilen der Erde, getrieben von der Suche nach Vergebung ihrer Sünden und fühlten sich zu jenem Ort berufen, an dem Innos Kraft so deutlich zu spüren war.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_12"); //Die fünf Männer sprachen jeder eine andere Sprache und doch verstanden sie einander problemlos. Sie beschlossen gemeinsam ein großes Kloster zu bauen. Sie bauten lange, doch Zeit hatte für sie die Bedeutung verloren, durch die Tränen Innos’ alterten sie nicht mehr.
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_13"); //Dann sind die Tränen eine Art Zaubertrank?
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_14"); //Sozusagen ja, nur noch viel mächtiger!
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_15"); //Und was geschah nachdem sie das Kloster erbaut hatten?
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_16"); //Nun, sie zogen aus um die Botschaft von Innos zu verbreiten und suchten Novizen für ihr Kloster. Zumindest die meisten von ihnen. Einer jedoch fühlte sich zu anderem berufen. Es war Ragon.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_17"); //Er wusste, oder vielmehr fühlte er, dass es noch eine Träne Innos' gab. Diese wollte er finden und ins Kloster bringen.
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_18"); //Und hat er sie gefunden?
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_19"); //Das weiß niemand. Die restlichen 4vier trafen sich wieder im Kloster, wo sie noch heute das Oberhaupt der Innoskirche bilden, doch von Ragon hat man nie wieder was gehört.
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_20"); //Und warum erzählst du mir diese Geschichte?
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_21"); //Nur um dir die nötigen Hintergrundinformationen für deinen nächsten Auftrag zu geben.
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_22"); //Meinen nächsten Auftrag?
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_23"); //Ja. Patherion wurde vor einiger Zeit von den Schwarzmagiern und schwarzen Kriegern belagert. Zuerst verstanden wir ihr Handeln nicht, eine Belagerung war quasi sinnlos, da wir uns ja nach belieben teleportieren können, doch wir unterschätzen die Schwarzmagier. Sie haben die Foki gestohlen und eine Barriere errichtet.
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_24"); //Was? Du meinst wie damals in der Minenkolonie?
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_25"); //Ja und Nein. Sie haben zwar eine ähnliche Barriere errichtet, doch man kann sowohl rein als auch raus gehen.
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_26"); //Was ist dann das Problem?
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_27"); //Tja, man kann eben nur rein "gehen". Die Barriere verhindert, dass wir uns dorthin teleportieren können! Die Nahrungs- und Trankvorräte von Patherion gehen zur Neige, deshalb sollst du ihnen dieses Paket voller Tränke und dieses Paket voll Nahrung bringen.
-
-	CreateInvItems	(hero, ItMi_Pat_Nahrung, 1);
-	CreateInvItems	(hero, ItMi_Pat_Trank, 1);
-
-	AI_PrintScreen	("2 Pakete erhalten", -1, YPOS_GoldGiven, FONT_ScreenSmall, 2);
-
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_28"); //Was? Ich denke man kann sich nicht dorthin teleportieren und wie du selbst gesagt hast ist es nahezu unerreichbar.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_29"); //Das stimmt so nicht ganz, man kann sich nur nicht zum Kloster teleportieren. Erinnerst du dich an die Kapelle, die Ragon eigenhändig baute? Sie liegt ausserhalb der Barriere und man kann problemlos durch Magie zu ihr reisen.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_30"); //Von dort aus wirst du dir allerdings selbst einen Weg durch die Reihen der Schwarzmagier suchen müssen.
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_31"); //Klingt gefährlich!
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_32"); //Ist es auch. Aus diesem Grund wird das ganze auch dir aufgetragen und keinem der Novizen.
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_33"); //Gut, ich mache mich gleich auf den Weg.
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_34"); //Nimm diese Rune. Mit ihr wirst du zur Kapelle von Patherion kommen.
-
-	CreateInvItems	(self, ItRu_Teleport_Pat, 1);
-	B_GiveInvItems	(self, hero, ItRu_Teleport_Pat, 1);
-
-	AI_Output(hero, self, "Info_Mod_Pyrokar_Patherion_15_35"); //Und wie komme ich wieder zurück?
-	AI_Output(self, hero, "Info_Mod_Pyrokar_Patherion_11_36"); //Mit dieser Rune. Du kannst sie allerdings nur in der Kapelle benutzen.
-
-	CreateInvItems	(self, ItRu_TeleportPatBack, 1);
-	B_GiveInvItems	(self, hero, ItRu_TeleportPatBack, 1);
 
 	Log_CreateTopic	(TOPIC_MOD_PATHERION, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_PATHERION, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_PATHERION, "Pyrokar hat mir von Patherion, einem großen Tempel der Feuermagier erzählt. Dieser wird momentan aber von Schwarzmagiern und Kriegern belagert und braucht deshalb Nachschub an Nahrung und Tränken. Ich soll diese nun in den Tempel bringen.");
+	B_LogEntry	(TOPIC_MOD_PATHERION, "Kaum ist die Sache mit dem Portal überstanden, gibt es eine andere wichtige Aufgabe für mich. Ich soll mich an Parlan wenden, um alles weitere dazu zu erfahren.");
 };
 
 INSTANCE Info_Mod_Pyrokar_Patherion2 (C_INFO)

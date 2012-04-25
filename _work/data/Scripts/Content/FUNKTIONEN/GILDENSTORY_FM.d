@@ -584,5 +584,33 @@ FUNC VOID GILDENSTORY_FM()
 				Mod_FM_FeuerEis = 1;
 			};
 		};
+
+		if (Mod_FM_FeuerEis == 1)
+		{
+			if (Npc_KnowsInfo(hero, Info_Mod_Hyglas_FeuerGegenEis4))
+			&& (Npc_GetDistToWP(Mod_918_KDF_Hyglas_NW, "WP_STEINKREIS_05") < 500)
+			{
+				Wld_InsertNpc	(IceGolem_FeuerGegenEis_02,	"WP_STEINKREIS_05");
+				Wld_InsertNpc	(IceGolem_FeuerGegenEis_03,	"WP_STEINKREIS_05");
+				Wld_InsertNpc	(IceGolem_FeuerGegenEis_04,	"WP_STEINKREIS_05");
+
+				Mod_FM_FeuerEis = 2;
+			};
+		};
+
+		if (Mod_FM_FeuerEis == 2)
+		{
+			if (Npc_KnowsInfo(hero, Info_Mod_Hyglas_FeuerGegenEis5))
+			&& (!Npc_IsInState(Mod_918_KDF_Hyglas_NW, ZS_Talk))
+			{
+				AI_Teleport	(hero, "WP_EISHOEHLE_01");
+
+				AI_Teleport	(Mod_918_KDF_Hyglas_NW, "WP_EISHOEHLE_01");
+
+				B_StartOtherRoutine	(Mod_918_KDF_Hyglas_NW, "EISHOEHLE");
+
+				Mod_FM_FeuerEis = 3;
+			};
+		};
 	};
 };

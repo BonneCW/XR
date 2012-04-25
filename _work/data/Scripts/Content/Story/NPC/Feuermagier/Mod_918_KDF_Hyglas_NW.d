@@ -68,3 +68,15 @@ FUNC VOID Rtn_ZuSekob_918 ()
 	TA_Guide_Player	(08,00,23,00,"WP_STEINKREIS_05");
 	TA_Guide_Player	(23,00,08,00,"WP_STEINKREIS_05");
 };
+
+FUNC VOID Rtn_Eishoehle_918 ()
+{	
+	TA_Stand_WP	(08,00,23,00,"WP_EISHOEHLE_01");
+	TA_Stand_WP	(23,00,08,00,"WP_EISHOEHLE_01");
+};
+
+FUNC VOID Rtn_Eishoehle2_918 ()
+{	
+	TA_Guide_Player	(08,00,23,00,"WP_EISHOEHLE_04");
+	TA_Guide_Player	(23,00,08,00,"WP_EISHOEHLE_04");
+};

@@ -87,14 +87,21 @@ func void B_SetVisuals_ShadowbeastRider()
 	Mdl_SetVisualBody		(self,	"Sha_Rider_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
-func void B_SetVisuals_Feuerläufer()
+func void B_SetVisuals_Feuerlaeufer()
 {
 	Mdl_SetVisual			(self,"Shadow.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
 	Mdl_SetVisualBody		(self,	"Sha_Body",		1,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
-func void B_SetVisuals_Wasserläufer()
+func void B_SetVisuals_Wasserlaeufer()
+{
+	Mdl_SetVisual			(self,"Shadow.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Sha_Body",		2,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
+
+func void B_SetVisuals_Eislaeufer()
 {
 	Mdl_SetVisual			(self,"Shadow.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
@@ -197,7 +204,7 @@ INSTANCE ShadowbeastNew	(Mst_Default_Shadowbeast)
 	CreateInvItems (self, ItFo_MuttonRaw, 4);
 };
 
-INSTANCE Feuerläufer	(Mst_Default_Shadowbeast)
+INSTANCE Feuerlaeufer	(Mst_Default_Shadowbeast)
 {
 	name	= "Feuerläufer";
 
@@ -226,14 +233,14 @@ INSTANCE Feuerläufer	(Mst_Default_Shadowbeast)
 
 	damagetype 						=	DAM_FIRE;
 
-	B_SetVisuals_Feuerläufer();
+	B_SetVisuals_Feuerlaeufer();
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFo_MuttonRaw, 4);
 	CreateInvItems	(self, ItAt_FireShadowFur, 1);
 	CreateInvItems	(self, ItAt_FireShadowHorn, 1);
 };
 
-INSTANCE Wasserläufer	(Mst_Default_Shadowbeast)
+INSTANCE Wasserlaeufer	(Mst_Default_Shadowbeast)
 {
 	name	= "Wasserläufer";
 
@@ -260,11 +267,43 @@ INSTANCE Wasserläufer	(Mst_Default_Shadowbeast)
 
 	effect	= "SPELLFX_ICEARMOR";
 
-	B_SetVisuals_Wasserläufer();
+	B_SetVisuals_Wasserlaeufer();
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFo_MuttonRaw, 4);
 	CreateInvItems	(self, ItAt_WaterShadowFur, 1);
 	CreateInvItems	(self, ItAt_WaterShadowHorn, 1);
+};
+
+INSTANCE Eislaeufer_FGE	(Mst_Default_Shadowbeast)
+{
+	name	= "Eisläufer";
+
+	aivar[AIV_MM_REAL_ID]			= 	ID_WATERSHADOWBEAST;
+
+	level	= 100;
+
+	attribute	[ATR_STRENGTH]		=	240;
+	attribute	[ATR_DEXTERITY]		=	20;
+	attribute	[ATR_HITPOINTS_MAX]	=	600;
+	attribute	[ATR_HITPOINTS]		=	600;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	150000;
+	protection	[PROT_EDGE]			=	150000;
+	protection	[PROT_POINT]		=	100000;
+	protection	[PROT_FIRE]			=	150;
+	protection	[PROT_FLY]			=	150;
+	protection	[PROT_MAGIC]		=	100;
+
+	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
+
+	effect	= "SPELLFX_ICEARMOR";
+
+	B_SetVisuals_Wasserlaeufer();
+	Npc_SetToFistMode(self);
+	CreateInvItems (self, ItFo_MuttonRaw, 4);
 };
 
 INSTANCE Nightmare	(Mst_Default_Shadowbeast)

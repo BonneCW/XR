@@ -1374,7 +1374,7 @@ FUNC VOID Info_Mod_Vatras_Ruestung_Info()
 	
 		Mod_ZweiteVerbesserung = TRUE;
 	
-		Wld_InsertNpc	(Wasserläufer,	"FP_MAGICGOLEM");
+		Wld_InsertNpc	(Wasserlaeufer,	"FP_MAGICGOLEM");
 	};
 
 	Info_ClearChoices	(Info_Mod_Vatras_Ruestung);

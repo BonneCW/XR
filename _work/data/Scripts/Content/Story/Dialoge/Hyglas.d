@@ -49,9 +49,27 @@ FUNC VOID Info_Mod_Hyglas_FeuerGegenEis_Info()
 
 	B_KillNpc	(IceGolem_FeuerGegenEis_01);
 
-	Wld_InsertNpc	(Mod_7786_NOV_Novize_NW, "TAVERNE);
+	Wld_InsertNpc	(Mod_7786_NOV_Novize_NW, "TAVERNE");
 
 	B_KillNpc	(Mod_7786_NOV_Novize_NW);
+
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_05,	"WP_EISHOEHLE_01");
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_06,	"WP_EISHOEHLE_01");
+
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_07,	"WP_EISHOEHLE_04");
+
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_08,	"NW_BIGFARM_ALLEE_07");
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_09,	"NW_BIGFARM_FARM4_PATH_05");
+
+	Wld_InsertNpc	(Eislaeufer_FGE,	"FP_SPAWN_STONEGUARDIAN_STEINKREIS_05");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"NW_BIGFARM_FARM4_PATH_07");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"NW_BIGFARM_CROSS");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"NW_BIGFARM_CROSS");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"WP_SLD_DRACHENJAGD_01");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"FP_ROAM_NW_BIGFARM_LAKE_MONSTER_05_03");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"FP_ROAM_NW_BIGFARM_LAKE_MONSTER_05_03");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"NW_LAKE__WATER_02");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"NW_LAKE__WATER_02");
 };
 
 INSTANCE Info_Mod_Hyglas_FeuerGegenEis2 (C_INFO)
@@ -165,9 +183,119 @@ FUNC INT Info_Mod_Hyglas_FeuerGegenEis4_Condition()
 
 FUNC VOID Info_Mod_Hyglas_FeuerGegenEis4_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis4_14_00"); //Beunruhigend… das Portal ist mittlerweile sichtbar… . Ich muss es mir näher ansehen.
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis4_14_00"); //Beunruhigend ... das Portal ist mittlerweile sichtbar. Ich muss es mir näher ansehen.
 
 	AI_StopProcessInfos	(self);
+};
+
+INSTANCE Info_Mod_Hyglas_FeuerGegenEis5 (C_INFO)
+{
+	npc		= Mod_918_KDF_Hyglas_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hyglas_FeuerGegenEis5_Condition;
+	information	= Info_Mod_Hyglas_FeuerGegenEis5_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Hyglas_FeuerGegenEis5_Condition()
+{
+	if (Mod_FM_FeuerEis == 2)
+	&& (Npc_IsDead(IceGolem_FeuerGegenEis_02))
+	&& (Npc_IsDead(IceGolem_FeuerGegenEis_03))
+	&& (Npc_IsDead(IceGolem_FeuerGegenEis_04))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_FeuerGegenEis5_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis5_14_00"); //Bei Innos, es scheint unaufhörlich zu wachsen. Wenn wir es nicht schnell verschließen, wird bald ganz Khorinis ein Hort des Eises sein.
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis5_15_01"); //Was ist zu tun?
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis5_14_02"); //Ich werde versuchen das magische Gefüge des Portals mit einem Feuersturm zu destabilisieren.
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis5_14_03"); //Mit etwas Glück, wird es dann in sich zusammenfallen ... hoffentlich.
+
+	AI_StopProcessInfos	(self);
+};
+
+INSTANCE Info_Mod_Hyglas_FeuerGegenEis6 (C_INFO)
+{
+	npc		= Mod_918_KDF_Hyglas_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hyglas_FeuerGegenEis6_Condition;
+	information	= Info_Mod_Hyglas_FeuerGegenEis6_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Hyglas_FeuerGegenEis6_Condition()
+{
+	if (Mod_FM_FeuerEis == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_FeuerGegenEis6_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis6_15_00"); //Verdammt, was ist geschehen.
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis6_14_01"); //Die ... die magische Entladung hat das Portal nicht verschlossen ... sondern es noch gestärkt ... und scheinbar wurden wir dadurch auf die andere Seite gezogen.
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis6_15_02"); //Und was sollen wir jetzt tun?
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis6_14_03"); //Wir müssen uns rasch hier umsehen. Vielleicht finden wir Anhaltspunkte über die Quelle des Portals.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "EISHOEHLE2");
+
+	B_LogEntry	(TOPIC_MOD_FM_FEUEREIS, "Na toll! Anstatt das Portal zu versiegeln, sind wir jetzt in einer eiseigen Höhle auf der anderen Seite gelandet.");
+};
+
+INSTANCE Info_Mod_Hyglas_FeuerGegenEis7 (C_INFO)
+{
+	npc		= Mod_918_KDF_Hyglas_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hyglas_FeuerGegenEis7_Condition;
+	information	= Info_Mod_Hyglas_FeuerGegenEis7_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Hyglas_FeuerGegenEis7_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Hyglas_FeuerGegenEis6))
+	&& (Npc_GetDistToWP(hero, "WP_EISHOEHLE_04") < 300)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_FeuerGegenEis7_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_00"); //Da! Von diesem Konstrukt geht große magische Energie aus. Zweifelsfrei wird dadurch das Portal gespeist.
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis7_15_01"); //Dann müssen wir es also zerstören?
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_02"); //Ja ... Allerdings ...
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis7_15_03"); //Allerdings was?
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_04"); //Allerdings würde dann das Portal in sich zusammenfallen und uns den Rückweg versperren.
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis7_15_05"); //Na toll! Dann können wir nichts machen?
+
+	AI_TurnAway	(self, hero);
+
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_06"); //(nachdenklich) Hmm, doch ...
+
+	AI_TurnToNpc	(self, hero);
+
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_07"); //(bestimmend zum Helden) Du wirst zurück durch das Portal nach Khorinis gehen ... und ich werde zurückbleiben und die Höhle mit einer gewaltigen Feuersbrunst zum Einsturz bringen.
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis7_15_08"); //Aber ... das wäre dein sicheres Verderben.
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_09"); //Eine andere Wahl haben wir nicht, wenn wir Khorinis vor weiterem Unheil bewahren wollen.
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis7_15_10"); //Also gut ... Es war eine Ehre an deiner Seite gekämpft zu haben.
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_11"); //Ebenso ... (drängend) Und nun geh ... jede weitere Minute, die das Portal existiert, ist eine zuviel. Innos sei mit dir!
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(Mod_551_KDF_Pyrokar_NW, "ATBETT");
+	B_StartOtherRoutine	(Mod_552_KDF_Serpentes_NW, "ATBETT");
+	B_StartOtherRoutine	(Mod_553_KDF_Ulthar_NW, "ATBETT");
 };
 
 INSTANCE Info_Mod_Hyglas_Leichengase (C_INFO)

@@ -80,34 +80,16 @@ INSTANCE IceGolem	(Mst_Default_IceGolem)
 {
 	B_SetVisuals_IceGolem();
 	Npc_SetToFistMode(self);
-
-	protection	[PROT_BLUNT]		=	-1;
-	protection	[PROT_EDGE]			=	-1;
-	protection	[PROT_POINT]		=	-1;
-	protection	[PROT_FLY]			=	-1;
-	protection	[PROT_MAGIC]		=	0;
 };
 INSTANCE IceGolem_Griselda_01	(Mst_Default_IceGolem)
 {
 	B_SetVisuals_IceGolem();
 	Npc_SetToFistMode(self);
-
-	protection	[PROT_BLUNT]		=	-1;
-	protection	[PROT_EDGE]			=	-1;
-	protection	[PROT_POINT]		=	-1;
-	protection	[PROT_FLY]			=	-1;
-	protection	[PROT_MAGIC]		=	0;
 };
 INSTANCE IceGolem_Moor	(Mst_Default_IceGolem)
 {
 	B_SetVisuals_IceGolem();
 	Npc_SetToFistMode(self);
-
-	protection	[PROT_BLUNT]		=	-1;
-	protection	[PROT_EDGE]			=	-1;
-	protection	[PROT_POINT]		=	-1;
-	protection	[PROT_FLY]			=	-1;
-	protection	[PROT_MAGIC]		=	0;
 };
 
 INSTANCE FrostGolem	(Mst_Default_IceGolem)
@@ -115,12 +97,60 @@ INSTANCE FrostGolem	(Mst_Default_IceGolem)
 	name = "Frostgolem";
 	B_SetVisuals_FrostGolem();
 	Npc_SetToFistMode(self);
+};
 
-	protection	[PROT_BLUNT]		=	-1;
-	protection	[PROT_EDGE]			=	-1;
-	protection	[PROT_POINT]		=	-1;
-	protection	[PROT_FLY]			=	-1;
-	protection	[PROT_MAGIC]		=	0;
+INSTANCE IceGolem_FeuerGegenEis_01	(Mst_Default_IceGolem)
+{
+	B_SetVisuals_IceGolem();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE IceGolem_FeuerGegenEis_02	(Mst_Default_IceGolem)
+{
+	B_SetVisuals_IceGolem();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE IceGolem_FeuerGegenEis_03	(Mst_Default_IceGolem)
+{
+	B_SetVisuals_IceGolem();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE IceGolem_FeuerGegenEis_04	(Mst_Default_IceGolem)
+{
+	B_SetVisuals_IceGolem();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE IceGolem_FeuerGegenEis_05	(Mst_Default_IceGolem)
+{
+	B_SetVisuals_IceGolem();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE IceGolem_FeuerGegenEis_06	(Mst_Default_IceGolem)
+{
+	B_SetVisuals_IceGolem();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE IceGolem_FeuerGegenEis_07	(Mst_Default_IceGolem)
+{
+	B_SetVisuals_IceGolem();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE IceGolem_FeuerGegenEis_08	(Mst_Default_IceGolem)
+{
+	B_SetVisuals_IceGolem();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE IceGolem_FeuerGegenEis_09	(Mst_Default_IceGolem)
+{
+	B_SetVisuals_IceGolem();
+	Npc_SetToFistMode(self);
 };
 
 INSTANCE Summoned_IceGolem (Mst_Default_IceGolem)

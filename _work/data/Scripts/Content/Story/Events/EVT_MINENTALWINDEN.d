@@ -255,3 +255,13 @@ FUNC VOID EVT_BIBENTDECKT_FUNC()
 		B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Na, das sieht doch aus, als wäre ich erfolgreich gewesen. Wirklich beeindruckend. Da hat jemand lange gesammelt. Andokai wird es freuen, davon zu erfahren.");
 	};
 };
+
+FUNC VOID EVT_FEUERGEGENEIS_TELEPORT()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Hyglas_FeuerGegenEis7))
+	{
+		AI_Teleport	(hero, "NW_MONASTERY_NOVICE01_06");
+
+		Mod_FM_FeuerEis = 4;
+	};
+};

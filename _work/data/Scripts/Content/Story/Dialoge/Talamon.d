@@ -90,7 +90,6 @@ FUNC VOID Info_Mod_Talamon_Befoerderung_Info()
 	AI_UnequipArmor	(hero);
 	AI_EquipArmor	(hero, ItAr_Kdf_H);
 
-
 	Snd_Play ("LEVELUP");
 	
 	B_GivePlayerXP	(400);
@@ -142,7 +141,7 @@ FUNC VOID Info_Mod_Talamon_Ruestung_Info()
 	
 		Mod_ZweiteVerbesserung = TRUE;
 	
-		Wld_InsertNpc	(Feuerläufer,	"FP_MAGICGOLEM");
+		Wld_InsertNpc	(Feuerlaeufer,	"FP_MAGICGOLEM");
 	};
 
 	Info_ClearChoices	(Info_Mod_Talamon_Ruestung);
