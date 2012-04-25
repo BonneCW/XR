@@ -698,6 +698,10 @@ FUNC VOID GILDENSTORY_NL ()
 		{
 			B_SetTopicStatus	(TOPIC_MOD_NL_DRACHEN, LOG_SUCCESS);
 
+			Mod_TillChange = 1;
+
+			Mod_TillChange_Day = Wld_GetDay();
+
 			Mod_NL_HasKamm = 5;
 		};
 

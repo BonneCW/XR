@@ -479,6 +479,10 @@ FUNC VOID Info_Mod_Pyrokar_FeuerGegenEis2_Info()
 	B_StartOtherRoutine	(Mod_553_KDF_Ulthar_NW, "START");
 
 	Npc_SetRefuseTalk	(self, 240);
+
+	Mod_TillChange = 1;
+
+	Mod_TillChange_Day = Wld_GetDay();
 };
 
 INSTANCE Info_Mod_Pyrokar_Befoerderung (C_INFO)

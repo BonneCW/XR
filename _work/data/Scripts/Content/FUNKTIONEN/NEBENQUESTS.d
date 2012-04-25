@@ -1317,6 +1317,45 @@ FUNC VOID NEBENQUESTS()
 
 			B_StartOtherRoutine	(Mod_7783_OUT_Schmuggler_NW, "ATNAGUR");
 		};
+
+		// Till schließt sich je nach Held einer Gilde an
+
+		if (Mod_TillChange == 1)
+		&& (Wld_GetDay()-3 > Mod_TillChange_Day)
+		{
+			Mod_TillChange = 2;
+
+			if (hero.guild == GIL_VLK)
+			{
+				B_StartOtherRoutine	(Mod_541_NONE_Till_NW, "FM");
+
+				AI_UnequipArmor	(Mod_541_NONE_Till_NW);
+
+				CreateInvItems	(Mod_541_NONE_Till_NW, ItAr_Nov_L, 1);
+
+				AI_EquipArmor	(Mod_541_NONE_Till_NW, ItAr_Nov_L);
+			}
+			else if (hero.guild == GIL_NOV)
+			{
+				B_StartOtherRoutine	(Mod_541_NONE_Till_NW, "WM");
+
+				AI_UnequipArmor	(Mod_541_NONE_Till_NW);
+
+				CreateInvItems	(Mod_541_NONE_Till_NW, ITAR_Wassernovize1, 1);
+
+				AI_EquipArmor	(Mod_541_NONE_Till_NW, ITAR_Wassernovize1);
+			}
+			else if (hero.guild == GIL_MIL)
+			{
+				B_StartOtherRoutine	(Mod_541_NONE_Till_NW, "SLD");
+
+				AI_UnequipArmor	(Mod_541_NONE_Till_NW);
+
+				CreateInvItems	(Mod_541_NONE_Till_NW, ItAr_Sld_L, 1);
+
+				AI_EquipArmor	(Mod_541_NONE_Till_NW, ItAr_Sld_L);
+			};
+		};
 	};
 
 	if (CurrentLevel == ADDONWORLD_ZEN)

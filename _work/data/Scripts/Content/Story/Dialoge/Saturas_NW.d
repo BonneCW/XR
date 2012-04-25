@@ -1342,6 +1342,10 @@ FUNC VOID Info_Mod_Saturas_AW_Member_26_E()
 
 	B_SetTopicStatus	(TOPIC_MOD_ADANOS_UNHEIL, LOG_SUCCESS);
 
+	Mod_TillChange = 1;
+
+	Mod_TillChange_Day = Wld_GetDay();
+
 	B_Göttergefallen(2, 1);
 
 	Info_ClearChoices	(Info_Mod_Saturas_AW_Member_26);

@@ -256,6 +256,94 @@ FUNC VOID Info_Mod_Till_InnosNase3_Info()
 	Npc_SetRefuseTalk (self, 30);
 };
 
+INSTANCE Info_Mod_Till_NachGildenstories (C_INFO)
+{
+	npc		= Mod_541_NONE_Till_NW;
+	nr		= 1;
+	condition	= Info_Mod_Till_NachGildenstories_Condition;
+	information	= Info_Mod_Till_NachGildenstories_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Till?";
+};
+
+FUNC INT Info_Mod_Till_NachGildenstories_Condition()
+{
+	if (Mod_TillChange == 2)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Till_NachGildenstories_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Till_NachGildenstories_15_00"); //Till?
+
+	if (hero.guild == GIL_VLK)
+	|| (hero.guild == GIL_NOV)
+	{
+		AI_Output(self, hero, "Info_Mod_Till_NachGildenstories_03_01"); //(überrascht) Was du…? (stockt) Ohh, verzeih mir, Meister.
+	};
+
+	if (hero.guild == GIL_VLK)
+	{
+		AI_Output(self, hero, "Info_Mod_Till_NachGildenstories_03_02"); //(erklärt sich) Nachdem ihr Feuermagier uns alle vor diesen Eiswesen gerettet habt, gab es für mich keinen Zweifel daran, dass ich mich in den Dienst des Klosters stellen möchte.
+		AI_Output(self, hero, "Info_Mod_Till_NachGildenstories_03_03"); //Ein Diener Innos zu sein muss das Größte sein.
+	}
+	else if (hero.guild == GIL_NOV)
+	{
+		AI_Output(self, hero, "Info_Mod_Till_NachGildenstories_03_04"); //(erklärt sich) Nachdem ihr Wassermagier uns alle vor diesen Monstern bewahrt habt, gab es für mich keinen Zweifel, daran, dass auch ich für eure Sache kämpfen möchte.
+		AI_Output(self, hero, "Info_Mod_Till_NachGildenstories_03_05"); //Ein Diener Adanos’ zu sein muss das Größte sein.
+	};
+
+	if (hero.guild == GIL_VLK)
+	|| (hero.guild == GIL_NOV)
+	{
+		AI_Output(hero, self, "Info_Mod_Till_NachGildenstories_15_06"); //Naja, aber nicht immer ungefährlich.
+	};
+
+	if (hero.guild == GIL_VLK)
+	{
+		AI_Output(hero, self, "Info_Mod_Till_NachGildenstories_15_07"); //Bei der Sache mit den Eiswesen haben einige Novizen ihr Leben gelassen.
+	}
+	else if (hero.guild == GIL_NOV)
+	{
+		AI_Output(hero, self, "Info_Mod_Till_NachGildenstories_15_08"); //Bei der Sache mit dem Weidenplateau haben einige Streiter ihr Leben gelassen.
+	};
+
+	if (hero.guild == GIL_VLK)
+	|| (hero.guild == GIL_NOV)
+	{
+		AI_Output(self, hero, "Info_Mod_Till_NachGildenstories_03_09"); //(erschrocken) Was!?
+
+		AI_TurnAway	(self, hero);
+	};
+
+	if (hero.guild == GIL_VLK)
+	{
+		AI_Output(self, hero, "Info_Mod_Till_NachGildenstories_03_10"); //(zu sich selbst) Also deshalb haben sie mich so schnell im Kloster aufgenommen.
+	}
+	else if (hero.guild == GIL_NOV)
+	{
+		AI_Output(self, hero, "Info_Mod_Till_NachGildenstories_03_11"); //(zu sich selbst) Also deshalb haben sie mich so schnell zum Novizen gemacht.
+	};
+
+	if (hero.guild == GIL_VLK)
+	|| (hero.guild == GIL_NOV)
+	{
+		AI_Output(self, hero, "Info_Mod_Till_NachGildenstories_03_12"); //(besorgt) Wenn das mal gut geht ...
+	};
+
+	if (hero.guild == GIL_MIL)
+	{
+		AI_Output(self, hero, "Info_Mod_Till_NachGildenstories_03_13"); //(überrascht) Was du…? (stockt) Ohh, der Drachentöter.
+		AI_Output(self, hero, "Info_Mod_Till_NachGildenstories_03_14"); //(erklärt sich) Nachdem ihr Söldner uns alle von diesen Drachen befreit habt, gab es für mich keinen Zweifel, daran, dass auch ich an eurer Seite kämpfen möchte.
+		AI_Output(self, hero, "Info_Mod_Till_NachGildenstories_03_15"); //Ein Söldner zu sein muss das Größte sein. Und mein Vater hat mir jetzt nichts mehr zu sagen!
+	};
+
+	AI_StopProcessInfos	(self);
+};
+
 INSTANCE Info_Mod_Till_ArenaFighter (C_INFO)
 {
 	npc		= Mod_541_NONE_Till_NW;
@@ -269,7 +357,7 @@ INSTANCE Info_Mod_Till_ArenaFighter (C_INFO)
 FUNC INT Info_Mod_Till_ArenaFighter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Andre_Turnier1))
-	&& (Mod_MilizTurnier	==	0)
+	&& (Mod_MilizTurnier == 0)
 	{
 		return 1;
 	};
@@ -345,7 +433,7 @@ INSTANCE Info_Mod_Till_KampfEnde (C_INFO)
 
 FUNC INT Info_Mod_Till_KampfEnde_Condition()
 {
-	if (Mod_MilizTurnier	==	1)
+	if (Mod_MilizTurnier == 1)
 	{
 		return 1;
 	};
@@ -359,7 +447,7 @@ FUNC VOID Info_Mod_Till_KampfEnde_Info()
 		{
 			AI_Output(self, hero, "Info_Mod_Till_KampfEnde_03_00"); //Du bist wirklich gut. Ich geh zurück auf den Hof meines Vaters, vielleicht sehen wir uns mal wieder.
 
-			Mod_MilizTurnier	=	2;
+			Mod_MilizTurnier = 2;
 			
 			B_StartOtherRoutine	(Mod_541_NONE_Till_NW,	"PRESTART");
 				
@@ -369,7 +457,7 @@ FUNC VOID Info_Mod_Till_KampfEnde_Info()
 		{
 			AI_Output(self, hero, "Info_Mod_Till_KampfEnde_03_01"); //Tja, das war wohl nichts. Jetzt werde ich vielleicht ein Mitglied der Miliz.
 
-			Mod_MilizTurnier	=	3;
+			Mod_MilizTurnier = 3;
 
 			B_LogEntry	(TOPIC_MOD_MILIZTURNIER, "Ich habe meinen Kampf gegen Till verloren. Ich sollte jetzt mit Lord Andre sprechen.");
 
@@ -379,7 +467,7 @@ FUNC VOID Info_Mod_Till_KampfEnde_Info()
 		{
 			AI_Output (self, other,"Info_Mod_Till_KampfEnde_03_02"); //Du bist abgehauen und dadurch hab ich gewonnen. Dumm gelaufen für dich.
 
-			Mod_MilizTurnier	=	3;
+			Mod_MilizTurnier = 3;
 
 			B_LogEntry	(TOPIC_MOD_MILIZTURNIER, "Ich habe meinen Kampf gegen Till verloren. Ich sollte jetzt mit Lord Andre sprechen.");
 
