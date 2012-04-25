@@ -2053,7 +2053,7 @@ FUNC VOID HAUPTQUESTS()
 
 		if (Mod_XW_Startscene == 0)
 		{
-			//Mod_XW_Startscene = 1;
+			Mod_XW_Startscene = 1;
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Urnol_XW_Hi))
