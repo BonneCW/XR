@@ -29,6 +29,34 @@ FUNC VOID Info_Mod_Sergio_Dragon_Info()
 	AI_StopProcessInfos	(self);
 };
 
+INSTANCE Info_Mod_Sergio_FeuerGegenEis (C_INFO)
+{
+	npc		= Mod_924_RIT_Sergio_NW;
+	nr		= 1;
+	condition	= Info_Mod_Sergio_FeuerGegenEis_Condition;
+	information	= Info_Mod_Sergio_FeuerGegenEis_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Sergio_FeuerGegenEis_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Hyglas_FeuerGegenEis2))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Sergio_FeuerGegenEis_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Sergio_FeuerGegenEis_04_00"); //Verdammt, es waren einfach zu viele. Ich habe versagt und die Novizen nicht vor ihrem Verderben bewahrt.
+	AI_Output(self, hero, "Info_Mod_Sergio_FeuerGegenEis_04_01"); //(zischt und setzt sich) Ahh, mein Bein.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "ATSEE2");
+};
+
 INSTANCE Info_Mod_Sergio_Pickpocket (C_INFO)
 {
 	npc		= Mod_924_RIT_Sergio_NW;

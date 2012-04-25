@@ -57,8 +57,14 @@ FUNC VOID Rtn_Taverne_918 ()
 	TA_Stand_WP	(23,00,08,00,"NW_TAVERNE");
 };
 
+FUNC VOID Rtn_ZuSergio_918 ()
+{	
+	TA_Guide_Player	(08,00,23,00,"NW_LAKE__WATER_02");
+	TA_Guide_Player	(23,00,08,00,"NW_LAKE__WATER_02");
+};
+
 FUNC VOID Rtn_ZuSekob_918 ()
 {	
-	TA_Guide_Player	(08,00,23,00,"NW_MONASTERY_THRONE_01");
-	TA_Guide_Player	(23,00,08,00,"NW_MONASTERY_THRONE_01");
+	TA_Guide_Player	(08,00,23,00,"WP_STEINKREIS_05");
+	TA_Guide_Player	(23,00,08,00,"WP_STEINKREIS_05");
 };

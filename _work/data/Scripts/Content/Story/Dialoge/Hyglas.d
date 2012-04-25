@@ -42,6 +42,16 @@ FUNC VOID Info_Mod_Hyglas_FeuerGegenEis_Info()
 	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis_14_01"); //Dort besprechen wir das weitere Vorgehen im Detail.
 
 	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(Mod_924_RIT_Sergio_NW, "ATSEE");
+
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_01,	"NW_BIGFARM_LAKE_07");
+
+	B_KillNpc	(IceGolem_FeuerGegenEis_01);
+
+	Wld_InsertNpc	(Mod_7786_NOV_Novize_NW, "TAVERNE);
+
+	B_KillNpc	(Mod_7786_NOV_Novize_NW);
 };
 
 INSTANCE Info_Mod_Hyglas_FeuerGegenEis2 (C_INFO)
@@ -100,8 +110,64 @@ FUNC VOID Info_Mod_Hyglas_FeuerGegenEis2_Info()
 
 	self.aivar[AIV_Partymember] = TRUE;
 
-	B_StartOtherRoutine	(self, "ZUSEKOB");
+	B_StartOtherRoutine	(self, "ZUSERGIO");
 	B_StartOtherRoutine	(Orlan, "START");
+};
+
+INSTANCE Info_Mod_Hyglas_FeuerGegenEis3 (C_INFO)
+{
+	npc		= Mod_918_KDF_Hyglas_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hyglas_FeuerGegenEis3_Condition;
+	information	= Info_Mod_Hyglas_FeuerGegenEis3_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Hyglas_FeuerGegenEis3_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Sergio_FeuerGegenEis))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_FeuerGegenEis3_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis3_14_00"); //Mach dir keine Vorwürfe ... du hast tapfer gekämpft und dein Möglichstes gegeben.
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis3_14_01"); //Außerdem ist jetzt nicht der Rechte Zeitpunkt für Selbstvorwürfe. Kurier deine Wunden und pass auf, dass keine dieser Wesen in die Umgebung entkommen.
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis3_14_02"); //Ich werde derweil mit dem Novizen zum Steinkreis gehen und versuchen das Portal zu verschließen. Innos sei mit dir.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "ZUSEKOB");
+
+	B_LogEntry	(TOPIC_MOD_FM_FEUEREIS, "Keine Zeit zu rasten. Wir müssen weiter zum Portal auf Sekobs Hof, um es zu verschließen.");
+};
+
+INSTANCE Info_Mod_Hyglas_FeuerGegenEis4 (C_INFO)
+{
+	npc		= Mod_918_KDF_Hyglas_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hyglas_FeuerGegenEis4_Condition;
+	information	= Info_Mod_Hyglas_FeuerGegenEis4_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Hyglas_FeuerGegenEis4_Condition()
+{
+	if (Npc_GetDistToWP(self, "WP_STEINKREIS_05") < 1000)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_FeuerGegenEis4_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis4_14_00"); //Beunruhigend… das Portal ist mittlerweile sichtbar… . Ich muss es mir näher ansehen.
+
+	AI_StopProcessInfos	(self);
 };
 
 INSTANCE Info_Mod_Hyglas_Leichengase (C_INFO)
