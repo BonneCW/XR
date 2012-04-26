@@ -415,6 +415,35 @@ FUNC VOID Info_Mod_Sagitta_OnarsHeilmittel_Info()
 	B_GiveInvItems	(self, hero, ItPo_OnarsTrank, 1);
 };
 
+INSTANCE Info_Mod_Sagitta_MangelQuest (C_INFO)
+{
+	npc		= Mod_773_NONE_Sagitta_NW;
+	nr		= 1;
+	condition	= Info_Mod_Sagitta_MangelQuest_Condition;
+	information	= Info_Mod_Sagitta_MangelQuest_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Fungizid kaufen (80 Gold)";
+};
+
+FUNC INT Info_Mod_Sagitta_MangelQuest_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Faros_MangelQuest))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Faros_MangelQuest2))
+	&& (Npc_HasItems(hero, ItMi_Gold) >= 80)
+	&& (Npc_HasItems(hero, ItMi_Fungizid) == 0)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Sagitta_MangelQuest_Info()
+{
+	B_GiveInvItems	(hero, self, ItMi_Gold, 80);
+
+	B_GiveInvItems	(self, hero, ItMi_Fungizid, 1);
+};
+
 INSTANCE Info_Mod_Sagitta_Lehrer (C_INFO)
 {
 	npc		= Mod_773_NONE_Sagitta_NW;

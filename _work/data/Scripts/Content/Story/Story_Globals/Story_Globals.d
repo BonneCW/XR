@@ -46,6 +46,8 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_Pat_FurgasFertig;
+var int Mod_Pat_MangelStarted;
 var int Mod_TillChange;
 var int Mod_TillChange_Day;
 var int Mod_BeliarBibScene;

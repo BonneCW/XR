@@ -2179,7 +2179,22 @@ INSTANCE ItMi_Sumpfkraeuter_Molerat (C_Item)//steht drin, weil auch in Welt vert
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
-INSTANCE ItMi_JackalTabak (C_Item)//steht drin, weil auch in Welt verteilt!!
+INSTANCE ItMi_Fungizid (C_Item)
+{
+	name 				=	"Fungizide";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	80;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[5]				= 	NAME_Value;		COUNT[5]	=	value;
+};
+
+INSTANCE ItMi_JackalTabak (C_Item)
 {
 	name 				=	"Varant-Tabak";
 

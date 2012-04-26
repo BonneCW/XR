@@ -202,6 +202,35 @@ FUNC VOID Info_Mod_Ignaz_Amulett_Info()
 	B_LogEntry	(TOPIC_MOD_BEL_SUCHE, "Ignaz ist dem Tode nahe und das Amulett wurde von Novizen gestohlen. Sie sind scheinbar bei einem Steinkreis in einem großen Wald.");
 };
 
+INSTANCE Info_Mod_Ignaz_MangelQuest (C_INFO)
+{
+	npc		= Mod_584_NONE_Ignaz_NW;
+	nr		= 1;
+	condition	= Info_Mod_Ignaz_MangelQuest_Condition;
+	information	= Info_Mod_Ignaz_MangelQuest_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Fungizid kaufen (80 Gold)";
+};
+
+FUNC INT Info_Mod_Ignaz_MangelQuest_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Faros_MangelQuest))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Faros_MangelQuest2))
+	&& (Npc_HasItems(hero, ItMi_Gold) >= 80)
+	&& (Npc_HasItems(hero, ItMi_Fungizid) == 0)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Ignaz_MangelQuest_Info()
+{
+	B_GiveInvItems	(hero, self, ItMi_Gold, 80);
+
+	B_GiveInvItems	(self, hero, ItMi_Fungizid, 1);
+};
+
 INSTANCE Info_Mod_Ignaz_Flugblaetter (C_INFO)
 {
 	npc		= Mod_584_NONE_Ignaz_NW;

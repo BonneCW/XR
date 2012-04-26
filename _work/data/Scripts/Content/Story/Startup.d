@@ -7789,12 +7789,17 @@ FUNC VOID STARTUP_FEUERMAGIER_TEMPEL()
 	Wld_InsertNpc	(Mod_1739_KDF_Ordenspriester_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1740_KDF_Ordenspriester_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1769_PAL_Paladin_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7787_SFB_Schuerfer_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7788_SFB_Schuerfer_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7789_SFB_Schuerfer_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7790_SFB_Schuerfer_PAT,	"WP_PAT_START");
 
 	//Wichtige NPC's
 	Wld_InsertNpc	(Mod_1746_KDF_Tojan_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1747_KDF_Furgas_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1773_KDF_Nagon_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1774_KDF_Orakel_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7791_SFB_Flaemar_PAT,	"WP_PAT_START");
 
 	//Mauer-NPC's
 	Wld_InsertNpc	(Mod_1748_KDF_Magier_PAT,	"WP_PAT_START");
@@ -7886,6 +7891,24 @@ FUNC VOID INIT_FEUERMAGIER_UNTERGRUND()
 		Wld_InsertNpc	(Mod_1916_KDF_Magier_PAT_UG, "WP_PAT_UNTERGRUND_06");
 		
 		Mod_SchwarzerVerraeterInsert = TRUE;
+	};
+
+	if (Npc_KnowsInfo(hero, Info_Mod_Furgas_MangelQuest2))
+	&& (Mod_Pat_FurgasFertig == 0)
+	{
+		Mod_Pat_FurgasFertig = 1;
+
+		Wld_InsertNpc	(Mod_7787_SFB_Schuerfer_PAT, "TOT");
+		Wld_InsertNpc	(Mod_7788_SFB_Schuerfer_PAT, "TOT");
+		Wld_InsertNpc	(Mod_7789_SFB_Schuerfer_PAT, "TOT");
+		Wld_InsertNpc	(Mod_7790_SFB_Schuerfer_PAT, "TOT");
+		Wld_InsertNpc	(Mod_7791_SFB_Flaemar_PAT, "TOT");
+
+		B_StartOtherRoutine	(Mod_7787_SFB_Schuerfer_PAT, "MINE");
+		B_StartOtherRoutine	(Mod_7788_SFB_Schuerfer_PAT, "MINE");
+		B_StartOtherRoutine	(Mod_7789_SFB_Schuerfer_PAT, "MINE");
+		B_StartOtherRoutine	(Mod_7790_SFB_Schuerfer_PAT, "MINE");
+		B_StartOtherRoutine	(Mod_7791_SFB_Flaemar_PAT, "MINE");
 	};
 };
 

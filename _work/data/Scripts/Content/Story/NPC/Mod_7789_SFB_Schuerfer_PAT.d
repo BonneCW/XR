@@ -1,13 +1,13 @@
-instance Mod_1553_SFB_Schuerfer_MT (Npc_Default)
+instance Mod_7789_SFB_Schuerfer_PAT (Npc_Default)
 {
 	//-------- primary data --------
 	
 	name =					NAME_Schuerfer;
-	npctype =				npctype_mt_schuerfer;
-	guild =					GIL_mil;      
+	npctype =				npctype_MAIN;
+	guild =					GIL_VLK;  
 	level =					3;
 	voice =					1;
-	id =					1553;
+	id =					7789;
 
 
 	//-------- abilities --------
@@ -37,14 +37,26 @@ instance Mod_1553_SFB_Schuerfer_MT (Npc_Default)
 	
 	//-------------Daily Routine-------------
 
-	daily_routine = Rtn_FMCstart_1553;
+	daily_routine = Rtn_Start_7789;
 	
 	//------------ //MISSIONs------------------
 
 };
 
-FUNC VOID Rtn_FMCstart_1553 ()
+FUNC VOID Rtn_Start_7789 ()
 {
-	TA_Pick_Ore	(01,00,13,00, "FMC_ORE_02");
-	TA_Pick_Ore	(13,00,01,00, "FMC_ORE_02");
+	TA_Sit_Campfire		(01,00,13,00,"WP_PAT_KLOSTER_002");
+	TA_Sit_Campfire		(13,00,01,00,"WP_PAT_KLOSTER_002");
+};
+
+FUNC VOID Rtn_Mine_7789 ()
+{
+	TA_Pick_Ore	(01,00,13,00,"WP_PAT_UG_RUNENSTEIN_11");
+	TA_Pick_Ore	(13,00,01,00,"WP_PAT_UG_RUNENSTEIN_11");
+};
+
+FUNC VOID Rtn_Tot_7789 ()
+{
+	TA_Pick_Ore	(01,00,13,00,"TOT");
+	TA_Pick_Ore	(13,00,01,00,"TOT");
 };
