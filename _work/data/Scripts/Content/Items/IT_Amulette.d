@@ -355,7 +355,7 @@ INSTANCE  ItAm_CyrcoMinenAmulett(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Amulett der Anitmagie";
+	description		= "Amulett der Antimagie";
 	
 	TEXT[2]			= "zeigt magisch verborgene Dinge";
 	TEXT[5]			= NAME_Value;

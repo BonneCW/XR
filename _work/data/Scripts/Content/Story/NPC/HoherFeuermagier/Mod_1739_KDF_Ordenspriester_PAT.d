@@ -1,7 +1,7 @@
 instance Mod_1739_KDF_Ordenspriester_PAT (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= Name_ordenspriester;	
+	name 		= "Ordensalchemist";	
 	guild 		= GIL_vlk;
 	id 			= 1739;
 	voice 		= 6;
@@ -42,5 +42,5 @@ instance Mod_1739_KDF_Ordenspriester_PAT (Npc_Default)
 FUNC VOID Rtn_Start_1739()
 {	
 	TA_Potion_Alchemy	(05,00,20,15,"WP_PAT_WEG_95");
-    TA_Potion_Alchemy	(20,15,05,00,"WP_PAT_WEG_95");
+	TA_Potion_Alchemy	(20,15,05,00,"WP_PAT_WEG_95");
 };

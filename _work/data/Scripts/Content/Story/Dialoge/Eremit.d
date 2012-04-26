@@ -468,6 +468,7 @@ FUNC INT Info_Mod_Eremit_Prisma8_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Eremit_Prisma6))
 	&& (Npc_HasItems(hero, ItSc_BeliarsRage) == 0)
+	&& (Mod_PrismaRitual_Counter < 80)
 	{
 		return 1;
 	};

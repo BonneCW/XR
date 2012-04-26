@@ -42,6 +42,6 @@ instance Mod_1738_KDF_Velario_PAT (Npc_Default)
 FUNC VOID Rtn_Start_1738()
 {	
 	TA_Read_Bookstand	(06,00,10,05,"WP_PAT_WEG_68");
-    TA_Study_WP			(10,05,23,05,"WP_PAT_WEG_70");
-    TA_Sit_Throne		(23,05,06,00,"WP_PAT_WEG_67");
+	TA_Study_WP		(10,05,23,05,"WP_PAT_WEG_70");
+	TA_Sit_Throne		(23,05,06,00,"WP_PAT_WEG_67");
 };
