@@ -50,7 +50,7 @@ INSTANCE Info_Mod_Flaemar_MangelQuest (C_INFO)
 	nr		= 1;
 	condition	= Info_Mod_Flaemar_MangelQuest_Condition;
 	information	= Info_Mod_Flaemar_MangelQuest_Info;
-	permanent	= 0;
+	permanent	= 1;
 	important	= 0;
 	description	= "(Kraut geben)";
 };
@@ -67,6 +67,8 @@ FUNC INT Info_Mod_Flaemar_MangelQuest_Condition()
 FUNC VOID Info_Mod_Flaemar_MangelQuest_F()
 {
 	Info_ClearChoices	(Info_Mod_Flaemar_MangelQuest);
+
+	Info_AddChoice	(Info_Mod_Flaemar_MangelQuest, DIALOG_BACK, Info_Mod_Flaemar_MangelQuest_BACK);
 
 	if (Npc_HasItems(hero, ItMi_Traumruf) >= 1)
 	{
@@ -89,6 +91,11 @@ FUNC VOID Info_Mod_Flaemar_MangelQuest_F()
 FUNC VOID Info_Mod_Flaemar_MangelQuest_Info()
 {
 	Info_Mod_Flaemar_MangelQuest_F();
+};
+
+FUNC VOID Info_Mod_Flaemar_MangelQuest_BACK()
+{
+	Info_ClearChoices	(Info_Mod_Flaemar_MangelQuest);
 };
 
 FUNC VOID Info_Mod_Flaemar_MangelQuest_E()
@@ -173,7 +180,7 @@ INSTANCE Info_Mod_Flaemar_MangelQuest2 (C_INFO)
 	nr		= 1;
 	condition	= Info_Mod_Flaemar_MangelQuest2_Condition;
 	information	= Info_Mod_Flaemar_MangelQuest2_Info;
-	permanent	= 0;
+	permanent	= 1;
 	important	= 0;
 	description	= "(Alkohol geben)";
 };
@@ -190,6 +197,8 @@ FUNC INT Info_Mod_Flaemar_MangelQuest2_Condition()
 FUNC VOID Info_Mod_Flaemar_MangelQuest2_F()
 {
 	Info_ClearChoices	(Info_Mod_Flaemar_MangelQuest2);
+
+	Info_AddChoice	(Info_Mod_Flaemar_MangelQuest2, DIALOG_BACK, Info_Mod_Flaemar_MangelQuest2_BACK);
 
 	if (Npc_HasItems(hero, ItFo_Addon_Rum) >= 1)
 	{
@@ -212,6 +221,11 @@ FUNC VOID Info_Mod_Flaemar_MangelQuest2_F()
 FUNC VOID Info_Mod_Flaemar_MangelQuest2_Info()
 {
 	Info_Mod_Flaemar_MangelQuest2_F();
+};
+
+FUNC VOID Info_Mod_Flaemar_MangelQuest2_BACK()
+{
+	Info_ClearChoices	(Info_Mod_Flaemar_MangelQuest2);
 };
 
 FUNC VOID Info_Mod_Flaemar_MangelQuest2_E()

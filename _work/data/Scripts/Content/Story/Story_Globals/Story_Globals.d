@@ -46,6 +46,15 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_Pat_PflanzenCount;
+var int Mod_Pat_Heilpflanze;
+var int Mod_Pat_Heilkraut;
+var int Mod_Pat_Heilwurzel;
+var int Mod_Pat_Feuernessel;
+var int Mod_Pat_Feuerkraut;
+var int Mod_Pat_Feuerwurzel;
+var int Mod_Pat_Heilknospe;
+var int Mod_Pat_Winterrute;
 var int Mod_Pat_FlaemarKraut;
 var int Mod_Pat_FlaemarAlkohol;
 var int Mod_Pat_FurgasFertig;

@@ -25,6 +25,7 @@ FUNC VOID B_StopMangel()
 	&& (Npc_KnowsInfo(hero, Info_Mod_Furgas_MangelQuest2))
 	&& (Mod_Pat_FlaemarKraut >= 15)
 	&& (Mod_Pat_FlaemarAlkohol >= 15)
+	&& (Mod_Pat_PflanzenCount == 5)
 	{
 		B_SetTopicStatus	(TOPIC_MOD_FM_MANGEL, LOG_SUCCESS);
 		B_LogEntry	(TOPIC_MOD_FM_MANGEL, "Durch die lange Belagerung fehlt es in Patherion an vielen Dingen.");
