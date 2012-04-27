@@ -483,7 +483,8 @@ FUNC INT PC_Scrolls_Condition ()
 	|| (PLAYER_TALENT_SCROLLS[SCROLL_Shrink] == TRUE)
 	|| (PLAYER_TALENT_SCROLLS[SCROLL_Light] == TRUE)
 	|| (PLAYER_TALENT_SCROLLS[SCROLL_HarmUndead] == TRUE)
-	|| (PLAYER_TALENT_SCROLLS[SCROLL_Zap] == TRUE))
+	|| (PLAYER_TALENT_SCROLLS[SCROLL_Zap] == TRUE)
+	|| (PLAYER_TALENT_SCROLLS[SCROLL_AuraFlammen] == TRUE))
 	{
 		return TRUE;
 	};
@@ -637,6 +638,10 @@ FUNC VOID PC_Scrolls_Info()
 	if (PLAYER_TALENT_SCROLLS[SCROLL_BeliarsRage] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Scrolls, "Berliars Zorn", PC_ItSc_BeliarsRage);
+	};
+	if (PLAYER_TALENT_SCROLLS[SCROLL_AuraFlammen] == TRUE)
+	{
+		Info_AddChoice 	  (PC_Scrolls, "Aura der Flammen", PC_ItSc_AuraFlammen);
 	};
 	if (PLAYER_TALENT_SCROLLS[SCROLL_ArmyOfDarkness] == TRUE)
 	{
@@ -2773,6 +2778,43 @@ FUNC VOID PC_ItSc_Shrink ()
 		Npc_RemoveInvItems  (hero, ItWr_Paper, 1);
 		
 		CreateInvItems 	    (hero, ItSc_Shrink, 1); 
+
+		Print (PRINT_RuneSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+	};
+	
+	CreateInvItems (self, ItMi_RuneBlank, 1);
+	
+	B_ENDPRODUCTIONDIALOG ();
+};
+
+FUNC VOID PC_ItSc_AuraFlammen ()
+{
+	if (Npc_HasItems(hero, ItWr_Paper) >= 1)	
+	&& (Npc_HasItems(hero, ItSc_Firerain) >= 1)
+	&& (Npc_HasItems(hero, ItSc_Pyrokinesis) >= 1)
+	&& (Npc_HasItems(hero, ItAt_DemonHeart) >= 1)
+	&& (Npc_HasItems(hero, ItAt_FiregolemHeart) >= 1)
+	&& (Npc_HasItems(hero, ItAt_WaranFiretongue) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Coal) >= 3)
+	&& (Npc_HasItems(hero, ItMi_Pitch) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Sulfur) >= 2)
+	{
+		Npc_RemoveInvItems  (hero, ItWr_Paper, 1);
+
+		Npc_RemoveInvItems  (hero, ItSc_Firerain, 1);
+		Npc_RemoveInvItems  (hero, ItSc_Pyrokinesis, 1);
+		Npc_RemoveInvItems  (hero, ItAt_DemonHeart, 1);
+		Npc_RemoveInvItems  (hero, ItAt_FiregolemHeart, 1);
+		Npc_RemoveInvItems  (hero, ItAt_WaranFiretongue, 1);
+		Npc_RemoveInvItems  (hero, ItMi_Coal, 3);
+		Npc_RemoveInvItems  (hero, ItMi_Pitch, 1);
+		Npc_RemoveInvItems  (hero, ItMi_Sulfur, 2);
+		
+		CreateInvItems 	    (hero, ItSc_AuraFlammen, 1); 
 
 		Print (PRINT_RuneSuccess);
 	}

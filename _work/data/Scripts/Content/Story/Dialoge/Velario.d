@@ -271,6 +271,92 @@ FUNC VOID Info_Mod_Velario_AurenUndKristalle4_Info()
 	B_StartOtherRoutine	(self, "START");
 };
 
+INSTANCE Info_Mod_Velario_AurenUndKristalle5 (C_INFO)
+{
+	npc		= Mod_1738_KDF_Velario_PAT;
+	nr		= 1;
+	condition	= Info_Mod_Velario_AurenUndKristalle5_Condition;
+	information	= Info_Mod_Velario_AurenUndKristalle5_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich habe die Spruchrolle angewendet.";
+};
+
+FUNC INT Info_Mod_Velario_AurenUndKristalle5_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Velario_AurenUndKristalle4))
+	&& (Mod_AuraFlammen_Used == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Velario_AurenUndKristalle5_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle5_15_00"); //Ich habe die Spruchrolle angewendet.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle5_06_01"); //(erwartungsvoll) Und, wie ist es verlaufen?
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle5_15_02"); //Sie haben alle Erwartungen erfüllt.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle5_06_03"); //(erfreut) Ausgezeichnet! Das wird einige neue Impulse für die Forschung an der Magie liefern.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle5_06_04"); //Hier, nimm zum Dank das Rezept für die Spruchrollen und einige Manatränke.
+
+	CreateInvItems	(hero, ItWr_Scroll_AuraFlammen, 1);
+	CreateInvItems	(hero, ItPo_Mana_Addon_04, 3);
+
+	B_ShowGivenThings	("Rezept für 'Aura der Flammen' und 3 Reines Mana erhalten");
+
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle5_06_05"); //Innos sei mit dir.
+
+	B_GivePlayerXP	(100);
+};
+
+INSTANCE Info_Mod_Velario_AurenUndKristalle6 (C_INFO)
+{
+	npc		= Mod_1738_KDF_Velario_PAT;
+	nr		= 1;
+	condition	= Info_Mod_Velario_AurenUndKristalle6_Condition;
+	information	= Info_Mod_Velario_AurenUndKristalle6_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Velario_AurenUndKristalle6_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Velario_AurenUndKristalle3))
+	&& (Wld_GetDay()-1 > Mod_PAT_VelarioDay)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Velario_AurenUndKristalle6_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_00"); //Es ist tatsächlich gelungen! Ich konnte diesen Kristall zu einem magischen Werkzeug umformen.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_01"); //Wenn du ihn bei dir trägst, sollte er dir einen umfassenden Schutz gegen Magie und Feuer bieten, der seines gleichen sucht.
+
+	B_GiveInvItems	(self, hero, ItMi_KristallPrisma, 1);
+
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_02"); //Hier, nun solltest du diese Aura-Spruchrollen ohne große Gefahr für dein Leben anwenden können.
+
+	B_GiveInvItems	(self, hero, ItSc_AuraFlammen, 2);
+
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_03"); //Nimm auch noch diesen Schnelligkeitstrank und die Verwandlungsspruchrolle.
+
+	CreateInvItems	(hero, ItSc_TrfSnapper, 1);
+	CreateInvItems	(hero, ItPo_Speed, 1);
+
+	B_ShowGivenThings	("Trank der Geschwindigkeit und Spruchrolle 'Verwandlung Snapper' erhalten");
+
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_04"); //Sie könnten dir dabei nützlich sein, die Reihen der Feinde zu passieren.
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle6_15_05"); //Eindrucksvolle Utensilien der Magie. Hab Dank.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_06"); //Und nun ... lasse dich von Innos' Flamme beseelen, wenn du diesen verfluchten Hexenweibern ordentlich einheizt!
+
+	B_SetTopicStatus	(TOPIC_MOD_FM_AURENUNDKRISTALLE, LOG_SUCCESS);
+
+	B_GivePlayerXP	(150);
+
+	B_StartOtherRoutine	(self, "START");
+};
+
 INSTANCE Info_Mod_Velario_Fake (C_INFO)
 {
 	npc		= Mod_1738_KDF_Velario_PAT;

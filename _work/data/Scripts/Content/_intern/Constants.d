@@ -1416,8 +1416,9 @@ const int SCROLL_FullHeal		= 33;
 const int SCROLL_Light			= 34;
 const int SCROLL_Shrink			= 35;
 const int SCROLL_HarmUndead		= 36;
+const int SCROLL_AuraFlammen		= 37;
 
-const int MAX_SCROLLS			= 37;
+const int MAX_SCROLLS			= 38;
 
 var int PLAYER_TALENT_SCROLLS[MAX_SCROLLS];
 

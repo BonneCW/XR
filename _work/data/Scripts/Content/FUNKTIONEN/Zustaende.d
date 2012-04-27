@@ -792,4 +792,24 @@ FUNC VOID Zustaende()
 	{
 		PrintScreen	("H", posx, 92, FONT_STATUS, 2);
 	};
+
+	// Kristall der Prismen
+
+	if (Mod_KristallPrisma == 0)
+	&& (Npc_HasItems(hero, ItMi_KristallPrisma) == 1)
+	{
+		Mod_KristallPrisma = 1;
+
+		hero.protection[PROT_MAGIC] += 30;
+		hero.protection[PROT_FIRE] += 30;
+	};
+
+	if (Mod_KristallPrisma == 1)
+	&& (Npc_HasItems(hero, ItMi_KristallPrisma) == 0)
+	{
+		Mod_KristallPrisma = 0;
+
+		hero.protection[PROT_MAGIC] -= 30;
+		hero.protection[PROT_FIRE] -= 30;
+	};
 };

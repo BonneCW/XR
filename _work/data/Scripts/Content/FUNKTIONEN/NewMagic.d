@@ -96,6 +96,23 @@ FUNC VOID NewMagic()
 		Mod_AuraFeuer_Counter -= 1;
 	};
 
+	// Aura der Flammen
+
+	if (Mod_AuraFlammen_Counter > 0)
+	{
+		if (Mod_AuraFeuer%5 == 0)
+		{
+			Wld_PlayEffect("spellFX_RedGlow",  hero, hero, 0, 0, 0, FALSE );
+		};
+
+		if (Mod_AuraFlammen_Counter == 1)
+		{
+			Mod_AuraFeuer = 0;
+		};
+
+		Mod_AuraFlammen_Counter -= 1;
+	};
+
 	// Aura der Heilung
 
 	if (Mod_AuraHeilung_Counter > 0)
