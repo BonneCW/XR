@@ -298,6 +298,45 @@ FUNC VOID Info_Mod_Hyglas_FeuerGegenEis7_Info()
 	B_StartOtherRoutine	(Mod_553_KDF_Ulthar_NW, "ATBETT");
 };
 
+INSTANCE Info_Mod_Hyglas_BackInKhorinis (C_INFO)
+{
+	npc		= Mod_918_KDF_Hyglas_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hyglas_BackInKhorinis_Condition;
+	information	= Info_Mod_Hyglas_BackInKhorinis_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Hyglas_BackInKhorinis_Condition()
+{
+	if (Mod_FM_Hyglas_Eisgebiet == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_BackInKhorinis_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Hyglas_BackInKhorinis_14_00"); //Ahh, mein Retter.
+	AI_Output(hero, self, "Info_Mod_Hyglas_BackInKhorinis_15_01"); //Du bist jetzt Prediger?
+	AI_Output(self, hero, "Info_Mod_Hyglas_BackInKhorinis_14_02"); //Ja, ich will den Armen und Not leidenden das wärmende Wort von Innos näher bringen.
+	AI_Output(self, hero, "Info_Mod_Hyglas_BackInKhorinis_14_03"); //Ich habe selbst viele Wochen Hunger und Kälte gelitten und sehe die vergangenen Ereignisse als eine Weisung von Innos.
+	AI_Output(self, hero, "Info_Mod_Hyglas_BackInKhorinis_14_04"); //Mein Leben werde ich von nun an der Unterstützung und Speisung jener Menschen zu widmen, denen das Schicksal eben nicht so viele Privilegien und Reichtum geschenkt hat.
+	AI_Output(self, hero, "Info_Mod_Hyglas_BackInKhorinis_14_05"); //Daher benötige ich diese Spruchrollen und Runen für den Kampf nicht mehr und gebe sie an dich weiter.
+
+	B_ShowGivenThings	("Spruchrollen Feuersturm und Feuerregen und Runen Feuersturm und großer Feuerball erhalten");
+
+	CreateInvItems	(hero, ItSc_Firerain, 1);
+	CreateInvItems	(hero, ItSc_Pyrokinesis, 1);
+	CreateInvItems	(hero, ItRu_Pyrokinesis, 1);
+	CreateInvItems	(hero, ItRu_ChargeFireball, 1);
+
+	AI_Output(self, hero, "Info_Mod_Hyglas_BackInKhorinis_14_06"); //Bei dir kann ich mir sicher sein, dass sie einem rechten Zweck dienen werden. Innos sei mit dir.
+
+	B_GivePlayerXP	(200);
+};
+
 INSTANCE Info_Mod_Hyglas_Leichengase (C_INFO)
 {
 	npc		= Mod_918_KDF_Hyglas_NW;
@@ -436,6 +475,7 @@ func int Info_Mod_Hyglas_Runen_Condition ()
 	&& ((Mod_Gilde == 6)
 	|| (Mod_Gilde == 7)
 	|| (Mod_Gilde == 8))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Hyglas_BackInKhorinis))
 	{
 		return 1;
 	};

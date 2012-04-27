@@ -80,3 +80,9 @@ FUNC VOID Rtn_Eishoehle2_918 ()
 	TA_Guide_Player	(08,00,23,00,"WP_EISHOEHLE_04");
 	TA_Guide_Player	(23,00,08,00,"WP_EISHOEHLE_04");
 };
+
+FUNC VOID Rtn_Prediger_918 ()
+{	
+	TA_Preach_Hyglas	(08,00,23,00,"NW_CITY_WAY_TO_SHIP_03");
+	TA_Preach_Hyglas	(23,00,08,00,"NW_CITY_WAY_TO_SHIP_03");
+};

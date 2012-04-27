@@ -46,6 +46,8 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_FM_Hyglas_Eisgebiet;
+var int Mod_FM_Hyglas_Eisgebiet_Day;
 var int Mod_KristallPrisma;
 var int Mod_AuraFlammen_Used;
 var int Mod_AuraFlammen;

@@ -41,13 +41,13 @@ instance Mod_1954_EIS_Thys_EIS (Npc_Default)
 FUNC VOID Rtn_Start_1954 ()
 {	
 	TA_Read_Bookstand	(06,00,07,00,"EIS_91");
-    TA_Sit_Throne	(07,00,10,00,"EIS_92");
-    TA_Potion_Alchemy	(10,00,13,00,"EIS_79");
-    TA_Sit_Throne	(13,00,15,00,"EIS_83");
-    TA_Study_WP	(15,00,17,00,"EIS_98");
-    TA_Read_Bookstand	(17,00,19,00,"EIS_91");
-    TA_Sit_Throne	(19,00,23,00,"EIS_92");
-    TA_Sleep	(23,00,06,00,"EIS_89");
+	TA_Sit_Throne	(07,00,10,00,"EIS_92");
+	TA_Potion_Alchemy	(10,00,13,00,"EIS_79");
+	TA_Sit_Throne	(13,00,15,00,"EIS_83");
+	TA_Study_WP	(15,00,17,00,"EIS_98");
+	TA_Read_Bookstand	(17,00,19,00,"EIS_91");
+	TA_Sit_Throne	(19,00,23,00,"EIS_92");
+	TA_Sleep	(23,00,06,00,"EIS_89");
 };
 
 FUNC VOID Rtn_AtThys_1954 ()

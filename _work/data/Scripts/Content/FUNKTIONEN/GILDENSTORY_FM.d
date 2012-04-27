@@ -622,5 +622,38 @@ FUNC VOID GILDENSTORY_FM()
 				Mod_FM_FeuerEis = 3;
 			};
 		};
+
+		if (Mod_FM_Hyglas_Eisgebiet == 2)
+		{
+			Mod_FM_Hyglas_Eisgebiet = 3;
+
+			B_StartOtherRoutine	(Mod_918_KDF_Hyglas_NW, "PREDIGER");
+		};
+	};
+
+	if (CurrentLevel == EISGEBIET_ZEN)
+	{
+		// Feuersbrunst am See
+
+		if (Npc_KnowsInfo(hero, Info_Mod_Hyglas_EIS_Feuersbrunst))
+		&& (Npc_GetDistToNpc(hero, Mod_7793_KDF_Hyglas_EIS) > 5000)
+		&& (Mod_FM_Hyglas_Eisgebiet == 0)
+		{
+			Mod_FM_Hyglas_Eisgebiet = 1;
+			Mod_FM_Hyglas_Eisgebiet_Day = Wld_GetDay();
+
+			B_StartOtherRoutine	(Mod_7793_KDF_Hyglas_EIS, "ATTHYS");
+			B_StartOtherRoutine	(Mod_1954_EIS_Thys_EIS, "ATTHYS");
+		};
+
+		if (Wld_GetDay() > Mod_FM_Hyglas_Eisgebiet_Day)
+		&& (Mod_FM_Hyglas_Eisgebiet == 1)
+		{
+			Mod_FM_Hyglas_Eisgebiet = 2;
+
+			B_RemoveNpc	(Mod_7793_KDF_Hyglas_EIS);
+
+			B_StartOtherRoutine	(Mod_1954_EIS_Thys_EIS, "START");
+		};
 	};
 };

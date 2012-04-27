@@ -1,9 +1,9 @@
-instance Mod_582_NONE_Halvor_NW (Npc_Default)
+instance Mod_7792_OUT_Anglar_EIS (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Halvor"; 
-	guild 		= GIL_PAL;
-	id 			= 582;
+	name 		= "Anglar"; 
+	guild 		= GIL_OUT;
+	id 			= 7792;
 	voice 		= 6;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
@@ -24,7 +24,7 @@ instance Mod_582_NONE_Halvor_NW (Npc_Default)
 	// Händler
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart11, BodyTex_N,ITAR_Vlk_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart11, BodyTex_N, ITAR_Eisgebiet_01);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 	
@@ -35,12 +35,12 @@ instance Mod_582_NONE_Halvor_NW (Npc_Default)
 	B_SetFightSkills (self, 40); 
 
 	// ------ TA anmelden ------
-	daily_routine 		= Rtn_Start_582;
+	daily_routine 		= Rtn_Start_7792;
 };
 
-FUNC VOID Rtn_Start_582()
+FUNC VOID Rtn_Start_7792()
 {
-	TA_Stand_ArmsCrossed		(05,00,20,00,"NW_CITY_HABOUR_POOR_AREA_PATH_01"); 
-	TA_Stand_Drinking			(20,00,01,00,"NW_CITY_HABOUR_PUFF_IN_07");
-	TA_Sleep					(01,00,05,00,"NW_CITY_BED_HALVOR");
+	TA_Stand_ArmsCrossed	(05,00,20,00,"MARKTHALLE_HANDEL_4"); 
+	TA_Stand_Drinking	(20,00,01,00,"EIS_139");
+	TA_Sleep		(01,00,05,00,"EIS_162");
 };

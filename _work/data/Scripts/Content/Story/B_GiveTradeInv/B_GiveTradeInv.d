@@ -83,6 +83,7 @@ func void B_GiveTradeInv (var C_NPC slf)
 	var C_NPC Trd_Genn_TUG;	Trd_Genn_TUG		= Hlp_GetNpc (Mod_1959_VMG_Genn_TUG);
 	var C_NPC Trd_Gestath_EIS;	Trd_Gestath_EIS		= Hlp_GetNpc (Mod_974_OUT_Gestath_EIS);
 	var C_NPC Trd_Schmuggler_NW;	Trd_Schmuggler_NW		= Hlp_GetNpc (Mod_7783_OUT_Schmuggler_NW);
+	var C_NPC Trd_Anglar_EIS;	Trd_Anglar_EIS		= Hlp_GetNpc (Mod_7792_OUT_Anglar_EIS);
 	
 	
 //********************************************************************
@@ -133,40 +134,41 @@ func void B_GiveTradeInv (var C_NPC slf)
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Miguel_MT)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Miguel_MT	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Fisk_MT)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Fisk_MT	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Fortuno_MT)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Fortuno_MT	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Samuel_AW)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Samuel_AW	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Samuel_AW)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Samuel_AW	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Thofeistos_MT)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Thofeistos_MT	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Borka_NW)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Borka_NW	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Borka_NW)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Borka_NW	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Darrion_MT)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Darrion_MT	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Lebensmittelhaendler_REL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Lebensmittelhaendler_REL	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Caine_MT)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Caine_MT	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Snaf_MT)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Snaf_MT	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Anna_REL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Anna_REL	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Hans_REL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Hans_REL	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Caine_MT)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Caine_MT	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Snaf_MT)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Snaf_MT	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Anna_REL)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Anna_REL	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Hans_REL)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Hans_REL	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Daniel_REL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Daniel_REL	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Erika_REL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Erika_REL	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Peter_REL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Peter_REL	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Martin_NW)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Martin_NW	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Erika_REL)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Erika_REL	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Peter_REL)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Peter_REL	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Martin_NW)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Martin_NW	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Ursula_REL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Ursula_REL	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Wulfgar_JL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Wulfgar_JL	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Woron_JL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Woron_JL	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Hungar_JL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Hungar_JL	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Silas_MT)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Silas_MT	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Rupert_NW)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Rupert_NW	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Bernd_MT)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Bernd_MT	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Woron_JL)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Woron_JL	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Hungar_JL)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Hungar_JL	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Silas_MT)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Silas_MT	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Rupert_NW)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Rupert_NW	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Bernd_MT)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Bernd_MT	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Brauer_REL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Brauer_REL	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Sagitta_IR)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Sagitta_IR	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Sharky_MT)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Sharky_MT	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Sharky_MT)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Sharky_MT	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Alfans_EIS)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Alfans_EIS	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Aabid_NW)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Aabid_NW	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Aabid_NW)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Aabid_NW	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Maysara_NW)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Maysara_NW	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Mufid_NW)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Mufid_NW	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Mufid_NW)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Mufid_NW	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Harlok_REL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Harlok_REL	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Morpheus_REL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Morpheus_REL	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Anor_MT)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Anor_MT	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Hermy_MT)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Hermy_MT	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Genn_TUG)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Genn_TUG	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Anor_MT)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Anor_MT	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Hermy_MT)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Hermy_MT	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Genn_TUG)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Genn_TUG	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Gestath_EIS)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Gestath_EIS	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Schmuggler_NW)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Schmuggler_NW	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Anglar_EIS)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Anglar_EIS	(slf);};
 		
 		slf.aivar[AIV_ChapterInv] = (Kapitel +1);
 	};		
@@ -251,6 +253,7 @@ func void B_GiveTradeInv (var C_NPC slf)
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Hermy_MT)		{B_ClearDeadTrader	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Genn_TUG)		{B_ClearDeadTrader	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Gestath_EIS)		{B_ClearDeadTrader	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Schmuggler_NW)		{B_ClearDeadTrader	(slf);};		
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Schmuggler_NW)		{B_ClearDeadTrader	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Anglar_EIS)		{B_ClearDeadTrader	(slf);};		
 	};
 };

@@ -918,6 +918,39 @@ FUNC VOID Info_Mod_Pyrokar_Comeback_Info()
 	B_LogEntry	(TOPIC_MOD_ASS_COMEBACK, "Mit ein wenig Überzeugungskraft konnte ich Pyrokar eine der Opferschalen abschwatzen. Ich soll jetzt zu Gorax gehen.");
 };
 
+INSTANCE Info_Mod_Pyrokar_HyglasBack (C_INFO)
+{
+	npc		= Mod_551_KDF_Pyrokar_NW;
+	nr		= 1;
+	condition	= Info_Mod_Pyrokar_HyglasBack_Condition;
+	information	= Info_Mod_Pyrokar_HyglasBack_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Pyrokar_HyglasBack_Condition()
+{
+	if (Mod_FM_Hyglas_Eisgebiet == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Pyrokar_HyglasBack_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Pyrokar_HyglasBack_11_00"); //Ahh, da bist du ja. Du hast uns tatsächlich unseren Bruder Hyglas lebend zurück gebracht.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_HyglasBack_11_01"); //Das ist schon fast ein Wunder ... zumindest sehen das auch viele Menschen auf Khorinis so.
+	AI_Output(hero, self, "Info_Mod_Pyrokar_HyglasBack_15_02"); //Wird er jetzt wieder dem Kloster dienen?
+	AI_Output(self, hero, "Info_Mod_Pyrokar_HyglasBack_11_03"); //Nein ... nicht direkt. Er hat sich für einen anderen Weg entschieden und will von nun an den weniger Privilegierten der Insel predigen und zur Seite stehen.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_HyglasBack_11_04"); //Mit persönlich wäre es zwar lieber gewesen, wenn er sich den Menschen aller Schichten gleichermaßen zuwenden würde ... aber, es ist nun mal sein Entschluss.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_HyglasBack_11_05"); //Jedenfalls hast du für Innos gerechte Sache einen großen Dienst getan und sollst daher einen Teil unseres Klosterschatzes zur Belohnung bekommen.
+	AI_Output(self, hero, "Info_Mod_Pyrokar_HyglasBack_11_06"); //Nutze dieses Gold im Sinne Innos.
+
+	B_GiveInvItems	(self, hero, ItMi_Gold, 1000);
+
+	B_GivePlayerXP	(300);
+};
+
 var int Pyrokar_LastPetzCounter;
 var int Pyrokar_LastPetzCrime;
 
