@@ -125,6 +125,8 @@ INSTANCE ItRu_KristallPrisma (C_Item)
 
 	description			=	"Kristall des Feuers";
 		
+	TEXT	[0]			=	"Der Prismen-Kristall scheint sich verändert zu haben";
+		
 	TEXT	[1]			=	NAME_Manakosten;		
 	COUNT	[1]			=	SPL_Cost_AuraFlammen;
 	
