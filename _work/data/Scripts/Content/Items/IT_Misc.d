@@ -676,6 +676,23 @@ INSTANCE ItMi_SumpfhaiStein (C_Item)
 	COUNT[5] 			= 	value;
 };
 
+INSTANCE ItMi_KristallPrisma (C_Item)
+{
+	name 				=	"Kristall der Prismen";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags				=	ITEM_MULTI;
+
+	value 				=	Value_RuneBlank;
+
+	visual 				=	"Sammelrune.3DS";
+	material 			=	MAT_STONE;
+
+	description			= 	name;
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5] 			= 	value;
+};
+
 INSTANCE ItMi_TeleportStein (C_Item)
 {
 	name 				=	"Teleportstein";

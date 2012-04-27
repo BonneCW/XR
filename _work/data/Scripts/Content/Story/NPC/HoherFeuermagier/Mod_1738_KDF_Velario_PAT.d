@@ -45,3 +45,9 @@ FUNC VOID Rtn_Start_1738()
 	TA_Study_WP		(10,05,23,05,"WP_PAT_WEG_70");
 	TA_Sit_Throne		(23,05,06,00,"WP_PAT_WEG_67");
 };
+
+FUNC VOID Rtn_Runemaker_1738()
+{	
+	TA_Make_Rune		(06,00,10,05,"WP_PAT_WEG_86");
+	TA_Make_Rune		(10,05,06,00,"WP_PAT_WEG_86");
+};

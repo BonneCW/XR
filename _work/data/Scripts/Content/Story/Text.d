@@ -543,7 +543,8 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"Fackel an/aus",
 	"zu Xeres Palast",
 	"Geist rufen",
-	"Giftteppich"
+	"Giftteppich",
+	"Aura der Flammen"
 };
 
 ////////////////////////////////////////////////////////////////////////////////

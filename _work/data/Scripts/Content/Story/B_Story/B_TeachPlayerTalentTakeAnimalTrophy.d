@@ -42,8 +42,8 @@ func int B_TeachPlayerTalentTakeAnimalTrophy (var C_NPC slf, var C_NPC oth, var 
 		Npc_RemoveInvItems	(hero, ItMi_Gold, kosten);
 	};
 	
-	Log_CreateTopic (TOPIC_TalentAnimalTrophy,LOG_NOTE);
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"Ich kann jetzt, wenn ich eine Rasierklinge dabei habe:");
+	Log_CreateTopic (TOPIC_TalentAnimalTrophy, LOG_NOTE);
+	B_LogEntry (TOPIC_TalentAnimalTrophy, "Ich kann jetzt, wenn ich eine Rasierklinge dabei habe:");
 	
 	// ------ Körperteil nehmen lernen ------
 	

@@ -46,6 +46,10 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_AuraFlammen;
+var int Mod_AuraFlammen_Counter;
+var int Mod_PAT_Velario;
+var int Mod_PAT_VelarioDay;
 var int Mod_Pat_Beter;
 var int Mod_Pat_PflanzenCount;
 var int Mod_Pat_Heilpflanze;

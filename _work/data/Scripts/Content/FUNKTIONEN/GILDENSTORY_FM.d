@@ -535,6 +535,16 @@ FUNC VOID GILDENSTORY_FM()
 				Mod_7332_SMK_SchwarzerKrieger_PAT.attribute[ATR_MANA] = Mod_7332_SMK_SchwarzerKrieger_PAT.attribute[ATR_MANA_MAX];
 			};
 		};
+
+		if (Npc_KnowsInfo(hero, Info_Mod_Velario_MangelQuest2))
+		&& (Wld_GetDay() > Mod_PAT_VelarioDay)
+		&& (Mod_Enter_PAT_Second == TRUE)
+		&& (Mod_PAT_Velario == 0)
+		{
+			Mod_PAT_Velario = 1;
+
+			B_StartOtherRoutine	(Mod_1738_KDF_Velario_PAT, "RUNEMAKER");
+		};
 	};
 
 	if (CurrentLevel == NEWWORLD_ZEN)

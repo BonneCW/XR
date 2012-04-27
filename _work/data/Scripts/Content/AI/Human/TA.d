@@ -148,6 +148,7 @@ func void TA_Stand_Torch			(var int start_h, var int start_m, var int stop_h, va
 func void TA_Eremit_Kichern			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Eremit_Kichern,				waypoint);};
 func void TA_Holzspalten			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Holzspalten,				waypoint);};
 func void TA_Schatzsuche			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Schatzsuche,				waypoint);};
+func void TA_Make_Rune			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Make_Rune,				waypoint);};
 
 // Ork-TA's
 

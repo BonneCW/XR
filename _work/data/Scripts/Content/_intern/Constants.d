@@ -752,8 +752,9 @@ const int SPL_Fackel			= 197;
 const int SPL_TeleportUW		= 198;
 const int SPL_SummonGeist		= 199;
 const int SPL_Giftteppich		= 200;
+const int SPL_AuraFlammen		= 201;
 
-const int MAX_SPELL					= 201;   // 59 (Gothic), 68 (Gothic2), 100 (G2Addon)
+const int MAX_SPELL					= 202;   // 59 (Gothic), 68 (Gothic2), 100 (G2Addon)
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -998,7 +999,8 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"Fackel",
 	"Teleport",
 	"SummonGeist",
-	"Giftteppich"
+	"Giftteppich",
+	"AuraFlammen"
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1244,7 +1246,8 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"FIB",					// 197
 	"HEA",					// 198
 	"SUM",	// 199
-	"SUM"
+	"SUM",	// 200
+	"HEA"
 };
 
 
@@ -1448,15 +1451,15 @@ var int PLAYER_TALENT_SMITH[MAX_WEAPONS];
 // AnimalTrophy-Talente
 // ********************
 
-const int TROPHY_Teeth					= 0;
-const int TROPHY_Claws					= 1;
-const int TROPHY_Fur					= 2;
-const int TROPHY_Heart					= 3;
+const int TROPHY_Teeth				= 0;
+const int TROPHY_Claws				= 1;
+const int TROPHY_Fur				= 2;
+const int TROPHY_Heart				= 3;
 const int TROPHY_ShadowHorn 			= 4;
-const int TROPHY_FireTongue				= 5;
-const int TROPHY_BFWing					= 6;
-const int TROPHY_BFSting				= 7;
-const int TROPHY_Mandibles				= 8;
+const int TROPHY_FireTongue			= 5;
+const int TROPHY_BFWing				= 6;
+const int TROPHY_BFSting			= 7;
+const int TROPHY_Mandibles			= 8;
 const int TROPHY_CrawlerPlate			= 9;
 const int TROPHY_DrgSnapperHorn			= 10;
 const int TROPHY_DragonScale			= 11;
@@ -1465,11 +1468,12 @@ const int TROPHY_ReptileSkin			= 13;
 const int TROPHY_AlligatorClaws			= 14;
 const int TROPHY_SwampSharkTeeth		= 15;
 const int TROPHY_TrollTeeth			= 16;
-const int TROPHY_Blood			= 17;
+const int TROPHY_Blood				= 17;
 const int TROPHY_DragonSehne			= 18;
 const int TROPHY_DragonElixier			= 19;
+const int TROPHY_CrawlerKristall		= 20;
 
-const int MAX_TROPHIES					= 20;
+const int MAX_TROPHIES				= 21;
 
 var int PLAYER_TALENT_TAKEANIMALTROPHY[MAX_TROPHIES];
 

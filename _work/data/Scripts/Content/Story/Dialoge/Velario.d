@@ -102,6 +102,173 @@ FUNC VOID Info_Mod_Velario_MangelQuest2_Info()
 	B_LogEntry	(TOPIC_MOD_FM_MANGEL, "Velario war über das Buch mehr als nur glücklich.");
 
 	B_StopMangel();
+
+	Mod_PAT_VelarioDay = Wld_GetDay();
+};
+
+INSTANCE Info_Mod_Velario_AurenUndKristalle (C_INFO)
+{
+	npc		= Mod_1738_KDF_Velario_PAT;
+	nr		= 1;
+	condition	= Info_Mod_Velario_AurenUndKristalle_Condition;
+	information	= Info_Mod_Velario_AurenUndKristalle_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Velario_AurenUndKristalle_Condition()
+{
+	if (Mod_PAT_Velario == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Velario_AurenUndKristalle_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle_06_00"); //Ja, endlich, der Durchbruch!
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle_15_01"); //Was hast du herausgefunden?
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle_06_02"); //Im Buch waren zahlreiche Ausführungen über so genannte "Aurazauber" festgehalten.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle_06_03"); //Im gemeinsamen Studium mit einem der Dämonenmagier, ist es mir gelungen Spruchrollen herzustellen, welche diese Macht in sich bergen.
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle_15_04"); //Was vermögen diese Zauber?
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle_06_05"); //Wenn alles wie geplant funktioniert, sollte bei Anwendung dieser Spruchrolle jeder in der Umgebung über einen längeren Zeitraum konstant von Flammen versehrt werden.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle_06_06"); //Dadurch könnten dutzende von Feinden auf einen Schlag ausgelöscht werden ...
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle_15_07"); //Hört sich doch toll an. Genau das, was wir brauchen.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle_06_08"); //Ja ... nur ... es gibt da ein Problem ...
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle_15_09"); //Ja, was?
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle_06_10"); //Wie ich sagte wird jeder in der Umgebung davon versehrt ... dies schließt auch den Magier, der die Spruchrolle nutzt, selbst mit ein.
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle_15_11"); //Das ist natürlich weniger gut ...
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle_06_12"); //Außerdem wirkt die Spruchrolle nur auf Feinde in direkter Umgebung.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle_06_13"); //Das heißt, wollte man die Spruchrolle mit größtmöglichem Effekt einsetzen, müsste sich der Anwender allein vor den Toren unter Scharen von Feinden begeben.
+};
+
+INSTANCE Info_Mod_Velario_AurenUndKristalle2 (C_INFO)
+{
+	npc		= Mod_1738_KDF_Velario_PAT;
+	nr		= 1;
+	condition	= Info_Mod_Velario_AurenUndKristalle2_Condition;
+	information	= Info_Mod_Velario_AurenUndKristalle2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich habe den Belagerungsring mittlerweile so oft durchquert ...";
+};
+
+FUNC INT Info_Mod_Velario_AurenUndKristalle2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Velario_AurenUndKristalle))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Velario_AurenUndKristalle2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle2_15_00"); //Ich habe den Belagerungsring mittlerweile so oft durchquert ...
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle2_06_01"); //Verstehe ich das richtig, du würdest dich dazu bereit erklären die Spruchrolle anzuwenden?
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle2_15_02"); //Nun, es wäre nicht das erste Mal, dass ich mich in ein Wespennest begebe ...
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle2_06_03"); //Fantastisch. Da wäre aber eben noch die Sache mit dem Magie- und Feuerschaden.
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle2_15_04"); //Ja, gibt es etwas, dass mir helfen könnte dem zu widerstehen?
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle2_06_05"); //Eventuell ... das Buch hat auch Anhaltspunkte dazu gegeben.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle2_06_06"); //Es scheint möglich zu sein Kristalle magisch so zu beeinflussen, dass sie elementare und magische Energien in sich aufnehmen.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle2_06_07"); //Ein solcher Kristall könnte in der Lage dazu sein, dich vor einem Großteil des Schadens zu bewahren.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle2_06_08"); //Dazu wären allerdings einige Materialien notwendig, die ich nicht hier habe.
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle2_15_09"); //Was würdest du denn dafür benötigen?
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle2_06_10"); //Nun, allem voran Kristalle. Und wenn ich mich recht entsinne, gibt es in der Nähe auch eine Höhle, wo es mehr als genug davon gibt.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle2_06_11"); //Wenn du mir vielleicht 20 Bergkristalle bringen könntest, sowie zehn Kristalle der Kristallcrawler, könnte ich meine Arbeiten daran aufnehmen.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle2_06_12"); //Um die Kristalle von den Crawlern abzubekommen, solltest du versuchen, diese mit einer Schmiedezange zu fassen und abzubrechen. Das müsste klappen.
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle2_15_13"); //In Ordnung, ich mache mich auf den Weg.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle2_06_14"); //Gut. Innos behüte dich.
+
+	Log_CreateTopic	(TOPIC_MOD_FM_AURENUNDKRISTALLE, LOG_MISSION);
+	B_SetTopicStatus	(TOPIC_MOD_FM_AURENUNDKRISTALLE, LOG_RUNNING);
+	B_LogEntry	(TOPIC_MOD_FM_AURENUNDKRISTALLE, "Velario hat einige mächtige Auraspruchrollen entwickelt, die jedoch auch den Anwender mit Feuerschaden verheeren. Um mich davor zu schützen, könnte er Kristalle magisch beeinflussen, die den Feuer- und Magieschaden absorbieren. Dazu soll ich ihm aus der Kristallhöhle 20 Bergkristalle bringen, wie auch 10 Kristalle von den Crawlern, wozu ich eine Schmiedezange benötige.");
+
+	Log_CreateTopic (TOPIC_TalentAnimalTrophy, LOG_NOTE);
+	B_LogEntry_NS (TOPIC_TalentAnimalTrophy, "... Kristallcrawlern Kristalle abnehmen.");
+
+	B_StartOtherRoutine	(self, "START");
+};
+
+INSTANCE Info_Mod_Velario_AurenUndKristalle3 (C_INFO)
+{
+	npc		= Mod_1738_KDF_Velario_PAT;
+	nr		= 1;
+	condition	= Info_Mod_Velario_AurenUndKristalle3_Condition;
+	information	= Info_Mod_Velario_AurenUndKristalle3_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich habe die Kristalle.";
+};
+
+FUNC INT Info_Mod_Velario_AurenUndKristalle3_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Velario_AurenUndKristalle2))
+	&& (Npc_HasItems(hero, ItAt_CrawlerKristall) >= 10)
+	&& (Npc_HasItems(hero, ItMi_RockCrystal) >= 20)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Velario_AurenUndKristalle3_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle3_15_00"); //Ich habe die Kristalle.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle3_06_01"); //Ausgezeichnet. Wunderschöne Exemplare. Ich bin schon gespannt, was sich daraus machen lässt.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle3_06_02"); //Schau am besten immer mal wieder alle paar Tage vorbei. Wenn ich Fortschritte gemacht habe werde ich dir sofort Bescheid geben.
+
+	B_LogEntry	(TOPIC_MOD_FM_AURENUNDKRISTALLE, "Velario hat die Kristalle und macht sich sofort an die Arbeit. In einigen Tagen sollte ich wieder bei ihm vorbeischauen.");
+
+	Mod_PAT_VelarioDay = Wld_GetDay();
+
+	B_StartOtherRoutine	(self, "RUNEMAKER");
+};
+
+INSTANCE Info_Mod_Velario_AurenUndKristalle4 (C_INFO)
+{
+	npc		= Mod_1738_KDF_Velario_PAT;
+	nr		= 1;
+	condition	= Info_Mod_Velario_AurenUndKristalle4_Condition;
+	information	= Info_Mod_Velario_AurenUndKristalle4_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Velario_AurenUndKristalle4_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Velario_AurenUndKristalle3))
+	&& (Wld_GetDay()-1 > Mod_PAT_VelarioDay)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Velario_AurenUndKristalle4_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle4_06_00"); //Es ist tatsächlich gelungen! Ich konnte diesen Kristall zu einem magischen Werkzeug umformen.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle4_06_01"); //Wenn du ihn bei dir trägst, sollte er dir einen umfassenden Schutz gegen Magie und Feuer bieten, der seines gleichen sucht.
+
+	B_GiveInvItems	(self, hero, ItMi_KristallPrisma, 1);
+
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle4_06_02"); //Hier, nun solltest du diese Aura-Spruchrollen ohne große Gefahr für dein Leben anwenden können.
+
+	B_GiveInvItems	(self, hero, ItSc_AuraFlammen, 2);
+
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle4_06_03"); //Nimm auch noch diesen Schnelligkeitstrank und die Verwandlungsspruchrolle.
+
+	CreateInvItems	(hero, ItSc_TrfSnapper, 1);
+	CreateInvItems	(hero, ItPo_Speed, 1);
+
+	B_ShowGivenThings	("Trank der Geschwindigkeit und Spruchrolle 'Verwandlung Snapper' erhalten");
+
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle4_06_04"); //Sie könnten dir dabei nützlich sein, die Reihen der Feinde zu passieren.
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle4_15_05"); //Eindrucksvolle Utensilien der Magie. Hab Dank.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle4_06_06"); //Und nun ... lasse dich von Innos' Flamme beseelen, wenn du diesen verfluchten Hexenweibern ordentlich einheizt!
+
+	B_SetTopicStatus	(TOPIC_MOD_FM_AURENUNDKRISTALLE, LOG_SUCCESS);
+
+	B_GivePlayerXP	(150);
+
+	B_StartOtherRoutine	(self, "START");
 };
 
 INSTANCE Info_Mod_Velario_Fake (C_INFO)

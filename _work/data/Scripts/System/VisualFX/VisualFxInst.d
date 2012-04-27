@@ -4820,6 +4820,58 @@ instance spellFX_AURAFEUER_LEFTHAND	(CFx_Base_Proto)
 
 
 
+instance spellFX_AURAFLAMMEN(CFx_Base_Proto)
+{
+		visname_S 			= "MFX_Heal_INIT";
+		emtrjmode_s 		= "FIXED";
+		emTrjOriginNode 	= "ZS_RIGHTHAND";
+
+		};
+
+		instance spellFX_AURAFLAMMEN_KEY_INVEST_1	(C_ParticleFXEmitKey)
+		{
+			visname_S		= "MFX_HEAL_CAST";
+			emCreateFXID	= "spellFX_AURAFLAMMEN_LEFTHAND";
+		};
+
+		instance spellFX_AURAFLAMMEN_KEY_CAST	 	(C_ParticleFXEmitKey)
+		{
+			// Noki: wieder aktiviert, da er an der Hand bliebt
+			pfx_ppsisloopingChg = 1;
+			emCreateFXID		= "spellFX_AURAFLAMMEN_ORIGIN";
+};
+
+instance spellFX_AURAFLAMMEN_ORIGIN	(CFx_Base_Proto)
+{
+		visname_S 			= "MFX_Heal_HEAVENLIGHT";
+		emTrjOriginNode 	= "BIP01";
+		visAlpha			= 1;
+	    emtrjmode_s 		= "FIXED";
+	    sfxid				= "MFX_HEAL_CAST";
+	    sfxisambient		= 1;
+};
+
+instance spellFX_AURAFLAMMEN_LEFTHAND	(CFx_Base_Proto)
+{
+		visname_S 			= "MFX_HEAL_CAST";
+		emTrjOriginNode 	= "ZS_LEFTHAND";
+		visAlpha			= 1;
+	    emtrjmode_s 		= "FIXED";
+	    LightPresetname		= "AURA";
+		};
+
+		INSTANCE spellFX_AURAFLAMMEN_LEFTHAND_KEY_INIT (C_ParticleFXEmitKey)
+		{
+				lightrange 				= 0.001;
+		};
+
+		INSTANCE spellFX_AURAFLAMMEN_LEFTHAND_KEY_CAST (C_ParticleFXEmitKey)
+		{
+				lightrange 				= 150;
+};
+
+
+
 instance spellFX_AURAHEILUNG(CFx_Base_Proto)
 {
 		visname_S 			= "MFX_Heal_INIT";

@@ -8,7 +8,7 @@
 FUNC VOID B_GiveDeathRandomRing (var C_NPC slf)
 {
 	var int rnd;
-	rnd = Hlp_Random(9);
+	rnd = r_max(8);
 
 	if (rnd == 0)
 	{
@@ -51,7 +51,7 @@ FUNC VOID B_GiveDeathRandomRing (var C_NPC slf)
 FUNC VOID B_GiveDeathRandomAmulett (var C_NPC slf)
 {
 	var int rnd;
-	rnd = Hlp_Random(2);
+	rnd = r_max(1);
 
 	if (rnd == 0)
 	{
@@ -66,7 +66,7 @@ FUNC VOID B_GiveDeathRandomAmulett (var C_NPC slf)
 FUNC VOID B_GiveDeathRandomGuertel (var C_NPC slf)
 {
 	var int rnd;
-	rnd = Hlp_Random(1);
+	rnd = r_max(0);
 
 	if (rnd == 0)
 	{
@@ -87,7 +87,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	if (slf.aivar[AIV_MM_REAL_ID] == ID_ZOMBIE)
 	&& (CurrentLevel == ORCTEMPEL_ZEN)
 	{
-		if (Hlp_Random(100) < 50)
+		if (r_max(99) < 50)
 		{
 			CreateInvItems	(slf, ItLsTorch, 1);
 		};
@@ -95,33 +95,33 @@ func void B_GiveDeathInv (var C_NPC slf)
 
 	if (slf.guild == GIL_GOBBO)
 	{
-		if (Hlp_Random(1000) < 4)
+		if (r_max(999) < 4)
 		{
 			B_GiveDeathRandomRing(slf);
 		};
-		if (Hlp_Random(1000) < 4)
+		if (r_max(999) < 4)
 		{
 			B_GiveDeathRandomAmulett(slf);
 		};
 	};
 	if (slf.guild == GIL_ZOMBIE)
 	{
-		if (Hlp_Random(1000) < 4)
+		if (r_max(999) < 4)
 		{
 			B_GiveDeathRandomRing(slf);
 		};
-		if (Hlp_Random(1000) < 4)
+		if (r_max(999) < 4)
 		{
 			B_GiveDeathRandomAmulett(slf);
 		};
-		if (Hlp_Random(100) < 1)
+		if (r_max(99) < 1)
 		{
 			B_GiveDeathRandomAmulett(slf);
 		};
 	};
 	if (slf.guild == GIL_SCAVENGER)
 	{
-		if (Hlp_Random(1000) < 4)
+		if (r_max(999) < 4)
 		{
 			B_GiveDeathRandomRing(slf);
 		};
@@ -379,13 +379,20 @@ func void B_GiveDeathInv (var C_NPC slf)
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Knucker_11001_NW))	{	CreateInvItems (slf, ItAt_DragonElixier, 3);		};
 	};
  	
-	// ------ Drachen-Blut------
+	// ------ Drachen-Sehne------
 	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonSehne] == TRUE)
 	{
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Dragon_11009_NW)){	CreateInvItems (slf, ItAt_DragonSehne, 2);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Feuerdrache_11002_NW))	{	CreateInvItems (slf, ItAt_DragonSehne, 2);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Giftdrache_11004_NW))	{	CreateInvItems (slf, ItAt_DragonSehne, 2);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Knucker_11001_NW))	{	CreateInvItems (slf, ItAt_DragonSehne, 2);		};
+	};
+ 	
+	// ------ Crawler-Kristalle------
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_CrawlerKristall] == TRUE)
+	&& (Npc_HasItems(hero, ItMi_Pliers) >= 1)
+	{
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(KristallMinecrawler))	{	CreateInvItems (slf, ItAt_CrawlerKristall, 4);		};
 	};
  	
  	// ------ Verteilung von ANFANG AN ------
@@ -432,7 +439,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	
 	
 	// ------ Orc Inventory -----
-	Orc_Randomizer	= Hlp_Random (10);
+	Orc_Randomizer	= r_max(9);
 	
 	//------ Orcwarrior -----
 	
@@ -605,11 +612,11 @@ func void B_GiveDeathInv (var C_NPC slf)
 	&& ((Hlp_IsItem(arm, ItAr_Assassine_01))
 	|| (Hlp_IsItem(arm, ItAr_Assassine_02))))
 	{
-		if (Hlp_Random(100) < 30)
+		if (r_max(99) < 30)
 		{
 			CreateInvItems	(slf, ItPo_Pflanzengift, 1);
 		};
-		if (Hlp_Random(100) < 5)
+		if (r_max(99) < 5)
 		{
 			CreateInvItems	(slf, ItPo_Tiergift, 1);
 		};

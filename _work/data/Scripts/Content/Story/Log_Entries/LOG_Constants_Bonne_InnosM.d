@@ -18,3 +18,4 @@ const string TOPIC_MOD_SERPENTES_WEINDIEBE	=	"Weindiebe";
 const string TOPIC_MOD_GORAX_UNKRAUT	=	"Unkraut jäten";
 const string TOPIC_MOD_FM_FEUEREIS	=	"Feuer gegen Eis";
 const string TOPIC_MOD_FM_MANGEL	=	"Mangel an allem";
+const string TOPIC_MOD_FM_AURENUNDKRISTALLE	=	"Auren und Kristalle";
