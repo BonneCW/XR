@@ -776,6 +776,7 @@ const int	MOBSI_GruenErzbrocken12				= 54;
 const int	MOBSI_Anschlagtafel_Khorinis			= 55;
 const int	MOBSI_OpferschaleDT				= 56;
 const int	MOBSI_FokusSchrein				= 57;
+const int	MOBSI_Trinkfass					= 58;
 
 var int 	PLAYER_MOBSI_PRODUCTION;
 

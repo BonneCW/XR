@@ -81,7 +81,7 @@ INSTANCE AMBIENT_SCREAM06		(C_SFX_DEF) {file= "Ambient_Scream06.wav";		vol=127;	
 INSTANCE AMBIENT_SCREAM07		(C_SFX_DEF) {file= "Ambient_Scream07.wav";		vol=127;	};
 INSTANCE AMBIENT_SCREAM08		(C_SFX_DEF) {file= "Ambient_Scream08.wav";		vol=127;	};
 INSTANCE FROGS				(C_SFX_DEF) {file= "Frogs.wav";				vol=127;	};
-
+INSTANCE TRINKFASSDRINK			(C_SFX_DEF) {file= "SWIM_LITTLEWAVES_02.wav";		vol=127;	};
 
 //////////////////////
 //     TEST         //
