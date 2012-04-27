@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Faros_Hi_Condition()
 FUNC VOID Info_Mod_Faros_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Faros_Hi_09_01"); //Ich bin Faros, der Gärtner.
 	AI_Output(self, hero, "Info_Mod_Faros_Hi_09_02"); //Ich bin der Chef vom Kräutergarten.
 };

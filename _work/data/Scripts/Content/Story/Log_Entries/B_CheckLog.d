@@ -27,10 +27,13 @@ FUNC VOID B_StopMangel()
 	&& (Mod_Pat_FlaemarAlkohol >= 15)
 	&& (Mod_Pat_PflanzenCount == 5)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Nagon_MangelQuest2))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Velario_MangelQuest2))
 	{
+		B_LogEntry	(TOPIC_MOD_FM_MANGEL, "Ich habe allen geholfen. Innos dürfte zufrieden mit mir sein.");
 		B_SetTopicStatus	(TOPIC_MOD_FM_MANGEL, LOG_SUCCESS);
-		B_LogEntry	(TOPIC_MOD_FM_MANGEL, "Durch die lange Belagerung fehlt es in Patherion an vielen Dingen.");
 
 		Mod_Pat_MangelStarted = 2;
+
+		B_BlessAttribute	(hero, ATR_MANA_MAX, 5);
 	};
 };

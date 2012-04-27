@@ -85,7 +85,6 @@ STORY\B_Story\B_GivePlayerXP.d
 AI\HUMAN\C_Human\C_BodyStateContains.d
 STORY\Dialoge\MONOLOG.d
 STORY\Log_Entries\B_CloseTopic.d
-STORY\Log_Entries\B_Checklog.d
 
 NEUERUNGEN\B_EXPVerteiler.d
 
@@ -121,6 +120,8 @@ STORY\B_Content\B_LieselMaeh.d
 STORY\B_Content\B_Greg_ComesToDexter.d
 STORY\B_Content\B_Upgrade_Hero_HackChance.d
 STORY\B_CONTENT\B_MALCOMEXIDENT.d
+
+STORY\Log_Entries\B_Checklog.d
 
 NEUERUNGEN\B_HealGift.d
 
