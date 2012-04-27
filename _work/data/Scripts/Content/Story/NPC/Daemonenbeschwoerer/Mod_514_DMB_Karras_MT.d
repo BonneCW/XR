@@ -46,6 +46,18 @@ FUNC VOID Rtn_Start_514()
 	TA_Sleep	(20,00,08,00,"PALTOBURGRECHTSOBEN_9");
 };
 
+FUNC VOID Rtn_AtPsicamp_514()
+{
+	TA_Stand_ArmsCrossed	(08,00,20,00,"PSI_START");
+	TA_Stand_ArmsCrossed	(20,00,08,00,"PSI_START");
+};
+
+FUNC VOID Rtn_Tempel_514()
+{
+	TA_Stand_ArmsCrossed	(08,00,20,00,"PSI_TEMPLE_NOVIZE_PR");
+	TA_Stand_ArmsCrossed	(20,00,08,00,"PSI_TEMPLE_NOVIZE_PR");
+};
+
 FUNC VOID Rtn_Tot_514()
 {
 	TA_Stand_WP	(08,00,20,00,"TOT");

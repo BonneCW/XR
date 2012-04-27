@@ -79,6 +79,15 @@ FUNC VOID Aufnahmequests ()
 				AI_Teleport	(hero, "PALTOBURGLINKSOBENTURM_8");
 			};
 		};
+
+		// Sumpfis
+
+		if (Mod_Sekte_Aufnahme == 1)
+		{
+			Wld_InsertNpc	(Mod_7268_PSINOV_Lester_MT, "PSI_START");
+
+			Mod_Sekte_Aufnahme = 2;
+		};
 	};
 
 	if (CurrentLevel == NEWWORLD_ZEN)
@@ -86,14 +95,28 @@ FUNC VOID Aufnahmequests ()
 		// Karras portet ins Minental
 
 		if (Mod_KarrasMTTeleport == 0)
-		&& (Mod_SaveOther == 0)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Karras_Lester))
+		&& (!Npc_IsInState(Mod_514_DMB_Karras_MT, ZS_Talk))
 		{
 			Mod_KarrasMTTeleport = 1;
 
-			Mod_HasToTeleport = TRUE;
-			Mod_TeleportOrt = "PSI_START";
-			AI_Teleport	(hero, "GOTOMINENTAL");
+			AI_Teleport	(Mod_514_DMB_Karras_MT, "PSI_START");
+			B_StartOtherRoutine	(Mod_514_DMB_Karras_MT, "ATPSICAMP");
+
+			AI_Teleport	(hero, "PSI_START");
+		};
+
+		if (Npc_KnowsInfo(hero, Info_Mod_Karras_Namib))
+		&& (Mod_KarrasNecronicum == 0)
+		{
+			Mod_KarrasNecronicum = 1;
+
+			Wld_InsertItem	(ItWr_BeliarBook, "FP_NW_ITEM_LIBRARY_IRDORATHBOOK");
+
+			B_StartOtherRoutine	(Mod_523_KDF_Daron_NW, "CITY");
+			B_StartOtherRoutine	(Mod_1190_NOV_Katar_NW, "CITY");
+
+			Wld_InsertNpc	(Mod_7267_VLK_Joseppe_NW, "MARKT");
 		};
 
 		// Beliar

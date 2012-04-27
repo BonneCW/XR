@@ -250,7 +250,7 @@ INSTANCE Info_Mod_Namib_KarrasDa (C_INFO)
 
 FUNC INT Info_Mod_Namib_KarrasDa_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Karras_MT_Namib))
+	if (Npc_KnowsInfo(hero, Info_Mod_Karras_Namib2))
 	{
 		return 1;
 	};
@@ -265,7 +265,7 @@ FUNC VOID Info_Mod_Namib_KarrasDa_Info()
 	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Baal Namib will, dass ich den anderen Gurus sage, dass sie auf den Tempelplatz kommen sollen. Talas kann mich zu den Gurus führen, wenn ich sie nicht finde oder nicht weiß, wer noch fehlt.");
 
 	B_StartOtherRoutine	(self, "TEMPEL");
-	B_StartOtherRoutine	(Mod_1896_DMB_Karras_MT, "TEMPEL");
+	B_StartOtherRoutine	(Mod_514_DMB_Karras_MT, "TEMPEL");
 	B_StartOtherRoutine	(Mod_7268_PSINOV_Lester_MT, "START");
 	B_StartOtherRoutine	(Mod_2005_GUR_CorCadar_MT, "TEMPEL");
 };
@@ -355,8 +355,8 @@ FUNC VOID Info_Mod_Namib_SUDD_Info()
 
 	if (hero.guild != GIL_KDF)
 	{
-		B_StartOtherRoutine	(Mod_1896_DMB_Karras_MT, "TOT");
-		AI_Teleport	(Mod_1896_DMB_Karras_MT, "TOT");
+		B_StartOtherRoutine	(Mod_514_DMB_Karras_MT, "START");
+		AI_Teleport	(Mod_514_DMB_Karras_MT, "TOT");
 	};
 
 	if (Mod_AnzahlNebengilden < MaxNebengilden)

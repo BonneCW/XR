@@ -6241,14 +6241,6 @@ FUNC VOID INIT_Minental ()
 		Wld_InsertNpc	(Mod_7508_BUD_Sterling_MT, "OC1");
 	};
 	
-	if (Mod_Sekte_Aufnahme == 1)
-	{
-		Wld_InsertNpc	(Mod_1896_DMB_Karras_MT, "PSI_START");
-		Wld_InsertNpc	(Mod_7268_PSINOV_Lester_MT, "PSI_START");
-
-		Mod_Sekte_Aufnahme = 2;
-	};
-
 	if (Mod_Enter_Minental_01 == FALSE)
 	&& (Mod_Schwierigkeit > 0)
 	{

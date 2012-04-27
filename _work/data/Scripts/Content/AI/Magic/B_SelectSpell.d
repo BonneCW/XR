@@ -1098,7 +1098,6 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_843_DMB_Xardas_GDG))
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_6007_DMB_Andokai_GDG))
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_6008_DMB_Karras_GDG))
-	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_1896_DMB_Karras_MT))
 	{
 		if (slf.attribute[ATR_HITPOINTS] < (slf.attribute[ATR_HITPOINTS_MAX] / 4))
 		&& (slf.attribute[ATR_MANA] >= SPL_Cost_FullHeal)
