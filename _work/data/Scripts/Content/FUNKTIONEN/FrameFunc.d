@@ -435,6 +435,46 @@ FUNC VOID FRAMEFUNC ()
 		Wld_InsertItem	(ItMi_Focus_Troll, "FP_ITEM_FOKUS_TROLL");
 	};
 
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_01) == 1)
+	&& (Mod_PAT_Focus_01 == 0)
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_01, 1);
+
+		Wld_InsertNpc	(ItMi_Focus_Pat_01, "FP_ITEM_FOKUS_01");
+	};
+
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_02) == 1)
+	&& (Mod_PAT_Focus_02 == 0)
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_02, 1);
+
+		Wld_InsertNpc	(ItMi_Focus_Pat_02, "FP_ITEM_FOKUS_02");
+	};
+
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_03) == 1)
+	&& (Mod_PAT_Focus_03 == 0)
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_03, 1);
+
+		Wld_InsertNpc	(ItMi_Focus_Pat_03, "FP_ITEM_FOKUS_03");
+	};
+
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_04) == 1)
+	&& (Mod_PAT_Focus_04 == 0)
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_04, 1);
+
+		Wld_InsertNpc	(ItMi_Focus_Pat_04, "FP_ITEM_FOKUS_04");
+	};
+
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_05) == 1)
+	&& (Mod_PAT_Focus_05 == 0)
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_05, 1);
+
+		Wld_InsertNpc	(ItMi_Focus_Pat_05, "FP_ITEM_FOKUS_05");
+	};
+
 	ObserveConsole();
 	ShowBars();
 

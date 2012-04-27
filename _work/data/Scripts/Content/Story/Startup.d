@@ -7704,7 +7704,7 @@ FUNC VOID STARTUP_FEUERMAGIER_SURFACE()
 
 	NameAllFires();
 
-       //Monster
+	// Monster
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_SCAV_01");
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_SCAV_02");
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_SCAV_03");
@@ -7721,7 +7721,7 @@ FUNC VOID STARTUP_FEUERMAGIER_SURFACE()
 
 	Wld_InsertNpc	(Wisp,	"FP_ROAM_IRRLICHT_01");
 
-	//H?hle
+	// Höhle
 	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_24");
 	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_07");
 	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_06");
@@ -7735,10 +7735,14 @@ FUNC VOID STARTUP_FEUERMAGIER_SURFACE()
 	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_21");
 	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_17");
 
-	//Fokusw?chter
-	Wld_InsertNpc	(Demon,		"FP_ROAM_DEMON_MUT_FOKUS");
+	// Fokuswächter
+	Wld_InsertNpc	(Demon_PAT_01,		"FP_ROAM_DEMON_MUT_FOKUS");
+	Wld_InsertNpc	(Demon_PAT_02,		"FP_ROAM_DEMON_MUT_FOKUS");
+	Wld_InsertNpc	(Mod_7794_KDS_SchwarzerMagier_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7795_SNOV_Novize_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7796_HEX_Hexe_PAT,	"WP_PAT_START");
 
-	//Schwarzis
+	// Schwarzis
 	Wld_InsertNpc	(Mod_1600_SMK_SchwarzerKrieger_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1601_SMK_Blackknight_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1602_SMK_Blackknight_PAT,	"WP_PAT_START");
@@ -7764,6 +7768,14 @@ FUNC VOID STARTUP_FEUERMAGIER_SURFACE()
 	Wld_InsertNpc	(Mod_1721_KDS_SchwarzerMagier_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1719_KDS_SchwarzerMagier_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1720_KDS_SchwarzerMagier_PAT,	"WP_PAT_START");
+
+	// Foki platzieren
+
+	Wld_InsertItem	(ItMi_Focus_Pat_01,	"FP_ITEM_FOKUS_01");
+	Wld_InsertItem	(ItMi_Focus_Pat_02,	"FP_ITEM_FOKUS_02");
+	Wld_InsertItem	(ItMi_Focus_Pat_03,	"FP_ITEM_FOKUS_03");
+	Wld_InsertItem	(ItMi_Focus_Pat_04,	"FP_ITEM_FOKUS_04");
+	Wld_InsertItem	(ItMi_Focus_Pat_05,	"FP_ITEM_FOKUS_05");
 };
 
 FUNC VOID INIT_FEUERMAGIER_SURFACE()

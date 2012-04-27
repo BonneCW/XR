@@ -90,6 +90,18 @@ INSTANCE Demon_AtEremit (Mst_Default_Demon)
 	Npc_SetToFistMode(self);
 };
 
+INSTANCE Demon_PAT_01 (Mst_Default_Demon)
+{
+	B_SetVisuals_Demon();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE Demon_PAT_02 (Mst_Default_Demon)
+{
+	B_SetVisuals_Demon();
+	Npc_SetToFistMode(self);
+};
+
 INSTANCE Demon_BK (Mst_Default_Demon)
 {
 	CreateInvItems	(self, ItAt_DemonHeart, 1);

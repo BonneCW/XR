@@ -1026,6 +1026,96 @@ INSTANCE ItMi_Focus_Pat (C_Item)
 
 };
 
+INSTANCE ItMi_Focus_Pat_01 (C_Item)
+{
+	name 				=	"Fokusstein";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Focus.3DS";
+	material 			=	MAT_STONE;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION"; 
+
+	description			= 	name;
+};
+
+INSTANCE ItMi_Focus_Pat_02 (C_Item)
+{
+	name 				=	"Fokusstein";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Focus.3DS";
+	material 			=	MAT_STONE;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION"; 
+
+	description			= 	name;
+};
+
+INSTANCE ItMi_Focus_Pat_03 (C_Item)
+{
+	name 				=	"Fokusstein";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Focus.3DS";
+	material 			=	MAT_STONE;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION"; 
+
+	description			= 	name;
+};
+
+INSTANCE ItMi_Focus_Pat_04 (C_Item)
+{
+	name 				=	"Fokusstein";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Focus.3DS";
+	material 			=	MAT_STONE;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION"; 
+
+	description			= 	name;
+};
+
+INSTANCE ItMi_Focus_Pat_05 (C_Item)
+{
+	name 				=	"Fokusstein";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Focus.3DS";
+	material 			=	MAT_STONE;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION"; 
+
+	description			= 	name;
+};
+
 INSTANCE ItMi_Focus_Troll (C_Item)
 {
 	name 				=	"Fokus aus der Trollschlucht";

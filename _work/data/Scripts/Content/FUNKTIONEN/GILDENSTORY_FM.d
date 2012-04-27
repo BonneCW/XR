@@ -88,6 +88,8 @@ FUNC VOID GILDENSTORY_FM()
 		{	
 			Wld_InsertNpc	(Mod_1775_DMB_Beschwoerer_PAT, "WP_PAT_WEG_34");
 
+			B_RemoveNpc	(Mod_7794_KDS_SchwarzerMagier_PAT);
+
 			Mod_FM_Foki = 1;
 		};
 
@@ -536,6 +538,8 @@ FUNC VOID GILDENSTORY_FM()
 			};
 		};
 
+		// Auren und Kristalle
+
 		if (Npc_KnowsInfo(hero, Info_Mod_Velario_MangelQuest2))
 		&& (Wld_GetDay() > Mod_PAT_VelarioDay)
 		&& (Mod_Enter_PAT_Second == TRUE)
@@ -544,6 +548,17 @@ FUNC VOID GILDENSTORY_FM()
 			Mod_PAT_Velario = 1;
 
 			B_StartOtherRoutine	(Mod_1738_KDF_Velario_PAT, "RUNEMAKER");
+		};
+
+		// Foki sammeln
+
+		if (Mod_PAT_Focus_01 == 0)
+		&& (Npc_IsDead(Demon_PAT_01))
+		&& (Npc_IsDead(Demon_PAT_02))
+		{
+			Mod_PAT_Focus_01 = 1;
+
+			B_LogEntry	(TOPIC_MOD_FM_FOKI, "Zwei Dämonen für einen Mann. Das sollte die Tugend Mut gewesen sein.");
 		};
 	};
 

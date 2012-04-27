@@ -46,11 +46,11 @@ FUNC VOID Info_Mod_Orakel_Nagon_Info()
 	AI_Output(hero, self, "Info_Mod_Orakel_Nagon_15_01"); //Woher weißt du ...?
 	AI_Output(self, hero, "Info_Mod_Orakel_Nagon_07_02"); //Ich bin das Orakel. Ich habe mein Wissen von Innos selbst erlangt.
 	AI_Output(hero, self, "Info_Mod_Orakel_Nagon_15_03"); //Also wie komm ich jetzt an die Foki?
-	AI_Output(self, hero, "Info_Mod_Orakel_Nagon_07_04"); //Du musst fünf Eigenschaften besitzen: Mut, List, Vernunft, Wissen und ???.
+	AI_Output(self, hero, "Info_Mod_Orakel_Nagon_07_04"); //Du musst fünf Eigenschaften besitzen: Mut, List, Vernunft, Glaube und Ehrlichkeit.
 	AI_Output(self, hero, "Info_Mod_Orakel_Nagon_07_05"); //Für jeden der Foki musst du eine dieser Eigenschaften nutzen, nur so kannst du alle erlangen.
 	AI_Output(self, hero, "Info_Mod_Orakel_Nagon_07_06"); //Nun geh und erfülle deine Aufgabe!
 
-	B_LogEntry	(TOPIC_MOD_FM_FOKI, "Das Orakel hat gesagt, dass ich fünf Eigenschaften brauche, um die Foki zu erlangen: Mut, List, Vernunft, Wissen und ???.");
+	B_LogEntry	(TOPIC_MOD_FM_FOKI, "Das Orakel hat gesagt, dass ich fünf Eigenschaften brauche, um die Foki zu erlangen: Mut, List, Vernunft, Glaube und Ehrlichkeit.");
 
 	B_GivePlayerXP	(500);
 

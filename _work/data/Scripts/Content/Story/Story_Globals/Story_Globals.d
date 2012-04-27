@@ -46,6 +46,11 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_PAT_Focus_01;
+var int Mod_PAT_Focus_02;
+var int Mod_PAT_Focus_03;
+var int Mod_PAT_Focus_04;
+var int Mod_PAT_Focus_05;
 var int Mod_KarrasNecronicum;
 var int Mod_FM_Hyglas_Eisgebiet;
 var int Mod_FM_Hyglas_Eisgebiet_Day;
