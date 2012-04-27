@@ -77,7 +77,9 @@ INSTANCE MENUITEM_XR2_LAST(C_MENU_ITEM_DEF)
 	posx		=	0;		posy		=	MENU_CREDITS_02_START_Y + MENU_CREDITS_02_DY*8;
 	dimx		=	4096;		dimy		=	800;
 	// Aktionen
-	onSelAction[0]	= 	SEL_ACTION_BACK;
+	onSelAction[0]	= SEL_ACTION_BACK;
+	onSelAction[1]	= SEL_ACTION_STARTMENU;
+	onSelAction_S[1] = "MENU_OPT_XR";
 	//onSelAction_S[0] = "MENU_MAIN";
 	// Weitere Eigenschaften
 	flags			= flags |IT_TXT_CENTER;
