@@ -47,4 +47,3 @@ FUNC VOID Rtn_Follow_1856 ()
 	TA_Follow_Player		(08,05,22,05,"WP_PAT_WEG_53");
 	TA_Follow_Player		(22,05,08,05,"WP_PAT_WEG_53");
 };
-

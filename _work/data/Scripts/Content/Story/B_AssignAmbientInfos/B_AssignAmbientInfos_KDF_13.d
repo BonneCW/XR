@@ -105,11 +105,57 @@ FUNC INT Info_Mod_KDF_13_TrankLeer_Condition()
 FUNC VOID Info_Mod_KDF_13_TrankLeer_Info()
 {	
 	AI_Output(self, hero, "Info_Mod_KDF_13_TrankLeer_13_00"); //Hast du auch einen Trank für mich?
-	AI_Output(hero, self, "Info_Mod_KDF_13_TrankLeer_15_01"); //Ähm… Nein. Da stimmt irgendetwas nicht.
+	AI_Output(hero, self, "Info_Mod_KDF_13_TrankLeer_15_01"); //Ähm ... Nein. Da stimmt irgendetwas nicht.
 
 	B_StartOtherRoutine	(Mod_1768_KDF_Magier_PAT, "FLUCHT");
 
 	AI_StopProcessInfos	(self);
+};
+
+INSTANCE Info_Mod_KDF_13_MangelQuest(C_INFO)
+{
+	nr			= 5;
+	condition	= Info_Mod_KDF_13_MangelQuest_Condition;
+	information	= Info_Mod_KDF_13_MangelQuest_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Was hieltest du von einem Besuch in der Kirche, um zu Innos zu beten?";
+};                       
+
+FUNC INT Info_Mod_KDF_13_MangelQuest_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Nagon_MangelQuest))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Nagon_MangelQuest2))
+	{
+		return TRUE;
+	};
+};
+
+FUNC VOID Info_Mod_KDF_13_MangelQuest_Info()
+{	
+	AI_Output(hero, self, "Info_Mod_KDF_13_MangelQuest_15_00"); //Was hieltest du von einem Besuch in der Kirche, um zu Innos zu beten?
+	AI_Output(self, hero, "Info_Mod_KDF_13_MangelQuest_13_01"); //Ich muss hier auf der Mauer Wache halten und die Schwarzröcken die Hölle heiß machen, sollten sie zu nahe kommen.
+	AI_Output(hero, self, "Info_Mod_KDF_13_MangelQuest_15_02"); //Im Moment ist aber alles ruhig.
+	AI_Output(self, hero, "Info_Mod_KDF_13_MangelQuest_13_03"); //Hmm, ja, stimmt eigentlich schon ... und die letzten Angriffe liegen auch schon einige Zeit zurück.
+	AI_Output(hero, self, "Info_Mod_KDF_13_MangelQuest_15_04"); //Und dein letzter Besuch in der Kirche?
+	AI_Output(self, hero, "Info_Mod_KDF_13_MangelQuest_13_05"); //(eingestehend) Hmm, nun, das ist tatsächlich schon etwas her ...
+	AI_Output(hero, self, "Info_Mod_KDF_13_MangelQuest_15_06"); //Und einen Mann werdet ihr hier oben auch sicher entbehren können. Außer Belagerung ist ja nichts los ...
+	AI_Output(self, hero, "Info_Mod_KDF_13_MangelQuest_13_07"); //Ja, du hast vollkommen recht.
+	AI_Output(self, hero, "Info_Mod_KDF_13_MangelQuest_13_08"); //Über die Belagerung habe ich allmählich meine anderen Pflichten als Diener Innos immer stärker vernachlässigt, ohne es zu merken.
+	AI_Output(self, hero, "Info_Mod_KDF_13_MangelQuest_13_09"); //Ich werde mich sofort zur Kirche begeben.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "KIRCHE");
+
+	B_GivePlayerXP	(100);
+
+	Mod_Pat_Beter += 1;
+
+	if (Mod_Pat_Beter == 3)
+	{
+		B_LogEntry	(TOPIC_MOD_FM_MANGEL, "So, ich denke ich haben genügend Jünger Innos’ zum Gebet bewegen können und sollte in der Kirche bei Nagon vorbeischauen.");
+	};
 };
 
 INSTANCE Info_Mod_KDF_13_Pickpocket (C_INFO)
@@ -155,5 +201,6 @@ FUNC VOID B_AssignAmbientInfos_KDF_13 (var c_NPC slf)
 	Info_Mod_KDF_13_Trank.npc	= Hlp_GetInstanceID(slf);
 	Info_Mod_KDF_13_Fake.npc	= Hlp_GetInstanceID(slf);
 	Info_Mod_KDF_13_TrankLeer.npc	= Hlp_GetInstanceID(slf);
+	Info_Mod_KDF_13_MangelQuest.npc	= Hlp_GetInstanceID(slf);
 	Info_Mod_KDF_13_Pickpocket.npc	= Hlp_GetInstanceID(slf);
 };

@@ -42,5 +42,11 @@ instance Mod_1737_KDF_Feuermagier_PAT (Npc_Default)
 FUNC VOID Rtn_Start_1737()
 {	
 	TA_Sit_Throne		(22,00,08,00,"WP_PAT_WEG_75"); 	        	                  
-    TA_Read_Bookstand	(08,00,22,00,"WP_PAT_WEG_69");    	                                   
+	TA_Read_Bookstand	(08,00,22,00,"WP_PAT_WEG_69");    	                                   
 };  
+
+FUNC VOID Rtn_Kirche_1737 ()
+{	
+	TA_Pray_Innos_FP		(08,05,22,05,"WP_PAT_WEG_183");
+	TA_Pray_Innos_FP		(22,05,08,05,"WP_PAT_WEG_183");
+};

@@ -38,6 +38,12 @@ instance Mod_1769_PAL_Paladin_PAT (Npc_Default)
 
 FUNC VOID Rtn_Start_1769 ()
 {	
-	TA_Practice_Sword			(08,00,21,00,"WP_PAT_WEG_147");
-    TA_Sleep				(21,00,08,00,"WP_PAT_WEG_157");
+	TA_Practice_Sword	(08,00,21,00,"WP_PAT_WEG_147");
+	TA_Sleep		(21,00,08,00,"WP_PAT_WEG_157");
+};
+
+FUNC VOID Rtn_Kirche_1769 ()
+{	
+	TA_Pray_Innos_FP		(08,05,22,05,"WP_PAT_WEG_183");
+	TA_Pray_Innos_FP		(22,05,08,05,"WP_PAT_WEG_183");
 };

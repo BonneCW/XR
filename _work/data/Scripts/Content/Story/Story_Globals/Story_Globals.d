@@ -46,6 +46,7 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_Pat_Beter;
 var int Mod_Pat_PflanzenCount;
 var int Mod_Pat_Heilpflanze;
 var int Mod_Pat_Heilkraut;
