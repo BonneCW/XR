@@ -316,13 +316,14 @@ INSTANCE Info_Mod_Velario_AurenUndKristalle6 (C_INFO)
 	condition	= Info_Mod_Velario_AurenUndKristalle6_Condition;
 	information	= Info_Mod_Velario_AurenUndKristalle6_Info;
 	permanent	= 0;
-	important	= 1;
+	important	= 0;
+	description	= "Der Kristall hat sich verändert.";
 };
 
 FUNC INT Info_Mod_Velario_AurenUndKristalle6_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Velario_AurenUndKristalle3))
-	&& (Wld_GetDay()-1 > Mod_PAT_VelarioDay)
+	if (Npc_KnowsInfo(hero, Info_Mod_Velario_AurenUndKristalle4))
+	&& (Npc_HasItems(hero, ItRu_KristallPrisma) == 1)
 	{
 		return 1;
 	};
@@ -330,31 +331,28 @@ FUNC INT Info_Mod_Velario_AurenUndKristalle6_Condition()
 
 FUNC VOID Info_Mod_Velario_AurenUndKristalle6_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_00"); //Es ist tatsächlich gelungen! Ich konnte diesen Kristall zu einem magischen Werkzeug umformen.
-	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_01"); //Wenn du ihn bei dir trägst, sollte er dir einen umfassenden Schutz gegen Magie und Feuer bieten, der seines gleichen sucht.
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle6_15_00"); //Der Kristall hat sich verändert.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_01"); //Was? Lass sehen.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_02"); //Das ... das ist unmöglich.
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle6_15_03"); //Was ist geschehen?
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_04"); //Durch den wiederholten Kontakt mit Feuer und Magie scheint er den Effekt ... übernommen zu haben. Er kann jetzt wie eine Rune eingesetzt werden.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_05"); //Das unglaubliche daran ist, dass er seine Macht aus keinem der Götter zieht. Das ist so faszinierend ... wie auch erschreckend.
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle6_15_06"); //Wieso?
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_07"); //Verstehst du nicht? Bislang konnten einzig und allein Götter, oder göttliche Wesen, Menschen zum wirken von Magie befähigen.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_08"); //Diese Forschungsergebnisse widersprechen nun jedoch diesem Gesetz. Das könnte eine Revolution für unser gesamtes Verständnis um die Magie bedeuten.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_09"); //Andererseits jedoch ...
+	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle6_15_10"); //Ja?
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_11"); //... andererseits stellt es gleichzeitig das magische Monopol der drei Kirchen in Frage.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_12"); //(nachdenklich) Ich glaube nicht, dass unsere Forschungsergebnisse den hohen Magiern der Räte besonders gefallen würden ... besonders im aktuellen Konflikt mit Xeres.
 
-	B_GiveInvItems	(self, hero, ItMi_KristallPrisma, 1);
+	AI_PlayAni	(self, "T_SEARCH");
 
-	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_02"); //Hier, nun solltest du diese Aura-Spruchrollen ohne große Gefahr für dein Leben anwenden können.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_13"); //(konspirativ zum Helden) Es wäre daher besser, wenn wir unsere Erkenntnisse vorerst unter Verschluss hielten.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_14"); //Noch ist die Kirche nicht so weit und ich würde ungern sehen, dass unsere Erkenntnisse ein Opfer der ... nunja, ich denke, du verstehst die Situation.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_15"); //(etwas betrübt) Es ... es ist das Vernünftigste.
+	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_16"); //Und nun ... lasse dich von Innos' Flamme beseelen, wenn du diesen verfluchten Hexenweibern ordentlich einheizt!
 
-	B_GiveInvItems	(self, hero, ItSc_AuraFlammen, 2);
-
-	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_03"); //Nimm auch noch diesen Schnelligkeitstrank und die Verwandlungsspruchrolle.
-
-	CreateInvItems	(hero, ItSc_TrfSnapper, 1);
-	CreateInvItems	(hero, ItPo_Speed, 1);
-
-	B_ShowGivenThings	("Trank der Geschwindigkeit und Spruchrolle 'Verwandlung Snapper' erhalten");
-
-	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_04"); //Sie könnten dir dabei nützlich sein, die Reihen der Feinde zu passieren.
-	AI_Output(hero, self, "Info_Mod_Velario_AurenUndKristalle6_15_05"); //Eindrucksvolle Utensilien der Magie. Hab Dank.
-	AI_Output(self, hero, "Info_Mod_Velario_AurenUndKristalle6_06_06"); //Und nun ... lasse dich von Innos' Flamme beseelen, wenn du diesen verfluchten Hexenweibern ordentlich einheizt!
-
-	B_SetTopicStatus	(TOPIC_MOD_FM_AURENUNDKRISTALLE, LOG_SUCCESS);
-
-	B_GivePlayerXP	(150);
-
-	B_StartOtherRoutine	(self, "START");
+	B_GivePlayerXP	(200);
 };
 
 INSTANCE Info_Mod_Velario_Fake (C_INFO)

@@ -145,11 +145,20 @@ FUNC VOID B_Vergiftet(var C_NPC slf)
 			slf.aivar[AIV_Siechtum] -= 1;
 		};
 
-		if (Mod_AuraFlammen == 1)
+		if (Mod_AuraFlammen >= 1)
 		{
 			if (Mod_AuraFlammen_Counter%3 == 0)
 			{
-				var int fldmg; fldmg = 120-slf.protection[PROT_MAGIC];
+				var int fldmg;
+
+				if (Mod_AuraFlammen == 1)
+				{
+					fldmg = 120-slf.protection[PROT_MAGIC];
+				}
+				else
+				{
+					fldmg = 60-slf.protection[PROT_MAGIC];
+				};
 
 				if (fldmg < 5)
 				{

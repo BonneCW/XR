@@ -42,8 +42,16 @@ func void Spell_Cast_AuraFlammen()
 
 	if (C_NpcIsHero(self))
 	{
-		Mod_AuraFlammen = 1;
-		Mod_AuraFlammen_Counter = 30;
+		if (Npc_GetActiveSpellIsScroll(self))
+		{
+			Mod_AuraFlammen = 1;
+			Mod_AuraFlammen_Counter = 30;
+		}
+		else
+		{
+			Mod_AuraFlammen = 2;
+			Mod_AuraFlammen_Counter = 15;
+		};
 	};
 
 	return;

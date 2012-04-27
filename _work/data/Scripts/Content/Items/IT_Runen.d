@@ -105,6 +105,36 @@ INSTANCE ItRu_PalLight (C_Item)
 	COUNT	[5]			=	value;
 }; 
 
+INSTANCE ItRu_KristallPrisma (C_Item)
+{
+	name 				=	NAME_Rune;
+
+	mainflag 			=	ITEM_KAT_RUNE;
+	flags 				=	0;
+
+	value 				=	Value_Ru_PalLight;
+
+	visual				=	"IT_INNOSCRYSTAL_01.3ds";
+	material			=	MAT_STONE;
+
+	spell				= 	SPL_AuraFlammen;
+	
+
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_WEAKGLIMMER";
+
+	description			=	"Kristall des Feuers";
+		
+	TEXT	[1]			=	NAME_Manakosten;		
+	COUNT	[1]			=	SPL_Cost_AuraFlammen;
+	
+	TEXT	[2]			=	NAME_Sec_Duration;		
+	COUNT	[2]			=	15;
+	
+	TEXT	[5]			=	NAME_Value;				
+	COUNT	[5]			=	value;
+}; 
+
 INSTANCE ItMi_AbsorbKristall (C_Item)
 {
 	name 				=	"Kristall der Absorption";
