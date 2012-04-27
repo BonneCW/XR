@@ -189,6 +189,168 @@ func void UseKrautruestungListe ()
 
 };
 
+INSTANCE ItWr_OTGeheimkammer01		(C_Item)
+{
+	name 				=	"Zettelteil";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	ITEM_MISSION|ITEM_SHOW;
+
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseOTGeheimkammer01;
+	scemeName			=	"MAP";
+	description			= 	name;
+	TEXT[0]				=	"Hinweis zur Geheimkammer";
+};
+
+func void UseOTGeheimkammer01 ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		()			  ;							// DocManager
+					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
+					Doc_SetFont 	( nDocID,  0, FONT_Handschrift		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Da die vermaledeite Kombination für die beiden Schalter nicht in deinen Kopf geht, habe ich sie dir hier aufgeschrieben. Aber komm ja nicht auf die Idee, den Zettel im Ganzen mit dir herumzutragen! Die Orks müssen nicht wissen, wo wir Teil ihn in drei Teile, und nur diesen hier behältst du bei dir - den Rest versteckst du und holst ihn nur bei Bedarf hervor, hast du verstanden?!"					);
+					
+					Doc_Show		( nDocID );
+
+	if (Mod_OT_Geheimkammer == 0)
+	{
+		Mod_OT_Geheimkammer = 1;
+
+		Log_CreateTopic	(TOPIC_MOD_OT_GEHEIMKAMMER, LOG_MISSION);
+		B_SetTopicStatus	(TOPIC_MOD_OT_GEHEIMKAMMER, LOG_RUNNING);
+		B_LogEntry	(TOPIC_MOD_OT_GEHEIMKAMMER, "Ich habe einen Teil einer Notiz gefunden, auf der Cor Kalom anscheinend aufgeschrieben hat, wie man in eine versteckte Kammer gelangt. Allerdings fehlen mir noch zwei weitere Teile, um das Rätsel lösen zu können.");
+	};
+
+};
+
+INSTANCE ItWr_OTGeheimkammer02		(C_Item)
+{
+	name 				=	"Zettelteil";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	ITEM_MISSION|ITEM_SHOW;
+
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseOTGeheimkammer02;
+	scemeName			=	"MAP";
+	description			= 	name;
+	TEXT[0]				=	"Hinweis zur Geheimkammer";
+};
+
+func void UseOTGeheimkammer02 ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		()			  ;							// DocManager
+					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
+					Doc_SetFont 	( nDocID,  0, FONT_Handschrift		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Du öffnest die Kammer mit den beiden Schaltern, die mit Totenköpfen verziert sind. Du findest sie im rechten der beiden Gänge, die vom Raum mit der großen Schläferstatue abgehen. Die beiden Schalter musst du in der richtigen Kombination betätigen: Zuerst den linken zwei Mal, dann den rechten ein Mal, dann wieder den linken ..."					);
+					
+					Doc_Show		( nDocID );
+
+	if (Mod_OT_Geheimkammer == 0)
+	{
+		Mod_OT_Geheimkammer = 1;
+
+		Log_CreateTopic	(TOPIC_MOD_OT_GEHEIMKAMMER, LOG_MISSION);
+		B_SetTopicStatus	(TOPIC_MOD_OT_GEHEIMKAMMER, LOG_RUNNING);
+		B_LogEntry	(TOPIC_MOD_OT_GEHEIMKAMMER, "Ich habe einen Teil einer Notiz gefunden, auf der Cor Kalom anscheinend aufgeschrieben hat, wie man in eine versteckte Kammer gelangt. Allerdings fehlen mir noch zwei weitere Teile, um das Rätsel lösen zu können.");
+	};
+
+};
+
+INSTANCE ItWr_OTGeheimkammer03		(C_Item)
+{
+	name 				=	"Zettelteil";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	ITEM_MISSION|ITEM_SHOW;
+
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseOTGeheimkammer03;
+	scemeName			=	"MAP";
+	description			= 	name;
+	TEXT[0]				=	"Hinweis zur Geheimkammer";
+};
+
+func void UseOTGeheimkammer03 ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		()			  ;							// DocManager
+					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
+					Doc_SetFont 	( nDocID,  0, FONT_Handschrift		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "... zwei Mal, den rechten drei Mal. Dann den linken ein Mal, den rechten zwei Mal, den linken zwei Mal. Und zum Abschluss den rechten (unleserlich) Mal. Im gegenüberliegenden Raum öffnet sich jetzt das Loch, das ihr schnell gehauen habt."					);
+					
+					Doc_Show		( nDocID );
+
+	if (Mod_OT_Geheimkammer == 0)
+	{
+		Mod_OT_Geheimkammer = 1;
+
+		Log_CreateTopic	(TOPIC_MOD_OT_GEHEIMKAMMER, LOG_MISSION);
+		B_SetTopicStatus	(TOPIC_MOD_OT_GEHEIMKAMMER, LOG_RUNNING);
+		B_LogEntry	(TOPIC_MOD_OT_GEHEIMKAMMER, "Ich habe einen Teil einer Notiz gefunden, auf der Cor Kalom anscheinend aufgeschrieben hat, wie man in eine versteckte Kammer gelangt. Allerdings fehlen mir noch zwei weitere Teile, um das Rätsel lösen zu können.");
+	};
+
+};
+
+INSTANCE ItWr_OTGeheimkammer04		(C_Item)
+{
+	name 				=	"Zettel";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	ITEM_MISSION|ITEM_SHOW;
+
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseOTGeheimkammer04;
+	scemeName			=	"MAP";
+	description			= 	name;
+	TEXT[0]				=	"Aus der Geheimkammer";
+	TEXT[2]				=	"An den glücklichen Finder der Kammer";
+};
+
+func void UseOTGeheimkammer04 ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		()			  ;							// DocManager
+					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline  			); 	// -1 -> all pages
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
+					Doc_PrintLines	( nDocID,  0, ""					);
+					Doc_SetFont 	( nDocID,  0, FONT_Handschrift		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Ich war schneller! Gez. M.A.D."					);
+					
+					Doc_Show		( nDocID );
+
+};
+
 INSTANCE ItWr_Akahasch		(C_Item)
 {
 	name 				=	"Zettel";
@@ -1402,7 +1564,7 @@ FUNC VOID UseOrktempelZettel3 ()
 	Doc_SetPage 	(nDocID,  0, "letters.TGA", 0);
 	Doc_SetFont 	(nDocID,  0, FONT_Book);
 	Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);
-	Doc_PrintLines	(nDocID,  0, "(Du kannst die Zeichen nicht lesen, aber die aggressive Schrift lässt auf keinen freundlichen Ton schließen. Es scheint, als würde im Text häufiger das Wort „Krushak“ vorkommen. Beim näheren Hinsehen fällt dir auf, dass die Schriftfarbe nicht schwarz wie Tinte ist, sondern dunkelrot ...)");
+	Doc_PrintLines	(nDocID,  0, "(Du kannst die Zeichen nicht lesen, aber die aggressive Schrift lässt auf keinen freundlichen Ton schließen. Es scheint, als würde im Text häufiger das Wort 'Krushak' vorkommen. Beim näheren Hinsehen fällt dir auf, dass die Schriftfarbe nicht schwarz wie Tinte ist, sondern bronzefarben wie von getrocknetem Blut...)");
 	Doc_PrintLines	(nDocID,  0, "");
 					
 	Doc_Show (nDocID);

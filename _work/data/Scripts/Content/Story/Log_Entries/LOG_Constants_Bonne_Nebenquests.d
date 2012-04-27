@@ -126,3 +126,4 @@ const string TOPIC_MOD_NAGUR_GESCHAEFT	= "Es geht nur ums Geschäft";
 const string TOPIC_MOD_JACKAL_TABAK	= "Vanille mit einem Hauch Safran";
 const string TOPIC_MOD_GRAVO_SCHATZ	= "Der Schatz im Schlammsee";
 const string TOPIC_MOD_GRAVO_MUSIK	= "Lagermusik";
+const string TOPIC_MOD_OT_GEHEIMKAMMER	= "Die Geheimkammer";

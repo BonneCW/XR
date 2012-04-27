@@ -6690,6 +6690,10 @@ FUNC VOID STARTUP_OrcTempel ()
 
 	Wld_InsertNpc	(Monster_11055_Skelett_OT, "TPL_386");
 	Wld_InsertNpc	(Monster_11056_Skelett_OT, "TPL_386");
+
+	Wld_InsertNpc	(Mod_7797_PSINOV_Novize_OT, "TPL_386");
+
+	B_KillNpc	(Mod_7797_PSINOV_Novize_OT);
 };
 
 FUNC VOID INIT_OrcTempel ()

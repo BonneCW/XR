@@ -19,6 +19,7 @@ const string FONT_Ausdauer				= "FONT_O.TGA";
 const string FONT_EXP					= "FONT_T.TGA";
 const string FONT_Monster				= "FONT_B.TGA";
 const string FONT_Status				= "FONT_ICON.TGA";
+const string FONT_Handschrift				= "FONT_HANDSCHRIFT.TGA";
 
 // ****************************
 // Spellkosten für ALLE SCrolls
