@@ -707,6 +707,66 @@ FUNC VOID Info_Mod_Eduard_Ruestung_SNOV_S ()
 	Info_ClearChoices	(Info_Mod_Eduard_Ruestung);
 };
 
+instance Info_Mod_Eduard_TeachCOMMON (C_INFO)
+{
+	npc		= Mod_1027_SMK_Eduard_MT;
+	nr          	= 1;
+	condition	= Info_Mod_Eduard_TeachCOMMON_Condition;
+	information	= Info_Mod_Eduard_TeachCOMMON_Info;
+	permanent	= TRUE;
+	description	= B_BuildLearnString("Schmieden lernen", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_Common));
+};
+
+func int Info_Mod_Eduard_TeachCOMMON_Condition ()
+{
+	if (PLAYER_TALENT_SMITH[WEAPON_Common] == FALSE)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Eduard_SchmiedenLehren))
+	{
+		return TRUE;
+	};
+};
+
+func void Info_Mod_Eduard_TeachCOMMON_Info ()
+{
+	AI_Output (other, self, "Info_Mod_Eduard_TeachCOMMON_15_00"); //Bring mir bei, wie man ein Schwert schmiedet!
+	
+	if (B_TeachPlayerTalentSmith (self, other, WEAPON_Common))
+	{
+		AI_Output (self, other, "Info_Mod_Eduard_TeachCOMMON_11_01"); //Ganz einfach: Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
+		AI_Output (self, other, "Info_Mod_Eduard_TeachCOMMON_11_02"); //Dann schlägst du am Amboss die Klinge zurecht.
+		AI_Output (self, other, "Info_Mod_Eduard_TeachCOMMON_11_03"); //Achte vor allem darauf, dass die Klinge nicht zu kalt wird. Du hast immer nur wenige Minuten Zeit, an deiner Waffe zu arbeiten ...
+		AI_Output (self, other, "Info_Mod_Eduard_TeachCOMMON_11_04"); //Den Rest findest du schon raus - reine Übungssache.
+	};
+};
+
+INSTANCE Info_Mod_Eduard_Trade (C_INFO)
+{
+	npc		= Mod_1027_SMK_Eduard_MT;
+	nr		= 1;
+	condition	= Info_Mod_Eduard_Trade_Condition;
+	information	= Info_Mod_Eduard_Trade_Info;
+	permanent	= 1;
+	important	= 0;
+	trade		= 1;
+	description	= DIALOG_TRADE;
+};
+
+FUNC INT Info_Mod_Eduard_Trade_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Eduard_Haendler))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Eduard_Trade_Info()
+{
+	Backup_Questitems();
+
+	B_GiveTradeInv (self);
+	B_Say (hero, self, "$TRADE_1");
+};
+
 INSTANCE Info_Mod_Eduard_Pickpocket (C_INFO)
 {
 	npc		= Mod_1027_SMK_Eduard_MT;
