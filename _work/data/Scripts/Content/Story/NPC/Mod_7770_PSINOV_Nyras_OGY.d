@@ -23,8 +23,7 @@ instance Mod_7770_PSINOV_Nyras_OGY (Npc_Default)
 	
 	fight_tactic	=	FAI_HUMAN_STRONG;
 
-	//-------- Talente --------
-	
+	//-------- Talente --------	
 		
 	//-------- inventory --------
 	B_CreateAmbientInv	(self);
