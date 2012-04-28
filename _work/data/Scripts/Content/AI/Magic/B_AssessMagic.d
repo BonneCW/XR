@@ -95,6 +95,18 @@ func void B_AssessMagic ()
 		{
 			self.aivar[AIV_Trefferzone] = 2;
 		};
+
+		if (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
+		&& (Npc_HasItems(hero, ItMi_KristallPrisma) == 1)
+		{
+			Mod_KristallPrisma_Absorbiert += 1;
+
+			if (Mod_KristallPrisma_Absorbiert == 30)
+			{
+				Npc_RemoveInvItems	(hero, ItMi_KristallPrisma, 1);
+				CreateInvItems	(hero, ItRu_KristallPrisma, 1);
+			};
+		};
 	
 		return;
 	};
@@ -245,6 +257,18 @@ func void B_AssessMagic ()
 			self.aivar[AIV_Trefferzone] = 2;
 		};
 
+		if (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
+		&& (Npc_HasItems(hero, ItMi_KristallPrisma) == 1)
+		{
+			Mod_KristallPrisma_Absorbiert += 1;
+
+			if (Mod_KristallPrisma_Absorbiert == 30)
+			{
+				Npc_RemoveInvItems	(hero, ItMi_KristallPrisma, 1);
+				CreateInvItems	(hero, ItRu_KristallPrisma, 1);
+			};
+		};
+
 		return;
 	};
 
@@ -266,6 +290,18 @@ func void B_AssessMagic ()
 		&& (self.aivar[AIV_Trefferzone] == 0)
 		{
 			self.aivar[AIV_Trefferzone] = 2;
+		};
+
+		if (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
+		&& (Npc_HasItems(hero, ItMi_KristallPrisma) == 1)
+		{
+			Mod_KristallPrisma_Absorbiert += 1;
+
+			if (Mod_KristallPrisma_Absorbiert == 30)
+			{
+				Npc_RemoveInvItems	(hero, ItMi_KristallPrisma, 1);
+				CreateInvItems	(hero, ItRu_KristallPrisma, 1);
+			};
 		};
 
 		return;

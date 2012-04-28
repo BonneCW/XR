@@ -46,6 +46,7 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_KristallPrisma_Absorbiert;
 var int Mod_OTSchalter;
 var int Mod_OT_Geheimkammer;
 var int Mod_PAT_Focus_01;
