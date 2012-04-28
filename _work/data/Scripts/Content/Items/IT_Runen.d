@@ -343,7 +343,7 @@ INSTANCE ItRu_TrfRabbit (C_Item)
 
 	value 				=	20;
 
-	visual				=	"ItRu_PalLight.3ds";
+	visual				=	"ItRu_TrfRabbit.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TRFSKELETON;

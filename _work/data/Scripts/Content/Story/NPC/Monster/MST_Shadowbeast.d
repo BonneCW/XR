@@ -105,7 +105,7 @@ func void B_SetVisuals_Eislaeufer()
 {
 	Mdl_SetVisual			(self,"Shadow.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Sha_Body",		2,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"Sha_Ice_Body",		0,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
 func void B_SetVisuals_Nightmare()
@@ -301,7 +301,7 @@ INSTANCE Eislaeufer_FGE	(Mst_Default_Shadowbeast)
 
 	effect	= "SPELLFX_ICEARMOR";
 
-	B_SetVisuals_Wasserlaeufer();
+	B_SetVisuals_Eislaeufer();
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFo_MuttonRaw, 4);
 };

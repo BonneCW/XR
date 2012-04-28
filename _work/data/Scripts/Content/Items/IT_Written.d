@@ -212,10 +212,9 @@ func void UseOTGeheimkammer01 ()
 
 		nDocID = 	Doc_Create		()			  ;							// DocManager
 					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
-					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
-					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
+					Doc_SetPage 	( nDocID,  0, "letters_oben.TGA"  , 0 		);
+					Doc_SetMargins	( nDocID, -1, 50, 20, 50, 50, 1   		);  //  0 -> margins are in pixels
 					Doc_SetFont 	( nDocID,  0, FONT_Handschrift		); 	// -1 -> all pages
-					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Da die vermaledeite Kombination für die beiden Schalter nicht in deinen Kopf geht, habe ich sie dir hier aufgeschrieben. Aber komm ja nicht auf die Idee, den Zettel im Ganzen mit dir herumzutragen! Die Orks müssen nicht wissen, wo wir unsere Schätze gelagert haben. Teil ihn in drei Teile, und nur diesen hier behältst du bei dir - den Rest versteckst du und holst ihn nur bei Bedarf hervor, hast du verstanden?!"					);
 					
 					Doc_Show		( nDocID );
@@ -254,9 +253,16 @@ func void UseOTGeheimkammer02 ()
 
 		nDocID = 	Doc_Create		()			  ;							// DocManager
 					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
-					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetPage 	( nDocID,  0, "letters_mitte.TGA"  , 0 		);
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
 					Doc_SetFont 	( nDocID,  0, FONT_Handschrift		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Du öffnest die Kammer mit den beiden Schaltern, die mit Totenköpfen verziert sind. Du findest sie im rechten der beiden Gänge, die vom Raum mit der großen Schläferstatue abgehen. Die beiden Schalter musst du in der richtigen Kombination betätigen: Zuerst den linken zwei Mal, dann den rechten ein Mal, dann wieder den linken ..."					);
 					
@@ -296,9 +302,24 @@ func void UseOTGeheimkammer03 ()
 
 		nDocID = 	Doc_Create		()			  ;							// DocManager
 					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
-					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetPage 	( nDocID,  0, "letters_unten.TGA"  , 0 		);
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
 					Doc_SetFont 	( nDocID,  0, FONT_Handschrift		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "... zwei Mal, den rechten drei Mal. Dann den linken ein Mal, den rechten zwei Mal, den linken zwei Mal. Und zum Abschluss den rechten (unleserlich) Mal. Im gegenüberliegenden Raum öffnet sich jetzt das Loch, das ihr schnell gehauen habt."					);
 					
