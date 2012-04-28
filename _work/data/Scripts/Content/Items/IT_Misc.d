@@ -3980,7 +3980,7 @@ INSTANCE ItMi_Beliarstein_Unloaded (C_Item)
 	name 				=	"Stein aus schwarzem Erz (unaufgeladen)";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI|ITEM_SHOW;
 
 	value 				=	Value_DarkPearl;
 
@@ -4001,7 +4001,7 @@ INSTANCE ItMi_Beliarstein (C_Item)
 	name 				=	"Stein aus schwarzem Erz";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI|ITEM_SHOW;
 
 	value 				=	Value_DarkPearl;
 
@@ -4022,7 +4022,7 @@ INSTANCE ItMi_TugettsoStein (C_Item)
 	name 				=	"Aufladestein";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI|ITEM_SHOW;
 
 	value 				=	10;
 
