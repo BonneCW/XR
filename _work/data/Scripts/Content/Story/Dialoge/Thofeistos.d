@@ -496,6 +496,7 @@ FUNC VOID Info_Mod_Thofeistos_Teacher_Waffe_ErzEisen()
 	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_ErzEisen_05_00"); //Nimm einen Schmiederohling, erhitze diesen und schmiede – abhängig von der Größe des Waffe – 20 bis 30 Brocken magischen Erzes in den glühenden Stahl hinein.
 	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_ErzEisen_05_01"); //Erst die daraus entstehende Legierung hat die Eigenschaften, die sie formbar und schmiedbar machen.
 
+	B_TeachPlayerTalentSmith	(self, hero, WEAPON_1H_Special_03_Dex);
 	B_TeachPlayerTalentSmith	(self, hero, WEAPON_1H_Special_03);
 	B_TeachPlayerTalentSmith	(self, hero, WEAPON_2H_Special_03);
 

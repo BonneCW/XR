@@ -59,6 +59,8 @@ func int B_TeachPlayerTalentSmith (var C_NPC slf, var C_NPC oth, var int waffe)
 	B_LogEntry (TOPIC_TalentSmith,"Wenn ich 3 Erz hinzugebe, kann ich mir einen ´SCHWEREN ERZ-ZWEIHÄNDER´ schmieden.");};
 	if (waffe == WEAPON_1H_Special_03)		{	PLAYER_TALENT_SMITH[WEAPON_1H_Special_03] 	= TRUE;	
 	B_LogEntry (TOPIC_TalentSmith,"Wenn ich 20 Erz hinzugebe, kann ich mir eine ´ERZ-SCHLACHTKLINGE´ schmieden.");};
+	if (waffe == WEAPON_1H_Special_03_Dex)		{	PLAYER_TALENT_SMITH[WEAPON_1H_Special_03] 	= TRUE;	
+	B_LogEntry (TOPIC_TalentSmith,"Wenn ich 20 Erz hinzugebe, kann ich mir einen ´ERZ-SCHLACHTSTECHER´ schmieden.");};
 	if (waffe == WEAPON_2H_Special_03)		{	PLAYER_TALENT_SMITH[WEAPON_2H_Special_03] 	= TRUE;	
 	B_LogEntry (TOPIC_TalentSmith,"Wenn ich 30 Erz hinzugebe, kann ich mir eine ´SCHWERE ERZ-SCHLACHTKLINGE´ schmieden.");};
 	if (waffe == WEAPON_1H_Special_04)		{	PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] 	= TRUE;	
