@@ -216,7 +216,7 @@ func void UseOTGeheimkammer01 ()
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
 					Doc_SetFont 	( nDocID,  0, FONT_Handschrift		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "Da die vermaledeite Kombination für die beiden Schalter nicht in deinen Kopf geht, habe ich sie dir hier aufgeschrieben. Aber komm ja nicht auf die Idee, den Zettel im Ganzen mit dir herumzutragen! Die Orks müssen nicht wissen, wo wir Teil ihn in drei Teile, und nur diesen hier behältst du bei dir - den Rest versteckst du und holst ihn nur bei Bedarf hervor, hast du verstanden?!"					);
+					Doc_PrintLines	( nDocID,  0, "Da die vermaledeite Kombination für die beiden Schalter nicht in deinen Kopf geht, habe ich sie dir hier aufgeschrieben. Aber komm ja nicht auf die Idee, den Zettel im Ganzen mit dir herumzutragen! Die Orks müssen nicht wissen, wo wir unsere Schätze gelagert haben. Teil ihn in drei Teile, und nur diesen hier behältst du bei dir - den Rest versteckst du und holst ihn nur bei Bedarf hervor, hast du verstanden?!"					);
 					
 					Doc_Show		( nDocID );
 
