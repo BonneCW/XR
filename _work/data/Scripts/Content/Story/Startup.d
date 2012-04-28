@@ -6814,6 +6814,8 @@ FUNC VOID STARTUP_OldMine ()
 	NameAllFires();
 
       	Wld_InsertNpc	(Mod_1031_DMR_Kurgan_OM,	"OM_ENTRANCE");
+      	Wld_InsertNpc	(Mod_7798_SMK_Drake_OM,	"OM_ENTRANCE");
+      	Wld_InsertNpc	(Mod_7799_SMK_Brandick_OM,	"OM_ENTRANCE");
 	
 	Wld_InsertNpc	(Mod_1474_BUD_Buddler_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1475_BUD_Buddler_OM,	"OM_ENTRANCE");
