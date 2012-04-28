@@ -189,6 +189,47 @@ func void UseKrautruestungListe ()
 
 };
 
+INSTANCE ItWr_GarpNotiz		(C_Item)
+{
+	name 				=	"Zettel";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	ITEM_MISSION;
+
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseGarpNotiz;
+	scemeName			=	"MAP";
+	description			= 	name;
+	TEXT[0]				=	"von Garp aus der alten Mine";
+};
+
+func void UseGarpNotiz ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		()			  ;							// DocManager
+					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline  			); 	// -1 -> all pages
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
+					Doc_PrintLines	( nDocID,  0, ""					);
+					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Tag 8: Ich halte es nicht mehr unter den anderen aus. Nur weg von ihnen. Niemals werde ich das Fleisch unserer toten Kameraden essen, um zu überleben. Wir wären verdammt bis in alle Ewigkeit ..."					);
+					Doc_PrintLines	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Tag 10: Dieser Hunger, Hunger, peinigende Hunger. Was würde ich jetzt für ein Stück Fleisch geben. Aber diese verdammten Crawler sind unten aufgetaucht und versperren mir den Weg. Keine 10 Pferde bringen mich da runter ..."					);
+					Doc_PrintLines	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Tag 11: Verdammt, eines von den Biestern hat mich gebissen, als ich nach unten klettern wollte. Ich spüre wie das Gift meine Venen durchdringt ... ich mach es nicht mehr lange ..."					);
+					Doc_PrintLines	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Garp"					);
+					
+					Doc_Show		( nDocID );
+
+};
+
 INSTANCE ItWr_OTGeheimkammer01		(C_Item)
 {
 	name 				=	"Zettelteil";

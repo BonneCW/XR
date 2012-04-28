@@ -6816,6 +6816,14 @@ FUNC VOID STARTUP_OldMine ()
       	Wld_InsertNpc	(Mod_1031_DMR_Kurgan_OM,	"OM_ENTRANCE");
       	Wld_InsertNpc	(Mod_7798_SMK_Drake_OM,	"OM_ENTRANCE");
       	Wld_InsertNpc	(Mod_7799_SMK_Brandick_OM,	"OM_ENTRANCE");
+	Wld_InsertNpc	(Mod_1497_BUD_Aleph_OM,	"OM_ENTRANCE");
+	Wld_InsertNpc	(Mod_7800_SMK_Alberto_OM,	"OM_ENTRANCE");
+	Wld_InsertNpc	(Mod_7801_TPL_GorNaBar_OM,	"OM_ENTRANCE");
+	Wld_InsertNpc	(Mod_7802_TPL_Templer_OM,	"OM_ENTRANCE");
+
+	B_KillNpc	(Mod_1497_BUD_Aleph_OM);
+	B_KillNpc	(Mod_7801_TPL_GorNaBar_OM);
+	B_KillNpc	(Mod_7802_TPL_Templer_OM);
 	
 	Wld_InsertNpc	(Mod_1474_BUD_Buddler_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1475_BUD_Buddler_OM,	"OM_ENTRANCE");
@@ -6836,7 +6844,6 @@ FUNC VOID STARTUP_OldMine ()
 	Wld_InsertNpc	(Mod_1507_BUD_Buddler_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1493_BUD_Buddler_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1495_BUD_Buddler_OM,	"OM_ENTRANCE");
-	Wld_InsertNpc	(Mod_1497_BUD_Aleph_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1498_BUD_Grimes_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1500_BUD_Buddler_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1501_BUD_Buddler_OM,	"OM_ENTRANCE");
@@ -6859,6 +6866,14 @@ FUNC VOID STARTUP_OldMine ()
 
 	Wld_InsertNpc	(Orc_Stomper,		"OM_CAVE3_15");
 	Wld_InsertNpc	(Orc_Stonemill,		"OM_CAVE1_BELLOWS");
+
+	Wld_InsertNpc	(Minecrawler,		"OM_037");
+	Wld_InsertNpc	(Minecrawler,		"OM_033");
+	Wld_InsertNpc	(Minecrawler,		"FP_ROAM_CRAWLER04_02");
+
+	Wld_InsertNpc	(Minecrawler,		"OM_030");
+	Wld_InsertNpc	(Minecrawler,		"OM_133");
+	Wld_InsertNpc	(Minecrawler,		"OM_133");
 
 };
 

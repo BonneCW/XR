@@ -5,9 +5,7 @@ instance Mod_1497_BUD_Aleph_OM (Npc_Default)
 	name =							"Aleph";
 	npctype =						npctype_main;
 	guild =							GIL_KDF;      
-	level =							5;
-	
-	
+	level =							5;	
 	voice =							5;
 	id =							1497;
 
@@ -36,22 +34,21 @@ instance Mod_1497_BUD_Aleph_OM (Npc_Default)
 	B_SetFightSkills (self, 30); 
 	B_SetAttributesToChapter (self, 2);
 	
-	//-------- inventory --------                                    
+	//-------- inventory --------    
+	CreateInvItems	(self, ItKe_Santino, 1);
+	CreateInvItems	(self, ItMi_Nugget, 26);
+	CreateInvItems	(self, ItMw_2H_Axe_L_01, 1);
+	CreateInvItems	(self, ItFo_Water, 1);
+	CreateInvItems	(self, ItFo_Cheese, 1);
 
 	
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_1497;
-	};
+};
 
 FUNC VOID Rtn_start_1497 ()
 {   
-	TA_Pick_Ore	(16,00,04,00,"OM_PICKORE_05");
-	TA_Pick_Ore	(04,00,16,00,"OM_PICKORE_05");
-};
-
-FUNC VOID Rtn_Pause_1497 ()
-{   
-	TA_Stand_Eating	(16,00,04,00,"OM_PICKORE_05");
-	TA_Stand_Eating	(04,00,16,00,"OM_PICKORE_05");
+	TA_Pick_Ore	(16,00,04,00,"OM_049");
+	TA_Pick_Ore	(04,00,16,00,"OM_049");
 };

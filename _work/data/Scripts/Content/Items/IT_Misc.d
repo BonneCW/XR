@@ -4557,3 +4557,26 @@ INSTANCE ItMi_Waffenbuendel (C_Item)
 	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
 	
 };
+
+
+/******************************************************************************************/
+INSTANCE ItMi_ZeichenDerBruderschaft (C_Item)
+{
+	name 				=	"Zeichen der Bruderschaft";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI|ITEM_SHOW;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Amulet_Psi_01.3ds";
+	material 			=	MAT_METAL;
+
+	description			= 	name;
+	
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5]			= 	value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
+	
+};
