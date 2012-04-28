@@ -13,7 +13,6 @@ INSTANCE MENU_OPT_XR2(C_MENU_DEF)
 	items[2]		= "MENUITEM_XR2_BLOODSPLATS_CHOICE";
 	
 	items[3]		= "MENUITEM_XR2_LAST";
-	items[4]		= "MENUITEM_XR2_BACK";
 	
 	flags = flags | MENU_SHOW_INFO;
 };
@@ -78,21 +77,6 @@ INSTANCE MENUITEM_XR2_LAST(C_MENU_ITEM_DEF)
 	dimx		=	4096;		dimy		=	800;
 	// Aktionen
 	onSelAction[0]	= SEL_ACTION_BACK;
-	onSelAction[1]	= SEL_ACTION_STARTMENU;
-	onSelAction_S[1] = "MENU_OPT_XR";
-	//onSelAction_S[0] = "MENU_MAIN";
 	// Weitere Eigenschaften
 	flags			= flags |IT_TXT_CENTER;
-};
-
-INSTANCE MENUITEM_XR2_BACK(C_MENU_ITEM_DEF)
-{
-	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Zurück";
-	// Position und Dimension	
-	posx		=	1000;		posy		=	MENU_BACK_Y+500;
-	dimx		=	6192;		dimy		=	MENU_DY;
-	// Aktionen
-	onSelAction[0]	= 	SEL_ACTION_BACK;	
-	flags = flags | IT_TXT_CENTER;
 };
