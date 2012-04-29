@@ -4319,7 +4319,6 @@ FUNC VOID STARTUP_MinentalPsiCamp ()
 	Wld_InsertNpc	(Mod_1233_TPL_Templer_MT,	"PSI_START");
 	Wld_InsertNpc	(Mod_1286_TPL_Templer_MT,	"PSI_START");
 	Wld_InsertNpc	(Mod_1235_TPL_Templer_MT,	"PSI_START");
-	Wld_InsertNpc	(Mod_1873_TPL_GorNaKosh_MT,	"PSI_START");
 	Wld_InsertNpc	(Mod_1924_TPL_GorNaMon_MT,	"PSI_START");
 	Wld_InsertNpc	(Mod_1925_TPL_GorNaKar_MT,	"PSI_START");
 };
@@ -5921,6 +5920,14 @@ FUNC VOID INIT_Minental ()
 	Wld_SetMobRoutine(19, 30, "LIGHTSPAWNERELEVEN", 1);
 	Wld_SetMobRoutine(20, 10, "LIGHTSPAWNERELEVEN", 0);
 
+	if (Npc_KnowsInfo(hero, Info_Mod_NaKosh_OM_ZeichenDerBruderschaft))
+	&& (Mod_NaKosh_MT == 0)
+	{
+		Wld_InsertNpc	(Mod_1873_TPL_GorNaKosh_MT,	"PSI_START");
+
+		Mod_NaKosh_MT = 1;
+	};
+
 	if (Kapitel == 2)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_AW_Hi))
 	{
@@ -6820,6 +6827,7 @@ FUNC VOID STARTUP_OldMine ()
 	Wld_InsertNpc	(Mod_7800_SMK_Alberto_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_7801_TPL_GorNaBar_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_7802_TPL_Templer_OM,	"OM_ENTRANCE");
+	Wld_InsertNpc	(Mod_7803_TPL_GorNaKosh_OM,	"OM_ENTRANCE");
 
 	B_KillNpc	(Mod_1497_BUD_Aleph_OM);
 	B_KillNpc	(Mod_7801_TPL_GorNaBar_OM);
