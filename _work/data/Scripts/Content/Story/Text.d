@@ -547,7 +547,8 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"zu Xeres Palast",
 	"Geist rufen",
 	"Giftteppich",
-	"Aura der Flammen"
+	"Aura der Flammen",
+	"Teleport zur Burg"
 };
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -670,6 +670,32 @@ INSTANCE ItRu_TeleportUW (C_Item)
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
+INSTANCE ItRu_TeleportGDG (C_Item) 
+{
+	name 				=	NAME_Rune;
+
+	mainflag 			=	ITEM_KAT_RUNE;
+	flags 				=	0;
+	
+	value				=	Value_Ru_PalTeleportSecret;
+	
+	visual				=	"ItRu_PalTeleportSecret.3DS";	
+	material			=	MAT_STONE;
+
+	spell				= 	SPL_TeleportGDG;
+
+
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	"Teleport zur Burg";
+	
+	TEXT	[1]			=	NAME_Manakosten;			
+	COUNT	[1]			=	SPL_COST_TELEPORT;
+	TEXT	[5]			=	NAME_Value;					
+	COUNT	[5]			=	value;
+};
+/*******************************************************************************************/
 INSTANCE ItRu_BrokenRune (C_Item) 
 {
 	name 				=	NAME_Rune;
