@@ -10,5 +10,11 @@ FUNC VOID B_OpenChest()
 	if (r_max(hero.attribute[ATR_DEXTERITY]) < r_max(99))
 	{
 		Npc_SendPassivePerc (hero, PERC_ASSESSQUIETSOUND, hero, hero);
+
+		Snd_Play	("TRUHENKNARREN_LAUT");
+	}
+	else
+	{
+		Snd_Play	("TRUHENKNARREN_LEISE");
 	};
 };
