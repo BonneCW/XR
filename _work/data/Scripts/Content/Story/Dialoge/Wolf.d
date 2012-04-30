@@ -16,7 +16,25 @@ FUNC INT Info_Mod_Wolf_Hi_Condition()
 FUNC VOID Info_Mod_Wolf_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_00"); //Hey, du lebst ja noch. Hätte nicht gedacht, dass wir uns noch mal sehen.
-	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_01"); //Meine Crawler-Rüstung scheint ja ganz stabil gewesen zu sein.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_01"); //Die Minecrawlerrüstung scheint ja ganz schön stabil gewesen zu sein.
+	AI_Output(hero, self, "Info_Mod_Wolf_Hi_15_02"); //Ja, da hast du ganze Arbeit geleistet.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_03"); //Stimmt ... wirklich zwei Prachtstücke, die ich das zusammengebastelt hatte.
+	AI_Output(hero, self, "Info_Mod_Wolf_Hi_15_04"); //Zwei? Wo ist die andere.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_05"); //Ich hab sie meinem alten Kumpel Gestath gegeben, mit dem ich am Rande der Barriere Handel trieb.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_06"); //Er hat mir die Dinge besorgt, die es vor allem außerhalb unseres Gefängnisses gab und ich habe ihm dafür einige spezielle Gegenstände gegeben, welche die Kolonie hervorgebracht hatte.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_07"); //Er wollte dann in irgendeine unwirkliche Gegend, die von wilden Bestien bewohnt wird ... ein Paradies für Jäger, wie er jedenfalls meinte.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_08"); //Habe ihn nach dem Fall der Barriere auf jeden Fall nicht wieder zu Gesicht bekommen.
+	AI_Output(hero, self, "Info_Mod_Wolf_Hi_15_09"); //Kannst du mir noch mal so eine Rüstung basteln?
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_10"); //Könnte ich schon. Aber dazu bräuchte ich eben die nötigen Rohstoffe. Weißt du denn noch, wie man den Biestern die Platten abzieht?
+	AI_Output(hero, self, "Info_Mod_Wolf_Hi_15_11"); //Also ... ich habe so einiges Vergessen ...
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_12"); //Nun gut, ich könnte es dir noch mal zeigen. Aber ohne Crawlerkrieger brächte uns auch das nichts.
+	AI_Output(hero, self, "Info_Mod_Wolf_Hi_15_13"); //Wo werde ich welche finden?
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_14"); //Ich weiß nicht ... in der Nähe würde mir eigentlich nichts in den Sinn kommen ... höchstens im Süden.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_15"); //Gorn hatte nämlich irgendetwas von einer verfluchten Festung in den Bergen erzählt, die er einnehmen wollte. Auf jeden Fall noch nicht erschlossen.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_16"); //Womöglich gibt es da Höhlen mit den Viechern ... keine Ahnung.
+
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_SÖLDNER, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_SÖLDNER, "Wolf kann mir wieder zeigen, wie ich an Crawlerplatten komme.");
 };
 
 INSTANCE Info_Mod_Wolf_Snapperbogen (C_INFO)
@@ -97,34 +115,6 @@ FUNC VOID Info_Mod_Wolf_Snapperbogen2_Info()
 	AI_Output(self, hero, "Info_Mod_Wolf_Snapperbogen2_08_01"); //(zu sich selbst) Und jetzt schau ich mir das Ding mal genau an ... wäre doch gelacht, wenn ich nicht auch solche Bögen herstellen könnte.
 
 	B_GivePlayerXP	(400);
-};
-
-INSTANCE Info_Mod_Wolf_CanYouPlates (C_INFO)
-{
-	npc		= Mod_798_SLD_Wolf_NW;
-	nr		= 1;
-	condition	= Info_Mod_Wolf_CanYouPlates_Condition;
-	information	= Info_Mod_Wolf_CanYouPlates_Info;
-	permanent	= 0;
-	important	= 0;
-	description	= "Kannst du mir wieder zeigen, wie ich an Crawlerplatten komme?";
-};
-
-FUNC INT Info_Mod_Wolf_CanYouPlates_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_Hi))
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Wolf_CanYouPlates_Info()
-{
-	AI_Output(hero, self, "Info_Mod_Wolf_CanYouPlates_15_00"); //Kannst du mir wieder zeigen, wie ich an Crawlerplatten komme?
-	AI_Output(self, hero, "Info_Mod_Wolf_CanYouPlates_08_01"); //Natürlich, ich hab ja nicht vergessen, wie es geht.
-
-	Log_CreateTopic	(TOPIC_MOD_LEHRER_SÖLDNER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_LEHRER_SÖLDNER, "Wolf kann mir wieder zeigen, wie ich an Crawlerplatten komme.");
 };
 
 INSTANCE Info_Mod_Wolf_Lehrer (C_INFO)
@@ -426,7 +416,7 @@ FUNC INT Info_Mod_Wolf_PlattenNehmen_Condition()
 {
 	Info_Mod_Wolf_PlattenNehmen.description = B_BuildLearnString("Wie bekomme ich diese Platten von den Biestern ab?", B_GetLearnCostTalent(hero, NPC_TALENT_TAKEANIMALTROPHY, TROPHY_CrawlerPlate));
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_CanYouPlates))
+	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_Hi))
 	&& (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_CrawlerPlate] == FALSE)
 	{
 		return 1;
@@ -437,7 +427,7 @@ FUNC VOID Info_Mod_Wolf_PlattenNehmen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Wolf_PlattenNehmen_15_00"); //Wie bekomme ich diese Platten von den Biestern ab?
 
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_CrawlerPlate))
+	if (B_TeachPlayerTalentTakeAnimalTrophy (self, hero, TROPHY_CrawlerPlate))
 	{
 		AI_Output(self, hero, "Info_Mod_Wolf_PlattenNehmen_08_01"); //Das ist relativ einfach. Die Rückenplatten sind nur an deren Rändern mit dem Körper verwachsen.
 		AI_Output(self, hero, "Info_Mod_Wolf_PlattenNehmen_08_02"); //Nimm einfach ein Rasiermesser und schneide halbschräg an den Rändern entlang.
