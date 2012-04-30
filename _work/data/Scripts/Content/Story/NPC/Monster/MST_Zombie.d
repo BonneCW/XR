@@ -286,6 +286,12 @@ INSTANCE ZombieRandom		(Mst_Default_Zombie)
 	Npc_SetToFistMode(self);
 };
 
+INSTANCE Zombie_Castlemine		(Mst_Default_Zombie)
+{
+	B_SetVisual_Zom();
+	Npc_SetToFistMode(self);
+};
+
 INSTANCE ZombieRandom_Lib		(Mst_Default_Zombie)
 {
 	B_SetVisual_Zom();
@@ -1606,6 +1612,14 @@ INSTANCE MayaZombie03		(Mst_Default_Zombie)
 
 INSTANCE MayaZombie04		(Mst_Default_Zombie)
 {
+	B_SetVisuals_Maya_Zombie04();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE Zombie_Burgherr		(Mst_Default_Zombie)
+{
+	name		=	"Burgherr";
+
 	B_SetVisuals_Maya_Zombie04();
 	Npc_SetToFistMode(self);
 };

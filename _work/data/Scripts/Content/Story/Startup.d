@@ -172,26 +172,6 @@ func void INIT_GLOBAL()
 
 	Wld_StopEffect("DEMENTOR_FX");
 
-	/*if (!FF_Active(FRAMEFUNC))
-	{
-		FF_Apply(FRAMEFUNC);
-	};
-
-	if (!FF_Active(DAUERFUNC_01))
-	{
-		FF_ApplyExt(DAUERFUNC_01, 1000, -1);
-	};*/
-
-	if (FF_Active(FRAMEFUNC))
-	{
-		FF_Remove(FRAMEFUNC);
-	};
-
-	if (FF_Active(DAUERFUNC_01))
-	{
-		FF_Remove(DAUERFUNC_01);
-	};
-
 	Wld_SendTrigger	("FRAMETRIGGER");
 	Wld_SendTrigger ("DAUERTRIGGER");
 	Wld_SendTrigger ("SPECIALTRIGGER");
@@ -1714,7 +1694,17 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(Hammel, 		"FP_ROAM_FARM4_SHEEP_04");
 	Wld_InsertNpc 	(Sheep, 		"FP_ROAM_FARM4_SHEEP_04");
 
-	// Mine hinter den D?monenrittern
+	// Festung oben
+
+	Wld_InsertNpc	(Zombie_Burgherr,	"NW_CASTLEMINE_HUT_10");
+	Wld_InsertNpc	(Zombie_Castlemine,	"NW_CASTLEMINE_HUT_03");
+	Wld_InsertNpc	(Zombie_Castlemine,	"FP_ROAM_NW_CASTLEMINE_HUT_03");
+	Wld_InsertNpc	(Zombie_Castlemine,	"FP_CAMPFIRE_SPIELPLATZ_02");
+	Wld_InsertNpc	(Zombie_Castlemine,	"FP_ROAM_NW_CASTLEMINE_HUT_01_MONSTER_02");
+	Wld_InsertNpc	(Zombie_Castlemine,	"FP_SMALLTALK_STAND_SPIELPLATZ_05");
+	Wld_InsertNpc	(Zombie_Castlemine,	"FP_STAND_SPIELPLATZ_01");
+
+	// Mine hinter den Dämonenrittern
 
 	Wld_InsertNpc	(Minecrawler,	"FP_ROAM_CASTLEMINE2_01");
 	Wld_InsertNpc	(MinecrawlerWarrior,	"FP_ROAM_CASTLEMINE2_12");
@@ -1726,7 +1716,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc	(MinecrawlerWarrior,	"FP_ROAM_CASTLEMINE2_07");
 	Wld_InsertNpc	(Minecrawler,	"FP_ROAM_CASTLEMINE2_06");
 
-	// Talkessel unter den D?monenrittern
+	// Talkessel unter den Dämonenrittern
 
 	Wld_InsertNpc	(Troll,	"NW_CASTLEMINE_TROLL_08");
 	Wld_InsertNpc	(Troll,	"NW_CASTLEMINE_TROLL_07");
@@ -1842,9 +1832,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc	(Keiler,	"NW_FARM3_BIGWOOD_03_C");
 	Wld_InsertNpc	(Keiler,	"NW_FARM3_BIGWOOD_03_C");
 
-	//Wld_InsertNpc	(Dragonsnapper,	"NW_FARM3_BIGWOOD_04");
-
-	// Talkessel in der N?he von Bengar
+	// Talkessel in der Nähe von Bengar
 
 	Wld_InsertNpc	(Rabbit,	"NW_BIGMILL_FARM3_03");
 	Wld_InsertNpc	(Rabbit,	"NW_BIGMILL_FARM3_03");

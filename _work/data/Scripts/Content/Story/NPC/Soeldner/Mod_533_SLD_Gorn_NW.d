@@ -35,10 +35,15 @@ INSTANCE Mod_533_SLD_Gorn_NW (Npc_Default)
 	B_SetFightSkills (self, 70); 
 
 	// ------ TA anmelden ------
-	daily_routine 		= Rtn_Start_533;
+	daily_routine 		= Rtn_PreStart_533;
 };
 
-//-------------------------------------
+FUNC VOID Rtn_PreStart_533()
+{
+	TA_Stand_WP		(05,00,20,00,"NW_CASTLEMINE_PATH_13");	
+	TA_Stand_WP		(20,00,05,00,"NW_CASTLEMINE_PATH_13");
+};
+
 FUNC VOID Rtn_Start_533 ()
 {	
 	TA_Stand_Eating		(07,00,07,30,"NW_BIGFARM_KITCHEN_OUT_02"); 
@@ -58,8 +63,8 @@ FUNC VOID Rtn_Start_533 ()
 
 FUNC VOID Rtn_Treffen_533()
 {
-	TA_Stand_WP (05,00,20,00,"NW_TAVERNE_IN_RANGERMEETING_LARES");	
-	TA_Stand_WP	(20,00,05,00,"NW_TAVERNE_IN_RANGERMEETING_LARES");
+	TA_Stand_WP		(05,00,20,00,"NW_TAVERNE_IN_RANGERMEETING_LARES");	
+	TA_Stand_WP		(20,00,05,00,"NW_TAVERNE_IN_RANGERMEETING_LARES");
 };
 
 FUNC VOID Rtn_Aufstellung_533()
@@ -90,6 +95,12 @@ FUNC VOID Rtn_Diener_533()
 {
 	TA_RunToWP		(08,00,20,00,"NW_FARM4_WOOD_MONSTER_MORE_03");
 	TA_RunToWP		(20,00,08,00,"NW_FARM4_WOOD_MONSTER_MORE_03");
+};
+
+FUNC VOID Rtn_Castlemine_533()
+{
+	TA_Guide_Player		(08,00,20,00,"NW_CASTLEMINE_HUT_10_B");
+	TA_Guide_Player		(20,00,08,00,"NW_CASTLEMINE_HUT_10_B");
 };
 
 FUNC VOID Rtn_WaldTour_533()
