@@ -22,6 +22,7 @@ var int ESP;
 var int EBX;
 var int EBP;
 var int EDI;
+var int ESI;
 
 
 //========================================
@@ -100,6 +101,11 @@ func void HookEngineI(var int address, var int oldInstr, var int function) {
     ASM_2(ASMINT_OP_movEDItoEAX);
     ASM_2(ASMINT_OP_movEAXtoMem);
     ASM_4(_@(EDI));
+
+    // ESI in Daedalus Variable sichern
+    ASM_2(ASMINT_OP_movESItoEAX);
+    ASM_2(ASMINT_OP_movEAXtoMem);
+    ASM_4(_@(ESI));
 
     // --- Daedalusfunktion aufrufen ---
 

@@ -8,23 +8,23 @@ PROTOTYPE Mst_Default_Addon_Alligator (C_Npc)
 	name							=	"Alligator";
 	guild							=	GIL_Alligator;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Alligator;
-	level							=	18;
+	level							=	16;
 	
 	//----- Attributes ----
-	attribute	[ATR_STRENGTH]		=	100;
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	200;
-	attribute	[ATR_HITPOINTS]		=	200;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(41)+80;
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21);
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(99)+150;
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	140000;
-	protection	[PROT_EDGE]			=	140000;
-	protection	[PROT_POINT]		=	140000;
-	protection	[PROT_FIRE]			=	0;
-	protection	[PROT_FLY]			=	140;
-	protection	[PROT_MAGIC]		=	50;
+	protection	[PROT_BLUNT]		=	Hlp_Random(41)*1000+120000;
+	protection	[PROT_EDGE]		=	Hlp_Random(41)*1000+120000;
+	protection	[PROT_POINT]		=	Hlp_Random(41)*1000+120000;
+	protection	[PROT_FIRE]		=	0;
+	protection	[PROT_FLY]		=	Hlp_Random(41)+120;
+	protection	[PROT_MAGIC]		=	Hlp_Random(41)+30;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	
@@ -133,13 +133,13 @@ INSTANCE Alligator_AJ_09	(Mst_Default_Addon_Alligator)
 {
 	name	=	"Muttertier";
 
-	level							=	15;
+	level							=	20;
 	
 	//----- Attributes ----
-	attribute	[ATR_STRENGTH]		=	130;
+	attribute	[ATR_STRENGTH]		=	150;
 	attribute	[ATR_DEXTERITY]		=	40;
-	attribute	[ATR_HITPOINTS_MAX]	=	250;
-	attribute	[ATR_HITPOINTS]		=	250;
+	attribute	[ATR_HITPOINTS_MAX]	=	450;
+	attribute	[ATR_HITPOINTS]		=	450;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
@@ -161,13 +161,13 @@ INSTANCE Alligator_AJ_10	(Mst_Default_Addon_Alligator)
 {
 	name	=	"Muttertier";
 
-	level							=	15;
+	level							=	20;
 	
 	//----- Attributes ----
-	attribute	[ATR_STRENGTH]		=	130;
+	attribute	[ATR_STRENGTH]		=	150;
 	attribute	[ATR_DEXTERITY]		=	40;
-	attribute	[ATR_HITPOINTS_MAX]	=	250;
-	attribute	[ATR_HITPOINTS]		=	250;
+	attribute	[ATR_HITPOINTS_MAX]	=	450;
+	attribute	[ATR_HITPOINTS]		=	450;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 

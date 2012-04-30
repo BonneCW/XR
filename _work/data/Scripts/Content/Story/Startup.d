@@ -189,6 +189,7 @@ func void INIT_GLOBAL()
 		HookEngine (4349731, 7, "B_ENDGAME");
 		HookEngine (7742032, 6, "B_OPENINVENTORY");
 		HookEngine (7742480, 9, "B_CLOSEINVENTORY");
+		HookEngine (7487221, 5, "B_OPENCHEST");
 
 		GOTHIC_RESTART = "Y";
 	};

@@ -28,6 +28,8 @@ NEUERUNGEN\Balken.d
 
 NEUERUNGEN\Respawn.d
 
+NEUERUNGEN\B_OpenChest.d
+
 STORY\Log_Entries\Log_Constants_*.d
 STORY\XP_Constants.d
 STORY\Story_Globals\*.d
