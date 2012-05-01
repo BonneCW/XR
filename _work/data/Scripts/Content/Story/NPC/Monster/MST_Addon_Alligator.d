@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Addon_Alligator (C_Npc)
 	level							=	16;
 	
 	//----- Attributes ----
-	attribute	[ATR_STRENGTH]		=	Hlp_Random(41)+80;
-	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21);
-	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(99)+150;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(41)+80;	// 80 - 120
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21);		// 0 - 20
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(101)+150;	// 150 - 250
 	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_MANA] 		=	0;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	Hlp_Random(41)*1000+120000;
-	protection	[PROT_EDGE]		=	Hlp_Random(41)*1000+120000;
-	protection	[PROT_POINT]		=	Hlp_Random(41)*1000+120000;
+	protection	[PROT_BLUNT]		=	Hlp_Random(41)*1000+120000;	// 120 - 160
+	protection	[PROT_EDGE]		=	Hlp_Random(41)*1000+120000;	// 120 - 160
+	protection	[PROT_POINT]		=	Hlp_Random(41)*1000+120000;	// 120 - 160
 	protection	[PROT_FIRE]		=	0;
-	protection	[PROT_FLY]		=	Hlp_Random(41)+120;
-	protection	[PROT_MAGIC]		=	Hlp_Random(41)+30;
+	protection	[PROT_FLY]		=	Hlp_Random(41)+120;		// 120 - 160
+	protection	[PROT_MAGIC]		=	Hlp_Random(41)+30;		// 30 - 70
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

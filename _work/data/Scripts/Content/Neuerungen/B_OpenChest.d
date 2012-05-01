@@ -11,10 +11,6 @@ FUNC VOID B_OpenChest()
 	{
 		Npc_SendPassivePerc (hero, PERC_ASSESSQUIETSOUND, hero, hero);
 
-		Snd_Play	("TRUHENKNARREN_LAUT");
-	}
-	else
-	{
-		Snd_Play	("TRUHENKNARREN_LEISE");
+		Snd_Play3D	(hero, "TRUHENKNARREN_LAUT");
 	};
 };

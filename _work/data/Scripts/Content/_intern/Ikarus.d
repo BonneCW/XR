@@ -1084,8 +1084,6 @@ const int ASMINT_OP_movEBPtoEAX     = 50571; //0xC58B  aus LeGo geklaut
 const int ASMINT_OP_movEDItoEAX     = 51083; //0xC78B  aus LeGo geklaut
 const int ASMINT_OP_addImToEAX      = 49283; //0xC083  aus LeGo geklaut
 
-const int ASMINT_OP_movESItoEAX    = 655376384;
-
 /* Tuning:
    If not specified differently,
    there will be this much space available

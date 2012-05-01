@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Giant_DesertRat(C_Npc)
 	level							=	10;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	75;
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	75;
-	attribute	[ATR_HITPOINTS]		=	75;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(41) + 55;	// 55 - 95
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21);		// 0 - 20
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(61) + 55;	// 55 - 115
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_MANA] 		=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	75000;
-	protection	[PROT_EDGE]			=	75000;
-	protection	[PROT_POINT]		=	25000;
-	protection	[PROT_FIRE]			=	75;
-	protection	[PROT_FLY]			=	75;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	Hlp_Random(41)*1000 + 55000;	// 55 - 95
+	protection	[PROT_EDGE]		=	Hlp_Random(41)*1000 + 55000;	// 55 - 95
+	protection	[PROT_POINT]		=	Hlp_Random(51)*1000;		// 0 - 50
+	protection	[PROT_FIRE]		=	Hlp_Random(41) + 55;		// 55 - 95
+	protection	[PROT_FLY]		=	75;
+	protection	[PROT_MAGIC]		=	Hlp_Random(21);			// 0 - 20
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

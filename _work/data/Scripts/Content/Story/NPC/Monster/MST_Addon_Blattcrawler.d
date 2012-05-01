@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Blattcrawler(C_Npc)
 	level							=	15;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		= Hlp_Random(41)+75;
-	attribute	[ATR_DEXTERITY]		= Hlp_Random(21)+5;
-	attribute	[ATR_HITPOINTS_MAX]	= Hlp_Random(99)+100;
+	attribute	[ATR_STRENGTH]		= Hlp_Random(41)+75;	// 75 - 115
+	attribute	[ATR_DEXTERITY]		= Hlp_Random(21)+5;	// 5 - 25
+	attribute	[ATR_HITPOINTS_MAX]	= Hlp_Random(101)+100;	// 100 - 200
 	attribute	[ATR_HITPOINTS]		= attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		= 0;
-	attribute	[ATR_MANA] 			= 0;
+	attribute	[ATR_MANA] 		= 0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		= Hlp_Random(41)*1000+65000;
-	protection	[PROT_EDGE]		= Hlp_Random(41)*1000+65000;
-	protection	[PROT_POINT]		= Hlp_Random(41)*1000+65000;
-	protection	[PROT_FIRE]		= Hlp_Random(41)+65;
-	protection	[PROT_FLY]		= Hlp_Random(41)+65;
-	protection	[PROT_MAGIC]		= Hlp_Random(16);
+	protection	[PROT_BLUNT]		= Hlp_Random(41)*1000+65000;	// 65 - 105
+	protection	[PROT_EDGE]		= Hlp_Random(41)*1000+65000;	// 65 - 105
+	protection	[PROT_POINT]		= Hlp_Random(41)*1000+65000;	// 65 - 105
+	protection	[PROT_FIRE]		= Hlp_Random(41)+65;		// 65 - 105
+	protection	[PROT_FLY]		= Hlp_Random(41)+65;		// 65 - 105
+	protection	[PROT_MAGIC]		= Hlp_Random(16);		// 0 - 15
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

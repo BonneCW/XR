@@ -189,13 +189,20 @@ func void INIT_GLOBAL()
 		HookEngine (4349731, 7, "B_ENDGAME");
 		HookEngine (7742032, 6, "B_OPENINVENTORY");
 		HookEngine (7742480, 9, "B_CLOSEINVENTORY");
-		HookEngine (7487221, 5, "B_OPENCHEST");
+		HookEngine (7487221, 5, "B_OPENCHEST");		// 0x723EF5
+
+		// Keine Dietriche mehr abbrechen bei Truhe knacken
+
+		MemoryProtectionOverride(7487735, 4);	// 0x7240F7
+		MEM_WriteByte(7487735, 232);
 
 		GOTHIC_RESTART = "Y";
 	};
 
 	MoreAlphaVobs(2048); //normal: 256
 	MoreAlphaPolys(16384); //normal: 2048
+
+	B_AutoGeneratePicklockKombos();
 };
 
 FUNC VOID OldLevel(var int newlevel)

@@ -9,19 +9,19 @@ PROTOTYPE Mst_Default_Bloodhound(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_Bloodhound;
 	level							=	22;
 //----------------------------------------------------------------
-	attribute	[ATR_STRENGTH]		=	180;
-	attribute	[ATR_DEXTERITY]		=	15;
-	attribute	[ATR_HITPOINTS_MAX]	=	180;
-	attribute	[ATR_HITPOINTS]		=	180;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(61) + 150;	// 150 - 210
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21) + 5;	// 5 - 25
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(101) + 150;	// 150 - 250
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_MANA] 		=	0;
 //----------------------------------------------------------------
-	protection	[PROT_BLUNT]		=	90000;
-	protection	[PROT_EDGE]			=	90000;
-	protection	[PROT_POINT]		=	40000;
-	protection	[PROT_FIRE]			=	90;
-	protection	[PROT_FLY]			=	90;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	Hlp_Random(31)*1000+75000;	// 75 - 105
+	protection	[PROT_EDGE]		=	Hlp_Random(31)*1000+75000;	// 75 - 105
+	protection	[PROT_POINT]		=	Hlp_Random(31)*1000+25000;	// 75 - 105
+	protection	[PROT_FIRE]		=	Hlp_Random(31)+75;		// 75 - 105
+	protection	[PROT_FLY]		=	90;
+	protection	[PROT_MAGIC]		=	Hlp_Random(31);			// 0 - 30
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 //----------------------------------------------------------------
@@ -51,13 +51,6 @@ PROTOTYPE Mst_Default_Bloodhound(C_Npc)
 	start_aistate				= ZS_MM_AllScheduler;
 
 	aivar[AIV_MM_RoamStart] 	= OnlyRoutine;
-};
-//-------------------------------------------------------------
-func void Set_Bloodhound_Visuals()
-{
-	Mdl_SetVisual			(self,	"Shadow.mds");
-	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Bhd_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 
 	if (Hlp_Random(100) < 15)
 	{
@@ -67,6 +60,13 @@ func void Set_Bloodhound_Visuals()
 	{
 		CreateInvItems (self, ItAt_SkeletonBone, 1+Hlp_Random(2));
 	};
+};
+//-------------------------------------------------------------
+func void Set_Bloodhound_Visuals()
+{
+	Mdl_SetVisual			(self,	"Shadow.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Bhd_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
 

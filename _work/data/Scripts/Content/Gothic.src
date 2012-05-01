@@ -28,7 +28,7 @@ NEUERUNGEN\Balken.d
 
 NEUERUNGEN\Respawn.d
 
-NEUERUNGEN\B_OpenChest.d
+NEUERUNGEN\B_AutoGeneratePicklockKombos.d
 
 STORY\Log_Entries\Log_Constants_*.d
 STORY\XP_Constants.d
@@ -87,6 +87,8 @@ STORY\B_Story\B_GivePlayerXP.d
 AI\HUMAN\C_Human\C_BodyStateContains.d
 STORY\Dialoge\MONOLOG.d
 STORY\Log_Entries\B_CloseTopic.d
+
+NEUERUNGEN\B_OpenChest.d
 
 NEUERUNGEN\B_EXPVerteiler.d
 

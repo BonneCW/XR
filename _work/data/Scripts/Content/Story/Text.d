@@ -745,7 +745,7 @@ const string NAME_SPL_TeleportSektis	= "Teleport der Sektenspinner";
 const string NAME_SPL_Laehmen	= "Lähmen";
 const string NAME_SPL_FireLance				= "Feuerlanze";
 const string NAME_SPL_Teleport_Eisgebiet	= "Teleport ins Eisgebiet";
-const string NAME_SPL_Eisklinge	= "Rune der Eisklinge";
+const string NAME_SPL_Eisklinge		= "Rune der Eisklinge";
 
 // *****************************************************************************************
 // Charakterbogen-Texte: TALENTE
@@ -1194,9 +1194,9 @@ const string PRINT_MissingItem				= "Mir fehlt der entsprechende Gegenstand";
 const string PRINT_AnotherUser				= "Das wird gerade benutzt";
 const string PRINT_NoPicklockTalent			= "Dafür habe ich kein Talent";
 
-const string PRINT_NOTHINGTOGET				= "Da ist nichts zu holen...";
-const string PRINT_NOTHINGTOGET02			= "Nichts zu holen...";
-const string PRINT_NOTHINGTOGET03			= "Nichts zu plündern...";
+const string PRINT_NOTHINGTOGET				= "Da ist nichts zu holen ...";
+const string PRINT_NOTHINGTOGET02			= "Nichts zu holen ...";
+const string PRINT_NOTHINGTOGET03			= "Nichts zu plündern ...";
 
 // *************************************
 // StringKonstanten	für	Beten
@@ -1393,7 +1393,7 @@ const int YPOS_XPGAINED			= 55;
 // ------ G_PickLock ------
 const string PRINT_PICKLOCK_SUCCESS	= "Das hörte sich gut an";
 const string PRINT_PICKLOCK_UNLOCK	= "Das Schloß ist geknackt";
-const string PRINT_PICKLOCK_FAILURE	= "Mist.. wieder von vorne";
+const string PRINT_PICKLOCK_FAILURE	= "Mist... wieder von vorne";
 const string PRINT_PICKLOCK_BROKEN	= "Der Dietrich ist abgebrochen";
 
 // ------ G_CanNotUse ------

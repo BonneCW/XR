@@ -109,8 +109,8 @@ INSTANCE Keiler	(Mst_Default_Keiler)
 
 INSTANCE Riesenkeiler	(Mst_Default_Keiler)
 {
-	level							=	30;
-	name							=	"Riesenkeiler";
+	level					=	30;
+	name					=	"Riesenkeiler";
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	150;
 	attribute	[ATR_DEXTERITY]		=	150;
@@ -119,14 +119,13 @@ INSTANCE Riesenkeiler	(Mst_Default_Keiler)
 	
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	150000;
-	protection	[PROT_EDGE]			=	150000;
+	protection	[PROT_EDGE]		=	150000;
 	protection	[PROT_POINT]		=	150000;
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	150;
+	protection	[PROT_FIRE]		=	150;
+	protection	[PROT_FLY]		=	150;
 
 	B_SetVisuals_Riesenkeiler();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFo_MuttonRaw, 1);
 };
 
 INSTANCE KeilerTransform	(Mst_Default_Keiler)
@@ -136,14 +135,14 @@ INSTANCE KeilerTransform	(Mst_Default_Keiler)
 	attribute	[ATR_HITPOINTS_MAX]	=	100 + Npc_KnowsInfo(hero, Info_Mod_AlterWaldMann_Hi)*100;
 	attribute	[ATR_HITPOINTS]		=	100 + Npc_KnowsInfo(hero, Info_Mod_AlterWaldMann_Hi)*100;
 	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_MANA] 		=	0;
 	
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	50000 + Npc_KnowsInfo(hero, Info_Mod_AlterWaldMann_Hi)*50000;
-	protection	[PROT_EDGE]			=	50000 + Npc_KnowsInfo(hero, Info_Mod_AlterWaldMann_Hi)*50000;
+	protection	[PROT_EDGE]		=	50000 + Npc_KnowsInfo(hero, Info_Mod_AlterWaldMann_Hi)*50000;
 	protection	[PROT_POINT]		=	50000 + Npc_KnowsInfo(hero, Info_Mod_AlterWaldMann_Hi)*50000;
-	protection	[PROT_FIRE]			=	50 + Npc_KnowsInfo(hero, Info_Mod_AlterWaldMann_Hi)*50;
-	protection	[PROT_FLY]			=	50 + Npc_KnowsInfo(hero, Info_Mod_AlterWaldMann_Hi)*50;
+	protection	[PROT_FIRE]		=	50 + Npc_KnowsInfo(hero, Info_Mod_AlterWaldMann_Hi)*50;
+	protection	[PROT_FLY]		=	50 + Npc_KnowsInfo(hero, Info_Mod_AlterWaldMann_Hi)*50;
 	protection	[PROT_MAGIC]		=	0 + Npc_KnowsInfo(hero, Info_Mod_AlterWaldMann_Hi)*50;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
