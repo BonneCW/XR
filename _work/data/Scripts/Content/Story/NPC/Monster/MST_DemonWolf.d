@@ -12,20 +12,20 @@ PROTOTYPE Mst_Default_DemonWolf(C_Npc)
 	level = 12;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	60;
-	attribute	[ATR_DEXTERITY]		=	5;
-	attribute	[ATR_HITPOINTS_MAX]	=	150;
-	attribute	[ATR_HITPOINTS]		=	150;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(61) + 40;	// 40 - 100
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(16);		// 0 - 15
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(101) + 100;	// 100 - 200
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_MANA] 		=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	50000;
-	protection	[PROT_EDGE]			=	50000;
-	protection	[PROT_POINT]		=	20000;
-	protection	[PROT_FIRE]			=	30;
-	protection	[PROT_FLY]			=	30;
-	protection	[PROT_MAGIC]		=	20;
+	protection	[PROT_BLUNT]		=	Hlp_Random(51)*1000 + 35000;	// 35 - 85
+	protection	[PROT_EDGE]		=	Hlp_Random(51)*1000 + 35000;	// 35 - 85
+	protection	[PROT_POINT]		=	Hlp_Random(31)*1000 + 20000;	// 20 - 50
+	protection	[PROT_FIRE]		=	Hlp_Random(31) + 20;		// 20 - 50
+	protection	[PROT_FLY]		=	30;
+	protection	[PROT_MAGIC]		=	Hlp_Random(31) + 10;		// 10 - 40
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 

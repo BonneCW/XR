@@ -147,21 +147,21 @@ INSTANCE Alraune_Moor	(Mst_Default_Alraune)
 
 	level		=	20;
 
-	attribute	[ATR_STRENGTH]		=	200;
-	attribute	[ATR_DEXTERITY]		=	100;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(101) + 150;	// 150 - 250
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21) + 10;	// 10 - 30
 	
-	attribute	[ATR_HITPOINTS_MAX]	=	2000;
-	attribute	[ATR_HITPOINTS]		=	2000;
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(201) + 400;	// 400 - 600
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 
 	attribute	[ATR_MANA_MAX] 		=	1000;
-	attribute	[ATR_MANA] 			=	1000;
+	attribute	[ATR_MANA] 		=	1000;
 //------------------------------------------------------
 	protection	[PROT_BLUNT]		=	IMMUNE;
-	protection	[PROT_EDGE]			=	150000;
+	protection	[PROT_EDGE]		=	Hlp_Random(101)*1000 + 100000;	// 100 - 200
 	protection	[PROT_POINT]		=	IMMUNE;
-	protection	[PROT_FIRE]			=	0;
-	protection	[PROT_FLY]			=	1000;
-	protection	[PROT_MAGIC]		=	60;
+	protection	[PROT_FIRE]		=	0;
+	protection	[PROT_FLY]		=	1000;
+	protection	[PROT_MAGIC]		=	Hlp_Random(41) + 40;		// 40 - 80
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 
@@ -199,7 +199,7 @@ INSTANCE Alraune_Botschek_01	(Mst_Default_Alraune)
 	level		=	10;
 
 	attribute	[ATR_STRENGTH]		=	100;
-	attribute	[ATR_DEXTERITY]		=	100;
+	attribute	[ATR_DEXTERITY]		=	10;
 	
 	attribute	[ATR_HITPOINTS_MAX]	=	1000;
 	attribute	[ATR_HITPOINTS]		=	1000;
@@ -252,7 +252,7 @@ INSTANCE Alraune_Botschek_02	(Mst_Default_Alraune)
 	level		=	10;
 
 	attribute	[ATR_STRENGTH]		=	100;
-	attribute	[ATR_DEXTERITY]		=	100;
+	attribute	[ATR_DEXTERITY]		=	10;
 	
 	attribute	[ATR_HITPOINTS_MAX]	=	1000;
 	attribute	[ATR_HITPOINTS]		=	1000;
@@ -305,7 +305,7 @@ INSTANCE Alraune_Botschek_03	(Mst_Default_Alraune)
 	level		=	10;
 
 	attribute	[ATR_STRENGTH]		=	100;
-	attribute	[ATR_DEXTERITY]		=	100;
+	attribute	[ATR_DEXTERITY]		=	10;
 	
 	attribute	[ATR_HITPOINTS_MAX]	=	1000;
 	attribute	[ATR_HITPOINTS]		=	1000;

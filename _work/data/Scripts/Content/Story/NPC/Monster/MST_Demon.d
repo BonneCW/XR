@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Demon(C_Npc)
 	level							=	60;
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	150;
-	attribute	[ATR_DEXTERITY]		=	30;
-	attribute	[ATR_HITPOINTS_MAX]	=	350;
-	attribute	[ATR_HITPOINTS]		=	350;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(101) + 100;	// 100 - 200
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21) + 20;	// 20 - 40
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(151) + 275;	// 275 - 425
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	200;
-	attribute	[ATR_MANA] 			=	200;
+	attribute	[ATR_MANA] 		=	200;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	125000;
-	protection	[PROT_EDGE]			=	125000;
-	protection	[PROT_POINT]		=	125000;
-	protection	[PROT_FIRE]			=	125;
-	protection	[PROT_FLY]			=	125;
-	protection	[PROT_MAGIC]		=	125;
+	protection	[PROT_BLUNT]		=	Hlp_Random(101)*1000 + 75000;	// 75 - 175
+	protection	[PROT_EDGE]		=	Hlp_Random(101)*1000 + 75000;	// 75 - 175
+	protection	[PROT_POINT]		=	Hlp_Random(101)*1000 + 75000;	// 75 - 175
+	protection	[PROT_FIRE]		=	Hlp_Random(101) + 75;		// 75 - 175
+	protection	[PROT_FLY]		=	125;
+	protection	[PROT_MAGIC]		=	Hlp_Random(101) + 75;		// 75 - 175
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

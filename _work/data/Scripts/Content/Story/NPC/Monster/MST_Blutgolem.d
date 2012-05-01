@@ -16,14 +16,14 @@ PROTOTYPE Mst_Default_Blutgolem(C_Npc)
 	attribute	[ATR_HITPOINTS_MAX]	=	400;
 	attribute	[ATR_HITPOINTS]		=	400;
 	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 			=	100;
+	attribute	[ATR_MANA] 		=	100;
 	
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	150000;
-	protection	[PROT_EDGE]			=	150000;
+	protection	[PROT_EDGE]		=	150000;
 	protection	[PROT_POINT]		=	150000;
-	protection	[PROT_FIRE]			=	-1;
-	protection	[PROT_FLY]			=	-1;	
+	protection	[PROT_FIRE]		=	-1;
+	protection	[PROT_FLY]		=	-1;	
 	protection	[PROT_MAGIC]		=	-1;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];

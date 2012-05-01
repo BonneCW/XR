@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_DemonLord(C_Npc)
 	level							= 150;
 	
 	//------ Attribute ----	
-	attribute	[ATR_STRENGTH]		= 200;
-	attribute	[ATR_DEXTERITY]		= 40;
-	attribute	[ATR_HITPOINTS_MAX]	= 500;
-	attribute	[ATR_HITPOINTS]		= 500;
+	attribute	[ATR_STRENGTH]		= Hlp_Random(101) + 150;	// 150 - 250
+	attribute	[ATR_DEXTERITY]		= Hlp_Random(21) + 30;		// 30 - 50
+	attribute	[ATR_HITPOINTS_MAX]	= Hlp_Random(201) + 450;	// 450 - 650
+	attribute	[ATR_HITPOINTS]		= attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		= 200;
-	attribute	[ATR_MANA] 			= 200;
+	attribute	[ATR_MANA] 		= 200;
 	
 	//------ Protections ----
-	protection	[PROT_BLUNT]		= 150000;
-	protection	[PROT_EDGE]			= 150000;
-	protection	[PROT_POINT]		= 150000;
-	protection	[PROT_FIRE]			= 150;		
-	protection	[PROT_FLY]			= 150;	
-	protection	[PROT_MAGIC]		= 100;
+	protection	[PROT_BLUNT]		= Hlp_Random(101)*1000 + 125000;	// 125 - 225
+	protection	[PROT_EDGE]		= Hlp_Random(101)*1000 + 125000;	// 125 - 225
+	protection	[PROT_POINT]		= Hlp_Random(101)*1000 + 125000;	// 125 - 225
+	protection	[PROT_FIRE]		= Hlp_Random(101) + 125;	// 125 - 225		
+	protection	[PROT_FLY]		= 150;	
+	protection	[PROT_MAGIC]		= Hlp_Random(101) + 125;	// 125 - 225
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	
@@ -119,4 +119,3 @@ INSTANCE DemonLord_Balrog	(Mst_Default_DemonLord)
 	B_SetVisuals_DemonLord();
 	Npc_SetToFistMode(self);
 };
-

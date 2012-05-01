@@ -53,7 +53,7 @@ PROTOTYPE Mst_Default_Blattcrawler(C_Npc)
 
 	aivar[AIV_MM_WuselStart] 	= OnlyRoutine;
 
-	CreateInvItems (self, ItAt_Addon_BCKopf		, 1);
+	CreateInvItems (self, ItAt_Addon_BCKopf, 1);
 };
 
 PROTOTYPE Mst_Default_Erznager(C_Npc)			
@@ -65,20 +65,20 @@ PROTOTYPE Mst_Default_Erznager(C_Npc)
 	level							=	20;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		= 140;
-	attribute	[ATR_DEXTERITY]		= 15;
-	attribute	[ATR_HITPOINTS_MAX]	= 275;
-	attribute	[ATR_HITPOINTS]		= 275;
+	attribute	[ATR_STRENGTH]		= Hlp_Random(81) + 100;		// 100 - 180
+	attribute	[ATR_DEXTERITY]		= Hlp_Random(21) + 5;		// 5 - 25
+	attribute	[ATR_HITPOINTS_MAX]	= Hlp_Random(151) + 200;	// 200 - 350
+	attribute	[ATR_HITPOINTS]		= attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		= 0;
-	attribute	[ATR_MANA] 			= 0;
+	attribute	[ATR_MANA] 		= 0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		= 75000;
-	protection	[PROT_EDGE]			= 75000;
-	protection	[PROT_POINT]		= 75000;
-	protection	[PROT_FIRE]			= 75;
-	protection	[PROT_FLY]			= 75;
-	protection	[PROT_MAGIC]		= 40;
+	protection	[PROT_BLUNT]		= Hlp_Random(41)*1000 + 55000;	// 55 - 95
+	protection	[PROT_EDGE]		= Hlp_Random(41)*1000 + 55000;	// 55 - 95
+	protection	[PROT_POINT]		= Hlp_Random(41)*1000 + 55000;	// 55 - 95
+	protection	[PROT_FIRE]		= Hlp_Random(41) + 55;		// 55 - 95
+	protection	[PROT_FLY]		= 75;
+	protection	[PROT_MAGIC]		= Hlp_Random(41) + 20;		// 20 - 60
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	
