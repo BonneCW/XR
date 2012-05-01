@@ -65,6 +65,8 @@ FUNC INT B_Beklauen ()
 		bonusdex = 25;
 	};
 
+	bonusdex += 10 - r_max(20);
+
 	if (other.attribute[ATR_DEXTERITY]+bonusdex >= TheftDexGlob) // Diebstahl gelingt
 	{
 		B_GiveInvItems (self, other, TheftItemGlob, TheftGoldGlob);

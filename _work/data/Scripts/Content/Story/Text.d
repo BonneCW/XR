@@ -1358,19 +1358,21 @@ const string TEXT_Innoseye_Gem		= "Der Edelstein ist matt und kraftlos";
 // ***************************************************************************************
 // Diebtstahl Text Konstanten
 // ***************************************************************************************
-const string Pickpocket_20	=	"(Es wäre ein Kinderspiel seinen Geldbeutel zu stehlen)";
-const string Pickpocket_40	=	"(Es wäre einfach seinen Geldbeutel zu stehlen)";
-const string Pickpocket_60	=	"(Es wäre gewagt seinen Geldbeutel zu stehlen)";
-const string Pickpocket_80	=	"(Es wäre schwierig seinen Geldbeutel zu stehlen)";
-const string Pickpocket_100	=	"(Es wäre verdammt schwierig seinen Geldbeutel zu stehlen)";
-const string Pickpocket_120	=	"(Es wäre fast unmöglich seinen Geldbeutel zu stehlen)";
+const string Pickpocket_30	=	"(Es wäre ein Kinderspiel ihn zu bestehlen)";
+const string Pickpocket_60	=	"(Es wäre einfach ihn zu bestehlen)";
+const string Pickpocket_90	=	"(Es wäre gewagt ihn zu bestehlen)";
+const string Pickpocket_120	=	"(Es wäre schwierig ihn zu bestehlen)";
+const string Pickpocket_150	=	"(Es wäre riskant ihn zu bestehlen)";
+const string Pickpocket_180	=	"(Es wäre verdammt schwierig ihn zu bestehlen)";
+const string Pickpocket_210	=	"(Es wäre fast unmöglich ihn zu bestehlen)";
 
-const string Pickpocket_20_Female	=	"(Es wäre ein Kinderspiel ihren Geldbeutel zu stehlen)";
-const string Pickpocket_40_Female	=	"(Es wäre einfach ihren Geldbeutel zu stehlen)";
-const string Pickpocket_60_Female	=	"(Es wäre gewagt ihren Geldbeutel zu stehlen)";
-const string Pickpocket_80_Female	=	"(Es wäre schwierig ihren Geldbeutel zu stehlen)";
-const string Pickpocket_100_Female	=	"(Es wäre verdammt schwierig ihren Geldbeutel zu stehlen)";
-const string Pickpocket_120_Female	=	"(Es wäre fast unmöglich ihren Geldbeutel zu stehlen)";
+const string Pickpocket_30_Female	=	"(Es wäre ein Kinderspiel sie zu bestehlen)";
+const string Pickpocket_60_Female	=	"(Es wäre einfach sie zu bestehlen)";
+const string Pickpocket_90_Female	=	"(Es wäre gewagt sie zu bestehlen)";
+const string Pickpocket_120_Female	=	"(Es wäre schwierig sie zu bestehlen)";
+const string Pickpocket_150_Female	=	"(Es wäre riskant sie zu bestehlen)";
+const string Pickpocket_180_Female	=	"(Es wäre verdammt schwierig sie zu bestehlen)";
+const string Pickpocket_210_Female	=	"(Es wäre fast unmöglich sie zu bestehlen)";
 
 // ****************************************************************************************
 // Relative	Y-Koordinaten für die Bildschirmausgabe	(in	% der aktuellen	Bildhöhe, von oben)
