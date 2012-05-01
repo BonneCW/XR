@@ -17,13 +17,13 @@ PROTOTYPE Mst_Default_Alraune(C_Npc)
 	attribute	[ATR_HITPOINTS]		=	3000;
 
 	attribute	[ATR_MANA_MAX] 		=	1000;
-	attribute	[ATR_MANA] 			=	1000;
+	attribute	[ATR_MANA] 		=	1000;
 //------------------------------------------------------
 	protection	[PROT_BLUNT]		=	IMMUNE;
-	protection	[PROT_EDGE]			=	160000;
+	protection	[PROT_EDGE]		=	160000;
 	protection	[PROT_POINT]		=	IMMUNE;
-	protection	[PROT_FIRE]			=	0;
-	protection	[PROT_FLY]			=	1000;
+	protection	[PROT_FIRE]		=	0;
+	protection	[PROT_FLY]		=	1000;
 	protection	[PROT_MAGIC]		=	60;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];

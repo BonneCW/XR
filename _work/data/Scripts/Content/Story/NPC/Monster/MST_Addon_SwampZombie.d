@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_SwampZombie(C_Npc)
 	level							=	15;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	100;
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	250;
-	attribute	[ATR_HITPOINTS]		=	250;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(51) + 75;	// 75 - 125
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21);		// 0 - 20
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(101) + 200;	// 200 - 300
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_MANA] 		=	0;
 
 	//----- Protection ----
-	protection	[PROT_BLUNT]		=	75000;
-	protection	[PROT_EDGE]			=	75000;
-	protection	[PROT_POINT]		=	75000;	
-	protection	[PROT_FIRE]			=	75;
-	protection	[PROT_FLY]			=	75;
-	protection	[PROT_MAGIC]		=	30;
+	protection	[PROT_BLUNT]		=	Hlp_Random(51)*1000 + 50000;	// 50 - 100
+	protection	[PROT_EDGE]		=	Hlp_Random(51)*1000 + 50000;	// 50 - 100
+	protection	[PROT_POINT]		=	Hlp_Random(51)*1000 + 50000;	// 50 - 100
+	protection	[PROT_FIRE]		=	Hlp_Random(51) + 50;		// 50 - 100
+	protection	[PROT_FLY]		=	75;
+	protection	[PROT_MAGIC]		=	Hlp_Random(31) + 15;		// 15 - 45
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

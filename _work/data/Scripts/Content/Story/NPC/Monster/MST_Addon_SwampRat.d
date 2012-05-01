@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Swamprat (C_Npc)
 	level							=	12;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	60;
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	120;
-	attribute	[ATR_HITPOINTS]		=	120;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(41) + 40;	// 40 - 80
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21);		// 0 - 20
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(81) + 80;	// 80 - 160
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_MANA] 		=	0;
 
 	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	60000;
-	protection	[PROT_EDGE]			=	60000;
-	protection	[PROT_POINT]		=	10000;		
-	protection	[PROT_FIRE]			=	60;
-	protection	[PROT_FLY]			=	60;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	Hlp_Random(41)*1000 + 40000;	// 40 - 80
+	protection	[PROT_EDGE]		=	Hlp_Random(41)*1000 + 40000;	// 40 - 80
+	protection	[PROT_POINT]		=	Hlp_Random(21)*1000;		// 0 - 20
+	protection	[PROT_FIRE]		=	Hlp_Random(41) + 40;		// 40 - 80
+	protection	[PROT_FLY]		=	60;
+	protection	[PROT_MAGIC]		=	Hlp_Random(21);			// 0 - 20
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	
@@ -65,7 +65,6 @@ func void B_SetVisuals_Swamprat ()
 	Mdl_SetVisual			(self,	"Swamprat.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
 	Mdl_SetVisualBody		(self,	"Swamprat_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
-	//Mdl_SetModelScale(self, 1.3, 1.3, 1);
 };
 
 
