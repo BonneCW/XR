@@ -370,4 +370,10 @@ instance SVM_11 (C_SVM)
 	WITZ_10_08			= "SVM_11_WITZ_10_08";			//Gesagt, getan. Als Pepe zwei Tage später wieder Balthasar besucht, trauert er:
 	WITZ_10_09			= "SVM_11_WITZ_10_09";			//"Meine Lisl ist tot." Darauf Balthasar: "Meine Clara damals auch."
 	WITZ_10_10			= "SVM_11_WITZ_10_10";			//(belustigt) Ja, hähä. Wenn man den Viechern das Zeug zum Saufen gibt.
+
+	// Taschendiebstahl
+
+	PICKPOCKET_BESTECHUNG_01	=	"SVM_11_PICKPOCKET_BESTECHUNG_01";	//Gut, aber jetzt verzieh dich!
+	PICKPOCKET_HERAUSREDEN_01	=	"SVM_11_PICKPOCKET_HERAUSREDEN_01";	//Da hab ich mich wohl geirrt ...
+	PICKPOCKET_HERAUSREDEN_02	=	"SVM_11_PICKPOCKET_HERAUSREDEN_02";	//Du warst doch eindeutig an meiner Tasche ...
 };

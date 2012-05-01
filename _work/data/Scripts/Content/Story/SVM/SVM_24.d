@@ -90,4 +90,10 @@ instance SVM_24 (C_SVM)
 	Aargh_1						= "SVM_24_Aargh_1"					;//Aargh
 	Aargh_2						= "SVM_24_Aargh_2"					;//Aargh
 	Aargh_3						= "SVM_24_Aargh_3"					;//Aargh
+
+	// Taschendiebstahl
+
+	PICKPOCKET_BESTECHUNG_01	=	"SVM_24_PICKPOCKET_BESTECHUNG_01";	//Gut, aber jetzt verzieh dich!
+	PICKPOCKET_HERAUSREDEN_01	=	"SVM_24_PICKPOCKET_HERAUSREDEN_01";	//Da hab ich mich wohl geirrt ...
+	PICKPOCKET_HERAUSREDEN_02	=	"SVM_24_PICKPOCKET_HERAUSREDEN_02";	//Du warst doch eindeutig an meiner Tasche ...
 };

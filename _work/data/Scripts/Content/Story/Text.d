@@ -1451,3 +1451,7 @@ const string KapWechsel_6			= "Kapitel 6"					;
 const string KapWechsel_6_Text		= "Die Hallen von Irdorath"		;
 
 //-----Written Texte----------
+
+const string DIALOG_PP_BESCHIMPFEN	=	"Leck mich.";
+const string DIALOG_PP_BESTECHUNG	=	"Können wir dieses Missverständnis vielleicht irgendwie aus dem Weg räumen?";
+const string DIALOG_PP_HERAUSREDEN	=	"Ich habe keine Ahnung was du meinst.";

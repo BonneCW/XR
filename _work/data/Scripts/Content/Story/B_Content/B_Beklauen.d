@@ -55,7 +55,7 @@ FUNC INT C_Beklauen (var int TheftDex, var int TheftItem, var int TheftGold)
 	};
 };	
 	
-func void B_Beklauen ()
+FUNC INT B_Beklauen ()
 {	
 	var int bonusdex;
 	bonusdex = 0;
@@ -78,11 +78,13 @@ func void B_Beklauen ()
 		B_Göttergefallen(3, 1);
 
 		Mod_CountTaschendiebstahl += 1;
+
+		return TRUE;
 	}
 	else
 	{
 		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
+
+		return FALSE;
 	};
 };	

@@ -230,4 +230,10 @@ INSTANCE SVM_15	(C_SVM)		//	PLAYER	trocken,ernst
 
 	BOOKSTANDNOTREADABLE01	=	"SVM_15_BOOKSTANDNOTREADABLE01";	//Diese Schriftzeichen kann ich nicht entziffern.
 	BOOKSTANDNOTREADABLE02	=	"SVM_15_BOOKSTANDNOTREADABLE02";	//Hier ist der Wurm drin. Der Bücherwurm.
+
+	// Taschendiebstahl
+
+	PICKPOCKET_BESCHIMPFEN	=	"SVM_15_PICKPOCKET_BESCHIMPFEN";	//Leck mich.
+	PICKPOCKET_BESTECHUNG	=	"SVM_15_PICKPOCKET_BESTECHUNG";		//Können wir dieses Missverständnis vielleicht irgendwie aus dem Weg räumen?
+	PICKPOCKET_HERAUSREDEN	=	"SVM_15_PICKPOCKET_HERAUSREDEN";	//Ich habe keine Ahnung was du meinst.
 };
