@@ -614,8 +614,6 @@ FUNC VOID Info_Mod_Myxir_Ruestung_Info()
 		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_12_01"); //Ich hab gehört, dass auf dem Weg zur Ausgrabungsstätte der Wassermagier ein Nachtmahr sein soll. Mit dessen Fell könnte ich deine schwarze Magierrobe sicher ein wenig verbessern.
 	
 		Mod_ZweiteVerbesserung = TRUE;
-	
-		//Wld_InsertNpc	(Nightmare,	"FP_MAGICGOLEM");
 	};
 
 	Info_ClearChoices	(Info_Mod_Myxir_Ruestung);
@@ -657,7 +655,7 @@ FUNC VOID Info_Mod_Myxir_Ruestung_KDS_S ()
 
 		Mod_ZweiteVerbesserung = 2;
 	}
-	else if (Npc_HasItems(hero, SChwarzmagierrobe) == 0)
+	else if (Npc_HasItems(hero, Schwarzmagierrobe) == 0)
 	{
 		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_SKR_S_12_02"); //Du musst schon eine schwarze Magierrobe haben, sonst kann ich sie dir nicht verbessern.
 	}

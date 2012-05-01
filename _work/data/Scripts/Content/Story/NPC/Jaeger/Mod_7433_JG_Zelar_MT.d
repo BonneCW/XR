@@ -56,6 +56,6 @@ FUNC VOID Rtn_KapThree_7433 ()
 
 FUNC VOID Rtn_Irrlichter_7433()
 {	
-	TA_Guide_Player		(06,05,20,15,"PATH_TO_CLIFF_02B");
-	TA_Guide_Player		(20,15,06,05,"PATH_TO_CLIFF_02B"); 
+	TA_Guide_Player		(06,05,20,15,"ALTERWALD_20");
+	TA_Guide_Player		(20,15,06,05,"ALTERWALD_20"); 
 };

@@ -177,9 +177,9 @@ FUNC VOID Info_Mod_Zelar_Urs_Info()
 
 	self.aivar[AIV_Partymember] = TRUE;
 
-	Wld_InsertNpc	(Wisp_Zelar_01,	"PATH_TO_CLIFF_02B");
-	Wld_InsertNpc	(Wisp_Zelar_02,	"PATH_TO_CLIFF_02B");
-	Wld_InsertNpc	(Wisp_Zelar_03,	"PATH_TO_CLIFF_02B");
+	Wld_InsertNpc	(Wisp_Zelar_01,	"ALTERWALD_20");
+	Wld_InsertNpc	(Wisp_Zelar_02,	"ALTERWALD_20");
+	Wld_InsertNpc	(Wisp_Zelar_03,	"ALTERWALD_20");
 };
 
 INSTANCE Info_Mod_Zelar_Urs2 (C_INFO)

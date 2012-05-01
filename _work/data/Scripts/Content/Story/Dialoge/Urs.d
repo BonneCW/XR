@@ -79,38 +79,38 @@ FUNC VOID Info_Mod_Urs_Hi_Info()
 	B_GiveInvItems	(self, hero, ItMw_FeurigerHammer, 1);
 
 	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_57"); //Du findest ihn in der großen Wohnhöhle. Er wird das gute Stück schon sehnsüchtig erwarten. Gewiss wird er 20 Brocken Erz dafür zahlen.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_58"); //Dann als nächstes wäre da wäre diese lodernde Pfanne für Omid. Er ist der Koch im Haus der Erzbarone.
-
-	B_GiveInvItems	(self, hero, ItMi_MagischePfanne, 1);
-
-	AI_Output(hero, self, "Info_Mod_Urs_Hi_15_59"); //Augenblick mal, eine magische Pfanne für den Koch?
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_60"); //Ja, einige der Erzbarone mögen ihre Speisen immer besonders knusprig durchgebraten.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_61"); //Und der zufriedene Gaumen eines Erzbarons ist in Gold kaum aufzuwiegen. 400 Münzen solltest du dafür gewiss bekommen.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_62"); //So, dann noch dieses kleine Päckchen gesegneter Rohlinge für den Schmied Darrion, aus dem Sumpflager.
-
-	B_GiveInvItems	(self, hero, ItMi_ErzpaketDarrion, 1);
-
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_63"); //Die daraus geschmiedeten Klingen sollten im Besonderen gegen dämonische Geschöpfe mehr Wirkung zeigen.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_64"); //Die im Sumpflager hatten nämlich mal früher Ärger mit einem Erzdämon, oder so.
-	AI_Output(hero, self, "Info_Mod_Urs_Hi_15_65"); //Hmm, kommt mir bekannt vor.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_66"); //Jedenfalls bekommst du ein feines Paket Sumpfkraut dafür.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_67"); //So, jetzt noch die Lager, die erst vor kurzem entstanden sind.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_68"); //An die Magier in der Klosterruine noch dieser Ring, der das Licht Innos' in sich trägt.
-
-	B_GiveInvItems	(self, hero, ItRi_Licht, 1);
-
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_69"); //Wird er angelegt, erhellt er dem Träger für einige Zeit die Umgebung.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_70"); //Einer der Verwandlungsmagier wollte den haben, um auch noch spät nachts seine Forschungen ohne Einschnitte fortsetzen zu können.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_71"); //Falls du noch nicht weißt wo du sie findest: Folge einfach diesem Fluss Stromabwärts, bis er sich in zwei Läufe trennt.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_72"); //Links davon liegt die Klosterruine. Du wirst den Ring bei der Torwache Ferco abgeben und dafür eine Zauberrune bekommen.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_73"); //Hmm, und von dort aus wirst du am leichtesten das Lager der Waldläufer finden, welches du noch zuletzt aufsuchen musst.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_74"); //Folge einfach weiter der Küste. Nach einem maroden Turm und einem Strand liegt ihr Lager.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_75"); //Für den Jäger Zelar habe ich diese Ladung magisch verzauberter Pfeile.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_58"); //Hmm, und von dort aus wirst du am leichtesten das Lager der Waldläufer finden, welches du auch noch aufsuchen musst.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_59"); //Folge einfach weiter dem Weg Richtung alte Mine. Dort ist ein Durchgang hinter dem ihr Lager liegt.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_60"); //Für den Jäger Zelar habe ich diese Ladung magisch verzauberter Pfeile.
 
 	B_GiveInvItems	(self, hero, ItMi_PfeilpaketZelar, 1);
 
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_76"); //Die wollten sie haben, falls sich mal wieder Irrlichter ihrem Lager nähren. Denn mit normalen Waffen ist denen nicht beizukommen.
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_77"); //Jedenfalls bekommst du einige wertvolle Felle dafür. Ja, das waren auch schon die wichtigsten Dinge.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_61"); //Die wollten sie haben, falls sich mal wieder Irrlichter ihrem Lager nähren. Denn mit normalen Waffen ist denen nicht beizukommen.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_62"); //Jedenfalls bekommst du einige wertvolle Felle dafür.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_63"); //Dann als nächstes wäre da diese lodernde Pfanne für Omid. Er ist der Koch im Haus der Erzbarone.
+
+	B_GiveInvItems	(self, hero, ItMi_MagischePfanne, 1);
+
+	AI_Output(hero, self, "Info_Mod_Urs_Hi_15_64"); //Augenblick mal, eine magische Pfanne für den Koch?
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_65"); //Ja, einige der Erzbarone mögen ihre Speisen immer besonders knusprig durchgebraten.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_66"); //Und der zufriedene Gaumen eines Erzbarons ist in Gold kaum aufzuwiegen. 400 Münzen solltest du dafür gewiss bekommen.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_67"); //So, dann noch dieses kleine Päckchen gesegneter Rohlinge für den Schmied Darrion, aus dem Sumpflager.
+
+	B_GiveInvItems	(self, hero, ItMi_ErzpaketDarrion, 1);
+
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_68"); //Die daraus geschmiedeten Klingen sollten im Besonderen gegen dämonische Geschöpfe mehr Wirkung zeigen.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_69"); //Die im Sumpflager hatten nämlich mal früher Ärger mit einem Erzdämon, oder so.
+	AI_Output(hero, self, "Info_Mod_Urs_Hi_15_70"); //Hmm, kommt mir bekannt vor.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_71"); //Jedenfalls bekommst du ein feines Paket Sumpfkraut dafür.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_72"); //So, jetzt noch die Lager, die erst vor kurzem entstanden sind.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_73"); //An die Magier in der Klosterruine noch dieser Ring, der das Licht Innos' in sich trägt.
+
+	B_GiveInvItems	(self, hero, ItRi_Licht, 1);
+
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_74"); //Wird er angelegt, erhellt er dem Träger für einige Zeit die Umgebung.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_75"); //Einer der Verwandlungsmagier wollte den haben, um auch noch spät nachts seine Forschungen ohne Einschnitte fortsetzen zu können.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_76"); //Falls du noch nicht weißt wo du sie findest: Folge einfach diesem Fluss Stromabwärts, bis er sich in zwei Läufe trennt.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_77"); //Links davon liegt die Klosterruine. Du wirst den Ring bei der Torwache Ferco abgeben und dafür eine Zauberrune bekommen.
 	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_78"); //Den Rest verkauf ich ein andermal, wenn weniger Ärger in der Luft liegt.
 	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_79"); //Sobald du dann alles zusammenhast, wirst du mich  hier finden.
 	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_80"); //Zur Belohnung sollst du eines meiner besten Stücke bekommen. Du wirst gewiss zufrieden sein.
@@ -118,7 +118,7 @@ FUNC VOID Info_Mod_Urs_Hi_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_URS_HUND, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_URS_HUND, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_URS_HUND, "Dem Händler Urs ist unterhalb des Passes sein Orkhund Wally ausgerissen. Da die Banditen in der nähe sind und er seinen Wally schnell wieder finden will, werde ich derweil seine wichtigsten Waren an den Mann bringen. Im Neuen Lager erwartet der Schmied Thofeistos einen feurigen Hammer, für welchen ich Erz bekomme, im Alten Lager soll ich dem Koch der Erzbarone Omid eine lodernde Pfanne übergeben, für welche einige Goldmünzen herausspringen. Schmied Darrion im Sumpflager wartet auf einige gesegnete Rohlinge, wofür ich ein Packet Sumpfkraut bekomme. Dem Flusslauf unterhalb des Passes folgend, werde ich links eine Klosterruine finden, in welcher Verwandlungsmagier wohnhaft sind. Der Torwache Ferco übergebe ich einen Ring des Lichtes und bekomme im Gegenzug eine Rune. Weiter an der Küste entlang treffe ich auf die Waldläufer. Für mehrere gesegnete Pfeile bekomme ich einige wertvolle Felle. Wenn ich alles zusammenhabe, soll ich es Urs bringen, wofür er mir eine zufrieden stellende Belohnung versprochen hat. Ich sollte mich aber beeilen, da er nicht ewig an Ort und Stelle bleiben kann.");
+	B_LogEntry	(TOPIC_MOD_URS_HUND, "Dem Händler Urs ist unterhalb des Passes sein Orkhund Wally ausgerissen. Da die Banditen in der nähe sind und er seinen Wally schnell wieder finden will, werde ich derweil seine wichtigsten Waren an den Mann bringen. Im Neuen Lager erwartet der Schmied Thofeistos einen feurigen Hammer, für welchen ich Erz bekomme. In der Nähe der alten Mine treffe ich auf die Waldläufer. Für mehrere gesegnete Pfeile bekomme ich einige wertvolle Felle. Im Alten Lager soll ich dem Koch der Erzbarone Omid eine lodernde Pfanne übergeben, für welche einige Goldmünzen herausspringen. Schmied Darrion im Sumpflager wartet auf einige gesegnete Rohlinge, wofür ich ein Packet Sumpfkraut bekomme. Dem Flusslauf unterhalb des Passes folgend, werde ich links eine Klosterruine finden, in welcher Verwandlungsmagier wohnhaft sind. Der Torwache Ferco übergebe ich einen Ring des Lichtes und bekomme im Gegenzug eine Rune. Wenn ich alles zusammenhabe, soll ich es Urs bringen, wofür er mir eine zufrieden stellende Belohnung versprochen hat. Ich sollte mich aber beeilen, da er nicht ewig an Ort und Stelle bleiben kann.");
 };
 
 INSTANCE Info_Mod_Urs_Hund (C_INFO)
@@ -198,7 +198,7 @@ FUNC VOID Info_Mod_Urs_Hund2_Info()
 
 	B_GiveInvItems	(self, hero, ItRi_Versengung, 1);
 
-	AI_Output(self, hero, "Info_Mod_Urs_Hund2_12_03"); //Dieser Ring wird deine Angriffe mir etwas Feuer und Magie verstärken.
+	AI_Output(self, hero, "Info_Mod_Urs_Hund2_12_03"); //Dieser Ring wird deine Angriffe mit etwas Feuer und Magie verstärken.
 	AI_Output(hero, self, "Info_Mod_Urs_Hund2_15_04"); //Gut, danke. Und was jetzt weiter?
 	AI_Output(self, hero, "Info_Mod_Urs_Hund2_12_05"); //Nun, um dieses Ritual zu vollführen, benötige ich einen mystischen, magischen Ort.
 	AI_Output(self, hero, "Info_Mod_Urs_Hund2_12_06"); //Nicht weit von hier habe ich in einem Waldstück einen Steinkreis gesehen.

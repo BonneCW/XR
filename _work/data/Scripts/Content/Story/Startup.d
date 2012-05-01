@@ -2583,22 +2583,22 @@ FUNC VOID STARTUP_NewWorld()
 	STARTUP_NewWorld_Part_Pass_To_OW_01();
 	// ------ INTRO - muss ganz am Ende der Startup stehen ------
 	Kapitel = 1; //Joly: Kann hier stehen bleiben!
-	//PlayVideo ("INTRO_ALT.BIK");
-	//PlayVideo ("GREATPRAYER.BIK");
-	//PlayVideo ("OREHEAP.BIK");
-	//PlayVideo ("EXTRO.BIK");
-	//PlayVideo ("PLAYEROUT.BIK");
-	//PlayVideo ("INTRO.BIK");
-	//PlayVideo ("Addon_Title.BIK");
 	
 	//-----Addon Talent Goldhacken---------
 	Hero_HackChance = 10;
 };
+
 FUNC VOID INIT_NewWorld()
 {
 	B_InitMonsterAttitudes ();
 	B_InitGuildAttitudes();
 	B_InitNpcGlobals ();
+
+	if (Npc_KnowsInfo(hero, Info_Mod_Dragomir_BurnedLager))
+	{
+		Wld_SendUntrigger	("DRAGOMIRSFEUER");
+		Wld_SendUntrigger	("DRAGOMIRSMOKE");
+	};
 	
 	if (Mod_Cronos_Artefakt == 1)
 	{
