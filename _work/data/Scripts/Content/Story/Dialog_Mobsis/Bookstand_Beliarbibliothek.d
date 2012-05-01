@@ -787,6 +787,15 @@ FUNC VOID BOOKSTAND_BELIARBIBLIOTHEK_FAKE_S1()
 	
 	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	{	
-		B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE01");
+		var int rnd; rnd = r_max(1);
+
+		if (rnd == 0)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE01");
+		}
+		else if (rnd == 1)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE02");
+		};
 	};
 };

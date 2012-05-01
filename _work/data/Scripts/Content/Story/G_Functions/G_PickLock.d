@@ -34,6 +34,8 @@ func void G_PickLock (var int bSuccess, var int bBrokenOpen)
 				Snd_Play3D 	(self, "PICKLOCK_BROKEN");
 				Print (PRINT_PICKLOCK_BROKEN);
 
+				B_Say	(hero, NULL, "$PICKLOCKBROKEN");
+
 				Npc_RemoveInvItems	(hero, ItKe_Lockpick, 1);
 
 				if (Npc_HasItems(hero, ItKe_Lockpick) == 1)
@@ -53,6 +55,8 @@ func void G_PickLock (var int bSuccess, var int bBrokenOpen)
 			{
 				Snd_Play3D 	(self, "PICKLOCK_FAILURE");
 				Print (PRINT_PICKLOCK_FAILURE);
+
+				B_Say	(hero, NULL, "$PICKLOCKFAILURE");
 			};
 		};
 	};

@@ -639,6 +639,16 @@ CLASS C_SVM
 	// Held riecht den Tabak von Jackal
 
 	var string SMELLTABAK;
+
+	// Schlösser knacken
+
+	var string PICKLOCKFAILURE;
+	var string PICKLOCKBROKEN;
+
+	// Bücher nicht lesen können
+
+	var string BOOKSTANDNOTREADABLE01;
+	var string BOOKSTANDNOTREADABLE02;
 };     
 
 

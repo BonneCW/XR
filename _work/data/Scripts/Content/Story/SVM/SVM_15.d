@@ -220,4 +220,14 @@ INSTANCE SVM_15	(C_SVM)		//	PLAYER	trocken,ernst
 	// Held riecht Tabak von Jackal
 
 	SMELLTABAK	=	"SVM_15_SMELLTABAK";	//Hier riecht es doch nach Vanille und Safran.
+
+	// Schlösser knacken
+
+	PICKLOCKFAILURE	=	"SVM_15_PICKLOCKFAILURE";	//Mist, der ist abgebrochen ...
+	PICKLOCKBROKEN	=	"SVM_15_PICKLOCKBROKEN";	//Mist ... wieder von vorne.
+
+	// Bücher nicht lesen können
+
+	BOOKSTANDNOTREADABLE01	=	"SVM_15_BOOKSTANDNOTREADABLE01";	//Diese Schriftzeichen kann ich nicht entziffern.
+	BOOKSTANDNOTREADABLE02	=	"SVM_15_BOOKSTANDNOTREADABLE02";	//Hier ist der Wurm drin. Der Bücherwurm.
 };
