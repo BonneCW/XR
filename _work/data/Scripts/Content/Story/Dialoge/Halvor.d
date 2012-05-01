@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Halvor_Hi_Condition()
 FUNC VOID Info_Mod_Halvor_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
-	AI_Output(self, hero, "Info_Mod_Halvor_Hi_06_01"); //Ich bin Havlor, der Fischhändler.
+	AI_Output(self, hero, "Info_Mod_Halvor_Hi_06_01"); //Ich bin Halvor, der Fischhändler.
 	
 	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Halvor im Hafenviertel ist Fischhändler.");
@@ -288,35 +288,35 @@ FUNC VOID Info_Mod_Halvor_Pickpocket_BACK()
 	Info_ClearChoices	(Info_Mod_Halvor_Pickpocket);
 };
 
-FUNC VOID Info_Mod_Aabid_Pickpocket_DoIt()
+FUNC VOID Info_Mod_Halvor_Pickpocket_DoIt()
 {
 	if (B_Beklauen() == TRUE)
 	{
-		Info_ClearChoices	(Info_Mod_Aabid_Pickpocket);
+		Info_ClearChoices	(Info_Mod_Halvor_Pickpocket);
 	}
 	else
 	{
-		Info_ClearChoices	(Info_Mod_Aabid_Pickpocket);
+		Info_ClearChoices	(Info_Mod_Halvor_Pickpocket);
 
-		Info_AddChoice	(Info_Mod_Aabid_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Aabid_Pickpocket_Beschimpfen);
-		Info_AddChoice	(Info_Mod_Aabid_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Aabid_Pickpocket_Bestechung);
-		Info_AddChoice	(Info_Mod_Aabid_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Aabid_Pickpocket_Herausreden);
+		Info_AddChoice	(Info_Mod_Halvor_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Halvor_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Halvor_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Halvor_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Halvor_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Halvor_Pickpocket_Herausreden);
 	};
 };
 
-FUNC VOID Info_Mod_Aabid_Pickpocket_Beschimpfen()
+FUNC VOID Info_Mod_Halvor_Pickpocket_Beschimpfen()
 {
 	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
 	B_Say	(self, hero, "$DIRTYTHIEF");
 
-	Info_ClearChoices	(Info_Mod_Aabid_Pickpocket);
+	Info_ClearChoices	(Info_Mod_Halvor_Pickpocket);
 
 	AI_StopProcessInfos	(self);
 
 	B_Attack (self, hero, AR_Theft, 1);
 };
 
-FUNC VOID Info_Mod_Aabid_Pickpocket_Bestechung()
+FUNC VOID Info_Mod_Halvor_Pickpocket_Bestechung()
 {
 	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
 
@@ -329,7 +329,7 @@ FUNC VOID Info_Mod_Aabid_Pickpocket_Bestechung()
 	{
 		B_Say	(self, hero, "$DIRTYTHIEF");
 
-		Info_ClearChoices	(Info_Mod_Aabid_Pickpocket);
+		Info_ClearChoices	(Info_Mod_Halvor_Pickpocket);
 
 		AI_StopProcessInfos	(self);
 
@@ -352,13 +352,13 @@ FUNC VOID Info_Mod_Aabid_Pickpocket_Bestechung()
 
 		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
 
-		Info_ClearChoices	(Info_Mod_Aabid_Pickpocket);
+		Info_ClearChoices	(Info_Mod_Halvor_Pickpocket);
 
 		AI_StopProcessInfos	(self);
 	};
 };
 
-FUNC VOID Info_Mod_Aabid_Pickpocket_Herausreden()
+FUNC VOID Info_Mod_Halvor_Pickpocket_Herausreden()
 {
 	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
 
@@ -366,7 +366,7 @@ FUNC VOID Info_Mod_Aabid_Pickpocket_Herausreden()
 	{
 		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
 
-		Info_ClearChoices	(Info_Mod_Aabid_Pickpocket);
+		Info_ClearChoices	(Info_Mod_Halvor_Pickpocket);
 	}
 	else
 	{

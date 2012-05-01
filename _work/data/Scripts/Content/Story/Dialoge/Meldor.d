@@ -393,35 +393,35 @@ FUNC VOID Info_Mod_Meldor_Pickpocket_BACK()
 	Info_ClearChoices	(Info_Mod_Meldor_Pickpocket);
 };
 
-FUNC VOID Info_Mod_Aabid_Pickpocket_DoIt()
+FUNC VOID Info_Mod_Meldor_Pickpocket_DoIt()
 {
 	if (B_Beklauen() == TRUE)
 	{
-		Info_ClearChoices	(Info_Mod_Aabid_Pickpocket);
+		Info_ClearChoices	(Info_Mod_Meldor_Pickpocket);
 	}
 	else
 	{
-		Info_ClearChoices	(Info_Mod_Aabid_Pickpocket);
+		Info_ClearChoices	(Info_Mod_Meldor_Pickpocket);
 
-		Info_AddChoice	(Info_Mod_Aabid_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Aabid_Pickpocket_Beschimpfen);
-		Info_AddChoice	(Info_Mod_Aabid_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Aabid_Pickpocket_Bestechung);
-		Info_AddChoice	(Info_Mod_Aabid_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Aabid_Pickpocket_Herausreden);
+		Info_AddChoice	(Info_Mod_Meldor_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Meldor_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Meldor_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Meldor_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Meldor_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Meldor_Pickpocket_Herausreden);
 	};
 };
 
-FUNC VOID Info_Mod_Aabid_Pickpocket_Beschimpfen()
+FUNC VOID Info_Mod_Meldor_Pickpocket_Beschimpfen()
 {
 	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
 	B_Say	(self, hero, "$DIRTYTHIEF");
 
-	Info_ClearChoices	(Info_Mod_Aabid_Pickpocket);
+	Info_ClearChoices	(Info_Mod_Meldor_Pickpocket);
 
 	AI_StopProcessInfos	(self);
 
 	B_Attack (self, hero, AR_Theft, 1);
 };
 
-FUNC VOID Info_Mod_Aabid_Pickpocket_Bestechung()
+FUNC VOID Info_Mod_Meldor_Pickpocket_Bestechung()
 {
 	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
 
@@ -434,7 +434,7 @@ FUNC VOID Info_Mod_Aabid_Pickpocket_Bestechung()
 	{
 		B_Say	(self, hero, "$DIRTYTHIEF");
 
-		Info_ClearChoices	(Info_Mod_Aabid_Pickpocket);
+		Info_ClearChoices	(Info_Mod_Meldor_Pickpocket);
 
 		AI_StopProcessInfos	(self);
 
@@ -457,13 +457,13 @@ FUNC VOID Info_Mod_Aabid_Pickpocket_Bestechung()
 
 		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
 
-		Info_ClearChoices	(Info_Mod_Aabid_Pickpocket);
+		Info_ClearChoices	(Info_Mod_Meldor_Pickpocket);
 
 		AI_StopProcessInfos	(self);
 	};
 };
 
-FUNC VOID Info_Mod_Aabid_Pickpocket_Herausreden()
+FUNC VOID Info_Mod_Meldor_Pickpocket_Herausreden()
 {
 	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
 
@@ -471,7 +471,7 @@ FUNC VOID Info_Mod_Aabid_Pickpocket_Herausreden()
 	{
 		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
 
-		Info_ClearChoices	(Info_Mod_Aabid_Pickpocket);
+		Info_ClearChoices	(Info_Mod_Meldor_Pickpocket);
 	}
 	else
 	{
