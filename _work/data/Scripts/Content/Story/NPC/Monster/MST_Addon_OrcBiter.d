@@ -93,5 +93,6 @@ INSTANCE OrcBiter (Mst_Default_OrcBiter)
 	{
 		Set_OrcBiter_Sumpf_Visuals();
 	};
+
 	Npc_SetToFistMode(self);
 };

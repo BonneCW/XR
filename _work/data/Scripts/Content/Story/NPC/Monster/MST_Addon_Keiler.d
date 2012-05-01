@@ -113,7 +113,7 @@ INSTANCE Riesenkeiler	(Mst_Default_Keiler)
 	name					=	"Riesenkeiler";
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	Hlp_Random(201) + 100;	// 100 - 300
-	attribute	[ATR_DEXTERITY]		=	Hlp_Random(31) + 15;	// 15 + 45
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(31) + 15;	// 15 - 45
 	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(301) + 300;	// 300 - 600	
 	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	
