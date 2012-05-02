@@ -151,12 +151,12 @@ INSTANCE Info_Mod_TPL_13_Pickpocket (C_INFO)
 	information	= Info_Mod_TPL_13_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_TPL_13_Pickpocket_Condition()
 {
-	C_Beklauen	(95, ItMi_Gold, 600);
+	C_Beklauen	(120+r_max(30), ItMi_Gold, 300+r_max(200));
 };
 
 FUNC VOID Info_Mod_TPL_13_Pickpocket_Info()

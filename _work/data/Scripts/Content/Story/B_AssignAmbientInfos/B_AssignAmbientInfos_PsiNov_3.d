@@ -164,12 +164,12 @@ INSTANCE Info_Mod_PsiNov_3_Pickpocket (C_INFO)
 	information	= Info_Mod_PsiNov_3_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_PsiNov_3_Pickpocket_Condition()
 {
-	C_Beklauen	(60, ItMi_Gold, 200);
+	C_Beklauen	(60+r_max(30), ItMi_Gold, 100+r_max(50));
 };
 
 FUNC VOID Info_Mod_PsiNov_3_Pickpocket_Info()

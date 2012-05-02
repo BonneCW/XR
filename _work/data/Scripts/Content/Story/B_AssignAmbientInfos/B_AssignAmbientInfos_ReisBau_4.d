@@ -107,12 +107,12 @@ INSTANCE Info_Mod_ReisBau_4_Pickpocket (C_INFO)
 	information	= Info_Mod_ReisBau_4_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_ReisBau_4_Pickpocket_Condition()
 {
-	C_Beklauen	(15, ItMi_Gold, 15);
+	C_Beklauen	(r_max(30), ItMi_Gold, 10+r_max(20));
 };
 
 FUNC VOID Info_Mod_ReisBau_4_Pickpocket_Info()

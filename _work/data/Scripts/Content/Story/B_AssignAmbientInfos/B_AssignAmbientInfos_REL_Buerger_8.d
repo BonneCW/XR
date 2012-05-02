@@ -94,7 +94,7 @@ INSTANCE Info_Mod_REL_Buerger_8_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_REL_Buerger_8_Pickpocket_Condition()
 {
-	C_Beklauen	(50, ItMi_Gold, 100);
+	C_Beklauen	(30+r_max(30), ItMi_Gold, 100+r_max(50));
 };
 
 FUNC VOID Info_Mod_REL_Buerger_8_Pickpocket_Info()

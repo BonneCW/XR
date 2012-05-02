@@ -88,12 +88,12 @@ INSTANCE Info_Mod_REL_Buerger_6_Pickpocket (C_INFO)
 	information	= Info_Mod_REL_Buerger_6_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_REL_Buerger_6_Pickpocket_Condition()
 {
-	C_Beklauen	(53, ItMi_Gold, 120);
+	C_Beklauen	(60+r_max(30), ItMi_Gold, 150+r_max(100));
 };
 
 FUNC VOID Info_Mod_REL_Buerger_6_Pickpocket_Info()

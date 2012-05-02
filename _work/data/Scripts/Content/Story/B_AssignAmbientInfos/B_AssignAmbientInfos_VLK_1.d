@@ -278,7 +278,7 @@ INSTANCE Info_Mod_VLK_1_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_VLK_1_Pickpocket_Condition()
 {
-	C_Beklauen	(43, ItMi_Gold, 90);
+	C_Beklauen	(30+r_max(30), ItMi_Gold, 50+r_max(100));
 };
 
 FUNC VOID Info_Mod_VLK_1_Pickpocket_Info()

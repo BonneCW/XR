@@ -154,12 +154,12 @@ INSTANCE Info_Mod_STT_10_Pickpocket (C_INFO)
 	information	= Info_Mod_STT_10_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_STT_10_Pickpocket_Condition()
 {
-	C_Beklauen	(58, ItMi_Gold, 130);
+	C_Beklauen	(60+r_max(30), ItMi_Gold, 200+r_max(100));
 };
 
 FUNC VOID Info_Mod_STT_10_Pickpocket_Info()

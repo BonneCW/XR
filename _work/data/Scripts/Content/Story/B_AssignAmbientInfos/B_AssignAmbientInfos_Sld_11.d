@@ -140,12 +140,12 @@ INSTANCE Info_Mod_SLD_11_Pickpocket (C_INFO)
 	information	= Info_Mod_SLD_11_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_SLD_11_Pickpocket_Condition()
 {
-	C_Beklauen	(75, ItMi_Gold, 390);
+	C_Beklauen	(90+r_max(30), ItMi_Gold, 400+r_max(200));
 };
 
 FUNC VOID Info_Mod_SLD_11_Pickpocket_Info()
