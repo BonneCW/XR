@@ -1191,12 +1191,12 @@ INSTANCE Info_Mod_Alissandro_Pickpocket (C_INFO)
 	information	= Info_Mod_Alissandro_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Alissandro_Pickpocket_Condition()
 {
-	C_Beklauen	(95, ItMi_Gold, 900);
+	C_Beklauen	(169, ItMi_Gold, 900);
 };
 
 FUNC VOID Info_Mod_Alissandro_Pickpocket_Info()

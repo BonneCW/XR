@@ -291,7 +291,7 @@ INSTANCE Info_Mod_Asko_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Asko_Pickpocket_Condition()
 {
-	C_Beklauen	(58, ItPo_Health_01, 12);
+	C_Beklauen	(58, ItPo_Health_01, 5);
 };
 
 FUNC VOID Info_Mod_Asko_Pickpocket_Info()

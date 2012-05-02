@@ -140,12 +140,12 @@ INSTANCE Info_Mod_Anglar_Pickpocket (C_INFO)
 	information	= Info_Mod_Anglar_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Anglar_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 350);
+	C_Beklauen	(80, ItMi_Gold, 350);
 };
 
 FUNC VOID Info_Mod_Anglar_Pickpocket_Info()

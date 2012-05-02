@@ -224,12 +224,12 @@ INSTANCE Info_Mod_AlligatorJack_Pickpocket (C_INFO)
 	information	= Info_Mod_AlligatorJack_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_AlligatorJack_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(88, ItAt_AlligatorClaw, 4);
 };
 
 FUNC VOID Info_Mod_AlligatorJack_Pickpocket_Info()

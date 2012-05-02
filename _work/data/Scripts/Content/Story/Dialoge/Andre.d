@@ -3271,12 +3271,12 @@ INSTANCE Info_Mod_Andre_Pickpocket (C_INFO)
 	information	= Info_Mod_Andre_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_210;
 };
 
 FUNC INT Info_Mod_Andre_Pickpocket_Condition()
 {
-	C_Beklauen	(100, ItMi_Gold, 750);
+	C_Beklauen	(199, ItMi_Gold, 2500);
 };
 
 FUNC VOID Info_Mod_Andre_Pickpocket_Info()

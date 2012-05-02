@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Alvares_Hi_Condition()
 FUNC VOID Info_Mod_Alvares_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Alvares_Hi_11_01"); //Ich bin Alvares.
 };
 
@@ -144,12 +145,12 @@ INSTANCE Info_Mod_Alvares_Pickpocket (C_INFO)
 	information	= Info_Mod_Alvares_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_60;
 };
 
 FUNC INT Info_Mod_Alvares_Pickpocket_Condition()
 {
-	C_Beklauen	(20, ItMi_Gold, 50);
+	C_Beklauen	(41, ItMi_Gold, 60);
 };
 
 FUNC VOID Info_Mod_Alvares_Pickpocket_Info()

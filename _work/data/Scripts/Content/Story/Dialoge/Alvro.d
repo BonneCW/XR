@@ -75,7 +75,7 @@ INSTANCE Info_Mod_Alvro_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Alvro_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 150);
+	C_Beklauen	(55, ItMi_Flask, 3);
 };
 
 FUNC VOID Info_Mod_Alvro_Pickpocket_Info()

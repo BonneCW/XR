@@ -323,22 +323,25 @@ func int Info_Mod_Albrecht_Teach_Condition ()
 };
 func void Info_Mod_Albrecht_Teach_Info ()
 {
-	AI_Output (other, self, "Info_Mod_Albrecht_Teach_15_00"); //Ich will meine magische Kraft steigern.
-	
+	AI_Output (other, self, "Info_Mod_Albrecht_Teach_15_00"); //Ich will meine magische Kraft steigern.	
 	
 	Info_ClearChoices   (Info_Mod_Albrecht_Teach);
+
 	Info_AddChoice 		(Info_Mod_Albrecht_Teach, DIALOG_BACK, Info_Mod_Albrecht_Teach_BACK);
-	Info_AddChoice		(Info_Mod_Albrecht_Teach, B_BuildLearnString_New(PRINT_LearnMANA5	, B_GetLearnCostAttribute_New(other, ATR_MANA_MAX), ATR_MANA_MAX)	,Info_Mod_Albrecht_Teach_5);
-	Info_AddChoice		(Info_Mod_Albrecht_Teach, B_BuildLearnString_New(PRINT_LearnMANA1	, B_GetLearnCostAttribute(other, ATR_MANA_MAX), ATR_MANA_MAX)	,Info_Mod_Albrecht_Teach_1);
+	Info_AddChoice		(Info_Mod_Albrecht_Teach, B_BuildLearnString_New(PRINT_LearnMANA5, B_GetLearnCostAttribute_New(other, ATR_MANA_MAX), ATR_MANA_MAX)	,Info_Mod_Albrecht_Teach_5);
+	Info_AddChoice		(Info_Mod_Albrecht_Teach, B_BuildLearnString_New(PRINT_LearnMANA1, B_GetLearnCostAttribute(other, ATR_MANA_MAX), ATR_MANA_MAX)	,Info_Mod_Albrecht_Teach_1);
 };
+
 func void Info_Mod_Albrecht_Teach_BACK()
 {
 	if (other.attribute [ATR_MANA_MAX] >= T_MED)
 	{
 		AI_Output (self, other, "Info_Mod_Albrecht_Teach_03_00"); //Wenn du deine magische Kraft weiter steigern willst, musst du dir einen anderen Lehrer suchen.
 	};
+
 	Info_ClearChoices (Info_Mod_Albrecht_TEACH);
 };
+
 func void Info_Mod_Albrecht_Teach_1()
 {
 	B_TeachAttributePoints (self, other, ATR_MANA_MAX, 1, T_MED);
@@ -346,11 +349,10 @@ func void Info_Mod_Albrecht_Teach_1()
 	Info_ClearChoices   (Info_Mod_Albrecht_Teach);
 	
 	Info_AddChoice 		(Info_Mod_Albrecht_Teach, DIALOG_BACK, Info_Mod_Albrecht_TEACH_BACK);
-	Info_AddChoice		(Info_Mod_Albrecht_Teach, B_BuildLearnString_New(PRINT_LearnMANA5	, B_GetLearnCostAttribute_New(other, ATR_MANA_MAX), ATR_MANA_MAX)	,Info_Mod_Albrecht_Teach_5);
-	Info_AddChoice		(Info_Mod_Albrecht_Teach, B_BuildLearnString_New(PRINT_LearnMANA1	, B_GetLearnCostAttribute(other, ATR_MANA_MAX), ATR_MANA_MAX)	,Info_Mod_Albrecht_Teach_1);
-	
-	
+	Info_AddChoice		(Info_Mod_Albrecht_Teach, B_BuildLearnString_New(PRINT_LearnMANA5, B_GetLearnCostAttribute_New(other, ATR_MANA_MAX), ATR_MANA_MAX)	,Info_Mod_Albrecht_Teach_5);
+	Info_AddChoice		(Info_Mod_Albrecht_Teach, B_BuildLearnString_New(PRINT_LearnMANA1, B_GetLearnCostAttribute(other, ATR_MANA_MAX), ATR_MANA_MAX)	,Info_Mod_Albrecht_Teach_1);
 };
+
 func void Info_Mod_Albrecht_Teach_5()
 {
 	B_TeachAttributePoints_New (self, other, ATR_MANA_MAX, 5, T_MED);
@@ -358,10 +360,8 @@ func void Info_Mod_Albrecht_Teach_5()
 	Info_ClearChoices   (Info_Mod_Albrecht_Teach);
 	
 	Info_AddChoice 		(Info_Mod_Albrecht_Teach, DIALOG_BACK, Info_Mod_Albrecht_Teach_BACK);
-	Info_AddChoice		(Info_Mod_Albrecht_Teach, B_BuildLearnString_New(PRINT_LearnMANA5	, B_GetLearnCostAttribute_New(other, ATR_MANA_MAX), ATR_MANA_MAX)	,Info_Mod_Albrecht_Teach_5);
-	Info_AddChoice		(Info_Mod_Albrecht_Teach, B_BuildLearnString_New(PRINT_LearnMANA1	, B_GetLearnCostAttribute(other, ATR_MANA_MAX), ATR_MANA_MAX)	,Info_Mod_Albrecht_Teach_1);
-	
-	
+	Info_AddChoice		(Info_Mod_Albrecht_Teach, B_BuildLearnString_New(PRINT_LearnMANA5, B_GetLearnCostAttribute_New(other, ATR_MANA_MAX), ATR_MANA_MAX)	,Info_Mod_Albrecht_Teach_5);
+	Info_AddChoice		(Info_Mod_Albrecht_Teach, B_BuildLearnString_New(PRINT_LearnMANA1, B_GetLearnCostAttribute(other, ATR_MANA_MAX), ATR_MANA_MAX)	,Info_Mod_Albrecht_Teach_1);
 };
 
 INSTANCE Info_Mod_Albrecht_Pickpocket (C_INFO)
@@ -372,12 +372,12 @@ INSTANCE Info_Mod_Albrecht_Pickpocket (C_INFO)
 	information	= Info_Mod_Albrecht_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Albrecht_Pickpocket_Condition()
 {
-	C_Beklauen	(90, ItMi_Gold, 700);
+	C_Beklauen	(177, ItMi_Gold, 2000);
 };
 
 FUNC VOID Info_Mod_Albrecht_Pickpocket_Info()

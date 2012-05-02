@@ -335,12 +335,12 @@ INSTANCE Info_Mod_Alex_Pickpocket (C_INFO)
 	information	= Info_Mod_Alex_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Alex_Pickpocket_Condition()
 {
-	C_Beklauen	(79, ItMi_Gold, 200);
+	C_Beklauen	(99, ItMi_Freudenspender, 3);
 };
 
 FUNC VOID Info_Mod_Alex_Pickpocket_Info()

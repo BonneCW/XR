@@ -874,12 +874,12 @@ INSTANCE Info_Mod_Andokai_Pickpocket (C_INFO)
 	information	= Info_Mod_Andokai_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Andokai_Pickpocket_Condition()
 {
-	C_Beklauen	(110, ItMi_Gold, 1000);
+	C_Beklauen	(170, ItMi_Gold, 1000);
 };
 
 FUNC VOID Info_Mod_Andokai_Pickpocket_Info()
