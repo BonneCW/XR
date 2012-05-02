@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_DungeonHarpie(C_Npc)
 	level							=	18;
 	
 	//-----Attribute ----	
-	attribute	[ATR_STRENGTH]		=	90;
-	attribute	[ATR_DEXTERITY]		=	15;
-	attribute	[ATR_HITPOINTS_MAX]	=	180;
-	attribute	[ATR_HITPOINTS]		=	180;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(41) + 70;
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21) + 5;
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(101) + 130;
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 			=	100;
+	attribute	[ATR_MANA] 		=	100;
 	
 	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	90000;
-	protection	[PROT_EDGE]			=	90000;
-	protection	[PROT_POINT]		=	40000;
-	protection	[PROT_FIRE]			=	90;
-	protection	[PROT_FLY]			=	90;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	Hlp_Random(41)*1000 + 70000;
+	protection	[PROT_EDGE]		=	Hlp_Random(41)*1000 + 70000;
+	protection	[PROT_POINT]		=	Hlp_Random(21)*1000 + 30000;
+	protection	[PROT_FIRE]		=	Hlp_Random(41) + 70;
+	protection	[PROT_FLY]		=	90;
+	protection	[PROT_MAGIC]		=	Hlp_Random(21) + 30;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	
