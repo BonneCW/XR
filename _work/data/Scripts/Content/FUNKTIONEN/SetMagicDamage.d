@@ -141,7 +141,7 @@ FUNC VOID SetMagicDamage()
 		SPL_Damage_ChargeZap = 60;
 		SPL_Damage_Geyser = 300;
 		SPL_Damage_IceRain = 800;
-		SPL_Damage_IceBolt = 100;
+		SPL_Damage_IceBolt = 60;
 		SPL_Damage_Icelance = 200;
 		SPL_Damage_LightningFlash = 300;
 		SPL_Damage_InstantIceball = 150;
@@ -156,7 +156,7 @@ FUNC VOID SetMagicDamage()
 		SPL_Damage_ChargeZap = 45;
 		SPL_Damage_Geyser = 225;
 		SPL_Damage_IceRain = 600;
-		SPL_Damage_IceBolt = 75;
+		SPL_Damage_IceBolt = 45;
 		SPL_Damage_Icelance = 150;
 		SPL_Damage_LightningFlash = 225;
 		SPL_Damage_InstantIceball = 112;
@@ -171,7 +171,7 @@ FUNC VOID SetMagicDamage()
 		SPL_Damage_ChargeZap = 37;
 		SPL_Damage_Geyser = 187;
 		SPL_Damage_IceRain = 500;
-		SPL_Damage_IceBolt = 62;
+		SPL_Damage_IceBolt = 37;
 		SPL_Damage_Icelance = 125;
 		SPL_Damage_LightningFlash = 187;
 		SPL_Damage_InstantIceball = 93;
@@ -186,7 +186,7 @@ FUNC VOID SetMagicDamage()
 		SPL_Damage_ChargeZap = 33;
 		SPL_Damage_Geyser = 165;
 		SPL_Damage_IceRain = 440;
-		SPL_Damage_IceBolt = 55;
+		SPL_Damage_IceBolt = 33;
 		SPL_Damage_Icelance = 110;
 		SPL_Damage_LightningFlash = 165;
 		SPL_Damage_InstantIceball = 82;
@@ -199,7 +199,7 @@ FUNC VOID SetMagicDamage()
 		SPL_Damage_ChargeZap = 30;
 		SPL_Damage_Geyser = 150;
 		SPL_Damage_IceRain = 400;
-		SPL_Damage_IceBolt = 50;
+		SPL_Damage_IceBolt = 30;
 		SPL_Damage_Icelance = 100;
 		SPL_Damage_LightningFlash = 150;
 		SPL_Damage_InstantIceball = 75;

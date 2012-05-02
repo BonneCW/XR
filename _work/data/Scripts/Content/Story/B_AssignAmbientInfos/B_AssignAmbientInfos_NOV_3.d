@@ -109,7 +109,7 @@ INSTANCE Info_Mod_NOV_3_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_NOV_3_Pickpocket_Condition()
 {
-	C_Beklauen	(60, ItMi_Gold, 200);
+	C_Beklauen	(30+r_max(30), ItMi_Gold, 50+r_max(30));
 };
 
 FUNC VOID Info_Mod_NOV_3_Pickpocket_Info()

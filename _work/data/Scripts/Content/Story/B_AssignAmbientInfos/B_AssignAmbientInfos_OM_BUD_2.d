@@ -107,12 +107,12 @@ INSTANCE Info_Mod_OM_BUD_2_Pickpocket (C_INFO)
 	information	= Info_Mod_OM_BUD_2_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_OM_BUD_2_Pickpocket_Condition()
 {
-	C_Beklauen	(14, ItMi_Gold, 10);
+	C_Beklauen	(8+r_max(12), ItMi_Nugget, 2+r_max(3));
 };
 
 FUNC VOID Info_Mod_OM_BUD_2_Pickpocket_Info()

@@ -186,12 +186,12 @@ INSTANCE Info_Mod_GRD_7_Pickpocket (C_INFO)
 	information	= Info_Mod_GRD_7_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_GRD_7_Pickpocket_Condition()
 {
-	C_Beklauen	(75, ItMi_Gold, 400);
+	C_Beklauen	(60+r_max(90), ItMi_Gold, 100+r_max(50));
 };
 
 FUNC VOID Info_Mod_GRD_7_Pickpocket_Info()

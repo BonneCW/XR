@@ -81,11 +81,11 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 		{
 			if (Mod_Schwierigkeit != 4)
 			{
-				Mod_Mana_Praxis += 10;
+				Mod_Mana_Praxis += 3;
 			}
 			else
 			{
-				Mod_Mana_Praxis += 20;
+				Mod_Mana_Praxis += 6;
 			};
 
 			//PrintScreen	("Magiekampf!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);

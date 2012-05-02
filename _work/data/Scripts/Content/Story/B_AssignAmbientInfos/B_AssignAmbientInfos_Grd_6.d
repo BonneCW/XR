@@ -161,12 +161,12 @@ INSTANCE Info_Mod_GRD_6_Pickpocket (C_INFO)
 	information	= Info_Mod_GRD_6_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_GRD_6_Pickpocket_Condition()
 {
-	C_Beklauen	(70, ItMi_Gold, 350);
+	C_Beklauen	(90+r_max(30), ItMi_Gold, 300+r_max(100));
 };
 
 FUNC VOID Info_Mod_GRD_6_Pickpocket_Info()

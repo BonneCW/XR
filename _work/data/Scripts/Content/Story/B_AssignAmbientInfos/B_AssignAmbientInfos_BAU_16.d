@@ -106,12 +106,12 @@ INSTANCE Info_Mod_BAU_16_Pickpocket (C_INFO)
 	information	= Info_Mod_BAU_16_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20_Female;
+	description	= Pickpocket_30_Female;
 };
 
 FUNC INT Info_Mod_BAU_16_Pickpocket_Condition()
 {
-	C_Beklauen	(15, ItMi_Gold, 30);
+	C_Beklauen	(8+r_max(12), ItMi_Gold, 15+r_max(22));
 };
 
 FUNC VOID Info_Mod_BAU_16_Pickpocket_Info()

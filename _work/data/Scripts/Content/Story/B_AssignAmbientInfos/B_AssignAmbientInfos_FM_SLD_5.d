@@ -105,12 +105,12 @@ INSTANCE Info_Mod_FM_SLD_5_Pickpocket (C_INFO)
 	information	= Info_Mod_FM_SLD_5_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_FM_SLD_5_Pickpocket_Condition()
 {
-	C_Beklauen	(75, ItMi_Gold, 400);
+	C_Beklauen	(90+r_max(30), ItMi_Gold, 350+r_max(100));
 };
 
 FUNC VOID Info_Mod_FM_SLD_5_Pickpocket_Info()
