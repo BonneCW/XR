@@ -14,6 +14,12 @@ func int B_AssessEnemy()
 
 	B_Vergiftet (self);
 
+	if (other.aivar[AIV_INVINCIBLE] == TRUE)
+	|| (self.aivar[AIV_INVINCIBLE] == TRUE)
+	{
+		return FALSE;
+	};
+
 	if (Wld_IsTime(21,00,05,00))
 	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
 	{
