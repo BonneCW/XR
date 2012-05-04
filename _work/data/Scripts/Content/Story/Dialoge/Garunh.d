@@ -154,6 +154,7 @@ FUNC INT Info_Mod_Garunh_Orkring5_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Garunh_Orkring))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Garunh_Orkring2))
+	&& (Npc_HasItems(hero, ItRi_Garunh) == 1)
 	{
 		return 1;
 	};
