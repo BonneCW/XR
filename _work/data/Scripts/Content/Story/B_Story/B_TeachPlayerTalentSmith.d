@@ -65,6 +65,8 @@ func int B_TeachPlayerTalentSmith (var C_NPC slf, var C_NPC oth, var int waffe)
 	B_LogEntry (TOPIC_TalentSmith,"Wenn ich 30 Erz hinzugebe, kann ich mir eine ´SCHWERE ERZ-SCHLACHTKLINGE´ schmieden.");};
 	if (waffe == WEAPON_1H_Special_04)		{	PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] 	= TRUE;	
 	B_LogEntry (TOPIC_TalentSmith,"Wenn ich 60 Erz und 5 Drachenblut hinzugebe, kann ich mir einen ´ERZ-DRACHENTÖTER´ schmieden.");};
+	if (waffe == WEAPON_1H_Special_04_Dex)		{	PLAYER_TALENT_SMITH[WEAPON_1H_Special_04_Dex] 	= TRUE;	
+	B_LogEntry (TOPIC_TalentSmith,"Wenn ich 60 Erz und 5 Drachenblut hinzugebe, kann ich mir einen ´ERZ-DRACHENSTECHER´ schmieden.");};
 	if (waffe == WEAPON_2H_Special_04)		{	PLAYER_TALENT_SMITH[WEAPON_2H_Special_04] 	= TRUE;	
 	B_LogEntry (TOPIC_TalentSmith,"Wenn ich 80 Erz und 7 Drachenblut hinzugebe, kann ich mir einen ´GROßEN ERZ-DRACHENTÖTER´ schmieden.");};
 	

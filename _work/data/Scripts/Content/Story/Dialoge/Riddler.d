@@ -11,7 +11,7 @@ INSTANCE Info_Mod_Riddler_Hi (C_INFO)
 FUNC INT Info_Mod_Riddler_Hi_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_Felsenfestung))
-	&& (riddle6	==	TRUE)
+	&& (riddle6 == TRUE)
 	{
 		return 1;
 	};
@@ -22,6 +22,8 @@ FUNC VOID Info_Mod_Riddler_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Riddler_Hi_09_00"); //Was ist passiert? Ich kann mich nicht mehr genau erinnern.
 	AI_Output(self, hero, "Info_Mod_Riddler_Hi_09_01"); //Schatten, Tod und eine ungeheure Macht.
 	AI_Output(self, hero, "Info_Mod_Riddler_Hi_09_02"); //Hat Chromanin mich verlassen?
+
+	B_SetTopicStatus	(TOPIC_MOD_THERIDDLE, LOG_SUCCESS);
 };
 
 INSTANCE Info_Mod_Riddler_Chromanin (C_INFO)

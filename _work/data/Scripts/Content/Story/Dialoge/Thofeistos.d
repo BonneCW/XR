@@ -526,6 +526,7 @@ FUNC VOID Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter()
 	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_15"); //Von der Schmelze nimmst du nur den Teil in der Mitte als Rohling, der am schnellsten fest wird.
 	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_16"); //Um daraus eine Waffe zu schmieden begibst du dich an eine Schmiede und heizt diese mit einem Fläschchen der Flüssigkeit auf.
 
+	B_TeachPlayerTalentSmith	(self, hero, WEAPON_1H_Special_04_Dex);
 	B_TeachPlayerTalentSmith	(self, hero, WEAPON_1H_Special_04);
 	B_TeachPlayerTalentSmith	(self, hero, WEAPON_2H_Special_04);
 

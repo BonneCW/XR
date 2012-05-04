@@ -1405,6 +1405,9 @@ FUNC VOID Info_Mod_Xardas_NW_Irdorath_Info()
 		Wld_InsertNpc	(Mod_7416_BAU_Velaya_NW, "BIGFARM");
 	};
 
+	B_RemoveNpc	(Pal_212_Schiffswache);
+	B_RemoveNpc	(Pal_213_Schiffswache);
+
 	Log_CreateTopic	(TOPIC_MOD_HQ_CREW, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_HQ_CREW, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_HQ_CREW, "Ok, dann darf ich mir also eine Mannschaft zusammensuchen, mit welcher ich zur Insel aufbreche, um den Seelenstein zu bergen. Xardas riet mir, auch Magier mitzunehmen und bei der Suche nach fähigen Leuten meine Freunde Milten, Gorn, Diego und Lester zu konsultieren. Er selbst schlug mir noch Myxir und Raven als mögliche Kandidaten vor.");

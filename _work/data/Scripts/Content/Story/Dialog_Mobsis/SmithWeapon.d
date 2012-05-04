@@ -1064,7 +1064,7 @@ INSTANCE PC_ItMw_1H_Special_04_Dex (C_INFO)
 FUNC INT PC_ItMw_1H_Special_04_Dex_Condition()
 {	
 	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] == TRUE))
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Special_04_Dex] == TRUE))
 	&& (Erzwaffen == TRUE)
 	&& (Waffe_ErzEisen >= 2)
 	{	

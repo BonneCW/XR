@@ -1447,8 +1447,9 @@ const int WEAPON_1H_Harad_02			= 10;
 const int WEAPON_1H_Harad_03			= 11;
 const int WEAPON_1H_Harad_04			= 12;
 const int WEAPON_1H_Special_03_Dex		= 13;
+const int WEAPON_1H_Special_04_Dex		= 14;
 
-const int MAX_WEAPONS 					= 14;
+const int MAX_WEAPONS 					= 15;
 
 var int PLAYER_TALENT_SMITH[MAX_WEAPONS];
 
