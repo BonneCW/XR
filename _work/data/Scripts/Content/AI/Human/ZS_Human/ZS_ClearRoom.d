@@ -8,11 +8,11 @@ func void B_ClearRoomTalk()
 {
 	if (C_WantToAttackRoomIntruder(self))
 	{
-		B_Say			(self, other, "$GETOUTOFHERE");
+		B_Say	(self, other, "$GETOUTOFHERE");
 	}
 	else
 	{
-		B_Say 			(self, other, "$WHYAREYOUINHERE");
+		B_Say 	(self, other, "$WHYAREYOUINHERE");
 	};
 };
 
@@ -78,7 +78,7 @@ func int ZS_ClearRoom_Loop ()
 		if (C_WantToAttackRoomIntruder(self))
 		{
 			B_SelectWeapon	(self, other);
-			B_Say			(self, other, "$GETOUTOFHERE");
+			B_Say		(self, other, "$GETOUTOFHERE");
 		}
 		else
 		{
@@ -109,6 +109,7 @@ func int ZS_ClearRoom_Loop ()
 	{
 		// ------ Spieler zu lange in Raum ------
 		if (Npc_GetStateTime(self) > 5)
+		|| (Wld_IsTime(21,00,04,00))
 		{
 			B_Attack (self, other, AR_ClearRoom, 0);
 			return LOOP_END;
@@ -121,7 +122,7 @@ func int ZS_ClearRoom_Loop ()
 		{
 			if (!Npc_CanSeeNpcFreeLOS (self, other))	
 			{
-				AI_GotoWP 		(self, Npc_GetNearestWP(other));
+				AI_GotoWP 	(self, Npc_GetNearestWP(other));
 				B_TurnToNpc 	(self, other);
 			}
 			else if (!Npc_CanSeeNpc (self, other))
@@ -140,6 +141,3 @@ func void ZS_ClearRoom_End ()
 {
 	B_StopLookAt (self);
 };
-
-
-
