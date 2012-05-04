@@ -99,7 +99,7 @@ INSTANCE Info_Mod_Bret_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Bret_Pickpocket_Condition()
 {
-	C_Beklauen	(60, ItMi_Gold, 230);
+	C_Beklauen	(60, ItAt_Claw, 2);
 };
 
 FUNC VOID Info_Mod_Bret_Pickpocket_Info()

@@ -52,7 +52,7 @@ FUNC VOID Info_Mod_Bilgot_Mortis_Info()
 	{
 		AI_Output(hero, self, "Info_Mod_Bilgot_Mortis_05_02"); //Bei mir ist alles in Ordnung.
 
-		Mod_BilgotOK	=	1;
+		Mod_BilgotOK = 1;
 
 		B_GivePlayerXP	(50);
 	};
@@ -71,8 +71,8 @@ INSTANCE Info_Mod_Bilgot_OK (C_INFO)
 
 FUNC INT Info_Mod_Bilgot_OK_Condition()
 {
-	if (Mod_BilgotOK	==	0)
-	&& (Mod_BilgotBromorBartok	==	1)
+	if (Mod_BilgotOK == 0)
+	&& (Mod_BilgotBromorBartok == 1)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Bromor_Bartok))
 	{
 		return 1;
@@ -84,7 +84,7 @@ FUNC VOID Info_Mod_Bilgot_OK_Info()
 	AI_Output(hero, self, "Info_Mod_Bilgot_OK_15_00"); //Die Sache ist erledigt.
 	AI_Output(self, hero, "Info_Mod_Bilgot_OK_05_01"); //Gut, dann ist bei mir jetzt alles in Ordnung.
 
-	Mod_BilgotOK	=	1;
+	Mod_BilgotOK = 1;
 
 	B_LogEntry	(TOPIC_MOD_MORTIS_KONTROLLE, "Bei Bilgot ist alles in Ordnung.");
 

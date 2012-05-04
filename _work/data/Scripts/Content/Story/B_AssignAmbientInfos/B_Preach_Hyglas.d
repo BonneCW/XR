@@ -51,5 +51,5 @@ func void B_Preach_Hyglas(var int satz)
 	if (satz == 11) 	
 	{	
 		AI_Output (self, self, "Info_Mod_Hyglas_Preach_14_11"); //... und wenn eurer irdisches Dasein endet, kehrt ihr ein in sein Reich ...
-	};.
+	};
 };

@@ -519,12 +519,12 @@ INSTANCE Info_Mod_Baltram_Pickpocket (C_INFO)
 	information	= Info_Mod_Baltram_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Baltram_Pickpocket_Condition()
 {
-	C_Beklauen	(60, ItMi_Gold, 200);
+	C_Beklauen	(67, ItMi_Gold, 200);
 };
 
 FUNC VOID Info_Mod_Baltram_Pickpocket_Info()

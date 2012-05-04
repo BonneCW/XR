@@ -608,7 +608,7 @@ INSTANCE Info_Mod_Bartok_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Bartok_Pickpocket_Condition()
 {
-	C_Beklauen	(50, ItMi_Gold, 130);
+	C_Beklauen	(50, ItAt_Teeth, 3);
 };
 
 FUNC VOID Info_Mod_Bartok_Pickpocket_Info()

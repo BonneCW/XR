@@ -457,12 +457,12 @@ INSTANCE Info_Mod_Brauer_Pickpocket (C_INFO)
 	information	= Info_Mod_Brauer_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Brauer_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 1000);
+	C_Beklauen	(105, ItFo_Beer_Khorata, 4);
 };
 
 FUNC VOID Info_Mod_Brauer_Pickpocket_Info()

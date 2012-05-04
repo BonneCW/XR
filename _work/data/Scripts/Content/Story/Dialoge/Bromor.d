@@ -36,7 +36,7 @@ FUNC INT Info_Mod_Bromor_Bilgot_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Bromor_Hi))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Bilgot_Mortis))
-	&& (Mod_BilgotBromorBartok	==	0)
+	&& (Mod_BilgotBromorBartok == 0)
 	{
 		return 1;
 	};
@@ -61,7 +61,7 @@ INSTANCE Info_Mod_Bromor_Bartok (C_INFO)
 
 FUNC INT Info_Mod_Bromor_Bartok_Condition()
 {
-	if (Npc_HasItems(hero, ItMi_Gold)	>=	500)
+	if (Npc_HasItems(hero, ItMi_Gold) >= 500)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Bromor_Bilgot))
 	{
 		return 1;
@@ -76,7 +76,7 @@ FUNC VOID Info_Mod_Bromor_Bartok_Info()
 
 	AI_Output(self, hero, "Info_Mod_Bromor_Bartok_07_01"); //Danke.
 
-	Mod_BilgotBromorBartok	=	1;
+	Mod_BilgotBromorBartok = 1;
 
 	B_Göttergefallen(1, 1);
 };
@@ -268,12 +268,12 @@ INSTANCE Info_Mod_Bromor_Pickpocket (C_INFO)
 	information	= Info_Mod_Bromor_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Bromor_Pickpocket_Condition()
 {
-	C_Beklauen	(57, ItMi_Gold, 180);
+	C_Beklauen	(112, ItMi_Gold, 1234);
 };
 
 FUNC VOID Info_Mod_Bromor_Pickpocket_Info()

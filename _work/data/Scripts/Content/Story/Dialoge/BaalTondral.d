@@ -63,7 +63,6 @@ FUNC VOID Info_Mod_Tondral_Ken_Info()
 	Info_ClearChoices	(Info_Mod_Tondral_Ken);
 
 	Info_AddChoice	(Info_Mod_Tondral_Ken, "Ich bitte dich. Es ist wichtig.", Info_Mod_Tondral_Ken_B);
-	//Info_AddChoice	(Info_Mod_Tondral_Ken, "Entweder du gibt’s mir den Zauber, oder ich hole ihn mir.", Info_Mod_Tondral_Ken_A);
 };
 
 FUNC VOID Info_Mod_Tondral_Ken_B()
@@ -73,7 +72,6 @@ FUNC VOID Info_Mod_Tondral_Ken_B()
 	AI_Output(hero, self, "Info_Mod_Tondral_Ken_B_15_02"); //Es geht um einen Auftrag. Mehr darf ich nicht verraten. Es ist wichtig.
 	AI_Output(self, hero, "Info_Mod_Tondral_Ken_B_13_03"); //Na gut, ich denke, ich muss dir vertrauen. Hier hast du die Spruchrolle.
 
-	CreateInvItems	(self, ItSc_Teleport_Eisgebiet, 1);
 	B_GiveInvItems	(self, hero, ItSc_Teleport_Eisgebiet, 1);
 
 	B_LogEntry	(TOPIC_MOD_FERCO_WANZE, "Ich habe nun den Teleportzauber. Ich muss das Risiko eingehen ihn zu benutzen.");
@@ -129,7 +127,6 @@ FUNC VOID Info_Mod_Tondral_Thys_C()
 	AI_Output(hero, self, "Info_Mod_Tondral_Thys_C_15_00"); //Hier habt ihr 1000 Goldmünzen. Finanziert damit eure Grabungen.
 	AI_Output(self, hero, "Info_Mod_Tondral_Thys_C_13_01"); //Tausend Dank! Hier, nimm diesen Heiltrank als Dank.
 
-	CreateInvItems	(self, ItPo_Health_02, 1);
 	B_GiveInvItems	(self, hero, ItPo_Health_02, 1);
 
 	AI_Output(hero, self, "Info_Mod_Tondral_Thys_C_15_02"); //Ich danke dir. Ich muss mich jetzt auf den Weg machen.
@@ -149,7 +146,6 @@ FUNC VOID Info_Mod_Tondral_Thys_B()
 	AI_Output(hero, self, "Info_Mod_Tondral_Thys_B_15_00"); //Hier habt ihr 100 Goldmünzen. Finanziert damit eure Grabungen.
 	AI_Output(self, hero, "Info_Mod_Tondral_Thys_B_13_01"); //Vielen Dank! Hier, nimm diesen Heiltrank als Dank.
 
-	CreateInvItems	(self, ItPo_Health_01, 1);
 	B_GiveInvItems	(self, hero, ItPo_Health_01, 1);
 
 	AI_Output(hero, self, "Info_Mod_Tondral_Thys_B_15_02"); //Ich danke dir. Ich muss mich jetzt auf den Weg machen.

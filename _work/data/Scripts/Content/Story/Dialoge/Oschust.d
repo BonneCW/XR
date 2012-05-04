@@ -341,7 +341,7 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_G()
 	CreateInvItems	(hero, ItMw_Zweihaender, 1);
 	Npc_RemoveInvItems	(hero, ItMw_2H_Sword_M_01, 1);
 
-	Print	("Einen Zweihänder entrostet"));
+	Print	("Einen Zweihänder entrostet");
 
 	Info_ClearChoices	(Info_Mod_Oschust_WegenSchwertern);
 };
@@ -379,7 +379,7 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_E()
 	CreateInvItems	(hero, ItMw_Zweihaender, 1);
 	Npc_RemoveInvItems	(hero, ItMw_2H_Sword_M_01, 1);
 
-	Print	("Einen Zweihänder entrostet"));
+	Print	("Einen Zweihänder entrostet");
 
 	Info_ClearChoices	(Info_Mod_Oschust_WegenSchwertern);
 };
@@ -417,7 +417,7 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_C()
 	CreateInvItems	(hero, ItMw_1H_quantarie_Schwert_01_Geschaerft, 1);
 	Npc_RemoveInvItems	(hero, ItMw_1h_MISC_Sword_Geschaerft, 1);
 
-	Print	("Ein Schwert entrostet"));
+	Print	("Ein Schwert entrostet");
 
 	Info_ClearChoices	(Info_Mod_Oschust_WegenSchwertern);
 };
@@ -455,7 +455,7 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_A()
 	CreateInvItems	(hero, ItMw_1H_quantarie_Schwert_01, 1);
 	Npc_RemoveInvItems	(hero, ItMw_1h_MISC_Sword, 1);
 
-	Print	("Ein Schwert entrostet"));
+	Print	("Ein Schwert entrostet");
 
 	Info_ClearChoices	(Info_Mod_Oschust_WegenSchwertern);
 };

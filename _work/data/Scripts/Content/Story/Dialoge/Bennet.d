@@ -800,12 +800,12 @@ INSTANCE Info_Mod_Bennet_Pickpocket (C_INFO)
 	information	= Info_Mod_Bennet_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Bennet_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 170);
+	C_Beklauen	(88, ItMiSwordraw, 6);
 };
 
 FUNC VOID Info_Mod_Bennet_Pickpocket_Info()

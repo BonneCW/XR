@@ -338,12 +338,12 @@ INSTANCE Info_Mod_Brandon_Pickpocket (C_INFO)
 	information	= Info_Mod_Brandon_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Brandon_Pickpocket_Condition()
 {
-	C_Beklauen	(60, ItMi_Gold, 180);
+	C_Beklauen	(61, ItMi_Gold, 180);
 };
 
 FUNC VOID Info_Mod_Brandon_Pickpocket_Info()
