@@ -149,7 +149,6 @@ FUNC VOID Info_Mod_Den_Rangar_Info()
 	AI_Output(hero, self, "Info_Mod_Den_Rangar_15_02"); //Er wird die Sachen überprüfen.
 	AI_Output(self, hero, "Info_Mod_Den_Rangar_05_03"); //Sehr gut, hier ist deine Belohnung.
 
-	CreateInvItems	(self, ItMi_Gold, 250);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 250);
 
 	B_GivePlayerXP	(250);

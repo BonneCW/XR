@@ -539,6 +539,7 @@ FUNC VOID Info_Mod_Dexter_AmulettAbgegeben_Info()
 	Info_ClearChoices	(Info_Mod_Dexter_AmulettAbgegeben);
 
 	Info_AddChoice	(Info_Mod_Dexter_AmulettAbgegeben, "Nein, er war noch wütend wegen des gefälschten Schmuckstückes.", Info_Mod_Dexter_AmulettAbgegeben_B);
+
 	if (Npc_HasItems(hero, ItMi_Gold) >= 300)
 	&& (Npc_HasItems(hero, ItSc_TrfSheep) >= 1)
 	&& (Npc_HasItems(hero, ItSc_TrfKeiler) >= 1)
@@ -1392,12 +1393,12 @@ INSTANCE Info_Mod_Dexter_Pickpocket (C_INFO)
 	information	= Info_Mod_Dexter_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Dexter_Pickpocket_Condition()
 {
-	C_Beklauen	(85, ItMi_Gold, 630);
+	C_Beklauen	(125, ItMi_Gold, 630);
 };
 
 FUNC VOID Info_Mod_Dexter_Pickpocket_Info()

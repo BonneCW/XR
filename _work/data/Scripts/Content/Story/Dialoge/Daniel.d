@@ -313,12 +313,12 @@ INSTANCE Info_Mod_Daniel_Pickpocket (C_INFO)
 	information	= Info_Mod_Daniel_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Daniel_Pickpocket_Condition()
 {
-	C_Beklauen	(84, ItMi_Gold, 750);
+	C_Beklauen	(94, ItMi_Gold, 750);
 };
 
 FUNC VOID Info_Mod_Daniel_Pickpocket_Info()

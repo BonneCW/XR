@@ -1168,7 +1168,7 @@ INSTANCE Info_Mod_Dragomir_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Dragomir_Pickpocket_Condition()
 {
-	C_Beklauen	(58, ItMi_Gold, 140);
+	C_Beklauen	(58, ItRw_Bolt, 40);
 };
 
 FUNC VOID Info_Mod_Dragomir_Pickpocket_Info()

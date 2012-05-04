@@ -1517,12 +1517,12 @@ INSTANCE Info_Mod_Diego_Pickpocket (C_INFO)
 	information	= Info_Mod_Diego_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_210;
 };
 
 FUNC INT Info_Mod_Diego_Pickpocket_Condition()
 {
-	C_Beklauen	(120, ItMi_Gold, 2500);
+	C_Beklauen	(200, ItKe_Lockpick, 25);
 };
 
 FUNC VOID Info_Mod_Diego_Pickpocket_Info()

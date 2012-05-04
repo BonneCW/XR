@@ -510,12 +510,12 @@ INSTANCE Info_Mod_Daron_Pickpocket (C_INFO)
 	information	= Info_Mod_Daron_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Daron_Pickpocket_Condition()
 {
-	C_Beklauen	(68, ItMi_Gold, 290);
+	C_Beklauen	(68, ItMi_InnosStatue, 1);
 };
 
 FUNC VOID Info_Mod_Daron_Pickpocket_Info()

@@ -243,12 +243,12 @@ INSTANCE Info_Mod_Drax_Pickpocket (C_INFO)
 	information	= Info_Mod_Drax_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Drax_Pickpocket_Condition()
 {
-	C_Beklauen	(65, ItMi_Gold, 150);
+	C_Beklauen	(65, ItAt_WolfFur, 3);
 };
 
 FUNC VOID Info_Mod_Drax_Pickpocket_Info()

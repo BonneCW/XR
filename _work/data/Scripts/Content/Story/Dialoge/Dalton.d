@@ -153,7 +153,7 @@ FUNC VOID Info_Mod_Dalton_Freudenspender_Info()
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 10);
 
-	Mod_Freudenspender	+= 1;
+	Mod_Freudenspender += 1;
 };
 
 INSTANCE Info_Mod_Dalton_Pickpocket (C_INFO)
@@ -164,7 +164,7 @@ INSTANCE Info_Mod_Dalton_Pickpocket (C_INFO)
 	information	= Info_Mod_Dalton_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Dalton_Pickpocket_Condition()

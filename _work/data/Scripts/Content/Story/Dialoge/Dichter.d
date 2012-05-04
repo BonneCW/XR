@@ -154,7 +154,7 @@ FUNC VOID Info_Mod_Dichter_Freudenspender_Info()
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 10);
 
-	Mod_Freudenspender	+= 1;
+	Mod_Freudenspender += 1;
 };
 
 INSTANCE Info_Mod_Dichter_Pickpocket (C_INFO)
