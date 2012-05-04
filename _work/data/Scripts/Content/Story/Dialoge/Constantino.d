@@ -135,8 +135,6 @@ FUNC VOID Info_Mod_Constantino_Lehrling_C()
 
 	B_GiveInvItems	(self, hero, Mod_ConstantinosZutatenliste, 1);
 
-	Mod_MinecrawlerEi	=	0;
-
 	AI_Output(hero, self, "Info_Mod_Constantino_Lehrling_C_15_07"); //Wo finde ich die Zutaten?
 	AI_Output(self, hero, "Info_Mod_Constantino_Lehrling_C_10_08"); //Draußen. Die Klosterfuzzis haben einiges an Ingredenzien. Würde vorschlagen, dass du gleich da bleibst.
 	AI_Output(hero, self, "Info_Mod_Constantino_Lehrling_C_15_09"); //In Ordnung, ich besorg dir den Kram.
@@ -1782,12 +1780,12 @@ INSTANCE Info_Mod_Constantino_Pickpocket (C_INFO)
 	information	= Info_Mod_Constantino_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Constantino_Pickpocket_Condition()
 {
-	C_Beklauen	(70, ItMi_Gold, 340);
+	C_Beklauen	(110, ItPl_Perm_Herb, 1);
 };
 
 FUNC VOID Info_Mod_Constantino_Pickpocket_Info()

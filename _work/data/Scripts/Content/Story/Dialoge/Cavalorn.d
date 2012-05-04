@@ -442,7 +442,7 @@ INSTANCE Info_Mod_Cavalorn_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Cavalorn_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 130);
+	C_Beklauen	(55, ItRw_Arrow, 23);
 };
 
 FUNC VOID Info_Mod_Cavalorn_Pickpocket_Info()

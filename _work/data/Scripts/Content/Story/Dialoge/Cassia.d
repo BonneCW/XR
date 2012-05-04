@@ -800,12 +800,12 @@ INSTANCE Info_Mod_Cassia_Pickpocket (C_INFO)
 	information	= Info_Mod_Cassia_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100_Female;
+	description	= Pickpocket_180_Female;
 };
 
 FUNC INT Info_Mod_Cassia_Pickpocket_Condition()
 {
-	C_Beklauen	(100, ItMi_Gold, 750);
+	C_Beklauen	(170, ItMi_Gold, 750);
 };
 
 FUNC VOID Info_Mod_Cassia_Pickpocket_Info()

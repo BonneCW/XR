@@ -186,12 +186,12 @@ INSTANCE Info_Mod_Cadar_Pickpocket (C_INFO)
 	information	= Info_Mod_Cadar_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Cadar_Pickpocket_Condition()
 {
-	C_Beklauen	(111, ItMi_Gold, 1100);
+	C_Beklauen	(176, ItPo_Mana_Addon_04, 3);
 };
 
 FUNC VOID Info_Mod_Cadar_Pickpocket_Info()

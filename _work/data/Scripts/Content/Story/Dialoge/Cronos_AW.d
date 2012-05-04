@@ -466,12 +466,12 @@ INSTANCE Info_Mod_Cronos_Pickpocket (C_INFO)
 	information	= Info_Mod_Cronos_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Cronos_Pickpocket_Condition()
 {
-	C_Beklauen	(96, ItMi_Gold, 750);
+	C_Beklauen	(145, ItSc_IceRain, 2);
 };
 
 FUNC VOID Info_Mod_Cronos_Pickpocket_Info()

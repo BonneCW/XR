@@ -766,12 +766,12 @@ INSTANCE Info_Mod_Cyrco_Pickpocket (C_INFO)
 	information	= Info_Mod_Cyrco_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Cyrco_Pickpocket_Condition()
 {
-	C_Beklauen	(93, ItMi_Gold, 3500);
+	C_Beklauen	(175, ItMi_Gold, 1200);
 };
 
 FUNC VOID Info_Mod_Cyrco_Pickpocket_Info()

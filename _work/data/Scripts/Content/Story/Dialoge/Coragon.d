@@ -427,12 +427,12 @@ INSTANCE Info_Mod_Coragon_Pickpocket (C_INFO)
 	information	= Info_Mod_Coragon_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Coragon_Pickpocket_Condition()
 {
-	C_Beklauen	(45, ItMi_Gold, 100);
+	C_Beklauen	(75, ItFo_CoragonsBeer, 3);
 };
 
 FUNC VOID Info_Mod_Coragon_Pickpocket_Info()

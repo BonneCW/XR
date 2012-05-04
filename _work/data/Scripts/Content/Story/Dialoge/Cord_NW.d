@@ -369,12 +369,12 @@ INSTANCE Info_Mod_Cord_Pickpocket (C_INFO)
 	information	= Info_Mod_Cord_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Cord_Pickpocket_Condition()
 {
-	C_Beklauen	(80, ItMi_Gold, 190);
+	C_Beklauen	(125, ItMi_Gold, 650);
 };
 
 FUNC VOID Info_Mod_Cord_Pickpocket_Info()

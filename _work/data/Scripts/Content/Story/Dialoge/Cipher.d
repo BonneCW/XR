@@ -175,12 +175,12 @@ INSTANCE Info_Mod_Cipher_Pickpocket (C_INFO)
 	information	= Info_Mod_Cipher_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Cipher_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 480);
+	C_Beklauen	(77, ItMi_Joint, 6);
 };
 
 FUNC VOID Info_Mod_Cipher_Pickpocket_Info()
