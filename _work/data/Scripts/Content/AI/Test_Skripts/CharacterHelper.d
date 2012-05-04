@@ -36,71 +36,6 @@ func void UseMobsiBrief ()
 					Doc_PrintLines	(nDocID,  0, "self.aivar[AIV_INVINCIBLE] = FALSE;"				);
 					Doc_Show		(nDocID);
 };
-//****************************************************************************
-//				Sack voll neuer addon waffen
-//			---------------------------------------------
-//****************************************************************************
-INSTANCE ItSe_Addon_Sack (C_Item)
-{	
-	name 				=	"Der Sack ist voller neuer Waffen!";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MISSION;
-	
-	value 				=	25;
-	
-	visual 				=	"ItFo_Fish.3DS";
-	material 			=	MAT_LEATHER;
-	scemeName			=	"MAPSEALED";
-	on_state[0]			=	Use_Sack;
-
-	description			= 	name;
-	TEXT[2]				= 	"Viele viele bunte Waffen";		
-	
-};
-
-	FUNC VOID Use_Sack()
-	{
-		Print("Einen Haufen neuer Waffen gefunden!");
-		
-		CreateInvItems (self, ItMW_Addon_Knife01,1);
-		CreateInvItems (self, ItMW_Addon_Stab01,1);
-		CreateInvItems (self, ItMW_Addon_Stab02,1);
-		CreateInvItems (self, ItMW_Addon_Stab03,1);
-		CreateInvItems (self, ItMW_Addon_Stab04,1);
-		CreateInvItems (self, ItMW_Addon_Stab05,1);
-		CreateInvItems (self, ItMW_Addon_Hacker_1h_01,1);
-		CreateInvItems (self, ItMW_Addon_Hacker_2h_01,1);
-		CreateInvItems (self, ItMW_Addon_Hacker_2h_02,1);
-		CreateInvItems (self, ItMW_Addon_Hacker_1h_02,1);
-		CreateInvItems (self, ItMW_Addon_Keule_1h_01,1);
-		
-		CreateInvItems (self, ItMW_Addon_Keule_2h_01,1);
-		
-	};
-INSTANCE ItFo_TestTrigger (C_Item)
-{	
-	name 				=	"Trigger die Adw";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;
-	
-	value 				=	0;
-	
-	visual 				=	"ItFo_Honey.3DS";
-	material 			=	MAT_STONE;
-	scemeName			=	"FOODHUGE";
-	on_state[0]			=	Use_TestTrigger;
-
-	description			= 	name;
-	
-
-};
-
-	FUNC VOID Use_TestTrigger()
-	{
-		ENTER_ADDONWORLD_FIRSTTIME_TRIGGER_FUNC ();
-	};
 
 INSTANCE CH (NPC_DEFAULT)
 {
@@ -338,41 +273,6 @@ FUNC VOID  CH_kriegen_Info()
 {
 	
 	B_GiveInvItems (other, self, Itmi_Nugget, 1);
-};
-//***************************************************************************
-//	Rahmen-Infos
-// 	Ende
-//***************************************************************************
-instance  CH_Geben (C_INFO)
-{
-	npc			=  CH;
-	nr			=  999;
-	condition	=  CH_Geben_Condition;
-	information	=  CH_Geben_Info;
-	permanent	=  TRUE;
-	description = "zeig mal dingens";
-};                       
-
-FUNC int  CH_Geben_Condition()
-{
-	if (LevelStart == FALSE) 
-	&& (MagieStart == FALSE)
-	&& (AttributeStart == FALSE)
-	&& (KampfStart == FALSE)
-	&& (DiebStart == FALSE)
-	&& (MiscStart == FALSE)
-	{		
-		return TRUE;
-	};
-};
-FUNC VOID  CH_Geben_Info()
-{
-	//B_GiveInvItems (self, other, Itmi_Nugget, 2);
-	
-		 AI_PrintScreen ("Honig gegeben",	 -1, 34, FONT_ScreenSmall, 2);
-		 AI_PrintScreen ("Brot gegeben",	 -1, 37, FONT_ScreenSmall, 2);
-		 AI_PrintScreen ("Wein gegeben",     -1, 40, FONT_ScreenSmall, 2);
-		 AI_PrintScreen ("Wurst gegeben",  	 -1, 43, FONT_ScreenSmall, 2);
 };
 //***************************************************************************
 //	Rahmen-Infos
