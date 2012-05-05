@@ -50,8 +50,8 @@ func void ZS_Attack ()
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4073_BDT_Bandit_MT))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4074_BDT_Bandit_MT))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4075_BDT_Bandit_MT)))
-	&& ((Mod_Banditenüberfall_Esteban == 6)
-	|| (Mod_Banditenüberfall_Esteban == 7))
+	&& ((Mod_Banditenueberfall_Esteban == 6)
+	|| (Mod_Banditenueberfall_Esteban == 7))
 	&& (C_NpcIsHero(other))
 	{
 		return;
@@ -240,8 +240,8 @@ func int ZS_Attack_Loop_Core ()
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4073_BDT_Bandit_MT))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4074_BDT_Bandit_MT))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4075_BDT_Bandit_MT)))
-	&& ((Mod_Banditenüberfall_Esteban == 6)
-	|| (Mod_Banditenüberfall_Esteban == 7))
+	&& ((Mod_Banditenueberfall_Esteban == 6)
+	|| (Mod_Banditenueberfall_Esteban == 7))
 	&& (C_NpcIsHero(other))
 	{
 		return LOOP_END;

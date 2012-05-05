@@ -54,7 +54,7 @@ INSTANCE Info_Mod_Franco_Warnung (C_INFO)
 FUNC INT Info_Mod_Franco_Warnung_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Tom_Hi))
-	&& (Mod_Tom_Böse == TRUE)
+	&& (Mod_Tom_Boese == TRUE)
 	{
 		return 1;
 	};
@@ -92,7 +92,7 @@ INSTANCE Info_Mod_Franco_Scorpio (C_INFO)
 FUNC INT Info_Mod_Franco_Scorpio_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Franco_Hi))
-	&& (Mod_Tom_Böse == FALSE)
+	&& (Mod_Tom_Boese == FALSE)
 	&& (Npc_IsDead(Mod_7600_GRD_Scorpio_NW))
 	&& (Npc_IsDead(Mod_7601_GRD_Gardist_NW))
 	&& (Npc_IsDead(Mod_7602_GRD_Gardist_NW))

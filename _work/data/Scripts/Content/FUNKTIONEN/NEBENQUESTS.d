@@ -877,14 +877,14 @@ FUNC VOID NEBENQUESTS()
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Balthasar_Bereit))
-		&& (Mod_BalthasarsWölfe == 0)
+		&& (Mod_BalthasarsWoelfe == 0)
 		&& (Npc_GetDistToWP(Mod_101_BAU_Balthasar_NW, "NW_FARM4_BALTHASAR_PEE") < 500)
 		{
 			Wld_InsertNpc	(Balthi_YWolf1, "NW_FARM4_WOLFSPAWN");
 			Wld_InsertNpc	(Balthi_YWolf2, "NW_FARM4_WOLFSPAWN");
 			Wld_InsertNpc	(Balthi_YWolf3, "NW_FARM4_WOLFSPAWN");
 
-			Mod_BalthasarsWölfe = 1;
+			Mod_BalthasarsWoelfe = 1;
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Diego_Joe))

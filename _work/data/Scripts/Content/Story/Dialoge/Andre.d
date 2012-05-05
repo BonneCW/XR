@@ -2969,7 +2969,7 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Info()
 	Info_AddChoice	(Info_Mod_Andre_Kopfgeld, "Zurück.", Info_Mod_Andre_Kopfgeld_Zurueck);
 	
 	if (Npc_KnowsInfo(hero, Info_Mod_Tom_Hi))
-	&& (Mod_Tom_Böse	==	TRUE)
+	&& (Mod_Tom_Boese	==	TRUE)
 	{
 		Info_AddChoice	(Info_Mod_Andre_Kopfgeld, "Tom versucht einen Freund vor einem Miliztrupp zu warnen.", Info_Mod_Andre_Kopfgeld_Tom);
 	};
@@ -3033,7 +3033,7 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Tom()
 
 	B_StartOtherRoutine	(Mod_967_BDT_Tom_NW, "GEFANGEN");
 
-	Mod_Tom_Böse = FALSE;
+	Mod_Tom_Boese = FALSE;
 
 	B_LogEntry	(TOPIC_MOD_TOMSFREUND, "Ich hab Tom bei Lord Andre verpfiffen.");
 	B_SetTopicStatus	(TOPIC_MOD_TOMSFREUND, LOG_FAILED);

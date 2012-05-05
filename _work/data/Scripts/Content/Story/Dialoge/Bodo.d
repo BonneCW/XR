@@ -39,7 +39,7 @@ INSTANCE Info_Mod_Bodo_Krautlieferung (C_INFO)
 FUNC INT Info_Mod_Bodo_Krautlieferung_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Myxir_Haendler))
-	&& (Mod_MyxirsKräuter == 0)
+	&& (Mod_MyxirsKraeuter == 0)
 	{
 		return 1;
 	};

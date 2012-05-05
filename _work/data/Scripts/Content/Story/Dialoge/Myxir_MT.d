@@ -490,7 +490,7 @@ FUNC VOID Info_Mod_Myxir_Haendler_A()
 	B_SetTopicStatus	(TOPIC_MOD_GIFTPFLANZEN, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_GIFTPFLANZEN, "Wenn ich mit Myxir handeln will, muss ich ihm vorher einen Gefallen tun: Bodo in der Stadt hat eine Pflanzenlieferung, auf die Myxir wartet.");
 
-	Mod_MyxirsKräuter = 0;
+	Mod_MyxirsKraeuter = 0;
 	Mod_KenntBodo = 1;
 
 	Mod_MyxirsAuftragOK = 1;

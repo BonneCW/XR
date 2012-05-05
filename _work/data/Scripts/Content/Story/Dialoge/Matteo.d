@@ -1009,7 +1009,7 @@ INSTANCE Info_Mod_Matteo_Angebot_Kaese (C_INFO)
 FUNC INT Info_Mod_Matteo_Angebot_Kaese_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Hi))
-	&& (Mod_AngebotMatteo	==	1)
+	&& (Mod_AngebotMatteo == 1)
 	{
 		return 1;
 	};
@@ -1020,7 +1020,7 @@ FUNC VOID Info_Mod_Matteo_Angebot_Kaese_Info()
 	AI_Output(hero, self, "Info_Mod_Matteo_Angebot_Kaese_15_00"); //Ich hab was von deinem Angebot gelesen.
 	AI_Output(self, hero, "Info_Mod_Matteo_Angebot_Kaese_09_01"); //Du meinst den Käse. Ja, der nur 10 Goldmünzen und ist bei mir auch nur in den nächsten Tagen erhältlich.
 
-	Mod_MatteosKäseAngebot	=	Wld_GetDay();
+	Mod_MatteosKaeseAngebot	= Wld_GetDay();
 };
 
 INSTANCE Info_Mod_Matteo_Angebot_Vorbei (C_INFO)
@@ -1036,7 +1036,7 @@ INSTANCE Info_Mod_Matteo_Angebot_Vorbei (C_INFO)
 FUNC INT Info_Mod_Matteo_Angebot_Vorbei_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Angebot_Kaese))
-	&& ((Wld_GetDay() - Mod_MatteosKäseAngebot) >= 5)
+	&& ((Wld_GetDay() - Mod_MatteosKaeseAngebot) >= 5)
 	{
 		return 1;
 	};

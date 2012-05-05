@@ -3423,7 +3423,7 @@ INSTANCE ITAR_KDF_L (C_Item)
 };
 FUNC VOID Equip_ITAR_KDF_L()
 {
-	Mod_TrägtFeuerkleidung = 1;
+	Mod_TraegtFeuerkleidung = 1;
 
 	if Npc_IsPlayer (self)
 	{
@@ -3441,7 +3441,7 @@ FUNC VOID Equip_ITAR_KDF_L()
 };
 FUNC VOID UnEquip_ITAR_KDF_L()
 {
-	Mod_TrägtFeuerkleidung = 0;
+	Mod_TraegtFeuerkleidung = 0;
 
 	if Npc_IsPlayer (self)
 	{
@@ -3624,7 +3624,7 @@ INSTANCE ITAR_KDF_H (C_Item)
 };
 FUNC VOID Equip_ITAR_KDF_H()
 {
-	Mod_TrägtFeuerkleidung = 1;
+	Mod_TraegtFeuerkleidung = 1;
 
 	if Npc_IsPlayer (self)
 	{
@@ -3642,7 +3642,7 @@ FUNC VOID Equip_ITAR_KDF_H()
 };
 FUNC VOID UnEquip_ITAR_KDF_H()
 {
-	Mod_TrägtFeuerkleidung = 0;
+	Mod_TraegtFeuerkleidung = 0;
 
 	if Npc_IsPlayer (self)
 	{

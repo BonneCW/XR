@@ -5635,13 +5635,13 @@ FUNC VOID INIT_MinentalSurface ()
 	}; 
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_AW_Hi))
-	&& (Hölle_First	==	0)
+	&& (Hoelle_First == 0)
 	{
 		Wld_InsertNpc	(Schattenlord_877_Urnol,	"OC1");
 		Wld_InsertNpc	(Xeres_01,			"OC1");
 
 
-		Hölle_First	=	1;
+		Hoelle_First = 1;
 	};
 
 	if (Urnol_InOT == TRUE)

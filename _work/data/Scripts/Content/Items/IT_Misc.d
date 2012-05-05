@@ -2987,7 +2987,7 @@ FUNC VOID BDTKiste_01_Open ()
 	if ((hero.attribute[ATR_DEXTERITY] >= 120)
 	&& (Npc_GetTalentSkill (hero, NPC_TALENT_PICKLOCK) == 1)
 	&& (Npc_HasItems(hero, ItKe_Lockpick) >= 1)	
-	&& (Mod_Banditenüberfall_Esteban >= 10))
+	&& (Mod_Banditenueberfall_Esteban >= 10))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Thorben_BDTSchatzkisten_Open))
 	{
 		B_ShowGivenThings	("Diverse Items erhalten");
@@ -3032,7 +3032,7 @@ FUNC VOID BDTKiste_02_Open ()
 	if ((hero.attribute[ATR_DEXTERITY] >= 120)
 	&& (Npc_GetTalentSkill (hero, NPC_TALENT_PICKLOCK) == 1)
 	&& (Npc_HasItems(hero, ItKe_Lockpick) >= 1)	
-	&& (Mod_Banditenüberfall_Esteban >= 10))
+	&& (Mod_Banditenueberfall_Esteban >= 10))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Thorben_BDTSchatzkisten_Open))
 	{
 		B_ShowGivenThings	("Diverse Items erhalten");

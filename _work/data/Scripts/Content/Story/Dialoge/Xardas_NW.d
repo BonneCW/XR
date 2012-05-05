@@ -2257,10 +2257,6 @@ FUNC VOID Info_Mod_Xardas_NW_WasMussIchTun_Info()
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_WasMussIchTun_14_05"); //Hoch oben in den Bergen, in der Nähe des Neuen Lagers.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_WasMussIchTun_14_06"); //In der Zeit des ersten Orkkrieges wurde in dieser unwirtlichen Gegend eine Festung errichtet.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_WasMussIchTun_14_07"); //Nach der Erschaffung der Barriere siedelten dort die Menschen an, die gute Gründe dafür hatten, nicht mit den anderen Lagern in Kontakt zu kommen - Anhänger Beliars.
-	
-	Mod_KriegerGetroffen	=	0;
-	Mod_MagierGetroffen	=	0;
-	Mod_AufnahmeZähler	=	0;
 };
 
 INSTANCE Info_Mod_Xardas_NW_WasDuMitGruppe (C_INFO)

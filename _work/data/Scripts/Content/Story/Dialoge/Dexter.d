@@ -180,7 +180,7 @@ FUNC INT Info_Mod_Dexter_TimeOver_Condition()
 FUNC VOID Info_Mod_Dexter_TimeOver_Info()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Skinner_Laufbursche2))
-	|| (Mod_Banditenüberfall_Esteban == 11)
+	|| (Mod_Banditenueberfall_Esteban == 11)
 	|| (Mod_Orks_Morgahard == 4)
 	{
 		AI_Output(self, hero, "Info_Mod_Dexter_TimeOver_09_00"); //Du hast unserem Lager schon gute Dienste erwiesen und dich als geschickter und würdiger Bandit gezeigt.

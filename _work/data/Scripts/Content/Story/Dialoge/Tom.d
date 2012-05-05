@@ -43,7 +43,7 @@ FUNC VOID Info_Mod_Tom_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Tom_Hi_11_09"); //Ein Kumpel von mir hat ein Lager bei der Brücke nahe der Taverne. Ich hab allerdings erfahren, dass ein kleiner Miliztrupp dorthin aufgebrochen ist.
 	AI_Output(self, hero, "Info_Mod_Tom_Hi_11_10"); //Du musst ihn unbedingt warnen.
 
-	Mod_Tom_Böse = TRUE;
+	Mod_Tom_Boese = TRUE;
 
 	Log_CreateTopic	(TOPIC_MOD_TOMSFREUND, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_TOMSFREUND, LOG_RUNNING);
@@ -64,7 +64,7 @@ INSTANCE Info_Mod_Tom_Franco (C_INFO)
 FUNC INT Info_Mod_Tom_Franco_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Franco_Warnung))
-	&& (Mod_Tom_Böse	==	TRUE)
+	&& (Mod_Tom_Boese == TRUE)
 	{
 		return 1;
 	};
@@ -78,7 +78,7 @@ FUNC VOID Info_Mod_Tom_Franco_Info()
 	B_LogEntry	(TOPIC_MOD_TOMSFREUND, "Ich hab Tom von der Flucht Francos berichtet.");
 	B_SetTopicStatus	(TOPIC_MOD_TOMSFREUND, LOG_SUCCESS);
 
-	Mod_Tom_Böse = FALSE;
+	Mod_Tom_Boese = FALSE;
 
 	B_GivePlayerXP	(100);
 
@@ -110,7 +110,6 @@ FUNC VOID Info_Mod_Tom_Belohnung_Info()
 	AI_Output(self, hero, "Info_Mod_Tom_Belohnung_11_01"); //Gut, du hast mir einen Gefallen getan, jetzt tue ich dir einen.
 	AI_Output(self, hero, "Info_Mod_Tom_Belohnung_11_02"); //Nimm diesen Ring und gehe zu Edgor. Er befindet sich in der Nähe von Bengars Hof.
 
-	CreateInvItems	(self, Mod_Banditenring, 1);
 	B_GiveInvItems	(self, hero, Mod_Banditenring, 1);
 
 	AI_Output(self, hero, "Info_Mod_Tom_Belohnung_11_03"); //Du wirst etwas für ihn erledigen müssen und dann gibt er dir die erste Hälfte eines Wortes. Wenn du beide Hälften hast, dann kannst du zu unserem Hauptlager gehen und du wirst aufgenommen.

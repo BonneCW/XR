@@ -1155,12 +1155,12 @@ INSTANCE ITAR_FAKE_NOV_L (C_Item)
 
 FUNC VOID Equip_FAKE_NOV_L()
 {
-	Mod_TrägtFeuerkleidung = 1;
+	Mod_TraegtFeuerkleidung = 1;
 };
 
 FUNC VOID UnEquip_FAKE_NOV_L()
 {
-	Mod_TrägtFeuerkleidung = 0;
+	Mod_TraegtFeuerkleidung = 0;
 };
 
 INSTANCE ITAR_BDT_M_01 (C_Item)
@@ -1331,12 +1331,12 @@ INSTANCE ITAR_KDF_L_Feuer (C_Item)
 
 FUNC VOID Equip_KDF_L_Feuer()
 {
-	Mod_TrägtFeuerkleidung = 1;
+	Mod_TraegtFeuerkleidung = 1;
 };
 
 FUNC VOID UnEquip_KDF_L_Feuer()
 {
-	Mod_TrägtFeuerkleidung = 0;
+	Mod_TraegtFeuerkleidung = 0;
 };
 
 INSTANCE ITAR_NOV_DMB_01 (C_Item)
@@ -1717,12 +1717,12 @@ INSTANCE ITAR_KDF_VeryHigh (C_Item)
 
 FUNC VOID Equip_KDF_VH()
 {
-	Mod_TrägtFeuerkleidung = 1;
+	Mod_TraegtFeuerkleidung = 1;
 };
 
 FUNC VOID UnEquip_KDF_VH()
 {
-	Mod_TrägtFeuerkleidung = 0;
+	Mod_TraegtFeuerkleidung = 0;
 };
 
 INSTANCE ITAR_DruideWaldmagier (C_Item)
