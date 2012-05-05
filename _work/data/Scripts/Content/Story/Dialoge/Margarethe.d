@@ -186,12 +186,12 @@ INSTANCE Info_Mod_Margarethe_Pickpocket (C_INFO)
 	information	= Info_Mod_Margarethe_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90_Female;
 };
 
 FUNC INT Info_Mod_Margarethe_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 150);
+	C_Beklauen	(65, ItMi_Gold, 150);
 };
 
 FUNC VOID Info_Mod_Margarethe_Pickpocket_Info()

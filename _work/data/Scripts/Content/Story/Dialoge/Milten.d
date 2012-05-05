@@ -399,7 +399,7 @@ FUNC VOID Info_Mod_Milten_Teleport_Da_Info()
 
 	Npc_ExchangeRoutine	(self, "GUIDETOTROLLPARTTWO");
 
-	self.aivar[AIV_Partymember]	=	TRUE;
+	self.aivar[AIV_Partymember] = TRUE;
 };
 
 INSTANCE Info_Mod_Milten_Station (C_INFO)
@@ -506,7 +506,7 @@ INSTANCE Info_Mod_Milten_HabPflanze (C_INFO)
 FUNC INT Info_Mod_Milten_HabPflanze_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Milten_BeiTroll))
-	&& (Npc_HasItems(hero, ItPl_Sagitta_Herb_MIS)	==	1)
+	&& (Npc_HasItems(hero, ItPl_Sagitta_Herb_MIS) == 1)
 	{
 		return 1;
 	};
@@ -545,8 +545,8 @@ INSTANCE Info_Mod_Milten_Fertig (C_INFO)
 FUNC INT Info_Mod_Milten_Fertig_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Milten_HabPflanze))
-	&& (Npc_HasItems(hero, ItPl_Sagitta_Herb_MIS)	==	1)
-	&& (Hlp_StrCmp	(Npc_GetNearestWP(self), "NW_MONASTERY_ALCHEMY_01"))
+	&& (Npc_HasItems(hero, ItPl_Sagitta_Herb_MIS) == 1)
+	&& (Hlp_StrCmp(Npc_GetNearestWP(self), "NW_MONASTERY_ALCHEMY_01"))
 	{
 		return 1;
 	};
@@ -562,7 +562,7 @@ FUNC VOID Info_Mod_Milten_Fertig_Info()
 	AI_Output(self, hero, "Info_Mod_Milten_Fertig_03_02"); //Danke. Jetzt kann ich endlich den Trank für Meister Neoras fertigstellen.
 	AI_Output(self, hero, "Info_Mod_Milten_Fertig_03_03"); //Am besten gibts du ihm den Trank, dann kannst du auch ihn überzeugen. Komm morgen wieder, dann bin ich fertig.
 
-	MiltenBrautTrank	=	Wld_GetDay();
+	MiltenBrautTrank = Wld_GetDay();
 
 	Log_CreateTopic	(TOPIC_MOD_NEORAS_TRANK, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_NEORAS_TRANK, LOG_RUNNING);
@@ -591,7 +591,7 @@ INSTANCE Info_Mod_Milten_HabTrank (C_INFO)
 FUNC INT Info_Mod_Milten_HabTrank_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Milten_Fertig))
-	&& (Wld_GetDay()	>	MiltenBrautTrank)
+	&& (Wld_GetDay() > MiltenBrautTrank)
 	{
 		return 1;
 	};
@@ -603,7 +603,6 @@ FUNC VOID Info_Mod_Milten_HabTrank_Info()
 	AI_Output(self, hero, "Info_Mod_Milten_HabTrank_03_01"); //Ja, ich bin gerade fertig geworden.
 	AI_Output(self, hero, "Info_Mod_Milten_HabTrank_03_02"); //Hier ist er.
 
-	CreateInvItems	(self, NeorasTrankVonMilten, 1);
 	B_GiveInvItems	(self, hero, NeorasTrankVonMilten, 1);
 
 	AI_Output(self, hero, "Info_Mod_Milten_HabTrank_03_03"); //Bring ihn zu Neoras, dann wird er von dir überzeugt sein.
@@ -778,7 +777,7 @@ INSTANCE Info_Mod_Milten_Treffen (C_INFO)
 
 FUNC INT Info_Mod_Milten_Treffen_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Gorn_Hi))
+	if (Npc_KnowsInfo(hero, Info_Mod_Gorn_AtCastlemine))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Milten_Hi))
 	&& (Hlp_StrCmp	(Npc_GetNearestWP(self), "NW_MONASTERY_ALCHEMY_01"))
 	{
@@ -824,7 +823,7 @@ FUNC VOID Info_Mod_Milten_HaveYouCrawlerEggs_Info()
 	AI_Output(self, hero, "Info_Mod_Milten_HaveYouCrawlerEggs_03_01"); //Gorn hat mir damals welche aus der freien Mine mitgebracht. Schöne Exemplare.
 	AI_Output(self, hero, "Info_Mod_Milten_HaveYouCrawlerEggs_03_02"); //Wusste gar nicht, dass in der freien Mine auch eine Königin war.
 	
-	Mod_MinecrawlerEi	=	2;
+	Mod_MinecrawlerEi = 2;
 };
 
 INSTANCE Info_Mod_Milten_MinecrawlerEi (C_INFO)

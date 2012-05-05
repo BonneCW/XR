@@ -729,7 +729,7 @@ INSTANCE Info_Mod_Diego_Treffen (C_INFO)
 
 FUNC INT Info_Mod_Diego_Treffen_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Gorn_Hi))
+	if (Npc_KnowsInfo(hero, Info_Mod_Gorn_AtCastlemine))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Diego_Hi))
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Diego_Mario))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Diego_Mario2)))

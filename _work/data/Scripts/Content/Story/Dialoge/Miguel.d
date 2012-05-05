@@ -227,7 +227,7 @@ INSTANCE Info_Mod_Miguel_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Miguel_Pickpocket_Condition()
 {
-	C_Beklauen	(46, ItMi_Gold, 150);
+	C_Beklauen	(46, ItPo_Perm_Dex, 1);
 };
 
 FUNC VOID Info_Mod_Miguel_Pickpocket_Info()

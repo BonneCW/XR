@@ -244,12 +244,12 @@ INSTANCE Info_Mod_Masut_Pickpocket (C_INFO)
 	information	= Info_Mod_Masut_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Masut_Pickpocket_Condition()
 {
-	C_Beklauen	(97, ItMi_Gold, 1000);
+	C_Beklauen	(97, ItMi_Gold, 250);
 };
 
 FUNC VOID Info_Mod_Masut_Pickpocket_Info()

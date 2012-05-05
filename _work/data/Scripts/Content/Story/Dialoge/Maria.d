@@ -136,7 +136,7 @@ FUNC VOID Info_Mod_Maria_BelohnungWasili_Info()
 	AI_Output(self, hero, "Info_Mod_Maria_BelohnungWasili_17_02"); //Denkt wohl ich wüsste nichts von seinen Geschichten mit den Mägden und Bäuerinnen ...
 	AI_Output(self, hero, "Info_Mod_Maria_BelohnungWasili_17_03"); //Wenn du unter Onars Matratze schaust, wirst du bestimmt mehr als genug finden. Aber dass es bloß unter uns bleibt ...
 
-	MOBNAME_XR_ONARSVERSTECK = "Onar's Versteck";
+	MOBNAME_XR_ONARSVERSTECK = "Onars Versteck";
 };
 
 INSTANCE Info_Mod_Maria_Pickpocket (C_INFO)

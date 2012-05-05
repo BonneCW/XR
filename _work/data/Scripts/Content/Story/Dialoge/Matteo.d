@@ -404,6 +404,7 @@ FUNC VOID Info_Mod_Matteo_Aufnahme_A()
 	AI_Output(self, hero, "Info_Mod_Matteo_Aufnahme_A_09_02"); //Ich will dir alles sagen, was du als zukünftiger Händler wissen musst.
 
 	CreateInvItems	(hero, ItAr_Vlk_H, 1);
+
 	B_ShowGivenThings	("Bürgerkleidung erhalten");
 
 	AI_Output(self, hero, "Info_Mod_Matteo_Aufnahme_A_09_03"); //Lass uns die Lehrstunden aufteilen in theoretische und praktische Teile.
@@ -1123,12 +1124,12 @@ INSTANCE Info_Mod_Matteo_Pickpocket (C_INFO)
 	information	= Info_Mod_Matteo_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Matteo_Pickpocket_Condition()
 {
-	C_Beklauen	(59, ItMi_Gold, 180);
+	C_Beklauen	(109, ItMi_Gold, 1180);
 };
 
 FUNC VOID Info_Mod_Matteo_Pickpocket_Info()

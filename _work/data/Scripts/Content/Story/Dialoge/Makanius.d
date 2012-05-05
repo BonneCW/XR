@@ -347,12 +347,12 @@ INSTANCE Info_Mod_Makanius_Pickpocket (C_INFO)
 	information	= Info_Mod_Makanius_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Makanius_Pickpocket_Condition()
 {
-	C_Beklauen	(130, ItMi_Gold, 1300);
+	C_Beklauen	(130, ItSc_FullHeal, 2);
 };
 
 FUNC VOID Info_Mod_Makanius_Pickpocket_Info()

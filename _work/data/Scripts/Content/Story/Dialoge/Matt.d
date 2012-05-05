@@ -112,12 +112,12 @@ INSTANCE Info_Mod_Matt_Pickpocket (C_INFO)
 	information	= Info_Mod_Matt_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Matt_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 1000);
+	C_Beklauen	(75, ItFo_Addon_Grog, 2);
 };
 
 FUNC VOID Info_Mod_Matt_Pickpocket_Info()

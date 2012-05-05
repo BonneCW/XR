@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Mortis_Hi_Condition()
 FUNC VOID Info_Mod_Mortis_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Mortis_Hi_13_01"); //Ich bin Mortis, Mitglied der Miliz und Schmied.
 };
 
@@ -34,7 +35,7 @@ INSTANCE Info_Mod_Mortis_Join (C_INFO)
 FUNC INT Info_Mod_Mortis_Join_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Mortis_Hi))
-	&& (Mod_Gilde	==	0)
+	&& (Mod_Gilde == 0)
 	{
 		return 1;
 	};
@@ -60,8 +61,8 @@ INSTANCE Info_Mod_Mortis_Andre (C_INFO)
 FUNC INT Info_Mod_Mortis_Andre_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Mortis_Join))
-	&& (Mod_MilizTurnier	==	9)
-	&& (Mod_Gilde	==	0)
+	&& (Mod_MilizTurnier == 9)
+	&& (Mod_Gilde == 0)
 	{
 		return 1;
 	};

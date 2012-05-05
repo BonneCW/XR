@@ -182,13 +182,11 @@ FUNC VOID Info_Mod_Merdarion_AW_NefariusKey_Info()
 	AI_Output(hero, self, "Info_Mod_Merdarion_Nefarius_15_00"); //Nefarius schickt mich. Ich soll bei dir vorbeischauen.
 	AI_Output(self, hero, "Info_Mod_Merdarion_Nefarius_06_01"); //Gut, dass du gekommen bist. Es gibt in den Ruinen auf Khorinis einen Teleporter. Mit diesem Schlüssel kommt du durch die Tür.
 
-	CreateInvItems	(self, ItKe_PORTALTEMPELWALKTHROUGH_ADDON, 1);
 	B_GiveInvItems	(self, hero, ItKe_PORTALTEMPELWALKTHROUGH_ADDON, 1);
 
 	AI_Output(self, hero, "Info_Mod_Merdarion_Nefarius_06_02"); //Dann gibt es noch einen weiteren Teleporter in der Nähe der Taverne "Zur toten Harpie". Auch dieser Teleporter ist durch eine Tür geschützt.
 	AI_Output(self, hero, "Info_Mod_Merdarion_Nefarius_06_03"); //Mit diesem Schlüssel kannst du die Tür öffnen.
 
-	CreateInvItems	(self, ITKE_ORLAN_TELEPORTSTATION, 1);
 	B_GiveInvItems	(self, hero, ITKE_ORLAN_TELEPORTSTATION, 1);
 
 	AI_Output(self, hero, "Info_Mod_Merdarion_Nefarius_06_04"); //Und nun beeile dich.

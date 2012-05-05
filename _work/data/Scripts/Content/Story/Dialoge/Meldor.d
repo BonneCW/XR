@@ -372,12 +372,12 @@ INSTANCE Info_Mod_Meldor_Pickpocket (C_INFO)
 	information	= Info_Mod_Meldor_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_60;
 };
 
 FUNC INT Info_Mod_Meldor_Pickpocket_Condition()
 {
-	C_Beklauen	(20, ItMi_Gold, 50);
+	C_Beklauen	(50, ItMi_Joint, 3);
 };
 
 FUNC VOID Info_Mod_Meldor_Pickpocket_Info()

@@ -148,7 +148,7 @@ INSTANCE Info_Mod_MinenwacheKG_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_MinenwacheKG_Pickpocket_Condition()
 {
-	C_Beklauen	(57, ItMi_Gold, 170);
+	C_Beklauen	(57, ItMi_Nugget, 3);
 };
 
 FUNC VOID Info_Mod_MinenwacheKG_Pickpocket_Info()

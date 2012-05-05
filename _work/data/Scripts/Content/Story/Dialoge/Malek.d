@@ -20,7 +20,7 @@ FUNC INT Info_Mod_Malek_Hi_Condition()
 FUNC VOID Info_Mod_Malek_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Malek_Hi_15_00"); //Ich höre, du bist knapp an Mana.
-	AI_Output(self, hero, "Info_Mod_Malek_Hi_08_01"); //Bei Beliar! Du hast recht. Ich bin erst kürzlich Magier geworden. Irgendwie verbrauche ich zuviel von dem Zeug bei meinen Übungen.
+	AI_Output(self, hero, "Info_Mod_Malek_Hi_08_01"); //Bei Beliar! Du hast recht. Ich bin erst kürzlich Magier geworden. Irgendwie verbrauche ich zu viel von dem Zeug bei meinen Übungen.
 	AI_Output(hero, self, "Info_Mod_Malek_Hi_15_02"); //Wenn du genug Geld hast, besorg ich dir welches.
 	AI_Output(self, hero, "Info_Mod_Malek_Hi_08_03"); //Du bist lustig. Wie soll man hier zu viel Geld kommen?
 	AI_Output(hero, self, "Info_Mod_Malek_Hi_15_04"); //Auch wahr. Aber deine Stimme gibst du mir.
@@ -53,7 +53,7 @@ FUNC INT Info_Mod_Malek_Manaextrakt_Condition()
 
 FUNC VOID Info_Mod_Malek_Manaextrakt_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Malek_Manaextrakt_08_00"); //Und, hast du ... ?
+	AI_Output(self, hero, "Info_Mod_Malek_Manaextrakt_08_00"); //Und, hast du ...?
 	AI_Output(hero, self, "Info_Mod_Malek_Manaextrakt_15_01"); //Ja, hier sind 20 Flaschen.
 
 	B_GiveInvItems	(hero, self, ItPo_Mana_02, 20);
@@ -77,12 +77,12 @@ INSTANCE Info_Mod_Malek_Pickpocket (C_INFO)
 	information	= Info_Mod_Malek_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Malek_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 1000);
+	C_Beklauen	(62, ItMi_Gold, 200);
 };
 
 FUNC VOID Info_Mod_Malek_Pickpocket_Info()
