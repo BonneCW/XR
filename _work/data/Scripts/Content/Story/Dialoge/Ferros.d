@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Ferros_Hi (C_INFO)
 	information	= Info_Mod_Ferros_Hi_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ein Schmied hier im Lager? Braucht´s das?";
+	description	= "Ein Schmied hier im Lager? Braucht's das?";
 };
 
 FUNC INT Info_Mod_Ferros_Hi_Condition()
@@ -16,7 +16,7 @@ FUNC INT Info_Mod_Ferros_Hi_Condition()
 
 FUNC VOID Info_Mod_Ferros_Hi_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Ferros_Hi_15_00"); //Ein Schmied hier im Lager? Braucht´s das?
+	AI_Output(hero, self, "Info_Mod_Ferros_Hi_15_00"); //Ein Schmied hier im Lager? Braucht's das?
 	AI_Output(self, hero, "Info_Mod_Ferros_Hi_06_01"); //Eigentlich nicht. Ich richte ab und zu ein Schwert oder schärfe eins.
 	AI_Output(self, hero, "Info_Mod_Ferros_Hi_06_02"); //Manchmal mache ich  Sachen aus Metall oder repariere sie.
 	AI_Output(hero, self, "Info_Mod_Ferros_Hi_15_03"); //Und das ist alles?
@@ -100,12 +100,12 @@ INSTANCE Info_Mod_Ferros_Pickpocket (C_INFO)
 	information	= Info_Mod_Ferros_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Ferros_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 1000);
+	C_Beklauen	(90, ItMiSwordRaw, 3);
 };
 
 FUNC VOID Info_Mod_Ferros_Pickpocket_Info()

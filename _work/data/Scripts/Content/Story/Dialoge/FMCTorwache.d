@@ -86,12 +86,12 @@ INSTANCE Info_Mod_FMCTorwache_Pickpocket (C_INFO)
 	information	= Info_Mod_FMCTorwache_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_FMCTorwache_Pickpocket_Condition()
 {
-	C_Beklauen	(94, ItMi_Nugget, 3);
+	C_Beklauen	(134, ItMi_Nugget, 3);
 };
 
 FUNC VOID Info_Mod_FMCTorwache_Pickpocket_Info()

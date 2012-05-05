@@ -124,7 +124,7 @@ FUNC VOID Info_Mod_Felicita_Belauscht_Info()
 	AI_Output(hero, self, "Info_Mod_Felicita_Belauscht_15_07"); //Dein Hochzeitsring?
 	AI_Output(self, hero, "Info_Mod_Felicita_Belauscht_16_08"); //Das war er mal. Nimm!
 
-	B_LogEntry	(TOPIC_MOD_ASS_FELICITA, "Habe den Totwächter August mit einer anderen Frau erwischt und Felicita berichtet. Sie gab mir ihren Hochzeitsring dafür.");
+	B_LogEntry	(TOPIC_MOD_ASS_FELICITA, "Habe den Torwächter August mit einer anderen Frau erwischt und Felicita berichtet. Sie gab mir ihren Hochzeitsring dafür.");
 	B_SetTopicStatus	(TOPIC_MOD_ASS_FELICITA, LOG_SUCCESS);
 
 	B_GivePlayerXP	(100);

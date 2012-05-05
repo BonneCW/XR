@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Farim_Hi_Condition()
 FUNC VOID Info_Mod_Farim_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Farim_Hi_11_01"); //Ich bin Farim, ein Fischer. Wenn du Fische kaufen willst musst du allerdings zu Halvor.
 };
 
@@ -49,7 +50,6 @@ FUNC VOID Info_Mod_Farim_Salzwasser_Info()
 	AI_Output(hero, self, "Info_Mod_Farim_Salzwasser_15_04"); //Zwei Flaschen.
 	AI_Output(self, hero, "Info_Mod_Farim_Salzwasser_11_05"); //Hier hast du zwei.
 
-	CreateInvItems	(self, ItMi_Salzwasser, 2);
 	B_GiveInvItems	(self, hero, ItMi_Salzwasser, 2);
 
 	AI_Output(self, hero, "Info_Mod_Farim_Salzwasser_11_06"); //Und jetzt beeil dich, wird Zeit, dass Kardif wieder eine Lieferung bekommt.
@@ -166,12 +166,12 @@ INSTANCE Info_Mod_Farim_Pickpocket (C_INFO)
 	information	= Info_Mod_Farim_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_Farim_Pickpocket_Condition()
 {
-	C_Beklauen	(20, ItMi_Gold, 15);
+	C_Beklauen	(20, ItFo_Fish, 3);
 };
 
 FUNC VOID Info_Mod_Farim_Pickpocket_Info()

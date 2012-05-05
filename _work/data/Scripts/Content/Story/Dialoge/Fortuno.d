@@ -85,12 +85,12 @@ INSTANCE Info_Mod_Fortuno_Pickpocket (C_INFO)
 	information	= Info_Mod_Fortuno_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Fortuno_Pickpocket_Condition()
 {
-	C_Beklauen	(70, ItMi_Gold, 340);
+	C_Beklauen	(70, ItMi_Addon_Joint_02, 5);
 };
 
 FUNC VOID Info_Mod_Fortuno_Pickpocket_Info()

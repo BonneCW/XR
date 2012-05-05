@@ -10,41 +10,11 @@ FUNC INT C_Beklauen (var int TheftDex, var int TheftItem, var int TheftGold)
 
 	if (Npc_GetTalentSkill(other, NPC_TALENT_PICKPOCKET) == TRUE) 
 	//&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (other.attribute[ATR_DEXTERITY]+bonusdex >= (TheftDex - Theftdiff))
+	//&& (other.attribute[ATR_DEXTERITY]+bonusdex >= (TheftDex - Theftdiff))
 	{
 		if (Npc_IsInState (self, ZS_Talk))
 		{
-			if (TheftDex <= 20)
-			{
-				TheftDexGlob = 10; //"Kinderspiel" klappt immer
-			}
-			else
-			{
-				TheftDexGlob = TheftDex;
-			};
-
-			TheftItemGlob = TheftItem;
-
-			TheftGoldGlob = TheftGold;
-		};
-
-		return TRUE;
-	}
-	else if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_751_NONE_Salandril_NW))
-	&& (TheftGold == ItPo_Perm_DEX_Salandril)
-	&& (Npc_HasItems(hero, ItPo_Perm_DEX_Salandril) == 0)
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Gaertner_HierTrank))
-	{
-		if (Npc_IsInState (self, ZS_Talk))
-		{
-			if (TheftDex <= 20)
-			{
-				TheftDexGlob = 10; //"Kinderspiel" klappt immer
-			}
-			else
-			{
-				TheftDexGlob = TheftDex;
-			};
+			TheftDexGlob = 10; //"Kinderspiel" klappt immer
 
 			TheftItemGlob = TheftItem;
 
@@ -53,6 +23,8 @@ FUNC INT C_Beklauen (var int TheftDex, var int TheftItem, var int TheftGold)
 
 		return TRUE;
 	};
+
+	return FALSE;
 };	
 	
 FUNC INT B_Beklauen ()

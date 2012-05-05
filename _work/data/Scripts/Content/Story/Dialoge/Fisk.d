@@ -143,7 +143,6 @@ FUNC VOID Info_Mod_Fisk_Zettel_Info()
 	AI_Output(hero, self, "Info_Mod_Fisk_Zettel_15_00"); //Bloodwyn und Cutter wurden gefangen, was ist jetzt mit dem Beweis?
 	AI_Output(self, hero, "Info_Mod_Fisk_Zettel_12_01"); //Hier, diese Schrift war bei jeder Lieferung dabei.
 
-	CreateInvItems	(self, ItWr_FisksNotiz, 1);
 	B_GiveInvItems	(self, hero, ItWr_FisksNotiz, 1);
 
 	B_LogEntry	(TOPIC_MOD_PDV, "Fisk gab mir ein Schriftstück. Das dürfte als Beweis genügen.");
@@ -288,7 +287,7 @@ INSTANCE Info_Mod_Fisk_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Fisk_Pickpocket_Condition()
 {
-	C_Beklauen	(59, ItMi_Gold, 195);
+	C_Beklauen	(59, ItMi_Nugget, 6);
 };
 
 FUNC VOID Info_Mod_Fisk_Pickpocket_Info()

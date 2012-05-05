@@ -333,12 +333,12 @@ INSTANCE Info_Mod_Fingers_Pickpocket (C_INFO)
 	information	= Info_Mod_Fingers_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Fingers_Pickpocket_Condition()
 {
-	C_Beklauen	(100, ItMi_Gold, 400);
+	C_Beklauen	(100, ItMi_Nugget, 4);
 };
 
 FUNC VOID Info_Mod_Fingers_Pickpocket_Info()
