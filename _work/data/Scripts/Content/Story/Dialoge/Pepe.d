@@ -123,7 +123,7 @@ INSTANCE Info_Mod_Pepe_PICKPOCKET (C_INFO)
 	condition	= Info_Mod_Pepe_PICKPOCKET_Condition;
 	information	= Info_Mod_Pepe_PICKPOCKET_Info;
 	permanent	= 1;
-	description	= Pickpocket_20;
+	description	= Pickpocket_30;
 };                       
 
 FUNC INT Info_Mod_Pepe_PICKPOCKET_Condition()

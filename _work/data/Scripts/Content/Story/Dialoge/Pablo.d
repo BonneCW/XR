@@ -60,9 +60,9 @@ INSTANCE Info_Mod_Pablo_Infos (C_INFO)
 FUNC INT Info_Mod_Pablo_Infos_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Pablo_Mortis))
-	&& (Npc_HasItems(hero, ItFo_Water)	>=	1)
-	&& (Npc_HasItems(hero, ItFo_Cheese)	>=	1)
-	&& (Npc_HasItems(hero, ItFo_Bread)	>=	1)
+	&& (Npc_HasItems(hero, ItFo_Water) >= 1)
+	&& (Npc_HasItems(hero, ItFo_Cheese) >= 1)
+	&& (Npc_HasItems(hero, ItFo_Bread) >= 1)
 	{
 		return 1;
 	};

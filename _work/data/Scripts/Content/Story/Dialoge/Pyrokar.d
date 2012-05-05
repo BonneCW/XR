@@ -1313,12 +1313,12 @@ INSTANCE Info_Mod_Pyrokar_Pickpocket (C_INFO)
 	information	= Info_Mod_Pyrokar_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Pyrokar_Pickpocket_Condition()
 {
-	C_Beklauen	(120, ItMi_Gold, 1500);
+	C_Beklauen	(180, ItMi_Gold, 1500);
 };
 
 FUNC VOID Info_Mod_Pyrokar_Pickpocket_Info()

@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Peck_Hi_Condition()
 FUNC VOID Info_Mod_Peck_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Peck_Hi_12_01"); //Ich bin Peck. Ich verkaufe den Milizen Rüstungen.
 };
 
@@ -195,12 +196,12 @@ INSTANCE Info_Mod_Peck_Pickpocket (C_INFO)
 	information	= Info_Mod_Peck_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Peck_Pickpocket_Condition()
 {
-	C_Beklauen	(60, ItMi_Gold, 200);
+	C_Beklauen	(62, ItMi_Gold, 200);
 };
 
 FUNC VOID Info_Mod_Peck_Pickpocket_Info()

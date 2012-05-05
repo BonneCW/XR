@@ -34,7 +34,7 @@ INSTANCE Info_Mod_Pardos_Pickpocket (C_INFO)
 	information	= Info_Mod_Pardos_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_40;
+	description	= Pickpocket_60;
 };
 
 FUNC INT Info_Mod_Pardos_Pickpocket_Condition()
