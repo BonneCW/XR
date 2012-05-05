@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Ingmar_Hi_Condition()
 FUNC VOID Info_Mod_Ingmar_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Ingmar_Hi_06_01"); //Ich bin Ingmar der Ritter. Ich bin ein Beschützer dieser Stadt. Außerdem sorge ich dafür, dass die anderen Ritter stark genug sind.
 };
 
@@ -133,7 +134,7 @@ INSTANCE Info_Mod_Ingmar_Lernen (C_INFO)
 	information	= Info_Mod_Ingmar_Lernen_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= "Zeig mir wie ich Stärker werde.";
+	description	= "Zeig mir wie ich stärker werde.";
 };
 
 FUNC INT Info_Mod_Ingmar_Lernen_Condition()
@@ -149,7 +150,7 @@ FUNC INT Info_Mod_Ingmar_Lernen_Condition()
 
 FUNC VOID Info_Mod_Ingmar_Lernen_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Ingmar_Lernen_15_00"); //Zeig mir wie ich Stärker werde.
+	AI_Output(hero, self, "Info_Mod_Ingmar_Lernen_15_00"); //Zeig mir wie ich stärker werde.
 
 	Info_ClearChoices	(Info_Mod_Ingmar_Lernen);
 
@@ -193,12 +194,12 @@ INSTANCE Info_Mod_Ingmar_Pickpocket (C_INFO)
 	information	= Info_Mod_Ingmar_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Ingmar_Pickpocket_Condition()
 {
-	C_Beklauen	(90, ItMi_Gold, 580);
+	C_Beklauen	(140, ItMi_Gold, 580);
 };
 
 FUNC VOID Info_Mod_Ingmar_Pickpocket_Info()

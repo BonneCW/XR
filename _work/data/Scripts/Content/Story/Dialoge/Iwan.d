@@ -24,7 +24,7 @@ FUNC VOID Info_Mod_Iwan_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Iwan_Hi_11_06"); //Hier, nimm dieses Rezept und diese Behälter.
 
 	CreateInvItems	(hero, ItWr_Rezept_Iwan, 1);
-	CreateInvItems	(hero, ItMi_Salpeter, 1);
+	CreateInvItems	(hero, ItMi_Salpeter, 5);
 
 	B_ShowGivenThings	("5 Fläschchen und Rezept erhalten");
 
