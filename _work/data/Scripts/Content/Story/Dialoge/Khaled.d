@@ -256,12 +256,12 @@ INSTANCE Info_Mod_Khaled_Pickpocket (C_INFO)
 	information	= Info_Mod_Khaled_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Khaled_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 430);
+	C_Beklauen	(107, ItMi_Gold, 430);
 };
 
 FUNC VOID Info_Mod_Khaled_Pickpocket_Info()

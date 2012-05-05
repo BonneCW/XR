@@ -419,8 +419,8 @@ FUNC VOID Info_Mod_Karras_Fertig_Info()
 
 	AI_StopProcessInfos	(self);
 
-	B_StartOtherRoutine	(self, "START");
 	AI_Teleport	(self, "TOT");
+	B_StartOtherRoutine	(self, "START");
 };
 
 INSTANCE Info_Mod_Karras_UDS (C_INFO)
@@ -732,12 +732,12 @@ INSTANCE Info_Mod_Karras_Pickpocket (C_INFO)
 	information	= Info_Mod_Karras_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Karras_Pickpocket_Condition()
 {
-	C_Beklauen	(96, ItMi_Gold, 620);
+	C_Beklauen	(136, ItMi_Gold, 620);
 };
 
 FUNC VOID Info_Mod_Karras_Pickpocket_Info()

@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Kurgan_OM_Hi_Condition()
 FUNC VOID Info_Mod_Kurgan_OM_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Kurgan_OM_Hi_01_01"); //Ich bin Kurgan, der Wächter der Mine.
 };
 
@@ -67,12 +68,12 @@ INSTANCE Info_Mod_Kurgan_OM_Pickpocket (C_INFO)
 	information	= Info_Mod_Kurgan_OM_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Kurgan_OM_Pickpocket_Condition()
 {
-	C_Beklauen	(100, ItMi_Gold, 700);
+	C_Beklauen	(130, ItMi_Nugget, 7);
 };
 
 FUNC VOID Info_Mod_Kurgan_OM_Pickpocket_Info()

@@ -313,8 +313,7 @@ FUNC VOID Info_Mod_Kamal_Lernen_Info()
 	if (PLAYER_TALENT_ALCHEMY[POTION_Health_05] == FALSE)
 	{
 		Info_AddChoice	  (Info_Mod_Kamal_Lernen, B_BuildLearnString ("Trank der schnellen Heilung", B_GetLearnCostTalent (hero, NPC_TALENT_ALCHEMY, POTION_Health_05)), Info_Mod_Kamal_Lernen_Health_05);
-	};
-	
+	};	
 	
 		
 	if (PLAYER_TALENT_ALCHEMY[POTION_Mana_06] == FALSE)
@@ -386,12 +385,12 @@ INSTANCE Info_Mod_Kamal_Pickpocket (C_INFO)
 	information	= Info_Mod_Kamal_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Kamal_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 1000);
+	C_Beklauen	(97, ItPo_Tiergift, 2);
 };
 
 FUNC VOID Info_Mod_Kamal_Pickpocket_Info()

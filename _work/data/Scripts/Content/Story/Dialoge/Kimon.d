@@ -76,7 +76,6 @@ FUNC VOID Info_Mod_Kimon_Beleg_Info()
 	AI_Output(hero, self, "Info_Mod_Kimon_Beleg_15_00"); //Hast du einen Beweis für den Betrug von Serpentes.
 	AI_Output(self, hero, "Info_Mod_Kimon_Beleg_04_01"); //Sicherlich, hier.
 
-	CreateInvItems	(self, ItWr_KimonsBeleg, 1);
 	B_GiveInvItems	(self, hero, ItWr_KimonsBeleg, 1);
 
 	B_LogEntry	(TOPIC_MOD_KIMONSTRAUBEN, "Kimon hat mir einen Beweis für die Schuld Serpentes' gegeben. Ich sollte diesen jetzt zu Pyrokar bringen.");
@@ -142,12 +141,12 @@ INSTANCE Info_Mod_Kimon_Pickpocket (C_INFO)
 	information	= Info_Mod_Kimon_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Kimon_Pickpocket_Condition()
 {
-	C_Beklauen	(98, ItMi_Gold, 2300);
+	C_Beklauen	(98, ItMi_Gold, 650);
 };
 
 FUNC VOID Info_Mod_Kimon_Pickpocket_Info()
