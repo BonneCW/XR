@@ -97,7 +97,7 @@ INSTANCE Info_Mod_Garwig_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Garwig_Pickpocket_Condition()
 {
-	C_Beklauen	(120, ItMi_Gold, 100);
+	C_Beklauen	(120, ItSc_Firestorm, 2);
 };
 
 FUNC VOID Info_Mod_Garwig_Pickpocket_Info()

@@ -59,8 +59,10 @@ FUNC INT B_Beklauen ()
 	{
 		B_ResetThiefLevel();
 
-		var oCInfo inf; inf = MEM_PtrToInst(MEM_InformationMan.Info);
-		inf = FALSE;
+		var oCInfo inf;
+		//inf = MEM_InformationMan.Info;
+		inf = MEM_PtrToInst(MEM_InformationMan.Info);
+		inf.told = FALSE;
 
 		return FALSE;
 	};

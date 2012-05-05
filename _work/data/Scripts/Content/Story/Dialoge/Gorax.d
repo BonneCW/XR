@@ -419,12 +419,12 @@ INSTANCE Info_Mod_Gorax_Pickpocket (C_INFO)
 	information	= Info_Mod_Gorax_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Gorax_Pickpocket_Condition()
 {
-	C_Beklauen	(91, ItMi_Gold, 680);
+	C_Beklauen	(91, ItFo_KWine, 6);
 };
 
 FUNC VOID Info_Mod_Gorax_Pickpocket_Info()

@@ -19,7 +19,7 @@ FUNC INT Info_Mod_Gelehrter_Hi_Condition()
 FUNC VOID Info_Mod_Gelehrter_Hi_Info()
 {
 	var int rnd;
-	rnd = Hlp_Random(3);
+	rnd = r_max(2);
 
 	if (rnd == 0)
 	{

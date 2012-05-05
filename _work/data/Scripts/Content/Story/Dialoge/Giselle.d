@@ -274,7 +274,7 @@ INSTANCE Info_Mod_Giselle_Pickpocket (C_INFO)
 	information	= Info_Mod_Giselle_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_40;
+	description	= Pickpocket_60_Female;
 };
 
 FUNC INT Info_Mod_Giselle_Pickpocket_Condition()

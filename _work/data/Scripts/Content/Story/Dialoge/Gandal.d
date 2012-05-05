@@ -106,7 +106,7 @@ INSTANCE Info_Mod_Gandal_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Gandal_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 130);
+	C_Beklauen	(55, ItRw_Arrow, 13);
 };
 
 FUNC VOID Info_Mod_Gandal_Pickpocket_Info()

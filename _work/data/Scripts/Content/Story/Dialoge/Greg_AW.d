@@ -310,7 +310,6 @@ FUNC VOID Info_Mod_Greg_Aufgabe_Info()
 	AI_Output(hero, self, "Info_Mod_Greg_Aufgabe_15_00"); //Hast du was zu tun für mich?
 	AI_Output(self, hero, "Info_Mod_Greg_Aufgabe_01_01"); //Nun, du könntest meinen alten Piratensäbel, den du mir bei deiner Aufnahmeprüfung gebracht hast, zu einem Schmied bringen und reparieren lassen.
 
-	CreateInvItems	(self, ItMw_Piratensaebel_Greg, 1);
 	B_GiveInvItems	(self, hero, ItMw_Piratensaebel_Greg, 1);
 
 	AI_Output(self, hero, "Info_Mod_Greg_Aufgabe_01_02"); //Mit dem alten, verrosteten Ding seh ich ja wohl richtig dämlich aus. Also beeil dich!
@@ -413,6 +412,7 @@ FUNC VOID Info_Mod_Greg_Bill_Info()
 	AI_Output(hero, self, "Info_Mod_Greg_Bill_15_02"); //Auf diesem Zettel steht es. Ich hab den Zettel von einem Alchemisten aus Khorinis.
 
 	B_GiveInvItems	(hero, self, Mod_BillsRumRezept, 1);
+
 	B_UseFakeScroll();
 
 	AI_Output(self, hero, "Info_Mod_Greg_Bill_01_03"); //Tatsächlich. Na warte, der kann was erleben. Gut gemacht, min jung!
@@ -630,7 +630,6 @@ FUNC VOID Info_Mod_Greg_Schatzaufteilung_Gold ()
 	AI_Output(hero, self, "Info_Mod_Greg_Schatzaufteilung_Gold_15_00"); //Ich nehm das Gold.
 	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_Gold_01_01"); //Gut, hier ist dein Gold.
 
-	CreateInvItems	(self, ItMi_Gold, 10000);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 10000);
 
 	Info_ClearChoices	(Info_Mod_Greg_Schatzaufteilung);
@@ -748,7 +747,6 @@ FUNC VOID Info_Mod_Greg_Befreiung3_Info()
 
 	AI_Teleport	(Mod_939_PIR_Owen_AW,	"WP_BLA_PIR_01");
 	B_StartOtherRoutine	(Mod_939_PIR_Owen_AW, "GREG");
-	AI_Teleport	(Mod_939_PIR_Owen_AW,	"WP_BLA_PIR_01");
 
 	B_SetTopicStatus	(TOPIC_MOD_BEL_PIRATENLAGER, LOG_SUCCESS);
 	B_LogEntry	(TOPIC_MOD_BEL_BEFREIUNG, "Vor dem Lager befinden sich drei untote Hohepriester um ein magisches Artefakt, das sie schützt und ihnen große Macht verleiht. Sie können jeden Flüchtenden mit Teleportation rasch einholen und  verhindern zudem die Nutzung von Teleportmagie im Lager.");
@@ -1014,9 +1012,9 @@ FUNC INT Info_Mod_Greg_AJAlive4_Condition()
 FUNC VOID Info_Mod_Greg_AJAlive4_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Greg_AJAlive4_01_00"); //Junge, du hast ungeheuer viel getan für unser Lager. Mir Gold kann ich das kaum aufwiegen.
-	AI_Output(self, hero, "Info_Mod_Greg_AJAlive4_01_01"); //Daher sollst du mein bestes Stück bekommen: Blackbarts’ Piratenhut. Trage ihn mit stolz.
+	AI_Output(self, hero, "Info_Mod_Greg_AJAlive4_01_01"); //Daher sollst du mein bestes Stück bekommen: Blackbarts Piratenhut. Trage ihn mit stolz.
 
-	B_ShowGivenThings	("Blackbarts' Piratenhut erhalten");
+	B_ShowGivenThings	("Blackbarts Piratenhut erhalten");
 
 	CreateInvItems	(hero, ItAr_Piratenhut, 1);
 
@@ -1113,12 +1111,12 @@ INSTANCE Info_Mod_Greg_Pickpocket (C_INFO)
 	information	= Info_Mod_Greg_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Greg_Pickpocket_Condition()
 {
-	C_Beklauen	(100, ItMi_Gold, 750);
+	C_Beklauen	(150, ItFo_Addon_Rum, 7);
 };
 
 FUNC VOID Info_Mod_Greg_Pickpocket_Info()

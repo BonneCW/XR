@@ -149,7 +149,6 @@ FUNC VOID Info_Mod_Grom_Sauhaufen_Ja()
 	AI_Output(hero, self, "Info_Mod_Grom_Sauhaufen_Ja_15_00"); //Klingt gefährlich.
 	AI_Output(self, hero, "Info_Mod_Grom_Sauhaufen_Ja_08_01"); //Ist es nicht. Hör zu. Schütte einfach, wenn gerade keine hinschaut, diesen Scavangerdung in Theklas Eintopf.
 
-	CreateInvItems	(self, ItMi_Scavengerdung, 1);
 	B_GiveInvItems	(self, hero, ItMi_Scavengerdung, 1);
 
 	AI_Output(self, hero, "Info_Mod_Grom_Sauhaufen_Ja_08_02"); //Die Söldner essen jeden Abend davon und werden dadurch ziemliche Magenkrämpfe kriegen, darauf kannst du dich verlassen.
@@ -198,7 +197,6 @@ FUNC VOID Info_Mod_Grom_DungDrin_Info()
 
 	B_GivePlayerXP	(100);
 
-	CreateInvItems	(self, ItMi_Gold, 100);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 100);
 
 	B_Göttergefallen(3, 1);
@@ -247,7 +245,7 @@ INSTANCE Info_Mod_Grom_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Grom_Pickpocket_Condition()
 {
-	C_Beklauen	(60, ItMi_Gold, 190);
+	C_Beklauen	(60, ItAt_LurkerSkin, 2);
 };
 
 FUNC VOID Info_Mod_Grom_Pickpocket_Info()

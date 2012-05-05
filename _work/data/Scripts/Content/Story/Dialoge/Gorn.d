@@ -1098,12 +1098,12 @@ INSTANCE Info_Mod_Gorn_Pickpocket (C_INFO)
 	information	= Info_Mod_Gorn_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_210;
 };
 
 FUNC INT Info_Mod_Gorn_Pickpocket_Condition()
 {
-	C_Beklauen	(109, ItMi_Gold, 1000);
+	C_Beklauen	(210, ItMi_Gold, 2000);
 };
 
 FUNC VOID Info_Mod_Gorn_Pickpocket_Info()

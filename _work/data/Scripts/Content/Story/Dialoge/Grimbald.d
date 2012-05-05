@@ -119,7 +119,6 @@ FUNC VOID Info_Mod_Grimbald_Erzbrocken_Info()
 
 	AI_Output(self, hero, "Info_Mod_Grimbald_Erzbrocken_07_01"); //Hier, diesen merkwürigen Erzbrocken habe ich zwischen den Knochen der toten Snappern gefunden, der ist mir nicht ganz geheuer.
 
-	CreateInvItems	(self, ItMi_Erzbrocken_Seltsam, 1);
 	B_GiveInvItems	(self, hero, ItMi_Erzbrocken_Seltsam, 1);
 
 	AI_Output(self, hero, "Info_Mod_Grimbald_Erzbrocken_07_02"); //Nimm ihn am besten mit zu Dragomir, vielleicht kann er etwas damit anfangen.
@@ -518,12 +517,12 @@ INSTANCE Info_Mod_Grimbald_Pickpocket (C_INFO)
 	information	= Info_Mod_Grimbald_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Grimbald_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 240);
+	C_Beklauen	(80, ItAt_Sting, 4);
 };
 
 FUNC VOID Info_Mod_Grimbald_Pickpocket_Info()

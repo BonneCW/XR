@@ -170,7 +170,6 @@ FUNC VOID Info_Mod_Gomez_HabDietrich_Info()
 
 	AI_Output(self, hero, "Info_Mod_Gomez_HabDietrich_10_02"); //Hier hast du den Dietrich.
 
-	CreateInvItems	(self, ItKe_Lockpick_Mage, 1);
 	B_GiveInvItems	(self, hero, ItKe_Lockpick_Mage, 1);
 
 	B_GivePlayerXP	(250);
@@ -626,12 +625,12 @@ INSTANCE Info_Mod_Gomez_Pickpocket (C_INFO)
 	information	= Info_Mod_Gomez_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Gomez_Pickpocket_Condition()
 {
-	C_Beklauen	(100, ItMi_Gold, 700);
+	C_Beklauen	(160, ItMi_Gold, 700);
 };
 
 FUNC VOID Info_Mod_Gomez_Pickpocket_Info()

@@ -37,7 +37,7 @@ FUNC INT Info_Mod_Gidan_Kampf_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Gidan_Hi))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Andre_Turnier3))
-	&& (Mod_MilizTurnier	==	8)
+	&& (Mod_MilizTurnier == 8)
 	{
 		return 1;
 	};
@@ -93,7 +93,7 @@ INSTANCE Info_Mod_Gidan_Kampf2 (C_INFO)
 FUNC INT Info_Mod_Gidan_Kampf2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Gidan_Kampf))
-	&& (Mod_MilizTurnier	==	8)
+	&& (Mod_MilizTurnier == 8)
 	{
 		return 1;
 	};
@@ -141,7 +141,7 @@ FUNC VOID Info_Mod_Gidan_KampfEnde_Info()
 			AI_Output(hero, self, "Info_Mod_Gidan_KampfEnde_15_04"); //Reg dich ab! Ich habe dich fair und ehrlich geschlagen.
 			AI_Output(self, hero, "Info_Mod_Gidan_KampfEnde_13_05"); //Das werde ich mir nicht gefallen lassen!
 
-			Mod_MilizTurnier	=	11;
+			Mod_MilizTurnier = 11;
 			
 			B_StartOtherRoutine	(Mod_1723_MIL_Gidan_NW,	"SAUER");
 				
@@ -151,7 +151,7 @@ FUNC VOID Info_Mod_Gidan_KampfEnde_Info()
 		{
 			AI_Output(self, hero, "Info_Mod_Gidan_KampfEnde_13_01"); //Tja, das war wohl nichts. Jetzt werde ich vielleicht ein Mitglied der Miliz.
 
-			Mod_MilizTurnier	=	12;
+			Mod_MilizTurnier = 12;
 
 			B_LogEntry	(TOPIC_MOD_MILIZTURNIER, "Ich habe meinen Kampf gegen Gidan verloren. Ich sollte jetzt mit Lord Andre sprechen.");
 
@@ -161,7 +161,7 @@ FUNC VOID Info_Mod_Gidan_KampfEnde_Info()
 		{
 			AI_Output (self, other,"Info_Mod_Gidan_KampfEnde_13_02"); //Du bist abgehauen und dadurch hab ich gewonnen. Dumm gelaufen für dich.
 
-			Mod_MilizTurnier	=	12;
+			Mod_MilizTurnier = 12;
 
 			B_LogEntry	(TOPIC_MOD_MILIZTURNIER, "Ich habe meinen Kampf gegen Gidan verloren. Ich sollte jetzt mit Lord Andre sprechen.");
 
@@ -264,12 +264,12 @@ INSTANCE Info_Mod_Gidan_Pickpocket (C_INFO)
 	information	= Info_Mod_Gidan_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Gidan_Pickpocket_Condition()
 {
-	C_Beklauen	(20, ItMi_Gold, 40);
+	C_Beklauen	(120, ItMi_Gold, 40);
 };
 
 FUNC VOID Info_Mod_Gidan_Pickpocket_Info()

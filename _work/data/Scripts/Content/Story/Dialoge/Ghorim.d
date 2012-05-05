@@ -53,12 +53,12 @@ INSTANCE Info_Mod_Ghorim_Pickpocket (C_INFO)
 	information	= Info_Mod_Ghorim_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_40;
+	description	= Pickpocket_60;
 };
 
 FUNC INT Info_Mod_Ghorim_Pickpocket_Condition()
 {
-	C_Beklauen	(40, ItMi_Gold, 70);
+	C_Beklauen	(45, ItPl_SwampHerb, 7);
 };
 
 FUNC VOID Info_Mod_Ghorim_Pickpocket_Info()

@@ -55,12 +55,10 @@ FUNC VOID Info_Mod_Gaertner_Dieb_Info()
 	AI_Output(hero, self, "Info_Mod_Gaertner_Dieb_15_05"); //Was gibt's zu tun?
 	AI_Output(self, hero, "Info_Mod_Gaertner_Dieb_09_06"); //Der Händler Salandril besitzt einige wertvolle Tränke. Bring mir einen, aber du musst aufpassen, er traut keinem über den Weg und ist immer wachsam.
 	AI_Output(hero, self, "Info_Mod_Gaertner_Dieb_15_07"); //Ich werd's versuchen.
-
-	//Wld_InsertItem	(ItPo_Perm_DEX_Salandril, "FP_ITEM_SALANDRIL_WERTVOLLERTRANK");
 	
 	Log_CreateTopic	(TOPIC_MOD_DIEB_SALANDRIL, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_DIEB_SALANDRIL, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_DIEB_SALANDRIL, "Der Gärtner will, dass ich einen von Salandril's wertvollen Tränken stehle.");
+	B_LogEntry	(TOPIC_MOD_DIEB_SALANDRIL, "Der Gärtner will, dass ich einen von Salandrils wertvollen Tränken stehle.");
 };
 
 INSTANCE Info_Mod_Gaertner_HierTrank (C_INFO)
@@ -93,7 +91,6 @@ FUNC VOID Info_Mod_Gaertner_HierTrank_Info()
 
 	AI_Output(self, hero, "Info_Mod_Gaertner_HierTrank_09_01"); //Unglaublich, du bist ein Naturtalent. Hier hast du eine Belohnung.
 
-	CreateInvItems	(self, ItMi_Gold, 250);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 250);
 
 	AI_Output(self, hero, "Info_Mod_Gaertner_HierTrank_09_02"); //Wenn du willst, dann verkauf ich ihn dir.
@@ -139,12 +136,12 @@ INSTANCE Info_Mod_Gaertner_Pickpocket (C_INFO)
 	information	= Info_Mod_Gaertner_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_Gaertner_Pickpocket_Condition()
 {
-	C_Beklauen	(16, ItMi_Gold, 20);
+	C_Beklauen	(16, ItPl_Temp_Herb, 2);
 };
 
 FUNC VOID Info_Mod_Gaertner_Pickpocket_Info()
