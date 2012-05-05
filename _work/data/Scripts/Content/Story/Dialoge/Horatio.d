@@ -74,12 +74,12 @@ INSTANCE Info_Mod_Horatio_Pickpocket (C_INFO)
 	information	= Info_Mod_Horatio_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_Horatio_Pickpocket_Condition()
 {
-	C_Beklauen	(11, ItMi_Gold, 9);
+	C_Beklauen	(11, ItPl_Riceplant, 3);
 };
 
 FUNC VOID Info_Mod_Horatio_Pickpocket_Info()

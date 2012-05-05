@@ -38,7 +38,7 @@ INSTANCE Info_Mod_Hakon_Ueberfall (C_INFO)
 FUNC INT Info_Mod_Hakon_Ueberfall_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Senyan_Edgor))
-	&& (Mod_HakonÜberfall == 0)
+	&& (Mod_HakonUeberfall == 0)
 	{
 		return 1;
 	};
@@ -68,7 +68,7 @@ FUNC VOID Info_Mod_Hakon_Ueberfall_Info()
 		B_Attack (self, hero, AR_NONE, 1);
 	};
 
-	Mod_HakonÜberfall	=	1;
+	Mod_HakonUeberfall = 1;
 };
 
 INSTANCE Info_Mod_Hakon_Weglocken (C_INFO)
@@ -85,7 +85,7 @@ INSTANCE Info_Mod_Hakon_Weglocken (C_INFO)
 FUNC INT Info_Mod_Hakon_Weglocken_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Senyan_Edgor))
-	&& (Mod_HakonÜberfall == 0)
+	&& (Mod_HakonUeberfall == 0)
 	{
 		return 1;
 	};
@@ -110,7 +110,7 @@ FUNC VOID Info_Mod_Hakon_Weglocken_C()
 
 	Info_ClearChoices	(Info_Mod_Hakon_Weglocken);
 
-	Mod_HakonÜberfall = 2;
+	Mod_HakonUeberfall = 2;
 
 	AI_StopProcessInfos	(self);
 };
@@ -130,7 +130,7 @@ FUNC VOID Info_Mod_Hakon_Weglocken_A()
 
 	Info_ClearChoices	(Info_Mod_Hakon_Weglocken);
 
-	Mod_HakonÜberfall = 3;
+	Mod_HakonUeberfall = 3;
 
 	AI_StopProcessInfos	(self);
 
@@ -149,7 +149,7 @@ INSTANCE Info_Mod_Hakon_Neugier (C_INFO)
 
 FUNC INT Info_Mod_Hakon_Neugier_Condition()
 {
-	if (Mod_HakonÜberfall == 2)
+	if (Mod_HakonUeberfall == 2)
 	{
 		return 1;
 	};
@@ -159,7 +159,7 @@ FUNC VOID Info_Mod_Hakon_Neugier_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Hakon_Neugier_12_00"); //Ähh, na ja, vielleicht doch ein kurzer Blick. Bring mich hin. Aber wehe, es ist nichts Interessantes.
 
-	Mod_HakonÜberfall = 4;
+	Mod_HakonUeberfall = 4;
 
 	AI_StopProcessInfos	(self);
 
@@ -178,8 +178,8 @@ INSTANCE Info_Mod_Hakon_Falle (C_INFO)
 
 FUNC INT Info_Mod_Hakon_Falle_Condition()
 {
-	if ((Mod_HakonÜberfall == 3)
-	|| (Mod_HakonÜberfall == 4))
+	if ((Mod_HakonUeberfall == 3)
+	|| (Mod_HakonUeberfall == 4))
 	&& (Npc_GetDistToWP(hero, "NW_CITY_HAKON") > 5000)
 	{
 		return 1;
@@ -188,7 +188,7 @@ FUNC INT Info_Mod_Hakon_Falle_Condition()
 
 FUNC VOID Info_Mod_Hakon_Falle_Info()
 {
-	if (Mod_HakonÜberfall == 3)
+	if (Mod_HakonUeberfall == 3)
 	{
 		AI_Output(self, hero, "Info_Mod_Hakon_Falle_12_00"); //Also, wo ist jetzt die Höhle mit Waffen und Goblin’s?
 		AI_Output(hero, self, "Info_Mod_Hakon_Falle_15_01"); //Ach, die Waffen sind schon hier nur Goblins waren es doch nicht sondern ... ein Bandit.
@@ -201,7 +201,7 @@ FUNC VOID Info_Mod_Hakon_Falle_Info()
 
 	AI_Output(self, hero, "Info_Mod_Hakon_Falle_12_04"); //Was, wo?
 
-	Mod_HakonÜberfall = 1;
+	Mod_HakonUeberfall = 1;
 
 	B_StartOtherRoutine	(self, "START");
 
@@ -382,12 +382,12 @@ INSTANCE Info_Mod_Hakon_Pickpocket (C_INFO)
 	information	= Info_Mod_Hakon_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Hakon_Pickpocket_Condition()
 {
-	C_Beklauen	(58, ItMi_Gold, 195);
+	C_Beklauen	(108, ItMi_Gold, 195);
 };
 
 FUNC VOID Info_Mod_Hakon_Pickpocket_Info()

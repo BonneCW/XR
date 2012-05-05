@@ -178,7 +178,7 @@ INSTANCE Info_Mod_HofstaatDrogenminister_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_HofstaatDrogenminister_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(55, ItMi_Freudenspender, 1);
 };
 
 FUNC VOID Info_Mod_HofstaatDrogenminister_Pickpocket_Info()

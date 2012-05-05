@@ -74,12 +74,12 @@ INSTANCE Info_Mod_Hungar_Pickpocket (C_INFO)
 	information	= Info_Mod_Hungar_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Hungar_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 1000);
+	C_Beklauen	(77, ItFo_MuttonRaw, 12);
 };
 
 FUNC VOID Info_Mod_Hungar_Pickpocket_Info()

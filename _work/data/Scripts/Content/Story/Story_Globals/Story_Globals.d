@@ -1759,7 +1759,7 @@ var int Mod_Tom_Böse;
 var int Mil_309_schonmalreingelassen;
 var int Mod_BDT_Orkjagd;
 var int Mod_Schwierigkeit;
-var int Mod_HakonÜberfall;
+var int Mod_HakonUeberfall;
 var int Mod_TarrokbautUluMulu;
 var int Mod_TarrokDarfQuatschen;
 var int FokiEingesetzt;

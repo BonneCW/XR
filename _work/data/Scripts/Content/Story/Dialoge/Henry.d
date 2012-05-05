@@ -110,7 +110,7 @@ FUNC VOID Info_Mod_Henry_Entertrupp_Info()
 
 	AI_Teleport	(Mod_940_PIR_Samuel_AW, "ADW_PIRATECAMP_TOWER_BED");
 
-	Npc_ExchangeRoutine	(Mod_940_PIR_Samuel_AW, "ENTER");
+	B_StartOtherRoutine	(Mod_940_PIR_Samuel_AW, "ENTER");
 };
 
 INSTANCE Info_Mod_Henry_SamuelWeg (C_INFO)
@@ -659,12 +659,12 @@ INSTANCE Info_Mod_Henry_Pickpocket (C_INFO)
 	information	= Info_Mod_Henry_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Henry_Pickpocket_Condition()
 {
-	C_Beklauen	(60, ItMi_Gold, 150);
+	C_Beklauen	(91, ItFo_Addon_Grog, 5);
 };
 
 FUNC VOID Info_Mod_Henry_Pickpocket_Info()

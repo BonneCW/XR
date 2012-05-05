@@ -89,7 +89,7 @@ INSTANCE Info_Mod_HofstaatGleichgewichtsminister_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_HofstaatGleichgewichtsminister_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(45, ItMi_Freudenspender, 3);
 };
 
 FUNC VOID Info_Mod_HofstaatGleichgewichtsminister_Pickpocket_Info()

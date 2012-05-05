@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Herold_Hi_Condition()
 FUNC VOID Info_Mod_Herold_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Herold_Hi_04_01"); //Ich bin Herold. Meine Aufgabe ist es hier die Neuigkeiten zu verkünden.
 };
 
@@ -102,7 +103,7 @@ INSTANCE Info_Mod_Herold_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Herold_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(55, ItMi_Gold, 111);
 };
 
 FUNC VOID Info_Mod_Herold_Pickpocket_Info()

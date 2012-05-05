@@ -233,8 +233,6 @@ FUNC VOID Info_Mod_Heiler_Endres06_A()
 	Mod_EndresIndizien = 5;
 
 	Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);
-
-	//AI_Teleport	(hero, "REL_CITY_341");
 };
 
 INSTANCE Info_Mod_Heiler_Heilen (C_INFO)
@@ -324,7 +322,7 @@ FUNC VOID Info_Mod_Heiler_Freudenspender_Info()
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 10);
 
-	Mod_Freudenspender	+= 1;
+	Mod_Freudenspender += 1;
 };
 
 INSTANCE Info_Mod_Heiler_Pickpocket (C_INFO)
@@ -340,7 +338,7 @@ INSTANCE Info_Mod_Heiler_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Heiler_Pickpocket_Condition()
 {
-	C_Beklauen	(53, ItMi_Gold, ItPo_Health_Addon_04);
+	C_Beklauen	(53, ItPo_Health_Addon_04, 2);
 };
 
 FUNC VOID Info_Mod_Heiler_Pickpocket_Info()

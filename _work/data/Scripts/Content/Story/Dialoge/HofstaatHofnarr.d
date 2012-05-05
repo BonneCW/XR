@@ -113,7 +113,7 @@ INSTANCE Info_Mod_HofstaatHofnarr_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_HofstaatHofnarr_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 50);
+	C_Beklauen	(55, ItMi_Freudenspender, 1);
 };
 
 FUNC VOID Info_Mod_HofstaatHofnarr_Pickpocket_Info()

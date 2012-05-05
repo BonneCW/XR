@@ -485,7 +485,7 @@ func void Info_Mod_Hyglas_Runen_Info ()
 {
 	var int abletolearn;
 	abletolearn = 0;
-	AI_Output (other, self, "Info_Mod_Hyglas_Runen_15_00"); //Unterweise mich.
+	AI_Output(hero, self, "Info_Mod_Hyglas_Runen_15_00"); //Unterweise mich.
 	
 	Info_ClearChoices 	(Info_Mod_Hyglas_Runen);
 	Info_AddChoice		(Info_Mod_Hyglas_Runen, DIALOG_BACK, Info_Mod_Hyglas_Runen_BACK);
@@ -763,12 +763,12 @@ INSTANCE Info_Mod_Hyglas_Pickpocket (C_INFO)
 	information	= Info_Mod_Hyglas_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Hyglas_Pickpocket_Condition()
 {
-	C_Beklauen	(88, ItMi_Gold, 590);
+	C_Beklauen	(98, ItMi_Gold, 590);
 };
 
 FUNC VOID Info_Mod_Hyglas_Pickpocket_Info()

@@ -29,12 +29,12 @@ INSTANCE Info_Mod_Homer_Pickpocket (C_INFO)
 	information	= Info_Mod_Homer_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_40;
+	description	= Pickpocket_60;
 };
 
 FUNC INT Info_Mod_Homer_Pickpocket_Condition()
 {
-	C_Beklauen	(40, ItMi_Gold, 80);
+	C_Beklauen	(40, ItMi_Nugget, 1);
 };
 
 FUNC VOID Info_Mod_Homer_Pickpocket_Info()

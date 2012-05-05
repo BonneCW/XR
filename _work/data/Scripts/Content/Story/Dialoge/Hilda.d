@@ -184,7 +184,6 @@ FUNC VOID Info_Mod_Hilda_HabWein_Info()
 	AI_Output(hero, self, "Info_Mod_Hilda_HabWein_15_01"); //Kein Problem.
 	AI_Output(self, hero, "Info_Mod_Hilda_HabWein_17_02"); //Hier, für deine Mühen.
 
-	CreateInvItems	(self, ItMi_Gold, 50);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
 	B_GivePlayerXP	(100);

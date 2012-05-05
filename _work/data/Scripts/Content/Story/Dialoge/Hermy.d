@@ -233,7 +233,6 @@ FUNC VOID Info_Mod_Hermy_Harpie_E()
 	AI_Output(hero, self, "Info_Mod_Hermy_Harpie_E_15_00"); //Das war ein ganz schön hartes Abenteuer ...
 	AI_Output(self, hero, "Info_Mod_Hermy_Harpie_E_05_01"); //Hier hast du 500 Goldmünzen. Mehr gibt es nicht.
 
-	CreateInvItems	(self, ItMi_Gold, 500);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 
 	AI_Output(hero, self, "Info_Mod_Hermy_Harpie_E_15_02"); //Vielen Dank.
@@ -280,7 +279,6 @@ FUNC VOID Info_Mod_Hermy_Harpie_C()
 	AI_Output(hero, self, "Info_Mod_Hermy_Harpie_C_15_02"); //Besser als nichts.
 	AI_Output(self, hero, "Info_Mod_Hermy_Harpie_C_05_03"); //Hier hast du 500 Goldmünzen. Mehr gibt es nicht.
 
-	CreateInvItems	(self, ItMi_Gold, 500);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 
 	AI_Output(self, hero, "Info_Mod_Hermy_Harpie_C_05_04"); //Bekomme ich jetzt den Zauber?
@@ -413,12 +411,12 @@ INSTANCE Info_Mod_Hermy_Pickpocket (C_INFO)
 	information	= Info_Mod_Hermy_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Hermy_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 150);
+	C_Beklauen	(87, ItSc_TrfHarpie, 1);
 };
 
 FUNC VOID Info_Mod_Hermy_Pickpocket_Info()

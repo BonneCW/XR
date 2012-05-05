@@ -131,7 +131,6 @@ FUNC VOID Info_Mod_Halvor_HierSindFische_Info()
 	AI_Output(hero, self, "Info_Mod_Halvor_HierSindFische_15_02"); //Was ist mit meiner Belohnung?
 	AI_Output(self, hero, "Info_Mod_Halvor_HierSindFische_06_03"); //Achja, hier hast du ein paar Goldmünzen.
 
-	CreateInvItems	(self, ItMi_Gold, 50);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
 	B_GivePlayerXP	(50);
@@ -272,7 +271,7 @@ INSTANCE Info_Mod_Halvor_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Halvor_Pickpocket_Condition()
 {
-	C_Beklauen	(52, ItMi_Gold, 120);
+	C_Beklauen	(52, ItFo_Fish, 12);
 };
 
 FUNC VOID Info_Mod_Halvor_Pickpocket_Info()

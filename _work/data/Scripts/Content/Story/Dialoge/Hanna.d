@@ -74,7 +74,6 @@ FUNC VOID Info_Mod_Hanna_Meldor_Info()
 	AI_Output(hero, self, "Info_Mod_Hanna_Meldor_15_03"); //Was seid ihr überhaupt?
 	AI_Output(self, hero, "Info_Mod_Hanna_Meldor_17_04"); //Hier, nimm diesen Schlüssel und geh durch die Kellertür.
 
-	CreateInvItems	(self, ItKe_ThiefGuildKey_Hotel_MIS, 1);
 	B_GiveInvItems	(self, hero, ItKe_ThiefGuildKey_Hotel_MIS, 1);
 
 	AI_Output(self, hero, "Info_Mod_Hanna_Meldor_17_05"); //Dort wirst du deine Antwort finden.
@@ -157,12 +156,12 @@ INSTANCE Info_Mod_Hanna_Pickpocket (C_INFO)
 	information	= Info_Mod_Hanna_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60_Female;
+	description	= Pickpocket_90_Female;
 };
 
 FUNC INT Info_Mod_Hanna_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 140);
+	C_Beklauen	(75, ItMi_Gold, 140);
 };
 
 FUNC VOID Info_Mod_Hanna_Pickpocket_Info()

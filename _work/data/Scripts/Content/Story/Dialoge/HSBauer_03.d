@@ -60,12 +60,12 @@ INSTANCE Info_Mod_HSBauer_03_Pickpocket (C_INFO)
 	information	= Info_Mod_HSBauer_03_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_HSBauer_03_Pickpocket_Condition()
 {
-	C_Beklauen	(15, ItMi_Gold, 45);
+	C_Beklauen	(25, ItMi_Gold, 35);
 };
 
 FUNC VOID Info_Mod_HSBauer_03_Pickpocket_Info()

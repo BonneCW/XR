@@ -1705,12 +1705,12 @@ INSTANCE Info_Mod_Hagen_Pickpocket (C_INFO)
 	information	= Info_Mod_Hagen_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Hagen_Pickpocket_Condition()
 {
-	C_Beklauen	(108, ItMi_Gold, 1200);
+	C_Beklauen	(178, ItMi_Gold, 1200);
 };
 
 FUNC VOID Info_Mod_Hagen_Pickpocket_Info()

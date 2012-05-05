@@ -49,7 +49,7 @@ FUNC VOID Info_Mod_Senyan_Edgor_Info()
 	B_SetTopicStatus	(TOPIC_MOD_SENYANSSCHWERT, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_SENYANSSCHWERT, "Ich soll für Senyan ein Grobes Langsschwert von Hakon klauen.");
 
-	Mod_HakonÜberfall = 0;
+	Mod_HakonUeberfall = 0;
 };
 
 INSTANCE Info_Mod_Senyan_HabSchwert (C_INFO)
