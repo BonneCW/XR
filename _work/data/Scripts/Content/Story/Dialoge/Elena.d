@@ -574,12 +574,12 @@ INSTANCE Info_Mod_Elena_Pickpocket (C_INFO)
 	information	= Info_Mod_Elena_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_40_Female;
+	description	= Pickpocket_60_Female;
 };
 
 FUNC INT Info_Mod_Elena_Pickpocket_Condition()
 {
-	C_Beklauen	(34, ItMi_Gold, 80);
+	C_Beklauen	(34, ItFo_Apple, 2);
 };
 
 FUNC VOID Info_Mod_Elena_Pickpocket_Info()

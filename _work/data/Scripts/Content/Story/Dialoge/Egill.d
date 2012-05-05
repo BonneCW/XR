@@ -164,7 +164,7 @@ INSTANCE Info_Mod_Egill_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Egill_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(55, ItMi_Gold, 70);
 };
 
 FUNC VOID Info_Mod_Egill_Pickpocket_Info()

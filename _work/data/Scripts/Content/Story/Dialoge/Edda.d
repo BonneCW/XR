@@ -536,12 +536,12 @@ INSTANCE Info_Mod_Edda_Pickpocket (C_INFO)
 	information	= Info_Mod_Edda_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20_Female;
+	description	= Pickpocket_30_Female;
 };
 
 FUNC INT Info_Mod_Edda_Pickpocket_Condition()
 {
-	C_Beklauen	(10, ItMi_Gold, 10);
+	C_Beklauen	(10, ItFo_FishSoup, 2);
 };
 
 FUNC VOID Info_Mod_Edda_Pickpocket_Info()

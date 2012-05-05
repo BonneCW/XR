@@ -451,12 +451,12 @@ INSTANCE Info_Mod_Elvira_Pickpocket_Quest (C_INFO)
 	information	= Info_Mod_Elvira_Pickpocket_Quest_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= "(Es wäre fast unmöglich ihr den Schlüssel zu stehlen)";
+	description	= Pickpocket_180_Female;
 };
 
 FUNC INT Info_Mod_Elvira_Pickpocket_Quest_Condition()
 {
-	if (C_Beklauen(116, ItKe_RELMagier, 1))
+	if (C_Beklauen(166, ItKe_RELMagier, 1))
 	&& (Npc_HasItems(self, ItKe_RELMagier) == 1)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Cassia_Elvira))
 	{
@@ -491,7 +491,7 @@ INSTANCE Info_Mod_Elvira_Pickpocket (C_INFO)
 	information	= Info_Mod_Elvira_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100_Female;
+	description	= Pickpocket_120_Female;
 };
 
 FUNC INT Info_Mod_Elvira_Pickpocket_Condition()

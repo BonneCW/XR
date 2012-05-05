@@ -138,7 +138,7 @@ INSTANCE Info_Mod_Ehnim_Pickpocket (C_INFO)
 	information	= Info_Mod_Ehnim_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_Ehnim_Pickpocket_Condition()

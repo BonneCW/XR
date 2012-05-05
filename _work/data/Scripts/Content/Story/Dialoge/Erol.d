@@ -826,12 +826,12 @@ INSTANCE Info_Mod_Erol_Pickpocket (C_INFO)
 	information	= Info_Mod_Erol_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Erol_Pickpocket_Condition()
 {
-	C_Beklauen	(57, ItMi_Gold, 180);
+	C_Beklauen	(117, ItMi_OldCoin, 18);
 };
 
 FUNC VOID Info_Mod_Erol_Pickpocket_Info()
