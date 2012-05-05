@@ -223,6 +223,7 @@ FUNC VOID Info_Mod_Lehrling_Cutter_A()
 		Info_ClearChoices	(Info_Mod_Lehrling_Cutter);
 
 		Info_AddChoice	(Info_Mod_Lehrling_Cutter, "Das ist es mir nicht wert.", Info_Mod_Lehrling_Cutter_C);
+
 		if (Npc_HasItems(hero, ItMi_Gold) >= 50)
 		{
 			Info_AddChoice	(Info_Mod_Lehrling_Cutter, "Gut, hier ist das Gold.", Info_Mod_Lehrling_Cutter_B);
@@ -278,7 +279,7 @@ INSTANCE Info_Mod_Lehrling_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Lehrling_Pickpocket_Condition()
 {
-	C_Beklauen	(51, ItMi_Gold, 100);
+	C_Beklauen	(51, ItMi_Gold, 95);
 };
 
 FUNC VOID Info_Mod_Lehrling_Pickpocket_Info()

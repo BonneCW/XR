@@ -49,8 +49,6 @@ FUNC VOID Info_Mod_Larius_Hi_Info()
 	Mod_MitLawrenceGesprochen = 11;
 
 	B_Attack	(self, hero, AR_GuildEnemy, 0);
-	//B_Attack	(Mod_1730_MIL_Lawrence_NW, hero, AR_GuildEnemy, 0);
-	//B_Attack	(Mod_594_NONE_Lutero_NW, hero, AR_GuildEnemy, 0);
 };
 
 INSTANCE Info_Mod_Larius_Ornament (C_INFO)

@@ -146,7 +146,7 @@ INSTANCE Info_Mod_Lares_WillSoeldner (C_INFO)
 FUNC INT Info_Mod_Lares_WillSoeldner_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Lares_Hi))
-	&& (Mod_Gilde	==	0)
+	&& (Mod_Gilde == 0)
 	{
 		return 1;
 	};
@@ -326,7 +326,7 @@ FUNC VOID Info_Mod_Lares_Aufnahme_Ja()
 	B_SetTopicStatus	(TOPIC_MOD_MILIZ, LOG_FAILED);
 	B_SetTopicStatus	(TOPIC_MOD_DAEMONENBESCHWOERER, LOG_FAILED);
 	
-	Mod_Gilde	=	4;
+	Mod_Gilde = 4;
 
 	Snd_Play ("LEVELUP");
 
@@ -1090,12 +1090,12 @@ INSTANCE Info_Mod_Lares_Pickpocket (C_INFO)
 	information	= Info_Mod_Lares_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Lares_Pickpocket_Condition()
 {
-	C_Beklauen	(94, ItMi_Gold, 600);
+	C_Beklauen	(124, ItMi_Gold, 600);
 };
 
 FUNC VOID Info_Mod_Lares_Pickpocket_Info()

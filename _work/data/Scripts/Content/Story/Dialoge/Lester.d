@@ -597,12 +597,12 @@ INSTANCE Info_Mod_Lester_Pickpocket (C_INFO)
 	information	= Info_Mod_Lester_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_210;
 };
 
 FUNC INT Info_Mod_Lester_Pickpocket_Condition()
 {
-	C_Beklauen	(105, ItMi_Gold, 1000);
+	C_Beklauen	(185, ItMi_Traumruf, 3);
 };
 
 FUNC VOID Info_Mod_Lester_Pickpocket_Info()

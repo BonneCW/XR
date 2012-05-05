@@ -224,7 +224,7 @@ INSTANCE Info_Mod_Lefty_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Lefty_Pickpocket_Condition()
 {
-	C_Beklauen	(53, ItMi_Gold, 80);
+	C_Beklauen	(53, ItFo_Water, 6);
 };
 
 FUNC VOID Info_Mod_Lefty_Pickpocket_Info()

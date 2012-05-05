@@ -745,12 +745,12 @@ INSTANCE Info_Mod_Lukas_Pickpocket (C_INFO)
 	information	= Info_Mod_Lukas_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Lukas_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 1000);
+	C_Beklauen	(66, ItMi_Hammer, 1);
 };
 
 FUNC VOID Info_Mod_Lukas_Pickpocket_Info()

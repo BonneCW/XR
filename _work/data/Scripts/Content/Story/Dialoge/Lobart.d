@@ -642,7 +642,7 @@ INSTANCE Info_Mod_Lobart_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Lobart_Pickpocket_Condition()
 {
-	C_Beklauen	(53, ItMi_Gold, 120);
+	C_Beklauen	(53, ItPl_Beet, 12);
 };
 
 FUNC VOID Info_Mod_Lobart_Pickpocket_Info()

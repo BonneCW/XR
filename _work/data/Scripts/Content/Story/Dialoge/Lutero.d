@@ -251,12 +251,12 @@ INSTANCE Info_Mod_Lutero_Pickpocket (C_INFO)
 	information	= Info_Mod_Lutero_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Lutero_Pickpocket_Condition()
 {
-	C_Beklauen	(68, ItMi_Gold, 400);
+	C_Beklauen	(118, ItAt_DemonHeart, 1);
 };
 
 FUNC VOID Info_Mod_Lutero_Pickpocket_Info()

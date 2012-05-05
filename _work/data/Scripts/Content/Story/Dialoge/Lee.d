@@ -55,7 +55,6 @@ INSTANCE Info_Mod_Lee_WieStehts (C_INFO)
 FUNC INT Info_Mod_Lee_WieStehts_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Lee_Hi))
-	//&& (hero.guild == GIL_MIL)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Hagen_Hi))
 	{
 		return 1;
@@ -1408,12 +1407,12 @@ INSTANCE Info_Mod_Lee_Pickpocket (C_INFO)
 	information	= Info_Mod_Lee_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Lee_Pickpocket_Condition()
 {
-	C_Beklauen	(108, ItMi_Gold, 1300);
+	C_Beklauen	(158, ItMi_Gold, 1300);
 };
 
 FUNC VOID Info_Mod_Lee_Pickpocket_Info()

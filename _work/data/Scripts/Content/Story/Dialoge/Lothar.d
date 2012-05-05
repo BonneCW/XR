@@ -234,7 +234,7 @@ FUNC VOID Info_Mod_Lothar_Lernen_BACK()
 
 FUNC VOID Info_Mod_Lothar_Lernen_Staerke_5()
 {
-	B_TeachAttributePoints_New (self, hero, ATR_STRENGTH, 5, 120);
+	B_TeachAttributePoints_New (self, hero, ATR_STRENGTH, 5, 200);
 	
 	Info_ClearChoices	(Info_Mod_Lothar_Lernen);
 
@@ -245,7 +245,7 @@ FUNC VOID Info_Mod_Lothar_Lernen_Staerke_5()
 
 FUNC VOID Info_Mod_Lothar_Lernen_Staerke_1()
 {
-	B_TeachAttributePoints (self, hero, ATR_STRENGTH, 1, 120);
+	B_TeachAttributePoints (self, hero, ATR_STRENGTH, 1, 200);
 	
 	Info_ClearChoices	(Info_Mod_Lothar_Lernen);
 
@@ -262,12 +262,12 @@ INSTANCE Info_Mod_Lothar_Pickpocket (C_INFO)
 	information	= Info_Mod_Lothar_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Lothar_Pickpocket_Condition()
 {
-	C_Beklauen	(85, ItMi_Gold, 530);
+	C_Beklauen	(135, ItFo_Beer, 3);
 };
 
 FUNC VOID Info_Mod_Lothar_Pickpocket_Info()

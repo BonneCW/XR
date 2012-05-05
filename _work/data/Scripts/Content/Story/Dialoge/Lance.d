@@ -131,7 +131,7 @@ INSTANCE Info_Mod_Lance_RDW (C_INFO)
 
 FUNC INT Info_Mod_Lance_RDW_Condition()
 {
-	if (Mod_Gilde	==	9)
+	if (Mod_Gilde == 9)
 	{
 		return 1;
 	};
@@ -163,7 +163,7 @@ INSTANCE Info_Mod_Lance_Brief (C_INFO)
 FUNC INT Info_Mod_Lance_Brief_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Saturas))
-	&& (Mod_LanceXardasBrief	==	FALSE)
+	&& (Mod_LanceXardasBrief == FALSE)
 	&& ((Npc_HasItems(hero, XardasLetterForSaturas) == 1)
 	|| (Npc_HasItems(hero, XardasLetterForSaturas_Geoeffnet) == 1))
 	{
@@ -211,7 +211,6 @@ FUNC VOID Info_Mod_Lance_Brief_Ja()
 
 	AI_Output(self, hero, "Info_Mod_Lance_Brief_Ja_03_01"); //Sieht wichtig aus. Hier ist der Brief wieder.
 
-	CreateInvItems	(self, XardasLetterForSaturas_Geoeffnet, 1);
 	B_GiveInvItems	(self, hero, XardasLetterForSaturas_Geoeffnet, 1);
 
 	AI_Output(self, hero, "Info_Mod_Lance_Brief_Ja_03_02"); //Du kannst durch gehen.
@@ -374,7 +373,7 @@ INSTANCE Info_Mod_Lance_Pickpocket (C_INFO)
 	information	= Info_Mod_Lance_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Lance_Pickpocket_Condition()

@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Lucy_Hi_Condition()
 FUNC VOID Info_Mod_Lucy_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Lucy_Hi_17_01"); //Ich bin Lucy und arbeite hier.
 };
 
@@ -83,12 +84,12 @@ INSTANCE Info_Mod_Lucy_Pickpocket (C_INFO)
 	information	= Info_Mod_Lucy_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_60_Female;
 };
 
 FUNC INT Info_Mod_Lucy_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(55, ItMi_Gold, 130);
 };
 
 FUNC VOID Info_Mod_Lucy_Pickpocket_Info()
