@@ -15,7 +15,7 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	if (oth.lp < kosten)
 	&& (Mod_Schwierigkeit != 4)
 	{
-		PrintScreen	(PRINT_NotEnoughLearnPoints, -1,-1, FONT_ScreenSmall ,2);
+		PrintScreen	(PRINT_NotEnoughLearnPoints, -1, -1, FONT_ScreenSmall, 2);
 		B_Say (slf, oth, "$NOLEARNNOPOINTS");
 		
 		return FALSE;
@@ -42,21 +42,21 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 		Npc_RemoveInvItems	(hero, ItMi_Gold, kosten);
 	};
 	
-	Log_CreateTopic (TOPIC_TalentRunes,LOG_NOTE);
-	B_LogEntry (TOPIC_TalentRunes,"Um eine Rune zu erschaffen, benötige ich, neben der Spruchrolle des gewünschten Spruches, für jede Rune unterschiedliche Zutaten. Mit diesen Zutaten und einem Runenrohling kann ich dann die gewünschte Rune am Runentisch erschaffen.");
+	Log_CreateTopic (TOPIC_TalentRunes, LOG_NOTE);
+	B_LogEntry (TOPIC_TalentRunes, "Um eine Rune zu erschaffen, benötige ich, neben der Spruchrolle des gewünschten Spruches, für jede Rune unterschiedliche Zutaten. Mit diesen Zutaten und einem Runenrohling kann ich dann die gewünschte Rune am Runentisch erschaffen.");
 	
 	var C_NPC ScrollTrader;
 	
 	
 	
 	// ------ Rune lernen ------
-	if (spell == SPL_PalLight)				{	PLAYER_TALENT_RUNES[SPL_PalLight] 				= TRUE;	};		
+	if (spell == SPL_PalLight)			{	PLAYER_TALENT_RUNES[SPL_PalLight] 			= TRUE;	};		
 	if (spell == SPL_PalLightHeal)			{	PLAYER_TALENT_RUNES[SPL_PalLightHeal] 			= TRUE;	};		
 	if (spell == SPL_PalHolyBolt)			{	PLAYER_TALENT_RUNES[SPL_PalHolyBolt] 			= TRUE; };		
 	if (spell == SPL_PalMediumHeal)			{	PLAYER_TALENT_RUNES[SPL_PalMediumHeal] 			= TRUE;	};		
 	if (spell == SPL_PalRepelEvil)			{	PLAYER_TALENT_RUNES[SPL_PalRepelEvil] 			= TRUE;	};		
-	if (spell == SPL_SummonGoblinKrieger)			{	PLAYER_TALENT_RUNES[SPL_SummonGoblinKrieger] 			= TRUE;	};		
-	if (spell == SPL_SummonEisgoblin)			{	PLAYER_TALENT_RUNES[SPL_SummonEisgoblin] 			= TRUE;	};		
+	if (spell == SPL_SummonGoblinKrieger)		{	PLAYER_TALENT_RUNES[SPL_SummonGoblinKrieger] 		= TRUE;	};		
+	if (spell == SPL_SummonEisgoblin)		{	PLAYER_TALENT_RUNES[SPL_SummonEisgoblin] 		= TRUE;	};		
 	if (spell == SPL_PalFullHeal)			{	PLAYER_TALENT_RUNES[SPL_PalFullHeal] 			= TRUE;	};		
 	if (spell == SPL_PalDestroyEvil)		{	PLAYER_TALENT_RUNES[SPL_PalDestroyEvil]			= TRUE;	};		
 	if (spell == SPL_PalTeleportSecret)		{	PLAYER_TALENT_RUNES[SPL_PalTeleportSecret] 		= TRUE;	};		

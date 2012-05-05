@@ -5,9 +5,9 @@
 // ---------------------------------------
 func void B_RaiseRealAttributeLearnCounter (var C_NPC oth, var int attrib, var int points)
 {
-	if 		(attrib == ATR_STRENGTH)	{	Mod_RealStrength	=	Mod_RealStrength + points;	}
-	else if (attrib == ATR_DEXTERITY)	{	Mod_RealDexterity = Mod_RealDexterity + points;	}
-	else if (attrib == ATR_MANA_MAX)	{	Mod_RealMana = Mod_RealMana + points;	};
+	if 	(attrib == ATR_STRENGTH)	{	Mod_RealStrength	=	Mod_RealStrength + points;	}
+	else if (attrib == ATR_DEXTERITY)	{	Mod_RealDexterity	=	Mod_RealDexterity + points;	}
+	else if (attrib == ATR_MANA_MAX)	{	Mod_RealMana		=	Mod_RealMana + points;	};
 };
 
 // ---------------------------------------
