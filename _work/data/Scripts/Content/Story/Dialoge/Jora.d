@@ -266,12 +266,12 @@ INSTANCE Info_Mod_Jora_Pickpocket (C_INFO)
 	information	= Info_Mod_Jora_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Jora_Pickpocket_Condition()
 {
-	C_Beklauen	(56, ItMi_Gold, 160);
+	C_Beklauen	(76, ItMi_Gold, 160);
 };
 
 FUNC VOID Info_Mod_Jora_Pickpocket_Info()

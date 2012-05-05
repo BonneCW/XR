@@ -275,17 +275,17 @@ FUNC VOID Info_Mod_Joseppe_StartAuftrag_A()
 	Info_ClearChoices	(Info_Mod_Joseppe_StartAuftrag);
 };
 
-INSTANCE Info_Mod_Joseppe_Neconomicum (C_INFO)
+INSTANCE Info_Mod_Joseppe_Necronomicum (C_INFO)
 {
 	npc		= Mod_7267_VLK_Joseppe_NW;
 	nr		= 1;
-	condition	= Info_Mod_Joseppe_Neconomicum_Condition;
-	information	= Info_Mod_Joseppe_Neconomicum_Info;
+	condition	= Info_Mod_Joseppe_Necronomicum_Condition;
+	information	= Info_Mod_Joseppe_Necronomicum_Info;
 	permanent	= 0;
 	important	= 1;
 };
 
-FUNC INT Info_Mod_Joseppe_Neconomicum_Condition()
+FUNC INT Info_Mod_Joseppe_Necronomicum_Condition()
 {
 	if (Mod_Sekte_Joseppe == 2)
 	&& (Wld_GetDay() > Mod_Sekte_JoseppeBuch)
@@ -296,13 +296,13 @@ FUNC INT Info_Mod_Joseppe_Neconomicum_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Joseppe_Neconomicum_Info()
+FUNC VOID Info_Mod_Joseppe_Necronomicum_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Joseppe_Neconomicum_08_00"); //Da bist du ja wieder. Ich habe dein Buch bekommen. Hier hast du es.
+	AI_Output(self, hero, "Info_Mod_Joseppe_Necronomicum_08_00"); //Da bist du ja wieder. Ich habe dein Buch bekommen. Hier hast du es.
 
 	B_GiveInvItems	(self, hero, ItWr_BeliarBook, 1);
 
-	AI_Output(hero, self, "Info_Mod_Joseppe_Neconomicum_15_01"); //Danke.
+	AI_Output(hero, self, "Info_Mod_Joseppe_Necronomicum_15_01"); //Danke.
 
 	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Ich habe das Neconomicum von Joseppe erhalten. Ich sollte nun zu Karras zurückkehren.");
 };
@@ -315,12 +315,12 @@ INSTANCE Info_Mod_Joseppe_Pickpocket (C_INFO)
 	information	= Info_Mod_Joseppe_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Joseppe_Pickpocket_Condition()
 {
-	C_Beklauen	(75, ItMi_Gold, 1000);
+	C_Beklauen	(75, ItMi_Gold, 340);
 };
 
 FUNC VOID Info_Mod_Joseppe_Pickpocket_Info()

@@ -435,12 +435,12 @@ INSTANCE Info_Mod_Juan_Pickpocket (C_INFO)
 	information	= Info_Mod_Juan_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Juan_Pickpocket_Condition()
 {
-	C_Beklauen	(59, ItMi_Gold, 130);
+	C_Beklauen	(69, ItMi_Gold, 130);
 };
 
 FUNC VOID Info_Mod_Juan_Pickpocket_Info()

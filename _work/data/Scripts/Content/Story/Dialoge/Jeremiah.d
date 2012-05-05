@@ -275,7 +275,7 @@ INSTANCE Info_Mod_Jeremiah_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Jeremiah_Pickpocket_Condition()
 {
-	C_Beklauen	(51, ItMi_Gold, 180);
+	C_Beklauen	(51, ItMi_Flask, 3);
 };
 
 FUNC VOID Info_Mod_Jeremiah_Pickpocket_Info()
