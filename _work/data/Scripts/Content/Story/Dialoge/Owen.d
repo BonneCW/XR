@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Owen_Hi_Condition()
 FUNC VOID Info_Mod_Owen_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Owen_Hi_13_01"); //Ich bin Owen.
 };
 
@@ -50,7 +51,6 @@ FUNC VOID Info_Mod_Owen_Auftrag_Info()
 	AI_Output(hero, self, "Info_Mod_Owen_Auftrag_15_05"); //Gib mir das Geld und ich hol dein Vitamin C.
 	AI_Output(self, hero, "Info_Mod_Owen_Auftrag_13_06"); //Hier, 400 Goldstücke.
 
-	CreateInvItems	(self, ItMi_Gold, 400);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 400);
 
 	AI_Output(self, hero, "Info_Mod_Owen_Auftrag_13_07"); //Wenn er mehr verlangt haut er dich übern Tisch!

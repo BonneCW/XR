@@ -576,12 +576,12 @@ INSTANCE Info_Mod_Orlan_Pickpocket (C_INFO)
 	information	= Info_Mod_Orlan_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Orlan_Pickpocket_Condition()
 {
-	C_Beklauen	(53, ItMi_Gold, 180);
+	C_Beklauen	(63, ItFo_Wine, 5);
 };
 
 FUNC VOID Info_Mod_Orlan_Pickpocket_Info()

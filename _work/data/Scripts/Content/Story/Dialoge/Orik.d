@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Orik_Hi_Condition()
 FUNC VOID Info_Mod_Orik_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Orik_Hi_08_01"); //Ich bin Orik. Ich verkaufe den Söldnern Rüstungen.
 };
 
@@ -130,6 +131,7 @@ FUNC VOID Info_Mod_Orik_Niedergeschlagen_Info()
 	B_StartOtherRoutine	(self, "FOLLOWTOAL");
 
 	CreateInvItems	(self, ItPo_Health_Addon_04, 1);
+
 	B_UseItem	(self, ItPo_Health_Addon_04);
 
 	B_LogEntry	(TOPIC_MOD_AL_ORIK, "Wir lauerten Orik vor der Höhle auf und haben ihn niedergeschlagen. Jetzt wird er erst mal mitkommen müssen.");
@@ -332,12 +334,12 @@ INSTANCE Info_Mod_Orik_Pickpocket (C_INFO)
 	information	= Info_Mod_Orik_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Orik_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 460);
+	C_Beklauen	(112, ItMi_Gold, 460);
 };
 
 FUNC VOID Info_Mod_Orik_Pickpocket_Info()

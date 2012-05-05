@@ -196,7 +196,7 @@ FUNC VOID Info_Mod_Ole_ErzAnteil_Info()
 	{
 		AI_Output(self, hero, "Info_Mod_Ole_ErzAnteil_02_01"); //Hier ist dein Anteil.
 
-		B_GiveInvItems	(self, hero, ItMi_Nugget, 10+Hlp_Random(6));
+		B_GiveInvItems	(self, hero, ItMi_Nugget, 10+r_max(5));
 
 		Mod_KG_OleErz = Wld_GetDay();
 	}
@@ -246,7 +246,7 @@ INSTANCE Info_Mod_Ole_Pickpocket (C_INFO)
 	information	= Info_Mod_Ole_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Ole_Pickpocket_Condition()
