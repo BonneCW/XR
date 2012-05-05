@@ -57,12 +57,12 @@ INSTANCE Info_Mod_Nadja_Pickpocket (C_INFO)
 	information	= Info_Mod_Nadja_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90_Female;
 };
 
 FUNC INT Info_Mod_Nadja_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 250);
+	C_Beklauen	(73, ItMi_Gold, 250);
 };
 
 FUNC VOID Info_Mod_Nadja_Pickpocket_Info()

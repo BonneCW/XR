@@ -34,12 +34,12 @@ INSTANCE Info_Mod_Neron_Pickpocket (C_INFO)
 	information	= Info_Mod_Neron_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Neron_Pickpocket_Condition()
 {
-	C_Beklauen	(94, ItMi_Gold, 500);
+	C_Beklauen	(94, ItMi_Gold, 570);
 };
 
 FUNC VOID Info_Mod_Neron_Pickpocket_Info()

@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Neoras_Hi_Condition()
 FUNC VOID Info_Mod_Neoras_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Neoras_Hi_01_01"); //Ich bin Neoras, der Meister der Tränke.
 };
 
@@ -336,12 +337,12 @@ INSTANCE Info_Mod_Neoras_Pickpocket (C_INFO)
 	information	= Info_Mod_Neoras_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Neoras_Pickpocket_Condition()
 {
-	C_Beklauen	(90, ItMi_Gold, 680);
+	C_Beklauen	(130, ItPo_Perm_Mana, 1);
 };
 
 FUNC VOID Info_Mod_Neoras_Pickpocket_Info()

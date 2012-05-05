@@ -267,12 +267,12 @@ INSTANCE Info_Mod_Naim_Pickpocket (C_INFO)
 	information	= Info_Mod_Naim_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Naim_Pickpocket_Condition()
 {
-	C_Beklauen	(118, ItMi_Gold, 2000);
+	C_Beklauen	(168, ItMi_Gold, 2000);
 };
 
 FUNC VOID Info_Mod_Naim_Pickpocket_Info()

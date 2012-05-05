@@ -131,7 +131,6 @@ FUNC VOID Info_Mod_Nefarius_VierErbauer_Info()
 	B_LogEntry	(TOPIC_MOD_PORTAL, "Der letzte Überlebende, ein Totenwächter, hat sich in den Norden aufgemacht. Ich soll mich dort mal umsehen.");
 
 	Wld_InsertItem	(ItMi_Ornament_Totenwaechter,	"FP_ITEM_ORNAMENT_TOTENWAECHTER");
-	//Wld_InsertItem	(ItMi_Ornament_Heiler,	"FP_ITEM_ORNAMENT_HEILER");
 
 	Mob_CreateItems	("ONARSAHNENTRUHE", ItMi_Ornament_Krieger, 1);
 
@@ -166,7 +165,6 @@ FUNC VOID Info_Mod_Nefarius_PriesterOrnament_Info()
 
 	AI_Output(self, hero, "Info_Mod_Nefarius_PriesterOrnament_05_01"); //In Khorata? Nun ja, jetzt haben wir es ja. Hier ist deine Belohnung.
 
-	CreateInvItems	(self, ItMi_Gold, 250);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 250);
 
 	B_GivePlayerXP	(200);
@@ -202,7 +200,6 @@ FUNC VOID Info_Mod_Nefarius_HeilerOrnament_Info()
 
 	AI_Output(self, hero, "Info_Mod_Nefarius_HeilerOrnament_05_01"); //Sehr gut. Hier hast du eine Belohnung.
 
-	CreateInvItems	(self, ItMi_Gold, 250);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 250);
 
 	B_GivePlayerXP	(200);
@@ -241,7 +238,6 @@ FUNC VOID Info_Mod_Nefarius_KriegerOrnament_Info()
 	AI_Output(self, hero, "Info_Mod_Nefarius_KriegerOrnament_05_03"); //Ah ja, also waren die beiden tatsächlich verwandt.
 	AI_Output(self, hero, "Info_Mod_Nefarius_KriegerOrnament_05_04"); //Hier ist deine Belohnung.
 
-	CreateInvItems	(self, ItMi_Gold, 250);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 250);
 
 	B_GivePlayerXP	(200);
@@ -280,7 +276,6 @@ FUNC VOID Info_Mod_Nefarius_TotenwaechterOrnament_Info()
 	AI_Output(self, hero, "Info_Mod_Nefarius_TotenwaechterOrnament_05_03"); //Der Sonnenkreis also, interessant.
 	AI_Output(self, hero, "Info_Mod_Nefarius_TotenwaechterOrnament_05_04"); //Sehr gut. Hier ist eine kleine Belohnung für dich.
 
-	CreateInvItems	(self, ItMi_Gold, 250);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 250);
 
 	B_GivePlayerXP	(200);

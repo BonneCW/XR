@@ -87,7 +87,6 @@ FUNC VOID Info_Mod_Nimius_WilfriedTot_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Nimius_WilfriedTot_01_01"); //Wilfried ist tot? Das hast du gut gemacht.
 
-	CreateInvItems	(self, ItMi_Gold, 50);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 };
 
@@ -163,7 +162,7 @@ INSTANCE Info_Mod_Nimius_Pickpocket (C_INFO)
 	information	= Info_Mod_Nimius_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_Nimius_Pickpocket_Condition()
