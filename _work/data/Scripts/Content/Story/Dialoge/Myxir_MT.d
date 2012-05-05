@@ -775,7 +775,7 @@ INSTANCE Info_Mod_Myxir_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Myxir_Pickpocket_Condition()
 {
-	C_Beklauen	(100, ItPl_Speed_Herb, 3);
+	C_Beklauen	(100, ItPl_Speed_Herb_01, 3);
 };
 
 FUNC VOID Info_Mod_Myxir_Pickpocket_Info()

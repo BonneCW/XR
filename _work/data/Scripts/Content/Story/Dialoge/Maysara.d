@@ -155,7 +155,7 @@ INSTANCE Info_Mod_Maysara_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Maysara_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItRw_Bow, 15);
+	C_Beklauen	(77, ItRw_Arrow, 15);
 };
 
 FUNC VOID Info_Mod_Maysara_Pickpocket_Info()
