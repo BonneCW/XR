@@ -413,12 +413,12 @@ INSTANCE Info_Mod_Thekla_Pickpocket (C_INFO)
 	information	= Info_Mod_Thekla_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60_Female;
+	description	= Pickpocket_120_Female;
 };
 
 FUNC INT Info_Mod_Thekla_Pickpocket_Condition()
 {
-	C_Beklauen	(52, ItMi_Gold, 150);
+	C_Beklauen	(112, ItFo_XPStew, 1);
 };
 
 FUNC VOID Info_Mod_Thekla_Pickpocket_Info()

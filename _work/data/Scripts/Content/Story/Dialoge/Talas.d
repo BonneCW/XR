@@ -542,12 +542,12 @@ INSTANCE Info_Mod_Talas_Pickpocket (C_INFO)
 	information	= Info_Mod_Talas_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_Talas_Pickpocket_Condition()
 {
-	C_Beklauen	(50, ItMi_Gold, 50);
+	C_Beklauen	(30, ItMi_Gold, 50);
 };
 
 FUNC VOID Info_Mod_Talas_Pickpocket_Info()

@@ -880,12 +880,12 @@ INSTANCE Info_Mod_Turendil_Pickpocket (C_INFO)
 	information	= Info_Mod_Turendil_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Turendil_Pickpocket_Condition()
 {
-	C_Beklauen	(93, ItMi_Gold, 850);
+	C_Beklauen	(143, ItSc_TrfMeatbug, 1);
 };
 
 FUNC VOID Info_Mod_Turendil_Pickpocket_Info()

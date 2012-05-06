@@ -939,7 +939,7 @@ FUNC INT Info_Mod_Thorben_BDTSchatzkisten_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Thorben_Hi))
 	&& (Npc_HasItems(hero, ItMi_BDTKiste_01) == 1)
 	&& (Npc_HasItems(hero, ItMi_BDTKiste_02) == 1)
-	&& (Mod_Banditenüberfall_Esteban >= 10)
+	&& (Mod_Banditenueberfall_Esteban >= 10)
 	{
 		return 1;
 	};
@@ -1258,7 +1258,7 @@ INSTANCE Info_Mod_Thorben_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Thorben_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 120);
+	C_Beklauen	(55, ItMi_Ast, 12);
 };
 
 FUNC VOID Info_Mod_Thorben_Pickpocket_Info()
