@@ -235,12 +235,12 @@ INSTANCE Info_Mod_Rufus_Pickpocket (C_INFO)
 	information	= Info_Mod_Rufus_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_Rufus_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(25, ItPl_Riceplant, 3);
 };
 
 FUNC VOID Info_Mod_Rufus_Pickpocket_Info()

@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Roka_Hi_Condition()
 FUNC VOID Info_Mod_Roka_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Roka_Hi_11_01"); //Ich bin Roka. Ich verkaufe den Wasserkriegern Rüstungen.
 };
 
@@ -114,7 +115,7 @@ INSTANCE Info_Mod_Roka_Pickpocket (C_INFO)
 	information	= Info_Mod_Roka_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Roka_Pickpocket_Condition()

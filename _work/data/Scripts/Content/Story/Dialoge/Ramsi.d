@@ -250,12 +250,12 @@ INSTANCE Info_Mod_Ramsi_Pickpocket (C_INFO)
 	information	= Info_Mod_Ramsi_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Ramsi_Pickpocket_Condition()
 {
-	C_Beklauen	(48, ItMi_Gold, 250);
+	C_Beklauen	(78, ItMi_Gold, 250);
 };
 
 FUNC VOID Info_Mod_Ramsi_Pickpocket_Info()

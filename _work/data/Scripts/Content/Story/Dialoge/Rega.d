@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Rega_Unheil (C_INFO)
 	information	= Info_Mod_Rega_Unheil_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Hallo schönes Kind.";
+	description	= "Hallo, schönes Kind.";
 };
 
 FUNC INT Info_Mod_Rega_Unheil_Condition()
@@ -20,8 +20,8 @@ FUNC INT Info_Mod_Rega_Unheil_Condition()
 
 FUNC VOID Info_Mod_Rega_Unheil_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Rega_Unheil_15_00"); //Hallo schönes Kind.
-	AI_Output(self, hero, "Info_Mod_Rega_Unheil_17_01"); //Hallo Wanderer? Was verschlägt euch an diesen finsteren Tagen hierhin?
+	AI_Output(hero, self, "Info_Mod_Rega_Unheil_15_00"); //Hallo, schönes Kind.
+	AI_Output(self, hero, "Info_Mod_Rega_Unheil_17_01"); //Hallo, Wanderer? Was verschlägt euch an diesen finsteren Tagen hierhin?
 	AI_Output(hero, self, "Info_Mod_Rega_Unheil_15_02"); //Och, ich wollte mich nur etwas umsehen und fragen, ob etwas Ungewohntes in den letzten Tagen und Wochen hier passiert ist.
 	AI_Output(self, hero, "Info_Mod_Rega_Unheil_17_03"); //Ach, es ist einfach schrecklich. Dem Hof ist es dieses Jahr mehr als schlecht ergangen. Und jetzt noch diese Untoten auf dem Friedhof.
 	AI_Output(self, hero, "Info_Mod_Rega_Unheil_17_04"); //Nimm es dann anderen nicht übel, wenn sie etwas unfreundlich erscheinen sollten. Aber diese Tage ist es sehr schwer.
@@ -35,12 +35,12 @@ INSTANCE Info_Mod_Rega_Pickpocket (C_INFO)
 	information	= Info_Mod_Rega_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_40_Female;
+	description	= Pickpocket_60_Female;
 };
 
 FUNC INT Info_Mod_Rega_Pickpocket_Condition()
 {
-	C_Beklauen	(26, ItMi_Gold, 30);
+	C_Beklauen	(36, ItMi_Gold, 30);
 };
 
 FUNC VOID Info_Mod_Rega_Pickpocket_Info()

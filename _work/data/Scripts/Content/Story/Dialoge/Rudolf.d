@@ -216,12 +216,12 @@ INSTANCE Info_Mod_Rudolf_Pickpocket (C_INFO)
 	information	= Info_Mod_Rudolf_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Rudolf_Pickpocket_Condition()
 {
-	C_Beklauen	(97, ItMi_Gold, 2000);
+	C_Beklauen	(97, ItFo_Booze, 2);
 };
 
 FUNC VOID Info_Mod_Rudolf_Pickpocket_Info()

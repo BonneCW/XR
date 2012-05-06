@@ -40,6 +40,7 @@ FUNC INT Info_Mod_Ramirez_Dieb_Condition()
 FUNC VOID Info_Mod_Ramirez_Dieb_Info()
 {
 	AI_PlayAni (hero, "T_YES");
+
 	AI_Output(self, hero, "Info_Mod_Ramirez_Dieb_14_00"); //Du gehörst also zu uns.
 	AI_Output(self, hero, "Info_Mod_Ramirez_Dieb_14_01"); //Ich kann dir beibringen, wie du Schlösser knackst.
 

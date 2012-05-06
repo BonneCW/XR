@@ -102,12 +102,12 @@ INSTANCE Info_Mod_Rotkaeppchen_Pickpocket (C_INFO)
 	information	= Info_Mod_Rotkaeppchen_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_60_Female;
 };
 
 FUNC INT Info_Mod_Rotkaeppchen_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 100);
+	C_Beklauen	(47, ItPl_Mushroom_01, 5);
 };
 
 FUNC VOID Info_Mod_Rotkaeppchen_Pickpocket_Info()

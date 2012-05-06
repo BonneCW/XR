@@ -784,12 +784,12 @@ INSTANCE Info_Mod_Richter_Pickpocket (C_INFO)
 	information	= Info_Mod_Richter_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Richter_Pickpocket_Condition()
 {
-	C_Beklauen	(95, ItMi_Gold, 2000);
+	C_Beklauen	(145, ItMi_Gold, 2000);
 };
 
 FUNC VOID Info_Mod_Richter_Pickpocket_Info()

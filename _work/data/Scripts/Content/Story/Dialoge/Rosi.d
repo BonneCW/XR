@@ -276,7 +276,7 @@ INSTANCE Info_Mod_Rosi_Pickpocket (C_INFO)
 	information	= Info_Mod_Rosi_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20_Female;
+	description	= Pickpocket_30_Female;
 };
 
 FUNC INT Info_Mod_Rosi_Pickpocket_Condition()

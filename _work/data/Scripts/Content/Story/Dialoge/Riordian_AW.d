@@ -708,12 +708,12 @@ INSTANCE Info_Mod_Riordian_AW_Pickpocket (C_INFO)
 	information	= Info_Mod_Riordian_AW_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Riordian_AW_Pickpocket_Condition()
 {
-	C_Beklauen	(98, ItMi_Gold, 700);
+	C_Beklauen	(148, ItPo_Health_Addon_04, 2);
 };
 
 FUNC VOID Info_Mod_Riordian_AW_Pickpocket_Info()

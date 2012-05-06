@@ -280,12 +280,12 @@ INSTANCE Info_Mod_Robert_Pickpocket (C_INFO)
 	information	= Info_Mod_Robert_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Robert_Pickpocket_Condition()
 {
-	C_Beklauen	(78, ItMi_Gold, 760);
+	C_Beklauen	(78, ItMiSwordRaw, 7);
 };
 
 FUNC VOID Info_Mod_Robert_Pickpocket_Info()

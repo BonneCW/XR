@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Rath_Hi_Condition()
 FUNC VOID Info_Mod_Rath_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Rath_Hi_08_01"); //Ich bin Rath. Was willst du?
 };
 
@@ -257,7 +258,7 @@ INSTANCE Info_Mod_Rath_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Rath_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(55, ItMi_Gold, 50);
 };
 
 FUNC VOID Info_Mod_Rath_Pickpocket_Info()
