@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Velario_Hi_Condition()
 FUNC VOID Info_Mod_Velario_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Velario_Hi_06_01"); //Ich bin Velario.
 };
 

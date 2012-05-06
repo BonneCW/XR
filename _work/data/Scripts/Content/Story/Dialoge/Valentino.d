@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Valentino_Hi_Condition()
 FUNC VOID Info_Mod_Valentino_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Valentino_Hi_03_01"); //Was willst DU denn von mir?
 };
 
@@ -172,12 +173,12 @@ INSTANCE Info_Mod_Valentino_Pickpocket (C_INFO)
 	information	= Info_Mod_Valentino_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Valentino_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(85, ItMi_GoldRing, 1);
 };
 
 FUNC VOID Info_Mod_Valentino_Pickpocket_Info()

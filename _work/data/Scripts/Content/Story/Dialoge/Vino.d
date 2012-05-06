@@ -322,12 +322,12 @@ INSTANCE Info_Mod_Vino_Pickpocket (C_INFO)
 	information	= Info_Mod_Vino_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_40;
+	description	= Pickpocket_60;
 };
 
 FUNC INT Info_Mod_Vino_Pickpocket_Condition()
 {
-	C_Beklauen	(34, ItMi_Gold, 40);
+	C_Beklauen	(34, ItPl_Weed, 4);
 };
 
 FUNC VOID Info_Mod_Vino_Pickpocket_Info()
