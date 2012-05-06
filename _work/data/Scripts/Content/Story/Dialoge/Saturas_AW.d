@@ -1234,12 +1234,12 @@ INSTANCE Info_Mod_Saturas_AW_Pickpocket (C_INFO)
 	information	= Info_Mod_Saturas_AW_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Saturas_AW_Pickpocket_Condition()
 {
-	C_Beklauen	(116, ItMi_Gold, 1200);
+	C_Beklauen	(176, ItMi_Gold, 1200);
 };
 
 FUNC VOID Info_Mod_Saturas_AW_Pickpocket_Info()

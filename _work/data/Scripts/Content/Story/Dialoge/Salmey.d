@@ -60,12 +60,12 @@ INSTANCE Info_Mod_Salmey_Pickpocket (C_INFO)
 	information	= Info_Mod_Salmey_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90_Female;
 };
 
 FUNC INT Info_Mod_Salmey_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 200);
+	C_Beklauen	(77, ItFo_Beer, 2);
 };
 
 FUNC VOID Info_Mod_Salmey_Pickpocket_Info()

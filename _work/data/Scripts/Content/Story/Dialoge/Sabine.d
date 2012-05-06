@@ -20,6 +20,7 @@ FUNC INT Info_Mod_Sabine_Hi_Condition()
 FUNC VOID Info_Mod_Sabine_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Sabine_Hi_17_01"); //Mein Name ist Sabine, meines Zeichens königliche Gewürzhänlderin!
 	AI_Output(hero, self, "Info_Mod_Sabine_Hi_15_02"); //Gewürzhändlerin?
 	AI_Output(self, hero, "Info_Mod_Sabine_Hi_17_03"); //Königliche Gewürzhändlerin!
@@ -277,12 +278,12 @@ INSTANCE Info_Mod_Sabine_Pickpocket (C_INFO)
 	information	= Info_Mod_Sabine_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_120_Female;
 };
 
 FUNC INT Info_Mod_Sabine_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(105, ItMi_Freudenspender, 4);
 };
 
 FUNC VOID Info_Mod_Sabine_Pickpocket_Info()

@@ -668,12 +668,12 @@ INSTANCE Info_Mod_Sagitta_Pickpocket (C_INFO)
 	information	= Info_Mod_Sagitta_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60_Female;
+	description	= Pickpocket_150_Female;
 };
 
 FUNC INT Info_Mod_Sagitta_Pickpocket_Condition()
 {
-	C_Beklauen	(60, ItMi_Gold, 400);
+	C_Beklauen	(130, ItPo_Gegengift, 4);
 };
 
 FUNC VOID Info_Mod_Sagitta_Pickpocket_Info()

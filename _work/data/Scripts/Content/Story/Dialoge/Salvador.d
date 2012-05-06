@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Salvador_Hi_Condition()
 FUNC VOID Info_Mod_Salvador_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Salvador_Hi_04_01"); //Ich bin Salvador, Trainer der Wasserkrieger und Hüter.
 };
 
@@ -230,7 +231,7 @@ INSTANCE Info_Mod_Salvador_Pickpocket (C_INFO)
 	information	= Info_Mod_Salvador_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Salvador_Pickpocket_Condition()

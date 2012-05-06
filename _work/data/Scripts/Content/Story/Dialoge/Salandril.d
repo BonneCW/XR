@@ -170,12 +170,12 @@ INSTANCE Info_Mod_Salandril_Pickpocket_Gaertner (C_INFO)
 	information	= Info_Mod_Salandril_Pickpocket_Gaertner_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Salandril_Pickpocket_Gaertner_Condition()
 {
-	if (C_Beklauen	(96, ItPo_Perm_DEX_Salandril, 1))
+	if (C_Beklauen	(176, ItPo_Perm_DEX_Salandril, 1))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Gaertner_Dieb))
 	{
 		return 1;
@@ -209,12 +209,12 @@ INSTANCE Info_Mod_Salandril_Pickpocket (C_INFO)
 	information	= Info_Mod_Salandril_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Salandril_Pickpocket_Condition()
 {
-	C_Beklauen	(60, ItMi_Gold, 300);
+	C_Beklauen	(110, ItMi_Gold, 300);
 };
 
 FUNC VOID Info_Mod_Salandril_Pickpocket_Info()

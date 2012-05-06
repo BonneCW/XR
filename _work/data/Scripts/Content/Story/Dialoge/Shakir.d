@@ -399,12 +399,12 @@ INSTANCE Info_Mod_Shakir_Pickpocket (C_INFO)
 	information	= Info_Mod_Shakir_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Shakir_Pickpocket_Condition()
 {
-	C_Beklauen	(75, ItMi_Gold, 300);
+	C_Beklauen	(75, ItPo_Pflanzengift, 1);
 };
 
 FUNC VOID Info_Mod_Shakir_Pickpocket_Info()

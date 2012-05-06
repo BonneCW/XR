@@ -29,12 +29,12 @@ INSTANCE Info_Mod_Schoeppe_02_Pickpocket (C_INFO)
 	information	= Info_Mod_Schoeppe_02_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Schoeppe_02_Pickpocket_Condition()
 {
-	C_Beklauen	(76, ItMi_Gold, 350);
+	C_Beklauen	(66, ItMi_Gold, 230);
 };
 
 FUNC VOID Info_Mod_Schoeppe_02_Pickpocket_Info()

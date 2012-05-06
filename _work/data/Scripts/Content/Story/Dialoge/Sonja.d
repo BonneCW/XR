@@ -283,7 +283,7 @@ INSTANCE Info_Mod_Sonja_Pickpocket (C_INFO)
 	information	= Info_Mod_Sonja_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_40_Female;
+	description	= Pickpocket_60_Female;
 };
 
 FUNC INT Info_Mod_Sonja_Pickpocket_Condition()

@@ -17,9 +17,11 @@ FUNC INT Info_Mod_Samuel_Hi_Condition()
 FUNC VOID Info_Mod_Samuel_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Samuel_Hi_14_01"); //Ich bin Samuel. Nimm erstmal nen ordentlichen Schluck Grog.
 	
 	B_GiveInvItems	(self, hero, ItFo_Addon_Grog, 1);
+
 	B_UseItem	(hero, ItFo_Addon_Grog);
 
 	AI_Output(self, hero, "Info_Mod_Samuel_Hi_14_02"); //Wenn du mehr willst, dann geh zu Skip, ich bring mein Zeug meistens zu ihm. Ich hab nicht viel, aber wenn du willst, kann ich dir auch etwas verkaufen.
@@ -89,13 +91,14 @@ FUNC VOID Info_Mod_Samuel_HabZeug_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Samuel_HabZeug_15_00"); //Ich hab das Zeug.
 
-	B_GiveInvItems	(hero, self, ItFo_Water, 20);
-	B_GiveInvItems	(hero, self, ItFo_Melasse, 20);
+	Npc_RemoveInvItems	(hero, ItFo_Water, 20);
+	Npc_RemoveInvItems	(hero, ItFo_Melasse, 20);
+
+	B_ShowGivenThings	("20 Wasser und 20 Melasse gegeben");
 
 	AI_Output(self, hero, "Info_Mod_Samuel_HabZeug_14_01"); //Gut, dann haben wir unseren Rumvorrat gesichert.
 	AI_Output(self, hero, "Info_Mod_Samuel_HabZeug_14_02"); //Hier ist dein Gold.
 
-	CreateInvItems	(self, ItMi_Gold, 400);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 400);
 
 	B_GivePlayerXP	(200);
@@ -412,7 +415,6 @@ FUNC VOID Info_Mod_Samuel_AdanosWohltat2_Info()
 	AI_Output(hero, self, "Info_Mod_Samuel_AdanosWohltat2_15_00"); //Und?
 	AI_Output(self, hero, "Info_Mod_Samuel_AdanosWohltat2_14_01"); //Es hat lange gedauert, aber hier ist der Trank. Bring' ihn schleunigst zu Skip.
 
-	CreateInvItems	(self, ItPo_AdanosWohltat, 1);
 	B_GiveInvItems	(self, hero, ItPo_AdanosWohltat, 1);
 
 	AI_Output(hero, self, "Info_Mod_Samuel_AdanosWohltat2_15_02"); //Verstanden.
@@ -458,12 +460,12 @@ INSTANCE Info_Mod_Samuel_Pickpocket (C_INFO)
 	information	= Info_Mod_Samuel_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Samuel_Pickpocket_Condition()
 {
-	C_Beklauen	(54, ItMi_Gold, 190);
+	C_Beklauen	(84, ItFo_Addon_Rum, 19);
 };
 
 FUNC VOID Info_Mod_Samuel_Pickpocket_Info()

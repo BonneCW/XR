@@ -30,7 +30,7 @@ INSTANCE Info_Mod_Schoeppe_01_Pickpocket (C_INFO)
 	information	= Info_Mod_Schoeppe_01_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Schoeppe_01_Pickpocket_Condition()
