@@ -3554,12 +3554,12 @@ INSTANCE Info_Mod_Xardas_NW_Pickpocket (C_INFO)
 	information	= Info_Mod_Xardas_NW_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_210;
 };
 
 FUNC INT Info_Mod_Xardas_NW_Pickpocket_Condition()
 {
-	C_Beklauen	(150, ItMi_Gold, 3000);
+	C_Beklauen	(210, ItPo_MegaDrink, 1);
 };
 
 FUNC VOID Info_Mod_Xardas_NW_Pickpocket_Info()

@@ -207,12 +207,12 @@ INSTANCE Info_Mod_Zuris_Pickpocket (C_INFO)
 	information	= Info_Mod_Zuris_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Zuris_Pickpocket_Condition()
 {
-	C_Beklauen	(58, ItMi_Gold, 200);
+	C_Beklauen	(118, ItPo_Perm_Health, 1);
 };
 
 FUNC VOID Info_Mod_Zuris_Pickpocket_Info()
