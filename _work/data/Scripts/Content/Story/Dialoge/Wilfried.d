@@ -366,12 +366,12 @@ INSTANCE Info_Mod_Wilfried_Pickpocket (C_INFO)
 	information	= Info_Mod_Wilfried_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_40;
+	description	= Pickpocket_60;
 };
 
 FUNC INT Info_Mod_Wilfried_Pickpocket_Condition()
 {
-	C_Beklauen	(45, ItMi_Gold, 90);
+	C_Beklauen	(45, ItMi_Gold, 9);
 };
 
 FUNC VOID Info_Mod_Wilfried_Pickpocket_Info()

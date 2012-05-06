@@ -143,12 +143,12 @@ INSTANCE Info_Mod_Wedge_Pickpocket (C_INFO)
 	information	= Info_Mod_Wedge_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Wedge_Pickpocket_Condition()
 {
-	C_Beklauen	(74, ItMi_Gold, 300);
+	C_Beklauen	(74, ItMi_Gold, 150);
 };
 
 FUNC VOID Info_Mod_Wedge_Pickpocket_Info()

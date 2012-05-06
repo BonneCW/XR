@@ -17,6 +17,7 @@ FUNC INT Info_Mod_William_Hi_Condition()
 FUNC VOID Info_Mod_William_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_William_Hi_06_01"); //Ich bin William, der Fischer.
 };
 
@@ -97,7 +98,6 @@ FUNC VOID Info_Mod_William_HalvorHolFische_Info()
 	{
 		AI_Output(self, hero, "Info_Mod_William_HalvorHolFische_06_07"); //Hier hast du meinen Fang.
 
-		CreateInvItems	(self, ItFo_Fish, 10);
 		B_GiveInvItems	(self, hero, ItFo_Fish, 10);
 
 		Mod_HalvorHolFischeQuest = 2;
@@ -132,7 +132,6 @@ FUNC VOID Info_Mod_William_WaranDead_Info()
 	AI_Output(hero, self, "Info_Mod_William_WaranDead_15_00"); //Der Waran ist tot.
 	AI_Output(self, hero, "Info_Mod_William_WaranDead_06_01"); //Vielen Dank. Hier hast du meinen Fang.
 
-	CreateInvItems	(self, ItFo_Fish, 10);
 	B_GiveInvItems	(self, hero, ItFo_Fish, 10);
 
 	Mod_HalvorHolFischeQuest = 2;
@@ -150,12 +149,12 @@ INSTANCE Info_Mod_William_Pickpocket (C_INFO)
 	information	= Info_Mod_William_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_William_Pickpocket_Condition()
 {
-	C_Beklauen	(20, ItMi_Gold, 15);
+	C_Beklauen	(20, ItFo_Fish, 15);
 };
 
 FUNC VOID Info_Mod_William_Pickpocket_Info()

@@ -786,18 +786,26 @@ FUNC VOID Info_Mod_Wendel_Plagenquest_02_Info()
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_03"); //Jeder hatte die Pflicht eine bestimmte Anzahl an Tieren zu opfern.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_04"); //Einer ihrer Gründerväter war jedoch so geizig, dass er nicht Schafe oder Molerat, sondern Insekten opferte.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_05"); //Die Götter waren darüber so erzürnt, dass sie den Wunsch der Menschen nach reicher Tierpopulation vor allem auf die Insekten der Umgebung übertrugen.
+
 	B_Say	(hero, self, "$PLAGENQUEST04");
+
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_07"); //Nun, mit der chemischen Keule.
+
 	B_Say	(hero, self, "$PLAGENQUEST05");
+
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_09"); //Ja, lange Zeit war man völlig ratlos und es schien so, als müsse man die Stadt aufgeben.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_10"); //Doch dann wurde einem rechtschaffenden und ehrbaren Bürger namens Chemos ein Traum gesandt.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_11"); //Er erhielt die Anleitung zum Bau einer Waffe, welche die Plagegeister bannen konnte.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_12"); //Daher muss auch unser Brauch mit den Stadthämmern zum Kampf gegen die Insekten kommen.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_13"); //Damals unterschieden sich Hämmer und Keulen nämlich noch nicht grundlegend.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_14"); //Unser Gesetz dazu stammt erst aus etwas späterer Zeit, als die Hämmer ihre charakteristische Form erhielten und die Keulen aus praktischen Gründen ablösten.
+
 	B_Say	(hero, self, "$PLAGENQUEST06");
+
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_16"); //Nein, leider nicht mehr. Und die Anfertigung einer solchen Waffe ist nicht ganz unkompliziert. Ich habe die Anleitung gefunden ...
+
 	B_Say	(hero, self, "$PLAGENQUEST07");
+
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_18"); //Hier hast du eine Abschrift davon.
 
 	B_GiveInvItems	(self, hero, ItWr_Bauplan_ChemischeKeule, 1);
@@ -1038,12 +1046,12 @@ INSTANCE Info_Mod_Wendel_Pickpocket (C_INFO)
 	information	= Info_Mod_Wendel_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Wendel_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 500);
+	C_Beklauen	(79, ItMi_Gold, 230);
 };
 
 FUNC VOID Info_Mod_Wendel_Pickpocket_Info()

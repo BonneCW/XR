@@ -60,12 +60,12 @@ INSTANCE Info_Mod_Wild_Pickpocket (C_INFO)
 	information	= Info_Mod_Wild_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Wild_Pickpocket_Condition()
 {
-	C_Beklauen	(72, ItMi_Gold, 400);
+	C_Beklauen	(72, ItRw_Bolt, 23);
 };
 
 FUNC VOID Info_Mod_Wild_Pickpocket_Info()
