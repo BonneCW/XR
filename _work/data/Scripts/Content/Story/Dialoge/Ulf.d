@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Ulf_Hi_Condition()
 FUNC VOID Info_Mod_Ulf_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Ulf_Hi_03_01"); //Ich bin Ulf, meine Aufgabe ist es, den Wein des Klosters hier in der Stadt zu verkaufen.
 };
 
@@ -93,7 +94,6 @@ FUNC VOID Info_Mod_Ulf_AkahaschTot_Info()
 
 	B_GivePlayerXP	(100);
 
-	CreateInvItems	(self, ItMi_Gold, 50);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 };
 

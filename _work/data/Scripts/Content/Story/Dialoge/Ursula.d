@@ -175,12 +175,12 @@ INSTANCE Info_Mod_Ursula_Pickpocket (C_INFO)
 	information	= Info_Mod_Ursula_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90_Female;
 };
 
 FUNC INT Info_Mod_Ursula_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 1000);
+	C_Beklauen	(77, ItAt_ShadowFur, 1);
 };
 
 FUNC VOID Info_Mod_Ursula_Pickpocket_Info()

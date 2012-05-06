@@ -349,12 +349,12 @@ INSTANCE Info_Mod_Ulthar_Pickpocket (C_INFO)
 	information	= Info_Mod_Ulthar_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Ulthar_Pickpocket_Condition()
 {
-	C_Beklauen	(109, ItMi_Gold, 1000);
+	C_Beklauen	(169, ItMi_Gold, 1230);
 };
 
 FUNC VOID Info_Mod_Ulthar_Pickpocket_Info()
