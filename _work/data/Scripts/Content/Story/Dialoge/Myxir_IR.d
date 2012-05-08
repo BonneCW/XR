@@ -17,8 +17,8 @@ FUNC VOID Info_Mod_Myxir_IR_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Myxir_IR_Hi_12_00"); //(in die Höhle blickend) Ahh, herrlich ... Finsternis, Verdammnis, abscheuliche Geschöpfe sphärischer Manifestation.
 	AI_Output(hero, self, "Info_Mod_Myxir_IR_Hi_15_01"); //Nun, zumindest dir scheint es hier recht gut zu gefallen ...
-	AI_Output(self, hero, "Info_Mod_Myxir_IR_Hi_12_02"); //(zum Helden) Wie sollte es einen Verfechter dunkler Künste denn auch hier anders gehen?
-	AI_Output(self, hero, "Info_Mod_Myxir_IR_Hi_12_03"); //Blicke dich um ... Es ist ein einziger Schatz dunkler Magie, den es nur noch zu ergründen gilt.
+	AI_Output(self, hero, "Info_Mod_Myxir_IR_Hi_12_02"); //(zum Helden) Wie sollte es einem Verfechter dunkler Künste denn auch hier anders gehen?
+	AI_Output(self, hero, "Info_Mod_Myxir_IR_Hi_12_03"); //Blick dich um ... Es ist ein einziger Schatz dunkler Magie, den es nur noch zu ergründen gilt.
 	AI_Output(hero, self, "Info_Mod_Myxir_IR_Hi_15_04"); //Ja, dazu wirst du bestimmt noch Gelegenheit bekommen.
 };
 

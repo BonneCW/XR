@@ -18,13 +18,13 @@ FUNC INT Info_Mod_HofstaatHofnarr_Hi_Condition()
 
 FUNC VOID Info_Mod_HofstaatHofnarr_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_Hi_04_00"); //Ich grüße euch, werter Kehrwisch. Der Arsch hat mir von eurem Kommen berichtet.
-	AI_Output(hero, self, "Info_Mod_HofstaatHofnarr_Hi_15_01"); //Du bist das Orakel? Ich dachte du bist der Hofnarr.
+	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_Hi_04_00"); //Ich grüße Euch, werter Kehrwisch. Der Arsch hat mir von Eurem Kommen berichtet.
+	AI_Output(hero, self, "Info_Mod_HofstaatHofnarr_Hi_15_01"); //Du bist das Orakel? Ich dachte, du bist der Hofnarr.
 	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_Hi_04_02"); //Der bin ich auch.
 	AI_Output(hero, self, "Info_Mod_HofstaatHofnarr_Hi_15_03"); //Du bist der Hofnarr und das Orakel?
-	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_Hi_04_04"); //Der Einäugige ist unter den Blinden der König, doch der Weiße ist unter den Spinnern ein Narr.
+	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_Hi_04_04"); //Der Einäugige ist unter den Blinden der König, doch der Weise ist unter den Spinnern ein Narr.
 	AI_Output(hero, self, "Info_Mod_HofstaatHofnarr_Hi_15_05"); //Was soll das heißen?
-	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_Hi_04_06"); //Das jede Münze zwei Seiten hat, du nicht erwarten kannst, nur weil die Zahl oben liegt, die Zahl unten vorzufinden.
+	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_Hi_04_06"); //Dass jede Münze zwei Seiten hat und du nicht erwarten kannst, nur weil der Kopf oben liegt, die Zahl unten vorzufinden.
 	AI_Output(hero, self, "Info_Mod_HofstaatHofnarr_Hi_15_07"); //Ist das schon dein Orakelspruch?
 	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_Hi_04_08"); //Natürlich nicht, zuerst musst du immerhin deine Frage stellen.
 	AI_Output(hero, self, "Info_Mod_HofstaatHofnarr_Hi_15_09"); //Klar ... Meine Frage. Ich suche etwas, das den König wieder glücklich macht.
@@ -60,7 +60,7 @@ FUNC INT Info_Mod_HofstaatHofnarr_KingSorge_Condition()
 
 FUNC VOID Info_Mod_HofstaatHofnarr_KingSorge_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_KingSorge_04_00"); //Ich sehe Ihr hattet kein Glück beim König.
+	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_KingSorge_04_00"); //Ich sehe, Ihr hattet kein Glück beim König.
 	AI_Output(hero, self, "Info_Mod_HofstaatHofnarr_KingSorge_15_01"); //Glaubst du, der Sumpf war gar nicht die Antwort?
 	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_KingSorge_04_02"); //Ich mag vielleicht ein Narr sein, doch meine Aufgabe als Orakel nehme ich sehr ernst, werter Kehrwisch.
 	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_KingSorge_04_03"); //Wenn Ihr den Sumpf gesehen habt, so ist er auch die Antwort. Das Problem ist, dass Ihr ihn eben gesehen habt, der König nur davon hörte.
@@ -97,7 +97,7 @@ FUNC INT Info_Mod_HofstaatHofnarr_Transportsystem_Condition()
 FUNC VOID Info_Mod_HofstaatHofnarr_Transportsystem_Info()
 {
 	AI_Output(hero, self, "Info_Mod_HofstaatHofnarr_Transportsystem_15_00"); //Ich suche einen angenehmen Weg in die Sümpfe.
-	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_Transportsystem_04_01"); //Ich bin nur ein einfacher Narr, niemand der dir weiterhelfen könnte, werter Kehrwisch.
+	AI_Output(self, hero, "Info_Mod_HofstaatHofnarr_Transportsystem_04_01"); //Ich bin nur ein einfacher Narr, niemand, der dir weiterhelfen könnte, werter Kehrwisch.
 };
 
 INSTANCE Info_Mod_HofstaatHofnarr_Pickpocket (C_INFO)

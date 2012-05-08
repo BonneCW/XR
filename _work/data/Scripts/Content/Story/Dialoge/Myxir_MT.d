@@ -21,8 +21,8 @@ FUNC VOID Info_Mod_Myxir_Irdorath_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Myxir_Irdorath_15_00"); //Ich will mit einem Schiff zu einer Enklave von Xeres aufbrechen, um ...
 	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath_12_01"); //Was, in eine Region tiefer Finsternis, abscheulicher Blasphemie ...
-	AI_Output(hero, self, "Info_Mod_Myxir_Irdorath_15_02"); //Naja, es geht aber um die Rettung der ...
-	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath_12_03"); //(unterbricht, ohne Helden zuzuhören) ... und Artefakte dunkler Magie? Herrlich.
+	AI_Output(hero, self, "Info_Mod_Myxir_Irdorath_15_02"); //Na ja, es geht aber um die Rettung der ...
+	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath_12_03"); //(unterbricht, ohne zuzuhören) ... und Artefakte dunkler Magie? Herrlich.
 };
 
 INSTANCE Info_Mod_Myxir_Irdorath2 (C_INFO)
@@ -138,7 +138,7 @@ FUNC VOID Info_Mod_Myxir_GotoIgnaz_Info()
 	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_12_03"); //Damit können wir vielleicht das Kloster erpressen und so wertvolle Informationen über deren Magie erfahren!
 	AI_Output(hero, self, "Info_Mod_Myxir_GotoIgnaz_15_04"); //Wo soll ich anfangen zu suchen?
 	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_12_05"); //Das Amulett soll ein alter wirrer Alchemist vor einiger Zeit gekauft haben. Der Narr heißt Ignaz. Er lebt im Hafenviertel der Stadt Khorinis.
-	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_12_06"); //Gehe zu ihm und bringe das Artefakt zu mir!
+	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_12_06"); //Geh zu ihm und bringe das Artefakt zu mir!
 	AI_Output(hero, self, "Info_Mod_Myxir_GotoIgnaz_15_07"); //Was soll ich mit Ignaz machen?
 	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_12_08"); //Das liegt in deiner Hand!
 	AI_Output(hero, self, "Info_Mod_Myxir_GotoIgnaz_15_09"); //Gut.
@@ -570,7 +570,7 @@ FUNC INT Info_Mod_Myxir_Angebot_Condition()
 FUNC VOID Info_Mod_Myxir_Angebot_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Myxir_Angebot_12_00"); //(wütend) Was ist hier los?
-	AI_Output(hero, self, "Info_Mod_Myxir_Angebot_15_01"); //Kurgan hat mich angegriffen, als ich ihm erklärte, dass das Alte Lager gezwungen ist, härtere Maßnahmen zu ergreifen, falls sie uns nicht einen Teil der alten Mine verkaufen wollen.
+	AI_Output(hero, self, "Info_Mod_Myxir_Angebot_15_01"); //Kurgan hat mich angegriffen, als ich ihm erklärte, dass das Alte Lager gezwungen ist, härtere Maßnahmen zu ergreifen, falls sie uns nicht einen Teil der Alten Mine verkaufen wollen.
 	AI_Output(self, hero, "Info_Mod_Myxir_Angebot_12_02"); //Von der Mine wirst du jetzt nichts mehr sehen, und wenn Scar Wind davon bekommt und sich an das Alte Lager erinnern sollte, dann wird er mit den anderen wohl versuchen, das Lager einzunehmen, um seine alte Position wieder zu erlangen.
 	AI_Output(hero, self, "Info_Mod_Myxir_Angebot_15_03"); //Du solltest am besten jetzt verschwinden.
 
@@ -730,7 +730,7 @@ FUNC VOID Info_Mod_Myxir_Blut_Info()
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, hero, TROPHY_Blood))
 	{
 		AI_Output (self, other, "Info_Mod_Myxir_Blut_12_01"); //Gut. Hör zu. Es ist im Grunde ganz einfach.
-		AI_Output (self, other, "Info_Mod_Myxir_Blut_12_02"); //Du nimmst eine scharfe Klinge und schneidest sie irgendwo auf, am besten an der Hauptschlagader. Dann hältst du ein Fläschchen darunter und fängst das Blut ein.
+		AI_Output (self, other, "Info_Mod_Myxir_Blut_12_02"); //Du nimmst eine scharfe Klinge und schneidest dein Opfer irgendwo auf, am besten an der Hauptschlagader. Dann hältst du ein Fläschchen darunter und fängst das Blut ein.
 	};
 };
 

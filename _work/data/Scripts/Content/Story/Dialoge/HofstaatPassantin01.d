@@ -18,7 +18,7 @@ FUNC INT Info_Mod_HofstaatPassantin01_Fluffy_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin01_Fluffy_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Fluffy_16_00"); //Also der König hat seinen Hund aber schlecht unter Kontrolle ...
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Fluffy_16_00"); //Also, der König hat seinen Hund aber schlecht unter Kontrolle ...
 
 	Mod_SL_PartFluffy = 4;
 
@@ -45,7 +45,7 @@ FUNC INT Info_Mod_HofstaatPassantin01_Lochgraeber_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin01_Lochgraeber_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Lochgraeber_16_00"); //Hast du gehört? Irgend so ein Grünschnabel hat in nur einer Nacht ein Loch gegraben, das hundertmal tiefer war, als das, unseres Gräbers!
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Lochgraeber_16_00"); //Hast du gehört? Irgend so ein Grünschnabel hat in nur einer Nacht ein Loch gegraben, das hundert Mal tiefer war, als das unseres Gräbers!
 
 	Mod_SL_PartLochgraeber = 3;
 
@@ -99,7 +99,7 @@ FUNC INT Info_Mod_HofstaatPassantin01_Blind_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin01_Blind_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Blind_16_00"); //Hast du's schon gehört?! In Khorata können wir kein Freudenspender mehr verkaufen! Die glauben, dass es Blind macht!
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Blind_16_00"); //Hast du's schon gehört?! In Khorata können wir kein Freudenspender mehr verkaufen! Die glauben, dass es blind macht!
 
 	Mod_SL_PartBlind = 4;
 
@@ -128,7 +128,7 @@ FUNC INT Info_Mod_HofstaatPassantin01_Brunnen_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin01_Brunnen_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Brunnen_16_00"); //Sag mal, hast du dir das Schloss mal genauer angesehen? Das ist doch irgendwie schäbig und gar nicht Prunkvoll.
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Brunnen_16_00"); //Sag mal, hast du dir das Schloss mal genauer angesehen? Das ist doch irgendwie schäbig und gar nicht prunkvoll.
 
 	Mod_SL_PartBrunnen = 2;
 

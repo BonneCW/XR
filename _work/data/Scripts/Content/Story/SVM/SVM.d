@@ -766,4 +766,4 @@ INSTANCE SVM_23 (C_SVM)
 // 		Maximale SVMs
 // ***********************
 
-CONST INT SVM_MODULES =	26;
+CONST INT SVM_MODULES =	29;

@@ -131,10 +131,10 @@ FUNC VOID Info_Mod_Penner_Infos_F()
 	B_GiveInvItems	(hero, self, ItMi_Gold, 50);
 
 	AI_Output(self, hero, "Info_Mod_Penner_Infos_F_03_01"); //Die Schnecke bei den Feuermagiern?
-	AI_Output(self, hero, "Info_Mod_Penner_Infos_F_03_02"); //Ja… wart mal, da gab’s irgendeine lustige Geschichte in der Taverne.
-	AI_Output(self, hero, "Info_Mod_Penner_Infos_F_03_03"); //Irgendwas mit Alkohol und Klosterwein ... ja, genau, die war mal tatsächlich dort um das Wort Innos zu predigen und die Trinker zu bekehren.
+	AI_Output(self, hero, "Info_Mod_Penner_Infos_F_03_02"); //Ja ... wart mal, da gab’s irgendeine lustige Geschichte in der Taverne.
+	AI_Output(self, hero, "Info_Mod_Penner_Infos_F_03_03"); //Irgendwas mit Alkohol und Klosterwein ... ja, genau, die war mal tatsächlich dort, um das Wort Innos' zu predigen und die Trinker zu bekehren.
 	AI_Output(self, hero, "Info_Mod_Penner_Infos_F_03_04"); //Die ganzen Jungs haben dort natürlich erst mal gejohlt, als die da rein kam.
-	AI_Output(self, hero, "Info_Mod_Penner_Infos_F_03_05"); //Der Wirt hat ganz einen auf Gentleman gemacht und ihr 'nen Klosterwein angeboten.
+	AI_Output(self, hero, "Info_Mod_Penner_Infos_F_03_05"); //Der Wirt hat ganz einen auf Kavalier gemacht und ihr 'nen Klosterwein angeboten.
 	AI_Output(self, hero, "Info_Mod_Penner_Infos_F_03_06"); //Und sie? Stand erst mal zögerlich da und hat dann nach dem alkoholfreien Klosterwein gefragt, hähä.
 	AI_Output(self, hero, "Info_Mod_Penner_Infos_F_03_07"); //Wahrscheinlich wird ihr bei Alkohol ganz anders, wenn du verstehst, haha.
 
@@ -226,7 +226,7 @@ FUNC VOID Info_Mod_Penner_Kimon_Info()
 	AI_Output(hero, self, "Info_Mod_Penner_Kimon_15_00"); //Hallo! Ich brauche eine Information.
 	AI_Output(self, hero, "Info_Mod_Penner_Kimon_03_01"); //Dafür bin ich ja da. Was willst du wissen?
 	AI_Output(hero, self, "Info_Mod_Penner_Kimon_15_02"); //Ich suchen jemanden, der Freudenspender liefert. Du vielleicht?
-	AI_Output(self, hero, "Info_Mod_Penner_Kimon_03_03"); //Wo denkst du hin. Damit habe ich nichts zu tun. Und du wirst hier wohl keinen finden, der dir weiterhelfen kann.
+	AI_Output(self, hero, "Info_Mod_Penner_Kimon_03_03"); //Wo denkst du hin? Damit habe ich nichts zu tun.
 	AI_Output(hero, self, "Info_Mod_Penner_Kimon_15_04"); //Dann werde ich mich mal bei den Händlern umhören.
 };
 
@@ -254,7 +254,7 @@ FUNC VOID Info_Mod_Penner_Kimon2_Info()
 	AI_Output(hero, self, "Info_Mod_Penner_Kimon2_15_00"); //Ich schon wieder. Habe nichts gefunden. Aber der Morpheus behauptet, du wüsstest was.
 	AI_Output(self, hero, "Info_Mod_Penner_Kimon2_03_01"); //So, sagt er? Hmm, ich weiß nicht ...
 	AI_Output(hero, self, "Info_Mod_Penner_Kimon2_15_02"); //Nun rück schon raus. Es soll dein Schaden nicht sein.
-	AI_Output(self, hero, "Info_Mod_Penner_Kimon2_03_03"); //Hmm ... Erstens: Das wird teuer für dich. Zweites: Du erzählst niemand ein Sterbeswörtchen, darüber, sonst verpfeife ich dich beim Gericht.
+	AI_Output(self, hero, "Info_Mod_Penner_Kimon2_03_03"); //Hmm ... Erstens: Das wird teuer für dich. Zweitens: Du erzählst niemandem ein Sterbenswörtchen darüber, sonst verpfeife ich dich beim Gericht.
 	AI_Output(hero, self, "Info_Mod_Penner_Kimon2_15_04"); //Abgemacht. Ich halte dicht. Was willst du?
 	AI_Output(self, hero, "Info_Mod_Penner_Kimon2_03_05"); //Erst mal 300 Gold für die Info.
 };
@@ -282,8 +282,8 @@ FUNC INT Info_Mod_Penner_Kimon3_Condition()
 FUNC VOID Info_Mod_Penner_Kimon3_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Penner_Kimon3_15_00"); //Was kannst du mir darüber sagen?
-	AI_Output(self, hero, "Info_Mod_Penner_Kimon3_03_01"); //Also Pass auf: Mein alter Herr lebt auch hier in Relendel. Aber er ist nicht mehr richtig im Kopf. Hat sich in eine Höhle zurückgezogen.
-	AI_Output(self, hero, "Info_Mod_Penner_Kimon3_03_02"); //Ich kann ihn heute nicht mehr  verstehn. Der redet nur noch in Rätsel. Vielleicht wirst du ja daraus schlau.
+	AI_Output(self, hero, "Info_Mod_Penner_Kimon3_03_01"); //Also, pass auf: Mein alter Herr lebt auch hier in Relendel. Aber er ist nicht mehr richtig im Kopf. Hat sich in eine Höhle zurückgezogen.
+	AI_Output(self, hero, "Info_Mod_Penner_Kimon3_03_02"); //Ich kann ihn heute nicht mehr verstehen. Der redet nur noch in Rätseln. Vielleicht wirst du ja daraus schlau.
 	AI_Output(hero, self, "Info_Mod_Penner_Kimon3_15_03"); //Doch. Hört sich interessant an. Den besuche ich mal. Wo ist diese Höhle?
 	AI_Output(self, hero, "Info_Mod_Penner_Kimon3_03_04"); //Du kennst den Rundweg, wenn du zum Tal reinkommst?
 	AI_Output(hero, self, "Info_Mod_Penner_Kimon3_15_05"); //Ich denke ja.
@@ -315,13 +315,13 @@ FUNC VOID Info_Mod_Penner_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Penner_Hi_03_00"); //Eh! Haste mal 'ne Münze?
 	AI_Output(hero, self, "Info_Mod_Penner_Hi_15_01"); //Das hatten wir doch schon mal! Ich dachte, du hast genug Geld?
 	AI_Output(self, hero, "Info_Mod_Penner_Hi_03_02"); //Seit Anselm weg ist, werden meine, äh, Dienste nicht mehr so gerne gesehen.
-	AI_Output(self, hero, "Info_Mod_Penner_Hi_03_03"); //Dabei muss ich doch dringend mit der Kutsche nach Khorinis, weil meine Alte liegt im Sterbn.
+	AI_Output(self, hero, "Info_Mod_Penner_Hi_03_03"); //Dabei muss ich doch dringend mit der Kutsche nach Khorinis, weil meine Alte liegt im Sterben.
 	AI_Output(self, hero, "Info_Mod_Penner_Hi_03_04"); //Nu hab ich aber nich genuch Mäuse. Bei den Leuten hier is nix mehr zu holen.
 	AI_Output(hero, self, "Info_Mod_Penner_Hi_15_05"); //Na gut. Hier hast du 5 Gold. Aber versauf sie nicht.
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 5);
 
-	AI_Output(self, hero, "Info_Mod_Penner_Hi_03_06"); //Oh, danke Mann. Adanos soll dich schützn.
+	AI_Output(self, hero, "Info_Mod_Penner_Hi_03_06"); //Oh, danke, Mann. Adanos soll dich schützn.
 
 	Log_CreateTopic	(TOPIC_MOD_JG_PENNER, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_JG_PENNER, LOG_RUNNING);
@@ -353,11 +353,11 @@ FUNC INT Info_Mod_Penner_NochDa_Condition()
 
 FUNC VOID Info_Mod_Penner_NochDa_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Penner_NochDa_03_00"); //Hey!
+	AI_Output(self, hero, "Info_Mod_Penner_NochDa_03_00"); //He!
 	AI_Output(hero, self, "Info_Mod_Penner_NochDa_15_01"); //Nanu. Du bist ja immer noch da.
 	AI_Output(self, hero, "Info_Mod_Penner_NochDa_03_02"); //Wär längst weg, aber die Kutsche fährt nich.
 	AI_Output(hero, self, "Info_Mod_Penner_NochDa_15_03"); //Und warum nicht?
-	AI_Output(self, hero, "Info_Mod_Penner_NochDa_03_04"); //Weil wir hier keine Ferde ham ...
+	AI_Output(self, hero, "Info_Mod_Penner_NochDa_03_04"); //Weil wir hier keine Pferde ham ...
 	AI_Output(hero, self, "Info_Mod_Penner_NochDa_15_05"); //Dann soll der Kutscher Snapper einspannen. Oder besser Razor zähmen. Die laufen schneller.
 	AI_Output(self, hero, "Info_Mod_Penner_NochDa_03_06"); //Razor zähmen? Willst du mich verarschen? Aber was andres: Ich sehe, du hast da so 'ne Rune dabei.
 	AI_Output(hero, self, "Info_Mod_Penner_NochDa_15_07"); //Dieses kaputte Ding hier?
@@ -376,20 +376,20 @@ FUNC VOID Info_Mod_Penner_NochDa_Info()
 FUNC VOID Info_Mod_Penner_NochDa_B()
 {
 	AI_Output(hero, self, "Info_Mod_Penner_NochDa_B_15_00"); //Nein, das ist mir nicht ganz geheuer. Und vielleicht brauche ich die Rune noch.
-	AI_Output(self, hero, "Info_Mod_Penner_NochDa_B_03_01"); //O je, bis der Kutscher die Razor im Griff hat, ist meine Alte hinüber.
-	AI_Output(self, hero, "Info_Mod_Penner_NochDa_B_03_02"); //Was soll's. Haste wenigstens 'ne Pulle Schaps für mich? Muss mein Schmerz betäubn.
+	AI_Output(self, hero, "Info_Mod_Penner_NochDa_B_03_01"); //Oh je, bis der Kutscher die Razor im Griff hat, ist meine Alte hinüber.
+	AI_Output(self, hero, "Info_Mod_Penner_NochDa_B_03_02"); //Was soll's. Haste wenigstens 'ne Pulle Schnaps für mich? Muss mein Schmerz betäubn.
 
 	if (Npc_HasItems(hero, ItFo_Booze) >= 1)
 	{
 		AI_Output(hero, self, "Info_Mod_Penner_NochDa_B_15_03"); //Na gut, hier, ein Wacholder.
-		AI_Output(self, hero, "Info_Mod_Penner_NochDa_B_03_04"); //Danke Mann. Du rettest wenigstens mir das Lebn.
+		AI_Output(self, hero, "Info_Mod_Penner_NochDa_B_03_04"); //Danke, Mann. Du rettest wenigstens mir das Lebn.
 
 		B_GivePlayerXP	(50);
 	}
 	else
 	{
 		AI_Output(hero, self, "Info_Mod_Penner_NochDa_B_15_05"); //Nein, leider nicht.
-		AI_Output(self, hero, "Info_Mod_Penner_NochDa_B_03_06"); //O je, wenn mich der Schmerz mal nich umbringt.
+		AI_Output(self, hero, "Info_Mod_Penner_NochDa_B_03_06"); //Oh je, wenn mich der Schmerz mal nich umbringt.
 	};
 
 	Info_ClearChoices	(Info_Mod_Penner_NochDa);
@@ -403,17 +403,17 @@ FUNC VOID Info_Mod_Penner_NochDa_A()
 
 	B_GiveInvItems	(hero, self, ItMi_BrokenRune01, 1);
 
-	AI_Output(self, hero, "Info_Mod_Penner_NochDa_A_03_03"); //Also pass auf. Mein Alter war früher Pirat.
+	AI_Output(self, hero, "Info_Mod_Penner_NochDa_A_03_03"); //Also, pass auf. Mein Alter war früher Pirat.
 	AI_Output(self, hero, "Info_Mod_Penner_NochDa_A_03_04"); //Hat ganz schön was auf die Seite geschafft und den ganzen Schotter vergrabn.
-	AI_Output(self, hero, "Info_Mod_Penner_NochDa_A_03_05"); //Ich weiß nicht wo und den alten Knacker kann ich heut nich mehr verstehn.
-	AI_Output(self, hero, "Info_Mod_Penner_NochDa_A_03_06"); //Der red nur noch in Rätsel. Vielleicht wirst du ja draus schlau.
+	AI_Output(self, hero, "Info_Mod_Penner_NochDa_A_03_05"); //Ich weiß nicht, wo, und den alten Knacker kann ich heut nich mehr verstehn.
+	AI_Output(self, hero, "Info_Mod_Penner_NochDa_A_03_06"); //Der red nur noch in Rätseln. Vielleicht wirst du ja draus schlau.
 	AI_Output(hero, self, "Info_Mod_Penner_NochDa_A_15_07"); //Doch, hört sich interessant an. Den besuche ich mal. Wo ist diese Höhle?
 	AI_Output(self, hero, "Info_Mod_Penner_NochDa_A_03_08"); //Du kennst den Rundweg, wenn du zum Tal reinkommst?
 	AI_Output(hero, self, "Info_Mod_Penner_NochDa_A_15_09"); //Ich denke ja.
 	AI_Output(self, hero, "Info_Mod_Penner_NochDa_A_03_10"); //Also du latscht ... ähhh ... Wie heißt noch mal das, wo der Daumen rechts ist?
 	AI_Output(hero, self, "Info_Mod_Penner_NochDa_A_15_11"); //Links, du Pfeife!
 	AI_Output(self, hero, "Info_Mod_Penner_NochDa_A_03_12"); //Also links rum, den Weg entlang.
-	AI_Output(self, hero, "Info_Mod_Penner_NochDa_A_03_13"); //Irgendwann siehst du rechts auf dem Wall 'nen toten Baum. Sieht aus, wie ne Hand.
+	AI_Output(self, hero, "Info_Mod_Penner_NochDa_A_03_13"); //Irgendwann siehst du rechts auf dem Wall 'nen toten Baum. Sieht aus wie 'ne Hand.
 	AI_Output(self, hero, "Info_Mod_Penner_NochDa_A_03_14"); //Da wieder ... links bis zur Felswand. Hinter 'nem großen Brocken ist dann die Höhle.
 	AI_Output(hero, self, "Info_Mod_Penner_NochDa_A_15_15"); //Das sollte zu finden sein. Mach's gut.
 
@@ -448,16 +448,16 @@ FUNC INT Info_Mod_Penner_RuneBack_Condition()
 
 FUNC VOID Info_Mod_Penner_RuneBack_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Penner_RuneBack_15_00"); //Tag Sportsfreund. Bist du schon gereist?
+	AI_Output(hero, self, "Info_Mod_Penner_RuneBack_15_00"); //Tag, Sportsfreund. Bist du schon gereist?
 	AI_Output(self, hero, "Info_Mod_Penner_RuneBack_03_01"); //Nee. Das Ding funzt nich. Habs probiert, mir wurde schwindelig, hab so was wie blauen Dunst gesehen.
-	AI_Output(self, hero, "Info_Mod_Penner_RuneBack_03_02"); //Wie ich Augen wieder aufmach, sitz ich immer noch hier.
+	AI_Output(self, hero, "Info_Mod_Penner_RuneBack_03_02"); //Wie ich die Augen wieder aufmach, sitz ich immer noch hier.
 	AI_Output(hero, self, "Info_Mod_Penner_RuneBack_15_03"); //Das tut mir aber leid. Weißt du was?
 	AI_Output(self, hero, "Info_Mod_Penner_RuneBack_03_04"); //Nö.
 	AI_Output(hero, self, "Info_Mod_Penner_RuneBack_15_05"); //Du gibst mir das Teil zurück und ich gebe dir dafür 200 Gold.
-	AI_Output(self, hero, "Info_Mod_Penner_RuneBack_03_06"); //(schreit auf) 200 Mäuse! Das sind ja zehn Pullen, Quatsch, 20zich Pullen. Nee ...
+	AI_Output(self, hero, "Info_Mod_Penner_RuneBack_03_06"); //(schreit auf) 200 Mäuse! Das sind ja zehn Pullen, Quatsch, zwanzich Pullen. Nee ...
 	AI_Output(hero, self, "Info_Mod_Penner_RuneBack_15_07"); //Komm wieder runter. Und denk auch ans Essen. Der Wirt hat gepökeltes Lammfleisch.
-	AI_Output(self, hero, "Info_Mod_Penner_RuneBack_03_08"); //Gepökeltes Lamm. Bei Adanos! Hab ich zuletzt an Weihnachten gegessen. Vor zwei Jahrn oder so. Boahr ...
-	AI_Output(hero, self, "Info_Mod_Penner_RuneBack_15_09"); //Hier nimm und mach's gut!
+	AI_Output(self, hero, "Info_Mod_Penner_RuneBack_03_08"); //Gepökeltes Lamm. Bei Adanos! Hab ich zuletzt an Weihnachten gegessen. Vor zwei Jahrn oder so. Boah ...
+	AI_Output(hero, self, "Info_Mod_Penner_RuneBack_15_09"); //Hier, nimm, und mach's gut!
 
 	Npc_RemoveInvItems	(hero, ItMi_Gold, 200);
 	Npc_RemoveInvItems	(self, ItMi_BrokenRune01, 1);

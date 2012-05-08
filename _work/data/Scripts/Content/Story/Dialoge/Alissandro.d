@@ -44,11 +44,11 @@ FUNC INT Info_Mod_Alissandro_Dieb_Condition()
 FUNC VOID Info_Mod_Alissandro_Dieb_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Alissandro_Dieb_15_00"); //Was weißt du über den Dieb?
-	AI_Output(self, hero, "Info_Mod_Alissandro_Dieb_02_01"); //Also, normalerweise ist es zwischen 23 und 6 Uhr, wenn der Dieb zuschlägt. Es wird wohl einer der Gardisten sein, die zu der Zeit Nachtwache halten.
-	AI_Output(self, hero, "Info_Mod_Alissandro_Dieb_02_02"); //Das sind Bullit, Cutter, Jackal und Bloodwyn.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Dieb_02_01"); //Also, normalerweise ist es zwischen 23 und 6 Uhr, wenn er zuschlägt. Um die Zeit halten vier Gardisten Wache, die davon eigentlich etwas mitbekommen müssten:
+	AI_Output(self, hero, "Info_Mod_Alissandro_Dieb_02_02"); //Bullit, Cutter, Jackal und Bloodwyn. Dass sie bisher nichts bemerkt haben, macht sie in meinen Augen verdächtig. Zumindest einer wird seine Finger im Spiel haben.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Dieb_15_03"); //Verstehe, ich werde mich mal umhören.
 
-	B_LogEntry	(TOPIC_MOD_PDV, "Bullit, Cutter, Jackal und Bloodwyn sind verdächtigt, den Diebstahl begangen zu haben. Ich glaube, ich statte ihnen mal einen Besuch ab.");
+	B_LogEntry	(TOPIC_MOD_PDV, "Bullit, Cutter, Jackal und Bloodwyn werden verdächtigt, den Diebstahl begangen zu haben. Ich glaube, ich statte ihnen mal einen Besuch ab.");
 };
 
 INSTANCE Info_Mod_Alissandro_Unbekannter (C_INFO)
@@ -74,10 +74,10 @@ FUNC VOID Info_Mod_Alissandro_Unbekannter_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Alissandro_Unbekannter_02_00"); //Du wurdest doch von Thorus beauftragt, dem Unbekannten den Betrug nachzuweisen.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Unbekannter_15_01"); //Ja, und?
-	AI_Output(self, hero, "Info_Mod_Alissandro_Unbekannter_02_02"); //Ich weiß in welcher Hütte der Unbekannte schläft. Wenn du aus der Burg gehst und dann rechts Richtung Arena, dann die Hütte direkt neben Scatty's Stand.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Unbekannter_02_02"); //Ich weiß, in welcher Hütte der Unbekannte schläft. Wenn du aus der Burg gehst und dann rechts Richtung Arena, dann die Hütte direkt neben Scattys Stand.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Unbekannter_15_03"); //Danke.
 
-	B_LogEntry	(TOPIC_MOD_AL_ARENA, "Alissandro hat mir gesagt, wo ich die Hütte von dem Unbekannten finden kann. Es ist die Hütte direkt neben Scatty's Stand. Vielleicht sollte ich mich dort mal umsehen.");
+	B_LogEntry	(TOPIC_MOD_AL_ARENA, "Alissandro hat mir gesagt, wo ich die Hütte von dem Unbekannten finden kann. Es ist die Hütte direkt neben Scattys Stand. Vielleicht sollte ich mich dort mal umsehen.");
 
 	Mod_GorKarantoSchwach = 6;
 
@@ -109,12 +109,12 @@ FUNC VOID Info_Mod_Alissandro_ThorusTot_Info()
 	AI_Output(self, hero, "Info_Mod_Alissandro_ThorusTot_02_00"); //(benommen) Verdammt, ich habe nichts mehr tun können.
 	AI_Output(hero, self, "Info_Mod_Alissandro_ThorusTot_15_01"); //Was ist passiert?
 	AI_Output(self, hero, "Info_Mod_Alissandro_ThorusTot_02_02"); //Dieses Drecksschwein Bartholo hat uns zu dieser Höhle geführt, meinte, die Buddler würden sich auflehnen.
-	AI_Output(self, hero, "Info_Mod_Alissandro_ThorusTot_02_03"); //Als wir da waren, hat er uns mit einer Horde Gardisten überfallen. Thorus hat er dabei getötet, Arto und ich haben bis zum Umfallen gekämpft, aber wir haben gemerkt, dass wir gegen die Überzahl nicht gewinnen konnten.
-	AI_Output(self, hero, "Info_Mod_Alissandro_ThorusTot_02_04"); //Also hat mich Arto mit einer "Schlaf" Spruchrolle belegt, damit es aussieht, als wäre ich tot. Er konnte fliehen. Er meinte, wir treffen uns im alten Kastell, oben am Berg.
-	AI_Output(self, hero, "Info_Mod_Alissandro_ThorusTot_02_05"); //Er meinte, dass wir von da aus unseren Gegenschlag planen, denn Bartholo hat das Lager übernommen.
+	AI_Output(self, hero, "Info_Mod_Alissandro_ThorusTot_02_03"); //Als wir da waren, hat er uns mit einer Horde Gardisten überfallen. Thorus hat er dabei getötet, Arto und ich kämpften bis zum Umfallen, bis wir gemerkt haben, dass wir gegen die Überzahl nicht gewinnen konnten.
+	AI_Output(self, hero, "Info_Mod_Alissandro_ThorusTot_02_04"); //Also hat mich Arto mit einem Schlafzauber belegt, damit es aussieht, als wäre ich tot. Er konnte fliehen. Er meinte, wir treffen uns im alten Kastell, oben am Berg.
+	AI_Output(self, hero, "Info_Mod_Alissandro_ThorusTot_02_05"); //Er schlug vor, von da aus unseren Gegenschlag zu planen, denn Bartholo hat das Lager übernommen.
 	AI_Output(self, hero, "Info_Mod_Alissandro_ThorusTot_02_06"); //Ich werde euch hinführen.
 
-	B_LogEntry	(TOPIC_MOD_AL_SCHMUGGLER, "Alissandro hat erzählt, dass Bartholo nun das Lager übernommen hat. Makanius will Bartholo seine Hilfe anbieten, um ihm besser beobachten zu können, doch ich werde mich Alissandro anschliesen und mit ihm den Gegenschlag planen.");
+	B_LogEntry	(TOPIC_MOD_AL_SCHMUGGLER, "Alissandro hat erzählt, dass Bartholo nun das Lager übernommen hat. Makanius will Bartholo seine Hilfe anbieten, um ihn besser beobachten zu können, doch ich werde mich Alissandro anschließen und mit ihm den Gegenschlag planen.");
 
 	self.aivar[AIV_PARTYMEMBER] = TRUE;
 
@@ -159,7 +159,7 @@ FUNC INT Info_Mod_Alissandro_ZwischenstationA_Condition()
 
 FUNC VOID Info_Mod_Alissandro_ZwischenstationA_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Alissandro_ZwischenstationA_02_00"); //Hm, der Weg hier ist gut bewacht, wir sollten den anderen Weg bei Pacho nehmen.
+	AI_Output(self, hero, "Info_Mod_Alissandro_ZwischenstationA_02_00"); //Hm, der Weg hier ist gut bewacht, wir sollten einen anderen nehmen.
 
 	AI_StopProcessInfos	(self);
 
@@ -216,7 +216,7 @@ FUNC INT Info_Mod_Alissandro_Kastell_Condition()
 FUNC VOID Info_Mod_Alissandro_Kastell_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Alissandro_Kastell_02_00"); //Da wären wir. Hier werden wir uns auf den Gegenschlag vorbereiten.
-	AI_Output(self, hero, "Info_Mod_Alissandro_Kastell_02_01"); //Ich werde mich mit Arto beraten, komm morgen wieder.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Kastell_02_01"); //Ich werde mich mit Arto beraten. Komm morgen wieder.
 
 	B_SetTopicStatus	(TOPIC_MOD_AL_SCHMUGGLER, LOG_SUCCESS);
 
@@ -257,14 +257,14 @@ FUNC VOID Info_Mod_Alissandro_Botschafter_Info()
 	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_02_00"); //Es gibt ein Problem und ich will, dass du es löst.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Botschafter_15_01"); //Verstehe, was habe ich zu tun?
 	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_02_02"); //Wir haben Botschafter in alle Lager geschickt, um um Hilfe im Kampf gegen Bartholo zu bitten. Allerdings ist ein Botschafter nicht zurückgekommen.
-	AI_Output(hero, self, "Info_Mod_Alissandro_Botschafter_15_03"); //Wo habt ihr ihn hin geschickt?
-	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_02_04"); //In das Lager der Banditen, nahe der Trollschlucht.
+	AI_Output(hero, self, "Info_Mod_Alissandro_Botschafter_15_03"); //Wo habt ihr ihn hingeschickt?
+	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_02_04"); //In das Lager der Banditen nahe der Trollschlucht.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Botschafter_15_05"); //Und da wundert ihr euch, dass er nicht zurückgekommen ist?
-	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_02_06"); //Allerdings. Die Banditen würde ihn nicht ohne Vorwarnung umbringen. Wenn sie Interesse daran hätten, ihn zu töten, hätten sie versucht, Lösegeld für ihn zu kassieren.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_02_06"); //Allerdings. Die Banditen würden ihn nicht ohne Vorwarnung umbringen. Wenn sie Interesse daran hätten, ihn zu töten, hätten sie versucht, Lösegeld für ihn zu kassieren.
 
 	Log_CreateTopic	(TOPIC_MOD_AL_BOTSCHAFTER, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_AL_BOTSCHAFTER, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_AL_BOTSCHAFTER, "Alissandro schickt mich zum Banditenlager, um aufzuklären, was aus dem Botschafter wurde.");
+	B_LogEntry	(TOPIC_MOD_AL_BOTSCHAFTER, "Alissandro schickt mich zum Banditenlager, um aufzuklären, was aus dem Botschafter geworden ist.");
 
 	Wld_InsertNpc	(Mod_1875_GRD_Botschafter_MT, "OC1");
 	B_KillNpc	(Mod_1875_GRD_Botschafter_MT);
@@ -329,17 +329,17 @@ FUNC INT Info_Mod_Alissandro_EigentlichBereit_Condition()
 
 FUNC VOID Info_Mod_Alissandro_EigentlichBereit_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Alissandro_EigentlichBereit_02_00"); //Wir haben nun genug Leute, um das alte Lager zu stürmen, allerdings gibt es noch ein Problem.
+	AI_Output(self, hero, "Info_Mod_Alissandro_EigentlichBereit_02_00"); //Wir haben nun genug Leute, um das Alte Lager zu stürmen, allerdings gibt es noch ein Problem.
 	AI_Output(self, hero, "Info_Mod_Alissandro_EigentlichBereit_02_01"); //Wir kennen die Aufstellung der Gardisten nicht. Und genau da liegt dein nächster Auftrag.
 	AI_Output(hero, self, "Info_Mod_Alissandro_EigentlichBereit_15_02"); //Gut, was soll ich machen?
 	AI_Output(self, hero, "Info_Mod_Alissandro_EigentlichBereit_02_03"); //Du sollst in das Lager einbrechen und die Karte mit der Aufstellung stehlen.
 	AI_Output(hero, self, "Info_Mod_Alissandro_EigentlichBereit_15_04"); //Und wie soll ich in das Lager kommen?
-	AI_Output(self, hero, "Info_Mod_Alissandro_EigentlichBereit_02_05"); //Ich habe von den Verwandlungsmagiern einige "Verwandlung Hase" Spruchrollen bekommen, damit kommst du in das Lager.
+	AI_Output(self, hero, "Info_Mod_Alissandro_EigentlichBereit_02_05"); //Ich habe von den Verwandlungsmagiern einige Spruchrollen bekommen, damit kommst du in das Lager.
 
 	CreateInvItems	(self, ItSc_TrfRabbit, 3);
 	B_GiveInvItems	(self, hero, ItSc_TrfRabbit, 3);
 
-	AI_Output(self, hero, "Info_Mod_Alissandro_EigentlichBereit_02_06"); //Du darfst dich nicht zurückverwandeln bis du in Bartholo's Zimmer bist, der Ort, an dem früher Gomez wohnte.
+	AI_Output(self, hero, "Info_Mod_Alissandro_EigentlichBereit_02_06"); //Du darfst dich nicht zurückverwandeln, bis du in Bartholos Zimmer bist, der Ort, an dem früher Gomez wohnte.
 
 	B_StartOtherRoutine	(Mod_1106_EBR_Bartholo_MT, "SMALLTALK");
 	B_StartOtherRoutine	(Mod_1876_EBR_Bloodwyn_MT, "SMALLTALK");
@@ -375,7 +375,7 @@ FUNC VOID Info_Mod_Alissandro_HierPlan_Info()
 	
 	B_GiveInvItems	(hero, self, AL_Aufstellung, 1);
 
-	AI_Output(self, hero, "Info_Mod_Alissandro_HierPlan_02_01"); //Gut, Dann werde wir das Lager bald angreifen können.
+	AI_Output(self, hero, "Info_Mod_Alissandro_HierPlan_02_01"); //Gut, dann werden wir das Lager bald angreifen können.
 
 	B_GivePlayerXP	(500);
 
@@ -409,12 +409,12 @@ FUNC VOID Info_Mod_Alissandro_GotoJackal_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Alissandro_GotoJackal_02_00"); //Bald können wir das Lager angreifen, aber einen Schritt haben wir noch zu machen.
 	AI_Output(hero, self, "Info_Mod_Alissandro_GotoJackal_15_01"); //Und der wäre?
-	AI_Output(self, hero, "Info_Mod_Alissandro_GotoJackal_02_02"); //Dem Plan nach, sind Bartholos Leute sehr gut geordnet, so dass das Lager kaum verwundbar ist.
+	AI_Output(self, hero, "Info_Mod_Alissandro_GotoJackal_02_02"); //Dem Plan nach sind Bartholos Leute sehr gut geordnet, so dass das Lager kaum verwundbar ist.
 	AI_Output(hero, self, "Info_Mod_Alissandro_GotoJackal_15_03"); //Und wie soll ich dieses Problem lösen?
-	AI_Output(self, hero, "Info_Mod_Alissandro_GotoJackal_02_04"); //Der Mann, der dich gerettet hat, hat den Auftrag, die wichtigen Mitglieder des Lagers zu töten. Allerdings hat Bloodwyn ein Auge auf ihn, Bartholo schöpft vermutlich Verdacht.
+	AI_Output(self, hero, "Info_Mod_Alissandro_GotoJackal_02_04"); //Der Mann, der dich gerettet hat, hat den Auftrag, die wichtigen Mitglieder des Lagers zu töten. Allerdings hat Bloodwyn ein Auge auf ihn geworfen, Bartholo schöpft vermutlich Verdacht.
 	AI_Output(self, hero, "Info_Mod_Alissandro_GotoJackal_02_05"); //Nun musst du seinen Auftrag übernehmen.
 	AI_Output(hero, self, "Info_Mod_Alissandro_GotoJackal_15_06"); //Wer war der Kerl eigentlich?
-	AI_Output(self, hero, "Info_Mod_Alissandro_GotoJackal_02_07"); //Der Gardist Jackal, wenn du mehr Fragen hast, unterhalte dich mit ihm.
+	AI_Output(self, hero, "Info_Mod_Alissandro_GotoJackal_02_07"); //Der Gardist Jackal. Wenn du mehr Fragen hast, unterhalte dich mit ihm.
 	AI_Output(hero, self, "Info_Mod_Alissandro_GotoJackal_15_08"); //Wie soll ich in das Lager kommen?
 	AI_Output(self, hero, "Info_Mod_Alissandro_GotoJackal_02_09"); //Ich habe eine Teleportrune von den Heilmagiern bekommen, du kommst damit in das Haus der Magier.
 
@@ -458,13 +458,13 @@ FUNC INT Info_Mod_Alissandro_WarnungLagerEntdeckt_Condition()
 FUNC VOID Info_Mod_Alissandro_WarnungLagerEntdeckt_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Alissandro_WarnungLagerEntdeckt_15_00"); //Die Gardisten kennen unser Versteck, wir müssen fliehen.
-	AI_Output(self, hero, "Info_Mod_Alissandro_WarnungLagerEntdeckt_02_01"); //Verdammt, wir teilen uns auf. Geh zur Goblin Höhle auf dem Weg zum Sumpflager.
+	AI_Output(self, hero, "Info_Mod_Alissandro_WarnungLagerEntdeckt_02_01"); //Verdammt, wir teilen uns auf. Geh zur Goblinhöhle auf dem Weg zum Sumpflager.
 	AI_Output(self, hero, "Info_Mod_Alissandro_WarnungLagerEntdeckt_02_02"); //Benutze nicht den Bergpass, ich habe dir den Weg auf der Karte eingezeichnet.
 
 	CreateInvItems	(self, ItWr_MapToGobboHoehle, 1);
 	B_GiveInvItems	(self, hero, ItWr_MapToGobboHoehle, 1);
 
-	B_LogEntry	(TOPIC_MOD_AL_KillMission, "Alissandro wurde gewarnt wir werden uns aufteilen. Ich soll zur alten Goblinhöhle gehen, in der das Almanach versteckt war. Er hat mir den Weg auf der Karte eingezeichnet.");
+	B_LogEntry	(TOPIC_MOD_AL_KillMission, "Alissandro wurde gewarnt. Wir werden uns aufteilen. Ich soll zur alten Goblinhöhle gehen, in der der Almanach versteckt war. Er hat mir den Weg auf der Karte eingezeichnet.");
 
 	B_StartOtherRoutine	(Mod_1107_GRD_Jackal_MT, "WAITATKASTELL");
 
@@ -540,7 +540,7 @@ FUNC INT Info_Mod_Alissandro_GotoZufluchten_Condition()
 
 FUNC VOID Info_Mod_Alissandro_GotoZufluchten_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Alissandro_GotoZufluchten_02_00"); //Es ist nun Zeit, uns das Lager zurück zu erkämpfen. Ich will, dass du die anderen Zufluchten unserer Leute aufsuchst und sie in das Sektenlager schickst, wo wir eine Beratung abhalten werden.
+	AI_Output(self, hero, "Info_Mod_Alissandro_GotoZufluchten_02_00"); //Es ist nun Zeit, das Lager zurück zu erobern. Ich will, dass du die anderen Zufluchten unserer Leute aufsuchst und sie in das Sektenlager schickst, wo wir eine Beratung abhalten werden.
 	AI_Output(self, hero, "Info_Mod_Alissandro_GotoZufluchten_02_01"); //Jackal wird in der Zeit die verbündeten Gilden aufsuchen und ihnen diese Botschaft überbringen.
 	AI_Output(hero, self, "Info_Mod_Alissandro_GotoZufluchten_15_02"); //Wo sind die anderen Zufluchten?
 	AI_Output(self, hero, "Info_Mod_Alissandro_GotoZufluchten_02_03"); //Du bekommst diese Karte von mir.
@@ -638,7 +638,7 @@ FUNC INT Info_Mod_Alissandro_Eroberung_10_Condition()
 
 FUNC VOID Info_Mod_Alissandro_Eroberung_10_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Alissandro_Eroberung_10_02_00"); //Also, ich fasse es nochmal zusammen:
+	AI_Output(self, hero, "Info_Mod_Alissandro_Eroberung_10_02_00"); //Also, ich fasse es noch mal zusammen:
 	AI_Output(self, hero, "Info_Mod_Alissandro_Eroberung_10_02_01"); //1. Schritt: Wir dringen als Sumpfkrauthändler verkleidet in das Lager ein. Als Geleitschutz dienen uns zwei Templer.
 	AI_Output(self, hero, "Info_Mod_Alissandro_Eroberung_10_02_02"); //2. Schritt: Makanius gibt für unsere Leute im Lager das Zeichen, die Tore zu öffnen.
 	AI_Output(self, hero, "Info_Mod_Alissandro_Eroberung_10_02_03"); //3. Schritt: Die Banditen vom einen und die Garde vom anderen Tor stoßen zu uns und bekämpfen die Gardisten.
@@ -714,7 +714,7 @@ FUNC INT Info_Mod_Alissandro_WacheTotWoBartholo_Condition()
 
 FUNC VOID Info_Mod_Alissandro_WacheTotWoBartholo_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Alissandro_WacheTotWoBartholo_02_00"); //Jetzt müssen wir Bartholo suchen, er kann das Lager nicht verlassen haben.
+	AI_Output(self, hero, "Info_Mod_Alissandro_WacheTotWoBartholo_02_00"); //Jetzt müssen wir Bartholo suchen. Er kann das Lager nicht verlassen haben.
 	
 	B_StartOtherRoutine	(self, "GOTOMAKANIUS");
 	B_StartOtherRoutine	(Mod_1924_TPL_GorNaMon_MT, "STAYATOC");
@@ -744,12 +744,12 @@ FUNC INT Info_Mod_Alissandro_BartholoTot_Condition()
 FUNC VOID Info_Mod_Alissandro_BartholoTot_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Alissandro_BartholoTot_15_00"); //Das Lager ist nun wieder in unserer Hand.
-	AI_Output(self, hero, "Info_Mod_Alissandro_BartholoTot_02_01"); //Gut, nun ist der Kampf vorbei. In diesem Fall hast es verdient, belohnt zu werden.
+	AI_Output(self, hero, "Info_Mod_Alissandro_BartholoTot_02_01"); //Gut, nun ist der Kampf vorbei. In diesem Fall hast du es verdient, belohnt zu werden.
 	AI_Output(self, hero, "Info_Mod_Alissandro_BartholoTot_02_02"); //Komm morgen in den Thronsaal.
 
 	AI_StopProcessInfos	(self);
 	
-	B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Ich habe Bartholo in den Kerkern gefuden und getötet. Nun soll ich am nächsten Tag in den Thronsaal kommen.");
+	B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Ich habe Bartholo in den Kerkern gefunden und getötet. Nun soll ich am nächsten Tag in den Thronsaal kommen.");
 
 	B_StartOtherRoutine	(Mod_1874_HMG_Makanius_MT, "ALTESLAGER");
 	B_StartOtherRoutine	(self, "BOSS");
@@ -778,7 +778,7 @@ FUNC INT Info_Mod_Alissandro_BelohnungFuerEroberung_Condition()
 
 FUNC VOID Info_Mod_Alissandro_BelohnungFuerEroberung_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Alissandro_BelohnungFuerEroberung_02_00"); //Gut, du wurdest nun hier her berufen, um den höchsten Rang im Lager einzunehmen.
+	AI_Output(self, hero, "Info_Mod_Alissandro_BelohnungFuerEroberung_02_00"); //Gut, du wurdest nun hierher berufen, um den höchsten Rang im Lager einzunehmen.
 	AI_Output(self, hero, "Info_Mod_Alissandro_BelohnungFuerEroberung_02_01"); //Nimm diese Rüstung in Empfang und sprich mir nach:
 
 	CreateInvItems	(hero, Ebr_Armor_H2, 1);
@@ -791,7 +791,7 @@ FUNC VOID Info_Mod_Alissandro_BelohnungFuerEroberung_Info()
 	AI_Output(hero, self, "Info_Mod_Alissandro_BelohnungFuerEroberung_15_05"); //... ob Buddler, Schatten oder Erzbaron, ...
 	AI_Output(self, hero, "Info_Mod_Alissandro_BelohnungFuerEroberung_02_06"); //... dass ich das Lager gerecht leite und schütze.
 	AI_Output(hero, self, "Info_Mod_Alissandro_BelohnungFuerEroberung_15_07"); //... dass ich das Lager gerecht leite und schütze.
-	AI_Output(self, hero, "Info_Mod_Alissandro_BelohnungFuerEroberung_02_08"); //Nun gut, nun bist du Erzbaron des alten Lagers.
+	AI_Output(self, hero, "Info_Mod_Alissandro_BelohnungFuerEroberung_02_08"); //Nun gut, nun bist du Erzbaron des Alten Lagers.
 
 	B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Ich wurde von Alissandro zum Erzbaron ernannt.");
 	B_SetTopicStatus	(TOPIC_MOD_AL_EROBERUNG, LOG_SUCCESS);
@@ -828,14 +828,14 @@ FUNC VOID Info_Mod_Alissandro_WasTunAlsErzbaron_Info()
 	AI_Output(self, hero, "Info_Mod_Alissandro_WasTunAlsErzbaron_02_03"); //Unser momentanes Ziel ist es, unseren Einfluss auf Khorinis auszuweiten.
 	AI_Output(hero, self, "Info_Mod_Alissandro_WasTunAlsErzbaron_15_04"); //Und was kann ich dabei tun?
 	AI_Output(self, hero, "Info_Mod_Alissandro_WasTunAlsErzbaron_02_05"); //Geh in die Stadt und rede mit Larius, dem Statthalter.
-	AI_Output(hero, self, "Info_Mod_Alissandro_WasTunAlsErzbaron_15_06"); //Larius Posten haben doch die Paladine übernommen.
+	AI_Output(hero, self, "Info_Mod_Alissandro_WasTunAlsErzbaron_15_06"); //Larius' Posten haben doch die Paladine übernommen.
 	AI_Output(self, hero, "Info_Mod_Alissandro_WasTunAlsErzbaron_02_07"); //Verdammt, das wusste ich nicht.
 	AI_Output(hero, self, "Info_Mod_Alissandro_WasTunAlsErzbaron_15_08"); //Und was soll ich jetzt machen?
-	AI_Output(self, hero, "Info_Mod_Alissandro_WasTunAlsErzbaron_02_09"); //Der Schatten Whistler ist bereits in der Stadt. Unterhalte dich mit ihm.
+	AI_Output(self, hero, "Info_Mod_Alissandro_WasTunAlsErzbaron_02_09"); //Der Schatten Whistler ist bereits auf dem Weg in die Stadt. Unterhalte dich mit ihm.
 
 	Log_CreateTopic	(TOPIC_MOD_AL_AUSBREITUNGK, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_AL_AUSBREITUNGK, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_AL_AUSBREITUNGK, "Alissandro will, dass wir den Einfluss des Lagers in die Stadt ausweiten. Dafür soll ich Whistler vor dem Stadtor treffen.");
+	B_LogEntry	(TOPIC_MOD_AL_AUSBREITUNGK, "Alissandro will, dass wir den Einfluss des Lagers in die Stadt Khorinis ausweiten. Dafür soll ich Whistler vor dem Stadttor treffen.");
 
 	B_StartOtherRoutine	(Mod_1161_STT_Whistler_MT, "TOT");
 	AI_Teleport	(Mod_1161_STT_Whistler_MT, "TOT");
@@ -867,7 +867,7 @@ FUNC INT Info_Mod_Alissandro_Daemonenritter_Condition()
 FUNC VOID Info_Mod_Alissandro_Daemonenritter_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Alissandro_Daemonenritter_02_00"); //Wer sind diese Leute? Was wollen sie von uns?
-	AI_Output(hero, self, "Info_Mod_Alissandro_Daemonenritter_15_01"); //Das ist eine lange Geschichte für die wir aber nun keine Zeit haben. Es kommt sicher bald Verstärkung. Wir sollten abhauen, bevor noch mehr von den Kerlen hier sind.
+	AI_Output(hero, self, "Info_Mod_Alissandro_Daemonenritter_15_01"); //Das ist eine lange Geschichte, für die wir aber nun keine Zeit haben. Es kommt sicher bald Verstärkung. Wir sollten abhauen, bevor noch mehr von den Kerlen hier sind.
 	AI_Output(self, hero, "Info_Mod_Alissandro_Daemonenritter_02_02"); //Gut, folgt mir!
 
 	B_LogEntry	(TOPIC_MOD_AL_MINE, "Es ist zu spät, die Dämonenritter sind schon bei Alissandro. Wir konnten sie schlagen, allerdings wird bald Verstärkung kommen. Wir sollten fliehen.");
@@ -940,19 +940,19 @@ FUNC VOID Info_Mod_Alissandro_Flucht_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Alissandro_Flucht_15_00"); //Was jetzt?
 	AI_Output(self, hero, "Info_Mod_Alissandro_Flucht_02_01"); //Wir sind hier nicht lange sicher, vermutlich sucht man schon nach uns.
-	AI_Output(hero, self, "Info_Mod_Alissandro_Flucht_15_02"); //Dann treten wir denen die uns suchen in den Arsch.
+	AI_Output(hero, self, "Info_Mod_Alissandro_Flucht_15_02"); //Dann treten wir denen, die uns suchen, in den Arsch.
 	AI_Output(self, hero, "Info_Mod_Alissandro_Flucht_02_03"); //Dafür sind es zu viele und wir können keine Verstärkung anfordern. Wir müssen erst einmal fliehen und Unterstützung anfordern und da hätte ich einen Plan ...
 	AI_Output(hero, self, "Info_Mod_Alissandro_Flucht_15_04"); //Wie sieht der aus?
 	AI_Output(self, hero, "Info_Mod_Alissandro_Flucht_02_05"); //Die Paladine sind mit Gomez' Leuten verfeindet und sie sind eine starke Gilde, also können wir vielleicht auf ihre Unterstützung hoffen.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Flucht_15_06"); //Warum sollten die Paladine ausgerechnet uns helfen?
 	AI_Output(self, hero, "Info_Mod_Alissandro_Flucht_02_07"); //(belustigt) Oh, ich habe einen bemerkenswert guten Draht zu ihnen ...
 	AI_Output(hero, self, "Info_Mod_Alissandro_Flucht_15_08"); //Wie das?
-	AI_Output(self, hero, "Info_Mod_Alissandro_Flucht_02_09"); //Na gut, ich denke, ich sollte es dir erzählen ... Bevor ich mich auf Khorinis als Händler niederließ war ich Paladin in Myrtana und mit Hagen befreundet.
-	AI_Output(self, hero, "Info_Mod_Alissandro_Flucht_02_10"); //Wir schlugen zusammen die Schlacht von Ishtar als es von uns besetzt war und der Assassinenführer Zuben die Stadt zurückerobern wollte ... Nun, wir haben den Angriff abgewehrt, nun haben die Assassinen allerdings wieder die Macht in Varant...
-	AI_Output(self, hero, "Info_Mod_Alissandro_Flucht_02_11"); //Das tut allerdings nicht zur Sache. Ich bin jedenfalls mit Lord Hagen befreundet und ich denke, er wird uns helfen.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Flucht_02_09"); //Na gut, ich denke, ich sollte es dir erzählen ... Bevor ich mich auf Khorinis als Händler niederließ, war ich Paladin in Myrtana und mit Hagen befreundet.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Flucht_02_10"); //Wir schlugen zusammen die Schlacht von Ishtar, als es von uns besetzt war und der Assassinenführer Zuben die Stadt zurückerobern wollte ... Nun, wir haben den Angriff damals abgewehrt, heute haben die Assassinen allerdings wieder die Macht in Varant...
+	AI_Output(self, hero, "Info_Mod_Alissandro_Flucht_02_11"); //Das tut allerdings nichts zur Sache. Ich bin jedenfalls mit Lord Hagen befreundet und ich denke, er wird uns helfen.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Flucht_15_12"); //Gut, wie soll ich aber aus dem Minental herauskommen? Gomez' Leute bewachen alle Ausgänge.
-	AI_Output(self, hero, "Info_Mod_Alissandro_Flucht_02_13"); //Das ist wahr und macht es schwieriger. Nur haben die Wachen beim Austauschplatz dieses Zeug für sich entdeckt, dass sie in Khorata verkaufen ... Wie hieß es noch mal? Frustspender?
-	AI_Output(hero, self, "Info_Mod_Alissandro_Flucht_15_14"); //Freudenspender ... Ich verstehe. Ich werde versuchen Lord Hagen zu erreichen.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Flucht_02_13"); //Das ist wahr und macht es schwieriger. Nur haben die Wachen beim Austauschplatz dieses Zeug für sich entdeckt, das sie in Khorata verkaufen ... Wie hieß es noch mal? Frustspender?
+	AI_Output(hero, self, "Info_Mod_Alissandro_Flucht_15_14"); //Freudenspender ... Ich verstehe. Ich werde versuchen, Lord Hagen zu erreichen.
 	AI_Output(self, hero, "Info_Mod_Alissandro_Flucht_02_15"); //Gut, viel Glück!
 
 	Wld_InsertNpc	(DemonKnight_01,	"START");
@@ -962,7 +962,7 @@ FUNC VOID Info_Mod_Alissandro_Flucht_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_AL_FLUCHT, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_AL_FLUCHT, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_AL_FLUCHT, "Alissandro hat mich zu den Paladinen geschickt. Um das Minental zu verlassen sollte ich den weg beim Austauschplatz nehmen.");
+	B_LogEntry	(TOPIC_MOD_AL_FLUCHT, "Alissandro hat mich zu den Paladinen geschickt. Um das Minental zu verlassen, sollte ich den weg beim Austauschplatz nehmen.");
 };
 
 INSTANCE Info_Mod_Alissandro_Hagen (C_INFO)
@@ -987,7 +987,7 @@ FUNC INT Info_Mod_Alissandro_Hagen_Condition()
 FUNC VOID Info_Mod_Alissandro_Hagen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Alissandro_Hagen_15_00"); //Lord Hagen hat uns die Hilfe der Paladine zugesichert.
-	AI_Output(self, hero, "Info_Mod_Alissandro_Hagen_02_01"); //Sehr gut. Nun warten wir bis seine Leute kommen.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Hagen_02_01"); //Sehr gut. Nun warten wir, bis seine Leute kommen.
 
 	B_GivePlayerXP	(500);
 
@@ -1022,17 +1022,17 @@ FUNC INT Info_Mod_Alissandro_OricDa_Condition()
 FUNC VOID Info_Mod_Alissandro_OricDa_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Alissandro_OricDa_15_00"); //Ich hätte etwas mehr Paladine erwartet.
-	AI_Output(self, hero, "Info_Mod_Alissandro_OricDa_02_01"); //Das ist nur die Truppe mit der wir die ersten Schritte ausführen werden. Für die Befreiung der Mine werden mehr zu uns stoßen und für die Belagerung ebenfalls.
-	AI_Output(self, hero, "Info_Mod_Alissandro_OricDa_02_02"); //Mit Orics Trupe nehmen wir die Wege aus dem Minental ein. Wir werden nun gleich losgehen und die Alte Mine wie auch den Austauschplatz erobern.
+	AI_Output(self, hero, "Info_Mod_Alissandro_OricDa_02_01"); //Das ist nur die Truppe, mit der wir die ersten Schritte ausführen werden. Für die Befreiung der Mine werden mehr zu uns stoßen und für die Belagerung ebenfalls.
+	AI_Output(self, hero, "Info_Mod_Alissandro_OricDa_02_02"); //Mit Orics Truppe nehmen wir die Wege aus dem Minental ein. Wir werden nun gleich losgehen und die Alte Mine wie auch den Austauschplatz erobern.
 	AI_Output(hero, self, "Info_Mod_Alissandro_OricDa_15_03"); //Was machen wir mit den Beliarschreinen?
-	AI_Output(self, hero, "Info_Mod_Alissandro_OricDa_02_04"); //Die Orks in der Orkstadt sind mit allen Menschen verfeindet, die in der Festung unterhalten Beziehungen mit dem Schwarzmagier, der die Dämonenritter und die Beschwörer anführt ...
-	AI_Output(self, hero, "Info_Mod_Alissandro_OricDa_02_05"); //... dieser unterstützt Gomez Pläne allerdings nicht und hat die Altare für die Ritter die mit Gomez zusammenarbeiten gesperrt.
-	AI_Output(hero, self, "Info_Mod_Alissandro_OricDa_15_06"); //Das macht die Sache etwas leichter.
-	AI_Output(self, hero, "Info_Mod_Alissandro_OricDa_02_07"); //Gut. Wir ziehens jetzt durch. Folgen wir Oric.
+	AI_Output(self, hero, "Info_Mod_Alissandro_OricDa_02_04"); //Die Orks in der Orkstadt sind mit allen Menschen verfeindet. Die in der Festung unterhalten Beziehungen mit dem Schwarzmagier, der die Dämonenritter und die Beschwörer anführt ...
+	AI_Output(self, hero, "Info_Mod_Alissandro_OricDa_02_05"); //... dieser unterstützt Gomez' Pläne allerdings nicht und hat die Altäre für die Ritter, die mit Gomez zusammenarbeiten, gesperrt.
+	AI_Output(hero, self, "Info_Mod_Alissandro_OricDa_15_06"); //Das macht die Sache etwas einfacher.
+	AI_Output(self, hero, "Info_Mod_Alissandro_OricDa_02_07"); //Gut. Wir ziehen's jetzt durch. Folgen wir Oric.
 
 	Log_CreateTopic	(TOPIC_MOD_AL_ERSTERSCHRITT, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_AL_ERSTERSCHRITT, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_AL_ERSTERSCHRITT, "Wir sollen als erstes die Zugänge in das Minental einnehmen. Dabei stehen uns einige Paladine unter Oric zur Seite.");
+	B_LogEntry	(TOPIC_MOD_AL_ERSTERSCHRITT, "Wir sollen als Erstes die Zugänge in das Minental einnehmen. Dabei stehen uns einige Paladine unter Oric zur Seite.");
 
 	B_StartOtherRoutine	(self, "TOVM");
 	B_StartOtherRoutine	(Mod_7039_PAL_Oric_MT, "TOVM");
@@ -1109,7 +1109,7 @@ FUNC VOID Info_Mod_Alissandro_Lockvogel_Info()
 	AI_Output(self, hero, "Info_Mod_Alissandro_Lockvogel_02_03"); //Sie bringt dich in das Haus der Heilmagier. Sie sind im Haus gefangen, es wird bewacht.
 	AI_Output(self, hero, "Info_Mod_Alissandro_Lockvogel_02_04"); //Allerdings stehen sie auf unserer Seite. Sie werden dich also nicht verraten, wenn du dich in ihr Gebäude teleportierst.
 	AI_Output(self, hero, "Info_Mod_Alissandro_Lockvogel_02_05"); //Zusammen mit den Heilmagiern tötest du die Wache des Hauses und nimmst ihre Rüstung.
-	AI_Output(self, hero, "Info_Mod_Alissandro_Lockvogel_02_06"); //Gehe mit dieser zu Gomez und versuche ihn und sein Leute aus dem Lager in den Wald in der Nähe der Hütte zu locken.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Lockvogel_02_06"); //Gehe mit dieser zu Gomez und versuche ihn und seine Leute aus dem Lager in den Wald in der Nähe der Hütte zu locken.
 	AI_Output(self, hero, "Info_Mod_Alissandro_Lockvogel_02_07"); //Dort werden wir einen Hinterhalt vorbereiten.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Lockvogel_15_08"); //Klingt riskant. Woher soll ich wissen, dass die anderen Dämonenritter nicht alarmiert werden, wenn ich die Wache bei den Heilmagiern umbringe?
 	AI_Output(self, hero, "Info_Mod_Alissandro_Lockvogel_02_09"); //Überlass das Makanius. Er scheint einen Plan zu haben. Nun geh und erfülle deine Aufgabe ... viel Glück.
@@ -1176,9 +1176,9 @@ FUNC INT Info_Mod_Alissandro_Erzbaron_Condition()
 FUNC VOID Info_Mod_Alissandro_Erzbaron_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Alissandro_Erzbaron_15_00"); //Wie bist du Erzbaron geworden?
-	AI_Output(self, hero, "Info_Mod_Alissandro_Erzbaron_02_01"); //Ich war vorher Kaufmann aus Khorinis und habe Erz an- und verkauft. Also bin ich nach dem Fall der Barriere in das Minental gekommen, um zu sehen, wie es um das Erz steht.
-	AI_Output(self, hero, "Info_Mod_Alissandro_Erzbaron_02_02"); //So bin nun eben in das alte Lager gekommen, um nachzusehen, ob es noch Erz gibt.
-	AI_Output(self, hero, "Info_Mod_Alissandro_Erzbaron_02_03"); //Als ich mich mit Thorus unterhalten habe, erkannte er natürlich sofort mein Handelsgeschick und mein gutes Gedächtnis, und fragte, ob ich nicht mit ihm zusammenarbeiten wolle.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Erzbaron_02_01"); //Ich war vorher Kaufmann in Khorinis und habe Erz an- und verkauft. Also bin ich nach dem Fall der Barriere in das Minental gekommen, um zu sehen, wie es um das Erz steht.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Erzbaron_02_02"); //Mein Erkundigungen führten mich ins Alte Lager.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Erzbaron_02_03"); //Als ich mich ein Weilchen mit Thorus unterhalten hatte, fragte er mich, ob ich ihm nicht mit meinem Handelsgeschick unter die Arme greifen könnte.
 	AI_Output(self, hero, "Info_Mod_Alissandro_Erzbaron_02_04"); //Nun ja, da ich ja auch das Erz in Aussicht hatte, habe ich natürlich zugestimmt.
 	AI_Output(self, hero, "Info_Mod_Alissandro_Erzbaron_02_05"); //Und so arbeiten wir hier nun zusammen und ich bin sein oberster Berater.
 };

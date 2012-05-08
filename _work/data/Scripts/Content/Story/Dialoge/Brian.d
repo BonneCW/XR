@@ -78,7 +78,7 @@ FUNC VOID Info_Mod_Brian_HaradLehrling_A()
 	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_A_04_01"); //Du musst mir nicht danken.
 	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_A_04_02"); //Wenn ich dir wirklich helfen wollte, würde ich dich mit Händen und Füßen davon abhalten, Harads Lehrling zu werden.
 	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_A_04_03"); //Aber mir ist es ziemlich egal. Entweder bist du leidensfähig, setzt dich gegen ihn durch oder hörst nach kurzer Zeit entnervt auf.
-	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_A_04_04"); //Mir ist es egal. Ich werde jetzt sofort kündigen.
+	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_A_04_04"); //Ich werde jetzt sofort kündigen.
 
 	Info_ClearChoices	(Info_Mod_Brian_HaradLehrling);
 };
@@ -154,7 +154,7 @@ FUNC INT Info_Mod_Brian_Daemonisch_Condition()
 
 FUNC VOID Info_Mod_Brian_Daemonisch_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Brian_Daemonisch_04_00"); //(aufgeregt) Wie, was machst du hier? Du bist doch nicht einer von ihnen? Sei gewarnt, ich werde bis zum Tode kämpfen.
+	AI_Output(self, hero, "Info_Mod_Brian_Daemonisch_04_00"); //(aufgeregt) Wie, was machst du hier? Du bist doch nicht einer von ihnen? Sei gewarnt, ich werde bis zum Tod kämpfen.
 	AI_Output(hero, self, "Info_Mod_Brian_Daemonisch_15_01"); //Beruhig dich erst einmal. Wovon sprichst du?
 	AI_Output(self, hero, "Info_Mod_Brian_Daemonisch_04_02"); //(etwas ruhiger) Du scheinst nicht zu ihnen zu gehören.
 	AI_Output(self, hero, "Info_Mod_Brian_Daemonisch_04_03"); //Die schwarzen Schatten ... du musst wissen, dass die Stadt ...

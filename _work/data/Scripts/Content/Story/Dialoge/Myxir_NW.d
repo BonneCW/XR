@@ -24,13 +24,13 @@ FUNC INT Info_Mod_Myxir_NW_Irdorath3_Condition()
 
 FUNC VOID Info_Mod_Myxir_NW_Irdorath3_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Myxir_NW_Irdorath3_15_00"); //Tut mir leid, aber es scheint das wir zu viele sind. Ich kann dich doch nicht mitnehmen.
+	AI_Output(hero, self, "Info_Mod_Myxir_NW_Irdorath3_15_00"); //Tut mir leid, aber es scheint, dass wir zu viele sind. Ich kann dich doch nicht mitnehmen.
 	AI_Output(self, hero, "Info_Mod_Myxir_NW_Irdorath3_15_01"); //Wie war das? Ich rate dir ganz genau zu überlegen, was du jetzt sagst ...
 
 	Info_ClearChoices	(Info_Mod_Myxir_NW_Irdorath3);
 
 	Info_AddChoice	(Info_Mod_Myxir_NW_Irdorath3, "Nein, es geht leider wirklich nicht. Die Plätze sind voll.", Info_Mod_Myxir_NW_Irdorath3_B);
-	Info_AddChoice	(Info_Mod_Myxir_NW_Irdorath3, "Ähhm, war nur ein organisatorisches Missverständnis.", Info_Mod_Myxir_NW_Irdorath3_A);
+	Info_AddChoice	(Info_Mod_Myxir_NW_Irdorath3, "Ähm, war nur ein organisatorisches Missverständnis.", Info_Mod_Myxir_NW_Irdorath3_A);
 };
 
 FUNC VOID Info_Mod_Myxir_NW_Irdorath3_B()
@@ -57,7 +57,7 @@ FUNC VOID Info_Mod_Myxir_NW_Irdorath3_B()
 
 FUNC VOID Info_Mod_Myxir_NW_Irdorath3_A()
 {
-	AI_Output(hero, self, "Info_Mod_Myxir_NW_Irdorath3_A_15_00"); //Ähhm, war nur ein organisatorisches Missverständnis.
+	AI_Output(hero, self, "Info_Mod_Myxir_NW_Irdorath3_A_15_00"); //Ähm, war nur ein organisatorisches Missverständnis.
 
 	Info_ClearChoices	(Info_Mod_Myxir_NW_Irdorath3);
 };

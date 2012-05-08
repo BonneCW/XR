@@ -21,7 +21,7 @@ FUNC VOID Info_Mod_Turgor_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Turgor_Hi_05_01"); //Das wüsste ich auch ganz gern!
 	AI_Output(self, hero, "Info_Mod_Turgor_Hi_05_02"); //"Geh nach Relendel", haben sie gesagt, "dort hast du einen freien Markt für Sumpfkraut."
 	AI_Output(self, hero, "Info_Mod_Turgor_Hi_05_03"); //Jaahah, aber sie haben nicht verraten, dass es hier was viel Besseres gibt!
-	AI_Output(self, hero, "Info_Mod_Turgor_Hi_05_04"); //Etwas, dass das ganze beschissene Sumpfkraut unnötig macht!
+	AI_Output(self, hero, "Info_Mod_Turgor_Hi_05_04"); //Etwas, das das ganze beschissene Sumpfkraut unnötig macht!
 
 	Info_ClearChoices	(Info_Mod_Turgor_Hi);
 
@@ -33,7 +33,7 @@ FUNC VOID Info_Mod_Turgor_Hi_B()
 {
 	AI_TurnAway	(hero, self);
 
-	AI_Output(self, hero, "Info_Mod_Turgor_Hi_B_05_00"); //Und erst die Leute hier ... Hey, was soll das werden?!
+	AI_Output(self, hero, "Info_Mod_Turgor_Hi_B_05_00"); //Und erst die Leute hier ... He, was soll das werden?!
 
 	Info_ClearChoices	(Info_Mod_Turgor_Hi);
 
@@ -81,32 +81,6 @@ FUNC VOID Info_Mod_Turgor_WieLaeufts_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Turgor_WieLaeufts_15_00"); //Wie läuft's?
 	AI_Output(self, hero, "Info_Mod_Turgor_WieLaeufts_05_01"); //Haha, witzig. Das Sumpfkraut wächst, aber niemand will's haben. Kann's höchstens noch selbst rauchen.
-};
-
-INSTANCE Info_Mod_Turgor_Wasserfall (C_INFO)
-{
-	npc		= Mod_7397_PSINOV_Turgor_REL;
-	nr		= 1;
-	condition	= Info_Mod_Turgor_Wasserfall_Condition;
-	information	= Info_Mod_Turgor_Wasserfall_Info;
-	permanent	= 0;
-	important	= 0;
-	description	= "Irgendwas stimmt doch mit dem Wasserfall nicht ...";
-};
-
-FUNC INT Info_Mod_Turgor_Wasserfall_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Turgor_Hi))
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Turgor_Wasserfall_Info()
-{
-	AI_Output(hero, self, "Info_Mod_Turgor_Wasserfall_15_00"); //Irgendwas stimmt doch mit dem Wasserfall nicht ...
-	AI_Output(self, hero, "Info_Mod_Turgor_Wasserfall_05_01"); //Sag ich ja, hier sind alle meschugge. Das soll so'n Magier gewesen sein, der den Wasserfall aus dem Fels gezaubert hat.
-	AI_Output(self, hero, "Info_Mod_Turgor_Wasserfall_05_02"); //Frag mich nicht, woher das Wasser kommt ...
 };
 
 INSTANCE Info_Mod_Turgor_Freudenspender (C_INFO)

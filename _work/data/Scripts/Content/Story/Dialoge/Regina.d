@@ -30,7 +30,7 @@ FUNC VOID Info_Mod_Regina_Hi_Info()
 FUNC VOID Info_Mod_Regina_Hi_C()
 {
 	AI_Output(self, hero, "Info_Mod_Regina_Hi_C_16_00"); //Mein Bub wollte auch immer raus in die weite Welt, da kann ich dir was erzählen, ja.
-	AI_Output(hero, self, "Info_Mod_Regina_Hi_C_15_01"); //Ein andernmal.
+	AI_Output(hero, self, "Info_Mod_Regina_Hi_C_15_01"); //Ein andermal.
 	AI_Output(self, hero, "Info_Mod_Regina_Hi_C_16_02"); //Er sagte, Mutti, wenn ich groß bin, will ich über die Leute herrschen. Süß, nich?
 	AI_Output(self, hero, "Info_Mod_Regina_Hi_C_16_03"); //Vielleicht kennst du ja seinen Namen?
 	AI_Output(hero, self, "Info_Mod_Regina_Hi_C_15_04"); //Der da lautet?

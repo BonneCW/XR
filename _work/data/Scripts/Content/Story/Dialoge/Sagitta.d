@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Sagitta_Hi_Condition()
 
 FUNC VOID Info_Mod_Sagitta_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Sagitta_Hi_17_00"); //Hey, was machst du hier? Willst du meine Dienste als Alchemistin nutzen oder willst du einen meiner Tränke kaufen?
+	AI_Output(self, hero, "Info_Mod_Sagitta_Hi_17_00"); //He, was machst du hier? Willst du meine Dienste als Kräuterkundige nutzen oder willst du einen meiner Tränke kaufen?
 	
 	Log_CreateTopic	(TOPIC_MOD_HAENDLER_OHNELAGER, LOG_NOTE);
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_KHORINIS, LOG_NOTE);
@@ -49,10 +49,10 @@ FUNC VOID Info_Mod_Sagitta_AkilsHof_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Sagitta_AkilsHof_15_00"); //Gebieterin über die Kräuterheilkunst, ich benötige eure Unterstützung.
 	AI_Output(self, hero, "Info_Mod_Sagitta_AkilsHof_17_01"); //Selbstverständlich, sonst wärest du nicht hier. Worum geht es?
-	AI_Output(hero, self, "Info_Mod_Sagitta_AkilsHof_15_02"); //Seit dem Besuch einer finsteren Gestalt sind einige Leute auf Akil’s Hof erkrankt, leiden unter raschen körperlich Verfall.
+	AI_Output(hero, self, "Info_Mod_Sagitta_AkilsHof_15_02"); //Seit dem Besuch einer finsteren Gestalt sind einige Leute auf Akils Hof erkrankt, leiden unter raschem körperlichen Verfall.
 	AI_Output(hero, self, "Info_Mod_Sagitta_AkilsHof_15_03"); //Die beiden Brüder sind indes wie wild aufeinander losgegangen und Ehnim wurde dabei schwer verwundet.
 	AI_Output(self, hero, "Info_Mod_Sagitta_AkilsHof_17_04"); //Hmm, die Umstände lassen mich vermuten, dass wir es mit keiner alltäglichen Krankheit zu tun haben.
-	AI_Output(self, hero, "Info_Mod_Sagitta_AkilsHof_17_05"); //Es scheint sich eher um eine Art Fluch handeln zu können, bei welchem meine Heilkunst nichts auszurichten vermag.
+	AI_Output(self, hero, "Info_Mod_Sagitta_AkilsHof_17_05"); //Es scheint sich eher um eine Art Fluch zu handeln, bei welchem meine Heilkunst nichts auszurichten vermag.
 	AI_Output(self, hero, "Info_Mod_Sagitta_AkilsHof_17_06"); //Am ehesten wirst du wohl im Kloster Hilfe finden, wo du dich auch schleunigst hinbegeben solltest.
 	AI_Output(self, hero, "Info_Mod_Sagitta_AkilsHof_17_07"); //Hier noch ein heilender Trank für Ehnim. Seine Verletzung sollte dadurch kuriert werden.
 
@@ -95,7 +95,7 @@ FUNC VOID Info_Mod_Sagitta_Kraeuter_Info()
 	}
 	else
 	{
-		AI_Output(hero, self, "Info_Mod_Sagitta_Kraeuter_15_05"); //Naja, kann ganz nützlich sein, denke ich.
+		AI_Output(hero, self, "Info_Mod_Sagitta_Kraeuter_15_05"); //Na ja, kann ganz nützlich sein, denke ich.
 		AI_Output(self, hero, "Info_Mod_Sagitta_Kraeuter_17_06"); //So, denkst du ... Klingt ja fast nach einer fixen Idee.
 		AI_Output(self, hero, "Info_Mod_Sagitta_Kraeuter_17_07"); //Nein, wenn ich meine Zeit opfern soll, dann musst du zuerst eine Kleinigkeit für mich erledigen.
 		AI_Output(self, hero, "Info_Mod_Sagitta_Kraeuter_17_08"); //So wird sich zeigen, ob dein Interesse auch wirklich aufrichtig ist.
@@ -140,7 +140,7 @@ FUNC VOID Info_Mod_Sagitta_Kraeuter2_Info()
 	Npc_RemoveInvItems	(hero, ItPl_Mushroom_03, 1);
 	Npc_RemoveInvItems	(hero, ItPl_Blueplant, 2);
 
-	B_ShowGivenThings	("Heilknospe, Fliegenpilz und 2 Blauflieder gegeben");
+	B_ShowGivenThings	("Heilknospe, Fliegenpilz und zwei Blauflieder gegeben");
 
 	AI_Output(self, hero, "Info_Mod_Sagitta_Kraeuter2_17_01"); //Gut. Gib schon her. Ich muss die Gewächse noch am Alchemietisch verarbeiten.
 	AI_Output(self, hero, "Info_Mod_Sagitta_Kraeuter2_17_02"); //Sieh zu und lerne.
@@ -158,7 +158,7 @@ FUNC VOID Info_Mod_Sagitta_Kraeuter2_Info()
 	AI_Output(hero, self, "Info_Mod_Sagitta_Kraeuter2_15_05"); //Medizin? Aus Fliegenpilz?
 	AI_Output(self, hero, "Info_Mod_Sagitta_Kraeuter2_17_06"); //Du scheinst ungläubig. Das spricht nicht für dich.
 	AI_Output(self, hero, "Info_Mod_Sagitta_Kraeuter2_17_07"); //Jeder erfahrene Alchemist sollte wissen, dass Gifte in geringer Konzentration durchaus heilsame Wirkungen entfalten können.
-	AI_Output(self, hero, "Info_Mod_Sagitta_Kraeuter2_17_08"); //Sekob z.B. leidet unter Herzproblemen, was auch kein Wunder ist, bei dem notorischen Choleriker der er ist.
+	AI_Output(self, hero, "Info_Mod_Sagitta_Kraeuter2_17_08"); //Sekob zum Beispiel leidet unter Herzproblemen, was auch kein Wunder ist, bei dem notorischen Choleriker, der er ist.
 	AI_Output(self, hero, "Info_Mod_Sagitta_Kraeuter2_17_09"); //Das gering dosierte Fliegenpilzgift lindert seine Beschwerden ... und die Wutausbrüche.
 	AI_Output(self, hero, "Info_Mod_Sagitta_Kraeuter2_17_10"); //Und nun geh. Du weißt, was du zu tun hast.
 
@@ -227,34 +227,34 @@ FUNC INT Info_Mod_Sagitta_Irdorath_Condition()
 FUNC VOID Info_Mod_Sagitta_Irdorath_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_00"); //Ich muss diese Insel mit einem Schiff verlassen und benötige jemanden mit deinen Fähigkeiten in meiner Mannschaft.
-	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_01"); //Es geht um das Waohl von Khorinis ...
-	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_02"); //Was, ich auf einem Schiff, welche sich doch ihr ganzes Leben der Kräuterkunst auf dem Land gewidmet hat? Na du kommst auf Ideen ...
-	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_03"); //Aber erzähl doch erst einmal, worum es überhaupt bei dieser Exkursion geht?
-	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_04"); //Ein finsterer Magier versucht dieses Eiland zu unterwerfen und richtete bereits einigen Schaden an im Minental, der Stadt und auf Bauernhöfen ...
+	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_01"); //Es geht um das Wohl von Khorinis ...
+	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_02"); //Was? Ich, die ich mich doch mein ganzes Leben der Kräuterkunst auf dem Land gewidmet habe, auf einem Schiff? Na, du kommst auf Ideen ...
+	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_03"); //Aber erzähl doch erst einmal, worum es überhaupt bei dieser Exkursion geht.
+	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_04"); //Ein finsterer Magier versucht dieses Eiland zu unterwerfen und richtete bereits einigen Schaden im Minental, der Stadt und auf Bauernhöfen an.
 	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_05"); //Wir müssen eine nahe gelegene Insel aufsuchen, um seinen Machenschaften auf kurz oder lang ein Ende setzen zu können.
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_06"); //Was sagst du da?
-	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_07"); //Ja, in letzter Zeit haben sich die Fälle ungewöhnlicher Erkrankungen gehäuft, ich wurde so oft aufgesucht, wie niemals zuvor.
+	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_07"); //Ja, in letzter Zeit haben sich die Fälle ungewöhnlicher Erkrankungen gehäuft. Ich wurde so oft aufgesucht, wie niemals zuvor.
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_08"); //Kaum ein Tag mehr, da nicht Leute klagend zu mir kommen und um Linderung ihrer Leiden bitten.
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_09"); //(halblaut) Allmählich wird mir das zu viel ...
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_10"); //(wieder zum Helden) In Ordnung, wenn nur die Seereise dieses üble Treiben beenden kann, werde ich euch begleiten ...
 	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_11"); //(überrascht) Was, ja, wirklich?
-	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_12"); //Ja ... aber vorher musst du mir noch einige Gewächse besorgen ... sie sollen den Effekt von Seekrankheit deutlich mindern können ...
-	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_13"); //Ok, wohin muss ich laufen?
+	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_12"); //Ja ... aber vorher musst du mir noch einige Gewächse besorgen ... sie sollten die Seekrankheit deutlich mindern können.
+	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_13"); //Gut, wohin muss ich laufen?
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_14"); //Nirgendwohin.
 	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_15"); //Wie? Was dann?
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_16"); //Klettern und schwimmen. Die Harpienkralle – ein Pilz - wächst nur auf kahlen Berggipfeln und zwar – wie der Name schon verrät – in der Nähe von Harpien.
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_17"); //Du wirst eines ihrer Nester finden müssen und zwischen ihrem Unrat bestimmt die begehrte Zutat finden.
-	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_18"); //Früher sollen sie vor allem im Minental heimisch gewesen sein, aber mit dem Fall der Barriere könntest du vielleicht auch in der Nähe von Onar’s Hof in den Bergen Harpien antreffen.
-	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_19"); //Hmm, ok, was noch?
+	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_18"); //Früher sollen sie vor allem im Minental heimisch gewesen sein, aber mit dem Fall der Barriere könntest du vielleicht auch in der Nähe von Onars Hof in den Bergen Harpien antreffen.
+	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_19"); //Hmm, na schön, was noch?
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_20"); //Und dann musst du noch den Salzwassersprießling besorgen, der in der Nähe von Seichtwasserbarsten wächst.
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_21"); //Der Grund liegt darin ...
-	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_22"); //Jaja, dass die Pflanze in seinem Unrat wächst ...
-	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_23"); //Was, nein, absolut nicht, wie kommst du auf so etwas.
-	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_24"); //Der Seichtwasserbarsten ist die bevorzugte Beute seines fünf Meter größeren Vetters, dem Gierschlundleviathan und wächst in dessen Ausscheidungen.
+	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_22"); //Ja, ja, dass die Pflanze in seinem Unrat wächst ...
+	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_23"); //Was, nein, absolut nicht, wie kommst du auf so etwas?
+	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_24"); //Der Seichtwasserbarsten ist die bevorzugte Beute seines fünf Meter größeren Vetters, dem Gierschlundleviathan, und wächst in dessen Ausscheidungen.
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath_17_25"); //Du könntest an den seichten Stellen des Hafens und der vorgelagerten kleinen Insel fündig werden.
 	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath_15_26"); //Ähh ... ich mache mich dann mal auf den Weg.
 
-	B_LogEntry	(TOPIC_MOD_HQ_JACK, "Schön, Sagitta erklärt sich prinzipiell zu der Reise bereit ... nur muss ich ihr noch zwei Dinge besorgen: Die Harpienkralle, die auf Berggipfeln in Harpiennestern wächst – im Minental und in den Bergen um Onar’s Hof könnte ich welche finden – und den Salzwassersprießling, der irgendwo an seichten Stellen am Hafen und der kleinen Insel sprießen könnte.");
+	B_LogEntry	(TOPIC_MOD_HQ_JACK, "Schön, Sagitta erklärt sich prinzipiell zu der Reise bereit ... nur muss ich ihr noch zwei Dinge besorgen: die Harpienkralle, die auf Berggipfeln in Harpiennestern wächst – im Minental und in den Bergen um Onars Hof könnte ich welche finden – und den Salzwassersprießling, der irgendwo an seichten Stellen am Hafen und der kleinen Insel sprießen könnte.");
 
 	Wld_InsertItem	(ItPl_SalzwasserSprießling, "FP_ITEM_SALZWASSERSPRIESSLING_01");
 	Wld_InsertItem	(ItPl_SalzwasserSprießling, "FP_ITEM_SALZWASSERSPRIESSLING_02");
@@ -305,7 +305,7 @@ FUNC VOID Info_Mod_Sagitta_Irdorath2_Info()
 
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath2_17_01"); //Zeig mal ... tatsächlich.
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath2_17_02"); //Das hast du vortrefflich gemacht.
-	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath2_17_03"); //Du scheinst es wirklich ernst zu meinen, mit der Expedition ... und ich sehe keinen Hinderungsgrund mehr, warum auch ich mich ihr nicht anschließen sollte.
+	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath2_17_03"); //Du scheinst es wirklich ernst zu meinen mit der Expedition ... und ich sehe keinen Hinderungsgrund mehr, warum auch ich mich ihr nicht anschließen sollte.
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath2_17_04"); //Wir sehen uns beim Hafen.
 
 	B_LogEntry	(TOPIC_MOD_HQ_JACK, "Sagitta war sehr zufrieden und wird am Hafen auf den Beginn der Seereise warten.");
@@ -330,7 +330,7 @@ INSTANCE Info_Mod_Sagitta_Irdorath3 (C_INFO)
 	information	= Info_Mod_Sagitta_Irdorath3_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= "Tut mir leid, aber es scheint das wir zu viele sind.";
+	description	= "Tut mir leid, aber es scheint, dass wir zu viele sind.";
 };
 
 FUNC INT Info_Mod_Sagitta_Irdorath3_Condition()
@@ -347,7 +347,7 @@ FUNC INT Info_Mod_Sagitta_Irdorath3_Condition()
 
 FUNC VOID Info_Mod_Sagitta_Irdorath3_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath3_15_00"); //Tut mir leid, aber es scheint das wir zu viele sind. Ich kann dich doch nicht mitnehmen.
+	AI_Output(hero, self, "Info_Mod_Sagitta_Irdorath3_15_00"); //Tut mir leid, aber es scheint, dass wir zu viele sind. Ich kann dich doch nicht mitnehmen.
 	AI_Output(self, hero, "Info_Mod_Sagitta_Irdorath3_17_01"); //Schade. Ich gehe dann wieder zurück.
 
 	Mod_SagittaDabei = 0;
@@ -367,7 +367,7 @@ INSTANCE Info_Mod_Sagitta_OnarsSchnaps (C_INFO)
 	information	= Info_Mod_Sagitta_OnarsSchnaps_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Onar hat was falsches getrunken und jetzt schwere Magenverstimmungen.";
+	description	= "Onar hat was Falsches getrunken und jetzt schwere Magenverstimmungen.";
 };
 
 FUNC INT Info_Mod_Sagitta_OnarsSchnaps_Condition()
@@ -380,8 +380,8 @@ FUNC INT Info_Mod_Sagitta_OnarsSchnaps_Condition()
 
 FUNC VOID Info_Mod_Sagitta_OnarsSchnaps_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Sagitta_OnarsSchnaps_15_00"); //Onar hat was falsches getrunken und jetzt schwere Magenverstimmungen. Weißt du Abhilfe?
-	AI_Output(self, hero, "Info_Mod_Sagitta_OnarsSchnaps_17_01"); //Onar sagst du? Dieser alte Geizkragen? In diesem Fall kostet mein Heilmittel 100 Goldmünzen.
+	AI_Output(hero, self, "Info_Mod_Sagitta_OnarsSchnaps_15_00"); //Onar hat was Falsches getrunken und jetzt schwere Magenverstimmungen. Weißt du Abhilfe?
+	AI_Output(self, hero, "Info_Mod_Sagitta_OnarsSchnaps_17_01"); //Onar, sagst du? Dieser alte Geizkragen? In diesem Fall kostet mein Heilmittel 100 Goldmünzen.
 };
 
 INSTANCE Info_Mod_Sagitta_OnarsHeilmittel (C_INFO)

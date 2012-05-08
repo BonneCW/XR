@@ -97,105 +97,6 @@ FUNC VOID Info_Mod_Hilda_Argez2_Info()
 	B_SetTopicStatus	(TOPIC_MOD_HILDA_ARGEZ, LOG_SUCCESS);
 };
 
-INSTANCE Info_Mod_Hilda_Wein (C_INFO)
-{
-	npc		= Mod_909_BAU_Hilda_NW;
-	nr		= 1;
-	condition	= Info_Mod_Hilda_Wein_Condition;
-	information	= Info_Mod_Hilda_Wein_Info;
-	permanent	= 0;
-	important	= 1;
-};
-
-FUNC INT Info_Mod_Hilda_Wein_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Hilda_Hi))
-	&& (Kapitel > 1)
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Hilda_Wein_Info()
-{
-	AI_Output(self, hero, "Info_Mod_Hilda_Wein_17_00"); //Du kommst mir gerade recht!
-	AI_Output(hero, self, "Info_Mod_Hilda_Wein_15_01"); //Was gibt’s?
-	AI_Output(self, hero, "Info_Mod_Hilda_Wein_17_02"); //Wir wollen unsere Arbeiter mir etwas Wein belohnen, da sie arg schuften. Bitte besorge mir doch welchen. 6 Flaschen sollten reichen!
-
-	Info_ClearChoices	(Info_Mod_Hilda_Wein);
-
-	Info_AddChoice	(Info_Mod_Hilda_Wein, "Such dir jemand anderen.", Info_Mod_Hilda_Wein_B);
-	Info_AddChoice	(Info_Mod_Hilda_Wein, "Kein Problem.", Info_Mod_Hilda_Wein_A);
-};
-
-FUNC VOID Info_Mod_Hilda_Wein_B()
-{
-	AI_Output(hero, self, "Info_Mod_Hilda_Wein_B_15_00"); //Such dir jemand anderen.
-	AI_Output(self, hero, "Info_Mod_Hilda_Wein_B_17_01"); //Dann verzieh dich!
-
-	Info_ClearChoices	(Info_Mod_Hilda_Wein);
-
-	AI_StopProcessInfos	(self);
-
-	B_Göttergefallen(3, 1);
-};
-
-FUNC VOID Info_Mod_Hilda_Wein_A()
-{
-	AI_Output(hero, self, "Info_Mod_Hilda_Wein_A_15_00"); //Kein Problem.
-	AI_Output(self, hero, "Info_Mod_Hilda_Wein_A_17_01"); //Gut, und beeil dich bitte.
-
-	Info_ClearChoices	(Info_Mod_Hilda_Wein);
-
-	Log_CreateTopic	(TOPIC_MOD_HILDA_WEIN, LOG_MISSION);
-	B_SetTopicStatus	(TOPIC_MOD_HILDA_WEIN, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_HILDA_WEIN, "Hilda möchte, dass ich sechs Flaschen Wein für ihre Arbeiter besorge.");
-
-	Mod_HildaWeinQuest = TRUE;
-
-	AI_StopProcessInfos	(self);
-};
-
-INSTANCE Info_Mod_Hilda_HabWein (C_INFO)
-{
-	npc		= Mod_909_BAU_Hilda_NW;
-	nr		= 1;
-	condition	= Info_Mod_Hilda_HabWein_Condition;
-	information	= Info_Mod_Hilda_HabWein_Info;
-	permanent	= 0;
-	important	= 0;
-	description	= "Ich hab den Wein.";
-};
-
-FUNC INT Info_Mod_Hilda_HabWein_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Hilda_Wein))
-	&& (Mod_HildaWeinQuest == TRUE)
-	&& (Npc_HasItems(hero, ItFo_Wine) > 5)
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Hilda_HabWein_Info()
-{
-	AI_Output(hero, self, "Info_Mod_Hilda_HabWein_15_00"); //Ich hab den Wein.
-	AI_Output(self, hero, "Info_Mod_Hilda_HabWein_17_01"); //Danke sehr.
-	AI_Output(hero, self, "Info_Mod_Hilda_HabWein_15_01"); //Kein Problem.
-	AI_Output(self, hero, "Info_Mod_Hilda_HabWein_17_02"); //Hier, für deine Mühen.
-
-	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
-
-	B_GivePlayerXP	(100);
-
-	B_Göttergefallen(1, 1);
-
-	B_LogEntry	(TOPIC_MOD_HILDA_WEIN, "Ich habe Hilda den Wein gebracht.");
-	B_SetTopicStatus	(TOPIC_MOD_HILDA_WEIN, LOG_SUCCESS);
-
-	CurrentNQ += 1;
-};
-
 INSTANCE Info_Mod_Hilda_Pickpocket (C_INFO)
 {
 	npc		= Mod_909_BAU_Hilda_NW;
@@ -204,7 +105,7 @@ INSTANCE Info_Mod_Hilda_Pickpocket (C_INFO)
 	information	= Info_Mod_Hilda_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_60_Female;
 };
 
 FUNC INT Info_Mod_Hilda_Pickpocket_Condition()

@@ -19,10 +19,10 @@ FUNC INT Info_Mod_Lagerhauswache_Diebe_Condition()
 
 FUNC VOID Info_Mod_Lagerhauswache_Diebe_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe_11_00"); //Moment mal wohin des Wegs?
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe_11_00"); //Moment mal! Wohin des Wegs?
 	AI_Output(hero, self, "Info_Mod_Lagerhauswache_Diebe_15_01"); //Ins Lager, Kisten schleppen.
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe_11_02"); //Und wo ist deine Kiste? Schau, da drüben liegen sie.
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe_11_03"); //Los, schnapp dir 'ne Ladung Schweinefutter ... du wirst nicht fürs herumstehen bezahlt, faules Pack.
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe_11_02"); //Und wo ist Seine Kiste? Schau, da drüben liegen sie.
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe_11_03"); //Los, schnappe Er sich eine Ladung Schweinefutter ... Er wird nicht fürs Herumstehen bezahlt.
 
 	self.aivar[AIV_PASSGATE] = FALSE;
 };
@@ -48,8 +48,8 @@ FUNC INT Info_Mod_Lagerhauswache_Diebe2_Condition()
 
 FUNC VOID Info_Mod_Lagerhauswache_Diebe2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe2_11_00"); //Wart mal ... ahh, eine Kiste voll mit Schweinefutter für unser Lager.
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe2_11_01"); //Na los, weiter beweg dich Gesindel.
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe2_11_00"); //Warte Er mal ... ahh, eine Kiste voll mit Schweinefutter für unser Lager.
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe2_11_01"); //Na los, beweg Er sich weiter.
 
 	self.aivar[AIV_PASSGATE] = TRUE;
 };
@@ -288,7 +288,7 @@ FUNC INT Info_Mod_Lagerhauswache_SecondWarn_Condition()
 
 func void Info_Mod_Lagerhauswache_SecondWarn_Info()
 {
-	AI_Output (self, hero,"Info_Mod_Lagerhauswache_SecondWarn_11_00"); //Ich sag's dir zum letzten Mal. Einen Schritt weiter und du begibst dich in die Welt des Schmerzes!
+	AI_Output (self, hero,"Info_Mod_Lagerhauswache_SecondWarn_11_00"); //Ich sag's Ihm zum letzten Mal. Einen Schritt weiter und Er begibt sich in die Welt des Schmerzes!
 
 	hero.aivar[AIV_LastDistToWP] = Npc_GetDistToWP (hero,Lagerhauswache_Checkpoint);
 	self.aivar[AIV_Guardpassage_Status] = GP_SecondWarnGiven;	
@@ -326,7 +326,7 @@ func void Info_Mod_Lagerhauswache_Attack_Info()
 	hero.aivar[AIV_LastDistToWP] = 0;
 	self.aivar[AIV_Guardpassage_Status] = GP_NONE;						//wird auch in ZS_Attack resettet
 	
-	AI_Output (self, hero,"Info_Mod_Lagerhauswache_Attack_11_00"); //Du hast es so gewollt ...
+	AI_Output (self, hero,"Info_Mod_Lagerhauswache_Attack_11_00"); //Er hat es so gewollt ...
 
 	AI_StopProcessInfos	(self);	
 
