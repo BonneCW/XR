@@ -23,12 +23,12 @@ FUNC VOID Info_Mod_HofstaatTuersteher_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_HofstaatTuersteher_Hi_15_05"); //Und wie werde ich Mitglied des Hofstaates?
 	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_06_06"); //Da musst du zuerst mal die Staatsbürgerschaft für unser Reich hier erhalten.
 	AI_Output(hero, self, "Info_Mod_HofstaatTuersteher_Hi_15_07"); //Wie werde ich Staatsbürger?
-	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_06_08"); //Du hast zwei Möglichkeiten: Heirate eine aus unsrer Mitte oder eröffne einen Laden.
+	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_06_08"); //Du hast zwei Möglichkeiten: Heirate eine aus unserer Mitte oder eröffne einen Laden.
 	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_06_09"); //Ach ja, falls du vorhast zu heiraten, würd ich mich nicht an die Bauern halten.
 	AI_Output(hero, self, "Info_Mod_HofstaatTuersteher_Hi_15_10"); //Warum nicht?
 	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_06_11"); //Bauern sind nur Pöbel! Du wirst dann zwar als Pöbel angesehen, doch nicht als Mitglied des Staates. Dazu müsstest du mit der Bäuerin in ein Haus ziehen ...
 
-	B_LogEntry	(TOPIC_MOD_SEKTE_FREUDENSPENDER, "Der Türsteher des Schlosses sagt, dass ich es erst betreten darf, wenn ich Mitglied des Hofstaates bin. Um das zu erreichen hab ich zwei Möglichkeiten: Ich heirate eine Hofstaatlerin oder ich eröffne einen Laden. Sollte ich jedoch eine Bäuerin heiraten, dann muss ich mit ihr noch in die Burg ziehen.");
+	B_LogEntry	(TOPIC_MOD_SEKTE_FREUDENSPENDER, "Der Türsteher des Schlosses sagt, dass ich es erst betreten darf, wenn ich Mitglied des Hofstaates bin. Um das zu erreichen, hab ich zwei Möglichkeiten: Ich heirate eine Hofstaatlerin oder ich eröffne einen Laden. Sollte ich jedoch eine Bäuerin heiraten, dann muss ich mit ihr noch in die Burg ziehen.");
 };
 
 INSTANCE Info_Mod_HofstaatTuersteher_NachFest (C_INFO)

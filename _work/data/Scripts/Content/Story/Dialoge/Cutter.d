@@ -80,7 +80,7 @@ FUNC VOID Info_Mod_Cutter_Dokumente_Info()
 
 	B_ShowGivenThings	("Blätter des Lehrlings gegeben");
 
-	AI_Output(self, hero, "Info_Mod_Cutter_Dokumente_08_01"); //Hey, Mann, das ist aus dem Buch, von dem ich dir erzählt habe!
+	AI_Output(self, hero, "Info_Mod_Cutter_Dokumente_08_01"); //He, Mann, das ist aus dem Buch, von dem ich dir erzählt habe!
 
 	B_UseFakeScroll	();
 
@@ -125,7 +125,7 @@ FUNC INT Info_Mod_Cutter_Dieb_Condition()
 FUNC VOID Info_Mod_Cutter_Dieb_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cutter_Dieb_15_00"); //Waren wurden aus dem Haus der Erzbarone gestohlen, und ich glaube, dass du damit zu tun hast.
-	AI_Output(self, hero, "Info_Mod_Cutter_Dieb_08_01"); //(wütend) Was?! Du bezichtigst mich des Diebstahls? Ich bemühe mich darum, den Diebstahl endlich aufzuhalten, aber wenn ich wache, traut sich dieses Lumpenpack ja nicht, irgendetwas zu stehlen.
+	AI_Output(self, hero, "Info_Mod_Cutter_Dieb_08_01"); //(wütend) Was?! Ich soll klauen? Ich bemühe mich darum, den Diebstahl endlich aufzuhalten, aber wenn ich wache, traut sich dieses Lumpenpack ja nicht, irgendetwas zu stehlen.
 	AI_Output(self, hero, "Info_Mod_Cutter_Dieb_08_02"); //Mir genügt es ja zu sehen, dass dieser Fisk gestohlene Waren verkauft.
 
 	Mod_PDV_Cutter_Infos = 1;
