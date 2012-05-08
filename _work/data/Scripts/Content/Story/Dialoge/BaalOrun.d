@@ -20,6 +20,7 @@ FUNC INT Info_Mod_Orun_Hi_Condition()
 FUNC VOID Info_Mod_Orun_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Orun_Hi_12_01"); //Ich bin Baal Orun und kümmere mich um die Herstellung der Sumpfkrautstengel aus Sumpfkraut.
 };
 
@@ -37,7 +38,8 @@ INSTANCE Info_Mod_Orun_GotoTempel (C_INFO)
 FUNC INT Info_Mod_Orun_GotoTempel_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Namib_KarrasDa))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Orun_Hi))
+	&& ((Npc_KnowsInfo(hero, Info_Mod_Orun_Hi))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Cyrco_Hi)))
 	{
 		return 1;
 	};
