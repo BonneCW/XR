@@ -4,7 +4,7 @@ INSTANCE Mod_566_NONE_Brian_NW (Npc_Default)
 	name 		= "Brian"; 
 	guild 		= GIL_PAL;
 	id 			= 566;
-	voice 		= 4;
+	voice 		= 27;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

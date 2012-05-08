@@ -15,10 +15,10 @@ FUNC INT Info_Mod_Myxir_IR_Hi_Condition()
 
 FUNC VOID Info_Mod_Myxir_IR_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Myxir_IR_Hi_12_00"); //(in die Höhle blickend) Ahh, herrlich ... Finsternis, Verdammnis, abscheuliche Geschöpfe sphärischer Manifestation.
+	AI_Output(self, hero, "Info_Mod_Myxir_IR_Hi_28_00"); //(in die Höhle blickend) Ahh, herrlich ... Finsternis, Verdammnis, abscheuliche Geschöpfe sphärischer Manifestation.
 	AI_Output(hero, self, "Info_Mod_Myxir_IR_Hi_15_01"); //Nun, zumindest dir scheint es hier recht gut zu gefallen ...
-	AI_Output(self, hero, "Info_Mod_Myxir_IR_Hi_12_02"); //(zum Helden) Wie sollte es einem Verfechter dunkler Künste denn auch hier anders gehen?
-	AI_Output(self, hero, "Info_Mod_Myxir_IR_Hi_12_03"); //Blick dich um ... Es ist ein einziger Schatz dunkler Magie, den es nur noch zu ergründen gilt.
+	AI_Output(self, hero, "Info_Mod_Myxir_IR_Hi_28_02"); //(zum Helden) Wie sollte es einem Verfechter dunkler Künste denn auch hier anders gehen?
+	AI_Output(self, hero, "Info_Mod_Myxir_IR_Hi_28_03"); //Blick dich um ... Es ist ein einziger Schatz dunkler Magie, den es nur noch zu ergründen gilt.
 	AI_Output(hero, self, "Info_Mod_Myxir_IR_Hi_15_04"); //Ja, dazu wirst du bestimmt noch Gelegenheit bekommen.
 };
 
@@ -47,7 +47,7 @@ FUNC VOID Info_Mod_Myxir_IR_Hebel_Info()
 {
 	B_Say	(hero, self, "$IRDORATHHEBEL");
 
-	AI_Output(self, hero, "Info_Mod_Myxir_IR_Hebel_12_00"); //Natürlich. Wenn wir dadurch vielleicht weiterkommen ...
+	AI_Output(self, hero, "Info_Mod_Myxir_IR_Hebel_28_00"); //Natürlich. Wenn wir dadurch vielleicht weiterkommen ...
 
 	Mod_IR_Hebel = 1;
 
@@ -76,7 +76,7 @@ FUNC INT Info_Mod_Myxir_IR_Ambient01_Condition()
 
 FUNC VOID Info_Mod_Myxir_IR_Ambient01_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Myxir_IR_Ambient01_12_00"); //(anerkennend) So viele finstere Gestalten auf engstem Raum ... hier muss ein wahrer Meister der dunklen Künste am Werk gewesen sein.
+	AI_Output(self, hero, "Info_Mod_Myxir_IR_Ambient01_28_00"); //(anerkennend) So viele finstere Gestalten auf engstem Raum ... hier muss ein wahrer Meister der dunklen Künste am Werk gewesen sein.
 
 	AI_StopProcessInfos	(self);
 };
@@ -108,7 +108,7 @@ FUNC VOID Info_Mod_Myxir_IR_GehtLos_Info()
 {
 	B_Say	(hero, self, "$IRDORATHGEHTLOS");
 
-	AI_Output(self, hero, "Info_Mod_Myxir_IR_GehtLos_12_00"); //Selbstverständlich. Nichts sehnlicher wünsche ich, als das finstere Gut dieser Insel zu bergen und zu ergründen.
+	AI_Output(self, hero, "Info_Mod_Myxir_IR_GehtLos_28_00"); //Selbstverständlich. Nichts sehnlicher wünsche ich, als das finstere Gut dieser Insel zu bergen und zu ergründen.
 
 	Mod_IR_Dabei += 1;
 
@@ -144,7 +144,7 @@ FUNC VOID Info_Mod_Myxir_IR_GehBack_Info()
 {
 	B_Say	(hero, self, "$IRDORATHGEHBACK");
 
-	AI_Output(self, hero, "Info_Mod_Myxir_IR_GehBack_12_00"); //Gut, wenn du mich brauchst, weißt du ja, wo du mich findest.
+	AI_Output(self, hero, "Info_Mod_Myxir_IR_GehBack_28_00"); //Gut, wenn du mich brauchst, weißt du ja, wo du mich findest.
 
 	Mod_IR_Dabei -= 1;
 

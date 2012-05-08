@@ -6,7 +6,7 @@ instance Mod_1870_EBR_Alissandro_MT (Npc_Default)
 	npctype 	= 	npctype_main;
    	guild 		=	GIL_OUT;      
 	level 		=	70;
-	voice 		=	2;
+	voice 		=	28;
 	id 			=	1870;
 	flags = 2;
 

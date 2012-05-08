@@ -15,24 +15,24 @@ FUNC INT Info_Mod_Griselda_Hi_Condition()
 
 FUNC VOID Info_Mod_Griselda_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Griselda_Hi_17_00"); //Was, ein Besucher? Und dazu noch ein stattlicher Bursche.
-	AI_Output(self, hero, "Info_Mod_Griselda_Hi_17_01"); //Erstaunlich, dir ist es tatsächlich gelungen zu mir vorzudringen.
+	AI_Output(self, hero, "Info_Mod_Griselda_Hi_26_00"); //Was, ein Besucher? Und dazu noch ein stattlicher Bursche.
+	AI_Output(self, hero, "Info_Mod_Griselda_Hi_26_01"); //Erstaunlich, dir ist es tatsächlich gelungen zu mir vorzudringen.
 	AI_Output(hero, self, "Info_Mod_Griselda_Hi_15_02"); //Was?! Wer bist du?
-	AI_Output(self, hero, "Info_Mod_Griselda_Hi_17_03"); //(unschuldig) Ich? Ich bin nur ein altes Mütterchen.
+	AI_Output(self, hero, "Info_Mod_Griselda_Hi_26_03"); //(unschuldig) Ich? Ich bin nur ein altes Mütterchen.
 	AI_Output(hero, self, "Info_Mod_Griselda_Hi_15_04"); //Verborgen in einer Höhle mit Schneegeistern?! Das glaube ich kaum. Lass das Gerede und erkläre dich!
-	AI_Output(self, hero, "Info_Mod_Griselda_Hi_17_05"); //(ironisch) Ohh, ein Mann mit Köpfchen. Und er lässt sich nichts vorspielen.
-	AI_Output(self, hero, "Info_Mod_Griselda_Hi_17_06"); //Nun gut. Ich bin die Mutter einer Schwesternschaft, die sich den magischen Künsten verschrieben hat.
+	AI_Output(self, hero, "Info_Mod_Griselda_Hi_26_05"); //(ironisch) Ohh, ein Mann mit Köpfchen. Und er lässt sich nichts vorspielen.
+	AI_Output(self, hero, "Info_Mod_Griselda_Hi_26_06"); //Nun gut. Ich bin die Mutter einer Schwesternschaft, die sich den magischen Künsten verschrieben hat.
 	AI_Output(hero, self, "Info_Mod_Griselda_Hi_15_07"); //Schwesternschaft magischer Künste? Du sprichst nicht zufällig von Hexen?!
-	AI_Output(self, hero, "Info_Mod_Griselda_Hi_17_08"); //Ohh, welch schlimmes Wort ... "Hexe". Ich ziehe die Umschreibung "Schwester der dunklen Kunst" vor.
+	AI_Output(self, hero, "Info_Mod_Griselda_Hi_26_08"); //Ohh, welch schlimmes Wort ... "Hexe". Ich ziehe die Umschreibung "Schwester der dunklen Kunst" vor.
 	AI_Output(hero, self, "Info_Mod_Griselda_Hi_15_09"); //Was sollen diese Wortspielereien. Was machst du hier und was führst du im Schilde?
-	AI_Output(self, hero, "Info_Mod_Griselda_Hi_17_10"); //Was ich hier mache? Du kamst doch zu mir.
-	AI_Output(self, hero, "Info_Mod_Griselda_Hi_17_11"); //Die Frage muss also lauten: Was machst du hier?
+	AI_Output(self, hero, "Info_Mod_Griselda_Hi_26_10"); //Was ich hier mache? Du kamst doch zu mir.
+	AI_Output(self, hero, "Info_Mod_Griselda_Hi_26_11"); //Die Frage muss also lauten: Was machst du hier?
 	AI_Output(hero, self, "Info_Mod_Griselda_Hi_15_12"); //Nun ...
-	AI_Output(self, hero, "Info_Mod_Griselda_Hi_17_13"); //Nach Wortspielchen scheint dir nicht das Gemüt zu stehen. Vielleicht darf es dann eine Prüfung sein?
-	AI_Output(self, hero, "Info_Mod_Griselda_Hi_17_14"); //Ja, du siehst mir nach einem Mann aus, den es nach Prüfungen dürstet.
+	AI_Output(self, hero, "Info_Mod_Griselda_Hi_26_13"); //Nach Wortspielchen scheint dir nicht das Gemüt zu stehen. Vielleicht darf es dann eine Prüfung sein?
+	AI_Output(self, hero, "Info_Mod_Griselda_Hi_26_14"); //Ja, du siehst mir nach einem Mann aus, den es nach Prüfungen dürstet.
 	AI_Output(hero, self, "Info_Mod_Griselda_Hi_15_15"); //Prüfungen? Was meinst du?
-	AI_Output(self, hero, "Info_Mod_Griselda_Hi_17_16"); //Nun, Prüfungen eben. Sie stellen Menschen auf die Probe, zeigen, ob sie Köpfchen, Mut, Stärke, Geschick besitzen.
-	AI_Output(self, hero, "Info_Mod_Griselda_Hi_17_17"); //Bewährt man sich, so stehen Belohnungen in Aussicht. Was sagst du, mein Held?
+	AI_Output(self, hero, "Info_Mod_Griselda_Hi_26_16"); //Nun, Prüfungen eben. Sie stellen Menschen auf die Probe, zeigen, ob sie Köpfchen, Mut, Stärke, Geschick besitzen.
+	AI_Output(self, hero, "Info_Mod_Griselda_Hi_26_17"); //Bewährt man sich, so stehen Belohnungen in Aussicht. Was sagst du, mein Held?
 };
 
 INSTANCE Info_Mod_Griselda_Pruefung (C_INFO)
@@ -57,17 +57,17 @@ FUNC INT Info_Mod_Griselda_Pruefung_Condition()
 FUNC VOID Info_Mod_Griselda_Pruefung_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Griselda_Pruefung_15_00"); //Nun gut, ich kann es ja mal versuchen mit der Prüfung.
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_17_01"); //Du kannst nun zeigen, ob du so viel über die Schöpfung weißt, wie du zu wissen glaubst.
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_17_02"); //Genauer gesagt, den belebten Teil der Schöpfung, die Wesen und Kreaturen, welche auf dem Erdenrund wandeln, kriechen und krabbeln.
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_17_03"); //In der Arena wird ein Geschöpf erscheinen und du kannst unter mehreren Wesen eines wählen, welches dagegen antreten soll.
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_17_04"); //Dabei erhältst du im Kampf die Kontrolle über deine Kreatur und kannst sie nach deinem Willen lenken.
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_17_05"); //Triumphierst du, erhältst du eine Belohnung.
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_17_06"); //Versuchst du Kampf durch eine Rückverwandlung zu unterbrechen, gilt er als verloren.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_26_01"); //Du kannst nun zeigen, ob du so viel über die Schöpfung weißt, wie du zu wissen glaubst.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_26_02"); //Genauer gesagt, den belebten Teil der Schöpfung, die Wesen und Kreaturen, welche auf dem Erdenrund wandeln, kriechen und krabbeln.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_26_03"); //In der Arena wird ein Geschöpf erscheinen und du kannst unter mehreren Wesen eines wählen, welches dagegen antreten soll.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_26_04"); //Dabei erhältst du im Kampf die Kontrolle über deine Kreatur und kannst sie nach deinem Willen lenken.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_26_05"); //Triumphierst du, erhältst du eine Belohnung.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_26_06"); //Versuchst du Kampf durch eine Rückverwandlung zu unterbrechen, gilt er als verloren.
 
 	AI_PlayAni	(self, "T_PRACTICEMAGIC5");
 
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_17_07"); //So, wie du sehen wirst, befindet sich nun ein Wolf in der Arena. Triff deine Wahl.
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_17_08"); //Mit welcher Kreatur möchtest du kämpfen?
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_26_07"); //So, wie du sehen wirst, befindet sich nun ein Wolf in der Arena. Triff deine Wahl.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_26_08"); //Mit welcher Kreatur möchtest du kämpfen?
 
 	B_StartOtherRoutine	(self, "ARENA");
 
@@ -84,13 +84,13 @@ FUNC VOID Info_Mod_Griselda_Pruefung_Info()
 
 FUNC VOID Info_Mod_Griselda_Pruefung_FalscheWahl()
 {
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_FalscheWahl_17_00"); //Hohoho, ganz, wie du wünschst, mein Dummerchen.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_FalscheWahl_26_00"); //Hohoho, ganz, wie du wünschst, mein Dummerchen.
 };
 
 FUNC VOID Info_Mod_Griselda_Pruefung_C()
 {
 	AI_Output(hero, self, "Info_Mod_Griselda_Pruefung_C_15_00"); //Snapper.
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_C_17_01"); //So soll es sein.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung_C_26_01"); //So soll es sein.
 
 	B_GiveInvItems	(self, hero, ItSc_TrfSnapper, 1);
 
@@ -142,9 +142,9 @@ FUNC VOID Info_Mod_Griselda_Pruefung2_Info()
 {
 	if (Mod_Griselda_Arena == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_17_00"); //Ohh, ich bin enttäuscht von dir.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_17_01"); //Das pulsierende Leben wäre dein Lohn gewesen ... Ach, wie bedauerlich, ich vergaß zu erwähnen:
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_17_02"); //Deine Wettschuld soll nun auf dieselbe Weise getilgt werden. (lacht meckernd)
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_26_00"); //Ohh, ich bin enttäuscht von dir.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_26_01"); //Das pulsierende Leben wäre dein Lohn gewesen ... Ach, wie bedauerlich, ich vergaß zu erwähnen:
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_26_02"); //Deine Wettschuld soll nun auf dieselbe Weise getilgt werden. (lacht meckernd)
 
 		Mod_Griselda_Arena = -1;
 
@@ -152,15 +152,15 @@ FUNC VOID Info_Mod_Griselda_Pruefung2_Info()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_17_03"); //Nun, es war wohl nicht allzu schwer die rechte Wahl zu treffen.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_17_04"); //Zumindest kann ich nun ausschließen, dass ein kompletter Narr vor mir steht. (lacht)
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_17_05"); //Nichts für ungut, dein Lohn soll ein Teil der Lebenskraft deines getöteten Gegners sein.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_26_03"); //Nun, es war wohl nicht allzu schwer die rechte Wahl zu treffen.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_26_04"); //Zumindest kann ich nun ausschließen, dass ein kompletter Narr vor mir steht. (lacht)
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_26_05"); //Nichts für ungut, dein Lohn soll ein Teil der Lebenskraft deines getöteten Gegners sein.
 
 		B_RaiseAttribute_Rest (hero, ATR_HITPOINTS_MAX, 14);
 
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_17_06"); //So, nachdem du den ersten Kampf erfolgreich überstanden hast, gelüstet es dich da nicht nach einer Fortsetzung?
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_17_07"); //Auch jetzt gibt es wieder Preise für den glücklichen Knaben zu erringen.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_17_08"); //Diesmal sind es eine Handvoll Gegner, zwei Blutfliegen und zwei Spinnen ... nichts, wovor es sich zu fürchten gilt, nur Bodensatz des Tierreiches.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_26_06"); //So, nachdem du den ersten Kampf erfolgreich überstanden hast, gelüstet es dich da nicht nach einer Fortsetzung?
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_26_07"); //Auch jetzt gibt es wieder Preise für den glücklichen Knaben zu erringen.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung2_26_08"); //Diesmal sind es eine Handvoll Gegner, zwei Blutfliegen und zwei Spinnen ... nichts, wovor es sich zu fürchten gilt, nur Bodensatz des Tierreiches.
 	};
 };
 
@@ -187,7 +187,7 @@ FUNC INT Info_Mod_Griselda_Pruefung3_Condition()
 FUNC VOID Info_Mod_Griselda_Pruefung3_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Griselda_Pruefung3_15_00"); //Ich will kämpfen.
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung3_17_01"); //Triff deine Wahl.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung3_26_01"); //Triff deine Wahl.
 
 	Wld_InsertNpc	(Blutfliege_Griselda_01, "HEXE_ARENA_TEAM_01");
 	Wld_InsertNpc	(Blutfliege_Griselda_02, "HEXE_ARENA_TEAM_02");
@@ -207,7 +207,7 @@ FUNC VOID Info_Mod_Griselda_Pruefung3_Info()
 
 FUNC VOID Info_Mod_Griselda_Pruefung3_Wahl()
 {
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung3_Wahl_17_00"); //Wie du wünschst.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung3_Wahl_26_00"); //Wie du wünschst.
 };
 
 FUNC VOID Info_Mod_Griselda_Pruefung3_C()
@@ -266,8 +266,8 @@ FUNC VOID Info_Mod_Griselda_Pruefung4_Info()
 {
 	if (Mod_Griselda_Arena == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_17_00"); //Ohh, wie ernüchternd, den Giften hielt er nicht stand. Schade, denn als Lohn hätte dich die Fähigkeit erwartet, den Giften zu entrinnen ...
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_17_01"); //Ach, wie bedauerlich, ich vergaß zu erwähnen: Deine Wettschuld soll nun auf dieselbe Weise getilgt werden. (lacht meckernd)
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_26_00"); //Ohh, wie ernüchternd, den Giften hielt er nicht stand. Schade, denn als Lohn hätte dich die Fähigkeit erwartet, den Giften zu entrinnen ...
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_26_01"); //Ach, wie bedauerlich, ich vergaß zu erwähnen: Deine Wettschuld soll nun auf dieselbe Weise getilgt werden. (lacht meckernd)
 
 		Mod_Griselda_Arena = -1;
 
@@ -275,11 +275,11 @@ FUNC VOID Info_Mod_Griselda_Pruefung4_Info()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_17_02"); //Ohh, du hast mich überrascht. Du scheinst nicht auf den Kopf gefallen zu sein, mein Knabe. (lacht)
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_26_02"); //Ohh, du hast mich überrascht. Du scheinst nicht auf den Kopf gefallen zu sein, mein Knabe. (lacht)
 		AI_Output(hero, self, "Info_Mod_Griselda_Pruefung4_15_03"); //He, was sollte das mit dem Sumpfgolem!?
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_17_04"); //Ohh, ich vergaß wohl, ihn zu erwähnen. Aber ich sagte doch "eine Handvoll", und das können durchaus fünf sein.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_17_05"); //Gleichermaßen ist ein Golem auch kein Geschöpf der Tierwelt.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_17_06"); //Gräme dich also nicht, du hast dich mutig geschlagen und Giften getrotzt, so erhältst du auch deine Belohnung, die Kraft den Giften zu entrinnen.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_26_04"); //Ohh, ich vergaß wohl, ihn zu erwähnen. Aber ich sagte doch "eine Handvoll", und das können durchaus fünf sein.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_26_05"); //Gleichermaßen ist ein Golem auch kein Geschöpf der Tierwelt.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_26_06"); //Gräme dich also nicht, du hast dich mutig geschlagen und Giften getrotzt, so erhältst du auch deine Belohnung, die Kraft den Giften zu entrinnen.
 
 		if (Gift < 3)
 		{
@@ -288,12 +288,12 @@ FUNC VOID Info_Mod_Griselda_Pruefung4_Info()
 			PrintScreen	("Deine Widerstandskraft gegenüber Giften ist gestiegen.", -1, -1, FONT_SCREEN, 2);
 		};
 
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_17_07"); //Nun, nachdem du dich so wacker geschlagen hast, wirst du jetzt wohl kaum verzagen und der nächsten Prüfung mit Freuden entgegentreten.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_17_08"); //Dich erwarten nun die Elemente im Ring, ein Golem des Feuers und Eises gleichermaßen.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_17_09"); //Es scheint gewagt, gar unmöglich, beide niederzustrecken, so erlasse ich es dir auch, dich beiden zu stellen.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_17_10"); //Nur einen musst du in die Knie zwingen, und dein Kampf gilt als bestanden.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_17_11"); //Mehr noch, sie werden sich nicht von der Stelle rühren.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_17_12"); //Das klingt doch nach einem rechten Kinderspiel. Was sagst du, mein Täubchen?
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_26_07"); //Nun, nachdem du dich so wacker geschlagen hast, wirst du jetzt wohl kaum verzagen und der nächsten Prüfung mit Freuden entgegentreten.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_26_08"); //Dich erwarten nun die Elemente im Ring, ein Golem des Feuers und Eises gleichermaßen.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_26_09"); //Es scheint gewagt, gar unmöglich, beide niederzustrecken, so erlasse ich es dir auch, dich beiden zu stellen.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_26_10"); //Nur einen musst du in die Knie zwingen, und dein Kampf gilt als bestanden.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_26_11"); //Mehr noch, sie werden sich nicht von der Stelle rühren.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung4_26_12"); //Das klingt doch nach einem rechten Kinderspiel. Was sagst du, mein Täubchen?
 	};
 };
 
@@ -320,7 +320,7 @@ FUNC INT Info_Mod_Griselda_Pruefung5_Condition()
 FUNC VOID Info_Mod_Griselda_Pruefung5_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Griselda_Pruefung5_15_00"); //Ich bin so weit.
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung5_17_01"); //Gut, so triff dein Wahl.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung5_26_01"); //Gut, so triff dein Wahl.
 
 	Wld_InsertNpc	(Firegolem_Griselda_01, "HEXE_ARENA_TEAM_01");
 	Wld_InsertNpc	(Icegolem_Griselda_01, "HEXE_ARENA_TEAM_03");
@@ -338,7 +338,7 @@ FUNC VOID Info_Mod_Griselda_Pruefung5_Info()
 
 FUNC VOID Info_Mod_Griselda_Pruefung5_Wahl()
 {
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung5_Wahl_17_00"); //Ganz wie du wünschst.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung5_Wahl_26_00"); //Ganz wie du wünschst.
 };
 
 FUNC VOID Info_Mod_Griselda_Pruefung5_C()
@@ -397,9 +397,9 @@ FUNC VOID Info_Mod_Griselda_Pruefung6_Info()
 {
 	if (Mod_Griselda_Arena == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_17_00"); //Ohh, wurde es dem zarten Knaben heiß und kalt im Ringe.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_17_01"); //Schade, denn als Lohn hätte dich die Widerstandkraft gegen Hitze und Kälte erwartet.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_17_02"); //Ach, wie bedauerlich, ich vergaß zu erwähnen: Deine Wettschuld soll nun auf dieselbe Weise getilgt werden. (lacht meckernd)
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_00"); //Ohh, wurde es dem zarten Knaben heiß und kalt im Ringe.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_01"); //Schade, denn als Lohn hätte dich die Widerstandkraft gegen Hitze und Kälte erwartet.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_02"); //Ach, wie bedauerlich, ich vergaß zu erwähnen: Deine Wettschuld soll nun auf dieselbe Weise getilgt werden. (lacht meckernd)
 
 		Mod_Griselda_Arena = -1;
 
@@ -409,21 +409,21 @@ FUNC VOID Info_Mod_Griselda_Pruefung6_Info()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_17_03"); //(überrascht) Ohh ... du machst mich fast sprachlos.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_03"); //(überrascht) Ohh ... du machst mich fast sprachlos.
 		AI_Output(hero, self, "Info_Mod_Griselda_Pruefung6_15_04"); //Warum, es war doch ein Kinderspiel.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_17_05"); //Nun gut, nun gut. Dann sollst du noch mehr dieser Spiele haben.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_17_06"); //Zuvor jedoch die Belohnung dafür, dass du den Elementen getrotzt hast. Die Widerstandkraft gegen sie soll in dir wachsen.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_05"); //Nun gut, nun gut. Dann sollst du noch mehr dieser Spiele haben.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_06"); //Zuvor jedoch die Belohnung dafür, dass du den Elementen getrotzt hast. Die Widerstandkraft gegen sie soll in dir wachsen.
 
 		PrintScreen	("+5 Schutz vor Feuer und Magie", -1, -1, FONT_SCREEN, 2);
 
 		hero.protection[PROT_FIRE] += 5;
 		hero.protection[PROT_MAGIC] += 5;
 
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_17_07"); //So, bereit für die nächste Runde?
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_17_08"); //Als nächstes stellen sich dir drei langsame, träge Untote entgegen. Und dies nicht mal zu gleicher Zeit.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_17_09"); //Erst, wenn du einen bezwungen hast, erscheint der nächste.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_17_10"); //Ich hoffe, du bist nicht gekränkt, wenn ich dich mit dieser anspruchslosen Aufgabe betraue.
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_17_11"); //Wenn du bereit bist, so triff deine Wahl.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_07"); //So, bereit für die nächste Runde?
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_08"); //Als nächstes stellen sich dir drei langsame, träge Untote entgegen. Und dies nicht mal zu gleicher Zeit.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_09"); //Erst, wenn du einen bezwungen hast, erscheint der nächste.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_10"); //Ich hoffe, du bist nicht gekränkt, wenn ich dich mit dieser anspruchslosen Aufgabe betraue.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_11"); //Wenn du bereit bist, so triff deine Wahl.
 
 		AI_StopProcessInfos	(self);
 
@@ -454,7 +454,7 @@ FUNC INT Info_Mod_Griselda_Pruefung7_Condition()
 FUNC VOID Info_Mod_Griselda_Pruefung7_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Griselda_Pruefung7_15_00"); //Weiter geht's.
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung7_17_01"); //Welches Wesen soll es diesmal sein?
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung7_26_01"); //Welches Wesen soll es diesmal sein?
 
 	Wld_InsertNpc	(Zombie_Griselda_01, "HEXE_ARENA_TEAM_01");
 
@@ -471,7 +471,7 @@ FUNC VOID Info_Mod_Griselda_Pruefung7_Info()
 
 FUNC VOID Info_Mod_Griselda_Pruefung7_Wahl()
 {
-	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung7_Wahl_17_00"); //Wie du wünschst.
+	AI_Output(self, hero, "Info_Mod_Griselda_Pruefung7_Wahl_26_00"); //Wie du wünschst.
 };
 
 FUNC VOID Info_Mod_Griselda_Pruefung7_C()
@@ -530,9 +530,9 @@ FUNC VOID Info_Mod_Griselda_Pruefung8_Info()
 {
 	if (Mod_Griselda_Arena == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_17_00"); //Ohh, hat das Knäblein gekränkelt?
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_17_01"); //Schade, denn als Lohn hätte dich die Widerstandkraft gegen Krankheiten erwartet ...
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_17_02"); //Ach, wie bedauerlich, ich vergaß zu erwähnen: Deine Wettschuld soll nun auf dieselbe Weise getilgt werden. (lacht meckernd)
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_26_00"); //Ohh, hat das Knäblein gekränkelt?
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_26_01"); //Schade, denn als Lohn hätte dich die Widerstandkraft gegen Krankheiten erwartet ...
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_26_02"); //Ach, wie bedauerlich, ich vergaß zu erwähnen: Deine Wettschuld soll nun auf dieselbe Weise getilgt werden. (lacht meckernd)
 
 		Mod_Griselda_Arena = -1;
 
@@ -540,7 +540,7 @@ FUNC VOID Info_Mod_Griselda_Pruefung8_Info()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_17_03"); //Erstaunlich, selbst dem Hauch der Pest wusstest du durch geschickte Wahl zu Widerstehen.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_26_03"); //Erstaunlich, selbst dem Hauch der Pest wusstest du durch geschickte Wahl zu Widerstehen.
 		AI_Output(hero, self, "Info_Mod_Griselda_Pruefung8_15_04"); //So soll auch deine Widerstandskraft gegen Krankheiten wachsen.
 
 		if (Krankheit < 4)
@@ -557,9 +557,9 @@ FUNC VOID Info_Mod_Griselda_Pruefung8_Info()
 			//PrintScreen	("Deine Widerstandskraft gegenüber Giften ist gestiegen.", -1, -1, FONT_SCREEN, 2);
 		};
 
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_17_05"); //So, gespielt hast du und viele Preise gewonnen. Willst du nicht noch ein letztes Mal spielen und mir die Möglichkeit eröffnen, alles zurück zu gewinnen?
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_26_05"); //So, gespielt hast du und viele Preise gewonnen. Willst du nicht noch ein letztes Mal spielen und mir die Möglichkeit eröffnen, alles zurück zu gewinnen?
 		AI_Output(hero, self, "Info_Mod_Griselda_Pruefung8_15_06"); //Was meinst du? Ich glaube ...
-		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_17_07"); //(krächzt) Es ist nicht so, dass du die Wahl hättest, hahahaha.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_26_07"); //(krächzt) Es ist nicht so, dass du die Wahl hättest, hahahaha.
 	};
 };
 

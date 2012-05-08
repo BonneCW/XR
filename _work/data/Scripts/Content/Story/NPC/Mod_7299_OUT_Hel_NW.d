@@ -4,7 +4,7 @@ INSTANCE Mod_7299_OUT_Hel_NW (Npc_Default)
 	name 		= "Hel";
 	guild 		= GIL_DMT;
 	id 			= 7299;
-	voice 		= 17;
+	voice 		= 26;
 	flags       = 2;				
 	npctype		= NPCTYPE_MAIN;
 	

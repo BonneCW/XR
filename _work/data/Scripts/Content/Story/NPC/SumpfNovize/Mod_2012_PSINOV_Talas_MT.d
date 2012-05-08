@@ -7,7 +7,7 @@ instance Mod_2012_PSINOV_Talas_MT (Npc_Default)
 	level 		=	    4;
 	flags 		= 		NPC_FLAG_IMMORTAL;
 	
-	voice 		=     	2;
+	voice 		=     	27;
 	id 			=     	2012;
 		
 	//-------- abilities --------

@@ -17,13 +17,13 @@ FUNC INT Info_Mod_Brian_Hi_Condition()
 FUNC VOID Info_Mod_Brian_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Brian_Hi_15_00"); //Harads Lehrling, nehme ich an?
-	AI_Output(self, hero, "Info_Mod_Brian_Hi_04_01"); //(wütend) Gerade eben noch, ja!
+	AI_Output(self, hero, "Info_Mod_Brian_Hi_27_01"); //(wütend) Gerade eben noch, ja!
 	AI_Output(hero, self, "Info_Mod_Brian_Hi_15_02"); //Gerade eben noch?
-	AI_Output(self, hero, "Info_Mod_Brian_Hi_04_03"); //Sollte noch die geringste Kleinigkeit vorfallen, bin ich die längste Zeit sein Lehrling gewesen. Dann kann er mich mal.
+	AI_Output(self, hero, "Info_Mod_Brian_Hi_27_03"); //Sollte noch die geringste Kleinigkeit vorfallen, bin ich die längste Zeit sein Lehrling gewesen. Dann kann er mich mal.
 	AI_Output(hero, self, "Info_Mod_Brian_Hi_15_04"); //Wieso bist du so erbost?
-	AI_Output(self, hero, "Info_Mod_Brian_Hi_04_05"); //Weil Harad ein komplettes Arschloch ist, jawohl.
-	AI_Output(self, hero, "Info_Mod_Brian_Hi_04_06"); //Heult mich den ganzen Tag mit seinen Wehwehchen voll und kritisiert im gleichen Atemzug alles, was ich mache.
-	AI_Output(self, hero, "Info_Mod_Brian_Hi_04_07"); //Dem Egoisten kann man einfach nichts recht machen!
+	AI_Output(self, hero, "Info_Mod_Brian_Hi_27_05"); //Weil Harad ein komplettes Arschloch ist, jawohl.
+	AI_Output(self, hero, "Info_Mod_Brian_Hi_27_06"); //Heult mich den ganzen Tag mit seinen Wehwehchen voll und kritisiert im gleichen Atemzug alles, was ich mache.
+	AI_Output(self, hero, "Info_Mod_Brian_Hi_27_07"); //Dem Egoisten kann man einfach nichts recht machen!
 };
 
 INSTANCE Info_Mod_Brian_HaradLehrling (C_INFO)
@@ -50,9 +50,9 @@ FUNC VOID Info_Mod_Brian_HaradLehrling_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Brian_HaradLehrling_15_00"); //Ich würde gern Schmiedelehrling werden.
 	AI_Output(hero, self, "Info_Mod_Brian_HaradLehrling_15_01"); //Aber Harad meint, dass er nur einen Lehrling gleichzeitig unterrichten will.
-	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_04_02"); //Ha! Da kenne ich doch eine ganz einfache Lösung!
-	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_04_03"); //Lieber werde ich Fischer, als dass ich mich hier noch länger ausnutzen lasse.
-	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_04_04"); //Also - werd ruhig sein Lehrling. Ich wünsche dir viel Erfolg und dass du ihm von mir ein paar aufs Maul gibst.
+	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_27_02"); //Ha! Da kenne ich doch eine ganz einfache Lösung!
+	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_27_03"); //Lieber werde ich Fischer, als dass ich mich hier noch länger ausnutzen lasse.
+	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_27_04"); //Also - werd ruhig sein Lehrling. Ich wünsche dir viel Erfolg und dass du ihm von mir ein paar aufs Maul gibst.
 
 	Mod_Brian_KeinLehrling_Day = Wld_GetDay();
 
@@ -65,9 +65,9 @@ FUNC VOID Info_Mod_Brian_HaradLehrling_Info()
 FUNC VOID Info_Mod_Brian_HaradLehrling_B()
 {
 	AI_Output(hero, self, "Info_Mod_Brian_HaradLehrling_B_15_00"); //Willst du es dir nicht noch mal überlegen?
-	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_B_04_01"); //Da gibt es nichts mehr zu überdenken. Jeden Tag habe ich mir gewünscht, eine andere Lehre begonnen zu haben.
-	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_B_04_02"); //Und dazu gibst du mir jetzt die Möglichkeit. Das lasse ich nicht einfach verstreichen.
-	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_B_04_03"); //Noch heute Abend bin ich ein freier Mann!
+	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_B_27_01"); //Da gibt es nichts mehr zu überdenken. Jeden Tag habe ich mir gewünscht, eine andere Lehre begonnen zu haben.
+	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_B_27_02"); //Und dazu gibst du mir jetzt die Möglichkeit. Das lasse ich nicht einfach verstreichen.
+	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_B_27_03"); //Noch heute Abend bin ich ein freier Mann!
 
 	Info_ClearChoices	(Info_Mod_Brian_HaradLehrling);
 };
@@ -75,10 +75,10 @@ FUNC VOID Info_Mod_Brian_HaradLehrling_B()
 FUNC VOID Info_Mod_Brian_HaradLehrling_A()
 {
 	AI_Output(hero, self, "Info_Mod_Brian_HaradLehrling_A_15_00"); //Äh... danke.
-	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_A_04_01"); //Du musst mir nicht danken.
-	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_A_04_02"); //Wenn ich dir wirklich helfen wollte, würde ich dich mit Händen und Füßen davon abhalten, Harads Lehrling zu werden.
-	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_A_04_03"); //Aber mir ist es ziemlich egal. Entweder bist du leidensfähig, setzt dich gegen ihn durch oder hörst nach kurzer Zeit entnervt auf.
-	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_A_04_04"); //Ich werde jetzt sofort kündigen.
+	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_A_27_01"); //Du musst mir nicht danken.
+	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_A_27_02"); //Wenn ich dir wirklich helfen wollte, würde ich dich mit Händen und Füßen davon abhalten, Harads Lehrling zu werden.
+	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_A_27_03"); //Aber mir ist es ziemlich egal. Entweder bist du leidensfähig, setzt dich gegen ihn durch oder hörst nach kurzer Zeit entnervt auf.
+	AI_Output(self, hero, "Info_Mod_Brian_HaradLehrling_A_27_04"); //Ich werde jetzt sofort kündigen.
 
 	Info_ClearChoices	(Info_Mod_Brian_HaradLehrling);
 };
@@ -105,7 +105,7 @@ FUNC INT Info_Mod_Brian_KeinLehrlingMehr01_Condition()
 FUNC VOID Info_Mod_Brian_KeinLehrlingMehr01_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Brian_KeinLehrlingMehr01_15_00"); //Was macht die Arbeit?
-	AI_Output(self, hero, "Info_Mod_Brian_KeinLehrlingMehr01_04_01"); //Ich liebe die Ruhe beim Fischfang. Einfach zu warten und die Gedanken schweifen zu lassen ...
+	AI_Output(self, hero, "Info_Mod_Brian_KeinLehrlingMehr01_27_01"); //Ich liebe die Ruhe beim Fischfang. Einfach zu warten und die Gedanken schweifen zu lassen ...
 };
 
 INSTANCE Info_Mod_Brian_KeinLehrlingMehr02 (C_INFO)
@@ -130,8 +130,8 @@ FUNC INT Info_Mod_Brian_KeinLehrlingMehr02_Condition()
 FUNC VOID Info_Mod_Brian_KeinLehrlingMehr02_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Brian_KeinLehrlingMehr02_15_00"); //Handelst du noch?
-	AI_Output(self, hero, "Info_Mod_Brian_KeinLehrlingMehr02_04_01"); //Da Harad mich nach unserem Gespräch rausgeworfen hat, habe ich noch einigen Krempel von früher bei mir.
-	AI_Output(self, hero, "Info_Mod_Brian_KeinLehrlingMehr02_04_02"); //Den kannst du mir gern abkaufen.
+	AI_Output(self, hero, "Info_Mod_Brian_KeinLehrlingMehr02_27_01"); //Da Harad mich nach unserem Gespräch rausgeworfen hat, habe ich noch einigen Krempel von früher bei mir.
+	AI_Output(self, hero, "Info_Mod_Brian_KeinLehrlingMehr02_27_02"); //Den kannst du mir gern abkaufen.
 };
 
 INSTANCE Info_Mod_Brian_Daemonisch (C_INFO)
@@ -154,11 +154,11 @@ FUNC INT Info_Mod_Brian_Daemonisch_Condition()
 
 FUNC VOID Info_Mod_Brian_Daemonisch_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Brian_Daemonisch_04_00"); //(aufgeregt) Wie, was machst du hier? Du bist doch nicht einer von ihnen? Sei gewarnt, ich werde bis zum Tod kämpfen.
+	AI_Output(self, hero, "Info_Mod_Brian_Daemonisch_27_00"); //(aufgeregt) Wie, was machst du hier? Du bist doch nicht einer von ihnen? Sei gewarnt, ich werde bis zum Tod kämpfen.
 	AI_Output(hero, self, "Info_Mod_Brian_Daemonisch_15_01"); //Beruhig dich erst einmal. Wovon sprichst du?
-	AI_Output(self, hero, "Info_Mod_Brian_Daemonisch_04_02"); //(etwas ruhiger) Du scheinst nicht zu ihnen zu gehören.
-	AI_Output(self, hero, "Info_Mod_Brian_Daemonisch_04_03"); //Die schwarzen Schatten ... du musst wissen, dass die Stadt ...
-	AI_Output(self, hero, "Info_Mod_Brian_Daemonisch_04_04"); //(mit verklingender Stimme) Rupert, er ... Hüte dich vor der Finsternis ...
+	AI_Output(self, hero, "Info_Mod_Brian_Daemonisch_27_02"); //(etwas ruhiger) Du scheinst nicht zu ihnen zu gehören.
+	AI_Output(self, hero, "Info_Mod_Brian_Daemonisch_27_03"); //Die schwarzen Schatten ... du musst wissen, dass die Stadt ...
+	AI_Output(self, hero, "Info_Mod_Brian_Daemonisch_27_04"); //(mit verklingender Stimme) Rupert, er ... Hüte dich vor der Finsternis ...
 
 	AI_StopProcessInfos	(self);
 

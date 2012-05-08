@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Edda_Hi_Condition()
 FUNC VOID Info_Mod_Edda_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Edda_Hi_15_00"); //Und du bist?
-	AI_Output(self, hero, "Info_Mod_Edda_Hi_17_01"); //Mein Name ist Edda. Ich koche den größten Teil des Tages Suppen und Sude gegen alle möglichen Krankheiten.
+	AI_Output(self, hero, "Info_Mod_Edda_Hi_26_01"); //Mein Name ist Edda. Ich koche den größten Teil des Tages Suppen und Sude gegen alle möglichen Krankheiten.
 };
 
 INSTANCE Info_Mod_Edda_SuppeKochenLernen (C_INFO)
@@ -43,8 +43,8 @@ FUNC INT Info_Mod_Edda_SuppeKochenLernen_Condition()
 FUNC VOID Info_Mod_Edda_SuppeKochenLernen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Edda_SuppeKochenLernen_15_00"); //Kannst du mir zeigen, wie man Suppen kocht?
-	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen_17_01"); //Wenn du magst, gebe ich mein Wissen gern weiter.
-	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen_17_02"); //Da ich durch meine Arbeit kaum etwas verdiene, wäre ich dir aber für eine kleine Spende sehr dankbar.
+	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen_26_01"); //Wenn du magst, gebe ich mein Wissen gern weiter.
+	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen_26_02"); //Da ich durch meine Arbeit kaum etwas verdiene, wäre ich dir aber für eine kleine Spende sehr dankbar.
 
 	Info_ClearChoices	(Info_Mod_Edda_SuppeKochenLernen);
 
@@ -70,7 +70,7 @@ FUNC VOID Info_Mod_Edda_SuppeKochenLernen_A()
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 50);
 
-	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen_A_17_01"); //Dann sag Bescheid, wenn es losgehen kann.
+	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen_A_26_01"); //Dann sag Bescheid, wenn es losgehen kann.
 
 	Mod_Edda_Lernen = TRUE;
 
@@ -99,8 +99,8 @@ FUNC INT Info_Mod_Edda_WiesoHier_Condition()
 FUNC VOID Info_Mod_Edda_WiesoHier_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Edda_WiesoHier_15_00"); //Wieso wohnst du hier so abgeschieden von den anderen?
-	AI_Output(self, hero, "Info_Mod_Edda_WiesoHier_17_01"); //Ich hatte vor einigen Jahren die Blattern und war eine der wenigen Überlebenden.
-	AI_Output(self, hero, "Info_Mod_Edda_WiesoHier_17_02"); //Seitdem werde ich wie eine Aussätzige behandelt, und niemand kommt freiwillig zu mir.
+	AI_Output(self, hero, "Info_Mod_Edda_WiesoHier_26_01"); //Ich hatte vor einigen Jahren die Blattern und war eine der wenigen Überlebenden.
+	AI_Output(self, hero, "Info_Mod_Edda_WiesoHier_26_02"); //Seitdem werde ich wie eine Aussätzige behandelt, und niemand kommt freiwillig zu mir.
 };
 
 INSTANCE Info_Mod_Edda_Problem (C_INFO)
@@ -124,12 +124,12 @@ FUNC INT Info_Mod_Edda_Problem_Condition()
 
 FUNC VOID Info_Mod_Edda_Problem_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Edda_Problem_17_00"); //Du musst mir helfen, bitte!
+	AI_Output(self, hero, "Info_Mod_Edda_Problem_26_00"); //Du musst mir helfen, bitte!
 	AI_Output(hero, self, "Info_Mod_Edda_Problem_15_01"); //Was gibt's denn?
-	AI_Output(self, hero, "Info_Mod_Edda_Problem_17_02"); //Mein Haus ist seit gestern voller Fleischwanzen!
+	AI_Output(self, hero, "Info_Mod_Edda_Problem_26_02"); //Mein Haus ist seit gestern voller Fleischwanzen!
 	AI_Output(hero, self, "Info_Mod_Edda_Problem_15_03"); //Wieso so hysterisch? Die tun doch nichts.
-	AI_Output(self, hero, "Info_Mod_Edda_Problem_17_04"); //Sie sind gefährliche Krankheitsüberträger. Die Pocken, die ich nur knapp überlebt habe, sollen durch sie verbreitet worden sein.
-	AI_Output(self, hero, "Info_Mod_Edda_Problem_17_05"); //Seitdem ich das weiß, kann ich nicht mehr in ihrer Nähe sein.
+	AI_Output(self, hero, "Info_Mod_Edda_Problem_26_04"); //Sie sind gefährliche Krankheitsüberträger. Die Pocken, die ich nur knapp überlebt habe, sollen durch sie verbreitet worden sein.
+	AI_Output(self, hero, "Info_Mod_Edda_Problem_26_05"); //Seitdem ich das weiß, kann ich nicht mehr in ihrer Nähe sein.
 
 	Edda_Schlafplatz = TRUE;
 
@@ -148,7 +148,7 @@ FUNC VOID Info_Mod_Edda_Problem_Info()
 FUNC VOID Info_Mod_Edda_Problem_Nein()
 {
 	AI_Output(hero, self, "Info_Mod_Edda_Problem_Nein_15_00"); //Ich werde mich davor hüten, mit Fleischwanzen in Berührung zu kommen.
-	AI_Output(self, hero, "Info_Mod_Edda_Problem_Nein_17_01"); //Aber was mache ich dann jetzt? Ich brauche Hilfe!
+	AI_Output(self, hero, "Info_Mod_Edda_Problem_Nein_26_01"); //Aber was mache ich dann jetzt? Ich brauche Hilfe!
 
 	Info_ClearChoices	(Info_Mod_Edda_Problem);
 
@@ -158,7 +158,7 @@ FUNC VOID Info_Mod_Edda_Problem_Nein()
 FUNC VOID Info_Mod_Edda_Problem_Ja()
 {
 	AI_Output(hero, self, "Info_Mod_Edda_Problem_Ja_15_00"); //Das wird kurz und schmerzlos erledigt.
-	AI_Output(self, hero, "Info_Mod_Edda_Problem_Ja_17_01"); //(erleichtert) Ich danke dir schon jetzt vielmals!
+	AI_Output(self, hero, "Info_Mod_Edda_Problem_Ja_26_01"); //(erleichtert) Ich danke dir schon jetzt vielmals!
 
 	Info_ClearChoices	(Info_Mod_Edda_Problem);
 
@@ -199,8 +199,8 @@ FUNC INT Info_Mod_Edda_Wanzen_Condition()
 FUNC VOID Info_Mod_Edda_Wanzen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Edda_Wanzen_15_00"); //Die Wanzen sind weg.
-	AI_Output(self, hero, "Info_Mod_Edda_Wanzen_17_01"); //Endlich kann ich zurück in meine Hütte.
-	AI_Output(self, hero, "Info_Mod_Edda_Wanzen_17_02"); //Vielen Dank. Hier hast du eine kleine Belohnung
+	AI_Output(self, hero, "Info_Mod_Edda_Wanzen_26_01"); //Endlich kann ich zurück in meine Hütte.
+	AI_Output(self, hero, "Info_Mod_Edda_Wanzen_26_02"); //Vielen Dank. Hier hast du eine kleine Belohnung
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 10);
 
@@ -237,13 +237,13 @@ FUNC INT Info_Mod_Edda_ProblemBack_Condition()
 
 FUNC VOID Info_Mod_Edda_ProblemBack_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Edda_ProblemBack_17_00"); //Es sind schon wieder Fleischwanzen in meiner Hütte! Sie krabbeln überall herum!
+	AI_Output(self, hero, "Info_Mod_Edda_ProblemBack_26_00"); //Es sind schon wieder Fleischwanzen in meiner Hütte! Sie krabbeln überall herum!
 	AI_Output(hero, self, "Info_Mod_Edda_ProblemBack_15_01"); //Wie konnte das denn geschehen? Ich habe sie doch erst letztens alle getötet.
-	AI_Output(self, hero, "Info_Mod_Edda_ProblemBack_17_02"); //Entweder ist es Schicksal ... oder da hat jemand nachgeholfen.
+	AI_Output(self, hero, "Info_Mod_Edda_ProblemBack_26_02"); //Entweder ist es Schicksal ... oder da hat jemand nachgeholfen.
 	AI_Output(hero, self, "Info_Mod_Edda_ProblemBack_15_03"); //(skeptisch) Wer sollte das tun?
-	AI_Output(self, hero, "Info_Mod_Edda_ProblemBack_17_04"); //Jemand, der mich kennt und weiß, wie ich Fleischwanzen hasse.
-	AI_Output(self, hero, "Info_Mod_Edda_ProblemBack_17_05"); //Ich kann mir nicht helfen, aber ich habe Angst.
-	AI_Output(self, hero, "Info_Mod_Edda_ProblemBack_17_06"); //Würdest du mir noch ein Mal mit den Fleischwanzen aushelfen?
+	AI_Output(self, hero, "Info_Mod_Edda_ProblemBack_26_04"); //Jemand, der mich kennt und weiß, wie ich Fleischwanzen hasse.
+	AI_Output(self, hero, "Info_Mod_Edda_ProblemBack_26_05"); //Ich kann mir nicht helfen, aber ich habe Angst.
+	AI_Output(self, hero, "Info_Mod_Edda_ProblemBack_26_06"); //Würdest du mir noch ein Mal mit den Fleischwanzen aushelfen?
 	AI_Output(hero, self, "Info_Mod_Edda_ProblemBack_15_07"); //Schon so gut wie geschehen.
 
 	AI_StopProcessInfos	(self);
@@ -289,9 +289,9 @@ FUNC INT Info_Mod_Edda_WanzenBack_Condition()
 FUNC VOID Info_Mod_Edda_WanzenBack_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Edda_WanzenBack_15_00"); //Es sollte keine Fleischwanze überlebt haben.
-	AI_Output(self, hero, "Info_Mod_Edda_WanzenBack_17_01"); //Ich kann dir gar nicht sagen, wie froh ich bin!
-	AI_Output(self, hero, "Info_Mod_Edda_WanzenBack_17_02"); //Aber einen kleinen Gefallen musst du mir noch tun, damit ich wieder beruhigt schlafen kann:
-	AI_Output(self, hero, "Info_Mod_Edda_WanzenBack_17_03"); //Würdest du dich bitte in der nächsten Nacht draußen vor der Hütte auf die Lauer legen?
+	AI_Output(self, hero, "Info_Mod_Edda_WanzenBack_26_01"); //Ich kann dir gar nicht sagen, wie froh ich bin!
+	AI_Output(self, hero, "Info_Mod_Edda_WanzenBack_26_02"); //Aber einen kleinen Gefallen musst du mir noch tun, damit ich wieder beruhigt schlafen kann:
+	AI_Output(self, hero, "Info_Mod_Edda_WanzenBack_26_03"); //Würdest du dich bitte in der nächsten Nacht draußen vor der Hütte auf die Lauer legen?
 	AI_Output(hero, self, "Info_Mod_Edda_WanzenBack_15_04"); //Klar. Kein Problem.
 
 	B_GivePlayerXP	(50);
@@ -326,28 +326,28 @@ FUNC INT Info_Mod_Edda_Fenia_Condition()
 FUNC VOID Info_Mod_Edda_Fenia_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Edda_Fenia_15_00"); //Es war tatsächlich kein Zufall, dass die Fleischwanzen bei dir gelandet sind.
-	AI_Output(self, hero, "Info_Mod_Edda_Fenia_17_01"); //Wer war's? Sag schon!
+	AI_Output(self, hero, "Info_Mod_Edda_Fenia_26_01"); //Wer war's? Sag schon!
 	AI_Output(hero, self, "Info_Mod_Edda_Fenia_15_02"); //Fenia will dich gesehen haben, wie du mit ihrem Mann angebandelt hast.
-	AI_Output(self, hero, "Info_Mod_Edda_Fenia_17_03"); //(lacht freudlos) Du meinst unser Verkaufsgespräch?
-	AI_Output(self, hero, "Info_Mod_Edda_Fenia_17_04"); //Weil er nicht so abweisend zu mir war wie alle anderen?
+	AI_Output(self, hero, "Info_Mod_Edda_Fenia_26_03"); //(lacht freudlos) Du meinst unser Verkaufsgespräch?
+	AI_Output(self, hero, "Info_Mod_Edda_Fenia_26_04"); //Weil er nicht so abweisend zu mir war wie alle anderen?
 	AI_Output(hero, self, "Info_Mod_Edda_Fenia_15_05"); //Scheint so. Was willst du jetzt machen?
 
 	if (hero.guild != GIL_PAL)
 	{
-		AI_Output(self, hero, "Info_Mod_Edda_Fenia_17_06"); //Was kann ich schon machen? Die Miliz würde sich nicht dafür interessieren.
-		AI_Output(self, hero, "Info_Mod_Edda_Fenia_17_07"); //Ich werde mit ihr reden und sie zur Einsicht bringen müssen.
-		AI_Output(self, hero, "Info_Mod_Edda_Fenia_17_08"); //Dir aber muss ich meinen herzlichsten Dank aussprechen. Du bist ein guter Mensch.
+		AI_Output(self, hero, "Info_Mod_Edda_Fenia_26_06"); //Was kann ich schon machen? Die Miliz würde sich nicht dafür interessieren.
+		AI_Output(self, hero, "Info_Mod_Edda_Fenia_26_07"); //Ich werde mit ihr reden und sie zur Einsicht bringen müssen.
+		AI_Output(self, hero, "Info_Mod_Edda_Fenia_26_08"); //Dir aber muss ich meinen herzlichsten Dank aussprechen. Du bist ein guter Mensch.
 
 		B_GivePlayerXP	(100);
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Edda_Fenia_17_09"); //Du gehörst doch zu den Wächtern der Stadt, oder irre mich da?
-		AI_Output(self, hero, "Info_Mod_Edda_Fenia_17_10"); //Kannst du nicht vielleicht etwas unternehmen?
+		AI_Output(self, hero, "Info_Mod_Edda_Fenia_26_09"); //Du gehörst doch zu den Wächtern der Stadt, oder irre mich da?
+		AI_Output(self, hero, "Info_Mod_Edda_Fenia_26_10"); //Kannst du nicht vielleicht etwas unternehmen?
 		AI_Output(hero, self, "Info_Mod_Edda_Fenia_15_11"); //Ich kann dich unter meinen persönlichen Schutz stellen.
 		AI_Output(hero, self, "Info_Mod_Edda_Fenia_15_12"); //Wenn dir noch ein Mal etwas angetan wird, werde ich mir Fenia vorknöpfen.
-		AI_Output(self, hero, "Info_Mod_Edda_Fenia_17_13"); //Vielleicht ist es am sinnvollsten, wenn ich ihr das gleich sage ... Dann kommt sie auf keine dummen Gedanken mehr.
-		AI_Output(self, hero, "Info_Mod_Edda_Fenia_17_14"); //Dafür muss ich dir meinen herzlichsten Dank aussprechen. Du bist ein guter Mensch.
+		AI_Output(self, hero, "Info_Mod_Edda_Fenia_26_13"); //Vielleicht ist es am sinnvollsten, wenn ich ihr das gleich sage ... Dann kommt sie auf keine dummen Gedanken mehr.
+		AI_Output(self, hero, "Info_Mod_Edda_Fenia_26_14"); //Dafür muss ich dir meinen herzlichsten Dank aussprechen. Du bist ein guter Mensch.
 
 		B_GivePlayerXP	(150);
 	};
@@ -386,8 +386,8 @@ FUNC INT Info_Mod_Edda_FeniaNicht_Condition()
 FUNC VOID Info_Mod_Edda_FeniaNicht_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Edda_FeniaNicht_15_00"); //Es war niemand hinter deinem Haus.
-	AI_Output(self, hero, "Info_Mod_Edda_FeniaNicht_17_01"); //Hm ... na gut, dann sind die Wanzen wohl wirklich zufällig in meine Haus gekommen.
-	AI_Output(self, hero, "Info_Mod_Edda_FeniaNicht_17_02"); //Ich danke dir, hier ist eine kleine Belohnung.
+	AI_Output(self, hero, "Info_Mod_Edda_FeniaNicht_26_01"); //Hm ... na gut, dann sind die Wanzen wohl wirklich zufällig in meine Haus gekommen.
+	AI_Output(self, hero, "Info_Mod_Edda_FeniaNicht_26_02"); //Ich danke dir, hier ist eine kleine Belohnung.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 25);
 
@@ -418,12 +418,12 @@ FUNC INT Info_Mod_Edda_Shakir_Condition()
 FUNC VOID Info_Mod_Edda_Shakir_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Edda_Shakir_15_00"); //Ich hätte gerne eine Auskunft.
-	AI_Output(self, hero, "Info_Mod_Edda_Shakir_17_01"); //Und die wäre?
+	AI_Output(self, hero, "Info_Mod_Edda_Shakir_26_01"); //Und die wäre?
 	AI_Output(hero, self, "Info_Mod_Edda_Shakir_15_02"); //Ich suche eine ... hm, wie soll ich sagen? Ein Straßenmädchen oder so.
-	AI_Output(self, hero, "Info_Mod_Edda_Shakir_17_03"); //Eine Dirne meinst du. Sag's doch gleich. Nein, da haben wir keine im Ort.
+	AI_Output(self, hero, "Info_Mod_Edda_Shakir_26_03"); //Eine Dirne meinst du. Sag's doch gleich. Nein, da haben wir keine im Ort.
 	AI_Output(hero, self, "Info_Mod_Edda_Shakir_15_04"); //Und wo könnte ich ...
-	AI_Output(self, hero, "Info_Mod_Edda_Shakir_17_05"); //Da fällt mir was ein. Drüben beim Schiffsbauer steht in letzter Zeit immer eine Frau rum, als wenn sie auf was wartet.
-	AI_Output(self, hero, "Info_Mod_Edda_Shakir_17_06"); //Heisst Jana, glaub ich. Vielleicht ... (laut) aber sag nicht, dass ich das gesagt habe.
+	AI_Output(self, hero, "Info_Mod_Edda_Shakir_26_05"); //Da fällt mir was ein. Drüben beim Schiffsbauer steht in letzter Zeit immer eine Frau rum, als wenn sie auf was wartet.
+	AI_Output(self, hero, "Info_Mod_Edda_Shakir_26_06"); //Heisst Jana, glaub ich. Vielleicht ... (laut) aber sag nicht, dass ich das gesagt habe.
 	AI_Output(hero, self, "Info_Mod_Edda_Shakir_15_07"); //Verstehe. Danke.
 
 	B_LogEntry	(TOPIC_MOD_ASS_SHAKIR_FRAU, "Edda meint, ich soll mal mit Jana reden. Die steht jeden Tag beim Schiffsbauer rum, als warte sie auf etwas.");
@@ -482,10 +482,10 @@ FUNC VOID Info_Mod_Edda_SuppeKochenLernen2_Info()
 		B_GiveInvItems	(hero, self, ItMi_Gold, 300);
 	};
 
-	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_17_01"); //Die Grundlagen sind schnell erklärt: Du brauchst einen mit Wasser gefüllten Topf, unter dem du ein Feuer entfachst, und eine Rezeptur.
-	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_17_02"); //Dem jeweiligen Rezept entnimmst du die Zutaten, die du unter ständigem Rühren in den Topf gibst.
-	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_17_03"); //Damit die Suppe genießbar ist, darfst du das Würzen nicht vergessen.
-	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_17_04"); //Sobald alles im Topf ist, dämpfst du das Feuer und lässt die Suppe mit geschlossenem Deckel eine Zeit lang köcheln.
+	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_26_01"); //Die Grundlagen sind schnell erklärt: Du brauchst einen mit Wasser gefüllten Topf, unter dem du ein Feuer entfachst, und eine Rezeptur.
+	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_26_02"); //Dem jeweiligen Rezept entnimmst du die Zutaten, die du unter ständigem Rühren in den Topf gibst.
+	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_26_03"); //Damit die Suppe genießbar ist, darfst du das Würzen nicht vergessen.
+	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_26_04"); //Sobald alles im Topf ist, dämpfst du das Feuer und lässt die Suppe mit geschlossenem Deckel eine Zeit lang köcheln.
 
 	Mod_Edda_Lernen = 2;
 };
@@ -519,11 +519,11 @@ FUNC VOID Info_Mod_Edda_Flugblaetter_Info()
 
 	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_Edda_Flugblaetter_17_01"); //Oh danke. Mal sehen ...
+	AI_Output(self, hero, "Info_Mod_Edda_Flugblaetter_26_01"); //Oh danke. Mal sehen ...
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_Edda_Flugblaetter_17_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
+	AI_Output(self, hero, "Info_Mod_Edda_Flugblaetter_26_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
 
 	Mod_Flugblaetter += 1;
 };

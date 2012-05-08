@@ -18,7 +18,7 @@ FUNC INT Info_Mod_HofstaatPassantin01_Fluffy_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin01_Fluffy_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Fluffy_16_00"); //Also, der König hat seinen Hund aber schlecht unter Kontrolle ...
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Fluffy_26_00"); //Also, der König hat seinen Hund aber schlecht unter Kontrolle ...
 
 	Mod_SL_PartFluffy = 4;
 
@@ -45,7 +45,7 @@ FUNC INT Info_Mod_HofstaatPassantin01_Lochgraeber_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin01_Lochgraeber_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Lochgraeber_16_00"); //Hast du gehört? Irgend so ein Grünschnabel hat in nur einer Nacht ein Loch gegraben, das hundert Mal tiefer war, als das unseres Gräbers!
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Lochgraeber_26_00"); //Hast du gehört? Irgend so ein Grünschnabel hat in nur einer Nacht ein Loch gegraben, das hundert Mal tiefer war, als das unseres Gräbers!
 
 	Mod_SL_PartLochgraeber = 3;
 
@@ -72,7 +72,7 @@ FUNC INT Info_Mod_HofstaatPassantin01_Geliebte_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin01_Geliebte_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Geliebte_16_00"); //Hast du gehört? Anscheinend hat irgend so ein junger Spund es geschafft, die königliche Geliebte zu verführen!
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Geliebte_26_00"); //Hast du gehört? Anscheinend hat irgend so ein junger Spund es geschafft, die königliche Geliebte zu verführen!
 
 	Mod_SL_PartGeliebte = 7;
 
@@ -99,7 +99,7 @@ FUNC INT Info_Mod_HofstaatPassantin01_Blind_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin01_Blind_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Blind_16_00"); //Hast du's schon gehört?! In Khorata können wir kein Freudenspender mehr verkaufen! Die glauben, dass es blind macht!
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Blind_26_00"); //Hast du's schon gehört?! In Khorata können wir kein Freudenspender mehr verkaufen! Die glauben, dass es blind macht!
 
 	Mod_SL_PartBlind = 4;
 
@@ -128,7 +128,7 @@ FUNC INT Info_Mod_HofstaatPassantin01_Brunnen_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin01_Brunnen_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Brunnen_16_00"); //Sag mal, hast du dir das Schloss mal genauer angesehen? Das ist doch irgendwie schäbig und gar nicht prunkvoll.
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Brunnen_26_00"); //Sag mal, hast du dir das Schloss mal genauer angesehen? Das ist doch irgendwie schäbig und gar nicht prunkvoll.
 
 	Mod_SL_PartBrunnen = 2;
 
@@ -155,7 +155,7 @@ FUNC INT Info_Mod_HofstaatPassantin01_Geschwaecht_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin01_Geschwaecht_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Geschwaecht_16_00"); //Also ... in letzter Zeit läuft ziemlich viel falsch!
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin01_Geschwaecht_26_00"); //Also ... in letzter Zeit läuft ziemlich viel falsch!
 
 	Mod_SL_Schwaechen = 3;
 

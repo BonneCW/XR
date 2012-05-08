@@ -10,13 +10,13 @@ FUNC VOID B_Say_Smalltalk_Fremdgang ()
 	}
 	else if (Mod_Smalltalk_Fremdgang == 1)
 	{
-		AI_Output(Mod_7385_OUT_August_REL, NULL, "Info_Mod_Smalltalk_Fremdgang_13_01"); //Null Problemo, Schatzi. Du schnallst doch, dass nachts kaum ein Schwein ans Tor kommt.
+		AI_Output(Mod_7385_OUT_August_REL, NULL, "Info_Mod_Smalltalk_Fremdgang_29_01"); //Jetzt hab dich nicht so, Schatzi. Nachts lässt sich hier schon keiner blicken.
 
 		Mod_Smalltalk_Fremdgang = 2;
 	}
 	else if (Mod_Smalltalk_Fremdgang == 2)
 	{
-		AI_Output(Mod_7385_OUT_August_REL, NULL, "Info_Mod_Smalltalk_Fremdgang_13_02"); //Falls doch mal, war ich eben grad pinkeln. Nun zier dich nicht so.
+		AI_Output(Mod_7385_OUT_August_REL, NULL, "Info_Mod_Smalltalk_Fremdgang_29_02"); //Falls doch mal, war ich eben gerade pinkeln. Nun zier dich nicht so.
 
 		Mod_Smalltalk_Fremdgang = 3;
 	}
@@ -28,7 +28,7 @@ FUNC VOID B_Say_Smalltalk_Fremdgang ()
 	}
 	else if (Mod_Smalltalk_Fremdgang == 4)
 	{
-		AI_Output(Mod_7385_OUT_August_REL, NULL, "Info_Mod_Smalltalk_Fremdgang_13_04"); //Komm schon.
+		AI_Output(Mod_7385_OUT_August_REL, NULL, "Info_Mod_Smalltalk_Fremdgang_29_04"); //Komm schon.
 
 		Mod_Smalltalk_Fremdgang = 5;
 	}
@@ -38,7 +38,7 @@ FUNC VOID B_Say_Smalltalk_Fremdgang ()
 
 		Mod_Smalltalk_Fremdgang = 6;
 
-		B_LogEntry	(TOPIC_MOD_ASS_FELICITA, "Felicitas Verdacht hat sich bestätigt. Ob sie das wohl freuen wird?");
+		B_LogEntry	(TOPIC_MOD_ASS_FELICITA, "Felicitas' Verdacht hat sich bestätigt. Ob sie das wohl freuen wird?");
 
 		Mod_ASS_Felicita = 1;
 	};

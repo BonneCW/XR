@@ -4,7 +4,7 @@ INSTANCE Mod_7448_KDS_Myxir_IR (Npc_Default)
 	name 		= "Myxir";
 	guild 		= GIL_OUT; 
 	id 			= 7448;
-	voice 		= 12;
+	voice 		= 28;
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ aivars ------

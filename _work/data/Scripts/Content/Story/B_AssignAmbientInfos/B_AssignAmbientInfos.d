@@ -55,7 +55,7 @@ FUNC VOID B_AssignAmbientInfos (var C_NPC slf)
 
 	if (slf.npctype == NPCTYPE_MT_TEMPLER)
 	{
-		if (slf.voice == 8) { B_AssignAmbientInfos_Tpl_8 (slf); };
+		if (slf.voice == 29) { B_AssignAmbientInfos_Tpl_29 (slf); };
 		if (slf.voice == 13) { B_AssignAmbientInfos_Tpl_13 (slf); };
 	};
 

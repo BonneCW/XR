@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Harad_Hi_Condition()
 FUNC VOID Info_Mod_Harad_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_Hi_15_00"); //Du bist Schmied, richtig?
-	AI_Output(self, hero, "Info_Mod_Harad_Hi_12_01"); //(beleidigt) Das sieht man doch!
+	AI_Output(self, hero, "Info_Mod_Harad_Hi_28_01"); //(beleidigt) Das sieht man doch!
 };
 
 INSTANCE Info_Mod_Harad_Waffenverkauf (C_INFO)
@@ -42,9 +42,9 @@ FUNC INT Info_Mod_Harad_Waffenverkauf_Condition()
 FUNC VOID Info_Mod_Harad_Waffenverkauf_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_Waffenverkauf_15_00"); //Verkaufst du auch Waffen?
-	AI_Output(self, hero, "Info_Mod_Harad_Waffenverkauf_12_01"); //Jetzt soll ich auch noch Waffen verkaufen?!
-	AI_Output(self, hero, "Info_Mod_Harad_Waffenverkauf_12_02"); //Reicht es nicht, dass ich den ganzen Tag vor der Schmiede stehe und mir das Gesicht und die Hände versenge?
-	AI_Output(self, hero, "Info_Mod_Harad_Waffenverkauf_12_03"); //Frag doch Brian, den Lümmel. Der kann sich auch mal zu etwas nützlich machen.
+	AI_Output(self, hero, "Info_Mod_Harad_Waffenverkauf_28_01"); //Jetzt soll ich auch noch Waffen verkaufen?!
+	AI_Output(self, hero, "Info_Mod_Harad_Waffenverkauf_28_02"); //Reicht es nicht, dass ich den ganzen Tag vor der Schmiede stehe und mir das Gesicht und die Hände versenge?
+	AI_Output(self, hero, "Info_Mod_Harad_Waffenverkauf_28_03"); //Frag doch Brian, den Lümmel. Der kann sich auch mal zu etwas nützlich machen.
 };
 
 INSTANCE Info_Mod_Harad_SchlechteLaune (C_INFO)
@@ -69,12 +69,12 @@ FUNC INT Info_Mod_Harad_SchlechteLaune_Condition()
 FUNC VOID Info_Mod_Harad_SchlechteLaune_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_SchlechteLaune_15_00"); //Warum so schlecht gelaunt?
-	AI_Output(self, hero, "Info_Mod_Harad_SchlechteLaune_12_01"); //Ich überlege gerade ernsthaft, ob ich die Arbeit nicht einfach an den Nagel hängen soll.
-	AI_Output(self, hero, "Info_Mod_Harad_SchlechteLaune_12_02"); //Anscheinend wird sie nicht mehr wertgeschätzt.
+	AI_Output(self, hero, "Info_Mod_Harad_SchlechteLaune_28_01"); //Ich überlege gerade ernsthaft, ob ich die Arbeit nicht einfach an den Nagel hängen soll.
+	AI_Output(self, hero, "Info_Mod_Harad_SchlechteLaune_28_02"); //Anscheinend wird sie nicht mehr wertgeschätzt.
 	AI_Output(hero, self, "Info_Mod_Harad_SchlechteLaune_15_03"); //Was ist passiert?
-	AI_Output(self, hero, "Info_Mod_Harad_SchlechteLaune_12_04"); //Die letzte Stahllieferung hat mich nie erreicht. Sie wurde von den Paladinen beschlagnahmt. Als wäre ich ein Verbrecher!
-	AI_Output(self, hero, "Info_Mod_Harad_SchlechteLaune_12_05"); //Da sollen sie sich nicht wundern, wenn ich ihnen keine Waffen schmieden will.
-	AI_Output(self, hero, "Info_Mod_Harad_SchlechteLaune_12_06"); //Wie man in den Wald hineinruft, so schallt es heraus.
+	AI_Output(self, hero, "Info_Mod_Harad_SchlechteLaune_28_04"); //Die letzte Stahllieferung hat mich nie erreicht. Sie wurde von den Paladinen beschlagnahmt. Als wäre ich ein Verbrecher!
+	AI_Output(self, hero, "Info_Mod_Harad_SchlechteLaune_28_05"); //Da sollen sie sich nicht wundern, wenn ich ihnen keine Waffen schmieden will.
+	AI_Output(self, hero, "Info_Mod_Harad_SchlechteLaune_28_06"); //Wie man in den Wald hineinruft, so schallt es heraus.
 };
 
 INSTANCE Info_Mod_Harad_Bartok (C_INFO)
@@ -102,18 +102,18 @@ FUNC INT Info_Mod_Harad_Bartok_Condition()
 FUNC VOID Info_Mod_Harad_Bartok_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_Bartok_15_00"); //Ich habe einen Spezialauftrag von Bartok.
-	AI_Output(self, hero, "Info_Mod_Harad_Bartok_12_01"); //Na, die Zahlungsmoral bei dem Hurenbock kann ich mir ja vorstellen.
+	AI_Output(self, hero, "Info_Mod_Harad_Bartok_28_01"); //Na, die Zahlungsmoral bei dem Hurenbock kann ich mir ja vorstellen.
 	AI_Output(hero, self, "Info_Mod_Harad_Bartok_15_02"); //Er wünscht sich eine Sumpfkrautrüstung.
-	AI_Output(self, hero, "Info_Mod_Harad_Bartok_12_03"); //(beleidigt) Haha, wie witzig. Hätte ich mir gleich denken können, dass ihr mich veräppeln wollt.
-	AI_Output(self, hero, "Info_Mod_Harad_Bartok_12_04"); //Treibt eure Späße mit jemand anderem.
+	AI_Output(self, hero, "Info_Mod_Harad_Bartok_28_03"); //(beleidigt) Haha, wie witzig. Hätte ich mir gleich denken können, dass ihr mich veräppeln wollt.
+	AI_Output(self, hero, "Info_Mod_Harad_Bartok_28_04"); //Treibt eure Späße mit jemand anderem.
 	AI_Output(hero, self, "Info_Mod_Harad_Bartok_15_05"); //Er hat mir 1000 Gold mitgegeben...
-	AI_Output(self, hero, "Info_Mod_Harad_Bartok_12_06"); //(wie ausgetauscht) Eine Sumpfkrautrüstung? Kein Problem! Also ... quasi keins!
+	AI_Output(self, hero, "Info_Mod_Harad_Bartok_28_06"); //(wie ausgetauscht) Eine Sumpfkrautrüstung? Kein Problem! Also ... quasi keins!
 	AI_Output(hero, self, "Info_Mod_Harad_Bartok_15_07"); //Du kümmerst dich also drum?
-	AI_Output(self, hero, "Info_Mod_Harad_Bartok_12_08"); //Was soll ich denn sonst auch machen?
+	AI_Output(self, hero, "Info_Mod_Harad_Bartok_28_08"); //Was soll ich denn sonst auch machen?
 	AI_Output(hero, self, "Info_Mod_Harad_Bartok_15_09"); //Und was wird die Anfertigung kosten?
-	AI_Output(self, hero, "Info_Mod_Harad_Bartok_12_10"); //(überlegt angestrengt) Materialkosten, Arbeitszeit, Transportwege... Ich komme da ziemlich genau auf 1000 Gold!
+	AI_Output(self, hero, "Info_Mod_Harad_Bartok_28_10"); //(überlegt angestrengt) Materialkosten, Arbeitszeit, Transportwege... Ich komme da ziemlich genau auf 1000 Gold!
 	AI_Output(hero, self, "Info_Mod_Harad_Bartok_15_11"); //(ironisch) Potztausend, was ein Zufall.
-	AI_Output(self, hero, "Info_Mod_Harad_Bartok_12_12"); //Soll's ja geben. Komm morgen vorbei, dann kann ich dir Neues berichten!
+	AI_Output(self, hero, "Info_Mod_Harad_Bartok_28_12"); //Soll's ja geben. Komm morgen vorbei, dann kann ich dir Neues berichten!
 
 	B_LogEntry	(TOPIC_MOD_BARTOK_SUMPFKRAUTRUESTUNG, "Harad braucht einen Tag, um die Rüstung zu entwerfen. Dann soll ich noch mal vorbeischauen.");
 
@@ -143,13 +143,13 @@ FUNC INT Info_Mod_Harad_Sumpfkrautruestung_Condition()
 FUNC VOID Info_Mod_Harad_Sumpfkrautruestung_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_Sumpfkrautruestung_15_00"); //Was gibt's Neues zur Sumpfkrautrüstung?
-	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung_12_01"); //Zwei Dinge. Erstens brauche ich deine Unterstützung, um alles Nötige zu besorgen.
-	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung_12_02"); //Ich habe dir eine Liste angefertigt.
+	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung_28_01"); //Zwei Dinge. Erstens brauche ich deine Unterstützung, um alles Nötige zu besorgen.
+	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung_28_02"); //Ich habe dir eine Liste angefertigt.
 
 	B_GiveInvItems	(self, hero, ItWr_KrautruestungListe, 1);
 
 	AI_Output(hero, self, "Info_Mod_Harad_Sumpfkrautruestung_15_03"); //Und zweitens?
-	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung_12_04"); //Denk an das Gold, wenn du mir die Sachen bringst. Ohne das ... äh, kann ich nicht anfangen.
+	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung_28_04"); //Denk an das Gold, wenn du mir die Sachen bringst. Ohne das ... äh, kann ich nicht anfangen.
 	AI_Output(hero, self, "Info_Mod_Harad_Sumpfkrautruestung_15_05"); //Schon klar.
 
 	B_LogEntry	(TOPIC_MOD_BARTOK_SUMPFKRAUTRUESTUNG, "Harad hat mir eine Liste mit Dingen gegeben, die es zu beschaffen gilt, bis er mit der Rüstung anfangen kann. Außerdem soll ich daran denken, das Gold mitzubringen.");
@@ -192,11 +192,11 @@ FUNC VOID Info_Mod_Harad_Sumpfkrautruestung2_Info()
 
 	B_ShowGivenThings	("1000 Gold, 15 Sumpfkrautpflanzen, 10 Reptilienhäute, 5 Rohstahl und 3 Skelettknochen gegeben");
 
-	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung2_12_01"); //Es wird zwar schwierig, daraus eine respektable Lederrüstung zu erstellen, aber dir sei versichert, dass du dich an niemand Besseren hättest wenden können.
-	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung2_12_02"); //Da die Häute noch gegerbt werden müssen, dauert die Fertigstellung der Rüstung ein paar Tage.
-	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung2_12_03"); //Dein Freund Bartok kann sie dann in einer Woche abholen.
+	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung2_28_01"); //Es wird zwar schwierig, daraus eine respektable Lederrüstung zu erstellen, aber dir sei versichert, dass du dich an niemand Besseren hättest wenden können.
+	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung2_28_02"); //Da die Häute noch gegerbt werden müssen, dauert die Fertigstellung der Rüstung ein paar Tage.
+	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung2_28_03"); //Dein Freund Bartok kann sie dann in einer Woche abholen.
 	AI_Output(hero, self, "Info_Mod_Harad_Sumpfkrautruestung2_15_04"); //Er ist nicht mein Freund.
-	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung2_12_05"); //Wie auch immer. Sag ihm das.
+	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung2_28_05"); //Wie auch immer. Sag ihm das.
 
 	B_GivePlayerXP	(400);
 
@@ -228,8 +228,8 @@ FUNC INT Info_Mod_Harad_Sumpfkrautruestung3_Condition()
 FUNC VOID Info_Mod_Harad_Sumpfkrautruestung3_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_Sumpfkrautruestung3_15_00"); //Bartok will die Rüstung nicht mehr. Du kannst sie mir geben.
-	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung3_12_01"); //Das müsst ihr unter euch ausmachen.
-	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung3_12_02"); //Ich lobe mich ja nur ungern, aber sie ist ein wahres Prachtstück geworden. Hier ist sie.
+	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung3_28_01"); //Das müsst ihr unter euch ausmachen.
+	AI_Output(self, hero, "Info_Mod_Harad_Sumpfkrautruestung3_28_02"); //Ich lobe mich ja nur ungern, aber sie ist ein wahres Prachtstück geworden. Hier ist sie.
 
 	CreateInvItems	(self, ItAr_Sumpfkraut, 1);
 	B_GiveInvItems	(self, hero, ItAr_Sumpfkraut, 1);
@@ -262,7 +262,7 @@ FUNC VOID Info_Mod_Harad_Piraten_Info()
 
 	B_GiveInvItems	(hero, self, ItMw_Piratensaebel_Greg, 1);
 
-	AI_Output(self, hero, "Info_Mod_Harad_Piraten_12_01"); //Hmm ... Lass mal sehen ...
+	AI_Output(self, hero, "Info_Mod_Harad_Piraten_28_01"); //Hmm ... Lass mal sehen ...
 
 	AI_UnequipWeapons	(self);
 	EquipItem	(self, ItMw_Piratensaebel_Greg);
@@ -271,10 +271,10 @@ FUNC VOID Info_Mod_Harad_Piraten_Info()
 	AI_RemoveWeapon	(self);
 	AI_UnequipWeapons	(self);
 
-	AI_Output(self, hero, "Info_Mod_Harad_Piraten_12_02"); //Ein selten schönes Teil, obwohl es nicht von mir kommt. Woher hast du es?
+	AI_Output(self, hero, "Info_Mod_Harad_Piraten_28_02"); //Ein selten schönes Teil, obwohl es nicht von mir kommt. Woher hast du es?
 	AI_Output(hero, self, "Info_Mod_Harad_Piraten_15_03"); //Tut nichts zur Sache. Kannst du?
-	AI_Output(self, hero, "Info_Mod_Harad_Piraten_12_04"); //Fürs Klingenputzen habe ich jetzt gar keine Zeit.
-	AI_Output(self, hero, "Info_Mod_Harad_Piraten_12_05"); //Mit so etwas beauftragt man unerfahrene Schmiede, keinen Meister wie mich.
+	AI_Output(self, hero, "Info_Mod_Harad_Piraten_28_04"); //Fürs Klingenputzen habe ich jetzt gar keine Zeit.
+	AI_Output(self, hero, "Info_Mod_Harad_Piraten_28_05"); //Mit so etwas beauftragt man unerfahrene Schmiede, keinen Meister wie mich.
 	AI_Output(hero, self, "Info_Mod_Harad_Piraten_15_06"); //Na gut. Dann gib wieder her.
 
 	B_GiveInvItems	(self, hero, ItMw_Piratensaebel_Greg, 1);
@@ -305,17 +305,17 @@ FUNC INT Info_Mod_Harad_Lehrling_Condition()
 FUNC VOID Info_Mod_Harad_Lehrling_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_Lehrling_15_00"); //Matteo sagt, ich bräuchte deine Zustimmung, um Lehrling werden zu können.
-	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_12_01"); //Oh nein, jetzt soll ich mir schon wieder eine Prüfung ausdenken, oder wie?
-	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_12_02"); //Als hätte ich den ganzen Tag über nichts Besseres zu tun!
+	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_28_01"); //Oh nein, jetzt soll ich mir schon wieder eine Prüfung ausdenken, oder wie?
+	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_28_02"); //Als hätte ich den ganzen Tag über nichts Besseres zu tun!
 	AI_Output(hero, self, "Info_Mod_Harad_Lehrling_15_03"); //Irgendetwas werde ich doch tun können, womit ich dir unter die Arme greifen kann.
-	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_12_04"); //Da gibt's nur eine Sache - aber bei der wirst du mir auch nicht helfen können.
-	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_12_05"); //Und zwar geht es um mein beschlagnahmtes Stahlpaket, das die Paladine auf ihr Schiff geladen haben, um es dem König zu bringen - möge er sich damit selbst umbringen!
-	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_12_06"); //Das Schiff wird die ganze Zeit über bewacht, und die Wachen lassen niemanden zum Stahlpaket durch, nicht mal mich als rechtmäßigen Eigentümer.
-	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_12_07"); //Du müsstest also eine andere Möglichkeit finden, auf das Schiff zu gelangen.
+	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_28_04"); //Da gibt's nur eine Sache - aber bei der wirst du mir auch nicht helfen können.
+	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_28_05"); //Und zwar geht es um mein beschlagnahmtes Stahlpaket, das die Paladine auf ihr Schiff geladen haben, um es dem König zu bringen - möge er sich damit selbst umbringen!
+	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_28_06"); //Das Schiff wird die ganze Zeit über bewacht, und die Wachen lassen niemanden zum Stahlpaket durch, nicht mal mich als rechtmäßigen Eigentümer.
+	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_28_07"); //Du müsstest also eine andere Möglichkeit finden, auf das Schiff zu gelangen.
 	AI_Output(hero, self, "Info_Mod_Harad_Lehrling_15_08"); //Wo befindet sich denn das Paket auf dem Schiff?
-	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_12_09"); //Das liegt wahrscheinlich im Frachtraum unter Deck, wo es die nächsten Monate vor sich hin modern soll.
+	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_28_09"); //Das liegt wahrscheinlich im Frachtraum unter Deck, wo es die nächsten Monate vor sich hin modern soll.
 	AI_Output(hero, self, "Info_Mod_Harad_Lehrling_15_10"); //Ich werd mal nachschauen.
-	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_12_11"); //Mach dir bloß keine Hoffnungen!
+	AI_Output(self, hero, "Info_Mod_Harad_Lehrling_28_11"); //Mach dir bloß keine Hoffnungen!
 
 	Log_CreateTopic	(TOPIC_MOD_HARADSSTAHL, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_HARADSSTAHL, LOG_RUNNING);
@@ -348,11 +348,11 @@ FUNC VOID Info_Mod_Harad_Stimme_Info()
 
 	B_GiveInvItems	(hero, self, ItMi_Addon_Steel_Paket, 1);
 
-	AI_Output(self, hero, "Info_Mod_Harad_Stimme_12_01"); //Die Wächter ließen sich also doch bestechen?
+	AI_Output(self, hero, "Info_Mod_Harad_Stimme_28_01"); //Die Wächter ließen sich also doch bestechen?
 	AI_Output(hero, self, "Info_Mod_Harad_Stimme_15_02"); //Nein.
-	AI_Output(self, hero, "Info_Mod_Harad_Stimme_12_03"); //(brüsk) Dann will ich gar nicht wissen, wie du daran gelangt bist.
-	AI_Output(self, hero, "Info_Mod_Harad_Stimme_12_04"); //Ich habe zwar schon erhebliche Einbußen durch das verzögerte Paket verzeichnen müssen, aber immerhin ist es jetzt da.
-	AI_Output(self, hero, "Info_Mod_Harad_Stimme_12_05"); //Meinetwegen kannst du meine Stimme haben.
+	AI_Output(self, hero, "Info_Mod_Harad_Stimme_28_03"); //(brüsk) Dann will ich gar nicht wissen, wie du daran gelangt bist.
+	AI_Output(self, hero, "Info_Mod_Harad_Stimme_28_04"); //Ich habe zwar schon erhebliche Einbußen durch das verzögerte Paket verzeichnen müssen, aber immerhin ist es jetzt da.
+	AI_Output(self, hero, "Info_Mod_Harad_Stimme_28_05"); //Meinetwegen kannst du meine Stimme haben.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 100);
 
@@ -389,10 +389,10 @@ FUNC INT Info_Mod_Harad_DeinLehrling_Condition()
 FUNC VOID Info_Mod_Harad_DeinLehrling_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_DeinLehrling_15_00"); //Kann ich bei dir Lehrling werden?
-	AI_Output(self, hero, "Info_Mod_Harad_DeinLehrling_12_01"); //Unmöglich! Ich kann nicht gleichzeitig arbeiten und mich um zwei Lehrlinge kümmern.
+	AI_Output(self, hero, "Info_Mod_Harad_DeinLehrling_28_01"); //Unmöglich! Ich kann nicht gleichzeitig arbeiten und mich um zwei Lehrlinge kümmern.
 	AI_Output(hero, self, "Info_Mod_Harad_DeinLehrling_15_03"); //Aber Brian hat doch schon viel gelernt ...
-	AI_Output(self, hero, "Info_Mod_Harad_DeinLehrling_12_04"); //... Und wenn man ihm nicht ständig auf die Finger schaut, macht er trotzdem alles falsch!
-	AI_Output(self, hero, "Info_Mod_Harad_DeinLehrling_12_05"); //Nein, einen zweiten Lehrling werde ich nicht aufnehmen.
+	AI_Output(self, hero, "Info_Mod_Harad_DeinLehrling_28_04"); //... Und wenn man ihm nicht ständig auf die Finger schaut, macht er trotzdem alles falsch!
+	AI_Output(self, hero, "Info_Mod_Harad_DeinLehrling_28_05"); //Nein, einen zweiten Lehrling werde ich nicht aufnehmen.
 };
 
 INSTANCE Info_Mod_Harad_DeinLehrlingStattBrian (C_INFO)
@@ -418,7 +418,7 @@ FUNC INT Info_Mod_Harad_DeinLehrlingStattBrian_Condition()
 FUNC VOID Info_Mod_Harad_DeinLehrlingStattBrian_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_DeinLehrlingStattBrian_15_00"); //Würdest du mich statt Brian nehmen wollen?
-	AI_Output(self, hero, "Info_Mod_Harad_DeinLehrlingStattBrian_12_01"); //Na ja, noch ungeschickter als er kannst du dich ja kaum anstellen.
+	AI_Output(self, hero, "Info_Mod_Harad_DeinLehrlingStattBrian_28_01"); //Na ja, noch ungeschickter als er kannst du dich ja kaum anstellen.
 	AI_Output(hero, self, "Info_Mod_Harad_DeinLehrlingStattBrian_15_02"); //Dann werde ich mich mal mit ihm unterhalten.
 };
 
@@ -527,15 +527,15 @@ FUNC INT Info_Mod_Harad_Job_Condition()
 FUNC VOID Info_Mod_Harad_Job_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_Job_15_00"); //Ich möchte etwas lernen.
-	AI_Output(self, hero, "Info_Mod_Harad_Job_12_01"); //Dann wirst du dich zuerst nützlich machen.
-	AI_Output(self, hero, "Info_Mod_Harad_Job_12_02"); //Dadurch, dass sich die Paladine so einen offenen Vertrauensbruch geleistet haben, verspüre ich keine große Lust, ihnen weiter zur Verfügung zu stehen.
-	AI_Output(self, hero, "Info_Mod_Harad_Job_12_03"); //Allerdings kann ich ohne neue Aufträge nicht überleben. Deswegen werde ich den Söldnern meine Dienste anbieten müssen.
-	AI_Output(self, hero, "Info_Mod_Harad_Job_12_04"); //Hier hast du ein selbstgeschmiedetes Schwert. Das wirst du ihnen zeigen, dann werden sie von meinen Fähigkeiten überzeugt sein.
+	AI_Output(self, hero, "Info_Mod_Harad_Job_28_01"); //Dann wirst du dich zuerst nützlich machen.
+	AI_Output(self, hero, "Info_Mod_Harad_Job_28_02"); //Dadurch, dass sich die Paladine so einen offenen Vertrauensbruch geleistet haben, verspüre ich keine große Lust, ihnen weiter zur Verfügung zu stehen.
+	AI_Output(self, hero, "Info_Mod_Harad_Job_28_03"); //Allerdings kann ich ohne neue Aufträge nicht überleben. Deswegen werde ich den Söldnern meine Dienste anbieten müssen.
+	AI_Output(self, hero, "Info_Mod_Harad_Job_28_04"); //Hier hast du ein selbstgeschmiedetes Schwert. Das wirst du ihnen zeigen, dann werden sie von meinen Fähigkeiten überzeugt sein.
 
 	B_GiveInvItems	(self, hero, ItMw_HaradSchwert, 1);
 
 	AI_Output(hero, self, "Info_Mod_Harad_Job_15_05"); //Und wenn das nicht funktioniert?
-	AI_Output(self, hero, "Info_Mod_Harad_Job_12_06"); //Stell dich nicht blöd an, dann wird es funktionieren.
+	AI_Output(self, hero, "Info_Mod_Harad_Job_28_06"); //Stell dich nicht blöd an, dann wird es funktionieren.
 
 	Log_CreateTopic	(TOPIC_MOD_LEHRLING_HARAD_ONE, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_LEHRLING_HARAD_ONE, LOG_RUNNING);
@@ -1197,9 +1197,9 @@ FUNC INT Info_Mod_Harad_Blutkelch_Condition()
 FUNC VOID Info_Mod_Harad_Blutkelch_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_Blutkelch_15_00"); //Ich brauche eine besonders harte Spitzhacke. Hast du sowas?
-	AI_Output(self, hero, "Info_Mod_Harad_Blutkelch_12_01"); //Nein. Ich schmiede nur richtige Waffen.
+	AI_Output(self, hero, "Info_Mod_Harad_Blutkelch_28_01"); //Nein. Ich schmiede nur richtige Waffen.
 	AI_Output(hero, self, "Info_Mod_Harad_Blutkelch_15_02"); //Und wer könnte mir da helfen?
-	AI_Output(self, hero, "Info_Mod_Harad_Blutkelch_12_03"); //Woher soll ich das wissen? Selbst ist der Mann.
+	AI_Output(self, hero, "Info_Mod_Harad_Blutkelch_28_03"); //Woher soll ich das wissen? Selbst ist der Mann.
 };
 
 INSTANCE Info_Mod_Harad_AndreVermaechtnis (C_INFO)
@@ -1222,10 +1222,10 @@ FUNC INT Info_Mod_Harad_AndreVermaechtnis_Condition()
 
 FUNC VOID Info_Mod_Harad_AndreVermaechtnis_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis_12_00"); //Bist du nicht derjenige, der die Nachfolge von Andre antreten soll?
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis_28_00"); //Bist du nicht derjenige, der die Nachfolge von Andre antreten soll?
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis_15_01"); //Ja, das stimmt.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis_12_02"); //Andre war ein Taugenichts, der mir ständig in die Arbeit gepfuscht hat.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis_12_03"); //Ich hoffe, du wirst nicht so wie er.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis_28_02"); //Andre war ein Taugenichts, der mir ständig in die Arbeit gepfuscht hat.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis_28_03"); //Ich hoffe, du wirst nicht so wie er.
 };
 
 INSTANCE Info_Mod_Harad_AndreVermaechtnis2 (C_INFO)
@@ -1251,7 +1251,7 @@ FUNC INT Info_Mod_Harad_AndreVermaechtnis2_Condition()
 FUNC VOID Info_Mod_Harad_AndreVermaechtnis2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis2_15_00"); //Andre hat mir dieses Schwert hinterlassen und meinte, du könntest es für mich umschmieden.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_12_01"); //Zeig her.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_28_01"); //Zeig her.
 
 	EquipWeapon	(self, Weltenspalter);
 
@@ -1261,18 +1261,18 @@ FUNC VOID Info_Mod_Harad_AndreVermaechtnis2_Info()
 
 	AI_UnequipWeapons	(self);
 
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_12_02"); //Das Schwert kenne ich doch! Damit hat er den Dämonen durchbohrt.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_28_02"); //Das Schwert kenne ich doch! Damit hat er den Dämonen durchbohrt.
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis2_15_03"); //Wovon sprichst du?
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_12_04"); //Vor vielen Jahren, als ich den lästigen Heeresdienst ableistete, kämpfte ich mit Andre auf dem Schlachtfeld im Krieg gegen die Orks.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_12_05"); //Wir hatten gerade das feindliche Heer aufgerieben und der Sieg in der Schlacht schien schon sicher, als einige orkische Schamanen einen mächtigen Feuerdämonen beschworen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_12_06"); //Er begann in unseren Reihen zu wüten und versengte viele Paladine und Krieger erbarmungslos mit seinen Flammen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_12_07"); //Da stürmte Andre vor und stieß sein Schwert bis zum Anschlag in die Brust des Monsters, das augenblicklich tot war.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_12_08"); //Doch das Feuer in dessen Brust war so heiß, dass der Stahl schmolz.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_28_04"); //Vor vielen Jahren, als ich den lästigen Heeresdienst ableistete, kämpfte ich mit Andre auf dem Schlachtfeld im Krieg gegen die Orks.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_28_05"); //Wir hatten gerade das feindliche Heer aufgerieben und der Sieg in der Schlacht schien schon sicher, als einige orkische Schamanen einen mächtigen Feuerdämonen beschworen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_28_06"); //Er begann in unseren Reihen zu wüten und versengte viele Paladine und Krieger erbarmungslos mit seinen Flammen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_28_07"); //Da stürmte Andre vor und stieß sein Schwert bis zum Anschlag in die Brust des Monsters, das augenblicklich tot war.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_28_08"); //Doch das Feuer in dessen Brust war so heiß, dass der Stahl schmolz.
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis2_15_09"); //Was? Das muss ja wie im Schmiedefeuer gewesen sein.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_12_10"); //Nein ... ungleich heißer.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_12_11"); //Es war ein Schwert höchster Güte, in den Minen Nordmars geschmiedet, im Kloster gesegnet und mit dem Siegel des Feuers versehen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_12_12"); //Eine Klinge, wie nur wenige Paladine sie schon damals führten ... und noch weniger sie heute besitzen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_12_13"); //Andre hatte sie von seinem Vater geerbt.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_28_10"); //Nein ... ungleich heißer.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_28_11"); //Es war ein Schwert höchster Güte, in den Minen Nordmars geschmiedet, im Kloster gesegnet und mit dem Siegel des Feuers versehen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_28_12"); //Eine Klinge, wie nur wenige Paladine sie schon damals führten ... und noch weniger sie heute besitzen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_28_13"); //Andre hatte sie von seinem Vater geerbt.
 
 	Info_ClearChoices	(Info_Mod_Harad_AndreVermaechtnis2);
 
@@ -1283,10 +1283,10 @@ FUNC VOID Info_Mod_Harad_AndreVermaechtnis2_Info()
 FUNC VOID Info_Mod_Harad_AndreVermaechtnis2_C()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis2_C_15_00"); //Wirst du das Schwert für mich neu schmieden?
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_C_12_01"); //Große Lust habe ich nicht, schließlich schulde ich Andre nichts. Aber du wirst dich hoffentlich erkenntlich zeigen, wenn ich es doch tue. Für dich.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_C_12_02"); //Du solltest aber wissen, dass ein solches Schwert seine volle Macht erst in den Händen eines Paladins und wahren Gläubigen entfaltet.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_C_12_03"); //Ein Ungläubiger dagegen wird den Zorn Innos zu spüren bekommen, falls er versucht die Waffe anzulegen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_C_12_04"); //Wie dem auch sei, soll ich das Schwert als Einhand- oder Zweihandwaffe schmieden?
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_C_28_01"); //Große Lust habe ich nicht, schließlich schulde ich Andre nichts. Aber du wirst dich hoffentlich erkenntlich zeigen, wenn ich es doch tue. Für dich.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_C_28_02"); //Du solltest aber wissen, dass ein solches Schwert seine volle Macht erst in den Händen eines Paladins und wahren Gläubigen entfaltet.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_C_28_03"); //Ein Ungläubiger dagegen wird den Zorn Innos zu spüren bekommen, falls er versucht die Waffe anzulegen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_C_28_04"); //Wie dem auch sei, soll ich das Schwert als Einhand- oder Zweihandwaffe schmieden?
 
 	Info_ClearChoices	(Info_Mod_Harad_AndreVermaechtnis2);
 
@@ -1297,9 +1297,9 @@ FUNC VOID Info_Mod_Harad_AndreVermaechtnis2_C()
 FUNC VOID Info_Mod_Harad_AndreVermaechtnis2_B()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis2_B_15_00"); //Wieso wurde die Klinge nicht schon für Andre neu geschmiedet?
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_B_12_01"); //Die Hitze, die das Schwert schmolz, versengte auch seine Hand.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_B_12_02"); //Er konnte niemals mehr wieder eine Waffe führen, wie er es damals tat. Stattdessen wurde er zum Hauptmann erhoben. Wäre seine Hand bloß unversehrt geblieben...
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_B_12_03"); //Das geschmolzene Schwert behielt er als Andenken.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_B_28_01"); //Die Hitze, die das Schwert schmolz, versengte auch seine Hand.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_B_28_02"); //Er konnte niemals mehr wieder eine Waffe führen, wie er es damals tat. Stattdessen wurde er zum Hauptmann erhoben. Wäre seine Hand bloß unversehrt geblieben...
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_B_28_03"); //Das geschmolzene Schwert behielt er als Andenken.
 
 	Mod_AndreSchwert_Counter += 1;
 
@@ -1312,9 +1312,9 @@ FUNC VOID Info_Mod_Harad_AndreVermaechtnis2_B()
 FUNC VOID Info_Mod_Harad_AndreVermaechtnis2_A()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis2_A_15_00"); //Wieso sind solche Klingen denn mittlerweile so selten?
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_A_12_01"); //Na, schau dich doch mal um, was auf dem Festland vor sich geht. Die Schmiedekunst wird von Unfähigen verkrüppelt.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_A_12_02"); //Die Orks fallen von allen Seiten ein, das Königreich droht auseinander zu fallen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_A_12_03"); //Heute muss man schauen, dass man noch genug Erz und Eisen findet, um jeden Kämpfer mit einer einfachen Waffe auszustatten.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_A_28_01"); //Na, schau dich doch mal um, was auf dem Festland vor sich geht. Die Schmiedekunst wird von Unfähigen verkrüppelt.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_A_28_02"); //Die Orks fallen von allen Seiten ein, das Königreich droht auseinander zu fallen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_A_28_03"); //Heute muss man schauen, dass man noch genug Erz und Eisen findet, um jeden Kämpfer mit einer einfachen Waffe auszustatten.
 
 	Mod_AndreSchwert_Counter += 1;
 
@@ -1326,8 +1326,8 @@ FUNC VOID Info_Mod_Harad_AndreVermaechtnis2_A()
 
 FUNC VOID Info_Mod_Harad_AndreVermaechtnis2_F()
 {
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_F_12_00"); //So werde ich es tun. Dafür werde ich jedoch einige Tage benötigen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_F_12_01"); //Wenn ich fertig bin, werde ich es dir mitteilen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_F_28_00"); //So werde ich es tun. Dafür werde ich jedoch einige Tage benötigen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis2_F_28_01"); //Wenn ich fertig bin, werde ich es dir mitteilen.
 
 	Info_ClearChoices	(Info_Mod_Harad_AndreVermaechtnis2);
 
@@ -1375,7 +1375,7 @@ FUNC INT Info_Mod_Harad_AndreVermaechtnis3_Condition()
 
 FUNC VOID Info_Mod_Harad_AndreVermaechtnis3_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_12_00"); //Es ist geschafft. Das Schwert ist neu geschmiedet.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_28_00"); //Es ist geschafft. Das Schwert ist neu geschmiedet.
 
 	if (Mod_AndreSchwert_Art == 1)
 	{
@@ -1386,14 +1386,14 @@ FUNC VOID Info_Mod_Harad_AndreVermaechtnis3_Info()
 		B_GiveInvItems	(self, hero, ItMw_2H_Blessed_01, 1);
 	};
 
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_12_01"); //Du darfst dich bei Innos stolz und glücklich schätzen, eine solche Waffe zu führen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_28_01"); //Du darfst dich bei Innos stolz und glücklich schätzen, eine solche Waffe zu führen.
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis3_15_02"); //Ja, von der Waffe scheint eine ganz besondere Kraft auszugehen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_12_03"); //Das will ich meinen. Außerdem ist sie von mir bearbeitet. Seine wahre Macht wird sie jedoch erst wieder erlangen, wenn sie nach so langer Zeit erneut die Weihe erhält.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_28_03"); //Das will ich meinen. Außerdem ist sie von mir bearbeitet. Seine wahre Macht wird sie jedoch erst wieder erlangen, wenn sie nach so langer Zeit erneut die Weihe erhält.
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis3_15_04"); //Weihe?
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_12_05"); //Ein jedes Paladinschwert wurde geweiht, ehe es in die Hände eines Innos-Anhängers gegeben wurde.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_12_06"); //So hat es im Besonderen die Macht, untote und dämonische Geschöpfe zu bannen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_12_07"); //Für die Weihe musst du dich ins Kloster begeben und mit einem Magier Innos' sprechen ... ich glaube, es war Marduk.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_12_08"); //Dann wird die Macht des Schwertes wachsen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_28_05"); //Ein jedes Paladinschwert wurde geweiht, ehe es in die Hände eines Innos-Anhängers gegeben wurde.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_28_06"); //So hat es im Besonderen die Macht, untote und dämonische Geschöpfe zu bannen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_28_07"); //Für die Weihe musst du dich ins Kloster begeben und mit einem Magier Innos' sprechen ... ich glaube, es war Marduk.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis3_28_08"); //Dann wird die Macht des Schwertes wachsen.
 
 	B_GivePlayerXP	(1000);
 
@@ -1424,15 +1424,15 @@ FUNC INT Info_Mod_Harad_AndreVermaechtnis4_Condition()
 
 FUNC VOID Info_Mod_Harad_AndreVermaechtnis4_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis4_12_00"); //Du hast die Weihe vollzogen?
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis4_28_00"); //Du hast die Weihe vollzogen?
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis4_15_01"); //Ja, und die Macht des Schwertes ist gewachsen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis4_12_02"); //(gelangweilt) Das ist ja ... fantastisch. Jetzt ist die Klinge vollkommen. (nachdenklich) Hmm, wobei ...
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis4_28_02"); //(gelangweilt) Das ist ja ... fantastisch. Jetzt ist die Klinge vollkommen. (nachdenklich) Hmm, wobei ...
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis4_15_03"); //Ja?
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis4_12_04"); //Ich erinnere mich an Überlieferungen, dass es neben der einfache Schwertweihe, für solche Klingen auch noch eine Art Pilgerweg gegeben haben soll, um die Klinge zu vervollkommnen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis4_12_05"); //Aber vielleicht waren das auch nur Gerüchte. Ist ja alles lange her.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis4_28_04"); //Ich erinnere mich an Überlieferungen, dass es neben der einfache Schwertweihe, für solche Klingen auch noch eine Art Pilgerweg gegeben haben soll, um die Klinge zu vervollkommnen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis4_28_05"); //Aber vielleicht waren das auch nur Gerüchte. Ist ja alles lange her.
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis4_15_06"); //Was meinst du?
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis4_12_07"); //Ich weiß es wirklich nicht mehr genau.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis4_12_08"); //Wenn ich es ein wenig mehr mit dem Lesen hätte, würde ich wohl in der Klosterbibliothek nachschauen ... aber mein Handwerk ist nun mal der Stahl.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis4_28_07"); //Ich weiß es wirklich nicht mehr genau.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis4_28_08"); //Wenn ich es ein wenig mehr mit dem Lesen hätte, würde ich wohl in der Klosterbibliothek nachschauen ... aber mein Handwerk ist nun mal der Stahl.
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_INNOSKLINGE, "Harad erwähnte etwas von einem Pilgerweg, der die Klinge noch mächtiger machen könnte. Er wusste aber nichts Genaueres. Vielleicht kann mir aber die Klosterbibliothek weiterhelfen.");
 
@@ -1462,25 +1462,25 @@ FUNC INT Info_Mod_Harad_AndreVermaechtnis5_Condition()
 FUNC VOID Info_Mod_Harad_AndreVermaechtnis5_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis5_15_00"); //Ich habe da einen möglichen Hinweis.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_12_01"); //Lass sehen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_28_01"); //Lass sehen.
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_12_02"); //Aha ... so, so ... interessant. Hmm ... der Ruf des Kriegers.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_28_02"); //Aha ... so, so ... interessant. Hmm ... der Ruf des Kriegers.
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis5_15_03"); //Ja?
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_12_04"); //Lass mich nachdenken ... Ja, das könnte es sein ...
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_28_04"); //Lass mich nachdenken ... Ja, das könnte es sein ...
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis5_15_05"); //Ich bin ganz Ohr.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_12_06"); //Der Ruf des Kriegers ... damit könnte Dominiques Ruf gemeint sein.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_12_07"); //Es soll ein Liedtext gewesen sein, den die Paladine einst anstimmten, bevor sie in den Kampf zogen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_12_08"); //Das liegt aber lange zurück.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_12_09"); //Ich glaube mich an einen Mythos zu erinnern, der in dem Zusammenhang tatsächlich von dem heiligen Feuer sprach, welches den Krieger und seine Klinge durchzog.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_28_06"); //Der Ruf des Kriegers ... damit könnte Dominiques Ruf gemeint sein.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_28_07"); //Es soll ein Liedtext gewesen sein, den die Paladine einst anstimmten, bevor sie in den Kampf zogen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_28_08"); //Das liegt aber lange zurück.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_28_09"); //Ich glaube mich an einen Mythos zu erinnern, der in dem Zusammenhang tatsächlich von dem heiligen Feuer sprach, welches den Krieger und seine Klinge durchzog.
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis5_15_10"); //Vielleicht also mehr als eine bloße Metapher?
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_12_11"); //Das wäre schier ... unglaublich. Und du könntest derjenige sein, der es womöglich herausfindet.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_28_11"); //Das wäre schier ... unglaublich. Und du könntest derjenige sein, der es womöglich herausfindet.
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis5_15_12"); //Dazu müsste ich jedoch diesen Text haben.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_12_13"); //Warte mal ... ich glaube, Ingmar könnte dir da weiterhelfen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_12_14"); //Wie kein anderer Paladin begeistert er sich für Gedichte und Lieder über Krieg und Glauben.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_28_13"); //Warte mal ... ich glaube, Ingmar könnte dir da weiterhelfen.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_28_14"); //Wie kein anderer Paladin begeistert er sich für Gedichte und Lieder über Krieg und Glauben.
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis5_15_15"); //Dann werde ich es bei ihm versuchen.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_12_16"); //Ja, mach das. Und gib mir Bescheid, wenn du es bekommen hast.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis5_28_16"); //Ja, mach das. Und gib mir Bescheid, wenn du es bekommen hast.
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_INNOSKLINGE, "Wie ich von Harad erfuhr, ist womöglich der Liedtext 'Dominiques Ruf' gemeint. Paladin Ingmar könnte vielleicht noch über diesen verfügen.");
 };
@@ -1505,12 +1505,12 @@ FUNC INT Info_Mod_Harad_AndreVermaechtnis6_Condition()
 
 FUNC VOID Info_Mod_Harad_AndreVermaechtnis6_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis6_12_00"); //Hast du den Text bekommen?
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis6_28_00"); //Hast du den Text bekommen?
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis6_15_01"); //Ja, er hatte ihn tatsächlich.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis6_12_02"); //Dann kannst du dich also nun auf den Pilgerweg machen ... wenn du alles hast, was du brauchst.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis6_12_03"); //Der Text nannte ja die Dinge, die du benötigst, während du von Schrein zu Schrein ziehst und jedes Mal einen Teil des Liedtextes sprichst.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis6_12_04"); //Und sobald du damit fertig bist, wird das Schwert hoffentlich neue Eigenschaften haben.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis6_12_05"); //Viel Erfolg dabei. Und erinnere dich daran, wer dir die ganzen wertvollen Hinweise gegeben hat!
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis6_28_02"); //Dann kannst du dich also nun auf den Pilgerweg machen ... wenn du alles hast, was du brauchst.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis6_28_03"); //Der Text nannte ja die Dinge, die du benötigst, während du von Schrein zu Schrein ziehst und jedes Mal einen Teil des Liedtextes sprichst.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis6_28_04"); //Und sobald du damit fertig bist, wird das Schwert hoffentlich neue Eigenschaften haben.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis6_28_05"); //Viel Erfolg dabei. Und erinnere dich daran, wer dir die ganzen wertvollen Hinweise gegeben hat!
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_INNOSKLINGE, "Nun kann ich mich auf den Pilgerweg begeben.");
 };
@@ -1537,9 +1537,9 @@ FUNC INT Info_Mod_Harad_AndreVermaechtnis7_Condition()
 
 FUNC VOID Info_Mod_Harad_AndreVermaechtnis7_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis7_12_00"); //Und, hast du die Weihe vollzogen?
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis7_28_00"); //Und, hast du die Weihe vollzogen?
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis7_15_01"); //Ja, es hat tatsächlich geklappt.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis7_12_02"); //Lass sehen ...
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis7_28_02"); //Lass sehen ...
 
 	EquipWeapon	(self, ItMw_2H_Blessed_03);
 
@@ -1549,10 +1549,10 @@ FUNC VOID Info_Mod_Harad_AndreVermaechtnis7_Info()
 
 	AI_UnequipWeapons	(self);	
 
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis7_12_03"); //Stimmt, das ist jetzt wirklich ein einmaliges Schwert. (schwärmerisch) Meine und Innos' Kräfte vereint in einer Klinge ...
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis7_28_03"); //Stimmt, das ist jetzt wirklich ein einmaliges Schwert. (schwärmerisch) Meine und Innos' Kräfte vereint in einer Klinge ...
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis7_15_04"); //Schon gut. Danke auf jeden Fall für deine Hilfe.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis7_12_05"); //(gönnerhaft) Man hilft doch, wo man kann.
-	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis7_12_06"); //Pass gut auf mein Schwert auf und schenk es keinem der geldgierigen Paladine!
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis7_28_05"); //(gönnerhaft) Man hilft doch, wo man kann.
+	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis7_28_06"); //Pass gut auf mein Schwert auf und schenk es keinem der geldgierigen Paladine!
 
 	B_SetTopicStatus	(TOPIC_MOD_MILIZ_INNOSKLINGE, LOG_SUCCESS);
 
@@ -1600,12 +1600,12 @@ FUNC VOID Info_Mod_Harad_Anschlagtafel_Info()
 		Npc_RemoveInvItems	(hero, ItMw_1H_Mace_L_01, Mod_Anschlagtafel_Khorinis_Harad_Schuerhaken);
 		Npc_RemoveInvItems	(hero, ItMiSwordraw, Mod_Anschlagtafel_Khorinis_Harad_Rohstahl);
 
-		AI_Output(self, hero, "Info_Mod_Harad_Anschlagtafel_12_00"); //Was? Zeig her ... Tatsächlich, alles dabei. Nicht in bestem Zustand, aber gerade noch zu gebrauchen.
-		AI_Output(self, hero, "Info_Mod_Harad_Anschlagtafel_12_01"); //Hier ist deine Entlohnung.
+		AI_Output(self, hero, "Info_Mod_Harad_Anschlagtafel_28_00"); //Was? Zeig her ... Tatsächlich, alles dabei. Nicht in bestem Zustand, aber gerade noch zu gebrauchen.
+		AI_Output(self, hero, "Info_Mod_Harad_Anschlagtafel_28_01"); //Hier ist deine Entlohnung.
 
 		B_GiveInvItems	(self, hero, ItMi_Gold, Mod_Anschlagtafel_Khorinis_Harad_Gold);
 
-		AI_Output(self, hero, "Info_Mod_Harad_Anschlagtafel_12_02"); //Nächstes Mal bitte bessere Qualität, ja?
+		AI_Output(self, hero, "Info_Mod_Harad_Anschlagtafel_28_02"); //Nächstes Mal bitte bessere Qualität, ja?
 
 		if (Mod_Anschlagtafel_Khorinis_Harad_Gold < 200)
 		{
@@ -1758,9 +1758,9 @@ FUNC VOID Info_Mod_Harad_Schmieden_Common()
 {
 	if B_TeachPlayerTalentSmith (self, other, WEAPON_Common)
 	{
-		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Common_12_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
-		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Common_12_02"); //Dann schlägst du am Amboss die Klinge zurecht.
-		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Common_12_03"); //Deine ersten Schwerter werden keine Meisterwerke sein, aber alles weitere kannst du ja noch später lernen.
+		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Common_28_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
+		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Common_28_02"); //Dann schlägst du am Amboss die Klinge zurecht.
+		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Common_28_03"); //Deine ersten Schwerter werden keine Meisterwerke sein, aber alles weitere kannst du ja noch später lernen.
 	};
 	
 	Info_ClearChoices (Info_Mod_Harad_Schmieden);
@@ -1795,8 +1795,8 @@ FUNC VOID Info_Mod_Harad_Schmieden_Harad01()
 {
 	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Harad_01)
 	{
-		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad01_12_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
-		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad01_12_02"); //Dann schlägst du am Amboss die Klinge zurecht.
+		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad01_28_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
+		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad01_28_02"); //Dann schlägst du am Amboss die Klinge zurecht.
 	};
 	
 	Info_ClearChoices (Info_Mod_Harad_Schmieden);
@@ -1831,8 +1831,8 @@ FUNC VOID Info_Mod_Harad_Schmieden_Harad02()
 {
 	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Harad_02)
 	{
-		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad02_12_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
-		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad02_12_02"); //Dann schlägst du am Amboss die Klinge zurecht.
+		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad02_28_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
+		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad02_28_02"); //Dann schlägst du am Amboss die Klinge zurecht.
 	};
 	
 	Info_ClearChoices (Info_Mod_Harad_Schmieden);
@@ -1867,8 +1867,8 @@ FUNC VOID Info_Mod_Harad_Schmieden_Harad03()
 {
 	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Harad_03)
 	{
-		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad03_12_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
-		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad03_12_02"); //Dann schlägst du am Amboss die Klinge zurecht.
+		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad03_28_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
+		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad03_28_02"); //Dann schlägst du am Amboss die Klinge zurecht.
 	};
 	
 	Info_ClearChoices (Info_Mod_Harad_Schmieden);
@@ -1903,8 +1903,8 @@ FUNC VOID Info_Mod_Harad_Schmieden_Harad04()
 {
 	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Harad_04)
 	{
-		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad04_12_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
-		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad04_12_02"); //Dann schlägst du am Amboss die Klinge zurecht.
+		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad04_28_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
+		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad04_28_02"); //Dann schlägst du am Amboss die Klinge zurecht.
 	};
 	
 	Info_ClearChoices (Info_Mod_Harad_Schmieden);
@@ -1981,11 +1981,11 @@ FUNC VOID Info_Mod_Harad_Verkaufen_Info()
 		|| (Hlp_IsItem(equipWeap, ItMw_Rubinklinge) == TRUE)
 		|| (Hlp_IsItem(equipWeap, ItMw_ElBastardo) == TRUE)  
 		{
-			AI_Output (self, other, "Info_Mod_Harad_Verkaufen_12_01"); //Du hast nur die, die du am Gürtel trägst. Du solltest sie besser behalten.
+			AI_Output (self, other, "Info_Mod_Harad_Verkaufen_28_01"); //Du hast nur die, die du am Gürtel trägst. Du solltest sie besser behalten.
 		}
 		else
 		{
-			AI_Output (self, other, "Info_Mod_Harad_Verkaufen_12_04"); //Dann stell welche her! Ich nehme nur einfache Schwerter an.
+			AI_Output (self, other, "Info_Mod_Harad_Verkaufen_28_04"); //Dann stell welche her! Ich nehme nur einfache Schwerter an.
 		};
 	}
 	else //(gesamt >= 1) - die verbeliebenden Klingen verkaufen ------
@@ -2002,7 +2002,7 @@ FUNC VOID Info_Mod_Harad_Verkaufen_Info()
 		concatText = ConcatStrings(IntToString(gesamt), PRINT_ItemsGegeben);		// "x Gegenstände gegeben"
 		AI_PrintScreen (concatText, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 				
-		AI_Output (self, other, "Info_Mod_Harad_Verkaufen_12_03"); //So, und hier hast du deinen Lohn.
+		AI_Output (self, other, "Info_Mod_Harad_Verkaufen_28_03"); //So, und hier hast du deinen Lohn.
 		var int lohn;
 		lohn = (anzahl_common * Value_Common1) + (anzahl_schwert1 * Value_Schwert1) + (anzahl_schwert4 * Value_Schwert4) + (anzahl_rubinklinge * Value_Rubinklinge) + (anzahl_elbastardo * Value_ElBastardo);
 				
@@ -2034,7 +2034,7 @@ FUNC INT Info_Mod_Harad_Pfeilspitzen_Condition()
 FUNC VOID Info_Mod_Harad_Pfeilspitzen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Harad_Pfeilspitzen_15_00"); //Bosper meint, du könntest mir beibringen, Pfeilspitzen zu schmieden.
-	AI_Output(self, hero, "Info_Mod_Harad_Pfeilspitzen_12_01"); //Ja, wenn's denn unbedingt sein muss.
+	AI_Output(self, hero, "Info_Mod_Harad_Pfeilspitzen_28_01"); //Ja, wenn's denn unbedingt sein muss.
 };
 
 INSTANCE Info_Mod_Harad_Spitzen (C_INFO)

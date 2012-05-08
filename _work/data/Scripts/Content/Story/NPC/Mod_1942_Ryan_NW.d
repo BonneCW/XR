@@ -4,7 +4,7 @@ INSTANCE Mod_1942_Ryan_NW (Npc_Default)
 	name 		= "Ryan";
 	guild 		= GIL_DMT;
 	id 			= 1942;
-	voice 		= 4;
+	voice 		= 29;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	level = 80;

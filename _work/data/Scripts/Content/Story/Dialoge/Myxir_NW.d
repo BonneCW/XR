@@ -25,7 +25,7 @@ FUNC INT Info_Mod_Myxir_NW_Irdorath3_Condition()
 FUNC VOID Info_Mod_Myxir_NW_Irdorath3_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Myxir_NW_Irdorath3_15_00"); //Tut mir leid, aber es scheint, dass wir zu viele sind. Ich kann dich doch nicht mitnehmen.
-	AI_Output(self, hero, "Info_Mod_Myxir_NW_Irdorath3_15_01"); //Wie war das? Ich rate dir ganz genau zu überlegen, was du jetzt sagst ...
+	AI_Output(self, hero, "Info_Mod_Myxir_NW_Irdorath3_28_01"); //Wie war das? Ich rate dir ganz genau zu überlegen, was du jetzt sagst ...
 
 	Info_ClearChoices	(Info_Mod_Myxir_NW_Irdorath3);
 
@@ -36,8 +36,8 @@ FUNC VOID Info_Mod_Myxir_NW_Irdorath3_Info()
 FUNC VOID Info_Mod_Myxir_NW_Irdorath3_B()
 {
 	AI_Output(hero, self, "Info_Mod_Myxir_NW_Irdorath3_B_15_00"); //Nein, es geht leider wirklich nicht. Die Plätze sind voll.
-	AI_Output(self, hero, "Info_Mod_Myxir_NW_Irdorath3_B_15_01"); //(zornig) In Ordnung, es ist dein Entschluss.
-	AI_Output(self, hero, "Info_Mod_Myxir_NW_Irdorath3_B_15_02"); //Ich werde aber nicht so einfach gehen, ohne dir noch ein Präsent zu hinterlassen. Viel Spaß damit.
+	AI_Output(self, hero, "Info_Mod_Myxir_NW_Irdorath3_B_28_01"); //(zornig) In Ordnung, es ist dein Entschluss.
+	AI_Output(self, hero, "Info_Mod_Myxir_NW_Irdorath3_B_28_02"); //Ich werde aber nicht so einfach gehen, ohne dir noch ein Präsent zu hinterlassen. Viel Spaß damit.
 
 	Info_ClearChoices	(Info_Mod_Myxir_NW_Irdorath3);
 

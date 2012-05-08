@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Wirt_Hi_Condition()
 
 FUNC VOID Info_Mod_Wirt_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Wirt_Hi_14_00"); //Komm näher, Fremder! Trink einen mit uns, ist heute alles umsonst!
+	AI_Output(self, hero, "Info_Mod_Wirt_Hi_29_00"); //Komm näher, Fremder! Trink einen mit uns, ist heute alles umsonst!
 
 	CreateInvItems	(self, ItFo_Beer, 3);
 
@@ -44,7 +44,7 @@ FUNC INT Info_Mod_Wirt_Spender_Condition()
 FUNC VOID Info_Mod_Wirt_Spender_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Wirt_Spender_15_00"); //Wer ist der wohltätige Spender?
-	AI_Output(self, hero, "Info_Mod_Wirt_Spender_14_01"); //Matteo! Sein Geschäft läuft gut, und er hat sich kräftig verguckt! (lacht dröhnend)
+	AI_Output(self, hero, "Info_Mod_Wirt_Spender_29_01"); //Matteo! Sein Geschäft läuft gut, und er hat sich kräftig verguckt! (lacht dröhnend)
 
 	Info_ClearChoices	(Info_Mod_Wirt_Spender);
 
@@ -62,7 +62,7 @@ FUNC VOID Info_Mod_Wirt_Spender_B()
 FUNC VOID Info_Mod_Wirt_Spender_A()
 {
 	AI_Output(hero, self, "Info_Mod_Wirt_Spender_A_15_00"); //Erzähl mehr.
-	AI_Output(self, hero, "Info_Mod_Wirt_Spender_A_14_01"); //(verschwörerisch) Valentine aus dem Oberen Viertel ist seine Angebetete. Er hat mir verraten, dass er sich mit ihr verloben will.
+	AI_Output(self, hero, "Info_Mod_Wirt_Spender_A_29_01"); //(verschwörerisch) Valentine aus dem Oberen Viertel ist seine Angebetete. Er hat mir verraten, dass er sich mit ihr verloben will.
 
 	Mod_Wirt_Freibier = 1;
 
@@ -115,7 +115,7 @@ FUNC INT Info_Mod_Wirt_Bild2_Condition()
 
 FUNC VOID Info_Mod_Wirt_Bild2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Wirt_Bild2_14_00"); //(lacht) Und Wilfried, kennst du den? Halt dich fern von ihm.
+	AI_Output(self, hero, "Info_Mod_Wirt_Bild2_29_00"); //(lacht) Und Wilfried, kennst du den? Halt dich fern von ihm.
 };
 
 INSTANCE Info_Mod_Wirt_Wilfried (C_INFO)
@@ -140,16 +140,16 @@ FUNC INT Info_Mod_Wirt_Wilfried_Condition()
 FUNC VOID Info_Mod_Wirt_Wilfried_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Wirt_Wilfried_15_00"); //Was ist mit Wilfried?
-	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_14_01"); //Tagaus, tagein hör ich Geschichten über ihn.
-	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_14_02"); //Ich glaube kaum, dass es jemanden in Khorinis gibt, den er noch nicht beschissen hat.
-	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_14_03"); //Ganz recht, dass er jetzt einsam in seiner Hütte im Hafenviertel schmort!
+	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_29_01"); //Tagaus, tagein hör ich Geschichten über ihn.
+	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_29_02"); //Ich glaube kaum, dass es jemanden in Khorinis gibt, den er noch nicht beschissen hat.
+	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_29_03"); //Ganz recht, dass er jetzt einsam in seiner Hütte im Hafenviertel schmort!
 	AI_Output(hero, self, "Info_Mod_Wirt_Wilfried_15_04"); //Werd ich mir merken.
-	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_14_05"); //Ach, da hätte ich doch fast das Stadtgespräch schlechthin vergessen, den Untergang der Minna, einem Fischkutter aus Myrtana!
-	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_14_06"); //Muss ein Spektakel gewesen sein, die ganzen Toten trieben im Wasser, und alle wollten sie sehen.
-	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_14_07"); //Es soll sogar ein weltberühmter Maler an Deck gewesen sein, tja.
-	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_14_08"); //Wenn du noch nicht mit Moe gesprochen hast, solltest du das nachholen, der weiß sicher noch mehr darüber.
+	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_29_05"); //Ach, da hätte ich doch fast das Stadtgespräch schlechthin vergessen, den Untergang der Minna, einem Fischkutter aus Myrtana!
+	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_29_06"); //Muss ein Spektakel gewesen sein, die ganzen Toten trieben im Wasser, und alle wollten sie sehen.
+	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_29_07"); //Es soll sogar ein weltberühmter Maler an Deck gewesen sein, tja.
+	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_29_08"); //Wenn du noch nicht mit Moe gesprochen hast, solltest du das nachholen, der weiß sicher noch mehr darüber.
 	AI_Output(hero, self, "Info_Mod_Wirt_Wilfried_15_09"); //Danke für das Gespräch.
-	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_14_10"); //Einen noch!
+	AI_Output(self, hero, "Info_Mod_Wirt_Wilfried_29_10"); //Einen noch!
 
 	CreateInvItems	(self, ItFo_Beer, 3);
 
@@ -182,9 +182,9 @@ FUNC INT Info_Mod_Wirt_WacholderDieb_Condition()
 FUNC VOID Info_Mod_Wirt_WacholderDieb_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Wirt_WacholderDieb_15_00"); //Weißt du etwas über den Diebstahl bei Coragon?
-	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_14_01"); //Selbst wenn, wieso sollte ich dir was sagen?
+	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_29_01"); //Selbst wenn, wieso sollte ich dir was sagen?
 	AI_Output(hero, self, "Info_Mod_Wirt_WacholderDieb_15_02"); //Weil ich dir vielleicht Geld anbieten könnte.
-	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_14_03"); //Dann würde ich 200 Goldstücke verlangen.
+	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_29_03"); //Dann würde ich 200 Goldstücke verlangen.
 
 	B_LogEntry	(TOPIC_MOD_CORAGON_WACHOLDER, "Der Wirt will für Informationen 200 Goldstücke.");
 };
@@ -215,10 +215,10 @@ FUNC VOID Info_Mod_Wirt_WacholderDieb_Pay_Info()
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 200);
 
-	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_Pay_14_01"); //Am Tag des Diebstahls lungerte die ganze Zeit ein Typ namens Rukhar vor Coragons Taverne herum.
-	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_Pay_14_02"); //Der sitzt normalerweise aber in Orlans Taverne und besäuft sich. Sehr merkwürdig, oder?
+	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_Pay_29_01"); //Am Tag des Diebstahls lungerte die ganze Zeit ein Typ namens Rukhar vor Coragons Taverne herum.
+	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_Pay_29_02"); //Der sitzt normalerweise aber in Orlans Taverne und besäuft sich. Sehr merkwürdig, oder?
 	AI_Output(hero, self, "Info_Mod_Wirt_WacholderDieb_Pay_15_03"); //Mag sein. Danke für den Tipp!
-	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_Pay_14_04"); //(grinst) Wenn du mal wieder Informationen brauchst, dann weißt du ja, bei wem du sie bekommst!
+	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_Pay_29_04"); //(grinst) Wenn du mal wieder Informationen brauchst, dann weißt du ja, bei wem du sie bekommst!
 
 	B_LogEntry	(TOPIC_MOD_CORAGON_WACHOLDER, "Rukhar, welcher sich normalerweise in der Taverne von Orlan aufhält, soll am Tag des Diebstahls vor Coragons Kneipe herumgelungert haben. Ich sollte mal zu ihm gehen und überprüfen, ob diese Information die 200 Goldstücke wert war.");
 };

@@ -17,10 +17,10 @@ FUNC INT Info_Mod_Hilda_Hi_Condition()
 FUNC VOID Info_Mod_Hilda_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hilda_Hi_15_00"); //Hallo, schöne Frau.
-	AI_Output(self, hero, "Info_Mod_Hilda_Hi_17_01"); //(misstrauisch) Was willst du?
+	AI_Output(self, hero, "Info_Mod_Hilda_Hi_26_01"); //(misstrauisch) Was willst du?
 	AI_Output(hero, self, "Info_Mod_Hilda_Hi_15_02"); //Warum so feindselig?
-	AI_Output(self, hero, "Info_Mod_Hilda_Hi_17_03"); //(gelöst) Ach, in letzter Zeit kommen hier so viele Fremde vorbei, dass man gar nicht mehr weiß, woran man ist.
-	AI_Output(self, hero, "Info_Mod_Hilda_Hi_17_04"); //Und nicht alle Begegnungen waren erfreulicher Natur.
+	AI_Output(self, hero, "Info_Mod_Hilda_Hi_26_03"); //(gelöst) Ach, in letzter Zeit kommen hier so viele Fremde vorbei, dass man gar nicht mehr weiß, woran man ist.
+	AI_Output(self, hero, "Info_Mod_Hilda_Hi_26_04"); //Und nicht alle Begegnungen waren erfreulicher Natur.
 };
 
 INSTANCE Info_Mod_Hilda_Argez (C_INFO)
@@ -45,15 +45,15 @@ FUNC INT Info_Mod_Hilda_Argez_Condition()
 FUNC VOID Info_Mod_Hilda_Argez_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hilda_Argez_15_00"); //Wer war denn hier?
-	AI_Output(self, hero, "Info_Mod_Hilda_Argez_17_01"); //Das fing schon mit den Paladinen und Rittern an. Lauter Schmutzfinken sind das, ich habe noch keine aufrichtige Person unter ihnen erlebt.
-	AI_Output(self, hero, "Info_Mod_Hilda_Argez_17_02"); //Und seit dem Fall der Barriere kommen immer mal wieder ehemalige Sträflinge vorbei, verhalten sich aber ruhig, weil Lobart ein großes Herz hat.
-	AI_Output(self, hero, "Info_Mod_Hilda_Argez_17_03"); //Zu viel wurde es ihm dann erst bei dem Tätowierten. Der hat ihm richtig Angst gemacht.
-	AI_Output(self, hero, "Info_Mod_Hilda_Argez_17_04"); //Er hat zwar nur nach Arbeit gefragt, aber auf eine so komische Weise, als würde er im nächsten Moment durchdrehen.
+	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_01"); //Das fing schon mit den Paladinen und Rittern an. Lauter Schmutzfinken sind das, ich habe noch keine aufrichtige Person unter ihnen erlebt.
+	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_02"); //Und seit dem Fall der Barriere kommen immer mal wieder ehemalige Sträflinge vorbei, verhalten sich aber ruhig, weil Lobart ein großes Herz hat.
+	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_03"); //Zu viel wurde es ihm dann erst bei dem Tätowierten. Der hat ihm richtig Angst gemacht.
+	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_04"); //Er hat zwar nur nach Arbeit gefragt, aber auf eine so komische Weise, als würde er im nächsten Moment durchdrehen.
 
 	if (!Npc_KnowsInfo(hero, Info_Mod_Argez_NW_InCity))
 	{
-		AI_Output(self, hero, "Info_Mod_Hilda_Argez_17_05"); //Ich habe ihm dann eine Suppe gegeben, damit er geht, aber da er wohl nicht in die Stadt eingelassen wurde, steht er noch immer auf dem Weg vor den Feldern.
-		AI_Output(self, hero, "Info_Mod_Hilda_Argez_17_06"); //Wenn du dafür sorgst, dass er von dort verschwindet, könnten wir sicher besser schlafen.
+		AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_05"); //Ich habe ihm dann eine Suppe gegeben, damit er geht, aber da er wohl nicht in die Stadt eingelassen wurde, steht er noch immer auf dem Weg vor den Feldern.
+		AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_06"); //Wenn du dafür sorgst, dass er von dort verschwindet, könnten wir sicher besser schlafen.
 
 		Log_CreateTopic	(TOPIC_MOD_HILDA_ARGEZ, LOG_MISSION);
 		B_SetTopicStatus	(TOPIC_MOD_HILDA_ARGEZ, LOG_RUNNING);
@@ -86,7 +86,7 @@ FUNC INT Info_Mod_Hilda_Argez2_Condition()
 FUNC VOID Info_Mod_Hilda_Argez2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hilda_Argez2_15_00"); //Der Fremde ist nun in der Stadt.
-	AI_Output(self, hero, "Info_Mod_Hilda_Argez2_17_01"); //Mir fällt ein Stein vom Herzen. Hier, nimm du auch eine warme Suppe.
+	AI_Output(self, hero, "Info_Mod_Hilda_Argez2_26_01"); //Mir fällt ein Stein vom Herzen. Hier, nimm du auch eine warme Suppe.
 
 	B_GiveInvItems	(self, hero, ItFo_Fleischeintopf, 1);
 

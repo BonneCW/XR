@@ -20,9 +20,9 @@ FUNC INT Info_Mod_Myxir_Irdorath_Condition()
 FUNC VOID Info_Mod_Myxir_Irdorath_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Myxir_Irdorath_15_00"); //Ich will mit einem Schiff zu einer Enklave von Xeres aufbrechen, um ...
-	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath_12_01"); //Was, in eine Region tiefer Finsternis, abscheulicher Blasphemie ...
+	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath_28_01"); //Was, in eine Region tiefer Finsternis, abscheulicher Blasphemie ...
 	AI_Output(hero, self, "Info_Mod_Myxir_Irdorath_15_02"); //Na ja, es geht aber um die Rettung der ...
-	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath_12_03"); //(unterbricht, ohne zuzuhören) ... und Artefakte dunkler Magie? Herrlich.
+	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath_28_03"); //(unterbricht, ohne zuzuhören) ... und Artefakte dunkler Magie? Herrlich.
 };
 
 INSTANCE Info_Mod_Myxir_Irdorath2 (C_INFO)
@@ -48,7 +48,7 @@ FUNC INT Info_Mod_Myxir_Irdorath2_Condition()
 FUNC VOID Info_Mod_Myxir_Irdorath2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Myxir_Irdorath2_15_00"); //(überrascht) Ohh, zufällig habe ich noch an Platz an Bord ...
-	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath2_12_01"); //Großartig, ich werde mich dann zum Hafen begeben.
+	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath2_28_01"); //Großartig, ich werde mich dann zum Hafen begeben.
 
 	B_LogEntry	(TOPIC_MOD_HQ_CREW, "Na, bei Myxir habe ich aber nicht allzu große Überredungskünste benötigt.");
 
@@ -86,8 +86,8 @@ FUNC INT Info_Mod_Myxir_Irdorath3_Condition()
 FUNC VOID Info_Mod_Myxir_Irdorath3_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Myxir_Irdorath3_15_00"); //Eventuell hätte ich noch einen Platz an Bord. Die Aufwendungen für dieses Unterfangen sind jedoch groß ...
-	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath3_12_01"); //Ach, Gold kann die Möglichkeit, die sich damit bietet, gar nicht aufwiegen.
-	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath3_12_02"); //Hier, ich denke, das sollte den Ausgaben gerecht werden.
+	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath3_28_01"); //Ach, Gold kann die Möglichkeit, die sich damit bietet, gar nicht aufwiegen.
+	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath3_28_02"); //Hier, ich denke, das sollte den Ausgaben gerecht werden.
 
 	B_ShowGivenThings	("300 Gold, Spruchrolle, 2 Fläschchen Blut und 4 Zombiefleisch erhalten");
 
@@ -96,7 +96,7 @@ FUNC VOID Info_Mod_Myxir_Irdorath3_Info()
 	CreateInvItems	(hero, ItPo_Blood, 2);
 	CreateInvItems	(hero, ItFoMuttonZombie, 4);
 
-	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath3_12_03"); //Ich werde mich dann zum Hafen begeben.
+	AI_Output(self, hero, "Info_Mod_Myxir_Irdorath3_28_03"); //Ich werde mich dann zum Hafen begeben.
 
 	B_LogEntry	(TOPIC_MOD_HQ_CREW, "Na, bei Myxir habe ich aber nicht allzu große Überredungskünste benötigt.");
 
@@ -132,17 +132,17 @@ FUNC INT Info_Mod_Myxir_GotoIgnaz_Condition()
 
 FUNC VOID Info_Mod_Myxir_GotoIgnaz_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_12_00"); //Ah, du kommst mir gerade gelegen. Ich hätte etwas zu tun für dich!
+	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_28_00"); //Ah, du kommst mir gerade gelegen. Ich hätte etwas zu tun für dich!
 	AI_Output(hero, self, "Info_Mod_Myxir_GotoIgnaz_15_01"); //(seufzt) Um was geht es dieses Mal?
-	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_12_02"); //Ich suche ein wertvolles Schmuckstück; ein altes Amulett, das von der Kraft Innos' erfüllt sein soll.
-	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_12_03"); //Damit können wir vielleicht das Kloster erpressen und so wertvolle Informationen über deren Magie erfahren!
+	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_28_02"); //Ich suche ein wertvolles Schmuckstück; ein altes Amulett, das von der Kraft Innos' erfüllt sein soll.
+	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_28_03"); //Damit können wir vielleicht das Kloster erpressen und so wertvolle Informationen über deren Magie erfahren!
 	AI_Output(hero, self, "Info_Mod_Myxir_GotoIgnaz_15_04"); //Wo soll ich anfangen zu suchen?
-	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_12_05"); //Das Amulett soll ein alter wirrer Alchemist vor einiger Zeit gekauft haben. Der Narr heißt Ignaz. Er lebt im Hafenviertel der Stadt Khorinis.
-	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_12_06"); //Geh zu ihm und bringe das Artefakt zu mir!
+	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_28_05"); //Das Amulett soll ein alter wirrer Alchemist vor einiger Zeit gekauft haben. Der Narr heißt Ignaz. Er lebt im Hafenviertel der Stadt Khorinis.
+	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_28_06"); //Geh zu ihm und bringe das Artefakt zu mir!
 	AI_Output(hero, self, "Info_Mod_Myxir_GotoIgnaz_15_07"); //Was soll ich mit Ignaz machen?
-	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_12_08"); //Das liegt in deiner Hand!
+	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_28_08"); //Das liegt in deiner Hand!
 	AI_Output(hero, self, "Info_Mod_Myxir_GotoIgnaz_15_09"); //Gut.
-	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_12_10"); //(streng) Nun geh!
+	AI_Output(self, hero, "Info_Mod_Myxir_GotoIgnaz_28_10"); //(streng) Nun geh!
 
 	Mod_584_NONE_Ignaz_NW.attribute[ATR_HITPOINTS] = 1;
 
@@ -179,12 +179,12 @@ FUNC VOID Info_Mod_Myxir_Amulett_Info()
 
 	Npc_RemoveInvItems	(self, ItAm_GardeInnos, 1);
 
-	AI_Output(self, hero, "Info_Mod_Myxir_Amulett_12_01"); //Warum ist es geöffnet?
+	AI_Output(self, hero, "Info_Mod_Myxir_Amulett_28_01"); //Warum ist es geöffnet?
 	AI_Output(hero, self, "Info_Mod_Myxir_Amulett_15_02"); //Mehrere untote Novizen haben es Ignaz geraubt und ihn ermordet. Ich verfolgte sie zu einem Steinkreis im großen Wald, wo sie ein Ritual abhielten.
 	AI_Output(hero, self, "Info_Mod_Myxir_Amulett_15_03"); //Einer der Untoten schwafelte davon, dass die alte Garde Innos' zurück sei und Beliar vernichten wolle.
-	AI_Output(self, hero, "Info_Mod_Myxir_Amulett_12_04"); //(aufgebracht) Was? Das ist eine Katastrophe. Geh sofort zu Xardas und erstatte ihm Bericht!
+	AI_Output(self, hero, "Info_Mod_Myxir_Amulett_28_04"); //(aufgebracht) Was? Das ist eine Katastrophe. Geh sofort zu Xardas und erstatte ihm Bericht!
 	AI_Output(hero, self, "Info_Mod_Myxir_Amulett_15_05"); //Wieso?
-	AI_Output(self, hero, "Info_Mod_Myxir_Amulett_12_06"); //Sofort!
+	AI_Output(self, hero, "Info_Mod_Myxir_Amulett_28_06"); //Sofort!
 
 	B_StartOtherRoutine	(Mod_513_DMB_Xardas_NW, "GARDEINNOS");
 
@@ -224,9 +224,9 @@ FUNC VOID Info_Mod_Myxir_Wein_Info()
 	B_GiveInvItems	(hero, self, ItFo_KWine, 10);
 	Npc_RemoveInvItems	(self, ItFo_KWine, 10);
 
-	AI_Output(self, hero, "Info_Mod_Myxir_Wein_12_01"); //Ah ja, der Nachschub. Das wird heute wieder ein feuchtfröhliches Gelage der Krieger geben. Ätzend.
+	AI_Output(self, hero, "Info_Mod_Myxir_Wein_28_01"); //Ah ja, der Nachschub. Das wird heute wieder ein feuchtfröhliches Gelage der Krieger geben. Ätzend.
 	AI_Output(hero, self, "Info_Mod_Myxir_Wein_15_02"); //Hab ich was falsch gemacht?
-	AI_Output(self, hero, "Info_Mod_Myxir_Wein_12_03"); //(genervt) Hab ich das etwa gesagt? Du kannst dich jetzt entfernen.
+	AI_Output(self, hero, "Info_Mod_Myxir_Wein_28_03"); //(genervt) Hab ich das etwa gesagt? Du kannst dich jetzt entfernen.
 
 	B_LogEntry	(TOPIC_MOD_ANDOKAI_WEIN, "Ich hab Myxir die Weinlieferung überbracht. Wirklich zufrieden war er nicht, aber das ist nicht mein Problem.");
 	B_SetTopicStatus	(TOPIC_MOD_ANDOKAI_WEIN, LOG_SUCCESS);
@@ -258,15 +258,15 @@ FUNC VOID Info_Mod_Myxir_HabDieKraeuter_Info()
 
 	B_GiveInvItems	(hero, self, MyxirsGiftpflanze, 20);
 
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_01"); //Die kann er sich sparen! Hauptsache, er hat alles gefunden, was ich brauche.
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_02"); //(kurze Pause, zornig) Hab ich's mir doch gedacht! Dieser Faulenzer hat es sich wieder leicht gemacht!
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_03"); //Ich habe ausdrücklich von zehn Heilknospen gesprochen, und er schickt mir Heilkraut!
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_04"); //Das hätte ich ja wohl noch selbst sammeln können. Außerdem hat er die fünf Zwillingsdorne vergessen!
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_05"); //Wie soll ich denn jetzt bei meinen Forschungen weiterkommen?
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_28_01"); //Die kann er sich sparen! Hauptsache, er hat alles gefunden, was ich brauche.
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_28_02"); //(kurze Pause, zornig) Hab ich's mir doch gedacht! Dieser Faulenzer hat es sich wieder leicht gemacht!
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_28_03"); //Ich habe ausdrücklich von zehn Heilknospen gesprochen, und er schickt mir Heilkraut!
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_28_04"); //Das hätte ich ja wohl noch selbst sammeln können. Außerdem hat er die fünf Zwillingsdorne vergessen!
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_28_05"); //Wie soll ich denn jetzt bei meinen Forschungen weiterkommen?
 	AI_Output(hero, self, "Info_Mod_Myxir_HabDieKraeuter_15_06"); //Das tut mir Leid. Aber handelst du jetzt mit mir?
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_07"); //Nicht, bis ich die vermaledeiten Pflanzen habe!
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_28_07"); //Nicht, bis ich die vermaledeiten Pflanzen habe!
 	AI_Output(hero, self, "Info_Mod_Myxir_HabDieKraeuter_15_08"); //So lautete unsere Abmachung aber nicht.
-	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_12_09"); //Was interessiert mich irgendeine Abmachung, hä?
+	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_28_09"); //Was interessiert mich irgendeine Abmachung, hä?
 
 	B_GivePlayerXP	(100);
 
@@ -307,7 +307,7 @@ FUNC VOID Info_Mod_Myxir_RestPflanzen_Info()
 
 	B_ShowGivenThings	("10 Heilknospen und 5 Zwillingsdorne gegeben");
 
-	AI_Output(self, hero, "Info_Mod_Myxir_RestPflanzen_12_01"); //Na, endlich! Und meine Haare sind noch nicht mal komplett ergraut!
+	AI_Output(self, hero, "Info_Mod_Myxir_RestPflanzen_28_01"); //Na, endlich! Und meine Haare sind noch nicht mal komplett ergraut!
 
 	B_GivePlayerXP	(200);
 
@@ -356,9 +356,9 @@ FUNC VOID Info_Mod_Myxir_Skinner_Info()
 
 	B_ShowGivenThings	("Dämonischen Kram gegeben");
 
-	AI_Output(self, hero, "Info_Mod_Myxir_Skinner_12_01"); //Herrlich. Bei Beliar, damit werde ich mein abscheuliches Werk vorantreiben können.
+	AI_Output(self, hero, "Info_Mod_Myxir_Skinner_28_01"); //Herrlich. Bei Beliar, damit werde ich mein abscheuliches Werk vorantreiben können.
 	AI_Output(hero, self, "Info_Mod_Myxir_Skinner_15_02"); //Wie sieht das aus ... ?
-	AI_Output(self, hero, "Info_Mod_Myxir_Skinner_12_03"); //Was? Wieso belästigst du mich noch? Ach so, deine Entlohnung. Der Finder dieser Relikte des Todes und der finsteren Mächte ist dieser Spruchrollen wahrhaft würdig.
+	AI_Output(self, hero, "Info_Mod_Myxir_Skinner_28_03"); //Was? Wieso belästigst du mich noch? Ach so, deine Entlohnung. Der Finder dieser Relikte des Todes und der finsteren Mächte ist dieser Spruchrollen wahrhaft würdig.
 
 	CreateInvItems	(hero, ItSc_SumWolf, 1);
 	CreateInvItems	(hero, ItSc_SumDemon, 1);
@@ -395,9 +395,9 @@ FUNC INT Info_Mod_Myxir_Befoerderung_Condition()
 FUNC VOID Info_Mod_Myxir_Befoerderung_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Myxir_Befoerderung_15_00"); //Ich will Dämonenbeschwörer werden.
-	AI_Output(self, hero, "Info_Mod_Myxir_Befoerderung_12_01"); //(abschätzend) Meinetwegen. Du hast Beliar bereits gute Dienste geleistet. Du hast seine Gunst erworben.
-	AI_Output(self, hero, "Info_Mod_Myxir_Befoerderung_12_02"); //Ich werde dich in den Rang des Dämonenbeschwörers erheben.
-	AI_Output(self, hero, "Info_Mod_Myxir_Befoerderung_12_03"); //Hier ist deine Robe.
+	AI_Output(self, hero, "Info_Mod_Myxir_Befoerderung_28_01"); //(abschätzend) Meinetwegen. Du hast Beliar bereits gute Dienste geleistet. Du hast seine Gunst erworben.
+	AI_Output(self, hero, "Info_Mod_Myxir_Befoerderung_28_02"); //Ich werde dich in den Rang des Dämonenbeschwörers erheben.
+	AI_Output(self, hero, "Info_Mod_Myxir_Befoerderung_28_03"); //Hier ist deine Robe.
 
 	CreateInvItems	(self, ITAR_Xardas, 1);
 	B_GiveInvItems	(self, hero, ITAR_Xardas, 1);
@@ -433,8 +433,8 @@ FUNC INT Info_Mod_Myxir_WieGehts_Condition()
 FUNC VOID Info_Mod_Myxir_WieGehts_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Myxir_WieGehts_15_00"); //He, wie geht's so?
-	AI_Output(self, hero, "Info_Mod_Myxir_WieGehts_12_01"); //Komm mir ja nicht so kumpelhaft, als würden wir uns schon ewig kennen!
-	AI_Output(self, hero, "Info_Mod_Myxir_WieGehts_12_02"); //Bei den anderen mag das funktionieren, aber bei mir nicht.
+	AI_Output(self, hero, "Info_Mod_Myxir_WieGehts_28_01"); //Komm mir ja nicht so kumpelhaft, als würden wir uns schon ewig kennen!
+	AI_Output(self, hero, "Info_Mod_Myxir_WieGehts_28_02"); //Bei den anderen mag das funktionieren, aber bei mir nicht.
 };
 
 INSTANCE Info_Mod_Myxir_Haendler (C_INFO)
@@ -459,9 +459,9 @@ FUNC INT Info_Mod_Myxir_Haendler_Condition()
 FUNC VOID Info_Mod_Myxir_Haendler_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Myxir_Haendler_15_00"); //Mein Gefühl sagt mir, dass du der geborene Händler wärst.
-	AI_Output(self, hero, "Info_Mod_Myxir_Haendler_12_01"); //Tatsächlich biete ich die eine oder andere Ware zum Verkauf.
+	AI_Output(self, hero, "Info_Mod_Myxir_Haendler_28_01"); //Tatsächlich biete ich die eine oder andere Ware zum Verkauf.
 	AI_Output(hero, self, "Info_Mod_Myxir_Haendler_15_02"); //Handelst du mit mir?
-	AI_Output(self, hero, "Info_Mod_Myxir_Haendler_12_03"); //Ich verkaufe an jeden, der mir auch mal einen Gefallen getan hat ...
+	AI_Output(self, hero, "Info_Mod_Myxir_Haendler_28_03"); //Ich verkaufe an jeden, der mir auch mal einen Gefallen getan hat ...
 
 	Info_ClearChoices	(Info_Mod_Myxir_Haendler);
 
@@ -479,10 +479,10 @@ FUNC VOID Info_Mod_Myxir_Haendler_B()
 FUNC VOID Info_Mod_Myxir_Haendler_A()
 {
 	AI_Output(hero, self, "Info_Mod_Myxir_Haendler_A_15_00"); //Und wie könnte so ein Gefallen aussehen?
-	AI_Output(self, hero, "Info_Mod_Myxir_Haendler_A_12_01"); //Ich hatte Bodo losgeschickt, weil er mir Kräuter sammeln sollte.
-	AI_Output(self, hero, "Info_Mod_Myxir_Haendler_A_12_02"); //Auf Xardas' Geheiß ist er jetzt aber in Khorinis geblieben, um sich dort über die aktuelle Lage zu informieren. Und ich warte auf meine Pflanzen.
+	AI_Output(self, hero, "Info_Mod_Myxir_Haendler_A_28_01"); //Ich hatte Bodo losgeschickt, weil er mir Kräuter sammeln sollte.
+	AI_Output(self, hero, "Info_Mod_Myxir_Haendler_A_28_02"); //Auf Xardas' Geheiß ist er jetzt aber in Khorinis geblieben, um sich dort über die aktuelle Lage zu informieren. Und ich warte auf meine Pflanzen.
 	AI_Output(hero, self, "Info_Mod_Myxir_Haendler_A_15_03"); //Ich werd dran denken, wenn ich ihn sehe.
-	AI_Output(self, hero, "Info_Mod_Myxir_Haendler_A_12_04"); //Das solltest du. Die Versorgung des Klosters funktioniert eh schon mehr schlecht als recht, da brauche ich nicht noch weitere Verzögerungen.
+	AI_Output(self, hero, "Info_Mod_Myxir_Haendler_A_28_04"); //Das solltest du. Die Versorgung des Klosters funktioniert eh schon mehr schlecht als recht, da brauche ich nicht noch weitere Verzögerungen.
 
 	Info_ClearChoices	(Info_Mod_Myxir_Haendler);
 
@@ -518,8 +518,8 @@ FUNC INT Info_Mod_Myxir_Schattenlaeuferhorn_Condition()
 FUNC VOID Info_Mod_Myxir_Schattenlaeuferhorn_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Myxir_Schattenlaeuferhorn_15_00"); //Du erwähntest früher mal, dass die Versorgung des Klosters stockt.
-	AI_Output(self, hero, "Info_Mod_Myxir_Schattenlaeuferhorn_12_01"); //Ja, das liegt hauptsächlich an unseren unzuverlässigen Boten.
-	AI_Output(self, hero, "Info_Mod_Myxir_Schattenlaeuferhorn_12_02"); //Scar kann ein Lied davon singen.
+	AI_Output(self, hero, "Info_Mod_Myxir_Schattenlaeuferhorn_28_01"); //Ja, das liegt hauptsächlich an unseren unzuverlässigen Boten.
+	AI_Output(self, hero, "Info_Mod_Myxir_Schattenlaeuferhorn_28_02"); //Scar kann ein Lied davon singen.
 };
 
 INSTANCE Info_Mod_Myxir_Scar (C_INFO)
@@ -544,9 +544,9 @@ FUNC INT Info_Mod_Myxir_Scar_Condition()
 FUNC VOID Info_Mod_Myxir_Scar_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Myxir_Scar_15_00"); //Was ist mit Scar?
-	AI_Output(self, hero, "Info_Mod_Myxir_Scar_12_01"); //Er handelt eigentlich nicht nur mit Schwertern, sondern auch mit Trophäen.
-	AI_Output(self, hero, "Info_Mod_Myxir_Scar_12_02"); //Aber Bartok, den er losgeschickt hat, lässt sich nicht mehr blicken.
-	AI_Output(self, hero, "Info_Mod_Myxir_Scar_12_03"); //(gehässig) Vielleicht ist er übergelaufen, wer weiß?
+	AI_Output(self, hero, "Info_Mod_Myxir_Scar_28_01"); //Er handelt eigentlich nicht nur mit Schwertern, sondern auch mit Trophäen.
+	AI_Output(self, hero, "Info_Mod_Myxir_Scar_28_02"); //Aber Bartok, den er losgeschickt hat, lässt sich nicht mehr blicken.
+	AI_Output(self, hero, "Info_Mod_Myxir_Scar_28_03"); //(gehässig) Vielleicht ist er übergelaufen, wer weiß?
 };
 
 INSTANCE Info_Mod_Myxir_Angebot (C_INFO)
@@ -569,9 +569,9 @@ FUNC INT Info_Mod_Myxir_Angebot_Condition()
 
 FUNC VOID Info_Mod_Myxir_Angebot_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Myxir_Angebot_12_00"); //(wütend) Was ist hier los?
+	AI_Output(self, hero, "Info_Mod_Myxir_Angebot_28_00"); //(wütend) Was ist hier los?
 	AI_Output(hero, self, "Info_Mod_Myxir_Angebot_15_01"); //Kurgan hat mich angegriffen, als ich ihm erklärte, dass das Alte Lager gezwungen ist, härtere Maßnahmen zu ergreifen, falls sie uns nicht einen Teil der Alten Mine verkaufen wollen.
-	AI_Output(self, hero, "Info_Mod_Myxir_Angebot_12_02"); //Von der Mine wirst du jetzt nichts mehr sehen, und wenn Scar Wind davon bekommt und sich an das Alte Lager erinnern sollte, dann wird er mit den anderen wohl versuchen, das Lager einzunehmen, um seine alte Position wieder zu erlangen.
+	AI_Output(self, hero, "Info_Mod_Myxir_Angebot_28_02"); //Von der Mine wirst du jetzt nichts mehr sehen, und wenn Scar Wind davon bekommt und sich an das Alte Lager erinnern sollte, dann wird er mit den anderen wohl versuchen, das Lager einzunehmen, um seine alte Position wieder zu erlangen.
 	AI_Output(hero, self, "Info_Mod_Myxir_Angebot_15_03"); //Du solltest am besten jetzt verschwinden.
 
 	AI_StopProcessInfos	(self);
@@ -611,7 +611,7 @@ FUNC VOID Info_Mod_Myxir_Ruestung_Info()
 	&& (Mod_ZweiteVerbesserung == FALSE)
 	&& (Mod_Gilde == 13)
 	{
-		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_12_01"); //Ich hab gehört, dass auf dem Weg zur Ausgrabungsstätte der Wassermagier ein Nachtmahr sein soll. Mit dessen Fell könnte ich deine schwarze Magierrobe sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_28_01"); //Ich hab gehört, dass auf dem Weg zur Ausgrabungsstätte der Wassermagier ein Nachtmahr sein soll. Mit dessen Fell könnte ich deine schwarze Magierrobe sicher ein wenig verbessern.
 	
 		Mod_ZweiteVerbesserung = TRUE;
 	};
@@ -638,7 +638,7 @@ FUNC VOID Info_Mod_Myxir_Ruestung_KDS_S ()
 	if (Npc_HasItems(hero, ItAt_NightmareFur) == 1)
 	&& (Npc_HasItems(hero, SChwarzmagierrobe) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_KDS_S_12_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_KDS_S_28_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_NightmareFur, 1);
 		
@@ -657,11 +657,11 @@ FUNC VOID Info_Mod_Myxir_Ruestung_KDS_S ()
 	}
 	else if (Npc_HasItems(hero, Schwarzmagierrobe) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_SKR_S_12_02"); //Du musst schon eine schwarze Magierrobe haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_SKR_S_28_02"); //Du musst schon eine schwarze Magierrobe haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_NightmareFur) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_SKR_S_12_03"); //Wenn du das Nachtmahrfell nicht hast, kann ich deine Robe nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_SKR_S_28_03"); //Wenn du das Nachtmahrfell nicht hast, kann ich deine Robe nicht verbessern.
 	};
 
 	Info_ClearChoices	(Info_Mod_Myxir_Ruestung);
@@ -692,7 +692,7 @@ FUNC VOID Info_Mod_Myxir_Lehrer_Info()
 {
 	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
 
-	AI_Output(self, hero, "Info_Mod_Myxir_Lehrer_12_01"); //Ich kann dir zeigen, wie du Menschen, die du getötet hast, Blut abnehmen kannst.
+	AI_Output(self, hero, "Info_Mod_Myxir_Lehrer_28_01"); //Ich kann dir zeigen, wie du Menschen, die du getötet hast, Blut abnehmen kannst.
 
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, "Myxir kann mir zeigen, wie ich toten Menschen Blut abnehmen kann.");
@@ -729,8 +729,8 @@ FUNC VOID Info_Mod_Myxir_Blut_Info()
 
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, hero, TROPHY_Blood))
 	{
-		AI_Output (self, other, "Info_Mod_Myxir_Blut_12_01"); //Gut. Hör zu. Es ist im Grunde ganz einfach.
-		AI_Output (self, other, "Info_Mod_Myxir_Blut_12_02"); //Du nimmst eine scharfe Klinge und schneidest dein Opfer irgendwo auf, am besten an der Hauptschlagader. Dann hältst du ein Fläschchen darunter und fängst das Blut ein.
+		AI_Output (self, other, "Info_Mod_Myxir_Blut_28_01"); //Gut. Hör zu. Es ist im Grunde ganz einfach.
+		AI_Output (self, other, "Info_Mod_Myxir_Blut_28_02"); //Du nimmst eine scharfe Klinge und schneidest dein Opfer irgendwo auf, am besten an der Hauptschlagader. Dann hältst du ein Fläschchen darunter und fängst das Blut ein.
 	};
 };
 

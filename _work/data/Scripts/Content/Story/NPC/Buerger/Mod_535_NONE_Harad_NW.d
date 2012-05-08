@@ -4,7 +4,7 @@ instance Mod_535_NONE_Harad_NW (Npc_Default)
 	name 		= "Harad";
 	guild 		= GIL_PAL;
 	id 			= 535;
-	voice 		= 12;
+	voice 		= 28;
 	flags       = 0;															
 	npctype		= NPCTYPE_MAIN;
 	

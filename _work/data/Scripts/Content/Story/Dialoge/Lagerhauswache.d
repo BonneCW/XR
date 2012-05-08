@@ -19,10 +19,10 @@ FUNC INT Info_Mod_Lagerhauswache_Diebe_Condition()
 
 FUNC VOID Info_Mod_Lagerhauswache_Diebe_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe_11_00"); //Moment mal! Wohin des Wegs?
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe_28_00"); //Moment mal! Wohin des Wegs?
 	AI_Output(hero, self, "Info_Mod_Lagerhauswache_Diebe_15_01"); //Ins Lager, Kisten schleppen.
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe_11_02"); //Und wo ist Seine Kiste? Schau, da drüben liegen sie.
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe_11_03"); //Los, schnappe Er sich eine Ladung Schweinefutter ... Er wird nicht fürs Herumstehen bezahlt.
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe_28_02"); //Und wo ist Seine Kiste? Schau, da drüben liegen sie.
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe_28_03"); //Los, schnappe Er sich eine Ladung Schweinefutter ... Er wird nicht fürs Herumstehen bezahlt.
 
 	self.aivar[AIV_PASSGATE] = FALSE;
 };
@@ -48,8 +48,8 @@ FUNC INT Info_Mod_Lagerhauswache_Diebe2_Condition()
 
 FUNC VOID Info_Mod_Lagerhauswache_Diebe2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe2_11_00"); //Warte Er mal ... ahh, eine Kiste voll mit Schweinefutter für unser Lager.
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe2_11_01"); //Na los, beweg Er sich weiter.
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe2_28_00"); //Warte Er mal ... ahh, eine Kiste voll mit Schweinefutter für unser Lager.
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Diebe2_28_01"); //Na los, beweg Er sich weiter.
 
 	self.aivar[AIV_PASSGATE] = TRUE;
 };
@@ -76,7 +76,7 @@ FUNC INT Info_Mod_Lagerhauswache_Stadthalter_Condition()
 FUNC VOID Info_Mod_Lagerhauswache_Stadthalter_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Lagerhauswache_Stadthalter_15_00"); //Ich bin der Stadthalter. Lass mich rein!
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Stadthalter_11_01"); //(lacht dröhnend) Halte Er mich nicht zum Narren! Ich sehe von weitem, dass kein blaues Blut in Seinen Adern fließt!
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Stadthalter_28_01"); //(lacht dröhnend) Halte Er mich nicht zum Narren! Ich sehe von weitem, dass kein blaues Blut in Seinen Adern fließt!
 };
 
 INSTANCE Info_Mod_Lagerhauswache_Duell (C_INFO)
@@ -101,7 +101,7 @@ FUNC INT Info_Mod_Lagerhauswache_Duell_Condition()
 FUNC VOID Info_Mod_Lagerhauswache_Duell_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Lagerhauswache_Duell_15_00"); //Ich fordere dich zum Duell!
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Duell_11_01"); //Ein Duell? Aus welchem Grund?
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Duell_28_01"); //Ein Duell? Aus welchem Grund?
 
 	Info_ClearChoices	(Info_Mod_Lagerhauswache_Duell);
 
@@ -112,9 +112,9 @@ FUNC VOID Info_Mod_Lagerhauswache_Duell_Info()
 FUNC VOID Info_Mod_Lagerhauswache_Duell_B()
 {
 	AI_Output(hero, self, "Info_Mod_Lagerhauswache_Duell_B_15_00"); //Dein Vater hat meine Familienehre beschmutzt!
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Duell_B_11_01"); //(betroffen) Mein Vater? Nein! Mein Vater war ein rechtschaffener Mann!
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Duell_B_11_02"); //(hart) Er zieht das Ansehen meiner Familie durch seine Anschuldigung in den Unrat. Das kann ich nicht ungesühnt lassen.
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Duell_B_11_03"); //Zieh Er seine Waffe!
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Duell_B_28_01"); //(betroffen) Mein Vater? Nein! Mein Vater war ein rechtschaffener Mann!
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Duell_B_28_02"); //(hart) Er zieht das Ansehen meiner Familie durch seine Anschuldigung in den Unrat. Das kann ich nicht ungesühnt lassen.
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Duell_B_28_03"); //Zieh Er seine Waffe!
 
 	Info_ClearChoices	(Info_Mod_Lagerhauswache_Duell);
 
@@ -128,7 +128,7 @@ FUNC VOID Info_Mod_Lagerhauswache_Duell_B()
 FUNC VOID Info_Mod_Lagerhauswache_Duell_A()
 {
 	AI_Output(hero, self, "Info_Mod_Lagerhauswache_Duell_A_15_00"); //Einfach so!
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Duell_A_11_01"); //Oh nein, dafür kann ich nicht meine Pflicht vernachlässigen.
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Duell_A_28_01"); //Oh nein, dafür kann ich nicht meine Pflicht vernachlässigen.
 
 	Info_ClearChoices	(Info_Mod_Lagerhauswache_Duell);
 };
@@ -155,7 +155,7 @@ FUNC INT Info_Mod_Lagerhauswache_Bestechung_Condition()
 FUNC VOID Info_Mod_Lagerhauswache_Bestechung_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Lagerhauswache_Bestechung_15_00"); //Wie wär's mit ein wenig Gold?
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Bestechung_11_01"); //Pah, beleidige Er mich nicht!
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Bestechung_28_01"); //Pah, beleidige Er mich nicht!
 };
 
 INSTANCE Info_Mod_Lagerhauswache_Umgehauen (C_INFO)
@@ -180,7 +180,7 @@ FUNC INT Info_Mod_Lagerhauswache_Umgehauen_Condition()
 
 FUNC VOID Info_Mod_Lagerhauswache_Umgehauen_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Umgehauen_11_00"); //(unterwürfig) Bitte, spreche Er mich nicht mehr an. Ich bitte Ihn um Verzeihung für alle Beleidigungen, die Ihm durch meine Familie widerfahren sind!
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Umgehauen_28_00"); //(unterwürfig) Bitte, spreche Er mich nicht mehr an. Ich bitte Ihn um Verzeihung für alle Beleidigungen, die Ihm durch meine Familie widerfahren sind!
 
 	// ------ In jedem Fall: Arena-Kampf abgeschlossen ------
 	self.aivar[AIV_ArenaFight] = AF_NONE;
@@ -213,7 +213,7 @@ FUNC INT Info_Mod_Lagerhauswache_Umgehauen2_Condition()
 
 FUNC VOID Info_Mod_Lagerhauswache_Umgehauen2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Umgehauen2_11_00"); //Was wagt Er es, mich nach seiner Niederlage noch einmal anzusprechen? Bleibe Er liegen im Staub der Straße!
+	AI_Output(self, hero, "Info_Mod_Lagerhauswache_Umgehauen2_28_00"); //Was wagt Er es, mich nach seiner Niederlage noch einmal anzusprechen? Bleibe Er liegen im Staub der Straße!
 
 	// ------ In jedem Fall: Arena-Kampf abgeschlossen ------
 	self.aivar[AIV_ArenaFight] = AF_NONE;
@@ -255,7 +255,7 @@ func int Info_Mod_Lagerhauswache_FirstWarn_Condition()
 
 func void Info_Mod_Lagerhauswache_FirstWarn_Info()
 {
-	AI_Output (self, hero,"Info_Mod_Lagerhauswache_FirstWarn_11_00"); //Mäßige Er seinen Schritt! Zu diesem Lagerhaus hat nur unser allerdurchlauchtigster Stadthalter Zutritt!
+	AI_Output (self, hero,"Info_Mod_Lagerhauswache_FirstWarn_28_00"); //Mäßige Er seinen Schritt! Zu diesem Lagerhaus hat nur unser allerdurchlauchtigster Stadthalter Zutritt!
 
 	hero.aivar[AIV_LastDistToWP] = Npc_GetDistToWP(hero, Lagerhauswache_Checkpoint);
 	self.aivar[AIV_Guardpassage_Status] = GP_FirstWarnGiven;
@@ -288,7 +288,7 @@ FUNC INT Info_Mod_Lagerhauswache_SecondWarn_Condition()
 
 func void Info_Mod_Lagerhauswache_SecondWarn_Info()
 {
-	AI_Output (self, hero,"Info_Mod_Lagerhauswache_SecondWarn_11_00"); //Ich sag's Ihm zum letzten Mal. Einen Schritt weiter und Er begibt sich in die Welt des Schmerzes!
+	AI_Output (self, hero,"Info_Mod_Lagerhauswache_SecondWarn_28_00"); //Ich sag's Ihm zum letzten Mal. Einen Schritt weiter und Er begibt sich in die Welt des Schmerzes!
 
 	hero.aivar[AIV_LastDistToWP] = Npc_GetDistToWP (hero,Lagerhauswache_Checkpoint);
 	self.aivar[AIV_Guardpassage_Status] = GP_SecondWarnGiven;	
@@ -326,7 +326,7 @@ func void Info_Mod_Lagerhauswache_Attack_Info()
 	hero.aivar[AIV_LastDistToWP] = 0;
 	self.aivar[AIV_Guardpassage_Status] = GP_NONE;						//wird auch in ZS_Attack resettet
 	
-	AI_Output (self, hero,"Info_Mod_Lagerhauswache_Attack_11_00"); //Er hat es so gewollt ...
+	AI_Output (self, hero,"Info_Mod_Lagerhauswache_Attack_28_00"); //Er hat es so gewollt ...
 
 	AI_StopProcessInfos	(self);	
 

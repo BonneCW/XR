@@ -4,7 +4,7 @@ INSTANCE Mod_7611_OUT_Lagerhauswache_REL (Npc_Default)
 	name 		= "Lagerhauswache"; 
 	guild 		= GIL_OUT;
 	id 			= 7611;
-	voice 		= 11;
+	voice 		= 28;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

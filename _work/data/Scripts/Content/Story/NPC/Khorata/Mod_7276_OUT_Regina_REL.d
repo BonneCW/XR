@@ -4,7 +4,7 @@ INSTANCE Mod_7276_OUT_Regina_REL (Npc_Default)
 	name 		= "Regina";
 	guild 		= GIL_OUT;
 	id 		= 7276;
-	voice 		= 16;
+	voice 		= 26;
 	flags           = 0;
 	npctype		= NPCTYPE_MAIN;
 

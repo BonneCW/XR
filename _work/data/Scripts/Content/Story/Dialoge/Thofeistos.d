@@ -17,13 +17,13 @@ FUNC INT Info_Mod_Thofeistos_Hi_Condition()
 FUNC VOID Info_Mod_Thofeistos_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Thofeistos_Hi_15_00"); //Hallo. Bist du hier der Schmied?
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Hi_05_01"); //Nein, ich heize nur ordentlich die Wohnhöhle auf. Was sollte ich wohl sonst an der Schmiede machen?!
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Hi_29_01"); //Nein, ich heize nur ordentlich die Wohnhöhle auf. Was sollte ich wohl sonst an der Schmiede machen?!
 	AI_Output(hero, self, "Info_Mod_Thofeistos_Hi_15_02"); //Tschuldigung, war nur eine Frage.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Hi_05_03"); //Ja, eine ziemlich dumme. Na ja, sei’s drum. Nichts für ungut. Gibt hier viel zu tun für mich, mehr als ich ursprünglich erwartet hatte, als ich mich dem Lager anschloss.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Hi_29_03"); //Ja, eine ziemlich dumme. Na ja, sei’s drum. Nichts für ungut. Gibt hier viel zu tun für mich, mehr als ich ursprünglich erwartet hatte, als ich mich dem Lager anschloss.
 	AI_Output(hero, self, "Info_Mod_Thofeistos_Hi_15_04"); //Woher kommst du und warum hast du dich nach dem Fall der Barriere dem Neuen Lager angeschlossen?
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Hi_05_05"); //Ursprünglich stamme ich aus dem Norden des Festlandes. Ich hörte von den großen Erzvorkommen auf Khorinis und habe mich daher auf den Weg auf diese Insel gemacht.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Hi_05_06"); //Nach dem Fall der Barriere habe ich keine Sekunde gezögert und bin ins Tal gegangen, zur eigentlichen Quelle des Erzes.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Hi_05_07"); //So viel magisches Erz, das ich nach meinem Willen formen kann, neue Legierungen ergründen, Kompositionen des Metalls erschaffen, die es noch nicht gegeben hat.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Hi_29_05"); //Ursprünglich stamme ich aus dem Norden des Festlandes. Ich hörte von den großen Erzvorkommen auf Khorinis und habe mich daher auf den Weg auf diese Insel gemacht.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Hi_29_06"); //Nach dem Fall der Barriere habe ich keine Sekunde gezögert und bin ins Tal gegangen, zur eigentlichen Quelle des Erzes.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Hi_29_07"); //So viel magisches Erz, das ich nach meinem Willen formen kann, neue Legierungen ergründen, Kompositionen des Metalls erschaffen, die es noch nicht gegeben hat.
 	AI_Output(hero, self, "Info_Mod_Thofeistos_Hi_15_08"); //Ja, man hört, ein Schmied aus voller Seele.
 };
 
@@ -49,9 +49,9 @@ FUNC INT Info_Mod_Thofeistos_Orksoeldner_Condition()
 FUNC VOID Info_Mod_Thofeistos_Orksoeldner_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Thofeistos_GiveSLDWeapon_15_00"); //Hast du eine Waffe für mich?
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Orksoeldner_05_01"); //Nun, an sich schon, da du jetzt zu den Orkjägern gehörst ...
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Orksoeldner_29_01"); //Nun, an sich schon, da du jetzt zu den Orkjägern gehörst ...
 	AI_Output(hero, self, "Info_Mod_Thofeistos_Orksoeldner_15_02"); //Aber was?
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Orksoeldner_05_03"); //Mir ist gerade mal wieder das Erz ausgegangen. Wenn du dein Schwert haben willst, so gehe zu unserer Mine und hole mir eine Kiste Erz.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Orksoeldner_29_03"); //Mir ist gerade mal wieder das Erz ausgegangen. Wenn du dein Schwert haben willst, so gehe zu unserer Mine und hole mir eine Kiste Erz.
 
 	Log_CreateTopic	(TOPIC_MOD_NL_ERZKISTE, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_NL_ERZKISTE, LOG_RUNNING);
@@ -86,20 +86,20 @@ FUNC VOID Info_Mod_Thofeistos_Erzkiste_Info()
 
 	if (hero.attribute[ATR_STRENGTH] >= hero.attribute[ATR_DEXTERITY])
 	{
-		AI_Output(self, hero, "Info_Mod_Thofeistos_Erzkiste_05_01"); //Sehr gut. Hier hast du das Schwert, das dir gebührt, Orkschlächter genannt.
+		AI_Output(self, hero, "Info_Mod_Thofeistos_Erzkiste_29_01"); //Sehr gut. Hier hast du das Schwert, das dir gebührt, Orkschlächter genannt.
 
 		B_GiveInvItems	(self, hero, ItMw_Orkschlaechter, 1);
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Thofeistos_Erzkiste_05_02"); //Sehr gut. Hier hast du das Schwert, das dir gebührt, Orkpiekser genannt.
+		AI_Output(self, hero, "Info_Mod_Thofeistos_Erzkiste_29_02"); //Sehr gut. Hier hast du das Schwert, das dir gebührt, Orkpiekser genannt.
 
 		B_GiveInvItems	(self, hero, ItMw_Orkpickser, 1);
 	};
 
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Erzkiste_05_03"); //Es ist das Beste, was du bei mir bekommen kannst. Bessere Waffen wirst du dir schon selbst anfertigen müssen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Erzkiste_29_03"); //Es ist das Beste, was du bei mir bekommen kannst. Bessere Waffen wirst du dir schon selbst anfertigen müssen.
 	AI_Output(hero, self, "Info_Mod_Thofeistos_Erzkiste_15_04"); //(verwirrt) Ähh, du hast die Waffe schon?! Aber wieso ...
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Erzkiste_05_05"); //Ach, ich hatte gerade keine Zeit und war mir zu gemütlich, um selbst die Kiste zu holen. Hier hast du zwei Erzbrocken als Dank.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Erzkiste_29_05"); //Ach, ich hatte gerade keine Zeit und war mir zu gemütlich, um selbst die Kiste zu holen. Hier hast du zwei Erzbrocken als Dank.
 
 	B_GiveInvItems	(self, hero, ItMi_Nugget, 2);
 
@@ -128,7 +128,7 @@ FUNC INT Info_Mod_Thofeistos_Gormgniez_Condition()
 FUNC VOID Info_Mod_Thofeistos_Gormgniez_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Thofeistos_Gormgniez_15_00"); //Ich komme von Lee, um mir Erz als Belohnung zu holen.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Gormgniez_05_01"); //Ja, ja, so viel Erz. Hoffentlich versäufst du nicht alles, sondern machst auch einige schöne Klingen daraus.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Gormgniez_29_01"); //Ja, ja, so viel Erz. Hoffentlich versäufst du nicht alles, sondern machst auch einige schöne Klingen daraus.
 
 	B_GiveInvItems	(self, hero, ItMi_Nugget, 15);
 
@@ -155,24 +155,24 @@ FUNC INT Info_Mod_Thofeistos_SeeVorLager_Condition()
 
 FUNC VOID Info_Mod_Thofeistos_SeeVorLager_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_05_00"); //Du bist doch viel draußen unterwegs. Ist dir vielleicht am See vor dem Lager etwas Ungewöhnliches aufgefallen?
+	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_29_00"); //Du bist doch viel draußen unterwegs. Ist dir vielleicht am See vor dem Lager etwas Ungewöhnliches aufgefallen?
 	AI_Output(hero, self, "Info_Mod_Thofeistos_SeeVorLager_15_01"); //Nee, nicht dass ich wüsste. Warum fragst du?
-	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_05_02"); //Ach, nur so, ist nicht so wichtig. Mir war nur etwas Merkwürdiges im See aufgefallen ... aber ... nein, zu abwegig.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_29_02"); //Ach, nur so, ist nicht so wichtig. Mir war nur etwas Merkwürdiges im See aufgefallen ... aber ... nein, zu abwegig.
 	AI_Output(hero, self, "Info_Mod_Thofeistos_SeeVorLager_15_03"); //Naja, es sind viele ungewöhnliche und abwegige Dinge in den letzten Tagen auf Khorinis geschehen. Zum Beispiel Drachen ...
-	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_05_04"); //(unterbricht) Dann stimmt es also doch, was ich des Nachts im See glaubte zu sehen und zu hören.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_29_04"); //(unterbricht) Dann stimmt es also doch, was ich des Nachts im See glaubte zu sehen und zu hören.
 	AI_Output(hero, self, "Info_Mod_Thofeistos_SeeVorLager_15_05"); //Ja, wovon sprichst du?
-	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_05_06"); //Letzte Nacht. Ich machte einen Spaziergang vor dem Lager und vernahm plötzlich fauchende und quiekende Geräusche vom See, wie ich sie nur aus alten Büchern zu kennen glaubte.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_29_06"); //Letzte Nacht. Ich machte einen Spaziergang vor dem Lager und vernahm plötzlich fauchende und quiekende Geräusche vom See, wie ich sie nur aus alten Büchern zu kennen glaubte.
 	AI_Output(hero, self, "Info_Mod_Thofeistos_SeeVorLager_15_07"); //Fauchende Geräusche?! Was für Bücher?
-	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_05_08"); //Bücher über Drachen und ihnen verwandte Wesen, darunter auch solche, die im Wasser zu Hause sind.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_05_09"); //Als ich zum See schaute, glaubte ich auch kurz einen langen Körper erkennen zu können, der sich durch das Wasser schlängelte.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_05_10"); //Es erschien mir aber zu unwahrscheinlich, hier im Minental plötzlich auf solches Seeungeheuer zu stoßen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_29_08"); //Bücher über Drachen und ihnen verwandte Wesen, darunter auch solche, die im Wasser zu Hause sind.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_29_09"); //Als ich zum See schaute, glaubte ich auch kurz einen langen Körper erkennen zu können, der sich durch das Wasser schlängelte.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_29_10"); //Es erschien mir aber zu unwahrscheinlich, hier im Minental plötzlich auf solches Seeungeheuer zu stoßen.
 	AI_Output(hero, self, "Info_Mod_Thofeistos_SeeVorLager_15_11"); //Und wie soll man da jetzt weiter vorgehen? Was ist zu tun?
-	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_05_12"); //Nun, ich glaube nicht, dass dieses Wesen eine echte Bedrohung für das Lager darstellt, da es sich wie erwähnt bevorzugt im Wasser aufhält, auch wenn es sich gewisse Zeit im Flug fortbewegen kann.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_05_13"); //Hmm, wenn du mir jedoch seine Schuppen bringen könntest, könnte ich dir daraus eine neue Rüstung fertigen.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_05_14"); //Du müsstest jedoch berücksichtigen, dass es sich nur nachts aus dem Schlamm des Sees erhebt.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_05_15"); //Versuche es an Land zu locken und es dort zu bezwingen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_29_12"); //Nun, ich glaube nicht, dass dieses Wesen eine echte Bedrohung für das Lager darstellt, da es sich wie erwähnt bevorzugt im Wasser aufhält, auch wenn es sich gewisse Zeit im Flug fortbewegen kann.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_29_13"); //Hmm, wenn du mir jedoch seine Schuppen bringen könntest, könnte ich dir daraus eine neue Rüstung fertigen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_29_14"); //Du müsstest jedoch berücksichtigen, dass es sich nur nachts aus dem Schlamm des Sees erhebt.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_29_15"); //Versuche es an Land zu locken und es dort zu bezwingen.
 	AI_Output(hero, self, "Info_Mod_Thofeistos_SeeVorLager_15_16"); //Ein Seeungeheuer bezwingen?! Hmm, ich werde sehen, was sich machen lässt ...
-	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_05_17"); //Viel Glück.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_SeeVorLager_29_17"); //Viel Glück.
 
 	B_LogEntry	(TOPIC_MOD_NL_DRACHEN, "Thofeistos glaubt im See vor dem Lager ein Seeungeheuer ausgemacht zu haben. Wenn das Geschöpf sich nachts aus dem See erhebt, soll ich es an Land locken und erledigen. Aus den Schuppen des Seeungeheuers könnte Thofeistos mir eine neue Rüstung fertigen.");
 };
@@ -200,14 +200,14 @@ FUNC INT Info_Mod_Thofeistos_Seeungeheuer_Condition()
 FUNC VOID Info_Mod_Thofeistos_Seeungeheuer_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Thofeistos_Seeungeheuer_15_00"); //Ich habe die Schuppen.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Seeungeheuer_05_01"); //Zeig her ...
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Seeungeheuer_29_01"); //Zeig her ...
 
 	B_GiveInvItems	(hero, self, ItAt_Seeungeheuerschuppen, 11);
 
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Seeungeheuer_05_02"); //... tatsächlich.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Seeungeheuer_05_03"); //Du bist ein noch größerer Krieger, als ich ursprünglich vermutet hatte.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Seeungeheuer_05_04"); //Nicht vielen Menschen wäre es gelungen, so ein Ungetüm zu bezwingen.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Seeungeheuer_05_05"); //Komm morgen wieder. Dann werde ich deine Rüstung fertig haben.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Seeungeheuer_29_02"); //... tatsächlich.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Seeungeheuer_29_03"); //Du bist ein noch größerer Krieger, als ich ursprünglich vermutet hatte.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Seeungeheuer_29_04"); //Nicht vielen Menschen wäre es gelungen, so ein Ungetüm zu bezwingen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Seeungeheuer_29_05"); //Komm morgen wieder. Dann werde ich deine Rüstung fertig haben.
 
 	Mod_NL_DJGArmor_Day = Wld_GetDay();
 };
@@ -233,18 +233,18 @@ FUNC INT Info_Mod_Thofeistos_DJGArmor_Condition()
 
 FUNC VOID Info_Mod_Thofeistos_DJGArmor_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_05_00"); //Ahh, da bist du. Vor kurzem habe ich deine Rüstung fertig bekommen.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_05_01"); //Hier, sie wird dir hoffentlich noch lange gute Dienste erweisen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_00"); //Ahh, da bist du. Vor kurzem habe ich deine Rüstung fertig bekommen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_01"); //Hier, sie wird dir hoffentlich noch lange gute Dienste erweisen.
 
 	B_GiveInvItems	(self, hero, ItAr_DJG_L, 1);
 
-	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_05_02"); //Hmm, und dann noch ... ich habe nachgedacht.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_05_03"); //Mein ganzes Leben habe ich der Schmiedekunst verschrieben, formte Waffen, welche sonst keiner zu schmieden vermochte und erschuf Legierungen, deren Geheimnisse nur mir bekannt sind.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_05_04"); //Ich habe Wissen, das aus uralten Quellen überliefert wurde und kann mich mit den besten Schmelzern und Schmieden Nordmars messen.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_05_05"); //Doch du bist der Erste, der mir würdig erscheint, die tieferen Weihen der Erzverarbeitung zu erfahren.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_05_06"); //Ja, auch wenn ich die meiste Zeit am Schmiedeoffen stehe, so erfahre ich doch einiges ...
-	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_05_07"); //Mein ganzes Wissen um die Erzverarbeitung steht dir nun offen.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_05_08"); //Triff deine Wahl, aber sei dir auch bewusst, dass es viel Erfahrung erfordert, die Kunst in jeder der Disziplinen zu vervollkommnen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_02"); //Hmm, und dann noch ... ich habe nachgedacht.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_03"); //Mein ganzes Leben habe ich der Schmiedekunst verschrieben, formte Waffen, welche sonst keiner zu schmieden vermochte und erschuf Legierungen, deren Geheimnisse nur mir bekannt sind.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_04"); //Ich habe Wissen, das aus uralten Quellen überliefert wurde und kann mich mit den besten Schmelzern und Schmieden Nordmars messen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_05"); //Doch du bist der Erste, der mir würdig erscheint, die tieferen Weihen der Erzverarbeitung zu erfahren.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_06"); //Ja, auch wenn ich die meiste Zeit am Schmiedeoffen stehe, so erfahre ich doch einiges ...
+	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_07"); //Mein ganzes Wissen um die Erzverarbeitung steht dir nun offen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_08"); //Triff deine Wahl, aber sei dir auch bewusst, dass es viel Erfahrung erfordert, die Kunst in jeder der Disziplinen zu vervollkommnen.
 
 	Mod_Gilde = 5;
 };
@@ -273,7 +273,7 @@ FUNC INT Info_Mod_Thofeistos_Urs_Condition()
 FUNC VOID Info_Mod_Thofeistos_Urs_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Thofeistos_Urs_15_00"); //Ich bringe den feurigen Hammer von Urs.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Urs_05_01"); //(euphorisch) Was, der magische Hammer?! Gib schon her, ich muss ihn gleich ausprobieren.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Urs_29_01"); //(euphorisch) Was, der magische Hammer?! Gib schon her, ich muss ihn gleich ausprobieren.
 
 	B_GiveInvItems	(hero, self, ItMw_FeurigerHammer, 1);
 
@@ -283,9 +283,9 @@ FUNC VOID Info_Mod_Thofeistos_Urs_Info()
 	AI_TurnToNpc	(self, hero);
 	AI_TurnToNpc	(hero, self);
 
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Urs_05_02"); //Fantastisch, der Stahl erhitzt sich ja unter den Schlägen fast von selbst.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Urs_05_03"); //Ein großartiges Stück, das eines Erzschmelzers in Nordmar würdig wäre.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Urs_05_04"); //20 Brocken waren ausgemacht? Hier, nimm 30 ... und selbst dies spiegelt den wahren Wert dieses Stückes nicht wirklich wieder.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Urs_29_02"); //Fantastisch, der Stahl erhitzt sich ja unter den Schlägen fast von selbst.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Urs_29_03"); //Ein großartiges Stück, das eines Erzschmelzers in Nordmar würdig wäre.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Urs_29_04"); //20 Brocken waren ausgemacht? Hier, nimm 30 ... und selbst dies spiegelt den wahren Wert dieses Stückes nicht wirklich wieder.
 
 	B_GiveInvItems	(self, hero, ItMi_Nugget, 30);
 
@@ -320,7 +320,7 @@ FUNC VOID Info_Mod_Thofeistos_Teacher_Info()
 	if (Mod_Gilde != 5)
 	&& (Mod_Gilde != 19)
 	{
-		AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_05_01"); //Erweise dich erst mal als würdig. Nicht jeden Dahergelaufenen weihe ich darin ein, magisches Erz zu bearbeiten.
+		AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_29_01"); //Erweise dich erst mal als würdig. Nicht jeden Dahergelaufenen weihe ich darin ein, magisches Erz zu bearbeiten.
 	}
 	else
 	{
@@ -332,10 +332,10 @@ FUNC VOID Info_Mod_Thofeistos_Teacher_Info()
 			{
 				Mod_NL_Thofeistos_Lehrer = 1;
 
-				AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_05_02"); //Du hast bewiesen, dass du sowohl über die Fertigkeiten des Kampfes verfügst, als auch über Verstand und Geschick.
-				AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_05_03"); //Damit hast du dich dafür qualifiziert, etwas über die Kunst zu erlernen magisches Erz zu verarbeiten.
-				AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_05_04"); //Natürlich werde ich dich nicht in alles einweisen.
-				AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_05_05"); //Zum einen fehlt mir dafür die Zeit, zum anderen ist dieses Wissen nur den allergrößten Kriegern vorbehalten.
+				AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_29_02"); //Du hast bewiesen, dass du sowohl über die Fertigkeiten des Kampfes verfügst, als auch über Verstand und Geschick.
+				AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_29_03"); //Damit hast du dich dafür qualifiziert, etwas über die Kunst zu erlernen magisches Erz zu verarbeiten.
+				AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_29_04"); //Natürlich werde ich dich nicht in alles einweisen.
+				AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_29_05"); //Zum einen fehlt mir dafür die Zeit, zum anderen ist dieses Wissen nur den allergrößten Kriegern vorbehalten.
 			};
 
 			if (Mod_Gilde == 5)
@@ -468,9 +468,9 @@ FUNC VOID Info_Mod_Thofeistos_Teacher_BACK()
 
 FUNC VOID Info_Mod_Thofeistos_Teacher_Geschoss_GoldErz()
 {
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_GoldErz_05_00"); //Nimm drei Erzbrocken und erhitze diese mit einem Goldbrocken.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_GoldErz_05_01"); //Dadurch lässt sich das magische Erz überhaupt erst weich genug machen, um Pfeil- und Bolzenspitzen daraus zu schmieden.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_GoldErz_05_02"); //Das Material reicht für etwa 100 Pfeile oder Bolzen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_GoldErz_29_00"); //Nimm drei Erzbrocken und erhitze diese mit einem Goldbrocken.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_GoldErz_29_01"); //Dadurch lässt sich das magische Erz überhaupt erst weich genug machen, um Pfeil- und Bolzenspitzen daraus zu schmieden.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_GoldErz_29_02"); //Das Material reicht für etwa 100 Pfeile oder Bolzen.
 
 	if (Mod_Schwierigkeit == 4)
 	{
@@ -493,8 +493,8 @@ FUNC VOID Info_Mod_Thofeistos_Teacher_Geschoss_GoldErz()
 
 FUNC VOID Info_Mod_Thofeistos_Teacher_Waffe_ErzEisen()
 {
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_ErzEisen_05_00"); //Nimm einen Schmiederohling, erhitze diesen und schmiede – abhängig von der Größe des Waffe – 20 bis 30 Brocken magischen Erzes in den glühenden Stahl hinein.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_ErzEisen_05_01"); //Erst die daraus entstehende Legierung hat die Eigenschaften, die sie formbar und schmiedbar machen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_ErzEisen_29_00"); //Nimm einen Schmiederohling, erhitze diesen und schmiede – abhängig von der Größe des Waffe – 20 bis 30 Brocken magischen Erzes in den glühenden Stahl hinein.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_ErzEisen_29_01"); //Erst die daraus entstehende Legierung hat die Eigenschaften, die sie formbar und schmiedbar machen.
 
 	B_TeachPlayerTalentSmith	(self, hero, WEAPON_1H_Special_03_Dex);
 	B_TeachPlayerTalentSmith	(self, hero, WEAPON_1H_Special_03);
@@ -508,23 +508,23 @@ FUNC VOID Info_Mod_Thofeistos_Teacher_Waffe_ErzEisen()
 
 FUNC VOID Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter()
 {
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_00"); //Die Legende besagt, dass vor vielen Jahrhunderten, als Drachen noch wesentlich häufiger auf dem Antlitz der Erde anzutreffen waren, ein wagemutiger Recke sich dem Kampf mit einer solchen Bestie stellte.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_01"); //Er focht lange mit ihr, doch vermochte er mit seiner Erzwaffe kaum den Panzer des Untieres zu durchdringen und fügte ihr nur kleinere Wunden zu.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_02"); //Endlich traf ein Flammenhauch die vom Drachenblut getränkte Klinge, dass diese rot erglühte.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_03"); //Der nächste Hieb, welchen der Krieger ausführte, durchbohrte das Untier nun auf einmal mühelos.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_04"); //Es stellt sich heraus, dass glühende Erzwaffen, die mit dem Blut dieser magischen Geschöpfe in Kontakt kommen, eine Härte erlangen, der nichts zu widerstehen vermag.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_05"); //Je nach Größe der Waffe benötigt man zwischen fünf und sieben Phiolen Drachenblut.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_06"); //Eine Waffe aus reinem Erz herzustellen, ist jedoch eine ungleich größere Kunst.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_07"); //Man mag zwar häufig von Erzwaffen sprechen, dabei handelt es sich jedoch immer um Legierungen, die mit anderen Metallen verunreinigt sind.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_08"); //Um eine Hitze zu erzeugen, die alle anderen Verunreinigungen im Erz beseitigt und selbst reines Erz formbar und schmiedbar macht, muss man einem Drachen die Flüssigkeit entnehmen, welche ihm seinen gefürchteten Flammenhauch verleiht.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_09"); //Diese befindet sich in einem weiß-violetten Organ, welches nicht weit unterhalb des Brustbeins liegt.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_10"); //Du musst zwischen seiner Schuppenpanzerung mit einem Messer ansetzen und so lange schneiden, bis das Organ sichtbar wird.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_11"); //Die Flüssigkeit fängst du dann in einem Fläschchen auf.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_12"); //Der Prozess, einen reinen Erzrohling herzustellen, wird in einem Hochzofen vollzogen.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_13"); //Aber sei gewarnt. Die explosive Hitze, die dabei entsteht, zieht alle Umstehenden mit in Leidenschaft.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_14"); //Wenn du, je nach gewünschter Größe der Waffe, 60 bis 80 Erzbrocken in den Ofen gegeben hast, fügst du nun drei Fläschchen der Flüssigkeit hinzu.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_15"); //Von der Schmelze nimmst du nur den Teil in der Mitte als Rohling, der am schnellsten fest wird.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_05_16"); //Um daraus eine Waffe zu schmieden, begibst du dich an eine Schmiede und heizt diese mit einem Fläschchen der Flüssigkeit auf.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_00"); //Die Legende besagt, dass vor vielen Jahrhunderten, als Drachen noch wesentlich häufiger auf dem Antlitz der Erde anzutreffen waren, ein wagemutiger Recke sich dem Kampf mit einer solchen Bestie stellte.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_01"); //Er focht lange mit ihr, doch vermochte er mit seiner Erzwaffe kaum den Panzer des Untieres zu durchdringen und fügte ihr nur kleinere Wunden zu.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_02"); //Endlich traf ein Flammenhauch die vom Drachenblut getränkte Klinge, dass diese rot erglühte.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_03"); //Der nächste Hieb, welchen der Krieger ausführte, durchbohrte das Untier nun auf einmal mühelos.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_04"); //Es stellt sich heraus, dass glühende Erzwaffen, die mit dem Blut dieser magischen Geschöpfe in Kontakt kommen, eine Härte erlangen, der nichts zu widerstehen vermag.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_05"); //Je nach Größe der Waffe benötigt man zwischen fünf und sieben Phiolen Drachenblut.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_06"); //Eine Waffe aus reinem Erz herzustellen, ist jedoch eine ungleich größere Kunst.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_07"); //Man mag zwar häufig von Erzwaffen sprechen, dabei handelt es sich jedoch immer um Legierungen, die mit anderen Metallen verunreinigt sind.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_08"); //Um eine Hitze zu erzeugen, die alle anderen Verunreinigungen im Erz beseitigt und selbst reines Erz formbar und schmiedbar macht, muss man einem Drachen die Flüssigkeit entnehmen, welche ihm seinen gefürchteten Flammenhauch verleiht.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_09"); //Diese befindet sich in einem weiß-violetten Organ, welches nicht weit unterhalb des Brustbeins liegt.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_10"); //Du musst zwischen seiner Schuppenpanzerung mit einem Messer ansetzen und so lange schneiden, bis das Organ sichtbar wird.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_11"); //Die Flüssigkeit fängst du dann in einem Fläschchen auf.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_12"); //Der Prozess, einen reinen Erzrohling herzustellen, wird in einem Hochzofen vollzogen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_13"); //Aber sei gewarnt. Die explosive Hitze, die dabei entsteht, zieht alle Umstehenden mit in Leidenschaft.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_14"); //Wenn du, je nach gewünschter Größe der Waffe, 60 bis 80 Erzbrocken in den Ofen gegeben hast, fügst du nun drei Fläschchen der Flüssigkeit hinzu.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_15"); //Von der Schmelze nimmst du nur den Teil in der Mitte als Rohling, der am schnellsten fest wird.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter_29_16"); //Um daraus eine Waffe zu schmieden, begibst du dich an eine Schmiede und heizt diese mit einem Fläschchen der Flüssigkeit auf.
 
 	B_TeachPlayerTalentSmith	(self, hero, WEAPON_1H_Special_04_Dex);
 	B_TeachPlayerTalentSmith	(self, hero, WEAPON_1H_Special_04);
@@ -556,12 +556,12 @@ FUNC VOID Info_Mod_Thofeistos_Teacher_Waffe_Dragonhunter()
 
 FUNC VOID Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter()
 {
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter_05_00"); //Während du die Erzlegierung für Pfeile oder Bolzen herstellst, mischst du ein Fläschchen Drachenblut hinzu.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter_05_01"); //Das verleiht den Pfeilspitzen eine Härte, die jeden Panzer und Schild zu durchbohren vermag.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter_05_02"); //Du solltest auch einen Bogen oder eine Armbrust mit Drachensehnen herstellen.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter_05_03"); //Die Spann- und Durchschlagskraft, die eine Drachensehne erzeugt, übertrifft alles, was man sonst findet.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter_05_04"); //Geeignet sind vor allem die Sehnen an den Gelenken der Arme und Beine dieser Viecher, am Hals kann man auch brauchbares Material finden.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter_05_05"); //Du musst längs schneiden, zwischen den Schuppen, um dich vorsichtig zu den Sehnen vorzuarbeiten.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter_29_00"); //Während du die Erzlegierung für Pfeile oder Bolzen herstellst, mischst du ein Fläschchen Drachenblut hinzu.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter_29_01"); //Das verleiht den Pfeilspitzen eine Härte, die jeden Panzer und Schild zu durchbohren vermag.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter_29_02"); //Du solltest auch einen Bogen oder eine Armbrust mit Drachensehnen herstellen.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter_29_03"); //Die Spann- und Durchschlagskraft, die eine Drachensehne erzeugt, übertrifft alles, was man sonst findet.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter_29_04"); //Geeignet sind vor allem die Sehnen an den Gelenken der Arme und Beine dieser Viecher, am Hals kann man auch brauchbares Material finden.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter_29_05"); //Du musst längs schneiden, zwischen den Schuppen, um dich vorsichtig zu den Sehnen vorzuarbeiten.
 
 	Log_CreateTopic (TOPIC_TalentAnimalTrophy, LOG_NOTE);
 	Log_AddEntry (TOPIC_TalentAnimalTrophy, "Ich kann jetzt, wenn ich eine Rasierklinge dabei habe:");
@@ -602,7 +602,7 @@ FUNC VOID Info_Mod_Thofeistos_Teacher_Geschoss_Dragonhunter()
 
 FUNC VOID Info_Mod_Thofeistos_Teacher_Armor_Dragon()
 {
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Armor_Dragon_05_00"); //Nun, das zu erklären habe ich keine Zeit. Präge dir diese Bauanleitung aufmerksam ein, dann wirst du wissen, wie vorzugehen ist.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Armor_Dragon_29_00"); //Nun, das zu erklären habe ich keine Zeit. Präge dir diese Bauanleitung aufmerksam ein, dann wirst du wissen, wie vorzugehen ist.
 
 	B_ShowGivenThings	("Bauanleitung erhalten");
 
@@ -640,8 +640,8 @@ FUNC VOID Info_Mod_Thofeistos_Teacher_Armor_Dragon()
 
 FUNC VOID Info_Mod_Thofeistos_Teacher_Armor_Dragon2()
 {
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Armor_Dragon2_05_00"); //Um die perfekte Rüstung zu erschaffen, musst du noch geschickter vorgehen, um weitere 16 Erz und sieben Schuppen mit der Rüstung zu verbinden.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Armor_Dragon2_05_01"); //Daneben benötigst du noch vier Phiolen Drachenblut zum Härten der Rüstung.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Armor_Dragon2_29_00"); //Um die perfekte Rüstung zu erschaffen, musst du noch geschickter vorgehen, um weitere 16 Erz und sieben Schuppen mit der Rüstung zu verbinden.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_Teacher_Armor_Dragon2_29_01"); //Daneben benötigst du noch vier Phiolen Drachenblut zum Härten der Rüstung.
 
 	Log_CreateTopic (TOPIC_TalentAnimalTrophy, LOG_NOTE);
 	Log_AddEntry (TOPIC_TalentAnimalTrophy, "Ich kann jetzt, wenn ich eine Rasierklinge dabei habe:");
@@ -692,7 +692,7 @@ FUNC INT Info_Mod_Thofeistos_GiveSLDWeapon_Condition()
 FUNC VOID Info_Mod_Thofeistos_GiveSLDWeapon_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Thofeistos_GiveSLDWeapon_15_00"); //Hast du eine Waffe für mich?
-	AI_Output(self, hero, "Info_Mod_Thofeistos_GiveSLDWeapon_05_01"); //Als einfacher Söldner habe ich ein Söldnerschwert für dich. Entscheide dich für das Ein- oder Zweihandschwert.
+	AI_Output(self, hero, "Info_Mod_Thofeistos_GiveSLDWeapon_29_01"); //Als einfacher Söldner habe ich ein Söldnerschwert für dich. Entscheide dich für das Ein- oder Zweihandschwert.
 
 	Info_ClearChoices	(Info_Mod_Thofeistos_GiveSLDWeapon);
 
