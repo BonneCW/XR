@@ -186,7 +186,7 @@ FUNC VOID Info_Mod_Wirt_WacholderDieb_Info()
 	AI_Output(hero, self, "Info_Mod_Wirt_WacholderDieb_15_02"); //Weil ich dir vielleicht Geld anbieten könnte.
 	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_14_03"); //Dann würde ich 200 Goldstücke verlangen.
 
-	B_LogEntry	(TOPIC_MOD_CORAGON_WACHOLDER, "Der Wirt will für Informatinen 200 Goldstücke.");
+	B_LogEntry	(TOPIC_MOD_CORAGON_WACHOLDER, "Der Wirt will für Informationen 200 Goldstücke.");
 };
 
 INSTANCE Info_Mod_Wirt_WacholderDieb_Pay (C_INFO)
@@ -197,7 +197,7 @@ INSTANCE Info_Mod_Wirt_WacholderDieb_Pay (C_INFO)
 	information	= Info_Mod_Wirt_WacholderDieb_Pay_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Hier ist das Gold. Nun erzähl mir was du weißt.";
+	description	= "Hier ist das Gold. Nun erzähl mir, was du weißt.";
 };
 
 FUNC INT Info_Mod_Wirt_WacholderDieb_Pay_Condition()
@@ -211,16 +211,16 @@ FUNC INT Info_Mod_Wirt_WacholderDieb_Pay_Condition()
 
 FUNC VOID Info_Mod_Wirt_WacholderDieb_Pay_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Wirt_WacholderDieb_Pay_15_00"); //Hier ist das Gold. Nun erzähl mir was du weißt.
+	AI_Output(hero, self, "Info_Mod_Wirt_WacholderDieb_Pay_15_00"); //Hier ist das Gold. Nun erzähl mir, was du weißt.
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 200);
 
 	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_Pay_14_01"); //Am Tag des Diebstahls lungerte die ganze Zeit ein Typ namens Rukhar vor Coragons Taverne herum.
-	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_Pay_14_02"); //Der treibt sich normalerweise immer bei Orlans Taverne 'rum und besäuft sich. Sehr merkwürdig, oder?
+	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_Pay_14_02"); //Der sitzt normalerweise aber in Orlans Taverne und besäuft sich. Sehr merkwürdig, oder?
 	AI_Output(hero, self, "Info_Mod_Wirt_WacholderDieb_Pay_15_03"); //Mag sein. Danke für den Tipp!
-	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_Pay_14_04"); //(grinst) Wenn du mal wieder Infos brauchst dann weißt du ja bei wem du sie bekommst!
+	AI_Output(self, hero, "Info_Mod_Wirt_WacholderDieb_Pay_14_04"); //(grinst) Wenn du mal wieder Informationen brauchst, dann weißt du ja, bei wem du sie bekommst!
 
-	B_LogEntry	(TOPIC_MOD_CORAGON_WACHOLDER, "Rukhar, welcher sich normalerweise in der Taverne von Orlan aufhält, soll am Tag des Diebstahls vor Coragons Kneipe herumgelungert sein. Ich sollte mal zu ihm gehen und überprüfen, ob diese Information die 200 Goldstücke wert war.");
+	B_LogEntry	(TOPIC_MOD_CORAGON_WACHOLDER, "Rukhar, welcher sich normalerweise in der Taverne von Orlan aufhält, soll am Tag des Diebstahls vor Coragons Kneipe herumgelungert haben. Ich sollte mal zu ihm gehen und überprüfen, ob diese Information die 200 Goldstücke wert war.");
 };
 
 INSTANCE Info_Mod_Wirt_Pickpocket (C_INFO)

@@ -182,7 +182,7 @@ FUNC VOID Info_Mod_Moe_Geruechte3_D()
 {
 	AI_Output(hero, self, "Info_Mod_Moe_Geruechte3_D_15_00"); //Das war ja zu erwarten ...
 	AI_Output(self, hero, "Info_Mod_Moe_Geruechte3_D_01_01"); //Valentino ist 'n beliebter Mann, vor allem beim weiblichen Volk und bei den Wirten.
-	AI_Output(self, hero, "Info_Mod_Moe_Geruechte3_D_01_02"); //Sollte sich Canthar Forderung 'rumsprechen, würden die meisten einen Tausch fordern - ihn gegen dich.
+	AI_Output(self, hero, "Info_Mod_Moe_Geruechte3_D_01_02"); //Sollte sich Canthars Forderung 'rumsprechen, würden die meisten einen Tausch fordern - ihn gegen dich.
 	AI_Output(self, hero, "Info_Mod_Moe_Geruechte3_D_01_03"); //Lord Andre kann nichts dagegen unternehmen: Was er auch macht, Menschenleben stehen auf dem Spiel.
 	AI_Output(self, hero, "Info_Mod_Moe_Geruechte3_D_01_04"); //Er wird seine korrupten Stadtwachen nicht gegen Canthar einsetzen, weil er dessen Stärke kennt.
 	AI_Output(self, hero, "Info_Mod_Moe_Geruechte3_D_01_05"); //Es bleibt also an dir hängen. Du musst versuchen, Valentino zu befreien, damit Canthar kein Druckmittel mehr in der Hand hat.
@@ -214,8 +214,8 @@ FUNC VOID Info_Mod_Moe_Geruechte3_A()
 
 FUNC VOID Info_Mod_Moe_Geruechte3_F()
 {
-	AI_Output(hero, self, "Info_Mod_Moe_Geruechte3_F_15_00"); //Soll Canthar doch kommen, für Valentino setze ich mein Leben nicht auf's Spiel.
-	AI_Output(self, hero, "Info_Mod_Moe_Geruechte3_F_01_01"); //In dem Fall weichst du nur dem Unabwendbaren aus. Wenn du deine Entscheidung geändert ist, geh' ins Obere Viertel und suche nach Valentine, Valentinos Schwester.
+	AI_Output(hero, self, "Info_Mod_Moe_Geruechte3_F_15_00"); //Soll Canthar doch kommen, für Valentino setze ich mein Leben nicht aufs Spiel.
+	AI_Output(self, hero, "Info_Mod_Moe_Geruechte3_F_01_01"); //In dem Fall weichst du nur dem Unabwendbaren aus. Wenn du deine Entscheidung geändert ist, geh ins Obere Viertel und suche nach Valentine, Valentinos Schwester.
 	
 	Info_ClearChoices	(Info_Mod_Moe_Geruechte3);
 
@@ -300,12 +300,12 @@ FUNC INT Info_Mod_Moe_AllievoTot_Condition()
 FUNC VOID Info_Mod_Moe_AllievoTot_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Moe_AllievoTot_15_00"); //Ich konnte Valentino befreien und einen Schüler von Canthar erledigen.
-	AI_Output(self, hero, "Info_Mod_Moe_AllievoTot_01_01"); //Das mit Valentino hab' ich schon gehört, aber was für ein Schüler soll das gewesen sein?
+	AI_Output(self, hero, "Info_Mod_Moe_AllievoTot_01_01"); //Das mit Valentino hab ich schon gehört, aber was für ein Schüler soll das gewesen sein?
 	AI_Output(hero, self, "Info_Mod_Moe_AllievoTot_15_02"); //Sein Name war Allievo.
 	AI_Output(self, hero, "Info_Mod_Moe_AllievoTot_01_03"); //Allievo? Verflucht, wenn dir das keinen Ärger einbringt ...
 	AI_Output(hero, self, "Info_Mod_Moe_AllievoTot_15_04"); //Wieso sollte es das?
-	AI_Output(self, hero, "Info_Mod_Moe_AllievoTot_01_05"); //Es heißt, Allievo sei Canthar' Sohn gewesen. Du stehst jetzt wahrscheinlich noch höher auf seiner Abschussliste, wenn das noch geht.
-	AI_Output(self, hero, "Info_Mod_Moe_AllievoTot_01_06"); //Also, pass' auf deinen Arsch auf. Ich sag' dir Bescheid, wenn ich Neues in Erfahrung bringe.
+	AI_Output(self, hero, "Info_Mod_Moe_AllievoTot_01_05"); //Es heißt, Allievo sei Canthars Sohn gewesen. Du stehst jetzt wahrscheinlich noch höher auf seiner Abschussliste, wenn das noch geht.
+	AI_Output(self, hero, "Info_Mod_Moe_AllievoTot_01_06"); //Also, pass auf deinen Arsch auf. Ich sag dir Bescheid, wenn ich Neues in Erfahrung bringe.
 
 	B_GivePlayerXP	(100);
 
@@ -339,7 +339,7 @@ FUNC VOID Info_Mod_Moe_AufgebrachteFrau_Info()
 	AI_Output(self, hero, "Info_Mod_Moe_AufgebrachteFrau_01_01"); //Ja, das kann ich mir zumindest denken. Ich hatte ja bereits angekündigt, dass Canthar jetzt nicht mehr von dir lassen wird, Kumpel.
 	AI_Output(self, hero, "Info_Mod_Moe_AufgebrachteFrau_01_02"); //Keine Ahnung, was er sich diesmal einfallen lassen hat, aber es sieht ganz nach Verleumdung aus. (Pause) Die schmutzige Sache mit Allievo hättest du dir halt sparen sollen.
 	AI_Output(hero, self, "Info_Mod_Moe_AufgebrachteFrau_15_03"); //Was soll ich denn jetzt machen?
-	AI_Output(self, hero, "Info_Mod_Moe_AufgebrachteFrau_01_04"); //Heul nicht gleich 'rum und lass dich überraschen. Wenn du die Scheiße nicht abwenden kannst, bevor sie über dich hineinbricht, musst du dich eben durchwühlen.
+	AI_Output(self, hero, "Info_Mod_Moe_AufgebrachteFrau_01_04"); //Heul nicht gleich rum und lass dich überraschen. Wenn du die Scheiße nicht abwenden kannst, bevor sie über dich hineinbricht, musst du dich eben durchwühlen.
 	AI_Output(hero, self, "Info_Mod_Moe_AufgebrachteFrau_15_05"); //Danke für die schlauen Sprüche.
 	AI_Output(self, hero, "Info_Mod_Moe_AufgebrachteFrau_01_06"); //Du wirst es schon überstehen.
 	AI_Output(hero, self, "Info_Mod_Moe_AufgebrachteFrau_15_07"); //Wir werden sehen.
@@ -404,13 +404,13 @@ FUNC VOID Info_Mod_Moe_ErsterAnschlag_Info()
 
 	Info_AddChoice	(Info_Mod_Moe_ErsterAnschlag, "Der Bastard hat es verdient, so zu enden!", Info_Mod_Moe_ErsterAnschlag_C);
 	Info_AddChoice	(Info_Mod_Moe_ErsterAnschlag, "Ich habe Allievo im Kampf getötet, aber nicht hingerichtet.", Info_Mod_Moe_ErsterAnschlag_B);
-	Info_AddChoice	(Info_Mod_Moe_ErsterAnschlag, "Siehst du nicht, dass das Canthar' Blendwerk ist?", Info_Mod_Moe_ErsterAnschlag_A);
+	Info_AddChoice	(Info_Mod_Moe_ErsterAnschlag, "Siehst du nicht, dass das Canthars Blendwerk ist?", Info_Mod_Moe_ErsterAnschlag_A);
 };
 
 FUNC VOID Info_Mod_Moe_ErsterAnschlag_D()
 {
 	AI_Output(self, hero, "Info_Mod_Moe_ErsterAnschlag_D_01_00"); //Scheiße, Mann, ich hatte gehofft, dass du so etwas sagst.
-	AI_Output(self, hero, "Info_Mod_Moe_ErsterAnschlag_D_01_01"); //Überall auf Khorinis hängen diese Plakate jetzt 'rum. Alle haben davon erfahren, keiner will noch mit dir zu tun haben.
+	AI_Output(self, hero, "Info_Mod_Moe_ErsterAnschlag_D_01_01"); //Überall auf Khorinis hängen diese Plakate jetzt rum. Alle haben davon erfahren, keiner will noch mit dir zu tun haben.
 	AI_Output(self, hero, "Info_Mod_Moe_ErsterAnschlag_D_01_02"); //Ich weiß allerdings, wie viele Plakate es gibt: eines findest du im Kloster, eins jeweils auf dem Hof von Bengar, Onar und Lobart, und drei hängen hier in der Stadt aus, an sehr zugänglichen Stellen, habe ich mir sagen lassen.
 	AI_Output(hero, self, "Info_Mod_Moe_ErsterAnschlag_D_15_03"); //Das heißt, ich muss alle Plakate abnehmen?
 	AI_Output(self, hero, "Info_Mod_Moe_ErsterAnschlag_D_01_04"); //Ich würde solche Bilder von mir nicht sehen wollen.
@@ -443,7 +443,7 @@ FUNC VOID Info_Mod_Moe_ErsterAnschlag_B()
 
 FUNC VOID Info_Mod_Moe_ErsterAnschlag_A()
 {
-	AI_Output(hero, self, "Info_Mod_Moe_ErsterAnschlag_A_15_00"); //Siehst du nicht, dass das Canthar' Blendwerk ist?
+	AI_Output(hero, self, "Info_Mod_Moe_ErsterAnschlag_A_15_00"); //Siehst du nicht, dass das Canthars Blendwerk ist?
 
 	Info_Mod_Moe_ErsterAnschlag_D();
 };
@@ -562,7 +562,7 @@ FUNC INT Info_Mod_Moe_Shakir_Condition()
 
 FUNC VOID Info_Mod_Moe_Shakir_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Moe_Shakir_15_00"); //Hallo Moe. Ich brauche eine Frau.
+	AI_Output(hero, self, "Info_Mod_Moe_Shakir_15_00"); //Hallo, Moe. Ich brauche eine Frau.
 	AI_Output(self, hero, "Info_Mod_Moe_Shakir_01_01"); //Du willst heiraten?
 	AI_Output(hero, self, "Info_Mod_Moe_Shakir_15_02"); //Nein. Nur mal eben so.
 	AI_Output(self, hero, "Info_Mod_Moe_Shakir_01_03"); //Aha. Wieso gehst du nicht zu Bromor? Er hat die Auswahl.

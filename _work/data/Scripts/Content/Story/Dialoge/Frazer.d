@@ -90,7 +90,7 @@ FUNC VOID Info_Mod_Frazer_Endres02_Info()
 	AI_Output(hero, self, "Info_Mod_Frazer_Endres02_15_03"); //Was muss ich tun, damit du mir den Namen verrätst?
 	AI_Output(self, hero, "Info_Mod_Frazer_Endres02_13_04"); //Ich muss mir sicher sein, dass du ihm keinen Schaden zufügen willst.
 	AI_Output(hero, self, "Info_Mod_Frazer_Endres02_15_05"); //Versprechen reicht dir wahrscheinlich nicht?
-	AI_Output(self, hero, "Info_Mod_Frazer_Endres02_13_06"); //Haha. Hmm ... ein Nachweis deiner Loyalität ... ok, da fällt mir was ein: Küss mich!
+	AI_Output(self, hero, "Info_Mod_Frazer_Endres02_13_06"); //Haha. Hmm ... ein Nachweis deiner Loyalität ... na schön, da fällt mir was ein: Küss mich!
 	AI_Output(hero, self, "Info_Mod_Frazer_Endres02_15_07"); //Was?!
 	AI_Output(self, hero, "Info_Mod_Frazer_Endres02_13_08"); //Ahaha, Witz. Ein kleines Zettelchen von Anselm, auf dem er sich für dich verbürgt, würde mir auch reichen.
 	AI_Output(hero, self, "Info_Mod_Frazer_Endres02_15_09"); //Ich werde sehen, was sich machen lässt.

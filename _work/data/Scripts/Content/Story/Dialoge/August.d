@@ -117,7 +117,7 @@ FUNC VOID Info_Mod_August_EssenGeholt_Info()
 
 	B_GivePlayerXP	(50);
 
-	B_LogEntry	(TOPIC_MOD_KHORATA_FRISCHFLEISCH, "Ich konnte den Auftrag zu Hans' Zufriedenheit ausführen.");
+	B_LogEntry	(TOPIC_MOD_KHORATA_FRISCHFLEISCH, "Ich konnte den Auftrag zu Augusts Zufriedenheit ausführen.");
 	B_SetTopicStatus	(TOPIC_MOD_KHORATA_FRISCHFLEISCH, LOG_SUCCESS);
 
 	CurrentNQ += 1;
@@ -497,7 +497,7 @@ FUNC INT Info_Mod_August_Freudenspender_Condition()
 FUNC VOID Info_Mod_August_Freudenspender_Info()
 {
 	AI_Output(hero, self, "Info_Mod_August_Freudenspender_15_00"); //Ich hab hier Freudenspender ...
-	AI_Output(self, hero, "Info_Mod_August_Freudenspender_13_01"); //... das du nicht in der Stadt konsumieren darfst, genau. Halt dich dran.
+	AI_Output(self, hero, "Info_Mod_August_Freudenspender_13_01"); //... den du nicht in der Stadt konsumieren darfst, genau. Halt dich dran.
 };
 
 INSTANCE Info_Mod_August_Penner (C_INFO)
@@ -525,11 +525,11 @@ FUNC VOID Info_Mod_August_Penner_Info()
 
 	if (Npc_KnowsInfo(hero, Info_Mod_August_EssenGeholt))
 	{
-		AI_Output(hero, self, "Info_Mod_August_Penner_15_02"); //Habe dir das Frühstück gebracht.
-		AI_Output(self, hero, "Info_Mod_August_Penner_13_03"); //(eifrig) Genau! Das gepökelte Lamm. Köstlich, köstlich. Würdest du ...
+		AI_Output(hero, self, "Info_Mod_August_Penner_15_02"); //Ich habe dir das Frühstück gebracht.
+		AI_Output(self, hero, "Info_Mod_August_Penner_13_03"); //(eifrig) Genau! Das gepökelte Lamm. Für den großen Hunger. Würdest du ...
 		AI_Output(hero, self, "Info_Mod_August_Penner_15_04"); //Ich verstehe. Noch eine Portion ...
 		AI_Output(self, hero, "Info_Mod_August_Penner_13_05"); //Genau! Und ein Fladenbrot vom Bäcker dazu, wenn's recht ist, und ein Dunkelbier aus der Brauerei.
-		AI_Output(self, hero, "Info_Mod_August_Penner_13_06"); //Das Lamm vom  Fleischer ist fast noch besser, als das von den Peter. So drei Keulen dürfen's sein.
+		AI_Output(self, hero, "Info_Mod_August_Penner_13_06"); //Das Lamm vom Fleischer ist fast noch besser, als das von Peter. So drei Keulen dürfen's sein.
 	}
 	else
 	{
@@ -539,13 +539,13 @@ FUNC VOID Info_Mod_August_Penner_Info()
 	};
 
 	AI_Output(hero, self, "Info_Mod_August_Penner_15_10"); //Alkohol im Dienst? Wenn ich das dem Stadthalter sage ...
-	AI_Output(self, hero, "Info_Mod_August_Penner_13_11"); //Sagst du nicht. Weil, ich hätte da ein ganz heißes Teil für dich.
+	AI_Output(self, hero, "Info_Mod_August_Penner_13_11"); //Sagst du nicht. Dann würdest du nämlich bekommen, was ich zu geben habe ...
 	AI_Output(hero, self, "Info_Mod_August_Penner_15_12"); //So? Was denn?
 	AI_Output(self, hero, "Info_Mod_August_Penner_13_13"); //Erst den Happen.
 
 	Log_CreateTopic	(TOPIC_MOD_JG_AUGUST, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_JG_AUGUST, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_JG_AUGUST, "Soll für August Essen besorgen. Gepökeltes Lamm von Peter oder dem Metzger, Fladenbrot vom Bäcker und Dunkelbier vom Brauer.");
+	B_LogEntry	(TOPIC_MOD_JG_AUGUST, "Ich soll für August Essen besorgen. Gepökeltes Lamm von Peter oder dem Metzger, Fladenbrot vom Bäcker und Dunkelbier vom Brauer.");
 
 	B_StartOtherRoutine	(self, "START");
 };
@@ -582,9 +582,9 @@ FUNC VOID Info_Mod_August_Penner2_Info()
 
 	B_ShowGivenThings	("3 gepökeltes Lammfleisch, Fladenbrot und Dunkelbier gegeben");
 
-	AI_Output(self, hero, "Info_Mod_August_Penner2_13_01"); //Gib schon her. Hab Kohldampf.
-	AI_Output(hero, self, "Info_Mod_August_Penner2_15_02"); //Was ist jetzt mit dem heißen Teil?
-	AI_Output(self, hero, "Info_Mod_August_Penner2_13_03"); //Also letzthin hatte ich Dienst auf dem Wachturm am Pass.
+	AI_Output(self, hero, "Info_Mod_August_Penner2_13_01"); //Gib schon her. Mittlerweile schieb ich ordentlich Kohldampf.
+	AI_Output(hero, self, "Info_Mod_August_Penner2_15_02"); //Was ist es, was du mir geben wolltest?
+	AI_Output(self, hero, "Info_Mod_August_Penner2_13_03"); //Also letztens hatte ich Dienst auf dem Wachturm am Pass.
 	AI_Output(self, hero, "Info_Mod_August_Penner2_13_04"); //Wie ich so den Hang hochlaufe, stolpere ich doch über dieses Ding hier. Ist garantiert wertvoll, das Teil.
 	AI_Output(hero, self, "Info_Mod_August_Penner2_15_05"); //Zeig her.
 	AI_Output(self, hero, "Info_Mod_August_Penner2_13_06"); //Hier.
