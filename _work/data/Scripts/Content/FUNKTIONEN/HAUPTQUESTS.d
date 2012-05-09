@@ -213,12 +213,21 @@ FUNC VOID HAUPTQUESTS()
 
 			hero.aivar[AIV_INVINCIBLE] = FALSE;
 
-			if (Mod_HQ_FokusTeleport == 3)
+			if (Mod_HQ_FokusTeleport == 2)
 			{
 				AI_Teleport	(hero, "ADW_ENTRANCE");
 
 				Mod_HQ_FokusZuXardas = 2;
 			};
+		};
+
+		if (Mod_HQ_FokusZuXardas == 2)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_AW_Hi))
+		&& (!Npc_IsInState(Mod_678_DMB_Xardas_AW, ZS_Talk))
+		{
+			AI_Teleport	(hero, "OBELISKSCHREIN_WP");
+
+			Mod_HQ_FokusZuXardas = 3;
 		};
 
 		// Die Schlacht der Echsen

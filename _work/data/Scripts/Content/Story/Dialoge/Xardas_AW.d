@@ -256,9 +256,4 @@ FUNC VOID Info_Mod_Xardas_AW_EXIT_Info()
 
 	AI_Teleport	(self, "TOT");
 	B_StartOtherRoutine	(self, "TOT");
-
-	if (Kapitel == 3)
-	{
-		AI_Teleport	(hero, "OBELISKSCHREIN_WP");
-	};
 };

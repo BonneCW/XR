@@ -19,7 +19,7 @@ FUNC VOID Info_Mod_HofstaatTuersteher_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_HofstaatTuersteher_Hi_15_01"); //Warum nicht?
 	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_29_02"); //Nur Angehörige des Hofstaats dürfen da rein!
 	AI_Output(hero, self, "Info_Mod_HofstaatTuersteher_Hi_15_03"); //Hofstaat?
-	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_29_04"); //Ja, Mann! Der Pöbel hat in der Burg nichts Verloren!
+	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_29_04"); //Ja, Mann! Der Pöbel hat in der Burg nichts verloren!
 	AI_Output(hero, self, "Info_Mod_HofstaatTuersteher_Hi_15_05"); //Und wie werde ich Mitglied des Hofstaates?
 	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_29_06"); //Da musst du zuerst mal die Staatsbürgerschaft für unser Reich hier erhalten.
 	AI_Output(hero, self, "Info_Mod_HofstaatTuersteher_Hi_15_07"); //Wie werde ich Staatsbürger?
