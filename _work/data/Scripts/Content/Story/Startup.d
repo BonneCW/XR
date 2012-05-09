@@ -172,26 +172,6 @@ func void INIT_GLOBAL()
 
 	Wld_StopEffect("DEMENTOR_FX");
 
-	/*if (!FF_Active(FRAMEFUNC))
-	{
-		FF_Apply(FRAMEFUNC);
-	};
-
-	if (!FF_Active(DAUERFUNC_01))
-	{
-		FF_ApplyExt(DAUERFUNC_01, 1000, -1);
-	};*/
-
-	if (FF_Active(FRAMEFUNC))
-	{
-		FF_Remove(FRAMEFUNC);
-	};
-
-	if (FF_Active(DAUERFUNC_01))
-	{
-		FF_Remove(DAUERFUNC_01);
-	};
-
 	Wld_SendTrigger	("FRAMETRIGGER");
 	Wld_SendTrigger ("DAUERTRIGGER");
 	Wld_SendTrigger ("SPECIALTRIGGER");
