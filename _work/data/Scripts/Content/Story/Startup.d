@@ -5922,6 +5922,12 @@ FUNC VOID INIT_Minental ()
 
 		Wld_InsertItem	(ItWr_MagicSecretsBand6,	"FP_ITEM_MAGICSECRETSBAND6");
 	};
+	
+	if (Mod_HQ_FokusZuXardas == 3)
+	&& (Kapitel == 2)
+	{
+		B_Kapitelwechsel	(3, MINENTAL_ZEN);
+	};
 
 	// Wenn man sich f?r den Hofstaat entschieden hat, dann werden mal die meisten Sumpfis entfernt :)
 

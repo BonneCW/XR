@@ -221,6 +221,15 @@ FUNC VOID HAUPTQUESTS()
 			};
 		};
 
+		if (Npc_KnowsInfo(hero, Info_Mod_Xardas_AW_Hi))
+		&& (!Npc_IsInState(Mod_678_DMB_Xardas_AW, ZS_Talk))
+		&& (Mod_HQ_FokusZuXardas == 2)
+		{
+			AI_Teleport	(hero, "OBELISKSCHREIN_WP");
+
+			Mod_HQ_FokusZuXardas = 3;
+		};
+
 		// Die Schlacht der Echsen
 
 		if (Mod_HQ_AlraunenTor == 1)

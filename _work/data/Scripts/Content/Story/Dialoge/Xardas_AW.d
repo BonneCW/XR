@@ -78,8 +78,6 @@ FUNC VOID Info_Mod_Xardas_AW_Hi_Info()
 	B_SetTopicStatus	(TOPIC_MOD_XERES, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_XERES, "Durch das Einsetzen der Foki habe ich Xeres, einen mächtigen Magier des Alten Volkes, aus seinem Schattenreich befreit. Xardas hat mir aufgetragen, bei den Orks im Minental nach dem Rechten zu sehen, bevor Xeres sie sich untertan macht.");
 
-	B_Kapitelwechsel	(3, ADDONWORLD_ZEN);
-
 	B_SetTopicStatus	(TOPIC_MOD_DIEBEDROHUNG, LOG_SUCCESS);
 
 	B_SetLevelchange ("Minental\Minental.zen", "DT_E3_03");
@@ -258,9 +256,4 @@ FUNC VOID Info_Mod_Xardas_AW_EXIT_Info()
 
 	AI_Teleport	(self, "TOT");
 	B_StartOtherRoutine	(self, "TOT");
-
-	if (Kapitel == 3)
-	{
-		AI_Teleport	(hero, "OBELISKSCHREIN_WP");
-	};
 };
