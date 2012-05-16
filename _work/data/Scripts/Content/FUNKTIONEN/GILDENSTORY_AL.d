@@ -85,8 +85,8 @@ FUNC VOID GILDENSTORY_AL()
 			B_StartOtherRoutine	(Mod_1873_TPL_GorNaKosh_MT, "TEMPLER");
 		};
 
-		if (Npc_KnowsInfo(PC_Hero, Info_Mod_Thorus_Templer))
-		&& (Npc_GetDistToWP(PC_Hero, "OCC_CELLAR_BACK_LEFT_CELL") < 500)
+		if (Npc_KnowsInfo(hero, Info_Mod_Thorus_Templer))
+		&& (Npc_GetDistToWP(hero, "OCC_CELLAR_BACK_LEFT_CELL") < 750)
 		&& (Mod_TemplerBeiThorus == 1)
 		{
 			Wld_SendTrigger	("EVT_KERKERGATE_01");

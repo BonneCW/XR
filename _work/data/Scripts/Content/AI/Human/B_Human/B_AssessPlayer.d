@@ -354,6 +354,7 @@ func void B_AssessPlayer ()
 	{
 		if (!Npc_KnowsInfo(hero, Info_Mod_Dexter_Alissandro))
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Sancho_Parole))
+		&& (!Npc_KnowsInfo(hero, Info_Mod_Sancho_Dam3))
 		{
 			B_Attack	(self, hero, AR_Kill, 0);
 		}

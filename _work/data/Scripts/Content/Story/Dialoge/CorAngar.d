@@ -321,7 +321,7 @@ INSTANCE Info_Mod_Angar_Wambo (C_INFO)
 
 FUNC INT Info_Mod_Angar_Wambo_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Wambo_Angar))
+	if (Npc_KnowsInfo(hero, Info_Mod_Wambo_Asylanten))
 	&& (Npc_HasItems(hero, ItMi_AngarHalskette) == 1)
 	{
 		return 1;

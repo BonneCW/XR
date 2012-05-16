@@ -230,7 +230,7 @@ FUNC INT Info_Mod_Straschiduo_AllesDa_Condition()
 	|| (Npc_HasItems(hero, ItMw_Kilgorin) >= 1)
 	|| (Npc_HasItems(hero, ItMw_Kilgorin_Geschaerft) >= 1)
 	|| (Npc_HasItems(hero, ItMw_XRSchwert_02) >= 1)
-	|| (Npc_HasItems(hero, ItMw_XRSchwert_29_Geschaerft) >= 1)
+	|| (Npc_HasItems(hero, ItMw_XRSchwert_02_Geschaerft) >= 1)
 	|| (Npc_HasItems(hero, ItMW_Addon_Stab03) >= 1))
 	{
 		return 1;
@@ -272,9 +272,9 @@ FUNC VOID Info_Mod_Straschiduo_AllesDa_Info()
 	{
 		Npc_RemoveInvItems	(hero, ItMw_XRSchwert_02, 1);
 	}
-	else if (Npc_HasItems(hero, ItMw_XRSchwert_29_Geschaerft) >= 1)
+	else if (Npc_HasItems(hero, ItMw_XRSchwert_02_Geschaerft) >= 1)
 	{
-		Npc_RemoveInvItems	(hero, ItMw_XRSchwert_29_Geschaerft, 1);
+		Npc_RemoveInvItems	(hero, ItMw_XRSchwert_02_Geschaerft, 1);
 	}
 	else if (Npc_HasItems(hero, ItMW_Addon_Stab03) >= 1)
 	{

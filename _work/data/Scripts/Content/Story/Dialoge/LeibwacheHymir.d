@@ -11,6 +11,7 @@ INSTANCE Info_Mod_LeibwacheHymir_Treue (C_INFO)
 FUNC INT Info_Mod_LeibwacheHymir_Treue_Condition()
 {
 	if (!Npc_KnowsInfo(hero, Info_Mod_Ole_Vorbereitungen2))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Hagen_AndreVermaechtnis11))
 	{
 		return 1;
 	};

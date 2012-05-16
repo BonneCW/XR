@@ -35,6 +35,7 @@ FUNC INT Info_Mod_Orik_Florentius_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Orik_Hi))
 	&& (Mod_NL_HatFlorentiusGekillt == 1)
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Orik_Niedergeschlagen))
 	{
 		return 1;
 	};
@@ -135,6 +136,8 @@ FUNC VOID Info_Mod_Orik_Niedergeschlagen_Info()
 	B_UseItem	(self, ItPo_Health_Addon_04);
 
 	B_LogEntry	(TOPIC_MOD_AL_ORIK, "Wir lauerten Orik vor der Höhle auf und haben ihn niedergeschlagen. Jetzt wird er erst mal mitkommen müssen.");
+
+	self.aivar[AIV_PARTYMEMBER] = TRUE;
 };
 
 INSTANCE Info_Mod_Orik_Ruestung (C_INFO)

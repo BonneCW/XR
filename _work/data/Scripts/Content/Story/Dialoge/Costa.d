@@ -170,6 +170,8 @@ FUNC VOID Info_Mod_Costa_NichtZufrieden_A()
 
 	Mod_Costa_Guertel = 1;
 
+	Mod_Costa_Guertel_Tag = Wld_GetDay();
+
 	Info_ClearChoices	(Info_Mod_Costa_NichtZufrieden);
 
 	Log_CreateTopic	(TOPIC_MOD_COSTA_GUERTEL, LOG_MISSION);

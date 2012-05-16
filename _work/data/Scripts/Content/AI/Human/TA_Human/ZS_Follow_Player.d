@@ -77,7 +77,8 @@ func void ZS_Follow_Player ()
 	};
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1082_BAU_Rufus_MT))
-	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1621_EBR_Velaya_MT))	
+	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1621_EBR_Velaya_MT))
+	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1266_SLD_Orik_MT))
 	{
 		self.senses_range = 1000;
 	};
