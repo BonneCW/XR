@@ -101,7 +101,7 @@ INSTANCE Info_Mod_Xardas_MT_WoWaffe (C_INFO)
 
 FUNC INT Info_Mod_Xardas_MT_WoWaffe_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_Felsenfestung))
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_ArgezSicher))
 	&& (Npc_HasItems(hero, ItMw_BeliarWeapon_Raven) == 0)
 	{
 		return 1;

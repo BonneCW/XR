@@ -597,7 +597,7 @@ func void UseErolNotiz2 ()
 					Doc_PrintLines	( nDocID,  0, ""					);
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "Auch ein Würdiger weiß nicht alles. Doch sind Scharfsinn und Geduld Bestandteil seiner Würde."					);
+					Doc_PrintLines	( nDocID,  0, "Auch der belesenste weiß noch nicht alles. Doch sind Scharfsinn und Geduld Bestandteil seiner Würde."					);
 					
 					Doc_Show		( nDocID );
 
@@ -606,7 +606,7 @@ func void UseErolNotiz2 ()
 	{
 		Mod_Erol_Fahrender = 4;
 
-		B_LogEntry	(TOPIC_MOD_EROL_FEUERMAGIER, "Oha! Hier gibt's wohl wieder mal ein Rätsel zu lösen.");
+		B_LogEntry	(TOPIC_MOD_EROL_FEUERMAGIER, "Oha! Hier gibt's wohl wieder mal ein Rätsel zu lösen: 'Auch der belesenste weiß noch nicht alles. Doch sind Scharfsinn und Geduld Bestandteil seiner Würde.'");
 
 		//Mob_CreateItems	("TRUHE_MT_02", ItWr_ErolNotiz3, 1);
 	};
