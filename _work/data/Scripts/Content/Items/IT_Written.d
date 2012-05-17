@@ -685,7 +685,7 @@ func void UseErolNotiz4 ()
 					Doc_PrintLines	( nDocID,  0, ""					);
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "Die Zeit der Wandlung birgt Änderungen. Ändere das Symböl der Unendlichkeit und du hast den Schlüssel zur Macht."					);
+					Doc_PrintLines	( nDocID,  0, "Die Zeit der Wandlung birgt Änderungen. Ändere das Symbol der Unendlichkeit und du hast den Schlüssel zur Macht."					);
 					
 					Doc_Show		( nDocID );
 
