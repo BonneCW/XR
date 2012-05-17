@@ -251,6 +251,9 @@ FUNC VOID Info_Mod_Edgor_IstBandit_A()
 
 	B_StartOtherRoutine	(self, "MALAK");
 	B_StartOtherRoutine	(Mod_952_BDT_Franco_NW, "MALAK");
+
+	self.aivar[AIV_PARTYMEMBER] = TRUE;
+	Mod_952_BDT_Franco_NW.aivar[AIV_PARTYMEMBER] = TRUE;
 };
 
 INSTANCE Info_Mod_Edgor_SchafeTot (C_INFO)
@@ -288,10 +291,15 @@ FUNC VOID Info_Mod_Edgor_SchafeTot_Info()
 
 	B_SetTopicStatus	(TOPIC_MOD_BDT_EDGOR, LOG_SUCCESS);
 
-	B_StartOtherRoutine	(Mod_946_BDT_Edgor_NW, "START");
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "START");
 	B_StartOtherRoutine	(Mod_952_BDT_Franco_NW, "BEIFRANCO");
 
 	CurrentNQ += 1;
+
+	self.aivar[AIV_PARTYMEMBER] = FALSE;
+	Mod_952_BDT_Franco_NW.aivar[AIV_PARTYMEMBER] = FALSE;
 };
 
 INSTANCE Info_Mod_Edgor_Pickpocket (C_INFO)

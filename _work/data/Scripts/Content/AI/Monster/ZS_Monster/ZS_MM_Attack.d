@@ -70,13 +70,6 @@ func void ZS_MM_Attack ()
 
 func int ZS_MM_Attack_Loop()
 {
-	var int tmp;
-	tmp = MEM_BenchmarkMMS(ZS_MM_Attack_Loop_Core);
-	PrintDebug (ConcatStrings("Benchmark (ZS_MM): ", IntToString(tmp)));
-};
-
-func int ZS_MM_Attack_Loop_Core ()
-{
 	Mod_KampfLaeuft = TRUE;
 	
 	if (!Npc_GetTarget (self))
@@ -130,8 +123,6 @@ func int ZS_MM_Attack_Loop_Core ()
 		AI_Wait(self, 3);
 
 		self.attribute[ATR_MANA] -= 25;
-
-		Wld_InsertNpc	(Gobbo_Matrone_Summoned, Npc_GetNearestWP(self));
 
 		Wld_SpawnNpcRange	(self, Gobbo_Matrone_Summoned, 1, 500);
 

@@ -9,7 +9,7 @@ INSTANCE Mod_7106_ASS_Ramsi_NW (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);															
+	B_SetAttributesToChapter (self, 2);															
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_NORMAL;	

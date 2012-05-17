@@ -4468,29 +4468,6 @@ INSTANCE ItMi_Orkstatuette_Stonehenge (C_Item)
 
 
 /******************************************************************************************/
-INSTANCE ItMi_Magieprisma(C_Item)
-{
-	name 				=	"Magieprisma";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI|ITEM_SHOW;
-
-	value 				=	0;
-
-	visual 				=	"Schwarzesprisma.3DS";
-	material 			=	MAT_LEATHER;
-
-	description			= 	name;
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			= 	value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	
-};
-
-
-/******************************************************************************************/
 INSTANCE ItMi_Magieprisma_Fake(C_Item)
 {
 	name 				=	"Magieprisma";

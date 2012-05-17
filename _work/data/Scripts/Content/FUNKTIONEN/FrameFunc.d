@@ -45,6 +45,9 @@ FUNC VOID ChangeStatusMenu (var string field, var string text)
 	};
 };
 
+var int ExpBar;
+var int FutterBar;
+
 FUNC VOID FRAMEFUNC ()
 {
 	// Es wird gleich MEM_Timer genutzt, der muss initialisiert sein
@@ -53,11 +56,7 @@ FUNC VOID FRAMEFUNC ()
 	// Triggernachricht senden
 	Wld_SendTrigger ("FRAMETRIGGER"); //ruft meineSchleifenFunktion auf
 
-	//BarHP = Bar_SetValue(BarHP, "Bar_Mana.tga", (hero.exp*100)/hero.exp_next, 80, 7272);
-
 	// Balken anzeigen
-
-	var int ExpBar;
 
 	if (Mod_EXP_Anzeige)
 	{
@@ -78,8 +77,6 @@ FUNC VOID FRAMEFUNC ()
 			ExpBar = 0;
 		};
 	};
-
-	var int FutterBar;
 
 	if (Mod_Esssystem)
 	{
@@ -169,28 +166,6 @@ FUNC VOID FRAMEFUNC ()
 		};
 
 		CurrentLevel2 = 0;
-	};
-
-	if (Mod_Fliegen == 1)
-	{
-		var oCNpc her;
-		her = Hlp_GetNpc (hero);
-
-		her._zCVob_bitfield[0] = her._zCVob_bitfield[0] & ~ zCVob_bitfield0_physicsEnabled;
-
-		var zCAIPlayer boppel;
-		MEM_AssignInst(boppel, her.human_ai);
-
-		PrintScreen	(IntToString(boppel.fallDownDistanceY), -1, 50, FONT_SCREEN, 1);
-		PrintScreen	(IntToString(boppel.fallDownStartY), -1, 55, FONT_SCREEN, 1);
-
-		if (MEM_KeyState(KEY_A) == KEY_PRESSED)
-		{
-			her._zCVob_trafoObjToWorld[7] = addf(her._zCVob_trafoObjToWorld[7], mkf(100));
-		}
-		else if (MEM_KeyState(KEY_Z) == KEY_PRESSED)
-		{
-		};
 	};
 
 	if (GetInput)
@@ -358,7 +333,7 @@ FUNC VOID FRAMEFUNC ()
 
 	if (MEM_KeyState(KEY_F) == KEY_PRESSED)
 	{
-		if (Npc_HasItems(hero, ItMi_Magieprisma) == 1)
+		if (Mod_PrismaAngelegt == 1)
 		{
 			var ocNpc her2; her2 = Hlp_GetNpc(hero);
 
@@ -440,7 +415,7 @@ FUNC VOID FRAMEFUNC ()
 	{
 		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_01, 1);
 
-		Wld_InsertNpc	(ItMi_Focus_Pat_01, "FP_ITEM_FOKUS_01");
+		Wld_InsertItem	(ItMi_Focus_Pat_01, "FP_ITEM_FOKUS_01");
 	};
 
 	if (Npc_HasItems(hero, ItMi_Focus_Pat_02) == 1)
@@ -448,7 +423,7 @@ FUNC VOID FRAMEFUNC ()
 	{
 		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_02, 1);
 
-		Wld_InsertNpc	(ItMi_Focus_Pat_02, "FP_ITEM_FOKUS_02");
+		Wld_InsertItem	(ItMi_Focus_Pat_02, "FP_ITEM_FOKUS_02");
 	};
 
 	if (Npc_HasItems(hero, ItMi_Focus_Pat_03) == 1)
@@ -456,7 +431,7 @@ FUNC VOID FRAMEFUNC ()
 	{
 		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_03, 1);
 
-		Wld_InsertNpc	(ItMi_Focus_Pat_03, "FP_ITEM_FOKUS_03");
+		Wld_InsertItem	(ItMi_Focus_Pat_03, "FP_ITEM_FOKUS_03");
 	};
 
 	if (Npc_HasItems(hero, ItMi_Focus_Pat_04) == 1)
@@ -464,7 +439,7 @@ FUNC VOID FRAMEFUNC ()
 	{
 		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_04, 1);
 
-		Wld_InsertNpc	(ItMi_Focus_Pat_04, "FP_ITEM_FOKUS_04");
+		Wld_InsertItem	(ItMi_Focus_Pat_04, "FP_ITEM_FOKUS_04");
 	};
 
 	if (Npc_HasItems(hero, ItMi_Focus_Pat_05) == 1)
@@ -472,7 +447,16 @@ FUNC VOID FRAMEFUNC ()
 	{
 		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_05, 1);
 
-		Wld_InsertNpc	(ItMi_Focus_Pat_05, "FP_ITEM_FOKUS_05");
+		Wld_InsertItem	(ItMi_Focus_Pat_05, "FP_ITEM_FOKUS_05");
+	};
+
+	if (Npc_HasItems(hero, ItMi_Magieprisma_Fake) == 1)
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Magieprisma_Fake, 1);
+
+		Wld_InsertItem	(ItMi_Magieprisma_Fake,	"FP_ITEM_MAGIEPRISMA");
+
+		Wld_PlayEffect ("SPELLFX_PRISMA", ItMi_Magieprisma_Fake, ItMi_Magieprisma_Fake, 0, 0, 0, FALSE);
 	};
 
 	ObserveConsole();

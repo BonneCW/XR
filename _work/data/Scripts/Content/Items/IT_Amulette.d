@@ -1307,3 +1307,42 @@ FUNC VOID UnEquip_ItTa_Behueter ()
 
 	Npc_ChangeAttribute (Wisp_Helper, ATR_HITPOINTS, -Wisp_Helper.attribute[ATR_HITPOINTS_MAX]);
 };
+
+
+INSTANCE  ItMi_Magieprisma(C_Item)
+{
+	name 			=	NAME_Amulett;
+
+	mainflag 		=	ITEM_KAT_NONE;
+	flags 			=	ITEM_AMULET|ITEM_SHOW;
+
+	value 			=	0;
+
+	visual 			=	"Schwarzesprisma.3DS";
+
+	visual_skin 	=	0;
+	material 		=	MAT_METAL;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
+	on_equip		=	Equip_ItMi_Magieprisma;
+	on_unequip		=	UnEquip_ItMi_Magieprisma;
+
+	description		= "Magieprisma";
+	
+	TEXT[5]			= NAME_Value;
+	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	
+};
+
+FUNC VOID Equip_ItMi_Magieprisma ()
+{
+	Mod_PrismaAngelegt = TRUE;
+};
+
+FUNC VOID UnEquip_ItMi_Magieprisma ()
+{
+	Mod_PrismaAngelegt = FALSE;
+};

@@ -199,6 +199,7 @@ INSTANCE Info_Mod_Scatty_ArenaFight (C_INFO)
 FUNC INT Info_Mod_Scatty_ArenaFight_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Thorus_Arena))
+	&& (Wld_IsTime(08,00,23,00))
 	{
 		return 1;
 	};
@@ -229,6 +230,7 @@ INSTANCE Info_Mod_Scatty_WannaFightUB (C_INFO)
 FUNC INT Info_Mod_Scatty_WannaFightUB_Condition()
 {
 	if (Mod_GorKarantoSchwach == 2)
+	&& (Wld_IsTime(08,00,23,00))
 	{
 		return 1;
 	};
@@ -265,6 +267,7 @@ INSTANCE Info_Mod_Scatty_WannaFightUB_AK (C_INFO)
 FUNC INT Info_Mod_Scatty_WannaFightUB_AK_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Scatty_WannaFightUB))
+	&& (Wld_IsTime(08,00,23,00))
 	{
 		return 1;
 	};
@@ -291,6 +294,7 @@ INSTANCE Info_Mod_Scatty_WannaFightUB_2 (C_INFO)
 FUNC INT Info_Mod_Scatty_WannaFightUB_2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Thorus_Botschaft))
+	&& (Wld_IsTime(08,00,23,00))
 	{
 		return 1;
 	};
@@ -323,6 +327,7 @@ INSTANCE Info_Mod_Scatty_WannaFightUB_AK_2 (C_INFO)
 FUNC INT Info_Mod_Scatty_WannaFightUB_AK_2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Scatty_WannaFightUB_2))
+	&& (Wld_IsTime(08,00,23,00))
 	{
 		return 1;
 	};

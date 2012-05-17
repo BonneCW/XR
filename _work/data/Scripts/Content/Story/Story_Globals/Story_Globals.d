@@ -46,6 +46,7 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_PrismaAngelegt;
 var int Mod_NaKosh_MT;
 var int Mod_KristallPrisma_Absorbiert;
 var int Mod_OTSchalter;

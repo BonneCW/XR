@@ -1514,7 +1514,7 @@ func void Spell_Cast_TeleportRELMoor()
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
 	};
 
-	AI_Teleport	(self, "REL_MOOR_019");
+	AI_Teleport	(self, "REL_MOOR_017");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
 };
 

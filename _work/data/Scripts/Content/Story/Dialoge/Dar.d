@@ -27,18 +27,18 @@ FUNC VOID Info_Mod_Dar_Miguel_Info()
 
 	AI_Output(self, hero, "Info_Mod_Dar_Miguel_03_03"); //Na dann, wohl bekomms ...
 
-	B_UseItem	(self, ItPo_MiguelForDar);
+	CreateInvItems	(self, ItPo_Health_01, 1);
+
+	B_UseItem	(self, ItPo_Health_01);
 
 	AI_Output(hero, self, "Info_Mod_Dar_Miguel_15_04"); //Ähh ...
 	AI_Output(self, hero, "Info_Mod_Dar_Miguel_03_05"); //Buaahh, echt krasses Zeug, haut derbe rein. Mit so was will ich mich am libsten dn gaaanzn Tlg ...
 
-	AI_PlayAni	(self, "T_DANCE");
-
-	AI_PlayAni	(self, "T_STAND_2_SLEEPGROUND");
-
 	AI_StopProcessInfos	(self);
 
-	AI_Wait	(self, 30);
+	AI_PlayAni	(self, "T_DANCE_01");
+
+	AI_PlayAni	(self, "T_STAND_2_SLEEPGROUND");
 	
 	B_LogEntry	(TOPIC_MOD_BDT_FLIEGENPILZLURKERSCHLEIM, "Dar schlürft das Gebräu selbst leer? Was soll das jetzt? Gesund ist das bestimmt nicht ...");
 };

@@ -560,11 +560,11 @@ FUNC VOID Info_Mod_TeleportObelisk_Moor_Info()
 
 	if (CurrentLevel == RELENDEL_ZEN)
 	{
-		AI_Teleport	(hero, "REL_MOOR_019");
+		AI_Teleport	(hero, "REL_MOOR_017");
 	}
 	else
 	{
-		B_SetLevelchange ("Zafiron\Relendel.zen", "REL_MOOR_019");
+		B_SetLevelchange ("Zafiron\Relendel.zen", "REL_MOOR_017");
 
 		AI_Teleport	(hero, "OBELISKSCHREIN_WP");
 	};

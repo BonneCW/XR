@@ -28,7 +28,7 @@ func void B_AssessDamage_Hero ()
 		if (self.aivar[AIV_Damage] == self.attribute[ATR_HITPOINTS])
 		{
 			if (C_CanDefenseBreak(other))
-			&& (Hlp_Random(100) < 15)
+			&& (r_max(99) < 15)
 			{
 				B_CalculateDamage(self, other);
 			}
@@ -136,7 +136,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -203,7 +203,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -270,7 +270,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -337,7 +337,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -404,7 +404,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -481,7 +481,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -548,7 +548,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -615,7 +615,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -678,7 +678,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -741,7 +741,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -804,7 +804,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -867,7 +867,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -930,7 +930,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -993,7 +993,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -1063,7 +1063,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -1126,7 +1126,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -1186,7 +1186,7 @@ func void B_AssessDamage_Hero ()
 			GiftChance = 61; //nochmal -15% vom Rest
 		};
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit erhöhen
 
@@ -1265,7 +1265,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -1539,7 +1539,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -1813,7 +1813,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -2086,7 +2086,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -2359,7 +2359,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -2632,7 +2632,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -2906,7 +2906,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -3179,7 +3179,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -3452,7 +3452,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -3725,7 +3725,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -3998,7 +3998,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -4273,7 +4273,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -4546,7 +4546,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -4819,7 +4819,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -5092,7 +5092,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
@@ -5365,7 +5365,7 @@ func void B_AssessDamage_Hero ()
 
 		GiftChance = GiftChance - ((GiftChance*armor)/100);
 
-		if (Hlp_Random(100) < GiftChance)
+		if (r_max(99) < GiftChance)
 		{
 			// Zeit festlegen
 
