@@ -2132,7 +2132,4 @@ FUNC VOID DAUERFUNC_01()
 	};
 
 	Wld_SendTrigger	("DAUERTRIGGER");
-	Wld_SendTrigger	("FRAMETRIGGER");
-
-	Framefunc();
 };
