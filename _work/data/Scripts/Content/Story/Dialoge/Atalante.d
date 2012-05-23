@@ -49,7 +49,7 @@ FUNC VOID Info_Mod_Atalante_Bosper_Info()
 	AI_Output(self, hero, "Info_Mod_Atalante_Bosper_16_05"); //Hör auf, diesen Namen zu nennen! Er hat nur Leid über mein Leben gebracht.
 	AI_Output(hero, self, "Info_Mod_Atalante_Bosper_15_06"); //Meinst du nicht, dass man darüber reden kann?
 	AI_Output(self, hero, "Info_Mod_Atalante_Bosper_16_07"); //Nein, ich brauche nicht mehr zu reden. Was mir nicht gefällt, wird getötet und gefressen.
-	AI_Output(self, hero, "Info_Mod_Atalante_Bosper_16_08"); //Und du gefällst mir nicht, neugieriger Mensch. Dein saftiges Fleisch wird meinen Magen füllen!
+	AI_Output(self, hero, "Info_Mod_Atalante_Bosper_16_08"); //Und du gefällst mir nicht, neugieriger Mensch. Du wühlst in Sachen, die dich nichts angehen!
 
 	B_LogEntry	(TOPIC_MOD_LEHRLING_BOSPER_FOUR, "Es ist mir nicht gelungen, vernünftig mit Atalante zu sprechen. Sie griff mich an, und so blieb mir nichts anderes übrig, als sie zu töten. Ich sollte Bosper die traurige Nachricht überbringen.");
 

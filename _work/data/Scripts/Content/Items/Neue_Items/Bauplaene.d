@@ -37,6 +37,9 @@ func void UseBauplan_Snapperring ()
 					Doc_Show		( nDocID );
 
 		Snapperring = TRUE;
+
+	Log_CreateTopic	(TOPIC_MOD_SCHMUCK, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_SCHMUCK, "Snapperkraftring: 1x Metallblock, 4x Krallen");
 };
 
 INSTANCE ItWr_Bauplan_Wolfsring_Ruestung		(C_Item)
@@ -76,6 +79,9 @@ func void UseBauplan_Wolfsring_Ruestung ()
 					Doc_Show		( nDocID );
 
 		Wolfsring_Ruestung = TRUE;
+
+	Log_CreateTopic	(TOPIC_MOD_SCHMUCK, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_SCHMUCK, "Wolfsring der Rüstung: 1x Metallblock, 4x Wolfsfell");
 };
 
 INSTANCE ItWr_Bauplan_Wolfsring_Leben		(C_Item)
@@ -115,6 +121,9 @@ func void UseBauplan_Wolfsring_Leben ()
 					Doc_Show		( nDocID );
 
 		Wolfsring_Leben = TRUE;
+
+	Log_CreateTopic	(TOPIC_MOD_SCHMUCK, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_SCHMUCK, "Wolfsring des Lebens: 1x Metallblock, 4x Zähne");
 };
 
 INSTANCE ItWr_Bauplan_Wolfsamulett		(C_Item)
@@ -156,6 +165,9 @@ func void UseBauplan_Wolfsamulett ()
 					Doc_Show		( nDocID );
 
 		Wolfsamulett = TRUE;
+
+	Log_CreateTopic	(TOPIC_MOD_SCHMUCK, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_SCHMUCK, "Amulett des Wolfes: 1x Metallblock, 3x Zähne, 3x Wolfsfell, 1x Spruchrolle 'Wolf beschwören'");
 };
 
 INSTANCE ItWr_Bauplan_AdanosRing		(C_Item)
@@ -197,6 +209,9 @@ func void UseBauplan_AdanosRing ()
 					Doc_Show		( nDocID );
 
 		AdanosRing = TRUE;
+
+	Log_CreateTopic	(TOPIC_MOD_SCHMUCK, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_SCHMUCK, "Adanos' Ring des Wassers: 1x Metallblock, 1x Erzbrocken, 2x Aquamarin, 1x Herz eines Eisgolems");
 };
 
 INSTANCE ItWr_Bauplan_AdanosBelt		(C_Item)
@@ -239,6 +254,9 @@ func void UseBauplan_AdanosBelt ()
 					Doc_Show		( nDocID );
 
 		AdanosBelt = TRUE;
+
+	Log_CreateTopic	(TOPIC_MOD_SCHMUCK, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_SCHMUCK, "Adanos' Gürtel des Frostes: 1x Metallblock, 2x Reptilienhaut, 1x Erzbrocken, 1x Bergkristall, 1x Spruchrolle 'Eisblock'");
 };
 
 INSTANCE ItWr_Bauplan_AdanosAmulett		(C_Item)
@@ -281,6 +299,9 @@ func void UseBauplan_AdanosAmulett ()
 					Doc_Show		( nDocID );
 
 		AdanosAmulett = TRUE;
+
+	Log_CreateTopic	(TOPIC_MOD_SCHMUCK, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_SCHMUCK, "Adanos' Amulett des Nebels: 1x Metallblock, 1x Goldbrocken, 1x Erzbrocken, 2x Aquamarin, 1x Spruchrolle 'Eiswelle'");
 };
 
 INSTANCE ItWr_Bauplan_DJG_M		(C_Item)
@@ -439,6 +460,9 @@ func void UseBauplan_RingGewandtheit ()
 					Doc_Show		( nDocID );
 
 		RingGewandtheit = TRUE;
+
+	Log_CreateTopic	(TOPIC_MOD_SCHMUCK, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_SCHMUCK, "Rechter Ring der Gewandtheit: 1x Metallblock, 1x Horn eines Drachensnappers, 2x Knochen eines Goblins");
 };
 
 INSTANCE ItWr_Bauplan_RingAusdauer		(C_Item)
@@ -454,7 +478,7 @@ INSTANCE ItWr_Bauplan_RingAusdauer		(C_Item)
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseBauplan_RingAusdauer;
 	scemeName			=	"MAPSEALED";
-	description			= 	"Bauplan: Linker Ring des Ausdauer";
+	description			= 	"Bauplan: Linker Ring der Ausdauer";
 	
 	TEXT[5]				= 	NAME_Value;			
 	COUNT[5]			= 	value;
@@ -469,7 +493,7 @@ func void UseBauplan_RingAusdauer ()
 					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
 					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline  			); 	// -1 -> all pages
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
-					Doc_PrintLine	( nDocID,  0, "Linker Ring des Ausdauer"					);
+					Doc_PrintLine	( nDocID,  0, "Linker Ring der Ausdauer"					);
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "1x Metallblock"					);
@@ -479,6 +503,9 @@ func void UseBauplan_RingAusdauer ()
 					Doc_Show		( nDocID );
 
 		RingAusdauer = TRUE;
+
+	Log_CreateTopic	(TOPIC_MOD_SCHMUCK, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_SCHMUCK, "Linker Ring der Ausdauer: 1x Metallblock, 1x Trank der Geschwindigkeit, 2x Flügel");
 };
 
 INSTANCE ItWr_Bauplan_RingStaerke		(C_Item)
@@ -519,6 +546,9 @@ func void UseBauplan_RingStaerke ()
 					Doc_Show		( nDocID );
 
 		RingStaerke = TRUE;
+
+	Log_CreateTopic	(TOPIC_MOD_SCHMUCK, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_SCHMUCK, "Rechter Ring der Stärke: 1x Metallblock, 1x Horn eines Drachensnappers, 2x Knochen eines Goblins");
 };
 
 INSTANCE ItWr_Bauplan_RingHiebe		(C_Item)
@@ -559,6 +589,9 @@ func void UseBauplan_RingHiebe ()
 					Doc_Show		( nDocID );
 
 		RingHiebe = TRUE;
+
+	Log_CreateTopic	(TOPIC_MOD_SCHMUCK, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_SCHMUCK, "Linker Ring der Hiebe: 1x Metallblock, 1x Trank der Geschwindigkeit, 2x Lurkerklaue");
 };
 
 INSTANCE ItWr_Bauplan_Snapperbogen		(C_Item)
