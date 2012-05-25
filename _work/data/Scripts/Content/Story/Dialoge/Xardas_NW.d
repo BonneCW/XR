@@ -2841,7 +2841,7 @@ FUNC VOID Info_Mod_Xardas_NW_Aufnahme_Ja()
 {
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_Aufnahme_Ja_15_00"); //Ja.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Aufnahme_Ja_14_01"); //Dann darf ich dich hiermit stellvertretend für Andokai willkommen heißen!
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Aufnahme_Ja_14_02"); //Er wird es mir schon nicht übelnehmen, wenn ich dir deine Rüstung und den traditionelle Waffe übergebe.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Aufnahme_Ja_14_02"); //Er wird es mir schon nicht übelnehmen, wenn ich dir deine Rüstung und die traditionelle Waffe übergebe.
 
 	CreateInvItems	(hero, ITAR_NOV_DMB_01, 1);
 	CreateInvItems	(hero, ItMw_1h_SNov_Mace, 1);

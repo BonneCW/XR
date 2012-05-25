@@ -420,7 +420,7 @@ FUNC VOID PC_Stark_ItMw_1H_Common_Info ()
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	Starkwaffen = FALSE;
 };
 
 //*******************************************************
@@ -473,7 +473,7 @@ FUNC VOID PC_Stark_WEAPON_1H_Harad_01_Info ()
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	Starkwaffen = FALSE;
 };
 //*******************************************************
 INSTANCE PC_Stark_WEAPON_1H_Harad_02 (C_INFO)
@@ -525,7 +525,7 @@ FUNC VOID PC_Stark_WEAPON_1H_Harad_02_Info ()
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	Starkwaffen = FALSE;
 };
 //*******************************************************
 INSTANCE PC_Stark_WEAPON_1H_Harad_03 (C_INFO)
@@ -577,7 +577,7 @@ FUNC VOID PC_Stark_WEAPON_1H_Harad_03_Info ()
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	Starkwaffen = FALSE;
 };
 //*******************************************************
 INSTANCE PC_Stark_WEAPON_1H_Harad_04 (C_INFO)
@@ -629,7 +629,7 @@ FUNC VOID PC_Stark_WEAPON_1H_Harad_04_Info ()
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	Starkwaffen = FALSE;
 };
 
 //*******************************************************
@@ -651,6 +651,7 @@ FUNC INT PC_CommonBACK_Condition()
 	&& (PfeileMachen == FALSE)
 	&& (Verbessern == FALSE)
 	&& (Set == FALSE)
+	&& (Starkwaffen == FALSE)
 	{	
 		return TRUE;
 	};
@@ -2593,6 +2594,7 @@ FUNC INT PC_PfeileMachen_Condition()
 	&& (PfeileMachen == FALSE)
 	&& (Verbessern == FALSE)
 	&& (Set == FALSE)
+	&& (Starkwaffen == FALSE)
 	{
 		return 1;
 	};
@@ -3529,6 +3531,7 @@ FUNC INT PC_Set_Condition()
 	&& (PfeileMachen == FALSE)
 	&& (Verbessern == FALSE)
 	&& (Set == FALSE)
+	&& (Starkwaffen == FALSE)
 	{
 		return 1;
 	};
@@ -3992,6 +3995,7 @@ FUNC INT PC_Verbessern_Condition()
 	&& (PfeileMachen == FALSE)
 	&& (Verbessern == FALSE)
 	&& (Set == FALSE)
+	&& (Starkwaffen == FALSE)
 	{
 		return 1;
 	};

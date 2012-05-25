@@ -362,7 +362,6 @@ FUNC VOID Info_Mod_Jackal_Fluchthilfe_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Jackal_Fluchthilfe_07_00"); //Nimm diese Spruchrolle und verschwinde hier.
 
-	CreateInvItems	(self, ItSc_TeleportVorAL, 1);
 	B_GiveInvItems	(self, hero, ItSc_TeleportVorAL, 1);
 
 	AI_StopProcessInfos	(self);
@@ -528,8 +527,7 @@ FUNC VOID Info_Mod_Jackal_AtZuflucht_Info()
 	AI_Output(hero, self, "Info_Mod_Jackal_AtZuflucht_15_06"); //Gut, wo sollen wir suchen?
 	AI_Output(self, hero, "Info_Mod_Jackal_AtZuflucht_07_07"); //Wir haben uns bei dem versunkenen Turm verloren.
 	AI_Output(hero, self, "Info_Mod_Jackal_AtZuflucht_15_08"); //Gut, dann sollten wir uns da mal umsehen.
-	
-	B_StartOtherRoutine	(Mod_1141_GRD_Gardist_MT, "ATTURM");
+	AI_Output(self, hero, "DEFAULT"); //
 
 	Log_CreateTopic	(TOPIC_MOD_AL_WhereAlissandro, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_AL_WhereAlissandro, LOG_RUNNING);
@@ -540,7 +538,8 @@ FUNC VOID Info_Mod_Jackal_AtZuflucht_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "ATTURM");
-	B_StartOtherRoutine	(Mod_1870_EBR_Alissandro_MT, "GEFANGEN");
+	B_StartOtherRoutine	(Mod_1870_EBR_Alissandro_MT, "GEFANGEN");	
+	B_StartOtherRoutine	(Mod_1141_GRD_Gardist_MT, "ATTURM");
 };
 
 INSTANCE Info_Mod_Jackal_AtTurm (C_INFO)
@@ -611,7 +610,7 @@ INSTANCE Info_Mod_Jackal_AtOC (C_INFO)
 FUNC INT Info_Mod_Jackal_AtOC_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Jackal_WeHaveToGoToOC))
-	&& (Npc_GetDistToWP(self, "OC_ROUND_1") < 500)
+	&& (Npc_GetDistToWP(self, "OC_ROUND_1") < 1000)
 	{
 		return 1;
 	};
@@ -621,7 +620,6 @@ FUNC VOID Info_Mod_Jackal_AtOC_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Jackal_AtOC_07_00"); //Nimm diese Spruchrolle und öffne dann das Tor.
 
-	CreateInvItems	(self, ItSc_TrfRabbit, 1);
 	B_GiveInvItems	(self, hero, ItSc_TrfRabbit, 1);
 	
 	AI_StopProcessInfos	(self);

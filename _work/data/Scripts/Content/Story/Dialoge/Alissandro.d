@@ -418,12 +418,10 @@ FUNC VOID Info_Mod_Alissandro_GotoJackal_Info()
 	AI_Output(hero, self, "Info_Mod_Alissandro_GotoJackal_15_08"); //Wie soll ich in das Lager kommen?
 	AI_Output(self, hero, "Info_Mod_Alissandro_GotoJackal_28_09"); //Ich habe eine Teleportrune von den Heilmagiern bekommen, du kommst damit in das Haus der Magier.
 
-	CreateInvItems	(self, ItRu_TeleportOldcamp, 1);
 	B_GiveInvItems	(self, hero, ItRu_TeleportOldcamp, 1);
 
 	AI_Output(self, hero, "Info_Mod_Alissandro_GotoJackal_28_10"); //Außerdem bekommst du eine Liste mit den Leuten, die du töten sollst. 
 
-	CreateInvItems	(self, ItWr_Alissandro_KillList, 1);
 	B_GiveInvItems	(self, hero, ItWr_Alissandro_KillList, 1);
 
 	B_StartOtherRoutine	(Mod_1874_HMG_Makanius_MT, "TREFFEN");
@@ -681,6 +679,8 @@ FUNC VOID Info_Mod_Alissandro_BeiBartholo_Info()
 	AI_EquipArmor	(self, EBR_ARMOR_H2);
 
 	AI_Output(self, hero, "Info_Mod_Alissandro_BeiBartholo_28_00"); //Angriff!
+
+	AI_StopProcessInfos	(self);
 	
 	B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Wir sind nun bei Bartholo und Makanius hat das Signal für die Banditen und königlichen Gardisten gegeben, allerdings ist Bartholo geflohen und hat uns einen Gardisten auf den Hals gehetzt.");
 	

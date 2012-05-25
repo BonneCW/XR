@@ -37,7 +37,7 @@ FUNC VOID Info_Mod_Tom_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_Tom_Hi_15_03"); //Was meinst du?
 	AI_Output(self, hero, "Info_Mod_Tom_Hi_11_04"); //Ich war damals Buddler im Alten Lager und glaubte dich als Mitgefangenen wieder erkannt zu haben.
 	AI_Output(self, hero, "Info_Mod_Tom_Hi_11_05"); //Um auf Nummer sich gehen zu wollen, habe ich dir diese Frage gestellt.
-	AI_Output(hero, self, "Info_Mod_Tom_Hi_15_06"); //Und wozu das ganze?
+	AI_Output(hero, self, "Info_Mod_Tom_Hi_15_06"); //Und wozu das Ganze?
 	AI_Output(self, hero, "Info_Mod_Tom_Hi_11_07"); //Nun, ich habe da ein Problem, dass ich nicht unbedingt jedem kleinbürgerlichen Spießer aus dieser Stadt anvertrauen kann ... sondern lieber einem anderen Ex-Knacki.
 	AI_Output(hero, self, "Info_Mod_Tom_Hi_15_08"); //Was soll ich für dich machen?
 	AI_Output(self, hero, "Info_Mod_Tom_Hi_11_09"); //Ein Kumpel von mir hat ein Lager bei der Brücke nahe der Taverne. Ich hab allerdings erfahren, dass ein kleiner Miliztrupp dorthin aufgebrochen ist.

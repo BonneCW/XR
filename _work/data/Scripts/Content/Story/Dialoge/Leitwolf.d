@@ -418,11 +418,11 @@ FUNC VOID Info_Mod_Leitwolf_Aufgabe_Info()
 	{
 		AI_Output(hero, self, "Info_Mod_Leitwolf_Aufgabe_15_05"); //Ich bin an der Sache dran.
 		AI_Output(self, hero, "Info_Mod_Leitwolf_Aufgabe_09_06"); //Beeil' dich gefälligst!
-
-		Npc_SetRefuseTalk	(self, 60);
 	};
 
 	AI_StopProcessInfos	(self);
+
+	Npc_SetRefuseTalk	(self, 60);
 };
 
 INSTANCE Info_Mod_Leitwolf_EXIT (C_INFO)

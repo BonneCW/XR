@@ -7,6 +7,8 @@ FUNC VOID DAUERFUNC_01()
 	var string concatText;
 	var int XPOS_XPNEEDED;
 
+	PrintScreen	(IntToString(Mod_HasFleisch_Amount), -1, -1, FONT_SCREEN, 2);
+
 	// Spielstart erstmal Username eingeben
 
 	var int Mod_OnlineMode2;
