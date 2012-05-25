@@ -57,21 +57,6 @@ func void  B_InitNpcGlobals ()
 
 	HeroLook();
 
-	if (Mod_HasToTeleport == TRUE)
-	{
-		if (Npc_GetDistToWP(hero, Mod_TeleportOrt) > 300)
-		{
-			AI_Teleport	(hero, Mod_TeleportOrt);
-
-			Mod_HasToTeleport = FALSE;
-		};
-
-		if (Npc_GetDistToWP(hero, Mod_TeleportOrt) <= 300)
-		{
-			Mod_HasToTeleport = FALSE;
-		};
-	};
-
 	// Randolph auf Irdorath nach Dialog im Halbinfernalischer ;)
 
 	if (Mod_RandolphIR_Demon == 1)
