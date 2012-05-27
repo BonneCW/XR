@@ -852,11 +852,11 @@ FUNC VOID PC_PrayIdol_Teleport_Eremit()
 
 	if (CurrentLevel == ADDONWORLD_ZEN)
 	{
-		AI_Teleport	(hero, "ADW_VALLEY_PATH_020_CAVE_02");
+		AI_Teleport	(hero, "WP_AW_EREMIT_STATUE");
 	}
 	else
 	{
-		B_SetLevelchange ("Addon\AddonWorld.zen", "ADW_VALLEY_PATH_020_CAVE_02");
+		B_SetLevelchange ("Addon\AddonWorld.zen", "WP_AW_EREMIT_STATUE");
 
 		AI_Teleport	(hero, "OBELISKSCHREIN_WP");
 	};

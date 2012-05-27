@@ -48,6 +48,8 @@ INSTANCE Gormgniez_11007_FM	(Mst_Default_Gobbo_Green)
 	aivar[AIV_MM_FollowInWater] = FALSE;
 
 	aivar[AIV_FightDistCancel] = FIGHT_DIST_CANCEL;
+
+	aivar[AIV_Partymember] = TRUE;
 	
 	Mdl_SetVisual			(self,	"Gobbo.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR

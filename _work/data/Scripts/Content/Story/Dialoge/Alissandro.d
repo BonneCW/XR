@@ -120,7 +120,6 @@ FUNC VOID Info_Mod_Alissandro_ThorusTot_Info()
 
 	AI_StopProcessInfos	(self);
 
-
 	if (Mod_ALTor_01 == 0)
 	{
 		Wld_SendTrigger	("EVT_OC_MAINGATE01_01");
