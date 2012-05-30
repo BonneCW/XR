@@ -45,6 +45,8 @@ func void B_StartMagicTransform()
 		Mod_HasFleisch_Amount = Npc_HasItems(hero, ItFo_MuttonRaw);
 
 		B_MeleeWeaponUndoChange();
+
+		transformCooldown = 0;
 	};
 };
 
@@ -71,8 +73,6 @@ func void B_StopMagicTransform()
 
 		AI_UnequipWeapons(self);
 
-		playerIsTransformed = FALSE;
-
 		Mod_WM_IsWarg = 0;
 		Mod_IstKeiler = 0;
 		Mod_IsRabbit = 0;
@@ -81,6 +81,4 @@ func void B_StopMagicTransform()
 		Mod_IstGolem = 0;
 		Mod_IstSchaf = 0;
 	};
-	
-	playerIsTransformed = FALSE;
 };

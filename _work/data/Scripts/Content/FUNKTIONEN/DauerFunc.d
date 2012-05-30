@@ -2071,8 +2071,11 @@ FUNC VOID DAUERFUNC_01()
 		Mod_Anschlagtafel_Khorinis_Thorben_Cooldown -= 1;
 	};
 
+	transformCooldown += 1;
+
 	if (playerIsTransformed)
 	&& (hero.guild < GIL_SEPERATOR_HUM)
+	&& (transformCooldown > 5)
 	{
 		playerIsTransformed = FALSE;
 
