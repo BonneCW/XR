@@ -37,7 +37,8 @@ INSTANCE Info_Mod_Orun_GotoTempel (C_INFO)
 FUNC INT Info_Mod_Orun_GotoTempel_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Namib_KarrasDa))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Orun_Hi))
+	&& ((Npc_KnowsInfo(hero, Info_Mod_Orun_Hi))
+	|| (!Npc_KnowsInfo(hero, Info_Mod_Cyrco_Hi)))
 	{
 		return 1;
 	};
