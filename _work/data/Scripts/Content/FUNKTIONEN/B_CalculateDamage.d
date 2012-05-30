@@ -119,6 +119,12 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		damage = taeter.attribute[ATR_STRENGTH];
 
 		if (r_max(99) < taeter.attribute[ATR_DEXTERITY])
+		&& (taeter.guild > GIL_SEPERATOR_HUM)
+		{
+			critChance = 1;
+		}
+		else if (r_max(99) < (taeter.HitChance[NPC_TALENT_1H]+taeter.HitChance[NPC_TALENT_2H])/2)
+		&& (taeter.guild < GIL_SEPERATOR_HUM)
 		{
 			critChance = 1;
 		};
