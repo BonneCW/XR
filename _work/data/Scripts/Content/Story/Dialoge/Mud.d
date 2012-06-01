@@ -1179,7 +1179,7 @@ func void Info_Mod_Mud_VMG_W2()
 
 	Info_ClearChoices(Info_Mod_Mud_VMG);
 
-	Info_AddChoice	 (Info_Mod_Mud_VMG, "Bring mir eine Spruchrolle „Verwandlung Blutfliege“.", Info_Mod_Mud_VMG_V);
+	Info_AddChoice	 (Info_Mod_Mud_VMG, "Bring mir eine Spruchrolle Verwandlung Blutfliege.", Info_Mod_Mud_VMG_V);
 	Info_AddChoice	 (Info_Mod_Mud_VMG, "Bring mir ein paar Scavengerkeulen. Fünf dürften genügen.", Info_Mod_Mud_VMG_T);
 	Info_AddChoice	 (Info_Mod_Mud_VMG, "Dort hinten in dem Wald haust ein Schattenläufer.", Info_Mod_Mud_VMG_S);
 };
@@ -1232,7 +1232,7 @@ func void Info_Mod_Mud_VMG_W()
 
 	Info_ClearChoices(Info_Mod_Mud_VMG);
 
-	Info_AddChoice	 (Info_Mod_Mud_VMG, "Bring mir eine Spruchrolle „Verwandlung Blutfliege“.", Info_Mod_Mud_VMG_V);
+	Info_AddChoice	 (Info_Mod_Mud_VMG, "Bring mir eine Spruchrolle Verwandlung Blutfliege.", Info_Mod_Mud_VMG_V);
 	Info_AddChoice	 (Info_Mod_Mud_VMG, "Außerhalb der Barriere hat einer der Magier etwas verloren. Such das bitte.", Info_Mod_Mud_VMG_U);
 	Info_AddChoice	 (Info_Mod_Mud_VMG, "Bring mir ein paar Scavengerkeulen. Fünf dürften genügen.", Info_Mod_Mud_VMG_T);
 };

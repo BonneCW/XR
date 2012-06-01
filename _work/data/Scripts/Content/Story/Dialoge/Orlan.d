@@ -145,7 +145,7 @@ FUNC VOID Info_Mod_Orlan_Daemonisch_Info()
 
 	B_GivePlayerXP	(100);
 
-	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Von Orlan habe ich erfahren, dass Rukhar zu Tode gekommen ist. Er hatte einige Bürger, Bauern und Novizen, von denen in letzter Zeit viele in die Taverne kommen, abends nach draußen – in eine Höhle, oder so - begleitet und zuvor viel Klosterwein getrunken. Er kam alleine schreiend zurück gerannt und soll irgendwas von schwarzen Schatten und Schreien berichtet haben, seine Begleiter kamen etwas später nach. Am nächsten morgen war er tot. Außerdem erzählte Orlan, dass kaum jemand mehr Klosterwein trinkt, jedoch erstaunlich viel gegessen wird. Trotzdem erscheinen viele der Besucher sehr ausgemergelt ...");
+	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Von Orlan habe ich erfahren, dass Rukhar zu Tode gekommen ist. Er hatte einige Bürger, Bauern und Novizen, von denen in letzter Zeit viele in die Taverne kommen, abends nach draußen - in eine Höhle, oder so - begleitet und zuvor viel Klosterwein getrunken. Er kam alleine schreiend zurück gerannt und soll irgendwas von schwarzen Schatten und Schreien berichtet haben, seine Begleiter kamen etwas später nach. Am nächsten morgen war er tot. Außerdem erzählte Orlan, dass kaum jemand mehr Klosterwein trinkt, jedoch erstaunlich viel gegessen wird. Trotzdem erscheinen viele der Besucher sehr ausgemergelt ...");
 };
 
 INSTANCE Info_Mod_Orlan_Daemonisch2 (C_INFO)

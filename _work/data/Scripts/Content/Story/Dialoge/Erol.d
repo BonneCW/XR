@@ -59,7 +59,7 @@ FUNC VOID Info_Mod_Erol_DunklerPilger_Info()
 	B_StartOtherRoutine	(Mod_7036_NONE_Pilger_NW, "GRAVEYARD");
 	AI_Teleport	(Mod_7036_NONE_Pilger_NW, "NW_FARM4_WOOD_MONSTER_MORE_03");
 
-	B_LogEntry	(TOPIC_MOD_DUNKLERPILGER, "Ich bin dem Pilger dicht auf den Fersen. Erol – sehr beunruhigt über die Gestalt – hat sie erst vor kurzem in den Wald Richtung Friedhof entschwinden sehen, nur wenige Meter entfernt.");
+	B_LogEntry	(TOPIC_MOD_DUNKLERPILGER, "Ich bin dem Pilger dicht auf den Fersen. Erol - sehr beunruhigt über die Gestalt - hat sie erst vor kurzem in den Wald Richtung Friedhof entschwinden sehen, nur wenige Meter entfernt.");
 };
 
 INSTANCE Info_Mod_Erol_Blutkelch (C_INFO)

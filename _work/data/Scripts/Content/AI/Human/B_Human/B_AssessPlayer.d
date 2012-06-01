@@ -146,7 +146,7 @@ func void B_AssessPlayer ()
 		};
 	};
 
-	if (Mod_IsRabbit = 1)
+	if (Mod_IsRabbit == 1)
 	{
 		return;
 	};
