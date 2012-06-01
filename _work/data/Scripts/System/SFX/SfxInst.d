@@ -1737,6 +1737,17 @@ INSTANCE 		ALRAUNE_ATT					(C_SFX_DEF)		{file="Alraune_Attack01.wav";		vol=80;		
 INSTANCE 		ALRAUNE_ATT_A1					(C_SFX_DEF)		{file="Alraune_Attack02.wav";		vol=80;						};
 
 
+INSTANCE 		BAL_DIE						(C_SFX_DEF)		{file="BAL_Die01.wav";			vol=80;						};
+INSTANCE 		BAL_AMB						(C_SFX_DEF)		{file="BAL_Ambient01.wav";		vol=80;						};
+INSTANCE 		BAL_AMB_A1					(C_SFX_DEF)		{file="BAL_Ambient02.wav";		vol=80;						};
+INSTANCE 		BAL_AMB_A2					(C_SFX_DEF)		{file="BAL_Ambient03.wav";		vol=80;						};
+INSTANCE 		BAL_ATT						(C_SFX_DEF)		{file="BAL_Attack01.wav";		vol=80;						};
+INSTANCE 		BAL_ATT_A1					(C_SFX_DEF)		{file="BAL_Attack02.wav";		vol=80;						};
+INSTANCE 		BAL_HURT					(C_SFX_DEF)		{file="BAL_Hurt01.wav";			vol=80;						};
+INSTANCE 		BAL_HURT_A1					(C_SFX_DEF)		{file="BAL_Hurt02.wav";			vol=80;						};
+INSTANCE 		BAL_WHIPPINGCHAIN				(C_SFX_DEF)		{file="BAL_WhippingChain01.wav";	vol=80;						};
+
+
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 //  H U M A N S //////////////////////////////////////////////////////////////
