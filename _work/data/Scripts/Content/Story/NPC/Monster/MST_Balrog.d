@@ -61,9 +61,9 @@ PROTOTYPE Mst_Default_Balrog(C_Npc)
 
 func void B_SetVisuals_Balrog()
 {
-	Mdl_SetVisual			(self,	"Demon.mds");
+	Mdl_SetVisual			(self,	"Balrog.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Dem2_Body",	1,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"Balrog_Body",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
 //****************
