@@ -8326,8 +8326,9 @@ FUNC VOID STARTUP_Eisgebiet()
 
 	Wld_InsertNpc	(Monster_11067_Talos_EIS,	"START_EISGEBIET");
 	Wld_InsertNpc	(Monster_11068_Eisriese_EIS,	"START_EISGEBIET");
+	Wld_InsertNpc	(Balrog,	"GROSEROFEN");
 
-	// Tempelchen f?r Quest
+	// Tempelchen für Quest
 
 	Wld_InsertNpc	(Zombie_Eis_Schneegeister,	"EIS_TEMPELCHEN_005");
 	Wld_InsertNpc	(Schneegeist,	"EIS_TEMPELCHEN_005");

@@ -583,7 +583,7 @@ FUNC VOID GILDENSTORY_FM()
 			{
 				Mod_Marduk_StampfZeit += 1;
 
-				if (Mod_Marduk_StampfZeit >= 6000)
+				if (Mod_Marduk_StampfZeit >= 600)
 				{
 					Mod_Marduk_Gestampft = TRUE;
 

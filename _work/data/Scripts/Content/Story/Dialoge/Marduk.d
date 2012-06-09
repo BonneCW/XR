@@ -49,12 +49,12 @@ FUNC VOID Info_Mod_Marduk_Aufgabe_Info()
 	AI_Output(hero, self, "Info_Mod_Marduk_Aufgabe_15_03"); //Aber das dauert ja ewig. Gibt es keinen schnelleren Weg?
 	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_04"); //(spöttisch) So, tatsächlich, es wäre dir zu anstrengend und zeitraubend?
 	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_05"); //Wenn du zu gut für die Aufgaben eines Novizen bist, wirst du wohl eher den Fähigkeiten eines Feuermagiers gerecht, oder?
-	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_06"); //Dann bring mir doch… eine Feuerballrune. Damit wäre ich von deinem fortgeschrittenen Können überzeugt.
+	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_06"); //Dann bring mir doch ... eine Feuerballrune. Damit wäre ich von deinem fortgeschrittenen Können überzeugt.
 	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_07"); // (zu sich selbst, kopfschüttelnd) Tse, da hör sich das mal einer an ... so viel Unverfrorenheit.
 
 	Log_CreateTopic	(TOPIC_MOD_MARDUK_FEUERBALL, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_MARDUK_FEUERBALL, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_MARDUK_FEUERBALL, "Ich habe Marduk nach einer Aufgabe gefragt, woraufhin er mir wochenlanges Arbeiten und Beten m Kloster auftrug. Auf meine Frage hin, ob es einen schnelleren Weg gäbe reagierte er etwas gereizt und Trug mir auf, ihm eine Feuerballrune zu besorgen. Ich glaube nicht, dass ich ohne weiteres selbst eine herstellen kann. Vielleicht könnte ich mir ja Hilfe bei jemandem holen ...");
+	B_LogEntry	(TOPIC_MOD_MARDUK_FEUERBALL, "Ich habe Marduk nach einer Aufgabe gefragt, woraufhin er mir wochenlanges Arbeiten und Beten im Kloster auftrug. Auf meine Frage hin, ob es einen schnelleren Weg gäbe reagierte er etwas gereizt und Trug mir auf, ihm eine Feuerballrune zu besorgen. Ich glaube nicht, dass ich ohne weiteres selbst eine herstellen kann. Vielleicht könnte ich mir ja Hilfe bei jemandem holen ...");
 };
 
 INSTANCE Info_Mod_Marduk_FeuerballRune (C_INFO)

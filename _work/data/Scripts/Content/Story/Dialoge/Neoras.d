@@ -153,6 +153,12 @@ FUNC VOID Info_Mod_Neoras_Mitgift2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Neoras_Mitgift2_15_00"); //So, hier ein Fläschchen Gewächsgift und das Fläschchen Tiergift.
 
+
+	B_ShowGivenThings	("Tier-  und Gewächsgift gegeben");
+
+	Npc_RemoveInvItems	(hero, ItPo_Tiergift, 1);
+	Npc_RemoveInvItems	(hero, ItPo_Pflanzengift, 1);
+
 	if (Npc_KnowsInfo(hero, Info_Mod_Constantino_Mitgift2))
 	{
 		AI_Output(hero, self, "Info_Mod_Neoras_Mitgift2_15_01"); //Mit schönen Grüßen von Constantino.

@@ -593,9 +593,11 @@ FUNC VOID PC_PrayShrine_Pray_NoPay ()
 			if (Wld_GetDay()-1 > Mod_Marduk_BetTag)
 			{
 				Mod_Marduk_BetReihe = 0;
+			}
+			else
+			{
+				Mod_Marduk_BetReihe += 1;
 			};
-
-			Mod_Marduk_BetReihe += 1;
 
 			Mod_Marduk_BetTag = Wld_GetDay();
 
@@ -637,9 +639,11 @@ func VOID PC_PrayShrine_Pray_SmallPay ()
 			if (Wld_GetDay()-1 > Mod_Marduk_BetTag)
 			{
 				Mod_Marduk_BetReihe = 0;
+			}
+			else
+			{
+				Mod_Marduk_BetReihe += 1;
 			};
-
-			Mod_Marduk_BetReihe += 1;
 
 			Mod_Marduk_BetTag = Wld_GetDay();
 
@@ -684,9 +688,11 @@ FUNC VOID PC_PrayShrine_Pray_MediumPay ()
 			if (Wld_GetDay()-1 > Mod_Marduk_BetTag)
 			{
 				Mod_Marduk_BetReihe = 0;
+			}
+			else
+			{
+				Mod_Marduk_BetReihe += 1;
 			};
-
-			Mod_Marduk_BetReihe += 1;
 
 			Mod_Marduk_BetTag = Wld_GetDay();
 
@@ -753,9 +759,11 @@ func VOID PC_PrayShrine_Pray_BigPay ()
 			if (Wld_GetDay()-1 > Mod_Marduk_BetTag)
 			{
 				Mod_Marduk_BetReihe = 0;
+			}
+			else
+			{
+				Mod_Marduk_BetReihe += 1;
 			};
-
-			Mod_Marduk_BetReihe += 1;
 
 			Mod_Marduk_BetTag = Wld_GetDay();
 
