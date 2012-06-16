@@ -248,9 +248,9 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	{
 		if (Npc_IsInFightMode(taeter, FMODE_FIST))
 		{			
-			if (damage < 5)
+			if (damage < 0)
 			{
-				damage = 5;
+				damage = 0;
 			};
 		}
 		else
@@ -260,10 +260,10 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	}
 	else
 	{
-		if (damage < 5)
+		if (damage < 0)
 		&& (armor != -1)
 		{
-			damage = 5;
+			damage = 0;
 		};
 	};
 
