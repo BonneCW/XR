@@ -1702,6 +1702,8 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(Hammel, 		"FP_ROAM_FARM4_SHEEP_04");
 	Wld_InsertNpc 	(Sheep, 		"FP_ROAM_FARM4_SHEEP_04");
 
+	Wld_InsertNpc 	(Minecrawlerqueen, 			"NW_CASTLEMINE_062");
+
 	// Festung oben
 
 	Wld_InsertNpc	(Zombie_Burgherr,	"NW_CASTLEMINE_HUT_10");
@@ -2350,7 +2352,6 @@ FUNC VOID INIT_NewWorld_Part_Forest_01 ()
 //------- Troll Area ---------------------------
 FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 {
-	Wld_InsertNpc 	(Minecrawlerqueen, 			"FP_ROAM_MAGECAVE_20");
 
 	// Stollen unter Sonnenkreis
 
