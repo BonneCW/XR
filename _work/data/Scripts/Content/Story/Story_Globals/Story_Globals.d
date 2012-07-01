@@ -46,6 +46,8 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_Diebe_WandGehackt;
+var int Mod_Diebe_BrunnenTag;
 var int Mod_PrismaAngelegt;
 var int Mod_NaKosh_MT;
 var int Mod_KristallPrisma_Absorbiert;
@@ -597,6 +599,7 @@ var int Mod_IR_Myxir;
 var int Mod_IR_Gorn;
 var int Mod_IR_Cord;
 var int Mod_IR_Milten;
+var int Mod_Beliarstatue_Kanalisation_Dabei;
 var int Mod_VinoWillRache;
 var int Mod_SheromeSuche;
 var int Mod_LobartRuebinator;

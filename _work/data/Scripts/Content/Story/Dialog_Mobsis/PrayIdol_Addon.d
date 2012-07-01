@@ -105,6 +105,7 @@ FUNC VOID B_CheckAllTeleports()
 		&& (Mod_BeliarStatue_Canyon_Dabei)
 		&& (Mod_BeliarStatue_Strand_Dabei)
 		&& (Mod_BeliarStatue_Eremit_Dabei)
+		&& (Mod_BeliarStatue_Kanalisation_Dabei)
 		{
 			Mod_BeliarSchreine = 1;
 
@@ -530,6 +531,33 @@ FUNC VOID PC_PrayIdol_TeleportPlusEisgebiet_Info()
 	B_CheckAllTeleports();
 };
 
+INSTANCE PC_PrayIdol_TeleportPlusKanalisation (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_PrayIdol_TeleportPlusKanalisation_Condition;
+	information	= PC_PrayIdol_TeleportPlusKanalisation_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "In Teleport-System einfügen";
+};
+
+FUNC INT PC_PrayIdol_TeleportPlusKanalisation_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYIDOL)
+	&& (Npc_GetDistToWP(hero, "REL_CITY_KANAL_027") < 500)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_PrayIdol_TeleportPlusKanalisation_Info()
+{
+	Mod_BeliarStatue_Kanalisation_Dabei	=	1;
+
+	B_CheckAllTeleports();
+};
+
 INSTANCE PC_PrayIdol_Teleport (C_INFO)
 {
 	npc		= PC_Hero;
@@ -573,6 +601,11 @@ FUNC VOID PC_PrayIdol_Teleport_Info()
 	if (Mod_BeliarStatue_City_Dabei == TRUE)
 	{
 		Info_AddChoice	(PC_PrayIdol_Teleport, "... der Stadt", PC_PrayIdol_Teleport_City);
+	};
+
+	if (Mod_BeliarStatue_Kanalisation_Dabei == TRUE)
+	{
+		Info_AddChoice	(PC_PrayIdol_Teleport, "... der Spendenhöhle", PC_PrayIdol_Teleport_Kanalisation);
 	};
 
 	Info_AddChoice	(PC_PrayIdol_Teleport, "... Xardas", PC_PrayIdol_Teleport_Xardas);
@@ -659,6 +692,24 @@ FUNC VOID PC_PrayIdol_Teleport_City()
 	else
 	{
 		B_SetLevelchange ("NewWorld\NewWorld.zen", "NW_CITY_KANAL_03");
+
+		AI_Teleport	(hero, "OBELISKSCHREIN_WP");
+	};
+};
+
+FUNC VOID PC_PrayIdol_Teleport_Kanalisation()
+{
+	B_ENDPRODUCTIONDIALOG();
+	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
+	Snd_Play ("MFX_TELEPORT_CAST");
+
+	if (CurrentLevel == RELENDEL_ZEN)
+	{
+		AI_Teleport	(hero, "REL_CITY_KANAL_027");
+	}
+	else
+	{
+		B_SetLevelchange ("Zafiron\Relendel.zen", "REL_CITY_KANAL_027");
 
 		AI_Teleport	(hero, "OBELISKSCHREIN_WP");
 	};

@@ -57,6 +57,36 @@ FUNC VOID GILDENSTORY_DIEBE()
 
 			B_LogEntry	(TOPIC_MOD_DIEB_GLORIE, "Aha ... im Brunnen landet also das Gold.");
 		};
+
+		if (Mod_Diebe_Brunnen == 1)
+		&& (Wld_GetDay() > Mod_Diebe_BrunnenTag)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Cassia_REL_Glorie7))
+		{
+			Mod_Diebe_Brunnen = 2;
+
+			Mod_Diebe_BrunnenTag = Wld_GetDay();
+
+			B_StartOtherRoutine	(Mod_7705_OUT_Cassia_REL, "SCHATZKAMMER");
+			B_StartOtherRoutine	(Mod_7704_OUT_Jesper_REL, "SCHATZKAMMER");
+			B_StartOtherRoutine	(Mod_7708_OUT_Ramirez_REL, "SCHATZKAMMER");
+			B_StartOtherRoutine	(Mod_7709_OUT_Attila_REL, "SCHATZKAMMER");
+		};
+
+		if (Mod_Diebe_Brunnen == 2)
+		&& (Wld_GetDay() > Mod_Diebe_BrunnenTag)
+		{
+			Mod_Diebe_Brunnen = 3;
+		};
+
+		if (Mod_Diebe_Brunnen == 3)
+		&& (Npc_HasItems(hero, ItMi_Lederbeutel_Diebe) == 5)
+		{
+			Mod_Diebe_Brunnen = 4;
+
+			Npc_RemoveInvItems	(hero, ItMi_Lederbeutel_Diebe, 5);
+
+			CreateInvItems	(hero, ItSe_GoldPocket100, 5);
+		};
 	};
 
 	if (CurrentLevel == NEWWORLD_ZEN)

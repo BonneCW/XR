@@ -135,6 +135,61 @@ FUNC VOID Info_Mod_Attila_REL_Glorie3_Info()
 	B_StartOtherRoutine	(Mod_7708_OUT_Ramirez_REL, "INHAUS");
 };
 
+INSTANCE Info_Mod_Attila_REL_Glorie4 (C_INFO)
+{
+	npc		= Mod_7709_OUT_Attila_REL;
+	nr		= 1;
+	condition	= Info_Mod_Attila_REL_Glorie4_Condition;
+	information	= Info_Mod_Attila_REL_Glorie4_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Attila_REL_Glorie4_Condition()
+{
+	if (Npc_GetDistToWP(hero, "REL_CITY_KANAL_027") < 500)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Attila_REL_Glorie4_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Attila_REL_Glorie4_09_00"); //Beliar ist groß ... schaut euch nur diesen Schatz an.
+
+	AI_StopProcessInfos (self);
+};
+
+INSTANCE Info_Mod_Attila_REL_Glorie5 (C_INFO)
+{
+	npc		= Mod_7709_OUT_Attila_REL;
+	nr		= 1;
+	condition	= Info_Mod_Attila_REL_Glorie5_Condition;
+	information	= Info_Mod_Attila_REL_Glorie5_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Attila_REL_Glorie5_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Jesper_REL_Glorie4))
+	&& (Npc_IsDead(Lesser_Skeleton_Diebe_01))
+	&& (Npc_IsDead(Lesser_Skeleton_Diebe_02))
+	&& (Npc_IsDead(Lesser_Skeleton_Diebe_03))
+	&& (Npc_IsDead(Lesser_Skeleton_Diebe_04))
+	&& (Npc_IsDead(Lesser_Skeleton_Diebe_05))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Attila_REL_Glorie5_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Attila_REL_Glorie5_09_00"); //Nun, ich denke wir haben Beliar für heute genug erzürnt. Wir sollten seinen Schatz besser nicht weiter plündern.
+
+	AI_StopProcessInfos (self);
+};
+
 INSTANCE Info_Mod_Attila_REL_EXIT (C_INFO)
 {
 	npc		= Mod_7709_OUT_Attila_REL;

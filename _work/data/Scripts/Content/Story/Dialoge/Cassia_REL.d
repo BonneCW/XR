@@ -420,6 +420,98 @@ FUNC VOID Info_Mod_Cassia_REL_Glorie7_Info()
 	AI_Output(self, hero, "Info_Mod_Cassia_REL_Glorie7_16_06"); //Bis morgen haben wir hoffentlich alles zusammen, um mit dem Tunnel loszulegen.
 
 	B_LogEntry	(TOPIC_MOD_DIEB_GLORIE, "Cassia plant den Bau eines Tunnels von unserem Versteck aus.");
+
+	Mod_Diebe_BrunnenTag = Wld_GetDay();
+};
+
+INSTANCE Info_Mod_Cassia_REL_Glorie8 (C_INFO)
+{
+	npc		= Mod_7705_OUT_Cassia_REL;
+	nr		= 1;
+	condition	= Info_Mod_Cassia_REL_Glorie8_Condition;
+	information	= Info_Mod_Cassia_REL_Glorie8_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Cassia_REL_Glorie8_Condition()
+{
+	if (Mod_Diebe_Brunnen == 2)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Cassia_REL_Glorie8_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Cassia_REL_Glorie8_16_00"); //(zu den dreien) Los, immer schön weiter hacken.
+	AI_Output(self, hero, "Info_Mod_Cassia_REL_Glorie8_16_01"); //(zum Helden) Und du kannst auch ruhig die Spitzhacke schwingen ... (süffisant) das vermisst du doch bestimmt aus der Kolonie.
+
+	AI_StopProcessInfos	(self);
+};
+
+INSTANCE Info_Mod_Cassia_REL_Glorie9 (C_INFO)
+{
+	npc		= Mod_7705_OUT_Cassia_REL;
+	nr		= 1;
+	condition	= Info_Mod_Cassia_REL_Glorie9_Condition;
+	information	= Info_Mod_Cassia_REL_Glorie9_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Cassia_REL_Glorie9_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Ramirez_REL_Glorie4))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Cassia_REL_Glorie9_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Cassia_REL_Glorie9_16_00"); //Also gut, schnappt euch Fackeln und dann los. Wir sind unserem Ziel sehr nahe.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "SCHATZKAMMER");
+	B_StartOtherRoutine	(Mod_7704_OUT_Jesper_REL, "SCHATZKAMMER");
+	B_StartOtherRoutine	(Mod_7708_OUT_Ramirez_REL, "SCHATZKAMMER");
+	B_StartOtherRoutine	(Mod_7709_OUT_Attila_REL, "SCHATZKAMMER");
+};
+
+INSTANCE Info_Mod_Cassia_REL_Glorie10 (C_INFO)
+{
+	npc		= Mod_7705_OUT_Cassia_REL;
+	nr		= 1;
+	condition	= Info_Mod_Cassia_REL_Glorie10_Condition;
+	information	= Info_Mod_Cassia_REL_Glorie10_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Cassia_REL_Glorie10_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Attila_REL_Glorie4))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Cassia_REL_Glorie10_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Cassia_REL_Glorie10_16_00"); //Ich möchte behaupten, wir haben den Jackpot gezogen. Ich nehme es niemanden Übel, wenn er sich auf den Goldhaufen wirft und sich die Taschen füllt ... (schnell) ich werde die erst sein, die es tut.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "INSCHATZKAMMER");
+	B_StartOtherRoutine	(Mod_7704_OUT_Jesper_REL, "INSCHATZKAMMER");
+	B_StartOtherRoutine	(Mod_7708_OUT_Ramirez_REL, "INSCHATZKAMMER");
+	B_StartOtherRoutine	(Mod_7709_OUT_Attila_REL, "INSCHATZKAMMER");
+
+	B_SetTopicStatus	(TOPIC_MOD_DIEB_GLORIE, LOG_SUCCESS);
+
+	B_GivePlayerXP	(1000);
 };
 
 INSTANCE Info_Mod_Cassia_REL_EXIT (C_INFO)

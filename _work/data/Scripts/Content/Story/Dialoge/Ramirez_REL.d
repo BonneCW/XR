@@ -204,6 +204,68 @@ FUNC VOID Info_Mod_Ramirez_REL_Glorie3_Info()
 	Wld_InsertItem	(ItAr_GelehrterNeu, "FP_ITEM_GELEHRTENKLEIDUNG");
 };
 
+INSTANCE Info_Mod_Ramirez_REL_Glorie4 (C_INFO)
+{
+	npc		= Mod_7708_OUT_Ramirez_REL;
+	nr		= 1;
+	condition	= Info_Mod_Ramirez_REL_Glorie4_Condition;
+	information	= Info_Mod_Ramirez_REL_Glorie4_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Ramirez_REL_Glorie4_Condition()
+{
+	if (Mod_Diebe_Brunnen == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Ramirez_REL_Glorie4_Info()
+{
+	if (Mod_Diebe_WandGehackt == 0)
+	{
+		AI_Output(self, hero, "Info_Mod_Ramirez_REL_Glorie4_14_00"); //Da bist du endlich. Während du mit deinem Arsch im Bett lagst, haben wir die Wand durchbrochen und einen Tunnel freigelegt.
+	}
+	else
+	{
+		AI_Output(self, hero, "Info_Mod_Ramirez_REL_Glorie4_14_01"); //Super, wir sind durch. Gute Arbeit Jungs. Scheinbar geht es da tatsächlich weiter.
+	};
+
+	AI_StopProcessInfos	(self);
+};
+
+INSTANCE Info_Mod_Ramirez_REL_Glorie5 (C_INFO)
+{
+	npc		= Mod_7708_OUT_Ramirez_REL;
+	nr		= 1;
+	condition	= Info_Mod_Ramirez_REL_Glorie5_Condition;
+	information	= Info_Mod_Ramirez_REL_Glorie5_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Ramirez_REL_Glorie5_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Attila_REL_Glorie5))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Ramirez_REL_Glorie5_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Ramirez_REL_Glorie5_14_00"); //In Ordnung ... die drei Pfund Gold in meinen Taschen reichen auch fürs erste.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "INHAUS");
+	B_StartOtherRoutine	(Mod_7709_OUT_Attila_REL, "INHAUS");
+	B_StartOtherRoutine	(Mod_7705_OUT_Cassia_REL, "INHAUS");
+	B_StartOtherRoutine	(Mod_7704_OUT_Jesper_REL, "GELEHRTER");
+};
+
 INSTANCE Info_Mod_Ramirez_REL_EXIT (C_INFO)
 {
 	npc		= Mod_7708_OUT_Ramirez_REL;

@@ -234,6 +234,67 @@ FUNC VOID Info_Mod_Jesper_REL_Glorie3_Info()
 	AI_StopProcessInfos	(self);
 };
 
+INSTANCE Info_Mod_Jesper_REL_Glorie4 (C_INFO)
+{
+	npc		= Mod_7704_OUT_Jesper_REL;
+	nr		= 1;
+	condition	= Info_Mod_Jesper_REL_Glorie4_Condition;
+	information	= Info_Mod_Jesper_REL_Glorie4_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Jesper_REL_Glorie4_Condition()
+{
+	if (Mod_Diebe_Brunnen == 4)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Jesper_REL_Glorie4_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Jesper_REL_Glorie4_09_00"); //Scheiﬂe, was ist das?
+
+	AI_StopProcessInfos	(self);
+
+	Wld_InsertNpc	(Lesser_Skeleton_Diebe_01, "FP_REL_SKELETT_DIEBE_01");
+	Wld_InsertNpc	(Lesser_Skeleton_Diebe_02, "FP_REL_SKELETT_DIEBE_02");
+	Wld_InsertNpc	(Lesser_Skeleton_Diebe_03, "FP_REL_SKELETT_DIEBE_03");
+	Wld_InsertNpc	(Lesser_Skeleton_Diebe_04, "FP_REL_SKELETT_DIEBE_04");
+	Wld_InsertNpc	(Lesser_Skeleton_Diebe_05, "FP_REL_SKELETT_DIEBE_05");
+};
+
+INSTANCE Info_Mod_Jesper_REL_Glorie5 (C_INFO)
+{
+	npc		= Mod_7704_OUT_Jesper_REL;
+	nr		= 1;
+	condition	= Info_Mod_Jesper_REL_Glorie5_Condition;
+	information	= Info_Mod_Jesper_REL_Glorie5_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Jesper_REL_Glorie5_Condition()
+{
+	if (Npc_GetDistToWP(hero, "REL_CITY_023") < 500)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Jesper_REL_Glorie5_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Jesper_REL_Glorie5_09_00"); //Ohh, ach du bistís. H‰tte mir vor Schreck fast in die Hosen gemacht.
+	AI_Output(hero, self, "Info_Mod_Jesper_REL_Glorie5_15_01"); //Du hier?
+	AI_Output(self, hero, "Info_Mod_Jesper_REL_Glorie5_09_02"); //Wo sonst? Seitdem der Alte im Knast sitzt, kann man in seinem Anwesen seelenruhig pl¸ndern. Das ist doch unsere Berufung. Schauen, wo es was zu holen gibt und zugreifen.
+	AI_Output(self, hero, "Info_Mod_Jesper_REL_Glorie5_09_03"); //Also, immer schˆn die Augen offen halten.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "INHAUS");
+};
+
 INSTANCE Info_Mod_Jesper_REL_EXIT (C_INFO)
 {
 	npc		= Mod_7704_OUT_Jesper_REL;
