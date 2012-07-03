@@ -1053,6 +1053,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc	(Mod_1539_WKR_Wasserkrieger_NW,	"NW_CITY_ENTRANCE_01");
 	Wld_InsertNpc	(PC_Friend_NW,	"NW_CITY_ENTRANCE_01");
 	Wld_InsertNpc	(Mod_1723_MIL_Gidan_NW,	"NW_CITY_ENTRANCE_01");
+	Wld_InsertNpc	(Mod_7804_VLK_Spieler_NW,	"NW_CITY_ENTRANCE_01");
 
 	if (Mod_Import_Dusty == LOG_SUCCESS)
 	|| (Mod_Import_Dusty == -1)

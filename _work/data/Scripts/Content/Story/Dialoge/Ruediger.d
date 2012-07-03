@@ -312,8 +312,6 @@ FUNC VOID Info_Mod_Ruediger_Spielstart02_Info()
 	AI_Output(hero, self, "Info_Mod_Ruediger_Spielstart02_15_00"); //Lass uns eine weitere Partie mit verdoppeltem Einsatz spielen.
 	AI_Output(self, hero, "DEFAULT"); //
 
-	Info_ClearChoices	(Info_Mod_Ruediger_Spielstart02);
-
 	AI_StopProcessInfos	(self);
 
 	AI_Function (self, B_MG_Start_Ruediger);
@@ -426,8 +424,6 @@ FUNC VOID Info_Mod_Ruediger_Spielstart03_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Ruediger_Spielstart03_15_00"); //Lass uns eine weitere Partie spielen.
 	AI_Output(self, hero, "DEFAULT"); //
-
-	Info_ClearChoices	(Info_Mod_Ruediger_Spielstart03);
 
 	AI_StopProcessInfos	(self);
 
