@@ -3583,3 +3583,13 @@ var int Mod_Import_Snaf;
 var int Mod_Import_AL;
 var int Mod_Import_NL;
 var int Mod_Import_SL;
+
+
+// XP-Konstanten
+
+const int 	XP_Bookstand 			= 25;
+const int 	XP_SwordBlessed				= 400;	//Schwert wurde geweiht
+const int	XP_STUNTBONUS							= 100;
+const int	XP_EXPLOITBONUS							= -100;
+const int   XP_OpenSecretLibrary        = 1000;
+const int	XP_FoundVinosKellerei		= 400; 	//Moleratefett anngewendet und VinosKellerei geöffnet

@@ -31,7 +31,6 @@ NEUERUNGEN\Respawn.d
 NEUERUNGEN\B_AutoGeneratePicklockKombos.d
 
 STORY\Log_Entries\Log_Constants_*.d
-STORY\XP_Constants.d
 STORY\Story_Globals\*.d
 STORY\NPC_Globals.d
 STORY\SVM\svm.d

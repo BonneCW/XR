@@ -335,7 +335,7 @@ FUNC VOID Use_FINALDRAGONEQUIPMENT_S1()		//Buchständer in der geheimen Bibliothe
 		
 		if FinalDragonEquipment_Once == FALSE
 		{
-			B_GivePlayerXP (XP_FinalDragonEquipment);
+			//B_GivePlayerXP (XP_FinalDragonEquipment);
 			FinalDragonEquipment_Once = TRUE;
 		};
 	};

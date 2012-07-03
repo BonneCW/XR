@@ -115,7 +115,6 @@ FUNC VOID Use_HallsofIrdorath ()
 			CreateInvItems (hero,ItWr_UseLampIdiot_Mis ,1);
 			
 			Print	(PRINT_IrdorathBookHiddenKey);
-			B_GivePlayerXP (XP_HallsofIrdorathIsOpen);
 			ItWr_HallsofIrdorathIsOpen = TRUE;
 			
 			B_LogEntry (TOPIC_BuchHallenVonIrdorath,"Ich konnte Xardas Buch öffnen. Es befanden sich eine geheime Nachricht und ein seltsamer Schlüssel darin. Wer weiß, was ich da unten im Keller des Klosters noch so alles finden werde."); 
@@ -387,7 +386,6 @@ FUNC VOID Use_Seamap_Irdorath ()
 		Log_CreateTopic (TOPIC_SHIP, LOG_MISSION);                                                                   
 	    B_SetTopicStatus(TOPIC_SHIP, LOG_RUNNING);                                                                 
 	    B_LogEntry (TOPIC_SHIP,"Wie es aussieht, muss ich diese seltsame Insel des Feindes erreichen. Doch dafür benötige ich erst einmal ein Schiff, eine Mannschaft und einen Kapitän.");
-		B_GivePlayerXP (XP_SCKnowsWayToIrdorath);
 	};
 
 	MIS_SCKnowsWayToIrdorath  = TRUE;
