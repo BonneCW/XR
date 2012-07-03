@@ -853,12 +853,13 @@ FUNC VOID GILDENSTORY_NL ()
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Moorhexe))
 		&& (Mod_Moorhexe == 0)
-		&& (Npc_GetDistToWP(hero, "REL_MOOR_130") < 1000)
+		&& ((Npc_GetDistToWP(hero, "REL_MOOR_131") < 1000)
+		|| (Npc_GetDistToWP(hero, "REL_MOOR_131") < 1000))
 		&& (playerIsTransformed == TRUE)
 		{
 			Mod_Moorhexe = 1;
 
-			Wld_InsertNpc	(Mod_7295_OUT_Moorhexe_REL,	"REL_MOOR_130");
+			Wld_InsertNpc	(Mod_7295_OUT_Moorhexe_REL,	"REL_MOOR_131");
 		};
 
 		if (Mod_NL_HasKamm == 0)

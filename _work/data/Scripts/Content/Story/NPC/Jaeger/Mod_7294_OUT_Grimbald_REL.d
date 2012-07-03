@@ -47,8 +47,8 @@ FUNC VOID Rtn_Start_7294 ()
 
 FUNC VOID Rtn_Guide_7294 ()
 {	
-	TA_Guide_Player 	(08,00,23,00,"REL_152"); 
-	TA_Guide_Player		(23,00,08,00,"REL_152");
+	TA_Guide_Player 	(08,00,23,00,"REL_154"); 
+	TA_Guide_Player		(23,00,08,00,"REL_154");
 };
 
 FUNC VOID Rtn_Tot_7294 ()

@@ -4,8 +4,6 @@ FUNC VOID EVT_GIFTKRATER()
 
 	GiftChance = 0;
 
-	Print ("Gift");
-
 	if (!Npc_IsPlayer(self))
 	{
 		return;

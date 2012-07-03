@@ -11,7 +11,7 @@ INSTANCE Info_Mod_Grimbald_REL_Hi (C_INFO)
 FUNC INT Info_Mod_Grimbald_REL_Hi_Condition()
 {
 	if (Mod_NL_Grimbald == 3)
-	&& (Npc_GetDistToWP(self, "REL_152") < 500)
+	&& (Npc_GetDistToWP(self, "REL_154") < 500)
 	{
 		return 1;
 	};
