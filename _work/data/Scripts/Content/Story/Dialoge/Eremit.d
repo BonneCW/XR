@@ -879,7 +879,8 @@ INSTANCE Info_Mod_Eremit_PreLehrer (C_INFO)
 
 FUNC INT Info_Mod_Eremit_PreLehrer_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Eremit_Hi))
+	if (Npc_KnowsInfo(hero, Info_Mod_Eremit_Prisma))
+	&& (Npc_GetDistToWP(self, "ADW_VALLEY_BENCH") < 2000)
 	{
 		return 1;
 	};

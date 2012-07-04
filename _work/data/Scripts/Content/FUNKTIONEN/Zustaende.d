@@ -579,14 +579,8 @@ FUNC VOID Zustaende()
 
 	CurrentArmor = Npc_GetEquippedArmor(hero);
 
-	if (Npc_HasEquippedArmor(hero))
+	if (!Npc_HasEquippedArmor(hero))
 	{
-		//PrintScreen ("Rüstung angelegt!", -1, YPOS_LevelUp, FONT_Screen, 2);
-	}
-	else
-	{
-		//PrintScreen ("Keine Rüstung angelegt!", -1, YPOS_LevelUp, FONT_Screen, 2);
-
 		if (CurrentLevel == EISGEBIET_ZEN)
 		&& (Erkaeltung == FALSE)
 		&& (!playerIsTransformed)
@@ -741,56 +735,6 @@ FUNC VOID Zustaende()
 
 			Mod_Purpurmond_Intus = 0;
 		};
-	};
-
-	// Wenn der Hero blöd rumsteht, dann Zufalls-Anis ausführen lassen
-
-	if (Mod_HeroMachtRandiAni > 0)
-	{
-		Mod_HeroMachtRandiAni += 1;
-
-		if (Mod_HeroMachtRandiAni == 3)
-		{
-			Mod_HeroMachtRandiAni = 0;
-		};
-	};
-
-	// Icon bei Krankheit und Vergiftung anzeigen
-
-	var int posx;
-
-	posx = 18;
-
-	if (GGPf_Sumpfgolem_Time > 0)
-	|| (GGPi_Orkschamane_Time > 0)
-	|| (GGPf_Echsenmensch_Time > 0)
-	|| (GGPi_OrkkriegerArmbrust_Time > 0)
-	|| (GGPi_Fliegenpilz_Time > 0)
-	|| (GGPf_Echsenschwert_Time > 0)
-	|| (GGPf_Assassinenschwert_Time > 0)
-	|| (GGPi_Schamanenaxt_Time > 0)
-	|| (GTB_Blutfliege_Time > 0)
-	|| (GTS_Sumpfgasdrohne_Time > 0)
-	|| (GTM_Minecrawler_Time > 0)
-	|| (GTM_MinecrawlerWarrior_Time > 0)
-	|| (GTSu_Sumpfhai_Time > 0)
-	|| (GTS_Echsenschwert_Time > 0)
-	|| (GTB_Assassinenschwert_Time > 0)
-	|| (GTM_Schamanenaxt_Time > 0)
-	|| (GGD_Sumpfgasdrohne_Time > 0)
-	|| (GGD_Sumpfgolem_Time > 0)
-	|| (GGD_Sumpfdrache_Time > 0)
-	|| (GGD_Giftkrater_Time > 0)
-	{
-		PrintScreen	("K", posx, 92, FONT_STATUS, 2);
-
-		posx += 4;
-	};
-
-	if (BissDerFaeulnis_Time > 0)
-	|| (HauchDerPestilenz_Time > 0)
-	{
-		PrintScreen	("H", posx, 92, FONT_STATUS, 2);
 	};
 
 	// Kristall der Prismen

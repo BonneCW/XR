@@ -7,8 +7,6 @@ FUNC VOID DAUERFUNC_01()
 	var string concatText;
 	var int XPOS_XPNEEDED;
 
-	PrintScreen	(IntToString(Mod_HasFleisch_Amount), -1, -1, FONT_SCREEN, 2);
-
 	// Spielstart erstmal Username eingeben
 
 	var int Mod_OnlineMode2;
@@ -172,7 +170,7 @@ FUNC VOID DAUERFUNC_01()
 		};
 	};
 
-	if (online_playtime >= 1800)
+	if (online_playtime >= 900)
 	&& (Offline_Modus == 0)
 	{
 		CURL_Send(ConcatStrings(ConcatStrings(ConcatStrings("http://www.teutonicteam.de/gomon/tauschen/actualizePlaytime.php?name=", username), "&game=4&time="), IntToString(online_playtime)));
