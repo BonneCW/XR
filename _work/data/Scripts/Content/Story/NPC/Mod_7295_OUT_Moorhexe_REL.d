@@ -41,9 +41,9 @@ INSTANCE Mod_7295_OUT_Moorhexe_REL (Npc_Default)
 
 FUNC VOID Rtn_Start_7295()
 {
-	TA_Sit_Campfire	(22,00,06,00,"REL_MOOR_131");
-	TA_Wash_FP	(06,00,08,00,"REL_MOOR_131");
+	TA_Sit_Campfire	(22,00,06,00,"REL_MOOR_130");
+	TA_Wash_FP	(06,00,08,00,"REL_MOOR_130");
 	TA_Pick_FP	(08,00,18,00,"REL_MOOR_130");
-	TA_Wash_FP	(18,00,20,00,"REL_MOOR_131");
-	TA_Sit_Campfire	(22,00,06,00,"REL_MOOR_131");
+	TA_Wash_FP	(18,00,20,00,"REL_MOOR_130");
+	TA_Sit_Campfire	(22,00,06,00,"REL_MOOR_130");
 };
