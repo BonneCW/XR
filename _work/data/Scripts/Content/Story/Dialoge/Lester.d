@@ -498,6 +498,35 @@ FUNC VOID Info_Mod_Lester_Crawlersekret_Info()
 	AI_Output(self, hero, "Info_Mod_Lester_Crawlersekret_13_05"); //Dann solltest du dir Eier besorgen und das Sekret abfüllen. Wenn du Glück hast, gibt es im Lager auch noch bereits abgefülltes Sekret.
 };
 
+INSTANCE Info_Mod_Lester_ZeichenDerBruderschaft (C_INFO)
+{
+	npc		= Mod_557_PSINOV_Lester_NW;
+	nr		= 1;
+	condition	= Info_Mod_Lester_ZeichenDerBruderschaft_Condition;
+	information	= Info_Mod_Lester_ZeichenDerBruderschaft_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Lester_ZeichenDerBruderschaft_Condition()
+{
+	if (Npc_HasItems(hero, ItMi_ZeichenDerBruderschaft) == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Lester_ZeichenDerBruderschaft_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Lester_ZeichenDerBruderschaft_13_00"); //Was sehe ich da? Du trägst das Zeichen der alten Bruderschaft bei dir? Ich denke, ich nehme es mal besser an mich.
+
+	B_GiveInvItems	(hero, self, ItMi_ZeichenDerBruderschaft, 1);
+
+	AI_Output(self, hero, "Info_Mod_Lester_ZeichenDerBruderschaft_13_01"); //Unter der Bruderschaft gibt es nämlich immer noch vereinzelte Fanatiker, die es als Provokation ansehen könnten, wenn du dieses Zeichen bei dir trägst.
+
+	B_GivePlayerXP	(150);
+};
+
 INSTANCE Info_Mod_Lester_DefenseBreak (C_INFO)
 {
 	npc		= Mod_557_PSINOV_Lester_NW;
