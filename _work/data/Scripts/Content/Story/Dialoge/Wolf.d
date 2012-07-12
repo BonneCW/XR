@@ -37,6 +37,139 @@ FUNC VOID Info_Mod_Wolf_Hi_Info()
 	B_LogEntry	(TOPIC_MOD_LEHRER_SÖLDNER, "Wolf kann mir wieder zeigen, wie ich an Crawlerplatten komme.");
 };
 
+INSTANCE Info_Mod_Wolf_MinecrawlerRuestung (C_INFO)
+{
+	npc		= Mod_798_SLD_Wolf_NW;
+	nr		= 1;
+	condition	= Info_Mod_Wolf_MinecrawlerRuestung_Condition;
+	information	= Info_Mod_Wolf_MinecrawlerRuestung_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich habe einige Crawlerplatten.";
+};
+
+FUNC INT Info_Mod_Wolf_MinecrawlerRuestung_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_Hi))
+	&& (Npc_HasItems(hero, ItAt_CrawlerPlate) >= 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Wolf_MinecrawlerRuestung_15_00"); //Ich habe einige Crawlerplatten.
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_01"); //Tatsächlich?
+
+	AI_TurnAway	(self, hero);
+
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_02"); //(zu sich selbst) Es gibt hier also doch Crawlerkrieger ... das ist gut.
+
+	AI_TurnToNpc	(self, hero);
+
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_03"); //(zum Helden) Wenn du mir mindestens 15 Stück davon besorgst, kann ich dir eine neue Rüstung basteln.
+	AI_Output(hero, self, "Info_Mod_Wolf_MinecrawlerRuestung_15_04"); //15 Stück diesmal?!
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_05"); //Hey, du hast doch selbst zugegeben, dass dir deine Minecrawlerrüstung damals im Minental das Leben gerettet hat.
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_06"); //Daher halte ich es nur für angemessen, wenn ich dieses Mal einen etwas größeren Profit davon habe.
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_07"); //Und es ist auch nicht meine Schuld, dass du deine alte Rüstung verloren hast.
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_08"); //Außerdem sollten die paar Crawler mehr, oder weniger auch keinen Unterschied für dich machen, nachdem du es mit Orks, Untoten und Dämonen aufgenommen hast.
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_09"); //Also, wie gesagt, 15 Platten und jeder ist fein raus.
+};
+
+INSTANCE Info_Mod_Wolf_MinecrawlerRuestung2 (C_INFO)
+{
+	npc		= Mod_798_SLD_Wolf_NW;
+	nr		= 1;
+	condition	= Info_Mod_Wolf_MinecrawlerRuestung2_Condition;
+	information	= Info_Mod_Wolf_MinecrawlerRuestung2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich habe hier 15 Minecrawlerplatten.";
+};
+
+FUNC INT Info_Mod_Wolf_MinecrawlerRuestung2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_MinecrawlerRuestung))
+	&& (Npc_HasItems(hero, ItAt_CrawlerPlate) >= 15)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Wolf_MinecrawlerRuestung2_15_00"); //Ich habe hier 15 Minecrawlerplatten.
+
+	B_GiveInvItems	(hero, self, ItAt_CrawlerPlate, 15);
+
+	Npc_RemoveInvItems	(self, ItAt_CrawlerPlate, 15);
+
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung2_08_01"); //Spitze! Ich mach mich gleich an die Arbeit. Komm in paar Tagen wieder vorbei.
+
+	Mod_Wolf_MinecrawlerRuestung_Day = Wld_GetDay();
+};
+
+INSTANCE Info_Mod_Wolf_MinecrawlerRuestung3 (C_INFO)
+{
+	npc		= Mod_798_SLD_Wolf_NW;
+	nr		= 1;
+	condition	= Info_Mod_Wolf_MinecrawlerRuestung3_Condition;
+	information	= Info_Mod_Wolf_MinecrawlerRuestung3_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wie ich sehe ist die Crawlerrüstung fertig.";
+};
+
+FUNC INT Info_Mod_Wolf_MinecrawlerRuestung3_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_MinecrawlerRuestung2))
+	&& (Mod_Wolf_MinecrawlerRuestung == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung3_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Wolf_MinecrawlerRuestung3_15_00"); //Wie ich sehe ist die Crawlerrüstung fertig.
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung3_08_01"); //Ja ... meine. Für deine brauche ich noch ein paar Tage.
+
+	Mod_Wolf_MinecrawlerRuestung = Wld_GetDay();
+};
+
+INSTANCE Info_Mod_Wolf_MinecrawlerRuestung4 (C_INFO)
+{
+	npc		= Mod_798_SLD_Wolf_NW;
+	nr		= 1;
+	condition	= Info_Mod_Wolf_MinecrawlerRuestung4_Condition;
+	information	= Info_Mod_Wolf_MinecrawlerRuestung4_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Wolf_MinecrawlerRuestung4_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_MinecrawlerRuestung3))
+	&& (Wld_GetDay()-2 > Mod_Wolf_MinecrawlerRuestung_Day)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung4_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung4_08_00"); //Du brauchst gar nicht zu fragen. Hier ist deine schöne neue Crawlerplattenrüstung.
+
+	CreateInvItems	(hero, ITAR_DJG_Crawler, 1);
+
+	B_ShowGivenThings	("Rüstung aus Crawlerplatten erhalten");
+
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung4_08_01"); //Viel Spaß damit.
+
+	B_GivePlayerXP	(200);
+};
+
 INSTANCE Info_Mod_Wolf_Snapperbogen (C_INFO)
 {
 	npc		= Mod_798_SLD_Wolf_NW;

@@ -46,6 +46,8 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_Wolf_MinecrawlerRuestung;
+var int Mod_Wolf_MinecrawlerRuestung_Day;
 var int Mod_Diebe_WandGehackt;
 var int Mod_Diebe_BrunnenTag;
 var int Mod_PrismaAngelegt;
