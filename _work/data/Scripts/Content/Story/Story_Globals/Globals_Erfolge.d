@@ -26,4 +26,4 @@ var int CurrentErfolge;			// Aktuelle Anzahl an erreichten Erfolgen (wichtig für
 var string ErfolgText;			// Text beim Buch (wie viel Prozent wurden erreicht?)
 
 var int CurrentNQ;
-const int MaxNQ = 122;
+const int MaxNQ = 123;

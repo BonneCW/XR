@@ -4719,6 +4719,7 @@ FUNC VOID STARTUP_MinentalSurface ()
 	Wld_InsertNpc	(Mod_1030_SNOV_Abdi_MT,	"OC1");
 	Wld_InsertNpc	(Mod_7358_DMR_Daemonenritter_MT, "OC1");
 	Wld_InsertNpc	(Mod_7784_SNOV_Novize_MT, "OC1");
+	Wld_InsertNpc	(Mod_7502_KDS_Alax_MT,	"OC1");
 
 	// Monster in Stollen in Felsenfestung
 
@@ -8109,35 +8110,6 @@ FUNC VOID INIT_PATHERION()
 
 		Mod_Enter_PAT_Second = TRUE;
 	};
-};
-
-FUNC VOID STARTUP_BeliarKloster()
-{
-	CurrentLevel3 = BELIARKLOSTER_ZEN;
-
-	NameAllFires();
-
-	// Schwarzmagier
-
-	Wld_InsertNpc	(Mod_7502_KDS_Alax_BK,	"BK_001");
-
-	// Schwarze Novizen
-	
-};
-
-FUNC VOID INIT_BeliarKloster()
-{
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-
-	OldLevel(BELIARKLOSTER_ZEN);
-
-	Wld_AssignRoomToGuild("laden"  , GIL_PUBLIC);
-	Wld_AssignRoomToGuild("kirche"  , GIL_PUBLIC);
-	Wld_AssignRoomToGuild("folterkammer"  , GIL_PUBLIC);
-	Wld_AssignRoomToGuild("myxir"  , GIL_PUBLIC);
-	Wld_AssignRoomToGuild("restraum"  , GIL_PUBLIC);
 };
 
 FUNC VOID STARTUP_Bergwelt()

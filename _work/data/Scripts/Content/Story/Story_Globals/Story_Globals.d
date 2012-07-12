@@ -46,6 +46,22 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_Alax_Zutaten;
+var int Mod_Alax_Zutat_Schwefel;
+var int Mod_Alax_Zutat_Pech;
+var int Mod_Alax_Zutat_Bergkristall;
+var int Mod_Alax_Zutat_GletscherQuartz;
+var int Mod_Alax_Zutat_Aquamarin;
+var int Mod_Alax_Zutat_Heilknospe;
+var int Mod_Alax_Zutat_Zwillingsdorn;
+var int Mod_Alax_Zutat_Heilkraut;
+var int Mod_Alax_Zutat_Heilpflanze;
+var int Mod_Alax_Zutat_Heilwurzel;
+var int Mod_Alax_Zutat_Feuernessel;
+var int Mod_Alax_Zutat_Feuerkraut;
+var int Mod_Alax_Zutat_Feuerwurzel;
+var int Mod_Alax_Zutat_Kohle;
+var int Mod_Alax_Zutat_SchwarzePerle;
 var int Mod_Wolf_MinecrawlerRuestung;
 var int Mod_Wolf_MinecrawlerRuestung_Day;
 var int Mod_Diebe_WandGehackt;

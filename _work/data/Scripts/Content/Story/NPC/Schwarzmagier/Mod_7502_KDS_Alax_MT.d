@@ -1,4 +1,4 @@
-instance Mod_7502_KDS_Alax_BK (Npc_Default)
+instance Mod_7502_KDS_Alax_MT (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Alax"; 
@@ -39,6 +39,6 @@ instance Mod_7502_KDS_Alax_BK (Npc_Default)
 
 FUNC VOID Rtn_Start_7502()
 {
-	TA_Potion_Alchemy	(08,00,23,00,"BK_035");
-	TA_Sleep		(23,00,07,00,"BK_038");	
+	TA_Potion_Alchemy	(08,00,23,00,"PALTOBURGRECHTS_9_1");
+	TA_Sleep		(23,00,07,00,"PALTOBURGRECHTSOBEN_9");	
 };

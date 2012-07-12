@@ -1431,33 +1431,6 @@ func void Use_Joint_Herkules()
 	Mod_JointCounter += 1;
 };
 /******************************************************************************************/
-/*
-INSTANCE ItMi_Alarmhorn (C_Item)
-{
-	name 				=	"Horn";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags				=	ITEM_MULTI;
-
-	value 				=	Value_Alarmhorn;
-
-	visual 				=	"ItMi_Alarmhorn.3DS";
-	material 			=	MAT_WOOD;
-
-	scemeName			=	"HORN";
-	on_state[0]			= 	Use_Alarmhorn;
-	description			= 	name;
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			= 	value;
-};
-func void Use_Alarmhorn()
-{
-	
-};
-
-*/
-
 INSTANCE ItMi_StrandBild(C_Item)
 {
 	name 				=	"Bild";
@@ -3547,7 +3520,7 @@ INSTANCE ItMi_Salpeter (C_Item)
 
 INSTANCE ItMi_Quartz (C_Item)
 {
-	name 				=	"Gletscher Quartz";
+	name 				=	"Gletscher-Quartz";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
