@@ -189,39 +189,6 @@ FUNC VOID Info_Mod_Lares_AndereSoeldner_Info()
 	AI_Output(self, hero, "Info_Mod_Lares_AndereSoeldner_09_04"); //Wir haben schon einige überzeugt.
 };
 
-INSTANCE Info_Mod_Lares_Lehrer (C_INFO)
-{
-	npc		= Mod_526_SLD_Lares_NW;
-	nr		= 1;
-	condition	= Info_Mod_Lares_Lehrer_Condition;
-	information	= Info_Mod_Lares_Lehrer_Info;
-	permanent	= 0;
-	important	= 0;
-	description	= "Kannst du mir was beibringen?";
-};
-
-FUNC INT Info_Mod_Lares_Lehrer_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Lares_Hi))
-	&& ((Mod_Gilde == 5)
-	|| (Mod_Gilde == 4)
-	|| (Mod_Gilde == 19))
-	&& (Mod_Schwierigkeit != 4)
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Lares_Lehrer_Info()
-{
-	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
-
-	AI_Output(self, hero, "Info_Mod_Lares_Lehrer_09_00"); //Ich kann dir helfen geschickter zu werden.
-
-	Log_CreateTopic	(TOPIC_MOD_LEHRER_SOELDNER_ONAR, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_LEHRER_SOELDNER_ONAR, "Lares kann mir helfen geschickter zu werden.");
-};
-
 INSTANCE Info_Mod_Lares_Aufnahme (C_INFO)
 {
 	npc		= Mod_526_SLD_Lares_NW;
@@ -765,6 +732,64 @@ FUNC VOID Info_Mod_Lares_Friedensbote_Info()
 	AI_Output(self, hero, "Info_Mod_Lares_Friedensbote_09_16"); //Nichts für ungut. Ich bin gespannt, wie sich das weiterentwickelt. Mach’s gut.
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_FRIEDENSBOTE, "Lares hat der Waffenruhe zugestimmt. Ich sollte Lord Hagen davon berichten.");
+};
+
+INSTANCE Info_Mod_Lares_Banditenfestung (C_INFO)
+{
+	npc		= Mod_526_SLD_Lares_NW;
+	nr		= 1;
+	condition	= Info_Mod_Lares_Banditenfestung_Condition;
+	information	= Info_Mod_Lares_Banditenfestung_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Lares_Banditenfestung_Condition()
+{
+	if (Mod_Irdorath == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Lares_Banditenfestung_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Lares_Banditenfestung_09_00"); //He, warte mal. Ich wollte dich warnen, falls du nach Süden in die Berge gehen willst.
+	AI_Output(hero, self, "Info_Mod_Lares_Banditenfestung_15_01"); //Wieso? Was ist da?
+	AI_Output(self, hero, "Info_Mod_Lares_Banditenfestung_09_02"); //In der Festung hat sich irgendwelcher Abschaum aus dem Minental niedergelassen. Pass also gut auf, wenn du dort unterwegs bist.
+};
+
+INSTANCE Info_Mod_Lares_Lehrer (C_INFO)
+{
+	npc		= Mod_526_SLD_Lares_NW;
+	nr		= 1;
+	condition	= Info_Mod_Lares_Lehrer_Condition;
+	information	= Info_Mod_Lares_Lehrer_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Kannst du mir was beibringen?";
+};
+
+FUNC INT Info_Mod_Lares_Lehrer_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Lares_Hi))
+	&& ((Mod_Gilde == 5)
+	|| (Mod_Gilde == 4)
+	|| (Mod_Gilde == 19))
+	&& (Mod_Schwierigkeit != 4)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Lares_Lehrer_Info()
+{
+	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
+
+	AI_Output(self, hero, "Info_Mod_Lares_Lehrer_09_00"); //Ich kann dir helfen geschickter zu werden.
+
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_SOELDNER_ONAR, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_SOELDNER_ONAR, "Lares kann mir helfen geschickter zu werden.");
 };
 
 var int Lares_LastPetzCounter;

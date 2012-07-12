@@ -675,9 +675,6 @@ FUNC VOID DAUERFUNC_01()
 			B_RemoveNpc	(Mod_674_SLD_Lee_NW);
 			B_RemoveNpc	(Mod_551_KDF_Pyrokar_NW);
 			B_RemoveNpc	(Mod_774_KDW_Saturas_NW);
-			//B_RemoveNpc	(Mod_517_DMR_Gomez_NW);
-			//B_RemoveNpc	(Mod_520_DMR_Raven_NW);
-			//B_RemoveNpc	(Mod_514_DMB_Karras_NW);
 			B_RemoveNpc	(Mod_553_KDF_Ulthar_NW);
 			B_RemoveNpc	(Mod_524_KDW_Vatras_NW);
 			B_RemoveNpc	(Mod_552_KDF_Serpentes_NW);
