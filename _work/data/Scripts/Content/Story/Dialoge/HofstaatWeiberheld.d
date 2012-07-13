@@ -20,25 +20,25 @@ FUNC INT Info_Mod_HofstaatWeiberheld_Hi_Condition()
 
 FUNC VOID Info_Mod_HofstaatWeiberheld_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_09_00"); //So wirst du bei den Frauen aber kein Glück haben ...
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_27_00"); //So wirst du bei den Frauen aber kein Glück haben ...
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Hi_15_01"); //Was?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_09_02"); //Die hofstaatlichen Frauen sind nicht wie die Frauen, die du kennst.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_27_02"); //Die hofstaatlichen Frauen sind nicht wie die Frauen, die du kennst.
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Hi_15_03"); //Wer bist du überhaupt?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_09_04"); //Ich bin der königliche Frauenheld. Und glaub mir, die Frauen, die du kennst, sind anders als die hierzulande!
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_27_04"); //Ich bin der königliche Frauenheld. Und glaub mir, die Frauen, die du kennst, sind anders als die hierzulande!
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Hi_15_05"); //Inwiefern?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_09_06"); //Na ja ... Die hofstaatlichen Frauen sind anders.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_27_06"); //Na ja ... Die hofstaatlichen Frauen sind anders.
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Hi_15_07"); //Ja, so viel hab ich auch mitbekommen, aber wie unterscheiden sie sich von den anderen Frauen?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_09_08"); //Die Frauen?
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_27_08"); //Die Frauen?
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Hi_15_09"); //Ja ...
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_09_10"); //Ach so ... Ich hab ein Buch geschrieben.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_27_10"); //Ach so ... Ich hab ein Buch geschrieben.
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Hi_15_11"); //Schön für dich ...
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_09_12"); //Darin stehen alle Eigenheiten der hofstaatlichen Frauen.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_27_12"); //Darin stehen alle Eigenheiten der hofstaatlichen Frauen.
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Hi_15_13"); //Verkaufst du es mir?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_09_14"); //Na gut ... aber pass auf, ich bin ein verdammt guter Feilscher.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_27_14"); //Na gut ... aber pass auf, ich bin ein verdammt guter Feilscher.
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Hi_15_15"); //Wie viel willst du?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_09_16"); //32 Milliarden 435 Millionen 684 Tausend 341 Goldstücke.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_27_16"); //32 Milliarden 435 Millionen 684 Tausend 341 Goldstücke.
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Hi_15_17"); //Ein bisschen überteuert ...
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_09_18"); //Na gut ... Zwei Goldstücke.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_27_18"); //Na gut ... Zwei Goldstücke.
 
 	Info_ClearChoices	(Info_Mod_HofstaatWeiberheld_Hi);
 
@@ -60,7 +60,7 @@ FUNC VOID Info_Mod_HofstaatWeiberheld_Hi_D()
 FUNC VOID Info_Mod_HofstaatWeiberheld_Hi_C()
 {
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Hi_C_15_00"); //Gekauft.
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_C_09_01"); //(lacht) Dich hab ich aber übern Tisch gezogen.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_C_27_01"); //(lacht) Dich hab ich aber übern Tisch gezogen.
 
 	Info_ClearChoices	(Info_Mod_HofstaatWeiberheld_Hi);
 };
@@ -71,7 +71,7 @@ FUNC VOID Info_Mod_HofstaatWeiberheld_Hi_B()
 
 	if (Hlp_Random(100) < Mod_Verhandlungsgeschick)
 	{
-		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_B_09_00"); //Na gut ... ich gebe dir 100 Goldstücke und das Buch.
+		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_B_27_00"); //Na gut ... ich gebe dir 100 Goldstücke und das Buch.
 
 		Info_ClearChoices	(Info_Mod_HofstaatWeiberheld_Hi);
 
@@ -80,7 +80,7 @@ FUNC VOID Info_Mod_HofstaatWeiberheld_Hi_B()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_B_09_01"); //Nee, nee, so viel muss schon sein.
+		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_B_27_01"); //Nee, nee, so viel muss schon sein.
 
 		Info_ClearChoices	(Info_Mod_HofstaatWeiberheld_Hi);
 
@@ -103,7 +103,7 @@ FUNC VOID Info_Mod_HofstaatWeiberheld_Hi_F()
 
 	if (Hlp_Random(100) < Mod_Verhandlungsgeschick)
 	{
-		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_F_09_00"); //Na gut ... ahm, du bekommst mein Haus, das Buch und 100 Goldstücke!
+		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_F_27_00"); //Na gut ... ahm, du bekommst mein Haus, das Buch und 100 Goldstücke!
 
 		Info_ClearChoices	(Info_Mod_HofstaatWeiberheld_Hi);
 
@@ -112,7 +112,7 @@ FUNC VOID Info_Mod_HofstaatWeiberheld_Hi_F()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_F_09_01"); //Nein, das reicht ja wohl!
+		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_F_27_01"); //Nein, das reicht ja wohl!
 
 		Info_ClearChoices	(Info_Mod_HofstaatWeiberheld_Hi);
 
@@ -136,9 +136,9 @@ FUNC VOID Info_Mod_HofstaatWeiberheld_Hi_H()
 
 	if (Hlp_Random(100) < Mod_Verhandlungsgeschick)
 	{
-		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_H_09_00"); //Gaaaaahrr! Na gut, ich gebe dir mein Buch, mein Gold, mein Haus und ich heirate dich!
+		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_H_27_00"); //Gaaaaahrr! Na gut, ich gebe dir mein Buch, mein Gold, mein Haus und ich heirate dich!
 		AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Hi_H_15_01"); //WAS?!
-		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_H_09_02"); //Du willst doch die Staatsbürgerschaft, oder? In Relendel dürfen auch Männer heiraten.
+		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_H_27_02"); //Du willst doch die Staatsbürgerschaft, oder? In Relendel dürfen auch Männer heiraten.
 
 		Info_ClearChoices	(Info_Mod_HofstaatWeiberheld_Hi);
 
@@ -147,7 +147,7 @@ FUNC VOID Info_Mod_HofstaatWeiberheld_Hi_H()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_H_09_03"); //Hahaha, das reicht aber langsam.
+		AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Hi_H_27_03"); //Hahaha, das reicht aber langsam.
 
 		Info_ClearChoices	(Info_Mod_HofstaatWeiberheld_Hi);
 
@@ -216,15 +216,15 @@ FUNC INT Info_Mod_HofstaatWeiberheld_SabineWillNicht_Condition()
 FUNC VOID Info_Mod_HofstaatWeiberheld_SabineWillNicht_Info()
 {
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_15_00"); //Das mit dem Heiraten funktioniert nicht.
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_09_01"); //Woran scheitert es denn?
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_27_01"); //Woran scheitert es denn?
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_15_02"); //Na ja, ich weiß nicht, was ich sagen soll ...
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_09_03"); //AHA!
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_27_03"); //AHA!
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_15_04"); //Ja?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_09_05"); //Du brauchst mein patentiertes "Anmachen und Anlachen", sozusagen die Fortsetzung meines ersten Buches.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_27_05"); //Du brauchst mein patentiertes "Anmachen und Anlachen", sozusagen die Fortsetzung meines ersten Buches.
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_15_06"); //Wie viel willst du dafür?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_09_07"); //200 Goldstücke.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_27_07"); //200 Goldstücke.
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_15_08"); //Kein Feilschen?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_09_09"); //Nee ... letztens hab ich mein Haus verloren bei dem Versuch, jemandem meine gesammelten Werke zu verkaufen.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_SabineWillNicht_27_09"); //Nee ... letztens hab ich mein Haus verloren bei dem Versuch, jemandem meine gesammelten Werke zu verkaufen.
 };
 
 INSTANCE Info_Mod_HofstaatWeiberheld_BuyBook2 (C_INFO)
@@ -255,7 +255,7 @@ FUNC VOID Info_Mod_HofstaatWeiberheld_BuyBook2_Info()
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 200);
 
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_BuyBook2_09_01"); //Hier hast du es. Viel Glück damit.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_BuyBook2_27_01"); //Hier hast du es. Viel Glück damit.
 
 	B_GiveInvItems	(self, hero, ItWr_HSBook2, 1);
 };
@@ -281,7 +281,7 @@ FUNC INT Info_Mod_HofstaatWeiberheld_Preacher_Condition()
 
 FUNC VOID Info_Mod_HofstaatWeiberheld_Preacher_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Preacher_09_00"); //Damit erkläre ich euch zu Mann und Frau!
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Preacher_27_00"); //Damit erkläre ich euch zu Mann und Frau!
 
 	Mod_Sekte_Verheiratet = 1;
 
@@ -317,27 +317,27 @@ FUNC INT Info_Mod_HofstaatWeiberheld_Geliebte_Condition()
 
 FUNC VOID Info_Mod_HofstaatWeiberheld_Geliebte_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_09_00"); //Du schon wieder?
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_27_00"); //Du schon wieder?
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Geliebte_15_01"); //Ich brauche noch mal deine Hilfe.
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_09_02"); //Wie kann ich dir helfen? Willst du eine Frau rumkriegen, willst du einen Mann rumkriegen, willst du eine Frau und einen Mann rumkriegen? Nichts ist unmöglich!
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_27_02"); //Wie kann ich dir helfen? Willst du eine Frau rumkriegen, willst du einen Mann rumkriegen, willst du eine Frau und einen Mann rumkriegen? Nichts ist unmöglich!
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Geliebte_15_03"); //Ich will die königliche Geliebte verführen.
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_09_04"); //Na klar, kein Problem, die königliche Geliebte verführen, das ist ga ... DU WILLST WAS? UNMÖGLICH!
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_09_05"); //Du ungläubiger Narr! Glaubst du, sie heißt zum Spaß "königliche Geliebte".
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_09_06"); //Dummkopf! Niemand außer dem König hat es je geschafft bei ihr zu landen.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_27_04"); //Na klar, kein Problem, die königliche Geliebte verführen, das ist ga ... DU WILLST WAS? UNMÖGLICH!
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_27_05"); //Du ungläubiger Narr! Glaubst du, sie heißt zum Spaß "königliche Geliebte".
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_27_06"); //Dummkopf! Niemand außer dem König hat es je geschafft bei ihr zu landen.
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Geliebte_15_07"); //Es muss doch eine Möglichkeit geben. Wie hat es denn der König angestellt?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_09_08"); //Er hat ein Reich gegründet und trägt eine Krone! Der könnte sogar mich verführen!
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_27_08"); //Er hat ein Reich gegründet und trägt eine Krone! Der könnte sogar mich verführen!
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Geliebte_15_09"); //Dann brauch ich eine Krone?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_09_10"); //Ach was! (Leiser) Es geht das Gerücht um, dass der königliche Trunkenbold es zur Zeit des letzten Festes geschafft hat, sie zu verführen.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_27_10"); //Ach was! (Leiser) Es geht das Gerücht um, dass der königliche Trunkenbold es zur Zeit des letzten Festes geschafft hat, sie zu verführen.
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Geliebte_15_11"); //Dann muss ich sie nur betrunken machen?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_09_12"); //Das wird nicht funktionieren. Glaub mir ... es funktioniert nicht. Du musst wohl ... den Trunkenbold wecken.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_27_12"); //Das wird nicht funktionieren. Glaub mir ... es funktioniert nicht. Du musst wohl ... den Trunkenbold wecken.
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Geliebte_15_13"); //Wie stell ich das an?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_09_14"); //Das kann nur der König. Er hat das Blastherr!
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_27_14"); //Das kann nur der König. Er hat das Blastherr!
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Geliebte_15_15"); //Das ... Blastherr?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_09_16"); //Ja, das ist das Horn, mit dem er die Zeit des Feierns ausruft! Du musst es ihm stehlen. Es ist im Schloss.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_27_16"); //Ja, das ist das Horn, mit dem er die Zeit des Feierns ausruft! Du musst es ihm stehlen. Es ist im Schloss.
 	AI_Output(hero, self, "Info_Mod_HofstaatWeiberheld_Geliebte_15_17"); //Und wenn ich es habe?
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_09_18"); //Spielst du es ... aber LEISE! Nur der Trunkenbold darf dich hören.
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_09_19"); //Und sobald du hast, was du brauchst, musst du ihm Freudenspender geben, damit er wieder einschläft.
-	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_09_20"); //Sobald er sich den Schlaf aus den Augen reibt und merkt, dass du nicht der König bist und dass nicht die Zeit des Feierns ist, wird er dich erschlagen!
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_27_18"); //Spielst du es ... aber LEISE! Nur der Trunkenbold darf dich hören.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_27_19"); //Und sobald du hast, was du brauchst, musst du ihm Freudenspender geben, damit er wieder einschläft.
+	AI_Output(self, hero, "Info_Mod_HofstaatWeiberheld_Geliebte_27_20"); //Sobald er sich den Schlaf aus den Augen reibt und merkt, dass du nicht der König bist und dass nicht die Zeit des Feierns ist, wird er dich erschlagen!
 
 	B_LogEntry	(TOPIC_MOD_SL_GELIEBTE, "Ich muss den Trunkenbold wecken, der angeblich schon einmal die königliche Geliebte verführt hat. Dazu brauche ich das Blastherr des Königs, welches ich im Schloss finde.");
 
