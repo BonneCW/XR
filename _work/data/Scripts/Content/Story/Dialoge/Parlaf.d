@@ -269,7 +269,7 @@ FUNC INT Info_Mod_Parlaf_Daemonisch_Condition()
 
 FUNC VOID Info_Mod_Parlaf_Daemonisch_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Parlaf_Daemonisch_06_00"); //Halt, erst den ¼ Klosterwein trinken
+	AI_Output(self, hero, "Info_Mod_Parlaf_Daemonisch_06_00"); //Halt, erst den 1/4 Klosterwein trinken
 
 	B_GiveInvItems	(self, hero, ItFo_KWine, 1);
 

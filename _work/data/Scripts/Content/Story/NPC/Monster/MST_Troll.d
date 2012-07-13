@@ -21,7 +21,7 @@ PROTOTYPE Mst_Default_Troll(C_Npc)
 	//----- Protections ----	
 	protection	[PROT_BLUNT]		=	180000;
 	protection	[PROT_EDGE]			=	180000;
-	protection	[PROT_POINT]		=	IMMUNE;	
+	protection	[PROT_POINT]		=	IMMUNE;
 	protection	[PROT_FIRE]			=	125;
 	protection	[PROT_FLY]			=	IMMUNE;
 	protection	[PROT_MAGIC]		=	125;

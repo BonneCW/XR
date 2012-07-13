@@ -390,6 +390,7 @@ FUNC VOID DAUERFUNC_01()
 	Mod_Balken = STR_ToInt(MEM_GetGothOpt("XERES", "balken"));
 	Mod_Maussteuerung = STR_ToInt(MEM_GetGothOpt("XERES", "enableMouse"));
 	Mod_Bloodsplats = STR_ToInt(MEM_GetGothOpt("XERES", "bloodsplats"));
+	Mod_PrismaKey = MEM_GetGothOpt("KEYS", "keyUsePrisma");
 
 	if (Mod_Maussteuerung == 0)
 	{
@@ -651,6 +652,7 @@ FUNC VOID DAUERFUNC_01()
 				Mod_Wolf_MinecrawlerRuestung = 1;
 
 				CreateInvItems	(Mod_798_SLD_Wolf_NW, ITAR_DJG_Crawler, 1);
+				AI_UnEquipArmor	(Mod_798_SLD_Wolf_NW);
 				AI_EquipArmor	(Mod_798_SLD_Wolf_NW, ITAR_DJG_Crawler);
 			};
 		};

@@ -120,7 +120,6 @@ func void ShowBars ()
 	{
 		_View_SetTexture(bar_hp.value_bar, "BAR_HEALTH.TGA");
 	};
-		_View_SetTexture(bar_hp.value_bar, "BAR_POISON.TGA");
 };
 
 func void HideBars ()

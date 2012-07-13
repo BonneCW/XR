@@ -331,7 +331,21 @@ FUNC VOID FRAMEFUNC ()
 		};
 	};*/
 
-	if (MEM_KeyState(KEY_F) == KEY_PRESSED)
+	var int PrismaKey; PrismaKey = 0;
+	var int PrismaKey2; PrismaKey2 = 0;
+
+	if (STR_Len(Mod_PrismaKey) >= 4)
+	{
+		PrismaKey = B_GetIntOfHex(STR_SubStr(Mod_PrismaKey, 0, 4));
+
+		if (STR_Len(Mod_PrismaKey) == 8)
+		{
+			PrismaKey2 = B_GetIntOfHex(STR_SubStr(Mod_PrismaKey, 4, 4));
+		};
+	};
+
+	if (MEM_KeyState(PrismaKey) == KEY_PRESSED)
+	|| (MEM_KeyState(PrismaKey2) == KEY_PRESSED)
 	{
 		if (Mod_PrismaAngelegt == 1)
 		{
