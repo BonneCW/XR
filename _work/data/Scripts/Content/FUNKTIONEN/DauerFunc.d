@@ -836,6 +836,38 @@ FUNC VOID DAUERFUNC_01()
 				Mod_HagenKOScene = 1;
 			};
 		};
+
+		if (Mod_Irdorath == 1)
+		&& (Mod_Banditen_Irdorath_NW == 0)
+		{
+			Mod_Banditen_Irdorath_NW = 1;
+
+			Wld_InsertNpc	(Mod_7805_BlutkultKrieger_NW, "TAVERNE");
+		};
+
+		if (Mod_Banditen_Mine == 0)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Dexter_NW_Minenzugang))
+		&& (Npc_GetDistToWP(hero, "CASTLEMINE") > 10000)
+		{
+			Mod_Banditen_Mine = 1;
+
+			// ToDo: Banditen-Schürfer schürfen lassen
+
+			MEM_RemoveVob	("EVT_MINENEINGANG_CASTLE");
+		};
+
+		if (Mod_Banditen_Mine == 1)
+		&& (Npc_GetDistToWP(hero, "CASTLEMINE") > 10000)
+		&& (Wld_GetDay()-2 > Mod_Banditen_Mine_Tag)
+		{
+			Mod_Banditen_Mine = 2;
+
+			// ToDo: Esteban und Morgahard Rüstung umziehen
+
+			AI_UnEquipArmor	(Mod_7806_BDT_Dexter_NW);
+			CreateInvItems	(Mod_7806_BDT_Dexter_NW, ItAr_Governor, 1);
+			AI_EquipArmor	(Mod_7806_BDT_Dexter_NW, ItAr_Governor);
+		};
 	};
 
 	// Spezielle Zustände: Hunger, Betrunken, Erkältung, Vergiftung
@@ -1126,6 +1158,31 @@ FUNC VOID DAUERFUNC_01()
 			{
 				Mod_Mud_Lebt = 1;
 			};
+		};
+
+		if (Mod_Irdorath == 1)
+		&& (Mod_Banditen_Irdorath_MT == 0)
+		{
+			Mod_Banditen_Irdorath_MT = 1;
+
+			B_RemoveNpc	(Mod_761_BDT_Dexter_MT);
+			B_RemoveNpc	(Mod_955_BDT_Juan_MT);
+			B_RemoveNpc	(Mod_957_BDT_Logan_MT);
+			B_RemoveNpc	(Mod_961_BDT_Sancho_MT);
+			B_RemoveNpc	(Mod_790_BDT_Morgahard_MT);
+			B_RemoveNpc	(Mod_958_BDT_Miguel_MT);
+			B_RemoveNpc	(Mod_948_BDT_Esteban_MT);
+			B_RemoveNpc	(Mod_4072_BDT_Bandit_MT);
+			B_RemoveNpc	(Mod_4073_BDT_Bandit_MT);
+			B_RemoveNpc	(Mod_7022_BDT_Oschust_MT);
+			B_RemoveNpc	(Mod_7023_BDT_Quentin_MT);
+			B_RemoveNpc	(Mod_4074_BDT_Bandit_MT);
+
+			Wld_InsertNpc	(Monster_11076_Skelett_MT, "OC1");
+			Wld_InsertNpc	(Monster_11077_Skelett_MT, "OC1");
+			Wld_InsertNpc	(Monster_11078_Skelett_MT, "OC1");
+
+			Wld_InsertNpc	(Mod_7805_BlutkultKrieger_NW, "OC1");
 		};
 	};
 

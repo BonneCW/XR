@@ -759,6 +759,33 @@ FUNC VOID Info_Mod_Lares_Banditenfestung_Info()
 	AI_Output(self, hero, "Info_Mod_Lares_Banditenfestung_09_02"); //In der Festung hat sich irgendwelcher Abschaum aus dem Minental niedergelassen. Pass also gut auf, wenn du dort unterwegs bist.
 };
 
+INSTANCE Info_Mod_Lares_Banditenfestung2 (C_INFO)
+{
+	npc		= Mod_526_SLD_Lares_NW;
+	nr		= 1;
+	condition	= Info_Mod_Lares_Banditenfestung2_Condition;
+	information	= Info_Mod_Lares_Banditenfestung2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Die Männer in den Bergen Stellen keine Gefahr dar.";
+};
+
+FUNC INT Info_Mod_Lares_Banditenfestung2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Dexter_NW_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Lares_Banditenfestung2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Lares_Banditenfestung2_15_00"); //Die Männer in den Bergen Stellen keine Gefahr dar. Es sind alte Bekannte aus der Kolonie.
+	AI_Output(self, hero, "Info_Mod_Lares_Banditenfestung2_09_01"); //Hmm, ok, wenn du es sagst, wird es wohl stimmen. Dann kann ich ja beruhigt sein.
+
+	B_GivePlayerXP	(150);
+};
+
 INSTANCE Info_Mod_Lares_Lehrer (C_INFO)
 {
 	npc		= Mod_526_SLD_Lares_NW;

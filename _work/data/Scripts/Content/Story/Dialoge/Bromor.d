@@ -260,6 +260,32 @@ FUNC VOID Info_Mod_Bromor_Shakir_Info()
 	B_LogEntry	(TOPIC_MOD_ASS_SHAKIR_FRAU, "Bromor will mir keine Frau mitgeben. Ich soll 'ne Straﬂendirne suchen. Hm ... Mal Moe fragen, der kennt sich hier aus.");
 };
 
+INSTANCE Info_Mod_Bromor_NadjaBeiDexter (C_INFO)
+{
+	npc		= Mod_567_NONE_Bromor_NW;
+	nr		= 1;
+	condition	= Info_Mod_Bromor_NadjaBeiDexter_Condition;
+	information	= Info_Mod_Bromor_NadjaBeiDexter_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Und, wie l‰uft das Gesch‰ft?";
+};
+
+FUNC INT Info_Mod_Bromor_NadjaBeiDexter_Condition()
+{
+	if (Mod_Banditen_Mine == 2)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Bromor_NadjaBeiDexter_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Bromor_NadjaBeiDexter_15_00"); //Und, wie l‰uft das Gesch‰ft?
+	AI_Output(self, hero, "Info_Mod_Bromor_NadjaBeiDexter_07_01"); //Miserabel. Mein bestes M‰dchen Nadja hat sich aus dem Staub gemacht.
+	AI_Output(self, hero, "Info_Mod_Bromor_NadjaBeiDexter_07_02"); //Sie hockt jetzt bei irgendeinem neureichen Bastard, der k¸rzlich durch das Erzgesch‰ft zu groﬂem Reichtum kam. Verdammter Scheiﬂdreck!
+};
+
 INSTANCE Info_Mod_Bromor_Pickpocket (C_INFO)
 {
 	npc		= Mod_567_NONE_Bromor_NW;

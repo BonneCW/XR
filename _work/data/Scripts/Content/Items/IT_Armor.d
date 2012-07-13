@@ -304,7 +304,7 @@ INSTANCE ITAR_Jaeger (C_Item)
 
 INSTANCE ITAR_Governor (C_Item)
 {
-	name 					=	"Wams des Statthalters";
+	name 					=	"Prunkgewand";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;

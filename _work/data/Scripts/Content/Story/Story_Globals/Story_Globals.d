@@ -46,6 +46,11 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_Banditen_Mine;
+var int Mod_Banditen_Mine_Tag;
+var int Mod_Mineneingang_Castle;
+var int Mod_Banditen_Irdorath_MT;
+var int Mod_Banditen_Irdorath_NW;
 var string Mod_PrismaKey;
 var int Mod_Alax_Zutaten;
 var int Mod_Alax_Zutat_Schwefel;

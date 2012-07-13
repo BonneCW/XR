@@ -22,6 +22,8 @@ STORY\Events\B_AWAKE_STONEGUARDIAN.d
 
 NEUERUNGEN\B_GetIntOfHex.d
 
+NEUERUNGEN\RemoveVob.d
+
 NEUERUNGEN\VobPositionUpdates.d
 
 NEUERUNGEN\Broadcasts.d

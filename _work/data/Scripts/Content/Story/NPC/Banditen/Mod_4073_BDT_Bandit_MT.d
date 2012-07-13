@@ -40,7 +40,7 @@ INSTANCE Mod_4073_BDT_Bandit_MT (Npc_Default)
 
 FUNC VOID Rtn_Start_4073 ()
 {	
-	TA_Pick_Ore		(08,00,20,00,"HOEHLE_10");
+	TA_Pick_Ore	(08,00,20,00,"HOEHLE_10");
 	TA_Pick_Ore	(20,00,08,00,"HOEHLE_10");
 };
 
@@ -78,4 +78,10 @@ FUNC VOID Rtn_Rettung_4073()
 {
 	TA_RunToWP	(08,00,20,00,"LOCATION_11_12_09");
 	TA_RunToWP	(20,00,08,00,"LOCATION_11_12_09");
+};
+
+FUNC VOID Rtn_Tot_4073()
+{
+	TA_FleeToWP	(08,00,20,00,"TOT");
+	TA_FleeToWP	(20,00,08,00,"TOT");
 };

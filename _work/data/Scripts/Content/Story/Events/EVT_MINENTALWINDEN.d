@@ -322,3 +322,8 @@ FUNC VOID OTGEHEIMKAMMER03()
 		CurrentNQ += 1;
 	};
 };
+
+FUNC VOID EVT_MINENEINGANG_TRIGGERSCRIPT_FUNC()
+{
+	Mod_Mineneingang_Castle = TRUE;
+};
