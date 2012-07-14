@@ -2231,7 +2231,7 @@ INSTANCE ItRu_Eisklinge (C_Item)
 
 	value 				=	Value_Ru_Sleep;
 
-	visual				=	"ItRu_Sleep.3ds";
+	visual				=	"ItRu_Eisklinge.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_EISKLINGE;
