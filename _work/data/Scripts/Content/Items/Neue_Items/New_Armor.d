@@ -5,11 +5,11 @@ INSTANCE Erzrüstung(C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE] 	= 	100000;
-	protection [PROT_BLUNT] = 	100000;
-	protection [PROT_POINT] = 	100000;
-	protection [PROT_FIRE] 	= 	100;
-	protection [PROT_MAGIC] = 	100;
+	protection [PROT_EDGE] 	= 	80000;
+	protection [PROT_BLUNT] = 	80000;
+	protection [PROT_POINT] = 	80000;
+	protection [PROT_FIRE] 	= 	80;
+	protection [PROT_MAGIC] = 	80;
 
 	value 					=	10000;	// weil einzigartig
 

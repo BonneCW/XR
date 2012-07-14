@@ -311,6 +311,8 @@ FUNC VOID Equip_Verschlagenheit()
 
 	Mod_Ring_Verschlagenheit_Sneak = Npc_GetTalentSkill(hero, NPC_TALENT_SNEAK);
 
+	Npc_SetTalentSkill	(hero, NPC_TALENT_SNEAK, TRUE);
+
 	Mod_Ring_Verschlagenheit = TRUE;
 };
 
