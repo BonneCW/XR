@@ -1070,6 +1070,8 @@ const string PRINT_LP						= " LP";
 // ------ Zu wenig LP /	techerMAX überschritten	------
 const string PRINT_NotEnoughLP				= "Nicht genug Lernpunkte!";
 const string PRINT_NoLearnOverPersonalMAX	= "Maximum dieses Lehrers liegt bei ";
+const string PRINT_NotEnoughStr		= "Nicht genug Stärke!";
+const string PRINT_NotEnoughDex		= "Nicht genug Geschick!";
 
 // ------ Attribute	------------------------------------------------------------------------------
 const string PRINT_LearnSTR					= "Stärke + ";
