@@ -22,6 +22,9 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	var int damageType;
 	damageType = 0;
 
+	var int taeterMonster;
+	taeterMonster = FALSE;
+
 	var C_ITEM rwp;
 
 	if ((taeter.guild < GIL_SEPERATOR_HUM)
@@ -134,6 +137,8 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			damage += 120;
 		};
+
+		taeterMonster = TRUE;
 	};
 
 	// Wenn von hinten angegriffen, Schaden verdoppeln
@@ -213,8 +218,15 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	};
 
 	if (critChance == 0)
+	&& (!taeterMonster)
 	{
 		damage = damage/10;
+	};
+
+	if (critChance == 1)
+	&& (taeterMonster)
+	{
+		damage = damage*2;
 	};
 
 	// Hier kommt dann noch Spezialschaden dazu (Klaue, Hammer usw.)

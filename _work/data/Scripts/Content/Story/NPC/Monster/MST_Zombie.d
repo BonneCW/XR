@@ -11,7 +11,7 @@ PROTOTYPE Mst_Default_Zombie(C_Npc)
 	level							=	20;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	100;
+	attribute	[ATR_STRENGTH]		=	130;
 	attribute	[ATR_DEXTERITY]		=	10;
 	attribute	[ATR_HITPOINTS_MAX]	=	400;
 	attribute	[ATR_HITPOINTS]		=	400;
