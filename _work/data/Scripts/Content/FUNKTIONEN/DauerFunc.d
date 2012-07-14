@@ -876,8 +876,6 @@ FUNC VOID DAUERFUNC_01()
 		{
 			Mod_Banditen_Mine = 2;
 
-			// ToDo: Morgahard Rüstung umziehen
-
 			AI_UnEquipArmor	(Mod_7806_BDT_Dexter_NW);
 			CreateInvItems	(Mod_7806_BDT_Dexter_NW, ItAr_Governor, 1);
 			AI_EquipArmor	(Mod_7806_BDT_Dexter_NW, ItAr_Governor);

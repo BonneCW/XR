@@ -212,14 +212,14 @@ AI\AI_INTERN\PERCEPTION.D
 STORY\B_Content\B_GhostSpecialDamage.d
 AI\AI_INTERN\B_RefreshAtInsert.d
 STORY\B_Content\B_Pfeile.d
-STORY\B_Story\B_Vergiftet.d
-
-AI\MONSTER\B_Monster\B_MM_WispDetect.d
-AI\MONSTER\B_Monster\B_MM_DeSynchronize.d
 
 AI\HUMAN\C_Human\C_NpcIsOrc.d
 
 FUNKTIONEN\B_CalculateDamage.d
+STORY\B_Story\B_Vergiftet.d
+
+AI\MONSTER\B_Monster\B_MM_WispDetect.d
+AI\MONSTER\B_Monster\B_MM_DeSynchronize.d
 
 AI\HUMAN\GUILDS.d
 AI\HUMAN\B_RefreshArmor.d

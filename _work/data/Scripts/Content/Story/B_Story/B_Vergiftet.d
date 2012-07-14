@@ -173,6 +173,18 @@ FUNC VOID B_Vergiftet(var C_NPC slf)
 			};
 		};
 
+		if (C_BodyStateContains(slf, BS_SWIM))
+		{
+			if (Npc_GetDistToNpc(slf, other) < 300)
+			&& (Npc_CanSeeNpc(slf, other))
+			&& (r_max(2) == 0)
+			{
+				AI_PlayAni	(slf, "T_FISTATTACKMOVE");
+
+				B_CalculateDamage	(other, slf);
+			};
+		};
+
 		slf.aivar[AIV_Gifttime] = Mod_GiftCounter;		
 	};
 
