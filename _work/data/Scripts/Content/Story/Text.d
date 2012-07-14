@@ -548,7 +548,8 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"Geist rufen",
 	"Giftteppich",
 	"Aura der Flammen",
-	"Teleport zur Burg"
+	"Teleport zur Burg",
+	"zur Beliarfestung"
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -600,6 +601,7 @@ const string NAME_SPL_TeleportRELSee			= "Teleport zum groﬂen See";
 const string NAME_SPL_TeleportRELMoor			= "Teleport zum Moor";
 const string NAME_SPL_TeleportBanditenlager		= "Teleport zum Banditenlager";
 const string NAME_SPL_TeleportGelato			= "Teleport zum Dorf in Gelato";
+const string NAME_SPL_TeleportBeliarfestung		= "Teleport zur Beliarfestung";
 const string NAME_SPL_soulsplit			= "Seelenspaltung";
 const string NAME_SPL_Engel			= "Engel rufen";
 

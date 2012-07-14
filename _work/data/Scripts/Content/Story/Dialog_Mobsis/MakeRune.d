@@ -2877,6 +2877,11 @@ FUNC VOID PC_Verbessern_Obelisk_Info()
 	{
 		Info_AddChoice 	  (PC_Verbessern_Obelisk, "Teleport zur Bergfestung", PC_Verbessern_Obelisk_Bergfestung);
 	};
+	if (Npc_HasItems(hero, ItRu_TeleportBeliarfestung) >= 1)
+	&& (Mod_TeleportBeliarfestung == FALSE)
+	{
+		Info_AddChoice 	  (PC_Verbessern_Obelisk, "Teleport zur Beliarfestung", PC_Verbessern_Obelisk_Beliarfestung);
+	};
 	if (Npc_HasItems(hero, ItRu_TeleportWaldis) >= 1)
 	&& (Mod_TeleportWaldis == FALSE)
 	{
@@ -3165,6 +3170,13 @@ FUNC VOID PC_Verbessern_Obelisk_Bergfestung()
 	Npc_RemoveInvItems	(hero, ItRu_TeleportBergfestung, 1);
 
 	Mod_TeleportBergfestung = TRUE;
+};
+
+FUNC VOID PC_Verbessern_Obelisk_Beliarfestung()
+{
+	Npc_RemoveInvItems	(hero, ItRu_TeleportBeliarfestung, 1);
+
+	Mod_TeleportBeliarfestung = TRUE;
 };
 
 FUNC VOID PC_Verbessern_Obelisk_Seaport()

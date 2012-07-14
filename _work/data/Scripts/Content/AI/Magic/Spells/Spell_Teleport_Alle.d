@@ -1007,6 +1007,37 @@ func void Spell_Cast_TeleportBergfestung()
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
 };
 
+func int Spell_Logic_TeleportBeliarfestung (var int manaInvested)
+{
+	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
+	{
+		return SPL_SENDCAST;
+	}
+	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
+	{
+		return SPL_SENDCAST;
+	};
+	
+	return SPL_NEXTLEVEL;
+};
+
+func void Spell_Cast_TeleportBeliarfestung()
+{
+	B_PrintTeleportTooFarAway (MINENTAL_ZEN);
+	
+	if (Npc_GetActiveSpellIsScroll(self))
+	{
+		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
+	}
+	else
+	{
+		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
+	};
+
+	AI_Teleport		(self, "PALTOBURG_2");
+	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
+};
+
 func int Spell_Logic_TeleportKlosterruine (var int manaInvested)
 {
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
@@ -1694,11 +1725,6 @@ func void Spell_Cast_Teleport()
 	if (Npc_GetActiveSpell(self) == SPL_TeleportGelato)	{	Spell_Cast_Teleport_Gelato(); };
 	if (Npc_GetActiveSpell(self) == SPL_TeleportUW)	{	Spell_Cast_Teleport_UW(); };
 	if (Npc_GetActiveSpell(self) == SPL_TeleportGDG)	{	Spell_Cast_TeleportGDG(); };
+	if (Npc_GetActiveSpell(self) == SPL_TeleportBeliarfestung)	{	Spell_Cast_TeleportBeliarfestung(); };
 
 };
-
-
-
-
-
-

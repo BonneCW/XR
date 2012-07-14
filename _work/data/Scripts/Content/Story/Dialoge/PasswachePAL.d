@@ -1,4 +1,4 @@
-const string PasswachePAL_Checkpoint	= "NW_PASS_ORKS_14";	//WP hinter City-Tor vom Spielstart aus!
+const string PasswachePAL_Checkpoint	= "NW_PASS_GATE_01";
 
 instance Info_Mod_PasswachePAL_Hi (C_INFO)
 {
@@ -76,7 +76,7 @@ instance Info_Mod_PasswachePAL_FirstWarn (C_INFO)
 
 func int Info_Mod_PasswachePAL_FirstWarn_Condition()
 {
-	if (Npc_GetDistToWP(hero, PasswachePAL_Checkpoint) <= 500) //NICHT von hinten!
+	if (Npc_GetDistToWP(hero, PasswachePAL_Checkpoint) <= 300) //NICHT von hinten!
 	{
 		Npc_SetRefuseTalk(self,5);
 		return FALSE;

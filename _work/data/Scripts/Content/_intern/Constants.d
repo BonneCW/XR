@@ -755,8 +755,9 @@ const int SPL_SummonGeist		= 199;
 const int SPL_Giftteppich		= 200;
 const int SPL_AuraFlammen		= 201;
 const int SPL_TeleportGDG		= 202;
+const int SPL_TeleportBeliarfestung	= 203;
 
-const int MAX_SPELL					= 203;   // 59 (Gothic), 68 (Gothic2), 100 (G2Addon)
+const int MAX_SPELL					= 204;   // 59 (Gothic), 68 (Gothic2), 100 (G2Addon)
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1003,6 +1004,7 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"SummonGeist",
 	"Giftteppich",
 	"AuraFlammen",
+	"Teleport",
 	"Teleport"
 };
 
@@ -1251,6 +1253,7 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"SUM",	// 199
 	"SUM",	// 200
 	"HEA",	//201
+	"HEA",	//202
 	"HEA"
 };
 

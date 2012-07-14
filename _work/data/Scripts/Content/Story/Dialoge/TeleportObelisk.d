@@ -578,7 +578,7 @@ INSTANCE Info_Mod_TeleportObelisk_Newcamp (C_INFO)
 	information	= Info_Mod_TeleportObelisk_Newcamp_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= "zum neuen Lager";
+	description	= "zum Neuen Lager";
 };
 
 FUNC INT Info_Mod_TeleportObelisk_Newcamp_Condition()
@@ -877,6 +877,45 @@ FUNC VOID Info_Mod_TeleportObelisk_Waldis_Info()
 	else
 	{
 		B_SetLevelchange ("Minental\Minental.zen", "WP_MT_JAEGERLAGER_01");
+
+		AI_Teleport	(hero, "OBELISKSCHREIN_WP");
+	};
+};
+
+INSTANCE Info_Mod_TeleportObelisk_Beliarfestung (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= Info_Mod_TeleportObelisk_Beliarfestung_Condition;
+	information	= Info_Mod_TeleportObelisk_Beliarfestung_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "zur Beliarfestung";
+};
+
+FUNC INT Info_Mod_TeleportObelisk_Beliarfestung_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_TeleportObelisk)
+	&& (Mod_TeleportBeliarfestung == TRUE)
+	&& (CurrentLevel != PATHERION_ZEN)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_TeleportObelisk_Beliarfestung_Info()
+{
+	B_ENDPRODUCTIONDIALOG();
+
+	Mod_TeleportObelisk_Funzt = 1;
+
+	if (CurrentLevel == MINENTAL_ZEN)
+	{
+		AI_Teleport	(hero, "PALTOBURG_2");
+	}
+	else
+	{
+		B_SetLevelchange ("Minental\Minental.zen", "PALTOBURG_2");
 
 		AI_Teleport	(hero, "OBELISKSCHREIN_WP");
 	};

@@ -28,4 +28,5 @@ var int Mod_TeleportPatherionKapelle;
 var int Mod_TeleportPatherionKloster;
 var int Mod_TeleportBanditenlager;
 var int Mod_TeleportGelato;
+var int Mod_TeleportBeliarfestung;
 var int Mod_TeleportObelisk_Funzt;

@@ -10,6 +10,12 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		return;
 	};
 
+	var oCAniCtrl_Human blubb;
+	var ocNpc her;
+	her = Hlp_GetNpc(taeter);
+
+	blubb = MEM_PtrToInst(her.anictrl);
+
 	var int damage;
 	damage = 0;
 
@@ -121,12 +127,21 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		damageType = taeter.damagetype;
 		damage = taeter.attribute[ATR_STRENGTH];
 
+		var int bonusCrit;
+		bonusCrit = 0;
+
+		if (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(PC_Hero))
+		&& (Mod_Ring_Verschlagenheit == TRUE)
+		{
+			bonusCrit = 40;
+		};
+
 		if (r_max(99) < taeter.attribute[ATR_DEXTERITY])
 		&& (taeter.guild > GIL_SEPERATOR_HUM)
 		{
 			critChance = 1;
 		}
-		else if (r_max(99) < (taeter.HitChance[NPC_TALENT_1H]+taeter.HitChance[NPC_TALENT_2H])/2)
+		else if (r_max(99) < (taeter.HitChance[NPC_TALENT_1H]+taeter.HitChance[NPC_TALENT_2H])/2+bonusCrit)
 		&& (taeter.guild < GIL_SEPERATOR_HUM)
 		{
 			critChance = 1;
@@ -146,6 +161,11 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	if (!Npc_CanSeeNpc(opfer, taeter))
 	{
 		damage = damage*2;
+	};
+
+	if (blubb.comboNr > 0)
+	{
+		damage += blubb.comboNr*damage;
 	};
 
 	// Rüstungsschutz vom Schaden abziehen
