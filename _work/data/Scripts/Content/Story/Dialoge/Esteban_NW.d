@@ -122,6 +122,88 @@ FUNC VOID Info_Mod_Esteban_NW_Kleidung_Info()
 	AI_Output(self, hero, "Info_Mod_Esteban_NW_Kleidung_07_01"); //Meinst du, ich spaziere mit der Banditenkleidung in die Stadt, sage den Stadtwachen "guten Tag" und bitte um eine Privataudienz bei Hagen?
 };
 
+INSTANCE Info_Mod_Esteban_NW_Castlemine (C_INFO)
+{
+	npc		= Mod_1926_BDT_Esteban_NW;
+	nr		= 1;
+	condition	= Info_Mod_Esteban_NW_Castlemine_Condition;
+	information	= Info_Mod_Esteban_NW_Castlemine_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Und, wie läuft es bei dir jetzt in Khorinis?";
+};
+
+FUNC INT Info_Mod_Esteban_NW_Castlemine_Condition()
+{
+	if (Mod_Banditen_Irdorath_NW == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Esteban_NW_Castlemine_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Esteban_NW_Castlemine_15_00"); //Und, wie läuft es bei dir jetzt in Khorinis?
+	AI_Output(self, hero, "Info_Mod_Esteban_NW_Castlemine_07_01"); //(schlecht gelaunt) Ich hatte gehofft mehr rausholen zu können aus meiner Rückkehr hierher ...
+	AI_Output(hero, self, "Info_Mod_Esteban_NW_Castlemine_15_02"); //Was meinst du?
+	AI_Output(self, hero, "Info_Mod_Esteban_NW_Castlemine_07_03"); //Ausstehende Rechnungen. Bevor man mich nämlich in die Kolonie warf, hatte ich einige Rücklagen ganz in der Nähe deponiert.
+	AI_Output(self, hero, "Info_Mod_Esteban_NW_Castlemine_07_04"); //Aber dass sich die Söldner jetzt als Schutzherren der Bauern geben verhindert, dass ich diese bergen kann.
+	AI_Output(self, hero, "Info_Mod_Esteban_NW_Castlemine_07_05"); //Aber eines Nachts schleich ich mich zu diesem dreckigen Sekob und prügele es aus ihm heraus ...
+	AI_Output(hero, self, "Info_Mod_Esteban_NW_Castlemine_15_06"); //Sekob der Bauer? Was hat der damit zu tun?
+	AI_Output(self, hero, "Info_Mod_Esteban_NW_Castlemine_07_07"); //Nun, bei ihm lagern meine Sachen. Ich hatte ihm damals einen Batzen Gold gegeben, dass er sie für mich verwahrt.
+	AI_Output(self, hero, "Info_Mod_Esteban_NW_Castlemine_07_08"); //Aber als ich jetzt bei ihm war, um die Dinge abzuholen, hat er mir nur damit gedroht die Söldner auf mich zu hetzen, wenn ich mich noch mal bei ihm blicken lasse.
+	AI_Output(self, hero, "Info_Mod_Esteban_NW_Castlemine_07_09"); //Es hat mich einiges an Beherrschung gekostet ihm nicht auf der Stelle den Schädel einzuschlagen.
+	AI_Output(self, hero, "Info_Mod_Esteban_NW_Castlemine_07_10"); //Aber einen Konflikt mit den Söldnern können wir uns leider nicht leisten.
+
+	AI_TurnAway	(self, hero);
+
+	AI_Output(self, hero, "Info_Mod_Esteban_NW_Castlemine_07_11"); //(zu sich selbst) Die Sachen sind bestimmt in der verschlossenen Truhe.
+
+	AI_TurnToNpc	(self, hero);
+};
+
+INSTANCE Info_Mod_Esteban_NW_Castlemine2 (C_INFO)
+{
+	npc		= Mod_1926_BDT_Esteban_NW;
+	nr		= 1;
+	condition	= Info_Mod_Esteban_NW_Castlemine2_Condition;
+	information	= Info_Mod_Esteban_NW_Castlemine2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich habe deine 'Rücklagen'.";
+};
+
+FUNC INT Info_Mod_Esteban_NW_Castlemine2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Esteban_NW_Castlemine))
+	&& (Npc_HasItems(hero, ItMi_EstebanPaket_01) == 1)
+	&& (Npc_HasItems(hero, ItMi_EstebanPaket_02) == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Esteban_NW_Castlemine2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Esteban_NW_Castlemine2_15_00"); //Ich habe deine "Rücklagen".
+	AI_Output(self, hero, "Info_Mod_Esteban_NW_Castlemine2_07_01"); //Tatsache! Da bin aber baff. Ich hoffe aber doch, dass wir nicht bald wütende Söldner abwehren müssen?
+	AI_Output(hero, self, "Info_Mod_Esteban_NW_Castlemine2_15_02"); //Da mach dir mal keine Sorgen.
+	AI_Output(self, hero, "Info_Mod_Esteban_NW_Castlemine2_07_03"); //Ausgezeichnet! Da hast du wirklich gute Arbeit geleistet. Hier, nimm zum Dank etwas Kraut, Erz und Gold.
+
+	B_ShowGivenThings	("300 Gold, 10 Erz, 5 Schwarzer Weiser und 4 Traumrufe erhalten");
+
+	CreateInvItems	(hero, ItMi_Gold, 300);
+	CreateInvItems	(hero, ItMi_Nugget, 10);
+	CreateInvItems	(hero, ItMi_Addon_Joint_02, 5);
+	CreateInvItems	(hero, ItMi_Traumruf, 4);
+
+	AI_Output(self, hero, "Info_Mod_Esteban_NW_Castlemine2_07_04"); //Achja, diesen Ring sollst du auch haben. Er kann dir immer nützlich sein, wenn du jemandem mit etwas Nachdruck um dessen Wertsachen erleichtern willst. Viel Spaß damit.
+
+	B_GiveInvItems	(self, hero, ItRi_Verschlagenheit, 1);
+
+	B_GivePlayerXP	(500);
+};
+
 INSTANCE Info_Mod_Esteban_NW_Pickpocket (C_INFO)
 {
 	npc		= Mod_1926_BDT_Esteban_NW;

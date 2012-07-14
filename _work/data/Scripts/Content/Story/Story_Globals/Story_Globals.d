@@ -46,6 +46,9 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+
+var int Mod_Ring_Verschlagenheit;
+var int Mod_Ring_Verschlagenheit_Sneak;
 var int Mod_Banditen_Mine;
 var int Mod_Banditen_Mine_Tag;
 var int Mod_Mineneingang_Castle;

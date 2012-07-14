@@ -426,8 +426,6 @@ FUNC VOID DAUERFUNC_01()
 
 	SetGuild();
 
-	//Print (IntToString(Mod_WM_BoedenAktiviert));
-
 	// Neue Zauber
 
 	NewMagic();
@@ -842,7 +840,23 @@ FUNC VOID DAUERFUNC_01()
 		{
 			Mod_Banditen_Irdorath_NW = 1;
 
-			Wld_InsertNpc	(Mod_7805_BlutkultKrieger_NW, "TAVERNE");
+			Wld_InsertNpc	(Mod_7806_BDT_Dexter_NW, "TAVERNE");
+
+			if (!Hlp_IsValidNpc(Mod_1926_BDT_Esteban_NW))
+			{
+				Wld_InsertNpc	(Mod_1926_BDT_Esteban_NW, "TAVERNE");
+			};
+
+			B_StartOtherRoutine	(Mod_1926_BDT_Esteban_NW, "CASTLEMINE");
+
+			if (!Hlp_IsValidNpc(Mod_1928_BDT_Morgahard_NW))
+			{
+				Wld_InsertNpc	(Mod_1928_BDT_Morgahard_NW, "TAVERNE");
+			};
+
+			B_StartOtherRoutine	(Mod_1928_BDT_Morgahard_NW, "CASTLEMINE");
+
+			// ToDo: Restliche Banditen umziehen lassen
 		};
 
 		if (Mod_Banditen_Mine == 0)
@@ -862,11 +876,21 @@ FUNC VOID DAUERFUNC_01()
 		{
 			Mod_Banditen_Mine = 2;
 
-			// ToDo: Esteban und Morgahard Rüstung umziehen
+			// ToDo: Morgahard Rüstung umziehen
 
 			AI_UnEquipArmor	(Mod_7806_BDT_Dexter_NW);
 			CreateInvItems	(Mod_7806_BDT_Dexter_NW, ItAr_Governor, 1);
 			AI_EquipArmor	(Mod_7806_BDT_Dexter_NW, ItAr_Governor);
+
+			AI_UnEquipArmor	(Mod_1926_BDT_Esteban_NW);
+			CreateInvItems	(Mod_1926_BDT_Esteban_NW, ItAr_Governor, 1);
+			AI_EquipArmor	(Mod_1926_BDT_Esteban_NW, ItAr_Governor);
+
+			AI_UnEquipArmor	(Mod_1928_BDT_Morgahard_NW);
+			CreateInvItems	(Mod_1928_BDT_Morgahard_NW, ItAr_Governor, 1);
+			AI_EquipArmor	(Mod_1928_BDT_Morgahard_NW, ItAr_Governor);
+
+			B_StartOtherRoutine	(Mod_7115_NONE_Nadja_NW, "DEXTER");
 		};
 	};
 

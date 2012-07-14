@@ -2036,6 +2036,40 @@ INSTANCE ItMi_FakeFreudenspenderSporen(C_Item)
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
+INSTANCE ItMi_EstebanPaket_01 (C_Item)
+{
+	name 				=	"Paket mit Sumpfkraut";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	0;
+
+	value 				=	500;
+
+	visual 				=	"ItMi_Packet.3ds";
+	material 			=	MAT_LEATHER;
+	//on_state[0]			=   UsePacket;
+	description			= 	name;
+	TEXT[1]				= 	"Trägt die Initialien 'EB'";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
+INSTANCE ItMi_EstebanPaket_02 (C_Item)
+{
+	name 				=	"Paket mit Erz";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	0;
+
+	value 				=	500;
+
+	visual 				=	"ItMi_Packet.3ds";
+	material 			=	MAT_LEATHER;
+	//on_state[0]			=   UsePacket;
+	description			= 	name;
+	TEXT[1]				= 	"Trägt die Initialien 'EB'";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
 //in dieser Funktio steht der inhalt, die use Funkt dann bitte einkommentiren.
 FUNC VOID UsePacket ()
 {
