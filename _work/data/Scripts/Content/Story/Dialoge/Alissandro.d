@@ -458,7 +458,6 @@ FUNC VOID Info_Mod_Alissandro_WarnungLagerEntdeckt_Info()
 	AI_Output(self, hero, "Info_Mod_Alissandro_WarnungLagerEntdeckt_28_01"); //Verdammt, wir teilen uns auf. Geh zur Goblinhöhle auf dem Weg zum Sumpflager.
 	AI_Output(self, hero, "Info_Mod_Alissandro_WarnungLagerEntdeckt_28_02"); //Benutze nicht den Bergpass, ich habe dir den Weg auf der Karte eingezeichnet.
 
-	CreateInvItems	(self, ItWr_MapToGobboHoehle, 1);
 	B_GiveInvItems	(self, hero, ItWr_MapToGobboHoehle, 1);
 
 	B_LogEntry	(TOPIC_MOD_AL_KillMission, "Alissandro wurde gewarnt. Wir werden uns aufteilen. Ich soll zur alten Goblinhöhle gehen, in der der Almanach versteckt war. Er hat mir den Weg auf der Karte eingezeichnet.");
