@@ -236,8 +236,7 @@ INSTANCE Info_Mod_Whistler_NW_Daemonen (C_INFO)
 
 FUNC INT Info_Mod_Whistler_NW_Daemonen_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Angebot))
-	|| (Npc_KnowsInfo(hero, Info_Mod_Myxir_Angebot))
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_Angebot))
 	{
 		return 1;
 	};
@@ -246,12 +245,7 @@ FUNC INT Info_Mod_Whistler_NW_Daemonen_Condition()
 FUNC VOID Info_Mod_Whistler_NW_Daemonen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Whistler_NW_Daemonen_15_00"); //Ich war bei den Dämonenrittern.
-
-	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Angebot))
-	{
-		AI_Output(hero, self, "Info_Mod_Whistler_NW_Daemonen_15_01"); //Dort meinte Gomez, er wolle das Lager zurückerobern.
-	};
-
+	AI_Output(hero, self, "Info_Mod_Whistler_NW_Daemonen_15_01"); //Dort meinte Gomez, er wolle das Lager zurückerobern.
 	AI_Output(self, hero, "Info_Mod_Whistler_NW_Daemonen_11_02"); //Was?! Verdammt, er wird vermutlich schon einen seiner Leute zum Lager geschickt haben, Alissandro muss sofort gewarnt werden!
 
 	B_LogEntry	(TOPIC_MOD_AL_MINE, "Whistler sagte, ich sollte so schnell wie möglich Alissandro warnen.");

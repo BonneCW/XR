@@ -92,3 +92,15 @@ FUNC VOID Rtn_Jagd_517()
 	TA_Guide_Player		(08,00,20,00,"PALTO_25");
 	TA_Guide_Player		(20,00,08,00,"PALTO_25");
 };
+
+FUNC VOID Rtn_InAL_7067()
+{
+	TA_Stand_Guarding		(08,00,20,00,"OCC_BARONS_DOOR");
+	TA_Stand_Guarding		(20,00,08,00,"OCC_BARONS_DOOR");
+};
+
+FUNC VOID Rtn_Outdoor_7067()
+{
+	TA_RunToWP		(08,00,20,00,"OC_ROUND_20");
+	TA_RunToWP		(20,00,08,00,"OC_ROUND_20");
+};

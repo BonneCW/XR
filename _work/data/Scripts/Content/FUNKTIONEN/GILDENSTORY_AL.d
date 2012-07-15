@@ -263,8 +263,6 @@ FUNC VOID GILDENSTORY_AL()
 
 		if (AustauschDialog_Demon == 1)
 		{
-			//Print ("GEHT");
-
 			if (DemonKnight_Talk == 0)
 			{
 				AI_GotoWP	(hero, "OW_PATH_1_15");
@@ -368,25 +366,26 @@ FUNC VOID GILDENSTORY_AL()
 		};
 
 		if (Mod_GomezAngriff == 0)
-		&& (Npc_KnowsInfo(hero, Info_Mod_Gomez_MT_WasWillstDu_B))
+		&& (Npc_KnowsInfo(hero, Info_Mod_Gomez_AtAL2_B))
 		&& (Npc_GetDistToWP(hero, "OC_ROUND_20") < 1000)
 		{
 			Mod_GomezAngriff = 1;
 
-			B_Attack	(Mod_1874_HMG_Makanius_MT, Mod_7067_DMR_Gomez_MT, AR_None, 0);
-			B_Attack	(Mod_7039_PAL_Oric_MT, Mod_7067_DMR_Gomez_MT, AR_None, 0);
-			B_Attack	(Mod_1870_EBR_Alissandro_MT, Mod_7067_DMR_Gomez_MT, AR_None, 0);
+			B_Attack	(Mod_1874_HMG_Makanius_MT, Mod_517_DMR_Gomez_MT, AR_None, 0);
+			B_Attack	(Mod_7039_PAL_Oric_MT, Mod_517_DMR_Gomez_MT, AR_None, 0);
+			B_Attack	(Mod_1870_EBR_Alissandro_MT, Mod_517_DMR_Gomez_MT, AR_None, 0);
 		};
 
 		if (Mod_GomezAngriff == 1)
-		&& (C_NpcIsDown(Mod_7067_DMR_Gomez_MT))
+		&& (C_NpcIsDown(Mod_517_DMR_Gomez_MT))
 		{
 			Mod_GomezAngriff = 2;
 
 			B_StartOtherRoutine	(Mod_680_DMB_Xardas_MT, "GOMEZ");
 			AI_Teleport	(Mod_680_DMB_Xardas_MT, "OC_ROUND_20");
 
-			Wld_InsertNpc	(Mod_7068_DMR_Raven_MT, "OC_ROUND_20");
+			B_StartOtherRoutine	(Mod_520_DMR_Raven_MT, "ATAL");
+			AI_Teleport	(Mod_520_DMR_Raven_MT, "OC_ROUND_20");
 		};
 
 		// Nicht mehr questrelevante NPC's wieder verwundbar machen
@@ -488,20 +487,20 @@ FUNC VOID GILDENSTORY_AL()
 
 			Mod_AL_BloodwynBartholoGefangen_Counter += 1;
 		};
-	};
 
-	if (CurrentLevel == NEWWORLD_ZEN)
-	{
 		if (Npc_KnowsInfo(hero, Info_Mod_Gomez_Angebot))
 		&& (hero.attribute[ATR_HITPOINTS] <= 3)
 		{
 			B_StartOtherRoutine	(Mod_513_DMB_Xardas_NW, "ANGEBOT");
 
-			//B_StartOtherRoutine	(Mod_517_DMR_Gomez_NW, "START");
+			B_StartOtherRoutine	(Mod_517_DMR_Gomez_MT, "START");
 
-			//AI_StartState	(Mod_517_DMR_Gomez_NW, ZS_MagicFreeze, 0, "");
+			AI_StartState	(Mod_517_DMR_Gomez_MT, ZS_MagicFreeze, 0, "");
 		};
+	};
 
+	if (CurrentLevel == NEWWORLD_ZEN)
+	{
 		// Cornelius erst nach Gespräch killen
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Cornelius_AtMarkt))

@@ -549,40 +549,6 @@ FUNC VOID Info_Mod_Myxir_Scar_Info()
 	AI_Output(self, hero, "Info_Mod_Myxir_Scar_28_03"); //(gehässig) Vielleicht ist er übergelaufen, wer weiß?
 };
 
-INSTANCE Info_Mod_Myxir_Angebot (C_INFO)
-{
-	npc		= Mod_515_KDS_Myxir_MT;
-	nr		= 1;
-	condition	= Info_Mod_Myxir_Angebot_Condition;
-	information	= Info_Mod_Myxir_Angebot_Info;
-	permanent	= 0;
-	important	= 1;
-};
-
-FUNC INT Info_Mod_Myxir_Angebot_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Kurgan_Angebot))
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Myxir_Angebot_Info()
-{
-	AI_Output(self, hero, "Info_Mod_Myxir_Angebot_28_00"); //(wütend) Was ist hier los?
-	AI_Output(hero, self, "Info_Mod_Myxir_Angebot_15_01"); //Kurgan hat mich angegriffen, als ich ihm erklärte, dass das Alte Lager gezwungen ist, härtere Maßnahmen zu ergreifen, falls sie uns nicht einen Teil der Alten Mine verkaufen wollen.
-	AI_Output(self, hero, "Info_Mod_Myxir_Angebot_28_02"); //Von der Mine wirst du jetzt nichts mehr sehen, und wenn Scar Wind davon bekommt und sich an das Alte Lager erinnern sollte, dann wird er mit den anderen wohl versuchen, das Lager einzunehmen, um seine alte Position wieder zu erlangen.
-	AI_Output(hero, self, "Info_Mod_Myxir_Angebot_15_03"); //Du solltest am besten jetzt verschwinden.
-
-	AI_StopProcessInfos	(self);
-
-	B_LogEntry	(TOPIC_MOD_AL_MINE, "Ich habe im Lager der Dämonenritter Kurgan getroffen, der mich angegriffen hat. Myxir konnte ihn lähmen und meinte, ich sollte fliehen. Ich berichte besser Whistler, was geschehen ist.");
-
-	AI_Teleport	(self, "START");
-
-	Npc_ExchangeRoutine	(self, "START");
-};	
-
 INSTANCE Info_Mod_Myxir_Ruestung (C_INFO)
 {
 	npc		= Mod_515_KDS_Myxir_MT;

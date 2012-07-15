@@ -86,3 +86,9 @@ FUNC VOID Rtn_Schiff_520()
 	TA_Stand_Guarding		(08,00,20,00,"SHIP_CREW_04");
 	TA_Stand_Guarding		(20,00,08,00,"SHIP_CREW_04");
 };
+
+FUNC VOID Rtn_AtAL_520()
+{
+	TA_Stand_Guarding		(08,00,20,00,"SPAWN_SIT_OW");
+	TA_Stand_Guarding		(20,00,08,00,"SPAWN_SIT_OW");
+};

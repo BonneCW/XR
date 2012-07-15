@@ -32,7 +32,7 @@ FUNC VOID Info_Mod_DaemonenritterWache_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_DaemonenritterWache_Hi_12_04"); //Das kann jeder sagen. Wer bist du überhaupt?
 	AI_Output(hero, self, "Info_Mod_DaemonenritterWache_Hi_15_05"); //Ich bin ...
 
-	Wld_InsertNpc	(Mod_7067_DMR_Gomez_MT, "OCC_BARONS_RIGHT_ROOM_TO_GREATHALL");
+	B_StartOtherRoutine	(Mod_517_DMR_Gomez_MT, "INAL");
 
 	AI_StopProcessInfos	(self);
 };
@@ -49,8 +49,8 @@ INSTANCE Info_Mod_DaemonenritterWache_Ok (C_INFO)
 
 FUNC INT Info_Mod_DaemonenritterWache_Ok_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Gomez_MT_Hi))
-	&& (!Npc_IsInState(Mod_7067_DMR_Gomez_MT, ZS_Talk))
+	if (Npc_KnowsInfo(hero, Info_Mod_Gomez_AtAL))
+	&& (!Npc_IsInState(Mod_517_DMR_Gomez_MT, ZS_Talk))
 	{
 		return 1;
 	};
@@ -58,7 +58,7 @@ FUNC INT Info_Mod_DaemonenritterWache_Ok_Condition()
 
 FUNC VOID Info_Mod_DaemonenritterWache_Ok_Info()
 {
-	AI_TurnToNpc	(self, Mod_7067_DMR_Gomez_MT);
+	AI_TurnToNpc	(self, Mod_517_DMR_Gomez_MT);
 
 	AI_Output(self, hero, "Info_Mod_DaemonenritterWache_Ok_12_00"); //Ja, Herr.
 
