@@ -49,7 +49,6 @@ FUNC VOID Info_Mod_Balor_Duenger_Info()
 	AI_Output(hero, self, "Info_Mod_Balor_Duenger_15_02"); //Ich soll es auf dem Feld verteilen?
 	AI_Output(self, hero, "Info_Mod_Balor_Duenger_01_03"); //Ja. Hier nimm diese Spitzhacke.
 
-	CreateInvItems	(self, ItMw_2H_Axe_L_01, 1);
 	B_GiveInvItems	(self, hero, ItMw_2H_Axe_L_01, 1);
 
 	AI_Output(self, hero, "Info_Mod_Balor_Duenger_01_04"); //Ich habe den Ort, an dem du düngen musst, mit einem roten X gekennzeichnet. Grab einfach dort und dünge dann.
@@ -86,6 +85,7 @@ FUNC VOID Info_Mod_Balor_DuengerVerteilt_Info()
 	AI_Output(self, hero, "Info_Mod_Balor_DuengerVerteilt_01_02"); //Hier hast du ein paar Stängel.
 
 	CreateInvItems	(self, ItMi_Joint, 6);
+
 	B_GiveInvItems	(self, hero, ItMi_Joint, 5);
 
 	AI_Output(self, hero, "Info_Mod_Balor_DuengerVerteilt_01_04"); //Ich zieh mir auch erst mal einen rein.
@@ -97,6 +97,50 @@ FUNC VOID Info_Mod_Balor_DuengerVerteilt_Info()
 	B_GivePlayerXP	(50);
 
 	Wld_SendTrigger	("EVT_MT_DUENGER");
+};
+
+INSTANCE Info_Mod_Balor_Sumpfmensch (C_INFO)
+{
+	npc		= Mod_3001_PSINOV_Balor_MT;
+	nr		= 1;
+	condition	= Info_Mod_Balor_Sumpfmensch_Condition;
+	information	= Info_Mod_Balor_Sumpfmensch_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Balor_Sumpfmensch_Condition()
+{
+	if (Guru_Dabei == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Balor_Sumpfmensch_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Balor_Sumpfmensch_01_00"); //Ahhhhhhh!!!
+	AI_Output(hero, self, "Info_Mod_Balor_Sumpfmensch_15_01"); //Was ist denn los?
+	AI_Output(self, hero, "Info_Mod_Balor_Sumpfmensch_01_02"); //Meine Güte, jag' mir doch nicht solche Angst ein! Kurz habe ich gedacht, du bist der ... der ... (schluckt)
+	AI_Output(hero, self, "Info_Mod_Balor_Sumpfmensch_15_03"); //Der was? Spuck's schon aus!
+	AI_Output(self, hero, "Info_Mod_Balor_Sumpfmensch_01_04"); //Der ... (nuschelt unverständlich)
+	AI_Output(hero, self, "Info_Mod_Balor_Sumpfmensch_15_05"); //Der WAS?
+	AI_Output(self, hero, "Info_Mod_Balor_Sumpfmensch_01_06"); //Der HEULENDE SUMPFMENSCH!!!
+
+	// ToDo: Chor ergänzen
+
+	AI_PlayAni	(self, "T_SEARCH");
+
+	AI_Output(self, hero, "Info_Mod_Balor_Sumpfmensch_01_07"); //Tut mir Leid, falscher Alarm!
+	AI_Output(hero, self, "Info_Mod_Balor_Sumpfmensch_15_08"); //Was hat es mit diesem heulenden Sumpfmenschen ... (schreiender Chor im Hintergrund) ... auf sich?
+	AI_Output(self, hero, "Info_Mod_Balor_Sumpfmensch_01_09"); //Wenn du mehr wissen willst, folge nachts vom Lagereingang dem rechten Steg bis du zu einem Lagerfeuer kommst.
+	AI_Output(self, hero, "Info_Mod_Balor_Sumpfmensch_01_10"); //Der Novize Fortuno gibt die Geschichte zum Besten. Und bring lieber Unterwäsche zum Wechseln mit.
+
+	Log_CreateTopic	(TOPIC_MOD_SL_SUMPFMENSCH, LOG_MISSION);
+	B_SetTopicStatus	(TOPIC_MOD_SL_SUMPFMENSCH, LOG_RUNNING);
+	B_LogEntry	(TOPIC_MOD_SL_SUMPFMENSCH, "Ich sollte nachts  vom Lagereingang dem rechten Steg folgen, bis ich an ein Lagerfeuer komme. Der Novize Fortuno erzählt dort anscheinend die Geschichte des 'heulenden Sumpfmenschen'.");
+
+	B_StartOtherRoutine	(Mod_951_PSINOV_Fortuno_MT, "SUMPFMENSCH");
 };
 
 INSTANCE Info_Mod_Balor_Woher (C_INFO)

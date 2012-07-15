@@ -44,7 +44,13 @@ instance Mod_2008_PSINOV_Ghorim_MT (Npc_Default)
 FUNC VOID Rtn_PreStart_2008 ()
 {
 	TA_Stomp_Herb 	(06,55,23,55,"PSI_HERB_PLACE_1");
-    TA_Sleep 		(23,55,06,55,"PSI_6_HUT_IN_BED3");
+	TA_Sleep 	(23,55,06,55,"PSI_6_HUT_IN_BED3");
+};
+
+FUNC VOID Rtn_Sumpfmensch_2008 ()
+{
+	TA_Stomp_Herb 	(07,00,22,00,"PSI_HERB_PLACE_1");
+	TA_Sit_Campfire	(22,00,07,00,"PSI_PLACE");
 };
 
 FUNC VOID Rtn_Tot_2008 ()

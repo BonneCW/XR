@@ -474,6 +474,16 @@ FUNC VOID GILDENSTORY_SL()
 				Wld_InsertNpc	(Mod_7721_OUT_Rank_MT, "MT_EREMIT_05");
 			};
 		};
+
+		// Dieses unheimliche Heulen
+
+		if (Mod_Fortuno_Sumpfmensch_Scene == 1)
+		{
+			if (!Npc_IsInState(Mod_2008_PSINOV_Ghorim_MT, ZS_Talk))
+			{
+				FortunoSumpfmensch_Scene();
+			};
+		};
 	};
 
 	if (Mod_Leichengase_Kraut == 0)

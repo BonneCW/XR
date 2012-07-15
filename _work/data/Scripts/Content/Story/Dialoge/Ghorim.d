@@ -18,6 +18,55 @@ FUNC VOID Info_Mod_Ghorim_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Ghorim_Hi_02_00"); //Du lebst noch? Danke nochmal, dass du mir damals geholfen hast.
 };
 
+INSTANCE Info_Mod_Ghorim_Sumpfmensch (C_INFO)
+{
+	npc		= Mod_2008_PSINOV_Ghorim_MT;
+	nr		= 1;
+	condition	= Info_Mod_Ghorim_Sumpfmensch_Condition;
+	information	= Info_Mod_Ghorim_Sumpfmensch_Info;
+	permanent	= 1;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Ghorim_Sumpfmensch_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Balor_Sumpfmensch))
+	&& (Mod_Fortuno_Sumpfmensch_Scene == 0)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Wld_IsTime(22,00,06,00))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Ghorim_Sumpfmensch_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Ghorim_Sumpfmensch_02_00"); //Pssst. Es geht gleich los! Willst du dich auch setzen?
+
+	Info_ClearChoices	(Info_Mod_Ghorim_Sumpfmensch);
+
+	Info_AddChoice	(Info_Mod_Ghorim_Sumpfmensch, "Nein.", Info_Mod_Ghorim_Sumpfmensch_B);
+	Info_AddChoice	(Info_Mod_Ghorim_Sumpfmensch, "Ja.", Info_Mod_Ghorim_Sumpfmensch_A);
+};
+
+FUNC VOID Info_Mod_Ghorim_Sumpfmensch_B()
+{
+	AI_Output(hero, self, "Info_Mod_Ghorim_Sumpfmensch_B_15_00"); //Nein.
+
+	Info_ClearChoices	(Info_Mod_Ghorim_Sumpfmensch);
+
+	Npc_SetRefuseTalk	(self, 30);
+};
+
+FUNC VOID Info_Mod_Ghorim_Sumpfmensch_A()
+{
+	AI_Output(hero, self, "Info_Mod_Ghorim_Sumpfmensch_A_15_00"); //Ja.
+
+	Info_ClearChoices	(Info_Mod_Ghorim_Sumpfmensch);
+
+	Mod_Fortuno_Sumpfmensch_Scene = 1;
+};
+
 INSTANCE Info_Mod_Ghorim_Woher (C_INFO)
 {
 	npc		= Mod_2008_PSINOV_Ghorim_MT;

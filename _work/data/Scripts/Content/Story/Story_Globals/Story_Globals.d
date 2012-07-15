@@ -47,6 +47,7 @@ var int Bosskampf_Pass_NW;
 
 
 
+var int Mod_Fortuno_Sumpfmensch_Scene;
 var int Mod_Ring_Verschlagenheit;
 var int Mod_Ring_Verschlagenheit_Sneak;
 var int Mod_Banditen_Mine;
