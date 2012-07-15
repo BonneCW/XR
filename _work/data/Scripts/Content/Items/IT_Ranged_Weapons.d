@@ -698,7 +698,7 @@ INSTANCE ItRw_Sld_Bow_Schmetter (C_Item)
 	cond_atr[2]   		= 	ATR_DEXTERITY;
 	cond_value[2]  		= 	Condition_Sldbogen;
 
-	range		= 25000;
+	range		= 2500;
 	
 	on_equip	=	munichange;
 	on_unequip	=	munichange_e;

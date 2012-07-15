@@ -468,7 +468,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		if (rwp.munition == ItRw_SprengstoffArrow)
 		|| (rwp.munition == ItRw_SprengstoffBolt)
 		{
-			rangeBonus -= 2000;
+			rangeBonus -= 1200;
 
 			damage += (damage*50)/100;
 		};
