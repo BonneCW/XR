@@ -751,7 +751,7 @@ FUNC INT Info_Mod_Lester_EXIT_Condition()
 
 FUNC VOID Info_Mod_Lester_EXIT_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lester_EXIT_13_01"); //Dem Ziel entgegen!
-
 	AI_StopProcessInfos	(self);
+
+	AI_Output(self, hero, "Info_Mod_Lester_EXIT_13_00"); //Dem Ziel entgegen!
 };

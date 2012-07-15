@@ -199,8 +199,8 @@ FUNC VOID Info_Mod_Fahim_Lehrer_Info()
 
 	AI_Output(self, hero, "Info_Mod_Fahim_Lehrer_10_00"); //Ich kann dir den Umgang mit Einhändern beibringen.
 
-	Log_CreateTopic	(TOPIC_MOD_LEHRER_DÄMONENRITTER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_LEHRER_DÄMONENRITTER, "Fahim kann mich im Kampf mit Einhändern unterweisen.");
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_BELIARFESTUNG, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Fahim kann mich im Kampf mit Einhändern unterweisen.");
 };
 
 INSTANCE Info_Mod_Fahim_Lernen (C_INFO)

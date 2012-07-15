@@ -655,6 +655,8 @@ FUNC VOID Info_Mod_Per_Pruefung4_F()
 	Info_Mod_Per_Pruefung4_E();
 };
 
+var int Mod_Knows_PerTeacher;
+
 INSTANCE Info_Mod_Per_Lernen_DEX (C_INFO)
 {
 	npc		= Mod_7353_VMG_Per_TUG;
@@ -676,6 +678,14 @@ FUNC INT Info_Mod_Per_Lernen_DEX_Condition()
 
 FUNC VOID Info_Mod_Per_Lernen_DEX_Info()
 {
+	if (Mod_Knows_PerTeacher == FALSE)
+	{
+		Mod_Knows_PerTeacher = TRUE;
+
+		Log_CreateTopic	(TOPIC_MOD_LEHRER_VM, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_LEHRER_VM, "Per kann mir zeigen wie ich geschickter werde.");
+	};
+
 	AI_Output(hero, self, "Info_Mod_Per_Lernen_DEX_15_00"); //Bring mir was bei.
 	AI_Output(self, hero, "Info_Mod_Per_Lernen_DEX_13_01"); //Was willst du lernen?
 

@@ -213,8 +213,8 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Verteiler()
 
 		B_SetTopicStatus	(TOPIC_MOD_ALAX_ZUTATEN, LOG_SUCCESS);
 
-		Log_CreateTopic	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, LOG_NOTE);
-		B_LogEntry	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, "Alax kann mich in der Kunst der Alchemie unterweisen.");
+		Log_CreateTopic	(TOPIC_MOD_LEHRER_BELIARFESTUNG, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Alax kann mich in der Kunst der Alchemie unterweisen.");
 	};
 };
 

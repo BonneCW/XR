@@ -23,6 +23,9 @@ FUNC VOID Info_Mod_Hermy_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Hermy_Hi_05_04"); //Ich handle mit Verwandlungsspruchrollen. Ich kann dir ein paar einfache Rollen anbieten, aber die wertvollen Sprüche verkaufe ich nur an Mitglieder.
 	AI_Output(hero, self, "Info_Mod_Hermy_Hi_15_05"); //Ich komm darauf zurück.
 	AI_Output(self, hero, "Info_Mod_Hermy_Hi_05_06"); //Bei mir bist du immer wollkommen.
+
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_VM, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_VM, "Hermy verkauft Verwandlungsspruchrollen.");
 };
 
 INSTANCE Info_Mod_Hermy_QuestHermy (C_INFO)

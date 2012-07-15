@@ -2363,8 +2363,8 @@ FUNC VOID Info_Mod_Xardas_NW_VonWemKannIchLernen_Info()
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_VonWemKannIchLernen_15_00"); //Bei wem kann ich was lernen?
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_VonWemKannIchLernen_14_01"); //Ich kann dir etwas über die Magie beibringen.
 
-	Log_CreateTopic	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, "Xardas kann mir helfen mein Mana zu steigern.");
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_BELIARFESTUNG, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Xardas kann mir helfen mein Mana zu steigern.");
 };
 
 INSTANCE Info_Mod_Xardas_NW_GomezHier (C_INFO)
@@ -3389,8 +3389,8 @@ FUNC VOID Info_Mod_Xardas_NW_Lehrer_Info()
 		{
 			Mod_XardasAlchemie = TRUE;
 
-			Log_CreateTopic	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, LOG_NOTE);
-			B_LogEntry	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, "Xardas kann mir etwas über die Alchemie beibringen.");
+			Log_CreateTopic	(TOPIC_MOD_LEHRER_BELIARFESTUNG, LOG_NOTE);
+			B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Xardas kann mir etwas über die Alchemie beibringen.");
 		};
 
 		Info_ClearChoices 	(Info_Mod_Xardas_NW_Lehrer);

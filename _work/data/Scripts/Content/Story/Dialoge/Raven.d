@@ -704,8 +704,8 @@ FUNC VOID Info_Mod_Raven_Teacher_Info()
 	AI_Output(self, hero, "Info_Mod_Raven_Teacher_10_01"); //Ja, ich kann dir zeigen wie du stärker wirst.
 	AI_Output(self, hero, "Info_Mod_Raven_Teacher_10_02"); //Außerdem kann ich dir den Umgang mit Zweihandwaffen beibringen.
 
-	Log_CreateTopic	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, "Raven kann mir beibringen wie ich stärker werde und wie ich mit Zweihandwaffen umgehe.");
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_BELIARFESTUNG, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Raven kann mir beibringen wie ich stärker werde und wie ich mit Zweihandwaffen umgehe.");
 };
 
 INSTANCE Info_Mod_Raven_Lernen (C_INFO)

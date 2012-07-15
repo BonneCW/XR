@@ -1021,6 +1021,8 @@ FUNC VOID Info_Mod_Albert_WerBistDu_A()
 	};
 };
 
+var int Mod_Knows_AlbertTeacher;
+
 INSTANCE Info_Mod_Albert_Lernen_MANA (C_INFO)
 {
 	npc		= Mod_1958_VMG_Albert_MT;
@@ -1044,6 +1046,14 @@ FUNC INT Info_Mod_Albert_Lernen_MANA_Condition()
 
 FUNC VOID Info_Mod_Albert_Lernen_MANA_Info()
 {
+	if (Mod_Knows_AlbertTeacher == FALSE)
+	{
+		Mod_Knows_AlbertTeacher = TRUE;
+
+		Log_CreateTopic	(TOPIC_MOD_LEHRER_VM, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_LEHRER_VM, "Albert kann mir helfen meine magische Kraft zu steigern.");
+	};
+
 	AI_Output(hero, self, "Info_Mod_Albert_Lernen_MANA_15_00"); //Ich will meine magischen Kräfte steigern.
 
 	Info_ClearChoices	(Info_Mod_Albert_Lernen_MANA);

@@ -932,6 +932,8 @@ FUNC VOID Info_Mod_Genn_Pruefung3_Info()
 	AI_Output(self, hero, "Info_Mod_Genn_Pruefung3_09_05"); //Mach's gut!
 };
 
+var int Mod_Knows_GennTrader;
+
 INSTANCE Info_Mod_Genn_Trade (C_INFO)
 {
 	npc		= Mod_1959_VMG_Genn_TUG;
@@ -951,6 +953,13 @@ FUNC INT Info_Mod_Genn_Trade_Condition()
 
 FUNC VOID Info_Mod_Genn_Trade_Info()
 {
+	if (Mod_Knows_GennTrader == FALSE)
+	{
+		Mod_Knows_GennTrader = TRUE;
+
+		Log_CreateTopic	(TOPIC_MOD_HAENDLER_VM, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_HAENDLER_VM, "Genn handelt mit magischem Zubehör.");
+	};
 	Backup_Questitems();
 
 	B_GiveTradeInv (self);

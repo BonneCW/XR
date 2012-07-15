@@ -1,5 +1,4 @@
-const string TOPIC_MOD_HAENDLER_DÄMONENBESCHWÖRER	=	"Händler Dämonenbeschwörer";
-const string TOPIC_MOD_HAENDLER_DÄMONENRITTER	=	"Händler Dämonenritter";
+const string TOPIC_MOD_HAENDLER_BELIARFESTUNG	=	"Händler Beliarfestung";
 const string TOPIC_MOD_HAENDLER_OHNELAGER	=	"Händler Außenwelt";
 const string TOPIC_MOD_HAENDLER_STADT	=	"Händler Stadt";
 const string TOPIC_MOD_HAENDLER_ONAR	=	"Händler Onars Hof";
@@ -13,3 +12,4 @@ const string TOPIC_MOD_HAENDLER_KHORATA	=	"Händler Khorata";
 const string TOPIC_MOD_HAENDLER_WALDIS	=	"Händler Waldläuferlager";
 const string TOPIC_MOD_HAENDLER_KG	=	"Händler königl. Garde";
 const string TOPIC_MOD_HAENDLER_EISGEBIET	=	"Händler Gelato";
+const string TOPIC_MOD_HAENDLER_VM	=	"Händler Verwandlungsmagier";

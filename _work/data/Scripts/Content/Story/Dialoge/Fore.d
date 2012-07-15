@@ -66,6 +66,8 @@ FUNC VOID Info_Mod_Fore_Trador_C()
 	Info_Mod_Fore_Trador_A();
 };
 
+var int Mod_Knows_ForeTeacher;
+
 INSTANCE Info_Mod_Fore_Lehrer (C_INFO)
 {
 	npc		= Mod_7356_VMG_Fore_TUG;
@@ -87,6 +89,14 @@ FUNC INT Info_Mod_Fore_Lehrer_Condition()
 
 FUNC VOID Info_Mod_Fore_Lehrer_Info()
 {
+	if (Mod_Knows_ForeTeacher == FALSE)
+	{
+		Mod_Knows_ForeTeacher = TRUE;
+
+		Log_CreateTopic	(TOPIC_MOD_LEHRER_VM, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_LEHRER_VM, "Fore kann mich in der Kunst der Alchemie unterweisen.");
+	};
+
 	AI_Output (hero, self, "Info_Mod_Fore_Lehrer_15_00"); //Kann ich bei dir lernen?
 	AI_Output (self, hero, "Info_Mod_Fore_Lehrer_01_01"); //Ich werde dich in die Geheimnisse der Alchemie einweihen.
 		

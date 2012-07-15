@@ -103,6 +103,8 @@ FUNC VOID Info_Mod_Dever_Frage_Info()
 	B_SetTopicStatus	(TOPIC_MOD_DEVER_DEAN, LOG_SUCCESS);
 };
 
+var int Mod_Knows_DeverTeacher;
+
 INSTANCE Info_Mod_Dever_Lernen (C_INFO)
 {
 	npc		= Mod_7354_VMG_Dever_TUG;
@@ -125,6 +127,14 @@ FUNC INT Info_Mod_Dever_Lernen_Condition()
 
 FUNC VOID Info_Mod_Dever_Lernen_Info()
 {
+	if (Mod_Knows_DeverTeacher == FALSE)
+	{
+		Mod_Knows_DeverTeacher = TRUE;
+
+		Log_CreateTopic	(TOPIC_MOD_LEHRER_VM, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_LEHRER_VM, "Dever kann mir helfen stärker zu werden.");
+	};
+
 	AI_Output(hero, self, "Info_Mod_Dever_Lernen_15_00"); //Ich will stärker werden!
 
 	Info_ClearChoices	(Info_Mod_Dever_Lernen);

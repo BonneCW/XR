@@ -660,8 +660,8 @@ FUNC VOID Info_Mod_Myxir_Lehrer_Info()
 
 	AI_Output(self, hero, "Info_Mod_Myxir_Lehrer_28_01"); //Ich kann dir zeigen, wie du Menschen, die du getötet hast, Blut abnehmen kannst.
 
-	Log_CreateTopic	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, "Myxir kann mir zeigen, wie ich toten Menschen Blut abnehmen kann.");
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_BELIARFESTUNG, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Myxir kann mir zeigen, wie ich toten Menschen Blut abnehmen kann.");
 };
 
 INSTANCE Info_Mod_Myxir_Blut (C_INFO)

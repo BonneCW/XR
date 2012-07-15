@@ -19,6 +19,9 @@ FUNC VOID Info_Mod_Anor_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_Anor_Hi_15_00"); //Was machst du hier?
 	AI_Output(self, hero, "Info_Mod_Anor_Hi_02_01"); //Ich bin Händler und verkaufe Tränke. Wieso willst du das wissen?
 
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_VM, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_VM, "Anor handelt mit Tränken.");
+
 	Info_ClearChoices	(Info_Mod_Anor_Hi);
 
 	Info_AddChoice	(Info_Mod_Anor_Hi, "Ich will wissen, wen ich töte, wenn ich hier alle niedermetzle.", Info_Mod_Anor_Hi_B);
