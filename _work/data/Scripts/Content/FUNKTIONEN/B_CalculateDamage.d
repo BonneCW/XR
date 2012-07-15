@@ -156,16 +156,22 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		taeterMonster = TRUE;
 	};
 
+	if (blubb.comboNr > 0)
+	{
+		damage += blubb.comboNr*damage;
+	};
+
+	if (blubb.hitAniID == blubb._t_hitfrun)
+	&& (!C_BodyStateContains(taeter, BS_SWIM))
+	{
+		damage += taeter.attribute[ATR_STRENGTH];
+	};
+
 	// Wenn von hinten angegriffen, Schaden verdoppeln
 
 	if (!Npc_CanSeeNpc(opfer, taeter))
 	{
 		damage = damage*2;
-	};
-
-	if (blubb.comboNr > 0)
-	{
-		damage += blubb.comboNr*damage;
 	};
 
 	// Rüstungsschutz vom Schaden abziehen

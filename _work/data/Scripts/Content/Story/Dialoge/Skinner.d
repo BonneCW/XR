@@ -98,25 +98,21 @@ FUNC VOID Info_Mod_Skinner_Laufbursche_Info()
 	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_00"); //Achja, fast hätte ich es noch vergessen. Ich habe da noch was schönes, was du Myxir vorbeibringen sollst. Er experimentiert gerade an irgendwelchen neuen Beschwörungszaubern.
 	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_01"); //Erst mal einige Skelettknochen ...
 
-	CreateInvItems	(self, ItAt_SkeletonBone, 20);
 	B_GiveInvItems	(self, hero, ItAt_SkeletonBone, 20);
 
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche_15_02"); //Aha ...
 	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_03"); //... paar Goblinknochen ...
 
-	CreateInvItems	(self, ItAt_GoblinBone, 14);
 	B_GiveInvItems	(self, hero, ItAt_GoblinBone, 14);
 
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche_15_04"); //Schön ...
 	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_05"); //... Totenschädel ...
 
-	CreateInvItems	(self, ItAt_SkeletonHead, 4);
 	B_GiveInvItems	(self, hero, ItAt_SkeletonHead, 4);
 
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche_15_06"); //Was noch?
 	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_07"); //... zwei Köpfe ...
 
-	CreateInvItems	(self, ItMi_Addon_Bloodwyn_Kopf, 2);
 	B_GiveInvItems	(self, hero, ItMi_Addon_Bloodwyn_Kopf, 2);
 
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche_15_08"); //Wie nett ...

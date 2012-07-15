@@ -1204,7 +1204,7 @@ FUNC VOID DAUERFUNC_01()
 			Wld_InsertNpc	(Monster_11077_Skelett_MT, "OC1");
 			Wld_InsertNpc	(Monster_11078_Skelett_MT, "OC1");
 
-			Wld_InsertNpc	(Mod_7805_BlutkultKrieger_NW, "OC1");
+			Wld_InsertNpc	(Mod_7805_BlutkultKrieger_MT, "OC1");
 		};
 	};
 

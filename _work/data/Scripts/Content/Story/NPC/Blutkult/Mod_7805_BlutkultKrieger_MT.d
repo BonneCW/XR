@@ -1,9 +1,9 @@
-instance Mod_7805_BlutkultKrieger_NW (Npc_Default)
+instance Mod_7805_BlutkultKrieger_MT (Npc_Default)
 {
 	//-------- primary data --------
 	name 		=		"Blutkult-Krieger";
 	Npctype 		=		Npctype_main;
-	guild 		=		GIL_DMT;
+	guild 		=		GIL_STRF;
 	level 		=		60;
 	 	
 	voice 		=		2;

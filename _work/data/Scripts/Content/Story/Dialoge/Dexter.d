@@ -363,7 +363,7 @@ FUNC VOID Info_Mod_Dexter_QuentinsBack_Info()
 	AI_Output(self, hero, "Info_Mod_Dexter_QuentinsBack_09_07"); //Als wir ihm das Amulett zum Aufpolieren gaben, muss er noch in selber Nacht eine exakte Kopie erstellt haben, welche er uns dann am nächsten Tag übergab.
 	AI_Output(self, hero, "Info_Mod_Dexter_QuentinsBack_09_08"); //Das Original muss er irgendwo versteckt haben. Ich kann jetzt aber nicht einfach zu ihm gehen und ihn in stücke hauen. Wir brauchen ihn noch.
 	AI_Output(hero, self, "Info_Mod_Dexter_QuentinsBack_15_09"); //Was bleibt zu tun?
-	AI_Output(self, hero, "Info_Mod_Dexter_QuentinsBack_09_10"); //Das überlasse ich dir. Kümmere du dich um Oschust. Bringe ihn mit etwas ,,Diplomatie’’ dazu, dir Auskunft über den Standort des Amulettes zu geben.
+	AI_Output(self, hero, "Info_Mod_Dexter_QuentinsBack_09_10"); //Das überlasse ich dir. Kümmere du dich um Oschust. Bringe ihn mit etwas "Diplomatie" dazu, dir Auskunft über den Standort des Amulettes zu geben.
 	AI_Output(self, hero, "Info_Mod_Dexter_QuentinsBack_09_11"); //Aber er soll danach noch weiterhin dazu in der Lage sein, seinem Fälscherhandwerk nachzugehen. Du verstehst?
 	AI_Output(self, hero, "Info_Mod_Dexter_QuentinsBack_09_12"); //Gut. Erstatte mir danach wieder Bericht.
 
