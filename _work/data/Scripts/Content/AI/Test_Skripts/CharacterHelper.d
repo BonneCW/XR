@@ -19,7 +19,7 @@
 func void UseMobsiBrief ()
 {
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_NONE;
-		self.aivar[AIV_INVINCIBLE]=FALSE;
+		B_SetAivar(self, AIV_INVINCIBLE, FALSE);
 	
 		var int nDocID;
 

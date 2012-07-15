@@ -80,12 +80,12 @@ INSTANCE Info_Mod_Vino_Pruegel (C_INFO)
 FUNC INT Info_Mod_Vino_Pruegel_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Vino_Hi))
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 	{
 		return 1;
 	}
 	else if (Npc_KnowsInfo(hero, Info_Mod_Vino_Hi))
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 	{
 		Mod_VinoWillRache = 1;
 	};

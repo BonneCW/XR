@@ -14,8 +14,8 @@ func int B_AssessEnemy()
 
 	B_Vergiftet (self);
 
-	if (other.aivar[AIV_INVINCIBLE] == TRUE)
-	|| (self.aivar[AIV_INVINCIBLE] == TRUE)
+	if (B_GetAivar(other, AIV_INVINCIBLE) == TRUE)
+	|| (B_GetAivar(self, AIV_INVINCIBLE) == TRUE)
 	{
 		return FALSE;
 	};

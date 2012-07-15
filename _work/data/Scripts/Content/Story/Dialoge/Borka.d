@@ -149,7 +149,7 @@ FUNC VOID Info_Mod_Borka_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_04_00"); //Mannomann! Du hast ja 'nen ganz schönen Schlag drauf.
 			AI_Output(hero, self, "Info_Mod_Borka_Umgehauen_15_02"); //Willst du mir jetzt sagen, wer dich schickt?
@@ -169,7 +169,7 @@ FUNC VOID Info_Mod_Borka_Umgehauen_Info()
 
 			B_LogEntry	(TOPIC_MOD_AL_LAGERHAUS, "Es war Borka. Er arbeitet für Bromor, der uns Sträflinge nicht zu mögen scheint. Das sollte ich Whistler erzählen.");
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_04_01"); //Tja, das war wohl nichts.
 

@@ -741,7 +741,7 @@ func void PLAYER_HOTKEY_LAME_HEAL ()
 	{
 		var C_NPC her; her = Hlp_GetNpc(PC_Hero);
 
-		her.aivar[AIV_INVINCIBLE]=TRUE; //Gegner greifen nicht an, solange der Held im Auswahlmodus ist
+		B_SetAivar(her, AIV_INVINCIBLE, TRUE); //Gegner greifen nicht an, solange der Held im Auswahlmodus ist
 		PLAYER_MOBSI_PRODUCTION = MOBSI_AniLog; //Der Mobsi AniLog ist aktiv
 		AI_ProcessInfos (her); //Dialog wird gestartet
 	};

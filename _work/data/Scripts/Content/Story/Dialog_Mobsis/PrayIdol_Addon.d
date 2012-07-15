@@ -133,7 +133,7 @@ FUNC VOID PrayIdol_S1 ()
 
 		Wld_PlayEffect("DEMENTOR_FX",  hero, hero, 0, 0, 0, FALSE );
 
-		self.aivar[AIV_INVINCIBLE] = TRUE; 
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	= MOBSI_PRAYIDOL;
 		Ai_ProcessInfos (her);
 	};

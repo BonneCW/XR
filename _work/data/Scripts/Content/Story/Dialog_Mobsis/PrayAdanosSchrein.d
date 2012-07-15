@@ -18,7 +18,7 @@ FUNC VOID PrayAdanosSchrein_S1 ()
 	{	
 		AI_Output(hero, hero, "Info_Mod_Hero_Altar_Adanos_15_00"); //Adanos!
 
-		self.aivar[AIV_INVINCIBLE]=TRUE; 
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_PrayAdanosSchrein;
 		Ai_ProcessInfos (her);
 	};

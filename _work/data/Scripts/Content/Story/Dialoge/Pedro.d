@@ -20,6 +20,7 @@ FUNC INT Info_Mod_Pedro_Hi_Condition()
 FUNC VOID Info_Mod_Pedro_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Pedro_Hi_09_01"); //Ich bin Pedro. Was willst du von mir?
 };
 
@@ -47,6 +48,7 @@ FUNC VOID Info_Mod_Pedro_Erwischt_Info()
 	AI_Output(self, hero, "Info_Mod_Pedro_Erwischt_09_04"); //Dann komm und hol ihn dir.
 
 	AI_StopProcessInfos	(self);
+
 	B_Attack	(self, hero, AR_NONE, 1);
 };
 
@@ -72,7 +74,7 @@ FUNC VOID Info_Mod_Pedro_Niederlage_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Pedro_Niederlage_09_00"); //Ok, du hast gewonnen.
 			AI_Output(hero, self, "Info_Mod_Pedro_Niederlage_15_01"); //Gibst du mir jetzt den Ring?
@@ -85,7 +87,7 @@ FUNC VOID Info_Mod_Pedro_Niederlage_Info()
 
 			B_Göttergefallen(1, 1);
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Pedro_Niederlage_09_03"); //Das hast du davon. Jetzt mach das du verschwindest.
 		};

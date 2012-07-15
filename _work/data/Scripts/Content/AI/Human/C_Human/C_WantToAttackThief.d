@@ -11,7 +11,7 @@ func int C_WantToAttackThief (var C_NPC slf, var C_NPC oth)
 		return FALSE;
 	};
 	
-	if (slf.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+	if (B_GetAivar(slf, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 	{
 		return FALSE;
 	};

@@ -24,8 +24,8 @@ func void B_Attack (var C_NPC slf, var C_NPC oth, var int attack_reason, var int
 	// ------ wenn aus ZS_Talk B_Attack aufgerufen wird ------
 	if (Npc_IsInState (slf, ZS_Talk))
 	{
-		slf.aivar[AIV_INVINCIBLE] = FALSE;
-		oth.aivar[AIV_INVINCIBLE] = FALSE; //VORSICHT! (selten) in Dialogen ANDERES Target (s. Cipher & Dar) - dann manuell machen
+		B_SetAivar(slf, AIV_INVINCIBLE, FALSE);
+		B_SetAivar(oth, AIV_INVINCIBLE, FALSE); //VORSICHT! (selten) in Dialogen ANDERES Target (s. Cipher & Dar) - dann manuell machen
 	};
 
 	// ------ wenn der NSC schon in ZS_Attack ist ------
@@ -110,7 +110,7 @@ func void B_Attack (var C_NPC slf, var C_NPC oth, var int attack_reason, var int
 	// BUGFIX: Nicht, wenn verwandelt
 	if (C_NpcIsHero(oth))
 	{
-		slf.aivar[AIV_LastFightAgainstPlayer] = FIGHT_CANCEL;
+		B_SetAivar(slf, AIV_LastFightAgainstPlayer, FIGHT_CANCEL);
 		slf.aivar[AIV_LastFightComment] = FALSE;
 	};
 	
@@ -118,8 +118,10 @@ func void B_Attack (var C_NPC slf, var C_NPC oth, var int attack_reason, var int
 	{
 		Npc_ClearAIQueue(slf); 
 	};
+
 	B_ClearPerceptions	(slf);
 	Npc_SetTarget		(slf, oth);
+
 	if (C_BodyStateContains(slf, BS_LIE))
 	{
 		AI_StartState		(slf, ZS_Attack, 1, "");
@@ -128,5 +130,6 @@ func void B_Attack (var C_NPC slf, var C_NPC oth, var int attack_reason, var int
 	{
 		AI_StartState		(slf, ZS_Attack, 0, "");
 	};
+
 	return;
 };

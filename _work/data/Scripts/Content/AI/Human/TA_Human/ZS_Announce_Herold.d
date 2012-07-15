@@ -27,7 +27,7 @@ func void ZS_Announce_Herold()
 func int ZS_Announce_Herold_loop()
 {
 	if (Npc_GetStateTime(self) >= 30)
-	&& (hero.aivar[AIV_INVINCIBLE] == FALSE) //quatscht so nicht mehr rein
+	&& (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE) //quatscht so nicht mehr rein
 	{
 		AI_PlayAni (self,"T_HGUARD_2_STAND");
 		self.aivar[AIV_TAPOSITION] = NOTINPOS;

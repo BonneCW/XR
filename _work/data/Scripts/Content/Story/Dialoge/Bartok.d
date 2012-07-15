@@ -72,7 +72,7 @@ FUNC VOID Info_Mod_Bartok_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Bartok_Umgehauen_04_00"); //Mannomann! Du hast ja 'nen ganz schönen Schlag drauf. Hier ist das Gold.
 
@@ -84,7 +84,7 @@ FUNC VOID Info_Mod_Bartok_Umgehauen_Info()
 
 			B_Göttergefallen(1, 1);
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Bartok_Umgehauen_04_01"); //Tja, das war wohl nichts.
 		};
@@ -326,7 +326,7 @@ FUNC VOID Info_Mod_Bartok_Arbeite_AufsMaul_Gekriegt_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Bartok_Arbeite_AufsMaul_Gekriegt_04_00"); //Mannomann! Du hast ja 'nen ganz schönen Schlag drauf.
 
@@ -334,7 +334,7 @@ FUNC VOID Info_Mod_Bartok_Arbeite_AufsMaul_Gekriegt_Info()
 
 			B_Göttergefallen(3, 1);
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Bartok_Arbeite_AufsMaul_Gekriegt_04_01"); //Tja, das war wohl nichts.
 

@@ -171,7 +171,7 @@ INSTANCE Info_Mod_Lagerhauswache_Umgehauen (C_INFO)
 FUNC INT Info_Mod_Lagerhauswache_Umgehauen_Condition()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 	&& (Npc_IsInState(self, ZS_Talk))
 	{
 		return 1;
@@ -204,7 +204,7 @@ INSTANCE Info_Mod_Lagerhauswache_Umgehauen2 (C_INFO)
 FUNC INT Info_Mod_Lagerhauswache_Umgehauen2_Condition()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 	&& (Npc_IsInState(self, ZS_Talk))
 	{
 		return 1;

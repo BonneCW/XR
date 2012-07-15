@@ -34,7 +34,7 @@ func void B_AssessBody()
 	};
 	
 	// ------ Wurde schon geplündert ------
-	if (other.aivar[AIV_RANSACKED] == TRUE)
+	if (B_GetAivar(other, AIV_RANSACKED) == TRUE)
 	{
 		return;
 	};

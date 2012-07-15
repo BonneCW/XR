@@ -8,7 +8,7 @@ FUNC VOID Opferaltar_S1 ()
 		&& (Npc_KnowsInfo(hero, Info_Mod_Cronos_AW_Artefakt_04))
 		&& (!Npc_KnowsInfo(hero, Info_Mod_AdanosDog_Kristall))
 		{
-			self.aivar[AIV_INVINCIBLE] = TRUE;
+			B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 			PLAYER_MOBSI_PRODUCTION	= MOBSI_Opferaltar;
 			Ai_ProcessInfos (her);
 		}
@@ -23,13 +23,13 @@ FUNC VOID Opferaltar_S1 ()
 		&& (Mod_ASS_Waechter_08 == 1)
 		&& (Mod_ASS_Waechter_09 == 1)
 		{
-			self.aivar[AIV_INVINCIBLE] = TRUE;
+			B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 			PLAYER_MOBSI_PRODUCTION	= MOBSI_Opferaltar;
 			Ai_ProcessInfos (her);
 		}
 		else if (Mod_Riordian_Geister == 1)
 		{
-			self.aivar[AIV_INVINCIBLE] = TRUE;
+			B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 			PLAYER_MOBSI_PRODUCTION	= MOBSI_Opferaltar;
 			Ai_ProcessInfos (her);
 		}

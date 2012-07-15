@@ -20,7 +20,7 @@ func int Spell_Logic_Charm(var int manaInvested)
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_Charm)
 	{
 		//---STORY: Ignaz-Mission-----------------------------
-		if (other.aivar[AIV_NpcSawPlayerCommit] != CRIME_NONE)
+		if (B_GetAivar(other, AIV_NpcSawPlayerCommit) != CRIME_NONE)
 		&& (MIS_Ignaz_Charm == LOG_RUNNING)
 		{
 			Charm_Test = TRUE;
@@ -28,8 +28,8 @@ func int Spell_Logic_Charm(var int manaInvested)
 		//----------------------------------------------------
 			
 		B_DeletePetzCrime (other); ///hat bei CRIME_NONE (oder keiner Home-Location) keine Auswirkungen
- 		other.aivar[AIV_NpcSawPlayerCommit] = CRIME_NONE;
- 		other.aivar[AIV_LastFightAgainstPlayer] = FIGHT_NONE;
+ 		B_SetAivar(other, AIV_NpcSawPlayerCommit, CRIME_NONE);
+ 		B_SetAivar(other, AIV_LastFightAgainstPlayer, FIGHT_NONE);
  		
  		// ------ Opfer (other) ist nicht GILDEN-Hostile zu other ------
 		if (Wld_GetGuildAttitude(other.guild, self.guild) != ATT_HOSTILE)

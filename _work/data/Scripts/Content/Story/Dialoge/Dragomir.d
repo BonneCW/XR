@@ -275,12 +275,10 @@ FUNC VOID Info_Mod_Dragomir_ToDoChapter1_Info()
 	AI_Output(hero, self, "Info_Mod_Dragomir_ToDoChapter1_15_10"); //Also soll ich ...
 	AI_Output(self, hero, "Info_Mod_Dragomir_ToDoChapter1_12_11"); //Genau. Hier, du nimm diesen Trank ein, bevor du in ihr Nest gehst. Damit werden sie dich am Geruch nicht von ihren Artgenossen unterscheiden können und nicht angreifen.
 
-	CreateInvItems	(self, ItPo_Feldraeubertrank, 1);
 	B_GiveInvItems	(self, hero, ItPo_Feldraeubertrank, 1);
 
 	AI_Output(self, hero, "Info_Mod_Dragomir_ToDoChapter1_12_12"); //Dann legst du in ihrem Nest diesen Eimer voller Eier ab. Das dürften noch ein paar Hundert von den Viechern sein, die in den nächsten Tagen schlüpfen müssten.
 
-	CreateInvItems	(self, ItMi_Feldraeubereier, 1);
 	B_GiveInvItems	(self, hero, ItMi_Feldraeubereier, 1);
 
 	AI_Output(hero, self, "Info_Mod_Dragomir_ToDoChapter1_15_13"); //Oha. Ich hoffe für dich, dass der Trank funktioniert.
@@ -346,7 +344,6 @@ FUNC VOID Info_Mod_Dragomir_EimerLeer_Info()
 
 	B_GivePlayerXP	(100);
 
-	CreateInvItems	(self, ItMi_Gold, 100);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 100);
 
 	B_SetTopicStatus	(TOPIC_MOD_JG_BUGS, LOG_SUCCESS);
@@ -914,7 +911,7 @@ FUNC VOID Info_Mod_Dragomir_Niederlage_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_00"); //Ok, Ok, ich hab gelogen.
 			AI_Output(hero, self, "Info_Mod_Dragomir_Niederlage_15_01"); //Also sagst du mir jetzt wo Pedro ist oder muss ich nochmal?
@@ -924,7 +921,7 @@ FUNC VOID Info_Mod_Dragomir_Niederlage_Info()
 
 			B_Göttergefallen(1, 1);
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_03"); //Das nächste mal solltest du es dir zweimal überlegen bevor du mich als Lügner bezeichnest.
 		};

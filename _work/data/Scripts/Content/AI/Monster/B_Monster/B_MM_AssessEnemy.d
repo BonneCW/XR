@@ -296,7 +296,7 @@ func void B_MM_AssessEnemy ()
 	
 	// ------- OVERRIDE für menschliche Enemies ------
 	if ((self.aivar[AIV_NoFightParker] == TRUE)	//werden nie angegriffen und greifen auch selbst nicht an.
-		|| 	(other.aivar[AIV_NoFightParker] == TRUE))
+	|| 	(other.aivar[AIV_NoFightParker] == TRUE))
 	{
 		return;
 	};
@@ -378,7 +378,7 @@ func void B_MM_AssessEnemy ()
 		};
 	};
 
-	if (other.aivar[AIV_INVINCIBLE] == TRUE)
+	if (B_GetAivar(other, AIV_INVINCIBLE) == TRUE)
 	{
 		return;
 	};

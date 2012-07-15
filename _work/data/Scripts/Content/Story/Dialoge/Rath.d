@@ -218,7 +218,7 @@ FUNC VOID Info_Mod_Rath_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Rath_Umgehauen_08_00"); //Verdammt, mein Rücken ...
 			AI_Output(hero, self, "Info_Mod_Rath_Umgehauen_15_01"); //Na, ein bisschen Training wird deinem Rücken bestimmt gut tun.
@@ -230,7 +230,7 @@ FUNC VOID Info_Mod_Rath_Umgehauen_Info()
 
 			B_StartOtherRoutine	(self, "TRAINING");
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Rath_Umgehauen_08_03"); //Nichts mit Trainig.
 

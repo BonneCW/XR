@@ -316,7 +316,7 @@ FUNC VOID Info_Mod_Jackal_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Jackal_Umgehauen_07_00"); //Ok, OK, du hast gewonnen. Aber ich bin der falsche dafür, geh lieber zu Fisk.
 
@@ -326,7 +326,7 @@ FUNC VOID Info_Mod_Jackal_Umgehauen_Info()
 
 			B_LogEntry	(TOPIC_MOD_PDV, "Jackal weiß anscheinend etwas, aber die einzige Information, die ich bekommen habe, war, dass ich es bei Fisk versuchen sollte.");
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Jackal_Umgehauen_07_01"); //Verzieh dich, beim nächsten mal bring ich dich um!
 		};

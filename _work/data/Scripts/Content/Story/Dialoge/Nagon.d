@@ -333,7 +333,7 @@ FUNC VOID Info_Mod_Nagon_PETZMASTER_Info()
 	Nagon_Schulden = 0; //weil Funktion nochmal durchlaufen wird, wenn Crime höher ist...
 	
 	// ------ SC hat mit Nagon noch nicht gesprochen ------
-	if (self.aivar[AIV_TalkedToPlayer] == FALSE)
+	if (B_GetAivar(self, AIV_TalkedToPlayer) == FALSE)
 	{
 		AI_Output (self, hero, "Info_Mod_Nagon_PETZMASTER_10_00"); //Du musst der Neue sein, der hier im Kloster Ärger gemacht hat.
 	};	

@@ -134,7 +134,7 @@ FUNC VOID Info_Mod_Gidan_KampfEnde_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Gidan_KampfEnde_13_00"); //(brüllt) Betrug! Man hat mich betrogen!
 			AI_Output(self, hero, "Info_Mod_Gidan_KampfEnde_13_03"); //Nie hätte jemand wie du es geschafft einen Kämpfer meinesgleichen zu besiegen!
@@ -147,7 +147,7 @@ FUNC VOID Info_Mod_Gidan_KampfEnde_Info()
 				
 			B_LogEntry	(TOPIC_MOD_MILIZTURNIER, "Ich habe meinen Kampf gegen Gidan gewonnen. Ich sollte jetzt mit Lord Andre sprechen.");
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Gidan_KampfEnde_13_01"); //Tja, das war wohl nichts. Jetzt werde ich vielleicht ein Mitglied der Miliz.
 

@@ -9,7 +9,7 @@ INSTANCE Monster_11075_Daemonenfuerst_XW (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	level = 400;
 
-	aivar[AIV_INVINCIBLE] = TRUE;
+	B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 	
 	// ------ Attribute ------
 	attribute[ATR_HITPOINTS_MAX] = 200;

@@ -252,7 +252,7 @@ FUNC VOID Info_Mod_Alrik_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			if (Kapitel == 1)
 			{
@@ -277,7 +277,7 @@ FUNC VOID Info_Mod_Alrik_Umgehauen_Info()
 
 			B_GivePlayerXP	(Kapitel*50);
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Alrik_Umgehauen_09_05"); //Du bist eine gute Einnahmequelle. Wenn du Lust auf eine weitere Runde hast, komm wieder vorbei.
 
@@ -431,7 +431,7 @@ FUNC VOID Info_Mod_Alrik_KampfEnde_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Alrik_KampfEnde_09_00"); //Du bist wirklich gut. Du solltest mal zu mir kommen und ein wenig mit mir trainieren.
 
@@ -442,7 +442,7 @@ FUNC VOID Info_Mod_Alrik_KampfEnde_Info()
 			B_LogEntry	(TOPIC_MOD_MILIZTURNIER, "Ich habe meinen Kampf gegen Alrik gewonnen. Ich sollte jetzt mit Lord Andre sprechen.");
 	
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Alrik_KampfEnde_09_01"); //Tja, das war wohl nichts. Jetzt werde ich vielleicht ein Mitglied der Miliz. Wenn du willst, kannst du mal zu mir kommen, dann können wir zusammen trainieren.
 

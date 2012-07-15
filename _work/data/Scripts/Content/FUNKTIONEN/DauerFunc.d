@@ -208,14 +208,14 @@ FUNC VOID DAUERFUNC_01()
 			{
 				Mod_SaveOther = 0;
 
-				hero.aivar[AIV_INVINCIBLE] = 0;
+				B_SetAivar(hero, AIV_INVINCIBLE, FALSE);
 			};
 		}
 		else
 		{
 			Mod_SaveOther = 0;
 
-			hero.aivar[AIV_INVINCIBLE] = 0;
+			B_SetAivar(hero, AIV_INVINCIBLE, FALSE);
 		};
 	};
 
@@ -1918,7 +1918,7 @@ FUNC VOID DAUERFUNC_01()
 
 	// Held quatsch oder auch nicht
 
-	if (hero.aivar[AIV_INVINCIBLE] == TRUE)
+	if (B_GetAivar(hero, AIV_INVINCIBLE) == TRUE)
 	|| (Mod_KampfLaeuft)
 	|| (CutsceneAn)
 	|| (playerIsTransformed)
@@ -1986,7 +1986,7 @@ FUNC VOID DAUERFUNC_01()
 		// Nur, wenn alle Bedingungen erfüllt sind, wird gespeichert
 
 		if (Mod_SaveOther == 0)				// Kein Gesprächspartner
-		&& (hero.aivar[AIV_Invincible] == FALSE)	// In keinem Gespräch
+		&& (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)	// In keinem Gespräch
 		&& (Mod_QuatschtNichtCounter >= 3)		// Quatscht seit 5 Sekunden nicht (damit es nicht beim Beenden des Gespräches schon speichert)
 		&& (!Mod_KampfLaeuft)			// Nicht während Kämpfen
 		&& (!CutsceneAn)

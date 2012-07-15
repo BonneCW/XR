@@ -119,7 +119,7 @@ func void B_MM_AssessPlayer()
 	};
 	
 	// ------ SC im Dialog ------
-	if (other.aivar[AIV_INVINCIBLE] == TRUE)
+	if (B_GetAivar(other, AIV_INVINCIBLE) == TRUE)
 	{
 		return;
 	};
@@ -197,10 +197,10 @@ func void B_MM_AssessPlayer()
 		{
 			// ------- Spieler fällt, schwimmt und taucht NICHT ------
 			if  (!C_BodyStateContains(other,BS_FALL))
-			&& 	(!C_BodyStateContains(other,BS_SWIM))
+			&& (!C_BodyStateContains(other,BS_SWIM))
 			&&  (!C_BodyStateContains(other,BS_DIVE))
 			{
-				self.aivar[AIV_NpcStartedTalk] = TRUE;
+				B_SetAivar(self, AIV_NpcStartedTalk, TRUE);
 				
 				B_AssessTalk(); //Human-AI-Befehl, wird auch von Monstern benutzt
 				return;
@@ -220,4 +220,3 @@ func void B_MM_AssessPlayer()
 		};
 	};
 };
-

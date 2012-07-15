@@ -15,7 +15,7 @@ INSTANCE DIA_ToughGuy_NEWS (C_INFO)
 FUNC INT DIA_ToughGuy_NEWS_Condition()
 {
 	if (Npc_IsInState(self, ZS_Talk))
-	&& (self.aivar[AIV_LastFightAgainstPlayer] != FIGHT_NONE)
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) != FIGHT_NONE)
 	&& (self.aivar[AIV_LastFightComment] == FALSE)
 	{
 		return TRUE;
@@ -24,11 +24,11 @@ FUNC INT DIA_ToughGuy_NEWS_Condition()
 
 FUNC VOID DIA_ToughGuy_NEWS_Info()
 {	
-	if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+	if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 	{
 		B_Say (self,other,"$TOUGHGUY_ATTACKLOST"); //Okay, okay, du bist der Bessere von uns beiden! Was willst du?
 	}
-	else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+	else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 	{
 		B_Say (self,other,"$TOUGHGUY_ATTACKWON"); //(selbstgefällig) Ich nehme an, du hast mittlerweile begriffen, wer von uns beiden der Stärkere ist... Was willst du?
 	}
@@ -54,4 +54,3 @@ func void B_AssignToughGuyNEWS (var C_NPC slf)
 {
 	DIA_ToughGuy_NEWS.npc = Hlp_GetInstanceID(slf);
 };
-

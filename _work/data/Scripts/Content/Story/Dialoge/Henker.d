@@ -130,7 +130,7 @@ FUNC INT Info_Mod_Henker_Umgehauen_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Henker_LetsFight))
 	&& (Mod_REL_HenkerKampf == 2)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 	{
 		return 1;
 	};

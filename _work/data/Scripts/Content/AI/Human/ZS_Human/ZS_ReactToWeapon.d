@@ -30,7 +30,7 @@ func void ZS_ReactToWeapon ()
 
 	
 	// ------ wenn ich den Spieler beim letzten Kampf besiegt habe ------
-	if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+	if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 	&& (self.aivar[AIV_LastPlayerAR] != AR_NONE)
 	&& (Npc_IsPlayer(other))
 	&& (!C_NpcIsSeelenpeiniger(self))
@@ -136,7 +136,3 @@ func void ZS_ReactToWeapon_End ()
 	
 	AI_StartState (self, ZS_ObservePlayer, 1, "");
 };
-
-
-
-

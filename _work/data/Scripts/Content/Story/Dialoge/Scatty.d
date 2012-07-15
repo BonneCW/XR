@@ -89,7 +89,7 @@ FUNC VOID Info_Mod_Scatty_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Scatty_Umgehauen_01_00"); //Oh, mein armer Sch‰del.
 			AI_Output(hero, self, "Info_Mod_Scatty_Umgehauen_15_01"); //Na, ich denke du weiﬂt, dass man sich keine Probleme mit mir einhandelt.
@@ -97,7 +97,7 @@ FUNC VOID Info_Mod_Scatty_Umgehauen_Info()
 
 			Scatty_Start_DIA = 4;
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Scatty_Umgehauen_01_03"); //Bist wohl doch nur ein Groﬂmaul.
 			AI_Output(hero, self, "Info_Mod_Scatty_Umgehauen_01_04"); //Vielleicht kannst du uns trotzdem helfen.

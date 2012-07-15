@@ -1146,7 +1146,7 @@ func void Spell_Cast_TeleportObelisk()
 	
 	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	{	
-		self.aivar[AIV_INVINCIBLE] = TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_TeleportObelisk;
 		Ai_ProcessInfos (her);
 	};

@@ -647,7 +647,7 @@ FUNC VOID NEBENQUESTS()
 		// Matteos Flugblätter
 
 		if (Mod_Flugblaetter > Mod_FlugblattMeldung)
-		&& (hero.aivar[AIV_INVINCIBLE] == FALSE)
+		&& (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)
 		{
 			if (Mod_Flugblaetter == 20)
 			{
@@ -3025,7 +3025,7 @@ FUNC VOID NEBENQUESTS()
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Urs_Hi))
 		&& (Mod_Urs_Hund == 0)
-		&& (hero.aivar[AIV_INVINCIBLE] == FALSE)
+		&& (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)
 		{
 			if (Npc_HasItems(hero, ItMi_Nugget) >= 20)
 			&& (Npc_HasItems(hero, ItMi_Gold) >= 400)

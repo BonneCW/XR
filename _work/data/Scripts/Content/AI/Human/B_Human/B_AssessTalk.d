@@ -216,7 +216,7 @@ func void B_AssessTalk ()
 	};
 	
 	// ------ Spieler labert NSC an ------
-	if (self.aivar[AIV_NpcStartedTalk] == FALSE)
+	if (B_GetAivar(self, AIV_NpcStartedTalk) == FALSE)
 	{
 		if ( C_BodyStateContains(self,BS_WALK) || C_BodyStateContains(self,BS_RUN) )
 		{
@@ -238,7 +238,7 @@ func void B_AssessTalk ()
 	// ------ NSC bleibt sitzen oder steht in Ruhe auf bzw. beendet Mobsi in Ruhe -----------------
 	if (C_BodyStateContains(self, BS_SIT))
 	{
-		if (self.aivar[AIV_NpcStartedTalk] == TRUE)
+		if (B_GetAivar(self, AIV_NpcStartedTalk) == TRUE)
 		{
 			AI_StandUpQuick (other); //Spieler anhalten
 		}
@@ -265,7 +265,7 @@ func void B_AssessTalk ()
 	}
 	else //nicht sitzen
 	{
-		if (self.aivar[AIV_NpcStartedTalk] == TRUE)
+		if (B_GetAivar(self, AIV_NpcStartedTalk) == TRUE)
 		{
 			AI_StandUpQuick (self);
 			AI_StandUpQuick (other); //Spieler anhalten
@@ -280,6 +280,3 @@ func void B_AssessTalk ()
 		return;
 	};
 };
-			
-
-				

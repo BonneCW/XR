@@ -514,7 +514,7 @@ FUNC VOID GILDENSTORY_NL ()
 
 			AI_Teleport	(hero, "NW_TAVERNE_IN_04");
 
-			hero.aivar[AIV_INVINCIBLE] = FALSE;
+			B_SetAivar(hero, AIV_INVINCIBLE, FALSE);
 
 			B_RemoveNpc	(Kobold_11000_NW);
 

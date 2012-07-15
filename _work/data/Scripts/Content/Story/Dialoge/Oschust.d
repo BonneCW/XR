@@ -113,7 +113,7 @@ FUNC INT Info_Mod_Oschust_Umgehauen_Condition()
 {
 	if ((Npc_KnowsInfo(hero, Info_Mod_Oschust_Amulett_A))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Oschust_Amulett_B)))
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 	{
 		return 1;
 	};

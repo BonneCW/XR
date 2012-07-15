@@ -162,13 +162,13 @@ FUNC VOID Info_Mod_Ferco_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Ferco_Umgehauen_02_00"); //Mannomann! Du hast ja 'nen ganz schönen Schlag drauf.
 
 			Mod_FercoBesiegt	=	1;
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Ferco_Umgehauen_02_01"); //Na, du Großmaul?
 		};

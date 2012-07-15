@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Bromor_Hi_Condition()
 FUNC VOID Info_Mod_Bromor_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Bromor_Hi_07_01"); //Ich bin Bromor, mir gehört dieses Bordell.
 	AI_Output(self, hero, "Info_Mod_Bromor_Hi_07_02"); //Was kann ich für dich tun?
 };
@@ -139,7 +140,7 @@ FUNC VOID Info_Mod_Bromor_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Bromor_Umgehauen_04_00"); //Oh, mein Schädel.
 			AI_Output(hero, self, "Info_Mod_Bromor_Umgehauen_15_01"); //Lässt du Vanja jetzt in Frieden?
@@ -151,7 +152,7 @@ FUNC VOID Info_Mod_Bromor_Umgehauen_Info()
 
 			B_Göttergefallen(1, 1);
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Bromor_Umgehauen_04_03"); //Große Sprüche klopfen und nichts dahinter. Jetzt verzieh dich und misch dich nicht in meine Angelegenheiten ein.
 

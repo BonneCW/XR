@@ -39,7 +39,7 @@ FUNC void ZS_Talk ()
 	// EXIT IF...
 
 	// ------ Spieler spricht schon mit jemand anderem ------
-	if (other.aivar[AIV_INVINCIBLE] == TRUE)
+	if (B_GetAivar(other, AIV_INVINCIBLE) == TRUE)
 	{
 		return;				
 	};
@@ -50,8 +50,8 @@ FUNC void ZS_Talk ()
 	// FUNC 
 	
 	// ------ damit kein Dialogteilnehmer angegriffen wird ------
-	self.aivar[AIV_INVINCIBLE] = TRUE;
-	other.aivar[AIV_INVINCIBLE] = TRUE;
+	B_SetAivar(self, AIV_INVINCIBLE, TRUE);
+	B_SetAivar(other, AIV_INVINCIBLE, TRUE);
 		
 	// ------ NUR bei Humans ------
 	if (self.guild < GIL_SEPERATOR_HUM)
@@ -173,10 +173,10 @@ func INT ZS_Talk_Loop ()
    	&& (zsTalkBugfix == TRUE)			//verhindert, daß InfoManager_HasFinished im ERSTEN FRAME der Loop abgefragt wird --> führt sonst bei MOB-SITZENDEN NSCs (kein Scheiss) zu Abbruch der Loop im ERSTEN FRAME! 
    										//(Problem besteht wegen falscher Reihenfolge der Befehle AI_ProcessInfos und InfoManager_HasFinished)
    	{
-		self.aivar[AIV_INVINCIBLE] = FALSE;
-		other.aivar[AIV_INVINCIBLE] = FALSE;
-		self.aivar[AIV_NpcStartedTalk] = FALSE;
-		self.aivar[AIV_TalkedToPlayer] = TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, FALSE);
+		B_SetAivar(other, AIV_INVINCIBLE, FALSE);
+		B_SetAivar(self, AIV_NpcStartedTalk, FALSE);
+		B_SetAivar(self, AIV_TalkedToPlayer, TRUE);
 		
 		// ------ NUR bei Humans ------
 		if (self.guild < GIL_SEPERATOR_HUM)
@@ -191,8 +191,8 @@ func INT ZS_Talk_Loop ()
 			AI_PlayAni (self, "T_TALK_2_STAND");
 		};
 
-		self.aivar[AIV_INVINCIBLE] = FALSE;
-		hero.aivar[AIV_INVINCIBLE] = FALSE;
+		B_SetAivar(self, AIV_INVINCIBLE, FALSE);
+		B_SetAivar(other, AIV_INVINCIBLE, FALSE);
 		
 		return LOOP_END;
   	}
@@ -238,4 +238,3 @@ FUNC VOID ZS_Talk_End ()
 
 	//B_Göttergefallen();
 };
-

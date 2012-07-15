@@ -211,7 +211,7 @@ FUNC VOID HAUPTQUESTS()
 		{
 			Mod_HQ_FokusTeleport += 1;
 
-			hero.aivar[AIV_INVINCIBLE] = FALSE;
+			B_SetAivar(hero, AIV_INVINCIBLE, FALSE);
 
 			if (Mod_HQ_FokusTeleport == 2)
 			{

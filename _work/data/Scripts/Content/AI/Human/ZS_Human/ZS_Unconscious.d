@@ -42,7 +42,7 @@ func void ZS_Unconscious ()
 	&& (C_NpcIsHero(other))								
 	{
 		self.aivar[AIV_DefeatedByPlayer] = TRUE; //wird nur hier gesetzt, nie verändert!
-		self.aivar[AIV_LastFightAgainstPlayer] = FIGHT_LOST;
+		B_SetAivar(self, AIV_LastFightAgainstPlayer, FIGHT_LOST);
 		
 		if (self.aivar[AIV_LastPlayerAR] == AR_NONE)
 		&& (self.aivar[AIV_DuelLost] == FALSE) //also nur EINMAL
@@ -68,7 +68,7 @@ func void ZS_Unconscious ()
 	// BUGFIX: Nicht, wenn verwandelt
 	if (C_NpcIsHero (self))
 	{
-		other.aivar[AIV_LastFightAgainstPlayer] = FIGHT_WON;
+		B_SetAivar(other, AIV_LastFightAgainstPlayer, FIGHT_WON);
 		
 		if (other.aivar[AIV_ArenaFight] == AF_RUNNING)
 		{
@@ -142,7 +142,7 @@ func int ZS_Unconscious_Loop ()
 func void ZS_Unconscious_End ()
 {	
 	// ------ AIV nochmal resetten ------
-	self.aivar[AIV_RANSACKED] = FALSE;
+	B_SetAivar(self, AIV_RANSACKED, FALSE);
 	
 	// ------ aufstehen (auch Spieler) ------
 	AI_StandUp(self);
@@ -202,5 +202,3 @@ func void ZS_Unconscious_End ()
 	AI_StartState (self, ZS_HealSelf, 0, "");
 	return;
 };
-
-

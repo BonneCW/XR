@@ -13,7 +13,7 @@ func int C_RefuseTalk (var C_NPC slf, var C_NPC oth)
 	};
 	
 	// ------ NSCs, die nicht abseits ihres Waypoints zum ersten Mal einen Dialog anfangen dürfen ------
-	if (slf.aivar[AIV_TalkedToPlayer] == FALSE)
+	if (B_GetAivar(slf, AIV_TalkedToPlayer) == FALSE)
 	&& (Npc_GetDistToWP(slf, slf.wp) > 500)
 	{
 		

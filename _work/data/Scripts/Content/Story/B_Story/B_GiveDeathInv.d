@@ -79,7 +79,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	// EXIT IF...
 	
 	//-------- NUR beim ersten Durchlauf weitermachen (AIV_DeathInvGiven ist dann FALSE, wird hier (unten) auf TRUE gesetzt) --------
-	if (slf.aivar[AIV_DeathInvGiven] == TRUE)
+	if (B_GetAivar(slf, AIV_DeathInvGiven) == TRUE)
 	{
 		return;
 	};
@@ -622,15 +622,5 @@ func void B_GiveDeathInv (var C_NPC slf)
 		};
 	};
 	//-------- AIV setzen, damit INV-Items nur EINMAL vergeben werden  --------
-	slf.aivar[AIV_DeathInvGiven] = TRUE;
+	B_SetAivar(slf, AIV_DeathInvGiven, TRUE);
 };
-
-
-
-
-
-
-
-
-
-

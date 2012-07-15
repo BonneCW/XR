@@ -2831,7 +2831,7 @@ FUNC VOID Info_Mod_Andre_PETZMASTER_Info()
 	Andre_Schulden = 0; //weil Funktion nochmal durchlaufen wird, wenn Crime höher ist...
 	
 	// ------ SC hat mit Andre noch nicht gesprochen ------
-	if (self.aivar[AIV_TalkedToPlayer] == FALSE)
+	if (B_GetAivar(self, AIV_TalkedToPlayer) == FALSE)
 	{
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_08_00"); //Du musst der Neue sein, der hier in der Stadt Ärger gemacht hat.
 	};	

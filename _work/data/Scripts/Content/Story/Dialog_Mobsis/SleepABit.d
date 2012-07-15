@@ -7,7 +7,7 @@ func void PC_Sleep (var int t)
 	AI_StopProcessInfos(self);		// [SK] ->muss hier stehen um das update zu gewährleisten
 
 	PLAYER_MOBSI_PRODUCTION	=	MOBSI_NONE;
-	self.aivar[AIV_INVINCIBLE] = FALSE;
+	B_SetAivar(self, AIV_INVINCIBLE, FALSE);
 
 	//Wld_PlayEffect("SCREENBLEND_SCHWARZ",  hero, hero, 0, 0, 0, FALSE );
 
@@ -167,7 +167,7 @@ func void SLEEPABIT_S1 ()
 		}
 		else
 		{
-			self.aivar[AIV_INVINCIBLE]=TRUE;
+			B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 			PLAYER_MOBSI_PRODUCTION	=	MOBSI_SLEEPABIT;
 			Ai_ProcessInfos (her);
 
@@ -205,7 +205,7 @@ func VOID PC_NoSleep_Info()
 {
 	AI_StopProcessInfos (self);
  	Wld_StopEffect("DEMENTOR_FX");
-	self.aivar[AIV_INVINCIBLE]=FALSE;
+	B_SetAivar(self, AIV_INVINCIBLE, FALSE);
 	PLAYER_MOBSI_PRODUCTION	=	MOBSI_NONE;
 };
 

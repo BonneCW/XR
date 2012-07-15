@@ -18,7 +18,7 @@ func void ZS_Dead ()
 	};
 
 	// ------ aivars resetten ------
-	self.aivar[AIV_RANSACKED] = FALSE;
+	B_SetAivar(self, AIV_RANSACKED, FALSE);
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	
 	B_StopLookAt	(self);
@@ -863,7 +863,7 @@ func void ZS_Dead ()
 	
 	// ------ PetzCounter meiner Home-Location runtersetzen ------
 	B_DeletePetzCrime (self); //hat bei CRIME_NONE (oder keiner Home-Location) keine Auswirkungen
-	self.aivar[AIV_NpcSawPlayerCommit] = CRIME_NONE;
+	B_SetAivar(self, AIV_NpcSawPlayerCommit, CRIME_NONE);
 	
 	// ------ Equippte Waffen können nicht genommen werden! ------
 	AI_UnequipWeapons (self);

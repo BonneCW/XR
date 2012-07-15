@@ -978,7 +978,7 @@ FUNC VOID Use_MagischePfanne()
 	
 	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	{	
-		self.aivar[AIV_INVINCIBLE] = TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_Herd;
 		Ai_ProcessInfos (her);
 	};
@@ -4213,7 +4213,7 @@ FUNC VOID Use_Pfeife()
 
 	if (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))//Wenn der Benutzer der held ist...
 	{ 
-		self.aivar[AIV_INVINCIBLE]=TRUE; //Gegner greifen nicht an, solange der Held im Auswahlmodus ist
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE); //Gegner greifen nicht an, solange der Held im Auswahlmodus ist
 
 		PLAYER_MOBSI_PRODUCTION = MOBSI_Pfeife; //Der Mobsi BOw ist aktiv
 		AI_ProcessInfos (her); //Dialog wird gestartet

@@ -382,7 +382,7 @@ func int ZS_MM_Attack_Loop()
 	if (Hlp_IsValidNpc(other)) 				// wenn target da ist, ist hier auch other valid
 	&& (!C_NpcIsDown(other)) 				// sonst "attackiert" der NPC ein z.B. totes Opfer weiter
 	{
-		if (other.aivar[AIV_INVINCIBLE] == FALSE) 	// Nur NSCs angreifen, die NICHT im Talk sind
+		if (B_GetAivar(other, AIV_INVINCIBLE) == FALSE) 	// Nur NSCs angreifen, die NICHT im Talk sind
 		{
 			AI_Attack (self); 	//In der Funktion, in der AI_Attack aufgerufen wird DARF KEIN AI_ Befehl VOR AI_Attack kommen, da sonst AI_Attack ignoriert wird
 								//(AI-Attack funktioniert NUR, wenn die AIqueue leer ist!)
@@ -419,7 +419,7 @@ func int ZS_MM_Attack_Loop()
 		if (Hlp_IsValidNpc(other))
 		&& (!C_NpcIsDown(other))
 		&& ( (Npc_GetDistToNpc(self, other) < PERC_DIST_INTERMEDIAT) || (Npc_IsPlayer(other)) ) //Bei Nicht-Player Enemies nur auf 1000m reagieren (sonst ACTIVE_MAX)
-		&& (other.aivar[AIV_INVINCIBLE] == FALSE)
+		&& (B_GetAivar(other, AIV_INVINCIBLE) == FALSE)
 		{
 			self.aivar[AIV_LASTTARGET] = Hlp_GetInstanceID (other);
 			return LOOP_CONTINUE;

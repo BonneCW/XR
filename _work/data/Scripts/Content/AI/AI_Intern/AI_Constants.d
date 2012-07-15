@@ -14,12 +14,23 @@ func void	B_FullStop(var C_NPC npc)
 // - KEINE automatische News-Verbreitung, AIV-Check bei aNSCs in Dialogen = Ersatz für News-Verbreitung
 // - News-Vergabe über Dialog-Module
 
+
+const int	AIV_LastFightAgainstPlayer	= 100;
+const int 	AIV_NpcSawPlayerCommit		= 101;
+const int 	AIV_NpcStartedTalk		= 102; 	//wenn der NSC mit Important Info den SC anquatscht
+const int   	AIV_INVINCIBLE			= 103;	//ist TRUE für beide Teilnehmer eines Dialogs
+const int 	AIV_TalkedToPlayer		= 104;
+const int 	AIV_PlayerHasPickedMyPocket	= 105;
+const int 	AIV_FernkampfHitZone		= 106;
+const int 	AIV_RANSACKED			= 107; 	//damit nur EIN NSC einen Body plündert
+const int 	AIV_DeathInvGiven		= 108;	// Für Mensch und Monster!
+
 const int	HAI_DIST_GUARDPASSAGE_ATTENTION	= 1200;	
 const int	AIV_ISTINARENATOFIGHT	= 2;
 
 //Original
 
-const int 	AIV_LastFightAgainstPlayer		= 0;
+const int 	AIV_Multi01		= 0;
 const int 		FIGHT_NONE				= 0;
 const int 		FIGHT_LOST				= 1;	//in ZS_Unconscious
 const int 		FIGHT_WON				= 2;	//in ZS_Unconscious (player)
@@ -27,7 +38,7 @@ const int 		FIGHT_CANCEL			= 3;	//in B_Attack, wenn other = Player
 
 const int	AIV_Trefferzone				= 0; // nur Monster
 
-const int 	AIV_NpcSawPlayerCommit			= 1;
+const int 	AIV_Frei01			= 1;
 const int 		CRIME_NONE				= 0;
 const int 		CRIME_SHEEPKILLER		= 1;
 const int 		CRIME_ATTACK			= 2;	//Kampf self-SC --> feinere Analys in DIA-Modul über AIV_LastFightAgainstPlayer
@@ -37,14 +48,14 @@ const int 		CRIME_MURDER			= 4;
 const int 	AIV_NpcSawPlayerCommitDay		= 2;
 
 // ------ B_AssessTalk -------------------------
-const int 	AIV_NpcStartedTalk				= 3; 	//wenn der NSC mit Important Info den SC anquatscht
+const int 	AIV_Frei02				= 3; 	//wenn der NSC mit Important Info den SC anquatscht
 
 // ------ ZS_Talk ------------------------------
-const int   AIV_INVINCIBLE					= 4;	//ist TRUE für beide Teilnehmer eines Dialogs
-const int 	AIV_TalkedToPlayer				= 5;	
+const int   	AIV_Frei03					= 4;	//ist TRUE für beide Teilnehmer eines Dialogs
+const int 	AIV_Frei04				= 5;	
 
 // ------ Pickpocket ---------------------------
-const int 	AIV_PlayerHasPickedMyPocket		= 6;
+const int 	AIV_PfeilLadezeit		= 6;
 
 // ------ ZS_Attack ----------------------------
 const int	AIV_LASTTARGET					= 7;	//damit other erhalten bleibt
@@ -77,10 +88,10 @@ const int		AR_BERSERK		= 20;
 const int AIV_ITEMFREQ = 18;
 
 // ------ ZS_RansackBody ------------------------
-const int 	AIV_RANSACKED					= 10; 	//damit nur EIN NSC einen Body plündert
+const int 	AIV_Frei05					= 10; 	//damit nur EIN NSC einen Body plündert
 
 // ------ ZS_Dead -------------------------------
-const int 	AIV_DeathInvGiven				= 11;	// Für Mensch und Monster!
+const int 	AIV_Frei06				= 11;	// Für Mensch und Monster!
 
 // ------ TA_GuardPassage -----------------------
 const int	AIV_Guardpassage_Status			= 12;	// Enthält den Status einer Durchgangswache

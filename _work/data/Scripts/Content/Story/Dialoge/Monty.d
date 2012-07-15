@@ -160,12 +160,12 @@ INSTANCE Info_Mod_Monty_Pruegel (C_INFO)
 FUNC INT Info_Mod_Monty_Pruegel_Condition()
 {
 	if (Mod_MontyFake == 2)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 	{
 		return 1;
 	}
 	else if (Mod_MontyFake == 2)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 	{
 		B_SetTopicStatus	(TOPIC_MOD_MONTY_KONKURRENZKAMPF, LOG_FAILED);
 	};

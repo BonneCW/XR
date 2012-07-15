@@ -90,7 +90,7 @@ func void B_MemorizePlayerCrime (var C_NPC slf, var C_NPC taeter, var int crime)
 	// ------ neue Straftat überschreibt alte, wenn sie schwerer (oder gleichschwer) ist ------	
 	if (crime >= B_GetPlayerCrime(slf))
 	{
-		slf.aivar[AIV_NpcSawPlayerCommit] 		= crime;
+		B_SetAivar(slf, AIV_NpcSawPlayerCommit, crime);
 		slf.aivar[AIV_NpcSawPlayerCommitDay] 	= Wld_GetDay();
 		slf.aivar[AIV_CrimeAbsolutionLevel] 	= B_GetCurrentAbsolutionLevel(slf); //bleibt für NSCs, die NICHT zu City/Monastery/Farm gehören, immer 0 
 	};

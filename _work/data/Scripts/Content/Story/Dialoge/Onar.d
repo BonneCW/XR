@@ -198,7 +198,7 @@ FUNC VOID Info_Mod_Onar_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Onar_Umgehauen_14_00"); //Du verdammtes Schwein, dafür wirst du bezahlen ...
 			AI_Output(hero, self, "Info_Mod_Onar_Umgehauen_15_01"); //Also, was ist jetzt?
@@ -212,7 +212,7 @@ FUNC VOID Info_Mod_Onar_Umgehauen_Info()
 
 			B_SetTopicStatus	(TOPIC_MOD_ADANOS_WASILI, LOG_SUCCESS);
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Onar_Umgehauen_14_03"); //Tja, das war wohl nichts.
 		};

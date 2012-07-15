@@ -92,7 +92,7 @@ FUNC VOID Info_Mod_Shrike_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Shrike_Umgehauen_07_00"); //Ohh, meine Knochen. Du Mistkerl ...
 			AI_Output(hero, self, "Info_Mod_Shrike_Umgehauen_15_01"); //Na, Lust auf weitere Sperenzchen?
@@ -104,7 +104,7 @@ FUNC VOID Info_Mod_Shrike_Umgehauen_Info()
 
 			B_StartOtherRoutine	(self, "SMOKING");
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Shrike_Umgehauen_07_03"); //Schwächling.
 		};

@@ -87,7 +87,7 @@ func void B_AssessPlayer ()
 		};
 
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7368_JG_Jaeger_NW))
-		&& (other.aivar[AIV_INVINCIBLE] == FALSE)
+		&& (B_GetAivar(other, AIV_INVINCIBLE) == FALSE)
 		&& (!C_NpcIsDown(Mod_7106_ASS_Ramsi_NW))
 		{
 			B_Attack	(self, Mod_7106_ASS_Ramsi_NW, AR_NONE, 0);
@@ -95,7 +95,7 @@ func void B_AssessPlayer ()
 		};
 
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7366_JG_Jaeger_NW))
-		&& (other.aivar[AIV_INVINCIBLE] == FALSE)
+		&& (B_GetAivar(other, AIV_INVINCIBLE) == FALSE)
 		{
 			B_Attack	(self, hero, AR_NONE, 0);
 			return;
@@ -407,7 +407,7 @@ func void B_AssessPlayer ()
 	};
 	
 	// ------ SC im Dialog ------
-	if (other.aivar[AIV_INVINCIBLE] == TRUE) 
+	if (B_GetAivar(other, AIV_INVINCIBLE) == TRUE) 
 	{
 		return;
 	};
@@ -651,7 +651,7 @@ func void B_AssessPlayer ()
 		// ------ Gate Guards labern IMMER an ------
 		if (C_NpcIsGateGuard(self))
 		{
-			self.aivar[AIV_NpcStartedTalk] = TRUE;
+			B_SetAivar(self, AIV_NpcStartedTalk, TRUE);
 			
 			B_AssessTalk();
 			return;
@@ -669,7 +669,7 @@ func void B_AssessPlayer ()
 			// ------- Will ich die FakeArmor kommentieren? ---
 			&& (C_PlayerHasFakeGuild (self,other) == FALSE)
 			{
-				self.aivar[AIV_NpcStartedTalk] = TRUE;
+				B_SetAivar(self, AIV_NpcStartedTalk, TRUE);
 				
 				B_AssessTalk();
 				return;
@@ -700,4 +700,3 @@ func void B_AssessPlayer ()
 	
 	return;
 };
-			

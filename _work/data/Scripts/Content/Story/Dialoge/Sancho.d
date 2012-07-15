@@ -289,7 +289,7 @@ FUNC INT Info_Mod_Sancho_Umgehauen_Condition()
 	&& (Mod_SanchoHatZettel	==	1)
 	&& (Mod_SanchoKampfWegenZettel == 1)
 	&& (self.aivar[AIV_LastPlayerAR] == AR_NONE)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 	{
 		return 1;
 	};

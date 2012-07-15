@@ -489,7 +489,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 		// Plattform anquatschen
 
-		if (hero.aivar[AIV_INVINCIBLE] == FALSE)
+		if (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)
 		&& (Npc_GetDistToNpc(hero, Mod_7314_Ziel_AW) <= 300)
 		&& ((!Npc_KnowsInfo(hero, Info_Mod_PlattformAWBeliar_Erzbrocken))
 		|| (!Npc_KnowsInfo(hero, Info_Mod_PlattformAWBeliar_Weihwasser)))

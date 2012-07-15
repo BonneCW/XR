@@ -5,7 +5,7 @@ FUNC VOID BIERFASSORLAN_S1 ()
 	if  (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))
 	&& (FokusBlockade == FALSE)
 	{	
-		self.aivar[AIV_INVINCIBLE]=TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_BierfassOrlan;
 		Ai_ProcessInfos (her);
 	};

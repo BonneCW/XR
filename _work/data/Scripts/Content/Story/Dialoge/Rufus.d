@@ -163,7 +163,7 @@ FUNC VOID Info_Mod_Rufus_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Rufus_Umgehauen_02_00"); //Verdammt, meine Knochen ...
 			AI_Output(hero, self, "Info_Mod_Rufus_Umgehauen_15_01"); //Na, wie sieht es jetzt aus mit ein bisschen Arbeit auf dem Reisfeld?
@@ -173,7 +173,7 @@ FUNC VOID Info_Mod_Rufus_Umgehauen_Info()
 
 			B_StartOtherRoutine	(self, "START");
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Rufus_Umgehauen_02_03"); //Tja, das war wohl nichts.
 
