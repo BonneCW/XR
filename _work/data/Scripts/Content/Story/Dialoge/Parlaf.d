@@ -176,7 +176,7 @@ FUNC VOID Info_Mod_Parlaf_Hi_Info()
 	{
 		AI_Output(self, hero, "Info_Mod_Parlaf_Hi_06_02"); //Ahh, ein Novize des Innosklosters.
 		AI_Output(self, hero, "Info_Mod_Parlaf_Hi_06_03"); //Es freut mich immer, wenn ich die Streiter für das Rechtschaffende in unseren Stadtmauern willkommen heißen darf.
-		AI_Output(self, hero, "Info_Mod_Parlaf_Hi_06_04"); //Wenn man bedenkt, was sich sonst so für Gesinde seit dem Fall der Barriere hier herumtreibt ...
+		AI_Output(self, hero, "Info_Mod_Parlaf_Hi_06_04"); //Wenn man bedenkt, was sich sonst so für Gesindel seit dem Fall der Barriere hier herumtreibt ...
 		AI_Output(self, hero, "Info_Mod_Parlaf_Hi_06_05"); //Jedenfalls solltest du aufpassen, was du in der Stadt tust, da gibt es leicht Ärger in letzter Zeit.
 	};
 
