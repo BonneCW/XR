@@ -95,7 +95,7 @@ FUNC VOID Info_Mod_Owen_VitaminC_Info()
 
 	B_Göttergefallen(2, 1);
 
-	B_LogEntry	(TOPIC_MOD_OWEN_SKORBUT, "Diese Schatzsuche sollte sicher sein vor einem Skorbut-Befall.");
+	B_LogEntry_More	(TOPIC_MOD_PIRATEN_SCHATZSUCHE, TOPIC_MOD_OWEN_SKORBUT, "Gegen Skorbut haben Owen und ich uns abgesichert.", "Diese Schatzsuche sollte sicher sein vor einem Skorbut-Befall.");
 	B_SetTopicStatus	(TOPIC_MOD_OWEN_SKORBUT, LOG_SUCCESS);
 };
 

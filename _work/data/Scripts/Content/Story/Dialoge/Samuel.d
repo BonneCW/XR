@@ -108,6 +108,8 @@ FUNC VOID Info_Mod_Samuel_HabZeug_Info()
 	B_Göttergefallen(2, 1);
 
 	B_SetTopicStatus	(TOPIC_MOD_SAMUEL_RUM, LOG_SUCCESS);
+
+	B_LogEntry	(TOPIC_MOD_PIRATEN_SCHATZSUCHE, "Ich habe Samuel geholfen den Rumvorrat zu sichern.");
 };
 
 INSTANCE Info_Mod_Samuel_SkipFleisch (C_INFO)
