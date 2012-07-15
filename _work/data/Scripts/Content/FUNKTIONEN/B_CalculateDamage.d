@@ -508,8 +508,6 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			damage += damage/2;
 		};
-
-		//B_SetAivar(taeter, AIV_FernkampfHitZone, TARGET_RUMP; // nicht mehr zurücksetzen
 	};
 
 	if (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(PC_Hero))
