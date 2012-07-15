@@ -24,6 +24,9 @@ FUNC VOID Info_Mod_Morgahard_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Morgahard_Hi_07_02"); //Auﬂerdem kann ich dir manchen Banditentrick zeigen, der bei ‹berf‰llen goldwert ist.
 
 	Npc_SetRefuseTalk	(self, 60);
+
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_BANDITEN, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_BANDITEN, "Von Morgahard kann ich gewissen Banditentricks lernen.");
 };
 
 INSTANCE Info_Mod_Morgahard_OrkQuest (C_INFO)

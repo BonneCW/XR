@@ -476,6 +476,9 @@ FUNC VOID Info_Mod_Skinner_Lehrer_Info()
 	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
 
 	AI_Output(self, hero, "Info_Mod_Skinner_Lehrer_08_01"); //Ich kann dir den Umgang mit Einhändern beibringen.
+
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_BANDITEN, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_BANDITEN, "Skinner kann mich im Umgang mit Einhändern unterweisen.");
 };
 
 INSTANCE Info_Mod_Skinner_Lernen (C_INFO)

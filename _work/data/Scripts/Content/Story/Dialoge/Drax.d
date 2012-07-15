@@ -27,10 +27,16 @@ FUNC VOID Info_Mod_Drax_Hi_Info()
 		if (Mod_Schwierigkeit != 4)
 		{
 			AI_Output(self, hero, "Info_Mod_Drax_Hi_06_02"); //Hm, da du einer von uns bist, werde ich dir etwas über die Jagd und das Bogenschießen beibringen.
+
+			Log_CreateTopic	(TOPIC_MOD_LEHRER_BANDITEN, LOG_NOTE);
+			B_LogEntry	(TOPIC_MOD_LEHRER_BANDITEN, "Von Drax kann ich diverse Jagdtalente sowie das Bogenschießen lernen.");
 		}
 		else
 		{
 			AI_Output(self, hero, "Info_Mod_Drax_Hi_06_03"); //Hm, da du einer von uns bist, werde ich dir etwas über die Jagd beibringen.
+
+			Log_CreateTopic	(TOPIC_MOD_LEHRER_BANDITEN, LOG_NOTE);
+			B_LogEntry	(TOPIC_MOD_LEHRER_BANDITEN, "Von Drax kann ich diverse Jagdtalente lernen.");
 		};
 	};
 };
