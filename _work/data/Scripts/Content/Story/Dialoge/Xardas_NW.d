@@ -44,6 +44,8 @@ FUNC VOID Info_Mod_Xardas_NW_Hallo_Info()
 	Monster_Max = 2307;
 	Erzhackchance = 10;
 
+	Mod_Gottstatus = 8;
+
 	Mod_Verhandlungsgeschick = 10;
 
 	Npc_RemoveInvItems	(hero, ItWr_XardasLetterForHeroOT, 1);

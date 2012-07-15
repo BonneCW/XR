@@ -22,7 +22,7 @@ FUNC VOID B_StartOtherRoutine (var C_npc slf, var string newRoutine)
 		if ((Hlp_IsValidNpc (slf))
 		&& (!Npc_IsDead (slf)))
 		{
-			Npc_ExchangeRoutine  (slf,newRoutine);
+			Npc_ExchangeRoutine  (slf, newRoutine);
 			AI_ContinueRoutine (slf);
 		};	
 	}
@@ -30,4 +30,6 @@ FUNC VOID B_StartOtherRoutine (var C_npc slf, var string newRoutine)
 	{
 		Npc_ExchangeRoutine  (slf, newRoutine);	//Joly: zur Sicherheit!
 	};
+
+	Npc_ExchangeRoutine  (slf, newRoutine);
 };

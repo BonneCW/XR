@@ -21,8 +21,7 @@ FUNC VOID EVT_KLOSTEREINGANG()
 	|| (Mod_Gottstatus == 10)
 	|| (Mod_GottStatus == 11)
 	|| (Mod_Gottstatus == 12)))
-	{
-		
+	{		
 	}
 	else if (Hlp_IsItem(itm, ITAR_NOV_L) == FALSE)
 	&& (Hlp_IsItem(itm, ITAR_NOV_M) == FALSE)

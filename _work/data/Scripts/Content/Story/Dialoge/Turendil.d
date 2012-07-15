@@ -65,7 +65,6 @@ FUNC VOID Info_Mod_Turendil_Hi_A()
 	AI_Output(self, hero, "Info_Mod_Turendil_Hi_A_05_09"); //Du kannst den Kämpfer Struk und den Magier Thorge mitnehmen. Sie werden am Tor auf dich warten.
 	AI_Output(hero, self, "Info_Mod_Turendil_Hi_A_15_10"); //Gut, dann sehen wir uns später.
 
-	CreateInvItems	(self, ItPo_Health_01, 3);
 	B_GiveInvItems	(self, hero, ItPo_Health_01, 3);
 
 	B_StartOtherRoutine	(Mod_1956_VMK_Struk_MT, "ATGATE");
