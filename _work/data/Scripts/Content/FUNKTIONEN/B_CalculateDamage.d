@@ -82,6 +82,39 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 			{
 				damageType = DAM_MAGIC;
 			};
+
+			if (Hlp_GetInstanceID(taeter) != Hlp_GetInstanceID(PC_Hero))
+			{
+				if (taeter.fight_tactic == FAI_HUMAN_COWARD)
+				{
+					B_SetAivar(taeter, AIV_FernkampfHitZone, TARGET_RUMP);
+				}
+				else if (taeter.fight_tactic == FAI_HUMAN_STRONG)
+				{
+					var int strRnd; strRnd = r_max(2);
+
+					if (strRnd == 0)
+					{
+						B_SetAivar(taeter, AIV_FernkampfHitZone, TARGET_RUMP);
+					}
+					else if (strRnd == 1)
+					{
+						B_SetAivar(taeter, AIV_FernkampfHitZone, TARGET_LEFTLEG);
+					}
+					else if (strRnd == 2)
+					{
+						B_SetAivar(taeter, AIV_FernkampfHitZone, TARGET_RIGHTLEG);
+					};
+				}
+				else if (taeter.fight_tactic == FAI_HUMAN_MASTER)
+				{
+					B_SetAivar(taeter, AIV_FernkampfHitZone, 1 + r_max(5));
+				}
+				else
+				{
+					B_SetAivar(taeter, AIV_FernkampfHitZone, TARGET_RUMP);
+				};
+			};
 		};
 
 		if ((C_ItmHasFlag(rwp, ITEM_SWD))
@@ -326,158 +359,161 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		};
 	};
 
-	// Wenn Hero geschossen hat, dann zurücksetzen
+	// Wenn Täter geschossen hat, dann zurücksetzen
 
-	if (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(PC_Hero))
+	if (Npc_HasReadiedRangedWeapon(taeter))
 	{
-		if (Npc_HasReadiedRangedWeapon(hero))
+		var int chanceBonus;
+		chanceBonus = 0;
+
+		if (rwp.munition == ItRw_PraezisionsArrow)
+		|| (rwp.munition == ItRw_PraezisionsBolt)
 		{
-			var int chanceBonus;
-			chanceBonus = 0;
+			chanceBonus += 5;
+		};
 
-			if (rwp.munition == ItRw_PraezisionsArrow)
-			|| (rwp.munition == ItRw_PraezisionsBolt)
+		if (Npc_GetDistToNpc(taeter, opfer) < 1000)
+		{
+			chancebonus += (10-(Npc_GetDistToNpc(taeter, opfer)/100))*4;
+		};
+
+		if (rwp.munition == ItRw_SprengstoffArrow)
+		|| (rwp.munition == ItRw_SprengstoffBolt)
+		{
+			if (opfer.guild > GIL_SEPERATOR_HUM)
+			&& (opfer.aivar[AIV_Trefferzone] == 0)
 			{
-				chanceBonus += 5;
+				opfer.aivar[AIV_Trefferzone] = 2;
 			};
+		};
 
-			if (Npc_GetDistToNpc(taeter, opfer) < 1000)
+		if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_RUMP)
+		{
+			if (r_max(99) < (10-chanceBonus))
 			{
-				chancebonus += (10-(Npc_GetDistToNpc(taeter, opfer)/100))*4;
-			};
-
-			if (rwp.munition == ItRw_SprengstoffArrow)
-			|| (rwp.munition == ItRw_SprengstoffBolt)
+				damage = 0;
+			}
+			else
 			{
 				if (opfer.guild > GIL_SEPERATOR_HUM)
 				&& (opfer.aivar[AIV_Trefferzone] == 0)
 				{
-					opfer.aivar[AIV_Trefferzone] = 2;
+					opfer.aivar[AIV_Trefferzone] = 1;
 				};
 			};
-
-			if (CurrentTarget == TARGET_RUMP)
+		}
+		else if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_LEFTLEG)
+		|| (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_RIGHTLEG)
+		{
+			if (r_max(99) < (40-chanceBonus))
 			{
-				if (r_max(99) < (10-chanceBonus))
-				{
-					damage = 0;
-				}
-				else
-				{
-					if (opfer.guild > GIL_SEPERATOR_HUM)
-					&& (opfer.aivar[AIV_Trefferzone] == 0)
-					{
-						opfer.aivar[AIV_Trefferzone] = 1;
-					};
-				};
+				damage = 0;
 			}
-			else if (CurrentTarget == TARGET_LEFTLEG)
-			|| (CurrentTarget == TARGET_RIGHTLEG)
+			else
 			{
-				if (r_max(99) < (40-chanceBonus))
-				{
-					damage = 0;
-				}
-				else
-				{
-					// Schaden bleibt, dafür langsamer
+				// Schaden bleibt, dafür langsamer
 
-					Npc_ClearAIQueue	(opfer);
-					AI_StandUP	(opfer);
+				Npc_ClearAIQueue	(opfer);
+				AI_StandUP	(opfer);
 
-					AI_StartState	(opfer, ZS_MagicMiniFreeze, 0, "");
-				};
+				AI_StartState	(opfer, ZS_MagicMiniFreeze, 0, "");
+			};
+		}
+		else if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_RIGHTARM)
+		|| (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_LEFTARM)
+		{
+			if (r_max(99) < (40-chanceBonus))
+			{
+				damage = 0;
 			}
-			else if (CurrentTarget == TARGET_RIGHTARM)
-			|| (CurrentTarget == TARGET_LEFTARM)
+			else
 			{
-				if (r_max(99) < (40-chanceBonus))
-				{
-					damage = 0;
-				}
-				else
-				{
-					// Schaden bleibt, dafür weniger Schaden
+				// Schaden bleibt, dafür weniger Schaden
 
+				if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(PC_Hero))
+				{
 					opfer.attribute[ATR_STRENGTH] -= opfer.attribute[ATR_STRENGTH]/10;
 				};
-			}
-			else if (CurrentTarget == TARGET_HEAD)
+			};
+		}
+		else if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_HEAD)
+		{
+			if (r_max(99) < (60-chanceBonus)/(1+Mod_KritischerTrefferRing))
 			{
-				if (r_max(99) < (60-chanceBonus)/(1+Mod_KritischerTrefferRing))
-				{
-					damage = 0;
-				}
-				else
-				{
-					damage += (damage*25)/10;
+				damage = 0;
+			}
+			else
+			{
+				damage += (damage*25)/10;
 
-					if (opfer.guild > GIL_SEPERATOR_HUM)
-					&& (opfer.aivar[AIV_Trefferzone] == 0)
-					{
-						opfer.aivar[AIV_Trefferzone] = 1;
-					};
+				if (opfer.guild > GIL_SEPERATOR_HUM)
+				&& (opfer.aivar[AIV_Trefferzone] == 0)
+				{
+					opfer.aivar[AIV_Trefferzone] = 1;
 				};
 			};
+		};
 
-			var int rangeBonus;
-			rangeBonus = 0;
+		var int rangeBonus;
+		rangeBonus = 0;
 
-			if (rwp.munition == ItRw_PraezisionsArrow)
-			|| (rwp.munition == ItRw_PraezisionsBolt)
-			{
-				rangeBonus += 1000;
+		if (rwp.munition == ItRw_PraezisionsArrow)
+		|| (rwp.munition == ItRw_PraezisionsBolt)
+		{
+			rangeBonus += 1000;
 
-				damage -= (damage*10)/100;
-			};
+			damage -= (damage*10)/100;
+		};
 
-			if (rwp.munition == ItRw_SprengstoffArrow)
-			|| (rwp.munition == ItRw_SprengstoffBolt)
-			{
-				rangeBonus -= 2000;
+		if (rwp.munition == ItRw_SprengstoffArrow)
+		|| (rwp.munition == ItRw_SprengstoffBolt)
+		{
+			rangeBonus -= 2000;
 
-				damage += (damage*50)/100;
-			};
+			damage += (damage*50)/100;
+		};
 
-			if (Npc_GetHeightToNpc(taeter, opfer) > 200)
-			{
-				rangeBonus += (Npc_GetHeightToNpc(taeter, opfer)/100)*2;
-			};
+		if (Npc_GetHeightToNpc(taeter, opfer) > 200)
+		{
+			rangeBonus += (Npc_GetHeightToNpc(taeter, opfer)/100)*2;
+		};
 
-			if (Npc_GetDistToNpc(taeter, opfer) > (rwp.range+rangeBonus))
+		if (Npc_GetDistToNpc(taeter, opfer) > (rwp.range+rangeBonus))
+		{
+			return;
+		};
+
+		if (rwp.munition == ItRw_WiderhakenArrow)
+		|| (rwp.munition == ItRw_WiderhakenBolt)
+		{
+			if (r_max(99) < 10)
 			{
 				return;
 			};
-
-			if (rwp.munition == ItRw_WiderhakenArrow)
-			|| (rwp.munition == ItRw_WiderhakenBolt)
-			{
-				if (r_max(99) < 10)
-				{
-					return;
-				};
-			};
-
-			if (rwp.munition == ItRw_RueckverwandlungsArrow)
-			|| (rwp.munition == ItRw_RueckverwandlungsBolt)
-			{
-				if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Warg_Atalante))
-				{
-					B_RemoveNpc	(Warg_Atalante);
-
-					Wld_InsertNpc	(Mod_7678_OUT_Atalante_NW, "NW_FOREST_PATH_31_NAVIGATION3");
-				};
-			};
-
-			if (Hlp_IsItem(rwp, ItRw_Geisterbogen) == TRUE)
-			&& (C_NpcIsUndead(opfer))
-			{
-				damage += damage/2;
-			};
-
-			//CurrentTarget = TARGET_RUMP; // nicht mehr zurücksetzen
 		};
 
+		if (rwp.munition == ItRw_RueckverwandlungsArrow)
+		|| (rwp.munition == ItRw_RueckverwandlungsBolt)
+		{
+			if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Warg_Atalante))
+			{
+				B_RemoveNpc	(Warg_Atalante);
+
+				Wld_InsertNpc	(Mod_7678_OUT_Atalante_NW, "NW_FOREST_PATH_31_NAVIGATION3");
+			};
+		};
+
+		if (Hlp_IsItem(rwp, ItRw_Geisterbogen) == TRUE)
+		&& (C_NpcIsUndead(opfer))
+		{
+			damage += damage/2;
+		};
+
+		//B_SetAivar(taeter, AIV_FernkampfHitZone, TARGET_RUMP; // nicht mehr zurücksetzen
+	};
+
+	if (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(PC_Hero))
+	{
 		if (Mod_NL_DrachensudIntus == 1)
 		&& (hero.attribute[ATR_MANA] > 20)
 		{

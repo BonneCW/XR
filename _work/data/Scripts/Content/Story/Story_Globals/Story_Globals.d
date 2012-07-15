@@ -32,8 +32,6 @@ var int Mod_PermHealth_Wrong;
 
 // Zielsystem
 
-var int CurrentTarget;
-
 const int TARGET_RUMP = 1;
 const int TARGET_HEAD = 2;
 const int TARGET_LEFTARM = 3;

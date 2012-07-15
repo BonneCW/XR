@@ -224,69 +224,63 @@ FUNC VOID FRAMEFUNC ()
 		if (Npc_IsAiming(hero, other))
 		&& (Npc_IsInFightMode(hero, FMODE_FAR))
 		{
-			if (CurrentTarget == TARGET_RUMP)
+			if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_RUMP)
 			{
 				PrintScreen	("Körper", -1, 20, FONT_SCREEN, 1);
 			}
-			else if (CurrentTarget == TARGET_LEFTLEG)
+			else if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_LEFTLEG)
 			{
 				PrintScreen	("Linkes Bein", -1, 20, FONT_SCREEN, 1);
 			}
-			else if (CurrentTarget == TARGET_RIGHTLEG)
+			else if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_RIGHTLEG)
 			{
 				PrintScreen	("Rechtes Bein", -1, 20, FONT_SCREEN, 1);
 			}
-			else if (CurrentTarget == TARGET_LEFTARM)
+			else if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_LEFTARM)
 			{
 				PrintScreen	("Linker Arm", -1, 20, FONT_SCREEN, 1);
 			}
-			else if (CurrentTarget == TARGET_RIGHTARM)
+			else if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_RIGHTARM)
 			{
 				PrintScreen	("Rechter Arm", -1, 20, FONT_SCREEN, 1);
 			}
-			else if (CurrentTarget == TARGET_HEAD)
+			else if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_HEAD)
 			{
 				PrintScreen	("Kopf", -1, 20, FONT_SCREEN, 1);
 			};
 
 			if (MEM_KeyState(KEY_NUMPAD1) == KEY_PRESSED)
 			{
-				CurrentTarget = TARGET_LEFTLEG;
+				B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_LEFTLEG);
 			}
 			else if (MEM_KeyState(KEY_NUMPAD4) == KEY_PRESSED)
 			{
-				CurrentTarget = TARGET_LEFTARM;
+				B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_LEFTARM);
 			}
 			else if (MEM_KeyState(KEY_NUMPAD6) == KEY_PRESSED)
 			{
-				CurrentTarget = TARGET_RIGHTARM;
+				B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_RIGHTARM);
 			}
 			else if (MEM_KeyState(KEY_NUMPAD8) == KEY_PRESSED)
 			{
-				CurrentTarget = TARGET_HEAD;
+				B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_HEAD);
 			}
 			else if (MEM_KeyState(KEY_NUMPAD3) == KEY_PRESSED)
 			{
-				CurrentTarget = TARGET_RIGHTLEG;
+				B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_RIGHTLEG);
 			}
 			else if (MEM_KeyState(KEY_NUMPAD5) == KEY_PRESSED)
 			{
-				CurrentTarget = TARGET_RUMP;
+				B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_RUMP);
 			};
 		}
 		else
 		{
-			//CurrentTarget = TARGET_RUMP;
+			//B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_RUMP;
 		};
 
 		var string OppState;
 		OppState = "";
-
-		if (other.aivar[AIV_Tiergift] > 0)
-		|| (other.aivar[AIV_Pflanzengift] > 0)
-		{
-			OppState = ConcatStrings(OppState, "K ");
-		};
 
 		if (other.aivar[AIV_Blutet] > 0)
 		{
@@ -300,7 +294,7 @@ FUNC VOID FRAMEFUNC ()
 	}
 	else
 	{
-		CurrentTarget = TARGET_RUMP;
+		B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_RUMP);
 	};
 
 	FrameCounter += 1;
