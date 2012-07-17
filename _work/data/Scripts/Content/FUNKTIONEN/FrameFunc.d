@@ -210,6 +210,7 @@ FUNC VOID FRAMEFUNC ()
 	ChangeStatusMenu ("MENU_ITEM_ARMOR_2", IntToString(hero.protection[PROT_POINT]/1000));
 	ChangeStatusMenu ("MENU_ITEM_GIFT_WERT", IntToString(Gift));
 	ChangeStatusMenu ("MENU_ITEM_KRANKHEIT_WERT", IntToString(Krankheit));
+	ChangeStatusMenu ("MENU_ITEM_TALENT_21_SKILL", ConcatStrings(IntToString(Mod_Verhandlungsgeschick), " %"));
 
 	if (Mod_Schwierigkeit == 4)
 	{

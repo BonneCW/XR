@@ -19,18 +19,18 @@ FUNC VOID B_RaiseHandelsgeschick (var int wert)
 
 	if (Mod_Verhandlungsgeschick == 100)
 	{
-		Npc_SetTalentSkill (hero, NPC_TALENT_HANDELN,5);
+		Npc_SetTalentSkill (hero, NPC_TALENT_HANDELN, 5);
 	}
 	else if (Mod_Verhandlungsgeschick > 74)
 	{
-		Npc_SetTalentSkill (hero, NPC_TALENT_HANDELN,4);
+		Npc_SetTalentSkill (hero, NPC_TALENT_HANDELN, 4);
 	}
 	else if (Mod_Verhandlungsgeschick > 49)
 	{
-		Npc_SetTalentSkill (hero, NPC_TALENT_HANDELN,3);
+		Npc_SetTalentSkill (hero, NPC_TALENT_HANDELN, 3);
 	}
 	else if (Mod_Verhandlungsgeschick > 29)
 	{
-		Npc_SetTalentSkill (hero, NPC_TALENT_HANDELN,2);
+		Npc_SetTalentSkill (hero, NPC_TALENT_HANDELN, 2);
 	};
 };
