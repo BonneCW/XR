@@ -108,6 +108,8 @@ FUNC INT Info_Mod_Furt_Faice02_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Turendil_Mendulus))
 	&& (Mod_VMG_FaiceGifty_Gift == 10)
+	&& ((Npc_KnowsInfo(hero, Info_Mod_Hermy_Faice01))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Hermy_Faice03)))
 	{
 		return 1;
 	};
