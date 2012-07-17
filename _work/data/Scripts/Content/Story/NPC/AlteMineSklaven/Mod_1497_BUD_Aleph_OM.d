@@ -4,7 +4,7 @@ instance Mod_1497_BUD_Aleph_OM (Npc_Default)
 	
 	name =							"Aleph";
 	npctype =						npctype_main;
-	guild =							GIL_KDF;      
+	guild =							GIL_OUT;      
 	level =							5;	
 	voice =							5;
 	id =							1497;

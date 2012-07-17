@@ -4,7 +4,7 @@ instance Mod_1498_BUD_Grimes_OM (Npc_Default)
 	
 	name =							"Grimes";
 	npctype =						npctype_main;
-	guild =							GIL_KDF;      
+	guild =							GIL_OUT;      
 	level =							5;
 	
 	

@@ -476,6 +476,7 @@ FUNC VOID GILDENSTORY_AL()
 			{
 				B_LogEntry	(TOPIC_MOD_AL_KillMission, "Bartholo hat mich mit Jackal und einem Gardisten zum Kastell geschickt, er wird Verstärkung nachschicken.");
 	
+				B_StartOtherRoutine	(Mod_1106_EBR_Bartholo_MT, "BOSS");
 				B_StartOtherRoutine	(Mod_1876_EBR_Bloodwyn_MT, "GOTOBERGKASTELL");
 				B_StartOtherRoutine	(Mod_1145_GRD_Gardist_MT, "GOTOBERGKASTELL");
 				B_StartOtherRoutine	(Mod_1107_GRD_Jackal_MT, "FOLLOWTOBERGKASTELL");
@@ -491,7 +492,7 @@ FUNC VOID GILDENSTORY_AL()
 		if (Npc_KnowsInfo(hero, Info_Mod_Gomez_Angebot))
 		&& (hero.attribute[ATR_HITPOINTS] <= 3)
 		{
-			B_StartOtherRoutine	(Mod_513_DMB_Xardas_NW, "ANGEBOT");
+			B_StartOtherRoutine	(Mod_680_DMB_Xardas_MT, "ANGEBOT");
 
 			B_StartOtherRoutine	(Mod_517_DMR_Gomez_MT, "START");
 

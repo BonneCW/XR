@@ -6924,8 +6924,6 @@ FUNC VOID INIT_OldMine ()
 		B_RemoveNpc	(Mod_7048_RIT_Ritter_OM);
 		B_RemoveNpc	(Mod_7049_RIT_Ritter_OM);
 	};
-
-	B_OM_ARBEIT();
 };
 
 FUNC VOID STARTUP_OrcGraveyard()

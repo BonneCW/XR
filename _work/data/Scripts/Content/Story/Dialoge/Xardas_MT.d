@@ -262,7 +262,7 @@ FUNC VOID Info_Mod_Xardas_MT_HabSchwert_Info()
 	AI_StopProcessInfos	(self);
 
 	AI_Teleport	(self, "TOT");
-	Npc_ExchangeRoutine	(self, "TOT");
+	B_StartOtherRoutine	(self, "TOT");
 };
 
 INSTANCE Info_Mod_Xardas_MT_Befoerderung (C_INFO)
