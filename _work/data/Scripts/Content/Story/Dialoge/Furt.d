@@ -124,7 +124,7 @@ FUNC VOID Info_Mod_Furt_Faice02_Info()
 	AI_Output(hero, self, "Info_Mod_Furt_Faice02_15_04"); //Na bitte, geht doch. Warum hast du das getan?
 	AI_Output(self, hero, "Info_Mod_Furt_Faice02_03_05"); //Ich werde meinen Auftraggeber nicht verraten!
 	AI_Output(hero, self, "Info_Mod_Furt_Faice02_15_06"); //Was soll ich jetzt mit dir machen?
-	AI_Output(self, hero, "Info_Mod_Furt_Faice02_03_07"); //Lass mich laufen. Ich gebe dir 500 Goldmünzen und eine Spruchrolle „Verwandlung Scavenger“.
+	AI_Output(self, hero, "Info_Mod_Furt_Faice02_03_07"); //Lass mich laufen. Ich gebe dir 500 Goldmünzen und eine Spruchrolle „Verwandlung Keiler“.
 
 	B_LogEntry	(TOPIC_MOD_FAICE_HEILUNG, "Ich habe herausgefunden, dass Furt die Spruchrolle vergiftet hat.");
 };
@@ -184,7 +184,10 @@ FUNC VOID Info_Mod_Furt_Faice04_Info()
 	AI_Output(hero, self, "Info_Mod_Furt_Faice04_15_00"); //Okay, gib mir das Zeug und verschwinde.
 	AI_Output(self, hero, "Info_Mod_Furt_Faice04_03_01"); //Hier. Jetzt mach's gut.
 
-	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
+	CreateInvItems	(hero, ItMi_Gold, 500);
+	CreateInvItems	(hero, ItSc_TrfKeiler, 1);
+
+	B_ShowGivenThings	("500 Gold und eine Spruchrolle 'Verwandlung Keiler' erhalten");
 
 	B_LogEntry	(TOPIC_MOD_FAICE_HEILUNG, "Ich habe Furt laufen lassen und ein paar Gegenstände von ihm erhalten. Er wird sich wohl nicht wieder blicken lassen.");
 
