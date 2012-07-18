@@ -415,6 +415,11 @@ FUNC VOID Info_Mod_Alax_Lehrer_Info()
 		
 	Info_ClearChoices 	(Info_Mod_Alax_Lehrer);
 	Info_AddChoice 		(Info_Mod_Alax_Lehrer,DIALOG_BACK,Info_Mod_Alax_Lehrer_BACK);
+
+	if (PLAYER_TALENT_ALCHEMY[POTION_Regeneration] == FALSE)
+	{
+		Info_AddChoice	  (Info_Mod_Alax_Lehrer, B_BuildLearnString ("Regenerationstrank", B_GetLearnCostTalent (hero, NPC_TALENT_ALCHEMY, POTION_Regeneration)), Info_Mod_Alax_Lehrer_Regeneration);
+	};
 		
 	if (PLAYER_TALENT_ALCHEMY[POTION_Health_07] == FALSE)
 	{
@@ -485,6 +490,10 @@ FUNC VOID Info_Mod_Alax_Lehrer_Info()
 FUNC VOID Info_Mod_Alax_Lehrer_BACK()
 {
 	Info_ClearChoices 	(Info_Mod_Alax_Lehrer);
+};
+FUNC VOID Info_Mod_Alax_Lehrer_Regeneration()
+{
+	B_TeachPlayerTalentAlchemy (self, hero, POTION_Regeneration);
 };
 FUNC VOID Info_Mod_Alax_Lehrer_HEALTH_01()
 {

@@ -175,7 +175,8 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 		else if (skill == POTION_GiftNeutralisierer) 	{	kosten = (15);	}
 		else if (skill == POTION_Gift	) 		{	kosten = (5);	}
 		else if (skill == POTION_Gegengift	) 	{	kosten = (3);	}
-		else if (skill == POTION_Genesung	) 	{	kosten = (3);	};
+		else if (skill == POTION_Genesung	) 	{	kosten = (3);	}
+		else if (skill == POTION_Regeneration	) 	{	kosten = (3);	};
 	};                                                              
 	
 	// ------ Kosten für Animaltrophy ------

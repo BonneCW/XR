@@ -756,4 +756,27 @@ FUNC VOID Zustaende()
 		hero.protection[PROT_MAGIC] -= 30;
 		hero.protection[PROT_FIRE] -= 30;
 	};
+
+	// Regenerationstrank
+
+	if (Mod_Regenerationstrank_Counter > 0)
+	{
+		Mod_Regenerationstrank_Counter -= 1;
+
+		hero.attribute[ATR_HITPOINTS] += hero.attribute[ATR_HITPOINTS_MAX]/50;
+
+		if (hero.attribute[ATR_HITPOINTS] > hero.attribute[ATR_HITPOINTS_MAX])
+		{
+			hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
+		};
+
+		hero.aivar[AIV_Damage] = hero.attribute[ATR_HITPOINTS];
+
+		hero.attribute[ATR_MANA] += hero.attribute[ATR_MANA_MAX]/50;
+
+		if (hero.attribute[ATR_MANA] > hero.attribute[ATR_MANA_MAX])
+		{
+			hero.attribute[ATR_MANA] = hero.attribute[ATR_MANA_MAX];
+		};
+	};
 };

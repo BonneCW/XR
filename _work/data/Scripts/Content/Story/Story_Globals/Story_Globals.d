@@ -45,6 +45,7 @@ var int Bosskampf_Pass_NW;
 
 
 
+var int Mod_Regenerationstrank_Counter;
 var int Mod_AL_ZufluchtCounter;
 var int Mod_Fortuno_Sumpfmensch_Scene;
 var int Mod_Ring_Verschlagenheit;

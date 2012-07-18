@@ -1377,8 +1377,9 @@ const int POTION_GiftNeutralisierer			= 21;
 const int POTION_Gift					= 22;
 const int POTION_Gegengift				= 23;
 const int POTION_Genesung				= 24;
+const int POTION_Regeneration				= 25;
 
-const int MAX_POTION					= 25;
+const int MAX_POTION					= 26;
 
 var int PLAYER_TALENT_ALCHEMY[MAX_POTION];
 

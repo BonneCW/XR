@@ -108,6 +108,9 @@ func int B_TeachPlayerTalentAlchemy (var C_NPC slf, var C_NPC oth, var int potio
 	
 	if (potion == POTION_Genesung)		{	PLAYER_TALENT_ALCHEMY[POTION_Genesung] 		= TRUE;	
 	B_LogEntry(TOPIC_TalentAlchemy,"Zutaten ´TRANK DER GENESUNG´: 1 Extrakt der Heilung, 1 Wacholder, 4 Heilpflanzen, 1 Feldknöterich");  };
+	
+	if (potion == POTION_Regeneration)		{	PLAYER_TALENT_ALCHEMY[POTION_Regeneration] 		= TRUE;	
+	B_LogEntry(TOPIC_TalentAlchemy,"Zutaten ´REGENERATIONSTRANK´: 1 Milch, 10 Blauflieder");  };
 
 	PrintScreen			(PRINT_LearnAlchemy, -1, -1, FONT_Screen, 2);
 	
