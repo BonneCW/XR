@@ -43,6 +43,18 @@ FUNC VOID Rtn_Start_1336 ()
     TA_Sit_Campfire	(08,00,01,00,"PSI_PATH_4_CAMPFIRE_A");
 };
 
+FUNC VOID Rtn_Sumpfmensch_1336 ()
+{
+	TA_Sit_Campfire	(22,00,07,00,"PSI_PLACE");
+	TA_Sit_Campfire	(07,00,22,00,"PSI_PATH_4_CAMPFIRE_A");	
+};
+
+FUNC VOID Rtn_Sumpfmensch2_1336 ()
+{
+	TA_Sit_Campfire			(07,00,22,00,"PSI_PATH_4_CAMPFIRE_A");	
+	TA_Smalltalk_Sumpfmensch02	(22,00,07,00,"PSI_TO_HERB_PLACE_1");	
+};
+
 FUNC VOID Rtn_Tot_1336 ()
 {
 	TA_Stand_WP 	(08,00,20,00,"TOT");

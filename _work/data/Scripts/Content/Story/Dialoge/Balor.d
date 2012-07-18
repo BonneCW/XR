@@ -141,6 +141,11 @@ FUNC VOID Info_Mod_Balor_Sumpfmensch_Info()
 	B_LogEntry	(TOPIC_MOD_SL_SUMPFMENSCH, "Ich sollte nachts  vom Lagereingang dem rechten Steg folgen, bis ich an ein Lagerfeuer komme. Der Novize Fortuno erzählt dort anscheinend die Geschichte des 'heulenden Sumpfmenschen'.");
 
 	B_StartOtherRoutine	(Mod_951_PSINOV_Fortuno_MT, "SUMPFMENSCH");
+	B_StartOtherRoutine	(Mod_1339_PSINOV_Novize_MT, "SUMPFMENSCH");
+	B_StartOtherRoutine	(Mod_2008_PSINOV_Ghorim_MT, "SUMPFMENSCH");
+	B_StartOtherRoutine	(Mod_1337_PSINOV_Novize_MT, "SUMPFMENSCH");
+	B_StartOtherRoutine	(Mod_1336_PSINOV_Novize_MT, "SUMPFMENSCH");
+	B_StartOtherRoutine	(Mod_1338_PSINOV_Novize_MT, "SUMPFMENSCH");
 };
 
 INSTANCE Info_Mod_Balor_Woher (C_INFO)

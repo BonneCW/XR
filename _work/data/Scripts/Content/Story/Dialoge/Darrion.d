@@ -396,32 +396,74 @@ FUNC VOID Info_Mod_Darrion_Hueterklinge_A1()
 	Info_ClearChoices	(Info_Mod_Darrion_Hueterklinge);
 };
 
-INSTANCE Info_Mod_Darrion_Woher (C_INFO)
+INSTANCE Info_Mod_Darrion_Sumpfmensch (C_INFO)
 {
 	npc		= Mod_2014_PSINOV_Darrion_MT;
 	nr		= 1;
-	condition	= Info_Mod_Darrion_Woher_Condition;
-	information	= Info_Mod_Darrion_Woher_Info;
-	permanent	= 1;
+	condition	= Info_Mod_Darrion_Sumpfmensch_Condition;
+	information	= Info_Mod_Darrion_Sumpfmensch_Info;
+	permanent	= 0;
 	important	= 0;
-	description	= "Wie kommt ein Kerl wie du in dieses Lager?";
+	description	= "Fortuno hat mir erzählt, du hast den heulenden Sumpfmenschen gesehen.";
 };
 
-FUNC INT Info_Mod_Darrion_Woher_Condition()
+FUNC INT Info_Mod_Darrion_Sumpfmensch_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Darrion_Hi))
+	if (Npc_KnowsInfo(hero, Info_Mod_Fortuno_Sumpfmensch))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Darrion_Woher_Info()
+FUNC VOID Info_Mod_Darrion_Sumpfmensch_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Darrion_Woher_15_00"); //Wie kommt ein Kerl wie du in dieses Lager?
-	AI_Output(self, hero, "Info_Mod_Darrion_Woher_11_01"); //Ich war schon immer Schmied und hier war die einzige Möglichkeit, wieder als Schmied zu arbeiten.
-	AI_Output(self, hero, "Info_Mod_Darrion_Woher_11_02"); //Ursprünglich komme ich aus Mora Sul. Ich habe dort als Schmied gearbeitet, doch da ich auch Waffen an die Feinde des Königs verkauft habe, haben sie mich in die Kolonie geworfen.
-	AI_Output(self, hero, "Info_Mod_Darrion_Woher_11_03"); //Ich bin dann zuerst ins Neue Lager und hab dort als Schürfer gearbeitet, aber das war nichts für mich.
-	AI_Output(self, hero, "Info_Mod_Darrion_Woher_11_04"); //Also bin ich hierher gekommen und hier konnte ich wieder als Schmied arbeiten und das mache ich seitdem auch.
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch_15_00"); //Fortuno hat mir erzählt, du hast den heulenden Sumpfmenschen gesehen.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_11_01"); //Ja, das habe ich, und es hätte mich beinahe das Leben gekostet! Ich weiß nicht, welchem Gott ich danken soll, aber dass ich noch lebe grenzt an ein Wunder.
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch_15_02"); //Wo hast du ihn getroffen?
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_11_03"); //Tief im Sumpf. Ich habe dort früher spezielles Sumpfkraut gepflanzt, das an den Randgebieten einfach nicht gedeiht.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_11_04"); //Als ich vor einigen Wochen dort nach dem Rechten sehen wollte, stand plötzlich diese Kreatur vor mir. Ich hab mir fast in die Hosen geschissen!
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_11_05"); //Da hab sogar ich alter Seebär mich gefühlt, wie ein kleines Mädchen!
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_11_06"); //Ich  hab's den andren gesagt und ich sag's dir: Wenn du diesem Monster jemals begegnen solltest, nimm die Beine in die Hand und renn!
+
+	B_StartOtherRoutine	(Mod_951_PSINOV_Fortuno_MT, "START");
+	B_StartOtherRoutine	(Mod_1339_PSINOV_Novize_MT, "START");
+	B_StartOtherRoutine	(Mod_2008_PSINOV_Ghorim_MT, "START");
+	B_StartOtherRoutine	(Mod_1337_PSINOV_Novize_MT, "START");
+	B_StartOtherRoutine	(Mod_1336_PSINOV_Novize_MT, "START");
+	B_StartOtherRoutine	(Mod_1338_PSINOV_Novize_MT, "START");
+
+	Info_ClearChoices	(Info_Mod_Darrion_Sumpfmensch);
+
+	Info_AddChoice	(Info_Mod_Darrion_Sumpfmensch, "Wo im Sumpf hast du dein Sumpfkraut gefplanzt?", Info_Mod_Darrion_Sumpfmensch_C);
+	Info_AddChoice	(Info_Mod_Darrion_Sumpfmensch, "Du bist früher zur See gefahren?", Info_Mod_Darrion_Sumpfmensch_B);
+	Info_AddChoice	(Info_Mod_Darrion_Sumpfmensch, "Was für spezielles Sumpfkraut hast du da gepflanzt?", Info_Mod_Darrion_Sumpfmensch_A);
+};
+
+FUNC VOID Info_Mod_Darrion_Sumpfmensch_C()
+{
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch_C_15_00"); //Wo im Sumpf hast du dein Sumpfkraut gefplanzt?
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_C_11_01"); //Irgendwo weit drinnen, aber komm ja nicht auf die Idee da zu suchen, Junge, ich sag's nochmals: das Wesen ist gefährlich, das reißt dir den Arsch auf!
+};
+
+FUNC VOID Info_Mod_Darrion_Sumpfmensch_B()
+{
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch_B_15_00"); //Du bist früher zur See gefahren?
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_B_11_01"); //Ich war früher Pirat, Junge! Und was für einer!
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch_B_15_02"); //Warum hast du die Piraten verlassen?
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_B_11_03"); //Ach, ich hatte das Piratendasein satt, Junge.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_B_11_04"); //Und hier? Hier stampf ich tagsüber etwas Kraut, damit die Muskeln nicht rosten, rauch ein bisschen Sumpfkraut und lass mir den restlichen Tag die Sonne auf den Bauch scheinen.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_B_11_05"); //Und jetzt lass mich in Ruhe.
+
+	Info_ClearChoices	(Info_Mod_Darrion_Sumpfmensch);
+
+	AI_StopProcessInfos	(self);
+};
+
+FUNC VOID Info_Mod_Darrion_Sumpfmensch_A()
+{
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch_A_15_00"); //Was für spezielles Sumpfkraut hast du da gepflanzt?
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_A_11_01"); //Das war ganz was Feines, das hab ich aus dem großen Sumpf der ein bisschen von der Piratenbucht entfernt liegt ausgegraben und mitgebracht.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_A_11_02"); //Musste ein paar ziemlich hässliche Viecher umhaun' um da dran zu kommen.
 };
 
 INSTANCE Info_Mod_Darrion_Trade (C_INFO)

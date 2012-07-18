@@ -53,6 +53,12 @@ FUNC VOID Rtn_Sumpfmensch_2008 ()
 	TA_Sit_Campfire	(22,00,07,00,"PSI_PLACE");
 };
 
+FUNC VOID Rtn_Sumpfmensch2_2008 ()
+{
+	TA_Stomp_Herb 			(07,00,22,00,"PSI_HERB_PLACE_1");
+	TA_Smalltalk_Sumpfmensch01	(07,00,22,00,"PSI_PATH_2_6");	
+};
+
 FUNC VOID Rtn_Tot_2008 ()
 {
 	TA_Stand_WP 	(08,00,20,00,"TOT");

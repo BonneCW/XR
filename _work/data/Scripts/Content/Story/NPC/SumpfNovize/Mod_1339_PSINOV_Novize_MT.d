@@ -43,7 +43,19 @@ instance Mod_1339_PSINOV_Novize_MT (Npc_Default)
 FUNC VOID Rtn_start_1339 ()
 {
 	TA_Sleep 	(23,05,07,30,"PSI_27_HUT_IN");
-    TA_Listen	(07,30,23,05,"PSI_PLATFORM_1");	
+	TA_Listen	(07,30,23,05,"PSI_PLATFORM_1");	
+};
+
+FUNC VOID Rtn_Sumpfmensch_1339 ()
+{
+	TA_Sit_Campfire	(22,00,07,00,"PSI_PLACE");
+	TA_Listen	(07,00,22,00,"PSI_PLATFORM_1");	
+};
+
+FUNC VOID Rtn_Sumpfmensch2_1339 ()
+{
+	TA_Smalltalk_Sumpfmensch01	(22,00,07,00,"PSI_PATH_2_6");	
+	TA_Listen	(07,00,22,00,"PSI_PLATFORM_1");	
 };
 
 FUNC VOID Rtn_Tot_1339 ()

@@ -87,6 +87,13 @@ FUNC VOID FortunoSumpfmensch_Scene()
 		CutsceneAn = FALSE;
 
 		AI_PlayAni	(hero, "T_SIT_2_STAND");
+
+		B_StartOtherRoutine	(Mod_2008_PSINOV_Ghorim_MT, "SUMPFMENSCH2");
+		B_StartOtherRoutine	(Mod_1339_PSINOV_Novize_MT, "SUMPFMENSCH2");
+		B_StartOtherRoutine	(Mod_1337_PSINOV_Novize_MT, "SUMPFMENSCH2");
+		B_StartOtherRoutine	(Mod_1336_PSINOV_Novize_MT, "SUMPFMENSCH2");
+		B_StartOtherRoutine	(Mod_1338_PSINOV_Novize_MT, "SUMPFMENSCH2");
+		B_StartOtherRoutine	(Mod_951_PSINOV_Fortuno_MT, "SUMPFMENSCH2");
 	};
 
 	Mod_FortunoSumpfmensch_Scene_Counter += 1;

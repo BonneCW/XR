@@ -21,6 +21,38 @@ FUNC VOID Info_Mod_Fortuno_Hi_Info()
 	B_LogEntry	(TOPIC_MOD_HAENDLER_PSICAMP, "Fortuno handelt mit allerlei Kleinkram.");
 };
 
+INSTANCE Info_Mod_Fortuno_Sumpfmensch (C_INFO)
+{
+	npc		= Mod_951_PSINOV_Fortuno_MT;
+	nr		= 1;
+	condition	= Info_Mod_Fortuno_Sumpfmensch_Condition;
+	information	= Info_Mod_Fortuno_Sumpfmensch_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Nette Geschichte.";
+};
+
+FUNC INT Info_Mod_Fortuno_Sumpfmensch_Condition()
+{
+	if (Mod_Fortuno_Sumpfmensch_Scene == 2)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Fortuno_Sumpfmensch_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Fortuno_Sumpfmensch_15_00"); //Nette Geschichte.
+	AI_Output(self, hero, "Info_Mod_Fortuno_Sumpfmensch_13_01"); //Das kann nur jemand behaupten, der dem heulenden Sumpfmenschen noch nicht begegnet ist.
+	AI_Output(hero, self, "Info_Mod_Fortuno_Sumpfmensch_15_02"); //Und du bist ihm begegnet?
+	AI_Output(self, hero, "Info_Mod_Fortuno_Sumpfmensch_13_03"); //Wenn dem  so wäre, würde ich wohl kaum vor dir stehen.
+	AI_Output(hero, self, "Info_Mod_Fortuno_Sumpfmensch_15_04"); //Also hat noch niemand diesen heulenden Sumpfmenschen gesehen?
+	AI_Output(self, hero, "Info_Mod_Fortuno_Sumpfmensch_13_05"); //Doch. Ein Novize namens Regahn, und der zittert seitdem wie Espenlaub. Und Regahn ist nicht einfach irgendein schwächlicher Novize, der sich beim Anblick einer Sumpfratte in die Hose macht.
+	AI_Output(self, hero, "Info_Mod_Fortuno_Sumpfmensch_13_06"); //Der Typ war früher Pirat, der verspeist Sumpfhaie zum Frühstück!
+
+	B_LogEntry	(TOPIC_MOD_SL_SUMPFMENSCH, "Offenbar hat bisher nur Darrion den Sumpfmensch gesehen. Ich sollte mal mit ihm sprechen.");
+};
+
 INSTANCE Info_Mod_Fortuno_Woher (C_INFO)
 {
 	npc		= Mod_951_PSINOV_Fortuno_MT;
