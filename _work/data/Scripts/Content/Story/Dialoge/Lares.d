@@ -46,11 +46,11 @@ FUNC VOID Info_Mod_Lares_Daemonisch_Info()
 	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_03"); //Ja, da war schon was. Pepe hatte nachts dunkle Schatten im Wald gesehen, vermutlich von Wölfen.
 	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_04"); //Ich habe dann einige Jungs mit ihm zu dem kleinen Lager im Wald geschickt, um sich die Nacht über dort umzusehen.
 	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_05"); //Pepe kam am frühen morgen panisch aus dem Wald gelaufen und blickte sich nach allen Richtungen verstört um.
-	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_06"); //Als dann meine Jungs ebenfalls wieder aus dem Wald kamen, lief er schreiend in Richtung Dämonenkriegerlager davon.
+	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_06"); //Als dann meine Jungs ebenfalls wieder aus dem Wald kamen, lief er schreiend in Richtung Bergfestung davon.
 	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_07"); //Die Jungs meinten, dass ein großes Rudel Wölfe sie überfallen hätte und Pepe daraufhin weggelaufen sei.
 	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_08"); //Leider ist durch die Mistviecher auch einer meiner Söldner draufgegangen. Naja, das kommt schon alles wieder ins Lot.
 
-	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Von Lares habe ich erfahren, dass Pepe dunkle Schatten im Wald gesehen hat, welche wohl von Wölfen gerührt haben. Einige Söldner hatten sich daher mit Pepe zum kleinen Lager im Wald begeben. Pepe kam am frühen morgen panisch aus dem Wald gerannt und verschwand Richtung Dämonenkriegerlager, als er hinter sich die Söldner aus dem Wald kommen sah. Angeblich hatte ein großes Rudel Wölfe sie überfallen, worauf Pepe in Panik verfiel. Ein Söldner kam dabei um.");
+	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Von Lares habe ich erfahren, dass Pepe dunkle Schatten im Wald gesehen hat, welche wohl von Wölfen gerührt haben. Einige Söldner hatten sich daher mit Pepe zum kleinen Lager im Wald begeben. Pepe kam am frühen morgen panisch aus dem Wald gerannt und verschwand Richtung Bergfestung, als er hinter sich die Söldner aus dem Wald kommen sah. Angeblich hatte ein großes Rudel Wölfe sie überfallen, worauf Pepe in Panik verfiel. Ein Söldner kam dabei um.");
 };
 
 INSTANCE Info_Mod_Lares_Grog (C_INFO)

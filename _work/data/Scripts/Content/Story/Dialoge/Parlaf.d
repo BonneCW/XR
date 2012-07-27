@@ -289,7 +289,7 @@ FUNC VOID Info_Mod_Parlaf_Daemonisch_Info()
 		B_LogEntry	(TOPIC_MOD_DAEMONISCH, "So, vom Südtor aus rechts in den Wald gelaufen. Dich krieg ich ... Urnol.");
 	};
 
-	Npc_SetRefuseTalk (self, 60);
+	Npc_SetRefuseTalk (self, 40);
 };
 
 instance Info_Mod_Parlaf_FirstWarn (C_INFO)

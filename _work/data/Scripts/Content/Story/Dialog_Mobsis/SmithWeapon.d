@@ -3314,17 +3314,17 @@ FUNC VOID PC_PfeileMachen_GoldErzBlut_Komplett_Alle_Info ()
 		{
 			Mod_PfeilCounter = Npc_HasItems(hero, PfeilSpitze_GoldErzBlut);
 
-			Npc_RemoveInvItems	(hero, PfeilStab, Npc_HasItems(hero, PfeilSpitze_GoldErzBlut));
-			CreateInvItems	(hero, ItRw_GoldErzBlutArrow, Npc_HasItems(hero, PfeilSpitze_GoldErzBlut));
-			Npc_RemoveInvItems	(hero, PfeilSpitze_GoldErzBlut, Npc_HasItems(hero, PfeilSpitze_GoldErzBlut));
+			Npc_RemoveInvItems	(hero, PfeilStab, Mod_PfeilCounter);
+			CreateInvItems	(hero, ItRw_GoldErzBlutArrow, Mod_PfeilCounter);
+			Npc_RemoveInvItems	(hero, PfeilSpitze_GoldErzBlut, Mod_PfeilCounter);
 		}
 		else
 		{
 			Mod_PfeilCounter = Npc_HasItems(hero, PfeilStab);
 
-			Npc_RemoveInvItems	(hero, PfeilSpitze_GoldErzBlut, Npc_HasItems(hero, PfeilStab));
-			CreateInvItems	(hero, ItRw_GoldErzBlutArrow, Npc_HasItems(hero, PfeilStab));
-			Npc_RemoveInvItems	(hero, PfeilStab, Npc_HasItems(hero, PfeilStab));
+			Npc_RemoveInvItems	(hero, PfeilSpitze_GoldErzBlut, Mod_PfeilCounter);
+			CreateInvItems	(hero, ItRw_GoldErzBlutArrow, Mod_PfeilCounter);
+			Npc_RemoveInvItems	(hero, PfeilStab, Mod_PfeilCounter);
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Pfeile aus Gold-Erz-Blut-Legierung hergestellt!"));
