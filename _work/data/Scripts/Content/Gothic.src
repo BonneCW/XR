@@ -58,6 +58,8 @@ STORY\B_Story\B_Inventar.d
 
 NEUERUNGEN\XR_Backgroundstory.d
 
+NEUERUNGEN\B_SetKrankheitswerte.d
+
 NEUERUNGEN\B_Autosave.d
 NEUERUNGEN\B_SetLevelchange.d
 NEUERUNGEN\B_AutoPlundering.d

@@ -1304,208 +1304,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KBDF == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 10;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 10;
-				BissDerFaeulnis_Stufe01_STR = 5;
-				BissDerFaeulnis_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 31)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 30;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 15;
-				BissDerFaeulnis_Stufe02_STR = 10;
-				BissDerFaeulnis_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 61)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 60;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 30;
-				BissDerFaeulnis_Stufe03_STR = 20;
-				BissDerFaeulnis_Stufe03_DEX = 20;
+				B_SetBissDerFaeulnisWerte (10, 10, 5, 5, 30, 15, 10, 10, 60, 30, 20, 20);
 			}
 			else if (KBDF == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 8;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 8;
-				BissDerFaeulnis_Stufe01_STR = 4;
-				BissDerFaeulnis_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 25)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 24;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 12;
-				BissDerFaeulnis_Stufe02_STR = 8;
-				BissDerFaeulnis_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 49)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 48;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 24;
-				BissDerFaeulnis_Stufe03_STR = 16;
-				BissDerFaeulnis_Stufe03_DEX = 16;
+				B_SetBissDerFaeulnisWerte (8, 8, 4, 4, 24, 12, 8, 8, 48, 24, 16, 16);
 			}
 			else if (KBDF == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 7)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 6;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 6;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 20)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 19;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 10;
-				BissDerFaeulnis_Stufe02_STR = 6;
-				BissDerFaeulnis_Stufe02_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 39)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 38;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 19;
-				BissDerFaeulnis_Stufe03_STR = 13;
-				BissDerFaeulnis_Stufe03_DEX = 13;
+				B_SetBissDerFaeulnisWerte (6, 6, 3, 3, 19, 10, 6, 6, 38, 19, 13, 13);
 			}
 			else if (KBDF == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 6)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 5;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 5;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 16)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 15;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 8;
-				BissDerFaeulnis_Stufe02_STR = 5;
-				BissDerFaeulnis_Stufe02_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 32)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 31;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 15;
-				BissDerFaeulnis_Stufe03_STR = 10;
-				BissDerFaeulnis_Stufe03_DEX = 10;
+				B_SetBissDerFaeulnisWerte (5, 5, 3, 3, 15, 8, 5, 5, 31, 15, 10, 10);
 			}
 			else if (KBDF == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 5)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 4;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 4;
-				BissDerFaeulnis_Stufe01_STR = 2;
-				BissDerFaeulnis_Stufe01_DEX = 2;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 13)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 12;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 6;
-				BissDerFaeulnis_Stufe02_STR = 4;
-				BissDerFaeulnis_Stufe02_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 26)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 25;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 12;
-				BissDerFaeulnis_Stufe03_STR = 8;
-				BissDerFaeulnis_Stufe03_DEX = 8;
+				B_SetBissDerFaeulnisWerte (4, 4, 2, 2, 12, 6, 4, 4, 25, 12, 8, 8);
 			};
 
 			BissDerFaeulnis_Time = 1;
@@ -1578,208 +1393,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KBDF == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 10;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 10;
-				BissDerFaeulnis_Stufe01_STR = 5;
-				BissDerFaeulnis_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 31)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 30;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 15;
-				BissDerFaeulnis_Stufe02_STR = 10;
-				BissDerFaeulnis_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 61)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 60;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 30;
-				BissDerFaeulnis_Stufe03_STR = 20;
-				BissDerFaeulnis_Stufe03_DEX = 20;
+				B_SetBissDerFaeulnisWerte (10, 10, 5, 5, 30, 15, 10, 10, 60, 30, 20, 20);
 			}
 			else if (KBDF == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 8;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 8;
-				BissDerFaeulnis_Stufe01_STR = 4;
-				BissDerFaeulnis_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 25)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 24;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 12;
-				BissDerFaeulnis_Stufe02_STR = 8;
-				BissDerFaeulnis_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 49)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 48;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 24;
-				BissDerFaeulnis_Stufe03_STR = 16;
-				BissDerFaeulnis_Stufe03_DEX = 16;
+				B_SetBissDerFaeulnisWerte (8, 8, 4, 4, 24, 12, 8, 8, 48, 24, 16, 16);
 			}
 			else if (KBDF == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 7)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 6;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 6;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 20)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 19;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 10;
-				BissDerFaeulnis_Stufe02_STR = 6;
-				BissDerFaeulnis_Stufe02_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 39)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 38;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 19;
-				BissDerFaeulnis_Stufe03_STR = 13;
-				BissDerFaeulnis_Stufe03_DEX = 13;
+				B_SetBissDerFaeulnisWerte (6, 6, 3, 3, 19, 10, 6, 6, 38, 19, 13, 13);
 			}
 			else if (KBDF == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 6)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 5;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 5;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 16)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 15;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 8;
-				BissDerFaeulnis_Stufe02_STR = 5;
-				BissDerFaeulnis_Stufe02_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 32)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 31;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 15;
-				BissDerFaeulnis_Stufe03_STR = 10;
-				BissDerFaeulnis_Stufe03_DEX = 10;
+				B_SetBissDerFaeulnisWerte (5, 5, 3, 3, 15, 8, 5, 5, 31, 15, 10, 10);
 			}
 			else if (KBDF == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 5)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 4;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 4;
-				BissDerFaeulnis_Stufe01_STR = 2;
-				BissDerFaeulnis_Stufe01_DEX = 2;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 13)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 12;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 6;
-				BissDerFaeulnis_Stufe02_STR = 4;
-				BissDerFaeulnis_Stufe02_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 26)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 25;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 12;
-				BissDerFaeulnis_Stufe03_STR = 8;
-				BissDerFaeulnis_Stufe03_DEX = 8;
+				B_SetBissDerFaeulnisWerte (4, 4, 2, 2, 12, 6, 4, 4, 25, 12, 8, 8);
 			};
 
 			BissDerFaeulnis_Time = 1;
@@ -1852,208 +1482,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KBDF == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 10;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 10;
-				BissDerFaeulnis_Stufe01_STR = 5;
-				BissDerFaeulnis_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 31)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 30;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 15;
-				BissDerFaeulnis_Stufe02_STR = 10;
-				BissDerFaeulnis_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 61)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 60;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 30;
-				BissDerFaeulnis_Stufe03_STR = 20;
-				BissDerFaeulnis_Stufe03_DEX = 20;
+				B_SetBissDerFaeulnisWerte (10, 10, 5, 5, 30, 15, 10, 10, 60, 30, 20, 20);
 			}
 			else if (KBDF == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 8;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 8;
-				BissDerFaeulnis_Stufe01_STR = 4;
-				BissDerFaeulnis_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 25)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 24;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 12;
-				BissDerFaeulnis_Stufe02_STR = 8;
-				BissDerFaeulnis_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 49)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 48;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 24;
-				BissDerFaeulnis_Stufe03_STR = 16;
-				BissDerFaeulnis_Stufe03_DEX = 16;
+				B_SetBissDerFaeulnisWerte (8, 8, 4, 4, 24, 12, 8, 8, 48, 24, 16, 16);
 			}
 			else if (KBDF == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 7)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 6;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 6;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 20)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 19;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 10;
-				BissDerFaeulnis_Stufe02_STR = 6;
-				BissDerFaeulnis_Stufe02_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 39)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 38;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 19;
-				BissDerFaeulnis_Stufe03_STR = 13;
-				BissDerFaeulnis_Stufe03_DEX = 13;
+				B_SetBissDerFaeulnisWerte (6, 6, 3, 3, 19, 10, 6, 6, 38, 19, 13, 13);
 			}
 			else if (KBDF == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 6)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 5;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 5;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 16)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 15;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 8;
-				BissDerFaeulnis_Stufe02_STR = 5;
-				BissDerFaeulnis_Stufe02_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 32)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 31;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 15;
-				BissDerFaeulnis_Stufe03_STR = 10;
-				BissDerFaeulnis_Stufe03_DEX = 10;
+				B_SetBissDerFaeulnisWerte (5, 5, 3, 3, 15, 8, 5, 5, 31, 15, 10, 10);
 			}
 			else if (KBDF == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 5)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 4;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 4;
-				BissDerFaeulnis_Stufe01_STR = 2;
-				BissDerFaeulnis_Stufe01_DEX = 2;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 13)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 12;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 6;
-				BissDerFaeulnis_Stufe02_STR = 4;
-				BissDerFaeulnis_Stufe02_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 26)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 25;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 12;
-				BissDerFaeulnis_Stufe03_STR = 8;
-				BissDerFaeulnis_Stufe03_DEX = 8;
+				B_SetBissDerFaeulnisWerte (4, 4, 2, 2, 12, 6, 4, 4, 25, 12, 8, 8);
 			};
 
 			BissDerFaeulnis_Time = 1;
@@ -2125,208 +1570,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KBDF == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 10;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 10;
-				BissDerFaeulnis_Stufe01_STR = 5;
-				BissDerFaeulnis_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 31)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 30;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 15;
-				BissDerFaeulnis_Stufe02_STR = 10;
-				BissDerFaeulnis_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 61)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 60;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 30;
-				BissDerFaeulnis_Stufe03_STR = 20;
-				BissDerFaeulnis_Stufe03_DEX = 20;
+				B_SetBissDerFaeulnisWerte (10, 10, 5, 5, 30, 15, 10, 10, 60, 30, 20, 20);
 			}
 			else if (KBDF == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 8;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 8;
-				BissDerFaeulnis_Stufe01_STR = 4;
-				BissDerFaeulnis_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 25)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 24;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 12;
-				BissDerFaeulnis_Stufe02_STR = 8;
-				BissDerFaeulnis_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 49)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 48;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 24;
-				BissDerFaeulnis_Stufe03_STR = 16;
-				BissDerFaeulnis_Stufe03_DEX = 16;
+				B_SetBissDerFaeulnisWerte (8, 8, 4, 4, 24, 12, 8, 8, 48, 24, 16, 16);
 			}
 			else if (KBDF == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 7)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 6;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 6;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 20)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 19;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 10;
-				BissDerFaeulnis_Stufe02_STR = 6;
-				BissDerFaeulnis_Stufe02_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 39)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 38;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 19;
-				BissDerFaeulnis_Stufe03_STR = 13;
-				BissDerFaeulnis_Stufe03_DEX = 13;
+				B_SetBissDerFaeulnisWerte (6, 6, 3, 3, 19, 10, 6, 6, 38, 19, 13, 13);
 			}
 			else if (KBDF == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 6)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 5;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 5;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 16)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 15;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 8;
-				BissDerFaeulnis_Stufe02_STR = 5;
-				BissDerFaeulnis_Stufe02_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 32)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 31;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 15;
-				BissDerFaeulnis_Stufe03_STR = 10;
-				BissDerFaeulnis_Stufe03_DEX = 10;
+				B_SetBissDerFaeulnisWerte (5, 5, 3, 3, 15, 8, 5, 5, 31, 15, 10, 10);
 			}
 			else if (KBDF == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 5)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 4;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 4;
-				BissDerFaeulnis_Stufe01_STR = 2;
-				BissDerFaeulnis_Stufe01_DEX = 2;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 13)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 12;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 6;
-				BissDerFaeulnis_Stufe02_STR = 4;
-				BissDerFaeulnis_Stufe02_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 26)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 25;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 12;
-				BissDerFaeulnis_Stufe03_STR = 8;
-				BissDerFaeulnis_Stufe03_DEX = 8;
+				B_SetBissDerFaeulnisWerte (4, 4, 2, 2, 12, 6, 4, 4, 25, 12, 8, 8);
 			};
 
 			BissDerFaeulnis_Time = 1;
@@ -2398,208 +1658,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KBDF == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 10;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 10;
-				BissDerFaeulnis_Stufe01_STR = 5;
-				BissDerFaeulnis_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 31)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 30;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 15;
-				BissDerFaeulnis_Stufe02_STR = 10;
-				BissDerFaeulnis_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 61)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 60;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 30;
-				BissDerFaeulnis_Stufe03_STR = 20;
-				BissDerFaeulnis_Stufe03_DEX = 20;
+				B_SetBissDerFaeulnisWerte (10, 10, 5, 5, 30, 15, 10, 10, 60, 30, 20, 20);
 			}
 			else if (KBDF == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 8;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 8;
-				BissDerFaeulnis_Stufe01_STR = 4;
-				BissDerFaeulnis_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 25)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 24;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 12;
-				BissDerFaeulnis_Stufe02_STR = 8;
-				BissDerFaeulnis_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 49)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 48;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 24;
-				BissDerFaeulnis_Stufe03_STR = 16;
-				BissDerFaeulnis_Stufe03_DEX = 16;
+				B_SetBissDerFaeulnisWerte (8, 8, 4, 4, 24, 12, 8, 8, 48, 24, 16, 16);
 			}
 			else if (KBDF == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 7)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 6;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 6;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 20)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 19;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 10;
-				BissDerFaeulnis_Stufe02_STR = 6;
-				BissDerFaeulnis_Stufe02_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 39)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 38;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 19;
-				BissDerFaeulnis_Stufe03_STR = 13;
-				BissDerFaeulnis_Stufe03_DEX = 13;
+				B_SetBissDerFaeulnisWerte (6, 6, 3, 3, 19, 10, 6, 6, 38, 19, 13, 13);
 			}
 			else if (KBDF == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 6)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 5;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 5;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 16)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 15;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 8;
-				BissDerFaeulnis_Stufe02_STR = 5;
-				BissDerFaeulnis_Stufe02_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 32)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 31;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 15;
-				BissDerFaeulnis_Stufe03_STR = 10;
-				BissDerFaeulnis_Stufe03_DEX = 10;
+				B_SetBissDerFaeulnisWerte (5, 5, 3, 3, 15, 8, 5, 5, 31, 15, 10, 10);
 			}
 			else if (KBDF == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 5)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 4;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 4;
-				BissDerFaeulnis_Stufe01_STR = 2;
-				BissDerFaeulnis_Stufe01_DEX = 2;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 13)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 12;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 6;
-				BissDerFaeulnis_Stufe02_STR = 4;
-				BissDerFaeulnis_Stufe02_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 26)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 25;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 12;
-				BissDerFaeulnis_Stufe03_STR = 8;
-				BissDerFaeulnis_Stufe03_DEX = 8;
+				B_SetBissDerFaeulnisWerte (4, 4, 2, 2, 12, 6, 4, 4, 25, 12, 8, 8);
 			};
 
 			BissDerFaeulnis_Time = 1;
@@ -2671,208 +1746,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KBDF == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 10;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 10;
-				BissDerFaeulnis_Stufe01_STR = 5;
-				BissDerFaeulnis_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 31)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 30;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 15;
-				BissDerFaeulnis_Stufe02_STR = 10;
-				BissDerFaeulnis_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 61)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 60;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 30;
-				BissDerFaeulnis_Stufe03_STR = 20;
-				BissDerFaeulnis_Stufe03_DEX = 20;
+				B_SetBissDerFaeulnisWerte (10, 10, 5, 5, 30, 15, 10, 10, 60, 30, 20, 20);
 			}
 			else if (KBDF == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 8;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 8;
-				BissDerFaeulnis_Stufe01_STR = 4;
-				BissDerFaeulnis_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 25)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 24;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 12;
-				BissDerFaeulnis_Stufe02_STR = 8;
-				BissDerFaeulnis_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 49)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 48;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 24;
-				BissDerFaeulnis_Stufe03_STR = 16;
-				BissDerFaeulnis_Stufe03_DEX = 16;
+				B_SetBissDerFaeulnisWerte (8, 8, 4, 4, 24, 12, 8, 8, 48, 24, 16, 16);
 			}
 			else if (KBDF == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 7)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 6;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 6;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 20)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 19;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 10;
-				BissDerFaeulnis_Stufe02_STR = 6;
-				BissDerFaeulnis_Stufe02_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 39)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 38;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 19;
-				BissDerFaeulnis_Stufe03_STR = 13;
-				BissDerFaeulnis_Stufe03_DEX = 13;
+				B_SetBissDerFaeulnisWerte (6, 6, 3, 3, 19, 10, 6, 6, 38, 19, 13, 13);
 			}
 			else if (KBDF == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 6)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 5;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 5;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 16)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 15;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 8;
-				BissDerFaeulnis_Stufe02_STR = 5;
-				BissDerFaeulnis_Stufe02_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 32)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 31;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 15;
-				BissDerFaeulnis_Stufe03_STR = 10;
-				BissDerFaeulnis_Stufe03_DEX = 10;
+				B_SetBissDerFaeulnisWerte (5, 5, 3, 3, 15, 8, 5, 5, 31, 15, 10, 10);
 			}
 			else if (KBDF == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 5)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 4;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 4;
-				BissDerFaeulnis_Stufe01_STR = 2;
-				BissDerFaeulnis_Stufe01_DEX = 2;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 13)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 12;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 6;
-				BissDerFaeulnis_Stufe02_STR = 4;
-				BissDerFaeulnis_Stufe02_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 26)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 25;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 12;
-				BissDerFaeulnis_Stufe03_STR = 8;
-				BissDerFaeulnis_Stufe03_DEX = 8;
+				B_SetBissDerFaeulnisWerte (4, 4, 2, 2, 12, 6, 4, 4, 25, 12, 8, 8);
 			};
 
 			BissDerFaeulnis_Time = 1;
@@ -2945,208 +1835,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KBDF == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 10;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 10;
-				BissDerFaeulnis_Stufe01_STR = 5;
-				BissDerFaeulnis_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 31)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 30;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 15;
-				BissDerFaeulnis_Stufe02_STR = 10;
-				BissDerFaeulnis_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 61)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 60;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 30;
-				BissDerFaeulnis_Stufe03_STR = 20;
-				BissDerFaeulnis_Stufe03_DEX = 20;
+				B_SetBissDerFaeulnisWerte (10, 10, 5, 5, 30, 15, 10, 10, 60, 30, 20, 20);
 			}
 			else if (KBDF == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 8;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 8;
-				BissDerFaeulnis_Stufe01_STR = 4;
-				BissDerFaeulnis_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 25)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 24;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 12;
-				BissDerFaeulnis_Stufe02_STR = 8;
-				BissDerFaeulnis_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 49)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 48;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 24;
-				BissDerFaeulnis_Stufe03_STR = 16;
-				BissDerFaeulnis_Stufe03_DEX = 16;
+				B_SetBissDerFaeulnisWerte (8, 8, 4, 4, 24, 12, 8, 8, 48, 24, 16, 16);
 			}
 			else if (KBDF == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 7)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 6;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 6;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 20)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 19;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 10;
-				BissDerFaeulnis_Stufe02_STR = 6;
-				BissDerFaeulnis_Stufe02_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 39)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 38;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 19;
-				BissDerFaeulnis_Stufe03_STR = 13;
-				BissDerFaeulnis_Stufe03_DEX = 13;
+				B_SetBissDerFaeulnisWerte (6, 6, 3, 3, 19, 10, 6, 6, 38, 19, 13, 13);
 			}
 			else if (KBDF == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 6)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 5;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 5;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 16)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 15;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 8;
-				BissDerFaeulnis_Stufe02_STR = 5;
-				BissDerFaeulnis_Stufe02_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 32)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 31;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 15;
-				BissDerFaeulnis_Stufe03_STR = 10;
-				BissDerFaeulnis_Stufe03_DEX = 10;
+				B_SetBissDerFaeulnisWerte (5, 5, 3, 3, 15, 8, 5, 5, 31, 15, 10, 10);
 			}
 			else if (KBDF == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 5)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 4;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 4;
-				BissDerFaeulnis_Stufe01_STR = 2;
-				BissDerFaeulnis_Stufe01_DEX = 2;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 13)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 12;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 6;
-				BissDerFaeulnis_Stufe02_STR = 4;
-				BissDerFaeulnis_Stufe02_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 26)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 25;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 12;
-				BissDerFaeulnis_Stufe03_STR = 8;
-				BissDerFaeulnis_Stufe03_DEX = 8;
+				B_SetBissDerFaeulnisWerte (4, 4, 2, 2, 12, 6, 4, 4, 25, 12, 8, 8);
 			};
 
 			BissDerFaeulnis_Time = 1;
@@ -3218,208 +1923,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KBDF == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 10;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 10;
-				BissDerFaeulnis_Stufe01_STR = 5;
-				BissDerFaeulnis_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 31)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 30;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 15;
-				BissDerFaeulnis_Stufe02_STR = 10;
-				BissDerFaeulnis_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 61)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 60;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 30;
-				BissDerFaeulnis_Stufe03_STR = 20;
-				BissDerFaeulnis_Stufe03_DEX = 20;
+				B_SetBissDerFaeulnisWerte (10, 10, 5, 5, 30, 15, 10, 10, 60, 30, 20, 20);
 			}
 			else if (KBDF == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 8;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 8;
-				BissDerFaeulnis_Stufe01_STR = 4;
-				BissDerFaeulnis_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 25)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 24;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 12;
-				BissDerFaeulnis_Stufe02_STR = 8;
-				BissDerFaeulnis_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 49)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 48;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 24;
-				BissDerFaeulnis_Stufe03_STR = 16;
-				BissDerFaeulnis_Stufe03_DEX = 16;
+				B_SetBissDerFaeulnisWerte (8, 8, 4, 4, 24, 12, 8, 8, 48, 24, 16, 16);
 			}
 			else if (KBDF == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 7)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 6;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 6;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 20)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 19;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 10;
-				BissDerFaeulnis_Stufe02_STR = 6;
-				BissDerFaeulnis_Stufe02_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 39)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 38;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 19;
-				BissDerFaeulnis_Stufe03_STR = 13;
-				BissDerFaeulnis_Stufe03_DEX = 13;
+				B_SetBissDerFaeulnisWerte (6, 6, 3, 3, 19, 10, 6, 6, 38, 19, 13, 13);
 			}
 			else if (KBDF == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 6)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 5;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 5;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 16)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 15;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 8;
-				BissDerFaeulnis_Stufe02_STR = 5;
-				BissDerFaeulnis_Stufe02_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 32)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 31;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 15;
-				BissDerFaeulnis_Stufe03_STR = 10;
-				BissDerFaeulnis_Stufe03_DEX = 10;
+				B_SetBissDerFaeulnisWerte (5, 5, 3, 3, 15, 8, 5, 5, 31, 15, 10, 10);
 			}
 			else if (KBDF == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 5)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 4;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 4;
-				BissDerFaeulnis_Stufe01_STR = 2;
-				BissDerFaeulnis_Stufe01_DEX = 2;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 13)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 12;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 6;
-				BissDerFaeulnis_Stufe02_STR = 4;
-				BissDerFaeulnis_Stufe02_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 26)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 25;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 12;
-				BissDerFaeulnis_Stufe03_STR = 8;
-				BissDerFaeulnis_Stufe03_DEX = 8;
+				B_SetBissDerFaeulnisWerte (4, 4, 2, 2, 12, 6, 4, 4, 25, 12, 8, 8);
 			};
 
 			BissDerFaeulnis_Time = 1;
@@ -3491,208 +2011,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KBDF == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 10;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 10;
-				BissDerFaeulnis_Stufe01_STR = 5;
-				BissDerFaeulnis_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 31)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 30;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 15;
-				BissDerFaeulnis_Stufe02_STR = 10;
-				BissDerFaeulnis_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 61)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 60;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 30;
-				BissDerFaeulnis_Stufe03_STR = 20;
-				BissDerFaeulnis_Stufe03_DEX = 20;
+				B_SetBissDerFaeulnisWerte (10, 10, 5, 5, 30, 15, 10, 10, 60, 30, 20, 20);
 			}
 			else if (KBDF == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 8;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 8;
-				BissDerFaeulnis_Stufe01_STR = 4;
-				BissDerFaeulnis_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 25)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 24;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 12;
-				BissDerFaeulnis_Stufe02_STR = 8;
-				BissDerFaeulnis_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 49)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 48;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 24;
-				BissDerFaeulnis_Stufe03_STR = 16;
-				BissDerFaeulnis_Stufe03_DEX = 16;
+				B_SetBissDerFaeulnisWerte (8, 8, 4, 4, 24, 12, 8, 8, 48, 24, 16, 16);
 			}
 			else if (KBDF == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 7)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 6;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 6;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 20)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 19;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 10;
-				BissDerFaeulnis_Stufe02_STR = 6;
-				BissDerFaeulnis_Stufe02_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 39)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 38;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 19;
-				BissDerFaeulnis_Stufe03_STR = 13;
-				BissDerFaeulnis_Stufe03_DEX = 13;
+				B_SetBissDerFaeulnisWerte (6, 6, 3, 3, 19, 10, 6, 6, 38, 19, 13, 13);
 			}
 			else if (KBDF == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 6)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 5;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 5;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 16)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 15;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 8;
-				BissDerFaeulnis_Stufe02_STR = 5;
-				BissDerFaeulnis_Stufe02_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 32)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 31;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 15;
-				BissDerFaeulnis_Stufe03_STR = 10;
-				BissDerFaeulnis_Stufe03_DEX = 10;
+				B_SetBissDerFaeulnisWerte (5, 5, 3, 3, 15, 8, 5, 5, 31, 15, 10, 10);
 			}
 			else if (KBDF == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 5)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 4;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 4;
-				BissDerFaeulnis_Stufe01_STR = 2;
-				BissDerFaeulnis_Stufe01_DEX = 2;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 13)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 12;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 6;
-				BissDerFaeulnis_Stufe02_STR = 4;
-				BissDerFaeulnis_Stufe02_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 26)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 25;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 12;
-				BissDerFaeulnis_Stufe03_STR = 8;
-				BissDerFaeulnis_Stufe03_DEX = 8;
+				B_SetBissDerFaeulnisWerte (4, 4, 2, 2, 12, 6, 4, 4, 25, 12, 8, 8);
 			};
 
 			BissDerFaeulnis_Time = 1;
@@ -3764,208 +2099,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KBDF == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 10;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 10;
-				BissDerFaeulnis_Stufe01_STR = 5;
-				BissDerFaeulnis_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 31)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 30;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 15;
-				BissDerFaeulnis_Stufe02_STR = 10;
-				BissDerFaeulnis_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 61)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 60;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 30;
-				BissDerFaeulnis_Stufe03_STR = 20;
-				BissDerFaeulnis_Stufe03_DEX = 20;
+				B_SetBissDerFaeulnisWerte (10, 10, 5, 5, 30, 15, 10, 10, 60, 30, 20, 20);
 			}
 			else if (KBDF == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 8;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 8;
-				BissDerFaeulnis_Stufe01_STR = 4;
-				BissDerFaeulnis_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 25)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 24;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 12;
-				BissDerFaeulnis_Stufe02_STR = 8;
-				BissDerFaeulnis_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 49)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 48;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 24;
-				BissDerFaeulnis_Stufe03_STR = 16;
-				BissDerFaeulnis_Stufe03_DEX = 16;
+				B_SetBissDerFaeulnisWerte (8, 8, 4, 4, 24, 12, 8, 8, 48, 24, 16, 16);
 			}
 			else if (KBDF == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 7)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 6;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 6;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 20)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 19;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 10;
-				BissDerFaeulnis_Stufe02_STR = 6;
-				BissDerFaeulnis_Stufe02_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 39)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 38;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 19;
-				BissDerFaeulnis_Stufe03_STR = 13;
-				BissDerFaeulnis_Stufe03_DEX = 13;
+				B_SetBissDerFaeulnisWerte (6, 6, 3, 3, 19, 10, 6, 6, 38, 19, 13, 13);
 			}
 			else if (KBDF == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 6)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 5;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 5;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 16)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 15;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 8;
-				BissDerFaeulnis_Stufe02_STR = 5;
-				BissDerFaeulnis_Stufe02_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 32)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 31;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 15;
-				BissDerFaeulnis_Stufe03_STR = 10;
-				BissDerFaeulnis_Stufe03_DEX = 10;
+				B_SetBissDerFaeulnisWerte (5, 5, 3, 3, 15, 8, 5, 5, 31, 15, 10, 10);
 			}
 			else if (KBDF == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 5)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 4;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 4;
-				BissDerFaeulnis_Stufe01_STR = 2;
-				BissDerFaeulnis_Stufe01_DEX = 2;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 13)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 12;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 6;
-				BissDerFaeulnis_Stufe02_STR = 4;
-				BissDerFaeulnis_Stufe02_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 26)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 25;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 12;
-				BissDerFaeulnis_Stufe03_STR = 8;
-				BissDerFaeulnis_Stufe03_DEX = 8;
+				B_SetBissDerFaeulnisWerte (4, 4, 2, 2, 12, 6, 4, 4, 25, 12, 8, 8);
 			};
 
 			BissDerFaeulnis_Time = 1;
@@ -4037,208 +2187,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KBDF == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 10;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 10;
-				BissDerFaeulnis_Stufe01_STR = 5;
-				BissDerFaeulnis_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 31)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 30;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 15;
-				BissDerFaeulnis_Stufe02_STR = 10;
-				BissDerFaeulnis_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 61)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 60;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 30;
-				BissDerFaeulnis_Stufe03_STR = 20;
-				BissDerFaeulnis_Stufe03_DEX = 20;
+				B_SetBissDerFaeulnisWerte (10, 10, 5, 5, 30, 15, 10, 10, 60, 30, 20, 20);
 			}
 			else if (KBDF == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 8;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 8;
-				BissDerFaeulnis_Stufe01_STR = 4;
-				BissDerFaeulnis_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 25)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 24;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 12;
-				BissDerFaeulnis_Stufe02_STR = 8;
-				BissDerFaeulnis_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 49)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 48;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 24;
-				BissDerFaeulnis_Stufe03_STR = 16;
-				BissDerFaeulnis_Stufe03_DEX = 16;
+				B_SetBissDerFaeulnisWerte (8, 8, 4, 4, 24, 12, 8, 8, 48, 24, 16, 16);
 			}
 			else if (KBDF == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 7)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 6;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 6;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 20)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 19;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 10;
-				BissDerFaeulnis_Stufe02_STR = 6;
-				BissDerFaeulnis_Stufe02_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 39)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 38;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 19;
-				BissDerFaeulnis_Stufe03_STR = 13;
-				BissDerFaeulnis_Stufe03_DEX = 13;
+				B_SetBissDerFaeulnisWerte (6, 6, 3, 3, 19, 10, 6, 6, 38, 19, 13, 13);
 			}
 			else if (KBDF == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 6)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 5;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 5;
-				BissDerFaeulnis_Stufe01_STR = 3;
-				BissDerFaeulnis_Stufe01_DEX = 3;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 16)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 15;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 8;
-				BissDerFaeulnis_Stufe02_STR = 5;
-				BissDerFaeulnis_Stufe02_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 32)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 31;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 15;
-				BissDerFaeulnis_Stufe03_STR = 10;
-				BissDerFaeulnis_Stufe03_DEX = 10;
+				B_SetBissDerFaeulnisWerte (5, 5, 3, 3, 15, 8, 5, 5, 31, 15, 10, 10);
 			}
 			else if (KBDF == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 5)
-				{
-					BissDerFaeulnis_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe01_HP = 4;
-				};
-
-				BissDerFaeulnis_Stufe01_MANA = 4;
-				BissDerFaeulnis_Stufe01_STR = 2;
-				BissDerFaeulnis_Stufe01_DEX = 2;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 13)
-				{
-					BissDerFaeulnis_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe02_HP = 12;
-				};
-
-				BissDerFaeulnis_Stufe02_MANA = 6;
-				BissDerFaeulnis_Stufe02_STR = 4;
-				BissDerFaeulnis_Stufe02_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 26)
-				{
-					BissDerFaeulnis_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					BissDerFaeulnis_Stufe03_HP = 25;
-				};
-
-				BissDerFaeulnis_Stufe03_MANA = 12;
-				BissDerFaeulnis_Stufe03_STR = 8;
-				BissDerFaeulnis_Stufe03_DEX = 8;
+				B_SetBissDerFaeulnisWerte (4, 4, 2, 2, 12, 6, 4, 4, 25, 12, 8, 8);
 			};
 
 			BissDerFaeulnis_Time = 1;
@@ -4312,208 +2277,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KHDP == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 21)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 20;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 15;
-				HauchDerPestilenz_Stufe01_STR = 10;
-				HauchDerPestilenz_Stufe01_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 51)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 50;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 30;
-				HauchDerPestilenz_Stufe02_STR = 20;
-				HauchDerPestilenz_Stufe02_DEX = 20;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 121)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 120;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 60;
-				HauchDerPestilenz_Stufe03_STR = 40;
-				HauchDerPestilenz_Stufe03_DEX = 40;
+				B_SetHauchDerPestilenzWerte (20, 15, 10, 10, 50, 30, 20, 20, 120, 60, 40, 40);
 			}
 			else if (KHDP == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 17)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 16;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 12;
-				HauchDerPestilenz_Stufe01_STR = 8;
-				HauchDerPestilenz_Stufe01_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 41)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 40;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 24;
-				HauchDerPestilenz_Stufe02_STR = 16;
-				HauchDerPestilenz_Stufe02_DEX = 16;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 97)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 96;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 48;
-				HauchDerPestilenz_Stufe03_STR = 32;
-				HauchDerPestilenz_Stufe03_DEX = 32;
+				B_SetHauchDerPestilenzWerte (16, 12, 8, 8, 40, 24, 16, 16, 96, 48, 32, 32);
 			}
 			else if (KHDP == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 14)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 13;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 10;
-				HauchDerPestilenz_Stufe01_STR = 6;
-				HauchDerPestilenz_Stufe01_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 33)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 32;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 19;
-				HauchDerPestilenz_Stufe02_STR = 13;
-				HauchDerPestilenz_Stufe02_DEX = 13;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 78)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 77;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 38;
-				HauchDerPestilenz_Stufe03_STR = 26;
-				HauchDerPestilenz_Stufe03_DEX = 26;
+				B_SetHauchDerPestilenzWerte (13, 10, 6, 6, 32, 19, 13, 13, 77, 38, 26, 26);
 			}
 			else if (KHDP == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 10;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 8;
-				HauchDerPestilenz_Stufe01_STR = 5;
-				HauchDerPestilenz_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 27)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 26;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 15;
-				HauchDerPestilenz_Stufe02_STR = 10;
-				HauchDerPestilenz_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 62)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 61;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 31;
-				HauchDerPestilenz_Stufe03_STR = 20;
-				HauchDerPestilenz_Stufe03_DEX = 20;
+				B_SetHauchDerPestilenzWerte (10, 8, 5, 5, 26, 15, 10, 10, 61, 31, 20, 20);
 			}
 			else if (KHDP == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 8;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 6;
-				HauchDerPestilenz_Stufe01_STR = 4;
-				HauchDerPestilenz_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 21)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 20;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 12;
-				HauchDerPestilenz_Stufe02_STR = 8;
-				HauchDerPestilenz_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 50)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 49;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 25;
-				HauchDerPestilenz_Stufe03_STR = 16;
-				HauchDerPestilenz_Stufe03_DEX = 16;
+				B_SetHauchDerPestilenzWerte (8, 6, 4, 4, 20, 12, 8, 8, 49, 25, 16, 16);
 			};
 
 			HauchDerPestilenz_Time = 1;
@@ -4585,208 +2365,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KHDP == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 21)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 20;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 15;
-				HauchDerPestilenz_Stufe01_STR = 10;
-				HauchDerPestilenz_Stufe01_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 51)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 50;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 30;
-				HauchDerPestilenz_Stufe02_STR = 20;
-				HauchDerPestilenz_Stufe02_DEX = 20;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 121)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 120;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 60;
-				HauchDerPestilenz_Stufe03_STR = 40;
-				HauchDerPestilenz_Stufe03_DEX = 40;
+				B_SetHauchDerPestilenzWerte (20, 15, 10, 10, 50, 30, 20, 20, 120, 60, 40, 40);
 			}
 			else if (KHDP == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 17)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 16;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 12;
-				HauchDerPestilenz_Stufe01_STR = 8;
-				HauchDerPestilenz_Stufe01_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 41)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 40;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 24;
-				HauchDerPestilenz_Stufe02_STR = 16;
-				HauchDerPestilenz_Stufe02_DEX = 16;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 97)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 96;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 48;
-				HauchDerPestilenz_Stufe03_STR = 32;
-				HauchDerPestilenz_Stufe03_DEX = 32;
+				B_SetHauchDerPestilenzWerte (16, 12, 8, 8, 40, 24, 16, 16, 96, 48, 32, 32);
 			}
 			else if (KHDP == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 14)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 13;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 10;
-				HauchDerPestilenz_Stufe01_STR = 6;
-				HauchDerPestilenz_Stufe01_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 33)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 32;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 19;
-				HauchDerPestilenz_Stufe02_STR = 13;
-				HauchDerPestilenz_Stufe02_DEX = 13;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 78)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 77;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 38;
-				HauchDerPestilenz_Stufe03_STR = 26;
-				HauchDerPestilenz_Stufe03_DEX = 26;
+				B_SetHauchDerPestilenzWerte (13, 10, 6, 6, 32, 19, 13, 13, 77, 38, 26, 26);
 			}
 			else if (KHDP == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 10;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 8;
-				HauchDerPestilenz_Stufe01_STR = 5;
-				HauchDerPestilenz_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 27)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 26;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 15;
-				HauchDerPestilenz_Stufe02_STR = 10;
-				HauchDerPestilenz_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 62)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 61;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 31;
-				HauchDerPestilenz_Stufe03_STR = 20;
-				HauchDerPestilenz_Stufe03_DEX = 20;
+				B_SetHauchDerPestilenzWerte (10, 8, 5, 5, 26, 15, 10, 10, 61, 31, 20, 20);
 			}
 			else if (KHDP == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 8;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 6;
-				HauchDerPestilenz_Stufe01_STR = 4;
-				HauchDerPestilenz_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 21)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 20;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 12;
-				HauchDerPestilenz_Stufe02_STR = 8;
-				HauchDerPestilenz_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 50)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 49;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 25;
-				HauchDerPestilenz_Stufe03_STR = 16;
-				HauchDerPestilenz_Stufe03_DEX = 16;
+				B_SetHauchDerPestilenzWerte (8, 6, 4, 4, 20, 12, 8, 8, 49, 25, 16, 16);
 			};
 
 			HauchDerPestilenz_Time = 1;
@@ -4858,208 +2453,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KHDP == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 21)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 20;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 15;
-				HauchDerPestilenz_Stufe01_STR = 10;
-				HauchDerPestilenz_Stufe01_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 51)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 50;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 30;
-				HauchDerPestilenz_Stufe02_STR = 20;
-				HauchDerPestilenz_Stufe02_DEX = 20;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 121)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 120;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 60;
-				HauchDerPestilenz_Stufe03_STR = 40;
-				HauchDerPestilenz_Stufe03_DEX = 40;
+				B_SetHauchDerPestilenzWerte (20, 15, 10, 10, 50, 30, 20, 20, 120, 60, 40, 40);
 			}
 			else if (KHDP == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 17)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 16;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 12;
-				HauchDerPestilenz_Stufe01_STR = 8;
-				HauchDerPestilenz_Stufe01_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 41)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 40;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 24;
-				HauchDerPestilenz_Stufe02_STR = 16;
-				HauchDerPestilenz_Stufe02_DEX = 16;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 97)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 96;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 48;
-				HauchDerPestilenz_Stufe03_STR = 32;
-				HauchDerPestilenz_Stufe03_DEX = 32;
+				B_SetHauchDerPestilenzWerte (16, 12, 8, 8, 40, 24, 16, 16, 96, 48, 32, 32);
 			}
 			else if (KHDP == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 14)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 13;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 10;
-				HauchDerPestilenz_Stufe01_STR = 6;
-				HauchDerPestilenz_Stufe01_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 33)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 32;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 19;
-				HauchDerPestilenz_Stufe02_STR = 13;
-				HauchDerPestilenz_Stufe02_DEX = 13;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 78)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 77;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 38;
-				HauchDerPestilenz_Stufe03_STR = 26;
-				HauchDerPestilenz_Stufe03_DEX = 26;
+				B_SetHauchDerPestilenzWerte (13, 10, 6, 6, 32, 19, 13, 13, 77, 38, 26, 26);
 			}
 			else if (KHDP == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 10;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 8;
-				HauchDerPestilenz_Stufe01_STR = 5;
-				HauchDerPestilenz_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 27)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 26;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 15;
-				HauchDerPestilenz_Stufe02_STR = 10;
-				HauchDerPestilenz_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 62)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 61;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 31;
-				HauchDerPestilenz_Stufe03_STR = 20;
-				HauchDerPestilenz_Stufe03_DEX = 20;
+				B_SetHauchDerPestilenzWerte (10, 8, 5, 5, 26, 15, 10, 10, 61, 31, 20, 20);
 			}
 			else if (KHDP == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 8;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 6;
-				HauchDerPestilenz_Stufe01_STR = 4;
-				HauchDerPestilenz_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 21)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 20;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 12;
-				HauchDerPestilenz_Stufe02_STR = 8;
-				HauchDerPestilenz_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 50)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 49;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 25;
-				HauchDerPestilenz_Stufe03_STR = 16;
-				HauchDerPestilenz_Stufe03_DEX = 16;
+				B_SetHauchDerPestilenzWerte (8, 6, 4, 4, 20, 12, 8, 8, 49, 25, 16, 16);
 			};
 
 			HauchDerPestilenz_Time = 1;
@@ -5131,208 +2541,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KHDP == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 21)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 20;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 15;
-				HauchDerPestilenz_Stufe01_STR = 10;
-				HauchDerPestilenz_Stufe01_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 51)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 50;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 30;
-				HauchDerPestilenz_Stufe02_STR = 20;
-				HauchDerPestilenz_Stufe02_DEX = 20;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 121)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 120;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 60;
-				HauchDerPestilenz_Stufe03_STR = 40;
-				HauchDerPestilenz_Stufe03_DEX = 40;
+				B_SetHauchDerPestilenzWerte (20, 15, 10, 10, 50, 30, 20, 20, 120, 60, 40, 40);
 			}
 			else if (KHDP == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 17)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 16;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 12;
-				HauchDerPestilenz_Stufe01_STR = 8;
-				HauchDerPestilenz_Stufe01_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 41)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 40;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 24;
-				HauchDerPestilenz_Stufe02_STR = 16;
-				HauchDerPestilenz_Stufe02_DEX = 16;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 97)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 96;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 48;
-				HauchDerPestilenz_Stufe03_STR = 32;
-				HauchDerPestilenz_Stufe03_DEX = 32;
+				B_SetHauchDerPestilenzWerte (16, 12, 8, 8, 40, 24, 16, 16, 96, 48, 32, 32);
 			}
 			else if (KHDP == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 14)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 13;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 10;
-				HauchDerPestilenz_Stufe01_STR = 6;
-				HauchDerPestilenz_Stufe01_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 33)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 32;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 19;
-				HauchDerPestilenz_Stufe02_STR = 13;
-				HauchDerPestilenz_Stufe02_DEX = 13;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 78)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 77;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 38;
-				HauchDerPestilenz_Stufe03_STR = 26;
-				HauchDerPestilenz_Stufe03_DEX = 26;
+				B_SetHauchDerPestilenzWerte (13, 10, 6, 6, 32, 19, 13, 13, 77, 38, 26, 26);
 			}
 			else if (KHDP == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 10;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 8;
-				HauchDerPestilenz_Stufe01_STR = 5;
-				HauchDerPestilenz_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 27)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 26;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 15;
-				HauchDerPestilenz_Stufe02_STR = 10;
-				HauchDerPestilenz_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 62)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 61;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 31;
-				HauchDerPestilenz_Stufe03_STR = 20;
-				HauchDerPestilenz_Stufe03_DEX = 20;
+				B_SetHauchDerPestilenzWerte (10, 8, 5, 5, 26, 15, 10, 10, 61, 31, 20, 20);
 			}
 			else if (KHDP == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 8;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 6;
-				HauchDerPestilenz_Stufe01_STR = 4;
-				HauchDerPestilenz_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 21)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 20;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 12;
-				HauchDerPestilenz_Stufe02_STR = 8;
-				HauchDerPestilenz_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 50)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 49;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 25;
-				HauchDerPestilenz_Stufe03_STR = 16;
-				HauchDerPestilenz_Stufe03_DEX = 16;
+				B_SetHauchDerPestilenzWerte (8, 6, 4, 4, 20, 12, 8, 8, 49, 25, 16, 16);
 			};
 
 			HauchDerPestilenz_Time = 1;
@@ -5404,208 +2629,23 @@ func void B_AssessDamage_Hero ()
 
 			if (KHDP == 0)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 21)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 20;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 15;
-				HauchDerPestilenz_Stufe01_STR = 10;
-				HauchDerPestilenz_Stufe01_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 51)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 50;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 30;
-				HauchDerPestilenz_Stufe02_STR = 20;
-				HauchDerPestilenz_Stufe02_DEX = 20;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 121)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 120;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 60;
-				HauchDerPestilenz_Stufe03_STR = 40;
-				HauchDerPestilenz_Stufe03_DEX = 40;
+				B_SetHauchDerPestilenzWerte (20, 15, 10, 10, 50, 30, 20, 20, 120, 60, 40, 40);
 			}
 			else if (KHDP == 1)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 17)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 16;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 12;
-				HauchDerPestilenz_Stufe01_STR = 8;
-				HauchDerPestilenz_Stufe01_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 41)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 40;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 24;
-				HauchDerPestilenz_Stufe02_STR = 16;
-				HauchDerPestilenz_Stufe02_DEX = 16;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 97)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 96;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 48;
-				HauchDerPestilenz_Stufe03_STR = 32;
-				HauchDerPestilenz_Stufe03_DEX = 32;
+				B_SetHauchDerPestilenzWerte (16, 12, 8, 8, 40, 24, 16, 16, 96, 48, 32, 32);
 			}
 			else if (KHDP == 2)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 14)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 13;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 10;
-				HauchDerPestilenz_Stufe01_STR = 6;
-				HauchDerPestilenz_Stufe01_DEX = 6;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 33)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 32;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 19;
-				HauchDerPestilenz_Stufe02_STR = 13;
-				HauchDerPestilenz_Stufe02_DEX = 13;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 78)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 77;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 38;
-				HauchDerPestilenz_Stufe03_STR = 26;
-				HauchDerPestilenz_Stufe03_DEX = 26;
+				B_SetHauchDerPestilenzWerte (13, 10, 6, 6, 32, 19, 13, 13, 77, 38, 26, 26);
 			}
 			else if (KHDP == 3)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 11)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 10;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 8;
-				HauchDerPestilenz_Stufe01_STR = 5;
-				HauchDerPestilenz_Stufe01_DEX = 5;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 27)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 26;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 15;
-				HauchDerPestilenz_Stufe02_STR = 10;
-				HauchDerPestilenz_Stufe02_DEX = 10;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 62)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 61;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 31;
-				HauchDerPestilenz_Stufe03_STR = 20;
-				HauchDerPestilenz_Stufe03_DEX = 20;
+				B_SetHauchDerPestilenzWerte (10, 8, 5, 5, 26, 15, 10, 10, 61, 31, 20, 20);
 			}
 			else if (KHDP == 4)
 			{
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 9)
-				{
-					HauchDerPestilenz_Stufe01_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe01_HP = 8;
-				};
-
-				HauchDerPestilenz_Stufe01_MANA = 6;
-				HauchDerPestilenz_Stufe01_STR = 4;
-				HauchDerPestilenz_Stufe01_DEX = 4;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 21)
-				{
-					HauchDerPestilenz_Stufe02_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe02_HP = 20;
-				};
-
-				HauchDerPestilenz_Stufe02_MANA = 12;
-				HauchDerPestilenz_Stufe02_STR = 8;
-				HauchDerPestilenz_Stufe02_DEX = 8;
-
-				if (hero.attribute[ATR_HITPOINTS_MAX] <= 50)
-				{
-					HauchDerPestilenz_Stufe03_HP = hero.attribute[ATR_HITPOINTS_MAX]-2;
-				}
-				else
-				{
-					HauchDerPestilenz_Stufe03_HP = 49;
-				};
-
-				HauchDerPestilenz_Stufe03_MANA = 25;
-				HauchDerPestilenz_Stufe03_STR = 16;
-				HauchDerPestilenz_Stufe03_DEX = 16;
+				B_SetHauchDerPestilenzWerte (8, 6, 4, 4, 20, 12, 8, 8, 49, 25, 16, 16);
 			};
 
 			HauchDerPestilenz_Time = 1;
