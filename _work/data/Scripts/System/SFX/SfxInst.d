@@ -2687,7 +2687,13 @@ INSTANCE CONTROL_RETURN     	(C_SFX_DEF) {file= "Magic_6.wav" ;					};
 				INSTANCE SVM_15_AARGH_1					(C_SFX_DEF) {file= "svm_2_aargh_2.wav";				vol = 107;			};				
 				INSTANCE SVM_15_AARGH_2					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
 				INSTANCE SVM_15_AARGH_3					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
-				INSTANCE SVM_15_AARGH_4					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};				
+				INSTANCE SVM_15_AARGH_4					(C_SFX_DEF) {file= "svm_2_aargh_3.wav";				vol = 107;			};
+
+				INSTANCE SVM_27_AARGH					(C_SFX_DEF) {file= "svm_27_aargh_1.wav";				vol = 107;			};				
+				INSTANCE SVM_27_AARGH_1					(C_SFX_DEF) {file= "svm_27_aargh_2.wav";				vol = 107;			};				
+				INSTANCE SVM_27_AARGH_2					(C_SFX_DEF) {file= "svm_27_aargh_3.wav";				vol = 107;			};				
+				INSTANCE SVM_27_AARGH_3					(C_SFX_DEF) {file= "svm_27_aargh_3.wav";				vol = 107;			};				
+				INSTANCE SVM_27_AARGH_4					(C_SFX_DEF) {file= "svm_27_aargh_3.wav";				vol = 107;			};				
 
 
 //	DEAD
@@ -2706,6 +2712,7 @@ INSTANCE CONTROL_RETURN     	(C_SFX_DEF) {file= "Magic_6.wav" ;					};
 				INSTANCE SVM_13_DEAD					(C_SFX_DEF) {file= "svm_1_dead.wav";				vol = 120;			};				
 				INSTANCE SVM_14_DEAD					(C_SFX_DEF) {file= "svm_2_dead.wav";				vol = 120;			};				
 				INSTANCE SVM_15_DEAD					(C_SFX_DEF) {file= "svm_2_dead.wav";				vol = 120;			};				
+				INSTANCE SVM_27_DEAD					(C_SFX_DEF) {file= "svm_27_dead.wav";				vol = 120;			};				
 
 //	BERZERK
 				INSTANCE SVM_1_BERZERK					(C_SFX_DEF) {file= "svm_1_berzerk.wav";				vol = 110;			};				
@@ -2723,6 +2730,7 @@ INSTANCE CONTROL_RETURN     	(C_SFX_DEF) {file= "Magic_6.wav" ;					};
 				INSTANCE SVM_13_BERZERK					(C_SFX_DEF) {file= "svm_1_berzerk.wav";				vol = 110;			};				
 				INSTANCE SVM_14_BERZERK					(C_SFX_DEF) {file= "svm_2_berzerk.wav";				vol = 110;			};				
 				INSTANCE SVM_15_BERZERK					(C_SFX_DEF) {file= "svm_3_berzerk.wav";				vol = 110;			};				
+				INSTANCE SVM_27_BERZERK					(C_SFX_DEF) {file= "svm_27_berzerk.wav";				vol = 110;			};				
 				INSTANCE DEMENTHOR_TALK     				(C_SFX_DEF) {file= "DementhorTalk.wav";   vol=60;     loop=1; };
 
 

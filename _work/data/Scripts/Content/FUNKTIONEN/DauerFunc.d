@@ -119,7 +119,7 @@ FUNC VOID DAUERFUNC_01()
 
 				beta = STR_ToInt(eingabe);
 
-				if (release > 090)
+				if (release > 0910)
 				{
 					PrintScreen	("Neuere Version erhältlich!", -1, 60, FONT_SCREEN, 10);
 				};
