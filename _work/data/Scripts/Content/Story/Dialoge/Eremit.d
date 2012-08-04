@@ -531,7 +531,7 @@ FUNC VOID Info_Mod_Eremit_Prisma9_Info()
 	B_SetTopicStatus	(TOPIC_MOD_MAGIEPRISMA, LOG_SUCCESS);
 
 	Log_CreateTopic	(TOPIC_MOD_PRISMA, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_PRISMA, "Wenn das Prisma angelegt ist und der Held einen Schadenszauber spricht, wird das Prisma aufgeladen. Das Prisma kann vier Zaubersprüche gleichzeitig aufnehmen. Das Prisma kann durch Drücken der Taste 'F' ausgelöst werden und streut dann den Schaden der vier Zauber auf umliegende Gegner.");
+	B_LogEntry	(TOPIC_MOD_PRISMA, "Wenn das Prisma angelegt ist und der Held einen Schadenszauber spricht, wird das Prisma aufgeladen. Das Prisma kann vier Zaubersprüche gleichzeitig aufnehmen. Das Prisma kann durch Drücken der ihm zu gewiesenen Taste ausgelöst werden und streut dann den Schaden der vier Zauber auf umliegende Gegner.");
 
 	AI_StopProcessInfos	(self);
 

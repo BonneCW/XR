@@ -565,7 +565,9 @@ FUNC VOID NEBENQUESTS()
 			{
 				Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);
 
-				B_TransferInventory_Mob (hero, "CANTHARSTRUHE");
+				B_TransferInventory_All (hero, PC_Itemholder);
+
+				Mob_CreateItems	("CANTHARSTRUHE", ItSe_HeroPocket, 1);
 
 				Mod_CantharQuest_Last = 5;
 

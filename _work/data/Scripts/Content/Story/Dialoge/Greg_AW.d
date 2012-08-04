@@ -81,6 +81,8 @@ FUNC VOID Info_Mod_Greg_Sweetwater_Info()
 	AI_Output(self, hero, "Info_Mod_Greg_Sweetwater_01_12"); //Dann ist gut.
 
 	B_LogEntry	(TOPIC_MOD_JG_SWEETWATER, "Alligatorenplage im Talkessel, dem Süßwasserreservoir ... Mal sehen, was Alligator Jack erzählt.");
+
+	B_StartOtherRoutine	(Mod_928_PIR_AlligatorJack_AW, "PRESTART");
 };
 
 INSTANCE Info_Mod_Greg_Irdorath (C_INFO)

@@ -670,7 +670,7 @@ INSTANCE ItWr_Ritualplatz (C_ITEM)
 	on_state[0]	=	Use_Ritualplatz;
 	scemeName	=	"MAP";
 	description	=	name;
-	TEXT[2]		=	"";
+	TEXT[2]		=	"Enthält die Formel zum Öffnen des Ritualplatzes";
 };
 
 FUNC VOID Use_Ritualplatz()

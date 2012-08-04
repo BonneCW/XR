@@ -1727,6 +1727,30 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc	(MinecrawlerWarrior,	"FP_ROAM_CASTLEMINE2_07");
 	Wld_InsertNpc	(Minecrawler,	"FP_ROAM_CASTLEMINE2_06");
 
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_060");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_059");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_056");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_054");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_052");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_051");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_050");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_049");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_047");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_045");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_043");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_041");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_039");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_037");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_035");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_033");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_031");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_029");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_027");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_025");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_063");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_065");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_067");
+
 	// Talkessel unter den Dämonenrittern
 
 	Wld_InsertNpc	(Troll,	"NW_CASTLEMINE_TROLL_08");
@@ -1990,7 +2014,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc	(Keiler,	"NW_BIGFARM_FOREST_02");
 	Wld_InsertNpc	(Keiler,	"NW_BIGFARM_FOREST_02");
 
-	// Br?tende Scavenger
+	// Brütende Scavenger
 
 	Wld_InsertNpc	(Scavenger_Breed,	"FP_BREED_SCAVENGER_01");
 };

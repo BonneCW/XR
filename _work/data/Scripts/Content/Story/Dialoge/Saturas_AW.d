@@ -337,6 +337,14 @@ FUNC VOID Info_Mod_Saturas_AW_Magieschranke_Info()
 	AI_Output(self, hero, "Info_Mod_Saturas_AW_Magieschranke_14_01"); //Eine was?
 	AI_Output(hero, self, "Info_Mod_Saturas_AW_Magieschranke_15_02"); //(seufzt) Schon gut. Du kennst auch niemanden, der davon Ahnung haben könnte?
 	AI_Output(self, hero, "Info_Mod_Saturas_AW_Magieschranke_14_03"); //Die Chance, dass ein anderer Wassermagier sich damit auskennt, ist sehr gering, wenn ich noch nie davon gehört habe.
+
+	AI_TurnAway	(hero, self);
+
+	AI_Output(hero, self, "Info_Mod_Saturas_AW_Magieschranke_15_04"); //Den Magiern ist dieses Land fast genau so fremd wie mir. Zur magischen Markierung werden sie nichts wissen. Aber weil ich gerade an mysteriöse Magie denke - was meint eigentlich Argez dazu?
+
+	AI_TurnToNpc	(hero, self);
+
+	B_LogEntry	(TOPIC_MOD_MAGISCHEMARKIERUNG, "Saturas und wohl auch alle anderen Magier kennen keine Möglichkeit, eine magische Markierung loszuwerden. Vielleicht sollte ich Argez um Rat fragen ...");
 };
 
 INSTANCE Info_Mod_Saturas_AW_HabFoki (C_INFO)
