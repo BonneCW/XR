@@ -102,43 +102,6 @@ func void B_ClearJunkTradeInv (var C_NPC slf)
 		Npc_RemoveInvItems	(slf ,ItPl_Planeberry 		, Npc_HasItems (slf, ItPl_Planeberry ));
 	
 // Ranged Weapons
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Firebolt, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Icebolt, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Zap, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_SumWolf, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_SumGobSkel, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_SumSkel, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_SummonGuardian, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_SummonZombie, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_SumGol, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_SumDemon, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_ArmyOfDarkness, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_InstantIceball, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Icelance, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Geyser, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Icecube, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Waterfist, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Icewave, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Icerain, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_InstantFireball, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Firestorm, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_ChargeFireball, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Pyrokinesis, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Firerain, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Thunderstorm, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Thunderball, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_LightningFlash, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Light, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Shrink, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_HarmUndead, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_LightHeal, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_MediumHeal, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_FullHeal, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_SuckEnergy, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Zerfleischen, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_BeliarsRage, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_Skull, 100);	
-		Npc_RemoveInvItems	(slf, ItWr_Scroll_BreathOfDeath, 100);	
 		Npc_RemoveInvItems	(slf, ItWr_Paper, 15);	
 
 	};	

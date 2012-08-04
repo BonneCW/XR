@@ -3,6 +3,8 @@ var int MG_Spielfeld_Texturen[80];
 var int MG_Spielfeld_Possibilities[80];
 var int MG_Spielfeld_Figur[80];
 
+var int MG_Spielbrett;
+
 var int MG_EigeneFiguren[5];
 var int MG_GegnerFiguren[5];
 
@@ -41,7 +43,9 @@ var int PlayerHas_Goblin;
 var int PlayerHas_Schaf;
 
 const int MG_GEGNER_RUEDIGER		= 1;
+const int MG_GEGNER_SPIELER_ORLAN	= 2;
 
 var int MG_Ruediger_Runde;
+var int MG_Spieler_Orlan_Runde;
 
 var int MG_CurrentOpp;

@@ -61,3 +61,21 @@ FUNC VOID Rtn_InHaus_7709()
 	TA_Stand_ArmsCrossed	(08,00,20,00,"REL_CITY_057");
 	TA_Stand_ArmsCrossed 	(20,00,08,00,"REL_CITY_057");
 };
+
+FUNC VOID Rtn_Hacken_7709()
+{	
+	TA_Pick_Ore		(08,00,20,00,"REL_CITY_060");
+	TA_Pick_Ore	 	(20,00,08,00,"REL_CITY_060");
+};
+
+FUNC VOID Rtn_Schatzkammer_7709()
+{	
+	TA_Follow_Player	(08,00,20,00,"REL_CITY_060");
+	TA_Follow_Player 	(20,00,08,00,"REL_CITY_060");
+};
+
+FUNC VOID Rtn_InSchatzkammer_7709()
+{	
+	TA_Pick_FP		(08,00,20,00,"REL_CITY_KANAL_027");
+	TA_Pick_FP	 	(20,00,08,00,"REL_CITY_KANAL_027");
+};

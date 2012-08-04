@@ -6,7 +6,7 @@ instance Mod_7397_PSINOV_Turgor_REL (Npc_Default)
 	guild 		=		GIL_out;
 	level 		=		9;	
 	
-	voice 		=		5;
+	voice 		=		27;
 	id 			=		7397;
 		
 	//-------- abilities --------

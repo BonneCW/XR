@@ -145,6 +145,46 @@ FUNC VOID B_Vergiftet(var C_NPC slf)
 			slf.aivar[AIV_Siechtum] -= 1;
 		};
 
+		if (Mod_AuraFlammen >= 1)
+		{
+			if (Mod_AuraFlammen_Counter%3 == 0)
+			{
+				var int fldmg;
+
+				if (Mod_AuraFlammen == 1)
+				{
+					fldmg = 120-slf.protection[PROT_MAGIC];
+				}
+				else
+				{
+					fldmg = 60-slf.protection[PROT_MAGIC];
+				};
+
+				if (fldmg < 5)
+				{
+					fldmg = 5;
+				};
+
+				B_MagicHurtNpc	(hero, slf, fldmg);
+
+				Wld_PlayEffect ("spellFX_Firestorm_COLLIDE", slf, slf, 0, 0, 0, FALSE);
+
+				Mod_AuraFlammen_Used = 1;
+			};
+		};
+
+		if (C_BodyStateContains(slf, BS_SWIM))
+		{
+			if (Npc_GetDistToNpc(slf, other) < 300)
+			&& (Npc_CanSeeNpc(slf, other))
+			&& (r_max(2) == 0)
+			{
+				AI_PlayAni	(slf, "T_FISTATTACKMOVE");
+
+				B_CalculateDamage	(other, slf);
+			};
+		};
+
 		slf.aivar[AIV_Gifttime] = Mod_GiftCounter;		
 	};
 

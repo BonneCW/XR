@@ -64,9 +64,9 @@ FUNC VOID Info_Mod_Andokai_Hi_A()
 
 	Log_CreateTopic	(TOPIC_MOD_ANDOKAI_WEIN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_ANDOKAI_WEIN, LOG_RUNNING);
-	B_LogEntry_More	(TOPIC_MOD_DÄMONENBESCHWÖRER, TOPIC_MOD_ANDOKAI_WEIN, "Mein erster Auftrag besteht darin, den Heiligen Hammer zu stehlen, den die Feuermagier irgendwo in den Gewölben ihres Klosters in Khorinis versteckt haben.", "Ich soll mich ins Kloster der Feuermagier begeben und dort Gorax davon überzeugen, mir eine Weinlieferung auszuhändigen, die ich dann zu Myxir bringe.");
+	B_LogEntry_More	(TOPIC_MOD_DAEMONENBESCHWOERER, TOPIC_MOD_ANDOKAI_WEIN, "Mein erster Auftrag besteht darin, den Heiligen Hammer zu stehlen, den die Feuermagier irgendwo in den Gewölben ihres Klosters in Khorinis versteckt haben.", "Ich soll mich ins Kloster der Feuermagier begeben und dort Gorax davon überzeugen, mir eine Weinlieferung auszuhändigen, die ich dann zu Myxir bringe.");
 	B_LogEntry_NS	(TOPIC_MOD_ANDOKAI_WEIN, "Ich falle im Kloster nicht auf, wenn ich eine Novizenrobe trage. Außerdem muss ich über die Mauer rechts neben dem Eingangstor zum Kloster klettern, um in den Innenhof gelangen zu können.");
-	B_LogEntry_NS	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Ich falle im Kloster nicht auf, wenn ich eine Novizenrobe trage. Außerdem muss ich über die Mauer rechts neben dem Eingangstor zum Kloster klettern, um in den Innenhof gelangen zu können. Wie ich den Hammer stehle, ohne dass es bemerkt wird, kann mir vielleicht Bodo in der Stadt sagen.");
+	B_LogEntry_NS	(TOPIC_MOD_DAEMONENBESCHWOERER, "Ich falle im Kloster nicht auf, wenn ich eine Novizenrobe trage. Außerdem muss ich über die Mauer rechts neben dem Eingangstor zum Kloster klettern, um in den Innenhof gelangen zu können. Wie ich den Hammer stehle, ohne dass es bemerkt wird, kann mir vielleicht Bodo in der Stadt sagen.");
 };
 
 INSTANCE Info_Mod_Andokai_Hammer (C_INFO)
@@ -110,7 +110,7 @@ FUNC VOID Info_Mod_Andokai_Hammer_Info()
 
 	B_Göttergefallen(3, 1);
 
-	B_LogEntry	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Hinter dem großen Tor auf dem Platz der Festung der Beliaranhänger verbirgt sich ein Irrgarten, der zu einer Bibliothek führen soll. Und ich muss den Weg finden.");
+	B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Hinter dem großen Tor auf dem Platz der Festung der Beliaranhänger verbirgt sich ein Irrgarten, der zu einer Bibliothek führen soll. Und ich muss den Weg finden.");
 };
 
 INSTANCE Info_Mod_Andokai_WarInBib (C_INFO)
@@ -160,7 +160,7 @@ FUNC VOID Info_Mod_Andokai_WarInBib_Info()
 
 	B_Göttergefallen(3, 1);
 
-	B_LogEntry	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Wenn Xardas sein Einverständnis erklärt, will Andokai mich als Novizen aufnehmen.");
+	B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Wenn Xardas sein Einverständnis erklärt, will Andokai mich als Novizen aufnehmen.");
 
 	Wld_InsertNpc	(Mod_7755_KDS_SchwarzerMagier_MT, "LABYRINTH_98");
 	Wld_InsertNpc	(Mod_7756_KDS_SchwarzerMagier_MT, "LABYRINTH_98");
@@ -288,6 +288,99 @@ FUNC VOID Info_Mod_Andokai_PyrmansStab_Info()
 	B_SetTopicStatus	(TOPIC_MOD_NL_STAB, LOG_SUCCESS);
 
 	B_Göttergefallen(3, 1);
+};
+
+INSTANCE Info_Mod_Andokai_UngeheuerInBib (C_INFO)
+{
+	npc		= Mod_473_DMB_Andokai_MT;
+	nr		= 1;
+	condition	= Info_Mod_Andokai_UngeheuerInBib_Condition;
+	information	= Info_Mod_Andokai_UngeheuerInBib_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Andokai_UngeheuerInBib_Condition()
+{
+	if (Mod_BeliarBibScene == 2)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Andokai_UngeheuerInBib_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Andokai_UngeheuerInBib_12_00"); //(zum Helden) Würdest du mitgehen? Ich gebe nicht viel auf diesen Schwächling.
+
+	Info_ClearChoices	(Info_Mod_Andokai_UngeheuerInBib);
+
+	Info_AddChoice	(Info_Mod_Andokai_UngeheuerInBib, "Lass ihn allein gehen.", Info_Mod_Andokai_UngeheuerInBib_B);
+	Info_AddChoice	(Info_Mod_Andokai_UngeheuerInBib, "Kein Problem.", Info_Mod_Andokai_UngeheuerInBib_A);
+};
+
+FUNC VOID Info_Mod_Andokai_UngeheuerInBib_C()
+{
+	AI_Output(self, hero, "Info_Mod_Andokai_UngeheuerInBib_C_12_00"); //Dann ist es beschlossen. Ich werde mich nun wieder wichtigen Dingen zuwenden.
+
+	Info_ClearChoices	(Info_Mod_Andokai_UngeheuerInBib);
+};
+
+FUNC VOID Info_Mod_Andokai_UngeheuerInBib_B()
+{
+	AI_Output(hero, self, "Info_Mod_Andokai_UngeheuerInBib_B_15_00"); //Lass ihn allein gehen.
+
+	B_StartOtherRoutine	(Mod_7756_KDS_SchwarzerMagier_MT, "START");
+
+	Info_Mod_Andokai_UngeheuerInBib_C();
+};
+
+FUNC VOID Info_Mod_Andokai_UngeheuerInBib_A()
+{
+	AI_Output(hero, self, "Info_Mod_Andokai_UngeheuerInBib_A_15_00"); //Kein Problem.
+
+	Mod_BeliarBibScene = 3;
+
+	Log_CreateTopic	(TOPIC_MOD_BELIAR_UNGEHEUER, LOG_MISSION);
+	B_SetTopicStatus	(TOPIC_MOD_BELIAR_UNGEHEUER, LOG_RUNNING);
+	B_LogEntry	(TOPIC_MOD_BELIAR_UNGEHEUER, "Ich habe mich bereit erklärt, zusammen mit einem Magier in der Bibliothek nach dem Rechten zu sehen. Dort ist anscheinend etwas Seltsames vorgefallen.");
+
+	Info_Mod_Andokai_UngeheuerInBib_C();
+};
+
+INSTANCE Info_Mod_Andokai_UngeheuerInBib2 (C_INFO)
+{
+	npc		= Mod_473_DMB_Andokai_MT;
+	nr		= 1;
+	condition	= Info_Mod_Andokai_UngeheuerInBib2_Condition;
+	information	= Info_Mod_Andokai_UngeheuerInBib2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Die Bibliothek ist wieder sauber.";
+};
+
+FUNC INT Info_Mod_Andokai_UngeheuerInBib2_Condition()
+{
+	if (Mod_BeliarBibScene == 4)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Andokai_UngeheuerInBib2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Andokai_UngeheuerInBib2_15_00"); //Die Bibliothek ist wieder sauber.
+	AI_Output(self, hero, "Info_Mod_Andokai_UngeheuerInBib2_12_01"); //Gute Arbeit. Was hat der Novize angerichtet?
+	AI_Output(hero, self, "Info_Mod_Andokai_UngeheuerInBib2_15_02"); //Er hat ein paar sehr alte Kreaturen freigelassen. Aber die sind alle tot.
+	AI_Output(self, hero, "Info_Mod_Andokai_UngeheuerInBib2_12_03"); //Ich gebe mir schon so viel Mühe bei der Auswahl der Novizen. Wieso werde ich trotzdem mit solchen Dummköpfen gestraft?
+	AI_Output(hero, self, "Info_Mod_Andokai_UngeheuerInBib2_15_04"); //Das weiß allein Beliar.
+	AI_Output(self, hero, "Info_Mod_Andokai_UngeheuerInBib2_12_05"); //Recht hast du. Ich werde die Aufnahmebedingungen verschärfen.
+
+	B_GivePlayerXP	(400);
+
+	B_SetTopicStatus	(TOPIC_MOD_BELIAR_UNGEHEUER, LOG_SUCCESS);
+
+	B_StartOtherRoutine	(Mod_7755_KDS_SchwarzerMagier_MT, "START");
+	B_StartOtherRoutine	(self, "START");
 };
 
 INSTANCE Info_Mod_Andokai_Bibliothek1 (C_INFO)
@@ -781,12 +874,12 @@ INSTANCE Info_Mod_Andokai_Pickpocket (C_INFO)
 	information	= Info_Mod_Andokai_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Andokai_Pickpocket_Condition()
 {
-	C_Beklauen	(110, ItMi_Gold, 1000);
+	C_Beklauen	(170, ItMi_Gold, 1000);
 };
 
 FUNC VOID Info_Mod_Andokai_Pickpocket_Info()
@@ -804,8 +897,88 @@ FUNC VOID Info_Mod_Andokai_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Andokai_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Andokai_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Andokai_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Andokai_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Andokai_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Andokai_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Andokai_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Andokai_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Andokai_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Andokai_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Andokai_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Andokai_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Andokai_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Andokai_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Andokai_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Andokai_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Andokai_EXIT (C_INFO)

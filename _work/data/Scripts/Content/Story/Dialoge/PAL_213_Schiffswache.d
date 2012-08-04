@@ -544,8 +544,3 @@ FUNC VOID DIA_Pal_213_Schiffswache_IAmDJG3_Info()
 	AI_Output (self ,other,"DIA_Pal_213_Schiffswache_IAmDJG3_01_02"); //In Ordnung, du darfst passieren.
 	
 };
-
-
-
-
-

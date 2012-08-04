@@ -30,18 +30,18 @@ FUNC VOID Info_Mod_Saturas_NW_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Saturas_NW_Hi_14_06"); //Pass also von nun an gut auf, was du machst!
 };
 
-INSTANCE Info_Mod_Saturas_NW_Söldner (C_INFO)
+INSTANCE Info_Mod_Saturas_NW_Soeldner (C_INFO)
 {
 	npc		= Mod_774_KDW_Saturas_NW;
 	nr		= 1;
-	condition	= Info_Mod_Saturas_NW_Söldner_Condition;
-	information	= Info_Mod_Saturas_NW_Söldner_Info;
+	condition	= Info_Mod_Saturas_NW_Soeldner_Condition;
+	information	= Info_Mod_Saturas_NW_Soeldner_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich gehöre zu den Söldnern.";
 };
 
-FUNC INT Info_Mod_Saturas_NW_Söldner_Condition()
+FUNC INT Info_Mod_Saturas_NW_Soeldner_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_NW_Hi))
 	&& (Mod_Gilde == 4)
@@ -50,10 +50,10 @@ FUNC INT Info_Mod_Saturas_NW_Söldner_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Saturas_NW_Söldner_Info()
+FUNC VOID Info_Mod_Saturas_NW_Soeldner_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Saturas_NW_Söldner_15_00"); //Ich gehöre zu den Söldnern.
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Söldner_14_01"); //Dann seh' dich hier ruhig um, aber mach keinen Unfug.
+	AI_Output(hero, self, "Info_Mod_Saturas_NW_Soeldner_15_00"); //Ich gehöre zu den Söldnern.
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Soeldner_14_01"); //Dann seh' dich hier ruhig um, aber mach keinen Unfug.
 };
 
 INSTANCE Info_Mod_Saturas_NW_RDW (C_INFO)
@@ -97,7 +97,7 @@ FUNC INT Info_Mod_Saturas_NW_Brief_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_NW_Hi))
 	&& (Mod_PortalLance == TRUE)
-	&& (Npc_HasItems(hero, XardasLetterForSaturas_Geöffnet) == 1)
+	&& (Npc_HasItems(hero, XardasLetterForSaturas_Geoeffnet) == 1)
 	{
 		return 1;
 	};
@@ -107,7 +107,7 @@ FUNC VOID Info_Mod_Saturas_NW_Brief_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Saturas_NW_Brief_15_00"); //Ich hab hier einen Brief von Xardas für dich.
 
-	B_GiveInvItems	(hero, self, XardasLetterForSaturas_Geöffnet, 1);
+	B_GiveInvItems	(hero, self, XardasLetterForSaturas_Geoeffnet, 1);
 
 	B_UseFakeScroll();
 
@@ -172,18 +172,18 @@ FUNC VOID Info_Mod_Saturas_NW_DurchsPortal_Info()
 	B_LogEntry	(TOPIC_MOD_PORTAL, "Saturas hat mir gestattet mit durchs Portal zu gehen sobald es geöffnet ist.");
 };
 
-INSTANCE Info_Mod_Saturas_NW_WieÖffnen (C_INFO)
+INSTANCE Info_Mod_Saturas_NW_WieOeffnen (C_INFO)
 {
 	npc		= Mod_774_KDW_Saturas_NW;
 	nr		= 1;
-	condition	= Info_Mod_Saturas_NW_WieÖffnen_Condition;
-	information	= Info_Mod_Saturas_NW_WieÖffnen_Info;
+	condition	= Info_Mod_Saturas_NW_WieOeffnen_Condition;
+	information	= Info_Mod_Saturas_NW_WieOeffnen_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Was können wir tun um das Tor zu öffnen?";
 };
 
-FUNC INT Info_Mod_Saturas_NW_WieÖffnen_Condition()
+FUNC INT Info_Mod_Saturas_NW_WieOeffnen_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_NW_Portal))
 	{
@@ -191,11 +191,11 @@ FUNC INT Info_Mod_Saturas_NW_WieÖffnen_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Saturas_NW_WieÖffnen_Info()
+FUNC VOID Info_Mod_Saturas_NW_WieOeffnen_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Saturas_NW_WieÖffnen_15_00"); //Was können wir tun um das Tor zu öffnen?
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_WieÖffnen_14_01"); //Geh mal zu Nefarius, er ist gerade dabei die Inschriften in den Wänden zu übersetzen.
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_WieÖffnen_14_02"); //Vielleicht hat er inzwischen etwas Neues herausgefunden.
+	AI_Output(hero, self, "Info_Mod_Saturas_NW_WieOeffnen_15_00"); //Was können wir tun um das Tor zu öffnen?
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_WieOeffnen_14_01"); //Geh mal zu Nefarius, er ist gerade dabei die Inschriften in den Wänden zu übersetzen.
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_WieOeffnen_14_02"); //Vielleicht hat er inzwischen etwas Neues herausgefunden.
 
 	B_LogEntry	(TOPIC_MOD_PORTAL, "Saturas hat mich zu Nefarius geschickt. Ich soll mich bei ihm erkundigen ob es was neues gibt.");
 };
@@ -212,7 +212,7 @@ INSTANCE Info_Mod_Saturas_NW_Argez (C_INFO)
 
 FUNC INT Info_Mod_Saturas_NW_Argez_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_NW_WieÖffnen))
+	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_NW_WieOeffnen))
 	&& (Mod_Argez == 1)
 	{
 		return 1;
@@ -400,18 +400,18 @@ FUNC VOID Info_Mod_Saturas_NW_Gefangen_Info()
 	AI_Output(self, hero, "Info_Mod_Saturas_NW_Gefangen_14_09"); //Viel Glück.
 };
 
-INSTANCE Info_Mod_Saturas_NW_Götter (C_INFO)
+INSTANCE Info_Mod_Saturas_NW_Goetter (C_INFO)
 {
 	npc		= Mod_774_KDW_Saturas_NW;
 	nr		= 1;
-	condition	= Info_Mod_Saturas_NW_Götter_Condition;
-	information	= Info_Mod_Saturas_NW_Götter_Info;
+	condition	= Info_Mod_Saturas_NW_Goetter_Condition;
+	information	= Info_Mod_Saturas_NW_Goetter_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Was weißt du über die Götterwaffen?";
 };
 
-FUNC INT Info_Mod_Saturas_NW_Götter_Condition()
+FUNC INT Info_Mod_Saturas_NW_Goetter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_NW_Hi))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_UrizielKaputt))
@@ -420,13 +420,13 @@ FUNC INT Info_Mod_Saturas_NW_Götter_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Saturas_NW_Götter_Info()
+FUNC VOID Info_Mod_Saturas_NW_Goetter_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Saturas_NW_Götter_15_00"); //Was weißt du über die Götterwaffen?
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Götter_14_01"); //Den alten Überlieferungen zufolge soll es drei dieser Artefakte geben. Für jeden Gott eine.
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Götter_14_02"); //Diese Waffen sollen auf die drei Gebiete von Khorinis verteilt worden sein. Diesen Teil, das Minental und Jharkendar.
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Götter_14_03"); //Wir haben von Jharkendar noch nicht viel erforscht, aber in den Inschriften ist die Rede von einem Tempel Adanos'. Dort wirst du sicher eine dieser Waffen finden.
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Götter_14_04"); //Bei der anderen Waffe handelt es sich wohl um den Heiligen Hammer der Feuermagier. Dieser befindet sich zum Glück bereits in unserem Besitz.
+	AI_Output(hero, self, "Info_Mod_Saturas_NW_Goetter_15_00"); //Was weißt du über die Götterwaffen?
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Goetter_14_01"); //Den alten Überlieferungen zufolge soll es drei dieser Artefakte geben. Für jeden Gott eine.
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Goetter_14_02"); //Diese Waffen sollen auf die drei Gebiete von Khorinis verteilt worden sein. Diesen Teil, das Minental und Jharkendar.
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Goetter_14_03"); //Wir haben von Jharkendar noch nicht viel erforscht, aber in den Inschriften ist die Rede von einem Tempel Adanos'. Dort wirst du sicher eine dieser Waffen finden.
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Goetter_14_04"); //Bei der anderen Waffe handelt es sich wohl um den Heiligen Hammer der Feuermagier. Dieser befindet sich zum Glück bereits in unserem Besitz.
 
 	B_LogEntry	(TOPIC_MOD_URIZIEL, "Jede der Götterwaffen ist einem Gott zuzuorden. Die Waffe Beliars habe ich bereits in meinem Besitz. Die Waffe Innos' ist der heilige Hammer der Feuermagier. Und die Waffe Adanos' soll in Jharkendar in einem Tempel Adanos' zu finden sein.");
 };
@@ -1341,6 +1341,10 @@ FUNC VOID Info_Mod_Saturas_AW_Member_26_E()
 	Mod_BengarsHofLeer = 1;
 
 	B_SetTopicStatus	(TOPIC_MOD_ADANOS_UNHEIL, LOG_SUCCESS);
+
+	Mod_TillChange = 1;
+
+	Mod_TillChange_Day = Wld_GetDay();
 
 	B_Göttergefallen(2, 1);
 

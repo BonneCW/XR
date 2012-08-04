@@ -80,7 +80,7 @@ func void ZS_RansackBody_End ()
 		};
 	};
 
-	other.aivar[AIV_Ransacked] = TRUE;
+	B_SetAivar(other, AIV_Ransacked, TRUE);
 	
 	// ------ NSC heilt sich ------
 	if (self.attribute[ATR_HITPOINTS] < (self.attribute[ATR_HITPOINTS_MAX]/2))
@@ -116,9 +116,5 @@ func void ZS_GetMeat ()
 		return;
 	};
 
-	other.aivar[AIV_Ransacked] = TRUE;
+	B_SetAivar(other, AIV_Ransacked, TRUE);
 };
-
-
-
-		

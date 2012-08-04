@@ -628,6 +628,39 @@ instance ItSc_AuraFeuer (C_Item)
 	COUNT	[5]			=	value;
 };
 
+instance ItSc_AuraFlammen (C_Item)
+{
+	name 				=	NAME_Spruchrolle;
+
+	mainflag 			=	ITEM_KAT_RUNE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_Sc_Light;
+
+	visual				=	"ItSc_Aura.3DS";
+	material			=	MAT_LEATHER;
+
+	spell				= 	SPL_AURAFLAMMEN;
+	cond_atr[2]   			= 	ATR_MANA_MAX;
+	cond_value[2]  			= 	SPL_Cost_Scroll;
+
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_WEAKGLIMMER";
+
+	description			=	"Aura der Flammen";
+	
+	TEXT	[0]			=	Name_MageScroll	;
+	
+	TEXT	[1]			=	NAME_Mana_needed;		
+	COUNT	[1]			=	SPL_Cost_Scroll;
+	
+	TEXT	[2]			=	NAME_Sec_Duration;		
+	COUNT	[2]			=	30;
+	
+	TEXT	[5]			=	NAME_Value;				
+	COUNT	[5]			=	value;
+};
+
 instance ItSc_AuraHeilung (C_Item)
 {
 	name 				=	NAME_Spruchrolle;

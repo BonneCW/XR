@@ -48,7 +48,7 @@ FUNC VOID Rtn_Start_580 ()
 	TA_Stand_Sweeping		(14,00,18,00,"NW_CITY_MERCHANT_HUT_01_IN");
 	TA_Cook_Stove			(18,00,20,00,"NW_CITY_BED_BOSPER_B");
 	TA_Read_Bookstand 		(20,00,23,00,"NW_CITY_MERCHANT_HUT_01_IN");
-    TA_Sleep				(23,00,08,00,"NW_CITY_BED_BOSPER_B");
+	TA_Sleep				(23,00,08,00,"NW_CITY_BED_BOSPER_B");
 };
 
 FUNC VOID Rtn_FollowToShakir_580 ()

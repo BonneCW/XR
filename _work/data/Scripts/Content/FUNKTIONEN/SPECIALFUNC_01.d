@@ -1852,7 +1852,7 @@ FUNC VOID SPECIALFUNC_01()
 		// NL-Story: Gespräch mit dem Shamanen im Friedhof starten zwecks Fehlern bei anderen Fällen
 
 		if (Mod_NL_UOS == 5)
-		&& (hero.aivar[AIV_INVINCIBLE] == FALSE)
+		&& (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)
 		&& (Hlp_IsValidNpc(Mod_10033_ORC_UndeadShamane_OGY))
 		&& (Npc_GetDistToNpc(hero, Mod_10033_ORC_UndeadShamane_OGY) <= 600)
 		{

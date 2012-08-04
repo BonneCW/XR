@@ -45,3 +45,15 @@ FUNC VOID Rtn_start_1427 ()
 	TA_Sit_Bench	(17,00,19,05,"OCR_OUTSIDE_ARENA_BENCH_2");
 	TA_Stand_WP	(19,05,23,00,"OCR_ARENA_07");
 };
+
+FUNC VOID Rtn_AtGravo_1427 ()
+{
+	TA_Stand_Eating		(11,00,07,00,"OCR_OUTSIDE_HUT_4_INSERT");
+	TA_Stand_Eating		(07,00,11,00,"OCR_OUTSIDE_HUT_4_INSERT");
+};
+
+FUNC VOID Rtn_Auftritt_1427 ()
+{
+	TA_Concert	(05,00,20,00,"OCR_IE_THOMAS");
+	TA_Concert	(20,00,05,00,"OCR_IE_THOMAS");
+};

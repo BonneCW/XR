@@ -2,10 +2,10 @@ FUNC VOID Haemmern_S1 ()
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
-	if  (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))
+	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	{	
-		self.aivar[AIV_INVINCIBLE]=TRUE;
-		PLAYER_MOBSI_PRODUCTION	=	MOBSI_Haemmern;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
+		PLAYER_MOBSI_PRODUCTION	= MOBSI_Haemmern;
 		Ai_ProcessInfos (her);
 	};
 };
@@ -23,7 +23,7 @@ INSTANCE PC_Haemmern_CoragonStuhl (C_INFO)
 
 FUNC INT PC_Haemmern_CoragonStuhl_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Haemmern)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Haemmern)
 	&& (Mod_LehrlingBei == 2)
 	&& (Npc_HasItems(hero, ItMi_Brett_Saege) >= 5)
 	&& (Npc_HasItems(hero, ItWr_Zeichnung_Stuhl) == 1)
@@ -56,7 +56,7 @@ INSTANCE PC_Haemmern_MatteoFesttisch (C_INFO)
 
 FUNC INT PC_Haemmern_MatteoFesttisch_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Haemmern)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Haemmern)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Thorben_LehrlingQuest3))
 	&& (Npc_HasItems(hero, ItMi_Brett_Saege) >= 6)
 	&& (Npc_HasItems(hero, ItWr_Zeichnung_Tisch) == 1)
@@ -89,7 +89,7 @@ INSTANCE PC_Haemmern_Schmuckkasten (C_INFO)
 
 FUNC INT PC_Haemmern_Schmuckkasten_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Haemmern)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Haemmern)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Brahim_ThorbenLehrling4))
 	&& (Npc_HasItems(hero, ItMi_Schmuckkasten_Roh) >= 1)
 	&& (Npc_HasItems(hero, ItWr_Zeichnung_Schmuckkasten) == 1)
@@ -122,7 +122,7 @@ INSTANCE PC_Haemmern_Bierkrug (C_INFO)
 
 FUNC INT PC_Haemmern_Bierkrug_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Haemmern)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Haemmern)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Brahim_ThorbenLehrling4))
 	&& (Npc_HasItems(hero, ItMi_Bierkrug_Roh) >= 1)
 	&& (Npc_HasItems(hero, ItWr_Zeichnung_Bierkrug) == 1)
@@ -155,7 +155,7 @@ INSTANCE PC_Haemmern_Karte (C_INFO)
 
 FUNC INT PC_Haemmern_Karte_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Haemmern)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Haemmern)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Brahim_ThorbenLehrling4))
 	&& (Npc_HasItems(hero, ItMi_Karte_Roh) >= 1)
 	&& (Npc_HasItems(hero, ItWr_Zeichnung_Karte) == 1)
@@ -188,8 +188,8 @@ INSTANCE PC_Haemmern_EXIT (C_INFO)
 
 FUNC INT PC_Haemmern_EXIT_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Haemmern)
-	&& (Sägen	==	FALSE)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Haemmern)
+	&& (Saegen == FALSE)
 	{
 		return 1;
 	};

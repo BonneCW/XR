@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_SwampDrone(C_Npc)
 	level							= 10;
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		= 50;
-	attribute	[ATR_DEXTERITY]		= 5;
-	attribute	[ATR_HITPOINTS_MAX]	= 100; 
-	attribute	[ATR_HITPOINTS]		= 100;
+	attribute	[ATR_STRENGTH]		= Hlp_Random(51) + 25;	// 25 - 75
+	attribute	[ATR_DEXTERITY]		= Hlp_Random(11);	// 0 - 10
+	attribute	[ATR_HITPOINTS_MAX]	= Hlp_Random(51) + 75;	// 75 - 125
+	attribute	[ATR_HITPOINTS]		= attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		= 0;
-	attribute	[ATR_MANA] 			= 0;
+	attribute	[ATR_MANA] 		= 0;
 	
 	//----- Ptotection ----
-	protection	[PROT_BLUNT]		= 50000;
-	protection	[PROT_EDGE]			= 50000;
-	protection	[PROT_POINT]		= 0;
-	protection	[PROT_FIRE]			= 50;
-	protection	[PROT_FLY]			= 50;
-	protection	[PROT_MAGIC]		= 0;
+	protection	[PROT_BLUNT]		= Hlp_Random(51)*1000 + 25000;	// 25 - 75
+	protection	[PROT_EDGE]		= Hlp_Random(51)*1000 + 25000;	// 25 - 75
+	protection	[PROT_POINT]		= Hlp_Random(21);		// 0 - 20
+	protection	[PROT_FIRE]		= Hlp_Random(51) + 25;		// 25 - 75
+	protection	[PROT_FLY]		= 50;
+	protection	[PROT_MAGIC]		= Hlp_Random(21);		// 0 - 20
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

@@ -6,7 +6,7 @@ instance Mod_1224_TPL_Templer_MT (Npc_Default)
 	guild =							GIL_out;
 	level =							17;
 	
-	voice =							8;
+	voice =							29;
 	id =							1224;
 		
 	//-------- abilities --------

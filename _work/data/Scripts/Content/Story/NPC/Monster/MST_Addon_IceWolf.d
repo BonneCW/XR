@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Icewolf(C_Npc)
 	level							=	12;		
 	
 	//----- Attributes ----
-	attribute	[ATR_STRENGTH]		=	120;
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	250;
-	attribute	[ATR_HITPOINTS]		=	250;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(61) + 90;	// 90 - 150
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21);		// 0 - 20
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(201) + 150;	// 150 - 350
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_MANA] 		=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	120000;
-	protection	[PROT_EDGE]			=	120000;
-	protection	[PROT_POINT]		=	70000;
-	protection	[PROT_FIRE]			=	50;
-	protection	[PROT_FLY]			=	50;
-	protection	[PROT_MAGIC]		=	50;
+	protection	[PROT_BLUNT]		=	Hlp_Random(61)*1000 + 90000;	// 90 - 150
+	protection	[PROT_EDGE]		=	Hlp_Random(61)*1000 + 90000;	// 90 - 150
+	protection	[PROT_POINT]		=	Hlp_Random(41)*1000 + 50000;	// 50 - 90
+	protection	[PROT_FIRE]		=	Hlp_Random(41) + 30;		// 30 - 70
+	protection	[PROT_FLY]		=	50;
+	protection	[PROT_MAGIC]		=	Hlp_Random(41) + 30;		// 30 - 70
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 
@@ -51,11 +51,6 @@ PROTOTYPE Mst_Default_Icewolf(C_Npc)
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
-
-	aivar[AIV_MM_RoamStart] 	= 6;	
-	aivar[AIV_MM_RoamEnd]		= 22;
-	aivar[AIV_MM_SleepStart]	= 22;
-	aivar[AIV_MM_SleepEnd]		= 6;
 
 	if (Hlp_Random(100) < 5)
 	{

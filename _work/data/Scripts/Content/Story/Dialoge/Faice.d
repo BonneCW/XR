@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Faice_Hi_Condition()
 FUNC VOID Info_Mod_Faice_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Faice_Hi_03_01"); //Ich bin Faice. Stör mich nicht, ich hab zu tun.
 };
 
@@ -262,11 +263,11 @@ FUNC VOID Info_Mod_Faice_Aufnahme_Info()
 
 	B_GivePlayerXP	(450);
 
+	B_StartOtherRoutine	(self, "RITUAL");
 	B_StartOtherRoutine	(Mod_4020_VMG_Hermy_MT, "RITUAL");
 	B_StartOtherRoutine	(Mod_1626_VMG_Furt_MT, "RITUAL");
 	B_StartOtherRoutine	(Mod_1625_VMG_Neol_MT, "RITUAL");
 	B_StartOtherRoutine	(Mod_1628_VMG_Anor_MT, "RITUAL");
-	B_StartOtherRoutine	(self, "RITUAL");
 	B_StartOtherRoutine	(Mod_1955_VMG_Turendil_MT, "RITUAL");
 
 	B_LogEntry	(TOPIC_MOD_VMG_AUFNAHME, "Faice meint, ich soll später auf den Hof des Klosters kommen, um aufgenommen zu werden. Ich sollte dort dann nochmal mit ihm sprechen.");
@@ -749,12 +750,12 @@ INSTANCE Info_Mod_Faice_Pickpocket (C_INFO)
 	information	= Info_Mod_Faice_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Faice_Pickpocket_Condition()
 {
-	C_Beklauen	(120, ItMi_Gold, 750);
+	C_Beklauen	(170, ItSc_TrfShadowbeast, 2);
 };
 
 FUNC VOID Info_Mod_Faice_Pickpocket_Info()
@@ -772,8 +773,88 @@ FUNC VOID Info_Mod_Faice_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Faice_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Faice_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Faice_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Faice_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Faice_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Faice_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Faice_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Faice_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Faice_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Faice_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Faice_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Faice_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Faice_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Faice_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Faice_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Faice_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Faice_EXIT (C_INFO)

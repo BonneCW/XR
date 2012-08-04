@@ -4,7 +4,7 @@ INSTANCE Info_Mod_Nagon_Hi (C_INFO)
 	nr		= 1;
 	condition	= Info_Mod_Nagon_Hi_Condition;
 	information	= Info_Mod_Nagon_Hi_Info;
-	permanent	= 1;
+	permanent	= 0;
 	important	= 1;
 };
 
@@ -45,7 +45,7 @@ FUNC INT Info_Mod_Nagon_Gizar_Condition()
 FUNC VOID Info_Mod_Nagon_Gizar_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Nagon_Gizar_10_00"); //Ah, es freut mich, dich zu sehen, Bruder.
-	AI_Output(hero, self, "Info_Mod_Nagon_Gizar_15_01"); //Gisar hat mich zu Euch geschickt.
+	AI_Output(hero, self, "Info_Mod_Nagon_Gizar_15_01"); //Gizar hat mich zu Euch geschickt.
 	AI_Output(self, hero, "Info_Mod_Nagon_Gizar_10_02"); //Ich weiß. Pyrokar hält große Stücke auf dich. Er hat großes Vertrauen in dich! Das ist auch der Grund warum du hier bist.
 	AI_Output(self, hero, "Info_Mod_Nagon_Gizar_10_03"); //Ich habe eine wichtige Aufgabe für dich. Du musst die fünf Foki, die die Schwarzmagier benutzen um die Barriere aufrecht zu halten, stehlen und zu uns bringen.
 	AI_Output(hero, self, "Info_Mod_Nagon_Gizar_15_04"); //Aber... Wie soll ich das machen?
@@ -113,6 +113,73 @@ FUNC VOID Info_Mod_Nagon_HabFoki_Info()
 
 	B_LogEntry	(TOPIC_MOD_FM_VERRAT, "Aaron ist tagsüber nur schwer aufzufinden, da er überall aushilft, aber nachts ist er immer in der Kirche und betet. Was noch komisch war, was dass Nagon es für unmöglich hält, dass ein Schwarzmagier im Kloster ist. Es scheint fast so, als hätte Tojan ihn nicht darüber informiert.");
 	B_SetTopicStatus	(TOPIC_MOD_FM_FOKI, LOG_SUCCESS);
+};
+
+INSTANCE Info_Mod_Nagon_MangelQuest (C_INFO)
+{
+	npc		= Mod_1773_KDF_Nagon_PAT;
+	nr		= 1;
+	condition	= Info_Mod_Nagon_MangelQuest_Condition;
+	information	= Info_Mod_Nagon_MangelQuest_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Was trübt dein Gemüt, Bruder?";
+};
+
+FUNC INT Info_Mod_Nagon_MangelQuest_Condition()
+{
+	return 1;
+};
+
+FUNC VOID Info_Mod_Nagon_MangelQuest_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Nagon_MangelQuest_15_00"); //Was trübt dein Gemüt, Bruder?
+	AI_Output(self, hero, "Info_Mod_Nagon_MangelQuest_10_01"); //Ach ... entschuldige meinen Tonfall ... aber sieh dich doch nur mal hier um!
+	AI_Output(hero, self, "Info_Mod_Nagon_MangelQuest_15_02"); //(schaut sich um) Hmm, ich sehe nichts ...
+	AI_Output(self, hero, "Info_Mod_Nagon_MangelQuest_10_03"); //Eben! Dies ist die Kirche Patherions, einer der wichtigsten religiösen Orte unseres Gemeinschaft Innos’ ... und wer ist hier? Fast niemand!
+	AI_Output(hero, self, "Info_Mod_Nagon_MangelQuest_15_04"); //Es herrscht aber nun mal leider Belagerung, und die Priester und Streiter Innos’ müssen ...
+	AI_Output(self, hero, "Info_Mod_Nagon_MangelQuest_10_05"); //(unterbricht) Ja, diese Stätte verteidigen.
+	AI_Output(self, hero, "Info_Mod_Nagon_MangelQuest_10_06"); //Aber welchen Wert hat es denn überhaupt noch, wenn keiner das Gebet zu Innos’ spricht und die religiösen Traditionen pflegt, die doch unseren Glauben als solchen definieren.
+	AI_Output(self, hero, "Info_Mod_Nagon_MangelQuest_10_07"); //Dieser Konflikt hat uns viele Opfer abverlangt ... aber der größte Preis, den wir dafür zahlen, ist unsere Verbindung zu Innos.
+	AI_Output(self, hero, "Info_Mod_Nagon_MangelQuest_10_08"); //Wenn nicht mal mehr an diesem heiligen Ort jemand die Beziehung zu Innos pflegt, ja, dann haben wir den Krieg quasi schon verloren.
+
+	B_StartMangel();
+
+	B_LogEntry	(TOPIC_MOD_FM_MANGEL, "Nagon beklagte sich darüber, dass niemand mehr in die Kapelle beten kommt.");
+};
+
+INSTANCE Info_Mod_Nagon_MangelQuest2 (C_INFO)
+{
+	npc		= Mod_1773_KDF_Nagon_PAT;
+	nr		= 1;
+	condition	= Info_Mod_Nagon_MangelQuest2_Condition;
+	information	= Info_Mod_Nagon_MangelQuest2_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Nagon_MangelQuest2_Condition()
+{
+	if (Mod_Pat_Beter >= 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Nagon_MangelQuest2_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Nagon_MangelQuest2_10_00"); //(enthusiastischer) Sei gegrüßt, Bruder. Kaum, dass wir uns unterhalten hatten, fanden sich rasch mehrere Jünger zum Gebet ein.
+	AI_Output(self, hero, "Info_Mod_Nagon_MangelQuest2_10_01"); //Diesem Ort des Glaubens wird nun wieder die Aufmerksamkeit zu Teil, wie es sein sollte ... und ich bezweifle mal, dass es Zufall ist.
+	AI_Output(self, hero, "Info_Mod_Nagon_MangelQuest2_10_02"); //Dein Einsatz für unseren Glauben zeigt, dass du ein wahrer Diener unseres Herrn bist.
+	AI_Output(self, hero, "Info_Mod_Nagon_MangelQuest2_10_03"); //So gehe denn mit Innos' Segen und helfe auch weiterhin die Welt nach seinem Willen zu gestalten.
+
+	B_BlessAttribute	(hero, ATR_MANA_MAX, 3);
+
+	B_GivePlayerXP	(200);
+
+	B_LogEntry	(TOPIC_MOD_FM_MANGEL, "Nagon war erfreut über die Gläubigen in der Kirche.");
+
+	B_StopMangel();
 };
 
 var int Nagon_LastPetzCounter;
@@ -266,7 +333,7 @@ FUNC VOID Info_Mod_Nagon_PETZMASTER_Info()
 	Nagon_Schulden = 0; //weil Funktion nochmal durchlaufen wird, wenn Crime höher ist...
 	
 	// ------ SC hat mit Nagon noch nicht gesprochen ------
-	if (self.aivar[AIV_TalkedToPlayer] == FALSE)
+	if (B_GetAivar(self, AIV_TalkedToPlayer) == FALSE)
 	{
 		AI_Output (self, hero, "Info_Mod_Nagon_PETZMASTER_10_00"); //Du musst der Neue sein, der hier im Kloster Ärger gemacht hat.
 	};	

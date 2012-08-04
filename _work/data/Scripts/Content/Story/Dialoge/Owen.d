@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Owen_Hi_Condition()
 FUNC VOID Info_Mod_Owen_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Owen_Hi_13_01"); //Ich bin Owen.
 };
 
@@ -50,7 +51,6 @@ FUNC VOID Info_Mod_Owen_Auftrag_Info()
 	AI_Output(hero, self, "Info_Mod_Owen_Auftrag_15_05"); //Gib mir das Geld und ich hol dein Vitamin C.
 	AI_Output(self, hero, "Info_Mod_Owen_Auftrag_13_06"); //Hier, 400 Goldstücke.
 
-	CreateInvItems	(self, ItMi_Gold, 400);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 400);
 
 	AI_Output(self, hero, "Info_Mod_Owen_Auftrag_13_07"); //Wenn er mehr verlangt haut er dich übern Tisch!
@@ -95,7 +95,7 @@ FUNC VOID Info_Mod_Owen_VitaminC_Info()
 
 	B_Göttergefallen(2, 1);
 
-	B_LogEntry	(TOPIC_MOD_OWEN_SKORBUT, "Diese Schatzsuche sollte sicher sein vor einem Skorbut-Befall.");
+	B_LogEntry_More	(TOPIC_MOD_PIRATEN_SCHATZSUCHE, TOPIC_MOD_OWEN_SKORBUT, "Gegen Skorbut haben Owen und ich uns abgesichert.", "Diese Schatzsuche sollte sicher sein vor einem Skorbut-Befall.");
 	B_SetTopicStatus	(TOPIC_MOD_OWEN_SKORBUT, LOG_SUCCESS);
 };
 
@@ -204,8 +204,88 @@ FUNC VOID Info_Mod_Owen_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Owen_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Owen_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Owen_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Owen_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Owen_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Owen_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Owen_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Owen_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Owen_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Owen_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Owen_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Owen_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Owen_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Owen_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Owen_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Owen_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Owen_EXIT (C_INFO)

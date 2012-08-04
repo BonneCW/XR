@@ -4,11 +4,11 @@ FUNC VOID GILDENSTORY_BANDIT()
 	{
 		// Irgendwas anderes ^^
 
-		if (Mod_Banditenüberfall_Esteban == 1)
-		&& (Mod_ÜberfallTag == Wld_GetDay()-1)
+		if (Mod_Banditenueberfall_Esteban == 1)
+		&& (Mod_UeberfallTag == Wld_GetDay()-1)
 		&& (Wld_IsTime(08,00,10,00))
 		{
-			Mod_Banditenüberfall_Esteban = 2;
+			Mod_Banditenueberfall_Esteban = 2;
 
 			B_StartOtherRoutine	(Mod_948_BDT_Esteban_MT, "VM");
 			B_StartOtherRoutine	(Mod_4074_BDT_Bandit_MT, "VM");
@@ -17,9 +17,9 @@ FUNC VOID GILDENSTORY_BANDIT()
 			B_StartOtherRoutine	(Mod_4075_BDT_Bandit_MT, "VM");
 		};
 
-		if (Mod_Banditenüberfall_Esteban == 2)
-		&& ((Mod_ÜberfallTag == Wld_GetDay()-2)
-		|| ((Mod_ÜberfallTag == Wld_GetDay()-1)
+		if (Mod_Banditenueberfall_Esteban == 2)
+		&& ((Mod_UeberfallTag == Wld_GetDay()-2)
+		|| ((Mod_UeberfallTag == Wld_GetDay()-1)
 		&& (Wld_IsTime(10,01,24,00))))
 		{
 			Mod_EstebanBeleidigt = 1;
@@ -33,7 +33,7 @@ FUNC VOID GILDENSTORY_BANDIT()
 			B_SetTopicStatus	(TOPIC_MOD_BDT_ESTEBAN, LOG_FAILED);
 		};
 
-		if (Mod_Banditenüberfall_Esteban == 4)
+		if (Mod_Banditenueberfall_Esteban == 4)
 		&& (Npc_GetDistToWP(Mod_4076_VLK_Haendler_MT, "OW_PATH_1_15") < 300)
 		&& (Npc_GetDistToWP(Mod_4077_VLK_Haendler_MT, "OW_PATH_1_15") < 300)
 		{
@@ -44,10 +44,10 @@ FUNC VOID GILDENSTORY_BANDIT()
 			B_StartOtherRoutine	(Mod_4080_GRD_Gardist_MT, "END");
 			B_StartOtherRoutine	(Mod_4081_GRD_Gardist_MT, "END");
 
-			Mod_Banditenüberfall_Esteban = 5;
+			Mod_Banditenueberfall_Esteban = 5;
 		};
 
-		if (Mod_Banditenüberfall_Esteban == 6)
+		if (Mod_Banditenueberfall_Esteban == 6)
 		&& (Npc_GetDistToWP(hero, "OW_PATH_1_16_7") < 300)
 		{
 			B_StartOtherRoutine	(Mod_4078_GRD_Gardist_MT, "TOT");
@@ -55,10 +55,10 @@ FUNC VOID GILDENSTORY_BANDIT()
 			B_StartOtherRoutine	(Mod_4080_GRD_Gardist_MT, "TOT");
 			B_StartOtherRoutine	(Mod_4081_GRD_Gardist_MT, "TOT");
 
-			Mod_Banditenüberfall_Esteban = 7;
+			Mod_Banditenueberfall_Esteban = 7;
 		};
 
-		if (Mod_Banditenüberfall_Esteban == 10)
+		if (Mod_Banditenueberfall_Esteban == 10)
 		&& (!Npc_IsInState(Mod_948_BDT_Esteban_MT, ZS_Talk))
 		&& (Mod_BDT_Esteban_RacheAngriff == 0)
 		{

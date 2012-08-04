@@ -11,6 +11,7 @@ INSTANCE Info_Mod_Turendil_Hi (C_INFO)
 FUNC INT Info_Mod_Turendil_Hi_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Ferco_QuestThree))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Turendil_WerBistDu))
 	{
 		return 1;
 	};
@@ -64,7 +65,6 @@ FUNC VOID Info_Mod_Turendil_Hi_A()
 	AI_Output(self, hero, "Info_Mod_Turendil_Hi_A_05_09"); //Du kannst den Kämpfer Struk und den Magier Thorge mitnehmen. Sie werden am Tor auf dich warten.
 	AI_Output(hero, self, "Info_Mod_Turendil_Hi_A_15_10"); //Gut, dann sehen wir uns später.
 
-	CreateInvItems	(self, ItPo_Health_01, 3);
 	B_GiveInvItems	(self, hero, ItPo_Health_01, 3);
 
 	B_StartOtherRoutine	(Mod_1956_VMK_Struk_MT, "ATGATE");
@@ -770,6 +770,81 @@ FUNC VOID Info_Mod_Turendil_TradorTot_C()
 	B_SetTopicStatus	(TOPIC_MOD_TURENDIL_GOLEM, LOG_SUCCESS);
 };
 
+INSTANCE Info_Mod_Turendil_WerBistDu (C_INFO)
+{
+	npc		= Mod_1955_VMG_Turendil_MT;
+	nr		= 1;
+	condition	= Info_Mod_Turendil_WerBistDu_Condition;
+	information	= Info_Mod_Turendil_WerBistDu_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wer bist du?";
+};
+
+FUNC INT Info_Mod_Turendil_WerBistDu_Condition()
+{
+	return 1;
+};
+
+FUNC VOID Info_Mod_Turendil_WerBistDu_Info()
+{
+	B_Say	(hero, self, "$WHOAREYOU");
+
+	AI_Output(self, hero, "Info_Mod_Turendil_WerBistDu_05_00"); //Mein Name ist Turendil. Ich bin der Stellvertreter von Faice, unserem Oberhaupt. Er ist zur Zeit sehr beschäftigt.
+	AI_Output(self, hero, "Info_Mod_Turendil_WerBistDu_05_01"); //Wie kann ich dir helfen?
+};
+
+INSTANCE Info_Mod_Turendil_Woher (C_INFO)
+{
+	npc		= Mod_1955_VMG_Turendil_MT;
+	nr		= 1;
+	condition	= Info_Mod_Turendil_Woher_Condition;
+	information	= Info_Mod_Turendil_Woher_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wo kommt ihr her?";
+};
+
+FUNC INT Info_Mod_Turendil_Woher_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Turendil_WerBistDu))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Turendil_Woher_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Turendil_Woher_15_00"); //Wo kommt ihr her?
+	AI_Output(self, hero, "Info_Mod_Turendil_Woher_05_01"); //Wir kommen aus einem kleinen Tal namens Tugettso. Dieses Tal ist Natur pur.
+	AI_Output(self, hero, "Info_Mod_Turendil_Woher_05_02"); //Wenn es soweit ist, wirst du vielleicht mal dort hin gelangen.
+};
+
+INSTANCE Info_Mod_Turendil_WasHier (C_INFO)
+{
+	npc		= Mod_1955_VMG_Turendil_MT;
+	nr		= 1;
+	condition	= Info_Mod_Turendil_WasHier_Condition;
+	information	= Info_Mod_Turendil_WasHier_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Was macht ihr hier?";
+};
+
+FUNC INT Info_Mod_Turendil_WasHier_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Turendil_WerBistDu))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Turendil_WasHier_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Turendil_WasHier_15_00"); //Was macht ihr hier?
+	AI_Output(self, hero, "Info_Mod_Turendil_WasHier_05_01"); //Wir erforschen dieses Tal und das alte Wissen, das sich hier finden lässt.
+};
+
 INSTANCE Info_Mod_Turendil_BACK (C_INFO)
 {
 	npc		= Mod_1955_VMG_Turendil_MT;
@@ -804,12 +879,12 @@ INSTANCE Info_Mod_Turendil_Pickpocket (C_INFO)
 	information	= Info_Mod_Turendil_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Turendil_Pickpocket_Condition()
 {
-	C_Beklauen	(93, ItMi_Gold, 850);
+	C_Beklauen	(143, ItSc_TrfMeatbug, 1);
 };
 
 FUNC VOID Info_Mod_Turendil_Pickpocket_Info()
@@ -827,8 +902,88 @@ FUNC VOID Info_Mod_Turendil_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Turendil_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Turendil_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Turendil_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Turendil_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Turendil_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Turendil_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Turendil_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Turendil_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Turendil_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Turendil_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Turendil_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Turendil_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Turendil_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Turendil_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Turendil_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Turendil_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Turendil_EXIT (C_INFO)

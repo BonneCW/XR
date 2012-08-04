@@ -9,19 +9,19 @@ PROTOTYPE Mst_Default_Razor(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= ID_RAZOR;
 	level							= 18;
 //--------------------------------------------------------------
-	attribute	[ATR_STRENGTH]		= 180;
-	attribute	[ATR_DEXTERITY]		= 15;
-	attribute	[ATR_HITPOINTS_MAX]	= 180;
-	attribute	[ATR_HITPOINTS]		= 180;
+	attribute	[ATR_STRENGTH]		= Hlp_Random(121) + 120;	// 120 - 240
+	attribute	[ATR_DEXTERITY]		= Hlp_Random(21) + 5;		// 5 - 25
+	attribute	[ATR_HITPOINTS_MAX]	= Hlp_Random(121) + 120;	// 120 - 240
+	attribute	[ATR_HITPOINTS]		= attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		= 0;
-	attribute	[ATR_MANA] 			= 0;
+	attribute	[ATR_MANA] 		= 0;
 //--------------------------------------------------------------
-	protection	[PROT_BLUNT]		= 90000;
-	protection	[PROT_EDGE]			= 90000;
-	protection	[PROT_POINT]		= 90000;
-	protection	[PROT_FIRE]			= 90;
-	protection	[PROT_FLY]			= 90;
-	protection	[PROT_MAGIC]		= 0;
+	protection	[PROT_BLUNT]		= Hlp_Random(61)*1000 + 90000;	// 90 - 150
+	protection	[PROT_EDGE]		= Hlp_Random(61)*1000 + 90000;	// 90 - 150
+	protection	[PROT_POINT]		= Hlp_Random(61)*1000 + 90000;	// 90 - 150
+	protection	[PROT_FIRE]		= Hlp_Random(61) + 90;		// 90 - 150
+	protection	[PROT_FLY]		= 90;
+	protection	[PROT_MAGIC]		= Hlp_Random(41);		// 0 - 40
 //--------------------------------------------------------------
 	damagetype 						=	DAM_EDGE;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
@@ -50,6 +50,11 @@ PROTOTYPE Mst_Default_Razor(C_Npc)
 	start_aistate				= ZS_MM_AllScheduler;
 
 	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
+
+	if (Hlp_Random(100) < 5)
+	{
+		CreateInvItems (self, ItAt_GoblinBone, 1);
+	};
 };
 //-------------------------------------------------------------
 func void Set_Razor_Visuals()
@@ -57,11 +62,6 @@ func void Set_Razor_Visuals()
 	Mdl_SetVisual			(self,	"Razor.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
 	Mdl_SetVisualBody		(self,	"Raz_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
-
-	if (Hlp_Random(100) < 5)
-	{
-		CreateInvItems (self, ItAt_GoblinBone, 1);
-	};
 };
 
 

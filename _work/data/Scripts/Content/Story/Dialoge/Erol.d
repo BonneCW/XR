@@ -1,28 +1,28 @@
-INSTANCE Info_Mod_Erol_Händler (C_INFO)
+INSTANCE Info_Mod_Erol_Haendler (C_INFO)
 {
 	npc		= Mod_521_NONE_Erol_NW;
 	nr		= 1;
-	condition	= Info_Mod_Erol_Händler_Condition;
-	information	= Info_Mod_Erol_Händler_Info;
+	condition	= Info_Mod_Erol_Haendler_Condition;
+	information	= Info_Mod_Erol_Haendler_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Hier steht ja alles voll mit Krimskrams.";
 };
 
-FUNC INT Info_Mod_Erol_Händler_Condition()
+FUNC INT Info_Mod_Erol_Haendler_Condition()
 {
 	return 1;
 };
 
-FUNC VOID Info_Mod_Erol_Händler_Info()
+FUNC VOID Info_Mod_Erol_Haendler_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Erol_Händler_15_00"); //Hier steht ja alles voll mit Krimskrams.
-	AI_Output(self, hero, "Info_Mod_Erol_Händler_10_01"); //Ja, da sammelt sich im Laufe des Lebens einiges an.
-	AI_Output(self, hero, "Info_Mod_Erol_Händler_10_02"); //Sind ein paar echte Antiquitäten dabei.
-	AI_Output(self, hero, "Info_Mod_Erol_Händler_10_03"); //Willst du vielleicht was davon kaufen?
+	AI_Output(hero, self, "Info_Mod_Erol_Haendler_15_00"); //Hier steht ja alles voll mit Krimskrams.
+	AI_Output(self, hero, "Info_Mod_Erol_Haendler_10_01"); //Ja, da sammelt sich im Laufe des Lebens einiges an.
+	AI_Output(self, hero, "Info_Mod_Erol_Haendler_10_02"); //Sind ein paar echte Antiquitäten dabei.
+	AI_Output(self, hero, "Info_Mod_Erol_Haendler_10_03"); //Willst du vielleicht was davon kaufen?
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_OHNELAGER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_OHNELAGER, "Der Händler Erol verkauft Antiquitäten.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_OHNELAGER, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_OHNELAGER, "Der Händler Erol verkauft Antiquitäten.");
 };
 
 INSTANCE Info_Mod_Erol_DunklerPilger (C_INFO)
@@ -38,7 +38,7 @@ INSTANCE Info_Mod_Erol_DunklerPilger (C_INFO)
 
 FUNC INT Info_Mod_Erol_DunklerPilger_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Händler))
+	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Haendler))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Orlan_DunklerPilger))
 	{
 		return 1;
@@ -59,7 +59,7 @@ FUNC VOID Info_Mod_Erol_DunklerPilger_Info()
 	B_StartOtherRoutine	(Mod_7036_NONE_Pilger_NW, "GRAVEYARD");
 	AI_Teleport	(Mod_7036_NONE_Pilger_NW, "NW_FARM4_WOOD_MONSTER_MORE_03");
 
-	B_LogEntry	(TOPIC_MOD_DUNKLERPILGER, "Ich bin dem Pilger dicht auf den Fersen. Erol – sehr beunruhigt über die Gestalt – hat sie erst vor kurzem in den Wald Richtung Friedhof entschwinden sehen, nur wenige Meter entfernt.");
+	B_LogEntry	(TOPIC_MOD_DUNKLERPILGER, "Ich bin dem Pilger dicht auf den Fersen. Erol - sehr beunruhigt über die Gestalt - hat sie erst vor kurzem in den Wald Richtung Friedhof entschwinden sehen, nur wenige Meter entfernt.");
 };
 
 INSTANCE Info_Mod_Erol_Blutkelch (C_INFO)
@@ -211,12 +211,11 @@ FUNC VOID Info_Mod_Erol_Fahrender2_Info()
 	AI_Output(hero, self, "Info_Mod_Erol_Fahrender2_15_02"); //Ja?
 	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_03"); //Ich hab in der Stadt einen der Feuermagier getroffen.
 	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_04"); //Denen ihre Anführer sind an einem Teil interessiert, das im Minental zu finden sein soll.
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_05"); //Denen ihre Anführer sind an einem Teil interessiert, das im Minental zu finden sein soll.
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_06"); //Nun kenn ich mich da gar nicht aus.
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_07"); //Als ich auf die Insel kam, gab's die Barriere schon. Kannst du mir vielleicht helfen?
-	AI_Output(hero, self, "Info_Mod_Erol_Fahrender2_15_08"); //Ich denke schon. Im Hafenviertel ist ein Händler, der Karten verkauft. Der sollte was für dich haben.
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_09"); //Danke für den Tip. Ich denke, wir sind quitt.
-	AI_Output(hero, self, "Info_Mod_Erol_Fahrender2_15_10"); //So muss es sein. Viel Erfolg.
+	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_05"); //Nun kenn ich mich da gar nicht aus.
+	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_06"); //Als ich auf die Insel kam, gab's die Barriere schon. Kannst du mir vielleicht helfen?
+	AI_Output(hero, self, "Info_Mod_Erol_Fahrender2_15_07"); //Ich denke schon. Im Hafenviertel ist ein Händler, der Karten verkauft. Der sollte was für dich haben.
+	AI_Output(self, hero, "Info_Mod_Erol_Fahrender2_10_08"); //Danke für den Tip. Ich denke, wir sind quitt.
+	AI_Output(hero, self, "Info_Mod_Erol_Fahrender2_15_09"); //So muss es sein. Viel Erfolg.
 
 	Mod_Erol_Unterwegs_Day = Wld_GetDay();
 };
@@ -540,7 +539,7 @@ INSTANCE Info_Mod_Erol_Soeldner (C_INFO)
 
 FUNC INT Info_Mod_Erol_Soeldner_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Händler))
+	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Haendler))
 	{
 		return 1;
 	};
@@ -566,7 +565,7 @@ INSTANCE Info_Mod_Erol_Muenzen (C_INFO)
 
 FUNC INT Info_Mod_Erol_Muenzen_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Händler))
+	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Haendler))
 	{
 		return 1;
 	};
@@ -805,7 +804,7 @@ INSTANCE Info_Mod_Erol_Trade (C_INFO)
 
 FUNC INT Info_Mod_Erol_Trade_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Händler))
+	if (Npc_KnowsInfo(hero, Info_Mod_Erol_Haendler))
 	{
 		return 1;
 	};
@@ -827,12 +826,12 @@ INSTANCE Info_Mod_Erol_Pickpocket (C_INFO)
 	information	= Info_Mod_Erol_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Erol_Pickpocket_Condition()
 {
-	C_Beklauen	(57, ItMi_Gold, 180);
+	C_Beklauen	(117, ItMi_OldCoin, 18);
 };
 
 FUNC VOID Info_Mod_Erol_Pickpocket_Info()
@@ -850,8 +849,88 @@ FUNC VOID Info_Mod_Erol_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Erol_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Erol_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Erol_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Erol_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Erol_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Erol_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Erol_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Erol_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Erol_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Erol_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Erol_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Erol_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Erol_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Erol_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Erol_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Erol_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Erol_EXIT (C_INFO)

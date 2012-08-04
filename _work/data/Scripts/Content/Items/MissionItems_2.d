@@ -459,7 +459,7 @@ func void UseBloodMIS ()
 			Knows_Bloodfly = TRUE;
 			Log_CreateTopic (Topic_Bonus,LOG_NOTE);
 			B_LogEntry (Topic_Bonus, "Ich weiß jetzt was ich tun muss, um heilenden Saft aus den abgetrennten Stacheln von Blutfliegen trinken zu können oder es an einem Alchemietisch abzufüllen. ");
-			B_GivePlayerXP (XP_Ambient);
+			B_GivePlayerXP (50);
 		};		
 };
 //**********************************************************************************

@@ -44,19 +44,18 @@ instance Mod_1768_KDF_Magier_PAT (Npc_Default)
 
 FUNC VOID Rtn_Start_1768 ()
 {	
-	TA_Stand_WP			(08,00,23,00,"WP_PAT_WEG_155");
-    TA_Stand_WP			(23,00,08,00,"WP_PAT_WEG_155");
- 
+	TA_Stand_WP		(08,00,23,00,"WP_PAT_WEG_155");
+	TA_Stand_WP		(23,00,08,00,"WP_PAT_WEG_155"); 
 };
 
 FUNC VOID Rtn_Flucht_1768 ()
 {	
-	TA_Stand_WP			(08,00,23,00,"TOT");
-    TA_Stand_WP			(23,00,08,00,"TOT");
+	TA_Stand_WP		(08,00,23,00,"TOT");
+	TA_Stand_WP		(23,00,08,00,"TOT");
 };
 
 FUNC VOID Rtn_Mine_1768 ()
 {	
-	TA_Stand_WP			(08,00,23,00,"WP_PAT_UNTERGRUND_08");
-    TA_Stand_WP			(23,00,08,00,"WP_PAT_UNTERGRUND_08");
+	TA_Stand_WP		(08,00,23,00,"WP_PAT_UNTERGRUND_08");
+	TA_Stand_WP		(23,00,08,00,"WP_PAT_UNTERGRUND_08");
 };

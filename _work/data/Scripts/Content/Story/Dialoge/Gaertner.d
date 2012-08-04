@@ -20,8 +20,8 @@ FUNC VOID Info_Mod_Gaertner_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Gaertner_Hi_09_01"); //Ich bin hier der Gärtner. Meine Aufgabe ist es mich um die Pflanze im oberen Viertel zu kümmern.
 	AI_Output(self, hero, "Info_Mod_Gaertner_Hi_09_02"); //Ich kann dir auch ein paar davon verkaufen.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Der Gärtner aus dem oberen Viertel kann mir ein paar Pflanzen verkaufen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Der Gärtner aus dem oberen Viertel kann mir ein paar Pflanzen verkaufen.");
 };
 
 INSTANCE Info_Mod_Gaertner_Dieb (C_INFO)
@@ -55,12 +55,10 @@ FUNC VOID Info_Mod_Gaertner_Dieb_Info()
 	AI_Output(hero, self, "Info_Mod_Gaertner_Dieb_15_05"); //Was gibt's zu tun?
 	AI_Output(self, hero, "Info_Mod_Gaertner_Dieb_09_06"); //Der Händler Salandril besitzt einige wertvolle Tränke. Bring mir einen, aber du musst aufpassen, er traut keinem über den Weg und ist immer wachsam.
 	AI_Output(hero, self, "Info_Mod_Gaertner_Dieb_15_07"); //Ich werd's versuchen.
-
-	//Wld_InsertItem	(ItPo_Perm_DEX_Salandril, "FP_ITEM_SALANDRIL_WERTVOLLERTRANK");
 	
 	Log_CreateTopic	(TOPIC_MOD_DIEB_SALANDRIL, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_DIEB_SALANDRIL, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_DIEB_SALANDRIL, "Der Gärtner will, dass ich einen von Salandril's wertvollen Tränken stehle.");
+	B_LogEntry	(TOPIC_MOD_DIEB_SALANDRIL, "Der Gärtner will, dass ich einen von Salandrils wertvollen Tränken stehle.");
 };
 
 INSTANCE Info_Mod_Gaertner_HierTrank (C_INFO)
@@ -93,7 +91,6 @@ FUNC VOID Info_Mod_Gaertner_HierTrank_Info()
 
 	AI_Output(self, hero, "Info_Mod_Gaertner_HierTrank_09_01"); //Unglaublich, du bist ein Naturtalent. Hier hast du eine Belohnung.
 
-	CreateInvItems	(self, ItMi_Gold, 250);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 250);
 
 	AI_Output(self, hero, "Info_Mod_Gaertner_HierTrank_09_02"); //Wenn du willst, dann verkauf ich ihn dir.
@@ -139,12 +136,12 @@ INSTANCE Info_Mod_Gaertner_Pickpocket (C_INFO)
 	information	= Info_Mod_Gaertner_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_Gaertner_Pickpocket_Condition()
 {
-	C_Beklauen	(16, ItMi_Gold, 20);
+	C_Beklauen	(16, ItPl_Temp_Herb, 2);
 };
 
 FUNC VOID Info_Mod_Gaertner_Pickpocket_Info()
@@ -162,8 +159,88 @@ FUNC VOID Info_Mod_Gaertner_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Gaertner_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Gaertner_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Gaertner_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Gaertner_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Gaertner_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Gaertner_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Gaertner_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Gaertner_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Gaertner_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Gaertner_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Gaertner_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Gaertner_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Gaertner_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Gaertner_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Gaertner_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Gaertner_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Gaertner_EXIT (C_INFO)

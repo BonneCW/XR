@@ -20,8 +20,8 @@ FUNC VOID Info_Mod_Caine_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Caine_Hi_09_01"); //Oh, dich wiederzusehen hätte ich nicht gedacht.
 	AI_Output(self, hero, "Info_Mod_Caine_Hi_09_02"); //Da ich jetzt der Zuständige für Tränke und Spruchrollen bin, kann ich sie dir auch verkaufen.
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_PSICAMP, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_PSICAMP, "Baal Caine kann mir Tränke und Spruchrollen verkaufen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_PSICAMP, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_PSICAMP, "Baal Caine kann mir Tränke und Spruchrollen verkaufen.");
 };
 
 INSTANCE Info_Mod_Caine_GotoTempel (C_INFO)

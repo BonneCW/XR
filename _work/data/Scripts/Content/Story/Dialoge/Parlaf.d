@@ -176,8 +176,8 @@ FUNC VOID Info_Mod_Parlaf_Hi_Info()
 	{
 		AI_Output(self, hero, "Info_Mod_Parlaf_Hi_06_02"); //Ahh, ein Novize des Innosklosters.
 		AI_Output(self, hero, "Info_Mod_Parlaf_Hi_06_03"); //Es freut mich immer, wenn ich die Streiter für das Rechtschaffende in unseren Stadtmauern willkommen heißen darf.
-		AI_Output(self, hero, "Info_Mod_Parlaf_Hi_06_04"); //Wenn man bedenkt, was sich sonst so für Gesinde seit dem Fall der Barriere hier herumtreibt ...
-		AI_Output(self, hero, "Info_Mod_Parlaf_Hi_06_05"); //Jedenfalls solltest du aufpassen, was du in der Stadt tust, da gibt es leicht ärger in letzter Zeit.
+		AI_Output(self, hero, "Info_Mod_Parlaf_Hi_06_04"); //Wenn man bedenkt, was sich sonst so für Gesindel seit dem Fall der Barriere hier herumtreibt ...
+		AI_Output(self, hero, "Info_Mod_Parlaf_Hi_06_05"); //Jedenfalls solltest du aufpassen, was du in der Stadt tust, da gibt es leicht Ärger in letzter Zeit.
 	};
 
 	Info_ClearChoices	(Info_Mod_Parlaf_Hi);
@@ -269,7 +269,7 @@ FUNC INT Info_Mod_Parlaf_Daemonisch_Condition()
 
 FUNC VOID Info_Mod_Parlaf_Daemonisch_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Parlaf_Daemonisch_06_00"); //Halt, erst den ¼ Klosterwein trinken
+	AI_Output(self, hero, "Info_Mod_Parlaf_Daemonisch_06_00"); //Halt, erst den 1/4 Klosterwein trinken
 
 	B_GiveInvItems	(self, hero, ItFo_KWine, 1);
 
@@ -289,7 +289,7 @@ FUNC VOID Info_Mod_Parlaf_Daemonisch_Info()
 		B_LogEntry	(TOPIC_MOD_DAEMONISCH, "So, vom Südtor aus rechts in den Wald gelaufen. Dich krieg ich ... Urnol.");
 	};
 
-	Npc_SetRefuseTalk (self, 60);
+	Npc_SetRefuseTalk (self, 40);
 };
 
 instance Info_Mod_Parlaf_FirstWarn (C_INFO)

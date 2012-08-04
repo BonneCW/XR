@@ -1,4 +1,4 @@
-const string TOPIC_MOD_DÄMONENBESCHWÖRER	=	"Aufnahme Schwarzer Novize";
+const string TOPIC_MOD_DAEMONENBESCHWOERER	=	"Aufnahme Schwarzer Novize";
 const string TOPIC_MOD_GIFTPFLANZEN	=	"Pflanzen für Myxir";
 const string TOPIC_MOD_GOMEZHORN	=	"Jagd mit Gomez";
 const string TOPIC_MOD_FAULERJÄGER	=	"Der faule Jäger";
@@ -33,3 +33,4 @@ const string TOPIC_MOD_BEL_PIRBRANDON	=	"Brandon auf Entzug";
 const string TOPIC_MOD_BEL_PIRMATT	=	"Tauchgang";
 const string TOPIC_MOD_BEL_PIRBILL	=	"Der verschwundene Freund";
 const string TOPIC_MOD_BEL_PIRFRANCIS	=	"Faule Bande";
+const string TOPIC_MOD_BELIAR_UNGEHEUER	=	"Ungeheuer in der Bibliothek";

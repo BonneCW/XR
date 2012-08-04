@@ -5,11 +5,11 @@ INSTANCE Erzrüstung(C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE] 	= 	100000;
-	protection [PROT_BLUNT] = 	100000;
-	protection [PROT_POINT] = 	100000;
-	protection [PROT_FIRE] 	= 	100;
-	protection [PROT_MAGIC] = 	100;
+	protection [PROT_EDGE] 	= 	80000;
+	protection [PROT_BLUNT] = 	80000;
+	protection [PROT_POINT] = 	80000;
+	protection [PROT_FIRE] 	= 	80;
+	protection [PROT_MAGIC] = 	80;
 
 	value 					=	10000;	// weil einzigartig
 
@@ -1155,12 +1155,12 @@ INSTANCE ITAR_FAKE_NOV_L (C_Item)
 
 FUNC VOID Equip_FAKE_NOV_L()
 {
-	Mod_TrägtFeuerkleidung = 1;
+	Mod_TraegtFeuerkleidung = 1;
 };
 
 FUNC VOID UnEquip_FAKE_NOV_L()
 {
-	Mod_TrägtFeuerkleidung = 0;
+	Mod_TraegtFeuerkleidung = 0;
 };
 
 INSTANCE ITAR_BDT_M_01 (C_Item)
@@ -1331,12 +1331,12 @@ INSTANCE ITAR_KDF_L_Feuer (C_Item)
 
 FUNC VOID Equip_KDF_L_Feuer()
 {
-	Mod_TrägtFeuerkleidung = 1;
+	Mod_TraegtFeuerkleidung = 1;
 };
 
 FUNC VOID UnEquip_KDF_L_Feuer()
 {
-	Mod_TrägtFeuerkleidung = 0;
+	Mod_TraegtFeuerkleidung = 0;
 };
 
 INSTANCE ITAR_NOV_DMB_01 (C_Item)
@@ -1717,12 +1717,12 @@ INSTANCE ITAR_KDF_VeryHigh (C_Item)
 
 FUNC VOID Equip_KDF_VH()
 {
-	Mod_TrägtFeuerkleidung = 1;
+	Mod_TraegtFeuerkleidung = 1;
 };
 
 FUNC VOID UnEquip_KDF_VH()
 {
-	Mod_TrägtFeuerkleidung = 0;
+	Mod_TraegtFeuerkleidung = 0;
 };
 
 INSTANCE ITAR_DruideWaldmagier (C_Item)
@@ -2542,8 +2542,8 @@ INSTANCE ItAr_GewandDerMacht (C_Item)
 
  	value 					=	3000;
 
-	visual 					=	"gurh.3ds";
-	visual_change 			=	"Hum_GURS_ARMOR.asc";
+	visual 					=	"ItAr_GewandDerMacht.3ds";
+	visual_change 			=	"Armor_GewandDerMacht.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 

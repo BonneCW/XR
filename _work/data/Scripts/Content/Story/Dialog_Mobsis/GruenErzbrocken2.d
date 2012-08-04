@@ -12,7 +12,7 @@ FUNC VOID GruenErzbrocken2_S1 ()
 			return;
 		};
 
-		self.aivar[AIV_INVINCIBLE]=TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_GruenErzbrocken2;
 		Ai_ProcessInfos (her);
 	};

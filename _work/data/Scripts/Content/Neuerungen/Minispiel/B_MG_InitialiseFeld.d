@@ -4,6 +4,12 @@
 
 FUNC VOID B_MG_InitialiseFeld()
 {
+	Print_GetScreenSize();
+
+	MG_Spielbrett = View_CreatePxl(0, 0, Print_Screen[PS_X], Print_Screen[PS_Y]);
+	View_SetTexture(MG_Spielbrett, "SPIELBRETT.TGA");
+	View_Open(MG_Spielbrett);
+
 	var int i; i = 0;
 	var int ptr; ptr = MEM_StackPos.position;
 
@@ -21,8 +27,6 @@ FUNC VOID B_MG_InitialiseFeld()
 
 	MG_Opp_Counter = 0;
 	MG_Own_Counter = 0;
-
-	Print_GetScreenSize();
 
 	var int xy; // x/y-Größe der Felder, da quadratisch
 
@@ -195,41 +199,70 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		C_MG_SPIELFIGUR_SetType(Opp_Bloodfly, MG_FIGUR_Bloodfly, 1);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 0, MyFigurHndl);
-	};
-	if (MG_CurrentOpp == MG_GEGNER_RUEDIGER)
-	{
+
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Schaf = get(MyFigurHndl);
 
 		C_MG_SPIELFIGUR_SetType(Opp_Schaf, MG_FIGUR_Schaf, 1);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 1, MyFigurHndl);
-	};
-	if (MG_CurrentOpp == MG_GEGNER_RUEDIGER)
-	{
+
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Hase = get(MyFigurHndl);
 
 		C_MG_SPIELFIGUR_SetType(Opp_Hase, MG_FIGUR_Hase, 1);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 2, MyFigurHndl);
-	};
-	if (MG_CurrentOpp == MG_GEGNER_RUEDIGER)
-	{
+
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Stoneguardian = get(MyFigurHndl);
 
 		C_MG_SPIELFIGUR_SetType(Opp_Stoneguardian, MG_FIGUR_Stoneguardian, 1);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 3, MyFigurHndl);
-	};
-	if (MG_CurrentOpp == MG_GEGNER_RUEDIGER)
-	{
+
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Troll = get(MyFigurHndl);
 
 		C_MG_SPIELFIGUR_SetType(Opp_Troll, MG_FIGUR_Troll, 1);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 4, MyFigurHndl);
+	}
+	else if (MG_CurrentOpp == MG_GEGNER_SPIELER_ORLAN)
+	{
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Bloodfly = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Bloodfly, MG_FIGUR_Bloodfly, 1);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 0, MyFigurHndl);
+
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Schaf = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Schaf, MG_FIGUR_Schaf, 1);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 1, MyFigurHndl);
+
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Hase = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Hase, MG_FIGUR_Hase, 1);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 2, MyFigurHndl);
+
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Meatbug = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Meatbug, MG_FIGUR_Meatbug, 1);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 3, MyFigurHndl);
+
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Snapper = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Snapper, MG_FIGUR_Snapper, 1);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 4, MyFigurHndl);
 	};
 };

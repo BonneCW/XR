@@ -102,6 +102,8 @@ FUNC VOID Info_Mod_Riordian_AW_SteinkreisTafel_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_STEINKREIS, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_STEINKREIS, "Riordian hat mir eine Steintafel gegeben, welche ich bei Steinkreisen verwenden soll. Mal sehen, was passiert ...");
+
+	Mod_Riordian_Geister_Tag = Wld_GetDay();
 };
 
 INSTANCE Info_Mod_Riordian_AW_SteinkreisTafelFunzt (C_INFO)
@@ -138,6 +140,94 @@ FUNC VOID Info_Mod_Riordian_AW_SteinkreisTafelFunzt_Info()
 	B_GivePlayerXP	(250);
 
 	B_LogEntry	(TOPIC_MOD_STEINKREIS, "Es hat sich herausgestellt, dass ich mit der Steintafel zwischen den Steinkreisen hin und herreisen kann.");
+};
+
+INSTANCE Info_Mod_Riordian_AW_Plagegeister (C_INFO)
+{
+	npc		= Mod_9003_KDW_Riordian_AW;
+	nr		= 1;
+	condition	= Info_Mod_Riordian_AW_Plagegeister_Condition;
+	information	= Info_Mod_Riordian_AW_Plagegeister_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Riordian_AW_Plagegeister_Condition()
+{
+	if (Mod_Riordian_Geister == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Riordian_AW_Plagegeister_Info()
+{
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister_10_00"); //Gut, dass du kommst. Hier ist die Hölle ausgebrochen.
+	AI_Output (hero, self, "Info_Mod_Riordian_AW_Plagegeister_15_01"); //Das sehe ich. Was ist geschehen?
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister_10_02"); //Nun, in letzter Zeit hatten wir sehr intensiv in den Ruinen geforscht und ihr viele Geheimnisse entlockt.
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister_10_03"); //Nur leider, nunja, waren wir wohl etwas zu unvorsichtig und haben dabei wohl einige Geister geweckt, die jetzt ruhelos und wütend hier ihr Unwesen treiben.
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister_10_04"); //Und sie scheinen sobald nicht damit aufhören zu wollen ...
+	AI_Output (hero, self, "Info_Mod_Riordian_AW_Plagegeister_15_05"); //Würden nicht vielleicht paar magische Geschosse sie wieder zur Ruhe ...
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister_10_06"); //(unterbricht) Um Adanos Willen, nein. Die Gefahr, dass wir noch mehr schlafende Mächte wecken wäre zu groß.
+	AI_Output (hero, self, "Info_Mod_Riordian_AW_Plagegeister_15_07"); //Und was können wir dann tun?
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister_10_08"); //Nun, bei meinen Forschungen bin ich zuletzt auf etwas gestoßen, das uns vielleicht helfen könnte.
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister_10_09"); //Es handelt sich dabei um eine Formel die in der Lage sein soll, ruhelose Geister zu besänftigen.
+	AI_Output (hero, self, "Info_Mod_Riordian_AW_Plagegeister_15_10"); //Wird sie funktionieren?
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister_10_11"); //Vielleicht… aber sie muss gesprochen, während an einem Altar ein Totenopfer dargebracht wird und im Anschluss zwei Zauber gewirkt werden.
+	AI_Output (hero, self, "Info_Mod_Riordian_AW_Plagegeister_15_12"); //Ein Totenopfer und Zauber?
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister_10_13"); //Bei dem Totenopfer handelt es sich vermutlich um drei Sumpfkrautpflanzen. Sie sollten den Kontakt zu den jenseitigen Sphären herstellen.
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister_10_14"); //Die Zauber wiederum sollen die Eigenschaft haben, Geschehenes vergessen zu lassen und wachen Geistern den Schlaf zu bringen.
+	AI_Output (hero, self, "Info_Mod_Riordian_AW_Plagegeister_15_15"); //Hmm ...
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister_10_16"); //Wir wissen zudem nicht genau, wo ein solcher Opferaltar zu finden ist, aber zweifelsohne wirst du in einer der alten Anlagen fündig werden.
+	AI_Output (hero, self, "Info_Mod_Riordian_AW_Plagegeister_15_17"); //Ok, ich schau mich mal um. Die Formel?
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister_10_18"); //Hier hast du sie.
+
+	B_GiveInvItems	(self, hero, ItWr_PlagegeisterFormel, 1);
+
+	AI_Output (hero, self, "Info_Mod_Riordian_AW_Plagegeister_15_19"); //Gut, ich mach mich dann mal auf den Weg.
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister_10_20"); //Viel Glück. Adanos sei mit dir.
+
+	Log_CreateTopic	(TOPIC_MOD_RIORDIAN_PLAGEGEISTER, LOG_MISSION);
+	B_SetTopicStatus	(TOPIC_MOD_RIORDIAN_PLAGEGEISTER, LOG_RUNNING);
+	B_LogEntry	(TOPIC_MOD_RIORDIAN_PLAGEGEISTER, "Die Wassermagier haben bei ihren Forschungen einige Geister verärgert, die dort nun ruhelos umherschwirren. Riordian meinte, dass man um sie wieder zu besänftigen ein Ritual an einem Opferaltar durchführen müsste. Dazu muss ich die Formel Aufsagen, 3 Sumpfkrautpflanzen opfern und 2 Zauber wirken. Die Zauber sollten die Eigenschaft haben Geschehnisse vergessen zu machen und wachen Geistern den Schlaf zu bringen.");
+};
+
+INSTANCE Info_Mod_Riordian_AW_Plagegeister2 (C_INFO)
+{
+	npc		= Mod_9003_KDW_Riordian_AW;
+	nr		= 1;
+	condition	= Info_Mod_Riordian_AW_Plagegeister2_Condition;
+	information	= Info_Mod_Riordian_AW_Plagegeister2_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Riordian_AW_Plagegeister2_Condition()
+{
+	if (Mod_Riordian_Geister == 2)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Riordian_AW_Plagegeister2_Info()
+{
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister2_10_00"); //Du hast es geschafft! Die Ruhelosen Seelen und Geister sind besänftigt.
+	AI_Output (hero, self, "Info_Mod_Riordian_AW_Plagegeister2_15_01"); //Ich hoffe ihr seid in Zukunft etwas vorsichtiger bei euren Forschungen.
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister2_10_02"); //Ja, natürlich! Dessen kannst du gewiss sein. Aber hier, nimm diese Steintafeln für deine Hilfe.
+
+	B_ShowGivenThings	("2 Steintafeln erhalten");
+
+	CreateInvItems	(hero, ItWr_DexStonePlate1_Addon, 1);
+	CreateInvItems	(hero, ItWr_HitPointStonePlate1_Addon, 1);
+
+	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister2_10_03"); //Mögen sie dir auf deinen weiteren Wegen von Nutzen sein.
+
+	B_SetTopicStatus	(TOPIC_MOD_RIORDIAN_PLAGEGEISTER, LOG_SUCCESS);
+
+	B_GivePlayerXP	(400);
+
+	CurrentNQ += 1;
 };
 
 INSTANCE Info_Mod_Riordian_AW_ScrollJG (C_INFO)
@@ -618,12 +708,12 @@ INSTANCE Info_Mod_Riordian_AW_Pickpocket (C_INFO)
 	information	= Info_Mod_Riordian_AW_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Riordian_AW_Pickpocket_Condition()
 {
-	C_Beklauen	(98, ItMi_Gold, 700);
+	C_Beklauen	(148, ItPo_Health_Addon_04, 2);
 };
 
 FUNC VOID Info_Mod_Riordian_AW_Pickpocket_Info()
@@ -641,8 +731,88 @@ FUNC VOID Info_Mod_Riordian_AW_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Riordian_AW_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Riordian_AW_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Riordian_AW_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Riordian_AW_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Riordian_AW_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Riordian_AW_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Riordian_AW_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Riordian_AW_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Riordian_AW_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Riordian_AW_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Riordian_AW_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Riordian_AW_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Riordian_AW_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Riordian_AW_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Riordian_AW_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Riordian_AW_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Riordian_AW_EXIT (C_INFO)

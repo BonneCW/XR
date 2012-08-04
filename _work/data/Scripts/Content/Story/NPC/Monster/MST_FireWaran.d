@@ -11,25 +11,25 @@ PROTOTYPE Mst_Default_FireWaran(C_Npc)
 	level							=	30;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	150;
-	attribute	[ATR_DEXTERITY]		=	20;
-	attribute	[ATR_HITPOINTS_MAX]	=	300;
-	attribute	[ATR_HITPOINTS]		=	300;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(51) + 125;
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(11) + 15;
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(101) + 250;
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_MANA] 		=	0;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	150000;
-	protection	[PROT_EDGE]			=	150000;
-	protection	[PROT_POINT]		=	150000;
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	150;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	Hlp_Random(51)*1000 + 125000;
+	protection	[PROT_EDGE]		=	Hlp_Random(51)*1000 + 125000;
+	protection	[PROT_POINT]		=	Hlp_Random(51)*1000 + 125000;
+	protection	[PROT_FIRE]		=	-1;
+	protection	[PROT_FLY]		=	150;
+	protection	[PROT_MAGIC]		=	Hlp_Random(51) + 50;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	
 	//----- Damage Types ----
-	damagetype 						=	DAM_FIRE; //Opfer fängt an zu brennen
+	damagetype 				=	DAM_FIRE; //Opfer fängt an zu brennen
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;
@@ -119,8 +119,8 @@ INSTANCE EisWaran	(Mst_Default_FireWaran)
 {
 	name	= "Eiswaran";
 
-	protection	[PROT_FIRE]			=	0;
-	damagetype 						=	DAM_MAGIC;
+	protection	[PROT_FIRE]		=	0;
+	damagetype 				=	DAM_MAGIC;
 	
 	B_SetVisuals_EisWaran();
 	Npc_SetToFistMode(self);

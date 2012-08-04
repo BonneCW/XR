@@ -41,8 +41,8 @@ instance PC_Friend_NW (Npc_Default)
 
 FUNC VOID Rtn_PreStart_1605()
 {	
-	TA_Stand_ArmsCrossed	(10,55,18,50,"NW_FARM1_PATH_CITY_05");
-	TA_Stand_ArmsCrossed	(18,50,10,55,"NW_FARM1_PATH_CITY_05");
+	TA_Stand_ArmsCrossed	(10,55,18,50,"NW_FARM1_PATH_CITY_07");
+	TA_Stand_ArmsCrossed	(18,50,10,55,"NW_FARM1_PATH_CITY_07");
 };
 
 FUNC VOID Rtn_Ruhe_1605()

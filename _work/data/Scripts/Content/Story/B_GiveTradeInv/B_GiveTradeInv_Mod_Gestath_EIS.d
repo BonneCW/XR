@@ -13,6 +13,8 @@ FUNC VOID B_GiveTradeInv_Mod_Gestath_EIS (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Arrow, 100); 
 		CreateInvItems (slf, ItRw_Bolt, 100); 
 		CreateInvItems (slf, ItRw_SchmetterArrow, 30); 
+
+		CreateInvItems	(slf, ItRu_TeleportGelato, 1);
 		
 		// ------ Waffen ------
 		CreateInvItems	(slf, ItRw_Crossbow_L_01, 1);

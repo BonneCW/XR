@@ -85,8 +85,8 @@ FUNC VOID GILDENSTORY_AL()
 			B_StartOtherRoutine	(Mod_1873_TPL_GorNaKosh_MT, "TEMPLER");
 		};
 
-		if (Npc_KnowsInfo(PC_Hero, Info_Mod_Thorus_Templer))
-		&& (Npc_GetDistToWP(PC_Hero, "OCC_CELLAR_BACK_LEFT_CELL") < 500)
+		if (Npc_KnowsInfo(hero, Info_Mod_Thorus_Templer))
+		&& (Npc_GetDistToWP(hero, "OCC_CELLAR_BACK_LEFT_CELL") < 750)
 		&& (Mod_TemplerBeiThorus == 1)
 		{
 			Wld_SendTrigger	("EVT_KERKERGATE_01");
@@ -263,8 +263,6 @@ FUNC VOID GILDENSTORY_AL()
 
 		if (AustauschDialog_Demon == 1)
 		{
-			//Print ("GEHT");
-
 			if (DemonKnight_Talk == 0)
 			{
 				AI_GotoWP	(hero, "OW_PATH_1_15");
@@ -368,25 +366,26 @@ FUNC VOID GILDENSTORY_AL()
 		};
 
 		if (Mod_GomezAngriff == 0)
-		&& (Npc_KnowsInfo(hero, Info_Mod_Gomez_MT_WasWillstDu_B))
+		&& (Npc_KnowsInfo(hero, Info_Mod_Gomez_AtAL2_B))
 		&& (Npc_GetDistToWP(hero, "OC_ROUND_20") < 1000)
 		{
 			Mod_GomezAngriff = 1;
 
-			B_Attack	(Mod_1874_HMG_Makanius_MT, Mod_7067_DMR_Gomez_MT, AR_None, 0);
-			B_Attack	(Mod_7039_PAL_Oric_MT, Mod_7067_DMR_Gomez_MT, AR_None, 0);
-			B_Attack	(Mod_1870_EBR_Alissandro_MT, Mod_7067_DMR_Gomez_MT, AR_None, 0);
+			B_Attack	(Mod_1874_HMG_Makanius_MT, Mod_517_DMR_Gomez_MT, AR_None, 0);
+			B_Attack	(Mod_7039_PAL_Oric_MT, Mod_517_DMR_Gomez_MT, AR_None, 0);
+			B_Attack	(Mod_1870_EBR_Alissandro_MT, Mod_517_DMR_Gomez_MT, AR_None, 0);
 		};
 
 		if (Mod_GomezAngriff == 1)
-		&& (C_NpcIsDown(Mod_7067_DMR_Gomez_MT))
+		&& (C_NpcIsDown(Mod_517_DMR_Gomez_MT))
 		{
 			Mod_GomezAngriff = 2;
 
 			B_StartOtherRoutine	(Mod_680_DMB_Xardas_MT, "GOMEZ");
 			AI_Teleport	(Mod_680_DMB_Xardas_MT, "OC_ROUND_20");
 
-			Wld_InsertNpc	(Mod_7068_DMR_Raven_MT, "OC_ROUND_20");
+			B_StartOtherRoutine	(Mod_520_DMR_Raven_MT, "ATAL");
+			AI_Teleport	(Mod_520_DMR_Raven_MT, "OC_ROUND_20");
 		};
 
 		// Nicht mehr questrelevante NPC's wieder verwundbar machen
@@ -477,6 +476,7 @@ FUNC VOID GILDENSTORY_AL()
 			{
 				B_LogEntry	(TOPIC_MOD_AL_KillMission, "Bartholo hat mich mit Jackal und einem Gardisten zum Kastell geschickt, er wird Verstärkung nachschicken.");
 	
+				B_StartOtherRoutine	(Mod_1106_EBR_Bartholo_MT, "BOSS");
 				B_StartOtherRoutine	(Mod_1876_EBR_Bloodwyn_MT, "GOTOBERGKASTELL");
 				B_StartOtherRoutine	(Mod_1145_GRD_Gardist_MT, "GOTOBERGKASTELL");
 				B_StartOtherRoutine	(Mod_1107_GRD_Jackal_MT, "FOLLOWTOBERGKASTELL");
@@ -488,20 +488,20 @@ FUNC VOID GILDENSTORY_AL()
 
 			Mod_AL_BloodwynBartholoGefangen_Counter += 1;
 		};
+
+		if (Npc_KnowsInfo(hero, Info_Mod_Gomez_Angebot))
+		&& (hero.attribute[ATR_HITPOINTS] <= 3)
+		{
+			B_StartOtherRoutine	(Mod_680_DMB_Xardas_MT, "ANGEBOT");
+
+			B_StartOtherRoutine	(Mod_517_DMR_Gomez_MT, "START");
+
+			AI_StartState	(Mod_517_DMR_Gomez_MT, ZS_MagicFreeze, 0, "");
+		};
 	};
 
 	if (CurrentLevel == NEWWORLD_ZEN)
 	{
-		if (Npc_KnowsInfo(hero, Info_Mod_Gomez_Angebot))
-		&& (hero.attribute[ATR_HITPOINTS] <= 3)
-		{
-			B_StartOtherRoutine	(Mod_513_DMB_Xardas_NW, "ANGEBOT");
-
-			//B_StartOtherRoutine	(Mod_517_DMR_Gomez_NW, "START");
-
-			//AI_StartState	(Mod_517_DMR_Gomez_NW, ZS_MagicFreeze, 0, "");
-		};
-
 		// Cornelius erst nach Gespräch killen
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Cornelius_AtMarkt))

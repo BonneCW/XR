@@ -19,7 +19,7 @@ FUNC INT Info_Mod_SchlaegerCanthar02_HiVorher_Condition()
 
 FUNC VOID Info_Mod_SchlaegerCanthar02_HiVorher_Info()
 {
-	AI_Output(self, hero, "Info_Mod_SchlaegerCanthar02_HiVorher_01_00"); //Hau ab!
+	AI_Output(self, hero, "Info_Mod_SchlaegerCanthar02_HiVorher_28_00"); //Hau ab!
 
 	AI_StopProcessInfos	(self);
 };
@@ -47,9 +47,9 @@ FUNC INT Info_Mod_SchlaegerCanthar02_Hi_Condition()
 FUNC VOID Info_Mod_SchlaegerCanthar02_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_SchlaegerCanthar02_Hi_15_00"); //Wie komme ich zurück nach Khorinis?
-	AI_Output(self, hero, "Info_Mod_SchlaegerCanthar02_Hi_01_01"); //Lern Schwimmen.
+	AI_Output(self, hero, "Info_Mod_SchlaegerCanthar02_Hi_28_01"); //Lern Schwimmen.
 	AI_Output(hero, self, "Info_Mod_SchlaegerCanthar02_Hi_15_02"); //Habt ihr kein Boot?
-	AI_Output(self, hero, "Info_Mod_SchlaegerCanthar02_Hi_01_03"); //Nich für dich.
+	AI_Output(self, hero, "Info_Mod_SchlaegerCanthar02_Hi_28_03"); //Nich für dich.
 };
 
 INSTANCE Info_Mod_SchlaegerCanthar02_EXIT (C_INFO)

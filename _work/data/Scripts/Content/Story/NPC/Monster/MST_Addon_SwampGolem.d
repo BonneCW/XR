@@ -11,26 +11,26 @@ PROTOTYPE Mst_Default_Addon_SwampGolem(C_Npc)
 	level							=	10;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		= 155;
-	attribute	[ATR_DEXTERITY]		= 20;
-	attribute	[ATR_HITPOINTS_MAX]	= 300;
-	attribute	[ATR_HITPOINTS]		= 300;
+	attribute	[ATR_STRENGTH]		= Hlp_Random(81) + 115;	// 115 - 195
+	attribute	[ATR_DEXTERITY]		= Hlp_Random(21) + 10;	// 10 - 30
+	attribute	[ATR_HITPOINTS_MAX]	= Hlp_Random(201) + 200;	// 200 - 400
+	attribute	[ATR_HITPOINTS]		= attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		= 0;
-	attribute	[ATR_MANA] 			= 0;
+	attribute	[ATR_MANA] 		= 0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		= 90000;
-	protection	[PROT_EDGE]			= 90000;
+	protection	[PROT_BLUNT]		= Hlp_Random(41)*1000 + 70000;	// 70 - 110
+	protection	[PROT_EDGE]		= Hlp_Random(41)*1000 + 70000;	// 70 - 110
 	protection	[PROT_POINT]		= -1;
-	protection	[PROT_FIRE]			= -1;
-	protection	[PROT_FLY]			= -1;	
+	protection	[PROT_FIRE]		= -1;
+	protection	[PROT_FLY]		= -1;	
 	protection	[PROT_MAGIC]		= -1;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	
 	//---- Damage Types ----
 	damagetype 						=	DAM_BLUNT|DAM_FLY;
-	damage		[DAM_INDEX_BLUNT]	=	154;
+	damage		[DAM_INDEX_BLUNT]	=	attribute[ATR_STRENGTH]-1;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;
 //	damage		[DAM_INDEX_FIRE]	=	0;
@@ -251,11 +251,8 @@ INSTANCE SwampGolem_Valley	(Mst_Default_Addon_SwampGolem)
 	aivar[AIV_MaxDistToWp]			= 1500;
 	aivar[AIV_OriginalFightTactic] 	= FAI_STONEGOLEM;
 
-	protection	[PROT_BLUNT]		= 75000;
-	protection	[PROT_EDGE]			= 75000;
-	protection	[PROT_FIRE]			= -1;
-	protection	[PROT_FLY]			= -1;	
-	protection	[PROT_MAGIC]		= -1;
+	protection	[PROT_BLUNT]		= Hlp_Random(51)*1000 + 50000;	// 50 - 100
+	protection	[PROT_EDGE]		= Hlp_Random(51)*1000 + 50000;	// 50 - 100
 };
 
 INSTANCE SwampGolem_GigantDerVorzeit	(Mst_Default_Addon_SwampGolem)
@@ -263,11 +260,8 @@ INSTANCE SwampGolem_GigantDerVorzeit	(Mst_Default_Addon_SwampGolem)
 	B_SetVisuals_Swampgolem();
 	Npc_SetToFistMode	(self);
 
-	protection	[PROT_BLUNT]		= 75000;
-	protection	[PROT_EDGE]			= 75000;
-	protection	[PROT_FIRE]			= -1;
-	protection	[PROT_FLY]			= -1;	
-	protection	[PROT_MAGIC]		= -1;
+	protection	[PROT_BLUNT]		= Hlp_Random(51)*1000 + 50000;	// 50 - 100
+	protection	[PROT_EDGE]		= Hlp_Random(51)*1000 + 50000;	// 50 - 100
 };
 
 INSTANCE Wurzelzwerg	(Mst_Default_Addon_SwampGolem)
@@ -284,14 +278,14 @@ INSTANCE Wurzelzwerg	(Mst_Default_Addon_SwampGolem)
 	attribute	[ATR_HITPOINTS_MAX]	= 100;
 	attribute	[ATR_HITPOINTS]		= 100;
 	attribute	[ATR_MANA_MAX] 		= 0;
-	attribute	[ATR_MANA] 			= 0;
+	attribute	[ATR_MANA] 		= 0;
 	
 	//----- Protections ----
 	protection	[PROT_BLUNT]		= 40000;
-	protection	[PROT_EDGE]			= 40000;
+	protection	[PROT_EDGE]		= 40000;
 	protection	[PROT_POINT]		= 40000;
-	protection	[PROT_FIRE]			= 40;
-	protection	[PROT_FLY]			= 40;	
+	protection	[PROT_FIRE]		= 40;
+	protection	[PROT_FLY]		= 40;	
 	protection	[PROT_MAGIC]		= 40;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
@@ -301,8 +295,6 @@ INSTANCE Wurzelzwerg	(Mst_Default_Addon_SwampGolem)
 	//---- Damage Types ----
 	damagetype 						=	DAM_BLUNT;
 };
-
-
 
 INSTANCE Summoned_SwampGolem (Mst_Default_Addon_SwampGolem)
 {
@@ -318,21 +310,6 @@ INSTANCE Summoned_SwampGolem (Mst_Default_Addon_SwampGolem)
 	
 	B_SetVisuals_Swampgolem();
 	Npc_SetToFistMode	(self);
-
-	attribute	[ATR_STRENGTH]		=	125;
-	attribute	[ATR_DEXTERITY]		=	125;
-	attribute	[ATR_HITPOINTS_MAX]	=	250;
-	attribute	[ATR_HITPOINTS]		=	250;
-	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 			=	100;
-	
-	//----- Protections ----
-	protection	[PROT_BLUNT]		=	50000;
-	protection	[PROT_EDGE]			=	100000;
-	protection	[PROT_POINT]		=	150000;
-	protection	[PROT_FIRE]			=	100;
-	protection	[PROT_FLY]			=	100;	
-	protection	[PROT_MAGIC]		=	100;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 };

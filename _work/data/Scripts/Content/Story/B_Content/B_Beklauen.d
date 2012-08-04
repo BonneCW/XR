@@ -1,4 +1,4 @@
-func int C_Beklauen (var int TheftDex, var int TheftItem, var int TheftGold)
+FUNC INT C_Beklauen (var int TheftDex, var int TheftItem, var int TheftGold)
 {
 	var int bonusdex;
 	bonusdex = 0;
@@ -8,55 +8,26 @@ func int C_Beklauen (var int TheftDex, var int TheftItem, var int TheftGold)
 		bonusdex = 25;
 	};
 
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == TRUE) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (other.attribute[ATR_DEXTERITY]+bonusdex >= (TheftDex - Theftdiff))
+	if (Npc_GetTalentSkill(other, NPC_TALENT_PICKPOCKET) == TRUE) 
+	//&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
+	//&& (other.attribute[ATR_DEXTERITY]+bonusdex >= (TheftDex - Theftdiff))
 	{
 		if (Npc_IsInState (self, ZS_Talk))
 		{
-			if (TheftDex <= 20)
-			{
-				TheftDexGlob = 10; //"Kinderspiel" klappt immer
-			}
-			else
-			{
-				TheftDexGlob = TheftDex;
-			};
+			TheftDexGlob = 10; //"Kinderspiel" klappt immer
 
 			TheftItemGlob = TheftItem;
 
 			TheftGoldGlob = TheftGold;
 		};
-		return TRUE;
-	}
-	else if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_751_NONE_Salandril_NW))
-	&& (TheftGold == ItPo_Perm_DEX_Salandril)
-	&& (Npc_HasItems(hero, ItPo_Perm_DEX_Salandril) == 0)
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Gaertner_HierTrank))
-	{
-		if (Npc_IsInState (self, ZS_Talk))
-		{
-			if (TheftDex <= 20)
-			{
-				TheftDexGlob = 10; //"Kinderspiel" klappt immer
-			}
-			else
-			{
-				TheftDexGlob = TheftDex;
-			};
 
-			TheftItemGlob = TheftItem;
-
-			TheftGoldGlob = TheftGold;
-		};
 		return TRUE;
 	};
 
-};
-
-var int RealAmount;	
+	return FALSE;
+};	
 	
-func void B_Beklauen ()
+FUNC INT B_Beklauen ()
 {	
 	var int bonusdex;
 	bonusdex = 0;
@@ -66,30 +37,33 @@ func void B_Beklauen ()
 		bonusdex = 25;
 	};
 
-	if (other.attribute[ATR_DEXTERITY]+bonusdex >= TheftDexGlob)
+	bonusdex += 10 - r_max(20);
+
+	if (other.attribute[ATR_DEXTERITY]+bonusdex >= TheftDexGlob) // Diebstahl gelingt
 	{
-		RealAmount = Hlp_Random(TheftGoldGlob)+((hero.attribute[ATR_DEXTERITY]+bonusdex-TheftDexGlob)*(1+(TheftDexGlob%20)));
-
-		if (RealAmount > TheftGoldGlob)
-		{
-			RealAmount = TheftGoldGlob;
-		};
-
-		TheftGoldGlob = RealAmount;
-
 		B_GiveInvItems (self, other, TheftItemGlob, TheftGoldGlob);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
+
+		//self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
+
 		B_GiveThiefXP();//B_GivePlayerXP (XP_Ambient);
+
 		Snd_Play ("Geldbeutel");
 
 		B_Göttergefallen(3, 1);
 
 		Mod_CountTaschendiebstahl += 1;
+
+		return TRUE;
 	}
 	else
 	{
 		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
+
+		var oCInfo inf;
+		//inf = MEM_InformationMan.Info;
+		inf = MEM_PtrToInst(MEM_InformationMan.Info);
+		inf.told = FALSE;
+
+		return FALSE;
 	};
 };	

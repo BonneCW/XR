@@ -193,6 +193,35 @@ FUNC VOID Info_Mod_Erika_Kissen_Info()
 	AI_Output(hero, self, "Info_Mod_Erika_Kissen_15_07"); //Danke trotzdem.
 };
 
+INSTANCE Info_Mod_Erika_Kimon (C_INFO)
+{
+	npc		= Mod_7381_OUT_Erika_REL;
+	nr		= 1;
+	condition	= Info_Mod_Erika_Kimon_Condition;
+	information	= Info_Mod_Erika_Kimon_Info;
+	permanent	= 0;
+	important	= 0;
+	description 	= "Gute Frau, kannst du mir Freude spenden?";
+};                       
+
+FUNC INT Info_Mod_Erika_Kimon_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Erika_Hi))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Penner_Kimon))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Morpheus_Kimon))
+	{
+		return TRUE;
+	};
+};
+
+FUNC VOID Info_Mod_Erika_Kimon_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Erika_Kimon_15_00"); //Gute Frau, kannst du mir Freude spenden?
+	AI_Output(self, hero, "Info_Mod_Erika_Kimon_16_01"); //Mach dich fort, du Schwein! Ich bin eine ehrbare Frau.
+	AI_Output(hero, self, "Info_Mod_Erika_Kimon_15_02"); //Da habe ich mich wohl falsch ausgedrückt. Ich suche Freudenspender.
+	AI_Output(self, hero, "Info_Mod_Erika_Kimon_16_03"); //Nicht bei mir, du Lümmel.
+};
+
 INSTANCE Info_Mod_Erika_WendelS (C_INFO)
 {
 	npc		= Mod_7381_OUT_Erika_REL;
@@ -289,7 +318,7 @@ INSTANCE Info_Mod_Erika_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Erika_Pickpocket_Condition()
 {
-	C_Beklauen	(53, ItMi_Gold, 550);
+	C_Beklauen	(53, ItMi_Gold, 250);
 };
 
 FUNC VOID Info_Mod_Erika_Pickpocket_Info()
@@ -307,8 +336,88 @@ FUNC VOID Info_Mod_Erika_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Erika_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Erika_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Erika_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Erika_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Erika_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Erika_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Erika_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Erika_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Erika_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Erika_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Erika_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Erika_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Erika_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Erika_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Erika_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Erika_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Erika_EXIT (C_INFO)

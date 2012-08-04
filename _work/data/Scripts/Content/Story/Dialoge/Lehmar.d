@@ -154,7 +154,7 @@ INSTANCE Info_Mod_Lehmar_Leihen (C_INFO)
 FUNC INT Info_Mod_Lehmar_Leihen_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Lehmar_Hi))
-	&& (Mod_Geliehen	==	FALSE)
+	&& (Mod_Geliehen == FALSE)
 	{
 		return 1;
 	};
@@ -186,23 +186,21 @@ FUNC VOID Info_Mod_Lehmar_Leihen_1000()
 		AI_Output(self, hero, "Info_Mod_Lehmar_Leihen_1000_09_00"); //TAUSEND GOLDMÜNZEN!!!
 		AI_Output(self, hero, "Info_Mod_Lehmar_Leihen_1000_09_01"); //Ich werde dir 200 Goldmünzen geben, mehr nicht. Und vergiss nicht es zurückzuzahlen.
 	
-		CreateInvItems	(self, ItMi_Gold, 200);
 		B_GiveInvItems	(self, hero, ItMi_Gold, 200);
 
-		Mod_LeihBetrag	=	220;
+		Mod_LeihBetrag = 220;
 	}
 	else
 	{
 		AI_Output(self, hero, "Info_Mod_Lehmar_Leihen_1000_09_02"); //Das ist verdammt viel Gold. Aber du mir mein Gold bisher immer wieder zurückgebracht, deshalb werde ich dir das Gold geben.
 		AI_Output(self, hero, "Info_Mod_Lehmar_Leihen_1000_09_03"); //Hier hast du 1000 Goldmünzen. Und vergiss nicht es zurückzuzahlen.
 	
-		CreateInvItems	(self, ItMi_Gold, 1000);
 		B_GiveInvItems	(self, hero, ItMi_Gold, 1000);
 
-		Mod_LeihBetrag	=	1100;
+		Mod_LeihBetrag = 1100;
 	};
 
-	Mod_Geliehen	=	TRUE;
+	Mod_Geliehen = TRUE;
 	Mod_HatGoldGeliehen += 1;
 
 	Info_ClearChoices	(Info_Mod_Lehmar_Leihen);
@@ -213,11 +211,10 @@ FUNC VOID Info_Mod_Lehmar_Leihen_500()
 	AI_Output(self, hero, "Info_Mod_Lehmar_Leihen_500_09_00"); //500 Goldmünzen. Ich glaube kaum das du das jemals zurückzahlen kannst, aber ich gebe dir das Geld.
 	AI_Output(self, hero, "Info_Mod_Lehmar_Leihen_500_09_01"); //Und vergiss nicht es zurückzuzahlen.
 
-	CreateInvItems	(self, ItMi_Gold, 500);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 
-	Mod_LeihBetrag	=	550;
-	Mod_Geliehen	=	TRUE;
+	Mod_LeihBetrag = 550;
+	Mod_Geliehen = TRUE;
 	Mod_HatGoldGeliehen += 1;
 
 	Info_ClearChoices	(Info_Mod_Lehmar_Leihen);
@@ -226,12 +223,11 @@ FUNC VOID Info_Mod_Lehmar_Leihen_500()
 FUNC VOID Info_Mod_Lehmar_Leihen_200()
 {
 	AI_Output(self, hero, "Info_Mod_Lehmar_Leihen_200_09_00"); //200 Goldmünzen sind nicht viel. Und vergiss nicht es zurückzuzahlen.
-	
-	CreateInvItems	(self, ItMi_Gold, 200);
+
 	B_GiveInvItems	(self, hero, ItMi_Gold, 200);
 	
-	Mod_LeihBetrag	=	220;
-	Mod_Geliehen	=	TRUE;
+	Mod_LeihBetrag = 220;
+	Mod_Geliehen = TRUE;
 	Mod_HatGoldGeliehen += 1;
 
 	Info_ClearChoices	(Info_Mod_Lehmar_Leihen);
@@ -241,11 +237,10 @@ FUNC VOID Info_Mod_Lehmar_Leihen_100()
 {
 	AI_Output(self, hero, "Info_Mod_Lehmar_Leihen_100_09_00"); //100 Goldmünzen sind nicht grad viel. Vergiss nicht es zurückzuzahlen.
 
-	CreateInvItems	(self, ItMi_Gold, 100);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 100);
 
-	Mod_LeihBetrag	=	110;
-	Mod_Geliehen	=	TRUE;
+	Mod_LeihBetrag = 110;
+	Mod_Geliehen = TRUE;
 	Mod_HatGoldGeliehen += 1;
 
 	Info_ClearChoices	(Info_Mod_Lehmar_Leihen);
@@ -319,7 +314,7 @@ FUNC VOID Info_Mod_Lehmar_Zurueckzahlen_Ja()
 
 	AI_Output(self, hero, "Info_Mod_Lehmar_Zurueckzahlen_Ja_09_01"); //Gut, wenn du wieder Gold brauchst, dann komm zu mir.
 
-	Mod_Geliehen	=	FALSE;
+	Mod_Geliehen = FALSE;
 
 	Mod_Leihbetrag = 0;
 
@@ -334,12 +329,12 @@ INSTANCE Info_Mod_Lehmar_Pickpocket (C_INFO)
 	information	= Info_Mod_Lehmar_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_210;
 };
 
 FUNC INT Info_Mod_Lehmar_Pickpocket_Condition()
 {
-	C_Beklauen	(51, ItMi_Gold, 200);
+	C_Beklauen	(200, ItMi_Gold, 10000);
 };
 
 FUNC VOID Info_Mod_Lehmar_Pickpocket_Info()
@@ -357,8 +352,88 @@ FUNC VOID Info_Mod_Lehmar_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Lehmar_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Lehmar_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Lehmar_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Lehmar_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Lehmar_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Lehmar_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Lehmar_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Lehmar_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Lehmar_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Lehmar_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Lehmar_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Lehmar_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Lehmar_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Lehmar_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Lehmar_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Lehmar_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Lehmar_EXIT (C_INFO)

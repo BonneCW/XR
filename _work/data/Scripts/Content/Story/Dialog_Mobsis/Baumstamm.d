@@ -2,10 +2,10 @@ FUNC VOID Baumstamm_S1 ()
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
-	if  (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))
+	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	{	
-		self.aivar[AIV_INVINCIBLE]=TRUE;
-		PLAYER_MOBSI_PRODUCTION	=	MOBSI_Baumstamm;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
+		PLAYER_MOBSI_PRODUCTION = MOBSI_Baumstamm;
 		Ai_ProcessInfos (her);
 	};
 };
@@ -23,7 +23,7 @@ INSTANCE PC_Baumstamm_CoragonStuhl (C_INFO)
 
 FUNC INT PC_Baumstamm_CoragonStuhl_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Baumstamm)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Baumstamm)
 	&& (Mod_LehrlingBei == 2)
 	&& (Npc_HasItems(hero, ItWr_Zeichnung_Stuhl) == 1)
 	{
@@ -62,7 +62,7 @@ INSTANCE PC_Baumstamm_MatteoFesttisch (C_INFO)
 
 FUNC INT PC_Baumstamm_MatteoFesttisch_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Baumstamm)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Baumstamm)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Thorben_LehrlingQuest3))
 	&& (Npc_HasItems(hero, ItWr_Zeichnung_Tisch) == 1)
 	{
@@ -101,7 +101,7 @@ INSTANCE PC_Baumstamm_Schmuckkasten (C_INFO)
 
 FUNC INT PC_Baumstamm_Schmuckkasten_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Baumstamm)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Baumstamm)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Brahim_ThorbenLehrling4))
 	&& (Npc_HasItems(hero, ItWr_Zeichnung_Schmuckkasten) == 1)
 	{
@@ -142,7 +142,7 @@ INSTANCE PC_Baumstamm_Bierkrug (C_INFO)
 
 FUNC INT PC_Baumstamm_Bierkrug_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Baumstamm)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Baumstamm)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Brahim_ThorbenLehrling4))
 	&& (Npc_HasItems(hero, ItWr_Zeichnung_Bierkrug) == 1)
 	{
@@ -183,7 +183,7 @@ INSTANCE PC_Baumstamm_Karte (C_INFO)
 
 FUNC INT PC_Baumstamm_Karte_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Baumstamm)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Baumstamm)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Brahim_ThorbenLehrling4))
 	&& (Npc_HasItems(hero, ItWr_Zeichnung_Karte) == 1)
 	{
@@ -224,8 +224,8 @@ INSTANCE PC_Baumstamm_SchwererAst (C_INFO)
 
 FUNC INT PC_Baumstamm_SchwererAst_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Baumstamm)
-	&& (Sägen == FALSE)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Baumstamm)
+	&& (Saegen == FALSE)
 	{
 		return 1;
 	};
@@ -257,8 +257,8 @@ INSTANCE PC_Baumstamm_Pfeile (C_INFO)
 
 FUNC INT PC_Baumstamm_Pfeile_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Baumstamm)
-	&& (Sägen	== FALSE)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Baumstamm)
+	&& (Saegen == FALSE)
 	&& (Mod_PfeileSchnitzen	== 1)
 	{
 		return 1;
@@ -291,8 +291,8 @@ INSTANCE PC_Baumstamm_Drachenbogen (C_INFO)
 
 FUNC INT PC_Baumstamm_Drachenbogen_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Baumstamm)
-	&& (Sägen	== FALSE)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Baumstamm)
+	&& (Saegen == FALSE)
 	&& (Pfeil_GoldErz == 2)
 	&& (Npc_HasItems(hero, ItMi_Ast) >= 1)
 	&& (Npc_HasItems(hero, ItAt_DragonSehne) >= 2)
@@ -324,8 +324,8 @@ INSTANCE PC_Baumstamm_Drachenarmbrust (C_INFO)
 
 FUNC INT PC_Baumstamm_Drachenarmbrust_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_Baumstamm)
-	&& (Sägen	== FALSE)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Baumstamm)
+	&& (Saegen == FALSE)
 	&& (Pfeil_GoldErz == 2)
 	&& (Npc_HasItems(hero, ItMi_Ast) >= 1)
 	&& (Npc_HasItems(hero, ItAt_DragonSehne) >= 2)
@@ -358,7 +358,7 @@ INSTANCE PC_Baumstamm_Snapperbogen (C_INFO)
 FUNC INT PC_Baumstamm_Snapperbogen_Condition()
 {
 	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Baumstamm)
-	&& (Sägen == FALSE)
+	&& (Saegen == FALSE)
 	&& (Snapperbogen)
 	&& (Npc_HasItems(hero, ItMi_Ast) >= 3)
 	&& (Npc_HasItems(hero, ItAt_Drachensnappersehne) >= 1)
@@ -394,8 +394,8 @@ INSTANCE PC_Baumstamm_EXIT (C_INFO)
 
 FUNC INT PC_Baumstamm_EXIT_Condition()
 {
-	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Baumstamm)
-	&& (Sägen	==	FALSE)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Baumstamm)
+	&& (Saegen == FALSE)
 	{
 		return 1;
 	};

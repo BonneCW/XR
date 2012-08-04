@@ -13,20 +13,20 @@ prototype Mst_Addon_Stoneguardian	(C_NPC)
 	bodyStateInterruptableOverride  = TRUE;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	200; 
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(101) + 150;	// 150 - 250
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21);		// 0 - 20
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(201) + 300;	// 300 - 500
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_MANA] 		=	0;
 
 	//----- Protection ----
-	protection	[PROT_BLUNT]		= 40000;
-	protection	[PROT_EDGE]			= 150000;
-	protection	[PROT_POINT]		= 150000; 
-	protection	[PROT_FIRE]			= 150;
-	protection	[PROT_FLY]			= 150;
-	protection	[PROT_MAGIC]		= 110;	
+	protection	[PROT_BLUNT]		= Hlp_Random(61)*1000 + 20000;		// 20 - 80
+	protection	[PROT_EDGE]		= Hlp_Random(101)*1000 + 100000;	// 100 - 200
+	protection	[PROT_POINT]		= Hlp_Random(101)*1000 + 100000; 	// 100 - 200
+	protection	[PROT_FIRE]		= Hlp_Random(101) + 100;		// 100 - 200
+	protection	[PROT_FLY]		= 150;
+	protection	[PROT_MAGIC]		= Hlp_Random(61) + 80;			// 80 - 140
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 		
@@ -86,19 +86,6 @@ INSTANCE Summoned_Guardian	(Mst_Addon_Stoneguardian)
 	guild							= GIL_SUMMONEDGuardian;
 	aivar[AIV_MM_REAL_ID]			= ID_SUMMONEDGuardian;
 	level							=	0;	//30
-
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	100; //+50 Waffe
-	attribute	[ATR_DEXTERITY]		=	150;
-	attribute	[ATR_HITPOINTS_MAX]	=	150;
-	attribute	[ATR_HITPOINTS]		=	150;
-
-	//----- Protection ----
-	protection	[PROT_BLUNT]		=	75000;
-	protection	[PROT_EDGE]			=	125000;
-	protection	[PROT_POINT]		=	175000; 
-	protection	[PROT_FIRE]			=	125;
-	protection	[PROT_FLY]			=	125;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 		
@@ -164,7 +151,7 @@ INSTANCE Stoneguardian_Giant	(Mst_Addon_Stoneguardian)
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protection ----
-	protection	[PROT_BLUNT]		= 60000;
+	protection	[PROT_BLUNT]		= 80000;
 	protection	[PROT_EDGE]			= 180000;
 	protection	[PROT_POINT]		= 180000; 
 	protection	[PROT_FIRE]			= 180;

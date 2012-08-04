@@ -118,6 +118,8 @@ func void TA_Transform_Wolf			(var int start_h, var int start_m, var int stop_h,
 func void TA_Teach_Andre			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Teach_Andre,				waypoint);};
 func void TA_Swim			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Swim,				waypoint);};
 func void TA_Smalltalk_Dragon			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Smalltalk_Dragon,				waypoint);};
+func void TA_Smalltalk_Sumpfmensch01			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Smalltalk_Sumpfmensch01,				waypoint);};
+func void TA_Smalltalk_Sumpfmensch02			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Smalltalk_Sumpfmensch02,				waypoint);};
 func void TA_Announce_Richter_Anna			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Announce_Richter_Anna,				waypoint);};
 func void TA_Watch_ArenaFight			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Watch_ArenaFight,				waypoint);};
 func void TA_Transform_Ratte			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Transform_Ratte,				waypoint);};
@@ -147,6 +149,9 @@ func void TA_Practice_Bow			(var int start_h, var int start_m, var int stop_h, v
 func void TA_Stand_Torch			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Stand_Torch,				waypoint);};
 func void TA_Eremit_Kichern			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Eremit_Kichern,				waypoint);};
 func void TA_Holzspalten			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Holzspalten,				waypoint);};
+func void TA_Schatzsuche			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Schatzsuche,				waypoint);};
+func void TA_Make_Rune			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Make_Rune,				waypoint);};
+func void TA_Preach_Hyglas			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Preach_Hyglas,				waypoint);};
 
 // Ork-TA's
 

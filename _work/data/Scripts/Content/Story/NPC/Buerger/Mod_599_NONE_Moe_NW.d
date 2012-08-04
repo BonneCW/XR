@@ -4,7 +4,7 @@ instance Mod_599_NONE_Moe_NW (Npc_Default)
 	name 		= "Moe"; 
 	guild 		= GIL_NONE;
 	id 			= 599;
-	voice 		= 1;
+	voice 		= 29;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

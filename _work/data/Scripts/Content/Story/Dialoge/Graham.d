@@ -48,8 +48,8 @@ FUNC VOID Info_Mod_Graham_Haendler_Info()
 	AI_Output(hero, self, "Info_Mod_Graham_Haendler_15_00"); //Verkaufst du immer noch Karten?
 	AI_Output(self, hero, "Info_Mod_Graham_Haendler_02_01"); //Klar. Ich fertige zwar keine mehr an, aber ich hab noch ein Restangebot. Kannst sie dir ja mal anschauen.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_OLDCAMP, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_OLDCAMP, "Graham verkauft Karten.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_OLDCAMP, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_OLDCAMP, "Graham verkauft Karten.");
 };
 
 INSTANCE Info_Mod_Graham_WasGibts (C_INFO)
@@ -80,6 +80,42 @@ FUNC VOID Info_Mod_Graham_WasGibts_Info()
 	AI_Output(self, hero, "Info_Mod_Graham_WasGibts_02_04"); //Alles sehr mysteriös. Im Lager brach jedenfalls die Hölle los und es herrschte die reinste Anarchie, bis Thorus für Ruhe sorgen konnte.
 	AI_Output(self, hero, "Info_Mod_Graham_WasGibts_02_05"); //Mittlerweile hat sich alles wieder etwas beruhigt. Etwas zu sehr, wenn du mich fragst. Ohne die Mine gibt es für uns den lieben langen Tag nichts zu tun.
 	AI_Output(self, hero, "Info_Mod_Graham_WasGibts_02_06"); //Die meisten wissen sich nur mit Alkohol, Sumpfkrautstängeln oder den Kämpfen in der Arena abzulenken.
+};
+
+INSTANCE Info_Mod_Graham_Lagermusik (C_INFO)
+{
+	npc		= Mod_1469_BUD_Graham_MT;
+	nr		= 1;
+	condition	= Info_Mod_Graham_Lagermusik_Condition;
+	information	= Info_Mod_Graham_Lagermusik_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Kannst du ein Instrument spielen?";
+};
+
+FUNC INT Info_Mod_Graham_Lagermusik_Condition()
+{
+	if (Mod_Gravo_Schatz == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Graham_Lagermusik_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Graham_Lagermusik_15_00"); //Kannst du ein Instrument spielen?
+	AI_Output(self, hero, "Info_Mod_Graham_Lagermusik_02_01"); //Na ja, ich bin kein Virtuose oder so... aber ein bisschen kann ich auf der Laute klimpern.
+	AI_Output(hero, self, "Info_Mod_Graham_Lagermusik_15_02"); //Gravo sucht Mitglieder für seine Gruppe. Du solltest dich mal bei ihm melden.
+	AI_Output(self, hero, "Info_Mod_Graham_Lagermusik_02_03"); //Eigentlich gern. Aber warum ausgerechnet bei Gravo?
+	AI_Output(hero, self, "Info_Mod_Graham_Lagermusik_15_04"); //Er beißt schon nicht.
+	AI_Output(self, hero, "Info_Mod_Graham_Lagermusik_02_05"); //Nicht, solange er sich an seine gute Erziehung erinnert...
+	AI_Output(self, hero, "Info_Mod_Graham_Lagermusik_02_06"); //Na gut, ich werd mal schauen, ob das was für mich ist.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "ATGRAVO");
+
+	B_GivePlayerXP	(50);
 };
 
 INSTANCE Info_Mod_Graham_Trade (C_INFO)
@@ -117,12 +153,12 @@ INSTANCE Info_Mod_Graham_Pickpocket (C_INFO)
 	information	= Info_Mod_Graham_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_Graham_Pickpocket_Condition()
 {
-	C_Beklauen	(20, ItMi_Gold, 88);
+	C_Beklauen	(30, ItMi_Gold, 88);
 };
 
 FUNC VOID Info_Mod_Graham_Pickpocket_Info()
@@ -140,8 +176,88 @@ FUNC VOID Info_Mod_Graham_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Graham_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Graham_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Graham_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Graham_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Graham_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Graham_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Graham_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Graham_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Graham_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Graham_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Graham_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Graham_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Graham_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Graham_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Graham_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Graham_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Graham_EXIT (C_INFO)

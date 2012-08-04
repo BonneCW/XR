@@ -141,7 +141,7 @@ FUNC VOID Info_Mod_Valentine_WoValentino_G()
 
 	Mod_Moe_Valentino = 1;
 
-	B_LogEntry	(TOPIC_MOD_MOE_VALENTINO, "Valentino wird auf dem Plateau in der Nähe von Jacks Leuchtturm festgehalten. Da werde ich ihn wohl irgendwie 'rausholen müssen.");
+	B_LogEntry	(TOPIC_MOD_MOE_VALENTINO, "Valentino wird auf dem Plateau in der Nähe von Jacks Leuchtturm festgehalten. Da werde ich ihn wohl irgendwie rausholen müssen.");
 
 	// Pfad zum Leuchtturm
 
@@ -191,7 +191,7 @@ FUNC VOID Info_Mod_Valentine_WoValentino_I()
 
 	Mod_Moe_Valentino = 1;
 
-	B_LogEntry	(TOPIC_MOD_MOE_VALENTINO, "Valentino wird auf dem Plateau in der Nähe von Jacks Leuchtturm festgehalten. Da werde ich ihn wohl irgendwie 'rausholen müssen.");
+	B_LogEntry	(TOPIC_MOD_MOE_VALENTINO, "Valentino wird auf dem Plateau in der Nähe von Jacks Leuchtturm festgehalten. Da werde ich ihn wohl irgendwie rausholen müssen.");
 
 	// Pfad zum Leuchtturm
 
@@ -219,7 +219,7 @@ FUNC VOID Info_Mod_Valentine_WoValentino_I()
 FUNC VOID Info_Mod_Valentine_WoValentino_H()
 {
 	AI_Output(hero, self, "Info_Mod_Valentine_WoValentino_H_15_00"); //Das findest du nicht zu gefährlich?
-	AI_Output(self, hero, "Info_Mod_Valentine_WoValentino_H_16_01"); //Ich habe schon einen Plan ... Folge mir, ich führe dich zu dem Lager der Entführer.
+	AI_Output(self, hero, "Info_Mod_Valentine_WoValentino_H_16_01"); //Ich habe schon einen Plan ... Folge mir, ich bringe dich zu dem Lager der Entführer.
 
 	Info_ClearChoices	(Info_Mod_Valentine_WoValentino);
 
@@ -303,7 +303,7 @@ FUNC VOID Info_Mod_Valentine_FirstStop_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Valentine_FirstStop_16_00"); //(flüsternd) Dort vorn sind schon die ersten beiden dieser Verbrecherbande.
 	AI_Output(self, hero, "Info_Mod_Valentine_FirstStop_16_01"); //Scheinen mir aber noch Neulinge zu sein, sie sehen nicht gerade wie ernste Gegner aus.
-	AI_Output(self, hero, "Info_Mod_Valentine_FirstStop_16_02"); //Ich denke, du kannst sie ohne weiteres ausschalten. Pass nur auf, dass sie keine Verstärkung holen.
+	AI_Output(self, hero, "Info_Mod_Valentine_FirstStop_16_02"); //Ich denke, du kannst sie ohne Weiteres ausschalten. Pass nur auf, dass sie keine Verstärkung holen.
 
 	AI_StopProcessInfos	(self);
 
@@ -363,9 +363,9 @@ FUNC VOID Info_Mod_Valentine_SecondStop_Info()
 	AI_Output(self, hero, "Info_Mod_Valentine_SecondStop_16_00"); //(die ganze Zeit über flüsternd) Psst! Da vorn sind sie.
 	AI_Output(self, hero, "Info_Mod_Valentine_SecondStop_16_01"); //Jetzt zu meinem Plan: Du bleibst genau hier stehen und ich schleiche mich an das Lager heran und spioniere die Bewacher aus.
 	AI_Output(self, hero, "Info_Mod_Valentine_SecondStop_16_02"); //Vielleicht kann man sie irgendwie voneinander trennen oder sich an ihnen vorbei schleichen.
-	AI_Output(hero, self, "Info_Mod_Valentine_SecondStop_15_03"); //(ebenfalls immer flüsternd) Wieso soll ich das nicht machen?
+	AI_Output(hero, self, "Info_Mod_Valentine_SecondStop_15_03"); //(ebenfalls immer flüsternd) Wieso soll nicht ich das machen?
 	AI_Output(self, hero, "Info_Mod_Valentine_SecondStop_16_04"); //Weil sie dich suchen und mich nicht. Wenn ich entdeckt werde, kann ich immer noch unschuldig tun.
-	AI_Output(self, hero, "Info_Mod_Valentine_SecondStop_16_05"); //Aber am besten wäre es wohl, du sagst mir, was ich tun soll. Ich selbst habe nämlich von solchen Unternehmungen noch nicht viel Ahnung.
+	AI_Output(self, hero, "Info_Mod_Valentine_SecondStop_16_05"); //Aber am besten wäre es wohl, du sagst mir, was ich tun soll. Das ist meine erste Unternehmung dieser Art!
 
 	AI_StopProcessInfos	(self);
 
@@ -437,7 +437,7 @@ INSTANCE Info_Mod_Valentine_Spy02 (C_INFO)
 	information	= Info_Mod_Valentine_Spy02_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Kundschafte das Lager nochmal aus und achte auf besondere Eigenschaften.";
+	description	= "Kundschafte das Lager noch mal aus und achte auf besondere Eigenschaften.";
 };
 
 FUNC INT Info_Mod_Valentine_Spy02_Condition()
@@ -450,7 +450,7 @@ FUNC INT Info_Mod_Valentine_Spy02_Condition()
 
 FUNC VOID Info_Mod_Valentine_Spy02_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Valentine_Spy02_15_00"); //Kundschafte das Lager nochmal aus und achte auf besondere Eigenschaften der Wächter.
+	AI_Output(hero, self, "Info_Mod_Valentine_Spy02_15_00"); //Kundschafte das Lager noch mal aus und achte auf besondere Eigenschaften der Wächter.
 
 	AI_SetWalkMode	(self, NPC_SNEAK);
 
@@ -482,15 +482,15 @@ FUNC VOID Info_Mod_Valentine_Spy02_Fertig_Info()
 {
 	if (!Npc_IsDead(Mod_7032_OUT_Entfuehrer_NW))
 	{
-		AI_Output(self, hero, "Info_Mod_Valentine_Spy02_Fertig_16_00"); //Einer der Wächter bleibt immer auf der Stelle stehen und betrinkt sich.
+		AI_Output(self, hero, "Info_Mod_Valentine_Spy02_Fertig_16_00"); //Einer der Wächter bleibt immer auf der Stelle stehen und trinkt unablässig Bier.
 	};
 	if (!Npc_IsDead(Mod_7030_OUT_Entfuehrer_NW))
 	{
-		AI_Output(self, hero, "Info_Mod_Valentine_Spy02_Fertig_16_01"); //Einer hat anscheinend eine schwache Blase, er rennt ziemlich genau zu jeder geraden Stunde weit weg, um sich zu erleichtern.
+		AI_Output(self, hero, "Info_Mod_Valentine_Spy02_Fertig_16_01"); //Einer hat anscheinend eine schwache Blase, er entfernt sich ungefähr zu jeder geraden Stunde vom Lager, um sich zu erleichtern.
 	};
 	if (!Npc_IsDead(Mod_7031_OUT_Entfuehrer_NW))
 	{
-		AI_Output(self, hero, "Info_Mod_Valentine_Spy02_Fertig_16_02"); //Einer patrouilliert normal, sieht dafür aber nicht sehr kräftig aus.
+		AI_Output(self, hero, "Info_Mod_Valentine_Spy02_Fertig_16_02"); //Einer patrouilliert zwar durchs Lager, sieht dafür aber nicht sehr kräftig aus.
 	};
 };
 
@@ -517,7 +517,7 @@ FUNC INT Info_Mod_Valentine_Kill01_Condition()
 
 FUNC VOID Info_Mod_Valentine_Kill01_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Valentine_Kill01_15_00"); //Misch' dem ersten Wächter eine Überdosis in sein Bier.
+	AI_Output(hero, self, "Info_Mod_Valentine_Kill01_15_00"); //Misch dem ersten Wächter eine Überdosis in sein Bier.
 	AI_Output(self, hero, "Info_Mod_Valentine_Kill01_16_01"); //Was genau soll ich denn mixen?
 	AI_Output(self, hero, "Info_Mod_Valentine_Kill01_16_02"); //Wenn du zehn Blauflieder hast, wird er von der Überdosis einschlafen.
 	AI_Output(self, hero, "Info_Mod_Valentine_Kill01_16_03"); //Falls du eine Portion Gift hast, wird er zumindest für längere Zeit in Ohnmacht fallen.
@@ -529,23 +529,23 @@ FUNC VOID Info_Mod_Valentine_Kill01_Info()
 
 	if (Npc_HasItems(hero, ItPo_Gift) >= 3)
 	{
-		Info_AddChoice	(Info_Mod_Valentine_Kill01, "Gift hab' ich genug, daran wird's nicht scheitern.", Info_Mod_Valentine_Kill01_C);
+		Info_AddChoice	(Info_Mod_Valentine_Kill01, "Gift hab ich genug, daran wird's nicht scheitern.", Info_Mod_Valentine_Kill01_C);
 	};
 	if (Npc_HasItems(hero, ItPo_Gift) >= 1)
 	{
-		Info_AddChoice	(Info_Mod_Valentine_Kill01, "Ich hab' nur eine Portion Gift.", Info_Mod_Valentine_Kill01_B);
+		Info_AddChoice	(Info_Mod_Valentine_Kill01, "Ich hab nur eine Portion Gift.", Info_Mod_Valentine_Kill01_B);
 	};
 	if (Npc_HasItems(hero, ItPo_Tiergift) >= 1)
 	{
-		Info_AddChoice	(Info_Mod_Valentine_Kill01, "Ich hab' hier etwas Tiergift.", Info_Mod_Valentine_Kill01_G);
+		Info_AddChoice	(Info_Mod_Valentine_Kill01, "Ich hab hier etwas Tiergift.", Info_Mod_Valentine_Kill01_G);
 	};
 	if (Npc_HasItems(hero, ItPo_Pflanzengift) >= 1)
 	{
-		Info_AddChoice	(Info_Mod_Valentine_Kill01, "Ich hab' hier etwas Gewächsgift.", Info_Mod_Valentine_Kill01_F);
+		Info_AddChoice	(Info_Mod_Valentine_Kill01, "Ich hab hier etwas Gewächsgift.", Info_Mod_Valentine_Kill01_F);
 	};
 	if (Npc_HasItems(hero, ItPo_Mischgift) >= 1)
 	{
-		Info_AddChoice	(Info_Mod_Valentine_Kill01, "Ich hab' dieses spezielle Gift.", Info_Mod_Valentine_Kill01_E);
+		Info_AddChoice	(Info_Mod_Valentine_Kill01, "Ich hab dieses spezielle Gift.", Info_Mod_Valentine_Kill01_E);
 	};
 	if (Npc_HasItems(hero, ItPl_BluePlant) >= 10)
 	{
@@ -562,7 +562,7 @@ FUNC VOID Info_Mod_Valentine_Kill01_D()
 
 FUNC VOID Info_Mod_Valentine_Kill01_C()
 {
-	AI_Output(hero, self, "Info_Mod_Valentine_Kill01_C_15_00"); //Gift hab' ich genug, daran wird's nicht scheitern.
+	AI_Output(hero, self, "Info_Mod_Valentine_Kill01_C_15_00"); //Gift hab ich genug, daran wird's nicht scheitern.
 
 	B_GiveInvItems	(hero, self, ItPo_Gift, 3);
 
@@ -580,7 +580,7 @@ FUNC VOID Info_Mod_Valentine_Kill01_C()
 
 FUNC VOID Info_Mod_Valentine_Kill01_B()
 {
-	AI_Output(hero, self, "Info_Mod_Valentine_Kill01_B_15_00"); //Ich hab' nur eine Portion Gift.
+	AI_Output(hero, self, "Info_Mod_Valentine_Kill01_B_15_00"); //Ich hab nur eine Portion Gift.
 
 	B_GiveInvItems	(hero, self, ItPo_Gift, 1);
 
@@ -598,7 +598,7 @@ FUNC VOID Info_Mod_Valentine_Kill01_B()
 
 FUNC VOID Info_Mod_Valentine_Kill01_G()
 {
-	AI_Output(hero, self, "Info_Mod_Valentine_Kill01_G_15_00"); //Ich hab' hier etwas Tiergift.
+	AI_Output(hero, self, "Info_Mod_Valentine_Kill01_G_15_00"); //Ich hab hier etwas Tiergift.
 
 	B_GiveInvItems	(hero, self, ItPo_Tiergift, 1);
 
@@ -616,7 +616,7 @@ FUNC VOID Info_Mod_Valentine_Kill01_G()
 
 FUNC VOID Info_Mod_Valentine_Kill01_F()
 {
-	AI_Output(hero, self, "Info_Mod_Valentine_Kill01_F_15_00"); //Ich hab' hier etwas Gewächsgift.
+	AI_Output(hero, self, "Info_Mod_Valentine_Kill01_F_15_00"); //Ich hab hier etwas Gewächsgift.
 
 	B_GiveInvItems	(hero, self, ItPo_Pflanzengift, 1);
 
@@ -634,7 +634,7 @@ FUNC VOID Info_Mod_Valentine_Kill01_F()
 
 FUNC VOID Info_Mod_Valentine_Kill01_E()
 {
-	AI_Output(hero, self, "Info_Mod_Valentine_Kill01_E_15_00"); //Ich hab' dieses spezielle Gift.
+	AI_Output(hero, self, "Info_Mod_Valentine_Kill01_E_15_00"); //Ich hab dieses spezielle Gift.
 
 	B_GiveInvItems	(hero, self, ItPo_Mischgift, 1);
 
@@ -780,7 +780,7 @@ FUNC INT Info_Mod_Valentine_Kill02_Fertig_Condition()
 
 FUNC VOID Info_Mod_Valentine_Kill02_Fertig_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Valentine_Kill02_Fertig_16_00"); //Der steht erstmal nicht so schnell wieder auf. Einer weniger, um den wir uns sorgen müssen.
+	AI_Output(self, hero, "Info_Mod_Valentine_Kill02_Fertig_16_00"); //Der steht so schnell nicht wieder auf. Einer weniger, um den wir uns sorgen müssen.
 };
 
 INSTANCE Info_Mod_Valentine_Kill03 (C_INFO)
@@ -907,7 +907,7 @@ INSTANCE Info_Mod_Valentine_Pickpocket (C_INFO)
 	information	= Info_Mod_Valentine_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_60_Female;
 };
 
 FUNC INT Info_Mod_Valentine_Pickpocket_Condition()
@@ -930,8 +930,88 @@ FUNC VOID Info_Mod_Valentine_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Valentine_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Valentine_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Valentine_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Valentine_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Valentine_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Valentine_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Valentine_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Valentine_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Valentine_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Valentine_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Valentine_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Valentine_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Valentine_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Valentine_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Valentine_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Valentine_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Valentine_EXIT (C_INFO)

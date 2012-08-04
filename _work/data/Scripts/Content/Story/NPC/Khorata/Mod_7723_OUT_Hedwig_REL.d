@@ -4,7 +4,7 @@ instance Mod_7723_OUT_Hedwig_REL (Npc_Default)
 	name 		= "Hedwig";	
 	guild 		= GIL_OUT;
 	id 			= 7723;
-	voice 		= 17;
+	voice 		= 26;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

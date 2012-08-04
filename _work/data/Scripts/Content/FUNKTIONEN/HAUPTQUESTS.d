@@ -211,9 +211,9 @@ FUNC VOID HAUPTQUESTS()
 		{
 			Mod_HQ_FokusTeleport += 1;
 
-			hero.aivar[AIV_INVINCIBLE] = FALSE;
+			B_SetAivar(hero, AIV_INVINCIBLE, FALSE);
 
-			if (Mod_HQ_FokusTeleport == 3)
+			if (Mod_HQ_FokusTeleport == 2)
 			{
 				AI_Teleport	(hero, "ADW_ENTRANCE");
 
@@ -221,9 +221,9 @@ FUNC VOID HAUPTQUESTS()
 			};
 		};
 
-		if (Npc_KnowsInfo(hero, Info_Mod_Xardas_AW_Hi))
+		if (Mod_HQ_FokusZuXardas == 2)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_AW_Hi))
 		&& (!Npc_IsInState(Mod_678_DMB_Xardas_AW, ZS_Talk))
-		&& (Mod_HQ_FokusZuXardas == 2)
 		{
 			AI_Teleport	(hero, "OBELISKSCHREIN_WP");
 
@@ -1514,7 +1514,7 @@ FUNC VOID HAUPTQUESTS()
 
 				B_LogEntry	(TOPIC_MOD_DUNKLEMAGIE, "Die Vision hat Argez gezeigt, als er seinen ungeplanten Zauber ausstieß. Ungeplant? Oder spielt er die ganze Zeit über nur mit uns?");
 
-				PlayVideo ("Xeres' Rückkehr\XR_ArgezVision.bik");
+				PlayVideo ("Xeres\XR_ArgezVision.bik");
 			};
 		};
 
@@ -1683,20 +1683,6 @@ FUNC VOID HAUPTQUESTS()
 
 		if (XardasLetterForHeroOT == TRUE)
 		&& (TooLessMana == 1)
-		&& (Mod_OT_Monolog_01 == FALSE)
-		{
-			Npc_ClearAIQueue	(hero);
-
-			AI_StandUp	(hero);
-
-			AI_Output(hero, NULL, "Info_Mod_Hero_OT_Start_15_00"); //Na prima, als Untoter kann ich mich nicht teleportieren. Ich muss zuerst einen Weg zurück ins Leben finden. Aber wie? Ich habe schon alles mitgenommen, was der Tempel zu bieten hat, bevor ich dem Schläfer gegenübergetreten bin. (überlegt) Hmm, vielleicht kann ich durch die Erdbeben an Orte gelangen, die mir vorher verwehrt geblieben sind...?
-
-			B_LogEntry	(TOPIC_MOD_ANFANG, "Na prima, als Untoter kann ich mich nicht teleportieren. Ich muss zuerst einen Weg zurück ins Leben finden. Aber wie? Ich habe schon alles mitgenommen, was der Tempel zu bieten hat, bevor ich dem Schläfer gegenübergetreten bin. (überlegt) Hmm, vielleicht kann ich durch die Erdbeben an Orte gelangen, die mir vorher verwehrt geblieben sind...?");
-
-			Mod_OT_Monolog_01 = TRUE;
-		};
-
-		if (TooLessMana == 1)
 		{
 			OTTeleportScene();
 		};

@@ -46,11 +46,11 @@ FUNC VOID Info_Mod_Lares_Daemonisch_Info()
 	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_03"); //Ja, da war schon was. Pepe hatte nachts dunkle Schatten im Wald gesehen, vermutlich von Wölfen.
 	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_04"); //Ich habe dann einige Jungs mit ihm zu dem kleinen Lager im Wald geschickt, um sich die Nacht über dort umzusehen.
 	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_05"); //Pepe kam am frühen morgen panisch aus dem Wald gelaufen und blickte sich nach allen Richtungen verstört um.
-	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_06"); //Als dann meine Jungs ebenfalls wieder aus dem Wald kamen, lief er schreiend in Richtung Dämonenkriegerlager davon.
+	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_06"); //Als dann meine Jungs ebenfalls wieder aus dem Wald kamen, lief er schreiend in Richtung Bergfestung davon.
 	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_07"); //Die Jungs meinten, dass ein großes Rudel Wölfe sie überfallen hätte und Pepe daraufhin weggelaufen sei.
 	AI_Output(self, hero, "Info_Mod_Lares_Daemonisch_09_08"); //Leider ist durch die Mistviecher auch einer meiner Söldner draufgegangen. Naja, das kommt schon alles wieder ins Lot.
 
-	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Von Lares habe ich erfahren, dass Pepe dunkle Schatten im Wald gesehen hat, welche wohl von Wölfen gerührt haben. Einige Söldner hatten sich daher mit Pepe zum kleinen Lager im Wald begeben. Pepe kam am frühen morgen panisch aus dem Wald gerannt und verschwand Richtung Dämonenkriegerlager, als er hinter sich die Söldner aus dem Wald kommen sah. Angeblich hatte ein großes Rudel Wölfe sie überfallen, worauf Pepe in Panik verfiel. Ein Söldner kam dabei um.");
+	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Von Lares habe ich erfahren, dass Pepe dunkle Schatten im Wald gesehen hat, welche wohl von Wölfen gerührt haben. Einige Söldner hatten sich daher mit Pepe zum kleinen Lager im Wald begeben. Pepe kam am frühen morgen panisch aus dem Wald gerannt und verschwand Richtung Bergfestung, als er hinter sich die Söldner aus dem Wald kommen sah. Angeblich hatte ein großes Rudel Wölfe sie überfallen, worauf Pepe in Panik verfiel. Ein Söldner kam dabei um.");
 };
 
 INSTANCE Info_Mod_Lares_Grog (C_INFO)
@@ -85,7 +85,6 @@ FUNC VOID Info_Mod_Lares_Grog_Info()
 	AI_Output(self, hero, "Info_Mod_Lares_Grog_09_03"); //Wurde aber auch langsam Zeit. Endlich kann ich mit meinen Jungs mal wieder ein wenig feiern.
 	AI_Output(self, hero, "Info_Mod_Lares_Grog_09_04"); //Hier ist dein Gold.
 
-	CreateInvItems	(self, ItMi_Gold, 500);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 };
 
@@ -133,47 +132,47 @@ FUNC VOID Info_Mod_Lares_BronkoMehlsack_Info()
 	Mod_BronkoMehlsack = 3;
 };
 
-INSTANCE Info_Mod_Lares_WillSöldner (C_INFO)
+INSTANCE Info_Mod_Lares_WillSoeldner (C_INFO)
 {
 	npc		= Mod_526_SLD_Lares_NW;
 	nr		= 1;
-	condition	= Info_Mod_Lares_WillSöldner_Condition;
-	information	= Info_Mod_Lares_WillSöldner_Info;
+	condition	= Info_Mod_Lares_WillSoeldner_Condition;
+	information	= Info_Mod_Lares_WillSoeldner_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich will mich euch anschließen.";
 };
 
-FUNC INT Info_Mod_Lares_WillSöldner_Condition()
+FUNC INT Info_Mod_Lares_WillSoeldner_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Lares_Hi))
-	&& (Mod_Gilde	==	0)
+	&& (Mod_Gilde == 0)
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Lares_WillSöldner_Info()
+FUNC VOID Info_Mod_Lares_WillSoeldner_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Lares_WillSöldner_15_00"); //Ich will mich euch anschließen.
-	AI_Output(self, hero, "Info_Mod_Lares_WillSöldner_09_01"); //Das ist gut. Aber bevor ich dich aufnehmen kann, musst du uns deine Loyalität beweisen.
-	AI_Output(self, hero, "Info_Mod_Lares_WillSöldner_09_02"); //Geh zu Torlof und sage ihm, dass ich dich schicke.
+	AI_Output(hero, self, "Info_Mod_Lares_WillSoeldner_15_00"); //Ich will mich euch anschließen.
+	AI_Output(self, hero, "Info_Mod_Lares_WillSoeldner_09_01"); //Das ist gut. Aber bevor ich dich aufnehmen kann, musst du uns deine Loyalität beweisen.
+	AI_Output(self, hero, "Info_Mod_Lares_WillSoeldner_09_02"); //Geh zu Torlof und sage ihm, dass ich dich schicke.
 
 	B_LogEntry	(TOPIC_MOD_SÖLDNER, "Um bei den Söldner aufgenommen zu werden muss ich meine Loyalität beweisen. Ich soll mal mit Torlof sprechen.");
 };
 
-INSTANCE Info_Mod_Lares_AndereSöldner (C_INFO)
+INSTANCE Info_Mod_Lares_AndereSoeldner (C_INFO)
 {
 	npc		= Mod_526_SLD_Lares_NW;
 	nr		= 1;
-	condition	= Info_Mod_Lares_AndereSöldner_Condition;
-	information	= Info_Mod_Lares_AndereSöldner_Info;
+	condition	= Info_Mod_Lares_AndereSoeldner_Condition;
+	information	= Info_Mod_Lares_AndereSoeldner_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Wo sind eigentlich die anderen Söldner?";
 };
 
-FUNC INT Info_Mod_Lares_AndereSöldner_Condition()
+FUNC INT Info_Mod_Lares_AndereSoeldner_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Lares_Hi))
 	{
@@ -181,46 +180,13 @@ FUNC INT Info_Mod_Lares_AndereSöldner_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Lares_AndereSöldner_Info()
+FUNC VOID Info_Mod_Lares_AndereSoeldner_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Lares_AndereSöldner_15_00"); //Wo sind eigentlich die anderen Söldner?
-	AI_Output(self, hero, "Info_Mod_Lares_AndereSöldner_09_01"); //Die sind noch im Neuen Lager.
-	AI_Output(self, hero, "Info_Mod_Lares_AndereSöldner_09_02"); //Lee hat mich zusammen mit Torlof und Cord hierher geschickt, damit wir ein paar Leute aus Khorinis dazu überreden sich uns anzuschließen.
-	AI_Output(hero, self, "Info_Mod_Lares_AndereSöldner_15_03"); //Wieviele habt ihr schon überredet?
-	AI_Output(self, hero, "Info_Mod_Lares_AndereSöldner_09_04"); //Wir haben schon einige überzeugt.
-};
-
-INSTANCE Info_Mod_Lares_Lehrer (C_INFO)
-{
-	npc		= Mod_526_SLD_Lares_NW;
-	nr		= 1;
-	condition	= Info_Mod_Lares_Lehrer_Condition;
-	information	= Info_Mod_Lares_Lehrer_Info;
-	permanent	= 0;
-	important	= 0;
-	description	= "Kannst du mir was beibringen?";
-};
-
-FUNC INT Info_Mod_Lares_Lehrer_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Lares_Hi))
-	&& ((Mod_Gilde == 5)
-	|| (Mod_Gilde == 4)
-	|| (Mod_Gilde == 19))
-	&& (Mod_Schwierigkeit != 4)
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Lares_Lehrer_Info()
-{
-	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
-
-	AI_Output(self, hero, "Info_Mod_Lares_Lehrer_09_00"); //Ich kann dir helfen geschickter zu werden.
-
-	Log_CreateTopic	(TOPIC_MOD_LEHRER_SOELDNER_ONAR, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_LEHRER_SOELDNER_ONAR, "Lares kann mir helfen geschickter zu werden.");
+	AI_Output(hero, self, "Info_Mod_Lares_AndereSoeldner_15_00"); //Wo sind eigentlich die anderen Söldner?
+	AI_Output(self, hero, "Info_Mod_Lares_AndereSoeldner_09_01"); //Die sind noch im Neuen Lager.
+	AI_Output(self, hero, "Info_Mod_Lares_AndereSoeldner_09_02"); //Lee hat mich zusammen mit Torlof und Cord hierher geschickt, damit wir ein paar Leute aus Khorinis dazu überreden sich uns anzuschließen.
+	AI_Output(hero, self, "Info_Mod_Lares_AndereSoeldner_15_03"); //Wieviele habt ihr schon überredet?
+	AI_Output(self, hero, "Info_Mod_Lares_AndereSoeldner_09_04"); //Wir haben schon einige überzeugt.
 };
 
 INSTANCE Info_Mod_Lares_Aufnahme (C_INFO)
@@ -325,9 +291,9 @@ FUNC VOID Info_Mod_Lares_Aufnahme_Ja()
 	B_SetTopicStatus	(TOPIC_MOD_FEUERMAGIER, LOG_FAILED);
 	B_SetTopicStatus	(TOPIC_MOD_WASSERMAGIER, LOG_FAILED);
 	B_SetTopicStatus	(TOPIC_MOD_MILIZ, LOG_FAILED);
-	B_SetTopicStatus	(TOPIC_MOD_DÄMONENBESCHWÖRER, LOG_FAILED);
+	B_SetTopicStatus	(TOPIC_MOD_DAEMONENBESCHWOERER, LOG_FAILED);
 	
-	Mod_Gilde	=	4;
+	Mod_Gilde = 4;
 
 	Snd_Play ("LEVELUP");
 
@@ -705,7 +671,7 @@ FUNC INT Info_Mod_Lares_AndereGilde_Condition()
 {
 	if (Mod_Gilde > 0)
 	&& (hero.guild != GIL_MIL)
-	&& (Npc_KnowsInfo(hero, Info_Mod_Lares_WillSöldner))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Lares_WillSoeldner))
 	{
 		return 1;
 	};
@@ -766,6 +732,91 @@ FUNC VOID Info_Mod_Lares_Friedensbote_Info()
 	AI_Output(self, hero, "Info_Mod_Lares_Friedensbote_09_16"); //Nichts für ungut. Ich bin gespannt, wie sich das weiterentwickelt. Mach’s gut.
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_FRIEDENSBOTE, "Lares hat der Waffenruhe zugestimmt. Ich sollte Lord Hagen davon berichten.");
+};
+
+INSTANCE Info_Mod_Lares_Banditenfestung (C_INFO)
+{
+	npc		= Mod_526_SLD_Lares_NW;
+	nr		= 1;
+	condition	= Info_Mod_Lares_Banditenfestung_Condition;
+	information	= Info_Mod_Lares_Banditenfestung_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Lares_Banditenfestung_Condition()
+{
+	if (Mod_Irdorath == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Lares_Banditenfestung_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Lares_Banditenfestung_09_00"); //He, warte mal. Ich wollte dich warnen, falls du nach Süden in die Berge gehen willst.
+	AI_Output(hero, self, "Info_Mod_Lares_Banditenfestung_15_01"); //Wieso? Was ist da?
+	AI_Output(self, hero, "Info_Mod_Lares_Banditenfestung_09_02"); //In der Festung hat sich irgendwelcher Abschaum aus dem Minental niedergelassen. Pass also gut auf, wenn du dort unterwegs bist.
+};
+
+INSTANCE Info_Mod_Lares_Banditenfestung2 (C_INFO)
+{
+	npc		= Mod_526_SLD_Lares_NW;
+	nr		= 1;
+	condition	= Info_Mod_Lares_Banditenfestung2_Condition;
+	information	= Info_Mod_Lares_Banditenfestung2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Die Männer in den Bergen Stellen keine Gefahr dar.";
+};
+
+FUNC INT Info_Mod_Lares_Banditenfestung2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Dexter_NW_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Lares_Banditenfestung2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Lares_Banditenfestung2_15_00"); //Die Männer in den Bergen Stellen keine Gefahr dar. Es sind alte Bekannte aus der Kolonie.
+	AI_Output(self, hero, "Info_Mod_Lares_Banditenfestung2_09_01"); //Hmm, ok, wenn du es sagst, wird es wohl stimmen. Dann kann ich ja beruhigt sein.
+
+	B_GivePlayerXP	(150);
+};
+
+INSTANCE Info_Mod_Lares_Lehrer (C_INFO)
+{
+	npc		= Mod_526_SLD_Lares_NW;
+	nr		= 1;
+	condition	= Info_Mod_Lares_Lehrer_Condition;
+	information	= Info_Mod_Lares_Lehrer_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Kannst du mir was beibringen?";
+};
+
+FUNC INT Info_Mod_Lares_Lehrer_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Lares_Hi))
+	&& ((Mod_Gilde == 5)
+	|| (Mod_Gilde == 4)
+	|| (Mod_Gilde == 19))
+	&& (Mod_Schwierigkeit != 4)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Lares_Lehrer_Info()
+{
+	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
+
+	AI_Output(self, hero, "Info_Mod_Lares_Lehrer_09_00"); //Ich kann dir helfen geschickter zu werden.
+
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_SOELDNER_ONAR, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_SOELDNER_ONAR, "Lares kann mir helfen geschickter zu werden.");
 };
 
 var int Lares_LastPetzCounter;
@@ -1091,12 +1142,12 @@ INSTANCE Info_Mod_Lares_Pickpocket (C_INFO)
 	information	= Info_Mod_Lares_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Lares_Pickpocket_Condition()
 {
-	C_Beklauen	(94, ItMi_Gold, 600);
+	C_Beklauen	(124, ItMi_Gold, 600);
 };
 
 FUNC VOID Info_Mod_Lares_Pickpocket_Info()
@@ -1114,8 +1165,88 @@ FUNC VOID Info_Mod_Lares_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Lares_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Lares_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Lares_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Lares_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Lares_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Lares_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Lares_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Lares_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Lares_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Lares_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Lares_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Lares_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Lares_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Lares_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Lares_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Lares_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Lares_EXIT (C_INFO)

@@ -81,6 +81,8 @@ FUNC VOID Info_Mod_Greg_Sweetwater_Info()
 	AI_Output(self, hero, "Info_Mod_Greg_Sweetwater_01_12"); //Dann ist gut.
 
 	B_LogEntry	(TOPIC_MOD_JG_SWEETWATER, "Alligatorenplage im Talkessel, dem Süßwasserreservoir ... Mal sehen, was Alligator Jack erzählt.");
+
+	B_StartOtherRoutine	(Mod_928_PIR_AlligatorJack_AW, "PRESTART");
 };
 
 INSTANCE Info_Mod_Greg_Irdorath (C_INFO)
@@ -310,7 +312,6 @@ FUNC VOID Info_Mod_Greg_Aufgabe_Info()
 	AI_Output(hero, self, "Info_Mod_Greg_Aufgabe_15_00"); //Hast du was zu tun für mich?
 	AI_Output(self, hero, "Info_Mod_Greg_Aufgabe_01_01"); //Nun, du könntest meinen alten Piratensäbel, den du mir bei deiner Aufnahmeprüfung gebracht hast, zu einem Schmied bringen und reparieren lassen.
 
-	CreateInvItems	(self, ItMw_Piratensaebel_Greg, 1);
 	B_GiveInvItems	(self, hero, ItMw_Piratensaebel_Greg, 1);
 
 	AI_Output(self, hero, "Info_Mod_Greg_Aufgabe_01_02"); //Mit dem alten, verrosteten Ding seh ich ja wohl richtig dämlich aus. Also beeil dich!
@@ -321,18 +322,18 @@ FUNC VOID Info_Mod_Greg_Aufgabe_Info()
 	B_LogEntry	(TOPIC_MOD_GREG_ROST, "Ich soll Greg's alten Piratensäbel bei einem Schmied reparieren lassen.");
 };
 
-INSTANCE Info_Mod_Greg_Säbel (C_INFO)
+INSTANCE Info_Mod_Greg_Saebel (C_INFO)
 {
 	npc		= Mod_764_PIR_Greg_AW;
 	nr		= 1;
-	condition	= Info_Mod_Greg_Säbel_Condition;
-	information	= Info_Mod_Greg_Säbel_Info;
+	condition	= Info_Mod_Greg_Saebel_Condition;
+	information	= Info_Mod_Greg_Saebel_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Bin zurück und hab dir was mitgebracht.";
 };
 
-FUNC INT Info_Mod_Greg_Säbel_Condition()
+FUNC INT Info_Mod_Greg_Saebel_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Bennet_Piraten))
 	&& (Npc_HasItems(hero, ItMw_BennetGreg) == 1)
@@ -341,23 +342,23 @@ FUNC INT Info_Mod_Greg_Säbel_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Greg_Säbel_Info()
+FUNC VOID Info_Mod_Greg_Saebel_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Greg_Säbel_15_00"); //Bin zurück und hab dir was mitgebracht.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_01"); //Meinen aufgepeppten Säbel?
-	AI_Output(hero, self, "Info_Mod_Greg_Säbel_15_02"); //Nein, was Besseres. Der Schmied Bennet möchte deinen Säbel behalten.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_03"); //Beim Klabautermann! Ein Erbstück! Von meinem Grossvater selbst!
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_04"); //Man nannte ihn den Freibeuter der Meere ...
-	AI_Output(hero, self, "Info_Mod_Greg_Säbel_15_05"); //Der Schmied hat mir dafür dieses Schwert mitgegeben.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_06"); //Dieser Säbel hat schon gallonenweise Blut getrunken!
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_07"); //Mein Ahn würde sich im Gra ... im Meer umdrehen!
-	AI_Output(hero, self, "Info_Mod_Greg_Säbel_15_08"); //Hier. Schau doch erst mal.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_09"); //Die Seelen aller gefallenen Piraten würden mir nachstellen.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_10"); //Hm ... Zeig mal her.
+	AI_Output(hero, self, "Info_Mod_Greg_Saebel_15_00"); //Bin zurück und hab dir was mitgebracht.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_01"); //Meinen aufgepeppten Säbel?
+	AI_Output(hero, self, "Info_Mod_Greg_Saebel_15_02"); //Nein, was Besseres. Der Schmied Bennet möchte deinen Säbel behalten.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_03"); //Beim Klabautermann! Ein Erbstück! Von meinem Grossvater selbst!
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_04"); //Man nannte ihn den Freibeuter der Meere ...
+	AI_Output(hero, self, "Info_Mod_Greg_Saebel_15_05"); //Der Schmied hat mir dafür dieses Schwert mitgegeben.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_06"); //Dieser Säbel hat schon gallonenweise Blut getrunken!
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_07"); //Mein Ahn würde sich im Gra ... im Meer umdrehen!
+	AI_Output(hero, self, "Info_Mod_Greg_Saebel_15_08"); //Hier. Schau doch erst mal.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_09"); //Die Seelen aller gefallenen Piraten würden mir nachstellen.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_10"); //Hm ... Zeig mal her.
 
 	B_GiveInvItems	(hero, self, ItMw_BennetGreg, 1);
 
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_11"); //Was soll das denn sein?
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_11"); //Was soll das denn sein?
 
 	AI_UnequipWeapons	(self);
 
@@ -367,11 +368,11 @@ FUNC VOID Info_Mod_Greg_Säbel_Info()
 	AI_PlayAni	(self, "T_1HSINSPECT");
 	AI_RemoveWeapon	(self);
 
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_12"); //Wieso ist das schwarz angemalt? Au! Das ist aber scharf.
-	AI_Output(hero, self, "Info_Mod_Greg_Säbel_15_13"); //Drei mal schärfer als jede Klinge und doppelt so stabil. Ganz neues Material, sagt Bennet.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_14"); //Das muss ich selber sehen. Ich gehe mal zu Bones die Klinge testen.
-	AI_Output(self, hero, "Info_Mod_Greg_Säbel_01_15"); //Du fragst Skip, ob die Vorräte verladen sind.
-	AI_Output(hero, self, "Info_Mod_Greg_Säbel_15_16"); //Aye, Sir.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_12"); //Wieso ist das schwarz angemalt? Au! Das ist aber scharf.
+	AI_Output(hero, self, "Info_Mod_Greg_Saebel_15_13"); //Drei mal schärfer als jede Klinge und doppelt so stabil. Ganz neues Material, sagt Bennet.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_14"); //Das muss ich selber sehen. Ich gehe mal zu Bones die Klinge testen.
+	AI_Output(self, hero, "Info_Mod_Greg_Saebel_01_15"); //Du fragst Skip, ob die Vorräte verladen sind.
+	AI_Output(hero, self, "Info_Mod_Greg_Saebel_15_16"); //Aye, Sir.
 
 	B_SetTopicStatus	(TOPIC_MOD_GREG_ROST, LOG_SUCCESS);
 
@@ -413,6 +414,7 @@ FUNC VOID Info_Mod_Greg_Bill_Info()
 	AI_Output(hero, self, "Info_Mod_Greg_Bill_15_02"); //Auf diesem Zettel steht es. Ich hab den Zettel von einem Alchemisten aus Khorinis.
 
 	B_GiveInvItems	(hero, self, Mod_BillsRumRezept, 1);
+
 	B_UseFakeScroll();
 
 	AI_Output(self, hero, "Info_Mod_Greg_Bill_01_03"); //Tatsächlich. Na warte, der kann was erleben. Gut gemacht, min jung!
@@ -630,7 +632,6 @@ FUNC VOID Info_Mod_Greg_Schatzaufteilung_Gold ()
 	AI_Output(hero, self, "Info_Mod_Greg_Schatzaufteilung_Gold_15_00"); //Ich nehm das Gold.
 	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_Gold_01_01"); //Gut, hier ist dein Gold.
 
-	CreateInvItems	(self, ItMi_Gold, 10000);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 10000);
 
 	Info_ClearChoices	(Info_Mod_Greg_Schatzaufteilung);
@@ -748,7 +749,6 @@ FUNC VOID Info_Mod_Greg_Befreiung3_Info()
 
 	AI_Teleport	(Mod_939_PIR_Owen_AW,	"WP_BLA_PIR_01");
 	B_StartOtherRoutine	(Mod_939_PIR_Owen_AW, "GREG");
-	AI_Teleport	(Mod_939_PIR_Owen_AW,	"WP_BLA_PIR_01");
 
 	B_SetTopicStatus	(TOPIC_MOD_BEL_PIRATENLAGER, LOG_SUCCESS);
 	B_LogEntry	(TOPIC_MOD_BEL_BEFREIUNG, "Vor dem Lager befinden sich drei untote Hohepriester um ein magisches Artefakt, das sie schützt und ihnen große Macht verleiht. Sie können jeden Flüchtenden mit Teleportation rasch einholen und  verhindern zudem die Nutzung von Teleportmagie im Lager.");
@@ -1014,9 +1014,9 @@ FUNC INT Info_Mod_Greg_AJAlive4_Condition()
 FUNC VOID Info_Mod_Greg_AJAlive4_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Greg_AJAlive4_01_00"); //Junge, du hast ungeheuer viel getan für unser Lager. Mir Gold kann ich das kaum aufwiegen.
-	AI_Output(self, hero, "Info_Mod_Greg_AJAlive4_01_01"); //Daher sollst du mein bestes Stück bekommen: Blackbarts’ Piratenhut. Trage ihn mit stolz.
+	AI_Output(self, hero, "Info_Mod_Greg_AJAlive4_01_01"); //Daher sollst du mein bestes Stück bekommen: Blackbarts Piratenhut. Trage ihn mit stolz.
 
-	B_ShowGivenThings	("Blackbarts' Piratenhut erhalten");
+	B_ShowGivenThings	("Blackbarts Piratenhut erhalten");
 
 	CreateInvItems	(hero, ItAr_Piratenhut, 1);
 
@@ -1113,12 +1113,12 @@ INSTANCE Info_Mod_Greg_Pickpocket (C_INFO)
 	information	= Info_Mod_Greg_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Greg_Pickpocket_Condition()
 {
-	C_Beklauen	(100, ItMi_Gold, 750);
+	C_Beklauen	(150, ItFo_Addon_Rum, 7);
 };
 
 FUNC VOID Info_Mod_Greg_Pickpocket_Info()
@@ -1136,8 +1136,88 @@ FUNC VOID Info_Mod_Greg_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Greg_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Greg_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Greg_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Greg_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Greg_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Greg_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Greg_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Greg_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Greg_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Greg_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Greg_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Greg_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Greg_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Greg_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Greg_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Greg_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Greg_EXIT (C_INFO)

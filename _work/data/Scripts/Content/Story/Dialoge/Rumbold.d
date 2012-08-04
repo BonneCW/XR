@@ -60,7 +60,7 @@ instance Info_Mod_Rumbold_FirstWarn (C_INFO)
 
 func int Info_Mod_Rumbold_FirstWarn_Condition()
 {
-	if (Npc_GetDistToWP(hero, Rumbold_Checkpoint) <= 500) //NICHT von hinten!
+	if (Npc_GetDistToWP(hero, Rumbold_Checkpoint) <= 400) //NICHT von hinten!
 	{
 		Npc_SetRefuseTalk(self,5);
 		return FALSE;

@@ -36,11 +36,11 @@ FUNC VOID DAUERFUNC_01()
 		Offline_Modus = 1;
 	};
 
-	if (Mod_RespawnFix < 3)
+	if (Mod_RespawnFix < 1)
 	{
 		CleanRespawns();
 
-		Mod_RespawnFix = 3;
+		Mod_RespawnFix = 1;
 	};
 
 	LogState_PosY = 0;
@@ -170,7 +170,7 @@ FUNC VOID DAUERFUNC_01()
 		};
 	};
 
-	if (online_playtime >= 1800)
+	if (online_playtime >= 900)
 	&& (Offline_Modus == 0)
 	{
 		CURL_Send(ConcatStrings(ConcatStrings(ConcatStrings("http://www.teutonicteam.de/gomon/tauschen/actualizePlaytime.php?name=", username), "&game=4&time="), IntToString(online_playtime)));
@@ -208,14 +208,14 @@ FUNC VOID DAUERFUNC_01()
 			{
 				Mod_SaveOther = 0;
 
-				hero.aivar[AIV_INVINCIBLE] = 0;
+				B_SetAivar(hero, AIV_INVINCIBLE, FALSE);
 			};
 		}
 		else
 		{
 			Mod_SaveOther = 0;
 
-			hero.aivar[AIV_INVINCIBLE] = 0;
+			B_SetAivar(hero, AIV_INVINCIBLE, FALSE);
 		};
 	};
 
@@ -390,6 +390,7 @@ FUNC VOID DAUERFUNC_01()
 	Mod_Balken = STR_ToInt(MEM_GetGothOpt("XERES", "balken"));
 	Mod_Maussteuerung = STR_ToInt(MEM_GetGothOpt("XERES", "enableMouse"));
 	Mod_Bloodsplats = STR_ToInt(MEM_GetGothOpt("XERES", "bloodsplats"));
+	Mod_PrismaKey = MEM_GetGothOpt("KEYS", "keyUsePrisma");
 
 	if (Mod_Maussteuerung == 0)
 	{
@@ -424,8 +425,6 @@ FUNC VOID DAUERFUNC_01()
 	// Gildennamen aktualisieren
 
 	SetGuild();
-
-	//Print (IntToString(Mod_WM_BoedenAktiviert));
 
 	// Neue Zauber
 
@@ -644,6 +643,16 @@ FUNC VOID DAUERFUNC_01()
 					};
 				};
 			};
+
+			if (Wld_GetDay()-2 > Mod_Wolf_MinecrawlerRuestung_Day)
+			&& (Mod_Wolf_MinecrawlerRuestung == 0)
+			{
+				Mod_Wolf_MinecrawlerRuestung = 1;
+
+				CreateInvItems	(Mod_798_SLD_Wolf_NW, ITAR_DJG_Crawler, 1);
+				AI_UnEquipArmor	(Mod_798_SLD_Wolf_NW);
+				AI_EquipArmor	(Mod_798_SLD_Wolf_NW, ITAR_DJG_Crawler);
+			};
 		};
 
 		// Magier usw. gehen auf die Ritualinsel
@@ -666,9 +675,6 @@ FUNC VOID DAUERFUNC_01()
 			B_RemoveNpc	(Mod_674_SLD_Lee_NW);
 			B_RemoveNpc	(Mod_551_KDF_Pyrokar_NW);
 			B_RemoveNpc	(Mod_774_KDW_Saturas_NW);
-			//B_RemoveNpc	(Mod_517_DMR_Gomez_NW);
-			//B_RemoveNpc	(Mod_520_DMR_Raven_NW);
-			//B_RemoveNpc	(Mod_514_DMB_Karras_NW);
 			B_RemoveNpc	(Mod_553_KDF_Ulthar_NW);
 			B_RemoveNpc	(Mod_524_KDW_Vatras_NW);
 			B_RemoveNpc	(Mod_552_KDF_Serpentes_NW);
@@ -827,6 +833,62 @@ FUNC VOID DAUERFUNC_01()
 			{
 				Mod_HagenKOScene = 1;
 			};
+		};
+
+		if (Mod_Irdorath == 1)
+		&& (Mod_Banditen_Irdorath_NW == 0)
+		{
+			Mod_Banditen_Irdorath_NW = 1;
+
+			Wld_InsertNpc	(Mod_7806_BDT_Dexter_NW, "TAVERNE");
+
+			if (!Hlp_IsValidNpc(Mod_1926_BDT_Esteban_NW))
+			{
+				Wld_InsertNpc	(Mod_1926_BDT_Esteban_NW, "TAVERNE");
+			};
+
+			B_StartOtherRoutine	(Mod_1926_BDT_Esteban_NW, "CASTLEMINE");
+
+			if (!Hlp_IsValidNpc(Mod_1928_BDT_Morgahard_NW))
+			{
+				Wld_InsertNpc	(Mod_1928_BDT_Morgahard_NW, "TAVERNE");
+			};
+
+			B_StartOtherRoutine	(Mod_1928_BDT_Morgahard_NW, "CASTLEMINE");
+
+			// ToDo: Restliche Banditen umziehen lassen
+		};
+
+		if (Mod_Banditen_Mine == 0)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Dexter_NW_Minenzugang))
+		&& (Npc_GetDistToWP(hero, "CASTLEMINE") > 10000)
+		{
+			Mod_Banditen_Mine = 1;
+
+			// ToDo: Banditen-Schürfer schürfen lassen
+
+			MEM_RemoveVob	("EVT_MINENEINGANG_CASTLE");
+		};
+
+		if (Mod_Banditen_Mine == 1)
+		&& (Npc_GetDistToWP(hero, "CASTLEMINE") > 10000)
+		&& (Wld_GetDay()-2 > Mod_Banditen_Mine_Tag)
+		{
+			Mod_Banditen_Mine = 2;
+
+			AI_UnEquipArmor	(Mod_7806_BDT_Dexter_NW);
+			CreateInvItems	(Mod_7806_BDT_Dexter_NW, ItAr_Governor, 1);
+			AI_EquipArmor	(Mod_7806_BDT_Dexter_NW, ItAr_Governor);
+
+			AI_UnEquipArmor	(Mod_1926_BDT_Esteban_NW);
+			CreateInvItems	(Mod_1926_BDT_Esteban_NW, ItAr_Governor, 1);
+			AI_EquipArmor	(Mod_1926_BDT_Esteban_NW, ItAr_Governor);
+
+			AI_UnEquipArmor	(Mod_1928_BDT_Morgahard_NW);
+			CreateInvItems	(Mod_1928_BDT_Morgahard_NW, ItAr_Governor, 1);
+			AI_EquipArmor	(Mod_1928_BDT_Morgahard_NW, ItAr_Governor);
+
+			B_StartOtherRoutine	(Mod_7115_NONE_Nadja_NW, "DEXTER");
 		};
 	};
 
@@ -1118,6 +1180,31 @@ FUNC VOID DAUERFUNC_01()
 			{
 				Mod_Mud_Lebt = 1;
 			};
+		};
+
+		if (Mod_Irdorath == 1)
+		&& (Mod_Banditen_Irdorath_MT == 0)
+		{
+			Mod_Banditen_Irdorath_MT = 1;
+
+			B_RemoveNpc	(Mod_761_BDT_Dexter_MT);
+			B_RemoveNpc	(Mod_955_BDT_Juan_MT);
+			B_RemoveNpc	(Mod_957_BDT_Logan_MT);
+			B_RemoveNpc	(Mod_961_BDT_Sancho_MT);
+			B_RemoveNpc	(Mod_790_BDT_Morgahard_MT);
+			B_RemoveNpc	(Mod_958_BDT_Miguel_MT);
+			B_RemoveNpc	(Mod_948_BDT_Esteban_MT);
+			B_RemoveNpc	(Mod_4072_BDT_Bandit_MT);
+			B_RemoveNpc	(Mod_4073_BDT_Bandit_MT);
+			B_RemoveNpc	(Mod_7022_BDT_Oschust_MT);
+			B_RemoveNpc	(Mod_7023_BDT_Quentin_MT);
+			B_RemoveNpc	(Mod_4074_BDT_Bandit_MT);
+
+			Wld_InsertNpc	(Monster_11076_Skelett_MT, "OC1");
+			Wld_InsertNpc	(Monster_11077_Skelett_MT, "OC1");
+			Wld_InsertNpc	(Monster_11078_Skelett_MT, "OC1");
+
+			Wld_InsertNpc	(Mod_7805_BlutkultKrieger_MT, "OC1");
 		};
 	};
 
@@ -1422,208 +1509,6 @@ FUNC VOID DAUERFUNC_01()
 
 				B_StartOtherRoutine	(Mod_7612_PSINOV_Lester_REL,	"MARKT");
 			};
-		};
-
-		// Moorleichen-Respawn
-
-		Mod_REL_Moorleiche_01_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_01 <= 0)
-		&& (Mod_REL_Moorleiche_01_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_01,	"REL_MOOR_054");
-
-			Mod_REL_Moorleiche_01 += 1;
-		};
-
-		Mod_REL_Moorleiche_02_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_02 <= 0)
-		&& (Mod_REL_Moorleiche_02_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_02,	"REL_MOOR_041");
-
-			Mod_REL_Moorleiche_02 += 1;
-		};
-
-		Mod_REL_Moorleiche_03_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_03 <= 0)
-		&& (Mod_REL_Moorleiche_03_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_03,	"REL_MOOR_046");
-
-			Mod_REL_Moorleiche_03 += 1;
-		};
-
-		Mod_REL_Moorleiche_04_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_04 <= 0)
-		&& (Mod_REL_Moorleiche_04_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_04,	"REL_MOOR_026");
-
-			Mod_REL_Moorleiche_04 += 1;
-		};
-
-		Mod_REL_Moorleiche_05_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_05 <= 0)
-		&& (Mod_REL_Moorleiche_05_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_05,	"REL_MOOR_037");
-
-			Mod_REL_Moorleiche_05 += 1;
-		};
-
-		Mod_REL_Moorleiche_06_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_06 <= 0)
-		&& (Mod_REL_Moorleiche_06_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_06,	"REL_MOOR_059");
-
-			Mod_REL_Moorleiche_06 += 1;
-		};
-
-		Mod_REL_Moorleiche_07_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_07 <= 0)
-		&& (Mod_REL_Moorleiche_07_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_07,	"REL_MOOR_064");
-
-			Mod_REL_Moorleiche_07 += 1;
-		};
-
-		Mod_REL_Moorleiche_08_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_08 <= 0)
-		&& (Mod_REL_Moorleiche_08_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_08,	"REL_MOOR_068");
-
-			Mod_REL_Moorleiche_08 += 1;
-		};
-
-		Mod_REL_Moorleiche_09_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_09 <= 0)
-		&& (Mod_REL_Moorleiche_09_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_09,	"REL_MOOR_072");
-
-			Mod_REL_Moorleiche_09 += 1;
-		};
-
-		Mod_REL_Moorleiche_10_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_10 <= 0)
-		&& (Mod_REL_Moorleiche_10_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_10,	"REL_MOOR_077");
-
-			Mod_REL_Moorleiche_10 += 1;
-		};
-
-		Mod_REL_Moorleiche_11_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_11 <= 0)
-		&& (Mod_REL_Moorleiche_11_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_11,	"REL_MOOR_082");
-
-			Mod_REL_Moorleiche_11 += 1;
-		};
-
-		Mod_REL_Moorleiche_12_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_12 <= 0)
-		&& (Mod_REL_Moorleiche_12_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_12,	"REL_MOOR_117");
-
-			Mod_REL_Moorleiche_12 += 1;
-		};
-
-		Mod_REL_Moorleiche_13_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_13 <= 0)
-		&& (Mod_REL_Moorleiche_13_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_13,	"REL_MOOR_123");
-
-			Mod_REL_Moorleiche_13 += 1;
-		};
-
-		Mod_REL_Moorleiche_14_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_14 <= 0)
-		&& (Mod_REL_Moorleiche_14_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_14,	"REL_MOOR_127");
-
-			Mod_REL_Moorleiche_14 += 1;
-		};
-
-		Mod_REL_Moorleiche_15_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_15 <= 0)
-		&& (Mod_REL_Moorleiche_15_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_15,	"REL_MOOR_087");
-
-			Mod_REL_Moorleiche_15 += 1;
-		};
-
-		Mod_REL_Moorleiche_16_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_16 <= 0)
-		&& (Mod_REL_Moorleiche_16_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_16,	"REL_MOOR_091");
-
-			Mod_REL_Moorleiche_16 += 1;
-		};
-
-		Mod_REL_Moorleiche_17_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_17 <= 0)
-		&& (Mod_REL_Moorleiche_17_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_17,	"REL_MOOR_095");
-
-			Mod_REL_Moorleiche_17 += 1;
-		};
-
-		Mod_REL_Moorleiche_18_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_18 <= 0)
-		&& (Mod_REL_Moorleiche_18_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_18,	"REL_MOOR_057");
-
-			Mod_REL_Moorleiche_18 += 1;
-		};
-
-		Mod_REL_Moorleiche_19_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_19 <= 0)
-		&& (Mod_REL_Moorleiche_19_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_19,	"REL_MOOR_039");
-
-			Mod_REL_Moorleiche_19 += 1;
-		};
-
-		Mod_REL_Moorleiche_20_Counter -= 1;
-
-		if (Mod_REL_Moorleiche_20 <= 0)
-		&& (Mod_REL_Moorleiche_20_Counter <= 0)
-		{
-			Wld_InsertNpc	(SwampZombie_Moor_20,	"REL_MOOR_085");
-
-			Mod_REL_Moorleiche_20 += 1;
 		};
 
 		// Fake-Geisterrüstung durch richtige ersetzen
@@ -2033,7 +1918,7 @@ FUNC VOID DAUERFUNC_01()
 
 	// Held quatsch oder auch nicht
 
-	if (hero.aivar[AIV_INVINCIBLE] == TRUE)
+	if (B_GetAivar(hero, AIV_INVINCIBLE) == TRUE)
 	|| (Mod_KampfLaeuft)
 	|| (CutsceneAn)
 	|| (playerIsTransformed)
@@ -2104,8 +1989,8 @@ FUNC VOID DAUERFUNC_01()
 		// Nur, wenn alle Bedingungen erfüllt sind, wird gespeichert
 
 		if (Mod_SaveOther == 0)				// Kein Gesprächspartner
-		&& (hero.aivar[AIV_Invincible] == FALSE)	// In keinem Gespräch
-		&& (Mod_QuatschtNichtCounter >= 5)		// Quatscht seit 5 Sekunden nicht (damit es nicht beim Beenden des Gespräches schon speichert)
+		&& (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)	// In keinem Gespräch
+		&& (Mod_QuatschtNichtCounter >= 3)		// Quatscht seit 5 Sekunden nicht (damit es nicht beim Beenden des Gespräches schon speichert)
 		&& (!Mod_KampfLaeuft)			// Nicht während Kämpfen
 		&& (!CutsceneAn)
 		&& (!playerIsTransformed)

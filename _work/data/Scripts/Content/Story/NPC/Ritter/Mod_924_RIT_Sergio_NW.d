@@ -40,7 +40,7 @@ instance Mod_924_RIT_Sergio_NW (Npc_Default)
 FUNC VOID Rtn_Start_924 ()
 {
 	TA_Pray_Innos  	(08,00,23,00,"NW_MONASTERY_CHAPELL_02");
-    TA_Pray_Innos 	(23,00,08,00,"NW_MONASTERY_CHAPELL_02");	
+	TA_Pray_Innos 	(23,00,08,00,"NW_MONASTERY_CHAPELL_02");	
 };
 
 FUNC VOID Rtn_Dragon_924 ()
@@ -53,4 +53,16 @@ FUNC VOID Rtn_DragonFight_924 ()
 {
 	TA_Follow_Player  	(08,00,23,00,"NW_FOREST_TO_DRAGON_07");
 	TA_Follow_Player 	(23,00,08,00,"NW_FOREST_TO_DRAGON_07");	
+};
+
+FUNC VOID Rtn_AtSee_924 ()
+{
+	TA_Stand_Guarding  	(08,00,23,00,"NW_LAKE__WATER_02");
+	TA_Stand_Guarding 	(23,00,08,00,"NW_LAKE__WATER_02");	
+};
+
+FUNC VOID Rtn_AtSee2_924 ()
+{
+	TA_Sit_Campfire  	(08,00,23,00,"NW_LAKE__WATER_02");
+	TA_Sit_Campfire 	(23,00,08,00,"NW_LAKE__WATER_02");	
 };

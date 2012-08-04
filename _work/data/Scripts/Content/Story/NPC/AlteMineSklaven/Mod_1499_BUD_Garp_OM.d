@@ -4,7 +4,7 @@ instance Mod_1499_BUD_Garp_OM (Npc_Default)
 	
 	name =							"Garp";
 	npctype =						npctype_main;
-	guild =							GIL_KDF;      
+	guild =							GIL_OUT;      
 	level =							5;
 	
 	

@@ -4,7 +4,7 @@ instance Mod_1076_VLK_Wirt_NW (Npc_Default)
 	name 		= "Wirt";
 	guild 		= GIL_PAL;
 	id 			= 1076;
-	voice 		= 14;
+	voice 		= 29;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -178,6 +178,42 @@ FUNC VOID Info_Mod_TeleportSteinkreisTafel_GreatSeaREL_Info()
 	};
 };
 
+INSTANCE Info_Mod_TeleportSteinkreisTafel_NLMT (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= Info_Mod_TeleportSteinkreisTafel_NLMT_Condition;
+	information	= Info_Mod_TeleportSteinkreisTafel_NLMT_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "zum großen See in Relendel";
+};
+
+FUNC INT Info_Mod_TeleportSteinkreisTafel_NLMT_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_TeleportSteinkreisTafel)
+	&& (Npc_GetDistToWP(hero, "OLDWORLDBERGE_50") > 500)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_TeleportSteinkreisTafel_NLMT_Info()
+{
+	B_ENDPRODUCTIONDIALOG();
+
+	if (CurrentLevel == MINENTAL_ZEN)
+	{
+		AI_Teleport	(hero, "OLDWORLDBERGE_50");
+	}
+	else
+	{
+		B_SetLevelchange ("Minental\Minental.zen", "OLDWORLDBERGE_50");
+
+		AI_Teleport	(hero, "OBELISKSCHREIN_WP");
+	};
+};
+
 INSTANCE Info_Mod_TeleportSteinkreisTafel_PassREL (C_INFO)
 {
 	npc		= PC_Hero;

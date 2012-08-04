@@ -24,44 +24,48 @@ instance MENU_OPT_CONTROLS(C_MENU_DEF)
 	items[11]		= "MENU_ITEM_KEY_WEAPON";
 	items[12]		= "MENU_ITEM_KEY_MAP";
 
-	items[13]		= "MENU_ITEM_KEY_LOOK";
-	items[14]		= "MENU_ITEM_KEY_LOOK_FP";
+	items[13]		= "MENU_ITEM_KEY_PRISMA";
 
-	items[15]		= "MENU_ITEM_KEY_INVENTORY";
-	items[16]		= "MENU_ITEM_KEY_SCREEN_STATUS";
-	items[17]		= "MENU_ITEM_KEY_SCREEN_LOG";
+	items[14]		= "MENU_ITEM_KEY_LOOK";
+	items[15]		= "MENU_ITEM_KEY_LOOK_FP";
+
+	items[16]		= "MENU_ITEM_KEY_INVENTORY";
+	items[17]		= "MENU_ITEM_KEY_SCREEN_STATUS";
+	items[18]		= "MENU_ITEM_KEY_SCREEN_LOG";
 
 	// Input
 
-	items[18]		= "MENU_ITEM_INP_UP";
-	items[19]		= "MENU_ITEM_INP_DOWN";
-	items[20]		= "MENU_ITEM_INP_LEFT";
-	items[21]		= "MENU_ITEM_INP_RIGHT";
-	items[22]		= "MENU_ITEM_INP_STRAFE_LEFT";
-	items[23]		= "MENU_ITEM_INP_STRAFE_RIGHT";
-	items[24]		= "MENU_ITEM_INP_JUMPCLIMBSTRAFE";
-	items[25]		= "MENU_ITEM_INP_RUNMODETOGGLE";
-	items[26]		= "MENU_ITEM_INP_SNEAK";
+	items[19]		= "MENU_ITEM_INP_UP";
+	items[20]		= "MENU_ITEM_INP_DOWN";
+	items[21]		= "MENU_ITEM_INP_LEFT";
+	items[22]		= "MENU_ITEM_INP_RIGHT";
+	items[23]		= "MENU_ITEM_INP_STRAFE_LEFT";
+	items[24]		= "MENU_ITEM_INP_STRAFE_RIGHT";
+	items[25]		= "MENU_ITEM_INP_JUMPCLIMBSTRAFE";
+	items[26]		= "MENU_ITEM_INP_RUNMODETOGGLE";
+	items[27]		= "MENU_ITEM_INP_SNEAK";
 
-	items[27]		= "MENU_ITEM_INP_ACTION";
-	items[28]		= "MENU_ITEM_INP_WEAPON";
-	items[29]		= "MENU_ITEM_INP_MAP";
+	items[28]		= "MENU_ITEM_INP_ACTION";
+	items[29]		= "MENU_ITEM_INP_WEAPON";
+	items[30]		= "MENU_ITEM_INP_MAP";
 
-	items[30]		= "MENU_ITEM_INP_LOOK";
-	items[31]		= "MENU_ITEM_INP_LOOK_FP";
+	items[31]		= "MENU_ITEM_INP_PRISMA";
 
-	items[32]		= "MENU_ITEM_INP_INVENTORY";
-	items[33]		= "MENU_ITEM_INP_SCREEN_STATUS";
-	items[34]		= "MENU_ITEM_INP_SCREEN_LOG";
+	items[32]		= "MENU_ITEM_INP_LOOK";
+	items[33]		= "MENU_ITEM_INP_LOOK_FP";
+
+	items[34]		= "MENU_ITEM_INP_INVENTORY";
+	items[35]		= "MENU_ITEM_INP_SCREEN_STATUS";
+	items[36]		= "MENU_ITEM_INP_SCREEN_LOG";
 
 	//
 
-	items[35]		= "MENU_ITEM_CHG_KEYS_SET_DEFAULT";
-	items[36]		= "MENU_ITEM_CHG_KEYS_SET_ALTERNATIVE";
+	items[37]		= "MENU_ITEM_CHG_KEYS_SET_DEFAULT";
+	items[38]		= "MENU_ITEM_CHG_KEYS_SET_ALTERNATIVE";
 
-	items[37]		= "MENUITEM_CHG_KEYS_BACK";
+	items[39]		= "MENUITEM_CHG_KEYS_BACK";
 
-	items[38]		= "MENU_ITEM_NEXTMENU";
+	items[40]		= "MENU_ITEM_NEXTMENU";
 
 
 	flags = flags | MENU_SHOW_INFO;
@@ -551,6 +555,18 @@ INSTANCE MENU_ITEM_KEY_MAP(C_MENU_ITEM_DEF)
 	flags = flags;
 };
 
+INSTANCE MENU_ITEM_KEY_PRISMA(C_MENU_ITEM_DEF)
+{
+	text[0]			=	"Prismabenutzung";
+	text[1]			=   "Taste ENTF zum Löschen und RETURN zum definieren"; // Kommentar
+	posx			=	ctrl_sp1_1;		posy	=	ctrl_y_start + ctrl_y_step * 13 + CTRL_GROUP2;
+
+	onSelAction[0]	=	SEL_ACTION_EXECCOMMANDS;
+	onSelAction_S[0]= 	"RUN MENU_ITEM_INP_PRISMA";
+	fontName 		= 	MENU_FONT_SMALL;
+	flags = flags;
+};
+
 //
 // Group 3 (view)
 //
@@ -818,6 +834,21 @@ INSTANCE MENU_ITEM_INP_MAP(C_MENU_ITEM_DEF)
 	flags		=	flags & ~IT_SELECTABLE;
 };
 
+INSTANCE MENU_ITEM_INP_PRISMA(C_MENU_ITEM_DEF)
+{
+	type		= 	MENU_ITEM_INPUT;
+	text[1] 	=   "Gewünschte Taste betätigen.";
+
+	posx		=	ctrl_sp1_2;	posy		=	ctrl_y_start + ctrl_y_step * 13 + CTRL_GROUP2;
+	dimx		=	ctrl_dimx;
+	dimy		=	300;
+	fontName 	= 	MENU_FONT_SMALL;
+	backPic		=	MENU_KBDINPUT_BACK_PIC;
+
+	onChgSetOption 			= "keyUsePrisma";
+	onChgSetOptionSection 	= "XERES";
+	flags		=	flags & ~IT_SELECTABLE;
+};
 //
 // Group 3 (view)
 //

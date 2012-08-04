@@ -10,7 +10,7 @@ FUNC VOID MAKERUNE_S1 ()
 	
 	if  (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))
 	{	
-		self.aivar[AIV_INVINCIBLE]=TRUE; 
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_MAKERUNE;
 		Ai_ProcessInfos (her);
 	};
@@ -483,7 +483,8 @@ FUNC INT PC_Scrolls_Condition ()
 	|| (PLAYER_TALENT_SCROLLS[SCROLL_Shrink] == TRUE)
 	|| (PLAYER_TALENT_SCROLLS[SCROLL_Light] == TRUE)
 	|| (PLAYER_TALENT_SCROLLS[SCROLL_HarmUndead] == TRUE)
-	|| (PLAYER_TALENT_SCROLLS[SCROLL_Zap] == TRUE))
+	|| (PLAYER_TALENT_SCROLLS[SCROLL_Zap] == TRUE)
+	|| (PLAYER_TALENT_SCROLLS[SCROLL_AuraFlammen] == TRUE))
 	{
 		return TRUE;
 	};
@@ -637,6 +638,10 @@ FUNC VOID PC_Scrolls_Info()
 	if (PLAYER_TALENT_SCROLLS[SCROLL_BeliarsRage] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Scrolls, "Berliars Zorn", PC_ItSc_BeliarsRage);
+	};
+	if (PLAYER_TALENT_SCROLLS[SCROLL_AuraFlammen] == TRUE)
+	{
+		Info_AddChoice 	  (PC_Scrolls, "Aura der Flammen", PC_ItSc_AuraFlammen);
 	};
 	if (PLAYER_TALENT_SCROLLS[SCROLL_ArmyOfDarkness] == TRUE)
 	{
@@ -2786,6 +2791,43 @@ FUNC VOID PC_ItSc_Shrink ()
 	B_ENDPRODUCTIONDIALOG ();
 };
 
+FUNC VOID PC_ItSc_AuraFlammen ()
+{
+	if (Npc_HasItems(hero, ItWr_Paper) >= 1)	
+	&& (Npc_HasItems(hero, ItSc_Firerain) >= 1)
+	&& (Npc_HasItems(hero, ItSc_Pyrokinesis) >= 1)
+	&& (Npc_HasItems(hero, ItAt_DemonHeart) >= 1)
+	&& (Npc_HasItems(hero, ItAt_FiregolemHeart) >= 1)
+	&& (Npc_HasItems(hero, ItAt_WaranFiretongue) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Coal) >= 3)
+	&& (Npc_HasItems(hero, ItMi_Pitch) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Sulfur) >= 2)
+	{
+		Npc_RemoveInvItems  (hero, ItWr_Paper, 1);
+
+		Npc_RemoveInvItems  (hero, ItSc_Firerain, 1);
+		Npc_RemoveInvItems  (hero, ItSc_Pyrokinesis, 1);
+		Npc_RemoveInvItems  (hero, ItAt_DemonHeart, 1);
+		Npc_RemoveInvItems  (hero, ItAt_FiregolemHeart, 1);
+		Npc_RemoveInvItems  (hero, ItAt_WaranFiretongue, 1);
+		Npc_RemoveInvItems  (hero, ItMi_Coal, 3);
+		Npc_RemoveInvItems  (hero, ItMi_Pitch, 1);
+		Npc_RemoveInvItems  (hero, ItMi_Sulfur, 2);
+		
+		CreateInvItems 	    (hero, ItSc_AuraFlammen, 1); 
+
+		Print (PRINT_RuneSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+	};
+	
+	CreateInvItems (self, ItMi_RuneBlank, 1);
+	
+	B_ENDPRODUCTIONDIALOG ();
+};
+
 INSTANCE PC_Verbessern_Obelisk (C_Info)
 {
 	npc				= PC_Hero;
@@ -2834,6 +2876,11 @@ FUNC VOID PC_Verbessern_Obelisk_Info()
 	&& (Mod_TeleportBergfestung == FALSE)
 	{
 		Info_AddChoice 	  (PC_Verbessern_Obelisk, "Teleport zur Bergfestung", PC_Verbessern_Obelisk_Bergfestung);
+	};
+	if (Npc_HasItems(hero, ItRu_TeleportBeliarfestung) >= 1)
+	&& (Mod_TeleportBeliarfestung == FALSE)
+	{
+		Info_AddChoice 	  (PC_Verbessern_Obelisk, "Teleport zur Beliarfestung", PC_Verbessern_Obelisk_Beliarfestung);
 	};
 	if (Npc_HasItems(hero, ItRu_TeleportWaldis) >= 1)
 	&& (Mod_TeleportWaldis == FALSE)
@@ -3123,6 +3170,13 @@ FUNC VOID PC_Verbessern_Obelisk_Bergfestung()
 	Npc_RemoveInvItems	(hero, ItRu_TeleportBergfestung, 1);
 
 	Mod_TeleportBergfestung = TRUE;
+};
+
+FUNC VOID PC_Verbessern_Obelisk_Beliarfestung()
+{
+	Npc_RemoveInvItems	(hero, ItRu_TeleportBeliarfestung, 1);
+
+	Mod_TeleportBeliarfestung = TRUE;
 };
 
 FUNC VOID PC_Verbessern_Obelisk_Seaport()

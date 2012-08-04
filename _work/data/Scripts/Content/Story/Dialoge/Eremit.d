@@ -468,6 +468,7 @@ FUNC INT Info_Mod_Eremit_Prisma8_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Eremit_Prisma6))
 	&& (Npc_HasItems(hero, ItSc_BeliarsRage) == 0)
+	&& (Mod_PrismaRitual_Counter < 80)
 	{
 		return 1;
 	};
@@ -530,7 +531,7 @@ FUNC VOID Info_Mod_Eremit_Prisma9_Info()
 	B_SetTopicStatus	(TOPIC_MOD_MAGIEPRISMA, LOG_SUCCESS);
 
 	Log_CreateTopic	(TOPIC_MOD_PRISMA, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_PRISMA, "Wenn das Prisma angelegt ist und der Held einen Schadenszauber spricht, wird das Prisma aufgeladen. Das Prisma kann vier Zaubersprüche gleichzeitig aufnehmen. Das Prisma kann durch Drücken der Taste 'F' ausgelöst werden und streut dann den Schaden der vier Zauber auf umliegende Gegner.");
+	B_LogEntry	(TOPIC_MOD_PRISMA, "Wenn das Prisma angelegt ist und der Held einen Schadenszauber spricht, wird das Prisma aufgeladen. Das Prisma kann vier Zaubersprüche gleichzeitig aufnehmen. Das Prisma kann durch Drücken der ihm zu gewiesenen Taste ausgelöst werden und streut dann den Schaden der vier Zauber auf umliegende Gegner.");
 
 	AI_StopProcessInfos	(self);
 
@@ -878,7 +879,8 @@ INSTANCE Info_Mod_Eremit_PreLehrer (C_INFO)
 
 FUNC INT Info_Mod_Eremit_PreLehrer_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Eremit_Hi))
+	if (Npc_KnowsInfo(hero, Info_Mod_Eremit_Prisma))
+	&& (Npc_GetDistToWP(self, "ADW_VALLEY_BENCH") < 2000)
 	{
 		return 1;
 	};
@@ -1079,12 +1081,12 @@ INSTANCE Info_Mod_Eremit_Pickpocket (C_INFO)
 	information	= Info_Mod_Eremit_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Eremit_Pickpocket_Condition()
 {
-	C_Beklauen	(80, ItMi_Gold, 10);
+	C_Beklauen	(80, ItWr_HitPointStonePlate2_Addon, 1);
 };
 
 FUNC VOID Info_Mod_Eremit_Pickpocket_Info()
@@ -1102,8 +1104,88 @@ FUNC VOID Info_Mod_Eremit_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Eremit_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Eremit_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Eremit_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Eremit_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Eremit_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Eremit_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Eremit_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Eremit_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Eremit_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Eremit_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Eremit_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Eremit_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Eremit_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Eremit_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Eremit_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Eremit_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Eremit_EXIT (C_INFO)

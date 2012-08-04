@@ -20,8 +20,8 @@ FUNC VOID Info_Mod_Orlan_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Orlan_Hi_05_01"); //Willkommen in meiner Taverne, Fremder.
 	AI_Output(self, hero, "Info_Mod_Orlan_Hi_05_02"); //Was kann ich für dich tun? Brauchst du was zu trinken? Oder suchst du vielleicht ein Bett für die Nacht?
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_OHNELAGER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_OHNELAGER, "Orlan kann mir was zu trinken verkaufen und mir ein Zimmer vermieten.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_OHNELAGER, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_OHNELAGER, "Orlan kann mir was zu trinken verkaufen und mir ein Zimmer vermieten.");
 };
 
 INSTANCE Info_Mod_Orlan_DunklerPilger (C_INFO)
@@ -145,7 +145,7 @@ FUNC VOID Info_Mod_Orlan_Daemonisch_Info()
 
 	B_GivePlayerXP	(100);
 
-	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Von Orlan habe ich erfahren, dass Rukhar zu Tode gekommen ist. Er hatte einige Bürger, Bauern und Novizen, von denen in letzter Zeit viele in die Taverne kommen, abends nach draußen – in eine Höhle, oder so - begleitet und zuvor viel Klosterwein getrunken. Er kam alleine schreiend zurück gerannt und soll irgendwas von schwarzen Schatten und Schreien berichtet haben, seine Begleiter kamen etwas später nach. Am nächsten morgen war er tot. Außerdem erzählte Orlan, dass kaum jemand mehr Klosterwein trinkt, jedoch erstaunlich viel gegessen wird. Trotzdem erscheinen viele der Besucher sehr ausgemergelt ...");
+	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Von Orlan habe ich erfahren, dass Rukhar zu Tode gekommen ist. Er hatte einige Bürger, Bauern und Novizen, von denen in letzter Zeit viele in die Taverne kommen, abends nach draußen - in eine Höhle, oder so - begleitet und zuvor viel Klosterwein getrunken. Er kam alleine schreiend zurück gerannt und soll irgendwas von schwarzen Schatten und Schreien berichtet haben, seine Begleiter kamen etwas später nach. Am nächsten morgen war er tot. Außerdem erzählte Orlan, dass kaum jemand mehr Klosterwein trinkt, jedoch erstaunlich viel gegessen wird. Trotzdem erscheinen viele der Besucher sehr ausgemergelt ...");
 };
 
 INSTANCE Info_Mod_Orlan_Daemonisch2 (C_INFO)
@@ -278,7 +278,7 @@ INSTANCE Info_Mod_Orlan_Pedro (C_INFO)
 FUNC INT Info_Mod_Orlan_Pedro_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Orlan_Hi))
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Parlan_Ring_Zurück))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Parlan_Ring_Zurueck))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Dragomir_Pedro))
 	{
 		return 1;
@@ -576,12 +576,12 @@ INSTANCE Info_Mod_Orlan_Pickpocket (C_INFO)
 	information	= Info_Mod_Orlan_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Orlan_Pickpocket_Condition()
 {
-	C_Beklauen	(53, ItMi_Gold, 180);
+	C_Beklauen	(63, ItFo_Wine, 5);
 };
 
 FUNC VOID Info_Mod_Orlan_Pickpocket_Info()
@@ -599,8 +599,88 @@ FUNC VOID Info_Mod_Orlan_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Orlan_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Orlan_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Orlan_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Orlan_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Orlan_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Orlan_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Orlan_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Orlan_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Orlan_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Orlan_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Orlan_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Orlan_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Orlan_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Orlan_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Orlan_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Orlan_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Orlan_EXIT (C_INFO)

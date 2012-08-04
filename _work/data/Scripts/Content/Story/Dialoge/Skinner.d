@@ -98,25 +98,21 @@ FUNC VOID Info_Mod_Skinner_Laufbursche_Info()
 	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_00"); //Achja, fast hätte ich es noch vergessen. Ich habe da noch was schönes, was du Myxir vorbeibringen sollst. Er experimentiert gerade an irgendwelchen neuen Beschwörungszaubern.
 	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_01"); //Erst mal einige Skelettknochen ...
 
-	CreateInvItems	(self, ItAt_SkeletonBone, 20);
 	B_GiveInvItems	(self, hero, ItAt_SkeletonBone, 20);
 
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche_15_02"); //Aha ...
 	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_03"); //... paar Goblinknochen ...
 
-	CreateInvItems	(self, ItAt_GoblinBone, 14);
 	B_GiveInvItems	(self, hero, ItAt_GoblinBone, 14);
 
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche_15_04"); //Schön ...
 	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_05"); //... Totenschädel ...
 
-	CreateInvItems	(self, ItAt_SkeletonHead, 4);
 	B_GiveInvItems	(self, hero, ItAt_SkeletonHead, 4);
 
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche_15_06"); //Was noch?
 	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_07"); //... zwei Köpfe ...
 
-	CreateInvItems	(self, ItMi_Addon_Bloodwyn_Kopf, 2);
 	B_GiveInvItems	(self, hero, ItMi_Addon_Bloodwyn_Kopf, 2);
 
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche_15_08"); //Wie nett ...
@@ -480,6 +476,9 @@ FUNC VOID Info_Mod_Skinner_Lehrer_Info()
 	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
 
 	AI_Output(self, hero, "Info_Mod_Skinner_Lehrer_08_01"); //Ich kann dir den Umgang mit Einhändern beibringen.
+
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_BANDITEN, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_BANDITEN, "Skinner kann mich im Umgang mit Einhändern unterweisen.");
 };
 
 INSTANCE Info_Mod_Skinner_Lernen (C_INFO)
@@ -550,7 +549,7 @@ INSTANCE Info_Mod_Skinner_Pickpocket (C_INFO)
 	information	= Info_Mod_Skinner_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Skinner_Pickpocket_Condition()
@@ -573,8 +572,88 @@ FUNC VOID Info_Mod_Skinner_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Skinner_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Skinner_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Skinner_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Skinner_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Skinner_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Skinner_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Skinner_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Skinner_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Skinner_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Skinner_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Skinner_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Skinner_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Skinner_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Skinner_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Skinner_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Skinner_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Skinner_EXIT (C_INFO)

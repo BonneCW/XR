@@ -23,6 +23,13 @@ FUNC VOID Info_Mod_Gardist_Zuflucht_01_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Gardist_Zuflucht_01_Hi_13_01"); //In Ordnung, ich mach mich sofort auf den Weg.
 
 	B_StartOtherRoutine	(self, "PSICAMP");
+
+	Mod_AL_ZufluchtCounter += 1;
+
+	if (Mod_AL_ZufluchtCounter == 7)
+	{
+		B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Ich hab' alle Gardisten informiert. Jetzt sollte ich zum Sumpflager aufbrechen.");
+	};
 };
 
 INSTANCE Info_Mod_Gardist_Zuflucht_01_EXIT (C_INFO)

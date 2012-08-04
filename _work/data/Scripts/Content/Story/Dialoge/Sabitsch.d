@@ -272,7 +272,7 @@ FUNC VOID Info_Mod_Sabitsch_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			if (Mod_SabitschHatteRing == TRUE)
 			{
@@ -286,7 +286,7 @@ FUNC VOID Info_Mod_Sabitsch_Umgehauen_Info()
 
 			Mod_SabitschArenaLooser = TRUE;
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Sabitsch_Umgehauen_04_03"); //Bist wohl doch nur ein Groﬂmaul.
 		};

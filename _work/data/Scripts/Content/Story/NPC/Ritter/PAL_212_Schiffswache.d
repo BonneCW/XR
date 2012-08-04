@@ -1,5 +1,4 @@
- 
-instance Pal_212_Schiffswache (Npc_Default)
+INSTANCE Pal_212_Schiffswache (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= NAME_Schiffswache;
@@ -42,11 +41,17 @@ FUNC VOID Rtn_Start_212 ()
 {
 	TA_Guard_Passage	(08,00,01,00,"NW_CITY_SHIP_GUARD_02");
 	TA_Sit_Chair (01,00,02,00,"NW_CITY_HABOUR_TAVERN01_04");	
-    TA_Guard_Passage	(02,00,08,00,"NW_CITY_SHIP_GUARD_02");	
+	TA_Guard_Passage	(02,00,08,00,"NW_CITY_SHIP_GUARD_02");	
 };
 
 FUNC VOID Rtn_ShipFree_212 ()
 {
 	TA_Smalltalk	(08,00,23,00,"NW_CITY_PALCAMP_01");
-    TA_Smalltalk	(23,00,08,00,"NW_CITY_PALCAMP_01");	
+	TA_Smalltalk	(23,00,08,00,"NW_CITY_PALCAMP_01");	
+};
+
+FUNC VOID Rtn_Tot_212 ()
+{
+	TA_Smalltalk	(08,00,23,00,"TOT");
+	TA_Smalltalk	(23,00,08,00,"TOT");	
 };

@@ -44,7 +44,7 @@ INSTANCE Info_Mod_Bandenmitglied1_Umgehauen (C_INFO)
 FUNC INT Info_Mod_Bandenmitglied1_Umgehauen_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Bandenmitglied1_Hi))
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 	{
 		return 1;
 	};

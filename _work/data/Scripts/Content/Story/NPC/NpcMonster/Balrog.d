@@ -46,10 +46,9 @@ INSTANCE Balrog_Plateau	(Mst_Default_Firegolem)
 	aivar[AIV_MM_FollowTime]	= FOLLOWTIME_MEDIUM;
 	aivar[AIV_MM_FollowInWater] = FALSE;
 	
-	Mdl_SetVisual			(self,	"Golem.mds");
-	Mdl_ApplyOverlayMds 	(self,	"Golem_Firegolem.mds");
+	Mdl_SetVisual			(self,	"Balrog.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Gol_Fire_Body",DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"Balrog_Body",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 
 	daily_routine = Rtn_Start_7194;
 	

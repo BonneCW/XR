@@ -7,7 +7,7 @@ instance Mod_1211_TPL_Templer_MT (Npc_Default)
 	level =							17;
 	flags =							0;
 	
-	voice =							8;
+	voice =							29;
 	id =							1211;
 		
 	//-------- abilities --------

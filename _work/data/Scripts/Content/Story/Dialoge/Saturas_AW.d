@@ -41,7 +41,7 @@ FUNC VOID Info_Mod_Saturas_AW_Hi_Info()
 
 	AI_StopProcessInfos	(self);
 
-	Npc_ExchangeRoutine	(self, "GUIDETOFOKUS");
+	B_StartOtherRoutine	(self, "GUIDETOFOKUS");
 
 	B_StartOtherRoutine	(Mod_9002_KDW_Nefarius_AW, "INTEMPEL");
 };
@@ -337,6 +337,14 @@ FUNC VOID Info_Mod_Saturas_AW_Magieschranke_Info()
 	AI_Output(self, hero, "Info_Mod_Saturas_AW_Magieschranke_14_01"); //Eine was?
 	AI_Output(hero, self, "Info_Mod_Saturas_AW_Magieschranke_15_02"); //(seufzt) Schon gut. Du kennst auch niemanden, der davon Ahnung haben könnte?
 	AI_Output(self, hero, "Info_Mod_Saturas_AW_Magieschranke_14_03"); //Die Chance, dass ein anderer Wassermagier sich damit auskennt, ist sehr gering, wenn ich noch nie davon gehört habe.
+
+	AI_TurnAway	(hero, self);
+
+	AI_Output(hero, self, "Info_Mod_Saturas_AW_Magieschranke_15_04"); //Den Magiern ist dieses Land fast genau so fremd wie mir. Zur magischen Markierung werden sie nichts wissen. Aber weil ich gerade an mysteriöse Magie denke - was meint eigentlich Argez dazu?
+
+	AI_TurnToNpc	(hero, self);
+
+	B_LogEntry	(TOPIC_MOD_MAGISCHEMARKIERUNG, "Saturas und wohl auch alle anderen Magier kennen keine Möglichkeit, eine magische Markierung loszuwerden. Vielleicht sollte ich Argez um Rat fragen ...");
 };
 
 INSTANCE Info_Mod_Saturas_AW_HabFoki (C_INFO)
@@ -1234,12 +1242,12 @@ INSTANCE Info_Mod_Saturas_AW_Pickpocket (C_INFO)
 	information	= Info_Mod_Saturas_AW_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Saturas_AW_Pickpocket_Condition()
 {
-	C_Beklauen	(116, ItMi_Gold, 1200);
+	C_Beklauen	(176, ItMi_Gold, 1200);
 };
 
 FUNC VOID Info_Mod_Saturas_AW_Pickpocket_Info()
@@ -1257,8 +1265,88 @@ FUNC VOID Info_Mod_Saturas_AW_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Saturas_AW_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Saturas_AW_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Saturas_AW_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Saturas_AW_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Saturas_AW_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Saturas_AW_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Saturas_AW_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Saturas_AW_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Saturas_AW_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Saturas_AW_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Saturas_AW_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Saturas_AW_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Saturas_AW_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Saturas_AW_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Saturas_AW_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Saturas_AW_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Saturas_AW_EXIT (C_INFO)

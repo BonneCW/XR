@@ -105,6 +105,38 @@ INSTANCE ItRu_PalLight (C_Item)
 	COUNT	[5]			=	value;
 }; 
 
+INSTANCE ItRu_KristallPrisma (C_Item)
+{
+	name 				=	NAME_Rune;
+
+	mainflag 			=	ITEM_KAT_RUNE;
+	flags 				=	0;
+
+	value 				=	Value_Ru_PalLight;
+
+	visual				=	"IT_INNOSCRYSTAL_01.3ds";
+	material			=	MAT_STONE;
+
+	spell				= 	SPL_AuraFlammen;
+	
+
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_WEAKGLIMMER";
+
+	description			=	"Kristall des Feuers";
+		
+	TEXT	[0]			=	"Der Prismen-Kristall scheint sich verändert zu haben";
+		
+	TEXT	[1]			=	NAME_Manakosten;		
+	COUNT	[1]			=	SPL_Cost_AuraFlammen;
+	
+	TEXT	[2]			=	NAME_Sec_Duration;		
+	COUNT	[2]			=	15;
+	
+	TEXT	[5]			=	NAME_Value;				
+	COUNT	[5]			=	value;
+}; 
+
 INSTANCE ItMi_AbsorbKristall (C_Item)
 {
 	name 				=	"Kristall der Absorption";
@@ -311,7 +343,7 @@ INSTANCE ItRu_TrfRabbit (C_Item)
 
 	value 				=	20;
 
-	visual				=	"ItRu_PalLight.3ds";
+	visual				=	"ItRu_TrfRabbit.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TRFSKELETON;
@@ -631,6 +663,32 @@ INSTANCE ItRu_TeleportUW (C_Item)
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
 	description			= 	"Teleport zu Xeres";
+	
+	TEXT	[1]			=	NAME_Manakosten;			
+	COUNT	[1]			=	SPL_COST_TELEPORT;
+	TEXT	[5]			=	NAME_Value;					
+	COUNT	[5]			=	value;
+};
+/*******************************************************************************************/
+INSTANCE ItRu_TeleportGDG (C_Item) 
+{
+	name 				=	NAME_Rune;
+
+	mainflag 			=	ITEM_KAT_RUNE;
+	flags 				=	0;
+	
+	value				=	Value_Ru_PalTeleportSecret;
+	
+	visual				=	"ItRu_PalTeleportSecret.3DS";	
+	material			=	MAT_STONE;
+
+	spell				= 	SPL_TeleportGDG;
+
+
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	"Teleport zur Burg";
 	
 	TEXT	[1]			=	NAME_Manakosten;			
 	COUNT	[1]			=	SPL_COST_TELEPORT;
@@ -959,6 +1017,33 @@ INSTANCE ItRu_TeleportRELPass (C_Item)
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
 	description			= 	NAME_SPL_TeleportRELPass;
+	
+	
+	TEXT	[1]			=	NAME_Manakosten;			
+	COUNT	[1]			=	SPL_COST_TELEPORT;
+	TEXT	[5]			=	NAME_Value;					
+	COUNT	[5]			=	value;
+};
+/*******************************************************************************************/
+INSTANCE ItRu_TeleportBeliarfestung (C_Item) 
+{
+	name 				=	NAME_Rune;
+
+	mainflag 			=	ITEM_KAT_RUNE;
+	flags 				=	0;
+	
+	value 				=	Value_Ru_TeleportFarm;
+	
+	visual				=	"ItRu_TeleportFarm.3ds";	
+	material			=	MAT_STONE;
+
+	spell				= 	SPL_TeleportBeliarfestung;
+
+
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	NAME_SPL_TeleportBeliarfestung;
 	
 	
 	TEXT	[1]			=	NAME_Manakosten;			
@@ -2146,7 +2231,7 @@ INSTANCE ItRu_Eisklinge (C_Item)
 
 	value 				=	Value_Ru_Sleep;
 
-	visual				=	"ItRu_Sleep.3ds";
+	visual				=	"ItRu_Eisklinge.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_EISKLINGE;

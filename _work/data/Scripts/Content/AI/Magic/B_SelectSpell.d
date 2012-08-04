@@ -414,15 +414,15 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 
 			B_ReadySpell (slf, SPL_LightHeal, SPL_Cost_LightHeal);
 		}
-		else if (slf.attribute[ATR_MANA] >= SPL_Cost_Windfist)
+		else if (slf.attribute[ATR_MANA] >= SPL_Cost_Waterfist)
 		&& (slf.attribute[ATR_HITPOINTS] >= (self.attribute[ATR_HITPOINTS_MAX] / 4))
 		{
-			if (Npc_HasItems (slf, ItRu_Windfist) == 0)
+			if (Npc_HasItems (slf, ItRu_Waterfist) == 0)
 			{
-				CreateInvItems (slf, ItRu_Windfist, 1);
+				CreateInvItems (slf, ItRu_Waterfist, 1);
 			};
 
-			B_ReadySpell (slf, SPL_Windfist, SPL_Cost_Windfist);
+			B_ReadySpell (slf, SPL_Waterfist, SPL_Cost_Waterfist);
 		}
 		else
 		{
@@ -1098,7 +1098,6 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_843_DMB_Xardas_GDG))
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_6007_DMB_Andokai_GDG))
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_6008_DMB_Karras_GDG))
-	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_1896_DMB_Karras_MT))
 	{
 		if (slf.attribute[ATR_HITPOINTS] < (slf.attribute[ATR_HITPOINTS_MAX] / 4))
 		&& (slf.attribute[ATR_MANA] >= SPL_Cost_FullHeal)

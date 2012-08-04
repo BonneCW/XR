@@ -432,6 +432,171 @@ INSTANCE Lesser_Skeleton	(Mst_Default_Skeleton)
 	EquipItem (self, ItMw_1h_MISC_Sword);
 };
 
+INSTANCE Lesser_Skeleton_Diebe_01	(Mst_Default_Skeleton)
+{
+	name							=	"Niederes Skelett";
+	
+	level							=	15;
+
+	//----- Attribute ----	
+	attribute	[ATR_STRENGTH]		=	45; //+30 Waffe
+	attribute	[ATR_DEXTERITY]		=	75;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	//----- Protection ----
+	protection	[PROT_BLUNT]		=	40000;
+	protection	[PROT_EDGE]			=	80000;
+	protection	[PROT_POINT]		=	130000; 
+	protection	[PROT_FIRE]			=	80;
+	protection	[PROT_FLY]			=	80;
+
+	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
+	
+	fight_tactic	=	FAI_HUMAN_NORMAL;
+	
+	// ------ visual ------
+	B_SetVisuals_Lesser_Skeleton();
+
+	protection	[PROT_POINT]		=	-1; 
+	// ------ Waffe ------
+	EquipItem (self, ItMw_1h_MISC_Sword);
+};
+
+INSTANCE Lesser_Skeleton_Diebe_02	(Mst_Default_Skeleton)
+{
+	name							=	"Niederes Skelett";
+	
+	level							=	15;
+
+	//----- Attribute ----	
+	attribute	[ATR_STRENGTH]		=	45; //+30 Waffe
+	attribute	[ATR_DEXTERITY]		=	75;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	//----- Protection ----
+	protection	[PROT_BLUNT]		=	40000;
+	protection	[PROT_EDGE]			=	80000;
+	protection	[PROT_POINT]		=	130000; 
+	protection	[PROT_FIRE]			=	80;
+	protection	[PROT_FLY]			=	80;
+
+	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
+	
+	fight_tactic	=	FAI_HUMAN_NORMAL;
+	
+	// ------ visual ------
+	B_SetVisuals_Lesser_Skeleton();
+
+	protection	[PROT_POINT]		=	-1; 
+	// ------ Waffe ------
+	EquipItem (self, ItMw_1h_MISC_Sword);
+};
+
+INSTANCE Lesser_Skeleton_Diebe_03	(Mst_Default_Skeleton)
+{
+	name							=	"Niederes Skelett";
+	
+	level							=	15;
+
+	//----- Attribute ----	
+	attribute	[ATR_STRENGTH]		=	45; //+30 Waffe
+	attribute	[ATR_DEXTERITY]		=	75;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	//----- Protection ----
+	protection	[PROT_BLUNT]		=	40000;
+	protection	[PROT_EDGE]			=	80000;
+	protection	[PROT_POINT]		=	130000; 
+	protection	[PROT_FIRE]			=	80;
+	protection	[PROT_FLY]			=	80;
+
+	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
+	
+	fight_tactic	=	FAI_HUMAN_NORMAL;
+	
+	// ------ visual ------
+	B_SetVisuals_Lesser_Skeleton();
+
+	protection	[PROT_POINT]		=	-1; 
+	// ------ Waffe ------
+	EquipItem (self, ItMw_1h_MISC_Sword);
+};
+
+INSTANCE Lesser_Skeleton_Diebe_04	(Mst_Default_Skeleton)
+{
+	name							=	"Niederes Skelett";
+	
+	level							=	15;
+
+	//----- Attribute ----	
+	attribute	[ATR_STRENGTH]		=	45; //+30 Waffe
+	attribute	[ATR_DEXTERITY]		=	75;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	//----- Protection ----
+	protection	[PROT_BLUNT]		=	40000;
+	protection	[PROT_EDGE]			=	80000;
+	protection	[PROT_POINT]		=	130000; 
+	protection	[PROT_FIRE]			=	80;
+	protection	[PROT_FLY]			=	80;
+
+	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
+	
+	fight_tactic	=	FAI_HUMAN_NORMAL;
+	
+	// ------ visual ------
+	B_SetVisuals_Lesser_Skeleton();
+
+	protection	[PROT_POINT]		=	-1; 
+	// ------ Waffe ------
+	EquipItem (self, ItMw_1h_MISC_Sword);
+};
+
+INSTANCE Lesser_Skeleton_Diebe_05	(Mst_Default_Skeleton)
+{
+	name							=	"Niederes Skelett";
+	
+	level							=	15;
+
+	//----- Attribute ----	
+	attribute	[ATR_STRENGTH]		=	45; //+30 Waffe
+	attribute	[ATR_DEXTERITY]		=	75;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	//----- Protection ----
+	protection	[PROT_BLUNT]		=	40000;
+	protection	[PROT_EDGE]			=	80000;
+	protection	[PROT_POINT]		=	130000; 
+	protection	[PROT_FIRE]			=	80;
+	protection	[PROT_FLY]			=	80;
+
+	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
+	
+	fight_tactic	=	FAI_HUMAN_NORMAL;
+	
+	// ------ visual ------
+	B_SetVisuals_Lesser_Skeleton();
+
+	protection	[PROT_POINT]		=	-1; 
+	// ------ Waffe ------
+	EquipItem (self, ItMw_1h_MISC_Sword);
+};
+
 
 INSTANCE Skeleton_DienerDesBoesen_01_01			(Mst_Default_Skeleton)
 {

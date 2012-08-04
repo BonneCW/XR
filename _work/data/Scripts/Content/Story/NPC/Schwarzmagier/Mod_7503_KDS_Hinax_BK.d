@@ -1,7 +1,7 @@
 instance Mod_7503_KDS_Hinax_MT (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Hinax"; 
+	name 		= "Schwarzmagier"; 
 	guild 		= GIL_KDF;
 	id 			= 7503;
 	voice 		= 11;

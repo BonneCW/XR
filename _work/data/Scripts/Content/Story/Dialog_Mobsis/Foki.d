@@ -5,7 +5,7 @@ FUNC VOID Fokus1_S1 ()
 	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	&& (FokusBlockade == FALSE)
 	{	
-		self.aivar[AIV_INVINCIBLE]=TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_Fokus1;
 		Ai_ProcessInfos (her);
 	}
@@ -42,8 +42,6 @@ FUNC VOID B_ActivateFokus ()
 	};
 
 	B_ENDPRODUCTIONDIALOG();
-
-	hero.aivar[AIV_INVINCIBLE] = FALSE;
 
 	PLAYER_MOBSI_PRODUCTION = 0;
 
@@ -112,7 +110,7 @@ FUNC VOID Fokus2_S1 ()
 	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	&& (FokusBlockade == FALSE)
 	{	
-		self.aivar[AIV_INVINCIBLE]=TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_Fokus2;
 		Ai_ProcessInfos (her);
 	}
@@ -163,7 +161,7 @@ FUNC VOID Fokus3_S1 ()
 	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	&& (FokusBlockade == FALSE)
 	{	
-		self.aivar[AIV_INVINCIBLE]=TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_Fokus3;
 		Ai_ProcessInfos (her);
 	}
@@ -213,7 +211,7 @@ FUNC VOID Fokus4_S1 ()
 	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	&& (FokusBlockade == FALSE)
 	{	
-		self.aivar[AIV_INVINCIBLE]=TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_Fokus4;
 		Ai_ProcessInfos (her);
 	}
@@ -263,7 +261,7 @@ FUNC VOID Fokus5_S1 ()
 	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	&& (FokusBlockade == FALSE)
 	{	
-		self.aivar[AIV_INVINCIBLE]=TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_Fokus5;
 		Ai_ProcessInfos (her);
 	}

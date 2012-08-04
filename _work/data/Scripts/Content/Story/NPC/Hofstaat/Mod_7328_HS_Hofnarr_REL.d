@@ -4,7 +4,7 @@ INSTANCE Mod_7328_HS_Hofnarr_REL (Npc_Default)
 	name 		= "Königlicher Hofnarr"; 
 	guild 		= GIL_OUT;
 	id 			= 7328;
-	voice 		= 4;
+	voice 		= 27;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

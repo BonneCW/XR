@@ -786,18 +786,26 @@ FUNC VOID Info_Mod_Wendel_Plagenquest_02_Info()
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_03"); //Jeder hatte die Pflicht eine bestimmte Anzahl an Tieren zu opfern.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_04"); //Einer ihrer Gründerväter war jedoch so geizig, dass er nicht Schafe oder Molerat, sondern Insekten opferte.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_05"); //Die Götter waren darüber so erzürnt, dass sie den Wunsch der Menschen nach reicher Tierpopulation vor allem auf die Insekten der Umgebung übertrugen.
+
 	B_Say	(hero, self, "$PLAGENQUEST04");
+
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_07"); //Nun, mit der chemischen Keule.
+
 	B_Say	(hero, self, "$PLAGENQUEST05");
+
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_09"); //Ja, lange Zeit war man völlig ratlos und es schien so, als müsse man die Stadt aufgeben.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_10"); //Doch dann wurde einem rechtschaffenden und ehrbaren Bürger namens Chemos ein Traum gesandt.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_11"); //Er erhielt die Anleitung zum Bau einer Waffe, welche die Plagegeister bannen konnte.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_12"); //Daher muss auch unser Brauch mit den Stadthämmern zum Kampf gegen die Insekten kommen.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_13"); //Damals unterschieden sich Hämmer und Keulen nämlich noch nicht grundlegend.
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_14"); //Unser Gesetz dazu stammt erst aus etwas späterer Zeit, als die Hämmer ihre charakteristische Form erhielten und die Keulen aus praktischen Gründen ablösten.
+
 	B_Say	(hero, self, "$PLAGENQUEST06");
+
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_16"); //Nein, leider nicht mehr. Und die Anfertigung einer solchen Waffe ist nicht ganz unkompliziert. Ich habe die Anleitung gefunden ...
+
 	B_Say	(hero, self, "$PLAGENQUEST07");
+
 	AI_Output(self, hero, "Info_Mod_Wendel_Plagenquest_02_01_18"); //Hier hast du eine Abschrift davon.
 
 	B_GiveInvItems	(self, hero, ItWr_Bauplan_ChemischeKeule, 1);
@@ -1038,12 +1046,12 @@ INSTANCE Info_Mod_Wendel_Pickpocket (C_INFO)
 	information	= Info_Mod_Wendel_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Wendel_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 500);
+	C_Beklauen	(79, ItMi_Gold, 230);
 };
 
 FUNC VOID Info_Mod_Wendel_Pickpocket_Info()
@@ -1061,8 +1069,88 @@ FUNC VOID Info_Mod_Wendel_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Wendel_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Wendel_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Wendel_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Wendel_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Wendel_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Wendel_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Wendel_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Wendel_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Wendel_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Wendel_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Wendel_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Wendel_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Wendel_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Wendel_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Wendel_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Wendel_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Wendel_EXIT (C_INFO)

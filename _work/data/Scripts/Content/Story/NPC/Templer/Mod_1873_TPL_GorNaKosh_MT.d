@@ -29,10 +29,7 @@ instance Mod_1873_TPL_GorNaKosh_MT (Npc_Default)
 	
 	//-------- inventory --------
 	
-	EquipItem (self, ItMw_2H_Sword_Light_02);
-	CreateInvItems (self, ItMi_Joint, 10);
-	
-	
+	EquipItem (self, ItMw_2H_Sword_Light_02);	
 	
 
 	//-------------Daily Routine-------------
@@ -41,8 +38,8 @@ instance Mod_1873_TPL_GorNaKosh_MT (Npc_Default)
 
 FUNC VOID Rtn_start_1873 ()
 {
-	TA_Stand_ArmsCrossed	(00,00,12,00,"WP_MT_GORNAKOSH_WAIT");	
-	TA_Stand_ArmsCrossed	(12,00,24,00,"WP_MT_GORNAKOSH_WAIT");		
+	TA_Sit_Campfire		(00,00,12,00,"WP_MT_HECTA_UND_ACHIL");	
+	TA_Sit_Campfire		(12,00,24,00,"WP_MT_HECTA_UND_ACHIL");		
 };
 
 func void Rtn_Templer_1873 ()
@@ -50,4 +47,3 @@ func void Rtn_Templer_1873 ()
 	TA_Smalltalk (00,00,12,00,"OCC_BARONS_DANCE2");
 	TA_Smalltalk (12,00,24,00,"OCC_BARONS_DANCE2");
 };
-

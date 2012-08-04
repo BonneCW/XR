@@ -15,20 +15,20 @@ FUNC INT Info_Mod_HofstaatTuersteher_Hi_Condition()
 
 FUNC VOID Info_Mod_HofstaatTuersteher_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_06_00"); //Hey! Du kannst hier nicht durch!
+	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_29_00"); //Hey! Du kannst hier nicht durch!
 	AI_Output(hero, self, "Info_Mod_HofstaatTuersteher_Hi_15_01"); //Warum nicht?
-	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_06_02"); //Nur Angehörige des Hofstaats dürfen da rein!
+	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_29_02"); //Nur Angehörige des Hofstaats dürfen da rein!
 	AI_Output(hero, self, "Info_Mod_HofstaatTuersteher_Hi_15_03"); //Hofstaat?
-	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_06_04"); //Ja, Mann! Der Pöbel hat in der Burg nichts Verloren!
+	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_29_04"); //Ja, Mann! Der Pöbel hat in der Burg nichts verloren!
 	AI_Output(hero, self, "Info_Mod_HofstaatTuersteher_Hi_15_05"); //Und wie werde ich Mitglied des Hofstaates?
-	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_06_06"); //Da musst du zuerst mal die Staatsbürgerschaft für unser Reich hier erhalten.
+	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_29_06"); //Da musst du zuerst mal die Staatsbürgerschaft für unser Reich hier erhalten.
 	AI_Output(hero, self, "Info_Mod_HofstaatTuersteher_Hi_15_07"); //Wie werde ich Staatsbürger?
-	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_06_08"); //Du hast zwei Möglichkeiten: Heirate eine aus unsrer Mitte oder eröffne einen Laden.
-	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_06_09"); //Ach ja, falls du vorhast zu heiraten, würd ich mich nicht an die Bauern halten.
+	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_29_08"); //Du hast zwei Möglichkeiten: Heirate eine aus unserer Mitte oder eröffne einen Laden.
+	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_29_09"); //Ach ja, falls du vorhast zu heiraten, würd ich mich nicht an die Bauern halten.
 	AI_Output(hero, self, "Info_Mod_HofstaatTuersteher_Hi_15_10"); //Warum nicht?
-	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_06_11"); //Bauern sind nur Pöbel! Du wirst dann zwar als Pöbel angesehen, doch nicht als Mitglied des Staates. Dazu müsstest du mit der Bäuerin in ein Haus ziehen ...
+	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_Hi_29_11"); //Bauern sind nur Pöbel! Du wirst dann zwar als Pöbel angesehen, doch nicht als Mitglied des Staates. Dazu müsstest du mit der Bäuerin in ein Haus ziehen ...
 
-	B_LogEntry	(TOPIC_MOD_SEKTE_FREUDENSPENDER, "Der Türsteher des Schlosses sagt, dass ich es erst betreten darf, wenn ich Mitglied des Hofstaates bin. Um das zu erreichen hab ich zwei Möglichkeiten: Ich heirate eine Hofstaatlerin oder ich eröffne einen Laden. Sollte ich jedoch eine Bäuerin heiraten, dann muss ich mit ihr noch in die Burg ziehen.");
+	B_LogEntry	(TOPIC_MOD_SEKTE_FREUDENSPENDER, "Der Türsteher des Schlosses sagt, dass ich es erst betreten darf, wenn ich Mitglied des Hofstaates bin. Um das zu erreichen, hab ich zwei Möglichkeiten: Ich heirate eine Hofstaatlerin oder ich eröffne einen Laden. Sollte ich jedoch eine Bäuerin heiraten, dann muss ich mit ihr noch in die Burg ziehen.");
 };
 
 INSTANCE Info_Mod_HofstaatTuersteher_NachFest (C_INFO)
@@ -51,7 +51,7 @@ FUNC INT Info_Mod_HofstaatTuersteher_NachFest_Condition()
 
 FUNC VOID Info_Mod_HofstaatTuersteher_NachFest_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_NachFest_06_00"); //Hey, du bist doch der königliche Bademeister? Der König sucht nach dir.
+	AI_Output(self, hero, "Info_Mod_HofstaatTuersteher_NachFest_29_00"); //Hey, du bist doch der königliche Bademeister? Der König sucht nach dir.
 
 	Log_CreateTopic	(TOPIC_MOD_SEKTE_KING, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_SEKTE_KING, LOG_RUNNING);
@@ -93,7 +93,7 @@ func int Info_Mod_HofstaatTuersteher_FirstWarn_Condition()
 
 func void Info_Mod_HofstaatTuersteher_FirstWarn_Info()
 {
-	AI_Output (self, hero,"Info_Mod_HofstaatTuersteher_FirstWarn_06_00"); //HALT! Du darfst hier noch nicht rein.
+	AI_Output (self, hero,"Info_Mod_HofstaatTuersteher_FirstWarn_29_00"); //HALT! Du darfst hier noch nicht rein.
 
 	hero.aivar[AIV_LastDistToWP] = Npc_GetDistToWP(hero, HofstaatTuersteher_Checkpoint);
 	self.aivar[AIV_Guardpassage_Status] = GP_FirstWarnGiven;
@@ -126,7 +126,7 @@ FUNC INT Info_Mod_HofstaatTuersteher_SecondWarn_Condition()
 
 func void Info_Mod_HofstaatTuersteher_SecondWarn_Info()
 {
-	AI_Output (self, hero,"Info_Mod_HofstaatTuersteher_SecondWarn_06_00"); //Ich sag's dir zum letzten Mal. Einen Schritt weiter und du begibst dich in die Welt des Schmerzes!
+	AI_Output (self, hero,"Info_Mod_HofstaatTuersteher_SecondWarn_29_00"); //Ich sag's dir zum letzten Mal. Einen Schritt weiter und du begibst dich in die Welt des Schmerzes!
 
 	hero.aivar[AIV_LastDistToWP] = Npc_GetDistToWP (hero,HofstaatTuersteher_Checkpoint);
 	self.aivar[AIV_Guardpassage_Status] = GP_SecondWarnGiven;	
@@ -164,7 +164,7 @@ func void Info_Mod_HofstaatTuersteher_Attack_Info()
 	hero.aivar[AIV_LastDistToWP] = 0;
 	self.aivar[AIV_Guardpassage_Status] = GP_NONE;						//wird auch in ZS_Attack resettet
 	
-	AI_Output (self, hero,"Info_Mod_HofstaatTuersteher_Attack_06_00"); //Du hast es so gewollt ...
+	AI_Output (self, hero,"Info_Mod_HofstaatTuersteher_Attack_29_00"); //Du hast es so gewollt ...
 
 	AI_StopProcessInfos	(self);	
 
@@ -179,7 +179,7 @@ INSTANCE Info_Mod_HofstaatTuersteher_Pickpocket (C_INFO)
 	information	= Info_Mod_HofstaatTuersteher_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_HofstaatTuersteher_Pickpocket_Condition()
@@ -202,8 +202,88 @@ FUNC VOID Info_Mod_HofstaatTuersteher_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_HofstaatTuersteher_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_HofstaatTuersteher_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_HofstaatTuersteher_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_HofstaatTuersteher_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_HofstaatTuersteher_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_HofstaatTuersteher_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_HofstaatTuersteher_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_HofstaatTuersteher_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_HofstaatTuersteher_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_HofstaatTuersteher_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_HofstaatTuersteher_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_HofstaatTuersteher_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_HofstaatTuersteher_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_HofstaatTuersteher_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_HofstaatTuersteher_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_HofstaatTuersteher_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_HofstaatTuersteher_EXIT (C_INFO)

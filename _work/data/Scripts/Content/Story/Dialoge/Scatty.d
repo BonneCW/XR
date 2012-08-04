@@ -79,7 +79,7 @@ INSTANCE Info_Mod_Scatty_Umgehauen (C_INFO)
 FUNC INT Info_Mod_Scatty_Umgehauen_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Scatty_Hi))
-	&& (Scatty_Start_DIA	==	2)
+	&& (Scatty_Start_DIA == 2)
 	{
 		return 1;
 	};
@@ -89,15 +89,15 @@ FUNC VOID Info_Mod_Scatty_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Scatty_Umgehauen_01_00"); //Oh, mein armer Schädel.
 			AI_Output(hero, self, "Info_Mod_Scatty_Umgehauen_15_01"); //Na, ich denke du weißt, dass man sich keine Probleme mit mir einhandelt.
 			AI_Output(self, hero, "Info_Mod_Scatty_Umgehauen_01_02"); //Verdammt, du bist anscheinend immer noch ein guter Kämpfer. Jemanden wie dich können wir brauchen.
 
-			Scatty_Start_DIA	=	4;
+			Scatty_Start_DIA = 4;
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Scatty_Umgehauen_01_03"); //Bist wohl doch nur ein Großmaul.
 			AI_Output(hero, self, "Info_Mod_Scatty_Umgehauen_01_04"); //Vielleicht kannst du uns trotzdem helfen.
@@ -124,9 +124,9 @@ INSTANCE Info_Mod_Scatty_Hilfe (C_INFO)
 
 FUNC INT Info_Mod_Scatty_Hilfe_Condition()
 {
-	if ((Scatty_Start_DIA	==	3)
-	|| (Scatty_Start_DIA	==	1)
-	|| (Scatty_Start_DIA	==	4))
+	if ((Scatty_Start_DIA == 3)
+	|| (Scatty_Start_DIA == 1)
+	|| (Scatty_Start_DIA == 4))
 	&& (Mod_Gilde > 0)
 	{
 		return 1;
@@ -147,6 +147,7 @@ FUNC VOID Info_Mod_Scatty_Hilfe_Info()
 	Info_ClearChoices	(Info_Mod_Scatty_Hilfe);
 
 	Info_AddChoice	(Info_Mod_Scatty_Hilfe, "Steckt euch eure Probleme sonst wo hin, ihr dreckigen Verräter!", Info_Mod_Scatty_Hilfe_B);
+
 	if (Mod_AnzahlNebengilden < MaxNebengilden)
 	{
 		Info_AddChoice	(Info_Mod_Scatty_Hilfe, "Was soll ich für euch tun?", Info_Mod_Scatty_Hilfe_A);
@@ -198,6 +199,7 @@ INSTANCE Info_Mod_Scatty_ArenaFight (C_INFO)
 FUNC INT Info_Mod_Scatty_ArenaFight_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Thorus_Arena))
+	&& (Wld_IsTime(08,00,23,00))
 	{
 		return 1;
 	};
@@ -227,7 +229,8 @@ INSTANCE Info_Mod_Scatty_WannaFightUB (C_INFO)
 
 FUNC INT Info_Mod_Scatty_WannaFightUB_Condition()
 {
-	if (Mod_GorKarantoSchwach	==	2)
+	if (Mod_GorKarantoSchwach == 2)
+	&& (Wld_IsTime(08,00,23,00))
 	{
 		return 1;
 	};
@@ -264,6 +267,7 @@ INSTANCE Info_Mod_Scatty_WannaFightUB_AK (C_INFO)
 FUNC INT Info_Mod_Scatty_WannaFightUB_AK_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Scatty_WannaFightUB))
+	&& (Wld_IsTime(08,00,23,00))
 	{
 		return 1;
 	};
@@ -290,6 +294,7 @@ INSTANCE Info_Mod_Scatty_WannaFightUB_2 (C_INFO)
 FUNC INT Info_Mod_Scatty_WannaFightUB_2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Thorus_Botschaft))
+	&& (Wld_IsTime(08,00,23,00))
 	{
 		return 1;
 	};
@@ -322,6 +327,7 @@ INSTANCE Info_Mod_Scatty_WannaFightUB_AK_2 (C_INFO)
 FUNC INT Info_Mod_Scatty_WannaFightUB_AK_2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Scatty_WannaFightUB_2))
+	&& (Wld_IsTime(08,00,23,00))
 	{
 		return 1;
 	};
@@ -359,7 +365,6 @@ FUNC VOID Info_Mod_Scatty_UB_Besiegt_Info()
 	AI_Output(self, hero, "Info_Mod_Scatty_UB_Besiegt_01_01"); //Sehr gut, endlich mal wieder einer von unseren Kämpfern, der gewonnen hat.
 	AI_Output(self, hero, "Info_Mod_Scatty_UB_Besiegt_01_02"); //Hier hast du deinen Anteil an den Einnahmen.
 
-	CreateInvItems	(self, ItMi_Gold, 250);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 250);
 
 	B_GivePlayerXP	(250);
@@ -430,6 +435,37 @@ FUNC VOID Info_Mod_Scatty_SabitschTot_Info()
 	AI_Output(self, hero, "Info_Mod_Scatty_SabitschTot_01_01"); //Naja, ich wollte mir gerade auch noch einen grünen Novizen genehmigen.
 
 	Mod_SabitschTotPetze = 1;
+};
+
+INSTANCE Info_Mod_Scatty_SlyArena (C_INFO)
+{
+	npc		= Mod_962_STT_Scatty_MT;
+	nr		= 1;
+	condition	= Info_Mod_Scatty_SlyArena_Condition;
+	information	= Info_Mod_Scatty_SlyArena_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Hat sich Sly schon bei dir gemeldet?";
+};
+
+FUNC INT Info_Mod_Scatty_SlyArena_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Sly_Arena5))
+	&& (Wld_IsTime(08,00,16,00))
+	&& (Kapitel < 4)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Scatty_SlyArena_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Scatty_SlyArena_15_00"); //Hat sich Sly schon bei dir gemeldet?
+	AI_Output(self, hero, "Info_Mod_Scatty_SlyArena_01_01"); //Klaro. Ich bin mal gespannt, wie sich der Grünschnabel schlägt. Bisher ist er mir ja nur durch sein Saufen aufgefallen.
+	AI_Output(hero, self, "Info_Mod_Scatty_SlyArena_15_02"); //Gibt es schon einen Termin für seinen ersten Kampf?
+	AI_Output(self, hero, "Info_Mod_Scatty_SlyArena_01_03"); //Jo. Nachher um 18 Uhr tritt er gegen Gor Karanto an. Das wird ein harter Kampf, sag ich mal.
+
+	B_LogEntry	(TOPIC_MOD_BDT_ORKS, "Scatty meinte, dass Sabitsch ein unglaublich starker Kämpfer sein müsse, um seine Waffe zu führen. Außerdem trägt Sabitsch den ganzen Tag über Schmuck, welchen er nur nachts zum Teil  ablegt und in seiner Truhe verstaut, um sich anschließend in Bürgerkleidung schlafen zu legen. Seine Hütte finde ich bei der Arena.");
 };
 
 INSTANCE Info_Mod_Scatty_Kap4 (C_INFO)

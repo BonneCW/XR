@@ -75,6 +75,51 @@ func void ShowBars ()
 	
 	bar_focus.zCView_vposx = focus_vposx;
 	bar_focus.zCView_vposy = focus_vposy;
+
+	Npc_GetTarget(hero);
+
+	if (other.aivar[AIV_Pflanzengift] > 0)
+	|| (other.aivar[AIV_Tiergift] > 0)
+	{
+		_View_SetTexture(bar_focus.value_bar, "BAR_POISON.TGA");
+	}
+	else
+	{
+		_View_SetTexture(bar_focus.value_bar, "BAR_HEALTH.TGA");
+	};
+
+	if (GGPf_Sumpfgolem_Time > 0)
+	|| (GGPi_Orkschamane_Time > 0)
+	|| (GGPf_Echsenmensch_Time > 0)
+	|| (GGPi_OrkkriegerArmbrust_Time > 0)
+	|| (GGPi_Fliegenpilz_Time > 0)
+	|| (GGPf_Echsenschwert_Time > 0)
+	|| (GGPf_Assassinenschwert_Time > 0)
+	|| (GGPi_Schamanenaxt_Time > 0)
+	|| (GTB_Blutfliege_Time > 0)
+	|| (GTS_Sumpfgasdrohne_Time > 0)
+	|| (GTM_Minecrawler_Time > 0)
+	|| (GTM_MinecrawlerWarrior_Time > 0)
+	|| (GTSu_Sumpfhai_Time > 0)
+	|| (GTS_Echsenschwert_Time > 0)
+	|| (GTB_Assassinenschwert_Time > 0)
+	|| (GTM_Schamanenaxt_Time > 0)
+	|| (GGD_Sumpfgasdrohne_Time > 0)
+	|| (GGD_Sumpfgolem_Time > 0)
+	|| (GGD_Sumpfdrache_Time > 0)
+	|| (GGD_Giftkrater_Time > 0)
+	{
+		_View_SetTexture(bar_hp.value_bar, "BAR_POISON.TGA");
+	}
+	else if (BissDerFaeulnis_Time > 0)
+	|| (HauchDerPestilenz_Time > 0)
+	{
+		_View_SetTexture(bar_hp.value_bar, "BAR_KRANK.TGA");
+	}
+	else
+	{
+		_View_SetTexture(bar_hp.value_bar, "BAR_HEALTH.TGA");
+	};
 };
 
 func void HideBars ()

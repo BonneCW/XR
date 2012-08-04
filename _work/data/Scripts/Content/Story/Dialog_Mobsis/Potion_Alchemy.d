@@ -4,7 +4,7 @@ FUNC VOID POTIONALCHEMY_S1 ()
 	
 	if  (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))
 	{	
-		self.aivar[AIV_INVINCIBLE]=TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_POTIONALCHEMY;
 		Ai_ProcessInfos (her);
 	};
@@ -1680,6 +1680,7 @@ FUNC INT PC_PotionAlchemy_Special_Condition ()
 	|| (PLAYER_TALENT_ALCHEMY[POTION_Gift] == TRUE)
 	|| (PLAYER_TALENT_ALCHEMY[POTION_Gegengift] == TRUE)
 	|| (PLAYER_TALENT_ALCHEMY[POTION_Genesung] == TRUE)
+	|| (PLAYER_TALENT_ALCHEMY[POTION_Regeneration] == TRUE)
 	|| (DrachensudManaverbrennung == TRUE)
 	|| (FolgsamkeitSnapper == TRUE)
 	|| (Weisenchronik == TRUE)
@@ -1723,6 +1724,11 @@ FUNC VOID PC_PotionAlchemy_Special_Info()
 	if (FolgsamkeitSnapper == TRUE)
 	{
 		Info_AddChoice	(PC_PotionAlchemy_Special, "Trank der Folgsamkeit des Snappers (1 Menschenblut, 1 Hexenblut, 3 Drachensnapperhorn)", PC_PotionAlchemy_Special_FolgsamkeitSnapper);
+	};
+
+	if (PLAYER_TALENT_ALCHEMY[POTION_Regeneration] == TRUE)
+	{
+		Info_AddChoice	(PC_PotionAlchemy_Special, "Regenerationstrank (1 Milch, 10 Blauflieder)", PC_PotionAlchemy_Special_Regeneration);
 	};
 
 	if (Purpurmond == TRUE)
@@ -1813,6 +1819,28 @@ FUNC VOID PC_PotionAlchemy_Special_Genesung ()
 		Npc_RemoveInvItems (hero, ItPl_Temp_Herb, 1);
 		
 		CreateInvItem	   (hero, ItPo_Genesung);  
+		Print (PRINT_AlchemySuccess);
+	
+		B_ENDPRODUCTIONDIALOG ();
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+		CreateInvItems (self, ItMi_Flask,1);
+	
+		B_ENDPRODUCTIONDIALOG ();
+	};
+};
+
+FUNC VOID PC_PotionAlchemy_Special_Regeneration ()
+{
+	if (Npc_HasItems(hero, ItFo_Milk) >= 1) 
+	&& (Npc_HasItems(hero, ItPl_Blueplant) >= 10)
+	{
+		Npc_RemoveInvItems (hero, ItFo_Milk, 1);
+		Npc_RemoveInvItems (hero, ItPl_Blueplant, 10);
+		
+		CreateInvItem	   (hero, ItPo_Regeneration);  
 		Print (PRINT_AlchemySuccess);
 	
 		B_ENDPRODUCTIONDIALOG ();

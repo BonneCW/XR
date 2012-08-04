@@ -186,18 +186,18 @@ FUNC VOID Info_Mod_Lobart_SheromeDa_A()
 	Mod_LobartRuebinator = 1;
 };
 
-INSTANCE Info_Mod_Lobart_Rüben (C_INFO)
+INSTANCE Info_Mod_Lobart_Rueben (C_INFO)
 {
 	npc		= Mod_910_BAU_Lobart_NW;
 	nr		= 1;
-	condition	= Info_Mod_Lobart_Rüben_Condition;
-	information	= Info_Mod_Lobart_Rüben_Info;
+	condition	= Info_Mod_Lobart_Rueben_Condition;
+	information	= Info_Mod_Lobart_Rueben_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Hier sind deine Rüben.";
 };
 
-FUNC INT Info_Mod_Lobart_Rüben_Condition()
+FUNC INT Info_Mod_Lobart_Rueben_Condition()
 {
 	if (Npc_HasItems(hero, ItPl_Beet) >= 20)
 	&& (Mod_LobartRuebinator == 2)
@@ -206,19 +206,19 @@ FUNC INT Info_Mod_Lobart_Rüben_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Lobart_Rüben_Info()
+FUNC VOID Info_Mod_Lobart_Rueben_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Lobart_Rüben_15_00"); //Hier sind deine Rüben.
+	AI_Output(hero, self, "Info_Mod_Lobart_Rueben_15_00"); //Hier sind deine Rüben.
 
 	B_GiveInvItems	(hero, self, ItPl_Beet, 20);
 
-	AI_Output(self, hero, "Info_Mod_Lobart_Rüben_05_01"); //Hätte nicht gedacht, dass du das schaffst. Vielen Dank! Nimm das als Lohn.
+	AI_Output(self, hero, "Info_Mod_Lobart_Rueben_05_01"); //Hätte nicht gedacht, dass du das schaffst. Vielen Dank! Nimm das als Lohn.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
-	AI_Output(hero, self, "Info_Mod_Lobart_Rüben_15_02"); //Gibt es noch mehr zu tun?
-	AI_Output(self, hero, "Info_Mod_Lobart_Rüben_05_03"); //Nichts, womit wir nicht selbst fertig werden. Ich könnte dich auch gar nicht weiter bezahlen.
-	AI_Output(self, hero, "Info_Mod_Lobart_Rüben_05_04"); //Du bist aber immer willkommen auf dem Hof! Mach's gut!
+	AI_Output(hero, self, "Info_Mod_Lobart_Rueben_15_02"); //Gibt es noch mehr zu tun?
+	AI_Output(self, hero, "Info_Mod_Lobart_Rueben_05_03"); //Nichts, womit wir nicht selbst fertig werden. Ich könnte dich auch gar nicht weiter bezahlen.
+	AI_Output(self, hero, "Info_Mod_Lobart_Rueben_05_04"); //Du bist aber immer willkommen auf dem Hof! Mach's gut!
 
 	B_LogEntry	(TOPIC_MOD_RUEBENZIEHEN, "Ich hab Lobart seine Rüben gegeben.");
 	B_SetTopicStatus	(TOPIC_MOD_RUEBENZIEHEN, LOG_SUCCESS);
@@ -252,7 +252,7 @@ FUNC VOID Info_Mod_Lobart_Warentransport_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Lobart_Warentransport_15_00"); //Du wolltest Baltram deine Rüben verkaufen.
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Lobart_Rüben))
+	if (Npc_KnowsInfo(hero, Info_Mod_Lobart_Rueben))
 	{
 		AI_Output(self, hero, "Info_Mod_Lobart_Warentransport_05_01"); //Ja? Oh, verdammt, das hab' ich ja schon wieder vergessen!
 		AI_Output(self, hero, "Info_Mod_Lobart_Warentransport_05_02"); //Wollte sie schon fast meiner Frau bringen, um Suppe daraus zu machen!
@@ -642,7 +642,7 @@ INSTANCE Info_Mod_Lobart_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Lobart_Pickpocket_Condition()
 {
-	C_Beklauen	(53, ItMi_Gold, 120);
+	C_Beklauen	(53, ItPl_Beet, 12);
 };
 
 FUNC VOID Info_Mod_Lobart_Pickpocket_Info()
@@ -660,8 +660,88 @@ FUNC VOID Info_Mod_Lobart_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Lobart_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Lobart_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Lobart_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Lobart_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Lobart_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Lobart_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Lobart_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Lobart_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Lobart_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Lobart_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Lobart_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Lobart_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Lobart_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Lobart_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Lobart_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Lobart_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Lobart_EXIT (C_INFO)

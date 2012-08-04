@@ -5,7 +5,7 @@ instance Mod_7735_BDT_Aslan_EIS (Npc_Default)
 	guild 		= GIL_STRF;
 	id 			= 7735;
 	voice 		= 9;
-	flags       = 2;								
+	flags       = 0;								
 	npctype		= NPCTYPE_MAIN;
 	
 	//--------Aivars-----------

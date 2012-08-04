@@ -225,7 +225,7 @@ INSTANCE WilderApfelbaum	(Mst_Addon_Stoneguardian)
 INSTANCE Apfelbaum_Botschek_01	(Mst_Addon_Stoneguardian)
 {
 	name							= "Apfelbaum";
-	guild							= GIL_SUMMONEDGuardian;
+	guild							= GIL_StoneGuardian;
 	aivar[AIV_MM_REAL_ID]			= ID_APFELBAUM;
 	level							=	20;	//30
 
@@ -253,7 +253,7 @@ INSTANCE Apfelbaum_Botschek_01	(Mst_Addon_Stoneguardian)
 INSTANCE Apfelbaum_Botschek_02	(Mst_Addon_Stoneguardian)
 {
 	name							= "Apfelbaum";
-	guild							= GIL_SUMMONEDGuardian;
+	guild							= GIL_StoneGuardian;
 	aivar[AIV_MM_REAL_ID]			= ID_APFELBAUM;
 	level							=	20;	//30
 
@@ -281,7 +281,7 @@ INSTANCE Apfelbaum_Botschek_02	(Mst_Addon_Stoneguardian)
 INSTANCE Apfelbaum_Botschek_03	(Mst_Addon_Stoneguardian)
 {
 	name							= "Apfelbaum";
-	guild							= GIL_SUMMONEDGuardian;
+	guild							= GIL_StoneGuardian;
 	aivar[AIV_MM_REAL_ID]			= ID_APFELBAUM;
 	level							=	20;	//30
 

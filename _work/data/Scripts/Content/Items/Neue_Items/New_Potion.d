@@ -85,9 +85,9 @@ INSTANCE ItFo_Potion_Blutfliege(C_Item)
 	on_state[0]		=	UseBlutfliegeElixier;
 	scemeName		=	"POTIONFAST";
 
-	description			= "Blutfliegengift";
+	description			= "Blutfliegensekret";
 	TEXT[1]				= NAME_Bonus_Hp;			COUNT[1]	= 15;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= 100;
+	TEXT[5]				= NAME_Value;				COUNT[5]	= value;
 };
 
 	func void  UseBlutfliegeElixier ()

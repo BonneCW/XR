@@ -119,7 +119,7 @@ FUNC VOID Goldhacken_S1 ()
 			return;
 		};
 
-		self.aivar[AIV_INVINCIBLE]=TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_GOLDHACKEN;
 		Ai_ProcessInfos (her);
 	};

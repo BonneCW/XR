@@ -106,3 +106,21 @@ FUNC VOID Rtn_DokumenteLesen_7705()
 	TA_Study_WP	(08,00,20,00,"REL_CITY_057");
 	TA_Study_WP	(20,00,08,00,"REL_CITY_057");
 };
+
+FUNC VOID Rtn_Hacken_7705()
+{	
+	TA_Stand_Guarding	(08,00,20,00,"REL_CITY_060");
+	TA_Stand_Guarding 	(20,00,08,00,"REL_CITY_060");
+};
+
+FUNC VOID Rtn_Schatzkammer_7705()
+{	
+	TA_Follow_Player	(08,00,20,00,"REL_CITY_060");
+	TA_Follow_Player 	(20,00,08,00,"REL_CITY_060");
+};
+
+FUNC VOID Rtn_InSchatzkammer_7705()
+{	
+	TA_Pick_FP		(08,00,20,00,"REL_CITY_KANAL_027");
+	TA_Pick_FP	 	(20,00,08,00,"REL_CITY_KANAL_027");
+};

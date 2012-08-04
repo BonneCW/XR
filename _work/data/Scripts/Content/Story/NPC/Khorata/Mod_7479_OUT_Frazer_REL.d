@@ -4,7 +4,7 @@ instance Mod_7479_OUT_Frazer_REL (Npc_Default)
 	name 		= "Frazer"; 
 	guild 		= GIL_OUT;
 	id 			= 7479;
-	voice 		= 13;
+	voice 		= 29;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

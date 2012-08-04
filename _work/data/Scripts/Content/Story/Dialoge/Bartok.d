@@ -25,16 +25,15 @@ FUNC VOID Info_Mod_Bartok_Bromor_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bartok_Bromor_15_00"); //Ich hab gehˆrt, du willst nicht zahlen.
 
-	Mod_BartokZufallZahlen	=	Hlp_Random(100);
+	Mod_BartokZufallZahlen = r_max(99);
 
 	if (Mod_BartokZufallZahlen >= 80)
 	{
 		AI_Output(self, hero, "Info_Mod_Bartok_Bromor_04_01"); //Wieso das denn? Hier ist das Geld.
 
-		CreateInvItems	(self, ItMi_Gold, 500);
 		B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 
-		Mod_BilgotBromorBartok	=	1;
+		Mod_BilgotBromorBartok = 1;
 
 		B_Gˆttergefallen(2, 1);
 	}
@@ -73,20 +72,19 @@ FUNC VOID Info_Mod_Bartok_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Bartok_Umgehauen_04_00"); //Mannomann! Du hast ja 'nen ganz schˆnen Schlag drauf. Hier ist das Gold.
 
-			Mod_BilgotBromorBartok	=	1;
+			Mod_BilgotBromorBartok = 1;
 
-			Mod_Bartok‹berzeugt	=	1;
+			Mod_BartokUeberzeugt = 1;
 
-			CreateInvItems	(self, ItMi_Gold, 500);
 			B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 
 			B_Gˆttergefallen(1, 1);
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Bartok_Umgehauen_04_01"); //Tja, das war wohl nichts.
 		};
@@ -116,7 +114,7 @@ INSTANCE Info_Mod_Bartok_Arbeite (C_INFO)
 
 FUNC INT Info_Mod_Bartok_Arbeite_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Scar_Jagdtroph‰en_SollIch))
+	if (Npc_KnowsInfo(hero, Info_Mod_Scar_Jagdtrophaeen_SollIch))
 	{
 		return 1;
 	};
@@ -185,7 +183,7 @@ FUNC VOID Info_Mod_Bartok_Arbeite_Geld_1000()
 
 		B_GiveInvItems	(hero, self, ItMi_Gold, 1000);
 
-		Mod_Bartok‹berzeugt	=	1;
+		Mod_BartokUeberzeugt = 1;
 
 		B_Gˆttergefallen(2, 1);
 
@@ -214,7 +212,7 @@ FUNC VOID Info_Mod_Bartok_Arbeite_Geld_500()
 
 		B_GiveInvItems	(hero, self, ItMi_Gold, 500);
 
-		Mod_Bartok‹berzeugt	=	1;
+		Mod_BartokUeberzeugt = 1;
 
 		B_Gˆttergefallen(2, 1);
 
@@ -223,12 +221,6 @@ FUNC VOID Info_Mod_Bartok_Arbeite_Geld_500()
 	else
 	{
 		AI_Output(self, hero, "Info_Mod_Bartok_Arbeite_Geld_500_04_03"); //Du willst mich wohl verarschen. Du hast gar keine 500 Goldm¸nzen. Na warte.
-
-		var int MerkLebenspunkteBartok;
-		var int MerkLebenspunkteHeldBartok;
-
-		MerkLebenspunkteBartok	=	self.attribute[ATR_HITPOINTS];
-		MerkLebenspunkteHeldBartok	=	hero.attribute[ATR_HITPOINTS];
 
 		AI_StopProcessInfos	(self);
 		B_Attack	(self, hero, AR_NONE, 1);
@@ -246,7 +238,7 @@ FUNC VOID Info_Mod_Bartok_Arbeite_Geld_200()
 
 		B_GiveInvItems	(hero, self, ItMi_Gold, 200);
 
-		Mod_Bartok‹berzeugt	=	1;
+		Mod_BartokUeberzeugt = 1;
 
 		B_Gˆttergefallen(2, 1);
 
@@ -255,12 +247,6 @@ FUNC VOID Info_Mod_Bartok_Arbeite_Geld_200()
 	else
 	{
 		AI_Output(self, hero, "Info_Mod_Bartok_Arbeite_Geld_200_04_03"); //Du willst mich wohl verarschen. Du hast gar keine 200 Goldm¸nzen. Na warte.
-
-		var int MerkLebenspunkteBartok;
-		var int MerkLebenspunkteHeldBartok;
-
-		MerkLebenspunkteBartok	=	self.attribute[ATR_HITPOINTS];
-		MerkLebenspunkteHeldBartok	=	hero.attribute[ATR_HITPOINTS];
 
 		AI_StopProcessInfos	(self);
 		B_Attack	(self, hero, AR_NONE, 1);
@@ -340,15 +326,15 @@ FUNC VOID Info_Mod_Bartok_Arbeite_AufsMaul_Gekriegt_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Bartok_Arbeite_AufsMaul_Gekriegt_04_00"); //Mannomann! Du hast ja 'nen ganz schˆnen Schlag drauf.
 
-			Mod_Bartok‹berzeugt	=	1;
+			Mod_BartokUeberzeugt = 1;
 
 			B_Gˆttergefallen(3, 1);
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Bartok_Arbeite_AufsMaul_Gekriegt_04_01"); //Tja, das war wohl nichts.
 
@@ -381,7 +367,7 @@ INSTANCE Info_Mod_Bartok_ArbeiteWieder (C_INFO)
 FUNC INT Info_Mod_Bartok_ArbeiteWieder_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Bartok_Arbeite))
-	&& ((Mod_Bartok‹berzeugt == 1)
+	&& ((Mod_BartokUeberzeugt == 1)
 	|| ((Wld_GetDay() > Mod_SonjaHilftGegenBartok)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Sonja_Bartok))))
 	{
@@ -397,7 +383,7 @@ FUNC VOID Info_Mod_Bartok_ArbeiteWieder_Info()
 	B_StartOtherRoutine	(self,"ERWISCHT");
 	B_StartOtherRoutine	(Mod_7115_NONE_Nadja_NW, "DOWN");
 
-	Mod_BilgotBromorBartok	=	1;
+	Mod_BilgotBromorBartok = 1;
 
 	AI_StopProcessInfos	(self);
 
@@ -426,7 +412,7 @@ INSTANCE Info_Mod_Bartok_Stimme (C_INFO)
 
 FUNC INT Info_Mod_Bartok_Stimme_Condition()
 {
-	if (Mod_Bartok‹berzeugt	== 1)
+	if (Mod_BartokUeberzeugt == 1)
 	{
 		return 1;
 	};
@@ -543,7 +529,7 @@ INSTANCE Info_Mod_Bartok_Lehrer (C_INFO)
 
 FUNC INT Info_Mod_Bartok_Lehrer_Condition()
 {
-	if (Mod_Bartok‹berzeugt == 1)
+	if (Mod_BartokUeberzeugt == 1)
 	{
 		return 1;
 	};
@@ -608,7 +594,7 @@ INSTANCE Info_Mod_Bartok_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Bartok_Pickpocket_Condition()
 {
-	C_Beklauen	(50, ItMi_Gold, 130);
+	C_Beklauen	(50, ItAt_Teeth, 3);
 };
 
 FUNC VOID Info_Mod_Bartok_Pickpocket_Info()
@@ -626,8 +612,88 @@ FUNC VOID Info_Mod_Bartok_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Bartok_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Bartok_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Bartok_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Bartok_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Bartok_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Bartok_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Bartok_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Bartok_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Bartok_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Bartok_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Bartok_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Bartok_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Bartok_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Bartok_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Bartok_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Bartok_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Bartok_EXIT (C_INFO)

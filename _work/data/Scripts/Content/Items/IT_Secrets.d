@@ -201,6 +201,28 @@ FUNC VOID GoldPocket100 ()
 		B_PlayerFindItem (ItMI_Gold,100);
 };
 //------------- 100 Gold -----------------------
+INSTANCE ItMi_Lederbeutel_Diebe	(C_Item)
+{
+	name 				=	"Lederbeutel";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	100;
+
+	visual 				=	"ItMi_Pocket.3ds";
+	material 			=	MAT_LEATHER;
+	
+	description			= 	"Ein Lederbeutel";
+	
+	TEXT[0]				= 	"";
+	TEXT[1]				= 	"";
+	TEXT[2]				= 	"Ein schwerer Beutel";
+	TEXT[3]				= 	"gefüllt mit goldenen Münzen";
+	TEXT[4]				= 	"";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+//------------- 100 Gold -----------------------
 INSTANCE ItSe_HeroPocket	(C_Item)
 {
 	name 				=	"Lederbeutel";

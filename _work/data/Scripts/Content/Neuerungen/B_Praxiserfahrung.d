@@ -14,9 +14,9 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 	if (Hlp_GetInstanceID(oth) == Hlp_GetInstanceID(PC_Hero))
 	&& (!playerIsTransformed)
 	{
-		if (Mod_Stärke_Praxis_Next == 0)
+		if (Mod_Staerke_Praxis_Next == 0)
 		{
-			Mod_Stärke_Praxis_Next = 100;
+			Mod_Staerke_Praxis_Next = 100;
 		};
 
 		if (Mod_Geschick_Praxis_Next == 0)
@@ -53,11 +53,11 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 		{
 			if (Mod_Schwierigkeit != 4)
 			{
-				Mod_Stärke_Praxis += 3;
+				Mod_Staerke_Praxis += 3;
 			}
 			else
 			{
-				Mod_Stärke_Praxis += 6;
+				Mod_Staerke_Praxis += 6;
 				Mod_Geschick_Praxis += 2;
 			};
 
@@ -72,7 +72,7 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 			else
 			{
 				Mod_Geschick_Praxis += 6;
-				Mod_Stärke_Praxis += 2;
+				Mod_Staerke_Praxis += 2;
 			};
 
 			//PrintScreen	("Fernkampf!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
@@ -81,11 +81,11 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 		{
 			if (Mod_Schwierigkeit != 4)
 			{
-				Mod_Mana_Praxis += 10;
+				Mod_Mana_Praxis += 3;
 			}
 			else
 			{
-				Mod_Mana_Praxis += 20;
+				Mod_Mana_Praxis += 6;
 			};
 
 			//PrintScreen	("Magiekampf!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
@@ -94,11 +94,11 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 		{
 			if (Mod_Schwierigkeit != 4)
 			{
-				Mod_Stärke_Praxis += 5;
+				Mod_Staerke_Praxis += 5;
 			}
 			else
 			{
-				Mod_Stärke_Praxis += 10;
+				Mod_Staerke_Praxis += 10;
 			};
 
 			//PrintScreen	("Faustkampf!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
@@ -115,16 +115,16 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 			Mod_Geschick_Praxis -= Mod_Geschick_Praxis_Next;
 			Mod_Geschick_Praxis_Next += 50;
 		}
-		else if (Mod_Stärke_Praxis >= Mod_Stärke_Praxis_Next)
+		else if (Mod_Staerke_Praxis >= Mod_Staerke_Praxis_Next)
 		{
-			Mod_Stärke_Praxis_Level += 1;
+			Mod_Staerke_Praxis_Level += 1;
 
 			hero.attribute[ATR_STRENGTH] += 1;
 
 			AI_PrintScreen	("+1 Stärke durch Praxiserfahrung", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 
-			Mod_Stärke_Praxis -= Mod_Stärke_Praxis_Next;
-			Mod_Stärke_Praxis_Next += 50;
+			Mod_Staerke_Praxis -= Mod_Staerke_Praxis_Next;
+			Mod_Staerke_Praxis_Next += 50;
 		}
 		else if (Mod_Mana_Praxis >= Mod_Mana_Praxis_Next)
 		{

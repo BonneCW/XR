@@ -68,7 +68,7 @@ FUNC VOID Info_Mod_Glenn_Nahrungsversorgung2_Info()
 	Npc_RemoveInvItems	(hero, ItMi_Gold, 150);
 	Npc_RemoveInvItems	(hero, ItMi_Scoop_Glenn, 1);
 
-	B_ShowGivenThings	("150 Gold und Glenn's Kochlöffel gegeben");
+	B_ShowGivenThings	("150 Gold und Glenns Kochlöffel gegeben");
 
 	AI_Output(self, hero, "Info_Mod_Glenn_Nahrungsversorgung2_06_01"); //Natürlich, wo soll ich für dich Kochen?
 	AI_Output(hero, self, "Info_Mod_Glenn_Nahrungsversorgung2_15_02"); //Geh ins Minental und warte vor dem Eingang der verlassenen Mine auf mich.

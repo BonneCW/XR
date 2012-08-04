@@ -6,7 +6,7 @@ instance Mod_7203_BK_Straschiduo_NW (Npc_Default)
 	guild 		=		GIL_OUT;
 	level 		=		60;
 	 	
-	voice 		=		2;
+	voice 		=		29;
 	id 			=		7203;
 		
 	//-------- abilities --------

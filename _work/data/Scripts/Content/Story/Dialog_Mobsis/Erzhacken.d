@@ -12,7 +12,7 @@ FUNC VOID Erzhacken_S1 ()
 			return;
 		};
 
-		self.aivar[AIV_INVINCIBLE]=TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_Erzhacken;
 		Ai_ProcessInfos (her);
 	};

@@ -41,7 +41,7 @@ INSTANCE Mod_4074_BDT_Bandit_MT (Npc_Default)
 FUNC VOID Rtn_Start_4074 ()
 {	
 	TA_Pick_Ore		(08,00,20,00,"HOEHLE_12");
-    TA_Pick_Ore			(20,00,08,00,"HOEHLE_12");
+    	TA_Pick_Ore		(20,00,08,00,"HOEHLE_12");
 };
 
 FUNC VOID Rtn_VM_4074()

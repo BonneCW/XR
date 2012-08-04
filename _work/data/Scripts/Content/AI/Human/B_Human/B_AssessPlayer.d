@@ -87,7 +87,7 @@ func void B_AssessPlayer ()
 		};
 
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7368_JG_Jaeger_NW))
-		&& (other.aivar[AIV_INVINCIBLE] == FALSE)
+		&& (B_GetAivar(other, AIV_INVINCIBLE) == FALSE)
 		&& (!C_NpcIsDown(Mod_7106_ASS_Ramsi_NW))
 		{
 			B_Attack	(self, Mod_7106_ASS_Ramsi_NW, AR_NONE, 0);
@@ -95,7 +95,7 @@ func void B_AssessPlayer ()
 		};
 
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7366_JG_Jaeger_NW))
-		&& (other.aivar[AIV_INVINCIBLE] == FALSE)
+		&& (B_GetAivar(other, AIV_INVINCIBLE) == FALSE)
 		{
 			B_Attack	(self, hero, AR_NONE, 0);
 			return;
@@ -146,7 +146,7 @@ func void B_AssessPlayer ()
 		};
 	};
 
-	if (Mod_IsRabbit = 1)
+	if (Mod_IsRabbit == 1)
 	{
 		return;
 	};
@@ -284,7 +284,14 @@ func void B_AssessPlayer ()
 
 	if (self.npctype == NPCTYPE_MT_GARDIST)
 	&& (C_NpcIsHero(other))
-	&& (Hlp_IsItem(RuessiCheck, ItAr_SLD_Logan) == TRUE)
+	&& ((Hlp_IsItem(RuessiCheck, ItAr_SLD_Logan) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_SLD_L) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_SLD_M) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_SLD_H) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_SLD_H2) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_DJG_L) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_DJG_M) == TRUE)
+	|| (Hlp_IsItem(RuessiCheck, ItAr_DJG_H) == TRUE))
 	{
 		B_Attack (self, hero, AR_Kill, 0);
 		return;
@@ -347,6 +354,7 @@ func void B_AssessPlayer ()
 	{
 		if (!Npc_KnowsInfo(hero, Info_Mod_Dexter_Alissandro))
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Sancho_Parole))
+		&& (!Npc_KnowsInfo(hero, Info_Mod_Sancho_Dam3))
 		{
 			B_Attack	(self, hero, AR_Kill, 0);
 		}
@@ -399,7 +407,7 @@ func void B_AssessPlayer ()
 	};
 	
 	// ------ SC im Dialog ------
-	if (other.aivar[AIV_INVINCIBLE] == TRUE) 
+	if (B_GetAivar(other, AIV_INVINCIBLE) == TRUE) 
 	{
 		return;
 	};
@@ -603,7 +611,7 @@ func void B_AssessPlayer ()
 	};
 	
 	// ------ SC schleicht -------
-	if (C_BodyStateContains(other,BS_SNEAK))
+	if (C_BodyStateContains(other, BS_SNEAK))
 	{
 		if (!Npc_IsInState(self, ZS_ObservePlayer))
 		&& (C_WantToReactToSneaker(self, other))
@@ -623,7 +631,7 @@ func void B_AssessPlayer ()
 	};
 	
 	// FLAG freimachen
-	if (!C_BodyStateContains(other,BS_LIE))
+	if (!C_BodyStateContains(other, BS_LIE))
 	{
 		Player_GetOutOfMyBedComment = FALSE;
 	};
@@ -643,7 +651,7 @@ func void B_AssessPlayer ()
 		// ------ Gate Guards labern IMMER an ------
 		if (C_NpcIsGateGuard(self))
 		{
-			self.aivar[AIV_NpcStartedTalk] = TRUE;
+			B_SetAivar(self, AIV_NpcStartedTalk, TRUE);
 			
 			B_AssessTalk();
 			return;
@@ -651,9 +659,9 @@ func void B_AssessPlayer ()
 		else //alle anderen NSCs
 		{
 			// ------- Spieler fällt, schwimmt und taucht NICHT ------
-			if (!C_BodyStateContains(other,BS_FALL))
-			&& (!C_BodyStateContains(other,BS_SWIM))
-			&& (!C_BodyStateContains(other,BS_DIVE))
+			if (!C_BodyStateContains(other, BS_FALL))
+			&& (!C_BodyStateContains(other, BS_SWIM))
+			&& (!C_BodyStateContains(other, BS_DIVE))
 			// ------- und NUR, wenn keine CRIME vorliegt -------
 			&& (B_GetPlayerCrime(self) == CRIME_NONE)
 			// ------- und NUR, wenn NSC KEINEN RefuseTalk hat ------
@@ -661,7 +669,7 @@ func void B_AssessPlayer ()
 			// ------- Will ich die FakeArmor kommentieren? ---
 			&& (C_PlayerHasFakeGuild (self,other) == FALSE)
 			{
-				self.aivar[AIV_NpcStartedTalk] = TRUE;
+				B_SetAivar(self, AIV_NpcStartedTalk, TRUE);
 				
 				B_AssessTalk();
 				return;
@@ -692,4 +700,3 @@ func void B_AssessPlayer ()
 	
 	return;
 };
-			

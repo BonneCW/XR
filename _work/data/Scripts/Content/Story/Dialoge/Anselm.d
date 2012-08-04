@@ -1226,7 +1226,7 @@ FUNC VOID Info_Mod_Anselm_DickeLuft_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_16_01"); //(lautstark) Bis du Nichtsnutz endlich mal anfängst, mir bei der Hausarbeit unter die Arme zu greifen.
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_01"); //(lautstark) Bis du Nichtsnutz endlich mal anfängst, mir bei der Hausarbeit unter die Arme zu greifen.
 
 	TRIA_Next(Anselm);
 
@@ -1234,7 +1234,7 @@ FUNC VOID Info_Mod_Anselm_DickeLuft_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_16_03"); //Und, wie sieht es aus? Hast du langsam deine Meinung geändert?
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_03"); //Und, wie sieht es aus? Hast du langsam deine Meinung geändert?
 
 	TRIA_Next(Anselm);
 
@@ -1242,7 +1242,7 @@ FUNC VOID Info_Mod_Anselm_DickeLuft_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_16_05"); //Es macht dir wohl gar nichts aus, dass ich dort jeden störe?
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_05"); //Es macht dir wohl gar nichts aus, dass ich dort jeden störe?
 
 	TRIA_Next(Anselm);
 
@@ -1250,14 +1250,14 @@ FUNC VOID Info_Mod_Anselm_DickeLuft_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_16_07"); //Schön. Dann werde ich mir ein neues Druckmittel ausdenken müssen.
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_16_08"); //Wie wär's damit: Ich setze mich genau hier hin.
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_07"); //Schön. Dann werde ich mir ein neues Druckmittel ausdenken müssen.
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_08"); //Wie wär's damit: Ich setze mich genau hier hin.
 
 	AI_UseMob	(self, "THRONE", 1);
 
 	AI_TurnToNpc	(Anselm, self);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_16_09"); //Und niemand wird mich hier weg kriegen, solange du zu Hause keinen Finger krümmst!
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_09"); //Und niemand wird mich hier weg kriegen, solange du zu Hause keinen Finger krümmst!
 
 	TRIA_Next(Anselm);
 
@@ -1265,7 +1265,7 @@ FUNC VOID Info_Mod_Anselm_DickeLuft_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_16_11"); //Oh ja!
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_11"); //Oh ja!
 
 	TRIA_Next(Anselm);
 
@@ -1273,7 +1273,7 @@ FUNC VOID Info_Mod_Anselm_DickeLuft_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_16_13"); //(erbost) Ich warne dich!
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_13"); //(erbost) Ich warne dich!
 
 	TRIA_Next(Anselm);
 
@@ -1411,8 +1411,88 @@ FUNC VOID Info_Mod_Anselm_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Anselm_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Anselm_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Anselm_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Anselm_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Anselm_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Anselm_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Anselm_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Anselm_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Anselm_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Anselm_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Anselm_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Anselm_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Anselm_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Anselm_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Anselm_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Anselm_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Anselm_EXIT (C_INFO)

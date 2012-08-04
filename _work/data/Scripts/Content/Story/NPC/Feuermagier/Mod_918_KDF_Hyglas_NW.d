@@ -57,8 +57,32 @@ FUNC VOID Rtn_Taverne_918 ()
 	TA_Stand_WP	(23,00,08,00,"NW_TAVERNE");
 };
 
+FUNC VOID Rtn_ZuSergio_918 ()
+{	
+	TA_Guide_Player	(08,00,23,00,"NW_LAKE__WATER_02");
+	TA_Guide_Player	(23,00,08,00,"NW_LAKE__WATER_02");
+};
+
 FUNC VOID Rtn_ZuSekob_918 ()
 {	
-	TA_Guide_Player	(08,00,23,00,"NW_MONASTERY_THRONE_01");
-	TA_Guide_Player	(23,00,08,00,"NW_MONASTERY_THRONE_01");
+	TA_Guide_Player	(08,00,23,00,"WP_STEINKREIS_05");
+	TA_Guide_Player	(23,00,08,00,"WP_STEINKREIS_05");
+};
+
+FUNC VOID Rtn_Eishoehle_918 ()
+{	
+	TA_Stand_WP	(08,00,23,00,"WP_EISHOEHLE_01");
+	TA_Stand_WP	(23,00,08,00,"WP_EISHOEHLE_01");
+};
+
+FUNC VOID Rtn_Eishoehle2_918 ()
+{	
+	TA_Guide_Player	(08,00,23,00,"WP_EISHOEHLE_04");
+	TA_Guide_Player	(23,00,08,00,"WP_EISHOEHLE_04");
+};
+
+FUNC VOID Rtn_Prediger_918 ()
+{	
+	TA_Preach_Hyglas	(08,00,23,00,"NW_CITY_WAY_TO_SHIP_03");
+	TA_Preach_Hyglas	(23,00,08,00,"NW_CITY_WAY_TO_SHIP_03");
 };

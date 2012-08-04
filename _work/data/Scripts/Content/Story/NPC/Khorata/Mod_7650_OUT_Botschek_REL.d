@@ -4,7 +4,7 @@ instance Mod_7650_OUT_Botschek_REL (Npc_Default)
 	name 		= "Botschek";
 	guild 		= GIL_OUT;
 	id 			= 7650;
-	voice 		= 14;
+	voice 		= 28;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

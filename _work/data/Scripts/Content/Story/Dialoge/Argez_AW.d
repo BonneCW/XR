@@ -170,8 +170,8 @@ FUNC VOID Info_Mod_Argez_AW_Echsis_Info()
 
 	AI_StopProcessInfos	(self);
 
+	AI_Teleport	(self, "STRAND");
 	B_StartOtherRoutine	(self, "START");
-	AI_Teleport	(self, "START");
 
 	B_LogEntry	(TOPIC_MOD_FOKUSSUCHE, "Vor dem Sumpf habe ich Argez wieder getroffen. Er hat mir eine 'Verwandlung Fleischwanze' Spruchrolle gegeben und gab mir den Tip, rechts von den Wachen durch ein Loch in der Barrikade zu kriechen. Auch hat er komische Andeutungen gemacht: 'Aber auch kluge Entscheidungen können mal schief gehen. Dann gibt’s immer zwei Wege. Den des Kampfes und den der Diplomatie. Zum Ziel führen meist beide, der eine schneller, der andere dafür vielleicht effektiver ...");
 };

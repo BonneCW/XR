@@ -18,7 +18,7 @@ func void ZS_Dead ()
 	};
 
 	// ------ aivars resetten ------
-	self.aivar[AIV_RANSACKED] = FALSE;
+	B_SetAivar(self, AIV_RANSACKED, FALSE);
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	
 	B_StopLookAt	(self);
@@ -424,7 +424,7 @@ func void ZS_Dead ()
 		CreateInvItems	(Mod_783_BAU_Elena_NW, ItKe_Elena, 1);
 	};
 	
-	if Seele_unterwegs==TRUE
+	if (Seele_unterwegs==TRUE)
 	&& (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(PC_Hero))
 	{
 		B_KillNpc (PC_seele);
@@ -761,126 +761,6 @@ func void ZS_Dead ()
 
 	if (CurrentLevel == RELENDEL_ZEN)
 	{
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_01))
-		{
-			Mod_REL_Moorleiche_01 -= 1;
-
-			Mod_REL_Moorleiche_01_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_02))
-		{
-			Mod_REL_Moorleiche_02 -= 1;
-
-			Mod_REL_Moorleiche_02_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_03))
-		{
-			Mod_REL_Moorleiche_03 -= 1;
-
-			Mod_REL_Moorleiche_03_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_04))
-		{
-			Mod_REL_Moorleiche_04 -= 1;
-
-			Mod_REL_Moorleiche_04_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_05))
-		{
-			Mod_REL_Moorleiche_05 -= 1;
-
-			Mod_REL_Moorleiche_05_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_06))
-		{
-			Mod_REL_Moorleiche_06 -= 1;
-
-			Mod_REL_Moorleiche_06_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_07))
-		{
-			Mod_REL_Moorleiche_07 -= 1;
-
-			Mod_REL_Moorleiche_07_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_08))
-		{
-			Mod_REL_Moorleiche_08 -= 1;
-
-			Mod_REL_Moorleiche_08_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_09))
-		{
-			Mod_REL_Moorleiche_09 -= 1;
-
-			Mod_REL_Moorleiche_09_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_10))
-		{
-			Mod_REL_Moorleiche_10 -= 1;
-
-			Mod_REL_Moorleiche_10_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_11))
-		{
-			Mod_REL_Moorleiche_11 -= 1;
-
-			Mod_REL_Moorleiche_11_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_12))
-		{
-			Mod_REL_Moorleiche_12 -= 1;
-
-			Mod_REL_Moorleiche_12_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_13))
-		{
-			Mod_REL_Moorleiche_13 -= 1;
-
-			Mod_REL_Moorleiche_13_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_14))
-		{
-			Mod_REL_Moorleiche_14 -= 1;
-
-			Mod_REL_Moorleiche_14_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_15))
-		{
-			Mod_REL_Moorleiche_15 -= 1;
-
-			Mod_REL_Moorleiche_15_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_16))
-		{
-			Mod_REL_Moorleiche_16 -= 1;
-
-			Mod_REL_Moorleiche_16_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_17))
-		{
-			Mod_REL_Moorleiche_17 -= 1;
-
-			Mod_REL_Moorleiche_17_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_18))
-		{
-			Mod_REL_Moorleiche_18 -= 1;
-
-			Mod_REL_Moorleiche_18_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_19))
-		{
-			Mod_REL_Moorleiche_19 -= 1;
-
-			Mod_REL_Moorleiche_19_Counter = 10;
-		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(SwampZombie_Moor_20))
-		{
-			Mod_REL_Moorleiche_20 -= 1;
-
-			Mod_REL_Moorleiche_20_Counter = 10;
-		};
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Monster_11069_Emma_REL))
 		&& (Mod_Metzger_Schaf < 4)
 		{
@@ -983,7 +863,7 @@ func void ZS_Dead ()
 	
 	// ------ PetzCounter meiner Home-Location runtersetzen ------
 	B_DeletePetzCrime (self); //hat bei CRIME_NONE (oder keiner Home-Location) keine Auswirkungen
-	self.aivar[AIV_NpcSawPlayerCommit] = CRIME_NONE;
+	B_SetAivar(self, AIV_NpcSawPlayerCommit, CRIME_NONE);
 	
 	// ------ Equippte Waffen können nicht genommen werden! ------
 	AI_UnequipWeapons (self);
@@ -995,7 +875,7 @@ func void ZS_Dead ()
 	|| (self.guild == GIL_SUMMONED_GOBBO_SKELETON)
 	|| (self.guild == GIL_SKELETON)
 	{
-		Npc_SetToFightMode (self, 0);
+		//Npc_SetToFightMode (self, 0);
 
 		Npc_RemoveInvItems	(self, ItMw_1h_Bau_Mace, 1);
 		Npc_RemoveInvItems	(self, ItMw_1h_MISC_Sword, 1);

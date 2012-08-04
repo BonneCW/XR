@@ -4,7 +4,7 @@ instance Mod_7540_OUT_Penner_REL (Npc_Default)
 	name 		= "Penner";
 	guild 		= GIL_OUT;
 	id 			= 7540;
-	voice 		= 3;
+	voice 		= 27;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

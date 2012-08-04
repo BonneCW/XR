@@ -84,7 +84,26 @@ func void B_GivePlayerXP (var int add_xp)
 
 			if (Mod_Schwierigkeit < 4)
 			{
-				hero.LP = hero.LP + LP_PER_LEVEL;
+				if (hero.level <= 10)
+				{
+					hero.LP += 10;
+				}
+				else if (hero.level <= 20)
+				{
+					hero.LP += 8;
+				}
+				else if (hero.level <= 30)
+				{
+					hero.LP += 6;
+				}
+				else if (hero.level <= 40)
+				{
+					hero.LP += 4;
+				}
+				else
+				{
+					hero.LP += 2;
+				};
 		
 				if (Dummheit_Perk == TRUE)
 				{

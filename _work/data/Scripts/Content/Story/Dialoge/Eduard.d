@@ -566,18 +566,18 @@ FUNC VOID Info_Mod_Eduard_AlteMineQuest2_Info()
 	B_GivePlayerXP	(100);
 };
 
-INSTANCE Info_Mod_Eduard_Rüstung (C_INFO)
+INSTANCE Info_Mod_Eduard_Ruestung (C_INFO)
 {
 	npc		= Mod_1027_SMK_Eduard_MT;
 	nr		= 1;
-	condition	= Info_Mod_Eduard_Rüstung_Condition;
-	information	= Info_Mod_Eduard_Rüstung_Info;
+	condition	= Info_Mod_Eduard_Ruestung_Condition;
+	information	= Info_Mod_Eduard_Ruestung_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Kann ich bei dir eine bessere Rüstung bekommen?";
 };
 
-FUNC INT Info_Mod_Eduard_Rüstung_Condition()
+FUNC INT Info_Mod_Eduard_Ruestung_Condition()
 {
 	if ((Mod_Gilde == 15)
 	|| (Mod_Gilde == 12))
@@ -588,15 +588,15 @@ FUNC INT Info_Mod_Eduard_Rüstung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Eduard_Rüstung_Info()
+FUNC VOID Info_Mod_Eduard_Ruestung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Eduard_Rüstung_15_00"); //Kann ich bei dir eine bessere Rüstung bekommen?
+	AI_Output(hero, self, "Info_Mod_Eduard_Ruestung_15_00"); //Kann ich bei dir eine bessere Rüstung bekommen?
 
 	if (Kapitel > 3)
 	&& (Mod_ZweiteVerbesserung == FALSE)
 	&& (Mod_Gilde == 15)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_11_02"); //Ich hab gehört, dass auf dem Weg zur Ausgrabungsstätte der Wassermagier ein Nachtmahr sein soll. Mit dessen Fell könnte ich deine schwarze Kriegerrüstung sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_11_02"); //Ich hab gehört, dass auf dem Weg zur Ausgrabungsstätte der Wassermagier ein Nachtmahr sein soll. Mit dessen Fell könnte ich deine schwarze Kriegerrüstung sicher ein wenig verbessern.
 	
 		Mod_ZweiteVerbesserung = TRUE;
 	
@@ -607,42 +607,42 @@ FUNC VOID Info_Mod_Eduard_Rüstung_Info()
 	&& (Mod_ErsteVerbesserung == FALSE)
 	&& (Mod_Gilde == 12)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_11_03"); //Ich hab gehört, dass auf beim Pass ein Schattensnapper sein soll. Mit dessen Haut könnte ich deine schwarze Novizenrobe sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_11_03"); //Ich hab gehört, dass auf beim Pass ein Schattensnapper sein soll. Mit dessen Haut könnte ich deine schwarze Novizenrobe sicher ein wenig verbessern.
 	
 		Mod_ErsteVerbesserung = TRUE;
 	
 		Wld_InsertNpc	(Schattensnapper,	"NW_PASS_06");
 	};
 
-	Info_ClearChoices	(Info_Mod_Eduard_Rüstung);
-	Info_AddChoice	(Info_Mod_Eduard_Rüstung, DIALOG_BACK, Info_Mod_Eduard_Rüstung_BACK);
+	Info_ClearChoices	(Info_Mod_Eduard_Ruestung);
+	Info_AddChoice	(Info_Mod_Eduard_Ruestung, DIALOG_BACK, Info_Mod_Eduard_Ruestung_BACK);
 
 	if (Mod_ZweiteVerbesserung == TRUE)
 	&& (Mod_Gilde == 15)
 	{
-		Info_AddChoice	(Info_Mod_Eduard_Rüstung, "Schwarze Kriegerrüstung verbessern", Info_Mod_Eduard_Rüstung_SKR_S);
+		Info_AddChoice	(Info_Mod_Eduard_Ruestung, "Schwarze Kriegerrüstung verbessern", Info_Mod_Eduard_Ruestung_SKR_S);
 	};
 
 	if (Mod_ErsteVerbesserung == TRUE)
 	&& (Mod_Gilde == 12)
 	{
-		Info_AddChoice	(Info_Mod_Eduard_Rüstung, "Schwarze Novizenrobe verbessern", Info_Mod_Eduard_Rüstung_SNOV_S);
+		Info_AddChoice	(Info_Mod_Eduard_Ruestung, "Schwarze Novizenrobe verbessern", Info_Mod_Eduard_Ruestung_SNOV_S);
 	};
 };
 
-FUNC VOID Info_Mod_Eduard_Rüstung_BACK ()
+FUNC VOID Info_Mod_Eduard_Ruestung_BACK ()
 {
-	Info_ClearChoices	(Info_Mod_Eduard_Rüstung);
+	Info_ClearChoices	(Info_Mod_Eduard_Ruestung);
 };
 
-FUNC VOID Info_Mod_Eduard_Rüstung_SKR_S ()
+FUNC VOID Info_Mod_Eduard_Ruestung_SKR_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Eduard_Rüstung_SKR_S_15_00"); //Verbessere meine schwarze Kriegerrüstung.
+	AI_Output(hero, self, "Info_Mod_Eduard_Ruestung_SKR_S_15_00"); //Verbessere meine schwarze Kriegerrüstung.
 
 	if (Npc_HasItems(hero, ItAt_NightmareFur) == 1)
 	&& (Npc_HasItems(hero, ItAr_SMK_L) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_SKR_S_11_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_SKR_S_11_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_NightmareFur, 1);
 		
@@ -661,24 +661,24 @@ FUNC VOID Info_Mod_Eduard_Rüstung_SKR_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_SMK_L) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_SKR_S_11_02"); //Du musst schon eine schwarze Kriegerrüstung haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_SKR_S_11_02"); //Du musst schon eine schwarze Kriegerrüstung haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_NightmareFur) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_SKR_S_11_03"); //Wenn du das Nachtmahrfell nicht hast, kann ich deine Rüstung nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_SKR_S_11_03"); //Wenn du das Nachtmahrfell nicht hast, kann ich deine Rüstung nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Eduard_Rüstung);
+	Info_ClearChoices	(Info_Mod_Eduard_Ruestung);
 };
 
-FUNC VOID Info_Mod_Eduard_Rüstung_SNOV_S ()
+FUNC VOID Info_Mod_Eduard_Ruestung_SNOV_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Eduard_Rüstung_SNOV_S_15_00"); //Verbessere meine schwarze Novizenrobe.
+	AI_Output(hero, self, "Info_Mod_Eduard_Ruestung_SNOV_S_15_00"); //Verbessere meine schwarze Novizenrobe.
 
 	if (Npc_HasItems(hero, ItAt_Schattensnapperhaut) == 1)
 	&& (Npc_HasItems(hero, ItAr_NOV_DMB_01) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_SNOV_S_11_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_SNOV_S_11_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_Schattensnapperhaut, 1);
 		
@@ -697,14 +697,74 @@ FUNC VOID Info_Mod_Eduard_Rüstung_SNOV_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_NOV_DMB_01) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_SNOV_S_11_02"); //Du musst schon eine schwarze Novizenrobe haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_SNOV_S_11_02"); //Du musst schon eine schwarze Novizenrobe haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_Schattensnapperhaut) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Rüstung_SNOV_S_11_03"); //Wenn du die Schattensnapperhaut nicht hast, kann ich deine Rüstung nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_SNOV_S_11_03"); //Wenn du die Schattensnapperhaut nicht hast, kann ich deine Rüstung nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Eduard_Rüstung);
+	Info_ClearChoices	(Info_Mod_Eduard_Ruestung);
+};
+
+instance Info_Mod_Eduard_TeachCOMMON (C_INFO)
+{
+	npc		= Mod_1027_SMK_Eduard_MT;
+	nr          	= 1;
+	condition	= Info_Mod_Eduard_TeachCOMMON_Condition;
+	information	= Info_Mod_Eduard_TeachCOMMON_Info;
+	permanent	= TRUE;
+	description	= B_BuildLearnString("Schmieden lernen", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_Common));
+};
+
+func int Info_Mod_Eduard_TeachCOMMON_Condition ()
+{
+	if (PLAYER_TALENT_SMITH[WEAPON_Common] == FALSE)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Eduard_SchmiedenLehren))
+	{
+		return TRUE;
+	};
+};
+
+func void Info_Mod_Eduard_TeachCOMMON_Info ()
+{
+	AI_Output (other, self, "Info_Mod_Eduard_TeachCOMMON_15_00"); //Bring mir bei, wie man ein Schwert schmiedet!
+	
+	if (B_TeachPlayerTalentSmith (self, other, WEAPON_Common))
+	{
+		AI_Output (self, other, "Info_Mod_Eduard_TeachCOMMON_11_01"); //Ganz einfach: Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
+		AI_Output (self, other, "Info_Mod_Eduard_TeachCOMMON_11_02"); //Dann schlägst du am Amboss die Klinge zurecht.
+		AI_Output (self, other, "Info_Mod_Eduard_TeachCOMMON_11_03"); //Achte vor allem darauf, dass die Klinge nicht zu kalt wird. Du hast immer nur wenige Minuten Zeit, an deiner Waffe zu arbeiten ...
+		AI_Output (self, other, "Info_Mod_Eduard_TeachCOMMON_11_04"); //Den Rest findest du schon raus - reine Übungssache.
+	};
+};
+
+INSTANCE Info_Mod_Eduard_Trade (C_INFO)
+{
+	npc		= Mod_1027_SMK_Eduard_MT;
+	nr		= 1;
+	condition	= Info_Mod_Eduard_Trade_Condition;
+	information	= Info_Mod_Eduard_Trade_Info;
+	permanent	= 1;
+	important	= 0;
+	trade		= 1;
+	description	= DIALOG_TRADE;
+};
+
+FUNC INT Info_Mod_Eduard_Trade_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Eduard_Haendler))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Eduard_Trade_Info()
+{
+	Backup_Questitems();
+
+	B_GiveTradeInv (self);
+	B_Say (hero, self, "$TRADE_1");
 };
 
 INSTANCE Info_Mod_Eduard_Pickpocket (C_INFO)
@@ -715,12 +775,12 @@ INSTANCE Info_Mod_Eduard_Pickpocket (C_INFO)
 	information	= Info_Mod_Eduard_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Eduard_Pickpocket_Condition()
 {
-	C_Beklauen	(72, ItMi_Gold, 430);
+	C_Beklauen	(72, ItMiSwordRaw, 5);
 };
 
 FUNC VOID Info_Mod_Eduard_Pickpocket_Info()
@@ -738,8 +798,88 @@ FUNC VOID Info_Mod_Eduard_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Eduard_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Eduard_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Eduard_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Eduard_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Eduard_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Eduard_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Eduard_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Eduard_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Eduard_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Eduard_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Eduard_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Eduard_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Eduard_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Eduard_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Eduard_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Eduard_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Eduard_EXIT (C_INFO)

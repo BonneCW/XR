@@ -81,7 +81,10 @@ INSTANCE AMBIENT_SCREAM06		(C_SFX_DEF) {file= "Ambient_Scream06.wav";		vol=127;	
 INSTANCE AMBIENT_SCREAM07		(C_SFX_DEF) {file= "Ambient_Scream07.wav";		vol=127;	};
 INSTANCE AMBIENT_SCREAM08		(C_SFX_DEF) {file= "Ambient_Scream08.wav";		vol=127;	};
 INSTANCE FROGS				(C_SFX_DEF) {file= "Frogs.wav";				vol=127;	};
-
+INSTANCE TRINKFASSDRINK			(C_SFX_DEF) {file= "SWIM_LITTLEWAVES_02.wav";		vol=127;	};
+INSTANCE TRUHENKNARREN_LAUT		(C_SFX_DEF) {file= "TRUHENKNARREN_LEISE.wav";		vol=127;	};
+INSTANCE TRUHENKNARREN_LAUT_A1		(C_SFX_DEF) {file= "TRUHENKNARREN.wav";		vol=127;	};
+INSTANCE TRUHENKNARREN_LAUT_A2		(C_SFX_DEF) {file= "TRUHENKNARREN2.wav";		vol=127;	};
 
 //////////////////////
 //     TEST         //
@@ -1732,6 +1735,16 @@ INSTANCE 		ALRAUNE_AMB_A1					(C_SFX_DEF)		{file="Alraune_Ambient02.wav";		vol=8
 INSTANCE 		ALRAUNE_AMB_A2					(C_SFX_DEF)		{file="Alraune_Ambient03.wav";		vol=80;						};
 INSTANCE 		ALRAUNE_ATT					(C_SFX_DEF)		{file="Alraune_Attack01.wav";		vol=80;						};
 INSTANCE 		ALRAUNE_ATT_A1					(C_SFX_DEF)		{file="Alraune_Attack02.wav";		vol=80;						};
+
+INSTANCE 		BALROG_DIE					(C_SFX_DEF)		{file="BAL_Die01.wav";			vol=80;						};
+INSTANCE 		BALROG_AMB					(C_SFX_DEF)		{file="BAL_Ambient01.wav";		vol=80;						};
+INSTANCE 		BALROG_AMB_A1					(C_SFX_DEF)		{file="BAL_Ambient02.wav";		vol=80;						};
+INSTANCE 		BALROG_AMB_A2					(C_SFX_DEF)		{file="BAL_Ambient03.wav";		vol=80;						};
+INSTANCE 		BALROG_ATT					(C_SFX_DEF)		{file="BAL_Attack01.wav";		vol=80;						};
+INSTANCE 		BALROG_ATT_A1					(C_SFX_DEF)		{file="BAL_Attack02.wav";		vol=80;						};
+INSTANCE 		BALROG_HURT					(C_SFX_DEF)		{file="BAL_Hurt01.wav";			vol=80;						};
+INSTANCE 		BALROG_HURT_A1					(C_SFX_DEF)		{file="BAL_Hurt02.wav";			vol=80;						};
+INSTANCE 		BALROG_WHIPPINGCHAIN				(C_SFX_DEF)		{file="BAL_WhippingChain01.wav";	vol=80;						};
 
 
 //////////////////////////////////////////////////////////////////////////////

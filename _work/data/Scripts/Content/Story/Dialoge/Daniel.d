@@ -219,6 +219,36 @@ FUNC VOID Info_Mod_Daniel_Kissen_Info()
 	AI_Output(hero, self, "Info_Mod_Daniel_Kissen_15_04"); //Danke.
 };
 
+INSTANCE Info_Mod_Daniel_Kimon (C_INFO)
+{
+	npc		= Mod_7378_OUT_Daniel_REL;
+	nr		= 1;
+	condition	= Info_Mod_Daniel_Kimon_Condition;
+	information	= Info_Mod_Daniel_Kimon_Info;
+	permanent	= 0;
+	important	= 0;
+	description 	= "Du hast allerlei Tränke und Pflanzen.";
+};                       
+
+FUNC INT Info_Mod_Daniel_Kimon_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Daniel_Hi))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Penner_Kimon))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Morpheus_Kimon))
+	{
+		return TRUE;
+	};
+};
+
+FUNC VOID Info_Mod_Daniel_Kimon_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Daniel_Kimon_15_00"); //Du hast allerlei Tränke und Pflanzen. Da ist sicher auch Freudenspender dabei.
+	AI_Output(self, hero, "Info_Mod_Daniel_Kimon_11_01"); //Da denkst du falsch. Ich führe nur, was ehrliche Alchemie herstellt. Nicht dieses monströse Gepansche. Da musst du schon zu den Hofstaatlern gehen.
+	AI_Output(hero, self, "Info_Mod_Daniel_Kimon_15_02"); //Da komme ich nicht rein.
+	AI_Output(self, hero, "Info_Mod_Daniel_Kimon_11_03"); //Ist auch gut so. Ich kann dir jedenfalls nicht helfen.
+	AI_Output(hero, self, "Info_Mod_Daniel_Kimon_15_04"); //Hätte ja sein können. Bis ein andermal.
+};
+
 INSTANCE Info_Mod_Daniel_Freudenspender (C_INFO)
 {
 	npc		= Mod_7378_OUT_Daniel_REL;
@@ -283,12 +313,12 @@ INSTANCE Info_Mod_Daniel_Pickpocket (C_INFO)
 	information	= Info_Mod_Daniel_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Daniel_Pickpocket_Condition()
 {
-	C_Beklauen	(84, ItMi_Gold, 750);
+	C_Beklauen	(94, ItMi_Gold, 750);
 };
 
 FUNC VOID Info_Mod_Daniel_Pickpocket_Info()
@@ -306,8 +336,88 @@ FUNC VOID Info_Mod_Daniel_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Daniel_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Daniel_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Daniel_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Daniel_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Daniel_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Daniel_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Daniel_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Daniel_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Daniel_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Daniel_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Daniel_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Daniel_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Daniel_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Daniel_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Daniel_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Daniel_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Daniel_EXIT (C_INFO)

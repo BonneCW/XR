@@ -180,7 +180,7 @@ FUNC INT Info_Mod_Dexter_TimeOver_Condition()
 FUNC VOID Info_Mod_Dexter_TimeOver_Info()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Skinner_Laufbursche2))
-	|| (Mod_Banditenüberfall_Esteban == 11)
+	|| (Mod_Banditenueberfall_Esteban == 11)
 	|| (Mod_Orks_Morgahard == 4)
 	{
 		AI_Output(self, hero, "Info_Mod_Dexter_TimeOver_09_00"); //Du hast unserem Lager schon gute Dienste erwiesen und dich als geschickter und würdiger Bandit gezeigt.
@@ -363,7 +363,7 @@ FUNC VOID Info_Mod_Dexter_QuentinsBack_Info()
 	AI_Output(self, hero, "Info_Mod_Dexter_QuentinsBack_09_07"); //Als wir ihm das Amulett zum Aufpolieren gaben, muss er noch in selber Nacht eine exakte Kopie erstellt haben, welche er uns dann am nächsten Tag übergab.
 	AI_Output(self, hero, "Info_Mod_Dexter_QuentinsBack_09_08"); //Das Original muss er irgendwo versteckt haben. Ich kann jetzt aber nicht einfach zu ihm gehen und ihn in stücke hauen. Wir brauchen ihn noch.
 	AI_Output(hero, self, "Info_Mod_Dexter_QuentinsBack_15_09"); //Was bleibt zu tun?
-	AI_Output(self, hero, "Info_Mod_Dexter_QuentinsBack_09_10"); //Das überlasse ich dir. Kümmere du dich um Oschust. Bringe ihn mit etwas ,,Diplomatie’’ dazu, dir Auskunft über den Standort des Amulettes zu geben.
+	AI_Output(self, hero, "Info_Mod_Dexter_QuentinsBack_09_10"); //Das überlasse ich dir. Kümmere du dich um Oschust. Bringe ihn mit etwas "Diplomatie" dazu, dir Auskunft über den Standort des Amulettes zu geben.
 	AI_Output(self, hero, "Info_Mod_Dexter_QuentinsBack_09_11"); //Aber er soll danach noch weiterhin dazu in der Lage sein, seinem Fälscherhandwerk nachzugehen. Du verstehst?
 	AI_Output(self, hero, "Info_Mod_Dexter_QuentinsBack_09_12"); //Gut. Erstatte mir danach wieder Bericht.
 
@@ -539,6 +539,7 @@ FUNC VOID Info_Mod_Dexter_AmulettAbgegeben_Info()
 	Info_ClearChoices	(Info_Mod_Dexter_AmulettAbgegeben);
 
 	Info_AddChoice	(Info_Mod_Dexter_AmulettAbgegeben, "Nein, er war noch wütend wegen des gefälschten Schmuckstückes.", Info_Mod_Dexter_AmulettAbgegeben_B);
+
 	if (Npc_HasItems(hero, ItMi_Gold) >= 300)
 	&& (Npc_HasItems(hero, ItSc_TrfSheep) >= 1)
 	&& (Npc_HasItems(hero, ItSc_TrfKeiler) >= 1)
@@ -1392,12 +1393,12 @@ INSTANCE Info_Mod_Dexter_Pickpocket (C_INFO)
 	information	= Info_Mod_Dexter_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Dexter_Pickpocket_Condition()
 {
-	C_Beklauen	(85, ItMi_Gold, 630);
+	C_Beklauen	(125, ItMi_Gold, 630);
 };
 
 FUNC VOID Info_Mod_Dexter_Pickpocket_Info()
@@ -1415,8 +1416,88 @@ FUNC VOID Info_Mod_Dexter_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Dexter_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Dexter_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Dexter_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Dexter_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Dexter_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Dexter_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Dexter_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Dexter_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Dexter_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Dexter_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Dexter_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Dexter_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Dexter_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Dexter_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Dexter_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Dexter_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Dexter_EXIT (C_INFO)

@@ -94,7 +94,7 @@ FUNC VOID PrayShrine_S1 ()
 			Wld_PlayEffect("DEMENTOR_FX",  hero, hero, 0, 0, 0, FALSE );
 		};
 
-		self.aivar[AIV_INVINCIBLE]=TRUE; 
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_PrayShrine;
 		Ai_ProcessInfos (her);
 	};
@@ -593,9 +593,11 @@ FUNC VOID PC_PrayShrine_Pray_NoPay ()
 			if (Wld_GetDay()-1 > Mod_Marduk_BetTag)
 			{
 				Mod_Marduk_BetReihe = 0;
+			}
+			else
+			{
+				Mod_Marduk_BetReihe += 1;
 			};
-
-			Mod_Marduk_BetReihe += 1;
 
 			Mod_Marduk_BetTag = Wld_GetDay();
 
@@ -637,9 +639,11 @@ func VOID PC_PrayShrine_Pray_SmallPay ()
 			if (Wld_GetDay()-1 > Mod_Marduk_BetTag)
 			{
 				Mod_Marduk_BetReihe = 0;
+			}
+			else
+			{
+				Mod_Marduk_BetReihe += 1;
 			};
-
-			Mod_Marduk_BetReihe += 1;
 
 			Mod_Marduk_BetTag = Wld_GetDay();
 
@@ -684,9 +688,11 @@ FUNC VOID PC_PrayShrine_Pray_MediumPay ()
 			if (Wld_GetDay()-1 > Mod_Marduk_BetTag)
 			{
 				Mod_Marduk_BetReihe = 0;
+			}
+			else
+			{
+				Mod_Marduk_BetReihe += 1;
 			};
-
-			Mod_Marduk_BetReihe += 1;
 
 			Mod_Marduk_BetTag = Wld_GetDay();
 
@@ -753,9 +759,11 @@ func VOID PC_PrayShrine_Pray_BigPay ()
 			if (Wld_GetDay()-1 > Mod_Marduk_BetTag)
 			{
 				Mod_Marduk_BetReihe = 0;
+			}
+			else
+			{
+				Mod_Marduk_BetReihe += 1;
 			};
-
-			Mod_Marduk_BetReihe += 1;
 
 			Mod_Marduk_BetTag = Wld_GetDay();
 

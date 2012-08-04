@@ -22,6 +22,7 @@ func int Info_Mod_TemplerTempelwache_FirstWarn_Condition()
 	&& (self.aivar[AIV_PASSGATE] == FALSE)
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self), self.wp)	== TRUE)
 	&& (Npc_RefuseTalk(self) == FALSE))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Jackal_AtPC))
 	{
 		return TRUE;
 	};

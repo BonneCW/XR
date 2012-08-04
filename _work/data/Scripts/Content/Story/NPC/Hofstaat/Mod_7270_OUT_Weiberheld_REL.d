@@ -4,7 +4,7 @@ instance Mod_7270_OUT_Weiberheld_REL (Npc_Default)
 	name 		= "Königlicher Weiberheld";
 	guild 		= GIL_OUT;
 	id 			= 7270;
-	voice 		= 9;
+	voice 		= 27;
 	flags       = 0;									//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -121,7 +121,7 @@ prototype Mst_Default_Matrone (C_NPC)
 	attribute	[ATR_HITPOINTS_MAX]	=	400;
 	attribute	[ATR_HITPOINTS]		=	400;
 	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 			=	100;
+	attribute	[ATR_MANA] 		=	100;
 	
 	// ------ Protection ------
 	protection	[PROT_BLUNT]		=	90000;
@@ -287,6 +287,7 @@ INSTANCE Gobbo_Matrone_04 (Mst_Default_Gobbo_Green)
 
 INSTANCE Gobbo_Matrone_Summoned (Mst_Default_Matrone)
 {
+	name		= "Beschworene Goblin-Matrone";
 	level = 0;
 
 	B_SetVisuals_Gobbo_Matrone();

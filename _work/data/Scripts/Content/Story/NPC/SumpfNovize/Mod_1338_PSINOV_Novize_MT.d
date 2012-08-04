@@ -37,15 +37,24 @@ instance Mod_1338_PSINOV_Novize_MT (Npc_Default)
 	        
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_1338;
-
-
-	
 };
 
 FUNC VOID Rtn_start_1338 ()
 {
     TA_Sleep  		(23,00,07,30,"PSI_8_HUT_IN");
     TA_Sit_Campfire	(07,30,23,00,"PSI_PATH_2_14");
+};
+
+FUNC VOID Rtn_Sumpfmensch_1338 ()
+{
+	TA_Sit_Campfire	(22,00,07,00,"PSI_PLACE");
+	TA_Sit_Campfire	(07,00,22,00,"PSI_PATH_2_14");	
+};
+
+FUNC VOID Rtn_Sumpfmensch2_1338 ()
+{
+	TA_Sit_Campfire			(07,00,22,00,"PSI_PATH_2_14");	
+	TA_Smalltalk_Sumpfmensch02	(22,00,07,00,"PSI_TO_HERB_PLACE_1");	
 };
 
 FUNC VOID Rtn_Tot_1338 ()

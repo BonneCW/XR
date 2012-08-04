@@ -51,3 +51,9 @@ FUNC VOID Rtn_Hoehle_7023()
 	TA_Stand_WP	(08,00,20,00,"LOCATION_11_11");
 	TA_Stand_WP	(20,00,08,00,"LOCATION_11_11");
 };
+
+FUNC VOID Rtn_Tot_7023()
+{
+	TA_FleeToWP	(08,00,20,00,"TOT");
+	TA_FleeToWP	(20,00,08,00,"TOT");
+};

@@ -43,9 +43,9 @@ instance Mod_7115_NONE_Nadja_NW (Npc_Default)
 FUNC VOID Rtn_Down_7115 ()
 {	
 	TA_Stand_Drinking	(05,00,17,00,"NW_PUFF_DANCE");
-	TA_Dance			(17,00,21,00,"NW_PUFF_DANCE");
+	TA_Dance		(17,00,21,00,"NW_PUFF_DANCE");
 	TA_Stand_Drinking	(21,00,21,30,"NW_PUFF_DANCE");
-    TA_Dance			(21,30,05,00,"NW_PUFF_DANCE");
+	TA_Dance		(21,30,05,00,"NW_PUFF_DANCE");
 };
 
 FUNC VOID Rtn_Start_7115 ()
@@ -58,4 +58,11 @@ FUNC VOID Rtn_Erpressung_7115()
 {
 	TA_Smalltalk	(08,00,22,00,"NW_CITY_HABOUR_HUT_03_IN");
 	TA_Smalltalk	(22,00,08,00,"NW_CITY_HABOUR_HUT_03_IN");
+};
+
+
+FUNC VOID Rtn_Dexter_7115()
+{
+	TA_Dance	(08,00,22,00,"NW_CASTLEMINE_HUT_10");
+	TA_Dance	(22,00,08,00,"NW_CASTLEMINE_HUT_10");
 };

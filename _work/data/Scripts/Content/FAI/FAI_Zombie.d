@@ -25,13 +25,13 @@ MOVE_WAIT				200 ms
 INSTANCE FA_ENEMY_PREHIT_23 (C_FightAI)
 {
 	move[0] = MOVE_JUMPBACK;
-	move[1] = MOVE_WAIT;
+	move[1] = MOVE_ATTACK;
 };
 
 // ------ Gegner macht Sturmattacke ------
 INSTANCE FA_ENEMY_STORMPREHIT_23 (C_FightAI)
 {
-	move[0] = MOVE_WAIT;
+	move[0] = MOVE_ATTACK;
 };
 
 

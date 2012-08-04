@@ -4,6 +4,8 @@ FUNC VOID NEBENQUESTS()
 	var int loopStart;
 	var C_Npc temp;
 	var int npcPtr;
+	var int ptr;
+	var zCVob vob;
 
 	// Nebenquests
 
@@ -563,7 +565,9 @@ FUNC VOID NEBENQUESTS()
 			{
 				Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);
 
-				B_TransferInventory_Mob (hero, "CANTHARSTRUHE");
+				B_TransferInventory_All (hero, PC_Itemholder);
+
+				Mob_CreateItems	("CANTHARSTRUHE", ItSe_HeroPocket, 1);
 
 				Mod_CantharQuest_Last = 5;
 
@@ -644,10 +648,10 @@ FUNC VOID NEBENQUESTS()
 
 		// Matteos Flugblätter
 
-		if (Mod_Flugblätter > Mod_FlugblattMeldung)
-		&& (hero.aivar[AIV_INVINCIBLE] == FALSE)
+		if (Mod_Flugblaetter > Mod_FlugblattMeldung)
+		&& (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)
 		{
-			if (Mod_Flugblätter == 20)
+			if (Mod_Flugblaetter == 20)
 			{
 				Print ("Alle Flugblätter verteilt!");
 
@@ -656,13 +660,13 @@ FUNC VOID NEBENQUESTS()
 			else
 			{
 				var string FlugblattMeldung;
-				FlugblattMeldung = ConcatStrings("Noch ", IntToString(20-Mod_Flugblätter));
+				FlugblattMeldung = ConcatStrings("Noch ", IntToString(20-Mod_Flugblaetter));
 				FlugblattMeldung = ConcatStrings(FlugblattMeldung, " Flugblätter zu verteilen!");
 
 				Print (FlugblattMeldung);
 			};
 
-			Mod_FlugblattMeldung = Mod_Flugblätter;
+			Mod_FlugblattMeldung = Mod_Flugblaetter;
 		};
 
 		// Topic für Kristall schließen
@@ -875,14 +879,14 @@ FUNC VOID NEBENQUESTS()
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Balthasar_Bereit))
-		&& (Mod_BalthasarsWölfe == 0)
+		&& (Mod_BalthasarsWoelfe == 0)
 		&& (Npc_GetDistToWP(Mod_101_BAU_Balthasar_NW, "NW_FARM4_BALTHASAR_PEE") < 500)
 		{
 			Wld_InsertNpc	(Balthi_YWolf1, "NW_FARM4_WOLFSPAWN");
 			Wld_InsertNpc	(Balthi_YWolf2, "NW_FARM4_WOLFSPAWN");
 			Wld_InsertNpc	(Balthi_YWolf3, "NW_FARM4_WOLFSPAWN");
 
-			Mod_BalthasarsWölfe = 1;
+			Mod_BalthasarsWoelfe = 1;
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Diego_Joe))
@@ -1215,6 +1219,145 @@ FUNC VOID NEBENQUESTS()
 
 			B_LogEntry	(TOPIC_MOD_GILDO_UNKRAUT, "So, die Felder sind vom Unkraut befreit.");
 		};
+
+		// Nagur kommt wieder frei
+
+		if (Nagur_KillAkahasch == 2)
+		&& (Kapitel >= 3)
+		{
+			Nagur_KillAkahasch = 3;
+
+			B_StartOtherRoutine	(Mod_743_NONE_Nagur_NW, "TOT");
+		};
+
+		if (Nagur_KillAkahasch == 3)
+		&& (Npc_HasItems(hero, ItMi_AkahaschKopf) == 1)
+		{
+			Nagur_KillAkahasch = 4;
+
+			AI_Teleport	(Mod_743_NONE_Nagur_NW, "NW_TAVERN_TO_FOREST_05_02");
+			B_StartOtherRoutine	(Mod_743_NONE_Nagur_NW, "RACHE");
+
+			Wld_InsertNpc	(Mod_7779_ASS_Assassine_NW, "NW_TAVERN_TO_FOREST_05_02");
+			Wld_InsertNpc	(Mod_7780_SNOV_Novize_NW, "NW_TAVERN_TO_FOREST_05_02");
+		};
+
+		if (Mod_Kardif_InfoTruhe == 1)
+		{
+			if (Mob_HasItems("KARDIFINFOTRUHE", ItMi_Joint) == 0)
+			&& (Mob_HasItems("KARDIFINFOTRUHE", ItFo_Booze) == 0)
+			&& (Mob_HasItems("KARDIFINFOTRUHE", ItFo_Wine) == 0)
+			&& (Mob_HasItems("KARDIFINFOTRUHE", ItFo_Beer) == 0)
+			&& (Mob_HasItems("KARDIFINFOTRUHE", ItPo_Tiergift) == 0)
+			&& (Mob_HasItems("KARDIFINFOTRUHE", ItPo_Pflanzengift) == 0)
+			{
+				Mod_Kardif_InfoTruhe = 0;
+
+				ptr = MEM_SearchVobByName("KARDIFINFOTRUHE");
+
+				vob = MEM_PtrToInst(ptr);
+
+				vob.trafoObjToWorld[3] = mkf(55);
+				vob.trafoObjToWorld[7] = mkf(650);
+				vob.trafoObjToWorld[11] = mkf(-1440);
+
+				VobPositionUpdated(ptr);
+			};
+		};
+
+		// Es geht nur ums Geschäft
+
+		if (Npc_KnowsInfo(hero, Info_Mod_Nagur_Geschaeft))
+		&& (Mob_HasItems("KARDIFINFOTRUHE", ItMi_NagurPaket) == 1)
+		&& (Mod_Nagur_Geschaeft == 0)
+		{
+			Mod_Nagur_Geschaeft = 1;
+
+			B_LogEntry	(TOPIC_MOD_NAGUR_GESCHAEFT, "Ich habe das Paket in den Kisten verstaut.");
+		};
+
+		if (Mod_Nagur_Geschaeft == 1)
+		&& (Npc_GetDistToWP(hero, "NW_CITY_HABOUR_KASERN_05_01") < 500)
+		{
+			Mod_Nagur_Geschaeft = 2;
+
+			ptr = MEM_SearchVobByName("KARDIFINFOTRUHE");
+
+			vob = MEM_PtrToInst(ptr);
+
+			vob.trafoObjToWorld[3] = mkf(55);
+			vob.trafoObjToWorld[7] = mkf(650);
+			vob.trafoObjToWorld[11] = mkf(-1440);
+
+			VobPositionUpdated(ptr);
+		};
+
+		if (Mod_Nagur_Geschaeft == 2)
+		{
+			NagurGeschaefte_Scene();
+		};
+
+		if (Mod_Nagur_Geschaeft == 5)
+		&& (Npc_IsDead(Mod_7782_ASS_Assassine_NW))
+		&& (Npc_IsDead(Mod_7781_SNOV_Novize_NW))
+		&& (Npc_IsDead(Mod_7783_OUT_Schmuggler_NW))
+		{
+			Mod_Nagur_Geschaeft = 6;
+
+			B_LogEntry	(TOPIC_MOD_NAGUR_GESCHAEFT, "Ich kann jetzt Nagur davon berichten, dass seine Konkurrenten beseitigt wurden.");
+		};
+
+		if (Mod_Nagur_Geschaeft == 6)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Nagur_Geschaeft2))
+		&& (Wld_GetDay()-2 >= Mod_Nagur_Geschaeft_Tag)
+		{
+			Mod_Nagur_Geschaeft = 7;
+
+			B_RemoveNpc	(Mod_7782_ASS_Assassine_NW);
+			B_RemoveNpc	(Mod_7781_SNOV_Novize_NW);
+			B_RemoveNpc	(Mod_743_NONE_Nagur_NW);
+
+			B_StartOtherRoutine	(Mod_7783_OUT_Schmuggler_NW, "ATNAGUR");
+		};
+
+		// Till schließt sich je nach Held einer Gilde an
+
+		if (Mod_TillChange == 1)
+		&& (Wld_GetDay()-3 > Mod_TillChange_Day)
+		{
+			Mod_TillChange = 2;
+
+			if (hero.guild == GIL_VLK)
+			{
+				B_StartOtherRoutine	(Mod_541_NONE_Till_NW, "FM");
+
+				AI_UnequipArmor	(Mod_541_NONE_Till_NW);
+
+				CreateInvItems	(Mod_541_NONE_Till_NW, ItAr_Nov_L, 1);
+
+				AI_EquipArmor	(Mod_541_NONE_Till_NW, ItAr_Nov_L);
+			}
+			else if (hero.guild == GIL_NOV)
+			{
+				B_StartOtherRoutine	(Mod_541_NONE_Till_NW, "WM");
+
+				AI_UnequipArmor	(Mod_541_NONE_Till_NW);
+
+				CreateInvItems	(Mod_541_NONE_Till_NW, ITAR_Wassernovize1, 1);
+
+				AI_EquipArmor	(Mod_541_NONE_Till_NW, ITAR_Wassernovize1);
+			}
+			else if (hero.guild == GIL_MIL)
+			{
+				B_StartOtherRoutine	(Mod_541_NONE_Till_NW, "SLD");
+
+				AI_UnequipArmor	(Mod_541_NONE_Till_NW);
+
+				CreateInvItems	(Mod_541_NONE_Till_NW, ItAr_Sld_L, 1);
+
+				AI_EquipArmor	(Mod_541_NONE_Till_NW, ItAr_Sld_L);
+			};
+		};
 	};
 
 	if (CurrentLevel == ADDONWORLD_ZEN)
@@ -1336,6 +1479,30 @@ FUNC VOID NEBENQUESTS()
 
 				B_LogEntry	(TOPIC_MOD_EREMIT_HARPIEN, "Das sollten wohl alle Flattermänner ... oder Flatterfrauen ... wie auch immer gewesen sein.");
 			};
+		};
+
+		// Plagegeister
+
+		if (Mod_Riordian_Geister == 0)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Riordian_AW_SteinkreisTafel))
+		&& (Wld_GetDay()-2 >= Mod_Riordian_Geister_Tag)
+		{
+			Mod_Riordian_Geister = 1;
+
+			B_StartOtherRoutine	(Mod_9003_KDW_Riordian_AW, "PLAGEGEISTER");
+			B_StartOtherRoutine	(Mod_9004_KDW_Merdarion_AW, "PLAGEGEISTER");
+			B_StartOtherRoutine	(Mod_9001_KDW_Cronos_AW, "PLAGEGEISTER");
+			B_StartOtherRoutine	(Mod_9002_KDW_Nefarius_AW, "PLAGEGEISTER");
+
+			Wld_InsertNpc	(RuheloseSeele_01, "ADW_ENTRANCE_PLATEAU_11");
+			Wld_InsertNpc	(RuheloseSeele_02, "ADW_ENTRANCE_PLATEAU_10A");
+			Wld_InsertNpc	(RuheloseSeele_03, "ADW_ENTRANCE_02");
+			Wld_InsertNpc	(RuheloseSeele_04, "ADW_ENTRANCE_PLATEAU_07A");
+			Wld_InsertNpc	(RuheloseSeele_05, "ADW_ENTRANCE_PLATEAU_14");
+			Wld_InsertNpc	(RuheloseSeele_06, "ADW_ENTRANCE_BUILDING1_02");
+			Wld_InsertNpc	(RuheloseSeele_07, "ADW_ANCIENTGHOST");
+			Wld_InsertNpc	(RuheloseSeele_08, "ADW_ANCIENTGHOST");
+			Wld_InsertNpc	(RuheloseSeele_09, "ADW_VALLEY_BIGCAVE_18");
 		};
 	};
 
@@ -2638,7 +2805,7 @@ FUNC VOID NEBENQUESTS()
 		if (Mod_BaroAtWillingham == 0)
 		{
 			if (Npc_KnowsInfo(hero, Info_Mod_Brendan_Hi))
-			&& (Npc_GetDistToWP(hero, "") < 500)
+			&& (Npc_GetDistToWP(hero, "EISFESTUNG_18") < 500)
 			{
 				Mod_BaroAtWillingham = 1;
 
@@ -2860,7 +3027,7 @@ FUNC VOID NEBENQUESTS()
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Urs_Hi))
 		&& (Mod_Urs_Hund == 0)
-		&& (hero.aivar[AIV_INVINCIBLE] == FALSE)
+		&& (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)
 		{
 			if (Npc_HasItems(hero, ItMi_Nugget) >= 20)
 			&& (Npc_HasItems(hero, ItMi_Gold) >= 400)
@@ -3099,6 +3266,227 @@ FUNC VOID NEBENQUESTS()
 			Mod_Sly_Arena = 3;
 
 			B_StartOtherRoutine	(Mod_801_STT_Sly_MT, "TRAINING4");
+		};
+
+		if (Mod_Sly_Arena == 3)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Scatty_SlyArena))
+		&& (Wld_IsTime(18,00,19,00))
+		&& (Npc_GetDistToWP(hero, "OCR_ARENABATTLE") < 1000)
+		{
+			B_StartOtherRoutine	(Mod_801_STT_Sly_MT, "ARENAFIGHT");
+			B_StartOtherRoutine	(Mod_1871_TPL_GorKaranto_MT, "ARENAFIGHT");
+
+			Mod_Sly_Arena = 4;
+		};
+
+		if (Mod_Sly_Arena == 4)
+		&& (Npc_GetDistToWP(Mod_801_STT_Sly_MT, "OCR_ARENABATTLE") < 500)
+		&& (Npc_GetDistToWP(Mod_1871_TPL_GorKaranto_MT, "OCR_ARENABATTLE") < 500)
+		{
+			SlyKaranto_KampfScene();
+		};
+
+		// Vanille mit einem Hauch Safran
+
+		if (Mod_JackalTabak_01 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_01) < 500)
+		{
+			Mod_JackalTabak_01 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_01) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_01, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_02 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_02) < 500)
+		{
+			Mod_JackalTabak_02 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_02) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_02, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_03 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_03) < 500)
+		{
+			Mod_JackalTabak_03 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_03) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_03, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_04 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_04) < 500)
+		{
+			Mod_JackalTabak_04 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_04) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_04, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_05 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_05) < 500)
+		{
+			Mod_JackalTabak_05 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_05) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_05, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_06 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_06) < 500)
+		{
+			Mod_JackalTabak_06 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_06) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_06, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_07 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_07) < 500)
+		{
+			Mod_JackalTabak_07 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_07) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_07, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_08 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_08) < 500)
+		{
+			Mod_JackalTabak_08 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_08) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_08, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_09 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_09) < 500)
+		{
+			Mod_JackalTabak_09 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_09) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_09, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_10 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_10) < 500)
+		{
+			Mod_JackalTabak_10 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_10) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_10, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_11 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_11) < 500)
+		{
+			Mod_JackalTabak_11 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_11) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_11, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_12 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_12) < 500)
+		{
+			Mod_JackalTabak_12 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_12) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_12, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		if (Mod_JackalTabak_13 == FALSE)
+		&& (Npc_GetDistToItem(hero, ItMi_JackalTabak_13) < 500)
+		{
+			Mod_JackalTabak_13 = TRUE;
+
+			B_Say	(hero, NULL, "$SMELLTABAK");
+		};
+
+		if (Npc_HasItems(hero, ItMi_JackalTabak_13) == 1)
+		{
+			Npc_RemoveInvItems	(hero, ItMi_JackalTabak_13, 1);
+			CreateInvItems	(hero, ItMi_JackalTabak, 1);
+		};
+
+		// Lagermusik
+
+		if (Mod_Gravo_Schatz == 4)
+		&& (Wld_GetDay() > Mod_Gravo_Auftritt_Tag)
+		&& (Wld_IsTime(19,00,00,00))
+		{
+			Mod_Gravo_Schatz = 5;
+
+			B_StartOtherRoutine	(Mod_1469_BUD_Graham_MT, "AUFTRITT");
+			B_StartOtherRoutine	(Mod_1430_BUD_Gravo_MT, "AUFTRITT");
+			B_StartOtherRoutine	(Mod_1427_BUD_Guy_MT, "AUFTRITT");
+			B_StartOtherRoutine	(Mod_803_STT_Mud_MT, "AUFTRITT");
+
+			if (Npc_KnowsInfo(hero, Info_Mod_Seraphia_Lagermusik))
+			{
+				B_StartOtherRoutine	(Mod_1469_BUD_Graham_MT, "AUFTRITT");
+			};
 		};
 	};
 

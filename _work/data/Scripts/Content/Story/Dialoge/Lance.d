@@ -74,18 +74,18 @@ FUNC VOID Info_Mod_Lance_KristallEntgelt_Info()
 	B_GivePlayerXP	(100);
 };
 
-INSTANCE Info_Mod_Lance_Söldner (C_INFO)
+INSTANCE Info_Mod_Lance_Soeldner (C_INFO)
 {
 	npc		= Mod_926_RDW_Lance_NW;
 	nr		= 1;
-	condition	= Info_Mod_Lance_Söldner_Condition;
-	information	= Info_Mod_Lance_Söldner_Info;
+	condition	= Info_Mod_Lance_Soeldner_Condition;
+	information	= Info_Mod_Lance_Soeldner_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Ich bin Söldner.";
 };
 
-FUNC INT Info_Mod_Lance_Söldner_Condition()
+FUNC INT Info_Mod_Lance_Soeldner_Condition()
 {
 	if (Mod_Gilde == 4)
 	&& (Mod_PortalLance == FALSE)
@@ -94,9 +94,9 @@ FUNC INT Info_Mod_Lance_Söldner_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Lance_Söldner_Info()
+FUNC VOID Info_Mod_Lance_Soeldner_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Lance_Söldner_15_00"); //Ich bin Söldner.
+	AI_Output(hero, self, "Info_Mod_Lance_Soeldner_15_00"); //Ich bin Söldner.
 
 	var C_ITEM SLDRuessi;
 	SLDRuessi = Npc_GetEquippedArmor(hero);
@@ -104,7 +104,7 @@ FUNC VOID Info_Mod_Lance_Söldner_Info()
 	if (Hlp_IsItem(SLDRuessi, ItAr_SLD_L) == TRUE)
 	|| (Hlp_IsItem(SLDRuessi, ItAr_SLD_M) == TRUE)
 	{
-		AI_Output(self, hero, "Info_Mod_Lance_Söldner_03_01"); //Die Söldner und Wassermagier haben damals im Minental zusammengearbeitet und einige der Wasserkrieger sind ehemalige Söldner. In Ordnung, du kannst rein.
+		AI_Output(self, hero, "Info_Mod_Lance_Soeldner_03_01"); //Die Söldner und Wassermagier haben damals im Minental zusammengearbeitet und einige der Wasserkrieger sind ehemalige Söldner. In Ordnung, du kannst rein.
 
 		Mod_PortalLance	= TRUE;
 
@@ -114,7 +114,7 @@ FUNC VOID Info_Mod_Lance_Söldner_Info()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Lance_Söldner_03_02"); //Ach ja, und woran soll man das bitte erkennen?
+		AI_Output(self, hero, "Info_Mod_Lance_Soeldner_03_02"); //Ach ja, und woran soll man das bitte erkennen?
 	};
 };
 
@@ -131,7 +131,7 @@ INSTANCE Info_Mod_Lance_RDW (C_INFO)
 
 FUNC INT Info_Mod_Lance_RDW_Condition()
 {
-	if (Mod_Gilde	==	9)
+	if (Mod_Gilde == 9)
 	{
 		return 1;
 	};
@@ -163,9 +163,9 @@ INSTANCE Info_Mod_Lance_Brief (C_INFO)
 FUNC INT Info_Mod_Lance_Brief_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Saturas))
-	&& (Mod_LanceXardasBrief	==	FALSE)
+	&& (Mod_LanceXardasBrief == FALSE)
 	&& ((Npc_HasItems(hero, XardasLetterForSaturas) == 1)
-	|| (Npc_HasItems(hero, XardasLetterForSaturas_Geöffnet) == 1))
+	|| (Npc_HasItems(hero, XardasLetterForSaturas_Geoeffnet) == 1))
 	{
 		return 1;
 	};
@@ -202,7 +202,7 @@ FUNC VOID Info_Mod_Lance_Brief_Ja()
 	}
 	else
 	{
-		B_GiveInvItems(hero, self, XardasLetterForSaturas_Geöffnet, 1);
+		B_GiveInvItems(hero, self, XardasLetterForSaturas_Geoeffnet, 1);
 
 		B_GivePlayerXP	(75);
 	};
@@ -211,8 +211,7 @@ FUNC VOID Info_Mod_Lance_Brief_Ja()
 
 	AI_Output(self, hero, "Info_Mod_Lance_Brief_Ja_03_01"); //Sieht wichtig aus. Hier ist der Brief wieder.
 
-	CreateInvItems	(self, XardasLetterForSaturas_Geöffnet, 1);
-	B_GiveInvItems	(self, hero, XardasLetterForSaturas_Geöffnet, 1);
+	B_GiveInvItems	(self, hero, XardasLetterForSaturas_Geoeffnet, 1);
 
 	AI_Output(self, hero, "Info_Mod_Lance_Brief_Ja_03_02"); //Du kannst durch gehen.
 
@@ -374,7 +373,7 @@ INSTANCE Info_Mod_Lance_Pickpocket (C_INFO)
 	information	= Info_Mod_Lance_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Lance_Pickpocket_Condition()
@@ -397,8 +396,88 @@ FUNC VOID Info_Mod_Lance_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Lance_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Lance_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Lance_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Lance_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Lance_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Lance_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Lance_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Lance_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Lance_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Lance_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Lance_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Lance_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Lance_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Lance_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Lance_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Lance_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Lance_EXIT (C_INFO)

@@ -19,6 +19,7 @@ const string FONT_Ausdauer				= "FONT_O.TGA";
 const string FONT_EXP					= "FONT_T.TGA";
 const string FONT_Monster				= "FONT_B.TGA";
 const string FONT_Status				= "FONT_ICON.TGA";
+const string FONT_Handschrift				= "FONT_HANDSCHRIFT.TGA";
 
 // ****************************
 // Spellkosten für ALLE SCrolls
@@ -752,8 +753,11 @@ const int SPL_Fackel			= 197;
 const int SPL_TeleportUW		= 198;
 const int SPL_SummonGeist		= 199;
 const int SPL_Giftteppich		= 200;
+const int SPL_AuraFlammen		= 201;
+const int SPL_TeleportGDG		= 202;
+const int SPL_TeleportBeliarfestung	= 203;
 
-const int MAX_SPELL					= 201;   // 59 (Gothic), 68 (Gothic2), 100 (G2Addon)
+const int MAX_SPELL					= 204;   // 59 (Gothic), 68 (Gothic2), 100 (G2Addon)
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -998,7 +1002,10 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"Fackel",
 	"Teleport",
 	"SummonGeist",
-	"Giftteppich"
+	"Giftteppich",
+	"AuraFlammen",
+	"Teleport",
+	"Teleport"
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1244,7 +1251,10 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"FIB",					// 197
 	"HEA",					// 198
 	"SUM",	// 199
-	"SUM"
+	"SUM",	// 200
+	"HEA",	//201
+	"HEA",	//202
+	"HEA"
 };
 
 
@@ -1367,8 +1377,9 @@ const int POTION_GiftNeutralisierer			= 21;
 const int POTION_Gift					= 22;
 const int POTION_Gegengift				= 23;
 const int POTION_Genesung				= 24;
+const int POTION_Regeneration				= 25;
 
-const int MAX_POTION					= 25;
+const int MAX_POTION					= 26;
 
 var int PLAYER_TALENT_ALCHEMY[MAX_POTION];
 
@@ -1413,8 +1424,9 @@ const int SCROLL_FullHeal		= 33;
 const int SCROLL_Light			= 34;
 const int SCROLL_Shrink			= 35;
 const int SCROLL_HarmUndead		= 36;
+const int SCROLL_AuraFlammen		= 37;
 
-const int MAX_SCROLLS			= 37;
+const int MAX_SCROLLS			= 38;
 
 var int PLAYER_TALENT_SCROLLS[MAX_SCROLLS];
 
@@ -1438,8 +1450,10 @@ const int WEAPON_1H_Harad_01			= 9;
 const int WEAPON_1H_Harad_02			= 10;
 const int WEAPON_1H_Harad_03			= 11;
 const int WEAPON_1H_Harad_04			= 12;
+const int WEAPON_1H_Special_03_Dex		= 13;
+const int WEAPON_1H_Special_04_Dex		= 14;
 
-const int MAX_WEAPONS 					= 13;
+const int MAX_WEAPONS 					= 15;
 
 var int PLAYER_TALENT_SMITH[MAX_WEAPONS];
 
@@ -1448,15 +1462,15 @@ var int PLAYER_TALENT_SMITH[MAX_WEAPONS];
 // AnimalTrophy-Talente
 // ********************
 
-const int TROPHY_Teeth					= 0;
-const int TROPHY_Claws					= 1;
-const int TROPHY_Fur					= 2;
-const int TROPHY_Heart					= 3;
+const int TROPHY_Teeth				= 0;
+const int TROPHY_Claws				= 1;
+const int TROPHY_Fur				= 2;
+const int TROPHY_Heart				= 3;
 const int TROPHY_ShadowHorn 			= 4;
-const int TROPHY_FireTongue				= 5;
-const int TROPHY_BFWing					= 6;
-const int TROPHY_BFSting				= 7;
-const int TROPHY_Mandibles				= 8;
+const int TROPHY_FireTongue			= 5;
+const int TROPHY_BFWing				= 6;
+const int TROPHY_BFSting			= 7;
+const int TROPHY_Mandibles			= 8;
 const int TROPHY_CrawlerPlate			= 9;
 const int TROPHY_DrgSnapperHorn			= 10;
 const int TROPHY_DragonScale			= 11;
@@ -1465,11 +1479,12 @@ const int TROPHY_ReptileSkin			= 13;
 const int TROPHY_AlligatorClaws			= 14;
 const int TROPHY_SwampSharkTeeth		= 15;
 const int TROPHY_TrollTeeth			= 16;
-const int TROPHY_Blood			= 17;
+const int TROPHY_Blood				= 17;
 const int TROPHY_DragonSehne			= 18;
 const int TROPHY_DragonElixier			= 19;
+const int TROPHY_CrawlerKristall		= 20;
 
-const int MAX_TROPHIES					= 20;
+const int MAX_TROPHIES				= 21;
 
 var int PLAYER_TALENT_TAKEANIMALTROPHY[MAX_TROPHIES];
 

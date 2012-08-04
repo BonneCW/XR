@@ -15,7 +15,7 @@ func int B_GetLearnCostAttribute (var C_NPC oth, var int attribut)
 		else if (Mod_RealStrength >= 90) 	{	kosten = (4);	}
 		else if (Mod_RealStrength >= 60) 	{	kosten = (3);	}
 		else if (Mod_RealStrength >= 30) 	{	kosten = (2);	}
-		else 										{	kosten = (1);	};
+		else 					{	kosten = (1);	};
 
 		if (Mod_Gilde == 6)
 		|| (Mod_Gilde == 7)
@@ -36,7 +36,7 @@ func int B_GetLearnCostAttribute (var C_NPC oth, var int attribut)
 		else if (Mod_RealDexterity >= 90)	{	kosten = (4);	}
 		else if (Mod_RealDexterity >= 60)	{	kosten = (3);	}
 		else if (Mod_RealDexterity >= 30)	{	kosten = (2);	}
-		else 										{	kosten = (1);	};
+		else 					{	kosten = (1);	};
 
 		if (Mod_Gilde == 6)
 		|| (Mod_Gilde == 7)
@@ -54,10 +54,10 @@ func int B_GetLearnCostAttribute (var C_NPC oth, var int attribut)
 	if (attribut == ATR_MANA_MAX)
 	{		
 		if (Mod_RealMana >= 120)		{	kosten = (5);	}
-		else if (Mod_RealMana >= 90) 	{	kosten = (4);	}
-		else if (Mod_RealMana >= 60) 	{	kosten = (3);	}
-		else if (Mod_RealMana >= 30) 	{	kosten = (2);	}
-		else 										{	kosten = (1);	};
+		else if (Mod_RealMana >= 90) 		{	kosten = (4);	}
+		else if (Mod_RealMana >= 60) 		{	kosten = (3);	}
+		else if (Mod_RealMana >= 30) 		{	kosten = (2);	}
+		else 					{	kosten = (1);	};
 
 		if (Mod_Gilde == 4)
 		|| (Mod_Gilde == 5)
@@ -81,7 +81,7 @@ func int B_GetLearnCostAttribute_New (var C_NPC oth, var int attribut)
 	// ------ Kosten für Stärke ------
 	if (attribut == ATR_STRENGTH) 
 	{
-		if (Mod_Realstrength >= 120)	{	kosten = (25);	}
+		if (Mod_Realstrength >= 120)		{	kosten = (25);	}
 		else if (Mod_Realstrength == 119)	{	kosten = (24);	}
 		else if (Mod_Realstrength == 118)	{	kosten = (23);	}
 		else if (Mod_Realstrength == 117)	{	kosten = (22);	}
@@ -101,7 +101,7 @@ func int B_GetLearnCostAttribute_New (var C_NPC oth, var int attribut)
 		else if (Mod_Realstrength == 28)	{	kosten = (8);	}
 		else if (Mod_Realstrength == 27)	{	kosten = (7);	}
 		else if (Mod_Realstrength == 26)	{	kosten = (6);	}
-		else 										{	kosten = (5);	};
+		else 					{	kosten = (5);	};
 
 		if (Mod_Gilde == 6)
 		|| (Mod_Gilde == 7)
@@ -118,7 +118,7 @@ func int B_GetLearnCostAttribute_New (var C_NPC oth, var int attribut)
 	// ------ Kosten für Dexterity ------
 	if (attribut == ATR_DEXTERITY) 
 	{
-		if (Mod_RealDexterity >= 120)	{	kosten = (25);	}
+		if (Mod_RealDexterity >= 120)		{	kosten = (25);	}
 		else if (Mod_RealDexterity == 119)	{	kosten = (24);	}
 		else if (Mod_RealDexterity == 118)	{	kosten = (23);	}
 		else if (Mod_RealDexterity == 117)	{	kosten = (22);	}
@@ -138,7 +138,7 @@ func int B_GetLearnCostAttribute_New (var C_NPC oth, var int attribut)
 		else if (Mod_RealDexterity == 28)	{	kosten = (8);	}
 		else if (Mod_RealDexterity == 27)	{	kosten = (7);	}
 		else if (Mod_RealDexterity == 26)	{	kosten = (6);	}
-		else 										{	kosten = (5);	};
+		else 					{	kosten = (5);	};
 
 		if (Mod_Gilde == 6)
 		|| (Mod_Gilde == 7)
@@ -175,7 +175,7 @@ func int B_GetLearnCostAttribute_New (var C_NPC oth, var int attribut)
 		else if (Mod_RealMana == 28)	{	kosten = (8);	}
 		else if (Mod_RealMana == 27)	{	kosten = (7);	}
 		else if (Mod_RealMana == 26)	{	kosten = (6);	}
-		else 										{	kosten = (5);	};
+		else 				{	kosten = (5);	};
 
 		if (Mod_Gilde == 4)
 		|| (Mod_Gilde == 5)

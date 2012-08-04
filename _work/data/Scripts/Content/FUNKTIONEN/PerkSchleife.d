@@ -217,14 +217,17 @@ FUNC VOID PerkSchleife()
 	{
 		Mana_Reg = hero.attribute[ATR_MANA_MAX]*((hero.level));
 
-		Mana_Reg = Mana_Reg / 2000;
-
-		if (Mana_Reg < 1)
+		if (Mana_Reg / 2000 < 1)
 		{
-			Mana_Reg = 1;
+			if (TimeCounter_Real%(2000/Mana_Reg) == 0)
+			{
+				hero.attribute[ATR_MANA] += 1;
+			};
+		}
+		else
+		{
+			hero.attribute[ATR_MANA] += Mana_Reg / 2000;
 		};
-
-		hero.attribute[ATR_MANA] += Mana_Reg;
 
 		if (hero.attribute[ATR_MANA] > hero.attribute[ATR_MANA_MAX])
 		{

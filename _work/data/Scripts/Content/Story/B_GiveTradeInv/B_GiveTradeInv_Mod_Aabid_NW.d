@@ -18,7 +18,6 @@ FUNC VOID B_GiveTradeInv_Mod_Aabid_NW (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Arrow, 100); 
 		CreateInvItems (slf, ItRw_Bolt, 100); 
 		CreateInvItems	(slf, ItMi_Seide, 1);
-		CreateInvItems	(slf, ItFo_BoozeRudolf, 1);
 		
 		// ------ Waffen ------
 		

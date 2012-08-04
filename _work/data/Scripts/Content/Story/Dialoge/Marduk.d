@@ -49,12 +49,12 @@ FUNC VOID Info_Mod_Marduk_Aufgabe_Info()
 	AI_Output(hero, self, "Info_Mod_Marduk_Aufgabe_15_03"); //Aber das dauert ja ewig. Gibt es keinen schnelleren Weg?
 	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_04"); //(spöttisch) So, tatsächlich, es wäre dir zu anstrengend und zeitraubend?
 	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_05"); //Wenn du zu gut für die Aufgaben eines Novizen bist, wirst du wohl eher den Fähigkeiten eines Feuermagiers gerecht, oder?
-	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_06"); //Dann bring mir doch… eine Feuerballrune. Damit wäre ich von deinem fortgeschrittenen Können überzeugt.
+	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_06"); //Dann bring mir doch ... eine Feuerballrune. Damit wäre ich von deinem fortgeschrittenen Können überzeugt.
 	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_07"); // (zu sich selbst, kopfschüttelnd) Tse, da hör sich das mal einer an ... so viel Unverfrorenheit.
 
 	Log_CreateTopic	(TOPIC_MOD_MARDUK_FEUERBALL, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_MARDUK_FEUERBALL, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_MARDUK_FEUERBALL, "Ich habe Marduk nach einer Aufgabe gefragt, woraufhin er mir wochenlanges Arbeiten und Beten m Kloster auftrug. Auf meine Frage hin, ob es einen schnelleren Weg gäbe reagierte er etwas gereizt und Trug mir auf, ihm eine Feuerballrune zu besorgen. Ich glaube nicht, dass ich ohne weiteres selbst eine herstellen kann. Vielleicht könnte ich mir ja Hilfe bei jemandem holen ...");
+	B_LogEntry	(TOPIC_MOD_MARDUK_FEUERBALL, "Ich habe Marduk nach einer Aufgabe gefragt, woraufhin er mir wochenlanges Arbeiten und Beten im Kloster auftrug. Auf meine Frage hin, ob es einen schnelleren Weg gäbe reagierte er etwas gereizt und Trug mir auf, ihm eine Feuerballrune zu besorgen. Ich glaube nicht, dass ich ohne weiteres selbst eine herstellen kann. Vielleicht könnte ich mir ja Hilfe bei jemandem holen ...");
 };
 
 INSTANCE Info_Mod_Marduk_FeuerballRune (C_INFO)
@@ -116,6 +116,7 @@ INSTANCE Info_Mod_Marduk_Nachtschicht (C_INFO)
 FUNC INT Info_Mod_Marduk_Nachtschicht_Condition()
 {
 	if (hero.guild == GIL_VLK)
+	&& (Mod_Gilde == 6)
 	{
 		return 1;
 	};
@@ -456,12 +457,12 @@ INSTANCE Info_Mod_Marduk_Pickpocket (C_INFO)
 	information	= Info_Mod_Marduk_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Marduk_Pickpocket_Condition()
 {
-	C_Beklauen	(100, ItMi_Gold, 690);
+	C_Beklauen	(133, ItMi_Gold, 690);
 };
 
 FUNC VOID Info_Mod_Marduk_Pickpocket_Info()
@@ -479,8 +480,88 @@ FUNC VOID Info_Mod_Marduk_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Marduk_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Marduk_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Marduk_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Marduk_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Marduk_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Marduk_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Marduk_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Marduk_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Marduk_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Marduk_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Marduk_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Marduk_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Marduk_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Marduk_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Marduk_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Marduk_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Marduk_EXIT (C_INFO)

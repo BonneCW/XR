@@ -36,7 +36,6 @@ FUNC VOID Rtn_Start_551 ()
     	TA_Sit_Throne	(23,00,08,00,"NW_MONASTERY_THRONE_01");
 };
 
-
 FUNC VOID Rtn_Rat_551()
 {
 	TA_Sit_Throne		(08,00,20,00,"WP_KLOSTER_KELLER_RAT_PYROKAR");
@@ -47,4 +46,10 @@ FUNC VOID Rtn_Tot_551()
 {
 	TA_Stand_WP		(08,00,20,00,"TOT");
 	TA_Stand_WP		(20,00,08,00,"TOT");
+};
+
+FUNC VOID Rtn_AtBett_551()
+{
+	TA_Stand_WP		(08,00,20,00,"NW_MONASTERY_NOVICE01_01");
+	TA_Stand_WP		(20,00,08,00,"NW_MONASTERY_NOVICE01_01");
 };

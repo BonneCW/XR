@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_StonePuma(C_Npc)
 	level							=	20;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	200;
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(101) - 150;	// 150 - 250
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21);		// 0 - 20
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(201) + 300;	// 300 - 500
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_MANA] 		=	0;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	100000;
-	protection	[PROT_EDGE]			=	100000;
-	protection	[PROT_POINT]		=	100000;
-	protection	[PROT_FIRE]			=	75;
-	protection	[PROT_FLY]			=	0;
-	protection	[PROT_MAGIC]		=	50;
+	protection	[PROT_BLUNT]		=	Hlp_Random(41)*1000 + 80000;	// 80 - 120
+	protection	[PROT_EDGE]		=	Hlp_Random(41)*1000 + 80000;	// 80 - 120
+	protection	[PROT_POINT]		=	Hlp_Random(41)*1000 + 80000;	// 80 - 120
+	protection	[PROT_FIRE]		=	Hlp_Random(51) + 50;		// 50 - 100
+	protection	[PROT_FLY]		=	0;
+	protection	[PROT_MAGIC]		=	Hlp_Random(51) + 25;		// 25 - 75
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 
@@ -64,6 +64,8 @@ PROTOTYPE Mst_Default_StonePuma(C_Npc)
 	{
 		CreateInvItems (self, ItAt_SkeletonBone, 1+Hlp_Random(2));
 	};
+
+	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 };
 
 
@@ -94,8 +96,6 @@ INSTANCE Puma	(Mst_Default_StonePuma)
 {
 	B_SetVisuals_Puma();
 	Npc_SetToFistMode(self);
-
-	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 };
 
 INSTANCE StonePuma	(Mst_Default_StonePuma)
@@ -104,6 +104,4 @@ INSTANCE StonePuma	(Mst_Default_StonePuma)
 
 	B_SetVisuals_StonePuma();
 	Npc_SetToFistMode(self);
-
-	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 };

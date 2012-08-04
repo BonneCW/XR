@@ -42,7 +42,7 @@ func void ZS_Unconscious ()
 	&& (C_NpcIsHero(other))								
 	{
 		self.aivar[AIV_DefeatedByPlayer] = TRUE; //wird nur hier gesetzt, nie verändert!
-		self.aivar[AIV_LastFightAgainstPlayer] = FIGHT_LOST;
+		B_SetAivar(self, AIV_LastFightAgainstPlayer, FIGHT_LOST);
 		
 		if (self.aivar[AIV_LastPlayerAR] == AR_NONE)
 		&& (self.aivar[AIV_DuelLost] == FALSE) //also nur EINMAL
@@ -68,7 +68,7 @@ func void ZS_Unconscious ()
 	// BUGFIX: Nicht, wenn verwandelt
 	if (C_NpcIsHero (self))
 	{
-		other.aivar[AIV_LastFightAgainstPlayer] = FIGHT_WON;
+		B_SetAivar(other, AIV_LastFightAgainstPlayer, FIGHT_WON);
 		
 		if (other.aivar[AIV_ArenaFight] == AF_RUNNING)
 		{
@@ -142,7 +142,7 @@ func int ZS_Unconscious_Loop ()
 func void ZS_Unconscious_End ()
 {	
 	// ------ AIV nochmal resetten ------
-	self.aivar[AIV_RANSACKED] = FALSE;
+	B_SetAivar(self, AIV_RANSACKED, FALSE);
 	
 	// ------ aufstehen (auch Spieler) ------
 	AI_StandUp(self);
@@ -185,23 +185,13 @@ func void ZS_Unconscious_End ()
 	{
 		if (Hlp_IsValidItem (item))
 		{
-			if (Hlp_IsItem(item, ItMw_2H_Sword_Light_02) == TRUE)
-			&& (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1871_TPL_GorKaranto_MT))
+			if (Npc_GetDistToItem (self, item) > 500)
 			{
 				AI_GotoItem (self, item);
-				AI_TakeItem (self, item);
-			}
-			else if (Npc_GetDistToItem (self, item) <= 500)
-			{
-				AI_TakeItem (self, item);
 			};
-		};
-	};
 
-	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1871_TPL_GorKaranto_MT))
-	{
-		AI_GotoItem	(self, ItMw_2H_Sword_Light_02);
-		AI_TakeItem	(self, ItMw_2H_Sword_Light_02);
+			AI_TakeItem (self, item);
+		};
 	};
 	
 	// ------ die besten Waffen anlegen ------
@@ -212,5 +202,3 @@ func void ZS_Unconscious_End ()
 	AI_StartState (self, ZS_HealSelf, 0, "");
 	return;
 };
-
-

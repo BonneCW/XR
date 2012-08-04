@@ -26,7 +26,7 @@ func void B_GetWispDetectedItem ()
 	
 	AI_GotoItem (self, item);
 					
-	if (Npc_GetDistToItem(self,item) < 1000)
+	if (Npc_GetDistToItem(self, item) < 1000)
 	&& (randy <= 1)
 	{
 		if (Hlp_IsItem(item, ItMi_AlvarKristall))
@@ -163,7 +163,7 @@ func int B_MM_WispDetect()
 		}
 		else
 		{
-			if (Npc_GetDistToNpc (self,hero) < 500)
+			if (Npc_GetDistToNpc (self, hero) < 500)
 			{
 				self.aivar [AIV_TAPOSITION] = ISINPOS;
 			}
@@ -178,4 +178,3 @@ func int B_MM_WispDetect()
 		};
 	};
 };
-

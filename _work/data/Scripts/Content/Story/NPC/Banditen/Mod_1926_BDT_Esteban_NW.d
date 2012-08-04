@@ -47,6 +47,14 @@ FUNC VOID Rtn_Start_1926 ()
 	TA_Stand_Drinking	(22,00,08,30,"MARKT");
 };
 
+FUNC VOID Rtn_Castlemine_1926 ()
+{	
+   	TA_Smalltalk		(08,30,12,00,"NW_CASTLEMINE_TOWER_NAVIGATION2");
+	TA_Sit_Bench		(12,00,16,00,"NW_CASTLEMINE_HUT_BENCH_CAVE");
+	TA_Smalltalk		(16,00,22,00,"NW_CASTLEMINE_TOWER_NAVIGATION2");
+	TA_Stand_Drinking	(22,00,08,30,"NW_CASTLEMINE_TOWER_01");
+};
+
 FUNC VOID Rtn_Tot_1926()
 {
 	TA_Stand_WP	(08,00,20,00,"TOT");

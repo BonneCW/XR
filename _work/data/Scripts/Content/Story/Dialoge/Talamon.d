@@ -56,18 +56,18 @@ FUNC VOID Info_Mod_Talamon_Patherion_Info()
 	AI_StopProcessInfos	(self);
 };
 
-INSTANCE Info_Mod_Talamon_Beförderung (C_INFO)
+INSTANCE Info_Mod_Talamon_Befoerderung (C_INFO)
 {
 	npc		= Mod_925_KDF_Talamon_NW;
 	nr		= 1;
-	condition	= Info_Mod_Talamon_Beförderung_Condition;
-	information	= Info_Mod_Talamon_Beförderung_Info;
+	condition	= Info_Mod_Talamon_Befoerderung_Condition;
+	information	= Info_Mod_Talamon_Befoerderung_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich bin bereit Ordenspriester zu werden.";
 };
 
-FUNC INT Info_Mod_Talamon_Beförderung_Condition()
+FUNC INT Info_Mod_Talamon_Befoerderung_Condition()
 {
 	if (Mod_Gilde == 7)
 	&& (Kapitel > 4)
@@ -76,12 +76,12 @@ FUNC INT Info_Mod_Talamon_Beförderung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Talamon_Beförderung_Info()
+FUNC VOID Info_Mod_Talamon_Befoerderung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Talamon_Beförderung_15_00"); //Ich bin bereit Ordenspriester zu werden.
-	AI_Output(self, hero, "Info_Mod_Talamon_Beförderung_04_01"); //Du hast Innos deine Loyalität bewiesen und da Pyrokar mich dazu befugt hat, ernenne ich dich hiermit zum Ordenspriester Innos'.
-	AI_Output(self, hero, "Info_Mod_Talamon_Beförderung_04_02"); //Ich hoffe du missbrauchst die Macht nicht, die du durch diesen Rang erlangt hast.
-	AI_Output(self, hero, "Info_Mod_Talamon_Beförderung_04_03"); //Hier ist deine neue Robe.
+	AI_Output(hero, self, "Info_Mod_Talamon_Befoerderung_15_00"); //Ich bin bereit Ordenspriester zu werden.
+	AI_Output(self, hero, "Info_Mod_Talamon_Befoerderung_04_01"); //Du hast Innos deine Loyalität bewiesen und da Pyrokar mich dazu befugt hat, ernenne ich dich hiermit zum Ordenspriester Innos'.
+	AI_Output(self, hero, "Info_Mod_Talamon_Befoerderung_04_02"); //Ich hoffe du missbrauchst die Macht nicht, die du durch diesen Rang erlangt hast.
+	AI_Output(self, hero, "Info_Mod_Talamon_Befoerderung_04_03"); //Hier ist deine neue Robe.
 
 	CreateInvItems	(hero, ItAr_Kdf_H, 1);
 
@@ -89,7 +89,6 @@ FUNC VOID Info_Mod_Talamon_Beförderung_Info()
 
 	AI_UnequipArmor	(hero);
 	AI_EquipArmor	(hero, ItAr_Kdf_H);
-
 
 	Snd_Play ("LEVELUP");
 	
@@ -100,18 +99,18 @@ FUNC VOID Info_Mod_Talamon_Beförderung_Info()
 	B_Göttergefallen(1, 5);
 };
 
-INSTANCE Info_Mod_Talamon_Rüstung (C_INFO)
+INSTANCE Info_Mod_Talamon_Ruestung (C_INFO)
 {
 	npc		= Mod_925_KDF_Talamon_NW;
 	nr		= 1;
-	condition	= Info_Mod_Talamon_Rüstung_Condition;
-	information	= Info_Mod_Talamon_Rüstung_Info;
+	condition	= Info_Mod_Talamon_Ruestung_Condition;
+	information	= Info_Mod_Talamon_Ruestung_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Kann ich bei dir eine bessere Robe bekommen?";
 };
 
-FUNC INT Info_Mod_Talamon_Rüstung_Condition()
+FUNC INT Info_Mod_Talamon_Ruestung_Condition()
 {
 	if ((Mod_Gilde == 6)
 	|| (Mod_Gilde == 7))
@@ -121,14 +120,14 @@ FUNC INT Info_Mod_Talamon_Rüstung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Talamon_Rüstung_Info()
+FUNC VOID Info_Mod_Talamon_Ruestung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Talamon_Rüstung_15_00"); //Kann ich bei dir eine bessere Robe bekommen?
+	AI_Output(hero, self, "Info_Mod_Talamon_Ruestung_15_00"); //Kann ich bei dir eine bessere Robe bekommen?
 
 	if (Kapitel > 1)
 	&& (Mod_ErsteVerbesserung == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Talamon_Rüstung_04_02"); //Ich hab gehört, dass beim Pass zum Minental ein Feuersnapper sein soll. Mit dessen Haut könnte ich deine Feuer Novizenrobe sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Talamon_Ruestung_04_02"); //Ich hab gehört, dass beim Pass zum Minental ein Feuersnapper sein soll. Mit dessen Haut könnte ich deine Feuer Novizenrobe sicher ein wenig verbessern.
 	
 		Mod_ErsteVerbesserung = TRUE;
 	
@@ -138,42 +137,42 @@ FUNC VOID Info_Mod_Talamon_Rüstung_Info()
 	if (Kapitel > 3)
 	&& (Mod_ZweiteVerbesserung == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Talamon_Rüstung_04_03"); //Ich hab gehört, dass beim Weg zur Ausgrabungsstätte der Wassermagier ein Feuerläufer sein soll. Mit dessen Fell könnte ich deine Feuermagierrobe sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Talamon_Ruestung_04_03"); //Ich hab gehört, dass beim Weg zur Ausgrabungsstätte der Wassermagier ein Feuerläufer sein soll. Mit dessen Fell könnte ich deine Feuermagierrobe sicher ein wenig verbessern.
 	
 		Mod_ZweiteVerbesserung = TRUE;
 	
-		Wld_InsertNpc	(Feuerläufer,	"FP_MAGICGOLEM");
+		Wld_InsertNpc	(Feuerlaeufer,	"FP_MAGICGOLEM");
 	};
 
-	Info_ClearChoices	(Info_Mod_Talamon_Rüstung);
-	Info_AddChoice	(Info_Mod_Talamon_Rüstung, DIALOG_BACK, Info_Mod_Talamon_Rüstung_BACK);
+	Info_ClearChoices	(Info_Mod_Talamon_Ruestung);
+	Info_AddChoice	(Info_Mod_Talamon_Ruestung, DIALOG_BACK, Info_Mod_Talamon_Ruestung_BACK);
 
 	if (Mod_ErsteVerbesserung == TRUE)
 	&& (Mod_Gilde == 6)
 	{
-		Info_AddChoice	(Info_Mod_Talamon_Rüstung, "Feuer-Novizenrobe verbessern", Info_Mod_Talamon_Rüstung_NOV_S);
+		Info_AddChoice	(Info_Mod_Talamon_Ruestung, "Feuer-Novizenrobe verbessern", Info_Mod_Talamon_Ruestung_NOV_S);
 	};
 
 	if (Mod_ZweiteVerbesserung == TRUE)
 	&& (Mod_Gilde == 7)
 	{
-		Info_AddChoice	(Info_Mod_Talamon_Rüstung, "Feuermagierrobe verbessern", Info_Mod_Talamon_Rüstung_KDF_S);
+		Info_AddChoice	(Info_Mod_Talamon_Ruestung, "Feuermagierrobe verbessern", Info_Mod_Talamon_Ruestung_KDF_S);
 	};
 };
 
-FUNC VOID Info_Mod_Talamon_Rüstung_BACK ()
+FUNC VOID Info_Mod_Talamon_Ruestung_BACK ()
 {
-	Info_ClearChoices	(Info_Mod_Talamon_Rüstung);
+	Info_ClearChoices	(Info_Mod_Talamon_Ruestung);
 };
 
-FUNC VOID Info_Mod_Talamon_Rüstung_NOV_S ()
+FUNC VOID Info_Mod_Talamon_Ruestung_NOV_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Talamon_Rüstung_NOV_S_15_00"); //Verbessere meine Feuer-Novizenrobe.
+	AI_Output(hero, self, "Info_Mod_Talamon_Ruestung_NOV_S_15_00"); //Verbessere meine Feuer-Novizenrobe.
 
 	if (Npc_HasItems(hero, ItAt_FeuersnapperHaut) == 1)
 	&& (Npc_HasItems(hero, ItAr_NOV_L) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Talamon_Rüstung_NOV_S_04_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Talamon_Ruestung_NOV_S_04_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_FeuersnapperHaut, 1);
 		
@@ -192,24 +191,24 @@ FUNC VOID Info_Mod_Talamon_Rüstung_NOV_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_NOV_L) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Talamon_Rüstung_NOV_S_04_02"); //Du musst schon eine Feuer-Novizenrobe haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Talamon_Ruestung_NOV_S_04_02"); //Du musst schon eine Feuer-Novizenrobe haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_Feuersnapperhaut) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Talamon_Rüstung_NOV_S_04_03"); //Wenn du nicht die Snapperhaut hast, kann ich deine Robe nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Talamon_Ruestung_NOV_S_04_03"); //Wenn du nicht die Snapperhaut hast, kann ich deine Robe nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Talamon_Rüstung);
+	Info_ClearChoices	(Info_Mod_Talamon_Ruestung);
 };
 
-FUNC VOID Info_Mod_Talamon_Rüstung_KDF_S ()
+FUNC VOID Info_Mod_Talamon_Ruestung_KDF_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Talamon_Rüstung_KDF_S_15_00"); //Verbessere meine Feuermagierrobe.
+	AI_Output(hero, self, "Info_Mod_Talamon_Ruestung_KDF_S_15_00"); //Verbessere meine Feuermagierrobe.
 
 	if (Npc_HasItems(hero, ItAt_FireShadowFur) == 1)
 	&& (Npc_HasItems(hero, ItAr_KDF_L) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Talamon_Rüstung_KDF_S_04_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Talamon_Ruestung_KDF_S_04_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_FireShadowFur, 1);
 		
@@ -228,14 +227,14 @@ FUNC VOID Info_Mod_Talamon_Rüstung_KDF_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_KDF_L_FEUER) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Talamon_Rüstung_KDF_S_04_02"); //Du musst schon eine Feuermagierrobe haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Talamon_Ruestung_KDF_S_04_02"); //Du musst schon eine Feuermagierrobe haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_FireShadowFur) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Talamon_Rüstung_KDF_S_04_03"); //Wenn du nicht das Feuerläufer hast, kann ich deine Robe nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Talamon_Ruestung_KDF_S_04_03"); //Wenn du nicht das Feuerläufer hast, kann ich deine Robe nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Talamon_Rüstung);
+	Info_ClearChoices	(Info_Mod_Talamon_Ruestung);
 };
 
 const string Talamon_Checkpoint	= "NW_MONASTERY_SEALROOM_01";	//WP hinter City-Tor vom Spielstart aus!
@@ -358,12 +357,12 @@ INSTANCE Info_Mod_Talamon_Pickpocket (C_INFO)
 	information	= Info_Mod_Talamon_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Talamon_Pickpocket_Condition()
 {
-	C_Beklauen	(117, ItMi_Gold, 1000);
+	C_Beklauen	(167, ItMi_Gold, 1000);
 };
 
 FUNC VOID Info_Mod_Talamon_Pickpocket_Info()
@@ -381,8 +380,88 @@ FUNC VOID Info_Mod_Talamon_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Talamon_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Talamon_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Talamon_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Talamon_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Talamon_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Talamon_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Talamon_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Talamon_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Talamon_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Talamon_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Talamon_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Talamon_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Talamon_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Talamon_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Talamon_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Talamon_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Talamon_EXIT (C_INFO)

@@ -38,6 +38,6 @@ instance Mod_7675_RIT_Ritter_NW (Npc_Default)
 
 FUNC VOID Rtn_Start_7675 ()
 {
-	TA_Guard_Passage	(07,00,19,00,"NW_PASS_ORKS_12");
-	TA_Guard_Passage	(19,00,07,00,"NW_PASS_ORKS_12");	
+	TA_Guard_Passage	(07,00,19,00,"NW_PASS_GATE_01");
+	TA_Guard_Passage	(19,00,07,00,"NW_PASS_GATE_01");	
 };

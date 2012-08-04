@@ -9,19 +9,19 @@ PROTOTYPE Mst_Default_OrcBiter(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_ORCBITER;
 	level							=	12;
 //----------------------------------------------------
-	attribute	[ATR_STRENGTH]		= 60;
-	attribute	[ATR_DEXTERITY]		= 10;
-	attribute	[ATR_HITPOINTS_MAX]	= 120;
-	attribute	[ATR_HITPOINTS]		= 120;
+	attribute	[ATR_STRENGTH]		= Hlp_Random(41) + 40;	// 40 - 80
+	attribute	[ATR_DEXTERITY]		= Hlp_Random(21);	// 0 - 20
+	attribute	[ATR_HITPOINTS_MAX]	= Hlp_Random(121) + 60;	// 60 - 180
+	attribute	[ATR_HITPOINTS]		= attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		= 0;
-	attribute	[ATR_MANA] 			= 0;
+	attribute	[ATR_MANA] 		= 0;
 //----------------------------------------------------
-	protection	[PROT_BLUNT]		= 60000;
-	protection	[PROT_EDGE]			= 60000;
-	protection	[PROT_POINT]		= 60000;
-	protection	[PROT_FIRE]			= 60;
-	protection	[PROT_FLY]			= 60;
-	protection	[PROT_MAGIC]		= 0;
+	protection	[PROT_BLUNT]		= Hlp_Random(41)*1000 + 40000;	// 40 - 80
+	protection	[PROT_EDGE]		= Hlp_Random(41)*1000 + 40000;	// 40 - 80
+	protection	[PROT_POINT]		= Hlp_Random(41)*1000 + 40000;	// 40 - 80
+	protection	[PROT_FIRE]		= Hlp_Random(41) + 40;		// 40 - 80
+	protection	[PROT_FLY]		= 60;
+	protection	[PROT_MAGIC]		= Hlp_Random(41) + 20;		// 20 - 60
 //----------------------------------------------------
 	damagetype 						=	DAM_EDGE;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
@@ -93,5 +93,6 @@ INSTANCE OrcBiter (Mst_Default_OrcBiter)
 	{
 		Set_OrcBiter_Sumpf_Visuals();
 	};
+
 	Npc_SetToFistMode(self);
 };

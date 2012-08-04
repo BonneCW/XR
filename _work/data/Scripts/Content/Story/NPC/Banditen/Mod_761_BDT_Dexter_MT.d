@@ -64,3 +64,9 @@ FUNC VOID Rtn_InPsicamp_761 ()
 	TA_Stand_WP		(07,40,21,05,"PSI_TEMPLE_IN_05");
 	TA_Stand_WP		(21,05,02,10,"PSI_TEMPLE_IN_05");
 };
+
+FUNC VOID Rtn_Tot_761()
+{
+	TA_FleeToWP	(08,00,20,00,"TOT");
+	TA_FleeToWP	(20,00,08,00,"TOT");
+};

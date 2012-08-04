@@ -46,6 +46,12 @@ FUNC VOID Rtn_Start_473()
 	TA_Circle	(20,00,08,00,"PALTOBURGLINKSOBENTURM_9");
 };
 
+FUNC VOID Rtn_BibScene_473()
+{
+	TA_Smalltalk_Plaudern	(08,00,20,00,"LABYRINTH");
+	TA_Smalltalk_Plaudern	(20,00,08,00,"LABYRINTH");
+};
+
 FUNC VOID Rtn_Tot_473()
 {
 	TA_Stand_WP	(08,00,20,00,"TOT");

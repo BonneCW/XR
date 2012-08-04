@@ -63,3 +63,9 @@ FUNC VOID Rtn_Start_9001 ()
 
 	TA_Sit_Chair 	(22,00,06,35,"ADW_ENTRANCE_BUILDING2_03");
 };
+
+FUNC VOID Rtn_Plagegeister_9001 ()
+{
+	TA_Sit_Chair 	(06,00,22,00,"ADW_ENTRANCE_BUILDING2_03");
+	TA_Sit_Chair 	(22,00,06,00,"ADW_ENTRANCE_BUILDING2_03");
+};

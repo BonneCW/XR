@@ -242,8 +242,6 @@ FUNC VOID Info_Mod_Bloodwyn_EBR_Belauscht_Info()
 	B_StartOtherRoutine	(Mod_1107_GRD_Jackal_MT, "GEFANGENNAHME");
 	B_StartOtherRoutine	(Mod_1440_BUD_Buddler_MT, "KILLED");
 	B_StartOtherRoutine	(Mod_1106_EBR_Bartholo_MT, "SMALLTALK");
-
-	AI_Teleport	(Mod_1440_BUD_Buddler_MT,	"OCC_BARONS_GREATHALL_CENTER_FRONT");
 };
 
 INSTANCE Info_Mod_Bloodwyn_EBR_EXIT (C_INFO)

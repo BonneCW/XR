@@ -3,7 +3,7 @@ instance Mod_7755_KDS_SchwarzerMagier_MT (Npc_Default)
 	//-------- primary data --------
 	
 	name =							Name_SchwarzerMagier;
-	npctype =						npctype_PAT_SchwarzerMagier;
+	npctype =						npctype_MAIN;
 	guild =							GIL_KDF;      
 	level =							5;
 	
@@ -43,4 +43,10 @@ FUNC VOID Rtn_start_7755 ()
 {
 	TA_Read_Bookstand	(21,00,04,00,"LABYRINTH_106");
 	TA_Read_Bookstand	(04,00,21,00,"LABYRINTH_106");	
+};
+
+FUNC VOID Rtn_BibScene_7755()
+{
+	TA_Smalltalk_Plaudern	(08,00,20,00,"LABYRINTH");
+	TA_Smalltalk_Plaudern	(20,00,08,00,"LABYRINTH");
 };

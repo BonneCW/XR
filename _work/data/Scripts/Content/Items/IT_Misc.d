@@ -676,6 +676,23 @@ INSTANCE ItMi_SumpfhaiStein (C_Item)
 	COUNT[5] 			= 	value;
 };
 
+INSTANCE ItMi_KristallPrisma (C_Item)
+{
+	name 				=	"Kristall der Prismen";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags				=	ITEM_MULTI;
+
+	value 				=	Value_RuneBlank;
+
+	visual 				=	"Sammelrune.3DS";
+	material 			=	MAT_STONE;
+
+	description			= 	name;
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5] 			= 	value;
+};
+
 INSTANCE ItMi_TeleportStein (C_Item)
 {
 	name 				=	"Teleportstein";
@@ -961,7 +978,7 @@ FUNC VOID Use_MagischePfanne()
 	
 	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	{	
-		self.aivar[AIV_INVINCIBLE] = TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_Herd;
 		Ai_ProcessInfos (her);
 	};
@@ -1414,33 +1431,6 @@ func void Use_Joint_Herkules()
 	Mod_JointCounter += 1;
 };
 /******************************************************************************************/
-/*
-INSTANCE ItMi_Alarmhorn (C_Item)
-{
-	name 				=	"Horn";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags				=	ITEM_MULTI;
-
-	value 				=	Value_Alarmhorn;
-
-	visual 				=	"ItMi_Alarmhorn.3DS";
-	material 			=	MAT_WOOD;
-
-	scemeName			=	"HORN";
-	on_state[0]			= 	Use_Alarmhorn;
-	description			= 	name;
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			= 	value;
-};
-func void Use_Alarmhorn()
-{
-	
-};
-
-*/
-
 INSTANCE ItMi_StrandBild(C_Item)
 {
 	name 				=	"Bild";
@@ -1522,6 +1512,21 @@ INSTANCE ItMi_Kleiderkoffer (C_Item)
 INSTANCE ItMi_Nagelpaket (C_Item)
 {
 	name 				=	"Nagelpaket";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI|ITEM_SHOW;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Packet.3ds";
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
+INSTANCE ItMi_NagurPaket (C_Item)
+{
+	name 				=	"Paket";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI|ITEM_SHOW;
@@ -2031,6 +2036,40 @@ INSTANCE ItMi_FakeFreudenspenderSporen(C_Item)
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
+INSTANCE ItMi_EstebanPaket_01 (C_Item)
+{
+	name 				=	"Paket mit Sumpfkraut";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	0;
+
+	value 				=	500;
+
+	visual 				=	"ItMi_Packet.3ds";
+	material 			=	MAT_LEATHER;
+	//on_state[0]			=   UsePacket;
+	description			= 	name;
+	TEXT[1]				= 	"Trägt die Initialien 'EB'";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
+INSTANCE ItMi_EstebanPaket_02 (C_Item)
+{
+	name 				=	"Paket mit Erz";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	0;
+
+	value 				=	500;
+
+	visual 				=	"ItMi_Packet.3ds";
+	material 			=	MAT_LEATHER;
+	//on_state[0]			=   UsePacket;
+	description			= 	name;
+	TEXT[1]				= 	"Trägt die Initialien 'EB'";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
 //in dieser Funktio steht der inhalt, die use Funkt dann bitte einkommentiren.
 FUNC VOID UsePacket ()
 {
@@ -2162,6 +2201,245 @@ INSTANCE ItMi_Sumpfkraeuter_Molerat (C_Item)//steht drin, weil auch in Welt vert
 	material 			=	MAT_LEATHER;
 	description			= 	name;
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
+INSTANCE ItMi_Fungizid (C_Item)
+{
+	name 				=	"Fungizide";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	80;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[5]				= 	NAME_Value;		COUNT[5]	=	value;
+};
+
+INSTANCE ItMi_JackalTabak (C_Item)
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_01 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_02 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_03 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_04 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_05 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_06 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_07 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_08 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_09 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_10 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_11 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_12 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
+};
+
+INSTANCE ItMi_JackalTabak_13 (C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Varant-Tabak";
+
+	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI|ITEM_SHOW;
+	flags 				=	0;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Pocket.3ds";	
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[1]				= 	"exotischer Tabak";
+	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
 };
 
 //******************************************************************************************
@@ -2716,7 +2994,7 @@ FUNC VOID BDTKiste_01_Open ()
 	if ((hero.attribute[ATR_DEXTERITY] >= 120)
 	&& (Npc_GetTalentSkill (hero, NPC_TALENT_PICKLOCK) == 1)
 	&& (Npc_HasItems(hero, ItKe_Lockpick) >= 1)	
-	&& (Mod_Banditenüberfall_Esteban >= 10))
+	&& (Mod_Banditenueberfall_Esteban >= 10))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Thorben_BDTSchatzkisten_Open))
 	{
 		B_ShowGivenThings	("Diverse Items erhalten");
@@ -2761,7 +3039,7 @@ FUNC VOID BDTKiste_02_Open ()
 	if ((hero.attribute[ATR_DEXTERITY] >= 120)
 	&& (Npc_GetTalentSkill (hero, NPC_TALENT_PICKLOCK) == 1)
 	&& (Npc_HasItems(hero, ItKe_Lockpick) >= 1)	
-	&& (Mod_Banditenüberfall_Esteban >= 10))
+	&& (Mod_Banditenueberfall_Esteban >= 10))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Thorben_BDTSchatzkisten_Open))
 	{
 		B_ShowGivenThings	("Diverse Items erhalten");
@@ -3276,7 +3554,7 @@ INSTANCE ItMi_Salpeter (C_Item)
 
 INSTANCE ItMi_Quartz (C_Item)
 {
-	name 				=	"Gletscher Quartz";
+	name 				=	"Gletscher-Quartz";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -3709,7 +3987,7 @@ INSTANCE ItMi_Beliarstein_Unloaded (C_Item)
 	name 				=	"Stein aus schwarzem Erz (unaufgeladen)";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI|ITEM_SHOW;
 
 	value 				=	Value_DarkPearl;
 
@@ -3730,7 +4008,7 @@ INSTANCE ItMi_Beliarstein (C_Item)
 	name 				=	"Stein aus schwarzem Erz";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI|ITEM_SHOW;
 
 	value 				=	Value_DarkPearl;
 
@@ -3751,7 +4029,7 @@ INSTANCE ItMi_TugettsoStein (C_Item)
 	name 				=	"Aufladestein";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI|ITEM_SHOW;
 
 	value 				=	10;
 
@@ -3771,7 +4049,7 @@ INSTANCE ItMi_TugettsoStein (C_Item)
 //-------------------------------------------------------------
 INSTANCE ItMi_ApfelTabak(C_Item)
 {
-	name 				=	"Apfel Tabak";
+	name 				=	"Apfeltabak";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -3810,7 +4088,7 @@ INSTANCE ItMi_StarkerTabak(C_Item)
 //-------------------------------------------------------------
 INSTANCE ItMi_PilzTabak(C_Item)
 {
-	name 				=	"Pilz Tabak";
+	name 				=	"Pilztabak";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -3854,7 +4132,7 @@ INSTANCE ItMi_DoppelTabak(C_Item)
 //-------------------------------------------------------------
 INSTANCE ItMi_Honigtabak(C_Item)
 {
-	name 				=	"Honig Tabak";
+	name 				=	"Honigtabak";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -3875,7 +4153,7 @@ INSTANCE ItMi_Honigtabak(C_Item)
 //-------------------------------------------------------------
 INSTANCE ItMi_SumpfTabak(C_Item)
 {
-	name 				=	"Krautabak";
+	name 				=	"Krauttabak";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -3914,7 +4192,7 @@ INSTANCE ItMi_Stuff_Pipe_01 (C_Item)
 };
 INSTANCE ItMi_LeePipe (C_Item)
 {
-	name 				=	"Lee's Pfeife";
+	name 				=	"Lees Pfeife";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI|ITEM_SHOW;
@@ -3935,7 +4213,7 @@ FUNC VOID Use_Pfeife()
 
 	if (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))//Wenn der Benutzer der held ist...
 	{ 
-		self.aivar[AIV_INVINCIBLE]=TRUE; //Gegner greifen nicht an, solange der Held im Auswahlmodus ist
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE); //Gegner greifen nicht an, solange der Held im Auswahlmodus ist
 
 		PLAYER_MOBSI_PRODUCTION = MOBSI_Pfeife; //Der Mobsi BOw ist aktiv
 		AI_ProcessInfos (her); //Dialog wird gestartet
@@ -4197,29 +4475,6 @@ INSTANCE ItMi_Orkstatuette_Stonehenge (C_Item)
 
 
 /******************************************************************************************/
-INSTANCE ItMi_Magieprisma(C_Item)
-{
-	name 				=	"Magieprisma";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI|ITEM_SHOW;
-
-	value 				=	0;
-
-	visual 				=	"Schwarzesprisma.3DS";
-	material 			=	MAT_LEATHER;
-
-	description			= 	name;
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			= 	value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	
-};
-
-
-/******************************************************************************************/
 INSTANCE ItMi_Magieprisma_Fake(C_Item)
 {
 	name 				=	"Magieprisma";
@@ -4276,6 +4531,29 @@ INSTANCE ItMi_Waffenbuendel (C_Item)
 	value 				=	0;
 
 	visual 				=	"nw_city_weapon_bag_01.3DS";
+	material 			=	MAT_METAL;
+
+	description			= 	name;
+	
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5]			= 	value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
+	
+};
+
+
+/******************************************************************************************/
+INSTANCE ItMi_ZeichenDerBruderschaft (C_Item)
+{
+	name 				=	"Zeichen der Bruderschaft";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI|ITEM_SHOW;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Amulet_Psi_01.3ds";
 	material 			=	MAT_METAL;
 
 	description			= 	name;

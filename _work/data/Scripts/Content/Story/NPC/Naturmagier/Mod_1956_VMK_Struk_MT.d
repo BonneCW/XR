@@ -45,8 +45,8 @@ FUNC VOID Rtn_Start_1956 ()
 
 FUNC VOID Rtn_ATGATE_1956 ()
 {	
-	TA_Smalltalk	(08,00,20,00,"OW_PATH_175_GATE2");
-	TA_Smalltalk	(20,00,08,00,"OW_PATH_175_GATE2");
+	TA_Smalltalk	(08,00,20,00,"OW_PATH_176_TEMPELFOCUS2");
+	TA_Smalltalk	(20,00,08,00,"OW_PATH_176_TEMPELFOCUS2");
 };
 
 FUNC VOID Rtn_FollowPlayer_1956 ()

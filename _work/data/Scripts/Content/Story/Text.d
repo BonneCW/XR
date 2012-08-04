@@ -187,6 +187,10 @@ CONST STRING MOBNAME_Steinsarg		= "Steinsarg";
 CONST STRING MOBNAME_Buch		= "Buch";				
 CONST STRING MOBNAME_Opferschale	= "Opferschale";
 CONST STRING MOBNAME_Mumie		= "Mumie";
+CONST STRING MOBNAME_Werkbank		= "Werkbank";
+CONST STRING MOBNAME_Shrine		= "Schrein";
+CONST STRING MOBNAME_Trinkfass		= "Trinkfass";
+CONST STRING MOBNAME_SANTINOSTRUHE	= "Santinos Truhe";
 
 // XR - Ladenschilder
 
@@ -542,7 +546,10 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"Fackel an/aus",
 	"zu Xeres Palast",
 	"Geist rufen",
-	"Giftteppich"
+	"Giftteppich",
+	"Aura der Flammen",
+	"Teleport zur Burg",
+	"zur Beliarfestung"
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -594,6 +601,7 @@ const string NAME_SPL_TeleportRELSee			= "Teleport zum großen See";
 const string NAME_SPL_TeleportRELMoor			= "Teleport zum Moor";
 const string NAME_SPL_TeleportBanditenlager		= "Teleport zum Banditenlager";
 const string NAME_SPL_TeleportGelato			= "Teleport zum Dorf in Gelato";
+const string NAME_SPL_TeleportBeliarfestung		= "Teleport zur Beliarfestung";
 const string NAME_SPL_soulsplit			= "Seelenspaltung";
 const string NAME_SPL_Engel			= "Engel rufen";
 
@@ -739,7 +747,7 @@ const string NAME_SPL_TeleportSektis	= "Teleport der Sektenspinner";
 const string NAME_SPL_Laehmen	= "Lähmen";
 const string NAME_SPL_FireLance				= "Feuerlanze";
 const string NAME_SPL_Teleport_Eisgebiet	= "Teleport ins Eisgebiet";
-const string NAME_SPL_Eisklinge	= "Rune der Eisklinge";
+const string NAME_SPL_Eisklinge		= "Rune der Eisklinge";
 
 // *****************************************************************************************
 // Charakterbogen-Texte: TALENTE
@@ -1064,6 +1072,8 @@ const string PRINT_LP						= " LP";
 // ------ Zu wenig LP /	techerMAX überschritten	------
 const string PRINT_NotEnoughLP				= "Nicht genug Lernpunkte!";
 const string PRINT_NoLearnOverPersonalMAX	= "Maximum dieses Lehrers liegt bei ";
+const string PRINT_NotEnoughStr		= "Nicht genug Stärke!";
+const string PRINT_NotEnoughDex		= "Nicht genug Geschick!";
 
 // ------ Attribute	------------------------------------------------------------------------------
 const string PRINT_LearnSTR					= "Stärke + ";
@@ -1188,9 +1198,9 @@ const string PRINT_MissingItem				= "Mir fehlt der entsprechende Gegenstand";
 const string PRINT_AnotherUser				= "Das wird gerade benutzt";
 const string PRINT_NoPicklockTalent			= "Dafür habe ich kein Talent";
 
-const string PRINT_NOTHINGTOGET				= "Da ist nichts zu holen...";
-const string PRINT_NOTHINGTOGET02			= "Nichts zu holen...";
-const string PRINT_NOTHINGTOGET03			= "Nichts zu plündern...";
+const string PRINT_NOTHINGTOGET				= "Da ist nichts zu holen ...";
+const string PRINT_NOTHINGTOGET02			= "Nichts zu holen ...";
+const string PRINT_NOTHINGTOGET03			= "Nichts zu plündern ...";
 
 // *************************************
 // StringKonstanten	für	Beten
@@ -1352,19 +1362,21 @@ const string TEXT_Innoseye_Gem		= "Der Edelstein ist matt und kraftlos";
 // ***************************************************************************************
 // Diebtstahl Text Konstanten
 // ***************************************************************************************
-const string Pickpocket_20	=	"(Es wäre ein Kinderspiel seinen Geldbeutel zu stehlen)";
-const string Pickpocket_40	=	"(Es wäre einfach seinen Geldbeutel zu stehlen)";
-const string Pickpocket_60	=	"(Es wäre gewagt seinen Geldbeutel zu stehlen)";
-const string Pickpocket_80	=	"(Es wäre schwierig seinen Geldbeutel zu stehlen)";
-const string Pickpocket_100	=	"(Es wäre verdammt schwierig seinen Geldbeutel zu stehlen)";
-const string Pickpocket_120	=	"(Es wäre fast unmöglich seinen Geldbeutel zu stehlen)";
+const string Pickpocket_30	=	"(Es wäre ein Kinderspiel ihn zu bestehlen)";
+const string Pickpocket_60	=	"(Es wäre einfach ihn zu bestehlen)";
+const string Pickpocket_90	=	"(Es wäre gewagt ihn zu bestehlen)";
+const string Pickpocket_120	=	"(Es wäre schwierig ihn zu bestehlen)";
+const string Pickpocket_150	=	"(Es wäre riskant ihn zu bestehlen)";
+const string Pickpocket_180	=	"(Es wäre verdammt schwierig ihn zu bestehlen)";
+const string Pickpocket_210	=	"(Es wäre fast unmöglich ihn zu bestehlen)";
 
-const string Pickpocket_20_Female	=	"(Es wäre ein Kinderspiel ihren Geldbeutel zu stehlen)";
-const string Pickpocket_40_Female	=	"(Es wäre einfach ihren Geldbeutel zu stehlen)";
-const string Pickpocket_60_Female	=	"(Es wäre gewagt ihren Geldbeutel zu stehlen)";
-const string Pickpocket_80_Female	=	"(Es wäre schwierig ihren Geldbeutel zu stehlen)";
-const string Pickpocket_100_Female	=	"(Es wäre verdammt schwierig ihren Geldbeutel zu stehlen)";
-const string Pickpocket_120_Female	=	"(Es wäre fast unmöglich ihren Geldbeutel zu stehlen)";
+const string Pickpocket_30_Female	=	"(Es wäre ein Kinderspiel sie zu bestehlen)";
+const string Pickpocket_60_Female	=	"(Es wäre einfach sie zu bestehlen)";
+const string Pickpocket_90_Female	=	"(Es wäre gewagt sie zu bestehlen)";
+const string Pickpocket_120_Female	=	"(Es wäre schwierig sie zu bestehlen)";
+const string Pickpocket_150_Female	=	"(Es wäre riskant sie zu bestehlen)";
+const string Pickpocket_180_Female	=	"(Es wäre verdammt schwierig sie zu bestehlen)";
+const string Pickpocket_210_Female	=	"(Es wäre fast unmöglich sie zu bestehlen)";
 
 // ****************************************************************************************
 // Relative	Y-Koordinaten für die Bildschirmausgabe	(in	% der aktuellen	Bildhöhe, von oben)
@@ -1387,7 +1399,7 @@ const int YPOS_XPGAINED			= 55;
 // ------ G_PickLock ------
 const string PRINT_PICKLOCK_SUCCESS	= "Das hörte sich gut an";
 const string PRINT_PICKLOCK_UNLOCK	= "Das Schloß ist geknackt";
-const string PRINT_PICKLOCK_FAILURE	= "Mist.. wieder von vorne";
+const string PRINT_PICKLOCK_FAILURE	= "Mist... wieder von vorne";
 const string PRINT_PICKLOCK_BROKEN	= "Der Dietrich ist abgebrochen";
 
 // ------ G_CanNotUse ------
@@ -1445,3 +1457,7 @@ const string KapWechsel_6			= "Kapitel 6"					;
 const string KapWechsel_6_Text		= "Die Hallen von Irdorath"		;
 
 //-----Written Texte----------
+
+const string DIALOG_PP_BESCHIMPFEN	=	"Leck mich.";
+const string DIALOG_PP_BESTECHUNG	=	"Können wir dieses Missverständnis vielleicht irgendwie aus dem Weg räumen?";
+const string DIALOG_PP_HERAUSREDEN	=	"Ich habe keine Ahnung was du meinst.";

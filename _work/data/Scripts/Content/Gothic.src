@@ -5,10 +5,10 @@ _INTERN\FLOAT.D
 _INTERN\ENGINECLASSES_G2\*.d
 _INTERN\IKARUS_CONST_G2.D
 _INTERN\IKARUS.D
-_INTERN\INSTRUMENTATION.D
-_INTERN\INSTRUMENTATION_CODEPOOL.D
 
 LeGo\Header.src
+
+NEUERUNGEN\NDC_SetInput.d
 
 AI\AI_INTERN\AI_CONSTANTS.D
 AI\AI_INTERN\BODYSTATES.D
@@ -20,14 +20,23 @@ AI\AI_INTERN\PrintPlus.d
 
 STORY\Events\B_AWAKE_STONEGUARDIAN.d
 
+NEUERUNGEN\B_Aivar.d
+
+NEUERUNGEN\B_GetIntOfHex.d
+
+NEUERUNGEN\RemoveVob.d
+
+NEUERUNGEN\VobPositionUpdates.d
+
 NEUERUNGEN\Broadcasts.d
 
 NEUERUNGEN\Balken.d
 
 NEUERUNGEN\Respawn.d
 
+NEUERUNGEN\B_AutoGeneratePicklockKombos.d
+
 STORY\Log_Entries\Log_Constants_*.d
-STORY\XP_Constants.d
 STORY\Story_Globals\*.d
 STORY\NPC_Globals.d
 STORY\SVM\svm.d
@@ -48,6 +57,8 @@ NEUERUNGEN\Minispiel\B_MG_GameLoop.d
 STORY\B_Story\B_Inventar.d
 
 NEUERUNGEN\XR_Backgroundstory.d
+
+NEUERUNGEN\B_SetKrankheitswerte.d
 
 NEUERUNGEN\B_Autosave.d
 NEUERUNGEN\B_SetLevelchange.d
@@ -83,7 +94,8 @@ STORY\B_Story\B_GivePlayerXP.d
 AI\HUMAN\C_Human\C_BodyStateContains.d
 STORY\Dialoge\MONOLOG.d
 STORY\Log_Entries\B_CloseTopic.d
-STORY\Log_Entries\B_Checklog.d
+
+NEUERUNGEN\B_OpenChest.d
 
 NEUERUNGEN\B_EXPVerteiler.d
 
@@ -119,6 +131,8 @@ STORY\B_Content\B_LieselMaeh.d
 STORY\B_Content\B_Greg_ComesToDexter.d
 STORY\B_Content\B_Upgrade_Hero_HackChance.d
 STORY\B_CONTENT\B_MALCOMEXIDENT.d
+
+STORY\Log_Entries\B_Checklog.d
 
 NEUERUNGEN\B_HealGift.d
 
@@ -202,14 +216,14 @@ AI\AI_INTERN\PERCEPTION.D
 STORY\B_Content\B_GhostSpecialDamage.d
 AI\AI_INTERN\B_RefreshAtInsert.d
 STORY\B_Content\B_Pfeile.d
-STORY\B_Story\B_Vergiftet.d
-
-AI\MONSTER\B_Monster\B_MM_WispDetect.d
-AI\MONSTER\B_Monster\B_MM_DeSynchronize.d
 
 AI\HUMAN\C_Human\C_NpcIsOrc.d
 
 FUNKTIONEN\B_CalculateDamage.d
+STORY\B_Story\B_Vergiftet.d
+
+AI\MONSTER\B_Monster\B_MM_WispDetect.d
+AI\MONSTER\B_Monster\B_MM_DeSynchronize.d
 
 AI\HUMAN\GUILDS.d
 AI\HUMAN\B_RefreshArmor.d
@@ -320,6 +334,7 @@ STORY\B_AssignAmbientInfos\B_Announce_Herold.d
 STORY\B_AssignAmbientInfos\B_Preach_Vatras.d
 STORY\B_AssignAmbientInfos\B_Preach_Idrico.d
 STORY\B_AssignAmbientInfos\B_Preach_Monty.d
+STORY\B_AssignAmbientInfos\B_Preach_Hyglas.d
 STORY\B_AssignAmbientInfos\B_Teach_Andre.d
 STORY\B_AssignAmbientInfos\B_Say_Dog.d
 

@@ -59,8 +59,8 @@ FUNC VOID Info_Mod_Esteban_Hi_A()
 
 	AI_StopProcessInfos	(self);
 
-	Mod_Banditenüberfall_Esteban = 1;
-	Mod_ÜberfallTag = Wld_GetDay();
+	Mod_Banditenueberfall_Esteban = 1;
+	Mod_UeberfallTag = Wld_GetDay();
 
 	Log_CreateTopic	(TOPIC_MOD_BDT_ESTEBAN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_BDT_ESTEBAN, LOG_RUNNING);
@@ -80,7 +80,7 @@ INSTANCE Info_Mod_Esteban_AtVM (C_INFO)
 FUNC INT Info_Mod_Esteban_AtVM_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Esteban_Hi))
-	&& (Mod_Banditenüberfall_Esteban == 2)
+	&& (Mod_Banditenueberfall_Esteban == 2)
 	&& (Wld_IsTime(08,00,10,00))
 	{
 		return 1;
@@ -91,7 +91,7 @@ FUNC VOID Info_Mod_Esteban_AtVM_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Esteban_AtVM_07_00"); //Da bist du ja. Drei der Jungs gehen jetzt zum Austauschplatz und wir verbergen uns einige Schritte im Eingang der Mine.
 
-	Mod_Banditenüberfall_Esteban = 3;
+	Mod_Banditenueberfall_Esteban = 3;
 
 	AI_StopProcessInfos	(self);
 
@@ -120,7 +120,7 @@ INSTANCE Info_Mod_Esteban_AtVM2 (C_INFO)
 FUNC INT Info_Mod_Esteban_AtVM2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Esteban_AtVM))
-	&& (Mod_Banditenüberfall_Esteban == 3)
+	&& (Mod_Banditenueberfall_Esteban == 3)
 	{
 		return 1;
 	};
@@ -130,7 +130,7 @@ FUNC VOID Info_Mod_Esteban_AtVM2_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Esteban_AtVM2_07_00"); //Ahh, da kommen sie. Jetzt seid ganz still, damit uns die Gardisten nicht bemerken.
 
-	Mod_Banditenüberfall_Esteban = 4;
+	Mod_Banditenueberfall_Esteban = 4;
 
 	AI_StopProcessInfos	(self);
 
@@ -158,7 +158,7 @@ INSTANCE Info_Mod_Esteban_AtVM3 (C_INFO)
 FUNC INT Info_Mod_Esteban_AtVM3_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Esteban_AtVM2))
-	&& (Mod_Banditenüberfall_Esteban == 5)
+	&& (Mod_Banditenueberfall_Esteban == 5)
 	&& (Npc_GetDistToWP(Mod_4076_VLK_Haendler_MT, "OW_PATH_1_15") > 1500)
 	&& (Npc_GetDistToWP(Mod_4077_VLK_Haendler_MT, "OW_PATH_1_15") > 1500)
 	{
@@ -170,7 +170,7 @@ FUNC VOID Info_Mod_Esteban_AtVM3_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Esteban_AtVM3_07_00"); //Los jetzt!
 
-	Mod_Banditenüberfall_Esteban = 6;
+	Mod_Banditenueberfall_Esteban = 6;
 
 	AI_StopProcessInfos	(self);
 
@@ -208,7 +208,7 @@ INSTANCE Info_Mod_Esteban_AtVM4 (C_INFO)
 FUNC INT Info_Mod_Esteban_AtVM4_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Esteban_AtVM3))
-	&& (Mod_Banditenüberfall_Esteban == 7)
+	&& (Mod_Banditenueberfall_Esteban == 7)
 	&& (Npc_IsDead(Mod_7326_VLK_Haendler_MT))
 	&& (Npc_IsDead(Mod_7327_VLK_Haendler_MT))
 	{
@@ -220,7 +220,7 @@ FUNC VOID Info_Mod_Esteban_AtVM4_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Esteban_AtVM4_07_00"); //Gute Arbeit. Jetzt durchsuch die Beiden, sie müssten etwas wertvolles dabei haben.
 
-	Mod_Banditenüberfall_Esteban = 8;
+	Mod_Banditenueberfall_Esteban = 8;
 
 	AI_StopProcessInfos	(self);
 
@@ -256,7 +256,7 @@ INSTANCE Info_Mod_Esteban_AtVM5 (C_INFO)
 FUNC INT Info_Mod_Esteban_AtVM5_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Esteban_AtVM3))
-	&& (Mod_Banditenüberfall_Esteban == 8)
+	&& (Mod_Banditenueberfall_Esteban == 8)
 	&& (Npc_HasItems(hero, ItMi_BDTKiste_01) == 1)
 	&& (Npc_HasItems(hero, ItMi_BDTKiste_02) == 1)
 	{
@@ -268,7 +268,7 @@ FUNC VOID Info_Mod_Esteban_AtVM5_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Esteban_AtVM5_07_00"); //Genau danach haben wir gesucht. Jetzt gib mir die zwei Kisten, damit ich sie öffnen und die Beute verteilen kann.
 
-	Mod_Banditenüberfall_Esteban = 9;
+	Mod_Banditenueberfall_Esteban = 9;
 
 	Info_ClearChoices	(Info_Mod_Esteban_AtVM5);
 
@@ -281,7 +281,7 @@ FUNC VOID Info_Mod_Esteban_AtVM5_B()
 	AI_Output(hero, self, "Info_Mod_Esteban_AtVM5_B_15_00"); //Ich glaube ich behalte die Kisten lieber für mich.
 	AI_Output(self, hero, "Info_Mod_Esteban_AtVM5_B_07_01"); //Was? Dann holen wir sie uns eben. Los Männer!
 
-	Mod_Banditenüberfall_Esteban = 10;
+	Mod_Banditenueberfall_Esteban = 10;
 
 	Mod_EstebanBeleidigt = 1;
 
@@ -320,7 +320,7 @@ FUNC VOID Info_Mod_Esteban_AtVM5_A()
 
 	AI_Output(self, hero, "Info_Mod_Esteban_AtVM5_A_07_02"); //Komm später noch mal vorbei, da habe ich wieder was zu tun für dich.
 
-	Mod_Banditenüberfall_Esteban = 11;
+	Mod_Banditenueberfall_Esteban = 11;
 
 	Info_ClearChoices	(Info_Mod_Esteban_AtVM5);
 
@@ -748,7 +748,7 @@ INSTANCE Info_Mod_Esteban_Pickpocket (C_INFO)
 	information	= Info_Mod_Esteban_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Esteban_Pickpocket_Condition()
@@ -771,8 +771,88 @@ FUNC VOID Info_Mod_Esteban_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Esteban_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Esteban_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Esteban_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Esteban_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Esteban_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Esteban_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Esteban_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Esteban_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Esteban_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Esteban_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Esteban_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Esteban_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Esteban_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Esteban_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Esteban_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Esteban_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Esteban_EXIT (C_INFO)

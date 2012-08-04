@@ -88,6 +88,8 @@ FUNC VOID GILDENSTORY_FM()
 		{	
 			Wld_InsertNpc	(Mod_1775_DMB_Beschwoerer_PAT, "WP_PAT_WEG_34");
 
+			B_RemoveNpc	(Mod_7794_KDS_SchwarzerMagier_PAT);
+
 			Mod_FM_Foki = 1;
 		};
 
@@ -535,6 +537,29 @@ FUNC VOID GILDENSTORY_FM()
 				Mod_7332_SMK_SchwarzerKrieger_PAT.attribute[ATR_MANA] = Mod_7332_SMK_SchwarzerKrieger_PAT.attribute[ATR_MANA_MAX];
 			};
 		};
+
+		// Auren und Kristalle
+
+		if (Npc_KnowsInfo(hero, Info_Mod_Velario_MangelQuest2))
+		&& (Wld_GetDay() > Mod_PAT_VelarioDay)
+		&& (Mod_Enter_PAT_Second == TRUE)
+		&& (Mod_PAT_Velario == 0)
+		{
+			Mod_PAT_Velario = 1;
+
+			B_StartOtherRoutine	(Mod_1738_KDF_Velario_PAT, "RUNEMAKER");
+		};
+
+		// Foki sammeln
+
+		if (Mod_PAT_Focus_01 == 0)
+		&& (Npc_IsDead(Demon_PAT_01))
+		&& (Npc_IsDead(Demon_PAT_02))
+		{
+			Mod_PAT_Focus_01 = 1;
+
+			B_LogEntry	(TOPIC_MOD_FM_FOKI, "Zwei Dämonen für einen Mann. Das sollte die Tugend Mut gewesen sein.");
+		};
 	};
 
 	if (CurrentLevel == NEWWORLD_ZEN)
@@ -543,7 +568,7 @@ FUNC VOID GILDENSTORY_FM()
 
 		if (AUFSUCHENACHSEELENSTEINE == 0)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Aaron_Party))
-		&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Götterschwerter))
+		&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Goetterschwerter))
 		{
 			AUFSUCHENACHSEELENSTEINE = 1;
 		};
@@ -558,7 +583,7 @@ FUNC VOID GILDENSTORY_FM()
 			{
 				Mod_Marduk_StampfZeit += 1;
 
-				if (Mod_Marduk_StampfZeit >= 6000)
+				if (Mod_Marduk_StampfZeit >= 600)
 				{
 					Mod_Marduk_Gestampft = TRUE;
 
@@ -580,7 +605,70 @@ FUNC VOID GILDENSTORY_FM()
 				B_StartOtherRoutine	(Mod_776_NONE_Orlan_NW, "VORTAVERNE");
 
 				AI_Teleport	(hero, "NW_TAVERNE");
+
+				Mod_FM_FeuerEis = 1;
 			};
+		};
+
+		if (Mod_FM_FeuerEis == 1)
+		{
+			if (Npc_KnowsInfo(hero, Info_Mod_Hyglas_FeuerGegenEis4))
+			&& (Npc_GetDistToWP(Mod_918_KDF_Hyglas_NW, "WP_STEINKREIS_05") < 500)
+			{
+				Wld_InsertNpc	(IceGolem_FeuerGegenEis_02,	"WP_STEINKREIS_05");
+				Wld_InsertNpc	(IceGolem_FeuerGegenEis_03,	"WP_STEINKREIS_05");
+				Wld_InsertNpc	(IceGolem_FeuerGegenEis_04,	"WP_STEINKREIS_05");
+
+				Mod_FM_FeuerEis = 2;
+			};
+		};
+
+		if (Mod_FM_FeuerEis == 2)
+		{
+			if (Npc_KnowsInfo(hero, Info_Mod_Hyglas_FeuerGegenEis5))
+			&& (!Npc_IsInState(Mod_918_KDF_Hyglas_NW, ZS_Talk))
+			{
+				AI_Teleport	(hero, "WP_EISHOEHLE_01");
+
+				AI_Teleport	(Mod_918_KDF_Hyglas_NW, "WP_EISHOEHLE_01");
+
+				B_StartOtherRoutine	(Mod_918_KDF_Hyglas_NW, "EISHOEHLE");
+
+				Mod_FM_FeuerEis = 3;
+			};
+		};
+
+		if (Mod_FM_Hyglas_Eisgebiet == 2)
+		{
+			Mod_FM_Hyglas_Eisgebiet = 3;
+
+			B_StartOtherRoutine	(Mod_918_KDF_Hyglas_NW, "PREDIGER");
+		};
+	};
+
+	if (CurrentLevel == EISGEBIET_ZEN)
+	{
+		// Feuersbrunst am See
+
+		if (Npc_KnowsInfo(hero, Info_Mod_Hyglas_EIS_Feuersbrunst))
+		&& (Npc_GetDistToNpc(hero, Mod_7793_KDF_Hyglas_EIS) > 5000)
+		&& (Mod_FM_Hyglas_Eisgebiet == 0)
+		{
+			Mod_FM_Hyglas_Eisgebiet = 1;
+			Mod_FM_Hyglas_Eisgebiet_Day = Wld_GetDay();
+
+			B_StartOtherRoutine	(Mod_7793_KDF_Hyglas_EIS, "ATTHYS");
+			B_StartOtherRoutine	(Mod_1954_EIS_Thys_EIS, "ATTHYS");
+		};
+
+		if (Wld_GetDay() > Mod_FM_Hyglas_Eisgebiet_Day)
+		&& (Mod_FM_Hyglas_Eisgebiet == 1)
+		{
+			Mod_FM_Hyglas_Eisgebiet = 2;
+
+			B_RemoveNpc	(Mod_7793_KDF_Hyglas_EIS);
+
+			B_StartOtherRoutine	(Mod_1954_EIS_Thys_EIS, "START");
 		};
 	};
 };

@@ -67,7 +67,7 @@ FUNC VOID Info_Mod_AttraktiveFrau_Hi_A()
 FUNC VOID Info_Mod_AttraktiveFrau_Hi_E()
 {
 	AI_Output(hero, self, "Info_Mod_AttraktiveFrau_Hi_E_15_00"); //Nein, ich muss jetzt wirklich weiter.
-	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_E_17_01"); //Ach, ich weiß doch viel besser, was du wirklich willst.
+	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_E_17_01"); //(lächelnd) Ich höre doch an deiner Stimme, dass du nur mit mir spielst. Kommst du jetzt endlich?
 
 	Mod_AttraktiveFrau = 1;
 	

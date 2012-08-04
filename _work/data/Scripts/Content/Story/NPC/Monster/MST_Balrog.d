@@ -16,14 +16,14 @@ PROTOTYPE Mst_Default_Balrog(C_Npc)
 	attribute	[ATR_HITPOINTS_MAX]	= 1000;
 	attribute	[ATR_HITPOINTS]		= 1000;
 	attribute	[ATR_MANA_MAX] 		= 200;
-	attribute	[ATR_MANA] 			= 200;
+	attribute	[ATR_MANA] 		= 200;
 	
 	//------ Protections ----
 	protection	[PROT_BLUNT]		= 150000;
-	protection	[PROT_EDGE]			= 150000;
+	protection	[PROT_EDGE]		= 150000;
 	protection	[PROT_POINT]		= 150000;
-	protection	[PROT_FIRE]			= 150;		
-	protection	[PROT_FLY]			= 150;	
+	protection	[PROT_FIRE]		= IMMUNE;		
+	protection	[PROT_FLY]		= 150;	
 	protection	[PROT_MAGIC]		= 100;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
@@ -61,9 +61,9 @@ PROTOTYPE Mst_Default_Balrog(C_Npc)
 
 func void B_SetVisuals_Balrog()
 {
-	Mdl_SetVisual			(self,	"Demon.mds");
+	Mdl_SetVisual			(self,	"Balrog.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Dem2_Body",	1,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"Balrog_Body",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
 //****************

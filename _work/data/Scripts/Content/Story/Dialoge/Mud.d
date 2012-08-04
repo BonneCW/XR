@@ -62,7 +62,7 @@ INSTANCE Info_Mod_Mud_Defeated (C_INFO)
 
 FUNC INT Info_Mod_Mud_Defeated_Condition()
 {
-	if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+	if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Mud_OrksHunted)))
 	{
@@ -95,7 +95,7 @@ FUNC INT Info_Mod_Mud_Nerve_0_Condition()
 	if ((Mud_Nerve==0)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Mud_OrksHunted)))
 	{
@@ -126,7 +126,7 @@ FUNC INT Info_Mod_Mud_Nerve_1_Condition()
 	if ((Mud_Nerve==1)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Mud_OrksHunted)))
 	{
@@ -158,7 +158,7 @@ FUNC INT Info_Mod_Mud_Nerve_2_Condition()
 	if ((Mud_Nerve==2)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Mud_OrksHunted)))
 	{
@@ -189,7 +189,7 @@ FUNC INT Info_Mod_Mud_Nerve_3_Condition()
 	if ((Mud_Nerve==3)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Mud_OrksHunted)))
 	{
@@ -220,7 +220,7 @@ FUNC INT Info_Mod_Mud_Nerve_4_Condition()
 	if ((Mud_Nerve==4)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Mud_OrksHunted)))
 	{
@@ -251,7 +251,7 @@ FUNC INT Info_Mod_Mud_Nerve_5_Condition()
 	if ((Mud_Nerve==5)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Mud_OrksHunted)))
 	{
@@ -282,7 +282,7 @@ FUNC INT Info_Mod_Mud_Nerve_6_Condition()
 	if ((Mud_Nerve==6)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Mud_OrksHunted)))
 	{
@@ -411,6 +411,41 @@ func void Info_Mod_Mud_OrkJagd_Komm()
 	Mud_Nerve2 = 0;
 };
 
+INSTANCE Info_Mod_Mud_Lagermusik (C_INFO)
+{
+	npc		= Mod_803_STT_Mud_MT;
+	nr 		= 1;
+	condition	= Info_Mod_Mud_Lagermusik_Condition;
+	information	= Info_Mod_Mud_Lagermusik_Info;
+	permanent	= 0;
+	important 	= 0;
+	description	= "Du hast nicht zufällig Lust, berühmt zu werden?";
+};                       
+
+FUNC INT Info_Mod_Mud_Lagermusik_Condition()
+{
+	if (Mod_Gravo_Schatz == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Mud_Lagermusik_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Mud_Lagermusik_15_00"); //Du hast nicht zufällig Lust, berühmt zu werden?
+	AI_Output(self, hero, "Info_Mod_Mud_Lagermusik_03_01"); //Kommt drauf an, was ich dafür tun muss. Dich würde ich dafür natürlich nicht verlassen.
+	AI_Output(hero, self, "Info_Mod_Mud_Lagermusik_15_02"); //Du müsstest ein Instrument spielen. Gravo will eine Gruppe ins Leben rufen.
+	AI_Output(self, hero, "Info_Mod_Mud_Lagermusik_03_03"); //Die Trommel hat mir schon immer gefallen. Solange ich den Schlägel in der Hand hatte, wurden mir nicht so viele böse Dinge zugerufen.
+	AI_Output(hero, self, "Info_Mod_Mud_Lagermusik_15_04"); //Perfekt! Geh am besten gleich zu Gravo.
+	AI_Output(self, hero, "Info_Mod_Mud_Lagermusik_03_05"); //Ich lasse dich ungern im Stich, aber ich muss meiner Karriere eine Chance geben. Man sieht sich bestimmt bald wieder!
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "ATGRAVO");
+
+	B_GivePlayerXP	(50);
+};
+
 INSTANCE Info_Mod_Mud_Nerve2_0 (C_INFO)
 {
 	npc			= Mod_803_STT_Mud_MT;
@@ -426,7 +461,7 @@ FUNC INT Info_Mod_Mud_Nerve2_0_Condition()
 	if ((Mud_Nerve2==0)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkHoehle))
 	{
@@ -457,7 +492,7 @@ FUNC INT Info_Mod_Mud_Nerve2_1_Condition()
 	if ((Mud_Nerve2==1)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkHoehle))
 	{
@@ -488,7 +523,7 @@ FUNC INT Info_Mod_Mud_Nerve2_2_Condition()
 	if ((Mud_Nerve2==2)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkHoehle))
 	{
@@ -519,7 +554,7 @@ FUNC INT Info_Mod_Mud_Nerve2_3_Condition()
 	if ((Mud_Nerve2==3)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkHoehle))
 	{
@@ -550,7 +585,7 @@ FUNC INT Info_Mod_Mud_Nerve2_4_Condition()
 	if ((Mud_Nerve2==4)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkHoehle))
 	{
@@ -581,7 +616,7 @@ FUNC INT Info_Mod_Mud_Nerve2_5_Condition()
 	if ((Mud_Nerve2 == 5)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkHoehle))
 	{
@@ -612,7 +647,7 @@ FUNC INT Info_Mod_Mud_Nerve2_6_Condition()
 	if ((Mud_Nerve2 == 6)
 	&& (Npc_RefuseTalk(self)==FALSE)
 	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FALSE ))
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FALSE ))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Mud_OrkJagd))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Mud_OrkHoehle))
 	{
@@ -1144,7 +1179,7 @@ func void Info_Mod_Mud_VMG_W2()
 
 	Info_ClearChoices(Info_Mod_Mud_VMG);
 
-	Info_AddChoice	 (Info_Mod_Mud_VMG, "Bring mir eine Spruchrolle „Verwandlung Blutfliege“.", Info_Mod_Mud_VMG_V);
+	Info_AddChoice	 (Info_Mod_Mud_VMG, "Bring mir eine Spruchrolle Verwandlung Blutfliege.", Info_Mod_Mud_VMG_V);
 	Info_AddChoice	 (Info_Mod_Mud_VMG, "Bring mir ein paar Scavengerkeulen. Fünf dürften genügen.", Info_Mod_Mud_VMG_T);
 	Info_AddChoice	 (Info_Mod_Mud_VMG, "Dort hinten in dem Wald haust ein Schattenläufer.", Info_Mod_Mud_VMG_S);
 };
@@ -1197,7 +1232,7 @@ func void Info_Mod_Mud_VMG_W()
 
 	Info_ClearChoices(Info_Mod_Mud_VMG);
 
-	Info_AddChoice	 (Info_Mod_Mud_VMG, "Bring mir eine Spruchrolle „Verwandlung Blutfliege“.", Info_Mod_Mud_VMG_V);
+	Info_AddChoice	 (Info_Mod_Mud_VMG, "Bring mir eine Spruchrolle Verwandlung Blutfliege.", Info_Mod_Mud_VMG_V);
 	Info_AddChoice	 (Info_Mod_Mud_VMG, "Außerhalb der Barriere hat einer der Magier etwas verloren. Such das bitte.", Info_Mod_Mud_VMG_U);
 	Info_AddChoice	 (Info_Mod_Mud_VMG, "Bring mir ein paar Scavengerkeulen. Fünf dürften genügen.", Info_Mod_Mud_VMG_T);
 };
@@ -1210,12 +1245,12 @@ INSTANCE Info_Mod_Mud_Pickpocket (C_INFO)
 	information	= Info_Mod_Mud_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_20;
+	description	= Pickpocket_30;
 };
 
 FUNC INT Info_Mod_Mud_Pickpocket_Condition()
 {
-	C_Beklauen	(10, ItMi_Gold, 1);
+	C_Beklauen	(10, ItMi_OldCoin, 1);
 };
 
 FUNC VOID Info_Mod_Mud_Pickpocket_Info()
@@ -1233,8 +1268,88 @@ FUNC VOID Info_Mod_Mud_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Mud_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Mud_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Mud_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Mud_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Mud_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Mud_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Mud_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Mud_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Mud_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Mud_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Mud_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Mud_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Mud_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Mud_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Mud_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Mud_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Mud_EXIT (C_INFO)

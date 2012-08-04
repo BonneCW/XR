@@ -1026,6 +1026,96 @@ INSTANCE ItMi_Focus_Pat (C_Item)
 
 };
 
+INSTANCE ItMi_Focus_Pat_01 (C_Item)
+{
+	name 				=	"Fokusstein";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Focus.3DS";
+	material 			=	MAT_STONE;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION"; 
+
+	description			= 	name;
+};
+
+INSTANCE ItMi_Focus_Pat_02 (C_Item)
+{
+	name 				=	"Fokusstein";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Focus.3DS";
+	material 			=	MAT_STONE;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION"; 
+
+	description			= 	name;
+};
+
+INSTANCE ItMi_Focus_Pat_03 (C_Item)
+{
+	name 				=	"Fokusstein";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Focus.3DS";
+	material 			=	MAT_STONE;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION"; 
+
+	description			= 	name;
+};
+
+INSTANCE ItMi_Focus_Pat_04 (C_Item)
+{
+	name 				=	"Fokusstein";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Focus.3DS";
+	material 			=	MAT_STONE;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION"; 
+
+	description			= 	name;
+};
+
+INSTANCE ItMi_Focus_Pat_05 (C_Item)
+{
+	name 				=	"Fokusstein";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Focus.3DS";
+	material 			=	MAT_STONE;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION"; 
+
+	description			= 	name;
+};
+
 INSTANCE ItMi_Focus_Troll (C_Item)
 {
 	name 				=	"Fokus aus der Trollschlucht";
@@ -1420,6 +1510,7 @@ func void Use_SteinkreisTafel ()
 	|| (Npc_GetDistToWP(hero, "WP_STEINKREIS_06") < 500)
 	|| (Npc_GetDistToWP(hero, "WP_STEINKREIS_07") < 500)
 	|| (Npc_GetDistToWP(hero, "WP_STEINKREIS_08") < 500)
+	|| (Npc_GetDistToWP(hero, "OLDWORLDBERGE_50") < 500)
 	|| (Npc_GetDistToWP(hero, "EIS_01") < 800)
 	{
 		if (Mod_TeleportSteinkreis_Funzt == 0)
@@ -2229,6 +2320,28 @@ INSTANCE ItAt_IwansKopf (C_Item)
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
+//-----------------------------------------------------------------------
+//	Iwans Kopf
+//-----------------------------------------------------------------------
+INSTANCE ItMi_AkahaschKopf (C_Item)
+{
+	name 				=	"Akahaschs Kopf";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MISSION;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Head_Bloodwyn_01.3ds";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+	
+	TEXT[2]				=	"";
+	TEXT[3]				=   "";
+	
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
 //------------------------------------------------------------------------
 
 instance ItWR_Addon_TreasureMap (C_Item)
@@ -2293,7 +2406,7 @@ func void Use_GregsBottle ()
 };
 
 /******************************************************************************************/
-INSTANCE itmi_erolskelch (C_Item)
+INSTANCE ItMi_ErolsKelch (C_Item)
 {
 	name 				=	"Zerkratzte silberne Schale";
 

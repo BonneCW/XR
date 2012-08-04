@@ -5,7 +5,7 @@ FUNC VOID B_PrismaAdd(var int damage)
 		return;
 	};
 
-	if (Npc_HasItems(hero, ItMi_Magieprisma) == 0)
+	if (Mod_PrismaAngelegt == 0)
 	{
 		return;
 	};
@@ -46,6 +46,11 @@ FUNC VOID B_PrismaAdd(var int damage)
 FUNC VOID B_KillWithPrisma(var C_NPC slf)
 {
 	if (Npc_GetDistToNpc(slf, hero) > 500)
+	{
+		return;
+	};
+
+	if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(hero))
 	{
 		return;
 	};

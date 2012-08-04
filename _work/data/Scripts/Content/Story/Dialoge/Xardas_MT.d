@@ -101,7 +101,7 @@ INSTANCE Info_Mod_Xardas_MT_WoWaffe (C_INFO)
 
 FUNC INT Info_Mod_Xardas_MT_WoWaffe_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_Felsenfestung))
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_ArgezSicher))
 	&& (Npc_HasItems(hero, ItMw_BeliarWeapon_Raven) == 0)
 	{
 		return 1;
@@ -262,21 +262,21 @@ FUNC VOID Info_Mod_Xardas_MT_HabSchwert_Info()
 	AI_StopProcessInfos	(self);
 
 	AI_Teleport	(self, "TOT");
-	Npc_ExchangeRoutine	(self, "TOT");
+	B_StartOtherRoutine	(self, "TOT");
 };
 
-INSTANCE Info_Mod_Xardas_MT_Beförderung (C_INFO)
+INSTANCE Info_Mod_Xardas_MT_Befoerderung (C_INFO)
 {
 	npc		= Mod_680_DMB_Xardas_MT;
 	nr		= 1;
-	condition	= Info_Mod_Xardas_MT_Beförderung_Condition;
-	information	= Info_Mod_Xardas_MT_Beförderung_Info;
+	condition	= Info_Mod_Xardas_MT_Befoerderung_Condition;
+	information	= Info_Mod_Xardas_MT_Befoerderung_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich will Schwarzmagier werden.";
 };
 
-FUNC INT Info_Mod_Xardas_MT_Beförderung_Condition()
+FUNC INT Info_Mod_Xardas_MT_Befoerderung_Condition()
 {
 	if (Mod_Gilde == 12)
 	&& (Kapitel > 2)
@@ -285,12 +285,12 @@ FUNC INT Info_Mod_Xardas_MT_Beförderung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Xardas_MT_Beförderung_Info()
+FUNC VOID Info_Mod_Xardas_MT_Befoerderung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Xardas_MT_Beförderung_15_00"); //Ich will Schwarzmagier werden.
-	AI_Output(self, hero, "Info_Mod_Xardas_MT_Beförderung_14_01"); //Du wählst also den Weg der Magie. Eine weise Entscheidung.
-	AI_Output(self, hero, "Info_Mod_Xardas_MT_Beförderung_14_02"); //Ich werde dich in den Rang des Schwarzmagiers erheben. Hoffentlich hilft das bei der Vernichtung von Xeres.
-	AI_Output(self, hero, "Info_Mod_Xardas_MT_Beförderung_14_03"); //Hier ist deine Robe.
+	AI_Output(hero, self, "Info_Mod_Xardas_MT_Befoerderung_15_00"); //Ich will Schwarzmagier werden.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Befoerderung_14_01"); //Du wählst also den Weg der Magie. Eine weise Entscheidung.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Befoerderung_14_02"); //Ich werde dich in den Rang des Schwarzmagiers erheben. Hoffentlich hilft das bei der Vernichtung von Xeres.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Befoerderung_14_03"); //Hier ist deine Robe.
 
 	CreateInvItems	(self, SCHWARZMAGIERROBE, 1);
 	B_GiveInvItems	(self, hero, SCHWARZMAGIERROBE, 1);
@@ -305,6 +305,49 @@ FUNC VOID Info_Mod_Xardas_MT_Beförderung_Info()
 	Mod_Gilde = 13;
 
 	Snd_Play ("LEVELUP");
+};
+
+INSTANCE Info_Mod_Xardas_MT_Angebot (C_INFO)
+{
+	npc		= Mod_680_DMB_Xardas_MT;
+	nr		= 1;
+	condition	= Info_Mod_Xardas_MT_Angebot_Condition;
+	information	= Info_Mod_Xardas_MT_Angebot_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Xardas_MT_Angebot_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Gomez_Angebot))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Xardas_MT_Angebot_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Angebot_14_00"); //(wütend) Was sollte das?
+	AI_Output(hero, self, "Info_Mod_Xardas_MT_Angebot_15_01"); //Woher sollte ich wissen, dass dein Gedächtniszauber so schnell nachlässt?
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Angebot_14_02"); //Woher hätte ich wissen sollen, dass du ihn herausforderst?
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Angebot_14_03"); //Du kannst froh sein, dass ich momentan im Lager bin, sonst hätten wir uns erst in Beliars Reich wieder gesehen ...
+	AI_Output(hero, self, "Info_Mod_Xardas_MT_Angebot_15_04"); //Ich wollte mich auch eben mit Raven unterhalten, das Alte Lager will den Dämonenrittern ein Angebot machen.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Angebot_14_05"); //Dann trage mir dein Angebot vor, bevor bei Raven so ein Fiasko wie bei Gomez passiert. Gomez wird sich damit zwar an Raven und Scar wenden, je später das aber passiert, desto besser.
+	AI_Output(hero, self, "Info_Mod_Xardas_MT_Angebot_15_06"); //Kannst du den Gedächtniszauber nicht wiederholen?
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Angebot_14_07"); //Nein, damals war Gomez tot und ich traf mit Beliar ein Abkommen, dass er wiederbelebt wurde. Nach seinem Tod konnte ich einen so starken Gedächtniszauber wirken, jetzt ist mir das allerdings nicht mehr möglich ...
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Angebot_14_08"); //Wie auch immer, wie lautet dein Angebot?
+	AI_Output(hero, self, "Info_Mod_Xardas_MT_Angebot_15_09"); //Das Alte Lager will den Dämonenrittern anbieten, uns für viel Geld einen Teil der alten Mine zu überlassen, ansonsten müssen wir zu härteren Maßnahmen greifen.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Angebot_14_10"); //Das dürfte nach diesem Gespräch mit Gomez wohl unmöglich sein.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Angebot_14_11"); //Allerdings habe ich noch einen Rat an euch: Jetzt, wo Gomez von dem Alten Lager und seiner Geschichte weiß, wird er alles daran setzen, seine alte Position wieder einzunehmen.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Angebot_14_12"); //In diesem Fall ist es auch mir nicht möglich euch zu helfen. Jetzt solltest du aber das Lager verlassen, bevor Gomez wieder bei Bewusstsein ist.
+
+	AI_StopProcessInfos	(self);
+
+	B_LogEntry	(TOPIC_MOD_AL_MINE, "Ich habe im Lager der Dämonenritter Gomez getroffen, der mich angegriffen hat. Xardas konnte ihn lähmen und meinte, ich solle fliehen. Ich berichte besser Whistler, was geschehen ist.");
+
+	AI_Teleport	(self, "TOT");
+
+	B_StartOtherRoutine	(self, "TOT");
 };
 
 INSTANCE Info_Mod_Xardas_MT_Gomez (C_INFO)
@@ -344,8 +387,8 @@ INSTANCE Info_Mod_Xardas_MT_Raven (C_INFO)
 
 FUNC INT Info_Mod_Xardas_MT_Raven_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Raven_MT_GomezNervt))
-	&& (!Npc_IsInState(Mod_7068_DMR_Raven_MT, ZS_Talk))
+	if (Npc_KnowsInfo(hero, Info_Mod_Raven_GomezNervt))
+	&& (!Npc_IsInState(Mod_520_DMR_Raven_MT, ZS_Talk))
 	{
 		return 1;
 	};
@@ -360,13 +403,13 @@ FUNC VOID Info_Mod_Xardas_MT_Raven_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "TOT");
-	B_StartOtherRoutine	(Mod_7067_DMR_Gomez_MT, "TOT");
-	B_StartOtherRoutine	(Mod_7068_DMR_Raven_MT, "TOT");
+	B_StartOtherRoutine	(Mod_517_DMR_Gomez_MT, "START");
+	B_StartOtherRoutine	(Mod_520_DMR_Raven_MT, "START");
 	B_StartOtherRoutine	(Mod_7066_DMR_Daemonenritter_MT, "TOT");
 
 	AI_Teleport	(self, "TOT");
-	AI_Teleport	(Mod_7067_DMR_Gomez_MT, "TOT");
-	AI_Teleport	(Mod_7068_DMR_Raven_MT, "TOT");
+	AI_Teleport	(Mod_517_DMR_Gomez_MT, "TOT");
+	AI_Teleport	(Mod_520_DMR_Raven_MT, "TOT");
 	AI_Teleport	(Mod_7066_DMR_Daemonenritter_MT, "TOT");
 };
 

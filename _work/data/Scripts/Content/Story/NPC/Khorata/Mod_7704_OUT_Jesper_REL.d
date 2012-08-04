@@ -72,6 +72,30 @@ FUNC VOID Rtn_AtBib_7704()
 	TA_Stand_ArmsCrossed 	(20,00,08,00,"REL_CITY_148");
 };
 
+FUNC VOID Rtn_Hacken_7704()
+{	
+	TA_Pick_Ore		(08,00,20,00,"REL_CITY_060");
+	TA_Pick_Ore	 	(20,00,08,00,"REL_CITY_060");
+};
+
+FUNC VOID Rtn_Schatzkammer_7704()
+{	
+	TA_Follow_Player	(08,00,20,00,"REL_CITY_060");
+	TA_Follow_Player 	(20,00,08,00,"REL_CITY_060");
+};
+
+FUNC VOID Rtn_InSchatzkammer_7704()
+{	
+	TA_Pick_FP		(08,00,20,00,"REL_CITY_KANAL_027");
+	TA_Pick_FP	 	(20,00,08,00,"REL_CITY_KANAL_027");
+};
+
+FUNC VOID Rtn_Gelehrter_7704()
+{	
+	TA_Pick_FP		(08,00,20,00,"REL_CITY_023");
+	TA_Pick_FP	 	(20,00,08,00,"REL_CITY_023");
+};
+
 FUNC VOID Rtn_Tot_7704 ()
 {	
 	TA_RunToWP	(08,00,22,00,"TOT");

@@ -420,7 +420,7 @@ FUNC VOID PC_Stark_ItMw_1H_Common_Info ()
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	Starkwaffen = FALSE;
 };
 
 //*******************************************************
@@ -473,7 +473,7 @@ FUNC VOID PC_Stark_WEAPON_1H_Harad_01_Info ()
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	Starkwaffen = FALSE;
 };
 //*******************************************************
 INSTANCE PC_Stark_WEAPON_1H_Harad_02 (C_INFO)
@@ -525,7 +525,7 @@ FUNC VOID PC_Stark_WEAPON_1H_Harad_02_Info ()
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	Starkwaffen = FALSE;
 };
 //*******************************************************
 INSTANCE PC_Stark_WEAPON_1H_Harad_03 (C_INFO)
@@ -577,7 +577,7 @@ FUNC VOID PC_Stark_WEAPON_1H_Harad_03_Info ()
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	Starkwaffen = FALSE;
 };
 //*******************************************************
 INSTANCE PC_Stark_WEAPON_1H_Harad_04 (C_INFO)
@@ -629,7 +629,7 @@ FUNC VOID PC_Stark_WEAPON_1H_Harad_04_Info ()
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	Starkwaffen = FALSE;
 };
 
 //*******************************************************
@@ -651,6 +651,7 @@ FUNC INT PC_CommonBACK_Condition()
 	&& (PfeileMachen == FALSE)
 	&& (Verbessern == FALSE)
 	&& (Set == FALSE)
+	&& (Starkwaffen == FALSE)
 	{	
 		return TRUE;
 	};
@@ -932,7 +933,7 @@ INSTANCE PC_ItMw_1H_Special_03_Dex (C_INFO)
 FUNC INT PC_ItMw_1H_Special_03_Dex_Condition()
 {	
 	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Special_03] == TRUE))
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Special_03_Dex] == TRUE))
 	&& (Erzwaffen == TRUE)
 	&& (Waffe_ErzEisen >= 1)
 	{	
@@ -1064,7 +1065,7 @@ INSTANCE PC_ItMw_1H_Special_04_Dex (C_INFO)
 FUNC INT PC_ItMw_1H_Special_04_Dex_Condition()
 {	
 	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] == TRUE))
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Special_04_Dex] == TRUE))
 	&& (Erzwaffen == TRUE)
 	&& (Waffe_ErzEisen >= 2)
 	{	
@@ -2593,6 +2594,7 @@ FUNC INT PC_PfeileMachen_Condition()
 	&& (PfeileMachen == FALSE)
 	&& (Verbessern == FALSE)
 	&& (Set == FALSE)
+	&& (Starkwaffen == FALSE)
 	{
 		return 1;
 	};
@@ -3312,17 +3314,17 @@ FUNC VOID PC_PfeileMachen_GoldErzBlut_Komplett_Alle_Info ()
 		{
 			Mod_PfeilCounter = Npc_HasItems(hero, PfeilSpitze_GoldErzBlut);
 
-			Npc_RemoveInvItems	(hero, PfeilStab, Npc_HasItems(hero, PfeilSpitze_GoldErzBlut));
-			CreateInvItems	(hero, ItRw_GoldErzBlutArrow, Npc_HasItems(hero, PfeilSpitze_GoldErzBlut));
-			Npc_RemoveInvItems	(hero, PfeilSpitze_GoldErzBlut, Npc_HasItems(hero, PfeilSpitze_GoldErzBlut));
+			Npc_RemoveInvItems	(hero, PfeilStab, Mod_PfeilCounter);
+			CreateInvItems	(hero, ItRw_GoldErzBlutArrow, Mod_PfeilCounter);
+			Npc_RemoveInvItems	(hero, PfeilSpitze_GoldErzBlut, Mod_PfeilCounter);
 		}
 		else
 		{
 			Mod_PfeilCounter = Npc_HasItems(hero, PfeilStab);
 
-			Npc_RemoveInvItems	(hero, PfeilSpitze_GoldErzBlut, Npc_HasItems(hero, PfeilStab));
-			CreateInvItems	(hero, ItRw_GoldErzBlutArrow, Npc_HasItems(hero, PfeilStab));
-			Npc_RemoveInvItems	(hero, PfeilStab, Npc_HasItems(hero, PfeilStab));
+			Npc_RemoveInvItems	(hero, PfeilSpitze_GoldErzBlut, Mod_PfeilCounter);
+			CreateInvItems	(hero, ItRw_GoldErzBlutArrow, Mod_PfeilCounter);
+			Npc_RemoveInvItems	(hero, PfeilStab, Mod_PfeilCounter);
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Pfeile aus Gold-Erz-Blut-Legierung hergestellt!"));
@@ -3529,6 +3531,7 @@ FUNC INT PC_Set_Condition()
 	&& (PfeileMachen == FALSE)
 	&& (Verbessern == FALSE)
 	&& (Set == FALSE)
+	&& (Starkwaffen == FALSE)
 	{
 		return 1;
 	};
@@ -3992,6 +3995,7 @@ FUNC INT PC_Verbessern_Condition()
 	&& (PfeileMachen == FALSE)
 	&& (Verbessern == FALSE)
 	&& (Set == FALSE)
+	&& (Starkwaffen == FALSE)
 	{
 		return 1;
 	};
@@ -4297,7 +4301,7 @@ FUNC VOID SMITHWEAPON_S1 ()
 		
 	if  (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))
 	{	
-		self.aivar[AIV_INVINCIBLE]=TRUE;
+		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_SMITHWEAPON;
 		Ai_ProcessInfos (her);
 	};

@@ -113,7 +113,7 @@ FUNC INT Info_Mod_Oschust_Umgehauen_Condition()
 {
 	if ((Npc_KnowsInfo(hero, Info_Mod_Oschust_Amulett_A))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Oschust_Amulett_B)))
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 	{
 		return 1;
 	};
@@ -218,6 +218,9 @@ FUNC VOID Info_Mod_Oschust_WegenRingen_Silber_B()
 	{
 		Npc_RemoveInvItems	(hero, ItMi_Gold, 10*Npc_HasItems(hero, ItMi_SilverRing));
 		CreateInvItems	(hero, ItMi_GoldRing, Npc_HasItems(hero, ItMi_SilverRing));
+
+		Print	(ConcatStrings(IntToString(Npc_HasItems(hero, ItMi_SilverRing)), " Silberringe vergoldet"));
+
 		Npc_RemoveInvItems	(hero, ItMi_SilverRing, Npc_HasItems(hero, ItMi_SilverRing));
 	}
 	else
@@ -229,6 +232,8 @@ FUNC VOID Info_Mod_Oschust_WegenRingen_Silber_B()
 		Npc_RemoveInvItems	(hero, ItMi_Gold, 10*GoldForRinge);
 		CreateInvItems	(hero, ItMi_GoldRing, GoldForRinge);
 		Npc_RemoveInvItems	(hero, ItMi_SilverRing, GoldForRinge);
+
+		Print	(ConcatStrings(IntToString(GoldForRinge), " Silberringe vergoldet"));
 	};
 
 	Info_ClearChoices	(Info_Mod_Oschust_WegenRingen);
@@ -239,6 +244,8 @@ FUNC VOID Info_Mod_Oschust_WegenRingen_Silber_A()
 	Npc_RemoveInvItems	(hero, ItMi_Gold, 10);
 	CreateInvItems	(hero, ItMi_GoldRing, 1);
 	Npc_RemoveInvItems	(hero, ItMi_SilverRing, 1);
+
+	Print	("Einen Silberring vergoldet");
 
 	Info_ClearChoices	(Info_Mod_Oschust_WegenRingen);
 };
@@ -307,6 +314,9 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_H()
 	{
 		Npc_RemoveInvItems	(hero, ItMi_Gold, 2*Npc_HasItems(hero, ItMw_2H_Sword_M_01_Geschaerft));
 		CreateInvItems	(hero, ItMw_Zweihaender_Geschaerft, Npc_HasItems(hero, ItMw_2H_Sword_M_01_Geschaerft));
+
+		Print	(ConcatStrings(IntToString(Npc_HasItems(hero, ItMw_2H_Sword_M_01_Geschaerft)), " Zweihänder entrostet"));
+
 		Npc_RemoveInvItems	(hero, ItMw_2H_Sword_M_01_Geschaerft, Npc_HasItems(hero, ItMw_2H_Sword_M_01_Geschaerft));
 	}
 	else
@@ -318,6 +328,8 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_H()
 		Npc_RemoveInvItems	(hero, ItMi_Gold, 2*GoldForSchwerter);
 		CreateInvItems	(hero, ItMw_Zweihaender_Geschaerft, GoldForSchwerter);
 		Npc_RemoveInvItems	(hero, ItMw_2H_Sword_M_01_Geschaerft, GoldForSchwerter);
+
+		Print	(ConcatStrings(IntToString(GoldForSchwerter), " Zweihänder entrostet"));
 	};
 
 	Info_ClearChoices	(Info_Mod_Oschust_WegenSchwertern);
@@ -329,6 +341,8 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_G()
 	CreateInvItems	(hero, ItMw_Zweihaender, 1);
 	Npc_RemoveInvItems	(hero, ItMw_2H_Sword_M_01, 1);
 
+	Print	("Einen Zweihänder entrostet");
+
 	Info_ClearChoices	(Info_Mod_Oschust_WegenSchwertern);
 };
 
@@ -338,6 +352,9 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_F()
 	{
 		Npc_RemoveInvItems	(hero, ItMi_Gold, 2*Npc_HasItems(hero, ItMw_2H_Sword_M_01));
 		CreateInvItems	(hero, ItMw_Zweihaender, Npc_HasItems(hero, ItMw_2H_Sword_M_01));
+
+		Print	(ConcatStrings(IntToString(Npc_HasItems(hero, ItMw_2H_Sword_M_01)), " Zweihänder entrostet"));
+
 		Npc_RemoveInvItems	(hero, ItMw_2H_Sword_M_01, Npc_HasItems(hero, ItMw_2H_Sword_M_01));
 	}
 	else
@@ -349,6 +366,8 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_F()
 		Npc_RemoveInvItems	(hero, ItMi_Gold, 2*GoldForSchwerter);
 		CreateInvItems	(hero, ItMw_Zweihaender, GoldForSchwerter);
 		Npc_RemoveInvItems	(hero, ItMw_2H_Sword_M_01, GoldForSchwerter);
+
+		Print	(ConcatStrings(IntToString(GoldForSchwerter), " Zweihänder entrostet"));
 	};
 
 	Info_ClearChoices	(Info_Mod_Oschust_WegenSchwertern);
@@ -360,6 +379,8 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_E()
 	CreateInvItems	(hero, ItMw_Zweihaender, 1);
 	Npc_RemoveInvItems	(hero, ItMw_2H_Sword_M_01, 1);
 
+	Print	("Einen Zweihänder entrostet");
+
 	Info_ClearChoices	(Info_Mod_Oschust_WegenSchwertern);
 };
 
@@ -369,6 +390,9 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_D()
 	{
 		Npc_RemoveInvItems	(hero, ItMi_Gold, 2*Npc_HasItems(hero, ItMw_1h_MISC_Sword_Geschaerft));
 		CreateInvItems	(hero, ItMw_1H_quantarie_Schwert_01_Geschaerft, Npc_HasItems(hero, ItMw_1h_MISC_Sword_Geschaerft));
+
+		Print	(ConcatStrings(IntToString(Npc_HasItems(hero, ItMw_1h_MISC_Sword_Geschaerft)), " Schwerter entrostet"));
+
 		Npc_RemoveInvItems	(hero, ItMw_1h_MISC_Sword_Geschaerft, Npc_HasItems(hero, ItMw_1h_MISC_Sword_Geschaerft));
 	}
 	else
@@ -380,6 +404,8 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_D()
 		Npc_RemoveInvItems	(hero, ItMi_Gold, 2*GoldForSchwerter);
 		CreateInvItems	(hero, ItMw_1H_quantarie_Schwert_01_Geschaerft, GoldForSchwerter);
 		Npc_RemoveInvItems	(hero, ItMw_1h_MISC_Sword_Geschaerft, GoldForSchwerter);
+
+		Print	(ConcatStrings(IntToString(GoldForSchwerter), " Schwerter entrostet"));
 	};
 
 	Info_ClearChoices	(Info_Mod_Oschust_WegenSchwertern);
@@ -391,6 +417,8 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_C()
 	CreateInvItems	(hero, ItMw_1H_quantarie_Schwert_01_Geschaerft, 1);
 	Npc_RemoveInvItems	(hero, ItMw_1h_MISC_Sword_Geschaerft, 1);
 
+	Print	("Ein Schwert entrostet");
+
 	Info_ClearChoices	(Info_Mod_Oschust_WegenSchwertern);
 };
 
@@ -400,6 +428,9 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_B()
 	{
 		Npc_RemoveInvItems	(hero, ItMi_Gold, 2*Npc_HasItems(hero, ItMw_1h_MISC_Sword));
 		CreateInvItems	(hero, ItMw_1H_quantarie_Schwert_01, Npc_HasItems(hero, ItMw_1h_MISC_Sword));
+
+		Print	(ConcatStrings(IntToString(Npc_HasItems(hero, ItMw_1h_MISC_Sword)), " Schwerter entrostet"));
+
 		Npc_RemoveInvItems	(hero, ItMw_1h_MISC_Sword, Npc_HasItems(hero, ItMw_1h_MISC_Sword));
 	}
 	else
@@ -411,6 +442,8 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_B()
 		Npc_RemoveInvItems	(hero, ItMi_Gold, 2*GoldForSchwerter);
 		CreateInvItems	(hero, ItMw_1H_quantarie_Schwert_01, GoldForSchwerter);
 		Npc_RemoveInvItems	(hero, ItMw_1h_MISC_Sword, GoldForSchwerter);
+
+		Print	(ConcatStrings(IntToString(GoldForSchwerter), " Schwerter entrostet"));
 	};
 
 	Info_ClearChoices	(Info_Mod_Oschust_WegenSchwertern);
@@ -421,6 +454,8 @@ FUNC VOID Info_Mod_Oschust_WegenSchwertern_A()
 	Npc_RemoveInvItems	(hero, ItMi_Gold, 2);
 	CreateInvItems	(hero, ItMw_1H_quantarie_Schwert_01, 1);
 	Npc_RemoveInvItems	(hero, ItMw_1h_MISC_Sword, 1);
+
+	Print	("Ein Schwert entrostet");
 
 	Info_ClearChoices	(Info_Mod_Oschust_WegenSchwertern);
 };
@@ -499,18 +534,18 @@ FUNC VOID Info_Mod_Oschust_Piraten_Info()
 	Mod_SäbelReparieren = Wld_GetDay();
 };
 
-INSTANCE Info_Mod_Oschust_Säbel (C_INFO)
+INSTANCE Info_Mod_Oschust_Saebel (C_INFO)
 {
 	npc		= Mod_7022_BDT_Oschust_MT;
 	nr		= 1;
-	condition	= Info_Mod_Oschust_Säbel_Condition;
-	information	= Info_Mod_Oschust_Säbel_Info;
+	condition	= Info_Mod_Oschust_Saebel_Condition;
+	information	= Info_Mod_Oschust_Saebel_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ist der Säbel fertig?";
 };
 
-FUNC INT Info_Mod_Oschust_Säbel_Condition()
+FUNC INT Info_Mod_Oschust_Saebel_Condition()
 {
 	if (Mod_MachtSäbel == 1)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Oschust_Piraten))
@@ -520,12 +555,11 @@ FUNC INT Info_Mod_Oschust_Säbel_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Oschust_Säbel_Info()
+FUNC VOID Info_Mod_Oschust_Saebel_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Oschust_Säbel_15_00"); //Ist der Säbel fertig?
-	AI_Output(self, hero, "Info_Mod_Oschust_Säbel_04_01"); //Ja, er ist wieder wie neu. Hier ist er.
+	AI_Output(hero, self, "Info_Mod_Oschust_Saebel_15_00"); //Ist der Säbel fertig?
+	AI_Output(self, hero, "Info_Mod_Oschust_Saebel_04_01"); //Ja, er ist wieder wie neu. Hier ist er.
 
-	CreateInvItems	(self, ItMw_Piratensaebel_Greg_Gut, 1);
 	B_GiveInvItems	(self, hero, ItMw_Piratensaebel_Greg_Gut, 1);
 };
 
@@ -537,12 +571,12 @@ INSTANCE Info_Mod_Oschust_Pickpocket (C_INFO)
 	information	= Info_Mod_Oschust_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Oschust_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 1800);
+	C_Beklauen	(107, ItMiSwordRaw, 18);
 };
 
 FUNC VOID Info_Mod_Oschust_Pickpocket_Info()
@@ -560,8 +594,88 @@ FUNC VOID Info_Mod_Oschust_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Oschust_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Oschust_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Oschust_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Oschust_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Oschust_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Oschust_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Oschust_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Oschust_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Oschust_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Oschust_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Oschust_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Oschust_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Oschust_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Oschust_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Oschust_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Oschust_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Oschust_EXIT (C_INFO)

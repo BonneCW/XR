@@ -2112,6 +2112,18 @@ INSTANCE ItFo_KWine (C_Item)
 			HatGetrunken += 3;
 
 			B_Betrunken();
+
+			if (Mod_WM_HeroHatDaemonInSich)
+			{
+				if (hero.attribute[ATR_HITPOINTS] > hero.attribute[ATR_HITPOINTS_MAX]/2)
+				{
+					hero.attribute[ATR_HITPOINTS] -= hero.attribute[ATR_HITPOINTS_MAX]/2;
+				}
+				else
+				{
+					hero.attribute[ATR_HITPOINTS] = 1;
+				};
+			};
 		};
 
 		B_HealGift (10, 5*2);

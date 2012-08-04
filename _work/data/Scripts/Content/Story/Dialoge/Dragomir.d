@@ -275,12 +275,10 @@ FUNC VOID Info_Mod_Dragomir_ToDoChapter1_Info()
 	AI_Output(hero, self, "Info_Mod_Dragomir_ToDoChapter1_15_10"); //Also soll ich ...
 	AI_Output(self, hero, "Info_Mod_Dragomir_ToDoChapter1_12_11"); //Genau. Hier, du nimm diesen Trank ein, bevor du in ihr Nest gehst. Damit werden sie dich am Geruch nicht von ihren Artgenossen unterscheiden können und nicht angreifen.
 
-	CreateInvItems	(self, ItPo_Feldraeubertrank, 1);
 	B_GiveInvItems	(self, hero, ItPo_Feldraeubertrank, 1);
 
 	AI_Output(self, hero, "Info_Mod_Dragomir_ToDoChapter1_12_12"); //Dann legst du in ihrem Nest diesen Eimer voller Eier ab. Das dürften noch ein paar Hundert von den Viechern sein, die in den nächsten Tagen schlüpfen müssten.
 
-	CreateInvItems	(self, ItMi_Feldraeubereier, 1);
 	B_GiveInvItems	(self, hero, ItMi_Feldraeubereier, 1);
 
 	AI_Output(hero, self, "Info_Mod_Dragomir_ToDoChapter1_15_13"); //Oha. Ich hoffe für dich, dass der Trank funktioniert.
@@ -346,7 +344,6 @@ FUNC VOID Info_Mod_Dragomir_EimerLeer_Info()
 
 	B_GivePlayerXP	(100);
 
-	CreateInvItems	(self, ItMi_Gold, 100);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 100);
 
 	B_SetTopicStatus	(TOPIC_MOD_JG_BUGS, LOG_SUCCESS);
@@ -835,14 +832,14 @@ INSTANCE Info_Mod_Dragomir_Pedro (C_INFO)
 	information	= Info_Mod_Dragomir_Pedro_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Hast du einen Feuermagier-Novizen gesehen?";
+	description	= "Hast du einen Feuer Novizen gesehen?";
 };
 
 FUNC INT Info_Mod_Dragomir_Pedro_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Isgaroth_Pedro))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Dragomir_Hi))
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Parlan_Ring_Zurück))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Parlan_Ring_Zurueck))
 	{
 		return 1;
 	};
@@ -850,8 +847,8 @@ FUNC INT Info_Mod_Dragomir_Pedro_Condition()
 
 FUNC VOID Info_Mod_Dragomir_Pedro_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_00"); //Hast du einen Feuermagier-Novizen gesehen?
-	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_01"); //Natürlich hab ich einen Feuermagier-Novizen gesehen. Ich seh jeden Tag einen.
+	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_00"); //Hast du einen Feuer Novizen gesehen?
+	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_01"); //Natürlich hab ich einen Feuer Novizen gesehen. Ich seh jeden Tag einen.
 	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_02"); //Hast du heute auch schon einen gesehen.
 	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_03"); //Klar, dich.
 	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_04"); //Und außer mir?
@@ -914,7 +911,7 @@ FUNC VOID Info_Mod_Dragomir_Niederlage_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_00"); //Ok, Ok, ich hab gelogen.
 			AI_Output(hero, self, "Info_Mod_Dragomir_Niederlage_15_01"); //Also sagst du mir jetzt wo Pedro ist oder muss ich nochmal?
@@ -924,7 +921,7 @@ FUNC VOID Info_Mod_Dragomir_Niederlage_Info()
 
 			B_Göttergefallen(1, 1);
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_03"); //Das nächste mal solltest du es dir zweimal überlegen bevor du mich als Lügner bezeichnest.
 		};
@@ -1168,7 +1165,7 @@ INSTANCE Info_Mod_Dragomir_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Dragomir_Pickpocket_Condition()
 {
-	C_Beklauen	(58, ItMi_Gold, 140);
+	C_Beklauen	(58, ItRw_Bolt, 40);
 };
 
 FUNC VOID Info_Mod_Dragomir_Pickpocket_Info()
@@ -1186,8 +1183,88 @@ FUNC VOID Info_Mod_Dragomir_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Dragomir_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Dragomir_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Dragomir_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Dragomir_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Dragomir_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Dragomir_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Dragomir_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Dragomir_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Dragomir_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Dragomir_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Dragomir_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Dragomir_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Dragomir_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Dragomir_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Dragomir_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Dragomir_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Dragomir_EXIT (C_INFO)

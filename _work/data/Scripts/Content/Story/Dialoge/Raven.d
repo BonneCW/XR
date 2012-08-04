@@ -541,18 +541,18 @@ FUNC VOID Info_Mod_Raven_ToteNovizen_Info()
 	B_LogEntry	(TOPIC_MOD_BEL_DAEMON, "Raven hält einen Dämon für äußerst unwahrscheinlich, es sei denn, er hat sich in einem von den Lagerangehörigen eingenistet. Ich soll mich nachts mal umsehen.");
 };
 
-INSTANCE Info_Mod_Raven_Beförderung (C_INFO)
+INSTANCE Info_Mod_Raven_Befoerderung (C_INFO)
 {
 	npc		= Mod_520_DMR_Raven_MT;
 	nr		= 1;
-	condition	= Info_Mod_Raven_Beförderung_Condition;
-	information	= Info_Mod_Raven_Beförderung_Info;
+	condition	= Info_Mod_Raven_Befoerderung_Condition;
+	information	= Info_Mod_Raven_Befoerderung_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich will Schwarzer Krieger werden.";
 };
 
-FUNC INT Info_Mod_Raven_Beförderung_Condition()
+FUNC INT Info_Mod_Raven_Befoerderung_Condition()
 {
 	if (Mod_Gilde == 12)
 	&& (Kapitel > 2)
@@ -561,12 +561,12 @@ FUNC INT Info_Mod_Raven_Beförderung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Raven_Beförderung_Info()
+FUNC VOID Info_Mod_Raven_Befoerderung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Raven_Beförderung_15_00"); //Ich will Schwarzer Krieger werden.
-	AI_Output(self, hero, "Info_Mod_Raven_Beförderung_10_01"); //Du wählst also den Weg des Kampfes. Das war die richtige Entscheidung.
-	AI_Output(self, hero, "Info_Mod_Raven_Beförderung_10_02"); //Ich werde dich in den Rang des Schwarzen Kriegers erheben.
-	AI_Output(self, hero, "Info_Mod_Raven_Beförderung_10_03"); //Hier ist deine Rüstung.
+	AI_Output(hero, self, "Info_Mod_Raven_Befoerderung_15_00"); //Ich will Schwarzer Krieger werden.
+	AI_Output(self, hero, "Info_Mod_Raven_Befoerderung_10_01"); //Du wählst also den Weg des Kampfes. Das war die richtige Entscheidung.
+	AI_Output(self, hero, "Info_Mod_Raven_Befoerderung_10_02"); //Ich werde dich in den Rang des Schwarzen Kriegers erheben.
+	AI_Output(self, hero, "Info_Mod_Raven_Befoerderung_10_03"); //Hier ist deine Rüstung.
 
 	CreateInvItems	(self, ITAR_SMK_L, 1);
 	B_GiveInvItems	(self, hero, ITAR_SMK_L, 1);
@@ -581,6 +581,97 @@ FUNC VOID Info_Mod_Raven_Beförderung_Info()
 	Mod_Gilde = 15;
 
 	Snd_Play ("LEVELUP");
+};
+
+INSTANCE Info_Mod_Raven_GomezLebenLassen (C_INFO)
+{
+	npc		= Mod_520_DMR_Raven_MT;
+	nr		= 1;
+	condition	= Info_Mod_Raven_GomezLebenLassen_Condition;
+	information	= Info_Mod_Raven_GomezLebenLassen_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Raven_GomezLebenLassen_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_Gomez))
+	&& (!Npc_IsInState(Mod_680_DMB_Xardas_MT, ZS_Talk))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Raven_GomezLebenLassen_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Raven_GomezLebenLassen_10_00"); //Das stimmt. Lasst ihn am Leben. Ich werde den Truppen auch sofort befehlen euer Lager zu verlassen.
+
+	AI_StopProcessInfos	(self);
+};
+
+INSTANCE Info_Mod_Raven_Oric (C_INFO)
+{
+	npc		= Mod_520_DMR_Raven_MT;
+	nr		= 1;
+	condition	= Info_Mod_Raven_Oric_Condition;
+	information	= Info_Mod_Raven_Oric_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Raven_Oric_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Oric_Gomez))
+	&& (!Npc_IsInState(Mod_7039_PAL_Oric_MT, ZS_Talk))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Raven_Oric_Info()
+{
+	AI_TurnToNpc	(self, Mod_7039_PAL_Oric_MT);
+
+	AI_Output(self, hero, "Info_Mod_Raven_Oric_10_00"); //Halt's Maul
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(Mod_7039_PAL_Oric_MT, "DRAINED");
+};
+
+INSTANCE Info_Mod_Raven_GomezNervt (C_INFO)
+{
+	npc		= Mod_520_DMR_Raven_MT;
+	nr		= 1;
+	condition	= Info_Mod_Raven_GomezNervt_Condition;
+	information	= Info_Mod_Raven_GomezNervt_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Raven_GomezNervt_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Gomez_AtAL3))
+	&& (!Npc_IsInState(Mod_517_DMR_Gomez_MT, ZS_Talk))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Raven_GomezNervt_Info()
+{
+	AI_TurnToNpc	(self, Mod_517_DMR_Gomez_MT);
+
+	AI_Output(self, hero, "Info_Mod_Raven_GomezNervt_10_00"); //Ohne mich hätte dich hätte dich dieses Snapperrudel am Ausgang des Minentals doch zerfleischt und jetzt arbeitest du für mich.
+
+	AI_TurnToNpc	(self, hero);
+
+	AI_Output(self, hero, "Info_Mod_Raven_GomezNervt_10_01"); //Als Entschädigung überreiche ich dir das Schwert namens Innos' Zorn, das Gomez zu Zeiten des alten Lagers benutzte.
+	AI_Output(self, hero, "Info_Mod_Raven_GomezNervt_10_02"); //Möge es in deinen Händen ein Zeichen für die strahlende Zukunft des Alten Lagers sein.
+
+	B_GiveInvItems	(self, hero, ItMw_1H_Blessed_03, 1);
+
+	AI_StopProcessInfos	(self);
 };
 
 INSTANCE Info_Mod_Raven_Teacher (C_INFO)
@@ -613,8 +704,8 @@ FUNC VOID Info_Mod_Raven_Teacher_Info()
 	AI_Output(self, hero, "Info_Mod_Raven_Teacher_10_01"); //Ja, ich kann dir zeigen wie du stärker wirst.
 	AI_Output(self, hero, "Info_Mod_Raven_Teacher_10_02"); //Außerdem kann ich dir den Umgang mit Zweihandwaffen beibringen.
 
-	Log_CreateTopic	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_LEHRER_DÄMONENBESCHWÖRER, "Raven kann mir beibringen wie ich stärker werde und wie ich mit Zweihandwaffen umgehe.");
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_BELIARFESTUNG, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Raven kann mir beibringen wie ich stärker werde und wie ich mit Zweihandwaffen umgehe.");
 };
 
 INSTANCE Info_Mod_Raven_Lernen (C_INFO)
@@ -649,7 +740,7 @@ FUNC VOID Info_Mod_Raven_Lernen_Info()
 
 	Info_AddChoice	(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_BACK);
 	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Zweihandkampf)", Info_Mod_Raven_Lernen_Zweihand);
-	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Stärke)", Info_Mod_Raven_Lernen_Stärke);
+	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Stärke)", Info_Mod_Raven_Lernen_Staerke);
 };
 
 FUNC VOID Info_Mod_Raven_Lernen_BACK()
@@ -672,7 +763,7 @@ FUNC VOID Info_Mod_Raven_Lernen_Zweihand_BACK()
 
 	Info_AddChoice	(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_BACK);
 	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Zweihandkampf)", Info_Mod_Raven_Lernen_Zweihand);
-	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Stärke)", Info_Mod_Raven_Lernen_Stärke);
+	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Stärke)", Info_Mod_Raven_Lernen_Staerke);
 };
 
 FUNC VOID Info_Mod_Raven_Lernen_Zweihand_5()
@@ -699,44 +790,44 @@ FUNC VOID Info_Mod_Raven_Lernen_Zweihand_1()
 	};
 };	
 
-FUNC VOID Info_Mod_Raven_Lernen_Stärke()
+FUNC VOID Info_Mod_Raven_Lernen_Staerke()
 {
 	Info_ClearChoices	(Info_Mod_Raven_Lernen);
 
-	Info_AddChoice 		(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_Stärke_BACK);
-	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Stärke_5);
-	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Stärke_1);
+	Info_AddChoice 		(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_Staerke_BACK);
+	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Staerke_5);
+	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Staerke_1);
 };
 
-FUNC VOID Info_Mod_Raven_Lernen_Stärke_BACK()
+FUNC VOID Info_Mod_Raven_Lernen_Staerke_BACK()
 {
 	Info_ClearChoices	(Info_Mod_Raven_Lernen);
 
 	Info_AddChoice	(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_BACK);
 	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Zweihandkampf)", Info_Mod_Raven_Lernen_Zweihand);
-	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Stärke)", Info_Mod_Raven_Lernen_Stärke);
+	Info_AddChoice	(Info_Mod_Raven_Lernen, "(Stärke)", Info_Mod_Raven_Lernen_Staerke);
 };
 
-FUNC VOID Info_Mod_Raven_Lernen_Stärke_5()
+FUNC VOID Info_Mod_Raven_Lernen_Staerke_5()
 {
 	B_TeachAttributePoints_New (self, hero, ATR_STRENGTH, 5, 200);
 	
 	Info_ClearChoices	(Info_Mod_Raven_Lernen);
 
-	Info_AddChoice 		(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_Stärke_BACK);
-	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Stärke_5);
-	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Stärke_1);
+	Info_AddChoice 		(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_Staerke_BACK);
+	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Staerke_5);
+	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Staerke_1);
 };
 
-FUNC VOID Info_Mod_Raven_Lernen_Stärke_1()
+FUNC VOID Info_Mod_Raven_Lernen_Staerke_1()
 {
 	B_TeachAttributePoints	(self, hero, ATR_STRENGTH, 1, 200);
 
 	Info_ClearChoices	(Info_Mod_Raven_Lernen);
 
-	Info_AddChoice 		(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_Stärke_BACK);
-	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Stärke_5);
-	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Stärke_1);
+	Info_AddChoice 		(Info_Mod_Raven_Lernen, DIALOG_BACK, Info_Mod_Raven_Lernen_Staerke_BACK);
+	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Staerke_5);
+	Info_AddChoice		(Info_Mod_Raven_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1	, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Raven_Lernen_Staerke_1);
 };
 
 INSTANCE Info_Mod_Raven_Pickpocket (C_INFO)
@@ -747,12 +838,12 @@ INSTANCE Info_Mod_Raven_Pickpocket (C_INFO)
 	information	= Info_Mod_Raven_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Raven_Pickpocket_Condition()
 {
-	C_Beklauen	(111, ItMi_Gold, 1250);
+	C_Beklauen	(161, ItMi_Gold, 1250);
 };
 
 FUNC VOID Info_Mod_Raven_Pickpocket_Info()
@@ -770,8 +861,88 @@ FUNC VOID Info_Mod_Raven_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Raven_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Raven_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Raven_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Raven_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Raven_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Raven_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Raven_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Raven_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Raven_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Raven_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Raven_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Raven_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Raven_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Raven_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Raven_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Raven_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Raven_EXIT (C_INFO)

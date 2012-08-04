@@ -44,3 +44,9 @@ FUNC VOID Rtn_Start_1740()
 	TA_Potion_Alchemy	(01,00,13,00,"WP_PAT_WEG_91");
 	TA_Potion_Alchemy	(13,00,01,00,"WP_PAT_WEG_91");
 };
+
+FUNC VOID Rtn_Kirche_1740 ()
+{	
+	TA_Pray_Innos_FP		(08,05,22,05,"WP_PAT_WEG_183");
+	TA_Pray_Innos_FP		(22,05,08,05,"WP_PAT_WEG_183");
+};

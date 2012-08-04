@@ -4,7 +4,7 @@ instance Mod_1496_BUD_Glen_OM (Npc_Default)
 	
 	name =							"Glen";
 	npctype =						npctype_main;
-	guild =							GIL_KDF;      
+	guild =							GIL_OUT;      
 	level =							5;
 	
 	

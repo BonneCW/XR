@@ -1,7 +1,7 @@
 // ************* 
 // G_PickLock
 // ----------
-// self = Player
+// self = Player // stimmt nicht!!! immer hero benutzen
 // *************
 
 func void G_PickLock (var int bSuccess, var int bBrokenOpen)
@@ -23,32 +23,41 @@ func void G_PickLock (var int bSuccess, var int bBrokenOpen)
 	{
 		if (bBrokenOpen)
 		{
-			if (Dietrich_Perk == TRUE)
-			&& (Hlp_Random(100) < 50)
-			{
-				CreateInvItems	(self, ItKe_Lockpick, 1);
-
-				Print	("Noch mal Glück gehabt!");
-
-				Snd_Play3D 	(self, "PICKLOCK_FAILURE");
-				Print (PRINT_PICKLOCK_FAILURE);
-			}
-			else
-			{
-				Snd_Play3D 	(self, "PICKLOCK_BROKEN");
-				Print (PRINT_PICKLOCK_BROKEN);
-			
-				var int rnd; rnd = Hlp_Random(100);
-				if (rnd <= 25)
-				{
-					Npc_SendPassivePerc (hero, PERC_ASSESSQUIETSOUND, hero, hero);
-				};
-			};
+			Print	("Sollte hier nie ankommen!!!");
 		}
 		else
 		{
-			Snd_Play3D 	(self, "PICKLOCK_FAILURE");
-			Print (PRINT_PICKLOCK_FAILURE);
+			// Fehlschlag beim Knacken => Dietrich bricht ab und Sound oder nur Neuanfang
+
+			if (r_max(hero.attribute[ATR_DEXTERITY]) < r_max(99)-Dietrich_Perk*25)
+			{
+				Snd_Play3D 	(self, "PICKLOCK_BROKEN");
+				Print (PRINT_PICKLOCK_BROKEN);
+
+				B_Say	(hero, NULL, "$PICKLOCKBROKEN");
+
+				Npc_RemoveInvItems	(hero, ItKe_Lockpick, 1);
+
+				if (Npc_HasItems(hero, ItKe_Lockpick) == 1)
+				{
+					AI_UseMob	(hero, "CHESTSMALL", -1);
+					AI_UseMob	(hero, "CHESTBIG", -1);
+					AI_UseMob	(hero, "DOOR", -1);
+				};
+			
+				var int rnd; rnd = r_max(99);
+				if (rnd < 50)
+				{
+					Npc_SendPassivePerc (hero, PERC_ASSESSQUIETSOUND, hero, hero);
+				};
+			}
+			else
+			{
+				Snd_Play3D 	(self, "PICKLOCK_FAILURE");
+				Print (PRINT_PICKLOCK_FAILURE);
+
+				B_Say	(hero, NULL, "$PICKLOCKFAILURE");
+			};
 		};
 	};
 };

@@ -50,3 +50,15 @@ FUNC VOID Rtn_start_1469 ()
 	TA_Stand_ArmsCrossed	(12,00,18,00,"OCR_HUT_76");
 	TA_Sit_Campfire		(18,00,22,30,"OCR_OUSIDE_HUT_77_INSERT");
 };
+
+FUNC VOID Rtn_AtGravo_1469 ()
+{
+	TA_Stand_Eating		(11,00,07,00,"OCR_OUTSIDE_HUT_4_INSERT");
+	TA_Stand_Eating		(07,00,11,00,"OCR_OUTSIDE_HUT_4_INSERT");
+};
+
+FUNC VOID Rtn_Auftritt_1469 ()
+{
+	TA_Concert	(05,00,20,00,"OCR_IE_PYMONTE");
+	TA_Concert	(20,00,05,00,"OCR_IE_PYMONTE");
+};

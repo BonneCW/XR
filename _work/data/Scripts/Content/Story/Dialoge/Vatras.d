@@ -205,7 +205,7 @@ INSTANCE Info_Mod_Vatras_Novize (C_INFO)
 FUNC INT Info_Mod_Vatras_Novize_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Vatras_Hi))
-	&& (Mod_Gilde	==	0)
+	&& (Mod_Gilde == 0)
 	{
 		return 1;
 	};
@@ -235,7 +235,7 @@ INSTANCE Info_Mod_Vatras_Aufgabe (C_INFO)
 FUNC INT Info_Mod_Vatras_Aufgabe_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Vatras_Novize))
-	&& (Mod_Gilde	==	0)
+	&& (Mod_Gilde == 0)
 	{
 		return 1;
 	};
@@ -261,6 +261,8 @@ FUNC VOID Info_Mod_Vatras_Aufgabe_Wo()
 	AI_Output(self, hero, "Info_Mod_Vatras_Aufgabe_Wo_05_01"); //Geh in den Hafen und sprich dort mit einem unserer Mitglieder. Sein Name ist Diego.
 	AI_Output(self, hero, "Info_Mod_Vatras_Aufgabe_Wo_05_02"); //Sag ihm, dass ich dich schicke, dann wird er dir alles erzählen was er weiß.
 
+	Info_ClearChoices	(Info_Mod_Vatras_Aufgabe);
+
 	B_LogEntry	(TOPIC_MOD_VERMISSTE, "Ich soll in den Hafen und dort mit Diego sprechen. Er wird mir alles erzählen was sie über die Vermissten wissen.");
 };
 
@@ -278,7 +280,7 @@ INSTANCE Info_Mod_Vatras_ErsteInfos (C_INFO)
 FUNC INT Info_Mod_Vatras_ErsteInfos_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Gerbrandt_Da))
-	&& (Sklavenliste_OneTime	==	TRUE)
+	&& (Sklavenliste_OneTime == TRUE)
 	&& (Npc_HasItems(hero, Mod_Sklavenliste_DMR) == 1)
 	{
 		return 1;
@@ -339,7 +341,7 @@ FUNC VOID Info_Mod_Vatras_Fertig_Info()
 	AI_Output(self, hero, "Info_Mod_Vatras_Fertig_05_08"); //Und vieles bleibt in der Schwärze der Nacht verborgen.
 	AI_Output(self, hero, "Info_Mod_Vatras_Fertig_05_09"); //Gewissheit werden wir erst haben, wenn du die Entführten auch gefunden hast.
 	AI_Output(self, hero, "Info_Mod_Vatras_Fertig_05_10"); //Dir wurde die Richtung gewiesen. Mach dich auf den Weg und Versuch bei den Dämonenkriegern mehr herauszufinden.
-	AI_Output(self, hero, "Info_Mod_Vatras_Fertig_05_11"); //Du findest ihr Lager in der Nähe von Omar’s Hof in den Bergen.
+	AI_Output(self, hero, "Info_Mod_Vatras_Fertig_05_11"); //Du findest ihr Lager irgendwo im Minental in den Bergen.
 	AI_Output(self, hero, "Info_Mod_Vatras_Fertig_05_12"); //Ich hörte auch, sie sollen eine Mine besitzen. Vielleicht ist das auch ein wichtiger Anhaltspunkt ...
 
 	B_LogEntry	(TOPIC_MOD_VERMISSTE, "Vatras gab mir den Auftrag, bei den Dämonenkriegern Nachforschungen über die Vermissten anzustellen. Er nannte dabei eine Mine als mögliche Anlaufstelle.");
@@ -396,7 +398,7 @@ FUNC VOID Info_Mod_Vatras_RealInfos_Info()
 	AI_Output(self, hero, "Info_Mod_Vatras_RealInfos_05_11"); //Wie dem auch sei, du hast deine Sache mehr als gut gemacht und mir bewiesen, dass du unserer Gemeinschaft ein würdiger Mitbruder sein wirst.
 	AI_Output(self, hero, "Info_Mod_Vatras_RealInfos_05_12"); //Deiner Aufnahme in unsere Reihen steht nun nichts mehr im Wege.
 
-	if (Mod_Gilde	==	0)
+	if (Mod_Gilde == 0)
 	{
 		AI_Output(self, hero, "Info_Mod_Vatras_RealInfos_05_13"); //Du kannst dich uns nun anschließen.
 	}
@@ -427,7 +429,7 @@ INSTANCE Info_Mod_Vatras_Aufnahme (C_INFO)
 
 FUNC INT Info_Mod_vatras_Aufnahme_Condition()
 {
-	if (Mod_Gilde	==	0)
+	if (Mod_Gilde == 0)
 	&& ((Npc_KnowsInfo(hero, Info_Mod_vatras_RealInfos))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Vatras_Kristall)))
 	{
@@ -439,7 +441,7 @@ FUNC VOID Info_Mod_vatras_Aufnahme_Info()
 {
 	AI_Output(hero, self, "Info_Mod_vatras_Aufnahme_15_00"); //Ich bin bereit mich euch anzuschließen.
 	
-	if (hero.level	>=	5)
+	if (hero.level >= 5)
 	{
 		AI_Output(self, hero, "Info_Mod_vatras_Aufnahme_05_01"); //Du bist bereit dich uns anzuschließen.
 		AI_Output(self, hero, "Info_Mod_vatras_Aufnahme_05_02"); //Doch wenn du einmal eine unserer Rüstungen trägst, dann gibt es kein zurück mehr.
@@ -507,12 +509,10 @@ FUNC VOID Info_Mod_vatras_Aufnahme_Ja()
 
 	B_SetTopicStatus	(TOPIC_MOD_FEUERMAGIER, LOG_FAILED);
 	B_SetTopicStatus	(TOPIC_MOD_MILIZ, LOG_FAILED);
-	B_SetTopicStatus	(TOPIC_MOD_DÄMONENBESCHWÖRER, LOG_FAILED);
+	B_SetTopicStatus	(TOPIC_MOD_DAEMONENBESCHWOERER, LOG_FAILED);
 	B_SetTopicStatus	(TOPIC_MOD_SÖLDNER, LOG_FAILED);
 
-	Monster_Max += 6;
-
-	Mod_Gilde	=	9;
+	Mod_Gilde = 9;
 
 	hero.guild = GIL_NOV;
 	Npc_SetTrueGuild	(hero, GIL_NOV);
@@ -607,7 +607,7 @@ FUNC VOID Info_Mod_Vatras_Hexenfluch_Info()
 
 	if (Mod_AttraktiveFrau == 2)
 	{
-		Info_AddChoice	(Info_Mod_Vatras_Hexenfluch, "Ähh,… sie sprach mich an und machte mir anzügliche Angebote.", Info_Mod_Vatras_Hexenfluch_C);
+		Info_AddChoice	(Info_Mod_Vatras_Hexenfluch, "Ähh ... sie sprach mich an und machte mir anzügliche Angebote.", Info_Mod_Vatras_Hexenfluch_C);
 	};
 	Info_AddChoice	(Info_Mod_Vatras_Hexenfluch, "Sie sprach mich an und ich war ihr plötzlich verfallen.", Info_Mod_Vatras_Hexenfluch_B);
 	Info_AddChoice	(Info_Mod_Vatras_Hexenfluch, "Nicht viel. Sie sprach mir nur an und ich war plötzlich in diesem Zustand.", Info_Mod_Vatras_Hexenfluch_A);
@@ -615,7 +615,7 @@ FUNC VOID Info_Mod_Vatras_Hexenfluch_Info()
 
 FUNC VOID Info_Mod_Vatras_Hexenfluch_C()
 {
-	AI_Output(hero, self, "Info_Mod_Vatras_Hexenfluch_C_15_00"); //Ähh,… sie sprach mich an und machte mir anzügliche Angebote. Es tut mir leid. Ich war töricht mich darauf einzulassen.
+	AI_Output(hero, self, "Info_Mod_Vatras_Hexenfluch_C_15_00"); //Ähh ... sie sprach mich an und machte mir anzügliche Angebote. Es tut mir leid. Ich war töricht mich darauf einzulassen.
 	AI_Output(self, hero, "Info_Mod_Vatras_Hexenfluch_C_05_01"); //Was?! Ja, wirklich unwürdig hast du dich gebärdet. (Etwas ruhiger) Aber ich halte dir zu gute, dass du mir die Wahrheit sagst.
 	AI_Output(self, hero, "Info_Mod_Vatras_Hexenfluch_C_05_02"); //Ich hoffe, dass du aus deinem Fehler gelernt hast. Begib dich jetzt ins Kloster zu Pyrokar, da ich dir bei diesem Anliegen leider nicht helfen kann.
 
@@ -716,7 +716,6 @@ FUNC VOID Info_Mod_Vatras_NovizenTrank_Info()
 	AI_Output(hero, self, "Info_Mod_Vatras_NovizenTrank_15_03"); //Die Magie Innos reicht nicht aus, die Novizen zu heilen, deshalb wird deine Heilkunst benötigt.
 	AI_Output(self, hero, "Info_Mod_Vatras_NovizenTrank_05_04"); //Ah, das schwarze Fieber. Nimm diesen Trank, er sollte helfen.
 
-	CreateInvItems	(self, VatrasNovizenTrunk, 1);
 	B_GiveInvItems	(self, hero, VatrasNovizenTrunk, 1);
 
 	B_LogEntry	(TOPIC_MOD_DARONSGEFALLEN, "Vatras hat mir die Medizin gegeben.");
@@ -1329,18 +1328,18 @@ FUNC VOID Info_Mod_Vatras_Lernen_1()
 	Info_AddChoice		(Info_Mod_Vatras_Lernen, B_BuildLearnString_New(PRINT_LearnMANA1	, B_GetLearnCostAttribute(hero, ATR_MANA_MAX), ATR_MANA_MAX)		,Info_Mod_Vatras_Lernen_1);
 };
 
-INSTANCE Info_Mod_Vatras_Rüstung (C_INFO)
+INSTANCE Info_Mod_Vatras_Ruestung (C_INFO)
 {
 	npc		= Mod_524_KDW_Vatras_NW;
 	nr		= 1;
-	condition	= Info_Mod_Vatras_Rüstung_Condition;
-	information	= Info_Mod_Vatras_Rüstung_Info;
+	condition	= Info_Mod_Vatras_Ruestung_Condition;
+	information	= Info_Mod_Vatras_Ruestung_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Kann ich bei dir eine bessere Robe bekommen?";
 };
 
-FUNC INT Info_Mod_Vatras_Rüstung_Condition()
+FUNC INT Info_Mod_Vatras_Ruestung_Condition()
 {
 	if ((Mod_Gilde == 9)
 	|| (Mod_Gilde == 10))
@@ -1351,15 +1350,15 @@ FUNC INT Info_Mod_Vatras_Rüstung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Vatras_Rüstung_Info()
+FUNC VOID Info_Mod_Vatras_Ruestung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Vatras_Rüstung_15_00"); //Kann ich bei dir eine bessere Robe bekommen?
+	AI_Output(hero, self, "Info_Mod_Vatras_Ruestung_15_00"); //Kann ich bei dir eine bessere Robe bekommen?
 
 	if (Kapitel > 1)
 	&& (Mod_ErsteVerbesserung == FALSE)
 	&& (Mod_Gilde < 10)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_05_02"); //Ich hab gehört, dass beim See nordwestlich der Ausgrabungsstätte ein Rudel Wassersnapper hausen soll. Mit deren Haut könnte ich deine Wasser Novizenrobe sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_05_02"); //Ich hab gehört, dass beim See nordwestlich der Ausgrabungsstätte ein Rudel Wassersnapper hausen soll. Mit deren Haut könnte ich deine Wasser Novizenrobe sicher ein wenig verbessern.
 	
 		Mod_ErsteVerbesserung = TRUE;
 	
@@ -1371,15 +1370,15 @@ FUNC VOID Info_Mod_Vatras_Rüstung_Info()
 	if (Kapitel > 3)
 	&& (Mod_ZweiteVerbesserung == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_05_03"); //Ich hab gehört, dass beim Weg zur Ausgrabungsstätte ein Wasserläufer sein soll. Mit dessen Fell könnte ich deine Wassermagierrobe sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_05_03"); //Ich hab gehört, dass beim Weg zur Ausgrabungsstätte ein Wasserläufer sein soll. Mit dessen Fell könnte ich deine Wassermagierrobe sicher ein wenig verbessern.
 	
 		Mod_ZweiteVerbesserung = TRUE;
 	
-		Wld_InsertNpc	(Wasserläufer,	"FP_MAGICGOLEM");
+		Wld_InsertNpc	(Wasserlaeufer,	"FP_MAGICGOLEM");
 	};
 
-	Info_ClearChoices	(Info_Mod_Vatras_Rüstung);
-	Info_AddChoice	(Info_Mod_Vatras_Rüstung, DIALOG_BACK, Info_Mod_Vatras_Rüstung_BACK);
+	Info_ClearChoices	(Info_Mod_Vatras_Ruestung);
+	Info_AddChoice	(Info_Mod_Vatras_Ruestung, DIALOG_BACK, Info_Mod_Vatras_Ruestung_BACK);
 
 	if (Mod_ErsteVerbesserung == TRUE)
 	&& ((Mod_Gilde == 9)
@@ -1390,7 +1389,7 @@ FUNC VOID Info_Mod_Vatras_Rüstung_Info()
 	&& (Npc_HasItems(hero, ItAr_KDW_L_ADDON) == 0)
 	&& (Mod_Gilde < 10)
 	{
-		Info_AddChoice	(Info_Mod_Vatras_Rüstung, "Wasser Novizenrobe verbessern", Info_Mod_Vatras_Rüstung_WNOV_S);
+		Info_AddChoice	(Info_Mod_Vatras_Ruestung, "Wasser Novizenrobe verbessern", Info_Mod_Vatras_Ruestung_WNOV_S);
 	};
 
 	if (Mod_ZweiteVerbesserung == TRUE)
@@ -1400,23 +1399,23 @@ FUNC VOID Info_Mod_Vatras_Rüstung_Info()
 	|| (Mod_Gilde == 17)
 	|| (Mod_Gilde == 18))
 	{
-		Info_AddChoice	(Info_Mod_Vatras_Rüstung, "Wassermagierrobe verbessern", Info_Mod_Vatras_Rüstung_KDW_S);
+		Info_AddChoice	(Info_Mod_Vatras_Ruestung, "Wassermagierrobe verbessern", Info_Mod_Vatras_Ruestung_KDW_S);
 	};
 };
 
-FUNC VOID Info_Mod_Vatras_Rüstung_BACK ()
+FUNC VOID Info_Mod_Vatras_Ruestung_BACK ()
 {
-	Info_ClearChoices	(Info_Mod_Vatras_Rüstung);
+	Info_ClearChoices	(Info_Mod_Vatras_Ruestung);
 };
 
-FUNC VOID Info_Mod_Vatras_Rüstung_WNOV_S ()
+FUNC VOID Info_Mod_Vatras_Ruestung_WNOV_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Vatras_Rüstung_WNOV_S_15_00"); //Verbessere meine Wasser Novizenrobe.
+	AI_Output(hero, self, "Info_Mod_Vatras_Ruestung_WNOV_S_15_00"); //Verbessere meine Wasser Novizenrobe.
 
 	if (Npc_HasItems(hero, ItAt_WassersnapperHaut) >= 1)
 	&& (Npc_HasItems(hero, ItAr_Wassernovize1) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_WNOV_S_05_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_WNOV_S_05_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_WassersnapperHaut, 1);
 		
@@ -1435,24 +1434,24 @@ FUNC VOID Info_Mod_Vatras_Rüstung_WNOV_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_Wassernovize1) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_WNOV_S_05_02"); //Du musst schon eine Wasser Novizenrobe haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_WNOV_S_05_02"); //Du musst schon eine Wasser Novizenrobe haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_Wassersnapperhaut) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_WNOV_S_05_03"); //Wenn du nicht die Snapperhaut hast, kann ich deine Rüstung nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_WNOV_S_05_03"); //Wenn du nicht die Snapperhaut hast, kann ich deine Rüstung nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Vatras_Rüstung);
+	Info_ClearChoices	(Info_Mod_Vatras_Ruestung);
 };
 
-FUNC VOID Info_Mod_Vatras_Rüstung_KDW_S ()
+FUNC VOID Info_Mod_Vatras_Ruestung_KDW_S ()
 {
-	AI_Output(hero, self, "Info_Mod_Vatras_Rüstung_KDW_S_15_00"); //Verbessere meine Wassermagierrobe.
+	AI_Output(hero, self, "Info_Mod_Vatras_Ruestung_KDW_S_15_00"); //Verbessere meine Wassermagierrobe.
 
 	if (Npc_HasItems(hero, ItAt_WaterShadowFur) == 1)
 	&& (Npc_HasItems(hero, ItAr_KDW_L_ADDON) == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_KDW_S_05_01"); //Alles klar.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_KDW_S_05_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_WaterShadowFur, 1);
 		
@@ -1471,14 +1470,14 @@ FUNC VOID Info_Mod_Vatras_Rüstung_KDW_S ()
 	}
 	else if (Npc_HasItems(hero, ItAr_KDW_L_ADDON) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_RIT_S_05_02"); //Du musst schon eine Wassermagierrobe haben, sonst kann ich sie dir nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_RIT_S_05_02"); //Du musst schon eine Wassermagierrobe haben, sonst kann ich sie dir nicht verbessern.
 	}
 	else if (Npc_HasItems(hero, ItAt_WaterShadowFur) == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Vatras_Rüstung_RIT_S_05_03"); //Wenn du nicht das Wasserläuferfell hast, kann ich deine Rüstung nicht verbessern.
+		AI_Output(self, hero, "Info_Mod_Vatras_Ruestung_RIT_S_05_03"); //Wenn du nicht das Wasserläuferfell hast, kann ich deine Rüstung nicht verbessern.
 	};
 
-	Info_ClearChoices	(Info_Mod_Vatras_Rüstung);
+	Info_ClearChoices	(Info_Mod_Vatras_Ruestung);
 };
 
 INSTANCE Info_Mod_Vatras_Pickpocket (C_INFO)
@@ -1489,12 +1488,12 @@ INSTANCE Info_Mod_Vatras_Pickpocket (C_INFO)
 	information	= Info_Mod_Vatras_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_180;
 };
 
 FUNC INT Info_Mod_Vatras_Pickpocket_Condition()
 {
-	C_Beklauen	(100, ItMi_Gold, 640);
+	C_Beklauen	(180, ItMi_Gold, 640);
 };
 
 FUNC VOID Info_Mod_Vatras_Pickpocket_Info()
@@ -1512,8 +1511,88 @@ FUNC VOID Info_Mod_Vatras_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Vatras_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Vatras_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Vatras_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Vatras_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Vatras_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Vatras_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Vatras_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Vatras_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Vatras_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Vatras_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Vatras_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Vatras_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Vatras_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Vatras_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Vatras_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Vatras_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Vatras_EXIT (C_INFO)

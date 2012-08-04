@@ -170,6 +170,8 @@ FUNC VOID Info_Mod_Costa_NichtZufrieden_A()
 
 	Mod_Costa_Guertel = 1;
 
+	Mod_Costa_Guertel_Tag = Wld_GetDay();
+
 	Info_ClearChoices	(Info_Mod_Costa_NichtZufrieden);
 
 	Log_CreateTopic	(TOPIC_MOD_COSTA_GUERTEL, LOG_MISSION);
@@ -249,6 +251,31 @@ FUNC VOID Info_Mod_Costa_Jesse2_Info()
 	B_GivePlayerXP	(50);
 };
 
+INSTANCE Info_Mod_Costa_Lagermusik (C_INFO)
+{
+	npc		= Mod_1442_BUD_Costa_MT;
+	nr		= 1;
+	condition	= Info_Mod_Costa_Lagermusik_Condition;
+	information	= Info_Mod_Costa_Lagermusik_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Willst du bei Gravos Musikgruppe mitmachen?";
+};
+
+FUNC INT Info_Mod_Costa_Lagermusik_Condition()
+{
+	if (Mod_Gravo_Schatz == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Costa_Lagermusik_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Costa_Lagermusik_15_00"); //Willst du bei Gravos Musikgruppe mitmachen?
+	AI_Output(self, hero, "Info_Mod_Costa_Lagermusik_02_01"); //(abschätzig) Was der Musik nennt, hört meine Oma vielleicht gern. Ich brauch harte Sachen, Mann. Bei seiner Dudelmusik mach ich nicht mit. Keine Chance.
+};
+
 INSTANCE Info_Mod_Costa_WarumNichtWeg (C_INFO)
 {
 	npc		= Mod_1442_BUD_Costa_MT;
@@ -283,7 +310,7 @@ INSTANCE Info_Mod_Costa_Pickpocket (C_INFO)
 	information	= Info_Mod_Costa_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_40;
+	description	= Pickpocket_60;
 };
 
 FUNC INT Info_Mod_Costa_Pickpocket_Condition()
@@ -306,8 +333,88 @@ FUNC VOID Info_Mod_Costa_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Costa_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Costa_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Costa_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Costa_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Costa_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Costa_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Costa_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Costa_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Costa_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Costa_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Costa_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Costa_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Costa_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Costa_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Costa_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Costa_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Costa_EXIT (C_INFO)

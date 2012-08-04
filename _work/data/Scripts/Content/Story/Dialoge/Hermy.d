@@ -23,6 +23,9 @@ FUNC VOID Info_Mod_Hermy_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Hermy_Hi_05_04"); //Ich handle mit Verwandlungsspruchrollen. Ich kann dir ein paar einfache Rollen anbieten, aber die wertvollen Sprüche verkaufe ich nur an Mitglieder.
 	AI_Output(hero, self, "Info_Mod_Hermy_Hi_15_05"); //Ich komm darauf zurück.
 	AI_Output(self, hero, "Info_Mod_Hermy_Hi_05_06"); //Bei mir bist du immer wollkommen.
+
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_VM, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_VM, "Hermy verkauft Verwandlungsspruchrollen.");
 };
 
 INSTANCE Info_Mod_Hermy_QuestHermy (C_INFO)
@@ -233,7 +236,6 @@ FUNC VOID Info_Mod_Hermy_Harpie_E()
 	AI_Output(hero, self, "Info_Mod_Hermy_Harpie_E_15_00"); //Das war ein ganz schön hartes Abenteuer ...
 	AI_Output(self, hero, "Info_Mod_Hermy_Harpie_E_05_01"); //Hier hast du 500 Goldmünzen. Mehr gibt es nicht.
 
-	CreateInvItems	(self, ItMi_Gold, 500);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 
 	AI_Output(hero, self, "Info_Mod_Hermy_Harpie_E_15_02"); //Vielen Dank.
@@ -280,7 +282,6 @@ FUNC VOID Info_Mod_Hermy_Harpie_C()
 	AI_Output(hero, self, "Info_Mod_Hermy_Harpie_C_15_02"); //Besser als nichts.
 	AI_Output(self, hero, "Info_Mod_Hermy_Harpie_C_05_03"); //Hier hast du 500 Goldmünzen. Mehr gibt es nicht.
 
-	CreateInvItems	(self, ItMi_Gold, 500);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 
 	AI_Output(self, hero, "Info_Mod_Hermy_Harpie_C_05_04"); //Bekomme ich jetzt den Zauber?
@@ -413,12 +414,12 @@ INSTANCE Info_Mod_Hermy_Pickpocket (C_INFO)
 	information	= Info_Mod_Hermy_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Hermy_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 150);
+	C_Beklauen	(87, ItSc_TrfHarpie, 1);
 };
 
 FUNC VOID Info_Mod_Hermy_Pickpocket_Info()
@@ -436,8 +437,88 @@ FUNC VOID Info_Mod_Hermy_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Hermy_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Hermy_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Hermy_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Hermy_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Hermy_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Hermy_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Hermy_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Hermy_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Hermy_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Hermy_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Hermy_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Hermy_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Hermy_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Hermy_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Hermy_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Hermy_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Hermy_EXIT (C_INFO)

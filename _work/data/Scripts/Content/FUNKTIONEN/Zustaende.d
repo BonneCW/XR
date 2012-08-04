@@ -579,14 +579,8 @@ FUNC VOID Zustaende()
 
 	CurrentArmor = Npc_GetEquippedArmor(hero);
 
-	if (Npc_HasEquippedArmor(hero))
+	if (!Npc_HasEquippedArmor(hero))
 	{
-		//PrintScreen ("Rüstung angelegt!", -1, YPOS_LevelUp, FONT_Screen, 2);
-	}
-	else
-	{
-		//PrintScreen ("Keine Rüstung angelegt!", -1, YPOS_LevelUp, FONT_Screen, 2);
-
 		if (CurrentLevel == EISGEBIET_ZEN)
 		&& (Erkaeltung == FALSE)
 		&& (!playerIsTransformed)
@@ -743,53 +737,46 @@ FUNC VOID Zustaende()
 		};
 	};
 
-	// Wenn der Hero blöd rumsteht, dann Zufalls-Anis ausführen lassen
+	// Kristall der Prismen
 
-	if (Mod_HeroMachtRandiAni > 0)
+	if (Mod_KristallPrisma == 0)
+	&& (Npc_HasItems(hero, ItMi_KristallPrisma) == 1)
 	{
-		Mod_HeroMachtRandiAni += 1;
+		Mod_KristallPrisma = 1;
 
-		if (Mod_HeroMachtRandiAni == 3)
+		hero.protection[PROT_MAGIC] += 30;
+		hero.protection[PROT_FIRE] += 30;
+	};
+
+	if (Mod_KristallPrisma == 1)
+	&& (Npc_HasItems(hero, ItMi_KristallPrisma) == 0)
+	{
+		Mod_KristallPrisma = 0;
+
+		hero.protection[PROT_MAGIC] -= 30;
+		hero.protection[PROT_FIRE] -= 30;
+	};
+
+	// Regenerationstrank
+
+	if (Mod_Regenerationstrank_Counter > 0)
+	{
+		Mod_Regenerationstrank_Counter -= 1;
+
+		hero.attribute[ATR_HITPOINTS] += hero.attribute[ATR_HITPOINTS_MAX]/50;
+
+		if (hero.attribute[ATR_HITPOINTS] > hero.attribute[ATR_HITPOINTS_MAX])
 		{
-			Mod_HeroMachtRandiAni = 0;
+			hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
 		};
-	};
 
-	// Icon bei Krankheit und Vergiftung anzeigen
+		hero.aivar[AIV_Damage] = hero.attribute[ATR_HITPOINTS];
 
-	var int posx;
+		hero.attribute[ATR_MANA] += hero.attribute[ATR_MANA_MAX]/50;
 
-	posx = 18;
-
-	if (GGPf_Sumpfgolem_Time > 0)
-	|| (GGPi_Orkschamane_Time > 0)
-	|| (GGPf_Echsenmensch_Time > 0)
-	|| (GGPi_OrkkriegerArmbrust_Time > 0)
-	|| (GGPi_Fliegenpilz_Time > 0)
-	|| (GGPf_Echsenschwert_Time > 0)
-	|| (GGPf_Assassinenschwert_Time > 0)
-	|| (GGPi_Schamanenaxt_Time > 0)
-	|| (GTB_Blutfliege_Time > 0)
-	|| (GTS_Sumpfgasdrohne_Time > 0)
-	|| (GTM_Minecrawler_Time > 0)
-	|| (GTM_MinecrawlerWarrior_Time > 0)
-	|| (GTSu_Sumpfhai_Time > 0)
-	|| (GTS_Echsenschwert_Time > 0)
-	|| (GTB_Assassinenschwert_Time > 0)
-	|| (GTM_Schamanenaxt_Time > 0)
-	|| (GGD_Sumpfgasdrohne_Time > 0)
-	|| (GGD_Sumpfgolem_Time > 0)
-	|| (GGD_Sumpfdrache_Time > 0)
-	|| (GGD_Giftkrater_Time > 0)
-	{
-		PrintScreen	("K", posx, 92, FONT_STATUS, 2);
-
-		posx += 4;
-	};
-
-	if (BissDerFaeulnis_Time > 0)
-	|| (HauchDerPestilenz_Time > 0)
-	{
-		PrintScreen	("H", posx, 92, FONT_STATUS, 2);
+		if (hero.attribute[ATR_MANA] > hero.attribute[ATR_MANA_MAX])
+		{
+			hero.attribute[ATR_MANA] = hero.attribute[ATR_MANA_MAX];
+		};
 	};
 };

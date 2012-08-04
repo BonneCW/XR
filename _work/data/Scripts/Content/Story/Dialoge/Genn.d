@@ -42,7 +42,6 @@ FUNC VOID Info_Mod_Genn_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_Genn_Hi_15_14"); //Dann mache ich mich mal sofort auf den Weg.
 	AI_Output(self, hero, "Info_Mod_Genn_Hi_09_15"); //Bevor du losgehst, nimm das hier, es wird dir helfen.
 
-	CreateInvItems	(self, ItSc_TrfSnapper, 2);
 	B_GiveInvItems	(self, hero, ItSc_TrfSnapper, 2);
 
 	AI_Output(self, hero, "Info_Mod_Genn_Hi_09_16"); //Aber verwende sie nicht in der Gegenwart von Menschen, sie könnten dich sonst für ein Monster halten.
@@ -158,7 +157,6 @@ FUNC VOID Info_Mod_Genn_Matronen_B()
 
 	AI_Output(self, hero, "Info_Mod_Genn_Matronen_B_09_01"); //Vielen Dank für diesen Brief. Wir bleiben an der Sache dran. Hier hast du eine Entlohnung.
 
-	CreateInvItems	(self, ItMi_Gold, 500);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 
 	B_GivePlayerXP	(250);
@@ -175,7 +173,6 @@ FUNC VOID Info_Mod_Genn_Matronen_A()
 	AI_Output(hero, self, "Info_Mod_Genn_Matronen_A_15_00"); //Da war so ein Typ mit Lederklamotten, der meinte, er wäre geschickt worden, um dies zu tun. Ich habe ihn laufen lassen.
 	AI_Output(self, hero, "Info_Mod_Genn_Matronen_A_09_01"); //Danke für die Information. Wir bleiben an der Sache dran. Hier hast du eine Entlohnung.
 
-	CreateInvItems	(self, ItMi_Gold, 100);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 100);
 
 	B_GivePlayerXP	(250);
@@ -935,6 +932,8 @@ FUNC VOID Info_Mod_Genn_Pruefung3_Info()
 	AI_Output(self, hero, "Info_Mod_Genn_Pruefung3_09_05"); //Mach's gut!
 };
 
+var int Mod_Knows_GennTrader;
+
 INSTANCE Info_Mod_Genn_Trade (C_INFO)
 {
 	npc		= Mod_1959_VMG_Genn_TUG;
@@ -954,6 +953,13 @@ FUNC INT Info_Mod_Genn_Trade_Condition()
 
 FUNC VOID Info_Mod_Genn_Trade_Info()
 {
+	if (Mod_Knows_GennTrader == FALSE)
+	{
+		Mod_Knows_GennTrader = TRUE;
+
+		Log_CreateTopic	(TOPIC_MOD_HAENDLER_VM, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_HAENDLER_VM, "Genn handelt mit magischem Zubehör.");
+	};
 	Backup_Questitems();
 
 	B_GiveTradeInv (self);
@@ -973,7 +979,7 @@ INSTANCE Info_Mod_Genn_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Genn_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(55, ItSc_TrfBloodfly, 1);
 };
 
 FUNC VOID Info_Mod_Genn_Pickpocket_Info()
@@ -991,8 +997,88 @@ FUNC VOID Info_Mod_Genn_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Genn_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Genn_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Genn_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Genn_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Genn_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Genn_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Genn_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Genn_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Genn_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Genn_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Genn_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Genn_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Genn_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Genn_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Genn_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Genn_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Genn_EXIT (C_INFO)

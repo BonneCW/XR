@@ -108,13 +108,16 @@ FUNC INT Info_Mod_August_EssenGeholt_Condition()
 FUNC VOID Info_Mod_August_EssenGeholt_Info()
 {
 	AI_Output(hero, self, "Info_Mod_August_EssenGeholt_15_00"); //Hier hast du dein Essen.
+
+	B_GiveInvItems	(hero, self, ItFo_LammPoekelfleisch, 2);
+
 	AI_Output(self, hero, "Info_Mod_August_EssenGeholt_13_01"); //Dank dir! Nimm das!
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
 	B_GivePlayerXP	(50);
 
-	B_LogEntry	(TOPIC_MOD_KHORATA_FRISCHFLEISCH, "Ich konnte den Auftrag zu Hans' Zufriedenheit ausführen.");
+	B_LogEntry	(TOPIC_MOD_KHORATA_FRISCHFLEISCH, "Ich konnte den Auftrag zu Augusts Zufriedenheit ausführen.");
 	B_SetTopicStatus	(TOPIC_MOD_KHORATA_FRISCHFLEISCH, LOG_SUCCESS);
 
 	CurrentNQ += 1;
@@ -494,7 +497,7 @@ FUNC INT Info_Mod_August_Freudenspender_Condition()
 FUNC VOID Info_Mod_August_Freudenspender_Info()
 {
 	AI_Output(hero, self, "Info_Mod_August_Freudenspender_15_00"); //Ich hab hier Freudenspender ...
-	AI_Output(self, hero, "Info_Mod_August_Freudenspender_13_01"); //... das du nicht in der Stadt konsumieren darfst, genau. Halt dich dran.
+	AI_Output(self, hero, "Info_Mod_August_Freudenspender_13_01"); //... den du nicht in der Stadt konsumieren darfst, genau. Halt dich dran.
 };
 
 INSTANCE Info_Mod_August_Penner (C_INFO)
@@ -522,11 +525,11 @@ FUNC VOID Info_Mod_August_Penner_Info()
 
 	if (Npc_KnowsInfo(hero, Info_Mod_August_EssenGeholt))
 	{
-		AI_Output(hero, self, "Info_Mod_August_Penner_15_02"); //Habe dir das Frühstück gebracht.
-		AI_Output(self, hero, "Info_Mod_August_Penner_13_03"); //(eifrig) Genau! Das gepökelte Lamm. Köstlich, köstlich. Würdest du ...
+		AI_Output(hero, self, "Info_Mod_August_Penner_15_02"); //Ich habe dir das Frühstück gebracht.
+		AI_Output(self, hero, "Info_Mod_August_Penner_13_03"); //(eifrig) Genau! Das gepökelte Lamm. Für den großen Hunger. Würdest du ...
 		AI_Output(hero, self, "Info_Mod_August_Penner_15_04"); //Ich verstehe. Noch eine Portion ...
 		AI_Output(self, hero, "Info_Mod_August_Penner_13_05"); //Genau! Und ein Fladenbrot vom Bäcker dazu, wenn's recht ist, und ein Dunkelbier aus der Brauerei.
-		AI_Output(self, hero, "Info_Mod_August_Penner_13_06"); //Das Lamm vom  Fleischer ist fast noch besser, als das von den Peter. So drei Keulen dürfen's sein.
+		AI_Output(self, hero, "Info_Mod_August_Penner_13_06"); //Das Lamm vom Fleischer ist fast noch besser, als das von Peter. So drei Keulen dürfen's sein.
 	}
 	else
 	{
@@ -536,13 +539,13 @@ FUNC VOID Info_Mod_August_Penner_Info()
 	};
 
 	AI_Output(hero, self, "Info_Mod_August_Penner_15_10"); //Alkohol im Dienst? Wenn ich das dem Stadthalter sage ...
-	AI_Output(self, hero, "Info_Mod_August_Penner_13_11"); //Sagst du nicht. Weil, ich hätte da ein ganz heißes Teil für dich.
+	AI_Output(self, hero, "Info_Mod_August_Penner_13_11"); //Sagst du nicht. Dann würdest du nämlich bekommen, was ich zu geben habe ...
 	AI_Output(hero, self, "Info_Mod_August_Penner_15_12"); //So? Was denn?
 	AI_Output(self, hero, "Info_Mod_August_Penner_13_13"); //Erst den Happen.
 
 	Log_CreateTopic	(TOPIC_MOD_JG_AUGUST, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_JG_AUGUST, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_JG_AUGUST, "Soll für August Essen besorgen. Gepökeltes Lamm von Peter oder dem Metzger, Fladenbrot vom Bäcker und Dunkelbier vom Brauer.");
+	B_LogEntry	(TOPIC_MOD_JG_AUGUST, "Ich soll für August Essen besorgen. Gepökeltes Lamm von Peter oder dem Metzger, Fladenbrot vom Bäcker und Dunkelbier vom Brauer.");
 
 	B_StartOtherRoutine	(self, "START");
 };
@@ -579,9 +582,9 @@ FUNC VOID Info_Mod_August_Penner2_Info()
 
 	B_ShowGivenThings	("3 gepökeltes Lammfleisch, Fladenbrot und Dunkelbier gegeben");
 
-	AI_Output(self, hero, "Info_Mod_August_Penner2_13_01"); //Gib schon her. Hab Kohldampf.
-	AI_Output(hero, self, "Info_Mod_August_Penner2_15_02"); //Was ist jetzt mit dem heißen Teil?
-	AI_Output(self, hero, "Info_Mod_August_Penner2_13_03"); //Also letzthin hatte ich Dienst auf dem Wachturm am Pass.
+	AI_Output(self, hero, "Info_Mod_August_Penner2_13_01"); //Gib schon her. Mittlerweile schieb ich ordentlich Kohldampf.
+	AI_Output(hero, self, "Info_Mod_August_Penner2_15_02"); //Was ist es, was du mir geben wolltest?
+	AI_Output(self, hero, "Info_Mod_August_Penner2_13_03"); //Also letztens hatte ich Dienst auf dem Wachturm am Pass.
 	AI_Output(self, hero, "Info_Mod_August_Penner2_13_04"); //Wie ich so den Hang hochlaufe, stolpere ich doch über dieses Ding hier. Ist garantiert wertvoll, das Teil.
 	AI_Output(hero, self, "Info_Mod_August_Penner2_15_05"); //Zeig her.
 	AI_Output(self, hero, "Info_Mod_August_Penner2_13_06"); //Hier.
@@ -609,12 +612,12 @@ INSTANCE Info_Mod_August_Pickpocket (C_INFO)
 	information	= Info_Mod_August_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_August_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(62, ItMi_Gold, 234);
 };
 
 FUNC VOID Info_Mod_August_Pickpocket_Info()
@@ -632,8 +635,88 @@ FUNC VOID Info_Mod_August_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_August_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_August_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_August_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_August_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_August_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_August_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_August_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_August_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_August_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_August_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_August_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_August_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_August_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_August_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_August_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_August_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_August_EXIT (C_INFO)

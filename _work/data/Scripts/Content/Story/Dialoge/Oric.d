@@ -173,8 +173,8 @@ INSTANCE Info_Mod_Oric_Gomez (C_INFO)
 
 FUNC INT Info_Mod_Oric_Gomez_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Raven_MT_Hi))
-	&& (!Npc_IsInState(Mod_7068_DMR_Raven_MT, ZS_Talk))
+	if (Npc_KnowsInfo(hero, Info_Mod_Raven_GomezLebenLassen))
+	&& (!Npc_IsInState(Mod_520_DMR_Raven_MT, ZS_Talk))
 	{
 		return 1;
 	};
@@ -182,7 +182,7 @@ FUNC INT Info_Mod_Oric_Gomez_Condition()
 
 FUNC VOID Info_Mod_Oric_Gomez_Info()
 {
-	AI_TurnToNpc	(self, Mod_7068_DMR_Raven_MT);
+	AI_TurnToNpc	(self, Mod_520_DMR_Raven_MT);
 
 	AI_Output(self, hero, "Info_Mod_Oric_Gomez_11_00"); //Schweigt, Abschaum Beliars. Wir haben euren Mann bezwungen, und so steht uns auch das Recht zu, ihn zu töten.
 

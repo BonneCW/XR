@@ -19,8 +19,6 @@ FUNC INT Info_Mod_Trimedron_Hi_Condition()
 	}
 	else
 	{
-		//Print ("Kacke");
-
 		B_Attack	(self, hero, AR_None, 0);
 		return 0;
 	};

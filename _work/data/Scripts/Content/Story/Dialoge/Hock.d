@@ -50,8 +50,8 @@ FUNC VOID Info_Mod_Hock_NahkampfJG_Info()
 	AI_Output(self, hero, "Info_Mod_Hock_NahkampfJG_06_03"); //Aha. Und wie finde ich das?
 	AI_Output(hero, self, "Info_Mod_Hock_NahkampfJG_15_04"); //Warst du schon im Minental?
 	AI_Output(self, hero, "Info_Mod_Hock_NahkampfJG_06_05"); //War mal bei Lee im Söldnerlager. Ist aber länger her.
-	AI_Output(hero, self, "Info_Mod_Hock_NahkampfJG_15_06"); //Pass auf. Wenn du ins Tal kommst, hälts du dich links, immer den Bach lang Richtung Küste.
-	AI_Output(hero, self, "Info_Mod_Hock_NahkampfJG_15_07"); //Irgendwann siehst du dann eine Burgruine und in der Nähe einen hölzernen Wachturm.
+	AI_Output(hero, self, "Info_Mod_Hock_NahkampfJG_15_06"); //Pass auf. Wenn du ins Tal kommst, hälts du dich rechts, immer an den Bergen lang Richtung Alte Mine.
+	AI_Output(hero, self, "Info_Mod_Hock_NahkampfJG_15_07"); //Irgendwann siehst du dann einen Durchgang und ein gutes Stück weiter einen hölzernen Wachturm.
 	AI_Output(hero, self, "Info_Mod_Hock_NahkampfJG_15_08"); //Da ist das Waldläuferlager. Am Eingang steht Torgan. Ihm sagst du, du seiest der neue Nahkämpfer.
 	AI_Output(self, hero, "Info_Mod_Hock_NahkampfJG_06_09"); //So, bin ich das.
 	AI_Output(hero, self, "Info_Mod_Hock_NahkampfJG_15_10"); //Klar, du wirst reichlich Spass haben.

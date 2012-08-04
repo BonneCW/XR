@@ -2662,7 +2662,7 @@ INSTANCE ItPl_Winterrute(C_Item)
 
 	visual 				=	"Winterrute.3DS";
 	material 			=	MAT_LEATHER;
-	on_state[0]			=	Use_Blueplant;
+	on_state[0]			=	Use_Winterrute;
 	scemeName			=	"FOOD";
          wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_HEALTHPOTION"; 

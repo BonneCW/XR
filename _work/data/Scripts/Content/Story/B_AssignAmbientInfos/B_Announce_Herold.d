@@ -23,8 +23,8 @@ func void B_Announce_Herold ()
 
 	AI_Output (self,self,"Info_Mod_Herold_Announce_04_00"); //Hergehört, hergehört!
 	
-	if (Npc_KnowsInfo(hero, Info_Mod_Herold_Flugblätter))
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+	if (Npc_KnowsInfo(hero, Info_Mod_Herold_Flugblaetter))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 	{
 		AI_Output (self,self,"Info_Mod_Herold_Announce_04_01"); //Ihr habt Hunger und nicht viel Gold? Dann geht zu Matteo im Händlerviertel, dort bekommt ihr alle Lebensmittel zu einem guten Preis.
 		AI_Output (self,self,"Info_Mod_Herold_Announce_04_02"); //Für kurze Zeit gibt es sogar Käse im Angebot, also schlagt schnell zu.

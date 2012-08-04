@@ -635,6 +635,30 @@ CLASS C_SVM
 	// Held kennt Chromanin-Rätsel aus Vorgänger
 
 	var string KNOWSRIDDLER;
+
+	// Held riecht den Tabak von Jackal
+
+	var string SMELLTABAK;
+
+	// Schlösser knacken
+
+	var string PICKLOCKFAILURE;
+	var string PICKLOCKBROKEN;
+
+	// Bücher nicht lesen können
+
+	var string BOOKSTANDNOTREADABLE01;
+	var string BOOKSTANDNOTREADABLE02;
+
+	// Taschendiebstahl
+
+	var string PICKPOCKET_BESCHIMPFEN;
+	var string PICKPOCKET_BESTECHUNG;
+	var string PICKPOCKET_HERAUSREDEN;
+
+	var string PICKPOCKET_BESTECHUNG_01;
+	var string PICKPOCKET_HERAUSREDEN_01;
+	var string PICKPOCKET_HERAUSREDEN_02;
 };     
 
 
@@ -742,4 +766,4 @@ INSTANCE SVM_23 (C_SVM)
 // 		Maximale SVMs
 // ***********************
 
-CONST INT SVM_MODULES =	26;
+CONST INT SVM_MODULES =	31;

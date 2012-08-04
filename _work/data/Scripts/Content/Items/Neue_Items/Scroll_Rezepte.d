@@ -3,6 +3,7 @@ const int Value_Scroll_Icebolt 		= 50;
 const int Value_Scroll_Zap 		= 50;
 const int Value_Scroll_SumWolf		= 50;
 const int Value_Scroll_SumGobSkel	= 100;
+const int Value_Scroll_AuraFlammen	= 100;
 const int Value_Scroll_SumSkel		= 200;
 const int Value_Scroll_SummonGuardian	= 200;
 const int Value_Scroll_SummonZombie	= 300;
@@ -1609,5 +1610,54 @@ func void UseScroll_FullHeal ()
 			B_LogEntry	(TOPIC_TalentScrolls, "Zutaten für die Spruchrolle ´SCHWERE WUNDEN HEILEN´: 1 Heilwurzel");
 
 			PLAYER_TALENT_SCROLLS[SCROLL_FULLHEAL] = TRUE;
+		};
+};
+
+INSTANCE ItWr_Scroll_AuraFlammen		(C_Item)
+{
+	name 				=	"Rezept";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	ITEM_MISSION;
+
+	value 				=	Value_Scroll_AuraFlammen;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseScroll_AuraFlammen;
+	scemeName			=	"MAPSEALED";
+	description			= 	"Rezept: Aura der Flammen";
+	TEXT[5]	= NAME_Value;
+	Count[5] = value;
+};
+
+func void UseScroll_AuraFlammen ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		()			  ;							// DocManager
+					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline  			); 	// -1 -> all pages
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
+					Doc_PrintLine	( nDocID,  0, "Aura der Flammen - Spruchrolle"					);
+					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "1x Spruchrolle Feuerregen"					);
+					Doc_PrintLines	( nDocID,  0, "1x Spruchrolle Feuersturm"					);
+					Doc_PrintLines	( nDocID,  0, "1x Dämonenherz"					);
+					Doc_PrintLines	( nDocID,  0, "1x Herz eines Feuergolems"					);
+					Doc_PrintLines	( nDocID,  0, "1x Feuerzunge"					);
+					Doc_PrintLines	( nDocID,  0, "3x Kohle"					);
+					Doc_PrintLines	( nDocID,  0, "1x Pech"					);
+					Doc_PrintLines	( nDocID,  0, "2x Schwefel"					);
+
+					Doc_Show		( nDocID );
+
+		if (PLAYER_TALENT_SCROLLS[SCROLL_AuraFlammen] == FALSE)
+		{
+			B_LogEntry	(TOPIC_TalentScrolls, "Zutaten für die Spruchrolle ´AURA DER FLAMMEN´: 1 Spruchrolle Feuerregen, 1 Spruchrolle Feuersturm, 1 Dämonenherz, 1 Herz eines Feuergolems, 1 Feuerzunge, 3 Kohle, 1 Pech, 2 Schwefel");
+
+			PLAYER_TALENT_SCROLLS[SCROLL_AuraFlammen] = TRUE;
 		};
 };

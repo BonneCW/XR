@@ -45,16 +45,18 @@ FUNC VOID ChangeStatusMenu (var string field, var string text)
 	};
 };
 
+var int ExpBar;
+var int FutterBar;
+
 FUNC VOID FRAMEFUNC ()
 {
+	// Es wird gleich MEM_Timer genutzt, der muss initialisiert sein
+	MEM_InitGlobalInst();
+
 	// Triggernachricht senden
 	Wld_SendTrigger ("FRAMETRIGGER"); //ruft meineSchleifenFunktion auf
 
-	//BarHP = Bar_SetValue(BarHP, "Bar_Mana.tga", (hero.exp*100)/hero.exp_next, 80, 7272);
-
 	// Balken anzeigen
-
-	var int ExpBar;
 
 	if (Mod_EXP_Anzeige)
 	{
@@ -75,8 +77,6 @@ FUNC VOID FRAMEFUNC ()
 			ExpBar = 0;
 		};
 	};
-
-	var int FutterBar;
 
 	if (Mod_Esssystem)
 	{
@@ -168,28 +168,6 @@ FUNC VOID FRAMEFUNC ()
 		CurrentLevel2 = 0;
 	};
 
-	if (Mod_Fliegen == 1)
-	{
-		var oCNpc her;
-		her = Hlp_GetNpc (hero);
-
-		her._zCVob_bitfield[0] = her._zCVob_bitfield[0] & ~ zCVob_bitfield0_physicsEnabled;
-
-		var zCAIPlayer boppel;
-		MEM_AssignInst(boppel, her.human_ai);
-
-		PrintScreen	(IntToString(boppel.fallDownDistanceY), -1, 50, FONT_SCREEN, 1);
-		PrintScreen	(IntToString(boppel.fallDownStartY), -1, 55, FONT_SCREEN, 1);
-
-		if (MEM_KeyState(KEY_A) == KEY_PRESSED)
-		{
-			her._zCVob_trafoObjToWorld[7] = addf(her._zCVob_trafoObjToWorld[7], mkf(100));
-		}
-		else if (MEM_KeyState(KEY_Z) == KEY_PRESSED)
-		{
-		};
-	};
-
 	if (GetInput)
 	{
 		if (MEM_KeyState(KEY_RETURN) == KEY_PRESSED)
@@ -232,6 +210,7 @@ FUNC VOID FRAMEFUNC ()
 	ChangeStatusMenu ("MENU_ITEM_ARMOR_2", IntToString(hero.protection[PROT_POINT]/1000));
 	ChangeStatusMenu ("MENU_ITEM_GIFT_WERT", IntToString(Gift));
 	ChangeStatusMenu ("MENU_ITEM_KRANKHEIT_WERT", IntToString(Krankheit));
+	ChangeStatusMenu ("MENU_ITEM_TALENT_21_SKILL", ConcatStrings(IntToString(Mod_Verhandlungsgeschick), " %"));
 
 	if (Mod_Schwierigkeit == 4)
 	{
@@ -246,69 +225,63 @@ FUNC VOID FRAMEFUNC ()
 		if (Npc_IsAiming(hero, other))
 		&& (Npc_IsInFightMode(hero, FMODE_FAR))
 		{
-			if (CurrentTarget == TARGET_RUMP)
+			if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_RUMP)
 			{
 				PrintScreen	("Körper", -1, 20, FONT_SCREEN, 1);
 			}
-			else if (CurrentTarget == TARGET_LEFTLEG)
+			else if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_LEFTLEG)
 			{
 				PrintScreen	("Linkes Bein", -1, 20, FONT_SCREEN, 1);
 			}
-			else if (CurrentTarget == TARGET_RIGHTLEG)
+			else if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_RIGHTLEG)
 			{
 				PrintScreen	("Rechtes Bein", -1, 20, FONT_SCREEN, 1);
 			}
-			else if (CurrentTarget == TARGET_LEFTARM)
+			else if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_LEFTARM)
 			{
 				PrintScreen	("Linker Arm", -1, 20, FONT_SCREEN, 1);
 			}
-			else if (CurrentTarget == TARGET_RIGHTARM)
+			else if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_RIGHTARM)
 			{
 				PrintScreen	("Rechter Arm", -1, 20, FONT_SCREEN, 1);
 			}
-			else if (CurrentTarget == TARGET_HEAD)
+			else if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_HEAD)
 			{
 				PrintScreen	("Kopf", -1, 20, FONT_SCREEN, 1);
 			};
 
 			if (MEM_KeyState(KEY_NUMPAD1) == KEY_PRESSED)
 			{
-				CurrentTarget = TARGET_LEFTLEG;
+				B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_LEFTLEG);
 			}
 			else if (MEM_KeyState(KEY_NUMPAD4) == KEY_PRESSED)
 			{
-				CurrentTarget = TARGET_LEFTARM;
+				B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_LEFTARM);
 			}
 			else if (MEM_KeyState(KEY_NUMPAD6) == KEY_PRESSED)
 			{
-				CurrentTarget = TARGET_RIGHTARM;
+				B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_RIGHTARM);
 			}
 			else if (MEM_KeyState(KEY_NUMPAD8) == KEY_PRESSED)
 			{
-				CurrentTarget = TARGET_HEAD;
+				B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_HEAD);
 			}
 			else if (MEM_KeyState(KEY_NUMPAD3) == KEY_PRESSED)
 			{
-				CurrentTarget = TARGET_RIGHTLEG;
+				B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_RIGHTLEG);
 			}
 			else if (MEM_KeyState(KEY_NUMPAD5) == KEY_PRESSED)
 			{
-				CurrentTarget = TARGET_RUMP;
+				B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_RUMP);
 			};
 		}
 		else
 		{
-			//CurrentTarget = TARGET_RUMP;
+			//B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_RUMP;
 		};
 
 		var string OppState;
 		OppState = "";
-
-		if (other.aivar[AIV_Tiergift] > 0)
-		|| (other.aivar[AIV_Pflanzengift] > 0)
-		{
-			OppState = ConcatStrings(OppState, "K ");
-		};
 
 		if (other.aivar[AIV_Blutet] > 0)
 		{
@@ -322,7 +295,7 @@ FUNC VOID FRAMEFUNC ()
 	}
 	else
 	{
-		CurrentTarget = TARGET_RUMP;
+		B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_RUMP);
 	};
 
 	FrameCounter += 1;
@@ -353,9 +326,23 @@ FUNC VOID FRAMEFUNC ()
 		};
 	};*/
 
-	if (MEM_KeyState(KEY_F) == KEY_PRESSED)
+	var int PrismaKey; PrismaKey = 0;
+	var int PrismaKey2; PrismaKey2 = 0;
+
+	if (STR_Len(Mod_PrismaKey) >= 4)
 	{
-		if (Npc_HasItems(hero, ItMi_Magieprisma) == 1)
+		PrismaKey = B_GetIntOfHex(STR_SubStr(Mod_PrismaKey, 0, 4));
+
+		if (STR_Len(Mod_PrismaKey) == 8)
+		{
+			PrismaKey2 = B_GetIntOfHex(STR_SubStr(Mod_PrismaKey, 4, 4));
+		};
+	};
+
+	if (MEM_KeyState(PrismaKey) == KEY_PRESSED)
+	|| (MEM_KeyState(PrismaKey2) == KEY_PRESSED)
+	{
+		if (Mod_PrismaAngelegt == 1)
 		{
 			var ocNpc her2; her2 = Hlp_GetNpc(hero);
 
@@ -432,14 +419,61 @@ FUNC VOID FRAMEFUNC ()
 		Wld_InsertItem	(ItMi_Focus_Troll, "FP_ITEM_FOKUS_TROLL");
 	};
 
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_01) == 1)
+	&& (Mod_PAT_Focus_01 == 0)
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_01, 1);
+
+		Wld_InsertItem	(ItMi_Focus_Pat_01, "FP_ITEM_FOKUS_01");
+	};
+
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_02) == 1)
+	&& (Mod_PAT_Focus_02 == 0)
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_02, 1);
+
+		Wld_InsertItem	(ItMi_Focus_Pat_02, "FP_ITEM_FOKUS_02");
+	};
+
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_03) == 1)
+	&& (Mod_PAT_Focus_03 == 0)
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_03, 1);
+
+		Wld_InsertItem	(ItMi_Focus_Pat_03, "FP_ITEM_FOKUS_03");
+	};
+
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_04) == 1)
+	&& (Mod_PAT_Focus_04 == 0)
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_04, 1);
+
+		Wld_InsertItem	(ItMi_Focus_Pat_04, "FP_ITEM_FOKUS_04");
+	};
+
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_05) == 1)
+	&& (Mod_PAT_Focus_05 == 0)
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_05, 1);
+
+		Wld_InsertItem	(ItMi_Focus_Pat_05, "FP_ITEM_FOKUS_05");
+	};
+
+	if (Npc_HasItems(hero, ItMi_Magieprisma_Fake) == 1)
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Magieprisma_Fake, 1);
+
+		Wld_InsertItem	(ItMi_Magieprisma_Fake,	"FP_ITEM_MAGIEPRISMA");
+
+		Wld_PlayEffect ("SPELLFX_PRISMA", ItMi_Magieprisma_Fake, ItMi_Magieprisma_Fake, 0, 0, 0, FALSE);
+	};
+
 	ObserveConsole();
 	ShowBars();
 
 	// Pfeile bleiben in Welt stecken
 
 	ZaphodPfeilExchange();
-
-	//FDL_FRAMEUPDATE();
 
 	// Triggerscript holen:
 	var int ptr; ptr = MEM_SearchVobByName ("FRAMETRIGGER");

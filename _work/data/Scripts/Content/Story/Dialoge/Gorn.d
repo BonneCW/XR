@@ -15,18 +15,89 @@ FUNC INT Info_Mod_Gorn_Hi_Condition()
 
 FUNC VOID Info_Mod_Gorn_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Gorn_Hi_12_00"); //Du lebst noch?
-	AI_Output(self, hero, "Info_Mod_Gorn_Hi_12_01"); //Du hast es also tatsächlich geschafft den Schläfer zu besiegen?
-	AI_Output(hero, self, "Info_Mod_Gorn_Hi_15_02"); //Ja.
-	AI_Output(self, hero, "Info_Mod_Gorn_Hi_12_03"); //Kannst du mir einen Gefallen tun?
-	AI_Output(hero, self, "Info_Mod_Gorn_Hi_15_04"); //Klar, worum geht's?
-	AI_Output(self, hero, "Info_Mod_Gorn_Hi_12_05"); //Sag Diego, Milten und Lester bescheid, dass wir uns in Taverne 'Zur Toten Harpie' treffen.
-	AI_Output(self, hero, "Info_Mod_Gorn_Hi_12_06"); //Da du auch einer von uns geworden bist, kannst du natürlich auch kommen.
-	AI_Output(self, hero, "Info_Mod_Gorn_Hi_12_07"); //Und solltest jemals Hilfe brauchen, kannst du zu uns kommen, dann werden wir versuchen, dir zu helfen.
+	AI_Output(self, hero, "Info_Mod_Gorn_Hi_12_00"); //Ich glaub’s ja nicht ... du?! Dich kann auch wirklich kein Monster oder Erzdämon erledigen ...
+	AI_Output(hero, self, "Info_Mod_Gorn_Hi_15_01"); //Freut mich auch dich zu sehen.
+	AI_Output(self, hero, "Info_Mod_Gorn_Hi_12_02"); //Mann ... da werden einige Erinnerungen wach. Was wir alles zusammen erlebt haben.
+	AI_Output(self, hero, "Info_Mod_Gorn_Hi_12_03"); //Es ist, als wäre es erst gestern gewesen, wo wir die Gardisten mit einem Arschtritt aus unserer Mine vertrieben haben.
+	AI_Output(hero, self, "Info_Mod_Gorn_Hi_15_04"); //Oder gemeinsam den fetten Troll in der Klosterfestung erledigt haben.
+	AI_Output(self, hero, "Info_Mod_Gorn_Hi_12_05"); //Klar, wie könnte ich das fette Biest vergessen. Und schon wieder bist du zur rechten Zeit am rechten Ort.
+	AI_Output(hero, self, "Info_Mod_Gorn_Hi_15_06"); //Wieso?
+	AI_Output(self, hero, "Info_Mod_Gorn_Hi_12_07"); //Nun, ich hatte mir gerade vorgenommen die verfluchte Festung da oben einzunehmen. Viele Schätze soll es da zu holen geben, aber eben auch voller untoter Mistkerle.
+	AI_Output(self, hero, "Info_Mod_Gorn_Hi_12_08"); //Hartes Stück Arbeit, dachte ich mir. Bis du gekommen bist. Mit dir sollte es ein Spaziergang werden.
+};
+
+INSTANCE Info_Mod_Gorn_GotoCastlemine (C_INFO)
+{
+	npc		= Mod_533_SLD_Gorn_NW;
+	nr		= 1;
+	condition	= Info_Mod_Gorn_GotoCastlemine_Condition;
+	information	= Info_Mod_Gorn_GotoCastlemine_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Na dann lass uns den Untoten mal einen Besuch abzustatten.";
+};
+
+FUNC INT Info_Mod_Gorn_GotoCastlemine_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Gorn_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Gorn_GotoCastlemine_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Gorn_GotoCastlemine_15_00"); //Na dann lass uns den Untoten mal einen Besuch abzustatten.
+	AI_Output(self, hero, "Info_Mod_Gorn_GotoCastlemine_12_01"); //Nichts anderes hatte ich von dir erwartet. Dann zeigen wir es diesen Bastarden mal.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "CASTLEMINE");
+
+	self.aivar[AIV_PARTYMEMBER] = TRUE;
+};
+
+INSTANCE Info_Mod_Gorn_AtCastlemine (C_INFO)
+{
+	npc		= Mod_533_SLD_Gorn_NW;
+	nr		= 1;
+	condition	= Info_Mod_Gorn_AtCastlemine_Condition;
+	information	= Info_Mod_Gorn_AtCastlemine_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Gorn_AtCastlemine_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Gorn_GotoCastlemine))
+	&& (Npc_GetDistToWP(hero, "NW_CASTLEMINE_HUT_10_B") < 500)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Gorn_AtCastlemine_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Gorn_AtCastlemine_12_00"); //So, das war es also. Ein paar Goldmünzen sind zusammengekommen, aber doch nicht ganz so viel, wie ich erhofft hatte.
+	AI_Output(self, hero, "Info_Mod_Gorn_AtCastlemine_12_01"); //Und die Mine scheint auch verschüttet zu sein. Zu holen gibt es hier auf jeden Fall nichts mehr.
+	AI_Output(self, hero, "Info_Mod_Gorn_AtCastlemine_12_02"); //War aber trotzdem ein Riesenspaß mit dir mal wieder unterwegs zu sein ... und Grund genug mich mit den anderen Jungs zu treffen, um einige Dinge zu besprechen.
+	AI_Output(self, hero, "Info_Mod_Gorn_AtCastlemine_12_03"); //Kannst du mir einen Gefallen tun?
+	AI_Output(hero, self, "Info_Mod_Gorn_AtCastlemine_15_04"); //Klar, worum geht's?
+	AI_Output(self, hero, "Info_Mod_Gorn_AtCastlemine_12_05"); //Sag Diego, Milten und Lester bescheid, dass wir uns in Taverne 'Zur Toten Harpie' treffen.
+	AI_Output(self, hero, "Info_Mod_Gorn_AtCastlemine_12_06"); //Da du auch einer von uns geworden bist, kannst du natürlich auch kommen.
+	AI_Output(self, hero, "Info_Mod_Gorn_AtCastlemine_12_07"); //Und solltest jemals Hilfe brauchen, kannst du zu uns kommen, dann werden wir versuchen, dir zu helfen.
 	
 	Log_CreateTopic	(TOPIC_MOD_TREFFEN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_TREFFEN, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_TREFFEN, "Gorn bat mich Diego, Milten und Lester zu sagen, dass sie sich in der Taverne 'Zur Toten Harpie' treffen wollen");
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "START");
+
+	self.aivar[AIV_PARTYMEMBER] = FALSE;
+
+	B_GivePlayerXP	(200);
 };
 
 INSTANCE Info_Mod_Gorn_Daemonisch (C_INFO)
@@ -1027,12 +1098,12 @@ INSTANCE Info_Mod_Gorn_Pickpocket (C_INFO)
 	information	= Info_Mod_Gorn_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_210;
 };
 
 FUNC INT Info_Mod_Gorn_Pickpocket_Condition()
 {
-	C_Beklauen	(109, ItMi_Gold, 1000);
+	C_Beklauen	(210, ItMi_Gold, 2000);
 };
 
 FUNC VOID Info_Mod_Gorn_Pickpocket_Info()
@@ -1050,8 +1121,88 @@ FUNC VOID Info_Mod_Gorn_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Gorn_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Gorn_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Gorn_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Gorn_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Gorn_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Gorn_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Gorn_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Gorn_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Gorn_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Gorn_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Gorn_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Gorn_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Gorn_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Gorn_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Gorn_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Gorn_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Gorn_EXIT (C_INFO)

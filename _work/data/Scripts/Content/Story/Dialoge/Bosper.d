@@ -1021,8 +1021,17 @@ INSTANCE Info_Mod_Bosper_Schnitzen (C_INFO)
 
 FUNC INT Info_Mod_Bosper_Schnitzen_Condition()
 {
+	if (Mod_Schwierigkeit == 4)
+	{
+		Info_Mod_Bosper_Schnitzen.description = "Bring mir bei Pfeile zu schnitzen (200 Gold)";
+	}
+	else
+	{
+		Info_Mod_Bosper_Schnitzen.description = "Bring mir bei Pfeile zu schnitzen (2 LP)";
+	};
+
 	if (Npc_KnowsInfo(hero, Info_Mod_Bosper_Job))
-	&& (hero.lp	>=	2)
+	&& (((hero.lp >= 2) && (Mod_Schwierigkeit != 4)) || ((Npc_HasItems(hero, ItMi_Gold) >= 200) && (Mod_Schwierigkeit == 4)))
 	&& (Mod_PfeileSchnitzen	== 0)
 	{
 		return 1;
@@ -1035,7 +1044,14 @@ FUNC VOID Info_Mod_Bosper_Schnitzen_Info()
 	AI_Output(self, hero, "Info_Mod_Bosper_Schnitzen_11_01"); //Ok. Zuerst solltest du dir ein Holzstück bei Thorben kaufen. Dieses nimmst du dann mit an eine Baumsäge und schnitzt es zu etwa 10 Pfeilen.
 	AI_Output(self, hero, "Info_Mod_Bosper_Schnitzen_11_02"); //Dann fügst du den Pfeil mit einer Pfeilspitze an einem Amboss zusammen und fertig ist dein Pfeil.
 
-	hero.lp	-= 2;
+	if (Mod_Schwierigkeit != 4)
+	{
+		hero.lp -= 2;
+	}
+	else
+	{
+		Npc_RemoveInvItems	(hero, ItMi_Gold, 200);
+	};
 
 	Mod_PfeileSchnitzen	=	1;
 
@@ -1056,7 +1072,7 @@ INSTANCE Info_Mod_Bosper_Spitzen (C_INFO)
 
 FUNC INT Info_Mod_Bosper_Spitzen_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Bosper_Schnitzen))
+	if (Npc_KnowsInfo(hero, Info_Mod_Bosper_Job))
 	{
 		return 1;
 	};
@@ -1461,8 +1477,8 @@ FUNC VOID Info_Mod_Bosper_HandelstJetzt_Info()
 	AI_Output(hero, self, "Info_Mod_Bosper_HandelstJetzt_15_00"); //Handelst du jetzt mit mir?
 	AI_Output(self, hero, "Info_Mod_Bosper_HandelstJetzt_11_01"); //Meinetwegen.
 	
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Bosper verkauft Bögen und Armbrüste.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Bosper verkauft Bögen und Armbrüste.");
 };
 
 INSTANCE Info_Mod_Bosper_Trade (C_INFO)
@@ -1507,12 +1523,12 @@ INSTANCE Info_Mod_Bosper_Pickpocket (C_INFO)
 	information	= Info_Mod_Bosper_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Bosper_Pickpocket_Condition()
 {
-	C_Beklauen	(76, ItMi_Gold, 500);
+	C_Beklauen	(142, ItRw_Arrow, 50);
 };
 
 FUNC VOID Info_Mod_Bosper_Pickpocket_Info()
@@ -1530,8 +1546,88 @@ FUNC VOID Info_Mod_Bosper_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Bosper_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Bosper_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Bosper_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Bosper_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Bosper_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Bosper_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Bosper_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Bosper_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Bosper_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Bosper_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Bosper_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Bosper_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Bosper_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Bosper_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Bosper_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Bosper_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Bosper_EXIT (C_INFO)

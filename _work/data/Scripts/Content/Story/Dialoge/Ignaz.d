@@ -105,8 +105,8 @@ FUNC VOID Info_Mod_Ignaz_Handel_Info()
 	AI_Output(hero, self, "Info_Mod_Ignaz_Handel_15_00"); //Verkaufst du Alchemiezubehör?
 	AI_Output(self, hero, "Info_Mod_Ignaz_Handel_14_01"); //Ja, ja, steht doch alles hier rum. Oder sehe ich das falsch?
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_STADT, "Ignaz kann mir Tränke verkaufen.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Ignaz kann mir Tränke verkaufen.");
 };
 
 INSTANCE Info_Mod_Ignaz_Lehrer (C_INFO)
@@ -202,42 +202,71 @@ FUNC VOID Info_Mod_Ignaz_Amulett_Info()
 	B_LogEntry	(TOPIC_MOD_BEL_SUCHE, "Ignaz ist dem Tode nahe und das Amulett wurde von Novizen gestohlen. Sie sind scheinbar bei einem Steinkreis in einem großen Wald.");
 };
 
-INSTANCE Info_Mod_Ignaz_Flugblätter (C_INFO)
+INSTANCE Info_Mod_Ignaz_MangelQuest (C_INFO)
 {
 	npc		= Mod_584_NONE_Ignaz_NW;
 	nr		= 1;
-	condition	= Info_Mod_Ignaz_Flugblätter_Condition;
-	information	= Info_Mod_Ignaz_Flugblätter_Info;
+	condition	= Info_Mod_Ignaz_MangelQuest_Condition;
+	information	= Info_Mod_Ignaz_MangelQuest_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Fungizid kaufen (80 Gold)";
+};
+
+FUNC INT Info_Mod_Ignaz_MangelQuest_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Faros_MangelQuest))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Faros_MangelQuest2))
+	&& (Npc_HasItems(hero, ItMi_Gold) >= 80)
+	&& (Npc_HasItems(hero, ItMi_Fungizid) == 0)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Ignaz_MangelQuest_Info()
+{
+	B_GiveInvItems	(hero, self, ItMi_Gold, 80);
+
+	B_GiveInvItems	(self, hero, ItMi_Fungizid, 1);
+};
+
+INSTANCE Info_Mod_Ignaz_Flugblaetter (C_INFO)
+{
+	npc		= Mod_584_NONE_Ignaz_NW;
+	nr		= 1;
+	condition	= Info_Mod_Ignaz_Flugblaetter_Condition;
+	information	= Info_Mod_Ignaz_Flugblaetter_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab hier ein Flugblatt für dich.";
 };
 
-FUNC INT Info_Mod_Ignaz_Flugblätter_Condition()
+FUNC INT Info_Mod_Ignaz_Flugblaetter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Auftrag_2))
-	&& (Npc_HasItems(hero, MatteoFlugblätter) >= 1)
-	&& (Mod_Flugblätter	<	20)
-	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+	&& (Npc_HasItems(hero, MatteoFlugblaetter) >= 1)
+	&& (Mod_Flugblaetter < 20)
+	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Ignaz_Hi))
 	{
 		return 1;
 	};
 };
 
-FUNC VOID Info_Mod_Ignaz_Flugblätter_Info()
+FUNC VOID Info_Mod_Ignaz_Flugblaetter_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Ignaz_Flugblätter_15_00"); //Ich hab hier ein Flugblatt für dich.
+	AI_Output(hero, self, "Info_Mod_Ignaz_Flugblaetter_15_00"); //Ich hab hier ein Flugblatt für dich.
 
-	B_GiveInvItems	(hero, self, MatteoFlugblätter, 1);
+	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_Ignaz_Flugblätter_14_01"); //Oh danke. Mal sehen ...
+	AI_Output(self, hero, "Info_Mod_Ignaz_Flugblaetter_14_01"); //Oh danke. Mal sehen ...
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_Ignaz_Flugblätter_14_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
+	AI_Output(self, hero, "Info_Mod_Ignaz_Flugblaetter_14_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
 
-	Mod_Flugblätter	=	Mod_Flugblätter + 1;
+	Mod_Flugblaetter += 1;
 };
 
 INSTANCE Info_Mod_Ignaz_Anschlagtafel (C_INFO)
@@ -398,12 +427,12 @@ INSTANCE Info_Mod_Ignaz_Pickpocket (C_INFO)
 	information	= Info_Mod_Ignaz_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_40;
+	description	= Pickpocket_60;
 };
 
 FUNC INT Info_Mod_Ignaz_Pickpocket_Condition()
 {
-	C_Beklauen	(40, ItMi_Gold, 95);
+	C_Beklauen	(43, ItPl_Temp_Herb, 3);
 };
 
 FUNC VOID Info_Mod_Ignaz_Pickpocket_Info()
@@ -421,8 +450,88 @@ FUNC VOID Info_Mod_Ignaz_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Ignaz_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Ignaz_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Ignaz_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Ignaz_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Ignaz_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Ignaz_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Ignaz_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Ignaz_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Ignaz_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Ignaz_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Ignaz_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Ignaz_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Ignaz_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Ignaz_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Ignaz_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Ignaz_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Ignaz_EXIT (C_INFO)

@@ -58,6 +58,12 @@ FUNC VOID Rtn_Start_680()
 	TA_Stand_ArmsCrossed	(20,00,08,00,"LOCATION_19_03_PATH_RUIN7");
 };
 
+FUNC VOID Rtn_Angebot_680()
+{
+	TA_Stand_WP		(08,00,20,00,"PALTOBURGAUSEN1");
+	TA_Stand_WP		(20,00,08,00,"PALTOBURGAUSEN1");
+};
+
 FUNC VOID Rtn_TOT_680()
 {
 	TA_Stand_WP		(08,00,20,00,"TOT");

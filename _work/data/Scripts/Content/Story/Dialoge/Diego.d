@@ -729,7 +729,7 @@ INSTANCE Info_Mod_Diego_Treffen (C_INFO)
 
 FUNC INT Info_Mod_Diego_Treffen_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Gorn_Hi))
+	if (Npc_KnowsInfo(hero, Info_Mod_Gorn_AtCastlemine))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Diego_Hi))
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Diego_Mario))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Diego_Mario2)))
@@ -784,7 +784,6 @@ FUNC VOID Info_Mod_Diego_Dieb_Info()
 
 	B_LogEntry	(TOPIC_MOD_DIEGO_KRISTALL, "Diego hat mir einen Schlüssel zur Kanalisation gegeben, wo der Kristall versteckt sein soll. Dort liegt er im alten Zimmer von Fingers.");
 
-	CreateInvItems	(self, ItKe_ThiefGuildKey_MIS, 1);
 	B_GiveInvItems	(self, hero, ItKe_ThiefGuildKey_MIS, 1);
 
 	DiegoGibtDiebesQuest = Wld_GetDay();
@@ -806,7 +805,7 @@ INSTANCE Info_Mod_Diego_Kristall (C_INFO)
 FUNC INT Info_Mod_Diego_Kristall_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Diego_Dieb))
-	&& (Hlp_StrCmp(Npc_GetNearestWP(self), "NW_CITY_HABOUR_02_B"))
+	&& (Npc_GetDistToWP(self, "NW_CITY_HABOUR_02_B") < 1000)
 	&& (Npc_HasItems(hero, Mod_PaladinKristall) == 0)
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Lothar_Kristall))
 	&& (Mod_PalaKristall == 0)
@@ -843,7 +842,7 @@ INSTANCE Info_Mod_Diego_Joe (C_INFO)
 FUNC INT Info_Mod_Diego_Joe_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Joe_Diego))
-	&& (Npc_HasItems(hero, ItKe_Lockpick) > 4)
+	&& (Npc_HasItems(hero, ItKe_Lockpick) >= 5)
 	&& (Mod_PalaKristall == 0)
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Diego_Treffen))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen)))
@@ -862,7 +861,7 @@ FUNC VOID Info_Mod_Diego_Joe_Info()
 
 	B_LogEntry	(TOPIC_MOD_DIEGO_KRISTALL, "Diego ist unterwegs. Morgen kann ich mir den Kristall bei ihm abholen.");
 
-	Mod_DiegoHoltKristall	= Wld_GetDay();
+	Mod_DiegoHoltKristall = Wld_GetDay();
 
 	Mod_PalaKristall = 2;
 
@@ -968,13 +967,14 @@ FUNC VOID Info_Mod_Diego_HabBeweise_Info()
 	AI_Output(hero, self, "Info_Mod_Diego_HabBeweise_15_00"); //Ich die Beweise.
 
 	B_GiveInvItems	(hero, self, ItWr_AL_GebrandtDokumente, 1);
+
 	B_UseFakeScroll ();
 
 	AI_Output(self, hero, "Info_Mod_Diego_HabBeweise_11_01"); //Sehr gut, zeig Lord Andre diese Beweise. Wir treffen uns danach vor Gerbrandts Haus.
 
 	B_GiveInvItems	(self, hero, ItWr_AL_GebrandtDokumente, 1);
 
-	B_LogEntry	(TOPIC_MOD_AL_MORGAHARD, "Diego hat die Beweise gesehen, ich soll sie Lord Andre geben und ihn dann vor Gerbrandts Haus treffen.");
+	B_LogEntry	(TOPIC_MOD_AL_MORGAHARD, "Diego hat die Beweise gesehen. Ich soll sie Lord Andre geben und ihn dann vor Gerbrandts Haus treffen.");
 
 	B_StartOtherRoutine	(self, "GERBRANDT");
 };
@@ -1004,88 +1004,11 @@ FUNC VOID Info_Mod_Diego_GerbrandtGefangen_Info()
 	AI_Output(hero, self, "Info_Mod_Diego_GerbrandtGefangen_15_00"); //Sie wurden festgenommen.
 	AI_Output(self, hero, "Info_Mod_Diego_GerbrandtGefangen_11_01"); //Gut, Gerbrandts Haus gehört jetzt mir. Ich habe noch etwas von Gerbrandts Geld gefunden. Ich glaube, du kannst es brauchen.
 
-	CreateInvItems	(self, ItMi_Gold, 1000);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 1000);
 
 	B_LogEntry	(TOPIC_MOD_AL_MORGAHARD, "Diego gab mir das Geld von Gerbrandt als Lohn. Jetzt sollte ich Esteban berichten, dass Morgahard in die Stadt darf.");
 
 	B_StartOtherRoutine	(Mod_1928_BDT_Morgahard_NW, "STADT");
-};
-
-INSTANCE Info_Mod_Diego_Lehrer (C_INFO)
-{
-	npc		= Mod_538_RDW_Diego_NW;
-	nr		= 1;
-	condition	= Info_Mod_Diego_Lehrer_Condition;
-	information	= Info_Mod_Diego_Lehrer_Info;
-	permanent	= 0;
-	important	= 0;
-	description	= "Kannst du mir was beibringen?";
-};
-
-FUNC INT Info_Mod_Diego_Lehrer_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Diego_Hi))
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Diego_Lehrer_Info()
-{
-	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
-		AI_Output(self, hero, "Info_Mod_Diego_Lehrer_11_00"); //Ich kann dir beibringen wie du Schlösser knackst.
-
-	if (Mod_Schwierigkeit != 4)
-	{
-		AI_Output(self, hero, "Info_Mod_Diego_Lehrer_11_01"); //Außerdem kann ich dir wieder helfen, geschickter zu werden.
-
-		Log_CreateTopic	(TOPIC_MOD_LEHRER_STADT, LOG_NOTE);
-		B_LogEntry	(TOPIC_MOD_LEHRER_STADT, "Diego kann mir beibringen Schlösser zu knacken und geschickter zu werden.");
-	}
-	else
-	{
-		Log_CreateTopic	(TOPIC_MOD_LEHRER_STADT, LOG_NOTE);
-		B_LogEntry	(TOPIC_MOD_LEHRER_STADT, "Diego kann mir beibringen Schlösser zu knacken.");
-	};
-};
-
-INSTANCE Info_Mod_Diego_Flugblatt (C_INFO)
-{
-	npc		= Mod_538_RDW_Diego_NW;
-	nr		= 1;
-	condition	= Info_Mod_Diego_Flugblatt_Condition;
-	information	= Info_Mod_Diego_Flugblatt_Info;
-	permanent	= 0;
-	important	= 0;
-	description	= "Ich hab hier ein Flugblatt für dich.";
-};
-
-FUNC INT Info_Mod_Diego_Flugblatt_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Auftrag_2))
-	&& (Npc_HasItems(hero, MatteoFlugblätter) >= 1)
-	&& (Mod_Flugblätter	<	20)
-	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Diego_Hi))
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Diego_Flugblatt_Info()
-{
-	B_Say (hero, self, "$MATTEOPAPER");
-
-	B_GiveInvItems	(hero, self, MatteoFlugblätter, 1);
-
-	AI_Output(self, hero, "Info_Mod_Alrik_Flugblätter_11_01"); //Oh danke. Mal sehen ...
-
-	B_UseFakeScroll();
-
-	AI_Output(self, hero, "Info_Mod_Alrik_Flugblätter_11_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
-
-	Mod_Flugblätter	=	Mod_Flugblätter + 1;
 };
 
 INSTANCE Info_Mod_Diego_RDW (C_INFO)
@@ -1283,17 +1206,16 @@ FUNC VOID Info_Mod_Diego_VermissteFertig_Info()
 
 	AI_StopProcessInfos	(self);
 
-	Wld_InsertNpc	(Mod_7660_MIL_Miliz_NW,	"NW_CASTLEMINE_01");
+	/*Wld_InsertNpc	(Mod_7660_MIL_Miliz_NW,	"NW_CASTLEMINE_01");
 	Wld_InsertNpc	(Mod_7661_MIL_Miliz_NW,	"NW_CASTLEMINE_01");
 	Wld_InsertNpc	(Mod_7662_MIL_Miliz_NW,	"NW_CASTLEMINE_01");
 	Wld_InsertNpc	(Mod_7663_MIL_Miliz_NW,	"NW_CASTLEMINE_01");
-	Wld_InsertNpc	(Mod_7664_MIL_Miliz_NW,	"NW_CASTLEMINE_01");
+	Wld_InsertNpc	(Mod_7664_MIL_Miliz_NW,	"NW_CASTLEMINE_01");*/
 
 	Wld_InsertNpc	(Mod_7665_MIL_Miliz_NW,	"XARDAS");
 	Wld_InsertNpc	(Mod_7666_MIL_Miliz_NW,	"XARDAS");
 	Wld_InsertNpc	(Mod_7667_MIL_Miliz_NW,	"XARDAS");
 
-	B_KillNpc	(Mod_7665_MIL_Miliz_NW);
 	B_KillNpc	(Mod_7665_MIL_Miliz_NW);
 
 	Wld_InsertNpc	(Gobbo_Skeleton,	"XARDAS");
@@ -1325,6 +1247,83 @@ FUNC VOID Info_Mod_Diego_DrachenFrei_Info()
 	AI_Output(hero, self, "Info_Mod_Diego_DrachenFrei_15_01"); //Du meinst vermutlich die Drachen ...
 	AI_Output(self, hero, "Info_Mod_Diego_DrachenFrei_11_02"); //Drachen? Wirklich? Und ich dachte, es seien nur Geschöpfe aus Büchern ...
 	AI_Output(hero, self, "Info_Mod_Diego_DrachenFrei_15_03"); //(zu sich selbst) Hmm, na ja, irgendwie stimmt das auch ...
+};
+
+INSTANCE Info_Mod_Diego_Flugblatt (C_INFO)
+{
+	npc		= Mod_538_RDW_Diego_NW;
+	nr		= 1;
+	condition	= Info_Mod_Diego_Flugblatt_Condition;
+	information	= Info_Mod_Diego_Flugblatt_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich hab hier ein Flugblatt für dich.";
+};
+
+FUNC INT Info_Mod_Diego_Flugblatt_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Auftrag_2))
+	&& (Npc_HasItems(hero, MatteoFlugblaetter) >= 1)
+	&& (Mod_Flugblaetter < 20)
+	&&(!Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Diego_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Diego_Flugblatt_Info()
+{
+	B_Say (hero, self, "$MATTEOPAPER");
+
+	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
+
+	AI_Output(self, hero, "Info_Mod_Diego_Flugblatt_11_01"); //Oh danke. Mal sehen ...
+
+	B_UseFakeScroll();
+
+	AI_Output(self, hero, "Info_Mod_Diego_Flugblatt_11_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
+
+	Mod_Flugblaetter += 1;
+};
+
+INSTANCE Info_Mod_Diego_Lehrer (C_INFO)
+{
+	npc		= Mod_538_RDW_Diego_NW;
+	nr		= 1;
+	condition	= Info_Mod_Diego_Lehrer_Condition;
+	information	= Info_Mod_Diego_Lehrer_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Kannst du mir was beibringen?";
+};
+
+FUNC INT Info_Mod_Diego_Lehrer_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Diego_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Diego_Lehrer_Info()
+{
+	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
+
+	AI_Output(self, hero, "Info_Mod_Diego_Lehrer_11_00"); //Ich kann dir beibringen wie du Schlösser knackst.
+
+	if (Mod_Schwierigkeit != 4)
+	{
+		AI_Output(self, hero, "Info_Mod_Diego_Lehrer_11_01"); //Außerdem kann ich dir wieder helfen, geschickter zu werden.
+
+		Log_CreateTopic	(TOPIC_MOD_LEHRER_STADT, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_LEHRER_STADT, "Diego kann mir beibringen Schlösser zu knacken und geschickter zu werden.");
+	}
+	else
+	{
+		Log_CreateTopic	(TOPIC_MOD_LEHRER_STADT, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_LEHRER_STADT, "Diego kann mir beibringen Schlösser zu knacken.");
+	};
 };
 
 INSTANCE Info_Mod_Diego_Lernen (C_INFO)
@@ -1516,12 +1515,12 @@ INSTANCE Info_Mod_Diego_Pickpocket (C_INFO)
 	information	= Info_Mod_Diego_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_120;
+	description	= Pickpocket_210;
 };
 
 FUNC INT Info_Mod_Diego_Pickpocket_Condition()
 {
-	C_Beklauen	(120, ItMi_Gold, 2500);
+	C_Beklauen	(200, ItKe_Lockpick, 25);
 };
 
 FUNC VOID Info_Mod_Diego_Pickpocket_Info()
@@ -1539,8 +1538,88 @@ FUNC VOID Info_Mod_Diego_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Diego_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Diego_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Diego_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Diego_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Diego_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Diego_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Diego_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Diego_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Diego_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Diego_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Diego_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Diego_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Diego_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Diego_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Diego_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Diego_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Diego_EXIT (C_INFO)

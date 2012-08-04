@@ -14,6 +14,12 @@ func int B_AssessEnemy()
 
 	B_Vergiftet (self);
 
+	if (B_GetAivar(other, AIV_INVINCIBLE) == TRUE)
+	|| (B_GetAivar(self, AIV_INVINCIBLE) == TRUE)
+	{
+		return FALSE;
+	};
+
 	if (Wld_IsTime(21,00,05,00))
 	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
 	{
@@ -77,8 +83,8 @@ func int B_AssessEnemy()
 			if (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_7326_VLK_Haendler_MT))
 			|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_7327_VLK_Haendler_MT))
 			{
-				if (Mod_Banditenüberfall_Esteban == 6)
-				|| (Mod_Banditenüberfall_Esteban == 7)
+				if (Mod_Banditenueberfall_Esteban == 6)
+				|| (Mod_Banditenueberfall_Esteban == 7)
 				{
 					B_Attack	(self, other, AR_Kill, 0);
 

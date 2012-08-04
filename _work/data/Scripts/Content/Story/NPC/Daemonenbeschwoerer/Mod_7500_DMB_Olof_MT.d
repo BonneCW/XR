@@ -1,7 +1,7 @@
 instance Mod_7500_DMB_Olof_MT (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Olof"; 
+	name 		= "Dämonenbeschwörer"; 
 	guild 		= GIL_KDF;
 	id 			= 7500;
 	voice 		= 8;

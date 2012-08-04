@@ -26,6 +26,8 @@ FUNC VOID B_GiveTradeInv_Mod_Myxir_MT (var C_NPC slf)
 		CreateInvItems 	 (slf, ItRi_Mana_01, 1);
 
 		CreateInvItems	(slf, ItWr_Flueche, 1);
+
+		CreateInvItems	(slf, ItRu_TeleportBeliarfestung, 1);
 				
 		Myxir_MT_ItemsGiven_Chapter_1 = TRUE;
 	};

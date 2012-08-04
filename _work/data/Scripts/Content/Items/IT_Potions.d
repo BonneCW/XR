@@ -748,7 +748,7 @@ INSTANCE ItPo_AdanosWohltat(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_HEALTHPOTION"; 
 
-	description		= 	"Elixier des Lebens";
+	description		= 	"Adanos' Wohltat";
 	
 	TEXT[1]			= 	NAME_Bonus_HpMax;				
 	COUNT[1]		= 	HPAdanosWohltat;
@@ -766,6 +766,36 @@ INSTANCE ItPo_AdanosWohltat(C_Item)
 
 		B_HealGift (20, 0);
 	
+	};
+/******************************************************************************************/
+INSTANCE ItPo_Regeneration(C_Item)
+{
+	name 			=	NAME_Trank;
+
+	mainflag 		=	ITEM_KAT_POTIONS;
+	flags 			=	ITEM_MULTI;
+
+	value 			=	50;	
+
+	visual 			=	"ItPo_Perm_Health.3ds";
+	material 		=	MAT_GLAS;
+	on_state[0]		=	UseItPo_Regeneration;
+	scemeName		=	"POTIONFAST";
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_HEALTHPOTION"; 
+
+	description		= 	"Regenerationstrank";
+	
+	TEXT[1]			= 	"2% HP und Mana für 1 Minute";
+	
+	TEXT[5]			= 	NAME_Value;					
+	COUNT[5]		= 	value;
+};
+
+	FUNC VOID UseItPo_Regeneration()
+	{
+		Mod_Regenerationstrank_Counter += 60;
 	};
 /******************************************************************************************/
 INSTANCE ItPo_Perm_Mana(C_Item)

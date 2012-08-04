@@ -11,7 +11,7 @@ FUNC VOID  B_ENDPRODUCTIONDIALOG ()
 
 	Wld_StopEffect("SLOW_MOTION_6");
 
-	self.aivar[AIV_INVINCIBLE]= FALSE;
+	B_SetAivar(self, AIV_INVINCIBLE, FALSE);
 	
 	if (PLAYER_MOBSI_PRODUCTION == Mobsi_Fokus1)
 	{

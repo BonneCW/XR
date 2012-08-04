@@ -189,6 +189,7 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	if (activeSpell == SPL_TeleportRELPass			)	{	return	Spell_Logic_TeleportRELPass	(manaInvested);	};
 	if (activeSpell == SPL_TeleportRELRaeuber			)	{	return	Spell_Logic_TeleportRELRaeuber	(manaInvested);	};
 	if (activeSpell == SPL_TeleportRELSee			)	{	return	Spell_Logic_TeleportRELSee	(manaInvested);	};
+	if (activeSpell == SPL_TeleportBeliarfestung			)	{	return	Spell_Logic_TeleportBeliarfestung	(manaInvested);	};
 	if (activeSpell == SPL_SummonRabbit			)	{	return	Spell_Logic_SummonRabbit	(manaInvested);	};
 	if (activeSpell == SPL_SummonKrautschaf			)	{	return	Spell_Logic_SummonKrautschaf	(manaInvested);	};
 	if (activeSpell == SPL_SumHagen			)	{	return	Spell_Logic_SummonHagen	(manaInvested);	};
@@ -208,6 +209,8 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	if (activeSpell == SPL_ArgezVision			)	{	return	Spell_Logic_ArgezVision	(manaInvested);	};
 	if (activeSpell == SPL_Fackel			)	{	return	Spell_Logic_Fackel	(manaInvested);	};
 	if (activeSpell == SPL_Giftteppich			)	{	return	Spell_Logic_Giftteppich	(manaInvested);	};
+	if (activeSpell == SPL_AuraFlammen					)	{	return	Spell_Logic_AuraFlammen				(manaInvested);	};
+	if (activeSpell == SPL_TeleportGDG					)	{	return	Spell_Logic_TeleportGDG				(manaInvested);	};
 
 //Leer
 

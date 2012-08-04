@@ -41,7 +41,7 @@ FUNC VOID B_MG_Cleanup()
 		MEM_StackPos.position = ptr;
 	};
 
-	Cursor_Hide();
+	View_Delete(MG_Spielbrett);
 
-	delete(Hero_Troll);
+	Cursor_Hide();
 };

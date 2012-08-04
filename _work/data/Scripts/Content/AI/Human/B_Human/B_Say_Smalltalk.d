@@ -302,7 +302,7 @@ func void B_Say_Smalltalk()
 		else if (Npc_GetTrueGuild(self) == GIL_PAL)
 		&& (CurrentLevel == NEWWORLD_ZEN)
 		{
-			if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblätter))
+			if (Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
 			{
 				Randi = Hlp_Random(2);
 

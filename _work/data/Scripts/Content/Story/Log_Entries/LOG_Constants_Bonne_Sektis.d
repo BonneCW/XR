@@ -10,3 +10,4 @@ const string TOPIC_MOD_SL_BLIND	=	"Freudenspender macht blind";
 const string TOPIC_MOD_SL_BRUNNEN	=	"Den Freudenspender-Brunnen mit Wasser füllen";
 const string TOPIC_MOD_SL_LEICHENGASE	=	"Leichengase";
 const string TOPIC_MOD_SL_SCHMIEDEFEUERN	=	"Eine Hüterklinge";
+const string TOPIC_MOD_SL_SUMPFMENSCH	=	"Dieses unheimliche Heulen";

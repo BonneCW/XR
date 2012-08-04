@@ -119,7 +119,6 @@ FUNC VOID Info_Mod_Karras_Bote_Info()
 
 	AI_Output(self, hero, "Info_Mod_Karras_Bote_12_05"); //Du hast deine Aufgabe jedenfalls gut erfüllt. Hier ist eine kleine Belohnung.
 
-	CreateInvItems	(self, ItMi_Gold, 250);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 250);
 
 	B_GivePlayerXP	(400);
@@ -183,11 +182,6 @@ FUNC VOID Info_Mod_Karras_Namib_Info()
 		B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Bevor Karras mit ins Minental geht, soll ich ihm ein Buch von der Feuermagiern holen, welches ihm gestohlen wurde. Ich sollte mich mal in der Stadt umhören.");
 
 		Mod_Sekte_Karras = 2;
-
-		B_StartOtherRoutine	(Mod_523_KDF_Daron_NW, "CITY");
-		B_StartOtherRoutine	(Mod_1190_NOV_Katar_NW, "CITY");
-
-		Wld_InsertNpc	(Mod_7267_VLK_Joseppe_NW, "MARKT");
 	}
 	else
 	{
@@ -212,16 +206,9 @@ FUNC VOID Info_Mod_Karras_Namib_Info()
 		AI_Output(self, hero, "Info_Mod_Karras_Namib_12_26"); //Er funktioniert allerdings nur ein einziges Mal. Also pass gut auf. Versaust du das, musst du selbst eine Möglichkeit finden, die Wache auszuschalten.
 		AI_Output(self, hero, "Info_Mod_Karras_Namib_12_27"); //Und jetzt beeil dich!
 
-		Wld_InsertItem	(ItWr_BeliarBook, "FP_NW_ITEM_LIBRARY_IRDORATHBOOK");
-
 		B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Bevor Karras mit ins Minental geht, soll ich ihm ein Buch von der Feuermagiern holen, welches ihm gestohlen wurde.");
 
 		Mod_Sekte_Karras = 1;
-
-		B_StartOtherRoutine	(Mod_523_KDF_Daron_NW, "CITY");
-		B_StartOtherRoutine	(Mod_1190_NOV_Katar_NW, "CITY");
-
-		Wld_InsertNpc	(Mod_7267_VLK_Joseppe_NW, "MARKT");
 	};
 };
 
@@ -299,13 +286,141 @@ FUNC VOID Info_Mod_Karras_Lester_Info()
 	
 	AI_StopProcessInfos	(self);
 
-	B_StartOtherRoutine	(Mod_557_PSINOV_Lester_NW, "TOT");
-
 	Mod_Sekte_Aufnahme = 1;
+};
 
-	Mod_HasToTeleport = TRUE;
-	Mod_TeleportOrt = "PSI_START";
-	//AI_Teleport	(hero, "GOTOMINENTAL");
+INSTANCE Info_Mod_Karras_Namib2 (C_INFO)
+{
+	npc		= Mod_514_DMB_Karras_MT;
+	nr		= 1;
+	condition	= Info_Mod_Karras_Namib2_Condition;
+	information	= Info_Mod_Karras_Namib2_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Karras_Namib2_Condition()
+{
+	if (Mod_Sekte_Aufnahme == 2)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Karras_Namib2_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Karras_Namib2_12_00"); //Berichte Baal Namib, dass wir hier sind.
+};
+
+INSTANCE Info_Mod_Karras_Leader (C_INFO)
+{
+	npc		= Mod_514_DMB_Karras_MT;
+	nr		= 1;
+	condition	= Info_Mod_Karras_Leader_Condition;
+	information	= Info_Mod_Karras_Leader_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Karras_Leader_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Namib_AtTempel))
+	&& (hero.guild == GIL_KDF)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Karras_Leader_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Karras_Leader_12_00"); //Da bist du ja, alles läuft nach Plan. Bald ist es so weit.
+	AI_Output(self, hero, "Info_Mod_Karras_Leader_12_01"); //Wir werden hier gleich Untote beschwören, aber keine Knochengerüste, sondern die Sumpfhaie, die hier ihr Ende fanden.
+	AI_Output(self, hero, "Info_Mod_Karras_Leader_12_02"); //Keine Angst, das hat den gleichen Effekt auf den Boden, doch wir werden einen Vorteil daraus ziehen.
+	AI_Output(self, hero, "Info_Mod_Karras_Leader_12_03"); //Wir haben dafür gesorgt, dass einer der Templer, der eine Kampfgruppe gegen die Untoten leiten sollte, nicht dazu kommen wird.
+	AI_Output(self, hero, "Info_Mod_Karras_Leader_12_04"); //Du wirst seinen Platz einnehmen.
+	AI_Output(hero, self, "Info_Mod_Karras_Leader_15_05"); //Warum?
+	AI_Output(self, hero, "Info_Mod_Karras_Leader_12_06"); //Da, nimm diesen Stein.
+
+	B_GiveInvItems	(self, hero, ItMi_SumpfhaiStein, 1);
+
+	AI_Output(self, hero, "Info_Mod_Karras_Leader_12_07"); //Er wird die Energie jedes Sumphaies absorbieren, den du oder jemand aus deiner Gruppe umbringt.
+	AI_Output(self, hero, "Info_Mod_Karras_Leader_12_08"); //Es sollten mindestens zehn Haie sein, sonst war alles umsonst! Und jetzt geh.
+
+	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Karras hat mir einen Stein gegeben. Er meinte, dass er die Energie von Sumpfhaien, die ich mit meiner Gruppe töte, absorbieren wird.");
+
+	AI_StopProcessInfos	(self);
+};
+
+INSTANCE Info_Mod_Karras_Stein (C_INFO)
+{
+	npc		= Mod_514_DMB_Karras_MT;
+	nr		= 1;
+	condition	= Info_Mod_Karras_Stein_Condition;
+	information	= Info_Mod_Karras_Stein_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Karras_Stein_Condition()
+{
+	if (Npc_HasItems(hero, ItMi_SumpfhaiStein) == 1)
+	&& (hero.guild == GIL_KDF)
+	&& (Mod_Sekte_SH_Kampf == 4)
+	&& (Npc_IsDead(Swampshark_Undead))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Karras_Stein_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Karras_Stein_12_00"); //Gib mir den Stein.
+
+	B_GiveInvItems	(hero, self, ItMi_SumpfhaiStein, 1);
+
+	if (Mod_Sekte_UDS_Stein >= 10)
+	{
+		AI_Output(self, hero, "Info_Mod_Karras_Stein_12_01"); //Oh ja, sehr gut, er ist voll geladen. Komm in ein paar Tagen im Tal vorbei.
+	
+		B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Karras will, dass ich in ein paar Tagen nochmal bei ihm vorbei komme.");
+	}
+	else
+	{
+		AI_Output(self, hero, "Info_Mod_Karras_Stein_12_02"); //Aber ... der ist ja gar nicht aufgeladen! Verdammt, es war alles umsonst! Du nichtsnutziger Bastard! Geh mir aus den Augen!
+	};
+	
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "START");
+	AI_Teleport	(self, "TOT");
+};
+
+INSTANCE Info_Mod_Karras_Fertig (C_INFO)
+{
+	npc		= Mod_514_DMB_Karras_MT;
+	nr		= 1;
+	condition	= Info_Mod_Karras_Fertig_Condition;
+	information	= Info_Mod_Karras_Fertig_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Karras_Fertig_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Namib_SUDD))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Karras_Fertig_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Karras_Fertig_12_00"); //Ich werde jetzt wieder gehen.
+
+	AI_StopProcessInfos	(self);
+
+	AI_Teleport	(self, "TOT");
+	B_StartOtherRoutine	(self, "START");
 };
 
 INSTANCE Info_Mod_Karras_UDS (C_INFO)
@@ -320,7 +435,7 @@ INSTANCE Info_Mod_Karras_UDS (C_INFO)
 
 FUNC INT Info_Mod_Karras_UDS_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Karras_MT_Stein))
+	if (Npc_KnowsInfo(hero, Info_Mod_Karras_Stein))
 	&& (Mod_Sekte_UDS_Stein >= 10)
 	{
 		return 1;
@@ -353,8 +468,8 @@ INSTANCE Info_Mod_Karras_MagierWerden (C_INFO)
 FUNC INT Info_Mod_Karras_MagierWerden_Condition()
 {
 	if (Kapitel >= 3)
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_Beförderung))
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Raven_Beförderung))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_Befoerderung))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Raven_Befoerderung))
 	&& (hero.guild == GIL_KDF)
 	{
 		return 1;
@@ -617,12 +732,12 @@ INSTANCE Info_Mod_Karras_Pickpocket (C_INFO)
 	information	= Info_Mod_Karras_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Karras_Pickpocket_Condition()
 {
-	C_Beklauen	(96, ItMi_Gold, 620);
+	C_Beklauen	(136, ItMi_Gold, 620);
 };
 
 FUNC VOID Info_Mod_Karras_Pickpocket_Info()
@@ -640,8 +755,88 @@ FUNC VOID Info_Mod_Karras_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Karras_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Karras_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Karras_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Karras_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Karras_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Karras_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Karras_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Karras_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Karras_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Karras_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Karras_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Karras_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Karras_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Karras_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Karras_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Karras_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Karras_EXIT (C_INFO)

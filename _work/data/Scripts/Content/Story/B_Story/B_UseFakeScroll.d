@@ -55,5 +55,3 @@ func void B_HeroFakeScroll ()
 		AI_UseItemToState	(hero,	Fakescroll,	-1);
 	};
 };
-
-

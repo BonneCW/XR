@@ -4,7 +4,7 @@ instance Mod_1480_BUD_Buddler_OM (Npc_Default)
 	
 	name =							Name_Buddler;
 	npctype =						npctype_om_buddler;
-	guild =							GIL_KDF;      
+	guild =							GIL_OUT;      
 	level =							3;
 	
 	

@@ -4,7 +4,7 @@ instance Mod_7220_SLD_Thofeistos_MT (Npc_Default)
 	name 		= "Thofeistos"; 
 	guild 		= GIL_MIL;
 	id 			= 7220;
-	voice 		= 5;
+	voice 		= 29;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

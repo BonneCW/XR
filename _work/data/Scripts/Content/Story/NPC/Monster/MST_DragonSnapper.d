@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_DragonSnapper(C_Npc)
 	level							=	40;
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	200; 
-	attribute	[ATR_DEXTERITY]		=	20;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(51) + 175; 
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21) + 10;
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(101) + 350;
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_MANA] 		=	0;
 	
 	//------ Protections ----	
-	protection	[PROT_BLUNT]		=	110000;
-	protection	[PROT_EDGE]			=	110000;
-	protection	[PROT_POINT]		=	110000;		
-	protection	[PROT_FIRE]			=	110;
-	protection	[PROT_FLY]			=	110;
-	protection	[PROT_MAGIC]		=	50;
+	protection	[PROT_BLUNT]		=	Hlp_Random(61)*1000 + 80000;
+	protection	[PROT_EDGE]		=	Hlp_Random(61)*1000 + 80000;
+	protection	[PROT_POINT]		=	Hlp_Random(61)*1000 + 80000;	
+	protection	[PROT_FIRE]		=	Hlp_Random(61) + 80;
+	protection	[PROT_FLY]		=	110;
+	protection	[PROT_MAGIC]		=	Hlp_Random(61) + 80;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

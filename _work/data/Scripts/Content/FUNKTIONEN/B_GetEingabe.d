@@ -5,11 +5,15 @@ FUNC VOID B_StartEingabe ()
 	eingabe = "";
 
 	GetInput = 1;
+
+	NDC_SetInput(FALSE);
 };
 
 FUNC VOID B_EndEingabe ()
 {
 	GetInput = 0;
+
+	NDC_SetInput(TRUE);
 };
 
 FUNC STRING B_GetEingabe (var string EingabeString)

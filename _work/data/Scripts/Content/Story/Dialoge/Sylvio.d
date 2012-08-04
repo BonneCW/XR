@@ -181,18 +181,18 @@ FUNC VOID Info_Mod_Sylvio_VelayaDabei_Info()
 	B_StartOtherRoutine	(Mod_1621_EBR_Velaya_MT, "ATSYLVIO");
 };
 
-INSTANCE Info_Mod_Sylvio_Beförderung (C_INFO)
+INSTANCE Info_Mod_Sylvio_Befoerderung (C_INFO)
 {
 	npc		= Mod_797_SLD_Sylvio_MT;
 	nr		= 1;
-	condition	= Info_Mod_Sylvio_Beförderung_Condition;
-	information	= Info_Mod_Sylvio_Beförderung_Info;
+	condition	= Info_Mod_Sylvio_Befoerderung_Condition;
+	information	= Info_Mod_Sylvio_Befoerderung_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Bin ich bereit in die Reihen der Orkjäger aufgenommen zu werden?";
 };
 
-FUNC INT Info_Mod_Sylvio_Beförderung_Condition()
+FUNC INT Info_Mod_Sylvio_Befoerderung_Condition()
 {
 	if (Mod_Gilde == 4)
 	&& (Mod_SLD_Orkjaeger == 0)
@@ -201,21 +201,21 @@ FUNC INT Info_Mod_Sylvio_Beförderung_Condition()
 	};
 };
 
-FUNC VOID Info_Mod_Sylvio_Beförderung_Info()
+FUNC VOID Info_Mod_Sylvio_Befoerderung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Sylvio_Beförderung_15_00"); //Bin ich bereit in die Reihen der Orkjäger aufgenommen zu werden?
+	AI_Output(hero, self, "Info_Mod_Sylvio_Befoerderung_15_00"); //Bin ich bereit in die Reihen der Orkjäger aufgenommen zu werden?
 
 	if (Kapitel == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_01"); //Was?! Ach die Aufnahme ... ich denke in ein paar Tagen darüber nach.
+		AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_01"); //Was?! Ach die Aufnahme ... ich denke in ein paar Tagen darüber nach.
 	}
 	else
 	{
 		if (Npc_KnowsInfo(hero, Info_Mod_Sylvio_VelayaDabei))
 		&& (Npc_KnowsInfo(hero, Info_Mod_Sentenza_Cutter))
 		{
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_02"); //Achja, deine Aufnahme. Du hast gezeigt, dass du auf der richtigen Seite stehst und deine Aufgaben zu meiner vollsten Zufriedenheit erfüllt.
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_03"); //Damit hast du dir deine Aufnahme mehr als verdient. Willkommen bei den Orkjägern. Hier ist deine neue Rüstung.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_02"); //Achja, deine Aufnahme. Du hast gezeigt, dass du auf der richtigen Seite stehst und deine Aufgaben zu meiner vollsten Zufriedenheit erfüllt.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_03"); //Damit hast du dir deine Aufnahme mehr als verdient. Willkommen bei den Orkjägern. Hier ist deine neue Rüstung.
 
 			B_ShowGivenThings	("Orkjägerrüstung erhalten");
 
@@ -224,7 +224,7 @@ FUNC VOID Info_Mod_Sylvio_Beförderung_Info()
 			AI_UnequipArmor	(hero);
 			AI_EquipArmor	(hero, ItAr_Sld_H);
 
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_04"); //Deine Waffe kannst du dir bei Thofeistos abholen.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_04"); //Deine Waffe kannst du dir bei Thofeistos abholen.
 
 			Snd_Play ("LEVELUP");
 
@@ -241,9 +241,9 @@ FUNC VOID Info_Mod_Sylvio_Beförderung_Info()
 		else if (Npc_KnowsInfo(hero, Info_Mod_Sylvio_VelayaWeg))
 		&& (Npc_KnowsInfo(hero, Info_Mod_Sylvio_InfosAnLee))
 		{
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_05"); //Achja, die Aufnahme. Du hast mir und meinen Jungs wirklich einigen Kummer gemacht, Bürschchen.
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_06"); //Sei froh, dass du ein ehemaliger Bekannter von Lee bist, sonst würde ich dich mit meiner Waffe in Stücke hacken.
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_07"); //Aufnahme? Bei den Bauern auf dem Reisfeld, aber nicht bei uns. Und jetzt geh mir aus den Augen, bevor ich mich doch noch vergesse.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_05"); //Achja, die Aufnahme. Du hast mir und meinen Jungs wirklich einigen Kummer gemacht, Bürschchen.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_06"); //Sei froh, dass du ein ehemaliger Bekannter von Lee bist, sonst würde ich dich mit meiner Waffe in Stücke hacken.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_07"); //Aufnahme? Bei den Bauern auf dem Reisfeld, aber nicht bei uns. Und jetzt geh mir aus den Augen, bevor ich mich doch noch vergesse.
 
 			Mod_SLD_Orkjaeger = 2;
 
@@ -257,8 +257,8 @@ FUNC VOID Info_Mod_Sylvio_Beförderung_Info()
 		&& (Npc_KnowsInfo(hero, Info_Mod_Fester_BackAtCamp))
 		&& (Mod_SLD_Engardo == 5)))
 		{
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_08"); //Manches hast du hinbekommen, einiges auch verhauen, jedoch alles in allem gute Arbeit geleistet.
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_09"); //Du hast dich zwar nicht mit Ruhm bekleckert, aber für eine Aufnahme bei uns reicht es trotzdem gerade so. Hier ist deine neue Rüstung.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_08"); //Manches hast du hinbekommen, einiges auch verhauen, jedoch alles in allem gute Arbeit geleistet.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_09"); //Du hast dich zwar nicht mit Ruhm bekleckert, aber für eine Aufnahme bei uns reicht es trotzdem gerade so. Hier ist deine neue Rüstung.
 
 			B_ShowGivenThings	("Orkjägerrüstung erhalten");
 
@@ -267,7 +267,7 @@ FUNC VOID Info_Mod_Sylvio_Beförderung_Info()
 			AI_UnequipArmor	(hero);
 			AI_EquipArmor	(hero, ItAr_Sld_H);
 
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_04"); //Deine Waffe kannst du dir bei Thofeistos abholen.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_04"); //Deine Waffe kannst du dir bei Thofeistos abholen.
 
 			Snd_Play ("LEVELUP");
 
@@ -283,8 +283,8 @@ FUNC VOID Info_Mod_Sylvio_Beförderung_Info()
 		}
 		else
 		{
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_10"); //Was, du hast du noch kaum etwas gemacht.
-			AI_Output(self, hero, "Info_Mod_Sylvio_Beförderung_04_11"); //Ehe du dich nicht bewährt hast, lautet die Antwort nein.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_10"); //Was, du hast du noch kaum etwas gemacht.
+			AI_Output(self, hero, "Info_Mod_Sylvio_Befoerderung_04_11"); //Ehe du dich nicht bewährt hast, lautet die Antwort nein.
 		};
 	};
 };
@@ -356,12 +356,12 @@ INSTANCE Info_Mod_Sylvio_Pickpocket (C_INFO)
 	information	= Info_Mod_Sylvio_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Sylvio_Pickpocket_Condition()
 {
-	C_Beklauen	(99, ItMi_Gold, 600);
+	C_Beklauen	(129, ItMi_Gold, 600);
 };
 
 FUNC VOID Info_Mod_Sylvio_Pickpocket_Info()
@@ -379,8 +379,88 @@ FUNC VOID Info_Mod_Sylvio_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Sylvio_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Sylvio_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Sylvio_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Sylvio_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Sylvio_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Sylvio_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Sylvio_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Sylvio_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Sylvio_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Sylvio_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Sylvio_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Sylvio_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Sylvio_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Sylvio_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Sylvio_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Sylvio_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Sylvio_EXIT (C_INFO)

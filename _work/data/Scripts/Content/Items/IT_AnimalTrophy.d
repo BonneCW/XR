@@ -2537,6 +2537,26 @@ INSTANCE ItAt_Wyverschuppen (C_Item)
 	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
+
+INSTANCE ItAt_CrawlerKristall (C_Item)
+{
+	name 				=	"Kristall eines Kristallcrawlers";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	50;
+
+	visual 				=	"ItMi_Rockcrystal.3ds";
+	material 			=	MAT_STONE ;
+
+	description			= 	name;
+	TEXT[0]				= 	"";
+	TEXT[1]				= 	"";
+	TEXT[2]				= 	"";
+	TEXT[3]				= 	"";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
 /******************************************************************************************/
 
 

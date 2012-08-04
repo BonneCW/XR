@@ -50,8 +50,8 @@ func void ZS_Attack ()
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4073_BDT_Bandit_MT))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4074_BDT_Bandit_MT))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4075_BDT_Bandit_MT)))
-	&& ((Mod_Banditenüberfall_Esteban == 6)
-	|| (Mod_Banditenüberfall_Esteban == 7))
+	&& ((Mod_Banditenueberfall_Esteban == 6)
+	|| (Mod_Banditenueberfall_Esteban == 7))
 	&& (C_NpcIsHero(other))
 	{
 		return;
@@ -139,13 +139,6 @@ func void ZS_Attack ()
 };
 
 func int ZS_Attack_Loop()
-{
-	var int tmp;
-	tmp = MEM_BenchmarkMMS(ZS_Attack_Loop_Core);
-	PrintDebug (ConcatStrings("Benchmark (ZS): ", IntToString(tmp)));
-};
-
-func int ZS_Attack_Loop_Core ()
 {
 	Mod_KampfLaeuft = TRUE;
 	
@@ -240,8 +233,8 @@ func int ZS_Attack_Loop_Core ()
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4073_BDT_Bandit_MT))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4074_BDT_Bandit_MT))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4075_BDT_Bandit_MT)))
-	&& ((Mod_Banditenüberfall_Esteban == 6)
-	|| (Mod_Banditenüberfall_Esteban == 7))
+	&& ((Mod_Banditenueberfall_Esteban == 6)
+	|| (Mod_Banditenueberfall_Esteban == 7))
 	&& (C_NpcIsHero(other))
 	{
 		return LOOP_END;
@@ -445,7 +438,7 @@ func int ZS_Attack_Loop_Core ()
 	if ((Hlp_IsValidNpc(other)) 							
 	&& (C_NpcIsDown(other) == FALSE))
 	{
-		if (other.aivar[AIV_INVINCIBLE] == FALSE) // Nur NSCs angreifen, die NICHT im Talk sind
+		if (B_GetAivar(other, AIV_INVINCIBLE) == FALSE) // Nur NSCs angreifen, die NICHT im Talk sind
 		{
 												//führt Angriff mit Waffe oder Spell aus (Aktion wird durch FAI bestimmt)
 			AI_Attack (self);		 			//In der Funktion, in der AI_Attack aufgerufen wird DARF KEIN AI_ Befehl VOR AI_Attack kommen, da sonst AI_Attack ignoriert wird
@@ -489,7 +482,7 @@ func int ZS_Attack_Loop_Core ()
 		&& (!C_NpcIsDown(other))
 		&& ((Npc_GetDistToNpc(self, other) < PERC_DIST_INTERMEDIAT) || (Npc_IsPlayer(other)) ) //Bei Nicht-Player Enemies nur auf 1000m reagieren (sonst PERC_DIST_ACTIVE_MAX)
 		&& (Npc_GetHeightToNpc(self, other) < PERC_DIST_HEIGHT)
-		&& (other.aivar[AIV_INVINCIBLE] == FALSE)
+		&& (B_GetAivar(other, AIV_INVINCIBLE) == FALSE)
 		&& (!( C_PlayerIsFakeBandit(self, other) && (self.guild == GIL_BDT) ) )
 		{																										
 			if (Wld_GetGuildAttitude(self.guild, other.guild) == ATT_HOSTILE)
@@ -500,7 +493,7 @@ func int ZS_Attack_Loop_Core ()
 				if (C_NpcIsHero(other))
 				{
 					self.aivar[AIV_LastPlayerAR] = AR_GuildEnemy;
-					self.aivar[AIV_LastFightAgainstPlayer] = FIGHT_CANCEL;
+					B_SetAivar(self, AIV_LastFightAgainstPlayer, FIGHT_CANCEL);
 					self.aivar[AIV_LastFightComment] = FALSE;
 				};
 			}
@@ -516,7 +509,7 @@ func int ZS_Attack_Loop_Core ()
 		{
 			Npc_ClearAIQueue(self);
 			
-			if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_CANCEL)
+			if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_CANCEL)
 			&& (self.aivar[AIV_LASTTARGET] != Hlp_GetInstanceID (hero)) //letztes Ziel NICHT Player
 			{
 				self.aivar[AIV_LastFightComment] = TRUE; //kein Kommentar abegeben
@@ -616,12 +609,12 @@ func void ZS_Attack_End ()
 	// ------ Plündern ------
 	if (C_NpcIsDown(other))
 	&& (C_WantToRansack(self))
-	&& ((other.aivar[AIV_RANSACKED] == FALSE) || C_NpcRansacksAlways(self) )
+	&& ((B_GetAivar(other, AIV_RANSACKED) == FALSE) || C_NpcRansacksAlways(self) )
 	&& (Npc_GetDistToNpc(self, other) < PERC_DIST_INTERMEDIAT)
 	&& (self.aivar[AIV_ATTACKREASON] != AR_BERSERK)
 	{
 		// ------ Opfer wird markiert, damit nur EINER plündert - abgefragt vor Aufruf von ZS_RansackBody -------
-		other.aivar[AIV_RANSACKED] = TRUE;						//FALSE gesetzt in ZS_Unconcious_End und ZS_Dead
+		B_SetAivar(other, AIV_RANSACKED, TRUE);						//FALSE gesetzt in ZS_Unconcious_End und ZS_Dead
 		
 		if (other.guild < GIL_SEPERATOR_HUM)
 		&& (Hlp_GetInstanceID(self) != Hlp_GetInstanceID(Mod_7106_ASS_Ramsi_NW))
@@ -653,10 +646,3 @@ func void ZS_Attack_End ()
 		return;
 	};
 };
-
-
-
-
-
-
-

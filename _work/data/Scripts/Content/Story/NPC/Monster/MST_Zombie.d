@@ -11,7 +11,7 @@ PROTOTYPE Mst_Default_Zombie(C_Npc)
 	level							=	20;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	100;
+	attribute	[ATR_STRENGTH]		=	130;
 	attribute	[ATR_DEXTERITY]		=	10;
 	attribute	[ATR_HITPOINTS_MAX]	=	400;
 	attribute	[ATR_HITPOINTS]		=	400;
@@ -281,6 +281,12 @@ INSTANCE Zombie_Kati		(Mst_Default_Zombie)
 };
 
 INSTANCE ZombieRandom		(Mst_Default_Zombie)
+{
+	B_SetVisual_Zom();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE Zombie_Castlemine		(Mst_Default_Zombie)
 {
 	B_SetVisual_Zom();
 	Npc_SetToFistMode(self);
@@ -1606,6 +1612,14 @@ INSTANCE MayaZombie03		(Mst_Default_Zombie)
 
 INSTANCE MayaZombie04		(Mst_Default_Zombie)
 {
+	B_SetVisuals_Maya_Zombie04();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE Zombie_Burgherr		(Mst_Default_Zombie)
+{
+	name		=	"Burgherr";
+
 	B_SetVisuals_Maya_Zombie04();
 	Npc_SetToFistMode(self);
 };

@@ -6,6 +6,8 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 {
 	Kapitel = neues_Kapitel;
 
+	Mod_Kardif_Info = 0;
+
 	var string sendText;
 
 	sendText = ConcatStrings("http://www.teutonicteam.de/gomon/tauschen/kapitel_XR.php?name=", username);
@@ -40,8 +42,6 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	//***************************************************************************
 	if (neues_Kapitel == 1)
 	{
-		// ------ Tagebucheintrag ------
-
 		// ------ Bild einblenden ------
 		IntroduceChapter (KapWechsel_1,"Die Bedrohung","chapter1.tga","chapter_01.wav", 6000);
 
@@ -57,11 +57,6 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	//***************************************************************************
 	else if	(neues_Kapitel == 2)
 	{
-		// ------ Immortals aufheben -----
-		
-		// ------ Tagebucheintrag ------
-		
-		
 		// ------ Bild einblenden ------
 		IntroduceChapter (KapWechsel_2,"Die Foki","chapter2.tga","chapter_01.wav", 6000);
 
@@ -77,14 +72,6 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	//***************************************************************************
 	else if (neues_Kapitel == 3)
 	{	
-		// ------ Tagebucheintrag ------
-		
-		// ------ Missionsvariablen ----
-		
-		
-		// ------ MissionItems -----
-		
-		
 		// ------ Bild einblenden ------
 		IntroduceChapter (KapWechsel_3,"Xeres","chapter3.tga","chapter_01.wav", 6000);
 
@@ -100,9 +87,6 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	//***************************************************************************
 	else if (neues_Kapitel == 4)
 	{
-		//PLAYER_TALENT_ALCHEMY[CHARGE_Innoseye] 	= TRUE;	//Joly: zur Sicherheit.
-		// ------ Tagebucheintrag ------
-		
 		// ------ Bild einblenden ------
 		IntroduceChapter (KapWechsel_4,"Die Macht der 3 Götter","chapter4.tga","chapter_01.wav", 6000);
 
@@ -117,10 +101,7 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	//	KAPITEL 5
 	//***************************************************************************
 	else if (neues_Kapitel == 5)
-	{
-		//PLAYER_TALENT_ALCHEMY[CHARGE_Innoseye] 	= TRUE;	//Joly: zur Sicherheit.
-		// ------ Tagebucheintrag ------
-		
+	{		
 		// ------ Bild einblenden ------
 		IntroduceChapter (KapWechsel_5,"Uriziel","chapter5.tga","chapter_01.wav", 6000);
 
@@ -136,10 +117,6 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	//***************************************************************************
 	else if (neues_Kapitel == 6)
 	{
-		//PLAYER_TALENT_ALCHEMY[CHARGE_Innoseye] 	= TRUE;	//Joly: zur Sicherheit.
-	
-		// ------ Tagebucheintrag ------
-		
 		// ------ Bild einblenden ------
 		IntroduceChapter (KapWechsel_6,"???","chapter6.tga","chapter_01.wav", 6000);
 
@@ -148,10 +125,6 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 		Kapitel06_Erfahrung	= hero.exp;
 		Kapitel06_Level		= hero.level;
 		Kapitel06_Zeit		= TimeCounter_Real;
-	}
-	else if (neues_Kapitel == 7)
-	{
-		IntroduceChapter ("Kapitel 7","Besuch bei Xeres","chapter6.tga","chapter_01.wav", 6000);
 	};
 	
 	//***************************************************************************
@@ -159,26 +132,4 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	//***************************************************************************
  
  	B_CheckLog ();
- 
- 	//	B_ENTER
-	//-------------
-
-	if (aktuelles_Level_Zen == OLDWORLD_ZEN)
-	{
-		B_ENTER_OLDWORLD ();
-	};
-	if (aktuelles_Level_Zen == NEWWORLD_ZEN)
-	{
-		B_ENTER_NEWWORLD ();
-	};
-	
- 
- 	//	AMBIENT XPs
-	//-------------
- 	if (Kapitel == 1){XP_Ambient=XP_AmbientKap1;};
- 	if (Kapitel == 2){XP_Ambient=XP_AmbientKap2;};
- 	if (Kapitel == 3){XP_Ambient=XP_AmbientKap3;};
- 	if (Kapitel == 4){XP_Ambient=XP_AmbientKap4;};
- 	if (Kapitel == 5){XP_Ambient=XP_AmbientKap5;};
- 	if (Kapitel == 6){XP_Ambient=XP_AmbientKap6;};
 };

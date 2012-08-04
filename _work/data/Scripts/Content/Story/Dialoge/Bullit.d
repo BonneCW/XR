@@ -127,7 +127,7 @@ FUNC VOID Info_Mod_Bullit_Umgehauen_Info()
 {
 	if (self.aivar[AIV_LastPlayerAR] == AR_NONE) //Kampf aus Dialog heraus.
 	{
-		if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
 			AI_Output(self, hero, "Info_Mod_Bullit_Umgehauen_06_00"); //Schon gut, schon gut. Ich kann dir nicht helfen, aber ich würde es mal bei Fisk versuchen.
 
@@ -137,7 +137,7 @@ FUNC VOID Info_Mod_Bullit_Umgehauen_Info()
 
 			B_LogEntry	(TOPIC_MOD_PDV, "Bullit meint, bei Fisk könnte ich Informationen bekommen.");
 		}
-		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
 			AI_Output(self, hero, "Info_Mod_Bullit_Umgehauen_06_01"); //Und wieder hattest du keine Chance. Jetzt verzieh dich!
 		};

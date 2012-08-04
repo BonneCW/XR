@@ -93,4 +93,7 @@ INSTANCE MENUITEM_XR2_BACK(C_MENU_ITEM_DEF)
 	// Aktionen
 	onSelAction[0]	= 	SEL_ACTION_BACK;	
 	flags = flags | IT_TXT_CENTER;
+	onSelAction[0]	= SEL_ACTION_BACK;
+	// Weitere Eigenschaften
+	flags			= flags |IT_TXT_CENTER;
 };

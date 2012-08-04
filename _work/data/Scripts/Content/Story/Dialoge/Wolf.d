@@ -16,7 +16,158 @@ FUNC INT Info_Mod_Wolf_Hi_Condition()
 FUNC VOID Info_Mod_Wolf_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_00"); //Hey, du lebst ja noch. Hätte nicht gedacht, dass wir uns noch mal sehen.
-	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_01"); //Meine Crawler-Rüstung scheint ja ganz stabil gewesen zu sein.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_01"); //Die Minecrawlerrüstung scheint ja ganz schön stabil gewesen zu sein.
+	AI_Output(hero, self, "Info_Mod_Wolf_Hi_15_02"); //Ja, da hast du ganze Arbeit geleistet.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_03"); //Stimmt ... wirklich zwei Prachtstücke, die ich das zusammengebastelt hatte.
+	AI_Output(hero, self, "Info_Mod_Wolf_Hi_15_04"); //Zwei? Wo ist die andere.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_05"); //Ich hab sie meinem alten Kumpel Gestath gegeben, mit dem ich am Rande der Barriere Handel trieb.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_06"); //Er hat mir die Dinge besorgt, die es vor allem außerhalb unseres Gefängnisses gab und ich habe ihm dafür einige spezielle Gegenstände gegeben, welche die Kolonie hervorgebracht hatte.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_07"); //Er wollte dann in irgendeine unwirkliche Gegend, die von wilden Bestien bewohnt wird ... ein Paradies für Jäger, wie er jedenfalls meinte.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_08"); //Habe ihn nach dem Fall der Barriere auf jeden Fall nicht wieder zu Gesicht bekommen.
+	AI_Output(hero, self, "Info_Mod_Wolf_Hi_15_09"); //Kannst du mir noch mal so eine Rüstung basteln?
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_10"); //Könnte ich schon. Aber dazu bräuchte ich eben die nötigen Rohstoffe. Weißt du denn noch, wie man den Biestern die Platten abzieht?
+	AI_Output(hero, self, "Info_Mod_Wolf_Hi_15_11"); //Also ... ich habe so einiges Vergessen ...
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_12"); //Nun gut, ich könnte es dir noch mal zeigen. Aber ohne Crawlerkrieger brächte uns auch das nichts.
+	AI_Output(hero, self, "Info_Mod_Wolf_Hi_15_13"); //Wo werde ich welche finden?
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_14"); //Ich weiß nicht ... in der Nähe würde mir eigentlich nichts in den Sinn kommen ... höchstens im Süden.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_15"); //Gorn hatte nämlich irgendetwas von einer verfluchten Festung in den Bergen erzählt, die er einnehmen wollte. Auf jeden Fall noch nicht erschlossen.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_16"); //Womöglich gibt es da Höhlen mit den Viechern ... keine Ahnung.
+
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_SÖLDNER, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_SÖLDNER, "Wolf kann mir wieder zeigen, wie ich an Crawlerplatten komme.");
+};
+
+INSTANCE Info_Mod_Wolf_MinecrawlerRuestung (C_INFO)
+{
+	npc		= Mod_798_SLD_Wolf_NW;
+	nr		= 1;
+	condition	= Info_Mod_Wolf_MinecrawlerRuestung_Condition;
+	information	= Info_Mod_Wolf_MinecrawlerRuestung_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich habe einige Crawlerplatten.";
+};
+
+FUNC INT Info_Mod_Wolf_MinecrawlerRuestung_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_Hi))
+	&& (Npc_HasItems(hero, ItAt_CrawlerPlate) >= 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Wolf_MinecrawlerRuestung_15_00"); //Ich habe einige Crawlerplatten.
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_01"); //Tatsächlich?
+
+	AI_TurnAway	(self, hero);
+
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_02"); //(zu sich selbst) Es gibt hier also doch Crawlerkrieger ... das ist gut.
+
+	AI_TurnToNpc	(self, hero);
+
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_03"); //(zum Helden) Wenn du mir mindestens 15 Stück davon besorgst, kann ich dir eine neue Rüstung basteln.
+	AI_Output(hero, self, "Info_Mod_Wolf_MinecrawlerRuestung_15_04"); //15 Stück diesmal?!
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_05"); //Hey, du hast doch selbst zugegeben, dass dir deine Minecrawlerrüstung damals im Minental das Leben gerettet hat.
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_06"); //Daher halte ich es nur für angemessen, wenn ich dieses Mal einen etwas größeren Profit davon habe.
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_07"); //Und es ist auch nicht meine Schuld, dass du deine alte Rüstung verloren hast.
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_08"); //Außerdem sollten die paar Crawler mehr, oder weniger auch keinen Unterschied für dich machen, nachdem du es mit Orks, Untoten und Dämonen aufgenommen hast.
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung_08_09"); //Also, wie gesagt, 15 Platten und jeder ist fein raus.
+};
+
+INSTANCE Info_Mod_Wolf_MinecrawlerRuestung2 (C_INFO)
+{
+	npc		= Mod_798_SLD_Wolf_NW;
+	nr		= 1;
+	condition	= Info_Mod_Wolf_MinecrawlerRuestung2_Condition;
+	information	= Info_Mod_Wolf_MinecrawlerRuestung2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich habe hier 15 Minecrawlerplatten.";
+};
+
+FUNC INT Info_Mod_Wolf_MinecrawlerRuestung2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_MinecrawlerRuestung))
+	&& (Npc_HasItems(hero, ItAt_CrawlerPlate) >= 15)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Wolf_MinecrawlerRuestung2_15_00"); //Ich habe hier 15 Minecrawlerplatten.
+
+	B_GiveInvItems	(hero, self, ItAt_CrawlerPlate, 15);
+
+	Npc_RemoveInvItems	(self, ItAt_CrawlerPlate, 15);
+
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung2_08_01"); //Spitze! Ich mach mich gleich an die Arbeit. Komm in paar Tagen wieder vorbei.
+
+	Mod_Wolf_MinecrawlerRuestung_Day = Wld_GetDay();
+};
+
+INSTANCE Info_Mod_Wolf_MinecrawlerRuestung3 (C_INFO)
+{
+	npc		= Mod_798_SLD_Wolf_NW;
+	nr		= 1;
+	condition	= Info_Mod_Wolf_MinecrawlerRuestung3_Condition;
+	information	= Info_Mod_Wolf_MinecrawlerRuestung3_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wie ich sehe ist die Crawlerrüstung fertig.";
+};
+
+FUNC INT Info_Mod_Wolf_MinecrawlerRuestung3_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_MinecrawlerRuestung2))
+	&& (Mod_Wolf_MinecrawlerRuestung == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung3_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Wolf_MinecrawlerRuestung3_15_00"); //Wie ich sehe ist die Crawlerrüstung fertig.
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung3_08_01"); //Ja ... meine. Für deine brauche ich noch ein paar Tage.
+
+	Mod_Wolf_MinecrawlerRuestung = Wld_GetDay();
+};
+
+INSTANCE Info_Mod_Wolf_MinecrawlerRuestung4 (C_INFO)
+{
+	npc		= Mod_798_SLD_Wolf_NW;
+	nr		= 1;
+	condition	= Info_Mod_Wolf_MinecrawlerRuestung4_Condition;
+	information	= Info_Mod_Wolf_MinecrawlerRuestung4_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Wolf_MinecrawlerRuestung4_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_MinecrawlerRuestung3))
+	&& (Wld_GetDay()-2 > Mod_Wolf_MinecrawlerRuestung_Day)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung4_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung4_08_00"); //Du brauchst gar nicht zu fragen. Hier ist deine schöne neue Crawlerplattenrüstung.
+
+	CreateInvItems	(hero, ITAR_DJG_Crawler, 1);
+
+	B_ShowGivenThings	("Rüstung aus Crawlerplatten erhalten");
+
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung4_08_01"); //Viel Spaß damit.
+
+	B_GivePlayerXP	(200);
 };
 
 INSTANCE Info_Mod_Wolf_Snapperbogen (C_INFO)
@@ -97,34 +248,6 @@ FUNC VOID Info_Mod_Wolf_Snapperbogen2_Info()
 	AI_Output(self, hero, "Info_Mod_Wolf_Snapperbogen2_08_01"); //(zu sich selbst) Und jetzt schau ich mir das Ding mal genau an ... wäre doch gelacht, wenn ich nicht auch solche Bögen herstellen könnte.
 
 	B_GivePlayerXP	(400);
-};
-
-INSTANCE Info_Mod_Wolf_CanYouPlates (C_INFO)
-{
-	npc		= Mod_798_SLD_Wolf_NW;
-	nr		= 1;
-	condition	= Info_Mod_Wolf_CanYouPlates_Condition;
-	information	= Info_Mod_Wolf_CanYouPlates_Info;
-	permanent	= 0;
-	important	= 0;
-	description	= "Kannst du mir wieder zeigen, wie ich an Crawlerplatten komme?";
-};
-
-FUNC INT Info_Mod_Wolf_CanYouPlates_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_Hi))
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Wolf_CanYouPlates_Info()
-{
-	AI_Output(hero, self, "Info_Mod_Wolf_CanYouPlates_15_00"); //Kannst du mir wieder zeigen, wie ich an Crawlerplatten komme?
-	AI_Output(self, hero, "Info_Mod_Wolf_CanYouPlates_08_01"); //Natürlich, ich hab ja nicht vergessen, wie es geht.
-
-	Log_CreateTopic	(TOPIC_MOD_LEHRER_SÖLDNER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_LEHRER_SÖLDNER, "Wolf kann mir wieder zeigen, wie ich an Crawlerplatten komme.");
 };
 
 INSTANCE Info_Mod_Wolf_Lehrer (C_INFO)
@@ -426,7 +549,7 @@ FUNC INT Info_Mod_Wolf_PlattenNehmen_Condition()
 {
 	Info_Mod_Wolf_PlattenNehmen.description = B_BuildLearnString("Wie bekomme ich diese Platten von den Biestern ab?", B_GetLearnCostTalent(hero, NPC_TALENT_TAKEANIMALTROPHY, TROPHY_CrawlerPlate));
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_CanYouPlates))
+	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_Hi))
 	&& (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_CrawlerPlate] == FALSE)
 	{
 		return 1;
@@ -437,7 +560,7 @@ FUNC VOID Info_Mod_Wolf_PlattenNehmen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Wolf_PlattenNehmen_15_00"); //Wie bekomme ich diese Platten von den Biestern ab?
 
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_CrawlerPlate))
+	if (B_TeachPlayerTalentTakeAnimalTrophy (self, hero, TROPHY_CrawlerPlate))
 	{
 		AI_Output(self, hero, "Info_Mod_Wolf_PlattenNehmen_08_01"); //Das ist relativ einfach. Die Rückenplatten sind nur an deren Rändern mit dem Körper verwachsen.
 		AI_Output(self, hero, "Info_Mod_Wolf_PlattenNehmen_08_02"); //Nimm einfach ein Rasiermesser und schneide halbschräg an den Rändern entlang.
@@ -452,12 +575,12 @@ INSTANCE Info_Mod_Wolf_Pickpocket (C_INFO)
 	information	= Info_Mod_Wolf_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_150;
 };
 
 FUNC INT Info_Mod_Wolf_Pickpocket_Condition()
 {
-	C_Beklauen	(87, ItMi_Gold, 600);
+	C_Beklauen	(137, ItRw_Arrow, 45);
 };
 
 FUNC VOID Info_Mod_Wolf_Pickpocket_Info()
@@ -475,8 +598,88 @@ FUNC VOID Info_Mod_Wolf_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Wolf_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Wolf_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Wolf_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Wolf_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Wolf_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Wolf_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Wolf_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Wolf_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Wolf_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Wolf_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Wolf_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Wolf_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Wolf_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Wolf_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Wolf_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Wolf_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Wolf_EXIT (C_INFO)

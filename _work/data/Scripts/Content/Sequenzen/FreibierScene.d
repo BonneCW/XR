@@ -28,7 +28,7 @@ FUNC VOID FreibierScene()
 
 	if (Mod_FreibierScene_Counter == 7)
 	{
-		AI_Output(Mod_1076_VLK_Wirt_NW, NULL, "Info_Mod_FreibierScene_14_01"); //Darauf müssen wir erst noch einen heben! Auf Matteo!
+		AI_Output(Mod_1076_VLK_Wirt_NW, NULL, "Info_Mod_FreibierScene_29_01"); //Darauf müssen wir erst noch einen heben! Auf Matteo!
 
 		AI_TurnToNpc	(Mod_747_MIL_Rangar_NW, Mod_1076_VLK_Wirt_NW);
 		AI_TurnToNpc	(Mod_753_NOV_Ulf_NW, Mod_1076_VLK_Wirt_NW);
@@ -55,12 +55,12 @@ FUNC VOID FreibierScene()
 
 	if (Mod_FreibierScene_Counter == 14)
 	{
-		AI_Output(Mod_1076_VLK_Wirt_NW, NULL, "Info_Mod_FreibierScene_14_02"); //Und sonst? Das übliche Geschwätz.
+		AI_Output(Mod_1076_VLK_Wirt_NW, NULL, "Info_Mod_FreibierScene_29_02"); //Und sonst? Das übliche Geschwätz.
 	};
 
 	if (Mod_FreibierScene_Counter == 19)
 	{
-		AI_Output(Mod_1076_VLK_Wirt_NW, NULL, "Info_Mod_FreibierScene_14_03"); //Constantino soll einem Jungen nachgestellt haben, na, wer seine Regungen noch nicht kennt, der kommt wohl aus dem Kloster! (lacht)
+		AI_Output(Mod_1076_VLK_Wirt_NW, NULL, "Info_Mod_FreibierScene_29_03"); //Constantino soll einem Jungen nachgestellt haben, na, wer seine Regungen noch nicht kennt, der kommt wohl aus dem Kloster! (lacht)
 	};
 
 	if (Mod_FreibierScene_Counter == 24)

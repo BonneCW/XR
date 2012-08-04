@@ -8,23 +8,23 @@ PROTOTYPE Mst_Default_SwampZombie(C_Npc)
 	name							=	"Moorleiche";
 	guild							=	GIL_ZOMBIE;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ZOMBIE;
-	level							=	15;
+	level							=	6;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	100;
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	250;
-	attribute	[ATR_HITPOINTS]		=	250;
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(51) + 100;	// 100 - 150
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21);		// 0 - 20
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(101) + 200;	// 200 - 300
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_MANA] 		=	0;
 
 	//----- Protection ----
-	protection	[PROT_BLUNT]		=	75000;
-	protection	[PROT_EDGE]			=	75000;
-	protection	[PROT_POINT]		=	75000;	
-	protection	[PROT_FIRE]			=	75;
-	protection	[PROT_FLY]			=	75;
-	protection	[PROT_MAGIC]		=	30;
+	protection	[PROT_BLUNT]		=	Hlp_Random(51)*1000 + 50000;	// 50 - 100
+	protection	[PROT_EDGE]		=	Hlp_Random(51)*1000 + 50000;	// 50 - 100
+	protection	[PROT_POINT]		=	Hlp_Random(51)*1000 + 50000;	// 50 - 100
+	protection	[PROT_FIRE]		=	Hlp_Random(51) + 50;		// 50 - 100
+	protection	[PROT_FLY]		=	75;
+	protection	[PROT_MAGIC]		=	Hlp_Random(31) + 15;		// 15 - 45
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	
@@ -83,121 +83,7 @@ INSTANCE SwampZombie		(Mst_Default_SwampZombie)
 	Npc_SetToFistMode(self);
 };
 
-INSTANCE SwampZombie_Moor_01		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_02		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_03		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_04		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_05		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_06		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_07		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_08		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_09		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_10		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_11		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_12		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_13		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_14		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_15		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_16		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_17		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_18		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_19		(Mst_Default_SwampZombie)
-{
-	B_SetVisuals_SwampZombie();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE SwampZombie_Moor_20		(Mst_Default_SwampZombie)
+INSTANCE SwampZombie_Moor		(Mst_Default_SwampZombie)
 {
 	B_SetVisuals_SwampZombie();
 	Npc_SetToFistMode(self);

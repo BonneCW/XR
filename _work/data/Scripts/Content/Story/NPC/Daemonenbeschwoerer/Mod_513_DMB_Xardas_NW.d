@@ -86,12 +86,6 @@ FUNC VOID Rtn_Tot_513()
 	TA_Stand_WP		(20,00,08,00,"TOT");
 };
 
-FUNC VOID Rtn_Angebot_513()
-{
-	TA_Stand_WP		(08,00,20,00,"NW_CASTLEMINE_TOWER_STAND_02");
-	TA_Stand_WP		(20,00,08,00,"NW_CASTLEMINE_TOWER_STAND_02");
-};
-
 FUNC VOID Rtn_GardeInnos_513()
 {
 	TA_Smalltalk_Plaudern	(08,00,20,00,"NW_XARDAS_START");

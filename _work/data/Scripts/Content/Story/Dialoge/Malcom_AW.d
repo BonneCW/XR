@@ -185,10 +185,10 @@ FUNC VOID Info_Mod_Malcom_AW_Schatzsuche3_Info()
 
 	AI_StopProcessInfos	(self);
 
-	B_StartOtherRoutine	(self, "TOCANYON");
-	B_StartOtherRoutine	(Mod_928_PIR_AlligatorJack_AW, "TOCANYON");
+	B_StartOtherRoutine	(self, "START");
+	B_StartOtherRoutine	(Mod_928_PIR_AlligatorJack_AW, "START");
 
-	B_LogEntry	(TOPIC_MOD_PIR_TALISMAN, "Der Talisman ist wieder in unserem Besitz.");
+	B_LogEntry_More	(TOPIC_MOD_PIRATEN_SCHATZSUCHE, TOPIC_MOD_PIR_TALISMAN, "Wir haben den Talisman der Piraten geborgen.", "Der Talisman ist wieder in unserem Besitz.");
 	B_SetTopicStatus	(TOPIC_MOD_PIR_TALISMAN, LOG_SUCCESS);
 
 	Mod_PiratenVorbereitungen += 1;

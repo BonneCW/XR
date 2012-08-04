@@ -355,7 +355,7 @@ INSTANCE  ItAm_CyrcoMinenAmulett(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Amulett der Anitmagie";
+	description		= "Amulett der Antimagie";
 	
 	TEXT[2]			= "zeigt magisch verborgene Dinge";
 	TEXT[5]			= NAME_Value;
@@ -666,7 +666,7 @@ INSTANCE  ItAm_Dam (C_Item) // Waffen Schutz Amulett
 	description		= "Amulett der Eichenhaut";
 	
 	TEXT[2]			= NAME_Prot_Point;
-	COUNT[2]		= Am_ProtPoint;
+	COUNT[2]		= Am_ProtPoint/1000;
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
@@ -917,6 +917,7 @@ INSTANCE  ItAm_Dam (C_Item) // Waffen Schutz Amulett
 	FUNC VOID UnEquip_ItAm_Hp_01()
 	{
 		self.attribute [ATR_HITPOINTS_MAX] = self.attribute [ATR_HITPOINTS_MAX] -Am_Hp;
+
 		if (self.attribute[ATR_HITPOINTS] > (Am_Hp + 2))
 		{
 			self.attribute [ATR_HITPOINTS] = self.attribute [ATR_HITPOINTS] -Am_Hp;
@@ -1305,4 +1306,43 @@ FUNC VOID UnEquip_ItTa_Behueter ()
 	self.protection[PROT_MAGIC] -= 5;
 
 	Npc_ChangeAttribute (Wisp_Helper, ATR_HITPOINTS, -Wisp_Helper.attribute[ATR_HITPOINTS_MAX]);
+};
+
+
+INSTANCE  ItMi_Magieprisma(C_Item)
+{
+	name 			=	NAME_Amulett;
+
+	mainflag 		=	ITEM_KAT_NONE;
+	flags 			=	ITEM_AMULET|ITEM_SHOW;
+
+	value 			=	0;
+
+	visual 			=	"Schwarzesprisma.3DS";
+
+	visual_skin 	=	0;
+	material 		=	MAT_METAL;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
+	on_equip		=	Equip_ItMi_Magieprisma;
+	on_unequip		=	UnEquip_ItMi_Magieprisma;
+
+	description		= "Magieprisma";
+	
+	TEXT[5]			= NAME_Value;
+	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	
+};
+
+FUNC VOID Equip_ItMi_Magieprisma ()
+{
+	Mod_PrismaAngelegt = TRUE;
+};
+
+FUNC VOID UnEquip_ItMi_Magieprisma ()
+{
+	Mod_PrismaAngelegt = FALSE;
 };

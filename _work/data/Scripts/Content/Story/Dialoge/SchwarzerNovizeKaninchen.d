@@ -71,7 +71,7 @@ FUNC INT Info_Mod_SchwarzerNovizeKaninchen_Umgehauen_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_SchwarzerNovizeKaninchen_Hi))
 	&& (self.aivar[AIV_LastPlayerAR] == AR_NONE)
-	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+	&& (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 	{
 		return 1;
 	};
@@ -95,7 +95,7 @@ INSTANCE Info_Mod_SchwarzerNovizeKaninchen_Pickpocket (C_INFO)
 	information	= Info_Mod_SchwarzerNovizeKaninchen_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_80;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_SchwarzerNovizeKaninchen_Pickpocket_Condition()

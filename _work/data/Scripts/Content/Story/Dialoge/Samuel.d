@@ -17,15 +17,17 @@ FUNC INT Info_Mod_Samuel_Hi_Condition()
 FUNC VOID Info_Mod_Samuel_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Samuel_Hi_14_01"); //Ich bin Samuel. Nimm erstmal nen ordentlichen Schluck Grog.
 	
 	B_GiveInvItems	(self, hero, ItFo_Addon_Grog, 1);
+
 	B_UseItem	(hero, ItFo_Addon_Grog);
 
 	AI_Output(self, hero, "Info_Mod_Samuel_Hi_14_02"); //Wenn du mehr willst, dann geh zu Skip, ich bring mein Zeug meistens zu ihm. Ich hab nicht viel, aber wenn du willst, kann ich dir auch etwas verkaufen.
 
-	Log_CreateTopic	(TOPIC_MOD_HÄNDLER_PIRATEN, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_HÄNDLER_PIRATEN, "Samuel hat ein wenig Grog, den er mir verkaufen könnte.");
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_PIRATEN, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_PIRATEN, "Samuel hat ein wenig Grog, den er mir verkaufen könnte.");
 };
 
 INSTANCE Info_Mod_Samuel_Auftrag (C_INFO)
@@ -89,13 +91,14 @@ FUNC VOID Info_Mod_Samuel_HabZeug_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Samuel_HabZeug_15_00"); //Ich hab das Zeug.
 
-	B_GiveInvItems	(hero, self, ItFo_Water, 20);
-	B_GiveInvItems	(hero, self, ItFo_Melasse, 20);
+	Npc_RemoveInvItems	(hero, ItFo_Water, 20);
+	Npc_RemoveInvItems	(hero, ItFo_Melasse, 20);
+
+	B_ShowGivenThings	("20 Wasser und 20 Melasse gegeben");
 
 	AI_Output(self, hero, "Info_Mod_Samuel_HabZeug_14_01"); //Gut, dann haben wir unseren Rumvorrat gesichert.
 	AI_Output(self, hero, "Info_Mod_Samuel_HabZeug_14_02"); //Hier ist dein Gold.
 
-	CreateInvItems	(self, ItMi_Gold, 400);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 400);
 
 	B_GivePlayerXP	(200);
@@ -105,6 +108,8 @@ FUNC VOID Info_Mod_Samuel_HabZeug_Info()
 	B_Göttergefallen(2, 1);
 
 	B_SetTopicStatus	(TOPIC_MOD_SAMUEL_RUM, LOG_SUCCESS);
+
+	B_LogEntry	(TOPIC_MOD_PIRATEN_SCHATZSUCHE, "Ich habe Samuel geholfen den Rumvorrat zu sichern.");
 };
 
 INSTANCE Info_Mod_Samuel_SkipFleisch (C_INFO)
@@ -412,7 +417,6 @@ FUNC VOID Info_Mod_Samuel_AdanosWohltat2_Info()
 	AI_Output(hero, self, "Info_Mod_Samuel_AdanosWohltat2_15_00"); //Und?
 	AI_Output(self, hero, "Info_Mod_Samuel_AdanosWohltat2_14_01"); //Es hat lange gedauert, aber hier ist der Trank. Bring' ihn schleunigst zu Skip.
 
-	CreateInvItems	(self, ItPo_AdanosWohltat, 1);
 	B_GiveInvItems	(self, hero, ItPo_AdanosWohltat, 1);
 
 	AI_Output(hero, self, "Info_Mod_Samuel_AdanosWohltat2_15_02"); //Verstanden.
@@ -458,12 +462,12 @@ INSTANCE Info_Mod_Samuel_Pickpocket (C_INFO)
 	information	= Info_Mod_Samuel_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_60;
+	description	= Pickpocket_90;
 };
 
 FUNC INT Info_Mod_Samuel_Pickpocket_Condition()
 {
-	C_Beklauen	(54, ItMi_Gold, 190);
+	C_Beklauen	(84, ItFo_Addon_Rum, 19);
 };
 
 FUNC VOID Info_Mod_Samuel_Pickpocket_Info()
@@ -481,8 +485,88 @@ FUNC VOID Info_Mod_Samuel_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Samuel_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Samuel_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Samuel_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Samuel_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Samuel_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Samuel_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Samuel_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Samuel_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Samuel_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Samuel_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Samuel_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Samuel_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Samuel_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Samuel_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Samuel_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Samuel_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Samuel_EXIT (C_INFO)

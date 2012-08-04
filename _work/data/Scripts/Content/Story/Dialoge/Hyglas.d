@@ -42,6 +42,34 @@ FUNC VOID Info_Mod_Hyglas_FeuerGegenEis_Info()
 	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis_14_01"); //Dort besprechen wir das weitere Vorgehen im Detail.
 
 	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(Mod_924_RIT_Sergio_NW, "ATSEE");
+
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_01,	"NW_BIGFARM_LAKE_07");
+
+	B_KillNpc	(IceGolem_FeuerGegenEis_01);
+
+	Wld_InsertNpc	(Mod_7786_NOV_Novize_NW, "TAVERNE");
+
+	B_KillNpc	(Mod_7786_NOV_Novize_NW);
+
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_05,	"WP_EISHOEHLE_01");
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_06,	"WP_EISHOEHLE_01");
+
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_07,	"WP_EISHOEHLE_04");
+
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_08,	"NW_BIGFARM_ALLEE_07");
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_09,	"NW_BIGFARM_FARM4_PATH_05");
+
+	Wld_InsertNpc	(Eislaeufer_FGE,	"FP_SPAWN_STONEGUARDIAN_STEINKREIS_05");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"NW_BIGFARM_FARM4_PATH_07");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"NW_BIGFARM_CROSS");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"NW_BIGFARM_CROSS");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"WP_SLD_DRACHENJAGD_01");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"FP_ROAM_NW_BIGFARM_LAKE_MONSTER_05_03");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"FP_ROAM_NW_BIGFARM_LAKE_MONSTER_05_03");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"NW_LAKE__WATER_02");
+	Wld_InsertNpc	(Eislaeufer_FGE,	"NW_LAKE__WATER_02");
 };
 
 INSTANCE Info_Mod_Hyglas_FeuerGegenEis2 (C_INFO)
@@ -100,8 +128,213 @@ FUNC VOID Info_Mod_Hyglas_FeuerGegenEis2_Info()
 
 	self.aivar[AIV_Partymember] = TRUE;
 
-	B_StartOtherRoutine	(self, "ZUSEKOB");
+	B_StartOtherRoutine	(self, "ZUSERGIO");
 	B_StartOtherRoutine	(Orlan, "START");
+};
+
+INSTANCE Info_Mod_Hyglas_FeuerGegenEis3 (C_INFO)
+{
+	npc		= Mod_918_KDF_Hyglas_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hyglas_FeuerGegenEis3_Condition;
+	information	= Info_Mod_Hyglas_FeuerGegenEis3_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Hyglas_FeuerGegenEis3_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Sergio_FeuerGegenEis))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_FeuerGegenEis3_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis3_14_00"); //Mach dir keine Vorwürfe ... du hast tapfer gekämpft und dein Möglichstes gegeben.
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis3_14_01"); //Außerdem ist jetzt nicht der Rechte Zeitpunkt für Selbstvorwürfe. Kurier deine Wunden und pass auf, dass keine dieser Wesen in die Umgebung entkommen.
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis3_14_02"); //Ich werde derweil mit dem Novizen zum Steinkreis gehen und versuchen das Portal zu verschließen. Innos sei mit dir.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "ZUSEKOB");
+
+	B_LogEntry	(TOPIC_MOD_FM_FEUEREIS, "Keine Zeit zu rasten. Wir müssen weiter zum Portal auf Sekobs Hof, um es zu verschließen.");
+};
+
+INSTANCE Info_Mod_Hyglas_FeuerGegenEis4 (C_INFO)
+{
+	npc		= Mod_918_KDF_Hyglas_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hyglas_FeuerGegenEis4_Condition;
+	information	= Info_Mod_Hyglas_FeuerGegenEis4_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Hyglas_FeuerGegenEis4_Condition()
+{
+	if (Npc_GetDistToWP(self, "WP_STEINKREIS_05") < 1000)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_FeuerGegenEis4_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis4_14_00"); //Beunruhigend ... das Portal ist mittlerweile sichtbar. Ich muss es mir näher ansehen.
+
+	AI_StopProcessInfos	(self);
+};
+
+INSTANCE Info_Mod_Hyglas_FeuerGegenEis5 (C_INFO)
+{
+	npc		= Mod_918_KDF_Hyglas_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hyglas_FeuerGegenEis5_Condition;
+	information	= Info_Mod_Hyglas_FeuerGegenEis5_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Hyglas_FeuerGegenEis5_Condition()
+{
+	if (Mod_FM_FeuerEis == 2)
+	&& (Npc_IsDead(IceGolem_FeuerGegenEis_02))
+	&& (Npc_IsDead(IceGolem_FeuerGegenEis_03))
+	&& (Npc_IsDead(IceGolem_FeuerGegenEis_04))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_FeuerGegenEis5_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis5_14_00"); //Bei Innos, es scheint unaufhörlich zu wachsen. Wenn wir es nicht schnell verschließen, wird bald ganz Khorinis ein Hort des Eises sein.
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis5_15_01"); //Was ist zu tun?
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis5_14_02"); //Ich werde versuchen das magische Gefüge des Portals mit einem Feuersturm zu destabilisieren.
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis5_14_03"); //Mit etwas Glück, wird es dann in sich zusammenfallen ... hoffentlich.
+
+	AI_StopProcessInfos	(self);
+};
+
+INSTANCE Info_Mod_Hyglas_FeuerGegenEis6 (C_INFO)
+{
+	npc		= Mod_918_KDF_Hyglas_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hyglas_FeuerGegenEis6_Condition;
+	information	= Info_Mod_Hyglas_FeuerGegenEis6_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Hyglas_FeuerGegenEis6_Condition()
+{
+	if (Mod_FM_FeuerEis == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_FeuerGegenEis6_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis6_15_00"); //Verdammt, was ist geschehen.
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis6_14_01"); //Die ... die magische Entladung hat das Portal nicht verschlossen ... sondern es noch gestärkt ... und scheinbar wurden wir dadurch auf die andere Seite gezogen.
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis6_15_02"); //Und was sollen wir jetzt tun?
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis6_14_03"); //Wir müssen uns rasch hier umsehen. Vielleicht finden wir Anhaltspunkte über die Quelle des Portals.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "EISHOEHLE2");
+
+	B_LogEntry	(TOPIC_MOD_FM_FEUEREIS, "Na toll! Anstatt das Portal zu versiegeln, sind wir jetzt in einer eiseigen Höhle auf der anderen Seite gelandet.");
+};
+
+INSTANCE Info_Mod_Hyglas_FeuerGegenEis7 (C_INFO)
+{
+	npc		= Mod_918_KDF_Hyglas_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hyglas_FeuerGegenEis7_Condition;
+	information	= Info_Mod_Hyglas_FeuerGegenEis7_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Hyglas_FeuerGegenEis7_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Hyglas_FeuerGegenEis6))
+	&& (Npc_GetDistToWP(hero, "WP_EISHOEHLE_04") < 300)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_FeuerGegenEis7_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_00"); //Da! Von diesem Konstrukt geht große magische Energie aus. Zweifelsfrei wird dadurch das Portal gespeist.
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis7_15_01"); //Dann müssen wir es also zerstören?
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_02"); //Ja ... Allerdings ...
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis7_15_03"); //Allerdings was?
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_04"); //Allerdings würde dann das Portal in sich zusammenfallen und uns den Rückweg versperren.
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis7_15_05"); //Na toll! Dann können wir nichts machen?
+
+	AI_TurnAway	(self, hero);
+
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_06"); //(nachdenklich) Hmm, doch ...
+
+	AI_TurnToNpc	(self, hero);
+
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_07"); //(bestimmend zum Helden) Du wirst zurück durch das Portal nach Khorinis gehen ... und ich werde zurückbleiben und die Höhle mit einer gewaltigen Feuersbrunst zum Einsturz bringen.
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis7_15_08"); //Aber ... das wäre dein sicheres Verderben.
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_09"); //Eine andere Wahl haben wir nicht, wenn wir Khorinis vor weiterem Unheil bewahren wollen.
+	AI_Output(hero, self, "Info_Mod_Hyglas_FeuerGegenEis7_15_10"); //Also gut ... Es war eine Ehre an deiner Seite gekämpft zu haben.
+	AI_Output(self, hero, "Info_Mod_Hyglas_FeuerGegenEis7_14_11"); //Ebenso ... (drängend) Und nun geh ... jede weitere Minute, die das Portal existiert, ist eine zuviel. Innos sei mit dir!
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(Mod_551_KDF_Pyrokar_NW, "ATBETT");
+	B_StartOtherRoutine	(Mod_552_KDF_Serpentes_NW, "ATBETT");
+	B_StartOtherRoutine	(Mod_553_KDF_Ulthar_NW, "ATBETT");
+};
+
+INSTANCE Info_Mod_Hyglas_BackInKhorinis (C_INFO)
+{
+	npc		= Mod_918_KDF_Hyglas_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hyglas_BackInKhorinis_Condition;
+	information	= Info_Mod_Hyglas_BackInKhorinis_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Hyglas_BackInKhorinis_Condition()
+{
+	if (Mod_FM_Hyglas_Eisgebiet == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_BackInKhorinis_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Hyglas_BackInKhorinis_14_00"); //Ahh, mein Retter.
+	AI_Output(hero, self, "Info_Mod_Hyglas_BackInKhorinis_15_01"); //Du bist jetzt Prediger?
+	AI_Output(self, hero, "Info_Mod_Hyglas_BackInKhorinis_14_02"); //Ja, ich will den Armen und Not leidenden das wärmende Wort von Innos näher bringen.
+	AI_Output(self, hero, "Info_Mod_Hyglas_BackInKhorinis_14_03"); //Ich habe selbst viele Wochen Hunger und Kälte gelitten und sehe die vergangenen Ereignisse als eine Weisung von Innos.
+	AI_Output(self, hero, "Info_Mod_Hyglas_BackInKhorinis_14_04"); //Mein Leben werde ich von nun an der Unterstützung und Speisung jener Menschen zu widmen, denen das Schicksal eben nicht so viele Privilegien und Reichtum geschenkt hat.
+	AI_Output(self, hero, "Info_Mod_Hyglas_BackInKhorinis_14_05"); //Daher benötige ich diese Spruchrollen und Runen für den Kampf nicht mehr und gebe sie an dich weiter.
+
+	B_ShowGivenThings	("Spruchrollen Feuersturm und Feuerregen und Runen Feuersturm und großer Feuerball erhalten");
+
+	CreateInvItems	(hero, ItSc_Firerain, 1);
+	CreateInvItems	(hero, ItSc_Pyrokinesis, 1);
+	CreateInvItems	(hero, ItRu_Pyrokinesis, 1);
+	CreateInvItems	(hero, ItRu_ChargeFireball, 1);
+
+	AI_Output(self, hero, "Info_Mod_Hyglas_BackInKhorinis_14_06"); //Bei dir kann ich mir sicher sein, dass sie einem rechten Zweck dienen werden. Innos sei mit dir.
+
+	B_GivePlayerXP	(200);
 };
 
 INSTANCE Info_Mod_Hyglas_Leichengase (C_INFO)
@@ -242,6 +475,7 @@ func int Info_Mod_Hyglas_Runen_Condition ()
 	&& ((Mod_Gilde == 6)
 	|| (Mod_Gilde == 7)
 	|| (Mod_Gilde == 8))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Hyglas_BackInKhorinis))
 	{
 		return 1;
 	};
@@ -251,7 +485,7 @@ func void Info_Mod_Hyglas_Runen_Info ()
 {
 	var int abletolearn;
 	abletolearn = 0;
-	AI_Output (other, self, "Info_Mod_Hyglas_Runen_15_00"); //Unterweise mich.
+	AI_Output(hero, self, "Info_Mod_Hyglas_Runen_15_00"); //Unterweise mich.
 	
 	Info_ClearChoices 	(Info_Mod_Hyglas_Runen);
 	Info_AddChoice		(Info_Mod_Hyglas_Runen, DIALOG_BACK, Info_Mod_Hyglas_Runen_BACK);
@@ -529,12 +763,12 @@ INSTANCE Info_Mod_Hyglas_Pickpocket (C_INFO)
 	information	= Info_Mod_Hyglas_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_100;
+	description	= Pickpocket_120;
 };
 
 FUNC INT Info_Mod_Hyglas_Pickpocket_Condition()
 {
-	C_Beklauen	(88, ItMi_Gold, 590);
+	C_Beklauen	(98, ItMi_Gold, 590);
 };
 
 FUNC VOID Info_Mod_Hyglas_Pickpocket_Info()
@@ -552,8 +786,88 @@ FUNC VOID Info_Mod_Hyglas_Pickpocket_BACK()
 
 FUNC VOID Info_Mod_Hyglas_Pickpocket_DoIt()
 {
-	B_Beklauen();
+	if (B_Beklauen() == TRUE)
+	{
+		Info_ClearChoices	(Info_Mod_Hyglas_Pickpocket);
+	}
+	else
+	{
+		Info_ClearChoices	(Info_Mod_Hyglas_Pickpocket);
+
+		Info_AddChoice	(Info_Mod_Hyglas_Pickpocket, DIALOG_PP_BESCHIMPFEN, Info_Mod_Hyglas_Pickpocket_Beschimpfen);
+		Info_AddChoice	(Info_Mod_Hyglas_Pickpocket, DIALOG_PP_BESTECHUNG, Info_Mod_Hyglas_Pickpocket_Bestechung);
+		Info_AddChoice	(Info_Mod_Hyglas_Pickpocket, DIALOG_PP_HERAUSREDEN, Info_Mod_Hyglas_Pickpocket_Herausreden);
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_Pickpocket_Beschimpfen()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESCHIMPFEN");
+	B_Say	(self, hero, "$DIRTYTHIEF");
+
 	Info_ClearChoices	(Info_Mod_Hyglas_Pickpocket);
+
+	AI_StopProcessInfos	(self);
+
+	B_Attack (self, hero, AR_Theft, 1);
+};
+
+FUNC VOID Info_Mod_Hyglas_Pickpocket_Bestechung()
+{
+	B_Say	(hero, self, "$PICKPOCKET_BESTECHUNG");
+
+	var int rnd; rnd = r_max(99);
+
+	if (rnd < 25)
+	|| ((rnd >= 25) && (rnd < 50) && (Npc_HasItems(hero, ItMi_Gold) < 50))
+	|| ((rnd >= 50) && (rnd < 75) && (Npc_HasItems(hero, ItMi_Gold) < 100))
+	|| ((rnd >= 75) && (rnd < 100) && (Npc_HasItems(hero, ItMi_Gold) < 200))
+	{
+		B_Say	(self, hero, "$DIRTYTHIEF");
+
+		Info_ClearChoices	(Info_Mod_Hyglas_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+
+		B_Attack (self, hero, AR_Theft, 1);
+	}
+	else
+	{
+		if (rnd >= 75)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 200);
+		}
+		else if (rnd >= 50)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+		}
+		else if (rnd >= 25)
+		{
+			B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+		};
+
+		B_Say	(self, hero, "$PICKPOCKET_BESTECHUNG_01");
+
+		Info_ClearChoices	(Info_Mod_Hyglas_Pickpocket);
+
+		AI_StopProcessInfos	(self);
+	};
+};
+
+FUNC VOID Info_Mod_Hyglas_Pickpocket_Herausreden()
+{
+	B_Say	(hero, self, "$PICKPOCKET_HERAUSREDEN");
+
+	if (r_max(99) < Mod_Verhandlungsgeschick)
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_01");
+
+		Info_ClearChoices	(Info_Mod_Hyglas_Pickpocket);
+	}
+	else
+	{
+		B_Say	(self, hero, "$PICKPOCKET_HERAUSREDEN_02");
+	};
 };
 
 INSTANCE Info_Mod_Hyglas_EXIT (C_INFO)

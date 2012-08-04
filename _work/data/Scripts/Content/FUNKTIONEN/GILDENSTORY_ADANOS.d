@@ -565,7 +565,7 @@ FUNC VOID GILDENSTORY_ADANOS()
 		&& (Mod_WM_Hexeninfos == 0)
 		&& (Mod_HinweiseDerBauernZuHexen >= 4)
 		&& (Mod_GenugBauernHinweise == 0)
-		&& (hero.aivar[AIV_INVINCIBLE] == 0)
+		&& (B_GetAivar(hero, AIV_INVINCIBLE) == 0)
 		{
 			AI_StandUP	(hero);
 
@@ -939,7 +939,7 @@ FUNC VOID GILDENSTORY_ADANOS()
 
 		if (Mod_WM_BlutkultAttack == 1)
 		{
-			if (hero.aivar[AIV_INVINCIBLE] == FALSE)
+			if (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)
 			{
 				if (!Npc_IsDead(Mod_7203_BK_Straschiduo_NW))
 				&& (!Npc_IsInState(Mod_7203_BK_Straschiduo_NW, ZS_Attack))
@@ -1064,7 +1064,7 @@ FUNC VOID GILDENSTORY_ADANOS()
 		{
 			Mod_WM_FokusTeleport += 1;
 
-			hero.aivar[AIV_INVINCIBLE] = FALSE;
+			B_SetAivar(hero, AIV_INVINCIBLE, FALSE);
 
 			if (Mod_WM_FokusTeleport == 3)
 			{
@@ -1079,7 +1079,7 @@ FUNC VOID GILDENSTORY_ADANOS()
 		{
 			Mod_WM_FokusTeleport += 1;
 
-			hero.aivar[AIV_INVINCIBLE] = FALSE;
+			B_SetAivar(hero, AIV_INVINCIBLE, FALSE);
 
 			if (Mod_WM_FokusTeleport == 6)
 			{

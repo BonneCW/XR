@@ -1,7 +1,7 @@
 instance Mod_7501_DMB_Netux_MT (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Netux"; 
+	name 		= "Dämonenbeschwörer"; 
 	guild 		= GIL_KDF;
 	id 			= 7501;
 	voice 		= 6;

@@ -189,12 +189,20 @@ func void INIT_GLOBAL()
 		HookEngine (4349731, 7, "B_ENDGAME");
 		HookEngine (7742032, 6, "B_OPENINVENTORY");
 		HookEngine (7742480, 9, "B_CLOSEINVENTORY");
+		HookEngine (7487221, 5, "B_OPENCHEST");		// 0x723EF5
+
+		// Keine Dietriche mehr abbrechen bei Truhe knacken
+
+		MemoryProtectionOverride(7487735, 4);	// 0x7240F7
+		MEM_WriteByte(7487735, 232);
 
 		GOTHIC_RESTART = "Y";
 	};
 
 	MoreAlphaVobs(2048); //normal: 256
 	MoreAlphaPolys(16384); //normal: 2048
+
+	B_AutoGeneratePicklockKombos();
 };
 
 FUNC VOID OldLevel(var int newlevel)
@@ -1045,6 +1053,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc	(Mod_1539_WKR_Wasserkrieger_NW,	"NW_CITY_ENTRANCE_01");
 	Wld_InsertNpc	(PC_Friend_NW,	"NW_CITY_ENTRANCE_01");
 	Wld_InsertNpc	(Mod_1723_MIL_Gidan_NW,	"NW_CITY_ENTRANCE_01");
+	Wld_InsertNpc	(Mod_7804_VLK_Spieler_NW,	"NW_CITY_ENTRANCE_01");
 
 	if (Mod_Import_Dusty == LOG_SUCCESS)
 	|| (Mod_Import_Dusty == -1)
@@ -1481,6 +1490,13 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 	Wld_InsertNpc	(Mod_513_DMB_Xardas_NW,		"NW_XARDAS_START");
 	Wld_InsertNpc	(Mod_7036_NONE_Pilger_NW,		"NW_XARDAS_START");
 	Wld_InsertNpc	(Mod_557_PSINOV_Lester_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7772_BDT_Bandit_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7773_BDT_Bandit_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7774_BDT_Bandit_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7775_BDT_Bandit_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7776_BDT_Bandit_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7777_BDT_Bandit_NW,	"NW_XARDAS_START");
+	Wld_InsertNpc	(Mod_7778_BDT_Bandit_NW,	"NW_XARDAS_START");
 
 	// Monster
 
@@ -1687,7 +1703,19 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(Hammel, 		"FP_ROAM_FARM4_SHEEP_04");
 	Wld_InsertNpc 	(Sheep, 		"FP_ROAM_FARM4_SHEEP_04");
 
-	// Mine hinter den D?monenrittern
+	Wld_InsertNpc 	(Minecrawlerqueen, 			"NW_CASTLEMINE_062");
+
+	// Festung oben
+
+	Wld_InsertNpc	(Zombie_Burgherr,	"NW_CASTLEMINE_HUT_10");
+	Wld_InsertNpc	(Zombie_Castlemine,	"NW_CASTLEMINE_HUT_03");
+	Wld_InsertNpc	(Zombie_Castlemine,	"FP_ROAM_NW_CASTLEMINE_HUT_03");
+	Wld_InsertNpc	(Zombie_Castlemine,	"FP_CAMPFIRE_SPIELPLATZ_02");
+	Wld_InsertNpc	(Zombie_Castlemine,	"FP_ROAM_NW_CASTLEMINE_HUT_01_MONSTER_02");
+	Wld_InsertNpc	(Zombie_Castlemine,	"FP_SMALLTALK_STAND_SPIELPLATZ_05");
+	Wld_InsertNpc	(Zombie_Castlemine,	"FP_STAND_SPIELPLATZ_01");
+
+	// Mine hinter den Dämonenrittern
 
 	Wld_InsertNpc	(Minecrawler,	"FP_ROAM_CASTLEMINE2_01");
 	Wld_InsertNpc	(MinecrawlerWarrior,	"FP_ROAM_CASTLEMINE2_12");
@@ -1699,7 +1727,31 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc	(MinecrawlerWarrior,	"FP_ROAM_CASTLEMINE2_07");
 	Wld_InsertNpc	(Minecrawler,	"FP_ROAM_CASTLEMINE2_06");
 
-	// Talkessel unter den D?monenrittern
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_060");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_059");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_056");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_054");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_052");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_051");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_050");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_049");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_047");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_045");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_043");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_041");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_039");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_037");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_035");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_033");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_031");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_029");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_027");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_025");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_063");
+	Wld_InsertNpc	(Minecrawler,	"NW_CASTLEMINE_065");
+	Wld_InsertNpc	(MinecrawlerWarrior,	"NW_CASTLEMINE_067");
+
+	// Talkessel unter den Dämonenrittern
 
 	Wld_InsertNpc	(Troll,	"NW_CASTLEMINE_TROLL_08");
 	Wld_InsertNpc	(Troll,	"NW_CASTLEMINE_TROLL_07");
@@ -1815,9 +1867,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc	(Keiler,	"NW_FARM3_BIGWOOD_03_C");
 	Wld_InsertNpc	(Keiler,	"NW_FARM3_BIGWOOD_03_C");
 
-	//Wld_InsertNpc	(Dragonsnapper,	"NW_FARM3_BIGWOOD_04");
-
-	// Talkessel in der N?he von Bengar
+	// Talkessel in der Nähe von Bengar
 
 	Wld_InsertNpc	(Rabbit,	"NW_BIGMILL_FARM3_03");
 	Wld_InsertNpc	(Rabbit,	"NW_BIGMILL_FARM3_03");
@@ -1964,7 +2014,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc	(Keiler,	"NW_BIGFARM_FOREST_02");
 	Wld_InsertNpc	(Keiler,	"NW_BIGFARM_FOREST_02");
 
-	// Br?tende Scavenger
+	// Brütende Scavenger
 
 	Wld_InsertNpc	(Scavenger_Breed,	"FP_BREED_SCAVENGER_01");
 };
@@ -2327,7 +2377,6 @@ FUNC VOID INIT_NewWorld_Part_Forest_01 ()
 //------- Troll Area ---------------------------
 FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 {
-	Wld_InsertNpc 	(Minecrawlerqueen, 			"FP_ROAM_MAGECAVE_20");
 
 	// Stollen unter Sonnenkreis
 
@@ -2560,22 +2609,22 @@ FUNC VOID STARTUP_NewWorld()
 	STARTUP_NewWorld_Part_Pass_To_OW_01();
 	// ------ INTRO - muss ganz am Ende der Startup stehen ------
 	Kapitel = 1; //Joly: Kann hier stehen bleiben!
-	//PlayVideo ("INTRO_ALT.BIK");
-	//PlayVideo ("GREATPRAYER.BIK");
-	//PlayVideo ("OREHEAP.BIK");
-	//PlayVideo ("EXTRO.BIK");
-	//PlayVideo ("PLAYEROUT.BIK");
-	//PlayVideo ("INTRO.BIK");
-	//PlayVideo ("Addon_Title.BIK");
 	
 	//-----Addon Talent Goldhacken---------
 	Hero_HackChance = 10;
 };
+
 FUNC VOID INIT_NewWorld()
 {
 	B_InitMonsterAttitudes ();
 	B_InitGuildAttitudes();
 	B_InitNpcGlobals ();
+
+	if (Npc_KnowsInfo(hero, Info_Mod_Dragomir_BurnedLager))
+	{
+		Wld_SendUntrigger	("DRAGOMIRSFEUER");
+		Wld_SendUntrigger	("DRAGOMIRSMOKE");
+	};
 	
 	if (Mod_Cronos_Artefakt == 1)
 	{
@@ -3055,6 +3104,13 @@ FUNC VOID INIT_NewWorld()
 		B_StartOtherRoutine	(Mod_512_RDW_Cavalorn_NW, "MAGIERWEG");
 		B_StartOtherRoutine	(Mod_766_NONE_Grom_NW, "ATLAGER");
 
+		Mod_Cavalorn_Banditen = 1;
+
+		if (Npc_KnowsInfo(hero, Info_Mod_Cavalorn_Banditen3))
+		{
+			B_SetTopicStatus	(TOPIC_MOD_CAVALORN_BANDITEN, LOG_FAILED);
+		};
+
 		B_StartOtherRoutine	(Mod_1723_MIL_Gidan_NW, "ANDRE");
 		B_StartOtherRoutine	(PC_Friend_NW, "TOT");
 
@@ -3301,7 +3357,7 @@ FUNC VOID INIT_AddonWorld ()
 		Wld_InsertItem	(ItAt_DragonEgg_Giftdrache, "FP_ITEM_DRAGONEGG_04");
 	};
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Götterschwerter))
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Goetterschwerter))
 	&& (INSERT_FAKE_HERO_ONETIME == FALSE)
 	{
 		Wld_InsertNpc	(Fake_Hero,		"STRAND");
@@ -3828,19 +3884,11 @@ FUNC VOID INIT_MinentalFreeMineCamp ()
 
 FUNC VOID STARTUP_MinentalOldCamp ()
 {
-	Wld_InsertNpc	(PIR_1390_Addon_InExtremo_DrPymonte,	"OC1");
-	Wld_InsertNpc	(PIR_1391_Addon_InExtremo_TheFlail,	"OC1");
-	Wld_InsertNpc	(PIR_1392_Addon_InExtremo_ThomasTheForger,	"OC1");
-	Wld_InsertNpc	(PIR_1393_Addon_InExtremo_Unicorn,	"OC1");
-	Wld_InsertNpc	(PIR_1394_Addon_InExtremo_YellowPfeiffer,	"OC1");
-	Wld_InsertNpc	(PIR_1395_Addon_InExtremo_Lutter,	"OC1");
-	Wld_InsertNpc	(PIR_1396_Addon_InExtremo_Flex,		"OC1");	
 	Wld_InsertNpc	(Mod_943_GRD_Bloodwyn_MT,		"OC1");
 	Wld_InsertNpc	(Mod_950_STT_Fisk_MT,			"OC1");
 	Wld_InsertNpc	(Mod_954_STT_Huno_MT,			"OC1");
 	Wld_InsertNpc	(Mod_962_STT_Scatty_MT,			"OC1");
 	Wld_InsertNpc	(Mod_965_STT_Snaf_MT,			"OC1");
-	Wld_InsertNpc	(Mod_800_GRD_Stone_MT,			"OC1");
 	Wld_InsertNpc	(Mod_801_STT_Sly_MT,			"OC1");
 	Wld_InsertNpc	(Mod_802_STT_Herek_MT,			"OC1");
 	Wld_InsertNpc	(Mod_803_STT_Mud_MT,			"OC1");
@@ -4293,7 +4341,6 @@ FUNC VOID STARTUP_MinentalPsiCamp ()
 	Wld_InsertNpc	(Mod_1233_TPL_Templer_MT,	"PSI_START");
 	Wld_InsertNpc	(Mod_1286_TPL_Templer_MT,	"PSI_START");
 	Wld_InsertNpc	(Mod_1235_TPL_Templer_MT,	"PSI_START");
-	Wld_InsertNpc	(Mod_1873_TPL_GorNaKosh_MT,	"PSI_START");
 	Wld_InsertNpc	(Mod_1924_TPL_GorNaMon_MT,	"PSI_START");
 	Wld_InsertNpc	(Mod_1925_TPL_GorNaKar_MT,	"PSI_START");
 };
@@ -4695,6 +4742,8 @@ FUNC VOID STARTUP_MinentalSurface ()
 	Wld_InsertNpc	(Mod_1517_SNOV_Novize_MT,	"OC1");
 	Wld_InsertNpc	(Mod_1030_SNOV_Abdi_MT,	"OC1");
 	Wld_InsertNpc	(Mod_7358_DMR_Daemonenritter_MT, "OC1");
+	Wld_InsertNpc	(Mod_7784_SNOV_Novize_MT, "OC1");
+	Wld_InsertNpc	(Mod_7502_KDS_Alax_MT,	"OC1");
 
 	// Monster in Stollen in Felsenfestung
 
@@ -5554,7 +5603,7 @@ FUNC VOID STARTUP_MinentalSurface ()
 	Wld_InsertNpc	(Snapper,	"OW_MONSTER_NAVIGATE_02");
 	Wld_InsertNpc	(Snapper,	"OW_MONSTER_NAVIGATE_02");
 
-	// H?hle unter Klosterruine
+	// Höhle unter Klosterruine
 
 	Wld_InsertNpc	(Waran,	"OW_ABYSS_SPAWN_WARAN");
 	Wld_InsertNpc	(Waran,	"OW_ABYSS_SPAWN_WARAN");
@@ -5562,7 +5611,7 @@ FUNC VOID STARTUP_MinentalSurface ()
 	Wld_InsertNpc	(Waran,	"SPAWN_ABYSS_TO_CAVE_MOVE");
 	Wld_InsertNpc	(Waran,	"SPAWN_ABYSS_TO_CAVE_MOVE");
 
-	// Xardas versunkener Turm
+	// Xardas' versunkener Turm
 
 	Wld_InsertNpc	(ZombieRandom,	"MAGICTOWER_STAIRS");
 	Wld_InsertNpc	(ZombieRandom,	"MAGICTOWER_STAIRS");
@@ -5613,13 +5662,13 @@ FUNC VOID INIT_MinentalSurface ()
 	}; 
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_AW_Hi))
-	&& (Hölle_First	==	0)
+	&& (Hoelle_First == 0)
 	{
 		Wld_InsertNpc	(Schattenlord_877_Urnol,	"OC1");
 		Wld_InsertNpc	(Xeres_01,			"OC1");
 
 
-		Hölle_First	=	1;
+		Hoelle_First = 1;
 	};
 
 	if (Urnol_InOT == TRUE)
@@ -5894,6 +5943,19 @@ FUNC VOID INIT_Minental ()
 	Wld_SetMobRoutine(19, 30, "LIGHTSPAWNERELEVEN", 1);
 	Wld_SetMobRoutine(20, 10, "LIGHTSPAWNERELEVEN", 0);
 
+	if (Npc_KnowsInfo(hero, Info_Mod_NaKosh_OM_ZeichenDerBruderschaft))
+	&& (Mod_NaKosh_MT == 0)
+	{
+		Wld_InsertNpc	(Mod_1873_TPL_GorNaKosh_MT,	"PSI_START");
+
+		Mod_NaKosh_MT = 1;
+	};
+
+	if (Kapitel == 2)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_AW_Hi))
+	{
+		B_Kapitelwechsel	(3, MINENTAL_ZEN);
+	};
 
 	if (Mod_MinentalTor == 0)
 	&& ((Mod_WM_KurganAlarm < 4)
@@ -6215,14 +6277,6 @@ FUNC VOID INIT_Minental ()
 		Wld_InsertNpc	(Mod_7508_BUD_Sterling_MT, "OC1");
 	};
 	
-	if (Mod_Sekte_Aufnahme == 1)
-	{
-		Wld_InsertNpc	(Mod_1896_DMB_Karras_MT, "PSI_START");
-		Wld_InsertNpc	(Mod_7268_PSINOV_Lester_MT, "PSI_START");
-
-		Mod_Sekte_Aufnahme = 2;
-	};
-
 	if (Mod_Enter_Minental_01 == FALSE)
 	&& (Mod_Schwierigkeit > 0)
 	{
@@ -6672,6 +6726,10 @@ FUNC VOID STARTUP_OrcTempel ()
 
 	Wld_InsertNpc	(Monster_11055_Skelett_OT, "TPL_386");
 	Wld_InsertNpc	(Monster_11056_Skelett_OT, "TPL_386");
+
+	Wld_InsertNpc	(Mod_7797_PSINOV_Novize_OT, "TPL_386");
+
+	B_KillNpc	(Mod_7797_PSINOV_Novize_OT);
 };
 
 FUNC VOID INIT_OrcTempel ()
@@ -6792,6 +6850,17 @@ FUNC VOID STARTUP_OldMine ()
 	NameAllFires();
 
       	Wld_InsertNpc	(Mod_1031_DMR_Kurgan_OM,	"OM_ENTRANCE");
+      	Wld_InsertNpc	(Mod_7798_SMK_Drake_OM,	"OM_ENTRANCE");
+      	Wld_InsertNpc	(Mod_7799_SMK_Brandick_OM,	"OM_ENTRANCE");
+	Wld_InsertNpc	(Mod_1497_BUD_Aleph_OM,	"OM_ENTRANCE");
+	Wld_InsertNpc	(Mod_7800_SMK_Alberto_OM,	"OM_ENTRANCE");
+	Wld_InsertNpc	(Mod_7801_TPL_GorNaBar_OM,	"OM_ENTRANCE");
+	Wld_InsertNpc	(Mod_7802_TPL_Templer_OM,	"OM_ENTRANCE");
+	Wld_InsertNpc	(Mod_7803_TPL_GorNaKosh_OM,	"OM_ENTRANCE");
+
+	B_KillNpc	(Mod_1497_BUD_Aleph_OM);
+	B_KillNpc	(Mod_7801_TPL_GorNaBar_OM);
+	B_KillNpc	(Mod_7802_TPL_Templer_OM);
 	
 	Wld_InsertNpc	(Mod_1474_BUD_Buddler_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1475_BUD_Buddler_OM,	"OM_ENTRANCE");
@@ -6812,7 +6881,6 @@ FUNC VOID STARTUP_OldMine ()
 	Wld_InsertNpc	(Mod_1507_BUD_Buddler_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1493_BUD_Buddler_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1495_BUD_Buddler_OM,	"OM_ENTRANCE");
-	Wld_InsertNpc	(Mod_1497_BUD_Aleph_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1498_BUD_Grimes_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1500_BUD_Buddler_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1501_BUD_Buddler_OM,	"OM_ENTRANCE");
@@ -6835,6 +6903,14 @@ FUNC VOID STARTUP_OldMine ()
 
 	Wld_InsertNpc	(Orc_Stomper,		"OM_CAVE3_15");
 	Wld_InsertNpc	(Orc_Stonemill,		"OM_CAVE1_BELLOWS");
+
+	Wld_InsertNpc	(Minecrawler,		"OM_037");
+	Wld_InsertNpc	(Minecrawler,		"OM_033");
+	Wld_InsertNpc	(Minecrawler,		"FP_ROAM_CRAWLER04_02");
+
+	Wld_InsertNpc	(Minecrawler,		"OM_030");
+	Wld_InsertNpc	(Minecrawler,		"OM_133");
+	Wld_InsertNpc	(Minecrawler,		"OM_133");
 
 };
 
@@ -6878,8 +6954,6 @@ FUNC VOID INIT_OldMine ()
 		B_RemoveNpc	(Mod_7048_RIT_Ritter_OM);
 		B_RemoveNpc	(Mod_7049_RIT_Ritter_OM);
 	};
-
-	B_OM_ARBEIT();
 };
 
 FUNC VOID STARTUP_OrcGraveyard()
@@ -6982,7 +7056,7 @@ FUNC VOID STARTUP_OrcGraveyard()
 
 	// Irgendwo vorher
 
-	//Wld_InsertNpc	(Mod_7770_PSINOV_Nyras_OGY,	"GRYD_082");
+	Wld_InsertNpc	(Mod_7770_PSINOV_Nyras_OGY,	"GRYD_054");
 };
 
 FUNC VOID INIT_OrcGraveyard ()
@@ -7686,7 +7760,7 @@ FUNC VOID STARTUP_FEUERMAGIER_SURFACE()
 
 	NameAllFires();
 
-       //Monster
+	// Monster
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_SCAV_01");
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_SCAV_02");
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_SCAV_03");
@@ -7703,7 +7777,7 @@ FUNC VOID STARTUP_FEUERMAGIER_SURFACE()
 
 	Wld_InsertNpc	(Wisp,	"FP_ROAM_IRRLICHT_01");
 
-	//H?hle
+	// Höhle
 	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_24");
 	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_07");
 	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_06");
@@ -7717,10 +7791,14 @@ FUNC VOID STARTUP_FEUERMAGIER_SURFACE()
 	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_21");
 	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_17");
 
-	//Fokusw?chter
-	Wld_InsertNpc	(Demon,		"FP_ROAM_DEMON_MUT_FOKUS");
+	// Fokuswächter
+	Wld_InsertNpc	(Demon_PAT_01,		"FP_ROAM_DEMON_MUT_FOKUS");
+	Wld_InsertNpc	(Demon_PAT_02,		"FP_ROAM_DEMON_MUT_FOKUS");
+	Wld_InsertNpc	(Mod_7794_KDS_SchwarzerMagier_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7795_SNOV_Novize_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7796_HEX_Hexe_PAT,	"WP_PAT_START");
 
-	//Schwarzis
+	// Schwarzis
 	Wld_InsertNpc	(Mod_1600_SMK_SchwarzerKrieger_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1601_SMK_Blackknight_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1602_SMK_Blackknight_PAT,	"WP_PAT_START");
@@ -7746,6 +7824,14 @@ FUNC VOID STARTUP_FEUERMAGIER_SURFACE()
 	Wld_InsertNpc	(Mod_1721_KDS_SchwarzerMagier_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1719_KDS_SchwarzerMagier_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1720_KDS_SchwarzerMagier_PAT,	"WP_PAT_START");
+
+	// Foki platzieren
+
+	Wld_InsertItem	(ItMi_Focus_Pat_01,	"FP_ITEM_FOKUS_01");
+	Wld_InsertItem	(ItMi_Focus_Pat_02,	"FP_ITEM_FOKUS_02");
+	Wld_InsertItem	(ItMi_Focus_Pat_03,	"FP_ITEM_FOKUS_03");
+	Wld_InsertItem	(ItMi_Focus_Pat_04,	"FP_ITEM_FOKUS_04");
+	Wld_InsertItem	(ItMi_Focus_Pat_05,	"FP_ITEM_FOKUS_05");
 };
 
 FUNC VOID INIT_FEUERMAGIER_SURFACE()
@@ -7763,12 +7849,17 @@ FUNC VOID STARTUP_FEUERMAGIER_TEMPEL()
 	Wld_InsertNpc	(Mod_1739_KDF_Ordenspriester_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1740_KDF_Ordenspriester_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1769_PAL_Paladin_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7787_SFB_Schuerfer_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7788_SFB_Schuerfer_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7789_SFB_Schuerfer_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7790_SFB_Schuerfer_PAT,	"WP_PAT_START");
 
 	//Wichtige NPC's
 	Wld_InsertNpc	(Mod_1746_KDF_Tojan_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1747_KDF_Furgas_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1773_KDF_Nagon_PAT,	"WP_PAT_START");
 	Wld_InsertNpc	(Mod_1774_KDF_Orakel_PAT,	"WP_PAT_START");
+	Wld_InsertNpc	(Mod_7791_SFB_Flaemar_PAT,	"WP_PAT_START");
 
 	//Mauer-NPC's
 	Wld_InsertNpc	(Mod_1748_KDF_Magier_PAT,	"WP_PAT_START");
@@ -7860,6 +7951,24 @@ FUNC VOID INIT_FEUERMAGIER_UNTERGRUND()
 		Wld_InsertNpc	(Mod_1916_KDF_Magier_PAT_UG, "WP_PAT_UNTERGRUND_06");
 		
 		Mod_SchwarzerVerraeterInsert = TRUE;
+	};
+
+	if (Npc_KnowsInfo(hero, Info_Mod_Furgas_MangelQuest2))
+	&& (Mod_Pat_FurgasFertig == 0)
+	{
+		Mod_Pat_FurgasFertig = 1;
+
+		Wld_InsertNpc	(Mod_7787_SFB_Schuerfer_PAT, "TOT");
+		Wld_InsertNpc	(Mod_7788_SFB_Schuerfer_PAT, "TOT");
+		Wld_InsertNpc	(Mod_7789_SFB_Schuerfer_PAT, "TOT");
+		Wld_InsertNpc	(Mod_7790_SFB_Schuerfer_PAT, "TOT");
+		Wld_InsertNpc	(Mod_7791_SFB_Flaemar_PAT, "TOT");
+
+		B_StartOtherRoutine	(Mod_7787_SFB_Schuerfer_PAT, "MINE");
+		B_StartOtherRoutine	(Mod_7788_SFB_Schuerfer_PAT, "MINE");
+		B_StartOtherRoutine	(Mod_7789_SFB_Schuerfer_PAT, "MINE");
+		B_StartOtherRoutine	(Mod_7790_SFB_Schuerfer_PAT, "MINE");
+		B_StartOtherRoutine	(Mod_7791_SFB_Flaemar_PAT, "MINE");
 	};
 };
 
@@ -8031,35 +8140,6 @@ FUNC VOID INIT_PATHERION()
 	};
 };
 
-FUNC VOID STARTUP_BeliarKloster()
-{
-	CurrentLevel3 = BELIARKLOSTER_ZEN;
-
-	NameAllFires();
-
-	// Schwarzmagier
-
-	Wld_InsertNpc	(Mod_7502_KDS_Alax_BK,	"BK_001");
-
-	// Schwarze Novizen
-	
-};
-
-FUNC VOID INIT_BeliarKloster()
-{
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-
-	OldLevel(BELIARKLOSTER_ZEN);
-
-	Wld_AssignRoomToGuild("laden"  , GIL_PUBLIC);
-	Wld_AssignRoomToGuild("kirche"  , GIL_PUBLIC);
-	Wld_AssignRoomToGuild("folterkammer"  , GIL_PUBLIC);
-	Wld_AssignRoomToGuild("myxir"  , GIL_PUBLIC);
-	Wld_AssignRoomToGuild("restraum"  , GIL_PUBLIC);
-};
-
 FUNC VOID STARTUP_Bergwelt()
 {
 	CurrentLevel3 = BERGWELT_ZEN;
@@ -8218,6 +8298,7 @@ FUNC VOID STARTUP_Eisgebiet()
 	Wld_InsertNpc	(Mod_7767_OUT_Veronica_EIS, "START_EISGEBIET");
 	Wld_InsertNpc	(Mod_7768_OUT_Amorite_EIS, "START_EISGEBIET");
 	Wld_InsertNpc	(Mod_974_OUT_Gestath_EIS, "START_EISGEBIET");
+	Wld_InsertNpc	(Mod_7792_OUT_Anglar_EIS, "START_EISGEBIET");
 
 	// Menschen in der Umgebung
 
@@ -8247,8 +8328,9 @@ FUNC VOID STARTUP_Eisgebiet()
 
 	Wld_InsertNpc	(Monster_11067_Talos_EIS,	"START_EISGEBIET");
 	Wld_InsertNpc	(Monster_11068_Eisriese_EIS,	"START_EISGEBIET");
+	Wld_InsertNpc	(Balrog,	"GROSEROFEN");
 
-	// Tempelchen f?r Quest
+	// Tempelchen für Quest
 
 	Wld_InsertNpc	(Zombie_Eis_Schneegeister,	"EIS_TEMPELCHEN_005");
 	Wld_InsertNpc	(Schneegeist,	"EIS_TEMPELCHEN_005");
@@ -8260,7 +8342,41 @@ FUNC VOID INIT_Eisgebiet()
 	//---Laternen---
 	Wld_SetMobRoutine (00,00, "FIREPLACE", 1);
 	Wld_SetMobRoutine (20,00, "FIREPLACE", 1);
-	Wld_SetMobRoutine (05,00, "FIREPLACE", 0);
+	Wld_SetMobRoutine (07,00, "FIREPLACE", 0);
+
+	// Morgens
+
+	Wld_SetMobRoutine(05, 10, "LIGHTSPAWNERONE", 1);
+	Wld_SetMobRoutine(06, 10, "LIGHTSPAWNERONE", 0);
+	Wld_SetMobRoutine(06, 10, "LIGHTSPAWNERTWO", 1);
+	Wld_SetMobRoutine(07, 10, "LIGHTSPAWNERTWO", 0);
+	Wld_SetMobRoutine(07, 10, "LIGHTSPAWNERTHREE", 1);
+	Wld_SetMobRoutine(08, 10, "LIGHTSPAWNERTHREE", 0);
+
+	// Mittags
+
+	Wld_SetMobRoutine(08, 10, "LIGHTSPAWNERFOUR", 1);
+	Wld_SetMobRoutine(09, 10, "LIGHTSPAWNERFOUR", 0);
+	Wld_SetMobRoutine(09, 10, "LIGHTSPAWNERFIVE", 1);
+	Wld_SetMobRoutine( 15, 10, "LIGHTSPAWNERFIVE", 0);
+	Wld_SetMobRoutine(15, 10, "LIGHTSPAWNERSIX", 1);
+	Wld_SetMobRoutine( 16, 10, "LIGHTSPAWNERSIX", 0);
+
+	// Nachmittags
+
+	Wld_SetMobRoutine(16, 10, "LIGHTSPAWNERSEVEN", 1);
+	Wld_SetMobRoutine(17, 10, "LIGHTSPAWNERSEVEN", 0);
+	Wld_SetMobRoutine(17, 10, "LIGHTSPAWNEREIGHT", 1);
+	Wld_SetMobRoutine(18, 10, "LIGHTSPAWNEREIGHT", 0);
+
+	// Abends
+
+	Wld_SetMobRoutine(18, 10, "LIGHTSPAWNERNINE", 1);
+	Wld_SetMobRoutine(18, 50, "LIGHTSPAWNERNINE", 0);
+	Wld_SetMobRoutine(18, 50, "LIGHTSPAWNERTEN", 1);
+	Wld_SetMobRoutine(19, 30, "LIGHTSPAWNERTEN", 0);
+	Wld_SetMobRoutine(19, 30, "LIGHTSPAWNERELEVEN", 1);
+	Wld_SetMobRoutine(20, 10, "LIGHTSPAWNERELEVEN", 0);
 
 	B_InitMonsterAttitudes();
 	B_InitGuildAttitudes();
@@ -8507,46 +8623,46 @@ FUNC VOID STARTUP_Relendel()
 
 	// Moor
 
-	Wld_InsertNpc	(SwampZombie_Moor_01,	"REL_MOOR_054");
-	Wld_InsertNpc	(SwampZombie_Moor_02,	"REL_MOOR_041");
-	Wld_InsertNpc	(SwampZombie_Moor_03,	"REL_MOOR_046");
-	Wld_InsertNpc	(SwampZombie_Moor_04,	"REL_MOOR_026");
-	Wld_InsertNpc	(SwampZombie_Moor_05,	"REL_MOOR_037");
-	Wld_InsertNpc	(SwampZombie_Moor_06,	"REL_MOOR_059");
-	Wld_InsertNpc	(SwampZombie_Moor_07,	"REL_MOOR_064");
-	Wld_InsertNpc	(SwampZombie_Moor_08,	"REL_MOOR_068");
-	Wld_InsertNpc	(SwampZombie_Moor_09,	"REL_MOOR_072");
-	Wld_InsertNpc	(SwampZombie_Moor_10,	"REL_MOOR_077");
-	Wld_InsertNpc	(SwampZombie_Moor_11,	"REL_MOOR_082");
-	Wld_InsertNpc	(SwampZombie_Moor_12,	"REL_MOOR_117");
-	Wld_InsertNpc	(SwampZombie_Moor_13,	"REL_MOOR_123");
-	Wld_InsertNpc	(SwampZombie_Moor_14,	"REL_MOOR_127");
-	Wld_InsertNpc	(SwampZombie_Moor_15,	"REL_MOOR_087");
-	Wld_InsertNpc	(SwampZombie_Moor_16,	"REL_MOOR_091");
-	Wld_InsertNpc	(SwampZombie_Moor_17,	"REL_MOOR_095");
-	Wld_InsertNpc	(SwampZombie_Moor_18,	"REL_MOOR_057");
-	Wld_InsertNpc	(SwampZombie_Moor_19,	"REL_MOOR_039");
-	Wld_InsertNpc	(SwampZombie_Moor_20,	"REL_MOOR_085");
-	Wld_InsertNpc	(SwampZombie_Moor_01,	"REL_MOOR_054");
-	Wld_InsertNpc	(SwampZombie_Moor_02,	"REL_MOOR_041");
-	Wld_InsertNpc	(SwampZombie_Moor_03,	"REL_MOOR_046");
-	Wld_InsertNpc	(SwampZombie_Moor_04,	"REL_MOOR_026");
-	Wld_InsertNpc	(SwampZombie_Moor_05,	"REL_MOOR_037");
-	Wld_InsertNpc	(SwampZombie_Moor_06,	"REL_MOOR_059");
-	Wld_InsertNpc	(SwampZombie_Moor_07,	"REL_MOOR_064");
-	Wld_InsertNpc	(SwampZombie_Moor_08,	"REL_MOOR_068");
-	Wld_InsertNpc	(SwampZombie_Moor_09,	"REL_MOOR_072");
-	Wld_InsertNpc	(SwampZombie_Moor_10,	"REL_MOOR_077");
-	Wld_InsertNpc	(SwampZombie_Moor_11,	"REL_MOOR_082");
-	Wld_InsertNpc	(SwampZombie_Moor_12,	"REL_MOOR_117");
-	Wld_InsertNpc	(SwampZombie_Moor_13,	"REL_MOOR_123");
-	Wld_InsertNpc	(SwampZombie_Moor_14,	"REL_MOOR_127");
-	Wld_InsertNpc	(SwampZombie_Moor_15,	"REL_MOOR_087");
-	Wld_InsertNpc	(SwampZombie_Moor_16,	"REL_MOOR_091");
-	Wld_InsertNpc	(SwampZombie_Moor_17,	"REL_MOOR_095");
-	Wld_InsertNpc	(SwampZombie_Moor_18,	"REL_MOOR_057");
-	Wld_InsertNpc	(SwampZombie_Moor_19,	"REL_MOOR_039");
-	Wld_InsertNpc	(SwampZombie_Moor_20,	"REL_MOOR_085");
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_054", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_041", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_046", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_026", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_037", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_059", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_064", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_068", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_072", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_077", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_082", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_117", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_123", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_127", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_087", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_091", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_095", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_057", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_039", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_085", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_054", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_041", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_046", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_026", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_037", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_059", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_064", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_068", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_072", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_077", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_082", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_117", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_123", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_127", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_087", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_091", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_095", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_057", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_039", 100);
+	Wld_InsertNpcAndRespawn	(SwampZombie_Moor,	"REL_MOOR_085", 100);
 
 	Wld_InsertNpc	(WilderApfelbaum,	"FP_ROAM_MOOR_WILDERAPFELBAUM_01");
 	Wld_InsertNpc	(WilderApfelbaum,	"FP_ROAM_MOOR_WILDERAPFELBAUM_02");
@@ -8721,7 +8837,7 @@ FUNC VOID INIT_Relendel()
 	{
 		Mod_Kimon_REL = 1;
 
-		//Wld_InsertNpc	(Mod_7771_FH_Kimon_REL, "TOT");
+		Wld_InsertNpc	(Mod_7771_FH_Kimon_REL, "TOT");
 	};
 
 	if (Mod_WM_UnheilFertig == 1)

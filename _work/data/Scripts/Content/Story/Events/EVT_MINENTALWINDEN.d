@@ -252,6 +252,78 @@ FUNC VOID EVT_BIBENTDECKT_FUNC()
 	{
 		Mod_BibEntdeckt = 1;
 
-		B_LogEntry	(TOPIC_MOD_DÄMONENBESCHWÖRER, "Na, das sieht doch aus, als wäre ich erfolgreich gewesen. Wirklich beeindruckend. Da hat jemand lange gesammelt. Andokai wird es freuen, davon zu erfahren.");
+		B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Na, das sieht doch aus, als wäre ich erfolgreich gewesen. Wirklich beeindruckend. Da hat jemand lange gesammelt. Andokai wird es freuen, davon zu erfahren.");
 	};
+};
+
+FUNC VOID EVT_FEUERGEGENEIS_TELEPORT()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Hyglas_FeuerGegenEis7))
+	{
+		AI_Teleport	(hero, "NW_MONASTERY_NOVICE01_06");
+
+		Mod_FM_FeuerEis = 4;
+	};
+};
+
+FUNC VOID OTSCHALTER01_S1()
+{
+	if (Mod_OTSchalter == 0)
+	|| (Mod_OTSchalter == 1)
+	|| (Mod_OTSchalter == 3)
+	|| (Mod_OTSchalter == 4)
+	|| (Mod_OTSchalter == 8)
+	|| (Mod_OTSchalter == 11)
+	|| (Mod_OTSchalter == 12)
+	{
+		Mod_OTSchalter += 1;
+	}
+	else
+	{
+		Mod_OTSchalter = 0;
+	};
+};
+
+FUNC VOID OTSCHALTER02_S1()
+{
+	if (Mod_OTSchalter == 2)
+	|| (Mod_OTSchalter == 5)
+	|| (Mod_OTSchalter == 6)
+	|| (Mod_OTSchalter == 7)
+	|| (Mod_OTSchalter == 9)
+	|| (Mod_OTSchalter == 10)
+	|| (Mod_OTSchalter == 13)
+	|| (Mod_OTSchalter == 14)
+	|| (Mod_OTSchalter == 15)
+	{
+		Mod_OTSchalter += 1;
+
+		if (Mod_OTSchalter == 16)
+		{
+			Wld_SendTrigger	("OTGEHEIMKAMMER");
+		};
+	}
+	else
+	{
+		Mod_OTSchalter = 0;
+	};
+};
+
+FUNC VOID OTGEHEIMKAMMER03()
+{
+	if (Mod_OT_Geheimkammer == 1)
+	{
+		Mod_OT_Geheimkammer = 2;
+
+		B_SetTopicStatus	(TOPIC_MOD_OT_GEHEIMKAMMER, LOG_SUCCESS);
+
+		B_GivePlayerXP	(200);
+
+		CurrentNQ += 1;
+	};
+};
+
+FUNC VOID EVT_MINENEINGANG_TRIGGERSCRIPT_FUNC()
+{
+	Mod_Mineneingang_Castle = TRUE;
 };
