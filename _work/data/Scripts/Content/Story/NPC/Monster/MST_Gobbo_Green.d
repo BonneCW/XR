@@ -338,6 +338,13 @@ INSTANCE YGobbo_Green (Mst_Default_YGobbo_Green)
 	Npc_SetToFightMode (self, ItMw_1h_Bau_Mace); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 };
 
+INSTANCE YGobbo_Green_Weg (Mst_Default_YGobbo_Green)
+{
+	B_SetVisuals_Gobbo_Green();
+	
+	Npc_SetToFightMode (self, ItMw_1h_Bau_Mace); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
+};
+
 INSTANCE Gobbo_Fester_01 (Mst_Default_Gobbo_Green)
 {
 	name	= "Junger Goblin";

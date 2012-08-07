@@ -439,6 +439,39 @@ INSTANCE YWolf	(Mst_Default_Wolf)
 	aivar[AIV_MM_SleepEnd]		= 6;
 };
 
+INSTANCE YWolf_Weg	(Mst_Default_Wolf)
+{
+	level							=	3;
+	name							=	"Junger Wolf";
+	//----- Attribute ----
+	attribute	[ATR_STRENGTH]		=	15;
+	attribute	[ATR_DEXTERITY]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	30;
+	attribute	[ATR_HITPOINTS]		=	30;
+	
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	15000;
+	protection	[PROT_EDGE]			=	15000;
+	protection	[PROT_POINT]		=	1000;
+	protection	[PROT_FIRE]			=	15;
+	protection	[PROT_FLY]			=	15;
+
+	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
+	
+	//----- Kampf-Taktik ----
+	fight_tactic					= FAI_MONSTER_COWARD;
+	
+	B_SetVisuals_Wolf();
+	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
+	Npc_SetToFistMode(self);
+	CreateInvItems (self, ItFo_MuttonRaw, 1);
+
+	aivar[AIV_MM_RoamStart] 	= 6;	
+	aivar[AIV_MM_RoamEnd]		= 22;
+	aivar[AIV_MM_SleepStart]	= 22;
+	aivar[AIV_MM_SleepEnd]		= 6;
+};
+
 INSTANCE Balthi_YWolf1	(Mst_Default_Wolf)
 {
 	name							=	"Junger Wolf";

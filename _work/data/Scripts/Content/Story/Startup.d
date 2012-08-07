@@ -1506,16 +1506,16 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 
 	Wld_InsertNpc	(Rabbit, "NW_XARDAS_TOWER_WATERFALL_01");
 
-	Wld_InsertNpc	(YWolf, "NW_XARDAS_PATH_FARM1_08_01");
-	Wld_InsertNpc	(YWolf, "NW_XARDAS_PATH_FARM1_08_01");
+	Wld_InsertNpc	(YWolf_Weg, "NW_XARDAS_PATH_FARM1_08_01");
+	Wld_InsertNpc	(YWolf_Weg, "NW_XARDAS_PATH_FARM1_08_01");
 
-	Wld_InsertNpc	(Wolf_Verletzt, "NW_XARDAS_PATH_FARM1_06");
+	Wld_InsertNpc	(YWolf_Weg, "NW_XARDAS_PATH_FARM1_06");
 
-	Wld_InsertNpc	(YGobbo_Green, "NW_XARDAS_PATH_FARM1_05");
-	Wld_InsertNpc	(YGobbo_Green, "NW_XARDAS_PATH_FARM1_05");
+	Wld_InsertNpc	(YGobbo_Green_Weg, "NW_XARDAS_PATH_FARM1_05");
+	Wld_InsertNpc	(YGobbo_Green_Weg, "NW_XARDAS_PATH_FARM1_05");
 
-	Wld_InsertNpc	(YGobbo_Green, "NW_XARDAS_MONSTER_INSERT_02");
-	Wld_InsertNpc	(YGobbo_Green, "NW_XARDAS_MONSTER_INSERT_02");
+	Wld_InsertNpc	(YGobbo_Green_Weg, "NW_XARDAS_MONSTER_INSERT_02");
+	Wld_InsertNpc	(YGobbo_Green_Weg, "NW_XARDAS_MONSTER_INSERT_02");
 
 	// H?hle ins Schwarzmagiertal
 
