@@ -219,78 +219,12 @@ FUNC VOID DAUERFUNC_01()
 		};
 	};
 
-	if (Mod_KIGlocke == 2)
-	{
-		if (FrameCounter < 25)
-		{
-			var int range;
-			range = MEM_ReadInt(SPAWN_INSERTRANGE_Address);
-			range = truncf(range);
-
-			var int Sichtweite;
-			Sichtweite = STR_ToInt(MEM_GetGothOpt("ENGINE", "zVobFarClipZScale"));
-
-			var int Sichtweite2;
-			Sichtweite2 = STR_ToInt(MEM_GetGothOpt("PERFORMANCE", "sightValue"));
-
-			if (range > 2000)
-			{
-				range -= 250;
-
-				MEM_WriteInt(SPAWN_INSERTRANGE_Address, mkf(range));
-				MEM_WriteInt(SPAWN_REMOVERANGE_Address, mkf(range));
-			}
-			else if (Sichtweite > 4)
-			{
-				Sichtweite -= 1;
-				MEM_SetGothOpt("ENGINE", "zVobFarClipZScale", IntToString(Sichtweite));
-			}
-			else if (Sichtweite2 > 4)
-			{
-				Sichtweite2 -= 1;
-				MEM_SetGothOpt("PERFORMANCE", "sightValue", IntToString(Sichtweite2));
-			};
-		}
-		else if (FrameCounter > 30)
-		{
-			var int range2;
-			range2 = MEM_ReadInt(SPAWN_INSERTRANGE_Address);
-			range2 = truncf(range2);
-
-			var int Sichtweite3;
-			Sichtweite3 = STR_ToInt(MEM_GetGothOpt("ENGINE", "zVobFarClipZScale"));
-
-			var int Sichtweite4;
-			Sichtweite4 = STR_ToInt(MEM_GetGothOpt("PERFORMANCE", "sightValue"));
-
-			if (Sichtweite4 < 14)
-			{
-				Sichtweite4 += 1;
-				MEM_SetGothOpt("PERFORMANCE", "sightValue", IntToString(Sichtweite4));
-			}
-			else if (Sichtweite3 < 14)
-			{
-				Sichtweite3 += 1;
-				MEM_SetGothOpt("ENGINE", "zVobFarClipZScale", IntToString(Sichtweite3));
-			}
-			else if (range2 < 4500)
-			{
-				range2 += 250;
-
-				MEM_WriteInt(SPAWN_INSERTRANGE_Address, mkf(range2));
-				MEM_WriteInt(SPAWN_REMOVERANGE_Address, mkf(range2));
-			};
-		};
-	};
-
 	if (Mod_StartTimer == 1)
 	{
 		if (FrameCounter > 10)
 		{
 			TimeCounter_Fog += 1;
 		};
-
-		Print (IntToString(TimeCounter_Fog));
 	};
 
 	if (C_BodyStateContains (hero, BS_DIVE))
@@ -385,7 +319,6 @@ FUNC VOID DAUERFUNC_01()
 	Mod_Esssystem = STR_ToInt(MEM_GetGothOpt("XERES", "esssystem"));
 	Mod_AutoInventar = STR_ToInt(MEM_GetGothOpt("XERES", "inventar"));
 	Mod_EXP_Anzeige = STR_ToInt(MEM_GetGothOpt("XERES", "erfahrung"));
-	//Mod_KIGlocke = STR_ToInt(MEM_GetGothOpt("XERES", "kiglocke"));
 	Mod_Autosave = STR_ToInt(MEM_GetGothOpt("XERES", "autosave"));
 	Mod_Balken = STR_ToInt(MEM_GetGothOpt("XERES", "balken"));
 	Mod_Maussteuerung = STR_ToInt(MEM_GetGothOpt("XERES", "enableMouse"));
@@ -494,9 +427,9 @@ FUNC VOID DAUERFUNC_01()
 
 					CutsceneAn = FALSE;
 
-					Wld_InsertNpc	(Gobbo_Skeleton, "NW_XARDAS_GOBBO_02");
-					Wld_InsertNpc	(Gobbo_Skeleton, "NW_XARDAS_GOBBO_02");
-					Wld_InsertNpc	(Gobbo_Skeleton, "NW_XARDAS_GOBBO_02");
+					Wld_InsertNpc	(Gobbo_Skeleton_Weg, "NW_XARDAS_GOBBO_02");
+					Wld_InsertNpc	(Gobbo_Skeleton_Weg, "NW_XARDAS_GOBBO_02");
+					Wld_InsertNpc	(Gobbo_Skeleton_Weg, "NW_XARDAS_GOBBO_02");
 				};
 
 				Mod_DunklerPilger_Counter += 1;

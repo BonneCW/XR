@@ -80,6 +80,13 @@ INSTANCE Gobbo_Skeleton	(Mst_Default_Gobbo_Skeleton)
 	Npc_SetToFightMode (self, ItMw_1h_Bau_Mace); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 };
 
+INSTANCE Gobbo_Skeleton_Weg	(Mst_Default_Gobbo_Skeleton)
+{
+	B_SetVisuals_Gobbo_Skeleton();
+
+	Npc_SetToFightMode (self, ItMw_1h_Bau_Mace); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
+};
+
 INSTANCE Gobbo_Skeleton_Eis	(Mst_Default_Gobbo_Skeleton)
 {
 	B_SetVisuals_Gobbo_Skeleton();
