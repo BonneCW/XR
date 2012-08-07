@@ -127,3 +127,10 @@ INSTANCE YFleischfly	(Mst_Default_YFleischfly)
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
 };
+
+INSTANCE YFleischfly_Weg	(Mst_Default_YFleischfly)
+{
+	B_SetVisuals_Fleischfly();
+	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
+	Npc_SetToFistMode(self);
+};

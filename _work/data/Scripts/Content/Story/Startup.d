@@ -1380,7 +1380,7 @@ func void STARTUP_NewWorld_Part_Farm_01()
 	Wld_InsertNpc		(Sheep_Lobart_12, 	"NW_FARM1_OUT_03");
 	Wld_InsertNpc		(Sheep_Lobart_13, 	"NW_FARM1_OUT_03");
 	
-	// Schafe bei der Windm?hl
+	// Schafe bei der Windmühle
 
 	Wld_InsertNpc		(Sheep_Lobart_14, 	"NW_FARM1_MILL_01");
 	Wld_InsertNpc		(Sheep_Lobart_15, 	"NW_FARM1_MILL_01");
@@ -1393,12 +1393,12 @@ func void STARTUP_NewWorld_Part_Farm_01()
 
 	// Am Weg Richtung Stadt
 
-	Wld_InsertNpc	(YFleischfly,	"FP_ROAM_NW_FARM1_PATH_SPAWN_02_02");
-	Wld_InsertNpc	(YFleischfly,	"FP_ROAM_NW_FARM1_PATH_SPAWN_01_03");
+	Wld_InsertNpc	(YFleischfly_Weg,	"FP_ROAM_NW_FARM1_PATH_SPAWN_02_02");
+	Wld_InsertNpc	(YFleischfly_Weg,	"FP_ROAM_NW_FARM1_PATH_SPAWN_01_03");
 
-	Wld_InsertNpc	(YGobbo_Green,	"FP_ROAM_NW_FARM1_PATH_SPAWN_07_04");
-	Wld_InsertNpc	(YGobbo_Green,	"FP_ROAM_NW_FARM1_PATH_SPAWN_07_02");
-	Wld_InsertNpc	(YGobbo_Green,	"FP_ROAM_NW_FARM1_PATH_SPAWN_07_03");
+	Wld_InsertNpc	(YGobbo_Green_Weg,	"FP_ROAM_NW_FARM1_PATH_SPAWN_07_04");
+	Wld_InsertNpc	(YGobbo_Green_Weg,	"FP_ROAM_NW_FARM1_PATH_SPAWN_07_02");
+	Wld_InsertNpc	(YGobbo_Green_weg,	"FP_ROAM_NW_FARM1_PATH_SPAWN_07_03");
 
 	Wld_InsertNpc	(Rabbit,	"FP_ROAM_NW_FARM1_PATH_SPAWN_05_03");
 
@@ -1408,7 +1408,7 @@ func void STARTUP_NewWorld_Part_Farm_01()
 	Wld_InsertNpc	(YGiant_Bug,	"FP_ROAM_NW_FARM1_CITYWALL_RIGHT_04_02");
 	Wld_InsertNpc	(YGiant_Bug,	"FP_ROAM_NW_FARM1_CITYWALL_RIGHT_04_01");
 
-	Wld_InsertNpc	(Giant_Bug,	"FP_ROAM_NW_FARM1_CITYWALL_RIGHT_02");
+	Wld_InsertNpc	(YGiant_Bug,	"FP_ROAM_NW_FARM1_CITYWALL_RIGHT_02");
 
 	Wld_InsertNpc	(Giant_Bug,	"FP_ROAM_NW_FARM1_OUT_15_04");
 	Wld_InsertNpc	(Giant_Bug,	"FP_ROAM_NW_FARM1_OUT_15_01");
@@ -1431,7 +1431,7 @@ func void STARTUP_NewWorld_Part_Farm_01()
 	Wld_InsertNpc	(Wolf,	"FP_ROAM_FARM1_FORREST_BLOODFLY_08");
 	Wld_InsertNpc	(Wolf,	"FP_ROAM_FARM1_FORREST_BLOODFLY_09");
 
-	// Feldr?ben bei Lobart spawnen
+	// Feldrüben bei Lobart spawnen
 
 	Wld_InsertItem	(ItPl_Beet_Lobart_01, "FP_ITEM_RUEBE_LOBART_01");
 	Wld_InsertItem	(ItPl_Beet_Lobart_02, "FP_ITEM_RUEBE_LOBART_02");
