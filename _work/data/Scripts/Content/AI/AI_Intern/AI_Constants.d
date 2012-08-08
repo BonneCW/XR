@@ -36,9 +36,8 @@ const int 		FIGHT_LOST				= 1;	//in ZS_Unconscious
 const int 		FIGHT_WON				= 2;	//in ZS_Unconscious (player)
 const int 		FIGHT_CANCEL			= 3;	//in B_Attack, wenn other = Player
 
-const int	AIV_Trefferzone				= 0; // nur Monster
+const int	AIV_Trefferzone				= 1; // nur Monster
 
-const int 	AIV_Frei01			= 1;
 const int 		CRIME_NONE				= 0;
 const int 		CRIME_SHEEPKILLER		= 1;
 const int 		CRIME_ATTACK			= 2;	//Kampf self-SC --> feinere Analys in DIA-Modul über AIV_LastFightAgainstPlayer
