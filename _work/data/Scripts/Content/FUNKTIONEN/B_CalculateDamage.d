@@ -214,6 +214,10 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		if (opfer.protection[PROT_BLUNT] != -1)
 		{
 			armor = opfer.protection[PROT_BLUNT]/1000;
+		}
+		else
+		{
+			armor = -1;
 		};
 	}
 	else if (damageType == DAM_EDGE)
@@ -221,6 +225,10 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		if (opfer.protection[PROT_EDGE] != -1)
 		{
 			armor = opfer.protection[PROT_EDGE]/1000;
+		}
+		else
+		{
+			armor = -1;
 		};
 	}
 	else if (damageType == DAM_POINT)
@@ -228,6 +236,10 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		if (opfer.protection[PROT_POINT] != -1)
 		{
 			armor = opfer.protection[PROT_POINT]/1000;
+		}
+		else
+		{
+			armor = -1;
 		};
 	}
 	else if (damageType == DAM_MAGIC)
