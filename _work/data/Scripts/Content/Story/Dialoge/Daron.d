@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Daron_Hi_Condition()
 FUNC VOID Info_Mod_Daron_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Daron_Hi_10_01"); //Ich bin der Feuermagier Daron. Was kann ich für dich tun, Fremder?
 };
 
@@ -304,6 +305,8 @@ FUNC VOID Info_Mod_Daron_Akahasch2_A()
 
 	Info_ClearChoices	(Info_Mod_Daron_Akahasch2);
 
+	B_StartOtherRoutine	(Mod_4016_NOV_Akahasch_NW, "KLOSTER2");
+
 	Mod_DaronAkahasch_Day = Wld_GetDay();
 
 	Mod_DaronAkahasch = 1;
@@ -338,9 +341,9 @@ FUNC VOID Info_Mod_Daron_ImKloster_Info()
 
 	B_LogEntry	(TOPIC_MOD_DARONSGEFALLEN, "Daron hat mich zum Kloster gebracht, ich soll die Medizin nun zu Pyrokar bringen.");
 
-	Npc_ExchangeRoutine	(self, "LIFEKLOSTER");
-
 	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "LIFEKLOSTER");
 
 	B_GivePlayerXP	(100);
 };
