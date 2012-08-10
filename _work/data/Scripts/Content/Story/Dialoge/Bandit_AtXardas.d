@@ -46,6 +46,8 @@ FUNC VOID Info_Mod_Bandit_AtXardas_Bereuen_Info()
 
 	self.guild = GIL_STRF;
 	Npc_SetTrueGuild (self, GIL_STRF);
+
+	B_Attack	(self, hero, AR_GuildEnemy, 0);
 };
 
 INSTANCE Info_Mod_Bandit_AtXardas_WiesoHier (C_INFO)
@@ -103,4 +105,6 @@ FUNC VOID Info_Mod_Bandit_AtXardas_Anschluss_Info()
 
 	self.guild = GIL_STRF;
 	Npc_SetTrueGuild (self, GIL_STRF);
+
+	B_Attack	(self, hero, AR_GuildEnemy, 0);
 };
