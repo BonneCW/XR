@@ -1956,53 +1956,37 @@ FUNC INT Info_Mod_Harad_Verkaufen_Condition()
 
 FUNC VOID Info_Mod_Harad_Verkaufen_Info()
 {
-	AI_Output (other, self, "Info_Mod_Harad_Verkaufen_15_00"); //Ich will meine geschmiedeten Waffen verkaufen.
+	AI_Output (hero, self, "Info_Mod_Harad_Verkaufen_15_00"); //Ich will meine geschmiedeten Waffen verkaufen.
 	
-	var C_ITEM equipWeap; equipWeap = Npc_GetEquippedMeleeWeapon(other);
+	AI_UnequipWeapons	(hero);
 	
-	var int anzahl_common; anzahl_common = Npc_HasItems (other, ItMw_1H_Common_01);
-	if (Hlp_IsItem(equipWeap, ItMw_1H_Common_01) == TRUE) { anzahl_common = anzahl_common - 1; };
-	var int anzahl_schwert1; anzahl_schwert1 = Npc_HasItems (other, ItMw_Schwert1);
-	if (Hlp_IsItem(equipWeap, ItMw_Schwert1) == TRUE) { anzahl_schwert1 = anzahl_schwert1 - 1; };
-	var int anzahl_schwert4; anzahl_schwert4 = Npc_HasItems (other, ItMw_Schwert4);
-	if (Hlp_IsItem(equipWeap, ItMw_Schwert4) == TRUE) { anzahl_schwert4 = anzahl_schwert4 - 1; };
-	var int anzahl_rubinklinge; anzahl_rubinklinge = Npc_HasItems (other, ItMw_Rubinklinge);
-	if (Hlp_IsItem(equipWeap, ItMw_Rubinklinge) == TRUE) { anzahl_rubinklinge = anzahl_rubinklinge - 1; };
-	var int anzahl_elbastardo; anzahl_elbastardo = Npc_HasItems (other, ItMw_ElBastardo);
-	if (Hlp_IsItem(equipWeap, ItMw_ElBastardo) == TRUE) { anzahl_elbastardo = anzahl_elbastardo - 1; };
+	var int anzahl_common; anzahl_common = Npc_HasItems (hero, ItMw_1H_Common_01);
+	var int anzahl_schwert1; anzahl_schwert1 = Npc_HasItems (hero, ItMw_Schwert1);
+	var int anzahl_schwert4; anzahl_schwert4 = Npc_HasItems (hero, ItMw_Schwert4);
+	var int anzahl_rubinklinge; anzahl_rubinklinge = Npc_HasItems (hero, ItMw_Rubinklinge);
+	var int anzahl_elbastardo; anzahl_elbastardo = Npc_HasItems (hero, ItMw_ElBastardo);
 	
 	var int gesamt; gesamt = (anzahl_common + anzahl_schwert1 + anzahl_schwert4 + anzahl_rubinklinge + anzahl_elbastardo);
 	
-    if (gesamt == 0)
+	if (gesamt == 0)
 	{
-		if (Hlp_IsItem(equipWeap, ItMw_1H_Common_01) == TRUE)
-		|| (Hlp_IsItem(equipWeap, ItMw_Schwert1) == TRUE) 
-		|| (Hlp_IsItem(equipWeap, ItMw_Schwert4) == TRUE)
-		|| (Hlp_IsItem(equipWeap, ItMw_Rubinklinge) == TRUE)
-		|| (Hlp_IsItem(equipWeap, ItMw_ElBastardo) == TRUE)  
-		{
-			AI_Output (self, other, "Info_Mod_Harad_Verkaufen_28_01"); //Du hast nur die, die du am Gürtel trägst. Du solltest sie besser behalten.
-		}
-		else
-		{
-			AI_Output (self, other, "Info_Mod_Harad_Verkaufen_28_04"); //Dann stell welche her! Ich nehme nur einfache Schwerter an.
-		};
+		AI_Output (self, hero, "Info_Mod_Harad_Verkaufen_28_01"); //Dann stell welche her! Ich nehme nur einfache Schwerter an.
 	}
 	else //(gesamt >= 1) - die verbeliebenden Klingen verkaufen ------
 	{
-		AI_Output (self, other, "Info_Mod_Harad_Verkaufen"); //Gut - gib her.
+		AI_Output (self, hero, "Info_Mod_Harad_Verkaufen_28_02"); //Gut - gib her.
 		
-		Npc_RemoveInvItems (other, ItMw_1H_Common_01, anzahl_common);
-		Npc_RemoveInvItems (other, ItMw_Schwert1, anzahl_Schwert1);
-		Npc_RemoveInvItems (other, ItMw_Schwert4, anzahl_Schwert4);
-		Npc_RemoveInvItems (other, ItMw_Rubinklinge, anzahl_Rubinklinge);
-		Npc_RemoveInvItems (other, ItMw_ElBastardo, anzahl_ElBastardo);
+		Npc_RemoveInvItems (hero, ItMw_1H_Common_01, anzahl_common);
+		Npc_RemoveInvItems (hero, ItMw_Schwert1, anzahl_Schwert1);
+		Npc_RemoveInvItems (hero, ItMw_Schwert4, anzahl_Schwert4);
+		Npc_RemoveInvItems (hero, ItMw_Rubinklinge, anzahl_Rubinklinge);
+		Npc_RemoveInvItems (hero, ItMw_ElBastardo, anzahl_ElBastardo);
 		
 		var string concatText;
 		concatText = ConcatStrings(IntToString(gesamt), PRINT_ItemsGegeben);		// "x Gegenstände gegeben"
 		AI_PrintScreen (concatText, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 				
-		AI_Output (self, other, "Info_Mod_Harad_Verkaufen_28_03"); //So, und hier hast du deinen Lohn.
+		AI_Output (self, hero, "Info_Mod_Harad_Verkaufen_28_03"); //So, und hier hast du deinen Lohn.
 		var int lohn;
 		lohn = (anzahl_common * Value_Common1) + (anzahl_schwert1 * Value_Schwert1) + (anzahl_schwert4 * Value_Schwert4) + (anzahl_rubinklinge * Value_Rubinklinge) + (anzahl_elbastardo * Value_ElBastardo);
 				
