@@ -135,7 +135,7 @@ FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung3_Info()
 	AI_Output(hero, self, "Info_Mod_Wolf_MinecrawlerRuestung3_15_00"); //Wie ich sehe ist die Crawlerrüstung fertig.
 	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung3_08_01"); //Ja ... meine. Für deine brauche ich noch ein paar Tage.
 
-	Mod_Wolf_MinecrawlerRuestung = Wld_GetDay();
+	Mod_Wolf_MinecrawlerRuestung_Day = Wld_GetDay();
 };
 
 INSTANCE Info_Mod_Wolf_MinecrawlerRuestung4 (C_INFO)
