@@ -57,7 +57,7 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 	};
 
 	if (talent == NPC_TALENT_1H)
-	&& ((2*oth.attribute[ATR_STRENGTH])/3 < realHitChance + percent)
+	&& (oth.attribute[ATR_STRENGTH] < (2*(realHitChance + percent))/3)
 	{
 		PrintScreen	(PRINT_NotEnoughStr, -1, -1, FONT_Screen, 2);
 		B_Say	(slf, oth, "$NOTENOUGHSTR");
@@ -75,7 +75,7 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 	};
 
 	if (talent == NPC_TALENT_1H)
-	&& (oth.attribute[ATR_DEXTERITY]/2 < realHitChance + percent)
+	&& (oth.attribute[ATR_DEXTERITY] < (realHitChance + percent)/2)
 	{
 		PrintScreen	(PRINT_NotEnoughDex, -1, -1, FONT_Screen, 2);
 		B_Say	(slf, oth, "$NOTENOUGHDEX");
@@ -84,7 +84,7 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 	};
 
 	if (talent == NPC_TALENT_2H)
-	&& (oth.attribute[ATR_DEXTERITY]/3 < realHitChance + percent)
+	&& (oth.attribute[ATR_DEXTERITY] < (realHitChance + percent)/3)
 	{
 		PrintScreen	(PRINT_NotEnoughDex, -1, -1, FONT_Screen, 2);
 		B_Say	(slf, oth, "$NOTENOUGHDEX");
@@ -93,7 +93,7 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 	};
 
 	if (talent == NPC_TALENT_BOW)
-	&& (oth.attribute[ATR_STRENGTH]/3 < realHitChance + percent)
+	&& (oth.attribute[ATR_STRENGTH] < (realHitChance + percent)/3)
 	{
 		PrintScreen	(PRINT_NotEnoughStr, -1, -1, FONT_Screen, 2);
 		B_Say	(slf, oth, "$NOTENOUGHSTR");
@@ -102,7 +102,7 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 	};
 
 	if (talent == NPC_TALENT_CROSSBOW)
-	&& (oth.attribute[ATR_STRENGTH]/2 < realHitChance + percent)
+	&& (oth.attribute[ATR_STRENGTH] < (realHitChance + percent)/2)
 	{
 		PrintScreen	(PRINT_NotEnoughStr, -1, -1, FONT_Screen, 2);
 		B_Say	(slf, oth, "$NOTENOUGHSTR");
@@ -120,7 +120,7 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 	};
 
 	if (talent == NPC_TALENT_CROSSBOW)
-	&& ((2*oth.attribute[ATR_DEXTERITY])/3 < realHitChance + percent)
+	&& (oth.attribute[ATR_DEXTERITY] < (2*(realHitChance + percent))/3)
 	{
 		PrintScreen	(PRINT_NotEnoughDex, -1, -1, FONT_Screen, 2);
 		B_Say	(slf, oth, "$NOTENOUGHDEX");
