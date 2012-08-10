@@ -69,8 +69,6 @@ FUNC VOID Info_Mod_Urnol_WerBistDu_Info()
 
 	AI_Teleport	(self, "TOT");
 
-	//Wld_SpawnNpcRange	(hero, Gobbo_Skeleton, 3, 1000);
-
 	Wld_StopEffect	("DEMENTOR_FX");
 
 	B_LogEntry	(TOPIC_MOD_DIEBEDROHUNG, "Ein gewisser Schattenlord Urnol hat mir erzählt, dass sein Meister aus seinem Reich zurückkehren wird, um mich zu töten. Er begründet das damit, dass ich den Schläfer, einen seiner Diener, getötet habe. Ich sollte Xardas davon berichten.");
@@ -109,5 +107,5 @@ FUNC VOID Info_Mod_Urnol_Daemonisch_Info()
 
 	B_GivePlayerXP	(200);
 
-	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Urnol’s Tarnung ist aufgeflogen ... auch, wenn ich jemand anderen in Verdacht hatte. Er dürfte sich wieder ins Minental verdrückt haben und ich kann Xardas von meinem Erfolg berichten.");
+	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Urnols Tarnung ist aufgeflogen ... auch, wenn ich jemand anderen in Verdacht hatte. Er dürfte sich wieder ins Minental verdrückt haben und ich kann Xardas von meinem Erfolg berichten.");
 };
