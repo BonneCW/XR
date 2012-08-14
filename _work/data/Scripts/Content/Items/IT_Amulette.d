@@ -1132,7 +1132,8 @@ INSTANCE  ItAm_Blickfang (C_Item)
 
 	description		= "Blickfangamulett";
 	
-	TEXT[2]			= "Dieses Amulett zieht die Blicke jedes Gesprächpartners auf sich und lenkt ihn ab.";
+	TEXT[2]			= "Dieses Amulett zieht die Blicke jedes Gesprächpartners";
+	TEXT[3]			= "auf sich und lenkt ihn ab.";
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;

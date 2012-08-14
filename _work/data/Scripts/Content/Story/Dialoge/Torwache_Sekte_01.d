@@ -194,7 +194,6 @@ FUNC VOID Info_Mod_Torwache_Sekte_01_ZuGuru_Info()
 
 		AI_Teleport	(Mod_2012_PSINOV_Talas_MT, "PSI_BRIDGE_1");
 		B_StartOtherRoutine	(Mod_2012_PSINOV_Talas_MT, "BEINAMIB");
-		AI_Teleport	(Mod_2012_PSINOV_Talas_MT, "PSI_BRIDGE_1");
 	};
 };
 

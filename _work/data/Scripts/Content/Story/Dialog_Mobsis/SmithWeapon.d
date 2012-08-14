@@ -130,7 +130,7 @@ FUNC INT PC_ItMw_1H_Common_Condition()
 
 FUNC VOID PC_ItMw_1H_Common_Info ()
 {
-	Npc_RemoveInvItems (hero, ItMiSwordRaw, 1);
+	Npc_RemoveInvItems (hero, ItMiSwordRawHot, 1);
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Andre_HaradLehrling4))
 	{
@@ -183,7 +183,7 @@ FUNC INT PC_WEAPON_1H_Harad_01_Condition()
 
 FUNC VOID PC_WEAPON_1H_Harad_01_Info ()
 {
-	Npc_RemoveInvItems (hero, ItMiSwordRaw, 1);
+	Npc_RemoveInvItems (hero, ItMiSwordRawHot, 1);
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Andre_HaradLehrling4))
 	{
@@ -235,7 +235,7 @@ FUNC INT PC_WEAPON_1H_Harad_02_Condition()
 
 FUNC VOID PC_WEAPON_1H_Harad_02_Info ()
 {
-	Npc_RemoveInvItems (hero, ItMiSwordRaw, 1);
+	Npc_RemoveInvItems (hero, ItMiSwordRawHot, 1);
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Andre_HaradLehrling4))
 	{
@@ -287,7 +287,7 @@ FUNC INT PC_WEAPON_1H_Harad_03_Condition()
 
 FUNC VOID PC_WEAPON_1H_Harad_03_Info ()
 {
-	Npc_RemoveInvItems (hero, ItMiSwordRaw, 1);
+	Npc_RemoveInvItems (hero, ItMiSwordRawHot, 1);
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Andre_HaradLehrling4))
 	{
@@ -339,7 +339,7 @@ FUNC INT PC_WEAPON_1H_Harad_04_Condition()
 
 FUNC VOID PC_WEAPON_1H_Harad_04_Info ()
 {
-	Npc_RemoveInvItems (hero, ItMiSwordRaw, 1);
+	Npc_RemoveInvItems (hero, ItMiSwordRawHot, 1);
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Andre_HaradLehrling4))
 	{
@@ -392,7 +392,7 @@ FUNC INT PC_Stark_ItMw_1H_Common_Condition()
 
 FUNC VOID PC_Stark_ItMw_1H_Common_Info ()
 {
-	Npc_RemoveInvItems (hero, ItMiSwordRaw, 4);
+	Npc_RemoveInvItems (hero, ItMiSwordRawHot, 4);
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Andre_HaradLehrling4))
 	{
@@ -445,7 +445,7 @@ FUNC INT PC_Stark_WEAPON_1H_Harad_01_Condition()
 
 FUNC VOID PC_Stark_WEAPON_1H_Harad_01_Info ()
 {
-	Npc_RemoveInvItems (hero, ItMiSwordRaw, 4);
+	Npc_RemoveInvItems (hero, ItMiSwordRawHot, 4);
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Andre_HaradLehrling4))
 	{
@@ -497,7 +497,7 @@ FUNC INT PC_Stark_WEAPON_1H_Harad_02_Condition()
 
 FUNC VOID PC_Stark_WEAPON_1H_Harad_02_Info ()
 {
-	Npc_RemoveInvItems (hero, ItMiSwordRaw, 4);
+	Npc_RemoveInvItems (hero, ItMiSwordRawHot, 4);
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Andre_HaradLehrling4))
 	{
@@ -549,7 +549,7 @@ FUNC INT PC_Stark_WEAPON_1H_Harad_03_Condition()
 
 FUNC VOID PC_Stark_WEAPON_1H_Harad_03_Info ()
 {
-	Npc_RemoveInvItems (hero, ItMiSwordRaw, 4);
+	Npc_RemoveInvItems (hero, ItMiSwordRawHot, 4);
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Andre_HaradLehrling4))
 	{
@@ -601,7 +601,7 @@ FUNC INT PC_Stark_WEAPON_1H_Harad_04_Condition()
 
 FUNC VOID PC_Stark_WEAPON_1H_Harad_04_Info ()
 {
-	Npc_RemoveInvItems (hero, ItMiSwordRaw, 4);
+	Npc_RemoveInvItems (hero, ItMiSwordRawHot, 4);
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Andre_HaradLehrling4))
 	{
