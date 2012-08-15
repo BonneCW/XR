@@ -19,24 +19,20 @@ FUNC INT Info_Mod_Gildo_Unkraut_Condition()
 
 FUNC VOID Info_Mod_Gildo_Unkraut_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Gildo_Unkraut_07_00"); //He, du, wir könnten mal wieder deine Hilfe gebrauchen ...
+	AI_Output(self, hero, "Info_Mod_Gildo_Unkraut_07_00"); //He, du, wir kï¿½nnten mal wieder deine Hilfe gebrauchen ...
 	AI_Output(hero, self, "Info_Mod_Gildo_Unkraut_15_01"); //Wovon werdet ihr bedroht?
-	AI_Output(self, hero, "Info_Mod_Gildo_Unkraut_07_02"); //Unkraut ... die Felder sind voll davon. Du hast uns schon damals bei der Rübenernte geholfen und bist genau der Richtige für die Aufgabe.
+	AI_Output(self, hero, "Info_Mod_Gildo_Unkraut_07_02"); //Unkraut ... die Felder sind voll davon. Du hast uns schon damals bei der Rï¿½benernte geholfen und bist genau der Richtige fï¿½r die Aufgabe.
 
 	Info_ClearChoices	(Info_Mod_Gildo_Unkraut);
 
 	Info_AddChoice	(Info_Mod_Gildo_Unkraut, "Willst du mich verarschen?! Seh ich vielleicht aus wie ein mickriger Feldarbeiter?!", Info_Mod_Gildo_Unkraut_B);
 	Info_AddChoice	(Info_Mod_Gildo_Unkraut, "Na gut ...", Info_Mod_Gildo_Unkraut_A);
-
-	Log_CreateTopic	(TOPIC_MOD_GILDO_UNKRAUT, LOG_MISSION);
-	B_SetTopicStatus	(TOPIC_MOD_GILDO_UNKRAUT, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_GILDO_UNKRAUT, "Ich habe mit Gildo gesprochen, einem er Gauner der Assassinen. Er will mir seine Stimme geben, aber nur, wenn ich ihm drei Pakete voller Sumpfkraut bringe, die eigentlich von verschiedenen 'Händlern' der Stadt hätten geliefert werden müssen. Dieser Personen sind Meldor, Borka und Jason. Wenn ich von ihnen die Pakete erhalten habe, soll ich mich wieder bei Gildo melden.");
 };
 
 FUNC VOID Info_Mod_Gildo_Unkraut_B()
 {
 	AI_Output(hero, self, "Info_Mod_Gildo_Unkraut_B_15_00"); //Willst du mich verarschen?! Seh ich vielleicht aus wie ein mickriger Feldarbeiter?!
-	AI_Output(self, hero, "Info_Mod_Gildo_Unkraut_B_07_01"); //Ich meinte ja nur. Aber wenn du dir zu fein dafür bist, dann wird sich eben jemand anders die 20 Goldmünzen verdienen.
+	AI_Output(self, hero, "Info_Mod_Gildo_Unkraut_B_07_01"); //Ich meinte ja nur. Aber wenn du dir zu fein dafï¿½r bist, dann wird sich eben jemand anders die 20 Goldmï¿½nzen verdienen.
 
 	Info_ClearChoices	(Info_Mod_Gildo_Unkraut);
 };
@@ -91,7 +87,7 @@ FUNC INT Info_Mod_Gildo_Unkraut2_Condition()
 FUNC VOID Info_Mod_Gildo_Unkraut2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Gildo_Unkraut2_15_00"); //Die Felder sind sauber.
-	AI_Output(self, hero, "Info_Mod_Gildo_Unkraut2_07_01"); //Gut gemacht. Dafür bekommst du auch einen Batzen Geld. Viel Spaß damit.
+	AI_Output(self, hero, "Info_Mod_Gildo_Unkraut2_07_01"); //Gut gemacht. Dafï¿½r bekommst du auch einen Batzen Geld. Viel Spaï¿½ damit.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 20);
 
