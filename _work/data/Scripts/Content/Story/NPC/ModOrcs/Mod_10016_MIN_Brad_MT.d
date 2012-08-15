@@ -11,7 +11,7 @@ INSTANCE Mod_10016_MIN_Brad_MT (Mst_Default_OrcElite)
 	
 	Mdl_SetVisual		(self,	"Minotaurus.mds");
 	//							Body-Mesh			Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody	(self,	"Mino_Body",	DEFAULT,	DEFAULT,	"",	DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"MIN_BODY",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 	
 	EquipItem	(self, ItMw_2H_OrcSword_02);
 

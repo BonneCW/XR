@@ -15,10 +15,37 @@ FUNC INT Info_Mod_Dusty_Hi_Condition()
 
 FUNC VOID Info_Mod_Dusty_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Dusty_Hi_14_00"); //Du hier? Ich dachte du wärst bei dem Versuch den Schläfer zu töten gestorben.
-	AI_Output(hero, self, "Info_Mod_Dusty_Hi_15_01"); //Das ist eine lange Geschichte, aber was machst du hier?
-	AI_Output(self, hero, "Info_Mod_Dusty_Hi_14_02"); //Ich bin hier um zu jagen. Bringt orderntlich Gold, wenn man die ganzen Jagdtrophäen verkauft.
-	AI_Output(self, hero, "Info_Mod_Dusty_Hi_14_03"); //Wenn du willst, dann zeig ich dir ein paar Sachen, schließlich hast du mir damals in der Kolonie geholfen.
+	AI_Output(self, hero, "Info_Mod_Dusty_Hi_14_00"); //Du hier? Es hieß, du wärst im Schläfertempel verschüttet ...
+	AI_Output(hero, self, "Info_Mod_Dusty_Hi_15_01"); //Eine lange, nicht sehr erfreuliche Geschichte. Aber wieso bist du hier?
+	AI_Output(self, hero, "Info_Mod_Dusty_Hi_14_02"); //Ich wollte eigentlich rüber aufs Festland, Familie und so. (lacht gequält)
+	AI_Output(self, hero, "Info_Mod_Dusty_Hi_14_03"); //Problem ist nur, dass momentan kein Schiff im Hafen liegt, das in nächster Zeit dorthin auslaufen wird.
+	AI_Output(self, hero, "Info_Mod_Dusty_Hi_14_04"); //Und weil die Paladine selbst im Hafenviertel Stress machen, bin ich wieder raus und verdinge mich als Jäger.
+};
+
+INSTANCE Info_Mod_Dusty_Lehrer (C_INFO)
+{
+	npc		= Mod_1724_PSINOV_Dusty_NW;
+	nr		= 1;
+	condition	= Info_Mod_Dusty_Lehrer_Condition;
+	information	= Info_Mod_Dusty_Lehrer_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Hast du als Jäger vielleicht ein paar Tipps für mich auf Lager?";
+};
+
+FUNC INT Info_Mod_Dusty_Lehrer_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Angar_Fanatiker))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Andre_Erfahrung_Fanatiker))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Dusty_Lehrer_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Dusty_Lehrer_15_00"); //Hast du als Jäger vielleicht ein paar Tipps für mich auf Lager?
+	AI_Output(self, hero, "Info_Mod_Dusty_Lehrer_14_01"); //Die Grundlagen kann ich dir auf jeden Fall zeigen. Du hast mir in der Kolonie ja auch geholfen.
 
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_KHORINIS, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_LEHRER_KHORINIS, "Dusty kann mir ein paar Jagdtrophäen beibringen.");
@@ -144,8 +171,66 @@ FUNC INT Info_Mod_Dusty_OtherHunters_Condition()
 FUNC VOID Info_Mod_Dusty_OtherHunters_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Dusty_OtherHunters_15_00"); //Kannst du mir sagen, wo ich noch andere Jäger finde?
-	AI_Output(self, hero, "Info_Mod_Dusty_OtherHunters_14_01"); //Bei der Taverne lagern noch welche, glaube ich.
-	AI_Output(hero, self, "Info_Mod_Dusty_OtherHunters_15_02"); //Danke, Mann.
+	AI_Output(self, hero, "Info_Mod_Dusty_OtherHunters_14_01"); //Bei der Taverne "Zur toten Harpie" nordöstlich von hier ist ein großes Lager, an dem ich vorbeigekommen bin. Ob es noch andere Treffpunkte gibt, weiß ich nicht.
+	AI_Output(hero, self, "Info_Mod_Dusty_OtherHunters_15_02"); //Danke, das hilft mir schon weiter.
+};
+
+INSTANCE Info_Mod_Dusty_Bruderschaft (C_INFO)
+{
+	npc		= Mod_1724_PSINOV_Dusty_NW;
+	nr		= 1;
+	condition	= Info_Mod_Dusty_Bruderschaft_Condition;
+	information	= Info_Mod_Dusty_Bruderschaft_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Was ist nach dem Fall der Barriere mit der Bruderschaft passiert?";
+};
+
+FUNC INT Info_Mod_Dusty_Bruderschaft_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Dusty_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Dusty_Bruderschaft_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Dusty_Bruderschaft_15_00"); //Was ist nach dem Fall der Barriere mit der Bruderschaft passiert?
+	AI_Output(self, hero, "Info_Mod_Dusty_Bruderschaft_14_01"); //Keine Ahnung, es gab keine große Aufbruchstimmung oder so. Die meisten haben sich im Lager ein neues Leben aufgebaut und wollen gar nicht mehr weg.
+	AI_Output(self, hero, "Info_Mod_Dusty_Bruderschaft_14_02"); //Dass der Schläfer ein Erzdämon war, mussten natürlich einige erst mal verdauen, aber ob sie sich jetzt einen Ersatz gesucht haben oder nur noch Sumpfkraut rauchen, weiß ich nicht.
+};
+
+INSTANCE Info_Mod_Dusty_BosperFelle (C_INFO)
+{
+	npc		= Mod_1724_PSINOV_Dusty_NW;
+	nr		= 1;
+	condition	= Info_Mod_Dusty_BosperFelle_Condition;
+	information	= Info_Mod_Dusty_BosperFelle_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Du hast nicht zufällig ein paar schöne Wolfsfelle, die du nicht mehr brauchst?";
+};
+
+FUNC INT Info_Mod_Dusty_BosperFelle_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Dusty_Hi))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Dragomir_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Dusty_BosperFelle_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Dusty_BosperFelle_15_00"); //Du hast nicht zufällig ein paar schöne Wolfsfelle, die du nicht mehr brauchst?
+	AI_Output(self, hero, "Info_Mod_Dusty_BosperFelle_14_01"); //Wölfe habe ich schon ein paar erlegt, auch wenn die verdammt gefährlich sind.
+	AI_Output(self, hero, "Info_Mod_Dusty_BosperFelle_14_02"); //Aber das Fell hab ich nicht allen abgezogen. Wart mal ... (Suchgeräusch) Zwei unbeschädigte Felle hätte ich. Interesse?
+	AI_Output(hero, self, "Info_Mod_Dusty_BosperFelle_15_03"); //Nur her damit. Wie kann ich dir danken?
+
+	B_GiveInvItems	(self, hero, ItAt_WolfFur_Rein, 2);
+
+	AI_Output(self, hero, "Info_Mod_Dusty_BosperFelle_14_04"); //Du hast die Barriere beseitigt. Mehr brauchst du nicht für mich tun.
 };
 
 INSTANCE Info_Mod_Dusty_Lernen (C_INFO)
