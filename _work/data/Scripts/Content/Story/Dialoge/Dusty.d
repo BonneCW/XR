@@ -48,7 +48,7 @@ FUNC VOID Info_Mod_Dusty_Lehrer_Info()
 	AI_Output(self, hero, "Info_Mod_Dusty_Lehrer_14_01"); //Die Grundlagen kann ich dir auf jeden Fall zeigen. Du hast mir in der Kolonie ja auch geholfen.
 
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_KHORINIS, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_LEHRER_KHORINIS, "Dusty kann mir ein paar Jagdtrophäen beibringen.");
+	B_LogEntry	(TOPIC_MOD_LEHRER_KHORINIS, "Dusty kann mir beibringen, wie ich an Jagdtrophäen komme.");
 };
 
 INSTANCE Info_Mod_Dusty_Infos (C_INFO)
@@ -76,7 +76,9 @@ FUNC VOID Info_Mod_Dusty_Infos_Info()
 	AI_Output(hero, self, "Info_Mod_Dusty_Infos_15_00"); //Weißt du was über die Schläferanhänger hier in der Gegend?
 	AI_Output(self, hero, "Info_Mod_Dusty_Infos_14_01"); //Ja, ich hab ein paar gesehen. Es waren zwei kleine Gruppen.
 	AI_Output(hero, self, "Info_Mod_Dusty_Infos_15_02"); //Wo kann ich sie finden?
-	AI_Output(self, hero, "Info_Mod_Dusty_Infos_14_03"); //Ich kann mich nicht mehr erinnern. Besorg mir einen Sumpfkrautstengel, dann sollte es wieder gehen.
+	AI_Output(self, hero, "Info_Mod_Dusty_Infos_14_03"); //Weißt du was? Ich bin schon seit Tagen auf Entzug. Da arbeitet mein Gehirn nicht mehr so schnell, wenn du verstehst, was ich meine.
+	AI_Output(hero, self, "Info_Mod_Dusty_Infos_15_04"); //Du brauchst mal wieder eine Dosis Sumpfkraut?
+	AI_Output(self, hero, "Info_Mod_Dusty_Infos_14_05"); //(wollüstig) Oh ja! Wenn du mir einen ordentlichen Stengel bringst, ordnen sich meine Gedanken auch wieder.
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_SEKTENSPINNER, "Bevor Dusty mir sagen kann, wo sich die Schläferanhänger aufhalten, soll ich ihm einen Sumpfkrautstengel bringen.");
 };
@@ -109,8 +111,8 @@ FUNC VOID Info_Mod_Dusty_Kippe_Info()
 
 	B_UseItem	(self, ItMi_Joint);
 
-	AI_Output(self, hero, "Info_Mod_Dusty_Kippe_14_01"); //Ah, sehr schön. Ich erinnere mich.
-	AI_Output(hero, self, "Info_Mod_Dusty_Kippe_15_02"); //Dann sag mir wo ich die Fanatiker finde.
+	AI_Output(self, hero, "Info_Mod_Dusty_Kippe_14_01"); //Ah, sehr schön. Mein Blick wird wieder klar.
+	AI_Output(hero, self, "Info_Mod_Dusty_Kippe_15_02"); //Dann sag mir, wo ich die Fanatiker finde.
 	AI_Output(self, hero, "Info_Mod_Dusty_Kippe_14_03"); //Die eine Gruppe hat sich beim Leuchtturm niedergelassen. Das ist die größere Gruppe. Wenn du dort hingehst, musst du sehr vorsichtig sein.
 	AI_Output(self, hero, "Info_Mod_Dusty_Kippe_14_04"); //Die andere Gruppe ist in einer Höhle im Wald südlich der Stadt. Dort solltest du zuerst vorbeischauen.
 	AI_Output(self, hero, "Info_Mod_Dusty_Kippe_14_05"); //Den Leuchtturm lässt du besser mal noch bleiben, bevor du mehr herausgefunden hast.
@@ -145,7 +147,7 @@ FUNC VOID Info_Mod_Dusty_Crawlersekret_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Dusty_Crawlersekret_15_00"); //Woher könnte ich starkes Minecrawler-Sekret bekommen?
 	AI_Output(self, hero, "Info_Mod_Dusty_Crawlersekret_14_01"); //Ich habe von den anderen Jägern gehört, dass im Norden Minecrawler gesichtet wurden.
-	AI_Output(self, hero, "Info_Mod_Dusty_Crawlersekret_14_02"); //Wenn du Glück hast, dann gibt es dort auch eine Königin, deren Eier zu stehlen kannst, um daraus das Sekret zu gewinnen.
+	AI_Output(self, hero, "Info_Mod_Dusty_Crawlersekret_14_02"); //Wenn du Glück hast, dann gibt es dort auch eine Königin, deren Eier du stehlen kannst, um daraus das Sekret zu gewinnen.
 };
 
 INSTANCE Info_Mod_Dusty_OtherHunters (C_INFO)
