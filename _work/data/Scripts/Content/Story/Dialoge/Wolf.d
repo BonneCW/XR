@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Wolf_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_00"); //Hey, du lebst ja noch. Hätte nicht gedacht, dass wir uns noch mal sehen.
 	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_01"); //Die Minecrawlerrüstung scheint ja ganz schön stabil gewesen zu sein.
 	AI_Output(hero, self, "Info_Mod_Wolf_Hi_15_02"); //Ja, da hast du ganze Arbeit geleistet.
-	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_03"); //Stimmt ... wirklich zwei Prachtstücke, die ich das zusammengebastelt hatte.
+	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_03"); //Stimmt ... wirklich zwei Prachtstücke, die ich da zusammengebastelt hatte.
 	AI_Output(hero, self, "Info_Mod_Wolf_Hi_15_04"); //Zwei? Wo ist die andere.
 	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_05"); //Ich hab sie meinem alten Kumpel Gestath gegeben, mit dem ich am Rande der Barriere Handel trieb.
 	AI_Output(self, hero, "Info_Mod_Wolf_Hi_08_06"); //Er hat mir die Dinge besorgt, die es vor allem außerhalb unseres Gefängnisses gab und ich habe ihm dafür einige spezielle Gegenstände gegeben, welche die Kolonie hervorgebracht hatte.

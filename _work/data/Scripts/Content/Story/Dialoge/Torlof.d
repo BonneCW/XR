@@ -474,7 +474,7 @@ INSTANCE Info_Mod_Torlof_HaradLehrling4 (C_INFO)
 
 FUNC INT Info_Mod_Torlof_HaradLehrling4_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Torlof_HaradLehrling2))
+	if (Npc_KnowsInfo(hero, Info_Mod_Hock_HaradLehrling))
 	{
 		return 1;
 	};
@@ -497,6 +497,7 @@ FUNC VOID Info_Mod_Torlof_HaradLehrling4_Info()
 		AI_Output(self, hero, "Info_Mod_Torlof_HaradLehrling4_01_05"); //Du hast Nerven! Scher dich zurück zu ihm!
 	};
 
+	AI_Teleport	(Mod_1200_SLD_Soeldner_NW, "NW_BIGFARM_PATH_01");
 	B_StartOtherRoutine	(Mod_1200_SLD_Soeldner_NW, "START");
 };
 

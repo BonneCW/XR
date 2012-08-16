@@ -126,7 +126,7 @@ FUNC INT Info_Mod_Grom_Sauhaufen_Condition()
 FUNC VOID Info_Mod_Grom_Sauhaufen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Grom_Sauhaufen_15_00"); //Ja, ein echter Sauhaufen hier.
-	AI_Output(self, hero, "Info_Mod_Grom_Sauhaufen_08_01"); //Hm, sag mal, hast du nicht an ner kleinen Aufgabe interesse?
+	AI_Output(self, hero, "Info_Mod_Grom_Sauhaufen_08_01"); //Hm, sag mal, hast du nicht an 'ner kleinen Aufgabe Interesse?
 	AI_Output(hero, self, "Info_Mod_Grom_Sauhaufen_15_02"); //Kommt darauf an.
 	AI_Output(self, hero, "Info_Mod_Grom_Sauhaufen_08_03"); //Ich wollte mir mal die geheimen Lagerräume der Söldner ansehen, allerdings wachen die davor wie ein Drache vor seinem Hort. Ich möchte, dass du sie etwas ... ablenkst.
 
