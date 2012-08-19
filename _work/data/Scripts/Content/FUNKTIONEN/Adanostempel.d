@@ -4,7 +4,7 @@ FUNC VOID B_BodenfallenAuslosen (var int Reihe)
 
 	if (Reihe == 1)
 	{
-		Randi = Hlp_Random(3);
+		Randi = r_max(2);
 
 		if (Randi == 0)
 		&& (ATFeld01 == 0)
@@ -50,7 +50,7 @@ FUNC VOID B_BodenfallenAuslosen (var int Reihe)
 	}
 	else if (Reihe == 2)
 	{
-		Randi = Hlp_Random(3);
+		Randi = r_max(2);
 
 		if (Randi == 0)
 		&& (ATFeld04 == 0)
@@ -96,7 +96,7 @@ FUNC VOID B_BodenfallenAuslosen (var int Reihe)
 	}
 	else if (Reihe == 3)
 	{
-		Randi = Hlp_Random(3);
+		Randi = r_max(2);
 
 		if (Randi == 0)
 		&& (ATFeld07 == 0)
@@ -142,7 +142,7 @@ FUNC VOID B_BodenfallenAuslosen (var int Reihe)
 	}
 	else if (Reihe == 4)
 	{
-		Randi = Hlp_Random(3);
+		Randi = r_max(2);
 
 		if (Randi == 0)
 		&& (ATFeld10 == 0)

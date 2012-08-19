@@ -308,7 +308,27 @@ FUNC VOID DAUERFUNC_01()
 		};
 	};
 
-	TimeAn = STR_ToInt(MEM_GetGothOpt("XERES", "spielzeit"));
+	TimeSwitch = STR_ToInt(MEM_GetGothOpt("XERES", "spielzeit"));
+
+	if (TimeSwitch != TimeAn)
+	{
+		if (TimeSwitch == 1)
+		{
+			if (!Hlp_IsValidHandle(View_Time))
+			{
+				View_Time = View_CreatePxl	(Print_Screen[PS_X]-120, 20, Print_Screen[PS_X]-20, 50);
+			};
+
+			View_Open	(View_Time);
+		}
+		else
+		{
+			View_Close	(View_Time);
+		};
+
+		TimeAn = TimeSwitch;
+	};
+
 	Mod_Esssystem = STR_ToInt(MEM_GetGothOpt("XERES", "esssystem"));
 	Mod_AutoInventar = STR_ToInt(MEM_GetGothOpt("XERES", "inventar"));
 	Mod_EXP_Anzeige = STR_ToInt(MEM_GetGothOpt("XERES", "erfahrung"));

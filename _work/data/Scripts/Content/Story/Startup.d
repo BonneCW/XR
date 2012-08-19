@@ -29,12 +29,6 @@ func void INIT_GLOBAL()
 	B_InitGuildAttitudes();
 	B_InitNpcGlobals ();
 
-	if (Kapitel > 1)
-	&& (Npc_HasItems(hero, ItMi_PortalRing_Addon) > 0)
-	{
-		Npc_RemoveInvItems	(hero, ItMi_PortalRing_Addon, Npc_HasItems(hero, ItMi_PortalRing_Addon));
-	};
-
 	gameloaded = Hlp_GetNpc(0);
 
 	LeGo_Init(LeGo_All & ~LeGo_Focusnames);

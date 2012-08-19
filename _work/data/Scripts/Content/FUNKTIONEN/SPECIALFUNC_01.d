@@ -80,8 +80,8 @@ FUNC VOID SPECIALFUNC()
 			Wld_InsertNpc	(Mod_7291_PAL_Aramis_NW,	"TAVERNE");
 			Wld_InsertNpc	(Mod_7292_PAL_Porthos_NW,	"TAVERNE");
 
-			Wld_InsertNpc	(Skeleton_Lord, "NW_FARM2_TAVERNCAVE1_02");
-			Wld_InsertNpc	(Skeleton_Lord, "NW_FARM2_TAVERNCAVE1_02");
+			Wld_InsertNpc	(Skeleton_Lord_Weg, "NW_FARM2_TAVERNCAVE1_02");
+			Wld_InsertNpc	(Skeleton_Lord_Weg, "NW_FARM2_TAVERNCAVE1_02");
 
 			Wld_SendTrigger	("DRAGONSSCHATZ");
 		};
@@ -113,7 +113,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe01 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -142,7 +142,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_01, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -199,7 +199,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe02 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -228,7 +228,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_02, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -285,7 +285,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe03 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -314,7 +314,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_03, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -371,7 +371,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe04 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -400,7 +400,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_04, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -457,7 +457,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe05 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -486,7 +486,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_05, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -543,7 +543,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe06 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -572,7 +572,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_06, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -629,7 +629,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe07 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -658,7 +658,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_07, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -715,7 +715,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe08 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -744,7 +744,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_08, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -801,7 +801,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe09 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -830,7 +830,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_09, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -887,7 +887,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe10 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -916,7 +916,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_10, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -973,7 +973,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe11 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -1002,7 +1002,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_11, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -1059,7 +1059,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe12 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -1088,7 +1088,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_12, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -1145,7 +1145,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe13 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -1174,7 +1174,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_13, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -1231,7 +1231,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe14 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -1260,7 +1260,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_14, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -1317,11 +1317,11 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe15 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -1359,7 +1359,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_15, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -1416,7 +1416,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe16 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -1445,7 +1445,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_16, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -1502,7 +1502,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe17 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -1531,7 +1531,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_17, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -1588,7 +1588,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe18 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -1617,7 +1617,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_18, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -1674,7 +1674,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe19 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -1703,7 +1703,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_19, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{
@@ -1760,7 +1760,7 @@ FUNC VOID SPECIALFUNC()
 
 					if (Mod_LobartsRuebe20 == 1)
 					{
-						randi = Hlp_Random(3);
+						randi = r_max(2);
 
 						if (randi == 0)
 						{
@@ -1789,7 +1789,7 @@ FUNC VOID SPECIALFUNC()
 					Npc_RemoveInvItems	(hero, ItPl_Beet_Lobart_20, 1);
 					CreateInvItems	(hero, ItPl_Beet, 1);
 
-					randi = Hlp_Random(3);
+					randi = r_max(2);
 
 					if (randi == 0)
 					{

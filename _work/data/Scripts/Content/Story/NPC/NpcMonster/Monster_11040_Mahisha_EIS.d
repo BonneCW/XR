@@ -39,7 +39,7 @@ INSTANCE Monster_11040_Mahisha_EIS (Npc_Default)
 	// ------ visuals ------																			
 	Mdl_SetVisual		(self,	"Minotaurus.mds");
 	//							Body-Mesh			Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody	(self,	"Mino_Body",	DEFAULT,	DEFAULT,	"",	DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"MIN_BODY",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 	
 	// ------ NSC-relevante Talente vergeben ------
 	B_GiveNpcTalents (self);

@@ -62,7 +62,7 @@ FUNC VOID Aufnahmequests ()
 		// Nicht ins Indoor-Lager vor Erlaubnis
 
 		if (!Npc_KnowsInfo(hero, Info_Mod_Torgan_GardistenZettel))
-		&& (Npc_GetDistToWP(hero, "WP_MT_JAEGERLAGER_03") < 500)
+		&& (Npc_GetDistToWP(hero, "WP_MT_JAEGERLAGER_03") < 750)
 		{
 			AI_GotoWP	(hero, "WP_MT_JAEGERLAGER_02");
 		};

@@ -81,6 +81,11 @@ INSTANCE Skeleton_Lord	(Mst_Skeleton_Lord)
 	B_SetVisuals_Skeleton_Lord ();
 };
 
+INSTANCE Skeleton_Lord_Weg	(Mst_Skeleton_Lord)
+{
+	B_SetVisuals_Skeleton_Lord ();
+};
+
 INSTANCE Skeleton_Lord_Ghost	(Mst_Skeleton_Lord)
 {
 	B_SetVisuals_Skeleton_Lord ();

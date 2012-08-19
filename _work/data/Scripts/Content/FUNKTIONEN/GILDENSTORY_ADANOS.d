@@ -716,8 +716,6 @@ FUNC VOID GILDENSTORY_ADANOS()
 			{
 				Mod_WM_BlutkultTot = TRUE;
 
-				//Wld_SendUntrigger	("BLUTKULTFLAMME");
-
 				if (!Npc_KnowsInfo(hero, Info_Mod_Cronos_Angriff_02))
 				{
 					B_LogEntry	(TOPIC_MOD_ADANOS_UNHEIL, "Gut, die Blutkultfritzen wären Geschichte. Jetzt sollte ich Saturas von meinem Erfolg berichten.");

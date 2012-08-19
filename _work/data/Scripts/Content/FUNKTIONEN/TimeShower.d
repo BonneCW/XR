@@ -21,44 +21,45 @@ FUNC VOID TimeShower()
 		TimeCounter_Min = 0;
 	};	
 
-	var string Time;
-
-	var string Time_H;
-	var string Time_Min;
-	var string Time_Sek;
-
-	if (TimeCounter_H < 10)
-	{
-		Time_H = ConcatStrings("0", IntToString(TimeCounter_H));
-	}
-	else
-	{
-		Time_H = IntToString(TimeCounter_H);
-	};
-	if (TimeCounter_Min < 10)
-	{
-		Time_Min = ConcatStrings("0", IntToString(TimeCounter_Min));
-	}
-	else
-	{
-		Time_Min = IntToString(TimeCounter_Min);
-	};
-	if (TimeCounter_Sek < 10)
-	{
-		Time_Sek = ConcatStrings("0", IntToString(TimeCounter_Sek));
-	}
-	else
-	{
-		Time_Sek = IntToString(TimeCounter_Sek);
-	};
-
-	Time = ConcatStrings(Time_H, ":");
-	Time = ConcatStrings(Time, Time_Min);
-	Time = ConcatStrings(Time, ":");
-	Time = ConcatStrings(Time, Time_Sek);
-
 	if (TimeAn == TRUE)
 	{
-		PrintScreen	(Time, 86, 2, FONT_Screen, 1);
+		var string Time;
+
+		var string Time_H;
+		var string Time_Min;
+		var string Time_Sek;
+
+		if (TimeCounter_H < 10)
+		{
+			Time_H = ConcatStrings("0", IntToString(TimeCounter_H));
+		}
+		else
+		{
+			Time_H = IntToString(TimeCounter_H);
+		};
+		if (TimeCounter_Min < 10)
+		{
+			Time_Min = ConcatStrings("0", IntToString(TimeCounter_Min));
+		}
+		else
+		{
+			Time_Min = IntToString(TimeCounter_Min);
+		};
+		if (TimeCounter_Sek < 10)
+		{
+			Time_Sek = ConcatStrings("0", IntToString(TimeCounter_Sek));
+		}
+		else
+		{
+			Time_Sek = IntToString(TimeCounter_Sek);
+		};
+
+		Time = ConcatStrings(Time_H, ":");
+		Time = ConcatStrings(Time, Time_Min);
+		Time = ConcatStrings(Time, ":");
+		Time = ConcatStrings(Time, Time_Sek);
+
+		View_DeleteText	(View_Time);
+		View_AddText	(View_Time, 0, 0, Time, FONT_Screen);
 	};
 };

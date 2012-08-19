@@ -51,31 +51,6 @@ FUNC VOID WaffenCheck()
 		Mdl_RemoveOverlayMDS	(hero, "HUMANS_DOLCH.MDS");
 	};
 
-	if (DolchkampfAn == 1)
-	{
-		/*if (C_BodyStateContains(hero, BS_SNEAK))
-		&& (Dolchkampf_Sneak == 0)
-		{
-			Dolchkampf_Sneak = 1;
-
-			Mdl_ApplyOverlayMDS	(hero, "HUMANS_DOLCH_SNEAK.MDS");
-		}
-		else if (C_BodyStateContains(hero, BS_HIT))
-		&& (Dolchkampf_Sneak == 1)
-		{
-		}
-		else if (!C_BodyStateContains(hero, BS_SNEAK))
-		&& (!C_BodyStateContains(hero, BS_HIT))
-		&& (Dolchkampf_Sneak == 1)
-		{
-			Dolchkampf_Sneak = 0;
-
-			Mdl_RemoveOverlayMDS	(hero, "HUMANS_DOLCH_SNEAK.MDS");
-		};
-
-		AI_PrintScreen	(IntToString(Dolchkampf_Sneak), -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);*/
-	};
-
 	if (Hlp_IsItem(Waffentest, ItMw_Zweiklinge))
 	|| (Hlp_IsItem(Waffentest, ItMw_Zweiklinge_Geschaerft))
 	{

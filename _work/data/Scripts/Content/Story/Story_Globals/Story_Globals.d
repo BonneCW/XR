@@ -44,6 +44,8 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int TimeSwitch;
+var int View_Time;
 var int transformCooldown;
 var int Mod_Regenerationstrank_Counter;
 var int Mod_AL_ZufluchtCounter;

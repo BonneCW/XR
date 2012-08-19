@@ -171,98 +171,21 @@ FUNC VOID B_SetSchwierigkeit()
 		};
 
 		if (self.protection[PROT_EDGE] < 1000)
+		&& (self.protection[PROT_EDGE] != -1)
 		{
 			self.protection[PROT_EDGE] = 1000;
 		};
 
 		if (self.protection[PROT_BLUNT] < 1000)
+		&& (self.protection[PROT_BLUNT] != -1)
 		{
 			self.protection[PROT_BLUNT] = 1000;
 		};
 
 		if (self.protection[PROT_POINT] < 1000)
+		&& (self.protection[PROT_POINT] != -1)
 		{
 			self.protection[PROT_POINT] = 1000;
-		};
-
-		if (self.aivar[AIV_MM_REAL_ID]	==	ID_SKELETON)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_SUMMONED_SKELETON)
-		|| (Hlp_GetInstanceID(self)	==	Hlp_GetInstanceID(Mod_1552_SKE_Skelett_DI))
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_TROLL)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_TROLL_HÖHLE)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Stoneguardian)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Dragon_Undead)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_FireGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Gobbo_Skeleton)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Summoned_Gobbo_Skeleton)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_IceGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Shadowbeast_Skeleton)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_StoneGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Skeleton_Mage)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_TROLL_BLACK)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_TROLL_Silber)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_WISP)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Summoned_Golem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Summoned_IceGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_GEISTERKRIEGER)
-		|| ((self.aivar[AIV_MM_REAL_ID]	==	ID_SwampGolem)
-		&& (Hlp_GetInstanceID(self) != Hlp_GetInstanceID(Wurzelzwerg)))
-		{
-			self.protection[PROT_Point] = -1;
-		};
-
-		if (self.aivar[AIV_MM_REAL_ID]	==	ID_TROLL)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_TROLL_HÖHLE)
-		|| ((self.aivar[AIV_MM_REAL_ID]	==	ID_SwampGolem)
-		&& (Hlp_GetInstanceID(self) != Hlp_GetInstanceID(Wurzelzwerg)))
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_FireGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_IceGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_StoneGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Summoned_Golem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Summoned_IceGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_TROLL_BLACK)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_TROLL_Silber)
-		{
-			self.protection[PROT_Fly] = -1;
-		};
-
-		if (self.aivar[AIV_MM_REAL_ID]	==	ID_Gargoyle)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_FireWaran)
-		|| ((self.aivar[AIV_MM_REAL_ID]	==	ID_SwampGolem)
-		&& (Hlp_GetInstanceID(self) != Hlp_GetInstanceID(Wurzelzwerg)))
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_FireGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_StoneGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Summoned_Golem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Summoned_IceGolem)
-		{
-			self.protection[PROT_Fire] = -1;
-		};
-
-		if (self.aivar[AIV_MM_REAL_ID]	==	ID_IceGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_StoneGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_WISP)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_GEISTERKRIEGER)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Summoned_Golem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Summoned_IceGolem)
-		{
-			self.protection[PROT_Edge] = -1;
-		};
-
-		if (self.aivar[AIV_MM_REAL_ID]	==	ID_FireGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_IceGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_WISP)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_GEISTERKRIEGER)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Summoned_IceGolem)
-		{
-			self.protection[PROT_Blunt] = -1;
-		};
-
-		if ((self.aivar[AIV_MM_REAL_ID]	==	ID_SwampGolem)
-		&& (Hlp_GetInstanceID(self) != Hlp_GetInstanceID(Wurzelzwerg)))
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_StoneGolem)
-		|| (self.aivar[AIV_MM_REAL_ID]	==	ID_Summoned_Golem)
-		{
-			self.protection[PROT_Magic] = -1;
 		};
 	};
 

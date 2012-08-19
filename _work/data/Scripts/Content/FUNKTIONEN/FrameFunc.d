@@ -61,7 +61,7 @@ FUNC VOID FRAMEFUNC ()
 	if (Mod_EXP_Anzeige)
 	{
 		if(!Hlp_IsValidHandle(ExpBar)) {
-			ExpBar = Bar_Create(ExpBalken); // Unsere Bar_1
+			ExpBar = Bar_Create(ExpBalken);
 		};
 
 		// Der Rest ist wohl selbsterklärend:
@@ -81,7 +81,7 @@ FUNC VOID FRAMEFUNC ()
 	if (Mod_Esssystem)
 	{
 		if(!Hlp_IsValidHandle(FutterBar)) {
-			FutterBar = Bar_Create(NahrungsBalken); // Unsere Bar_1
+			FutterBar = Bar_Create(NahrungsBalken);
 		};
 
 		// Der Rest ist wohl selbsterklärend:

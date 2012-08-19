@@ -35,12 +35,9 @@ FUNC INT GetTickCount ()
 };
 
 func int CURL_Send(var string url) {
-	PrintDebug("CURL_Send -- Start");
-
 	var int libcurl; libcurl = LoadLibrary("LIBCURL.DLL");
 
 	if(!libcurl) { return -1; };
-	PrintDebug("CURL_Send -- Lib ok");
 
 	var int curl_init;      curl_init      = GetProcAddress(libcurl, "curl_easy_init");
 	var int curl_setopt;    curl_setopt    = GetProcAddress(libcurl, "curl_easy_setopt");
@@ -54,8 +51,6 @@ func int CURL_Send(var string url) {
 		return -1;
 	};
 
-	PrintDebug("CURL_Send -- Functions ok");
-
 	var int CURL;  CURL  = 0;
 	var int res;
 
@@ -66,12 +61,10 @@ func int CURL_Send(var string url) {
 	CALL_IntParam(10002);
 	CALL_PtrParam(CURL);
 	CALL__cdecl(curl_setopt);
-	PrintDebug("CURL_Send -- Options ok");
 
 	CALL_PtrParam(CURL);
 	CALL__cdecl(curl_perform);
 	res = CALL_RetValAsInt();
-	PrintDebug("CURL_Send -- Done");
 
 	CALL_PtrParam(CURL);
 	CALL__cdecl(curl_cleanup);
@@ -82,8 +75,6 @@ func int CURL_Send(var string url) {
 };
 
 func string CURL_Get(var string url) {
-	PrintDebug("CURL_Receive -- Start");
-
 	var int libcurl; libcurl = LoadLibrary("CURL_Receive.DLL");
 
 	var int lasterror;
@@ -93,7 +84,6 @@ func string CURL_Get(var string url) {
 	{ 
 		return "AMARSCH";
 	};
-	PrintDebug("CURL_Receive -- Lib ok");
 
 	var int curl_receive;      curl_receive	= GetProcAddress(libcurl, "?CURL_Receive@@YAXPBDPAD@Z");
 
@@ -103,18 +93,11 @@ func string CURL_Get(var string url) {
 		return "AMARSCH";
 	};
 
-	PrintDebug("CURL_Receive -- Functions ok");
-
 	const string STR_BUFFER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1ABCDEFGHIJKLMNOPQRSTUVWXYZ2ABCDEFGHIJKLMNOPQRSTUVWXYZ3ABCDEFGHIJKLMNOPQRSTUVWXYZ4ABCDEFGHIJKLMNOPQRSTUVWXYZ5ABCDEFGHIJKLMNOPQRSTUVWXYZ6ABCDEFGHIJKLMNOPQRSTUVWXYZ7ABCDEFGHIJKLMNOPQRSTUVWXYZ8ABCDEFGHIJKLMNOPQRSTUVWXYZ9ABCDEFGHIJKLMNOPQRSTUVWXYZ10ABCDEFGHIJKLMNOPQRSTUVWXYZ10ABCDEFGHIJKLMNOPQRSTUVWXYZ10ABCDEFGHIJKLMNOPQRSTUVWXYZ10ABCDEFGHIJKLMNOPQRSTUVWXYZ10ABCDEFGHIJKLMNOPQRSTUVWXYZ10ABCDEFGHIJKLMNOPQRSTUVWXYZ10";
 
 	CALL_cStringPtrParam(STR_BUFFER);
 	CALL_cStringPtrParam(url);
 	CALL__cdecl(curl_receive);
-	PrintDebug("CURL_Receive -- Funktion läuft");
-
-	PrintDebug("CURL_Receive -- Done");
-
-	PrintDebug(ConcatStrings("CURL_Receive: ", STR_BUFFER));
 
 	FreeLibrary(libcurl);
 
