@@ -286,6 +286,12 @@ INSTANCE ZombieRandom		(Mst_Default_Zombie)
 	Npc_SetToFistMode(self);
 };
 
+INSTANCE ZombieRandom_Weg		(Mst_Default_Zombie)
+{
+	B_SetVisual_Zom();
+	Npc_SetToFistMode(self);
+};
+
 INSTANCE Zombie_Castlemine		(Mst_Default_Zombie)
 {
 	B_SetVisual_Zom();

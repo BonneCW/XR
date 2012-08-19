@@ -108,13 +108,18 @@ INSTANCE Skeleton			(Mst_Default_Skeleton)
 	EquipItem (self, ItMw_2H_Sword_M_01);
 };
 
+INSTANCE Skeleton_Weg			(Mst_Default_Skeleton)
+{
+	B_SetVisuals_Skeleton();
+
+	EquipItem (self, ItMw_2H_Sword_M_01);
+};
+
 INSTANCE SkeletonTransform			(Mst_Default_Skeleton)
 {
 	Npc_PercEnable (self, PERC_ASSESSSURPRISE , B_StopMagicTransform);
 	B_SetVisuals_Skeleton();
 	EquipItem (self, ItMw_2H_Sword_M_01);
-
-	protection	[PROT_POINT]		=	-1; 
 };
 
 INSTANCE Skeleton_Anführer			(Mst_Default_Skeleton)
@@ -146,6 +151,17 @@ INSTANCE Skeleton_Anführer			(Mst_Default_Skeleton)
 };
 
 INSTANCE SkeletonWarrior	(Mst_Default_Skeleton)
+{
+	name							=	"Skelettkrieger";
+	Set_SkeletonWarrior_Visuals();
+	level							=	40;
+	attribute	[ATR_STRENGTH]		=	140;
+	aivar		[AIV_MM_REAL_ID]	= 	ID_SKELETONWARRIOR;
+
+	EquipItem		(self, ItMw_2H_Sword_M_01);
+};
+
+INSTANCE SkeletonWarrior_Weg	(Mst_Default_Skeleton)
 {
 	name							=	"Skelettkrieger";
 	Set_SkeletonWarrior_Visuals();

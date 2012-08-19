@@ -251,16 +251,16 @@ FUNC VOID Info_Mod_Eremit_Prisma2_Info()
 	AI_StopProcessInfos	(self);
 
 	Wld_InsertNpc	(Demon_AtEremit,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(ZombieRandom,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(ZombieRandom,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(ZombieRandom,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(ZombieRandom,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(ZombieRandom,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(SkeletonMage,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(SkeletonWarrior,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(SkeletonWarrior,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(Skeleton,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(Skeleton,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(ZombieRandom_Weg,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(ZombieRandom_Weg,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(ZombieRandom_Weg,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(ZombieRandom_Weg,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(ZombieRandom_Weg,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(SkeletonMage_Weg,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(SkeletonWarrior_Weg,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(SkeletonWarrior_Weg,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(Skeleton_Weg,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(Skeleton_Weg,	"ADW_VALLEY_PATH_031");
 };
 
 INSTANCE Info_Mod_Eremit_Prisma3 (C_INFO)
@@ -807,7 +807,7 @@ FUNC VOID Info_Mod_Eremit_Zeremoniendolch4_Info()
 
 	B_GivePlayerXP	(250);
 
-	Wld_InsertNpc	(Troll, "FP_ROAM_VALLEY_010");
+	Wld_InsertNpc	(Troll_Weg, "FP_ROAM_VALLEY_010");
 };
 
 INSTANCE Info_Mod_Eremit_Zeremoniendolch5 (C_INFO)

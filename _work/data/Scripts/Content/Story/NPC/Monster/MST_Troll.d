@@ -108,6 +108,13 @@ INSTANCE Troll	(Mst_Default_Troll)
 	B_SetVisuals_Troll();
 	Npc_SetToFistMode(self);
 };
+
+INSTANCE Troll_Weg	(Mst_Default_Troll)
+{
+	B_SetVisuals_Troll();
+	Npc_SetToFistMode(self);
+};
+
 INSTANCE Krauttroll	(Mst_Default_Troll)
 {
 	B_SetVisuals_Troll();

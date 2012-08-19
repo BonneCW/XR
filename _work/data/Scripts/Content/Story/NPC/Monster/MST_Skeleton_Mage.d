@@ -74,8 +74,11 @@ func void B_SetVisuals_Skeleton_Mage()
 INSTANCE SkeletonMage		(Mst_Default_Skeleton_Mage)
 {
  	B_SetVisuals_Skeleton_Mage();
+};
 
-	protection	[PROT_POINT]		=	-1;
+INSTANCE SkeletonMage_Weg		(Mst_Default_Skeleton_Mage)
+{
+ 	B_SetVisuals_Skeleton_Mage();
 };
 
 INSTANCE SkeletonMage_Riddler		(Mst_Default_Skeleton_Mage)
@@ -85,35 +88,25 @@ INSTANCE SkeletonMage_Riddler		(Mst_Default_Skeleton_Mage)
 	name = "Besonderer Skelettmagier";
 
 	CreateInvItems	(self, theriddle1, 1);
-
-	protection	[PROT_POINT]		=	-1;
 };
 
 
 INSTANCE SkeletonMage_DienerDesBoesen_01_01		(Mst_Default_Skeleton_Mage)
 {
  	B_SetVisuals_Skeleton_Mage();
-
-	protection	[PROT_POINT]		=	-1;
 };
 
 INSTANCE SkeletonMage_DienerDesBoesen_01_02		(Mst_Default_Skeleton_Mage)
 {
  	B_SetVisuals_Skeleton_Mage();
-
-	protection	[PROT_POINT]		=	-1;
 };
 
 INSTANCE SkeletonMage_DienerDesBoesen_02_01		(Mst_Default_Skeleton_Mage)
 {
  	B_SetVisuals_Skeleton_Mage();
-
-	protection	[PROT_POINT]		=	-1;
 };
 
 INSTANCE SkeletonMage_DienerDesBoesen_02_02		(Mst_Default_Skeleton_Mage)
 {
  	B_SetVisuals_Skeleton_Mage();
-
-	protection	[PROT_POINT]		=	-1;
 };
