@@ -60,8 +60,6 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 				Mod_Staerke_Praxis += 6;
 				Mod_Geschick_Praxis += 2;
 			};
-
-			//PrintScreen	("Nahkampf!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 		}
 		else if (Npc_IsInFightMode (hero, FMODE_FAR))
 		{
@@ -74,8 +72,6 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 				Mod_Geschick_Praxis += 6;
 				Mod_Staerke_Praxis += 2;
 			};
-
-			//PrintScreen	("Fernkampf!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 		}
 		else if (Npc_IsInFightMode (hero, FMODE_MAGIC))
 		{
@@ -87,8 +83,6 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 			{
 				Mod_Mana_Praxis += 6;
 			};
-
-			//PrintScreen	("Magiekampf!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 		}
 		else if (Npc_IsInFightMode (hero, FMODE_FIST))
 		{
@@ -100,8 +94,6 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 			{
 				Mod_Staerke_Praxis += 10;
 			};
-
-			//PrintScreen	("Faustkampf!", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 		};
 				
 		if (Mod_Geschick_Praxis >= Mod_Geschick_Praxis_Next)

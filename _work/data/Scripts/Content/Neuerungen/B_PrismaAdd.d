@@ -45,6 +45,11 @@ FUNC VOID B_PrismaAdd(var int damage)
 
 FUNC VOID B_KillWithPrisma(var C_NPC slf)
 {
+	if (Npc_IsDead(slf))
+	{
+		return;
+	};
+
 	if (Npc_GetDistToNpc(slf, hero) > 500)
 	{
 		return;
