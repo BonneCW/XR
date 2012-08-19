@@ -69,7 +69,7 @@ FUNC VOID Info_Mod_Jana_Shakir_Info()
 	AI_Output(self, hero, "Info_Mod_Jana_Shakir_16_09"); //(laut) Aber sag nicht, dass ich das gesagt habe!
 	AI_Output(hero, self, "Info_Mod_Jana_Shakir_15_10"); //Entschuldigung nochmal.
 
-	B_LogEntry	(TOPIC_MOD_ASS_SHAKIR_FRAU, "Jana war stinksauer. Sie sei eine ehrbare Frau. Was man von Gritta, Thorben's Nichte, nicht behaupten könne. Mal sehen.");
+	B_LogEntry	(TOPIC_MOD_ASS_SHAKIR_FRAU, "Jana war stinksauer. Sie sei eine ehrbare Frau. Was man von Gritta, Thorbens Nichte, nicht behaupten könne. Mal sehen.");
 };
 
 INSTANCE Info_Mod_Jana_Beutel (C_INFO)
@@ -139,8 +139,6 @@ FUNC VOID Info_Mod_Jana_Beutel_C()
 	Log_CreateTopic	(TOPIC_MOD_JANA_BEUTEL, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_JANA_BEUTEL, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_JANA_BEUTEL, "Mann, das Ding ist wirklich verdammt schwer. Ich sollte sehen, dass ich es möglichst schnell in der Hütte zwischen Fellan und der Lagerhalle ablege.");
-
-	Mdl_ApplyOverlayMDS	(hero, "HUMANS_WALK.MDS");
 
 	AI_SetWalkMode	(hero, NPC_WALK);
 

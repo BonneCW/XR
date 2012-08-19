@@ -873,9 +873,13 @@ FUNC VOID NEBENQUESTS()
 
 			AI_PlayAni	(hero, "T_PLUNDER");
 
-			Mdl_RemoveOverlayMDS	(hero, "HUMANS_WALK.MDS");
-
 			B_LogEntry	(TOPIC_MOD_JANA_BEUTEL, "Puh, endlich bin ich die Last los.");
+		};
+
+		if (Mod_Jana_Beutel == 2)
+		&& (Npc_GetWalkMode(hero) != NPC_WALK)
+		{
+			AI_SetWalkMode	(hero, NPC_WALK);
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Balthasar_Bereit))
