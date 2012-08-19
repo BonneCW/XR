@@ -1254,7 +1254,7 @@ INSTANCE  ItTa_Behueter(C_Item)
 {
 	name 			=	NAME_Amulett;
 
-	mainflag 		=	ITEM_KAT_NONE;
+	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
 
 	value 			=	Value_Am_ProtFire;
@@ -1314,7 +1314,7 @@ INSTANCE  ItMi_Magieprisma(C_Item)
 {
 	name 			=	NAME_Amulett;
 
-	mainflag 		=	ITEM_KAT_NONE;
+	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET|ITEM_SHOW;
 
 	value 			=	0;
@@ -1334,7 +1334,7 @@ INSTANCE  ItMi_Magieprisma(C_Item)
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	//INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
 	
 };
 
