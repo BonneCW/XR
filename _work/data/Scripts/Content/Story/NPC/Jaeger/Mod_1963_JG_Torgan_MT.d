@@ -5,7 +5,7 @@ INSTANCE Mod_1963_JG_Torgan_MT (Npc_Default)
 	guild 		= GIL_OUT;
 	id 			= 1963;
 	voice 		= 13;
-	flags       = 0;																	
+	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------

@@ -8196,9 +8196,9 @@ FUNC VOID STARTUP_Tugettso()
 	Wld_InsertNpc	(Gobbo_Tugettso04,	"FP_ROAM_08");
 	Wld_InsertNpc	(Gobbo_Tugettso03,	"FP_ROAM_09");
 	Wld_InsertNpc	(Gobbo_Tugettso03,	"FP_ROAM_10");
-	Wld_InsertNpc	(Gobbo_Tugettso02,	"FP_ROAM_11");
-	Wld_InsertNpc	(Gobbo_Tugettso01,	"FP_ROAM_12");
-	Wld_InsertNpc	(Gobbo_Tugettso04,	"FP_ROAM_13");
+	Wld_InsertNpc	(Gobbo_Tugettso02_Weg,	"FP_ROAM_11");
+	Wld_InsertNpc	(Gobbo_Tugettso01_Weg,	"FP_ROAM_12");
+	Wld_InsertNpc	(Gobbo_Tugettso04_Weg,	"FP_ROAM_13");
 	Wld_InsertNpc	(Gobbo_Tugettso03,	"FP_ROAM_14");
 	Wld_InsertNpc	(Gobbo_Tugettso01,	"FP_ROAM_15");
 	Wld_InsertNpc	(Gobbo_Tugettso01,	"FP_ROAM_16");

@@ -5,7 +5,7 @@ instance Mod_7432_JG_Sonor_MT (Npc_Default)
 	guild 		= GIL_OUT;
 	id 			= 7432;
 	voice 		= 6;
-	flags       = 0;																
+	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------

@@ -16,7 +16,7 @@ INSTANCE MENU_MAIN(C_MENU_DEF)
 	items[6]		= "MENUITEM_MAIN_OPTIONS";
 	//items[7]		= "MENUITEM_MAIN_INTRO";
 	items[7]		= "MENUITEM_MAIN_TEAM";
-	items[8]		= "MENUITEM_MAIN_CREDITS";	
+	//items[8]		= "MENUITEM_MAIN_CREDITS";	
 	items[9]		= "MENUITEM_MAIN_EXIT"; 
 	items[7]		= "MENUITEM_MAIN_TEAM";
 	

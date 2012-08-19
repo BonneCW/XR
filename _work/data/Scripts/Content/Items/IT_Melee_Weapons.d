@@ -29,32 +29,6 @@
 // Alle haben sehr geringen Wert
 // Alle können (theoretisch) in Kapitel 1 erlangt werden
 // *****************************************************
-INSTANCE Testwaffe (C_Item)
-{	
-	name 				=	"Dolch";  
-
-	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_SWD;	
-	material 			=	MAT_METAL;
-
-	value 				=	Value_VLKDolch;
-
-	damageTotal  		= 	Damage_VLKDolch;
-	damagetype 			=	DAM_EDGE;
-	range    			=  	RANGE_VLKDolch;		
-	
-	cond_atr[2]   		=	ATR_STRENGTH;
-	cond_value[2]  		=	Condition_VLKDolch;
-	visual 				=	"ItMw_testschwet.3DS";
-
-	description			= name;
-	
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_OneHanded;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-
 INSTANCE ItMw_1H_Mace_02 (C_Item)
 {	
 	name 				=	"Stachelkeule";

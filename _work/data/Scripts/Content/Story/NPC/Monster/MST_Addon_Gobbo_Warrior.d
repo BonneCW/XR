@@ -169,7 +169,21 @@ INSTANCE Gobbo_Tugettso01 (Mst_Default_Gobbo_Warrior)
 	Npc_SetToFightMode (self, ItMw_1h_Bau_Mace); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 };
 
+INSTANCE Gobbo_Tugettso01_Weg (Mst_Default_Gobbo_Warrior)
+{
+	B_SetVisuals_Gobbo_Tugettso01();
+	
+	Npc_SetToFightMode (self, ItMw_1h_Bau_Mace); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
+};
+
 INSTANCE Gobbo_Tugettso02 (Mst_Default_Gobbo_Warrior)
+{
+	B_SetVisuals_Gobbo_Tugettso02();
+	
+	Npc_SetToFightMode (self, ItMw_1h_Bau_Mace); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
+};
+
+INSTANCE Gobbo_Tugettso02_Weg (Mst_Default_Gobbo_Warrior)
 {
 	B_SetVisuals_Gobbo_Tugettso02();
 	
@@ -183,7 +197,21 @@ INSTANCE Gobbo_Tugettso03 (Mst_Default_Gobbo_Warrior)
 	Npc_SetToFightMode (self, ItMw_1h_Bau_Mace); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 };
 
+INSTANCE Gobbo_Tugettso03_Weg (Mst_Default_Gobbo_Warrior)
+{
+	B_SetVisuals_Gobbo_Tugettso03();
+	
+	Npc_SetToFightMode (self, ItMw_1h_Bau_Mace); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
+};
+
 INSTANCE Gobbo_Tugettso04 (Mst_Default_Gobbo_Warrior)
+{
+	B_SetVisuals_Gobbo_Tugettso04();
+	
+	Npc_SetToFightMode (self, ItMw_1h_Bau_Mace); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
+};
+
+INSTANCE Gobbo_Tugettso04_Weg (Mst_Default_Gobbo_Warrior)
 {
 	B_SetVisuals_Gobbo_Tugettso04();
 	

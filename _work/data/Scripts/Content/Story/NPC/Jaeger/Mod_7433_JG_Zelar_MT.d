@@ -7,6 +7,7 @@ instance Mod_7433_JG_Zelar_MT (Npc_Default)
 	guild =							GIL_out;      	
 	voice =							3;
 	id =							7433;
+	flags			=		2;
 
 
 	//-------- visuals --------
