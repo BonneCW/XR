@@ -140,18 +140,14 @@ FUNC void ZS_Talk ()
 		|| (C_NpcIsDog(self))
 		{
 			B_AssignAmbientInfos	(self);
-		};
-		
-		
+		};		
 
 		// ------ ToughGuy NEWS zuweisen -------
 		if (C_NpcIsToughGuy (self))
 		&& (self.aivar[AIV_ToughGuyNewsOverride] == FALSE)
 		{			
 			B_AssignToughGuyNEWS (self);
-		};
-				
-				
+		};				
 	};		
 		
 	if (self.guild == GIL_DRAGON)
@@ -162,7 +158,6 @@ FUNC void ZS_Talk ()
 	
 	// ------ START Multiple Choice Dialog ------
 	AI_ProcessInfos(self);
-
 	
 	zsTalkBugfix = FALSE;	//var resetten!
 };
@@ -209,7 +204,7 @@ FUNC VOID ZS_Talk_End ()
 	// ------ damit nicht nach Dialog+Losgehen gegrüßt wird ------
 	if (Mod_Talk_Sicherung == FALSE)
 	{
-		Npc_SetRefuseTalk(other, 20); //BEACHTEN: other ist Spieler!
+		Npc_SetRefuseTalk(other, 10); //BEACHTEN: other ist Spieler!
 	};
 
 	Restore_Questitems();
@@ -235,6 +230,4 @@ FUNC VOID ZS_Talk_End ()
 	{
 
 	};
-
-	//B_Göttergefallen();
 };
