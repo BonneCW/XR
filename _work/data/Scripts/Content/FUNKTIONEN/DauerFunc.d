@@ -36,13 +36,6 @@ FUNC VOID DAUERFUNC_01()
 		Offline_Modus = 1;
 	};
 
-	if (Mod_RespawnFix < 1)
-	{
-		CleanRespawns();
-
-		Mod_RespawnFix = 1;
-	};
-
 	LogState_PosY = 0;
 
 	if (GetInput == 0)
@@ -961,18 +954,6 @@ FUNC VOID DAUERFUNC_01()
 
 	PerkSchleife();
 
-	if (Mod_Monster_Anzeige == TRUE)
-	{
-		//PrintScreen	(concatText, XPOS_XPNEEDED, 6, FONT_ScreenSmall, 2);	
-		//MonsterCounter();
-	};
-
-	if (Mod_EXP_Anzeige == TRUE)
-	{
-		//PrintScreen	(concatText, XPOS_XPNEEDED, 2, FONT_ScreenSmall, 2);
-		//EXPBalken();
-	};
-
 	// Anfang im Tempel, 1. Monolog
 
 	if (CurrentLevel == ORCTEMPEL_ZEN)
@@ -1253,12 +1234,6 @@ FUNC VOID DAUERFUNC_01()
 	Mod_GiftCounter += 1;
 	Mod_BlutCounter += 1;
 
-	// Inventarbegrenzung
-
-	//GewichtsBegrenzung();
-
-	//PrintScreen	(IntToString(Feldraeubertrank_Counter/100), -1, 4, FONT_ScreenSmall, 2);
-
 	TimeShower();
 
 	// Anzeige, wie viele Opfergaben noch fehlen bei Opferaltar im Adanostempel wegen göttlichem Boten
@@ -1349,7 +1324,7 @@ FUNC VOID DAUERFUNC_01()
 
 	Adanostempel();
 
-	// Daniel's Eiszauber-Angebot
+	// Daniels Eiszauber-Angebot
 
 	if (Npc_HasItems(hero, ItSc_IceBolt_Fake) >= 1)
 	{
@@ -1842,12 +1817,6 @@ FUNC VOID DAUERFUNC_01()
 	// Vergiftungen
 
 	Gifte();
-
-	// Zipfelklatscher
-
-	//DebugPrintAllNpcs();
-
-	//Kompass();
 
 	// Held quatsch oder auch nicht
 
