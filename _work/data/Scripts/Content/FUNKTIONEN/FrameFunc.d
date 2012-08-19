@@ -475,6 +475,8 @@ FUNC VOID FRAMEFUNC ()
 
 	ZaphodPfeilExchange();
 
+	SPECIALFUNC();
+
 	// Triggerscript holen:
 	var int ptr; ptr = MEM_SearchVobByName ("FRAMETRIGGER");
 	MEM_AssignInst (Mein_Schleifen_Trigger, ptr);

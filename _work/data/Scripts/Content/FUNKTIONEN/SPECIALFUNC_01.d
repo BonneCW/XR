@@ -1,4 +1,4 @@
-FUNC VOID SPECIALFUNC_01()
+FUNC VOID SPECIALFUNC()
 {
 	if (CurrentLevel == NEWWORLD_ZEN)
 	{
@@ -1921,6 +1921,4 @@ FUNC VOID SPECIALFUNC_01()
 			AI_Teleport	(hero, "BANDIT_CAMP_ROOF_02");
 		};
 	};
-
-	Wld_SendTrigger	("SPECIALTRIGGER");
 };

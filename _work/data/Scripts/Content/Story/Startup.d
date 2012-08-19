@@ -174,7 +174,6 @@ func void INIT_GLOBAL()
 
 	Wld_SendTrigger	("FRAMETRIGGER");
 	Wld_SendTrigger ("DAUERTRIGGER");
-	Wld_SendTrigger ("SPECIALTRIGGER");
 
 	MEM_SetShowDebug (1);
 
