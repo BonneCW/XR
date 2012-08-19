@@ -244,19 +244,8 @@ func void STARTUP_ADDON_PART_ADANOSTEMPLE_01 ()
 	Wld_InsertNpc	(ErzGuardian,	"FP_PRAY_RAVEN");
 };
 
-func void INIT_SUB_ADDON_PART_ADANOSTEMPLE_01 ()
-{
-};
-
 func void INIT_ADDON_PART_ADANOSTEMPLE_01 ()
 {
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-
-	//OldLevel(ADDONWORLD_ZEN);	 
-
-	INIT_SUB_ADDON_PART_ADANOSTEMPLE_01();
 };
 
 //------------------------------------------------------------
@@ -267,18 +256,8 @@ func void STARTUP_ADDON_PART_GOLDMINE_01 ()
 
 };
 
-func void INIT_SUB_ADDON_PART_GOLDMINE_01 ()
-{
-	
-};
-
 func void INIT_ADDON_PART_GOLDMINE_01 ()
 {
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals (); 
-	
-	INIT_SUB_ADDON_PART_GOLDMINE_01();
 };
 
 //------------------------------------------------------------
@@ -390,17 +369,9 @@ func void STARTUP_ADDON_PART_CANYON_01 ()
 	Wld_InsertNpc	(Mod_10038_Orc_Scout_AW,	"CANYONLIBRARY");
 	
 };
-func void INIT_SUB_ADDON_PART_CANYON_01 ()
-{
 
-};
 func void INIT_ADDON_PART_CANYON_01 ()
 {
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals (); 
-	
-	INIT_SUB_ADDON_PART_CANYON_01();
 };
 //------------------------------------------------------------
 //		Addon World ENTRANCE
@@ -464,17 +435,8 @@ func void STARTUP_ADDON_PART_ENTRANCE_01 ()
 	Wld_InsertNpc	(Shadowbeast_Skeleton,	"ADW_ENTRANCE_PATH2BANDITSCAVE1_06");
 };
 
-func void INIT_SUB_ADDON_PART_ENTRANCE_01 ()
-{
-};
-
 func void INIT_ADDON_PART_ENTRANCE_01 ()
 {
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals (); 
-	
-	INIT_SUB_ADDON_PART_ENTRANCE_01();
 };
 //------------------------------------------------------------
 //		Addon World Banditenlager
@@ -536,25 +498,15 @@ FUNC VOID STARTUP_ADDON_PART_BANDITSCAMP_01()
 	Wld_InsertNpc	(SwampGolem,	"FP_ROAM_SWAMP_04");
 };
 
-
-
-FUNC VOID INIT_SUB_ADDON_PART_BANDITSCAMP_01()
-{	
-		//Die portalräume im banditenlager
-		Wld_AssignRoomToGuild("tavern01"  , GIL_DRACONIAN);
-		Wld_AssignRoomToGuild("beds01"	  , GIL_DRACONIAN);
-		Wld_AssignRoomToGuild("merchant01", GIL_NONE);
-		Wld_AssignRoomToGuild("schmied01" , GIL_DRACONIAN);
-		Wld_AssignRoomToGuild("zoll01"	  , GIL_NONE);
-		Wld_AssignRoomToGuild("raven01"	  , GIL_DRACONIAN);
-};
 FUNC VOID INIT_ADDON_PART_BANDITSCAMP_01()
 {
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals (); 
-	
-	INIT_SUB_ADDON_PART_BANDITSCAMP_01();
+	//Die portalräume im banditenlager
+	Wld_AssignRoomToGuild("tavern01"  , GIL_DRACONIAN);
+	Wld_AssignRoomToGuild("beds01"	  , GIL_DRACONIAN);
+	Wld_AssignRoomToGuild("merchant01", GIL_NONE);
+	Wld_AssignRoomToGuild("schmied01" , GIL_DRACONIAN);
+	Wld_AssignRoomToGuild("zoll01"	  , GIL_NONE);
+	Wld_AssignRoomToGuild("raven01"	  , GIL_DRACONIAN);
 };
 
 //#############################################
@@ -648,17 +600,8 @@ FUNC VOID STARTUP_ADDON_PART_PIRATESCAMP_01 ()
 	Wld_InsertNpc	(BrandonWaran,		"ADW_PIRATECAMP_BEACH_27");
 };
 
-FUNC VOID INIT_SUB_ADDON_PART_PIRATESCAMP_01 ()
-{
-};
-
 FUNC VOID INIT_ADDON_PART_PIRATESCAMP_01 ()
 {
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals (); 
-	
-	INIT_SUB_ADDON_PART_PIRATESCAMP_01();
 };
 
 //#############################################
@@ -785,17 +728,8 @@ FUNC VOID STARTUP_ADDON_PART_VALLEY_01 ()
 	Wld_InsertNpc	(Troll,	"ADW_VALLEY_BIGCAVE_08");
 };
 
-FUNC VOID INIT_SUB_ADDON_PART_VALLEY_01 ()
-{
-};
-
 FUNC VOID INIT_ADDON_PART_VALLEY_01 ()
 {
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-	
-	INIT_SUB_ADDON_PART_VALLEY_01();
 };
 
 // *************
@@ -1139,7 +1073,6 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc	(Mod_4030_VLK_Flora_NW,	"NW_CITY_ENTRANCE_01");
 	Wld_InsertNpc	(Mod_7115_NONE_Nadja_NW,	"NW_CITY_ENTRANCE_01");
 
-
 	// Assassinen im Hauptlager
 
 	Wld_InsertNpc	(Mod_7100_ASS_Zahit_NW, "HAFEN");
@@ -1194,7 +1127,6 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc	(Mod_7413_JG_Wild_NW, "HAFEN");
 	Wld_InsertNpc	(Mod_7414_JG_Bret_NW, "HAFEN");
 
-
 	// Tiere in Stadt
 
 	Wld_InsertNpc (Hammel			, "NW_CITY_SHEEP_SPAWN_02");	//Schaf
@@ -1226,15 +1158,14 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc	(Mod_7609_STT_Schatten_NW,	"NW_CITY_ENTRANCE_01");
 };
 
-	func void INIT_SUB_NewWorld_Part_City_01()
-	{
+func void INIT_NewWorld_Part_City_01()
+{
 		//---Laternen---
 		Wld_SetMobRoutine (00,00, "FIREPLACE", 1);
 		Wld_SetMobRoutine (20,00, "FIREPLACE", 1);
-		Wld_SetMobRoutine (05,00, "FIREPLACE", 0);
+		Wld_SetMobRoutine (05,00, "FIREPLACE", 0);		
 		
-		
-		//---------------- PORTALR?UME ------------------------ 
+		//---------------- PORTALRÄUME ------------------------ 
 		
 		//Hafenviertel
 		Wld_AssignRoomToGuild ("hafen01",		GIL_PUBLIC); //Vermisstenliste
@@ -1250,14 +1181,13 @@ func void STARTUP_NewWorld_Part_City_01()
 		Wld_AssignRoomToGuild ("hafen10",		GIL_NONE);
 		Wld_AssignRoomToGuild ("hafen11",		GIL_PAL);
 		Wld_AssignRoomToGuild ("fellan",		GIL_PAL);
-		//Wld_AssignRoomToGuild ("boot",			GIL_PAL); - ist RAUS
 		Wld_AssignRoomToGuild ("fisch",			GIL_PAL);
 		Wld_AssignRoomToGuild ("lagerhaus",		GIL_NONE);
 		Wld_AssignRoomToGuild ("karten",		GIL_PUBLIC);
 		Wld_AssignRoomToGuild ("hafenkneipe",	GIL_NONE);
 		Wld_AssignRoomToGuild ("puff",			GIL_NONE);
 		
-		//Handwerker und H?ndler
+		//Handwerker und Händler
 		if (Mod_LehrlingBei == 4)
 		{
 			Wld_AssignRoomToGuild ("bogner",		GIL_NONE);		// = Thorben und Gritta!
@@ -1305,7 +1235,7 @@ func void STARTUP_NewWorld_Part_City_01()
 			Wld_AssignRoomToGuild ("schmied",	GIL_PAL);
 		};
 		
-		//T?rme
+		//Türme
 		Wld_AssignRoomToGuild ("turmsued01",	GIL_MIL);
 		Wld_AssignRoomToGuild ("turmsued02",	GIL_MIL);
 		Wld_AssignRoomToGuild ("turmost01",		GIL_MIL);
@@ -1338,17 +1268,7 @@ func void STARTUP_NewWorld_Part_City_01()
 		Wld_AssignRoomToGuild ("reich06",		GIL_PUBLIC); //Salandril Alchemist -> Wegen Mission!!!
 		Wld_AssignRoomToGuild ("richter",		GIL_PUBLIC); //wegen SLD Mission Kap.3 
 		Wld_AssignRoomToGuild ("leomar",		GIL_PUBLIC);
-	};
-
-func void INIT_NewWorld_Part_City_01()
-{
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-
-	INIT_SUB_NewWorld_Part_City_01();
 };
-
 
 // ------ Farm1 -------
 
@@ -1454,30 +1374,20 @@ func void STARTUP_NewWorld_Part_Farm_01()
 	Wld_InsertItem	(ItPl_Beet_Lobart_19, "FP_ITEM_RUEBE_LOBART_19");
 	Wld_InsertItem	(ItPl_Beet_Lobart_20, "FP_ITEM_RUEBE_LOBART_20");
 };
-
-	func void INIT_SUB_NewWorld_Part_Farm_01()
-	{
-		Wld_AssignRoomToGuild ("farm01", GIL_PUBLIC);	// Hildas Raum
-		Wld_AssignRoomToGuild ("farm02", GIL_PUBLIC);  	// Scheune 
-
-		if (Lobart_Kleidung_Verkauft == TRUE)
-		{
-			Wld_AssignRoomToGuild ("farm03", GIL_NONE);  	// Schlafraum
-		}
-		else
-		{		
-			Wld_AssignRoomToGuild ("farm03", GIL_PUBLIC);  	// Schlafraum
-		};
-		
-	};
 	
 func void INIT_NewWorld_Part_Farm_01()
 {
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-	
-	INIT_SUB_NewWorld_Part_Farm_01();
+	Wld_AssignRoomToGuild ("farm01", GIL_PUBLIC);	// Hildas Raum
+	Wld_AssignRoomToGuild ("farm02", GIL_PUBLIC);  	// Scheune 
+
+	if (Lobart_Kleidung_Verkauft == TRUE)
+	{
+		Wld_AssignRoomToGuild ("farm03", GIL_NONE);  	// Schlafraum
+	}
+	else
+	{		
+		Wld_AssignRoomToGuild ("farm03", GIL_PUBLIC);  	// Schlafraum
+	};
 };
 
 
@@ -1540,7 +1450,6 @@ func void INIT_NewWorld_Part_Xardas_01()
 	B_InitNpcGlobals ();	
 };
 
-
 // KLOSTER 
 FUNC VOID STARTUP_NewWorld_Part_Monastery_01 ()
 {
@@ -1584,56 +1493,44 @@ FUNC VOID STARTUP_NewWorld_Part_Monastery_01 ()
 	Wld_InsertNpc	(Scavenger_Breed,	"FP_BREED_SCAVENGER_02");
 };
 
-	FUNC VOID INIT_SUB_NewWorld_Part_Monastery_01()
-	{
-		Wld_AssignRoomToGuild ("kloster01",GIL_PUBLIC); //Kirche
-		Wld_AssignRoomToGuild ("kloster02",GIL_PUBLIC); //B?cherei
-		Wld_AssignRoomToGuild ("kloster03",GIL_PUBLIC); //Kapelle 
-		
-		Wld_AssignRoomToGuild ("kloster11",GIL_PUBLIC); //Der Keller
-		Wld_AssignRoomToGuild ("kloster13",GIL_PUBLIC); //Weinkelterei
-		
-		if (Mod_Gilde == 6)
-		|| (Mod_Gilde == 7)
-		|| (Mod_Gilde == 8)
-		{
-			Wld_AssignRoomToGuild ("kloster04",GIL_PUBLIC); //Schlafraum Novizen
-			Wld_AssignRoomToGuild ("kloster05",GIL_PUBLIC); //Schlafraum Novizen
-			Wld_AssignRoomToGuild ("kloster10",GIL_PUBLIC); //Schlafraum Novizen
-			Wld_AssignRoomToGuild ("kloster12",GIL_PUBLIC); //Schlafraum Novizen
-		
-			Wld_AssignRoomToGuild ("kloster06",GIL_PUBLIC); //Schlafraum Magier
-			Wld_AssignRoomToGuild ("kloster07",GIL_PUBLIC); //Schlafraum Magier
-			Wld_AssignRoomToGuild ("kloster08",GIL_PUBLIC); //Schlafraum Magier
-			Wld_AssignRoomToGuild ("kloster09",GIL_PUBLIC); //Schlafraum Magier
-		}
-		else
-		{
-			Wld_AssignRoomToGuild ("kloster04",GIL_VLK); //Schlafraum Novizen
-			Wld_AssignRoomToGuild ("kloster05",GIL_VLK); //Schlafraum Novizen
-			Wld_AssignRoomToGuild ("kloster10",GIL_VLK); //Schlafraum Novizen
-			Wld_AssignRoomToGuild ("kloster12",GIL_VLK); //Schlafraum Novizen
-		
-			Wld_AssignRoomToGuild ("kloster06",GIL_VLK); //Schlafraum Magier
-			Wld_AssignRoomToGuild ("kloster07",GIL_VLK); //Schlafraum Magier
-			Wld_AssignRoomToGuild ("kloster08",GIL_VLK); //Schlafraum Magier
-			Wld_AssignRoomToGuild ("kloster09",GIL_VLK); //Schlafraum Magier
-		};
-	};
-
 FUNC VOID INIT_NewWorld_Part_Monastery_01 ()
 {
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
+	Wld_AssignRoomToGuild ("kloster01",GIL_PUBLIC); //Kirche
+	Wld_AssignRoomToGuild ("kloster02",GIL_PUBLIC); //B?cherei
+	Wld_AssignRoomToGuild ("kloster03",GIL_PUBLIC); //Kapelle 
+		
+	Wld_AssignRoomToGuild ("kloster11",GIL_PUBLIC); //Der Keller
+	Wld_AssignRoomToGuild ("kloster13",GIL_PUBLIC); //Weinkelterei
 
-	INIT_SUB_NewWorld_Part_Monastery_01(); 
+	if (Mod_Gilde == 6)
+	|| (Mod_Gilde == 7)
+	|| (Mod_Gilde == 8)
+	{
+		Wld_AssignRoomToGuild ("kloster04",GIL_PUBLIC); //Schlafraum Novizen
+		Wld_AssignRoomToGuild ("kloster05",GIL_PUBLIC); //Schlafraum Novizen
+		Wld_AssignRoomToGuild ("kloster10",GIL_PUBLIC); //Schlafraum Novizen
+		Wld_AssignRoomToGuild ("kloster12",GIL_PUBLIC); //Schlafraum Novizen
+	
+		Wld_AssignRoomToGuild ("kloster06",GIL_PUBLIC); //Schlafraum Magier
+		Wld_AssignRoomToGuild ("kloster07",GIL_PUBLIC); //Schlafraum Magier
+		Wld_AssignRoomToGuild ("kloster08",GIL_PUBLIC); //Schlafraum Magier
+		Wld_AssignRoomToGuild ("kloster09",GIL_PUBLIC); //Schlafraum Magier
+	}
+	else
+	{
+		Wld_AssignRoomToGuild ("kloster04",GIL_VLK); //Schlafraum Novizen
+		Wld_AssignRoomToGuild ("kloster05",GIL_VLK); //Schlafraum Novizen
+		Wld_AssignRoomToGuild ("kloster10",GIL_VLK); //Schlafraum Novizen
+		Wld_AssignRoomToGuild ("kloster12",GIL_VLK); //Schlafraum Novizen
+		
+		Wld_AssignRoomToGuild ("kloster06",GIL_VLK); //Schlafraum Magier
+		Wld_AssignRoomToGuild ("kloster07",GIL_VLK); //Schlafraum Magier
+		Wld_AssignRoomToGuild ("kloster08",GIL_VLK); //Schlafraum Magier
+		Wld_AssignRoomToGuild ("kloster09",GIL_VLK); //Schlafraum Magier
+	};
 };
 
-
 //---Der grosse Bauernhof--------
-
-
 FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 {
 	//Mod-Personen
@@ -2018,50 +1915,41 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc	(Scavenger_Breed,	"FP_BREED_SCAVENGER_01");
 };
 
-	FUNC VOID INIT_SUB_NewWorld_Part_GreatPeasant_01()
-	{
-		// ------- Sld-Vorposten -------
-		Wld_AssignRoomToGuild ("grpwaldhuette01",	GIL_PUBLIC);
-	
-		
-		// ------ Onars Hof ------
-		Wld_AssignRoomToGuild ("grphaupthaus01",	GIL_PUBLIC);
-		Wld_AssignRoomToGuild ("grpschmiede01",		GIL_NONE);
-		Wld_AssignRoomToGuild ("grpscheune01",		GIL_PUBLIC);
-		Wld_AssignRoomToGuild ("grpkapelle01",		GIL_NONE);
-		
-		// ------ abgelegene Gruft ------
-		Wld_AssignRoomToGuild ("cementary01",		GIL_NONE);
-				
-		// ------ Sekobs Farm ------
-		if (Sekob_RoomFree == FALSE)
-		{
-			Wld_AssignRoomToGuild ("grpbauer01",		GIL_PUBLIC);
-		}
-		else
-		{
-			Wld_AssignRoomToGuild ("grpbauer01",		GIL_NONE);
-		};
-		Wld_AssignRoomToGuild ("grpbauerscheune01",	GIL_PUBLIC);
-		
-		// ------ Bengars Farm ------
-		Wld_AssignRoomToGuild ("grpbauer02",		GIL_PUBLIC);
-		Wld_AssignRoomToGuild ("grpbauerscheune02",	GIL_PUBLIC);
-		
-		// ------ Abenteuerspielplatz -------
-		Wld_AssignRoomToGuild ("grpturm02",			GIL_PUBLIC); //vorderer Turm
-		Wld_AssignRoomToGuild ("grpturm01",			GIL_PUBLIC); //hinterer Turm
-		Wld_AssignRoomToGuild ("grpwaldhuette02",	GIL_PUBLIC); //Banditenh?tte
-	};
-
 FUNC VOID INIT_NewWorld_Part_GreatPeasant_01 ()
 {
-	B_InitMonsterAttitudes (); 
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();	
+	// ------- Sld-Vorposten -------
+	Wld_AssignRoomToGuild ("grpwaldhuette01",	GIL_PUBLIC);
+		
+	// ------ Onars Hof ------
+	Wld_AssignRoomToGuild ("grphaupthaus01",	GIL_PUBLIC);
+	Wld_AssignRoomToGuild ("grpschmiede01",		GIL_NONE);
+	Wld_AssignRoomToGuild ("grpscheune01",		GIL_PUBLIC);
+	Wld_AssignRoomToGuild ("grpkapelle01",		GIL_NONE);
 	
-	INIT_SUB_NewWorld_Part_GreatPeasant_01(); 
+	// ------ abgelegene Gruft ------
+	Wld_AssignRoomToGuild ("cementary01",		GIL_NONE);
+
+	// ------ Sekobs Farm ------
+	if (Sekob_RoomFree == FALSE)
+	{
+		Wld_AssignRoomToGuild ("grpbauer01",		GIL_PUBLIC);
+	}
+	else
+	{
+		Wld_AssignRoomToGuild ("grpbauer01",		GIL_NONE);
+	};
+	Wld_AssignRoomToGuild ("grpbauerscheune01",	GIL_PUBLIC);
+		
+	// ------ Bengars Farm ------
+	Wld_AssignRoomToGuild ("grpbauer02",		GIL_PUBLIC);
+	Wld_AssignRoomToGuild ("grpbauerscheune02",	GIL_PUBLIC);
+	
+	// ------ Abenteuerspielplatz -------
+	Wld_AssignRoomToGuild ("grpturm02",			GIL_PUBLIC); //vorderer Turm
+	Wld_AssignRoomToGuild ("grpturm01",			GIL_PUBLIC); //hinterer Turm
+	Wld_AssignRoomToGuild ("grpwaldhuette02",	GIL_PUBLIC); //Banditenh?tte
 };
+
 //--------------------------- PASS -------------------------------------------------------
 FUNC VOID STARTUP_NewWorld_Part_Pass_To_OW_01 ()
 {
@@ -2091,20 +1979,12 @@ FUNC VOID STARTUP_NewWorld_Part_Pass_To_OW_01 ()
 	Wld_InsertNpc	(Gobbo_Black, "FP_ROAM_WOLF_PASS_05");
 	Wld_InsertNpc	(Gobbo_Warrior, "FP_ROAM_WOLF_PASS_06");
 };
-FUNC VOID INIT_SUB_NewWorld_Part_Pass_To_OW_01 ()
-{
 
-};
 FUNC VOID INIT_NewWorld_Part_Pass_To_OW_01 ()
 {
-	B_InitMonsterAttitudes (); 
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();	
-	
-	INIT_SUB_NewWorld_Part_Pass_To_OW_01(); 
 };
-//---Medium Forest--------
 
+//---Medium Forest--------
 FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 {
 	Wld_InsertNpc 	(Sheep, 		"NW_FARM2_OUT_02");
@@ -2359,24 +2239,14 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 	Wld_InsertNpc 	(BlackWolf,	"NW_FOREST_PATH_31_MONSTER");
 };
 
-	FUNC VOID INIT_SUB_NewWorld_Part_Forest_01()
-	{
-		Wld_AssignRoomToNpc	("forestherberge01",	Mod_776_NONE_Orlan_NW);
-	};
-
 FUNC VOID INIT_NewWorld_Part_Forest_01 ()
 {
-	B_InitMonsterAttitudes (); 
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();	
-	
-	INIT_SUB_NewWorld_Part_Forest_01(); 
+	Wld_AssignRoomToNpc	("forestherberge01",	Mod_776_NONE_Orlan_NW);
 };
 	
 //------- Troll Area ---------------------------
 FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 {
-
 	// Stollen unter Sonnenkreis
 
 	Wld_InsertNpc	(ZombieRandom,	"FP_ROAM_RITUALFOREST_CAVE_05");
@@ -2564,17 +2434,8 @@ FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 	Wld_InsertNpc	(Spider_01,	"NW_TROLLAREA_RUINS_CAVE_17");
 };
 
-	FUNC VOID INIT_SUB_NewWorld_Part_TrollArea_01()
-	{
-	};
-
 FUNC VOID INIT_NewWorld_Part_TrollArea_01 ()
-{
-	B_InitMonsterAttitudes (); 
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-	
-	INIT_SUB_NewWorld_Part_TrollArea_01();	 
+{ 
 };
 
 // ------ World -------
@@ -2590,12 +2451,7 @@ FUNC VOID STARTUP_NewWorld()
 	Wld_InsertNpc	(Rat_Sekob_02, "FP_ROAM_SEKOBSRATTE_04");
 	Wld_InsertNpc	(Rat_Sekob_03, "FP_ROAM_SEKOBSRATTE_07");
 
-
-
-
-	// Sonstiges
-
-	
+	// Sonstiges	
 
 	// ------ StartUps der Unter-Parts ------ 
 	STARTUP_NewWorld_Part_City_01();
@@ -2606,6 +2462,7 @@ FUNC VOID STARTUP_NewWorld()
 	STARTUP_NewWorld_Part_TrollArea_01();
 	STARTUP_NewWorld_Part_Forest_01();
 	STARTUP_NewWorld_Part_Pass_To_OW_01();
+
 	// ------ INTRO - muss ganz am Ende der Startup stehen ------
 	Kapitel = 1; //Joly: Kann hier stehen bleiben!
 	
@@ -2615,10 +2472,6 @@ FUNC VOID STARTUP_NewWorld()
 
 FUNC VOID INIT_NewWorld()
 {
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-
 	if (Npc_KnowsInfo(hero, Info_Mod_Dragomir_BurnedLager))
 	{
 		Wld_SendUntrigger	("DRAGOMIRSFEUER");
@@ -3056,14 +2909,14 @@ FUNC VOID INIT_NewWorld()
 	};
 	
 	// ------ INITS der Unter-Parts ------ 
-	INIT_SUB_NewWorld_Part_City_01();
-	INIT_SUB_NewWorld_Part_Farm_01();
+	INIT_NewWorld_Part_City_01();
+	INIT_NewWorld_Part_Farm_01();
 	INIT_NewWorld_Part_Xardas_01();
-	INIT_SUB_NewWorld_Part_Monastery_01();
-	INIT_SUB_NewWorld_Part_GreatPeasant_01();
-	INIT_SUB_NewWorld_Part_TrollArea_01();
-	INIT_SUB_NewWorld_Part_Forest_01();
-	INIT_SUB_NewWorld_Part_Pass_To_OW_01();
+	INIT_NewWorld_Part_Monastery_01();
+	INIT_NewWorld_Part_GreatPeasant_01();
+	INIT_NewWorld_Part_TrollArea_01();
+	INIT_NewWorld_Part_Forest_01();
+	INIT_NewWorld_Part_Pass_To_OW_01();
 	
 	if (Mod_Gilde == 4)
 	&& (Mod_ErsteVerbesserung == TRUE)
@@ -3222,7 +3075,6 @@ FUNC VOID INIT_NewWorld()
 	OldLevel(NEWWORLD_ZEN);
 };
 
-
 // ------ AddonWorld -------
 FUNC VOID STARTUP_AddonWorld ()
 {
@@ -3240,8 +3092,6 @@ FUNC VOID STARTUP_AddonWorld ()
 		
 	// ------ StartUps der Unter-Parts ------ 
 	ENTERED_ADDONWORLD = TRUE;
-	//OldLevel(ADDONWORLD_ZEN);	 
-	//Wld_SetTime	(60,00);//Joly: KDW sind schon 2 Tag da. SC hat ein bisschen l?nger gebraucht.
 };
 
 FUNC VOID INIT_AddonWorld ()
@@ -3365,18 +3215,13 @@ FUNC VOID INIT_AddonWorld ()
 		INSERT_FAKE_HERO_ONETIME = TRUE;
 	}; 
 	
-	INIT_SUB_ADDON_PART_BANDITSCAMP_01 ();
-	INIT_SUB_ADDON_PART_PIRATESCAMP_01 ();
- 	INIT_SUB_ADDON_PART_ENTRANCE_01 ();
-   	INIT_SUB_ADDON_PART_GOLDMINE_01 ();
-   	INIT_SUB_ADDON_PART_CANYON_01 ();
-   	INIT_SUB_ADDON_PART_VALLEY_01 ();
-   	INIT_SUB_ADDON_PART_ADANOSTEMPLE_01 ();
-   
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-	
+	INIT_ADDON_PART_BANDITSCAMP_01 ();
+	INIT_ADDON_PART_PIRATESCAMP_01 ();
+ 	INIT_ADDON_PART_ENTRANCE_01 ();
+   	INIT_ADDON_PART_GOLDMINE_01 ();
+   	INIT_ADDON_PART_CANYON_01 ();
+   	INIT_ADDON_PART_VALLEY_01 ();
+   	INIT_ADDON_PART_ADANOSTEMPLE_01 ();	
 
 	if (Mod_Schwierigkeit > 0)
 	&& (Mod_Enter_Addon_01 == FALSE)
@@ -3600,7 +3445,6 @@ FUNC VOID STARTUP_MinentalNewCamp ()
 	Wld_InsertNpc	(Mod_1275_SLD_Nodrak_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_1276_SLD_Soeldner_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_1277_SLD_Soeldner_MT,	"NC_DAM2");
-	//Wld_InsertNpc	(Mod_1278_SLD_Soeldner_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_1279_SLD_Soeldner_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_1280_SLD_Soeldner_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_1281_SLD_Soeldner_MT,	"NC_DAM2");
@@ -3815,12 +3659,7 @@ FUNC VOID INIT_MinentalNewCamp ()
 	Wld_AssignRoomToGuild("MAGE04",GIL_PUBLIC);	//Bibliothek frei zug?nglich!
 	Wld_AssignRoomToGuild("MAGE05",GIL_PUBLIC);	//NC_KDW03_IN
 	Wld_AssignRoomToGuild("MAGE06",GIL_PUBLIC);	//NC_KDW02_IN
-	Wld_AssignRoomToGuild("MAGHO4",GIL_PUBLIC);	//Pentagrammh?hle frei zug?nglich
-	
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-	
+	Wld_AssignRoomToGuild("MAGHO4",GIL_PUBLIC);	//Pentagrammh?hle frei zug?nglich	
 };
 
 FUNC VOID STARTUP_MinentalFreeMineCamp ()
@@ -3857,10 +3696,6 @@ FUNC VOID STARTUP_MinentalFreeMineCamp ()
 
 FUNC VOID INIT_MinentalFreeMineCamp ()
 {
-/*	Wld_SetMobRoutine			(00,00, "FIREPLACE", 1);
-	Wld_SetMobRoutine			(22,00, "FIREPLACE", 1);
-	Wld_SetMobRoutine			(05,00, "FIREPLACE", 0);
-*/
 	Wld_AssignRoomToGuild("FMC01",GIL_MIL);     
 	Wld_AssignRoomToGuild("FMC03",GIL_MIL); 
 	Wld_AssignRoomToGuild("FMC04",GIL_MIL);
@@ -3874,11 +3709,7 @@ FUNC VOID INIT_MinentalFreeMineCamp ()
 	Wld_AssignRoomToGuild("FMC12",GIL_MIL);
 	Wld_AssignRoomToGuild("FMC13",GIL_MIL);
 	Wld_AssignRoomToGuild("FMC14",GIL_MIL);
-	Wld_AssignRoomToGuild("FMC15",GIL_MIL);
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-	
+	Wld_AssignRoomToGuild("FMC15",GIL_MIL);	
 };
 
 FUNC VOID STARTUP_MinentalOldCamp ()
@@ -3896,7 +3727,6 @@ FUNC VOID STARTUP_MinentalOldCamp ()
 	Wld_InsertNpc	(Mod_1106_EBR_Bartholo_MT,		"OC1");
 	Wld_InsertNpc	(Mod_1107_GRD_Jackal_MT,		"OC1");
 	Wld_InsertNpc	(Mod_1108_GRD_Bullit_MT,		"OC1");
-	//Wld_InsertNpc	(Mod_1109_GRD_Scorpio_MT,		"OC1");
 	Wld_InsertNpc	(Mod_1110_GRD_Cutter_MT,		"OC1");
 	Wld_InsertNpc	(Mod_1113_GRD_Fletcher_MT,		"OC1");
 	Wld_InsertNpc	(Mod_1120_BDT_Ratford_MT,		"OC1");
@@ -3936,7 +3766,6 @@ FUNC VOID STARTUP_MinentalOldCamp ()
 	Wld_InsertNpc	(Mod_1168_STT_Schatten_MT,	"OC1");
 	Wld_InsertNpc	(Mod_1169_STT_Schatten_MT,	"OC1");
 	Wld_InsertNpc	(Mod_1170_STT_Schatten_MT,	"OC1");
-	//Wld_InsertNpc	(Mod_1171_STT_Balam_MT,		"OC1");
 	Wld_InsertNpc	(Mod_1172_STT_Omid_MT,		"OC1");
 	Wld_InsertNpc	(Mod_1871_TPL_GorKaranto_MT,	"OC1");
 	Wld_InsertNpc	(Mod_1173_STT_Fingers_MT,	"OC1");
@@ -4162,90 +3991,85 @@ FUNC VOID INIT_MinentalOldCamp ()
 	Wld_AssignRoomToGuild("HH7",GIL_PUBLIC);	// Portalraum EBR-Bedroom
 	
 	Wld_AssignRoomToGuild("ocgateb",GIL_OUT);	//Wachraum am Haupteingang
-	Wld_AssignRoomToGuild("h?tte1",GIL_OUT); //Diegos H?tte
-	Wld_AssignRoomToGuild("h?tte2",GIL_OUT); 
-	Wld_AssignRoomToGuild("h?tte3",GIL_OUT); 
-	Wld_AssignRoomToGuild("h?tte4",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte5",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte6",GIL_OUT); 
-	Wld_AssignRoomToGuild("h?tte7",GIL_OUT); 
-	Wld_AssignRoomToGuild("h?tte8",GIL_OUT); 
-	Wld_AssignRoomToGuild("h?tte9",GIL_OUT); 
-	Wld_AssignRoomToGuild("h?tte10",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte11",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte12",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte13",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte14",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte15",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte16",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte17",GIL_PUBLIC); //Durchgangsh?tte, wird nicht auf jedes Betreten ?berwacht
-	Wld_AssignRoomToGuild("h?tte18",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte19",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte20",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte21",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte22",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte23",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte24",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte25",GIL_OUT);
-	//Wld_AssignRoomToGuild("h?tte26",GIL_VLK); //PLAYER H?tte
-	Wld_AssignRoomToGuild("h?tte27",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte28",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte29",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte30",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte31",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte32",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte33",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte34",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte35",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte36",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte37",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte38",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte39",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte40",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte41",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte42",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte43",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte44",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte45",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte46",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte47",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte48",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte49",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte50",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte51",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte52",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte53",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte54",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte55",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte56",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte57",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte58",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte59",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte60",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte61",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte62",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte63",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte64",GIL_PUBLIC); //Durchgangsh?tte, wird nicht auf jedes Betreten ?berwacht
-	Wld_AssignRoomToGuild("h?tte65",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte66",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte67",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte68",GIL_PUBLIC); //Durchgangsh?tte, wird nicht auf jedes Betreten ?berwacht
-	Wld_AssignRoomToGuild("h?tte69",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte70",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte71",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte72",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte73",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte74",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte75",GIL_OUT);
-	Wld_AssignRoomToGuild("h?tte76",GIL_OUT);	//Grahams H?tte, abgesprochen mit Mike
-	Wld_AssignRoomToGuild("h?tte77",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte1",GIL_OUT); //Diegos H?tte
+	Wld_AssignRoomToGuild("hütte2",GIL_OUT); 
+	Wld_AssignRoomToGuild("hütte3",GIL_OUT); 
+	Wld_AssignRoomToGuild("hütte4",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte5",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte6",GIL_OUT); 
+	Wld_AssignRoomToGuild("hütte7",GIL_OUT); 
+	Wld_AssignRoomToGuild("hütte8",GIL_OUT); 
+	Wld_AssignRoomToGuild("hütte9",GIL_OUT); 
+	Wld_AssignRoomToGuild("hütte10",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte11",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte12",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte13",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte14",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte15",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte16",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte17",GIL_PUBLIC); //Durchgangsh?tte, wird nicht auf jedes Betreten ?berwacht
+	Wld_AssignRoomToGuild("hütte18",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte19",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte20",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte21",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte22",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte23",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte24",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte25",GIL_OUT);
+	//Wld_AssignRoomToGuild("hütte26",GIL_VLK); //PLAYER H?tte
+	Wld_AssignRoomToGuild("hütte27",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte28",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte29",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte30",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte31",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte32",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte33",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte34",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte35",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte36",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte37",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte38",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte39",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte40",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte41",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte42",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte43",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte44",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte45",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte46",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte47",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte48",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte49",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte50",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte51",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte52",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte53",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte54",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte55",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte56",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte57",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte58",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte59",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte60",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte61",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte62",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte63",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte64",GIL_PUBLIC); //Durchgangsh?tte, wird nicht auf jedes Betreten ?berwacht
+	Wld_AssignRoomToGuild("hütte65",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte66",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte67",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte68",GIL_PUBLIC); //Durchgangsh?tte, wird nicht auf jedes Betreten ?berwacht
+	Wld_AssignRoomToGuild("hütte69",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte70",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte71",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte72",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte73",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte74",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte75",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte76",GIL_OUT);	//Grahams H?tte, abgesprochen mit Mike
+	Wld_AssignRoomToGuild("hütte77",GIL_OUT);
 
-	Wld_AssignRoomToGuild("HHMH1", GIL_PUBLIC);	// Portalraum EBR-Bedroom
-
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-	
+	Wld_AssignRoomToGuild("HHMH1", GIL_PUBLIC);	// Portalraum EBR-Bedroom	
 };
 
 FUNC VOID STARTUP_MinentalPsiCamp ()
@@ -4258,7 +4082,6 @@ FUNC VOID STARTUP_MinentalPsiCamp ()
 	Wld_InsertNpc	(Mod_2014_PSINOV_Darrion_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_3001_PSINOV_Balor_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_1116_PSINOV_Caine_MT,	"PSI_START");
-	//Wld_InsertNpc	(Mod_1119_PSINOV_Shrat_MT,	"PSI_START");
 	Wld_InsertNpc	(Mod_1364_PSINOV_Novize_MT,	"PSI_START");
 	Wld_InsertNpc	(Mod_1322_PSINOV_Novize_MT,	"PSI_START");
 	Wld_InsertNpc	(Mod_1324_PSINOV_Novize_MT,	"PSI_START");
@@ -4616,25 +4439,15 @@ FUNC VOID INIT_MinentalPsiCamp ()
 	Wld_AssignRoomToGuild("PSIH33",GIL_OUT);
 	Wld_AssignRoomToGuild("PSIH34",GIL_OUT);
 	Wld_AssignRoomToGuild("PSIH35",GIL_OUT);
-	Wld_AssignRoomToGuild("PSIH36",GIL_OUT);
-
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-	
+	Wld_AssignRoomToGuild("PSIH36",GIL_OUT);	
 };
 
 FUNC VOID STARTUP_MinentalDemontower ()
 {	
-	
 };
 
 FUNC VOID INIT_MinentalDemontower ()
-{
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-	
+{	
 };
 
 FUNC VOID STARTUP_MinentalSurface ()
@@ -4716,7 +4529,6 @@ FUNC VOID STARTUP_MinentalSurface ()
 
 	// Orks in Orkstadt
 
-	//Wld_InsertNpc	(Mod_10002_Orc_HoshPak_MT,	"OC1");
 	Wld_InsertNpc	(Mod_10003_Orc_Masshak_MT,	"OC1");
 	Wld_InsertNpc	(Mod_10004_Orc_Ashrak_MT,	"OC1");
 
@@ -5469,21 +5281,15 @@ FUNC VOID STARTUP_MinentalSurface ()
 
 	// Nebelturm
 
-	//Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_09");
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_09");
 
-	//Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_11");
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_11");
 
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_15");
 
-	//Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_16");
-
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_17");
 
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_22");
-
-	//Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_24");
 
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_23");
 
@@ -5492,8 +5298,6 @@ FUNC VOID STARTUP_MinentalSurface ()
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_20");
 
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_25");
-
-	//Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_31");
 
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_32");
 
@@ -5504,8 +5308,6 @@ FUNC VOID STARTUP_MinentalSurface ()
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_26");
 
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_34");
-
-	//Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_33");
 
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_36_MOVEMENT");
 
@@ -5523,15 +5325,9 @@ FUNC VOID STARTUP_MinentalSurface ()
 
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_42");
 
-	//Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_44");
-
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_45");
 
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_17");
-
-	//Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_17");
-
-	//Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_17");
 
 	Wld_InsertNpc	(Lesser_Skeleton,	"OW_FOGDUNGEON_17");
 
@@ -5711,8 +5507,7 @@ FUNC VOID INIT_MinentalSurface ()
 	
 	Wld_SetMobRoutine			(00,00, "FIREPLACE", 1);
 	Wld_SetMobRoutine			(22,00, "FIREPLACE", 1);
-	Wld_SetMobRoutine			(05,00, "FIREPLACE", 0);
-	
+	Wld_SetMobRoutine			(05,00, "FIREPLACE", 0);	
 	
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH_01",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH_01",1);
@@ -5872,10 +5667,6 @@ FUNC VOID INIT_MinentalSurface ()
 	
 	// aus Orc-City
 	Wld_SetMobRoutine	(00,00, "FIREPLACE", 1);
-
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
 	
 };
 
@@ -5885,13 +5676,10 @@ FUNC VOID STARTUP_Minental ()
 
 	NameAllFires();
 
-	// Orks - Orks kriegen alle nen TA, ist dann cooler
-
-	
+	// Orks - Orks kriegen alle nen TA, ist dann cooler	
 
 
 	// NPC's
-
 
 
 	// Sonstiges
@@ -5901,9 +5689,7 @@ FUNC VOID STARTUP_Minental ()
 	STARTUP_MinentalPsiCamp ();
 	STARTUP_MinentalNewCamp ();
 	STARTUP_MinentalFreeMineCamp ();
-	STARTUP_MinentalDemontower ();
-	
-		
+	STARTUP_MinentalDemontower ();		
 };
 
 FUNC VOID INIT_Minental ()
@@ -6247,10 +6033,6 @@ FUNC VOID INIT_Minental ()
 	INIT_MinentalDemontower ();
 	
 	OldLevel(MINENTAL_ZEN);
-   
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Morgahard_NW_Hi))
 	&& (Mod_AL_Esteban_Back == FALSE)
@@ -6337,8 +6119,6 @@ FUNC VOID INIT_Minental ()
 
 		Mod_Enter_Minental_03 = True;
 	};
-
-	PrintDebug	("LOADMIN: Vor Kapitel 4 Spawns");
 
 	if (Kapitel >= 4)
 	&& (Mod_Enter_Minental_04 == FALSE)
@@ -6525,8 +6305,6 @@ FUNC VOID INIT_Minental ()
 		Wld_InsertNpc	(OrcWarrior_Roam,	"OCR_OUTSIDE_HUT_7");
 		Wld_InsertNpc	(OrcWarrior_Roam,	"OCR_OUTSIDE_HUT_7");
 
-		PrintDebug	("LOADMIN: Nach Orkspawns");
-
 		// Bewohner des alten Lagers killen
 
 		B_KillNpc	(Mod_943_GRD_Bloodwyn_MT);
@@ -6591,8 +6369,6 @@ FUNC VOID INIT_Minental ()
 
 		Mod_Enter_Minental_04 = True;
 	};
-
-	PrintDebug	("LOADMIN: Nach Kapitel 4 Spawns");
 
 	if (Kapitel >= 5)
 	&& (Mod_Enter_Minental_05 == FALSE)
@@ -6689,8 +6465,6 @@ FUNC VOID INIT_Minental ()
 
 		Mod_Kap4_KGOrks = 4;
 	};
-
-	PrintDebug	("LOADMIN: Ende Init");
 };
 
 FUNC VOID STARTUP_OrcTempel ()
@@ -6740,10 +6514,6 @@ FUNC VOID INIT_OrcTempel ()
 
 		Wld_InsertNpc	(Mod_10039_ORC_UndeadShamane_OT, "TPL_331");
 	};
-
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
 
 	OldLevel(ORCTEMPEL_ZEN);
 
@@ -6811,10 +6581,6 @@ FUNC VOID STARTUP_AbandonedMine ()
 
 FUNC VOID INIT_AbandonedMine ()
 {
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-	
 	OldLevel(ABANDONEDMINE_ZEN);
 
 	if (Mod_KG_MineSpawn == FALSE)
@@ -6915,10 +6681,6 @@ FUNC VOID STARTUP_OldMine ()
 
 FUNC VOID INIT_OldMine ()
 {
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-	
 	OldLevel(OLDMINE_ZEN);
 
 	if (Mod_Schwierigkeit > 0)
@@ -7060,10 +6822,6 @@ FUNC VOID STARTUP_OrcGraveyard()
 
 FUNC VOID INIT_OrcGraveyard ()
 {
-	B_InitMonsterAttitudes ();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();
-	
 	OldLevel(ORCGRAVEYARD_ZEN);
 
 	if (Mod_Schwierigkeit > 0)
@@ -7137,13 +6895,7 @@ FUNC VOID STARTUP_FreeMine()
 
 FUNC VOID INIT_FreeMine()
 {
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-
 	OldLevel(FREEMINE_ZEN);
-
-	B_FM_ARBEIT();
 };
 
 FUNC VOID STARTUP_GdG_World()
@@ -7211,11 +6963,7 @@ FUNC VOID INIT_GdG_World()
 		Wld_InsertNpc		(Mod_6011_KDF_Serpentes_GDG,		"LGR_EINGANG_01");
 	};
 
-	OldLevel(GDG_WORLD_ZEN);
-
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();	
+	OldLevel(GDG_WORLD_ZEN);	
 };
 
 FUNC VOID STARTUP_DieInsel()
@@ -7265,10 +7013,6 @@ FUNC VOID STARTUP_DieInsel()
 
 FUNC VOID INIT_DieInsel()
 {
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-
 	OldLevel(DIEINSEL_ZEN);
 
 	if (Mod_Schwierigkeit > 0)
@@ -7287,10 +7031,6 @@ FUNC VOID STARTUP_OrcCity()
 
 FUNC VOID INIT_OrcCity()
 {
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-
 	if (Mod_HoshPakInOC == 0)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Ranad_WasHier))
 	{
@@ -7338,10 +7078,6 @@ FUNC VOID STARTUP_Xeres_Endlevel()
 
 FUNC VOID INIT_Xeres_Endlevel()
 {
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-
 	OldLevel(XERESWELT_ZEN);
 
 	if (Mod_XW_Kap6 == 1)
@@ -7517,10 +7253,6 @@ FUNC VOID STARTUP_DragonIsland()
 
 FUNC VOID INIT_DragonIsland()
 {
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-
 	OldLevel(DRAGONISLAND_ZEN); 
 
 	// Crew spawnen
@@ -7744,10 +7476,6 @@ FUNC VOID STARTUP_Schiffschlacht()
 
 FUNC VOID INIT_Schiffschlacht()
 {
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-
 	OldLevel(SCHIFFSCHLACHT_ZEN);
 
 	StartRain();
@@ -7835,9 +7563,6 @@ FUNC VOID STARTUP_FEUERMAGIER_SURFACE()
 
 FUNC VOID INIT_FEUERMAGIER_SURFACE()
 {
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
 };
 
 FUNC VOID STARTUP_FEUERMAGIER_TEMPEL()
@@ -7898,10 +7623,6 @@ FUNC VOID STARTUP_FEUERMAGIER_TEMPEL()
 
 FUNC VOID INIT_FEUERMAGIER_TEMPEL()
 {
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-
 	Wld_AssignRoomToGuild("alchemie1"	  , GIL_PUBLIC);
 	Wld_AssignRoomToGuild("alchemie2"	  , GIL_PUBLIC);
 	Wld_AssignRoomToGuild("bibliothek"	  , GIL_NONE);
@@ -7927,9 +7648,6 @@ var int Mod_SchwarzerVerraeterInsert_02;
 
 FUNC VOID INIT_FEUERMAGIER_UNTERGRUND()
 {
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
 	OldLevel(PATHERION_ZEN);
 
 	if (Npc_HasItems(hero, ItMi_TeleportStein) == 0)
@@ -8011,11 +7729,6 @@ FUNC VOID INIT_PATHERION()
 	};
 
 	OldLevel(PATHERION_ZEN);
-
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-	Wld_SendTrigger ("SPECIALTRIGGER");
 
 	if (Mod_Enter_PAT_First == FALSE)
 	{
@@ -8159,10 +7872,6 @@ FUNC VOID STARTUP_Bergwelt()
 
 FUNC VOID INIT_Bergwelt()
 {
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-
 	OldLevel(BERGWELT_ZEN); 
 };
 
@@ -8261,10 +7970,6 @@ FUNC VOID INIT_Tugettso()
 	};
 
 	Npc_RemoveInvItems	(hero, ItMi_TugettsoStein, 1);
-
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
 
 	OldLevel(TUGETTSO_ZEN); 
 };
@@ -8377,10 +8082,6 @@ FUNC VOID INIT_Eisgebiet()
 	Wld_SetMobRoutine(19, 30, "LIGHTSPAWNERELEVEN", 1);
 	Wld_SetMobRoutine(20, 10, "LIGHTSPAWNERELEVEN", 0);
 
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-
 	OldLevel(EISGEBIET_ZEN);
 
 	if (Mod_RattenQuest == 3)
@@ -8405,10 +8106,6 @@ FUNC VOID STARTUP_FliegendeInsel()
 FUNC VOID INIT_FliegendeInsel()
 {
 	OldLevel(FLIEGENDEINSEL_ZEN);
-
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
 };
 
 FUNC VOID STARTUP_Relendel()
@@ -8810,10 +8507,6 @@ FUNC VOID INIT_Relendel()
 
 	OldLevel(RELENDEL_ZEN);
 
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-
 	if (Npc_KnowsInfo(hero, Info_Mod_Namib_NoDeal))
 	&& (Mod_SabineInRelendel == 0)
 	{
@@ -9038,10 +8731,6 @@ FUNC VOID INIT_Jaegerlager()
 
 	OldLevel(JAEGERLAGER_ZEN);
 
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
-
 	if (Kapitel >= 5)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Cyrco_Nahkampf))
 	&& (Mod_JG_HockDa == 0)
@@ -9080,10 +8769,6 @@ FUNC VOID STARTUP_Wolkenwelt()
 FUNC VOID INIT_Wolkenwelt()
 {
 	OldLevel(WOLKENWELT_ZEN);
-
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
 };
 
 FUNC VOID STARTUP_Halluzination()
@@ -9118,10 +8803,6 @@ FUNC VOID STARTUP_Halluzination()
 FUNC VOID INIT_Halluzination()
 {
 	OldLevel(HALLUZINATION_ZEN);
-
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
 };
 
 FUNC VOID STARTUP_Wald_Schlucht()
@@ -9162,10 +8843,6 @@ FUNC VOID STARTUP_Wald_Schlucht()
 FUNC VOID INIT_Wald_Schlucht()
 {
 	OldLevel(WALDSCHLUCHT_ZEN);
-
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
 };
 
 FUNC VOID STARTUP_Drachental()
@@ -9200,10 +8877,6 @@ FUNC VOID STARTUP_Drachental()
 FUNC VOID INIT_Drachental()
 {
 	OldLevel(DRACHENTAL_ZEN);
-
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Drache_Drachendurst04))
 	{
@@ -9249,8 +8922,4 @@ FUNC VOID STARTUP_Relendel_Mine()
 FUNC VOID INIT_Relendel_Mine()
 {
 	OldLevel(RELENDELMINE_ZEN);
-
-	B_InitMonsterAttitudes();
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals();
 };
