@@ -210,7 +210,8 @@ FUNC VOID EVT_BUCHLABYRINTH_SCHALTER3 ()
 {
 	if (BUCHLABYRINTH_SCHALTER3 == FALSE)
 	{
-		Wld_SendTrigger	("TOR3");
+		Wld_SendTrigger	("TOR3_1");
+		Wld_SendTrigger	("TOR3_2");
 
 		Wld_SendTrigger	("TOR32");
 		Snd_Play 	("MYSTERY_03");
