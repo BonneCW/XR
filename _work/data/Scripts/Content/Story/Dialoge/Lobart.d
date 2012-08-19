@@ -228,6 +228,106 @@ FUNC VOID Info_Mod_Lobart_Rueben_Info()
 	CurrentNQ += 1;
 };
 
+INSTANCE Info_Mod_Lobart_Unkraut (C_INFO)
+{
+	npc		= Mod_910_BAU_Lobart_NW;
+	nr		= 1;
+	condition	= Info_Mod_Lobart_Unkraut_Condition;
+	information	= Info_Mod_Lobart_Unkraut_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Lobart_Unkraut_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Lobart_Rueben))
+	&& (Kapitel >= 5)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Lobart_Unkraut_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Lobart_Unkraut_05_00"); //He, du, wir könnten mal wieder deine Hilfe gebrauchen ...
+	AI_Output(hero, self, "Info_Mod_Lobart_Unkraut_15_01"); //Wovon werdet ihr bedroht?
+	AI_Output(self, hero, "Info_Mod_Lobart_Unkraut_05_02"); //Unkraut ... die Felder sind voll davon. Du hast uns schon damals bei der Rübenernte geholfen und bist genau der Richtige für die Aufgabe.
+
+	Info_ClearChoices	(Info_Mod_Lobart_Unkraut);
+
+	Info_AddChoice	(Info_Mod_Lobart_Unkraut, "Willst du mich verarschen?! Seh ich vielleicht aus wie ein mickriger Feldarbeiter?!", Info_Mod_Lobart_Unkraut_B);
+	Info_AddChoice	(Info_Mod_Lobart_Unkraut, "Na gut ...", Info_Mod_Lobart_Unkraut_A);
+};
+
+FUNC VOID Info_Mod_Lobart_Unkraut_B()
+{
+	AI_Output(hero, self, "Info_Mod_Lobart_Unkraut_B_15_00"); //Willst du mich verarschen?! Seh ich vielleicht aus wie ein mickriger Feldarbeiter?!
+	AI_Output(self, hero, "Info_Mod_Lobart_Unkraut_B_05_01"); //Ich meinte ja nur. Aber wenn du dir zu fein dafür bist, dann wird sich eben jemand anders die 20 Goldmünzen verdienen.
+
+	Info_ClearChoices	(Info_Mod_Lobart_Unkraut);
+};
+
+FUNC VOID Info_Mod_Lobart_Unkraut_A()
+{
+	AI_Output(hero, self, "Info_Mod_Lobart_Unkraut_A_15_00"); //Na gut ...
+	AI_Output(self, hero, "Info_Mod_Lobart_Unkraut_A_05_01"); //Dann fang am besten gleich an.
+
+	Info_ClearChoices	(Info_Mod_Lobart_Unkraut);
+
+	Mod_Lobart_Unkraut = 1;
+
+	Log_CreateTopic	(TOPIC_MOD_LOBART_UNKRAUT, LOG_MISSION);
+	B_SetTopicStatus	(TOPIC_MOD_LOBART_UNKRAUT, LOG_RUNNING);
+	B_LogEntry	(TOPIC_MOD_LOBART_UNKRAUT, "Lobart hat mir aufgetragen die Felder von Unkraut zu befreien.");
+
+	Wld_InsertItem	(ItPl_Unkraut_Lobart, "FP_ITEM_RUEBE_LOBART_01");
+	Wld_InsertItem	(ItPl_Unkraut_Lobart, "FP_ITEM_RUEBE_LOBART_02");
+	Wld_InsertItem	(ItPl_Unkraut_Lobart, "FP_ITEM_RUEBE_LOBART_03");
+	Wld_InsertItem	(ItPl_Unkraut_Lobart, "FP_ITEM_RUEBE_LOBART_04");
+	Wld_InsertItem	(ItPl_Unkraut_Lobart, "FP_ITEM_RUEBE_LOBART_05");
+	Wld_InsertItem	(ItPl_Unkraut_Lobart, "FP_ITEM_RUEBE_LOBART_06");
+	Wld_InsertItem	(ItPl_Unkraut_Lobart, "FP_ITEM_RUEBE_LOBART_07");
+	Wld_InsertItem	(ItPl_Unkraut_Lobart, "FP_ITEM_RUEBE_LOBART_08");
+	Wld_InsertItem	(ItPl_Unkraut_Lobart, "FP_ITEM_RUEBE_LOBART_09");
+	Wld_InsertItem	(ItPl_Unkraut_Lobart, "FP_ITEM_RUEBE_LOBART_10");
+	Wld_InsertItem	(ItPl_Unkraut_Lobart, "FP_ITEM_RUEBE_LOBART_11");
+	Wld_InsertItem	(ItPl_Unkraut_Lobart, "FP_ITEM_RUEBE_LOBART_12");
+	Wld_InsertItem	(ItPl_Unkraut_Lobart, "FP_ITEM_RUEBE_LOBART_13");
+};
+
+INSTANCE Info_Mod_Lobart_Unkraut2 (C_INFO)
+{
+	npc		= Mod_910_BAU_Lobart_NW;
+	nr		= 1;
+	condition	= Info_Mod_Lobart_Unkraut2_Condition;
+	information	= Info_Mod_Lobart_Unkraut2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Die Felder sind sauber.";
+};
+
+FUNC INT Info_Mod_Lobart_Unkraut2_Condition()
+{
+	if (Mod_Lobart_Unkraut == 2)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Lobart_Unkraut2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Lobart_Unkraut2_15_00"); //Die Felder sind sauber.
+	AI_Output(self, hero, "Info_Mod_Lobart_Unkraut2_05_01"); //Gut gemacht. Dafür bekommst du auch einen Batzen Geld. Viel Spaß damit.
+
+	B_GiveInvItems	(self, hero, ItMi_Gold, 20);
+
+	B_SetTopicStatus	(TOPIC_MOD_LOBART_UNKRAUT, LOG_SUCCESS);
+
+	B_GivePlayerXP	(50);
+
+	CurrentNQ += 1;
+};
+
 INSTANCE Info_Mod_Lobart_Warentransport (C_INFO)
 {
 	npc		= Mod_910_BAU_Lobart_NW;

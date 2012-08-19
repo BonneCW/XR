@@ -139,7 +139,7 @@ var int Mod_Riordian_Geister_Tag;
 var int Mod_Cavalorn_Banditen;
 var int Mod_Kimon_REL;
 var int Mod_Bloodsplats;
-var int Mod_Gildo_Unkraut;
+var int Mod_Lobart_Unkraut;
 var int Mod_Eremit_Harpien;
 var int Mod_RespawnFix;
 var int Mod_EIS_Wuetar;

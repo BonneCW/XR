@@ -1216,12 +1216,12 @@ FUNC VOID NEBENQUESTS()
 
 		// Zurück zu den Wurzeln
 
-		if (Mod_Gildo_Unkraut == 1)
-		&& (Npc_HasItems(hero, ItPl_Unkraut_Gildo) == 13)
+		if (Mod_Lobart_Unkraut == 1)
+		&& (Npc_HasItems(hero, ItPl_Unkraut_Lobart) == 13)
 		{
-			Mod_Gildo_Unkraut = 2;
+			Mod_Lobart_Unkraut = 2;
 
-			B_LogEntry	(TOPIC_MOD_GILDO_UNKRAUT, "So, die Felder sind vom Unkraut befreit.");
+			B_LogEntry	(TOPIC_MOD_LOBART_UNKRAUT, "So, die Felder sind vom Unkraut befreit.");
 		};
 
 		// Nagur kommt wieder frei

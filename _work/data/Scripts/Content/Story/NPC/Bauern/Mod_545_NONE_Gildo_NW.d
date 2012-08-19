@@ -6,7 +6,7 @@ INSTANCE Mod_545_NONE_Gildo_NW (Npc_Default)
    	id = 545;
    	voice = 7;
    	flags = 0;
-   	npctype = NPCTYPE_MAIN;
+   	npctype = NPCTYPE_NW_BAUER;
 
  	B_SetAttributesToChapter (self, 4);
    	B_GiveNpcTalents (self);

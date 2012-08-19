@@ -41,6 +41,3 @@ FUNC VOID Rtn_Start_1424 ()
 	TA_Smalltalk		(08,00,22,00,"NW_TAVERNE_IN_05"); 
     TA_Smalltalk		(22,00,08,00,"NW_TAVERNE_IN_05");
 };
-
-
-

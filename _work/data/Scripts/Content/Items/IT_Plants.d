@@ -73,7 +73,7 @@ INSTANCE ItPl_Unkraut_Gorax (C_Item)
 	COUNT[5]			= 	Value_Weed;
 };
 
-INSTANCE ItPl_Unkraut_Gildo (C_Item)
+INSTANCE ItPl_Unkraut_Lobart (C_Item)
 {	
 	name 				=	"Unkraut";
 

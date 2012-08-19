@@ -1507,14 +1507,11 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 	Wld_InsertNpc	(Rabbit, "NW_XARDAS_TOWER_WATERFALL_01");
 
 	Wld_InsertNpc	(YWolf_Weg, "NW_XARDAS_PATH_FARM1_08_01");
-	Wld_InsertNpc	(YWolf_Weg, "NW_XARDAS_PATH_FARM1_08_01");
 
 	Wld_InsertNpc	(YWolf_Weg, "NW_XARDAS_PATH_FARM1_06");
 
 	Wld_InsertNpc	(YGobbo_Green_Weg, "NW_XARDAS_PATH_FARM1_05");
-	Wld_InsertNpc	(YGobbo_Green_Weg, "NW_XARDAS_PATH_FARM1_05");
 
-	Wld_InsertNpc	(YGobbo_Green_Weg, "NW_XARDAS_MONSTER_INSERT_02");
 	Wld_InsertNpc	(YGobbo_Green_Weg, "NW_XARDAS_MONSTER_INSERT_02");
 
 	// H?hle ins Schwarzmagiertal
@@ -1526,19 +1523,21 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 	Wld_InsertNpc	(Gobbo_Green, "FP_ROAM_XARDAS_CAVE_02");
 	Wld_InsertNpc	(Gobbo_Green, "FP_ROAM_XARDAS_CAVE_01");
 	Wld_InsertNpc	(Gobbo_Green, "FP_ROAM_XARDAS_CAVE_03");
-};
 
-	func void INIT_SUB_NewWorld_Part_Xardas_01()
-	{
-	};
+	// Plateau überm Tal
+
+	Wld_InsertNpc	(Waran, "FP_ROAM_XARDAS_SECRET_27");
+	Wld_InsertNpc	(Waran, "FP_ROAM_XARDAS_SECRET_14");
+	Wld_InsertNpc	(Waran, "FP_ROAM_XARDAS_SECRET_17");
+	Wld_InsertNpc	(Stonepuma, "FP_ROAM_XARDAS_SECRET_02");
+	Wld_InsertNpc	(Waran, "FP_ROAM_XARDAS_SECRET_22");
+};
 
 func void INIT_NewWorld_Part_Xardas_01()
 {
 	B_InitMonsterAttitudes ();
 	B_InitGuildAttitudes();
 	B_InitNpcGlobals ();	
-	
-	INIT_SUB_NewWorld_Part_Xardas_01();
 };
 
 
@@ -3059,7 +3058,7 @@ FUNC VOID INIT_NewWorld()
 	// ------ INITS der Unter-Parts ------ 
 	INIT_SUB_NewWorld_Part_City_01();
 	INIT_SUB_NewWorld_Part_Farm_01();
-	INIT_SUB_NewWorld_Part_Xardas_01();
+	INIT_NewWorld_Part_Xardas_01();
 	INIT_SUB_NewWorld_Part_Monastery_01();
 	INIT_SUB_NewWorld_Part_GreatPeasant_01();
 	INIT_SUB_NewWorld_Part_TrollArea_01();
