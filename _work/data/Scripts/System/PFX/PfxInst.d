@@ -2504,7 +2504,7 @@ INSTANCE BARRIEREWARNING_BOX (C_PARTICLEFX)
 {
      ppsvalue = 500.000000000;
      ppsscalekeys_s = "1";
-     ppsislooping = 1;
+     ppsislooping = 0;
      ppsissmooth = 1;
      ppsfps = 2.000000000;
      shptype_s = "BOX";

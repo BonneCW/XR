@@ -606,6 +606,8 @@ FUNC VOID PC_PrayShrine_Pray_NoPay ()
 				B_BlessAttribute (hero, ATR_MANA_MAX, 2);
 
 				Mod_Marduk_Gebetet = TRUE;
+
+				B_LogEntry	(TOPIC_MOD_MARDUK_NACHTSCHICHT, "Ich habe eine Woche lang jeden Tag gebetet. Das sollte meinen Glauben bewiesen haben.");
 			};
 		};
 	};
@@ -652,6 +654,8 @@ func VOID PC_PrayShrine_Pray_SmallPay ()
 				B_BlessAttribute (hero, ATR_MANA_MAX, 2);
 
 				Mod_Marduk_Gebetet = TRUE;
+
+				B_LogEntry	(TOPIC_MOD_MARDUK_NACHTSCHICHT, "Ich habe eine Woche lang jeden Tag gebetet. Das sollte meinen Glauben bewiesen haben.");
 			};
 		};
 	};
@@ -701,6 +705,8 @@ FUNC VOID PC_PrayShrine_Pray_MediumPay ()
 				B_BlessAttribute (hero, ATR_MANA_MAX, 2);
 
 				Mod_Marduk_Gebetet = TRUE;
+
+				B_LogEntry	(TOPIC_MOD_MARDUK_NACHTSCHICHT, "Ich habe eine Woche lang jeden Tag gebetet. Das sollte meinen Glauben bewiesen haben.");
 			};
 		};
 	};
@@ -772,6 +778,8 @@ func VOID PC_PrayShrine_Pray_BigPay ()
 				B_BlessAttribute (hero, ATR_MANA_MAX, 2);
 
 				Mod_Marduk_Gebetet = TRUE;
+
+				B_LogEntry	(TOPIC_MOD_MARDUK_NACHTSCHICHT, "Ich habe eine Woche lang jeden Tag gebetet. Das sollte meinen Glauben bewiesen haben.");
 			};
 		};
 	};

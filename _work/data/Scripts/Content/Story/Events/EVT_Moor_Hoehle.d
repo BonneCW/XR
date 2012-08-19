@@ -27,6 +27,31 @@ FUNC VOID EVT_MOOR_HOEHLE ()
 	};
 };
 
+FUNC VOID EVT_MOOR_HOEHLE2 ()
+{
+	var C_Item ewp;
+	var C_Item ear;
+
+	ewp = Npc_GetEquippedMeleeWeapon(hero);
+	ear = Npc_GetEquippedArmor(hero);
+
+	if (Hlp_IsValidItem(ewp))
+	{
+		if (ewp.material == MAT_METAL)
+		{
+			Wld_PlayEffect("SPELLFX_BARRIEREWARNING", hero, hero, 0, 0, 0, FALSE);
+		};
+	};
+
+	if (Hlp_IsValidItem(ear))
+	{
+		if (ear.material == MAT_METAL)
+		{
+			Wld_PlayEffect("SPELLFX_BARRIEREWARNING", hero, hero, 0, 0, 0, FALSE);
+		};
+	};
+};
+
 var int Moor_Dolche;
 
 FUNC VOID EVT_MOOR_DOLCHE()

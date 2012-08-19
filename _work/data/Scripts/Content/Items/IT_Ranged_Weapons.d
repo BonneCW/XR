@@ -588,6 +588,35 @@ INSTANCE ItRw_Mil_Crossbow(C_Item)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
+INSTANCE ItRw_EchsenArmbrust (C_Item)
+{
+	name 				=	"Echsenarmbrust";
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_CROSSBOW;
+	material 			=	MAT_WOOD;
+
+	value 				=	Value_MilArmbrust;
+
+	damageTotal			= 	50;
+	damagetype			=	DAM_POINT;
+	munition			=	ItRw_Bolt;
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	30;
+	visual 				=	"ItRw_Mil_Crossbow.mms";
+
+	range		= 2000;
+	
+	on_equip	=	munichange_cb;
+	on_unequip	=	munichange_cb_e;
+
+	description			= name;
+	TEXT[1]				= NAME_Range;					COUNT[1]	= range/100;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
 INSTANCE ItRw_Mil_Crossbow_Schmetter (C_Item)
 {
 	name 				=	"Armbrust";

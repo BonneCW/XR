@@ -579,7 +579,7 @@ FUNC VOID GILDENSTORY_FM()
 		{
 			if (Npc_KnowsInfo(hero, Info_Mod_Marduk_Nachtschicht))
 			&& (C_BodyStateContains(hero, BS_MOBINTERACT))
-			&& (Npc_GetDistToWP(hero, "NW_MONASTERY_WINEMAKER_04") < 500)
+			&& (Npc_GetDistToWP(hero, "NW_MONASTERY_WINEMAKER_04") < 1000)
 			{
 				Mod_Marduk_StampfZeit += 1;
 
@@ -588,6 +588,8 @@ FUNC VOID GILDENSTORY_FM()
 					Mod_Marduk_Gestampft = TRUE;
 
 					B_BlessAttribute (hero, ATR_STRENGTH, 1);
+
+					B_LogEntry	(TOPIC_MOD_MARDUK_NACHTSCHICHT, "Ich habe wohl genug Weintrauben für Marduk gestampft.");
 				};
 			};
 		};

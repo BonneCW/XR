@@ -77,11 +77,21 @@ FUNC VOID Info_Mod_Echsenhaendler_Waffe_Info()
 
 	if (hero.HitChance[NPC_TALENT_BOW] > hero.HitChance[NPC_TALENT_2H])
 	&& (hero.HitChance[NPC_TALENT_BOW] > hero.HitChance[NPC_TALENT_1H])
+	&& (hero.HitChance[NPC_TALENT_BOW] > hero.HitChance[NPC_TALENT_CROSSBOW])
 	{
 		CreateInvItems	(hero, ItRw_EchsenBogen, 1);
 		CreateInvItems	(hero, ItRw_Arrow, 50);
 
 		B_ShowGivenThings	("10 Golemherzfragmente gegeben und Echsenbogen und Pfeile erhalten");
+	}
+	else if (hero.HitChance[NPC_TALENT_CROSSBOW] > hero.HitChance[NPC_TALENT_2H])
+	&& (hero.HitChance[NPC_TALENT_CROSSBOW] > hero.HitChance[NPC_TALENT_1H])
+	&& (hero.HitChance[NPC_TALENT_CROSSBOW] > hero.HitChance[NPC_TALENT_BOW])
+	{
+		CreateInvItems	(hero, ItRw_EchsenArmbrust, 1);
+		CreateInvItems	(hero, ItRw_Bolt, 50);
+
+		B_ShowGivenThings	("10 Golemherzfragmente gegeben und Echsenarmbrust und Bolzen erhalten");
 	}
 	else if (hero.HitChance[NPC_TALENT_1H] > hero.HitChance[NPC_TALENT_2H])
 	&& (hero.HitChance[NPC_TALENT_1H] > hero.HitChance[NPC_TALENT_BOW])
@@ -90,13 +100,13 @@ FUNC VOID Info_Mod_Echsenhaendler_Waffe_Info()
 		{
 			CreateInvItems	(hero, ItMw_EchsenSchwertStr, 1);
 
-		B_ShowGivenThings	("10 Golemherzfragmente gegeben und Echsenschwert erhalten");
+			B_ShowGivenThings	("10 Golemherzfragmente gegeben und Echsenschwert erhalten");
 		}
 		else
 		{
 			CreateInvItems	(hero, ItMw_EchsenSchwertDex, 1);
 
-		B_ShowGivenThings	("10 Golemherzfragmente gegeben und Echsenschwert erhalten");
+			B_ShowGivenThings	("10 Golemherzfragmente gegeben und Echsenschwert erhalten");
 		};
 	}
 	else

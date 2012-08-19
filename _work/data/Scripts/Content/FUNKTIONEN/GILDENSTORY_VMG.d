@@ -82,9 +82,10 @@ FUNC VOID GILDENSTORY_VMG()
 		{
 			Mod_VMG_FaiceImBett = 1;
 
-			B_StartOtherRoutine	(Mod_4019_VMG_Faice_MT, "GIFT");
 			AI_Teleport	(Mod_4019_VMG_Faice_MT, "VMG_05");
+			B_StartOtherRoutine	(Mod_4019_VMG_Faice_MT, "GIFT");
 
+			AI_Teleport	(Mod_1955_VMG_Turendil_MT, "VMG_05");
 			B_StartOtherRoutine	(Mod_1955_VMG_Turendil_MT, "FAICE");
 		};
 	};

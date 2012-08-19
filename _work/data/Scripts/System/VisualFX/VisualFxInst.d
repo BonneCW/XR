@@ -9372,6 +9372,26 @@ INSTANCE SPELLFX_DARKARMOR_SMOKE_KEY_CAST (C_PARTICLEFXEMITKEY)
      lightrange				= 500;
 };
 
+
+
+INSTANCE SPELLFX_BARRIEREWARNING (CFX_BASE_PROTO)
+{
+     visname_s				= "BARRIEREWARNING_BOX";
+     visalpha				= 1;
+     visalphablendfunc_s	= "ADD";
+     emtrjmode_s			= "FIXED";
+     emtrjoriginnode		= "=";
+     emtrjtargetrange		= 10;
+     emtrjnumkeys			= 10;
+     emtrjloopmode_s		= "NONE";
+     emtrjeasefunc_s		= "LINEAR";
+     emtrjdynupdatedelay	= 2000000;
+     emfxlifespan			= 50;
+     emselfrotvel_s			= "0 0 0";
+     secsperdamage			= -1;
+     emAdjustShpToOrigin	= 1;
+     
+};
 ////////////////////////////////////////////////////////////////////////////////
 
 INSTANCE SPELLFX_FIRESWORD (CFX_BASE_PROTO)

@@ -658,6 +658,9 @@ FUNC VOID GILDENSTORY_NL ()
 			B_StartOtherRoutine	(Mod_533_SLD_Gorn_NW, "DRAGON");
 			B_StartOtherRoutine	(Mod_528_SLD_Cord_NW, "DRAGON");
 
+			Mod_924_RIT_Sergio_NW.guild = GIL_DMT;
+			Npc_SetTrueGuild	(Mod_924_RIT_Sergio_NW, GIL_DMT);
+
 			Mod_NL_HasKamm = 3;
 		};
 
@@ -688,6 +691,9 @@ FUNC VOID GILDENSTORY_NL ()
 			B_StartOtherRoutine	(Mod_924_RIT_Sergio_NW,	"DRAGONFIGHT");
 			Mod_924_RIT_Sergio_NW.aivar[AIV_PARTYMEMBER] = TRUE;
 			B_Attack	(Mod_924_RIT_Sergio_NW, Dragon_11009_NW, AR_Kill, 0);
+
+			Mod_924_RIT_Sergio_NW.guild = GIL_OUT;
+			Npc_SetTrueGuild	(Mod_924_RIT_Sergio_NW, GIL_OUT);
 		};
 
 		if (Mod_NL_HasKamm == 4)
