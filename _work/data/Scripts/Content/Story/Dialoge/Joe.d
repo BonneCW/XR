@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Joe_Hi_Condition()
 FUNC VOID Info_Mod_Joe_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Joe_Hi_10_01"); //Ich bin Joe.
 };
 
@@ -86,8 +87,6 @@ FUNC VOID Info_Mod_Joe_Diego_Info()
 	B_LogEntry	(TOPIC_MOD_DIEGO_KRISTALL, "Joe wird Diego ablösen, bis dieser den Kristall geborgen hat.");
 
 	AI_StopProcessInfos	(self);
-
-	Mod_PalaKristall = 2;
 
 	Npc_ExchangeRoutine	(self, "DIEGO");
 };
