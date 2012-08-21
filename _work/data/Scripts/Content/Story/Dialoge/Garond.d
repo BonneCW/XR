@@ -169,7 +169,7 @@ FUNC VOID Info_Mod_Garond_News_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Garond_News_15_00"); //Gibt es Neuigkeiten?
 	AI_Output(self, hero, "Info_Mod_Garond_News_10_01"); //Allerdings! Seit ich Wache stehen muss, bricht eine Katastrophe nach der anderen über uns herein.
-	AI_Output(self, hero, "Info_Mod_Garond_News_10_02"); //Erst kommt ihr Verbrecher, und jetzt heulen uns die Bauern die Ohren voll wegen so eines finsteren Kapuzenmannes, der sie ärgern soll.
+	AI_Output(self, hero, "Info_Mod_Garond_News_10_02"); //Erst terrorisiert uns eine Räuberbande, und wir haben nicht genügend Mann, um deren Nest auszuräuchern, dann kommt ihr Verbrecher, und jetzt heulen uns die Bauern die Ohren voll wegen so eines finsteren Kapuzenmannes, der sie ärgern soll.
 	AI_Output(self, hero, "Info_Mod_Garond_News_10_03"); //Aber was soll so ein einzelner Knabe schon anrichten. (lacht dreckig)
 	AI_Output(hero, self, "Info_Mod_Garond_News_15_04"); //Noch nie etwas von Magie gehört?
 	AI_Output(self, hero, "Info_Mod_Garond_News_10_05"); //Schnauze!

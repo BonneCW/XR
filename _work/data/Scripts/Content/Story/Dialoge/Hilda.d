@@ -45,15 +45,19 @@ FUNC INT Info_Mod_Hilda_Argez_Condition()
 FUNC VOID Info_Mod_Hilda_Argez_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hilda_Argez_15_00"); //Wer war denn hier?
-	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_01"); //Das fing schon mit den Paladinen und Rittern an. Lauter Schmutzfinken sind das, ich habe noch keine aufrichtige Person unter ihnen erlebt.
-	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_02"); //Und seit dem Fall der Barriere kommen immer mal wieder ehemalige Sträflinge vorbei, verhalten sich aber ruhig, weil Lobart ein großes Herz hat.
-	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_03"); //Zu viel wurde es ihm dann erst bei dem Tätowierten. Der hat ihm richtig Angst gemacht.
-	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_04"); //Er hat zwar nur nach Arbeit gefragt, aber auf eine so komische Weise, als würde er im nächsten Moment durchdrehen.
+	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_01"); //Alle, vom Räuber bis zum Paladin, und man weiß nachher nicht, wer jetzt die Guten und wer die Bösen sind!
+	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_02"); //Eine Räuberbande macht seit Wochen die Gegend unsicher und hat uns über Nacht einige unserer Schafe gestohlen.
+	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_03"); //Wir haben natürlich die Miliz gerufen, ein Trupp ist zu uns ausgerückt und hat sich unsere Probleme angehört - und hinterher ist nichts passiert, das Räuberlager wurde nicht gefunden oder der Angriff war zu gefährlich.
+	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_04"); //Der Höhepunkt war, dass nach dem Besuch der Milizionäre mehr Sachen gefehlt haben, als uns die Räuber gestohlen haben.
+	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_05"); //Richtige Schmutzfinken sind das allesamt, keiner mehr mit irgendwelchen Werten!
+	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_06"); //Und seit dem Fall der Barriere kommen immer mal wieder ehemalige Sträflinge vorbei, verhalten sich aber ruhig, weil Lobart ein großes Herz hat.
+	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_07"); //Zu viel wurde es ihm dann erst bei dem Tätowierten. Der hat ihm richtig Angst gemacht.
+	AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_08"); //Er hat zwar nur nach Arbeit gefragt, aber auf eine so komische Weise, als würde er im nächsten Moment durchdrehen.
 
 	if (!Npc_KnowsInfo(hero, Info_Mod_Argez_NW_InCity))
 	{
-		AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_05"); //Ich habe ihm dann eine Suppe gegeben, damit er geht, aber da er wohl nicht in die Stadt eingelassen wurde, steht er noch immer auf dem Weg vor den Feldern.
-		AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_06"); //Wenn du dafür sorgst, dass er von dort verschwindet, könnten wir sicher besser schlafen.
+		AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_09"); //Ich habe ihm dann eine Suppe gegeben, damit er geht, aber da er wohl nicht in die Stadt eingelassen wurde, steht er noch immer auf dem Weg vor den Feldern.
+		AI_Output(self, hero, "Info_Mod_Hilda_Argez_26_10"); //Wenn du dafür sorgst, dass er von dort verschwindet, könnten wir sicher besser schlafen.
 
 		Log_CreateTopic	(TOPIC_MOD_HILDA_ARGEZ, LOG_MISSION);
 		B_SetTopicStatus	(TOPIC_MOD_HILDA_ARGEZ, LOG_RUNNING);

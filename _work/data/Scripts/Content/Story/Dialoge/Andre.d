@@ -1880,6 +1880,7 @@ FUNC INT Info_Mod_Andre_Rangar_Condition()
 	&& ((Mob_HasItems("RANGARSTRUHE", ItMi_Joint) > 0)
 	|| (Mob_HasItems("RANGARSTRUHE", ItMi_HerbPaket) > 0))
 	&& (Mod_DenVerpfiffen == 0)
+	&& (Mod_Den_Problem == 1)
 	{
 		return 1;
 	};
@@ -3000,6 +3001,7 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Info()
 	if (Npc_KnowsInfo(hero, Info_Mod_Den_Problem))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Andre_Rangar))
 	&& (Mod_DenVerpfiffen == 0)
+	&& (Mod_Den_Problem == 1)
 	{
 		Info_AddChoice	(Info_Mod_Andre_Kopfgeld, "Den will Rangar in Verruf bringen.", Info_Mod_Andre_Kopfgeld_Den);
 	};

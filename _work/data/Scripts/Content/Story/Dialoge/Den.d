@@ -17,7 +17,99 @@ FUNC INT Info_Mod_Den_Hi_Condition()
 FUNC VOID Info_Mod_Den_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
+
 	AI_Output(self, hero, "Info_Mod_Den_Hi_05_01"); //Ich bin Den, Stadtwache von Khorinis.
+};
+
+INSTANCE Info_Mod_Den_Stadtwache (C_INFO)
+{
+	npc		= Mod_969_MIL_Den_NW;
+	nr		= 1;
+	condition	= Info_Mod_Den_Stadtwache_Condition;
+	information	= Info_Mod_Den_Stadtwache_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Du bist also bei der Stadtwache?";
+};
+
+FUNC INT Info_Mod_Den_Stadtwache_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Den_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Den_Stadtwache_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Den_Stadtwache_15_00"); //Du bist also bei der Stadtwache?
+	AI_Output(self, hero, "Info_Mod_Den_Stadtwache_05_01"); //He, warum der vorwurfsvolle Unterton?
+	AI_Output(hero, self, "Info_Mod_Den_Stadtwache_15_02"); //Welcher vorwurfsvolle Unterton?
+	AI_Output(self, hero, "Info_Mod_Den_Stadtwache_05_03"); //Meinst wohl, das höre ich nicht? Aber wir sind gar nicht alle so schlimm bei der Miliz, nur die wenigsten arbeiten mit der Diebesgilde zusammen und mit den Diebstählen vor drei Tagen habe ich nicht das geringste zu tun!
+	AI_Output(hero, self, "Info_Mod_Den_Stadtwache_15_04"); //Na, dann brauchst du ja keine Angst vor meinen Fragen zu haben.
+	AI_Output(self, hero, "Info_Mod_Den_Stadtwache_05_05"); //Ich will mir bloß nichts anhängen lassen! Meine Methoden sind absolut sauber und ich habe mir in meiner knapp dreijährigen Dienstzeit noch nichts zuschulden kommen lassen!
+};
+
+INSTANCE Info_Mod_Den_Raeuber (C_INFO)
+{
+	npc		= Mod_969_MIL_Den_NW;
+	nr		= 1;
+	condition	= Info_Mod_Den_Raeuber_Condition;
+	information	= Info_Mod_Den_Raeuber_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Hilda hat mir von einer Räuberbande vor Khorinis erzählt.";
+};
+
+FUNC INT Info_Mod_Den_Raeuber_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Den_Stadtwache))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Hilda_Argez))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Den_Raeuber_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Den_Raeuber_15_00"); //Hilda hat mir von einer Räuberbande vor Khorinis erzählt. Was weißt du darüber?
+	AI_Output(self, hero, "Info_Mod_Den_Raeuber_05_01"); //Kaum etwas. Hilda hat uns nicht ausreichend genug in ihren leckeren Fleischpasteten wühlen lassen, damit wir nennenswerte Hinweise finden konnten.
+	AI_Output(hero, self, "Info_Mod_Den_Raeuber_15_02"); //Was hat Fleischpastete mit dem Stehlen von Schafen zu tun?
+	AI_Output(self, hero, "Info_Mod_Den_Raeuber_05_03"); //Das kann man vorher ja nicht wissen.
+	AI_Output(self, hero, "Info_Mod_Den_Raeuber_05_04"); //Und ohne Einsichtnahme in die Fleischpasteten war die Hausdurchsuchung nicht vollständig, und somit konnte ich keinen Abschlussbericht schreiben, was uns auf der Suche nach den Verbrechern auch nicht gerade weiterhilft!
+	AI_Output(hero, self, "Info_Mod_Den_Raeuber_15_05"); //Was wisst ihr denn jetzt überhaupt von den Räubern?
+	AI_Output(self, hero, "Info_Mod_Den_Raeuber_05_06"); //Eine einfache Bande von Vogelfreien, die seit ein paar Monaten in der Gegend umherstreift und in der letzten Zeit offensichtlich ein eigenes Lager gefunden hat.
+	AI_Output(self, hero, "Info_Mod_Den_Raeuber_05_07"); //Wie viele Überfälle genau auf ihr Konto gehen, wissen wir nicht. Generell unterscheiden sie sich von den anderen Banditen dadurch, dass sie keinen Ehrenkodex haben.
+	AI_Output(self, hero, "Info_Mod_Den_Raeuber_05_08"); //Ich kenne jemanden, der auch jemanden kennt, der kurzfristigen Kontakt zu den Dieben in dieser Stadt hatte und der erfahren hat, dass selbst die Diebe diese Räuber verachten.
+	AI_Output(self, hero, "Info_Mod_Den_Raeuber_05_09"); //Diese Halunken machen sich also keine Freunde, und wenn sie keine Verbindungsmänner finden, wird es dauerhaft schwierig für sie, oh ja.
+};
+
+INSTANCE Info_Mod_Den_Dienstzeit (C_INFO)
+{
+	npc		= Mod_969_MIL_Den_NW;
+	nr		= 1;
+	condition	= Info_Mod_Den_Dienstzeit_Condition;
+	information	= Info_Mod_Den_Dienstzeit_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Seit drei Jahren im Amt? Was hast du vorher gemacht?";
+};
+
+FUNC INT Info_Mod_Den_Dienstzeit_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Den_Stadtwache))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Den_Dienstzeit_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Den_Dienstzeit_15_00"); //Seit drei Jahren im Amt? Was hast du vorher gemacht?
+	AI_Output(self, hero, "Info_Mod_Den_Dienstzeit_05_01"); //(abwehrend) Gar nichts! Gar nichts Schlimmes! Die Sache mit der Diebesgilde, das war was Einmaliges!
+	AI_Output(hero, self, "Info_Mod_Den_Dienstzeit_15_02"); //Du standest mit der Diebesgilde in Kontakt?
+	AI_Output(self, hero, "Info_Mod_Den_Dienstzeit_05_03"); //Ich komme aus dem Hafenviertel, da muss man sehen, wo man bleibt. Es wird keiner zugeben, aber die Diebesgilde kontrolliert weite Teile des Viertels.
+	AI_Output(self, hero, "Info_Mod_Den_Dienstzeit_05_04"); //Jeder dort kommt früher oder später mit ihr in Kontakt.
 };
 
 INSTANCE Info_Mod_Den_Problem (C_INFO)
@@ -32,7 +124,7 @@ INSTANCE Info_Mod_Den_Problem (C_INFO)
 
 FUNC INT Info_Mod_Den_Problem_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Den_Hi))
+	if (Npc_KnowsInfo(hero, Info_Mod_Den_Stadtwache))
 	&& (Wld_GetDay() >= 4)
 	{
 		return 1;
@@ -41,26 +133,45 @@ FUNC INT Info_Mod_Den_Problem_Condition()
 
 FUNC VOID Info_Mod_Den_Problem_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Den_Problem_05_00"); //Hey Du!
+	AI_Output(self, hero, "Info_Mod_Den_Problem_05_00"); //Pst! Hör mal!
 	AI_Output(hero, self, "Info_Mod_Den_Problem_15_01"); //Meinst du mich?
-	AI_Output(self, hero, "Info_Mod_Den_Problem_05_02"); //Ja dich. Du bist doch neu hier, oder?
-	AI_Output(hero, self, "Info_Mod_Den_Problem_15_03"); //Ja, wieso?
-	AI_Output(self, hero, "Info_Mod_Den_Problem_05_04"); //Ich hab ein Problem. Du bist neu hier und könntest mir vielleicht dabei helfen.
-	AI_Output(hero, self, "Info_Mod_Den_Problem_15_05"); //Worum gehts?
-	AI_Output(self, hero, "Info_Mod_Den_Problem_05_06"); //Nun es ist so, dass ich schon recht lange gute Arbeit als Miliz leiste, aber Lord Andre will mich nicht befördern.
-	AI_Output(self, hero, "Info_Mod_Den_Problem_05_07"); //Ich vermute, dass mich jemand bei Lord Andre schlecht macht, um mir meine Beförderung zu versauen.
-	AI_Output(hero, self, "Info_Mod_Den_Problem_15_08"); //Aber wer sollte denn sowas tun?
-	AI_Output(self, hero, "Info_Mod_Den_Problem_05_09"); //Rangar! Ich bin mir sicher, dass er dahinter steckt.
-	AI_Output(hero, self, "Info_Mod_Den_Problem_15_10"); //Und was ist dann meine Aufgabe?
-	AI_Output(self, hero, "Info_Mod_Den_Problem_05_11"); //Du sollst ein schlechtes Licht auf Rangar werfen. Verbreite Gerüchte über ihn, schmuggel verbotene Waren in seine Truhe und dann berichte Lord Andre davon.
-	AI_Output(hero, self, "Info_Mod_Den_Problem_15_12"); //Und was hab ich davon?
-	AI_Output(self, hero, "Info_Mod_Den_Problem_05_13"); //Ich werde dich natürlich dafür bezahlen. Also an die Arbeit!
+	AI_Output(self, hero, "Info_Mod_Den_Problem_05_02"); //Ja, genau. Du hast mich doch letztens so ausgefragt.
+	AI_Output(hero, self, "Info_Mod_Den_Problem_15_03"); //Wenn du es so nennen willst.
+	AI_Output(self, hero, "Info_Mod_Den_Problem_05_04"); //Ich hab dir alles erzählt, was du hören wolltest. Im Gegenzug könntest du mir vielleicht einen Gefallen tun - nichts Großes, keine Angst.
+	AI_Output(hero, self, "Info_Mod_Den_Problem_15_05"); //Worum geht's?
+	AI_Output(self, hero, "Info_Mod_Den_Problem_05_06"); //Ich hab so langsam das Patrouillieren satt. Jeden Tag latsch ich mir die Füße platt, das sollte was für die jungen Greenhorns sein.
+	AI_Output(self, hero, "Info_Mod_Den_Problem_05_07"); //In der Kaserne ist jetzt eine Stelle frei geworden, Ruga ist abgehauen. Tja, aber nicht ich bin der heißeste Anwärter auf den Posten, sondern Rangar, der faule Drecksack.
+	AI_Output(self, hero, "Info_Mod_Den_Problem_05_08"); //Rangar hat garantiert Dreck am Stecken, aber komischerweise will Lord Andre davon nichts wissen. Da müssen ihm mal die Augen geöffnet werden.
+	AI_Output(hero, self, "Info_Mod_Den_Problem_15_09"); //Was schwebt dir da vor?
+	AI_Output(self, hero, "Info_Mod_Den_Problem_05_10"); //Du sollst ein schlechtes Licht auf Rangar werfen. Verbreite Gerüchte über ihn, schmuggle verbotene Waren in seine Truhe, und dann berichte Lord Andre davon.
+	AI_Output(self, hero, "Info_Mod_Den_Problem_05_11"); //Kriegst du das hin?
 
-	AI_StopProcessInfos	(self);
+	Info_ClearChoices	(Info_Mod_Den_Problem);
+
+	Info_AddChoice	(Info_Mod_Den_Problem, "Zu gefährlich. Damit will ich nichts zu tun haben.", Info_Mod_Den_Problem_B);
+	Info_AddChoice	(Info_Mod_Den_Problem, "Klar. Aber das ist dir doch sicher auch was wert ...", Info_Mod_Den_Problem_A);
+};
+
+FUNC VOID Info_Mod_Den_Problem_B()
+{
+	AI_Output(hero, self, "Info_Mod_Den_Problem_B_15_00"); //Zu gefährlich. Damit will ich nichts zu tun haben.
+	AI_Output(self, hero, "Info_Mod_Den_Problem_B_05_01"); //Du bist ja nicht gerade ein guter Freund.
+
+	Info_ClearChoices	(Info_Mod_Den_Problem);
+};
+
+FUNC VOID Info_Mod_Den_Problem_A()
+{
+	AI_Output(hero, self, "Info_Mod_Den_Problem_A_15_00"); //Klar. Aber das ist dir doch sicher auch was wert ...
+	AI_Output(self, hero, "Info_Mod_Den_Problem_A_05_01"); //Ein paar Münzen würden für dich als Bezahlung rausspringen.
 
 	Log_CreateTopic	(TOPIC_MOD_DENSPROBLEM, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_DENSPROBLEM, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_DENSPROBLEM, "Der Milizsoldat Den wartet vergeblich auf eine Beförderung, da Rangar ihn scheinbar bei Lord Andre schlecht macht. Ich soll jetzt das Gleiche mit Rangar machen: Gerüchte über ihn verbreiten, verbotene Waren in seine Truhe schmuggeln und ihn dann bei Lord Andre anschwärzen.");
+
+	Info_ClearChoices	(Info_Mod_Den_Problem);
+
+	Mod_Den_Problem = 1;
 };
 
 INSTANCE Info_Mod_Den_Verbotenes (C_INFO)
@@ -79,6 +190,7 @@ FUNC INT Info_Mod_Den_Verbotenes_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Den_Problem))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Andre_Rangar))
 	&& (Mod_DenVerpfiffen == 0)
+	&& (Mod_Den_Problem == 1)
 	{
 		return 1;
 	};
@@ -110,6 +222,7 @@ FUNC INT Info_Mod_Den_RangarsTruhe_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Den_Problem))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Andre_Rangar))
 	&& (Mod_DenVerpfiffen == 0)
+	&& (Mod_Den_Problem == 1)
 	{
 		return 1;
 	};
@@ -156,6 +269,31 @@ FUNC VOID Info_Mod_Den_Rangar_Info()
 	B_SetTopicStatus	(TOPIC_MOD_DENSPROBLEM, LOG_SUCCESS);
 
 	CurrentNQ += 1;
+};
+
+INSTANCE Info_Mod_Den_Checker (C_INFO)
+{
+	npc		= Mod_969_MIL_Den_NW;
+	nr		= 1;
+	condition	= Info_Mod_Den_Checker_Condition;
+	information	= Info_Mod_Den_Checker_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Du weißt ja wirklich gut Bescheid ...";
+};
+
+FUNC INT Info_Mod_Den_Checker_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Den_Dienstzeit))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Den_Checker_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Den_Checker_15_00"); //Du weißt ja wirklich gut Bescheid ...
+	AI_Output(self, hero, "Info_Mod_Den_Checker_05_01"); //He, ich erledige meinen Job eben gewissenhaft! So viel Wissen kann man sich auch aneignen, ohne jahrelang Botengänge für die Diebesgilde erledigt zu haben!
 };
 
 INSTANCE Info_Mod_Den_Pickpocket (C_INFO)

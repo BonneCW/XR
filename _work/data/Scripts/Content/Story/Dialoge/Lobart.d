@@ -18,14 +18,15 @@ FUNC INT Info_Mod_Lobart_Hi_Condition()
 
 FUNC VOID Info_Mod_Lobart_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_00"); //Ah, ein weiterer frisch entflohener Gefangener?
-	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_01"); //Da wird Lord Hagen wohl wieder ein Jährchen altern, wenn er dich sieht.
-	AI_Output(hero, self, "Info_Mod_Lobart_Hi_15_02"); //Wieso? Was ist denn los?
-	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_03"); //Er scheint nicht gerade versessen darauf, euch Knastis in seiner Stadt aufzunehmen.
-	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_04"); //Man überlegt schon, wie man euch wieder vertreiben kann.
-	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_05"); //Ist natürlich nur das, was man so hört. Mir ist es egal.
-	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_06"); //So viel kann man mir nicht klauen, und ihr seid ja auch bestimmt nicht alle schlecht.
-	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_07"); //Wenn du ein bisschen Arbeit suchst - ich brauche noch jemanden, der für mich anpackt.
+	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_00"); //(misstrauisch) Ein weiterer frisch entflohener Gefangener? Oder warum treibst du dich hier herum?
+	AI_Output(hero, self, "Info_Mod_Lobart_Hi_15_01"); //Ersteres.
+	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_02"); //Da wird Lord Hagen wohl wieder ein Jährchen altern, wenn er dich sieht.
+	AI_Output(hero, self, "Info_Mod_Lobart_Hi_15_03"); //Wieso? Was ist denn los?
+	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_04"); //Er scheint nicht gerade versessen darauf, euch Knastis in seiner Stadt aufzunehmen.
+	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_05"); //Man überlegt schon, wie man euch wieder vertreiben kann.
+	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_06"); //Ist natürlich nur das, was man so hört. Mir ist es egal.
+	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_07"); //So viel kann man mir nicht klauen, und ihr seid ja auch bestimmt nicht alle schlecht.
+	AI_Output(self, hero, "Info_Mod_Lobart_Hi_05_08"); //Wenn du ein bisschen Arbeit suchst - ich brauche noch jemanden, der für mich anpackt.
 };
 
 INSTANCE Info_Mod_Lobart_Knastis (C_INFO)
