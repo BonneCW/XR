@@ -71,6 +71,67 @@ FUNC VOID Info_Mod_Rangar_DragoHelp_Info()
 	B_SetTopicStatus	(TOPIC_MOD_JG_DRAGOMIRHILFE, LOG_SUCCESS);
 };
 
+INSTANCE Info_Mod_Rangar_Lernen_Armbrust (C_INFO)
+{
+	npc		= Mod_747_MIL_Rangar_NW;
+	nr		= 1;
+	condition	= Info_Mod_Rangar_Lernen_Armbrust_Condition;
+	information	= Info_Mod_Rangar_Lernen_Armbrust_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Bring mir Armbrustschieﬂen bei.";
+};
+
+FUNC INT Info_Mod_Rangar_Lernen_Armbrust_Condition()
+{
+	if (hero.hitchance[NPC_TALENT_CrossBow] < 50)
+	&& (Mod_Schwierigkeit != 4)
+	&& (Mod_Miliz_Armbrust)
+	&& ((Mod_Den_Problem == 0)
+	|| (Mod_DenVerpfiffen == 1))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Rangar_Lernen_Armbrust_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Rangar_Lernen_Armbrust_15_00"); //Bring mir Armbrustschieﬂen bei.
+
+	Info_ClearChoices	(Info_Mod_Rangar_Lernen_Armbrust);
+	
+	Info_AddChoice	(Info_Mod_Rangar_Lernen_Armbrust, "Zur¸ck.", Info_Mod_Rangar_Lernen_Armbrust_BACK);
+	Info_AddChoice	(Info_Mod_Rangar_Lernen_Armbrust, B_BuildLearnString(PRINT_LearnCrossBow5, B_GetLearnCostTalent_New(hero, NPC_TALENT_CrossBow)), Info_Mod_Rangar_Lernen_Armbrust_5);
+	Info_AddChoice	(Info_Mod_Rangar_Lernen_Armbrust, B_BuildLearnString(PRINT_LearnCrossBow1, B_GetLearnCostTalent(hero, NPC_TALENT_CrossBow, 1)), Info_Mod_Rangar_Lernen_Armbrust_1);
+};
+
+FUNC VOID Info_Mod_Rangar_Lernen_Armbrust_BACK()
+{
+	Info_ClearChoices	(Info_Mod_Rangar_Lernen_Armbrust);
+};
+
+FUNC VOID Info_Mod_Rangar_Lernen_Armbrust_5()
+{
+	B_TeachFightTalentPercent_New (self, hero, NPC_TALENT_CrossBow, 5, 60);
+
+	Info_ClearChoices	(Info_Mod_Rangar_Lernen_Armbrust);
+
+	Info_AddChoice	(Info_Mod_Rangar_Lernen_Armbrust, "Zur¸ck.", Info_Mod_Rangar_Lernen_Armbrust_BACK);
+	Info_AddChoice	(Info_Mod_Rangar_Lernen_Armbrust, B_BuildLearnString(PRINT_LearnCrossBow5, B_GetLearnCostTalent_New(hero, NPC_TALENT_CrossBow)), Info_Mod_Rangar_Lernen_Armbrust_5);
+	Info_AddChoice	(Info_Mod_Rangar_Lernen_Armbrust, B_BuildLearnString(PRINT_LearnCrossBow1, B_GetLearnCostTalent(hero, NPC_TALENT_CrossBow, 1)), Info_Mod_Rangar_Lernen_Armbrust_1);
+};
+
+FUNC VOID Info_Mod_Rangar_Lernen_Armbrust_1()
+{
+	B_TeachFightTalentPercent (self, hero, NPC_TALENT_CrossBow, 1, 60);
+
+	Info_ClearChoices	(Info_Mod_Rangar_Lernen_Armbrust);
+
+	Info_AddChoice	(Info_Mod_Rangar_Lernen_Armbrust, "Zur¸ck.", Info_Mod_Rangar_Lernen_Armbrust_BACK);
+	Info_AddChoice	(Info_Mod_Rangar_Lernen_Armbrust, B_BuildLearnString(PRINT_LearnCrossBow5, B_GetLearnCostTalent_New(hero, NPC_TALENT_CrossBow)), Info_Mod_Rangar_Lernen_Armbrust_5);
+	Info_AddChoice	(Info_Mod_Rangar_Lernen_Armbrust, B_BuildLearnString(PRINT_LearnCrossBow1, B_GetLearnCostTalent(hero, NPC_TALENT_CrossBow, 1)), Info_Mod_Rangar_Lernen_Armbrust_1);
+};
+
 INSTANCE Info_Mod_Rangar_Pickpocket (C_INFO)
 {
 	npc		= Mod_747_MIL_Rangar_NW;

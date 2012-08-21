@@ -1362,6 +1362,27 @@ FUNC VOID NEBENQUESTS()
 				AI_EquipArmor	(Mod_541_NONE_Till_NW, ItAr_Sld_L);
 			};
 		};
+
+		// Den/Rangar werden neuer Armbrustlehrer in der Stadt
+
+		if (Kapitel >= 3)
+		&& (!Mod_Miliz_Armbrust)
+		{
+			if (Npc_KnowsInfo(hero, Info_Mod_Den_Problem))
+			{
+				if (Mod_Den_Problem == 0)
+				|| (Mod_DenVerpfiffen == 1)
+				{
+					B_StartOtherRoutine	(Mod_747_MIL_Rangar_NW, "ARMBRUST");
+				}
+				else
+				{
+					B_StartOtherRoutine	(Mod_969_MIL_Den_NW, "ARMBRUST");
+				};
+
+				Mod_Miliz_Armbrust = TRUE;
+			};
+		};
 	};
 
 	if (CurrentLevel == ADDONWORLD_ZEN)

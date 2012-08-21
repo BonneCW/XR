@@ -1908,7 +1908,6 @@ FUNC VOID Info_Mod_Andre_Rangar_Info()
 	AI_Output(self, hero, "Info_Mod_Andre_Rangar_08_05"); //Ich werde das sofort überprüfen lassen. Danke, dass du mich benachrichtigt hast.
 	AI_Output(self, hero, "Info_Mod_Andre_Rangar_08_06"); //Hier ist eine kleine Belohnung.
 
-	CreateInvItems	(self, ItMi_Gold, 100);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 100);
 
 	B_LogEntry	(TOPIC_MOD_DENSPROBLEM, "Lord Andre wird der Sache mit Rangar nachgehen. Ich sollte jetzt Den bescheid geben.");

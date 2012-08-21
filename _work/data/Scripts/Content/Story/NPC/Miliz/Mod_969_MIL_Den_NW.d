@@ -66,5 +66,11 @@ FUNC VOID Rtn_Start_969 ()
 FUNC VOID Rtn_NoMiliz_969 ()
 {	
 	TA_Sit_Campfire 	(08,00,09,00,"NW_BIGFARM_HUT_01");
-    TA_Sit_Campfire 	(09,00,08,00,"NW_BIGFARM_HUT_01");
+	TA_Sit_Campfire 	(09,00,08,00,"NW_BIGFARM_HUT_01");
+};
+
+FUNC VOID Rtn_Armbrust_969 ()
+{	
+	TA_Sit_Chair 	(08,00,09,00,"NW_CITY_HABOUR_KASERN_15_B");
+	TA_Sit_Chair 	(09,00,08,00,"NW_CITY_HABOUR_KASERN_15_B");
 };

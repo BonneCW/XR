@@ -44,6 +44,7 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_Miliz_Armbrust;
 var int Mod_Den_Problem;
 var int TimeSwitch;
 var int View_Time;

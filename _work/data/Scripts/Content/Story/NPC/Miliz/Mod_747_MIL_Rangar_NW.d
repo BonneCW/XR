@@ -38,7 +38,7 @@ instance Mod_747_MIL_Rangar_NW (Npc_Default)
 FUNC VOID Rtn_Start_747()
 {	
 	TA_Stand_Drinking	(08,00,20,00,"NW_CITY_BEER_06");
-    TA_Stand_Drinking	(20,00,08,00,"NW_CITY_BEER_06");
+	TA_Stand_Drinking	(20,00,08,00,"NW_CITY_BEER_06");
 };
 
 FUNC VOID Rtn_Pass_747 ()
@@ -50,11 +50,17 @@ FUNC VOID Rtn_Pass_747 ()
 FUNC VOID Rtn_AtNandor_747 ()
 {	
 	TA_Sit_Campfire 		(08,00,23,00,"WP_NANDOR_TENT_01"); 
-    TA_Sit_Campfire			(23,00,08,00,"WP_NANDOR_TENT_01");
+	TA_Sit_Campfire			(23,00,08,00,"WP_NANDOR_TENT_01");
 };
 
 FUNC VOID Rtn_Freibier_747()
 {	
 	TA_Smalltalk_Plaudern	(08,00,20,00,"NW_CITY_BEER_04");
    	TA_Smalltalk_Plaudern	(20,00,08,00,"NW_CITY_BEER_04");
+};
+
+FUNC VOID Rtn_Armbrust_747 ()
+{	
+	TA_Sit_Chair 	(08,00,09,00,"NW_CITY_HABOUR_KASERN_15_B");
+	TA_Sit_Chair 	(09,00,08,00,"NW_CITY_HABOUR_KASERN_15_B");
 };
