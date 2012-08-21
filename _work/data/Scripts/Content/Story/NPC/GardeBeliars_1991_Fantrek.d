@@ -2,7 +2,7 @@ INSTANCE GardeBeliars_1991_Fantrek	(Npc_Default)
 {
 	//----- Monster ----
 	name							=	"Fantrek";
-	guild							=	GIL_NONE;
+	guild							=	GIL_DMT;
 	id			= 	1991;
 	voice			=	14;
 	level							=	40;

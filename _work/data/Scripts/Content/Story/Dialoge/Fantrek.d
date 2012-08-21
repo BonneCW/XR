@@ -21,6 +21,9 @@ FUNC VOID Info_Mod_Fantrek_Hi_Info()
 
 	CreateInvItems	(self, ItWr_AxtAlmanach_03, 1);
 
+	self.guild = GIL_STRF;
+	Npc_SetTrueGuild	(self, GIL_STRF);
+
 	AI_StopProcessInfos	(self);
 
 	B_Attack	(self, hero, AR_Kill, 0);

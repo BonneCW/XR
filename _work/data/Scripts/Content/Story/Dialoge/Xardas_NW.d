@@ -1644,7 +1644,6 @@ FUNC VOID Info_Mod_Xardas_NW_AlmanachOffen_Info()
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_AlmanachOffen_15_14"); //(seufzt) Dann werde ich schnell aufbrechen!
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_AlmanachOffen_14_15"); //Gut, und sei vorsichtig! Sie sind hinterhältig! Hier ist das Buch mit dem ersten Rätsel!
 
-	CreateInvItems	(self, ItWr_AxtAlmanach_Pre, 1);
 	B_GiveInvItems	(self, hero, ItWr_AxtAlmanach_Pre, 1);
 
 	GardeBeliars_1989_Drach.attribute[ATR_HITPOINTS] = GardeBeliars_1989_Drach.attribute[ATR_HITPOINTS_MAX];
@@ -2840,8 +2839,6 @@ FUNC VOID Info_Mod_Xardas_NW_Aufnahme_Ja()
 	B_GivePlayerXP	(400);
 
 	B_Göttergefallen(3, 5);
-
-	//Mod_7358_DMR_Daemonenritter_NW.aivar[AIV_PASSGATE] = TRUE;
 };
 
 INSTANCE Info_Mod_Xardas_NW_AxtDesUntergangs (C_INFO)

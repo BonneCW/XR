@@ -39,6 +39,30 @@ FUNC VOID Info_Mod_PriesterRyan_Hi_B()
 
 	self.guild = GIL_STRF;
 	Npc_SetTrueGuild	(self, GIL_STRF);
+
+	Mod_1943_Waechter_01_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1943_Waechter_01_NW, GIL_STRF);
+
+	Mod_1952_Waechter_08_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1952_Waechter_08_NW, GIL_STRF);
+
+	Mod_1944_Waechter_02_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1944_Waechter_02_NW, GIL_STRF);
+
+	Mod_1945_Waechter_03_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1945_Waechter_03_NW, GIL_STRF);
+
+	Mod_1946_Waechter_04_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1946_Waechter_04_NW, GIL_STRF);
+
+	Mod_1947_Waechter_05_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1947_Waechter_05_NW, GIL_STRF);
+
+	Mod_1948_Waechter_06_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1948_Waechter_06_NW, GIL_STRF);
+
+	Mod_1949_Waechter_07_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1949_Waechter_07_NW, GIL_STRF);
 };
 
 FUNC VOID Info_Mod_PriesterRyan_Hi_A()
@@ -52,6 +76,30 @@ FUNC VOID Info_Mod_PriesterRyan_Hi_A()
 
 	self.guild = GIL_STRF;
 	Npc_SetTrueGuild	(self, GIL_STRF);
+
+	Mod_1943_Waechter_01_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1943_Waechter_01_NW, GIL_STRF);
+
+	Mod_1952_Waechter_08_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1952_Waechter_08_NW, GIL_STRF);
+
+	Mod_1944_Waechter_02_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1944_Waechter_02_NW, GIL_STRF);
+
+	Mod_1945_Waechter_03_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1945_Waechter_03_NW, GIL_STRF);
+
+	Mod_1946_Waechter_04_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1946_Waechter_04_NW, GIL_STRF);
+
+	Mod_1947_Waechter_05_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1947_Waechter_05_NW, GIL_STRF);
+
+	Mod_1948_Waechter_06_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1948_Waechter_06_NW, GIL_STRF);
+
+	Mod_1949_Waechter_07_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1949_Waechter_07_NW, GIL_STRF);
 };
 
 FUNC VOID Info_Mod_PriesterRyan_Hi_D()
@@ -97,4 +145,28 @@ FUNC VOID Info_Mod_PriesterRyan_Hi_C()
 
 	self.guild = GIL_STRF;
 	Npc_SetTrueGuild	(self, GIL_STRF);
+
+	Mod_1943_Waechter_01_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1943_Waechter_01_NW, GIL_STRF);
+
+	Mod_1952_Waechter_08_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1952_Waechter_08_NW, GIL_STRF);
+
+	Mod_1944_Waechter_02_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1944_Waechter_02_NW, GIL_STRF);
+
+	Mod_1945_Waechter_03_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1945_Waechter_03_NW, GIL_STRF);
+
+	Mod_1946_Waechter_04_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1946_Waechter_04_NW, GIL_STRF);
+
+	Mod_1947_Waechter_05_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1947_Waechter_05_NW, GIL_STRF);
+
+	Mod_1948_Waechter_06_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1948_Waechter_06_NW, GIL_STRF);
+
+	Mod_1949_Waechter_07_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1949_Waechter_07_NW, GIL_STRF);
 };

@@ -2042,9 +2042,7 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 	Wld_InsertNpc 	(Shadowbeast,	"FP_ITEM_FOREST_STPLATE_01");	
 	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_CITYFOREST_CAVE_04_02");	
 	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_CITYFOREST_CAVE_06_04");	
-	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_CITYFOREST_CAVE_06_02");	
-
-	Wld_InsertNpc 	(Shadowbeast_Skeleton,	"FP_ROAM_NW_CITYFOREST_CAVE_A06_03");	
+	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_CITYFOREST_CAVE_06_02");
 
 	// Weg Stadttor bis Taverne
 

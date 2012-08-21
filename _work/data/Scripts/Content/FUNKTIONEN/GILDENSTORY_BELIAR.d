@@ -44,12 +44,6 @@ FUNC VOID GILDENSTORY_BELIAR()
 			GardeBeliars_1989_Drach.aivar[AIV_AttackReason] = 0;
 			GardeBeliars_1989_Drach.aivar[AIV_LastTarget] = 0;
 			GardeBeliars_1989_Drach.aivar[AIV_Partymember] = TRUE;
-
-			Npc_ClearAIQueue	(GardeBeliars_1989_Drach);
-
-			AI_StandUp	(GardeBeliars_1989_Drach);
-
-			AI_ProcessInfos	(GardeBeliars_1989_Drach);
 		};
 
 		if (Npc_GetDistToWP(GardeBeliars_1994_Frowin, "NW_CITYFOREST_CAVE_A06") > 1000)

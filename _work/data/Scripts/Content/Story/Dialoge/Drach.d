@@ -125,6 +125,9 @@ FUNC VOID Info_Mod_Drach_AtAlmanach_Info()
 
 	CreateInvItems	(self, ItWr_AxtAlmanach_01, 1);
 
+	self.guild = GIL_STRF;
+	Npc_SetTrueGuild	(self, GIL_STRF);
+
 	AI_StopProcessInfos	(self);
 
 	B_Attack	(self, hero, AR_Kill, 0);
