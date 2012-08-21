@@ -589,16 +589,17 @@ FUNC VOID DAUERFUNC_01()
 					};
 				};
 			};
+		};
 
-			if (Wld_GetDay()-2 > Mod_Wolf_MinecrawlerRuestung_Day)
-			&& (Mod_Wolf_MinecrawlerRuestung == 0)
-			{
-				Mod_Wolf_MinecrawlerRuestung = 1;
+		if (Wld_GetDay()-2 > Mod_Wolf_MinecrawlerRuestung_Day)
+		&& (Mod_Wolf_MinecrawlerRuestung == 0)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Wolf_MinecrawlerRuestung2))
+		{
+			Mod_Wolf_MinecrawlerRuestung = 1;
 
-				CreateInvItems	(Mod_798_SLD_Wolf_NW, ITAR_DJG_Crawler, 1);
-				AI_UnEquipArmor	(Mod_798_SLD_Wolf_NW);
-				AI_EquipArmor	(Mod_798_SLD_Wolf_NW, ITAR_DJG_Crawler);
-			};
+			CreateInvItems	(Mod_798_SLD_Wolf_NW, ITAR_DJG_Crawler, 1);
+			AI_UnEquipArmor	(Mod_798_SLD_Wolf_NW);
+			AI_EquipArmor	(Mod_798_SLD_Wolf_NW, ITAR_DJG_Crawler);
 		};
 
 		// Magier usw. gehen auf die Ritualinsel
