@@ -466,7 +466,7 @@ FUNC VOID B_Grabraub_14_S1()
 	};
 };
 
-FUNC VOID B_GravoSchatz_S1()
+FUNC VOID B_GravosSchatz_S1()
 {
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(hero))
 	&& (Mod_Gravo_Schatz == 1)
