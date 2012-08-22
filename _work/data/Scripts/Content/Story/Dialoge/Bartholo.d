@@ -199,6 +199,7 @@ INSTANCE Info_Mod_Bartholo_Anschluss (C_INFO)
 FUNC INT Info_Mod_Bartholo_Anschluss_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Bartholo_Hi))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Bartholo_Thorus))
 	{
 		return 1;
 	};
@@ -229,6 +230,7 @@ INSTANCE Info_Mod_Bartholo_Thorus (C_INFO)
 FUNC INT Info_Mod_Bartholo_Thorus_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Bartholo_Hi))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Bartholo_Anschluss))
 	{
 		return 1;
 	};
@@ -255,7 +257,7 @@ INSTANCE Info_Mod_Bartholo_WarumNochHier (C_INFO)
 FUNC INT Info_Mod_Bartholo_WarumNochHier_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Bartholo_Anschluss))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Bartholo_Thorus))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Bartholo_Thorus))
 	{
 		return 1;
 	};

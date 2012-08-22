@@ -3251,7 +3251,8 @@ FUNC VOID NEBENQUESTS()
 		if (Wld_GetDay() > Mod_Costa_Guertel_Tag)
 		&& ((Mod_Costa_Guertel == 2)
 		|| ((Mod_Costa_Guertel == 1)
-		&& (!Npc_KnowsInfo(hero, Info_Mod_Costa_Jesse))))
+		&& (!Npc_KnowsInfo(hero, Info_Mod_Costa_Jesse))
+		&& (Npc_KnowsInfo(hero, Info_Mod_Jesse_Costa))))
 		{
 			Mod_Costa_Guertel = 3;
 

@@ -2,7 +2,7 @@ instance Mod_801_STT_Sly_MT (Npc_Default)
 {
 	//-------- primary data --------
 	name 		=		"Sly";
-	npctype 	=		NPCTYPE_main;
+	npctype 	=		NPCTYPE_FRIEND;
 	guild 		=		GIL_OUT;
 	level 		=		5;
 	
@@ -39,10 +39,9 @@ FUNC VOID Rtn_Start_801 ()
 	TA_Sleep		(00,00,07,00,"OCR_HUT_73");
 	TA_Stand_Eating		(07,00,07,30,"OCR_OUTSIDE_HUT_73");
 	TA_Smalltalk		(07,30,12,00,"OCR_OUTSIDE_HUT_73");	// mit ???
-	TA_Sit_Bench		(12,00,14,00,"OCR_OUTSIDE_HUT_73");
+	TA_Sit_Campfire		(12,00,14,00,"OCR_OUTSIDE_HUT_77_MOVEMENT");
 	TA_Watch_ArenaFight	(14,00,18,00,"OCR_AUDIENCE_01");
-	TA_Stand_Eating		(18,00,20,00,"OCR_OUTSIDE_HUT_73");
-	TA_Stand_Drinking	(20,00,00,00,"OCR_ARENA_05");
+	TA_Sit_Campfire		(18,00,00,00,"OCR_OUTSIDE_HUT_77_MOVEMENT");
 };
 
 FUNC VOID Rtn_Training_801 ()

@@ -20,6 +20,8 @@ FUNC VOID Info_Mod_Scatty_Hi_Info()
 	Log_CreateTopic	(TOPIC_MOD_ALTESLAGER, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_ALTESLAGER, "Am Eingang des alten Lagers wurde ich von meinem alten Freund Scatty begrüsst. Anscheinend gibt es das alte Lager immernoch.");
 
+	B_StartOtherRoutine	(self, "START");
+
 	Info_ClearChoices	(Info_Mod_Scatty_Hi);
 
 	Info_AddChoice	(Info_Mod_Scatty_Hi, "Reg dich ab, ihr habt doch überlebt, oder?", Info_Mod_Scatty_Hi_C);
