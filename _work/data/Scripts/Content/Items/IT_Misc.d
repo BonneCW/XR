@@ -646,7 +646,7 @@ INSTANCE ItMi_SpezielleRune (C_Item)
 	name 				=	"Rune";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags				=	ITEM_MULTI|ITEM_SHOW;
+	flags				=	ITEM_MULTI|ITEM_SHOW|ITEM_MISSION;
 
 	value 				=	Value_RuneBlank;
 

@@ -23,7 +23,6 @@ instance Mod_7777_BDT_Bandit_NW (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv (self); 
-	CreateInvItems (self, ITKE_ADDON_SKINNER,1);
 	
 	// ------ visuals ------																		
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_L_Tough01, BodyTex_L, ITAR_BDT_M_01);	

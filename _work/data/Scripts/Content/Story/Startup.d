@@ -3806,11 +3806,11 @@ FUNC VOID STARTUP_MinentalOldCamp ()
 	Wld_InsertNpc	(Mod_1870_EBR_Alissandro_MT,	"OC1");
 	Wld_InsertNpc	(Mod_1872_NONE_Unbekannt_MT,	"OC1");
 	Wld_InsertNpc	(Mod_7384_OUT_Dragan_MT,	"OC1");
-	Wld_InsertNpc	(Charlotte,	"OC1");
-	Wld_InsertNpc	(IEFan1,	"OC1");
-	Wld_InsertNpc	(IEFan2,	"OC1");
-	Wld_InsertNpc	(IEFan3,	"OC1");
-	Wld_InsertNpc	(IEFan4,	"OC1");
+	//Wld_InsertNpc	(Charlotte,	"OC1");
+	//Wld_InsertNpc	(IEFan1,	"OC1");
+	//Wld_InsertNpc	(IEFan2,	"OC1");
+	//Wld_InsertNpc	(IEFan3,	"OC1");
+	//Wld_InsertNpc	(IEFan4,	"OC1");
 	Wld_InsertNpc	(Mod_1902_STT_Ian_MT,	"OC1");
 	Wld_InsertNpc	(Mod_4074_BDT_Bandit_MT,	"OC1");
 	Wld_InsertNpc	(Mod_4072_BDT_Bandit_MT,	"OC1");
