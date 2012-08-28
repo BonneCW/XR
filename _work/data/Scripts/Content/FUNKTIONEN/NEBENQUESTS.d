@@ -1774,7 +1774,7 @@ FUNC VOID NEBENQUESTS()
 		&& (Mod_Jim_Schutz == 1)
 		&& (Mod_EndresGeist == 0)
 		&& (Mod_Jim_FakeGeist == 0)
-		&& (Npc_GetDistToWP(hero, "REL_SURFACE_208") < 500)
+		&& (Npc_GetDistToWP(hero, "REL_SURFACE_246") < 500)
 		{
 			Mod_Jim_FakeGeist = 1;
 

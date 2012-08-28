@@ -322,7 +322,7 @@ INSTANCE Info_Mod_Lester_REL_AtTroll (C_INFO)
 FUNC INT Info_Mod_Lester_REL_AtTroll_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Lester_REL_Hi))
-	&& (Npc_GetDistToWP(self, "REL_SURFACE_205") < 500)
+	&& (Npc_GetDistToWP(self, "RELWIDNIS_20") < 500)
 	&& (Mod_LesterRELGuide == 4)
 	{
 		return 1;
@@ -351,7 +351,7 @@ INSTANCE Info_Mod_Lester_REL_AtTroll2 (C_INFO)
 FUNC INT Info_Mod_Lester_REL_AtTroll2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Lester_REL_Hi))
-	&& (Npc_GetDistToWP(self, "REL_SURFACE_207") < 500)
+	&& (Npc_GetDistToWP(self, "RELWIDNIS_21") < 500)
 	&& (Mod_LesterRELGuide == 4)
 	{
 		return 1;

@@ -1,6 +1,6 @@
 INSTANCE Info_Mod_Heiler_Hi (C_INFO)
 {
-	npc		= Mod_7476_OUT_Arzt_REL;
+	npc		= Mod_7476_OUT_Heiler_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Hi_Condition;
 	information	= Info_Mod_Heiler_Hi_Info;
@@ -22,7 +22,7 @@ FUNC VOID Info_Mod_Heiler_Hi_Info()
 
 INSTANCE Info_Mod_Heiler_Endres (C_INFO)
 {
-	npc		= Mod_7476_OUT_Arzt_REL;
+	npc		= Mod_7476_OUT_Heiler_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Endres_Condition;
 	information	= Info_Mod_Heiler_Endres_Info;
@@ -55,7 +55,7 @@ FUNC VOID Info_Mod_Heiler_Endres_Info()
 
 INSTANCE Info_Mod_Heiler_Endres02 (C_INFO)
 {
-	npc		= Mod_7476_OUT_Arzt_REL;
+	npc		= Mod_7476_OUT_Heiler_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Endres02_Condition;
 	information	= Info_Mod_Heiler_Endres02_Info;
@@ -83,7 +83,7 @@ FUNC VOID Info_Mod_Heiler_Endres02_Info()
 
 INSTANCE Info_Mod_Heiler_Endres03 (C_INFO)
 {
-	npc		= Mod_7476_OUT_Arzt_REL;
+	npc		= Mod_7476_OUT_Heiler_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Endres03_Condition;
 	information	= Info_Mod_Heiler_Endres03_Info;
@@ -106,12 +106,12 @@ FUNC VOID Info_Mod_Heiler_Endres03_Info()
 	AI_Output(self, hero, "Info_Mod_Heiler_Endres03_10_01"); //Ich war hier im Haus und habe mich um meinen Patienten gekümmert.
 	AI_Output(self, hero, "Info_Mod_Heiler_Endres03_10_02"); //Den ganzen Tag habe ich das Haus nicht verlassen.
 
-	B_LogEntry	(TOPIC_MOD_KHORATA_ENDRES, "Der Arzt gibt an, sich den ganzen Tag über zu Hause um seinen Patienten gekümmert zu haben.");
+	B_LogEntry	(TOPIC_MOD_KHORATA_ENDRES, "Der Heiler gibt an, sich den ganzen Tag über zu Hause um seinen Patienten gekümmert zu haben.");
 };
 
 INSTANCE Info_Mod_Heiler_Endres04 (C_INFO)
 {
-	npc		= Mod_7476_OUT_Arzt_REL;
+	npc		= Mod_7476_OUT_Heiler_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Endres04_Condition;
 	information	= Info_Mod_Heiler_Endres04_Info;
@@ -138,7 +138,7 @@ FUNC VOID Info_Mod_Heiler_Endres04_Info()
 
 INSTANCE Info_Mod_Heiler_Endres05 (C_INFO)
 {
-	npc		= Mod_7476_OUT_Arzt_REL;
+	npc		= Mod_7476_OUT_Heiler_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Endres05_Condition;
 	information	= Info_Mod_Heiler_Endres05_Info;
@@ -160,12 +160,12 @@ FUNC VOID Info_Mod_Heiler_Endres05_Info()
 	AI_Output(hero, self, "Info_Mod_Heiler_Endres05_15_00"); //Was weißt du vom Verhältnis zwischen Endres und Wendel?
 	AI_Output(self, hero, "Info_Mod_Heiler_Endres05_10_01"); //Die beiden hatten ein gutes Verhältnis zueinander, schätz ich. Endres war Wendels Idol.
 
-	B_LogEntry	(TOPIC_MOD_KHORATA_ENDRES, "Den Angaben des Arztes zufolge habe es nie ein Problem zwischen Endres und Wendel gegeben.");
+	B_LogEntry	(TOPIC_MOD_KHORATA_ENDRES, "Den Angaben des Heilers zufolge habe es nie ein Problem zwischen Endres und Wendel gegeben.");
 };
 
 INSTANCE Info_Mod_Heiler_Endres06 (C_INFO)
 {
-	npc		= Mod_7476_OUT_Arzt_REL;
+	npc		= Mod_7476_OUT_Heiler_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Endres06_Condition;
 	information	= Info_Mod_Heiler_Endres06_Info;
@@ -193,7 +193,7 @@ FUNC VOID Info_Mod_Heiler_Endres06_Info()
 	AI_Output(hero, self, "Info_Mod_Heiler_Endres06_15_06"); //Dann wird der Richter es mir gestatten. Bin gleich zurück.
 	AI_Output(self, hero, "Info_Mod_Heiler_Endres06_10_07"); //Na schön. Du hast es so gewollt. Ihr alle habt es so gewollt. (laut) Rühr dich nicht vom Fleck!
 	AI_Output(hero, self, "Info_Mod_Heiler_Endres06_15_08"); //Was ist los?
-	AI_Output(self, hero, "Info_Mod_Heiler_Endres06_10_09"); //Ja, ich habe Wendel ermordet. Ich habe Juliana verführt, habe Unzüchtiges mit ihr getrieben.
+	AI_Output(self, hero, "Info_Mod_Heiler_Endres06_10_09"); //Ja, ich habe Endres ermordet. Ich habe Juliana verführt, habe Unzüchtiges mit ihr getrieben.
 	AI_Output(self, hero, "Info_Mod_Heiler_Endres06_10_10"); //Und ich bereue es nicht. Ich liebe sie.
 
 	AI_PlayAni  (self, "T_MAGRUN_2_HEASHOOT");
@@ -203,7 +203,7 @@ FUNC VOID Info_Mod_Heiler_Endres06_Info()
 	AI_Output(hero, self, "Info_Mod_Heiler_Endres06_15_12"); //Es gibt wohl doch eine höhere Gerechtigkeit.
 	AI_Output(self, hero, "Info_Mod_Heiler_Endres06_10_13"); //Das ist nicht möglich!
 
-	B_LogEntry	(TOPIC_MOD_KHORATA_ENDRES, "Der Arzt hat sich hinter Endres' Rücken an Juliana vergangen. Doch das reichte ihm anscheinend nicht, und so räumte ihren Mann aus dem Weg. Ach, die Liebe ...");
+	B_LogEntry	(TOPIC_MOD_KHORATA_ENDRES, "Der Heiler hat sich hinter Endres' Rücken an Juliana vergangen. Doch das reichte ihm anscheinend nicht, und so räumte ihren Mann aus dem Weg. Ach, die Liebe ...");
 
 	B_StartOtherRoutine	(self, "TOT");
 
@@ -237,7 +237,7 @@ FUNC VOID Info_Mod_Heiler_Endres06_A()
 
 INSTANCE Info_Mod_Heiler_Heilen (C_INFO)
 {
-	npc		= Mod_7476_OUT_Arzt_REL;
+	npc		= Mod_7476_OUT_Heiler_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Heilen_Condition;
 	information	= Info_Mod_Heiler_Heilen_Info;
@@ -272,7 +272,7 @@ FUNC VOID Info_Mod_Heiler_Heilen_Info()
 
 INSTANCE Info_Mod_Heiler_WasGeht (C_INFO)
 {
-	npc		= Mod_7476_OUT_Arzt_REL;
+	npc		= Mod_7476_OUT_Heiler_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_WasGeht_Condition;
 	information	= Info_Mod_Heiler_WasGeht_Info;
@@ -294,7 +294,7 @@ FUNC VOID Info_Mod_Heiler_WasGeht_Info()
 
 INSTANCE Info_Mod_Heiler_Freudenspender (C_INFO)
 {
-	npc		= Mod_7476_OUT_Arzt_REL;
+	npc		= Mod_7476_OUT_Heiler_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Freudenspender_Condition;
 	information	= Info_Mod_Heiler_Freudenspender_Info;
@@ -327,7 +327,7 @@ FUNC VOID Info_Mod_Heiler_Freudenspender_Info()
 
 INSTANCE Info_Mod_Heiler_Pickpocket (C_INFO)
 {
-	npc		= Mod_7476_OUT_Arzt_REL;
+	npc		= Mod_7476_OUT_Heiler_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Pickpocket_Condition;
 	information	= Info_Mod_Heiler_Pickpocket_Info;
@@ -442,7 +442,7 @@ FUNC VOID Info_Mod_Heiler_Pickpocket_Herausreden()
 
 INSTANCE Info_Mod_Heiler_EXIT (C_INFO)
 {
-	npc		= Mod_7476_OUT_Arzt_REL;
+	npc		= Mod_7476_OUT_Heiler_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_EXIT_Condition;
 	information	= Info_Mod_Heiler_EXIT_Info;

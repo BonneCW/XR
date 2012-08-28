@@ -41,7 +41,7 @@ INSTANCE Mod_7610_OUT_Endres_REL (Npc_Default)
 FUNC VOID Rtn_Start_7610 ()
 {	
 	TA_Stand_ArmsCrossed	(05,00,22,00,"TOT");
-	TA_Stand_ArmsCrossed	(22,00,05,00,"REL_SURFACE_208");
+	TA_Stand_ArmsCrossed	(22,00,05,00,"REL_SURFACE_246");
 };
 
 FUNC VOID Rtn_Tot_7610 ()

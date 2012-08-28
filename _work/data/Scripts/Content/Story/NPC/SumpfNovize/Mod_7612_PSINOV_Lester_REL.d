@@ -39,8 +39,8 @@ FUNC VOID Rtn_Markt_7612()
 
 FUNC VOID Rtn_GuideToTroll_7612()
 {	
-	TA_Guide_Player	(08,00,20,00,"REL_SURFACE_207");
-	TA_Guide_Player	(20,00,08,00,"REL_SURFACE_207");
+	TA_Guide_Player	(08,00,20,00,"RELWIDNIS_21");
+	TA_Guide_Player	(20,00,08,00,"RELWIDNIS_21");
 };
 
 FUNC VOID Rtn_GuideToMine_7612()
