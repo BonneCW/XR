@@ -371,7 +371,7 @@ FUNC INT Info_Mod_Alrik_Kampf_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Alrik_Hi))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Andre_Turnier2))
-	&& (Mod_MilizTurnier	==	4)
+	&& (Mod_MilizTurnier == 4)
 	{
 		return 1;
 	};
@@ -401,7 +401,7 @@ FUNC VOID Info_Mod_Alrik_Kampf_Ja()
 	AI_Output(hero, self, "Info_Mod_Alrik_Kampf_Ja_15_00"); //Ja, lass uns anfangen ...
 	AI_Output(self, hero, "Info_Mod_Alrik_Kampf_Ja_09_01"); //Ok.
 
-	Mod_MilizTurnier	=	5;
+	Mod_MilizTurnier = 5;
 
 	AI_StopProcessInfos	(self);
 	B_Attack	(self, hero, AR_NONE, 1);
@@ -435,7 +435,7 @@ FUNC VOID Info_Mod_Alrik_KampfEnde_Info()
 		{
 			AI_Output(self, hero, "Info_Mod_Alrik_KampfEnde_09_00"); //Du bist wirklich gut. Du solltest mal zu mir kommen und ein wenig mit mir trainieren.
 
-			Mod_MilizTurnier	=	6;
+			Mod_MilizTurnier = 6;
 			
 			B_StartOtherRoutine	(Mod_547_NONE_Alrik_NW,	"START");
 				
@@ -446,7 +446,7 @@ FUNC VOID Info_Mod_Alrik_KampfEnde_Info()
 		{
 			AI_Output(self, hero, "Info_Mod_Alrik_KampfEnde_09_01"); //Tja, das war wohl nichts. Jetzt werde ich vielleicht ein Mitglied der Miliz. Wenn du willst, kannst du mal zu mir kommen, dann können wir zusammen trainieren.
 
-			Mod_MilizTurnier	=	7;
+			Mod_MilizTurnier = 7;
 
 			B_LogEntry	(TOPIC_MOD_MILIZTURNIER, "Ich habe meinen Kampf gegen Alrik verloren. Ich sollte jetzt mit Lord Andre sprechen.");
 
@@ -456,7 +456,7 @@ FUNC VOID Info_Mod_Alrik_KampfEnde_Info()
 		{
 			AI_Output (self, other,"Info_Mod_Alrik_KampfEnde_09_02"); //Du bist abgehauen und dadurch hab ich gewonnen. Dumm gelaufen für dich.
 
-			Mod_MilizTurnier	=	7;
+			Mod_MilizTurnier = 7;
 
 			B_LogEntry	(TOPIC_MOD_MILIZTURNIER, "Ich habe meinen Kampf gegen Alrik verloren. Ich sollte jetzt mit Lord Andre sprechen.");
 

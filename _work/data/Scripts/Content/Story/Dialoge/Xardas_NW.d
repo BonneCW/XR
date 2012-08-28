@@ -1685,6 +1685,8 @@ FUNC VOID Info_Mod_Xardas_NW_HabAxt_Info()
 
 	B_GiveInvItems	(hero, self, ItMw_AxtDesUntergangs, 1);
 
+	AI_UnequipWeapons	(self);
+
 	EquipItem	(self, ItMw_AxtDesUntergangs);
 
 	AI_ReadyMeleeWeapon	(self);

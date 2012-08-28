@@ -2950,6 +2950,7 @@ FUNC VOID INIT_NewWorld()
 		Mod_Cavalorn_Banditen = 1;
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Cavalorn_Banditen3))
+		&& (!Npc_KnowsInfo(hero, Info_Mod_Cavalorn_Banditen4))
 		{
 			B_SetTopicStatus	(TOPIC_MOD_CAVALORN_BANDITEN, LOG_FAILED);
 		};

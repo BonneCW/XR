@@ -25,7 +25,8 @@ FUNC VOID WaffenCheck()
 		Npc_RemoveInvItems	(hero, ItMw_AxtDesUntergangs, 1);
 
 		CreateInvItems	(hero, ItMw_AxtDesUntergangs, 1);
-		AI_EquipBestMeleeWeapon	(hero);
+
+		EquipItem	(hero, ItMw_AxtDesUntergangs);
 	};
 
 	if ((Hlp_IsItem(Waffentest, ItMw_Avaquar))
