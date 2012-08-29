@@ -466,8 +466,6 @@ FUNC VOID Info_Mod_Scatty_SlyArena_Info()
 	AI_Output(self, hero, "Info_Mod_Scatty_SlyArena_01_01"); //Klaro. Ich bin mal gespannt, wie sich der Grünschnabel schlägt. Bisher ist er mir ja nur durch sein Saufen aufgefallen.
 	AI_Output(hero, self, "Info_Mod_Scatty_SlyArena_15_02"); //Gibt es schon einen Termin für seinen ersten Kampf?
 	AI_Output(self, hero, "Info_Mod_Scatty_SlyArena_01_03"); //Jo. Nachher um 18 Uhr tritt er gegen Gor Karanto an. Das wird ein harter Kampf, sag ich mal.
-
-	B_LogEntry	(TOPIC_MOD_BDT_ORKS, "Scatty meinte, dass Sabitsch ein unglaublich starker Kämpfer sein müsse, um seine Waffe zu führen. Außerdem trägt Sabitsch den ganzen Tag über Schmuck, welchen er nur nachts zum Teil  ablegt und in seiner Truhe verstaut, um sich anschließend in Bürgerkleidung schlafen zu legen. Seine Hütte finde ich bei der Arena.");
 };
 
 INSTANCE Info_Mod_Scatty_Kap4 (C_INFO)

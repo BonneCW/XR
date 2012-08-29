@@ -230,9 +230,10 @@ func void B_GiveDeathInv (var C_NPC slf)
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_TROLL_HÖHLE)	{	CreateInvItems (slf, ItAt_TrollHöhleFur, 1);	};	
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_Keiler)		{	CreateInvItems (slf, ItAt_Addon_KeilerFur, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_Keiler01)		{	CreateInvItems (slf, ItAt_Addon_KeilerFur01, 1);	};	
-		if (slf.aivar[AIV_MM_REAL_ID] == ID_Orcdog)		{	CreateInvItems (slf, ItAt_OrcdogFur, 1);	};
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_Orcdog && (Hlp_GetInstanceID(slf) != Hlp_GetInstanceID(Orcdog_Big)))		{	CreateInvItems (slf, ItAt_OrcdogFur, 1);	};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(StonePuma))	{	CreateInvItems (slf, ItAt_StonePumaFur, 1);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Puma))	{	CreateInvItems (slf, ItAt_PumaFur, 1);		};
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Schattenwark))	{	CreateInvItems (slf, ItAt_WargFur, 1);		};
 	};
 
 	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Fur] == TRUE)

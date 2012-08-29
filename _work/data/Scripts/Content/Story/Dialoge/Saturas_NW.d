@@ -340,6 +340,8 @@ FUNC VOID Info_Mod_Saturas_NW_Argez3_Info()
 
 	B_StartOtherRoutine	(self, "TALKWITHARGEZ");
 	B_StartOtherRoutine	(PC_Friend_NW, "ATSATURAS");
+
+	B_SetTopicStatus	(TOPIC_MOD_ARGEZ, LOG_SUCCESS);
 };
 
 INSTANCE Info_Mod_Saturas_NW_Argez4 (C_INFO)
