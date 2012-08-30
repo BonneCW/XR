@@ -94,14 +94,14 @@ FUNC VOID Info_Mod_Wulfgar_Turm_Info()
 	AI_Output(self, hero, "Info_Mod_Wulfgar_Turm_04_03"); //Dieser Magier war früher ein hochgestelltes Mitglied bei den Wassermagiern.
 	AI_Output(self, hero, "Info_Mod_Wulfgar_Turm_04_04"); //Ist offensichtlich vom Pfad des Gleichgewichts, den diese Leute verkörpern, abgekommen.
 	AI_Output(self, hero, "Info_Mod_Wulfgar_Turm_04_05"); //Was mich wundert, da man ihm eine Schwäche für das Meer und das Wasser überhaupt nachsagt.
-	AI_Output(hero, self, "Info_Mod_Wulfgar_Turm_15_06"); //Was kann das bedeuten? Siehst du einen Anhaltspunkt ?
-	AI_Output(self, hero, "Info_Mod_Wulfgar_Turm_04_07"); //Gewiss. Hier in der Nähe ist doch diese Burgruine. Ihr unterer Eingang mündet direkt an der See.
+	AI_Output(hero, self, "Info_Mod_Wulfgar_Turm_15_06"); //Was kann das bedeuten? Siehst du einen Anhaltspunkt?
+	AI_Output(self, hero, "Info_Mod_Wulfgar_Turm_04_07"); //Gewiss. Im Minental ist doch diese Burgruine. Ihr unterer Eingang mündet direkt an der See.
 	AI_Output(self, hero, "Info_Mod_Wulfgar_Turm_04_08"); //Dort könntest du ihn finden, meine ich.
 	AI_Output(self, hero, "Info_Mod_Wulfgar_Turm_04_09"); //Aber Vorsicht. Er ist sehr mächtig geworden, scheint mir.
 	AI_Output(hero, self, "Info_Mod_Wulfgar_Turm_15_10"); //Wahrscheinlich schwarze Magie, glaubt Cyrco.
 	AI_Output(self, hero, "Info_Mod_Wulfgar_Turm_04_11"); //Das kann gut sein.
 	AI_Output(hero, self, "Info_Mod_Wulfgar_Turm_15_12"); //Und wo genau ...
-	AI_Output(self, hero, "Info_Mod_Wulfgar_Turm_04_13"); //Nach Westen, entlang der Klippe. Wenn du den Wachturm hochkletterst, kannst du ihn sehen. Ist nicht zu verfehlen.
+	AI_Output(self, hero, "Info_Mod_Wulfgar_Turm_04_13"); //Im Süden der Kolonie, Richtung Meer. Ist eigentlich nicht zu verfehlen.
 	AI_Output(hero, self, "Info_Mod_Wulfgar_Turm_15_14"); //Ach, du meinst den Nebelturm. Da war ich schon mal. Xardas hat mich hingeschickt.
 	AI_Output(self, hero, "Info_Mod_Wulfgar_Turm_04_15"); //Xardas? Der Schwarzmagier?
 	AI_Output(hero, self, "Info_Mod_Wulfgar_Turm_15_16"); //Genau der. Er suchte eine mächtige Waffe ...

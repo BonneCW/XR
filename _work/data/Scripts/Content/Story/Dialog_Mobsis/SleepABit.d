@@ -126,6 +126,8 @@ func void PC_Sleep (var int t)
 		Mdl_ApplyOverlayMdsTimed	(hero, "HUMANS_SPRINT.MDS", 120000);
 
 		B_GivePlayerXP	(80);
+
+		Mod_Weisenchronik_Intus = FALSE;
 	};
 
 	if (Mod_Purpurmond_Intus == 1)
