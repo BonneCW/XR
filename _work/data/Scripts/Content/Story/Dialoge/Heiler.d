@@ -1,6 +1,6 @@
 INSTANCE Info_Mod_Heiler_Hi (C_INFO)
 {
-	npc		= Mod_7476_OUT_Heiler_REL;
+	npc		= Mod_7476_OUT_Arzt_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Hi_Condition;
 	information	= Info_Mod_Heiler_Hi_Info;
@@ -22,7 +22,7 @@ FUNC VOID Info_Mod_Heiler_Hi_Info()
 
 INSTANCE Info_Mod_Heiler_Endres (C_INFO)
 {
-	npc		= Mod_7476_OUT_Heiler_REL;
+	npc		= Mod_7476_OUT_Arzt_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Endres_Condition;
 	information	= Info_Mod_Heiler_Endres_Info;
@@ -55,7 +55,7 @@ FUNC VOID Info_Mod_Heiler_Endres_Info()
 
 INSTANCE Info_Mod_Heiler_Endres02 (C_INFO)
 {
-	npc		= Mod_7476_OUT_Heiler_REL;
+	npc		= Mod_7476_OUT_Arzt_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Endres02_Condition;
 	information	= Info_Mod_Heiler_Endres02_Info;
@@ -83,7 +83,7 @@ FUNC VOID Info_Mod_Heiler_Endres02_Info()
 
 INSTANCE Info_Mod_Heiler_Endres03 (C_INFO)
 {
-	npc		= Mod_7476_OUT_Heiler_REL;
+	npc		= Mod_7476_OUT_Arzt_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Endres03_Condition;
 	information	= Info_Mod_Heiler_Endres03_Info;
@@ -111,7 +111,7 @@ FUNC VOID Info_Mod_Heiler_Endres03_Info()
 
 INSTANCE Info_Mod_Heiler_Endres04 (C_INFO)
 {
-	npc		= Mod_7476_OUT_Heiler_REL;
+	npc		= Mod_7476_OUT_Arzt_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Endres04_Condition;
 	information	= Info_Mod_Heiler_Endres04_Info;
@@ -138,7 +138,7 @@ FUNC VOID Info_Mod_Heiler_Endres04_Info()
 
 INSTANCE Info_Mod_Heiler_Endres05 (C_INFO)
 {
-	npc		= Mod_7476_OUT_Heiler_REL;
+	npc		= Mod_7476_OUT_Arzt_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Endres05_Condition;
 	information	= Info_Mod_Heiler_Endres05_Info;
@@ -165,7 +165,7 @@ FUNC VOID Info_Mod_Heiler_Endres05_Info()
 
 INSTANCE Info_Mod_Heiler_Endres06 (C_INFO)
 {
-	npc		= Mod_7476_OUT_Heiler_REL;
+	npc		= Mod_7476_OUT_Arzt_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Endres06_Condition;
 	information	= Info_Mod_Heiler_Endres06_Info;
@@ -237,7 +237,7 @@ FUNC VOID Info_Mod_Heiler_Endres06_A()
 
 INSTANCE Info_Mod_Heiler_Heilen (C_INFO)
 {
-	npc		= Mod_7476_OUT_Heiler_REL;
+	npc		= Mod_7476_OUT_Arzt_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Heilen_Condition;
 	information	= Info_Mod_Heiler_Heilen_Info;
@@ -272,7 +272,7 @@ FUNC VOID Info_Mod_Heiler_Heilen_Info()
 
 INSTANCE Info_Mod_Heiler_WasGeht (C_INFO)
 {
-	npc		= Mod_7476_OUT_Heiler_REL;
+	npc		= Mod_7476_OUT_Arzt_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_WasGeht_Condition;
 	information	= Info_Mod_Heiler_WasGeht_Info;
@@ -294,7 +294,7 @@ FUNC VOID Info_Mod_Heiler_WasGeht_Info()
 
 INSTANCE Info_Mod_Heiler_Freudenspender (C_INFO)
 {
-	npc		= Mod_7476_OUT_Heiler_REL;
+	npc		= Mod_7476_OUT_Arzt_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Freudenspender_Condition;
 	information	= Info_Mod_Heiler_Freudenspender_Info;
@@ -327,7 +327,7 @@ FUNC VOID Info_Mod_Heiler_Freudenspender_Info()
 
 INSTANCE Info_Mod_Heiler_Pickpocket (C_INFO)
 {
-	npc		= Mod_7476_OUT_Heiler_REL;
+	npc		= Mod_7476_OUT_Arzt_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_Pickpocket_Condition;
 	information	= Info_Mod_Heiler_Pickpocket_Info;
@@ -442,7 +442,7 @@ FUNC VOID Info_Mod_Heiler_Pickpocket_Herausreden()
 
 INSTANCE Info_Mod_Heiler_EXIT (C_INFO)
 {
-	npc		= Mod_7476_OUT_Heiler_REL;
+	npc		= Mod_7476_OUT_Arzt_REL;
 	nr		= 1;
 	condition	= Info_Mod_Heiler_EXIT_Condition;
 	information	= Info_Mod_Heiler_EXIT_Info;

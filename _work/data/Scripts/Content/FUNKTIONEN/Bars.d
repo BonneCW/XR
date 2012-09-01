@@ -44,7 +44,7 @@ func void ShowBars ()
 
 	if (Mod_Balken == 0)
 	{
-		bar_mana.zCView_vposx = 6672;
+		bar_mana.zCView_vposx = 6246;
 		bar_mana.zCView_vposy = 7872;
 	}
 	else if (Mod_Balken == 1)
