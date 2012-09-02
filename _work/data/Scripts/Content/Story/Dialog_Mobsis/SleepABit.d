@@ -225,6 +225,15 @@ INSTANCE PC_SleepTime_Morning (C_INFO)
 
 FUNC INT PC_SleepTime_Morning_Condition()
 {
+	if (Wld_IsTime(12,00,07,59))
+	{
+		PC_SleepTime_Morning.description = "Bis zum Morgen schlafen";
+	}
+	else
+	{
+		PC_SleepTime_Morning.description = "Bis zum nächsten Morgen schlafen";
+	};
+
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_SLEEPABIT)
 	{
 		return 1;
@@ -279,6 +288,15 @@ INSTANCE PC_SleepTime_Evening (C_INFO)
 
 FUNC INT PC_SleepTime_Evening_Condition()
 {
+	if (Wld_IsTime(00,00,19,59))
+	{
+		PC_SleepTime_Evening.description = "Bis zum Abend schlafen";
+	}
+	else
+	{
+		PC_SleepTime_Evening.description = "Bis zum nächsten Abend schlafen";
+	};
+
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_SLEEPABIT)
 	{
 		return 1;
