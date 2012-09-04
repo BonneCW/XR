@@ -247,7 +247,6 @@ FUNC VOID Info_Mod_Xardas_MT_HabSchwert_Info()
 	AI_Output(self, hero, "Info_Mod_Xardas_MT_HabSchwert_14_02"); //Bevor du die Waffe jedoch benutzt, solltest du sie erst an einem Beliar Schrein weihen.
 	AI_Output(self, hero, "Info_Mod_Xardas_MT_HabSchwert_14_03"); //Nimm noch dieses Amulett zur Sicherheit.
 
-	CreateInvItems	(self, ItAm_Xardas_SchutzVorXeres, 1);
 	B_GiveInvItems	(self, hero, ItAm_Xardas_SchutzVorXeres, 1);
 
 	AI_Output(self, hero, "Info_Mod_Xardas_MT_HabSchwert_14_04"); //Dieses Amulett sollte in der Lage sein, dich vor Xeres Fesselzauber zu schützen.

@@ -167,7 +167,7 @@ FUNC VOID Info_Mod_Scar_Jagdtrophaeen_SollIch_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_FAULERJÄGER, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_FAULERJÄGER, LOG_RUNNING);
-	B_LogEntry_More	(TOPIC_MOD_GOMEZHORN, TOPIC_MOD_FAULERJÄGER, "Scar kann mir Jagdtrophäen verkaufen, wenn ich seinen Gehilfen wieder dazu bringe zu arbeiten.", "Scar will mir seine Jagdtrophäen erst verkaufen, wenn ich seinen Gehilfen Bartok dazu gebracht habe, wieder jagen zu gehen. Bartok hält sich die meiste Zeit in der Stadt und dort in der 'Roten Laterne' auf.");
+	B_LogEntry	(TOPIC_MOD_FAULERJÄGER, "Scar will mir seine Jagdtrophäen erst verkaufen, wenn ich seinen Gehilfen Bartok dazu gebracht habe, wieder jagen zu gehen. Bartok hält sich die meiste Zeit in der Stadt und dort in der 'Roten Laterne' auf.");
 };
 
 INSTANCE Info_Mod_Scar_BartokArbeitetWieder (C_INFO)
@@ -200,7 +200,7 @@ FUNC VOID Info_Mod_Scar_BartokArbeitetWieder_Info()
 
 	B_GivePlayerXP	(50);
 
-	B_LogEntry_More	(TOPIC_MOD_GOMEZHORN, TOPIC_MOD_FAULERJÄGER, "Scar weiß, dass Bartok wieder arbeitet und verkauft mir ab sofort Jagdtrophäen.", "Scar verkauft mir jetzt Jagdtrophäen. Ich hoffe, dass er ein Schattenläuferhorn hat.");
+	B_LogEntry	(TOPIC_MOD_FAULERJÄGER, "Scar verkauft mir jetzt Jagdtrophäen. Ich hoffe, dass er ein Schattenläuferhorn hat.");
 	B_SetTopicStatus	(TOPIC_MOD_FAULERJÄGER, LOG_SUCCESS);
 
 	CreateInvItems	(self, ItAt_ShadowHorn, 1);

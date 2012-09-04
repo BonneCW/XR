@@ -141,13 +141,6 @@ func int ZS_MM_Attack_Loop()
 		};
 	};
 
-	//ADDON>
-	if (RavenIsDead == TRUE)
-	&& (self.guild == GIL_STONEGUARDIAN)
-	{	
-		B_KillNpc (self);
-	};
-
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Icegolem_Griselda_01))
 	{
 		if (Npc_GetDistToNpc(self, hero) < Npc_GetDistToNpc(self, Firegolem_Griselda_01))

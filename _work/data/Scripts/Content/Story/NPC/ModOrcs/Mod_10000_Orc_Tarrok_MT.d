@@ -7,6 +7,7 @@ INSTANCE Mod_10000_Orc_Tarrok_MT (Npc_Default)
 	voice							=	18;
 	level							=	30;
 	Npctype 	=		NPCTYPE_MAIN;
+	flags			= 2;
 
 	//----- Attribute -----	
 	attribute	[ATR_STRENGTH]		=	150; //+ca. 50-80 Waffe //MIN 100 wg Equip!!!

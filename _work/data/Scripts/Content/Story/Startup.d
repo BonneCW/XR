@@ -2958,7 +2958,7 @@ FUNC VOID INIT_NewWorld()
 		B_StartOtherRoutine	(Mod_1723_MIL_Gidan_NW, "ANDRE");
 		B_StartOtherRoutine	(PC_Friend_NW, "TOT");
 
-		// Feldr?uber in H?hle spawnen, wenn man Eimer ausgeleert hat
+		// Feldräuber in Höhle spawnen, wenn man Eimer ausgeleert hat
 
 		if (Mod_EimerAusgeleert == 1)
 		{

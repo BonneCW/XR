@@ -153,14 +153,14 @@ FUNC VOID Info_Mod_Namib_Aufnehmen_Info()
 	AI_Output(hero, self, "Info_Mod_Namib_Aufnehmen_15_04"); //Warum gibt er es dann nicht dort ab?
 	AI_Output(self, hero, "Info_Mod_Namib_Aufnehmen_02_05"); //Da unterlief uns ein kleiner organisatorischer Fehler. Wir haben Lester mit zwei Aufgaben auf einmal beauftragt.
 	AI_Output(hero, self, "Info_Mod_Namib_Aufnehmen_15_06"); //Was macht er dann jetzt?
-	AI_Output(self, hero, "Info_Mod_Namib_Aufnehmen_02_07"); //Warst du schon im Tal der Schwarzmagier?
+	AI_Output(self, hero, "Info_Mod_Namib_Aufnehmen_02_07"); //Warst du schon bei dem großen Turm von Xardas in Khorinis?
 	AI_Output(hero, self, "Info_Mod_Namib_Aufnehmen_15_08"); //Äh ...
-	AI_Output(self, hero, "Info_Mod_Namib_Aufnehmen_02_09"); //Jedenfalls haben die dort untote Wesen beschworen. Die müssen viel Energie aufgewandt haben, es waren genügend um einen Turm und ein Kloster zu bauen.
+	AI_Output(self, hero, "Info_Mod_Namib_Aufnehmen_02_09"); //Jedenfalls hat er dort untote Wesen beschworen. Er muss viel Energie aufgewandt haben, es waren genügend um einen ganzen Turm in kurzer Zeit zu bauen.
 	AI_Output(self, hero, "Info_Mod_Namib_Aufnehmen_02_10"); //Das ganze hat jedoch den Boden verändert, ihm gewisse Stoffe entzogen und als diese Untoten wieder zu Stein wurden, hat der Boden gewisse andere Stoffe wiederbekommen.
 	AI_Output(self, hero, "Info_Mod_Namib_Aufnehmen_02_11"); //Lester soll in der Höhle testen, welche Auswirkungen so ein Zauber auf die Sumpfkrautpflanzen hat.
 	AI_Output(self, hero, "Info_Mod_Namib_Aufnehmen_02_12"); //Wenn du schon bei ihm bist, frage ihn um einen Lagerbericht.
 
-	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Baal Namib hat mich damit beauftrag Lester's Paket bei Constantino abzugeben und einen Lagebericht von Lester einzuholen.");
+	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Baal Namib hat mich damit beauftrag Lesters Paket bei Constantino abzugeben und einen Lagebericht von Lester einzuholen.");
 };
 
 INSTANCE Info_Mod_Namib_WarBeiLester (C_INFO)

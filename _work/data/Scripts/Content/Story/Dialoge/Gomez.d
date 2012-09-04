@@ -484,38 +484,6 @@ FUNC VOID Info_Mod_Gomez_Jagd04_Info()
 	B_StartOtherRoutine	(self, "START");
 };
 
-INSTANCE Info_Mod_Gomez_HornNehmen (C_INFO)
-{
-	npc		= Mod_517_DMR_Gomez_MT;
-	nr		= 1;
-	condition	= Info_Mod_Gomez_HornNehmen_Condition;
-	information	= Info_Mod_Gomez_HornNehmen_Info;
-	permanent	= 1;
-	important	= 0;
-	description	= "Bring mir bei, wie ich ein Schattenläuferhorn nehme! (5 LP)";
-};
-
-FUNC INT Info_Mod_Gomez_HornNehmen_Condition()
-{
-	Info_Mod_Gomez_HornNehmen.description = B_BuildLearnString("Bring mir bei, wie ich ein Schattenläuferhorn nehme!", B_GetLearnCostTalent(hero, NPC_TALENT_TAKEANIMALTROPHY, TROPHY_ShadowHorn));
-
-	if (hero.guild == GIL_KDF)
-	&& (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_ShadowHorn] == FALSE)
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Gomez_HornNehmen_Info()
-{
-	AI_Output(hero, self, "Info_Mod_Gomez_HornNehmen_15_00"); //Bring mir bei wie ich das Horn eines Schattenläufers nehme.
-
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_ShadowHorn))
-	{
-		AI_Output(self, hero, "Info_Mod_Gomez_HornNehmen_10_01"); //Ein Schattenläuferhorn bekommst du ab, wenn du dich mit aller Kraft gegen den Schädel stemmst, am Horn ziehst und das Ding mit einer harten Klinge heraustrennst.
-	};
-};
-
 INSTANCE Info_Mod_Gomez_DuHier (C_INFO)
 {
 	npc		= Mod_517_DMR_Gomez_MT;
@@ -543,39 +511,6 @@ FUNC VOID Info_Mod_Gomez_DuHier_Info()
 	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_06"); //An die Zeit in der Kuppel kann ich mich kaum erinnern.
 	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_07"); //Ich weiß noch, dass am Fuße des Bergs mit der Austauschstelle ein kleines Lager errichtet worden war, wo sich die anderen Gefangenen aufhielten.
 	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_08"); //Scheint eine harte Zeit gewesen zu sein - zu Bewusstsein gekommen bin ich erst wieder hier, unter Xardas' Augen.
-};
-	
-INSTANCE Info_Mod_Gomez_Hoerner (C_INFO)
-{
-	npc		= Mod_517_DMR_Gomez_MT;
-	nr		= 1;
-	condition	= Info_Mod_Gomez_Hoerner_Condition;
-	information	= Info_Mod_Gomez_Hoerner_Info;
-	permanent	= 1;
-	important	= 0;
-	description	= "Ich hab Hörner für dich.";
-};
-
-FUNC INT Info_Mod_Gomez_Hoerner_Condition()
-{
-	if (hero.guild == GIL_KDF)
-	&& (Npc_HasItems(hero, ItAt_ShadowHorn) >= 1)
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Gomez_Hoerner_Info()
-{
-	AI_Output(hero, self, "Info_Mod_Gomez_Hoerner_15_00"); //Ich hab Hörner für dich.
-
-	var int HornAmount;
-	HornAmount = Npc_HasItems(hero, ItAt_ShadowHorn);
-	
-	B_GiveInvItems	(hero, self, ItAt_ShadowHorn, HornAmount);
-	B_GiveInvItems	(self, hero, ItMi_Gold, HornAmount * Value_ShadowHorn);	
-
-	AI_Output(self, hero, "Info_Mod_Gomez_Hoerner_10_01"); //Sehr gut.
 };
 
 INSTANCE Info_Mod_Gomez_Angebot (C_INFO)

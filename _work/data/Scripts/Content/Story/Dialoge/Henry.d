@@ -106,7 +106,7 @@ FUNC VOID Info_Mod_Henry_Entertrupp_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_HENRY_ENTERTRUPP, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_HENRY_ENTERTRUPP, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_HENRY_ENTERTRUPP, "Um in Henry's Entertrupp zu kommen soll ich ihm erstmal ne Flasche Grog besorgen.");
+	B_LogEntry	(TOPIC_MOD_HENRY_ENTERTRUPP, "Um in Henry's Entertrupp zu kommen soll ich ihm erstmal 'ne Flasche Grog besorgen.");
 
 	AI_Teleport	(Mod_940_PIR_Samuel_AW, "ADW_PIRATECAMP_TOWER_BED");
 

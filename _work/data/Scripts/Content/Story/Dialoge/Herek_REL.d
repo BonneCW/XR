@@ -190,6 +190,9 @@ FUNC VOID Info_Mod_Herek_REL_AtZombie2_B()
 
 	AI_PlayAni	(hero, "T_FISTATTACKMOVE");
 
+	AI_TurnToNpc	(hero, self);
+	AI_TurnToNpc	(self, hero);
+
 	AI_Output(self, hero, "Info_Mod_Herek_REL_AtZombie2_B_01_04"); //(stöhnt) Ahh ... ich kann nicht mehr.
 	AI_Output(hero, self, "Info_Mod_Herek_REL_AtZombie2_B_15_05"); //Wir können das Spiel gerne so weitertreiben.
 	AI_Output(self, hero, "Info_Mod_Herek_REL_AtZombie2_B_01_06"); //Jaja ... ich hab genug.

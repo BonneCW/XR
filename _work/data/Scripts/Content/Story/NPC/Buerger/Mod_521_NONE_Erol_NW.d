@@ -5,8 +5,9 @@ INSTANCE Mod_521_NONE_Erol_NW (Npc_Default)
 	guild 		= GIL_OUT;
 	id 			= 521;
 	voice 		= 10;
-	flags       = 0;																	
+	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
+
 	aivar[AIV_IgnoresFakeGuild] = TRUE;
 	aivar[AIV_IGNORE_Murder]		= TRUE;
 	aivar[AIV_IGNORE_Theft] 		= TRUE;

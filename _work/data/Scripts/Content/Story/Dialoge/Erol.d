@@ -244,13 +244,8 @@ FUNC VOID Info_Mod_Erol_Fahrender3_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Erol_Fahrender3_15_00"); //Wie war's im Minental?
 	AI_Output(self, hero, "Info_Mod_Erol_Fahrender3_10_01"); //Wie soll ich das wissen?
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender3_10_02"); //Dieser Brahim hat mir zwar eine Karte verkauft, aber dann diese Horden von wildgewordenen Goblis im Pass.
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender3_10_03"); //Den Göttern sei Dank konnte ich schneller rennen als die.
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender3_10_04"); //Hab meinen Beutel festgehalten und bin durchgerannt wie wenn Beliar hinter mir her ist.
-	AI_Output(hero, self, "Info_Mod_Erol_Fahrender3_15_05"); //Siehst du, geht doch.
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender3_10_06"); //Aber dann stoppt mich eine Wache der Paladine. Haben mich für Gold und gute Worte nicht durchgelassen.
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender3_10_07"); //Ich also zurückgerannt. Hab wahrscheinlich paar von dem Gewürm zertreten.
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender3_10_08"); //Und nun bin ich hier ...
+	AI_Output(self, hero, "Info_Mod_Erol_Fahrender3_10_02"); //Dieser Brahim hat mir zwar eine Karte verkauft, aber dann stoppt mich eine Wache der Paladine. Haben mich für Gold und gute Worte nicht durchgelassen.
+	AI_Output(self, hero, "Info_Mod_Erol_Fahrender3_10_03"); //Also bin ich wieder umgekehrt und nun bin ich hier ...
 };
 
 INSTANCE Info_Mod_Erol_Fahrender4 (C_INFO)

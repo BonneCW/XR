@@ -145,9 +145,10 @@ func void B_MM_AssessPlayer()
 		};
 	};
 	
-	//Ulu-Mulu bei Orks
+	// Ulu-Mulu bei Orks
+
 	if (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(PC_Hero))
-	&& ((self.guild	==	GIL_ORC)
+	&& ((self.guild	== GIL_ORC)
 	|| (self.aivar[AIV_MM_REAL_ID] == ID_ORCDOG)
 	|| (self.aivar[AIV_MM_REAL_ID] == ID_ORCBITER))
 	{

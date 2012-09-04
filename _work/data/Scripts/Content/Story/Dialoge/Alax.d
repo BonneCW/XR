@@ -109,6 +109,8 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Verteiler()
 {
 	Info_ClearChoices	(Info_Mod_Alax_AlchemieLehrer2);
 
+	Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, DIALOG_BACK, Info_Mod_Alax_AlchemieLehrer2_BACK);
+
 	if (Mod_Alax_Zutaten < 13)
 	{
 		if (!Mod_Alax_Zutat_Zwillingsdorn)
@@ -208,6 +210,11 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Verteiler()
 FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Info()
 {
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_BACK()
+{
+	Info_ClearChoices	(Info_Mod_Alax_AlchemieLehrer2);
 };
 
 FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Zwillingsdorn()

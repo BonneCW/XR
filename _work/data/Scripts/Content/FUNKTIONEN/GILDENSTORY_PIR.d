@@ -173,6 +173,8 @@ FUNC VOID GILDENSTORY_PIR ()
 		&& (Mod_SamuelIstWeg == 0)
 		{
 			Mod_SamuelIstWeg = 1;
+
+			B_LogEntry	(TOPIC_MOD_HENRY_ENTERTRUPP, "Hm ... es scheint so, als wäre Samuel verschwunden. Ich sollte mich mal in seiner Höhle umsehen ...");
 		};
 
 		// Piraten aus Lager entfernen, wenn bereit zu Schatzsuche

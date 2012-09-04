@@ -106,14 +106,14 @@ FUNC VOID Info_Mod_Elena_Hexenparty_01_G()
 	AI_Output(self, hero, "Info_Mod_Elena_Hexenparty_01_G_16_00"); //Gut, wir wollen dir eine Chance geben. Wenn du dich unserer Schwesternschaft als würdig erwiesen hast, werden wir dich in unsere Gemeinschaft aufnehmen.
 	AI_Output(hero, self, "Info_Mod_Elena_Hexenparty_01_G_15_01"); //Was soll ich tun?
 	AI_Output(self, hero, "Info_Mod_Elena_Hexenparty_01_G_16_02"); //Dieser Pepe ist uns schon seit langem ein Dorn im Auge. Er steht viel zu nah an unserem Versteck.
-	AI_Output(self, hero, "Info_Mod_Elena_Hexenparty_01_G_16_03"); //Wir werden ihm einen kleinen Besuch abstatten ... das heißt, du wirst in Wolfsgestalt erscheinen und seine Herde dezimieren. Wir werden dieses Mal nur zusehen.
+	AI_Output(self, hero, "Info_Mod_Elena_Hexenparty_01_G_16_03"); //Wir werden ihm einen kleinen Besuch abstatten ... das heißt, du wirst in Warggestalt erscheinen und seine Herde dezimieren. Wir werden dieses Mal nur zusehen.
 	AI_Output(self, hero, "Info_Mod_Elena_Hexenparty_01_G_16_04"); //Das sollte reichen, um ihn zukünftig vom Wald fernzuhalten, damit wir unser Werk des Chaos ungestört fortsetzen können.
-	AI_Output(self, hero, "Info_Mod_Elena_Hexenparty_01_G_16_05"); //Nimm dazu diese verzauberte Wolfshaut, lege sie an und folge uns.
+	AI_Output(self, hero, "Info_Mod_Elena_Hexenparty_01_G_16_05"); //Nimm dazu diese verzauberte Warghaut, lege sie an und folge uns.
 
 	B_GiveInvItems	(self, hero, ItRu_Verwandlungsfell, 1);
 
 	AI_Output(self, hero, "Info_Mod_Elena_Hexenparty_01_G_16_06"); //Wenn du willst, kann ich dich auch noch lehren, deine tierische Form geschickter einzusetzen, deine aggressiven Triebe zu zähmen, Kadaver zu fressen und andere Wölfe und Warge dir folgen zu lassen.
-	AI_Output(self, hero, "Info_Mod_Elena_Hexenparty_01_G_16_07"); //Außerdem würdest du deine Tiergestalt an den Erfahrungen teilhaben lassen, die du als Mensch machst und so mit der Zeit als Wolf an Stärke und Macht gewinnen.
+	AI_Output(self, hero, "Info_Mod_Elena_Hexenparty_01_G_16_07"); //Außerdem würdest du deine Tiergestalt an den Erfahrungen teilhaben lassen, die du als Mensch machst und so mit der Zeit als Warg an Stärke und Macht gewinnen.
 	
 	Info_ClearChoices	(Info_Mod_Elena_Hexenparty_01);
 
@@ -161,7 +161,7 @@ FUNC VOID Info_Mod_Elena_Hexenparty_01_I()
 {
 	AI_Output(hero, self, "Info_Mod_Elena_Hexenparty_01_I_15_00"); //Lass uns aufbrechen.
 
-	B_LogEntry	(TOPIC_MOD_ADANOS_UNHEIL, "Unglaublich. Die Hexen sind doch tatsächlich auf meine Tarnung hereingefallen. Ich soll mir jetzt die Wolfshaut anlegen und mit meinen 'Schwestern' Pepe verscheuchen.");
+	B_LogEntry	(TOPIC_MOD_ADANOS_UNHEIL, "Unglaublich. Die Hexen sind doch tatsächlich auf meine Tarnung hereingefallen. Ich soll mir jetzt die Warghaut anlegen und mit meinen 'Schwestern' Pepe verscheuchen.");
 	
 	Info_ClearChoices	(Info_Mod_Elena_Hexenparty_01);
 
