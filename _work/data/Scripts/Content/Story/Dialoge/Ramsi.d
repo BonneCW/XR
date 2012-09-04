@@ -145,6 +145,11 @@ FUNC VOID Info_Mod_Ramsi_KeilerTot_Info()
 
 	self.flags = 0;
 
+	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX]/3;
+	self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS]/3 + 1;
+
+	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS];
+
 	AI_StopProcessInfos	(self);
 
 	Wld_InsertNpc	(Mod_7368_JG_Jaeger_NW,	"WP_RAMSI_ASS_JAEGERSPAWN");
