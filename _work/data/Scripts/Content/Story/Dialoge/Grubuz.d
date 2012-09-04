@@ -126,6 +126,8 @@ FUNC INT Info_Mod_Grubuz_Emerin_Condition()
 FUNC VOID Info_Mod_Grubuz_Emerin_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Grubuz_Emerin_18_00"); //Was du wollen hier?
+
+	self.flags = 0;
 	
 	Info_ClearChoices	(Info_Mod_Grubuz_Emerin);
 

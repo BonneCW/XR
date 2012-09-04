@@ -11,12 +11,7 @@ instance Mod_3002_PSINOV_Viran_REL (Npc_Default)
 		
 	
 	//-------- abilities --------
-	attribute[ATR_STRENGTH] 		=	15;
-	attribute[ATR_DEXTERITY] 		=	15;
-	attribute[ATR_MANA_MAX] 		=	0;
-	attribute[ATR_MANA] 			=	0;
-	attribute[ATR_HITPOINTS_MAX] 	=	100;
-	attribute[ATR_HITPOINTS] 		=	100;
+	B_SetAttributesToChapter	(self, 3);
 
 	//-------- visuals --------
 	// 				animations
@@ -25,7 +20,7 @@ instance Mod_3002_PSINOV_Viran_REL (Npc_Default)
 	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
 	Mdl_SetVisualBody (self,"hum_body_Naked0", 1, 1,"Hum_Head_Bald", 26,  1, NOV_ARMOR_L);
 
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 	
 	fight_tactic	=	FAI_HUMAN_STRONG;
 
