@@ -83,8 +83,15 @@ FUNC VOID Aufnahmequests ()
 		// Sumpfis
 
 		if (Mod_Sekte_Aufnahme == 1)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Karras_Lester))
+		&& (!Npc_IsInState(Mod_514_DMB_Karras_MT, ZS_Talk))
 		{
 			Wld_InsertNpc	(Mod_7268_PSINOV_Lester_MT, "PSI_START");
+
+			AI_Teleport	(Mod_514_DMB_Karras_MT, "PSI_START");
+			B_StartOtherRoutine	(Mod_514_DMB_Karras_MT, "ATPSICAMP");
+
+			AI_Teleport	(hero, "PSI_START");
 
 			Mod_Sekte_Aufnahme = 2;
 		};
@@ -92,20 +99,6 @@ FUNC VOID Aufnahmequests ()
 
 	if (CurrentLevel == NEWWORLD_ZEN)
 	{
-		// Karras portet ins Minental
-
-		if (Mod_KarrasMTTeleport == 0)
-		&& (Npc_KnowsInfo(hero, Info_Mod_Karras_Lester))
-		&& (!Npc_IsInState(Mod_514_DMB_Karras_MT, ZS_Talk))
-		{
-			Mod_KarrasMTTeleport = 1;
-
-			AI_Teleport	(Mod_514_DMB_Karras_MT, "PSI_START");
-			B_StartOtherRoutine	(Mod_514_DMB_Karras_MT, "ATPSICAMP");
-
-			AI_Teleport	(hero, "PSI_START");
-		};
-
 		if (Npc_KnowsInfo(hero, Info_Mod_Karras_Namib))
 		&& (Mod_KarrasNecronicum == 0)
 		{
