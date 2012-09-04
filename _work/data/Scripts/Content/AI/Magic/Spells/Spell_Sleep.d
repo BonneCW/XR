@@ -31,7 +31,8 @@ func int Spell_Logic_Sleep (var int manaInvested) //Parameter manaInvested wird 
 		&& (!C_BodyStateContains(other, BS_DIVE))
 		&& (!C_NpcIsDown(other))
 		&& (other.guild < GIL_SEPERATOR_HUM)
-		&& (other.flags != NPC_FLAG_IMMORTAL) 
+		&& ((other.flags != NPC_FLAG_IMMORTAL)
+		|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_7358_DMR_Daemonenritter_MT)))
 		&& (Npc_GetDistToNpc (self,other) <= 1000)
 		{		
 			Npc_ClearAIQueue	(other);
