@@ -48,19 +48,6 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Alax_AlchemieLehrer_15_00"); //Kannst du mir etwas über Alchemie beibringen?
 	AI_Output(self, hero, "Info_Mod_Alax_AlchemieLehrer_14_01"); //Warum bei Beliar sollte ich das tun?
-	AI_Output(hero, self, "Info_Mod_Alax_AlchemieLehrer_15_02"); //Ich möchte mich den Gaunern anschließen. Dazu brauche ich jedoch eure Stimmen.
-	AI_Output(hero, self, "Info_Mod_Alax_AlchemieLehrer_15_03"); //Würdest du mir nach dieser Aufgabe eventuell deine Stimme geben.
-	AI_Output(self, hero, "Info_Mod_Alax_AlchemieLehrer_14_04"); //Wenn du alle Pakete bekommen kannst, dann werde ich dir natürlich meine Stimme geben.
-	AI_Output(hero, self, "Info_Mod_Alax_AlchemieLehrer_15_05"); //Abgemacht. Wo soll ich die Pakete abholen?
-	AI_Output(self, hero, "Info_Mod_Alax_AlchemieLehrer_14_06"); //Alle drei Händler findest du in der Stadt. Ihre Namen sind Meldor, Borka und zuletzt Jason, ein Milizionär.
-	AI_Output(hero, self, "Info_Mod_Alax_AlchemieLehrer_15_07"); //Jemand von der Miliz handelt mit Sumpfkraut?
-	AI_Output(self, hero, "Info_Mod_Alax_AlchemieLehrer_14_08"); //Meinst du die halten sich alle an ihre Regeln?
-	AI_Output(hero, self, "Info_Mod_Alax_AlchemieLehrer_15_09"); //Nein. Also gut, ich werde die drei mal aufsuchen.
-	AI_Output(self, hero, "Info_Mod_Alax_AlchemieLehrer_14_10"); //Gut. Komm wieder, wenn du die Pakete hast.
-
-	Log_CreateTopic	(TOPIC_MOD_ALAX_ZUTATEN, LOG_MISSION);
-	B_SetTopicStatus	(TOPIC_MOD_ALAX_ZUTATEN, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Bevor mir Alax etwas über Alchemie beibringt, soll ich ihm erst mal von 13 Tränken, Gewächsen oder sonstigen Zutaten meiner Wahl je 6 Stück bringen.");
 
 	Info_ClearChoices	(Info_Mod_Alax_AlchemieLehrer);
 
@@ -73,11 +60,11 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer_C()
 	AI_Output(hero, self, "Info_Mod_Alax_AlchemieLehrer_C_15_00"); //Von welchen?
 	AI_Output(self, hero, "Info_Mod_Alax_AlchemieLehrer_C_14_01"); //Überrasch mich ... oder anders gesagt: Stiehl mir nicht mehr Zeit und lass mich in Ruhe weiterarbeiten.
 
+	Info_ClearChoices	(Info_Mod_Alax_AlchemieLehrer);
+
 	Log_CreateTopic	(TOPIC_MOD_ALAX_ZUTATEN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_ALAX_ZUTATEN, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe mit Alax gesprochen, einem er Gauner der Assassinen. Er will mir seine Stimme geben, aber nur, wenn ich ihm drei Pakete voller Sumpfkraut bringe, die eigentlich von verschiedenen 'Händlern' der Stadt hätten geliefert werden müssen. Dieser Personen sind Meldor, Borka und Jason. Wenn ich von ihnen die Pakete erhalten habe, soll ich mich wieder bei Alax melden.");
-
-	Info_ClearChoices	(Info_Mod_Alax_AlchemieLehrer);
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Bevor mir Alax etwas über Alchemie beibringt, soll ich ihm erst mal von 13 Tränken, Gewächsen oder sonstigen Zutaten meiner Wahl je 6 Stück bringen.");
 };
 
 FUNC VOID Info_Mod_Alax_AlchemieLehrer_B()

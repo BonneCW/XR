@@ -298,7 +298,6 @@ FUNC VOID Info_Mod_Lester_Namib_Info()
 	AI_Output(hero, self, "Info_Mod_Lester_Namib_15_00"); //Baal Namib schickt mich. Ich soll ein Paket bei dir abholen und es zu Constantino bringen.
 	AI_Output(self, hero, "Info_Mod_Lester_Namib_13_01"); //Sehr gut, dann kann ich mich weiter meinen ... Forschungen widmen.
 
-	CreateInvItems	(self, ItMi_LesterPaket, 1);
 	B_GiveInvItems	(self, hero, ItMi_LesterPaket, 1);
 
 	CreateInvItems	(self, ItMi_Joint, 1);
@@ -444,7 +443,7 @@ INSTANCE Info_Mod_Lester_Karras (C_INFO)
 	information	= Info_Mod_Lester_Karras_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich soll dich abholen.";
+	description	= "Ich soll dir Bescheid geben, dass du ins Minental kannst.";
 };
 
 FUNC INT Info_Mod_Lester_Karras_Condition()
@@ -457,14 +456,14 @@ FUNC INT Info_Mod_Lester_Karras_Condition()
 
 FUNC VOID Info_Mod_Lester_Karras_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Lester_Karras_15_00"); //Ich soll dich abholen.
+	AI_Output(hero, self, "Info_Mod_Lester_Karras_15_00"); //Ich soll dir Bescheid geben, dass du ins Minental kannst.
 	AI_Output(self, hero, "Info_Mod_Lester_Karras_13_01"); //Wurde auch Zeit, dieses Höhlenleben bekommt mir nicht gut.
 
-	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Lester begleitet mich nun zu Karras.");
+	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Lester wird jetzt ins Minental zurückkehren.");
 
 	AI_StopProcessInfos	(self);
 
-	B_StartOtherRoutine	(self, "KARRAS");
+	B_StartOtherRoutine	(self, "TOT");
 };
 
 INSTANCE Info_Mod_Lester_Crawlersekret (C_INFO)

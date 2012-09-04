@@ -257,7 +257,7 @@ FUNC VOID Info_Mod_Karras_NamibHabBuch_Info()
 
 	B_GivePlayerXP	(250);
 
-	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Jetzt muss ich noch Lester holen und dann geht's mit Karras ins Minental.");
+	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Jetzt muss ich noch Lester Bescheid geben und dann geht's mit Karras ins Minental.");
 };
 
 INSTANCE Info_Mod_Karras_Lester (C_INFO)
