@@ -9,7 +9,7 @@ FUNC INT C_Beklauen (var int TheftDex, var int TheftItem, var int TheftGold)
 	};
 
 	if (Npc_GetTalentSkill(other, NPC_TALENT_PICKPOCKET) == TRUE) 
-	//&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
+	&& (B_GetAivar(self, AIV_PlayerHasPickedMyPocket) == FALSE)
 	//&& (other.attribute[ATR_DEXTERITY]+bonusdex >= (TheftDex - Theftdiff))
 	{
 		if (Npc_IsInState (self, ZS_Talk))
@@ -43,7 +43,7 @@ FUNC INT B_Beklauen ()
 	{
 		B_GiveInvItems (self, other, TheftItemGlob, TheftGoldGlob);
 
-		//self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
+		B_SetAivar(self, AIV_PlayerHasPickedMyPocket, TRUE);
 
 		B_GiveThiefXP();//B_GivePlayerXP (XP_Ambient);
 
