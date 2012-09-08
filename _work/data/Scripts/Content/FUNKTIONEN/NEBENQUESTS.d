@@ -3613,6 +3613,7 @@ FUNC VOID NEBENQUESTS()
 
 		if (Mod_Aldaro_Gift == 0)
 		&& (Mod_Aldaro_Gift_Tag < Wld_GetDay())
+		&& (Npc_KnowsInfo(hero, Info_Mod_Aldaro_Gift))
 		{
 			Mod_Aldaro_Gift = 1;
 

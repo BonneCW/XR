@@ -310,9 +310,12 @@ FUNC VOID EVT_BUCHLABYRINTH_TRUHE4_S1 ()
 
 FUNC VOID EVT_FOKUS_TROLL ()
 {
-	Wld_SpawnNpcRange(hero, Gobbo_Warrior, 5, 500);
+	if (Kapitel == 2)
+	{
+		Wld_SpawnNpcRange(hero, Gobbo_Warrior_Weg, 5, 500);
 
-	B_LogEntry	(TOPIC_MOD_FOKUSSUCHE, "Nanu? Anscheinend war eine Gruppe Goblins ebenfalls hinter dem Fokusstein im Norden her. Was könnten die damit vorhaben?");
+		B_LogEntry	(TOPIC_MOD_FOKUSSUCHE, "Nanu? Anscheinend war eine Gruppe Goblins ebenfalls hinter dem Fokusstein im Norden her. Was könnten die damit vorhaben?");
+	};
 };
 
 /********************************************************************************/
