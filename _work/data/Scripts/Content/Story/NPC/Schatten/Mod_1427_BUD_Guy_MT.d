@@ -8,7 +8,7 @@ instance Mod_1427_BUD_Guy_MT (Npc_Default)
 	level =							2;
 	
 	
-	voice =							3;
+	voice =							24;
 	id =							1427;
 
 

@@ -4,7 +4,7 @@ instance Mod_7509_OUT_Lehrling_REL (Npc_Default)
 	name 		= "Lehrling";
 	guild 		= GIL_OUT;
 	id 			= 7509;
-	voice 		= 3;
+	voice 		= 24;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

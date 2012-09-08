@@ -4,7 +4,7 @@ INSTANCE Mod_7760_NOV_Akahasch_MT (Npc_Default)
 	name 		= "Akahasch";
 	guild 		= GIL_KDF;
 	id 			= 7760;
-	voice 		= 3;
+	voice 		= 24;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

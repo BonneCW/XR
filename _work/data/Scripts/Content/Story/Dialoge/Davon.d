@@ -18,8 +18,8 @@ FUNC VOID Info_Mod_Davon_Hi_Info()
 {
 	B_Say	(hero, self, "$WASMACHSTDUHIER");
 
-	AI_Output(self, hero, "Info_Mod_Davon_Hi_07_01"); //Ich bin bei Friedel in der Ausbildung. Ich will später ein guter Soldat werden!
-	AI_Output(self, hero, "Info_Mod_Davon_Hi_07_02"); //Frag Friedel, wenn du gut im Schwertkampf werden willst.
+	AI_Output(self, hero, "Info_Mod_Davon_Hi_24_01"); //Ich bin bei Friedel in der Ausbildung. Ich will später ein guter Soldat werden!
+	AI_Output(self, hero, "Info_Mod_Davon_Hi_24_02"); //Frag Friedel, wenn du gut im Schwertkampf werden willst.
 };
 
 INSTANCE Info_Mod_Davon_Wettstreit (C_INFO)
@@ -45,9 +45,9 @@ FUNC INT Info_Mod_Davon_Wettstreit_Condition()
 
 FUNC VOID Info_Mod_Davon_Wettstreit_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Davon_Wettstreit_07_00"); //He, du bist echt gut, Mann. (verlegen) Allerdings habe ich eine kleine Bitte.
+	AI_Output(self, hero, "Info_Mod_Davon_Wettstreit_24_00"); //He, du bist echt gut, Mann. (verlegen) Allerdings habe ich eine kleine Bitte.
 	AI_Output(hero, self, "Info_Mod_Davon_Wettstreit_15_01"); //Was für eine Bitte?
-	AI_Output(self, hero, "Info_Mod_Davon_Wettstreit_07_02"); //Überlass mir das Preisgeld. Ich bekomme kein Gehalt und habe Gold wirklich nötig.
+	AI_Output(self, hero, "Info_Mod_Davon_Wettstreit_24_02"); //Überlass mir das Preisgeld. Ich bekomme kein Gehalt und habe Gold wirklich nötig.
 
 	Info_ClearChoices	(Info_Mod_Davon_Wettstreit);
 
@@ -102,7 +102,7 @@ FUNC VOID Info_Mod_Davon_Wettstreit2_Info()
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 100);
 
-	AI_Output(self, hero, "Info_Mod_Davon_Wettstreit2_07_01"); //Vielen Dank! Davon werde ich in nächster Zeit leben können. Du bist ein guter Kerl.
+	AI_Output(self, hero, "Info_Mod_Davon_Wettstreit2_24_01"); //Vielen Dank! Davon werde ich in nächster Zeit leben können. Du bist ein guter Kerl.
 
 	B_GivePlayerXP	(100);
 
@@ -132,7 +132,7 @@ FUNC INT Info_Mod_Davon_Unruhen_Condition()
 FUNC VOID Info_Mod_Davon_Unruhen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Davon_Unruhen_15_00"); //Ich brauche dich im Kampf gegen die Aufrührer.
-	AI_Output(self, hero, "Info_Mod_Davon_Unruhen_07_01"); //Meine erste Bewährungsprobe! Ich bin schon ganz aufgeregt ...
+	AI_Output(self, hero, "Info_Mod_Davon_Unruhen_24_01"); //Meine erste Bewährungsprobe! Ich bin schon ganz aufgeregt ...
 
 	AI_StopProcessInfos	(self);
 
@@ -165,7 +165,7 @@ FUNC INT Info_Mod_Davon_Freudenspender_Condition()
 FUNC VOID Info_Mod_Davon_Freudenspender_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Davon_Freudenspender_15_00"); //Brauchst du Entspannung? Ich hätte da was ...
-	AI_Output(self, hero, "Info_Mod_Davon_Freudenspender_07_01"); //Hey, du hast Freudenspender? Gib schnell her, bevor Friedel was bemerkt.
+	AI_Output(self, hero, "Info_Mod_Davon_Freudenspender_24_01"); //Hey, du hast Freudenspender? Gib schnell her, bevor Friedel was bemerkt.
 
 	B_GiveInvItems	(hero, self, ItMi_Freudenspender, 1);
 

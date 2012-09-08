@@ -4,7 +4,7 @@ instance Mod_7518_OUT_Davon_REL (Npc_Default)
 	name 		= "Davon"; 
 	guild 		= GIL_OUT;
 	id 			= 7518;
-	voice 		= 7;
+	voice 		= 24;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

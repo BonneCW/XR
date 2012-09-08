@@ -18,13 +18,13 @@ FUNC VOID Info_Mod_Akahasch_Hi_Info()
 {
 	B_Say	(hero, self, "$WASMACHSTDUHIER");
 
-	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_03_01"); //(panisch) Was willst du?
+	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_24_01"); //(panisch) Was willst du?
 	AI_Output(hero, self, "Info_Mod_Akahasch_Hi_15_02"); //Ich wollte nur wissen, was du hier machst ...?
-	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_03_03"); //Du gehörst also nicht zu ihnen?
+	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_24_03"); //Du gehörst also nicht zu ihnen?
 	AI_Output(hero, self, "Info_Mod_Akahasch_Hi_15_04"); //Zu ihnen?
-	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_03_05"); //Diesen Verrückten, die mich töten wollten.
+	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_24_05"); //Diesen Verrückten, die mich töten wollten.
 	AI_Output(hero, self, "Info_Mod_Akahasch_Hi_15_06"); //Ich weiß von keinen Verrückten ...
-	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_03_07"); //Kannst du mir dann helfen?
+	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_24_07"); //Kannst du mir dann helfen?
 
 	Info_ClearChoices	(Info_Mod_Akahasch_Hi);
 
@@ -36,7 +36,7 @@ FUNC VOID Info_Mod_Akahasch_Hi_Info()
 FUNC VOID Info_Mod_Akahasch_Hi_B()
 {
 	AI_Output(hero, self, "Info_Mod_Akahasch_Hi_B_15_00"); //Kein Interesse.
-	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_B_03_01"); //(ängstlich) Was soll ich nur machen?
+	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_B_24_01"); //(ängstlich) Was soll ich nur machen?
 
 	Info_ClearChoices	(Info_Mod_Akahasch_Hi);
 
@@ -46,7 +46,7 @@ FUNC VOID Info_Mod_Akahasch_Hi_B()
 FUNC VOID Info_Mod_Akahasch_Hi_E()
 {
 	AI_Output(hero, self, "Info_Mod_Akahasch_Hi_E_15_00"); //Ich bring die Rechnung. Es ist Zahltag ...
-	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_E_03_01"); //(erschrocken) Nein ... ohh, Innos, steht mir bei.
+	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_E_24_01"); //(erschrocken) Nein ... ohh, Innos, steht mir bei.
 
 	Info_ClearChoices	(Info_Mod_Akahasch_Hi);
 
@@ -58,7 +58,7 @@ FUNC VOID Info_Mod_Akahasch_Hi_E()
 FUNC VOID Info_Mod_Akahasch_Hi_D()
 {
 	AI_Output(hero, self, "Info_Mod_Akahasch_Hi_D_15_00"); //Von wegen Verrückte. Wohl eher Leute, bei denen du in der Kreide stehst ...
-	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_D_03_01"); //(erschrocken) Was?! Wer bist du, was hast du vor?
+	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_D_24_01"); //(erschrocken) Was?! Wer bist du, was hast du vor?
 
 	Info_ClearChoices	(Info_Mod_Akahasch_Hi);
 
@@ -69,7 +69,7 @@ FUNC VOID Info_Mod_Akahasch_Hi_D()
 FUNC VOID Info_Mod_Akahasch_Hi_A()
 {
 	AI_Output(hero, self, "Info_Mod_Akahasch_Hi_A_15_00"); //Worum geht's?
-	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_A_03_01"); //Kannst du mich zurück zum Kloster begleiten? Ich will lieber kein Risiko eingehen.
+	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_A_24_01"); //Kannst du mich zurück zum Kloster begleiten? Ich will lieber kein Risiko eingehen.
 
 	Info_ClearChoices	(Info_Mod_Akahasch_Hi);
 
@@ -80,7 +80,7 @@ FUNC VOID Info_Mod_Akahasch_Hi_A()
 FUNC VOID Info_Mod_Akahasch_Hi_C()
 {
 	AI_Output(hero, self, "Info_Mod_Akahasch_Hi_C_15_00"); //Na gut, folge mir.
-	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_C_03_01"); //Vielen Dank.
+	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_C_24_01"); //Vielen Dank.
 
 	Info_ClearChoices	(Info_Mod_Akahasch_Hi);
 
@@ -96,7 +96,7 @@ FUNC VOID Info_Mod_Akahasch_Hi_C()
 FUNC VOID Info_Mod_Akahasch_Hi_F()
 {
 	AI_Output(hero, self, "Info_Mod_Akahasch_Hi_F_15_00"); //Keine Sorge. Ich werde dich in Sicherheit bringen.
-	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_F_03_01"); //Ja? Vielen Dank. Das Beste ist, wenn du mich zum Kloster bringst.
+	AI_Output(self, hero, "Info_Mod_Akahasch_Hi_F_24_01"); //Ja? Vielen Dank. Das Beste ist, wenn du mich zum Kloster bringst.
 
 	Info_ClearChoices	(Info_Mod_Akahasch_Hi);
 
@@ -130,15 +130,15 @@ FUNC INT Info_Mod_Akahasch_AtKloster_Condition()
 
 FUNC VOID Info_Mod_Akahasch_AtKloster_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Akahasch_AtKloster_03_00"); //Vielen Dank, wie kann ich das nur wieder gut machen?
+	AI_Output(self, hero, "Info_Mod_Akahasch_AtKloster_24_00"); //Vielen Dank, wie kann ich das nur wieder gut machen?
 	AI_Output(hero, self, "Info_Mod_Akahasch_AtKloster_15_01"); //Nun ja, ich wüsste da was ...
-	AI_Output(self, hero, "Info_Mod_Akahasch_AtKloster_03_02"); //Ah, mir fällt da etwas ein. Nimm das!
+	AI_Output(self, hero, "Info_Mod_Akahasch_AtKloster_24_02"); //Ah, mir fällt da etwas ein. Nimm das!
 
 	B_GiveInvItems	(self, hero, ItMi_Weinlieferung, 1);
 
-	AI_Output(self, hero, "Info_Mod_Akahasch_AtKloster_03_03"); //Bring es zu Ulf in der Stadt, er wird dich dafür entlohnen.
+	AI_Output(self, hero, "Info_Mod_Akahasch_AtKloster_24_03"); //Bring es zu Ulf in der Stadt, er wird dich dafür entlohnen.
 	AI_Output(hero, self, "Info_Mod_Akahasch_AtKloster_15_04"); //(stöhnt) Na gut ...
-	AI_Output(self, hero, "Info_Mod_Akahasch_AtKloster_03_05"); //Vielen Dank nochmal.
+	AI_Output(self, hero, "Info_Mod_Akahasch_AtKloster_24_05"); //Vielen Dank nochmal.
 	
 	B_LogEntry	(TOPIC_MOD_ASS_AUFNAHME, "Ich habe Akahasch zum Kloster gebracht. Dafür hat er mir ein Weinpaket gegeben, welches ich zu Ulf bringen sollte.");
 
@@ -177,7 +177,7 @@ FUNC INT Info_Mod_Akahasch_Fertig_Condition()
 FUNC VOID Info_Mod_Akahasch_Fertig_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Akahasch_Fertig_15_00"); //Wie geht's dir jetzt?
-	AI_Output(self, hero, "Info_Mod_Akahasch_Fertig_03_01"); //Hier bin ich sicher. So schnell traue ich mich aber nicht mehr nach draußen.
+	AI_Output(self, hero, "Info_Mod_Akahasch_Fertig_24_01"); //Hier bin ich sicher. So schnell traue ich mich aber nicht mehr nach draußen.
 };
 
 INSTANCE Info_Mod_Akahasch_Heiltrank (C_INFO)

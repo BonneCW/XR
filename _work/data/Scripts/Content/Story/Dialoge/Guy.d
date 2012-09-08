@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Guy_Hi_Condition()
 FUNC VOID Info_Mod_Guy_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Guy_Hi_15_00"); //Wer bist du noch mal?
-	AI_Output(self, hero, "Info_Mod_Guy_Hi_03_01"); //Nur so 'n Typ. Kümmer dich nicht um mich.
+	AI_Output(self, hero, "Info_Mod_Guy_Hi_24_01"); //Nur so 'n Typ. Kümmer dich nicht um mich.
 };
 
 INSTANCE Info_Mod_Guy_AllesKlar (C_INFO)
@@ -39,7 +39,7 @@ FUNC INT Info_Mod_Guy_AllesKlar_Condition()
 FUNC VOID Info_Mod_Guy_AllesKlar_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Guy_AllesKlar_15_00"); //Alles beim Alten bei dir?
-	AI_Output(self, hero, "Info_Mod_Guy_AllesKlar_03_01"); //Ja, mir geht's bestens. Solange mich alle in Ruhe lassen, geht's mir bestens.
+	AI_Output(self, hero, "Info_Mod_Guy_AllesKlar_24_01"); //Ja, mir geht's bestens. Solange mich alle in Ruhe lassen, geht's mir bestens.
 };
 
 INSTANCE Info_Mod_Guy_Lagermusik (C_INFO)
@@ -64,11 +64,11 @@ FUNC INT Info_Mod_Guy_Lagermusik_Condition()
 FUNC VOID Info_Mod_Guy_Lagermusik_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Guy_Lagermusik_15_00"); //Willst du Mitglied in Gravos neuer Musikgruppe werden?
-	AI_Output(self, hero, "Info_Mod_Guy_Lagermusik_03_01"); //Ich würde schon gern.
+	AI_Output(self, hero, "Info_Mod_Guy_Lagermusik_24_01"); //Ich würde schon gern.
 	AI_Output(hero, self, "Info_Mod_Guy_Lagermusik_15_02"); //Aber?
-	AI_Output(self, hero, "Info_Mod_Guy_Lagermusik_03_03"); //Ich kann kein Instrument spielen. Und singen - na ja. Und auftreten schon gar nicht.
+	AI_Output(self, hero, "Info_Mod_Guy_Lagermusik_24_03"); //Ich kann kein Instrument spielen. Und singen - na ja. Und auftreten schon gar nicht.
 	AI_Output(hero, self, "Info_Mod_Guy_Lagermusik_15_04"); //Das ist jetzt erst mal nicht das Problem. Gravo wird schon was für dich finden. Geh einfach zu ihm.
-	AI_Output(self, hero, "Info_Mod_Guy_Lagermusik_03_05"); //Na gut, wenn du meinst.
+	AI_Output(self, hero, "Info_Mod_Guy_Lagermusik_24_05"); //Na gut, wenn du meinst.
 
 	AI_StopProcessInfos	(self);
 
@@ -100,7 +100,7 @@ FUNC INT Info_Mod_Guy_KGBuddler_Condition()
 FUNC VOID Info_Mod_Guy_KGBuddler_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Guy_KGBuddler_15_00"); //Ich hätte da eine neue Aufgabe für dich ...
-	AI_Output(self, hero, "Info_Mod_Guy_KGBuddler_03_01"); //... die ich gar nicht brauche. Wenn ich was arbeiten will, kann ich auch aufs Feld gehen.
+	AI_Output(self, hero, "Info_Mod_Guy_KGBuddler_24_01"); //... die ich gar nicht brauche. Wenn ich was arbeiten will, kann ich auch aufs Feld gehen.
 };
 
 INSTANCE Info_Mod_Guy_Pickpocket (C_INFO)

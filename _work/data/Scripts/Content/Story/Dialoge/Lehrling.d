@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Lehrling_Hi_Condition()
 
 FUNC VOID Info_Mod_Lehrling_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_03_00"); //Ey, Opa!
+	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_24_00"); //Ey, Opa!
 
 	Info_ClearChoices	(Info_Mod_Lehrling_Hi);
 
@@ -31,7 +31,7 @@ FUNC VOID Info_Mod_Lehrling_Hi_B()
 FUNC VOID Info_Mod_Lehrling_Hi_A()
 {
 	AI_Output(hero, self, "Info_Mod_Lehrling_Hi_A_15_00"); //Ja?
-	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_A_03_01"); //Du hast doch 'n bisschen Zeit, oder? Könntest 'ne Aufgabe für mich erledigen.
+	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_A_24_01"); //Du hast doch 'n bisschen Zeit, oder? Könntest 'ne Aufgabe für mich erledigen.
 
 	Info_ClearChoices	(Info_Mod_Lehrling_Hi);
 
@@ -49,14 +49,14 @@ FUNC VOID Info_Mod_Lehrling_Hi_D()
 FUNC VOID Info_Mod_Lehrling_Hi_C()
 {
 	AI_Output(hero, self, "Info_Mod_Lehrling_Hi_C_15_00"); //Was willst du?
-	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_03_01"); //Jo, also, letztens hab ich 'nen Haufen ziemlich wichtiger Zettel verloren.
-	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_03_02"); //Ich war da gerade beim Bauern und hab' denen eine kleine Überdachung vor die Haustür gebaut.
-	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_03_03"); //Inner Mittagspause habe ich dann die Zettel ... ausprobiert, und zwar hinterm Haus, Richtung Kornfeld.
-	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_03_04"); //Dann kam der Bauer und hat mich richtig erschreckt ... und da hab ich die Blätter fallen gelassen.
-	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_03_05"); //War zu aufgeregt, deshalb hab ich sie dort vergessen, verstehste bestimmt.
-	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_03_06"); //Vielleicht kannst ja mal vorbeigucken, ob du die Seiten findest.
+	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_24_01"); //Jo, also, letztens hab ich 'nen Haufen ziemlich wichtiger Zettel verloren.
+	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_24_02"); //Ich war da gerade beim Bauern und hab' denen eine kleine Überdachung vor die Haustür gebaut.
+	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_24_03"); //Inner Mittagspause habe ich dann die Zettel ... ausprobiert, und zwar hinterm Haus, Richtung Kornfeld.
+	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_24_04"); //Dann kam der Bauer und hat mich richtig erschreckt ... und da hab ich die Blätter fallen gelassen.
+	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_24_05"); //War zu aufgeregt, deshalb hab ich sie dort vergessen, verstehste bestimmt.
+	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_24_06"); //Vielleicht kannst ja mal vorbeigucken, ob du die Seiten findest.
 	AI_Output(hero, self, "Info_Mod_Lehrling_Hi_C_15_07"); //Wie sieht's mit einer Aufwandsentschädigung aus?
-	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_03_08"); //Das wär mir sicher 'n paar Mäuse wert.
+	AI_Output(self, hero, "Info_Mod_Lehrling_Hi_C_24_08"); //Das wär mir sicher 'n paar Mäuse wert.
 
 	Info_ClearChoices	(Info_Mod_Lehrling_Hi);
 
@@ -107,14 +107,14 @@ FUNC VOID Info_Mod_Lehrling_Dokumente_Info()
 
 	B_ShowGivenThings	("Blätter des Lehrlings gegeben");
 
-	AI_Output(self, hero, "Info_Mod_Lehrling_Dokumente_03_01"); //Danke, Alter! Hier haste 10 Münzen.
+	AI_Output(self, hero, "Info_Mod_Lehrling_Dokumente_24_01"); //Danke, Alter! Hier haste 10 Münzen.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 10);
 
 	AI_Output(hero, self, "Info_Mod_Lehrling_Dokumente_15_02"); //Bisschen wenig ... Mika hat dafür 200 verlangt.
-	AI_Output(self, hero, "Info_Mod_Lehrling_Dokumente_03_03"); //Wa?! So viel hab ich nicht!
+	AI_Output(self, hero, "Info_Mod_Lehrling_Dokumente_24_03"); //Wa?! So viel hab ich nicht!
 	AI_Output(hero, self, "Info_Mod_Lehrling_Dokumente_15_04"); //Dann lass dir was einfallen.
-	AI_Output(self, hero, "Info_Mod_Lehrling_Dokumente_03_05"); //Mann, versuch ich doch! (überlegt) Na gut, kriegste halt meine Goldketten, okay?
+	AI_Output(self, hero, "Info_Mod_Lehrling_Dokumente_24_05"); //Mann, versuch ich doch! (überlegt) Na gut, kriegste halt meine Goldketten, okay?
 
 	B_GiveInvItems	(self, hero, ItMi_GoldNecklace, 2);
 
@@ -157,9 +157,9 @@ FUNC VOID Info_Mod_Lehrling_Cutter_Info()
 
 	B_ShowGivenThings	("Blätter des Lehrlings gegeben");
 
-	AI_Output(self, hero, "Info_Mod_Lehrling_Cutter_03_01"); //Hä? Du hast sie mir doch erst zurückgebracht?
+	AI_Output(self, hero, "Info_Mod_Lehrling_Cutter_24_01"); //Hä? Du hast sie mir doch erst zurückgebracht?
 	AI_Output(hero, self, "Info_Mod_Lehrling_Cutter_15_02"); //Ich könnte sie jetzt selbst gebrauchen.
-	AI_Output(self, hero, "Info_Mod_Lehrling_Cutter_03_03"); //Für 50 Mäuse kannste sie haben.
+	AI_Output(self, hero, "Info_Mod_Lehrling_Cutter_24_03"); //Für 50 Mäuse kannste sie haben.
 
 	Info_ClearChoices	(Info_Mod_Lehrling_Cutter);
 
@@ -187,7 +187,7 @@ FUNC VOID Info_Mod_Lehrling_Cutter_B()
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 50);
 
-	AI_Output(self, hero, "Info_Mod_Lehrling_Cutter_B_03_01"); //Krass, danke, Mann!
+	AI_Output(self, hero, "Info_Mod_Lehrling_Cutter_B_24_01"); //Krass, danke, Mann!
 
 	CreateInvItems	(hero, ItWr_Lehrling01, 1);
 	CreateInvItems	(hero, ItWr_Lehrling02, 1);
@@ -203,7 +203,7 @@ FUNC VOID Info_Mod_Lehrling_Cutter_A()
 
 	if (self.aivar[AIV_Verhandlung] == TRUE)
 	{
-		AI_Output(self, hero, "Info_Mod_Lehrling_Cutter_A_03_01"); //Stimmt schon irgendwie. Na gut, dann nimm's halt.
+		AI_Output(self, hero, "Info_Mod_Lehrling_Cutter_A_24_01"); //Stimmt schon irgendwie. Na gut, dann nimm's halt.
 
 		CreateInvItems	(hero, ItWr_Lehrling01, 1);
 		CreateInvItems	(hero, ItWr_Lehrling02, 1);
@@ -218,7 +218,7 @@ FUNC VOID Info_Mod_Lehrling_Cutter_A()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Lehrling_Cutter_A_03_02"); //Jo, Alter, aber ... nee, günstiger geb ich die nicht her.
+		AI_Output(self, hero, "Info_Mod_Lehrling_Cutter_A_24_02"); //Jo, Alter, aber ... nee, günstiger geb ich die nicht her.
 
 		Info_ClearChoices	(Info_Mod_Lehrling_Cutter);
 
@@ -255,9 +255,9 @@ FUNC INT Info_Mod_Lehrling_Freudenspender_Condition()
 FUNC VOID Info_Mod_Lehrling_Freudenspender_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Lehrling_Freudenspender_15_00"); //Meinst du, du verträgst Freudenspender?
-	AI_Output(self, hero, "Info_Mod_Lehrling_Freudenspender_03_01"); //Was für eine Frage! Hast du was?
+	AI_Output(self, hero, "Info_Mod_Lehrling_Freudenspender_24_01"); //Was für eine Frage! Hast du was?
 	AI_Output(hero, self, "Info_Mod_Lehrling_Freudenspender_15_02"); //Sicher doch.
-	AI_Output(self, hero, "Info_Mod_Lehrling_Freudenspender_03_03"); //Ich stehe in deiner Schuld.
+	AI_Output(self, hero, "Info_Mod_Lehrling_Freudenspender_24_03"); //Ich stehe in deiner Schuld.
 
 	B_GiveInvItems	(hero, self, ItMi_Freudenspender, 1);
 

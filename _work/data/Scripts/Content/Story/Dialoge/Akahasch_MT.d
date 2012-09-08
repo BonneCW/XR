@@ -17,9 +17,9 @@ FUNC INT Info_Mod_Akahasch_MT_Hi_Condition()
 FUNC VOID Info_Mod_Akahasch_MT_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Akahasch_MT_Hi_15_00"); //Warst du nicht mal Novize im Innoskloster?
-	AI_Output(self, hero, "Info_Mod_Akahasch_MT_Hi_03_01"); //Erinnere mich bloß nicht daran. Nach der Geschichte mit der Stadt haben die mir im Kloster das Leben nur noch zur Hölle gemacht.
-	AI_Output(self, hero, "Info_Mod_Akahasch_MT_Hi_03_02"); //Irgendjemand muss mich verpfiffen haben. Ich habe diesen Ulf in Verdacht ...
-	AI_Output(self, hero, "Info_Mod_Akahasch_MT_Hi_03_03"); //Egal, hier geht es mir jetzt tausendmal besser. Als ehemaligen Feuernovizen haben die mich hier mit offenen Armen aufgenommen.
+	AI_Output(self, hero, "Info_Mod_Akahasch_MT_Hi_24_01"); //Erinnere mich bloß nicht daran. Nach der Geschichte mit der Stadt haben die mir im Kloster das Leben nur noch zur Hölle gemacht.
+	AI_Output(self, hero, "Info_Mod_Akahasch_MT_Hi_24_02"); //Irgendjemand muss mich verpfiffen haben. Ich habe diesen Ulf in Verdacht ...
+	AI_Output(self, hero, "Info_Mod_Akahasch_MT_Hi_24_03"); //Egal, hier geht es mir jetzt tausendmal besser. Als ehemaligen Feuernovizen haben die mich hier mit offenen Armen aufgenommen.
 };
 
 INSTANCE Info_Mod_Akahasch_MT_EXIT (C_INFO)

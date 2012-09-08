@@ -4,7 +4,7 @@ INSTANCE Mod_4016_NOV_Akahasch_NW (Npc_Default)
 	name 		= "Akahasch";
 	guild 		= GIL_VLK;
 	id 			= 4016;
-	voice 		= 3;
+	voice 		= 24;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	
