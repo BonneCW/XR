@@ -377,6 +377,8 @@ FUNC VOID Info_Mod_Garond_Mario3_A()
 
 	self.flags = 0;
 
+	self.guild = GIL_STRF;
+
 	B_LogEntry	(TOPIC_MOD_MARIO_RACHE, "Ich hab Garond zur Rechenschaft gezogen.");
 	B_SetTopicStatus	(TOPIC_MOD_MARIO_RACHE, LOG_SUCCESS);
 };

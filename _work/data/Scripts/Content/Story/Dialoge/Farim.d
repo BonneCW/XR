@@ -101,7 +101,6 @@ INSTANCE Info_Mod_Farim_Paddel (C_INFO)
 FUNC INT Info_Mod_Farim_Paddel_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Farim_Hi))
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Garvell_Paddel))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Skip_Francis))
 	{
 		return 1;

@@ -75,5 +75,8 @@ FUNC VOID Info_Mod_Xeres_Beliar_Info()
 		AI_StartState	(hero, ZS_MagicFreeze, 0, "");
 	};
 
-	B_Attack	(self, hero, AR_Kill, 1);
+	B_Attack	(self, hero, AR_GuildEnemy, 1);
+
+	self.guild = GIL_STRF;
+	Npc_SetTrueGuild	(self, GIL_STRF);
 };

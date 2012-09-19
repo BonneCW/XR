@@ -186,7 +186,7 @@ INSTANCE Info_Mod_TeleportSteinkreisTafel_NLMT (C_INFO)
 	information	= Info_Mod_TeleportSteinkreisTafel_NLMT_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= "zum groﬂen See in Relendel";
+	description	= "zum Neuen Lager";
 };
 
 FUNC INT Info_Mod_TeleportSteinkreisTafel_NLMT_Condition()

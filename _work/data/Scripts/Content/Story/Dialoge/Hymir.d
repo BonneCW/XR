@@ -56,6 +56,8 @@ FUNC VOID Info_Mod_Hymir_MineLos_Info()
 	B_LogEntry	(TOPIC_MOD_KG_STEINMONSTER, "Ich soll jetzt mit Granmar zusammen die Monster in der Mine beseitigen. Er wartet bereits in der Mine auf mich.");
 
 	B_RemoveNpc	(Mod_1017_KGD_Granmar_MT);
+
+	Mod_7537_KG_Minenwache_MT.aivar[AIV_PassGate] = TRUE;
 };
 
 INSTANCE Info_Mod_Hymir_MineFertig (C_INFO)

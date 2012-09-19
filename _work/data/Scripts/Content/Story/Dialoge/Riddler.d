@@ -93,8 +93,6 @@ FUNC VOID Info_Mod_Riddler_Schwert_Info()
 	Info_AddChoice	(Info_Mod_Riddler_Schwert, "2 Geschick", Info_Mod_Riddler_Schwert_B);
 	Info_AddChoice	(Info_Mod_Riddler_Schwert, "3 Mana", Info_Mod_Riddler_Schwert_A);
 
-	B_LogEntry	(TOPIC_MOD_ERSTEWAFFE, "Riddler vermutet, dass sich das Schwert noch im Nebelturm befindet.");
-
 	Wld_InsertNpc	(Skeleton_Anführer, "OW_FOGDUNGEON_42");
 };
 

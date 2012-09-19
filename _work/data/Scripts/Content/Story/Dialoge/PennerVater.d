@@ -144,8 +144,7 @@ INSTANCE Info_Mod_PennerVater_Kimon (C_INFO)
 
 FUNC INT Info_Mod_PennerVater_Kimon_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Penner_NochDa))
-	&& (Npc_HasItems(Mod_7540_OUT_Penner_REL, ItMi_BrokenRune01) == 1)
+	if (Npc_KnowsInfo(hero, Info_Mod_Penner_Kimon3))
 	{
 		return 1;
 	};

@@ -413,6 +413,7 @@ INSTANCE Info_Mod_Bartok_Stimme (C_INFO)
 FUNC INT Info_Mod_Bartok_Stimme_Condition()
 {
 	if (Mod_BartokUeberzeugt == 1)
+	&& (Npc_GetDistToWP(self, "NW_CITY_BEER_04") < 1000)
 	{
 		return 1;
 	};

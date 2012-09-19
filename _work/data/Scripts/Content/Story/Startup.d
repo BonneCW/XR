@@ -8080,7 +8080,7 @@ FUNC VOID INIT_Eisgebiet()
 	{
 		Mod_RattenQuest = 4;
 
-		B_LogEntry	(TOPIC_MOD_RATTENQUEST, "Bisher ist das wohl das k?lteste Gebiet. Mal sehen ob hier irgend jemand was ?ber die Ratten wei?.");
+		B_LogEntry	(TOPIC_MOD_RATTENQUEST, "Bisher ist das wohl das kälteste Gebiet. Mal sehen ob hier irgend jemand was über die Ratten weiß.");
 	};
 };
 

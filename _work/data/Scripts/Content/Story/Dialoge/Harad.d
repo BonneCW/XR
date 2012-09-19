@@ -168,7 +168,7 @@ INSTANCE Info_Mod_Harad_Sumpfkrautruestung2 (C_INFO)
 
 FUNC INT Info_Mod_Harad_Sumpfkrautruestung2_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Harad_Bartok))
+	if (Npc_KnowsInfo(hero, Info_Mod_Harad_Sumpfkrautruestung))
 	&& (Npc_HasItems(hero, ItAt_LurkerSkin) >= 10)
 	&& (Npc_HasItems(hero, ItMiSwordRaw) >= 5)
 	&& (Npc_HasItems(hero, ItAt_SkeletonBone) >= 3)
