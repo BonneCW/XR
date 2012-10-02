@@ -32,7 +32,7 @@ FUNC VOID Info_Mod_Aldaro_Hi_Info()
 	B_LogEntry	(TOPIC_MOD_ALDARO_TIERGIFT, "Aldaro leidet unter starken Gelenkbeschwerden. Er meint gelesen zu haben, dass Tiergift dagegen helfen könnte.");
 };
 
-INSTANCE Info_Mod_Aldaro_Aufgabe (C_INFO)
+INSTANCE Info_Mod_Aldaro_Gift (C_INFO)
 {
 	npc		= Mod_7674_OUT_Aldaro_EIS;
 	nr		= 1;

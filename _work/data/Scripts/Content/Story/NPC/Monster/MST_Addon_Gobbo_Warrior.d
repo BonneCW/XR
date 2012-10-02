@@ -118,6 +118,14 @@ INSTANCE Gobbo_Warrior (Mst_Default_Gobbo_Warrior)
 	Mdl_SetModelScale(self, 1.15, 1.15, 1.15);
 };
 
+INSTANCE Gobbo_Warrior_Weg (Mst_Default_Gobbo_Warrior)
+{
+	B_SetVisuals_Gobbo_Warrior();
+	
+	Npc_SetToFightMode (self, ItMw_1h_Misc_Sword); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
+	Mdl_SetModelScale(self, 1.15, 1.15, 1.15);
+};
+
 INSTANCE Gobbo_Warrior_Mario_01 (Mst_Default_Gobbo_Warrior)
 {
 	B_SetVisuals_Gobbo_Warrior();
