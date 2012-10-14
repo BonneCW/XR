@@ -57,7 +57,7 @@ FUNC VOID Info_Mod_Fahim_Belagerung_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_BEL_BELIARSCHREIN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_BEL_BELIARSCHREIN, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_BEL_BELIARSCHREIN, "Der Stein aus schwarzem Erz des Beliarschreins ist zerstört. Ich muss einen Neuen finden, damit wir den Schrein wieder aktivieren können.");
+	B_LogEntry	(TOPIC_MOD_BEL_BELIARSCHREIN, "Fahim hat erzählt, dass der Stein aus schwarzem Erz des Beliarschreins zerstört ist. Ich muss einen Neuen finden, damit wir den Schrein wieder aktivieren können.");
 };
 
 INSTANCE Info_Mod_Fahim_HabStein (C_INFO)

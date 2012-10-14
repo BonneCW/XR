@@ -314,6 +314,12 @@ FUNC VOID GILDENSTORY_VMG()
 
 			B_Attack	(Mod_7592_OUT_Handlanger_TUG, hero, AR_GuildEnemy, 0);
 			B_Attack	(Mod_7593_OUT_Handlanger_TUG, hero, AR_GuildEnemy, 0);
+
+			Mod_7592_OUT_Handlanger_TUG.guild = GIL_STRF;
+			Npc_SetTrueGuild	(Mod_7592_OUT_Handlanger_TUG, GIL_STRF);
+
+			Mod_7593_OUT_Handlanger_TUG.guild = GIL_STRF;
+			Npc_SetTrueGuild	(Mod_7593_OUT_Handlanger_TUG, GIL_STRF);
 		};
 
 		if (Npc_HasItems(hero, ItWr_PetuniaZettel) == 1)

@@ -24,4 +24,13 @@ FUNC VOID Info_Mod_UntoterNovize_01_Hi_Info()
 	AI_StopProcessInfos	(self);
 
 	B_Attack	(self, hero, AR_GuildEnemy, 0);
+
+	Mod_1995_UntoterNovize_01_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1995_UntoterNovize_01_NW, GIL_STRF);
+
+	Mod_1996_UntoterNovize_02_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1996_UntoterNovize_02_NW, GIL_STRF);
+
+	Mod_1997_UntoterNovize_03_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_1997_UntoterNovize_03_NW, GIL_STRF);
 };

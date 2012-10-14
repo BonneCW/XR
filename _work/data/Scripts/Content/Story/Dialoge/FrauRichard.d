@@ -68,7 +68,7 @@ FUNC VOID Info_Mod_FrauRichard_Notiz_Info()
 	B_StartOtherRoutine	(self, "CITY");
 
 	B_LogEntry	(TOPIC_MOD_RATTENQUEST,"Ich habe die Frau gefunden und gerettet. Damit sollte die Rattenplage beseitigt sein.");
-	Log_SetTopicStatus	(TOPIC_MOD_RATTENQUEST, LOG_SUCCESS);
+	B_SetTopicStatus	(TOPIC_MOD_RATTENQUEST, LOG_SUCCESS);
 
 	B_GivePlayerXP	(250);
 

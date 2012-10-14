@@ -265,15 +265,15 @@ FUNC VOID Info_Mod_Raven_BelagerungHilfe_Info()
 	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_10_03"); //Wir müssen versuchen die Banditen zu überzeugen, die restlichen Untoten auf dem Plateau anzugreifen. Ohne Unterstützung schaffen wir das nicht.
 	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_10_04"); //Erst, wenn wir die Feinde getötet haben, können wir uns um die Garde Innos' selbst kümmern.
 	AI_Output(hero, self, "Info_Mod_Raven_BelagerungHilfe_15_05"); //Wie soll ich die Söldner überzeugen?
-	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_10_06"); //Du hast doch gute Kontakte zu Lares und Gorn. Überzeuge sie uns Männer zur Verfügung zu stellen!
+	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_10_06"); //Du hast doch gute Kontakte zum Neuen Lager. Überzeuge sie, uns Männer zur Verfügung zu stellen!
 	AI_Output(hero, self, "Info_Mod_Raven_BelagerungHilfe_15_07"); //Ich werde gleich aufbrechen.
-	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_10_08"); //Beeile dich. Die Zeit ist nicht unser Verbündeter!
+	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_10_08"); //Beeile dich. Die Zeit ist nicht unser Verbündeter! Im Lager vor der Freien Mine wirst du sicher ein paar Unterstützer finden.
 
 	B_GivePlayerXP	(800);
 
 	Log_CreateTopic	(TOPIC_MOD_BEL_SOELDNER, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_BEL_SOELDNER, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_BEL_SOELDNER, "Innerhalb unserer Festung sind wir nun wieder ziemlich sicher, doch gilt es nun, die Garde Innos' zu besiegen. Alleine haben wir jedoch gegen die Untoten keine Chance. Raven bat mich, die Söldner um ihre Hilfe zu bitten.");
+	B_LogEntry	(TOPIC_MOD_BEL_SOELDNER, "Innerhalb unserer Festung sind wir nun wieder ziemlich sicher, doch gilt es nun, die Garde Innos' zu besiegen. Alleine haben wir jedoch gegen die Untoten keine Chance. Raven bat mich, die Söldner bei der Freien Mine um ihre Hilfe zu bitten.");
 	B_SetTopicStatus	(TOPIC_MOD_BEL_BELAGERUNG, LOG_SUCCESS);
 
 	B_Göttergefallen(3, 1);
