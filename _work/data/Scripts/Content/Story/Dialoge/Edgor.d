@@ -95,12 +95,75 @@ FUNC VOID Info_Mod_Edgor_Aufgabe_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Edgor_Aufgabe_15_00"); //Was soll ich für dich machen?
 	AI_Output(self, hero, "Info_Mod_Edgor_Aufgabe_06_01"); //Besorge mir, ähh ... zwölf Stengel Sumpfkraut, sechs Flaschen Wacholder, vier Flaschen Wein, drei Bier, einen Schinken, fünf gebratene Fleischstücke, drei Stück Käse, zwei Flaschen Milch ... und ...
-	AI_Output(hero, self, "Info_Mod_Edgor_Aufgabe_15_02"); //Was noch?
-	AI_Output(self, hero, "Info_Mod_Edgor_Aufgabe_06_03"); //... 400 Goldmünzen wären auch nicht schlecht.
+	AI_Output(hero, self, "Info_Mod_Edgor_Aufgabe_15_02"); //(ungläubig) Sonst noch was?
+	AI_Output(self, hero, "Info_Mod_Edgor_Aufgabe_06_03"); //Wo du schon fragst ... 300 Goldmünzen wären auch nicht schlecht ...
+	AI_Output(hero, self, "Info_Mod_Edgor_Aufgabe_15_04"); //...
+	AI_Output(self, hero, "Info_Mod_Edgor_Aufgabe_06_05"); //Hey, jetzt sieh mich nicht so an. Von irgendwas muss ich ja auch leben.
+	AI_Output(self, hero, "Info_Mod_Edgor_Aufgabe_06_06"); //Habe schon damals nur wenig aus dem Minental mitbringen können ... und zudem haben sich noch diese verdammten Räuber um Khorinis breit gemacht und lassen uns Banditen nur wenig zum Plündern übrig.
 
 	Log_CreateTopic	(TOPIC_MOD_EDGORSGOLD, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_EDGORSGOLD, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_EDGORSGOLD, "Ich soll Edgor zwölf Stengel Sumpfkraut, sechs Flaschen Wacholder, vier Flaschen Wein, drei Bier, einen Schinken, fünf gebratene Fleischstücke, drei Stück Käse, zwei Flaschen Milch und 400 Goldmünzen bringen, dann verrät er mir die erste Hälfte des Losungswortes.");
+	B_LogEntry	(TOPIC_MOD_EDGORSGOLD, "Ich soll Edgor zwölf Stengel Sumpfkraut, sechs Flaschen Wacholder, vier Flaschen Wein, drei Bier, einen Schinken, fünf gebratene Fleischstücke, drei Stück Käse, zwei Flaschen Milch und 300 Goldmünzen bringen, dann verrät er mir die erste Hälfte des Losungswortes.");
+};
+
+INSTANCE Info_Mod_Edgor_Raeuber (C_INFO)
+{
+	npc		= Mod_946_BDT_Edgor_NW;
+	nr		= 1;
+	condition	= Info_Mod_Edgor_Raeuber_Condition;
+	information	= Info_Mod_Edgor_Raeuber_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Die Räuber sind Geschichte ...";
+};
+
+FUNC INT Info_Mod_Edgor_Raeuber_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Edgor_Aufgabe))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Edgor_Gold))
+	&& (Npc_IsDead(Mod_7772_BDT_Bandit_NW))
+	&& (Npc_IsDead(Mod_7773_BDT_Bandit_NW))
+	&& (Npc_IsDead(Mod_7774_BDT_Bandit_NW))
+	&& (Npc_IsDead(Mod_7775_BDT_Bandit_NW))
+	&& (Npc_IsDead(Mod_7776_BDT_Bandit_NW))
+	&& (Npc_IsDead(Mod_7777_BDT_Bandit_NW))
+	&& (Npc_IsDead(Mod_7778_BDT_Bandit_NW))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Edgor_Raeuber_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Edgor_Raeuber_15_00"); //Die Räuber sind Geschichte ...
+	AI_Output(self, hero, "Info_Mod_Edgor_Raeuber_06_01"); //Echt? Na, ist die Miliz ja also doch zu was zu gebrauchen. (lacht)
+	AI_Output(hero, self, "Info_Mod_Edgor_Raeuber_15_02"); //Ähm ...
+	AI_Output(self, hero, "Info_Mod_Edgor_Raeuber_06_03"); //Dann werde ich auch bald wieder die vollen Taschen und Wägen der fetten Händler plündern können, die hier vorbeiziehen. (lacht)
+
+	if (Npc_KnowsInfo(hero, Info_Mod_Edgor_Gold))
+	{
+		AI_Output(self, hero, "Info_Mod_Edgor_Raeuber_06_04"); //Nichts für ungut. Hier, nimm für die tolle Neuigkeit den fetten Schinken, der mir noch geblieben ist, 'n Bier und die 2 Stängel.
+
+		B_ShowGivenThings	("Schinken, Bier und 2 Stengel Sumpfkraut erhalten");
+
+		CreateInvItems	(hero, ItFo_Bacon, 1);
+		CreateInvItems	(hero, ItFo_Beer, 1);
+		CreateInvItems	(hero, ItMi_Joint, 2);
+
+		AI_Output(self, hero, "Info_Mod_Edgor_Raeuber_06_05"); //Viel Spaß damit.
+	}
+	else
+	{
+		AI_Output(self, hero, "Info_Mod_Edgor_Raeuber_06_06"); //Für diese tolle Nachricht verrate ich dir die erste Hälfte des Losungswortes. Sie heißt: Dex.
+		AI_Output(self, hero, "Info_Mod_Edgor_Raeuber_06_07"); //Die zweite Hälfte wird dir Senyan geben. Er befindet sich in der Nähe von Sekobs Hof.
+
+		B_LogEntry_More	(TOPIC_MOD_AUFNAHME_BANDITEN, TOPIC_MOD_EDGORSGOLD, "Die erste Hälfte heißt: Dex. Die zweite Hälfte hat Senyan, der sich in der Nähe von Sekobs Hof befindet.", "Ich hab Edgor von den erledigten Räubern berichtet. Das hat ihm offenbar gereicht ...");
+		B_SetTopicStatus	(TOPIC_MOD_EDGORSGOLD, LOG_SUCCESS);
+
+		B_Göttergefallen(3, 1);
+	};
+
+	B_GivePlayerXP	(400);
 };
 
 INSTANCE Info_Mod_Edgor_Gold (C_INFO)
@@ -126,6 +189,7 @@ FUNC INT Info_Mod_Edgor_Gold_Condition()
 	&& (Npc_HasItems(hero, ItFo_Mutton) >= 5)
 	&& (Npc_HasItems(hero, ItFo_Cheese) >= 3)
 	&& (Npc_HasItems(hero, ItFo_Milk) >= 2)
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Edgor_Raeuber))
 	{
 		return 1;
 	};
