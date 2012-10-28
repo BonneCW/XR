@@ -12,7 +12,7 @@ FUNC INT Info_Mod_Juan_Quest_Condition()
 {
 	if ((Npc_KnowsInfo(hero, Info_Mod_Dexter_AngriffVorbei))
 	&& (Mod_AlbertTransforms >= 8)
-	&& (Mod_Dexter_BanditenParty+2 <= Wld_GetDay()))
+	&& (Mod_Dexter_BanditenParty + 2 <= Wld_GetDay()))
 	|| ((Npc_KnowsInfo(hero, Info_Mod_Dexter_Hi))
 	&& (Banditen_Dabei == FALSE))
 	{
@@ -381,13 +381,15 @@ FUNC VOID Info_Mod_Juan_Florentius_A()
 FUNC VOID Info_Mod_Juan_Florentius_E()
 {
 	AI_Output(hero, self, "Info_Mod_Juan_Florentius_E_15_00"); //1000 Gold.
-	AI_Output(self, hero, "Info_Mod_Juan_Florentius_D_13_01"); //Halt mal kurz still. Auf deiner Schulter sitzt ein großes, hässliches Vieh.
+	AI_Output(self, hero, "Info_Mod_Juan_Florentius_E_13_01"); //Halt mal kurz still. Auf deiner Schulter sitzt ein großes, hässliches Vieh.
 	
 	Info_ClearChoices	(Info_Mod_Juan_Florentius);
 
 	AI_StopProcessInfos	(self);
 
 	CreateInvItems	(self, ItMi_Gold, 723);
+
+	B_SetTopicStatus	(TOPIC_MOD_BDT_JUAN, LOG_SUCCESS);
 
 	B_Attack	(self, hero, AR_None, 0);
 };

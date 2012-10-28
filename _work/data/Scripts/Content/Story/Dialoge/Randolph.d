@@ -65,6 +65,8 @@ FUNC VOID Info_Mod_Randolph_Hoehle_Info()
 
 	AI_StopProcessInfos	(self);
 
+	AI_StartState	(hero, ZS_MagicSleep, 0, "");
+
 	B_LogEntry	(TOPIC_MOD_AKIL_RANDOLPH, "Täuschen mich meine Sinne, oder waren da eben einige dunkle Schatten? Und diese plötzliche Paralyse ... Vielleicht hat sich doch mehr abgespielt, als nur Gespinste in Randolph’s Kopf. Ob ich ihn jetzt noch einholen kann ... ?");
 
 	B_StartOtherRoutine	(self, "FLUCHT");

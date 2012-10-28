@@ -2590,7 +2590,7 @@ FUNC VOID PC_PotionAlchemy_Geschosse_RueckverwandlungsBolt()
 	{
 		Npc_RemoveInvItems (self, ItRw_Bolt, 1);
 		
-		Print (PRINT_AlchemySuccess);
+		Print ("Rückverwandlungsbolzen hergestellt");
 
 		CreateInvItems (self, ItRw_RueckverwandlungsBolt, 1);
 	}
@@ -2610,7 +2610,7 @@ FUNC VOID PC_PotionAlchemy_Geschosse_RueckverwandlungsArrow()
 	{
 		Npc_RemoveInvItems (self, ItRw_Arrow, 1);
 		
-		Print (PRINT_AlchemySuccess);
+		Print ("Rückverwandlungspfeil hergestellt");
 
 		CreateInvItems (self, ItRw_RueckverwandlungsArrow, 1);
 	}

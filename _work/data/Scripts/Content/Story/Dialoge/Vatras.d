@@ -494,7 +494,6 @@ FUNC VOID Info_Mod_vatras_Aufnahme_Ja()
 	AI_Output(hero, self, "Info_Mod_vatras_Aufnahme_Ja_15_02"); //Wie steht's mit einer Waffe?
 	AI_Output(self, hero, "Info_Mod_vatras_Aufnahme_Ja_05_03"); //Die Novizen haben bei uns einen Kampfstab. Hier ist deiner.
 
-	CreateInvItems	(self, ItMw_RangerStaff_Addon, 1);
 	B_GiveInvItems	(self, hero, ItMw_RangerStaff_Addon, 1);
 
 	AI_Output(self, hero, "Info_Mod_vatras_Aufnahme_Ja_05_04"); //Wenn du eine bessere Waffe brauchst, dann musst du dir eine auf dem Marktplatz kaufen.
@@ -933,7 +932,7 @@ FUNC VOID Info_Mod_Vatras_BosperLehrling_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Vatras_BosperLehrling_15_00"); //Ich brauche eine Tinktur, die bei Berührung zurückverwandelt.
 
-	if (hero.guild != GIL_MIL)
+	if (hero.guild != GIL_KDF)
 	{
 		AI_Output(self, hero, "Info_Mod_Vatras_BosperLehrling_05_01"); //Tinkturen sind nicht mein Spezialgebiet.
 		AI_Output(self, hero, "Info_Mod_Vatras_BosperLehrling_05_02"); //Ich kann dir eine Rückverwandlungs-Spruchrolle geben, die du dann noch von einem Alchemiekundigen in ihre Bestandteile zerlegen lassen musst.

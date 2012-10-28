@@ -35,7 +35,7 @@ func void zs_Transform_Wolf_end()
 {
 	var string wp;
 	B_ResetAll (self);
-	if (Npc_GetDistToWP(self, "TOT") < 1000)
+	if (Npc_GetDistToWP(self, "TOT") > 1000)
 	{
 		wp = Npc_GetNearestWP (self);
 		B_ResetAll (self);
