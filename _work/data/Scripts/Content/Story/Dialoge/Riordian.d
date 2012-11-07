@@ -138,7 +138,7 @@ FUNC VOID Info_Mod_Riordian_TempelDicht2_Info()
 	AI_Output(self, hero, "Info_Mod_Riordian_TempelDicht2_10_02"); //Wir wollten nachsehen, was los war, doch dann telepotierten sich fünf extrem mächtige Gardisten in den Portalraum und fegten alles nieder und nahmen die anderen Wassermagier gefangen.
 	AI_Output(self, hero, "Info_Mod_Riordian_TempelDicht2_10_03"); //Ich entkam im letzen Moment nach draußen und dann versiegelte sich der Eingang. Dann kamst du zu uns und hast geholfen die Gegner zu besiegen.
 	AI_Output(hero, self, "Info_Mod_Riordian_TempelDicht2_15_04"); //Gibt es eine Möglichkeit den Eingang zu öffnen. Es ist sehr dringend. Khorinis Existenz steht auf dem Spiel.
-	AI_Output(self, hero, "Info_Mod_Riordian_TempelDicht2_10_05"); //Der Eingang ist magisch verschlossen. man bekommt ihn nicht ohne weiteres auf.
+	AI_Output(self, hero, "Info_Mod_Riordian_TempelDicht2_10_05"); //Der Eingang ist magisch verschlossen. man bekommt ihn nicht ohne Weiteres auf.
 	AI_Output(hero, self, "Info_Mod_Riordian_TempelDicht2_15_06"); //Was muss ich tun um in den Tempel zu gelangen?
 	AI_Output(self, hero, "Info_Mod_Riordian_TempelDicht2_10_07"); //Nun, wenn ich mich recht entsinne gibt es eine Art magischen Schlüssel um die Tür zu öffnen. Jedoch habe ich keine Ahnung, wo sich dieser befindet.
 	AI_Output(hero, self, "Info_Mod_Riordian_TempelDicht2_15_08"); //Weißt du wirklich nicht wo der Schlüssel sein kann?
@@ -180,7 +180,7 @@ FUNC VOID Info_Mod_Riordian_TempelDicht3_Info()
 
 	B_GiveInvItems	(hero, self, ItKe_MagicTempelKey, 1);
 
-	AI_Output(self, hero, "Info_Mod_Riordian_TempelDicht3_10_03"); //Geh nun beiseite damit ich den Eingang öffnen kann.
+	AI_Output(self, hero, "Info_Mod_Riordian_TempelDicht3_10_03"); //Geh nun beiseite, damit ich den Eingang öffnen kann.
 	
 	B_SetTopicStatus	(TOPIC_MOD_BEL_TEMPEL, LOG_SUCCESS);
 

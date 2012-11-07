@@ -16,12 +16,15 @@ FUNC INT Info_Mod_Danae_Hi_Condition()
 FUNC VOID Info_Mod_Danae_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Danae_Hi_02_00"); //Seht, wer gekommen ist. Der Anhänger Beliars, der bereits einen von uns getötet hat.
-	AI_Output(self, hero, "Info_Mod_Danae_Hi_02_01"); //Du kommst zu spät! Die anderen sind bereits auf der anderen Seite und werden Innos Schwert bergen. Euer Untergang ist besiegelt.
+	AI_Output(self, hero, "Info_Mod_Danae_Hi_02_01"); //Du kommst zu spät! Die Anderen sind bereits auf der anderen Seite und werden Innos' Schwert bergen. Euer Untergang ist besiegelt.
 	AI_Output(self, hero, "Info_Mod_Danae_Hi_02_02"); //Wenn ich euch getötet habe, werden wir Khorinis einnehmen.
-	AI_Output(hero, self, "Info_Mod_Danae_Hi_15_03"); //Hör' auf zu quatschen, lass uns zur Sache kommen!
+	AI_Output(hero, self, "Info_Mod_Danae_Hi_15_03"); //Hör' auf zu quatschen und lass uns zur Sache kommen!
 	AI_Output(self, hero, "Info_Mod_Danae_Hi_02_04"); //Wie du willst!
 
 	AI_StopProcessInfos	(self);
 
 	B_Attack	(self, hero, AR_Kill, 0);
+
+	self.guild = GIL_STRF;
+	Npc_SetTrueGuild	(self, GIL_STRF);
 };

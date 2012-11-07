@@ -1742,14 +1742,14 @@ FUNC VOID Info_Mod_Xardas_NW_Argibast_Info()
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Argibast_14_03"); //Sehr gut. Was hat der Gardist gesagt?
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_Argibast_15_04"); //Nicht viel. Er sprach wie immer über die unentwegte Macht seines Meisters und etwas von einer mächtigen Waffe, die die anderen Gardisten suchen.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Argibast_14_05"); //(scharf) Was für eine Waffe soll das sein?
-	AI_Output(hero, self, "Info_Mod_Xardas_NW_Argibast_15_06"); //Er nannte sie das Schwert des Innos.
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_Argibast_15_06"); //Er nannte sie das Schwert Innos'.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Argibast_14_07"); //Bei Beliar. Schlimmer konnte es nicht kommen.
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_Argibast_15_08"); //Was hat es damit auf sich?
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Argibast_14_09"); //Vor 1000 Jahren, zu der Zeit, als die Garde Beliars und die Garde Innos' entstanden und dann verbannt wurden, entstanden auch zwei göttliche Waffen mit ihnen, die das Gleichgewicht der Welt bedrohten.
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_Argibast_15_10"); //Ich nehme an du sprichst von der Axt des Untergangs und dem Schwert Innos'?
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Argibast_14_11"); //Ja, das tue ich. Adanos versiegelte die beiden Waffen, um die Welt vor dem Chaos zu bewahren. Die Axt hast du bereits geborgen, doch das Schwert Innos' ist wohl ebenfalls auf Khorinis und die Garde Innos' sucht danach.
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_Argibast_15_12"); //Was soll ich tun?
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_Argibast_14_13"); //Du must das Schwert Innos' erbeuten, um es vor den Händen des Bösen zu schützen. Desweiteren musst du die Garde Innos' aufhalten, um somit Khorinis vor einer weiteren Bedrohung zu schützen.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Argibast_14_13"); //Du must das Schwert Innos' erbeuten, um es vor den Händen des Bösen zu schützen. Desweiteren musst du die Garde Innos' aufhalten, um somit Khorinis vor einer weiteren Bedrohung zu bewahren.
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_Argibast_15_14"); //Wo soll ich anfangen zu suchen?
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Argibast_14_15"); //Das ist das Rätsel, welches du lösen musst. Wir wissen es nicht genau. Jedoch hat sich die Aktivität magischer Energie im Tal der Wassermagier drastisch verstärkt, was beunruhigend ist. Beginne dort mit deiner Suche.
 

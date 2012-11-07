@@ -52,7 +52,7 @@ FUNC VOID Info_Mod_Matt_Befreiung_Info()
 	AI_Output(self, hero, "Info_Mod_Matt_Befreiung_10_05"); //Dann bin ich ins Wasser gesprungen und Richtung Strand getaucht und habe dabei drei Säcke voller Gold verloren, die nun auf dem Meeresgrund liegen.
 	AI_Output(self, hero, "Info_Mod_Matt_Befreiung_10_06"); //Ich will, dass du mir diese wieder besorgst.
 	AI_Output(hero, self, "Info_Mod_Matt_Befreiung_15_07"); //Von mir aus, ich geh dann mal.
-	AI_Output(self, hero, "Info_Mod_Matt_Befreiung_10_08"); //Viel Spass.
+	AI_Output(self, hero, "Info_Mod_Matt_Befreiung_10_08"); //Viel Erfolg.
 
 	Log_CreateTopic	(TOPIC_MOD_BEL_PIRMATT, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_BEL_PIRMATT, LOG_RUNNING);

@@ -746,7 +746,7 @@ FUNC VOID Info_Mod_Vatras_TempelDicht_Info()
 	AI_Output(self, hero, "Info_Mod_Vatras_TempelDicht_05_01"); //Sprich, mein Sohn.
 	AI_Output(hero, self, "Info_Mod_Vatras_TempelDicht_15_02"); //Die Wassermagier wurden angegriffen und gefangen genommen in ihrem eigenen Tempel.
 	AI_Output(hero, self, "Info_Mod_Vatras_TempelDicht_15_03"); //Der Zugang wurde durch eine Barriere versiegelt, die nur durch einen magischen Schlüssel geöffnet werden kann.
-	AI_Output(hero, self, "Info_Mod_Vatras_TempelDicht_15_04"); //Riordian meinte, das du wüsstest wo sich dieser Schlüssel befindet.
+	AI_Output(hero, self, "Info_Mod_Vatras_TempelDicht_15_04"); //Riordian meinte, dass du wüsstest wo sich dieser Schlüssel befindet.
 	AI_Output(self, hero, "Info_Mod_Vatras_TempelDicht_05_05"); //Das sind wahrlich schreckliche Neuigkeiten. Ich würde dir den Schlüssel gerne geben, doch leider wurde er vor einiger Zeit geraubt.
 	AI_Output(hero, self, "Info_Mod_Vatras_TempelDicht_15_06"); //Was? Wer hat den Schlüssel gestohlen?
 	AI_Output(self, hero, "Info_Mod_Vatras_TempelDicht_05_07"); //Es war ein Mitglied des ominösen Blutkultes. Der Blutkult ist eine Gruppe abscheulicher Wesen, die eine Störung des Gleichgewichtes herbeisinnen.
@@ -793,7 +793,7 @@ FUNC INT Info_Mod_Vatras_TempelDicht2_Condition()
 FUNC VOID Info_Mod_Vatras_TempelDicht2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Vatras_TempelDicht2_15_00"); //Ich habe den Schlüssel gefunden!
-	AI_Output(self, hero, "Info_Mod_Vatras_TempelDicht2_05_01"); //Sehr gut, mein Sohn. Fu bist ein außergewöhnlicher Krieger.
+	AI_Output(self, hero, "Info_Mod_Vatras_TempelDicht2_05_01"); //Sehr gut, mein Sohn. Du bist ein außergewöhnlicher Krieger.
 	AI_Output(hero, self, "Info_Mod_Vatras_TempelDicht2_15_02"); //Ich werde nun gleich zu Riordian aufbrechen um die Anderen zu retten.
 	AI_Output(self, hero, "Info_Mod_Vatras_TempelDicht2_05_03"); //Tu dies, aber beeile dich. Die Zeit ist nicht unser Verbündeter.
 	

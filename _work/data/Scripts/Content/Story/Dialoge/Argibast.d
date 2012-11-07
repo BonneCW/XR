@@ -29,4 +29,7 @@ FUNC VOID Info_Mod_Argibast_Hi_Info()
 	B_Attack	(self, hero, AR_Kill, 0);
 
 	B_LogEntry	(TOPIC_MOD_BEL_GARDEINNOS, "Argibast, ein Mitglied der Garde Innos', hat erzählt, dass die anderen Gardisten nach dem Schwert Innos' suchen. Das klingt nicht gut.");
+
+	self.guild = GIL_STRF;
+	Npc_SetTrueGuild	(self, GIL_STRF);
 };
