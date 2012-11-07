@@ -6,7 +6,7 @@ func void B_MM_AssessDamage ()
 {
 	B_Vergiftet (self);
 
-	if (self.aivar[AIV_Damage] == self.attribute[ATR_HITPOINTS]+1)
+	if (self.aivar[AIV_Damage] == self.attribute[ATR_HITPOINTS] + 1)
 	{
 		self.attribute[ATR_HITPOINTS] += 1;
 
@@ -19,7 +19,7 @@ func void B_MM_AssessDamage ()
 		{
 			if (C_NpcIsHero(other))
 			&& (DefenseBreak_Perk == TRUE)
-			&& (Hlp_Random(100) < 15)
+			&& (r_max(99) < 15)
 			{
 				B_CalculateDamage(self, other);
 			}
@@ -35,7 +35,11 @@ func void B_MM_AssessDamage ()
 		else
 		{
 			self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS];
-			return;
+
+			if (!Npc_IsInFightMode(other, FMODE_MAGIC))
+			{
+				return;
+			};
 		};
 	};
 
@@ -150,7 +154,7 @@ func void B_MM_AssessDamage ()
 	};
 
 	// ------ wenn Monster im ZS_Attack ------
-	if (Npc_IsInState(self,ZS_MM_Attack))
+	if (Npc_IsInState(self, ZS_MM_Attack))
 	{
 		// EXIT IF...
 	

@@ -23,14 +23,6 @@ func void ZS_MM_AllScheduler()
 			self.senses_range = (7*PERC_DIST_ORC_ACTIVE_MAX)/10;
 		};
 	};
-
-	//ADDON>
-	if (self.guild == GIL_STONEGUARDIAN)
-	&& (RavenIsDead == TRUE)
-	{	
-		B_KillNpc (self);
-	};
-	//ADDON<
 		
 	if (Wld_IsTime	(self.aivar[AIV_MM_SleepStart],00,self.aivar[AIV_MM_SleepEnd],00) || (self.aivar[AIV_MM_SleepStart] == OnlyRoutine))
 	{
