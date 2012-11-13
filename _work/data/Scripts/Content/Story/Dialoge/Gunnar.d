@@ -87,7 +87,7 @@ FUNC VOID Info_Mod_Gunnar_Dieb_Info()
 
 	AI_StopProcessInfos	(self);
 
-	Npc_ExchangeRoutine	(self, "FLUCHT");
+	B_StartOtherRoutine	(self, "FLUCHT");
 };
 
 INSTANCE Info_Mod_Gunnar_Flucht (C_INFO)
@@ -142,7 +142,7 @@ FUNC VOID Info_Mod_Gunnar_Flucht_Teilen()
 
 	Info_ClearChoices	(Info_Mod_Gunnar_Flucht);
 
-	Npc_ExchangeRoutine	(self, "START");
+	B_StartOtherRoutine	(self, "START");
 };
 
 FUNC VOID Info_Mod_Gunnar_Flucht_Attacke()
@@ -156,7 +156,7 @@ FUNC VOID Info_Mod_Gunnar_Flucht_Attacke()
 
 	Info_ClearChoices	(Info_Mod_Gunnar_Flucht);
 
-	Npc_ExchangeRoutine	(self, "START");
+	B_StartOtherRoutine	(self, "START");
 
 	B_Attack	(self, hero, AR_NONE, 0);
 };

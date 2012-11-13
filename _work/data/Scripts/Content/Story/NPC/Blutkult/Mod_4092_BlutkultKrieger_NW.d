@@ -1,7 +1,7 @@
 instance Mod_4092_BlutkultKrieger_NW (Npc_Default)
 {
 	//-------- primary data --------
-	name 		=		"Blutkult Krieger";
+	name 		=		"Blutkultkrieger";
 	Npctype 		=		Npctype_main;
 	guild 		=		GIL_DMT;
 	level 		=		60;

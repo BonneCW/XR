@@ -99,13 +99,13 @@ func void ADW_PORTALTEMPEL_FOCUS_FUNC ()//Joly: kommt, wenn ein Focusstein in ei
 	{
 		ADW_PORTALTEMPEL_FOCUS_FUNC_OneTime = TRUE;
 	};
-};  
+};
 
 FUNC VOID EVT_TELEPORTSTATION_VINO()
 {
 	Wld_PlayEffect("spellFX_Teleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
-	Npc_ClearAIQueue (hero);	//Joly:wegen Seitwärts da durch rennen.
+	Npc_ClearAIQueue (hero);
 
 	AI_Teleport	(hero, "NW_FOREST_VINOSKELLEREI_01");
 };
@@ -114,7 +114,7 @@ FUNC VOID EVT_TELEPORTSTATION_VINO2()
 {
 	Wld_PlayEffect("spellFX_Teleport_RING",  self  , self	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
-	Npc_ClearAIQueue (self);	//Joly:wegen Seitwärts da durch rennen.
+	Npc_ClearAIQueue (self);
 
 	AI_Teleport	(self, "WP_MARIOTOUR_04");
 
@@ -124,4 +124,13 @@ FUNC VOID EVT_TELEPORTSTATION_VINO2()
 
 		B_SetTopicStatus	(TOPIC_MOD_VINO_WO, LOG_SUCCESS);
 	};
+};
+
+FUNC VOID EVT_TELEPORTSTATION_XERESWELT()
+{
+	Wld_PlayEffect("spellFX_Teleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
+	Snd_Play ("MFX_TELEPORT_CAST");
+	Npc_ClearAIQueue (hero);
+
+	AI_Teleport	(hero, "WURMTELEPORTER");
 };
