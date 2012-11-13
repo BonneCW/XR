@@ -21,20 +21,20 @@ FUNC VOID Info_Mod_Blutkultkrieger_Hi_Info()
 
 	AI_StopProcessInfos	(self);
 
-	Mod_4092_BlutkultMagier_NW.guild = GIL_STRF;
-	Npc_SetTrueGuild (Mod_4092_BlutkultMagier_NW, GIL_STRF);
+	Mod_4092_BlutkultKrieger_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild (Mod_4092_BlutkultKrieger_NW, GIL_STRF);
 
-	Mod_4093_BlutkultMagier_NW.guild = GIL_STRF;
-	Npc_SetTrueGuild (Mod_4093_BlutkultMagier_NW, GIL_STRF);
+	Mod_4093_BlutkultKrieger_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild (Mod_4093_BlutkultKrieger_NW, GIL_STRF);
 
-	Mod_4094_BlutkultMagier_NW.guild = GIL_STRF;
-	Npc_SetTrueGuild (Mod_4094_BlutkultMagier_NW, GIL_STRF);
+	Mod_4094_BlutkultKrieger_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild (Mod_4094_BlutkultKrieger_NW, GIL_STRF);
 
-	Mod_4095_BlutkultMagier_NW.guild = GIL_STRF;
-	Npc_SetTrueGuild (Mod_4095_BlutkultMagier_NW, GIL_STRF);
+	Mod_4095_BlutkultKrieger_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild (Mod_4095_BlutkultKrieger_NW, GIL_STRF);
 
-	Mod_4096_BlutkultMagier_NW.guild = GIL_STRF;
-	Npc_SetTrueGuild (Mod_4096_BlutkultMagier_NW, GIL_STRF);
+	Mod_4096_BlutkultKrieger_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild (Mod_4096_BlutkultKrieger_NW, GIL_STRF);
 
 	Mod_4097_BlutkultMagier_NW.guild = GIL_STRF;
 	Npc_SetTrueGuild (Mod_4097_BlutkultMagier_NW, GIL_STRF);
