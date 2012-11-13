@@ -154,7 +154,7 @@ FUNC VOID DAUERFUNC_01()
 			}
 			else
 			{
-				PrintScreen	("Unbekannter Fehler", -1, 55, FONT_SCREEN, 2);
+				PrintScreen	("Keine Internetverbindung", -1, 55, FONT_SCREEN, 2);
 
 				eingabe = "";
 
@@ -616,7 +616,7 @@ FUNC VOID DAUERFUNC_01()
 		|| (Mod_Gilde == 18))
 		&& (Mod_Irdorath == 1)
 		{
-			B_RemoveNpc	(Mod_513_DMB_Xardas_NW);
+			B_StartOtherRoutine	(Mod_513_DMB_Xardas_NW, "TOT");
 			B_RemoveNpc	(Mod_592_PAL_Hagen_NW);
 			B_RemoveNpc	(Mod_527_SLD_Torlof_NW);
 			B_RemoveNpc	(Mod_674_SLD_Lee_NW);

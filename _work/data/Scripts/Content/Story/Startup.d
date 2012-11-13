@@ -2992,7 +2992,6 @@ FUNC VOID INIT_NewWorld()
 
 		B_StartOtherRoutine	(Mod_538_RDW_Diego_NW, "ATMIKA");
 		B_StartOtherRoutine	(Mod_588_WNOV_Joe_NW, "DIEGO");
-		B_StartOtherRoutine	(PC_Friend_NW, "START");
 
 		B_StartOtherRoutine	(Mod_912_BAU_Vino_NW,	"BRENNEREI");
 		B_StartOtherRoutine	(Mod_1937_JGR_Nandor_NW,	"BRENNEREI");

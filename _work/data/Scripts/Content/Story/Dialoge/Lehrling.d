@@ -136,7 +136,7 @@ INSTANCE Info_Mod_Lehrling_Cutter (C_INFO)
 	information	= Info_Mod_Lehrling_Cutter_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Kann du mir die Dokumente geben?";
+	description	= "Kannst du mir die Dokumente geben?";
 };
 
 FUNC INT Info_Mod_Lehrling_Cutter_Condition()
@@ -150,13 +150,7 @@ FUNC INT Info_Mod_Lehrling_Cutter_Condition()
 
 FUNC VOID Info_Mod_Lehrling_Cutter_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Lehrling_Cutter_15_00"); //Kann du mir die Dokumente geben?
-
-	Npc_RemoveInvItems	(hero, ItWr_Lehrling01, 1);
-	Npc_RemoveInvItems	(hero, ItWr_Lehrling02, 1);
-
-	B_ShowGivenThings	("Blätter des Lehrlings gegeben");
-
+	AI_Output(hero, self, "Info_Mod_Lehrling_Cutter_15_00"); //Kannst du mir die Dokumente geben?
 	AI_Output(self, hero, "Info_Mod_Lehrling_Cutter_24_01"); //Hä? Du hast sie mir doch erst zurückgebracht?
 	AI_Output(hero, self, "Info_Mod_Lehrling_Cutter_15_02"); //Ich könnte sie jetzt selbst gebrauchen.
 	AI_Output(self, hero, "Info_Mod_Lehrling_Cutter_24_03"); //Für 50 Mäuse kannste sie haben.

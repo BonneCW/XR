@@ -44,7 +44,7 @@ func int CURL_Send(var string url) {
 	var int curl_perform;   curl_perform   = GetProcAddress(libcurl, "curl_easy_perform");
 	var int curl_cleanup;   curl_cleanup   = GetProcAddress(libcurl, "curl_easy_cleanup");
 
-	if((!!curl_init)+(!!curl_setopt)+(!!curl_perform)+(!!curl_cleanup) < 4)
+	if ((!!curl_init)+(!!curl_setopt)+(!!curl_perform)+(!!curl_cleanup) < 4)
 	{
 		FreeLibrary(libcurl);
 
