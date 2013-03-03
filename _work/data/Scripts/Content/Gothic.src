@@ -35,6 +35,8 @@ NEUERUNGEN\Respawn.d
 
 NEUERUNGEN\B_AutoGeneratePicklockKombos.d
 
+NEUERUNGEN\B_RemoveDeadBodies.d
+
 STORY\Log_Entries\Log_Constants_*.d
 STORY\Story_Globals\*.d
 STORY\NPC_Globals.d

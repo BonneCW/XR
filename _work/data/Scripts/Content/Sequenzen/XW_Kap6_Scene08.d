@@ -4,6 +4,8 @@ FUNC VOID XW_Kap6_Scene08()
 {
 	if (Mod_XW_Kap6_Scene08_Counter == 0)
 	{
+		DoForAll(B_RemoveDeadBodies);
+
 		AI_Teleport	(hero, "ARENA_12");
 		AI_Teleport	(Xeres_02, "ARENA_18");
 	};

@@ -4,6 +4,8 @@ FUNC VOID XW_Kap6_Scene07()
 {
 	if (Mod_XW_Kap6_Scene07_Counter == 1)
 	{
+		DoForAll(B_RemoveDeadBodies);
+
 		Wld_SendTrigger	("KAP6SCENE3");
 
 		CutsceneAn = TRUE;
