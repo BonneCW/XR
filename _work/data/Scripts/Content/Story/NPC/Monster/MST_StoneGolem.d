@@ -395,11 +395,16 @@ INSTANCE Golem_Trador_01	(Mst_Default_StoneGolem)
 	B_SetVisuals_StoneGolem();
 	Npc_SetToFistMode	(self);
 
-	protection	[PROT_EDGE]			=	50000;
-	protection	[PROT_POINT]		=	50000;
-	protection	[PROT_FIRE]			=	50000;
+	attribute	[ATR_STRENGTH]		=	95;
+	attribute	[ATR_DEXTERITY]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
+
+	protection	[PROT_EDGE]			=	30000;
+	protection	[PROT_POINT]		=	30000;
+	protection	[PROT_FIRE]			=	30000;
 	protection	[PROT_FLY]			=	-1;	
-	protection	[PROT_MAGIC]		=	50;
+	protection	[PROT_MAGIC]		=	30;
 
 	CreateInvItems	(self, ItPo_Health_02, 1);
 };
@@ -411,11 +416,16 @@ INSTANCE Golem_Trador_02	(Mst_Default_StoneGolem)
 	B_SetVisuals_StoneGolem();
 	Npc_SetToFistMode	(self);
 
-	protection	[PROT_EDGE]			=	50000;
-	protection	[PROT_POINT]		=	50000;
-	protection	[PROT_FIRE]			=	50000;
+	attribute	[ATR_STRENGTH]		=	95;
+	attribute	[ATR_DEXTERITY]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
+
+	protection	[PROT_EDGE]			=	30000;
+	protection	[PROT_POINT]		=	30000;
+	protection	[PROT_FIRE]			=	30000;
 	protection	[PROT_FLY]			=	-1;	
-	protection	[PROT_MAGIC]		=	50;
+	protection	[PROT_MAGIC]		=	30;
 
 	CreateInvItems	(self, ItPo_Mana_02, 1);
 };
@@ -427,11 +437,16 @@ INSTANCE Golem_Trador_03	(Mst_Default_StoneGolem)
 	B_SetVisuals_StoneGolem();
 	Npc_SetToFistMode	(self);
 
-	protection	[PROT_EDGE]			=	50000;
-	protection	[PROT_POINT]		=	50000;
-	protection	[PROT_FIRE]			=	50000;
+	attribute	[ATR_STRENGTH]		=	95;
+	attribute	[ATR_DEXTERITY]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
+
+	protection	[PROT_EDGE]			=	30000;
+	protection	[PROT_POINT]		=	30000;
+	protection	[PROT_FIRE]			=	30000;
 	protection	[PROT_FLY]			=	-1;	
-	protection	[PROT_MAGIC]		=	50;
+	protection	[PROT_MAGIC]		=	30;
 
 	CreateInvItems	(self, ItPo_Health_03, 1);
 	CreateInvItems	(self, ItPo_Mana_03, 1);
