@@ -64,7 +64,7 @@ FUNC VOID Info_Mod_Argez_XW_Gefangen_Info()
 
 	B_LogEntry	(TOPIC_MOD_ARGEZ, "Ich bin neben Argez in einer Zelle gefangen und will fliehen. Allzu viele Möglichkeiten stehen da nicht zur Auswahl.");
 
-	Wld_InsertNpc	(Monster_11074_Leprechaun_XW, "KNASTGANG_02");
+	Wld_InsertNpc	(Monster_11074_Leprechaun_XW, "KNAST_02");
 };
 
 INSTANCE Info_Mod_Argez_XW_Gefangen2 (C_INFO)

@@ -149,7 +149,9 @@ func void PC_Sleep (var int t)
 	PrintGlobals		(PD_ITEM_MOBSI);
 	Npc_SendPassivePerc	(hero,	PERC_ASSESSENTERROOM, NULL, hero);		//...damit der Spieler dieses Feature nicht zum Hütteplündern ausnutzt!
 
-	CheckRespawns();
+	if (!Mod_Respawn) {
+		CheckRespawns();
+	};
 };
 
 

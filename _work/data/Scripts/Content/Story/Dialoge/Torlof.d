@@ -455,11 +455,15 @@ FUNC VOID Info_Mod_Torlof_HaradLehrling3_Info()
 
 	EquipWeapon (hero, ItMw_HaradSchwert);
 
+	AI_ReadyMeleeWeapon	(hero);
+
 	AI_Output(self, hero, "Info_Mod_Torlof_HaradLehrling3_01_04"); //3, 2, 1, los!
 
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(Mod_1200_SLD_Soeldner_NW, "HARAD");
+
+	Mod_1200_SLD_Soeldner_NW.flags = 0;
 };
 
 INSTANCE Info_Mod_Torlof_HaradLehrling4 (C_INFO)
@@ -499,6 +503,8 @@ FUNC VOID Info_Mod_Torlof_HaradLehrling4_Info()
 
 	AI_Teleport	(Mod_1200_SLD_Soeldner_NW, "NW_BIGFARM_PATH_01");
 	B_StartOtherRoutine	(Mod_1200_SLD_Soeldner_NW, "START");
+
+	Mod_1200_SLD_Soeldner_NW.flags = 2;
 };
 
 INSTANCE Info_Mod_Torlof_HaradLehrling5 (C_INFO)

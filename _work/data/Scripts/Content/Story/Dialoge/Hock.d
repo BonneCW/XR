@@ -20,6 +20,8 @@ FUNC VOID Info_Mod_Hock_HaradLehrling_Info()
 {
 	AI_StopProcessInfos	(self);
 
+	AI_ReadyMeleeWeapon	(hero);
+
 	B_Attack	(self, hero, AR_None, 0);
 };
 

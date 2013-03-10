@@ -93,5 +93,6 @@ FUNC VOID Info_Mod_Leprechaun_XW_EXIT_Info()
 
 	AI_StopProcessInfos	(self);
 
+	AI_Teleport	(self, "TOT");
 	B_StartOtherRoutine	(self, "TOT");
 };

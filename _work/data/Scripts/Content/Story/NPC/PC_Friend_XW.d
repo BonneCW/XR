@@ -53,6 +53,6 @@ FUNC VOID Rtn_Arena_1607()
 
 FUNC VOID Rtn_Flucht_1607()
 {	
-	TA_Follow_Player	(10,55,18,50,"KNAST_01");
-	TA_Follow_Player	(18,50,10,55,"KNAST_01");
+	TA_Guide_Player	(10,55,18,50,"PORTALGANG_050");
+	TA_Guide_Player	(18,50,10,55,"PORTALGANG_050");
 };

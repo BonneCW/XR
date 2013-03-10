@@ -1373,6 +1373,7 @@ var int Mod_GarondQuest;
 var int Mod_NichtsGegessenCounter;
 var int Mod_EssPunkte;
 var int Mod_Esssystem;
+var int Mod_Respawn;
 var int Mod_Spell_BeliarCity;
 var int Mod_HeroHasRune;
 var int Mod_Andre_WaitForKnast;
