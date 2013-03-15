@@ -88,6 +88,8 @@ FUNC VOID Info_Mod_Gunnar_Dieb_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "FLUCHT");
+
+	self.flags = 2;
 };
 
 INSTANCE Info_Mod_Gunnar_Flucht (C_INFO)
@@ -116,6 +118,8 @@ FUNC VOID Info_Mod_Gunnar_Flucht_Info()
 	AI_Output(self, hero, "Info_Mod_Gunnar_Flucht_10_01"); //Äh ... was willst du von mir? Ich hab nichts gemacht.
 	AI_Output(hero, self, "Info_Mod_Gunnar_Flucht_15_02"); //Denkst du ich bin blöd? Ich hab dich gesehen wie du Sachen aus dem Lager gestohlen hast.
 	AI_Output(self, hero, "Info_Mod_Gunnar_Flucht_10_03"); //D ... Das muss ein Irrtum sein. Ich habe nichts gestohlen.
+
+	self.flags = 0;
 	
 	Info_ClearChoices	(Info_Mod_Gunnar_Flucht);
 

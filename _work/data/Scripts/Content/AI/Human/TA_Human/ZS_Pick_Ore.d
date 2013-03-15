@@ -64,7 +64,7 @@ FUNC int ZS_Pick_Ore_Loop ()
 		if (Npc_GetStateTime(self) > 5)
 		{
 			var int Randi;
-			Randi = Hlp_Random(100);
+			Randi = r_max(99);
 
 			if (Randi == 0)
 			{
