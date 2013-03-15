@@ -4,7 +4,7 @@ INSTANCE Mod_921_KDF_Marduk_NW (Npc_Default)
 	name 		= "Marduk";
 	guild 		= GIL_VLK;
 	id 			= 921;
-	voice 		= 5;
+	voice 		= 32;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

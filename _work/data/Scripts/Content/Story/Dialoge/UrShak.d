@@ -43,7 +43,7 @@ FUNC VOID Info_Mod_UrShak_WasHier_Info()
 {
 	B_Say	(hero, self, "$WASMACHSTDUHIER");
 
-	AI_Output(self, hero, "Info_Mod_UrShak_WasHier_18_01"); //Nachdem Freund hat vernichtet KRUSHAK, ich haben getroffen Tarrok. Zusammen wir haben beschlossen zu gründen neuen Klan.
+	AI_Output(self, hero, "Info_Mod_UrShak_WasHier_18_01"); //Nachdem Freund hat vernichtet Krushak, Ur Shak haben getroffen Tarrok. Zusammen haben beschlossen zu gründen neuen Klan.
 	AI_Output(self, hero, "Info_Mod_UrShak_WasHier_18_02"); //Als Lager wir haben genommen alte Festung in Felsen. Hier wir seien geschützt vor böse Orks.
 };
 
@@ -71,16 +71,16 @@ FUNC VOID Info_Mod_UrShak_Foki_Info()
 {
 	AI_Output(hero, self, "Info_Mod_UrShak_Foki_15_00"); //Was weißt du über die Foki?
 	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_01"); //Hier auf Podest ein Fokus haben gestanden, doch eines Nachts es weg war.
-	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_02"); //Als Fokus verschwunden war ich bin gegangen zu Freund Xardas. Er mir haben erklärt das es fünf Fokus geben.
-	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_03"); //Er mir geben Karte wo eingezeichnet alle Standorte von Fokus. Daraufhin ich haben geschickt Tarrok zu suchen Fokus bei Steine.
-	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_04"); //Doch auch diese Fokus bereits seien weg. Xardas vermuten das Orks haben gestohlen Fokus um KRUSHAK wieder zu erwecken.
-	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_05"); //Doch das nicht dürfen passieren. Freund müssen finden restliche Fokus und holen die von Orks.
+	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_02"); //Als Fokus verschwunden war, Ur Shak sein gegangen zu Freund Xardas. Er haben erklärt, dass es fünf Fokus geben.
+	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_03"); //Er Ur Shak geben Karte, wo eingezeichnet alle Standorte von Fokusse. Daraufhin Ur Shak haben geschickt Tarrok zu suchen Fokus bei Steine.
+	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_04"); //Doch auch diese Fokusse bereits sein weg. Xardas vermuten, dass Orks haben gestohlen Fokus, um Krushak wieder zu erwecken.
+	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_05"); //Doch das nicht dürfen passieren. Freund müssen finden restliche Fokusse und holen die von Orks.
 	AI_Output(hero, self, "Info_Mod_UrShak_Foki_15_06"); //Ich suche die Foki ja sowieso.
-	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_07"); //Freund suchen auch nach Fokus? Dann ich werden helfen Freund so gut ich können.
-	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_08"); //Wir haben eine Bruder von uns in Orkstadt. Er bringen uns Informationen über Plan von böse Orks. Sein Name seien Ranad.
-	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_09"); //Zur Zeit befindet er sich oben in Festung. Geh zu ihm und sprechen mit ihm. Er sicher haben viele Informationen für Freund.
+	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_07"); //Freund suchen auch nach Fokus? Dann Ur Shak werden helfen Freund so gut er können.
+	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_08"); //Ranad viel wissen darüber. Er noch immer manchmal beobachten Lager von Orks.
+	AI_Output(self, hero, "Info_Mod_UrShak_Foki_18_09"); //Zur Zeit er befinden sich oben in Festung. Gehen zu ihm und sprechen mit ihm. Er sicher haben viele Informationen für Freund.
 
-	B_LogEntry	(TOPIC_MOD_FOKUSSUCHE,	"Es scheint als wären die Orks in der Orkstadt ebenfalls hinter den Foki her. Ich soll mit einem gewissen Ranad in der Festung sprechen. Er ist der Spion der Orks und hat sicher einige interessante Informationen für mich.");
+	B_LogEntry	(TOPIC_MOD_FOKUSSUCHE,	"Es scheint, als wären die Orks in der Orkstadt ebenfalls hinter den Foki her. Ich soll mit einem gewissen Ranad in der Festung sprechen. Er ist der Spion der Orks und hat sicher einige interessante Informationen für mich.");
 };
 
 INSTANCE Info_Mod_UrShak_Mitmachen (C_INFO)
@@ -105,9 +105,9 @@ FUNC INT Info_Mod_UrShak_Mitmachen_Condition()
 FUNC VOID Info_Mod_UrShak_Mitmachen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_UrShak_Mitmachen_15_00"); //Das Ritual der Orks in der Stadt hat nicht geklappt.
-	AI_Output(self, hero, "Info_Mod_UrShak_Mitmachen_18_01"); //Das heißen KRUSHAK nicht seien zurück?
+	AI_Output(self, hero, "Info_Mod_UrShak_Mitmachen_18_01"); //Das heißen Krushak nicht sein zurück?
 	AI_Output(hero, self, "Info_Mod_UrShak_Mitmachen_15_02"); //Nein. Dank Ranad, der mich zu Hosh Pak geführt hat, konnte ich ihn töten und den Fokus in meinen Besitz bringen.
-	AI_Output(self, hero, "Info_Mod_UrShak_Mitmachen_18_03"); //Seien gut.
+	AI_Output(self, hero, "Info_Mod_UrShak_Mitmachen_18_03"); //Sein gut.
 };
 
 INSTANCE Info_Mod_UrShak_Oschust (C_INFO)
@@ -132,10 +132,10 @@ FUNC INT Info_Mod_UrShak_Oschust_Condition()
 
 FUNC VOID Info_Mod_UrShak_Oschust_Info()
 {
-	AI_Output(self, hero, "Info_Mod_UrShak_Oschust_18_00"); //Hallo Freund. Ranad mir berichten, dass Orks gefangen genommen Menschen, aus Lager in Bergen.
-	AI_Output(self, hero, "Info_Mod_UrShak_Oschust_18_01"); //Außerdem wollen starten Angriff auf Lager und auf Magier, um zu bekommen Amulett.
+	AI_Output(self, hero, "Info_Mod_UrShak_Oschust_18_00"); //Hallo, Freund. Ranad Ur Shak berichten, dass Orks gefangen genommen Menschen aus Lager in Bergen.
+	AI_Output(self, hero, "Info_Mod_UrShak_Oschust_18_01"); //Außerdem wollen starten Angriff auf Lager und auf Magier zu bekommen Amulett.
 	AI_Output(hero, self, "Info_Mod_UrShak_Oschust_15_02"); //Genau deshalb suche ich auch deinen Rat. Die Gefangenen sind meine Freunde aus dem Banditenlager. Ich will einen Versuch starten, sie zu befreien.
-	AI_Output(self, hero, "Info_Mod_UrShak_Oschust_18_03"); //Werden sein schwere Aufgabe. Gut bewacht von Orks sie sind in Orkstadt in unterirdischen Höhle.
+	AI_Output(self, hero, "Info_Mod_UrShak_Oschust_18_03"); //Werden sein schwere Aufgabe. Gut bewacht von Orks sie sind in Orkstadt in unterirdischer Höhle.
 	AI_Output(self, hero, "Info_Mod_UrShak_Oschust_18_04"); //Ur Shak wissen, dass du sein starker Krieger. Aber das nicht allein reichen, um können deine Freunde zu befreien.
 	AI_Output(hero, self, "Info_Mod_UrShak_Oschust_15_05"); //Da werde ich mich wohl die Unterstützung der Verwandlungsmagier bemühen müssen. Danke für die Auskünfte.
 	AI_Output(self, hero, "Info_Mod_UrShak_Oschust_18_06"); //Ur Shak gerne helfen Freund und wünschen Erfolg bei schwerer Aufgabe.
@@ -163,10 +163,8 @@ FUNC INT Info_Mod_UrShak_Xeres_Condition()
 
 FUNC VOID Info_Mod_UrShak_Xeres_Info()
 {
-	AI_Output(self, hero, "Info_Mod_UrShak_Xeres_18_00"); //Gut, dass Freund kommen. Wir schlechtere Nachrichten haben.
-	AI_Output(self, hero, "Info_Mod_UrShak_Xeres_18_01"); //Orks aus Stadt haben gewählt neuen Führer. Sehen aus wie Mensch, sein aber nicht mehr lebendig.
-	AI_Output(hero, self, "Info_Mod_UrShak_Xeres_15_02"); //Genau den Knaben suche ich.
-	AI_Output(self, hero, "Info_Mod_UrShak_Xeres_18_03"); //Ur-Shak hoffen, dass Freund können ihn vertreiben. Sonst er machen Orks zu bösen Dienern.
+	AI_Output(self, hero, "Info_Mod_UrShak_Xeres_18_00"); //Gut, dass Freund kommen. Ur Shak schlechte Nachrichten haben. Orks aus Stadt haben neues Führer. Sehen aus wie Mensch, sein aber nicht ganz lebendig.
+	AI_Output(self, hero, "Info_Mod_UrShak_Xeres_18_01"); //Er Orks wollen machen zu seine Armee. Freund müssen verhindern.
 
 	B_LogEntry	(TOPIC_MOD_XERES, "Xeres scheint alle Orks zu seinen Dienern machen zu wollen. Ur Shak will, dass ich das verhindere.");
 };
@@ -192,12 +190,12 @@ FUNC INT Info_Mod_UrShak_Karte_Condition()
 
 FUNC VOID Info_Mod_UrShak_Karte_Info()
 {
-	AI_Output(self, hero, "Info_Mod_UrShak_Karte_18_00"); //Ur Shak sehen Freund haben schlechte Karte. Ur Shak werden machen ganz.
+	AI_Output(self, hero, "Info_Mod_UrShak_Karte_18_00"); //Ur Shak sehen, Freund haben schlechte Karte. Ur Shak werden machen ganz.
 
 	Npc_RemoveInvItems	(hero, ItWrWorldmap, 1);
 	CreateInvItems	(hero, ItWrWorldmap_Orc, 1);
 
-	AI_Output(self, hero, "Info_Mod_UrShak_Karte_18_01"); //Jetzt Karte seien ganz.
+	AI_Output(self, hero, "Info_Mod_UrShak_Karte_18_01"); //Jetzt Karte sein ganz.
 };
 
 INSTANCE Info_Mod_UrShak_EXIT (C_INFO)

@@ -20,7 +20,7 @@ FUNC INT Info_Mod_Morgahard_NW_Hi_Condition()
 FUNC VOID Info_Mod_Morgahard_NW_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Morgahard_NW_Hi_15_00"); //Könntest du uns etwas organisieren?
-	AI_Output(self, hero, "Info_Mod_Morgahard_NW_Hi_07_01"); //Ja, ich habe uns ein Lagerhaus im Hafen besorgt. Komm, ich kann es dir zeigen.
+	AI_Output(self, hero, "Info_Mod_Morgahard_NW_Hi_31_01"); //Ja, ich habe uns ein Lagerhaus im Hafen besorgt. Komm, ich kann es dir zeigen.
 
 	B_StartOtherRoutine	(self, "GUIDETOLAGERHAUS");
 	B_StartOtherRoutine	(Mod_1926_BDT_Esteban_NW, "TOT");
@@ -50,9 +50,9 @@ FUNC INT Info_Mod_Morgahard_NW_AtLagerhaus_Condition()
 
 FUNC VOID Info_Mod_Morgahard_NW_AtLagerhaus_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Morgahard_NW_AtLagerhaus_07_00"); //Whistler hat seine Leute gleich hierher geschickt.
+	AI_Output(self, hero, "Info_Mod_Morgahard_NW_AtLagerhaus_31_00"); //Whistler hat seine Leute gleich hierher geschickt.
 	AI_Output(hero, self, "Info_Mod_Morgahard_NW_AtLagerhaus_15_01"); //Und was habe ich jetzt zu tun?
-	AI_Output(self, hero, "Info_Mod_Morgahard_NW_AtLagerhaus_07_02"); //Frag einmal Whistler, er verwaltet das ganze.
+	AI_Output(self, hero, "Info_Mod_Morgahard_NW_AtLagerhaus_31_02"); //Frag einmal Whistler, er verwaltet das ganze.
 
 	B_StartOtherRoutine	(self, "ATLAGERHAUS");
 	B_StartOtherRoutine	(Mod_1927_STT_Whistler_NW, "STADT");

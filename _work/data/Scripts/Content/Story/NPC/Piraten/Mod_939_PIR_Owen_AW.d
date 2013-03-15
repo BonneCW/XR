@@ -4,7 +4,7 @@ INSTANCE Mod_939_PIR_Owen_AW (Npc_Default)
 	name 		= "Owen";
 	guild 		= GIL_OUT;
 	id 			= 939;
-	voice 		= 13;
+	voice 		= 31;
 	flags       = 2;															
 	npctype		= NPCTYPE_MAIN;
 		

@@ -4,7 +4,7 @@ instance Mod_7241_OUT_Anselm_REL (Npc_Default)
 	name 		= "Anselm";
 	guild 		= GIL_OUT;	
 	id 			= 7241;
-	voice 		= 13;
+	voice 		= 32;
 	flags       = 2; //Joly: immortal Hauptstory																
 	npctype		= NPCTYPE_MAIN;
 	

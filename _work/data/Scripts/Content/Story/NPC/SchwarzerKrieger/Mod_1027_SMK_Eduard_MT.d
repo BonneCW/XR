@@ -4,7 +4,7 @@ instance Mod_1027_SMK_Eduard_MT (Npc_Default)
 	name 		= "Eduard";
 	guild 		= GIL_KDF;
 	id 			= 1027;
-	voice 		= 11;
+	voice 		= 32;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_776_NONE_Orlan_NW (Npc_Default)
 	name 		= "Orlan";
 	guild 		= GIL_NONE;
 	id 			= 776;
-	voice 		= 5;
+	voice 		= 32;
 	flags       = 2;	//Joly:bis das Ranger treffen war.																//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_7535_OUT_Schneider_REL (Npc_Default)
 	name 		= "Schneider"; 
 	guild 		= GIL_OUT;
 	id 			= 7535;
-	voice 		= 6;
+	voice 		= 31;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

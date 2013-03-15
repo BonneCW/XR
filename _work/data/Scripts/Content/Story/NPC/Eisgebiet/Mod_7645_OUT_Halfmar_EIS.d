@@ -4,7 +4,7 @@ INSTANCE Mod_7645_OUT_Halfmar_EIS (Npc_Default)
 	name 		= "Halfmar";
 	guild 		= GIL_OUT;
 	id 			= 7645;
-	voice 		= 10;
+	voice 		= 32;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 

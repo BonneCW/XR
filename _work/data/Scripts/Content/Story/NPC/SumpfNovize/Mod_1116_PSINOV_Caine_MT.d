@@ -6,7 +6,7 @@ instance Mod_1116_PSINOV_Caine_MT (Npc_Default)
 	guild 		=		GIL_OUT;
 	level 		=		9;
 	
-	voice 		=		13;
+	voice 		=		31;
 	id 			=		1116;
 		
 	//-------- abilities --------

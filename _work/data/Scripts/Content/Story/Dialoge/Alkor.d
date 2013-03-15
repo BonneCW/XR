@@ -18,11 +18,11 @@ FUNC INT Info_Mod_Alkor_Hi_Condition()
 
 FUNC VOID Info_Mod_Alkor_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Alkor_Hi_08_00"); //(rau) Was willst du, Hänfling? Die Schätze des Moores bergen? Ha, das ich nicht lache.
+	AI_Output(self, hero, "Info_Mod_Alkor_Hi_31_00"); //(rau) Was willst du, Hänfling? Die Schätze des Moores bergen? Ha, dass ich nicht lache.
 	AI_Output(hero, self, "Info_Mod_Alkor_Hi_15_01"); //Was ist dein Problem?
-	AI_Output(self, hero, "Info_Mod_Alkor_Hi_08_02"); //Ja, schau dich doch mal an.
-	AI_Output(self, hero, "Info_Mod_Alkor_Hi_08_03"); //So jämmerlich wie du aussiehst, überlebst du keine zehn Sekunden im giftigen Moor.
-	AI_Output(self, hero, "Info_Mod_Alkor_Hi_08_04"); //Ha, wahrscheinlich überlebst du nicht mal einen richtigen Schluck Wacholder.
+	AI_Output(self, hero, "Info_Mod_Alkor_Hi_31_02"); //Ja, schau dich doch mal an.
+	AI_Output(self, hero, "Info_Mod_Alkor_Hi_31_03"); //So jämmerlich wie du aussiehst, überlebst du keine zehn Sekunden im giftigen Moor.
+	AI_Output(self, hero, "Info_Mod_Alkor_Hi_31_04"); //Ha, wahrscheinlich überlebst du nicht mal einen richtigen Schluck Wacholder.
 
 	Info_ClearChoices	(Info_Mod_Alkor_Hi);
 
@@ -33,9 +33,9 @@ FUNC VOID Info_Mod_Alkor_Hi_Info()
 FUNC VOID Info_Mod_Alkor_Hi_B()
 {
 	AI_Output(hero, self, "Info_Mod_Alkor_Hi_B_15_00"); //Ich vertrage bestimmt mehr als du.
-	AI_Output(self, hero, "Info_Mod_Alkor_Hi_B_08_01"); //Ha, das ich nicht lache ... wenn du es jemals schaffen solltest, mit mir mitzuhalten, würde ich meine ganzen Reserven an Gegengift hergeben.
+	AI_Output(self, hero, "Info_Mod_Alkor_Hi_B_31_01"); //Ha, dass ich nicht lache ... Wenn du es jemals schaffen solltest, mit mir mitzuhalten, würde ich meine ganzen Reserven an Gegengift hergeben.
 	AI_Output(hero, self, "Info_Mod_Alkor_Hi_B_15_02"); //Gegengift kann ich immer brauchen.
-	AI_Output(self, hero, "Info_Mod_Alkor_Hi_B_08_03"); //Wir werden ja sehen. Für jeden Versuch mich unter den Tisch zu trinken, werden 40 Goldstücke für das Gesöff fällig.
+	AI_Output(self, hero, "Info_Mod_Alkor_Hi_B_31_03"); //Wir werden ja sehen. Für jeden Versuch mich unter den Tisch zu trinken, werden 40 Goldstücke für das Gesöff fällig.
 
 	Info_ClearChoices	(Info_Mod_Alkor_Hi);
 
@@ -45,7 +45,7 @@ FUNC VOID Info_Mod_Alkor_Hi_B()
 FUNC VOID Info_Mod_Alkor_Hi_A()
 {
 	AI_Output(hero, self, "Info_Mod_Alkor_Hi_A_15_00"); //Fall jemand anderem auf die Nerven. 
-	AI_Output(self, hero, "Info_Mod_Alkor_Hi_A_08_01"); //Ja, verzieh dich bloß wieder in die Stadt, du Weichei, geh zu deiner Mami!
+	AI_Output(self, hero, "Info_Mod_Alkor_Hi_A_31_01"); //Ja, verzieh dich bloß wieder in die Stadt, du Weichei, geh zu deiner Mami!
 
 	Info_ClearChoices	(Info_Mod_Alkor_Hi);
 };
@@ -77,7 +77,7 @@ FUNC VOID Info_Mod_Alkor_StarteContest_Info()
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 40);
 
-	AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_08_01"); //Na gut. Dann los zur ersten Runde.
+	AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_31_01"); //Na gut. Dann los zur ersten Runde.
 
 	Info_ClearChoices	(Info_Mod_Alkor_StarteContest);
 
@@ -96,7 +96,7 @@ FUNC VOID Info_Mod_Alkor_StarteContest_Weiter_01()
 	B_UseItem	(self, ItFo_Beer);
 	B_UseItem	(hero, ItFo_Beer);
 
-	AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_01_08_00"); //Du stehst noch? Bist vielleicht doch nicht so ein Hosenscheißer, wie ich zuerst gedacht hatte. Auf zur zweiten Runde.
+	AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_01_31_00"); //Du stehst noch? Bist vielleicht doch nicht so ein Hosenscheißer, wie ich zuerst gedacht hatte. Auf zur zweiten Runde.
 
 	Info_ClearChoices	(Info_Mod_Alkor_StarteContest);
 
@@ -117,15 +117,15 @@ FUNC VOID Info_Mod_Alkor_StarteContest_Weiter_02()
 
 	if (Mod_Betrunken == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_02_08_00"); //(hämisch) Ha, wusste ich’s doch. Beim ersten Schluck von was Stärkerem hält es den Wicht nicht mehr auf den Beinen.
-		AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_02_08_01"); //Hattest wohl noch nie den einen, oder anderen richtigen Rausch, hä?!
-		AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_02_08_02"); //Aber danke für das Gold, du Held.
+		AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_02_31_00"); //(hämisch) Ha, wusste ich’s doch. Beim ersten Schluck von was Stärkerem hält es den Wicht nicht mehr auf den Beinen.
+		AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_02_31_01"); //Hattest wohl noch nie den einen oder anderen richtigen Rausch, hä?!
+		AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_02_31_02"); //Aber danke für das Gold, du Held.
 
 		Info_ClearChoices	(Info_Mod_Alkor_StarteContest);
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_02_08_03"); //(angetrunken) Was?! Du stehst noch, aber ... aber gleich nicht mehr, wenn wir zur dritt... zur dritten Runde kommen.
+		AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_02_31_03"); //(angetrunken) Was?! Du stehst noch, aber ... aber gleich nicht mehr, wenn wir zur dritt... zur dritten Runde kommen.
 
 		Info_ClearChoices	(Info_Mod_Alkor_StarteContest);
 
@@ -140,9 +140,9 @@ FUNC VOID Info_Mod_Alkor_StarteContest_Weiter_03()
 	B_UseItem	(self, ItFo_Addon_Grog);
 
 	AI_Output(hero, self, "Info_Mod_Alkor_StarteContest_Weiter_03_15_00"); //Na, war’s das?
-	AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_03_08_01"); //(benommen) Was?! Ahh, verdammt mein Kopf. Du Mistkerl!
+	AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_03_31_01"); //(benommen) Was?! Ahh, verdammt mein Kopf. Du Mistkerl!
 	AI_Output(hero, self, "Info_Mod_Alkor_StarteContest_Weiter_03_15_02"); //Tja, man sollte den Mund nicht so voll nehmen, wenn man nicht so viel verträgt. Die Tränke?
-	AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_03_08_03"); //Ahh, verfluchter Mist. Hier hast du die Gegengifte. Und jetzt ... verpiss dich!
+	AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_Weiter_03_31_03"); //Ahh, verfluchter Mist. Hier hast du die Gegengifte. Und jetzt ... verpiss dich!
 
 	B_GiveInvItems	(self, hero, ItPo_Gegengift, 2);
 
@@ -173,7 +173,7 @@ FUNC INT Info_Mod_Alkor_Wasserleichen_Condition()
 
 FUNC VOID Info_Mod_Alkor_Wasserleichen_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Alkor_Wasserleichen_08_00"); //Was die Leichen nicht geschafft haben, werde ich zu Ende bringen!
+	AI_Output(self, hero, "Info_Mod_Alkor_Wasserleichen_31_00"); //Was die Leichen nicht geschafft haben, werde ich zu Ende bringen!
 
 	AI_StopProcessInfos	(self);
 

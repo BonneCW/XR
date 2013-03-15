@@ -4,7 +4,7 @@ instance Mod_798_SLD_Wolf_NW (Npc_Default)
 	name 		= "Wolf";
 	guild 		= GIL_MIL;
 	id 			= 798;
-	voice 		= 8;
+	voice 		= 31;
 	flags       = 2;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

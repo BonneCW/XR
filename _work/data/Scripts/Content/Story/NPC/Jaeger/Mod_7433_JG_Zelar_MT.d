@@ -5,7 +5,7 @@ instance Mod_7433_JG_Zelar_MT (Npc_Default)
 	name =							"Zelar";
 	npctype =						npctype_main;
 	guild =							GIL_out;      	
-	voice =							3;
+	voice =							31;
 	id =							7433;
 	flags			=		2;
 

@@ -4,7 +4,7 @@ instance Mod_1958_VMG_Albert_MT (Npc_Default)
 	name 		= "Albert";
 	guild 		= GIL_out;
 	id 			= 1958;
-	voice 		= 7;
+	voice 		= 32;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -15,8 +15,8 @@ FUNC INT Info_Mod_Ranad_OC_Hi_Condition()
 
 FUNC VOID Info_Mod_Ranad_OC_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Ranad_OC_Hi_18_00"); //Freund seien da. Gehen in großes Raum weit hinten in Stadt.
-	AI_Output(hero, self, "Info_Mod_Ranad_OC_Hi_15_01"); //Wie komme ich dort hin?
+	AI_Output(self, hero, "Info_Mod_Ranad_OC_Hi_18_00"); //Freund sein da. Gehen in großes Raum weit hinten in Stadt.
+	AI_Output(hero, self, "Info_Mod_Ranad_OC_Hi_15_01"); //Wie komme ich dorthin?
 	AI_Output(self, hero, "Info_Mod_Ranad_OC_Hi_18_02"); //Werden führen Freund.
 
 	AI_StopProcessInfos	(self);
@@ -47,9 +47,9 @@ FUNC INT Info_Mod_Ranad_OC_AtHoshPak_Condition()
 
 FUNC VOID Info_Mod_Ranad_OC_AtHoshPak_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Ranad_OC_AtHoshPak_18_00"); //Gleich Freund seien an Ziel. Ich werden warten hier.
+	AI_Output(self, hero, "Info_Mod_Ranad_OC_AtHoshPak_18_00"); //Gleich Freund sein an Ziel. Ranad werden warten hier.
 	AI_Output(hero, self, "Info_Mod_Ranad_OC_AtHoshPak_15_01"); //Wo soll ich hin?
-	AI_Output(self, hero, "Info_Mod_Ranad_OC_AtHoshPak_18_02"); //Dort vorne seine Raum. Hosh Pak halten Ritual dort. Du müssen gehen und töten Hosh Pak.
+	AI_Output(self, hero, "Info_Mod_Ranad_OC_AtHoshPak_18_02"); //Dort vorne sein Raum. Hosh Pak halten Ritual dort. Mensch müssen gehen und töten Hosh Pak.
 	AI_Output(hero, self, "Info_Mod_Ranad_OC_AtHoshPak_15_03"); //Bin schon unterwegs.
 	AI_Output(self, hero, "Info_Mod_Ranad_OC_AtHoshPak_18_04"); //Gut.
 
@@ -81,10 +81,10 @@ FUNC INT Info_Mod_Ranad_OC_HoshPakTot_Condition()
 
 FUNC VOID Info_Mod_Ranad_OC_HoshPakTot_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Ranad_OC_HoshPakTot_18_00"); //Freund haben gut gemacht. Hosh Pak seien tot.
+	AI_Output(self, hero, "Info_Mod_Ranad_OC_HoshPakTot_18_00"); //Freund haben gut gemacht. Hosh Pak sein tot.
 	AI_Output(hero, self, "Info_Mod_Ranad_OC_HoshPakTot_15_01"); //Was passiert jetzt?
-	AI_Output(self, hero, "Info_Mod_Ranad_OC_HoshPakTot_18_02"); //Freund müssen suchen restliche Fokus und erfüllen seine Aufgabe.
-	AI_Output(self, hero, "Info_Mod_Ranad_OC_HoshPakTot_18_03"); //Ich werden bleiben hier und versuchen zu erlangen Bündnis zwischen Orks in Stadt und uns.
+	AI_Output(self, hero, "Info_Mod_Ranad_OC_HoshPakTot_18_02"); //Freund müssen suchen restliche Fokusse und erfüllen seine Aufgabe.
+	AI_Output(self, hero, "Info_Mod_Ranad_OC_HoshPakTot_18_03"); //Ranad werden bleiben hier und versuchen zu erlangen Bündnis zwischen Orks in Stadt und uns.
 
 	AI_StopProcessInfos	(self);
 };

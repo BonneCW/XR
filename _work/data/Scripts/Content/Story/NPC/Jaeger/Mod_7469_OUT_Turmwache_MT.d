@@ -4,7 +4,7 @@ instance Mod_7469_OUT_Turmwache_MT (Npc_Default)
 	name 		= "Turmwache";
 	guild 		= GIL_OUT;
 	id 			= 7469;
-	voice 		= 13;
+	voice 		= 32;
 	flags       = 0;							
 	npctype		= NPCTYPE_MAIN;
 	

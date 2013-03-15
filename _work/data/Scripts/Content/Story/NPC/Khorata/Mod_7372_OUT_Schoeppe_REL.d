@@ -4,7 +4,7 @@ instance Mod_7372_OUT_Schoeppe_REL (Npc_Default)
 	name 		= "Schöppe"; 
 	guild 		= GIL_DMT;
 	id 			= 7372;
-	voice 		= 9;
+	voice 		= 31;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

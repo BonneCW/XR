@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Monty_Hi_Condition()
 FUNC VOID Info_Mod_Monty_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Monty_Hi_15_00"); //Wie ich höre, willst du den Schläfer besiegt haben.
-	AI_Output(self, hero, "Info_Mod_Monty_Hi_08_01"); //(eifrig) Genau! Stell dich zu den anderen, ich erzähle gerade, wie ich es geschafft habe.
+	AI_Output(self, hero, "Info_Mod_Monty_Hi_31_01"); //(eifrig) Genau! Stell dich zu den anderen, ich erzähle gerade, wie ich es geschafft habe.
 };
 
 INSTANCE Info_Mod_Monty_KeinInteresse (C_INFO)
@@ -42,9 +42,9 @@ FUNC INT Info_Mod_Monty_KeinInteresse_Condition()
 FUNC VOID Info_Mod_Monty_KeinInteresse_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Monty_KeinInteresse_15_00"); //Die Geschichte interessiert mich nicht.
-	AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_08_01"); //Nein? Was denn dann?
+	AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_31_01"); //Nein? Was denn dann?
 	AI_Output(hero, self, "Info_Mod_Monty_KeinInteresse_15_02"); //Ich war es, der den Schläfer zurück in seine Dimension verbannt hat.
-	AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_08_03"); //(lacht laut) Ah, ein Witzbold! (murmelt) Hey, Kollege, das hier ist mein Revier, in Ordnung?
+	AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_31_03"); //(lacht laut) Ah, ein Witzbold! (murmelt) Hey, Kollege, das hier ist mein Revier, in Ordnung?
 
 	Log_CreateTopic	(TOPIC_MOD_MONTY_KONKURRENZKAMPF, LOG_MISSION);
 
@@ -57,7 +57,7 @@ FUNC VOID Info_Mod_Monty_KeinInteresse_Info()
 FUNC VOID Info_Mod_Monty_KeinInteresse_B()
 {
 	AI_Output(hero, self, "Info_Mod_Monty_KeinInteresse_B_15_00"); //Entweder du verschwindest oder es wird wehtun.
-	AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_B_08_01"); //(ängstlich) Bleib mal ruhig! Ich bin ein bisschen knapp bei Kasse, was soll ich tun?
+	AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_B_31_01"); //(ängstlich) Bleib mal ruhig! Ich bin ein bisschen knapp bei Kasse, was soll ich tun?
 
 	Info_ClearChoices	(Info_Mod_Monty_KeinInteresse);
 
@@ -73,7 +73,7 @@ FUNC VOID Info_Mod_Monty_KeinInteresse_B()
 FUNC VOID Info_Mod_Monty_KeinInteresse_A()
 {
 	AI_Output(hero, self, "Info_Mod_Monty_KeinInteresse_A_15_00"); //Na schön, mach was du willst.
-	AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_A_08_01"); //(leise) Danke für deine Einsicht. Scheiße, ich brauch das Geld.
+	AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_A_31_01"); //(leise) Danke für deine Einsicht. Scheiße, ich brauch das Geld.
 
 	B_GivePlayerXP	(50);
 
@@ -93,7 +93,7 @@ FUNC VOID Info_Mod_Monty_KeinInteresse_E()
 
 	if (self.aivar[AIV_Verhandlung] == TRUE)
 	{
-		AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_E_08_01"); //Das ist ein guter Kompromiss!
+		AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_E_31_01"); //Das ist ein guter Kompromiss!
 
 		B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
@@ -101,7 +101,7 @@ FUNC VOID Info_Mod_Monty_KeinInteresse_E()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_E_08_02"); //So viel habe ich leider nicht.
+		AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_E_31_02"); //So viel habe ich leider nicht.
 	};
 
 	B_GivePlayerXP	(50);
@@ -133,7 +133,7 @@ FUNC VOID Info_Mod_Monty_KeinInteresse_D()
 FUNC VOID Info_Mod_Monty_KeinInteresse_C()
 {
 	AI_Output(hero, self, "Info_Mod_Monty_KeinInteresse_C_15_00"); //Also gut. Mach weiter.
-	AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_C_08_01"); //(leise) Danke für deine Einsicht. Scheiße, ich brauch das Geld.
+	AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_C_31_01"); //(leise) Danke für deine Einsicht. Scheiße, ich brauch das Geld.
 
 	B_GivePlayerXP	(50);
 
@@ -173,7 +173,7 @@ FUNC INT Info_Mod_Monty_Pruegel_Condition()
 
 FUNC VOID Info_Mod_Monty_Pruegel_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Monty_Pruegel_08_00"); //Ich sag ja schon nichts mehr!
+	AI_Output(self, hero, "Info_Mod_Monty_Pruegel_31_00"); //Ich sag ja schon nichts mehr!
 
 	Mod_MontyFake = 3;
 
@@ -227,11 +227,11 @@ FUNC VOID Info_Mod_Monty_WieGehts_Info()
 
 	if (Mod_MontyFake == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_Monty_WieGehts_08_01"); //Die Leute zahlen für eine gute Geschichte. Solltest du auch mal probieren.
+		AI_Output(self, hero, "Info_Mod_Monty_WieGehts_31_01"); //Die Leute zahlen für eine gute Geschichte. Solltest du auch mal probieren.
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Monty_WieGehts_08_02"); //(lustlos) Halt's Maul. Bin froh, wenn ich was zu beißen kriege.
+		AI_Output(self, hero, "Info_Mod_Monty_WieGehts_31_02"); //(lustlos) Halt's Maul. Bin froh, wenn ich was zu beißen kriege.
 
 		Info_ClearChoices	(Info_Mod_Monty_WieGehts);
 
@@ -257,7 +257,7 @@ FUNC VOID Info_Mod_Monty_WieGehts_A()
 
 	B_GiveInvItems	(hero, self, ItFo_Bread, 1);
 
-	AI_Output(self, hero, "Info_Mod_Monty_WieGehts_A_08_01"); //Danke. Das wird meinen Tod ein paar Tage hinauszögern.
+	AI_Output(self, hero, "Info_Mod_Monty_WieGehts_A_31_01"); //Danke. Das wird meinen Tod ein paar Tage hinauszögern.
 
 	B_GivePlayerXP	(30);
 
@@ -292,11 +292,11 @@ FUNC VOID Info_Mod_Monty_Flugblaetter_Info()
 
 	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_Monty_Flugblaetter_08_01"); //Oh danke. Mal sehen ...
+	AI_Output(self, hero, "Info_Mod_Monty_Flugblaetter_31_01"); //Oh danke. Mal sehen ...
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_Monty_Flugblaetter_08_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
+	AI_Output(self, hero, "Info_Mod_Monty_Flugblaetter_31_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
 
 	Mod_Flugblaetter += 1;
 };

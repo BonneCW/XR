@@ -15,18 +15,18 @@ FUNC INT Info_Mod_Deppenhans_Truhe_Condition()
 
 FUNC VOID Info_Mod_Deppenhans_Truhe_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_05_00"); //Hey, kannst du mir mal helfen? Ich habe Probleme mir meiner Truhe.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_05_01"); //Ich komme nicht an meine Ersparnisse.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_31_00"); //Hey, kannst du mir mal helfen? Ich habe Probleme mir meiner Truhe.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_31_01"); //Ich komme nicht an meine Ersparnisse.
 	AI_Output(hero, self, "Info_Mod_Deppenhans_Truhe_15_02"); //Ärger mit dem Schloss?
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_05_03"); //Ne, die braucht mal wieder eins auf den Deckel.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_31_03"); //Nee, die braucht mal wieder eins auf den Deckel.
 	AI_Output(hero, self, "Info_Mod_Deppenhans_Truhe_15_04"); //Wie?
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_05_05"); //Naja, die springt und beißt mal wieder wie verrückt.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_05_06"); //Diesmal ganz doll, sodass ich sie nicht alleine zu züchtigen vermag.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_31_05"); //Naja, die springt und beißt mal wieder wie verrückt.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_31_06"); //Diesmal ganz doll, sodass ich sie nicht alleine zu züchtigen vermag.
 	AI_Output(hero, self, "Info_Mod_Deppenhans_Truhe_15_07"); //Was ist das für ein Unsinn?
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_05_08"); //Ja, hast Recht, ist Unsinn, was die mal wieder macht.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_05_09"); //Konnte sich aber schon als Baum nicht benehmen. Ist durch das Feld gerannt und hat alles auf den Kopf gestellt.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_05_10"); //Irgendwann habe ich dann meine Axt genommen und ihn zu der Truhe gemacht.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_05_11"); //Aber mit dem Benehmen ist es immer noch nicht besser.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_31_08"); //Ja, hast Recht, ist Unsinn, was die mal wieder macht.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_31_09"); //Konnte sich aber schon als Baum nicht benehmen. Ist durch das Feld gerannt und hat alles auf den Kopf gestellt.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_31_10"); //Irgendwann habe ich dann meine Axt genommen und ihn zu der Truhe gemacht.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_31_11"); //Aber mit dem Benehmen ist es immer noch nicht besser.
 
 	AI_TurnAway	(hero, self);
 
@@ -34,13 +34,13 @@ FUNC VOID Info_Mod_Deppenhans_Truhe_Info()
 
 	AI_TurnToNpc	(hero, self);
 
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_05_13"); //Ja, ist schon schräg drauf die Gute.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_05_14"); //Wenn du mir hilfst sie zur Ruhe zu bringen, bekommst du auch einen Teil meiner Ersparnisse.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_05_15"); //Ich geh schon mal rein und schau nach ihr.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_31_13"); //Ja, ist schon schräg drauf, die Gute.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_31_14"); //Wenn du mir hilfst, sie zur Ruhe zu bringen, bekommst du auch einen Teil meiner Ersparnisse.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe_31_15"); //Ich geh schon mal rein und schau nach ihr.
 
 	Log_CreateTopic	(TOPIC_MOD_DEPPENHANS_TRUHE, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_DEPPENHANS_TRUHE, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_DEPPENHANS_TRUHE, "In Khorata begegnet man ja einigen Kuriositäten. Der Bauer Deppenhans bat mich darum seiner Truhe mit ein paar Schlägen Benehmen beizubringen, da diese angeblich wie wild herumspringt und beißt. Was davon zu halten ist ... na ja. Da er mir aber einen Teil seiner Ersparnisse zur Belohnung versprochen hat, sollte ich vielleicht doch mal einen Blick hinein werfen, was da so vor sich geht.");
+	B_LogEntry	(TOPIC_MOD_DEPPENHANS_TRUHE, "In Khorata begegnet man ja einigen Kuriositäten. Der Bauer Deppenhans bat mich darum, seiner Truhe mit ein paar Schlägen Benehmen beizubringen, da diese angeblich wie wild herumspringt und beißt. Was davon zu halten ist ... na ja. Da er mir aber einen Teil seiner Ersparnisse zur Belohnung versprochen hat, sollte ich vielleicht doch mal einen Blick hinein werfen, was da so vor sich geht.");
 
 	AI_StopProcessInfos	(self);
 
@@ -70,8 +70,8 @@ FUNC INT Info_Mod_Deppenhans_Truhe2_Condition()
 
 FUNC VOID Info_Mod_Deppenhans_Truhe2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe2_05_00"); //Da schau. So garstig war sie schon lange nicht mehr.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe2_05_01"); //Verpass ihr bitte eins, dass sie es so schnell nicht mehr vergisst.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe2_31_00"); //Da schau. So garstig war sie schon lange nicht mehr.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe2_31_01"); //Verpass ihr bitte eins, dass sie es so schnell nicht mehr vergisst.
 
 	AI_StopProcessInfos	(self);
 };
@@ -97,7 +97,7 @@ FUNC INT Info_Mod_Deppenhans_Truhe3_Condition()
 
 FUNC VOID Info_Mod_Deppenhans_Truhe3_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe3_05_00"); //Großartig, du hast es geschafft.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe3_31_00"); //Großartig, du hast es geschafft.
 
 	AI_GotoNpc	(self, Truhe_Deppenhans);
 
@@ -109,13 +109,13 @@ FUNC VOID Info_Mod_Deppenhans_Truhe3_Info()
 
 	AI_TurnToNpc	(self, hero);
 
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe3_05_01"); //Und hier, wie versprochen ein Teil meiner Ersparnisse.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe3_05_02"); //Hier, nimm ruhig die Hälfte. Du hast ja auch echt gute Arbeit geleistet und es dir wirklich verdient.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe3_31_01"); //Und hier, wie versprochen ein Teil meiner Ersparnisse.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe3_31_02"); //Hier, nimm ruhig die Hälfte. Du hast ja auch echt gute Arbeit geleistet und es dir wirklich verdient.
 
 	B_GiveInvItems	(self, hero, ItPl_Beet, 6);
 
 	AI_Output(hero, self, "Info_Mod_Deppenhans_Truhe3_15_03"); //Ohh, toll, Rüben.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe3_05_04"); //Ja, schön, dass sie dir gefallen.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Truhe3_31_04"); //Ja, schön, dass sie dir gefallen.
 
 	B_SetTopicStatus	(TOPIC_MOD_DEPPENHANS_TRUHE, LOG_SUCCESS);
 
@@ -148,19 +148,19 @@ FUNC INT Info_Mod_Deppenhans_Kaninchenplage_Condition()
 FUNC VOID Info_Mod_Deppenhans_Kaninchenplage_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Deppenhans_Kaninchenplage_15_00"); //Du hast hier ja eine ganz schöne Kaninchenplage auf deinem Feld.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Kaninchenplage_05_01"); //(leicht debil) Ja, überall lustige, flauschige Hoppelhasen. Komisch, dass seit dem mein Gemüse Stück für Stück verschwindet. Muss hier irgendwo ein Dieb sein ...
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Kaninchenplage_31_01"); //(leicht debil) Ja, überall lustige, flauschige Hoppelhasen. Komisch, dass seitdem mein Gemüse Stück für Stück verschwindet. Muss hier irgendwo ein Dieb sein ...
 	AI_Output(hero, self, "Info_Mod_Deppenhans_Kaninchenplage_15_02"); //Ähh, ja, wie dem auch sei, hast du eine Ahnung, woher die alle kommen könnten?
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Kaninchenplage_05_03"); //Nö, die tauchen einfach so auf.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Kaninchenplage_31_03"); //Nö, die tauchen einfach so auf.
 	AI_Output(hero, self, "Info_Mod_Deppenhans_Kaninchenplage_15_04"); //Na schön, dann darf ich die Gegend nach Hinweisen durchkämmen.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Kaninchenplage_05_05"); //Durchkämmen?! Hey, da habe ich was für dich.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Kaninchenplage_31_05"); //Durchkämmen?! Hey, da habe ich was für dich.
 	AI_Output(hero, self, "Info_Mod_Deppenhans_Kaninchenplage_15_06"); //(erwartungsvoll) Ja?! Hinweise?
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Kaninchenplage_05_07"); //Ne, ich hatte die tolle Idee, einen überdimensionalen Kamm an einen Holzstil zu basteln. Da habe ich das dabei herausbekommen.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Kaninchenplage_31_07"); //Nee, ich hatte die tolle Idee, einen überdimensionalen Kamm an einen Holzstil zu basteln. Da habe ich das dabei herausbekommen.
 
 	B_GiveInvItems	(self, hero, ItMi_Rake, 1);
 
 	AI_Output(hero, self, "Info_Mod_Deppenhans_Kaninchenplage_15_08"); //(etwas enttäuscht) Ohh, toll, eine Harke, danke.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Kaninchenplage_05_09"); //Aber kannst du ja auch diesen schwarz angezogenen Typen fragen, der hier immer so herumläuft und komische Lichter mit seiner Hand macht.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Kaninchenplage_05_10"); //Gerade dann tauchen immer besonders viele Kaninchen auf ... er hat's bestimmt auch gesehen.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Kaninchenplage_31_09"); //Aber kannst du ja auch diesen schwarz angezogenen Typen fragen, der hier immer so herumläuft und komische Lichter mit seiner Hand macht.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Kaninchenplage_31_10"); //Gerade dann tauchen immer besonders viele Kaninchen auf ... er hat's bestimmt auch gesehen.
 
 	B_LogEntry	(TOPIC_MOD_ADANOS_PLAGE, "Hmpf ... na ja, immerhin weiß ich jetzt, dass ich nach einem Magier in schwarzer Kleidung Ausschau halten muss.");
 
@@ -193,8 +193,8 @@ FUNC INT Info_Mod_Deppenhans_NovizeWeg_Condition()
 
 FUNC VOID Info_Mod_Deppenhans_NovizeWeg_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Deppenhans_NovizeWeg_05_00"); //Hey, mein Gemüse hat aufgehört zu verschwinden.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_NovizeWeg_05_01"); //Wie du das auch gemacht hast, nimm diese Kürbisse zum Dankschön.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_NovizeWeg_31_00"); //Hey, mein Gemüse hat aufgehört zu verschwinden.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_NovizeWeg_31_01"); //Wie du das auch gemacht hast, nimm diese Kürbisse als Dankeschön.
 
 	B_GiveInvItems	(self, hero, ItFo_Kuerbis, 5);
 
@@ -225,8 +225,8 @@ FUNC INT Info_Mod_Deppenhans_WoherBaum_Condition()
 FUNC VOID Info_Mod_Deppenhans_WoherBaum_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Deppenhans_WoherBaum_15_00"); //Woher hattest du den laufenden Baum?
-	AI_Output(self, hero, "Info_Mod_Deppenhans_WoherBaum_05_01"); //Den hatte ich neben meinem Feld gepflanzt ... mit Setzlingen aus dem verfluchten Moor.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_WoherBaum_05_02"); //Aber scheinbar wurden die schlecht aufgezogen, so wie er sich benommen hat. Du hast es ja selbst gesehen.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_WoherBaum_31_01"); //Den hatte ich neben meinem Feld gepflanzt ... mit Setzlingen aus dem verfluchten Moor.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_WoherBaum_31_02"); //Aber scheinbar wurden die schlecht aufgezogen, so wie er sich benommen hat. Du hast es ja selbst gesehen.
 };
 
 INSTANCE Info_Mod_Deppenhans_Landarbeit (C_INFO)
@@ -251,12 +251,12 @@ FUNC INT Info_Mod_Deppenhans_Landarbeit_Condition()
 FUNC VOID Info_Mod_Deppenhans_Landarbeit_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Deppenhans_Landarbeit_15_00"); //Und was macht sonst die Landarbeit?
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Landarbeit_05_01"); //Die läuft wunder prächtig. Ich weiß ja auch, wie es geht.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Landarbeit_05_02"); //Die Samen und Knollen kommen in die Erde aufs Feld und dann wachsen sie.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Landarbeit_05_03"); //Mein Chef, der Erhard, der macht das ganz falsch.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Landarbeit_05_04"); //Hat komische gelb und blau glänzende Brocken bei der Wand seines Hauses vergraben, zwischen den ganzen Heuballen und Fässern.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Landarbeit_05_05"); //Dass aus denen nichts Anständiges wachsen würde, hatte ich mir gleich gedacht.
-	AI_Output(self, hero, "Info_Mod_Deppenhans_Landarbeit_05_06"); //Aber es gibt ja komische Leute.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Landarbeit_31_01"); //Die läuft wunderprächtig. Ich weiß ja auch, wie es geht.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Landarbeit_31_02"); //Die Samen und Knollen kommen in die Erde aufs Feld und dann wachsen sie.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Landarbeit_31_03"); //Mein Chef, der Erhard, der macht das ganz falsch.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Landarbeit_31_04"); //Hat komische gelb und blau glänzende Brocken bei der Wand seines Hauses vergraben, zwischen den ganzen Heuballen und Fässern.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Landarbeit_31_05"); //Dass aus denen nichts Anständiges wachsen würde, hatte ich mir gleich gedacht.
+	AI_Output(self, hero, "Info_Mod_Deppenhans_Landarbeit_31_06"); //Aber es gibt ja komische Leute.
 };
 
 INSTANCE Info_Mod_Deppenhans_Pickpocket (C_INFO)

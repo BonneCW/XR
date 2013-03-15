@@ -4,7 +4,7 @@ INSTANCE Mod_1030_SNOV_Abdi_MT (Npc_Default)
 	name 		= "Abdi";
 	guild 		= GIL_KDF;
 	id 			= 1030;
-	voice 		= 9;
+	voice 		= 31;
 	flags       = FALSE;													
 	npctype		= NPCTYPE_MAIN;
 	

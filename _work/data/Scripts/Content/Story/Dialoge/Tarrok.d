@@ -43,9 +43,9 @@ FUNC INT Info_Mod_Tarrok_AtStonehenge_Condition()
 FUNC VOID Info_Mod_Tarrok_AtStonehenge_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Tarrok_AtStonehenge_15_00"); //Weißt du etwas über den Fokus, der hier sein sollte?
-	AI_Output(self, hero, "Info_Mod_Tarrok_AtStonehenge_18_01"); //Ur Shak haben mich geschickt zu holen Fokus und bringen in Sicherheit vor Orks in Stadt.
-	AI_Output(self, hero, "Info_Mod_Tarrok_AtStonehenge_18_02"); //Doch ich seinen gekommen zu spät, um zu retten.
-	AI_Output(self, hero, "Info_Mod_Tarrok_AtStonehenge_18_03"); //Hosh Pak haben lassen geholt bevor ich kommen.
+	AI_Output(self, hero, "Info_Mod_Tarrok_AtStonehenge_18_01"); //Ur Shak haben Tarrok geschickt zu holen Fokus und bringen in Sicherheit vor Orks in Stadt.
+	AI_Output(self, hero, "Info_Mod_Tarrok_AtStonehenge_18_02"); //Doch Tarrok sein gekommen zu spät zu retten.
+	AI_Output(self, hero, "Info_Mod_Tarrok_AtStonehenge_18_03"); //Hosh Pak haben lassen geholt, bevor Tarrok kommen.
 	AI_Output(hero, self, "Info_Mod_Tarrok_AtStonehenge_15_04"); //Was wirst du jetzt machen?
 	AI_Output(self, hero, "Info_Mod_Tarrok_AtStonehenge_18_05"); //Werden gehen zurück zu Ur Shak in Festung in Berg.
 
@@ -80,7 +80,7 @@ FUNC VOID Info_Mod_Tarrok_Fokussuche_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Tarrok_Fokussuche_15_00"); //Ich brauche wieder ein Ulu-Mulu.
 	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_18_01"); //Freund brauchen wieder Ulu-Mulu? Aber Freund sehen schwach aus, zu schwach zu besorgen Sachen für Ulu-Mulu.
-	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_18_05"); //Aber es keinen anderen weg geben, du müssen suchen Sachen. Freund noch wissen was ich brauchen für Ulu-Mulu?
+	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_18_05"); //Aber es keinen anderen weg geben, du müssen suchen Sachen. Freund noch wissen, was Tarrok brauchen für Ulu-Mulu?
 
 	Info_ClearChoices	(Info_Mod_Tarrok_Fokussuche);
 
@@ -93,15 +93,15 @@ FUNC VOID Info_Mod_Tarrok_Fokussuche_Nein()
 	AI_Output(hero, self, "Info_Mod_Tarrok_Fokussuche_Nein_15_00"); //Nein.
 	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_Nein_18_01"); //Freund brauchen KROTAHK, KHAZ-TAK, DWACHKARR und ORTH-ANTAK.
 	AI_Output(hero, self, "Info_Mod_Tarrok_Fokussuche_Nein_15_02"); //Was bedeutet das?
-	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_Nein_18_03"); //KROTAHK seien Flammenzunge. Seien Zunge von Feuerechse.
-	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_Nein_18_04"); //KHAZ-TAK seien Horn von Schattenläufer.
-	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_Nein_18_05"); //DWACHKARR seien Zähne von Sumpfhai.
-	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_Nein_18_06"); //ORTH-ANTAK seien Hauer von großes Troll.
-	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_Nein_18_07"); //Wenn Freund haben gefunden Sachen, er diese bringen zu mir.
+	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_Nein_18_03"); //KROTAHK sein Flammenzunge. Sein Zunge von Feuerechse.
+	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_Nein_18_04"); //KHAZ-TAK sein Horn von Schattenläufer.
+	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_Nein_18_05"); //DWACHKARR sein Zähne von Sumpfhai.
+	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_Nein_18_06"); //ORTH-ANTAK sein Hauer von großes Troll.
+	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_Nein_18_07"); //Wenn Freund haben gefunden Sachen, er sie bringen zu Tarrok.
 
 	Log_CreateTopic	(TOPIC_MOD_ULUMULU, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_ULUMULU, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_ULUMULU, "Ich brauche für das Ulu-Mulu folgende Sachen: Flammenzunge, Schattenläuferhorn, Sumpfhaizähne und Trollhauer. Wenn ich die Sachen habe soll ich sie Tarrok bringen.");
+	B_LogEntry	(TOPIC_MOD_ULUMULU, "Ich brauche für das Ulu-Mulu folgende Sachen: Flammenzunge, Schattenläuferhorn, Sumpfhaizähne und Trollhauer. Wenn ich die Sachen habe, soll ich sie Tarrok bringen.");
 
 	Info_ClearChoices	(Info_Mod_Tarrok_Fokussuche);
 
@@ -118,7 +118,7 @@ FUNC VOID Info_Mod_Tarrok_Fokussuche_Ja()
 
 	Log_CreateTopic	(TOPIC_MOD_ULUMULU, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_ULUMULU, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_ULUMULU, "Ich soll die Sachen für das Ulu-Mulu besorgen und dann zu Tarrok bringen. Wenn ich mich richtig erinnere waren das eine Flammenzunge, ein Schattenläuferhorn, Sumpfhaizähne und ein Trollhauer.");
+	B_LogEntry	(TOPIC_MOD_ULUMULU, "Ich soll die Sachen für das Ulu-Mulu besorgen und dann zu Tarrok bringen. Wenn ich mich richtig erinnere, waren das eine Flammenzunge, ein Schattenläuferhorn, Sumpfhaizähne und ein Trollhauer.");
 
 	Info_ClearChoices	(Info_Mod_Tarrok_Fokussuche);
 
@@ -160,7 +160,7 @@ FUNC VOID Info_Mod_Tarrok_HabSachen_Info()
 	Npc_RemoveInvItems	(hero, ItAt_ShadowHorn, 1);
 	Npc_RemoveInvItems	(hero, ItAt_SharkTeeth, 1);
 
-	AI_Output(self, hero, "Info_Mod_Tarrok_HabSachen_18_01"); //Sehr gut. Ich werden bauen Ulu-Mulu. Freund kommen wieder wenn nächster Tag sein.
+	AI_Output(self, hero, "Info_Mod_Tarrok_HabSachen_18_01"); //Sehr gut. Tarrok werden bauen Ulu-Mulu. Freund kommen wieder, wenn nächster Tag sein.
 
 	Mod_TarrokbautUluMulu	=	Wld_GetDay();
 
@@ -189,12 +189,12 @@ FUNC INT Info_Mod_Tarrok_UluMulu_Fertig_Condition()
 
 FUNC VOID Info_Mod_Tarrok_UluMulu_Fertig_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Tarrok_UluMulu_Fertig_18_00"); //Ich seien fertig. Du nun können gehen in Orkstadt mit Ulu-Mulu.
+	AI_Output(self, hero, "Info_Mod_Tarrok_UluMulu_Fertig_18_00"); //Tarrok sein fertig. Du nun können gehen in Orkstadt mit Ulu-Mulu.
 
 	CreateInvItems	(self, UluMulu, 1);
 	B_GiveInvItems	(self, hero, UluMulu, 1);
 
-	AI_Output(self, hero, "Info_Mod_Tarrok_UluMulu_Fertig_18_01"); //Freund aber müssen darauf achten das immer haben angelegt Ulu-Mulu wenn gehen in Stadt.
+	AI_Output(self, hero, "Info_Mod_Tarrok_UluMulu_Fertig_18_01"); //Freund aber müssen darauf achten, dass immer haben angelegt Ulu-Mulu, wenn gehen in Stadt.
 
 	B_GivePlayerXP	(2000);
 

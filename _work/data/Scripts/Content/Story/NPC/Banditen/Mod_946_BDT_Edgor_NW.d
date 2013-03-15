@@ -4,7 +4,7 @@ instance Mod_946_BDT_Edgor_NW (Npc_Default)
 	name 		= "Edgor";
 	guild 		= GIL_OUT;
 	id 			= 946;
-	voice 		= 6;
+	voice 		= 31;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

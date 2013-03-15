@@ -4,7 +4,7 @@ instance Mod_791_BAU_Onar_NW (Npc_Default)
 	name 		= "Onar";
 	guild 		= GIL_NONE;
 	id 			= 791;
-	voice 		= 14;
+	voice 		= 32;
 	flags       = 0;		//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

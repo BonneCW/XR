@@ -18,7 +18,7 @@ FUNC INT Info_Mod_Albert_OC_Bridge_Condition()
 
 FUNC VOID Info_Mod_Albert_OC_Bridge_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Albert_OC_Bridge_07_00"); //Hier müssen wir nach links gehen ...
+	AI_Output(self, hero, "Info_Mod_Albert_OC_Bridge_32_00"); //Hier müssen wir nach links gehen ...
 
 	AI_StopProcessInfos	(self);
 };
@@ -43,8 +43,8 @@ FUNC INT Info_Mod_Albert_OC_Tor_Condition()
 
 FUNC VOID Info_Mod_Albert_OC_Tor_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Albert_OC_Tor_07_00"); //Hier müssen wir uns ebenfalls links halten.
-	AI_Output(self, hero, "Info_Mod_Albert_OC_Tor_07_01"); //Irgendwann kommen wir dann an einer großen Orkstatue vorbei, von welcher es nur noch ein paar Meter bis zu der Grube mit den Banditen sind.
+	AI_Output(self, hero, "Info_Mod_Albert_OC_Tor_32_00"); //Hier müssen wir uns ebenfalls links halten.
+	AI_Output(self, hero, "Info_Mod_Albert_OC_Tor_32_01"); //Irgendwann kommen wir dann an einer großen Orkstatue vorbei, von welcher es nur noch ein paar Meter bis zu der Grube mit den Banditen sind.
 
 	AI_StopProcessInfos	(self);
 };
@@ -69,8 +69,8 @@ FUNC INT Info_Mod_Albert_OC_Hi_Condition()
 
 FUNC VOID Info_Mod_Albert_OC_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Albert_OC_Hi_07_00"); //Da unten sind sie. Bei ihnen befindet sich eine Teleportplattform.
-	AI_Output(self, hero, "Info_Mod_Albert_OC_Hi_07_01"); //Ich werde diese über das Amulett mit etwas magischer Energie speisen ... dann sollten sie im Nu hier oben stehen.
+	AI_Output(self, hero, "Info_Mod_Albert_OC_Hi_32_00"); //Da unten sind sie. Bei ihnen befindet sich eine Teleportplattform.
+	AI_Output(self, hero, "Info_Mod_Albert_OC_Hi_32_01"); //Ich werde diese über das Amulett mit etwas magischer Energie speisen ... dann sollten sie im Nu hier oben stehen.
 
 	AI_StopProcessInfos	(self);
 
@@ -98,9 +98,9 @@ FUNC INT Info_Mod_Albert_OC_Alarm_Condition()
 
 FUNC VOID Info_Mod_Albert_OC_Alarm_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Albert_OC_Alarm_07_00"); //Verflucht, dank dieses Lärms wissen die Orks jetzt unzweifelhaft von unserer Anwesenheit. Die Verwandlungen vorher haben mich einiges an magischer Kraft gekostet.
-	AI_Output(self, hero, "Info_Mod_Albert_OC_Alarm_07_01"); //Ich könnte aber doch noch den Versuch unternehmen, uns mithilfe des Amulettes hier herauszubringen, obwohl es eine große Herausforderung ist, den Zauber auf so viele Kampfgefährten gleichzeitig zu wirken.
-	AI_Output(self, hero, "Info_Mod_Albert_OC_Alarm_07_02"); //Was meinst du?
+	AI_Output(self, hero, "Info_Mod_Albert_OC_Alarm_32_00"); //Verflucht, dank dieses Lärms wissen die Orks jetzt unzweifelhaft von unserer Anwesenheit. Die Verwandlungen vorher haben mich einiges an magischer Kraft gekostet.
+	AI_Output(self, hero, "Info_Mod_Albert_OC_Alarm_32_01"); //Ich könnte aber doch noch den Versuch unternehmen, uns mithilfe des Amulettes hier herauszubringen, obwohl es eine große Herausforderung ist, den Zauber auf so viele Kampfgefährten gleichzeitig zu wirken.
+	AI_Output(self, hero, "Info_Mod_Albert_OC_Alarm_32_02"); //Was meinst du?
 
 	Mod_AlbertTransforms = 4;
 };
@@ -128,7 +128,7 @@ FUNC INT Info_Mod_Albert_OC_You_Condition()
 FUNC VOID Info_Mod_Albert_OC_You_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Albert_OC_You_15_00"); //Ja, benutze das Amulett.
-	AI_Output(self, hero, "Info_Mod_Albert_OC_You_07_01"); //In Ordnung, ich hoffe meine magische Kraft reicht aus.
+	AI_Output(self, hero, "Info_Mod_Albert_OC_You_32_01"); //In Ordnung, ich hoffe meine magische Kraft reicht aus.
 
 	Mod_AlbertTransforms = 5;
 
@@ -160,7 +160,7 @@ FUNC INT Info_Mod_Albert_OC_Fight_Condition()
 FUNC VOID Info_Mod_Albert_OC_Fight_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Albert_OC_Fight_15_00"); //Nein, wir werden uns schon den Weg freikämpfen.
-	AI_Output(self, hero, "Info_Mod_Albert_OC_Fight_07_01"); //Ein großes Wagnis, aber in Ordnung. Du hast bisher dein Kampfgeschick schon unter Beweis gestellt.
+	AI_Output(self, hero, "Info_Mod_Albert_OC_Fight_32_01"); //Ein großes Wagnis, aber in Ordnung. Du hast bisher dein Kampfgeschick schon unter Beweis gestellt.
 
 	Mod_AlbertTransforms = 5;
 

@@ -4,7 +4,7 @@ instance Mod_1928_BDT_Morgahard_NW (Npc_Default)
 	name 		= "Morgahard"; 
 	guild 		= GIL_OUT;
 	id 			= 1928;
-	voice 		= 7;
+	voice 		= 31;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

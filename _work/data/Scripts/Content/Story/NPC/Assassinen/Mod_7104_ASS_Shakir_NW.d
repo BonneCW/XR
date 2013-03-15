@@ -4,7 +4,7 @@ INSTANCE Mod_7104_ASS_Shakir_NW (Npc_Default)
 	name 		= "Shakir"; 
 	guild 		= GIL_OUT;
 	id 			= 7104;
-	voice 		= 2;
+	voice 		= 31;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

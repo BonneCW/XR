@@ -17,11 +17,11 @@ FUNC INT Info_Mod_Cipher_Hi_Condition()
 FUNC VOID Info_Mod_Cipher_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cipher_Hi_15_00"); //Hallo.
-	AI_Output(self, hero, "Info_Mod_Cipher_Hi_07_01"); //Hallo.
+	AI_Output(self, hero, "Info_Mod_Cipher_Hi_32_01"); //Hallo.
 	AI_Output(hero, self, "Info_Mod_Cipher_Hi_15_02"); //Handelst du immer noch mit Sumpfkraut?
-	AI_Output(self, hero, "Info_Mod_Cipher_Hi_07_03"); //(leise) Psst, nicht so laut. Es sind keine leichten Zeiten für den Handel mit Sumpfkraut.
-	AI_Output(self, hero, "Info_Mod_Cipher_Hi_07_04"); //Ähhm, du hast nicht zufällig wieder mal einige Sumpfkrautpflanzen oder einige Sumpfkrautstängel bei dir?
-	AI_Output(self, hero, "Info_Mod_Cipher_Hi_07_05"); //Je 10 würden mir echt weiterhelfen und ich würde dir einen guten Preis dafür geben.
+	AI_Output(self, hero, "Info_Mod_Cipher_Hi_32_03"); //(leise) Psst, nicht so laut. Es sind keine leichten Zeiten für den Handel mit Sumpfkraut.
+	AI_Output(self, hero, "Info_Mod_Cipher_Hi_32_04"); //Ähhm, du hast nicht zufällig wieder mal einige Sumpfkrautpflanzen oder einige Sumpfkrautstängel bei dir?
+	AI_Output(self, hero, "Info_Mod_Cipher_Hi_32_05"); //Je 10 würden mir echt weiterhelfen und ich würde dir einen guten Preis dafür geben.
 	
 	Log_CreateTopic	(TOPIC_MOD_HAENDLER_SOELDNER, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_HAENDLER_SOELDNER, "Cipher wird mit mir handeln.");
@@ -49,7 +49,7 @@ FUNC VOID Info_Mod_Cipher_Hi_Info()
 
 FUNC VOID Info_Mod_Cipher_Hi_C()
 {
-	AI_Output(self, hero, "Info_Mod_Cipher_Hi_C_07_00"); //Hey, vielen Dank. Hier hast du 200 Gold und 5 Erz.
+	AI_Output(self, hero, "Info_Mod_Cipher_Hi_C_32_00"); //Hey, vielen Dank. Hier hast du 200 Gold und 5 Erz.
 
 	B_GivePlayerXP	(100);
 
@@ -70,7 +70,7 @@ FUNC VOID Info_Mod_Cipher_Hi_D()
 
 	B_ShowGivenThings	("10 Sumpfkraut und 10 Stängel Sumpfkraut gegeben");
 
-	AI_Output(self, hero, "Info_Mod_Cipher_Hi_D_07_01"); //Hey, vielen Dank. Hier hast du 400 Gold und 10 Erz.
+	AI_Output(self, hero, "Info_Mod_Cipher_Hi_D_32_01"); //Hey, vielen Dank. Hier hast du 400 Gold und 10 Erz.
 
 	B_GivePlayerXP	(200);
 
@@ -125,12 +125,12 @@ FUNC INT Info_Mod_Cipher_Skinner_Condition()
 FUNC VOID Info_Mod_Cipher_Skinner_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cipher_Skinner_15_00"); //Willst du grüne Novizen?
-	AI_Output(self, hero, "Info_Mod_Cipher_Skinner_07_01"); //Das kann meinem Geschäft nur gut tun, also immer her mit dem Zeug.
+	AI_Output(self, hero, "Info_Mod_Cipher_Skinner_32_01"); //Das kann meinem Geschäft nur gut tun, also immer her mit dem Zeug.
 	AI_Output(hero, self, "Info_Mod_Cipher_Skinner_15_02"); //Hier, nimm.
 
 	B_GiveInvItems	(hero, self, ItMi_Addon_Joint_01, Npc_HasItems(hero, ItMi_Addon_Joint_01));
 
-	AI_Output(self, hero, "Info_Mod_Cipher_Skinner_07_03"); //Hier dein Gold.
+	AI_Output(self, hero, "Info_Mod_Cipher_Skinner_32_03"); //Hier dein Gold.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, Npc_HasItems(self, ItMi_Addon_Joint_01)*30);
 

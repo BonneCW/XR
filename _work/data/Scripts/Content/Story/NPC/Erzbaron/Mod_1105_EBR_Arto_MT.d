@@ -6,7 +6,7 @@ instance Mod_1105_EBR_Arto_MT (Npc_Default)
 	npctype 	= 	npctype_main;
    	guild 		=	GIL_OUT;
 	level 		=	80;
-	voice 		=	13;
+	voice 		=	32;
 	id 			=	1105;
 	flags = 2;
 	

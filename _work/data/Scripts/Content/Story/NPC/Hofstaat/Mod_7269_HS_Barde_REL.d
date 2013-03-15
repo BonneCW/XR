@@ -4,7 +4,7 @@ instance Mod_7269_HS_Barde_REL (Npc_Default)
 	name 		= "Barde"; 
 	guild 		= GIL_OUT;
 	id 			= 7269;
-	voice 		= 9;
+	voice 		= 31;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -7,7 +7,7 @@ instance Mod_801_STT_Sly_MT (Npc_Default)
 	level 		=		5;
 	
 	
-	voice 		=		10;
+	voice 		=		31;
 	id 			=		801;
 		
 	//-------- abilities --------

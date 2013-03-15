@@ -18,7 +18,7 @@ FUNC INT Info_Mod_Zuris_Hi_Condition()
 
 FUNC VOID Info_Mod_Zuris_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Zuris_Hi_14_00"); //Willkommen in Khorinis, Fremder. Solltest du je den Drang verspüren etwas Magie ausüben zu wollen oder dich der heilenden Wirkung eines Trankes zu unterziehen, dann komm zu mir.
+	AI_Output(self, hero, "Info_Mod_Zuris_Hi_32_00"); //Willkommen in Khorinis, Fremder. Solltest du je den Drang verspüren etwas Magie ausüben zu wollen oder dich der heilenden Wirkung eines Trankes zu unterziehen, dann komm zu mir.
 	
 	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Zuris handelt mit Spruchrollen und Tränken.");
@@ -54,10 +54,10 @@ FUNC INT Info_Mod_Zuris_Scorpio_Condition()
 
 FUNC VOID Info_Mod_Zuris_Scorpio_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Zuris_Scorpio_14_00"); //Heute ist mein Glückstag!
+	AI_Output(self, hero, "Info_Mod_Zuris_Scorpio_32_00"); //Heute ist mein Glückstag!
 	AI_Output(hero, self, "Info_Mod_Zuris_Scorpio_15_01"); //Wieso das?
-	AI_Output(self, hero, "Info_Mod_Zuris_Scorpio_14_02"); //Die verdammten Banditen oberhalb der Brücke sind alle tot, und ich kann wieder einigermaßen gefahrlos meine gewohnte Route fahren.
-	AI_Output(self, hero, "Info_Mod_Zuris_Scorpio_14_03"); //Dafür gibt es heute einen erlesenen Heiltrank gratis!
+	AI_Output(self, hero, "Info_Mod_Zuris_Scorpio_32_02"); //Die verdammten Banditen oberhalb der Brücke sind alle tot, und ich kann wieder einigermaßen gefahrlos meine gewohnte Route fahren.
+	AI_Output(self, hero, "Info_Mod_Zuris_Scorpio_32_03"); //Dafür gibt es heute einen erlesenen Heiltrank gratis!
 	
 	B_GiveInvItems	(self, hero, ItPo_Health_03, 1);
 };
@@ -85,13 +85,13 @@ FUNC INT Info_Mod_Zuris_Blutkelch_Condition()
 FUNC VOID Info_Mod_Zuris_Blutkelch_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Zuris_Blutkelch_15_00"); //Hier riecht es aber seltsam.
-	AI_Output(self, hero, "Info_Mod_Zuris_Blutkelch_14_01"); //Wohl wahr. Ich habe Knoblauch neu im Angebot.
+	AI_Output(self, hero, "Info_Mod_Zuris_Blutkelch_32_01"); //Wohl wahr. Ich habe Knoblauch neu im Angebot.
 	AI_Output(hero, self, "Info_Mod_Zuris_Blutkelch_15_02"); //Knoblauch?
-	AI_Output(self, hero, "Info_Mod_Zuris_Blutkelch_14_03"); //Eine Pflanze zum Würzen von Speisen.
+	AI_Output(self, hero, "Info_Mod_Zuris_Blutkelch_32_03"); //Eine Pflanze zum Würzen von Speisen.
 	AI_Output(hero, self, "Info_Mod_Zuris_Blutkelch_15_04"); //Aha. Ich suche aber keinen Knolbauch ...
-	AI_Output(self, hero, "Info_Mod_Zuris_Blutkelch_14_05"); //(langsam) K n o b l a u ch.
+	AI_Output(self, hero, "Info_Mod_Zuris_Blutkelch_32_05"); //(langsam) K n o b l a u ch.
 	AI_Output(hero, self, "Info_Mod_Zuris_Blutkelch_15_06"); //... sondern einen besonderen Kelch, Blutkelch genannt. Für Rituale und so.
-	AI_Output(self, hero, "Info_Mod_Zuris_Blutkelch_14_07"); //Davon weiß ich nichts.
+	AI_Output(self, hero, "Info_Mod_Zuris_Blutkelch_32_07"); //Davon weiß ich nichts.
 };
 
 INSTANCE Info_Mod_Zuris_Anschlagtafel (C_INFO)
@@ -135,12 +135,12 @@ FUNC VOID Info_Mod_Zuris_Anschlagtafel_Info()
 		Npc_RemoveInvItems	(hero, ItSc_Firebolt, Mod_Anschlagtafel_Khorinis_Zuris_Feuerpfeil);
 		Npc_RemoveInvItems	(hero, ItPo_Health_01, Mod_Anschlagtafel_Khorinis_Zuris_HPEssenz);
 
-		AI_Output(self, hero, "Info_Mod_Zuris_Anschlagtafel_14_00"); //Was? Zeig her ... Tatsächlich, alles dabei. Ausgesprochen gut gemacht.
-		AI_Output(self, hero, "Info_Mod_Zuris_Anschlagtafel_14_01"); //Hier ist deine Entlohnung.
+		AI_Output(self, hero, "Info_Mod_Zuris_Anschlagtafel_32_00"); //Was? Zeig her ... Tatsächlich, alles dabei. Ausgesprochen gut gemacht.
+		AI_Output(self, hero, "Info_Mod_Zuris_Anschlagtafel_32_01"); //Hier ist deine Entlohnung.
 
 		B_GiveInvItems	(self, hero, ItMi_Gold, Mod_Anschlagtafel_Khorinis_Zuris_Gold);
 
-		AI_Output(self, hero, "Info_Mod_Zuris_Anschlagtafel_14_02"); //Hat mich gefreut mit dir Geschäfte zu machen.
+		AI_Output(self, hero, "Info_Mod_Zuris_Anschlagtafel_32_02"); //Hat mich gefreut mit dir Geschäfte zu machen.
 
 		if (Mod_Anschlagtafel_Khorinis_Zuris_Gold < 200)
 		{

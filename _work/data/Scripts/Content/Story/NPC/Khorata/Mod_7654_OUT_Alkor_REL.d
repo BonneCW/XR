@@ -4,7 +4,7 @@ INSTANCE Mod_7654_OUT_Alkor_REL (Npc_Default)
 	name 		= "Alkor";
 	guild 		= GIL_OUT;
 	id 			= 7654;
-	voice 		= 8;
+	voice 		= 31;
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------

@@ -21,12 +21,12 @@ FUNC VOID Info_Mod_Morgahard_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Morgahard_Hi_15_00"); //Hallo, wer bist du und was ist deine Aufgabe im Lager?
 	AI_Output(self, hero, "Info_Mod_Morgahard_Hi_07_01"); //Ich bin Morgahard. Ich mache dieses und jenes. Manchmal organisiere ich einen Überfall, und manchmal organisiere ich heiße Ware.
-	AI_Output(self, hero, "Info_Mod_Morgahard_Hi_07_02"); //Außerdem kann ich dir manchen Banditentrick zeigen, der bei Überfällen goldwert ist.
+	AI_Output(self, hero, "Info_Mod_Morgahard_Hi_07_02"); //Außerdem kann ich dir manchen Banditentrick zeigen, der bei Überfällen Gold wert ist.
 
 	Npc_SetRefuseTalk	(self, 60);
 
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_BANDITEN, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_LEHRER_BANDITEN, "Von Morgahard kann ich gewissen Banditentricks lernen.");
+	B_LogEntry	(TOPIC_MOD_LEHRER_BANDITEN, "Von Morgahard kann ich gewisse Banditentricks lernen.");
 };
 
 INSTANCE Info_Mod_Morgahard_OrkQuest (C_INFO)
@@ -50,7 +50,7 @@ FUNC INT Info_Mod_Morgahard_OrkQuest_Condition()
 
 FUNC VOID Info_Mod_Morgahard_OrkQuest_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Morgahard_OrkQuest_07_00"); //Hey, ich Habe da vielleicht etwas für dich, womit du dich im Lager bewähren kannst.
+	AI_Output(self, hero, "Info_Mod_Morgahard_OrkQuest_07_00"); //Hey, ich habe da vielleicht etwas für dich, womit du dich im Lager bewähren kannst.
 	AI_Output(self, hero, "Info_Mod_Morgahard_OrkQuest_07_01"); //Etwas anspruchsvoller, als nur paar mickrige Händler zu überfallen. Wobei es für uns mittlerweile auch schon fast zur Gewohnheit geworden ist.
 	AI_Output(self, hero, "Info_Mod_Morgahard_OrkQuest_07_02"); //Es treiben sich nämlich immer wieder Patrouillen des feindlichen Orklagers in der Nähe des Lagers herum.
 	AI_Output(self, hero, "Info_Mod_Morgahard_OrkQuest_07_03"); //Vielleicht bist du während deiner Gefangenschaft in der Barriere auch schon mal Orks begegnet?
@@ -62,7 +62,7 @@ FUNC VOID Info_Mod_Morgahard_OrkQuest_Info()
 
 	Info_AddChoice	(Info_Mod_Morgahard_OrkQuest, "Ich habe damals im Alleingang die Orkstadt niedergemacht ...", Info_Mod_Morgahard_OrkQuest_C);
 	Info_AddChoice	(Info_Mod_Morgahard_OrkQuest, "Echte, große, böse Orks?!", Info_Mod_Morgahard_OrkQuest_B);
-	Info_AddChoice	(Info_Mod_Morgahard_OrkQuest, "Ja, bin tatsächlich Orks paar mal über den Weg gelaufen ...", Info_Mod_Morgahard_OrkQuest_A);
+	Info_AddChoice	(Info_Mod_Morgahard_OrkQuest, "Ja, bin tatsächlich paar mal Orks über den Weg gelaufen ...", Info_Mod_Morgahard_OrkQuest_A);
 };
 
 FUNC VOID Info_Mod_Morgahard_OrkQuest_D()
@@ -88,14 +88,14 @@ FUNC VOID Info_Mod_Morgahard_OrkQuest_C()
 FUNC VOID Info_Mod_Morgahard_OrkQuest_B()
 {
 	AI_Output(hero, self, "Info_Mod_Morgahard_OrkQuest_B_15_00"); //Echte, große, böse Orks?!
-	AI_Output(self, hero, "Info_Mod_Morgahard_OrkQuest_B_07_01"); //Ach, stell dich nicht so an. Die meisten von uns haben zumindest schon mal einen Orkspäher erschlagen und du hast bewiesen, dass du Kämpfen kannst.
+	AI_Output(self, hero, "Info_Mod_Morgahard_OrkQuest_B_07_01"); //Ach, stell dich nicht so an. Die meisten von uns haben zumindest schon mal einen Orkspäher erschlagen und du hast bewiesen, dass du kämpfen kannst.
 
 	Info_Mod_Morgahard_OrkQuest_D();
 };
 
 FUNC VOID Info_Mod_Morgahard_OrkQuest_A()
 {
-	AI_Output(hero, self, "Info_Mod_Morgahard_OrkQuest_A_15_00"); //Ja, bin tatsächlich Orks paar mal über den Weg gelaufen ...
+	AI_Output(hero, self, "Info_Mod_Morgahard_OrkQuest_A_15_00"); //Ja, bin tatsächlich paar mal Orks über den Weg gelaufen ...
 	AI_Output(self, hero, "Info_Mod_Morgahard_OrkQuest_A_07_01"); //Und du lebst noch. Das sind schon mal gute Voraussetzungen für die Aufgabe.
 
 	Info_Mod_Morgahard_OrkQuest_D();
@@ -130,7 +130,7 @@ FUNC VOID Info_Mod_Morgahard_OrkQuest_E()
 
 	Info_ClearChoices	(Info_Mod_Morgahard_OrkQuest);
 
-	B_LogEntry	(TOPIC_MOD_BDT_MORGAHARD, "Morgahard hat mich damit betraut eine kleine Orkpatrouille Auszuschalten, die sich jede Nacht in der Höhle unterhalb des Lagers niederlässt. Mit Skinner und drei bis fünf anderen Banditen soll ich mich um Mitternacht vor dem Lager versammeln um loszuschlagen.");
+	B_LogEntry	(TOPIC_MOD_BDT_MORGAHARD, "Morgahard hat mich damit betraut, eine kleine Orkpatrouille auszuschalten, die sich jede Nacht in der Höhle unterhalb des Lagers niederlässt. Mit Skinner und drei bis fünf anderen Banditen soll ich mich um Mitternacht vor dem Lager versammeln, um loszuschlagen.");
 };
 
 INSTANCE Info_Mod_Morgahard_OrkPatroullie (C_INFO)
@@ -197,24 +197,24 @@ FUNC VOID Info_Mod_Morgahard_AlterWaldMann_Info()
 	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_02"); //Nun, Logan war zufällig ein Schriftstück der Verwandlungsmagier in die Hände gefallen.
 	AI_Output(hero, self, "Info_Mod_Morgahard_AlterWaldMann_15_03"); //Zufällig?
 	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_04"); //Tja, er war bei ihnen, um sich für die Unterstützung bei der Sache mit den Orks zu bedanken und um mal wieder einige Geschäfte abzuschließen.
-	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_05"); //Und in einem Stapel Blätter, nunja, las er etwas von einem Schatz und nahm das Blatt an sich.
-	AI_Output(hero, self, "Info_Mod_Morgahard_AlterWaldMann_15_06"); //Soso, an sich genommen ...
+	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_05"); //Und in einem Stapel Blätter, nun ja, las er etwas von einem Schatz und nahm das Blatt an sich.
+	AI_Output(hero, self, "Info_Mod_Morgahard_AlterWaldMann_15_06"); //So, so, an sich genommen ...
 	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_07"); //Jedenfalls ging es darin um einen Hüter der Tiere und des Waldes, der uralt sein soll, blind, die Wälder von Khorata bewohnt und so weiter und sich im Besitz ...
 	AI_Output(hero, self, "Info_Mod_Morgahard_AlterWaldMann_15_08"); //... im Besitz von großen Schätzen befinden soll, vermute ich mal.
 	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_09"); //Ähh, ja, genau.
 	AI_Output(hero, self, "Info_Mod_Morgahard_AlterWaldMann_15_10"); //Und ich soll jetzt an die Schätze kommen? Einen uralter, blinden Greis beklauen?
-	AI_Output(hero, self, "Info_Mod_Morgahard_AlterWaldMann_15_11"); //Also wirklich, dass solltet ihr ja gerade noch selbst hinbekommen ...
-	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_12"); //Jaja, das haben wir ja auch versucht. Das Problem ist nur, dass er auch ein wenig magisch begabt scheint ...
+	AI_Output(hero, self, "Info_Mod_Morgahard_AlterWaldMann_15_11"); //Also wirklich, das solltet ihr ja gerade noch selbst hinbekommen ...
+	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_12"); //Ja, ja, das haben wir ja auch versucht. Das Problem ist nur, dass er auch ein wenig magisch begabt scheint ...
 	AI_Output(hero, self, "Info_Mod_Morgahard_AlterWaldMann_15_13"); //Magisch begabt?
-	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_14"); //Ja, als wir ihn versuchten zu stellen hat er uns mit allerlei Zauberkünsten, Verwandlung und Täuschung ein Schnippchen geschlagen und uns die lange Nase gedreht.
+	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_14"); //Ja, als wir ihn versuchten zu stellen, hat er uns mit allerlei Zauberkünsten, Verwandlung und Täuschung ein Schnippchen geschlagen und uns die lange Nase gedreht.
 	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_15"); //Wir haben es immer wieder versucht ihn zu erwischen, mussten aber zuletzt unverrichteter Dinge unter seinem höhnischen Gelächter wieder abziehen.
 	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_16"); //Auf normalem Wege kommen wir also nicht an den Schatz.
 	AI_Output(hero, self, "Info_Mod_Morgahard_AlterWaldMann_15_17"); //Hmm, "normalem Wege". Und was soll ich da jetzt machen?
 	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_18"); //Nun, versuch irgendwie mehr über ihn zu erfahren, lass deine Kontakte spielen.
-	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_19"); //Die Verwandlungsmagier können wir schlecht fragen, da es nach dem Verschwinden des Schriftstückes, nunja, ihr Misstrauen erwecken könnte. Du verstehst?
+	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_19"); //Die Verwandlungsmagier können wir schlecht fragen, da es nach dem Verschwinden des Schriftstückes, nun ja, ihr Misstrauen erwecken könnte. Du verstehst?
 	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_20"); //Du musst also einen anderen Weg finden an weitere Informationen zu kommen.
 	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_21"); //Vielleicht kannst du ja etwas von diesen Waldspinnern erfahren, die überall auf Khorinis ihre Zelte unter den Bäumen aufgeschlagen haben ...
-	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_22"); //Naja, du machst das schon. Sag bescheid, wenn du den Schatz gefunden hast.
+	AI_Output(self, hero, "Info_Mod_Morgahard_AlterWaldMann_07_22"); //Na ja, du machst das schon. Sag Bescheid, wenn du den Schatz gefunden hast.
 
 	Log_CreateTopic	(TOPIC_MOD_BDT_ALTERMANN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_BDT_ALTERMANN, LOG_RUNNING);
@@ -304,21 +304,21 @@ FUNC INT Info_Mod_Morgahard_Lernen_Knockout_Condition()
 
 FUNC VOID Info_Mod_Morgahard_Lernen_Knockout_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Morgahard_Lernen_Knockout_15_00"); //Zeig mir, wie ich jemanden Niederschlagen kann.
+	AI_Output(hero, self, "Info_Mod_Morgahard_Lernen_Knockout_15_00"); //Zeig mir, wie ich jemanden niederschlagen kann.
 
 	if (hero.lp >= 10)
 	{
-		AI_Output(self, other, "Info_Mod_Morgahard_Lernen_Knockout_08_01"); //Okey, du willst also wissen, wie du jemanden mit einem Überraschungsangriff K.O. schlagen kannst.
-		AI_Output(self, other, "Info_Mod_Morgahard_Lernen_Knockout_08_02"); //Schleiche dich zunächst leise von hinten an den Betreffenden heran, ohne bemerkt zu werden.
-		AI_Output(self, other, "Info_Mod_Morgahard_Lernen_Knockout_08_03"); //Wenn du dann nah genug bist, verpasst du ihm mit deiner Waffe einen ordentlichen Schlag auf den Hinterkopf.
-		AI_Output(self, other, "Info_Mod_Morgahard_Lernen_Knockout_08_04"); //Da dein Opfer nicht darauf eingestellt ist, wird es besonders großen Schaden nehmen und mit etwas Glück gleich zu Boden gehen, ohne dass du noch weiter nachhelfen musst.
-		AI_Output(self, other, "Info_Mod_Morgahard_Lernen_Knockout_08_05"); //Das wirkt übrigens auch bei Schlafenden, bei Tieren, Orks und was sonst noch so kräucht und fläucht.
+		AI_Output(self, other, "Info_Mod_Morgahard_Lernen_Knockout_31_01"); //Nun gut, du willst also wissen, wie du jemanden mit einem Überraschungsangriff überrumpeln kannst.
+		AI_Output(self, other, "Info_Mod_Morgahard_Lernen_Knockout_31_02"); //Schleiche dich zunächst leise von hinten an den Betreffenden heran, ohne bemerkt zu werden.
+		AI_Output(self, other, "Info_Mod_Morgahard_Lernen_Knockout_31_03"); //Wenn du dann nah genug bist, verpasst du ihm mit deiner Waffe einen ordentlichen Schlag auf den Hinterkopf.
+		AI_Output(self, other, "Info_Mod_Morgahard_Lernen_Knockout_31_04"); //Da dein Opfer nicht darauf eingestellt ist, wird es besonders großen Schaden nehmen und mit etwas Glück gleich zu Boden gehen, ohne dass du noch weiter nachhelfen musst.
+		AI_Output(self, other, "Info_Mod_Morgahard_Lernen_Knockout_31_05"); //Das wirkt übrigens auch bei Schlafenden, bei Tieren, Orks und was sonst noch so kreucht und fleucht.
 
 		Knockout_Perk = TRUE;
 	}
 	else
 	{
-		AI_Output(self, other, "Info_Mod_Morgahard_Lernen_Knockout_08_06"); //Komm wieder, wenn du mehr Erfahrung hast.
+		AI_Output(self, other, "Info_Mod_Morgahard_Lernen_Knockout_31_06"); //Komm wieder, wenn du mehr Erfahrung hast.
 	};
 };
 

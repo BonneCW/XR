@@ -10,7 +10,7 @@ INSTANCE Info_Mod_Felicita_Hi (C_INFO)
 
 FUNC INT Info_Mod_Felicita_Hi_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Schneider_Hi))
+	if (Npc_KnowsInfo(hero, Info_Mod_Schneider_Gritta))
 	{
 		return 1;
 	};

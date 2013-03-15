@@ -4,7 +4,7 @@ instance Mod_757_NONE_Zuris_NW (Npc_Default)
 	name 		= "Zuris";
 	guild 		= GIL_PAL;
 	id 			= 757;
-	voice 		= 14;
+	voice 		= 32;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

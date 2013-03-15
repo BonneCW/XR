@@ -17,9 +17,9 @@ FUNC INT Info_Mod_Schoeppe_01_Hi_Condition()
 FUNC VOID Info_Mod_Schoeppe_01_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Schoeppe_01_Hi_15_00"); //Magst du deinen Beruf?
-	AI_Output(self, hero, "Info_Mod_Schoeppe_01_Hi_09_01"); //Beruf? Nein, ich mache das ehrenamtlich, um dem größeren Wohl zu dienen.
-	AI_Output(self, hero, "Info_Mod_Schoeppe_01_Hi_09_02"); //Ich persönlich hasse ja diese stinkenden Menschen, die stinkenden Verbrechen und die stinkenden Ausreden.
-	AI_Output(self, hero, "Info_Mod_Schoeppe_01_Hi_09_03"); //Aber ich muss dafür sorgen, dass wir in Zukunft von solchem Pack verschont bleiben.
+	AI_Output(self, hero, "Info_Mod_Schoeppe_01_Hi_31_01"); //Beruf? Nein, ich mache das ehrenamtlich, um dem größeren Wohl zu dienen.
+	AI_Output(self, hero, "Info_Mod_Schoeppe_01_Hi_31_02"); //Ich persönlich hasse ja diese stinkenden Menschen, die stinkenden Verbrechen und die stinkenden Ausreden.
+	AI_Output(self, hero, "Info_Mod_Schoeppe_01_Hi_31_03"); //Aber ich muss dafür sorgen, dass wir in Zukunft von solchem Pack verschont bleiben.
 };
 
 INSTANCE Info_Mod_Schoeppe_01_Pickpocket (C_INFO)

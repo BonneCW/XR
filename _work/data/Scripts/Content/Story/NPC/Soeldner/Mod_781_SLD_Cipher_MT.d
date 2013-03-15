@@ -4,7 +4,7 @@ instance Mod_781_SLD_Cipher_MT (Npc_Default)
 	name 		= "Cipher";
 	guild 		= GIL_MIL;
 	id 			= 781;
-	voice 		= 7;
+	voice 		= 32;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

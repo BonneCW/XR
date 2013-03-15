@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Marduk_Hi_Condition()
 FUNC VOID Info_Mod_Marduk_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Marduk_Hi_15_00"); //Hi.
-	AI_Output(self, hero, "Info_Mod_Marduk_Hi_05_01"); //Sei mir gegrüßt, Fremder. Was kann ich für dich tun?
+	AI_Output(self, hero, "Info_Mod_Marduk_Hi_32_01"); //Sei mir gegrüßt, Fremder. Was kann ich für dich tun?
 };
 
 INSTANCE Info_Mod_Marduk_Aufgabe (C_INFO)
@@ -44,13 +44,13 @@ FUNC INT Info_Mod_Marduk_Aufgabe_Condition()
 FUNC VOID Info_Mod_Marduk_Aufgabe_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Marduk_Aufgabe_15_00"); //Ich möchte Novize werden und wollte dich daher um eine Aufgabe bitten.
-	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_01"); //So, eine Aufgabe. Ein Diener Innos zu sein, ist aber nicht nur eine Aufgabe, sondern eine Berufung.
-	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_02"); //Wenn du einige Wochen lang fleißig bei den Alltagsarbeiten im Kloster geholfen und eifrig zu Innos gebetet hast, wirst du mich von der Ernsthaftigkeit deines Wunsches überzeugt haben.
+	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_32_01"); //So, eine Aufgabe. Ein Diener Innos zu sein, ist aber nicht nur eine Aufgabe, sondern eine Berufung.
+	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_32_02"); //Wenn du einige Wochen lang fleißig bei den Alltagsarbeiten im Kloster geholfen und eifrig zu Innos gebetet hast, wirst du mich von der Ernsthaftigkeit deines Wunsches überzeugt haben.
 	AI_Output(hero, self, "Info_Mod_Marduk_Aufgabe_15_03"); //Aber das dauert ja ewig. Gibt es keinen schnelleren Weg?
-	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_04"); //(spöttisch) So, tatsächlich, es wäre dir zu anstrengend und zeitraubend?
-	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_05"); //Wenn du zu gut für die Aufgaben eines Novizen bist, wirst du wohl eher den Fähigkeiten eines Feuermagiers gerecht, oder?
-	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_06"); //Dann bring mir doch ... eine Feuerballrune. Damit wäre ich von deinem fortgeschrittenen Können überzeugt.
-	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_05_07"); // (zu sich selbst, kopfschüttelnd) Tse, da hör sich das mal einer an ... so viel Unverfrorenheit.
+	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_32_04"); //(spöttisch) So, tatsächlich, es wäre dir zu anstrengend und zeitraubend?
+	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_32_05"); //Wenn du zu gut für die Aufgaben eines Novizen bist, wirst du wohl eher den Fähigkeiten eines Feuermagiers gerecht, oder?
+	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_32_06"); //Dann bring mir doch ... eine Feuerballrune. Damit wäre ich von deinem fortgeschrittenen Können überzeugt.
+	AI_Output(self, hero, "Info_Mod_Marduk_Aufgabe_32_07"); // (zu sich selbst, kopfschüttelnd) Tse, da hör sich das mal einer an ... so viel Unverfrorenheit.
 
 	Log_CreateTopic	(TOPIC_MOD_MARDUK_FEUERBALL, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_MARDUK_FEUERBALL, LOG_RUNNING);
@@ -78,19 +78,19 @@ FUNC INT Info_Mod_Marduk_FeuerballRune_Condition()
 
 FUNC VOID Info_Mod_Marduk_FeuerballRune_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_05_00"); //(abweisend) Was willst du? Solltest du nicht lieber Trauben ernten, oder vor dem Altar knien und beten?
+	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_32_00"); //(abweisend) Was willst du? Solltest du nicht lieber Trauben ernten, oder vor dem Altar knien und beten?
 	AI_Output(hero, self, "Info_Mod_Marduk_FeuerballRune_15_01"); //Nein ... ich wollte dir stattdessen lieber mein fortgeschrittenes Werk bringen, Meister.
 
 	B_GiveInvItems	(hero, self, ItRu_InstantFireball, 1);
 
-	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_05_02"); //(entsetzt) Was?! Das ... das ist nicht möglich. Das muss eine Fälschung sein.
-	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_05_03"); //(drohend) Wehe dir, wenn du mich zum Narren halten willst.
+	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_32_02"); //(entsetzt) Was?! Das ... das ist nicht möglich. Das muss eine Fälschung sein.
+	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_32_03"); //(drohend) Wehe dir, wenn du mich zum Narren halten willst.
 	AI_Output(hero, self, "Info_Mod_Marduk_FeuerballRune_15_04"); //Nein, die Rune ist von begabter Hand gefertigt ... und nun in deinem Besitz, wie von dir verlangt.
-	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_05_05"); //(ungläubig) Aber alleine hättest du das niemals schaffen können ... nicht mal mit Hilfe eines Novizen ...
-	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_05_06"); //(überlegt) Augenblick mal ... (ernst feststellend) Hmm, in Ordnung, ich will gar nicht fragen, wer dir dabei geholfen hat.
-	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_05_07"); //Du hast deine Aufgabe ja in der Tat erfüllt, wie ich – wenn auch nur widerwillig - zugeben muss.
-	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_05_08"); //Und da du es scheinbar geschafft hast einen der anderen der Magier gänzlich von dir zu überzeugen, werde ich mich umso weniger gegen deine Aufnahme sträuben.
-	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_05_09"); //(nachsichtiger) So gehe den mit Innos Segen und meiner Zustimmung.
+	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_32_05"); //(ungläubig) Aber alleine hättest du das niemals schaffen können ... nicht mal mit Hilfe eines Novizen ...
+	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_32_06"); //(überlegt) Augenblick mal ... (ernst feststellend) Hmm, in Ordnung, ich will gar nicht fragen, wer dir dabei geholfen hat.
+	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_32_07"); //Du hast deine Aufgabe ja in der Tat erfüllt, wie ich – wenn auch nur widerwillig - zugeben muss.
+	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_32_08"); //Und da du es scheinbar geschafft hast einen der anderen der Magier gänzlich von dir zu überzeugen, werde ich mich umso weniger gegen deine Aufnahme sträuben.
+	AI_Output(self, hero, "Info_Mod_Marduk_FeuerballRune_32_09"); //(nachsichtiger) So gehe den mit Innos Segen und meiner Zustimmung.
 
 	B_LogEntry_More	(TOPIC_MOD_FEUERMAGIER, TOPIC_MOD_MARDUK_FEUERBALL, "Ich habe Marduk geholfen.", "Ich habe Marduk die Rune gebracht.");
 
@@ -124,16 +124,16 @@ FUNC INT Info_Mod_Marduk_Nachtschicht_Condition()
 
 FUNC VOID Info_Mod_Marduk_Nachtschicht_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_05_00"); //So, jetzt bist du also tatsächlich Novize ... und so sollst du auch die Aufgaben eines Novizen erfüllen.
+	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_32_00"); //So, jetzt bist du also tatsächlich Novize ... und so sollst du auch die Aufgaben eines Novizen erfüllen.
 	AI_Output(hero, self, "Info_Mod_Marduk_Nachtschicht_15_01"); //Was gibt es zu tun?
-	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_05_02"); //Dieses Jahr haben wir eine besonders gute Traubenernte ... unsere Novizen kommen kaum damit nach, die ganzen Trauben zu keltern.
-	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_05_03"); //Wenn die anderen Novizen also zur Nachtruhe gegangen sind, kannst du zumindest zwei Stunden an ihrer statt weiterstampfen.
-	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_05_04"); //Deine Arme sind ausgeruht und kräftig, sodass das reichen sollte, um den Rückstand aufzuholen ...
+	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_32_02"); //Dieses Jahr haben wir eine besonders gute Traubenernte ... unsere Novizen kommen kaum damit nach, die ganzen Trauben zu keltern.
+	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_32_03"); //Wenn die anderen Novizen also zur Nachtruhe gegangen sind, kannst du zumindest zwei Stunden an ihrer statt weiterstampfen.
+	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_32_04"); //Deine Arme sind ausgeruht und kräftig, sodass das reichen sollte, um den Rückstand aufzuholen ...
 	AI_Output(hero, self, "Info_Mod_Marduk_Nachtschicht_15_05"); //Gibt es noch was?
-	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_05_06"); //Ja. Wie du wahrscheinlich mitbekommen hast, haben sich in letzter Zeit beunruhigende Dinge außerhalb der Klostermauern begeben.
-	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_05_07"); //Die genauen Urheber sind uns nicht bekannt, aber es handelt sich zweifelsfrei um finstere, dämonische Mächte, die vor allem Nachts erstarken, wenn Innos’ Strahlen nicht die Welt erleuchtet.
-	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_05_08"); //Ich möchte also, dass du zumindest eine Woche lang täglich zur Mitternachtszeit an unserem Innosschrein betest.
-	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_05_09"); //Seine Präsenz möge uns auch dann vor Übel bewahre und finstere Blicke vom Kloster ablenken, wenn sein Gestirn nicht am Himmel steht.
+	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_32_06"); //Ja. Wie du wahrscheinlich mitbekommen hast, haben sich in letzter Zeit beunruhigende Dinge außerhalb der Klostermauern begeben.
+	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_32_07"); //Die genauen Urheber sind uns nicht bekannt, aber es handelt sich zweifelsfrei um finstere, dämonische Mächte, die vor allem Nachts erstarken, wenn Innos’ Strahlen nicht die Welt erleuchtet.
+	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_32_08"); //Ich möchte also, dass du zumindest eine Woche lang täglich zur Mitternachtszeit an unserem Innosschrein betest.
+	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht_32_09"); //Seine Präsenz möge uns auch dann vor Übel bewahre und finstere Blicke vom Kloster ablenken, wenn sein Gestirn nicht am Himmel steht.
 
 	Log_CreateTopic	(TOPIC_MOD_MARDUK_NACHTSCHICHT, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_MARDUK_NACHTSCHICHT, LOG_RUNNING);
@@ -164,7 +164,7 @@ FUNC INT Info_Mod_Marduk_Nachtschicht2_Condition()
 FUNC VOID Info_Mod_Marduk_Nachtschicht2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Marduk_Nachtschicht2_15_00"); //Ich habe getan, wie du mir aufgetragen hattest.
-	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht2_05_01"); //Daran hast du gut getan, Novize. Du hast Ausdauer bewiesen sollst zur Belohnung auch deine Rune wiederbekommen. Nutze sie nach Innos’ Willen.
+	AI_Output(self, hero, "Info_Mod_Marduk_Nachtschicht2_32_01"); //Daran hast du gut getan, Novize. Du hast Ausdauer bewiesen sollst zur Belohnung auch deine Rune wiederbekommen. Nutze sie nach Innos’ Willen.
 
 	B_GiveInvItems	(self, hero, ItRu_InstantFireball, 1);
 
@@ -199,14 +199,14 @@ FUNC VOID Info_Mod_Marduk_Innosklinge_Info()
 
 	if (Mod_Gilde == 2)
 	{
-		AI_Output(self, hero, "Info_Mod_Marduk_Innosklinge_05_01"); //Die heilige Weihe steht alleine einem Paladin und streiter Innos offen.
-		AI_Output(self, hero, "Info_Mod_Marduk_Innosklinge_05_02"); //Und ich kann nicht erkennen, dass du einer seist.
+		AI_Output(self, hero, "Info_Mod_Marduk_Innosklinge_32_01"); //Die heilige Weihe steht alleine einem Paladin und streiter Innos offen.
+		AI_Output(self, hero, "Info_Mod_Marduk_Innosklinge_32_02"); //Und ich kann nicht erkennen, dass du einer seist.
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Marduk_Innosklinge_05_03"); //Um die Weihe zu erhalten, musst du die Prüfungen des Feuers bestehen.
-		AI_Output(self, hero, "Info_Mod_Marduk_Innosklinge_05_04"); //Begib dich in den Keller des Klosters. Du erreichst ihn über die Bibliothek.
-		AI_Output(self, hero, "Info_Mod_Marduk_Innosklinge_05_05"); //Dort findest du einen Teleport, welcher dich in die Kammern der Prüfungen bringen wird.
+		AI_Output(self, hero, "Info_Mod_Marduk_Innosklinge_32_03"); //Um die Weihe zu erhalten, musst du die Prüfungen des Feuers bestehen.
+		AI_Output(self, hero, "Info_Mod_Marduk_Innosklinge_32_04"); //Begib dich in den Keller des Klosters. Du erreichst ihn über die Bibliothek.
+		AI_Output(self, hero, "Info_Mod_Marduk_Innosklinge_32_05"); //Dort findest du einen Teleport, welcher dich in die Kammern der Prüfungen bringen wird.
 
 		B_LogEntry	(TOPIC_MOD_MILIZ_INNOSKLINGE, "Um das Schwert zu weihen muss ich die Prüfungen des Feuers bestehen. Dazu soll ich in den Keller des Kloster gehen, welchen ich über die Bibliothek erreiche.");
 
@@ -241,8 +241,8 @@ FUNC VOID Info_Mod_Marduk_Kreis1_Info ()
 	
 	if B_TeachMagicCircle (self, hero, 1)
 	{
-		AI_Output (self, hero, "Info_Mod_Marduk_Kreis1_05_01"); //Der erste Kreis erlaubt es dir, Runen, die du erschaffen hast, anzuwenden.
-		AI_Output (self, hero, "Info_Mod_Marduk_Kreis1_05_02"); //Du kannst jetzt die Formeln der Zaubersprüche lernen, um deine eigenen Runen herzustellen.
+		AI_Output (self, hero, "Info_Mod_Marduk_Kreis1_32_01"); //Der erste Kreis erlaubt es dir, Runen, die du erschaffen hast, anzuwenden.
+		AI_Output (self, hero, "Info_Mod_Marduk_Kreis1_32_02"); //Du kannst jetzt die Formeln der Zaubersprüche lernen, um deine eigenen Runen herzustellen.
 
 		Mod_MagieKreis = 1;
 	};
@@ -278,14 +278,14 @@ FUNC VOID Info_Mod_Marduk_Kreis2_Info ()
 	{
 		if B_TeachMagicCircle (self, hero, 2)
 		{
-			AI_Output (self, hero, "Info_Mod_Marduk_Kreis2_05_01"); //Tritt nun in den zweiten Kreis und lerne, noch mächtigere Zauber zu wirken.
+			AI_Output (self, hero, "Info_Mod_Marduk_Kreis2_32_01"); //Tritt nun in den zweiten Kreis und lerne, noch mächtigere Zauber zu wirken.
 
 			Mod_MagieKreis = 2;
 		};
 	}
 	else
 	{
-		AI_Output (self, hero, "Info_Mod_Marduk_Kreis2_05_02"); //Die Zeit ist noch nicht gekommen.
+		AI_Output (self, hero, "Info_Mod_Marduk_Kreis2_32_02"); //Die Zeit ist noch nicht gekommen.
 	};
 };	
 ///////////////////////////////////////////////////////////////////////
@@ -318,14 +318,14 @@ FUNC VOID Info_Mod_Marduk_Kreis3_Info ()
 	{
 		if B_TeachMagicCircle (self, hero, 3)
 		{
-			AI_Output (self, hero, "Info_Mod_Marduk_Kreis3_05_01"); //Ja, die Zeit ist gekommen. Tritt ein in den dritten Kreis der Magie. Neue Zauber erwarten dich.
+			AI_Output (self, hero, "Info_Mod_Marduk_Kreis3_32_01"); //Ja, die Zeit ist gekommen. Tritt ein in den dritten Kreis der Magie. Neue Zauber erwarten dich.
 
 			Mod_MagieKreis = 3;
 		};
 	}
 	else
 	{
-		AI_Output (self, hero, "Info_Mod_Marduk_Kreis3_05_02"); //Es ist noch nicht an der Zeit für dich, den dritten Kreis zu lernen.
+		AI_Output (self, hero, "Info_Mod_Marduk_Kreis3_32_02"); //Es ist noch nicht an der Zeit für dich, den dritten Kreis zu lernen.
 	};
 };		
 
@@ -357,14 +357,14 @@ FUNC VOID Info_Mod_Marduk_Kreis4_Info ()
 	{
 		if B_TeachMagicCircle (self,hero, 4)
 		{
-			AI_Output (self, hero, "Info_Mod_Marduk_Kreis4_05_01"); //Gut. Alle Zeichen sind erfüllt. Tritt nun ein in den vierten Kreis, auf dass dir die Macht der neuen Zauber inne ist.
+			AI_Output (self, hero, "Info_Mod_Marduk_Kreis4_32_01"); //Gut. Alle Zeichen sind erfüllt. Tritt nun ein in den vierten Kreis, auf dass dir die Macht der neuen Zauber inne ist.
 
 			Mod_MagieKreis = 4;
 		};
 	}
 	else
 	{
-			AI_Output (self, hero, "Info_Mod_Marduk_Kreis4_05_02"); //Noch ist es nicht soweit.
+			AI_Output (self, hero, "Info_Mod_Marduk_Kreis4_32_02"); //Noch ist es nicht soweit.
 	};
 };
 
@@ -396,14 +396,14 @@ FUNC VOID Info_Mod_Marduk_Kreis5_Info()
 	{
 		if B_TeachMagicCircle (self,hero, 5)
 		{
-			AI_Output (self, hero, "Info_Mod_Marduk_Kreis5_05_01"); //Dann tritt nun ein, in den fünften Kreis der Magie. Du wirst nun mächtigere Zauber als je zuvor beherrschen.
+			AI_Output (self, hero, "Info_Mod_Marduk_Kreis5_32_01"); //Dann tritt nun ein, in den fünften Kreis der Magie. Du wirst nun mächtigere Zauber als je zuvor beherrschen.
 
 			Mod_MagieKreis = 5;
 		};
 	}
 	else
 	{
-			AI_Output (self, hero, "Info_Mod_Marduk_Kreis5_05_02"); //Die Zeit ist noch nicht reif dafür.
+			AI_Output (self, hero, "Info_Mod_Marduk_Kreis5_32_02"); //Die Zeit ist noch nicht reif dafür.
 	};
 };
 
@@ -435,17 +435,17 @@ FUNC VOID Info_Mod_Marduk_Kreis6_Info()
 	{
 		if B_TeachMagicCircle (self,hero, 6)  
 		{
-			AI_Output (self, hero, "Info_Mod_Marduk_Kreis6_05_01"); //Viel Zeit ist vergangen, seit du den Bund mit Innos eingegangen bist. Viel ist geschehen und wir finden keine Ruhe.
-			AI_Output (self, hero, "Info_Mod_Marduk_Kreis6_05_02"); //Du bist der Erwählte Innos'. Und als solcher wirst du alle Kraft brauchen, um deine Kämpfe zu bestehen.
-			AI_Output (self, hero, "Info_Mod_Marduk_Kreis6_05_03"); //Ich weihe dich nun, Erwählter. Du trittst in den sechsten Kreis.
-			AI_Output (self, hero, "Info_Mod_Marduk_Kreis6_05_04"); //Die Zauberformeln des letzten Kreises kannst du nun von Hyglas lernen, wenn du es wünscht.
+			AI_Output (self, hero, "Info_Mod_Marduk_Kreis6_32_01"); //Viel Zeit ist vergangen, seit du den Bund mit Innos eingegangen bist. Viel ist geschehen und wir finden keine Ruhe.
+			AI_Output (self, hero, "Info_Mod_Marduk_Kreis6_32_02"); //Du bist der Erwählte Innos'. Und als solcher wirst du alle Kraft brauchen, um deine Kämpfe zu bestehen.
+			AI_Output (self, hero, "Info_Mod_Marduk_Kreis6_32_03"); //Ich weihe dich nun, Erwählter. Du trittst in den sechsten Kreis.
+			AI_Output (self, hero, "Info_Mod_Marduk_Kreis6_32_04"); //Die Zauberformeln des letzten Kreises kannst du nun von Hyglas lernen, wenn du es wünscht.
 
 			Mod_MagieKreis = 6;
 		};
 	}
 	else
 	{
-		AI_Output (self, hero, "Info_Mod_Marduk_Kreis6_05_05"); //Noch ist es nicht an der Zeit dafür. Wenn du ein Stück weiter auf dem Weg gegangen bist, den Innos dir zeigt, dann werde ich dich unterweisen.
+		AI_Output (self, hero, "Info_Mod_Marduk_Kreis6_32_05"); //Noch ist es nicht an der Zeit dafür. Wenn du ein Stück weiter auf dem Weg gegangen bist, den Innos dir zeigt, dann werde ich dich unterweisen.
 	};
 };
 

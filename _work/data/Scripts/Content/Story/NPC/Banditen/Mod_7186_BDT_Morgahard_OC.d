@@ -4,7 +4,7 @@ instance Mod_7186_BDT_Morgahard_OC (Npc_Default)
 	name 		= "Morgahard"; 
 	guild 		= GIL_OUT;
 	id 			= 7186;
-	voice 		= 7;
+	voice 		= 31;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

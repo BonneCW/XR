@@ -4,7 +4,7 @@ INSTANCE Mod_923_NOV_Opolos_NW (Npc_Default)
 	name 		= "Opolos";
 	guild 		= GIL_VLK;
 	id 			= 923;
-	voice 		= 12;
+	voice 		= 31;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

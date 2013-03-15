@@ -4,7 +4,7 @@ instance Mod_7425_KDF_Fuego_REL (Npc_Default)
 	name 		= "Fuego";
 	guild 		= GIL_OUT;
 	id 			= 7425;
-	voice 		= 13;
+	voice 		= 32;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

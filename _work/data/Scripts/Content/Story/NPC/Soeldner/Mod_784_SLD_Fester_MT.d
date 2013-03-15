@@ -4,7 +4,7 @@ instance Mod_784_SLD_Fester_MT (Npc_Default)
 	name 		= "Fester";
 	guild 		= GIL_MIL;
 	id 			= 784;
-	voice 		= 8;
+	voice 		= 31;
 	flags       = 2;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_FRIEND; //weil sonst FK-Waffe zu "Steck die Waffe weg" führt, wenn Fester mit dir losgeht (kein Partymember!)
 	

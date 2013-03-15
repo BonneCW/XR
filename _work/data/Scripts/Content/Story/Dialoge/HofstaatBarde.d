@@ -18,12 +18,12 @@ FUNC INT Info_Mod_HofstaatBarde_Hi_Condition()
 
 FUNC VOID Info_Mod_HofstaatBarde_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Hi_09_00"); //Ein schwarzer Geselle betritt unser Reich,
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Hi_09_01"); //Die Haare sind blond, das Gesicht ist bleich.
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Hi_09_02"); //Die Narben seiner Seele, die sieht man nicht,
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Hi_09_03"); //Nur den Schrecken in seinem Gesicht.
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Hi_09_04"); //Bringt er uns Freude oder Bringt er uns Leid?
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Hi_09_05"); //Kommt er aus Gunst oder kommt er aus Neid?
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Hi_31_00"); //Ein schwarzer Geselle betritt unser Reich,
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Hi_31_01"); //Die Haare sind blond, das Gesicht ist bleich.
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Hi_31_02"); //Die Narben seiner Seele, die sieht man nicht,
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Hi_31_03"); //Nur den Schrecken in seinem Gesicht.
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Hi_31_04"); //Bringt er uns Freude oder bringt er uns Leid?
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Hi_31_05"); //Kommt er aus Gunst oder kommt er aus Neid?
 
 	AI_StopProcessInfos	(self);
 };
@@ -48,28 +48,28 @@ FUNC INT Info_Mod_HofstaatBarde_Sporen_Condition()
 
 FUNC VOID Info_Mod_HofstaatBarde_Sporen_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_00"); //Wer schleicht mit verbotenem Wissen herum?
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_01"); //Wer verkauft den hiesigen König für dumm?
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_02"); //Wer ist er, der er unser Schicksal trägt,
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_03"); //Und noch seine Entscheidung abwägt.
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_04"); //Ich habe dich durchschaut. Vom ersten Tag an war mir klar was du willst, doch ist es dir jetzt klar?
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_05"); //Du wurdest geschickt uns zu zerstören,
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_06"); //Stattdessen begannst du uns anzugehören.
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_07"); //In der einen Hand hältst du die Klinge,
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_08"); //In der andren meine Kehle.
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_09"); //Und während ich noch hier singe,
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_10"); //Hast du nur eine Wahl: WÄHLE!
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_11"); //Willst du Sturm in unsrem Garten säen
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_12"); //Oder ihn gar selbst bebauen
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_13"); //Über  unsre Leichen gehen
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_14"); //Oder aus unsrer Mitte schaun'.
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_15"); //Entscheide dich, und wähle gut,
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_16"); //Gib uns Hoffnung, gib uns Mut
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_17"); //Oder aber: nimm sie uns
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_18"); //Und bring das Säckchen in den Sumpf.
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_19"); //Entscheide dich welcher Seite du angehören willst.
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_20"); //Willst du bei deiner alten Gemeinschaft im Sumpf bleiben, so bring ihnen dieses Pulver.
-	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_09_21"); //Willst du aber einer neuen Gemeinschaft nicht alle Hoffnung nehmen, so bringe dieses Pulver dem Alchemisten.
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_00"); //Wer schleicht mit verbotenem Wissen herum?
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_01"); //Wer verkauft den hiesigen König für dumm?
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_02"); //Wer ist er, der er unser Schicksal trägt,
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_03"); //Und noch seine Entscheidung abwägt.
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_04"); //Ich habe dich durchschaut. Vom ersten Tag an war mir klar, was du willst, doch ist es dir jetzt klar?
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_05"); //Du wurdest geschickt uns zu zerstören,
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_06"); //Stattdessen begannst du uns anzugehören.
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_07"); //In der einen Hand hältst du die Klinge,
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_08"); //In der andren meine Kehle.
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_09"); //Und während ich noch hier singe,
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_10"); //Hast du nur eine Wahl: WÄHLE!
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_11"); //Willst du Sturm in unsrem Garten säen
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_12"); //Oder ihn gar selbst bebauen?
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_13"); //Über unsre Leichen gehen
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_14"); //Oder aus unsrer Mitte schaun?
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_15"); //Entscheide dich, und wähle gut,
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_16"); //Gib uns Hoffnung, gib uns Mut
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_17"); //Oder aber: Nimm sie uns
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_18"); //Und bring das Säckchen in den Sumpf.
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_19"); //Entscheide dich, welcher Seite du angehören willst.
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_20"); //Willst du bei deiner alten Gemeinschaft im Sumpf bleiben, so bring ihnen dieses Pulver.
+	AI_Output(self, hero, "Info_Mod_HofstaatBarde_Sporen_31_21"); //Willst du aber einer neuen Gemeinschaft nicht alle Hoffnung nehmen, so bringe dieses Pulver dem Alchemisten.
 
 	AI_StopProcessInfos	(self);
 

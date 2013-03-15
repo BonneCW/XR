@@ -4,7 +4,7 @@ instance Mod_741_NONE_Monty_NW (Npc_Default)
 	name 		= "Monty"; 
 	guild 		= GIL_PAL;
 	id 			= 741;
-	voice 		= 8;
+	voice 		= 31;
 	flags       = 0;							
 	npctype		= NPCTYPE_MAIN;
 	

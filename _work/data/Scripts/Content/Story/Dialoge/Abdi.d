@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Abdi_Hi (C_INFO)
 	information	= Info_Mod_Abdi_Hi_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Wer bist du?";
+	description	= "Du bist noch sehr jung.";
 };
 
 FUNC INT Info_Mod_Abdi_Hi_Condition()
@@ -16,9 +16,11 @@ FUNC INT Info_Mod_Abdi_Hi_Condition()
 
 FUNC VOID Info_Mod_Abdi_Hi_Info()
 {
-	B_Say (hero, self, "$WHOAREYOU");
-
-	AI_Output(self, hero, "Info_Mod_Abdi_Hi_09_01"); //Ich bin Abdi.
+	AI_Output(hero, self, "Info_Mod_Abdi_Hi_15_00"); //Du bist noch sehr jung.
+	AI_Output(self, hero, "Info_Mod_Abdi_Hi_31_01"); //(emotionslos) Alter spielt für Beliar keine Rolle. Auf die Inbrunst des Glaubens kommt es an.
+	AI_Output(hero, self, "Info_Mod_Abdi_Hi_15_02"); //Nur wer in jungen Jahren indoktriniert wird, hat das Zeug zu einem richtigen Fanatiker, stimmt's? Wie lautet dein Name?
+	AI_Output(self, hero, "Info_Mod_Abdi_Hi_31_03"); //Abdi, und ich bin kein Fanatiker. Ich bin lediglich fähig, meine Emotionen zu überwinden und mich nicht von ihnen leiten zu lassen, wie es bei schwächerem Fleisch häufig vorkommt.
+	AI_Output(hero, self, "Info_Mod_Abdi_Hi_15_04"); //Sage ich ja, ein Fanatiker.
 };
 
 INSTANCE Info_Mod_Abdi_WieLang (C_INFO)
@@ -43,7 +45,7 @@ FUNC INT Info_Mod_Abdi_WieLang_Condition()
 FUNC VOID Info_Mod_Abdi_WieLang_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Abdi_WieLang_15_00"); //Wie lange bist du schon dabei?
-	AI_Output(self, hero, "Info_Mod_Abdi_WieLang_09_01"); //Beliar hat mich erwählt, Großes zu leisten. Entsprechend früh hat er mich der Gemeinschaft zugeführt.
+	AI_Output(self, hero, "Info_Mod_Abdi_WieLang_31_01"); //Beliar hat mich erwählt, Großes zu leisten. Entsprechend früh hat er mich der Gemeinschaft zugeführt.
 };
 
 INSTANCE Info_Mod_Abdi_Eltern (C_INFO)
@@ -68,10 +70,10 @@ FUNC INT Info_Mod_Abdi_Eltern_Condition()
 FUNC VOID Info_Mod_Abdi_Eltern_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Abdi_Eltern_15_00"); //Was haben deine Eltern dazu gesagt?
-	AI_Output(self, hero, "Info_Mod_Abdi_Eltern_09_01"); //Ich kann mich nicht an meine Eltern erinnern.
-	AI_Output(self, hero, "Info_Mod_Abdi_Eltern_09_02"); //Aufgewachsen bin ich in dieser stinkenden Innosschule, wo sie mich triezten und quälten.
-	AI_Output(self, hero, "Info_Mod_Abdi_Eltern_09_03"); //Als sie uns zum Pflanzensammeln schickten, lief ich davon.
-	AI_Output(self, hero, "Info_Mod_Abdi_Eltern_09_04"); //Eduard fand mich damals und brachte mich hierher. Erst hier habe ich mein Zuhause gefunden.
+	AI_Output(self, hero, "Info_Mod_Abdi_Eltern_31_01"); //Ich kann mich nicht an meine Eltern erinnern.
+	AI_Output(self, hero, "Info_Mod_Abdi_Eltern_31_02"); //Aufgewachsen bin ich in dieser stinkenden Innosschule, wo sie mich triezten und quälten.
+	AI_Output(self, hero, "Info_Mod_Abdi_Eltern_31_03"); //Als sie uns zum Pflanzensammeln schickten, lief ich davon.
+	AI_Output(self, hero, "Info_Mod_Abdi_Eltern_31_04"); //Eduard fand mich damals und brachte mich hierher. Erst hier habe ich mein Zuhause gefunden.
 };
 
 INSTANCE Info_Mod_Abdi_DontTalk (C_INFO)
@@ -96,7 +98,7 @@ FUNC INT Info_Mod_Abdi_DontTalk_Condition()
 
 FUNC VOID Info_Mod_Abdi_DontTalk_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Abdi_DontTalk_09_00"); //Mit euch Gesindel geb ich mich nicht ab!
+	AI_Output(self, hero, "Info_Mod_Abdi_DontTalk_31_00"); //Mit euch Gesindel geb ich mich nicht ab.
 
 	AI_StopProcessInfos	(self);
 };
@@ -124,21 +126,21 @@ FUNC INT Info_Mod_Abdi_Belagerung_Condition()
 FUNC VOID Info_Mod_Abdi_Belagerung_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Abdi_Belagerung_15_00"); //Brauchst du Hilfe?
-	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_09_01"); //Ja, sogar sehr!
+	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_31_01"); //Ja.
 
 	B_Say	(hero, self, "$WASISTZUTUN");
 
-	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_09_02"); //In den letzten zwei Nächten wurde jeweils einer unser Novizen tot aufgefunden.
-	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_09_03"); //Beide wurden grausam zugerichtet.
-	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_09_04"); //Allerdings ist in der Nähe des Lagers niemand gesichtet worden, der dafür verantwortlich sein könnte.
-	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_09_05"); //Wir befürchten also, dass wir einen Verräter in unseren Reihen haben.
-	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_09_06"); //Wir müssen den Mörder ausfindig machen, um Schlimmeres zu verhindern.
+	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_31_02"); //In den letzten zwei Nächten wurde jeweils einer unser Novizen tot aufgefunden.
+	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_31_03"); //Beide wurden grausam zugerichtet.
+	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_31_04"); //Allerdings ist in der Nähe des Lagers niemand gesichtet worden, der dafür verantwortlich sein könnte.
+	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_31_05"); //Wir befürchten also, dass wir einen Verräter in unseren Reihen haben.
+	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_31_06"); //Wir müssen den Mörder ausfindig machen, um Schlimmeres zu verhindern.
 
 	B_Say	(hero, self, "$WIESOLLICHVORGEHEN");
 
-	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_09_07"); //Befrage unsere Leute, um an Informationen zu kommen. Töte den Mörder!
-	AI_Output(hero, self, "Info_Mod_Abdi_Belagerung_15_08"); //Ich werde mein Bestes geben!
-	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_09_09"); //Versage bitte nicht!
+	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_31_07"); //Befrage unsere Leute, um an Informationen zu kommen. Und wenn du ihn findest: Töte den Mörder.
+	AI_Output(hero, self, "Info_Mod_Abdi_Belagerung_15_08"); //Ich werde mein Bestes geben.
+	AI_Output(self, hero, "Info_Mod_Abdi_Belagerung_31_09"); //Versage nicht!
 
 	Log_CreateTopic	(TOPIC_MOD_BEL_DAEMON, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_BEL_DAEMON, LOG_RUNNING);
@@ -167,10 +169,9 @@ FUNC INT Info_Mod_Abdi_DaemonTot_Condition()
 
 FUNC VOID Info_Mod_Abdi_DaemonTot_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Abdi_DaemonTot_15_00"); //Der Dämon ist tot!
-	AI_Output(self, hero, "Info_Mod_Abdi_DaemonTot_09_01"); //Danke, damit hast du uns einen großen Dienst erwiesen. Hier, nimm diese Heilrune.
+	AI_Output(hero, self, "Info_Mod_Abdi_DaemonTot_15_00"); //Der Dämon ist tot.
+	AI_Output(self, hero, "Info_Mod_Abdi_DaemonTot_31_01"); //Vielen Dank. Beliar wird dir deinen Dienst entgelten. Hier, nimm diese Heilrune.
 
-	CreateInvItems	(self, ItRu_LightHeal, 1);
 	B_GiveInvItems	(self, hero, ItRu_LightHeal, 1);
 
 	B_GivePlayerXP	(1000);

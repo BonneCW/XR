@@ -5,7 +5,7 @@ instance Mod_7266_GUR_BaalLukor_OGY (Npc_Default)
 	Npctype 	=		NPCTYPE_Main;
 	guild 		=		GIL_DMT;
 	
-	voice 		=		12;
+	voice 		=		31;
 	id 			=		7266;
 		
 	B_SetAttributesToChapter	(self, 4);

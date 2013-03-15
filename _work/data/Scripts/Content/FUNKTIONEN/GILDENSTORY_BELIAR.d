@@ -130,7 +130,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 			if (GardeCutscene_Counter == 15)
 			{
-				AI_Output(hero, NULL, "Info_Mod_Xardas_GardeInnos_15_03"); //Diese schwafelten davon, dass die Garde Innos' wieder berfeit sei und Beliar vernichten würde.
+				AI_Output(hero, NULL, "Info_Mod_Xardas_GardeInnos_15_03"); //Diese schwafelten davon, dass die Garde Innos' wieder befreit sei und Beliar vernichten würde.
 			};
 
 			if (GardeCutscene_Counter == 20)
@@ -160,7 +160,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 			if (GardeCutscene_Counter == 45)
 			{
-				AI_Output(Mod_513_DMB_Xardas_NW, NULL, "Info_Mod_Xardas_GardeInnos_14_09"); //Doch nun wandelt die viel Stärkere Garde Innos' unter uns. Ihr Ziel ist es unseren Gott zu besiegen. Wir müssen sie aufhalten.
+				AI_Output(Mod_513_DMB_Xardas_NW, NULL, "Info_Mod_Xardas_GardeInnos_14_09"); //Doch nun wandelt die viel stärkere Garde Innos' unter uns. Ihr Ziel ist es unseren Gott zu besiegen. Wir müssen sie aufhalten.
 			};
 
 			if (GardeCutscene_Counter == 50)
@@ -217,7 +217,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 			if (GardeCutscene_Counter == 88)
 			{
-				AI_Output(Mod_513_DMB_Xardas_NW, NULL, "Info_Mod_Xardas_GardeInnos_14_17"); //Die Situation ist schlimmer als erwartet. Ich werde dich sofort zu den Dämonenrittern telepotieren und du musst ihnen helfen.
+				AI_Output(Mod_513_DMB_Xardas_NW, NULL, "Info_Mod_Xardas_GardeInnos_14_17"); //Die Situation ist schlimmer als erwartet. Ich werde dich sofort zu den Dämonenrittern telepotieren, und du musst ihnen helfen.
 			};
 
 			if (GardeCutscene_Counter == 93)
@@ -524,7 +524,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 			if (Mod_BEL_GregOwen_Counter == 1)
 			{
-				AI_Output(Mod_939_PIR_Owen_AW, NULL, "Info_Mod_GregOwen_03_00"); //Ich werde sie ablenken.
+				AI_Output(Mod_939_PIR_Owen_AW, NULL, "Info_Mod_GregOwen_31_00"); //Ich werde sie ablenken.
 			};
 
 			if (Mod_BEL_GregOwen_Counter == 6)
@@ -536,12 +536,12 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 			if (Mod_BEL_GregOwen_Counter == 11)
 			{
-				AI_Output(Mod_939_PIR_Owen_AW, NULL, "Info_Mod_GregOwen_03_02"); //Alligator Jack hat sich für mich geopfert. Jetzt ist es das mindeste, dass ich diese Aufgabe übernehme.
+				AI_Output(Mod_939_PIR_Owen_AW, NULL, "Info_Mod_GregOwen_31_02"); //Alligator Jack hat sich für mich geopfert. Jetzt ist es das mindeste, dass ich diese Aufgabe übernehme.
 			};
 
 			if (Mod_BEL_GregOwen_Counter == 16)
 			{
-				AI_Output(Mod_764_PIR_Greg_AW, NULL, "Info_Mod_GregOwen_01_03"); //Ne, du weißt wohl nicht, was du das redest. Außerdem bist du sowieso noch geschwächt.
+				AI_Output(Mod_764_PIR_Greg_AW, NULL, "Info_Mod_GregOwen_01_03"); //Nee, du weißt wohl nicht, was du das redest. Außerdem bist du sowieso noch geschwächt.
 			};
 
 			if (Mod_BEL_GregOwen_Counter == 21)
@@ -551,27 +551,27 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 			if (Mod_BEL_GregOwen_Counter == 26)
 			{
-				AI_Output(Mod_939_PIR_Owen_AW, NULL, "Info_Mod_GregOwen_03_05"); //Ich weiß sehr wohl, worauf ich mich da einlasse.
+				AI_Output(Mod_939_PIR_Owen_AW, NULL, "Info_Mod_GregOwen_31_05"); //Ich weiß sehr wohl, worauf ich mich da einlasse.
 			};
 
 			if (Mod_BEL_GregOwen_Counter == 31)
 			{
-				AI_Output(Mod_939_PIR_Owen_AW, NULL, "Info_Mod_GregOwen_03_06"); //Ich mag geschwächt sein, umso mehr braucht ihr beim Ausbruch aus dem Lager jeden starken, kampffähigen Mann.
+				AI_Output(Mod_939_PIR_Owen_AW, NULL, "Info_Mod_GregOwen_31_06"); //Ich mag geschwächt sein, umso mehr braucht ihr beim Ausbruch aus dem Lager jeden starken, kampffähigen Mann.
 			};
 
 			if (Mod_BEL_GregOwen_Counter == 36)
 			{
-				AI_Output(Mod_939_PIR_Owen_AW, NULL, "Info_Mod_GregOwen_03_07"); //Außerdem war ich sowieso immer ein guter Läufer und mit Samuels schnellem Hering hätte ich durchaus eine Chance, ihnen zu entkommen ... oder zumindest sie lange genug abzulenken.
+				AI_Output(Mod_939_PIR_Owen_AW, NULL, "Info_Mod_GregOwen_31_07"); //Außerdem war ich sowieso immer ein guter Läufer und mit Samuels schnellem Hering hätte ich durchaus eine Chance, ihnen zu entkommen ... oder zumindest sie lange genug abzulenken.
 			};
 
 			if (Mod_BEL_GregOwen_Counter == 41)
 			{
-				AI_Output(Mod_939_PIR_Owen_AW, NULL, "Info_Mod_GregOwen_03_08"); //Mein Entschluss steht fest.
+				AI_Output(Mod_939_PIR_Owen_AW, NULL, "Info_Mod_GregOwen_31_08"); //Mein Entschluss steht fest.
 			};
 
 			if (Mod_BEL_GregOwen_Counter == 46)
 			{
-				AI_Output(Mod_764_PIR_Greg_AW, NULL, "Info_Mod_GregOwen_01_09"); //Nu hör sich das mal einer an. Mut nenn ich das, sich für so ein Himmelfahrtskommando zu melden. Respekt Junge, Respekt.
+				AI_Output(Mod_764_PIR_Greg_AW, NULL, "Info_Mod_GregOwen_01_09"); //Nu hör sich das mal einer an. Mut nenn ich das, sich für so ein Himmelfahrtskommando zu melden. Respekt, Junge, Respekt.
 			};
 
 			if (Mod_BEL_GregOwen_Counter == 51)
@@ -586,7 +586,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 			if (Mod_BEL_GregOwen_Counter == 61)
 			{
-				B_LogEntry	(TOPIC_MOD_BEL_BEFREIUNG, "Owen will sich opfern und den Versuch unternehmen, die 3 lange genug abzulenken, bis wir das Artefakt zerstört haben. Samuels schneller Hering wird hoffentlich halten, was er verspricht ...");
+				B_LogEntry	(TOPIC_MOD_BEL_BEFREIUNG, "Owen will sich opfern und den Versuch unternehmen, die drei lange genug abzulenken, bis wir das Artefakt zerstört haben. Samuels schneller Hering wird hoffentlich halten, was er verspricht ...");
 
 				B_StartOtherRoutine	(Mod_764_PIR_Greg_AW, "SAMMELN");
 				B_StartOtherRoutine	(Mod_1079_PIR_PIRAT_AW, "SAMMELN");
@@ -709,7 +709,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 				AI_TurnToNpc	(Mod_520_DMR_Raven_MT, hero);
 				AI_TurnToNpc	(hero, Mod_520_DMR_Raven_MT);
 
-				AI_Output(Mod_520_DMR_Raven_MT, NULL, "Info_Mod_BS_Rede_10_00"); //Gut, dass du da bist. Ich muss dir noch etwas dringendes mitteilen.
+				AI_Output(Mod_520_DMR_Raven_MT, NULL, "Info_Mod_BS_Rede_10_00"); //Gut, dass du da bist. Ich muss dir noch etwas Dringendes mitteilen.
 			};
 
 			if (Talkessel_Counter == 5)
