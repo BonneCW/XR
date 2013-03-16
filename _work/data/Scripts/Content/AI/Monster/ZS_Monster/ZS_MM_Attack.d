@@ -349,11 +349,23 @@ func int ZS_MM_Attack_Loop()
 		if (Npc_GetDistToWP(self, self.wp) > self.aivar[AIV_MaxDistToWp])
 		&& (Npc_GetDistToWP(other, self.wp) > self.aivar[AIV_MaxDistToWp])
 		{
+			if (self.fight_tactic != FAI_NAILED) {
+				self.aivar[AIV_OriginalFightTactic] = self.fight_tactic;
+			};
+
+			if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Troll_Black)) {
+				self.flags = 2;
+			};
+
 			self.fight_tactic = FAI_NAILED;
 		}
 		else //einer von beiden nah genug am self.wp
 		{
 			self.fight_tactic = self.aivar[AIV_OriginalFightTactic];
+
+			if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Troll_Black)) {
+				self.flags = 0;
+			};
 		};
 	};
 	

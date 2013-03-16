@@ -94,7 +94,6 @@ func void B_SetVisuals_Troll_Silber()
 //************************
 INSTANCE Troll_Black	(Mst_Default_Troll_Black)
 {
-	aivar[AIV_MaxDistToWp]			= 2500;
 	B_SetVisuals_Troll_Black();
 	Npc_SetToFistMode(self);
 };
