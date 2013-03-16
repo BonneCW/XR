@@ -32,6 +32,8 @@ FUNC VOID Info_Mod_Wachter_01_Hi_B()
 
 	Info_ClearChoices	(Info_Mod_Wachter_01_Hi);
 
+	self.flags = 0;
+
 	AI_StopProcessInfos	(hero);
 };
 
