@@ -60,7 +60,7 @@ INSTANCE Info_Mod_DMRMinenwache_GoIn3 (C_INFO)
 	information	= Info_Mod_DMRMinenwache_GoIn3_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Mir in den Arsch zu treten? Das glaube ich erst, wenn ich es gesehen habe ...";
+	description	= "Pass auf, ich bin gefährlich.";
 };
 
 FUNC INT Info_Mod_DMRMinenwache_GoIn3_Condition()
@@ -73,8 +73,40 @@ FUNC INT Info_Mod_DMRMinenwache_GoIn3_Condition()
 
 FUNc VOID Info_Mod_DMRMinenwache_GoIn3_Info()
 {
-	AI_Output(hero, self, "Info_Mod_DMRMinenwache_GoIn3_15_00"); //Mir in den Arsch zu treten? Das glaube ich erst, wenn ich es gesehen habe ...
-	AI_Output(self, hero, "Info_Mod_DMRMinenwache_GoIn3_05_01"); //Ok, jetzt reicht’s.
+	AI_Output(hero, self, "Info_Mod_DMRMinenwache_GoIn3_15_00"); //Pass auf, ich bin gefährlich.
+	AI_Output(self, hero, "Info_Mod_DMRMinenwache_GoIn3_05_01"); //Haha, das ich nicht lache, du Wurm. Ich könnte dich mit geschlossenen Augen umhauen.
+	AI_Output(hero, self, "Info_Mod_DMRMinenwache_GoIn3_15_02"); //Das glaube ich erst, wenn ich es gesehen habe.
+	AI_Output(self, hero, "Info_Mod_DMRMinenwache_GoIn3_05_03"); //Na schön, jetzt erlebst du dein blaues Wunder.
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "SHOWTRAINING");
+};
+
+INSTANCE Info_Mod_DMRMinenwache_GoIn4 (C_INFO)
+{
+	npc		= Mod_7358_DMR_Daemonenritter_MT;
+	nr		= 1;
+	condition	= Info_Mod_DMRMinenwache_GoIn4_Condition;
+	information	= Info_Mod_DMRMinenwache_GoIn4_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Mir in den Arsch zu treten? Das glaube ich erst, wenn ich es gesehen habe ...";
+};
+
+FUNC INT Info_Mod_DMRMinenwache_GoIn4_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_DMRMinenwache_GoIn2))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_DMRMinenwache_GoIn3))
+	{
+		return 1;
+	};
+};
+
+FUNc VOID Info_Mod_DMRMinenwache_GoIn4_Info()
+{
+	AI_Output(hero, self, "Info_Mod_DMRMinenwache_GoIn4_15_00"); //Mir in den Arsch zu treten? Das glaube ich erst, wenn ich es gesehen habe ...
+	AI_Output(self, hero, "Info_Mod_DMRMinenwache_GoIn4_05_01"); //Ok, jetzt reicht’s.
 
 	AI_StopProcessInfos	(self);
 

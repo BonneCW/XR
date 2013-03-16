@@ -42,3 +42,9 @@ FUNC VOID Rtn_Start_7358()
 	TA_Guard_Passage	(08,00,23,00,"PALTOBURGLINKS_2_3");
 	TA_Guard_Passage 	(23,00,08,00,"PALTOBURGLINKS_2_3");
 };
+
+FUNC VOID Rtn_ShowTraining_7358()
+{	
+	TA_Practice_Sword	(08,00,23,00,"PALTOBURGLINKS_2_3");
+	TA_Practice_Sword 	(23,00,08,00,"PALTOBURGLINKS_2_3");
+};
