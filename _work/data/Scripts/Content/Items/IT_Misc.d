@@ -1536,6 +1536,7 @@ INSTANCE ItMi_NagurPaket (C_Item)
 	visual 				=	"ItMi_Packet.3ds";
 	material 			=	MAT_LEATHER;
 	description			= 	name;
+	TEXT[1]				=	"Paket mit Schmuggelware von Nagur";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
