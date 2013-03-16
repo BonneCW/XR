@@ -590,7 +590,7 @@ instance ItRi_Seering (C_Item)
 	description				= "Ring der Holzhaut";
 	
 	TEXT[2]					= NAME_Prot_Point;
-	COUNT[2]				= Ri_ProtPoint;
+	COUNT[2]				= Ri_ProtPoint / 1000;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
@@ -634,7 +634,7 @@ instance ItRi_Seering (C_Item)
 	description				= "Ring der Steinhaut";
 	
 	TEXT[2]					= NAME_Prot_Point;
-	COUNT[2]				= Ri_ProtPoint02;
+	COUNT[2]				= Ri_ProtPoint02 / 1000;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
@@ -678,7 +678,7 @@ instance ItRi_Seering (C_Item)
 	description				= "Ring der Eisenhaut";
 
 	TEXT[2]					= NAME_Prot_Edge;
-	COUNT[2]				= Ri_ProtEdge/1000;
+	COUNT[2]				= Ri_ProtEdge / 1000;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
@@ -724,7 +724,7 @@ instance ItRi_Seering (C_Item)
 	description				= "Ring der Erzhaut";
 	
 	TEXT[2]					= NAME_Prot_Edge;
-	COUNT[2]				= Ri_ProtEdge02;
+	COUNT[2]				= Ri_ProtEdge02 / 1000;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
@@ -865,9 +865,9 @@ instance ItRi_Seering (C_Item)
 	TEXT[2]			= NAME_Prot_Fire;
 	COUNT[2]		= Ri_TProtFire;
 	TEXT[3] 		= NAME_Prot_Point;
-	COUNT[3]		= Ri_TProtPoint;
+	COUNT[3]		= Ri_TProtPoint / 1000;
 	TEXT[4]			= NAME_Prot_Edge;
-	COUNT[4]		= Ri_TProtEdge;
+	COUNT[4]		= Ri_TProtEdge / 1000;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 		

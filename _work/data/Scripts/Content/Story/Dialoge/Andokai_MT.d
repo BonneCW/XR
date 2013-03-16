@@ -47,18 +47,19 @@ FUNC VOID Info_Mod_Andokai_Hi_A()
 	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_12"); //Du wirst dich also in das Kloster begeben und diesen Hammer stehlen.
 	AI_Output(hero, self, "Info_Mod_Andokai_Hi_A_15_13"); //Alles klar. Werde ich denn einfach so ins Kloster gelassen?
 	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_14"); //Nein. Nur Innosgläubige können das Eingangstor passieren. Es gibt aber rechts neben dem Eingang eine niedrige Mauer, über die du ins Klosterinnere kommst.
-	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_15"); //Um aber nicht aufzufallen, musst du eine Novizenrobe tragen. So wird der Schwindel funktionieren.
+	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_15"); //Um aber nicht aufzufallen, musst du eine Novizenrobe tragen. Wir haben ein grobes Imitat, mit dem du kaum jemanden beeindrucken wirst.
+	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_16"); //Aber die alten Augen von Gorax werden keinen Unterschied feststellen.
 
 	CreateInvItems	(self, ITAR_FAKE_NOV_L, 1);
 	B_GiveInvItems	(self, hero, ITAR_FAKE_NOV_L, 1);
 
-	AI_Output(hero, self, "Info_Mod_Andokai_Hi_A_15_16"); //Und wie komme ich an den Hammer? Wird der nicht beschützt?
-	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_17"); //Natürlich wird er das. Du wirst dir etwas einfallen lassen müssen.
-	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_18"); //Wenn du nicht weiter weißt, frag Bodo in der Stadt. Der hat selbst letztens eine ähnliche Aufgabe erfüllen müssen.
-	AI_Output(hero, self, "Info_Mod_Andokai_Hi_A_15_19"); //Dann mache ich mich mal auf den Weg.
-	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_20"); //Warte! Wenn du eh schon im Kloster bist, kannst du auch gleich noch etwas anderes erledigen. Dort ist nämlich Gorax verantwortlich für die Weinproduktion.
-	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_21"); //Wein ist gut, wir brauchen ihn nicht nur für unsere Rituale, sondern auch, weil er ausgezeichnet schmeckt - das muss man den roten Furzknoten lassen.
-	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_22"); //Erwirb das Vertrauen von Gorax. Biete ihm an, einen Botengang durchzuführen. Dann nimm den Wein und kehre zurück. Bring ihn Myxir.
+	AI_Output(hero, self, "Info_Mod_Andokai_Hi_A_15_17"); //Und wie komme ich an den Hammer? Wird der nicht beschützt?
+	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_18"); //Natürlich wird er das. Du wirst dir etwas einfallen lassen müssen.
+	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_19"); //Wenn du nicht weiter weißt, frag Bodo in der Stadt. Der hat selbst letztens eine ähnliche Aufgabe erfüllen müssen.
+	AI_Output(hero, self, "Info_Mod_Andokai_Hi_A_15_20"); //Dann mache ich mich mal auf den Weg.
+	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_21"); //Warte! Wenn du eh schon im Kloster bist, kannst du auch gleich noch etwas anderes erledigen. Dort ist nämlich Gorax verantwortlich für die Weinproduktion.
+	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_22"); //Wein ist gut, wir brauchen ihn nicht nur für unsere Rituale, sondern auch, weil er ausgezeichnet schmeckt - das muss man den roten Furzknoten lassen.
+	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_23"); //Erwirb das Vertrauen von Gorax. Biete ihm an, einen Botengang durchzuführen. Dann nimm den Wein und kehre zurück. Bring ihn Myxir.
 
 	Info_ClearChoices	(Info_Mod_Andokai_Hi);
 

@@ -204,8 +204,7 @@ INSTANCE Info_Mod_Bosper_Felle (C_INFO)
 FUNC INT Info_Mod_Bosper_Felle_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Bosper_Lehrling))
-	&& ((Npc_HasItems(hero, ItAt_WolfFur) >= 8)
-	|| (Npc_HasItems(hero, ItAt_WolfFur_Rein) >= 8))
+	&& (Npc_HasItems(hero, ItAt_WolfFur) + Npc_HasItems(hero, ItAt_WolfFur_Rein) >= 8)
 	{
 		return 1;
 	};
@@ -215,13 +214,20 @@ FUNC VOID Info_Mod_Bosper_Felle_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bosper_Felle_15_00"); //Ich habe hier acht Wolfsfelle.
 
-	if (Npc_HasItems(hero, ItAt_WolfFur) >= 8)
-	{
-		B_GiveInvItems	(hero, self, ItAt_WolfFur, 8);
-	}
-	else
-	{
-		B_GiveInvItems	(hero, self, ItAt_WolfFur_Rein, 8);
+	var int rein; rein = Npc_HasItems(hero, ItAt_WolfFur_Rein);
+
+	if (rein > 8) {
+		rein = 8;
+	};
+
+	if (rein > 0) {
+		B_GiveInvItems	(hero, self, ItAt_WolfFur_Rein, rein);
+	};
+
+	if (rein < 8) {
+		rein = 8 - rein;
+
+		B_GiveInvItems	(hero, self, ItAt_WolfFur, rein);
 	};
 
 	AI_Output(self, hero, "Info_Mod_Bosper_Felle_11_01"); //Sieh an, du scheinst ja wenigstens ein geschickter Jäger zu sein.
