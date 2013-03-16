@@ -146,7 +146,7 @@ INSTANCE ItMi_AbsorbKristall (C_Item)
 
 	value 				=	1000;
 
-	visual				=	"ItRu_PalLight.3ds";
+	visual				=	"ItMi_KristallDerAbsorption.3ds";
 	material			=	MAT_STONE;
 
 	wear				= 	WEAR_EFFECT;
@@ -167,7 +167,7 @@ INSTANCE ItMi_AbsorbKristall2 (C_Item)
 
 	value 				=	1000;
 
-	visual				=	"ItRu_PalLight.3ds";
+	visual				=	"ItMi_KristallDerAbsorption.3ds";
 	material			=	MAT_STONE;
 
 	wear				= 	WEAR_EFFECT;
