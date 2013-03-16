@@ -40,7 +40,7 @@ instance Mod_924_RIT_Sergio_NW (Npc_Default)
 FUNC VOID Rtn_Start_924 ()
 {
 	TA_Pray_Innos  	(08,00,23,00,"NW_MONASTERY_CHAPELL_02");
-	TA_Pray_Innos 	(23,00,08,00,"NW_MONASTERY_CHAPELL_02");	
+	TA_Practice_Sword 	(23,00,08,00,"NW_MONASTERY_TRAIN_01");	
 };
 
 FUNC VOID Rtn_Dragon_924 ()
