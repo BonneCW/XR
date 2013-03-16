@@ -170,6 +170,8 @@ FUNC VOID Info_Mod_Nagur_Geschaeft2_Info()
 		B_SetTopicStatus	(TOPIC_MOD_NAGUR_GESCHAEFT, LOG_SUCCESS);
 
 		B_GivePlayerXP	(350);
+
+		Mod_Nagur_Geschaeft_Tag = Wld_GetDay();
 	};
 };
 
