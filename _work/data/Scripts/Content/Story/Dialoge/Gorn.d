@@ -1087,7 +1087,7 @@ FUNC VOID Info_Mod_Gorn_Hilfe_Alvares()
 {
 	AI_Output(hero, self, "Info_Mod_Gorn_Hilfe_Alvares_15_00"); //Ich soll einen Söldneranwärter finden.
 	AI_Output(self, hero, "Info_Mod_Gorn_Hilfe_Alvares_12_01"); //Einen Söldneranwärter ... hmm, auf den Bauernhöfen wird es wohl kaum einen qualifizierten Kämpfer geben.
-	AI_Output(self, hero, "Info_Mod_Gorn_Hilfe_Alvares_12_02"); //Am ehesten wirst du in der Stadt jemanden finden, vielleicht Leute, die gerade nicht so gut auf die Stadtwachen und Paladine zu sprechen sind, wenn du verstehst, was ich meine.
+	AI_Output(self, hero, "Info_Mod_Gorn_Hilfe_Alvares_12_02"); //Am ehesten solche, die schon von den Stadtwachen wegen ihrer Taten einkassiert wurden.
 };
 
 INSTANCE Info_Mod_Gorn_Pickpocket (C_INFO)
