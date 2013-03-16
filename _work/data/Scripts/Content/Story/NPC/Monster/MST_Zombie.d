@@ -1628,6 +1628,10 @@ INSTANCE Zombie_Burgherr		(Mst_Default_Zombie)
 
 	B_SetVisuals_Maya_Zombie04();
 	Npc_SetToFistMode(self);
+
+	CreateInvItems	(self, ItMi_Gold, 332);
+	CreateInvItems	(self, ItMi_Nugget, 3);
+	CreateInvItems	(self, ItMi_SilverRing, 1);
 };
 //*************
 //	Einer der Totenwächter  	
