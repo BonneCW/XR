@@ -17,7 +17,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 	if (CurrentLevel == NEWWORLD_ZEN)
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Argibast))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_NW_Gefangen)))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Urnol_Hi))
+	&& (Mod_DunklerPilger > 0)
 	{
 		if (Npc_GetDistToWP(hero,"NW_TELEPORTSTATION_CITY")<3000)
 		{
