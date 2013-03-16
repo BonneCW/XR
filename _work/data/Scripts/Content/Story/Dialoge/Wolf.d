@@ -108,6 +108,8 @@ FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung2_Info()
 	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung2_31_01"); //Spitze! Ich mach mich gleich an die Arbeit. Komm in paar Tagen wieder vorbei.
 
 	Mod_Wolf_MinecrawlerRuestung_Day = Wld_GetDay();
+
+	B_GivePlayerXP	(200);
 };
 
 INSTANCE Info_Mod_Wolf_MinecrawlerRuestung3 (C_INFO)
