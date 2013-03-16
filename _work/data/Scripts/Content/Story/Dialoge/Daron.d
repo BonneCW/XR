@@ -270,7 +270,8 @@ FUNC INT Info_Mod_Daron_Akahasch2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Daron_InsKloster))
 	&& ((Npc_KnowsInfo(hero, Info_Mod_Akahasch_AtKloster))
-	|| (Npc_IsDead(Mod_4016_NOV_Akahasch_NW)))
+	|| ((Mod_Akahasch_Guiding == 1)
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Akahasch_AtKloster))))
 	{
 		return 1;
 	};
