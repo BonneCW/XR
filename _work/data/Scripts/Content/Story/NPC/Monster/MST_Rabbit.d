@@ -2,7 +2,7 @@ PROTOTYPE Mst_Default_Rabbit (C_Npc)
 {
 	//----- Monster ----
 	name							=	"Hase";
-	guild							=	GIL_SHEEP;
+	guild							=	GIL_MEATBUG;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Rabbit;
 	level							=	1;
 	
