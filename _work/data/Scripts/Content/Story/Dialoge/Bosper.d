@@ -367,11 +367,14 @@ FUNC VOID Info_Mod_Bosper_Aufnahme_A()
 	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_09"); //Deine erste Aufgabe wird darin bestehen, mir Wargfelle zu beschaffen.
 	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_10"); //Achte aber darauf, dass die Felle möglichst unbeschädigt bleiben, soll heißen: ziele auf die Beine.
 	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_11"); //Beschädigte Felle bringen weniger Gold, und man wird sie schlechter los.
-	AI_Output(hero, self, "Info_Mod_Bosper_Aufnahme_A_15_12"); //Wo finde ich Warge?
-	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_13"); //In der Umgebung der Stadt sind sie selten.
-	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_14"); //In abgelegenen Gebieten sind sie eher anzutreffen, und im Minental treiben sie sicher auch ihr Unwesen.
-	AI_Output(hero, self, "Info_Mod_Bosper_Aufnahme_A_15_15"); //Und wie viele Felle brauchst du?
-	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_16"); //Bringe mir fünf unbeschädigte Felle, und ich will dir zeigen, wie du bessere Pfeile herstellen kannst.
+	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_12"); //Natürlich kannst du auch versuchen unbeschädigte Felle über das Totkloppen der Viecher mit stumpfen Waffen zu bekommen.
+	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_13"); //Das ist aber eigentlich eher was für rohe Schläger die auf pure Gewalt setzen und nicht für geschickte Jäger.
+	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_14"); //Außerdem wird es dabei in etwa der Hälfte der Fälle passieren, dass die Haut der Tiere und damit ihr Fell durch die wuchtigen Schläge aufplatzt oder reißt.
+	AI_Output(hero, self, "Info_Mod_Bosper_Aufnahme_A_15_15"); //Wo finde ich Warge?
+	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_16"); //In der Umgebung der Stadt sind sie selten.
+	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_17"); //In abgelegenen Gebieten sind sie eher anzutreffen, und im Minental treiben sie sicher auch ihr Unwesen.
+	AI_Output(hero, self, "Info_Mod_Bosper_Aufnahme_A_15_18"); //Und wie viele Felle brauchst du?
+	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_19"); //Bringe mir fünf unbeschädigte Felle, und ich will dir zeigen, wie du bessere Pfeile herstellen kannst.
 
 	Mod_IstLehrling	= 1;
 
