@@ -92,6 +92,7 @@ INSTANCE Info_Mod_Nagur_Geschaeft (C_INFO)
 FUNC INT Info_Mod_Nagur_Geschaeft_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Nagur_AkahaschTot))
+	&& (Kapitel >= 2)
 	{
 		return 1;
 	};
