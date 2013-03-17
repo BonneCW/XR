@@ -67,6 +67,8 @@ FUNC VOID Info_Mod_Assassine_Nagur_Hi_E()
 	Mod_7783_OUT_Schmuggler_NW.guild = GIL_STRF;
 	Npc_SetTrueGuild (Mod_7783_OUT_Schmuggler_NW, GIL_STRF);
 
+	B_Attack	(self, hero, AR_GuildEnemy, 0);
+
 	Mod_Nagur_Geschaeft = 5;
 };
 
