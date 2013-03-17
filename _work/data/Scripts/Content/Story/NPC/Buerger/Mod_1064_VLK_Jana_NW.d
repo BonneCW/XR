@@ -50,6 +50,6 @@ FUNC VOID Rtn_Bernd_1064()
 
 FUNC VOID Rtn_Einkauf_1064()
 {
-	TA_Stand_ArmsCrossed	(08,00,20,00,"NW_CITY_MERCHANT_PATH_28_B");
-	TA_Stand_ArmsCrossed	(20,00,08,00,"NW_CITY_MERCHANT_PATH_28_B");
+	TA_Stand_ArmsCrossed	(06,00,19,00,"NW_CITY_MERCHANT_PATH_28_B");
+	TA_Stand_ArmsCrossed	(19,00,06,00,"NW_CITY_HABOUR_HUT_06_BED_01");
 };

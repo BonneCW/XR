@@ -55,7 +55,7 @@ FUNC VOID Info_Mod_Melvin_Hi_D()
 	AI_Output(self, hero, "Info_Mod_Melvin_Hi_D_29_01"); //Das brauchen wir für, na ja, fürn Mittel, das wir uns basteln wollen. (Pause) Wir wollen uns halt ein bisschen Freudenspender selbst machen, kapiert?
 	AI_Output(hero, self, "Info_Mod_Melvin_Hi_D_15_02"); //Mit Korn ...?
 	AI_Output(self, hero, "Info_Mod_Melvin_Hi_D_29_03"); //Ja, genau, mit Korn. Wir haben da so ein Rezept gefunden.
-	AI_Output(self, hero, "Info_Mod_Melvin_Hi_D_29_04"); //Alle anderen Zutaten haben wir schon, Skavengerdung, Schnaps und drei Fliegenpilze.
+	AI_Output(self, hero, "Info_Mod_Melvin_Hi_D_29_04"); //Alle anderen Zutaten haben wir schon, Scavengerdung, Schnaps und drei Fliegenpilze.
 	AI_Output(hero, self, "Info_Mod_Melvin_Hi_D_15_05"); //Und ihr meint, dass das funktioniert?
 	AI_Output(self, hero, "Info_Mod_Melvin_Hi_D_29_06"); //Äh, sicher. Halluzinationen garantiert, steht auf dem Rezept.
 

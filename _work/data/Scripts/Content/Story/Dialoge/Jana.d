@@ -85,6 +85,7 @@ INSTANCE Info_Mod_Jana_Beutel (C_INFO)
 FUNC INT Info_Mod_Jana_Beutel_Condition()
 {
 	if (Mod_Jana_Beutel == 1)
+	&& (Wld_IsTime(06,00,19,00))
 	{
 		return 1;
 	};
