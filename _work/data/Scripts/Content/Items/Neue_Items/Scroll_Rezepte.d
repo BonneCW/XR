@@ -406,8 +406,7 @@ func void UseScroll_SummonZombie ()
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "1x Zombiefleisch"					);
-					Doc_PrintLines	( nDocID,  0, "1x Skelettknochen"					);
-					Doc_PrintLines	( nDocID,  0, "2x Menschenblut"					);
+					Doc_PrintLines	( nDocID,  0, "1x Menschenblut"					);
 
 					Doc_Show		( nDocID );
 

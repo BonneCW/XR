@@ -955,23 +955,21 @@ FUNC INT Geht_SummonZombie ()
 {
 	if (Npc_HasItems(hero, ItRu_SummonZombie) >= 1)
 	&& (Npc_HasItems(hero, ItFoMuttonZombie) >= 1)
-	&& (Npc_HasItems(hero, ItAt_SkeletonBone) >= 1)
-	&& (Npc_HasItems(hero, ItPo_Blood) >= 2)
+	&& (Npc_HasItems(hero, ItPo_Blood) >= 1)
 	&& (PLAYER_TALENT_SCROLLS[SCROLL_SummonZombie] == TRUE)
 	{
 		return TRUE;
 	}
 	else if (Npc_HasItems(hero, ItFoMuttonZombie) >= 1)
-	&& (Npc_HasItems(hero, ItAt_SkeletonBone) >= 2)
-	&& (Npc_HasItems(hero, ItPo_Blood) >= 2)
+	&& (Npc_HasItems(hero, ItAt_SkeletonBone) >= 1)
+	&& (Npc_HasItems(hero, ItPo_Blood) >= 1)
 	&& (PLAYER_TALENT_SCROLLS[SCROLL_SummonZombie] == TRUE)
 	&& (Geht_SumSkel())
 	{
 		return TRUE;
 	}
 	else if (Npc_HasItems(hero, ItFoMuttonZombie) >= 1)
-	&& (Npc_HasItems(hero, ItAt_SkeletonBone) >= 1)
-	&& (Npc_HasItems(hero, ItPo_Blood) >= 2)
+	&& (Npc_HasItems(hero, ItPo_Blood) >= 1)
 	&& (PLAYER_TALENT_SCROLLS[SCROLL_SummonZombie] == TRUE)
 	&& (Geht_SummonGuardian())
 	{
@@ -986,8 +984,7 @@ FUNC INT Geht_SummonZombie ()
 FUNC VOID Mach_SummonZombie ()
 {
 	Npc_RemoveInvItems  (hero, ItFoMuttonZombie, 1);
-	Npc_RemoveInvItems  (hero, ItAt_SkeletonBone, 1);
-	Npc_RemoveInvItems  (hero, ItPo_Blood, 2);
+	Npc_RemoveInvItems  (hero, ItPo_Blood, 1);
 
 	if (Npc_HasItems(hero, ItRu_SummonZombie) == 0)
 	{
@@ -3901,13 +3898,11 @@ FUNC VOID PC_ItRu_SummonZombie_Info ()
 {
 	if (Npc_HasItems (hero, ItSc_SummonZombie) >= 1)
 	&& (Npc_HasItems (hero, ItFoMuttonZombie) >= 1)
-	&& (Npc_HasItems (hero, ItAt_Menschenblut) >= 2)
-	&& (Npc_HasItems (hero, ItAt_SkeletonBone) >= 1)
+	&& (Npc_HasItems (hero, ItAt_Menschenblut) >= 1)
 	{
 		Npc_RemoveInvItems  (hero,ItSc_SummonZombie, 1);
 		Npc_RemoveInvItems  (hero,ItFoMuttonZombie,1);
-		Npc_RemoveInvItems  (hero,ItAt_Menschenblut,2);
-		Npc_RemoveInvItems  (hero,ItAt_SkeletonBone,1);
+		Npc_RemoveInvItems  (hero,ItAt_Menschenblut,1);
 		
 		
 		CreateInvItems 	   (hero,ItRu_SummonZombie,1); 

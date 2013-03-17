@@ -161,7 +161,7 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	if (spell == SPL_SummonZombie)
 	{
 		PLAYER_TALENT_RUNES[SPL_SummonZombie] = TRUE;
-		B_LogEntry	(TOPIC_TalentRunes,"Zutaten für die Rune ´ZOMBIE BESCHWÖREN´: 1 Zombiefleisch, 1 Knochen und 2 Fläschchen Menschenblut");
+		B_LogEntry	(TOPIC_TalentRunes,"Zutaten für die Rune ´ZOMBIE BESCHWÖREN´: 1 Zombiefleisch und 1 Fläschchen Menschenblut");
 	};
 	if (spell == SPL_EnergyBall)
 	{
