@@ -547,7 +547,9 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 			if (opfer.guild > GIL_SEPERATOR_HUM)
 			&& (opfer.aivar[AIV_Trefferzone] == 0)
 			{
-				opfer.aivar[AIV_Trefferzone] = 1;
+				if (damageType != DAM_BLUNT && r_max(99) < 50) {
+					opfer.aivar[AIV_Trefferzone] = 1;
+				};
 			};
 
 			if (Hlp_IsItem(rwp, ItMw_Chemo) == TRUE)
