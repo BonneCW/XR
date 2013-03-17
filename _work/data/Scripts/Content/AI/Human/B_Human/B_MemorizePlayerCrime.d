@@ -75,7 +75,34 @@ func void B_MemorizePlayerCrime (var C_NPC slf, var C_NPC taeter, var int crime)
 		}
 		else if (crime == CRIME_ATTACK)
 		{
-			B_Göttergefallen(3, 1);
+			if (Hlp_IsValidItem(arm))
+			{
+				if (Hlp_IsItem(arm, ItAr_Assassine_01) == TRUE)
+				|| (Hlp_IsItem(arm, ItAr_Assassine_02) == TRUE)
+				|| (Hlp_IsItem(arm, ItAr_BDT_M_01) == TRUE)
+				|| (Hlp_IsItem(arm, ItAr_DMB_S) == TRUE)
+				|| (Hlp_IsItem(arm, ItAr_BDT_H_01) == TRUE)
+				|| (Hlp_IsItem(arm, ItAr_XARDAS) == TRUE)
+				|| (Hlp_IsItem(arm, ItAr_RAVEN_ADDON) == TRUE)
+				|| (Hlp_IsItem(arm, ItAr_SMK_L) == TRUE)
+				|| (Hlp_IsItem(arm, Schwarzmagierrobe) == TRUE)
+				|| (Hlp_IsItem(arm, ItAr_NOV_DMB_01) == TRUE)
+				|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_568_NONE_Cassia_NW))
+				|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_746_NONE_Ramirez_NW))
+				|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_748_NONE_Rengaru_NW))
+				|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_587_NONE_Jesper_NW))
+				{
+					B_Göttergefallen(1, 1);
+				}
+				else
+				{
+					B_Göttergefallen(3, 1);
+				};
+			}
+			else
+			{
+				B_Göttergefallen(3, 1);
+			};
 		}
 		else if (crime == CRIME_SHEEPKILLER)
 		{

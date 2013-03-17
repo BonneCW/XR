@@ -1455,13 +1455,13 @@ FUNC VOID STARTUP_NewWorld_Part_Monastery_01 ()
 	Wld_InsertNpc	(Mod_554_KDF_Parlan_NW,	"NW_MONASTERY_ENTRY_01");
 	Wld_InsertNpc	(Mod_556_NOV_Theodor_NW,	"NW_MONASTERY_ENTRY_01");
 
-	// Schafe f?r Opolos
+	// Schafe für Opolos
 
 	Wld_InsertNpc 	(Sheep_Opolos_01, 			"FP_ROAM_MONASTERY_01");
 	Wld_InsertNpc 	(Sheep_Opolos_02, 			"FP_ROAM_MONASTERY_02");
 	Wld_InsertNpc 	(Sheep_Opolos_03, 			"FP_ROAM_MONASTERY_03");
 
-	// Monster au?erhalb des Klosters
+	// Monster außerhalb des Klosters
 
 	Wld_InsertNpc	(Scavenger,	"FP_ROAM_NW_PATH_TO_MONASTER_AREA_11_01");
 	Wld_InsertNpc	(Scavenger,	"FP_ROAM_NW_NW_PATH_TO_MONASTER_MONSTER22_02");
@@ -1489,7 +1489,7 @@ FUNC VOID STARTUP_NewWorld_Part_Monastery_01 ()
 FUNC VOID INIT_NewWorld_Part_Monastery_01 ()
 {
 	Wld_AssignRoomToGuild ("kloster01",GIL_PUBLIC); //Kirche
-	Wld_AssignRoomToGuild ("kloster02",GIL_PUBLIC); //B?cherei
+	Wld_AssignRoomToGuild ("kloster02",GIL_PUBLIC); //Bücherei
 	Wld_AssignRoomToGuild ("kloster03",GIL_PUBLIC); //Kapelle 
 		
 	Wld_AssignRoomToGuild ("kloster11",GIL_PUBLIC); //Der Keller
