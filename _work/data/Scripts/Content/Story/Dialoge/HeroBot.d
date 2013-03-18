@@ -19,8 +19,8 @@ FUNC INT Info_Mod_HeroBot_Gelaber_Condition()
 
 FUNC VOID Info_Mod_HeroBot_Gelaber_Info()
 {
-	AI_Output(hero, self, "Info_Mod_HeroBot_Gelaber_15_00"); //Du bist Kolam's Kampfroboter!
-	AI_Output(self, hero, "Info_Mod_HeroBot_Gelaber_15_01"); //"Das Androhen von Gewalt gegen ein Individuum oder die Allgemeinheit als solche ist als Straftat anzusehen."
+	AI_Output(hero, self, "Info_Mod_HeroBot_Gelaber_15_00"); //Du bist Kolams Kampfroboter!
+	AI_Output(self, hero, "Info_Mod_HeroBot_Gelaber_15_01"); //"Das Androhen von Gewalt gegenüber einem Individuum oder der Allgemeinheit als solche ist als Straftat anzusehen."
 	AI_Output(hero, self, "Info_Mod_HeroBot_Gelaber_15_02"); //Das beenden wir jetzt ein für alle Mal.
 
 	AI_StopProcessInfos	(self);

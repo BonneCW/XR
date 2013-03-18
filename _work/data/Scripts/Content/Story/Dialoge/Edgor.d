@@ -120,7 +120,7 @@ INSTANCE Info_Mod_Edgor_Raeuber (C_INFO)
 FUNC INT Info_Mod_Edgor_Raeuber_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Edgor_Aufgabe))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Edgor_Gold))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Edgor_Gold))
 	&& (Npc_IsDead(Mod_7772_BDT_Bandit_NW))
 	&& (Npc_IsDead(Mod_7773_BDT_Bandit_NW))
 	&& (Npc_IsDead(Mod_7774_BDT_Bandit_NW))
