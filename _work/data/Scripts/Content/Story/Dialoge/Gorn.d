@@ -47,7 +47,7 @@ FUNC INT Info_Mod_Gorn_GotoCastlemine_Condition()
 
 FUNC VOID Info_Mod_Gorn_GotoCastlemine_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Gorn_GotoCastlemine_15_00"); //Na dann lass uns den Untoten mal einen Besuch abzustatten.
+	AI_Output(hero, self, "Info_Mod_Gorn_GotoCastlemine_15_00"); //Na dann lass uns den Untoten mal einen Besuch abstatten.
 	AI_Output(self, hero, "Info_Mod_Gorn_GotoCastlemine_12_01"); //Nichts anderes hatte ich von dir erwartet. Dann zeigen wir es diesen Bastarden mal.
 
 	AI_StopProcessInfos	(self);
