@@ -87,7 +87,7 @@ FUNC INT Info_Mod_Argez_XW_Gefangen2_Condition()
 
 FUNC VOID Info_Mod_Argez_XW_Gefangen2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Argez_XW_Gefangen2_01_00"); //Meinst du nicht, dass wir vorsichtig sein sollten? Wenn es sich um einen Test, ein Spiel dieses Leprechauns handelt?
+	AI_Output(self, hero, "Info_Mod_Argez_XW_Gefangen2_01_00"); //Meinst du nicht, dass wir vorsichtig sein sollten? Wenn es sich um einen Test, ein Spiel dieses Leprechaun handelt?
 	AI_Output(hero, self, "Info_Mod_Argez_XW_Gefangen2_15_01"); //Was haben wir zu verlieren? Das ist vielleicht unsere letzte Chance.
 	AI_Output(self, hero, "Info_Mod_Argez_XW_Gefangen2_01_02"); //Na schön.
 	AI_Output(hero, self, "Info_Mod_Argez_XW_Gefangen2_15_03"); //Bist du geschwächt? Schaffst du den ganzen Weg zurück?
@@ -143,8 +143,8 @@ FUNC VOID Info_Mod_Argez_XW_Ende_Info()
 	AI_Output(hero, self, "Info_Mod_Argez_XW_Ende_15_15"); //Du warst es doch, der Xeres mit seinen Machtträgern einst in die Zwischenwelt verbannte ...
 	AI_Output(self, hero, "Info_Mod_Argez_XW_Ende_01_16"); //Ja! Ich bin ein missglücktes Geschöpf.
 	AI_Output(self, hero, "Info_Mod_Argez_XW_Ende_01_17"); //Ich bin es, der nicht mit Xeres' Willen, sondern nur seiner Macht gespeist wurde.
-	AI_Output(self, hero, "Info_Mod_Argez_XW_Ende_01_18"); //Ich bin es, von dessen Existenz Xeres' Schergen jegliches Zeugnis tilgen wollten.
-	AI_Output(self, hero, "Info_Mod_Argez_XW_Ende_01_19"); //Und ich bin es nun, der mit seinem Dasein die Erde bedroht ...
+	AI_Output(self, hero, "Info_Mod_Argez_XW_Ende_01_18"); //Ich bin es, von dessen Existenz Xeres' Schergen jegliches Zeugnis tilgen wollten, indem sie mir mein Gedächtnis raubten.
+	AI_Output(self, hero, "Info_Mod_Argez_XW_Ende_01_19"); //Und ich bin es nun, der mit seinem Dasein unser aller Leben bedroht ...
 	AI_Output(hero, self, "Info_Mod_Argez_XW_Ende_15_20"); //Was soll das? Was willst du damit sagen?
 	AI_Output(self, hero, "Info_Mod_Argez_XW_Ende_01_21"); //Das weißt du ... Du wirst ihn erst endgültig vernichten können, wenn ich tot bin.
 	AI_Output(self, hero, "Info_Mod_Argez_XW_Ende_01_22"); //Also beeil dich, bevor er sich erholt hat. Töte mich und bring der Welt den Frieden.

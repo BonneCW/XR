@@ -4,7 +4,7 @@ instance Mod_7419_OUT_Leonhard_REL (Npc_Default)
 	name 		= "Leonhard"; 
 	guild 		= GIL_OUT;
 	id 			= 7419;
-	voice 		= 9;
+	voice 		= 36;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

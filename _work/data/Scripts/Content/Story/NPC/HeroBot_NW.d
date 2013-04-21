@@ -4,7 +4,7 @@ instance HeroBot_NW (NPC_DEFAULT)
 	name 		= "Helden-Bot";
 	guild		= GIL_DMT;
 	id			= 7237;
-	voice		= 15;
+	voice		= 33;
 	Npctype		= NPCTYPE_MAIN;
 	flags		= 2;
 	level		= 1000;

@@ -4,7 +4,7 @@ instance Mod_743_NONE_Nagur_NW (Npc_Default)
 	name 		= "Nagur"; 
 	guild 		= GIL_OUT;
 	id 			= 743;
-	voice 		= 8;
+	voice 		= 37;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

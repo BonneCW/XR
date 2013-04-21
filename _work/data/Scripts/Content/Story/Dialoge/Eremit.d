@@ -57,7 +57,7 @@ FUNC VOID Info_Mod_Eremit_WerBistDu_Info()
 	AI_Output(self, hero, "Info_Mod_Eremit_WerBistDu_04_08"); //(kindlich, begeistert) Ohhh ...
 	AI_Output(self, hero, "Info_Mod_Eremit_WerBistDu_04_09"); //(ernst) An mir soll's nicht scheitern.
 	AI_Output(self, hero, "Info_Mod_Eremit_WerBistDu_04_10"); //(ernst) Ist mir eh peinlich, wenn jemand die Kommentare dieses Zurückgebliebenen mithören muss.
-	AI_Output(self, hero, "Info_Mod_Eremit_WerBistDu_04_11"); //(kindlich, begeistert) Das nimmst du zurück!
+	AI_Output(self, hero, "Info_Mod_Eremit_WerBistDu_04_11"); //(kindlich) Das nimmst du zurück!
 	AI_Output(self, hero, "Info_Mod_Eremit_WerBistDu_04_12"); //(ernst) Nein!
 	AI_Output(hero, self, "Info_Mod_Eremit_WerBistDu_15_13"); //Psst.
 	AI_Output(self, hero, "Info_Mod_Eremit_WerBistDu_04_14"); //(räuspert sich, mit normaler Stimme) Hallo. Erinnert uns dunkel an alte Zeiten, so zu sprechen.
@@ -565,19 +565,19 @@ FUNC INT Info_Mod_Eremit_ScrollJG_Condition()
 FUNC VOID Info_Mod_Eremit_ScrollJG_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_15_00"); //Adanos zum Gruß.
-	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_01"); //Wenn du meinst ...
+	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_01"); //Adanos? Verschone uns mit diesem neumodischen Quatsch!
 	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_15_02"); //Du bist kein Anhänger des Wassers?
-	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_03"); //Nicht mehr. Ich kam her und habe die Schriften studiert. Konnte auch vier der Sprachen entziffern.
-	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_15_04"); //Vier? Ich kenne nur drei, welches ist die Vierte?
+	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_03"); //Nein, in den alten Schriften, die wir lesen, kam er noch nicht vor. Vier der Sprachen konnten wir entziffern.
+	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_15_04"); //Vier? Ich kenne nur drei, welches ist die vierte?
 	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_05"); //Die Sprache der Gelehrten.
-	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_06"); //Dann stieß ich auf eine weitere Sprache. Die war so furchtbar, dass ich heute noch in Panik gerate, wenn ich nur daran denke.
-	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_15_07"); //Hm. Dann kannst du mir die Sprache der Gelehrten auch beibringen?
-	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_08"); //Ich weiß nicht, ob du dafür schon bereit bist.
+	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_06"); //Dann stießen wir auf eine weitere Sprache. Die war so furchtbar, dass wir heute noch in Panik geraten, wenn wir nur daran denken.
+	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_15_07"); //Hmm. Dann kannst du mir die Sprache der Gelehrten auch beibringen?
+	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_08"); //Wir wissen nicht, ob du dafür schon bereit bist.
 	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_15_09"); //Dann probier's halt. Auf den Kopf gefallen bin ich nicht.
-	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_10"); //So höre: „Ralgnatiru chrenid kar“
+	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_10"); //So höre: „Ralgnatiru chrenid kar.“
 	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_15_11"); //Hör auf. Ich versteh kein Wort.
-	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_12"); //Also doch. Tut mir leid.
-	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_15_13"); //Hm. Kannst du mir wenigstens diese Nachricht übersetzen.
+	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_12"); //Also doch. Tut uns Leid.
+	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_15_13"); //Hmm. Kannst du mir wenigstens diese Nachricht übersetzen?
 
 	B_GiveInvItems	(hero, self, ItWr_TruhenNotizJG, 1);
 
@@ -587,8 +587,8 @@ FUNC VOID Info_Mod_Eremit_ScrollJG_Info()
 
 	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_15"); //Ja. Die Gelehrtensprache.
 	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_15_16"); //Und das heißt?
-	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_17"); //Du hast ein paar Gold für mich? Ich muss wieder mal einkaufen gehen zu den Piraten.
-	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_15_18"); //An wieviel dachtest du?
+	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_17"); //Du hast ein paar Gold für uns? Wir müssen wieder mal einkaufen gehen zu den Piraten.
+	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_15_18"); //An wie viel dachtest du?
 	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_04_19"); //Dir scheint es wichtig zu sein. So 500 Gold ...
 
 	Info_ClearChoices	(Info_Mod_Eremit_ScrollJG);
@@ -604,14 +604,14 @@ FUNC VOID Info_Mod_Eremit_ScrollJG_B()
 	B_GiveInvItems	(hero, self, ItMi_Gold, 500);
 
 	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_B_04_01"); //Dieser Text erklärt die Handhabung einer gewissen Spruchrolle.
-	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_B_15_02"); //Die Rolle habe ich auch.
+	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_B_15_02"); //Die Rolle haben wir auch.
 	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_B_04_03"); //Hier steht: Ralgnatiru chrenid ...
 	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_B_04_04"); //Ach so: „Man nehme diese Rolle, einen Brocken unreines Erz, einen Geschwindigkeitstrank, Teil eines Flugtieres oder einen Fliegenpilz, das Fleisch eines Untoten und zwei Skelettknochen.
-	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_B_04_05"); //Das füge man in der Opferschale zusammen. Sodann erscheint ein Gegenstand, das dir in Zeiten höchster Bedrängnis helfen wird."
+	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_B_04_05"); //Das füge man in der Opferschale zusammen. Sodann erscheint ein Gegenstand, der dir in Zeiten höchster Bedrängnis helfen wird."
 	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_B_15_06"); //Uff. Das wirft ja mehr Fragen auf, als es Antworten gibt.
-	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_B_04_07"); //Tut mir leid. Da kann ich dir auch nicht weiterhelfen.
+	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_B_04_07"); //Tut uns Leid. Da können wir dir auch nicht weiterhelfen.
 	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_B_15_08"); //Das glaub ich gerne. Also, wir sind quitt?
-	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_B_04_09"); //Gewiss. Ich wünsch dir Glück.
+	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_B_04_09"); //Gewiss. Wir wünschen dir Glück.
 
 	B_GivePlayerXP	(250);
 
@@ -619,14 +619,14 @@ FUNC VOID Info_Mod_Eremit_ScrollJG_B()
 
 	Log_CreateTopic	(TOPIC_MOD_JG_OPFERSCHALE, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_JG_OPFERSCHALE, LOG_RUNNING);
-	B_LogEntry_More	(TOPIC_MOD_JG_SCROLL, TOPIC_MOD_JG_OPFERSCHALE, "Der Einsiedler hat mir den Text übersetzt. Er ist in der Sprache der Gelehrten geschrieben und handelt von einer gewissen Opferschale. Hm. Hoffentlich weiß Wulfgar darüber Bescheid.", "Hmm. Ich brauche zwei Skelettknochen, was von einer Blutfliege oder Fliegenpilz, einen Geschwindigkeitstrank und unreines Erz. Das könnte der Brocken seltsames Erz sein, den ich von Grimbald habe. Hoffe, ich hab's noch einstecken. Und dann die Opferschale. Welche, bitte schön? Vielleicht kann Riordian ...");
+	B_LogEntry_More	(TOPIC_MOD_JG_SCROLL, TOPIC_MOD_JG_OPFERSCHALE, "Der Einsiedler hat mir den Text übersetzt. Er ist in der Sprache der Gelehrten geschrieben und handelt von einer gewissen Opferschale. Hmm. Hoffentlich weiß Wulfgar darüber Bescheid.", "Hmm. Ich brauche zwei Skelettknochen, was von einer Blutfliege oder einen Fliegenpilz, einen Geschwindigkeitstrank und unreines Erz. Das könnte der Brocken seltsames Erz sein, den ich von Grimbald habe. Hoffe, ich hab's noch dabei. Und dann die Opferschale. Welche, bitte schön? Vielleicht kann Riordian ...");
 	B_SetTopicStatus	(TOPIC_MOD_JG_SCROLL, LOG_SUCCESS);
 };
 
 FUNC VOID Info_Mod_Eremit_ScrollJG_A()
 {
 	AI_Output(hero, self, "Info_Mod_Eremit_ScrollJG_A_15_00"); //Tun es 200 Gold auch?
-	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_A_04_01"); //Nein. Ich muss auf Vorrat kaufen.
+	AI_Output(self, hero, "Info_Mod_Eremit_ScrollJG_A_04_01"); //Nein. Wir müssen auf Vorrat kaufen.
 
 	Info_ClearChoices	(Info_Mod_Eremit_ScrollJG);
 
@@ -655,11 +655,11 @@ FUNC INT Info_Mod_Eremit_Zeremoniendolch_Condition()
 FUNC VOID Info_Mod_Eremit_Zeremoniendolch_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch_15_00"); //Hallo! Du kennst dich doch aus in der Gegend.
-	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch_04_01"); //Das will ich meinen. Was suchst du?
-	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch_15_02"); //Sowas wie eine Ritualstätte, Opferstätte, mystischer Platz oder so.
-	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch_04_03"); //Da wüsste ich schon was. Aber damit ich dir das verrate, musst du mir einen Gefallen tun.
+	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch_04_01"); //Das wollen wir meinen. Was suchst du?
+	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch_15_02"); //Sowas wie eine Ritualstätte, Opferstätte, einen mystischen Platz oder so.
+	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch_04_03"); //Da wüssten wir schon was. Aber damit wir dir das verraten, musst du uns einen Gefallen tun.
 	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch_15_04"); //Und das wäre?
-	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch_04_05"); //Mir geht das Essen aus. Und dann würde ich gern mal etwas anderes trinken, als das Wasser vom See bei den Piraten.
+	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch_04_05"); //Uns geht das Essen aus. Und dann würden wir gern mal etwas anderes trinken, als das Wasser vom See bei den Piraten.
 };
 
 INSTANCE Info_Mod_Eremit_Zeremoniendolch2 (C_INFO)
@@ -693,11 +693,11 @@ FUNC VOID Info_Mod_Eremit_Zeremoniendolch2_Info()
 	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch2_04_01"); //Boaar! Lange nicht mehr so was Gutes getrunken! Wo hast du den her?
 	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch2_15_02"); //In Khorinis kannst du den fast überall kaufen.
 	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch2_04_03"); //Khorinis?
-	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch2_15_04"); //Der andere Teil der Insel. Da wo ich und die Wassermagier beim Tempel herkommen.
+	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch2_15_04"); //Der andere Teil der Insel. Da, wo ich und die Wassermagier beim Tempel herkommen.
 	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch2_04_05"); //Wie kommt man da hin?
 	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch2_15_06"); //Durch eben diesen Tempel. Die Magier würden dir sicher helfen.
-	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch2_04_07"); //Ich überleg's mir. Aber erst mal, was ich dringend brauche. Ich schreib dir einen Zettel.
-	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch2_04_08"); //Inzwischen könntest du mir frisches Wasser vom See im Talkessel in der Nähe der Piraten besorgen. Hier hast du einen Eimer.
+	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch2_04_07"); //Wir überlegen es uns. Aber erst mal, was wir dringend brauchen. Wir schreiben dir einen Zettel.
+	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch2_04_08"); //Inzwischen könntest du uns frisches Wasser vom See im Talkessel in der Nähe der Piraten besorgen. Hier hast du einen Eimer.
 
 	B_GiveInvItems	(self, hero, ItMi_Eimer, 1);
 
@@ -732,14 +732,14 @@ FUNC VOID Info_Mod_Eremit_Zeremoniendolch3_Info()
 
 	B_GiveInvItems	(hero, self, ItMi_EimerW, 1);
 
-	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch3_04_01"); //Und hier meine Liste. Und einen neuen Jagdbogen und eine neue Pfanne brauche ich auch noch.
+	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch3_04_01"); //Und hier unsere Liste. Und einen neuen Jagdbogen und eine neue Pfanne brauchen wir auch noch.
 
 	B_GiveInvItems	(self, hero, ItWr_EremitEinkaufsliste, 1);
 
 	B_HEROFAKESCROLL();
 
 	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch3_15_02"); //Ich lese hier: 30 Holz. Meinst du normale oder schwere Äste?
-	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch3_04_03"); //Das ist egal. Hauptsache es ist trocken und brennt gut.
+	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch3_04_03"); //Das ist egal. Hauptsache, es ist trocken und brennt gut.
 	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch3_15_04"); //Und dann verrätst du mir, wo ich eine Opferstätte finde?
 	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch3_04_05"); //Versprochen.
 	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch3_15_06"); //Bis später.
@@ -794,12 +794,12 @@ FUNC VOID Info_Mod_Eremit_Zeremoniendolch4_Info()
 
 	B_ShowGivenThings	("Diverse Gegenstände gegeben");
 
-	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch4_04_02"); //Prima, alles dabei. Ich mach dir einen Vorschlag: Wenn mein Tip dir weiterhilft, bekomme ich die Lieferung umsonst. Wenn nicht, bezahle ich die Sachen.
+	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch4_04_02"); //Prima, alles dabei. Wir machen dir einen Vorschlag: Wenn unser Tipp dir weiterhilft, bekommen wir die Lieferung umsonst. Wenn nicht, bezahlen wir die Sachen.
 	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch4_15_03"); //Von mir aus. Wo ist nun diese verdammte Opferstätte?
-	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch4_04_04"); //Also höre: Gleich hier um die Ecke, auf dem Weg hoch aus dem Tal, ist ein versteckter Abzweig auf ein kleines Plateau.
+	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch4_04_04"); //Also höre: Gleich hier um die Ecke, auf dem Weg hoch aus dem Tal, ist eine versteckte Abzweigung auf ein kleines Plateau.
 	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch4_04_05"); //Dort findest du eine Gruft. Und da drin könnte deine Opferstätte sein.
 	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch4_15_06"); //Warst du schon mal dort?
-	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch4_04_07"); //Bewahre! Da wimmelt es von Monstern. Niemand kriegt mich da rein. Ich bin zwar ein bisschen seltsam, aber nicht lebensmüde.
+	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch4_04_07"); //Bewahre! Da wimmelt es von Monstern. Niemand kriegt uns da rein. Wir sind zwar ein bisschen seltsam, aber nicht lebensmüde.
 	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch4_15_08"); //Ich schaff das schon. Bin gespannt.
 
 	B_LogEntry	(TOPIC_MOD_ASS_ZEREMONIENDOLCH, "Der Einsiedler hat mir von einem Plateau erzählt, das ganz in der Nähe seiner Hütte liegt. Der Zugang liegt an einem Weg, der nach oben führt. Da gibt es eine Gruft und haufenweise Monster. Mal sehen ...");
@@ -833,9 +833,9 @@ FUNC VOID Info_Mod_Eremit_Zeremoniendolch5_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch5_04_00"); //Und, hast du deinen Dolch?
 	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch5_15_01"); //Ja. Er war tatsächlich in der Gruft, aber gut geschützt. Und dann das Viehzeug!
-	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch5_04_02"); //Hab ich doch gesagt. Dann schulde ich dir nichts.
+	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch5_04_02"); //Haben wir doch gesagt. Dann schulden wir dir nichts.
 	AI_Output(hero, self, "Info_Mod_Eremit_Zeremoniendolch5_15_03"); //So war's abgemacht. Mach's gut, ich muss weiter.
-	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch5_04_04"); //Adanos auf deinen Wegen, Freund.
+	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch5_04_04"); //Möge dir die Sonne den Weg weisen. Alter Spruch.
 };
 
 INSTANCE Info_Mod_Eremit_NettHier (C_INFO)
@@ -890,12 +890,12 @@ FUNC VOID Info_Mod_Eremit_PreLehrer_Info()
 {
 	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
 
-	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer_04_00"); //Ich könnte dir die Sprache der alten Kultur beibringen ...
+	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer_04_00"); //Wir könnten dir die Sprache der alten Kultur beibringen ...
 	AI_Output(hero, self, "Info_Mod_Eremit_PreLehrer_15_01"); //Schön. Also, was muss ich ...
-	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer_04_02"); //(unterbricht) Ich sagte, ich könnte ... aber ich habe Zurzeit absolut nicht den Nerv dazu!
+	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer_04_02"); //(unterbricht) Wir sagten, wir könnten ... aber wir haben zur Zeit absolut nicht den Nerv dazu!
 	AI_Output(hero, self, "Info_Mod_Eremit_PreLehrer_15_03"); //Wieso, was ist los?
-	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer_04_04"); //Ach ... diese verdammten drecks Harpien mache mir gerade das Leben echt schwer.
-	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer_04_05"); //Immer, wenn ich mir gerade was Feines braten möchte, kommen sie angeflogen und ... ohh scheiße, das sind sie schon wieder!
+	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer_04_04"); //Ach ... diese verdammten Harpien machen uns gerade das Leben echt schwer.
+	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer_04_05"); //Immer, wenn wir uns gerade was Feines braten möchte, kommen sie angeflogen und ... oh verflucht, da sind sie schon wieder!
 
 	AI_StopProcessInfos	(self);
 
@@ -925,11 +925,11 @@ FUNC INT Info_Mod_Eremit_PreLehrer2_Condition()
 
 FUNC VOID Info_Mod_Eremit_PreLehrer2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer2_04_00"); //Siehst du, das meinte ich! Immer, wenn ich mir etwas braten möchte, kommen diese Viecher angeflogen und besudeln alles mit ihrem Gestank und Unrat.
+	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer2_04_00"); //Siehst du, das meinten wir! Immer, wenn wir uns etwas braten möchten, kommen diese Viecher angeflogen und besudeln alles mit ihrem Gestank und Unrat.
 	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer2_04_01"); //Diese verdammten Biester haben irgendwo in der Nähe ihre Nester ...
 	AI_Output(hero, self, "Info_Mod_Eremit_PreLehrer2_15_02"); //Hast du schon versucht sie zu erledigen?
-	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer2_04_03"); //Wie denn?! Kann ich denn zu ihren Nestern hochfliegen?! Und auf Fernkampf verstehe ich mich auch nicht.
-	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer2_04_04"); //Wenn das so weitergeht, werde ich mir wohl einen anderen Platz zum Leben suchen müssen ...
+	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer2_04_03"); //Wie denn?! Können wir denn zu ihren Nestern hochfliegen?! Und auf Fernkampf verstehen Wir uns auch nicht.
+	AI_Output(self, hero, "Info_Mod_Eremit_PreLehrer2_04_04"); //Wenn das so weitergeht, werden Wir uns wohl einen anderen Platz zum Leben suchen müssen ...
 
 	AI_StopProcessInfos	(self);
 
@@ -964,15 +964,15 @@ FUNC INT Info_Mod_Eremit_Lehrer_Condition()
 FUNC VOID Info_Mod_Eremit_Lehrer_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Eremit_Lehrer_15_00"); //Die Harpien sollten dir in Zukunft keinen Ärger mehr machen.
-	AI_Output(self, hero, "Info_Mod_Eremit_Lehrer_04_01"); //Dann hast du sie alle erwischt? Großartig, endlich habe ich wieder meine Ruhe.
-	AI_Output(self, hero, "Info_Mod_Eremit_Lehrer_04_02"); //Ich weiß nicht, wie ich dir danken soll ... hmm, wobei ... nimm diese Steintafeln.
+	AI_Output(self, hero, "Info_Mod_Eremit_Lehrer_04_01"); //Dann hast du sie alle erwischt? Großartig, endlich haben wir wieder unsere Ruhe.
+	AI_Output(self, hero, "Info_Mod_Eremit_Lehrer_04_02"); //Wir wissen nicht, wie wir dir danken sollen ... hmm, wobei ... nimm diese Steintafeln.
 
 	B_ShowGivenThings	("2 Steintafeln erhalten");
 
 	CreateInvItems	(hero, ItWr_DexStonePlate1_Addon, 1);
 	CreateInvItems	(hero, ItWr_ManaStonePlate1_Addon, 1);
 
-	AI_Output(self, hero, "Info_Mod_Eremit_Lehrer_04_03"); //Und falls du sie noch nicht lesen kannst, werde ich es dir selbstverständlich beibringen.
+	AI_Output(self, hero, "Info_Mod_Eremit_Lehrer_04_03"); //Und falls du sie noch nicht lesen kannst, werden wir es dir selbstverständlich beibringen.
 	
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_JHARKENDAR, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_LEHRER_JHARKENDAR, "Der Eremit kann mir die Sprachen dieses Landes beibringen.");
@@ -1029,7 +1029,7 @@ FUNC VOID Info_Mod_Eremit_Lernen_Info ()
 
 FUNC VOID B_Eremit_LernenLanguage()
 {	
-	AI_Output (self, other, "Info_Mod_Eremit_Lernen_04_02"); //Also, es es ganz einfach. Ein G ist ein O, ein T ist ein H ind ein I ist ein C. 
+	AI_Output (self, other, "Info_Mod_Eremit_Lernen_04_02"); //Also, es es ganz einfach. Ein G ist ein O, ein T ist ein H und ein I ist ein C. 
 	AI_Output (self, other, "Info_Mod_Eremit_Lernen_04_03"); //Wenn du das mal kapiert hast, ist der Rest eigentlich logisch ...
 };
 
@@ -1048,7 +1048,7 @@ FUNC VOID Info_Mod_Eremit_Lernen_Yes()
 {
 	if (PLAYER_TALENT_FOREIGNLANGUAGE[LANGUAGE_3] == TRUE)
 	{
-		AI_Output (self, other, "Info_Mod_Eremit_Lernen_04_04"); //Ich glaube nicht, daß ich dir noch was darüber beibringen kann...
+		AI_Output (self, other, "Info_Mod_Eremit_Lernen_04_04"); //Wir glauben nicht, dass wir dir noch was darüber beibringen können...
 	}
 	else if (PLAYER_TALENT_FOREIGNLANGUAGE[LANGUAGE_2] == TRUE)
 	{

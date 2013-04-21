@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Bodo_MT_Hi_Condition()
 
 FUNC VOID Info_Mod_Bodo_MT_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Bodo_MT_Hi_12_00"); //Ich habe dich schon erwartet. An mir kommst du nicht vorbei, das schwöre ich.
+	AI_Output(self, hero, "Info_Mod_Bodo_MT_Hi_36_00"); //Ich habe dich schon erwartet. An mir kommst du nicht vorbei, das schwöre ich.
 
 	AI_UnequipArmor	(self);
 

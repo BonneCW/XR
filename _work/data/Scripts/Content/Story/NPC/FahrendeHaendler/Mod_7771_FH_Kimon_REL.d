@@ -4,7 +4,7 @@ instance Mod_7771_FH_Kimon_REL (Npc_Default)
 	name 		= "Kimon";
 	guild 		= GIL_OUT;
 	id 			= 7771;
-	voice 		= 4;
+	voice 		= 34;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

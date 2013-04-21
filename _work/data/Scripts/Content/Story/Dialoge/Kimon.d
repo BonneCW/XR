@@ -17,12 +17,12 @@ FUNC INT Info_Mod_Kimon_Hi_Condition()
 FUNC VOID Info_Mod_Kimon_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Kimon_Hi_15_00"); //Hast du ein Problem?
-	AI_Output(self, hero, "Info_Mod_Kimon_Hi_04_01"); //Keines, bei dem du mir helfen könntest ...
+	AI_Output(self, hero, "Info_Mod_Kimon_Hi_34_01"); //Keines, bei dem du mir helfen könntest ...
 	AI_Output(hero, self, "Info_Mod_Kimon_Hi_15_02"); //Sag es mir einfach.
-	AI_Output(self, hero, "Info_Mod_Kimon_Hi_04_03"); //Na gut. Ich habe den Feuermagiern teure Weintrauben vom Berg Archolos aus Myrtana verkauft und sollte mir meinen Lohn von 2000 Gold von dem Magier Serpentes abholen.
-	AI_Output(self, hero, "Info_Mod_Kimon_Hi_04_04"); //Der Schweinehund hat mir aber nur 1000 Gold gegeben!
+	AI_Output(self, hero, "Info_Mod_Kimon_Hi_34_03"); //Na gut. Ich habe den Feuermagiern teure Weintrauben vom Berg Archolos aus Myrtana verkauft und sollte mir meinen Lohn von 2000 Gold von dem Magier Serpentes abholen.
+	AI_Output(self, hero, "Info_Mod_Kimon_Hi_34_04"); //Der Schweinehund hat mir aber nur 1000 Gold gegeben!
 	AI_Output(hero, self, "Info_Mod_Kimon_Hi_15_05"); //Geh doch zu Lord Andre.
-	AI_Output(self, hero, "Info_Mod_Kimon_Hi_04_06"); //(ironisch) Klar, ich zeige einen der höchsten Diener Innos' wegen Betrugs an ...Das würde mich mehr Gold kosten, als es mir bringt.
+	AI_Output(self, hero, "Info_Mod_Kimon_Hi_34_06"); //(ironisch) Klar, ich zeige einen der höchsten Diener Innos' wegen Betrugs an ...Das würde mich mehr Gold kosten, als es mir bringt.
 
 	Info_ClearChoices	(Info_Mod_Kimon_Hi);
 
@@ -33,7 +33,7 @@ FUNC VOID Info_Mod_Kimon_Hi_Info()
 FUNC VOID Info_Mod_Kimon_Hi_Nein()
 {
 	AI_Output(hero, self, "Info_Mod_Kimon_Hi_Nein_15_00"); //Dann kann ich dir auch nicht helfen.
-	AI_Output(self, hero, "Info_Mod_Kimon_Hi_Nein_04_01"); //Schon gut.
+	AI_Output(self, hero, "Info_Mod_Kimon_Hi_Nein_34_01"); //Schon gut.
 
 	Info_ClearChoices	(Info_Mod_Kimon_Hi);
 };
@@ -41,11 +41,11 @@ FUNC VOID Info_Mod_Kimon_Hi_Nein()
 FUNC VOID Info_Mod_Kimon_Hi_Ja()
 {
 	AI_Output(hero, self, "Info_Mod_Kimon_Hi_Ja_15_00"); //Ich schau, wie ich das regeln kann.
-	AI_Output(self, hero, "Info_Mod_Kimon_Hi_Ja_04_01"); //Ah, danke, auch wenn ich nicht glaube, dass das viel Sinn hat.
+	AI_Output(self, hero, "Info_Mod_Kimon_Hi_Ja_34_01"); //Ah, danke, auch wenn ich nicht glaube, dass das viel Sinn hat.
 
 	Log_CreateTopic	(TOPIC_MOD_KIMONSTRAUBEN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_KIMONSTRAUBEN, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_KIMONSTRAUBEN, "Der Händler Kimon hat im Kloster Weintrauben aus Myrtana verkauft, jedoch zu wenig Gold dafür bekommen. Ich hab mich bereit erklärt, die Sache für ihn zu regeln.");
+	B_LogEntry	(TOPIC_MOD_KIMONSTRAUBEN, "Der Händler Kimon hat im Kloster Weintrauben aus Myrtana verkauft, jedoch zu wenig Gold dafür bekommen. Ich habe mich bereit erklärt, die Sache für ihn zu regeln.");
 
 	Mod_Kimons_Traubenquest = TRUE;
 
@@ -73,8 +73,8 @@ FUNC INT Info_Mod_Kimon_Beleg_Condition()
 
 FUNC VOID Info_Mod_Kimon_Beleg_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Kimon_Beleg_15_00"); //Hast du einen Beweis für den Betrug von Serpentes.
-	AI_Output(self, hero, "Info_Mod_Kimon_Beleg_04_01"); //Sicherlich, hier.
+	AI_Output(hero, self, "Info_Mod_Kimon_Beleg_15_00"); //Hast du einen Beweis für den Betrug von Serpentes?
+	AI_Output(self, hero, "Info_Mod_Kimon_Beleg_34_01"); //Sicherlich, hier.
 
 	B_GiveInvItems	(self, hero, ItWr_KimonsBeleg, 1);
 
@@ -108,16 +108,16 @@ FUNC VOID Info_Mod_Kimon_HierIstDeinGold_Info()
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 1000);
 
-	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_04_01"); //Vielen Dank. Jetzt kann ich meine Runde wieder aufnehmen.
+	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_34_01"); //Vielen Dank. Jetzt kann ich meine Runde wieder aufnehmen.
 	AI_Output(hero, self, "Info_Mod_Kimon_HierIstDeinGold_15_02"); //Wo rundest du denn?
-	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_04_03"); //Ich verkehre normalerweise zwischen der Stadt und Relendel.
-	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_04_04"); //Ab und zu habe ich auch mal nen Abstecher ins Minental gemacht. Aber das ist mir zu gefährlich geworden.
-	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_04_05"); //Zu viel Viehzeugs und Wegelagerer unterwegs.
+	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_34_03"); //Ich verkehre normalerweise zwischen der Stadt und Relendel.
+	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_34_04"); //Ab und zu habe ich auch mal nen Abstecher ins Minental gemacht. Aber das ist mir zu gefährlich geworden.
+	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_34_05"); //Zu viel Viehzeugs und Wegelagerer unterwegs.
 	AI_Output(hero, self, "Info_Mod_Kimon_HierIstDeinGold_15_06"); //Aha. Mit was handelst du eigentlich?
-	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_04_07"); //Im Moment mit gar nichts. Ich muss erst zukaufen. Am besten verkaufen sich Raritäten wie diese Weintrauben. Sind allerdings nicht billig im Einkauf.
-	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_04_08"); //Aber genug Gold habe ich ja jetzt wieder.
+	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_34_07"); //Im Moment mit gar nichts. Ich muss erst zukaufen. Am besten verkaufen sich Raritäten wie diese Weintrauben. Sind allerdings nicht billig im Einkauf.
+	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_34_08"); //Aber genug Gold habe ich ja jetzt wieder.
 	AI_Output(hero, self, "Info_Mod_Kimon_HierIstDeinGold_15_09"); //Dann viel Erfolg. Vielleicht sehen wir uns mal wieder.
-	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_04_10"); //Kann sein. Danke noch mal.
+	AI_Output(self, hero, "Info_Mod_Kimon_HierIstDeinGold_34_10"); //Kann sein. Danke noch mal.
 
 	B_LogEntry	(TOPIC_MOD_KIMONSTRAUBEN, "Ich habe Kimon sein Gold gegeben. Er wird jetzt zu den anderen gehen.");
 	B_SetTopicStatus	(TOPIC_MOD_KIMONSTRAUBEN, LOG_SUCCESS);

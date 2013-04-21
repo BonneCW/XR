@@ -44,7 +44,16 @@ FUNC VOID Info_Mod_Ian_AlteMine_Info()
 	AI_Output(hero, self, "Info_Mod_Ian_AlteMine_15_00"); //Was ist in der Alten Mine passiert?
 	AI_Output(self, hero, "Info_Mod_Ian_AlteMine_13_01"); //Wir wurden überfallen. Und zwar nicht von den Bastarden aus dem Neuen Lager, sondern von schwarzen Kriegern und Magiern.
 
-	if (FALSE) // ToDo: Nur wenn Rüstung = Beliarrüstung
+	var C_ITEM arm;
+	
+	arm = Npc_GetEquippedArmor(hero);
+
+	if (Hlp_IsItem(arm, ItAr_DMB_S) == TRUE)
+	|| (Hlp_IsItem(arm, ItAr_XARDAS) == TRUE)
+	|| (Hlp_IsItem(arm, ItAr_RAVEN_ADDON) == TRUE)
+	|| (Hlp_IsItem(arm, ItAr_SMK_L) == TRUE)
+	|| (Hlp_IsItem(arm, Schwarzmagierrobe) == TRUE)
+	|| (Hlp_IsItem(arm, ItAr_NOV_DMB_01) == TRUE)
 	{
 		AI_Output(self, hero, "Info_Mod_Ian_AlteMine_13_02"); //(misstrauisch) Manche von ihnen trugen genau so eine Rüstung, wie du es tust.
 	};

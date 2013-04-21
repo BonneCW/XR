@@ -15,9 +15,9 @@ FUNC INT Info_Mod_Dichter_NW_InKhorinis_Condition()
 
 FUNC VOID Info_Mod_Dichter_NW_InKhorinis_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Dichter_NW_InKhorinis_08_00"); //Wie du siehst, bin ich deinem Rat gefolgt.
-	AI_Output(self, hero, "Info_Mod_Dichter_NW_InKhorinis_08_01"); //Ist echt spannend hier draußen, ich habe schon viel gelernt.
-	AI_Output(self, hero, "Info_Mod_Dichter_NW_InKhorinis_08_02"); //Ich kann dir jetzt sogar zeigen, wie du dich an Tiere heranschleichst.
+	AI_Output(self, hero, "Info_Mod_Dichter_NW_InKhorinis_34_00"); //Wie du siehst, bin ich deinem Rat gefolgt.
+	AI_Output(self, hero, "Info_Mod_Dichter_NW_InKhorinis_34_01"); //Ist echt spannend hier draußen, ich habe schon viel gelernt.
+	AI_Output(self, hero, "Info_Mod_Dichter_NW_InKhorinis_34_02"); //Ich kann dir jetzt sogar zeigen, wie du dich an Tiere heranschleichst.
 
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_KHORINIS, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_LEHRER_KHORINIS, "Der Dichter kann mir zeigen, wie ich mich an Tiere heranschleichen kann.");
@@ -49,6 +49,6 @@ FUNC VOID Info_Mod_Dichter_NW_Lernen_Schleichen_Info()
 
 	if (B_TeachThiefTalent (self, hero, NPC_TALENT_SNEAK))
 	{
-		AI_Output(self, hero, "Info_Mod_Dichter_NW_Lernen_Schleichen_08_01"); //Mit weichen Sohlen hast du eine größere Chance, dich deinen Gegnern zu nähern, ohne dass sie es merken.
+		AI_Output(self, hero, "Info_Mod_Dichter_NW_Lernen_Schleichen_34_01"); //Mit weichen Sohlen hast du eine größere Chance, dich deinen Gegnern zu nähern, ohne dass sie es merken.
 	};
 };

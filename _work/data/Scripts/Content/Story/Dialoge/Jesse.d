@@ -17,13 +17,13 @@ FUNC INT Info_Mod_Jesse_Hi_Condition()
 FUNC VOID Info_Mod_Jesse_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Jesse_Hi_15_00"); //Was macht die Arbeit, Schürfer?
-	AI_Output(self, hero, "Info_Mod_Jesse_Hi_03_01"); //Ach, der gleiche Job, den ich schon damals als Buddler erledigen musste.
-	AI_Output(self, hero, "Info_Mod_Jesse_Hi_03_02"); //Aber nach den ganzen Schweinereien, die das Alte Lager damals gemacht hat, bin ich lieber ins Neue Lager gegangen.
+	AI_Output(self, hero, "Info_Mod_Jesse_Hi_36_01"); //Ach, der gleiche Job, den ich schon damals als Buddler erledigen musste.
+	AI_Output(self, hero, "Info_Mod_Jesse_Hi_36_02"); //Aber nach den ganzen Schweinereien, die das Alte Lager damals gemacht hat, bin ich lieber ins Neue Lager gegangen.
 	AI_Output(hero, self, "Info_Mod_Jesse_Hi_15_03"); //Du meinst den Überfall auf die Mine hier?
-	AI_Output(self, hero, "Info_Mod_Jesse_Hi_03_04"); //Ja, unter anderem. Deshalb sind hier auch ein paar Plätze für Schürfer frei geworden.
-	AI_Output(self, hero, "Info_Mod_Jesse_Hi_03_05"); //Nachdem die Gardisten alle abgeschlachtet hatten, hat das Neue Lager ja Händeringend nach Arbeitern gesucht. Ist schon ganz ok hier.
-	AI_Output(self, hero, "Info_Mod_Jesse_Hi_03_06"); //Und zumindest gibt es hier keine Wahnsinnigen, die mit magischem Schwert Jagd auf alles machen, was geht und steht ... wie der Verrückte im Alten Lager damals.
-	AI_Output(self, hero, "Info_Mod_Jesse_Hi_03_07"); //Möchte gar nicht daran zurückdenken.
+	AI_Output(self, hero, "Info_Mod_Jesse_Hi_36_04"); //Ja, unter anderem. Deshalb sind hier auch ein paar Plätze für Schürfer frei geworden.
+	AI_Output(self, hero, "Info_Mod_Jesse_Hi_36_05"); //Nachdem die Gardisten alle abgeschlachtet hatten, hat das Neue Lager händeringend nach Arbeitern gesucht. Ist schon ganz in Ordnung hier.
+	AI_Output(self, hero, "Info_Mod_Jesse_Hi_36_06"); //Und zumindest gibt es hier keine Wahnsinnigen, die mit einem magischen Schwert Jagd auf alles machen, was geht und steht ... wie der Verrückte im Alten Lager damals.
+	AI_Output(self, hero, "Info_Mod_Jesse_Hi_36_07"); //Möchte gar nicht daran zurückdenken.
 };
 
 INSTANCE Info_Mod_Jesse_Costa (C_INFO)
@@ -48,13 +48,13 @@ FUNC INT Info_Mod_Jesse_Costa_Condition()
 FUNC VOID Info_Mod_Jesse_Costa_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Jesse_Costa_15_00"); //Du hast da etwas, das Costa gehört.
-	AI_Output(self, hero, "Info_Mod_Jesse_Costa_03_01"); //(besorgt) Ja, ich habe noch einiges von ihm. Weißt du, was aus ihm geworden ist? Haben die Gardisten ihn erwischt?
+	AI_Output(self, hero, "Info_Mod_Jesse_Costa_36_01"); //(besorgt) Ja, ich habe noch einiges von ihm. Weißt du, was aus ihm geworden ist? Haben die Gardisten ihn erwischt?
 	AI_Output(hero, self, "Info_Mod_Jesse_Costa_15_02"); //Nein. Er hat den Zeitpunkt verschlafen.
-	AI_Output(self, hero, "Info_Mod_Jesse_Costa_03_03"); //(bestürzt) Oh nein! Und wir dachten, ihm wäre etwas zugestoßen! Sitzt er noch immer im Lager fest?
+	AI_Output(self, hero, "Info_Mod_Jesse_Costa_36_03"); //(bestürzt) Oh nein! Und wir dachten, ihm wäre etwas zugestoßen! Sitzt er noch immer im Lager fest?
 	AI_Output(hero, self, "Info_Mod_Jesse_Costa_15_04"); //So ist es.
-	AI_Output(self, hero, "Info_Mod_Jesse_Costa_03_05"); //Dann muss ich ihn unbedingt retten. Ich werde noch heute Nacht aufbrechen und ihn da rausholen.
+	AI_Output(self, hero, "Info_Mod_Jesse_Costa_36_05"); //Dann muss ich ihn unbedingt retten. Ich werde noch heute Nacht aufbrechen und ihn da rausholen.
 	AI_Output(hero, self, "Info_Mod_Jesse_Costa_15_06"); //Ist das nicht etwas überstürzt?
-	AI_Output(self, hero, "Info_Mod_Jesse_Costa_03_07"); //Nicht, wenn er Bescheid weiß und sich darauf vorbereitet. Kannst du dich frei im Lager bewegen?
+	AI_Output(self, hero, "Info_Mod_Jesse_Costa_36_07"); //Nicht, wenn er Bescheid weiß und sich darauf vorbereitet. Kannst du dich frei im Lager bewegen?
 
 	Info_ClearChoices	(Info_Mod_Jesse_Costa);
 
@@ -65,7 +65,7 @@ FUNC VOID Info_Mod_Jesse_Costa_Info()
 FUNC VOID Info_Mod_Jesse_Costa_B()
 {
 	AI_Output(hero, self, "Info_Mod_Jesse_Costa_B_15_00"); //Nein.
-	AI_Output(self, hero, "Info_Mod_Jesse_Costa_B_03_01"); //Schade. Dann werde ich es so versuchen.
+	AI_Output(self, hero, "Info_Mod_Jesse_Costa_B_36_01"); //Schade. Dann werde ich es so versuchen.
 
 	Info_ClearChoices	(Info_Mod_Jesse_Costa);
 
@@ -75,7 +75,7 @@ FUNC VOID Info_Mod_Jesse_Costa_B()
 FUNC VOID Info_Mod_Jesse_Costa_A()
 {
 	AI_Output(hero, self, "Info_Mod_Jesse_Costa_A_15_00"); //Ja.
-	AI_Output(self, hero, "Info_Mod_Jesse_Costa_A_03_01"); //Du musst Costa noch heute warnen, dass er mich um Mitternacht an unserem letzten vereinbarten Ort treffen soll. Unbedingt heute, verstehst du?
+	AI_Output(self, hero, "Info_Mod_Jesse_Costa_A_36_01"); //Du musst Costa noch heute warnen, dass er mich um Mitternacht an unserem letzten vereinbarten Ort treffen soll. Unbedingt heute, verstehst du?
 
 	Info_ClearChoices	(Info_Mod_Jesse_Costa);
 

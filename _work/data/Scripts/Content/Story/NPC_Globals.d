@@ -11,12 +11,6 @@ FUNC VOID HeroLook()
 	var int HeroArmor_Count;
 	HeroArmor_Count = Npc_HasItems(hero, HeroArmor);
 
-	if (HeroIstKeinZombie == FALSE)
-	&& (CurrentLevel != ORCTEMPEL_ZEN)
-	{
-		//HeroIstKeinZombie = TRUE;
-	};
-
 	if (HeroIstKeinZombie == TRUE)
 	{
 		if (Mod_HeroIstDemon == 1)

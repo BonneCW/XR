@@ -16,8 +16,8 @@ FUNC INT Info_Mod_Tyrus_Hi_Condition()
 
 FUNC VOID Info_Mod_Tyrus_Hi_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Tyrus_Hi_15_00"); //Hi.
-	AI_Output(self, hero, "Info_Mod_Tyrus_Hi_08_01"); //(mürrisch) Ist was?
+	AI_Output(hero, self, "Info_Mod_Tyrus_Hi_15_00"); //Na.
+	AI_Output(self, hero, "Info_Mod_Tyrus_Hi_37_01"); //(mürrisch) Ist was?
 };
 
 INSTANCE Info_Mod_Tyrus_AboutYou (C_INFO)
@@ -42,8 +42,8 @@ FUNC INT Info_Mod_Tyrus_AboutYou_Condition()
 FUNC VOID Info_Mod_Tyrus_AboutYou_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Tyrus_AboutYou_15_00"); //Erzähl mir was über dich.
-	AI_Output(self, hero, "Info_Mod_Tyrus_AboutYou_08_01"); //Da gibt es nicht viel zu sagen. Ich bin ein Schüler von Friedel, und der Unterricht ist hart genug, dass ich kaum zu etwas anderem komme.
-	AI_Output(self, hero, "Info_Mod_Tyrus_AboutYou_08_02"); //Kriechen, Krabbeln, Kraulen ... Pah! Wer braucht das schon?
+	AI_Output(self, hero, "Info_Mod_Tyrus_AboutYou_37_01"); //Da gibt es nicht viel zu sagen. Ich bin ein Schüler von Friedel, und der Unterricht ist hart genug, dass ich kaum zu etwas anderem komme.
+	AI_Output(self, hero, "Info_Mod_Tyrus_AboutYou_37_02"); //Kriechen, Krabbeln, Kraulen ... Pah! Wer braucht das schon?
 };
 
 INSTANCE Info_Mod_Tyrus_Wettstreit (C_INFO)
@@ -71,7 +71,7 @@ FUNC INT Info_Mod_Tyrus_Wettstreit_Condition()
 FUNC VOID Info_Mod_Tyrus_Wettstreit_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Tyrus_Wettstreit_15_00"); //Was sagst du nun?
-	AI_Output(self, hero, "Info_Mod_Tyrus_Wettstreit_08_01"); //Fühlst dich jetzt wohl ganz toll, hä? Und ich darf weiter bei Friedel rumgammeln ...
+	AI_Output(self, hero, "Info_Mod_Tyrus_Wettstreit_37_01"); //Fühlst dich jetzt wohl ganz toll, hä? Und ich darf weiter bei Friedel rumgammeln ...
 };
 
 INSTANCE Info_Mod_Tyrus_Freudenspender (C_INFO)
@@ -98,7 +98,7 @@ FUNC INT Info_Mod_Tyrus_Freudenspender_Condition()
 FUNC VOID Info_Mod_Tyrus_Freudenspender_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Tyrus_Freudenspender_15_00"); //Ich hätte da bei Interesse Freudenspender für dich ...
-	AI_Output(self, hero, "Info_Mod_Tyrus_Freudenspender_08_01"); //Schön für dich. Steck's dir meinetwegen in den Arsch.
+	AI_Output(self, hero, "Info_Mod_Tyrus_Freudenspender_37_01"); //Schön für dich. Steck's dir meinetwegen in den Arsch.
 };
 
 INSTANCE Info_Mod_Tyrus_Pickpocket (C_INFO)

@@ -4,7 +4,7 @@ instance Mod_7482_OUT_Juliana_REL (Npc_Default)
 	name 		= "Juliana";	
 	guild 		= GIL_OUT;
 	id 			= 7482;
-	voice 		= 16;
+	voice 		= 35;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

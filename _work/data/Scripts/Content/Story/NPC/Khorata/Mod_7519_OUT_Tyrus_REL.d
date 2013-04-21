@@ -4,7 +4,7 @@ instance Mod_7519_OUT_Tyrus_REL (Npc_Default)
 	name 		= "Tyrus"; 
 	guild 		= GIL_OUT;
 	id 			= 7519;
-	voice 		= 8;
+	voice 		= 37;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

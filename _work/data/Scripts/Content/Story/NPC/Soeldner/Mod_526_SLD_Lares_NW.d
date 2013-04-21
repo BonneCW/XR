@@ -4,7 +4,7 @@ instance Mod_526_SLD_Lares_NW (Npc_Default)
 	name 		= "Lares"; 
 	guild 		= GIL_DMT;
 	id 			= 526;
-	voice 		= 9;	
+	voice 		= 37;	
 	flags = 2;																
 	npctype		= NPCTYPE_FRIEND;
 	

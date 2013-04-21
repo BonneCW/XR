@@ -4,7 +4,7 @@ INSTANCE Mod_6008_DMB_Karras_GDG (Npc_Default)
 	name 		= "Karras";
 	guild 		= GIL_OUT;
 	id 			= 6008;
-	voice 		= 12;
+	voice 		= 36;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	aivar[AIV_IGNORE_Murder]		= TRUE;

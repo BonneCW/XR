@@ -4,7 +4,7 @@ INSTANCE Mod_514_DMB_Karras_MT (Npc_Default)
 	name 		= "Karras";
 	guild 		= GIL_KDF;
 	id 			= 514;
-	voice 		= 12;
+	voice 		= 36;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	aivar[AIV_IGNORE_Murder]		= TRUE;

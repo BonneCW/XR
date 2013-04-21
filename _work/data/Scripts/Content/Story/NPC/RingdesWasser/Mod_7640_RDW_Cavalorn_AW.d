@@ -4,7 +4,7 @@ instance Mod_7640_RDW_Cavalorn_AW (Npc_Default)
 	name 		= "Cavalorn";
 	guild 		= GIL_NOV;
 	id 			= 7640;
-	voice 		= 8;
+	voice 		= 36;
 	flags       = 0;	
 	npctype		= NPCTYPE_FRIEND;
 	

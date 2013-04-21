@@ -18,11 +18,11 @@ FUNC VOID Info_Mod_Vincent_Hi_Info()
 {
 	B_Say	(hero, self, "$WHOAREYOU");
 
-	AI_Output(self, hero, "Info_Mod_Vincent_Hi_13_01"); //Hehe, ich bin Vincent, Jäger von Beruf.
+	AI_Output(self, hero, "Info_Mod_Vincent_Hi_36_01"); //Hehe, ich bin Vincent, Jäger von Beruf.
 
 	if (Mod_Schwierigkeit != 4)
 	{
-		AI_Output(self, hero, "Info_Mod_Vincent_Hi_13_02"); //Wenn du willst, kannst du von mir lernen, geschickter den Bogen zu führen.
+		AI_Output(self, hero, "Info_Mod_Vincent_Hi_36_02"); //Wenn du willst, kannst du von mir lernen, geschickter den Bogen zu führen.
 
 		Log_CreateTopic	(TOPIC_MOD_LEHRER_RELENDEL, LOG_NOTE);
 		B_LogEntry	(TOPIC_MOD_LEHRER_RELENDEL, "Der Jäger Vincent kann mir beim Umgang mit dem Bogen helfen.");
@@ -52,11 +52,11 @@ FUNC INT Info_Mod_Vincent_Landvermessung_Condition()
 FUNC VOID Info_Mod_Vincent_Landvermessung_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Vincent_Landvermessung_15_00"); //Anselm schickt mich. Ich soll für ihn in Erfahrung bringen, was für eine Fläche Khoratas Umland hat.
-	AI_Output(self, hero, "Info_Mod_Vincent_Landvermessung_13_01"); //(leise) Hihihihihi ...
+	AI_Output(self, hero, "Info_Mod_Vincent_Landvermessung_36_01"); //(leise) Hihihihihi ...
 	AI_Output(hero, self, "Info_Mod_Vincent_Landvermessung_15_02"); //Was ist?
-	AI_Output(self, hero, "Info_Mod_Vincent_Landvermessung_13_03"); //(lauter) Hahahaha ...
+	AI_Output(self, hero, "Info_Mod_Vincent_Landvermessung_36_03"); //(lauter) Hahahaha ...
 	AI_Output(hero, self, "Info_Mod_Vincent_Landvermessung_15_04"); //WAS IST???
-	AI_Output(self, hero, "Info_Mod_Vincent_Landvermessung_13_05"); //Nichts, nein, gar nichts ... hohoho ... (unterdrückt mühsam einen Lachanfall) Du kannst ... hehe ... sag ihm, Khoratas Umland hat eine Fläche von fünf Quadratmeilen. (Pause, dann prustet er los)
+	AI_Output(self, hero, "Info_Mod_Vincent_Landvermessung_36_05"); //Nichts, nein, gar nichts ... hohoho ... (unterdrückt mühsam einen Lachanfall) Du kannst ... hehe ... sag ihm, Khoratas Umland hat eine Fläche von fünf Quadratmeilen. (Pause, dann prustet er los)
 	AI_Output(hero, self, "Info_Mod_Vincent_Landvermessung_15_06"); //Na schön.
 
 	B_LogEntry	(TOPIC_MOD_KHORATA_LANDVERMESSUNG, "Fünf Quadratmeilen. Wie lustig.");
@@ -85,18 +85,18 @@ FUNC INT Info_Mod_Vincent_Schweine_Condition()
 FUNC VOID Info_Mod_Vincent_Schweine_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Vincent_Schweine_15_00"); //Ich habe gehört, du arbeitest nicht mehr richtig.
-	AI_Output(self, hero, "Info_Mod_Vincent_Schweine_13_01"); //Kann sein. Egal! Hihihi.
+	AI_Output(self, hero, "Info_Mod_Vincent_Schweine_36_01"); //Kann sein. Egal! Hihihi.
 	AI_Output(hero, self, "Info_Mod_Vincent_Schweine_15_02"); //Irgendjemand muss aber deine Arbeit übernehmen.
-	AI_Output(self, hero, "Info_Mod_Vincent_Schweine_13_03"); //Ja, wirklich? (Pause) Ich hab' 'ne tolle Idee: Du übernimmst das!
-	AI_Output(self, hero, "Info_Mod_Vincent_Schweine_13_04"); //Hier!
+	AI_Output(self, hero, "Info_Mod_Vincent_Schweine_36_03"); //Ja, wirklich? (Pause) Ich hab 'ne tolle Idee: Du übernimmst das!
+	AI_Output(self, hero, "Info_Mod_Vincent_Schweine_36_04"); //Hier!
 
 	B_GiveInvItems	(self, hero, ItRw_Bow_L_03, 1);
 
-	AI_Output(self, hero, "Info_Mod_Vincent_Schweine_13_05"); //Und hier!
+	AI_Output(self, hero, "Info_Mod_Vincent_Schweine_36_05"); //Und hier!
 
 	B_GiveInvItems	(self, hero, ItRw_Arrow, 30);
 
-	AI_Output(self, hero, "Info_Mod_Vincent_Schweine_13_06"); //Und keine Widerrede! Lass mich in Ruhe! (kichert)
+	AI_Output(self, hero, "Info_Mod_Vincent_Schweine_36_06"); //Und keine Widerrede! Lass mich in Ruhe! (kichert)
 };
 
 INSTANCE Info_Mod_Vincent_Freudenspender (C_INFO)
@@ -123,7 +123,7 @@ FUNC INT Info_Mod_Vincent_Freudenspender_Condition()
 FUNC VOID Info_Mod_Vincent_Freudenspender_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Vincent_Freudenspender_15_00"); //Du brauchst doch sicher noch Freudenspender-Nachschub.
-	AI_Output(self, hero, "Info_Mod_Vincent_Freudenspender_13_01"); //Richtig - Haha! Dann muss ich ja heute gar nicht mehr in die Stadt.
+	AI_Output(self, hero, "Info_Mod_Vincent_Freudenspender_36_01"); //Richtig - haha! Dann muss ich ja heute gar nicht mehr in die Stadt.
 
 	B_GiveInvItems	(hero, self, ItMi_Freudenspender, 1);
 

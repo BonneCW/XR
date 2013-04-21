@@ -1615,6 +1615,21 @@ INSTANCE ItMi_JanaBeutel (C_Item)
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
+INSTANCE ItMi_ArgezBruchstuecke (C_Item)
+{
+	name 				=	"Beutel mit Bruchstücken";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI|ITEM_SHOW;
+
+	value 				=	0;
+
+	visual 				=	"ItMi_Packet.3ds";
+	material 			=	MAT_LEATHER;
+	description			= 	name;
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
 INSTANCE ItMi_CronosBeutel (C_Item)
 {
 	name 				=	"Beutel für Cronos";

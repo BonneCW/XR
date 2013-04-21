@@ -4,7 +4,7 @@ instance Mod_7581_OUT_Morpheus_REL (Npc_Default)
 	name 		= "Morpheus";
 	guild 		= GIL_OUT;
 	id 			= 7581;
-	voice 		= 4;
+	voice 		= 37;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -980,6 +980,49 @@ func void UseYasinErpresser ()
 
 };
 
+var int Mod_ArgezTB1;
+
+INSTANCE ItWr_ArgezTagebuch1		(C_Item)
+{
+	name 				=	"Zettel";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	ITEM_MISSION|ITEM_SHOW;
+
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseArgezTagebuch1;
+	scemeName			=	"MAP";
+	description			= 	name;
+	TEXT[0]		=	"Seite aus Argez' Tagebuch";
+};
+func void UseArgezTagebuch1 ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		()			  ;							// DocManager
+					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline  			); 	// -1 -> all pages
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
+					Doc_PrintLines	( nDocID,  0, ""					);
+					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Heute wache ich auf, und mein Leben hat sich verändert. Radanos ist mir wieder im Schlaf erschienen - wie so häufig in letzter Zeit. Aber diesmal war die Botschaft klarer, und ich hatte schlafend das Gefühl, seine Forderungen seien absolut gerechtfertigt. Warum ich es bin, dem er sich zeigt, weiß ich nun: Ich bin sein Auserwählter, Xeres zu besiegen, ich bin der Einzige, der es zu tun vermag. Das kann kaum verwundern, wenn man meine Vorgeschichte kennt.");
+					Doc_PrintLines	( nDocID,  0, "Aber nicht einmal meine Magie reicht aus, um es mit Xeres aufzunehmen. Deswegen haben mir die Götter eine Waffe an die Seite gestellt, deren Anblick allein neuen Mut aufleben lässt. 'Uriziel' - der Gottesarm - wird im unvermeidlichen Kampf die Kraft Radanos' bündeln und Xeres den entscheidenden Stoß versetzen.");
+					Doc_PrintLines	( nDocID,  0, "Liebes Tagebuch, ich weiß nicht, ob ich dich jemals wiedersehen werde. Du kennst nun meine dunklen wie auch hellen Seiten, und ich will alles dafür tun, dass letztere überwiegen. Möge der Finder dieses Büchleins nur Gutes über mich hören.");
+					Doc_PrintLine	( nDocID,  0, ""					);
+
+					Doc_Show		( nDocID );
+
+	if (!Mod_ArgezTB1) {
+		B_LogEntry	(TOPIC_MOD_ARGEZ, "Argez ist anscheinend um einiges älter, als ich dachte! Die übersetzte Tagebuchseite, die er mir gab, legt nahe, dass er es war, der Xeres einst entgegentrat und dafür sorgte, dass er verbannt werden konnte. Was hält ihn seitdem am Leben? Ist er selbst göttlichen Ursprungs?");
+	};
+
+};
+
 INSTANCE ItWr_YasinNotiz		(C_Item)
 {
 	name 				=	"Zettel";

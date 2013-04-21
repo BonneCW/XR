@@ -4,7 +4,7 @@ instance Mod_7539_SLD_Hock_JG (Npc_Default)
 	name 		= "Hock"; 
 	guild 		= GIL_OUT;
 	id 			= 7539;
-	voice 		= 6;
+	voice 		= 34;
 	flags       = 2;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

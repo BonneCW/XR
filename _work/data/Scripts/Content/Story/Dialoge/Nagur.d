@@ -20,12 +20,12 @@ FUNC INT Info_Mod_Nagur_Hi_Condition()
 
 FUNC VOID Info_Mod_Nagur_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Nagur_Hi_08_00"); //(Zu sich selbst) Wenn ich diesen armseligen Hosenscheißer nur zwischen die Finger bekomme ...
+	AI_Output(self, hero, "Info_Mod_Nagur_Hi_37_00"); //(Zu sich selbst) Wenn ich diesen armseligen Hosenscheißer nur zwischen die Finger bekomme ...
 	AI_Output(hero, self, "Info_Mod_Nagur_Hi_15_01"); //Was?!
-	AI_Output(self, hero, "Info_Mod_Nagur_Hi_08_02"); //(zum Helden) Ach, so ein feiger Novize hat ordentlich Spielschulden gemacht und sich dann abgesetzt ... ist irgendwo Richtung Leuchtturm abgehauen.
-	AI_Output(self, hero, "Info_Mod_Nagur_Hi_08_03"); //(zweideutig) Aber zahlen soll er ... auf die eine oder andere Weise.
-	AI_Output(self, hero, "Info_Mod_Nagur_Hi_08_04"); //Wenn ihm nun irgendwas zustieße, würde ich demjenigen, der mir den Inhalt seiner Taschen bringt großzügig entlohnen.
-	AI_Output(self, hero, "Info_Mod_Nagur_Hi_08_05"); //(zu sich selbst) Das wäre den anderen eine Warnung, lieber rechtzeitig ihre Schulden zu begleichen.
+	AI_Output(self, hero, "Info_Mod_Nagur_Hi_37_02"); //(zum Helden) Ach, so ein feiger Novize hat ordentlich Spielschulden gemacht und sich dann abgesetzt ... ist irgendwo Richtung Leuchtturm abgehauen.
+	AI_Output(self, hero, "Info_Mod_Nagur_Hi_37_03"); //(zweideutig) Aber zahlen soll er ... auf die eine oder andere Weise.
+	AI_Output(self, hero, "Info_Mod_Nagur_Hi_37_04"); //Wenn ihm nun irgendwas zustieße, würde ich demjenigen, der mir den Inhalt seiner Taschen bringt, großzügig entlohnen.
+	AI_Output(self, hero, "Info_Mod_Nagur_Hi_37_05"); //(zu sich selbst) Das wäre den anderen eine Warnung, lieber rechtzeitig ihre Schulden zu begleichen.
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Daron_HabTrank))
 	{
@@ -59,22 +59,22 @@ FUNC INT Info_Mod_Nagur_AkahaschTot_Condition()
 FUNC VOID Info_Mod_Nagur_AkahaschTot_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Nagur_AkahaschTot_15_00"); //Akahasch hatte einen kleinen "Unfall" ...
-	AI_Output(self, hero, "Info_Mod_Nagur_AkahaschTot_08_01"); //(erwartungsvoll) Ja?
+	AI_Output(self, hero, "Info_Mod_Nagur_AkahaschTot_37_01"); //(erwartungsvoll) Ja?
 	AI_Output(hero, self, "Info_Mod_Nagur_AkahaschTot_15_02"); //Er wird wohl leider nie wieder jemandem "beklauen" können ...
-	AI_Output(self, hero, "Info_Mod_Nagur_AkahaschTot_08_03"); //Das hört sich doch schon mal viel versprechend an. Was ist mit dem Zeug das er bei sich hatte?
+	AI_Output(self, hero, "Info_Mod_Nagur_AkahaschTot_37_03"); //Das hört sich doch schon mal vielversprechend an. Was ist mit dem Zeug, das er bei sich hatte?
 	AI_Output(hero, self, "Info_Mod_Nagur_AkahaschTot_15_04"); //Er hatte zum einen ...
-	AI_Output(self, hero, "Info_Mod_Nagur_AkahaschTot_08_05"); //Ne, nicht im Detail ... ich will nur den Zettel als Beweis seines Ablebens.
+	AI_Output(self, hero, "Info_Mod_Nagur_AkahaschTot_37_05"); //Nee, nicht im Detail ... ich will nur den Zettel als Beweis seines Ablebens.
 	AI_Output(hero, self, "Info_Mod_Nagur_AkahaschTot_15_06"); //Hier ist er.
 
 	B_GiveInvItems	(hero, self, ItWr_AkahaschNagur, 1);
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_Nagur_AkahaschTot_08_07"); //Ja, da gibt es keinen Zweifel. Freiwillig hätte er dir den nicht in die Hand gedrückt.
+	AI_Output(self, hero, "Info_Mod_Nagur_AkahaschTot_37_07"); //Ja, da gibt es keinen Zweifel. Freiwillig hätte er dir den nicht in die Hand gedrückt.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 180);
 
-	AI_Output(self, hero, "Info_Mod_Nagur_AkahaschTot_08_08"); //Bist ein guter Junge. Hier, amüsier dich etwas auf meine Rechnung.
+	AI_Output(self, hero, "Info_Mod_Nagur_AkahaschTot_37_08"); //Bist ein guter Junge. Hier, amüsier dich etwas auf meine Rechnung.
 
 	B_GivePlayerXP	(200);
 };
@@ -100,18 +100,18 @@ FUNC INT Info_Mod_Nagur_Geschaeft_Condition()
 
 FUNC VOID Info_Mod_Nagur_Geschaeft_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_00"); //Gut, dass jetzt hier auftauchst. Ich habe mal wieder einen Job für dich.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_37_00"); //Gut, dass jetzt hier auftauchst. Ich habe mal wieder einen Job für dich.
 	AI_Output(hero, self, "Info_Mod_Nagur_Geschaeft_15_01"); //Wen soll ich diesmal umbringen?
-	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_02"); //Den verräterischen Abschaum, der mal für mich gearbeitet hat.
-	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_03"); //Zwei von meinen Jungs machen nämlich seit kurzem gemeinsame Sache mit dem Schmugglerpack, das sich hier im Hafenviertel breit gemacht hat.
-	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_04"); //Jetzt glauben sie, mir die Preise diktieren zu können und versuchen mich Stück für Stück aus den Geschäften zu verdrängen.
-	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_05"); //Das wird aber nicht passieren ... denn du wirst ein Exempel an ihnen statuieren.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_37_02"); //Den verräterischen Abschaum, der mal für mich gearbeitet hat.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_37_03"); //Zwei von meinen Jungs machen nämlich seit kurzem gemeinsame Sache mit dem Schmugglerpack, das sich hier im Hafenviertel breit gemacht hat.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_37_04"); //Jetzt glauben sie, mir die Preise diktieren zu können und versuchen mich Stück für Stück aus den Geschäften zu verdrängen.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_37_05"); //Das wird aber nicht passieren ... denn du wirst ein Exempel an ihnen statuieren.
 	AI_Output(hero, self, "Info_Mod_Nagur_Geschaeft_15_06"); //Und was springt für mich dabei heraus?
-	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_07"); //Nun, ich gebe dir zum einen 200 Goldmünzen, zum anderen darfst du alles behalten, was du bei diesen Bastarden findest.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_37_07"); //Nun, ich gebe dir zum einen 200 Goldmünzen, zum anderen darfst du alles behalten, was du bei diesen Bastarden findest.
 	AI_Output(hero, self, "Info_Mod_Nagur_Geschaeft_15_08"); //Und wo finde ich sie?
-	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_09"); //Die Frage lautet in dem Fall wie. Du wirst in den Kisten zwischen Lagerhaus und Lastenkran ein Paket deponieren und anschließend zum Baum über dem Lagerhaus gehen, um von dort aus alles im Blick zu haben.
-	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_10"); //Einer von den Bastarden sollte kurz danach das Paket holen und in ihr Versteck gehen.
-	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_08_11"); //Du wirst ihm folgen und dort die Mistkerle alle machen. Noch Fragen? Nein? Dann hast du hier das Paket.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_37_09"); //Die Frage lautet in dem Fall wie. Du wirst in den Kisten zwischen Lagerhaus und Lastenkran ein Paket deponieren und anschließend zum Baum über dem Lagerhaus gehen, um von dort aus alles im Blick zu haben.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_37_10"); //Einer von den Bastarden sollte kurz danach das Paket holen und in ihr Versteck gehen.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft_37_11"); //Du wirst ihm folgen und dort den Mistkerlen den Garaus machen. Noch Fragen? Nein? Dann hast du hier das Paket.
 
 	B_GiveInvItems	(self, hero, ItMi_NagurPaket, 1);
 
@@ -153,8 +153,8 @@ FUNC INT Info_Mod_Nagur_Geschaeft2_Condition()
 FUNC VOID Info_Mod_Nagur_Geschaeft2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Nagur_Geschaeft2_15_00"); //Die Verräter und Schmuggler werden keinen Ärger mehr machen.
-	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft2_08_01"); //Ausgezeichnet. Das wird allen anderen eine Warnung sein, sich besser nicht mit mir anzulegen.
-	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft2_08_02"); //Du hast deinen Job wieder mal gut gemacht. Hier ist dein Gold.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft2_37_01"); //Ausgezeichnet. Das wird allen anderen eine Warnung sein, sich besser nicht mit mir anzulegen.
+	AI_Output(self, hero, "Info_Mod_Nagur_Geschaeft2_37_02"); //Du hast deinen Job wieder mal gut gemacht. Hier ist dein Gold.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 200);
 
@@ -196,15 +196,15 @@ FUNC INT Info_Mod_Nagur_Rache_Condition()
 
 FUNC VOID Info_Mod_Nagur_Rache_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Nagur_Rache_08_00"); //(höhnisch) Na, hast du gefunden, was du gesucht hast?
+	AI_Output(self, hero, "Info_Mod_Nagur_Rache_37_00"); //(höhnisch) Na, hast du gefunden, was du gesucht hast?
 	AI_Output(hero, self, "Info_Mod_Nagur_Rache_15_01"); //Nagur?!
-	AI_Output(self, hero, "Info_Mod_Nagur_Rache_08_02"); //Überrascht mich zu sehen?
-	AI_Output(self, hero, "Info_Mod_Nagur_Rache_08_03"); //Ja, man hat mich eine ganze Weile aus dem Verkehr gezogen, habe lange im Kerker geschmort ... und ich hatte viel Zeit zum Nachdenken, wie ich mich bei demjenigen revanchiere, dem ich das zu verdanken habe.
-	AI_Output(self, hero, "Info_Mod_Nagur_Rache_08_04"); //Ich hoffe das Ergebnis gefällt dir ... das nette Wiedersehen mit deinem Kollegen.
+	AI_Output(self, hero, "Info_Mod_Nagur_Rache_37_02"); //Überrascht mich zu sehen?
+	AI_Output(self, hero, "Info_Mod_Nagur_Rache_37_03"); //Ja, man hat mich eine ganze Weile aus dem Verkehr gezogen, habe lange im Kerker geschmort ... und ich hatte viel Zeit zum Nachdenken, wie ich mich bei demjenigen revanchiere, dem ich das zu verdanken habe.
+	AI_Output(self, hero, "Info_Mod_Nagur_Rache_37_04"); //Ich hoffe das Ergebnis gefällt dir ... das nette Wiedersehen mit deinem Kollegen.
 
 	AI_TurnToNpc	(self, Mod_7780_SNOV_Novize_NW);
 
-	AI_Output(self, hero, "Info_Mod_Nagur_Rache_08_05"); //(zu den beiden anderen) Jungs, dasselbe mit ihm, wie mit Akahasch!
+	AI_Output(self, hero, "Info_Mod_Nagur_Rache_37_05"); //(zu den beiden anderen) Jungs, dasselbe mit ihm, wie mit Akahasch!
 
 	AI_TurnToNpc	(self, hero);
 

@@ -79,6 +79,8 @@ FUNC VOID Info_Mod_Alkor_StarteContest_Info()
 
 	AI_Output(self, hero, "Info_Mod_Alkor_StarteContest_31_01"); //Na gut. Dann los zur ersten Runde.
 
+	AI_UseMob	(self, "CHAIR", -1);
+
 	Info_ClearChoices	(Info_Mod_Alkor_StarteContest);
 
 	Info_AddChoice	(Info_Mod_Alkor_StarteContest, "(Weiter)", Info_Mod_Alkor_StarteContest_Weiter_01);

@@ -119,7 +119,7 @@ FUNC INT Info_Mod_Melvin_Korndiebe_Condition()
 FUNC VOID Info_Mod_Melvin_Korndiebe_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Melvin_Korndiebe_15_00"); //Der Bauer hat kein Korn mehr.
-	AI_Output(self, hero, "Info_Mod_Melvin_Korndiebe_29_01"); //Nein, wie ist das möglich? Müssen wir jetzt bis zur nächsten Ernte warten? Was sollen wir so lange machen?
+	AI_Output(self, hero, "Info_Mod_Melvin_Korndiebe_29_01"); //Hä, wie ist das möglich? Müssen wir jetzt bis zur nächsten Ernte warten? Was sollen wir denn so lange machen?
 	AI_Output(hero, self, "Info_Mod_Melvin_Korndiebe_15_02"); //Sucht einfach ein neues Rezept.
 	AI_Output(self, hero, "Info_Mod_Melvin_Korndiebe_29_03"); //Ja, das ist gut. (laut) Jungs, habt ihr das gehört? Wir suchen nach einem anderen Rezept!
 

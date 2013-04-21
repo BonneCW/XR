@@ -1,12 +1,12 @@
 INSTANCE Mod_915_NOV_Dyrian_NW (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Dyrian";
+	name 		= "Feuernovize";
 	guild 		= GIL_VLK;
 	id 			= 915;
 	voice 		= 13;
 	flags       = 0;																	
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_nw_feuernovize;
 	
 	// ------ Attribute ------
 	B_SetAttributesToChapter (self, 2);	

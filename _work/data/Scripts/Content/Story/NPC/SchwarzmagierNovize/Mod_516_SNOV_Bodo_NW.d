@@ -4,7 +4,7 @@ INSTANCE Mod_516_SNOV_Bodo_NW (Npc_Default)
 	name 		= "Bodo";
 	guild 		= GIL_OUT;
 	id 			= 516;
-	voice 		= 12;
+	voice 		= 36;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_FRIEND;
 	aivar[AIV_IGNORE_Murder]		= TRUE;

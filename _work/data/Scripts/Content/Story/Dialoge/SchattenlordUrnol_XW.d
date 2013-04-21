@@ -54,7 +54,6 @@ FUNC VOID Info_Mod_Urnol_XW_Gefangen_Info()
 	AI_Output(self, hero, "Info_Mod_Urnol_XW_Gefangen_14_08"); //Na ja, ich hoffe, es dauert nicht zu lange, bis Xeres wiederkommt. Er hat oben dringende Geschäfte zu erledigen, weißt du.
 	AI_Output(self, hero, "Info_Mod_Urnol_XW_Gefangen_14_09"); //Angelegenheiten, die er Tausende von Jahren aufschieben musste.
 	AI_Output(self, hero, "Info_Mod_Urnol_XW_Gefangen_14_10"); //Aber keine Sorge, so lange musst du nicht auf deine schmerzhafte Hinrichtung warten. (lacht)
-	AI_Output(hero, self, "Info_Mod_Urnol_XW_Gefangen_15_11"); //Wieso habt ihr Argez entführt?
 
 	AI_StopProcessInfos	(self);
 

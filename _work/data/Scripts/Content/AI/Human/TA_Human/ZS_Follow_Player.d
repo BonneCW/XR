@@ -160,7 +160,7 @@ func int ZS_Follow_Player_Loop ()
 			{
 				if (Npc_RefuseTalk(self) == FALSE)
 				{
-					AI_Output(self, hero, "Info_Mod_Argez_TooFar_01_00"); //Da sollten wir nicht langlaufen. Ich warte hier.
+					AI_Output(self, hero, "Info_Mod_Argez_TooFar_37_00"); //Da sollten wir nicht langlaufen. Ich warte hier.
 
 					Npc_SetRefuseTalk (self, 30);
 				};

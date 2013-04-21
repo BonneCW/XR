@@ -4,7 +4,7 @@ INSTANCE Mod_1941_SNOV_Bodo_NW (Npc_Default)
 	name 		= "Bodo";
 	guild 		= GIL_OUT;
 	id 			= 1941;
-	voice 		= 12;
+	voice 		= 36;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_main;
 	// ------ Attribute ------

@@ -1674,7 +1674,6 @@ FUNC VOID Info_Mod_Andre_Hanna_Info()
 	AI_Output(hero, self, "Info_Mod_Andre_Hanna_15_04"); //Das hat er sicherlich.
 	AI_Output(self, hero, "Info_Mod_Andre_Hanna_08_05"); //Gut, hier ist dein Sold.
 
-	CreateInvItems	(self, ItMi_Gold, 200);
 	B_GiveInvItems	(self, hero, ItMi_Gold, 200);
 
 	AI_Output(self, hero, "Info_Mod_Andre_Hanna_08_06"); //Komm später wieder, momentan ist alles ruhig.

@@ -4,7 +4,7 @@ instance Mod_7682_STT_Fisk_NW (Npc_Default)
 	name 		= "Fisk";
 	guild 		= GIL_OUT;
 	id 			= 7682;
-	voice 		= 12;
+	voice 		= 37;
 	flags      	= 0;
 	npctype		= NPCTYPE_main;
 	

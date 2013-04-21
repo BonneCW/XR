@@ -4,7 +4,7 @@ instance Mod_902_BAU_Egill_NW (Npc_Default)
 	name 		= "Egill";
 	guild 		= GIL_NONE;
 	id 			= 902;
-	voice 		= 8;
+	voice 		= 37;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

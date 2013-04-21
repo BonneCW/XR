@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Fisk_Hi_Condition()
 
 FUNC VOID Info_Mod_Fisk_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Fisk_Hi_12_00"); //Hey, ich kann dir was verkaufen. Ich hab einige Waffen auf Lager.
+	AI_Output(self, hero, "Info_Mod_Fisk_Hi_37_00"); //Hey, ich kann dir was verkaufen. Ich hab einige Waffen auf Lager.
 	
 	Log_CreateTopic	(TOPIC_MOD_HAENDLER_OLDCAMP, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_HAENDLER_OLDCAMP, "Fisk verkauft Waffen.");
@@ -45,10 +45,10 @@ FUNC INT Info_Mod_Fisk_Dieb_Condition()
 
 FUNC VOID Info_Mod_Fisk_Dieb_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Fisk_Dieb_15_00"); //Ich habe gehört, dass du mit "heißer Ware" handelst, und ich würde dir vorschlagen, du verrätst mir, ob darunter das Zeug ist, dass den Erzbaronen gestohlen wurde.
-	AI_Output(self, hero, "Info_Mod_Fisk_Dieb_12_01"); //(erschrocken) Hey, ich kann nichts dafür, er kam zu mir und er wollte, dass ich das Zeug für seinen Kontaktmann aufbewahre. Er hat gedroht mich umzubringen.
-	AI_Output(hero, self, "Info_Mod_Fisk_Dieb_15_02"); //Wer ist er? Kannst du mir wenigsten Beweise gegen ihn liefern?
-	AI_Output(self, hero, "Info_Mod_Fisk_Dieb_12_03"); //Ok, versichere mir, dass ich sicher vor ihm bin, dann gebe ich dir einen Beweis gegen ihn.
+	AI_Output(hero, self, "Info_Mod_Fisk_Dieb_15_00"); //Ich habe gehört, dass du mit "heißer Ware" handelst, und ich würde dir vorschlagen, du verrätst mir, ob darunter das Zeug ist, das den Erzbaronen gestohlen wurde.
+	AI_Output(self, hero, "Info_Mod_Fisk_Dieb_37_01"); //(erschrocken) Ich kann nichts dafür, er kam zu mir und er wollte, dass ich das Zeug für seinen Kontaktmann aufbewahre. Er hat gedroht mich umzubringen.
+	AI_Output(hero, self, "Info_Mod_Fisk_Dieb_15_02"); //Wer ist er? Kannst du mir wenigstens Beweise gegen ihn liefern?
+	AI_Output(self, hero, "Info_Mod_Fisk_Dieb_37_03"); //Wenn du sicherstellst, dass er mir nichts tut, dann gebe ich dir einen Beweis gegen ihn.
 
 	Mod_PDV_Fisk_Infos = 1;
 };
@@ -78,9 +78,9 @@ FUNC INT Info_Mod_Fisk_Frage_Condition()
 FUNC VOID Info_Mod_Fisk_Frage_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Fisk_Frage_15_00"); //Ich hätte Interesse an dem Zeug der Erzbarone und ich habe gehört, dass du etwas davon verkaufst.
-	AI_Output(self, hero, "Info_Mod_Fisk_Frage_12_01"); //(erschrocken) Was, woher weißt du das? Nein, davon kann ich nichts verkaufen, vergiss bitte schnell, dass ich das Zeug habe.
+	AI_Output(self, hero, "Info_Mod_Fisk_Frage_37_01"); //(erschrocken) Woher weißt du das? Nein, davon kann ich nichts verkaufen, vergiss bitte schnell, dass ich das Zeug habe.
 	AI_Output(hero, self, "Info_Mod_Fisk_Frage_15_02"); //Hör zu, ich bin im Auftrag von Thorus unterwegs und ich muss wissen, was hier vorgeht.
-	AI_Output(self, hero, "Info_Mod_Fisk_Frage_12_03"); //Ok, versichere mir, dass ich sicher vor ihm bin, dann gebe ich dir einen Beweis gegen ihn.
+	AI_Output(self, hero, "Info_Mod_Fisk_Frage_37_03"); //Wenn du sicherstellst, dass er mir nichts tut, dann gebe ich dir einen Beweis gegen ihn.
 
 	Mod_PDV_Fisk_Infos = 1;
 };
@@ -93,7 +93,7 @@ INSTANCE Info_Mod_Fisk_Hilfe (C_INFO)
 	information	= Info_Mod_Fisk_Hilfe_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Gut, wenn du mir sagst, was ich machen soll.";
+	description	= "Abgemacht.";
 };
 
 FUNC INT Info_Mod_Fisk_Hilfe_Condition()
@@ -106,14 +106,14 @@ FUNC INT Info_Mod_Fisk_Hilfe_Condition()
 
 FUNC VOID Info_Mod_Fisk_Hilfe_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Fisk_Hilfe_15_00"); //Gut, wenn du mir sagst, was ich machen soll.
-	AI_Output(self, hero, "Info_Mod_Fisk_Hilfe_12_01"); //Nun gut, sie stehlen das Zeug immer um 2 Uhr und bringen es es dann zu meinem Laden. Um die Zeit erwarten sie, dass ich anwesend bin.
-	AI_Output(self, hero, "Info_Mod_Fisk_Hilfe_12_02"); //Lege dich um die Zeit auf die Lauer im Haus der Erzbarone.
-	AI_Output(hero, self, "Info_Mod_Fisk_Hilfe_15_03"); //Gut.
+	AI_Output(hero, self, "Info_Mod_Fisk_Hilfe_15_00"); //Abgemacht.
+	AI_Output(self, hero, "Info_Mod_Fisk_Hilfe_37_01"); //Nun gut, sie stehlen das Zeug immer um zwei Uhr und bringen es dann zu meinem Laden. Um die Zeit erwarten sie, dass ich anwesend bin.
+	AI_Output(self, hero, "Info_Mod_Fisk_Hilfe_37_02"); //Lege dich um die Zeit auf die Lauer im Haus der Erzbarone.
+	AI_Output(hero, self, "Info_Mod_Fisk_Hilfe_15_03"); //Alles klar.
 
 	Mod_PDV_Fisk_Infos = 2;
 
-	B_LogEntry	(TOPIC_MOD_PDV, "Ich habe bei Fisk gefragt, ob er mir genaueres sagen kann. Er meinte, wenn ich sie bei Thorus melde, verschafft er mir einen Beweis. Außerdem sagte er, ich sollte mich um 2 Uhr im Haus der Erzbarone auf die Lauer legen.");
+	B_LogEntry	(TOPIC_MOD_PDV, "Ich habe bei Fisk gefragt, ob er mir Genaueres sagen kann. Er meinte, wenn ich sie bei Thorus melde, verschafft er mir einen Beweis. Außerdem sagte er, ich solle mich um 2 Uhr im Haus der Erzbarone auf die Lauer legen.");
 
 	B_StartOtherRoutine	(Mod_943_GRD_Bloodwyn_MT, "DIEB");
 	B_StartOtherRoutine	(Mod_1110_GRD_Cutter_MT, "DIEB");
@@ -141,7 +141,7 @@ FUNC INT Info_Mod_Fisk_Zettel_Condition()
 FUNC VOID Info_Mod_Fisk_Zettel_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Fisk_Zettel_15_00"); //Bloodwyn und Cutter wurden gefangen, was ist jetzt mit dem Beweis?
-	AI_Output(self, hero, "Info_Mod_Fisk_Zettel_12_01"); //Hier, diese Schrift war bei jeder Lieferung dabei.
+	AI_Output(self, hero, "Info_Mod_Fisk_Zettel_37_01"); //Hier, diese Schrift war bei jeder Lieferung dabei.
 
 	B_GiveInvItems	(self, hero, ItWr_FisksNotiz, 1);
 
@@ -173,15 +173,15 @@ FUNC INT Info_Mod_Fisk_SLDSpy_Condition()
 FUNC VOID Info_Mod_Fisk_SLDSpy_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Fisk_SLDSpy_15_00"); //Hallo, was gibt es Neues im Lager?
-	AI_Output(self, hero, "Info_Mod_Fisk_SLDSpy_12_01"); //Da fragst du noch ...
-	AI_Output(hero, self, "Info_Mod_Fisk_SLDSpy_15_02"); //(Erwartungsvoll) Ja?!
-	AI_Output(self, hero, "Info_Mod_Fisk_SLDSpy_12_03"); //Meine Waren. Beste und neuste Qualität, für einen Schnäppchenpreis zu haben.
+	AI_Output(self, hero, "Info_Mod_Fisk_SLDSpy_37_01"); //Da fragst du noch ...
+	AI_Output(hero, self, "Info_Mod_Fisk_SLDSpy_15_02"); //(erwartungsvoll) Ja?
+	AI_Output(self, hero, "Info_Mod_Fisk_SLDSpy_37_03"); //Meine Waren. Beste und neueste Qualität, für einen Schnäppchenpreis zu haben.
 	AI_Output(hero, self, "Info_Mod_Fisk_SLDSpy_15_04"); //Ähh, und andere Neuigkeiten?
-	AI_Output(self, hero, "Info_Mod_Fisk_SLDSpy_12_05"); //Jetzt weiß ich, was du meinst ...
+	AI_Output(self, hero, "Info_Mod_Fisk_SLDSpy_37_05"); //Jetzt weiß ich, was du meinst ...
 	AI_Output(hero, self, "Info_Mod_Fisk_SLDSpy_15_06"); //Ich höre.
-	AI_Output(self, hero, "Info_Mod_Fisk_SLDSpy_12_07"); //Die Sache mit den Ratten im Eintopf der Erzbarone. Das war vielleicht ein Spaß. Zu Gomez’ Zeiten hätte man die beiden Köche gevierteilt oder gerädert.
+	AI_Output(self, hero, "Info_Mod_Fisk_SLDSpy_37_07"); //Die Sache mit den Ratten im Eintopf der Erzbarone. Das war kein Spaß, sag ich dir. Zu Gomez’ Zeiten hätte man die beiden Köche gevierteilt oder gerädert.
 	AI_Output(hero, self, "Info_Mod_Fisk_SLDSpy_15_08"); //Hmm ...
-	AI_Output(self, hero, "Info_Mod_Fisk_SLDSpy_12_09"); //Oder ja, der Mord, den Cutter beobachtet hat. Scheint was Wichtiges gewesen zu sein. Mehr fällt mir im Moment nicht ein.
+	AI_Output(self, hero, "Info_Mod_Fisk_SLDSpy_37_09"); //Oder ja, der Mord, den Cutter beobachtet hat. Scheint was Wichtiges gewesen zu sein. Mehr fällt mir im Moment nicht ein.
 
 	B_LogEntry	(TOPIC_MOD_SLD_SPY, "Cutter hat einen wichtigen Mord beobachtet, wie ich von Fisk erfahren habe.");
 };
@@ -210,15 +210,15 @@ FUNC INT Info_Mod_Fisk_CutterBad_Condition()
 FUNC VOID Info_Mod_Fisk_CutterBad_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Fisk_CutterBad_15_00"); //Hey, du hast mir ja erzählt, dass Cutter einen Mord beobachtet hätte.
-	AI_Output(self, hero, "Info_Mod_Fisk_CutterBad_12_01"); //Ja und?
-	AI_Output(hero, self, "Info_Mod_Fisk_CutterBad_15_02"); //Also Cutter hat sich ja ziemlich merkwürdig in letzter Zeit benommen. Habe ihn nachts durch das Lager schleichen sehen mit einem Haufen Krempel, als ob er die Sachen verstecken wollte, was zu verbergen hätte. Womöglich ... ne das wäre abwegig ...
-	AI_Output(self, hero, "Info_Mod_Fisk_CutterBad_12_03"); //Ja sag schon, was meinst du?
+	AI_Output(self, hero, "Info_Mod_Fisk_CutterBad_37_01"); //Ja, und?
+	AI_Output(hero, self, "Info_Mod_Fisk_CutterBad_15_02"); //Also Cutter hat sich ja ziemlich merkwürdig in letzter Zeit benommen. Habe ihn nachts durch das Lager schleichen sehen mit einem Haufen Krempel, als ob er die Sachen verstecken wollte, was zu verbergen hätte. Womöglich ... nee, das wäre abwegig ...
+	AI_Output(self, hero, "Info_Mod_Fisk_CutterBad_37_03"); //Ja, sag schon, was meinst du?
 	AI_Output(hero, self, "Info_Mod_Fisk_CutterBad_15_04"); //Na ja, ich habe mich gefragt, ob er womöglich nicht selbst was mit dem Mord zu tun haben könnte.
-	AI_Output(self, hero, "Info_Mod_Fisk_CutterBad_12_05"); //Das ist eine gefährliche Unterstellung… . (zu sich selbst) Hmm, aber wenn vielleicht doch was dran ist? Muss unbedingt einige Gardisten darauf ansprechen.
+	AI_Output(self, hero, "Info_Mod_Fisk_CutterBad_37_05"); //Das ist eine gefährliche Unterstellung... (zu sich selbst) Hmm, aber wenn vielleicht doch was dran ist? Muss unbedingt einige Gardisten darauf ansprechen.
 
 	Mod_SLD_Spy = 6;
 
-	B_LogEntry	(TOPIC_MOD_SLD_SPY, "So, das wäre erledigt. Jetzt sollten die Gardisten bald in Cutter’s Truhe schauen.");
+	B_LogEntry	(TOPIC_MOD_SLD_SPY, "So, das wäre erledigt. Jetzt sollten die Gardisten bald in Cutters Truhe schauen.");
 };
 
 INSTANCE Info_Mod_Fisk_WoherWaren (C_INFO)
@@ -240,10 +240,10 @@ FUNC INT Info_Mod_Fisk_WoherWaren_Condition()
 FUNC VOID Info_Mod_Fisk_WoherWaren_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Fisk_WoherWaren_15_00"); //Woher bekommst du deine Ware in diesen trüben Zeiten?
-	AI_Output(self, hero, "Info_Mod_Fisk_WoherWaren_12_01"); //An Waffen zu kommen ist jetzt wirklich nicht so das Problem. Tüchtige Schmiede haben wir genug.
-	AI_Output(self, hero, "Info_Mod_Fisk_WoherWaren_12_02"); //Allerdings will den ganzen Krempel gerade keiner. Was soll man schon mit schartigem Eisen, wenn man eigentlich was zwischen die Zähne braucht?
+	AI_Output(self, hero, "Info_Mod_Fisk_WoherWaren_37_01"); //An Waffen zu kommen ist jetzt wirklich nicht so das Problem. Tüchtige Schmiede haben wir genug.
+	AI_Output(self, hero, "Info_Mod_Fisk_WoherWaren_37_02"); //Allerdings will den ganzen Krempel gerade keiner. Was soll man schon mit schartigem Eisen, wenn man eigentlich was zwischen die Zähne braucht?
 	AI_Output(hero, self, "Info_Mod_Fisk_WoherWaren_15_03"); //Wieso bist du dann noch hier?
-	AI_Output(self, hero, "Info_Mod_Fisk_WoherWaren_12_04"); //Das frag ich mich auch schon lange ...
+	AI_Output(self, hero, "Info_Mod_Fisk_WoherWaren_37_04"); //Das frag ich mich auch schon lange ...
 };
 
 INSTANCE Info_Mod_Fisk_Trade (C_INFO)

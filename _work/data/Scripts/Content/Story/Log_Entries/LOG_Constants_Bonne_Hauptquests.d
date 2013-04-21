@@ -22,3 +22,4 @@ const string TOPIC_MOD_MAGIEPRISMA	=	"Ein Prisma für Magie";
 const string TOPIC_MOD_SATURAS_TAGGAST	=	"Ein ungebetener Besucher";
 const string TOPIC_MOD_SATURAS_NACHTGAST	=	"Ein nächtlicher Besucher";
 const string TOPIC_MOD_MAGISCHEMARKIERUNG	=	"Die magische Markierung";
+const string TOPIC_MOD_ARGEZ_ORT	=	"Kein guter Ort für einen zerbrochenen Ort";

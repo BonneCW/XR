@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Costa_Hi_Info()
 {
 	B_Say	(hero, self, "$WHoAREYOU");
 
-	AI_Output(self, hero, "Info_Mod_Costa_Hi_02_00"); //Costa, Buddler. Wie unschwer zu erkennen ist.
+	AI_Output(self, hero, "Info_Mod_Costa_Hi_34_00"); //Costa, Buddler. Wie unschwer zu erkennen ist.
 };
 
 INSTANCE Info_Mod_Costa_Buddler (C_INFO)
@@ -43,15 +43,15 @@ FUNC INT Info_Mod_Costa_Buddler_Condition()
 FUNC VOID Info_Mod_Costa_Buddler_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Costa_Buddler_15_00"); //Interesse, wieder als Buddler zu arbeiten?
-	AI_Output(self, hero, "Info_Mod_Costa_Buddler_02_01"); //Leider ist mit mir nicht mehr soviel anzufangen. Hab seit dem Fall der Barriere keinen Brocken Erz mehr geschürft.
-	AI_Output(self, hero, "Info_Mod_Costa_Buddler_02_02"); //Und leider hab ich bei einem Kampf mit einem Skelett mein Buddlerbuch verloren. Da seht alles drin, um mich wieder auf Vordermann zu bringen.
+	AI_Output(self, hero, "Info_Mod_Costa_Buddler_34_01"); //Leider ist mit mir nicht mehr so viel anzufangen. Hab seit dem Fall der Barriere keinen Brocken Erz mehr geschürft.
+	AI_Output(self, hero, "Info_Mod_Costa_Buddler_34_02"); //Und leider hab ich bei einem Kampf mit einem Skelett mein Buddlerbuch verloren. Da steht alles drin, um mich wieder auf Vordermann zu bringen.
 	AI_Output(hero, self, "Info_Mod_Costa_Buddler_15_03"); //Warum legt sich ein Buddler mit einem Skelett an?
-	AI_Output(self, hero, "Info_Mod_Costa_Buddler_02_04"); //Na ja, irgendwas muss man ja machen. Hab mich nach dem Fall der Barriere als Artefaktsucher versucht. Bin wohl nicht sehr gut gewesen.
+	AI_Output(self, hero, "Info_Mod_Costa_Buddler_34_04"); //Na ja, irgendwas muss man ja machen. Hab mich nach dem Fall der Barriere als Artefaktsucher versucht. Bin wohl nicht sehr gut gewesen.
 	AI_Output(hero, self, "Info_Mod_Costa_Buddler_15_05"); //Dann ist das Skelett ja ein besserer Artefaktsucher als du. Wo soll denn dieses Skelett sein?
-	AI_Output(self, hero, "Info_Mod_Costa_Buddler_02_06"); //Ich nehme an, noch in meinem kleinen Lager, das auf dem Weg zum neuen Lager am Fluss liegt.
+	AI_Output(self, hero, "Info_Mod_Costa_Buddler_34_06"); //Ich nehme an, noch in meinem kleinen Lager, das auf dem Weg zum Neuen Lager am Fluss liegt.
 	AI_Output(hero, self, "Info_Mod_Costa_Buddler_15_07"); //Ich werde dein Buch schon irgendwie bekommen, pack du schon mal eine sieben Sachen ein.
 
-	B_LogEntry	(TOPIC_MOD_KG_BUDDLER, "Costa wäre bereit bei uns in der Mine zu schürfen, ist jedoch nicht mehr ganz in der Materie. Ich soll ihm daher sein Buddlerbuch besorgen, welches er jedoch bei einem Kampf mit einem Skelett verloren hat. Das Skelett befindet sich nun in seinem Lager am Fluss zum neuen Lager. Ich sollte lieber Melcador mitnehmen.");
+	B_LogEntry	(TOPIC_MOD_KG_BUDDLER, "Costa wäre bereit, bei uns in der Mine zu schürfen, ist jedoch nicht mehr ganz in der Materie. Ich soll ihm daher sein Buddlerbuch besorgen, welches er jedoch bei einem Kampf mit einem Skelett verloren hat. Das Skelett befindet sich nun in seinem Lager am Fluss zum Neuen Lager. Ich sollte lieber Melcador mitnehmen.");
 };
 
 INSTANCE Info_Mod_Costa_Buddler2 (C_INFO)
@@ -81,9 +81,9 @@ FUNC VOID Info_Mod_Costa_Buddler2_Info()
 
 	B_GiveInvItems	(hero, self, ItWr_Buddlerbuch, 1);
 
-	AI_Output(self, hero, "Info_Mod_Costa_Buddler2_02_01"); //Danke, jetzt kann ich mich wieder fit machen. Wo soll ich denn buddeln?
+	AI_Output(self, hero, "Info_Mod_Costa_Buddler2_34_01"); //Danke, jetzt kann ich mich wieder fit machen. Wo soll ich denn buddeln?
 	AI_Output(hero, self, "Info_Mod_Costa_Buddler2_15_02"); //Geh zur verlassenen Mine und warte davor.
-	AI_Output(self, hero, "Info_Mod_Costa_Buddler2_02_03"); //Ich mach mich sofort auf den Weg.
+	AI_Output(self, hero, "Info_Mod_Costa_Buddler2_34_03"); //Ich mach mich sofort auf den Weg.
 
 	B_LogEntry	(TOPIC_MOD_KG_BUDDLER, "Costa macht sich jetzt auf den Weg zur Mine.");
 
@@ -116,8 +116,8 @@ FUNC INT Info_Mod_Costa_SchonImmerHier_Condition()
 FUNC VOID Info_Mod_Costa_SchonImmerHier_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Costa_SchonImmerHier_15_00"); //Warst du schon immer im Alten Lager?
-	AI_Output(self, hero, "Info_Mod_Costa_SchonImmerHier_02_01"); //Jedenfalls schon deutlich zu lange. Ich habe dich vor Monaten auch schon mal gesehen.
-	AI_Output(self, hero, "Info_Mod_Costa_SchonImmerHier_02_02"); //Aber wie haben nie miteinander gesprochen oder so.
+	AI_Output(self, hero, "Info_Mod_Costa_SchonImmerHier_34_01"); //Jedenfalls schon deutlich zu lange. Ich habe dich vor Monaten auch schon mal gesehen.
+	AI_Output(self, hero, "Info_Mod_Costa_SchonImmerHier_34_02"); //Aber wie haben nie miteinander gesprochen oder so.
 };
 
 INSTANCE Info_Mod_Costa_NichtZufrieden (C_INFO)
@@ -142,11 +142,11 @@ FUNC INT Info_Mod_Costa_NichtZufrieden_Condition()
 FUNC VOID Info_Mod_Costa_NichtZufrieden_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Costa_NichtZufrieden_15_00"); //Wirklich zufrieden siehst du nicht aus.
-	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_02_01"); //Ja, verdammt. Ich hatte meine Chance, aus dem Lager zu fliehen, aber ich hab's einfach verpennt.
-	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_02_02"); //Die anderen haben sich mitten in der Nacht getroffen und sind abgehauen, während ich tief und fest geschlafen habe.
-	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_02_03"); //Zu allem Überfluss hatte ich Jesse vorher meine wertvollsten Besitztümer gegeben, weil er die unabhängig von uns rausschaffen wollte.
-	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_02_04"); //Das Erz ist mir egal, aber meinen Gürtel brauche ich zurück. Ohne den hätte ich die Arbeit in den Minen nie ertragen.
-	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_02_05"); //Und außerdem rutschen mir jetzt alle Hosen.
+	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_34_01"); //Ja, verdammt. Ich hatte meine Chance, aus dem Lager zu fliehen, aber ich hab's einfach verpennt.
+	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_34_02"); //Die anderen haben sich mitten in der Nacht getroffen und sind abgehauen, während ich tief und fest geschlafen habe.
+	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_34_03"); //Zu allem Überfluss hatte ich Jesse vorher meine wertvollsten Besitztümer gegeben, weil er die unabhängig von uns rausschaffen wollte.
+	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_34_04"); //Das Erz ist mir egal, aber meinen Gürtel brauche ich zurück. Ohne den hätte ich die Arbeit in den Minen nie ertragen.
+	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_34_05"); //Und außerdem rutschen mir jetzt alle Hosen.
 
 	Info_ClearChoices	(Info_Mod_Costa_NichtZufrieden);
 
@@ -164,9 +164,9 @@ FUNC VOID Info_Mod_Costa_NichtZufrieden_B()
 FUNC VOID Info_Mod_Costa_NichtZufrieden_A()
 {
 	AI_Output(hero, self, "Info_Mod_Costa_NichtZufrieden_A_15_00"); //Ich werde versuchen, deinen Gürtel aufzutreiben.
-	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_A_02_01"); //Das ist leichter gesagt als getan, fürchte ich. Wir wussten nämlich überhaupt nicht, wohin wir uns nach der Flucht wenden sollten.
-	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_A_02_02"); //Deshalb habe ich keine Ahnung, wo Jesse jetzt stecken könnte.
-	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_A_02_03"); //Wenn du ihm aber doch mal über den Weg läufst, soll er meinen Gürtel rausrücken.
+	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_A_34_01"); //Das ist leichter gesagt als getan, fürchte ich. Wir wussten nämlich überhaupt nicht, wohin wir uns nach der Flucht wenden sollten.
+	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_A_34_02"); //Deshalb habe ich keine Ahnung, wo Jesse jetzt stecken könnte.
+	AI_Output(self, hero, "Info_Mod_Costa_NichtZufrieden_A_34_03"); //Wenn du ihm aber doch mal über den Weg läufst, soll er meinen Gürtel rausrücken.
 
 	Mod_Costa_Guertel = 1;
 
@@ -202,10 +202,10 @@ FUNC INT Info_Mod_Costa_Jesse_Condition()
 FUNC VOID Info_Mod_Costa_Jesse_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Costa_Jesse_15_00"); //Ich habe Jesse gefunden.
-	AI_Output(self, hero, "Info_Mod_Costa_Jesse_02_01"); //Ha! Und? Hat er meinen Gürtel rausgerückt?
+	AI_Output(self, hero, "Info_Mod_Costa_Jesse_34_01"); //Ha! Und? Hat er meinen Gürtel rausgerückt?
 	AI_Output(hero, self, "Info_Mod_Costa_Jesse_15_02"); //Das nicht. Er kommt persönlich, um dich hier rauszuholen. Du sollst nur um Mitternacht zu eurem vereinbarten Treffpunkt erscheinen.
-	AI_Output(self, hero, "Info_Mod_Costa_Jesse_02_03"); //Jesse ist eben ein echter Kumpel! Ich hoffe bloß, dass uns die Wachen nicht erwischen...
-	AI_Output(self, hero, "Info_Mod_Costa_Jesse_02_04"); //Dir auch vielen Dank für deine Botschaft. Vielleicht sieht man sich mal wieder.
+	AI_Output(self, hero, "Info_Mod_Costa_Jesse_34_03"); //Jesse ist eben ein echter Kumpel! Ich hoffe bloß, dass uns die Wachen nicht erwischen...
+	AI_Output(self, hero, "Info_Mod_Costa_Jesse_34_04"); //Dir auch vielen Dank für deine Botschaft. Vielleicht sieht man sich mal wieder.
 
 	B_GivePlayerXP	(150);
 
@@ -239,13 +239,13 @@ FUNC INT Info_Mod_Costa_Jesse2_Condition()
 FUNC VOID Info_Mod_Costa_Jesse2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Costa_Jesse2_15_00"); //Du hast es geschafft.
-	AI_Output(self, hero, "Info_Mod_Costa_Jesse2_02_01"); //Ich habe es geschafft. Jesse hat mir meinen ganzen alten Kram wiedergegeben.
-	AI_Output(self, hero, "Info_Mod_Costa_Jesse2_02_02"); //Aber weil du fast den größten Anteil an meiner Flucht hattest, will ich dir meinen Gürtel schenken.
+	AI_Output(self, hero, "Info_Mod_Costa_Jesse2_34_01"); //Ich habe es geschafft. Jesse hat mir meinen ganzen alten Kram wiedergegeben.
+	AI_Output(self, hero, "Info_Mod_Costa_Jesse2_34_02"); //Aber weil du fast den größten Anteil an meiner Flucht hattest, will ich dir meinen Gürtel schenken.
 
 	B_GiveInvItems	(self, hero, ItBe_Addon_STR_10, 1);
 
 	AI_Output(hero, self, "Info_Mod_Costa_Jesse2_15_03"); //Und was machst du nun gegen rutschende Hosen?
-	AI_Output(self, hero, "Info_Mod_Costa_Jesse2_02_04"); //Ich hab neue bekommen! Da rutscht nichts mehr!
+	AI_Output(self, hero, "Info_Mod_Costa_Jesse2_34_04"); //Ich hab neue bekommen! Da rutscht nichts mehr!
 	AI_Output(hero, self, "Info_Mod_Costa_Jesse2_15_05"); //Dann mach's mal gut.
 
 	B_GivePlayerXP	(50);
@@ -273,7 +273,7 @@ FUNC INT Info_Mod_Costa_Lagermusik_Condition()
 FUNC VOID Info_Mod_Costa_Lagermusik_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Costa_Lagermusik_15_00"); //Willst du bei Gravos Musikgruppe mitmachen?
-	AI_Output(self, hero, "Info_Mod_Costa_Lagermusik_02_01"); //(abschätzig) Was der Musik nennt, hört meine Oma vielleicht gern. Ich brauch harte Sachen, Mann. Bei seiner Dudelmusik mach ich nicht mit. Keine Chance.
+	AI_Output(self, hero, "Info_Mod_Costa_Lagermusik_34_01"); //(abschätzig) Was der Musik nennt, hört meine Oma vielleicht gern. Ich brauch harte Sachen, Mann. Bei seiner Dudelmusik mach ich nicht mit. Keine Chance.
 };
 
 INSTANCE Info_Mod_Costa_WarumNichtWeg (C_INFO)
@@ -298,8 +298,8 @@ FUNC INT Info_Mod_Costa_WarumNichtWeg_Condition()
 FUNC VOID Info_Mod_Costa_WarumNichtWeg_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Costa_WarumNichtWeg_15_00"); //Wieso versuchst du nicht trotzdem, aus dem Lager zu fliehen?
-	AI_Output(self, hero, "Info_Mod_Costa_WarumNichtWeg_02_01"); //Ach, ich hab für so etwas einfach kein Händchen.
-	AI_Output(self, hero, "Info_Mod_Costa_WarumNichtWeg_02_02"); //Wenn jemand das gut organisiert, in Ordnung, aber allein traue ich mich das nicht.
+	AI_Output(self, hero, "Info_Mod_Costa_WarumNichtWeg_34_01"); //Ach, ich hab für so etwas einfach kein Händchen.
+	AI_Output(self, hero, "Info_Mod_Costa_WarumNichtWeg_34_02"); //Wenn jemand das gut organisiert, in Ordnung, aber allein traue ich mich das nicht.
 };
 
 INSTANCE Info_Mod_Costa_Pickpocket (C_INFO)

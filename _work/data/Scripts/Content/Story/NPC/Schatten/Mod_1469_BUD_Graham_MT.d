@@ -8,7 +8,7 @@ instance Mod_1469_BUD_Graham_MT (Npc_Default)
 	level =							4;
 	
 	
-	voice =							2;
+	voice =							36;
 	id =							1469;
 
 

@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Norman_Hi_Info()
 {
 	B_Say	(hero, self, "$WHOAREYOU");
 
-	AI_Output(self, hero, "Info_Mod_Norman_Hi_01_00"); //Ein armer Sklave, der dem ungnädigen Willen eines undurchsichtigen Plans unterworfen ist.
+	AI_Output(self, hero, "Info_Mod_Norman_Hi_36_00"); //Ein armer Sklave, der dem ungnädigen Willen eines undurchsichtigen Plans unterworfen ist.
 };
 
 INSTANCE Info_Mod_Norman_Unzufrieden (C_INFO)
@@ -43,7 +43,7 @@ FUNC INT Info_Mod_Norman_Unzufrieden_Condition()
 FUNC VOID Info_Mod_Norman_Unzufrieden_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Norman_Unzufrieden_15_00"); //Warum bist du unzufrieden?
-	AI_Output(self, hero, "Info_Mod_Norman_Unzufrieden_01_01"); //Warum Knechtschaft nicht befriedigt? Ich weiß es nicht, Bruder.
+	AI_Output(self, hero, "Info_Mod_Norman_Unzufrieden_36_01"); //Warum Knechtschaft nicht befriedigt? Ich weiß es nicht, Bruder.
 };
 
 INSTANCE Info_Mod_Norman_Endres (C_INFO)
@@ -69,9 +69,9 @@ FUNC INT Info_Mod_Norman_Endres_Condition()
 FUNC VOID Info_Mod_Norman_Endres_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Norman_Endres_15_00"); //Hast du von Endres' Tod gehört?
-	AI_Output(self, hero, "Info_Mod_Norman_Endres_01_01"); //(murmelt stumpfsinnig) Endres ist tot, aber sein Werk lebt fort.
-	AI_Output(self, hero, "Info_Mod_Norman_Endres_01_02"); //Warum musste er sterben? Wer profitiert von dem Mord?
-	AI_Output(self, hero, "Info_Mod_Norman_Endres_01_03"); //Adanos, verrate mir: Habe ich ihn mit meinen Wünschen getötet? Haben sie eine solche Kraft?
+	AI_Output(self, hero, "Info_Mod_Norman_Endres_36_01"); //(murmelt stumpfsinnig) Endres ist tot, aber sein Werk lebt fort.
+	AI_Output(self, hero, "Info_Mod_Norman_Endres_36_02"); //Warum musste er sterben? Wer profitiert von dem Mord?
+	AI_Output(self, hero, "Info_Mod_Norman_Endres_36_03"); //Adanos, verrate mir: Habe ich ihn mit meinen Wünschen getötet? Haben sie eine solche Kraft?
 
 	B_LogEntry	(TOPIC_MOD_KHORATA_ENDRES, "Norman wünschte sich im Stillen Endres' Ableben. Aber wenn wirklich die Bergleute es waren, die Endres getötet haben - was haben sie dadurch für einen Vorteil bekommen? Oder war es lediglich ein Racheakt?");
 };

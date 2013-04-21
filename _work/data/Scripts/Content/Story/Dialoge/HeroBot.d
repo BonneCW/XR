@@ -20,7 +20,7 @@ FUNC INT Info_Mod_HeroBot_Gelaber_Condition()
 FUNC VOID Info_Mod_HeroBot_Gelaber_Info()
 {
 	AI_Output(hero, self, "Info_Mod_HeroBot_Gelaber_15_00"); //Du bist Kolams Kampfroboter!
-	AI_Output(self, hero, "Info_Mod_HeroBot_Gelaber_15_01"); //"Das Androhen von Gewalt gegenüber einem Individuum oder der Allgemeinheit als solche ist als Straftat anzusehen."
+	AI_Output(self, hero, "Info_Mod_HeroBot_Gelaber_33_01"); //"Das Androhen von Gewalt gegenüber einem Individuum oder der Allgemeinheit als solche ist als Straftat anzusehen."
 	AI_Output(hero, self, "Info_Mod_HeroBot_Gelaber_15_02"); //Das beenden wir jetzt ein für alle Mal.
 
 	AI_StopProcessInfos	(self);
@@ -48,7 +48,7 @@ FUNC INT Info_Mod_HeroBot_Weg_Condition()
 
 FUNC VOID Info_Mod_HeroBot_Weg_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HeroBot_Weg_15_00"); //Auftrag erledigt. Suchvorgang iniziiert.
+	AI_Output(self, hero, "Info_Mod_HeroBot_Weg_33_00"); //Auftrag erledigt. Suchvorgang iniziiert.
 	
 	AI_StopProcessInfos	(self);
 

@@ -27,8 +27,8 @@ FUNC VOID Info_Mod_Karras_GDG_Kreis1_Info ()
 	
 	if B_TeachMagicCircle (self, hero, 1)
 	{
-		AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis1_12_01"); //Der erste Kreis erlaubt es dir, Runen, die du erschaffen hast, anzuwenden.
-		AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis1_12_02"); //Du kannst jetzt die Formeln der Zaubersprüche lernen, um deine eigenen Runen herzustellen.
+		AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis1_36_01"); //Der erste Kreis erlaubt es dir, Runen, die du erschaffen hast, anzuwenden.
+		AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis1_36_02"); //Du kannst jetzt die Formeln der Zaubersprüche lernen, um deine eigenen Runen herzustellen.
 
 		Mod_MagieKreis = 1;
 	};
@@ -66,14 +66,14 @@ FUNC VOID Info_Mod_Karras_GDG_Kreis2_Info ()
 	{
 		if B_TeachMagicCircle (self, hero, 2)
 		{
-			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis2_12_01"); //Tritt nun in den zweiten Kreis und lerne, noch mächtigere Zauber zu wirken.
+			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis2_36_01"); //Tritt nun in den zweiten Kreis und lerne, noch mächtigere Zauber zu wirken.
 
 			Mod_MagieKreis = 2;
 		};
 	}
 	else
 	{
-		AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis2_12_02"); //Die Zeit ist noch nicht gekommen.
+		AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis2_36_02"); //Die Zeit ist noch nicht gekommen.
 	};
 };	
 ///////////////////////////////////////////////////////////////////////
@@ -106,14 +106,14 @@ FUNC VOID Info_Mod_Karras_GDG_Kreis3_Info ()
 	{
 		if B_TeachMagicCircle (self, hero, 3)
 		{
-			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis3_12_01"); //Ja, die Zeit ist gekommen. Tritt ein in den dritten Kreis der Magie. Neue Zauber erwarten dich.
+			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis3_36_01"); //Ja, die Zeit ist gekommen. Tritt ein in den dritten Kreis der Magie. Neue Zauber erwarten dich.
 
 			Mod_MagieKreis = 3;
 		};
 	}
 	else
 	{
-		AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis3_12_02"); //Es ist noch nicht an der Zeit für dich, den dritten Kreis zu lernen.
+		AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis3_36_02"); //Es ist noch nicht an der Zeit für dich, den dritten Kreis zu lernen.
 	};
 };		
 
@@ -145,14 +145,14 @@ FUNC VOID Info_Mod_Karras_GDG_Kreis4_Info ()
 	{
 		if B_TeachMagicCircle (self,hero, 4)
 		{
-			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis4_12_01"); //Gut. Alle Zeichen sind erfüllt. Tritt nun ein in den vierten Kreis, auf dass dir die Macht der neuen Zauber inne ist.
+			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis4_36_01"); //Gut. Alle Zeichen sind erfüllt. Tritt nun ein in den vierten Kreis, auf dass dir die Macht der neuen Zauber inne ist.
 
 			Mod_MagieKreis = 4;
 		};
 	}
 	else
 	{
-			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis4_12_02"); //Noch ist es nicht soweit.
+			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis4_36_02"); //Noch ist es nicht soweit.
 	};
 };
 
@@ -184,14 +184,14 @@ FUNC VOID Info_Mod_Karras_GDG_Kreis5_Info()
 	{
 		if B_TeachMagicCircle (self,hero, 5)
 		{
-			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis5_12_01"); //Dann tritt nun ein, in den fünften Kreis der Magie. Du wirst nun mächtigere Zauber als je zuvor beherrschen.
+			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis5_36_01"); //Dann tritt nun ein in den fünften Kreis der Magie. Du wirst nun mächtigere Zauber als je zuvor beherrschen.
 
 			Mod_MagieKreis = 5;
 		};
 	}
 	else
 	{
-			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis5_12_02"); //Die Zeit ist noch nicht reif dafür.
+			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis5_36_02"); //Die Zeit ist noch nicht reif dafür.
 	};
 };
 
@@ -223,17 +223,17 @@ FUNC VOID Info_Mod_Karras_GDG_Kreis6_Info()
 	{
 		if B_TeachMagicCircle (self,hero, 6)  
 		{
-			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis6_12_01"); //Viel Zeit ist vergangen, seit du den Bund mit Beliar eingegangen bist. Viel ist geschehen und wir finden keine Ruhe.
-			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis6_12_02"); //Du bist der Erwählte Beliars'. Und als solcher wirst du alle Kraft brauchen, um deine Kämpfe zu bestehen.
-			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis6_12_03"); //Ich weihe dich nun, Erwählter. Du trittst in den sechsten Kreis.
-			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis6_12_04"); //Die Zauberformeln des letzten Kreises kannst du nun von Andokai lernen, wenn du es wünscht.
+			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis6_36_01"); //Viel Zeit ist vergangen, seit du den Bund mit Beliar eingegangen bist. Viel ist geschehen und wir finden keine Ruhe.
+			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis6_36_02"); //Du bist der Erwählte Beliars. Und als solcher wirst du alle Kraft brauchen, um deine Kämpfe zu bestehen.
+			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis6_36_03"); //Ich weihe dich nun, Erwählter. Du trittst ein in den sechsten Kreis.
+			AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis6_36_04"); //Die Zauberformeln des letzten Kreises kannst du nun von Andokai lernen, wenn du es wünscht.
 
 			Mod_MagieKreis = 6;
 		};
 	}
 	else
 	{
-		AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis6_12_05"); //Noch ist es nicht an der Zeit dafür. Wenn du ein Stück weiter auf dem Weg gegangen bist, den Beliar dir zeigt, dann werde ich dich unterweisen.
+		AI_Output (self, hero, "Info_Mod_Karras_GDG_Kreis6_36_05"); //Noch ist es nicht an der Zeit dafür. Wenn du ein Stück weiter auf dem Weg gegangen bist, den Beliar dir zeigt, dann werde ich dich unterweisen.
 	};
 };
 

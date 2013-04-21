@@ -4,7 +4,7 @@ instance Mod_7346_OUT_Dichter_REL (Npc_Default)
 	name 		= "Dichter";
 	guild 		= GIL_OUT;
 	id 			= 7346;
-	voice 		= 8;
+	voice 		= 34;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

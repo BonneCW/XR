@@ -4,7 +4,7 @@ instance Mod_7379_OUT_Vincent_REL (Npc_Default)
 	name 		= "Vincent";
 	guild 		= GIL_OUT;
 	id 			= 7379;
-	voice 		= 13;
+	voice 		= 36;
 	flags       = 0;							
 	npctype		= NPCTYPE_MAIN;
 	

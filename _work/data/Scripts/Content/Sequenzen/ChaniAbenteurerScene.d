@@ -39,7 +39,7 @@ FUNC VOID ChaniAbenteurerScene()
 
 	if (Mod_ChaniAbenteurerScene_Counter == 18)
 	{
-		AI_Output(Mod_7654_OUT_Alkor_REL, NULL, "Info_Mod_ChaniAbenteurerScene_08_02"); //(hämisch) Ha, das ging voll in die Weichteile.
+		AI_Output(Mod_7654_OUT_Alkor_REL, NULL, "Info_Mod_ChaniAbenteurerScene_31_02"); //(hämisch) Ha, das ging voll in die Weichteile.
 	};
 
 	if (Mod_ChaniAbenteurerScene_Counter == 24)

@@ -1553,7 +1553,7 @@ FUNC VOID HAUPTQUESTS()
 			};
 			if (Mod_Argez_Counter == 2)
 			{
-				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_01_01"); //Und Ihr müsst Saturas sein, Meister der Magie.
+				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_37_01"); //Und Ihr müsst Saturas sein, Meister der Magie.
 			};
 			if (Mod_Argez_Counter == 7)
 			{
@@ -1565,7 +1565,7 @@ FUNC VOID HAUPTQUESTS()
 			};
 			if (Mod_Argez_Counter == 17)
 			{
-				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_01_04"); //Das ist auch für mich ein Mysterium. Wenn ich sie Euch lehren könnte, würde ich es sofort tun.
+				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_37_04"); //Das ist auch für mich ein Mysterium. Wenn ich sie Euch lehren könnte, würde ich es sofort tun.
 			};
 			if (Mod_Argez_Counter == 22)
 			{
@@ -1577,7 +1577,7 @@ FUNC VOID HAUPTQUESTS()
 			};
 			if (Mod_Argez_Counter == 32)
 			{
-				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_01_07"); //Inwiefern habe ich gegen das Gleichgewicht verstoßen?
+				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_37_07"); //Inwiefern habe ich gegen das Gleichgewicht verstoßen?
 			};
 			if (Mod_Argez_Counter == 37)
 			{
@@ -1585,11 +1585,11 @@ FUNC VOID HAUPTQUESTS()
 			};
 			if (Mod_Argez_Counter == 42)
 			{
-				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_01_09"); //Ich kann nur versuchen, es in Zukunft nicht noch einmal so weit kommen zu lassen.
+				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_37_09"); //Ich kann nur versuchen, es in Zukunft nicht noch einmal so weit kommen zu lassen.
 			};
 			if (Mod_Argez_Counter == 47)
 			{
-				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_01_10"); //Ich versichere Euch, es stand nicht in meiner Absicht, zu einer Bedrohung zu werden.
+				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_37_10"); //Ich versichere Euch, es stand nicht in meiner Absicht, zu einer Bedrohung zu werden.
 			};
 			if (Mod_Argez_Counter == 52)
 			{
@@ -1597,11 +1597,11 @@ FUNC VOID HAUPTQUESTS()
 			};
 			if (Mod_Argez_Counter == 57)
 			{
-				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_01_12"); //Mit Eurer Erlaubnis, Meister, werde ich so lange in diesem Tempel helfen. Ich habe das unbestimmte Gefühl, ihn schon mal gesehen zu haben.
+				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_37_12"); //Mit Eurer Erlaubnis, Meister, werde ich so lange in diesem Tempel helfen. Ich habe das unbestimmte Gefühl, ihn schon mal gesehen zu haben.
 			};
 			if (Mod_Argez_Counter == 62)
 			{
-				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_01_13"); //Vielleicht finde ich hier Hinweise auf mein altes Leben.
+				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_37_13"); //Vielleicht finde ich hier Hinweise auf mein altes Leben.
 			};
 			if (Mod_Argez_Counter == 67)
 			{
@@ -1609,7 +1609,7 @@ FUNC VOID HAUPTQUESTS()
 			};
 			if (Mod_Argez_Counter == 72)
 			{
-				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_01_15"); //(hintergründig) Kann ich mir vorstellen ...
+				AI_Output(PC_Friend_NW, NULL, "Info_Mod_ArgezSaturas_37_15"); //(hintergründig) Kann ich mir vorstellen ...
 			};
 			if (Mod_Argez_Counter == 77)
 			{

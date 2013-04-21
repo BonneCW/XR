@@ -15,17 +15,17 @@ FUNC INT Info_Mod_Fisk_NW_Hi_Condition()
 
 FUNC VOID Info_Mod_Fisk_NW_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_00"); //(erleichtert) Du hier? Ohh, man, endlich mal wieder ein bekanntes Gesicht.
-	AI_Output(hero, self, "Info_Mod_Fisk_NW_Hi_15_01"); //Du bist den Überfall durch die Orks entkommen, wie ich sehe.
+	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_00"); //(erleichtert) Du hier? Oh Mann, endlich mal wieder ein bekanntes Gesicht.
+	AI_Output(hero, self, "Info_Mod_Fisk_NW_Hi_15_01"); //Du bist dem Überfall durch die Orks entkommen, wie ich sehe.
 	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_02"); //Ja, Mann. Hey, die letzten Tage waren die Hölle, sag ich dir.
-	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_03"); //Als die Orks nachts bei uns im Lager einfielen brach das reinste Chaos aus.
+	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_03"); //Als die Orks nachts bei uns im Lager einfielen, brach das reinste Chaos aus.
 	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_04"); //Alles ging so schnell ... ich stürzte im Dunkeln durch das Lager, ohne genau zu wissen, wohin eigentlich genau.
 	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_05"); //Dann fand ich mich plötzlich beim Hinterausgang des Lagers.
 	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_06"); //Ich sah, dass er offen stand und rannte ohne lange nachzudenken hinaus.
 	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_07"); //Aber dort wimmelte es auch von den dreckigen Bastarden.
-	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_08"); //Die nächsten Stunden war es ein ständiges rennen und verstecken, bis ich endlich in Sicherheit war.
-	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_09"); //Auf dem Weg aus dem Tal habe ich dann noch die drei anderen Jungs getroffen ... aber ich glaube, wirklich nicht, dass es sonst noch wer geschafft hat.
-	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_10"); //Aber falls du doch jemandem begegnen solltest ... gib mir auf jeden Fall Bescheid ok?
+	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_08"); //Die nächsten Stunden war es ein ständiges Rennen und Verstecken, bis ich endlich in Sicherheit war.
+	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_09"); //Auf dem Weg aus dem Tal habe ich dann noch die drei anderen Jungs getroffen ... aber ich glaube wirklich nicht, dass es sonst noch wer geschafft hat.
+	AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_10"); //Aber falls du doch jemandem begegnen solltest ... gib mir auf jeden Fall Bescheid, ja?
 
 	Log_CreateTopic	(TOPIC_MOD_LEISEHOFFNUNG, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_LEISEHOFFNUNG, LOG_RUNNING);
@@ -33,13 +33,13 @@ FUNC VOID Info_Mod_Fisk_NW_Hi_Info()
 	if (hero.guild == GIL_PAL)
 	{
 		AI_Output(hero, self, "Info_Mod_Fisk_NW_Hi_15_11"); //Klar, mach ich. Aber was wollt ihr jetzt machen?
-		AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_12"); //Ich weiß nicht Recht. Ich habe mir überlegt, ob ich vielleicht in die Stadt gehen sollte.
+		AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_12"); //Ich weiß nicht recht. Ich habe mir überlegt, ob ich vielleicht in die Stadt gehen sollte.
 		AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_13"); //Ich hoffe mal darauf, dass mein Ruf als Händler bis dorthin gedrungen ist und sie mich reinlassen.
 		AI_Output(hero, self, "Info_Mod_Fisk_NW_Hi_15_14"); //Ja, Stadt ist sicherlich gut für einen erfahrenen Händler.
 		AI_Output(hero, self, "Info_Mod_Fisk_NW_Hi_15_15"); //Die beiden Stadtwachen hier werden dir den Weg zeigen können ...
-		AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_16"); //Vielen Dank, man. Ich steh in deiner Schuld.
+		AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_16"); //Vielen Dank, Mann. Ich steh in deiner Schuld.
 
-		B_LogEntry_More	(TOPIC_MOD_MILIZ_FREUNDFEIND, TOPIC_MOD_LEISEHOFFNUNG, "Die Gruppe bei Bengars Hof ist sauber und wird sich zur Stadt begeben.", "Ich habe Fisk in Khorinis getroffen. Mit nur einer Hand voll Begleiter ist es ihm gelungen den Orks zu entkommen. Er zweifelt daran, dass es sonst noch jemand aus dem Lager geschafft hat. Falls ich jedoch noch weiteren Überlebenden auf meinem Weg begegnen sollte, will er, dass ich ihm bescheid gebe.");
+		B_LogEntry_More	(TOPIC_MOD_MILIZ_FREUNDFEIND, TOPIC_MOD_LEISEHOFFNUNG, "Die Gruppe bei Bengars Hof ist sauber und wird sich zur Stadt begeben.", "Ich habe Fisk in Khorinis getroffen. Mit nur einer Hand voll Begleiter ist es ihm gelungen, den Orks zu entkommen. Er zweifelt daran, dass es sonst noch jemand aus dem Lager geschafft hat. Falls ich jedoch noch weiteren Überlebenden auf meinem Weg begegnen sollte, will er, dass ich ihm Bescheid gebe.");
 
 		AI_StopProcessInfos	(self);
 
@@ -56,7 +56,7 @@ FUNC VOID Info_Mod_Fisk_NW_Hi_Info()
 		AI_Output(hero, self, "Info_Mod_Fisk_NW_Hi_15_17"); //Klar, mach ich. Viel Glück noch.
 		AI_Output(self, hero, "Info_Mod_Fisk_NW_Hi_12_18"); //Danke ... das kann ich echt gebrauchen.
 
-		B_LogEntry	(TOPIC_MOD_LEISEHOFFNUNG, "Ich habe Fisk in Khorinis getroffen. Mit nur einer Hand voll Begleiter ist es ihm gelungen den Orks zu entkommen. Er zweifelt daran, dass es sonst noch jemand aus dem Lager geschafft hat. Falls ich jedoch noch weiteren Überlebenden auf meinem Weg begegnen sollte, will er, dass ich ihm bescheid gebe.");
+		B_LogEntry	(TOPIC_MOD_LEISEHOFFNUNG, "Ich habe Fisk in Khorinis getroffen. Mit nur einer Hand voll Begleiter ist es ihm gelungen, den Orks zu entkommen. Er zweifelt daran, dass es sonst noch jemand aus dem Lager geschafft hat. Falls ich jedoch noch weiteren Überlebenden auf meinem Weg begegnen sollte, will er, dass ich ihm Bescheid gebe.");
 	};
 };
 
@@ -80,9 +80,9 @@ FUNC INT Info_Mod_Fisk_NW_Markt_Condition()
 
 FUNC VOID Info_Mod_Fisk_NW_Markt_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Fisk_NW_Markt_12_00"); //Ahh, da bist du ja. Vielen Dank für deine Hilfe.
+	AI_Output(self, hero, "Info_Mod_Fisk_NW_Markt_12_00"); //Ah, da bist du ja. Vielen Dank für deine Hilfe.
 	AI_Output(self, hero, "Info_Mod_Fisk_NW_Markt_12_01"); //Sonst wäre es wohl um einiges schwieriger geworden in die Stadt zu kommen.
-	AI_Output(self, hero, "Info_Mod_Fisk_NW_Markt_12_02"); //Aber was sind schon Worte ... hier, paar von den Sachen die ich noch bei mir hatte, als ich aus dem Lager entkam.
+	AI_Output(self, hero, "Info_Mod_Fisk_NW_Markt_12_02"); //Aber was sind schon Worte ... hier, ein paar von den Sachen, die ich noch bei mir hatte, als ich aus dem Lager entkam.
 
 	B_ShowGivenThings	("50 Gold, 3 Erzbrocken, 1 Traumruf und 2 Manaessenzen erhalten");
 
@@ -139,10 +139,10 @@ FUNC VOID Info_Mod_Fisk_NW_LeiseHoffnung_D()
 {
 	AI_Output(self, hero, "Info_Mod_Fisk_NW_LeiseHoffnung_D_12_00"); //Wie dem auch sei, tausend Dank für diese Auskunft.
 	AI_Output(self, hero, "Info_Mod_Fisk_NW_LeiseHoffnung_D_12_01"); //Das zu wissen ist eine echte Erleichterung.
-	AI_Output(self, hero, "Info_Mod_Fisk_NW_LeiseHoffnung_D_12_02"); //Dafür verrat ich dir auch einige Tricks, die du beim Handeln unbedingt beachten musst.
-	AI_Output(self, hero, "Info_Mod_Fisk_NW_LeiseHoffnung_D_12_03"); //Wenn du es auf einen Gegenstand wirklich abgesehen hast, darfst du es auf keinem Fall durchblicken lassen.
+	AI_Output(self, hero, "Info_Mod_Fisk_NW_LeiseHoffnung_D_12_02"); //Dafür verrate ich dir auch einige Tricks, die du beim Handeln unbedingt beachten musst.
+	AI_Output(self, hero, "Info_Mod_Fisk_NW_LeiseHoffnung_D_12_03"); //Wenn du es auf einen Gegenstand wirklich abgesehen hast, darfst du es auf keinen Fall durchblicken lassen.
 	AI_Output(self, hero, "Info_Mod_Fisk_NW_LeiseHoffnung_D_12_04"); //Täusche erst einmal nur verhaltenes Interesse vor, biete kleine Beträge und zögere dabei, auf höhere Gebote einzugehen.
-	AI_Output(self, hero, "Info_Mod_Fisk_NW_LeiseHoffnung_D_12_05"); //Dann erregst du keine Aufmerksamkeit, niemand wird mitbieten, und der Händler wird es dir zu einem viel geringeren Preis überlassen, weil er sich sicher ist, dass du nicht bereit bist mehr dafür herzugeben.
+	AI_Output(self, hero, "Info_Mod_Fisk_NW_LeiseHoffnung_D_12_05"); //Dann erregst du keine Aufmerksamkeit, niemand wird mitbieten, und der Händler wird es dir zu einem viel geringeren Preis überlassen, weil er sich sicher ist, dass du nicht bereit bist, mehr dafür herzugeben.
 	AI_Output(self, hero, "Info_Mod_Fisk_NW_LeiseHoffnung_D_12_06"); //Bluffen ist eben das halbe Geschäft.
 
 	B_GivePlayerXP	(600);

@@ -117,6 +117,7 @@ var int Mod_TillChange;
 var int Mod_TillChange_Day;
 var int Mod_BeliarBibScene;
 var int Mod_Gravo_Auftritt_Tag;
+var int Mod_Argez_Stab;
 var int Mod_Gravo_Schatz;
 var int Mod_Jackal_Tabak_1;
 var int Mod_Jackal_Tabak_7;

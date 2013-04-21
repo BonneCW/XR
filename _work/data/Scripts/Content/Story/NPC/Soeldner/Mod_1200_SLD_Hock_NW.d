@@ -4,7 +4,7 @@ instance Mod_1200_SLD_Soeldner_NW (Npc_Default)
 	name 		= "Hock"; 
 	guild 		= GIL_mil;
 	id 			= 1200;
-	voice 		= 6;
+	voice 		= 34;
 	flags       = 2;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

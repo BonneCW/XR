@@ -8,7 +8,7 @@ instance Mod_1442_BUD_Costa_MT (Npc_Default)
 	level =							2;
 
 	
-	voice =							3;
+	voice =							34;
 	id =							1442;
 
 

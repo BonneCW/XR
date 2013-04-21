@@ -8,7 +8,7 @@ instance Mod_1506_BUD_Jesse_MT (Npc_Default)
 	level =							4;
 	
 	
-	voice =							3;
+	voice =							36;
 	id =							564;
 
 
