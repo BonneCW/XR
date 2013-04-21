@@ -33,6 +33,7 @@ FUNC INT Info_Mod_Cassia_Irdorath_Condition()
 {
 	if (Diebe_Dabei)
 	&& (Mod_Irdorath == 0)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Irdorath))
 	{
 		return 1;
 	};
