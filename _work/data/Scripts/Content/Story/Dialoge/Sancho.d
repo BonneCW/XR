@@ -517,6 +517,8 @@ FUNC VOID Info_Mod_Sancho_Dam3_Info()
 		self.aivar[AIV_PASSGATE] = TRUE;
 	};
 
+	B_GivePlayerXP	(600);
+
 	B_SetTopicStatus	(TOPIC_MOD_SANCHO_DAM, LOG_SUCCESS);
 
 	CurrentNQ += 1;

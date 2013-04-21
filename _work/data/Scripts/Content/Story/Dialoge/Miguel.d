@@ -11,6 +11,7 @@ INSTANCE Info_Mod_Miguel_Hi (C_INFO)
 FUNC INT Info_Mod_Miguel_Hi_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Dexter_Hi))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Sancho_Dam3))
 	{
 		return 1;
 	};
