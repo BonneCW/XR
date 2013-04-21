@@ -85,7 +85,7 @@ FUNC VOID Info_Mod_Urs_Hi_Info()
 
 	B_GiveInvItems	(self, hero, ItMi_PfeilpaketZelar, 1);
 
-	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_61"); //Die wollten sie haben, falls sich mal wieder Irrlichter ihrem Lager nähren. Denn mit normalen Waffen ist denen nicht beizukommen.
+	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_61"); //Die wollten sie haben, falls sich mal wieder Irrlichter ihrem Lager nähren. Denn mit normalen Waffen ist denen kaum beizukommen.
 	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_62"); //Jedenfalls bekommst du einige wertvolle Felle dafür.
 	AI_Output(self, hero, "Info_Mod_Urs_Hi_12_63"); //Dann als nächstes wäre da diese lodernde Pfanne für Omid. Er ist der Koch im Haus der Erzbarone.
 
@@ -216,7 +216,7 @@ FUNC VOID Info_Mod_Urs_Hund2_Info()
 	AI_Output(self, hero, "Info_Mod_Urs_Hund2_12_18"); //Nun muss ich aber noch die ganzen magischen Kreaturen beim Steinkreis überwinden.
 	AI_Output(self, hero, "Info_Mod_Urs_Hund2_12_19"); //Es sollte durchaus in meine Macht stehen, und ich weiß, dass du bereits viel für mich getan hast.
 	AI_Output(self, hero, "Info_Mod_Urs_Hund2_12_20"); //Ich wäre dir jedoch sehr dankbar, wenn du mir ein weiters mal helfen würdest, indem du mir gegen die Wesen beim Stenkreis beistehst.
-	AI_Output(self, hero, "Info_Mod_Urs_Hund2_12_21"); //Wenn du den Ring anlegst, wirst du sogar Irrlichtern, die gegen gewöhnliche Waffen gefeilt sind, schaden können.
+	AI_Output(self, hero, "Info_Mod_Urs_Hund2_12_21"); //Wenn du den Ring anlegst, wirst du sogar Irrlichtern, die gegen gewöhnliche Waffen größtenteils gefeit sind, schaden können.
 	AI_Output(self, hero, "Info_Mod_Urs_Hund2_12_22"); //Nun gut, dann mal auf zum Steinkreis.
 
 	B_LogEntry	(TOPIC_MOD_URS_HUND, "Urs wird sich jetzt zum Steinkreis begeben, um eine neue Verwandlungsrune zu kreieren. Er will damit Wally finden, der vermutlich im Orkgebiet unterwegs ist. Ich sollte Urs dabei unterstützen, die Kreaturen beim Steinkreis klein zu kriegen. Ich könnte den neuen Ring bei der Gelegenheit gleich anlegen und erproben.");
