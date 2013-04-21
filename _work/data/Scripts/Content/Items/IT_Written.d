@@ -6745,7 +6745,7 @@ INSTANCE ItWr_AxtAlmanach_02 (C_ITEM)
  					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
 					Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
  					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "Das zweite Buch ist beborgen und du kommst deinem Ziele näher! Doch bedenke noch vier Rätsel musst du lösen um die Axt zu erlangen. Nun horch! Gehe zum Kreise im Wald an dem die Sonne scheint und berge den nächsten Almanach!");
+					Doc_PrintLines	( nDocID,  0, "Das zweite Buch ist geborgen und du kommst deinem Ziele näher! Doch bedenke noch vier Rätsel musst du lösen um die Axt zu erlangen. Nun horch! Gehe zum Kreise im Wald an dem die Sonne scheint und berge den nächsten Almanach!");
 					Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
@@ -6800,7 +6800,7 @@ INSTANCE ItWr_AxtAlmanach_03 (C_ITEM)
  					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
 					Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
  					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "Die hälfte des Weges hast du hinter dir! Nun höre das nächste Rätsel!");
+					Doc_PrintLines	( nDocID,  0, "Die Hälfte des Weges hast du hinter dir! Nun höre das nächste Rätsel!");
 					Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
