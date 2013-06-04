@@ -172,6 +172,32 @@ FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung4_Info()
 	B_GivePlayerXP	(200);
 };
 
+INSTANCE Info_Mod_Wolf_MinecrawlerRuestung5 (C_INFO)
+{
+	npc		= Mod_798_SLD_Wolf_NW;
+	nr		= 1;
+	condition	= Info_Mod_Wolf_MinecrawlerRuestung5_Condition;
+	information	= Info_Mod_Wolf_MinecrawlerRuestung5_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Ist die Rüstung schon fertig?";
+};
+
+FUNC INT Info_Mod_Wolf_MinecrawlerRuestung5_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_MinecrawlerRuestung3))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Wolf_MinecrawlerRuestung4))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung5_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Wolf_MinecrawlerRuestung5_15_00"); //Ist die Rüstung schon fertig?
+	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung5_31_01"); //Nein, ich brauche noch etwas Zeit.
+};
+
 INSTANCE Info_Mod_Wolf_Snapperbogen (C_INFO)
 {
 	npc		= Mod_798_SLD_Wolf_NW;
