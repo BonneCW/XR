@@ -26,6 +26,7 @@ FUNC VOID B_GiveTradeInv_Mod_Fortuno_MT (var C_NPC slf)
 		CreateInvItems (slf, ItRu_TeleportPsiCamp, 1);
 
 		CreateInvItems	(slf, ItMi_HerbPaket, 1);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 		
 		Fortuno_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -45,6 +46,7 @@ FUNC VOID B_GiveTradeInv_Mod_Fortuno_MT (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Traumruf, 5); 
 		CreateInvItems (slf, ItMi_Addon_Joint_01, 10); 
 		CreateInvItems (slf, ItMi_Addon_Joint_02, 10); 
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 
 		Fortuno_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -66,6 +68,7 @@ FUNC VOID B_GiveTradeInv_Mod_Fortuno_MT (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Traumruf, 5); 
 		CreateInvItems (slf, ItMi_Addon_Joint_01, 10); 
 		CreateInvItems (slf, ItMi_Addon_Joint_02, 10); 
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 
 		Fortuno_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -87,6 +90,7 @@ FUNC VOID B_GiveTradeInv_Mod_Fortuno_MT (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Traumruf, 5); 
 		CreateInvItems (slf, ItMi_Addon_Joint_01, 10); 
 		CreateInvItems (slf, ItMi_Addon_Joint_02, 10); 
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 		
 		Fortuno_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -108,6 +112,7 @@ FUNC VOID B_GiveTradeInv_Mod_Fortuno_MT (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Traumruf, 5); 
 		CreateInvItems (slf, ItMi_Addon_Joint_01, 10); 
 		CreateInvItems (slf, ItMi_Addon_Joint_02, 10); 
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 
 		Fortuno_ItemsGiven_Chapter_5 = TRUE;
 	};

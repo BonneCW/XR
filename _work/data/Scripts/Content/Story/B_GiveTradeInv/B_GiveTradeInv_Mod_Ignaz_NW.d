@@ -62,6 +62,7 @@ FUNC VOID B_GiveTradeInv_Mod_Ignaz_NW (var C_NPC slf)
 	
 		CreateInvItems (slf, ItPo_ZufallsDrink,		1);
 		CreateInvItems   (slf, ItPo_Gegengift,		2);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 		
 		Ignaz_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -116,6 +117,7 @@ FUNC VOID B_GiveTradeInv_Mod_Ignaz_NW (var C_NPC slf)
 		CreateInvItems	(slf, ItWr_Scroll_BeliarsRage, 1);	
 		CreateInvItems	(slf, ItWr_Scroll_Skull, 1);	
 		CreateInvItems	(slf, ItWr_Scroll_BreathOfDeath, 1);	
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 		
 		Ignaz_ItemsGiven_Chapter_2 = TRUE;
 	};	
@@ -133,6 +135,7 @@ FUNC VOID B_GiveTradeInv_Mod_Ignaz_NW (var C_NPC slf)
 		CreateInvItems (slf,ITMI_Flask		,10);	
 		CreateInvItems	(slf, ItWr_Scroll_SumWolf, 1);	
 		CreateInvItems   (slf, ItPo_Gegengift,		2);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 				
 		Ignaz_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -153,6 +156,7 @@ FUNC VOID B_GiveTradeInv_Mod_Ignaz_NW (var C_NPC slf)
 	
 		CreateInvItems (slf, ItPo_ZufallsDrink,		1);
 		CreateInvItems   (slf, ItPo_Gegengift,		2);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 		
 
 		Ignaz_ItemsGiven_Chapter_4 = TRUE;
@@ -169,6 +173,7 @@ FUNC VOID B_GiveTradeInv_Mod_Ignaz_NW (var C_NPC slf)
 		CreateInvItems (slf,ITMI_Flask		,10);	
 		CreateInvItems	(slf, ItWr_Scroll_SumWolf, 1);	
 		CreateInvItems   (slf, ItPo_Gegengift,		2);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 		
 		Ignaz_ItemsGiven_Chapter_5 = TRUE;
 	};

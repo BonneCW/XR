@@ -12,6 +12,7 @@ FUNC VOID B_GiveTradeInv_Mod_Gaertner_NW (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 50); 
 		CreateInvItems (slf,ItPl_Mana_Herb_01 , 5);
 		CreateInvItems (slf,ItPl_Mana_Herb_02 , 3);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 				
 		Gaertner_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -22,6 +23,7 @@ FUNC VOID B_GiveTradeInv_Mod_Gaertner_NW (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 50); 
 		CreateInvItems (slf,ItPl_Mana_Herb_01 , 5);
 		CreateInvItems (slf,ItPl_Mana_Herb_02 , 5);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 
 		Gaertner_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -33,6 +35,7 @@ FUNC VOID B_GiveTradeInv_Mod_Gaertner_NW (var C_NPC slf)
 		CreateInvItems (slf,ItPl_Mana_Herb_01 , 5);
 		CreateInvItems (slf,ItPl_Mana_Herb_02 , 3);
 		CreateInvItems (slf,ItPl_Mana_Herb_03 , 3);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 
 		Gaertner_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -44,6 +47,7 @@ FUNC VOID B_GiveTradeInv_Mod_Gaertner_NW (var C_NPC slf)
 		CreateInvItems (slf,ItPl_Mana_Herb_01 , 5);
 		CreateInvItems (slf,ItPl_Mana_Herb_02 , 3);
 		CreateInvItems (slf,ItPl_Mana_Herb_03 , 3);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 		
 		Gaertner_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -55,6 +59,7 @@ FUNC VOID B_GiveTradeInv_Mod_Gaertner_NW (var C_NPC slf)
 		CreateInvItems (slf,ItPl_Mana_Herb_01 , 5);
 		CreateInvItems (slf,ItPl_Mana_Herb_02 , 3);
 		CreateInvItems (slf,ItPl_Mana_Herb_03 , 3);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 
 		Gaertner_ItemsGiven_Chapter_5 = TRUE;
 	};

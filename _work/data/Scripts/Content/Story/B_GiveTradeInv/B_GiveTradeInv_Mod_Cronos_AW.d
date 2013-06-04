@@ -50,6 +50,7 @@ FUNC VOID B_GiveTradeInv_Mod_Cronos_AW (var C_NPC slf)
 		CreateInvItems   (slf, ItSc_Thunderstorm, 2);
 		CreateInvItems   (slf, ItSc_WATERFIST, 1);
 		CreateInvItems   (slf, ItRw_IceArrow, 100);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 		
 		Cronos_AW_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -89,6 +90,7 @@ FUNC VOID B_GiveTradeInv_Mod_Cronos_AW (var C_NPC slf)
 
 		CreateInvItems   (slf, ItSc_WATERFIST, 1);
 		CreateInvItems   (slf, ItRw_IceArrow, 100);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 	 
 		//Joly: RUNENROHLING!!  NICHT ZU VIELE !!!
 		//***********************************
@@ -132,6 +134,7 @@ FUNC VOID B_GiveTradeInv_Mod_Cronos_AW (var C_NPC slf)
 		CreateInvItems   (slf, ItSc_WATERFIST, 2);
 		CreateInvItems   (slf, ItRw_IceArrow, 100);
 		CreateInvItems   (slf, ItPo_Gegengift,		2);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 	
 		Cronos_AW_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -170,6 +173,7 @@ FUNC VOID B_GiveTradeInv_Mod_Cronos_AW (var C_NPC slf)
 		//***********************************
 		CreateInvItems   (slf, ItMi_RuneBlank, 1);
 		//***********************************
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 	
 		
 		Cronos_AW_ItemsGiven_Chapter_5 = TRUE;

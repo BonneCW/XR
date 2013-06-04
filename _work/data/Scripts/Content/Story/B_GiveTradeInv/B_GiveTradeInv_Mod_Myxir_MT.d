@@ -28,6 +28,7 @@ FUNC VOID B_GiveTradeInv_Mod_Myxir_MT (var C_NPC slf)
 		CreateInvItems	(slf, ItWr_Flueche, 1);
 
 		CreateInvItems	(slf, ItRu_TeleportBeliarfestung, 1);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 				
 		Myxir_MT_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -53,6 +54,7 @@ FUNC VOID B_GiveTradeInv_Mod_Myxir_MT (var C_NPC slf)
 		//***********************************
 		CreateInvItems   (slf, ItMi_RuneBlank, 2);
 		//***********************************
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 	
 		Myxir_MT_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -83,6 +85,7 @@ FUNC VOID B_GiveTradeInv_Mod_Myxir_MT (var C_NPC slf)
 		//***********************************
 
 		CreateInvItems (slf,ItBe_Addon_Prot_MAGIC, 1); 
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 
 		Myxir_MT_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -109,6 +112,7 @@ FUNC VOID B_GiveTradeInv_Mod_Myxir_MT (var C_NPC slf)
 		CreateInvItems   (slf, ItSc_HarmUndead, 2);
 		CreateInvItems   (slf, ItSc_SumDemon, 2);
 		CreateInvItems   (slf, ItSc_Skull, 1);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 				
 		Myxir_MT_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -133,6 +137,7 @@ FUNC VOID B_GiveTradeInv_Mod_Myxir_MT (var C_NPC slf)
 		CreateInvItems   (slf, ItSc_SumDemon, 2);
 		CreateInvItems   (slf, ItSc_FullHeal ,3);
 		CreateInvItems   (slf, ItSc_Skull, 1);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 
 		//Joly: RUNENROHLING!!  NICHT ZU VIELE !!!
 		//***********************************

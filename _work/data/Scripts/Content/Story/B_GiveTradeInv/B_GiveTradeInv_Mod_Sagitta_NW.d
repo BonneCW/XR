@@ -32,6 +32,7 @@ FUNC VOID B_GiveTradeInv_Mod_Sagitta_NW (var C_NPC slf)
 		CreateInvItems (slf, ITWr_Addon_Mana_04, 1); //NEUES REZEPT
 		
 		CreateInvItems (slf,ItFo_Addon_Pfeffer_01,1);//FÜR Mission fortuno
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 
 		Sagitta_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -68,6 +69,7 @@ FUNC VOID B_GiveTradeInv_Mod_Sagitta_NW (var C_NPC slf)
 		CreateInvItems (slf, ItPo_ZufallsDrink,		1);
 
 		CreateInvItems (slf, ItPo_Health_01, 1); 
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 
 		Sagitta_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -103,6 +105,7 @@ FUNC VOID B_GiveTradeInv_Mod_Sagitta_NW (var C_NPC slf)
 		CreateInvItems   (slf, ItPo_Mana_01,	6);
 	
 		CreateInvItems (slf, ItPo_ZufallsDrink,		1);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 
 	 
 		
@@ -144,6 +147,7 @@ FUNC VOID B_GiveTradeInv_Mod_Sagitta_NW (var C_NPC slf)
 		
 		CreateInvItems   (slf, ItPo_Health_Addon_04,	3);
 		CreateInvItems   (slf, ItPo_Mana_Addon_04,		3);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 				
 		
 		Sagitta_ItemsGiven_Chapter_4 = TRUE;
@@ -186,6 +190,7 @@ FUNC VOID B_GiveTradeInv_Mod_Sagitta_NW (var C_NPC slf)
 		
 		CreateInvItems   (slf, ItPo_Health_Addon_04,	3);
 		CreateInvItems   (slf, ItPo_Mana_Addon_04,		3);
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 	
 		
 		Sagitta_ItemsGiven_Chapter_5 = TRUE;
