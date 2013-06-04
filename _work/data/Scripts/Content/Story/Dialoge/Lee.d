@@ -81,17 +81,15 @@ FUNC VOID Info_Mod_Lee_WieStehts_Info()
 	AI_Output(hero, self, "Info_Mod_Lee_WieStehts_15_15"); //Gegen den König? Aber der ist doch auf dem Festland.
 	AI_Output(self, hero, "Info_Mod_Lee_WieStehts_04_16"); //Ja, auf dem Festland und geschwächt von den Orks. Zu einem günstigen Zeitpunkt brechen wir aus dem Minental aus, bemächtigen uns eines Schiffes und statten dem König einen Besuch ab.
 	AI_Output(self, hero, "Info_Mod_Lee_WieStehts_04_17"); //Und da es auf dem Festland mittlerweile von Orks nur so wimmeln soll, schulen wir viele unsere Männer speziell im Kampf gegen Orks, bilden sie zu Orkjägern aus, damit sie den behaarten Grünhäuten zeigen können, dass mit uns nicht zu spaßen ist.
-	AI_Output(self, hero, "Info_Mod_Lee_WieStehts_04_18"); //Wir nehmen aber nur die besten in die Reihen der Orkjäger auf. Dich würde ich auch gerne dabei haben, da du schon früher gezeigt hast, dass du über Kampfkraft und Verstand verfügst.
-	AI_Output(self, hero, "Info_Mod_Lee_WieStehts_04_19"); //Sylvio führt die Orkjäger an und entscheidet darüber, wer mit machen darf. Schau eben, wo du dich im Lager nützlich machen kannst.
 
-	if (hero.guild == GIL_MIL)
-	{
+	if (hero.guild == GIL_MIL) {
+		AI_Output(self, hero, "Info_Mod_Lee_WieStehts_04_18"); //Wir nehmen aber nur die besten in die Reihen der Orkjäger auf. Dich würde ich auch gerne dabei haben, da du schon früher gezeigt hast, dass du über Kampfkraft und Verstand verfügst.
+		AI_Output(self, hero, "Info_Mod_Lee_WieStehts_04_19"); //Sylvio führt die Orkjäger an und entscheidet darüber, wer mit machen darf. Schau eben, wo du dich im Lager nützlich machen kannst.
+
 		Log_CreateTopic	(TOPIC_MOD_SLD_ORKJAEGER, LOG_MISSION);
 		B_SetTopicStatus	(TOPIC_MOD_SLD_ORKJAEGER, LOG_RUNNING);
 		B_LogEntry_More	(TOPIC_MOD_SLD_ORKJAEGER, TOPIC_MOD_HAGEN_ASYLANTEN, "Sylvio entscheidet, wer bei den Orkjägern aufgenommen wird.", "Lee plant, mit seinen Gefolgsleuten aus dem Minental auszubrechen und zum Festland zu gelangen, wo sie den König stürzen wollen. Der Ausbruch wird bereits vorbereitet.");
-	}
-	else
-	{
+	} else {
 		B_LogEntry	(TOPIC_MOD_HAGEN_ASYLANTEN, "Lee plant, mit seinen Gefolgsleuten aus dem Minental auszubrechen und zum Festland zu gelangen, wo sie den König stürzen wollen. Der Ausbruch wird bereits vorbereitet.");
 	};
 };
