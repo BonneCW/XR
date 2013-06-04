@@ -175,13 +175,13 @@ FUNC VOID Info_Mod_Oschust_WegenRingen_Info()
 	Info_AddChoice	(Info_Mod_Oschust_WegenRingen, DIALOG_BACK, Info_Mod_Oschust_WegenRingen_BACK);
 
 	if (Npc_HasItems(hero, ItRi_SkinnersRing) > 0)
-	&& (Npc_HasItems(hero, ItMi_Gold) > 49)
+	&& (Npc_HasItems(hero, ItMi_Gold) >= 35)
 	{
 		Info_AddChoice	(Info_Mod_Oschust_WegenRingen, "Was ist mit diesem verwitterten Orkring?", Info_Mod_Oschust_WegenRingen_Skinner_C);
 	};
 
 	if (Npc_HasItems(hero, ItMi_SilverRing) > 0)
-	&& (Npc_HasItems(hero, ItMi_Gold) > 9)
+	&& (Npc_HasItems(hero, ItMi_Gold) >= 5)
 	{
 		Info_AddChoice	(Info_Mod_Oschust_WegenRingen, "Alle Silberringe vergolden", Info_Mod_Oschust_WegenRingen_Silber_B);
 		Info_AddChoice	(Info_Mod_Oschust_WegenRingen, "Einen Silberring vergolden", Info_Mod_Oschust_WegenRingen_Silber_A);
@@ -202,9 +202,9 @@ FUNC VOID Info_Mod_Oschust_WegenRingen_Skinner_C()
 	Npc_RemoveInvItems	(self, ItRi_SkinnersRing, 1);
 
 	AI_Output(self, hero, "Info_Mod_Oschust_WegenRingen_Skinner_C_04_01"); //Hmm, in sehr schlechtem Zustand. Das wird etwas länger dauern und ein wenig mehr kosten.
-	AI_Output(self, hero, "Info_Mod_Oschust_WegenRingen_Skinner_C_04_02"); //Für 50 Goldmünzen ist er morgen aber wieder wie neu.
+	AI_Output(self, hero, "Info_Mod_Oschust_WegenRingen_Skinner_C_04_02"); //Für 35 Goldmünzen ist er morgen aber wieder wie neu.
 
-	B_GiveInvItems	(hero, self, ItMi_Gold, 50);
+	B_GiveInvItems	(hero, self, ItMi_Gold, 35);
 
 	Mod_OschustMachtOrkring = 1;
 	Mod_OschustRingDay = Wld_GetDay();
@@ -214,9 +214,9 @@ FUNC VOID Info_Mod_Oschust_WegenRingen_Skinner_C()
 
 FUNC VOID Info_Mod_Oschust_WegenRingen_Silber_B()
 {
-	if (Npc_HasItems(hero, ItMi_Gold) >= Npc_HasItems(hero, ItMi_Silverring)*10)
+	if (Npc_HasItems(hero, ItMi_Gold) >= Npc_HasItems(hero, ItMi_Silverring)*5)
 	{
-		Npc_RemoveInvItems	(hero, ItMi_Gold, 10*Npc_HasItems(hero, ItMi_SilverRing));
+		Npc_RemoveInvItems	(hero, ItMi_Gold, 5*Npc_HasItems(hero, ItMi_SilverRing));
 		CreateInvItems	(hero, ItMi_GoldRing, Npc_HasItems(hero, ItMi_SilverRing));
 
 		Print	(ConcatStrings(IntToString(Npc_HasItems(hero, ItMi_SilverRing)), " Silberringe vergoldet"));
@@ -227,9 +227,9 @@ FUNC VOID Info_Mod_Oschust_WegenRingen_Silber_B()
 	{
 		var int GoldForRinge;
 
-		GoldForRinge = Npc_HasItems(hero, ItMi_Gold) / 10;
+		GoldForRinge = Npc_HasItems(hero, ItMi_Gold) / 5;
 
-		Npc_RemoveInvItems	(hero, ItMi_Gold, 10*GoldForRinge);
+		Npc_RemoveInvItems	(hero, ItMi_Gold, 5*GoldForRinge);
 		CreateInvItems	(hero, ItMi_GoldRing, GoldForRinge);
 		Npc_RemoveInvItems	(hero, ItMi_SilverRing, GoldForRinge);
 
@@ -241,7 +241,7 @@ FUNC VOID Info_Mod_Oschust_WegenRingen_Silber_B()
 
 FUNC VOID Info_Mod_Oschust_WegenRingen_Silber_A()
 {
-	Npc_RemoveInvItems	(hero, ItMi_Gold, 10);
+	Npc_RemoveInvItems	(hero, ItMi_Gold, 5);
 	CreateInvItems	(hero, ItMi_GoldRing, 1);
 	Npc_RemoveInvItems	(hero, ItMi_SilverRing, 1);
 
