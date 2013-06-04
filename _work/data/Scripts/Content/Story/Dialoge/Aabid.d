@@ -98,7 +98,7 @@ FUNC VOID Info_Mod_Aabid_HabPakete_Info()
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 
-	AI_Output(self, hero, "Info_Mod_Aabid_HabPakete_09_08"); //Außerdem bekommst du meine Stimme.
+	AI_Output(self, hero, "Info_Mod_Aabid_HabPakete_09_07"); //Außerdem bekommst du meine Stimme.
 
 	B_LogEntry	(TOPIC_MOD_ASS_AABID_PAKET, "Ich habe Aabid alle Pakte gebracht und er war sehr zufrieden mit meiner Leistung. Anscheinend hat er damit nicht gerechnet. Nunja, mir soll's recht sein, denn ich bin nun eine Stimme und 500 Goldmünzen reicher.");
 	B_SetTopicStatus	(TOPIC_MOD_ASS_AABID_PAKET, LOG_SUCCESS);

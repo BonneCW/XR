@@ -42,6 +42,12 @@ FUNC VOID Rtn_start_1873 ()
 	TA_Sit_Campfire		(12,00,24,00,"WP_MT_HECTA_UND_ACHIL");		
 };
 
+FUNC VOID Rtn_Follow_1873 ()
+{
+	TA_Follow_Player		(00,00,12,00,"WP_MT_HECTA_UND_ACHIL");	
+	TA_Follow_Player		(12,00,24,00,"WP_MT_HECTA_UND_ACHIL");		
+};
+
 func void Rtn_Templer_1873 ()
 {
 	TA_Smalltalk (00,00,12,00,"OCC_BARONS_DANCE2");

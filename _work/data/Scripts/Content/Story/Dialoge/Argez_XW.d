@@ -162,7 +162,7 @@ FUNC VOID Info_Mod_Argez_XW_Ende_B()
 	AI_Output(hero, self, "Info_Mod_Argez_XW_Ende_B_15_00"); //Es muss doch eine andere Möglichkeit geben.
 	AI_Output(self, hero, "Info_Mod_Argez_XW_Ende_B_01_01"); //Nein. Solange ich lebe, ist auch Xeres nicht vollständig tot.
 	AI_Output(hero, self, "Info_Mod_Argez_XW_Ende_B_15_02"); //Xeres muss ja nicht unbedingt sterben.
-	AI_Output(self, hero, "Info_Mod_Argez_XW_Ende_B_01_03"); //Wir könnten ihn wieder festsetzen. Diesmal ohne Hintertürchen. Er würde bis in alle Ewigkeit hier schmoren.
+	AI_Output(hero, self, "Info_Mod_Argez_XW_Ende_B_15_03"); //Wir könnten ihn wieder festsetzen. Diesmal ohne Hintertürchen. Er würde bis in alle Ewigkeit hier schmoren.
 	AI_Output(self, hero, "Info_Mod_Argez_XW_Ende_B_01_04"); //Die Gefahr, dass Xeres irgendwie ausbrechen könnte, wäre damit immer vorhanden.
 	AI_Output(hero, self, "Info_Mod_Argez_XW_Ende_B_15_05"); //Er hätte es auch jetzt nach Tausenden von Jahren ohne die Foki nicht geschafft.
 	AI_Output(self, hero, "Info_Mod_Argez_XW_Ende_B_01_06"); //(unschlüssig) Meinst du wirklich?
