@@ -72,7 +72,8 @@ INSTANCE Info_Mod_Ranad_OC_HoshPakTot (C_INFO)
 
 FUNC INT Info_Mod_Ranad_OC_HoshPakTot_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_HoshPak_OC_Hi))
+	if ((Npc_KnowsInfo(hero, Info_Mod_HoshPak_OC_Hi))
+	|| (Npc_IsDead(Mod_10005_Orc_HoshPak_OC)))
 	&& (Npc_GetDistToWP(self, "WP_OCC_35") < 500)
 	{
 		return 1;
