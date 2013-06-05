@@ -19,5 +19,7 @@ func void B_KillNpc (var int npcInstance)
 		CreateInvItem		(npc, ItMi_OldCoin);		// Mission-Item, das verhindert, daﬂ die Toten entfernt werden
 			
 		Npc_ChangeAttribute	(npc, ATR_HITPOINTS, -npc.attribute[ATR_HITPOINTS_MAX]);
+
+		B_GiveDeathInv	(npc);
 	};
 };
