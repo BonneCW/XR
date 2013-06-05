@@ -2,7 +2,7 @@ INSTANCE GardeBeliars_1994_Frowin	(Npc_Default)
 {
 	//----- Monster ----
 	name							=	"Frowin";
-	guild							=	GIL_NONE;
+	guild							=	GIL_DMT;
 	id			= 	1994;
 	voice			=	14;
 	level							=	40;
