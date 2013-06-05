@@ -161,6 +161,7 @@ STORY\B_GiveTradeInv\B_GiveTradeInv_*.d
 STORY\B_GiveTradeInv\B_GiveTradeInv.d
 
 
+STORY\B_Story\B_GiveDeathInv.d
 STORY\B_Story\B_KillNpc.d
 STORY\B_Story\KillALGardists.d
 STORY\B_Story\B_RemoveNpc.d
@@ -360,7 +361,6 @@ AI\MAGIC\ZS_Magic\ZS_*.d
 AI\MAGIC\C_CanNpcCollideWithSpell.d
 
 
-STORY\B_Story\B_GiveDeathInv.d
 STORY\B_Content\B_DragonKillCounter.d
 
 Story\Events\B_EVENT_PORTAL_EARTHQUAKE.d
