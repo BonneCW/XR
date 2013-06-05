@@ -228,6 +228,10 @@ FUNC VOID Info_Mod_Urs_Hund2_Info()
 	self.aivar[AIV_Partymember] = TRUE;
 
 	B_GivePlayerXP	(600);
+
+	Wld_InsertNpc	(Wisp,	"OW_PATH_WARAN01_SPAWN02");
+	Wld_InsertNpc	(Wisp,	"FP_ROAM_OW_BLOODFLY_WALD_OC4");
+	Wld_InsertNpc	(Wisp,	"FP_ROAM_OW_BLOODFLY_WALD_OC2");
 };
 
 INSTANCE Info_Mod_Urs_Hund3 (C_INFO)
