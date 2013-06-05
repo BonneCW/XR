@@ -19,7 +19,6 @@ FUNC VOID B_GiveTradeInv_Mod_Myxir_MT (var C_NPC slf)
 		CreateInvItems   (slf, ItSc_Light,	5);
 		CreateInvItems   (slf, ItSc_LightHeal,5);
 		CreateInvItems   (slf, ItSc_SumGobSkel, 5);
-		CreateInvItems 	 (slf, ItWr_Map_Newworld, 1);
 		
 		CreateInvItems   (slf, ItFo_Wine,	3);
 		
@@ -29,6 +28,8 @@ FUNC VOID B_GiveTradeInv_Mod_Myxir_MT (var C_NPC slf)
 
 		CreateInvItems	(slf, ItRu_TeleportBeliarfestung, 1);
 		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
+
+		CreateInvItems   (slf, ItMi_Runeblank,		1);
 				
 		Myxir_MT_ItemsGiven_Chapter_1 = TRUE;
 	};

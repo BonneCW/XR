@@ -11,7 +11,7 @@ FUNC VOID B_GiveTradeInv_Mod_Cronos_NW (var C_NPC slf)
 		CreateInvItems   (slf, ItPo_Health_01,	6);
 		CreateInvItems   (slf, ItMi_Pitch,	1);
 
-		//CreateInvItems   (slf, ItMi_RuneBlank, 1);
+		CreateInvItems   (slf, ItMi_RuneBlank, 1);
 		
 		// ------ Scrolls ------
 		CreateInvItems   (slf, ItSc_Light,	5);

@@ -40,6 +40,8 @@ FUNC VOID B_GiveTradeInv_Mod_Caine_MT (var C_NPC slf)
 		CreateInvItems (slf,ItSc_SumGol		,1);
 		CreateInvItems (slf,ItSc_SumDemon	,1);
 		CreateInvItems   (slf, ItPo_Gegengift,		2);
+
+		CreateInvItems   (slf, ItMi_Runeblank,		1);
 			
 		Caine_ItemsGiven_Chapter_1 = TRUE;
 	};

@@ -33,6 +33,8 @@ FUNC VOID B_GiveTradeInv_Mod_Mufid_NW (var C_NPC slf)
 
 		CreateInvItems   (slf, ItPo_Gegengift,		2);
 		CreateInvItems   (slf, ItPo_GiftNeutralisierer,		2);
+
+		CreateInvItems   (slf, ItMi_Runeblank,		1);
 			
 		Mufid_ItemsGiven_Chapter_1 = TRUE;
 	};

@@ -22,6 +22,8 @@ FUNC VOID B_GiveTradeInv_Mod_Lutero_NW (var C_NPC slf)
 		CreateInvItems (slf,ItMi_ApfelTabak, 1);
 		CreateInvItems (slf,ItAt_CrawlerMandibles, 1);
 		CreateInvItems	(slf, ItMi_Seide, 1);
+
+		CreateInvItems   (slf, ItMi_Runeblank,		1);
 				
 		Lutero_ItemsGiven_Chapter_1 = TRUE;
 	};

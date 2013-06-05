@@ -51,6 +51,8 @@ FUNC VOID B_GiveTradeInv_Mod_Daniel_REL (var C_NPC slf)
 		CreateInvItems (slf,ItBe_Addon_Prot_MAGIC, 1); 
 		CreateInvItems (slf,ItAm_Hp_Mana_01 ,1);	
 		CreateInvItems   (slf, ItPo_Gegengift,		2);
+
+		CreateInvItems   (slf, ItMi_Runeblank,		1);
 			
 		Daniel_ItemsGiven_Chapter_1 = TRUE;
 	};
