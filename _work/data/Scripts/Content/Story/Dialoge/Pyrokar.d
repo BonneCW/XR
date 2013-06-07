@@ -394,6 +394,16 @@ FUNC VOID Info_Mod_Pyrokar_Aufnahme_Ja()
 	B_Göttergefallen(1, 5);
 
 	Mod_FMAufnahme_Day = Wld_GetDay();
+
+	Wld_ReassignPortalToGuild ("kloster04", GIL_PUBLIC); //Schlafraum Novizen
+	Wld_ReassignPortalToGuild ("kloster05", GIL_PUBLIC); //Schlafraum Novizen
+	Wld_ReassignPortalToGuild ("kloster10", GIL_PUBLIC); //Schlafraum Novizen
+	Wld_ReassignPortalToGuild ("kloster12", GIL_PUBLIC); //Schlafraum Novizen
+	
+	Wld_ReassignPortalToGuild ("kloster06", GIL_PUBLIC); //Schlafraum Magier
+	Wld_ReassignPortalToGuild ("kloster07", GIL_PUBLIC); //Schlafraum Magier
+	Wld_ReassignPortalToGuild ("kloster08", GIL_PUBLIC); //Schlafraum Magier
+	Wld_ReassignPortalToGuild ("kloster09", GIL_PUBLIC); //Schlafraum Magier
 };
 
 INSTANCE Info_Mod_Pyrokar_FeuerGegenEis (C_INFO)
