@@ -125,12 +125,13 @@ FUNC int ZS_Pick_Ore_Loop ()
 FUNC VOID ZS_Pick_Ore_End ()
 {
 	if (self.guild < GIL_SEPERATOR_HUM)
-	|| (self.guild == GIL_ZOMBIE)
-	{
+	|| (self.guild == GIL_ZOMBIE) {
 		AI_UseMob (self, "ORE", -1);
-	}
-	else if (self.guild == GIL_GOBBO)
-	{
+	} else if (self.guild == GIL_GOBBO) {
 		AI_UseMob (self, "GOBBOORE", -1);
+	};
+
+	if (Npc_HasItems(self, ItMw_2H_Axe_L_01) > 1) {
+		Npc_RemoveInvItems (self, ItMw_2H_Axe_L_01, Npc_HasItems(self, ItMw_2H_Axe_L_01) - 1);
 	};
 };
