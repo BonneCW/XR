@@ -168,7 +168,7 @@ var int MEMINT_ForceErrorBox;
 
 func void MEM_SendToSpy(var int errorType, var string text) {
     /* Implementierung wird von MEM_InitAll ersetzt! */
-    PrintDebug(ConcatStrings(text, "(This is a preliminary printing variant, use MEM_InitAll to get neat 'Q:' prefixed messages.")); /* Q: is the Ikarus mark */
+    PrintDebug(ConcatStrings(text, "<<< (This is a preliminary printing variant, use MEM_InitAll to get neat 'Q:' prefixed messages.) >>>")); /* Q: is the Ikarus mark */
 };
 
 func void MEM_ErrorBox(var string text) {
@@ -463,18 +463,6 @@ func void MEM_WriteString (var int address, var string val) {
     MEMINT_StrAssign();
 };
 
-//--------------------------------------
-// Int-Arrayzugriff
-//--------------------------------------
-
-func int MEM_ReadIntArray (var int arrayAddress, var int offset) {
-    return MEM_ReadInt (arrayAddress + 4 * offset);
-};
-
-func void MEM_WriteIntArray (var int arrayAddress, var int offset, var int value) {
-    MEM_WriteInt (arrayAddress + 4 * offset, value);
-};
-
 //------------------------------------------------
 //  Byte-Zugriff
 //------------------------------------------------
@@ -490,6 +478,34 @@ func void MEM_WriteByte (var int adr, var int val) {
     };
     
     MEM_WriteInt (adr, (MEM_ReadInt (adr) & ~ 255) | val);
+};
+
+//--------------------------------------
+// Arrayzugriff
+//--------------------------------------
+
+func int MEM_ReadIntArray (var int arrayAddress, var int offset) {
+    return MEM_ReadInt (arrayAddress + 4 * offset);
+};
+
+func void MEM_WriteIntArray (var int arrayAddress, var int offset, var int value) {
+    MEM_WriteInt (arrayAddress + 4 * offset, value);
+};
+
+func int MEM_ReadByteArray (var int arrayAddress, var int offset) {
+    return MEM_ReadByte (arrayAddress + offset);
+};
+
+func void MEM_WriteByteArray (var int arrayAddress, var int offset, var int value) {
+    MEM_WriteByte (arrayAddress + offset, value);
+};
+/* Zurzeit in LeGo drin.
+func string MEM_ReadStringArray (var int arrayAddress, var int offset) {
+    return MEM_ReadString (arrayAddress + offset * sizeof_zString);
+};*/
+
+func void MEM_WriteStringArray (var int arrayAddress, var int offset, var string value) {
+    MEM_WriteString (arrayAddress + sizeof_zString * offset, value);
 };
 
 //######################################################
@@ -551,6 +567,7 @@ func void MEM_AssignInst (var int inst, var int ptr) {
             MEM_Error (ConcatStrings ("MEM_AssignInst: Invalid pointer: ", IntToString (ptr)));
             return;
         } else if (!MEM_AssignInstSuppressNullWarning) {
+            /* Instanzen die Null sind, will man eigentlich nicht, die machen nur Ärger. */
             MEM_Warn ("MEM_AssignInst: ptr is NULL. Use MEM_AssignInstNull if that's what you want.");
         };
     };
@@ -571,20 +588,24 @@ func void MEM_AssignInstNull (var int inst) {
 
 func MEMINT_HelperClass MEM_PtrToInst (var int ptr) {
     var MEMINT_HelperClass hlp;
+    const int hlpOffsetPtr = 0;
+    if (!hlpOffsetPtr) {
+        hlpOffsetPtr = MEM_ReadIntArray (currSymbolTableAddress, hlp) + zCParSymbol_offset_offset;
+    };
     
     if (ptr <= 0) {
         if (ptr < 0) {
             MEM_Error (ConcatStrings ("MEM_PtrToInst: Invalid pointer: ", IntToString (ptr)));
             return;
         } else if (!MEM_AssignInstSuppressNullWarning) {
+            /* Instanzen die Null sind, will man eigentlich nicht, die machen nur Ärger. */
             MEM_Warn ("MEM_PtrToInst: ptr is NULL. Use MEM_NullToInst if that's what you want.");
         };
         
-        MEM_AssignInstNull (hlp);
+        MEM_WriteInt(hlpOffsetPtr, 0);
     } else {
-        MEM_AssignInst (hlp, ptr);
+        MEM_WriteInt(hlpOffsetPtr, ptr);
     };
-    
     MEMINT_StackPushInst (hlp);
 };
 
@@ -728,7 +749,7 @@ func int MEM_GetFuncID(var func fnc) {
     
     if ((symb.bitfield & zCPar_Symbol_bitfield_type) != zPAR_TYPE_FUNC) {
         MEM_Warn("MEM_GetFuncID: Unresolvable request (probably uninitialised function variable).");
-        return 0;
+        return -1;
     };
     
     if (symb.bitfield & zPAR_FLAG_CONST) {
@@ -1318,32 +1339,27 @@ func int EngineFunc_Wrapper(var int this, var int param) {
     return CALL_RetValAsInt();
 }; */
 
+func void CALL_Open() {
+    /* Push an empty context too, it is unclear how CALL_Close is
+     * supposed to decide whether to pop or not.
+     * Besides: This will only be executed the first time. */
+    ASMINT_PushContext();
+    CALLINT_CodeMode = CALLINT_CodeMode_Recyclable;
+};
+
 func int CALL_Begin(var int ptr) {
     if (ptr) {
         ASM_Run(ptr);
         return 0;
     };
-    
-    /* Push an empty context too, it is unclear how CALL_End is
-     * supposed to decide whether to pop or not.
-     * Besides: This will only be executed the first time. */
      
-    ASMINT_PushContext();
-    CALLINT_CodeMode = CALLINT_CodeMode_Recyclable;
+    CALL_Open();
     return 1;
-};
-
-func int CALL_Open(var int ptr) {
-    if (ptr) {
-        return 0;
-    };
-    
-    return CALL_Begin(ptr);
 };
 
 func int CALL_Close() {
     if (CALLINT_CodeMode != CALLINT_CodeMode_Recyclable) {
-        MEM_Error("CALL_End: CALL_End without matching CALL_Begin? There is some serious problem with your code.");
+        MEM_Error("CALL_Close: CALL_End or CALL_Close without matching CALL_Begin / CALL_Open? There is some serious problem with your code.");
         return 0;
     };
     
@@ -1528,7 +1544,7 @@ func string CALL_RetValAszStringPtr() {
  * This function copies the contents of the zString into a
  * daedalus string and frees the zString afterwards. */
 func string CALL_RetValAszString() {
-    var string ret; ret = "";
+    var string ret;
     if (CALLINT_Result) {
         ret = CALL_RetValAszStringPtr();
         
@@ -1653,16 +1669,6 @@ func void MEM_SetShowDebug (var int on) {
 //----------------------------------
 //  Bereichskopieren
 //----------------------------------
-
-/* Für Zeitkritische Sachen könnte man überlegen ob man hier
-   Strings nutzt. Ich kann mir vorstellen, dass Stringzuweisungen
-   deutlich schneller sind als der Unsinn hier.
-   Allerdings weiß ich nicht ob es da wesentliche Besonderheiten
-   zu beachten gäbe, daher hier nur eine primitive Implementierung.
-
-   Jedenfalls kopiert diese Funktion wordCount Worte (je 4 Byte)
-   von Startadresse src zur Zieladresse dst.
-   Insgesamt also wordcount * 4 bytes. */
 
 func void MEM_CopyBytes (var int src, var int dst, var int byteCount) {
     const int memcpy_G1 = 7846464; //0x77BA40
@@ -2015,11 +2021,6 @@ func int MEM_ArrayCreate () {
 };
 
 func void MEM_ArrayFree(var int zCArray_ptr) {
-    if (!zCArray_ptr) {
-        MEM_Error ("MEM_ArrayFree: Invalid address: zCArray_ptr may not be null!");
-        return;
-    };
-
     var int array; array = MEM_ReadInt (zCArray_ptr);
 
     if (array) {
@@ -2030,11 +2031,6 @@ func void MEM_ArrayFree(var int zCArray_ptr) {
 };
 
 func void MEM_ArrayClear (var int zCArray_ptr) {
-    if (!zCArray_ptr) {
-        MEM_Error ("MEM_ArrayClear: Invalid address: zCArray_ptr may not be null!");
-        return;
-    };
-
     var zCArray array;
     array = _^(zCArray_ptr);
 
@@ -2048,20 +2044,10 @@ func void MEM_ArrayClear (var int zCArray_ptr) {
 };
 
 func int MEM_ArraySize(var int zCArray_ptr) {
-    if (!zCArray_ptr) {
-        MEM_Error ("MEM_ArraySize: Invalid address: zCArray_ptr may not be null!");
-        return -1;
-    };
-    
     return MEM_ReadInt(zCArray_ptr + 8);
 };
 
 func void MEM_ArrayWrite(var int zCArray_ptr, var int pos, var int value) {
-    if (!zCArray_ptr) {
-        MEM_Error ("MEM_ArrayWrite: Invalid address: zCArray_ptr may not be null!");
-        return;
-    };
-    
     var zCArray array;
     array = _^(zCArray_ptr);
     
@@ -2074,13 +2060,7 @@ func void MEM_ArrayWrite(var int zCArray_ptr, var int pos, var int value) {
 };
 
 func int MEM_ArrayRead(var int zCArray_ptr, var int pos) {
-    if (!zCArray_ptr) {
-        MEM_Error ("MEM_ArrayRead: Invalid address: zCArray_ptr may not be null!");
-        return 0;
-    };
-    
-    var zCArray array;
-    array = _^(zCArray_ptr);
+    var zCArray array; array = _^(zCArray_ptr);
     
     if (pos < 0 || array.numInArray <= pos) {
         MEM_Error (ConcatStrings("MEM_ArrayRead: pos out of bounds: ", IntToString(pos)));
@@ -2095,33 +2075,15 @@ func int MEM_ArrayRead(var int zCArray_ptr, var int pos) {
 //************************************************
 
 func void MEM_ArrayInsert (var int zCArray_ptr, var int value) {
-    if (!zCArray_ptr) {
-        MEM_Error ("MEM_ArrayInsert: Invalid address: zCArray_ptr may not be null!");
-        return;
-    };
-
     var zCArray array;
     array = _^(zCArray_ptr);
 
     if (!array.array) {
-        if (array.numAlloc) {
-            MEM_Error ("MEM_ArrayInsert: Invalid array state!");
-            return;
-        };
-        
         //Noch gar kein Array angelegt. Erstmals anlegen
         array.numAlloc = 16; //Startwert
         array.array = MEM_Alloc (array.numAlloc * 4);
     } else if (array.numInArray >= array.numAlloc) {
         //kein Platz mehr
-
-        //Tritt bestimmt nicht auf oder? Aber lieber mal Fehlermeldung statt komischem Absturz.
-        if (!array.numAlloc)
-        || (array.numInArray > array.numAlloc) {
-            MEM_Error ("MEM_ArrayInsert: Invalid array state!");
-            return;
-        };
-
         //nehmen wir mal das doppelte (oder ist das zu gierig? sollte passen):
         array.numAlloc = 2 * array.numAlloc;
         array.array = MEM_Realloc (array.array, array.numInArray * 4, array.numAlloc * 4);
@@ -2399,7 +2361,7 @@ func int STR_Len (var string str) {
 };
 
 //--------------------------------------
-// Pointer auf Daten
+// To and from char*
 //--------------------------------------
 
 /*  Be aware that strings may share their buffers!
@@ -2409,15 +2371,34 @@ func int STR_Len (var string str) {
     Now only one copy of "Hello" exists in memory!
     This is implemented by reference counting
     in ptr-1.
-    
-    Since I don't want to document all implications,
-    this function will not be public (but INTern).
  */
 
-func int STRINT_toChar (var string str) {
+func int STR_toChar (var string str) {
     var zString zStr;
     zStr = _^(_@s(str));
     return +zStr.ptr;
+};
+
+func int STRINT_toChar (var string str) {
+    return STR_ToChar(str);
+};
+
+func string STR_FromChar(var int char) {
+    var string str;
+    str = "";
+    var int ptr; ptr = _@s(str);
+
+    const int call = 0;
+    if (CALL_Begin(call)) {
+        CALL_PtrParam(_@(char));
+        
+        /* zString::zString(const char*) */
+        CALL__thiscall(_@(ptr), MEMINT_SwitchG1G2(4199328 /* 0x4013A0 */,
+                                                  4198592 /* 0x4010C0 */));
+        call = CALL_End();
+    };
+    
+    return str;
 };
 
 //************************************************
@@ -2425,14 +2406,6 @@ func int STRINT_toChar (var string str) {
 //************************************************
 
 func string STR_SubStr (var string str, var int start, var int count) {
-    /* dickes Problem:
-     * zString legt bei Zuweisungen nicht immer Kopien an
-     * sondern scheint sparsam zu sein (wo auch immer er sich merkt,
-     * ob etwas eine Kopie ist oder nicht).
-     * Jedenfalls hatte ich hier Probleme, dass sich der übergebene String
-     * BEIM AUFRUFER (!) verändert hat. Absolut unerwartet für mich.
-     * Neue Implementierung arbeitet mit MEM_Alloc. */
-
     if (start < 0) || (count < 0) {
         MEM_Error ("STR_SubStr: start and count may not be negative.");
         return "";
@@ -2449,9 +2422,14 @@ func string STR_SubStr (var string str, var int start, var int count) {
         if (zStrSrc.len < start) {
             MEM_Warn ("STR_SubStr: The desired start of the substring lies beyond the end of the string.");
             return "";
+            
         } else {
-            /* The start is in valid bounds. Is the end as well? */
+            /* The start is in valid bounds. The End is shitty. */
+            /* Careful! MEM_Warn will use STR_SubStr (but will never use it in a way that would produce a warning) */
+            var string saveStr; var int saveStart; var int saveCount;
+            saveStr = str; saveStart = start; saveCount = count;
             MEM_Warn ("STR_SubStr: The end of the desired substring exceeds the end of the string.");
+            str = saveStr; start = saveStart; count = saveCount;
             count = zStrSrc.len - start;
         };
     };
@@ -2541,7 +2519,7 @@ func int STR_ToInt (var string str) {
     len = STR_Len (str);
 
     var int buf; var int index;
-    buf = STRINT_toChar (str); //vorsicht, das ist ein flüchtiger Buffer!
+    buf = STR_toChar(str);
     index = 0;
 
     var int res; res = 0; var int minus; minus = FALSE;
@@ -2806,6 +2784,10 @@ func int MEM_FindParserSymbol (var string inst) {
     return +ret;
 };
 
+func int MEM_GetSymbolIndex(var string inst) {
+    return MEM_FindParserSymbol(inst);
+};
+
 func int MEM_GetParserSymbol (var string inst) {
     var int symID;
     symID = MEM_FindParserSymbol (inst); //does ReinitParser
@@ -2815,6 +2797,19 @@ func int MEM_GetParserSymbol (var string inst) {
     } else {
         return MEM_ReadIntArray (currSymbolTableAddress, symID);
     };
+};
+
+func int MEM_GetSymbol(var string inst) {
+    return MEM_GetParserSymbol(inst);
+};
+
+func int MEM_GetSymbolByIndex(var int id) {
+    if (id < 0 || id >= currSymbolTableLength) {
+        MEM_Error(ConcatStrings("MEM_GetSymbolByIndex: Index is not in valid bounds: ", IntToString(id)));
+        return 0;
+    };
+
+    return MEM_ReadIntArray (currSymbolTableAddress, id);
 };
 
 //************************************************
@@ -2875,6 +2870,11 @@ func MEMINT_HelperClass MEM_PopInstResult() {};
 //--------------------------------------
 
 func void MEM_CallByID (var int symbID) {
+    if (symbID < 0) {
+        MEM_Error(ConcatStrings("MEM_CallByID: symbID may not be negative but is ", IntToString(symbID)));
+        return;
+    };
+
     var zCPar_Symbol sym;
     sym = _^(MEM_ReadIntArray (contentSymbolTableAddress, symbID));
 
@@ -3231,9 +3231,14 @@ func int MEMINT_TraceParameter(var int pos, var int tokenArr, var int paramArr) 
         MEM_Error("MEMINT_TraceParameter: Assignment within expression that is expected to produce non-void result. This does not make sense.");
         paramsNeeded += 2;
     } else if (tok == zPAR_TOK_CALL || tok == zPAR_TOK_CALLEXTERN) {
-        var zCPar_Symbol symb;
-        symb = _^(MEM_ReadIntArray(contentSymbolTableAddress, MEM_ArrayRead(paramArr, pos)));
+        var zCPar_Symbol symb; var int symbID;
+        if (tok == zPAR_TOK_CALL) {
+            symbID = MEM_GetFuncIDByOffset(MEM_ArrayRead(paramArr, pos));
+        } else {
+            symbID = MEM_ArrayRead(paramArr, pos);
+        };
         
+        symb = _^(MEM_GetSymbolByIndex(symbID));
         paramsNeeded += symb.bitfield & zCPar_Symbol_bitfield_ele; /* need to calculate the parameters */
         paramsNeeded -= symb.offset != 0; //!= 0 ==> return value!
     } else if (tok >= zPAR_OP_UNARY && tok <= zPAR_OP_MAX)
@@ -3684,8 +3689,6 @@ func int MEM_GetMenuByString (var string menuName) {
 
 /* Selbe Bemerkung wie zu Menüs */
 
-const int  MEMINT_MenuItemArrayAddres = 9248508; //0x8D1EFC
-
 func int MEM_GetMenuItemByString (var string menuItemName) {
     var zCArray menuItems;
     menuItems = _^(MEMINT_MenuItemArrayAddres);
@@ -3703,7 +3706,7 @@ func int MEM_GetMenuItemByString (var string menuItemName) {
 
     var int menuItemAddr; menuItemAddr = MEM_ReadIntArray (menuItems.array, pos);
     var zCMenuItem menuItem;  menuItem = _^(menuItemAddr);
-
+    
     if (Hlp_StrCmp (menuItem.id, menuItemName)) {
         return menuItemAddr;
     };
@@ -3734,6 +3737,7 @@ instance MEM_Camera(zCCamera);
 instance MEM_SkyController(zCSkyController_Outdoor);
 instance MEM_SpawnManager (oCSpawnManager);
 instance MEM_GameMananger (CGameManager);
+instance MEM_GameManager (CGameManager);
 instance MEM_Parser(zCParser);
 
 func void MEM_InitGlobalInst() {
@@ -3775,7 +3779,8 @@ func void MEM_InitGlobalInst() {
     MEM_WorldTimer = _^(MEM_Game.wldTimer);
     
     //GameManager
-    MEM_GameMananger = _^(MEMINT_gameMan_Pointer_address);
+    MEM_GameMananger = _^(MEM_ReadInt(MEMINT_gameMan_Pointer_address)); /* shit: Typo! Keep it as to not break code */
+    MEM_GameManager  = _^(MEM_ReadInt(MEMINT_gameMan_Pointer_address));
     
     //The Content Parser
     MEM_Parser = _^(contentParserAddress);
@@ -3892,8 +3897,6 @@ func string MEM_GetClassName (var int objPtr) {
 
 /* Danke an Gottfried für die Entdeckung von Wld_InsertObject! */
 func int MEM_InsertVob(var string vis, var string wp) {
-    MEM_InitGlobalInst(); //MEM_World initialisieren
-    
     /* oCMob von Gothic konstruieren lassen */
     const int oCNpc__player_G1 = 9288624; //0x8DBBB0
     const int oCNpc__player_G2 = 11216516; //0xAB2684
@@ -3930,8 +3933,6 @@ func int MEM_InsertVob(var string vis, var string wp) {
 };
 
 func void MEM_DeleteVob(var int vobPtr) {
-    MEM_InitGlobalInst(); //MEM_Game initialisieren
-    
     var int world; world = MEM_Game._zCSession_world;
     
     const int call = 0;
@@ -3976,11 +3977,10 @@ func int MEM_GetBufferCRC32 (var int buf, var int buflen)
 };
 
 func int MEM_GetStringHash (var string str) {
-    return MEM_GetBufferCRC32 (STRINT_toChar (str), STR_Len (str));
+    return MEM_GetBufferCRC32 (STR_toChar(str), STR_Len (str));
 };
 
 func int MEMINT_GetWorldHashBucket (var int hash) {
-    MEM_InitGlobalInst();
     var int bucketPtr;
     bucketPtr = _@(MEM_World);
     bucketPtr += zCWorld_VobHashTable_Offset + /* sizeof (zCArray) */ 12 * hash;
@@ -3995,7 +3995,6 @@ func int MEM_SearchVobByName (var string str) {
     const int oCWorld__SearchVobByName_G1 = 7173120; //0x6D7400
     const int oCWorld__SearchVobByName_G2 = 7865872; //0x780610
     
-    MEM_InitGlobalInst();
     var int ptr;   ptr   = _@s(str);
     var int world; world = _@(MEM_World);
     
@@ -4017,8 +4016,6 @@ func int MEM_SearchVobByName (var string str) {
 func int MEM_SearchAllVobsByName (var string str) {
     const int oCWorld__SearchVobListByName_G1 = 7173296; //0x6D74B0
     const int oCWorld__SearchVobListByName_G2 = 7866048; //0x7806C0
-    
-    MEM_InitGlobalInst();
     
     var int arr;   arr   = MEM_ArrayCreate();
     var int ptr;   ptr   = _@s(str);
@@ -4368,6 +4365,58 @@ func string MEM_GetCommandLine () {
     return MEMINT_OPT_Set.commandline;
 };
 
+//#####################################################
+//  writing
+//#####################################################
+
+/* Mod configuration is never saved to disk, therefore
+ * there are no seperate functions for writing in it */
+
+func void MEM_SetGothOpt (var string section, var string option, var string value) {
+    var int optSetPtr; optSetPtr = MEM_ReadInt (zoptions_Pointer_Address);
+    MEMINT_OPT_Set = _^(optSetPtr);
+
+    if (!MEMINT_OPT_FindSection (section)) {
+        MEM_Info (ConcatStrings ("MEM_SetGothOpt: Creating new Section: ", section));
+        var int newSect_ptr;
+        newSect_ptr = MEM_Alloc (sizeof_zCOptionSection);
+        MEMINT_OPT_Section = _^(newSect_ptr);
+        MEMINT_OPT_Section.secName = section;
+
+        MEM_ArrayInsert (optSetPtr + 8, newSect_ptr);
+    };
+
+    if (!MEMINT_OPT_FindEntry (option)) {
+        MEM_Info (ConcatStrings ("MEM_SetGothOpt: Creating new entry: ", option));
+        var int newEntry_ptr;
+        newEntry_ptr = MEM_Alloc (sizeof_zCOptionEntry);
+        MEMINT_OPT_Entry = _^(newEntry_ptr);
+        MEMINT_OPT_Entry.varName = option;
+
+        var int sectPtr;
+        sectPtr = MEM_InstGetOffset (MEMINT_OPT_Section);
+
+        MEM_ArrayInsert (sectPtr + 20, newEntry_ptr);
+    };
+
+    MEMINT_OPT_Entry.varValue = value;
+    MEMINT_OPT_Entry.varValueTemp = value; /* dont forget temp value */
+};
+
+//--------------------------------------
+// Apply some changes
+// and write ini to disk
+//--------------------------------------
+
+func void MEM_ApplyGothOpt() {
+    const int call = 0;
+    if (CALL_Begin(call)) {
+        /* CGameManager.ApplySomeSettings */
+        CALL__thiscall(MEMINT_gameMan_Pointer_address, MEMINT_SwitchG1G2(4351936, 4355760));
+        call = CALL_End();
+    };
+};
+
 //--------------------------------------
 //  Get a key
 //--------------------------------------
@@ -4423,58 +4472,46 @@ func int MEM_GetSecondaryKey(var string name) {
     return MEMINT_KeyStringToKey(raw);
 };
 
-//#####################################################
-//  writing
-//#####################################################
-
-/* Mod configuration is never saved to disk, therefore
- * there are no seperate functions for writing in it */
-
-func void MEM_SetGothOpt (var string section, var string option, var string value) {
-    var int optSetPtr; optSetPtr = MEM_ReadInt (zoptions_Pointer_Address);
-    MEMINT_OPT_Set = _^(optSetPtr);
-
-    if (!MEMINT_OPT_FindSection (section)) {
-        MEM_Info (ConcatStrings ("MEM_SetGothOpt: Creating new Section: ", section));
-        var int newSect_ptr;
-        newSect_ptr = MEM_Alloc (sizeof_zCOptionSection);
-        MEMINT_OPT_Section = _^(newSect_ptr);
-        MEMINT_OPT_Section.secName = section;
-
-        MEM_ArrayInsert (optSetPtr + 8, newSect_ptr);
-    };
-
-    if (!MEMINT_OPT_FindEntry (option)) {
-        MEM_Info (ConcatStrings ("MEM_SetGothOpt: Creating new entry: ", option));
-        var int newEntry_ptr;
-        newEntry_ptr = MEM_Alloc (sizeof_zCOptionEntry);
-        MEMINT_OPT_Entry = _^(newEntry_ptr);
-        MEMINT_OPT_Entry.varName = option;
-
-        var int sectPtr;
-        sectPtr = MEM_InstGetOffset (MEMINT_OPT_Section);
-
-        MEM_ArrayInsert (sectPtr + 20, newEntry_ptr);
-    };
-
-    MEMINT_OPT_Entry.varValue = value;
-    MEMINT_OPT_Entry.varValueTemp = value; /* dont forget temp value */
+func string MEMINT_ByteToKeyHex(var int byte) {
+    const int ASCII_0 = 48;
+    byte = byte & 255;
+    
+    const int mem = 0;
+    if (!mem) { mem = MEM_Alloc(3); };
+    
+    MEM_WriteByte(mem    , (byte >>  4) + ASCII_0);
+    MEM_WriteByte(mem + 1, (byte &  15) + ASCII_0);
+    return STR_FromChar(mem);
 };
 
-//--------------------------------------
-// Apply some changes
-// and write ini to disk
-//--------------------------------------
-
-func void MEM_ApplyGothOpt() {
-    MEM_InitGlobalInst();
+func void MEM_SetKeys(var string name, var int primary, var int secondary) {
+    var string str; str = "";
+    str = ConcatStrings(str, MEMINT_ByteToKeyHex( primary        ));
+    str = ConcatStrings(str, MEMINT_ByteToKeyHex((primary   >> 8)));
+    str = ConcatStrings(str, MEMINT_ByteToKeyHex( secondary      ));
+    str = ConcatStrings(str, MEMINT_ByteToKeyHex((secondary >> 8)));
     
+    MEM_SetGothOpt("KEYS", name, str);
+    
+    /* Rebind the keys */
     const int call = 0;
     if (CALL_Begin(call)) {
-        /* CGameManager.ApplySomeSettings */
-        CALL__thiscall(MEMINT_gameMan_Pointer_address, MEMINT_SwitchG1G2(4351936, 4355760));
+        var int zInputPtr;         zInputPtr         = MEMINT_SwitchG1G2(8834208, 9246288);
+        var int zCInput__BindKeys; zCInput__BindKeys = MEMINT_SwitchG1G2(5003568, 5045760);
+        
+        var int null;
+        CALL_IntParam(_@(null));
+        CALL__thiscall(zInputPtr, zCInput__BindKeys);
         call = CALL_End();
     };
+};
+
+func void MEM_SetKey(var string name, var int key) {
+    MEM_SetKeys(name, key, MEM_GetSecondaryKey(name));
+};
+
+func void MEM_SetSecondaryKey(var string name, var int key) {
+    MEM_SetKeys(name, MEM_GetKey(name), key);
 };
 
 //#################################################
@@ -4616,6 +4653,13 @@ func void MEMINT_SendToSpy_Implementation(var int errorType, var string text) {
     var zERROR zerr; zerr = _^(zerrPtr);
     var int old_ack_type; old_ack_type = zerr.ack_type;
     if (MEMINT_ForceErrorBox) {
+        if (GOTHIC_BASE_VERSION == 1) {
+            /* There is a warning "lost focus",
+             * that will be printed constantly, unless
+             * I reduce its priority here */
+            MEM_WriteByte(5199298, 1);
+        };
+    
         zerr.ack_type = zERR_TYPE_WARN;
         
         /* Cannot enable Error Box for Infos, because
@@ -4839,7 +4883,8 @@ func void MEMINT_ExceptionHandler() {
 func void MEMINT_SetupExceptionHandler() {
     const int call = 0;
     
-    if (CALL_Open(call)) {
+    if (!call) {
+        CALL_Open();
         var int handlerOffset;
         handlerOffset = MEM_GetFuncOffset(MEMINT_ExceptionHandler);
         
@@ -4947,6 +4992,8 @@ func void MEMINT_InitFasterReadWrite() {
         MEMINT_OfTok   (zPAR_OP_UN_PLUS);     
         MEMINT_OfTok   (zPAR_TOK_RET);        
     
+    MEM_ReplaceFunc(MEM_ReadInt,    MEM_ReadInt_);
+        
     /* now a faster rewrite of MEM_WriteInt */
     var int id; id  = MEM_GetFuncID(MEM_WriteInt);
     
@@ -4971,7 +5018,25 @@ func void MEMINT_InitFasterReadWrite() {
         MEMINT_OfTokPar(zPAR_TOK_PUSHINST, zPAR_TOK_PUSHVAR);       
     //6. Assign and return:
         MEMINT_OfTok   (zPAR_OP_IS);             
-        MEMINT_OfTok   (zPAR_TOK_RET);           
+        MEMINT_OfTok   (zPAR_TOK_RET);
+        
+    /* Vorsicht, MEM_ReplaceFunc(MEM_WriteInt, MEM_WriteInt_);
+     * kann so nicht funktionieren, schließlich wird MEM_WriteInt dazu gebraucht */
+    var int buf; buf = MEM_Alloc(5);
+    MEM_WriteByte(buf    , zPAR_TOK_JUMP);
+    MEM_WriteInt (buf + 1, MEM_GetFuncOffset(MEM_WriteInt_));
+    MEM_CopyBytes(buf, MEM_GetFuncPtr(MEM_WriteInt), 5);
+};
+
+func void MEMINT_InitFasterPushInst() {
+    var MEMINT_HelperClass symb;
+
+    MEMINT_InitOverideFunc(MEMINT_StackPushInst);
+    
+    MEMINT_OfTok   (zPAR_OP_UN_PLUS);
+    MEMINT_OfTokPar(zPAR_TOK_PUSHINST, symb);                   
+    MEMINT_OfTok   (zPAR_TOK_ASSIGNINST);
+    MEMINT_OfTok   (zPAR_TOK_RET);
 };
 
 //************************************************
@@ -4998,6 +5063,12 @@ func int MEM_Alloc_(var int ele) {
 };
 
 func void MEM_Free_(var int ptr) {
+    /* keine Nuller freigeben */
+    if (!ptr) {
+        MEM_Warn ("MEM_Free: ptr is 0. Ignoring request.");
+        return;
+    };
+
     const int call = 0;
     
     if (CALL_Begin(call)) {
@@ -5034,15 +5105,9 @@ func void MEMINT_ReplaceSlowFunctions() {
         MEM_ReplaceFunc(MEM_Free,    MEM_Free_);
         
         MEMINT_InitFasterReadWrite();
-        MEM_ReplaceFunc(MEM_ReadInt,    MEM_ReadInt_);
+        MEMINT_InitFasterPushInst();
         
-        var int newFuncStart; newFuncStart = MEM_Alloc(5);
-        MEM_WriteByte(newFuncStart    , zPAR_TOK_JUMP);
-        MEM_WriteInt (newFuncStart + 1, MEM_GetFuncOffset(MEM_WriteInt_));
-        
-        /*  cannot use MEM_ReplaceFunc because this needs MEM_WriteInt
-         * (MEM_WriteInt is "in use" and cannot be replaced, let the engine do it:) */
-        MEM_CopyBytes(newFuncStart, MEM_GetFuncPtr(MEM_WriteInt), 5);
+        MEM_ReplaceFunc(_^, MEM_PtrToInst); //forwarding so billiger
     };
 };
 
@@ -5052,7 +5117,52 @@ func void MEMINT_ReplaceSlowFunctions() {
 //
 //#################################################################
 
+func void MEMINT_VersionError() {
+    const string G1   = "Gothic 1.08k";
+    const string G2   = "der sogenannten 'Report-Version' von Gothic 2";
+    const string G2EN = "the so-called 'Report-Version' of Gothic 2";
+    
+    var string str;
+    str = "Diese Mod funktioniert nur mit ";
+    if (GOTHIC_BASE_VERSION == 1) {
+        str = ConcatStrings(str, G1);
+    } else {
+        str = ConcatStrings(str, G2);
+    };
+    str = ConcatStrings(str, ", da sie Funktionalität aus dem Skriptpaket 'Ikarus' verwendet. Es ist wahrscheinlich, dass Gothic unmittelbar nach dieser Fehlermeldung abstürzt. Die genannte Version von Gothic steht zum Beispiel auf worldofgothic.de zum Download bereit. Der merkwürdige Charakter dieser Fehlermeldung ist leider nicht zu vermeiden. ### This mod only works with ");
+    if (GOTHIC_BASE_VERSION == 1) {
+        str = ConcatStrings(str, G1);
+    } else {
+        str = ConcatStrings(str, G2EN);
+    };
+    str = ConcatStrings(str, ", because it uses parts of the script package 'Ikarus'. Gothic will probably crash immediatly after displaying this error message. Said version of Gothic is available for download at worldofgothic.com. The weirdness of this error message is unavoidable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                !README!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ");
+    
+    Wld_InsertObject(str, MEM_FARFARAWAY);
+};
+
+func int MEMINT_ReportVersionCheck() {
+    /* In both G1 and G2 the first Instruction at address
+     * 0x401000 is some mov instruction moving some data
+     * from some location within the data section.
+     * This makes this check reliable */
+    
+    var int val; val = MEMINT_SwitchG1G2(-521402937, 504628679);
+    var int ptr; ptr = 4198400; //0x401000
+    
+    if (MEM_ReadInt(ptr) != val) {
+        /* Error-Message does not work for Gothic 1. I have no idea how to fix that. */
+        MEMINT_VersionError();
+        return false;
+    };
+    
+    return true;
+};
+
 func void MEM_InitAll() {
+    if (!MEMINT_ReportVersionCheck()) {
+        return;
+    };
+
     MEM_ReinitParser(); /* depends on nothing */
     MEM_InitLabels(); /* depends in MEM_ReinitParser */
     MEM_InitGlobalInst(); /* depends on MEM_ReinitParser */
@@ -5067,5 +5177,9 @@ func void MEM_InitAll() {
     MEMINT_ReplaceLoggingFunctions();
     MEMINT_ReplaceSlowFunctions();
     MEM_InitRepeat();
+    
+     /* takes a wail the first time it is called.
+        call it to avoid delay later */
+    var int dump; dump = MEM_GetFuncIDByOffset(0);
 };
 

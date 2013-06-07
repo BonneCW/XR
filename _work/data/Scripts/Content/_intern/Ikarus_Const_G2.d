@@ -15,10 +15,10 @@ const int zERR_TYPE_FATAL = 4; /* [ungenutzt]        */
 
 const int zERR_ReportToZSpy     = zERR_TYPE_INFO;  //alles ab zERR_TYPE_INFO
 const int zERR_ShowErrorBox     = zERR_TYPE_FAULT; //Messageboxen nur für Errors
-const int zERR_PrintStackTrace  = zERR_TYPE_FAULT; //Tracktrace printen für Faults.
+const int zERR_PrintStackTrace  = zERR_TYPE_WARN; //Tracktrace printen für Warnings.
 
 const int zERR_ErrorBoxOnlyForFirst   = 1; /* nie mehr als eine Error-Box anzeigen */
-const int zERR_StackTraceOnlyForFirst = 1; /* nur für den ersten Error Stack Trace anzeigen */
+const int zERR_StackTraceOnlyForFirst = 0; /* nur für den ersten Error Stack Trace anzeigen */
 
 /* Debug Channel:
  * MEM_Debug wird nicht von Ikarus verwendet und stellt einen
@@ -45,6 +45,7 @@ const int showDebugAddress = 11232372; //0xAB6474
 
 //Array mit alle erzeugten (und nicht wieder zerstörten) Menüs
 const int MEMINT_MenuArrayOffset = 9248324; //0x8D1E44
+const int MEMINT_MenuItemArrayAddres = 9248508; //0x8D1EFC
 
 //Ein paar nützliche statische Objekte
 const int MEMINT_oGame_Pointer_Address = 11208836; //0xAB0884

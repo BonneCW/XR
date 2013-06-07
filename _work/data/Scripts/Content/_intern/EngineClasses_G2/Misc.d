@@ -512,7 +512,7 @@ class oCMag_Book {
 */
 
 class zString {
-    var int _vtbl; //immer 0
+    var int _vtbl;
     var int _allocater; //immer 0
     var int ptr; //pointer zu den Daten
     var int len; //Länge des Strings
@@ -566,6 +566,29 @@ class zCClassDef {
     var int archiveVersion;          //zWORD //vermutlich nutzlos
     var int archiveVersionSum;       //zWORD //vermutlich nutzlos
 };      
+
+//--------------------------------------
+// oCLogTopic
+//--------------------------------------
+
+class oCLogTopic {
+	var string   		m_strDescription;
+	var int       		m_enuSection	; //LOG_MISSION / LOG_NOTE
+	var int            	m_enuStatus		; //LOG_RUNNING / ...
+	
+    //zCList<zString> m_lstEntries;
+        var int m_lstEntries_data; //zString*
+        var int m_lstEntries_next; //zCList<zString>*
+};
+
+/* oCLogManager == zCList<oCLogTopic> */
+
+class oCLogManager {
+    var int data; //oCLogTopic*
+    var int next; //zCList<oCLogTopic>*
+};
+
+const int oCLogManager_Ptr = 11191608; //0xAAC538
 
 //--------------------------------------
 // zERROR
