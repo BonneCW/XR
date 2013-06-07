@@ -189,6 +189,41 @@ func void UseKrautruestungListe ()
 
 };
 
+INSTANCE ItWr_TierZaehmung		(C_Item)
+{
+	name 				=	"Notiz";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+
+	value 				=	50;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseTierZaehmung;
+	scemeName			=	"MAP";
+	description			= 	name;
+	TEXT[0]				=	"Adanos' Gabe der Gewogenheit";
+};
+
+func void UseTierZaehmung ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		()			  ;							// DocManager
+					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline  			); 	// -1 -> all pages
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
+					Doc_PrintLines	( nDocID,  0, ""					);
+					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Wie alle Wesen auf Adanos' grüner Erde entstammten Mensch wie auch Tier der göttlichen Schöpfung. Es besteht eine Verbindung zwischen all diesen Geschöpfen. Ein kundiger Priester Adanos' vermag nun diese Bindung für sich zu nutzen und auch Tiere dem Menschen gewogen zu machen, die eigentlich wild und unzähmbar sind."					);
+					
+					Doc_Show		( nDocID );
+
+};
+
 INSTANCE ItWr_GarpNotiz		(C_Item)
 {
 	name 				=	"Zettel";

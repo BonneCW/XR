@@ -15,18 +15,68 @@ FUNC INT Info_Mod_Henry_Hi_Condition()
 
 FUNC VOID Info_Mod_Henry_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Henry_Hi_04_00"); //Wer bist du und was willst du?
-	AI_Output(hero, self, "Info_Mod_Henry_Hi_15_01"); //Ich komme aus Khorinis und will bei euch mitmachen.
-	AI_Output(self, hero, "Info_Mod_Henry_Hi_04_02"); //Du lügst! Khorinis ist nur auf dem Seeweg zu erreichen und vom Strand kommst du nicht.
-	AI_Output(hero, self, "Info_Mod_Henry_Hi_15_03"); //Ich komme vom Tempel oben.
-	AI_Output(hero, self, "Info_Mod_Henry_Hi_15_04"); //Die Wassermagier von Khorinis haben in einem alten Tempel einen Durchgang in diesen Teil von Khorinis gefunden.
-	AI_Output(self, hero, "Info_Mod_Henry_Hi_04_05"); //Trotzdem, so läuft das bei uns aber nicht.
-	AI_Output(self, hero, "Info_Mod_Henry_Hi_04_06"); //Da kann ja jeder kommen und sagen dass er bei uns mitmachen will.
-	AI_Output(self, hero, "Info_Mod_Henry_Hi_04_07"); //Du gehst jetzt in den Canyon und holst mir 'n Stück Fleisch, dann reden wir weiter.
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_04_00"); //Was beim Klabautermann willst du denn hier?
+	AI_Output(hero, self, "Info_Mod_Henry_Hi_15_01"); //Ich weiß nicht genau ... kommt drauf an, was es hier gibt.
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_04_02"); //Was es hier gibt? Ein Lager mit Typen, denen es schon in den Fingern juckt, wenn sie dich nur sehen.
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_04_03"); //Ich habe keine Ahnung woher du kommst und wer du bist ... interessiert mich auch nicht.
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_04_04"); //Aber unter uns Freibeutern schrubben wir mit Waschlappen wie dir den Kiel unseres Schiffes.
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_04_05"); //Tu dir also selbst einen gefallen, dreh dich wieder um und verpiss dich.
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_04_06"); //Hier haben nur ganze Kerle mit Salzwasser im Blut was verloren.
+
+	Info_ClearChoices	(Info_Mod_Henry_Hi);
+
+	Info_AddChoice	(Info_Mod_Henry_Hi, "Wenn du gleich etwas Blut verloren hast, wirst du die Sache vielleicht anders sehen!", Info_Mod_Henry_Hi_B);
+	Info_AddChoice	(Info_Mod_Henry_Hi, "Ich bin kein Waschlappen!", Info_Mod_Henry_Hi_A);
+};
+
+FUNC VOID Info_Mod_Henry_Hi_C()
+{
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_C_04_00"); //Ich sag dir was: Bevor ich nachher hier noch ne riesen Sauerei wegwischen muss, erledigst du eine kleine Sache für mich und dann reden wir nochmal über alles.
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_C_04_01"); //Also, links von hier befindet sich ein Canyon. Dort gehst du hin und holst mir 'n Stück Beißerfleisch. Kapiert?
+	AI_Output(hero, self, "Info_Mod_Henry_Hi_C_15_02"); //Ok, sollte ich hinbekommen.
+
+	AI_TurnAway	(self, hero);
+
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_C_04_03"); //(Leise zu sich selbst) Hmm, nachher kommt er tatsächlich wieder und nervt weiter ...
+
+	AI_TurnToNpc	(self, hero);
+
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_C_04_04"); //(wieder zum Helden) .. achja, und wenn du schon im Canyon bist, kannst du mir auch gleich noch ... eine Flasche Milch von dort bringen ...
+	AI_Output(hero, self, "Info_Mod_Henry_Hi_C_15_05"); //Was?! Ahh, du Spaßvogel ...
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_C_04_06"); //Spaßvogel?! Du hörst gleich die Vögel zwitschern, wenn ich dir eine mit der stumpfen Seite meines Schwertes verpasse.
+	AI_Output(hero, self, "Info_Mod_Henry_Hi_C_15_07"); //Aber was ...
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_C_04_08"); //Nix, aber. Im Canyon treiben sich immer wieder Herden von Wildziegen herum. Von einer mit vollen Eutern wirst du mir eine Flasche Ziegenmlich holen.
+	AI_Output(hero, self, "Info_Mod_Henry_Hi_C_15_09"); //Dann soll ich jetzt also für dich Ziegen melken?!
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_C_04_10"); //Wer hat denn was von melken gesagt, du Penner?! Obwohl, wenn ich dich so ansehe siehst du mir eher aus wie eine Küchenmagd, als wie ein Kerl, hähä.
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_C_04_11"); //Aber kannst es ja mal versuchen, eine von diesen Ziegen zu melken, solange sie noch lebt, hähähä.
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_C_04_12"); //Beim Barte des Käptns, dafür würde ich dir doch glatt all mein Gold geben und noch mein Schwert drauflegen, hahaha.
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_C_04_13"); //Aber genug von dem Blödsinn. Wenn du die Ziege umgehauen hast, durchbohrst du einfach ihren Euter und lässt die Milch in eine Flasche laufen. Kapiert?
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_C_04_14"); //Und jetzt verzieh dich und komm erst wieder, wenn du alles dabei hast.
+
+	Info_ClearChoices	(Info_Mod_Henry_Hi);
 
 	Log_CreateTopic	(TOPIC_MOD_HENRY_BEISSER, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_HENRY_BEISSER, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_HENRY_BEISSER, "Henry lässt mich erst ins Lager wenn ich ihm ein Stück Fleisch bringe.");
+	B_LogEntry	(TOPIC_MOD_HENRY_BEISSER, "Henry lässt mich erst ins Lager wenn ich ihm ein Stück Fleisch bringe. Ich soll außerdem die Milch einer Wildziege besorgen.");
+};
+
+FUNC VOID Info_Mod_Henry_Hi_B()
+{
+	AI_Output(hero, self, "Info_Mod_Henry_Hi_B_15_00"); //Wenn du gleich etwas Blut verloren hast, wirst du die Sache vielleicht anders sehen!
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_B_04_01"); //Sieh an, wir haben hier einen Helden ... einen ziemlich dummen Helden.
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_B_04_02"); //Du glaubst wohl, du kannst hier einfach einen auf dicke Hose machen und ich lasse dich rein?
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_B_04_03"); //Das einzige was gleich reingeht ist meine Klinge in deinen Bauch ... und die meiner Kollegen, wenn sie noch ein Stück von dir abhaben wollen.
+
+	Info_Mod_Henry_Hi_C();
+};
+
+FUNC VOID Info_Mod_Henry_Hi_A()
+{
+	AI_Output(hero, self, "Info_Mod_Henry_Hi_A_15_00"); //Ich bin kein Waschlappen!
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_A_04_01"); //Ja, stimmt ... der ist zumindest zu was zu gebrauchen. Was aber sollen wir hier mit so einem dreckigen Landstreicher wie dir im Lager anfangen?
+	AI_Output(self, hero, "Info_Mod_Henry_Hi_A_04_02"); //Den Eingang unseres Lagers mit rot streichen, falls mal feine Gesellschaft bei uns vorbeischaut?
+
+	Info_Mod_Henry_Hi_C();
 };
 
 INSTANCE Info_Mod_Henry_Fleisch (C_INFO)
