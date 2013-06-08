@@ -497,27 +497,8 @@ FUNC VOID PC_Erzhacken_Hacken_Info()
 {
 	var int ErzKriegChance;
 	var int ErzAnzahl;
-	ErzKriegChance	=	Hlp_Random(100);
-	ErzAnzahl	=	Hlp_Random(100);
-
-	Learn_by_doing = (Learn_by_doing +1);
-	
-	if (Learn_by_doing == 10)
-	{
-		B_Upgrade_ErzHackChance (2);
-	}
-	else if (Learn_by_doing == 15)
-	{
-		B_Upgrade_ErzHackChance (3);
-	}	
-	else if (Learn_by_doing == 20)
-	{
-		B_Upgrade_ErzHackChance (5);
-	}
-	else if (Learn_by_doing%30 == 0)
-	{
-		B_Upgrade_ErzHackChance (5);
-	};
+	ErzKriegChance	=	r_max(99);
+	ErzAnzahl	=	r_max(99);
 
 	if (B_ErzMob_Bestimmung() == TRUE)
 	{
@@ -552,11 +533,31 @@ FUNC VOID PC_Erzhacken_Hacken_Info()
 	{
 		PrintScreen ("Hier gibt's Nichts mehr zu holen.", -1, -1, FONT_ScreenSmall, 2);	
 		B_ENDPRODUCTIONDIALOG ();
+		return;
+	};
+
+	Learn_by_doing = (Learn_by_doing +1);
+	
+	if (Learn_by_doing == 10)
+	{
+		B_Upgrade_ErzHackChance (2);
+	}
+	else if (Learn_by_doing == 15)
+	{
+		B_Upgrade_ErzHackChance (3);
+	}	
+	else if (Learn_by_doing == 20)
+	{
+		B_Upgrade_ErzHackChance (5);
+	}
+	else if (Learn_by_doing%30 == 0)
+	{
+		B_Upgrade_ErzHackChance (5);
 	};
 
 	
 	var int Abnutzung;
-	Abnutzung	=	Hlp_Random(100);
+	Abnutzung	=	r_max(99);
 	
 	if (Abnutzung	<=	20)
 	{
@@ -599,7 +600,7 @@ FUNC INT PC_Erzhacken_TSchlag_Condition ()
 FUNC VOID PC_Erzhacken_TSchlag_Info()
 {
 	var int TruemmerChance;
-	TruemmerChance = Hlp_Random (100);
+	TruemmerChance = r_max(99);
 		
 	if (TruemmerChance < 5)
 	{
@@ -655,7 +656,6 @@ FUNC VOID PC_Erzhacken_Chance_Info()
 {
 	var string ConcatText;
 
-	
 	if (ErzHackChance < 20) 
 	{
 		ConcatText = ConcatStrings ("blutiger Anfänger (", IntToString (ErzHackChance));
