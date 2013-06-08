@@ -2181,6 +2181,26 @@ INSTANCE ItFo_Milk (C_Item)
 		B_HealGift (10, HP_Milk*2);
 	};
 
+INSTANCE ItFo_Ziegenmilch_Bloody (C_Item)
+{	
+	name 				=	"blutige Ziegenmilch";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+	
+	value 				=	Value_Milk;
+	
+	visual 				=	"ItFo_Milk.3DS";
+	material 			=	MAT_GLAS;
+
+	description			= 	name;
+	
+	TEXT[1]				= 	"Unbekannte Wirkung";
+
+	TEXT[5]				= 	NAME_Value;		COUNT[5]	= Value_Milk;
+
+};
+
 INSTANCE ItFo_Tee (C_Item)
 {	
 	name 				=	"Tee";

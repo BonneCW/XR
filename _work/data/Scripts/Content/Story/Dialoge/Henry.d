@@ -87,13 +87,14 @@ INSTANCE Info_Mod_Henry_Fleisch (C_INFO)
 	information	= Info_Mod_Henry_Fleisch_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich hab das Fleisch.";
+	description	= "Ich hab alles ...";
 };
 
 FUNC INT Info_Mod_Henry_Fleisch_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Henry_Hi))
-	&& (Npc_HasItems(hero, ItFo_MuttonRaw) > 0)
+	&& (Npc_HasItems(hero, ItFo_MuttonRaw) >= 1)
+	&& (Npc_HasItems(hero, ItFo_Ziegenmilch_Bloody) == 1)
 	{
 		return 1;
 	};
@@ -101,18 +102,33 @@ FUNC INT Info_Mod_Henry_Fleisch_Condition()
 
 FUNC VOID Info_Mod_Henry_Fleisch_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Henry_Fleisch_15_00"); //Ich hab das Fleisch.
+	AI_Output(hero, self, "Info_Mod_Henry_Fleisch_15_00"); //Ich hab alles ...
 	
 	B_GiveInvItems	(hero, self, ItFo_MuttonRaw, 1);
 
-	AI_Output(self, hero, "Info_Mod_Henry_Fleisch_04_01"); //Hast es ja geschafft welche zu töten.
-	AI_Output(self, hero, "Info_Mod_Henry_Fleisch_04_02"); //Vielleicht wird aus dir doch mal 'n richtiger Pirat!
-	AI_Output(self, hero, "Info_Mod_Henry_Fleisch_04_03"); //Na gut, dann meld dich mal bei Greg. Er wird schon was für dich zu tun haben.
+	AI_Output(self, hero, "Info_Mod_Henry_Fleisch_04_01"); //Na, dann lass mal sehen.
 
-	B_LogEntry	(TOPIC_MOD_HENRY_BEISSER, "Ich hab Henry das Fleisch gebracht. Jetzt soll ich zu Greg gehen.");
+	Npc_RemoveInvItems	(hero, ItFo_MuttonRaw, 1);
+	Npc_RemoveInvItems	(hero, ItFo_Ziegenmilch_Bloody, 1);
+
+	B_ShowGivenThings	("Fleisch und blutige Ziegenmilch gegeben");
+
+	CreateInvItems	(self, ItFo_Milk, 1);
+
+	B_UseItem	(self, ItFo_Milk);
+
+	AI_Output(self, hero, "Info_Mod_Henry_Fleisch_04_02"); //Ahh, es geht doch nichts über einen guten Schluck blutiger Ziegenmlich.
+	AI_Output(self, hero, "Info_Mod_Henry_Fleisch_04_03"); //Nichts für ungut. Du scheinst doch nicht so 'n Weichei zu sein, wie ich zuerst dachte, wenn du es mit den ganzen Viechern aufgenommen hast.
+	AI_Output(hero, self, "Info_Mod_Henry_Fleisch_15_04"); //Dann kann ich jetzt also rein?
+	AI_Output(self, hero, "Info_Mod_Henry_Fleisch_04_05"); //Da will ich mal nicht so sein. Ich dachte zuerst, du wärest ein mickriger Laufbursche dieser Magier, der hier nur etwas rumschnüffeln will.
+	AI_Output(self, hero, "Info_Mod_Henry_Fleisch_04_06"); //Du scheinst aber vielleicht doch was draufzuhaben ... hast auch keine Angst davor, dir auch mal deine Fingerchen bei der Jagd schmutzig zu machen.
+	AI_Output(self, hero, "Info_Mod_Henry_Fleisch_04_07"); //Für einen wie dich könnten wir vielleicht noch Verwendung in unserem Lager finden ... falls dich der Käptn nicht zum Frühstück verspeist, hähähä.
+	AI_Output(self, hero, "Info_Mod_Henry_Fleisch_04_08"); //Na gut, dann meld dich mal bei Greg. Er wird schon was für dich zu tun haben.
+
+	B_LogEntry	(TOPIC_MOD_HENRY_BEISSER, "Ich hab Henry das Fleisch und die Milch gebracht. Jetzt soll ich zu Greg gehen.");
 	B_SetTopicStatus	(TOPIC_MOD_HENRY_BEISSER, LOG_SUCCESS);
 
-	B_GivePlayerXP	(100);
+	B_GivePlayerXP	(600);
 
 	AI_StopProcessInfos	(self);
 
