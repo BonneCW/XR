@@ -1232,6 +1232,9 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 	if (Npc_HasItems(hero, ItAt_SheepFur) > 0)
 	|| (Npc_HasItems(hero, ItAt_SheepFur_Rein) > 0)
 	|| (Npc_HasItems(hero, ItAt_SheepFur_Feuer) > 0)
+	|| (Npc_HasItems(hero, ItAt_ZiegenFur) > 0)
+	|| (Npc_HasItems(hero, ItAt_ZiegenFur_Rein) > 0)
+	|| (Npc_HasItems(hero, ItAt_ZiegenFur_Feuer) > 0)
 	|| (Npc_HasItems(hero, ItAt_WolfFur) > 0)
 	|| (Npc_HasItems(hero, ItAt_WolfFur_Rein) > 0)
 	|| (Npc_HasItems(hero, ItAt_WolfFur_Feuer) > 0)
@@ -1269,20 +1272,20 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 
 			FellCounter = Npc_HasItems(hero, ItAt_Addon_KeilerFur);
 
-			B_GiveInvItems(self, hero, itmi_gold, (FellCounter * Value_KeilerFur) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (FellCounter * Value_KeilerFur) );
 			B_GiveInvItems(hero, self, ItAt_Addon_KeilerFur, Npc_HasItems(hero, ItAt_Addon_KeilerFur));
 
 			FellCounter = Npc_HasItems(hero, ItAt_Addon_KeilerFur_Rein);
 
-			B_GiveInvItems(self, hero, itmi_gold, (FellCounter * Value_KeilerFur_Rein) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (FellCounter * Value_KeilerFur_Rein) );
 			B_GiveInvItems(hero, self, ItAt_Addon_KeilerFur_Rein, Npc_HasItems(hero, ItAt_Addon_KeilerFur_Rein));
 
 			FellCounter = Npc_HasItems(hero, ItAt_Addon_KeilerFur_Feuer);
 
-			B_GiveInvItems(self, hero, itmi_gold, (FellCounter * Value_KeilerFur_Feuer) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (FellCounter * Value_KeilerFur_Feuer) );
 			B_GiveInvItems(hero, self, ItAt_Addon_KeilerFur_Feuer, Npc_HasItems(hero, ItAt_Addon_KeilerFur_Feuer));
 		};
-		
+
 		if (Npc_HasItems(hero, ItAt_SheepFur) > 0)
 		|| (Npc_HasItems(hero, ItAt_SheepFur_Rein) > 0)
 		|| (Npc_HasItems(hero, ItAt_SheepFur_Feuer) > 0)
@@ -1290,30 +1293,45 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 			AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_02"); //Schafsfell? Du hast doch nicht etwa bei irgendeinem Bauern die Schafe auf der Weide abgeschlachtet?
 			AI_Output (hero, self, "Info_Mod_Bosper_MehrFelle_15_03"); //Würde mir nie im Traum einfallen ...
 
-			B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(hero, ItAt_SheepFur) * Value_SheepFur) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(hero, ItAt_SheepFur) * Value_SheepFur) );
 			B_GiveInvItems(hero, self, ItAt_SheepFur, Npc_HasItems(hero, ItAt_SheepFur));
 
-			B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(hero, ItAt_SheepFur_Rein) * Value_SheepFur_Rein) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(hero, ItAt_SheepFur_Rein) * Value_SheepFur_Rein) );
 			B_GiveInvItems(hero, self, ItAt_SheepFur_Rein, Npc_HasItems(hero, ItAt_SheepFur_Rein));
 
-			B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(hero, ItAt_SheepFur_Feuer) * Value_SheepFur_Feuer) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(hero, ItAt_SheepFur_Feuer) * Value_SheepFur_Feuer) );
 			B_GiveInvItems(hero, self, ItAt_SheepFur_Feuer, Npc_HasItems(hero, ItAt_SheepFur_Feuer));
-				
+		};
+
+		if (Npc_HasItems(hero, ItAt_ZiegenFur) > 0)
+		|| (Npc_HasItems(hero, ItAt_ZiegenFur_Rein) > 0)
+		|| (Npc_HasItems(hero, ItAt_ZiegenFur_Feuer) > 0)
+		{
+			AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_04"); //Ziegenfelle, gute Ware ...
+
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(hero, ItAt_ZiegenFur) * Value_ZiegenFur) );
+			B_GiveInvItems(hero, self, ItAt_ZiegenFur, Npc_HasItems(hero, ItAt_ZiegenFur));
+
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(hero, ItAt_ZiegenFur_Rein) * Value_ZiegenFur_Rein) );
+			B_GiveInvItems(hero, self, ItAt_ZiegenFur_Rein, Npc_HasItems(hero, ItAt_ZiegenFur_Rein));
+
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(hero, ItAt_ZiegenFur_Feuer) * Value_ZiegenFur_Feuer) );
+			B_GiveInvItems(hero, self, ItAt_ZiegenFur_Feuer, Npc_HasItems(hero, ItAt_ZiegenFur_Feuer));
 		};
 		
 		if (Npc_HasItems(hero, ItAt_WolfFur) > 0)
 		|| (Npc_HasItems(hero, ItAt_WolfFur_Rein) > 0)
 		|| (Npc_HasItems(hero, ItAt_WolfFur_Feuer) > 0)
 		{
-			AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_04"); //Wolfsfell, das ist gut...
+			AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_05"); //Wolfsfell, das ist gut...
 
-			B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_WolfFur) * Value_WolfFur) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_WolfFur) * Value_WolfFur) );
 			B_GiveInvItems(hero, self, ItAt_WolfFur, Npc_HasItems(other, ItAt_WolfFur));
 
-			B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_WolfFur_Rein) * Value_WolfFur_Rein) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_WolfFur_Rein) * Value_WolfFur_Rein) );
 			B_GiveInvItems(hero, self, ItAt_WolfFur_Rein, Npc_HasItems(other, ItAt_WolfFur_Rein));
 
-			B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_WolfFur_Feuer) * Value_WolfFur_Feuer) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_WolfFur_Feuer) * Value_WolfFur_Feuer) );
 			B_GiveInvItems(hero, self, ItAt_WolfFur_Feuer, Npc_HasItems(other, ItAt_WolfFur_Feuer));
 		};
 		
@@ -1321,15 +1339,15 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 		|| (Npc_HasItems(hero, ItAt_WargFur_Rein) > 0)
 		|| (Npc_HasItems(hero, ItAt_WargFur_Feuer) > 0)
 		{
-			AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_05"); //Fell von Wargen? Zähe Biester sind das ...
+			AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_06"); //Fell von Wargen? Zähe Biester sind das ...
 
-			B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_WargFur) * Value_WargFur) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_WargFur) * Value_WargFur) );
 			B_GiveInvItems(hero, self, ItAt_WargFur, Npc_HasItems(other, ItAt_WargFur));
 
-			B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_WargFur_Rein) * Value_WargFur_Rein) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_WargFur_Rein) * Value_WargFur_Rein) );
 			B_GiveInvItems(hero, self, ItAt_WargFur_Rein, Npc_HasItems(other, ItAt_WargFur_Rein));
 
-			B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_WargFur_Feuer) * Value_WargFur_Feuer) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_WargFur_Feuer) * Value_WargFur_Feuer) );
 			B_GiveInvItems(hero, self, ItAt_WargFur_Feuer, Npc_HasItems(other, ItAt_WargFur_Feuer));
 		};
 		
@@ -1340,26 +1358,26 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 		|| (Npc_HasItems(hero, ItAt_StonePumaFur_Rein) > 0)
 		|| (Npc_HasItems(hero, ItAt_StonePumaFur_Feuer) > 0)
 		{
-			AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_16"); //Pumafell? Feine Sache ...
+			AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_07"); //Pumafell? Feine Sache ...
 
 			FellCounter = Npc_HasItems(hero, ItAt_PumaFur);
 			FellCounter += Npc_HasItems(hero, ItAt_StonePumaFur);
 
-			B_GiveInvItems(self, hero, itmi_gold, (FellCounter * Value_PumaFur) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (FellCounter * Value_PumaFur) );
 			B_GiveInvItems(hero, self, ItAt_PumaFur, Npc_HasItems(hero, ItAt_PumaFur));
 			B_GiveInvItems(hero, self, ItAt_StonePumaFur, Npc_HasItems(hero, ItAt_StonePumaFur));
 
 			FellCounter = Npc_HasItems(hero, ItAt_PumaFur_Rein);
 			FellCounter += Npc_HasItems(hero, ItAt_StonePumaFur_Rein);
 
-			B_GiveInvItems(self, hero, itmi_gold, (FellCounter * Value_PumaFur_Rein) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (FellCounter * Value_PumaFur_Rein) );
 			B_GiveInvItems(hero, self, ItAt_PumaFur_Rein, Npc_HasItems(hero, ItAt_PumaFur_Rein));
 			B_GiveInvItems(hero, self, ItAt_StonePumaFur_Rein, Npc_HasItems(hero, ItAt_StonePumaFur_Rein));
 
 			FellCounter = Npc_HasItems(hero, ItAt_PumaFur_Feuer);
 			FellCounter += Npc_HasItems(hero, ItAt_StonePumaFur_Feuer);
 
-			B_GiveInvItems(self, hero, itmi_gold, (FellCounter * Value_PumaFur_Feuer) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (FellCounter * Value_PumaFur_Feuer) );
 			B_GiveInvItems(hero, self, ItAt_PumaFur_Feuer, Npc_HasItems(hero, ItAt_PumaFur_Feuer));
 			B_GiveInvItems(hero, self, ItAt_StonePumaFur_Feuer, Npc_HasItems(hero, ItAt_StonePumaFur_Feuer));
 		};
@@ -1368,15 +1386,15 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 		|| (Npc_HasItems(hero, ItAt_OrcdogFur_Rein) > 0)
 		|| (Npc_HasItems(hero, ItAt_OrcdogFur_Feuer) > 0)
 		{
-			AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_15"); //Fell von Orkhunden? Zähe Biester sind das ...
+			AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_08"); //Fell von Orkhunden? Zähe Biester sind das ...
 
-			B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_OrcdogFur) * Value_WargFur) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_OrcdogFur) * Value_WargFur) );
 			B_GiveInvItems(hero, self, ItAt_OrcdogFur, Npc_HasItems(other, ItAt_OrcdogFur));
 
-			B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_OrcdogFur_Rein) * Value_WargFur_Rein) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_OrcdogFur_Rein) * Value_WargFur_Rein) );
 			B_GiveInvItems(hero, self, ItAt_OrcdogFur_Rein, Npc_HasItems(other, ItAt_OrcdogFur_Rein));
 
-			B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_OrcdogFur_Feuer) * Value_WargFur_Feuer) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_OrcdogFur_Feuer) * Value_WargFur_Feuer) );
 			B_GiveInvItems(hero, self, ItAt_OrcdogFur_Feuer, Npc_HasItems(other, ItAt_OrcdogFur_Feuer));
 		};
 		
@@ -1384,21 +1402,21 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 		|| (Npc_HasItems(hero, ItAt_ShadowFur_Rein) > 0)
 		|| (Npc_HasItems(hero, ItAt_ShadowFur_Feuer) > 0)
 		{
-			AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_06"); //Ah, sogar das Fell eines Schattenläufers - ist 'ne Menge wert.
+			AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_09"); //Ah, sogar das Fell eines Schattenläufers - ist 'ne Menge wert.
 
 			FellCounter = Npc_HasItems(hero, ItAt_ShadowFur);
 
-			B_GiveInvItems(self, hero, itmi_gold, (FellCounter * Value_ShadowFur) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (FellCounter * Value_ShadowFur) );
 			B_GiveInvItems(hero, self, ItAt_ShadowFur, Npc_HasItems(other, ItAt_ShadowFur));
 
 			FellCounter = Npc_HasItems(hero, ItAt_ShadowFur_Rein);
 
-			B_GiveInvItems(self, hero, itmi_gold, (FellCounter * Value_ShadowFur_Rein) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (FellCounter * Value_ShadowFur_Rein) );
 			B_GiveInvItems(hero, self, ItAt_ShadowFur_Rein, Npc_HasItems(other, ItAt_ShadowFur_Rein));
 
 			FellCounter = Npc_HasItems(hero, ItAt_ShadowFur_Feuer);
 
-			B_GiveInvItems(self, hero, itmi_gold, (FellCounter * Value_ShadowFur_Feuer) );
+			B_GiveInvItems(self, hero, ItMi_Gold, (FellCounter * Value_ShadowFur_Feuer) );
 			B_GiveInvItems(hero, self, ItAt_ShadowFur_Feuer, Npc_HasItems(other, ItAt_ShadowFur_Feuer));
 		};
 		
@@ -1411,29 +1429,29 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 		{
 			if (Mod_TrollfellBosper == FALSE)
 			{
-				AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_07"); //Was zur Hölle ist DAS für ein Fell?
-				AI_Output (hero, self, "Info_Mod_Bosper_MehrFelle_15_08"); //Das hab ich einem Troll über die Ohren gezogen.
-				AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_09"); //Das ... das ist ein halbes Vermögen wert ...
+				AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_10"); //Was zur Hölle ist DAS für ein Fell?
+				AI_Output (hero, self, "Info_Mod_Bosper_MehrFelle_15_11"); //Das hab ich einem Troll über die Ohren gezogen.
+				AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_12"); //Das ... das ist ein halbes Vermögen wert ...
 
 				Mod_TrollfellBosper == TRUE;
 			}
 			else //TRUE
 			{
-				AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_10"); //Schon wieder so ein riesiges Trollfell ... machst du Jagd auf die Viecher?
-				AI_Output (hero, self, "Info_Mod_Bosper_MehrFelle_15_11"); //Wenn mir mal einer begegnet, nutze ich die Gelegenheit ...
+				AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_13"); //Schon wieder so ein riesiges Trollfell ... machst du Jagd auf die Viecher?
+				AI_Output (hero, self, "Info_Mod_Bosper_MehrFelle_15_14"); //Wenn mir mal einer begegnet, nutze ich die Gelegenheit ...
 			};
 			
 			if (Npc_HasItems(hero, ItAt_TrollFur) > 0)
 			|| (Npc_HasItems(hero, ItAt_TrollFur_Rein) > 0)
 			|| (Npc_HasItems(hero, ItAt_TrollFur_Feuer) > 0)
 			{
-				B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_TrollFur) * Value_TrollFur) );
+				B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_TrollFur) * Value_TrollFur) );
 				B_GiveInvItems(hero, self, ItAt_TrollFur, Npc_HasItems(other, ItAt_TrollFur));
 
-				B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_TrollFur_Rein) * Value_TrollFur_Rein) );
+				B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_TrollFur_Rein) * Value_TrollFur_Rein) );
 				B_GiveInvItems(hero, self, ItAt_TrollFur_Rein, Npc_HasItems(other, ItAt_TrollFur_Rein));
 
-				B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_TrollFur_Feuer) * Value_TrollFur_Feuer) );
+				B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_TrollFur_Feuer) * Value_TrollFur_Feuer) );
 				B_GiveInvItems(hero, self, ItAt_TrollFur_Feuer, Npc_HasItems(other, ItAt_TrollFur_Feuer));
 			};
 			
@@ -1441,24 +1459,24 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 			|| (Npc_HasItems(hero, ItAt_TrollBlackFur_Rein) > 0)
 			|| (Npc_HasItems(hero, ItAt_TrollBlackFur_Feuer) > 0)
 			{
-				AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_12"); //Sogar das Fell eines schwarzen Trolls!
+				AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_15"); //Sogar das Fell eines schwarzen Trolls!
 
-				B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_TrollBlackFur) * Value_TrollBlackFur) );
+				B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_TrollBlackFur) * Value_TrollBlackFur) );
 				B_GiveInvItems(hero, self, ItAt_TrollBlackFur, Npc_HasItems(other, ItAt_TrollBlackFur));
 
-				B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_TrollBlackFur_Rein) * Value_TrollBlackFur_Rein) );
+				B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_TrollBlackFur_Rein) * Value_TrollBlackFur_Rein) );
 				B_GiveInvItems(hero, self, ItAt_TrollBlackFur_Rein, Npc_HasItems(other, ItAt_TrollBlackFur_Rein));
 
-				B_GiveInvItems(self, hero, itmi_gold, (Npc_HasItems(other, ItAt_TrollBlackFur_Feuer) * Value_TrollBlackFur_Feuer) );
+				B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_TrollBlackFur_Feuer) * Value_TrollBlackFur_Feuer) );
 				B_GiveInvItems(hero, self, ItAt_TrollBlackFur_Feuer, Npc_HasItems(other, ItAt_TrollBlackFur_Feuer));
 			};
 		};
 		
-		AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_13"); //Gute Arbeit. Wenn du mehr hast, komm zu mir zurück ...
+		AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_16"); //Gute Arbeit. Wenn du mehr hast, komm zu mir zurück ...
 	}
 	else
 	{
-		AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_14"); //Du weißt doch - ich bin nur an Fellen von Wölfen, Schattenläufern und dergleichen interessiert ...
+		AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_17"); //Du weißt doch - ich bin nur an Fellen von Wölfen, Schattenläufern und dergleichen interessiert ...
 	};
 };
 

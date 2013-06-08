@@ -208,7 +208,7 @@ FUNC VOID Info_Mod_Henry_SamuelWeg_Info()
 	AI_Output(hero, self, "Info_Mod_Henry_SamuelWeg_15_03"); //Und woher soll ich Grog bekommen?
 	AI_Output(self, hero, "Info_Mod_Henry_SamuelWeg_04_04"); //Am besten du siehst dich in Samuels Höhle um. Da muss irgendwo das Rezept liegen.
 	AI_Output(hero, self, "Info_Mod_Henry_SamuelWeg_15_05"); //Mach ich.
-	AI_Output(self, hero, "Info_Mod_Henry_SamuelWeg_04_06"); //Un wehe du bringst mir so nen billigen Fusel.
+	AI_Output(self, hero, "Info_Mod_Henry_SamuelWeg_04_06"); //Un wehe du bringst mir so 'nen billigen Fusel.
 
 	B_LogEntry	(TOPIC_MOD_HENRY_ENTERTRUPP, "Wie es scheint soll ich Henrys Grog selber brennen.");
 
