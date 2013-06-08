@@ -55,6 +55,8 @@ FUNC VOID Info_Mod_Henry_Hi_C()
 
 	Info_ClearChoices	(Info_Mod_Henry_Hi);
 
+	Wld_InsertNpc	(Canyon_Ziege_Euter,	"ADW_CANYON_PATH_TO_BANDITS_36");
+
 	Log_CreateTopic	(TOPIC_MOD_HENRY_BEISSER, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_HENRY_BEISSER, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_HENRY_BEISSER, "Henry lässt mich erst ins Lager wenn ich ihm ein Stück Fleisch bringe. Ich soll außerdem die Milch einer Wildziege besorgen.");
@@ -166,13 +168,13 @@ FUNC VOID Info_Mod_Henry_Entertrupp_Info()
 	AI_Output(self, hero, "Info_Mod_Henry_Entertrupp_04_04"); //Jeder will in meinen Entertrupp.
 	AI_Output(self, hero, "Info_Mod_Henry_Entertrupp_04_05"); //Wenn dir das ernst ist musst du zeigen was du drauf hast!
 	AI_Output(hero, self, "Info_Mod_Henry_Entertrupp_15_06"); //Was soll ich tun?
-	AI_Output(self, hero, "Info_Mod_Henry_Entertrupp_04_07"); //Zuerst holst du mir mal ne Flasche Grog, dann reden wir weiter.
+	AI_Output(self, hero, "Info_Mod_Henry_Entertrupp_04_07"); //Zuerst holst du mir mal 'ne Flasche Grog, dann reden wir weiter.
 	AI_Output(hero, self, "Info_Mod_Henry_Entertrupp_15_08"); //Und wo krieg ich den her?
 	AI_Output(self, hero, "Info_Mod_Henry_Entertrupp_04_09"); //Weiter hinten, in der Höhle, ist Samuels Hexenküche.
 
 	Log_CreateTopic	(TOPIC_MOD_HENRY_ENTERTRUPP, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_HENRY_ENTERTRUPP, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_HENRY_ENTERTRUPP, "Um in Henry's Entertrupp zu kommen soll ich ihm erstmal 'ne Flasche Grog besorgen.");
+	B_LogEntry	(TOPIC_MOD_HENRY_ENTERTRUPP, "Um in Henrys Entertrupp zu kommen soll ich ihm erstmal 'ne Flasche Grog besorgen.");
 
 	AI_Teleport	(Mod_940_PIR_Samuel_AW, "ADW_PIRATECAMP_TOWER_BED");
 

@@ -332,7 +332,7 @@ func void STARTUP_ADDON_PART_CANYON_01 ()
 	Wld_InsertNpc	(MinecrawlerWarrior,	"FP_ROAM_ADW_CANYON_MINE2_09_03");
 	Wld_InsertNpc	(MinecrawlerWarrior,	"FP_ROAM_ADW_CANYON_MINE2_09_02");
 
-	// Monster in der gro?en H?hle
+	// Monster in der großen Höhle
 
 	Wld_InsertNpc	(MinecrawlerWarrior,	"FP_ROAM_ADW_CANYONBANDITSCAVE_17");
 	Wld_InsertNpc	(MinecrawlerWarrior,	"FP_ROAM_ADW_CANYONBANDITSCAVE_16");
@@ -361,6 +361,12 @@ func void STARTUP_ADDON_PART_CANYON_01 ()
 	Wld_InsertNpc	(Mod_10037_Orc_Scout_AW,	"CANYONLIBRARY");
 	Wld_InsertNpc	(Mod_10038_Orc_Scout_AW,	"CANYONLIBRARY");
 	
+	// Canyonziegen
+
+	Wld_InsertNpc	(Canyon_Ziege,	"ADW_CANYON_PATH_TO_BANDITS_36");
+	Wld_InsertNpc	(Canyon_Ziege,	"ADW_CANYON_PATH_TO_BANDITS_36");
+	Wld_InsertNpc	(Canyon_Ziege,	"ADW_CANYON_PATH_TO_BANDITS_36");
+	Wld_InsertNpc	(Canyon_Ziege_Leitbock,	"ADW_CANYON_PATH_TO_BANDITS_36");
 };
 
 func void INIT_ADDON_PART_CANYON_01 ()

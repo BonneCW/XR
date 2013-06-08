@@ -458,6 +458,40 @@ FUNC VOID Info_Mod_Cronos_AW_Gast_Info()
 	};
 };
 
+INSTANCE Info_Mod_Cronos_AW_TiereZaehmen (C_INFO)
+{
+	npc		= Mod_9001_KDW_Cronos_AW;
+	nr		= 1;
+	condition	= Info_Mod_Cronos_AW_TiereZaehmen_Condition;
+	information	= Info_Mod_Cronos_AW_TiereZaehmen_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Weißt du vielleicht, wie man wilde Tiere zähmt?";
+};
+
+FUNC INT Info_Mod_Cronos_AW_TiereZaehmen_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Henry_Hi))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Henry_Fleisch))
+	&& (Npc_HasItems(self, ItWr_TierZaehmung) == 0)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Cronos_AW_TiereZaehmen_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Cronos_AW_TiereZaehmen_15_00"); //Weißt du vielleicht, wie man wilde Tiere zähmt?
+	AI_Output(self, hero, "Info_Mod_Cronos_AW_TiereZaehmen_04_01"); //Du willst Tiere zähmen? Hmm, das ist nicht ganz leicht.
+	AI_Output(self, hero, "Info_Mod_Cronos_AW_TiereZaehmen_04_02"); //Besonders Tiere die dem Menschen feindlich gesonnen sind, stellen selbst für erfahrene Magier eine Herausforderung dar ...
+	AI_Output(hero, self, "Info_Mod_Cronos_AW_TiereZaehmen_15_03"); //Wie sieht es mit Wildziegen aus?
+	AI_Output(self, hero, "Info_Mod_Cronos_AW_TiereZaehmen_04_04"); //Diese Geschöpfe sind so lange neutral, bis man sie angreift. Das macht es wesentlich leichter auf ihren Geist einzuwirken.
+	AI_Output(self, hero, "Info_Mod_Cronos_AW_TiereZaehmen_04_05"); //Ich könnte dir Spruchrollen für diesen Zweck herstellen. Dafür bräuchte ich allerdings einige Zutaten.
+	AI_Output(hero, self, "Info_Mod_Cronos_AW_TiereZaehmen_15_06"); //Was benötigst du?
+	AI_Output(self, hero, "Info_Mod_Cronos_AW_TiereZaehmen_04_07"); //Hmm, es könnte eigentlich schon reichen, wenn du mir zwei Stück rohes Ziegenfleisch und ein Ziegenfell besorgst.
+	AI_Output(self, hero, "Info_Mod_Cronos_AW_TiereZaehmen_04_08"); //Hier in den Bergen habe ich irgendwo Wildziegen blöken hören ...
+};
+
 INSTANCE Info_Mod_Cronos_Pickpocket (C_INFO)
 {
 	npc		= Mod_9001_KDW_Cronos_AW;

@@ -220,6 +220,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	&& (slf.aivar[AIV_Trefferzone] == 1)
 	{
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_SHEEP)		{	CreateInvItems (slf, ItAt_SheepFur	, 1);	};
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_ZIEGE)		{	CreateInvItems (slf, ItAt_ZiegenFur	, 1);	};
 		if ((slf.aivar[AIV_MM_REAL_ID] == ID_WOLF) && (Hlp_GetInstanceID(slf) != Hlp_GetInstanceID(Tiger_Weiﬂ)))			{	CreateInvItems (slf, ItAt_WolfFur	, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_ICEWOLF)		{	CreateInvItems (slf, ItAt_WolfFur	, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_WARG)		{	CreateInvItems (slf, ItAt_WargFur	, 1);	};
@@ -240,6 +241,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	&& (slf.aivar[AIV_Trefferzone] == 0)
 	{
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_SHEEP)		{	CreateInvItems (slf, ItAt_SheepFur_Rein, 1);	};
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_ZIEGE)		{	CreateInvItems (slf, ItAt_ZiegenFur_Rein, 1);	};
 		if ((slf.aivar[AIV_MM_REAL_ID] == ID_WOLF) && (Hlp_GetInstanceID(slf) != Hlp_GetInstanceID(Tiger_Weiﬂ)))			{	CreateInvItems (slf, ItAt_WolfFur_Rein, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_ICEWOLF)		{	CreateInvItems (slf, ItAt_WolfFur_Rein, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_WARG)		{	CreateInvItems (slf, ItAt_WargFur_Rein, 1);	};
@@ -259,6 +261,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	&& (slf.aivar[AIV_Trefferzone] == 2)
 	{
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_SHEEP)		{	CreateInvItems (slf, ItAt_SheepFur_Feuer, 1);	};
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_ZIEGE)		{	CreateInvItems (slf, ItAt_ZiegenFur_Feuer, 1);	};
 		if ((slf.aivar[AIV_MM_REAL_ID] == ID_WOLF) && (Hlp_GetInstanceID(slf) != Hlp_GetInstanceID(Tiger_Weiﬂ)))			{	CreateInvItems (slf, ItAt_WolfFur_Feuer, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_ICEWOLF)		{	CreateInvItems (slf, ItAt_WolfFur_Feuer, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_WARG)		{	CreateInvItems (slf, ItAt_WargFur_Feuer, 1);	};

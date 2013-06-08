@@ -9,6 +9,9 @@ const int	Value_Meatbugflesh			=	10;
 const int	Value_SheepFur				=	10;
 const int	Value_SheepFur_Rein			=	13;
 const int	Value_SheepFur_Feuer			=	3;
+const int	Value_ZiegenFur				=	10;
+const int	Value_ZiegenFur_Rein			=	13;
+const int	Value_ZiegenFur_Feuer			=	3;
 const int	Value_WolfFur				=	10;
 const int	Value_WolfFur_Rein			=	13;
 const int	Value_WolfFur_Feuer			=	3;
@@ -170,6 +173,69 @@ INSTANCE ItAt_SheepFur_Feuer (C_Item)
 	flags 				=	ITEM_MULTI;
 
 	value 				=	Value_SheepFur_Feuer;
+
+	visual 				=	"ItAt_SheepFur.3DS";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+	TEXT[0]				= 	"";
+	TEXT[1]				= 	"";
+	TEXT[2]				= 	"";
+	TEXT[3]				= 	"";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
+/******************************************************************************************/
+INSTANCE ItAt_ZiegenFur (C_Item)
+{
+	name 				=	"Ziegenfell";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_ZiegenFur;
+
+	visual 				=	"ItAt_SheepFur.3DS";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+	TEXT[0]				= 	"";
+	TEXT[1]				= 	"";
+	TEXT[2]				= 	"";
+	TEXT[3]				= 	"";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
+/******************************************************************************************/
+INSTANCE ItAt_ZiegenFur_Rein (C_Item)
+{
+	name 				=	"unbeschädigtes Ziegenfell";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_ZiegenFur_Rein;
+
+	visual 				=	"ItAt_SheepFur.3DS";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+	TEXT[0]				= 	"";
+	TEXT[1]				= 	"";
+	TEXT[2]				= 	"";
+	TEXT[3]				= 	"";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
+/******************************************************************************************/
+INSTANCE ItAt_ZiegenFur_Feuer (C_Item)
+{
+	name 				=	"versengtes Ziegenfell";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_ZiegenFur_Feuer;
 
 	visual 				=	"ItAt_SheepFur.3DS";
 	material 			=	MAT_LEATHER;
