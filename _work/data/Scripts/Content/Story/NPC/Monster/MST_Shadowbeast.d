@@ -306,6 +306,38 @@ INSTANCE Eislaeufer_FGE	(Mst_Default_Shadowbeast)
 	CreateInvItems (self, ItFo_MuttonRaw, 4);
 };
 
+INSTANCE Eislaeufer	(Mst_Default_Shadowbeast)
+{
+	name	= "Eisläufer";
+
+	aivar[AIV_MM_REAL_ID]			= 	ID_WATERSHADOWBEAST;
+
+	level	= 100;
+
+	attribute	[ATR_STRENGTH]		=	240;
+	attribute	[ATR_DEXTERITY]		=	20;
+	attribute	[ATR_HITPOINTS_MAX]	=	600;
+	attribute	[ATR_HITPOINTS]		=	600;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	150000;
+	protection	[PROT_EDGE]			=	150000;
+	protection	[PROT_POINT]		=	100000;
+	protection	[PROT_FIRE]			=	150;
+	protection	[PROT_FLY]			=	150;
+	protection	[PROT_MAGIC]		=	100;
+
+	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
+
+	effect	= "SPELLFX_ICEARMOR";
+
+	B_SetVisuals_Eislaeufer();
+	Npc_SetToFistMode(self);
+	CreateInvItems (self, ItFo_MuttonRaw, 4);
+};
+
 INSTANCE Nightmare	(Mst_Default_Shadowbeast)
 {
 	name	= "Nachtmahr";

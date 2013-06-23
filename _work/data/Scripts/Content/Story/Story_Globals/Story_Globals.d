@@ -48,6 +48,8 @@ var int Mod_Miliz_Armbrust;
 var int Mod_Cronos_ZiegenScroll;
 var int Mod_Den_Problem;
 var int TimeSwitch;
+var int Mod_Aerwak;
+var int Mod_Eivar;
 var int View_Time;
 var int transformCooldown;
 var int Mod_Regenerationstrank_Counter;

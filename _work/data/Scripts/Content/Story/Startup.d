@@ -8000,6 +8000,7 @@ FUNC VOID STARTUP_Eisgebiet()
 	Wld_InsertNpc	(Mod_7768_OUT_Amorite_EIS, "START_EISGEBIET");
 	Wld_InsertNpc	(Mod_974_OUT_Gestath_EIS, "START_EISGEBIET");
 	Wld_InsertNpc	(Mod_7792_OUT_Anglar_EIS, "START_EISGEBIET");
+	Wld_InsertNpc	(Mod_7807_OUT_Aerwak_EIS, "START_EISGEBIET");
 
 	// Menschen in der Umgebung
 
@@ -8036,6 +8037,10 @@ FUNC VOID STARTUP_Eisgebiet()
 	Wld_InsertNpc	(Zombie_Eis_Schneegeister,	"EIS_TEMPELCHEN_005");
 	Wld_InsertNpc	(Schneegeist,	"EIS_TEMPELCHEN_005");
 	Wld_InsertNpc	(Schneegeist,	"EIS_TEMPELCHEN_005");
+
+	// Monster in der Welt
+
+	Wld_InsertNpc	(Eislaeufer,	"FP_ROAM_EISLAEUFER_EIVAR");
 };
 
 FUNC VOID INIT_Eisgebiet()

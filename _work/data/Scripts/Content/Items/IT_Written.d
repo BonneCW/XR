@@ -189,6 +189,44 @@ func void UseKrautruestungListe ()
 
 };
 
+INSTANCE ItWr_EivarZettel		(C_Item)
+{
+	name 				=	"Notiz";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	ITEM_MISSION|ITEM_SHOW;
+
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseEivarZettel;
+	scemeName			=	"MAP";
+	description			= 	name;
+	TEXT[0]				=	"von einer Leiche in Gelato";
+};
+
+func void UseEivarZettel ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		()			  ;							// DocManager
+					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline  			); 	// -1 -> all pages
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
+					Doc_PrintLines	( nDocID,  0, ""					);
+					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Das hab ich nun von meiner Gier nach den Trophäen aus den ferneren Gebieten ... wollte das große Geld machen. Stattdessen sitze ich hier oben und krepiere an meiner Wunde. Wenn das verfluchte Biest endlich verschwinden würde könnte ich zumindest nach unten und sie notdürftig behandeln. Aber ich Narr musste ja alles im Baumstumpf verstecken ... als ob mich hier irgendjemand beklauen würde. Es geschieht mir fast recht ...");
+					Doc_PrintLines	( nDocID,  0, "Dem Jenseits entgegenblickend, Eivar");
+					
+					Doc_Show		( nDocID );
+
+	Mod_Eivar = 1;
+
+};
+
 INSTANCE ItWr_TierZaehmung		(C_Item)
 {
 	name 				=	"Notiz";

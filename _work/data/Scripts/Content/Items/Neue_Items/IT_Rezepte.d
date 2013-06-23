@@ -617,7 +617,7 @@ func void UsePurpurmond ()
 					Doc_PrintLine	( nDocID,  0, "Purpurmond"					);
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "Einen Fliegenpilz und das Kraut zweier St‰ngels 10min in Milch aufkochen.");
+					Doc_PrintLines	( nDocID,  0, "Einen Fliegenpilz und das Kraut zweier St‰ngel 10min in Milch aufkochen.");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLines	( nDocID,  0, "Am besten vor dem Schlafengehen zu genieﬂen.");
 
