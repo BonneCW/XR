@@ -317,8 +317,6 @@ FUNC INT Info_Mod_Argez_AW_Stab2_Condition()
 {
 	// TODO: Richtige Bedingung ergänzen, sobald Minispiel fertig ist
 	if (Npc_KnowsInfo(hero, Info_Mod_Argez_AW_Stab))
-	&& (Npc_HasItems(hero, ItMw_Adanos_Stab_Teil1) == 1)
-	&& (Npc_HasItems(hero, ItMw_Adanos_Stab_Teil2) == 1)
 	{
 		return 1;
 	};
@@ -390,8 +388,6 @@ FUNC INT Info_Mod_Argez_AW_Stab3_Condition()
 {
 	// TODO: Richtige Bedingung ergänzen, sobald Minispiel fertig ist
 	if (Npc_KnowsInfo(hero, Info_Mod_Argez_AW_Stab2))
-	&& (Npc_HasItems(hero, ItMw_Adanos_Stab_Teil1) == 1)
-	&& (Npc_HasItems(hero, ItMw_Adanos_Stab_Teil2) == 1)
 	{
 		return 1;
 	};
