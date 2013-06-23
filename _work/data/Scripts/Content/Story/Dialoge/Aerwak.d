@@ -132,34 +132,6 @@ FUNC VOID Info_Mod_Aerwak_Eivar_Info()
 	B_GivePlayerXP	(400);
 };
 
-INSTANCE Info_Mod_Aerwak_Trade (C_INFO)
-{
-	npc		= Mod_7807_OUT_Aerwak_EIS;
-	nr		= 1;
-	condition	= Info_Mod_Aerwak_Trade_Condition;
-	information	= Info_Mod_Aerwak_Trade_Info;
-	permanent	= 1;
-	important	= 0;
-	trade		= 1;
-	description	= DIALOG_TRADE;
-};
-
-FUNC INT Info_Mod_Aerwak_Trade_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Aerwak_Eivar))
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Aerwak_Trade_Info()
-{
-	Backup_Questitems();
-
-	B_GiveTradeInv (self);
-	B_Say (hero, self, "$TRADE_1");
-};
-
 INSTANCE Info_Mod_Aerwak_Pickpocket (C_INFO)
 {
 	npc		= Mod_7807_OUT_Aerwak_EIS;
