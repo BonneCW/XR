@@ -455,8 +455,6 @@ FUNC VOID Info_Mod_Torlof_HaradLehrling3_Info()
 
 	EquipWeapon (hero, ItMw_HaradSchwert);
 
-	AI_ReadyMeleeWeapon	(hero);
-
 	AI_Output(self, hero, "Info_Mod_Torlof_HaradLehrling3_01_04"); //3, 2, 1, los!
 
 	AI_StopProcessInfos	(self);
@@ -479,6 +477,8 @@ INSTANCE Info_Mod_Torlof_HaradLehrling4 (C_INFO)
 FUNC INT Info_Mod_Torlof_HaradLehrling4_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Hock_HaradLehrling))
+	&& (!Npc_IsInState(Mod_1200_SLD_Soeldner_NW, ZS_Attack))
+	&& (!Npc_IsInState(Mod_1200_SLD_Soeldner_NW, ZS_Talk))
 	{
 		return 1;
 	};

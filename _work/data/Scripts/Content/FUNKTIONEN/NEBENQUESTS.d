@@ -1156,11 +1156,13 @@ FUNC VOID NEBENQUESTS()
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Hock_HaradLehrling))
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Torlof_HaradLehrling4))
+		&& (Npc_IsInState(Mod_1200_SLD_Soeldner_NW, ZS_Attack))
 		{
 			var C_ITEM rwp;
 			rwp = Npc_GetReadiedWeapon(hero);
 
 			if (Hlp_IsItem(rwp, ItMw_HaradSchwert) == FALSE)
+			&& (Npc_IsInFightMode(hero, FMODE_MELEE))
 			{
 				Mod_HaradLehrling_Kampf = 1;
 			};
