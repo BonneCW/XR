@@ -4,7 +4,7 @@ instance Mod_106_TPL_Angar_MT (Npc_Default)
 	name 		= "Cor Angar";
 	guild 		= GIL_OUT;
 	id 			= 106;
-	voice 		= 4;
+	voice 		= 34;
 	flags       = 0;					//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

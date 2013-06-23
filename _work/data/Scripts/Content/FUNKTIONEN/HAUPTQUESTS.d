@@ -879,7 +879,7 @@ FUNC VOID HAUPTQUESTS()
 					AI_TurnToNpc	(Mod_7422_NONE_Frau_NW, Mod_541_NONE_Till_NW);
 					AI_TurnToNpc	(Mod_541_NONE_Till_NW, Mod_7422_NONE_Frau_NW);
 
-					AI_Output(Mod_541_NONE_Till_NW, NULL, "Info_Mod_UrnolKap4_Till_03_01"); //Ich ... ich kann das nicht mehr tun. Warum verlangst du das von mir?
+					AI_Output(Mod_541_NONE_Till_NW, NULL, "Info_Mod_UrnolKap4_Till_24_01"); //Ich ... ich kann das nicht mehr tun. Warum verlangst du das von mir?
 				}
 				else
 				{
@@ -897,7 +897,7 @@ FUNC VOID HAUPTQUESTS()
 				}
 				else if (Mod_HQ_Daemonisch_SP_02 == 2)
 				{
-					AI_Output(Mod_541_NONE_Till_NW, NULL, "Info_Mod_UrnolKap4_Till_03_04"); //Vorher bin ich dem Mann begegnet, den ich töten sollte ... ich konnte es nicht.
+					AI_Output(Mod_541_NONE_Till_NW, NULL, "Info_Mod_UrnolKap4_Till_24_04"); //Vorher bin ich dem Mann begegnet, den ich töten sollte ... ich konnte es nicht.
 				}
 				else
 				{
@@ -912,7 +912,7 @@ FUNC VOID HAUPTQUESTS()
 				}
 				else if (Mod_HQ_Daemonisch_SP_02 == 2)
 				{
-					AI_Output(Mod_541_NONE_Till_NW, NULL, "Info_Mod_UrnolKap4_Till_03_07"); //Ich will doch einfach nur unsere Liebe leben.
+					AI_Output(Mod_541_NONE_Till_NW, NULL, "Info_Mod_UrnolKap4_Till_24_07"); //Ich will doch einfach nur unsere Liebe leben.
 				}
 				else
 				{
@@ -935,7 +935,7 @@ FUNC VOID HAUPTQUESTS()
 				}
 				else if (Mod_HQ_Daemonisch_SP_02 == 2)
 				{
-					AI_Output(Mod_541_NONE_Till_NW, NULL, "Info_Mod_UrnolKap4_Till_03_12"); //Was ... nein, aber ich liebe dich doooch ...
+					AI_Output(Mod_541_NONE_Till_NW, NULL, "Info_Mod_UrnolKap4_Till_24_12"); //Was ... nein, aber ich liebe dich doooch ...
 				}
 				else
 				{

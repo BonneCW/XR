@@ -298,6 +298,7 @@ const int	ID_Summoned_Harpie	= 108;
 const int	ID_Minotaurus	= 109;
 const int	ID_RazorSkelett	= 110;
 const int	ID_Ziege	= 111;
+const int	ID_Kroete	= 112;
 
 
 

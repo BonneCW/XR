@@ -4,7 +4,7 @@ INSTANCE Mod_7417_JG_Cyrco_JL (Npc_Default)
 	name 		= "Cyrco";
 	guild 		= GIL_OUT;
 	id 			= 7417;
-	voice 		= 10;
+	voice 		= 38;
 	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 	aivar[AIV_IgnoresFakeGuild] = TRUE;

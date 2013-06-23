@@ -17,9 +17,9 @@ FUNC INT Info_Mod_Angar_IR_Hi_Condition()
 FUNC VOID Info_Mod_Angar_IR_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Angar_IR_Hi_15_00"); //Und, was sagst du?
-	AI_Output(self, hero, "Info_Mod_Angar_IR_Hi_04_01"); //Ja, das ist das Ziel unserer Reise.
-	AI_Output(self, hero, "Info_Mod_Angar_IR_Hi_04_02"); //Hier werde ich mein Schwert gegen jene führen, die mit Schuld an dem Tod von Meister Y'berion tragen.
-	AI_Output(self, hero, "Info_Mod_Angar_IR_Hi_04_03"); //Erst wenn sein Ableben 100fach durch die zerschmetterten Leiber unserer Feinde gesühnt wurde, kann ich wieder ruhen.
+	AI_Output(self, hero, "Info_Mod_Angar_IR_Hi_34_01"); //Ja, das ist das Ziel unserer Reise.
+	AI_Output(self, hero, "Info_Mod_Angar_IR_Hi_34_02"); //Hier werde ich mein Schwert gegen jene führen, die mit Schuld an dem Tod von Meister Y'berion tragen.
+	AI_Output(self, hero, "Info_Mod_Angar_IR_Hi_34_03"); //Erst wenn sein Ableben 100fach durch die zerschmetterten Leiber unserer Feinde gesühnt wurde, kann ich wieder ruhen.
 	AI_Output(hero, self, "Info_Mod_Angar_IR_Hi_15_04"); //Ohh, das ist genau die Art von Einstellung, die wir für diese Expedition brauchen.
 };
 
@@ -48,7 +48,7 @@ FUNC VOID Info_Mod_Angar_IR_Hebel_Info()
 {
 	B_Say	(hero, self, "$IRDORATHHEBEL");
 
-	AI_Output(self, hero, "Info_Mod_Angar_IR_Hebel_04_00"); //Natürlich. Wenn wir dadurch vielleicht weiterkommen ...
+	AI_Output(self, hero, "Info_Mod_Angar_IR_Hebel_34_00"); //Natürlich. Wenn wir dadurch vielleicht weiterkommen ...
 
 	Mod_IR_Hebel = 1;
 
@@ -84,7 +84,7 @@ FUNC VOID Info_Mod_Angar_IR_GehtLos_Info()
 {
 	B_Say	(hero, self, "$IRDORATHGEHTLOS");
 
-	AI_Output(self, hero, "Info_Mod_Angar_IR_GehtLos_04_00"); //Natürlich. Wenn es die Situation verlangt, so soll ein Mann nicht nur durch Worte, sondern auch durch seine Taten überzeugen.
+	AI_Output(self, hero, "Info_Mod_Angar_IR_GehtLos_34_00"); //Natürlich. Wenn es die Situation verlangt, so soll ein Mann nicht nur durch Worte, sondern auch durch seine Taten überzeugen.
 
 	Mod_IR_Dabei += 1;
 
@@ -120,7 +120,7 @@ FUNC VOID Info_Mod_Angar_IR_GehBack_Info()
 {
 	B_Say	(hero, self, "$IRDORATHGEHBACK");
 
-	AI_Output(self, hero, "Info_Mod_Angar_IR_GehBack_04_00"); //Gut, wenn du mich brauchst, weißt du ja, wo du mich findest.
+	AI_Output(self, hero, "Info_Mod_Angar_IR_GehBack_34_00"); //Gut, wenn du mich brauchst, weißt du ja, wo du mich findest.
 
 	Mod_IR_Dabei -= 1;
 
@@ -154,7 +154,7 @@ FUNC VOID Info_Mod_Angar_IR_Kram_Info()
 {
 	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
 
-	AI_Output(self, hero, "Info_Mod_Angar_IR_Kram_04_01"); //Ich kann dich lehren das zweihändige Schwert zu führen und dir zeigen, wie du die Kräfte deines Körpers effektiver nutzen kannst.
+	AI_Output(self, hero, "Info_Mod_Angar_IR_Kram_34_01"); //Ich kann dich lehren das zweihändige Schwert zu führen und dir zeigen, wie du die Kräfte deines Körpers effektiver nutzen kannst.
 };
 
 INSTANCE Info_Mod_Angar_IR_Lernen (C_INFO)

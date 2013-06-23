@@ -67,6 +67,15 @@ func void B_SetVisuals_Skeleton_Mage()
 	Mdl_SetVisualBody		(self,	"Ske_Fly_Body",	1,			DEFAULT,	"",			1,  		DEFAULT,	-1);
 };
 
+func void B_SetVisuals_Gespenst()
+{
+	Mdl_SetVisual			(self,	"HumanS.mds");
+	Mdl_ApplyOverlayMds 	(self,	"humans_skeleton_fly.mds");
+
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Gespenst_Body",	0,			DEFAULT,	"",			1,  		DEFAULT,	-1);
+};
+
 //*********************
 //	Skeleton   Mage 	
 //*********************
@@ -109,4 +118,9 @@ INSTANCE SkeletonMage_DienerDesBoesen_02_01		(Mst_Default_Skeleton_Mage)
 INSTANCE SkeletonMage_DienerDesBoesen_02_02		(Mst_Default_Skeleton_Mage)
 {
  	B_SetVisuals_Skeleton_Mage();
+};
+
+INSTANCE Gespenst		(Mst_Default_Skeleton_Mage)
+{
+ 	B_SetVisuals_Gespenst();
 };
