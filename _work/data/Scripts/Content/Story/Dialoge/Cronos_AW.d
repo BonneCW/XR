@@ -490,6 +490,8 @@ FUNC VOID Info_Mod_Cronos_AW_TiereZaehmen_Info()
 	AI_Output(hero, self, "Info_Mod_Cronos_AW_TiereZaehmen_15_06"); //Was benötigst du?
 	AI_Output(self, hero, "Info_Mod_Cronos_AW_TiereZaehmen_04_07"); //Hmm, es könnte eigentlich schon reichen, wenn du mir zwei Stück rohes Ziegenfleisch und ein Ziegenfell besorgst.
 	AI_Output(self, hero, "Info_Mod_Cronos_AW_TiereZaehmen_04_08"); //Hier in den Bergen habe ich irgendwo Wildziegen blöken hören ...
+
+	Wld_InsertNpc	(Wild_Ziege,	"FP_ITEM_ENTRANCE_06");
 };
 
 INSTANCE Info_Mod_Cronos_Pickpocket (C_INFO)

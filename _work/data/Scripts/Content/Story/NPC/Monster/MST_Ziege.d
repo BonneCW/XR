@@ -70,6 +70,13 @@ func void B_SetVisuals_CanyonZiege()
 	Mdl_SetVisualBody		(self,	"Ziege_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
+func void B_SetVisuals_SchneeZiege()
+{
+	Mdl_SetVisual			(self,	"Ziege.mds");
+	//								Body-Mesh			Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Ziege_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
+
 
 //***************
 //	Sheep
@@ -112,6 +119,96 @@ INSTANCE Canyon_Ziege_Euter	(Mst_Default_Ziege)
 INSTANCE Canyon_Ziege_Leitbock	(Mst_Default_Ziege)
 {
 	B_SetVisuals_CanyonZiege();
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_AllScheduler;
+	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
+	CreateInvItems (self, ItFo_MuttonRaw, 3);
+
+	attribute	[ATR_STRENGTH]		=	200;
+	attribute	[ATR_DEXTERITY]		=	15;
+	attribute	[ATR_HITPOINTS_MAX]	=	400;
+	attribute	[ATR_HITPOINTS]		=	400;
+
+	damagetype	=	DAM_EDGE|DAM_FLY;
+	damage[DAM_INDEX_FLY]	=	1;
+	damage[DAM_INDEX_EDGE]	=	attribute[ATR_STRENGTH];
+
+	Mdl_SetModelScale(self, 1.75, 1.75, 1.75);
+};
+
+INSTANCE Wild_Ziege	(Mst_Default_Ziege)
+{
+	B_SetVisuals_Ziege();
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_AllScheduler;
+	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
+	CreateInvItems (self, ItFo_MuttonRaw, 2);
+
+	Mdl_SetModelScale(self, 1.5, 1.5, 1.5);
+};
+
+INSTANCE Wild_Ziege_Euter	(Mst_Default_Ziege)
+{
+	name	=	"Wildziege mit fetten Eutern";
+	B_SetVisuals_Ziege();
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_AllScheduler;
+	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
+	CreateInvItems (self, ItFo_MuttonRaw, 2);
+	CreateInvItems (self, ItFo_Ziegenmilch_Bloody, 1);
+
+	Mdl_SetModelScale(self, 1.5, 1.5, 1.5);
+	Mdl_SetModelFatness	(self, 1.5);
+};
+
+INSTANCE Wild_Ziege_Leitbock	(Mst_Default_Ziege)
+{
+	B_SetVisuals_Ziege();
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_AllScheduler;
+	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
+	CreateInvItems (self, ItFo_MuttonRaw, 3);
+
+	attribute	[ATR_STRENGTH]		=	200;
+	attribute	[ATR_DEXTERITY]		=	15;
+	attribute	[ATR_HITPOINTS_MAX]	=	400;
+	attribute	[ATR_HITPOINTS]		=	400;
+
+	damagetype	=	DAM_EDGE|DAM_FLY;
+	damage[DAM_INDEX_FLY]	=	1;
+	damage[DAM_INDEX_EDGE]	=	attribute[ATR_STRENGTH];
+
+	Mdl_SetModelScale(self, 1.75, 1.75, 1.75);
+};
+
+INSTANCE Schnee_Ziege	(Mst_Default_Ziege)
+{
+	B_SetVisuals_SchneeZiege();
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_AllScheduler;
+	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
+	CreateInvItems (self, ItFo_MuttonRaw, 2);
+
+	Mdl_SetModelScale(self, 1.5, 1.5, 1.5);
+};
+
+INSTANCE Schnee_Ziege_Euter	(Mst_Default_Ziege)
+{
+	name	=	"Wildziege mit fetten Eutern";
+	B_SetVisuals_SchneeZiege();
+	Npc_SetToFistMode(self);
+	start_aistate				= ZS_MM_AllScheduler;
+	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
+	CreateInvItems (self, ItFo_MuttonRaw, 2);
+	CreateInvItems (self, ItFo_Ziegenmilch_Bloody, 1);
+
+	Mdl_SetModelScale(self, 1.5, 1.5, 1.5);
+	Mdl_SetModelFatness	(self, 1.5);
+};
+
+INSTANCE Schnee_Ziege_Leitbock	(Mst_Default_Ziege)
+{
+	B_SetVisuals_SchneeZiege();
 	Npc_SetToFistMode(self);
 	start_aistate				= ZS_MM_AllScheduler;
 	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
