@@ -597,7 +597,7 @@ INSTANCE ItWr_Rezept_Purpurmond		(C_Item)
 
 	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
 	material 			=	MAT_LEATHER;
-	on_state[0]			=   UseFolgsamkeitSnapper;
+	on_state[0]			=   UsePurpurmond;
 	scemeName			=	"MAPSEALED";
 	description			= 	"Rezept: Purpurmond";
 	
