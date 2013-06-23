@@ -150,6 +150,35 @@ INSTANCE ItSc_Poison (C_Item)
 	COUNT	[5]			=	value;
 };
 
+INSTANCE ItSc_ZiegeZaehmen (C_Item)
+{
+	name 				=	NAME_Spruchrolle;
+
+	mainflag 			=	ITEM_KAT_RUNE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	20;
+
+	visual				=	"itmi_darkpearl.3DS";
+	material			=	MAT_STONE;
+
+	spell				= 	SPL_ZiegeZaehmen;
+	
+
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_WEAKGLIMMER_RED";
+
+	description			=	"Ziege zähmen";
+	
+	TEXT	[1]			=	NAME_Manakosten;		
+	COUNT	[1]			=	SPL_Cost_scroll;
+	
+	
+	
+	TEXT	[5]			=	NAME_Value;					
+	COUNT	[5]			=	value;
+};
+
 INSTANCE ItSc_Telekinese (C_Item)
 {
 	name 				=	NAME_Spruchrolle;

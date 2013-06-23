@@ -756,8 +756,9 @@ const int SPL_Giftteppich		= 200;
 const int SPL_AuraFlammen		= 201;
 const int SPL_TeleportGDG		= 202;
 const int SPL_TeleportBeliarfestung	= 203;
+const int SPL_ZiegeZaehmen	= 204;
 
-const int MAX_SPELL					= 204;   // 59 (Gothic), 68 (Gothic2), 100 (G2Addon)
+const int MAX_SPELL					= 205;   // 59 (Gothic), 68 (Gothic2), 100 (G2Addon)
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1005,7 +1006,8 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"Giftteppich",
 	"AuraFlammen",
 	"Teleport",
-	"Teleport"
+	"Teleport",
+	"Zaehmen"
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1254,7 +1256,8 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"SUM",	// 200
 	"HEA",	//201
 	"HEA",	//202
-	"HEA"
+	"HEA",
+	"CON"
 };
 
 
@@ -1425,8 +1428,9 @@ const int SCROLL_Light			= 34;
 const int SCROLL_Shrink			= 35;
 const int SCROLL_HarmUndead		= 36;
 const int SCROLL_AuraFlammen		= 37;
+const int SCROLL_ZiegeZaehmen		= 38;
 
-const int MAX_SCROLLS			= 38;
+const int MAX_SCROLLS			= 39;
 
 var int PLAYER_TALENT_SCROLLS[MAX_SCROLLS];
 

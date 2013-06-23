@@ -347,6 +347,73 @@ INSTANCE spellFX_Control_BRIDGE	(CFx_Base_Proto)
 				emtrjeasevel	= 0.01;
 };
 
+INSTANCE spellFX_ZiegeZaehmen(CFx_Base_Proto)
+{
+		visName_S			=  "MFX_CONTROL_INIT";
+		vissize_s			= "1 1";
+		
+		emtrjmode_s 		= "FIXED";
+		emtrjoriginnode 	= "ZS_RIGHTHAND";
+		emtrjtargetnode 	= "BIP01 HEAD";
+		emtrjloopmode_s 	= "none";
+		emtrjeasefunc_s 	= "LINEAR";
+		emtrjdynupdatedelay = 0.;
+		//lightPresetname 	= "POISON";
+		//emselfrotvel_s 	= "0 0 50";
+		emTrjTargetRange 	= 0;
+		emTrjTargetElev  	= 0;
+		
+		emFXInvestTarget_S 	= "spellFX_ZiegeZaehmen_TARGET";	
+		emFXInvestOrigin_S	= "spellFX_ZiegeZaehmen_BRIDGE";
+		};
+
+		INSTANCE spellFX_ZiegeZaehmen_KEY_INVEST_1	(C_ParticleFXEmitKey)
+		{
+				visname_s	= "simpleglow.tga";
+				sfxid		= "MFX_CONTROL_STARTINVEST";
+				sfxisambient= 1;
+				
+		};
+		
+		INSTANCE spellFX_ZiegeZaehmen_KEY_CAST		(C_ParticleFXEmitKey)
+		{
+				pfx_ppsIsLoopingChg 	= 1;
+				emCreateFXID			= "CONTROL_CASTBLEND";
+				sfxid					= "MFX_CONTROL_CAST";
+				sfxisambient			= 1;
+};
+
+INSTANCE spellFX_ZiegeZaehmen_TARGET(CFx_Base_Proto)
+{
+		visname_S 			= "MFX_CONTROL_TARGET";
+		emtrjmode_s 		= "FIXED";
+		emTrjOriginNode 	= "BIP01 HEAD";
+		emTrjTargetRange	= 0;
+		emTrjTargetElev 	= 0;
+		sendAssessMagic		= 1;
+};
+
+INSTANCE spellFX_ZiegeZaehmen_BRIDGE	(CFx_Base_Proto)
+{
+		visname_S 			= "MFX_CONTROL_BRIDGE";
+		
+		emtrjmode_s 		= "TARGET LINE";
+		emTrjOriginNode 	= "BIP01 HEAD";
+		emtrjtargetnode 	= "BIP01 HEAD";
+		emTrjTargetRange	= 0;
+		emTrjTargetElev 	= 0;
+		emFXCreate_S		= "spellFX_ZiegeZaehmen_ORIGIN";
+		
+		sfxid				= "MFX_CONTROL_INVEST";
+		sfxisambient		= 1;
+		
+		};
+		
+		INSTANCE spellFX_ZiegeZaehmen_BRIDGE_KEY_INIT	(C_ParticleFXEmitKey)
+		{
+				emtrjeasevel	= 0.01;
+};
+
 instance spellFX_Teleport4(CFx_Base_Proto)
 {
 		visname_S 			= "MFX_Teleport_INIT";

@@ -549,7 +549,8 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"Giftteppich",
 	"Aura der Flammen",
 	"Teleport zur Burg",
-	"zur Beliarfestung"
+	"zur Beliarfestung",
+	"Ziege zähmen"
 };
 
 ////////////////////////////////////////////////////////////////////////////////

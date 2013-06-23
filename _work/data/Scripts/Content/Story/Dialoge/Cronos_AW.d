@@ -494,6 +494,75 @@ FUNC VOID Info_Mod_Cronos_AW_TiereZaehmen_Info()
 	Wld_InsertNpc	(Wild_Ziege,	"FP_ITEM_ENTRANCE_06");
 };
 
+INSTANCE Info_Mod_Cronos_AW_TiereZaehmen2 (C_INFO)
+{
+	npc		= Mod_9001_KDW_Cronos_AW;
+	nr		= 1;
+	condition	= Info_Mod_Cronos_AW_TiereZaehmen2_Condition;
+	information	= Info_Mod_Cronos_AW_TiereZaehmen2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich habe die Zutaten für die Spruchrolle.";
+};
+
+FUNC INT Info_Mod_Cronos_AW_TiereZaehmen2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Cronos_AW_TiereZaehmen))
+	&& (Npc_HasItems(hero, ItFo_MuttonRaw) >= 2)
+	&& (Npc_HasItems(hero, ItAt_ZiegenFur) >= 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Cronos_AW_TiereZaehmen2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Cronos_AW_TiereZaehmen2_15_00"); //Ich habe die Zutaten für die Spruchrolle.
+
+	Npc_RemoveInvItems	(hero, ItFo_MuttonRaw, 2);
+	Npc_RemoveInvItems	(hero, ItAt_ZiegenFur, 1);
+
+	B_ShowGivenThings	("2 Stück rohes Fleisch und Ziegenfell gegeben");
+
+	AI_Output(self, hero, "Info_Mod_Cronos_AW_TiereZaehmen2_04_01"); //Sehr gut. Komm morgen wieder, dann sollte die Herstellung abgeschlossen sein.
+
+	Mod_Cronos_ZiegenScroll = Wld_GetDay();
+};
+
+INSTANCE Info_Mod_Cronos_AW_TiereZaehmen3 (C_INFO)
+{
+	npc		= Mod_9001_KDW_Cronos_AW;
+	nr		= 1;
+	condition	= Info_Mod_Cronos_AW_TiereZaehmen3_Condition;
+	information	= Info_Mod_Cronos_AW_TiereZaehmen3_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Cronos_AW_TiereZaehmen3_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Cronos_AW_TiereZaehmen2))
+	&& (Wld_GetDay() > Mod_Cronos_ZiegenScroll)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Cronos_AW_TiereZaehmen3_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Cronos_AW_TiereZaehmen3_04_00"); //Gut, dass du kommst. Hier hast du die Spruchrolle.
+
+	B_GiveInvItems	(self, hero, ItSc_ZiegeZaehmen, 1);
+
+	AI_Output(self, hero, "Info_Mod_Cronos_AW_TiereZaehmen3_04_01"); //War einfacher, als gedacht die Zutaten mit dem Papier zu verbinden.
+
+	B_GivePlayerXP	(100);
+
+	B_LogEntry	(TOPIC_TalentScrolls, "Zutaten für die Spruchrolle ´ZIEGE ZÄHMEN´: 2 rohes Fleisch, 1 Ziegenfell");
+
+	PLAYER_TALENT_SCROLLS[SCROLL_ZIEGEZAEHMEN] = TRUE;
+};
+
 INSTANCE Info_Mod_Cronos_Pickpocket (C_INFO)
 {
 	npc		= Mod_9001_KDW_Cronos_AW;

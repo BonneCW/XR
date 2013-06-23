@@ -484,7 +484,8 @@ FUNC INT PC_Scrolls_Condition ()
 	|| (PLAYER_TALENT_SCROLLS[SCROLL_Light] == TRUE)
 	|| (PLAYER_TALENT_SCROLLS[SCROLL_HarmUndead] == TRUE)
 	|| (PLAYER_TALENT_SCROLLS[SCROLL_Zap] == TRUE)
-	|| (PLAYER_TALENT_SCROLLS[SCROLL_AuraFlammen] == TRUE))
+	|| (PLAYER_TALENT_SCROLLS[SCROLL_AuraFlammen] == TRUE)
+	|| (PLAYER_TALENT_SCROLLS[SCROLL_ZiegeZaehmen] == TRUE))
 	{
 		return TRUE;
 	};
@@ -498,6 +499,10 @@ FUNC VOID PC_Scrolls_Info()
 	if (PLAYER_TALENT_SCROLLS[SCROLL_SummonZombie] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Scrolls, "Zombie beschwören", PC_ItSc_SummonZombie);
+	};
+	if (PLAYER_TALENT_SCROLLS[SCROLL_ZiegeZaehmen] == TRUE)
+	{
+		Info_AddChoice 	  (PC_Scrolls, "Ziege zähmen", PC_ItSc_ZiegeZaehmen);
 	};
 	if (PLAYER_TALENT_SCROLLS[SCROLL_Zerfleischen] == TRUE)
 	{
@@ -655,6 +660,26 @@ FUNC VOID PC_Scrolls_BACK()
 };
 
 // Beliarzauber
+
+FUNC INT Geht_ZiegeZaehmen ()
+{
+	if (Npc_HasItems(hero, ItFo_MuttonRaw) >= 2)
+	&& (Npc_HasItems(hero, ItAt_ZiegenFur) >= 1)
+	&& (PLAYER_TALENT_SCROLLS[SCROLL_ZiegeZaehmen] == TRUE)
+	{
+		return TRUE;
+	}
+	else
+	{
+		return FALSE;
+	};
+};
+
+FUNC VOID Mach_ZiegeZaehmen ()
+{
+	Npc_RemoveInvItems  (hero, ItFo_MuttonRaw, 2);
+	Npc_RemoveInvItems	(hero, ItAt_ZiegenFur, 1);
+};
 
 FUNC INT Geht_SuckEnergy ()
 {
@@ -1926,6 +1951,29 @@ FUNC VOID Mach_Shrink ()
 };
 
 // Beliarzauber
+
+FUNC VOID PC_ItSc_ZiegeZaehmen ()
+{
+	if (Npc_HasItems(hero, ItWr_Paper) >= 1)
+	&& (Geht_ZiegeZaehmen())	
+	{
+		Mach_ZiegeZaehmen ();
+
+		Npc_RemoveInvItems  (hero, ItWr_Paper, 1);
+		
+		CreateInvItems 	    (hero, ItSc_ZiegeZaehmen, 1); 
+
+		Print (PRINT_RuneSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+	};
+	
+	CreateInvItems (self, ItMi_RuneBlank, 1);
+
+	B_ENDPRODUCTIONDIALOG ();
+};
 
 FUNC VOID PC_ItSc_SuckEnergy ()
 {
