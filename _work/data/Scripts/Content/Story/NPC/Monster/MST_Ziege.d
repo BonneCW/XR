@@ -147,20 +147,6 @@ INSTANCE Wild_Ziege	(Mst_Default_Ziege)
 	Mdl_SetModelScale(self, 1.5, 1.5, 1.5);
 };
 
-INSTANCE Wild_Ziege_Euter	(Mst_Default_Ziege)
-{
-	name	=	"Wildziege mit fetten Eutern";
-	B_SetVisuals_Ziege();
-	Npc_SetToFistMode(self);
-	start_aistate				= ZS_MM_AllScheduler;
-	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
-	CreateInvItems (self, ItFo_MuttonRaw, 2);
-	CreateInvItems (self, ItFo_Ziegenmilch_Bloody, 1);
-
-	Mdl_SetModelScale(self, 1.5, 1.5, 1.5);
-	Mdl_SetModelFatness	(self, 1.5);
-};
-
 INSTANCE Wild_Ziege_Leitbock	(Mst_Default_Ziege)
 {
 	B_SetVisuals_Ziege();
@@ -190,20 +176,6 @@ INSTANCE Schnee_Ziege	(Mst_Default_Ziege)
 	CreateInvItems (self, ItFo_MuttonRaw, 2);
 
 	Mdl_SetModelScale(self, 1.5, 1.5, 1.5);
-};
-
-INSTANCE Schnee_Ziege_Euter	(Mst_Default_Ziege)
-{
-	name	=	"Wildziege mit fetten Eutern";
-	B_SetVisuals_SchneeZiege();
-	Npc_SetToFistMode(self);
-	start_aistate				= ZS_MM_AllScheduler;
-	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
-	CreateInvItems (self, ItFo_MuttonRaw, 2);
-	CreateInvItems (self, ItFo_Ziegenmilch_Bloody, 1);
-
-	Mdl_SetModelScale(self, 1.5, 1.5, 1.5);
-	Mdl_SetModelFatness	(self, 1.5);
 };
 
 INSTANCE Schnee_Ziege_Leitbock	(Mst_Default_Ziege)
