@@ -6,7 +6,7 @@ instance Mod_1294_SLD_Lefty_MT (Npc_Default)
 	Npctype =					NPCTYPE_MAIN;	
 	guild =						GIL_mil;      
 	level =						8;
-	voice =						7;
+	voice =						24;
 	id =						1294;
 
 

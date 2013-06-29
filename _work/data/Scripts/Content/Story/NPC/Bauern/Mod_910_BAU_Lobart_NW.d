@@ -4,7 +4,7 @@ instance Mod_910_BAU_Lobart_NW (Npc_Default)
 	name 		= "Lobart";
 	guild 		= GIL_OUT;
 	id 			= 910;
-	voice 		= 5;
+	voice 		= 26;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

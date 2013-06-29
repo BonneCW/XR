@@ -26,7 +26,7 @@ FUNC VOID LobartAlwinScene()
 
 	if (Mod_LobartAlwinScene_Counter == 7)
 	{
-		AI_Output(Mod_910_BAU_Lobart_NW, NULL, "Info_Mod_LobartAlwinScene_05_01"); //(entrüstet) Der Kerl hat meine Schafe geschlachtet! Was fällt dem ein?!
+		AI_Output(Mod_910_BAU_Lobart_NW, NULL, "Info_Mod_LobartAlwinScene_26_01"); //(entrüstet) Der Kerl hat meine Schafe geschlachtet! Was fällt dem ein?!
 	};
 
 	if (Mod_LobartAlwinScene_Counter == 12)
@@ -43,7 +43,7 @@ FUNC VOID LobartAlwinScene()
 
 	if (Mod_LobartAlwinScene_Counter == 22)
 	{
-		AI_Output(Mod_910_BAU_Lobart_NW, NULL, "Info_Mod_LobartAlwinScene_03_04"); //Ich habe ihn niedergeschlagen! Oh, Innos! Lebt er noch?
+		AI_Output(Mod_910_BAU_Lobart_NW, NULL, "Info_Mod_LobartAlwinScene_26_04"); //Ich habe ihn niedergeschlagen! Oh, Innos! Lebt er noch?
 	};
 
 	if (Mod_LobartAlwinScene_Counter == 27)

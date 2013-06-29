@@ -20,16 +20,16 @@ FUNC INT Info_Mod_Skinner_Hi_Condition()
 FUNC VOID Info_Mod_Skinner_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Skinner_Hi_15_00"); //Hallo ...
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_08_01"); //(mürrisch) Warum weckst du mich? Siehst du nicht, dass ich mich gerade ausruhe?
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_24_01"); //(mürrisch) Warum weckst du mich? Siehst du nicht, dass ich mich gerade ausruhe?
 	AI_Output(hero, self, "Info_Mod_Skinner_Hi_15_02"); //Ich ...
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_08_03"); //Aber warte, du bist doch der Neue. Jetzt da du schon mal hier bist kann ich dir ein großartiges Angebot unterbreiten.
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_24_03"); //Aber warte, du bist doch der Neue. Jetzt, da du schon mal hier bist, kann ich dir ein großartiges Angebot unterbreiten.
 	AI_Output(hero, self, "Info_Mod_Skinner_Hi_15_04"); //Worum geht’s?
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_08_05"); //Du bist ja noch nicht lange dabei und willst sicher schnell im Lager aufsteigen, Ansehen gewinnen. Ich kann dir dabei helfen.
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_08_06"); //Dazu musst du nur ein paar Sachen meinen Geschäftspartnern vorbeibringen, dich von ihnen bezahlen lassen und mir Gold und Sonstiges was du von ihnen bekommst herbringen.
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_24_05"); //Du bist ja noch nicht lange dabei und willst sicher schnell im Lager aufsteigen, Ansehen gewinnen. Ich kann dir dabei helfen.
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_24_06"); //Dazu musst du nur ein paar Sachen meinen Geschäftspartnern vorbeibringen, dich von ihnen bezahlen lassen und mir Gold und Sonstiges, was du von ihnen bekommst, herbringen.
 	AI_Output(hero, self, "Info_Mod_Skinner_Hi_15_07"); //Was springt für mich dabei raus?
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_08_08"); //Was?! Ist es nicht schon Entlohnung genug, dass du mir…ähh, dem Lager helfen kannst?
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_08_09"); //Aber warte, da fällt mir etwas ein. Ich habe da noch einen mächtigen magischen Ring, der deine Stärke erheblich beeinflusst.
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_08_10"); //Den kriegst du dann noch zusätzlich zu dem ganzen Ruhm. Was sagst du?
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_24_08"); //Was?! Ist es nicht schon Entlohnung genug, dass du mir ... äh, dem Lager helfen kannst?
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_24_09"); //Aber warte, da fällt mir etwas ein. Ich habe da noch einen mächtigen magischen Ring, der deine Stärke erheblich beeinflusst.
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_24_10"); //Den kriegst du dann noch zusätzlich zu dem ganzen Ruhm. Was sagst du?
 
 	Info_ClearChoices	(Info_Mod_Skinner_Hi);
 
@@ -40,7 +40,7 @@ FUNC VOID Info_Mod_Skinner_Hi_Info()
 FUNC VOID Info_Mod_Skinner_Hi_B()
 {
 	AI_Output(hero, self, "Info_Mod_Skinner_Hi_B_15_00"); //Ich spiel doch nicht deinen Laufburschen.
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_B_08_01"); //(verärgert) Dann eben nicht. Und jetzt verpiss dich!
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_B_24_01"); //(verärgert) Dann eben nicht. Und jetzt verpiss dich!
 	
 	Info_ClearChoices	(Info_Mod_Skinner_Hi);
 
@@ -50,9 +50,9 @@ FUNC VOID Info_Mod_Skinner_Hi_B()
 FUNC VOID Info_Mod_Skinner_Hi_A()
 {
 	AI_Output(hero, self, "Info_Mod_Skinner_Hi_A_15_00"); //Ich mach's.
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_08_01"); //Na also, du weißt, was ein gutes Angebot ist.
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_08_02"); //Also, ich habe hier dieses Sumpfkraut. Habe ich mal einem Spinner abgenommen, der sich selbst Baal Netbek nannte, aber das tut nichts zur Sache.
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_08_03"); //Du wirst es jedenfalls meinen Kunden bringen.
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_24_01"); //Na also, du weißt, was ein gutes Angebot ist.
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_24_02"); //Also, ich habe hier dieses Sumpfkraut. Habe ich mal einem Spinner abgenommen, der sich selbst Baal Netbek nannte, aber das tut nichts zur Sache.
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_24_03"); //Du wirst es jedenfalls meinen Kunden bringen.
 
 	CreateInvItems	(hero, ItMi_Traumruf, 10);
 	CreateInvItems	(hero, ItMi_Addon_Joint_01, 7);
@@ -60,12 +60,12 @@ FUNC VOID Info_Mod_Skinner_Hi_A()
 
 	B_ShowGivenThings ("Sumpfkrautstengel erhalten");
 
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_08_04"); //Bei den Dämonenkriegern gibt es da Eduard. Der raucht massenweise Traumrufe weg. 4-8 Stück solltest du schon bei ihm wegbekommen. Pro Traumruf sind 80 Gold fällig.
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_08_05"); //Dann gibt es noch Andokai bei den Dämonenmagiern. Er raucht das Zeug, sagt er, um in Trance seinem Meister näher sein zu können.
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_08_06"); //Er nimmt dir auf jeden Fall paar Traumrufe und bestimmt noch einige schwarze Weise ab. Für jeden schwarzen Weisen sind 40 Goldstücke fällig und für jeden grünen Novizen 20.
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_08_07"); //Achja, mein Kumpel Edgor hat noch was gut bei mir. Ich denke mit 3 grünen Novizen sollte das abgegolten sein.
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_08_08"); //Den Rest verscherbelst du in der Stadt im unteren Viertel. Da gibt’s immer Abnehmer. Alles klar?
-	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_08_09"); //Ich erwarte dann mindestens 1200 Gold von dir. Den Rest kannst du behalten und bekommst dann noch die versprochene Belohnung bei mir.
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_24_04"); //Bei den Dämonenkriegern gibt es da Eduard. Der raucht massenweise Traumrufe weg. 4 bis 8 Stück solltest du schon bei ihm wegbekommen. Pro Traumruf sind 80 Gold fällig.
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_24_05"); //Dann gibt es noch Andokai bei den Dämonenmagiern. Er raucht das Zeug, sagt er, um in Trance seinem Meister näher sein zu können.
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_24_06"); //Er nimmt dir auf jeden Fall ein paar Traumrufe und bestimmt noch einige schwarze Weise ab. Für jeden schwarzen Weisen sind 40 Goldstücke fällig und für jeden grünen Novizen 20.
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_24_07"); //Ach ja, mein Kumpel Edgor hat noch was gut bei mir. Ich denke mit 3 grünen Novizen sollte das abgegolten sein.
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_24_08"); //Den Rest verscherbelst du in der Stadt im unteren Viertel. Da gibt’s immer Abnehmer. Alles klar?
+	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_24_09"); //Ich erwarte dann mindestens 1200 Gold von dir. Den Rest kannst du behalten und bekommst dann noch die versprochene Belohnung bei mir.
 	
 	Mod_SkinnerQuest = 1;
 
@@ -95,45 +95,45 @@ FUNC INT Info_Mod_Skinner_Laufbursche_Condition()
 
 FUNC VOID Info_Mod_Skinner_Laufbursche_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_00"); //Achja, fast hätte ich es noch vergessen. Ich habe da noch was schönes, was du Myxir vorbeibringen sollst. Er experimentiert gerade an irgendwelchen neuen Beschwörungszaubern.
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_01"); //Erst mal einige Skelettknochen ...
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_24_00"); //Ach ja, fast hätte ich es noch vergessen. Ich habe da noch was Schönes, was du Myxir vorbeibringen sollst. Er experimentiert gerade an irgendwelchen neuen Beschwörungszaubern.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_24_01"); //Erst mal einige Skelettknochen ...
 
 	B_GiveInvItems	(self, hero, ItAt_SkeletonBone, 20);
 
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche_15_02"); //Aha ...
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_03"); //... paar Goblinknochen ...
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_24_03"); //... ein paar Goblinknochen ...
 
 	B_GiveInvItems	(self, hero, ItAt_GoblinBone, 14);
 
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche_15_04"); //Schön ...
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_05"); //... Totenschädel ...
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_24_05"); //... Totenschädel ...
 
 	B_GiveInvItems	(self, hero, ItAt_SkeletonHead, 4);
 
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche_15_06"); //Was noch?
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_07"); //... zwei Köpfe ...
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_24_07"); //... zwei Köpfe ...
 
 	B_GiveInvItems	(self, hero, ItMi_Addon_Bloodwyn_Kopf, 2);
 
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche_15_08"); //Wie nett ...
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_09"); //Ach, und hier noch der ganze Rest.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_24_09"); //Ach, und hier noch der ganze Rest.
 
 	CreateInvItems	(hero, ItPo_Blood, 17);
 	CreateInvItems	(hero, ItFoMuttonZombie, 12);
 	CreateInvItems	(hero, ItAt_DemonHeart, 1);
 
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche_15_10"); //Woher ...
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_11"); //Frag besser nicht, willst du gar nicht wissen.
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_12"); //Du kriegst dann im Gegenzug je eine Beschwörungsspruchrolle für Wolf, Golem und Dämon von ihm.
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_13"); //Dafür kriege ich einen guten preis bei den Verwandlungsmagiern, die sich dafür interessieren, in wie weit ihre Verwandlungsmagie den unheiligen Beschwörungszaubern für Tiere ähnelt.
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_14"); //Soll mir recht sein, solange sie genug Gold haben. Achja, da wir schon dabei sind: Das kannst du auch gleich machen.
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_15"); //Kostet die Jungs 800 Gold und eine Spruchrolle Verwandlung Hase.
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_16"); //Das Geschäft machst du mit Albert, der draußen, links vom Eingang des verfallene Kloster über einen umgestürzten Baumstamm zu erreichen ist.
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_08_17"); //Jetzt mach dich aber auf den Weg. Das Zeug beginnt nämlich langsam zu riechen.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_24_11"); //Frag besser nicht, willst du gar nicht wissen.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_24_12"); //Du kriegst dann im Gegenzug je eine Beschwörungsspruchrolle für Wolf, Golem und Dämon von ihm.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_24_13"); //Dafür kriege ich einen guten Preis bei den Verwandlungsmagiern, die sich dafür interessieren, inwieweit ihre Verwandlungsmagie den unheiligen Beschwörungszaubern für Tiere ähnelt.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_24_14"); //Soll mir recht sein, solange sie genug Gold haben. Ach ja, da wir schon dabei sind: Das kannst du auch gleich machen.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_24_15"); //Kostet die Jungs 800 Gold und eine Verwandlung-Hase-Spruchrolle.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_24_16"); //Das Geschäft machst du mit Albert, der draußen, links vom Eingang des verfallenen Klosters über einen umgestürzten Baumstamm zu erreichen ist.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche_24_17"); //Jetzt mach dich aber auf den Weg. Das Zeug beginnt nämlich langsam zu riechen.
 
 	Log_CreateTopic	(TOPIC_MOD_BDT_SKINNER, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_BDT_SKINNER, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_BDT_SKINNER, "Na, schön, da habe ich jetzt einige Laufarbeit vor mir. Eduard kriegt Traumrufe für 80 Gold das Stück, Edgor bekommt drei grüne Novizen geschenkt, Andokai erhält für 80 Gold Traumrufe und für 40 Gold schwarze Weise. Den Rest soll ich in der Stadt loswerden, wobei 20 Gold für den grünen Novizen zu erwarten sind. Dann muss ich noch einen Haufen Aas dämonischer und untoter Geschöpfe Myxir überbringen und soll dafür drei Beschwörungsspruchrollen bekommen. Diese sollen dann wiederrum zurück ins Minental zu den Verwandlungsmagiern, wo ich von Albert, den ich außerhalb des Klosters links vom Eingang finden kann, dafür 800 Gold und eine Verwandlungsspruchrolle Hase erhalten soll. Skinner erwartet dann insgesamt 2000 Gold und die Hasenspruchrolle von mir. Dafür hat er mir einen magischen Ring in Aussicht gestellt, der die Stärke des Trägers 'erheblich beeinflussen' soll. Ich hoffe, dieser ist die ganze Mühe wert.");
+	B_LogEntry	(TOPIC_MOD_BDT_SKINNER, "Na schön, da habe ich jetzt einige Laufarbeit vor mir. Eduard kriegt Traumrufe für 80 Gold das Stück, Edgor bekommt drei grüne Novizen geschenkt, Andokai erhält für 80 Gold Traumrufe und für 40 Gold schwarze Weise. Den Rest soll ich in der Stadt loswerden, wobei 20 Gold für den grünen Novizen zu erwarten sind. Dann muss ich noch einen Haufen Aas dämonischer und untoter Geschöpfe Myxir überbringen und soll dafür drei Beschwörungsspruchrollen bekommen. Diese sollen dann wiederrum zurück ins Minental zu den Verwandlungsmagiern, wo ich von Albert, den ich außerhalb des Klosters links vom Eingang finden kann, dafür 800 Gold und eine Verwandlungsspruchrolle Hase erhalten soll. Skinner erwartet dann insgesamt 2000 Gold und die Hasenspruchrolle von mir. Dafür hat er mir einen magischen Ring in Aussicht gestellt, der die Stärke des Trägers 'erheblich beeinflussen' soll. Ich hoffe, dieser ist die ganze Mühe wert.");
 
 	B_StartOtherRoutine	(self, "START");
 };
@@ -169,20 +169,20 @@ FUNC INT Info_Mod_Skinner_Laufbursche2_Condition()
 FUNC VOID Info_Mod_Skinner_Laufbursche2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche2_15_00"); //Hier, ich habe alles abgeworfen, was du mir mitgegeben hast und auch alles dabei, was du dafür haben wolltest.
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche2_08_01"); //Ahh, gut, gib her.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche2_24_01"); //Ah, gut, gib her.
 	
 	Mod_SkinnerQuest = 2;
 
 	Info_ClearChoices	(Info_Mod_Skinner_Laufbursche2);
 
-	Info_AddChoice	(Info_Mod_Skinner_Laufbursche2, "Ich denke ich behalte das Gold und die Spruchrollen.", Info_Mod_Skinner_Laufbursche2_C);
+	Info_AddChoice	(Info_Mod_Skinner_Laufbursche2, "Ich denke, ich behalte das Gold und die Spruchrollen.", Info_Mod_Skinner_Laufbursche2_C);
 	Info_AddChoice	(Info_Mod_Skinner_Laufbursche2, "Was ist mit dem Ring?", Info_Mod_Skinner_Laufbursche2_B);
 	Info_AddChoice	(Info_Mod_Skinner_Laufbursche2, "Hier hast du das Gold und die Verwandlungsspruchrolle.", Info_Mod_Skinner_Laufbursche2_A);
 };
 
 FUNC VOID Info_Mod_Skinner_Laufbursche2_C()
 {
-	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche2_C_15_00"); //Ich denke ich behalte das Gold und die Spruchrollen.
+	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche2_C_15_00"); //Ich denke, ich behalte das Gold und die Spruchrollen.
 
 	Info_ClearChoices	(Info_Mod_Skinner_Laufbursche2);
 
@@ -196,7 +196,7 @@ FUNC VOID Info_Mod_Skinner_Laufbursche2_C()
 FUNC VOID Info_Mod_Skinner_Laufbursche2_B()
 {
 	AI_Output(hero, self, "Info_Mod_Skinner_Laufbursche2_B_15_00"); //Was ist mit dem Ring?
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche2_B_08_01"); //Ja, hier hast du den Ring und die Sachen nehme ich an mich.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche2_B_24_01"); //Ja, hier hast du den Ring und die Sachen nehme ich an mich.
 
 	CreateInvItems	(hero, ItRi_SkinnersRing, 1);
 
@@ -205,7 +205,7 @@ FUNC VOID Info_Mod_Skinner_Laufbursche2_B()
 
 	B_ShowGivenThings	("Verwitterter Ring erhalten und Spruchrolle und Gold gegeben");
 
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche2_B_08_02"); //Habe ich zuviel versprochen? (lacht hämisch) Aber bei deinem Botengang ist ja auch bestimmt genug für dich abgefallen.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche2_B_24_02"); //Habe ich zu viel versprochen? (lacht hämisch) Aber bei deinem Botengang ist ja auch bestimmt genug für dich abgefallen.
 
 	Info_ClearChoices	(Info_Mod_Skinner_Laufbursche2);
 
@@ -225,11 +225,11 @@ FUNC VOID Info_Mod_Skinner_Laufbursche2_A()
 
 	B_ShowGivenThings	("Spruchrolle und Gold gegeben");	
 
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche2_A_08_01"); //Sehr gut, hier hast du den Ring.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche2_A_24_01"); //Sehr gut, hier hast du den Ring.
 
 	B_GiveInvItems	(self, hero, ItRi_SkinnersRing, 1);
 
-	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche2_B_08_02"); //Habe ich zuviel versprochen? (lacht hämisch) Aber bei deinem Botengang ist ja auch bestimmt genug für dich abgefallen.
+	AI_Output(self, hero, "Info_Mod_Skinner_Laufbursche2_B_24_02"); //Habe ich zu viel versprochen? (lacht hämisch) Aber bei deinem Botengang ist ja auch bestimmt genug für dich abgefallen.
 
 	Info_ClearChoices	(Info_Mod_Skinner_Laufbursche2);
 
@@ -261,7 +261,7 @@ FUNC INT Info_Mod_Skinner_Orkjagd_Condition()
 FUNC VOID Info_Mod_Skinner_Orkjagd_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Skinner_Orkjagd_15_00"); //Es gibt was zu tun. Komm heute Nacht um Mitternacht vors Lager. Wir gehen auf Orkjagd.
-	AI_Output(self, hero, "Info_Mod_Skinner_Orkjagd_08_01"); //(mürrisch) Mir ist aber nicht danach Orks zu jagen. Außerdem habe ich noch was anderes zu tun.
+	AI_Output(self, hero, "Info_Mod_Skinner_Orkjagd_24_01"); //(mürrisch) Mir ist aber nicht danach Orks zu jagen. Außerdem habe ich noch was anderes zu tun.
 
 	AI_StopProcessInfos	(self);
 
@@ -292,7 +292,7 @@ FUNC INT Info_Mod_Skinner_Orkjagd2_Condition()
 FUNC VOID Info_Mod_Skinner_Orkjagd2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Skinner_Orkjagd2_15_00"); //Das war keine Bitte, sondern ein Befehl von Morgahard.
-	AI_Output(self, hero, "Info_Mod_Skinner_Orkjagd2_08_01"); //(mürrisch) Ahh, meinetwegen.
+	AI_Output(self, hero, "Info_Mod_Skinner_Orkjagd2_24_01"); //(mürrisch) Ah, meinetwegen.
 
 	AI_StopProcessInfos	(self);
 };
@@ -320,7 +320,7 @@ FUNC INT Info_Mod_Skinner_Orkjagd3_Condition()
 FUNC VOID Info_Mod_Skinner_Orkjagd3_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Skinner_Orkjagd3_15_00"); //(energisch) Skinner, aufstehen, mitkommen, jetzt!
-	AI_Output(self, hero, "Info_Mod_Skinner_Orkjagd3_08_01"); //Bahh, ich komme ja schon.
+	AI_Output(self, hero, "Info_Mod_Skinner_Orkjagd3_24_01"); //Bah, ich komme ja schon.
 
 	AI_StopProcessInfos	(self);
 
@@ -348,7 +348,7 @@ FUNC INT Info_Mod_Skinner_Orkjagd4_Condition()
 
 FUNC VOID Info_Mod_Skinner_Orkjagd4_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Skinner_Orkjagd4_08_00"); //Na lass uns endlich losgehen. Ich habe noch besseres zu tun.
+	AI_Output(self, hero, "Info_Mod_Skinner_Orkjagd4_24_00"); //Na, lass uns endlich losgehen. Ich habe noch Besseres zu tun.
 
 	AI_StopProcessInfos	(self);
 
@@ -398,7 +398,7 @@ FUNC INT Info_Mod_Skinner_Orkjagd5_Condition()
 
 FUNC VOID Info_Mod_Skinner_Orkjagd5_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Skinner_Orkjagd5_08_00"); //So jetzt aber leise.
+	AI_Output(self, hero, "Info_Mod_Skinner_Orkjagd5_24_00"); //So, jetzt aber leise.
 
 	AI_StopProcessInfos	(self);
 };
@@ -427,7 +427,7 @@ FUNC INT Info_Mod_Skinner_Orkjagd6_Condition()
 
 FUNC VOID Info_Mod_Skinner_Orkjagd6_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Skinner_Orkjagd6_08_00"); //So, ich gehe wieder zurück, das war genug Stress für heute.
+	AI_Output(self, hero, "Info_Mod_Skinner_Orkjagd6_24_00"); //So, ich gehe wieder zurück, das war genug Stress für heute.
 
 	AI_StopProcessInfos	(self);
 
@@ -475,7 +475,7 @@ FUNC VOID Info_Mod_Skinner_Lehrer_Info()
 {
 	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
 
-	AI_Output(self, hero, "Info_Mod_Skinner_Lehrer_08_01"); //Ich kann dir den Umgang mit Einhändern beibringen.
+	AI_Output(self, hero, "Info_Mod_Skinner_Lehrer_24_01"); //Ich kann dir den Umgang mit Einhändern beibringen.
 
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_BANDITEN, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_LEHRER_BANDITEN, "Skinner kann mich im Umgang mit Einhändern unterweisen.");

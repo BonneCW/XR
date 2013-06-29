@@ -10,37 +10,42 @@ INSTANCE Info_Mod_Lefty_Hi (C_INFO)
 
 FUNC INT Info_Mod_Lefty_Hi_Condition()
 {
-	if (hero.guild == GIL_MIL)
-	{
-		return 1;
-	};
+	return 1;
 };
 
 FUNC VOID Info_Mod_Lefty_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lefty_Hi_07_00"); //Hey, du musst neu im Lager sein.
-	AI_Output(hero, self, "Info_Mod_Lefty_Hi_15_01"); //In gewisser Weise schon ...
-	AI_Output(self, hero, "Info_Mod_Lefty_Hi_07_02"); //Wenn du es zu was bringen willst, musst du dich nützlich machen, zeigen, dass du was auf dem Kasten hast. Ich habe da schon eine Aufgabe für dich.
-	AI_Output(hero, self, "Info_Mod_Lefty_Hi_15_03"); //Ja, worum geht es?
-	AI_Output(self, hero, "Info_Mod_Lefty_Hi_07_04"); //Vor einiger Zeit kam so ein Typ zu uns ins Lager. Die Bauern haben den gegen uns aufgestachelt und er hat uns übel zugerichtet.
-	AI_Output(self, hero, "Info_Mod_Lefty_Hi_07_05"); //Der hat mich so am Kopf erwischt ... ich kann mich jetzt kaum noch erinnern, wie sein Gesicht genau aussah.
-	AI_Output(hero, self, "Info_Mod_Lefty_Hi_15_06"); //Soso, kommt mir irgendwie bekannt vor.
-	AI_Output(self, hero, "Info_Mod_Lefty_Hi_07_07"); //Hey, der Typ war auch ... ähh ... über zwei Meter groß, sage ich dir, genau. Voll der Bär. Gegen den sah ein Ork aus, wie ein Knabe ...
-	AI_Output(self, hero, "Info_Mod_Lefty_Hi_07_08"); //Ich habe zuletzt lange mit ihm gefochten, aber dann hat er mich doch noch erwischt.
-	AI_Output(hero, self, "Info_Mod_Lefty_Hi_15_09"); //(belächelnd) Über zwei Meter? Klingt ja Furcht einflößend.
-	AI_Output(self, hero, "Info_Mod_Lefty_Hi_07_10"); //Jedenfalls sind die Bauern seitdem sehr aufsässig. Jemand müsste ihnen mal wieder zeigen, wer das sagen hat.
-	AI_Output(self, hero, "Info_Mod_Lefty_Hi_07_11"); //Das wäre die Gelegenheit für dich zu zeigen, dass du austeilen kannst.
+	AI_Output(hero, self, "Info_Mod_Lefty_Hi_15_00"); //Du siehst ja ganz schön ramponiert aus.
+	AI_Output(self, hero, "Info_Mod_Lefty_Hi_24_01"); //(stöhnt) Erinner mich nicht doch daran.
+	AI_Output(hero, self, "Info_Mod_Lefty_Hi_15_02"); //Was ist denn passiert?
+	AI_Output(self, hero, "Info_Mod_Lefty_Hi_24_03"); //Vor einiger Zeit kam so ein Typ zu uns ins Lager. Die Bauern haben den gegen uns aufgestachelt und er hat uns übel zugerichtet.
+	AI_Output(self, hero, "Info_Mod_Lefty_Hi_24_04"); //Der hat mich so am Kopf erwischt ... ich kann mich jetzt kaum noch erinnern, wie sein Gesicht genau aussah.
+	AI_Output(hero, self, "Info_Mod_Lefty_Hi_15_05"); //So, so, kommt mir irgendwie bekannt vor.
+	AI_Output(self, hero, "Info_Mod_Lefty_Hi_24_06"); //Hey, der Typ war auch ... ähh ... über zwei Meter groß, sage ich dir, genau. Voll der Bär. Gegen den sah ein Ork aus wie ein Knabe ...
+	AI_Output(self, hero, "Info_Mod_Lefty_Hi_24_07"); //Ich habe lange ausgehalten, aber dann hat er mich doch noch erwischt.
+	AI_Output(hero, self, "Info_Mod_Lefty_Hi_15_08"); //(belächelnd) Über zwei Meter? Klingt ja furchteinflößend.
+	AI_Output(self, hero, "Info_Mod_Lefty_Hi_24_09"); //Glaubst mir wohl nicht, hä? Den hättste sehen sollen! Dich hätte der zum Frühstück geputzt!
 
-	Info_ClearChoices	(Info_Mod_Lefty_Hi);
+	if (hero.guild == GIL_MIL) {
+		AI_Output(self, hero, "Info_Mod_Lefty_Hi_24_10"); //Du bist wohl neu im Lager, oder?
+		AI_Output(hero, self, "Info_Mod_Lefty_Hi_15_11"); //In gewisser Weise schon ...
+		AI_Output(self, hero, "Info_Mod_Lefty_Hi_24_12"); //Wenn du es zu was bringen willst, musst du dich nützlich machen, zeigen, dass du was auf dem Kasten hast. Ich habe da schon eine Aufgabe für dich.
+		AI_Output(hero, self, "Info_Mod_Lefty_Hi_15_13"); //Ja, worum geht es?
+		AI_Output(self, hero, "Info_Mod_Lefty_Hi_24_14"); //Ich hab dir doch von diesem miesen Schläger erzählt, der über mich hergefallen ist.
+		AI_Output(self, hero, "Info_Mod_Lefty_Hi_24_15"); //Jedenfalls sind die Bauern sehr aufsässig, seitdem der hier war. Jemand müsste ihnen mal wieder zeigen, wer das Sagen hat.
+		AI_Output(self, hero, "Info_Mod_Lefty_Hi_24_16"); //Das wäre die Gelegenheit für dich zu zeigen, dass du austeilen kannst.
 
-	Info_AddChoice	(Info_Mod_Lefty_Hi, "Was, wehrlose Bauern? Da musst du dir echt jemand anderen suchen.", Info_Mod_Lefty_Hi_B);
-	Info_AddChoice	(Info_Mod_Lefty_Hi, "Klar, die paar Bauern haue ich im nu zusammen.", Info_Mod_Lefty_Hi_A);
+		Info_ClearChoices	(Info_Mod_Lefty_Hi);
+
+		Info_AddChoice	(Info_Mod_Lefty_Hi, "Was, wehrlose Bauern? Da musst du dir echt jemand anderen suchen.", Info_Mod_Lefty_Hi_B);
+		Info_AddChoice	(Info_Mod_Lefty_Hi, "Klar, die paar Bauern haue ich im Nu zusammen.", Info_Mod_Lefty_Hi_A);
+	};
 };
 
 FUNC VOID Info_Mod_Lefty_Hi_B()
 {
 	AI_Output(hero, self, "Info_Mod_Lefty_Hi_B_15_00"); //Was, wehrlose Bauern? Da musst du dir echt jemand anderen suchen.
-	AI_Output(self, hero, "Info_Mod_Lefty_Hi_B_07_01"); //Flasche. Dann muss das halt jemand anders übernehmen.
+	AI_Output(self, hero, "Info_Mod_Lefty_Hi_B_24_01"); //Flasche. Dann muss ich das halt wieder übernehmen.
 
 	Mod_LeftysBauern = 1;
 	
@@ -49,8 +54,8 @@ FUNC VOID Info_Mod_Lefty_Hi_B()
 
 FUNC VOID Info_Mod_Lefty_Hi_A()
 {
-	AI_Output(hero, self, "Info_Mod_Lefty_Hi_A_15_00"); //Klar, die paar Bauern haue ich im nu zusammen.
-	AI_Output(self, hero, "Info_Mod_Lefty_Hi_A_07_01"); //Sehr gut. Verkloppe mindestens fünf Bauern ... und diesen Horatio solltest du dir auch auf jeden Fall vornehmen. Der scheint so eine Art Anführer von denen zu sein.
+	AI_Output(hero, self, "Info_Mod_Lefty_Hi_A_15_00"); //Klar, die paar Bauern haue ich im Nu zusammen.
+	AI_Output(self, hero, "Info_Mod_Lefty_Hi_A_24_01"); //Sehr gut. Verkloppe mindestens fünf Bauern ... und diesen Horatio solltest du dir auch auf jeden Fall vornehmen. Der scheint so eine Art Anführer von denen zu sein.
 
 	Mod_LeftysBauern = 2;
 
@@ -81,8 +86,8 @@ FUNC INT Info_Mod_Lefty_BauernVerbatscht_Condition()
 
 FUNC VOID Info_Mod_Lefty_BauernVerbatscht_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lefty_BauernVerbatscht_07_00"); //Ha, sehr gut, das wird den Bauern zeigen, wer hier das Sagen hat. Geh gleich zum Reislord, er wird dich dafür belohnen.
-	AI_Output(self, hero, "Info_Mod_Lefty_BauernVerbatscht_07_01"); //Typen wie dich können wir hier im Lager gut gebrauchen.
+	AI_Output(self, hero, "Info_Mod_Lefty_BauernVerbatscht_24_00"); //Ha, sehr gut, das wird den Bauern zeigen, wer hier das Sagen hat. Geh gleich zum Reislord, er wird dich dafür belohnen.
+	AI_Output(self, hero, "Info_Mod_Lefty_BauernVerbatscht_24_01"); //Typen wie dich können wir hier im Lager gut gebrauchen.
 
 	B_LogEntry	(TOPIC_MOD_SLD_LEFTYBAUERN, "Lefty war zufrieden. Ich soll mir beim Reislord meine Belohnung holen.");
 
@@ -109,9 +114,9 @@ FUNC INT Info_Mod_Lefty_RufusWeg_Condition()
 
 FUNC VOID Info_Mod_Lefty_RufusWeg_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lefty_RufusWeg_07_00"); //Verdammt, dieser dumme Bauer Rufus hat die Kurve gekratzt. Der Reislord ist außer sich. So was bringt die anderen Bauern nur auf dumme Gedanken.
-	AI_Output(self, hero, "Info_Mod_Lefty_RufusWeg_07_01"); //Wer den Flüchtenden wieder einfangen würde, bekäme bestimmt eine gute Belohnung.
-	AI_Output(self, hero, "Info_Mod_Lefty_RufusWeg_07_02"); //(etwas stiller zu sich selbst) Obwohl der Reislord auch bestimmt nichts dagegen hätte, wenn man Rufus den Garaus machen würde.
+	AI_Output(self, hero, "Info_Mod_Lefty_RufusWeg_24_00"); //Verdammt, dieser dumme Bauer Rufus hat die Kurve gekratzt. Der Reislord ist außer sich. So was bringt die anderen Bauern nur auf dumme Gedanken.
+	AI_Output(self, hero, "Info_Mod_Lefty_RufusWeg_24_01"); //Wer den Flüchtenden wieder einfangen würde, bekäme bestimmt eine gute Belohnung.
+	AI_Output(self, hero, "Info_Mod_Lefty_RufusWeg_24_02"); //(etwas stiller zu sich selbst) Obwohl der Reislord auch bestimmt nichts dagegen hätte, wenn man Rufus den Garaus machen würde.
 
 	Log_CreateTopic	(TOPIC_MOD_SLD_RUFUS, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_SLD_RUFUS, LOG_RUNNING);
@@ -139,15 +144,15 @@ FUNC INT Info_Mod_Lefty_RufusDa_Condition()
 
 FUNC VOID Info_Mod_Lefty_RufusDa_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lefty_RufusDa_07_00"); //Du hast Rufus tatsächlich gefunden und zurückgebracht. Der kann jetzt was erleben ...
+	AI_Output(self, hero, "Info_Mod_Lefty_RufusDa_24_00"); //Du hast Rufus tatsächlich gefunden und zurückgebracht. Der kann jetzt was erleben ...
 
 	if (hero.guild == GIL_MIL)
 	{
-		AI_Output(self, hero, "Info_Mod_Lefty_RufusDa_07_01"); //Egal, damit hast du wieder einige Punkte gesammelt. Geh gleich zum Reislord.
+		AI_Output(self, hero, "Info_Mod_Lefty_RufusDa_24_01"); //Egal, damit hast du wieder einige Punkte gesammelt. Geh gleich zum Reislord.
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Lefty_RufusDa_07_02"); //Egal, damit hast du was gut. Geh gleich zum Reislord.
+		AI_Output(self, hero, "Info_Mod_Lefty_RufusDa_24_02"); //Egal, damit hast du was gut. Geh gleich zum Reislord.
 	};
 
 	B_LogEntry	(TOPIC_MOD_SLD_RUFUS, "Ich soll jetzt zum Reislord gehen.");
@@ -176,11 +181,11 @@ FUNC INT Info_Mod_Lefty_RufusTot_Condition()
 
 FUNC VOID Info_Mod_Lefty_RufusTot_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lefty_RufusTot_07_00"); //Du warst doch außerhalb des Lagers. Hast du zufällig Rufus gesehen?
+	AI_Output(self, hero, "Info_Mod_Lefty_RufusTot_24_00"); //Du warst doch außerhalb des Lagers. Hast du zufällig Rufus gesehen?
 	AI_Output(hero, self, "Info_Mod_Lefty_RufusTot_15_01"); //Ja. In seinem Blut.
-	AI_Output(self, hero, "Info_Mod_Lefty_RufusTot_07_02"); //Du willst doch nicht damit sagen ...
+	AI_Output(self, hero, "Info_Mod_Lefty_RufusTot_24_02"); //Du willst doch nicht damit sagen ...
 	AI_Output(hero, self, "Info_Mod_Lefty_RufusTot_15_03"); //Doch.
-	AI_Output(self, hero, "Info_Mod_Lefty_RufusTot_07_04"); //Geh zum Reislord. Das wird ihn interessieren.
+	AI_Output(self, hero, "Info_Mod_Lefty_RufusTot_24_04"); //Geh zum Reislord. Das wird ihn interessieren.
 
 	B_LogEntry	(TOPIC_MOD_SLD_RUFUS, "Ich soll zum Reislord und ihm von Rufus’ Schicksal berichten.");
 };
@@ -206,9 +211,9 @@ FUNC INT Info_Mod_Lefty_OJGBoss_Condition()
 
 FUNC VOID Info_Mod_Lefty_OJGBoss_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lefty_OJGBoss_07_00"); //(etwas ehrfürchtig) Hey, ähhm, du bist doch der neue Anführer der Orkjäger.
+	AI_Output(self, hero, "Info_Mod_Lefty_OJGBoss_24_00"); //(etwas ehrfürchtig) He, ähhm, du bist doch der neue Anführer der Orkjäger.
 	AI_Output(hero, self, "Info_Mod_Lefty_OJGBoss_15_01"); //Ja, und weiter?
-	AI_Output(self, hero, "Info_Mod_Lefty_OJGBoss_07_02"); //(verunsichert) Nichts, nichts ... nur ... der Reislord hat ein Geschenk für dich ... um dir, ähh, unseren Respekt zu zollen.
+	AI_Output(self, hero, "Info_Mod_Lefty_OJGBoss_24_02"); //(verunsichert) Nichts, nichts ... nur ... der Reislord hat ein Geschenk für dich ... um dir, ähh, unseren Respekt zu zollen.
 };
 
 INSTANCE Info_Mod_Lefty_Pickpocket (C_INFO)

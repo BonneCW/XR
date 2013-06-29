@@ -4,7 +4,7 @@ instance Mod_7180_BDT_Skinner_OC (Npc_Default)
 	name 		= "Skinner";
 	guild 		= GIL_OUT;
 	id 			= 7180;
-	voice 		= 8;
+	voice 		= 24;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

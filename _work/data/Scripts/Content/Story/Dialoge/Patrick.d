@@ -74,7 +74,7 @@ FUNC INT Info_Mod_Patrick_SindAlleDa_Condition()
 
 FUNC VOID Info_Mod_Patrick_SindAlleDa_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Patrick_SindAlleDa_07_00"); //Ausgezeichnet, Rath und Blade hast du schon mal dazu bewegt zum Treining zu erscheinen. Jetzt fehlt nur noch Shrike.
+	AI_Output(self, hero, "Info_Mod_Patrick_SindAlleDa_07_00"); //Ausgezeichnet, Rath und Blade hast du schon mal dazu bewegt zum Training zu erscheinen. Jetzt fehlt nur noch Shrike.
 	AI_Output(hero, self, "Info_Mod_Patrick_SindAlleDa_15_01"); //Was, aber ich habe ihn doch losgeschickt ...
 	AI_Output(self, hero, "Info_Mod_Patrick_SindAlleDa_07_02"); //Achso, nun, bei ihm dauert das meistens etwas länger, da er noch häufig einen Umweg in die Kneipe macht. Also, geh hin und mach ihm Beine.
 

@@ -44,6 +44,6 @@ instance Mod_7797_PSINOV_Novize_OT (Npc_Default)
 
 FUNC VOID Rtn_start_7797 ()
 {
-	TA_Stand_WP 	(08,00,20,00,"TOT");
-	TA_Stand_WP 	(20,00,08,00,"TOT");
+	TA_Stand_WP 	(08,00,20,00,"TPL_386");
+	TA_Stand_WP 	(20,00,08,00,"TPL_386");
 };

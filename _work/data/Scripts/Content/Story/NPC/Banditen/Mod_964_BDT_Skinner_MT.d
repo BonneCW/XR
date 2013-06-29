@@ -4,7 +4,7 @@ instance Mod_964_BDT_Skinner_MT (Npc_Default)
 	name 		= "Skinner";
 	guild 		= GIL_OUT;
 	id 			= 964;
-	voice 		= 8;
+	voice 		= 24;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	
