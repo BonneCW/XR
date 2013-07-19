@@ -606,7 +606,7 @@ FUNC VOID Goetterbonus()
 
 				Mod_GottHP = 2000/hero.attribute[ATR_HITPOINTS_MAX];
 				Mod_GottProtection = 20;
-				Mod_GottAdanos = 100;
+				Mod_GottAdanos = 20;
 			}
 			else if (Mod_Gottstatus == 6)
 			{
@@ -628,7 +628,7 @@ FUNC VOID Goetterbonus()
 
 				Mod_GottHP = 1500/hero.attribute[ATR_HITPOINTS_MAX];
 				Mod_GottProtection = 15;
-				Mod_GottAdanos = 50;
+				Mod_GottAdanos = 15;
 			}
 			else if (Mod_Gottstatus == 7)
 			{
@@ -650,7 +650,7 @@ FUNC VOID Goetterbonus()
 
 				Mod_GottHP = 1000/hero.attribute[ATR_HITPOINTS_MAX];
 				Mod_GottProtection = 10;
-				Mod_GottAdanos = 25;
+				Mod_GottAdanos = 10;
 			}
 			else if (Mod_Gottstatus == 8)
 			{
@@ -672,7 +672,7 @@ FUNC VOID Goetterbonus()
 
 				Mod_GottHP = 500/hero.attribute[ATR_HITPOINTS_MAX];
 				Mod_GottProtection = 5;
-				Mod_GottAdanos = 10;
+				Mod_GottAdanos = 5;
 			};
 
 			hero.attribute[ATR_MANA_MAX] += Mod_GottMana;

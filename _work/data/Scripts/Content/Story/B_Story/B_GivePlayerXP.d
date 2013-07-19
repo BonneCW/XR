@@ -14,11 +14,9 @@ func void B_GivePlayerXP (var int add_xp)
 
 	// Bonus-EP für Adanosgläubige
 
-	add_xp +=  Mod_GottAdanos;
-
 	// Bonus-EXP berechnen
 
-	bonuspercent = 0;
+	bonuspercent = Mod_GottAdanos;
 
 	// +2% für Halskette der Ehre
 
