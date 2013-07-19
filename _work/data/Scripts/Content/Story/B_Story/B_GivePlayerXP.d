@@ -50,7 +50,7 @@ func void B_GivePlayerXP (var int add_xp)
 
 	// Bonus-EXP dazuzählen
 
-	add_xp += (bonuspercent*add_xp)/100;
+	add_xp += (bonuspercent * add_xp) / 100;
 
 	//----------------------------------------------------------------------------
 	hero.exp = hero.exp + add_xp;
@@ -84,26 +84,7 @@ func void B_GivePlayerXP (var int add_xp)
 
 			if (Mod_Schwierigkeit < 4)
 			{
-				if (hero.level <= 10)
-				{
-					hero.LP += 10;
-				}
-				else if (hero.level <= 20)
-				{
-					hero.LP += 8;
-				}
-				else if (hero.level <= 30)
-				{
-					hero.LP += 6;
-				}
-				else if (hero.level <= 40)
-				{
-					hero.LP += 4;
-				}
-				else
-				{
-					hero.LP += 2;
-				};
+				hero.LP += 10;
 		
 				if (Dummheit_Perk == TRUE)
 				{
