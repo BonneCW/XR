@@ -32,7 +32,8 @@ INSTANCE Info_Mod_Senyan_Edgor (C_INFO)
 FUNC INT Info_Mod_Senyan_Edgor_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Senyan_Hi))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Edgor_Gold))
+	&& ((Npc_KnowsInfo(hero, Info_Mod_Edgor_Gold))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Edgor_Raeuber)))
 	{
 		return 1;
 	};
