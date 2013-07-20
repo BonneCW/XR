@@ -387,7 +387,7 @@ INSTANCE Info_Mod_Lobart_Randolph (C_INFO)
 
 FUNC INT Info_Mod_Lobart_Randolph_Condition()
 {
-	if (Mod_Randolph_Started == 11)
+	if (Mod_Randolph_Started >= 11)
 	{
 		return 1;
 	};
