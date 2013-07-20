@@ -169,6 +169,8 @@ func void _Cursor_GetVal() {
         c.wheel = 0;
     };
 
+	PrintDebug	(ConcatStrings("Cursor_Hndl: ", IntToString(Cursor_Hndl)));
+
     if(!Hlp_IsValidHandle(Cursor_Hndl)) { return; };
 
     View_MoveToPxl(Cursor_Hndl, Cursor_X, Cursor_Y);

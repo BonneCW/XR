@@ -22,6 +22,8 @@ func void INIT_GLOBAL()
 	// wird fuer jede Welt aufgerufen (vor INIT_<LevelName>)
 	Game_InitGerman();
 
+	Cursor_Hndl = 0;
+
 	var int divetime;
 	divetime = 30000;
 
