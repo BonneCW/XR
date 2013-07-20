@@ -137,6 +137,10 @@ FUNC VOID Info_Mod_Thorus_Diebe_Info()
 
 	B_StartOtherRoutine	(Mod_943_GRD_Bloodwyn_MT, "KNAST");
 	B_StartOtherRoutine	(Mod_1110_GRD_Cutter_MT, "KNAST");
+
+	AI_UnequipWeapons	(Mod_943_GRD_Bloodwyn_MT);
+
+	Npc_RemoveInvItems	(Mod_943_GRD_Bloodwyn_MT, ItMw_Sturmbringer, 1);
 };
 
 INSTANCE Info_Mod_Thorus_Zettel (C_INFO)
