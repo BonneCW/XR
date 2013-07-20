@@ -118,6 +118,37 @@ FUNC VOID Info_Mod_Nefarius_AW_Fokussuche2_A()
 	Info_Mod_Nefarius_AW_Fokussuche2_C();
 };
 
+INSTANCE Info_Mod_Nefarius_AW_PrismaGeladen (C_INFO)
+{
+	npc		= Mod_9002_KDW_Nefarius_AW;
+	nr		= 1;
+	condition	= Info_Mod_Nefarius_AW_PrismaGeladen_Condition;
+	information	= Info_Mod_Nefarius_AW_PrismaGeladen_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich habe das Prisma mit einem Zauberspruch geladen.";
+};
+
+FUNC INT Info_Mod_Nefarius_AW_PrismaGeladen_Condition()
+{
+	if (Mod_Prisma_Start)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Nefarius_AW_PrismaGeladen_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Nefarius_AW_PrismaGeladen_15_00"); //Ich habe das Prisma mit einem Zauberspruch geladen.
+	AI_Output(self, hero, "Info_Mod_Nefarius_AW_PrismaGeladen_05_01"); //Es hat funktioniert! Bravo! (Pause) Das war noch nicht alles, was du sagen wolltest?
+	AI_Output(hero, self, "Info_Mod_Nefarius_AW_PrismaGeladen_15_02"); //Ich weiß jetzt, was die mysteriöse Zeichnung an der Wand darstellen sollte.
+	AI_Output(hero, self, "Info_Mod_Nefarius_AW_PrismaGeladen_15_03"); //Der Zauber, der im Prisma verschwand ... ich habe das Gefühl, er hat mir einen Teil meiner Lebenskraft geraubt.
+	AI_Output(hero, self, "Info_Mod_Nefarius_AW_PrismaGeladen_15_04"); //Seitdem fühle ich mich kränklich und schwach.
+	AI_Output(self, hero, "Info_Mod_Nefarius_AW_PrismaGeladen_05_05"); //Das ist äußerst bedenklich, zumal du das Prisma noch mit weiteren Sprüchen laden musst, damit es seine volle Wirkung entfaltet.
+	AI_Output(self, hero, "Info_Mod_Nefarius_AW_PrismaGeladen_05_06"); //Sei bloß vorsichtig damit! Wir können nur hoffen, dass die Energie, die dir geraubt wurde, zusammen mit den Zaubersprüchen wieder freigelassen wird.
+	AI_Output(hero, self, "Info_Mod_Nefarius_AW_PrismaGeladen_15_07"); //Ansonsten bleibt auch nur noch meine fleischliche Hülle übrig...
+};
+
 INSTANCE Info_Mod_Nefarius_AW_Runen (C_INFO)
 {
 	npc		= Mod_9002_KDW_Nefarius_AW;

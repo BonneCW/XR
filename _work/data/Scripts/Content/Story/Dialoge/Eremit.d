@@ -469,6 +469,7 @@ FUNC INT Info_Mod_Eremit_Prisma8_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Eremit_Prisma6))
 	&& (Npc_HasItems(hero, ItSc_BeliarsRage) == 0)
 	&& (Mod_PrismaRitual_Counter < 80)
+	&& (Npc_RefuseTalk(self) == FALSE)
 	{
 		return 1;
 	};
@@ -476,15 +477,58 @@ FUNC INT Info_Mod_Eremit_Prisma8_Condition()
 
 FUNC VOID Info_Mod_Eremit_Prisma8_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Eremit_Prisma8_04_00"); //Du hast ja gar keine Zauber mehr. Hier, nimm neue.
+	if (!Mod_PrismaZauber_Eremit) {
+		AI_Output(self, hero, "Info_Mod_Eremit_Prisma8_04_00"); //Du hast ja gar keine Zauber mehr. Hier, nimm neue.
 
-	B_GiveInvItems	(self, hero, ItSc_BeliarsRage, 6);
+		B_GiveInvItems	(self, hero, ItSc_BeliarsRage, 6);
 
-	AI_StopProcessInfos	(self);
+		AI_StopProcessInfos	(self);
+
+		Mod_PrismaZauber_Eremit = TRUE;
+	} else {
+		AI_Output(self, hero, "Info_Mod_Eremit_Prisma8_04_01"); //Puh, wir sind ja immer noch nicht fertig. Wir haben zwar noch ein paar Zauber, aber bei deinem Verschleiß bald nicht mehr.
+		AI_Output(self, hero, "Info_Mod_Eremit_Prisma8_04_02"); //(ernst) Oder versuchst du etwa, uns zu hintergehen?
+		AI_Output(self, hero, "Info_Mod_Eremit_Prisma8_04_03"); //Wenn du mehr Zauber willst, verlangen wir von nun an 300 Goldstücke dafür.
+
+		Info_ClearChoices	(Info_Mod_Eremit_Prisma8);
+
+		Info_AddChoice	(Info_Mod_Eremit_Prisma8, "So viel Gold habe ich noch nicht.", Info_Mod_Eremit_Prisma8_B);
+
+		if (Npc_HasItems(hero, ItMi_Gold) >= 300) {
+			Info_AddChoice	(Info_Mod_Eremit_Prisma8, "Na gut, gib mir die Zauber.", Info_Mod_Eremit_Prisma8_A);
+		};
+	};
 
 	Mod_PrismaRitual_ZuLangsam = FALSE;
 
 	Mod_PrismaRitual_Counter = 0;
+};
+
+FUNC VOID Info_Mod_Eremit_Prisma8_A()
+{
+	AI_Output(hero, self, "Info_Mod_Eremit_Prisma8_A_15_00"); //Na gut, gib mir die Zauber.
+
+	B_GiveInvItems	(hero, self, ItMi_Gold, 300);
+
+	AI_Output(self, hero, "DEFAULT"); //
+
+	B_GiveInvItems	(self, hero, ItSc_BeliarsRage, 6);
+
+	Info_ClearChoices	(Info_Mod_Eremit_Prisma8);
+
+	AI_StopProcessInfos	(self);
+};
+
+FUNC VOID Info_Mod_Eremit_Prisma8_B()
+{
+	AI_Output(hero, self, "Info_Mod_Eremit_Prisma8_B_15_00"); //So viel Gold habe ich noch nicht.
+	AI_Output(self, hero, "DEFAULT"); //
+
+	Info_ClearChoices	(Info_Mod_Eremit_Prisma8);
+
+	AI_StopProcessInfos	(self);
+
+	Npc_SetRefuseTalk	(self, 30);
 };
 
 INSTANCE Info_Mod_Eremit_Prisma9 (C_INFO)
