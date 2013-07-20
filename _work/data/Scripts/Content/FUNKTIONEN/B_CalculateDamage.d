@@ -343,9 +343,9 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	}
 	else
 	{
-		if (damage < 0)
-		&& (armor != -1)
-		{
+		if (taeterMonster && damage < (taeter.attribute[ATR_STRENGTH] * 15) / 100 && armor != -1) {
+			damage = (taeter.attribute[ATR_STRENGTH] * 15) / 100;
+		} else if (damage < 0 && armor != -1) {
 			damage = 0;
 		};
 	};
