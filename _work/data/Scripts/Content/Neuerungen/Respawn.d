@@ -98,6 +98,10 @@ func int MeetsRespawnCondition(var c_npc slf) {
 		return FALSE;
 	};
 
+	if (!Mod_Respawn) {
+		return FALSE;
+	};
+
 	if (CurrentLevel == ORCTEMPEL_ZEN)
 	|| (CurrentLevel == BERGWELT_ZEN)
 	|| (CurrentLevel == WOLKENWELT_ZEN)

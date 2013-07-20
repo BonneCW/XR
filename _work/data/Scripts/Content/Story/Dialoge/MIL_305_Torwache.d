@@ -48,7 +48,6 @@ FUNC VOID DIA_Mil_305_Torwache_PassAsCitizen_Info()
 	self.aivar[AIV_PASSGATE] = TRUE;
 	Mil_305_schonmalreingelassen = TRUE;
 	
-	//B_CheckLog();
 	AI_StopProcessInfos (self);
 };
 
@@ -276,85 +275,6 @@ func void DIA_Mil_305_Torwache_Ausnahme_Info ()
 	AI_Output (self, other, "DIA_Mil_305_Torwache_Ausnahme_03_02"); //Wenn wir diese Regeln brechen, handeln wir ungerecht gegen alle, die sie einhalten.
 };	
 
-
-// ************************************************************
-// 						Pass as MILIZ
-// ************************************************************
-
-INSTANCE DIA_Mil_305_Torwache_PassAsMil (C_INFO)
-{
-	npc			= Mil_305_Torwache;
-	nr			= 3;
-	condition	= DIA_Mil_305_Torwache_PassAsMil_Condition;
-	information	= DIA_Mil_305_Torwache_PassAsMil_Info;
-	permanent 	= TRUE; 
-	description	= "Ich gehöre zur Miliz - lass mich rein!";
-};                       
-
-FUNC INT DIA_Mil_305_Torwache_PassAsMil_Condition()
-{	
-	if ((Mod_Gilde == 1)
-	|| (Mod_Gilde == 2)
-	|| (Mod_Gilde == 3))
-	&& (Mil_305_schonmalreingelassen == FALSE)
-	&& (B_GetGreatestPetzCrime(self) < CRIME_ATTACK)
-	{
-		return TRUE;
-	};
-};
-
-FUNC VOID DIA_Mil_305_Torwache_PassAsMil_Info()
-{
-	AI_Output (other, self,"DIA_Mil_305_Torwache_PassAsMil_15_00"); //Ich gehöre zur Miliz - lass mich rein!
-	AI_Output (self, other,"DIA_Mil_305_Torwache_PassAsMil_03_01"); //Andre hat dich also aufgenommen? Dann kannst du ja nicht so'n schlechter Kerl sein!
-	AI_Output (self, other,"DIA_Mil_305_Torwache_PassAsMil_03_02"); //Du gehörst ab jetzt zu den Beschützern der Stadt! Also sei schön freundlich zu den Bürgern!
-	
-	self.aivar[AIV_PASSGATE] = TRUE;
-	Mil_305_schonmalreingelassen = TRUE;
-	//B_CheckLog();
-	AI_StopProcessInfos	(self);
-};
-
-// ************************************************************
-// 						Pass as MAGE
-// ************************************************************
-
-INSTANCE DIA_Mil_305_Torwache_PassAsMage (C_INFO)
-{
-	npc			= Mil_305_Torwache;
-	nr			= 3;
-	condition	= DIA_Mil_305_Torwache_PassAsMage_Condition;
-	information	= DIA_Mil_305_Torwache_PassAsMage_Info;
-	permanent 	= TRUE; 
-	description	= "Du wagst es, dich einem Vertreter Innos' in den Weg zu stellen?!";
-};                       
-
-FUNC INT DIA_Mil_305_Torwache_PassAsMage_Condition()
-{	
-	if (other.guild == GIL_VLK)
-	&& (Mil_305_schonmalreingelassen == FALSE)
-	&& (B_GetGreatestPetzCrime(self) < CRIME_ATTACK)
-	{
-		return TRUE;
-	};
-};
-
-FUNC VOID DIA_Mil_305_Torwache_PassAsMage_Info()
-{
-	AI_Output (other, self,"DIA_Mil_305_Torwache_PassAsMage_15_00"); //Du wagst es, dich einem Vertreter Innos' in den Weg zu stellen?!
-	AI_Output (self, other,"DIA_Mil_305_Torwache_PassAsMage_03_01"); //Ähm ... nein! Natürlich nicht! Der Zugang steht den Erwählten Innos' frei!
-	AI_Output (other, self,"DIA_Mil_305_Torwache_PassAsMage_15_02"); //Bete zu Innos für diesen Frevel!
-	AI_Output (self, other,"DIA_Mil_305_Torwache_PassAsMage_03_03"); //Ja, Erwählter!
-	
-	self.aivar[AIV_PASSGATE] = TRUE;
-	Mil_305_schonmalreingelassen = TRUE;
-	//B_CheckLog();
-	AI_StopProcessInfos	(self);
-};
-
-// ************************************************************
-// 			  				   PERM 
-// ************************************************************
 INSTANCE DIA_Mil_305_Torwache_PERM (C_INFO)
 {
 	npc			= Mil_305_Torwache;
