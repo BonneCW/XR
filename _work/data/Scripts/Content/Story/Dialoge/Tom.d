@@ -24,6 +24,7 @@ FUNC INT Info_Mod_Tom_Hi_Condition()
 	}
 	else if (Mod_Gilde > 0)
 	&& (Mod_DidCrime)
+	&& (Kapitel >= 2)
 	{
 		return 1;
 	};

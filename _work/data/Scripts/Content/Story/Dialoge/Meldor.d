@@ -37,6 +37,7 @@ FUNC INT Info_Mod_Meldor_Hilfe_Condition()
 	&& (Wld_GetDay() > 1)
 	&& (hero.guild != GIL_PAL)
 	&& (Mod_Gilde > 0)
+	&& (Kapitel >= 2)
 	{
 		return 1;
 	};

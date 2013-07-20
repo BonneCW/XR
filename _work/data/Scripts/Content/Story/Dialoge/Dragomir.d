@@ -254,7 +254,7 @@ FUNC INT Info_Mod_Dragomir_ToDoChapter1_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Dragomir_Jagdgebiete))
 	&& (Jäger_Dabei == TRUE)
-	&& (Kapitel == 1)
+	&& (Kapitel == 2)
 	{
 		return 1;
 	};
@@ -707,6 +707,7 @@ FUNC INT Info_Mod_Dragomir_Mitmachen_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Dragomir_WhoAreYou))
 	&& (Mod_Gilde > 0)
+	&& (Kapitel >= 2)
 	{
 		return 1;
 	};

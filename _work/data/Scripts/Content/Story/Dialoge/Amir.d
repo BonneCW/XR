@@ -15,6 +15,7 @@ FUNC INT Info_Mod_Amir_Hi_Condition()
 	&& (Mod_DidCrime)
 	&& (hero.guild != GIL_PAL)
 	&& (Wld_IsTime(22,00,08,00))
+	&& (Kapitel >= 2)
 	{
 		return 1;
 	};
