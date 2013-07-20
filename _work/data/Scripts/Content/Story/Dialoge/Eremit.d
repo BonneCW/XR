@@ -303,7 +303,7 @@ FUNC VOID Info_Mod_Eremit_Prisma3_Info()
 	AI_Output(self, hero, "Info_Mod_Eremit_Prisma3_04_16"); //Es wäre besser, du würdest die Markierung abstreifen, bevor wir fortfahren. So viel Besuch ist uns doch ein wenig lästig.
 	AI_Output(self, hero, "Info_Mod_Eremit_Prisma3_04_17"); //Bis du wieder zurück bist, haben wir auch das Prisma fertig geschliffen.
 
-	B_LogEntry_More	(TOPIC_MOD_MAGISCHEMARKIERUNG, TOPIC_MOD_MAGIEPRISMA, "Der Eremit vermutet, ich würde wegen einer magischen Markierung für diesen finsteren Urnol und seinen Meister überall sichtbar sein. Er selbst kennt keine Methode, sie wieder loszuwerden. Ich soll mich an die Wassermagier oder einen Kundigen des alten Volkes wenden.", "Der Eremit schleift nun die schwarze Perle. Wenn ich die magische Markierung abgestreift habe, soll ich wiederkommen.");
+	B_LogEntry_More	(TOPIC_MOD_MAGISCHEMARKIERUNG, TOPIC_MOD_MAGIEPRISMA, "Der Eremit vermutet, ich würde wegen einer magischen Markierung für diesen finsteren Urnol und seinen Meister überall sichtbar sein. Er selbst kennt keine Methode, sie wieder loszuwerden. Ich sollte mich an Vatras oder einen Kundigen des alten Volkes wenden, so ich denn einen kenne. Als Notlösung könnte auch Argez in Frage kommen.", "Der Eremit schleift nun die schwarze Perle. Wenn ich die magische Markierung abgestreift habe, soll ich wiederkommen.");
 
 	AI_StopProcessInfos	(self);
 };
