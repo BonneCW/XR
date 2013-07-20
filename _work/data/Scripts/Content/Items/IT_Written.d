@@ -1394,7 +1394,7 @@ func void UseLeeInKneipe ()
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
 					Doc_PrintLines	( nDocID,  0, ""					);
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
-					Doc_PrintLines	( nDocID,  0, "Dieser Mann sich dem Lager als Schürfer verdient gemacht und seinen Anteil entrichtet."					);
+					Doc_PrintLines	( nDocID,  0, "Dieser Mann hat sich im Lager als Schürfer verdient gemacht und seinen Anteil entrichtet."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Lee"					);
 					
