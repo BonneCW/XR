@@ -837,15 +837,13 @@ func void UseAndreAbschied ()
 		nDocID = 	Doc_Create		()			  ;							// DocManager
 					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
 					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
-					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline  			); 	// -1 -> all pages
+					Doc_SetFont 	( nDocID,  0, FONT_Book  			); 	// -1 -> all pages
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
-					Doc_PrintLines	( nDocID,  0, ""					);
-					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLines	( nDocID,  0, "Die Zeit drängt, so will ich mich kurz fassen."					);
 					Doc_PrintLines	( nDocID,  0, "Das Vorhaben den Roboter einzuschmelzen ist hoffentlich gelungen. Doch war ich mir schon von Beginn an darüber im Klaren, dass es vermutlich nicht glücken wird einen 2ten Ausgang in den Ofen einzubauen. Sofern ihr das hier lest, hat sich meine Vermutung bestätigt und ich Weile vermutlich nicht mehr unter euch. Entschuldigt meine Täuschung, aber es war notwendig, um das Vorhaben nicht zu gefährden. Denn ungleich schlimmer als das wäre es, einer mordenden Maschine noch länger bei ihrem Treiben zuzusehen. Es waren gewiss nicht die untadeligsten Menschen, denen sie das Leben nahm. Aber den Tot hatten sie nicht verdient. Und Innos weiß, dass niemand ohne Schuld ist. Mein Nachfolger soll jener aus den Reihen der Stadtwachen werden, der sich bereit erklärte den Roboter in den Ofen zu locken. Eine solche Gefahr auf sich zu nehmen, um das Leben anderer zu schützen, ist eben das, was einen Streiter Innos auszeichnet. Ich bin mir sicher, er wird ein würdiger Nachfolger sein."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLine	( nDocID,  0, "Ergebenst,"					);
-					Doc_PrintLine	( nDocID,  0, "Hauptmann Andre"					);
+					Doc_PrintLines	( nDocID,  0, "Ergebenst,"					);
+					Doc_PrintLines	( nDocID,  0, "Hauptmann Andre"					);
 					
 					Doc_Show		( nDocID );
 
