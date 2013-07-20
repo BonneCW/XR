@@ -51,7 +51,7 @@ FUNC VOID Info_Mod_Geist_EIS_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Geist_EIS_Hi_10_33"); //An dieser Stelle der Erzählung brach mein Bruder in sich zusammen.
 	AI_Output(self, hero, "Info_Mod_Geist_EIS_Hi_10_34"); //Ich vernahm nur noch, dass er etwas von einer Sprache erzählte, die ihm magisch vermittelt worden sei und von dem Innersten des magischen Frostes, welches ihm den Zugang ermöglichen sollte.
 	AI_Output(self, hero, "Info_Mod_Geist_EIS_Hi_10_35"); //Wir brachten ihn ins Bett, damit er sich erholen könne. Am nächsten Morgen war er jedoch verschwunden.
-	AI_Output(self, hero, "Info_Mod_Geist_EIS_Hi_10_36"); //Ein Dorfbewohner meinte noch ihn nach Westen haben gehen zu sehen.
+	AI_Output(self, hero, "Info_Mod_Geist_EIS_Hi_10_36"); //Ein Dorfbewohner meinte noch ihn nach Süden habe gehen zu sehen.
 	AI_Output(self, hero, "Info_Mod_Geist_EIS_Hi_10_37"); //Ich brach sofort auf und versprach meiner besorgten Mutter, solange nicht zu ruhen, bis ich meinen Bruder gefunden habe ... oder – so fügte ich leise hinzu, als ich mich abgewandt hatte - seine sterbliche Hülle ins Reich der Erde eingekehrt sei.
 	AI_Output(self, hero, "Info_Mod_Geist_EIS_Hi_10_38"); //Denn mir waren die Gefahren da draußen durchaus bewusst ...
 	AI_Output(hero, self, "Info_Mod_Geist_EIS_Hi_15_39"); //Das hat es also damit auf sich ... aber, was geschah dann?
