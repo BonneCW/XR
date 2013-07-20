@@ -92,6 +92,10 @@ FUNC VOID Info_Mod_Saturas_AW_Fokusplatz_Info()
 	AI_Output(self, hero, "Info_Mod_Saturas_AW_Fokusplatz_14_22"); //Zufälligerweise ist Nefarius im hinteren Teil des Tempels auf etwas gestoßen, das dir hilfreich sein könnte.
 	AI_Output(self, hero, "Info_Mod_Saturas_AW_Fokusplatz_14_23"); //Er wird dir erklären, worum es sich dabei handelt.
 	AI_Output(self, hero, "Info_Mod_Saturas_AW_Fokusplatz_14_24"); //Hier hast du die Fokuskarte, falls du dich nicht mehr an die Orte erinnerst.
+	AI_Output(self, hero, "Info_Mod_Saturas_AW_Fokusplatz_14_25"); //Ach ja, der Pass zum Minental wird von den Paladinen bewacht, und nur, wer eine Lizenz besitzt, darf passieren.
+	AI_Output(self, hero, "Info_Mod_Saturas_AW_Fokusplatz_14_26"); //Ohne ausdrückliche Erlaubnis wirst du nicht hineingelassen.
+	AI_Output(hero, self, "Info_Mod_Saturas_AW_Fokusplatz_15_27"); //Wer könnte mir so eine Lizenz verschaffen?
+	AI_Output(self, hero, "Info_Mod_Saturas_AW_Fokusplatz_14_28"); //Ich vermute mal ganz stark, dass Lord Hagen für die Kontrolle verantwortlich ist.
 
 	B_GiveInvItems	(self, hero, ItWrFocimap, 1);
 
@@ -105,7 +109,7 @@ FUNC VOID Info_Mod_Saturas_AW_Fokusplatz_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_FOKUSSUCHE, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_FOKUSSUCHE, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_FOKUSSUCHE, "Saturas hat mich damit beauftragt, die Foki aus dem Minental zu holen. Allerdings sind alle mit einem Schutzzauber belegt, den nur drei Magier gleichzeitig brechen können. Nefarius im hinteren Teil des Tempels in Jharkendar sollte mir dabei helfen können.");
+	B_LogEntry	(TOPIC_MOD_FOKUSSUCHE, "Saturas hat mich damit beauftragt, die Foki aus dem Minental zu holen. Allerdings sind alle mit einem Schutzzauber belegt, den nur drei Magier gleichzeitig brechen können. Nefarius im hinteren Teil des Tempels in Jharkendar sollte mir dabei helfen können. Außerdem muss ich mich darum kümmern, dass ich ins Minental gelassen werde. Da der Eingang von den Paladinen kontrolliert wird, sollte ich mein Glück mal bei Lord Hagen versuchen.");
 };
 
 INSTANCE Info_Mod_Saturas_AW_UngebeterBesucher (C_INFO)
