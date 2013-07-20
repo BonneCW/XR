@@ -425,6 +425,18 @@ FUNC VOID HAUPTQUESTS()
 		{
 			Mod_Leprechaun_Choices = 3;
 
+			AI_Teleport	(Monster_11073_Leprechaun_AW, "TOT");
+			B_StartOtherRoutine	(Monster_11073_Leprechaun_AW, "TOT");
+			AI_Teleport	(Monster_11073_Leprechaun_AW, "TOT");
+
+			Wld_SpawnNpcRange	(hero, Stoneguardian, 1, 750);
+		};
+
+		if (Mod_Leprechaun_Choices == 3)
+		&& (Npc_GetDistToNpc(Monster_11073_Leprechaun_AW, hero) >= 1000)
+		{
+			Mod_Leprechaun_Choices = 4;
+
 			B_RemoveNpc	(Monster_11073_Leprechaun_AW);
 		};
 
