@@ -210,37 +210,6 @@ FUNC VOID Info_Mod_Scar_BartokArbeitetWieder_Info()
 	B_Göttergefallen(3, 1);
 };
 
-INSTANCE Info_Mod_Scar_MilizErledigt (C_INFO)
-{
-	npc		= Mod_518_SMK_Scar_MT;
-	nr		= 1;
-	condition	= Info_Mod_Scar_MilizErledigt_Condition;
-	information	= Info_Mod_Scar_MilizErledigt_Info;
-	permanent	= 0;
-	important	= 1;
-};
-
-FUNc INT Info_Mod_Scar_MilizErledigt_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Diego_VermissteFertig))
-	&& (Npc_IsDead(Mod_7660_MIL_Miliz_NW))
-	&& (Npc_IsDead(Mod_7661_MIL_Miliz_NW))
-	&& (Npc_IsDead(Mod_7662_MIL_Miliz_NW))
-	&& (Npc_IsDead(Mod_7663_MIL_Miliz_NW))
-	&& (Npc_IsDead(Mod_7664_MIL_Miliz_NW))
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Scar_MilizErledigt_Info()
-{
-	AI_Output(self, hero, "Info_Mod_Scar_MilizErledigt_10_00"); //(abfällig) Hä, die aus der Stadt wollen wohl unbedingt Ärger haben.
-	AI_Output(self, hero, "Info_Mod_Scar_MilizErledigt_10_01"); //Sollen sie nur ruhig ihre Pappkameraden schicken ...
-
-	AI_StopProcessInfos	(self);
-};
-
 INSTANCE Info_Mod_Scar_AlteMineQuest (C_INFO)
 {
 	npc		= Mod_518_SMK_Scar_MT;
