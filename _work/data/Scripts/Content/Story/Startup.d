@@ -3120,6 +3120,7 @@ FUNC VOID INIT_AddonWorld ()
 
 	if (Mod_WM_Boeden >= 11)
 	&& (SaturasNichtInJharki == FALSE)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_Kap3))
 	{
 		B_StartOtherRoutine	(Mod_9000_KDW_Saturas_AW, "TOT");
 

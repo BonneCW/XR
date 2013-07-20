@@ -322,6 +322,7 @@ FUNC VOID GILDENSTORY_ADANOS()
 
 		if (Mod_WM_Boeden == 9)
 		&& (CurrentLevel == NEWWORLD_ZEN)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_Kap3))
 		{
 			Wld_SetTime(23,00);
 
