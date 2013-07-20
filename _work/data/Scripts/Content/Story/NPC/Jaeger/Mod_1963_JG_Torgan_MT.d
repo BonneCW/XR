@@ -37,6 +37,6 @@ INSTANCE Mod_1963_JG_Torgan_MT (Npc_Default)
 
 FUNC VOID Rtn_Start_1963()
 {	
-	TA_Stand_Guarding		(08,00,20,00,"WP_MT_JAEGERLAGER_02");
-    TA_Stand_Guarding			(20,00,08,00,"WP_MT_JAEGERLAGER_02");
+	TA_Stand_Guarding		(08,00,20,00,"WP_MT_JAEGERLAGER_15");
+	TA_Stand_Guarding			(20,00,08,00,"WP_MT_JAEGERLAGER_15");
 };
