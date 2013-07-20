@@ -72,7 +72,7 @@ func int B_TeachPlayerTalentTakeAnimalTrophy (var C_NPC slf, var C_NPC oth, var 
 	if (trophy == TROPHY_BFWing) 			{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFWing] 			= TRUE;	
 	B_LogEntry (TOPIC_TalentAnimalTrophy,"... die Flügel von Blutfliegen vom Körper lösen.");};
 	if (trophy == TROPHY_BFSting) 			{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFSting] 			= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"... Blutfliegen den Stachen entfernen.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"... Blutfliegen den Stachel entfernen.");};
 	if (trophy == TROPHY_Mandibles) 		{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Mandibles] 		= TRUE;	
 	B_LogEntry (TOPIC_TalentAnimalTrophy,"... Tieren ihre Greifzangen entfernen.");};
 	if (trophy == TROPHY_CrawlerPlate) 		{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_CrawlerPlate] 	= TRUE;	
