@@ -433,6 +433,12 @@ FUNC VOID Info_Mod_Lobart_RandolphWeg_Info()
 	B_GivePlayerXP	(200);
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
+
+	B_StartOtherRoutine	(Mod_1414_BAU_Bauer_NW, "START");
+	B_StartOtherRoutine	(Mod_1415_BAU_Bauer_NW, "START");
+	B_StartOtherRoutine	(Mod_545_NONE_Gildo_NW, "START");
+	B_StartOtherRoutine	(Mod_910_BAU_Lobart_NW, "START");
+	B_StartOtherRoutine	(Mod_911_BAU_Maleth_NW, "START");
 };
 
 INSTANCE Info_Mod_Lobart_AlwinScene (C_INFO)
