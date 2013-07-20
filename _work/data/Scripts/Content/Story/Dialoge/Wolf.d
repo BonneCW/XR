@@ -154,6 +154,7 @@ FUNC INT Info_Mod_Wolf_MinecrawlerRuestung4_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_MinecrawlerRuestung3))
 	&& (Wld_GetDay()-2 > Mod_Wolf_MinecrawlerRuestung_Day)
+	&& (Kapitel >= 2)
 	{
 		return 1;
 	};
