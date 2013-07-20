@@ -36,8 +36,8 @@ instance Mod_7601_GRD_Gardist_NW (Npc_Default)
 
 FUNC VOID Rtn_start_7601 ()
 {
-	TA_Stand_Guarding(06,00,23,00,"WP_JAEGERLAGER_01");	
-	TA_Stand_Guarding(23,00,06,00,"WP_JAEGERLAGER_01");	
+	TA_Stand_Guarding(06,00,23,00,"NW_FARM2_TO_TAVERN_RANGERBANDITS_02");	
+	TA_Stand_Guarding(23,00,06,00,"NW_FARM2_TO_TAVERN_RANGERBANDITS_02");	
 };
 
 FUNC VOID Rtn_Zuris_7601 ()

@@ -38,8 +38,8 @@ instance Mod_7604_STT_Schatten_NW (Npc_Default)
 
 FUNC VOID Rtn_start_7604 ()
 {
-	TA_Smalltalk		(08,00,19,00,"WP_JAEGERLAGER_13");
-	TA_Sit_Campfire		(19,00,08,00,"WP_JAEGERLAGER_13");
+	TA_Sit_Campfire		(08,00,19,00,"NW_FARM2_TO_TAVERN_RANGERBANDITS_02");
+	TA_Sit_Campfire		(19,00,08,00,"NW_FARM2_TO_TAVERN_RANGERBANDITS_02");
 };
 
 FUNC VOID Rtn_Zuris_7604 ()
