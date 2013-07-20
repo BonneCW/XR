@@ -44,7 +44,7 @@ FUNC VOID Info_Mod_Hagen_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Hagen_Hi_36_23"); //Es ist nicht nötig, dass du dich dort erkundigst.
 	AI_Output(self, hero, "Info_Mod_Hagen_Hi_36_24"); //Über das Alte Lager weiß ich alles, was ich wissen muss.
 	AI_Output(self, hero, "Info_Mod_Hagen_Hi_36_25"); //Als Gegenleistung werde ich dir unbegrenzten Zutritt zum Minental verschaffen.
-	AI_Output(self, hero, "Info_Mod_Hagen_Hi_36_26"); //Du wirst der Einzige sein, der sich sowohl in Khorinis als auch im Minental frei bewegen kann.
+	AI_Output(self, hero, "Info_Mod_Hagen_Hi_36_26"); //Du wirst beinahe der Einzige sein, der sich sowohl in Khorinis als auch im Minental frei bewegen kann.
 	AI_Output(hero, self, "Info_Mod_Hagen_Hi_15_27"); //Dann werde ich mich mal auf den Weg machen.
 	AI_Output(self, hero, "Info_Mod_Hagen_Hi_36_28"); //Ich danke ... (stöhnt) Was ... ist das? Dieser ... Schmerz ...
 
