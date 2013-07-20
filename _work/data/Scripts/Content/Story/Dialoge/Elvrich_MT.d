@@ -10,10 +10,7 @@ INSTANCE Info_Mod_Elvrich_MT_Hi (C_INFO)
 
 FUNC INT Info_Mod_Elvrich_MT_Hi_Condition()
 {
-	if (Mod_WM_ElvrichImSumpf == 3)
-	{
-		return 1;
-	};
+	return 1;
 };
 
 FUNC VOID Info_Mod_Elvrich_MT_Hi_Info()
