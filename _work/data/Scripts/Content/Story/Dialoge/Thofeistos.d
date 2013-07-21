@@ -40,7 +40,7 @@ INSTANCE Info_Mod_Thofeistos_Orksoeldner (C_INFO)
 
 FUNC INT Info_Mod_Thofeistos_Orksoeldner_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Lee_HabPfeife))
+	if (Mod_Gilde == 19)
 	{
 		return 1;
 	};
