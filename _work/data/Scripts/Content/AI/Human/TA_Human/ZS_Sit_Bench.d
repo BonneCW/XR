@@ -24,7 +24,13 @@ FUNC VOID ZS_Sit_Bench ()
     	{
 			AI_GotoWP	(self, self.wp);
 		};
-	};	
+	};
+
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_798_SLD_Wolf_NW))
+	&& (Npc_HasItems(self, ITAR_DJG_Crawler) == 1) {
+		AI_UnequipArmor	(Mod_798_SLD_Wolf_NW);
+		AI_EquipArmor	(Mod_798_SLD_Wolf_NW, ITAR_DJG_Crawler);
+	};
 };
 
 FUNC int ZS_Sit_Bench_Loop ()
