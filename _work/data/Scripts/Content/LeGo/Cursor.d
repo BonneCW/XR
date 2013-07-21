@@ -31,6 +31,9 @@ func void Cursor_Hide() {
     if(!Hlp_IsValidHandle(Cursor_Hndl)) { return; };
 	
     View_Close(Cursor_Hndl);
+    View_Delete(Cursor_Hndl);
+
+	Cursor_Hndl = 0;
 };
 
 //========================================
