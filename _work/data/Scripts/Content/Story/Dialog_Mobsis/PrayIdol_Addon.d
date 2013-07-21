@@ -97,7 +97,7 @@ FUNC VOID B_CheckAllTeleports()
 		if (Mod_BeliarStatue_Bibliothek_Dabei)
 		&& (Mod_BeliarStatue_Eisgebiet_Dabei)
 		&& (Mod_BeliarStatue_City_Dabei)
-		&& (Mod_BeliarStatue_Oldmine_Dabei)
+		&& (Mod_BeliarStatue_Oldmine_Dabei && Jäger_Dabei)
 		&& (Mod_BeliarStatue_OldDementower_Dabei)
 		&& (Mod_BeliarStatue_Banditenlager_Dabei)
 		&& (Mod_BeliarStatue_Bergfestung_Dabei)
@@ -105,7 +105,7 @@ FUNC VOID B_CheckAllTeleports()
 		&& (Mod_BeliarStatue_Canyon_Dabei)
 		&& (Mod_BeliarStatue_Strand_Dabei)
 		&& (Mod_BeliarStatue_Eremit_Dabei)
-		&& (Mod_BeliarStatue_Kanalisation_Dabei)
+		&& (Mod_BeliarStatue_Kanalisation_Dabei && Diebe_Dabei)
 		{
 			Mod_BeliarSchreine = 1;
 
