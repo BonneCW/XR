@@ -694,7 +694,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 		return TRUE;
 	};
 
-	//Feuer Novize
+	// Feuer Novize
 
 	if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_556_NOV_Theodor_NW))
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_724_NOV_Mattheus_NW))
@@ -748,6 +748,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_921_KDF_Marduk_NW))
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_922_KDF_Neoras_NW))
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_920_KDF_Isgaroth_NW))
+	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_7499_KDF_Elvira_REL))
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_7443_KDF_Milten_IR))
 	|| ((Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_1771_KDF_Aaron_PAT))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Aaron_KillTojan)))
@@ -833,6 +834,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_1773_KDF_Nagon_PAT))
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_1857_KDF_Magier_PAT))
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_1739_KDF_Ordenspriester_PAT))
+	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_7425_KDF_Fuego_REL))
 	|| (self.npctype == npctype_pat_ordenspriester)
 	|| (self.npctype == npctype_pat_ordenspriester_mauer)
 	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_1738_KDF_Velario_PAT))
