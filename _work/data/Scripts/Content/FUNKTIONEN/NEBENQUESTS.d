@@ -3254,7 +3254,8 @@ FUNC VOID NEBENQUESTS()
 		&& ((Mod_Costa_Guertel == 2)
 		|| ((Mod_Costa_Guertel == 1)
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Costa_Jesse))
-		&& (Npc_KnowsInfo(hero, Info_Mod_Jesse_Costa))))
+		&& (Npc_KnowsInfo(hero, Info_Mod_Jesse_Costa))
+		&& (!Npc_IsInState(Mod_1506_BUD_Jesse_MT, ZS_Talk))))
 		{
 			Mod_Costa_Guertel = 3;
 
