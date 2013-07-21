@@ -31,22 +31,14 @@ func void ZS_Practice_Bow ()
 
 func int ZS_Practice_Bow_Loop()
 {	
-    if (self.aivar[AIV_TAPOSITION] == NOTINPOS)
-    {
-    	if (!Npc_HasEquippedMeleeWeapon (self))
-		{
-			CreateInvItems	(self, ItMw_1h_Bau_Mace, 1);
-			AI_EquipBestMeleeWeapon (self);
-		};
-		
-		AI_ReadyRangedWeapon	(self);
+	if (self.aivar[AIV_TAPOSITION] == NOTINPOS) {
+    		AI_ReadyRangedWeapon	(self);
+
+		AI_PlayAni		(self,"t_BowWalk_2_BowAim");
 		
 		self.aivar[AIV_TAPOSITION] = ISINPOS;
 	};
         
-	AI_PlayAni		(self,"t_BowWalk_2_BowAim");
-	AI_GotoWP		(self, self.wp);
-	AI_AlignToWP    (self);
 	
 	return LOOP_CONTINUE;
 };
