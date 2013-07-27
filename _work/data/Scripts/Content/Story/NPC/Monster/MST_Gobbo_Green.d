@@ -120,8 +120,8 @@ prototype Mst_Default_Matrone (C_NPC)
 	attribute	[ATR_DEXTERITY]		=	35;
 	attribute	[ATR_HITPOINTS_MAX]	=	400;
 	attribute	[ATR_HITPOINTS]		=	400;
-	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 		=	100;
+	attribute	[ATR_MANA_MAX] 		=	25;
+	attribute	[ATR_MANA] 		=	25;
 	
 	// ------ Protection ------
 	protection	[PROT_BLUNT]		=	90000;
