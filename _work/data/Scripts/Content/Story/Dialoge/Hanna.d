@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Hanna_Hi (C_INFO)
 	information	= Info_Mod_Hanna_Hi_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Wer bist du?";
+	description	= "Wo bin ich hier?";
 };
 
 FUNC INT Info_Mod_Hanna_Hi_Condition()
@@ -16,8 +16,92 @@ FUNC INT Info_Mod_Hanna_Hi_Condition()
 
 FUNC VOID Info_Mod_Hanna_Hi_Info()
 {
-	B_Say (hero, self, "$WHOAREYOU");
-	AI_Output(self, hero, "Info_Mod_Hanna_Hi_17_01"); //Ich bin Hanna, Besitzerin dieses Hotels.
+	AI_Output(hero, self, "Info_Mod_Hanna_Hi_15_00"); //Wo bin ich hier?
+	AI_Output(self, hero, "Info_Mod_Hanna_Hi_17_01"); //In meinem Rasthaus. Wenn du eine Bleibe für die Nacht suchst, bist du herzlich willkommen.
+};
+
+INSTANCE Info_Mod_Hanna_Preis (C_INFO)
+{
+	npc		= Mod_583_NONE_Hanna_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hanna_Preis_Condition;
+	information	= Info_Mod_Hanna_Preis_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Je nachdem. Wie viel verlangst du?";
+};
+
+FUNC INT Info_Mod_Hanna_Preis_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Hanna_Hi))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Hanna_Meldor))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hanna_Preis_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Hanna_Preis_15_00"); //Je nachdem. Wie viel verlangst du?
+	AI_Output(self, hero, "Info_Mod_Hanna_Preis_17_01"); //Hmm... Du bist der Neue aus dem Minental und hast sicher keine vollen Taschen.
+	AI_Output(self, hero, "Info_Mod_Hanna_Preis_17_02"); //Wenn du friedlich bist und ein freies Bett findest, kannst du meinetwegen kostenlos übernachten.
+	AI_Output(hero, self, "Info_Mod_Hanna_Preis_15_03"); //Das ist eine angenehme Überraschung. Davon hatte ich in letzter Zeit wenige.
+	AI_Output(self, hero, "Info_Mod_Hanna_Preis_17_04"); //Ich kann auch nur so großzügig sein, weil ich finanziell nicht von dem Rasthaus abhängig bin.
+	AI_Output(self, hero, "Info_Mod_Hanna_Preis_17_05"); //(hintergründig) Aber davon dann ein andermal vielleicht mehr...
+};
+
+INSTANCE Info_Mod_Hanna_Gaeste (C_INFO)
+{
+	npc		= Mod_583_NONE_Hanna_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hanna_Gaeste_Condition;
+	information	= Info_Mod_Hanna_Gaeste_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wer übernachtet sonst noch hier?";
+};
+
+FUNC INT Info_Mod_Hanna_Gaeste_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Hanna_Hi))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Hanna_Meldor))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hanna_Gaeste_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Hanna_Gaeste_15_00"); //Wer übernachtet sonst noch hier?
+	AI_Output(self, hero, "Info_Mod_Hanna_Gaeste_17_01"); //Eigentlich jeder, der von außerhalb kommt und keine Lust hat, sich in der Roten Laterne zu verausgaben.
+	AI_Output(self, hero, "Info_Mod_Hanna_Gaeste_17_02"); //Es kommt aber trotzdem sehr selten vor, dass ich meine Kundschaft nicht kenne. Es sind doch immer wieder dieselben Gesichter, die abends mehr oder weniger betrunken an mir vorbeitorkeln.
+};
+
+INSTANCE Info_Mod_Hanna_Rasthaus (C_INFO)
+{
+	npc		= Mod_583_NONE_Hanna_NW;
+	nr		= 1;
+	condition	= Info_Mod_Hanna_Rasthaus_Condition;
+	information	= Info_Mod_Hanna_Rasthaus_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Dein Rasthaus? Hast du keinen Mann?";
+};
+
+FUNC INT Info_Mod_Hanna_Rasthaus_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Hanna_Hi))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Hanna_Meldor))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hanna_Rasthaus_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Hanna_Rasthaus_15_00"); //Dein Rasthaus? Hast du keinen Mann?
+	AI_Output(self, hero, "Info_Mod_Hanna_Rasthaus_17_01"); //(spöttisch) Ich nehme mal an, dass du aus einem hinterwäldlerischen Landstrich stammst, wenn du es nicht für eine Frechheit hältst, so etwas zu fragen.
+	AI_Output(self, hero, "Info_Mod_Hanna_Rasthaus_17_02"); //Ich komme sehr gut allein zurecht, und für den Notfall weiß ich, wie ich Hilfe organisieren kann. Und für kleinere Probleme tut's auch immer der Prügel.
 };
 
 INSTANCE Info_Mod_Hanna_ThorbenLehrling (C_INFO)
