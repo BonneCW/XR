@@ -68,6 +68,8 @@ FUNC VOID Info_Mod_Irmgard_Kneipe_Info()
 	AI_Output(hero, self, "Info_Mod_Irmgard_Kneipe_15_20"); //Dann bis später!
 
 	B_LogEntry	(TOPIC_MOD_DITMAR_DICKELUFT, "Hedwig liebt Schafe über alles, deshalb mein Plan, mich in eines zu verwandeln und sie zu Anselm zu locken, damit die beiden sich aussprechen. Eine Verwandlungsspruchrolle bekomme ich vielleicht bei Daniel auf dem Marktplatz oder im Haus der Feuermagier.");
+
+	CreateInvItems	(Mod_7378_OUT_Daniel_REL, ItSc_TrfSheep, 3);
 };
 
 INSTANCE Info_Mod_Irmgard_Kneipe2 (C_INFO)
