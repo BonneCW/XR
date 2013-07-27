@@ -11,6 +11,7 @@ INSTANCE Info_Mod_Hagen_Hi (C_INFO)
 FUNC INT Info_Mod_Hagen_Hi_Condition()
 {
 	if (Mod_IstLehrling == 1)
+	&& (Kapitel >= 2)
 	{
 		return 1;
 	};

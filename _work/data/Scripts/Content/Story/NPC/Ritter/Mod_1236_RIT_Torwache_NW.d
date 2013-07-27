@@ -5,8 +5,8 @@ instance Mod_1236_RIT_Torwache_NW (Npc_Default)
 	guild 		= GIL_PAL;
 	id 			= 1236;
 	voice 		= 9;
-	flags       = 0;																	
-	npctype		= NPCTYPE_nw_paladin;
+	flags       = 2;															
+	npctype		= NPCTYPE_MAIN;
 	
 	//------- AI Vars ----------
 	aivar[AIV_NewsOverride] 	= TRUE;
@@ -41,5 +41,5 @@ instance Mod_1236_RIT_Torwache_NW (Npc_Default)
 FUNC VOID Rtn_Start_1236 ()
 {
 	TA_Guard_Passage	(08,00,23,00,"NW_CITYHALL_GUARD_01");
-    TA_Guard_Passage	(23,00,08,00,"NW_CITYHALL_GUARD_01");	
+	TA_Guard_Passage	(23,00,08,00,"NW_CITYHALL_GUARD_01");	
 };

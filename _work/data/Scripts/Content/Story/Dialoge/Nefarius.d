@@ -109,7 +109,7 @@ FUNC VOID Info_Mod_Nefarius_VierErbauer_Info()
 	AI_Output(self, hero, "Info_Mod_Nefarius_VierErbauer_05_01"); //Nichts genaues. Außerdem musst du bedenken, dass sich das Gebiet hier in den letzten Jahrhunderten auch verändert haben kann.
 	AI_Output(self, hero, "Info_Mod_Nefarius_VierErbauer_05_02"); //Ich will dir jedoch so viel sagen, wie mir möglich ist.
 	AI_Output(self, hero, "Info_Mod_Nefarius_VierErbauer_05_03"); //Einer der Erbauer, ein Priester, wollte in den Westen aufbrechen, um sich dort eine Residenz zu erschaffen und die Weisheit vom Ur-Adanos zu predigen.
-	AI_Output(self, hero, "Info_Mod_Nefarius_VierErbauer_05_04"); //Leider steht hier nicht, was aus ihm geworden ist. Vielleicht solltest du dich mal in Khorinis umhören.
+	AI_Output(self, hero, "Info_Mod_Nefarius_VierErbauer_05_04"); //Leider steht hier nicht, was aus ihm geworden ist. Vielleicht solltest du dich mal in Khorinis umhören. Vielleicht kann der Statthalter in seinen alten Büchern darüber etwas in Erfahrung bringen.
 	AI_Output(self, hero, "Info_Mod_Nefarius_VierErbauer_05_05"); //Ein anderer ist in den Süden gegangen. Er wollte dort sein Glück in den Minen suchen.
 	AI_Output(self, hero, "Info_Mod_Nefarius_VierErbauer_05_06"); //Den Schriften nach war er allerdings nur ein Mitglieder der Kaste der Heiler.
 	AI_Output(hero, self, "Info_Mod_Nefarius_VierErbauer_15_07"); //Und was heißt das?
@@ -125,7 +125,7 @@ FUNC VOID Info_Mod_Nefarius_VierErbauer_Info()
 	AI_Output(self, hero, "Info_Mod_Nefarius_VierErbauer_05_17"); //Schau dich mal im Norden von Khorinis um, vielleicht findest du dort einen Ort, der einem Totenwächter würdig ist.
 	AI_Output(hero, self, "Info_Mod_Nefarius_VierErbauer_15_18"); //Gut, ich mach mich dann mal auf den Weg.
 
-	B_LogEntry	(TOPIC_MOD_PORTAL, "Einer der Erbauer ist in den Westen gegangen, um sich dort eine Residenz zu erschaffen. Ich sollte mich in Khorinis nach der Geschichte des Stammvaters erkundigen.");
+	B_LogEntry	(TOPIC_MOD_PORTAL, "Einer der Erbauer ist in den Westen gegangen, um sich dort eine Residenz zu erschaffen. Ich sollte mich in Khorinis nach der Geschichte des Stammvaters erkundigen. Der Statthalter von Khorinis könnte mir dabei behilflich sein.");
 	B_LogEntry	(TOPIC_MOD_PORTAL, "Ein Heiler ist in den Süden aufgebrochen. Nefarius denkt allerdings, dass er nicht allzu weit gekommen ist, da damals der Pass ins Minental sicher noch von gefährlichen Monstern besiedelt wurde.");
 	B_LogEntry	(TOPIC_MOD_PORTAL, "Onar, ein Mitglieder der Krieger-Kaste, hat sich auf Khorinis niedergelassen und eine Familie gegründet. Der Name gleicht dem des heutigen Grossbauern. Vielleicht gibt es da eine Verbindung?");
 	B_LogEntry	(TOPIC_MOD_PORTAL, "Der letzte Überlebende, ein Totenwächter, hat sich in den Norden aufgemacht. Ich soll mich dort mal umsehen.");

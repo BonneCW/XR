@@ -85,6 +85,8 @@ FUNC VOID Info_Mod_Larius_Ornament_Info()
 	AI_Output(self, hero, "Info_Mod_Larius_Ornament_01_10"); //Du findest die Stadt oben im Norden der Insel. Noch ein ganzes Stück nördlich der Ausgrabungsstelle der Wassermagier ist der Pass.
 
 	B_LogEntry	(TOPIC_MOD_PORTAL, "Der Priester scheint Khorinis verlassen und in Relendel die Stadt Khorata gegründet zu haben. Sicher befindet sich das Ornamentstück dort. Ich sollte mich mal mit Anselm unterhalten. Khorata liegt im Norden der Insel und ist durch einen Pass nördlich der Ausgrabungsstelle zu finden.");
+
+	B_StartOtherRoutine	(self, "START");
 };
 
 INSTANCE Info_Mod_Larius_EXIT (C_INFO)

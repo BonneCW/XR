@@ -30,7 +30,9 @@ INSTANCE DIA_Mil_305_Torwache_PassAsCitizen (C_INFO)
 	nr			= 1;
 	condition	= DIA_Mil_305_Torwache_PassAsCitizen_Condition;
 	information	= DIA_Mil_305_Torwache_PassAsCitizen_Info;
-	important	= TRUE;
+	important	= 0;
+	permanent	= 0;
+	description	= "Ich bin jetzt ein Bürger der Stadt. Darf ich vorbei?";
 };                       
 FUNC INT DIA_Mil_305_Torwache_PassAsCitizen_Condition()
 {	
@@ -41,13 +43,15 @@ FUNC INT DIA_Mil_305_Torwache_PassAsCitizen_Condition()
 };
 FUNC VOID DIA_Mil_305_Torwache_PassAsCitizen_Info()
 {
-	AI_Output (self, hero, "DIA_Mil_305_Torwache_PassAsCitizen_03_00"); //Auf dich hab ich gewartet!
-	AI_Output (hero, self, "DIA_Mil_305_Torwache_PassAsCitizen_15_01"); //Hab ich was verbrochen?
-	AI_Output (self, hero, "DIA_Mil_305_Torwache_PassAsCitizen_03_02"); //(lacht) Bestimmt. Aber darum geht's nicht. Lord Hagen will dich sehen. Geradeaus im Rathaus.
-		
+	AI_Output (hero, self, "DIA_Mil_305_Torwache_PassAsCitizen_15_00"); //Ich bin jetzt ein Bürger der Stadt. Darf ich vorbei?
+	AI_Output (self, hero, "DIA_Mil_305_Torwache_PassAsCitizen_03_01"); //Es gibt kein Gesetz, das das verbieten würde.
+	AI_Output (self, hero, "DIA_Mil_305_Torwache_PassAsCitizen_03_02"); //Aber sieh dich vor: Wenn du dich hier an fremdem Besitz oder im Ton vergreifst, werden die Vergeltungen empfindlich sein.
+	AI_Output (self, hero, "DIA_Mil_305_Torwache_PassAsCitizen_03_03"); //Wer im Oberen Viertel wohnt, hat meistens Einfluss genug, dass es nicht bei einer Geldstrafe bleiben wird.
+	AI_Output (self, hero, "DIA_Mil_305_Torwache_PassAsCitizen_03_04"); //Und nun rein in die gute Stube!
+
 	self.aivar[AIV_PASSGATE] = TRUE;
 	Mil_305_schonmalreingelassen = TRUE;
-	
+
 	AI_StopProcessInfos (self);
 };
 

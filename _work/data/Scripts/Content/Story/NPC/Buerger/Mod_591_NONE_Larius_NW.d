@@ -35,7 +35,15 @@ instance Mod_591_NONE_Larius_NW (Npc_Default)
 	CreateInvItems	(self, ItWr_ErfinderKolamsBrief, 1);
 
 	// ------ TA anmelden ------
-	daily_routine 		= Rtn_Start_591;
+	daily_routine 		= Rtn_PreStart_591;
+};
+
+FUNC VOID Rtn_PreStart_591 ()
+{	
+	TA_Smalltalk		(08,00,12,00,"NW_CITY_RICHTER_01");
+	TA_Smalltalk		(12,00,15,00,"NW_CITY_UPTOWN_HUT_04_ENTRY");
+	TA_Smalltalk		(15,00,22,00,"NW_CITY_SHOP_SALANDRIL_02");
+	TA_Sleep		(22,00,08,00,"NW_CITY_LARIUS_BED");
 };
 
 FUNC VOID Rtn_Start_591 ()
