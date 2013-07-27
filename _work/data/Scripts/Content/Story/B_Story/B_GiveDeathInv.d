@@ -345,8 +345,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	// ------ Crawler-Platten ------
 	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_CrawlerPlate] == TRUE)
 	{
-		//if (slf.aivar[AIV_MM_REAL_ID] == ID_MINECRAWLER)	{	CreateInvItems (slf, ItAt_CrawlerPlate, 1);		};
-		if (slf.aivar[AIV_MM_REAL_ID] == ID_MINECRAWLERWARRIOR)	{	CreateInvItems (slf, ItAt_CrawlerPlate, 2);		};
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_MINECRAWLERWARRIOR && slf.level > 1)	{	CreateInvItems (slf, ItAt_CrawlerPlate, 2);		};
 	};
 	
 	// ------ Drachensnapperhorn ------
