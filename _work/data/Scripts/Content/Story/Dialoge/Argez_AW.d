@@ -117,6 +117,8 @@ FUNC VOID Info_Mod_Argez_AW_Magiespur2_Info()
 
 	// ToDo: Effekt auf Held und Monster rennt weg
 
+	AI_Flee	(Mod_Argez_ShrinkMonster);
+
 	AI_Output(self, hero, "Info_Mod_Argez_AW_Magiespur2_37_04"); //Das sollte es schon gewesen sein. Hoffentlich war das Tier noch nah genug, dass die Übertragung geklappt hat. Lass mal nachsehen.
 
 	// ToDo: Toller Zaubereffekt auf den Helden

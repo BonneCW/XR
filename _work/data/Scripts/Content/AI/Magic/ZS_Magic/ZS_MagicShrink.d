@@ -60,6 +60,8 @@ func int ZS_MagicShrink_Loop ()
 
 			Mod_Argez_ShrinkMonster = Hlp_GetNpc(self);
 
+			AI_Teleport	(self, "TOT");
+
 			self.wp = "TOT";
 			self.spawnPoint = "TOT";
 
