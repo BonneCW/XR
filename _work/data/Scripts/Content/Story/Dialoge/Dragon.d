@@ -62,8 +62,7 @@ INSTANCE Info_Mod_Dragon_Kloster (C_INFO)
 
 FUNC INT Info_Mod_Dragon_Kloster_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Dragon_Hi))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Gormgniez))
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Gormgniez))
 	{
 		return 1;
 	};
