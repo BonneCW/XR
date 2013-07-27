@@ -116,13 +116,8 @@ func void B_GiveDeathInv (var C_NPC slf)
 		};
 		if (r_max(99) < 1)
 		{
-			B_GiveDeathRandomAmulett(slf);
+			B_GiveDeathRandomGuertel(slf);
 		};
-
-		CreateInvItems	(slf, ItMi_Gold, r_max(10));
-		CreateInvItems	(slf, ItMi_OldCoin, r_max(5));
-		CreateInvItems	(slf, ItMi_SilverRing, r_max(1));
-		CreateInvItems	(slf, ItMi_GoldRing, r_max(10));
 	};
 	if (slf.guild == GIL_SCAVENGER)
 	{
