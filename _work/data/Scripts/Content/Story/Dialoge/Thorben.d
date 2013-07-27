@@ -119,6 +119,7 @@ FUNC INT Info_Mod_Thorben_Job_Condition()
 {
 	if (Wld_IsTime(24,00,19,00))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Thorben_Hi))
+	&& (!Mod_IstLehrling)
 	{
 		return 1;
 	};
@@ -146,6 +147,7 @@ FUNC INT Info_Mod_Thorben_JobKneipe_Condition()
 	if (Wld_IsTime(19,00,24,00))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Thorben_Job))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Thorben_HiKneipe))
+	&& (!Mod_IstLehrling)
 	{
 		return 1;
 	};
