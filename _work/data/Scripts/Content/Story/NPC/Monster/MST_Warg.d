@@ -187,6 +187,8 @@ INSTANCE Warg_Mirza	(Mst_Default_Warg)
 
 INSTANCE Warg_Atalante	(Mst_Default_Warg)
 {
+	name		= "weiblicher Warg";
+
 	B_SetVisuals_Warg();
 	Npc_SetToFistMode(self);
 };
