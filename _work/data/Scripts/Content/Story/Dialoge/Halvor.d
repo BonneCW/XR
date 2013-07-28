@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Halvor_Hi_Condition()
 FUNC VOID Info_Mod_Halvor_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
-	AI_Output(self, hero, "Info_Mod_Halvor_Hi_06_01"); //Ich bin Halvor, der Fischhändler.
+	AI_Output(self, hero, "Info_Mod_Halvor_Hi_26_01"); //Ich bin Halvor, der Fischhändler.
 	
 	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Halvor im Hafenviertel ist Fischhändler.");
@@ -45,7 +45,7 @@ FUNC INT Info_Mod_Halvor_HolFische_Condition()
 
 FUNC VOID Info_Mod_Halvor_HolFische_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_06_00"); //Hast du einen Moment Zeit?
+	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_26_00"); //Hast du einen Moment Zeit?
 
 	Info_ClearChoices	(Info_Mod_Halvor_HolFische);
 
@@ -56,7 +56,7 @@ FUNC VOID Info_Mod_Halvor_HolFische_Info()
 FUNC VOID Info_Mod_Halvor_HolFische_Nein()
 {
 	AI_Output(hero, self, "Info_Mod_Halvor_HolFische_Nein_15_00"); //Nein, momentan hab ich keine Zeit.
-	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Nein_06_01"); //Hm, dann muss ich mich wohl selbst darum kümmern.
+	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Nein_26_01"); //Hm, dann muss ich mich wohl selbst darum kümmern.
 
 	Info_ClearChoices	(Info_Mod_Halvor_HolFische);
 
@@ -66,8 +66,8 @@ FUNC VOID Info_Mod_Halvor_HolFische_Nein()
 FUNC VOID Info_Mod_Halvor_HolFische_Ja()
 {
 	AI_Output(hero, self, "Info_Mod_Halvor_HolFische_Ja_15_00"); //Ja, was gibt's denn?
-	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_06_01"); //Wie du weißt, bin ich ja hier der Fischerhändler. Meine Fische bekomme ich von den Fischern Farim und William.
-	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_06_02"); //Könntest du mir ihre Fische abholen? Bezahlt hab ich sie schon.
+	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_26_01"); //Wie du weißt, bin ich ja hier der Fischerhändler. Meine Fische bekomme ich von den Fischern Farim und William.
+	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_26_02"); //Könntest du mir ihre Fische abholen? Bezahlt hab ich sie schon.
 
 	Info_ClearChoices	(Info_Mod_Halvor_HolFische);
 
@@ -78,7 +78,7 @@ FUNC VOID Info_Mod_Halvor_HolFische_Ja()
 FUNC VOID Info_Mod_Halvor_HolFische_Ja_Nein()
 {
 	AI_Output(hero, self, "Info_Mod_Halvor_HolFische_Ja_Nein_15_00"); //Nein, geh doch selber.
-	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_Nein_06_01"); //Hm, dann muss ich mich wohl selbst darum kümmern.
+	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_Nein_26_01"); //Hm, dann muss ich mich wohl selbst darum kümmern.
 
 	Info_ClearChoices	(Info_Mod_Halvor_HolFische);
 
@@ -88,7 +88,7 @@ FUNC VOID Info_Mod_Halvor_HolFische_Ja_Nein()
 FUNC VOID Info_Mod_Halvor_HolFische_Ja_Ja()
 {
 	AI_Output(hero, self, "Info_Mod_Halvor_HolFische_Ja_Ja_15_00"); //Ja, aber wie stehts mit einer Belohnung?
-	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_Ja_06_01"); //Wenn du mir die Fische bringst, dann werde ich dir ein paar Goldmünzen dafür geben.
+	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_Ja_26_01"); //Wenn du mir die Fische bringst, dann werde ich dir ein paar Goldmünzen dafür geben.
 	AI_Output(hero, self, "Info_Mod_Halvor_HolFische_Ja_Ja_15_02"); //Ok, ich mach mich dann mal auf den Weg.
 
 	Mod_HalvorHolFischeQuest = TRUE;
@@ -127,9 +127,9 @@ FUNC VOID Info_Mod_Halvor_HierSindFische_Info()
 
 	B_GiveInvItems	(hero, self, ItFo_Fish, 20);
 
-	AI_Output(self, hero, "Info_Mod_Halvor_HierSindFische_06_01"); //Gut, das wird meinen Kunden gefallen.
+	AI_Output(self, hero, "Info_Mod_Halvor_HierSindFische_26_01"); //Gut, das wird meinen Kunden gefallen.
 	AI_Output(hero, self, "Info_Mod_Halvor_HierSindFische_15_02"); //Was ist mit meiner Belohnung?
-	AI_Output(self, hero, "Info_Mod_Halvor_HierSindFische_06_03"); //Achja, hier hast du ein paar Goldmünzen.
+	AI_Output(self, hero, "Info_Mod_Halvor_HierSindFische_26_03"); //Achja, hier hast du ein paar Goldmünzen.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
@@ -163,7 +163,7 @@ FUNC INT Info_Mod_Halvor_Fenia_Condition()
 FUNC VOID Info_Mod_Halvor_Fenia_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Halvor_Fenia_15_00"); //Ich habe da ein paar Frauengeschichten von dir gehört.
-	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_06_01"); //Lachhaft! Aber darüber rede ich nicht mit Fremden. Mit Häftlingen.
+	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_26_01"); //Lachhaft! Aber darüber rede ich nicht mit Fremden. Mit Häftlingen.
 
 	Info_ClearChoices	(Info_Mod_Halvor_Fenia);
 
@@ -182,14 +182,14 @@ FUNC VOID Info_Mod_Halvor_Fenia_Info()
 
 FUNC VOID Info_Mod_Halvor_Fenia_D()
 {
-	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_06_00"); //Abgemacht, aber da gibt es nicht viel zu erzählen.
-	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_06_01"); //Ich weiß nicht, was Fenia für Hirngespinste hat. Doch, ich weiß es, aber nicht, warum.
-	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_06_02"); //Sie ist eifersüchtig auf jede Frau, mit der ich rede, und das sind viele.
-	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_06_03"); //Als sie gesehen hat, dass Sonja einen Fisch bei mir gekauft hat, ist sie fast ausgerastet und hat mir unterstellt, Sonja würde mich nach einer tollen Nacht besuchen kommen.
+	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_26_00"); //Abgemacht, aber da gibt es nicht viel zu erzählen.
+	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_26_01"); //Ich weiß nicht, was Fenia für Hirngespinste hat. Doch, ich weiß es, aber nicht, warum.
+	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_26_02"); //Sie ist eifersüchtig auf jede Frau, mit der ich rede, und das sind viele.
+	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_26_03"); //Als sie gesehen hat, dass Sonja einen Fisch bei mir gekauft hat, ist sie fast ausgerastet und hat mir unterstellt, Sonja würde mich nach einer tollen Nacht besuchen kommen.
 	AI_Output(hero, self, "Info_Mod_Halvor_Fenia_D_15_04"); //An ihren Zweifeln ist also nichts dran?
-	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_06_05"); //Ich war schon seit Jahren nicht mehr im Puff!
-	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_06_06"); //Aber je mehr Fenia mich bedrängt, desto lieber würde ich ihr mal eins auswischen.
-	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_06_07"); //Das würde sie sicher zur Weißglut bringen.
+	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_26_05"); //Ich war schon seit Jahren nicht mehr im Puff!
+	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_26_06"); //Aber je mehr Fenia mich bedrängt, desto lieber würde ich ihr mal eins auswischen.
+	AI_Output(self, hero, "Info_Mod_Halvor_Fenia_D_26_07"); //Das würde sie sicher zur Weißglut bringen.
 
 	Info_ClearChoices	(Info_Mod_Halvor_Fenia);
 };
@@ -208,7 +208,7 @@ FUNC VOID Info_Mod_Halvor_Fenia_C()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Halvor_Fenia_C_06_01"); //Deine Unterstützung brauche ich sicher nicht.
+		AI_Output(self, hero, "Info_Mod_Halvor_Fenia_C_26_01"); //Deine Unterstützung brauche ich sicher nicht.
 
 		Info_ClearChoices	(Info_Mod_Halvor_Fenia);
 	};

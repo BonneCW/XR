@@ -4,7 +4,7 @@ instance Mod_1953_EIS_Gellit_EIS (Npc_Default)
 	name 		= "Gellit";
 	guild 		= GIL_OUT;
 	id 			= 1953;
-	voice 		= 3;
+	voice 		= 26;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

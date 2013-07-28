@@ -5,7 +5,7 @@ instance Mod_7625_KGD_Granmar_VM (Npc_Default)
 	name 		=	"Granmar";
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_OUT;
-	voice 		=	8;
+	voice 		=	26;
 	id 		=	7625;
 	flags		=	2;
 		

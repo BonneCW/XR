@@ -17,12 +17,12 @@ FUNC INT Info_Mod_Ditmar_Hi_Condition()
 FUNC VOID Info_Mod_Ditmar_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Ditmar_Hi_15_00"); //Warum ist es hier so ruhig? Sollte es in Gasthäusern nicht Lärm geben?
-	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_09_01"); //(gedämpft) Schau doch mal zu dem Tisch da vorn. Da sitzen die drei Gründe dafür, dass hier keiner mehr was sagen mag.
+	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_26_01"); //(gedämpft) Schau doch mal zu dem Tisch da vorn. Da sitzen die drei Gründe dafür, dass hier keiner mehr was sagen mag.
 	AI_Output(hero, self, "Info_Mod_Ditmar_Hi_15_02"); //Ein ... etwas ungewohntes Bild.
-	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_09_03"); //Du sagst es.
+	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_26_03"); //Du sagst es.
 	AI_Output(hero, self, "Info_Mod_Ditmar_Hi_15_04"); //Wie konnte das bloß geschehen?
-	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_09_05"); //(verzweifelt) Weiß ich doch nicht! Die marschieren hier einfach ein wie die Orks in Myrtana und bestehen darauf, dass sie sich hier aufhalten dürfen.
-	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_09_06"); //Seitdem können meine Gäste keine normalen Stammtischgespräche mehr führen, weil die Weiber alles mithören.
+	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_26_05"); //(verzweifelt) Weiß ich doch nicht! Die marschieren hier einfach ein wie die Orks in Myrtana und bestehen darauf, dass sie sich hier aufhalten dürfen.
+	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_26_06"); //Seitdem können meine Gäste keine normalen Stammtischgespräche mehr führen, weil die Weiber alles mithören.
 
 	Info_ClearChoices	(Info_Mod_Ditmar_Hi);
 
@@ -54,8 +54,8 @@ FUNC VOID Info_Mod_Ditmar_Hi_D()
 FUNC VOID Info_Mod_Ditmar_Hi_B()
 {
 	AI_Output(hero, self, "Info_Mod_Ditmar_Hi_B_15_00"); //Na und? Die Frauen sind vollkommen im Recht.
-	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_B_09_01"); //Ja, schon, deswegen habe ich ja auch nur versucht, sie durch Bitten zum Gehen zu bewegen. Aber fruchtlos, wie du siehst.
-	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_B_09_02"); //Vielleicht findest du ja einen Weg, sie von hier zu vertreiben ... es soll auch nicht zu deinem Schaden sein!
+	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_B_26_01"); //Ja, schon, deswegen habe ich ja auch nur versucht, sie durch Bitten zum Gehen zu bewegen. Aber fruchtlos, wie du siehst.
+	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_B_26_02"); //Vielleicht findest du ja einen Weg, sie von hier zu vertreiben ... es soll auch nicht zu deinem Schaden sein!
 
 	Info_Mod_Ditmar_Hi_D();
 };
@@ -63,8 +63,8 @@ FUNC VOID Info_Mod_Ditmar_Hi_B()
 FUNC VOID Info_Mod_Ditmar_Hi_A()
 {
 	AI_Output(hero, self, "Info_Mod_Ditmar_Hi_A_15_00"); //Ich verstehe das Problem.
-	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_A_09_01"); //Jemand muss sie von hier vertreiben ... alles Bitten hat nichts geholfen.
-	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_A_09_02"); //Wenn es dir gelingt, soll es dein Schaden nicht sein!
+	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_A_26_01"); //Jemand muss sie von hier vertreiben ... alles Bitten hat nichts geholfen.
+	AI_Output(self, hero, "Info_Mod_Ditmar_Hi_A_26_02"); //Wenn es dir gelingt, soll es dein Schaden nicht sein!
 
 	Info_Mod_Ditmar_Hi_D();
 };
@@ -91,8 +91,8 @@ FUNC INT Info_Mod_Ditmar_DeinLaden_Condition()
 FUNC VOID Info_Mod_Ditmar_DeinLaden_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Ditmar_DeinLaden_15_00"); //Ist das hier dein Laden?
-	AI_Output(self, hero, "Info_Mod_Ditmar_DeinLaden_09_01"); //(geübt) Jawoll. Ein echter Familienbetrieb.
-	AI_Output(self, hero, "Info_Mod_Ditmar_DeinLaden_09_02"); //Was zu trinken gibt es bei meiner Tochter, nur meine Frau gibt's nicht mehr, Adanos habe sie selig.
+	AI_Output(self, hero, "Info_Mod_Ditmar_DeinLaden_26_01"); //(geübt) Jawoll. Ein echter Familienbetrieb.
+	AI_Output(self, hero, "Info_Mod_Ditmar_DeinLaden_26_02"); //Was zu trinken gibt es bei meiner Tochter, nur meine Frau gibt's nicht mehr, Adanos habe sie selig.
 };
 
 INSTANCE Info_Mod_Ditmar_Geruechte (C_INFO)
@@ -124,27 +124,27 @@ FUNC VOID Info_Mod_Ditmar_Geruechte_Info()
 	if (Mod_Jim_Schutz < 2)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Endres_Hi))
 	{
-		AI_Output(self, hero, "Info_Mod_Ditmar_Geruechte_09_01"); //Auf dem Friedhof nahe dem Pass zu den Hofstaatlern soll es angeblich spuken.
-		AI_Output(self, hero, "Info_Mod_Ditmar_Geruechte_09_02"); //Mehrere Buddler wollen von dort auf dem Heimweg markerschütternde Geräusche gehört haben.
+		AI_Output(self, hero, "Info_Mod_Ditmar_Geruechte_26_01"); //Auf dem Friedhof nahe dem Pass zu den Hofstaatlern soll es angeblich spuken.
+		AI_Output(self, hero, "Info_Mod_Ditmar_Geruechte_26_02"); //Mehrere Buddler wollen von dort auf dem Heimweg markerschütternde Geräusche gehört haben.
 
 		didicounter += 1;
 	};
 	if (Npc_KnowsInfo(hero, Info_Mod_Anna_Hi))
 	{
-		AI_Output(self, hero, "Info_Mod_Ditmar_Geruechte_09_03"); //Maria wurde angeblich schon wieder beim Hexen erwischt.
-		AI_Output(self, hero, "Info_Mod_Ditmar_Geruechte_09_04"); //Wenn du mich fragst, ist es nur eine Frage der Zeit, bis sie endlich verbrannt wird.
+		AI_Output(self, hero, "Info_Mod_Ditmar_Geruechte_26_03"); //Maria wurde angeblich schon wieder beim Hexen erwischt.
+		AI_Output(self, hero, "Info_Mod_Ditmar_Geruechte_26_04"); //Wenn du mich fragst, ist es nur eine Frage der Zeit, bis sie endlich verbrannt wird.
 
 		didicounter += 1;
 	};
 	if (Npc_KnowsInfo(hero, Info_Mod_Theodorus_Unruhen4))
 	{
-		AI_Output(self, hero, "Info_Mod_Ditmar_Geruechte_09_05"); //Theodorus macht sich nicht gerade beliebt bei den Leuten. An seiner Stelle wäre ich vorsichtiger.
+		AI_Output(self, hero, "Info_Mod_Ditmar_Geruechte_26_05"); //Theodorus macht sich nicht gerade beliebt bei den Leuten. An seiner Stelle wäre ich vorsichtiger.
 
 		didicounter += 1;
 	};
 	if (didicounter == 0)
 	{
-		AI_Output(self, hero, "Info_Mod_Ditmar_Geruechte_09_06"); //Es passiert in Khorata so viel Komisches, aber was Besonderes war in letzter Zeit nicht dabei.
+		AI_Output(self, hero, "Info_Mod_Ditmar_Geruechte_26_06"); //Es passiert in Khorata so viel Komisches, aber was Besonderes war in letzter Zeit nicht dabei.
 	};
 };
 
@@ -168,8 +168,8 @@ FUNC INT Info_Mod_Ditmar_Buerger_Condition()
 
 FUNC VOID Info_Mod_Ditmar_Buerger_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Ditmar_Buerger_09_00"); //Jeder hat's schon mitbekommen, dass du ab heute zu uns gehörst.
-	AI_Output(self, hero, "Info_Mod_Ditmar_Buerger_09_01"); //Das will begossen werden!
+	AI_Output(self, hero, "Info_Mod_Ditmar_Buerger_26_00"); //Jeder hat's schon mitbekommen, dass du ab heute zu uns gehörst.
+	AI_Output(self, hero, "Info_Mod_Ditmar_Buerger_26_01"); //Das will begossen werden!
 
 	CreateInvItems	(self, ItFo_Beer, 1);
 	CreateInvItems	(hero, ItFo_Beer, 1);
@@ -177,7 +177,7 @@ FUNC VOID Info_Mod_Ditmar_Buerger_Info()
 	B_UseItem	(self, ItFo_Beer);
 	B_UseItem	(hero, ItFo_Beer);
 
-	AI_Output(self, hero, "Info_Mod_Ditmar_Buerger_09_02"); //Viel Spaß hier! Und Spaß kannst du haben. (augenzwinkernd) Nur nicht mit meiner Salmey, verstanden?
+	AI_Output(self, hero, "Info_Mod_Ditmar_Buerger_26_02"); //Viel Spaß hier! Und Spaß kannst du haben. (augenzwinkernd) Nur nicht mit meiner Salmey, verstanden?
 };
 
 INSTANCE Info_Mod_Ditmar_Pickpocket (C_INFO)

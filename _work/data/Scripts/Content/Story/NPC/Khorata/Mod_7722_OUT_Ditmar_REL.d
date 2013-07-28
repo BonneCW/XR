@@ -4,7 +4,7 @@ instance Mod_7722_OUT_Ditmar_REL (Npc_Default)
 	name 		= "Ditmar"; 
 	guild 		= GIL_OUT;
 	id 			= 7722;
-	voice 		= 9;
+	voice 		= 26;
 	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 	

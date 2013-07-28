@@ -20,7 +20,7 @@ FUNC VOID Info_Mod_Bruce_KesselProblem_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Bruce_KesselProblem_06_00"); //(zu sich selbst, lalend) Hähä, das habe ich fantastisch hinbekommen.
 	AI_Output(hero, self, "Info_Mod_Bruce_KesselProblem_15_01"); //(räuspert sich)
-	AI_Output(self, hero, "Info_Mod_Bruce_KesselProblem_06_02"); //(überrascht)Hmm, hä ...? Hey, was bist du denn für einer?
+	AI_Output(self, hero, "Info_Mod_Bruce_KesselProblem_06_02"); //(überrascht) Hmm, hä ...? Hey, was bist du denn für einer?
 	AI_Output(hero, self, "Info_Mod_Bruce_KesselProblem_15_03"); //Ich schau mich hier nur mal um.
 	AI_Output(self, hero, "Info_Mod_Bruce_KesselProblem_06_04"); //Ja, tu das meinetwegen. Aber mach keinen Ärger. Sonst zieh ich dir das Fell über die Ohren.
 	AI_Output(self, hero, "Info_Mod_Bruce_KesselProblem_06_05"); //So wie ... genau, so wie dem Schattenläufer, den ich vor kurzem in den Bergen erledigt habe. Siehst du. Echtes Schattenläuferfell.

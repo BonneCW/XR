@@ -4,7 +4,7 @@ instance Mod_582_NONE_Halvor_NW (Npc_Default)
 	name 		= "Halvor"; 
 	guild 		= GIL_PAL;
 	id 			= 582;
-	voice 		= 6;
+	voice 		= 26;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

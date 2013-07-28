@@ -5,7 +5,7 @@ instance Mod_1017_KGD_Granmar_MT (Npc_Default)
 	name 		=	"Granmar";
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_OUT;
-	voice 		=	8;
+	voice 		=	26;
 	id 			=	1017;
 		
 	//-------- abilities --------
