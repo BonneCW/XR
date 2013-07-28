@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Granmar_VM_Hi_Condition()
 
 FUNC VOID Info_Mod_Granmar_VM_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Granmar_VM_Hi_26_00"); //Ah, da bist du ja. Ich würde sagen wir sichern erst einmal das nächste Lager und den See dort unten. Folge mir!
+	AI_Output(self, hero, "Info_Mod_Granmar_VM_Hi_26_00"); //Ah, da bist du ja. Ich würde sagen, wir sichern erst einmal das nächste Lager und den See dort unten. Folge mir!
 
 	self.aivar[AIV_Partymember] = TRUE;
 
@@ -45,8 +45,8 @@ FUNC INT Info_Mod_Granmar_VM_AtSee_Condition()
 
 FUNC VOID Info_Mod_Granmar_VM_AtSee_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Granmar_VM_AtSee_26_00"); //Ich muss sagen die Keulen erfüllen ihren Zweck, ohne sie wären wir aufgeschmissen.
-	AI_Output(self, hero, "Info_Mod_Granmar_VM_AtSee_26_01"); //Gut, dann gehen wir jetzt tiefer in die Mine, mal sehen was dort unten noch so lauert.
+	AI_Output(self, hero, "Info_Mod_Granmar_VM_AtSee_26_00"); //Ich muss sagen, die Keulen erfüllen ihren Zweck. Ohne sie wären wir aufgeschmissen.
+	AI_Output(self, hero, "Info_Mod_Granmar_VM_AtSee_26_01"); //Gut, dann gehen wir jetzt tiefer in die Mine, mal sehen, was dort unten noch so lauert.
 
 	AI_StopProcessInfos	(self);
 
@@ -74,8 +74,8 @@ FUNC INT Info_Mod_Granmar_VM_AtNager_Condition()
 
 FUNC VOID Info_Mod_Granmar_VM_AtNager_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Granmar_VM_AtNager_26_00"); //Verdammt, was sind das den schon wieder für Viecher?!
-	AI_Output(self, hero, "Info_Mod_Granmar_VM_AtNager_26_01"); //Ok, ich würde sagen wir sichern jetzt erstmal den Teil der Mine, den wir frei gemacht haben.
+	AI_Output(self, hero, "Info_Mod_Granmar_VM_AtNager_26_00"); //Verdammt, was sind das denn schon wieder für Viecher?!
+	AI_Output(self, hero, "Info_Mod_Granmar_VM_AtNager_26_01"); //Na gut - ich würde sagen, wir sichern jetzt erst mal den Teil der Mine, den wir frei gemacht haben.
 	AI_Output(self, hero, "Info_Mod_Granmar_VM_AtNager_26_02"); //Ich gehe zurück zum Eingang und lass dort Erz schürfen, du übernimmst die Wache hier.
 	AI_Output(self, hero, "Info_Mod_Granmar_VM_AtNager_26_03"); //Und geh noch nicht tiefer in die Mine, ich brauch dich hier als Wachposten.
 
@@ -115,7 +115,7 @@ FUNC VOID Info_Mod_Granmar_VM_SpecialErzguardian_Info()
 
 	B_GiveInvItems	(self, hero, ItMi_ErzPaketAndre, 1);
 
-	AI_Output(self, hero, "Info_Mod_Granmar_VM_SpecialErzguardian_26_01"); //Ich halte solange die Stellung, bis du mit den Paladinen zurück bist.
+	AI_Output(self, hero, "Info_Mod_Granmar_VM_SpecialErzguardian_26_01"); //Ich halte so lange die Stellung, bis du mit den Paladinen zurück bist.
 
 	AI_StopProcessInfos	(self);
 
@@ -144,8 +144,8 @@ FUNC INT Info_Mod_Granmar_VM_Trent_Condition()
 
 FUNC VOID Info_Mod_Granmar_VM_Trent_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Granmar_VM_Trent_26_00"); //Ich hätte es wissen müssen. Wenn beim nächsten mal ein Paladin meint "er schickt uns Verstärkung" mache ich mir keine Hoffnungen.
-	AI_Output(self, hero, "Info_Mod_Granmar_VM_Trent_26_01"); //Wer weiß, wieviele Monster uns dort unten auflauern, und sie schicken uns nur einen Mann.
+	AI_Output(self, hero, "Info_Mod_Granmar_VM_Trent_26_00"); //Ich hätte es wissen müssen. Wenn beim nächsten mal ein Paladin meint, er schickt uns Verstärkung, mache ich mir keine Hoffnungen.
+	AI_Output(self, hero, "Info_Mod_Granmar_VM_Trent_26_01"); //Wer weiß, wie viele Monster uns dort unten auflauern, und sie schicken uns nur einen Mann.
 	AI_Output(self, hero, "Info_Mod_Granmar_VM_Trent_26_02"); //Na ja, zumindest scheint der Kerl in Ordnung zu sein. Am besten begleitest du ihn. Ich glaube, er wollte demnächst aufbrechen.
 
 	AI_StopProcessInfos	(self);
@@ -173,7 +173,7 @@ FUNC INT Info_Mod_Granmar_VM_Trent2_Condition()
 
 FUNC VOID Info_Mod_Granmar_VM_Trent2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Granmar_VM_Trent2_26_00"); //Was war los, hab ihr es geschafft? Ist die Mine sauber?
+	AI_Output(self, hero, "Info_Mod_Granmar_VM_Trent2_26_00"); //Was war los? Habt ihr es geschafft? Ist die Mine sauber?
 	AI_Output(hero, self, "Info_Mod_Granmar_VM_Trent2_15_01"); //So weit schon. Wenn ihr nicht zu gierig grabt und noch mehr Monster freilegt, wird die Mine einiges abwerfen.
 	AI_Output(self, hero, "Info_Mod_Granmar_VM_Trent2_26_02"); //Schön zu hören. Gab es Probleme?
 	AI_Output(hero, self, "Info_Mod_Granmar_VM_Trent2_15_03"); //Nichts, was man nicht in den Griff bekommen konnte.

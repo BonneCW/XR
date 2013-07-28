@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Halvor_Hi_Condition()
 FUNC VOID Info_Mod_Halvor_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
-	AI_Output(self, hero, "Info_Mod_Halvor_Hi_26_01"); //Ich bin Halvor, der Fischhändler.
+	AI_Output(self, hero, "Info_Mod_Halvor_Hi_26_01"); //Ich bin Halvor. Bei mir kriegst du immer frische Fische.
 	
 	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Halvor im Hafenviertel ist Fischhändler.");
@@ -66,8 +66,9 @@ FUNC VOID Info_Mod_Halvor_HolFische_Nein()
 FUNC VOID Info_Mod_Halvor_HolFische_Ja()
 {
 	AI_Output(hero, self, "Info_Mod_Halvor_HolFische_Ja_15_00"); //Ja, was gibt's denn?
-	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_26_01"); //Wie du weißt, bin ich ja hier der Fischerhändler. Meine Fische bekomme ich von den Fischern Farim und William.
-	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_26_02"); //Könntest du mir ihre Fische abholen? Bezahlt hab ich sie schon.
+	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_26_01"); //Wie du weißt, bin ich ja hier der Fischhändler, und ich sitze gerade fast auf dem Trockenen.
+	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_26_02"); //Meine Fische bekomme ich normalerweise von den Fischern Farim und William, aber die beiden haben sich seit Tagen nicht blicken lassen.
+	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_26_03"); //Könntest du mir ihre Fische abholen? Bezahlt hab ich sie schon, nur kann ich meinen Stand nicht allein lassen.
 
 	Info_ClearChoices	(Info_Mod_Halvor_HolFische);
 
@@ -87,9 +88,10 @@ FUNC VOID Info_Mod_Halvor_HolFische_Ja_Nein()
 
 FUNC VOID Info_Mod_Halvor_HolFische_Ja_Ja()
 {
-	AI_Output(hero, self, "Info_Mod_Halvor_HolFische_Ja_Ja_15_00"); //Ja, aber wie stehts mit einer Belohnung?
-	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_Ja_26_01"); //Wenn du mir die Fische bringst, dann werde ich dir ein paar Goldmünzen dafür geben.
-	AI_Output(hero, self, "Info_Mod_Halvor_HolFische_Ja_Ja_15_02"); //Ok, ich mach mich dann mal auf den Weg.
+	AI_Output(hero, self, "Info_Mod_Halvor_HolFische_Ja_Ja_15_00"); //Ja, aber wie steht's mit einer Belohnung?
+	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_Ja_26_01"); //(verächtlich) Natürlich, jede kleine Gefälligkeit will in barer Münze bezahlt werden, stimmt's?
+	AI_Output(self, hero, "Info_Mod_Halvor_HolFische_Ja_Ja_26_02"); //Na schön, wenn du deine Sache gut erledigst, sind ein paar Goldstücke drin.
+	AI_Output(hero, self, "Info_Mod_Halvor_HolFische_Ja_Ja_15_03"); //Das wollte ich hören. Ich mach mich dann mal auf den Weg.
 
 	Mod_HalvorHolFischeQuest = TRUE;
 
@@ -128,8 +130,8 @@ FUNC VOID Info_Mod_Halvor_HierSindFische_Info()
 	B_GiveInvItems	(hero, self, ItFo_Fish, 20);
 
 	AI_Output(self, hero, "Info_Mod_Halvor_HierSindFische_26_01"); //Gut, das wird meinen Kunden gefallen.
-	AI_Output(hero, self, "Info_Mod_Halvor_HierSindFische_15_02"); //Was ist mit meiner Belohnung?
-	AI_Output(self, hero, "Info_Mod_Halvor_HierSindFische_26_03"); //Achja, hier hast du ein paar Goldmünzen.
+	AI_Output(hero, self, "Info_Mod_Halvor_HierSindFische_15_02"); //Und dir gefällt's auch?
+	AI_Output(self, hero, "Info_Mod_Halvor_HierSindFische_26_03"); //Ach ja, hier hast du ein paar Goldmünzen.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
