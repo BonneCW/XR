@@ -23,9 +23,14 @@ FUNC VOID Info_Mod_Lich_Hi_Info()
 
 	AI_StopProcessInfos	(self);
 
-	B_Attack	(Mod_7290_PAL_Athos_NW, hero, AR_GuildEnemy, 0);
-	B_Attack	(Mod_7291_PAL_Aramis_NW, hero, AR_GuildEnemy, 0);
-	B_Attack	(Mod_7292_PAL_Porthos_NW, hero, AR_GuildEnemy, 0);
+	Mod_7290_PAL_Athos_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_7290_PAL_Athos_NW, GIL_STRF);
+
+	Mod_7291_PAL_Aramis_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_7291_PAL_Aramis_NW, GIL_STRF);
+
+	Mod_7292_PAL_Porthos_NW.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Mod_7292_PAL_Porthos_NW, GIL_STRF);
 
 	Wld_InsertNpc	(Kobold, "NW_TROLLAREA_TROLLROCKCAVE_06");
 	Wld_InsertNpc	(Kobold, "NW_TROLLAREA_TROLLROCKCAVE_06");
