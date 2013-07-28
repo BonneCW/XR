@@ -6,7 +6,7 @@ instance Info_Mod_HagenWache_Larius (C_INFO)
 	information	= Info_Mod_HagenWache_Larius_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "";
+	description	= "Ich muss dringend zu Larius.";
 };                       
 
 func int Info_Mod_HagenWache_Larius_Condition()
@@ -20,13 +20,8 @@ func int Info_Mod_HagenWache_Larius_Condition()
 
 func void Info_Mod_HagenWache_Larius_Info()
 {
-	AI_Output (hero, self, "Info_Mod_HagenWache_Larius_15_01"); //Was ist das für ein Gebäude?
-	AI_Output (self, hero, "Info_Mod_HagenWache_Larius_09_02"); //(lispelt) Ist Lord Hagen drinne. Nur Ritter und Paladine dürfen zu ihm.
-	AI_Output (hero, self, "Info_Mod_HagenWache_Larius_15_03"); //Kannst du keine Ausnahme machen?
-	AI_Output (self, hero, "Info_Mod_HagenWache_Larius_09_04"); //(entschuldigend) Nee, geht nicht. Nur wenn Lord Hagen sagt, kann ich Ausnahme machen.
-
-	hero.aivar[AIV_LastDistToWP] = Npc_GetDistToWP(hero, HagenWache_Checkpoint);
-	self.aivar[AIV_Guardpassage_Status] = GP_FirstWarnGiven;
+	AI_Output (hero, self, "Info_Mod_HagenWache_Larius_15_00"); //Ich muss dringend zu Larius.
+	AI_Output (self, hero, "Info_Mod_HagenWache_Larius_09_01"); //Läuft hier im Viertel rum. Aber weiß nicht, wo. Musste gucken.
 };
 
 const string HagenWache_Checkpoint	= "NW_CITY_CITYHALL_IN";	//WP hinter City-Tor vom Spielstart aus!

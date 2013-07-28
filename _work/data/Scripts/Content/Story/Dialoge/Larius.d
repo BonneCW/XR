@@ -51,6 +51,83 @@ FUNC VOID Info_Mod_Larius_Hi_Info()
 	B_Attack	(self, hero, AR_GuildEnemy, 0);
 };
 
+INSTANCE Info_Mod_Larius_Hallo (C_INFO)
+{
+	npc		= Mod_591_NONE_Larius_NW;
+	nr		= 1;
+	condition	= Info_Mod_Larius_Hallo_Condition;
+	information	= Info_Mod_Larius_Hallo_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Du bist ja schick angezogen.";
+};
+
+FUNC INT Info_Mod_Larius_Hallo_Condition()
+{
+	return 1;
+};
+
+FUNC VOID Info_Mod_Larius_Hallo_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Larius_Hallo_15_00"); //Du bist ja schick angezogen.
+	AI_Output(self, hero, "Info_Mod_Larius_Hallo_01_01"); //(belustigt) Ja, das stimmt. Damit man mich sofort als den Statthalter erkennt und nicht frech von der Seite anredet.
+};
+
+INSTANCE Info_Mod_Larius_Aufgaben (C_INFO)
+{
+	npc		= Mod_591_NONE_Larius_NW;
+	nr		= 1;
+	condition	= Info_Mod_Larius_Aufgaben_Condition;
+	information	= Info_Mod_Larius_Aufgaben_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Was sind deine Aufgaben als Statthalter?";
+};
+
+FUNC INT Info_Mod_Larius_Aufgaben_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Larius_Hallo))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Larius_Ornament))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Larius_Aufgaben_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Larius_Aufgaben_15_00"); //Was sind deine Aufgaben als Statthalter?
+	AI_Output(self, hero, "Info_Mod_Larius_Aufgaben_01_01"); //Im Moment kann ich mich nur um den Abfall kümmern, für den sich die Paladine zu wichtig sind.
+	AI_Output(self, hero, "Info_Mod_Larius_Aufgaben_01_02"); //Ich weiß, der König hat es so verfügt. Aber ich hoffe doch, dass die Besetzung der Stadt bald ihr Ende findet.
+	AI_Output(self, hero, "Info_Mod_Larius_Aufgaben_01_03"); //So lange widme ich mich dem Studium der alten Rechtsschriften oder lustwandle durch die Straßen und treffe mich mit Freunden...
+};
+
+INSTANCE Info_Mod_Larius_Haeftlinge (C_INFO)
+{
+	npc		= Mod_591_NONE_Larius_NW;
+	nr		= 1;
+	condition	= Info_Mod_Larius_Haeftlinge_Condition;
+	information	= Info_Mod_Larius_Haeftlinge_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Welche Meinung hast du von den Häftlingen des Minentals?";
+};
+
+FUNC INT Info_Mod_Larius_Haeftlinge_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Larius_Hallo))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Larius_Ornament))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Larius_Haeftlinge_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Larius_Haeftlinge_15_00"); //Welche Meinung hast du von den Häftlingen des Minentals?
+	AI_Output(self, hero, "Info_Mod_Larius_Haeftlinge_01_01"); //Ist das eine Fangfrage? Das ist mir zu politisch, als dass ich es ehrlich beantworten könnte.
+	AI_Output(self, hero, "Info_Mod_Larius_Haeftlinge_01_02"); //Aber so viel sei verraten: Nicht alles aus dem Minental, was nun vergangen ist, war so schlecht, wie es gemacht wurde.
+};
+
 INSTANCE Info_Mod_Larius_Ornament (C_INFO)
 {
 	npc		= Mod_591_NONE_Larius_NW;
