@@ -121,15 +121,27 @@ FUNC VOID Info_Mod_Fisk_NW_LeiseHoffnung_Info()
 
 	Info_ClearChoices	(Info_Mod_Fisk_NW_LeiseHoffnung);
 
+	Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, DIALOG_BACK, Info_Mod_Fisk_NW_LeiseHoffnung_BACK);
+
 	if (Mod_Fisk_LH_Mud == 0)
+	&& (Mod_Mud_Unterwegs == 3)
+	{
+		Mod_Fisk_LeiseHoffnung += 1;
+
+		Mod_Fisk_LH_Mud = 1;
+	};
+	if (Mod_Fisk_LH_Mud == 0)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Mud_REL_Hi))
 	{
 		Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, "Mud hütet Schafe in Relendel.", Info_Mod_Fisk_NW_LeiseHoffnung_C);
 	};
 	if (Mod_Fisk_LH_Fingers == 0)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Fingers_Kap4))
 	{
 		Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, "Fingers ist bei den Banditen. Er scheint ganz gut zurecht zu kommen.", Info_Mod_Fisk_NW_LeiseHoffnung_B);
 	};
 	if (Mod_Fisk_LH_Scatty == 0)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Scatty_Kap4))
 	{
 		Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, "Ich bin Scatty im Sumpflager begegnet.", Info_Mod_Fisk_NW_LeiseHoffnung_A);
 	};
@@ -154,21 +166,6 @@ FUNC VOID Info_Mod_Fisk_NW_LeiseHoffnung_D()
 	CurrentNQ += 1;
 
 	Info_ClearChoices	(Info_Mod_Fisk_NW_LeiseHoffnung);
-
-	Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, DIALOG_BACK, Info_Mod_Fisk_NW_LeiseHoffnung_BACK);
-
-	if (Mod_Fisk_LH_Mud == 0)
-	{
-		Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, "Mud hütet Schafe in Relendel.", Info_Mod_Fisk_NW_LeiseHoffnung_C);
-	};
-	if (Mod_Fisk_LH_Fingers == 0)
-	{
-		Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, "Fingers ist bei den Banditen. Er scheint ganz gut zurecht zu kommen.", Info_Mod_Fisk_NW_LeiseHoffnung_B);
-	};
-	if (Mod_Fisk_LH_Scatty == 0)
-	{
-		Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, "Ich bin Scatty im Sumpflager begegnet.", Info_Mod_Fisk_NW_LeiseHoffnung_A);
-	};
 };
 
 FUNC VOID Info_Mod_Fisk_NW_LeiseHoffnung_BACK()
@@ -184,7 +181,9 @@ FUNC VOID Info_Mod_Fisk_NW_LeiseHoffnung_C()
 
 	Mod_Fisk_LeiseHoffnung += 1;
 
-	if (Mod_Fisk_LeiseHoffnung == 1)
+	Mod_Fisk_LH_Mud = 1;
+
+	if (Mod_Fisk_LeiseHoffnung == 3)
 	{
 		Info_Mod_Fisk_NW_LeiseHoffnung_D();
 	}
@@ -193,21 +192,6 @@ FUNC VOID Info_Mod_Fisk_NW_LeiseHoffnung_C()
 		B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
 		B_GivePlayerXP	(200);
-	};
-
-	Mod_Fisk_LH_Mud = 1;
-
-	Info_ClearChoices	(Info_Mod_Fisk_NW_LeiseHoffnung);
-
-	Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, DIALOG_BACK, Info_Mod_Fisk_NW_LeiseHoffnung_BACK);
-
-	if (Mod_Fisk_LH_Fingers == 0)
-	{
-		Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, "Fingers ist bei den Banditen. Er scheint ganz gut zurecht zu kommen.", Info_Mod_Fisk_NW_LeiseHoffnung_B);
-	};
-	if (Mod_Fisk_LH_Scatty == 0)
-	{
-		Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, "Ich bin Scatty im Sumpflager begegnet.", Info_Mod_Fisk_NW_LeiseHoffnung_A);
 	};
 };
 
@@ -219,7 +203,9 @@ FUNC VOID Info_Mod_Fisk_NW_LeiseHoffnung_B()
 
 	Mod_Fisk_LeiseHoffnung += 1;
 
-	if (Mod_Fisk_LeiseHoffnung == 1)
+	Mod_Fisk_LH_Fingers = 1;
+
+	if (Mod_Fisk_LeiseHoffnung == 3)
 	{
 		Info_Mod_Fisk_NW_LeiseHoffnung_D();
 	}
@@ -228,21 +214,6 @@ FUNC VOID Info_Mod_Fisk_NW_LeiseHoffnung_B()
 		B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
 		B_GivePlayerXP	(200);
-	};
-
-	Mod_Fisk_LH_Fingers = 1;
-
-	Info_ClearChoices	(Info_Mod_Fisk_NW_LeiseHoffnung);
-
-	Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, DIALOG_BACK, Info_Mod_Fisk_NW_LeiseHoffnung_BACK);
-
-	if (Mod_Fisk_LH_Mud == 0)
-	{
-		Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, "Mud hütet Schafe in Relendel.", Info_Mod_Fisk_NW_LeiseHoffnung_C);
-	};
-	if (Mod_Fisk_LH_Scatty == 0)
-	{
-		Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, "Ich bin Scatty im Sumpflager begegnet.", Info_Mod_Fisk_NW_LeiseHoffnung_A);
 	};
 };
 
@@ -254,7 +225,9 @@ FUNC VOID Info_Mod_Fisk_NW_LeiseHoffnung_A()
 
 	Mod_Fisk_LeiseHoffnung += 1;
 
-	if (Mod_Fisk_LeiseHoffnung == 1)
+	Mod_Fisk_LH_Scatty = 1;
+
+	if (Mod_Fisk_LeiseHoffnung == 3)
 	{
 		Info_Mod_Fisk_NW_LeiseHoffnung_D();
 	}
@@ -263,21 +236,6 @@ FUNC VOID Info_Mod_Fisk_NW_LeiseHoffnung_A()
 		B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
 		B_GivePlayerXP	(200);
-	};
-
-	Mod_Fisk_LH_Scatty = 1;
-
-	Info_ClearChoices	(Info_Mod_Fisk_NW_LeiseHoffnung);
-
-	Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, DIALOG_BACK, Info_Mod_Fisk_NW_LeiseHoffnung_BACK);
-
-	if (Mod_Fisk_LH_Mud == 0)
-	{
-		Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, "Mud hütet Schafe in Relendel.", Info_Mod_Fisk_NW_LeiseHoffnung_C);
-	};
-	if (Mod_Fisk_LH_Fingers == 0)
-	{
-		Info_AddChoice	(Info_Mod_Fisk_NW_LeiseHoffnung, "Fingers ist bei den Banditen. Er scheint ganz gut zurecht zu kommen.", Info_Mod_Fisk_NW_LeiseHoffnung_B);
 	};
 };
 
