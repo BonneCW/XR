@@ -4068,7 +4068,7 @@ func void UseWilfriedsTagebuchseite ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "Was gibt es Schöneres als der Stadt zu entfliehen, dem Lärm, dem Dreck, den Leuten? Seit ich diese kleine Höhle knapp vor der Stadt entdeckt habe, besuche ich häufig. Ich habe sie mir so weit eingerichtet, dass ich dort jahrelang leben könnte (man weiß ja nie, was so passiert). Ganz besonders freue ich mich immer auf meine Goldtruhe. Ich liebe es, mit meinen Händen die Goldstücke zu berühren, die ich mir in Kleinstarbeit erworben und auch verdient habe. Vielleicht bin ich bald wirklich so weit, dass ich spurlos verschwinden kann... aber vorher gibt es noch einige, mit denen ich abrechnen will!"					);
+					Doc_PrintLines	( nDocID,  0, "Was gibt es Schöneres als der Stadt zu entfliehen, dem Lärm, dem Dreck, den Leuten? Seit ich diese kleine Höhle knapp vor der Stadt entdeckt habe, besuche ich sie häufig. Ich habe sie mir so weit eingerichtet, dass ich dort jahrelang leben könnte (man weiß ja nie, was so passiert). Ganz besonders freue ich mich immer auf meine Goldtruhe. Ich liebe es, mit meinen Händen die Goldstücke zu berühren, die ich mir in Kleinstarbeit erworben und auch verdient habe. Vielleicht bin ich bald wirklich so weit, dass ich spurlos verschwinden kann... aber vorher gibt es noch einige, mit denen ich abrechnen will!"					);
 
 					Doc_Show		( nDocID );
 

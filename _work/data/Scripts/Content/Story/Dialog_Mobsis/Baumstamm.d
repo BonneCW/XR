@@ -237,9 +237,9 @@ FUNC VOID PC_Baumstamm_SchwererAst_Info()
 
 	AstAnzahl = (Npc_HasItems(hero, ItMw_1h_Bau_Mace));
 	Npc_RemoveInvItems	(hero, ItMw_1h_Bau_Mace, AstAnzahl);
-	CreateInvItems	(hero, ItMi_Ast, AstAnzahl*3);
+	CreateInvItems	(hero, ItMi_Ast, AstAnzahl * 5);
 
-	Print (ConcatStrings(IntToString(AstAnzahl*3), " Äste erhalten!"));
+	Print (ConcatStrings(IntToString(AstAnzahl * 5), " Äste erhalten!"));
 
 	B_ENDPRODUCTIONDIALOG();
 };

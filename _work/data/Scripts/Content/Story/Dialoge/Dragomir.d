@@ -728,7 +728,7 @@ FUNC VOID Info_Mod_Dragomir_Mitmachen_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_JG_JAGDGEBIETE, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_JG_JAGDGEBIETE, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_JG_JAGDGEBIETE, "Dragomir hat mich gebeten die vier Jäger Gaan, Nandor, Grimbald und Grom aufzusuchen. Gaan befindet sich am Pass zum Minental, Grom ist auf Onars Hof, Nandor ist im dunklen Wald in der Nähe eines Steinkreises und Grimbald ist an einem See in der nähe des schwarzen Trolls.");
+	B_LogEntry	(TOPIC_MOD_JG_JAGDGEBIETE, "Dragomir hat mich gebeten die vier Jäger Gaan, Nandor, Grimbald und Grom aufzusuchen. Gaan befindet sich am Pass zum Minental, Grom ist auf Onars Hof, Nandor ist im dunklen Wald in der Nähe eines Steinkreises und Grimbald ist an einem See in der Nähe des schwarzen Trolls.");
 };
 
 INSTANCE Info_Mod_Dragomir_WoIst (C_INFO)
