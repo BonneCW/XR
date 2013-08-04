@@ -398,7 +398,11 @@ FUNC VOID Info_Mod_Lares_LeeDJGHelfer2_Info()
 	B_StartOtherRoutine	(Mod_798_SLD_Wolf_NW, "HEXEN");
 	B_StartOtherRoutine	(Mod_527_SLD_Torlof_NW, "HEXEN");
 	B_StartOtherRoutine	(self, "HEXEN");
-	B_StartOtherRoutine	(Mod_1200_SLD_Soeldner_NW, "HEXEN");
+
+	if (!Npc_KnowsInfo(hero, Info_Mod_Hock_NahkampfJG)) {
+		B_StartOtherRoutine	(Mod_1200_SLD_Soeldner_NW, "HEXEN");
+	};
+
 	B_StartOtherRoutine	(Mod_1201_SLD_Soeldner_NW, "HEXEN");
 	B_StartOtherRoutine	(Mod_1202_SLD_Soeldner_NW, "HEXEN");
 	B_StartOtherRoutine	(Mod_1203_SLD_Soeldner_NW, "HEXEN");
@@ -441,7 +445,11 @@ FUNC VOID Info_Mod_Lares_Knucker_Info()
 	B_StartOtherRoutine	(Mod_798_SLD_Wolf_NW, "KNUCKER");
 	B_StartOtherRoutine	(Mod_527_SLD_Torlof_NW, "KNUCKER");
 	B_StartOtherRoutine	(self, "KNUCKER");
-	B_StartOtherRoutine	(Mod_1200_SLD_Soeldner_NW, "KNUCKER");
+
+	if (!Npc_KnowsInfo(hero, Info_Mod_Hock_NahkampfJG)) {
+		B_StartOtherRoutine	(Mod_1200_SLD_Soeldner_NW, "KNUCKER");
+	};
+
 	B_StartOtherRoutine	(Mod_1201_SLD_Soeldner_NW, "KNUCKER");
 	B_StartOtherRoutine	(Mod_1202_SLD_Soeldner_NW, "KNUCKER");
 	B_StartOtherRoutine	(Mod_1203_SLD_Soeldner_NW, "KNUCKER");
@@ -504,7 +512,11 @@ FUNC VOID Info_Mod_Lares_KnuckerTot_Info()
 	B_StartOtherRoutine	(Mod_798_SLD_Wolf_NW, "START");
 	B_StartOtherRoutine	(Mod_527_SLD_Torlof_NW, "PRESTART");
 	B_StartOtherRoutine	(self, "START");
-	B_StartOtherRoutine	(Mod_1200_SLD_Soeldner_NW, "START");
+
+	if (!Npc_KnowsInfo(hero, Info_Mod_Hock_NahkampfJG)) {
+		B_StartOtherRoutine	(Mod_1200_SLD_Soeldner_NW, "START");
+	};
+
 	B_StartOtherRoutine	(Mod_1201_SLD_Soeldner_NW, "START");
 	B_StartOtherRoutine	(Mod_1202_SLD_Soeldner_NW, "START");
 	B_StartOtherRoutine	(Mod_1203_SLD_Soeldner_NW, "START");
