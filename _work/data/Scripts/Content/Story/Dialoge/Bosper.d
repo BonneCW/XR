@@ -473,7 +473,7 @@ FUNC VOID Info_Mod_Bosper_LehrlingQuest_Info()
 	AI_Output(self, hero, "Info_Mod_Bosper_LehrlingQuest_11_01"); //(prüfend) Ja, die sind zu gebrauchen.
 	AI_Output(self, hero, "Info_Mod_Bosper_LehrlingQuest_11_02"); //Hier hast du etwas Geld. Aber gib es nicht für Bier und leichte Mädchen aus!
 
-	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
+	B_GiveInvItems	(self, hero, ItMi_Gold, (5 * Value_WargFur_Rein) / 2);
 
 	AI_Output(self, hero, "Info_Mod_Bosper_LehrlingQuest_11_03"); //Da du dich als einigermaßen geschickt erwiesen hast, will ich dich nun in die Kunst der Pfeilherstellung einführen.
 	AI_Output(self, hero, "Info_Mod_Bosper_LehrlingQuest_11_04"); //Einen normalen Pfeil zu schnitzen, ist selbst für den blutigen Anfänger kein Problem.
