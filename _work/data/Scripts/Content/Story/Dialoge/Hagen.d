@@ -984,9 +984,10 @@ INSTANCE Info_Mod_Hagen_AndreVermaechtnis (C_INFO)
 
 FUNC INT Info_Mod_Hagen_AndreVermaechtnis_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Lukas_Andre))
+	if ((Npc_KnowsInfo(hero, Info_Mod_Lukas_Andre))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Theodorus_Andre))
-	|| (Npc_KnowsInfo(hero, Info_Mod_Wendel_Andre))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Wendel_Andre)))
+	&& (hero.guild == GIL_PAL)
 	{
 		return 1;
 	};
@@ -1035,6 +1036,7 @@ INSTANCE Info_Mod_Hagen_AndreVermaechtnis2 (C_INFO)
 FUNC INT Info_Mod_Hagen_AndreVermaechtnis2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Lares_Friedensbote))
+	&& (hero.guild == GIL_PAL)
 	{
 		return 1;
 	};
@@ -1142,6 +1144,7 @@ INSTANCE Info_Mod_Hagen_AndreVermaechtnis3 (C_INFO)
 FUNC INT Info_Mod_Hagen_AndreVermaechtnis3_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Till_InnosNase2))
+	&& (hero.guild == GIL_PAL)
 	{
 		return 1;
 	};
@@ -1190,6 +1193,7 @@ INSTANCE Info_Mod_Hagen_AndreVermaechtnis4 (C_INFO)
 FUNC INT Info_Mod_Hagen_AndreVermaechtnis4_Condition()
 {
 	if (Mod_PAL_MikaHehler > 0)
+	&& (hero.guild == GIL_PAL)
 	{
 		return 1;
 	};
@@ -1251,6 +1255,7 @@ FUNC INT Info_Mod_Hagen_AndreVermaechtnis5_Condition()
 {
 	if (Mod_PAL_MikaHehler == 1)
 	&& (Npc_HasItems(hero, ItKe_Hotel) == 1)
+	&& (hero.guild == GIL_PAL)
 	{
 		return 1;
 	};
@@ -1314,6 +1319,7 @@ FUNC INT Info_Mod_Hagen_AndreVermaechtnis6_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Hagen_AndreVermaechtnis5))
 	&& (Wld_GetDay() > Mod_PAL_Diebesgilde_Day)
 	&& (Mod_PAL_Diebesgilde == 0)
+	&& (hero.guild == GIL_PAL)
 	{
 		return 1;
 	};
@@ -1352,6 +1358,7 @@ FUNC INT Info_Mod_Hagen_AndreVermaechtnis7_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Wambo_AndreVermaechtnis))
 	&& (Mod_PAL_Diebesgilde == 1)
+	&& (hero.guild == GIL_PAL)
 	{
 		return 1;
 	};
@@ -1384,6 +1391,7 @@ FUNC INT Info_Mod_Hagen_AndreVermaechtnis8_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Hagen_AndreVermaechtnis3))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Urnol_Daemonisch))
+	&& (hero.guild == GIL_PAL)
 	{
 		return 1;
 	};
@@ -1427,6 +1435,7 @@ FUNC INT Info_Mod_Hagen_AndreVermaechtnis9_Condition()
 {
 	if (Mod_Gilde == 3)
 	&& (Mod_Enter_Minental_04)
+	&& (hero.guild == GIL_PAL)
 	{
 		return 1;
 	};
@@ -1500,6 +1509,7 @@ FUNC INT Info_Mod_Hagen_AndreVermaechtnis10_Condition()
 	&& (Npc_IsDead(Mod_7694_BDT_Bandit_NW))
 	&& (Npc_IsDead(Mod_7695_BDT_Bandit_NW))
 	&& (Npc_IsDead(Mod_7696_BDT_Bandit_NW))
+	&& (hero.guild == GIL_PAL)
 	{
 		return 1;
 	};
@@ -1551,6 +1561,7 @@ FUNC INT Info_Mod_Hagen_AndreVermaechtnis11_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Hagen_AndreVermaechtnis10))
 	&& (Wld_GetDay()-3 > Mod_Hagen_KG_Day)
+	&& (hero.guild == GIL_PAL)
 	{
 		return 1;
 	};
@@ -1608,6 +1619,7 @@ INSTANCE Info_Mod_Hagen_AndreVermaechtnis12 (C_INFO)
 FUNC INT Info_Mod_Hagen_AndreVermaechtnis12_Condition()
 {
 	if (Mod_Kap4_KGOrks >= 2)
+	&& (hero.guild == GIL_PAL)
 	{
 		return 1;
 	};
