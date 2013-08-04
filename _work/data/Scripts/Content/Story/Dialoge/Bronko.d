@@ -10,7 +10,10 @@ INSTANCE Info_Mod_Bronko_Hi (C_INFO)
 
 FUNC INT Info_Mod_Bronko_Hi_Condition()
 {
-	return 1;
+	if (!Npc_IsDead(Mod_541_NONE_Till_NW))
+	{
+		return 1;
+	};
 };
 
 FUNC VOID Info_Mod_Bronko_Hi_Info()
@@ -40,6 +43,7 @@ INSTANCE Info_Mod_Bronko_Streit02 (C_INFO)
 FUNC INT Info_Mod_Bronko_Streit02_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Till_Bronko))
+	&& (!Npc_IsDead(Mod_541_NONE_Till_NW))
 	{
 		return 1;
 	};
@@ -69,6 +73,7 @@ INSTANCE Info_Mod_Bronko_Streit03 (C_INFO)
 FUNC INT Info_Mod_Bronko_Streit03_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Till_Bronko02))
+	&& (!Npc_IsDead(Mod_541_NONE_Till_NW))
 	{
 		return 1;
 	};
@@ -98,6 +103,7 @@ INSTANCE Info_Mod_Bronko_Streit04 (C_INFO)
 FUNC INT Info_Mod_Bronko_Streit04_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Till_Bronko03))
+	&& (!Npc_IsDead(Mod_541_NONE_Till_NW))
 	{
 		return 1;
 	};
