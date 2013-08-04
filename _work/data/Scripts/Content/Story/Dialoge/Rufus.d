@@ -41,6 +41,8 @@ FUNC VOID Info_Mod_Rufus_Hi_B()
 
 	B_StartOtherRoutine	(self, "PASS");
 
+	self.aivar[AIV_Partymember] = TRUE;
+
 	Mod_SLD_Rufus = 1;
 };
 
@@ -96,6 +98,8 @@ FUNC VOID Info_Mod_Rufus_WrongGuide_B()
 
 	AI_StopProcessInfos	(self);
 
+	self.aivar[AIV_Partymember] = FALSE;
+
 	B_Attack	(self, hero, AR_None, 0);
 
 	Mod_SLD_Rufus = 2;
@@ -135,6 +139,8 @@ FUNC VOID Info_Mod_Rufus_WrongGuide02_Info()
 	AI_Output(self, hero, "Info_Mod_Rufus_WrongGuide02_02_00"); //Du willst mich wohl verarschen. Na warte!
 
 	AI_StopProcessInfos	(self);
+
+	self.aivar[AIV_Partymember] = FALSE;
 
 	B_Attack	(self, hero, AR_None, 0);
 
@@ -219,6 +225,8 @@ FUNC VOID Info_Mod_Rufus_RightGuide_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "TOT");
+
+	self.aivar[AIV_Partymember] = FALSE;
 
 	Mod_SLD_Rufus = 4;
 
