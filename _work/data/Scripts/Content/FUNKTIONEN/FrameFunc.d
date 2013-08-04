@@ -295,7 +295,7 @@ FUNC VOID FRAMEFUNC ()
 	}
 	else
 	{
-		B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_RUMP);
+		//B_SetAivar(hero, AIV_FernkampfHitZone, TARGET_RUMP);
 	};
 
 	FrameCounter += 1;
