@@ -1843,7 +1843,6 @@ FUNC VOID DAUERFUNC_01()
 	// Held quatsch oder auch nicht
 
 	if (B_GetAivar(hero, AIV_INVINCIBLE) == TRUE)
-	|| (Mod_KampfLaeuft)
 	|| (CutsceneAn)
 	|| (playerIsTransformed)
 	|| (Inventory_Open)
