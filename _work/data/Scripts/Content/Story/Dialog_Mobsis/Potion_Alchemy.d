@@ -3072,7 +3072,7 @@ FUNC VOID PC_PotionAlchemy_WaffeVergiften_Gewaechsgift()
 	Info_ClearChoices	(PC_PotionAlchemy_WaffeVergiften);
 };
 
-// Stengel
+// Stängel
 
 INSTANCE PC_PotionAlchemy_Joint (C_Info)
 {
@@ -3081,7 +3081,7 @@ INSTANCE PC_PotionAlchemy_Joint (C_Info)
 	condition		= PC_PotionAlchemy_Joint_Condition;
 	information		= PC_PotionAlchemy_Joint_Info;
 	permanent		= TRUE;
-	description		= "Stengel drehen"; 
+	description		= "Stängel drehen"; 
 };
 
 FUNC INT PC_PotionAlchemy_Joint_Condition ()
@@ -3100,20 +3100,20 @@ FUNC VOID PC_PotionAlchemy_Joint_Info()
 
 	if (Rezept_Traumruf == TRUE)
 	{
-		Info_AddChoice	(PC_PotionAlchemy_Joint, "Traumruf herstellen (1 Stengel)", PC_PotionAlchemy_Joint_Traumruf);
+		Info_AddChoice	(PC_PotionAlchemy_Joint, "Traumruf herstellen (1 Stängel)", PC_PotionAlchemy_Joint_Traumruf);
 	};
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Jeremiah_Kraut))
 	{
-		Info_AddChoice	(PC_PotionAlchemy_Joint, "Herkulesstengel herstellen (1 Stengel)", PC_PotionAlchemy_Joint_Herkulesstengel);
+		Info_AddChoice	(PC_PotionAlchemy_Joint, "Herkulesstängel herstellen (1 Stängel)", PC_PotionAlchemy_Joint_Herkulesstengel);
 	};
 
 	if (Green_Extrem == TRUE)
 	{
-		Info_AddChoice	(PC_PotionAlchemy_Joint, "Grünen Novizen herstellen (1 Stengel)", PC_PotionAlchemy_Joint_GrNovize);
+		Info_AddChoice	(PC_PotionAlchemy_Joint, "Grünen Novizen herstellen (1 Stängel)", PC_PotionAlchemy_Joint_GrNovize);
 	};
 
-	Info_AddChoice	(PC_PotionAlchemy_Joint, "Sumpfkraut verarbeiten (1 Stengel)", PC_PotionAlchemy_Joint_Normal);
+	Info_AddChoice	(PC_PotionAlchemy_Joint, "Sumpfkraut verarbeiten (1 Stängel)", PC_PotionAlchemy_Joint_Normal);
 };
 
 FUNC VOID PC_PotionAlchemy_Joint_EXIT()

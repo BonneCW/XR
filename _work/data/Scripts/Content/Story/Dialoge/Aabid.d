@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Aabid_Hi_Info()
 {
 	B_Say	(hero, self, "$WHOAREYOU");
 
-	AI_Output(self, hero, "Info_Mod_Aabid_Hi_09_00"); //Mein Name ist Aabid. Ich bin einer der Gauner hier und gleichzeitig Händler für außergewöhnliche Sorten von Tabak und Sumpfkrautstengeln.
+	AI_Output(self, hero, "Info_Mod_Aabid_Hi_09_00"); //Mein Name ist Aabid. Ich bin einer der Gauner hier und gleichzeitig Händler für außergewöhnliche Sorten von Tabak und Sumpfkrautstängeln.
 	AI_Output(hero, self, "Info_Mod_Aabid_Hi_15_01"); //Interessant. Kann ich mal dein Angebot sehen?
 	AI_Output(self, hero, "Info_Mod_Aabid_Hi_09_02"); //Nein, das geht leider nicht.
 	AI_Output(hero, self, "Info_Mod_Aabid_Hi_15_03"); //Wieso nicht?

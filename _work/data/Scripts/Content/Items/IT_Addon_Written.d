@@ -364,9 +364,9 @@ func void Use_Joint_Rezept_01 ()
 					Doc_PrintLine	( nDocID,  0, "Der grüne Novize"					);
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");	
-					Doc_PrintLines	( nDocID,  0, "(...) Die Stengel lassen sich zwar prima drehen, aber was wir im Sumpflager hatten, war von anderem Kaliber.");	
+					Doc_PrintLines	( nDocID,  0, "(...) Die Stängel lassen sich zwar prima drehen, aber was wir im Sumpflager hatten, war von anderem Kaliber.");	
 					Doc_PrintLine	( nDocID,  0, "");	
-					Doc_PrintLines	( nDocID,  0, "Wenn ich die Essenz aus zwei Sumpfkrautpflanzen verwende, und dazu einen Feldknöterich, dann habe ich einen Stengel mit der Wirkung des grünen Novizen."					);
+					Doc_PrintLines	( nDocID,  0, "Wenn ich die Essenz aus zwei Sumpfkrautpflanzen verwende, und dazu einen Feldknöterich, dann habe ich einen Stängel mit der Wirkung des grünen Novizen."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Der grüne Novize hilft gegen Schmerzen jeder Art und macht einen klaren Kopf.");	
 					Doc_PrintLine	( nDocID,  0, "");	

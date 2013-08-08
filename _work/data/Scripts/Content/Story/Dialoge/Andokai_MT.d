@@ -200,7 +200,7 @@ FUNC VOID Info_Mod_Andokai_Skinner_Info()
 	Npc_RemoveInvItems	(hero, ItMi_Traumruf, 2);
 	Npc_RemoveInvItems	(hero, ItMi_Addon_Joint_02, 12);
 
-	B_ShowGivenThings	("Sumpfkrautstengel gegeben");
+	B_ShowGivenThings	("Sumpfkrautstängel gegeben");
 
 	AI_Output(self, hero, "Info_Mod_Andokai_Skinner_12_03"); //Ich denke, das sollte deine Ausgaben decken.
 

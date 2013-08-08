@@ -40,7 +40,7 @@ FUNC VOID Info_Mod_SchwarzerNovize_Weindieb_Hi_C()
 	CreateInvItems	(hero, ItMi_Joint, 8);
 	CreateInvItems	(hero, ItFo_KWine, 12);
 
-	B_ShowGivenThings	("8 Sumpfkrautstengel und 12 Klosterwein erhalten");
+	B_ShowGivenThings	("8 Sumpfkrautstängel und 12 Klosterwein erhalten");
 
 	AI_Output(self, hero, "Info_Mod_SchwarzerNovize_Weindieb_Hi_C_11_04"); //Man sieht sich.
 

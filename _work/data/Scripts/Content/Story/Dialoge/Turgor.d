@@ -109,7 +109,7 @@ FUNC VOID Info_Mod_Turgor_Freudenspender_Info()
 	AI_Output(hero, self, "Info_Mod_Turgor_Freudenspender_15_00"); //Ich hätte hier Freudenspender für dich.
 	AI_Output(self, hero, "Info_Mod_Turgor_Freudenspender_27_01"); //Meine Fresse, du willst mich jetzt auch noch ruinieren?! Was passiert denn mit meinem Kraut?
 	AI_Output(hero, self, "Info_Mod_Turgor_Freudenspender_15_02"); //Also nicht?
-	AI_Output(self, hero, "Info_Mod_Turgor_Freudenspender_27_03"); //Scheiße, gib her. (brummelt) Ist einfach viel besser als 'n beschissener Stengel.
+	AI_Output(self, hero, "Info_Mod_Turgor_Freudenspender_27_03"); //Scheiße, gib her. (brummelt) Ist einfach viel besser als 'n beschissener Stängel.
 
 	B_GiveInvItems	(hero, self, ItMi_Freudenspender, 1);
 

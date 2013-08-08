@@ -425,7 +425,7 @@ FUNC VOID Info_Mod_Fester_KesselProblem2_Info()
 		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_31_01"); //Da bin ich gerade noch mit einem blauen Auge davongekommen.
 		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_31_02"); //Naja, in nächster Zeit muss ich etwas vorsichtiger sein. Daher ... hier, nimm das Kraut.
 
-		B_ShowGivenThings	("2 schwarzer Weise, 2 grüne Novizen, 1 Traumruf und 5 Stengel erhalten");
+		B_ShowGivenThings	("2 schwarzer Weise, 2 grüne Novizen, 1 Traumruf und 5 Stängel erhalten");
 
 		CreateInvItems	(hero, ItMi_Joint, 5);
 		CreateInvItems	(hero, ItMi_Addon_Joint_01, 2);

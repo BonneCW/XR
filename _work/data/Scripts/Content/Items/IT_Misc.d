@@ -1318,7 +1318,7 @@ func void Use_Brush()
 /******************************************************************************************/
 INSTANCE ItMi_Joint(C_Item)
 {
-	name 				=	"Ein Stengel Sumpfkraut";
+	name 				=	"Ein Stängel Sumpfkraut";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1352,7 +1352,7 @@ var int Traumruf_FirstTime;
 
 INSTANCE ItMi_Traumruf(C_Item)
 {
-	name 				=	"Ein Stengel Traumruf";
+	name 				=	"Ein Stängel Traumruf";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1390,7 +1390,7 @@ func void Use_Traumruf()
 
 INSTANCE ItMi_Joint_Herkules(C_Item)
 {
-	name 				=	"Herkulesstengel";
+	name 				=	"Herkulesstängel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;

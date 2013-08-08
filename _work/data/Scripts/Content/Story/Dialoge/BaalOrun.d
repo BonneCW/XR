@@ -21,7 +21,7 @@ FUNC VOID Info_Mod_Orun_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
 
-	AI_Output(self, hero, "Info_Mod_Orun_Hi_12_01"); //Ich bin Baal Orun und kümmere mich um die Herstellung der Sumpfkrautstengel aus Sumpfkraut.
+	AI_Output(self, hero, "Info_Mod_Orun_Hi_12_01"); //Ich bin Baal Orun und kümmere mich um die Herstellung der Sumpfkrautstängel aus Sumpfkraut.
 };
 
 INSTANCE Info_Mod_Orun_GotoTempel (C_INFO)

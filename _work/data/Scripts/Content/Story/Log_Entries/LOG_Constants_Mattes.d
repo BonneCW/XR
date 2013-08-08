@@ -126,7 +126,7 @@ const string	TOPIC_SLDRespekt			=	"Respekt der Söldner.";
  
 const string 	TOPIC_JarvisSLDKo			=	"Mit freundlichen Grüßen.";  
 const string 	TOPIC_CordProve				=	"Kampfkunst";   
-const string 	Topic_CipherHerb			=	"Für ein paar Stengel Kraut.";    
+const string 	Topic_CipherHerb			=	"Für ein paar Stängel Kraut.";    
 const string 	Topic_CipherPaket			=	"Das Krautpaket";    
 const string 	Topic_RodWette				=	"Rod's Schwert";    
 const string 	TOPIC_FesterRauber			=	"Die Feldräuber";   

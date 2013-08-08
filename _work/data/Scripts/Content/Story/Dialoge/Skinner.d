@@ -58,7 +58,7 @@ FUNC VOID Info_Mod_Skinner_Hi_A()
 	CreateInvItems	(hero, ItMi_Addon_Joint_01, 7);
 	CreateInvItems	(hero, ItMi_Addon_Joint_02, 12);
 
-	B_ShowGivenThings ("Sumpfkrautstengel erhalten");
+	B_ShowGivenThings ("Sumpfkrautstängel erhalten");
 
 	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_24_04"); //Bei den Dämonenkriegern gibt es da Eduard. Der raucht massenweise Traumrufe weg. 4 bis 8 Stück solltest du schon bei ihm wegbekommen. Pro Traumruf sind 80 Gold fällig.
 	AI_Output(self, hero, "Info_Mod_Skinner_Hi_A_24_05"); //Dann gibt es noch Andokai bei den Dämonenmagiern. Er raucht das Zeug, sagt er, um in Trance seinem Meister näher sein zu können.

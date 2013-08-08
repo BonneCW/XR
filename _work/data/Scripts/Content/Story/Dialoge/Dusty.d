@@ -78,9 +78,9 @@ FUNC VOID Info_Mod_Dusty_Infos_Info()
 	AI_Output(hero, self, "Info_Mod_Dusty_Infos_15_02"); //Wo kann ich sie finden?
 	AI_Output(self, hero, "Info_Mod_Dusty_Infos_14_03"); //Weißt du was? Ich bin schon seit Tagen auf Entzug. Da arbeitet mein Gehirn nicht mehr so schnell, wenn du verstehst, was ich meine.
 	AI_Output(hero, self, "Info_Mod_Dusty_Infos_15_04"); //Du brauchst mal wieder eine Dosis Sumpfkraut?
-	AI_Output(self, hero, "Info_Mod_Dusty_Infos_14_05"); //(wollüstig) Oh ja! Wenn du mir einen ordentlichen Stengel bringst, ordnen sich meine Gedanken auch wieder.
+	AI_Output(self, hero, "Info_Mod_Dusty_Infos_14_05"); //(wollüstig) Oh ja! Wenn du mir einen ordentlichen Stängel bringst, ordnen sich meine Gedanken auch wieder.
 
-	B_LogEntry	(TOPIC_MOD_MILIZ_SEKTENSPINNER, "Bevor Dusty mir sagen kann, wo sich die Schläferanhänger aufhalten, soll ich ihm einen Sumpfkrautstengel bringen.");
+	B_LogEntry	(TOPIC_MOD_MILIZ_SEKTENSPINNER, "Bevor Dusty mir sagen kann, wo sich die Schläferanhänger aufhalten, soll ich ihm einen Sumpfkrautstängel bringen.");
 };
 
 INSTANCE Info_Mod_Dusty_Kippe (C_INFO)

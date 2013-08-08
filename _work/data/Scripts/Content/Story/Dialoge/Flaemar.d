@@ -84,7 +84,7 @@ FUNC VOID Info_Mod_Flaemar_MangelQuest_F()
 	};
 	if (Npc_HasItems(hero, ItMi_Joint) >= 1)
 	{
-		Info_AddChoice	(Info_Mod_Flaemar_MangelQuest, "Sumpfkrautstengel", Info_Mod_Flaemar_MangelQuest_A);
+		Info_AddChoice	(Info_Mod_Flaemar_MangelQuest, "Sumpfkrautstängel", Info_Mod_Flaemar_MangelQuest_A);
 	};
 };
 

@@ -671,7 +671,7 @@ FUNC VOID Zustaende()
 		Mod_WM_Kontrolled -= 1;
 	};
 
-	// Herkulesstengel
+	// Herkulesstängel
 
 	if (Mod_HasHerkulesIntus > 0)
 	{

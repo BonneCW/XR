@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Balor_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
 	AI_Output(self, hero, "Info_Mod_Balor_Hi_01_01"); //Ich bin Balor, Novize der Bruderschaft. Meine Aufgabe ist es hier im Sumpf Sumpfkraut zu sammeln.
-	AI_Output(self, hero, "Info_Mod_Balor_Hi_01_02"); //Das wird dann im Lager zu Stengeln verarbeitet und dann rauchen wir es oder verkaufen es weiter.
+	AI_Output(self, hero, "Info_Mod_Balor_Hi_01_02"); //Das wird dann im Lager zu Stängeln verarbeitet und dann rauchen wir es oder verkaufen es weiter.
 };
 
 INSTANCE Info_Mod_Balor_Duenger (C_INFO)

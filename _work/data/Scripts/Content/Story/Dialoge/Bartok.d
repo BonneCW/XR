@@ -426,7 +426,7 @@ FUNC VOID Info_Mod_Bartok_Stimme_Info()
 	AI_Output(hero, self, "Info_Mod_Bartok_Stimme_15_02"); //Was hast du denn genommen?
 	AI_Output(self, hero, "Info_Mod_Bartok_Stimme_04_03"); //Hihi. Weißte, was geil wäre? Eine Rüstung aus Sumpfkraut!
 	AI_Output(self, hero, "Info_Mod_Bartok_Stimme_04_04"); //Muss natürlich so sein, dass sie nicht leicht abfackelt und so.
-	AI_Output(self, hero, "Info_Mod_Bartok_Stimme_04_05"); //Aber wenn du mal unterwegs bist und nix zu tun hast, kannste dir aus deinem Ärmel einfach 'nen Stengel drehen.
+	AI_Output(self, hero, "Info_Mod_Bartok_Stimme_04_05"); //Aber wenn du mal unterwegs bist und nix zu tun hast, kannste dir aus deinem Ärmel einfach 'nen Stängel drehen.
 	AI_Output(hero, self, "Info_Mod_Bartok_Stimme_15_06"); //So ist aber bald von deiner Rüstung nichts mehr übrig.
 	AI_Output(self, hero, "Info_Mod_Bartok_Stimme_04_07"); //Dann lass ich halt 'ne neue machen. Hihi.
 	AI_Output(self, hero, "Info_Mod_Bartok_Stimme_04_08"); //Das meine ich ernst, Bruder - besorg mir so eine Rüstung, und du bist ein reicher Mann.

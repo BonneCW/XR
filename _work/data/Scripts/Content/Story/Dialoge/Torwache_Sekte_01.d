@@ -78,7 +78,7 @@ FUNC VOID Info_Mod_Torwache_Sekte_01_GardistenInfos_F()
 FUNC VOID Info_Mod_Torwache_Sekte_01_GardistenInfos_E()
 {
 	AI_Output(hero, self, "Info_Mod_Torwache_Sekte_01_GardistenInfos_E_15_00"); //Alles, was ich dabei hatte, diese miesen ...
-	AI_Output(self, hero, "Info_Mod_Torwache_Sekte_01_GardistenInfos_E_13_01"); //Oh, das tut mir leid. Möchtest du nen Stengel?
+	AI_Output(self, hero, "Info_Mod_Torwache_Sekte_01_GardistenInfos_E_13_01"); //Oh, das tut mir leid. Möchtest du nen Stängel?
 
 	Info_ClearChoices	(Info_Mod_Torwache_Sekte_01_GardistenInfos);
 	
