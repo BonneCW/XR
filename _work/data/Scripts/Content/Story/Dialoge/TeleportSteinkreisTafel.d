@@ -358,6 +358,42 @@ FUNC VOID Info_Mod_TeleportSteinkreisTafel_NebelturmMT_Info()
 	};
 };
 
+INSTANCE Info_Mod_TeleportSteinkreisTafel_SuedmineEIS (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= Info_Mod_TeleportSteinkreisTafel_SuedmineEIS_Condition;
+	information	= Info_Mod_TeleportSteinkreisTafel_SuedmineEIS_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "zur Südmine in Gelato";
+};
+
+FUNC INT Info_Mod_TeleportSteinkreisTafel_SuedmineEIS_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_TeleportSteinkreisTafel)
+	&& (Npc_GetDistToWP(hero, "WP_STEINKREIS_01") > 500)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_TeleportSteinkreisTafel_SuedmineEIS_Info()
+{
+	B_ENDPRODUCTIONDIALOG();
+
+	if (CurrentLevel == EISGEBIET_ZEN)
+	{
+		AI_Teleport	(hero, "WP_STEINKREIS_01");
+	}
+	else
+	{
+		B_SetLevelchange ("Zafiron\Eisgebiet.zen", "WP_STEINKREIS_01");
+
+		AI_Teleport	(hero, "OBELISKSCHREIN_WP");
+	};
+};
+
 INSTANCE Info_Mod_TeleportSteinkreisTafel_EXIT (C_INFO)
 {
 	npc		= PC_Hero;
