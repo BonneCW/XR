@@ -392,6 +392,7 @@ FUNC VOID FRAMEFUNC ()
 	};
 
 	if (MEM_KeyState(KEY_8) == KEY_PRESSED)
+	|| (MEM_KeyState(KEY_NUMPAD8) == KEY_PRESSED)
 	{
 		if (Mod_Erol_Fahrender == 5)
 		{
@@ -409,6 +410,8 @@ FUNC VOID FRAMEFUNC ()
 						Mod_Erol_Fahrender = 6;
 
 						Mod_XardasOWTower_Truhe = TRUE;
+
+						B_LogEntry	(TOPIC_MOD_EROL_FEUERMAGIER, "Die Truhe sollte jetzt geöffnet werden können ...");
 					};
 				};
 			};
