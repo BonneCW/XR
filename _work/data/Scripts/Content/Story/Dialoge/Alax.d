@@ -118,6 +118,16 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Verteiler()
 		{
 			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Zwillingsdorn geben", Info_Mod_Alax_AlchemieLehrer2_Zwillingsdorn);
 		};
+		if (!Mod_Alax_Zutat_LeichtesMana)
+		&& (Npc_HasItems(hero, ItPo_Mana_06) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Trank des leichten Manas geben", Info_Mod_Alax_AlchemieLehrer2_LeichtesMana);
+		};
+		if (!Mod_Alax_Zutat_SchnelleHeilung)
+		&& (Npc_HasItems(hero, ItPo_Health_05) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Trank der schnellen Heilung geben", Info_Mod_Alax_AlchemieLehrer2_SchnelleHeilung);
+		};
 		if (!Mod_Alax_Zutat_Schwefel)
 		&& (Npc_HasItems(hero, ItMi_Sulfur) >= 6)
 		{
@@ -132,6 +142,31 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Verteiler()
 		&& (Npc_HasItems(hero, ItMi_Pitch) >= 6)
 		{
 			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Pech geben", Info_Mod_Alax_AlchemieLehrer2_Pech);
+		};
+		if (!Mod_Alax_Zutat_ManaExtrakt)
+		&& (Npc_HasItems(hero, ItPo_Mana_02) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Mana Extrakt geben", Info_Mod_Alax_AlchemieLehrer2_ManaExtrakt);
+		};
+		if (!Mod_Alax_Zutat_ManaEssenz)
+		&& (Npc_HasItems(hero, ItPo_Mana_01) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Mana Essenz geben", Info_Mod_Alax_AlchemieLehrer2_ManaEssenz);
+		};
+		if (!Mod_Alax_Zutat_ManaElixier)
+		&& (Npc_HasItems(hero, ItPo_Mana_03) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Mana Elixier geben", Info_Mod_Alax_AlchemieLehrer2_ManaElixier);
+		};
+		if (!Mod_Alax_Zutat_LeichterManatrank)
+		&& (Npc_HasItems(hero, ItPo_Mana_05) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Leichten Manatrank geben", Info_Mod_Alax_AlchemieLehrer2_LeichterManatrank);
+		};
+		if (!Mod_Alax_Zutat_LeichteHeilung)
+		&& (Npc_HasItems(hero, ItPo_Health_06) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Leichten Heiltrank geben", Info_Mod_Alax_AlchemieLehrer2_LeichteHeilung);
 		};
 		if (!Mod_Alax_Zutat_Kohle)
 		&& (Npc_HasItems(hero, ItMi_Coal) >= 6)
@@ -172,6 +207,21 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Verteiler()
 		&& (Npc_HasItems(hero, ItPl_Mana_Herb_01) >= 6)
 		{
 			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Feuernessel geben", Info_Mod_Alax_AlchemieLehrer2_Feuernessel);
+		};
+		if (!Mod_Alax_Zutat_ExtraktDerHeilung)
+		&& (Npc_HasItems(hero, ItPo_Health_02) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Extrakt der Heilung geben", Info_Mod_Alax_AlchemieLehrer2_ExtraktDerHeilung);
+		};
+		if (!Mod_Alax_Zutat_EssenzDerHeilung)
+		&& (Npc_HasItems(hero, ItPo_Health_01) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Essenz der Heilung geben", Info_Mod_Alax_AlchemieLehrer2_EssenzDerHeilung);
+		};
+		if (!Mod_Alax_Zutat_ElixierDerHeilung)
+		&& (Npc_HasItems(hero, ItPo_Health_03) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Elixier der Heilung geben", Info_Mod_Alax_AlchemieLehrer2_ElixierDerHeilung);
 		};
 		if (!Mod_Alax_Zutat_Feuerkraut)
 		&& (Npc_HasItems(hero, ItPl_Mana_Herb_02) >= 6)
@@ -224,6 +274,116 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Zwillingsdorn()
 	Mod_Alax_Zutaten += 1;
 
 	Mod_Alax_Zutat_Zwillingsdorn = TRUE;
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_ManaEssenz()
+{
+	B_GiveInvItems	(hero, self, ItPo_Mana_01, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_ManaEssenz = TRUE;
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_EssenzDerHeilung()
+{
+	B_GiveInvItems	(hero, self, ItPo_Health_01, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_EssenzDerHeilung = TRUE;
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_ExtraktDerHeilung()
+{
+	B_GiveInvItems	(hero, self, ItPo_Health_02, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_ExtraktDerHeilung = TRUE;
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_ElixierDerHeilung()
+{
+	B_GiveInvItems	(hero, self, ItPo_Health_03, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_ElixierDerHeilung = TRUE;
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_SchnelleHeilung()
+{
+	B_GiveInvItems	(hero, self, ItPo_Health_05, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_SchnelleHeilung = TRUE;
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_LeichteHeilung()
+{
+	B_GiveInvItems	(hero, self, ItPo_Health_06, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_LeichteHeilung = TRUE;
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_ManaExtrakt()
+{
+	B_GiveInvItems	(hero, self, ItPo_Mana_02, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_ManaExtrakt = TRUE;
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_ManaElixier()
+{
+	B_GiveInvItems	(hero, self, ItPo_Mana_03, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_ManaElixier = TRUE;
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_LeichterManatrank()
+{
+	B_GiveInvItems	(hero, self, ItPo_Mana_05, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_LeichterManatrank = TRUE;
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_LeichtesMana()
+{
+	B_GiveInvItems	(hero, self, ItPo_Mana_06, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_LeichtesMana = TRUE;
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
