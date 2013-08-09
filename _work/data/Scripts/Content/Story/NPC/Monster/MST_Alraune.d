@@ -88,7 +88,7 @@ INSTANCE Alraune_Sumpfis	(Mst_Default_Alraune)
 
 	if (Hlp_Random(100) < 70)
 	{
-		CreateInvItems	(self, ItFo_Beere_01, 1);
+		CreateInvItems	(self, ItPl_Sumpfbeeren_XR, 1);
 	};
 	if (Hlp_Random(100) < 20)
 	{
@@ -121,7 +121,7 @@ INSTANCE Alraune_Echsis	(Mst_Default_Alraune)
 
 	if (Hlp_Random(100) < 70)
 	{
-		CreateInvItems	(self, ItFo_Beere_01, 1);
+		CreateInvItems	(self, ItPl_Sumpfbeeren_XR, 1);
 	};
 	if (Hlp_Random(100) < 20)
 	{
@@ -172,7 +172,7 @@ INSTANCE Alraune_Moor	(Mst_Default_Alraune)
 
 	if (Hlp_Random(100) < 70)
 	{
-		CreateInvItems	(self, ItFo_Beere_01, 1);
+		CreateInvItems	(self, ItPl_Sumpfbeeren_XR, 1);
 	};
 	if (Hlp_Random(100) < 20)
 	{
@@ -225,7 +225,7 @@ INSTANCE Alraune_Botschek_01	(Mst_Default_Alraune)
 
 	if (Hlp_Random(100) < 70)
 	{
-		CreateInvItems	(self, ItFo_Beere_01, 1);
+		CreateInvItems	(self, ItPl_Sumpfbeeren_XR, 1);
 	};
 	if (Hlp_Random(100) < 20)
 	{
@@ -278,7 +278,7 @@ INSTANCE Alraune_Botschek_02	(Mst_Default_Alraune)
 
 	if (Hlp_Random(100) < 70)
 	{
-		CreateInvItems	(self, ItFo_Beere_01, 1);
+		CreateInvItems	(self, ItPl_Sumpfbeeren_XR, 1);
 	};
 	if (Hlp_Random(100) < 20)
 	{
@@ -331,7 +331,7 @@ INSTANCE Alraune_Botschek_03	(Mst_Default_Alraune)
 
 	if (Hlp_Random(100) < 70)
 	{
-		CreateInvItems	(self, ItFo_Beere_01, 1);
+		CreateInvItems	(self, ItPl_Sumpfbeeren_XR, 1);
 	};
 	if (Hlp_Random(100) < 20)
 	{

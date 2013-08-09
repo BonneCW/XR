@@ -2351,7 +2351,7 @@ FUNC VOID NEBENQUESTS()
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Viran_Traenke))
 		&& (Mod_Viran_Sumpfbeeren == FALSE)
-		&& (Npc_HasItems(hero, ItFo_Beere_01) >= 5)
+		&& (Npc_HasItems(hero, ItPl_Sumpfbeeren_XR) >= 5)
 		{
 			Mod_Viran_Sumpfbeeren = TRUE;
 

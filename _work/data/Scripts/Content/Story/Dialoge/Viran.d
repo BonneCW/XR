@@ -78,7 +78,7 @@ INSTANCE Info_Mod_Viran_Sumpfbeeren (C_INFO)
 FUNC INT Info_Mod_Viran_Sumpfbeeren_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Viran_Traenke))
-	&& (Npc_HasItems(hero, ItFo_Beere_01) >= 5)
+	&& (Npc_HasItems(hero, ItPl_Sumpfbeeren_XR) >= 5)
 	{
 		return 1;
 	};
@@ -88,7 +88,7 @@ FUNC VOID Info_Mod_Viran_Sumpfbeeren_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Viran_Sumpfbeeren_15_00"); //Hier sind fünf Sumpfbeeren.
 
-	B_GiveInvItems	(hero, self, ItFo_Beere_01, 5);
+	B_GiveInvItems	(hero, self, ItPl_Sumpfbeeren_XR, 5);
 
 	AI_Output(self, hero, "Info_Mod_Viran_Sumpfbeeren_02_01"); //Was willst du mich verarschen? Tatsächlich. Wie du das nur hinbekommen hast ...
 	AI_Output(self, hero, "Info_Mod_Viran_Sumpfbeeren_02_02"); //Das ist mir auf jeden Fall 500 Goldmünzen wert. Hier.
