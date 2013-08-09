@@ -351,13 +351,13 @@ FUNC VOID Info_Mod_Wulfgar_Felle2_Info()
 
 	AI_Output(self, hero, "Info_Mod_Wulfgar_Felle2_04_00"); //Hoppla. Ich brauche neues Wasser.
 	AI_Output(hero, self, "Info_Mod_Wulfgar_Felle2_15_01"); //Aha. Und da soll ich jetzt ...
-	AI_Output(self, hero, "Info_Mod_Wulfgar_Felle2_04_02"); //Ei gewiss. Am Besten bei der Landzunge, unten zwischen dem Turm und unserem Lager. Hier, nimm den Eimer mit.
+	AI_Output(self, hero, "Info_Mod_Wulfgar_Felle2_04_02"); //Ei gewiss. Am Besten hier im Wald bei dem kleinen Tümpel. Hier, nimm den Eimer mit.
 
 	B_GiveInvItems	(self, hero, ItMi_Eimer, 1);
 
 	AI_Output(hero, self, "Info_Mod_Wulfgar_Felle2_15_03"); //Na gut.
 
-	B_LogEntry	(TOPIC_MOD_JG_TURMFELLE, "Wulfgar will mir zeigen, wie man Felle richtig gerbt. Dazu soll ich Wasser von der Landzunge zwischen dem Lager und dem Nebelturm holen.");
+	B_LogEntry	(TOPIC_MOD_JG_TURMFELLE, "Wulfgar will mir zeigen, wie man Felle richtig gerbt. Dazu soll ich Wasser von dem Tümepl hier im Wald holen.");
 };
 
 INSTANCE Info_Mod_Wulfgar_Felle3 (C_INFO)

@@ -312,6 +312,8 @@ FUNC VOID Use_Eimer()
 	|| (Npc_GetDistToWP(hero, "WP_WASSERHOLEN5") < 500)
 	|| (Npc_GetDistToWP(hero, "WP_WASSERHOLEN6") < 500)
 	|| (Npc_GetDistToWP(hero, "WP_WASSERHOLEN7") < 500)
+	|| (Npc_GetDistToWP(hero, "WP_WASSERHOLEN8") < 500)
+	|| (Npc_GetDistToWP(hero, "WP_WASSERHOLEN9") < 500)
 	{
 		CreateInvItems	(hero, ItMi_EimerW, 1);
 
