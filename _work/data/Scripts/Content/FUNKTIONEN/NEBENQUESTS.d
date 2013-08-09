@@ -159,7 +159,7 @@ FUNC VOID NEBENQUESTS()
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Telbor_Hi))
-		&& (Wld_GetDay() > Mod_AkilsHof_WaitingForDeath)
+		&& (Wld_GetDay() - 1 > Mod_AkilsHof_WaitingForDeath)
 		&& (Mod_AkilsHofAusgestorben == FALSE)
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Akil_Heilung))
 		{
@@ -202,7 +202,7 @@ FUNC VOID NEBENQUESTS()
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Telbor_AllDead))
-		&& (Wld_GetDay() > Mod_AkilsHof_WaitingForDeath)
+		&& (Wld_GetDay() - 1 > Mod_AkilsHof_WaitingForDeath)
 		&& (Mod_AkilsHofAusgestorben == 1)
 		{
 			if (!Npc_KnowsInfo(hero, Info_Mod_Akil_Heilung))
@@ -240,7 +240,7 @@ FUNC VOID NEBENQUESTS()
 		// Hausbesetzer
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Telbor_FarmWorking))
-		&& (Wld_GetDay()-2 >= Mod_Telbor_HofBesetzt)
+		&& (Wld_GetDay() - 2 >= Mod_Telbor_HofBesetzt)
 		&& (Mod_Telbor_GoingToHof == TRUE)
 		{
 			Mod_Telbor_GoingToHof = 2;
