@@ -84,7 +84,7 @@ FUNC VOID Info_Mod_Attila_Moechtegern_Info()
 
 	TRIA_Next(Attila);
 
-	AI_Output(self, hero, "Info_Mod_Attila_Moechtegern_09_04"); //In dem Fall darf ich zu erkennen geben, dass ich gekommen das Sumpfkraut und deinen Kopf zu holen.
+	AI_Output(self, hero, "Info_Mod_Attila_Moechtegern_09_04"); //In dem Fall darf ich zu erkennen geben, dass ich gekommen bin das Sumpfkraut und deinen Kopf zu holen.
 
 	AI_ReadyMeleeWeapon	(self);
 
