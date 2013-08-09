@@ -292,6 +292,7 @@ func void B_AssessPlayer ()
 	|| (Hlp_IsItem(RuessiCheck, ItAr_DJG_L) == TRUE)
 	|| (Hlp_IsItem(RuessiCheck, ItAr_DJG_M) == TRUE)
 	|| (Hlp_IsItem(RuessiCheck, ItAr_DJG_H) == TRUE))
+	&& (Mod_Spell_BeliarCity == FALSE)
 	{
 		B_Attack (self, hero, AR_Kill, 0);
 		return;
