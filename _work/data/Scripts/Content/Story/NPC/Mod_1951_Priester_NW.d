@@ -3,7 +3,7 @@ instance Mod_1951_Priester_NW (Npc_Default)
 	//-------- primary data --------
 	name 		=		"Priester";
 	Npctype 		=		Npctype_main;
-	guild 		=		GIL_out;
+	guild 		=		GIL_DMT;
 	level 		=		30;
 	 	
 	voice 		=		2;

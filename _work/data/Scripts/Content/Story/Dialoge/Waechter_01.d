@@ -48,6 +48,8 @@ FUNC VOID Info_Mod_Wachter_01_Hi_A()
 
 	AI_StopProcessInfos	(self);
 
+	B_Attack	(self, hero, AR_GuildEnemy, 0);
+
 	self.guild = GIL_STRF;
 	Npc_SetTrueGuild	(self, GIL_STRF);
 

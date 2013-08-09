@@ -2110,10 +2110,6 @@ func void B_InitMonsterAttitudes ()
 	|| (Mod_Gilde == 7)
 	|| (Mod_Gilde == 8)
 	{
-		B_SetMonsterAttitude	(GIL_STRF, ATT_HOSTILE, 	GIL_PAL);
-		B_SetMonsterAttitude	(GIL_STRF, ATT_HOSTILE, 	GIL_VLK);
-		B_SetMonsterAttitude	(GIL_PAL, ATT_HOSTILE, 	GIL_STRF);
-		B_SetMonsterAttitude	(GIL_VLK, ATT_HOSTILE, 	GIL_STRF);
 		B_SetMonsterAttitude	(GIL_STRF, ATT_FRIENDLY, 	GIL_HARPY);
 		B_SetMonsterAttitude	(GIL_HARPY, ATT_FRIENDLY, 	GIL_STRF);			
 	};
