@@ -138,7 +138,7 @@ INSTANCE Info_Mod_FM_SFB_10_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_FM_SFB_10_Pickpocket_Condition()
 {
-	C_Beklauen	(8+r_max(12), ItMi_Gold, 10+r_max(22));
+	C_Beklauen	(8 + r_max(12), ItMi_Gold, 10 + r_max(5));
 };
 
 FUNC VOID Info_Mod_FM_SFB_10_Pickpocket_Info()

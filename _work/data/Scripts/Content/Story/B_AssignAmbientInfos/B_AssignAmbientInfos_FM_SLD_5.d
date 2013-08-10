@@ -110,7 +110,7 @@ INSTANCE Info_Mod_FM_SLD_5_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_FM_SLD_5_Pickpocket_Condition()
 {
-	C_Beklauen	(90+r_max(30), ItMi_Gold, 350+r_max(100));
+	C_Beklauen	(90 + r_max(30), ItMi_Gold, 35 + r_max(10));
 };
 
 FUNC VOID Info_Mod_FM_SLD_5_Pickpocket_Info()

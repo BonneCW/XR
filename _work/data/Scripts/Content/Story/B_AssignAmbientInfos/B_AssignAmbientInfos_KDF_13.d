@@ -170,7 +170,7 @@ INSTANCE Info_Mod_KDF_13_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_KDF_13_Pickpocket_Condition()
 {
-	C_Beklauen	(150+r_max(30), ItMi_Gold, 600+r_max(200));
+	C_Beklauen	(150 + r_max(30), ItMi_Gold, 90 + r_max(20));
 };
 
 FUNC VOID Info_Mod_KDF_13_Pickpocket_Info()

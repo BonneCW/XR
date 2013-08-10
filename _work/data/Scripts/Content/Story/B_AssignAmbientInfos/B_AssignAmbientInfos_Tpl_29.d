@@ -160,7 +160,7 @@ INSTANCE Info_Mod_TPL_29_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_TPL_29_Pickpocket_Condition()
 {
-	C_Beklauen	(150+r_max(30), ItMi_Gold, 500+r_max(300));
+	C_Beklauen	(150 + r_max(30), ItMi_Gold, 90 + r_max(20));
 };
 
 FUNC VOID Info_Mod_TPL_29_Pickpocket_Info()

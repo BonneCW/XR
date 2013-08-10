@@ -205,7 +205,7 @@ INSTANCE Info_Mod_SFB_1_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_SFB_1_Pickpocket_Condition()
 {
-	C_Beklauen	(r_max(30), ItMi_Gold, 10+r_max(20));
+	C_Beklauen	(r_max(30), ItMi_Gold, 10 + r_max(5));
 };
 
 FUNC VOID Info_Mod_SFB_1_Pickpocket_Info()

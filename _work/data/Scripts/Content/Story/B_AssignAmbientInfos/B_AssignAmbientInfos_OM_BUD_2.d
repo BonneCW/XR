@@ -112,7 +112,7 @@ INSTANCE Info_Mod_OM_BUD_2_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_OM_BUD_2_Pickpocket_Condition()
 {
-	C_Beklauen	(8+r_max(12), ItMi_Nugget, 2+r_max(3));
+	C_Beklauen	(8 + r_max(12), ItMi_Nugget, 1 + r_max(2));
 };
 
 FUNC VOID Info_Mod_OM_BUD_2_Pickpocket_Info()

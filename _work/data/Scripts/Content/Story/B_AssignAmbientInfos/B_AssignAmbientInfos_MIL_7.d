@@ -109,7 +109,7 @@ INSTANCE Info_Mod_MIL_7_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_MIL_7_Pickpocket_Condition()
 {
-	C_Beklauen	(60+r_max(30), ItMi_Gold, 100+r_max(50));
+	C_Beklauen	(60 + r_max(30), ItMi_Gold, 20 + r_max(10));
 };
 
 FUNC VOID Info_Mod_MIL_7_Pickpocket_Info()

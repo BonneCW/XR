@@ -113,7 +113,7 @@ INSTANCE Info_Mod_PAL_4_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_PAL_4_Pickpocket_Condition()
 {
-	C_Beklauen	(90+r_max(30), ItMi_Gold, 300+r_max(300));
+	C_Beklauen	(90 + r_max(30), ItMi_Gold, 35 + r_max(10));
 };
 
 FUNC VOID Info_Mod_PAL_4_Pickpocket_Info()

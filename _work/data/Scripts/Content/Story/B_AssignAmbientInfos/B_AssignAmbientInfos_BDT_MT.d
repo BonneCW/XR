@@ -90,7 +90,7 @@ INSTANCE Info_Mod_BDT_MT_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_BDT_MT_Pickpocket_Condition()
 {
-	C_Beklauen	(60+r_max(30), ItMi_Gold, 50+r_max(22));
+	C_Beklauen	(60 + r_max(30), ItMi_Gold, 20 + r_max(10));
 };
 
 FUNC VOID Info_Mod_BDT_MT_Pickpocket_Info()
