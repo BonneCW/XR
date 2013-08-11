@@ -80,7 +80,7 @@ INSTANCE Info_Mod_Aadel_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Aadel_Pickpocket_Condition()
 {
-	C_Beklauen	(133, ItMi_Gold, 750);
+	C_Beklauen	(133, ItMi_Gold, 77);
 };
 
 FUNC VOID Info_Mod_Aadel_Pickpocket_Info()

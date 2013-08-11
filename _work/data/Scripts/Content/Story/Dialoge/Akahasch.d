@@ -316,7 +316,7 @@ INSTANCE Info_Mod_Akahasch_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Akahasch_Pickpocket_Condition()
 {
-	C_Beklauen	(76, ItMi_Gold, 350);
+	C_Beklauen	(76, ItMi_Gold, 24);
 };
 
 FUNC VOID Info_Mod_Akahasch_Pickpocket_Info()

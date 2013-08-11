@@ -711,7 +711,7 @@ INSTANCE Info_Mod_Alax_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Alax_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 250);
+	C_Beklauen	(77, ItMi_Gold, 20);
 };
 
 FUNC VOID Info_Mod_Alax_Pickpocket_Info()

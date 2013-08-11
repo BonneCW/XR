@@ -113,7 +113,7 @@ INSTANCE Info_Mod_Azhar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Azhar_Pickpocket_Condition()
 {
-	C_Beklauen	(178, ItMi_Gold, 2000);
+	C_Beklauen	(178, ItMi_Gold, 109);
 };
 
 FUNC VOID Info_Mod_Azhar_Pickpocket_Info()

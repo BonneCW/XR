@@ -1393,7 +1393,7 @@ INSTANCE Info_Mod_Anselm_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Anselm_Pickpocket_Condition()
 {
-	C_Beklauen	(102, ItMi_Gold, 6000);
+	C_Beklauen	(102, ItMi_Gold, 37);
 };
 
 FUNC VOID Info_Mod_Anselm_Pickpocket_Info()

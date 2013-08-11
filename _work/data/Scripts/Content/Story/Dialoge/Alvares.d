@@ -150,7 +150,7 @@ INSTANCE Info_Mod_Alvares_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Alvares_Pickpocket_Condition()
 {
-	C_Beklauen	(41, ItMi_Gold, 60);
+	C_Beklauen	(41, ItMi_Gold, 19);
 };
 
 FUNC VOID Info_Mod_Alvares_Pickpocket_Info()

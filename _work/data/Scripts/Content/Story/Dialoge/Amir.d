@@ -336,7 +336,7 @@ INSTANCE Info_Mod_Amir_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Amir_Pickpocket_Condition()
 {
-	C_Beklauen	(111, ItMi_Gold, 350);
+	C_Beklauen	(111, ItMi_Gold, 41);
 };
 
 FUNC VOID Info_Mod_Amir_Pickpocket_Info()

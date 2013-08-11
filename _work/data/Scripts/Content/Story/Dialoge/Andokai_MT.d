@@ -880,7 +880,7 @@ INSTANCE Info_Mod_Andokai_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Andokai_Pickpocket_Condition()
 {
-	C_Beklauen	(170, ItMi_Gold, 1000);
+	C_Beklauen	(170, ItMi_Gold, 100);
 };
 
 FUNC VOID Info_Mod_Andokai_Pickpocket_Info()

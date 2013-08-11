@@ -78,7 +78,7 @@ INSTANCE Info_Mod_Anna_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Anna_Pickpocket_Condition()
 {
-	C_Beklauen	(76, ItMi_Gold, 250);
+	C_Beklauen	(76, ItMi_Gold, 21);
 };
 
 FUNC VOID Info_Mod_Anna_Pickpocket_Info()

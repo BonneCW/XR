@@ -60,7 +60,7 @@ INSTANCE Info_Mod_Aiman_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Aiman_Pickpocket_Condition()
 {
-	C_Beklauen	(164, ItMi_Gold, 1500);
+	C_Beklauen	(164, ItMi_Gold, 107);
 };
 
 FUNC VOID Info_Mod_Aiman_Pickpocket_Info()

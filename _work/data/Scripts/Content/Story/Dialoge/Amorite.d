@@ -108,7 +108,7 @@ INSTANCE Info_Mod_Amorite_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Amorite_Pickpocket_Condition()
 {
-	C_Beklauen	(59, ItMi_Gold, 175);
+	C_Beklauen	(59, ItMi_Gold, 20);
 };
 
 FUNC VOID Info_Mod_Amorite_Pickpocket_Info()

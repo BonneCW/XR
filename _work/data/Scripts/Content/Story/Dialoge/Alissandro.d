@@ -1194,7 +1194,7 @@ INSTANCE Info_Mod_Alissandro_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Alissandro_Pickpocket_Condition()
 {
-	C_Beklauen	(169, ItMi_Gold, 900);
+	C_Beklauen	(169, ItMi_Gold, 92);
 };
 
 FUNC VOID Info_Mod_Alissandro_Pickpocket_Info()

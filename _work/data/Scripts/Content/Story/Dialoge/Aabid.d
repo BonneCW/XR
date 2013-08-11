@@ -142,7 +142,7 @@ INSTANCE Info_Mod_Aabid_Pickpocket (C_INFO)
 	information	= Info_Mod_Aabid_Pickpocket_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= Pickpocket_90;
+	description	= Pickpocket_27;
 };
 
 FUNC INT Info_Mod_Aabid_Pickpocket_Condition()

@@ -617,7 +617,7 @@ INSTANCE Info_Mod_August_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_August_Pickpocket_Condition()
 {
-	C_Beklauen	(62, ItMi_Gold, 234);
+	C_Beklauen	(62, ItMi_Gold, 20);
 };
 
 FUNC VOID Info_Mod_August_Pickpocket_Info()

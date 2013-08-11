@@ -377,7 +377,7 @@ INSTANCE Info_Mod_Albrecht_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Albrecht_Pickpocket_Condition()
 {
-	C_Beklauen	(177, ItMi_Gold, 2000);
+	C_Beklauen	(177, ItMi_Gold, 99);
 };
 
 FUNC VOID Info_Mod_Albrecht_Pickpocket_Info()

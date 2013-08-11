@@ -145,7 +145,7 @@ INSTANCE Info_Mod_Aerwak_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Aerwak_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 250);
+	C_Beklauen	(77, ItMi_Gold, 22);
 };
 
 FUNC VOID Info_Mod_Aerwak_Pickpocket_Info()

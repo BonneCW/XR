@@ -314,7 +314,7 @@ INSTANCE Info_Mod_Anor_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Anor_Pickpocket_Condition()
 {
-	C_Beklauen	(64, ItMi_Gold, 90);
+	C_Beklauen	(64, ItMi_Gold, 26);
 };
 
 FUNC VOID Info_Mod_Anor_Pickpocket_Info()
