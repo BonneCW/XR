@@ -57,7 +57,7 @@ FUNC VOID Info_Mod_Pilar_AtHut_Info()
 
 	AI_StopProcessInfos	(self);
 
-	B_StartOtherRoutine	(self, "FOLLOWTOCHAD");
+	B_StartOtherRoutine	(self, "GOBBOZELT");
 	B_StartOtherRoutine	(Mod_7567_OUT_Luis_EIS, "START");
 
 	Mod_7567_OUT_Luis_EIS.aivar[AIV_Partymember] = FALSE;
@@ -110,7 +110,7 @@ FUNC VOID Info_Mod_Pilar_AtHut2_Info()
 
 	AI_StopProcessInfos	(self);
 
-	B_StartOtherRoutine	(self, "FOLLOWTOCHAD");
+	B_StartOtherRoutine	(self, "GOBBOZELT");
 };
 
 INSTANCE Info_Mod_Pilar_AtHut3 (C_INFO)
