@@ -1347,6 +1347,32 @@ FUNC VOID Info_Mod_Anselm_DickeLuft2_Info()
 	B_LogEntry	(TOPIC_MOD_DITMAR_DICKELUFT, "Ich habe Hedwig zu Anselm gelockt und es gab eine Aussprache. Na ja, so eine Art. Jedenfalls sollte sie jetzt nicht mehr ins Gasthaus zurückkehren. Das wird Irmgard sicher freuen zu erfahren.");
 };
 
+INSTANCE Info_Mod_Anselm_WoHubert (C_INFO)
+{
+	npc		= Mod_7241_OUT_Anselm_REL;
+	nr		= 1;
+	condition	= Info_Mod_Anselm_WoHubert_Condition;
+	information	= Info_Mod_Anselm_WoHubert_Info;
+	permanent	= 1;
+	important	= 0;
+	description 	= "Wo finde ich Hubert genau?";
+};                       
+
+FUNC INT Info_Mod_Anselm_WoHubert_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Anselm_LandvermessungVincent))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Anselm_LandvermessungHubert))
+	{
+		return TRUE;
+	};
+};
+
+FUNC VOID Info_Mod_Anselm_WoHubert_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Anselm_WoHubert_15_00"); //Wo finde ich Hubert genau?
+	AI_Output(self, hero, "Info_Mod_Anselm_WoHubert_32_01"); //Unterschiedlich, aber niemals weit weg von seinem Lebenselixier. Manchmal lungert er am Tor rum, aber meistens ist er in der Nähe des Gasthauses oder der Brauerei zu finden.
+};
+
 INSTANCE Info_Mod_Anselm_Freudenspender (C_INFO)
 {
 	npc		= Mod_7241_OUT_Anselm_REL;
