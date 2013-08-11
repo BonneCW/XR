@@ -737,7 +737,7 @@ INSTANCE Info_Mod_Karras_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Karras_Pickpocket_Condition()
 {
-	C_Beklauen	(136, ItMi_Gold, 620);
+	C_Beklauen	(136, ItMi_Gold, 62);
 };
 
 FUNC VOID Info_Mod_Karras_Pickpocket_Info()

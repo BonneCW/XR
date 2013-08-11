@@ -34,7 +34,7 @@ INSTANCE Info_Mod_Kuno_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Kuno_Pickpocket_Condition()
 {
-	C_Beklauen	(54, ItMi_Gold, 132);
+	C_Beklauen	(54, ItMi_Gold, 17);
 };
 
 FUNC VOID Info_Mod_Kuno_Pickpocket_Info()

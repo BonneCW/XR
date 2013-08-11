@@ -146,7 +146,7 @@ INSTANCE Info_Mod_Kyle_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Kyle_Pickpocket_Condition()
 {
-	C_Beklauen	(43, ItMi_Gold, 23);
+	C_Beklauen	(43, ItMi_Gold, 17);
 };
 
 FUNC VOID Info_Mod_Kyle_Pickpocket_Info()

@@ -146,7 +146,7 @@ INSTANCE Info_Mod_Kimon_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Kimon_Pickpocket_Condition()
 {
-	C_Beklauen	(98, ItMi_Gold, 650);
+	C_Beklauen	(98, ItMi_Gold, 41);
 };
 
 FUNC VOID Info_Mod_Kimon_Pickpocket_Info()

@@ -79,7 +79,7 @@ INSTANCE Info_Mod_Kais_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Kais_Pickpocket_Condition()
 {
-	C_Beklauen	(118, ItMi_Gold, 1400);
+	C_Beklauen	(118, ItMi_Gold, 40);
 };
 
 FUNC VOID Info_Mod_Kais_Pickpocket_Info()
