@@ -307,7 +307,7 @@ INSTANCE Info_Mod_HofstaatKoenig_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_HofstaatKoenig_Pickpocket_Condition()
 {
-	C_Beklauen	(118, ItMi_Gold, 1500);
+	C_Beklauen	(118, ItMi_Gold, 39);
 };
 
 FUNC VOID Info_Mod_HofstaatKoenig_Pickpocket_Info()

@@ -63,7 +63,7 @@ INSTANCE Info_Mod_HSBuerger_03_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_HSBuerger_03_Pickpocket_Condition()
 {
-	C_Beklauen	(13, ItMi_Gold, 40);
+	C_Beklauen	(13, ItMi_Gold, 12);
 };
 
 FUNC VOID Info_Mod_HSBuerger_03_Pickpocket_Info()

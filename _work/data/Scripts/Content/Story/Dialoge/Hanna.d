@@ -245,7 +245,7 @@ INSTANCE Info_Mod_Hanna_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Hanna_Pickpocket_Condition()
 {
-	C_Beklauen	(75, ItMi_Gold, 140);
+	C_Beklauen	(75, ItMi_Gold, 26);
 };
 
 FUNC VOID Info_Mod_Hanna_Pickpocket_Info()

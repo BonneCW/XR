@@ -35,7 +35,7 @@ INSTANCE Info_Mod_HSBauer_02_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_HSBauer_02_Pickpocket_Condition()
 {
-	C_Beklauen	(20, ItMi_Gold, 23);
+	C_Beklauen	(20, ItMi_Gold, 11);
 };
 
 FUNC VOID Info_Mod_HSBauer_02_Pickpocket_Info()

@@ -1723,7 +1723,7 @@ INSTANCE Info_Mod_Hagen_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Hagen_Pickpocket_Condition()
 {
-	C_Beklauen	(178, ItMi_Gold, 1200);
+	C_Beklauen	(178, ItMi_Gold, 102);
 };
 
 FUNC VOID Info_Mod_Hagen_Pickpocket_Info()

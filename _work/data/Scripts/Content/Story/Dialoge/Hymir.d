@@ -304,7 +304,7 @@ INSTANCE Info_Mod_Hymir_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Hymir_Pickpocket_Condition()
 {
-	C_Beklauen	(174, ItMi_Gold, 600);
+	C_Beklauen	(174, ItMi_Gold, 94);
 };
 
 FUNC VOID Info_Mod_Hymir_Pickpocket_Info()

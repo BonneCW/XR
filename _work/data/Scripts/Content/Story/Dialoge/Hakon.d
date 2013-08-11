@@ -387,7 +387,7 @@ INSTANCE Info_Mod_Hakon_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Hakon_Pickpocket_Condition()
 {
-	C_Beklauen	(108, ItMi_Gold, 195);
+	C_Beklauen	(108, ItMi_Gold, 38);
 };
 
 FUNC VOID Info_Mod_Hakon_Pickpocket_Info()
