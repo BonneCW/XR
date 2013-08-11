@@ -86,6 +86,7 @@ func void B_GiveTradeInv (var C_NPC slf)
 	var C_NPC Trd_Anglar_EIS;	Trd_Anglar_EIS		= Hlp_GetNpc (Mod_7792_OUT_Anglar_EIS);
 	var C_NPC Trd_Eduard_MT;	Trd_Eduard_MT		= Hlp_GetNpc (Mod_1027_SMK_Eduard_MT);
 	var C_NPC Trd_Alberto_OM;	Trd_Alberto_OM		= Hlp_GetNpc (Mod_7800_SMK_Alberto_OM);
+	var C_NPC Trd_Botschek_REL;	Trd_Botschek_REL		= Hlp_GetNpc (Mod_7650_OUT_Botschek_REL);
 	
 	
 //********************************************************************
@@ -173,6 +174,7 @@ func void B_GiveTradeInv (var C_NPC slf)
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Anglar_EIS)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Anglar_EIS	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Eduard_MT)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Eduard_MT	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Alberto_OM)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Alberto_OM	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Botschek_REL)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Mod_Botschek_REL	(slf);};
 		
 		slf.aivar[AIV_ChapterInv] = (Kapitel +1);
 	};		
@@ -260,6 +262,7 @@ func void B_GiveTradeInv (var C_NPC slf)
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Schmuggler_NW)		{B_ClearDeadTrader	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Anglar_EIS)		{B_ClearDeadTrader	(slf);};
 		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Eduard_MT)		{B_ClearDeadTrader	(slf);};
-		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Alberto_OM)		{B_ClearDeadTrader	(slf);};		
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Alberto_OM)		{B_ClearDeadTrader	(slf);};
+		if Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Botschek_REL)		{B_ClearDeadTrader	(slf);};		
 	};
 };

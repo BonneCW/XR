@@ -1007,6 +1007,34 @@ FUNC VOID Info_Mod_Botschek_Informationen_A_1()
 	Info_Mod_Botschek_Informationen_Infos();
 };
 
+INSTANCE Info_Mod_Botschek_Trade (C_INFO)
+{
+	npc		= Mod_7650_OUT_Botschek_REL;
+	nr		= 1;
+	condition	= Info_Mod_Botschek_Trade_Condition;
+	information	= Info_Mod_Botschek_Trade_Info;
+	permanent	= 1;
+	important	= 0;
+	trade		= 1;
+	description	= DIALOG_TRADE;
+};
+
+FUNC INT Info_Mod_Botschek_Trade_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Botschek_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Botschek_Trade_Info()
+{
+	Backup_Questitems();
+
+	B_GiveTradeInv (self);
+	B_Say (hero, self, "$TRADE_1");
+};
+
 INSTANCE Info_Mod_Botschek_Pickpocket (C_INFO)
 {
 	npc		= Mod_7650_OUT_Botschek_REL;
