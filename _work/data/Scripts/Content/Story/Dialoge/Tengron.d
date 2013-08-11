@@ -342,7 +342,7 @@ INSTANCE Info_Mod_Tengron_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Tengron_Pickpocket_Condition()
 {
-	C_Beklauen	(107, ItMi_Gold, 450);
+	C_Beklauen	(107, ItMi_Gold, 38);
 };
 
 FUNC VOID Info_Mod_Tengron_Pickpocket_Info()

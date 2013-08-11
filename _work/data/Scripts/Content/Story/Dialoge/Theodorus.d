@@ -689,7 +689,7 @@ INSTANCE Info_Mod_Theodorus_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Theodorus_Pickpocket_Condition()
 {
-	C_Beklauen	(75, ItMi_Gold, 250);
+	C_Beklauen	(75, ItMi_Gold, 28);
 };
 
 FUNC VOID Info_Mod_Theodorus_Pickpocket_Info()

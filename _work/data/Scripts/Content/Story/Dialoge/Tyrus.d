@@ -114,7 +114,7 @@ INSTANCE Info_Mod_Tyrus_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Tyrus_Pickpocket_Condition()
 {
-	C_Beklauen	(72, ItMi_Gold, 100);
+	C_Beklauen	(72, ItMi_Gold, 30);
 };
 
 FUNC VOID Info_Mod_Tyrus_Pickpocket_Info()

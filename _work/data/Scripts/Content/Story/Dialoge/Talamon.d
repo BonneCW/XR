@@ -366,7 +366,7 @@ INSTANCE Info_Mod_Talamon_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Talamon_Pickpocket_Condition()
 {
-	C_Beklauen	(167, ItMi_Gold, 1000);
+	C_Beklauen	(167, ItMi_Gold, 94);
 };
 
 FUNC VOID Info_Mod_Talamon_Pickpocket_Info()

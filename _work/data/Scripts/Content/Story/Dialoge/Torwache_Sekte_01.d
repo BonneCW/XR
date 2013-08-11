@@ -288,7 +288,7 @@ INSTANCE Info_Mod_Torwache_Sekte_01_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Torwache_Sekte_01_Pickpocket_Condition()
 {
-	C_Beklauen	(91, ItMi_Gold, 350);
+	C_Beklauen	(91, ItMi_Gold, 40);
 };
 
 FUNC VOID Info_Mod_Torwache_Sekte_01_Pickpocket_Info()

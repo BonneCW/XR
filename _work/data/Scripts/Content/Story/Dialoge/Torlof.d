@@ -720,7 +720,7 @@ INSTANCE Info_Mod_Torlof_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Torlof_Pickpocket_Condition()
 {
-	C_Beklauen	(130, ItMi_Gold, 500);
+	C_Beklauen	(130, ItMi_Gold, 69);
 };
 
 FUNC VOID Info_Mod_Torlof_Pickpocket_Info()

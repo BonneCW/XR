@@ -562,7 +562,7 @@ INSTANCE Info_Mod_Talas_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Talas_Pickpocket_Condition()
 {
-	C_Beklauen	(30, ItMi_Gold, 50);
+	C_Beklauen	(30, ItMi_Gold, 14);
 };
 
 FUNC VOID Info_Mod_Talas_Pickpocket_Info()

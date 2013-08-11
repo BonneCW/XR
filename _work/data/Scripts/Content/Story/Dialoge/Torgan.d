@@ -831,7 +831,7 @@ INSTANCE Info_Mod_Torgan_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Torgan_Pickpocket_Condition()
 {
-	C_Beklauen	(105, ItMi_Gold, 190);
+	C_Beklauen	(105, ItMi_Gold, 39);
 };
 
 FUNC VOID Info_Mod_Torgan_Pickpocket_Info()

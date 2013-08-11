@@ -685,7 +685,7 @@ INSTANCE Info_Mod_Telbor_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Telbor_Pickpocket_Condition()
 {
-	C_Beklauen	(40, ItMi_Gold, 30);
+	C_Beklauen	(40, ItMi_Gold, 20);
 };
 
 FUNC VOID Info_Mod_Telbor_Pickpocket_Info()

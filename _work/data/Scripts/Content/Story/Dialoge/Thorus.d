@@ -1027,7 +1027,7 @@ INSTANCE Info_Mod_Thorus_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Thorus_Pickpocket_Condition()
 {
-	C_Beklauen	(130, ItMi_Gold, 600);
+	C_Beklauen	(130, ItMi_Gold, 67);
 };
 
 FUNC VOID Info_Mod_Thorus_Pickpocket_Info()
