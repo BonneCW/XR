@@ -124,6 +124,8 @@ FUNC VOID Info_Mod_Lee_Aufgabe_Info()
 	Log_CreateTopic	(TOPIC_MOD_SLD_SPY, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_SLD_SPY, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_SLD_SPY, "Lee gab mir den Auftrag im Alten Lager zu spionieren. Ich soll mir dazu eine Schattenrüstung von Mordrag holen und mich mit möglichst vielen Schatten unterhalten.");
+
+	B_RemoveNpc	(Mod_1108_GRD_Bullit_MT);
 };
 
 INSTANCE Info_Mod_Lee_GotoSylvio (C_INFO)

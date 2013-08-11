@@ -53,3 +53,9 @@ FUNC VOID Rtn_Feuerregen_1108 ()
 	TA_Stand_Guarding	(06,00,21,00,"LOCATION_11_08");
 	TA_Stand_Guarding	(21,00,06,00,"LOCATION_11_08");	
 };
+
+FUNC VOID Rtn_Tot_1108 ()
+{
+	TA_Stand_Guarding	(06,00,21,00,"TOT");
+	TA_Stand_Guarding	(21,00,06,00,"TOT");	
+};
