@@ -156,7 +156,7 @@ INSTANCE Info_Mod_Irmgard_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Irmgard_Pickpocket_Condition()
 {
-	C_Beklauen	(79, ItMi_Gold, 280);
+	C_Beklauen	(79, ItMi_Gold, 28);
 };
 
 FUNC VOID Info_Mod_Irmgard_Pickpocket_Info()

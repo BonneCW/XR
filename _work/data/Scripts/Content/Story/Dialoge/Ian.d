@@ -334,7 +334,7 @@ INSTANCE Info_Mod_Ian_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Ian_Pickpocket_Condition()
 {
-	C_Beklauen	(80, ItMi_Nugget, 13);
+	C_Beklauen	(80, ItMi_Nugget, 5);
 };
 
 FUNC VOID Info_Mod_Ian_Pickpocket_Info()
