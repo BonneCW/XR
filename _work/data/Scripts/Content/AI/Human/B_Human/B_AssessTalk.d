@@ -19,6 +19,7 @@ func void B_AssessTalk ()
 
 	if (Npc_GetDistToNpc(self, other) > 500)
 	&& (Hlp_GetInstanceID(self) != Hlp_GetInstanceID(PC_Friend_XW))
+	&& (Hlp_GetInstanceID(self) != Hlp_GetInstanceID(Monster_11074_Leprechaun_XW))
 	{
 		return;
 	};

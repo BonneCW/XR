@@ -2063,6 +2063,15 @@ FUNC VOID HAUPTQUESTS()
 			Mod_XW_Startscene = 1;
 		};
 
+		if (!Npc_IsInState(Schattenlord_998_Urnol, ZS_Talk))
+		&& (!Npc_IsInState(PC_Friend_XW, ZS_Talk))
+		&& (Mod_XW_Startscene == 3)
+		{
+			Mod_XW_Startscene = 4;
+
+			Npc_SendSinglePerc	(hero, PC_Friend_XW, PERC_ASSESSTALK);
+		};
+
 		if (Npc_KnowsInfo(hero, Info_Mod_Urnol_XW_Hi))
 		&& (!Npc_IsInState(Schattenlord_998_Urnol, ZS_Talk))
 		&& (Mod_XW_Startscene == 2)
@@ -2072,11 +2081,21 @@ FUNC VOID HAUPTQUESTS()
 			AI_Teleport	(hero, "KNAST_02");
 		};
 
+		if (!Npc_IsInState(Monster_11074_Leprechaun_XW, ZS_Talk))
+		&& (!Npc_IsInState(PC_Friend_XW, ZS_Talk))
+		&& (Npc_KnowsInfo(hero, Info_Mod_Argez_XW_Gefangen))
+		&& (Mod_XW_Startscene == 4)
+		{
+			Mod_XW_Startscene = 5;
+
+			Npc_SendSinglePerc	(hero, Monster_11074_Leprechaun_XW, PERC_ASSESSTALK);
+		};
+
 		if (Npc_KnowsInfo(hero, Info_Mod_Leprechaun_XW_Hi))
 		&& (!Npc_IsInState(Monster_11074_Leprechaun_XW, ZS_Talk))
-		&& (Mod_XW_Startscene == 3)
+		&& (Mod_XW_Startscene == 5)
 		{
-			Mod_XW_Startscene = 4;
+			Mod_XW_Startscene = 6;
 
 			Wld_InsertItem	(ItKe_XeresKnast, "FP_ITEM_XERESKNAST");
 		};

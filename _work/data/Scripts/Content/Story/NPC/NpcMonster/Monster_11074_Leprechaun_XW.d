@@ -58,8 +58,8 @@ INSTANCE Monster_11074_Leprechaun_XW	(Mst_Default_Gobbo_Green)
 
 FUNC VOID Rtn_Start_11074()
 {
-	TA_Roam	(08,00,20,00,"KNAST_02");
-	TA_Roam	(20,00,08,00,"KNAST_02");
+	TA_Roam	(08,00,20,00,"KNASTGANG_01");
+	TA_Roam	(20,00,08,00,"KNASTGANG_01");
 };
 
 FUNC VOID Rtn_Arena_11074()
