@@ -399,7 +399,7 @@ INSTANCE Info_Mod_Cedric_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Cedric_Pickpocket_Condition()
 {
-	C_Beklauen	(130, ItMi_Gold, 690);
+	C_Beklauen	(130, ItMi_Gold, 69);
 };
 
 FUNC VOID Info_Mod_Cedric_Pickpocket_Info()

@@ -988,7 +988,7 @@ INSTANCE Info_Mod_Angar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Angar_Pickpocket_Condition()
 {
-	C_Beklauen	(157, ItMi_Gold, 1100);
+	C_Beklauen	(157, ItMi_Gold, 101);
 };
 
 FUNC VOID Info_Mod_Angar_Pickpocket_Info()

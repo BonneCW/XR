@@ -374,7 +374,7 @@ INSTANCE Info_Mod_Cord_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Cord_Pickpocket_Condition()
 {
-	C_Beklauen	(125, ItMi_Gold, 650);
+	C_Beklauen	(125, ItMi_Gold, 65);
 };
 
 FUNC VOID Info_Mod_Cord_Pickpocket_Info()

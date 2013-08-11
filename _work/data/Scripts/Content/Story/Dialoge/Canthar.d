@@ -308,7 +308,7 @@ INSTANCE Info_Mod_Canthar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Canthar_Pickpocket_Condition()
 {
-	C_Beklauen	(135, ItMi_Gold, 2500);
+	C_Beklauen	(135, ItMi_Gold, 62);
 };
 
 FUNC VOID Info_Mod_Canthar_Pickpocket_Info()

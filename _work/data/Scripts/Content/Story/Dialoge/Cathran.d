@@ -308,7 +308,7 @@ INSTANCE Info_Mod_Cathran_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Cathran_Pickpocket_Condition()
 {
-	C_Beklauen	(78, ItMi_Gold, 360);
+	C_Beklauen	(78, ItMi_Gold, 28);
 };
 
 FUNC VOID Info_Mod_Cathran_Pickpocket_Info()
