@@ -354,7 +354,7 @@ INSTANCE Info_Mod_Ulthar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Ulthar_Pickpocket_Condition()
 {
-	C_Beklauen	(169, ItMi_Gold, 1230);
+	C_Beklauen	(169, ItMi_Gold, 96);
 };
 
 FUNC VOID Info_Mod_Ulthar_Pickpocket_Info()

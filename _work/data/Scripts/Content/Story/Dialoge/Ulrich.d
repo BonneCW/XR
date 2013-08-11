@@ -196,7 +196,7 @@ INSTANCE Info_Mod_Ulrich_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Ulrich_Pickpocket_Condition()
 {
-	C_Beklauen	(68, ItMi_Gold, 316);
+	C_Beklauen	(68, ItMi_Gold, 21);
 };
 
 FUNC VOID Info_Mod_Ulrich_Pickpocket_Info()
