@@ -510,7 +510,7 @@ INSTANCE Info_Mod_Nefarius_AW_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Nefarius_AW_Pickpocket_Condition()
 {
-	C_Beklauen	(144, ItMi_Gold, 600);
+	C_Beklauen	(144, ItMi_Gold, 61);
 };
 
 FUNC VOID Info_Mod_Nefarius_AW_Pickpocket_Info()

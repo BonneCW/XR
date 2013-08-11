@@ -62,7 +62,7 @@ INSTANCE Info_Mod_Nadja_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Nadja_Pickpocket_Condition()
 {
-	C_Beklauen	(73, ItMi_Gold, 250);
+	C_Beklauen	(73, ItMi_Gold, 20);
 };
 
 FUNC VOID Info_Mod_Nadja_Pickpocket_Info()

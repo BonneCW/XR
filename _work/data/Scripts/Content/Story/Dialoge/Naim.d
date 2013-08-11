@@ -272,7 +272,7 @@ INSTANCE Info_Mod_Naim_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Naim_Pickpocket_Condition()
 {
-	C_Beklauen	(168, ItMi_Gold, 2000);
+	C_Beklauen	(168, ItMi_Gold, 90);
 };
 
 FUNC VOID Info_Mod_Naim_Pickpocket_Info()

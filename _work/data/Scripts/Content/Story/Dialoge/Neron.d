@@ -39,7 +39,7 @@ INSTANCE Info_Mod_Neron_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Neron_Pickpocket_Condition()
 {
-	C_Beklauen	(94, ItMi_Gold, 570);
+	C_Beklauen	(94, ItMi_Gold, 42);
 };
 
 FUNC VOID Info_Mod_Neron_Pickpocket_Info()

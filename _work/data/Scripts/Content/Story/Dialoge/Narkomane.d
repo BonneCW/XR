@@ -39,7 +39,7 @@ INSTANCE Info_Mod_Narkomane_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Narkomane_Pickpocket_Condition()
 {
-	C_Beklauen	(11, ItMi_Gold, 5);
+	C_Beklauen	(11, ItMi_Gold, 11);
 };
 
 FUNC VOID Info_Mod_Narkomane_Pickpocket_Info()

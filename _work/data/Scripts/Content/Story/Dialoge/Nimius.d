@@ -167,7 +167,7 @@ INSTANCE Info_Mod_Nimius_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Nimius_Pickpocket_Condition()
 {
-	C_Beklauen	(10, ItMi_Gold, 34);
+	C_Beklauen	(10, ItMi_Gold, 10);
 };
 
 FUNC VOID Info_Mod_Nimius_Pickpocket_Info()

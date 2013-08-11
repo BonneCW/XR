@@ -226,7 +226,7 @@ INSTANCE Info_Mod_Neol_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Neol_Pickpocket_Condition()
 {
-	C_Beklauen	(64, ItMi_Gold, 90);
+	C_Beklauen	(64, ItMi_Gold, 23);
 };
 
 FUNC VOID Info_Mod_Neol_Pickpocket_Info()

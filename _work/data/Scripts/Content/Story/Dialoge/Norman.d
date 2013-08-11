@@ -89,7 +89,7 @@ INSTANCE Info_Mod_Norman_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Norman_Pickpocket_Condition()
 {
-	C_Beklauen	(51, ItMi_Gold, 250);
+	C_Beklauen	(51, ItMi_Gold, 20);
 };
 
 FUNC VOID Info_Mod_Norman_Pickpocket_Info()

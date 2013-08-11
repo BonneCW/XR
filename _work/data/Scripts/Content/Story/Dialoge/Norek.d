@@ -322,7 +322,7 @@ INSTANCE Info_Mod_Norek_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Norek_Pickpocket_Condition()
 {
-	C_Beklauen	(118, ItMi_Gold, 750);
+	C_Beklauen	(118, ItMi_Gold, 41);
 };
 
 FUNC VOID Info_Mod_Norek_Pickpocket_Info()
