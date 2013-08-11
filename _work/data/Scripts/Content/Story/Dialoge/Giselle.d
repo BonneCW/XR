@@ -279,7 +279,7 @@ INSTANCE Info_Mod_Giselle_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Giselle_Pickpocket_Condition()
 {
-	C_Beklauen	(38, ItMi_Gold, 70);
+	C_Beklauen	(38, ItMi_Gold, 20);
 };
 
 FUNC VOID Info_Mod_Giselle_Pickpocket_Info()

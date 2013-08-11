@@ -177,7 +177,7 @@ INSTANCE Info_Mod_Garett_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Garett_Pickpocket_Condition()
 {
-	C_Beklauen	(67, ItMi_Gold, 471);
+	C_Beklauen	(67, ItMi_Gold, 24);
 };
 
 FUNC VOID Info_Mod_Garett_Pickpocket_Info()

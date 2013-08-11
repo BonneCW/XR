@@ -237,7 +237,7 @@ INSTANCE Info_Mod_Gerbrandt_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Gerbrandt_Pickpocket_Condition()
 {
-	C_Beklauen	(48, ItMi_Gold, 135);
+	C_Beklauen	(48, ItMi_Gold, 15);
 };
 
 FUNC VOID Info_Mod_Gerbrandt_Pickpocket_Info()

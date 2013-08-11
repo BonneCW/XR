@@ -102,7 +102,7 @@ INSTANCE Info_Mod_GorNaRan_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_GorNaRan_Pickpocket_Condition()
 {
-	C_Beklauen	(117, ItMi_Gold, 543);
+	C_Beklauen	(117, ItMi_Gold, 39);
 };
 
 FUNC VOID Info_Mod_GorNaRan_Pickpocket_Info()

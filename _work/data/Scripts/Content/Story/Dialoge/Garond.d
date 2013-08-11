@@ -396,7 +396,7 @@ INSTANCE Info_Mod_Garond_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Garond_Pickpocket_Condition()
 {
-	C_Beklauen	(127, ItMi_Gold, 500);
+	C_Beklauen	(127, ItMi_Gold, 70);
 };
 
 FUNC VOID Info_Mod_Garond_Pickpocket_Info()

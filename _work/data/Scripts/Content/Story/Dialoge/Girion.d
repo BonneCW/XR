@@ -41,7 +41,7 @@ INSTANCE Info_Mod_Girion_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Girion_Pickpocket_Condition()
 {
-	C_Beklauen	(109, ItMi_Gold, 430);
+	C_Beklauen	(109, ItMi_Gold, 43);
 };
 
 FUNC VOID Info_Mod_Girion_Pickpocket_Info()

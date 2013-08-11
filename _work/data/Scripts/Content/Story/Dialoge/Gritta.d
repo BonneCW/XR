@@ -232,7 +232,7 @@ INSTANCE Info_Mod_Gritta_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Gritta_Pickpocket_Condition()
 {
-	C_Beklauen	(36, ItMi_Gold, 75);
+	C_Beklauen	(36, ItMi_Gold, 19);
 };
 
 FUNC VOID Info_Mod_Gritta_Pickpocket_Info()

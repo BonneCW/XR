@@ -269,7 +269,7 @@ INSTANCE Info_Mod_Granmar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Granmar_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 200);
+	C_Beklauen	(77, ItMi_Gold, 25);
 };
 
 FUNC VOID Info_Mod_Granmar_Pickpocket_Info()

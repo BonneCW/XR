@@ -316,7 +316,7 @@ INSTANCE Info_Mod_Garvell_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Garvell_Pickpocket_Condition()
 {
-	C_Beklauen	(38, ItMi_Gold, 90);
+	C_Beklauen	(38, ItMi_Gold, 17);
 };
 
 FUNC VOID Info_Mod_Garvell_Pickpocket_Info()

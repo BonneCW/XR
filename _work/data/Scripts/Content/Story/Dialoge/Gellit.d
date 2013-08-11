@@ -166,7 +166,7 @@ INSTANCE Info_Mod_Gellit_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Gellit_Pickpocket_Condition()
 {
-	C_Beklauen	(100, ItMi_Gold, 1200);
+	C_Beklauen	(100, ItMi_Gold, 35);
 };
 
 FUNC VOID Info_Mod_Gellit_Pickpocket_Info()
