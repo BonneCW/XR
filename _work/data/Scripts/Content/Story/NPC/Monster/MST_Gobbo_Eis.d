@@ -83,6 +83,7 @@ INSTANCE Gobbo_Eis (Mst_Default_Gobbo_Eis)
 INSTANCE Gobbo_Eis_Beschwoerer (Mst_Default_Gobbo_Eis)
 {
 	name		= "Dämonenbeschwörer";
+	guild							=	GIL_GOBBO_SKELETON;
 
 	B_SetVisuals_Gobbo_Eis_Schamane();
 
