@@ -86,7 +86,7 @@ INSTANCE Info_Mod_Ranck_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Ranck_Pickpocket_Condition()
 {
-	C_Beklauen	(72, ItMi_Gold, 600);
+	C_Beklauen	(72, ItMi_Gold, 27);
 };
 
 FUNC VOID Info_Mod_Ranck_Pickpocket_Info()

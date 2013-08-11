@@ -51,7 +51,7 @@ INSTANCE Info_Mod_RichterKhorinis_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_RichterKhorinis_Pickpocket_Condition()
 {
-	C_Beklauen	(131, ItMi_Gold, 1000);
+	C_Beklauen	(131, ItMi_Gold, 64);
 };
 
 FUNC VOID Info_Mod_RichterKhorinis_Pickpocket_Info()

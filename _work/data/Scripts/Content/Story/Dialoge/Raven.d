@@ -843,7 +843,7 @@ INSTANCE Info_Mod_Raven_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Raven_Pickpocket_Condition()
 {
-	C_Beklauen	(161, ItMi_Gold, 1250);
+	C_Beklauen	(161, ItMi_Gold, 92);
 };
 
 FUNC VOID Info_Mod_Raven_Pickpocket_Info()

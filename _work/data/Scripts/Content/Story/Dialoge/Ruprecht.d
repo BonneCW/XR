@@ -129,7 +129,7 @@ INSTANCE Info_Mod_Ruprecht_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Ruprecht_Pickpocket_Condition()
 {
-	C_Beklauen	(103, ItMi_Gold, 500);
+	C_Beklauen	(103, ItMi_Gold, 36);
 };
 
 FUNC VOID Info_Mod_Ruprecht_Pickpocket_Info()

@@ -258,7 +258,7 @@ INSTANCE Info_Mod_Rath_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Rath_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 50);
+	C_Beklauen	(55, ItMi_Gold, 19);
 };
 
 FUNC VOID Info_Mod_Rath_Pickpocket_Info()

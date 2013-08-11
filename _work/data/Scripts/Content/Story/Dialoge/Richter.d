@@ -789,7 +789,7 @@ INSTANCE Info_Mod_Richter_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Richter_Pickpocket_Condition()
 {
-	C_Beklauen	(145, ItMi_Gold, 2000);
+	C_Beklauen	(145, ItMi_Gold, 62);
 };
 
 FUNC VOID Info_Mod_Richter_Pickpocket_Info()

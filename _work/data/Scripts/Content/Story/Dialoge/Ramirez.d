@@ -319,7 +319,7 @@ INSTANCE Info_Mod_Ramirez_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Ramirez_Pickpocket_Condition()
 {
-	C_Beklauen	(120, ItMi_Gold, 2500);
+	C_Beklauen	(120, ItMi_Gold, 37);
 };
 
 FUNC VOID Info_Mod_Ramirez_Pickpocket_Info()

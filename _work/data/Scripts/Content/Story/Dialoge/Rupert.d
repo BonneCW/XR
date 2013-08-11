@@ -372,7 +372,7 @@ INSTANCE Info_Mod_Rupert_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Rupert_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 250);
+	C_Beklauen	(55, ItMi_Gold, 17);
 };
 
 FUNC VOID Info_Mod_Rupert_Pickpocket_Info()

@@ -481,7 +481,7 @@ INSTANCE Info_Mod_Ruediger_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Ruediger_Pickpocket_Condition()
 {
-	C_Beklauen	(86, ItMi_Gold, 300);
+	C_Beklauen	(86, ItMi_Gold, 24);
 };
 
 FUNC VOID Info_Mod_Ruediger_Pickpocket_Info()

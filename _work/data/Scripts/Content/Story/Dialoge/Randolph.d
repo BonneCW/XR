@@ -280,7 +280,7 @@ INSTANCE Info_Mod_Randolph_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Randolph_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 75);
+	C_Beklauen	(55, ItMi_Gold, 19);
 };
 
 FUNC VOID Info_Mod_Randolph_Pickpocket_Info()

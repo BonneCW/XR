@@ -281,7 +281,7 @@ INSTANCE Info_Mod_Rosi_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Rosi_Pickpocket_Condition()
 {
-	C_Beklauen	(16, ItMi_Gold, 50);
+	C_Beklauen	(16, ItMi_Gold, 12);
 };
 
 FUNC VOID Info_Mod_Rosi_Pickpocket_Info()
