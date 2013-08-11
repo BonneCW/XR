@@ -912,7 +912,7 @@ INSTANCE Info_Mod_Valentine_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Valentine_Pickpocket_Condition()
 {
-	C_Beklauen	(56, ItMi_Gold, 85);
+	C_Beklauen	(56, ItMi_Gold, 17);
 };
 
 FUNC VOID Info_Mod_Valentine_Pickpocket_Info()

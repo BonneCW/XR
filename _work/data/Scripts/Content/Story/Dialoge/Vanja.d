@@ -100,7 +100,7 @@ INSTANCE Info_Mod_Vanja_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Vanja_Pickpocket_Condition()
 {
-	C_Beklauen	(36, ItMi_Gold, 25);
+	C_Beklauen	(36, ItMi_Gold, 18);
 };
 
 FUNC VOID Info_Mod_Vanja_Pickpocket_Info()

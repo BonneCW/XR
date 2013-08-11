@@ -37,7 +37,7 @@ INSTANCE Info_Mod_Veronica_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Veronica_Pickpocket_Condition()
 {
-	C_Beklauen	(53, ItMi_Gold, 90);
+	C_Beklauen	(53, ItMi_Gold, 19);
 };
 
 FUNC VOID Info_Mod_Veronica_Pickpocket_Info()

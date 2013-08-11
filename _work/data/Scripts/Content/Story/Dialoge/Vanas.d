@@ -87,7 +87,7 @@ INSTANCE Info_Mod_Vanas_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Vanas_Pickpocket_Condition()
 {
-	C_Beklauen	(65, ItMi_Gold, 123);
+	C_Beklauen	(65, ItMi_Gold, 22);
 };
 
 FUNC VOID Info_Mod_Vanas_Pickpocket_Info()
