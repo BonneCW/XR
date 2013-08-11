@@ -1398,7 +1398,7 @@ INSTANCE Info_Mod_Dexter_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Dexter_Pickpocket_Condition()
 {
-	C_Beklauen	(125, ItMi_Gold, 630);
+	C_Beklauen	(125, ItMi_Gold, 70);
 };
 
 FUNC VOID Info_Mod_Dexter_Pickpocket_Info()

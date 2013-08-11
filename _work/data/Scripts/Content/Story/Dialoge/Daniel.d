@@ -318,7 +318,7 @@ INSTANCE Info_Mod_Daniel_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Daniel_Pickpocket_Condition()
 {
-	C_Beklauen	(94, ItMi_Gold, 750);
+	C_Beklauen	(94, ItMi_Gold, 39);
 };
 
 FUNC VOID Info_Mod_Daniel_Pickpocket_Info()

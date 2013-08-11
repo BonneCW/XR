@@ -193,7 +193,7 @@ INSTANCE Info_Mod_Ditmar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Ditmar_Pickpocket_Condition()
 {
-	C_Beklauen	(98, ItMi_Gold, 800);
+	C_Beklauen	(98, ItMi_Gold, 45);
 };
 
 FUNC VOID Info_Mod_Ditmar_Pickpocket_Info()
