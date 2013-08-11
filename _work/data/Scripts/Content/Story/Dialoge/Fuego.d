@@ -387,7 +387,7 @@ INSTANCE Info_Mod_Fuego_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Fuego_Pickpocket_Condition()
 {
-	C_Beklauen	(157, ItMi_Gold, 1000);
+	C_Beklauen	(157, ItMi_Gold, 100);
 };
 
 FUNC VOID Info_Mod_Fuego_Pickpocket_Info()

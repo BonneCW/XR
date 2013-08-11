@@ -287,7 +287,7 @@ INSTANCE Info_Mod_Fisk_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Fisk_Pickpocket_Condition()
 {
-	C_Beklauen	(59, ItMi_Nugget, 6);
+	C_Beklauen	(59, ItMi_Nugget, 2);
 };
 
 FUNC VOID Info_Mod_Fisk_Pickpocket_Info()

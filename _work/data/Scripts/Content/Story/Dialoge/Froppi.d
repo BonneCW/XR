@@ -215,7 +215,7 @@ INSTANCE Info_Mod_Froppi_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Froppi_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItMi_Gold, 320);
+	C_Beklauen	(77, ItMi_Gold, 22);
 };
 
 FUNC VOID Info_Mod_Froppi_Pickpocket_Info()

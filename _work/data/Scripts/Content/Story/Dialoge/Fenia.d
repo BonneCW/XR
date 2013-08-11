@@ -347,7 +347,7 @@ INSTANCE Info_Mod_Fenia_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Fenia_Pickpocket_Condition()
 {
-	C_Beklauen	(40, ItMi_Gold, 70);
+	C_Beklauen	(40, ItMi_Gold, 15);
 };
 
 FUNC VOID Info_Mod_Fenia_Pickpocket_Info()

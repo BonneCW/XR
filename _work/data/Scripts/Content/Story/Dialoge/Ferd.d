@@ -38,7 +38,7 @@ INSTANCE Info_Mod_Ferd_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Ferd_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 130);
+	C_Beklauen	(55, ItMi_Gold, 18);
 };
 
 FUNC VOID Info_Mod_Ferd_Pickpocket_Info()

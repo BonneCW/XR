@@ -164,7 +164,7 @@ INSTANCE Info_Mod_Flora_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Flora_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(55, ItMi_Gold, 16);
 };
 
 FUNC VOID Info_Mod_Flora_Pickpocket_Info()
