@@ -232,6 +232,38 @@ FUNC VOID Info_Mod_Halvor_Fenia_A()
 	Info_ClearChoices	(Info_Mod_Halvor_Fenia);
 };
 
+INSTANCE Info_Mod_Halvor_Kap2 (C_INFO)
+{
+	npc		= Mod_582_NONE_Halvor_NW;
+	nr		= 1;
+	condition	= Info_Mod_Halvor_Kap2_Condition;
+	information	= Info_Mod_Halvor_Kap2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Du hast also frischen Fisch?";
+};
+
+FUNC INT Info_Mod_Halvor_Kap2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Halvor_Hi))
+	&& (Kapitel >= 2)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Halvor_Kap2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Halvor_Kap2_15_00"); //Du hast also frischen Fisch?
+	AI_Output(self, hero, "Info_Mod_Halvor_Kap2_26_01"); //Das sage ich doch die ganze Zeit. Frische Fische.
+	AI_Output(hero, self, "Info_Mod_Halvor_Kap2_15_02"); //Welcher ist denn am frischesten?
+	AI_Output(self, hero, "Info_Mod_Halvor_Kap2_26_03"); //Die sind alle gleich gut. Frischer Fisch eben.
+	AI_Output(hero, self, "Info_Mod_Halvor_Kap2_15_04"); //Also wirklich frischer Hering?
+	AI_Output(self, hero, "Info_Mod_Halvor_Kap2_26_05"); //(genervt) Pass mal auf, du Held. Siehst du den Hering ganz links?
+	AI_Output(hero, self, "Info_Mod_Halvor_Kap2_15_06"); //Meinst du den da?
+	AI_Output(self, hero, "Info_Mod_Halvor_Kap2_26_07"); //Ja, genau den. Der ist so frisch, der schwamm gestern noch im Ozean und hat die Haie gejagt. So frisch ist der. Und jetzt hau ab und lass mich in Ruhe.
+};
+
 INSTANCE Info_Mod_Halvor_Trade (C_INFO)
 {
 	npc		= Mod_582_NONE_Halvor_NW;
