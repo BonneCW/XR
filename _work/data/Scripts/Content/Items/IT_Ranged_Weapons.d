@@ -1422,6 +1422,38 @@ INSTANCE ItRw_Bow_H_04 (C_Item)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
+INSTANCE ItRw_Bow_H_04_Eigen (C_Item)
+{
+	name 				=	"Drachenbogen (selbst gebaut)";
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_BOW;
+	material 			=	MAT_WOOD;
+
+	value 				=	Value_Drachenbogen;
+
+	damageTotal			=	180;
+	damagetype			=	DAM_POINT;
+	munition			=	ItRw_Arrow;
+
+	cond_atr[2]   		= 	ATR_DEXTERITY;
+	cond_value[2]  		= 	150;
+	visual 				=	"ItRw_Bow_H_04.mms";
+
+	range		= 3000;
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+	
+	on_equip	=	munichange;
+	on_unequip	=	munichange_e;
+
+	description			= name;
+	TEXT[1]				= NAME_Range;					COUNT[1]	= range/100;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
 //Armbrüste
 
 //Kapitel 1
@@ -1633,6 +1665,35 @@ INSTANCE ItRw_Crossbow_H_02(C_Item)
 	munition			=	ItRw_Bolt;
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	165;
+	visual 				=	"ItRw_Crossbow_H_02.mms";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	range		= 3000;
+	
+	on_equip	=	munichange_cb;
+	on_unequip	=	munichange_cb_e;
+
+	description			= name;
+	TEXT[1]				= NAME_Range;					COUNT[1]	= range/100;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+INSTANCE ItRw_Crossbow_H_02_Eigen(C_Item)
+{
+	name 				=	"Drachenjägerarmbrust (selbst gebaut)";
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_CROSSBOW;
+	material 			=	MAT_WOOD;
+
+	damageTotal			= 	190;
+	damagetype			=	DAM_POINT;
+	munition			=	ItRw_Bolt;
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	155;
 	visual 				=	"ItRw_Crossbow_H_02.mms";
 
 	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;

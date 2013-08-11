@@ -306,7 +306,7 @@ FUNC VOID PC_Baumstamm_Drachenbogen_Info()
 	Npc_RemoveInvItems	(hero, ItMi_Ast, 1);
 	Npc_RemoveInvItems	(hero, ItAt_DragonSehne, 2);
 
-	CreateInvItems	(hero, ItRw_Bow_H_04, 1);
+	CreateInvItems	(hero, ItRw_Bow_H_04_Eigen, 1);
 
 	B_ENDPRODUCTIONDIALOG();
 };
@@ -339,7 +339,7 @@ FUNC VOID PC_Baumstamm_Drachenarmbrust_Info()
 	Npc_RemoveInvItems	(hero, ItMi_Ast, 1);
 	Npc_RemoveInvItems	(hero, ItAt_DragonSehne, 2);
 
-	CreateInvItems	(hero, ItRw_Crossbow_H_02, 1);
+	CreateInvItems	(hero, ItRw_Crossbow_H_02_Eigen, 1);
 
 	B_ENDPRODUCTIONDIALOG();
 };
