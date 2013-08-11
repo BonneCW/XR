@@ -41,7 +41,7 @@ INSTANCE Info_Mod_Struk_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Struk_Pickpocket_Condition()
 {
-	C_Beklauen	(58, ItMi_Gold, 180);
+	C_Beklauen	(58, ItMi_Gold, 18);
 };
 
 FUNC VOID Info_Mod_Struk_Pickpocket_Info()

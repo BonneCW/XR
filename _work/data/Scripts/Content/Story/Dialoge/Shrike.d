@@ -161,7 +161,7 @@ INSTANCE Info_Mod_Shrike_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Shrike_Pickpocket_Condition()
 {
-	C_Beklauen	(45, ItMi_Gold, 80);
+	C_Beklauen	(45, ItMi_Gold, 16);
 };
 
 FUNC VOID Info_Mod_Shrike_Pickpocket_Info()

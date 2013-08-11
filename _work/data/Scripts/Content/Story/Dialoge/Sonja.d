@@ -288,7 +288,7 @@ INSTANCE Info_Mod_Sonja_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Sonja_Pickpocket_Condition()
 {
-	C_Beklauen	(38, ItMi_Gold, 70);
+	C_Beklauen	(38, ItMi_Gold, 19);
 };
 
 FUNC VOID Info_Mod_Sonja_Pickpocket_Info()

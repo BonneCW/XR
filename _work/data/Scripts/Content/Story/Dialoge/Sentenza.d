@@ -184,7 +184,7 @@ INSTANCE Info_Mod_Sentenza_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Sentenza_Pickpocket_Condition()
 {
-	C_Beklauen	(79, ItMi_Gold, 440);
+	C_Beklauen	(79, ItMi_Gold, 21);
 };
 
 FUNC VOID Info_Mod_Sentenza_Pickpocket_Info()

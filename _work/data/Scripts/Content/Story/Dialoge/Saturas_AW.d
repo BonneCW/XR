@@ -1251,7 +1251,7 @@ INSTANCE Info_Mod_Saturas_AW_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Saturas_AW_Pickpocket_Condition()
 {
-	C_Beklauen	(176, ItMi_Gold, 1200);
+	C_Beklauen	(176, ItMi_Gold, 91);
 };
 
 FUNC VOID Info_Mod_Saturas_AW_Pickpocket_Info()

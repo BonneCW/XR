@@ -271,7 +271,7 @@ INSTANCE Info_Mod_Sonor_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Sonor_Pickpocket_Condition()
 {
-	C_Beklauen	(77, ItRw_Arrow, 33);
+	C_Beklauen	(77, ItRw_Arrow, 26);
 };
 
 FUNC VOID Info_Mod_Sonor_Pickpocket_Info()

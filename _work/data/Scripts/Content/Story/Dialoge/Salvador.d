@@ -236,7 +236,7 @@ INSTANCE Info_Mod_Salvador_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Salvador_Pickpocket_Condition()
 {
-	C_Beklauen	(73, ItMi_Gold, 400);
+	C_Beklauen	(73, ItMi_Gold, 28);
 };
 
 FUNC VOID Info_Mod_Salvador_Pickpocket_Info()

@@ -70,7 +70,7 @@ INSTANCE Info_Mod_Sergio_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Sergio_Pickpocket_Condition()
 {
-	C_Beklauen	(139, ItMi_Gold, 1900);
+	C_Beklauen	(139, ItMi_Gold, 66);
 };
 
 FUNC VOID Info_Mod_Sergio_Pickpocket_Info()

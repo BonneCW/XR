@@ -155,7 +155,7 @@ INSTANCE Info_Mod_Senyan_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Senyan_Pickpocket_Condition()
 {
-	C_Beklauen	(56, ItMi_Gold, 140);
+	C_Beklauen	(56, ItMi_Gold, 15);
 };
 
 FUNC VOID Info_Mod_Senyan_Pickpocket_Info()

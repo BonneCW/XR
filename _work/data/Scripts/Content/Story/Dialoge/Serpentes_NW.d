@@ -215,7 +215,7 @@ INSTANCE Info_Mod_Serpentes_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Serpentes_Pickpocket_Condition()
 {
-	C_Beklauen	(165, ItMi_Gold, 2000);
+	C_Beklauen	(165, ItMi_Gold, 93);
 };
 
 FUNC VOID Info_Mod_Serpentes_Pickpocket_Info()

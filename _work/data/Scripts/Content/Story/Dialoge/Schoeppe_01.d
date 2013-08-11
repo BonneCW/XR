@@ -35,7 +35,7 @@ INSTANCE Info_Mod_Schoeppe_01_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Schoeppe_01_Pickpocket_Condition()
 {
-	C_Beklauen	(76, ItMi_Gold, 350);
+	C_Beklauen	(76, ItMi_Gold, 20);
 };
 
 FUNC VOID Info_Mod_Schoeppe_01_Pickpocket_Info()

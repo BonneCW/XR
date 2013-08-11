@@ -361,7 +361,7 @@ INSTANCE Info_Mod_Sylvio_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Sylvio_Pickpocket_Condition()
 {
-	C_Beklauen	(129, ItMi_Gold, 600);
+	C_Beklauen	(129, ItMi_Gold, 65);
 };
 
 FUNC VOID Info_Mod_Sylvio_Pickpocket_Info()

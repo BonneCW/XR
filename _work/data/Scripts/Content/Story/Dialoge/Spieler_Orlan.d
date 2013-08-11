@@ -337,7 +337,7 @@ INSTANCE Info_Mod_Spieler_Orlan_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Spieler_Orlan_Pickpocket_Condition()
 {
-	C_Beklauen	(86, ItMi_Gold, 300);
+	C_Beklauen	(86, ItMi_Gold, 27);
 };
 
 FUNC VOID Info_Mod_Spieler_Orlan_Pickpocket_Info()

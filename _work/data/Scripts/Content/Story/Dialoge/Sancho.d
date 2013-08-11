@@ -714,7 +714,7 @@ INSTANCE Info_Mod_Sancho_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Sancho_Pickpocket_Condition()
 {
-	C_Beklauen	(57, ItMi_Gold, 170);
+	C_Beklauen	(57, ItMi_Gold, 19);
 };
 
 FUNC VOID Info_Mod_Sancho_Pickpocket_Info()

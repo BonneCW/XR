@@ -60,7 +60,7 @@ INSTANCE Info_Mod_Shrat_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Shrat_Pickpocket_Condition()
 {
-	C_Beklauen	(23, ItMi_Gold, 30);
+	C_Beklauen	(23, ItMi_Gold, 12);
 };
 
 FUNC VOID Info_Mod_Shrat_Pickpocket_Info()

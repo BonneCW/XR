@@ -142,7 +142,7 @@ INSTANCE Info_Mod_Silas_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Silas_Pickpocket_Condition()
 {
-	C_Beklauen	(55, ItMi_Gold, 100);
+	C_Beklauen	(55, ItMi_Gold, 17);
 };
 
 FUNC VOID Info_Mod_Silas_Pickpocket_Info()

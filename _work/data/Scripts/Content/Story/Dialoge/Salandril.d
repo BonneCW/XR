@@ -214,7 +214,7 @@ INSTANCE Info_Mod_Salandril_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Salandril_Pickpocket_Condition()
 {
-	C_Beklauen	(110, ItMi_Gold, 300);
+	C_Beklauen	(110, ItMi_Gold, 38);
 };
 
 FUNC VOID Info_Mod_Salandril_Pickpocket_Info()

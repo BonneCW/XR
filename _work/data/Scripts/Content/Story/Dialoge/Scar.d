@@ -464,7 +464,7 @@ INSTANCE Info_Mod_Scar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Scar_Pickpocket_Condition()
 {
-	C_Beklauen	(80, ItMi_Gold, 400);
+	C_Beklauen	(80, ItMi_Gold, 30);
 };
 
 FUNC VOID Info_Mod_Scar_Pickpocket_Info()
