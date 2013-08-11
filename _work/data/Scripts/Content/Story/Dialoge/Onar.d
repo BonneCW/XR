@@ -456,7 +456,7 @@ INSTANCE Info_Mod_Onar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Onar_Pickpocket_Condition()
 {
-	C_Beklauen	(100, ItMi_Gold, 800);
+	C_Beklauen	(100, ItMi_Gold, 43);
 };
 
 FUNC VOID Info_Mod_Onar_Pickpocket_Info()

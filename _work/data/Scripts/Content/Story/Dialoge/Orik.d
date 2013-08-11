@@ -342,7 +342,7 @@ INSTANCE Info_Mod_Orik_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Orik_Pickpocket_Condition()
 {
-	C_Beklauen	(112, ItMi_Gold, 460);
+	C_Beklauen	(112, ItMi_Gold, 44);
 };
 
 FUNC VOID Info_Mod_Orik_Pickpocket_Info()

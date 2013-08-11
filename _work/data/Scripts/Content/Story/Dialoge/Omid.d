@@ -53,7 +53,7 @@ INSTANCE Info_Mod_Omid_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Omid_Pickpocket_Condition()
 {
-	C_Beklauen	(46, ItMi_Gold, 150);
+	C_Beklauen	(46, ItMi_Gold, 18);
 };
 
 FUNC VOID Info_Mod_Omid_Pickpocket_Info()
