@@ -70,6 +70,7 @@ INSTANCE Info_Mod_Sylvio_Infos (C_INFO)
 FUNC INT Info_Mod_Sylvio_Infos_Condition()
 {
 	if (Mod_SLD_Spy == 1)
+	&& (Npc_HasItems(hero, ItAr_Stt_Mordrag) == 1)
 	{
 		return 1;
 	};
@@ -84,6 +85,8 @@ FUNC VOID Info_Mod_Sylvio_Infos_Info()
 	B_LogEntry	(TOPIC_MOD_SLD_SPY, "Ich soll zu Sentenza, um weitere Anweisungen zu erhalten.");
 
 	Mod_SLD_Spy = 4;
+
+	Npc_RemoveInvItems	(hero, ItAr_Stt_Mordrag, 1);
 };
 
 INSTANCE Info_Mod_Sylvio_Frauenraub (C_INFO)

@@ -167,6 +167,7 @@ INSTANCE Info_Mod_Lee_Infos (C_INFO)
 FUNC INT Info_Mod_Lee_Infos_Condition()
 {
 	if (Mod_SLD_Spy == 1)
+	&& (Npc_HasItems(hero, ItAr_Stt_Mordrag) == 1)
 	{
 		return 1;
 	};
@@ -188,6 +189,8 @@ FUNC VOID Info_Mod_Lee_Infos_Info()
 	Mod_SLD_KampfDay = Wld_GetDay();
 
 	B_GivePlayerXP	(250);
+
+	Npc_RemoveInvItems	(hero, ItAr_Stt_Mordrag, 1);
 
 	B_StartOtherRoutine	(self, "GARDISTEN");
 	B_StartOtherRoutine	(Mod_1283_SLD_Soeldner_MT, "GARDISTEN");
