@@ -297,7 +297,7 @@ INSTANCE Info_Mod_Yussuf_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Yussuf_Pickpocket_Condition()
 {
-	C_Beklauen	(82, ItMi_Gold, 120);
+	C_Beklauen	(82, ItMi_Gold, 26);
 };
 
 FUNC VOID Info_Mod_Yussuf_Pickpocket_Info()

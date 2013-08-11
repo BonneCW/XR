@@ -124,7 +124,7 @@ INSTANCE Info_Mod_Yasin_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Yasin_Pickpocket_Condition()
 {
-	C_Beklauen	(80, ItMi_Gold, 80);
+	C_Beklauen	(80, ItMi_Gold, 25);
 };
 
 FUNC VOID Info_Mod_Yasin_Pickpocket_Info()
