@@ -1410,7 +1410,7 @@ INSTANCE Info_Mod_Lee_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Lee_Pickpocket_Condition()
 {
-	C_Beklauen	(158, ItMi_Gold, 1300);
+	C_Beklauen	(158, ItMi_Gold, 100);
 };
 
 FUNC VOID Info_Mod_Lee_Pickpocket_Info()

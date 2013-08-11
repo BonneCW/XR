@@ -1161,7 +1161,7 @@ INSTANCE Info_Mod_Lares_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Lares_Pickpocket_Condition()
 {
-	C_Beklauen	(124, ItMi_Gold, 600);
+	C_Beklauen	(124, ItMi_Gold, 60);
 };
 
 FUNC VOID Info_Mod_Lares_Pickpocket_Info()

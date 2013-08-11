@@ -216,7 +216,7 @@ INSTANCE Info_Mod_Logan_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Logan_Pickpocket_Condition()
 {
-	C_Beklauen	(67, ItMi_Gold, 111);
+	C_Beklauen	(67, ItMi_Gold, 27);
 };
 
 FUNC VOID Info_Mod_Logan_Pickpocket_Info()

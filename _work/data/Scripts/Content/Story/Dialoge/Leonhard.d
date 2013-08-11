@@ -470,7 +470,7 @@ INSTANCE Info_Mod_Leonhard_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Leonhard_Pickpocket_Condition()
 {
-	C_Beklauen	(65, ItMi_Gold, 300);
+	C_Beklauen	(65, ItMi_Gold, 30);
 };
 
 FUNC VOID Info_Mod_Leonhard_Pickpocket_Info()

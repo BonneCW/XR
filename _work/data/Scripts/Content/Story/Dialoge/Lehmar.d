@@ -334,7 +334,7 @@ INSTANCE Info_Mod_Lehmar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Lehmar_Pickpocket_Condition()
 {
-	C_Beklauen	(200, ItMi_Gold, 10000);
+	C_Beklauen	(200, ItMi_Gold, 166);
 };
 
 FUNC VOID Info_Mod_Lehmar_Pickpocket_Info()
