@@ -301,6 +301,8 @@ FUNC VOID OTSCHALTER02_S1()
 		if (Mod_OTSchalter == 16)
 		{
 			Wld_SendTrigger	("OTGEHEIMKAMMER");
+
+			Snd_Play	("THRILLJINGLE_01");
 		};
 	}
 	else
