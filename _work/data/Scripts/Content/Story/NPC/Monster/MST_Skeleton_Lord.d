@@ -115,6 +115,10 @@ INSTANCE Skeleton_Lord_Ghost	(Mst_Skeleton_Lord)
 	protection	[PROT_MAGIC]		=	50;	//so lassen!
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
+
+	CreateInvItems	(self, ItMi_OldCoin, Hlp_Random(4));
+	CreateInvItems	(self, ItMi_Gold, Hlp_Random(16));
+	CreateInvItems	(self, ItMi_Aquamarine, Hlp_Random(3));
 };
 
 INSTANCE Summoned_Skeleton_Lord_Ghost_Xeres	(Mst_Skeleton_Lord)
