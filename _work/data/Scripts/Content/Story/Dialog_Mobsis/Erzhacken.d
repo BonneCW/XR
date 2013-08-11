@@ -469,6 +469,121 @@ FUNC INT B_ErzMob_Bestimmung()
 	{
 		ErzMob_91_Amount = (ErzMob_91_Amount +1);
 		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_58") && (ErzMob_92_Amount_MAX > ErzMob_92_Amount))
+	{
+		ErzMob_92_Amount = (ErzMob_92_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_59") && (ErzMob_93_Amount_MAX > ErzMob_93_Amount))
+	{
+		ErzMob_93_Amount = (ErzMob_93_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_60") && (ErzMob_94_Amount_MAX > ErzMob_94_Amount))
+	{
+		ErzMob_94_Amount = (ErzMob_94_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_61") && (ErzMob_95_Amount_MAX > ErzMob_95_Amount))
+	{
+		ErzMob_95_Amount = (ErzMob_95_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_62") && (ErzMob_96_Amount_MAX > ErzMob_96_Amount))
+	{
+		ErzMob_96_Amount = (ErzMob_96_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_63") && (ErzMob_97_Amount_MAX > ErzMob_97_Amount))
+	{
+		ErzMob_97_Amount = (ErzMob_97_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_64") && (ErzMob_98_Amount_MAX > ErzMob_98_Amount))
+	{
+		ErzMob_98_Amount = (ErzMob_98_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_65") && (ErzMob_99_Amount_MAX > ErzMob_99_Amount))
+	{
+		ErzMob_99_Amount = (ErzMob_99_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_66") && (ErzMob_100_Amount_MAX > ErzMob_100_Amount))
+	{
+		ErzMob_100_Amount = (ErzMob_100_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_67") && (ErzMob_101_Amount_MAX > ErzMob_101_Amount))
+	{
+		ErzMob_101_Amount = (ErzMob_101_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_68") && (ErzMob_102_Amount_MAX > ErzMob_102_Amount))
+	{
+		ErzMob_102_Amount = (ErzMob_102_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_69") && (ErzMob_103_Amount_MAX > ErzMob_103_Amount))
+	{
+		ErzMob_103_Amount = (ErzMob_103_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_70") && (ErzMob_104_Amount_MAX > ErzMob_104_Amount))
+	{
+		ErzMob_104_Amount = (ErzMob_104_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_71") && (ErzMob_105_Amount_MAX > ErzMob_105_Amount))
+	{
+		ErzMob_105_Amount = (ErzMob_105_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_72") && (ErzMob_106_Amount_MAX > ErzMob_106_Amount))
+	{
+		ErzMob_106_Amount = (ErzMob_106_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_73") && (ErzMob_107_Amount_MAX > ErzMob_107_Amount))
+	{
+		ErzMob_107_Amount = (ErzMob_107_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_74") && (ErzMob_108_Amount_MAX > ErzMob_108_Amount))
+	{
+		ErzMob_108_Amount = (ErzMob_108_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_75") && (ErzMob_109_Amount_MAX > ErzMob_109_Amount))
+	{
+		ErzMob_109_Amount = (ErzMob_109_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_76") && (ErzMob_110_Amount_MAX > ErzMob_110_Amount))
+	{
+		ErzMob_110_Amount = (ErzMob_110_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_77") && (ErzMob_111_Amount_MAX > ErzMob_111_Amount))
+	{
+		ErzMob_111_Amount = (ErzMob_111_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_78") && (ErzMob_112_Amount_MAX > ErzMob_112_Amount))
+	{
+		ErzMob_112_Amount = (ErzMob_112_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_56") && (ErzMob_113_Amount_MAX > ErzMob_113_Amount))
+	{
+		ErzMob_113_Amount = (ErzMob_113_Amount +1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "RM_37") && (ErzMob_114_Amount_MAX > ErzMob_114_Amount))
+	{
+		ErzMob_114_Amount = (ErzMob_114_Amount +1);
+		return TRUE;
 	};
 
 	return FALSE;
