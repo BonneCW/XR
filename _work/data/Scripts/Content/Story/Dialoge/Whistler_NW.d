@@ -266,7 +266,7 @@ INSTANCE Info_Mod_Whistler_NW_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Whistler_NW_Pickpocket_Condition()
 {
-	C_Beklauen	(52, ItMi_Gold, 140);
+	C_Beklauen	(52, ItMi_Gold, 15);
 };
 
 FUNC VOID Info_Mod_Whistler_NW_Pickpocket_Info()

@@ -154,7 +154,7 @@ INSTANCE Info_Mod_William_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_William_Pickpocket_Condition()
 {
-	C_Beklauen	(20, ItFo_Fish, 15);
+	C_Beklauen	(20, ItFo_Fish, 14);
 };
 
 FUNC VOID Info_Mod_William_Pickpocket_Info()

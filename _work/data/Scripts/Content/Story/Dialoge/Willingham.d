@@ -142,7 +142,7 @@ INSTANCE Info_Mod_Willingham_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Willingham_Pickpocket_Condition()
 {
-	C_Beklauen	(171, ItMi_Gold, 1234);
+	C_Beklauen	(171, ItMi_Gold, 98);
 };
 
 FUNC VOID Info_Mod_Willingham_Pickpocket_Info()
