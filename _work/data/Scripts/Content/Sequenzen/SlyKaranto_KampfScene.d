@@ -11,8 +11,21 @@ FUNC VOID SlyKaranto_KampfScene()
 
 	if (Mod_SlyKaranto_KampfScene_Counter == 2)
 	{
-		B_Attack	(Mod_801_STT_Sly_MT, Mod_1871_TPL_GorKaranto_MT, AR_NONE, 0);
-		B_Attack	(Mod_1871_TPL_GorKaranto_MT, Mod_801_STT_Sly_MT, AR_NONE, 0);
+		Npc_ClearAIQueue	(Mod_801_STT_Sly_MT);
+
+		Npc_SetTarget	(Mod_801_STT_Sly_MT, Mod_1871_TPL_GorKaranto_MT);
+
+		Npc_GetTarget	(Mod_801_STT_Sly_MT);
+
+		AI_StartState	(Mod_801_STT_Sly_MT, ZS_Attack, 0, "");
+
+		Npc_ClearAIQueue	(Mod_1871_TPL_GorKaranto_MT);
+
+		Npc_SetTarget	(Mod_1871_TPL_GorKaranto_MT, Mod_801_STT_Sly_MT);
+
+		Npc_GetTarget	(Mod_1871_TPL_GorKaranto_MT);
+
+		AI_StartState	(Mod_1871_TPL_GorKaranto_MT, ZS_Attack, 0, "");
 
 		if (Mod_Sly_Tipp)
 		{

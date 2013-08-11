@@ -465,7 +465,7 @@ FUNC VOID Info_Mod_Scatty_SlyArena_Info()
 	AI_Output(hero, self, "Info_Mod_Scatty_SlyArena_15_00"); //Hat sich Sly schon bei dir gemeldet?
 	AI_Output(self, hero, "Info_Mod_Scatty_SlyArena_01_01"); //Klaro. Ich bin mal gespannt, wie sich der Grünschnabel schlägt. Bisher ist er mir ja nur durch sein Saufen aufgefallen.
 	AI_Output(hero, self, "Info_Mod_Scatty_SlyArena_15_02"); //Gibt es schon einen Termin für seinen ersten Kampf?
-	AI_Output(self, hero, "Info_Mod_Scatty_SlyArena_01_03"); //Jo. Nachher um 18 Uhr tritt er gegen Gor Karanto an. Das wird ein harter Kampf, sag ich mal.
+	AI_Output(self, hero, "Info_Mod_Scatty_SlyArena_01_03"); //Jo. Nachher um 17 Uhr tritt er gegen Gor Karanto an. Das wird ein harter Kampf, sag ich mal.
 };
 
 INSTANCE Info_Mod_Scatty_Kap4 (C_INFO)

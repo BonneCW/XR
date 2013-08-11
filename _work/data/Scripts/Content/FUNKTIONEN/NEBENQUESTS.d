@@ -3299,7 +3299,7 @@ FUNC VOID NEBENQUESTS()
 
 		if (Mod_Sly_Arena == 3)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Scatty_SlyArena))
-		&& (Wld_IsTime(18,00,19,00))
+		&& (Wld_IsTime(17,00,21,00))
 		&& (Npc_GetDistToWP(hero, "OCR_ARENABATTLE") < 1000)
 		{
 			B_StartOtherRoutine	(Mod_801_STT_Sly_MT, "ARENAFIGHT");
