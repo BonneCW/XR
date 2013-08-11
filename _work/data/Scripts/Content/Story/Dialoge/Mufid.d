@@ -75,7 +75,7 @@ INSTANCE Info_Mod_Mufid_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Mufid_Pickpocket_Condition()
 {
-	C_Beklauen	(66, ItMi_Gold, 170);
+	C_Beklauen	(66, ItMi_Gold, 22);
 };
 
 FUNC VOID Info_Mod_Mufid_Pickpocket_Info()

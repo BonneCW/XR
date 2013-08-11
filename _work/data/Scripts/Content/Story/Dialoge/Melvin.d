@@ -417,7 +417,7 @@ INSTANCE Info_Mod_Melvin_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Melvin_Pickpocket_Condition()
 {
-	C_Beklauen	(80, ItMi_Gold, 250);
+	C_Beklauen	(80, ItMi_Gold, 29);
 };
 
 FUNC VOID Info_Mod_Melvin_Pickpocket_Info()

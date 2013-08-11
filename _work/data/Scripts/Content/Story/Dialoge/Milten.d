@@ -931,7 +931,7 @@ INSTANCE Info_Mod_Milten_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Milten_Pickpocket_Condition()
 {
-	C_Beklauen	(120, ItMi_Gold, 1200);
+	C_Beklauen	(120, ItMi_Gold, 36);
 };
 
 FUNC VOID Info_Mod_Milten_Pickpocket_Info()

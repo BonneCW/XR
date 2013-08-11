@@ -335,7 +335,7 @@ INSTANCE Info_Mod_Morgahard_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Morgahard_Pickpocket_Condition()
 {
-	C_Beklauen	(78, ItMi_Gold, 310);
+	C_Beklauen	(78, ItMi_Gold, 20);
 };
 
 FUNC VOID Info_Mod_Morgahard_Pickpocket_Info()

@@ -395,7 +395,7 @@ INSTANCE Info_Mod_Melcador_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Melcador_Pickpocket_Condition()
 {
-	C_Beklauen	(93, ItMi_Gold, 190);
+	C_Beklauen	(93, ItMi_Gold, 37);
 };
 
 FUNC VOID Info_Mod_Melcador_Pickpocket_Info()

@@ -99,7 +99,7 @@ INSTANCE Info_Mod_Malik_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Malik_Pickpocket_Condition()
 {
-	C_Beklauen	(117, ItMi_Gold, 320);
+	C_Beklauen	(117, ItMi_Gold, 40);
 };
 
 FUNC VOID Info_Mod_Malik_Pickpocket_Info()

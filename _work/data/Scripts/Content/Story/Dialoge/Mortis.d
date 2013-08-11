@@ -237,7 +237,7 @@ INSTANCE Info_Mod_Mortis_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Mortis_Pickpocket_Condition()
 {
-	C_Beklauen	(48, ItMi_Gold, 100);
+	C_Beklauen	(48, ItMi_Gold, 18);
 };
 
 FUNC VOID Info_Mod_Mortis_Pickpocket_Info()

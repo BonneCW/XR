@@ -191,7 +191,7 @@ INSTANCE Info_Mod_Margarethe_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Margarethe_Pickpocket_Condition()
 {
-	C_Beklauen	(65, ItMi_Gold, 150);
+	C_Beklauen	(65, ItMi_Gold, 25);
 };
 
 FUNC VOID Info_Mod_Margarethe_Pickpocket_Info()

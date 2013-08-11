@@ -314,7 +314,7 @@ INSTANCE Info_Mod_Monty_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Monty_Pickpocket_Condition()
 {
-	C_Beklauen	(34, ItMi_Gold, 65);
+	C_Beklauen	(34, ItMi_Gold, 16);
 };
 
 FUNC VOID Info_Mod_Monty_Pickpocket_Info()

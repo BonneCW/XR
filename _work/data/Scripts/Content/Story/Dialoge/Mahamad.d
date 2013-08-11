@@ -289,7 +289,7 @@ INSTANCE Info_Mod_Mahamad_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Mahamad_Pickpocket_Condition()
 {
-	C_Beklauen	(88, ItMi_Gold, 470);
+	C_Beklauen	(88, ItMi_Gold, 29);
 };
 
 FUNC VOID Info_Mod_Mahamad_Pickpocket_Info()

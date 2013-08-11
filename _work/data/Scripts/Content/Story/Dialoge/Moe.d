@@ -655,7 +655,7 @@ INSTANCE Info_Mod_Moe_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Moe_Pickpocket_Condition()
 {
-	C_Beklauen	(50, ItMi_Gold, 120);
+	C_Beklauen	(50, ItMi_Gold, 18);
 };
 
 FUNC VOID Info_Mod_Moe_Pickpocket_Info()

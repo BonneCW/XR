@@ -462,7 +462,7 @@ INSTANCE Info_Mod_Marduk_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Marduk_Pickpocket_Condition()
 {
-	C_Beklauen	(133, ItMi_Gold, 690);
+	C_Beklauen	(133, ItMi_Gold, 61);
 };
 
 FUNC VOID Info_Mod_Marduk_Pickpocket_Info()

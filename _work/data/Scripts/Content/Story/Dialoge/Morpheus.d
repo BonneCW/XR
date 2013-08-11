@@ -207,7 +207,7 @@ INSTANCE Info_Mod_Morpheus_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Morpheus_Pickpocket_Condition()
 {
-	C_Beklauen	(107, ItMi_Gold, 500);
+	C_Beklauen	(107, ItMi_Gold, 35);
 };
 
 FUNC VOID Info_Mod_Morpheus_Pickpocket_Info()
