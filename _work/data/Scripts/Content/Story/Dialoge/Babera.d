@@ -42,7 +42,7 @@ INSTANCE Info_Mod_Babera_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Babera_Pickpocket_Condition()
 {
-	C_Beklauen	(16, ItMi_Gold, 20);
+	C_Beklauen	(16, ItMi_Gold, 11);
 };
 
 FUNC VOID Info_Mod_Babera_Pickpocket_Info()

@@ -187,7 +187,7 @@ INSTANCE Info_Mod_Balor_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Balor_Pickpocket_Condition()
 {
-	C_Beklauen	(15, ItMi_Gold, 20);
+	C_Beklauen	(15, ItMi_Gold, 13);
 };
 
 FUNC VOID Info_Mod_Balor_Pickpocket_Info()

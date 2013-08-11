@@ -181,7 +181,7 @@ INSTANCE Info_Mod_Bill_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Bill_Pickpocket_Condition()
 {
-	C_Beklauen	(50, ItMi_Gold, 120);
+	C_Beklauen	(50, ItMi_Gold, 19);
 };
 
 FUNC VOID Info_Mod_Bill_Pickpocket_Info()

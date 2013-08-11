@@ -170,7 +170,7 @@ INSTANCE Info_Mod_Bengar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Bengar_Pickpocket_Condition()
 {
-	C_Beklauen	(35, ItMi_Gold, 80);
+	C_Beklauen	(35, ItMi_Gold, 15);
 };
 
 FUNC VOID Info_Mod_Bengar_Pickpocket_Info()

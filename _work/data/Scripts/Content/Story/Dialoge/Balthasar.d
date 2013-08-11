@@ -230,7 +230,7 @@ INSTANCE Info_Mod_Balthasar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Balthasar_Pickpocket_Condition()
 {
-	C_Beklauen	(10, ItMi_Gold, 30);
+	C_Beklauen	(10, ItMi_Gold, 12);
 };
 
 FUNC VOID Info_Mod_Balthasar_Pickpocket_Info()

@@ -130,7 +130,7 @@ INSTANCE Info_Mod_Bibliothekar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Bibliothekar_Pickpocket_Condition()
 {
-	C_Beklauen	(99, ItMi_Gold, 555);
+	C_Beklauen	(99, ItMi_Gold, 40);
 };
 
 FUNC VOID Info_Mod_Bibliothekar_Pickpocket_Info()

@@ -183,7 +183,7 @@ INSTANCE Info_Mod_Baro_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Baro_Pickpocket_Condition()
 {
-	C_Beklauen	(65, ItMi_Gold, 200);
+	C_Beklauen	(65, ItMi_Gold, 24);
 };
 
 FUNC VOID Info_Mod_Baro_Pickpocket_Info()

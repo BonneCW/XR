@@ -1119,7 +1119,7 @@ INSTANCE Info_Mod_Namib_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Namib_Pickpocket_Condition()
 {
-	C_Beklauen	(123, ItMi_Gold, 1300);
+	C_Beklauen	(123, ItMi_Gold, 66);
 };
 
 FUNC VOID Info_Mod_Namib_Pickpocket_Info()

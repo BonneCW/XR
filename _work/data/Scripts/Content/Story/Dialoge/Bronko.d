@@ -346,7 +346,7 @@ INSTANCE Info_Mod_Bronko_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Bronko_Pickpocket_Condition()
 {
-	C_Beklauen	(15, ItMi_Gold, 30);
+	C_Beklauen	(15, ItMi_Gold, 11);
 };
 
 FUNC VOID Info_Mod_Bronko_Pickpocket_Info()

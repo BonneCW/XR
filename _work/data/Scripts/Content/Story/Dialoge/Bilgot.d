@@ -140,7 +140,7 @@ INSTANCE Info_Mod_Bilgot_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Bilgot_Pickpocket_Condition()
 {
-	C_Beklauen	(60, ItMi_Gold, 175);
+	C_Beklauen	(60, ItMi_Gold, 17);
 };
 
 FUNC VOID Info_Mod_Bilgot_Pickpocket_Info()

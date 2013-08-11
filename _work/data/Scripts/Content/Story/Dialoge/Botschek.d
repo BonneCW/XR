@@ -1020,7 +1020,7 @@ INSTANCE Info_Mod_Botschek_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Botschek_Pickpocket_Condition()
 {
-	C_Beklauen	(133, ItMi_Gold, 1000);
+	C_Beklauen	(133, ItMi_Gold, 63);
 };
 
 FUNC VOID Info_Mod_Botschek_Pickpocket_Info()

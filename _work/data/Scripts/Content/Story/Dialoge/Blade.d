@@ -67,7 +67,7 @@ INSTANCE Info_Mod_Blade_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Blade_Pickpocket_Condition()
 {
-	C_Beklauen	(73, ItMi_Gold, 230);
+	C_Beklauen	(73, ItMi_Gold, 23);
 };
 
 FUNC VOID Info_Mod_Blade_Pickpocket_Info()

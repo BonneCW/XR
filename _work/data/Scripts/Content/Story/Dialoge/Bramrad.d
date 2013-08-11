@@ -165,7 +165,7 @@ INSTANCE Info_Mod_Bramrad_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Bramrad_Pickpocket_Condition()
 {
-	C_Beklauen	(71, ItMi_Gold, 350);
+	C_Beklauen	(71, ItMi_Gold, 23);
 };
 
 FUNC VOID Info_Mod_Bramrad_Pickpocket_Info()

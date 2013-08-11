@@ -155,7 +155,7 @@ INSTANCE Info_Mod_Orun_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Orun_Pickpocket_Condition()
 {
-	C_Beklauen	(143, ItMi_Gold, 700);
+	C_Beklauen	(143, ItMi_Gold, 66);
 };
 
 FUNC VOID Info_Mod_Orun_Pickpocket_Info()

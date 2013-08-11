@@ -44,7 +44,7 @@ INSTANCE Info_Mod_Buddler_NW_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Buddler_NW_Pickpocket_Condition()
 {
-	C_Beklauen	(36, ItMi_Gold, 20);
+	C_Beklauen	(36, ItMi_Gold, 18);
 };
 
 FUNC VOID Info_Mod_Buddler_NW_Pickpocket_Info()

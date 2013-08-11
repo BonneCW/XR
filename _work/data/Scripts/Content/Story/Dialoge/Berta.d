@@ -36,7 +36,7 @@ INSTANCE Info_Mod_Berta_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Berta_Pickpocket_Condition()
 {
-	C_Beklauen	(37, ItMi_Gold, 50);
+	C_Beklauen	(37, ItMi_Gold, 17);
 };
 
 FUNC VOID Info_Mod_Berta_Pickpocket_Info()

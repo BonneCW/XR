@@ -313,7 +313,7 @@ INSTANCE Info_Mod_Bartholo_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Bartholo_Pickpocket_Condition()
 {
-	C_Beklauen	(100, ItMi_Gold, 800);
+	C_Beklauen	(100, ItMi_Gold, 37);
 };
 
 FUNC VOID Info_Mod_Bartholo_Pickpocket_Info()

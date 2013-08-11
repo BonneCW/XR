@@ -170,7 +170,7 @@ INSTANCE Info_Mod_Brendan_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Brendan_Pickpocket_Condition()
 {
-	C_Beklauen	(85, ItMi_Gold, 200);
+	C_Beklauen	(85, ItMi_Gold, 20);
 };
 
 FUNC VOID Info_Mod_Brendan_Pickpocket_Info()

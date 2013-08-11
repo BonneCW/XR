@@ -210,7 +210,7 @@ INSTANCE Info_Mod_Bullco_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Bullco_Pickpocket_Condition()
 {
-	C_Beklauen	(79, ItMi_Gold, 700);
+	C_Beklauen	(79, ItMi_Gold, 22);
 };
 
 FUNC VOID Info_Mod_Bullco_Pickpocket_Info()

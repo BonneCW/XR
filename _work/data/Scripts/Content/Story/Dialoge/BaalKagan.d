@@ -120,7 +120,7 @@ INSTANCE Info_Mod_Kagan_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Kagan_Pickpocket_Condition()
 {
-	C_Beklauen	(116, ItMi_Gold, 475);
+	C_Beklauen	(116, ItMi_Gold, 44);
 };
 
 FUNC VOID Info_Mod_Kagan_Pickpocket_Info()

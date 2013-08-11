@@ -300,7 +300,7 @@ INSTANCE Info_Mod_Bromor_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Bromor_Pickpocket_Condition()
 {
-	C_Beklauen	(112, ItMi_Gold, 1234);
+	C_Beklauen	(112, ItMi_Gold, 45);
 };
 
 FUNC VOID Info_Mod_Bromor_Pickpocket_Info()

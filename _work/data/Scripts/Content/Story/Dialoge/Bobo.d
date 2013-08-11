@@ -50,7 +50,7 @@ INSTANCE Info_Mod_Bobo_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Bobo_Pickpocket_Condition()
 {
-	C_Beklauen	(36, ItMi_Gold, 55);
+	C_Beklauen	(36, ItMi_Gold, 15);
 };
 
 FUNC VOID Info_Mod_Bobo_Pickpocket_Info()
