@@ -496,7 +496,7 @@ INSTANCE Info_Mod_Elvira_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Elvira_Pickpocket_Condition()
 {
-	C_Beklauen	(96, ItMi_Gold, 333);
+	C_Beklauen	(96, ItMi_Gold, 41);
 };
 
 FUNC VOID Info_Mod_Elvira_Pickpocket_Info()

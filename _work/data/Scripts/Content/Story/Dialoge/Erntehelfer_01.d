@@ -57,7 +57,7 @@ INSTANCE Info_Mod_Erntehelfer_01_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Erntehelfer_01_Pickpocket_Condition()
 {
-	C_Beklauen	(27, ItMi_Gold, 57);
+	C_Beklauen	(27, ItMi_Gold, 10);
 };
 
 FUNC VOID Info_Mod_Erntehelfer_01_Pickpocket_Info()

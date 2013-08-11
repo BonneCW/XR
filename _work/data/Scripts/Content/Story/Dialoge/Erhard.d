@@ -403,7 +403,7 @@ INSTANCE Info_Mod_Erhard_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Erhard_Pickpocket_Condition()
 {
-	C_Beklauen	(71, ItMi_Gold, 100);
+	C_Beklauen	(71, ItMi_Gold, 26);
 };
 
 FUNC VOID Info_Mod_Erhard_Pickpocket_Info()

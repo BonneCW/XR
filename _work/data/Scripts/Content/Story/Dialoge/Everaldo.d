@@ -42,7 +42,7 @@ INSTANCE Info_Mod_Everaldo_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Everaldo_Pickpocket_Condition()
 {
-	C_Beklauen	(78, ItMi_Gold, 300);
+	C_Beklauen	(78, ItMi_Gold, 30);
 };
 
 FUNC VOID Info_Mod_Everaldo_Pickpocket_Info()

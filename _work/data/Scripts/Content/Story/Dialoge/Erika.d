@@ -318,7 +318,7 @@ INSTANCE Info_Mod_Erika_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Erika_Pickpocket_Condition()
 {
-	C_Beklauen	(53, ItMi_Gold, 250);
+	C_Beklauen	(53, ItMi_Gold, 16);
 };
 
 FUNC VOID Info_Mod_Erika_Pickpocket_Info()

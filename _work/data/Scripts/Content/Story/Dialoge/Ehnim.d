@@ -143,7 +143,7 @@ INSTANCE Info_Mod_Ehnim_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Ehnim_Pickpocket_Condition()
 {
-	C_Beklauen	(14, ItMi_Gold, 9);
+	C_Beklauen	(14, ItMi_Gold, 10);
 };
 
 FUNC VOID Info_Mod_Ehnim_Pickpocket_Info()
