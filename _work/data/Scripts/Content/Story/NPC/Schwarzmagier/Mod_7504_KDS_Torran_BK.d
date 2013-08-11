@@ -1,7 +1,7 @@
 instance Mod_7504_KDS_Torran_MT (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Torran"; 
+	name 		= "Schwarzmagier"; 
 	guild 		= GIL_KDF;
 	id 			= 7504;
 	voice 		= 3;
