@@ -40,6 +40,12 @@ INSTANCE Mod_7417_JG_Cyrco_JL (Npc_Default)
 
 FUNC VOID Rtn_PreStart_7417 ()
 {	
+	TA_Stand_Guarding	(07,00,19,00,"JL_02");
+	TA_Stand_Guarding	(19,00,07,00,"JL_02");
+};
+
+FUNC VOID Rtn_Start_7417 ()
+{	
 	TA_Stand_Guarding	(07,00,10,00,"JL_02");
 	TA_Stand_Guarding	(10,00,12,00,"JL_05");
 	TA_Sit_Bench		(12,00,15,00,"JL_20");

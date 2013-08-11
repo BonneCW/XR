@@ -84,6 +84,8 @@ FUNC VOID Info_Mod_Cyrco_Hi_Info()
 	B_LogEntry	(TOPIC_MOD_JG_GARDISTEN, "Noch nicht Waldläufer. Aber ich glaube, ich bin nahe dran. Ich soll nun den Zettel, den ich dem Gardisten abgenommen habe, Baal Orun im Sumpflager zeigen. Vielleicht kennt er die Aura, die um den Zettel liegt.");
 
 	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "START");
 };
 
 INSTANCE Info_Mod_Cyrco_BaalOrun (C_INFO)
