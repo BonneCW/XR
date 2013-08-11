@@ -128,7 +128,7 @@ INSTANCE Info_Mod_Pepe_PICKPOCKET (C_INFO)
 
 FUNC INT Info_Mod_Pepe_PICKPOCKET_Condition()
 {
-	C_Beklauen (15, ItMi_Gold, 25);
+	C_Beklauen (15, ItMi_Gold, 11);
 };
  
 FUNC VOID Info_Mod_Pepe_PICKPOCKET_Info()

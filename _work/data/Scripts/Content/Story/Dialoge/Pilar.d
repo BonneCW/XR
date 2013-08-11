@@ -178,7 +178,7 @@ INSTANCE Info_Mod_Pilar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Pilar_Pickpocket_Condition()
 {
-	C_Beklauen	(86, ItMi_Gold, 250);
+	C_Beklauen	(86, ItMi_Gold, 23);
 };
 
 FUNC VOID Info_Mod_Pilar_Pickpocket_Info()

@@ -348,7 +348,7 @@ INSTANCE Info_Mod_Parlan_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Parlan_Pickpocket_Condition()
 {
-	C_Beklauen	(96, ItMi_Gold, 560);
+	C_Beklauen	(96, ItMi_Gold, 45);
 };
 
 FUNC VOID Info_Mod_Parlan_Pickpocket_Info()

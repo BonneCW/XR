@@ -69,7 +69,7 @@ INSTANCE Info_Mod_Parcival_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Parcival_Pickpocket_Condition()
 {
-	C_Beklauen	(97, ItMi_Gold, 250);
+	C_Beklauen	(97, ItMi_Gold, 35);
 };
 
 FUNC VOID Info_Mod_Parcival_Pickpocket_Info()

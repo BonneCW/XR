@@ -1328,7 +1328,7 @@ INSTANCE Info_Mod_Pyrokar_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Pyrokar_Pickpocket_Condition()
 {
-	C_Beklauen	(180, ItMi_Gold, 1500);
+	C_Beklauen	(180, ItMi_Gold, 91);
 };
 
 FUNC VOID Info_Mod_Pyrokar_Pickpocket_Info()
