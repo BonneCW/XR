@@ -98,7 +98,7 @@ INSTANCE Info_Mod_Jesper_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Jesper_Pickpocket_Condition()
 {
-	C_Beklauen	(110, ItMi_Gold, 2100);
+	C_Beklauen	(110, ItMi_Gold, 37);
 };
 
 FUNC VOID Info_Mod_Jesper_Pickpocket_Info()

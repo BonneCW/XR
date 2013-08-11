@@ -329,7 +329,7 @@ INSTANCE Info_Mod_Juliana_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Juliana_Pickpocket_Condition()
 {
-	C_Beklauen	(57, ItMi_Gold, 160);
+	C_Beklauen	(57, ItMi_Gold, 16);
 };
 
 FUNC VOID Info_Mod_Juliana_Pickpocket_Info()

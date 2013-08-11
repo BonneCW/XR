@@ -735,7 +735,7 @@ INSTANCE Info_Mod_Jackal_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Jackal_Pickpocket_Condition()
 {
-	C_Beklauen	(108, ItMi_Gold, 450);
+	C_Beklauen	(108, ItMi_Gold, 45);
 };
 
 FUNC VOID Info_Mod_Jackal_Pickpocket_Info()

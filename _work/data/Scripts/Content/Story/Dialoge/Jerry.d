@@ -129,7 +129,7 @@ INSTANCE Info_Mod_Jerry_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Jerry_Pickpocket_Condition()
 {
-	C_Beklauen	(79, ItMi_Gold, 120);
+	C_Beklauen	(79, ItMi_Gold, 23);
 };
 
 FUNC VOID Info_Mod_Jerry_Pickpocket_Info()

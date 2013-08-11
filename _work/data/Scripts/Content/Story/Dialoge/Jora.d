@@ -271,7 +271,7 @@ INSTANCE Info_Mod_Jora_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Jora_Pickpocket_Condition()
 {
-	C_Beklauen	(76, ItMi_Gold, 160);
+	C_Beklauen	(76, ItMi_Gold, 29);
 };
 
 FUNC VOID Info_Mod_Jora_Pickpocket_Info()

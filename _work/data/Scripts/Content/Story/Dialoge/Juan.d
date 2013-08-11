@@ -442,7 +442,7 @@ INSTANCE Info_Mod_Juan_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Juan_Pickpocket_Condition()
 {
-	C_Beklauen	(69, ItMi_Gold, 130);
+	C_Beklauen	(69, ItMi_Gold, 21);
 };
 
 FUNC VOID Info_Mod_Juan_Pickpocket_Info()

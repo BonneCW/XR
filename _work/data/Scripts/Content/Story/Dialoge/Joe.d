@@ -284,7 +284,7 @@ INSTANCE Info_Mod_Joe_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Joe_Pickpocket_Condition()
 {
-	C_Beklauen	(47, ItMi_Gold, 110);
+	C_Beklauen	(47, ItMi_Gold, 20);
 };
 
 FUNC VOID Info_Mod_Joe_Pickpocket_Info()

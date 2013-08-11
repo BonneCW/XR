@@ -193,7 +193,7 @@ INSTANCE Info_Mod_Jana_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_Jana_Pickpocket_Condition()
 {
-	C_Beklauen	(53, ItMi_Gold, 80);
+	C_Beklauen	(53, ItMi_Gold, 20);
 };
 
 FUNC VOID Info_Mod_Jana_Pickpocket_Info()

@@ -88,7 +88,7 @@ INSTANCE Info_Mod_JGTurmwache_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_JGTurmwache_Pickpocket_Condition()
 {
-	C_Beklauen	(87, ItMi_Gold, 300);
+	C_Beklauen	(87, ItMi_Gold, 28);
 };
 
 FUNC VOID Info_Mod_JGTurmwache_Pickpocket_Info()
