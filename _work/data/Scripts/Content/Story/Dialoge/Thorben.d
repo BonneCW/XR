@@ -1062,11 +1062,16 @@ FUNC VOID Info_Mod_Thorben_Dietriche_B()
 FUNC VOID Info_Mod_Thorben_Dietriche_A()
 {
 	AI_Output(hero, self, "Info_Mod_Thorben_Dietriche_A_15_00"); //Kann ich die Zeit irgendwie abkürzen?
-	AI_Output(self, hero, "Info_Mod_Thorben_Dietriche_A_06_01"); //Du könntest mir eine Menge Laufarbeit ersparen. Neue Dietriche kann ich nur in Khorata beim Schmied Robert in Auftrag geben.
-	AI_Output(hero, self, "Info_Mod_Thorben_Dietriche_A_15_02"); //Aber hier gibt es doch auch Schmiede.
-	AI_Output(self, hero, "Info_Mod_Thorben_Dietriche_A_06_03"); //Um Dietriche in größeren Mengen herstellen zu können, muss viel Rohstahl eingeschmolzen werden.
-	AI_Output(self, hero, "Info_Mod_Thorben_Dietriche_A_06_04"); //Das kann Harad mit seinem kleinen Feuerchen nicht.
-	AI_Output(self, hero, "Info_Mod_Thorben_Dietriche_A_06_05"); //Wenn du dich darum kümmerst, Robert Bescheid zu sagen, kann ich dir bald wieder Dietriche verkaufen.
+
+	if (!Mod_Thorben_Robert) {
+		AI_Output(self, hero, "Info_Mod_Thorben_Dietriche_A_06_01"); //Du könntest mir eine Menge Laufarbeit ersparen. Neue Dietriche kann ich nur in Khorata beim Schmied Robert in Auftrag geben.
+		AI_Output(hero, self, "Info_Mod_Thorben_Dietriche_A_15_02"); //Aber hier gibt es doch auch Schmiede.
+		AI_Output(self, hero, "Info_Mod_Thorben_Dietriche_A_06_03"); //Um Dietriche in größeren Mengen herstellen zu können, muss viel Rohstahl eingeschmolzen werden.
+		AI_Output(self, hero, "Info_Mod_Thorben_Dietriche_A_06_04"); //Das kann Harad mit seinem kleinen Feuerchen nicht.
+		AI_Output(self, hero, "Info_Mod_Thorben_Dietriche_A_06_05"); //Wenn du dich darum kümmerst, Robert Bescheid zu sagen, kann ich dir bald wieder Dietriche verkaufen.
+	} else {
+		AI_Output(self, hero, "Info_Mod_Thorben_Dietriche_A_06_06"); //Du weißt ja, was zu tun ist ... geh zu Robert in Khorata.
+	};
 
 	Mod_Thorben_Dietriche = 1;
 
