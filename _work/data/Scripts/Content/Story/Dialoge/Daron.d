@@ -128,7 +128,7 @@ FUNC VOID Info_Mod_Daron_HabTrank_Info()
 	AI_Output(self, hero, "Info_Mod_Daron_HabTrank_10_01"); //Danke. Wenn du willst, kann ich dich jetzt zum Kloster geleiten.
 	AI_Output(self, hero, "Info_Mod_Daron_HabTrank_10_02"); //Eine Sache gibt es jedoch noch, die mich am Aufbruch hindert.
 	AI_Output(self, hero, "Info_Mod_Daron_HabTrank_10_03"); //Der Novize Akahasch ist seit einigen Tagen verschwunden.
-	AI_Output(self, hero, "Info_Mod_Daron_HabTrank_10_04"); //Zuletzt wurde er im Hafenviertel nahe der Taverne gesehen ... man könnte dort vielleicht Informationen über seinen Verbleib bekommen ... ich selbst würde mich ungern dorthin begeben wenn du verstehst.
+	AI_Output(self, hero, "Info_Mod_Daron_HabTrank_10_04"); //Zuletzt wurde er im Hafenviertel in der Taverne gesehen ... man könnte dort vielleicht Informationen über seinen Verbleib bekommen ... ich selbst würde mich ungern dorthin begeben wenn du verstehst.
 	AI_Output(self, hero, "Info_Mod_Daron_HabTrank_10_05"); //Wenn du also ...
 	AI_Output(hero, self, "Info_Mod_Daron_HabTrank_15_06"); //(die Augen verdrehend) Ja, ich verstehe schon. Ich werde mich umhören.
 	AI_Output(self, hero, "Info_Mod_Daron_HabTrank_10_07"); //Sehr gut. Sobald du ihn gefunden hast, bring ihn zu mir.
