@@ -1047,7 +1047,7 @@ INSTANCE WOOD_LIGHT_PARTICLES1 (C_PARTICLEFX)//Joly:ist noch in der Oldworld obj
 
 INSTANCE IRRLICHT (C_PARTICLEFX)
 {
-     ppsvalue = 200.;
+     ppsvalue = 100.;
      ppsscalekeys_s = "1.0 0";
      ppsislooping = 1;
      ppsissmooth = 1;
@@ -1083,7 +1083,7 @@ INSTANCE IRRLICHT (C_PARTICLEFX)
 
 INSTANCE IRRLICHT_WARN (C_PARTICLEFX)
 {
-     ppsvalue = 400.;
+     ppsvalue = 100.;
      ppsscalekeys_s = "1.0 0";
      ppsislooping = 1;
      ppsissmooth = 1;
@@ -1119,7 +1119,7 @@ INSTANCE IRRLICHT_WARN (C_PARTICLEFX)
 
 INSTANCE IRRLICHT_DIE (C_PARTICLEFX)
 {
-     ppsvalue = 1000.000000000;
+     ppsvalue = 250.000000000;
      ppsscalekeys_s = "1 1 1 3";
      ppsislooping = 0;
      ppsissmooth = 1;
@@ -1152,6 +1152,38 @@ INSTANCE IRRLICHT_DIE (C_PARTICLEFX)
      visalphafunc_s = "ADD";
      visalphastart = 255.000000000;
      trltexture_s = "JUSTWHITE.TGA";
+};
+
+INSTANCE IRRLICHT_DEAD (C_PARTICLEFX)
+{
+     ppsvalue = 50.000000000;
+     ppsscalekeys_s = "1.0";
+     ppsislooping = 1;
+     ppsfps = 0.020000000;
+     shptype_s = "POINT";
+     shpfor_s = "object";
+     shpoffsetvec_s = "0 15 0";
+     shpdistribtype_s = "RAND";
+     shpdistribwalkspeed = 0.000300000;
+     shpisvolume = 1;
+     shpdim_s = "15";
+     shpscalekeys_s = "1 0.3 1.2 0.8.0.1 1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 5.000000000;
+     dirmode_s = "RAND";
+     dirfor_s = "object";
+     velavg = 0.001000000;
+     lsppartavg = 150.000000000;
+     visname_s = "MFX_LIGHT_SINGLERAY.TGA";
+     visorientation_s = "VELO";
+     vistexisquadpoly = 1;
+     vistexcolorstart_s = "255 255 255";
+     vistexcolorend_s = "0 0 0";
+     vissizestart_s = "3 20";
+     vissizeendscale = 3.000000000;
+     visalphafunc_s = "ADD";
+     visalphaend = 255.000000000;
 };
 
 // IRRLICHT ENDE
