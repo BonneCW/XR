@@ -44,6 +44,10 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_DragonScales;
+var int Mod_DragonBlood;
+var int Mod_DragonElixier;
+var int Mod_DragonSehne;
 var int Mod_Miliz_Armbrust;
 var int Mod_Cronos_ZiegenScroll;
 var int Mod_Den_Problem;

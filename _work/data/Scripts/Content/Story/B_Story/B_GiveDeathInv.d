@@ -356,39 +356,55 @@ func void B_GiveDeathInv (var C_NPC slf)
 	};
 	
 	// ------ Drachen-Schuppen ------
-	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonScale] == TRUE)
-	{
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonScale] == TRUE) {
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Dragon_11009_NW))	{	CreateInvItems (slf, ItAt_DragonScale, 10);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Feuerdrache_11002_NW))	{	CreateInvItems (slf, ItAt_DragonScale, 8);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Giftdrache_11004_NW))	{	CreateInvItems (slf, ItAt_DragonScale, 9);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Knucker_11001_NW))	{	CreateInvItems (slf, ItAt_DragonScale, 8);		};
+	} else {
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Dragon_11009_NW))	{	Mod_DragonScales += 10;		};
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Feuerdrache_11002_NW))	{	Mod_DragonScales += 8;		};
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Giftdrache_11004_NW))	{	Mod_DragonScales += 9;		};
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Knucker_11001_NW))	{	Mod_DragonScales += 8;		};
 	};
  	
 	// ------ Drachen-Blut------
-	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonBlood] == TRUE)
-	{
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonBlood] == TRUE) {
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Dragon_11009_NW)){	CreateInvItems (slf, ItAt_DragonBlood, 8);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Feuerdrache_11002_NW))	{	CreateInvItems (slf, ItAt_DragonBlood, 6);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Giftdrache_11004_NW))	{	CreateInvItems (slf, ItAt_DragonBlood, 6);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Knucker_11001_NW))	{	CreateInvItems (slf, ItAt_DragonBlood, 6);		};
+	} else {
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Dragon_11009_NW))	{	Mod_DragonBlood += 8;		};
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Feuerdrache_11002_NW))	{	Mod_DragonBlood += 6;		};
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Giftdrache_11004_NW))	{	Mod_DragonBlood += 6;		};
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Knucker_11001_NW))	{	Mod_DragonBlood += 6;		};
 	};
  	
 	// ------ Drachen-Elixier------
-	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonElixier] == TRUE)
-	{
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonElixier] == TRUE) {
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Dragon_11009_NW)){	CreateInvItems (slf, ItAt_DragonElixier, 3);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Feuerdrache_11002_NW))	{	CreateInvItems (slf, ItAt_DragonElixier, 3);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Giftdrache_11004_NW))	{	CreateInvItems (slf, ItAt_DragonElixier, 3);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Knucker_11001_NW))	{	CreateInvItems (slf, ItAt_DragonElixier, 3);		};
+	} else {
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Dragon_11009_NW))	{	Mod_DragonElixier += 3;		};
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Feuerdrache_11002_NW))	{	Mod_DragonElixier += 3;		};
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Giftdrache_11004_NW))	{	Mod_DragonElixier += 3;		};
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Knucker_11001_NW))	{	Mod_DragonElixier += 3;		};
 	};
  	
 	// ------ Drachen-Sehne------
-	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonSehne] == TRUE)
-	{
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonSehne] == TRUE) {
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Dragon_11009_NW)){	CreateInvItems (slf, ItAt_DragonSehne, 2);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Feuerdrache_11002_NW))	{	CreateInvItems (slf, ItAt_DragonSehne, 2);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Giftdrache_11004_NW))	{	CreateInvItems (slf, ItAt_DragonSehne, 2);		};
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Knucker_11001_NW))	{	CreateInvItems (slf, ItAt_DragonSehne, 2);		};
+	} else {
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Dragon_11009_NW))	{	Mod_DragonSehne += 2;		};
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Feuerdrache_11002_NW))	{	Mod_DragonSehne += 2;		};
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Giftdrache_11004_NW))	{	Mod_DragonSehne += 2;		};
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Knucker_11001_NW))	{	Mod_DragonSehne += 2;		};
 	};
  	
 	// ------ Crawler-Kristalle------
