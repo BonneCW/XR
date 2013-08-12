@@ -2330,11 +2330,16 @@ FUNC INT Info_Mod_Xardas_NW_WoSindAndere_Condition()
 FUNC VOID Info_Mod_Xardas_NW_WoSindAndere_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_WoSindAndere_15_00"); //Wie komme ich zu dieser Bergfestung?
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_WoSindAndere_14_01"); //Die Frage lässt sich ganz einfach beantworten. Schau mal ein Stockwerk höher. Dort steht mein eigener Schrein.
-	AI_Output(hero, self, "Info_Mod_Xardas_NW_WoSindAndere_15_02"); //Und weiter? Ich wollte nicht beten.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_WoSindAndere_14_03"); //(spöttisch) Dir sei deine freche Unwissenheit noch einmal verziehen.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_WoSindAndere_14_04"); //Wir benutzen die Beliarschreine als Teleporter. Du musst jeden Schrein aktivieren, um damit reisen zu können, aber dann kannst du zwischen ihnen wechseln, wie du willst.
-	AI_Output(self, hero, "Info_Mod_Xardas_NW_WoSindAndere_14_05"); //Mein Schrein ist bisher nur mit dem der Festung verbunden. Du kannst sie also gar nicht verfehlen.
+
+	if (Npc_GetDistToWP(self, "NW_XARDAS_TOWER_IN1_22") < 500 || Npc_GetDistToWP(self, "WP_XARDAS_PREACH_02") < 500) {
+		AI_Output(self, hero, "Info_Mod_Xardas_NW_WoSindAndere_14_01"); //Die Frage lässt sich ganz einfach beantworten. Schau mal hier oben. Dort steht mein eigener Schrein.
+	} else {
+		AI_Output(self, hero, "Info_Mod_Xardas_NW_WoSindAndere_14_02"); //Die Frage lässt sich ganz einfach beantworten. Schau mal ein Stockwerk höher. Dort steht mein eigener Schrein.
+	};
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_WoSindAndere_15_03"); //Und weiter? Ich wollte nicht beten.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_WoSindAndere_14_04"); //(spöttisch) Dir sei deine freche Unwissenheit noch einmal verziehen.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_WoSindAndere_14_05"); //Wir benutzen die Beliarschreine als Teleporter. Du musst jeden Schrein aktivieren, um damit reisen zu können, aber dann kannst du zwischen ihnen wechseln, wie du willst.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_WoSindAndere_14_06"); //Mein Schrein ist bisher nur mit dem der Festung verbunden. Du kannst sie also gar nicht verfehlen.
 
 	B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Die Festung der Beliaranhänger erreiche ich über den Beliarschrein in Xardas' Turm, der gleichzeitig als Teleporter funktioniert.");
 
