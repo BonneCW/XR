@@ -32,6 +32,10 @@ func void B_AssessFightSound ()
 		};
 	};
 
+	if (Hlp_StrCmp(STR_SubStr(Npc_GetNearestWP(other), 0, 9), "LABYRINTH")) {
+		return;
+	};
+
 	if (CurrentLevel == NEWWORLD_ZEN)
 	{
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_534_KDF_Milten_NW))

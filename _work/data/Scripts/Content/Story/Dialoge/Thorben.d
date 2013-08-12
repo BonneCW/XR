@@ -1069,6 +1069,8 @@ FUNC VOID Info_Mod_Thorben_Dietriche_A()
 		AI_Output(self, hero, "Info_Mod_Thorben_Dietriche_A_06_03"); //Um Dietriche in größeren Mengen herstellen zu können, muss viel Rohstahl eingeschmolzen werden.
 		AI_Output(self, hero, "Info_Mod_Thorben_Dietriche_A_06_04"); //Das kann Harad mit seinem kleinen Feuerchen nicht.
 		AI_Output(self, hero, "Info_Mod_Thorben_Dietriche_A_06_05"); //Wenn du dich darum kümmerst, Robert Bescheid zu sagen, kann ich dir bald wieder Dietriche verkaufen.
+
+		Mod_Thorben_Robert = TRUE;
 	} else {
 		AI_Output(self, hero, "Info_Mod_Thorben_Dietriche_A_06_06"); //Du weißt ja, was zu tun ist ... geh zu Robert in Khorata.
 	};
