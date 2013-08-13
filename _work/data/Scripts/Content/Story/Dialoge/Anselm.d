@@ -1340,8 +1340,6 @@ FUNC VOID Info_Mod_Anselm_DickeLuft2_Info()
 
 	AI_StopProcessInfos	(self);
 
-	//B_StartOtherRoutine	(Hedwig, "ZIMMER");
-
 	B_GivePlayerXP	(250);
 
 	B_LogEntry	(TOPIC_MOD_DITMAR_DICKELUFT, "Ich habe Hedwig zu Anselm gelockt und es gab eine Aussprache. Na ja, so eine Art. Jedenfalls sollte sie jetzt nicht mehr ins Gasthaus zurückkehren. Das wird Irmgard sicher freuen zu erfahren.");
