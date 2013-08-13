@@ -2627,6 +2627,16 @@ FUNC VOID NEBENQUESTS()
 			};
 		};
 
+		if (!Mod_HedwigBeiAnselm)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Anselm_DickeLuft2))
+		&& (!Npc_IsInState(Mod_7241_OUT_Anselm_REL, ZS_Talk))
+		&& (!Npc_IsInState(Mod_7723_OUT_Hedwig_REL, ZS_Talk))
+		{
+			Mod_HedwigBeiAnselm = TRUE;
+
+			B_StartOtherRoutine	(Mod_7723_OUT_Hedwig_REL, "ZIMMER");
+		};
+
 		// Der Siegelring
 
 		if (Mod_Herold_Siegelring == 2)

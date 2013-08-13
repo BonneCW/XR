@@ -1340,7 +1340,7 @@ FUNC VOID Info_Mod_Anselm_DickeLuft2_Info()
 
 	AI_StopProcessInfos	(self);
 
-	B_StartOtherRoutine	(Hedwig, "ZIMMER");
+	//B_StartOtherRoutine	(Hedwig, "ZIMMER");
 
 	B_GivePlayerXP	(250);
 
