@@ -59,6 +59,9 @@ FUNC void ZS_Talk ()
 		// ------ NSC sieht Spieler an (funzt auch im Sitzen) ------
 		if (C_BodyStateContains (self, BS_SIT))
 		{
+			if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7241_OUT_Anselm_REL)) {
+				AI_UseMob (self, "CHAIR", -1);
+			};
 			var C_NPC target; target = Npc_GetLookAtTarget(self);
 			if (!Hlp_IsValidNpc(target))
 			{
