@@ -32,8 +32,12 @@ func void B_AssessFightSound ()
 		};
 	};
 
-	if (Hlp_StrCmp(STR_SubStr(Npc_GetNearestWP(other), 0, 9), "LABYRINTH")) {
-		return;
+	var string wp; wp = Npc_GetNearestWP(other);
+
+	if (STR_Len(wp) >= 9) {
+		if (Hlp_StrCmp(STR_SubStr(Npc_GetNearestWP(other), 0, 9), "LABYRINTH")) {
+			return;
+		};
 	};
 
 	if (CurrentLevel == NEWWORLD_ZEN)
