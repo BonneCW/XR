@@ -11,7 +11,7 @@ PROTOTYPE Mst_Default_StonePuma(C_Npc)
 	level							=	20;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	Hlp_Random(101) - 150;	// 150 - 250
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(101) + 150;	// 150 - 250
 	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21);		// 0 - 20
 	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(201) + 300;	// 300 - 500
 	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
