@@ -12,11 +12,11 @@ instance Info_Mod_EchseWache_01_FirstWarn (C_INFO)
 
 func int Info_Mod_EchseWache_01_FirstWarn_Condition()
 {
-	if (Npc_GetDistToWP(hero, EchseWache_01_Checkpoint) <= 1300) //NICHT von hinten!
+	/*if (Npc_GetDistToWP(hero, EchseWache_01_Checkpoint) <= 1300) //NICHT von hinten!
 	{
 		Npc_SetRefuseTalk(self,5);
 		return FALSE;
-	};
+	};*/
 	
 	if ((self.aivar[AIV_Guardpassage_Status] == GP_NONE)
 	&& (self.aivar[AIV_PASSGATE] == FALSE)
