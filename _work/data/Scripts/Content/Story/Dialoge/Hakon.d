@@ -32,13 +32,14 @@ INSTANCE Info_Mod_Hakon_Ueberfall (C_INFO)
 	information	= Info_Mod_Hakon_Ueberfall_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Das ist ein Überfall!";
+	description	= "(Hakon zu einer Schlägerei provozieren)";
 };
 
 FUNC INT Info_Mod_Hakon_Ueberfall_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Senyan_Edgor))
 	&& (Mod_HakonUeberfall == 0)
+	&& (Wld_IsTime(05,10,00,10))
 	{
 		return 1;
 	};
@@ -46,27 +47,17 @@ FUNC INT Info_Mod_Hakon_Ueberfall_Condition()
 
 FUNC VOID Info_Mod_Hakon_Ueberfall_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Hakon_Ueberfall_15_00"); //Das ist ein Überfall!
+	AI_Output(hero, self, "Info_Mod_Hakon_Ueberfall_15_00"); //Du verkaufst hier nur den letzten Schrott! Mit deinen Waffen könnte ich mir nicht mal den Dreck zwischen meinen Zehen wegmachen.
+	AI_Output(self, hero, "Info_Mod_Hakon_Ueberfall_12_01"); //He, pass auf, was du sagst. Ich habe hier nur hochwertige Ware.
+	AI_Output(hero, self, "Info_Mod_Hakon_Ueberfall_15_02"); //Als ob du das irgendwie beurteilen könntest. Ich sehe doch auf einen Blick, dass du zu schwächlich bist, um auch nur eine deiner Waffen selbst zu führen.
+	AI_Output(hero, self, "Info_Mod_Hakon_Ueberfall_15_03"); //Also, blas dich nicht so auf, sonst setzt gleich was hinter die Löffel.
+	AI_Output(self, hero, "Info_Mod_Hakon_Ueberfall_12_04"); //Junge, du überspannst hier gerade den Bogen. Pass bloß auf, sonst passiert was!
+	AI_Output(hero, self, "Info_Mod_Hakon_Ueberfall_15_05"); //Jaja, nicht zornig werden, Kleiner. Ich geh dann mal über den Marktplatz und verbreite unter den Leuten, was für eine Lachnummer du bist. Das stört dich doch sicher nicht. Kannst ohnehin nichts dagegen machen.
+	AI_Output(self, hero, "Info_Mod_Hakon_Ueberfall_12_06"); //Ok, jetzt reicht's!
 	
-	AI_ReadyMeleeWeapon		(hero);
+	AI_StopProcessInfos	(self);
 
-	AI_StopProcessInfos	(hero);
-
-	if (Hlp_StrCmp(Npc_GetNearestWP(Mod_561_NONE_Baltram_NW), "NW_CITY_BEER_05"))
-	{
-		Npc_ExchangeRoutine	(self, "RUNAWAY");
-
-		AI_UnequipWeapons	(self);
-		Npc_RemoveInvItems	(self, ItMw_HakonSchwert_02, 1);
-
-		Wld_InsertItem	(ItMw_HakonSchwert_01, "NW_CITY_HAKON_02");
-
-		B_Göttergefallen(3, 1);
-	}
-	else
-	{
-		B_Attack (self, hero, AR_NONE, 1);
-	};
+	B_Attack (self, hero, AR_NONE, 1);
 
 	Mod_HakonUeberfall = 1;
 };
