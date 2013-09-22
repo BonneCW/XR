@@ -6013,6 +6013,7 @@ FUNC VOID INIT_Minental ()
 
 	if (Mod_WM_KurganAlarm == 4)
 	&& (Mod_WM_ElvrichImSumpf == 0)
+	&& (Kapitel >= 2)
 	{
 		if (Mod_MinentalTor == 1)
 		{

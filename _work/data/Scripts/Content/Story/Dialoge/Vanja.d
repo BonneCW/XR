@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Vanja_Hi_Condition()
 FUNC VOID Info_Mod_Vanja_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
-	AI_Output(self, hero, "Info_Mod_Vanja_Hi_17_01"); //Ich bin Vanja. Wenn du dich mit jemandem vergnügen willst, dann sprich mit Bromor.
+	AI_Output(self, hero, "Info_Mod_Vanja_Hi_17_01"); //Ich bin Vanja.
 };
 
 INSTANCE Info_Mod_Vanja_Hilfe (C_INFO)
