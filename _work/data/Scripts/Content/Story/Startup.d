@@ -153,7 +153,7 @@ func void INIT_GLOBAL()
 	{
 		CurrentErfolge = STR_ToInt(MEM_GetGothOpt("XERES", "ach"));
 
-		ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
+		ErfolgText = ConcatStrings(IntToString((CurrentErfolge * 100) / MaxErfolge), "% aller Erfolge erreicht");
 
 		Npc_RemoveInvItems	(PC_Hero, ItWr_Erfolge, 1);
 		CreateInvItems	(PC_Hero, ItWr_Erfolge, 1);

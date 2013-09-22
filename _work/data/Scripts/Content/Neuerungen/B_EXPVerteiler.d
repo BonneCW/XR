@@ -13,7 +13,7 @@ FUNC VOID B_EXPVerteiler (var C_NPC slf, var C_NPC oth)
 	if (FinsternisPanzerhandschuh_Equipped)
 	&& (Wld_IsTime(22,00,05,00))
 	{
-		Wld_SpawnNpcRange (self, Summoned_Harpie, 1, 300);
+		Wld_SpawnNpcRange (slf, Summoned_Harpie, 1, 300);
 	};
 
 	// Schafe, Fleischwanzen und Ratten geben immer 5 XP

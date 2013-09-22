@@ -39,26 +39,10 @@ FUNC VOID B_SetSchwierigkeit()
 		else if (self.aivar[AIV_Schwierigkeitsgrad] == 2)
 		|| (self.aivar[AIV_Schwierigkeitsgrad] == 4)
 		{
-			self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] * 1;
-			self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] * 1;
-
 			if (self.attribute[ATR_HITPOINTS_MAX] <= 0)
 			{
 				self.attribute[ATR_HITPOINTS_MAX] = 10;
 				self.attribute[ATR_HITPOINTS] = 10;
-			};
-
-			if (self.guild > GIL_SEPERATOR_HUM)
-			&& (self.guild != GIL_ORC)
-			&& (self.guild != GIL_UNDEADORC)
-			&& (self.guild != GIL_FRIENDLY_ORC)
-			&& (self.guild != GIL_SKELETON)
-			&& (self.guild != GIL_SKELETON_MAGE)
-			{
-				self.attribute[ATR_STRENGTH] = self.attribute[ATR_STRENGTH] * 1;
-				self.attribute[ATR_DEXTERITY] = self.attribute[ATR_DEXTERITY] * 1;
-				self.attribute[ATR_MANA] = self.attribute[ATR_MANA] * 1;
-				self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] * 1;
 			};
 
 			self.aivar[AIV_Schwierigkeitsgrad] = 0;
@@ -119,26 +103,10 @@ FUNC VOID B_SetSchwierigkeit()
 		else if (Mod_Schwierigkeit == 2)
 		|| (Mod_Schwierigkeit == 4)
 		{
-			self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] * 1;
-			self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] * 1;
-
 			if (self.attribute[ATR_HITPOINTS_MAX] <= 0)
 			{
 				self.attribute[ATR_HITPOINTS_MAX] = 10;
 				self.attribute[ATR_HITPOINTS] = 10;
-			};
-
-			if (self.guild > GIL_SEPERATOR_HUM)
-			&& (self.guild != GIL_ORC)
-			&& (self.guild != GIL_UNDEADORC)
-			&& (self.guild != GIL_FRIENDLY_ORC)
-			&& (self.guild != GIL_SKELETON)
-			&& (self.guild != GIL_SKELETON_MAGE)
-			{
-				self.attribute[ATR_STRENGTH] = self.attribute[ATR_STRENGTH] * 1;
-				self.attribute[ATR_DEXTERITY] = self.attribute[ATR_DEXTERITY] * 1;
-				self.attribute[ATR_MANA] = self.attribute[ATR_MANA] * 1;
-				self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] * 1;
 			};
 
 			self.aivar[AIV_Schwierigkeitsgrad] = Mod_Schwierigkeit;

@@ -14,7 +14,9 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	var ocNpc her;
 	her = Hlp_GetNpc(taeter);
 
-	blubb = MEM_PtrToInst(her.anictrl);
+	if (her.anictrl) {
+		blubb = MEM_PtrToInst(her.anictrl);
+	};
 
 	var int damage;
 	damage = 0;
@@ -32,6 +34,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	taeterMonster = FALSE;
 
 	var C_ITEM rwp;
+	rwp = Npc_GetReadiedWeapon(taeter);
 
 	if ((taeter.guild < GIL_SEPERATOR_HUM)
 	|| (taeter.guild == GIL_SKELETON)
@@ -42,7 +45,6 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	|| (taeter.guild == GIL_DRACONIAN))
 	&& (Npc_HasReadiedWeapon(taeter))
 	{
-		rwp = Npc_GetReadiedWeapon(taeter);
 		damageType = rwp.damagetype;
 		damage = rwp.damageTotal;
 
@@ -189,22 +191,21 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		taeterMonster = TRUE;
 	};
 
-	if (blubb.comboNr > 0)
-	{
-		damage += blubb.comboNr*damage;
-	};
+	if (blubb) {
+		if (blubb.comboNr > 0) {
+			damage += blubb.comboNr * damage;
+		};
 
-	if (blubb.hitAniID == blubb._t_hitfrun)
-	&& (!C_BodyStateContains(taeter, BS_SWIM))
-	{
-		damage += taeter.attribute[ATR_STRENGTH];
+		if (blubb.hitAniID == blubb._t_hitfrun)
+		&& (!C_BodyStateContains(taeter, BS_SWIM)) {
+			damage += taeter.attribute[ATR_STRENGTH];
+		};
 	};
 
 	// Wenn von hinten angegriffen, Schaden verdoppeln
 
-	if (!Npc_CanSeeNpc(opfer, taeter))
-	{
-		damage = damage*2;
+	if (!Npc_CanSeeNpc(opfer, taeter)) {
+		damage = damage * 2;
 	};
 
 	// Rüstungsschutz vom Schaden abziehen
@@ -257,7 +258,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	&& (opfer.guild != GIL_FRIENDLY_ORC)
 	&& (opfer.guild != GIL_DRACONIAN)
 	{
-		armor = (2*armor)/5;
+		armor = (2 * armor) / 5;
 	};
 
 	// Bei Rüstungswert 1 ist armor = 0
@@ -291,13 +292,13 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	if (critChance == 0)
 	&& (!taeterMonster)
 	{
-		damage = damage/10;
+		damage = damage / 10;
 	};
 
 	if (critChance == 1)
 	&& (taeterMonster)
 	{
-		damage = damage*2;
+		damage = damage * 2;
 	};
 
 	// Hier kommt dann noch Spezialschaden dazu (Klaue, Hammer usw.)
@@ -355,7 +356,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		if (Mod_Dornenguertel)
 		{
 			var int dornendam;
-			dornendam = 80 - taeter.protection[PROT_EDGE]/1000;
+			dornendam = 80 - taeter.protection[PROT_EDGE] / 1000;
 
 			if (dornendam < 5)
 			{
@@ -373,8 +374,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 
 	// Wenn Täter geschossen hat, dann zurücksetzen
 
-	if (Npc_HasReadiedRangedWeapon(taeter))
-	{
+	if (Npc_HasReadiedRangedWeapon(taeter)) {
 		var int chanceBonus;
 		chanceBonus = 0;
 
@@ -417,7 +417,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		else if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_LEFTLEG)
 		|| (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_RIGHTLEG)
 		{
-			if (r_max(99) < (40-chanceBonus))
+			if (r_max(99) < (40 - chanceBonus))
 			{
 				damage = 0;
 			}
@@ -434,7 +434,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		else if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_RIGHTARM)
 		|| (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_LEFTARM)
 		{
-			if (r_max(99) < (40-chanceBonus))
+			if (r_max(99) < (40 - chanceBonus))
 			{
 				damage = 0;
 			}
@@ -450,13 +450,13 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		}
 		else if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_HEAD)
 		{
-			if (r_max(99) < (60-chanceBonus)/(1+Mod_KritischerTrefferRing))
+			if (r_max(99) < (60 - chanceBonus) / (1 + Mod_KritischerTrefferRing))
 			{
 				damage = 0;
 			}
 			else
 			{
-				damage += (damage*25)/10;
+				damage += (damage * 25) / 10;
 
 				if (opfer.guild > GIL_SEPERATOR_HUM)
 				&& (opfer.aivar[AIV_Trefferzone] == 0)
@@ -474,7 +474,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			rangeBonus += 1000;
 
-			damage -= (damage*10)/100;
+			damage -= (damage * 10) / 100;
 		};
 
 		if (rwp.munition == ItRw_SprengstoffArrow)
@@ -482,15 +482,15 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			rangeBonus -= 1200;
 
-			damage += (damage*50)/100;
+			damage += (damage * 50) / 100;
 		};
 
 		if (Npc_GetHeightToNpc(taeter, opfer) > 200)
 		{
-			rangeBonus += (Npc_GetHeightToNpc(taeter, opfer)/100)*2;
+			rangeBonus += (Npc_GetHeightToNpc(taeter, opfer) / 100) * 2;
 		};
 
-		if (Npc_GetDistToNpc(taeter, opfer) > (rwp.range+rangeBonus))
+		if (Npc_GetDistToNpc(taeter, opfer) > (rwp.range + rangeBonus))
 		{
 			return;
 		};
@@ -518,7 +518,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		if (Hlp_IsItem(rwp, ItRw_Geisterbogen) == TRUE)
 		&& (C_NpcIsUndead(opfer))
 		{
-			damage += damage/2;
+			damage += damage / 2;
 		};
 	};
 
@@ -811,7 +811,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 				if (opfer.guild == GIL_DEMON)
 				|| (C_NpcIsUndead(opfer))
 				{
-					damage += damage/30;
+					damage += damage / 30;
 				};
 			};
 
@@ -821,7 +821,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 				if (opfer.guild == GIL_DEMON)
 				|| (C_NpcIsUndead(opfer))
 				{
-					damage += damage/40;
+					damage += damage / 40;
 				};
 			};
 
@@ -831,7 +831,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 				if (opfer.guild == GIL_DEMON)
 				|| (C_NpcIsUndead(opfer))
 				{
-					damage += damage/50;
+					damage += damage / 50;
 				};
 			};
 
@@ -992,7 +992,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 
 		if (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(Xeres_02))
 		{
-			taeter.attribute[ATR_HITPOINTS] += damage/20; // 5% des Schadens kommen an HP dazu
+			taeter.attribute[ATR_HITPOINTS] += damage / 20; // 5% des Schadens kommen an HP dazu
 		};
 	};	
 

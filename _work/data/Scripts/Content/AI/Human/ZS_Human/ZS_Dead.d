@@ -7,10 +7,6 @@
 
 func void ZS_Dead ()
 {
-	if (MeetsRespawnCondition(self)) {
-		AddToRespawnArray(self);
-	};
-
 	if (!self.aivar[AIV_PARTYMEMBER])
 	&& (Mod_WiederkehrRing)
 	{
@@ -868,15 +864,11 @@ func void ZS_Dead ()
 	// ------ Equippte Waffen können nicht genommen werden! ------
 	AI_UnequipWeapons (self);
 
-	B_AutoPlundering(self, other);
-
 	if (self.guild == GIL_GOBBO)
 	|| (self.guild == GIL_GOBBO_SKELETON)
 	|| (self.guild == GIL_SUMMONED_GOBBO_SKELETON)
 	|| (self.guild == GIL_SKELETON)
 	{
-		//Npc_SetToFightMode (self, 0);
-
 		Npc_RemoveInvItems	(self, ItMw_1h_Bau_Mace, 1);
 		Npc_RemoveInvItems	(self, ItMw_1h_MISC_Sword, 1);
 		Npc_RemoveInvItems	(self, ItMw_Matronenkeule, 1);
@@ -902,7 +894,6 @@ func int ZS_Dead_loop ()
 	// Drachen 
 	if (self.aivar[AIV_TAPOSITION] == FALSE)
 	{
-		B_DragonKillCounter (self);
 		self.aivar[AIV_TAPOSITION] = TRUE;
 	};
 	

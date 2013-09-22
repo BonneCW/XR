@@ -33,8 +33,6 @@ NEUERUNGEN\Broadcasts.d
 
 NEUERUNGEN\Balken.d
 
-NEUERUNGEN\Respawn.d
-
 NEUERUNGEN\B_AutoGeneratePicklockKombos.d
 
 NEUERUNGEN\B_RemoveDeadBodies.d
@@ -65,7 +63,6 @@ NEUERUNGEN\B_SetKrankheitswerte.d
 
 NEUERUNGEN\B_Autosave.d
 NEUERUNGEN\B_SetLevelchange.d
-NEUERUNGEN\B_AutoPlundering.d
 NEUERUNGEN\Npc_GetWalkMode.d
 NEUERUNGEN\Backup_Questitems.d
 NEUERUNGEN\NameAllFires.d
@@ -189,8 +186,6 @@ ITEMS\IT_*.d
 ITEMS\Missionitems_*.d
 ITEMS\NEUE_ITEMS\*.d
 ITEMS\NEUE_ITEMS\Waffen\*.d
-
-NEUERUNGEN\Garten.d
 
 NEUERUNGEN\B_UseHat.d
 
@@ -362,8 +357,6 @@ AI\MAGIC\ZS_Magic\ZS_*.d
 
 AI\MAGIC\C_CanNpcCollideWithSpell.d
 
-
-STORY\B_Content\B_DragonKillCounter.d
 
 Story\Events\B_EVENT_PORTAL_EARTHQUAKE.d
 Story\Events\EVT_TELEPORTSTATION_FUNC.d

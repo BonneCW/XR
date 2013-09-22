@@ -11,9 +11,6 @@ func void B_MagicHurtNpc (var C_NPC slf, var C_NPC oth, var int damage)
 		//Bloodsplat(damage);
 	};
 
-	PrintDebug (ConcatStrings("B_CalcDam in MagicHurtNpc: Opfer: ", oth.name));
-	PrintDebug (ConcatStrings("B_CalcDam in MagicHurtNpc: Täter: ", slf.name));
-
 	if (oth.flags != 2)
 	{
 		if (damage >= oth.attribute[ATR_HITPOINTS])
@@ -59,8 +56,6 @@ func void B_MagicHurtNpc (var C_NPC slf, var C_NPC oth, var int damage)
 	if (Npc_IsDead(oth))
 	{
 		B_EXPVerteiler (oth, slf);
-
-		B_AutoPlundering(oth, slf);
 	};
 
 	if (oth.aivar[AIV_VictoryXPGiven] == TRUE)
@@ -69,6 +64,4 @@ func void B_MagicHurtNpc (var C_NPC slf, var C_NPC oth, var int damage)
 
 		oth.aivar[AIV_VictoryXPGiven] = 2;
 	};
-
-	PrintDebug ("TEST: B_MagicHurtNpc 3");
 };

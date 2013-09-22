@@ -354,7 +354,7 @@ FUNC INT B_GetTime()
 
 	// Zeit berechnen in Minuten
 
-	time = timeh*60 + timemin;
+	time = timeh * 60 + timemin;
 
 	return time;
 };

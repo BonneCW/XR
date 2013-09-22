@@ -115,10 +115,6 @@ func void ZS_Unconscious ()
 			
 	// ------ Equippte Waffen können nicht genommen werden! ------
 	AI_UnequipWeapons (self);
-
-	B_AutoPlundering(self, other);
-	
-	// ----- STORY ------
 };
 	
 func int ZS_Unconscious_Loop ()

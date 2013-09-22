@@ -9,8 +9,6 @@ func void PC_Sleep (var int t)
 	PLAYER_MOBSI_PRODUCTION	=	MOBSI_NONE;
 	B_SetAivar(self, AIV_INVINCIBLE, FALSE);
 
-	//Wld_PlayEffect("SCREENBLEND_SCHWARZ",  hero, hero, 0, 0, 0, FALSE );
-
 	if	(Wld_IsTime(00,00,t,00))
 	{
 		Wld_SetTime	(t,00);
@@ -147,11 +145,7 @@ func void PC_Sleep (var int t)
 
 	//-------- AssessEnterRoom-Wahrnehmung versenden --------
 	PrintGlobals		(PD_ITEM_MOBSI);
-	Npc_SendPassivePerc	(hero,	PERC_ASSESSENTERROOM, NULL, hero);		//...damit der Spieler dieses Feature nicht zum Hütteplündern ausnutzt!
-
-	if (!Mod_Respawn) {
-		CheckRespawns();
-	};
+	Npc_SendPassivePerc	(hero,	PERC_ASSESSENTERROOM, NULL, hero);
 };
 
 

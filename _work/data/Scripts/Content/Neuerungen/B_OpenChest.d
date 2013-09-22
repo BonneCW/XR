@@ -4,7 +4,7 @@ FUNC VOID B_OpenChest()
 
 	if (STR_Len(ml.pickLockStr) >= 3)
 	{
-		B_GivePlayerXP	((STR_Len(ml.pickLockStr)-2)*5);
+		B_GivePlayerXP	((STR_Len(ml.pickLockStr) - 2) * 5);
 	};
 
 	if (r_max(hero.attribute[ATR_DEXTERITY]) < r_max(99))
