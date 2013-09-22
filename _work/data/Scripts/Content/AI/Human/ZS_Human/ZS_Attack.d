@@ -220,14 +220,6 @@ func int ZS_Attack_Loop()
 		return LOOP_END;
 	};
 
-	if (self.guild == other.guild)
-	&& (!C_NpcIsHero(other))
-	&& (self.aivar[AIV_AttackReason] != AR_NONE)
-	&& (self.aivar[AIV_AttackReason] != AR_KILL)
-	{
-		//return LOOP_END;
-	};
-
 	if ((Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_948_BDT_Esteban_MT))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4072_BDT_Bandit_MT))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_4073_BDT_Bandit_MT))
