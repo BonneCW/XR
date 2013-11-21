@@ -23,10 +23,6 @@ func void G_PickLock (var int bSuccess, var int bBrokenOpen)
 	{
 		if (bBrokenOpen)
 		{
-			Print	("Sollte hier nie ankommen!!!");
-		}
-		else
-		{
 			// Fehlschlag beim Knacken => Dietrich bricht ab und Sound oder nur Neuanfang
 
 			if (r_max(hero.attribute[ATR_DEXTERITY]) < r_max(99)-Dietrich_Perk*25)
@@ -58,6 +54,10 @@ func void G_PickLock (var int bSuccess, var int bBrokenOpen)
 
 				B_Say	(hero, NULL, "$PICKLOCKFAILURE");
 			};
+		}
+		else
+		{
+			Print	("Sollte hier nie ankommen!!!");
 		};
 	};
 };

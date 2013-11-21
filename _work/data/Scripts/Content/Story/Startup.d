@@ -188,8 +188,14 @@ func void INIT_GLOBAL()
 
 		// Keine Dietriche mehr abbrechen bei Truhe knacken
 
-		//MemoryProtectionOverride(7487735, 4);	// 0x7240F7
-		//MEM_WriteByte(7487735, 232);
+		MemoryProtectionOverride(7487735, 4);	// 0x7240F7
+		MEM_WriteByte(7487735, 117);
+		MemoryProtectionOverride(5934458, 4);	// 0x5A8D7A
+		MEM_WriteByte(5934458, 144);
+		MEM_WriteByte(5934459, 144);
+		MEM_WriteByte(5934460, 144);
+		MEM_WriteByte(5934461, 144);
+		MEM_WriteByte(5934462, 144);
 
 		GOTHIC_RESTART = "Y";
 	};
