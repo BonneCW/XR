@@ -2507,9 +2507,9 @@ INSTANCE ITAR_SLD_M (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	70000;
-	protection [PROT_BLUNT] = 	70000;
-	protection [PROT_POINT] = 	70000;
+	protection [PROT_EDGE]	=	60000;
+	protection [PROT_BLUNT] = 	60000;
+	protection [PROT_POINT] = 	60000;
 	protection [PROT_FIRE] 	= 	10;
 	protection [PROT_MAGIC] = 	10;
 
