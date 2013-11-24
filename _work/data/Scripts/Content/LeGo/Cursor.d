@@ -31,7 +31,7 @@ func void Cursor_Hide() {
     if(!Hlp_IsValidHandle(Cursor_Hndl)) { return; };
 	
     View_Close(Cursor_Hndl);
-    View_Delete(Cursor_Hndl);
+	View_Delete(Cursor_Hndl);
 
 	Cursor_Hndl = 0;
 };
@@ -171,8 +171,6 @@ func void _Cursor_GetVal() {
         c.keyRight = 0;
         c.wheel = 0;
     };
-
-	PrintDebug	(ConcatStrings("Cursor_Hndl: ", IntToString(Cursor_Hndl)));
 
     if(!Hlp_IsValidHandle(Cursor_Hndl)) { return; };
 

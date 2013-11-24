@@ -13,6 +13,7 @@ const int ASMINT_OP_popEAX      = 88;    //0x58
 // /* 2 Byte */
 const int ASMINT_OP_addMemToESP = 9475;  //0x2503
 const int ASMINT_OP_movESItoEAX = 61577; //0xF089
+const int ASMINT_OP_movEAXtoEDI = 51081; //0xC789
 
 //-------------------
 // Registervariablen
@@ -48,7 +49,7 @@ func void HookEngineI(var int address, var int oldInstr, var int function) {
     };
 
     MemoryProtectionOverride (address, oldInstr+3);
-    // ----- Eventuell gesch?tzen Speicher behandeln -----
+    // ----- Eventuell geschützen Speicher behandeln -----
 
     if (MEM_ReadByte(address) == 233) { // Hook schon vorhanden
         HookEngineI(MEM_ReadInt(address+1)+address+5+81, oldInstr, function);
@@ -59,10 +60,10 @@ func void HookEngineI(var int address, var int oldInstr, var int function) {
     ptr = MEM_Alloc(oldInstr);
     MEM_CopyBytes(address, ptr, oldInstr);
 
-    // ----- Einen neuen Stream f?r den Assemblercode anlegen -----
+    // ----- Einen neuen Stream für den Assemblercode anlegen -----
     ASM_Open(200 + oldInstr); // Play it safe.
 
-    // ----- Jump aus der Enginefunktion in den neuen Code einf?gen -----
+    // ----- Jump aus der Enginefunktion in den neuen Code einfügen -----
     relAdr = ASMINT_CurrRun-address-5;
     MEM_WriteInt(address + 0, 233);
     MEM_WriteInt(address + 1, relAdr);
@@ -102,11 +103,11 @@ func void HookEngineI(var int address, var int oldInstr, var int function) {
     ASM_2(ASMINT_OP_movEDItoEAX);
     ASM_2(ASMINT_OP_movEAXtoMem);
     ASM_4(_@(EDI));
-        
-    // ESI in Daedalus Variable sichern 
-        ASM_2(ASMINT_OP_movESItoEAX);
-        ASM_2(ASMINT_OP_movEAXtoMem);
-        ASM_4(_@(ESI));
+	
+    // ESI in Daedalus Variable sichern	
+	ASM_2(ASMINT_OP_movESItoEAX);
+	ASM_2(ASMINT_OP_movEAXtoMem);
+	ASM_4(_@(ESI));
 
     // --- Daedalusfunktion aufrufen ---
 
@@ -127,18 +128,23 @@ func void HookEngineI(var int address, var int oldInstr, var int function) {
     ASM_1(ASMINT_OP_movMemToEAX);
     ASM_4(_@(ECX));
     ASM_2(ASMINT_OP_movEAXtoECX);
+		
+	ASM_1(ASMINT_OP_movMemToEax);
+	ASM_4(_@(EDI));
+	ASM_2(ASMINT_OP_movEAXtoEDI);
 
     ASM_1(ASMINT_OP_movMemToEAX);
     ASM_4(_@(EAX));
 
 
-    // Alte Anweisung wieder einf?gen
+
+    // Alte Anweisung wieder einfügen
     MEM_CopyBytes(ptr, ASMINT_Cursor, oldInstr);
     MEM_Free(ptr);
 
     ASMINT_Cursor += oldInstr;
 
-    // Zur Enginefunktion zur?ckkehren
+    // Zur Enginefunktion zurückkehren
     ASM_1(ASMINT_OP_pushIm);
     ASM_4(address + oldInstr);
     ASM_1(ASMINT_OP_retn);
