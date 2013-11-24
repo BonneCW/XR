@@ -86,13 +86,9 @@ FUNC VOID Info_Mod_Attila_Moechtegern_Info()
 
 	AI_Output(self, hero, "Info_Mod_Attila_Moechtegern_09_04"); //In dem Fall darf ich zu erkennen geben, dass ich gekommen bin das Sumpfkraut und deinen Kopf zu holen.
 
-	AI_ReadyMeleeWeapon	(self);
-
 	TRIA_Next(Moechtegern);
 
 	AI_Output(self, hero, "Info_Mod_Attila_Moechtegern_04_05"); //Besser du kriechst wieder unter deinen Stein oder du wirst mit deinem Freund den nächsten Tag nicht mehr erleben.
-
-	AI_ReadyMeleeWeapon	(self);
 
 	Moechtegern.guild = GIL_STRF;
 	Npc_SetTrueGuild	(Moechtegern, GIL_STRF);
