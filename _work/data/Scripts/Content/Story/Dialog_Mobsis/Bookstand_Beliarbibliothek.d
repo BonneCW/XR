@@ -796,6 +796,54 @@ FUNC VOID BOOKSTAND_BELIARBIBLIOTHEK_FAKE_S1()
 		else if (rnd == 1)
 		{
 			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE02");
+		}
+		else if (rnd == 2)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE03");
+		}
+		else if (rnd == 3)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE04");
+		}
+		else if (rnd == 4)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE05");
+		}
+		else if (rnd == 5)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE06");
+		}
+		else if (rnd == 6)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE07");
+		}
+		else if (rnd == 7)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE08");
+		}
+		else if (rnd == 8)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE09");
+		}
+		else if (rnd == 9)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE10");
+		}
+		else if (rnd == 10)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE11");
+		}
+		else if (rnd == 11)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE12");
+		}
+		else if (rnd == 12)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE13");
+		}
+		else if (rnd == 13)
+		{
+			B_Say	(hero, NULL, "$BOOKSTANDNOTREADABLE14");
 		};
 	};
 };
