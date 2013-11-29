@@ -554,8 +554,7 @@ INSTANCE Info_Mod_Raven_Befoerderung (C_INFO)
 
 FUNC INT Info_Mod_Raven_Befoerderung_Condition()
 {
-	if (Mod_Gilde == 12)
-	&& (Kapitel > 2)
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_BefoerderungKrieger))
 	{
 		return 1;
 	};

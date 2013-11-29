@@ -264,6 +264,34 @@ FUNC VOID Info_Mod_Xardas_MT_HabSchwert_Info()
 	B_StartOtherRoutine	(self, "TOT");
 };
 
+INSTANCE Info_Mod_Xardas_MT_PreBefoerderung (C_INFO)
+{
+	npc		= Mod_680_DMB_Xardas_MT;
+	nr		= 1;
+	condition	= Info_Mod_Xardas_MT_PreBefoerderung_Condition;
+	information	= Info_Mod_Xardas_MT_PreBefoerderung_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich will Schwarzmagier werden.";
+};
+
+FUNC INT Info_Mod_Xardas_MT_PreBefoerderung_Condition()
+{
+	if (Mod_Gilde == 12)
+	&& (Kapitel > 2)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Xardas_MT_PreBefoerderung_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_PreBefoerderung_14_00"); //Es gibt da etwas, worüber ich mit dir sprechen muss.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_PreBefoerderung_14_01"); //Du bist nun schon seit einiger Zeit bei uns und hast dich als fähiger Beliaranhänger bewiesen.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_PreBefoerderung_14_02"); //Wir können deine Hilfe gut gebrauchen und wollen daher, dass du den nächsten Schritt machst und dich entscheidest, ob du in Zukunft den Weg eines Magiers oder den eines Kriegers einschlagen willst.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_PreBefoerderung_14_03"); //Ich muss dir nicht mehr sagen, dass deine Entscheidung endgültig ist. Wähle du, welches der beiden Lager deinem Wesen mehr entspricht.
+};
+
 INSTANCE Info_Mod_Xardas_MT_Befoerderung (C_INFO)
 {
 	npc		= Mod_680_DMB_Xardas_MT;
@@ -277,8 +305,8 @@ INSTANCE Info_Mod_Xardas_MT_Befoerderung (C_INFO)
 
 FUNC INT Info_Mod_Xardas_MT_Befoerderung_Condition()
 {
-	if (Mod_Gilde == 12)
-	&& (Kapitel > 2)
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_PreBefoerderung))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_BefoerderungKrieger))
 	{
 		return 1;
 	};
@@ -304,6 +332,34 @@ FUNC VOID Info_Mod_Xardas_MT_Befoerderung_Info()
 	Mod_Gilde = 13;
 
 	Snd_Play ("LEVELUP");
+};
+
+INSTANCE Info_Mod_Xardas_MT_BefoerderungKrieger (C_INFO)
+{
+	npc		= Mod_680_DMB_Xardas_MT;
+	nr		= 1;
+	condition	= Info_Mod_Xardas_MT_BefoerderungKrieger_Condition;
+	information	= Info_Mod_Xardas_MT_BefoerderungKrieger_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich will Schwarzer Krieger werden.";
+};
+
+FUNC INT Info_Mod_Xardas_MT_BefoerderungKrieger_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_PreBefoerderung))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_Befoerderung))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Xardas_MT_BefoerderungKrieger_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Xardas_MT_BefoerderungKrieger_15_00"); //Ich will Schwarzer Krieger werden.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_BefoerderungKrieger_14_01"); //Du hast dich also entschieden, und ich halte dies den Umständen entsprechend für richtig.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_BefoerderungKrieger_14_02"); //Ich muss dir leider mitteilen, dass ich dich als Schwarzer Krieger nicht unterweisen kann - dies wird Raven übernehmen.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_BefoerderungKrieger_14_03"); //Begib dich bald zu ihm und verkünde ihm deinen Entschluss, damit er deinen weiteren Unterricht in die Wege leiten kann.
 };
 
 INSTANCE Info_Mod_Xardas_MT_Angebot (C_INFO)
