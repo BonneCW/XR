@@ -4,7 +4,7 @@ instance Mod_7704_OUT_Jesper_REL (Npc_Default)
 	name 		= "Jesper"; 
 	guild 		= GIL_OUT;
 	id 			= 7704;
-	voice 		= 9;
+	voice 		= 36;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

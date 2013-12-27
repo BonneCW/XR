@@ -4,7 +4,7 @@ instance Mod_587_NONE_Jesper_NW (Npc_Default)
 	name 		= "Jesper"; 
 	guild 		= GIL_OUT;
 	id 			= 587;
-	voice 		= 9;
+	voice 		= 36;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

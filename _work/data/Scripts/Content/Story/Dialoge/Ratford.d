@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Ratford_Hi_Condition()
 FUNC VOID Info_Mod_Ratford_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Ratford_Hi_15_00"); //Was macht ihr hier draußen?
-	AI_Output(self, hero, "Info_Mod_Ratford_Hi_07_01"); //Ich habe gerade so eine trockne Kehle. Wenn du mir ...
+	AI_Output(self, hero, "Info_Mod_Ratford_Hi_36_01"); //Ich habe gerade so eine trockene Kehle. Wenn du mir ...
 	AI_Output(hero, self, "Info_Mod_Ratford_Hi_15_02"); //Ja, ich weiß, ein Schluck Bier.
 };
 
@@ -41,17 +41,17 @@ FUNC INT Info_Mod_Ratford_Fokus_Condition()
 
 FUNC VOID Info_Mod_Ratford_Fokus_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_07_00"); //Scheiße, dich kenn ich doch, Mann! Kannst du mir sagen, was das hier soll?
+	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_36_00"); //Scheiße, dich kenn ich doch, Mann! Kannst du mir sagen, was das hier soll?
 	AI_Output(hero, self, "Info_Mod_Ratford_Fokus_15_01"); //Seh ich etwa so aus? Was ist denn passiert?
-	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_07_02"); //Gute Frage! Drax und ich waren hier gerade am Jagen, da tauchte hinter uns diese Horde Warge auf und hält direkt auf uns zu.
-	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_07_03"); //Wir haben also sofort unsere Pfeile gezückt und den Biestern ordentlich in die Fresse gegeben, aber es waren verdammt noch mal viel zu viele.
-	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_07_04"); //Anstatt aber über uns herzufallen, laufen sie an uns vorbei zu diesem komischen Kreis da drüben, schnappen sich ein kleines eckiges Ding, das oben drauf liegt, und hauen ab.
-	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_07_05"); //So was Verrücktes hab ich noch nie erlebt. (lacht unsicher)
+	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_36_02"); //Gute Frage! Drax und ich waren hier gerade am Jagen, da tauchte hinter uns diese Horde Warge auf und hält direkt auf uns zu.
+	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_36_03"); //Wir haben also sofort unsere Pfeile gezückt und den Biestern ordentlich in die Fresse gegeben, aber es waren verdammt noch mal viel zu viele.
+	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_36_04"); //Anstatt aber über uns herzufallen, laufen sie an uns vorbei zu diesem komischen Kreis da drüben, schnappen sich ein kleines eckiges Ding, das obendrauf liegt, und hauen ab.
+	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_36_05"); //So was Verrücktes hab ich noch nie erlebt. (lacht unsicher)
 	AI_Output(hero, self, "Info_Mod_Ratford_Fokus_15_06"); //Wohin sind die Warge verschwunden?
-	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_07_07"); //Direkt in die Hölle, wenn du mich fragst.
-	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_07_08"); //Drax ist ihnen hinterher, sie sind landeinwärts im Wald verschwunden.
+	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_36_07"); //Direkt in die Hölle, wenn du mich fragst.
+	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_36_08"); //Drax ist ihnen hinterher, sie sind landeinwärts im Wald verschwunden.
 	AI_Output(hero, self, "Info_Mod_Ratford_Fokus_15_09"); //Und du hältst hier die Stellung.
-	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_07_10"); //Na ja, die Puste macht nicht mehr mit. Ich hoffe bloß, Drax ist nicht doch noch zerfleischt worden.
+	AI_Output(self, hero, "Info_Mod_Ratford_Fokus_36_10"); //Na ja, die Puste macht nicht mehr mit. Ich hoffe bloß, Drax ist nicht doch noch zerfleischt worden.
 
 	B_LogEntry	(TOPIC_MOD_FOKUSSUCHE, "Beim Fokus an den Klippen ist mir eine Wargrotte zuvorgekommen. Während sie von Ratford und Drax unter Beschuss genommen wurde, hat sie sich den Fokus geschnappt und ist im Wald landeinwärts verschwunden. Drax ist hinterhergelaufen.");
 
@@ -114,13 +114,13 @@ FUNC VOID Info_Mod_Ratford_Infos_Info()
 
 	B_UseItem	(self, ItFo_Beer);
 
-	AI_Output(self, hero, "Info_Mod_Ratford_Infos_07_00"); //Nun gut, wir beobachten hier ein wenig die Gegend für das Banditenlager.
-	AI_Output(self, hero, "Info_Mod_Ratford_Infos_07_01"); //Außerdem jagen wir auch hin und wieder, um das Lager mit frischem Fleisch zu versorgen.
+	AI_Output(self, hero, "Info_Mod_Ratford_Infos_36_00"); //Nun gut, wir beobachten hier ein wenig die Gegend für das Banditenlager.
+	AI_Output(self, hero, "Info_Mod_Ratford_Infos_36_01"); //Außerdem jagen wir auch hin und wieder, um das Lager mit frischem Fleisch zu versorgen.
 
 	if (Banditen_Dabei == FALSE)
 	{
 		AI_Output(hero, self, "Info_Mod_Ratford_Infos_15_02"); //Wo ist euer Lager?
-		AI_Output(self, hero, "Info_Mod_Ratford_Infos_07_03"); //Du musst einfach nur immer an der Felswand entlanggehen, zuerst Richtung Wald, dann bergauf.
+		AI_Output(self, hero, "Info_Mod_Ratford_Infos_36_03"); //Du musst einfach nur immer an der Felswand entlanggehen, zuerst Richtung Wald, dann bergauf.
 	};
 };
 

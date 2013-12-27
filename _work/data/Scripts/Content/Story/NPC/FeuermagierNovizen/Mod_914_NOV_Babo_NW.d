@@ -4,7 +4,7 @@ INSTANCE Mod_914_NOV_Babo_NW (Npc_Default)
 	name 		= "Babo";
 	guild 		= GIL_VLK;
 	id 			= 914;
-	voice 		= 3;
+	voice 		= 36;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

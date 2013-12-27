@@ -19,14 +19,14 @@ FUNC INT Info_Mod_Babo_Daemonisch_Condition()
 
 FUNC VOID Info_Mod_Babo_Daemonisch_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Babo_Daemonisch_03_00"); //(verstört) Schwarzer Rauch aus seinem Schlund, schwarzer Rauch aus seinem Körper, Schreie ...
-	AI_Output(hero, self, "Info_Mod_Babo_Daemonisch_15_01"); //Nun, beruhige dich mal. Was genau ist passiert.
-	AI_Output(self, hero, "Info_Mod_Babo_Daemonisch_03_02"); //(verstört) Kurz nachdem er die Kirche verließ ... nein, nein ...
+	AI_Output(self, hero, "Info_Mod_Babo_Daemonisch_36_00"); //(verstört) Schwarzer Rauch aus seinem Schlund, schwarzer Rauch aus seinem Körper, Schreie ...
+	AI_Output(hero, self, "Info_Mod_Babo_Daemonisch_15_01"); //Nun, beruhige dich mal. Was genau ist passiert?
+	AI_Output(self, hero, "Info_Mod_Babo_Daemonisch_36_02"); //(verstört) Kurz nachdem er die Kirche verließ ... nein, nein ...
 	AI_Output(hero, self, "Info_Mod_Babo_Daemonisch_15_03"); //Nein, viel mehr bekomme ich aus ihm nicht heraus.
 
 	AI_TurnAway	(hero, self);
 
-	AI_Output(hero, self, "Info_Mod_Babo_Daemonisch_15_04"); //Acha, in der Kirche war er zuletzt. Da sollte ich mich mal umhören.
+	AI_Output(hero, self, "Info_Mod_Babo_Daemonisch_15_04"); //Ach jaa, in der Kirche war er zuletzt. Da sollte ich mich mal umhören.
 
 	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Babo ist tatsächlich ziemlich verstört, berichtet von schwarzem Rauch aus dem Körper des Verstorbenen. Dyrian war zuvor offensichtlich noch in der Kirche gewesen ...");
 
@@ -54,9 +54,9 @@ FUNC INT Info_Mod_Babo_Daemonisch2_Condition()
 
 FUNC VOID Info_Mod_Babo_Daemonisch2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Babo_Daemonisch2_03_00"); //Hey, wie sieht’s aus?
-	AI_Output(hero, self, "Info_Mod_Babo_Daemonisch2_15_01"); //Ähh, du bist wieder ok? Du hast mir doch solche Sachen erzählt ...
-	AI_Output(self, hero, "Info_Mod_Babo_Daemonisch2_03_02"); //Ach, vergiss den Unsinn. Ich war einfach verwirrt über Dyrian’s Tod. Aber jetzt geht es mir wieder gut.
+	AI_Output(self, hero, "Info_Mod_Babo_Daemonisch2_36_00"); //Na, wie sieht’s aus?
+	AI_Output(hero, self, "Info_Mod_Babo_Daemonisch2_15_01"); //Ähh, du bist wieder in Ordnung? Du hast mir doch solche Sachen erzählt ...
+	AI_Output(self, hero, "Info_Mod_Babo_Daemonisch2_36_02"); //Ach, vergiss den Unsinn. Ich war einfach verwirrt über Dyrians Tod. Aber jetzt geht es mir wieder gut.
 
 	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Komisch ... Babo scheint wieder voll beisammen zu sein und tut die Sachen, die er mir zuvor berichtet hatte, als Folge des Schocks über Dyrians Tod ab.");
 };
@@ -81,7 +81,7 @@ FUNC INT Info_Mod_Babo_Daemonisch3_Condition()
 
 FUNC VOID Info_Mod_Babo_Daemonisch3_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Babo_Daemonisch3_03_00"); //Die schwarzen Schatten in der Höhle beim See ... ich muss sofort das Kloster davon in Kenntnis setzen.
+	AI_Output(self, hero, "Info_Mod_Babo_Daemonisch3_36_00"); //Die schwarzen Schatten in der Höhle beim See ... ich muss sofort das Kloster davon in Kenntnis setzen.
 
 	AI_StopProcessInfos	(self);
 

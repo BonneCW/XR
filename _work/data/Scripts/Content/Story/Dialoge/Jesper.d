@@ -20,11 +20,14 @@ FUNC INT Info_Mod_Jesper_Dieb_Condition()
 FUNC VOID Info_Mod_Jesper_Dieb_Info()
 {
 	AI_PlayAni (hero, "T_YES");
-	AI_Output(self, hero, "Info_Mod_Jesper_Dieb_09_00"); //Wie ich sehe, bist du einer von uns.
-	AI_Output(self, hero, "Info_Mod_Jesper_Dieb_09_01"); //Ich kann dir beibringen zu Schleichen.
+	AI_Output(self, hero, "Info_Mod_Jesper_Dieb_36_00"); //Wie ich sehe, bist du einer von uns.
+	AI_Output(self, hero, "Info_Mod_Jesper_Dieb_36_01"); //Als Willkommensgruß kriegst du einen Tipp von mir: Lern dich richtig zu bewegen!
+	AI_Output(self, hero, "Info_Mod_Jesper_Dieb_36_02"); //Du stakst wie ein Storch durch die Gegend. Ich kann dich hören, egal in welchem Raum du dich hier befindest.
+	AI_Output(self, hero, "Info_Mod_Jesper_Dieb_36_03"); //Wenn du jemanden brauchst, der dir geschmeidige Bewegungen beibringt, melde dich bei mir.
+	AI_Output(self, hero, "Info_Mod_Jesper_Dieb_36_04"); //Damit hättest du sicher bessere Chancen, dich lautlos anzuschleichen.
 
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_STADT, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_LEHRER_STADT, "Jesper kann mir beibringen zu Schleichen.");
+	B_LogEntry	(TOPIC_MOD_LEHRER_STADT, "Jesper kann mir beibringen zu schleichen.");
 };
 
 INSTANCE Info_Mod_Jesper_AndreVermaechtnis (C_INFO)
@@ -49,7 +52,7 @@ FUNC VOID Info_Mod_Jesper_AndreVermaechtnis_Info()
 {
 	AI_TurnToNpc	(self, Mod_598_MIL_Mika_NW);
 
-	AI_Output(self, hero, "Info_Mod_Jesper_AndreVermaechtnis_09_00"); //Na schön, dann eben nur 40 Goldmünzen. Nimm, das scheiß Ding ... Halsabschneider. Aber ... wer zum Teufel ...
+	AI_Output(self, hero, "Info_Mod_Jesper_AndreVermaechtnis_36_00"); //Na schön, dann eben nur 40 Goldmünzen. Nimm das Scheißding ... Halsabschneider. Aber ... wer zum Teufel ...
 
 	AI_TurnToNpc	(self, hero);
 
@@ -80,7 +83,7 @@ FUNC INT Info_Mod_Jesper_Lernen_Condition()
 
 FUNC VOID Info_Mod_Jesper_Lernen_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Jesper_Lernen_15_00"); //Bring mir bei wie man schleicht.
+	AI_Output(hero, self, "Info_Mod_Jesper_Lernen_15_00"); //Bring mir bei, wie man schleicht.
 
 	B_TeachThiefTalent (self, hero, NPC_TALENT_SNEAK);
 };

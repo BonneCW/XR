@@ -8,7 +8,7 @@ instance Mod_1120_BDT_Ratford_MT (Npc_Default)
 	level =					8;
 
 	
-	voice =					7;
+	voice =					36;
 	id =					1120;
 
 

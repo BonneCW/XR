@@ -20,20 +20,20 @@ FUNC VOID Info_Mod_Drax_Hi_Info()
 
 	if (Banditen_Dabei == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Drax_Hi_06_01"); //Könnte, aber du gehörst nicht zu uns.
+		AI_Output(self, hero, "Info_Mod_Drax_Hi_06_01"); //Könnte ich, aber du gehörst nicht zu uns.
 	}
 	else
 	{
 		if (Mod_Schwierigkeit != 4)
 		{
-			AI_Output(self, hero, "Info_Mod_Drax_Hi_06_02"); //Hm, da du einer von uns bist, werde ich dir etwas über die Jagd und das Bogenschießen beibringen.
+			AI_Output(self, hero, "Info_Mod_Drax_Hi_06_02"); //Hmm, da du einer von uns bist, werde ich dir etwas über die Jagd und das Bogenschießen beibringen.
 
 			Log_CreateTopic	(TOPIC_MOD_LEHRER_BANDITEN, LOG_NOTE);
 			B_LogEntry	(TOPIC_MOD_LEHRER_BANDITEN, "Von Drax kann ich diverse Jagdtalente sowie das Bogenschießen lernen.");
 		}
 		else
 		{
-			AI_Output(self, hero, "Info_Mod_Drax_Hi_06_03"); //Hm, da du einer von uns bist, werde ich dir etwas über die Jagd beibringen.
+			AI_Output(self, hero, "Info_Mod_Drax_Hi_06_03"); //Hmm, da du einer von uns bist, werde ich dir etwas über die Jagd beibringen.
 
 			Log_CreateTopic	(TOPIC_MOD_LEHRER_BANDITEN, LOG_NOTE);
 			B_LogEntry	(TOPIC_MOD_LEHRER_BANDITEN, "Von Drax kann ich diverse Jagdtalente lernen.");
@@ -69,7 +69,7 @@ FUNC VOID Info_Mod_Drax_Fokus_Info()
 	AI_Output(hero, self, "Info_Mod_Drax_Fokus_15_04"); //Einer von ihnen hat etwas, das ich suche.
 	AI_Output(self, hero, "Info_Mod_Drax_Fokus_06_05"); //Das blaue funkelnde Ding? Ist sicher 'ne Menge wert, oder?
 	AI_Output(hero, self, "Info_Mod_Drax_Fokus_15_06"); //Nicht in Gold.
-	AI_Output(self, hero, "Info_Mod_Drax_Fokus_06_07"); //(enttäuscht) Na dann... Schau doch rum, einer von denen wird's schon dabeihaben.
+	AI_Output(self, hero, "Info_Mod_Drax_Fokus_06_07"); //(enttäuscht) Na dann... Schau doch rum, einer von denen wird's schon noch bei sich haben.
 
 	B_StartOtherRoutine	(self, "START");
 	B_StartOtherRoutine	(Mod_1120_BDT_Ratford_MT, "START");
@@ -213,8 +213,8 @@ FUNC VOID Info_Mod_Drax_Jagdtalente_Teeth()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, hero, TROPHY_Teeth))
 	{
-		AI_Output			(self, hero, "Info_Mod_Drax_Jagdtalente_Teeth_06_00"); //Das einfachste, was du Tieren entnehmen kannst, sind seine Zähne. Du fährst mit deinem Messer in seinem Maul um das Gebiss.
-		AI_Output			(self, hero, "Info_Mod_Drax_Jagdtalente_Teeth_06_01"); //Dann trennst es geschickt mit einem Ruck vom Schädel des Tieres.
+		AI_Output			(self, hero, "Info_Mod_Drax_Jagdtalente_Teeth_06_00"); //Das Einfachste, was du Tieren entnehmen kannst, sind seine Zähne. Du fährst mit deinem Messer in seinem Maul um das Gebiss.
+		AI_Output			(self, hero, "Info_Mod_Drax_Jagdtalente_Teeth_06_01"); //Dann trennst du es geschickt mit einem Ruck vom Schädel des Tieres.
 	};
 
 	Info_ClearChoices	(Info_Mod_Drax_Jagdtalente);
@@ -235,7 +235,7 @@ FUNC VOID Info_Mod_Drax_Jagdtalente_ReptileSkin()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, hero, TROPHY_ReptileSkin))
 	{
-		AI_Output			(self, hero, "Info_Mod_Drax_Jagdtalente_BFSting_06_00"); //enn du die Haut an den Seiten anschneidest, löst sie sich wie von selbst. Du solltest ab jetzt kein Problem mehr haben, Echsen zu häuten.
+		AI_Output			(self, hero, "Info_Mod_Drax_Jagdtalente_BFSting_06_00"); //Wenn du die Haut an den Seiten anschneidest, löst sie sich wie von selbst. Du solltest ab jetzt kein Problem mehr haben, Echsen zu häuten.
 	};
 
 	Info_ClearChoices	(Info_Mod_Drax_Jagdtalente);
