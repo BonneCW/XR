@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Maleth_Hi_Condition()
 
 FUNC VOID Info_Mod_Maleth_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Maleth_Hi_08_00"); //Hey Fremder, man sieht nicht häufig Wanderer hier vorbeikommen. Bist du auf dem Weg in die Stadt?
+	AI_Output(self, hero, "Info_Mod_Maleth_Hi_08_00"); //Sieh einer an, schon wieder ein Fremder! Bist du auf dem Weg in die Stadt?
 
 	Info_ClearChoices	(Info_Mod_Maleth_Hi);
 
@@ -44,12 +44,12 @@ FUNC VOID Info_Mod_Maleth_Hi_B()
 
 FUNC VOID Info_Mod_Maleth_Hi_A()
 {
-	AI_Output(hero, self, "Info_Mod_Maleth_Hi_A_15_00"); //Ja genau.
+	AI_Output(hero, self, "Info_Mod_Maleth_Hi_A_15_00"); //Ja, genau.
 	AI_Output(self, hero, "Info_Mod_Maleth_Hi_A_08_01"); //Da tust du auch gut daran.
 	AI_Output(self, hero, "Info_Mod_Maleth_Hi_A_08_02"); //Abgesehen von den wilden Tieren treibt sich seit dem Fall der Barriere auch allerlei unheimliches Gesindel hier herum, wie der sonderbare dunkle Pilger, der vorher hier vorbeikam.
 	AI_Output(hero, self, "Info_Mod_Maleth_Hi_A_15_03"); //Ein dunkler Pilger?
 	AI_Output(self, hero, "Info_Mod_Maleth_Hi_A_08_04"); //Ja, eine ziemlich finstere Gestalt. Er ist Richtung Stadt gegangen. Zum Glück hat er nicht bei uns um Unterkunft gebeten.
-	AI_Output(self, hero, "Info_Mod_Maleth_Hi_A_08_05"); //Naja, unser Bauer hätte ihm sowieso kein Obdach gegeben, sondern ihn in die Stadt verwiesen.
+	AI_Output(self, hero, "Info_Mod_Maleth_Hi_A_08_05"); //Na ja, unser Bauer hätte ihm sowieso kein Obdach gegeben, sondern ihn in die Stadt verwiesen.
 	AI_Output(self, hero, "Info_Mod_Maleth_Hi_A_08_06"); //Genau wie beim letzten Typen, der hier war. Der war mir auch nicht ganz geheuer.
 	AI_Output(self, hero, "Info_Mod_Maleth_Hi_A_08_07"); //Hat ganz ruhig gesprochen, sah aber mit seinen Tätowierungen aus, als würde er dir gleich an die Gurgel gehen.
 	AI_Output(self, hero, "Info_Mod_Maleth_Hi_A_08_08"); //Den haben sie nicht in die Stadt gelassen. Seitdem lungert er da noch irgendwo rum.
@@ -84,12 +84,12 @@ FUNC INT Info_Mod_Maleth_Wolfsplage_Condition()
 FUNC VOID Info_Mod_Maleth_Wolfsplage_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Maleth_Wolfsplage_15_00"); //Warum machst du so ein Gesicht?
-	AI_Output(self, hero, "Info_Mod_Maleth_Wolfsplage_08_01"); //(winkt ab) Ach, in letzter Zeit haben wir immer mehr Probleme mit den Wölfen. Die reißen immer mehr Schafe und ich kann sie nicht erwischen.
+	AI_Output(self, hero, "Info_Mod_Maleth_Wolfsplage_08_01"); //(winkt ab) Ach, in letzter Zeit haben wir immer mehr Probleme mit den Wölfen. Die reißen meine Schafe, und ich kann sie nicht erwischen.
 	AI_Output(hero, self, "Info_Mod_Maleth_Wolfsplage_15_02"); //Wo befinden sich diese Viecher?
-	AI_Output(self, hero, "Info_Mod_Maleth_Wolfsplage_08_03"); //(ungläubig) Willst du dich mit den Viechern anlegen!
-	AI_Output(hero, self, "Info_Mod_Maleth_Wolfsplage_15_04"); //Das hatte ich im Sinn!
-	AI_Output(self, hero, "Info_Mod_Maleth_Wolfsplage_08_05"); //Das würdest du tun. Gut diese Viecher treiben sich immer in der Nähe der Innostatue rum und erscheinen dann, wenn man wegsieht.
-	AI_Output(hero, self, "Info_Mod_Maleth_Wolfsplage_15_06"); //Dann werde ich dort mal nachsehen.
+	AI_Output(self, hero, "Info_Mod_Maleth_Wolfsplage_08_03"); //(ungläubig) Willst du dich mit den Viechern anlegen?
+	AI_Output(hero, self, "Info_Mod_Maleth_Wolfsplage_15_04"); //Das hatte ich im Sinn.
+	AI_Output(self, hero, "Info_Mod_Maleth_Wolfsplage_08_05"); //Das würdest du tun? Gut, diese Viecher treiben sich immer in der Nähe der Innostatue rum und erscheinen immer genau dann, wenn man wegsieht.
+	AI_Output(hero, self, "Info_Mod_Maleth_Wolfsplage_15_06"); //Das werde ich mir mal anschauen.
 	AI_Output(self, hero, "Info_Mod_Maleth_Wolfsplage_08_07"); //Viel Glück!
 
 	Log_CreateTopic	(TOPIC_MOD_MALETH_WOLFSPLAGE, LOG_MISSION);

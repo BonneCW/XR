@@ -503,14 +503,17 @@ FUNC INT Info_Mod_Gomez_DuHier_Condition()
 FUNC VOID Info_Mod_Gomez_DuHier_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Gomez_DuHier_15_00"); //Du hier? Wie bist du hierher gekommen?
-	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_01"); //Alles hat damit angefangen, dass der König meine Zusammenarbeit mit den Orks aufgedeckt hat.
-	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_02"); //Oh ja, das war ein Spaß - um die enttäuschte Fresse des alten Sacks zu sehen, hat es sich schon gelohnt.
-	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_03"); //Zur Strafe wurde ich natürlich in die Barriere geworfen. Zum Glück.
-	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_04"); //Normalerweise hätte mich der Strick erwartet, aber das Erz war dem König wichtiger als mein Tod.
-	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_05"); //Und wie wir alle wussten, war die Barriere nicht dafür errichtet worden, jemals wieder aufgehoben zu werden, deshalb konnten alle Verbrecher ruhigen Gewissens reingesteckt werden.
-	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_06"); //An die Zeit in der Kuppel kann ich mich kaum erinnern.
-	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_07"); //Ich weiß noch, dass am Fuße des Bergs mit der Austauschstelle ein kleines Lager errichtet worden war, wo sich die anderen Gefangenen aufhielten.
-	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_08"); //Scheint eine harte Zeit gewesen zu sein - zu Bewusstsein gekommen bin ich erst wieder hier, unter Xardas' Augen.
+	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_01"); //Willst du die ganze Geschichte wissen? Die ist ziemlich kompliziert.
+	AI_Output(hero, self, "Info_Mod_Gomez_DuHier_15_02"); //Klar!
+	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_03"); //Sie beginnt noch in Myrtana, in meiner Zeit als Diplomat König Rhobars.
+	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_04"); //Alles hat damit angefangen, dass der König meine Zusammenarbeit mit den Orks aufgedeckt hat, bei denen ich mir ein kleines Zubrot verdient hatte.
+	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_05"); //Oh ja, das war ein Spaß - um die enttäuschte Fresse des alten Sacks zu sehen, hat es sich schon gelohnt.
+	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_06"); //Zur Strafe wurde ich natürlich in die Barriere geworfen, wie es damals üblich war.
+	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_07"); //Zu anderen Zeiten hätte mich der Strick erwartet, aber das Erz war dem König wichtiger als mein Tod.
+	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_08"); //Und wie wir alle wussten, war die Barriere nicht dafür errichtet worden, jemals wieder aufgehoben zu werden, deshalb konnten alle Verbrecher ruhigen Gewissens reingesteckt werden.
+	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_09"); //An die Zeit in der Kuppel kann ich mich kaum erinnern.
+	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_10"); //Ich weiß noch, dass am Fuße des Bergs mit der Austauschstelle ein kleines Lager errichtet worden war, wo sich die anderen Gefangenen aufhielten.
+	AI_Output(self, hero, "Info_Mod_Gomez_DuHier_10_11"); //Scheint eine harte Zeit gewesen zu sein - zu Bewusstsein gekommen bin ich erst wieder hier, unter Xardas' Augen.
 };
 
 INSTANCE Info_Mod_Gomez_Angebot (C_INFO)

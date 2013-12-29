@@ -15,6 +15,10 @@ func void B_MM_AssessEnemy ()
 
 	B_Vergiftet (self);
 
+	if (!Hlp_IsValidNpc(other)) {
+		return;
+	};
+
 	if (Npc_IsInState(other, ZS_Unconscious))
 	{
 		return;
