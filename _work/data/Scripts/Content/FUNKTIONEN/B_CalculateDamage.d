@@ -10,13 +10,8 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		return;
 	};
 
-	var oCAniCtrl_Human blubb;
 	var ocNpc her;
 	her = Hlp_GetNpc(taeter);
-
-	if (her.anictrl) {
-		blubb = MEM_PtrToInst(her.anictrl);
-	};
 
 	var int damage;
 	damage = 0;
@@ -189,17 +184,6 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		};
 
 		taeterMonster = TRUE;
-	};
-
-	if (blubb) {
-		if (blubb.comboNr > 0) {
-			damage += blubb.comboNr * damage;
-		};
-
-		if (blubb.hitAniID == blubb._t_hitfrun)
-		&& (!C_BodyStateContains(taeter, BS_SWIM)) {
-			damage += taeter.attribute[ATR_STRENGTH];
-		};
 	};
 
 	// Wenn von hinten angegriffen, Schaden verdoppeln
