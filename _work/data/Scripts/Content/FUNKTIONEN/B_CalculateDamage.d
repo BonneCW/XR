@@ -506,6 +506,42 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		};
 	};
 
+	if (Npc_HasReadiedMeleeWeapon(taeter)) {
+		if (Hlp_IsItem(rwp, ItMw_Orkschlaechter) == TRUE)
+		&& (C_NpcIsOrc(opfer))
+		{
+			damage += 50;
+		};
+				
+		if (opfer.guild > GIL_SEPERATOR_HUM)
+		&& (opfer.aivar[AIV_Trefferzone] == 0)
+		{
+			if (damageType != DAM_BLUNT && r_max(99) < 50) {
+				opfer.aivar[AIV_Trefferzone] = 1;
+			};
+		};
+
+		if (Hlp_IsItem(rwp, ItMw_Chemo) == TRUE)
+		{
+			if (opfer.guild == GIL_BLOODFLY)
+			|| (opfer.guild == GIL_MINECRAWLER)
+			|| (opfer.guild == GIL_GIANT_BUG)
+			{
+				damage += 100;
+			};
+			if (opfer.guild == GIL_GIANT_RAT)
+			|| (opfer.guild == GIL_SWAMPSHARK)
+			{
+				damage += 50;
+			};
+		};
+
+		if (Hlp_IsItem(rwp, ItMw_FeurigerHammer) == TRUE)
+		{
+			damage += 3;
+		};
+	};
+
 	if (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(PC_Hero))
 	{
 		if (Mod_NL_DrachensudIntus == 1)
@@ -522,40 +558,6 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 
 		if (Npc_HasReadiedMeleeWeapon(hero))
 		{
-			if (Hlp_IsItem(rwp, ItMw_Orkschlaechter) == TRUE)
-			&& (C_NpcIsOrc(opfer))
-			{
-				damage += 50;
-			};
-				
-			if (opfer.guild > GIL_SEPERATOR_HUM)
-			&& (opfer.aivar[AIV_Trefferzone] == 0)
-			{
-				if (damageType != DAM_BLUNT && r_max(99) < 50) {
-					opfer.aivar[AIV_Trefferzone] = 1;
-				};
-			};
-
-			if (Hlp_IsItem(rwp, ItMw_Chemo) == TRUE)
-			{
-				if (opfer.guild == GIL_BLOODFLY)
-				|| (opfer.guild == GIL_MINECRAWLER)
-				|| (opfer.guild == GIL_GIANT_BUG)
-				{
-					damage += 100;
-				};
-				if (opfer.guild == GIL_GIANT_RAT)
-				|| (opfer.guild == GIL_SWAMPSHARK)
-				{
-					damage += 50;
-				};
-			};
-
-			if (Hlp_IsItem(rwp, ItMw_FeurigerHammer) == TRUE)
-			{
-				damage += 3;
-			};
-
 			if (Mod_Tiergift > 0)
 			{
 				if (opfer.aivar[AIV_MM_REAL_ID] != ID_BLOODFLY)
