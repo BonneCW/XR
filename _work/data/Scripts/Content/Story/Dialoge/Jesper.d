@@ -30,6 +30,89 @@ FUNC VOID Info_Mod_Jesper_Dieb_Info()
 	B_LogEntry	(TOPIC_MOD_LEHRER_STADT, "Jesper kann mir beibringen zu schleichen.");
 };
 
+INSTANCE Info_Mod_Jesper_WieLangDabei (C_INFO)
+{
+	npc		= Mod_587_NONE_Jesper_NW;
+	nr		= 1;
+	condition	= Info_Mod_Jesper_WieLangDabei_Condition;
+	information	= Info_Mod_Jesper_WieLangDabei_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wie lange bist du schon dabei?";
+};
+
+FUNC INT Info_Mod_Jesper_WieLangDabei_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Jesper_Dieb))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Jesper_WieLangDabei_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Jesper_WieLangDabei_15_00"); //Wie lange bist du schon dabei?
+	AI_Output(self, hero, "Info_Mod_Jesper_WieLangDabei_36_01"); //Ich hab nie was anderes gemacht. Meine Kinder- und Jugendstreiche waren noch planlos, ich habe mir immer gerade das genommen, was ich zum Überleben brauchte.
+	AI_Output(self, hero, "Info_Mod_Jesper_WieLangDabei_36_02"); //Mit Cassia hat sich das geändert. Ohne sie wäre ich ein kleiner Gauner geblieben, aber heute leben wir weit über das Notwendigste hinaus.
+	AI_Output(self, hero, "Info_Mod_Jesper_WieLangDabei_36_03"); //Gerade bei großen Unternehmungen ist es unabdinglich, im Team zu arbeiten. Deshalb hoffe ich, dass du dich gut einzubringen weißt.
+};
+
+INSTANCE Info_Mod_Jesper_Tipps (C_INFO)
+{
+	npc		= Mod_587_NONE_Jesper_NW;
+	nr		= 1;
+	condition	= Info_Mod_Jesper_Tipps_Condition;
+	information	= Info_Mod_Jesper_Tipps_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Hast du noch mehr Tipps für mich?";
+};
+
+FUNC INT Info_Mod_Jesper_Tipps_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Jesper_Dieb))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Jesper_Tipps_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Jesper_Tipps_15_00"); //Hast du noch mehr Tipps für mich?
+	AI_Output(self, hero, "Info_Mod_Jesper_Tipps_36_01"); //Das Schleichen ist meine Spezialität. Wenn dich verschlossene Truhen interessieren, sprich mit Ramirez.
+	AI_Output(self, hero, "Info_Mod_Jesper_Tipps_36_02"); //Cassia hat dir sicher schon gesagt, dass sie es wie keine zweite versteht, den ahnungslosen Bürgern den Geldbeutel abzuschneiden.
+};
+
+INSTANCE Info_Mod_Jesper_Coup (C_INFO)
+{
+	npc		= Mod_587_NONE_Jesper_NW;
+	nr		= 1;
+	condition	= Info_Mod_Jesper_Coup_Condition;
+	information	= Info_Mod_Jesper_Coup_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Was war dein größter Coup?";
+};
+
+FUNC INT Info_Mod_Jesper_Coup_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Jesper_WieLangDabei))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Jesper_Coup_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Jesper_Coup_15_00"); //Was war dein größter Coup?
+	AI_Output(self, hero, "Info_Mod_Jesper_Coup_36_01"); //Da muss ich nicht lange überlegen, obwohl es schon ein paar Jahre her ist!
+	AI_Output(self, hero, "Info_Mod_Jesper_Coup_36_02"); //Ramirez war bei einem Einbruch aufgeflogen und im Kerker gelandet. Cassia und ich mussten schnell sein, bevor die Miliz irgendetwas über uns herausfinden konnte.
+	AI_Output(self, hero, "Info_Mod_Jesper_Coup_36_03"); //Der Weg an dem Wachtposten vor den Zellen vorbei war für uns unmöglich - das hätten wir nicht ungesehen schaffen können.
+	AI_Output(self, hero, "Info_Mod_Jesper_Coup_36_04"); //Also haben wir uns die ganze Nacht Zeit genommen und die Mauer von der anderen Seite Stein für Stein abgetragen. Wir mussten dabei verdammt leise und vorsichtig sein - aber wir haben es geschafft.
+	AI_Output(self, hero, "Info_Mod_Jesper_Coup_36_05"); //Am Ende konnte sich Ramirez verdrücken, als die Wache gerade Pinkelpause machte. So einen Ausbruch hatte man in der Stadt noch nicht gesehen, und er war wochenlang im Gespräch.
+	AI_Output(self, hero, "Info_Mod_Jesper_Coup_36_06"); //Natürlich war es in der Zeit danach noch schwieriger für uns, weil alle Patrouillen und Kontrollen verstärkt wurden. Seitdem passen wir noch besser auf, dass wir nicht erwischt werden.
+};
+
 INSTANCE Info_Mod_Jesper_AndreVermaechtnis (C_INFO)
 {
 	npc		= Mod_587_NONE_Jesper_NW;

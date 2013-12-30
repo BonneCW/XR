@@ -61,6 +61,59 @@ FUNC VOID Info_Mod_Maleth_Hi_A()
 	Info_ClearChoices	(Info_Mod_Maleth_Hi);
 };
 
+INSTANCE Info_Mod_Maleth_Neuankoemmlinge (C_INFO)
+{
+	npc		= Mod_911_BAU_Maleth_NW;
+	nr		= 1;
+	condition	= Info_Mod_Maleth_Neuankoemmlinge_Condition;
+	information	= Info_Mod_Maleth_Neuankoemmlinge_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Du klingst, als könntest du auf die ganzen Neuankömmlinge verzichten.";
+};
+
+FUNC INT Info_Mod_Maleth_Neuankoemmlinge_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Maleth_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Maleth_Neuankoemmlinge_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Maleth_Neuankoemmlinge_15_00"); //Du klingst, als könntest du auf die ganzen Neuankömmlinge verzichten.
+	AI_Output(self, hero, "Info_Mod_Maleth_Neuankoemmlinge_08_01"); //Na ja - es wird mir gerade schon etwas viel. Noch vor ein paar Wochen war das hier der ruhigste Hof in ganz Khorinis, und ich musste nur aufpassen, dass die Goblins und Wölfe nicht zu vorwitzig wurden.
+	AI_Output(self, hero, "Info_Mod_Maleth_Neuankoemmlinge_08_02"); //Aber seitdem: Fremde ziehen vorbei, als wären wir eine Touristenattraktion. Räuber haben sich irgendwo entlang des Weges eingenistet, und weiter hinten soll über Nacht ein riesiger Turm entstanden sein, von dem eine böse Macht ausgeht.
+	AI_Output(self, hero, "Info_Mod_Maleth_Neuankoemmlinge_08_03"); //Und ich mittendrin mit meiner Schafherde, scheiße.
+};
+
+INSTANCE Info_Mod_Maleth_Hof (C_INFO)
+{
+	npc		= Mod_911_BAU_Maleth_NW;
+	nr		= 1;
+	condition	= Info_Mod_Maleth_Hof_Condition;
+	information	= Info_Mod_Maleth_Hof_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Was ist das hier für ein Hof?";
+};
+
+FUNC INT Info_Mod_Maleth_Hof_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Maleth_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Maleth_Hof_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Maleth_Hof_15_00"); //Was ist das hier für ein Hof?
+	AI_Output(self, hero, "Info_Mod_Maleth_Hof_08_01"); //Der Hof gehört dem Bauern Lobart. Wir genießen den Schutz der Stadt - zumindest theoretisch. Im Gegenzug müssen wir einen großen Teil unseres Ertrags den Paladinen überlassen.
+	AI_Output(self, hero, "Info_Mod_Maleth_Hof_08_02"); //Du findest Lobart dort drüben, in Richtung der Häuser. Er hat immer ein Auge auf alles.
+};
+
 INSTANCE Info_Mod_Maleth_Wolfsplage (C_INFO)
 {
 	npc		= Mod_911_BAU_Maleth_NW;

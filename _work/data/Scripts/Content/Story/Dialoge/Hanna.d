@@ -34,7 +34,7 @@ INSTANCE Info_Mod_Hanna_Preis (C_INFO)
 FUNC INT Info_Mod_Hanna_Preis_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Hanna_Hi))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Hanna_Meldor))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Hanna_Meldor))
 	{
 		return 1;
 	};
@@ -64,7 +64,7 @@ INSTANCE Info_Mod_Hanna_Gaeste (C_INFO)
 FUNC INT Info_Mod_Hanna_Gaeste_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Hanna_Hi))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Hanna_Meldor))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Hanna_Meldor))
 	{
 		return 1;
 	};
@@ -91,7 +91,7 @@ INSTANCE Info_Mod_Hanna_Rasthaus (C_INFO)
 FUNC INT Info_Mod_Hanna_Rasthaus_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Hanna_Hi))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Hanna_Meldor))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Hanna_Meldor))
 	{
 		return 1;
 	};

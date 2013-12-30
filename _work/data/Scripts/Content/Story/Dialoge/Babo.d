@@ -1,3 +1,87 @@
+INSTANCE Info_Mod_Babo_Hi (C_INFO)
+{
+	npc		= Mod_914_NOV_Babo_NW;
+	nr		= 1;
+	condition	= Info_Mod_Babo_Hi_Condition;
+	information	= Info_Mod_Babo_Hi_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Schlechte Laune?";
+};
+
+FUNC INT Info_Mod_Babo_Hi_Condition()
+{
+	return 1;
+};
+
+FUNC VOID Info_Mod_Babo_Hi_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Babo_Hi_15_00"); //Schlechte Laune?
+	AI_Output(self, hero, "Info_Mod_Babo_Hi_36_01"); //(niedergeschlagen) Ja. Sieht man doch.
+	AI_Output(hero, self, "Info_Mod_Babo_Hi_15_02"); //Was gibt's?
+	AI_Output(self, hero, "Info_Mod_Babo_Hi_36_03"); //Verdammt, jemand hat sich an meiner Truhe zu schaffen gemacht und mir ein wichtiges Stück Papier gestohlen.
+	AI_Output(self, hero, "Info_Mod_Babo_Hi_36_04"); //Das Einzige, was das Novizenleben hier im Kloster noch erträglich gemacht hat.
+	AI_Output(self, hero, "Info_Mod_Babo_Hi_36_05"); //Aber ich hab keinen Schimmer, wer das getan haben könnte. Ärgern tun sie mich alle, sogar die Magier.
+
+	Info_ClearChoices	(Info_Mod_Babo_Hi);
+
+	Info_AddChoice	(Info_Mod_Babo_Hi, "(auslachen)", Info_Mod_Babo_Hi_B);
+	Info_AddChoice	(Info_Mod_Babo_Hi, "Was ist das für ein Gegenstand? Soll ich die Augen offen halten?", Info_Mod_Babo_Hi_A);
+};
+
+FUNC VOID Info_Mod_Babo_Hi_B()
+{
+	AI_Output(hero, self, "Info_Mod_Babo_Hi_B_15_00"); //(auslachen)
+	AI_Output(self, hero, "DEFAULT"); //
+
+	Info_ClearChoices	(Info_Mod_Babo_Hi);
+
+	AI_StopProcessInfos	(self);
+};
+
+FUNC VOID Info_Mod_Babo_Hi_A()
+{
+	AI_Output(hero, self, "Info_Mod_Babo_Hi_A_15_00"); //Was ist das für ein Gegenstand? Soll ich die Augen offen halten?
+	AI_Output(self, hero, "Info_Mod_Babo_Hi_A_36_01"); //(panisch) Um Innos' Willen, nein! Das ist sehr privat.
+	AI_Output(self, hero, "Info_Mod_Babo_Hi_A_36_02"); //Ich hätte dir gar nichts erzählen dürfen...
+	AI_Output(hero, self, "Info_Mod_Babo_Hi_A_15_03"); //Willst du nicht mal ein wenig an die frische Luft?
+	AI_Output(self, hero, "Info_Mod_Babo_Hi_A_36_04"); //Das habe ich den Magiern schon oft gesagt. Aber sie wählen mich nie für die Botengänge aus.
+	AI_Output(self, hero, "Info_Mod_Babo_Hi_A_36_05"); //Ich darf fegen und den Wein stampfen, bis mir schlecht wird. Und das war's.
+	AI_Output(hero, self, "Info_Mod_Babo_Hi_A_15_06"); //Ich könnte ein gutes Wort bei den Magiern für dich einlegen...
+	AI_Output(self, hero, "Info_Mod_Babo_Hi_A_36_07"); //(argwöhnisch) Warum so hilfsbereit? Willst du mich auf den Arm nehmen, oder was?
+	AI_Output(hero, self, "Info_Mod_Babo_Hi_A_15_08"); //Ich biete es nur an.
+	AI_Output(self, hero, "Info_Mod_Babo_Hi_A_36_09"); //Hast du ein Stück Kohle? Dann könnte ich mir die Zeichnung aus dem Gedächtnis wieder anfertigen.
+
+	Info_ClearChoices	(Info_Mod_Babo_Hi);
+
+	Info_AddChoice	(Info_Mod_Babo_Hi, "Gerade nicht.", Info_Mod_Babo_Hi_D);
+
+	if (Npc_HasItems(hero, ItMi_Coal) >= 1) {
+		Info_AddChoice	(Info_Mod_Babo_Hi, "Klar, hier hast du es.", Info_Mod_Babo_Hi_C);
+	};
+};
+
+FUNC VOID Info_Mod_Babo_Hi_D()
+{
+	AI_Output(hero, self, "Info_Mod_Babo_Hi_D_15_00"); //Gerade nicht.
+	AI_Output(self, hero, "Info_Mod_Babo_Hi_D_36_01"); //Schade...
+
+	Info_ClearChoices	(Info_Mod_Babo_Hi);
+};
+
+FUNC VOID Info_Mod_Babo_Hi_C()
+{
+	AI_Output(hero, self, "Info_Mod_Babo_Hi_C_15_00"); //Klar, hier hast du es.
+
+	B_GiveInvItems	(hero, self, ItMi_Coal, 1);
+
+	AI_Output(self, hero, "Info_Mod_Babo_Hi_C_36_01"); //Danke, wenigstens etwas.
+
+	B_GivePlayerXP	(50);
+
+	Info_ClearChoices	(Info_Mod_Babo_Hi);
+};
+
 INSTANCE Info_Mod_Babo_Daemonisch (C_INFO)
 {
 	npc		= Mod_914_NOV_Babo_NW;
