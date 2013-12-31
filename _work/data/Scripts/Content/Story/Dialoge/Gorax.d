@@ -139,6 +139,7 @@ FUNC INT Info_Mod_Gorax_AndokaiBinBack_Condition()
 	&& (Mod_GoraxWeinGeklaut < Wld_GetDay())
 	&& (Npc_HasItems(hero, ItMi_Gold) >= 250)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Gorax_Weinverkauf))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Gorax_Weinverkauf))
 	{
 		return 1;
 	};
