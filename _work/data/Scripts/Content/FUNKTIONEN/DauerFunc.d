@@ -220,13 +220,16 @@ FUNC VOID DAUERFUNC_01()
 		};
 	};
 
+	var int lastFocusItem;
+
 	if (C_BodyStateContains (hero, BS_DIVE))
 	{
 		var oCNpc her;
 		her = Hlp_GetNpc (hero);
 		
-		if (her.focus_vob)
+		if (her.focus_vob && her.focus_vob != lastFocusItem)
 		{
+			lastFocusItem = her.focus_vob;
 			var oCItem her_focusItem;
 			MEM_AssignInst (her_focusItem, her.focus_vob);
 			
