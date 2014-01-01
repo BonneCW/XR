@@ -179,7 +179,7 @@ func void ZS_Unconscious_End ()
 	if (Wld_DetectItem (self, ITEM_KAT_NF))
 	|| (Wld_DetectItem (self, ITEM_KAT_FF))
 	{
-		if (Hlp_IsValidItem (item))
+		if (Hlp_IsValidItem (item) && Npc_GetDistToItem(self, item) < 750)
 		{
 			if (Npc_GetDistToItem (self, item) > 500)
 			{

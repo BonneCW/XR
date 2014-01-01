@@ -10,6 +10,8 @@ instance Mod_541_NONE_Till_NW (Npc_Default)
 	
 	// ------ Attribute ------
 	B_SetAttributesToChapter (self, 1);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
+
+	aivar[AIV_ToughGuyNewsOverride] = TRUE;
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
