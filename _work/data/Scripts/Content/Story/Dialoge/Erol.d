@@ -56,6 +56,8 @@ FUNC VOID Info_Mod_Erol_DunklerPilger_Info()
 
 	B_GivePlayerXP	(100);
 
+	Mod_Erol_Unterwegs_Day = Wld_GetDay();
+
 	B_StartOtherRoutine	(Mod_7036_NONE_Pilger_NW, "GRAVEYARD");
 	AI_Teleport	(Mod_7036_NONE_Pilger_NW, "NW_FARM4_WOOD_MONSTER_MORE_03");
 
@@ -159,6 +161,7 @@ INSTANCE Info_Mod_Erol_Fahrender (C_INFO)
 FUNC INT Info_Mod_Erol_Fahrender_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Erol_DunklerPilger))
+	&& (Wld_GetDay() > Mod_Erol_Unterwegs_Day)
 	{
 		return 1;
 	};
