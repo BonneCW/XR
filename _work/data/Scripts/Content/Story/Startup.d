@@ -1852,12 +1852,6 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc	(Wolf,	"NW_FARM4_WOOD_MONSTER_04");
 	Wld_InsertNpc	(Wolf,	"NW_FARM4_WOOD_MONSTER_04");
 
-	Wld_InsertNpc	(Gobbo_Skeleton,	"NW_FARM4_WOOD_MONSTER_MORE_02");
-	Wld_InsertNpc	(Gobbo_Skeleton,	"NW_FARM4_WOOD_MONSTER_MORE_02");
-
-	Wld_InsertNpc	(Gobbo_Skeleton,	"NW_FARM4_WOOD_MONSTER_MORE_01");
-	Wld_InsertNpc	(Gobbo_Skeleton,	"NW_FARM4_WOOD_MONSTER_MORE_01");
-
 	Wld_InsertNpc	(Wolf,	"NW_FARM4_WOOD_MONSTER_02");
 	Wld_InsertNpc	(Wolf,	"NW_FARM4_WOOD_MONSTER_02");
 	Wld_InsertNpc	(BlackWolf,	"NW_FARM4_WOOD_MONSTER_02");
