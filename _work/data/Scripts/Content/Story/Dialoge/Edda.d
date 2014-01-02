@@ -101,6 +101,8 @@ FUNC VOID Info_Mod_Edda_WiesoHier_Info()
 	AI_Output(hero, self, "Info_Mod_Edda_WiesoHier_15_00"); //Wieso wohnst du hier so abgeschieden von den anderen?
 	AI_Output(self, hero, "Info_Mod_Edda_WiesoHier_26_01"); //Ich hatte vor einigen Jahren die Blattern und war eine der wenigen Überlebenden.
 	AI_Output(self, hero, "Info_Mod_Edda_WiesoHier_26_02"); //Seitdem werde ich wie eine Aussätzige behandelt, und niemand kommt freiwillig zu mir.
+
+	EddasWanzen_Tag = Wld_GetDay();
 };
 
 INSTANCE Info_Mod_Edda_Problem (C_INFO)
@@ -117,6 +119,7 @@ FUNC INT Info_Mod_Edda_Problem_Condition()
 {
 	if (Wld_GetDay() > 6)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Edda_Hi))
+	&& (Wld_GetDay() > EddasWanzen_Tag)
 	{
 		return 1;
 	};
