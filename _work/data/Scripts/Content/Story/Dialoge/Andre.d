@@ -1895,13 +1895,13 @@ FUNC VOID Info_Mod_Andre_Rangar_Info()
 	{
 		AI_Output(hero, self, "Info_Mod_Andre_Rangar_15_03"); //Außerdem hab ich gesehen, wie er ein Paket Sumpfkraut in seine Truhe gelegt hat.
 
-		B_GivePlayerXP	(100);
+		B_GivePlayerXP	(150);
 	}
 	else
 	{
 		AI_Output(hero, self, "Info_Mod_Andre_Rangar_15_04"); //Außerdem hab ich gesehen, wie er Sumpfkrautstängel in seine Truhe getan hat.
 
-		B_GivePlayerXP	(250);
+		B_GivePlayerXP	(100);
 	};
 
 	AI_Output(self, hero, "Info_Mod_Andre_Rangar_08_05"); //Ich werde das sofort überprüfen lassen. Danke, dass du mich benachrichtigt hast.
