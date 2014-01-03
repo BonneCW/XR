@@ -11,7 +11,7 @@ func int AllowSaving()
 {
 	if (Mod_QuatschtNichtCounter < 2)
 	{
-		return FALSE;
+		//return FALSE;
 	};
 	if (CutsceneAn == TRUE)
 	{
