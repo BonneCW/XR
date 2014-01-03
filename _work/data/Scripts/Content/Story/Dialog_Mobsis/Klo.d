@@ -42,8 +42,6 @@ FUNC VOID PC_Klo_Trollfett_Info()
 
 	B_StartOtherRoutine	(Mod_7480_OUT_Wendel_REL, "ENDRES");
 	B_StartOtherRoutine	(Mod_7481_OUT_Monteur_REL, "ENDRES");
-
-	B_ENDPRODUCTIONDIALOG();
 };
 
 INSTANCE PC_Klo_EXIT (C_INFO)
