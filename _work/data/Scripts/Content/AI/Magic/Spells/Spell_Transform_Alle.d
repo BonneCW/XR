@@ -28,7 +28,7 @@ INSTANCE Spell_Transform (C_Spell_Proto)
 // ------ Schaf ------
 func int Spell_Logic_TrfMeatbug (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfMeatbug)))
 	{
 		B_StartMagicTransform();
 
@@ -66,7 +66,7 @@ func int Spell_Logic_TrfMeatbug (var int manaInvested)
 };
 func int Spell_Logic_TrfWoman (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfWoman)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfWoman)
 	{
 		B_StartMagicTransform();
@@ -104,7 +104,7 @@ func int Spell_Logic_TrfWoman (var int manaInvested)
 };
 func int Spell_Logic_TrfWomanBack (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfWoman)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfWoman)
 	{
 		B_StartMagicTransform();
@@ -146,7 +146,7 @@ func int Spell_Logic_TrfWomanBack (var int manaInvested)
 
 func int Spell_Logic_TrfSkeleton2 (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfWoman)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfWoman)
 	{
 		B_StartMagicTransform();
@@ -184,7 +184,7 @@ func int Spell_Logic_TrfSkeleton2 (var int manaInvested)
 // ------ Scavenger ------
 func int Spell_Logic_TrfOrk (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfOrk)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfOrk)
 	{
 		B_StartMagicTransform();
@@ -206,7 +206,7 @@ func int Spell_Logic_TrfOrk (var int manaInvested)
 // ------ Giant Rat ------
 func int Spell_Logic_TrfShadowbeast (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfShadowbeast)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfShadowbeast)
 	{
 		B_StartMagicTransform();
@@ -229,7 +229,7 @@ func int Spell_Logic_TrfShadowbeast (var int manaInvested)
 // ------ Giant BUG ------
 func int Spell_Logic_TrfSnapper (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfSnapper)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfSnapper)
 	{
 		B_StartMagicTransform();
@@ -251,7 +251,7 @@ func int Spell_Logic_TrfSnapper (var int manaInvested)
 // ------ Wolf ------
 func int Spell_Logic_TrfWarg (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfWarg)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfWarg)
 	{
 		B_StartMagicTransform();
@@ -275,7 +275,7 @@ func int Spell_Logic_TrfWarg (var int manaInvested)
 // ------ Waran ------
 func int Spell_Logic_TrfBlackTroll (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfBlackTroll)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfBlackTroll)
 	{
 		B_StartMagicTransform();
@@ -297,7 +297,7 @@ func int Spell_Logic_TrfBlackTroll (var int manaInvested)
 // ------ Snapper ------
 func int Spell_Logic_TrfGolem (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfGolem)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfGolem)
 	{
 		B_StartMagicTransform();
@@ -321,7 +321,7 @@ func int Spell_Logic_TrfGolem (var int manaInvested)
 // ------ Warg ------
 func int Spell_Logic_TrfBloodfly (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfBloodfly)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfBloodfly)
 	{
 		B_StartMagicTransform();
@@ -343,7 +343,7 @@ func int Spell_Logic_TrfBloodfly (var int manaInvested)
 // ------ Feuerwaran ------
 func int Spell_Logic_TrfBloodhound (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfBloodhound)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfBloodhound)
 	{
 		B_StartMagicTransform();
@@ -365,7 +365,7 @@ func int Spell_Logic_TrfBloodhound (var int manaInvested)
 // ------ Lurker ------
 func int Spell_Logic_TrfKeiler (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfKeiler)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfKeiler)
 	{
 		B_StartMagicTransform();
@@ -389,7 +389,7 @@ func int Spell_Logic_TrfKeiler (var int manaInvested)
 // ------ Shadowbeast ------
 func int Spell_Logic_TrfSheep (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfSheep)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfSheep)
 	{
 		B_StartMagicTransform();
@@ -413,7 +413,7 @@ func int Spell_Logic_TrfSheep (var int manaInvested)
 // ------ Dragon Snapper ------
 func int Spell_Logic_TrfSkeleton (var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
+	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_TrfSkeleton)))
 	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfSkeleton)
 	{
 		B_StartMagicTransform();

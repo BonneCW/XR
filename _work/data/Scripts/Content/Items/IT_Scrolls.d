@@ -1980,7 +1980,7 @@ INSTANCE ItSc_Rueckverwandlung (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfWoman;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -2010,7 +2010,7 @@ INSTANCE ItSc_TrfSkeleton (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfWoman;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -2962,7 +2962,7 @@ INSTANCE ItSc_TrfWoman (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfWoman;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -2992,7 +2992,7 @@ INSTANCE ItSc_TrfWomanBack (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfWoman;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -3022,7 +3022,7 @@ INSTANCE ItSc_TrfMeatbug (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfMeatbug;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -3052,7 +3052,7 @@ INSTANCE ItSc_TrfHarpie (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfOrk;
 
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -3082,7 +3082,7 @@ INSTANCE ItSc_TrfShadowbeast (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfShadowbeast;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -3112,7 +3112,7 @@ INSTANCE ItSc_TrfSnapper (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfSnapper;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -3143,7 +3143,7 @@ INSTANCE ItSc_TrfWarg (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfWarg;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -3173,7 +3173,7 @@ INSTANCE ItSc_TrfBlackTroll (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfBlackTroll;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -3203,7 +3203,7 @@ INSTANCE ItSc_TrfGolem (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfGolem;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -3233,7 +3233,7 @@ INSTANCE ItSc_TrfBloodfly (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfBloodfly;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -3263,7 +3263,7 @@ INSTANCE ItSc_TrfBloodhound (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfBloodhound;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -3293,7 +3293,7 @@ INSTANCE ItSc_TrfKeiler (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfKeiler;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -3323,7 +3323,7 @@ INSTANCE ItSc_TrfSheep (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfSheep;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -3353,7 +3353,7 @@ INSTANCE ItSc_TrfRabbit (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarzmagi
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfMeatbug;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
