@@ -37,6 +37,6 @@ instance Mod_7349_OUT_Buerger_REL (Npc_Default)
 
 FUNC VOID Rtn_PreStart_7349 ()
 {	
-	TA_Stand_ArmsCrossed		(08,00,22,00,"REL_CITY_109");
-  	TA_Sleep		(22,00,08,00,"REL_CITY_263");
+	TA_Stand_ArmsCrossed		(08,00,21,30,"REL_CITY_109");
+  	TA_Sleep		(21,30,08,00,"REL_CITY_263");
 };

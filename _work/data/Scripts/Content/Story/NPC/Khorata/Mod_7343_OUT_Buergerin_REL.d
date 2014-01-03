@@ -39,14 +39,14 @@ instance Mod_7343_OUT_Buergerin_REL (Npc_Default)
 
 FUNC VOID Rtn_Start_7343 ()
 {	
-	TA_Stand_ArmsCrossed		(08,00,20,30,"REL_CITY_090");
-	TA_Sleep		(20,30,08,00,"REL_CITY_078");
+	TA_Stand_ArmsCrossed		(08,00,20,15,"REL_CITY_090");
+	TA_Sleep		(20,15,08,00,"REL_CITY_078");
 };
 
 FUNC VOID Rtn_Fremdgang_7343 ()
 {	
-	TA_Stand_ArmsCrossed		(08,00,20,30,"REL_CITY_090");
-	TA_Sleep		(20,30,22,00,"REL_CITY_078");
+	TA_Stand_ArmsCrossed		(08,00,20,15,"REL_CITY_090");
+	TA_Sleep		(20,15,22,00,"REL_CITY_078");
 	TA_Smalltalk_Fremdgang		(22,00,06,00,"REL_SURFACE_153");
 	TA_Sleep		(06,00,08,00,"REL_CITY_078");
 };

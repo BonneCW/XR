@@ -37,6 +37,6 @@ instance Mod_7345_OUT_Buerger_REL (Npc_Default)
 
 FUNC VOID Rtn_PreStart_7345 ()
 {	
-	TA_Smalltalk		(08,00,22,00,"REL_CITY_110");
-  	TA_Sleep		(22,00,08,00,"REL_CITY_320");
+	TA_Smalltalk		(08,00,22,15,"REL_CITY_110");
+  	TA_Sleep		(22,15,08,00,"REL_CITY_320");
 };

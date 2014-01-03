@@ -39,6 +39,6 @@ instance Mod_7340_OUT_Buergerin_REL (Npc_Default)
 
 FUNC VOID Rtn_Start_7340 ()
 {	
-	TA_Smalltalk		(08,00,20,30,"REL_CITY_109");
-	TA_Sleep		(20,30,08,00,"REL_CITY_258");
+	TA_Smalltalk		(08,00,20,45,"REL_CITY_109");
+	TA_Sleep		(20,45,08,00,"REL_CITY_258");
 };
