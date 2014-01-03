@@ -63,6 +63,7 @@ FUNC INT Info_Mod_Raeuber01_Frauenkleider2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Raeuber01_Frauenkleider))
 	&& (Npc_HasItems(hero, ItMi_Gold) >= 10)
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Raeuber01_Frauenkleider3))
 	{
 		return 1;
 	};
@@ -109,6 +110,7 @@ INSTANCE Info_Mod_Raeuber01_Frauenkleider3 (C_INFO)
 FUNC INT Info_Mod_Raeuber01_Frauenkleider3_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Raeuber01_Frauenkleider))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Raeuber01_Frauenkleider2))
 	&& (Mod_REL_Frauenkleider01 == 0)
 	&& (Mod_Verhandlungsgeschick > 0)
 	{
