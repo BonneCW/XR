@@ -2098,6 +2098,16 @@ const int	RunenMob_10_Amount_MAX = 1;
 var int 	RunenMob_11_Amount;
 const int	RunenMob_11_Amount_MAX = 2;
 
+// Angeln
+var int 	AngelMob_01_Amount;
+const int	AngelMob_01_Amount_MAX = 2;
+var int 	AngelMob_02_Amount;
+const int	AngelMob_02_Amount_MAX = 1;
+var int 	AngelMob_03_Amount;
+const int	AngelMob_03_Amount_MAX = 2;
+var int 	AngelMob_04_Amount;
+const int	AngelMob_04_Amount_MAX = 1;
+
 
 // ------ Teacher MAX Werte ------
 const int T_MEGA = 300; //Pyrokar MANA

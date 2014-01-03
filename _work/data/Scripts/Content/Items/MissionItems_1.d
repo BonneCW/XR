@@ -1195,7 +1195,7 @@ INSTANCE ItRw_Bow_L_03_MIS (C_Item)
 //****************************************************************************
 INSTANCE ItRi_Prot_Point_01_MIS(C_Item)
 {
-	name 					=	"Constantino's Ring";
+	name 					=	"Constantinos Ring";
 
 	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_RING|ITEM_MISSION;
@@ -1633,7 +1633,7 @@ INSTANCE ITKE_ORLAN_HOTELZIMMER(C_Item)
 
 INSTANCE ItRw_DragomirsArmbrust_MIS (C_Item)
 {
-	name 				=	"Dragomir´s Armbrust";
+	name 				=	"Dragomirs Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;

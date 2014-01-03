@@ -646,7 +646,7 @@ FUNC VOID PC_Erzhacken_Hacken_Info()
 	}
 	else
 	{
-		PrintScreen ("Hier gibt's Nichts mehr zu holen.", -1, -1, FONT_ScreenSmall, 2);	
+		PrintScreen ("Hier gibt's nichts mehr zu holen.", -1, -1, FONT_ScreenSmall, 2);	
 		B_ENDPRODUCTIONDIALOG ();
 		return;
 	};

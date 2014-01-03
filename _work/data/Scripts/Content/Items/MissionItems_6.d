@@ -44,7 +44,7 @@ FUNC VOID Use_XardasNotfallBeutel ()
 
 INSTANCE ItWr_XardasErmahnungFuerIdioten_MIS	(C_Item)
 {
-	name 				=	"Xardas´ Ermahnungsbrief";
+	name 				=	"Xardas' Ermahnungsbrief";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION;
