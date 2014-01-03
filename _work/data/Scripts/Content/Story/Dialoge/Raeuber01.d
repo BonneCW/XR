@@ -63,7 +63,7 @@ FUNC INT Info_Mod_Raeuber01_Frauenkleider2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Raeuber01_Frauenkleider))
 	&& (Npc_HasItems(hero, ItMi_Gold) >= 10)
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Raeuber01_Frauenkleider3))
+	&& (Mod_REL_Frauenkleider01 == 0)
 	{
 		return 1;
 	};
@@ -74,9 +74,9 @@ FUNC VOID Info_Mod_Raeuber01_Frauenkleider2_Info()
 	AI_Output(hero, self, "Info_Mod_Raeuber01_Frauenkleider2_15_00"); //Sagst du es ihm für 10 Goldmünzen?
 	AI_Output(self, hero, "Info_Mod_Raeuber01_Frauenkleider2_08_01"); //Mach ich glatt.
 
-	B_GiveInvItems	(hero, self, ItMi_Gold, 10);
-
 	AI_StandUP	(self);
+
+	B_GiveInvItems	(hero, self, ItMi_Gold, 10);
 
 	AI_GotoNpc	(self, Mod_7505_BDT_Melvin_REL);
 
@@ -125,6 +125,8 @@ FUNC VOID Info_Mod_Raeuber01_Frauenkleider3_Info()
 	if (self.aivar[AIV_Verhandlung] == TRUE)
 	{
 		AI_Output(self, hero, "Info_Mod_Raeuber01_Frauenkleider3_08_01"); //Joa, klar.
+
+		AI_StandUP	(self);
 
 		AI_GotoNpc	(self, Mod_7505_BDT_Melvin_REL);
 

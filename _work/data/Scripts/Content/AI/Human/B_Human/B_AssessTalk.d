@@ -170,7 +170,7 @@ func void B_AssessTalk ()
 		};
 		
 		
-		if (C_RefuseTalk(self,other))
+		if (C_RefuseTalk(self, other))
 		{
 			if C_PlayerHasFakeGuild (self,other)
 			{
