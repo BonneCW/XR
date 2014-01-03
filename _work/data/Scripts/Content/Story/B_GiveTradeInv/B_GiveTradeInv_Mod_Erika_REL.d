@@ -19,6 +19,7 @@ FUNC VOID B_GiveTradeInv_Mod_Erika_REL (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Bolt,  30);
 		CreateInvItems	(slf, ItMi_Seide, 1);
 		CreateInvItems	(slf, ItFo_BoozeRudolf, 1);
+		CreateInvItems	(slf, ItFo_Addon_Grog, 1);
 		
 		// ------ Waffen ------
 		
