@@ -94,7 +94,6 @@ FUNC VOID Info_Mod_Raeuber03_Bierhexen_Info()
 	AI_Output(self, hero, "Info_Mod_Raeuber03_Bierhexen_06_02"); //Hat's mir jedenfalls stolz erzählt. Als ob das so was Besonderes wäre.
 	AI_Output(hero, self, "Info_Mod_Raeuber03_Bierhexen_15_03"); //Wo finde ich Leonhard?
 	AI_Output(self, hero, "Info_Mod_Raeuber03_Bierhexen_06_04"); //Der lungert in den Gassen von Khorata rum. Hat halt nicht so ein tolles Versteck wie wir.
-	AI_Output(hero, self, "Info_Mod_Raeuber03_Bierhexen_15_05"); //Wo finde ich Leonhard?
 
 	B_LogEntry	(TOPIC_MOD_KHORATA_BIERHEXEN, "Nach Angaben eines Kumpanen von Melvin ist Leonhard in Khorata der Übeltäter.");
 };
