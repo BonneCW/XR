@@ -262,6 +262,8 @@ FUNC VOID Info_Mod_Jim_SpenderFreuden2_Info()
 	Mod_REL_QuestCounter += 1;
 
 	Mod_Jim_Freudenspender = 4;
+
+	B_GivePlayerXP	(100);
 };
 
 INSTANCE Info_Mod_Jim_SpenderFreuden3 (C_INFO)
