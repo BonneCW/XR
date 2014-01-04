@@ -15,7 +15,7 @@ instance Mod_7485_OUT_Schuerfer_REL (Npc_Default)
 	B_SetAttributesToChapter	(self, 2);
 
 	//-------- visuals --------
-	B_SetNpcVisual	(self, MALE, "Hum_Head_Pony", 7, 3, SFB_ARMOR_L);
+	B_SetNpcVisual	(self, MALE, "Hum_Head_Fighter", 7, BodyTex_N, SFB_ARMOR_L);
 	Mdl_ApplyOverlayMds	(self,"Humans_Tired.mds");
 	
 	Mdl_SetModelFatness(self, 0);
