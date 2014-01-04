@@ -66,7 +66,7 @@ FUNC VOID Info_Mod_Erika_Landvermessung_B()
 FUNC VOID Info_Mod_Erika_Landvermessung_A()
 {
 	AI_Output(hero, self, "Info_Mod_Erika_Landvermessung_A_15_00"); //Kann ich seinen Alkohol haben?
-	AI_Output(self, hero, "Info_Mod_Erika_Landvermessung_A_16_01"); //(ironisch) Natürlich! Nein, das ist nicht möglich. Ich habe alle alkoholischen Waren bei mir zu Hause in einer Truhe versteckt, damit Hubert keine Möglichkeit hat, an sie zu gelangen.
+	AI_Output(self, hero, "Info_Mod_Erika_Landvermessung_A_16_01"); //(ironisch) Natürlich! Nein, das ist nicht möglich. Ich habe fast alle alkoholischen Waren bei mir zu Hause in einer Truhe versteckt, damit Hubert keine Möglichkeit hat, an sie zu gelangen.
 
 	Info_ClearChoices	(Info_Mod_Erika_Landvermessung);
 
