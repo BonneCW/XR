@@ -78,7 +78,7 @@ FUNC VOID Rtn_Gasthaus_7380()
 
 FUNC VOID Rtn_Streuner_7380()
 {	
-	TA_Sit_Bench		(06,00,10,00,"REL_CITY_044");
+	TA_Sit_Bench		(06,00,10,00,"REL_CITY_351");
 	TA_Stand_Drinking	(10,00,14,00,"REL_CITY_355"); 
 	TA_Sit_Bench		(14,00,18,00,"REL_CITY_299");
 	TA_Stand_Drinking	(18,00,22,00,"REL_CITY_219"); 
