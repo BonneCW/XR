@@ -282,6 +282,7 @@ FUNC INT Info_Mod_August_Buerger_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Anselm_Buerger2))
 	&& (Kapitel < 3)
+	&& (Mod_REL_Buerger == 0)
 	{
 		return 1;
 	};

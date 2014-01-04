@@ -220,6 +220,9 @@ FUNC VOID FRAMEFUNC ()
 				Npc_RemoveInvItems	(PC_Hero, ItWr_Erfolge, 1);
 				CreateInvItems	(PC_Hero, ItWr_Erfolge, 1);
 			};
+
+			username = MEM_GetGothOpt("CLOCKWORK", "username");
+			passwort = MEM_GetGothOpt("CLOCKWORK", "passwort");
 		}
 		else if (CurrentLevel != CurrentLevel2) // Levelwechsel
 		{
