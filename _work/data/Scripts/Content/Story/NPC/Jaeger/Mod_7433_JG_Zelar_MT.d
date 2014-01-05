@@ -26,7 +26,8 @@ instance Mod_7433_JG_Zelar_MT (Npc_Default)
 
 	
 	//-------- inventory --------  
-	EquipItem (self, ItRw_Bow_L_03);                             
+	EquipItem (self, ItRw_Bow_L_03);
+	EquipItem (self, ItMW_Addon_Knife01);
 
 	
 
