@@ -49,9 +49,28 @@ var C_MG_SPIELFIGUR Opp_Goblin;
 var C_MG_SPIELFIGUR Opp_Schaf;
 
 FUNC VOID Button_Spielfigur_Enter(var int hndl) {
+	Button_DeleteMouseover();
+
+	var string tex;
+	tex = View_GetTexture(Button_GetViewHandle(hndl));
+
+	if (Hlp_StrCmp(tex, "MG_FIGUR_TROLL.TGA")) {
+		Button_CreateMouseover("Gewinnt jeden Kampf, kann nicht übersprungen werden", Font_ScreenSmall);
+	} else if (Hlp_StrCmp(tex, "MG_FIGUR_MINECRAWLERQUEEN.TGA")) {
+		Button_CreateMouseover("Friert die Reihe vor sich für eine Runde ein", Font_ScreenSmall);
+	} else if (Hlp_StrCmp(tex, "MG_FIGUR_HASE.TGA")) {
+		Button_CreateMouseover("Kann Gegner (außer Troll) überspringen", Font_ScreenSmall);
+	} else if (Hlp_StrCmp(tex, "MG_FIGUR_MEATBUG.TGA")) {
+		Button_CreateMouseover("Verliert jeden Kampf", Font_ScreenSmall);
+	} else if (Hlp_StrCmp(tex, "MG_FIGUR_BALROG.TGA")) {
+		Button_CreateMouseover("Verbrennt Gegner auf den Feldern direkt rechts und links von sich", Font_ScreenSmall);
+	} else if (Hlp_StrCmp(tex, "MG_FIGUR_GOBLIN.TGA")) {
+		Button_CreateMouseover("Hinterlässt auf seinem ehemaligen Feld für eine Runde eine Mine", Font_ScreenSmall);
+	};
 };
 
 FUNC VOID Button_Spielfigur_Leave(var int hndl) {
+	Button_DeleteMouseover();
 };
 
 FUNC VOID Button_Spielfigur_Click(var int hndl) {
@@ -712,9 +731,6 @@ FUNC VOID C_MG_SPIELFIGUR_WalkToField(var C_MG_SPIELFIGUR sf, var int field)
 
 	x = x+temp;
 	y = y+temp;
-
-	PrintDebug(ConcatStrings("Hier x: ", IntToString(x)));
-	PrintDebug(ConcatStrings("Hier y: ", IntToString(y)));
 
 	Button_Move(sf.button, x, y);
 
