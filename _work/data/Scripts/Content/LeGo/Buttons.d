@@ -208,7 +208,7 @@ func int Button_GetState(var int hndl) {
 func void Button_Move(var int hndl, var int nposx, var int nposy) {
 	var _Button btn; btn = get(hndl);
 	
-	View_MovePxl(btn.view, nposx, nposy);
+	View_MoveToPxl(btn.view, nposx, nposy);
 };
 
 func int Button_GetViewHandle(var int hndl) {

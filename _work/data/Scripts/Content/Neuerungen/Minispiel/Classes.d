@@ -7,7 +7,7 @@ CLASS C_MG_SPIELFIGUR
 	var int owner; // damit ich weiß, zu wem das Monster gehört und in welche Richtung es muss
 	var int direction; // Richtung, in die das Monster standardmäßig muss (1 für Spieler, -1 für Gegner)
 	var int type;  // Monster-Art
-	var int view; // View des Monsters
+	var int button; // View des Monsters
 	var int left;
 	var int right;
 	var int front;
@@ -18,17 +18,12 @@ CLASS C_MG_SPIELFIGUR
 /** Konstruktor **/
  
 instance C_MG_SPIELFIGUR@(C_MG_SPIELFIGUR) {
-	var int xy;
-
-	xy = Print_Screen[PS_Y]/12;
-
-	C_MG_SPIELFIGUR@.view = View_CreatePxl(0, 0, xy, xy);
 };
  
 /** Destruktor **/
  
 func void C_MG_SPIELFIGUR_Delete(var C_MG_SPIELFIGUR m) {
-	View_Delete(m.view);
+	Button_Delete(m.button);
 };
 
 var C_MG_SPIELFIGUR Hero_MinecrawlerQueen;
@@ -53,19 +48,24 @@ var C_MG_SPIELFIGUR Opp_Snapper;
 var C_MG_SPIELFIGUR Opp_Goblin;
 var C_MG_SPIELFIGUR Opp_Schaf;
 
+FUNC VOID Button_Spielfigur_Enter(var int hndl) {
+};
+
+FUNC VOID Button_Spielfigur_Leave(var int hndl) {
+};
+
+FUNC VOID Button_Spielfigur_Click(var int hndl) {
+};
+
 FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int owner)
 {
 	sf.type = type;
-
-	PrintDebug ("B_MG_InitialiseFeld: Type geht");
-
-	PrintDebug (ConcatStrings("B_MG_InitialiseFeld: View-Handle: ", IntToString(sf.view)));
 
 	var int xy; // x/y-Größe der Felder, da quadratisch
 
 	xy = Print_Screen[PS_Y]/12;
 
-	sf.view = View_CreatePxl(0, 0, xy, xy);
+	sf.button = Button_CreatePxl(0, 0, xy, xy, "Default.tga", Button_Spielfigur_Enter, Button_Spielfigur_Leave, Button_Spielfigur_Click);
 
 	xy = Print_Screen[PS_Y]/10; // y-Auflösung ist kleiner als x, deswegen geht das
 
@@ -84,16 +84,12 @@ FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int 
 	}
 	else
 	{
-		x = Print_Screen[PS_X]/2+5*xy;
+		x = Print_Screen[PS_X]/2+4*xy;
 
 		sf.direction = 1;
 	};
 
-	PrintDebug ("B_MG_InitialiseFeld: Dir geht");
-
 	sf.owner = owner;
-
-	PrintDebug ("B_MG_InitialiseFeld: Owner geht");
 
 	if (type == MG_FIGUR_MINECRAWLERQUEEN)
 	{
@@ -102,14 +98,14 @@ FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int 
 
 		if (owner == 0)
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_MINECRAWLERQUEEN.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_MINECRAWLERQUEEN.TGA");
 		}
 		else
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_MINECRAWLERQUEEN2.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_MINECRAWLERQUEEN2.TGA");
 		};
 
-		View_MovePxl (sf.view, x+xy, y+2*xy);
+		Button_Move (sf.button, x+xy, y+2*xy);
 	}
 	else if (type == MG_FIGUR_TROLL)
 	{
@@ -118,14 +114,14 @@ FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int 
 
 		if (owner == 0)
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_TROLL.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_TROLL.TGA");
 		}
 		else
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_TROLL2.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_TROLL2.TGA");
 		};
 
-		View_MovePxl (sf.view, x+xy, y+4*xy);
+		Button_Move (sf.button, x+xy, y+4*xy);
 	}
 	else if (type == MG_FIGUR_HASE)
 	{
@@ -135,14 +131,14 @@ FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int 
 
 		if (owner == 0)
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_HASE.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_HASE.TGA");
 		}
 		else
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_HASE2.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_HASE2.TGA");
 		};
 
-		View_MovePxl (sf.view, x, y+2*xy);
+		Button_Move (sf.button, x, y+2*xy);
 	}
 	else if (type == MG_FIGUR_MEATBUG)
 	{
@@ -153,14 +149,14 @@ FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int 
 
 		if (owner == 0)
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_MEATBUG.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_MEATBUG.TGA");
 		}
 		else
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_MEATBUG2.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_MEATBUG2.TGA");
 		};
 
-		View_MovePxl (sf.view, x, y+xy);
+		Button_Move (sf.button, x, y+xy);
 	}
 	else if (type == MG_FIGUR_STONEGUARDIAN)
 	{
@@ -171,27 +167,27 @@ FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int 
 
 		if (owner == 0)
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_STONEGUARDIAN.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_STONEGUARDIAN.TGA");
 		}
 		else
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_STONEGUARDIAN2.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_STONEGUARDIAN2.TGA");
 		};
 
-		View_MovePxl (sf.view, x+xy, y+3*xy);
+		Button_Move (sf.button, x+xy, y+3*xy);
 	}
 	else if (type == MG_FIGUR_BLOODFLY)
 	{
 		if (owner == 0)
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_BLOODFLY.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_BLOODFLY.TGA");
 		}
 		else
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_BLOODFLY2.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_BLOODFLY2.TGA");
 		};
 
-		View_MovePxl (sf.view, x, y);
+		Button_Move (sf.button, x, y);
 	}
 	else if (type == MG_FIGUR_BALROG)
 	{
@@ -200,14 +196,14 @@ FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int 
 
 		if (owner == 0)
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_BALROG.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_BALROG.TGA");
 		}
 		else
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_BALROG2.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_BALROG2.TGA");
 		};
 
-		View_MovePxl (sf.view, x+xy, y);
+		Button_Move (sf.button, x+xy, y);
 	}
 	else if (type == MG_FIGUR_SNAPPER)
 	{
@@ -216,14 +212,14 @@ FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int 
 
 		if (owner == 0)
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_SNAPPER.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_SNAPPER.TGA");
 		}
 		else
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_SNAPPER2.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_SNAPPER2.TGA");
 		};
 
-		View_MovePxl (sf.view, x, y+4*xy);
+		Button_Move (sf.button, x, y+4*xy);
 	}
 	else if (type == MG_FIGUR_GOBLIN)
 	{
@@ -233,14 +229,14 @@ FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int 
 
 		if (owner == 0)
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_GOBLIN.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_GOBLIN.TGA");
 		}
 		else
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_GOBLIN2.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_GOBLIN2.TGA");
 		};
 
-		View_MovePxl (sf.view, x+xy, y+xy);
+		Button_Move (sf.button, x+xy, y+xy);
 	}
 	else if (type == MG_FIGUR_SCHAF)
 	{
@@ -251,19 +247,17 @@ FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int 
 
 		if (owner == 0)
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_SCHAF.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_SCHAF.TGA");
 		}
 		else
 		{
-			View_SetTexture (sf.view, "MG_FIGUR_SCHAF2.TGA");
+			Button_SetTexture (sf.button, "MG_FIGUR_SCHAF2.TGA");
 		};
 
-		View_MovePxl (sf.view, x, y+3*xy);
+		Button_Move (sf.button, x, y+3*xy);
 	};
 
-	View_Open(sf.view);
-
-	PrintDebug ("B_MG_InitialiseFeld: View_Open geht");
+	Button_Show(sf.button);
 };
 
 FUNC VOID B_MG_Schmeissen (var int field, var int owner)
@@ -705,7 +699,7 @@ FUNC VOID C_MG_SPIELFIGUR_WalkToField(var C_MG_SPIELFIGUR sf, var int field)
 	};
 
 	var zCView v;
-	v = View_Get(sf.view);
+	v = Button_GetView(sf.button);
 
 	x = x-v.pposx;
 	y = y-v.pposy;
@@ -719,7 +713,10 @@ FUNC VOID C_MG_SPIELFIGUR_WalkToField(var C_MG_SPIELFIGUR sf, var int field)
 	x = x+temp;
 	y = y+temp;
 
-	View_MovePxl(sf.view, x, y);
+	PrintDebug(ConcatStrings("Hier x: ", IntToString(x)));
+	PrintDebug(ConcatStrings("Hier y: ", IntToString(y)));
+
+	Button_Move(sf.button, x, y);
 
 	sf.walked = TRUE;
 };
