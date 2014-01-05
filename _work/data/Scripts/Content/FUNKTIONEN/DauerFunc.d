@@ -1945,5 +1945,15 @@ FUNC VOID DAUERFUNC_01()
 		Inventory_Open = FALSE;
 	};
 
+	// Dummen Beliareffekt entfernen
+
+	if (LastMobsi != PLAYER_MOBSI_PRODUCTION) {
+		if (LastMobsi == MOBSI_PrayIdol) {
+			Wld_StopEffect("DEMENTOR_FX");
+		};
+
+		LastMobsi = PLAYER_MOBSI_PRODUCTION;
+	};
+
 	Wld_SendTrigger	("DAUERTRIGGER");
 };

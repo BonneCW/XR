@@ -6,10 +6,8 @@
 // ********************************************
 FUNC VOID  B_ENDPRODUCTIONDIALOG ()
 {
-	AI_StopProcessInfos(self);		
+	AI_StopProcessInfos(self);
  	Wld_StopEffect("DEMENTOR_FX");
-
-	Wld_StopEffect("SLOW_MOTION_6");
 
 	B_SetAivar(self, AIV_INVINCIBLE, FALSE);
 	
