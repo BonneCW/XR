@@ -12,6 +12,7 @@ FUNC VOID B_GiveTradeInv_Mod_Brian_NW (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 20); 
 		CreateInvItems (slf, ItMiSwordraw, 2); 
 		CreateInvItems	(slf, ItMi_GoldNugget_Addon, 1);
+		CreateInvItems	(slf, Pfeilspitze, 15);
 		
 		Brian_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -22,6 +23,7 @@ FUNC VOID B_GiveTradeInv_Mod_Brian_NW (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 20); 
 		CreateInvItems (slf, ItMiSwordraw, 1); 
 		CreateInvItems	(slf, ItMi_GoldNugget_Addon, 1);
+		CreateInvItems	(slf, Pfeilspitze, 30);
 		
 		Brian_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -32,6 +34,7 @@ FUNC VOID B_GiveTradeInv_Mod_Brian_NW (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 20); 
 		CreateInvItems (slf, ItMiSwordraw, 1); 
 		CreateInvItems	(slf, ItMi_GoldNugget_Addon, 1);
+		CreateInvItems	(slf, Pfeilspitze, 45);
 		
 		Brian_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -42,6 +45,7 @@ FUNC VOID B_GiveTradeInv_Mod_Brian_NW (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 20); 
 		CreateInvItems (slf, ItMiSwordraw, 1); 
 		CreateInvItems	(slf, ItMi_GoldNugget_Addon, 1);
+		CreateInvItems	(slf, Pfeilspitze, 60);
 		
 		Brian_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -52,6 +56,7 @@ FUNC VOID B_GiveTradeInv_Mod_Brian_NW (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 40); 
 		CreateInvItems (slf, ItMiSwordraw, 1); 
 		CreateInvItems	(slf, ItMi_GoldNugget_Addon, 1);
+		CreateInvItems	(slf, Pfeilspitze, 75);
 		
 		Brian_ItemsGiven_Chapter_5 = TRUE;
 	};
