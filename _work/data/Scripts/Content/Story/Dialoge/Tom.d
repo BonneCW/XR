@@ -19,6 +19,7 @@ FUNC INT Info_Mod_Tom_Hi_Condition()
 	|| (Hlp_IsItem(itm, ITAR_PAL_H) == TRUE)
 	|| (Hlp_IsItem(itm, ITAR_PAL_TIGER) == TRUE)
 	|| (Hlp_IsItem(itm, ITAR_MIL_s2) == TRUE)
+	|| (hero.guild == GIL_PAL)
 	{
 		return 0;
 	}
