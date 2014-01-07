@@ -46,9 +46,10 @@ STORY\Text.d
 STORY\B_Story\SetGuild.d
 
 NEUERUNGEN\Minispiel\B_MG_FeldBesetzt.d
-NEUERUNGEN\Minispiel\Classes.d
 NEUERUNGEN\Minispiel\Globals_MG.d
+NEUERUNGEN\Minispiel\Classes.d
 NEUERUNGEN\Minispiel\B_MG_MarkFelder.d
+NEUERUNGEN\Minispiel\B_MG_Spielfigur_Funktionen.d
 NEUERUNGEN\Minispiel\B_MG_InitialiseFeld.d
 NEUERUNGEN\Minispiel\B_MG_WalkToBestPossibility.d
 NEUERUNGEN\Minispiel\B_MG_ResetWalks.d

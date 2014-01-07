@@ -89,8 +89,8 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		C_MG_SPIELFIGUR_SetType(Hero_MinecrawlerQueen, MG_FIGUR_MINECRAWLERQUEEN, 0, MyFigurHndl);
 
-		MEM_WriteStatArr(MG_EigeneFiguren2, 0, 1);
-		MEM_WriteStatArr(MG_EigeneFiguren3, 0, MyFigurHndl);
+		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_MINECRAWLERQUEEN - 1, 1);
+		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_MINECRAWLERQUEEN - 1, MyFigurHndl);
 	};
 	if (PlayerHas_Troll)
 	{
@@ -100,8 +100,8 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		C_MG_SPIELFIGUR_SetType(Hero_Troll, MG_FIGUR_Troll, 0, MyFigurHndl);
 
-		MEM_WriteStatArr(MG_EigeneFiguren2, 1, 1);
-		MEM_WriteStatArr(MG_EigeneFiguren3, 1, MyFigurHndl);
+		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Troll - 1, 1);
+		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Troll - 1, MyFigurHndl);
 	};
 	if (PlayerHas_Schaf)
 	{
@@ -111,8 +111,8 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		C_MG_SPIELFIGUR_SetType(Hero_Schaf, MG_FIGUR_Schaf, 0, MyFigurHndl);
 
-		MEM_WriteStatArr(MG_EigeneFiguren2, 2, 1);
-		MEM_WriteStatArr(MG_EigeneFiguren3, 2, MyFigurHndl);
+		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Schaf - 1, 1);
+		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Schaf - 1, MyFigurHndl);
 	};
 	if (PlayerHas_Snapper)
 	{
@@ -122,8 +122,8 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		C_MG_SPIELFIGUR_SetType(Hero_Snapper, MG_FIGUR_Snapper, 0, MyFigurHndl);
 
-		MEM_WriteStatArr(MG_EigeneFiguren2, 3, 1);
-		MEM_WriteStatArr(MG_EigeneFiguren3, 3, MyFigurHndl);
+		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Snapper - 1, 1);
+		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Snapper - 1, MyFigurHndl);
 	};
 	if (PlayerHas_Goblin)
 	{
@@ -133,8 +133,8 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		C_MG_SPIELFIGUR_SetType(Hero_Goblin, MG_FIGUR_Goblin, 0, MyFigurHndl);
 
-		MEM_WriteStatArr(MG_EigeneFiguren2, 4, 1);
-		MEM_WriteStatArr(MG_EigeneFiguren3, 4, MyFigurHndl);
+		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Goblin - 1, 1);
+		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Goblin - 1, MyFigurHndl);
 	};
 	if (PlayerHas_Hase)
 	{
@@ -144,8 +144,8 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		C_MG_SPIELFIGUR_SetType(Hero_Hase, MG_FIGUR_Hase, 0, MyFigurHndl);
 
-		MEM_WriteStatArr(MG_EigeneFiguren2, 5, 1);
-		MEM_WriteStatArr(MG_EigeneFiguren3, 5, MyFigurHndl);
+		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Hase - 1, 1);
+		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Hase - 1, MyFigurHndl);
 	};
 	if (PlayerHas_Meatbug)
 	{
@@ -155,8 +155,8 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		C_MG_SPIELFIGUR_SetType(Hero_Meatbug, MG_FIGUR_Meatbug, 0, MyFigurHndl);
 
-		MEM_WriteStatArr(MG_EigeneFiguren2, 6, 1);
-		MEM_WriteStatArr(MG_EigeneFiguren3, 6, MyFigurHndl);
+		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Meatbug - 1, 1);
+		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Meatbug - 1, MyFigurHndl);
 	};
 	if (PlayerHas_Balrog)
 	{
@@ -166,8 +166,8 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		C_MG_SPIELFIGUR_SetType(Hero_Balrog, MG_FIGUR_Balrog, 0, MyFigurHndl);
 
-		MEM_WriteStatArr(MG_EigeneFiguren2, 7, 1);
-		MEM_WriteStatArr(MG_EigeneFiguren3, 7, MyFigurHndl);
+		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Balrog - 1, 1);
+		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Balrog - 1, MyFigurHndl);
 	};
 	if (PlayerHas_Bloodfly)
 	{
@@ -177,8 +177,8 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		C_MG_SPIELFIGUR_SetType(Hero_Bloodfly, MG_FIGUR_Bloodfly, 0, MyFigurHndl);
 
-		MEM_WriteStatArr(MG_EigeneFiguren2, 8, 1);
-		MEM_WriteStatArr(MG_EigeneFiguren3, 8, MyFigurHndl);
+		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Bloodfly - 1, 1);
+		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Bloodfly - 1, MyFigurHndl);
 	};
 	if (PlayerHas_Stoneguardian)
 	{
@@ -188,8 +188,8 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		C_MG_SPIELFIGUR_SetType(Hero_Stoneguardian, MG_FIGUR_Stoneguardian, 0, MyFigurHndl);
 
-		MEM_WriteStatArr(MG_EigeneFiguren2, 9, 1);
-		MEM_WriteStatArr(MG_EigeneFiguren3, 9, MyFigurHndl);
+		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Stoneguardian - 1, 1);
+		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Stoneguardian - 1, MyFigurHndl);
 	};
 	if (MG_CurrentOpp == MG_GEGNER_RUEDIGER)
 	{

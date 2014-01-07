@@ -1,8 +1,5 @@
 // Game-Loop, am besten per FrameFunction
 
-var int temp;
-
-
 FUNC VOID B_MG_GameLoop()
 {
 	var int xy2;
@@ -61,105 +58,7 @@ FUNC VOID B_MG_GameLoop()
 				y = xy2;
 				x = Print_Screen[PS_X]/2-6*xy2;
 
-				if (temp == 0)
-				{
-					if (PlayerHas_Troll)
-					&& (Cursor_X >= x+xy2)
-					&& (Cursor_X < x+xy2+xy)
-					&& (Cursor_Y >= y+4*xy2)
-					&& (Cursor_Y < y+4*xy2+xy)
-					&& (MEM_ReadStatArr(MG_EigeneFiguren2, 1) == 1)
-					{
-						temp = MG_FIGUR_TROLL;
-					}
-					else if (PlayerHas_MINECRAWLERQUEEN)
-					&& (Cursor_X >= x+xy2)
-					&& (Cursor_X < x+xy2+xy)
-					&& (Cursor_Y >= y+2*xy2)
-					&& (Cursor_Y < y+2*xy2+xy)
-					&& (MEM_ReadStatArr(MG_EigeneFiguren2, 0) == 1)
-					{
-						temp = MG_FIGUR_MINECRAWLERQUEEN;
-					}
-					else if (PlayerHas_HASE)
-					&& (Cursor_X >= x)
-					&& (Cursor_X < x+xy)
-					&& (Cursor_Y >= y+4*xy2)
-					&& (Cursor_Y < y+4*xy2+xy)
-					&& (MEM_ReadStatArr(MG_EigeneFiguren2, 5) == 1)
-					{
-						temp = MG_FIGUR_HASE;
-					}
-					else if (PlayerHas_MEATBUG)
-					&& (Cursor_X >= x)
-					&& (Cursor_X < x+xy)
-					&& (Cursor_Y >= y+xy2)
-					&& (Cursor_Y < y+xy2+xy)
-					&& (MEM_ReadStatArr(MG_EigeneFiguren2, 6) == 1)
-					{
-						temp = MG_FIGUR_MEATBUG;
-					}
-					else if (PlayerHas_STONEGUARDIAN)
-					&& (Cursor_X >= x+xy2)
-					&& (Cursor_X < x+xy2+xy)
-					&& (Cursor_Y >= y+3*xy2)
-					&& (Cursor_Y < y+3*xy2+xy)
-					&& (MEM_ReadStatArr(MG_EigeneFiguren2, 9) == 1)
-					{
-						temp = MG_FIGUR_STONEGUARDIAN;
-					}
-					else if (PlayerHas_BLOODFLY)
-					&& (Cursor_X >= x)
-					&& (Cursor_X < x+xy)
-					&& (Cursor_Y >= y)
-					&& (Cursor_Y < y+xy)
-					&& (MEM_ReadStatArr(MG_EigeneFiguren2, 8) == 1)
-					{
-						temp = MG_FIGUR_BLOODFLY;
-					}
-					else if (PlayerHas_BALROG)
-					&& (Cursor_X >= x+xy2)
-					&& (Cursor_X < x+xy2+xy)
-					&& (Cursor_Y >= y)
-					&& (Cursor_Y < y+xy)
-					&& (MEM_ReadStatArr(MG_EigeneFiguren2, 7) == 1)
-					{
-						temp = MG_FIGUR_BALROG;
-					}
-					else if (PlayerHas_SNAPPER)
-					&& (Cursor_X >= x)
-					&& (Cursor_X < x+xy)
-					&& (Cursor_Y >= y+4*xy2)
-					&& (Cursor_Y < y+4*xy2+xy)
-					&& (MEM_ReadStatArr(MG_EigeneFiguren2, 3) == 1)
-					{
-						temp = MG_FIGUR_SNAPPER;
-					}
-					else if (PlayerHas_GOBLIN)
-					&& (Cursor_X >= x+xy2)
-					&& (Cursor_X < x+xy2+xy)
-					&& (Cursor_Y >= y+xy2)
-					&& (Cursor_Y < y+xy2+xy)
-					&& (MEM_ReadStatArr(MG_EigeneFiguren2, 4) == 1)
-					{
-						temp = MG_FIGUR_GOBLIN;
-					}
-					else if (PlayerHas_SCHAF)
-					&& (Cursor_X >= x)
-					&& (Cursor_X < x+xy)
-					&& (Cursor_Y >= y+3*xy2)
-					&& (Cursor_Y < y+3*xy2+xy)
-					&& (MEM_ReadStatArr(MG_EigeneFiguren2, 2) == 1)
-					{
-						temp = MG_FIGUR_SCHAF;
-					};
-
-					if (temp != 0)
-					{
-						B_MG_MarkStartReihe();
-					};
-				}
-				else
+				if (tempFigur != 0)
 				{
 					xy = Print_Screen[PS_Y]/10;
 
@@ -179,90 +78,72 @@ FUNC VOID B_MG_GameLoop()
 							return;
 						};
 
-						if (temp == MG_FIGUR_TROLL)
+						if (tempFigur == MG_FIGUR_TROLL)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_Troll, x+y*8);
 
-							MEM_WriteStatArr(MG_EigeneFiguren2, 1, 0);
-
 							MEM_WriteStatArr(MG_EigeneFiguren, MG_Own_Counter, MG_FIGUR_TROLL);
 						}
-						else if (temp == MG_FIGUR_MINECRAWLERQUEEN)
+						else if (tempFigur == MG_FIGUR_MINECRAWLERQUEEN)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_MINECRAWLERQUEEN, x+y*8);
 
-							MEM_WriteStatArr(MG_EigeneFiguren2, 0, 0);
-
 							MEM_WriteStatArr(MG_EigeneFiguren, MG_Own_Counter, MG_FIGUR_MINECRAWLERQUEEN);
 						}
-						else if (temp == MG_FIGUR_SCHAF)
+						else if (tempFigur == MG_FIGUR_SCHAF)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_SCHAF, x+y*8);
 
-							MEM_WriteStatArr(MG_EigeneFiguren2, 2, 0);
-
 							MEM_WriteStatArr(MG_EigeneFiguren, MG_Own_Counter, MG_FIGUR_SCHAF);
 						}
-						else if (temp == MG_FIGUR_BALROG)
+						else if (tempFigur == MG_FIGUR_BALROG)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_BALROG, x+y*8);
 
-							MEM_WriteStatArr(MG_EigeneFiguren2, 7, 0);
-
 							MEM_WriteStatArr(MG_EigeneFiguren, MG_Own_Counter, MG_FIGUR_BALROG);
 						}
-						else if (temp == MG_FIGUR_GOBLIN)
+						else if (tempFigur == MG_FIGUR_GOBLIN)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_GOBLIN, x+y*8);
 
-							MEM_WriteStatArr(MG_EigeneFiguren2, 4, 0);
-
 							MEM_WriteStatArr(MG_EigeneFiguren, MG_Own_Counter, MG_FIGUR_GOBLIN);
 						}
-						else if (temp == MG_FIGUR_MEATBUG)
+						else if (tempFigur == MG_FIGUR_MEATBUG)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_MEATBUG, x+y*8);
 
-							MEM_WriteStatArr(MG_EigeneFiguren2, 6, 0);
-
 							MEM_WriteStatArr(MG_EigeneFiguren, MG_Own_Counter, MG_FIGUR_MEATBUG);
 						}
-						else if (temp == MG_FIGUR_HASE)
+						else if (tempFigur == MG_FIGUR_HASE)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_HASE, x+y*8);
 
-							MEM_WriteStatArr(MG_EigeneFiguren2, 5, 0);
-
 							MEM_WriteStatArr(MG_EigeneFiguren, MG_Own_Counter, MG_FIGUR_HASE);
 						}
-						else if (temp == MG_FIGUR_SNAPPER)
+						else if (tempFigur == MG_FIGUR_SNAPPER)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_SNAPPER, x+y*8);
 
-							MEM_WriteStatArr(MG_EigeneFiguren2, 3, 0);
-
 							MEM_WriteStatArr(MG_EigeneFiguren, MG_Own_Counter, MG_FIGUR_SNAPPER);
 						}
-						else if (temp == MG_FIGUR_BLOODFLY)
+						else if (tempFigur == MG_FIGUR_BLOODFLY)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_BLOODFLY, x+y*8);
 
-							MEM_WriteStatArr(MG_EigeneFiguren2, 8, 0);
-
 							MEM_WriteStatArr(MG_EigeneFiguren, MG_Own_Counter, MG_FIGUR_BLOODFLY);
 						}
-						else if (temp == MG_FIGUR_STONEGUARDIAN)
+						else if (tempFigur == MG_FIGUR_STONEGUARDIAN)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_STONEGUARDIAN, x+y*8);
-
-							MEM_WriteStatArr(MG_EigeneFiguren2, 9, 0);
 
 							MEM_WriteStatArr(MG_EigeneFiguren, MG_Own_Counter, MG_FIGUR_STONEGUARDIAN);
 						};
 
+						MEM_WriteStatArr(MG_EigeneFiguren2, tempFigur - 1, 0);
+
 						MG_Own_Counter += 1;
 
-						temp = 0;
+						tempFigur = 0;
 
 						MG_Spieler01 = FALSE;
 						MG_Spieler02 = TRUE;
@@ -273,7 +154,7 @@ FUNC VOID B_MG_GameLoop()
 			}
 			else if (MEM_KeyState(MOUSE_BUTTONRIGHT) == KEY_PRESSED)
 			{
-				temp = 0;
+				tempFigur = 0;
 
 				B_MG_ResetStartReihe();
 			};
@@ -294,81 +175,81 @@ FUNC VOID B_MG_GameLoop()
 			{
 				if (MG_Opp_Counter == 0)
 				{
-					temp = MG_FIGUR_SCHAF;
+					tempFigur = MG_FIGUR_SCHAF;
 				}
 				else if (MG_Opp_Counter == 1)
 				{
-					temp = MG_FIGUR_STONEGUARDIAN;
+					tempFigur = MG_FIGUR_STONEGUARDIAN;
 				}
 				else if (MG_Opp_Counter == 2)
 				{
-					temp = MG_FIGUR_HASE;
+					tempFigur = MG_FIGUR_HASE;
 				}
 				else if (MG_Opp_Counter == 3)
 				{
-					temp = MG_FIGUR_BLOODFLY;
+					tempFigur = MG_FIGUR_BLOODFLY;
 				}
 				else if (MG_Opp_Counter == 4)
 				{
-					temp = MG_FIGUR_TROLL;
+					tempFigur = MG_FIGUR_TROLL;
 				};
 			};
 
-			if (temp == MG_FIGUR_TROLL)
+			if (tempFigur == MG_FIGUR_TROLL)
 			{
 				C_MG_SPIELFIGUR_WalkToField(Opp_Troll, x+y*8);
 
 				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_TROLL);
 			}
-			else if (temp == MG_FIGUR_MINECRAWLERQUEEN)
+			else if (tempFigur == MG_FIGUR_MINECRAWLERQUEEN)
 			{
 				C_MG_SPIELFIGUR_WalkToField(Opp_MINECRAWLERQUEEN, x+y*8);
 
 				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_MINECRAWLERQUEEN);
 			}
-			else if (temp == MG_FIGUR_SCHAF)
+			else if (tempFigur == MG_FIGUR_SCHAF)
 			{
 				C_MG_SPIELFIGUR_WalkToField(Opp_SCHAF, x+y*8);
 
 				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_SCHAF);
 			}
-			else if (temp == MG_FIGUR_BALROG)
+			else if (tempFigur == MG_FIGUR_BALROG)
 			{
 				C_MG_SPIELFIGUR_WalkToField(Opp_BALROG, x+y*8);
 
 				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_BALROG);
 			}
-			else if (temp == MG_FIGUR_GOBLIN)
+			else if (tempFigur == MG_FIGUR_GOBLIN)
 			{
 				C_MG_SPIELFIGUR_WalkToField(Opp_GOBLIN, x+y*8);
 
 				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_GOBLIN);
 			}
-			else if (temp == MG_FIGUR_MEATBUG)
+			else if (tempFigur == MG_FIGUR_MEATBUG)
 			{
 				C_MG_SPIELFIGUR_WalkToField(Opp_MEATBUG, x+y*8);
 
 				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_MEATBUG);
 			}
-			else if (temp == MG_FIGUR_HASE)
+			else if (tempFigur == MG_FIGUR_HASE)
 			{
 				C_MG_SPIELFIGUR_WalkToField(Opp_HASE, x+y*8);
 
 				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_HASE);
 			}
-			else if (temp == MG_FIGUR_SNAPPER)
+			else if (tempFigur == MG_FIGUR_SNAPPER)
 			{
 				C_MG_SPIELFIGUR_WalkToField(Opp_SNAPPER, x+y*8);
 
 				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_SNAPPER);
 			}
-			else if (temp == MG_FIGUR_BLOODFLY)
+			else if (tempFigur == MG_FIGUR_BLOODFLY)
 			{
 				C_MG_SPIELFIGUR_WalkToField(Opp_BLOODFLY, x+y*8);
 
 				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_BLOODFLY);
 			}
-			else if (temp == MG_FIGUR_STONEGUARDIAN)
+			else if (tempFigur == MG_FIGUR_STONEGUARDIAN)
 			{
 				C_MG_SPIELFIGUR_WalkToField(Opp_STONEGUARDIAN, x+y*8);
 
@@ -377,7 +258,7 @@ FUNC VOID B_MG_GameLoop()
 
 			MG_Opp_Counter += 1;
 
-			temp = 0;
+			tempFigur = 0;
 
 			MG_Spieler01 = TRUE;
 			MG_Spieler02 = FALSE;
@@ -388,7 +269,7 @@ FUNC VOID B_MG_GameLoop()
 		{
 			MG_GameState = 4;
 
-			temp = 0;
+			tempFigur = 0;
 
 			B_MG_ResetWalks(0);
 			B_MG_ResetWalks(1);
@@ -402,146 +283,7 @@ FUNC VOID B_MG_GameLoop()
 
 			if (MEM_KeyState(MOUSE_BUTTONLEFT) == KEY_PRESSED)
 			{
-				if (temp == 0)
-				{
-					xy = Print_Screen[PS_Y]/10;
-
-					if (Cursor_X >= Print_Screen[PS_X]/2-4*xy)
-					&& (Cursor_X < Print_Screen[PS_X]/2+4*xy)
-					{
-						y = CURSOR_Y/xy;
-						x = (CURSOR_X-(Print_Screen[PS_X]/2-4*xy))/xy;
-
-						if (y >= 10)
-						|| (x >= 8)
-						{
-							return;
-						};
-
-						if (!B_MG_FeldBesetzt(0, x, y))
-						{
-							return;
-						};
-
-						temp = MEM_ReadStatArr(MG_Spielfeld_Figur, x+8*y);
-
-						// Hier noch walked-Variable prüfen, Figur darf pro Zug nur ein Mal Laufen
-
-						if (temp == MG_FIGUR_TROLL)
-						{
-							if (Hero_Troll.walked == TRUE)
-							{
-								temp = 0;
-
-								return;
-							};
-
-							B_MG_SetPossibilities(Hero_Troll);
-						}
-						else if (temp == MG_FIGUR_Minecrawlerqueen)
-						{
-							if (Hero_Minecrawlerqueen.walked == TRUE)
-							{
-								temp = 0;
-
-								return;
-							};
-
-							B_MG_SetPossibilities(Hero_Minecrawlerqueen);
-						}
-						else if (temp == MG_FIGUR_Schaf)
-						{
-							if (Hero_Schaf.walked == TRUE)
-							{
-								temp = 0;
-
-								return;
-							};
-
-							B_MG_SetPossibilities(Hero_Schaf);
-						}
-						else if (temp == MG_FIGUR_Hase)
-						{
-							if (Hero_Hase.walked == TRUE)
-							{
-								temp = 0;
-
-								return;
-							};
-	
-							B_MG_SetPossibilities(Hero_Hase);
-						}
-						else if (temp == MG_FIGUR_Meatbug)
-						{
-							if (Hero_Meatbug.walked == TRUE)
-							{
-								temp = 0;
-
-								return;
-							};
-
-							B_MG_SetPossibilities(Hero_Meatbug);
-						}
-						else if (temp == MG_FIGUR_Goblin)
-						{
-							if (Hero_Goblin.walked == TRUE)
-							{
-								temp = 0;
-
-								return;
-							};
-
-							B_MG_SetPossibilities(Hero_Goblin);
-						}
-						else if (temp == MG_FIGUR_Snapper)
-						{
-							if (Hero_Snapper.walked == TRUE)
-							{
-								temp = 0;
-
-								return;
-							};
-
-							B_MG_SetPossibilities(Hero_Snapper);
-						}
-						else if (temp == MG_FIGUR_Stoneguardian)
-						{
-							if (Hero_Stoneguardian.walked == TRUE)
-							{
-								temp = 0;
-
-								return;
-							};
-
-							B_MG_SetPossibilities(Hero_Stoneguardian);
-						}
-						else if (temp == MG_FIGUR_Balrog)
-						{
-							if (Hero_Balrog.walked == TRUE)
-							{
-								temp = 0;
-
-								return;
-							};
-
-							B_MG_SetPossibilities(Hero_Balrog);
-						}
-						else if (temp == MG_FIGUR_Bloodfly)
-						{
-							if (Hero_Bloodfly.walked == TRUE)
-							{
-								temp = 0;
-
-								return;
-							};
-
-							B_MG_SetPossibilities(Hero_Bloodfly);
-						};
-
-						B_MG_MarkFelder();
-					};
-				}
-				else
+				if (tempFigur != 0)
 				{
 					xy = Print_Screen[PS_Y]/10;
 
@@ -562,56 +304,56 @@ FUNC VOID B_MG_GameLoop()
 							return;
 						};
 
-						if (temp == MG_FIGUR_TROLL)
+						if (tempFigur == MG_FIGUR_TROLL)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_Troll, x+8*y);
 						}
-						else if (temp == MG_FIGUR_Minecrawlerqueen)
+						else if (tempFigur == MG_FIGUR_Minecrawlerqueen)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_Minecrawlerqueen, x+8*y);
 						}
-						else if (temp == MG_FIGUR_Schaf)
+						else if (tempFigur == MG_FIGUR_Schaf)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_Schaf, x+8*y);
 						}
-						else if (temp == MG_FIGUR_Hase)
+						else if (tempFigur == MG_FIGUR_Hase)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_Hase, x+8*y);
 						}
-						else if (temp == MG_FIGUR_Meatbug)
+						else if (tempFigur == MG_FIGUR_Meatbug)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_Meatbug, x+8*y);
 						}
-						else if (temp == MG_FIGUR_Goblin)
+						else if (tempFigur == MG_FIGUR_Goblin)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_Goblin, x+8*y);
 						}
-						else if (temp == MG_FIGUR_Snapper)
+						else if (tempFigur == MG_FIGUR_Snapper)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_Snapper, x+8*y);
 						}
-						else if (temp == MG_FIGUR_Stoneguardian)
+						else if (tempFigur == MG_FIGUR_Stoneguardian)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_Stoneguardian, x+8*y);
 						}
-						else if (temp == MG_FIGUR_Balrog)
+						else if (tempFigur == MG_FIGUR_Balrog)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_Balrog, x+8*y);
 						}
-						else if (temp == MG_FIGUR_Bloodfly)
+						else if (tempFigur == MG_FIGUR_Bloodfly)
 						{
 							C_MG_SPIELFIGUR_WalkToField(Hero_Bloodfly, x+8*y);
 						};
 
 						B_MG_ResetFelder();
 
-						temp = 0;
+						tempFigur = 0;
 					};
 				};
 			}
 			else if (MEM_KeyState(MOUSE_BUTTONRIGHT) == KEY_PRESSED)
 			{
-				temp = 0;
+				tempFigur = 0;
 
 				B_MG_ResetFelder();
 			};

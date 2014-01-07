@@ -49,3 +49,5 @@ var int MG_Ruediger_Runde;
 var int MG_Spieler_Orlan_Runde;
 
 var int MG_CurrentOpp;
+
+var int tempFigur;
