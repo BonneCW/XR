@@ -46,6 +46,10 @@ func void B_AssessThreat ()
 		};
 	};
 
+	if (self.aivar[AIV_MM_REAL_ID] == ID_KOBOLD) {
+		return;
+	};
+
 	if (C_NpcIsHero(other))
 	&& (Unsichtbarkeitsperk == TRUE)
 	{

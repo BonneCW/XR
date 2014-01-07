@@ -40,6 +40,10 @@ func int B_AssessDrawWeapon()
 		};
 	};
 
+	if (self.aivar[AIV_MM_REAL_ID] == ID_KOBOLD) {
+		return FALSE;
+	};
+
 	if (self.guild < GIL_SEPERATOR_HUM)
 	&& ((CurrentLevel == ORCGRAVEYARD_ZEN)
 	|| (CurrentLevel == ORCCITY_ZEN))
