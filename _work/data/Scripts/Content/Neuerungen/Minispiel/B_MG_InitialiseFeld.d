@@ -87,7 +87,7 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		Hero_MinecrawlerQueen = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Hero_MinecrawlerQueen, MG_FIGUR_MINECRAWLERQUEEN, 0);
+		C_MG_SPIELFIGUR_SetType(Hero_MinecrawlerQueen, MG_FIGUR_MINECRAWLERQUEEN, 0, MyFigurHndl);
 
 		MEM_WriteStatArr(MG_EigeneFiguren2, 0, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, 0, MyFigurHndl);
@@ -98,7 +98,7 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		Hero_Troll = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Hero_Troll, MG_FIGUR_Troll, 0);
+		C_MG_SPIELFIGUR_SetType(Hero_Troll, MG_FIGUR_Troll, 0, MyFigurHndl);
 
 		MEM_WriteStatArr(MG_EigeneFiguren2, 1, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, 1, MyFigurHndl);
@@ -109,7 +109,7 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		Hero_Schaf = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Hero_Schaf, MG_FIGUR_Schaf, 0);
+		C_MG_SPIELFIGUR_SetType(Hero_Schaf, MG_FIGUR_Schaf, 0, MyFigurHndl);
 
 		MEM_WriteStatArr(MG_EigeneFiguren2, 2, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, 2, MyFigurHndl);
@@ -120,7 +120,7 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		Hero_Snapper = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Hero_Snapper, MG_FIGUR_Snapper, 0);
+		C_MG_SPIELFIGUR_SetType(Hero_Snapper, MG_FIGUR_Snapper, 0, MyFigurHndl);
 
 		MEM_WriteStatArr(MG_EigeneFiguren2, 3, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, 3, MyFigurHndl);
@@ -131,7 +131,7 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		Hero_Goblin = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Hero_Goblin, MG_FIGUR_Goblin, 0);
+		C_MG_SPIELFIGUR_SetType(Hero_Goblin, MG_FIGUR_Goblin, 0, MyFigurHndl);
 
 		MEM_WriteStatArr(MG_EigeneFiguren2, 4, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, 4, MyFigurHndl);
@@ -142,7 +142,7 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		Hero_Hase = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Hero_Hase, MG_FIGUR_Hase, 0);
+		C_MG_SPIELFIGUR_SetType(Hero_Hase, MG_FIGUR_Hase, 0, MyFigurHndl);
 
 		MEM_WriteStatArr(MG_EigeneFiguren2, 5, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, 5, MyFigurHndl);
@@ -153,7 +153,7 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		Hero_Meatbug = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Hero_Meatbug, MG_FIGUR_Meatbug, 0);
+		C_MG_SPIELFIGUR_SetType(Hero_Meatbug, MG_FIGUR_Meatbug, 0, MyFigurHndl);
 
 		MEM_WriteStatArr(MG_EigeneFiguren2, 6, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, 6, MyFigurHndl);
@@ -164,7 +164,7 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		Hero_Balrog = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Hero_Balrog, MG_FIGUR_Balrog, 0);
+		C_MG_SPIELFIGUR_SetType(Hero_Balrog, MG_FIGUR_Balrog, 0, MyFigurHndl);
 
 		MEM_WriteStatArr(MG_EigeneFiguren2, 7, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, 7, MyFigurHndl);
@@ -175,7 +175,7 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		Hero_Bloodfly = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Hero_Bloodfly, MG_FIGUR_Bloodfly, 0);
+		C_MG_SPIELFIGUR_SetType(Hero_Bloodfly, MG_FIGUR_Bloodfly, 0, MyFigurHndl);
 
 		MEM_WriteStatArr(MG_EigeneFiguren2, 8, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, 8, MyFigurHndl);
@@ -186,7 +186,7 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		Hero_Stoneguardian = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Hero_Stoneguardian, MG_FIGUR_Stoneguardian, 0);
+		C_MG_SPIELFIGUR_SetType(Hero_Stoneguardian, MG_FIGUR_Stoneguardian, 0, MyFigurHndl);
 
 		MEM_WriteStatArr(MG_EigeneFiguren2, 9, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, 9, MyFigurHndl);
@@ -197,35 +197,35 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		Opp_Bloodfly = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Opp_Bloodfly, MG_FIGUR_Bloodfly, 1);
+		C_MG_SPIELFIGUR_SetType(Opp_Bloodfly, MG_FIGUR_Bloodfly, 1, MyFigurHndl);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 0, MyFigurHndl);
 
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Schaf = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Opp_Schaf, MG_FIGUR_Schaf, 1);
+		C_MG_SPIELFIGUR_SetType(Opp_Schaf, MG_FIGUR_Schaf, 1, MyFigurHndl);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 1, MyFigurHndl);
 
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Hase = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Opp_Hase, MG_FIGUR_Hase, 1);
+		C_MG_SPIELFIGUR_SetType(Opp_Hase, MG_FIGUR_Hase, 1, MyFigurHndl);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 2, MyFigurHndl);
 
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Stoneguardian = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Opp_Stoneguardian, MG_FIGUR_Stoneguardian, 1);
+		C_MG_SPIELFIGUR_SetType(Opp_Stoneguardian, MG_FIGUR_Stoneguardian, 1, MyFigurHndl);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 3, MyFigurHndl);
 
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Troll = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Opp_Troll, MG_FIGUR_Troll, 1);
+		C_MG_SPIELFIGUR_SetType(Opp_Troll, MG_FIGUR_Troll, 1, MyFigurHndl);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 4, MyFigurHndl);
 	}
 	else if (MG_CurrentOpp == MG_GEGNER_SPIELER_ORLAN)
@@ -234,35 +234,35 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		Opp_Bloodfly = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Opp_Bloodfly, MG_FIGUR_Bloodfly, 1);
+		C_MG_SPIELFIGUR_SetType(Opp_Bloodfly, MG_FIGUR_Bloodfly, 1, MyFigurHndl);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 0, MyFigurHndl);
 
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Schaf = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Opp_Schaf, MG_FIGUR_Schaf, 1);
+		C_MG_SPIELFIGUR_SetType(Opp_Schaf, MG_FIGUR_Schaf, 1, MyFigurHndl);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 1, MyFigurHndl);
 
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Hase = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Opp_Hase, MG_FIGUR_Hase, 1);
+		C_MG_SPIELFIGUR_SetType(Opp_Hase, MG_FIGUR_Hase, 1, MyFigurHndl);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 2, MyFigurHndl);
 
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Meatbug = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Opp_Meatbug, MG_FIGUR_Meatbug, 1);
+		C_MG_SPIELFIGUR_SetType(Opp_Meatbug, MG_FIGUR_Meatbug, 1, MyFigurHndl);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 3, MyFigurHndl);
 
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Snapper = get(MyFigurHndl);
 
-		C_MG_SPIELFIGUR_SetType(Opp_Snapper, MG_FIGUR_Snapper, 1);
+		C_MG_SPIELFIGUR_SetType(Opp_Snapper, MG_FIGUR_Snapper, 1, MyFigurHndl);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 4, MyFigurHndl);
 	};
 };

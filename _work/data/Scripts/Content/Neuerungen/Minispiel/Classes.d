@@ -76,7 +76,7 @@ FUNC VOID Button_Spielfigur_Leave(var int hndl) {
 FUNC VOID Button_Spielfigur_Click(var int hndl) {
 };
 
-FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int owner)
+FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int owner, var int hndl)
 {
 	sf.type = type;
 
@@ -85,6 +85,7 @@ FUNC VOID C_MG_SPIELFIGUR_SetType(var C_MG_SPIELFIGUR sf, var int type, var int 
 	xy = Print_Screen[PS_Y]/12;
 
 	sf.button = Button_CreatePxl(0, 0, xy, xy, "Default.tga", Button_Spielfigur_Enter, Button_Spielfigur_Leave, Button_Spielfigur_Click);
+	Button_SetUserData(sf.button, hndl);
 
 	xy = Print_Screen[PS_Y]/10; // y-Auflösung ist kleiner als x, deswegen geht das
 
