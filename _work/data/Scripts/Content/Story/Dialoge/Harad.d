@@ -2027,7 +2027,7 @@ INSTANCE Info_Mod_Harad_Spitzen (C_INFO)
 	nr		= 1;
 	condition	= Info_Mod_Harad_Spitzen_Condition;
 	information	= Info_Mod_Harad_Spitzen_Info;
-	permanent	= 0;
+	permanent	= 1;
 	important	= 0;
 	description	= "Bring mir bei Pfeilspitzen zu schmieden (2 LP)";
 };
