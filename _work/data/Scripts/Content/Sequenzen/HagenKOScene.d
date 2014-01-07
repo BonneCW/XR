@@ -24,7 +24,7 @@ FUNC VOID HagenKOScene()
 
 	if (Mod_HagenKOScene_Counter == 7)
 	{
-		AI_Output(Mod_1242_RIT_Torwache_NW, NULL, "Info_Mod_HagenKOScene_12_01"); //Holt einen Arzt!
+		AI_Output(Mod_1242_RIT_Torwache_NW, NULL, "Info_Mod_HagenKOScene_12_01"); //Holt einen Heiler!
 	};
 
 	if (Mod_HagenKOScene_Counter == 12)
