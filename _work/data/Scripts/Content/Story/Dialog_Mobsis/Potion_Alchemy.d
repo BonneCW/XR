@@ -2936,7 +2936,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_SekretZange()
 		
 	Print (PRINT_SekretSuccess);
 
-	B_ENDPRODUCTIONDIALOG ();
+	PC_PotionAlchemy_Sekret_Info();
 };
 
 FUNC VOID PC_PotionAlchemy_Sekret_SekretEi()
@@ -2946,7 +2946,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_SekretEi()
 		
 	Print (PRINT_SekretSuccess);
 
-	B_ENDPRODUCTIONDIALOG ();
+	PC_PotionAlchemy_Sekret_Info();
 };
 
 FUNC VOID PC_PotionAlchemy_Sekret_Gigant()
@@ -2958,7 +2958,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_Gigant()
 	Print (ConcatStrings("4x ", PRINT_TiergiftSuccess));
 	Print (PRINT_GewaechsgiftSuccess);
 
-	B_ENDPRODUCTIONDIALOG ();
+	PC_PotionAlchemy_Sekret_Info();
 };
 
 FUNC VOID PC_PotionAlchemy_Sekret_Blutfliege()
@@ -2968,7 +2968,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_Blutfliege()
 		
 	Print (PRINT_SekretSuccess);
 
-	B_ENDPRODUCTIONDIALOG ();
+	PC_PotionAlchemy_Sekret_Info();
 };
 
 FUNC VOID PC_PotionAlchemy_Sekret_SpinneTiergift()
@@ -2978,7 +2978,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_SpinneTiergift()
 		
 	Print (PRINT_TiergiftSuccess);
 
-	B_ENDPRODUCTIONDIALOG ();
+	PC_PotionAlchemy_Sekret_Info();
 };
 
 FUNC VOID PC_PotionAlchemy_Sekret_MinecrawlerTiergift()
@@ -2988,7 +2988,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_MinecrawlerTiergift()
 		
 	Print (PRINT_TiergiftSuccess);
 
-	B_ENDPRODUCTIONDIALOG ();
+	PC_PotionAlchemy_Sekret_Info();
 };
 
 FUNC VOID PC_PotionAlchemy_Sekret_BlutfliegeTiergift()
@@ -2998,7 +2998,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_BlutfliegeTiergift()
 		
 	Print (PRINT_TiergiftSuccess);
 
-	B_ENDPRODUCTIONDIALOG ();
+	PC_PotionAlchemy_Sekret_Info();
 };
 
 FUNC VOID PC_PotionAlchemy_Sekret_FliegenpilzGewaechsgift()
@@ -3008,7 +3008,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_FliegenpilzGewaechsgift()
 		
 	Print (PRINT_GewaechsgiftSuccess);
 
-	B_ENDPRODUCTIONDIALOG ();
+	PC_PotionAlchemy_Sekret_Info();
 };
 
 // Waffen vergiften
