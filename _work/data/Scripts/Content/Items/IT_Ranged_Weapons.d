@@ -495,7 +495,7 @@ instance ItRw_Addon_MagicCrossbow (C_Item)
 	name 				=	"Magische Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
-	flags 				=	ITEM_CROSSBOW;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
 	material 			=	MAT_WOOD;
 
 	wear				=	WEAR_EFFECT;
@@ -564,7 +564,7 @@ INSTANCE ItRw_Mil_Crossbow(C_Item)
 	name 				=	"Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
-	flags 				=	ITEM_CROSSBOW;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
 	material 			=	MAT_WOOD;
 
 	value 				=	Value_MilArmbrust;
@@ -593,7 +593,7 @@ INSTANCE ItRw_EchsenArmbrust (C_Item)
 	name 				=	"Echsenarmbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
-	flags 				=	ITEM_CROSSBOW;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
 	material 			=	MAT_WOOD;
 
 	value 				=	Value_MilArmbrust;
@@ -622,7 +622,7 @@ INSTANCE ItRw_Mil_Crossbow_Schmetter (C_Item)
 	name 				=	"Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
-	flags 				=	ITEM_CROSSBOW;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
 	material 			=	MAT_WOOD;
 
 	value 				=	Value_MilArmbrust;
@@ -1463,7 +1463,7 @@ INSTANCE ItRw_Crossbow_L_01(C_Item)
 	name 				=	"Jagdarmbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
-	flags 				=	ITEM_CROSSBOW;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
 	material 			=	MAT_WOOD;
 
 	value 				=	Value_Jagdarmbrust;
@@ -1494,7 +1494,7 @@ INSTANCE ItRw_Crossbow_L_02(C_Item)
 	name 				=	"Leichte Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
-	flags 				=	ITEM_CROSSBOW;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
 	material 			=	MAT_WOOD;
 
 	value 				=	Value_LeichteArmbrust;
@@ -1509,7 +1509,7 @@ INSTANCE ItRw_Crossbow_L_02(C_Item)
 	range		= 1900;
 	
 	on_equip	=	munichange_cb;
-	on_unequip	=	munichange_cb_e;
+	//on_unequip	=	munichange_cb_e;
 
 	description			= name;
 	TEXT[1]				= NAME_Range;					COUNT[1]	= range/100;
@@ -1525,7 +1525,7 @@ INSTANCE ItRw_Crossbow_M_01(C_Item)
 	name 				=	"Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
-	flags 				=	ITEM_CROSSBOW;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
 	material 			=	MAT_WOOD;
 
 	value 				=	Value_Armbrust;
@@ -1558,7 +1558,7 @@ INSTANCE ItRw_Crossbow_M_02(C_Item)
 	name 				=	"Kriegsarmbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
-	flags 				=	ITEM_CROSSBOW;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
 	material 			=	MAT_WOOD;
 
 	value 				=	Value_Kriegsarmbrust;
@@ -1591,7 +1591,7 @@ INSTANCE ItRw_Crossbow_H_01(C_Item)
 	name 				=	"Schwere Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
-	flags 				=	ITEM_CROSSBOW;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
 	material 			=	MAT_WOOD;
 
 	value 				=	Value_SchwereArmbrust;
@@ -1624,7 +1624,7 @@ INSTANCE ItRw_Crossbow_Orc(C_Item)
 	name 				=	"Orkarmbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
-	flags 				=	ITEM_CROSSBOW;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
 	material 			=	MAT_WOOD;
 
 	value 				=	Value_SchwereArmbrust;
@@ -1655,7 +1655,7 @@ INSTANCE ItRw_Crossbow_H_02(C_Item)
 	name 				=	"Drachenjägerarmbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
-	flags 				=	ITEM_CROSSBOW;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
 	material 			=	MAT_WOOD;
 
 	value 				=	Value_Drachenjaegerarmbrust;
@@ -1686,7 +1686,7 @@ INSTANCE ItRw_Crossbow_H_02_Eigen(C_Item)
 	name 				=	"Drachenjägerarmbrust (selbst gebaut)";
 
 	mainflag 			=	ITEM_KAT_FF;
-	flags 				=	ITEM_CROSSBOW;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
 	material 			=	MAT_WOOD;
 
 	damageTotal			= 	190;
@@ -2219,7 +2219,6 @@ FUNC INT PC_Bow_End_Condition ()
 
 FUNC VOID PC_Bow_End_Info()
 {
-		Wld_StopEffect("SLOW_MOTION_6");
 	B_ENDPRODUCTIONDIALOG (); //Beendet das Dialogmenü
 };
 
@@ -2227,7 +2226,7 @@ FUNC VOID munichange_cb()
 {
 	var C_NPC her; her = Hlp_GetNpc(PC_Hero);
 
-	if (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))//Wenn der Benutzer der held ist...
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))//Wenn der Benutzer der held ist...
 	{ 
 		B_SetAivar(self, AIV_INVINCIBLE, TRUE); //Gegner greifen nicht an, solange der Held im Auswahlmodus ist
 		PLAYER_MOBSI_PRODUCTION = MOBSI_CBow; //Der Mobsi BOw ist aktiv
@@ -2724,6 +2723,5 @@ FUNC INT PC_CBow_End_Condition ()
 
 FUNC VOID PC_CBow_End_Info()
 {
-		Wld_StopEffect("SLOW_MOTION_6");
 	B_ENDPRODUCTIONDIALOG (); //Beendet das Dialogmenü
 };
