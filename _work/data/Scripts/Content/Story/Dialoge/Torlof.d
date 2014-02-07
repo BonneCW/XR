@@ -36,7 +36,7 @@ FUNC INT Info_Mod_Torlof_Auftrag_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Lares_WillSoeldner))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Torlof_Hi))
-	&& (Mod_Gilde	==	0)
+	&& (Mod_Gilde == 0)
 	{
 		return 1;
 	};
@@ -459,6 +459,7 @@ FUNC VOID Info_Mod_Torlof_HaradLehrling3_Info()
 
 	AI_StopProcessInfos	(self);
 
+	AI_Teleport	(Mod_1200_SLD_Soeldner_NW, "NW_BIGFARM_PATH_01");
 	B_StartOtherRoutine	(Mod_1200_SLD_Soeldner_NW, "HARAD");
 
 	Mod_1200_SLD_Soeldner_NW.flags = 0;
@@ -501,7 +502,6 @@ FUNC VOID Info_Mod_Torlof_HaradLehrling4_Info()
 		AI_Output(self, hero, "Info_Mod_Torlof_HaradLehrling4_01_05"); //Du hast Nerven! Scher dich zurück zu ihm!
 	};
 
-	AI_Teleport	(Mod_1200_SLD_Soeldner_NW, "NW_BIGFARM_PATH_01");
 	B_StartOtherRoutine	(Mod_1200_SLD_Soeldner_NW, "START");
 
 	Mod_1200_SLD_Soeldner_NW.flags = 2;
