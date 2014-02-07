@@ -355,12 +355,13 @@ FUNC VOID DAUERFUNC_01()
 
 	if (Mod_GiveErfolgXP == 1)
 	&& (TimeCounter_Real > 3)
+	&& (MaxErfolge > 0)
 	{
 		Mod_GiveErfolgXP = 0;
 
 		B_GivePlayerXP	(50*CurrentErfolge);
 
-		ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
+		ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100) / MaxErfolge), "% aller Erfolge erreicht");
 
 		CreateInvItems	(hero, ItWr_Erfolge, 1);
 	};

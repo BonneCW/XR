@@ -96,6 +96,12 @@ func void INIT_GLOBAL()
 		MEM_WriteByte(5934460, 144);
 		MEM_WriteByte(5934461, 144);
 		MEM_WriteByte(5934462, 144);
+		MemoryProtectionOverride(6276804, 5);	// 0x5FC6C4
+		MEM_WriteByte(6276804, 144);
+		MEM_WriteByte(6276805, 144);
+		MEM_WriteByte(6276806, 144);
+		MEM_WriteByte(6276807, 144);
+		MEM_WriteByte(6276808, 144);
 
 		GOTHIC_RESTART = "Y";
 	};

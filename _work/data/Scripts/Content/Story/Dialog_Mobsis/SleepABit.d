@@ -119,7 +119,7 @@ func void PC_Sleep (var int t)
 
 		PrintScreen	("Du fühlst dich wie neugeboren!", -1, 45, FONT_SCREEN, 2);
 
-		hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX]+(hero.attribute[ATR_HITPOINTS_MAX]*4)/10;
+		hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX]+(hero.attribute[ATR_HITPOINTS_MAX] * 4) / 10;
 
 		Mdl_ApplyOverlayMdsTimed	(hero, "HUMANS_SPRINT.MDS", 120000);
 
@@ -136,7 +136,7 @@ func void PC_Sleep (var int t)
 		hero.attribute[ATR_STRENGTH] += 10;
 		hero.attribute[ATR_DEXTERITY] += 10;
 		hero.attribute[ATR_MANA_MAX] += 10;
-		hero.attribute[ATR_MANA] = (hero.attribute[ATR_MANA_MAX]*3)/2;
+		hero.attribute[ATR_MANA] = (hero.attribute[ATR_MANA_MAX] * 3) / 2;
 
 		PrintScreen	("Dein Bewusstsein scheint erweitert!", -1, -1, FONT_SCREEN, 2);
 	};
