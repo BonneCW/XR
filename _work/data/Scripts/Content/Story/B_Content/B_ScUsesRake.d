@@ -285,15 +285,20 @@ FUNC VOID B_Schatzgraben_Deppenhans_S1()
 	};
 };
 
+var int Schatz_MegaAmulett;
+
 FUNC VOID B_Schatzgraben_OrkAmulett_S1()
 {
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(hero))
+	&& (Schatz_MegaAmulett == FALSE)
 	{
 		CreateInvItems(hero, ItAm_MegaAmulett2, 1);
 
 		PrintScreen	("Amulett gefunden", -1, YPOS_XPGained, FONT_ScreenSmall, 2);
 
 		B_LogEntry	(TOPIC_MOD_BDT_ORKS, "Endlich habe ich das richtige Amulett. Ich sollte jetzt damit zu Dexter gehen.");
+
+		Schatz_MegaAmulett = TRUE;
 	};
 };
 

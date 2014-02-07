@@ -472,6 +472,7 @@ FUNC VOID HAUPTQUESTS()
 		{
 			Mod_XW_Startscene = 5;
 
+			AI_Teleport	(PC_Friend_AW, "PC_HERO");
 			B_StartOtherRoutine	(PC_Friend_AW, "BACK");
 		};
 	};
