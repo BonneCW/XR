@@ -55,6 +55,7 @@ FUNC VOID Info_Mod_Sergio_FeuerGegenEis_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "ATSEE2");
+	B_SetAivar	(self, AIV_INVINCIBLE, FALSE);
 };
 
 INSTANCE Info_Mod_Sergio_Pickpocket (C_INFO)

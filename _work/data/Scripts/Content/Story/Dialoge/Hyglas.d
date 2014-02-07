@@ -44,6 +44,7 @@ FUNC VOID Info_Mod_Hyglas_FeuerGegenEis_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(Mod_924_RIT_Sergio_NW, "ATSEE");
+	B_SetAivar	(Mod_924_RIT_Sergio_NW, AIV_INVINCIBLE, TRUE);
 
 	Wld_InsertNpc	(IceGolem_FeuerGegenEis_01,	"NW_BIGFARM_LAKE_07");
 

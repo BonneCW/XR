@@ -205,9 +205,6 @@ FUNC VOID Info_Mod_Turendil_Faice_E()
 
 	Mod_VMG_Faice_Gift = Wld_GetDay();
 
-	//B_StartOtherRoutine	(Mod_4019_VMG_Faice_MT, "GIFT");
-	//AI_Teleport	(Mod_4019_VMG_Faice_MT, "VMG_05");
-
 	B_LogEntry	(TOPIC_MOD_FAICE_HEILUNG, "Morgen werde ich erfahren, was genau mit Faice geschehen ist, als er beim Ritual zusammengebrochen ist.");
 };
 
