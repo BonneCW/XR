@@ -2978,6 +2978,18 @@ FUNC VOID INIT_NewWorld()
 		Mod_Kap4_KGOrks = 3;
 	};
 
+	if (Eduard_SpawnUpOne == TRUE) {
+		Eduard_SpawnUpOne = FALSE;
+
+		Wld_InsertNpc	(Nightmare,	"FP_MAGICGOLEM");
+	};
+
+	if (Eduard_SpawnUpTwo == TRUE) {
+		Eduard_SpawnUpTwo = FALSE;
+
+		Wld_InsertNpc	(Schattensnapper,	"NW_PASS_06");
+	};
+
 	OldLevel(NEWWORLD_ZEN);
 };
 

@@ -44,6 +44,8 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Eduard_SpawnUpOne;
+var int Eduard_SpawnUpTwo;
 var int LastMobsi;
 var int Mod_HedwigBeiAnselm;
 var int Mod_Thorben_Robert;

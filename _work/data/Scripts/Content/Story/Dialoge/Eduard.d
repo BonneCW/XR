@@ -599,19 +599,19 @@ FUNC VOID Info_Mod_Eduard_Ruestung_Info()
 		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_32_02"); //Ich hab gehört, dass auf dem Weg zur Ausgrabungsstätte der Wassermagier ein Nachtmahr sein soll. Mit dessen Fell könnte ich deine schwarze Kriegerrüstung sicher ein wenig verbessern.
 	
 		Mod_ZweiteVerbesserung = TRUE;
-	
-		Wld_InsertNpc	(Nightmare,	"FP_MAGICGOLEM");
+
+		Eduard_SpawnUpOne = TRUE;
 	};
 
 	if (Kapitel > 1)
 	&& (Mod_ErsteVerbesserung == FALSE)
 	&& (Mod_Gilde == 12)
 	{
-		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_32_03"); //Ich hab gehört, dass auf beim Pass ein Schattensnapper sein soll. Mit dessen Haut könnte ich deine schwarze Novizenrobe sicher ein wenig verbessern.
+		AI_Output(self, hero, "Info_Mod_Eduard_Ruestung_32_03"); //Ich hab gehört, dass beim Pass in Khorinis ein Schattensnapper sein soll. Mit dessen Haut könnte ich deine schwarze Novizenrobe sicher ein wenig verbessern.
 	
 		Mod_ErsteVerbesserung = TRUE;
-	
-		Wld_InsertNpc	(Schattensnapper,	"NW_PASS_06");
+
+		Eduard_SpawnUpTwo = TRUE;
 	};
 
 	Info_ClearChoices	(Info_Mod_Eduard_Ruestung);
