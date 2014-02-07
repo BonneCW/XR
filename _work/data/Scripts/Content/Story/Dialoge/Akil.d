@@ -83,6 +83,8 @@ FUNC VOID Info_Mod_Akil_Heilung_Info()
 	B_GivePlayerXP	(350);
 
 	B_StartOtherRoutine	(Mod_906_BAU_Randolph_NW, "FOLLOWPLAYER");
+
+	B_LogEntry	(TOPIC_MOD_AKILSHOF, "Ich habe Akil das Heilmittel gegeben ...");
 };
 
 INSTANCE Info_Mod_Akil_Randolph (C_INFO)

@@ -28,6 +28,8 @@ FUNC VOID Info_Mod_Randolph_Hi_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "START");
+
+	B_LogEntry	(TOPIC_MOD_AKILSHOF, "Randolpf wollte den Heiltrank nicht nehmen, weil er wieder gesund zu sein scheint. Nun denn, ich sollte wohl Telbor informieren ...");
 };
 
 INSTANCE Info_Mod_Randolph_Hoehle (C_INFO)
