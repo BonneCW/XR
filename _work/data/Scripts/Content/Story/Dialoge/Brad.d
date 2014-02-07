@@ -198,7 +198,7 @@ FUNC INT Info_Mod_Brad_Wolfsfelle_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Brad_Hi))
 	&& (Mod_Brad_Quest == 1)
-	&& (Npc_HasItems(hero, ItAt_WolfFur) >= 20)
+	&& (Npc_HasItems(hero, ItAt_WolfFur) + Npc_HasItems(hero, ItAt_WolfFur_Rein) >= 20)
 	{
 		return 1;
 	};
@@ -235,7 +235,13 @@ FUNC VOID Info_Mod_Brad_Wolfsfelle_B()
 {
 	AI_Output(hero, self, "Info_Mod_Brad_Wolfsfelle_B_15_00"); //Hier.
 
-	B_GiveInvItems	(hero, self, ItAt_WolfFur, 20);
+	var int hlp;
+	hlp = Npc_HasItems(hero, ItAt_WolfFur);
+
+	Npc_RemoveInvItems	(hero, ItAt_WolfFur, hlp);
+	Npc_RemoveInvItems	(hero, ItAt_WolfFur_Rein, 20 - hlp);
+
+	B_ShowGivenThings	("20 Wolfsfelle gegeben");
 
 	Info_Mod_Brad_Wolfsfelle_C();
 };
@@ -278,7 +284,13 @@ FUNC VOID Info_Mod_Brad_Wolfsfelle_D()
 {
 	AI_Output(hero, self, "Info_Mod_Brad_Wolfsfelle_D_15_00"); //Okay, hier hast du die Felle.
 
-	B_GiveInvItems	(hero, self, ItAt_WolfFur, 20);
+	var int hlp;
+	hlp = Npc_HasItems(hero, ItAt_WolfFur);
+
+	Npc_RemoveInvItems	(hero, ItAt_WolfFur, hlp);
+	Npc_RemoveInvItems	(hero, ItAt_WolfFur_Rein, 20 - hlp);
+
+	B_ShowGivenThings	("20 Wolfsfelle gegeben");
 
 	Info_Mod_Brad_Wolfsfelle_C();
 };
