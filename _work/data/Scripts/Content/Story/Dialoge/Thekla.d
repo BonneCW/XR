@@ -144,7 +144,7 @@ INSTANCE Info_Mod_Thekla_Dung (C_INFO)
 	nr		= 1;
 	condition	= Info_Mod_Thekla_Dung_Condition;
 	information	= Info_Mod_Thekla_Dung_Info;
-	permanent	= 0;
+	permanent	= 1;
 	important	= 0;
 	description	= "(Thekla weglocken versuchen)";
 };
@@ -152,7 +152,8 @@ INSTANCE Info_Mod_Thekla_Dung (C_INFO)
 FUNC INT Info_Mod_Thekla_Dung_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Thekla_Hi))
-	&& (Npc_HasItems(hero, ItMi_Scavengerdung) == 1)	
+	&& (Npc_HasItems(hero, ItMi_Scavengerdung) == 1)
+	&& (Mod_Suppenwuerze_Thekla == 0)
 	{
 		return 1;
 	};
