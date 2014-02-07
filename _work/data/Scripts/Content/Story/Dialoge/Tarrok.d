@@ -51,8 +51,6 @@ FUNC VOID Info_Mod_Tarrok_AtStonehenge_Info()
 
 	B_LogEntry	(TOPIC_MOD_FOKUSSUCHE,	"Tarrok sollte für Ur Shak den Fokus aus dem Stonehenge holen, doch die Orks der Stadt waren schneller.");
 
-	//AI_StopProcessInfos	(self);
-
 	B_StartOtherRoutine	(self, "ANFELSENFESTUNG");
 };
 
@@ -109,6 +107,8 @@ FUNC VOID Info_Mod_Tarrok_Fokussuche_Nein()
 	Wld_InsertNpc	(Swampshark,	"FP_ROAM_NEW_302");
 	Wld_InsertNpc	(Shadowbeast,	"OW_PATH_218");
 	Wld_InsertNpc	(Firewaran,	"OW_MOVEMENT_BGOBBO1");
+	Wld_InsertNpc	(Firewaran,	"OW_COAST_SHIPWRECK_WARAN_2");
+	Wld_InsertNpc	(Firewaran,	"FP_ROAM_OW_WARAN_SHIPWRECK_2");
 };
 
 FUNC VOID Info_Mod_Tarrok_Fokussuche_Ja()
