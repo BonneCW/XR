@@ -99,7 +99,11 @@ FUNC VOID Info_Mod_Juliana_Endres_C()
 
 	AI_Teleport	(Mod_7483_OUT_Endres_REL, "REL_CITY_244");
 	B_StartOtherRoutine	(Mod_7483_OUT_Endres_REL, "ARZT");
-	B_StartOtherRoutine	(Mod_7480_OUT_Wendel_REL, "START");
+
+	if (Mod_REL_Stadthalter != 2) {
+		B_StartOtherRoutine	(Mod_7480_OUT_Wendel_REL, "START");
+	};
+
 	B_StartOtherRoutine	(Mod_7481_OUT_Monteur_REL, "START");
 
 	B_KillNpc	(Mod_7483_OUT_Endres_REL);
