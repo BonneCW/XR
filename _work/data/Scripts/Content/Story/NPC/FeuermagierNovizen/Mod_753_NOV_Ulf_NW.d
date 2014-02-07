@@ -4,7 +4,7 @@ INSTANCE Mod_753_NOV_Ulf_NW (Npc_Default)
 	name 		= "Ulf";
 	guild 		= GIL_VLK;
 	id 			= 753;
-	voice 		= 3;
+	voice 		= 28;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

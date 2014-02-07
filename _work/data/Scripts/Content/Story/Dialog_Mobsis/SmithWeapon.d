@@ -2092,7 +2092,7 @@ FUNC VOID PC_BolzenMachen_Sprengstoff_Komplett_Alle_Info ()
 {
 	if (Npc_HasItems(hero, PfeilStab) > 0)
 	&& (Npc_HasItems(hero, BolzenSpitze) > 0)
-	&& (Npc_HasItems(hero, ItMi_Salpeter) > 0)
+	&& (Npc_HasItems(hero, ItMi_Sprengstoff) > 0)
 	{
 		if (Npc_HasItems(hero, PfeilStab) > Npc_HasItems(hero, BolzenSpitze))
 		&& (Npc_HasItems(hero, PfeilStab) > Npc_HasItems(hero, ItMi_Sprengstoff))
@@ -3407,7 +3407,7 @@ FUNC VOID PC_PfeileMachen_Sprengstoff_Komplett_Alle_Info ()
 {
 	if (Npc_HasItems(hero, PfeilStab) > 0)
 	&& (Npc_HasItems(hero, PfeilSpitze) > 0)
-	&& (Npc_HasItems(hero, ItMi_Salpeter) > 0)
+	&& (Npc_HasItems(hero, ItMi_Sprengstoff) > 0)
 	{
 		if (Npc_HasItems(hero, PfeilStab) > Npc_HasItems(hero, PfeilSpitze))
 		&& (Npc_HasItems(hero, PfeilStab) > Npc_HasItems(hero, ItMi_Sprengstoff))
