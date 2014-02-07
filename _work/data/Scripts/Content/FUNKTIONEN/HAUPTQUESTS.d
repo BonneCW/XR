@@ -468,7 +468,7 @@ FUNC VOID HAUPTQUESTS()
 
 		// Aus Kapitel 3 zurück		
 
-		if (Mod_XW_Startscene == 4)
+		if (Mod_XW_Startscene == 4 || Npc_KnowsInfo(hero, Info_Mod_Argez_XW_Gefangen2))
 		{
 			Mod_XW_Startscene = 5;
 
