@@ -177,8 +177,8 @@ FUNC VOID Info_Mod_Henry_Entertrupp_Info()
 	B_LogEntry	(TOPIC_MOD_HENRY_ENTERTRUPP, "Um in Henrys Entertrupp zu kommen soll ich ihm erstmal 'ne Flasche Grog besorgen.");
 
 	AI_Teleport	(Mod_940_PIR_Samuel_AW, "ADW_PIRATECAMP_TOWER_BED");
-
 	B_StartOtherRoutine	(Mod_940_PIR_Samuel_AW, "ENTER");
+	AI_Teleport	(Mod_940_PIR_Samuel_AW, "ADW_PIRATECAMP_TOWER_BED");
 };
 
 INSTANCE Info_Mod_Henry_SamuelWeg (C_INFO)
