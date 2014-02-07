@@ -634,6 +634,7 @@ FUNC VOID Info_Mod_Genn_Giftpflanzen_Info()
 	B_LogEntry	(TOPIC_MOD_FAICE_GIFT, "Jetzt liegt es an mir, herauszufinden, wer von Trador umgebracht wurde. Ich sollte mich im Dorf etwas umsehen.");
 
 	AI_UnequipArmor	(Mod_7357_VMG_Dean_Tug);
+	Npc_RemoveInvItems	(Mod_7357_VMG_Dean_TUG, ItAr_Naturmagier2, 1);
 
 	B_StartOtherRoutine	(Mod_7357_VMG_Dean_TUG, "ERMORDET");
 	B_KillNpc	(Mod_7357_VMG_Dean_TUG);
