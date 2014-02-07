@@ -294,7 +294,8 @@ FUNC VOID PC_PotionAlchemy_Health_Info()
 FUNC VOID PC_PotionAlchemy_Health_04_Alle ()
 {
 	if (Npc_HasItems (hero, ItPo_Health_01) >= 3) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1) 
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
 		if (Npc_HasItems(hero, ItPo_Health_01)/3 >= Npc_HasItems(hero, ItPl_Temp_Herb))
 		&& (Npc_HasItems(hero, ItPo_Health_01)/3 >= Npc_HasItems(hero, ItMi_Flask)-1)
@@ -378,7 +379,8 @@ FUNC VOID PC_PotionAlchemy_Health_04 ()
 FUNC VOID PC_PotionAlchemy_Health_03_Alle ()
 {
 	if (Npc_HasItems (hero, ItPl_Health_Herb_03) >= 2) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1) 
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
 		if (Npc_HasItems(hero, ItPl_Health_Herb_03)/2 >= Npc_HasItems(hero, ItPl_Temp_Herb))
 		&& (Npc_HasItems(hero, ItPl_Health_Herb_03)/2 >= Npc_HasItems(hero, ItMi_Flask)-1)
@@ -462,7 +464,8 @@ FUNC VOID PC_PotionAlchemy_Health_03 ()
 FUNC VOID PC_PotionAlchemy_Health_02_Alle ()
 {
 	if (Npc_HasItems (hero, ItPl_Health_Herb_02) >= 2) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1) 
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
 		if (Npc_HasItems(hero, ItPl_Health_Herb_02)/2 >= Npc_HasItems(hero, ItPl_Temp_Herb))
 		&& (Npc_HasItems(hero, ItPl_Health_Herb_02)/2 >= Npc_HasItems(hero, ItMi_Flask)-1)
@@ -546,7 +549,8 @@ FUNC VOID PC_PotionAlchemy_Health_02 ()
 FUNC VOID PC_PotionAlchemy_Health_01_Alle ()
 {
 	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 2) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1) 
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
 		if (Npc_HasItems(hero, ItPl_Health_Herb_01)/2 >= Npc_HasItems(hero, ItPl_Temp_Herb))
 		&& (Npc_HasItems(hero, ItPl_Health_Herb_01)/2 >= Npc_HasItems(hero, ItMi_Flask)-1)
@@ -724,7 +728,8 @@ FUNC VOID PC_PotionAlchemy_Health_01_D ()
 FUNC VOID PC_PotionAlchemy_Health_07_Alle ()
 {
 	if (Npc_HasItems (hero, ItPl_Health_Herb_02) >= 2) 
-	&& (Npc_HasItems (hero, ItFo_Booze) >= 1) 
+	&& (Npc_HasItems (hero, ItFo_Booze) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
 		if (Npc_HasItems(hero, ItPl_Health_Herb_02)/2 >= Npc_HasItems(hero, ItFo_Booze))
 		&& (Npc_HasItems(hero, ItPl_Health_Herb_02)/2 >= Npc_HasItems(hero, ItMi_Flask)-1)
@@ -808,7 +813,8 @@ FUNC VOID PC_PotionAlchemy_Health_07 ()
 FUNC VOID PC_PotionAlchemy_Health_06_Alle ()
 {
 	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 4) 
-	&& (Npc_HasItems (hero, ItFo_Booze) >= 1) 
+	&& (Npc_HasItems (hero, ItFo_Booze) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
 		if (Npc_HasItems(hero, ItPl_Health_Herb_01)/4 >= Npc_HasItems(hero, ItFo_Booze))
 		&& (Npc_HasItems(hero, ItPl_Health_Herb_01)/4 >= Npc_HasItems(hero, ItMi_Flask)-1)
@@ -892,7 +898,8 @@ FUNC VOID PC_PotionAlchemy_Health_06 ()
 FUNC VOID PC_PotionAlchemy_Health_05_Alle ()
 {
 	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 3) 
-	&& (Npc_HasItems (hero, ItFo_Water) >= 1) 
+	&& (Npc_HasItems (hero, ItFo_Water) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
 		if (Npc_HasItems(hero, ItPl_Health_Herb_01)/3 >= Npc_HasItems(hero, ItFo_Water))
 		&& (Npc_HasItems(hero, ItPl_Health_Herb_01)/3 >= Npc_HasItems(hero, ItMi_Flask)-1)
@@ -1053,7 +1060,8 @@ FUNC VOID PC_PotionAlchemy_Mana_Info()
 FUNC VOID PC_PotionAlchemy_Mana_04_Alle ()
 {
 	if (Npc_HasItems (hero, ItPo_Mana_01) >= 3) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1) 
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
 		if (Npc_HasItems(hero, ItPo_Mana_01)/3 >= Npc_HasItems(hero, ItPl_Temp_Herb))
 		&& (Npc_HasItems(hero, ItPo_Mana_01)/3 >= Npc_HasItems(hero, ItMi_Flask)-1)
@@ -1137,7 +1145,8 @@ FUNC VOID PC_PotionAlchemy_Mana_04 ()
 FUNC VOID PC_PotionAlchemy_Mana_03_Alle ()
 {
 	if (Npc_HasItems (hero, ItPl_Mana_Herb_03) >= 2) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1) 
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
 		if (Npc_HasItems(hero, ItPl_Mana_Herb_03)/2 >= Npc_HasItems(hero, ItPl_Temp_Herb))
 		&& (Npc_HasItems(hero, ItPl_Mana_Herb_03)/2 >= Npc_HasItems(hero, ItMi_Flask)-1)
@@ -1305,7 +1314,8 @@ FUNC VOID PC_PotionAlchemy_Mana_02 ()
 FUNC VOID PC_PotionAlchemy_Mana_01_Alle ()
 {
 	if (Npc_HasItems (hero, ItPl_Mana_Herb_01) >= 2) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1) 
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
 		if (Npc_HasItems(hero, ItPl_Mana_Herb_01)/2 >= Npc_HasItems(hero, ItPl_Temp_Herb))
 		&& (Npc_HasItems(hero, ItPl_Mana_Herb_01)/2 >= Npc_HasItems(hero, ItMi_Flask)-1)
@@ -1483,7 +1493,8 @@ FUNC VOID PC_PotionAlchemy_Mana_01_D ()
 FUNC VOID PC_PotionAlchemy_Mana_06_Alle ()
 {
 	if (Npc_HasItems (hero, ItPl_Mana_Herb_02) >= 2) 
-	&& (Npc_HasItems (hero, ItMi_Alchemy_Alcohol_01) >= 1) 
+	&& (Npc_HasItems (hero, ItMi_Alchemy_Alcohol_01) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
 		if (Npc_HasItems(hero, ItPl_Mana_Herb_02)/2 >= Npc_HasItems(hero, ItMi_Alchemy_Alcohol_01))
 		&& (Npc_HasItems(hero, ItPl_Mana_Herb_02)/2 >= Npc_HasItems(hero, ItMi_Flask)-1)
@@ -1567,7 +1578,8 @@ FUNC VOID PC_PotionAlchemy_Mana_06 ()
 FUNC VOID PC_PotionAlchemy_Mana_05_Alle ()
 {
 	if (Npc_HasItems (hero, ItPl_Mana_Herb_01) >= 3) 
-	&& (Npc_HasItems (hero, ItMi_Alchemy_Alcohol_01) >= 1) 
+	&& (Npc_HasItems (hero, ItMi_Alchemy_Alcohol_01) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
 		if (Npc_HasItems(hero, ItPl_Mana_Herb_01)/3 >= Npc_HasItems(hero, ItMi_Alchemy_Alcohol_01))
 		&& (Npc_HasItems(hero, ItPl_Mana_Herb_01)/3 >= Npc_HasItems(hero, ItMi_Flask)-1)
