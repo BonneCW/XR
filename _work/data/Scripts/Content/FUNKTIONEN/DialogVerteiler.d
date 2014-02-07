@@ -113,6 +113,13 @@ FUNC VOID DialogVerteiler()
 
 		Info_Mod_Jesper_Lernen.npc		= Mod_7704_OUT_Jesper_REL;
 
+		// Lester
+
+		Info_Mod_Lester_DefenseBreak.npc	= Mod_7612_PSINOV_Lester_REL;
+		Info_Mod_Lester_DefenseBreak2.npc	= Mod_7612_PSINOV_Lester_REL;
+		Info_Mod_Lester_Fanatiker.npc	= Mod_7612_PSINOV_Lester_REL;
+		Info_Mod_Lester_ZeichenDerBruderschaft.npc	= Mod_7612_PSINOV_Lester_REL;
+
 		// Ramirez
 
 		Info_Mod_Ramirez_Lernen.npc		= Mod_7708_OUT_Ramirez_REL;
