@@ -17,6 +17,10 @@ var int MG_GegnerFiguren3[10];
 var int MG_Own_Counter;
 var int MG_Opp_Counter;
 
+var int MG_Opp_Index;
+
+var int MG_Opp_Time;
+
 const int MG_FIGUR_MINECRAWLERQUEEN	= 1;
 const int MG_FIGUR_TROLL		= 2;
 const int MG_FIGUR_HASE			= 3;

@@ -368,19 +368,21 @@ FUNC VOID B_MG_GameLoop()
 		}
 		else
 		{
-			var int i; i = 0;
+			if (MG_Opp_Time >= TimeCounter_Real - 2) {
+				return;
+			};
 
-			var int loop; loop = MEM_StackPos.position;
-
-			if (i < 5)
+			if (MG_Opp_Index < 5)
 			{
+				MG_Opp_Time = TimeCounter_Real;
+
 				var int counter;
 				counter = 0;
 
 				var int j;
 				var int loop2;
 
-				if (MEM_ReadStatArr(MG_GegnerFiguren, i) == MG_FIGUR_BLOODFLY)
+				if (MEM_ReadStatArr(MG_GegnerFiguren, MG_Opp_Index) == MG_FIGUR_BLOODFLY)
 				{
 					B_MG_SetPossibilities(Opp_Bloodfly);
 
@@ -388,9 +390,9 @@ FUNC VOID B_MG_GameLoop()
 
 					if (counter == 0)
 					{
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					}
 					else if (counter == 1)
 					{
@@ -404,9 +406,9 @@ FUNC VOID B_MG_GameLoop()
 							{
 								C_MG_SPIELFIGUR_WalkToField(Opp_Bloodfly, j);
 
-								i += 1;
+								MG_Opp_Index += 1;
 
-								MEM_StackPos.position = loop;
+								return;
 							};
 
 							j += 1;
@@ -418,12 +420,12 @@ FUNC VOID B_MG_GameLoop()
 					{
 						B_MG_WalkToBestPossibility(Opp_Bloodfly);
 
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					};
 				}
-				else if (MEM_ReadStatArr(MG_GegnerFiguren, i) == MG_FIGUR_Schaf)
+				else if (MEM_ReadStatArr(MG_GegnerFiguren, MG_Opp_Index) == MG_FIGUR_Schaf)
 				{
 					B_MG_SetPossibilities(Opp_Schaf);
 
@@ -431,9 +433,9 @@ FUNC VOID B_MG_GameLoop()
 
 					if (counter == 0)
 					{
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					}
 					else if (counter == 1)
 					{
@@ -447,9 +449,9 @@ FUNC VOID B_MG_GameLoop()
 							{
 								C_MG_SPIELFIGUR_WalkToField(Opp_Schaf, j);
 
-								i += 1;
+								MG_Opp_Index += 1;
 
-								MEM_StackPos.position = loop;
+								return;
 							};
 
 							j += 1;
@@ -461,12 +463,12 @@ FUNC VOID B_MG_GameLoop()
 					{
 						B_MG_WalkToBestPossibility(Opp_Schaf);
 
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					};
 				}
-				else if (MEM_ReadStatArr(MG_GegnerFiguren, i) == MG_FIGUR_Hase)
+				else if (MEM_ReadStatArr(MG_GegnerFiguren, MG_Opp_Index) == MG_FIGUR_Hase)
 				{
 					B_MG_SetPossibilities(Opp_Hase);
 
@@ -474,9 +476,9 @@ FUNC VOID B_MG_GameLoop()
 
 					if (counter == 0)
 					{
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					}
 					else if (counter == 1)
 					{
@@ -490,9 +492,9 @@ FUNC VOID B_MG_GameLoop()
 							{
 								C_MG_SPIELFIGUR_WalkToField(Opp_Hase, j);
 
-								i += 1;
+								MG_Opp_Index += 1;
 
-								MEM_StackPos.position = loop;
+								return;
 							};
 
 							j += 1;
@@ -504,12 +506,12 @@ FUNC VOID B_MG_GameLoop()
 					{
 						B_MG_WalkToBestPossibility(Opp_Hase);
 
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					};
 				}
-				else if (MEM_ReadStatArr(MG_GegnerFiguren, i) == MG_FIGUR_Meatbug)
+				else if (MEM_ReadStatArr(MG_GegnerFiguren, MG_Opp_Index) == MG_FIGUR_Meatbug)
 				{
 					B_MG_SetPossibilities(Opp_Meatbug);
 
@@ -517,9 +519,9 @@ FUNC VOID B_MG_GameLoop()
 
 					if (counter == 0)
 					{
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					}
 					else if (counter == 1)
 					{
@@ -533,9 +535,9 @@ FUNC VOID B_MG_GameLoop()
 							{
 								C_MG_SPIELFIGUR_WalkToField(Opp_Meatbug, j);
 
-								i += 1;
+								MG_Opp_Index += 1;
 
-								MEM_StackPos.position = loop;
+								return;
 							};
 
 							j += 1;
@@ -547,12 +549,12 @@ FUNC VOID B_MG_GameLoop()
 					{
 						B_MG_WalkToBestPossibility(Opp_Meatbug);
 
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					};
 				}
-				else if (MEM_ReadStatArr(MG_GegnerFiguren, i) == MG_FIGUR_Goblin)
+				else if (MEM_ReadStatArr(MG_GegnerFiguren, MG_Opp_Index) == MG_FIGUR_Goblin)
 				{
 					B_MG_SetPossibilities(Opp_Goblin);
 
@@ -560,9 +562,9 @@ FUNC VOID B_MG_GameLoop()
 
 					if (counter == 0)
 					{
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					}
 					else if (counter == 1)
 					{
@@ -576,9 +578,9 @@ FUNC VOID B_MG_GameLoop()
 							{
 								C_MG_SPIELFIGUR_WalkToField(Opp_Goblin, j);
 
-								i += 1;
+								MG_Opp_Index += 1;
 
-								MEM_StackPos.position = loop;
+								return;
 							};
 
 							j += 1;
@@ -590,12 +592,12 @@ FUNC VOID B_MG_GameLoop()
 					{
 						B_MG_WalkToBestPossibility(Opp_Goblin);
 
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					};
 				}
-				else if (MEM_ReadStatArr(MG_GegnerFiguren, i) == MG_FIGUR_Snapper)
+				else if (MEM_ReadStatArr(MG_GegnerFiguren, MG_Opp_Index) == MG_FIGUR_Snapper)
 				{
 					B_MG_SetPossibilities(Opp_Snapper);
 
@@ -603,9 +605,9 @@ FUNC VOID B_MG_GameLoop()
 
 					if (counter == 0)
 					{
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					}
 					else if (counter == 1)
 					{
@@ -619,9 +621,9 @@ FUNC VOID B_MG_GameLoop()
 							{
 								C_MG_SPIELFIGUR_WalkToField(Opp_Snapper, j);
 
-								i += 1;
+								MG_Opp_Index += 1;
 
-								MEM_StackPos.position = loop;
+								return;
 							};
 
 							j += 1;
@@ -633,12 +635,12 @@ FUNC VOID B_MG_GameLoop()
 					{
 						B_MG_WalkToBestPossibility(Opp_Snapper);
 
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					};
 				}
-				else if (MEM_ReadStatArr(MG_GegnerFiguren, i) == MG_FIGUR_Troll)
+				else if (MEM_ReadStatArr(MG_GegnerFiguren, MG_Opp_Index) == MG_FIGUR_Troll)
 				{
 					B_MG_SetPossibilities(Opp_Troll);
 
@@ -646,9 +648,9 @@ FUNC VOID B_MG_GameLoop()
 
 					if (counter == 0)
 					{
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					}
 					else if (counter == 1)
 					{
@@ -662,9 +664,9 @@ FUNC VOID B_MG_GameLoop()
 							{
 								C_MG_SPIELFIGUR_WalkToField(Opp_Troll, j);
 
-								i += 1;
+								MG_Opp_Index += 1;
 
-								MEM_StackPos.position = loop;
+								return;
 							};
 
 							j += 1;
@@ -676,12 +678,12 @@ FUNC VOID B_MG_GameLoop()
 					{
 						B_MG_WalkToBestPossibility(Opp_Troll);
 
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					};
 				}
-				else if (MEM_ReadStatArr(MG_GegnerFiguren, i) == MG_FIGUR_Minecrawlerqueen)
+				else if (MEM_ReadStatArr(MG_GegnerFiguren, MG_Opp_Index) == MG_FIGUR_Minecrawlerqueen)
 				{
 					B_MG_SetPossibilities(Opp_Minecrawlerqueen);
 
@@ -689,9 +691,9 @@ FUNC VOID B_MG_GameLoop()
 
 					if (counter == 0)
 					{
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					}
 					else if (counter == 1)
 					{
@@ -705,9 +707,9 @@ FUNC VOID B_MG_GameLoop()
 							{
 								C_MG_SPIELFIGUR_WalkToField(Opp_Minecrawlerqueen, j);
 
-								i += 1;
+								MG_Opp_Index += 1;
 
-								MEM_StackPos.position = loop;
+								return;
 							};
 
 							j += 1;
@@ -719,12 +721,12 @@ FUNC VOID B_MG_GameLoop()
 					{
 						B_MG_WalkToBestPossibility(Opp_Minecrawlerqueen);
 
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					};
 				}
-				else if (MEM_ReadStatArr(MG_GegnerFiguren, i) == MG_FIGUR_Balrog)
+				else if (MEM_ReadStatArr(MG_GegnerFiguren, MG_Opp_Index) == MG_FIGUR_Balrog)
 				{
 					B_MG_SetPossibilities(Opp_Balrog);
 
@@ -732,9 +734,9 @@ FUNC VOID B_MG_GameLoop()
 
 					if (counter == 0)
 					{
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					}
 					else if (counter == 1)
 					{
@@ -748,9 +750,9 @@ FUNC VOID B_MG_GameLoop()
 							{
 								C_MG_SPIELFIGUR_WalkToField(Opp_Balrog, j);
 
-								i += 1;
+								MG_Opp_Index += 1;
 
-								MEM_StackPos.position = loop;
+								return;
 							};
 
 							j += 1;
@@ -762,12 +764,12 @@ FUNC VOID B_MG_GameLoop()
 					{
 						B_MG_WalkToBestPossibility(Opp_Balrog);
 
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					};
 				}
-				else if (MEM_ReadStatArr(MG_GegnerFiguren, i) == MG_FIGUR_Stoneguardian)
+				else if (MEM_ReadStatArr(MG_GegnerFiguren, MG_Opp_Index) == MG_FIGUR_Stoneguardian)
 				{
 					B_MG_SetPossibilities(Opp_Stoneguardian);
 
@@ -775,9 +777,9 @@ FUNC VOID B_MG_GameLoop()
 
 					if (counter == 0)
 					{
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					}
 					else if (counter == 1)
 					{
@@ -791,9 +793,9 @@ FUNC VOID B_MG_GameLoop()
 							{
 								C_MG_SPIELFIGUR_WalkToField(Opp_Stoneguardian, j);
 
-								i += 1;
+								MG_Opp_Index += 1;
 
-								MEM_StackPos.position = loop;
+								return;
 							};
 
 							j += 1;
@@ -805,23 +807,25 @@ FUNC VOID B_MG_GameLoop()
 					{
 						B_MG_WalkToBestPossibility(Opp_Stoneguardian);
 
-						i += 1;
+						MG_Opp_Index += 1;
 
-						MEM_StackPos.position = loop;
+						return;
 					};
 				}
 				else
 				{
-					i += 1;
+					MG_Opp_Index += 1;
 
-					MEM_StackPos.position = loop;
+					return;
 				};
+			} else {
+				MG_Opp_Index = 0;
+
+				MG_Spieler01 = TRUE;
+				MG_Spieler02 = FALSE;
+
+				B_MG_ResetWalks(1);
 			};
-
-			MG_Spieler01 = TRUE;
-			MG_Spieler02 = FALSE;
-
-			B_MG_ResetWalks(1);
 		};
 	}
 	else if (MG_GameState == 5) // Spiel beenden
