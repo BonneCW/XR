@@ -257,6 +257,7 @@ FUNC INT Info_Mod_Gomez_Jagd02_Condition()
 FUNC VOID Info_Mod_Gomez_Jagd02_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Gomez_Jagd02_15_00"); //Wir können aufbrechen.
+	AI_Output(self, hero, "DEFAULT"); //
 
 	Wld_SendTrigger	("AUSENTORBURG");
 
@@ -314,15 +315,12 @@ FUNC VOID Info_Mod_Gomez_Jagd03_C()
 
 	Info_AddChoice	(Info_Mod_Gomez_Jagd03, "Ich bin bereit.", Info_Mod_Gomez_Jagd03_G);
 	Info_AddChoice	(Info_Mod_Gomez_Jagd03, "Was ist die Belohnung?", Info_Mod_Gomez_Jagd03_F);
-
-	self.aivar[AIV_Partymember] = TRUE;
-
-	AI_StopProcessInfos	(self);
 };
 
 FUNC VOID Info_Mod_Gomez_Jagd03_G()
 {
 	AI_Output(hero, self, "Info_Mod_Gomez_Jagd03_G_15_00"); //Ich bin bereit.
+	AI_Output(self, hero, "DEFAULT"); //
 
 	Info_ClearChoices	(Info_Mod_Gomez_Jagd03);
 
