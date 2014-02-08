@@ -281,3 +281,15 @@ INSTANCE SnapperTransform	(Mst_Default_Snapper)
 	B_SetVisuals_Snapper();
 	Npc_SetToFistMode(self);
 };
+
+INSTANCE Snapper_Mario_01	(Mst_Default_Snapper)
+{
+	B_SetVisuals_Sna();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE Snapper_Mario_02	(Mst_Default_Snapper)
+{
+	B_SetVisuals_Sna();
+	Npc_SetToFistMode(self);
+};

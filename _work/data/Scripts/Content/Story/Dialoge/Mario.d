@@ -74,7 +74,7 @@ FUNC INT Info_Mod_Mario_Aufgabe_Condition()
 FUNC VOID Info_Mod_Mario_Aufgabe_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Aufgabe_15_00"); //Was ist das für eine unlösbare Aufgabe?
-	AI_Output(self, hero, "Info_Mod_Mario_Aufgabe_07_01"); //In dem großen Wald vor der Stadt sollen sich zwei Drachensnapper aufhalten.
+	AI_Output(self, hero, "Info_Mod_Mario_Aufgabe_07_01"); //In dem großen Wald vor der Stadt sollen sich zwei Snapper aufhalten.
 	AI_Output(self, hero, "Info_Mod_Mario_Aufgabe_07_02"); //Anstatt einen Trupp loszuschicken, der sich um die Viecher kümmert, wird der ganze Dreck mir aufgehalst.
 	AI_Output(self, hero, "Info_Mod_Mario_Aufgabe_07_03"); //Würde den Obersten wohl gut in den Kram passen, wenn ich dort Snapperfraß würde.
 };
@@ -87,7 +87,7 @@ INSTANCE Info_Mod_Mario_Hilfe (C_INFO)
 	information	= Info_Mod_Mario_Hilfe_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich könnte dir bei den Drachensnappern helfen.";
+	description	= "Ich könnte dir bei den Snappern helfen.";
 };
 
 FUNC INT Info_Mod_Mario_Hilfe_Condition()
@@ -100,7 +100,7 @@ FUNC INT Info_Mod_Mario_Hilfe_Condition()
 
 FUNC VOID Info_Mod_Mario_Hilfe_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Mario_Hilfe_15_00"); //Ich könnte dir bei den Drachensnappern helfen.
+	AI_Output(hero, self, "Info_Mod_Mario_Hilfe_15_00"); //Ich könnte dir bei den Snappern helfen.
 	AI_Output(self, hero, "Info_Mod_Mario_Hilfe_07_01"); //Du, ein schwächlicher Sträfling?
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe_15_02"); //Snapper sind eine meiner Spezialitäten.
 	AI_Output(self, hero, "Info_Mod_Mario_Hilfe_07_03"); //Einen Versuch ist es wert. Selbst deine Begleitung wird mich im Ansehen der anderen nicht weiter sinken lassen.
@@ -108,7 +108,7 @@ FUNC VOID Info_Mod_Mario_Hilfe_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_MARIO_UPGRADE, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_MARIO_UPGRADE, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_MARIO_UPGRADE, "Der Milizionär Mario bekommt eine Prüfung nach der anderen auferlegt. Jetzt steht er vor einem Problem: Gegen zwei Drachensnapper kann er nichts ausrichten. Ich habe ihm meine Hilfe angeboten.");
+	B_LogEntry	(TOPIC_MOD_MARIO_UPGRADE, "Der Milizionär Mario bekommt eine Prüfung nach der anderen auferlegt. Jetzt steht er vor einem Problem: Gegen zwei Snapper kann er nichts ausrichten. Ich habe ihm meine Hilfe angeboten.");
 };
 
 INSTANCE Info_Mod_Mario_Hilfe2 (C_INFO)
@@ -141,8 +141,8 @@ FUNC VOID Info_Mod_Mario_Hilfe2_Info()
 
 	B_StartOtherRoutine	(self, "GUIDE");
 
-	Wld_InsertNpc	(Dragonsnapper_Mario_01,	"WP_MARIOTOUR_04");
-	Wld_InsertNpc	(Dragonsnapper_Mario_02,	"WP_MARIOTOUR_04");
+	Wld_InsertNpc	(Snapper_Mario_01,	"WP_MARIOTOUR_04");
+	Wld_InsertNpc	(Snapper_Mario_02,	"WP_MARIOTOUR_04");
 };
 
 INSTANCE Info_Mod_Mario_Hilfe3 (C_INFO)
@@ -158,8 +158,8 @@ INSTANCE Info_Mod_Mario_Hilfe3 (C_INFO)
 FUNC INT Info_Mod_Mario_Hilfe3_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Mario_Hilfe2))
-	&& (Npc_IsDead(Dragonsnapper_Mario_01))
-	&& (Npc_IsDead(Dragonsnapper_Mario_02))
+	&& (Npc_IsDead(Snapper_Mario_01))
+	&& (Npc_IsDead(Snapper_Mario_02))
 	{
 		return 1;
 	};
@@ -175,7 +175,7 @@ FUNC VOID Info_Mod_Mario_Hilfe3_Info()
 
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 
-	B_LogEntry	(TOPIC_MOD_MARIO_UPGRADE, "Wir haben die Drachensnapper erlegt. Damit hat Mario eine weitere Aufgabe für die Paladine abgeschlossen.");
+	B_LogEntry	(TOPIC_MOD_MARIO_UPGRADE, "Wir haben die Snapper erlegt. Damit hat Mario eine weitere Aufgabe für die Paladine abgeschlossen.");
 
 	B_GivePlayerXP	(50);
 

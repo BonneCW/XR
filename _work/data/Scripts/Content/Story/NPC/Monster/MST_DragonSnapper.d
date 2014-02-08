@@ -87,18 +87,6 @@ INSTANCE DragonSnapper	(Mst_Default_DragonSnapper)
 	Npc_SetToFistMode(self);
 };
 
-INSTANCE DragonSnapper_Mario_01	(Mst_Default_DragonSnapper)
-{
-	B_SetVisuals_DragonSnapper();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE DragonSnapper_Mario_02	(Mst_Default_DragonSnapper)
-{
-	B_SetVisuals_DragonSnapper();
-	Npc_SetToFistMode(self);
-};
-
 INSTANCE DragonSnapper_Bergwelt	(Mst_Default_DragonSnapper)
 {
 	B_SetVisuals_DragonSnapper();
