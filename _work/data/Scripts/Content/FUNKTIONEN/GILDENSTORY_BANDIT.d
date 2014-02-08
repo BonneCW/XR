@@ -232,6 +232,7 @@ FUNC VOID GILDENSTORY_BANDIT()
 			Mod_CrazyRabbit_Counter += 1;
 
 			if (Mod_CrazyRabbit_Counter == 10)
+			&& (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)
 			{
 				Mod_CrazyRabbit = 2;
 
