@@ -174,10 +174,17 @@ func void ZS_Unconscious_End ()
 	};
 
 	// ------ Waffe wiederholen ------
+
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1871_TPL_GorKaranto_MT)) {
+		if (Npc_HasItems(self, ItMw_2H_Sword_Light_02) == 0) {
+			AI_GotoItem	(self, ItMw_2H_Sword_Light_02);
+			AI_TakeItem	(self, ItMw_2H_Sword_Light_02);
+		};
+	};
+
 	Npc_PerceiveAll (self);
 	
 	if (Wld_DetectItem (self, ITEM_KAT_NF))
-	|| (Wld_DetectItem (self, ITEM_KAT_FF))
 	{
 		if (Hlp_IsValidItem (item) && Npc_GetDistToItem(self, item) < 750)
 		{
