@@ -1001,6 +1001,8 @@ FUNC VOID NEBENQUESTS()
 
 		if (Mod_Mario == 9)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Olav_Mario))
+		&& (Npc_KnowsInfo(hero, Info_Mod_Mil_333_Mario))
+		&& (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)
 		{
 			Mod_Mario = 10;
 
