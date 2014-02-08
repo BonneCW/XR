@@ -294,7 +294,7 @@ FUNC VOID Info_Mod_Edda_WanzenBack_Info()
 	AI_Output(hero, self, "Info_Mod_Edda_WanzenBack_15_00"); //Es sollte keine Fleischwanze überlebt haben.
 	AI_Output(self, hero, "Info_Mod_Edda_WanzenBack_26_01"); //Ich kann dir gar nicht sagen, wie froh ich bin!
 	AI_Output(self, hero, "Info_Mod_Edda_WanzenBack_26_02"); //Aber einen kleinen Gefallen musst du mir noch tun, damit ich wieder beruhigt schlafen kann:
-	AI_Output(self, hero, "Info_Mod_Edda_WanzenBack_26_03"); //Würdest du dich bitte in der nächsten Nacht draußen vor der Hütte auf die Lauer legen?
+	AI_Output(self, hero, "Info_Mod_Edda_WanzenBack_26_03"); //Würdest du dich bitte in der nächsten Nacht draußen hinter der Hütte auf die Lauer legen?
 	AI_Output(hero, self, "Info_Mod_Edda_WanzenBack_15_04"); //Klar. Kein Problem.
 
 	B_GivePlayerXP	(50);
@@ -303,7 +303,7 @@ FUNC VOID Info_Mod_Edda_WanzenBack_Info()
 
 	B_StartOtherRoutine	(Mod_575_NONE_Fenia_NW, "WANZEN");
 
-	B_LogEntry	(TOPIC_MOD_EDDASWANZENBACK, "Die Wanzen sind zwar erledigt, aber Edda kann erst wieder ruhig schlafen, wenn sie weiß, dass niemand ihr die Wanzen nachts in das Haus schmuggelt. Ich werde mich deswegen in der nächsten Nacht auf die Lauer legen.");
+	B_LogEntry	(TOPIC_MOD_EDDASWANZENBACK, "Die Wanzen sind zwar erledigt, aber Edda kann erst wieder ruhig schlafen, wenn sie weiß, dass niemand ihr die Wanzen nachts in das Haus schmuggelt. Ich werde mich deswegen in der nächsten Nacht hinter der Hütte auf die Lauer legen.");
 };
 
 INSTANCE Info_Mod_Edda_Fenia (C_INFO)
