@@ -301,7 +301,7 @@ FUNC VOID Info_Mod_Albert_TeleporterFurt_B()
 	AI_Output(hero, self, "Info_Mod_Albert_TeleporterFurt_B_15_04"); //Ich mache mich sofort auf den Weg.
 	AI_Output(self, hero, "Info_Mod_Albert_TeleporterFurt_B_32_05"); //Ich werde dir Bescheid geben, wenn das Portal sicher ist.
 
-	B_LogEntry	(TOPIC_MOD_TURENDIL_GOLEM, "Der Teleporter ist zu unsicher. Ich soll erstmal in der Nähe des Alten Lagers nach Furt sehen.");
+	B_LogEntry	(TOPIC_MOD_TURENDIL_GOLEM, "Der Teleporter ist zu unsicher. Ich soll erstmal in der Nähe des Alten Lagers nach Furt sehen. Ich sollte die Umgebung dort absuchen.");
 	
 	Info_ClearChoices	(Info_Mod_Albert_TeleporterFurt);
 
