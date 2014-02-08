@@ -9,14 +9,6 @@ instance Mod_1745_PSIGUR_Guru_NW (Npc_Default)
 	
 	voice 		=		12;
 	id 			=		1745;
-		
-	///-------- abilities --------
-	attribute[ATR_STRENGTH] 		=	70;
-	attribute[ATR_DEXTERITY] 		=	60;
-	attribute[ATR_MANA_MAX] 		=	50;
-	attribute[ATR_MANA] 			=	50;
-	attribute[ATR_HITPOINTS_MAX] 	=	376;
-	attribute[ATR_HITPOINTS] 		=	376;
 
 	//-------- visuals --------
 	// 				animations
@@ -36,7 +28,7 @@ instance Mod_1745_PSIGUR_Guru_NW (Npc_Default)
 	B_SetAttributesToChapter (self, 6);
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_1745;
-	fight_tactic	=	FAI_HUMAN_MAGE;
+	fight_tactic	=	FAI_HUMAN_MASTER;
 };
 
 FUNC VOID Rtn_start_1745 ()
