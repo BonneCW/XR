@@ -124,11 +124,11 @@ FUNC VOID Info_Mod_Spieler_Orlan_Spielende01_Info()
 	else
 	{
 		AI_Output(self, hero, "Info_Mod_Spieler_Orlan_Spielende01_01_01"); //Ach, so ein Mist! Das hab ich ja ganz übersehen!
-		AI_Output(hero, self, "Info_Mod_Spieler_Orlan_Spielende01_15_02"); //Das passiert mir doch sonst nie.
+		AI_Output(self, hero, "Info_Mod_Spieler_Orlan_Spielende01_01_02"); //Das passiert mir doch sonst nie.
 
 		B_GiveInvItems	(self, hero, ItMi_Gold, 15);
 
-		AI_Output(self, hero, "Info_Mod_Spieler_Orlan_Spielende01_01_03"); //Jetzt schuldest du mir noch den Hasenspielstein, oder irre ich mich da?
+		AI_Output(hero, hero, "Info_Mod_Spieler_Orlan_Spielende01_15_03"); //Jetzt schuldest du mir noch den Hasenspielstein, oder irre ich mich da?
 
 		AI_Output(self, hero, "Info_Mod_Spieler_Orlan_Spielende01_01_04"); //Den kann ich dir nach diesem reinen Glückstreffer doch nicht guten Gewissens geben.
 		AI_Output(self, hero, "Info_Mod_Spieler_Orlan_Spielende01_01_05"); //Vorher musst du mir erst noch beweisen, dass du auch wirklich was drauf hast. Und zwar mit verdoppeltem Einsatz.
