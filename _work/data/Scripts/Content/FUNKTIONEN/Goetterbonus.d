@@ -118,7 +118,11 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 13)
 				|| (Mod_Gilde == 14)
 				{
-					Mod_GottMana = 4000/hero.attribute[ATR_MANA_MAX];
+					if (hero.attribute[ATR_MANA_MAX] > 0) {
+						Mod_GottMana = 4000 / hero.attribute[ATR_MANA_MAX];
+					} else {
+						Mod_GottMana = 10;
+					};
 				};
 				if (Mod_Gilde == 12)
 				|| (Mod_Gilde == 15)
@@ -140,7 +144,11 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 13)
 				|| (Mod_Gilde == 14)
 				{
-					Mod_GottMana = 3000/hero.attribute[ATR_MANA_MAX];
+					if (hero.attribute[ATR_MANA_MAX] > 0) {
+						Mod_GottMana = 3000 / hero.attribute[ATR_MANA_MAX];
+					} else {
+						Mod_GottMana = 10;
+					};
 				};
 				if (Mod_Gilde == 12)
 				|| (Mod_Gilde == 15)
@@ -162,7 +170,11 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 13)
 				|| (Mod_Gilde == 14)
 				{
-					Mod_GottMana = 2000/hero.attribute[ATR_MANA_MAX];
+					if (hero.attribute[ATR_MANA_MAX] > 0) {
+						Mod_GottMana = 2000 / hero.attribute[ATR_MANA_MAX];
+					} else {
+						Mod_GottMana = 10;
+					};
 				};
 				if (Mod_Gilde == 12)
 				|| (Mod_Gilde == 15)
@@ -184,7 +196,11 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 13)
 				|| (Mod_Gilde == 14)
 				{
-					Mod_GottMana = 1000/hero.attribute[ATR_MANA_MAX];
+					if (hero.attribute[ATR_MANA_MAX] > 0) {
+						Mod_GottMana = 1000 / hero.attribute[ATR_MANA_MAX];
+					} else {
+						Mod_GottMana = 10;
+					};
 				};
 				if (Mod_Gilde == 12)
 				|| (Mod_Gilde == 15)
@@ -356,7 +372,11 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 7)
 				|| (Mod_Gilde == 8)
 				{
-					Mod_GottMana = 4000/hero.attribute[ATR_MANA_MAX];
+					if (hero.attribute[ATR_MANA_MAX] > 0) {
+						Mod_GottMana = 4000 / hero.attribute[ATR_MANA_MAX];
+					} else {
+						Mod_GottMana = 10;
+					};
 				};
 				if (Mod_Gilde == 1)
 				|| (Mod_Gilde == 2)
@@ -378,7 +398,11 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 7)
 				|| (Mod_Gilde == 8)
 				{
-					Mod_GottMana = 3000/hero.attribute[ATR_MANA_MAX];
+					if (hero.attribute[ATR_MANA_MAX] > 0) {
+						Mod_GottMana = 3000 / hero.attribute[ATR_MANA_MAX];
+					} else {
+						Mod_GottMana = 10;
+					};
 				};
 				if (Mod_Gilde == 1)
 				|| (Mod_Gilde == 2)
@@ -400,7 +424,11 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 7)
 				|| (Mod_Gilde == 8)
 				{
-					Mod_GottMana = 2000/hero.attribute[ATR_MANA_MAX];
+					if (hero.attribute[ATR_MANA_MAX] > 0) {
+						Mod_GottMana = 2000 / hero.attribute[ATR_MANA_MAX];
+					} else {
+						Mod_GottMana = 10;
+					};
 				};
 				if (Mod_Gilde == 1)
 				|| (Mod_Gilde == 2)
@@ -422,7 +450,11 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 7)
 				|| (Mod_Gilde == 8)
 				{
-					Mod_GottMana = 1000/hero.attribute[ATR_MANA_MAX];
+					if (hero.attribute[ATR_MANA_MAX] > 0) {
+						Mod_GottMana = 1000 / hero.attribute[ATR_MANA_MAX];
+					} else {
+						Mod_GottMana = 10;
+					};
 				};
 				if (Mod_Gilde == 1)
 				|| (Mod_Gilde == 2)
@@ -592,7 +624,11 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 10)
 				|| (Mod_Gilde == 11)
 				{
-					Mod_GottMana = 4000/hero.attribute[ATR_MANA_MAX];
+					if (hero.attribute[ATR_MANA_MAX] > 0) {
+						Mod_GottMana = 4000 / hero.attribute[ATR_MANA_MAX];
+					} else {
+						Mod_GottMana = 10;
+					};
 				};
 				if (Mod_Gilde == 9)
 				|| (Mod_Gilde == 17)
@@ -614,7 +650,11 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 10)
 				|| (Mod_Gilde == 11)
 				{
-					Mod_GottMana = 3000/hero.attribute[ATR_MANA_MAX];
+					if (hero.attribute[ATR_MANA_MAX] > 0) {
+						Mod_GottMana = 3000 / hero.attribute[ATR_MANA_MAX];
+					} else {
+						Mod_GottMana = 10;
+					};
 				};
 				if (Mod_Gilde == 9)
 				|| (Mod_Gilde == 17)
@@ -636,7 +676,11 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 10)
 				|| (Mod_Gilde == 11)
 				{
-					Mod_GottMana = 2000/hero.attribute[ATR_MANA_MAX];
+					if (hero.attribute[ATR_MANA_MAX] > 0) {
+						Mod_GottMana = 2000 / hero.attribute[ATR_MANA_MAX];
+					} else {
+						Mod_GottMana = 10;
+					};
 				};
 				if (Mod_Gilde == 9)
 				|| (Mod_Gilde == 17)
@@ -658,7 +702,11 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 10)
 				|| (Mod_Gilde == 11)
 				{
-					Mod_GottMana = 1000/hero.attribute[ATR_MANA_MAX];
+					if (hero.attribute[ATR_MANA_MAX] > 0) {
+						Mod_GottMana = 1000 / hero.attribute[ATR_MANA_MAX];
+					} else {
+						Mod_GottMana = 10;
+					};
 				};
 				if (Mod_Gilde == 9)
 				|| (Mod_Gilde == 17)
