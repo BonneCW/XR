@@ -44,6 +44,7 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int Mod_Sly_Schlagstock;
 var int Eduard_SpawnUpOne;
 var int Eduard_SpawnUpTwo;
 var int LastMobsi;

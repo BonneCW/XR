@@ -236,7 +236,7 @@ FUNC VOID Info_Mod_Bennet_Piraten_Info()
 
 	AI_UnequipWeapons	(self);
 
-	EquipItem	(self, ItMw_Piratensaebel_Greg);
+	EquipWeapon	(self, ItMw_Piratensaebel_Greg);
 
 	AI_ReadyMeleeWeapon	(self);
 	AI_PlayAni	(self, "T_1HSINSPECT");

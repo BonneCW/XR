@@ -199,7 +199,7 @@ FUNC VOID Info_Mod_Sly_Arena4_Info()
 
 	B_GiveInvItems	(self, hero, ItMw_Schlagstock, 1);
 
-	EquipItem	(hero, ItMw_Schlagstock);
+	EquipWeapon	(hero, ItMw_Schlagstock);
 
 	AI_Output(hero, self, "Info_Mod_Sly_Arena4_15_03"); //Dann zeig mal, was du noch so drauf hast.
 	AI_Output(self, hero, "Info_Mod_Sly_Arena4_31_04"); //Ok.

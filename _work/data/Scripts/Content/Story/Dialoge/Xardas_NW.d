@@ -1687,7 +1687,7 @@ FUNC VOID Info_Mod_Xardas_NW_HabAxt_Info()
 
 	AI_UnequipWeapons	(self);
 
-	EquipItem	(self, ItMw_AxtDesUntergangs);
+	EquipWeapon	(self, ItMw_AxtDesUntergangs);
 
 	AI_ReadyMeleeWeapon	(self);
 
