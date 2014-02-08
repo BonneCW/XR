@@ -60,3 +60,9 @@ FUNC VOID Rtn_InCity2_7619()
 	TA_Sleep	(08,00,23,00,"REL_CITY_320");
 	TA_Sleep	(23,00,08,00,"REL_CITY_320");
 };
+
+FUNC VOID Rtn_Tot_7619()
+{	
+	TA_Stand_Eating	(08,00,23,00,"TOT");
+	TA_Stand_Eating	(23,00,08,00,"TOT");
+};
