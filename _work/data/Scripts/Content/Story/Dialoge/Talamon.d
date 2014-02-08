@@ -132,6 +132,9 @@ FUNC VOID Info_Mod_Talamon_Ruestung_Info()
 		Mod_ErsteVerbesserung = TRUE;
 	
 		Wld_InsertNpc	(Feuersnapper,	"NW_PASS_06");
+
+		Log_CreateTopic	(TOPIC_MOD_RUESTUNGSUPGADSE, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_RUESTUNGSUPGADSE, "Beim Pass zum Minental soll sich ein Feuersnapper befinden, mit dessen Haut Talamon meine Feuer Novizenrobe verbessern kann.");
 	};
 
 	if (Kapitel > 3)
@@ -142,6 +145,9 @@ FUNC VOID Info_Mod_Talamon_Ruestung_Info()
 		Mod_ZweiteVerbesserung = TRUE;
 	
 		Wld_InsertNpc	(Feuerlaeufer,	"FP_MAGICGOLEM");
+
+		Log_CreateTopic	(TOPIC_MOD_RUESTUNGSUPGADSE, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_RUESTUNGSUPGADSE, "Auf dem Weg zur Ausgrabungsstätte der Wassermagier soll sich ein Feuerläufer befinden, mit dessen Fell Talamon meine Feuermagierrobe verbessern kann.");
 	};
 
 	Info_ClearChoices	(Info_Mod_Talamon_Ruestung);

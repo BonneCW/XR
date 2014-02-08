@@ -10,3 +10,4 @@ const string TOPIC_MOD_MOOR	=	"Das Moor in Relendel";
 const string TOPIC_MOD_PRISMA	=	"Allgemeine Infos";
 const string TOPIC_MOD_SCHAGBY	=	"Schagby";
 const string TOPIC_MOD_SCHMUCK	=	"Schmuckbaupläne";
+const string TOPIC_MOD_RUESTUNGSUPGADSE	=	"Rüstungsverbesserung";

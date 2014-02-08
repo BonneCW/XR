@@ -1364,6 +1364,9 @@ FUNC VOID Info_Mod_Vatras_Ruestung_Info()
 		Wld_InsertNpc	(Wassersnapper,	"NW_TROLLAREA_PATH_72");
 		Wld_InsertNpc	(Wassersnapper,	"NW_TROLLAREA_PATH_72");
 		Wld_InsertNpc	(Wassersnapper,	"NW_TROLLAREA_PATH_72");
+
+		Log_CreateTopic	(TOPIC_MOD_RUESTUNGSUPGADSE, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_RUESTUNGSUPGADSE, "Beim See nordwestlich der Ausgrabungsstätte soll sich ein Rudel Wassersnapper befinden, mit deren Haut Vatras meine Wasser Novizenrobe verbessern kann.");
 	};
 
 	if (Kapitel > 3)
@@ -1374,6 +1377,9 @@ FUNC VOID Info_Mod_Vatras_Ruestung_Info()
 		Mod_ZweiteVerbesserung = TRUE;
 	
 		Wld_InsertNpc	(Wasserlaeufer,	"FP_MAGICGOLEM");
+
+		Log_CreateTopic	(TOPIC_MOD_RUESTUNGSUPGADSE, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_RUESTUNGSUPGADSE, "Auf dem Weg zur Ausgrabungsstätte der Wassermagier soll sich ein Wasserläufer befinden, mit dessen Fell Vatras meine Wassermagierrobe verbessern kann.");
 	};
 
 	Info_ClearChoices	(Info_Mod_Vatras_Ruestung);

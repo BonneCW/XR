@@ -180,6 +180,9 @@ FUNC VOID Info_Mod_Orik_Ruestung_Info()
 		Mod_ErsteVerbesserung = TRUE;
 
 		Wld_InsertNpc	(Orcdog_Big,	"OW_PATH_1_16_8");
+
+		Log_CreateTopic	(TOPIC_MOD_RUESTUNGSUPGADSE, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_RUESTUNGSUPGADSE, "Beim Pass im Minental soll sich ein großer Orkhund befinden, mit dessen Fell Orik meine schwere Söldnerrüstung verbessern kann.");
 	};
 
 	if (Kapitel > 3)
@@ -190,6 +193,9 @@ FUNC VOID Info_Mod_Orik_Ruestung_Info()
 		Mod_ZweiteVerbesserung = TRUE;
 
 		Wld_InsertNpc	(Wyver,	"OW_PATH_276");
+
+		Log_CreateTopic	(TOPIC_MOD_RUESTUNGSUPGADSE, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_RUESTUNGSUPGADSE, "Beim Stonehenge soll sich ein Wyvern befinden, mit dessen Schuppen Orik meine Orkjägerrüstung verbessern kann.");
 	};
 
 	if (Mod_HasSLDH == TRUE)

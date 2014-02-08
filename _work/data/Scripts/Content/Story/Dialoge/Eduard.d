@@ -601,6 +601,9 @@ FUNC VOID Info_Mod_Eduard_Ruestung_Info()
 		Mod_ZweiteVerbesserung = TRUE;
 
 		Eduard_SpawnUpOne = TRUE;
+
+		Log_CreateTopic	(TOPIC_MOD_RUESTUNGSUPGADSE, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_RUESTUNGSUPGADSE, "Auf dem Weg zur Ausgrabungsstätte der Wassermagier soll sich ein Nachtmahr befinden, mit dessen Fell Eduard meine schwarze Kriegerrüstung verbessern kann.");
 	};
 
 	if (Kapitel > 1)
@@ -612,6 +615,9 @@ FUNC VOID Info_Mod_Eduard_Ruestung_Info()
 		Mod_ErsteVerbesserung = TRUE;
 
 		Eduard_SpawnUpTwo = TRUE;
+
+		Log_CreateTopic	(TOPIC_MOD_RUESTUNGSUPGADSE, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_RUESTUNGSUPGADSE, "Am Pass bei Khorinis soll sich ein Schattensnapper befinden, mit dessen Haut Eduard meine schwarze Novizenrobe verbessern kann.");
 	};
 
 	Info_ClearChoices	(Info_Mod_Eduard_Ruestung);

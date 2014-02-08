@@ -580,6 +580,9 @@ FUNC VOID Info_Mod_Myxir_Ruestung_Info()
 		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_28_01"); //Ich hab gehört, dass auf dem Weg zur Ausgrabungsstätte der Wassermagier ein Nachtmahr sein soll. Mit dessen Fell könnte ich deine schwarze Magierrobe sicher ein wenig verbessern.
 	
 		Mod_ZweiteVerbesserung = TRUE;
+
+		Log_CreateTopic	(TOPIC_MOD_RUESTUNGSUPGADSE, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_RUESTUNGSUPGADSE, "Auf dem Weg zur Ausgrabungsstätte der Wassermagier soll sich ein Nachtmahr befinden, mit dessen Fell Myxir meine schwarze Magierrobe verbessern kann.");
 	};
 
 	Info_ClearChoices	(Info_Mod_Myxir_Ruestung);

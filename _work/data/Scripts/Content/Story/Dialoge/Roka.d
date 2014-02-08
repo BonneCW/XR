@@ -54,6 +54,9 @@ FUNC VOID Info_Mod_Roka_Ruestung_Info()
 		Mod_ZweiteVerbesserung = TRUE;
 	
 		Wld_InsertNpc	(Wasserlaeufer,	"FP_MAGICGOLEM");
+
+		Log_CreateTopic	(TOPIC_MOD_RUESTUNGSUPGADSE, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_RUESTUNGSUPGADSE, "Auf dem Weg zur Ausgrabungsstätte der Wassermagier soll sich ein Wasserläufer befinden, mit dessen Fell Roka meine Wasserkriegerrüstung verbessern kann.");
 	};
 
 	Info_ClearChoices	(Info_Mod_Roka_Ruestung);
