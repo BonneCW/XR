@@ -146,6 +146,26 @@ func void UseGestathTrophyList ()
 		{
 			Doc_PrintLines	( nDocID,  0, ConcatStrings(IntToString(Mod_EIS_Gestath_DragonsnapperHorn), "x Horn eines Drachensnappers"));
 		};
+		if (Mod_EIS_Gestath_LurkerClaw > 0)
+		{
+			Doc_PrintLines	( nDocID,  0, ConcatStrings(IntToString(Mod_EIS_Gestath_LurkerClaw), "x Lurkerklaue"));
+		};
+		if (Mod_EIS_Gestath_Keilerhauer > 0)
+		{
+			Doc_PrintLines	( nDocID,  0, ConcatStrings(IntToString(Mod_EIS_Gestath_Keilerhauer), "x Keilerhauer"));
+		};
+		if (Mod_EIS_Gestath_Flammenzunge > 0)
+		{
+			Doc_PrintLines	( nDocID,  0, ConcatStrings(IntToString(Mod_EIS_Gestath_Flammenzunge), "x Flammenzunge"));
+		};
+		if (Mod_EIS_Gestath_ShadowHorn > 0)
+		{
+			Doc_PrintLines	( nDocID,  0, ConcatStrings(IntToString(Mod_EIS_Gestath_ShadowHorn), "x Horn eines Schattenläufers"));
+		};
+		if (Mod_EIS_Gestath_SharkTeeth > 0)
+		{
+			Doc_PrintLines	( nDocID,  0, ConcatStrings(IntToString(Mod_EIS_Gestath_SharkTeeth), "x Zähne eines Sumpfhaies"));
+		};
 					
 		Doc_Show		( nDocID );
 

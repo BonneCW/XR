@@ -86,6 +86,11 @@ FUNC VOID Info_Mod_Gestath_TrophaenHolen_Info()
 		B_GiveInvItems	(self, hero, ItWr_GestathTrophyList, 1);
 
 		Mod_EIS_Gestath_DragonsnapperHorn = r_max(4);
+		Mod_EIS_Gestath_LurkerClaw = r_max(10);
+		Mod_EIS_Gestath_Keilerhauer = r_max(5);
+		Mod_EIS_Gestath_Flammenzunge = r_max(4);
+		Mod_EIS_Gestath_ShadowHorn = r_max(4);
+		Mod_EIS_Gestath_SharkTeeth = r_max(4);
 	}
 	else
 	{
@@ -109,6 +114,11 @@ FUNC INT Info_Mod_Gestath_TrophaenGeben_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Gestath_TrophaenHolen))
 	&& (Mod_EIS_Gestath == 1)
 	&& (Npc_HasItems(hero, ItAt_DrgSnapperHorn) >= Mod_EIS_Gestath_DragonsnapperHorn)
+	&& (Npc_HasItems(hero, ItAt_LurkerClaw) >= Mod_EIS_Gestath_LurkerClaw)
+	&& (Npc_HasItems(hero, ItAt_Keilerhauer) >= Mod_EIS_Gestath_Keilerhauer)
+	&& (Npc_HasItems(hero, ItAt_WaranFiretongue) >= Mod_EIS_Gestath_Flammenzunge)
+	&& (Npc_HasItems(hero, ItAt_ShadowHorn) >= Mod_EIS_Gestath_ShadowHorn)
+	&& (Npc_HasItems(hero, ItAt_SharkTeeth) >= Mod_EIS_Gestath_SharkTeeth)
 	{
 		return 1;
 	};
@@ -121,15 +131,20 @@ FUNC VOID Info_Mod_Gestath_TrophaenGeben_Info()
 	B_ShowGivenThings	("Trophäen gegeben");
 
 	Npc_RemoveInvItems	(hero, ItAt_DrgSnapperHorn, Mod_EIS_Gestath_DragonsnapperHorn);
+	Npc_RemoveInvItems	(hero, ItAt_LurkerClaw, Mod_EIS_Gestath_LurkerClaw);
+	Npc_RemoveInvItems	(hero, ItAt_Keilerhauer, Mod_EIS_Gestath_Keilerhauer);
+	Npc_RemoveInvItems	(hero, ItAt_WaranFiretongue, Mod_EIS_Gestath_Flammenzunge);
+	Npc_RemoveInvItems	(hero, ItAt_ShadowHorn, Mod_EIS_Gestath_ShadowHorn);
+	Npc_RemoveInvItems	(hero, ItAt_SharkTeeth, Mod_EIS_Gestath_SharkTeeth);
 	Npc_RemoveInvItems	(hero, ItWr_GestathTrophyList, 1);
 
 	AI_Output(self, hero, "Info_Mod_Gestath_TrophaenGeben_09_01"); //Gut, danke. Hier ist dein Gold.
 
-	B_GiveInvItems	(self, hero, ItMi_Gold, (Mod_EIS_Gestath_DragonsnapperHorn*Value_DrgSnapperHorn)/2);
+	B_GiveInvItems	(self, hero, ItMi_Gold, (Mod_EIS_Gestath_DragonsnapperHorn * Value_DrgSnapperHorn + Mod_EIS_Gestath_LurkerClaw * Value_LurkerClaw + Mod_EIS_Gestath_Keilerhauer * Value_Keilerhauer + Mod_EIS_Gestath_Flammenzunge * Value_WaranFiretongue + Mod_EIS_Gestath_ShadowHorn * Value_ShadowHorn + Mod_EIS_Gestath_SharkTeeth * Value_SharkTeeth) / 2);
 
 	Mod_EIS_Gestath = 0;
 
-	Mod_EIS_Gestath_Day = Wld_GetDay()+5;
+	Mod_EIS_Gestath_Day = Wld_GetDay() + 5;
 };
 
 INSTANCE Info_Mod_Gestath_Lernen (C_INFO)

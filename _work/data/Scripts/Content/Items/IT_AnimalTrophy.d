@@ -19,6 +19,7 @@ const int	Value_BugMandibles			=	15;
 const int	Value_Claw					=	15;
 const int	Value_LurkerClaw			=	15;	
 const int	Value_Teeth					=	15;
+const int	Value_KeilerHauer					=	20;
 const int	Value_ErzdemonTooth					=	500;
 const int	Value_CrawlerMandibles		=	15;	
 const int	Value_Wing					=	20;
@@ -650,7 +651,7 @@ INSTANCE ItAt_Wirbelsaeule (C_Item)
 /******************************************************************************************/
 INSTANCE ItAt_LurkerClaw (C_Item)
 {
-	name 				=	"Lurker Klaue";
+	name 				=	"Lurkerklaue";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1297,7 +1298,7 @@ INSTANCE ItAt_KeilerHauer (C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_KeilerFur;
+	value 				=	Value_KeilerHauer;
 
 	visual 				=	"ItAt_KeilerHauer.3DS";
 	material 			=	MAT_LEATHER;
@@ -1392,7 +1393,7 @@ INSTANCE ItAt_DrgSnapperHorn (C_Item)
 /******************************************************************************************/
 INSTANCE ItAt_CrawlerPlate (C_Item)
 {
-	name 				=	"Minecrawler Panzerplatten";
+	name 				=	"Minecrawler-Panzerplatten";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1692,7 +1693,7 @@ INSTANCE ItAt_TrollHöhleFur (C_Item)
 
 INSTANCE ItAt_TrollHöhleFur_Rein (C_Item)
 {
-	name 				=	"unbeschädigtesHöhlentrollfell";
+	name 				=	"unbeschädigtes Höhlentrollfell";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
