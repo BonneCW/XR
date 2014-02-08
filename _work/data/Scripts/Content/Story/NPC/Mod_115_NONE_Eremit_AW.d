@@ -12,13 +12,13 @@ INSTANCE Mod_115_NONE_Eremit_AW (Npc_Default)
 	aivar[AIV_ToughGuy] 			= TRUE;
 
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);																
+	B_SetAttributesToChapter (self, 6);																
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_NORMAL;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem (self, ItMw_1h_Bau_Mace);
+	EquipItem (self, ItMw_Nagelknueppel);
 		
 	// ------ Inventory ------
 

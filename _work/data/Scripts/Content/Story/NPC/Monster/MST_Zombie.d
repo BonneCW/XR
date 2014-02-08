@@ -286,6 +286,30 @@ INSTANCE ZombieRandom		(Mst_Default_Zombie)
 	Npc_SetToFistMode(self);
 };
 
+INSTANCE ZombieRandom_Eremit_01		(Mst_Default_Zombie)
+{
+	B_SetVisual_Zom();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE ZombieRandom_Eremit_02		(Mst_Default_Zombie)
+{
+	B_SetVisual_Zom();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE ZombieRandom_Eremit_03		(Mst_Default_Zombie)
+{
+	B_SetVisual_Zom();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE ZombieRandom_Eremit_04		(Mst_Default_Zombie)
+{
+	B_SetVisual_Zom();
+	Npc_SetToFistMode(self);
+};
+
 INSTANCE ZombieRandom_Weg		(Mst_Default_Zombie)
 {
 	B_SetVisual_Zom();

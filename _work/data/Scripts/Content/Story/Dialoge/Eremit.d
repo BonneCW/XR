@@ -250,17 +250,12 @@ FUNC VOID Info_Mod_Eremit_Prisma2_Info()
 
 	AI_StopProcessInfos	(self);
 
-	Wld_InsertNpc	(Demon_AtEremit,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(ZombieRandom_Weg,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(ZombieRandom_Weg,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(ZombieRandom_Weg,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(ZombieRandom_Weg,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(ZombieRandom_Weg,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(SkeletonMage_Weg,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(SkeletonWarrior_Weg,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(SkeletonWarrior_Weg,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(Skeleton_Weg,	"ADW_VALLEY_PATH_031");
-	Wld_InsertNpc	(Skeleton_Weg,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(ZombieRandom_Eremit_01,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(ZombieRandom_Eremit_02,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(ZombieRandom_Eremit_03,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(ZombieRandom_Eremit_04,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(Skeleton_Eremit_01,	"ADW_VALLEY_PATH_031");
+	Wld_InsertNpc	(Skeleton_Eremit_02,	"ADW_VALLEY_PATH_031");
 };
 
 INSTANCE Info_Mod_Eremit_Prisma3 (C_INFO)
@@ -276,7 +271,12 @@ INSTANCE Info_Mod_Eremit_Prisma3 (C_INFO)
 FUNC INT Info_Mod_Eremit_Prisma3_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Eremit_Prisma2))
-	&& (Npc_IsDead(Demon_AtEremit))
+	&& (Npc_IsDead(ZombieRandom_Eremit_01))
+	&& (Npc_IsDead(ZombieRandom_Eremit_02))
+	&& (Npc_IsDead(ZombieRandom_Eremit_03))
+	&& (Npc_IsDead(ZombieRandom_Eremit_04))
+	&& (Npc_IsDead(Skeleton_Eremit_01))
+	&& (Npc_IsDead(Skeleton_Eremit_02))
 	{
 		return 1;
 	};

@@ -455,7 +455,7 @@ INSTANCE Info_Mod_Bosper_LehrlingQuest (C_INFO)
 FUNC INT Info_Mod_Bosper_LehrlingQuest_Condition()
 {
 	if (Mod_LehrlingBei == 4)
-	&& (Npc_HasItems(hero, ItAt_KeilerFur_Rein) >= 5)
+	&& (Npc_HasItems(hero, ItAt_Addon_KeilerFur_Rein) >= 5)
 	{
 		return 1;
 	};
@@ -465,9 +465,9 @@ FUNC VOID Info_Mod_Bosper_LehrlingQuest_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bosper_LehrlingQuest_15_00"); //Die fünf Keilerfelle, unbeschädigt.
 
-	B_GiveInvItems	(hero, self, ItAt_KeilerFur_Rein, 5);
+	B_GiveInvItems	(hero, self, ItAt_Addon_KeilerFur_Rein, 5);
 
-	Npc_RemoveInvItems	(self, ItAt_KeilerFur_Rein, 5);
+	Npc_RemoveInvItems	(self, ItAt_Addon_KeilerFur_Rein, 5);
 
 	AI_Output(self, hero, "Info_Mod_Bosper_LehrlingQuest_11_01"); //(prüfend) Ja, die sind zu gebrauchen.
 	AI_Output(self, hero, "Info_Mod_Bosper_LehrlingQuest_11_02"); //Hier hast du etwas Geld. Aber gib es nicht für Bier und leichte Mädchen aus!

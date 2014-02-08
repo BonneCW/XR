@@ -108,6 +108,20 @@ INSTANCE Skeleton			(Mst_Default_Skeleton)
 	EquipItem (self, ItMw_2H_Sword_M_01);
 };
 
+INSTANCE Skeleton_Eremit_01			(Mst_Default_Skeleton)
+{
+	B_SetVisuals_Skeleton();
+
+	EquipItem (self, ItMw_2H_Sword_M_01);
+};
+
+INSTANCE Skeleton_Eremit_02			(Mst_Default_Skeleton)
+{
+	B_SetVisuals_Skeleton();
+
+	EquipItem (self, ItMw_2H_Sword_M_01);
+};
+
 INSTANCE Skeleton_Weg			(Mst_Default_Skeleton)
 {
 	B_SetVisuals_Skeleton();
