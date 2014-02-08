@@ -34,8 +34,6 @@ FUNC VOID B_ActivateFokus ()
 
 		B_SetTopicStatus	(TOPIC_MOD_FOKUSSUCHE, LOG_SUCCESS);
 
-		//B_Kapitelwechsel (3, ADDONWORLD_ZEN);
-
 		Mod_HQ_FokusZuXardas = 1;
 
 		B_StartOtherRoutine	(PC_Friend_AW, "TOT");
@@ -46,6 +44,8 @@ FUNC VOID B_ActivateFokus ()
 	PLAYER_MOBSI_PRODUCTION = 0;
 
 	AI_StopProcessInfos	(hero);
+
+	B_SetAivar (hero, AIV_INVINCIBLE, FALSE);
 
 	if (hero.guild == GIL_NOV)
 	{

@@ -23,17 +23,17 @@ FUNC VOID Info_Mod_Brandon_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Brandon_Hi_04_02"); //Soso zu Greg also? Und was willst du beim Käpt'n?
 	AI_Output(hero, self, "Info_Mod_Brandon_Hi_15_03"); //Ich will Pirat werden.
 	AI_Output(self, hero, "Info_Mod_Brandon_Hi_04_04"); //Du willst Pirat werden? Mit deinen mickrigen Ärmchen?
-	AI_Output(self, hero, "Info_Mod_Brandon_Hi_04_05"); //Ich mach dir 'n Vorschlag. Du erlegst 'n Waran, der in der Nähe des Lagers rumstreunt.
-	AI_Output(self, hero, "Info_Mod_Brandon_Hi_04_06"); //Er macht n paar der Waschweiber Angst. (lacht)
+	AI_Output(self, hero, "Info_Mod_Brandon_Hi_04_05"); //Ich mach dir 'n Vorschlag. Du erlegst 'n größeren Strandwaran, der in der Nähe des Lagers rumstreunt.
+	AI_Output(self, hero, "Info_Mod_Brandon_Hi_04_06"); //Er macht 'n paar der Waschweiber Angst. (lacht)
 	AI_Output(hero, self, "Info_Mod_Brandon_Hi_15_07"); //Waschweiber? Ich sehe hier aber gar keine Frauen.
-	AI_Output(self, hero, "Info_Mod_Brandon_Hi_04_08"); //(lacht hämisch) Die Waschweiber sind die „Jungs“ aus Henrys Entertrupp.
-	AI_Output(self, hero, "Info_Mod_Brandon_Hi_04_09"); //Aber die wirst du noch früh genug sehen Jungchen.
+	AI_Output(self, hero, "Info_Mod_Brandon_Hi_04_08"); //(lacht hämisch) Die Waschweiber sind die "Jungs" aus Henrys Entertrupp.
+	AI_Output(self, hero, "Info_Mod_Brandon_Hi_04_09"); //Aber die wirst du noch früh genug sehen, Jungchen.
 	AI_Output(self, hero, "Info_Mod_Brandon_Hi_04_10"); //Wenn ich mich richtig erinnere, dann solltest du noch 'n Waran erledigen.
 	AI_Output(hero, self, "Info_Mod_Brandon_Hi_15_11"); //Ich geh ja schon ...
 
 	Log_CreateTopic	(TOPIC_MOD_BRANDON_WARAN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_BRANDON_WARAN, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_BRANDON_WARAN, "Ich soll für Brandon einen Waran töten.");
+	B_LogEntry	(TOPIC_MOD_BRANDON_WARAN, "Ich soll für Brandon einen großen Strandwaran töten.");
 };
 
 INSTANCE Info_Mod_Brandon_Waran (C_INFO)

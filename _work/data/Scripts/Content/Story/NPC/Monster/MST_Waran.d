@@ -89,6 +89,10 @@ INSTANCE Waran_William	(Mst_Default_Waran)
 
 INSTANCE BrandonWaran	(Mst_Default_Waran)
 {
+	name							=	"Strandwaran";
+
 	B_SetVisuals_Waran();
 	Npc_SetToFistMode(self);
+
+	Mdl_SetModelScale	(self, 1.2, 1.2, 1.2);
 };

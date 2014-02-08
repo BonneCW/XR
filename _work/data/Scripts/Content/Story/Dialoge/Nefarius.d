@@ -47,7 +47,7 @@ FUNC VOID Info_Mod_Nefarius_Saturas_Info()
 	AI_Output(self, hero, "Info_Mod_Nefarius_Saturas_05_01"); //Den Inschriften Zufolge wurde dieser Ring zur Sicherheit in vier gleiche Teile geteilt und in allen vier Himmelrichtungen versteckt.
 	AI_Output(self, hero, "Info_Mod_Nefarius_Saturas_05_02"); //Bevor du dich auf die Suche machst solltest du noch mit Merdarion reden.
 
-	B_LogEntry	(TOPIC_MOD_PORTAL, "Nefarius erzählt etwas von einem Ring, der das Portal öffnen könnte. Dieser Ring wurde jedoch scheinbar geteilt und in allen vier Himmelrichtungen versteckt.");
+	B_LogEntry	(TOPIC_MOD_PORTAL, "Nefarius erzählt etwas von einem Ring, der das Portal öffnen könnte. Dieser Ring wurde jedoch scheinbar geteilt und in allen vier Himmelrichtungen versteckt. Ich soll vorher nochmal mit Merdarion sprechen.");
 };
 
 INSTANCE Info_Mod_Nefarius_PortalDicht (C_INFO)
