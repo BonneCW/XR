@@ -25,6 +25,7 @@ instance Mod_1627_VMG_Ken_MT (Npc_Default)
 	B_SetAttributesToChapter (self, 6);                                  
 	
 	//-------- inventory --------                                    
+	EquipItem	(self, ItMw_Nagelkeule);
 
 	
 	//-------------Daily Routine-------------

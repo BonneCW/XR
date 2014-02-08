@@ -13,13 +13,6 @@ instance Mod_1630_VMG_Ferco_MT (Npc_Default)
 
 
 	//-------- abilities --------
-
-	attribute[ATR_STRENGTH] =		13;
-	attribute[ATR_DEXTERITY] =		10;
-	attribute[ATR_MANA_MAX] =		0;
-	attribute[ATR_MANA] =			0;
-	attribute[ATR_HITPOINTS_MAX] =	64;
-	attribute[ATR_HITPOINTS] =		64;
 	//-------- visuals --------
 	// 				animations
 	Mdl_SetVisual		(self,"HUMANS.MDS");
@@ -36,11 +29,11 @@ instance Mod_1630_VMG_Ferco_MT (Npc_Default)
 
 	
 	//-------- inventory --------                                    
-	
+	EquipItem	(self, ItMw_ShortSword3);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_1630;
-	};
+};
 
 FUNC VOID Rtn_start_1630 ()
 {

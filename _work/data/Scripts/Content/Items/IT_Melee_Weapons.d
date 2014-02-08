@@ -1837,7 +1837,7 @@ INSTANCE ItMw_1h_Pal_Sword_Geschaerft (C_Item)
 // *****************************************************
 INSTANCE ItMw_2h_Pal_Sword (C_Item)
 {	
-	name 				=	"Paladin Zweihänder";  //NUR PALADIN 
+	name 				=	"Paladin-Zweihänder";  //NUR PALADIN 
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -1861,7 +1861,7 @@ INSTANCE ItMw_2h_Pal_Sword (C_Item)
 };
 INSTANCE ItMw_2h_Pal_Sword_Geschaerft (C_Item)
 {	
-	name 				=	"Paladin Zweihänder (geschärft)";  //NUR PALADIN 
+	name 				=	"Paladin-Zweihänder (geschärft)";  //NUR PALADIN 
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
