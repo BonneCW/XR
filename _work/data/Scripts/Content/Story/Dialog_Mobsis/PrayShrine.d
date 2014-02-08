@@ -564,6 +564,30 @@ FUNC VOID PC_PrayShrine_Reg_HP ()
 	};
 };
 
+FUNC VOID B_MardukGebet() {
+	if (Npc_KnowsInfo(hero, Info_Mod_Marduk_Nachtschicht)) {
+		if (!Mod_Marduk_Gebetet) {
+			if (Wld_GetDay() - 1 > Mod_Marduk_BetTag) {
+				Mod_Marduk_BetReihe = 0;
+			} else if (Wld_GetDay() == Mod_Marduk_BetTag) {
+				// Hier passiert nichts, sonst kann man einfach 7x an einem Tag beten
+			} else {
+				Mod_Marduk_BetReihe += 1;
+			};
+
+			Mod_Marduk_BetTag = Wld_GetDay();
+
+			if (Mod_Marduk_BetReihe == 7) {
+				B_BlessAttribute (hero, ATR_MANA_MAX, 2);
+
+				Mod_Marduk_Gebetet = TRUE;
+
+				B_LogEntry	(TOPIC_MOD_MARDUK_NACHTSCHICHT, "Ich habe eine Woche lang jeden Tag gebetet. Das sollte meinen Glauben bewiesen haben.");
+			};
+		};
+	};
+};
+
 //****************
 //	0 Gold
 //****************
@@ -586,31 +610,7 @@ FUNC VOID PC_PrayShrine_Pray_NoPay ()
 		PrintScreen	(Print_BlessNone, -1, -1, FONT_SCREEN, 2);
 	};
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Marduk_Nachtschicht))
-	{
-		if (Mod_Marduk_Gebetet == FALSE)
-		{
-			if (Wld_GetDay()-1 > Mod_Marduk_BetTag)
-			{
-				Mod_Marduk_BetReihe = 0;
-			}
-			else
-			{
-				Mod_Marduk_BetReihe += 1;
-			};
-
-			Mod_Marduk_BetTag = Wld_GetDay();
-
-			if (Mod_Marduk_BetReihe == 7)
-			{
-				B_BlessAttribute (hero, ATR_MANA_MAX, 2);
-
-				Mod_Marduk_Gebetet = TRUE;
-
-				B_LogEntry	(TOPIC_MOD_MARDUK_NACHTSCHICHT, "Ich habe eine Woche lang jeden Tag gebetet. Das sollte meinen Glauben bewiesen haben.");
-			};
-		};
-	};
+	B_MardukGebet();
 
 	B_Göttergefallen(1, 1);
 	
@@ -634,31 +634,7 @@ func VOID PC_PrayShrine_Pray_SmallPay ()
 		B_BlessAttribute (hero, ATR_HITPOINTS_MAX, 1);
 	};
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Marduk_Nachtschicht))
-	{
-		if (Mod_Marduk_Gebetet == FALSE)
-		{
-			if (Wld_GetDay()-1 > Mod_Marduk_BetTag)
-			{
-				Mod_Marduk_BetReihe = 0;
-			}
-			else
-			{
-				Mod_Marduk_BetReihe += 1;
-			};
-
-			Mod_Marduk_BetTag = Wld_GetDay();
-
-			if (Mod_Marduk_BetReihe == 7)
-			{
-				B_BlessAttribute (hero, ATR_MANA_MAX, 2);
-
-				Mod_Marduk_Gebetet = TRUE;
-
-				B_LogEntry	(TOPIC_MOD_MARDUK_NACHTSCHICHT, "Ich habe eine Woche lang jeden Tag gebetet. Das sollte meinen Glauben bewiesen haben.");
-			};
-		};
-	};
+	B_MardukGebet();
 
 	Mod_CountSpende += 10;
 
@@ -673,7 +649,7 @@ func VOID PC_PrayShrine_Pray_SmallPay ()
 //****************
 FUNC VOID PC_PrayShrine_Pray_MediumPay ()
 {
-	Npc_RemoveInvItems  (hero,ItMi_Gold, 50);
+	Npc_RemoveInvItems  (hero, ItMi_Gold, 50);
 	
 	// ----- Heute Schon gebetet? -----	
 	if (PrayDay == Wld_GetDay())		
@@ -685,31 +661,7 @@ FUNC VOID PC_PrayShrine_Pray_MediumPay ()
 		B_BlessAttribute (hero, ATR_HITPOINTS_MAX, 2);
 	};
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Marduk_Nachtschicht))
-	{
-		if (Mod_Marduk_Gebetet == FALSE)
-		{
-			if (Wld_GetDay()-1 > Mod_Marduk_BetTag)
-			{
-				Mod_Marduk_BetReihe = 0;
-			}
-			else
-			{
-				Mod_Marduk_BetReihe += 1;
-			};
-
-			Mod_Marduk_BetTag = Wld_GetDay();
-
-			if (Mod_Marduk_BetReihe == 7)
-			{
-				B_BlessAttribute (hero, ATR_MANA_MAX, 2);
-
-				Mod_Marduk_Gebetet = TRUE;
-
-				B_LogEntry	(TOPIC_MOD_MARDUK_NACHTSCHICHT, "Ich habe eine Woche lang jeden Tag gebetet. Das sollte meinen Glauben bewiesen haben.");
-			};
-		};
-	};
+	B_MardukGebet();
 
 	Mod_CountSpende += 50;
 
@@ -724,9 +676,9 @@ FUNC VOID PC_PrayShrine_Pray_MediumPay ()
 //****************
 func VOID PC_PrayShrine_Pray_BigPay ()
 {
-	var int zufall;	zufall = Hlp_Random(100);
+	var int zufall;	zufall = r_max(99);
 	
-	Npc_RemoveInvItems  (hero,ItMi_Gold, 100);
+	Npc_RemoveInvItems  (hero, ItMi_Gold, 100);
 	
 	// ----- Heute Schon gebetet? -----	
 	if (PrayDay == Wld_GetDay())		
@@ -758,31 +710,7 @@ func VOID PC_PrayShrine_Pray_BigPay ()
 		};
 	};
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Marduk_Nachtschicht))
-	{
-		if (Mod_Marduk_Gebetet == FALSE)
-		{
-			if (Wld_GetDay()-1 > Mod_Marduk_BetTag)
-			{
-				Mod_Marduk_BetReihe = 0;
-			}
-			else
-			{
-				Mod_Marduk_BetReihe += 1;
-			};
-
-			Mod_Marduk_BetTag = Wld_GetDay();
-
-			if (Mod_Marduk_BetReihe == 7)
-			{
-				B_BlessAttribute (hero, ATR_MANA_MAX, 2);
-
-				Mod_Marduk_Gebetet = TRUE;
-
-				B_LogEntry	(TOPIC_MOD_MARDUK_NACHTSCHICHT, "Ich habe eine Woche lang jeden Tag gebetet. Das sollte meinen Glauben bewiesen haben.");
-			};
-		};
-	};
+	B_MardukGebet();
 
 	Mod_CountSpende += 100;
 
