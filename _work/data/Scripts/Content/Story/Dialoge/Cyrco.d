@@ -341,8 +341,6 @@ FUNC VOID Info_Mod_Cyrco_NovizePass_Info()
 	B_GiveInvItems	(self, hero, ItWr_NovizeJGPass, 1);
 
 	AI_Output(self, hero, "Info_Mod_Cyrco_NovizePass_38_05"); //Du findest ihn weiter hinten in der Höhle, dort hat er sein Alchemielabor.
-
-	B_SetTopicStatus	(TOPIC_MOD_JG_GARDISTEN, LOG_SUCCESS);
 };
 
 INSTANCE Info_Mod_Cyrco_Turm (C_INFO)

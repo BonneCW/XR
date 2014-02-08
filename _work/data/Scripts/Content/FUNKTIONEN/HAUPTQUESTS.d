@@ -497,9 +497,9 @@ FUNC VOID HAUPTQUESTS()
 
 		// Aus Kapitel 3 zurück		
 
-		if (Mod_XW_Startscene == 4 || Npc_KnowsInfo(hero, Info_Mod_Argez_XW_Gefangen2))
+		if (Mod_XW_Startscene == 6 || (Npc_KnowsInfo(hero, Info_Mod_Argez_XW_Gefangen2) && Mod_XW_StartScene != 7))
 		{
-			Mod_XW_Startscene = 5;
+			Mod_XW_Startscene = 7;
 
 			AI_Teleport	(PC_Friend_AW, "PC_HERO");
 			B_StartOtherRoutine	(PC_Friend_AW, "BACK");

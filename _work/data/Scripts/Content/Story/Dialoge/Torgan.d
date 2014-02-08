@@ -388,7 +388,6 @@ FUNC VOID Info_Mod_Torgan_NochEinAuftrag_Info()
 	AI_Output(hero, self, "Info_Mod_Torgan_NochEinAuftrag_15_10"); //Ich bin schon unterwegs!
 	AI_Output(self, hero, "Info_Mod_Torgan_NochEinAuftrag_13_11"); //Und hier, nimm diese Geschwindigkeitstränke. Ich denke, du wirst sie brauchen können.
 
-	CreateInvItems	(self, ItPo_Speed, 4);
 	B_GiveInvItems	(self, hero, ItPo_Speed, 4);
 
 	AI_Output(self, hero, "Info_Mod_Torgan_NochEinAuftrag_13_12"); //Und eine Spruchrolle habe ich auch wieder für dich.

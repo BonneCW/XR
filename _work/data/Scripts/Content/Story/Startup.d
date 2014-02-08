@@ -6019,6 +6019,13 @@ FUNC VOID INIT_Minental ()
 		Mod_Enter_Minental_03 = True;
 	};
 
+	if (!Mod_JG_PassNovize)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Cyrco_SuchenderZettel)) {
+		Mod_JG_PassNovize = TRUE;
+
+		Wld_InsertNpc	(Mod_7435_NOV_Novize_MT, "START");
+	};
+
 	if (Kapitel >= 4)
 	&& (Mod_Enter_Minental_04 == FALSE)
 	{

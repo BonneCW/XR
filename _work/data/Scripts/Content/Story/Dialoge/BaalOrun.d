@@ -109,8 +109,6 @@ FUNC VOID Info_Mod_Orun_Cyrco_Info()
 	Wld_InsertNpc	(Mod_7429_BDT_Bandit_MT, "WP_MT_JAEGERLAGER_04");
 	Wld_InsertNpc	(Mod_7430_BDT_Bandit_MT, "WP_MT_JAEGERLAGER_04");
 
-	Wld_InsertNpc	(Mod_7435_NOV_Novize_MT, "START");
-
 	B_LogEntry	(TOPIC_MOD_JG_GARDISTEN, "Baal Orun hatte eine Vision von einer Höhle, die dem Zettel nahe war, umgeben von starker schwarzer Magie. Das sollte Cyrco interessieren.");
 };
 
