@@ -364,15 +364,14 @@ FUNC VOID Info_Mod_Bosper_Aufnahme_A()
 	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_06"); //Wenn sich ihm ein Tier nähert, spannt er den Bogen oder die Armbrust möglichst lautlos und zielt auf das verwundbarste Körperteil des Tiers.
 	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_07"); //In den meisten Fällen ist dies der Kopf, bei einigen Monstern können aber auch Körper und Extremitäten besonders anfällig sein.
 	AI_Output(hero, self, "Info_Mod_Bosper_Aufnahme_A_15_08"); //Einleuchtend.
-	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_09"); //Deine erste Aufgabe wird darin bestehen, mir Wargfelle zu beschaffen.
+	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_09"); //Deine erste Aufgabe wird darin bestehen, mir Keilerfelle zu beschaffen.
 	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_10"); //Achte aber darauf, dass die Felle möglichst unbeschädigt bleiben, soll heißen: ziele auf die Beine.
 	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_11"); //Beschädigte Felle bringen weniger Gold, und man wird sie schlechter los.
 	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_12"); //Natürlich kannst du auch versuchen unbeschädigte Felle über das Totkloppen der Viecher mit stumpfen Waffen zu bekommen.
 	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_13"); //Das ist aber eigentlich eher was für rohe Schläger die auf pure Gewalt setzen und nicht für geschickte Jäger.
 	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_14"); //Außerdem wird es dabei in etwa der Hälfte der Fälle passieren, dass die Haut der Tiere und damit ihr Fell durch die wuchtigen Schläge aufplatzt oder reißt.
-	AI_Output(hero, self, "Info_Mod_Bosper_Aufnahme_A_15_15"); //Wo finde ich Warge?
-	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_16"); //In der Umgebung der Stadt sind sie selten.
-	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_17"); //In abgelegenen Gebieten sind sie eher anzutreffen, und im Minental treiben sie sicher auch ihr Unwesen.
+	AI_Output(hero, self, "Info_Mod_Bosper_Aufnahme_A_15_15"); //Wo finde ich Keiler?
+	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_16"); //Eigentlich sind sie überall zu finden. Schau dich um, das gehört zu einer erfolgreichen Jagd dazu.
 	AI_Output(hero, self, "Info_Mod_Bosper_Aufnahme_A_15_18"); //Und wie viele Felle brauchst du?
 	AI_Output(self, hero, "Info_Mod_Bosper_Aufnahme_A_11_19"); //Bringe mir fünf unbeschädigte Felle, und ich will dir zeigen, wie du bessere Pfeile herstellen kannst.
 
@@ -385,11 +384,11 @@ FUNC VOID Info_Mod_Bosper_Aufnahme_A()
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Torlof_Auftrag))
 	{
-		B_LogEntry_NMore	(TOPIC_MOD_BÜRGER, TOPIC_MOD_LEHRLING_BOSPER_ONE, TOPIC_MOD_TORLOFSPIONAGE, "Bosper, der Bogner, hat mich als seinen Lehrling aufgenommen. Dadurch bin ich jetzt ein Bürger der Stadt.", "Mein erster Auftrag für Bosper besteht darin, dass ich ihm fünf unbeschädigte Wargfelle liefere. Die erhalte ich, indem ich den Wargen in die Beine schieße.", "Da Bosper mich als seinen Lehrling aufgenommen hat ist es mir jetzt möglich das Obere Viertel zu betreten.");
+		B_LogEntry_NMore	(TOPIC_MOD_BÜRGER, TOPIC_MOD_LEHRLING_BOSPER_ONE, TOPIC_MOD_TORLOFSPIONAGE, "Bosper, der Bogner, hat mich als seinen Lehrling aufgenommen. Dadurch bin ich jetzt ein Bürger der Stadt.", "Mein erster Auftrag für Bosper besteht darin, dass ich ihm fünf unbeschädigte Keilerfelle liefere. Die erhalte ich, indem ich den Keilern in die Beine schieße.", "Da Bosper mich als seinen Lehrling aufgenommen hat ist es mir jetzt möglich das Obere Viertel zu betreten.");
 	}
 	else
 	{
-		B_LogEntry_More	(TOPIC_MOD_BÜRGER, TOPIC_MOD_LEHRLING_BOSPER_ONE, "Bosper, der Bogner, hat mich als seinen Lehrling aufgenommen. Dadurch bin ich jetzt ein Bürger der Stadt.", "Mein erster Auftrag für Bosper besteht darin, dass ich ihm fünf unbeschädigte Wargfelle liefere. Die erhalte ich, indem ich den Wargen in die Beine schieße.");
+		B_LogEntry_More	(TOPIC_MOD_BÜRGER, TOPIC_MOD_LEHRLING_BOSPER_ONE, "Bosper, der Bogner, hat mich als seinen Lehrling aufgenommen. Dadurch bin ich jetzt ein Bürger der Stadt.", "Mein erster Auftrag für Bosper besteht darin, dass ich ihm fünf unbeschädigte Keilerfelle liefere. Die erhalte ich, indem ich den Keilern in die Beine schieße.");
 	};
 
 	B_SetTopicStatus	(TOPIC_MOD_BÜRGER, LOG_SUCCESS);
@@ -450,13 +449,13 @@ INSTANCE Info_Mod_Bosper_LehrlingQuest (C_INFO)
 	information	= Info_Mod_Bosper_LehrlingQuest_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Die fünf Wargfelle, unbeschädigt.";
+	description	= "Die fünf Keilerfelle, unbeschädigt.";
 };
 
 FUNC INT Info_Mod_Bosper_LehrlingQuest_Condition()
 {
 	if (Mod_LehrlingBei == 4)
-	&& (Npc_HasItems(hero, ItAt_WargFur_Rein) >= 5)
+	&& (Npc_HasItems(hero, ItAt_KeilerFur_Rein) >= 5)
 	{
 		return 1;
 	};
@@ -464,16 +463,16 @@ FUNC INT Info_Mod_Bosper_LehrlingQuest_Condition()
 
 FUNC VOID Info_Mod_Bosper_LehrlingQuest_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Bosper_LehrlingQuest_15_00"); //Die fünf Wargfelle, unbeschädigt.
+	AI_Output(hero, self, "Info_Mod_Bosper_LehrlingQuest_15_00"); //Die fünf Keilerfelle, unbeschädigt.
 
-	B_GiveInvItems	(hero, self, ItAt_WargFur_Rein, 5);
+	B_GiveInvItems	(hero, self, ItAt_KeilerFur_Rein, 5);
 
-	Npc_RemoveInvItems	(self, ItAt_WargFur_Rein, 5);
+	Npc_RemoveInvItems	(self, ItAt_KeilerFur_Rein, 5);
 
 	AI_Output(self, hero, "Info_Mod_Bosper_LehrlingQuest_11_01"); //(prüfend) Ja, die sind zu gebrauchen.
 	AI_Output(self, hero, "Info_Mod_Bosper_LehrlingQuest_11_02"); //Hier hast du etwas Geld. Aber gib es nicht für Bier und leichte Mädchen aus!
 
-	B_GiveInvItems	(self, hero, ItMi_Gold, (5 * Value_WargFur_Rein) / 2);
+	B_GiveInvItems	(self, hero, ItMi_Gold, (5 * Value_KeilerFur_Rein) / 2);
 
 	AI_Output(self, hero, "Info_Mod_Bosper_LehrlingQuest_11_03"); //Da du dich als einigermaßen geschickt erwiesen hast, will ich dich nun in die Kunst der Pfeilherstellung einführen.
 	AI_Output(self, hero, "Info_Mod_Bosper_LehrlingQuest_11_04"); //Einen normalen Pfeil zu schnitzen, ist selbst für den blutigen Anfänger kein Problem.
