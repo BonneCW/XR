@@ -118,7 +118,7 @@ INSTANCE Info_Mod_Anglar_Trade (C_INFO)
 
 FUNC INT Info_Mod_Anglar_Trade_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Anglar_Feuersbrunst2))
+	if (Npc_KnowsInfo(hero, Info_Mod_Anglar_Hi))
 	{
 		return 1;
 	};

@@ -9,8 +9,7 @@ an ihrer alten Position, deshalb sollten die Funktion oft aufgerufen
 werden, zum Beispiel in jedem Frame
 ==================================================================*/
 
-func void ShowBars ()
-{
+func void ShowBars () {
 	// ----- ursprüngliche Positionen -----
 	
 	var int focus_vposx;
@@ -30,45 +29,34 @@ func void ShowBars ()
 	if (Mod_Balken == 0)
 	|| (Mod_Balken == 1)
 	|| ((Mod_Balken == 2)
-	&& (hero.attribute[ATR_HITPOINTS] < hero.attribute[ATR_HITPOINTS_MAX]))
-	{
+	&& (hero.attribute[ATR_HITPOINTS] < hero.attribute[ATR_HITPOINTS_MAX])) {
 		bar_hp.zCView_vposx = 80;
 		bar_hp.zCView_vposy = 7872;
-	}
-	else if ((Mod_Balken == 2)
-	&& (hero.attribute[ATR_HITPOINTS] == hero.attribute[ATR_HITPOINTS_MAX]))
-	{
+	} else if ((Mod_Balken == 2)
+	&& (hero.attribute[ATR_HITPOINTS] == hero.attribute[ATR_HITPOINTS_MAX])) {
 		bar_hp.zCView_vposx = 8200;
 		bar_hp.zCView_vposy = 8200;
 	};
 
-	if (Mod_Balken == 0)
-	{
+	if (Mod_Balken == 0) {
 		bar_mana.zCView_vposx = 6246;
 		bar_mana.zCView_vposy = 7872;
-	}
-	else if (Mod_Balken == 1)
+	} else if (Mod_Balken == 1)
 	|| ((Mod_Balken == 2)
-	&& (hero.attribute[ATR_MANA] < hero.attribute[ATR_MANA_MAX]))
-	{
+	&& (hero.attribute[ATR_MANA] < hero.attribute[ATR_MANA_MAX])) {
 		bar_mana.zCView_vposx = 80;
 		bar_mana.zCView_vposy = 7572;
-	}
-	else if ((Mod_Balken == 2)
-	&& (hero.attribute[ATR_HITPOINTS] == hero.attribute[ATR_HITPOINTS_MAX]))
-	{
+	} else if ((Mod_Balken == 2)
+	&& (hero.attribute[ATR_HITPOINTS] == hero.attribute[ATR_HITPOINTS_MAX])) {
 		bar_mana.zCView_vposx = 8200;
 		bar_mana.zCView_vposy = 8200;
 	};
 
-	if (Mod_Balken == 0)
-	{
+	if (Mod_Balken == 0) {
 		bar_swim.zCView_vposx = 3376;
 		bar_swim.zCView_vposy = 7872;
-	}
-	else if (Mod_Balken == 1)
-	|| (Mod_Balken == 2)
-	{
+	} else if (Mod_Balken == 1)
+	|| (Mod_Balken == 2) {
 		bar_swim.zCView_vposx = 80;
 		bar_swim.zCView_vposy = 7272;
 	};
@@ -82,9 +70,7 @@ func void ShowBars ()
 	|| (other.aivar[AIV_Tiergift] > 0)
 	{
 		_View_SetTexture(bar_focus.value_bar, "BAR_POISON.TGA");
-	}
-	else
-	{
+	} else {
 		_View_SetTexture(bar_focus.value_bar, "BAR_HEALTH.TGA");
 	};
 
@@ -107,23 +93,17 @@ func void ShowBars ()
 	|| (GGD_Sumpfgasdrohne_Time > 0)
 	|| (GGD_Sumpfgolem_Time > 0)
 	|| (GGD_Sumpfdrache_Time > 0)
-	|| (GGD_Giftkrater_Time > 0)
-	{
+	|| (GGD_Giftkrater_Time > 0) {
 		_View_SetTexture(bar_hp.value_bar, "BAR_POISON.TGA");
-	}
-	else if (BissDerFaeulnis_Time > 0)
-	|| (HauchDerPestilenz_Time > 0)
-	{
+	} else if (BissDerFaeulnis_Time > 0)
+	|| (HauchDerPestilenz_Time > 0) {
 		_View_SetTexture(bar_hp.value_bar, "BAR_KRANK.TGA");
-	}
-	else
-	{
+	} else {
 		_View_SetTexture(bar_hp.value_bar, "BAR_HEALTH.TGA");
 	};
 };
 
-func void HideBars ()
-{
+func void HideBars () {
 	// ----- an die Bars rankommen -----
 	MEM_InitGlobalInst ();
 	var oCViewStatusBar bar_hp; bar_hp = MEM_PtrToInst (MEM_GAME.hpBar);
