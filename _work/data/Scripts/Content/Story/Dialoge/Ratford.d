@@ -144,6 +144,7 @@ INSTANCE Info_Mod_Ratford_Fokus (C_INFO)
 FUNC INT Info_Mod_Ratford_Fokus_Condition()
 {
 	if (Kapitel == 2)
+	&& (Mod_RatfordDrax_Weg)
 	{
 		return 1;
 	};

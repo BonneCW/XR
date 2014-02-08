@@ -176,6 +176,35 @@ FUNC VOID HAUPTQUESTS()
 
 			B_LogEntry	(TOPIC_MOD_ERSTEWAFFE, "Ich habe dem Skelett die Klaue Beliars abgenommen und sollte nun zu Xardas gehen.");
 		};
+
+		// Ratford und Drax wegen Fokus verschwinden lassen
+
+		if (!Mod_RatfordDrax_Weg)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Ratford_Hi))
+		&& (Npc_GetDistToWP(hero, "OW_PATH_1_5_A") > 5000) {
+			Mod_RatfordDrax_Weg = TRUE;
+
+			B_StartOtherRoutine	(Mod_1120_BDT_Ratford_MT, "FOKUS");
+			B_StartOtherRoutine	(Mod_1121_BDT_Drax_MT, "TOT");
+
+			Wld_InsertNpc	(Warg_RatfordDrax_01, "FP_WARGLEICHE_FOKUS_01");
+			Wld_InsertNpc	(Warg_RatfordDrax_02, "FP_WARGLEICHE_FOKUS_02");
+			Wld_InsertNpc	(Warg_RatfordDrax_03, "FP_WARGLEICHE_FOKUS_03");
+			Wld_InsertNpc	(Warg_RatfordDrax_04, "FP_WARGLEICHE_FOKUS_04");
+			Wld_InsertNpc	(Warg_RatfordDrax_05, "FP_WARGLEICHE_FOKUS_05");
+			Wld_InsertNpc	(Warg_RatfordDrax_06, "FP_WARGLEICHE_FOKUS_06");
+			Wld_InsertNpc	(Warg_RatfordDrax_07, "FP_WARGLEICHE_FOKUS_07");
+			Wld_InsertNpc	(Warg_RatfordDrax_08, "FP_WARGLEICHE_FOKUS_08");
+
+			B_KillNpc	(Warg_RatfordDrax_01);
+			B_KillNpc	(Warg_RatfordDrax_02);
+			B_KillNpc	(Warg_RatfordDrax_03);
+			B_KillNpc	(Warg_RatfordDrax_04);
+			B_KillNpc	(Warg_RatfordDrax_05);
+			B_KillNpc	(Warg_RatfordDrax_06);
+			B_KillNpc	(Warg_RatfordDrax_07);
+			B_KillNpc	(Warg_RatfordDrax_08);
+		};
 	};
 
 	if (CurrentLevel == ADDONWORLD_ZEN)
