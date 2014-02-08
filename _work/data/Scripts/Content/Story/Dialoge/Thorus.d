@@ -468,6 +468,7 @@ FUNC VOID Info_Mod_Thorus_OrikDabei_Info()
 	B_LogEntry	(TOPIC_MOD_AL_ORIK, "Wir haben Orik Thorus übergeben, allerdings könnte es jetzt Probleme mit dem Neuen Lager geben.");
 	B_SetTopicStatus	(TOPIC_MOD_AL_ORIK, LOG_SUCCESS);
 
+	AI_Teleport	(Mod_1266_SLD_Orik_MT, "OCC_CELLAR_FRONT_RIGHT_CELL");
 	B_StartOtherRoutine	(Mod_1266_SLD_Orik_MT, "KNAST");
 
 	B_GivePlayerXP	(500);

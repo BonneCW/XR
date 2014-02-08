@@ -64,15 +64,6 @@ FUNC VOID Rtn_FollowToAL_1266 ()
 
 FUNC VOID Rtn_Knast_1266 ()
 {
-	TA_Stand_ArmsCrossed		(19,00,07,00,"OCC_CELLAR_BACK_RIGHT_CELL");
-	TA_Stand_ArmsCrossed		(07,00,19,00,"OCC_CELLAR_BACK_RIGHT_CELL");	
+	TA_Stand_ArmsCrossed		(19,00,07,00,"OCC_CELLAR_FRONT_RIGHT_CELL");
+	TA_Stand_ArmsCrossed		(07,00,19,00,"OCC_CELLAR_FRONT_RIGHT_CELL");	
 };
-
-
-
-
-
-
-
-
-
