@@ -139,7 +139,7 @@ func void B_AssessPlayer ()
 		|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7032_OUT_Entfuehrer_NW)))
 		{
 			if (C_NpcIsHero(other))
-			&& (Npc_GetDistToNpc(self, hero) < 400)
+			&& (Npc_GetDistToNpc(self, hero) < 700)
 			{
 				B_Attack	(self, hero, AR_GuildEnemy, 0);
 			};
