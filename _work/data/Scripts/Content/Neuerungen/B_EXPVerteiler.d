@@ -85,4 +85,16 @@ FUNC VOID B_EXPVerteiler (var C_NPC slf, var C_NPC oth)
 
 		slf.aivar[AIV_VictoryXPGiven] = TRUE;
 	};
+
+	if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Rabbit_Gomez))
+	{
+		if (Hlp_GetInstanceID(oth) == Hlp_GetInstanceID(Mod_517_DMR_Gomez_MT))
+		{
+			Mod_Gomez_HasenKiller += 1;
+		}
+		else
+		{
+			Mod_Gomez_HasenKiller2 += 1;
+		};
+	};
 };

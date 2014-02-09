@@ -104,3 +104,9 @@ FUNC VOID Rtn_Outdoor_7067()
 	TA_RunToWP		(08,00,20,00,"OC_ROUND_20");
 	TA_RunToWP		(20,00,08,00,"OC_ROUND_20");
 };
+
+FUNC VOID Rtn_Hasenjagd_517()
+{
+	TA_Hasenjagd		(08,00,20,00,"PALTO_25");
+	TA_Hasenjagd		(20,00,08,00,"PALTO_25");
+};

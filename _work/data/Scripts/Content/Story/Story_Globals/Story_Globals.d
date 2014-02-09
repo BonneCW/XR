@@ -44,6 +44,9 @@ const int TARGET_RIGHTLEG = 6;
 var int Bosskampf_Pass_NW;
 
 
+var int View_GomezTimer;
+var int View_GomezKillsIch;
+var int View_GomezKills;
 var int Mod_JG_PassNovize;
 var int Mod_RatfordDrax_Weg;
 var int Eduard_SpawnUpOne;

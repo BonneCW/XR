@@ -638,18 +638,6 @@ func void ZS_Dead ()
 		};
 	};
 
-	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Rabbit_Gomez))
-	{
-		if (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_517_DMR_Gomez_MT))
-		{
-			Mod_Gomez_HasenKiller += 1;
-		}
-		else
-		{
-			Mod_Gomez_HasenKiller2 += 1;
-		};
-	};
-
 	if (other.guild == GIL_DRACONIAN)
 	&& (self.guild == GIL_SWAMPGOLEM)
 	{

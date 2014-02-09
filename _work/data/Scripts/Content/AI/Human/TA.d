@@ -152,6 +152,7 @@ func void TA_Holzspalten			(var int start_h, var int start_m, var int stop_h, va
 func void TA_Schatzsuche			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Schatzsuche,				waypoint);};
 func void TA_Make_Rune			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Make_Rune,				waypoint);};
 func void TA_Preach_Hyglas			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Preach_Hyglas,				waypoint);};
+func void TA_Hasenjagd			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Hasenjagd,				waypoint);};
 
 // Ork-TA's
 

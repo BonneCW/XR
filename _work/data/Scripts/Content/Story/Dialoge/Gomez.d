@@ -326,7 +326,12 @@ FUNC VOID Info_Mod_Gomez_Jagd03_G()
 
 	self.aivar[AIV_Partymember] = TRUE;
 
+	self.guild = GIL_KDF;
+	Npc_SetTrueGuild	(self, GIL_KDF);
+
 	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "HASENJAGD");
 
 	Wld_InsertNpc	(Rabbit_Gomez,	"FP_ROAM_RABBITS_GOMEZ_01");
 	Wld_InsertNpc	(Rabbit_Gomez,	"FP_ROAM_RABBITS_GOMEZ_01");
@@ -458,6 +463,9 @@ FUNC INT Info_Mod_Gomez_Jagd04_Condition()
 
 FUNC VOID Info_Mod_Gomez_Jagd04_Info()
 {
+	self.guild = GIL_DMT;
+	Npc_SetTrueGuild	(self, GIL_DMT);
+
 	if (Mod_Gomez_HasenKiller >= Mod_Gomez_HasenKiller2)
 	{
 		AI_Output(self, hero, "Info_Mod_Gomez_Jagd04_10_00"); //(stichelt) Na, wer ist jetzt der Beste?

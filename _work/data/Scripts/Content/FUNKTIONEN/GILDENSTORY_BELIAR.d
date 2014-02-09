@@ -626,9 +626,36 @@ FUNC VOID GILDENSTORY_BELIAR()
 	{
 		if (Mod_Gomez_Timer > 0)
 		{
-			PrintScreen	(IntToString(Mod_Gomez_Timer), 86, 7, FONT_SCREEN, 2);
-			PrintScreen	(ConcatStrings("Ich: ", IntToString(Mod_Gomez_HasenKiller2)), 86, 12, FONT_SCREEN, 2);
-			PrintScreen	(ConcatStrings("Gomez: ", IntToString(Mod_Gomez_HasenKiller)), 86, 17, FONT_SCREEN, 2);
+			if (!Hlp_IsValidHandle(View_GomezTimer))
+			{
+				View_GomezTimer = View_CreatePxl	(Print_Screen[PS_X] - 170, 50, Print_Screen[PS_X] - 20, 80);
+				View_GomezKillsIch = View_CreatePxl	(Print_Screen[PS_X] - 170, 80, Print_Screen[PS_X] - 20, 110);
+				View_GomezKills = View_CreatePxl	(Print_Screen[PS_X] - 170, 110, Print_Screen[PS_X] - 20, 140);
+
+				View_Open	(View_GomezTimer);
+				View_Open	(View_GomezKillsIch);
+				View_Open	(View_GomezKills);
+			};
+
+			View_DeleteText	(View_GomezTimer);
+			View_AddText	(View_GomezTimer, 0, 0, IntToString(Mod_Gomez_Timer), FONT_Screen);
+
+			View_DeleteText	(View_GomezKillsIch);
+			View_AddText	(View_GomezKillsIch, 0, 0, ConcatStrings("Ich: ", IntToString(Mod_Gomez_HasenKiller2 / 2)), FONT_Screen);
+
+			View_DeleteText	(View_GomezKills);
+			View_AddText	(View_GomezKills, 0, 0, ConcatStrings("Gomez: ", IntToString(Mod_Gomez_HasenKiller)), FONT_Screen);
+
+			if (Mod_Gomez_Timer == 1) {
+				View_DeleteText	(View_GomezTimer);
+				View_Delete	(View_GomezTimer);
+
+				View_DeleteText	(View_GomezKillsIch);
+				View_Delete	(View_GomezKillsIch);
+
+				View_DeleteText	(View_GomezKills);
+				View_Delete	(View_GomezKills);
+			};
 
 			Mod_Gomez_Timer -= 1;
 		};
