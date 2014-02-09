@@ -15,7 +15,7 @@ instance Mod_1742_PSITPL_Templer_MT (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem (self, ItMw_2H_Axe_L_01);
+	EquipItem (self, ItMw_2H_Sword_Light_02);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
