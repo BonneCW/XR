@@ -23,7 +23,7 @@ instance Mod_7557_STRF_Straefling_NW (Npc_Default)
 
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Weak_Herek, BodyTex_N,ITAR_Prisoner);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", 70, 3,ITAR_Prisoner);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 	
