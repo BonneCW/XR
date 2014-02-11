@@ -757,8 +757,9 @@ const int SPL_AuraFlammen		= 201;
 const int SPL_TeleportGDG		= 202;
 const int SPL_TeleportBeliarfestung	= 203;
 const int SPL_ZiegeZaehmen	= 204;
+const int SPL_TeleportArgezToSaturas	= 205;
 
-const int MAX_SPELL					= 205;   // 59 (Gothic), 68 (Gothic2), 100 (G2Addon)
+const int MAX_SPELL					= 206;   // 59 (Gothic), 68 (Gothic2), 100 (G2Addon)
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1007,7 +1008,8 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"AuraFlammen",
 	"Teleport",
 	"Teleport",
-	"Zaehmen"
+	"Zaehmen",
+	"Teleport"
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1257,7 +1259,8 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"HEA",	//201
 	"HEA",	//202
 	"HEA",
-	"CON"
+	"CON",
+	"HEA"
 };
 
 

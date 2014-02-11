@@ -284,15 +284,20 @@ FUNC VOID Info_Mod_Saturas_NW_Argez2_Info()
 	AI_Output(self, hero, "Info_Mod_Saturas_NW_Argez2_14_06"); //Hmm, eine verdächtige Persönlichkeit allemal.
 	AI_Output(self, hero, "Info_Mod_Saturas_NW_Argez2_14_07"); //(überlegt) Meinst du, du schaffst es, ihn zu mir zu bringen? Ich würde mich zu gern mit ihm unterhalten.
 	AI_Output(hero, self, "Info_Mod_Saturas_NW_Argez2_15_08"); //Ich glaube nicht, dass das ein Problem wäre.
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Argez2_14_09"); //Ach, bevor du gehst, hätte ich gern mein Amulett zurück.
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Argez2_14_09"); //Sehr gut. Um dir und ihm einen weiten Weg zurück zu ersparen, habe ich diese Spruchrolle angefertigt.
+
+	B_GiveInvItems	(self, hero, ItSc_ArgezToSaturas, 1);
+
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Argez2_14_10"); //Nutze sie, wenn du ihn dazu gebracht hast dich zu begleiten.
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Argez2_14_11"); //Ach, bevor du gehst, hätte ich gern mein Amulett zurück.
 
 	if (Npc_HasItems(hero, ItAm_Anomalie) == 1)
 	{
-		AI_Output(hero, self, "Info_Mod_Saturas_NW_Argez2_15_10"); //Hier ist es.
+		AI_Output(hero, self, "Info_Mod_Saturas_NW_Argez2_15_12"); //Hier ist es.
 
 		B_GiveInvItems	(hero, self, ItAm_Anomalie, 1);
 
-		AI_Output(self, hero, "Info_Mod_Saturas_NW_Argez2_14_11"); //Danke. Bis später.
+		AI_Output(self, hero, "Info_Mod_Saturas_NW_Argez2_14_13"); //Danke. Bis später.
 
 		B_GivePlayerXP	(250);
 
@@ -300,8 +305,8 @@ FUNC VOID Info_Mod_Saturas_NW_Argez2_Info()
 	}
 	else
 	{
-		AI_Output(hero, self, "Info_Mod_Saturas_NW_Argez2_15_12"); //Tut mir Leid, ich habe es nicht mehr.
-		AI_Output(self, hero, "Info_Mod_Saturas_NW_Argez2_14_13"); //(wütend) Bei Beliar, wie konnte ich dir nur vertrauen? Du kannst dir sicher sein, dass dies das letzte Mal war!
+		AI_Output(hero, self, "Info_Mod_Saturas_NW_Argez2_15_14"); //Tut mir Leid, ich habe es nicht mehr.
+		AI_Output(self, hero, "Info_Mod_Saturas_NW_Argez2_14_15"); //(wütend) Bei Beliar, wie konnte ich dir nur vertrauen? Du kannst dir sicher sein, dass dies das letzte Mal war!
 
 		B_GivePlayerXP	(200);
 	};

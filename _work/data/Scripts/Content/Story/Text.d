@@ -550,7 +550,8 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"Aura der Flammen",
 	"Teleport zur Burg",
 	"zur Beliarfestung",
-	"Ziege zähmen"
+	"Ziege zähmen",
+	"zu Saturas"
 };
 
 ////////////////////////////////////////////////////////////////////////////////

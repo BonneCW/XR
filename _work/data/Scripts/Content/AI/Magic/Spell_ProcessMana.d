@@ -212,6 +212,7 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	if (activeSpell == SPL_AuraFlammen					)	{	return	Spell_Logic_AuraFlammen				(manaInvested);	};
 	if (activeSpell == SPL_TeleportGDG					)	{	return	Spell_Logic_TeleportGDG				(manaInvested);	};
 	if (activeSpell == SPL_ZiegeZaehmen					)	{	return	Spell_Logic_ZiegeZaehmen				(manaInvested);	};
+	if (activeSpell == SPL_TeleportArgezToSaturas					)	{	return	Spell_Logic_TeleportArgezToSaturas				(manaInvested);	};
 
 //Leer
 

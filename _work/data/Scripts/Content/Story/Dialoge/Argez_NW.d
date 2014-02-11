@@ -286,16 +286,12 @@ FUNC INT Info_Mod_Argez_NW_LosZuSaturas_Condition()
 
 FUNC VOID Info_Mod_Argez_NW_LosZuSaturas_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Argez_NW_LosZuSaturas_15_00"); //Lass uns aufbrechen.
+	AI_Output(hero, self, "Info_Mod_Argez_NW_LosZuSaturas_15_00"); //Lass uns aufbrechen. Saturas hat mit einen Teleportzauber gegeben, der uns den weiten Weg ersparen wird.
 	AI_Output(self, hero, "DEFAULT"); //
 
-	B_LogEntry	(TOPIC_MOD_ARGEZ, "Ich muss Argez nun zu Saturas bringen.");
+	B_LogEntry	(TOPIC_MOD_ARGEZ, "Ich muss Argez nun zu Saturas bringen. Mit dem Teleport von Saturas wird das ja kein Problem.");
 
 	AI_StopProcessInfos	(self);
-
-	self.aivar[AIV_Partymember] = TRUE;
-
-	B_StartOtherRoutine	(self, "FOLLOWTOSATURAS");
 };
 
 INSTANCE Info_Mod_Argez_NW_Infos (C_INFO)

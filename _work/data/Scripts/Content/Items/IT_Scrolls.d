@@ -1414,6 +1414,31 @@ INSTANCE ItSc_TeleportBergwelt (C_Item)
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
+INSTANCE ItSc_ArgezToSaturas (C_Item)
+{
+	name 				=	NAME_Spruchrolle;
+
+	mainflag 			=	ITEM_KAT_RUNE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_Sc_Windfist;
+
+	visual				=	"ItSc_Teleport.3DS";
+	material			=	MAT_LEATHER;
+
+	spell				= 	SPL_TELEPORTARGEZTOSATURAS;
+
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_WEAKGLIMMER";
+
+	description			=	"Teleport";
+	
+	TEXT	[0]			=	"Bringt Argez und mich zu Saturas";
+	
+	TEXT	[5]			=	NAME_Value;									
+	COUNT	[5]			=	value;
+};
+/*******************************************************************************************/
 INSTANCE ItSc_TeleportGenn (C_Item)
 {
 	name 				=	NAME_Spruchrolle;
