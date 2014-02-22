@@ -173,6 +173,7 @@ FUNC VOID Info_Mod_Anselm_LandvermessungVerarsche_B()
 FUNC VOID Info_Mod_Anselm_LandvermessungVerarsche_A()
 {
 	AI_Output(hero, self, "Info_Mod_Anselm_LandvermessungVerarsche_A_15_00"); //Ich glaube, es ist Zeit für eine Tracht Prügel, meinst du nicht auch?
+	AI_Output(self, hero, "DEFAULT"); //
 
 	Info_ClearChoices	(Info_Mod_Anselm_LandvermessungVerarsche);
 
