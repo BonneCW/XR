@@ -97,6 +97,7 @@ FUNC VOID Info_Mod_Penner_Infos_Choices()
 		Info_AddChoice	(Info_Mod_Penner_Infos, "Kannst du mir etwas über Elvira erzählen? (50 Gold)", Info_Mod_Penner_Infos_F);
 	};
 	if (Npc_KnowsInfo(hero, Info_Mod_Juliana_WasLos))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Wendel_Endres03))
 	&& (Npc_HasItems(hero, ItMi_Gold) >= 10)
 	{
 		Info_AddChoice	(Info_Mod_Penner_Infos, "Was kannst du mir über das Verschwinden von Julianas Mann erzählen? (10 Gold)", Info_Mod_Penner_Infos_E);
