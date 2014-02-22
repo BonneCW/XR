@@ -48,7 +48,6 @@ FUNC VOID Info_Mod_Brunhild_DI_Hi_Info()
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 
 	Wld_InsertNpc	(Mod_1554_KDW_Jones_DI, "WP_DI_HEROKOMMTANLAND");
-	Wld_InsertNpc	(Mod_7642_OUT_Brunhild_DI,	"WP_DI_BRUNHILD_02");
 };
 
 INSTANCE Info_Mod_Brunhild_DI_Gestaendnis (C_INFO)
