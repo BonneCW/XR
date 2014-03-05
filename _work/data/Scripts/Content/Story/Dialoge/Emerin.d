@@ -177,9 +177,9 @@ FUNC INT Info_Mod_Emerin_HabZutaten_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Emerin_Stollen))
 	&& (Mod_Hermy_KnowsQuest == 4)
-	&& (Npc_HasItems(hero, ItAt_Wing) > 1)
-	&& (Npc_HasItems(hero, ItPo_Mana_01) > 0)
-	&& (Npc_HasItems(hero, ItWr_Paper) > 0)
+	&& (Npc_HasItems(hero, ItAt_Wing) >= 2)
+	&& (Npc_HasItems(hero, ItPo_Mana_01) >= 1)
+	&& (Npc_HasItems(hero, ItWr_Paper) >= 1)
 	{
 		return 1;
 	};

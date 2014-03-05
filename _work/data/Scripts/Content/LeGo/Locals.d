@@ -54,7 +54,7 @@ func void Locals() {
     var string locals_retstr;
     var zCPar_Symbol retinst;
     var int arr, var int type;
-	var int sPtr;
+    var int sPtr;
 
     // Array vorbereiten
     const int locals_Arr = 0;
@@ -379,17 +379,87 @@ func void Locals() {
     MEM_WriteInt(foff+1, (stream+4) - currParserStackAddress);
 
     MEM_ArrayInsert(locals_Arr, stream);
-	
+
     MEM_CallByOffset(p);
-	
-	stream = MEM_ArrayPop(locals_Arr);
-	
+
+    stream = MEM_ArrayPop(locals_Arr);
+
     MEM_WriteInt(stream, 0);
     MEM_SetCallerStackPos(_@(zPAR_TOK_RET) - currParserStackAddress);
 };
 
+//========================================
+// Hilfsfunktionen
+//========================================
+func int Token_GetSize(var int tok) {
+    if((tok >= zPAR_TOK_CALL && tok <= zPAR_TOK_PUSHINDEX)||(tok >= zPAR_TOK_JUMP && tok <= zPAR_TOK_SETINSTANCE)) {
+        return 5;
+    };
+    return 1;
+};
 
+func int Tokens_Copy(var int src, var int dest, var int len) {
+    MEM_Warn(ConcatStrings("Now movin tokens: ", inttostring(len)));
+    var int p; p = MEM_Alloc(len);
+    MEM_CopyBytes(src, p, len);
+    MEM_CopyBytes(p, dest, len);
+    MEM_Free(p);
+    var int dstC; dstC = dest;
+    var int dstF; dstF = dest+len;
+    var int srcF; srcF = src+len;
+    var int diff; diff = dest-src;
+    while(dstC < dstF);
+        var int tok; tok = MEM_ReadByte(dstC);
+        if(tok == zPAR_TOK_JUMPF || tok == zPAR_TOK_JUMP) {
+            MEM_Info("Move if for Bytes.");
+            MEM_Info(inttostring(diff));
+            var int trg; trg = MEM_ReadInt(dstC+1);
+            if(trg <= srcF && trg >= src) {
+                MEM_WriteInt(dstC+1, trg+diff);
+            };
+        };
+        dstC += Token_GetSize(tok);
+    end;
+};
 
+//========================================
+// Final
+//========================================
+func int Final() {
+    // Alle benötigten Funktionsoffsets
+    const int setcallerpos = -1;
+    if(setcallerpos == -1) {
+        setcallerpos = MEM_GetFuncOffset(MEM_SetCallerStackPos);
+    };
+
+    var int p;   p   = MEM_GetCallerStackPos();
+    var int pa;  pa  = p + currParserStackAddress;
+
+    if(MEM_ReadByte(pa) != zPAR_TOK_JUMPF) {
+        MEM_Error("final() darf nur hinter einem if verwendet werden!");
+        return false;
+    };
+
+    var int ifp; ifp = MEM_ReadInt(pa + 1);
+    var int ifl; ifl = ifp - p - 5;
+
+    var int s; s = SB_New();
+
+    SBc(zPAR_TOK_PUSHINT); SBw(p);
+    SBc(zPAR_TOK_CALL);    SBw(setcallerpos);
+    SBc(zPAR_TOK_JUMP);    SBw(ifp);
+
+    var int ptr; ptr = SB_GetStream();
+    SB_Release();
+
+    MEM_WriteInt(pa-5, zPAR_TOK_CALL);
+    MEM_WriteInt(pa-4, ptr - currParserStackAddress);
+
+    Tokens_Copy(pa+5, pa, ifl);
+    MEM_WriteInt(pa+ifl, zPAR_TOK_RET | (zPAR_TOK_RET<<8) | (zPAR_TOK_RET<<16) | (zPAR_TOK_RET<<24));
+
+    MEM_SetCallerStackPos(p - 5);
+};
 
 
 
