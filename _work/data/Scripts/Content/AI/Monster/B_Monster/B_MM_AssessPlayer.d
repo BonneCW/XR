@@ -94,7 +94,7 @@ func void B_MM_AssessPlayer()
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Schrat_11022_NW))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Feuerdrache_11002_NW))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Knucker_11001_NW)))
-	&& (Mod_NL_HasKamm >= 3)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Dragon_Kamm))
 	{
 		self.flags = 0;
 		Npc_ClearAIQueue	(self);

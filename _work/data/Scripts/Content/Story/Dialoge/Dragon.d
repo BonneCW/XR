@@ -46,6 +46,8 @@ FUNC VOID Info_Mod_Dragon_Hi_Info()
 
 	AI_Output(hero, self, "Info_Mod_Dragon_Hi_15_17"); //Im Moment scheint mir der Drache samt seiner Dienerschaft übermächtig. Ich sollte mitspielen und schauen, ob ich nicht etwas Nützliches in Erfahrung bringe.
 
+	AI_TurnToNpc	(hero, self);
+
 	B_LogEntry	(TOPIC_MOD_NL_DRACHEN, "Tja, ein mächtiger Drache mit einer Furcht einflößenden Gefolgschaft ist dieser Dragon. Vorerst bin ich noch chancenlos und sollte daher mitspielen. Und es wäre wohl wirklich nicht von Nachteil, wenn ich mich etwas umsehe und umhöre. Hmm, seinen Drachenschatz will er vergrößern ...");
 };
 
