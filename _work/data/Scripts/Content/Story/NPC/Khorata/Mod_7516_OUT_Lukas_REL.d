@@ -60,3 +60,9 @@ FUNC VOID Rtn_Andre_7516 ()
 	TA_Sit_Chair	(08,00,23,00,"REL_CITY_026");
 	TA_Sit_Chair	(23,00,08,00,"REL_CITY_026");
 };
+
+FUNC VOID Rtn_Tot_7516 ()
+{
+	TA_RunToWP		(08,00,20,00,"TOT");
+	TA_RunToWP		(20,00,08,00,"TOT"); 
+};

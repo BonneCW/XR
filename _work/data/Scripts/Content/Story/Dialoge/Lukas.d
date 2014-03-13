@@ -383,6 +383,7 @@ FUNC VOID Info_Mod_Lukas_Theodorus_Info()
 
 	AI_StopProcessInfos	(self);
 
+	B_StartOtherRoutine	(self, "TOT");
 	B_Attack	(self, hero, AR_GuildEnemy, 0);
 };
 
