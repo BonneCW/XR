@@ -752,7 +752,7 @@ INSTANCE Info_Mod_Lee_Gormgniez (C_INFO)
 
 FUNC INT Info_Mod_Lee_Gormgniez_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Endolf_Gormgniez))
+	if (Npc_KnowsInfo(hero, Info_Mod_Gormgniez_Hi))
 	{
 		return 1;
 	};
@@ -782,6 +782,8 @@ FUNC VOID Info_Mod_Lee_Gormgniez_Info()
 	B_RemoveNpc	(Mod_1288_SLD_Butch_MT);
 	B_RemoveNpc	(Mod_1306_SLD_Organisator_MT);
 	B_RemoveNpc	(Mod_1314_SLD_Organisator_MT);
+
+	B_GivePlayerXP	(150);
 };
 
 INSTANCE Info_Mod_Lee_Plage (C_INFO)
