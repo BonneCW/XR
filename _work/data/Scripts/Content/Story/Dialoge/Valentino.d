@@ -52,7 +52,9 @@ FUNC VOID Info_Mod_Valentino_Kidnapped_Info()
 
 	CurrentNQ += 1;
 
-	B_StartOtherRoutine	(Mod_1197_VLK_Valentine_NW, "INZELT");
+	if (Mod_Moe_Valentino == 2) {
+		B_StartOtherRoutine	(Mod_1197_VLK_Valentine_NW, "INZELT");
+	};
 
 	Info_ClearChoices	(Info_Mod_Valentino_Kidnapped);
 
