@@ -32,6 +32,8 @@ FUNC VOID Info_Mod_Lich_Hi_Info()
 	Mod_7292_PAL_Porthos_NW.guild = GIL_STRF;
 	Npc_SetTrueGuild	(Mod_7292_PAL_Porthos_NW, GIL_STRF);
 
+	Npc_SendPassivePerc	(hero, PERC_ASSESSPLAYER, hero, hero);
+
 	Wld_InsertNpc	(Kobold, "NW_TROLLAREA_TROLLROCKCAVE_06");
 	Wld_InsertNpc	(Kobold, "NW_TROLLAREA_TROLLROCKCAVE_06");
 	Wld_InsertNpc	(Kobold, "NW_TROLLAREA_TROLLROCKCAVE_06");

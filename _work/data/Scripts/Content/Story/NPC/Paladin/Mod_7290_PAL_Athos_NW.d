@@ -9,7 +9,7 @@ instance Mod_7290_PAL_Athos_NW (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);	
+	B_SetAttributesToChapter (self, 4);	
 	aivar[AIV_IGNORE_Murder]		= TRUE;																//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 	
 	// ------ NSC-relevante Talente vergeben ------
