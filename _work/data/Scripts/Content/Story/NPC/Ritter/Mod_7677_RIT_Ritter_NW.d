@@ -37,6 +37,6 @@ instance Mod_7677_RIT_Ritter_NW (Npc_Default)
 
 FUNC VOID Rtn_Start_7677 ()
 {
-	TA_Stand_Guarding	(08,00,23,00,"NW_PASS_GATEGUARD_02");
-	TA_Stand_Guarding	(23,00,08,00,"NW_PASS_GATEGUARD_02");	
+	TA_Stand_Guarding	(08,00,23,00,"NW_PASS_ORKS_12");
+	TA_Stand_Guarding	(23,00,08,00,"NW_PASS_ORKS_12");	
 };
