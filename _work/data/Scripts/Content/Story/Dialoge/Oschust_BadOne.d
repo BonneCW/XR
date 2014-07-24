@@ -40,6 +40,19 @@ FUNC INT Info_Mod_Oschust_BadOne_You_Condition()
 
 FUNC VOID Info_Mod_Oschust_BadOne_You_Info()
 {
+	AI_Teleport	(Mod_948_BDT_Esteban_MT, "TOT");
+	AI_Teleport	(Mod_955_BDT_Juan_MT, "TOT");
+	AI_Teleport	(Mod_957_BDT_Logan_MT, "TOT");
+	AI_Teleport	(Mod_958_BDT_Miguel_MT, "TOT");
+	AI_Teleport	(Mod_964_BDT_Skinner_MT, "TOT");
+	AI_Teleport	(Mod_4074_BDT_Bandit_MT, "TOT");
+	AI_Teleport	(Mod_4075_BDT_Bandit_MT, "TOT");
+	AI_Teleport	(Mod_790_BDT_Morgahard_MT, "TOT");
+
+	AI_PlayAni	(hero, "T_SLEEPGROUND_2_STAND");
+
+	Wld_StopEffect	("BLACK_SCREEN");
+
 	AI_Output(self, hero, "Info_Mod_Oschust_BadOne_You_04_01"); //So, und nun zu dir.
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Dexter_OschustTot))
@@ -92,18 +105,6 @@ FUNC VOID Info_Mod_Oschust_BadOne_Trophies_Info()
 	B_StartOtherRoutine	(Mod_4075_BDT_Bandit_MT, "TOT");
 	B_StartOtherRoutine	(Mod_790_BDT_Morgahard_MT, "TOT");
 
-	B_StartOtherRoutine	(Mod_10017_ORC_Elite_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10018_ORC_Elite_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10019_ORC_Elite_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10020_ORC_Elite_MT, "TOT");
-
-	B_StartOtherRoutine	(Mod_10023_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10024_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10025_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10026_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10027_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10028_Orc_Warrior_MT, "TOT");
-
 	B_Attack	(self, hero, AR_Kill, 0);
 };
 
@@ -143,18 +144,6 @@ FUNC VOID Info_Mod_Oschust_BadOne_Gnade_Info()
 	B_StartOtherRoutine	(Mod_4074_BDT_Bandit_MT, "TOT");
 	B_StartOtherRoutine	(Mod_4075_BDT_Bandit_MT, "TOT");
 	B_StartOtherRoutine	(Mod_790_BDT_Morgahard_MT, "TOT");
-
-	B_StartOtherRoutine	(Mod_10017_ORC_Elite_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10018_ORC_Elite_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10019_ORC_Elite_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10020_ORC_Elite_MT, "TOT");
-
-	B_StartOtherRoutine	(Mod_10023_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10024_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10025_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10026_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10027_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10028_Orc_Warrior_MT, "TOT");
 
 	B_Attack	(self, hero, AR_Kill, 0);
 };
@@ -197,18 +186,6 @@ FUNC VOID Info_Mod_Oschust_BadOne_Plan_Info()
 	B_StartOtherRoutine	(Mod_4075_BDT_Bandit_MT, "TOT");
 	B_StartOtherRoutine	(Mod_790_BDT_Morgahard_MT, "TOT");
 
-	B_StartOtherRoutine	(Mod_10017_ORC_Elite_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10018_ORC_Elite_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10019_ORC_Elite_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10020_ORC_Elite_MT, "TOT");
-
-	B_StartOtherRoutine	(Mod_10023_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10024_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10025_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10026_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10027_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10028_Orc_Warrior_MT, "TOT");
-
 	B_Attack	(self, hero, AR_Kill, 0);
 };
 
@@ -249,18 +226,6 @@ FUNC VOID Info_Mod_Oschust_BadOne_Billig_Info()
 	B_StartOtherRoutine	(Mod_4074_BDT_Bandit_MT, "TOT");
 	B_StartOtherRoutine	(Mod_4075_BDT_Bandit_MT, "TOT");
 	B_StartOtherRoutine	(Mod_790_BDT_Morgahard_MT, "TOT");
-
-	B_StartOtherRoutine	(Mod_10017_ORC_Elite_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10018_ORC_Elite_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10019_ORC_Elite_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10020_ORC_Elite_MT, "TOT");
-
-	B_StartOtherRoutine	(Mod_10023_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10024_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10025_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10026_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10027_Orc_Warrior_MT, "TOT");
-	B_StartOtherRoutine	(Mod_10028_Orc_Warrior_MT, "TOT");
 
 	B_Attack	(self, hero, AR_Kill, 0);
 	B_Attack	(Mod_10021_ORC_Elite_MT, hero, AR_Kill, 0);

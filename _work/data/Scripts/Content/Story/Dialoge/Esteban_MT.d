@@ -443,19 +443,9 @@ FUNC VOID Info_Mod_Esteban_SecondOrkWave_Info()
 
 	// + Orks
 
-	Wld_InsertNpc	(Mod_10017_ORC_Elite_MT, "WP_MT_ORKS_OSCHUST_01");
-	Wld_InsertNpc	(Mod_10018_ORC_Elite_MT, "WP_MT_ORKS_OSCHUST_01");
-	Wld_InsertNpc	(Mod_10019_ORC_Elite_MT, "WP_MT_ORKS_OSCHUST_02");
-	Wld_InsertNpc	(Mod_10020_ORC_Elite_MT, "WP_MT_ORKS_OSCHUST_02");
 	Wld_InsertNpc	(Mod_10021_ORC_Elite_MT, "WP_MT_ORKS_OSCHUST_03");
 	Wld_InsertNpc	(Mod_10022_ORC_Elite_MT, "WP_MT_ORKS_OSCHUST_03");
 
-	Wld_InsertNpc	(Mod_10023_Orc_Warrior_MT, "WP_MT_ORKS_OSCHUST_01");
-	Wld_InsertNpc	(Mod_10024_Orc_Warrior_MT, "WP_MT_ORKS_OSCHUST_01");
-	Wld_InsertNpc	(Mod_10025_Orc_Warrior_MT, "WP_MT_ORKS_OSCHUST_01");
-	Wld_InsertNpc	(Mod_10026_Orc_Warrior_MT, "WP_MT_ORKS_OSCHUST_02");
-	Wld_InsertNpc	(Mod_10027_Orc_Warrior_MT, "WP_MT_ORKS_OSCHUST_02");
-	Wld_InsertNpc	(Mod_10028_Orc_Warrior_MT, "WP_MT_ORKS_OSCHUST_02");
 	Wld_InsertNpc	(Mod_10029_Orc_Warrior_MT, "WP_MT_ORKS_OSCHUST_03");
 	Wld_InsertNpc	(Mod_10030_Orc_Warrior_MT, "WP_MT_ORKS_OSCHUST_03");
 	Wld_InsertNpc	(Mod_10031_Orc_Warrior_MT, "WP_MT_ORKS_OSCHUST_03");
@@ -493,18 +483,6 @@ FUNC VOID Info_Mod_Esteban_Unterlegen_Info()
 	B_StartOtherRoutine	(Mod_4074_BDT_Bandit_MT, "GEFANGEN");
 	B_StartOtherRoutine	(Mod_4075_BDT_Bandit_MT, "GEFANGEN");
 	B_StartOtherRoutine	(Mod_790_BDT_Morgahard_MT, "GEFANGEN");
-
-	B_StartOtherRoutine	(Mod_10017_ORC_Elite_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_10018_ORC_Elite_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_10019_ORC_Elite_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_10020_ORC_Elite_MT, "GEFANGEN");
-
-	B_StartOtherRoutine	(Mod_10023_Orc_Warrior_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_10024_Orc_Warrior_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_10025_Orc_Warrior_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_10026_Orc_Warrior_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_10027_Orc_Warrior_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_10028_Orc_Warrior_MT, "GEFANGEN");
 };
 
 INSTANCE Info_Mod_Esteban_FluchtHappy (C_INFO)

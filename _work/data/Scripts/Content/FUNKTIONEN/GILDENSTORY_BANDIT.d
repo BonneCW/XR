@@ -372,6 +372,16 @@ FUNC VOID GILDENSTORY_BANDIT()
 
 			AI_Wait	(hero, 5);
 		};
+
+		// Blackscreen for Hero during Talk between Oschust and Esteban
+
+		if (Npc_KnowsInfo(hero, Info_Mod_Esteban_SecondOrkWave))
+		&& (!Npc_IsInState(Mod_948_BDT_Esteban_MT, ZS_Talk))
+		&& (!Mod_EstebanOschust) {
+			Mod_EstebanOschust = 1;
+
+			Wld_PlayEffect	("BLACK_SCREEN", hero, hero, 0, 0, 0, FALSE);
+		};
 	};
 
 	if (CurrentLevel == ORCCITY_ZEN)
