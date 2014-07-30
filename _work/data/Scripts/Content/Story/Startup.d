@@ -8328,7 +8328,31 @@ FUNC VOID STARTUP_Relendel()
 
 	Wld_InsertNpc	(Bloodhound,	"FP_ROAM_045");
 	Wld_InsertNpc	(Bloodhound,	"FP_ROAM_047");
-	
+
+	// Durchgang zum Moor
+
+	Wld_InsertNpc	(Scavenger,	"FP_ROAM_PASS_TO_MOOR_001");
+	Wld_InsertNpc	(Scavenger,	"FP_ROAM_PASS_TO_MOOR_001");
+	Wld_InsertNpc	(Scavenger,	"FP_ROAM_PASS_TO_MOOR_001");
+
+	Wld_InsertNpc	(Scavenger,	"FP_ROAM_PASS_TO_MOOR_007");
+	Wld_InsertNpc	(Scavenger,	"FP_ROAM_PASS_TO_MOOR_007");
+
+	Wld_InsertNpc	(Scavenger_Demon,	"FP_ROAM_PASS_TO_MOOR_014");
+	Wld_InsertNpc	(Scavenger_Demon,	"FP_ROAM_PASS_TO_MOOR_014");
+
+	Wld_InsertNpc	(Scavenger,	"FP_ROAM_PASS_TO_MOOR_016");
+	Wld_InsertNpc	(Scavenger,	"FP_ROAM_PASS_TO_MOOR_016");
+	Wld_InsertNpc	(Scavenger_Demon,	"FP_ROAM_PASS_TO_MOOR_016");
+
+	Wld_InsertNpc	(Scavenger,	"FP_ROAM_PASS_TO_MOOR_024");
+	Wld_InsertNpc	(Scavenger,	"FP_ROAM_PASS_TO_MOOR_024");
+
+	Wld_InsertNpc	(Waran,	"FP_ROAM_PASS_TO_MOOR_031");
+	Wld_InsertNpc	(Waran,	"FP_ROAM_PASS_TO_MOOR_031");
+
+	Wld_InsertNpc	(Waran,	"FP_ROAM_PASS_TO_MOOR_032");
+	Wld_InsertNpc	(Waran,	"FP_ROAM_PASS_TO_MOOR_032");
 };
 
 FUNC VOID INIT_Relendel()
