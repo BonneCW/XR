@@ -4,7 +4,7 @@ INSTANCE Mod_935_PIR_Malcom_AW (Npc_Default)
 	name 		= "Malcom";
 	guild 		= GIL_OUT;
 	id 			= 935;
-	voice 		= 4;
+	voice 		= 30;
 	flags       = 0;															
 	npctype		= NPCTYPE_MAIN;
 		

@@ -8,7 +8,7 @@ INSTANCE Info_Mod_Bennet_Hi (C_INFO)
 	information	= Info_Mod_Bennet_Hi_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Wer bist du?";
+	description	= "Hallo, Schmied. Was macht die Arbeit?";
 };
 
 FUNC INT Info_Mod_Bennet_Hi_Condition()
@@ -18,11 +18,62 @@ FUNC INT Info_Mod_Bennet_Hi_Condition()
 
 FUNC VOID Info_Mod_Bennet_Hi_Info()
 {
-	B_Say (hero, self, "$WHOAREYOU");
-	AI_Output(self, hero, "Info_Mod_Bennet_Hi_06_01"); //Ich bin Bennet, der Schmied auf diesem Hof.
+	AI_Output(hero, self, "Info_Mod_Bennet_Hi_15_00"); //Hallo, Schmied. Was macht die Arbeit?
+	AI_Output(self, hero, "Info_Mod_Bennet_Hi_30_01"); //Bennet heiße ich. Und wie die Arbeit läuft, kannst du dir ja denken, wenn du dich mal umschaust.
+	AI_Output(self, hero, "Info_Mod_Bennet_Hi_30_02"); //Kaum einer trägt hier eine Waffe oder Rüstung, die nicht von mir kommt.
+};
+
+INSTANCE Info_Mod_Bennet_Haendler (C_INFO)
+{
+	npc		= Mod_562_NONE_Bennet_NW;
+	nr		= 1;
+	condition	= Info_Mod_Bennet_Haendler_Condition;
+	information	= Info_Mod_Bennet_Haendler_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Verkaufst du Schmiedezubehör?";
+};
+
+FUNC INT Info_Mod_Bennet_Haendler_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Bennet_Hi)) {
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Bennet_Haendler_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Bennet_Haendler_15_00"); //Verkaufst du Schmiedezubehör?
+	AI_Output(self, hero, "Info_Mod_Bennet_Haendler_30_01"); //Nur das, was ich entbehren kann. Wenn es ständig an etwas fehlt, dann an Nachschub.
 
 	Log_CreateTopic	(TOPIC_MOD_HAENDLER_ONAR, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_HAENDLER_ONAR, "Bennet ist Schmied auf dem Hof und kann mir sicher was verkaufen.");
+};
+
+INSTANCE Info_Mod_Bennet_DerHof (C_INFO)
+{
+	npc		= Mod_562_NONE_Bennet_NW;
+	nr		= 1;
+	condition	= Info_Mod_Bennet_DerHof_Condition;
+	information	= Info_Mod_Bennet_DerHof_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wie gefällt es dir auf dem Hof?";
+};
+
+FUNC INT Info_Mod_Bennet_DerHof_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Bennet_Hi)) {
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Bennet_DerHof_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Bennet_DerHof_15_00"); //Wie gefällt es dir auf dem Hof?
+	AI_Output(self, hero, "Info_Mod_Bennet_DerHof_30_01"); //Mit meinem Platz hier bin ich ganz zufrieden. Aber sag mal - der Onar ist doch ein richtiger Arsch.
+	AI_Output(self, hero, "Info_Mod_Bennet_DerHof_30_02"); //Den würd ich gern mal mit der flachen Seite meiner Klinge verdreschen.
+	AI_Output(self, hero, "Info_Mod_Bennet_DerHof_30_03"); //Hab ich Lares auch schon vorgeschlagen. Aber der meint, das soll ich besser sein lassen.
 };
 
 INSTANCE Info_Mod_Bennet_Irdorath (C_INFO)
@@ -33,7 +84,7 @@ INSTANCE Info_Mod_Bennet_Irdorath (C_INFO)
 	information	= Info_Mod_Bennet_Irdorath_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Hey, Meister der Schmiede ...";
+	description	= "He, Meister der Schmiede ...";
 };
 
 FUNC INT Info_Mod_Bennet_Irdorath_Condition()
@@ -47,15 +98,15 @@ FUNC INT Info_Mod_Bennet_Irdorath_Condition()
 
 FUNC VOID Info_Mod_Bennet_Irdorath_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Bennet_Irdorath_15_00"); //Hey, Meister der Schmiede ...
-	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_06_01"); //Meister der Schmiede? Sprich nicht so geschwollen.
-	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_06_02"); //Was willst du? Waffen kaufen? Wenn nicht, dann verschwinde.
-	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_06_03"); //Ich habe viel zu tun und kaum brauchbares Material.
+	AI_Output(hero, self, "Info_Mod_Bennet_Irdorath_15_00"); //He, Meister der Schmiede ...
+	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_30_01"); //Meister der Schmiede? Sprich nicht so geschwollen.
+	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_30_02"); //Was willst du? Waffen kaufen? Wenn nicht, dann verschwinde.
+	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_30_03"); //Ich habe viel zu tun und kaum brauchbares Material.
 	AI_Output(hero, self, "Info_Mod_Bennet_Irdorath_15_04"); //Eigentlich wollte ich mit dem Schiff der Paladine zu einer Insel aufbrechen und hoffte, vielleicht einen kundigen Schmied mit an Bord zu haben ...
-	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_06_05"); //Eine Seereise? Ne, Onar würde mich kielholen, wenn er etwas von der Seefahrt verstünde.
-	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_06_06"); //Ich muss noch einige Waffen schmieden, habe aber kaum genug Rohstoffe.
-	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_06_07"); //Wenn ich doch nur 15 Erz und zumindest 20 rostige Schwerter hätte. Daraus ließe sich schon was machen ...
-	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_06_08"); //Man, wenn ich daran denke, wie viel teures Rohmaterial in den Gräbern hinter der Kapelle vergraben liegt ...
+	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_30_05"); //Eine Seereise? Nee, Onar würde mich kielholen, wenn er etwas von der Seefahrt verstünde.
+	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_30_06"); //Ich muss noch einige Waffen schmieden, habe aber kaum genug Rohstoffe.
+	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_30_07"); //Wenn ich doch nur 15 Erz und zumindest 20 rostige Schwerter hätte. Daraus ließe sich schon was machen ...
+	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath_30_08"); //Mann, wenn ich daran denke, wie viel teures Rohmaterial in den Gräbern hinter der Kapelle vergraben liegt ...
 
 	B_LogEntry	(TOPIC_MOD_HQ_CREW, "Tja, Bennet muss noch Schwerter schmieden. Er klagt darüber, dass er zu wenig Rohmaterial hat, mindestens 15 Erz und 20 rostige Schwerter bräuchte, wo doch so viel in den Gräbern hinter dem Hof herumliegt.");
 };
@@ -85,9 +136,9 @@ FUNC INT Info_Mod_Bennet_Irdorath2_Condition()
 FUNC VOID Info_Mod_Bennet_Irdorath2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bennet_Irdorath2_15_00"); //Ich habe einige Erz und rostige Schwerter ...
-	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath2_06_01"); //Was, wirklich? Was verlangst du dafür?
-	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath2_06_02"); //Achja, du sprachst irgendwas von einer Seereise.
-	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath2_06_03"); //Wenn du mir die Sachen gibst und einen Tag Zeit lässt für die Schwerter, komm ich mit an Bord. Was sagst du?
+	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath2_30_01"); //Was, wirklich? Was verlangst du dafür?
+	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath2_30_02"); //Ach ja, du sprachst irgendwas von einer Seereise.
+	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath2_30_03"); //Wenn du mir die Sachen gibst und einen Tag Zeit lässt für die Schwerter, komm ich mit an Bord. Was sagst du?
 };
 
 INSTANCE Info_Mod_Bennet_Irdorath3 (C_INFO)
@@ -121,7 +172,7 @@ FUNC VOID Info_Mod_Bennet_Irdorath3_Info()
 	Npc_RemoveInvItems	(hero, ItMi_Nugget, 15);
 	Npc_RemoveInvItems	(hero, ItMw_1h_MISC_Sword, 20);
 
-	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath3_06_01"); //Ja, klar, super, danke. Bis morgen am Hafen dann.
+	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath3_30_01"); //Ja, klar, super, danke. Bis morgen am Hafen dann.
 
 	B_LogEntry	(TOPIC_MOD_HQ_CREW, "Mit Bennet hätten wir dann einen Schmied an Bord.");
 
@@ -143,7 +194,7 @@ INSTANCE Info_Mod_Bennet_Irdorath4 (C_INFO)
 	information	= Info_Mod_Bennet_Irdorath4_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= "Tut mir leid, aber es scheint das wir zu viele sind.";
+	description	= "Tut mir leid, aber es scheint, dass wir zu viele sind.";
 };
 
 FUNC INT Info_Mod_Bennet_Irdorath4_Condition()
@@ -160,8 +211,8 @@ FUNC INT Info_Mod_Bennet_Irdorath4_Condition()
 
 FUNC VOID Info_Mod_Bennet_Irdorath4_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Bennet_Irdorath4_15_00"); //Tut mir leid, aber es scheint das wir zu viele sind. Ich kann dich doch nicht mitnehmen.
-	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath4_06_01"); //Schade. Ich gehe dann wieder zurück.
+	AI_Output(hero, self, "Info_Mod_Bennet_Irdorath4_15_00"); //Tut mir leid, aber es scheint, dass wir zu viele sind. Ich kann dich doch nicht mitnehmen.
+	AI_Output(self, hero, "Info_Mod_Bennet_Irdorath4_30_01"); //Schade. Ich gehe dann wieder zurück.
 
 	Mod_BennetDabei = 0;
 
@@ -195,9 +246,9 @@ FUNC INT Info_Mod_Bennet_Gildenwaffe_Condition()
 FUNC VOID Info_Mod_Bennet_Gildenwaffe_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bennet_Gildenwaffe_15_00"); //Hast du eine Waffe für mich?
-	AI_Output(self, hero, "Info_Mod_Bennet_Gildenwaffe_06_01"); //Wie ich sehe, bist du nun auch ein Söldner.
-	AI_Output(self, hero, "Info_Mod_Bennet_Gildenwaffe_06_02"); //Dann steht dir das gleiche Paket zu, wie den anderen Neuen.
-	AI_Output(self, hero, "Info_Mod_Bennet_Gildenwaffe_06_03"); //Hier hast du einen Einhänder, einen Zweihänder und einen Bogen.
+	AI_Output(self, hero, "Info_Mod_Bennet_Gildenwaffe_30_01"); //Wie ich sehe, bist du nun auch ein Söldner.
+	AI_Output(self, hero, "Info_Mod_Bennet_Gildenwaffe_30_02"); //Dann steht dir das gleiche Paket zu wie den anderen Neuen.
+	AI_Output(self, hero, "Info_Mod_Bennet_Gildenwaffe_30_03"); //Hier hast du einen Einhänder, einen Zweihänder und einen Bogen.
 
 	B_ShowGivenThings	("Grobes Kurzschwert, Grobe Axt und Bogen erhalten");
 
@@ -230,7 +281,7 @@ FUNC INT Info_Mod_Bennet_Piraten_Condition()
 FUNC VOID Info_Mod_Bennet_Piraten_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bennet_Piraten_15_00"); //Ich hab hier einen Säbel, der aufgearbeitet werden soll.
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_01"); //Zeig her, Bursche.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_01"); //Zeig her, Bursche.
 
 	B_GiveInvItems	(hero, self, ItMw_Piratensaebel_Greg, 1);
 
@@ -243,13 +294,13 @@ FUNC VOID Info_Mod_Bennet_Piraten_Info()
 	AI_RemoveWeapon	(self);
 	AI_UnequipWeapons	(self);
 
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_02"); //Ja. Eine schöne Arbeit! So was mache ich gern.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_02"); //Ja. Eine schöne Arbeit! So was mache ich gern.
 	AI_Output(hero, self, "Info_Mod_Bennet_Piraten_15_03"); //Und was kostet das?
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_04"); //Am liebsten gar nichts.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_04"); //Am liebsten gar nichts.
 	AI_Output(hero, self, "Info_Mod_Bennet_Piraten_15_05"); //Gar nichts?
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_06"); //Weil ich den am liebsten behalten würde.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_06"); //Weil ich den am liebsten behalten würde.
 	AI_Output(hero, self, "Info_Mod_Bennet_Piraten_15_07"); //Unmöglich. Mein Boss jagt mich über die Planke.
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_08"); //Hm ...
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_08"); //Hm ...
 
 	AI_UnequipWeapons	(self);
 	EquipItem	(self, ItMw_Piratensaebel_Greg);
@@ -258,30 +309,30 @@ FUNC VOID Info_Mod_Bennet_Piraten_Info()
 	AI_RemoveWeapon	(self);
 	AI_UnequipWeapons	(self);
 
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_09"); //Ich mach dir nen Vorschlag.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_09"); //Ich mach dir nen Vorschlag.
 	AI_Output(hero, self, "Info_Mod_Bennet_Piraten_15_10"); //Und der wäre?
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_11"); //Dein Boss bekommt dafür eine Waffe, die doppelt so stabil und dreimal so scharf ist wie alles, was er jemals geschwungen hat.
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_12"); //Geh hin und frag ihn mal.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_11"); //Dein Boss bekommt dafür eine Waffe, die doppelt so stabil und dreimal so scharf ist wie alles, was er jemals geschwungen hat.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_12"); //Geh hin und frag ihn mal.
 	AI_Output(hero, self, "Info_Mod_Bennet_Piraten_15_13"); //Er wird das nicht glauben. Ich übrigens auch nicht. Wie willst du das hinkriegen?
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_14"); //Dir erklär ich's. Aber nicht weitersagen.
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_15"); //Also, es war eher ein Zufall. Ich hab immer einen Bottich mit Moleratfett. Damit fette ich die Waffen ein, wenn sie fertig sind.
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_16"); //Nun stand eines Tages der Kübel hier draußen und ich hab mein Teil zum Abkühlen aus Versehen in das Fett getaucht, statt in den Wassereimer.
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_17"); //'Ne stinkende Rauchwolke gab's und wie ich das Schwert rausziehe, ist es schwarz wie die Nacht.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_14"); //Dir erklär ich's. Aber nicht weitersagen.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_15"); //Also, es war eher ein Zufall. Ich hab immer einen Bottich mit Moleratfett. Damit fette ich die Waffen ein, wenn sie fertig sind.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_16"); //Nun stand eines Tages der Kübel hier draußen und ich hab mein Teil zum Abkühlen aus Versehen in das Fett getaucht, statt in den Wassereimer.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_17"); //'Ne stinkende Rauchwolke gab's und wie ich das Schwert rausziehe, ist es schwarz wie die Nacht.
 	AI_Output(hero, self, "Info_Mod_Bennet_Piraten_15_18"); //Und dann?
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_19"); //Dann hab ich gemerkt, dass es viel schwerer zu hämmern ist als vorher.
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_20"); //Ich hab den schwereren Hammer genommen und weiter. Zum Schluß habs ich selbst geschliffen.
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_21"); //Scharf wie ein Rasiermesser, sag ich dir! So was hab ich selbst noch nie gesehen.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_19"); //Dann hab ich gemerkt, dass es viel schwerer zu hämmern ist als vorher.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_20"); //Ich hab den schwereren Hammer genommen und weiter. Zum Schluss hab ich's selbst geschliffen.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_21"); //Scharf wie ein Rasiermesser, sag ich dir! So was hab ich selbst noch nie gesehen.
 	AI_Output(hero, self, "Info_Mod_Bennet_Piraten_15_22"); //Ich auch nicht. Wo hast du das Teil?
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_23"); //Ich hab es stets bei mir.
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_24"); //Weißt du was? Ich geb dir das Schwert einfach mal mit.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_23"); //Ich hab es stets bei mir.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_24"); //Weißt du was? Ich geb dir das Schwert einfach mal mit.
 
 	B_GiveInvItems	(self, hero, ItMw_BennetGreg, 1);
 
-	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_06_25"); //Soll sich dein Boss selber überzeugen.
+	AI_Output(self, hero, "Info_Mod_Bennet_Piraten_30_25"); //Soll sich dein Boss selber überzeugen.
 	AI_Output(hero, self, "Info_Mod_Bennet_Piraten_15_26"); //Dir muss ja sehr viel an der alten Klinge liegen.
 	AI_Output(hero, self, "Info_Mod_Bennet_Piraten_15_27"); //Gut, ich denke, so kann man's machen.
 
-	B_LogEntry	(TOPIC_MOD_GREG_ROST, "Bennet hat mir im Austausch gegen Greg's Säbel ein besonderes Schwert gegeben. Es scheint sehr stabil und scharf zu sein. Hoffentlich ist Greg damit zufrieden.");
+	B_LogEntry	(TOPIC_MOD_GREG_ROST, "Bennet hat mir im Austausch gegen Gregs Säbel ein besonderes Schwert gegeben. Es scheint sehr stabil und scharf zu sein. Hoffentlich ist Greg damit zufrieden.");
 };
 
 INSTANCE Info_Mod_Bennet_Blutkelch (C_INFO)
@@ -306,15 +357,15 @@ FUNC INT Info_Mod_Bennet_Blutkelch_Condition()
 FUNC VOID Info_Mod_Bennet_Blutkelch_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bennet_Blutkelch_15_00"); //Man sagt, du machst auch Spezialwerkzeuge.
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_06_01"); //Wohl war. Derzeit arbeite ich zum Beispiel mit Stahl.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_30_01"); //Wohl war. Derzeit arbeite ich zum Beispiel mit Stahl.
 	AI_Output(hero, self, "Info_Mod_Bennet_Blutkelch_15_02"); //Stahl?
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_06_03"); //Genau. Ein Material, drei mal so hart ist als normales Eisen.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_30_03"); //Genau. Ein Material, dreimal so hart wie normales Eisen.
 	AI_Output(hero, self, "Info_Mod_Bennet_Blutkelch_15_04"); //Das trifft sich gut. Ich habe hier eine Spitzhacke, die irgendwie zu weich ist.
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_06_05"); //Kein Problem für mich. Ich baue dir eine Stahlhacke.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_30_05"); //Kein Problem für mich. Ich baue dir eine Stahlhacke.
 	AI_Output(hero, self, "Info_Mod_Bennet_Blutkelch_15_06"); //Und wann kann ich die haben?
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_06_07"); //Nun, die Herstellung ist aufwändig und nicht billig. 500 Gold müssen es schon sein.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_30_07"); //Nun, die Herstellung ist aufwändig und nicht billig. 500 Gold müssen es schon sein.
 	AI_Output(hero, self, "Info_Mod_Bennet_Blutkelch_15_08"); //Was? 500 Gold für eine Hacke?
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_06_09"); //Stahlhacke! Außerdem bin ich der Einzge, der dir sowas machen kann.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_30_09"); //Stahlhacke! Außerdem bin ich der Einzge, der dir so was machen kann.
 
 	Mod_ASS_Bennet = Wld_GetDay();
 
@@ -331,16 +382,16 @@ FUNC VOID Info_Mod_Bennet_Blutkelch_Info()
 FUNC VOID Info_Mod_Bennet_Blutkelch_B()
 {
 	AI_Output(hero, self, "Info_Mod_Bennet_Blutkelch_B_15_00"); //Trotzdem. So viel kann ich nicht ausgeben.
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_B_06_01"); //Dann mache ich dir einen Vorschlag: Ich brauche demnächst eine größere Menge Moleratfett.
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_B_06_02"); //Wenn du mir so 50 Portionen besorgst, lass ich dir 200 Gold nach.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_B_30_01"); //Dann mache ich dir einen Vorschlag: Ich brauche demnächst eine größere Menge Moleratfett.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_B_30_02"); //Wenn du mir so 50 Portionen besorgst, lass ich dir 200 Gold nach.
 	AI_Output(hero, self, "Info_Mod_Bennet_Blutkelch_B_15_03"); //Wo soll ich so einen Haufen herbekommen? Das krieg ich bei den Händlern nicht zusammen.
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_B_06_04"); //Genau das ist auch mein Problem. Du solltest es selbst herstellen.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_B_30_04"); //Genau das ist auch mein Problem. Du solltest es selbst herstellen.
 	AI_Output(hero, self, "Info_Mod_Bennet_Blutkelch_B_15_05"); //Wie soll ich das anstellen? Ich bin kein Fleischer.
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_B_06_06"); //Genau. Den solltest du aber fragen.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_B_30_06"); //Genau. Den solltest du aber fragen.
 	AI_Output(hero, self, "Info_Mod_Bennet_Blutkelch_B_15_07"); //Und wo finde ...
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_B_06_08"); //Ich hörte, in Khorata gibt's einen. Für sein gepökeltes Lamm zahlen die Leute in der Stadt Unsummen.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_B_30_08"); //Ich hörte, in Khorata gibt's einen. Für sein gepökeltes Lamm zahlen die Leute in der Stadt Unsummen.
 	AI_Output(hero, self, "Info_Mod_Bennet_Blutkelch_B_15_09"); //Also gut. Ich hoffe, die Hacke ist fertig, wenn ich zurückkomme.
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_B_06_10"); //Bestimmt.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_B_30_10"); //Bestimmt.
 
 	Mod_ASS_Blutkelch3 = 4;
 
@@ -357,7 +408,7 @@ FUNC VOID Info_Mod_Bennet_Blutkelch_A()
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 500);
 
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_A_06_01"); //Wie das so üblich ist bei uns. Komm morgen wieder.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch_A_30_01"); //Wie das so üblich ist bei uns. Komm morgen wieder.
 
 	Mod_ASS_Blutkelch3 = 3;
 
@@ -388,7 +439,7 @@ FUNC INT Info_Mod_Bennet_Blutkelch2_Condition()
 
 FUNC VOID Info_Mod_Bennet_Blutkelch2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch2_06_00"); //Da kommst du ja. Deine Hacke ist fertig.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch2_30_00"); //Da kommst du ja. Deine Hacke ist fertig.
 
 	B_GiveInvItems	(self, hero, ItMw_Stahlhacke, 1);
 
@@ -426,19 +477,19 @@ FUNC INT Info_Mod_Bennet_Blutkelch3_Condition()
 
 FUNC VOID Info_Mod_Bennet_Blutkelch3_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch3_06_00"); //Da kommst du ja. Deine Hacke ist fertig.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch3_30_00"); //Da kommst du ja. Deine Hacke ist fertig.
 	AI_Output(hero, self, "Info_Mod_Bennet_Blutkelch3_15_01"); //Zeig mal her das Teil.
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch3_06_02"); //Wo ist mein Fett?
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch3_30_02"); //Wo ist mein Fett?
 	AI_Output(hero, self, "Info_Mod_Bennet_Blutkelch3_15_03"); //Hier. Zu was brauchst du das eigentlich alles?
 
 	B_GiveInvItems	(hero, self, ItMi_Moleratlubric_MIS, 50);
 
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch3_06_04"); //Betriebsgeheimnis ...
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch3_30_04"); //Betriebsgeheimnis ...
 	AI_Output(hero, self, "Info_Mod_Bennet_Blutkelch3_15_05"); //Auch gut. Hier, das Restgold.
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 300);
 
-	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch3_06_06"); //Immer gern zu Diensten.
+	AI_Output(self, hero, "Info_Mod_Bennet_Blutkelch3_30_06"); //Immer gern zu Diensten.
 
 	B_GiveInvItems	(self, hero, ItMw_Stahlhacke, 1);
 
@@ -472,9 +523,9 @@ FUNC INT Info_Mod_Bennet_HaradLehrling_Condition()
 FUNC VOID Info_Mod_Bennet_HaradLehrling_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bennet_HaradLehrling_15_00"); //Wie läuft's?
-	AI_Output(self, hero, "Info_Mod_Bennet_HaradLehrling_06_01"); //Im Moment nicht so gut. Möge mich Beliar holen, von gestern auf heute hat Torlof mir den Auftrag entzogen.
-	AI_Output(self, hero, "Info_Mod_Bennet_HaradLehrling_06_02"); //Ich darf jetzt ausschließlich Rüstungen schmieden. Das ganze Gold geht nun an Harad.
-	AI_Output(self, hero, "Info_Mod_Bennet_HaradLehrling_06_03"); //Will gar nicht wissen, was der wieder für schmutzige Geschäfte gemacht hat, um mir die Arbeit wegzunehmen.
+	AI_Output(self, hero, "Info_Mod_Bennet_HaradLehrling_30_01"); //Im Moment nicht so gut. Möge mich Beliar holen, von gestern auf heute hat Torlof mir den Auftrag entzogen.
+	AI_Output(self, hero, "Info_Mod_Bennet_HaradLehrling_30_02"); //Ich darf jetzt ausschließlich Rüstungen schmieden. Das ganze Gold geht nun an Harad.
+	AI_Output(self, hero, "Info_Mod_Bennet_HaradLehrling_30_03"); //Will gar nicht wissen, was der wieder für schmutzige Geschäfte gemacht hat, um mir die Arbeit wegzunehmen.
 };
 
 instance Info_Mod_Bennet_Lehrer (C_INFO)
@@ -501,8 +552,8 @@ func int Info_Mod_Bennet_Lehrer_Condition ()
 func void Info_Mod_Bennet_Lehrer_Info ()
 {
 	AI_Output (hero, self, "Info_Mod_Bennet_Lehrer_15_00"); //Kannst du mir beibringen, ein Schwert zu schmieden?
-	AI_Output (self, hero, "Info_Mod_Bennet_Lehrer_06_01"); //Klar.
-	AI_Output (self, hero, "Info_Mod_Bennet_Lehrer_06_02"); //Das kostet aber 'ne Kleinigkeit. Sagen wir 30 Goldstücke.
+	AI_Output (self, hero, "Info_Mod_Bennet_Lehrer_30_01"); //Klar.
+	AI_Output (self, hero, "Info_Mod_Bennet_Lehrer_30_02"); //Das kostet aber 'ne Kleinigkeit. Sagen wir 30 Goldstücke.
 	
 	Info_ClearChoices	(Info_Mod_Bennet_Lehrer);
 	Info_AddChoice	(Info_Mod_Bennet_Lehrer, "Später vielleicht.", Info_Mod_Bennet_Lehrer_Later);
@@ -515,7 +566,7 @@ func void Info_Mod_Bennet_Lehrer_Pay()
 	
 	if (B_GiveInvItems (hero, self, ItMi_Gold, 30))
 	{
-		AI_Output (self, hero, "Info_Mod_Bennet_Lehrer_Pay_06_01"); //Und das war noch verdammt günstig! Wir können anfangen, sobald du so weit bist.
+		AI_Output (self, hero, "Info_Mod_Bennet_Lehrer_Pay_30_01"); //Und das war noch verdammt günstig! Wir können anfangen, sobald du so weit bist.
 		
 		Bennet_TeachCommon = 1;
 		Log_CreateTopic	(TOPIC_MOD_LEHRER_SOELDNER_ONAR, LOG_NOTE);
@@ -523,7 +574,7 @@ func void Info_Mod_Bennet_Lehrer_Pay()
 	}
 	else
 	{
-		AI_Output (self, hero, "Info_Mod_Bennet_Lehrer_Pay_06_02"); //Verarsch mich nicht. 30 und keine Münze weniger.
+		AI_Output (self, hero, "Info_Mod_Bennet_Lehrer_Pay_30_02"); //Verarsch mich nicht. 30 und keine Münze weniger.
 	};
 
 	Info_ClearChoices (Info_Mod_Bennet_Lehrer);
@@ -574,7 +625,7 @@ func void Info_Mod_Bennet_KlingeSchaerfen_Info ()
 	|| ((Mod_Schwierigkeit != 4)
 	&& (hero.lp >= 5))
 	{
-		AI_Output (self, hero, "Info_Mod_Bennet_KlingeSchaerfen_06_01"); //Dazu musst du deine Klinge zu einem Schleifstein bringen. Das funktioniert allerdings nur mit scharfen Waffen.
+		AI_Output (self, hero, "Info_Mod_Bennet_KlingeSchaerfen_30_01"); //Dazu musst du deine Klinge zu einem Schleifstein bringen. Das funktioniert allerdings nur mit scharfen Waffen.
 
 		Schaerfen_Perk = TRUE;
 
@@ -589,7 +640,7 @@ func void Info_Mod_Bennet_KlingeSchaerfen_Info ()
 	}
 	else
 	{
-		AI_Output (self, hero, "Info_Mod_Bennet_KlingeSchaerfen_06_02"); //Komm wieder, wenn du bereit bist.
+		AI_Output (self, hero, "Info_Mod_Bennet_KlingeSchaerfen_30_02"); //Komm wieder, wenn du bereit bist.
 	};
 };
 
@@ -618,10 +669,10 @@ func void Info_Mod_Bennet_TeachCOMMON_Info ()
 	
 	if (B_TeachPlayerTalentSmith (self, other, WEAPON_Common))
 	{
-		AI_Output (self, other, "Info_Mod_Bennet_TeachCOMMON_06_01"); //Ganz einfach: Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
-		AI_Output (self, other, "Info_Mod_Bennet_TeachCOMMON_06_02"); //Dann schlägst du am Amboss die Klinge zurecht.
-		AI_Output (self, other, "Info_Mod_Bennet_TeachCOMMON_06_03"); //Achte vor allem darauf, dass die Klinge nicht zu kalt wird. Du hast immer nur wenige Minuten Zeit, an deiner Waffe zu arbeiten ...
-		AI_Output (self, other, "Info_Mod_Bennet_TeachCOMMON_06_04"); //Den Rest findest du schon raus - reine Übungssache.
+		AI_Output (self, other, "Info_Mod_Bennet_TeachCOMMON_30_01"); //Ganz einfach: Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
+		AI_Output (self, other, "Info_Mod_Bennet_TeachCOMMON_30_02"); //Dann schlägst du am Amboss die Klinge zurecht.
+		AI_Output (self, other, "Info_Mod_Bennet_TeachCOMMON_30_03"); //Achte vor allem darauf, dass die Klinge nicht zu kalt wird. Du hast immer nur wenige Minuten Zeit, an deiner Waffe zu arbeiten ...
+		AI_Output (self, other, "Info_Mod_Bennet_TeachCOMMON_30_04"); //Den Rest findest du schon raus - reine Übungssache.
 	};
 };
 
@@ -651,17 +702,17 @@ func void Info_Mod_Bennet_WannaSmithORE_Info ()
 		
 	if (PLAYER_TALENT_SMITH[WEAPON_Common] == FALSE)
 	{
-		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_06_01"); //Du kennst dich doch nicht mal mit den Grundlagen aus.
-		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_06_02"); //Lerne erstmal, ein ordentliches Schwert zu schmieden. Dann sehen wir weiter.
+		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_30_01"); //Du kennst dich doch nicht mal mit den Grundlagen aus.
+		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_30_02"); //Lerne erst mal, ein ordentliches Schwert zu schmieden. Dann sehen wir weiter.
 	}
 	else
 	{
-		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_06_03"); //Gut, du kannst bereits ein ordentliches Schwert schmieden.
-		AI_Output (hero, self, "Info_Mod_Bennet_WannaSmithORE_15_04"); //Na dann leg mal los ...
-		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_06_05"); //Also, das Wichtigste ist: Es ist völlig egal, ob deine Waffe aus reinem Erz ist oder ob du eine einfache Stahlklinge mit einer Schicht aus Erz überziehst. Es kommt nur auf die Oberfläche an.
-		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_06_06"); //Und weil das verdammte Zeug so teuer ist, nimmst du dir einen Stahlrohling und ein paar Brocken Erz.
-		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_06_07"); //Es reicht natürlich nicht, einfach ein fertiges Schwert mit Erz zu überziehen. Du musst die Waffe schon selber schmieden.
-		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_06_08"); //Alles weitere hängt von der Waffe ab, die du herstellen willst.
+		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_30_03"); //Gut, du kannst bereits ein ordentliches Schwert schmieden.
+		AI_Output (hero, self, "Info_Mod_Bennet_WannaSmithORE_15_04"); //Na, dann leg mal los ...
+		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_30_05"); //Also, das Wichtigste ist: Es ist völlig egal, ob deine Waffe aus reinem Erz ist oder ob du eine einfache Stahlklinge mit einer Schicht aus Erz überziehst. Es kommt nur auf die Oberfläche an.
+		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_30_06"); //Und weil das verdammte Zeug so teuer ist, nimmst du dir einen Stahlrohling und ein paar Brocken Erz.
+		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_30_07"); //Es reicht natürlich nicht, einfach ein fertiges Schwert mit Erz zu überziehen. Du musst die Waffe schon selber schmieden.
+		AI_Output (self, hero, "Info_Mod_Bennet_WannaSmithORE_30_08"); //Alles Weitere hängt von der Waffe ab, die du herstellen willst.
 
 		Bennet_TeachSmith = 1;
 	};
@@ -697,18 +748,18 @@ func void Info_Mod_Bennet_TeachSmith_Info ()
 	
 	if (Kapitel == 1)//HACK Mattes  
 	{
-		AI_Output(self, hero, "Info_Mod_Bennet_TeachSmith_06_07"); //Nein, noch nicht. Komm später wieder.
+		AI_Output(self, hero, "Info_Mod_Bennet_TeachSmith_30_07"); //Nein, noch nicht. Komm später wieder.
 	}
 	else if (Kapitel == 2)
 	&& (Bennet_Kap2Smith == FALSE)
 	{
-		AI_Output (self, hero, "Info_Mod_Bennet_TeachSmith_06_01"); //Ich kann dir beibringen, wie man Erzschwerter oder sogar Zweihänder schmiedet.
+		AI_Output (self, hero, "Info_Mod_Bennet_TeachSmith_30_01"); //Ich kann dir beibringen, wie man Erzschwerter oder sogar Zweihänder schmiedet.
 		Bennet_Kap2Smith = 1;
 	}
 	else if (Kapitel == 3)
 	&& (Bennet_Kap3Smith == FALSE)
 	{
-		AI_Output (self, hero, "Info_Mod_Bennet_TeachSmith_06_02"); //Ich habe meine Technik verbessert. Ich kann dir jetzt beibringen, wie du Bastardschwerter oder schwere Zweihänder mit Erz herstellst.
+		AI_Output (self, hero, "Info_Mod_Bennet_TeachSmith_30_02"); //Ich habe meine Technik verbessert. Ich kann dir jetzt beibringen, wie du Bastardschwerter oder schwere Zweihänder mit Erz herstellst.
 		Bennet_Kap3Smith = 1;
 	};
 	
@@ -778,7 +829,7 @@ INSTANCE Info_Mod_Bennet_Trade (C_INFO)
 
 FUNC INT Info_Mod_Bennet_Trade_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Bennet_Hi))
+	if (Npc_KnowsInfo(hero, Info_Mod_Bennet_Haendler))
 	{
 		return 1;
 	};

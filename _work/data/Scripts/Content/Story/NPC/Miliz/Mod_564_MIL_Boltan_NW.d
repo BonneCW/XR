@@ -4,7 +4,7 @@ INSTANCE Mod_564_MIL_Boltan_NW (Npc_Default)
 	name 		= "Boltan";	
 	guild 		= GIL_PAL;
 	id 			= 564;
-	voice 		= 5;
+	voice 		= 30;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

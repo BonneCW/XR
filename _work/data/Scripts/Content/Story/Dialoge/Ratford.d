@@ -33,7 +33,7 @@ FUNC VOID Info_Mod_Ratford_Hi_Info()
 
 	TRIA_Next(Drax);
 
-	AI_Output(self, hero, "Info_Mod_Ratford_Hi_06_05"); //Das ist nicht dein Ernst!
+	AI_Output(self, hero, "Info_Mod_Ratford_Hi_30_05"); //Das ist nicht dein Ernst!
 
 	TRIA_Next(Ratford);
 
@@ -43,7 +43,7 @@ FUNC VOID Info_Mod_Ratford_Hi_Info()
 
 	TRIA_Next(Drax);
 
-	AI_Output(self, hero, "Info_Mod_Ratford_Hi_06_09"); //Und mir auch. Lass mal zwei Bierchen rüberwachsen!
+	AI_Output(self, hero, "Info_Mod_Ratford_Hi_30_09"); //Und mir auch. Lass mal zwei Bierchen rüberwachsen!
 
 	TRIA_Finish();
 
@@ -72,7 +72,7 @@ FUNC VOID Info_Mod_Ratford_Hi_B()
 
 	TRIA_Next(Drax);
 
-	AI_Output(self, hero, "Info_Mod_Ratford_Hi_B_06_02"); //Ja, verpiss dich!
+	AI_Output(self, hero, "Info_Mod_Ratford_Hi_B_30_02"); //Ja, verpiss dich!
 
 	TRIA_Finish();
 

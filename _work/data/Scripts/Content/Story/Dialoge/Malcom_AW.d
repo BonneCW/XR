@@ -15,29 +15,34 @@ FUNC INT Info_Mod_Malcom_AW_Hi_Condition()
 
 FUNC VOID Info_Mod_Malcom_AW_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_04_00"); //He Mann. Wie kommst du denn hierher?
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_30_00"); //He, Mann. Wie kommst du denn hierher?
 	AI_Output(hero, self, "Info_Mod_Malcom_AW_Hi_15_01"); //Dasselbe könnte ich dich fragen.
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Malcom_NW_Hi))
 	{
-		AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_04_02"); //Ich hatte Glück, dass Skip bei seiner Handelstour vorbeigekommen ist, sonst wäre ich wohl an diesem Strand verrottet.
+		AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_30_02"); //Ich hatte Glück, dass Skip bei seiner Handelstour vorbeigekommen ist, sonst wäre ich wohl an diesem Strand verrottet.
+		AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_30_03"); //Und ich hab mein Versprechen auch nicht vergessen: Das hier schulde ich dir noch für deine Hilfe.
+
+		B_GiveInvItems	(self, hero, ItMi_Gold, 100);
+
+		AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_30_04"); //Soll noch einer sagen, Piraten hätten keine Ehre, bei meiner einarmigen Lieblingshure!
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_04_03"); //Ich war zuerst hier. Sehe jeden, der hier vorbeikommt. Und du kommst eindeutig aus der falschen Richtung.
-		AI_Output(hero, self, "Info_Mod_Malcom_AW_Hi_15_04"); //Wieso? Ich komme vom Tempel drüben.
-		AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_04_05"); //Unsinn. Da gibt’s nur den Einsiedler und diese schuppigen Ungeheuer im Sumpf.
+		AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_30_05"); //Ich war zuerst hier. Sehe jeden, der hier vorbeikommt. Und du kommst eindeutig aus der falschen Richtung.
+		AI_Output(hero, self, "Info_Mod_Malcom_AW_Hi_15_06"); //Wieso? Ich komme vom Tempel drüben.
+		AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_30_07"); //Unsinn. Da gibt’s nur den Einsiedler und diese schuppigen Ungeheuer im Sumpf.
 	};
 
-	AI_Output(hero, self, "Info_Mod_Malcom_AW_Hi_15_06"); //Wenn du meinst. Was machst du denn hier?
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_04_07"); //Siehst du doch. Feuerholz für unser Lager.
-	AI_Output(hero, self, "Info_Mod_Malcom_AW_Hi_15_08"); //Hier gibt’s ein Lager?
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_04_09"); //Aber ja. Das Lager der gefürchtetsten Piraten der Meere.
-	AI_Output(hero, self, "Info_Mod_Malcom_AW_Hi_15_10"); //Und wo finde ich das?
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_04_11"); //Den Weg lang und vor der Ruine rechts. Ist nicht zu übersehen. Ach, und noch was.
-	AI_Output(hero, self, "Info_Mod_Malcom_AW_Hi_15_12"); //Ja?
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_04_13"); //Falls Henry dich ins Lager lässt, rede mit Skip.
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_04_14"); //Sag ihm, ich hab Hunger und er soll mir was zum Essen schicken.
+	AI_Output(hero, self, "Info_Mod_Malcom_AW_Hi_15_08"); //Wenn du meinst. Was machst du denn hier?
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_30_09"); //Siehst du doch. Feuerholz für unser Lager.
+	AI_Output(hero, self, "Info_Mod_Malcom_AW_Hi_15_10"); //Hier gibt’s ein Lager?
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_30_11"); //Aber ja. Das Lager der gefürchtetsten Piraten der Meere.
+	AI_Output(hero, self, "Info_Mod_Malcom_AW_Hi_15_12"); //Und wo finde ich das?
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_30_13"); //Den Weg lang und vor der Ruine rechts. Ist nicht zu übersehen. Ach, und noch was.
+	AI_Output(hero, self, "Info_Mod_Malcom_AW_Hi_15_14"); //Ja?
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_30_15"); //Falls Henry dich ins Lager lässt, rede mit Skip.
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Hi_30_16"); //Sag ihm, ich hab Hunger und er soll mir was zum Essen schicken.
 
 	Log_CreateTopic	(TOPIC_MOD_PIRATEN_MALCOM, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_PIRATEN_MALCOM, LOG_RUNNING);
@@ -66,21 +71,21 @@ FUNC INT Info_Mod_Malcom_AW_Schatzsuche_Condition()
 FUNC VOID Info_Mod_Malcom_AW_Schatzsuche_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Malcom_AW_Schatzsuche_15_00"); //Greg will auslaufen. Wir sollen die Vorbereitungen treffen.
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_04_01"); //Das hört man gern. Weißt du auch wohin?
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_30_01"); //Das hört man gern. Weißt du auch, wohin?
 	AI_Output(hero, self, "Info_Mod_Malcom_AW_Schatzsuche_15_02"); //Nein. Auf jeden Fall auf eine Schatzinsel.
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_04_03"); //Das hört man noch lieber. Hmm ... da müsste ich aber noch was richten ...
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_30_03"); //Das hört man noch lieber. Hmm ... da müsste ich aber noch was richten ...
 	AI_Output(hero, self, "Info_Mod_Malcom_AW_Schatzsuche_15_04"); //Brauchst du mich dazu?
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_04_05"); //Unbedingt. Hör zu:
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_04_06"); //Vor langer Zeit, kurz nachdem wir hier angelandet sind, hab ich mit meinem Entertrupp den Canyon ausgekundschaftet.
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_04_07"); //'nen Haufen Viehzeug gab's da, aber mit denen sind wir fertig geworden.
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_04_08"); //Irgendwann kamen wir in eine Riesenhöhle mit reichlich Riesenkrebsen drin.
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_04_09"); //Wir konnten viele davon niedermachen, aber dabei sind zwei meiner Leute draufgegangen.
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_04_10"); //Mir blieb nichts anderes übrig, als eiligst den Rückzug anzutreten.
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_04_11"); //Seitdem war ich nicht mehr im Canyon.
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_30_05"); //Unbedingt. Hör zu:
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_30_06"); //Vor langer Zeit, kurz nachdem wir hier angelandet waren, hab ich mit meinem Entertrupp den Canyon ausgekundschaftet.
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_30_07"); //Einen Haufen Viehzeug gab's da, aber mit denen sind wir fertig geworden.
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_30_08"); //Irgendwann kamen wir in eine Riesenhöhle mit reichlich Riesenkrebsen drin.
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_30_09"); //Wir konnten viele davon niedermachen, aber dabei sind zwei meiner Leute draufgegangen.
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_30_10"); //Mir blieb nichts anderes übrig, als eiligst den Rückzug anzutreten.
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_30_11"); //Seitdem war ich nicht mehr im Canyon.
 	AI_Output(hero, self, "Info_Mod_Malcom_AW_Schatzsuche_15_12"); //Das waren wohl Minecrawler. Die gibt's überall auf der Insel.
 	AI_Output(hero, self, "Info_Mod_Malcom_AW_Schatzsuche_15_13"); //Was hat das mit uns zu tun?
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_04_14"); //Ich muss wieder hin. Auf der Flucht ist mir unser Talismann abhanden gekommen.
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_04_15"); //Ohne den würde Greg niemals auslaufen.
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_30_14"); //Ich muss wieder hin. Auf der Flucht ist mir unser Talisman abhandengekommen.
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_30_15"); //Ohne den würde Greg niemals auslaufen.
 
 	AI_TurnAway	(hero, self);
 
@@ -88,8 +93,8 @@ FUNC VOID Info_Mod_Malcom_AW_Schatzsuche_Info()
 
 	AI_TurnToNpc	(hero, self);
 
-	AI_Output(hero, self, "Info_Mod_Malcom_AW_Schatzsuche_15_17"); //Und jetzt sollen wir zwei ...
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_04_18"); //Wir nehmen noch Jack mit. Er gehört zu meinem Entertrupp.
+	AI_Output(hero, self, "Info_Mod_Malcom_AW_Schatzsuche_15_17"); //Und jetzt sollen wir Zwei ...
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche_30_18"); //Wir nehmen noch Jack mit. Er gehört zu meinem Entertrupp.
 
 	Log_CreateTopic	(TOPIC_MOD_PIR_TALISMAN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_PIR_TALISMAN, LOG_RUNNING);
@@ -136,7 +141,7 @@ FUNC VOID Info_Mod_Malcom_AW_Schatzsuche2_Info()
 	AI_TurnToNpc	(Malcom, Jack);
 	AI_TurnToNpc	(Jack, Malcom);
 
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche2_04_00"); //Hallo Jack. Wir müssen in den Canyon. Du kommst mit.
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche2_30_00"); //Hallo Jack. Wir müssen in den Canyon. Du kommst mit.
 
 	TRIA_Next(Jack);
 
@@ -144,7 +149,7 @@ FUNC VOID Info_Mod_Malcom_AW_Schatzsuche2_Info()
 
 	TRIA_Next(Malcom);
 
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche2_04_02"); //Alles mir nach.
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche2_30_02"); //Alles mir nach.
 
 	TRIA_Finish();
 
@@ -181,7 +186,7 @@ FUNC VOID Info_Mod_Malcom_AW_Schatzsuche3_Info()
 
 	B_GiveInvItems	(hero, self, ItMi_Talisman_Piraten, 1);
 
-	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche3_04_01"); //Ist ja noch mal gut gegangen. Jetzt nichts wie weg hier.
+	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche3_30_01"); //Ist ja noch mal gut gegangen. Jetzt nichts wie weg hier.
 
 	AI_StopProcessInfos	(self);
 

@@ -4,7 +4,7 @@ instance Mod_500_PAL_Garond_NW (Npc_Default)
 	name 		= "Garond";
 	guild 		= GIL_PAL;
 	id 			= 500;
-	voice 		= 10;
+	voice 		= 30;
 	flags       = 2;	//Joly: NPC_FLAG_IMMORTAL																	
 	npctype		= NPCTYPE_MAIN;
 	

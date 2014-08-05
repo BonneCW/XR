@@ -8646,7 +8646,7 @@ FUNC VOID STARTUP_Jaegerlager()
 	Wld_InsertNpc	(Mod_7417_JG_Cyrco_JL,		"JL_01");
 	Wld_InsertNpc	(Mod_7436_JG_Wulfgar_MT,	"JL_01");
 
-	// J?ger
+	// Jaeger
 
 	Wld_InsertNpc	(Mod_7520_JG_Ferd_JL,		"JL_01");
 	Wld_InsertNpc	(Mod_7521_JG_Woron_JL,		"JL_01");

@@ -15,8 +15,8 @@ FUNC INT Info_Mod_Bennet_IR_Hi_Condition()
 
 FUNC VOID Info_Mod_Bennet_IR_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Bennet_IR_Hi_06_00"); //Bäh, so eine kalte und feuchte Absteige hätte ich nicht erwartet, als es hieß, wir würden zu einer Insel aufbrechen.
-	AI_Output(self, hero, "Info_Mod_Bennet_IR_Hi_06_01"); //Da kann ich doch froh sein das Schmiedefeuer immer in meiner Nähe zu haben.
+	AI_Output(self, hero, "Info_Mod_Bennet_IR_Hi_30_00"); //Bäh, so eine kalte und feuchte Absteige hätte ich nicht erwartet, als es hieß, wir würden zu einer Insel aufbrechen.
+	AI_Output(self, hero, "Info_Mod_Bennet_IR_Hi_30_01"); //Da kann ich doch froh sein, das Schmiedefeuer immer in meiner Nähe zu haben.
 };
 
 INSTANCE Info_Mod_Bennet_IR_GehtLos (C_INFO)
@@ -45,7 +45,7 @@ FUNC VOID Info_Mod_Bennet_IR_GehtLos_Info()
 {
 	B_Say	(hero, self, "$IRDORATHGEHTLOS");
 
-	AI_Output(self, hero, "Info_Mod_Bennet_IR_GehtLos_06_00"); //Machst du Witze?! Ich bin als Schmied an Bord gekommen und keinen Zentimeter werde ich mich vom Schmiedeofen wegbewegen. Wäre ja noch schöner ...
+	AI_Output(self, hero, "Info_Mod_Bennet_IR_GehtLos_30_00"); //Machst du Witze?! Ich bin als Schmied an Bord gekommen und keinen Zentimeter werde ich mich vom Schmiedeofen wegbewegen. Wäre ja noch schöner ...
 
 	AI_StopProcessInfos	(self);
 };
@@ -72,7 +72,7 @@ FUNC INT Info_Mod_Bennet_IR_Kram_Condition()
 FUNC VOID Info_Mod_Bennet_IR_Kram_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bennet_IR_Kram_15_00"); //Hast du vielleicht auch einige Schwerter und Schmiedewerkzeug für mich?
-	AI_Output(self, hero, "Info_Mod_Bennet_IR_Kram_06_01"); //Sicher. Da ich bisher sowieso nicht viel zu tun habe, kann ich dir auch zeugen, wie du einen stärkeren Arm bekommst.
+	AI_Output(self, hero, "Info_Mod_Bennet_IR_Kram_30_01"); //Sicher. Da ich bisher sowieso nicht viel zu tun habe, kann ich dir auch zeugen, wie du einen stärkeren Arm bekommst.
 };
 
 INSTANCE Info_Mod_Bennet_IR_Staerke (C_INFO)

@@ -4,7 +4,7 @@ INSTANCE Mod_562_NONE_Bennet_NW (Npc_Default)
 	name 		= "Bennet";
 	guild 		= GIL_NONE;
 	id 			= 562;
-	voice 		= 6;
+	voice 		= 30;
 	flags       = 0;	//Joly: NPC_FLAG_IMMORTAL	wegen Kapitel 3 Schmied der das Auge Innos repariert!		//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	
