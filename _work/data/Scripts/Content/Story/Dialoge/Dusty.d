@@ -217,6 +217,7 @@ INSTANCE Info_Mod_Dusty_BosperFelle (C_INFO)
 FUNC INT Info_Mod_Dusty_BosperFelle_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Dusty_Hi))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Bosper_Lehrling))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Dragomir_Hi))
 	{
 		return 1;
