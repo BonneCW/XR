@@ -1,11 +1,17 @@
 instance SVM_30 (C_SVM)
 {
+	SC_HeyWaitASecond			= 	"SVM_30_Addon_HeyWaitASecond"			;//(ruft) Warte!
+	
 	// ------ B_Say_GuildGreetings ---------------------------------------------------------------------------------------
+	MILGreetings				= 	"SVM_30_MILGreetings"				;//Für den König!
+	PALGreetings				=	"SVM_30_PALGreetings"				;//Für Innos!
+	BELGreetings				=	"SVM_30_BELGreetings"				;//Beliar zu ehren!
+	AdanosGreetings				=	"SVM_30_AdanosGreetings"				;//Adanos sei mit dir!
 	Weather						= 	"SVM_30_Weather"						;//So ein Mistwetter!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
-	IGetYouStill				= 	"SVM_30_IGetYouStill"				;//Krieg' ich dich DOCH noch!
+	IGetYouStill				= 	"SVM_30_IGetYouStill"				;//Krieg ich dich DOCH noch!
 	DieEnemy					=	"SVM_30_DieEnemy"					;//Jetzt bist du dran!
-	DieMonster					=	"SVM_30_DieMonster"					;//Da ist schon wieder eins von diesen Drecksviechern!
+	DieMonster					=	"SVM_30_DieMonster"					;//Da ist wieder eins von diesen Drecksviechern!
 	DirtyThief					=	"SVM_30_DirtyThief"					;//Na warte, du dreckiger Dieb!
 	HandsOff					=	"SVM_30_HandsOff"					;//Finger weg da!
 	SheepKiller					=	"SVM_30_SheepKiller"					;//Der Mistkerl schlachtet unsere Schafe!
@@ -14,12 +20,13 @@ instance SVM_30 (C_SVM)
 	DieStupidBeast				=	"SVM_30_DieStupidBeast"				;//Hier kommen keine Viecher rein!
 	YouDareHitMe				=	"SVM_30_YouDareHitMe"				;//Na warte, du Mistkerl!
 	YouAskedForIt				=	"SVM_30_YouAskedForIt"				;//Du hast es so gewollt!
-	ThenIBeatYouOutOfHere		=	"SVM_30_ThenIBeatYouOutOfHere"		;//Dann muss ich dich eben rausPRÜGELN!
+	ThenIBeatYouOutOfHere		=	"SVM_30_ThenIBeatYouOutOfHere"		;//Dann muss ich dich eben rausprügeln!
 	WhatDidYouDoInThere			=	"SVM_30_WhatDidYouDoInThere"			;//Was hattest DU denn da drin zu suchen, he!?
 	WillYouStopFighting			=	"SVM_30_WillYouStopFighting"			;//Wollt ihr wohl damit aufhören!?
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_30_KillEnemy"					;//Stirb, Mistkerl!
-	EnemyKilled					=	"SVM_30_EnemyKilled"				;//Das war's für dich, Junge.
+	EnemyKilled					=	"SVM_30_EnemyKilled"					;//Das war's für dich, Penner.
+	Berzerk						=	"SVM_30_Berzerk"						;//UUAAARRGGGHHH!!!
 	MonsterKilled				=	"SVM_30_MonsterKilled"				;//Ein Mistvieh weniger!
 	ThiefDown					=	"SVM_30_ThiefDown"					;//Versuch nie wieder, mich zu bestehlen!
 	rumfummlerDown				=	"SVM_30_rumfummlerDown"				;//Lass in Zukunft die Finger von Sachen, an denen du nichts zu suchen hast!
@@ -29,86 +36,127 @@ instance SVM_30 (C_SVM)
 	NeverHitMeAgain				=	"SVM_30_NeverHitMeAgain"				;//Leg dich nie wieder mit mir an!
 	YouBetterShouldHaveListened	=	"SVM_30_YouBetterShouldHaveListened"	;//Du hättest auf mich hören sollen!
 	GetUpAndBeGone				=	"SVM_30_GetUpAndBeGone"				;//Und jetzt mach, dass du hier rauskommst!
-	NeverEnterRoomAgain			=	"SVM_30_NeverEnterRoomAgain"			;//Und dass ich dich nie wieder da drin erwische, okay?
-	ThereIsNoFightingHere		=	"SVM_30_ThereIsNoFightingHere"		;//Hier wird nicht gekämpft, klar!? Lass dir das eine Lehre sein, okay?
+	NeverEnterRoomAgain			=	"SVM_30_NeverEnterRoomAgain"			;//Und dass ich dich nie wieder da drin erwische!
+	ThereIsNoFightingHere		=	"SVM_30_ThereIsNoFightingHere"		;//Hier wird nicht gekämpft, klar!? Lass dir das eine Lehre sein!
 	// ------ C_WantToFlee -------------------------------------------------------------------------------------------------
-	RunAway						= 	"SVM_30_RunAway"						;//Nichts wie weg!
+	RunAway						= 	"SVM_30_RunAway"						;//Scheiße! Nichts wie weg!
 	// ------ C_WantToCallGuardsToFight --------------------------------------------------------------------------------------
-	Alarm						=	"SVM_30_Alarm"					;//ALARM!
-	Guards						=	"SVM_30_Guards"					;//WACHE!
-	Help						=	"SVM_30_Help"					;//Hilfe!
+	Alarm						=	"SVM_30_Alarm"						;//ALARM!
+	Guards						=	"SVM_30_Guards"						;//WACHE!
+	Help						=	"SVM_30_Help"						;//Hilfe!
 	// ------ B_AssessMurder -----------------------------------------------------------------------------------------------
-	GoodMonsterKill				=	"SVM_30_GoodMonsterKill"			;//(ruft zu) Gut gemacht!
-	GoodKill					= 	"SVM_30_GoodKill"				;//(ruft) Ja, mach das Schwein fertig!
+	GoodMonsterKill				=	"SVM_30_GoodMonsterKill"				;//(ruft zu) Gut gemacht - ein Drecksvieh weniger!
+	GoodKill					= 	"SVM_30_GoodKill"					;//(ruft) Ja, mach das Schwein fertig!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
-	NOTNOW						= 	"SVM_30_NOTNOW"					;//Lass mich in Ruhe!
+	NOTNOW						= 	"SVM_30_NOTNOW"						;//Lass mich in Ruhe!
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
-	RunCoward					=	"SVM_30_RunCoward"				;//(ruft laut) Bleib stehen, du Feigling!
+	RunCoward					=	"SVM_30_RunCoward"					;//(ruft laut) Bleib stehen, du Lump!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
-	GetOutOfHere				=	"SVM_30_GetOutOfHere"			;//Mach, dass du hier rauskommst!
-	WhyAreYouInHere				=	"SVM_30_WhyAreYouInHere"		;//Was suchst du hier!? Geh!
-	YesGoOutOfHere				= 	"SVM_30_YesGoOutOfHere"			;//Ja, mach, dass du hier wegkommst!
+	GetOutOfHere				=	"SVM_30_GetOutOfHere"				;//Raus hier!
+	WhyAreYouInHere				=	"SVM_30_WhyAreYouInHere"				;//Was suchst du hier!? Geh!
+	YesGoOutOfHere				= 	"SVM_30_YesGoOutOfHere"				;//Ja, mach, dass du wegkommst!
 	// ------ ZS_ObservePlayer ---------------------------------------------------------------------------------------------
-	WhatsThisSupposedToBe		=	"SVM_30_WhatsThisSupposedToBe"	;//Hey du! Was schleichst du da rum.
-	YouDisturbedMySlumber		=	"SVM_30_YouDisturbedMySlumber"	;//(wacht auf) Verdammt, was ist los?
+	WhatsThisSupposedToBe		=	"SVM_30_WhatsThisSupposedToBe"		;//Hey du! Was schleichst du da rum?
+	YouDisturbedMySlumber		=	"SVM_30_YouDisturbedMySlumber"		;//(wacht auf) Verdammt, was ist los?
 	// ------ ZS_RansackBody -----------------------------------------------------------------------------------------------
-	ITookYourGold				=	"SVM_30_ITookYourGold"			;//Danke für das Gold, du Held!
-	ShitNoGold					=	"SVM_30_ShitNoGold"				;//Du arme Wurst, hast ja nicht mal Gold dabei!
-	ITakeYourWeapon				=	"SVM_30_ITakeYourWeapon"			;//Die Waffe nehm ich mal besser an mich!
+	ITookYourGold				=	"SVM_30_ITookYourGold"				;//Gold! Das ist schon mal meins ...
+	ShitNoGold					=	"SVM_30_ShitNoGold"					;//Du hast noch nicht mal Gold dabei?
+	ITakeYourWeapon				=	"SVM_30_ITakeYourWeapon"				;//Deine Waffe nehm ich mal lieber mit.
 	// ------ ZS_ReactToDamage ---------------------------------------------------------------------------------------------
-	WhatAreYouDoing				=	"SVM_30_WhatAreYouDoing"			;//(warnt) Pass auf! Noch mal, und ich verpass dir eine.
+	WhatAreYouDoing				=	"SVM_30_WhatAreYouDoing"				;//(warnt) Hey! Pass auf!
 	// ------ ZS_ReactToWeapon ---------------------------------------------------------------------------------------------
-	LookingForTroubleAgain		=	"SVM_30_LookingForTroubleAgain"	;//Hast du immer noch nicht genug?!
-	StopMagic					=	"SVM_30_StopMagic"				;//Hör auf mit dieser Magie-Scheiße!
-	ISaidStopMagic				=	"SVM_30_ISaidStopMagic"			;//Willst du Schläge? Hör sofort damit auf!!!
-	WeaponDown					=	"SVM_30_WeaponDown"				;//Steck die Waffe weg!
-	ISaidWeaponDown				=	"SVM_30_ISaidWeaponDown"		;//Steck endlich die Scheißwaffe weg!
-	WiseMove					=	"SVM_30_WiseMove"				;//Kluges Kerlchen!
+	LookingForTroubleAgain		=	"SVM_30_LookingForTroubleAgain"		;//(agressiv) Hast du immer noch nicht genug?!
+	StopMagic					=	"SVM_30_StopMagic"					;//Geh bloß weg mit deiner Magie!
+	ISaidStopMagic				=	"SVM_30_ISaidStopMagic"				;//Weg mit der Magie! Hörst du schlecht!?
+	WeaponDown					=	"SVM_30_WeaponDown"					;//Weg mit der Waffe!
+	ISaidWeaponDown				=	"SVM_30_ISaidWeaponDown"				;//Hörst du schlecht? Ich sagte: Weg mit der Waffe!
+	WiseMove					=	"SVM_30_WiseMove"					;//Na bitte, geht doch!
 	// ------ ZS_Unconscious ------------------------------------------------------------------------------------------------
-	NextTimeYoureInForIt		=	"SVM_30_NextTimeYoureInForIt"	;//(zu sich selbst) Das nächste Mal werden wir ja sehen ...
-	OhMyHead					=	"SVM_30_OhMyHead"				;//(zu sich selbst) Oh Mann, mein Kopf ...
+	NextTimeYoureInForIt		=	"SVM_30_NextTimeYoureInForIt"		;//(zu sich selbst) Darüber reden wir noch ...
+	OhMyHead					=	"SVM_30_OhMyHead"					;//(zu sich selbst) Oh, mein Schädel ...
 	// ------ ZS_WatchFight -------------------------------------------------------------------------------------------------
-	TheresAFight				=	"SVM_30_TheresAFight"			;//(gierig) Ah, ein Kampf!
-	OhMyGodItsAFight			=	"SVM_30_OhMyGodItsAFight"		;//(bestürzt) Mein Gott, ein Kampf!
-	GoodVictory					=	"SVM_30_GoodVictory"			;//(böse lachend) Dem hast du's gezeigt!
-	NotBad						= 	"SVM_30_NotBad"					;//(anerkennend) Nicht schlecht ...
-	OhMyGodHesDown				=	"SVM_30_OhMyGodHesDown"			;//(zu sich selbst) Mein Gott! Wie brutal ...
-	CheerFriend01				=	"SVM_30_CheerFriend01"			;//Hau drauf!
-	CheerFriend02				=	"SVM_30_CheerFriend02"			;//Zeig's ihm!
-	CheerFriend03				=	"SVM_30_CheerFriend03"			;//Mach ihn fertig!
-	Ooh01						=	"SVM_30_Ooh01"					;//Schlag zurück!
-	Ooh02						=	"SVM_30_Ooh02"					;//Pass doch auf!
-	Ooh03						=	"SVM_30_Ooh03"					;//Oh! Das tat weh!
+	TheresAFight				=	"SVM_30_TheresAFight"				;//(gierig) Jetzt geht's zur Sache!
+	OhMyGodItsAFight			=	"SVM_30_OhMyGodItsAFight"			;//(bestürzt) Die hauen sich den Schädel ein ...
+	GoodVictory					=	"SVM_30_GoodVictory"					;//(böse lachend) Das hat er verdient.
+	NotBad						= 	"SVM_30_NotBad"						;//(anerkennend) Gar nicht so übel ...
+	OhMyGodHesDown				=	"SVM_30_OhMyGodHesDown"				;//(zu sich selbst) Was für ein brutaler Kerl ...
+	CheerFriend01				=	"SVM_30_CheerFriend01"				;//Ja, so ist's gut!
+	CheerFriend02				=	"SVM_30_CheerFriend02"				;//Na, mach schon!
+	CheerFriend03				=	"SVM_30_CheerFriend03"				;//Immer feste drauf!
+	Ooh01						=	"SVM_30_Ooh01"						;//Lass dir nichts gefallen!
+	Ooh02						=	"SVM_30_Ooh02"						;//Den wirst du ja wohl schaffen!
+	Ooh03						=	"SVM_30_Ooh03"						;//Das gibt's doch gar nicht!
 	// ----------------------------------------------------------------------------------------------------------------------
-	WhatWasThat					= "SVM_30_WhatWasThat"				;//(zu sich selbst, wacht auf) Was WAR das!?
+	WhatWasThat					= "SVM_30_WhatWasThat"					;//(zu sich selbst, wacht auf) Was WAR das!?
 	// ----------------------------------------------------------------------------------------------------------------------
-	GetOutOfMyBed				= "SVM_30_GetOutOfMyBed"			;//Das ist mein Bett!
-	Awake						= "SVM_30_Awake"					;//(herzhaftes Gähnen)
+	GetOutOfMyBed				= "SVM_30_GetOutOfMyBed"					;//Raus aus meinem Bett!
+	Awake						= "SVM_30_Awake"							;//(herzhaftes Gähnen)
 	// ----------------------------------------------------------------------------------------------------------------------
-	Smalltalk01					= "SVM_30_Smalltalk01"				;//... wirklich? Das ist ja interessant ...
-	Smalltalk02					= "SVM_30_Smalltalk02"				;//... ich glaube da nicht dran ...
-	Smalltalk03					= "SVM_30_Smalltalk03"				;//... mein Mann sieht das anders ...
-	Smalltalk04					= "SVM_30_Smalltalk04"				;//... ach, erzähl mir nicht so was ...
-	Smalltalk05					= "SVM_30_Smalltalk05"				;//... ehrlich, ich hab es selbst erlebt ...
-	Smalltalk06					= "SVM_30_Smalltalk06"				;//... was du nicht sagst ...
-	Smalltalk07					= "SVM_30_Smalltalk07"				;//... das darfst du keinem erzählen ...
-	Smalltalk08					= "SVM_30_Smalltalk08"				;//... schlimme Zeiten sind das ...
-	Smalltalk09					= "SVM_30_Smalltalk09"				;//... wer sagt denn so was?...
-	Smalltalk10					= "SVM_30_Smalltalk10"				;//... wenn ich es nicht mit eigenen Augen gesehen hätte ...
-	Smalltalk11					= "SVM_30_Smalltalk11"				;//... irgendwer muss die Arbeit ja machen ...
-	Smalltalk12					= "SVM_30_Smalltalk12"				;//... ich habe was anderes gehört ...
-	Smalltalk13					= "SVM_30_Smalltalk13"				;//... das ist mal wieder typisch ...
-	Smalltalk14					= "SVM_30_Smalltalk14"				;//... er erzählt alles weiter ..
-	Smalltalk15					= "SVM_30_Smalltalk15"				;//... er sollte lieber den Mund halten ...
-	Smalltalk16					= "SVM_30_Smalltalk16"				;//... er arbeitet auch den ganzen Tag ...
-	Smalltalk17					= "SVM_30_Smalltalk17"				;//... worum soll ich mich denn noch alles kümmern ...
-	Smalltalk18					= "SVM_30_Smalltalk18"				;//... er redet einfach zu viel ...
-	Smalltalk19					= "SVM_30_Smalltalk19"				;//... das ist doch kein Geheimnis mehr...
-	Smalltalk20					= "SVM_30_Smalltalk20"				;//... das weiß doch inzwischen jeder ...
-	Smalltalk21					= "SVM_30_Smalltalk21"				;//... der erzähl ich gar nichts mehr ...
-	Smalltalk22					= "SVM_30_Smalltalk22"				;//... und es wird noch viel schlimmer ...
-	Smalltalk23					= "SVM_30_Smalltalk23"				;//... das ist ja schrecklich ...
-	Smalltalk24					= "SVM_30_Smalltalk24"				;//... das habe ich schon immer gesagt ...
+	TOUGHGUY_ATTACKLOST			= "SVM_30_TOUGHGUY_ATTACKLOST"			;//Ist ja schon gut, du hast gewonnen. Was willst du?
+	TOUGHGUY_ATTACKWON			= "SVM_30_TOUGHGUY_ATTACKWON"			;//(selbstgefällig) Muss ich dir noch mal zeigen, wer hier der Herr ist?
+	TOUGHGUY_PLAYERATTACK		= "SVM_30_TOUGHGUY_PLAYERATTACK"			;//Willst du dich noch mal mit mir anlegen oder was?
+	// ----------------------------------------------------------------------------------------------------------------------
+	GOLD_1000					= "SVM_30_GOLD_1000"						;//1000 Goldstücke.
+	GOLD_950					= "SVM_30_GOLD_950"						;//950 Goldstücke.
+	GOLD_900					= "SVM_30_GOLD_900"						;//900 Goldstücke.
+	GOLD_850					= "SVM_30_GOLD_850"						;//850 Goldstücke.
+	GOLD_800					= "SVM_30_GOLD_800"						;//800 Goldstücke.
+	GOLD_750					= "SVM_30_GOLD_750"						;//750 Goldstücke.
+	GOLD_700					= "SVM_30_GOLD_700"						;//700 Goldstücke.
+	GOLD_650					= "SVM_30_GOLD_650"						;//650 Goldstücke.
+	GOLD_600					= "SVM_30_GOLD_600"						;//600 Goldstücke.
+	GOLD_550					= "SVM_30_GOLD_550"						;//550 Goldstücke.
+	GOLD_500					= "SVM_30_GOLD_500"						;//500 Goldstücke.
+	GOLD_450					= "SVM_30_GOLD_450"						;//450 Goldstücke.
+	GOLD_400					= "SVM_30_GOLD_400"						;//400 Goldstücke.
+	GOLD_350					= "SVM_30_GOLD_350"						;//350 Goldstücke.
+	GOLD_300					= "SVM_30_GOLD_300"						;//300 Goldstücke.
+	GOLD_250					= "SVM_30_GOLD_250"						;//250 Goldstücke.
+	GOLD_200					= "SVM_30_GOLD_200"						;//200 Goldstücke.
+	GOLD_150					= "SVM_30_GOLD_150"						;//150 Goldstücke.
+	GOLD_100					= "SVM_30_GOLD_100"						;//100 Goldstücke.
+	GOLD_90						= "SVM_30_GOLD_90"						;//90 Goldstücke.
+	GOLD_80						= "SVM_30_GOLD_80"						;//80 Goldstücke.
+	GOLD_70						= "SVM_30_GOLD_70"						;//70 Goldstücke.
+	GOLD_60						= "SVM_30_GOLD_60"						;//60 Goldstücke.
+	GOLD_50						= "SVM_30_GOLD_50"						;//50 Goldstücke.
+	GOLD_40						= "SVM_30_GOLD_40"						;//40 Goldstücke.
+	GOLD_30						= "SVM_30_GOLD_30"						;//30 Goldstücke.
+	GOLD_20						= "SVM_30_GOLD_20"						;//20 Goldstücke.
+	GOLD_10						= "SVM_30_GOLD_10"						;//10 Goldstücke.
+	// -----------------------------------------------------------------------------------------------------------------------
+	Smalltalk01					= "SVM_30_Smalltalk01"					;//... glaubst du wirklich ...
+	Smalltalk02					= "SVM_30_Smalltalk02"					;//... möglich ist alles ...
+	Smalltalk03					= "SVM_30_Smalltalk03"					;//... das hätte er doch besser wissen müssen ...
+	Smalltalk04					= "SVM_30_Smalltalk04"					;//... als ob ich nicht schon genug Probleme hätte ...
+	Smalltalk05					= "SVM_30_Smalltalk05"					;//... wer erzählt denn so was ...
+	Smalltalk06					= "SVM_30_Smalltalk06"					;//... das gibt doch nur noch mehr Ärger ...
+	Smalltalk07					= "SVM_30_Smalltalk07"					;//... man erzählt sich ja so einiges ...
+	Smalltalk08					= "SVM_30_Smalltalk08"					;//... ich hätte das nicht gemacht ...
+	Smalltalk09					= "SVM_30_Smalltalk09"					;//... das sind doch alles nur Gerüchte ...
+	Smalltalk10					= "SVM_30_Smalltalk10"					;//... man muss eben aufpassen, was man so rumerzählt ...
+	Smalltalk11					= "SVM_30_Smalltalk11"					;//... das hätte ich dir vorher sagen können ...
+	Smalltalk12					= "SVM_30_Smalltalk12"					;//... mich fragt ja keiner ...
+	Smalltalk13					= "SVM_30_Smalltalk13"					;//... der arme Kerl kann einem Leid tun ...
+	Smalltalk14					= "SVM_30_Smalltalk14"					;//... das ist doch nichts Neues ...
+	Smalltalk15					= "SVM_30_Smalltalk15"					;//... das liegt doch auf der Hand ...
+	Smalltalk16					= "SVM_30_Smalltalk16"					;//... mich brauchst du das nicht zu fragen ...
+	Smalltalk17					= "SVM_30_Smalltalk17"					;//... das kann ja nicht ewig so weitergehen ...
+	Smalltalk18					= "SVM_30_Smalltalk18"					;//... meine Meinung kennst du ja schon ...
+	Smalltalk19					= "SVM_30_Smalltalk19"					;//... genau das hab ich auch gesagt ...
+	Smalltalk20					= "SVM_30_Smalltalk20"					;//... daran wird dich nie was ändern ...
+	Smalltalk21					= "SVM_30_Smalltalk21"					;//... warum erfahre ich das erst jetzt ...
+	Smalltalk22					= "SVM_30_Smalltalk22"					;//... lass uns erstmal abwarten, was daraus wird ...
+	Smalltalk23					= "SVM_30_Smalltalk23"					;//... einige Probleme erledigen sich von selbst ...
+	Smalltalk24					= "SVM_30_Smalltalk24"					;//... ich kann das nicht mehr hören ...
+	//ToughGuy (SLD/MIL/DJG)                                                                                                                        
+	Smalltalk25					= "SVM_30_Smalltalk25"					;//... der war doch sturzbetrunken ...
+	Smalltalk26					= "SVM_30_Smalltalk26"					;//... mit mir kann man so was nicht machen ...
+	Smalltalk27					= "SVM_30_Smalltalk27"					;//... alle sind gerannt wie die Hasen, ich war ganz allein ...
+	//ProInnos (NOV/KDF/PAL)                                                                                                                        
+	Smalltalk28					= "SVM_30_Smalltalk28"					;//... so steht es in den heiligen Schriften ...
+	Smalltalk29					= "SVM_30_Smalltalk29"					;//... ich handle stets in Innos' Namen ...
+	Smalltalk30					= "SVM_30_Smalltalk30"					;//... niemand darf gegen die göttliche Ordnung verstoßen ...
 	SmalltalkKhorataAnnaQuest01			= "SVM_30_SmalltalkKhorataAnnaQuest01"; //... er hat sie alle abgemetzelt ...
 	SmalltalkKhorataAnnaQuest02			= "SVM_30_SmalltalkKhorataAnnaQuest02"; //... nach dem, was er dem Richter angetan hat, würde ich ihn nicht mehr in mein Haus lassen ...
 	SmalltalkKhorataAnnaQuest03			= "SVM_30_SmalltalkKhorataAnnaQuest03"; //... ich trauere nicht um die Schöppen ...
@@ -174,6 +222,13 @@ instance SVM_30 (C_SVM)
 	SmalltalkKhorataDiebeBib07			= "SVM_30_SmalltalkKhorataDiebeBib07"; //... Bedeckt mit faulem Obst ...
 	SmalltalkKhorataDiebeBib08			= "SVM_30_SmalltalkKhorataDiebeBib08"; //... Der muss echt den Verstand verloren haben ...
 
+	SmalltalkKhorataNormal01			= "SVM_30_SmalltalkKhorataNormal01"; //... Ich hab schon lange keine zünftige Hexenverbrennung mehr erlebt! ...
+	SmalltalkKhorataNormal02			= "SVM_30_SmalltalkKhorataNormal02"; //... Einen trink ich noch ...
+	SmalltalkKhorataNormal03			= "SVM_30_SmalltalkKhorataNormal03"; //... Die nächste Runde geht auf mich! ...
+	SmalltalkKhorataNormal04			= "SVM_30_SmalltalkKhorataNormal04"; //... Morgen ist auch noch ein Tag - aber besser wird er nicht ...
+	SmalltalkKhorataNormal05			= "SVM_30_SmalltalkKhorataNormal05"; //... Die Zauberer sollst du nicht leben lassen ...
+	SmalltalkKhorataNormal06			= "SVM_30_SmalltalkKhorataNormal06"; //... Die Würfel sind gefallen ...
+
 	// Khorinis
 
 	SmalltalkRangar01			= "SVM_30_SmalltalkRangar01"; //... jetzt soll sogar die Miliz Kunde in der roten Laterne sein ...
@@ -194,12 +249,127 @@ instance SVM_30 (C_SVM)
 
 	SmalltalkMikaPflanzen01			= "SVM_30_SmalltalkMikaPflanzen01"; //... Mika bietet gerade Heilpflanzen für einen Spottpreis an! ...
 	SmalltalkMikaPflanzen02			= "SVM_30_SmalltalkMikaPflanzen02"; //... Diese Rübennase sammelt mir alle Pflanzen vor der Nase weg! ...
+
+	// Dämonenritterfestung wegen Belagerung
+
+	SmalltalkDMRBelagerungAbdi01			= "SVM_30_SmalltalkDMRBelagerungAbdi01"; //... ehrlich gesagt tut's mir um die beiden nicht Leid ...
+	SmalltalkDMRBelagerungAbdi02			= "SVM_30_SmalltalkDMRBelagerungAbdi02"; //... wüsste zu gerne, wer hier im Lager die Leute abschlachtet ...
 	// ----------------------------------------------------------------------------------------------------------------------
+	NoLearnNoPoints				= "SVM_30_NoLearnNoPoints"			;//Komm wieder, wenn du mehr Erfahrung hast.
+	NoLearnOverPersonalMAX		= "SVM_30_NoLearnOverPersonalMAX"	;//Du verlangst mehr von mir, als ich dir beibringen kann.
+	NoLearnYoureBetter			= "SVM_30_NoLearnYoureBetter"		;//Ich kann dir nichts mehr beibringen. Du bist schon zu gut.
+	YouLearnedSomething			= "SVM_30_YouLearnedSomething"		;//Siehst du, du bist schon besser geworden ...
+	// ----------------------------------------------------------------------------------------------------------------------
+	UNTERSTADT					= "SVM_30_UNTERSTADT"				;//Du bist jetzt in der Unterstadt.
+	OBERSTADT					= "SVM_30_OBERSTADT"					;//Du bist jetzt in der Oberstadt.
+	TEMPEL						= "SVM_30_TEMPEL"					;//Du bist jetzt am Tempel.
+	MARKT						= "SVM_30_MARKT"						;//Du bist jetzt am Marktplatz.
+	GALGEN						= "SVM_30_GALGEN"					;//Du bist jetzt am Galgenplatz vor der Kaserne.
+	KASERNE						= "SVM_30_KASERNE"					;//Das hier ist die Kaserne.
+	HAFEN						= "SVM_30_HAFEN"						;//Du bist hier im Hafenviertel.
+	// -----------------------
+	WHERETO						= "SVM_30_WHERETO"					;//Wo willst du hin?
+	// -----------------------
+	OBERSTADT_2_UNTERSTADT		= "SVM_30_OBERSTADT_2_UNTERSTADT"	;//Geh von hier aus durch das innere Stadttor und du kommst in die Unterstadt.
+	UNTERSTADT_2_OBERSTADT		= "SVM_30_UNTERSTADT_2_OBERSTADT"	;//Am südlichen Stadttor gibt es eine Treppe, die zum inneren Stadttor hochführt. Dort beginnt die Oberstadt.
+	UNTERSTADT_2_TEMPEL			= "SVM_30_UNTERSTADT_2_TEMPEL"		;//Geh vom Schmied aus durch die Unterführung und du kommst zum Tempelplatz.
+	UNTERSTADT_2_HAFEN			= "SVM_30_UNTERSTADT_2_HAFEN"		;//Geh vom Schmied aus die Hafenstraße runter, dann kommst du zum Hafen.
+	TEMPEL_2_UNTERSTADT			= "SVM_30_TEMPEL_2_UNTERSTADT"		;//Vom Tempelplatz aus gibt es eine Unterführung, die in die Unterstadt führt.
+	TEMPEL_2_MARKT				= "SVM_30_TEMPEL_2_MARKT"			;//Wenn du vorm Tempel stehst, geh links hoch und an der Stadtmauer entlang, dann kommst du zum Markt.
+	TEMPEL_2_GALGEN				= "SVM_30_TEMPEL_2_GALGEN"			;//Wenn du vom Tempel aus gesehen links an der Kneipe vorbeigehst, kommst du zum Galgenplatz.
+	MARKT_2_TEMPEL				= "SVM_30_MARKT_2_TEMPEL"			;//Wenn du vom Marktplatz aus an der hohen Stadtmauer entlanggehst, kommst du zum Tempel.
+	MARKT_2_KASERNE				= "SVM_30_MARKT_2_KASERNE"			;//Die Kaserne ist das riesengroße Gebäude. Geh einfach die Treppen gegenüber dem Hotel rauf.
+	MARKT_2_GALGEN				= "SVM_30_MARKT_2_GALGEN"			;//Geh einfach an der großen Kaserne entlang und du kommst zum Galgenplatz.
+	GALGEN_2_TEMPEL				= "SVM_30_GALGEN_2_TEMPEL"			;//Geh vom Galgenplatz aus die Gasse runter und du kommst zum Tempelplatz.
+	GALGEN_2_MARKT				= "SVM_30_GALGEN_2_MARKT"			;//Geh einfach an der großen Kaserne entlang und du kommst zum Markt.
+	GALGEN_2_KASERNE			= "SVM_30_GALGEN_2_KASERNE"			;//Die Kaserne ist das riesengroße Gebäude. Geh einfach die Treppen rauf.
+	KASERNE_2_MARKT				= "SVM_30_KASERNE_2_MARKT"			;//Geh einfach die Treppe am Haupteingang links runter, dann kommst du zum Marktplatz.
+	KASERNE_2_GALGEN			= "SVM_30_KASERNE_2_GALGEN"			;//Geh einfach die Treppe am Haupteingang rechts runter, dann kommst du zum Galgenplatz.
+	HAFEN_2_UNTERSTADT			= "SVM_30_HAFEN_2_UNTERSTADT"		;//Geh von der Kaimauer aus die Hafenstraße hoch, dann kommst du in die Unterstadt.
 	// -------------------------------------------------------------------------------------
 	Dead						= "SVM_30_Dead"						;//Aaaaaargl!
 	Aargh_1						= "SVM_30_Aargh_1"					;//Aargh
 	Aargh_2						= "SVM_30_Aargh_2"					;//Aargh
 	Aargh_3						= "SVM_30_Aargh_3"					;//Aargh
+	
+	//-------------------------------- Addon ------------------------------------------------
+	
+	ADDON_WRONGARMOR			= "SVM_30_Addon_WrongArmor";				//Was ist das für Kleidung? Sie passt nicht zu dir. Lass mich in Ruhe.
+	ADDON_WRONGARMOR_SLD		= "SVM_30_ADDON_WRONGARMOR_SLD";			//Trage gefälligst unsere Rüstung, wenn ich mit dir rede. Los, verschwinde.
+	ADDON_WRONGARMOR_MIL		= "SVM_30_ADDON_WRONGARMOR_MIL";			//Trage gefälligst die Rüstung des Königs. Los geh schon.
+	ADDON_WRONGARMOR_KDF		= "SVM_30_ADDON_WRONGARMOR_KDF";			//Deine Kleidung ist unserem Orden nicht angemessen. Zieh dich um.
+	ADDON_NOARMOR_BDT			= "SVM_30_ADDON_ADDON_NOARMOR_BDT";			//Hast ja noch nicht mal 'ne Rüstung. Verschwinde!
+
+	ADDON_DIEBANDIT				= "SVM_30_ADDON_DIEBANDIT";				//Schon wieder ein Bandit.
+	ADDON_DIRTYPIRATE			= "SVM_30_ADDON_DIRTYPIRATE";			//PIRATEN!
+
+	RELMINE01			= "SVM_30_RELMINE01";			//Ich halt das nicht mehr aus!
+	RELMINE02			= "SVM_30_RELMINE02";			//Wenn ich doch nur was zu essen hätte ...
+	RELMINE03			= "SVM_30_RELMINE03";			//Schlag auf Schlag, den ganzen Tag ...
+	RELMINE04			= "SVM_30_RELMINE04";			//Ein schwerer Brocken ist das.
+	RELMINE05			= "SVM_30_RELMINE05";			//Wann kommt die Ablösung endlich?
+	RELMINE06			= "SVM_30_RELMINE06";			//Die reinste Ausbeutung ist das!
+	RELMINE07			= "SVM_30_RELMINE07";			//Morgen komme ich nicht wieder, das versprech ich ...
+	RELMINE08			= "SVM_30_RELMINE08";			//So ein schönes Steinchen!
+	RELMINE09			= "SVM_30_RELMINE09";			//Meine Frau weiß schon gar nicht mehr, wie ich aussehe ...
+	RELMINE10			= "SVM_30_RELMINE10";			//'n Humpen wär jetzt das Richtige ...
+	RELMINE11			= "SVM_30_RELMINE11";			//Das soll wohl ein Ersatz für die Strafkolonie sein.
+	RELMINE12			= "SVM_30_RELMINE12";			//(summt) Nimm Freudenspender, dann ist es okay.
+
+	NoLearnGold			= "SVM_30_NoLearnGold"			;//Komm wieder, wenn du mehr Gold hast.
+
+	// Witze
+
+	WITZ_01_01			= "SVM_30_WITZ_01_01";			//Ein Jäger geht in den Wald.
+	WITZ_01_02			= "SVM_30_WITZ_01_02";			//Kommt ihm ein Ork mit einem Wildschwein auf der Schulter entgegen.
+	WITZ_01_03			= "SVM_30_WITZ_01_03";			//Ein paar Schritte weiter trifft er auf einen Söldner, der ebenfalls ein Wildschwein auf der Schulter trägt.
+	WITZ_01_04			= "SVM_30_WITZ_01_04";			//Und noch ein paar Meter weiter sieht er einen Goblin.
+	WITZ_01_05			= "SVM_30_WITZ_01_05";			//Frage ....... und was hat wohl der Goblin?
+	WITZ_01_06			= "SVM_30_WITZ_01_06";			//Zahnfleischbluten, denn jeder Dritte hat Zahnfleischbluten.
+
+	WITZ_02_01			= "SVM_30_WITZ_02_01";			//Kämpfen zwei Zombies um ihr Leben.
+
+	WITZ_03_01			= "SVM_30_WITZ_03_01";			//Was ist der unterschied zwischen Mud und 'ner Fleischwanze?
+	WITZ_03_02			= "SVM_30_WITZ_03_02";			//Fleischwanzen bringt 10 Erfahrung.
+
+	WITZ_04_01			= "SVM_30_WITZ_04_01";			//Ein Dieb bricht nachts in ein Haus ein.
+	WITZ_04_02			= "SVM_30_WITZ_04_02";			//Als er gerade durch das stockfinstere Wohnzimmer schleicht, hört er eine Stimme:
+	WITZ_04_03			= "SVM_30_WITZ_04_03";			//"Ich sehe dich und Innos sieht dich auch!"
+	WITZ_04_04			= "SVM_30_WITZ_04_04";			//Er erschrickt zu Tode und entzündet eine Kerze.
+	WITZ_04_05			= "SVM_30_WITZ_04_05";			//Er blickt auf und sieht auf einer Stange in der Ecke einen Papageien sitzen:
+	WITZ_04_06			= "SVM_30_WITZ_04_06";			//Meint der Einbrecher erleichtert:
+	WITZ_04_07			= "SVM_30_WITZ_04_07";			//"Hast Du mich aber erschreckt. Wie heißt Du denn ?"
+	WITZ_04_08			= "SVM_30_WITZ_04_08";			//"Mud!"
+	WITZ_04_09			= "SVM_30_WITZ_04_09";			//"Mud ist doch wohl wirklich ein selten blöder Name für einen Papagei!"
+	WITZ_04_10			= "SVM_30_WITZ_04_10";			//Grinst der Vogel: "Na und, Innos ist auch ein selten blöder Name für einen Warg."
+
+	WITZ_05_01			= "SVM_30_WITZ_05_01";			//Steigen zwei Skelette aus ihren Gräbern und klauen Pferde.
+	WITZ_05_02			= "SVM_30_WITZ_05_02";			//Packt das eine seinen Grabstein drauf.
+	WITZ_05_03			= "SVM_30_WITZ_05_03";			//Fragt das andere: "Wozu das?"
+	WITZ_05_04			= "SVM_30_WITZ_05_04";			//Sagt das andere: "Glaubst du ich fahr ohne Papiere"
+
+	WITZ_06_01			= "SVM_30_WITZ_06_01";			//Kommt ein Skelett während nem Sturm in Coragons Kneipe und sagt:
+	WITZ_06_02			= "SVM_30_WITZ_06_02";			//"Ich bin nass bis auf die Knochen"
+
+	WITZ_07_01			= "SVM_30_WITZ_07_01";			//Sagt die Snappermutter: "Kinder, heute gibt's frischen Paladin."
+	WITZ_07_02			= "SVM_30_WITZ_07_02";			//Sagt das Snapperkind: "Ich hasse Dosenfutter."
+
+	WITZ_08_01			= "SVM_30_WITZ_08_01";			//Was ist das für eine rote, glitschige Substanz zwischen den Flanken eines Sumpfhaies?
+	WITZ_08_02			= "SVM_30_WITZ_08_02";			//Langsamer Novize.
+
+	WITZ_09_01			= "SVM_30_WITZ_09_01";			//Was geht einem Ork als erstes durch den Kopf, wenn er ein Adanos-Kloster betritt?
+	WITZ_09_02			= "SVM_30_WITZ_09_02";			//Eine Eislanze.
+
+	WITZ_10_01			= "SVM_30_WITZ_10_01";			//Hör dir mal den an ...
+	WITZ_10_02			= "SVM_30_WITZ_10_02";			//Ja?
+	WITZ_10_03			= "SVM_30_WITZ_10_03";			//Also ...
+	WITZ_10_04			= "SVM_30_WITZ_10_04";			//Das Schaf Lisl vom Hirten Pepe ist krank.
+	WITZ_10_05			= "SVM_30_WITZ_10_05";			//Besorgt fragt er den Schäfer Balthasar:
+	WITZ_10_06			= "SVM_30_WITZ_10_06";			//"Was hast du denn damals deinem Schaf gegeben als sie so krank war?"
+	WITZ_10_07			= "SVM_30_WITZ_10_07";			//"Ich habe meiner Clara damals Lou’s doppelten Hammer gegeben", sagt dieser.
+	WITZ_10_08			= "SVM_30_WITZ_10_08";			//Gesagt, getan. Als Pepe zwei Tage später wieder Balthasar besucht, trauert er:
+	WITZ_10_09			= "SVM_30_WITZ_10_09";			//"Meine Lisl ist tot." Darauf Balthasar: "Meine Clara damals auch."
+	WITZ_10_10			= "SVM_30_WITZ_10_10";			//(belustigt) Ja, hähä. Wenn man den Viechern das Zeug zum Saufen gibt.
 
 	// Taschendiebstahl
 

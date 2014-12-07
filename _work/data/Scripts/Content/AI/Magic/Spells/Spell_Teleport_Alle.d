@@ -1675,11 +1675,11 @@ func void Spell_Cast_TeleportGDG()
 
 func int Spell_Logic_TeleportArgezToSaturas (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll) && Npc_GetDistToNpc(hero, PC_Friend_NW) < 500 && Npc_KnowsInfo(hero, Info_Mod_Argez_NW_LosZuSaturas))
+	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll) && Npc_GetDistToNpc(hero, PC_Friend_NW) < 1000 && Npc_KnowsInfo(hero, Info_Mod_Argez_NW_LosZuSaturas))
 	{
 		return SPL_SENDCAST;
 	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport && Npc_GetDistToNpc(hero, PC_Friend_NW) < 500 && Npc_KnowsInfo(hero, Info_Mod_Argez_NW_LosZuSaturas))
+	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport && Npc_GetDistToNpc(hero, PC_Friend_NW) < 1000 && Npc_KnowsInfo(hero, Info_Mod_Argez_NW_LosZuSaturas))
 	{
 		return SPL_SENDCAST;
 	};
@@ -1703,6 +1703,7 @@ func void Spell_Cast_TeleportArgezToSaturas()
 	AI_Teleport	(self, "NW_TROLLAREA_PORTALTEMPEL_40");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
 
+	AI_Teleport	(PC_Friend_NW, "NW_TROLLAREA_PORTALTEMPEL_40");
 	B_StartOtherRoutine	(PC_Friend_NW, "FOLLOWTOSATURAS");
 	AI_Teleport	(PC_Friend_NW, "NW_TROLLAREA_PORTALTEMPEL_40");
 };
