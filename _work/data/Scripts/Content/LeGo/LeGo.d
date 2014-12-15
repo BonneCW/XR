@@ -13,7 +13,7 @@
 |*                              auf Ikarus                               *|
 |*                                                                       *|
 \*************************************************************************/
-const string LeGo_Version = "LeGo 2.2.3";
+const string LeGo_Version = "LeGo 2.3.0b";
 
 const int LeGo_PrintS         = 1<<0;  // Interface.d
 const int LeGo_HookEngine     = 1<<1;  // HookEngine.d
@@ -50,7 +50,7 @@ var int _LeGo_Loaded;
 // [intern] Abhängigkeiten bestimmen
 //========================================
 func void LeGo_InitFlags(var int f) {
-    if(f & LeGo_Bloodsplats)    { f = f | LeGo_FrameFunctions | LeGo_HookEngine | LeGo_Random; };
+    if(f & LeGo_Bloodsplats)    { f = f | LeGo_FrameFunctions | LeGo_HookEngine | LeGo_Random | LeGo_Anim8; };
     if(f & LeGo_Gamestate)      { f = f | LeGo_EventHandler | LeGo_Saves; };
     if(f & LeGo_Cursor)         { f = f | LeGo_Interface | LeGo_View; };
     if(f & LeGo_PrintS)         { f = f | LeGo_AI_Function | LeGo_Anim8 | LeGo_Interface; };
@@ -75,7 +75,7 @@ func void LeGo_InitAlways(var int f) {
         if(HandlesPointer) {
             // Weltenwechsel
         };
-        if((_LeGo_Init)&&(!_LeGo_Loaded)) { // Neues Spiel -> Neues Spiel
+        if((_LeGo_Init)&&(!_LeGo_Loaded)) { // Aus einem Spiel heraus -> Neues Spiel
             _PM_Reset();
         };
     };

@@ -407,15 +407,18 @@ func void setPtr(var int h, var int ptr) {
 // Betrachten der folgenden
 // Scripte auf eigene Gefahr :0
 //========================================
-func void _deleteAll(var int val, var int key) {
+func void _deleteAll(var int key, var int val) {
 	delete(key);
 };
+
 func void _PM_Reset() {
     MEM_Info("Reset ALL the handles!");
     if(HandlesPointer) {
 		_HT_ForEach(HandlesPointer, _deleteAll);
 		_HT_Destroy(HandlesPointer);
 		_HT_Destroy(HandlesInstance);
+		HandlesPointer = 0;
+		HandlesInstance = 0;
     };
 	MEM_Info("Resetting done.");
 };

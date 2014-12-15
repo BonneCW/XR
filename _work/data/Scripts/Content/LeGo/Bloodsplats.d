@@ -96,4 +96,5 @@ func void _B_HeroDamage() {
 //========================================
 func void _Bloodsplats_Loop() {
     Npc_PercEnable(pc_hero, PERC_ASSESSDAMAGE, B_AssessDamage_Hero); //Deaktiviert sich manchmal grundlos, deshalb lieber reinkloppen
+    Hero_LastHP = hero.attribute[ATR_Hitpoints];
 };
