@@ -326,7 +326,10 @@ FUNC VOID DAUERFUNC_01()
 		}
 		else
 		{
-			View_Close	(View_Time);
+			if (Hlp_IsValidHandle(View_Time))
+			{
+				View_Close	(View_Time);
+			};
 		};
 
 		TimeAn = TimeSwitch;

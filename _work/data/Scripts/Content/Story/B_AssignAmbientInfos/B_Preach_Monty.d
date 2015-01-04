@@ -8,13 +8,27 @@ func void B_Preach_Monty(var int satz)
 	{	
 		// Hier Applaus-Ende
 
-		AI_PlayAni	(Mod_1049_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
-		AI_PlayAni	(Mod_1059_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
-		AI_PlayAni	(Mod_1055_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
-		AI_PlayAni	(Mod_1065_VLK_Buergerin_NW, "T_CLAPHANDS_2_STAND");
-		AI_PlayAni	(Mod_1073_VLK_Buergerin_NW, "T_CLAPHANDS_2_STAND");
-		AI_PlayAni	(Mod_1072_VLK_Buergerin_NW, "T_CLAPHANDS_2_STAND");
-		AI_PlayAni	(Mod_1044_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
+		if (!Npc_IsInState(Mod_1049_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1049_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
+		};
+		if (!Npc_IsInState(Mod_1059_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1059_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
+		};
+		if (!Npc_IsInState(Mod_1055_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1055_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
+		};
+		if (!Npc_IsInState(Mod_1065_VLK_Buergerin_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1065_VLK_Buergerin_NW, "T_CLAPHANDS_2_STAND");
+		};
+		if (!Npc_IsInState(Mod_1073_VLK_Buergerin_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1073_VLK_Buergerin_NW, "T_CLAPHANDS_2_STAND");
+		};
+		if (!Npc_IsInState(Mod_1072_VLK_Buergerin_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1072_VLK_Buergerin_NW, "T_CLAPHANDS_2_STAND");
+		};
+		if (!Npc_IsInState(Mod_1044_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1044_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
+		};
 
 		AI_Output (self, self, "Info_Mod_Monty_Preach_31_00"); //Mitten in der Nacht schlich ich mich durch das Orklager.
 	};
@@ -24,25 +38,53 @@ func void B_Preach_Monty(var int satz)
 
 		// Hier kommt dann das applaudierende Publikum drunter (T_STAND_2_CLAPHANDS oder so)
 
-		AI_PlayAni	(Mod_1049_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
-		AI_PlayAni	(Mod_1059_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
-		AI_PlayAni	(Mod_1055_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
-		AI_PlayAni	(Mod_1065_VLK_Buergerin_NW, "T_STAND_2_CLAPHANDS");
-		AI_PlayAni	(Mod_1073_VLK_Buergerin_NW, "T_STAND_2_CLAPHANDS");
-		AI_PlayAni	(Mod_1072_VLK_Buergerin_NW, "T_STAND_2_CLAPHANDS");
-		AI_PlayAni	(Mod_1044_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
+		if (!Npc_IsInState(Mod_1049_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1049_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
+		};
+		if (!Npc_IsInState(Mod_1059_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1059_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
+		};
+		if (!Npc_IsInState(Mod_1055_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1055_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
+		};
+		if (!Npc_IsInState(Mod_1065_VLK_Buergerin_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1065_VLK_Buergerin_NW, "T_STAND_2_CLAPHANDS");
+		};
+		if (!Npc_IsInState(Mod_1073_VLK_Buergerin_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1073_VLK_Buergerin_NW, "T_STAND_2_CLAPHANDS");
+		};
+		if (!Npc_IsInState(Mod_1072_VLK_Buergerin_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1072_VLK_Buergerin_NW, "T_STAND_2_CLAPHANDS");
+		};
+		if (!Npc_IsInState(Mod_1044_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1044_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
+		};
 	};
 	if (satz == 2) 	
 	{
 		// Hier Applaus-Ende
 
-		AI_PlayAni	(Mod_1049_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
-		AI_PlayAni	(Mod_1059_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
-		AI_PlayAni	(Mod_1055_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
-		AI_PlayAni	(Mod_1065_VLK_Buergerin_NW, "T_CLAPHANDS_2_STAND");
-		AI_PlayAni	(Mod_1073_VLK_Buergerin_NW, "T_CLAPHANDS_2_STAND");
-		AI_PlayAni	(Mod_1072_VLK_Buergerin_NW, "T_CLAPHANDS_2_STAND");
-		AI_PlayAni	(Mod_1044_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
+		if (!Npc_IsInState(Mod_1049_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1049_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
+		};
+		if (!Npc_IsInState(Mod_1059_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1059_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
+		};
+		if (!Npc_IsInState(Mod_1055_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1055_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
+		};
+		if (!Npc_IsInState(Mod_1065_VLK_Buergerin_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1065_VLK_Buergerin_NW, "T_CLAPHANDS_2_STAND");
+		};
+		if (!Npc_IsInState(Mod_1073_VLK_Buergerin_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1073_VLK_Buergerin_NW, "T_CLAPHANDS_2_STAND");
+		};
+		if (!Npc_IsInState(Mod_1072_VLK_Buergerin_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1072_VLK_Buergerin_NW, "T_CLAPHANDS_2_STAND");
+		};
+		if (!Npc_IsInState(Mod_1044_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1044_VLK_Buerger_NW, "T_CLAPHANDS_2_STAND");
+		};
 
 		AI_Output (self, self, "Info_Mod_Monty_Preach_31_02"); //Dann stieg ich die Höhle hinab wie in ein Grab.
 	};
@@ -80,12 +122,26 @@ func void B_Preach_Monty(var int satz)
 
 		// Hier kommt dann das applaudierende Publikum drunter (T_STAND_2_CLAPHANDS oder so)
 
-		AI_PlayAni	(Mod_1049_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
-		AI_PlayAni	(Mod_1059_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
-		AI_PlayAni	(Mod_1055_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
-		AI_PlayAni	(Mod_1065_VLK_Buergerin_NW, "T_STAND_2_CLAPHANDS");
-		AI_PlayAni	(Mod_1073_VLK_Buergerin_NW, "T_STAND_2_CLAPHANDS");
-		AI_PlayAni	(Mod_1072_VLK_Buergerin_NW, "T_STAND_2_CLAPHANDS");
-		AI_PlayAni	(Mod_1044_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
+		if (!Npc_IsInState(Mod_1049_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1049_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
+		};
+		if (!Npc_IsInState(Mod_1059_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1059_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
+		};
+		if (!Npc_IsInState(Mod_1055_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1055_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
+		};
+		if (!Npc_IsInState(Mod_1065_VLK_Buergerin_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1065_VLK_Buergerin_NW, "T_STAND_2_CLAPHANDS");
+		};
+		if (!Npc_IsInState(Mod_1073_VLK_Buergerin_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1073_VLK_Buergerin_NW, "T_STAND_2_CLAPHANDS");
+		};
+		if (!Npc_IsInState(Mod_1072_VLK_Buergerin_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1072_VLK_Buergerin_NW, "T_STAND_2_CLAPHANDS");
+		};
+		if (!Npc_IsInState(Mod_1044_VLK_Buerger_NW, ZS_Talk)) {
+			AI_PlayAni	(Mod_1044_VLK_Buerger_NW, "T_STAND_2_CLAPHANDS");
+		};
 	};
 };

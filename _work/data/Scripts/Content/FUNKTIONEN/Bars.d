@@ -66,12 +66,14 @@ func void ShowBars () {
 
 	Npc_GetTarget(hero);
 
-	if (other.aivar[AIV_Pflanzengift] > 0)
-	|| (other.aivar[AIV_Tiergift] > 0)
-	{
-		_View_SetTexture(bar_focus.value_bar, "BAR_POISON.TGA");
-	} else {
-		_View_SetTexture(bar_focus.value_bar, "BAR_HEALTH.TGA");
+	if (Hlp_IsValidNpc(other)) {
+		if (other.aivar[AIV_Pflanzengift] > 0)
+		|| (other.aivar[AIV_Tiergift] > 0)
+		{
+			_View_SetTexture(bar_focus.value_bar, "BAR_POISON.TGA");
+		} else {
+			_View_SetTexture(bar_focus.value_bar, "BAR_HEALTH.TGA");
+		};
 	};
 
 	if (GGPf_Sumpfgolem_Time > 0)

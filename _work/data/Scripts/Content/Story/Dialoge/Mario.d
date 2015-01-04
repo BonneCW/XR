@@ -49,7 +49,7 @@ FUNC VOID Info_Mod_Mario_WarumFeinde_Info()
 	AI_Output(hero, self, "Info_Mod_Mario_WarumFeinde_15_00"); //Warum hast du Feinde unter den Paladinen?
 	AI_Output(self, hero, "Info_Mod_Mario_WarumFeinde_07_01"); //Ich habe nie einen Hehl daraus gemacht, dass ich schwul bin.
 	AI_Output(self, hero, "Info_Mod_Mario_WarumFeinde_07_02"); //Da hört dann die Nächstenliebe bei den Paladinen auf. Die nettesten gucken mich nur komisch an.
-	AI_Output(self, hero, "Info_Mod_Mario_WarumFeinde_07_03"); //„Ein schwuler Paladin? Da muss doch Innos selbst Einhalt gebieten!“
+	AI_Output(self, hero, "Info_Mod_Mario_WarumFeinde_07_03"); //"Ein schwuler Paladin? Da muss doch Innos selbst Einhalt gebieten!"
 };
 
 INSTANCE Info_Mod_Mario_Aufgabe (C_INFO)
