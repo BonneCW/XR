@@ -2,6 +2,10 @@ FUNC VOID B_EXPVerteiler (var C_NPC slf, var C_NPC oth)
 {
 	// Weder Spieler, noch Partymember, noch Boss, noch mal draufgeschlagen
 
+	if (!Hlp_IsValidNpc(oth)) {
+		return;
+	};
+
 	if (!Npc_IsPlayer(oth))
 	&& (!C_NpcIsBossmonster(slf))
 	&& (slf.aivar[AIV_FLUGBLATTVERTEILT] == 0)

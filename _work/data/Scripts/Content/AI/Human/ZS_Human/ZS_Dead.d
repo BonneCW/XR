@@ -6,15 +6,10 @@
 // *****************************************
 
 func void ZS_Dead ()
-{
-	if (!self.aivar[AIV_PARTYMEMBER])
-	&& (Mod_WiederkehrRing)
-	{
-		Wld_SpawnNpcRange(self, SUMMONED_GOBBO_SKELETON, 1, 500);
-	};
-
-	// ------ aivars resetten ------
+{// ------ aivars resetten ------
 	B_SetAivar(self, AIV_RANSACKED, FALSE);
+	var int backupPM;
+	backupPM = self.aivar[AIV_PARTYMEMBER];
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	
 	B_StopLookAt	(self);
@@ -870,6 +865,13 @@ func void ZS_Dead ()
 	};
 	
 	self.aivar[AIV_TAPOSITION] = FALSE;
+	
+	if (!backupPM)
+	&& (Mod_WiederkehrRing)
+	&& (r_max(99) < 20)
+	{
+		Wld_SpawnNpcRange(self, SUMMONED_GOBBO_SKELETON, 1, 500);
+	};
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Nightmare))
 	{

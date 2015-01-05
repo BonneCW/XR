@@ -1642,9 +1642,9 @@ INSTANCE ItRi_Wiederkehr(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring der sphärischen Manifestation";
+	description				= "Ring der Wiederkehr";
 	
-	TEXT[2]					= "Dieser Ring scheint beschworene Wesen länger zu erhalten";
+	TEXT[2]					= "Beschwört Goblin-Skelette aus getöteten Gegnern";
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
