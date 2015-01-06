@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Cord_NW_Hi_Condition()
 FUNC VOID Info_Mod_Cord_NW_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cord_NW_Hi_15_00"); //Hi.
-	AI_Output(self, hero, "Info_Mod_Cord_NW_Hi_14_01"); //Was machst du denn hier. Du kannst froh sein, dass wir nicht mehr für die Wassermagier arbeiten.
+	AI_Output(self, hero, "Info_Mod_Cord_NW_Hi_14_01"); //Was machst du denn hier? Du kannst froh sein, dass wir nicht mehr für die Wassermagier arbeiten.
 	AI_Output(self, hero, "Info_Mod_Cord_NW_Hi_14_02"); //Die waren ziemlich sauer nachdem du ihrem Erzhaufen die magische Energie entzogen hast.
 	AI_Output(self, hero, "Info_Mod_Cord_NW_Hi_14_03"); //Aber wie es scheint hast du es geschafft die magische Barriere zu zerstören.
 };

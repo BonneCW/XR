@@ -860,7 +860,7 @@ FUNC VOID Use_Sklavenliste()
 		Doc_SetPage	( nDocID, 0, "letters.TGA" , 0	);
 		Doc_SetFont 	( nDocID, -1, FONT_Book		   		); 	
 		Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1	);
-		Doc_PrintLine	( nDocID, 0, "Liste der SKlaven:"	);
+		Doc_PrintLine	( nDocID, 0, "Liste der Sklaven:"	);
 		Doc_PrintLine	( nDocID, 0, ""			);
 		Doc_PrintLines	( nDocID, 0, "Fred    (X)"	);
 		Doc_PrintLines	( nDocID, 0, "Jorgen  (X)"	);

@@ -20,8 +20,8 @@ FUNC VOID Info_Mod_Brandick_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Brandick_Hi_11_01"); //Ach, war schon mal besser. Früher hatte ich mehr Erz in der Tasche ... als Aleph noch da war ...
 	AI_Output(hero, self, "Info_Mod_Brandick_Hi_15_02"); //Was meinst du?
 	AI_Output(self, hero, "Info_Mod_Brandick_Hi_11_03"); //Nunja ... er war ... ziemlich geschickt in einigen Dingen und hat mir gutes Erz dafür gezahlt, dass ich mal ein Auge zugedrückt, wenn er nicht geackert hat. Aber beim Beben hat es ihn dann erwischt.
-	AI_Output(hero, self, "Info_Mod_Brandick_Hi_15_04"); //Was ist passiert.
-	AI_Output(self, hero, "Info_Mod_Brandick_Hi_11_05"); //Nur paar Meter von uns entfernt ist er hinabgestürzt. Muss sofort tot gewesen sein ... sein Glück. Blieb im einiges erspart ...
+	AI_Output(hero, self, "Info_Mod_Brandick_Hi_15_04"); //Was ist passiert?
+	AI_Output(self, hero, "Info_Mod_Brandick_Hi_11_05"); //Nur paar Meter von uns entfernt ist er hinabgestürzt. Muss sofort tot gewesen sein ... sein Glück. Blieb ihm einiges erspart ...
 	AI_Output(self, hero, "Info_Mod_Brandick_Hi_11_06"); //Nur schade, dass ich nicht einen Tag vorher bei ihm abkassiert hatte ... und mit dem verschwundenen Schlüssel von Santino habe ich auch so meinen Verdacht.
 };
 

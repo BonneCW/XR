@@ -55,7 +55,7 @@ FUNC VOID NEBENQUESTS()
 			B_KillNpc	(Mod_4027_NONE_Port_NW);
 		};
 
-		if (Npc_GetDistToNpc(hero, Mod_4026_NONE_Kuno_NW) < 400)
+		if (Npc_GetDistToWP(hero, "WAY_PASS_MILL_07") < 500)
 		&& (Moe_KnowsPort == 6)
 		{
 			Wld_InsertNpc	(Mod_4028_Schlaeger_01_NW, "WAY_PASS_MILL_02");

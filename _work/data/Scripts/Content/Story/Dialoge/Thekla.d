@@ -237,7 +237,7 @@ FUNC INT Info_Mod_Thekla_Dung2_Condition()
 FUNC VOID Info_Mod_Thekla_Dung2_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Thekla_Dung2_17_00"); //Du hast mich angelogen! Tu das nie wieder.
-	AI_Output(self, hero, "Info_Mod_Thekla_Dung2_17_01"); //Wenn es um meine Vorr‰te geht, versteh ich keine Spaﬂ.
+	AI_Output(self, hero, "Info_Mod_Thekla_Dung2_17_01"); //Wenn es um meine Vorr‰te geht, versteh ich keinen Spaﬂ.
 };
 
 INSTANCE Info_Mod_Thekla_Dung3 (C_INFO)

@@ -324,6 +324,24 @@ INSTANCE Zombie_Castlemine		(Mst_Default_Zombie)
 
 INSTANCE ZombieRandom_Lib		(Mst_Default_Zombie)
 {
+	level							=	7;
+	
+	//----- Attribute ----
+	attribute	[ATR_STRENGTH]		=	40;
+	attribute	[ATR_DEXTERITY]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	70;
+	attribute	[ATR_HITPOINTS]		=	70;
+
+	//----- Protection ----
+	protection	[PROT_BLUNT]		=	20000;
+	protection	[PROT_EDGE]			=	20000;
+	protection	[PROT_POINT]		=	20000;	
+	protection	[PROT_FIRE]			=	20;
+	protection	[PROT_FLY]			=	20;
+	protection	[PROT_MAGIC]		=	0;
+
+	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
+
 	B_SetVisual_Zom();
 	Npc_SetToFistMode(self);
 };

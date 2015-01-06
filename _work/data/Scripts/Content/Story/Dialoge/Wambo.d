@@ -77,6 +77,7 @@ FUNC INT Info_Mod_Wambo_Asylanten_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Wambo_Lehrer))
 	&& (Mod_Wambo_Freund == 1)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Hagen_Hi))
 	{
 		return 1;
 	};

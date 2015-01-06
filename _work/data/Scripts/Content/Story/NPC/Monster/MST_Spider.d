@@ -168,6 +168,24 @@ INSTANCE Spider_01	(Mst_Default_Spider)
 
 INSTANCE Spider_Lib	(Mst_Default_Spider)
 {
+	level					=	5;
+
+	//----- Attribute ----
+	attribute	[ATR_STRENGTH]		=	30;
+	attribute	[ATR_DEXTERITY]		=	15;
+	attribute	[ATR_HITPOINTS_MAX]	=	50;
+	attribute	[ATR_HITPOINTS]		=	50;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+	
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	18000;
+	protection	[PROT_EDGE]		=	18000;
+	protection	[PROT_POINT]		=	18000;
+	protection	[PROT_FIRE]		=	18;
+	protection	[PROT_FLY]		=	18;
+	protection	[PROT_MAGIC]		=	0;
+
 	B_SetVisuals_Spider_01();
 	Npc_SetToFistMode(self);
 };

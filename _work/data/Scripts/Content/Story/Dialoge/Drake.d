@@ -28,7 +28,7 @@ INSTANCE Info_Mod_Drake_WhatHappened (C_INFO)
 	information	= Info_Mod_Drake_WhatHappened_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Was ist damals passiert.";
+	description	= "Was ist damals passiert?";
 };
 
 FUNC INT Info_Mod_Drake_WhatHappened_Condition()
@@ -41,7 +41,7 @@ FUNC INT Info_Mod_Drake_WhatHappened_Condition()
 
 FUNC VOID Info_Mod_Drake_WhatHappened_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Drake_WhatHappened_15_00"); //Was ist damals passiert.
+	AI_Output(hero, self, "Info_Mod_Drake_WhatHappened_15_00"); //Was ist damals passiert?
 	AI_Output(self, hero, "Info_Mod_Drake_WhatHappened_11_01"); //Du bist wohl noch nicht lange dabei, oder?
 	AI_Output(self, hero, "Info_Mod_Drake_WhatHappened_11_02"); //Ach, weißt du, ich würde dir ja gerne alles erzählen, aber von der staubigen Luft in der Mine ist mir gerade die Kehle so trocken, wenn du verstehst ...
 };
@@ -74,7 +74,7 @@ FUNC VOID Info_Mod_Drake_WhatHappened2_Info()
 
 	AI_Output(self, hero, "Info_Mod_Drake_WhatHappened2_11_00"); //Ahh, das tat gut. Ok, wo waren wir ... genau ... also, da als wir ohne an etwas böses zu denken in der Mine saßen und jeder seinen Job gemacht hat, fing die Erde auf einmal an zu beben und zu rumpeln, dass es nichts auf seinem Fleck hielt.
 	AI_Output(self, hero, "Info_Mod_Drake_WhatHappened2_11_01"); //Es ist dann auch so einiges eingestürzt und viele Jungs fanden den Tod ... nur ein paar Meter hinter mir wurde zum Beispiel Santino von Felsen erschlagen.
-	AI_Output(self, hero, "Info_Mod_Drake_WhatHappened2_11_02"); //Was aber für die Überlebenden am schlimmsten war: Der Eingang war von Tonnenschweren Felsbrocken versperrt ... aussichtslos da je wieder raus zukommen.
+	AI_Output(self, hero, "Info_Mod_Drake_WhatHappened2_11_02"); //Was aber für die Überlebenden am schlimmsten war: Der Eingang war von tonnenschweren Felsbrocken versperrt ... aussichtslos da je wieder raus zukommen.
 	AI_Output(self, hero, "Info_Mod_Drake_WhatHappened2_11_03"); //Wir hatten alle schon unseren Frieden mit dem Jenseits gemacht, als nach zwei Wochen die Dämonenmagier mit ihren Kreaturen plötzlich den Weg nach draußen freigehauen hatten ... nicht vom alten Eingang aus, sondern über eine unbekannte Festung!
 	AI_Output(self, hero, "Info_Mod_Drake_WhatHappened2_11_04"); //Kannst du dir das vorstellen?! Das waren hunderte Meter Gestein! Dafür hätten 100 Buddler paar Jahrzehnte gebraucht!
 	AI_Output(hero, self, "Info_Mod_Drake_WhatHappened2_15_05"); //Und die haben dann die Mine übernommen?

@@ -411,14 +411,14 @@ INSTANCE YWolf	(Mst_Default_Wolf)
 	level							=	3;
 	name							=	"Junger Wolf";
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	15;
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	30;
-	attribute	[ATR_HITPOINTS]		=	30;
+	attribute	[ATR_STRENGTH]		=	10;
+	attribute	[ATR_DEXTERITY]		=	5;
+	attribute	[ATR_HITPOINTS_MAX]	=	25;
+	attribute	[ATR_HITPOINTS]		=	25;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	15000;
-	protection	[PROT_EDGE]			=	15000;
+	protection	[PROT_BLUNT]		=	10000;
+	protection	[PROT_EDGE]			=	10000;
 	protection	[PROT_POINT]		=	1000;
 	protection	[PROT_FIRE]			=	15;
 	protection	[PROT_FLY]			=	15;

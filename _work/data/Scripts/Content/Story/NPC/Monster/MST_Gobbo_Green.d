@@ -63,17 +63,17 @@ prototype Mst_Default_YGobbo_Green (C_NPC)
 	level							=	2;
 	
 	// ------ Attribute ------
-	attribute	[ATR_STRENGTH]		=	10;
-	attribute	[ATR_DEXTERITY]		=	20;
-	attribute	[ATR_HITPOINTS_MAX]	=	20;
-	attribute	[ATR_HITPOINTS]		=	20;
+	attribute	[ATR_STRENGTH]		=	7;
+	attribute	[ATR_DEXTERITY]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	15;
+	attribute	[ATR_HITPOINTS]		=	15;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	// ------ Protection ------
-	protection	[PROT_BLUNT]		=	10000;
-	protection	[PROT_EDGE]			=	10000;
-	protection	[PROT_POINT]		=	10000;
+	protection	[PROT_BLUNT]		=	7000;
+	protection	[PROT_EDGE]			=	7000;
+	protection	[PROT_POINT]		=	7000;
 	protection	[PROT_FIRE]			=	10;
 	protection	[PROT_FLY]			=	10;
 	protection	[PROT_MAGIC]		=	0;

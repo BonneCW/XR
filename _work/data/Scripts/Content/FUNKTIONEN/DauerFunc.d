@@ -768,8 +768,9 @@ FUNC VOID DAUERFUNC_01()
 			RitterScene();
 		};
 
-		if (Npc_GetDistToWP(hero, "WP_RITTERSCENE_HERO") < 800)
+		if (Npc_GetDistToWP(hero, "WP_RITTERSCENE_HERO") < 600)
 		&& (Mod_RitterScene == 0)
+		&& (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)
 		{
 			Mod_RitterScene = 1;
 		};
@@ -1958,6 +1959,8 @@ FUNC VOID DAUERFUNC_01()
 
 		LastMobsi = PLAYER_MOBSI_PRODUCTION;
 	};
+
+	SetMagicDamage();
 
 	Wld_SendTrigger	("DAUERTRIGGER");
 };

@@ -147,7 +147,7 @@ FUNC VOID Info_Mod_Grom_Sauhaufen_Nein()
 FUNC VOID Info_Mod_Grom_Sauhaufen_Ja()
 {
 	AI_Output(hero, self, "Info_Mod_Grom_Sauhaufen_Ja_15_00"); //Klingt gefährlich.
-	AI_Output(self, hero, "Info_Mod_Grom_Sauhaufen_Ja_08_01"); //Ist es nicht. Hör zu. Schütte einfach, wenn gerade keine hinschaut, diesen Scavangerdung in Theklas Eintopf.
+	AI_Output(self, hero, "Info_Mod_Grom_Sauhaufen_Ja_08_01"); //Ist es nicht. Hör zu. Schütte einfach, wenn gerade keiner hinschaut, diesen Scavengerdung in Theklas Eintopf.
 
 	B_GiveInvItems	(self, hero, ItMi_Scavengerdung, 1);
 

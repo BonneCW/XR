@@ -104,18 +104,18 @@ INSTANCE YBloodfly	(Mst_Default_Bloodfly)
 	level							=	3;
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	Hlp_Random(16) + 7;	// 7 - 23
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(8) + 4;	// 7 - 23
 	attribute	[ATR_DEXTERITY]		=	Hlp_Random(6);		// 0 - 5
-	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(25) + 12;	// 12 - 37
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(12) + 12;	// 12 - 37
 	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 		=	0;
 	
 	//----- Ptotection ----
-	protection	[PROT_BLUNT]		=	Hlp_Random(15)*1000 + 1000;	// 0 - 15
-	protection	[PROT_EDGE]		=	Hlp_Random(15)*1000 + 1000;	// 0 - 15
-	protection	[PROT_POINT]		=	Hlp_Random(15)*1000 + 1000;	// 0 - 15
-	protection	[PROT_FIRE]		=	Hlp_Random(15);			// 0 - 15
+	protection	[PROT_BLUNT]		=	Hlp_Random(8)*1000 + 1000;	// 0 - 15
+	protection	[PROT_EDGE]		=	Hlp_Random(8)*1000 + 1000;	// 0 - 15
+	protection	[PROT_POINT]		=	Hlp_Random(8)*1000 + 1000;	// 0 - 15
+	protection	[PROT_FIRE]		=	Hlp_Random(8);			// 0 - 15
 	protection	[PROT_FLY]		=	10;
 	protection	[PROT_MAGIC]		=	Hlp_Random(6);			// 0 - 5
 
