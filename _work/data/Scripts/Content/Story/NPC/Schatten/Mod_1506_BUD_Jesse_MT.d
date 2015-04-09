@@ -44,6 +44,12 @@ FUNC VOID Rtn_start_1506 ()
 	TA_Pick_Ore 		(06,45,23,00,"FMC_ORE_09");
 };
 
+FUNC VOID Rtn_Treffen_1506 ()
+{
+	TA_Smalltalk		(23,00,06,45,"FMC_HUT11_IN");
+	TA_Pick_Ore 		(06,45,23,00,"FMC_ORE_09");
+};
+
 FUNC VOID Rtn_Abgemurkst_1506 ()
 {
 	TA_Sleep		(23,00,06,45,"WP_MT_JACKAL_BEFREIUNG");

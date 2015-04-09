@@ -214,6 +214,9 @@ FUNC VOID Info_Mod_Costa_Jesse_Info()
 	B_SetTopicStatus	(TOPIC_MOD_COSTA_GUERTEL, LOG_SUCCESS);
 
 	Mod_Costa_Guertel_Tag = Wld_GetDay();
+
+	B_StartOtherRoutine	(self, "TREFFEN");
+	B_StartOtherRoutine	(Mod_1506_BUD_Jesse_MT, "TREFFEN");
 };
 
 INSTANCE Info_Mod_Costa_Jesse2 (C_INFO)

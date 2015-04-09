@@ -45,6 +45,12 @@ FUNC VOID Rtn_start_1442 () //Arenaplatz
 	TA_Stand_Drinking	(19,00,23,00,"OCR_ARENA_05");
 };
 
+FUNC VOID Rtn_Treffen_1442 ()
+{
+	TA_Smalltalk		(23,00,06,45,"FMC_HUT11_IN");
+	TA_Pick_Ore 		(06,45,23,00,"FMC_ORE_09");
+};
+
 FUNC VOID Rtn_Mine_1442()
 {	
 	TA_Stand_ArmsCrossed	(08,00,23,00,"OW_PATH_1_17");
