@@ -41,7 +41,7 @@ INSTANCE Mod_7199_ASS_Amir_NW (Npc_Default)
 FUNC VOID Rtn_Start_7199 ()
 {	
 	TA_Stand_ArmsCrossed	(08,00,23,00,"NW_CITY_MERCHANT_PATH_15");
-	TA_Sleep		(23,00,08,00,"NW_CITY_HOTEL_BED_07");
+	TA_Stand_ArmsCrossed		(23,00,08,00,"NW_CITY_MERCHANT_PATH_15");
 };
 
 FUNC VOID Rtn_Lehmar_7199 ()
