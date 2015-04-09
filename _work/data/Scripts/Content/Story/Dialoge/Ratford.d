@@ -11,7 +11,9 @@ INSTANCE Info_Mod_Ratford_Hi (C_INFO)
 
 FUNC INT Info_Mod_Ratford_Hi_Condition()
 {
-	return 1;
+	if (Npc_GetDistToWP(hero, "OW_PATH_1_5_A") < 1000) {
+		return 1;
+	};
 };
 
 FUNC VOID Info_Mod_Ratford_Hi_Info()
@@ -49,12 +51,35 @@ FUNC VOID Info_Mod_Ratford_Hi_Info()
 
 	TRIA_Finish();
 
-	Info_ClearChoices	(Info_Mod_Ratford_Hi);
+	AI_StopProcessInfos	(self);
+};
 
-	Info_AddChoice	(Info_Mod_Ratford_Hi, "Das könnt ihr vergessen.", Info_Mod_Ratford_Hi_B);
+INSTANCE Info_Mod_Ratford_Hi_Extend (C_INFO)
+{
+	npc		= Mod_1120_BDT_Ratford_MT;
+	nr		= 1;
+	condition	= Info_Mod_Ratford_Hi_Extend_Condition;
+	information	= Info_Mod_Ratford_Hi_Extend_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Ratford_Hi_Extend_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Ratford_Hi))
+	&& (Npc_GetDistToWP(hero, "OW_PATH_1_5_A") < 1000) {
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Ratford_Hi_Extend_Info()
+{
+	Info_ClearChoices	(Info_Mod_Ratford_Hi_Extend);
+
+	Info_AddChoice	(Info_Mod_Ratford_Hi_Extend, "Das könnt ihr vergessen.", Info_Mod_Ratford_Hi_B);
 
 	if (Npc_HasItems(hero, ItFo_Beer) >= 2) {
-		Info_AddChoice	(Info_Mod_Ratford_Hi, "Eine Runde auf mich!", Info_Mod_Ratford_Hi_A);
+		Info_AddChoice	(Info_Mod_Ratford_Hi_Extend, "Eine Runde auf mich!", Info_Mod_Ratford_Hi_A);
 	};
 };
 
@@ -80,7 +105,9 @@ FUNC VOID Info_Mod_Ratford_Hi_B()
 
 	TRIA_Finish();
 
-	Info_ClearChoices	(Info_Mod_Ratford_Hi);
+	Info_ClearChoices	(Info_Mod_Ratford_Hi_Extend);
+
+	AI_StopProcessInfos	(self);
 };
 
 FUNC VOID Info_Mod_Ratford_Hi_A()
@@ -132,7 +159,9 @@ FUNC VOID Info_Mod_Ratford_Hi_A()
 
 	TRIA_Finish();
 
-	Info_ClearChoices	(Info_Mod_Ratford_Hi);
+	Info_ClearChoices	(Info_Mod_Ratford_Hi_Extend);
+
+	AI_StopProcessInfos	(self);
 };
 
 INSTANCE Info_Mod_Ratford_Fokus (C_INFO)

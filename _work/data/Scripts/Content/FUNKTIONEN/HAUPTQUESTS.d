@@ -180,8 +180,8 @@ FUNC VOID HAUPTQUESTS()
 		// Ratford und Drax wegen Fokus verschwinden lassen
 
 		if (!Mod_RatfordDrax_Weg)
-		&& (Npc_KnowsInfo(hero, Info_Mod_Ratford_Hi))
-		&& (Npc_GetDistToWP(hero, "OW_PATH_1_5_A") > 5000) {
+		&& (Npc_GetDistToWP(hero, "OW_PATH_1_5_A") > 5000)
+		&& (Npc_GetDistToWP(hero, "WP_CIRCLE_01") < 10000) {
 			Mod_RatfordDrax_Weg = TRUE;
 
 			B_StartOtherRoutine	(Mod_1120_BDT_Ratford_MT, "FOKUS");
