@@ -1,3 +1,7 @@
+FUNC VOID EquipAxtDesUntergangs() {
+	EquipWeapon(hero, ItMw_AxtDesUntergangs);
+};
+
 FUNC VOID WaffenCheck()
 {
 	var C_Item Waffentest;
@@ -22,11 +26,9 @@ FUNC VOID WaffenCheck()
 
 		AxtUpgrade = 1;
 
-		Npc_RemoveInvItems	(hero, ItMw_AxtDesUntergangs, 1);
-
 		CreateInvItems	(hero, ItMw_AxtDesUntergangs, 1);
-
-		EquipItem	(hero, ItMw_AxtDesUntergangs);
+		Npc_RemoveInvItems	(hero, ItMw_AxtDesUntergangs, 1);
+		AI_Function(hero, EquipAxtDesUntergangs);
 	};
 
 	if ((Hlp_IsItem(Waffentest, ItMw_Avaquar))
