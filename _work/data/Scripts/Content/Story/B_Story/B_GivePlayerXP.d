@@ -71,31 +71,28 @@ func void B_GivePlayerXP (var int add_xp)
 		hero.attribute[ATR_HITPOINTS_MAX] 	= hero.attribute[ATR_HITPOINTS_MAX]	+ HP_PER_LEVEL;
 		hero.attribute[ATR_HITPOINTS] 		= hero.attribute[ATR_HITPOINTS]		+ HP_PER_LEVEL;
 		
-		if (hero.level < 51)
+		if (SchnellesLernen_Perk == TRUE)
 		{
-			if (SchnellesLernen_Perk == TRUE)
-			{
-				hero.lp += 1;
-			};
+			hero.lp += 1;
+		};
 
-			HP_Heilknospe = hero.attribute[ATR_HITPOINTS_MAX] / 5;
+		HP_Heilknospe = hero.attribute[ATR_HITPOINTS_MAX] / 5;
 
-			if (Mod_Schwierigkeit < 4)
-			{
-				hero.LP += 10;
+		if (Mod_Schwierigkeit < 4)
+		{
+			hero.LP += 10;
 		
-				if (Dummheit_Perk == TRUE)
-				{
-					hero.lp -= 2;
-				};	
+			if (Dummheit_Perk == TRUE)
+			{
+				hero.lp -= 2;
+			};	
 		
-				if (Ueberschwaenglichkeit_Perk == TRUE)
-				{
-					hero.lp -= 1;
+			if (Ueberschwaenglichkeit_Perk == TRUE)
+			{
+				hero.lp -= 1;
 
-					hero.attribute[ATR_HITPOINTS] 		-= HP_PER_LEVEL/2;
-					hero.attribute[ATR_HITPOINTS_MAX] 	-= HP_PER_LEVEL/2;
-				};
+				hero.attribute[ATR_HITPOINTS] 		-= HP_PER_LEVEL/2;
+				hero.attribute[ATR_HITPOINTS_MAX] 	-= HP_PER_LEVEL/2;
 			};
 		};
 			
