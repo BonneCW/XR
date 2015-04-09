@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Scatty_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Scatty_Hi_01_00"); //Du bist doch der Kerl, der damals fast unser Ende besiegelt hätte!
 
 	Log_CreateTopic	(TOPIC_MOD_ALTESLAGER, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_ALTESLAGER, "Am Eingang des alten Lagers wurde ich von meinem alten Freund Scatty begrüsst. Anscheinend gibt es das alte Lager immernoch.");
+	B_LogEntry	(TOPIC_MOD_ALTESLAGER, "Am Eingang des alten Lagers wurde ich von meinem alten Freund Scatty begrüßt. Anscheinend gibt es das alte Lager immer noch.");
 
 	B_StartOtherRoutine	(self, "START");
 
@@ -32,8 +32,8 @@ FUNC VOID Info_Mod_Scatty_Hi_Info()
 FUNC VOID Info_Mod_Scatty_Hi_A()
 {
 	AI_Output(hero, self, "Info_Mod_Scatty_Hi_A_15_00"); //Es war nötig, außer ihr hattet vor alle zu sterben.
-	AI_Output(self, hero, "Info_Mod_Scatty_Hi_A_01_01"); //Dann erklär mir doch mal was nötig war.
-	AI_Output(hero, self, "Info_Mod_Scatty_Hi_A_15_02"); //Wenn ich nicht gewesen wäre, Dann wäre der Schläfer erwacht und dann würden wir uns hier nicht mehr unterhalten.
+	AI_Output(self, hero, "Info_Mod_Scatty_Hi_A_01_01"); //Dann erklär mir doch mal, was nötig war.
+	AI_Output(hero, self, "Info_Mod_Scatty_Hi_A_15_02"); //Wenn ich nicht gewesen wäre, dann wäre der Schläfer erwacht und dann würden wir uns hier nicht mehr unterhalten.
 	AI_Output(self, hero, "Info_Mod_Scatty_Hi_A_01_03"); //Ja, die Sektenspinner haben etwas in der Richtung erzählt, aber die erzählen viel, wenn es viel Sumpfkraut gibt.
 	AI_Output(self, hero, "Info_Mod_Scatty_Hi_A_01_04"); //Jemanden, der so einen Kampf überstanden hat, können wir gut brauchen.
 
@@ -165,7 +165,7 @@ FUNC VOID Info_Mod_Scatty_Hilfe_A()
 	AI_Output(hero, self, "Info_Mod_Scatty_Hilfe_A_15_04"); //Verstehe, wo soll ich mich anmelden?
 	AI_Output(self, hero, "Info_Mod_Scatty_Hilfe_A_01_05"); //Für alles, was mit der Verwaltung des Lagers zusammenhängt, ist der Erzbaron Bartholo zuständig.
 	AI_Output(hero, self, "Info_Mod_Scatty_Hilfe_A_15_06"); //(ironisch) Die Erzbarone werden sich sicher freuen, mich wieder zu sehen.
-	AI_Output(self, hero, "Info_Mod_Scatty_Hilfe_A_01_07"); //Ich glaube kaum, dass sie dch töten werden, ohne dich anzuhören. Schließlich sind sie in einer Lage, in der sie über jeden froh sein können.
+	AI_Output(self, hero, "Info_Mod_Scatty_Hilfe_A_01_07"); //Ich glaube kaum, dass sie dich töten werden, ohne dich anzuhören. Schließlich sind sie in einer Lage, in der sie über jeden froh sein können.
 	AI_Output(hero, self, "Info_Mod_Scatty_Hilfe_A_15_08"); //Sehr beruhigend.
 
 	B_LogEntry	(TOPIC_MOD_ALTESLAGER, "Ich habe mich also entschlossen, ihnen zu helfen. Ich soll für sie in der Arena kämpfen und andere Sachen 'regeln', da kann ich ja gespannt sein. Ich hoffe, das werde ich nicht bereuen. Scatty meinte, ich soll mit Bartholo reden. Der wird sich freuen mich wiederzusehen.");

@@ -259,6 +259,7 @@ INSTANCE Info_Mod_Fuego_DickeLuft (C_INFO)
 FUNC INT Info_Mod_Fuego_DickeLuft_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Irmgard_Kneipe))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Anselm_DickeLuft))
 	{
 		return TRUE;
 	};

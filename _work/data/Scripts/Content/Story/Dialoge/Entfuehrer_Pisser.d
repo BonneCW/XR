@@ -57,6 +57,7 @@ FUNC VOID Info_Mod_Entfuehrer_Pisser_Hi_A()
 FUNC VOID Info_Mod_Entfuehrer_Pisser_Hi_E()
 {
 	AI_Output(hero, self, "Info_Mod_Entfuehrer_Pisser_Hi_E_15_00"); //Nein, ich kann dich nicht am Leben lassen.
+	AI_Output(self, hero, "DEFAULT"); //
 
 	Info_ClearChoices	(Info_Mod_Entfuehrer_Pisser_Hi);
 
@@ -68,6 +69,7 @@ FUNC VOID Info_Mod_Entfuehrer_Pisser_Hi_E()
 FUNC VOID Info_Mod_Entfuehrer_Pisser_Hi_D()
 {
 	AI_Output(hero, self, "Info_Mod_Entfuehrer_Pisser_Hi_D_15_00"); //Einverstanden. Hau schon ab!
+	AI_Output(self, hero, "DEFAULT"); //
 
 	Info_ClearChoices	(Info_Mod_Entfuehrer_Pisser_Hi);
 

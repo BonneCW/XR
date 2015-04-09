@@ -36,7 +36,8 @@ INSTANCE Info_Mod_Wendel_Endres (C_INFO)
 
 FUNC INT Info_Mod_Wendel_Endres_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Juliana_WasLos))
+	if (Npc_KnowsInfo(hero, Info_Mod_Wendel_Hi))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Juliana_WasLos))
 	{
 		return 1;
 	};

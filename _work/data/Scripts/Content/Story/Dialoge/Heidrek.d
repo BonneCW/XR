@@ -20,11 +20,11 @@ FUNC VOID Info_Mod_Heidrek_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Heidrek_Hi_04_01"); //An Arbeit mangelt es hier im Lager wirklich nicht. Das liegt aber auch daran, dass außer Bernd und mir hier niemand was macht.
 	AI_Output(hero, self, "Info_Mod_Heidrek_Hi_15_02"); //Und woran, glaubst du, liegt das?
 	AI_Output(self, hero, "Info_Mod_Heidrek_Hi_04_03"); //Eine Mine wieder herzurichten ist keine Sonntag-Abend-Aufgabe. Wenn wir hier Erz abbauen wollen, müssen wir dafür auch was tun.
-	AI_Output(self, hero, "Info_Mod_Heidrek_Hi_04_04"); //Aber die haben ja alle Schiss vor den Monster in der Mine.
+	AI_Output(self, hero, "Info_Mod_Heidrek_Hi_04_04"); //Aber die haben ja alle Schiss vor den Monstern in der Mine.
 	AI_Output(hero, self, "Info_Mod_Heidrek_Hi_15_05"); //Du etwa nicht?
 	AI_Output(self, hero, "Info_Mod_Heidrek_Hi_04_06"); //Nein, warum auch, die lassen sich genau so wie alle anderen Monster töten.
 	AI_Output(hero, self, "Info_Mod_Heidrek_Hi_15_07"); //Warum gehst du dann nicht in die Mine?!
-	AI_Output(self, hero, "Info_Mod_Heidrek_Hi_04_08"); //Im Gegensatz zu den meisten hier hab ich außer Muskelkraft auch noch ein anderes Agument: Ich kann Schmieden!
+	AI_Output(self, hero, "Info_Mod_Heidrek_Hi_04_08"); //Im Gegensatz zu den meisten hier hab ich außer Muskelkraft auch noch ein anderes Argument: Ich kann schmieden!
 	AI_Output(self, hero, "Info_Mod_Heidrek_Hi_04_09"); //Wenn ich in der Mine draufgehen würde, wäre das ein zu großer Verlust für das Lager, und das kann ich nicht verantworten.
 	AI_Output(hero, self, "Info_Mod_Heidrek_Hi_15_10"); //(ironisch) Ah, ich verstehe ...
 };

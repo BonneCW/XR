@@ -2530,7 +2530,7 @@ func void UseFragebogen ()
 					Doc_PrintLines	( nDocID,  0, "1. In welchem Gebäude findet sich der einzige Abort Khoratas?"					);
 					Doc_PrintLines	( nDocID,  0, "2. Wie hießen die drei Ratten des Stadthalters?"					);
 					Doc_PrintLines	( nDocID,  0, "3. Lerne etwas über die Anfänge Khoratas!"					);
-					Doc_PrintLines	( nDocID,  0, "4. Wie viele Stände hat der Marktplatz Khoratas?"					);
+					Doc_PrintLines	( nDocID,  0, "4. Wie viele Händler haben ihren Stand am Marktplatz von Khorata?"					);
 					Doc_PrintLines	( nDocID,  0, "5. Wer hat dafür zu sorgen, dass die Wasserversorgung reibungslos läuft?"					);
 					Doc_PrintLines	( nDocID,  0, ""					);
 					

@@ -22,7 +22,7 @@ FUNC VOID Info_Mod_Lester_REL_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_Lester_REL_Hi_15_03"); //Schön und gut, aber weshalb bist du eigentlich hier?
 	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_04"); //Hast du schon mal von Khorata gehört?
 	AI_Output(hero, self, "Info_Mod_Lester_REL_Hi_15_05"); //Nicht wirklich.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_06"); //Von allem, was ich gehört habe, ich die Stadt nah dran am Paradies.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_06"); //Von allem, was ich gehört habe, ist die Stadt nah dran am Paradies.
 	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_07"); //Jeder, der will, wird reingelassen und darf dort sein gemütliches Leben führen.
 	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_08"); //Die Stadtverwaltung besteht aus einem einzigen Mann, der nur darauf achtet, dass das Chaos nicht überhandnimmt.
 	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_09"); //In dem nahen Hofstaat wird etwas gewonnen, das sich Freudenspender nennt, und viel effektiver sein soll als Sumpfkraut.
@@ -165,6 +165,7 @@ FUNC VOID B_Lester_Say_Alleine()
 FUNC VOID B_Lester_Say_Zusammen()
 {
 	AI_Output(hero, self, "Info_Mod_Lester_REL_FindeOrt_Zusammen_15_00"); //Zeig mir den Weg.
+	AI_Output(self, hero, "DEFAULT"); //
 };
 
 FUNC VOID Info_Mod_Lester_REL_FindeOrt_BACK()

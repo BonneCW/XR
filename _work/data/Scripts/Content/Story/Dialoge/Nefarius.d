@@ -117,7 +117,7 @@ FUNC VOID Info_Mod_Nefarius_VierErbauer_Info()
 	AI_Output(self, hero, "Info_Mod_Nefarius_VierErbauer_05_09"); //Daher dürften dort jede Menge gefährliche Monster unterwegs gewesen sein. Ich glaube kaum, dass ein Heiler da sehr weit gekommen ist.
 	AI_Output(hero, self, "Info_Mod_Nefarius_VierErbauer_15_10"); //Klingt einleuchtend.
 	AI_Output(self, hero, "Info_Mod_Nefarius_VierErbauer_05_11"); //Ein weiterer Erbauer, ein Krieger, wollte sich auf Khorinis niederlassen, eine Familie gründen und in Frieden leben.
-	AI_Output(self, hero, "Info_Mod_Nefarius_VierErbauer_05_12"); //Sein Name war Onar. Vielleicht hat gibt es ja eine Verbindung zum Grossbauer ...
+	AI_Output(self, hero, "Info_Mod_Nefarius_VierErbauer_05_12"); //Sein Name war Onar. Vielleicht hat gibt es ja eine Verbindung zum Großbauer ...
 	AI_Output(hero, self, "Info_Mod_Nefarius_VierErbauer_15_13"); //Ich werde mir das mal ansehen.
 	AI_Output(self, hero, "Info_Mod_Nefarius_VierErbauer_05_14"); //Der letzte der Überlebenden war ein Totenwächter, der wohl irgendwo im Norden von Khorinis zu finden sein muss.
 	AI_Output(hero, self, "Info_Mod_Nefarius_VierErbauer_15_15"); //Zumindest das, was von ihm übrig ist ...
@@ -127,7 +127,7 @@ FUNC VOID Info_Mod_Nefarius_VierErbauer_Info()
 
 	B_LogEntry	(TOPIC_MOD_PORTAL, "Einer der Erbauer ist in den Westen gegangen, um sich dort eine Residenz zu erschaffen. Ich sollte mich in Khorinis nach der Geschichte des Stammvaters erkundigen. Der Statthalter von Khorinis könnte mir dabei behilflich sein.");
 	B_LogEntry	(TOPIC_MOD_PORTAL, "Ein Heiler ist in den Süden aufgebrochen. Nefarius denkt allerdings, dass er nicht allzu weit gekommen ist, da damals der Pass ins Minental sicher noch von gefährlichen Monstern besiedelt wurde.");
-	B_LogEntry	(TOPIC_MOD_PORTAL, "Onar, ein Mitglieder der Krieger-Kaste, hat sich auf Khorinis niedergelassen und eine Familie gegründet. Der Name gleicht dem des heutigen Grossbauern. Vielleicht gibt es da eine Verbindung?");
+	B_LogEntry	(TOPIC_MOD_PORTAL, "Onar, ein Mitglied der Krieger-Kaste, hat sich auf Khorinis niedergelassen und eine Familie gegründet. Der Name gleicht dem des heutigen Grossbauern. Vielleicht gibt es da eine Verbindung?");
 	B_LogEntry	(TOPIC_MOD_PORTAL, "Der letzte Überlebende, ein Totenwächter, hat sich in den Norden aufgemacht. Ich soll mich dort mal umsehen.");
 
 	Wld_InsertItem	(ItMi_Ornament_Totenwaechter,	"FP_ITEM_ORNAMENT_TOTENWAECHTER");

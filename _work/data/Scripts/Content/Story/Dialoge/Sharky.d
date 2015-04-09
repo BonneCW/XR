@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Sharky_Hi_Condition()
 FUNC VOID Info_Mod_Sharky_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Sharky_Hi_15_00"); //Hey, hast du was für mich?
-	AI_Output(self, hero, "Info_Mod_Sharky_Hi_10_01"); //Ja, für gutes Erz und Gold kann du paar nützliche Sachen bei mir kaufen.
+	AI_Output(self, hero, "Info_Mod_Sharky_Hi_10_01"); //Ja, für gutes Erz und Gold kannst du ein paar nützliche Sachen bei mir kaufen.
 };
 
 INSTANCE Info_Mod_Sharky_Trade (C_INFO)

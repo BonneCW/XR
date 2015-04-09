@@ -29,7 +29,7 @@ INSTANCE Info_Mod_Rudolf_Aufgabe (C_INFO)
 	information	= Info_Mod_Rudolf_Aufgabe_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Kann ich dir irgendwas gutes tun?";
+	description	= "Kann ich dir irgendwas Gutes tun?";
 };
 
 FUNC INT Info_Mod_Rudolf_Aufgabe_Condition()
@@ -42,8 +42,8 @@ FUNC INT Info_Mod_Rudolf_Aufgabe_Condition()
 
 FUNC VOID Info_Mod_Rudolf_Aufgabe_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Rudolf_Aufgabe_15_00"); //Kann ich dir irgendwas gutes tun?
-	AI_Output(self, hero, "Info_Mod_Rudolf_Aufgabe_09_01"); //Was gutes?
+	AI_Output(hero, self, "Info_Mod_Rudolf_Aufgabe_15_00"); //Kann ich dir irgendwas Gutes tun?
+	AI_Output(self, hero, "Info_Mod_Rudolf_Aufgabe_09_01"); //Was Gutes?
 	AI_Output(hero, self, "Info_Mod_Rudolf_Aufgabe_15_02"); //Ja, irgendetwas, was dir auf dem Herzen liegt ...
 	AI_Output(self, hero, "Info_Mod_Rudolf_Aufgabe_09_03"); //Hm ... du könntest zu Erika gehen. Sie hat dort einen besonders guten Schnaps im Angebot.
 	AI_Output(self, hero, "Info_Mod_Rudolf_Aufgabe_09_04"); //Den könntest du mir besorgen. Ich geb dir auch das Gold dafür, wenn du ihn mir gebracht hast.

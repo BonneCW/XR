@@ -20,7 +20,7 @@ FUNC VOID Info_Mod_Richter_Hi_Info()
 
 	AI_Output(self, hero, "Info_Mod_Richter_Hi_10_01"); //Wir sind die oberste Gerichtsinstanz Khoratas.
 	AI_Output(self, hero, "Info_Mod_Richter_Hi_10_02"); //Wir entscheiden über Wohlstand und Armut, Hass und Rache, Leben und Tod.
-	AI_Output(self, hero, "Info_Mod_Richter_Hi_10_03"); //Doch gerade jetzt entscheiden Wir nur über den nächsten Gang bei unserem Mahl.
+	AI_Output(self, hero, "Info_Mod_Richter_Hi_10_03"); //Doch gerade jetzt entscheiden Wir nur über den nächsten Gang bei Unserem Mahl.
 };
 
 INSTANCE Info_Mod_Richter_UlrichVerpetzen (C_INFO)

@@ -24,7 +24,7 @@ FUNC VOID Info_Mod_Merdarion_AW_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Merdarion_AW_Hi_06_02"); //Wir fanden dich bewusstlos auf der anderen Seite des Portales vor. Du musst einem Schutzzauber zum Opfer gefallen sein.
 	AI_Output(hero, self, "Info_Mod_Merdarion_AW_Hi_15_03"); //Schutzzauber?!
 	AI_Output(self, hero, "Info_Mod_Merdarion_AW_Hi_06_04"); //Ja, vermutlich wollten die Erbauer damit einst mögliche Eindringlinge betäuben.
-	AI_Output(self, hero, "Info_Mod_Merdarion_AW_Hi_06_05"); //Vielleicht war der Mechanismsus aber früher auch tödlich, hat jedoch über die Jahrhunderte einen großen Teil seiner Magie eingebüßt.
+	AI_Output(self, hero, "Info_Mod_Merdarion_AW_Hi_06_05"); //Vielleicht war der Mechanismus aber früher auch tödlich, hat jedoch über die Jahrhunderte einen großen Teil seiner Magie eingebüßt.
 	AI_Output(hero, self, "Info_Mod_Merdarion_AW_Hi_15_06"); //Sehr beruhigend ...
 	AI_Output(self, hero, "Info_Mod_Merdarion_AW_Hi_06_07"); //Achja, sprich am besten gleich mit Saturas. Er hat etwas neues herausgefunden.
 

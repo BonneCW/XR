@@ -91,6 +91,7 @@ FUNC INT Info_Mod_Davon_Wettstreit2_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Davon_Wettstreit))
 	&& (Npc_HasItems(hero, ItMi_Gold) >= 100)
 	&& (Mod_REL_Wettstreit_Gold == 1)
+	&& (Mod_REL_Wettstreit > 2)
 	{
 		return 1;
 	};

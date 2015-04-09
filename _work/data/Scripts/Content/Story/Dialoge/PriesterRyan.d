@@ -98,6 +98,10 @@ FUNC VOID Info_Mod_PriesterRyan_Hi_D()
 		B_RemoveNpc	(Mod_1947_Waechter_05_NW);
 		B_RemoveNpc	(Mod_1948_Waechter_06_NW);
 		B_RemoveNpc	(Mod_1949_Waechter_07_NW);
+	
+		B_GivePlayerXP	(10);
+
+		B_RaiseHandelsgeschick (2);
 	}
 	else
 	{

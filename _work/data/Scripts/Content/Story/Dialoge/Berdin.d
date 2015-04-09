@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Berdin_Hi (C_INFO)
 	information	= Info_Mod_Berdin_Hi_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Hi, könntest du mir ein paar Tipps zur Jagd im Minetal geben?";
+	description	= "Hi, könntest du mir ein paar Tipps zur Jagd im Minental geben?";
 };
 
 FUNC INT Info_Mod_Berdin_Hi_Condition()
@@ -16,7 +16,7 @@ FUNC INT Info_Mod_Berdin_Hi_Condition()
 
 FUNC VOID Info_Mod_Berdin_Hi_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Berdin_Hi_15_00"); //Hi, könntest du mir ein paar Tipps zur Jagd im Minetal geben?
+	AI_Output(hero, self, "Info_Mod_Berdin_Hi_15_00"); //Hi, könntest du mir ein paar Tipps zur Jagd im Minental geben?
 	AI_Output(self, hero, "Info_Mod_Berdin_Hi_07_01"); //Na ja, eigentlich unterscheidet sich die Jagd hier nicht besonders von der Jagd wo anders.
 	AI_Output(self, hero, "Info_Mod_Berdin_Hi_07_02"); //Das einzige, was du hier wissen solltest, und das sagt eigentlich schon der Name, ist, dass du in einem Tal bist, und soweit ich weiß ist der Pass der einzige Weg hier raus.
 	AI_Output(self, hero, "Info_Mod_Berdin_Hi_07_03"); //Wenn du dich also bei der Jagd mit einem zu starken Monster anlegst und es nicht los werden kannst, bist du hier so gut wie gefangen. Das beste, was du dann machen kannst, ist in eins der vielen Lager hier zu fliehen.

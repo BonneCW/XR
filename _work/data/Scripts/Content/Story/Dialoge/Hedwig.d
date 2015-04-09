@@ -170,6 +170,7 @@ INSTANCE Info_Mod_Hedwig_Kneipe (C_INFO)
 FUNC INT Info_Mod_Hedwig_Kneipe_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Hedwig_Hi))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Anselm_DickeLuft2))
 	{
 		return 1;
 	};
@@ -196,6 +197,7 @@ INSTANCE Info_Mod_Hedwig_Kneipe2 (C_INFO)
 FUNC INT Info_Mod_Hedwig_Kneipe2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Hedwig_Kneipe))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Anselm_DickeLuft2))
 	{
 		return 1;
 	};
@@ -222,6 +224,7 @@ INSTANCE Info_Mod_Hedwig_Kneipe3 (C_INFO)
 FUNC INT Info_Mod_Hedwig_Kneipe3_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Hedwig_Kneipe2))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Anselm_DickeLuft2))
 	{
 		return 1;
 	};

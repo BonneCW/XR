@@ -111,6 +111,7 @@ FUNC VOID Info_Mod_Ulrich_ZuVerhandlung_B()
 FUNC VOID Info_Mod_Ulrich_ZuVerhandlung_A()
 {
 	AI_Output(hero, self, "Info_Mod_Ulrich_ZuVerhandlung_A_15_00"); //Dann lass uns gehen.
+	AI_Output(self, hero, "DEFAULT"); //
 	
 	Info_ClearChoices	(Info_Mod_Ulrich_ZuVerhandlung);
 

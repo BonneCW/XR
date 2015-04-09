@@ -58,13 +58,14 @@ FUNC VOID Info_Mod_Valentino_Kidnapped_Info()
 
 	Info_ClearChoices	(Info_Mod_Valentino_Kidnapped);
 
-	Info_AddChoice	(Info_Mod_Valentino_Kidnapped, "Weil ich gerade so gut in Übung bin, polier' ich dir auch nochmal die Fresse.", Info_Mod_Valentino_Kidnapped_B);
+	Info_AddChoice	(Info_Mod_Valentino_Kidnapped, "Weil ich gerade so gut in Übung bin, polier ich dir auch nochmal die Fresse.", Info_Mod_Valentino_Kidnapped_B);
 	Info_AddChoice	(Info_Mod_Valentino_Kidnapped, "Du bist frei.", Info_Mod_Valentino_Kidnapped_A);
 };
 
 FUNC VOID Info_Mod_Valentino_Kidnapped_B()
 {
-	AI_Output(hero, self, "Info_Mod_Valentino_Kidnapped_B_15_00"); //Weil ich gerade so gut in Übung bin, polier' ich dir auch nochmal die Fresse.
+	AI_Output(hero, self, "Info_Mod_Valentino_Kidnapped_B_15_00"); //Weil ich gerade so gut in Übung bin, polier ich dir auch nochmal die Fresse.
+	AI_Output(self, hero, "DEFAULT"); //
 
 	Info_ClearChoices	(Info_Mod_Valentino_Kidnapped);
 
@@ -86,6 +87,7 @@ FUNC VOID Info_Mod_Valentino_Kidnapped_B()
 FUNC VOID Info_Mod_Valentino_Kidnapped_A()
 {
 	AI_Output(hero, self, "Info_Mod_Valentino_Kidnapped_A_15_00"); //Du bist frei.
+	AI_Output(self, hero, "DEFAULT"); //
 
 	Info_ClearChoices	(Info_Mod_Valentino_Kidnapped);
 

@@ -196,6 +196,22 @@ INSTANCE FeuerSnapper	(Mst_Default_Snapper)
 	name	= "Feuersnapper";
 
 	level = 45;
+
+	attribute	[ATR_STRENGTH]		=	180;
+	attribute	[ATR_DEXTERITY]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	200;
+	attribute	[ATR_HITPOINTS]		=	200;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	//----- Protections ----	
+	protection	[PROT_BLUNT]		=	100000;
+	protection	[PROT_EDGE]			=	100000;
+	protection	[PROT_POINT]		=	100000;		
+	protection	[PROT_FIRE]			=	90;
+	protection	[PROT_FLY]			=	90;
+	protection	[PROT_MAGIC]		=	0;
+
 	effect	= "SPELLFX_FIREARMOR";
 
 	B_SetVisuals_FeuerSnapper();
@@ -267,6 +283,22 @@ INSTANCE SchattenSnapper	(Mst_Default_Snapper)
 	name	= "Schattensnapper";
 
 	level = 45;
+
+	attribute	[ATR_STRENGTH]		=	180;
+	attribute	[ATR_DEXTERITY]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	200;
+	attribute	[ATR_HITPOINTS]		=	200;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	//----- Protections ----	
+	protection	[PROT_BLUNT]		=	100000;
+	protection	[PROT_EDGE]			=	100000;
+	protection	[PROT_POINT]		=	100000;		
+	protection	[PROT_FIRE]			=	90;
+	protection	[PROT_FLY]			=	90;
+	protection	[PROT_MAGIC]		=	0;
+
 	effect	= "SPELLFX_DARKARMOR";
 
 	B_SetVisuals_SchattenSnapper();

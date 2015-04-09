@@ -880,10 +880,10 @@ FUNC VOID Info_Mod_Andre_Auftrag_Info()
 	AI_Output(self, hero, "Info_Mod_Andre_Auftrag_08_03"); //Zum Andren scheinen die alten fanatischen Sektenspinner irgendwas zu planen. Und zu allem Überfluss wurde auch die letzte Karawane, die Richtung Kloster unterwegs war, von seltsamen Golems überfallen.
 	AI_Output(hero, self, "Info_Mod_Andre_Auftrag_15_04"); //Wow, ziemlich viel auf einmal.
 	AI_Output(self, hero, "Info_Mod_Andre_Auftrag_08_05"); //Ja, deswegen arbeitest du auch nicht alleine daran.
-	AI_Output(hero, self, "Info_Mod_Andre_Auftrag_15_06"); //Was meinst du mir "nicht alleine"?
+	AI_Output(hero, self, "Info_Mod_Andre_Auftrag_15_06"); //Was meinst du mit "nicht alleine"?
 	AI_Output(self, hero, "Info_Mod_Andre_Auftrag_08_07"); //Gidan wird die Karawanen überwachen.
 	AI_Output(hero, self, "Info_Mod_Andre_Auftrag_15_08"); //Na gut ... dann kümmere ich mich um die Sekte und den Erfinder.
-	AI_Output(self, hero, "Info_Mod_Andre_Auftrag_08_09"); //Gut, sag bescheid, wenn du etwas herausfindest.
+	AI_Output(self, hero, "Info_Mod_Andre_Auftrag_08_09"); //Gut, sag Bescheid, wenn du etwas herausfindest.
 
 	Wld_InsertNpc	(Mod_1745_PSIGUR_Guru_NW, "BIGFARM");
 	Wld_InsertNpc	(Mod_7392_PSITPL_Templer_NW, "BIGFARM");
@@ -965,7 +965,7 @@ FUNC INT Info_Mod_Andre_WoFanatiker_Condition()
 FUNC VOID Info_Mod_Andre_WoFanatiker_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Andre_WoFanatiker_15_00"); //Wo gibt es Hinweise zu den Sektenspinnern?
-	AI_Output(self, hero, "Info_Mod_Andre_WoFanatiker_08_01"); //Hör dich am besten im Sumpflager im Minental um. Oder bei deinem Freund, von dem mir Gidan erzählt hat, dieser Lester.
+	AI_Output(self, hero, "Info_Mod_Andre_WoFanatiker_08_01"); //Hör dich am besten im Sumpflager im Minental um. Oder bei deinem Freund, von dem mir Gidan erzählt hat, diesem Lester.
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_SEKTENSPINNER, "Lord Andre meint ich sollte mich im Sumpflager oder bei Lester umhören, um etwas über die fanatischen Sektenspinner zu erfahren.");
 

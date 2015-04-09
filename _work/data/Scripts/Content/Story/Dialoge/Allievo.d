@@ -62,6 +62,7 @@ FUNC VOID Info_Mod_Allievo_Hi_D()
 FUNC VOID Info_Mod_Allievo_Hi_C()
 {
 	AI_Output(hero, self, "Info_Mod_Allievo_Hi_C_15_00"); //Was für ein begrüßenswerter Zufall, dass du allein bist. Jetzt bist du fällig!
+	AI_Output(self, hero, "DEFAULT"); //
 	
 	Info_ClearChoices	(Info_Mod_Allievo_Hi);
 

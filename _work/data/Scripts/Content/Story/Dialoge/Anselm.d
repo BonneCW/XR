@@ -953,7 +953,7 @@ FUNC VOID Info_Mod_Anselm_Buerger3_B1()
 
 FUNC VOID Info_Mod_Anselm_Buerger3_C()
 {
-	AI_Output(self, hero, "Info_Mod_Anselm_Buerger3_C_32_00"); //Vierte Frage: Wie viele Stände hat der Marktplatz Khoratas?
+	AI_Output(self, hero, "Info_Mod_Anselm_Buerger3_C_32_00"); //Vierte Frage: Wie viele Händler haben ihren Stand am Marktplatz von Khorata?
 
 	Info_ClearChoices	(Info_Mod_Anselm_Buerger3);
 

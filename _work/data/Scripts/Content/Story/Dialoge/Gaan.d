@@ -176,7 +176,7 @@ FUNC VOID Info_Mod_Gaan_Ornament_02_Info()
 		B_GiveInvItems	(self, hero, ItMi_Ornament_Heiler, 1);
 		Npc_RemoveInvItems	(Scavenger_Gaan, ItMi_Ornament_Heiler, 1);
 
-		AI_Output(self, hero, "Info_Mod_Gaan_Ornament_02_03_04"); //Du hast mir ja geholfen an das Fleisch zu kommen und das versteht es sich von selbst, dass ich das Stück Stein an dich abtrete. Man sieht sich.
+		AI_Output(self, hero, "Info_Mod_Gaan_Ornament_02_03_04"); //Du hast mir ja geholfen an das Fleisch zu kommen und da versteht es sich von selbst, dass ich das Stück Stein an dich abtrete. Man sieht sich.
 	};
 
 	AI_StopProcessInfos	(self);

@@ -323,7 +323,7 @@ FUNC VOID Info_Mod_Mika_Dokumente_Info()
 	if (Mod_Verhandlungsgeschick > 0)
 	&& (Mod_REL_Dokumente == 3)
 	{
-		Info_AddChoice	(Info_Mod_Mika_Dokumente, "(Feilschen) Was würde Lord Hagen dazu sagen, dass du beschlagnahmte Güter behältst?", Info_Mod_Mika_Dokumente_C);
+		Info_AddChoice	(Info_Mod_Mika_Dokumente, "(Feilschen) Was würde Lord Hagen dazu sagen ...", Info_Mod_Mika_Dokumente_C);
 	};
 
 	Info_AddChoice	(Info_Mod_Mika_Dokumente, "Ich komme später wieder.", Info_Mod_Mika_Dokumente_B);

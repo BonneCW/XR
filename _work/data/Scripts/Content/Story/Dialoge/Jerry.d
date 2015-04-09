@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Jerry_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Jerry_Hi_15_00"); //Hi.
 	AI_Output(self, hero, "Info_Mod_Jerry_Hi_04_01"); //Hey.
-	AI_Output(hero, self, "Info_Mod_Jerry_Hi_15_02"); //Du scheinst ja noch eine menge Arbeit vor dir zu haben.
+	AI_Output(hero, self, "Info_Mod_Jerry_Hi_15_02"); //Du scheinst ja noch eine Menge Arbeit vor dir zu haben.
 	AI_Output(self, hero, "Info_Mod_Jerry_Hi_04_03"); //Genau diese Art von Arbeit bekommt man hier als neuer Soldat.
 	AI_Output(self, hero, "Info_Mod_Jerry_Hi_04_04"); //Die bei der Miliz wollten mich nicht, aber der Oberbefehlshaber der Miliz meinte, es gäbe auch für mich eine Möglichkeit, das Militär zu unterstützen.
 	AI_Output(self, hero, "Info_Mod_Jerry_Hi_04_05"); //Und jetzt schau dir an, wo ich gelandet bin, an der Front und darf das Lager ausbessern.

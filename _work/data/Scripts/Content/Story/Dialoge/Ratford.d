@@ -45,6 +45,8 @@ FUNC VOID Info_Mod_Ratford_Hi_Info()
 
 	AI_Output(self, hero, "Info_Mod_Ratford_Hi_30_09"); //Und mir auch. Lass mal zwei Bierchen rüberwachsen!
 
+	TRIA_Next(Ratford);
+
 	TRIA_Finish();
 
 	Info_ClearChoices	(Info_Mod_Ratford_Hi);
@@ -73,6 +75,8 @@ FUNC VOID Info_Mod_Ratford_Hi_B()
 	TRIA_Next(Drax);
 
 	AI_Output(self, hero, "Info_Mod_Ratford_Hi_B_30_02"); //Ja, verpiss dich!
+
+	TRIA_Next(Ratford);
 
 	TRIA_Finish();
 

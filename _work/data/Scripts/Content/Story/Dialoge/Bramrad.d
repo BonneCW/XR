@@ -17,8 +17,8 @@ FUNC INT Info_Mod_Bramrad_Hi_Condition()
 FUNC VOID Info_Mod_Bramrad_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bramrad_Hi_15_00"); //Hi.
-	AI_Output(self, hero, "Info_Mod_Bramrad_Hi_07_01"); //Hi, was gibt’s?
-	AI_Output(hero, self, "Info_Mod_Bramrad_Hi_15_02"); //Du bist doch Jäger. Ist das Minental nicht ziehmlich gefährlich zum jagen?
+	AI_Output(self, hero, "Info_Mod_Bramrad_Hi_07_01"); //Hi, was gibt's?
+	AI_Output(hero, self, "Info_Mod_Bramrad_Hi_15_02"); //Du bist doch Jäger. Ist das Minental nicht ziehmlich gefährlich zum Jagen?
 	AI_Output(self, hero, "Info_Mod_Bramrad_Hi_07_03"); //Wenn man weiß, wo man jagen kann, ist das Minental auch nicht gefährlicher, als der Rest von Khorinis.
 	AI_Output(self, hero, "Info_Mod_Bramrad_Hi_07_04"); //Außerdem haben wir Glück. Auf dem Weg ins Minental tummeln sich genug Scavenger, so dass wir nur selten tiefer ins Tal gehen müssen.
 	AI_Output(hero, self, "Info_Mod_Bramrad_Hi_15_05"); //Also ernährt ihr euch fast nur von Scavengern?

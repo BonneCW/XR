@@ -82,6 +82,10 @@ FUNC VOID Info_Mod_Metzger_Schaf_C()
 
 		Mod_Metzger_Schaf = 1;
 		Mod_Metzger_Schaf_Wert = 70;
+	
+		B_GivePlayerXP	(10);
+
+		B_RaiseHandelsgeschick (2);
 	}
 	else
 	{
