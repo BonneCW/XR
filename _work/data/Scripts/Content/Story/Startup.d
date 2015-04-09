@@ -106,8 +106,8 @@ func void INIT_GLOBAL()
 		GOTHIC_RESTART = "Y";
 	};
 
-	MoreAlphaVobs(2048); //normal: 256
-	MoreAlphaPolys(16384); //normal: 2048
+	MoreAlphaVobs(2048 * 2); //normal: 256
+	MoreAlphaPolys(16384 * 2); //normal: 2048
 
 	B_AutoGeneratePicklockKombos();
 };

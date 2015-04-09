@@ -922,9 +922,9 @@ instance ItRi_Seering (C_Item)
 	TEXT[2]			= NAME_Prot_Fire;
 	COUNT[2]		= Ri_TProtFire02;
 	TEXT[3] 		= NAME_Prot_Point;
-	COUNT[3]		= Ri_TProtPoint02;
+	COUNT[3]		= Ri_TProtPoint02 / 1000;
 	TEXT[4]			= NAME_Prot_Edge;
-	COUNT[4]		= Ri_TProtEdge02;
+	COUNT[4]		= Ri_TProtEdge02 / 1000;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 		
