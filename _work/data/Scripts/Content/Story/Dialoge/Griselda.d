@@ -424,10 +424,6 @@ FUNC VOID Info_Mod_Griselda_Pruefung6_Info()
 		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_09"); //Erst, wenn du einen bezwungen hast, erscheint der nächste.
 		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_10"); //Ich hoffe, du bist nicht gekränkt, wenn ich dich mit dieser anspruchslosen Aufgabe betraue.
 		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung6_26_11"); //Wenn du bereit bist, so triff deine Wahl.
-
-		AI_StopProcessInfos	(self);
-
-		B_StartOtherRoutine	(self, "TRANSFORM");
 	};
 };
 
@@ -560,6 +556,10 @@ FUNC VOID Info_Mod_Griselda_Pruefung8_Info()
 		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_26_05"); //So, gespielt hast du und viele Preise gewonnen. Willst du nicht noch ein letztes Mal spielen und mir die Möglichkeit eröffnen, alles zurück zu gewinnen?
 		AI_Output(hero, self, "Info_Mod_Griselda_Pruefung8_15_06"); //Was meinst du? Ich glaube ...
 		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_26_07"); //(krächzt) Es ist nicht so, dass du die Wahl hättest, hahahaha.
+
+		AI_StopProcessInfos	(self);
+
+		B_StartOtherRoutine	(self, "TRANSFORM");
 	};
 };
 

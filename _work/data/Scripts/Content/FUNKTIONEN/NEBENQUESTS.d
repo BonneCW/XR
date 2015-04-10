@@ -3535,13 +3535,13 @@ FUNC VOID NEBENQUESTS()
 
 	if (CurrentLevel == EISGEBIET_ZEN)
 	{
-		if (Npc_GetDistToWP(hero, "HEXE_ARENA") < 1000)
+		if (Npc_GetDistToWP(hero, "HEXE_ARENA") < 750)
 		&& (!Npc_IsDead(Wolf_Griselda_01))
 		&& (playerIsTransformed == FALSE)
 		{
 			Mod_Griselda_Arena = 1;
 		};
-		if (Npc_GetDistToWP(hero, "HEXE_ARENA") < 1000)
+		if (Npc_GetDistToWP(hero, "HEXE_ARENA") < 750)
 		&& ((!Npc_IsDead(Blutfliege_Griselda_01))
 		|| (!Npc_IsDead(Blutfliege_Griselda_02))
 		|| (!Npc_IsDead(Spinne_Griselda_01))
@@ -3551,14 +3551,14 @@ FUNC VOID NEBENQUESTS()
 		{
 			Mod_Griselda_Arena = 1;
 		};
-		if (Npc_GetDistToWP(hero, "HEXE_ARENA") < 1000)
+		if (Npc_GetDistToWP(hero, "HEXE_ARENA") < 750)
 		&& ((!Npc_IsDead(Firegolem_Griselda_01))
 		|| (!Npc_IsDead(Icegolem_Griselda_01)))
 		&& (playerIsTransformed == FALSE)
 		{
 			Mod_Griselda_Arena = 1;
 		};
-		if (Npc_GetDistToWP(hero, "HEXE_ARENA") < 1000)
+		if (Npc_GetDistToWP(hero, "HEXE_ARENA") < 750)
 		&& ((!Npc_IsDead(Zombie_Griselda_01))
 		|| (!Npc_IsDead(Zombie_Griselda_02))
 		|| (!Npc_IsDead(Zombie_Griselda_03)))
