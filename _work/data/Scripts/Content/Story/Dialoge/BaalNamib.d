@@ -651,7 +651,7 @@ FUNC VOID Info_Mod_Namib_Sporen_Info()
 	AI_Output(self, hero, "Info_Mod_Namib_Sporen_02_08"); //Das liegt doch auf der Hand! Infiltriere sie, schwäche sie, unterwander ihre Motivation, so Sachen halt!
 	AI_Output(hero, self, "Info_Mod_Namib_Sporen_15_09"); //Ich werde sehen was ich finden kann ...
 
-	B_LogEntry	(TOPIC_MOD_SEKTE_ENTSCHEIDUNG, "Ich soll den Hofstatt infiltrieren, schwächen, ihre Motivation unterwandern und so Sachen halt. Währenddesse untersucht Baal Namib die Sporen, die ich ihm gebracht habe.");
+	B_LogEntry	(TOPIC_MOD_SEKTE_ENTSCHEIDUNG, "Ich soll den Hofstaat infiltrieren, schwächen, ihre Motivation unterwandern und so Sachen halt. Währenddessen untersucht Baal Namib die Sporen, die ich ihm gebracht habe.");
 
 	B_GivePlayerXP	(300);
 };
