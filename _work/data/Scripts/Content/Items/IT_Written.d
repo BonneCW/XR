@@ -6685,6 +6685,8 @@ INSTANCE ItWr_ErisKult (C_ITEM)
 				Wld_InsertItem	(ItMi_Traenenkristall,	"FP_ITEM_TRAENENKRISTALL");
 			};
 		};
+
+	Doc_Show		( nDocID );
 };
 
 var int Almanach_Pre_Gelesen;
