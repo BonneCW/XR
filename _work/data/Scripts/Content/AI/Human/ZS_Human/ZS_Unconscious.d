@@ -102,6 +102,11 @@ func void ZS_Unconscious ()
 			};
 		};
 	};
+
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1871_TPL_GorKaranto_MT))
+	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_1872_NONE_Unbekannt_MT)) {
+		Wld_SendUnTrigger	("ARENAKAMERA");
+	};
 	
 	// ------ weil sonst Händler bevor man zum ersten Mal TRADE gewählt hat nix haben ------
 	B_GiveTradeInv(self);//Joly:	STEHEN LASSEN VOR ->(self.aivar[AIV_VictoryXPGiven] = TRUE)!!!!!!!!!!!!!!!

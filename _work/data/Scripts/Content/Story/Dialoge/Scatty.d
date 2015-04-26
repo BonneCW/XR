@@ -216,6 +216,8 @@ FUNC VOID Info_Mod_Scatty_ArenaFight_Info()
 	B_StartOtherRoutine	(Mod_7384_OUT_Dragan_MT, "KAMPF");
 
 	B_Attack	(Mod_1871_TPL_GorKaranto_MT, Mod_1872_NONE_Unbekannt_MT, AR_NONE, 0);
+
+	Wld_SendTrigger	("ARENAKAMERA");
 };
 
 INSTANCE Info_Mod_Scatty_WannaFightUB (C_INFO)
