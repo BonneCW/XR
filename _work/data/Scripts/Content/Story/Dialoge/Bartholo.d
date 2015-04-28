@@ -20,6 +20,8 @@ FUNC VOID Info_Mod_Bartholo_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Bartholo_Hi_12_02"); //Was gibt's da herumzudrucksen?
 	AI_Output(hero, self, "Info_Mod_Bartholo_Hi_15_03"); //Früher nannte man mich häufig, äh, Rü...
 	AI_Output(self, hero, "Info_Mod_Bartholo_Hi_12_04"); //Wie dem auch sei. Was hast du hier verloren?
+
+	B_StartOtherRoutine	(self, "START");
 };
 
 INSTANCE Info_Mod_Bartholo_Laber (C_INFO)

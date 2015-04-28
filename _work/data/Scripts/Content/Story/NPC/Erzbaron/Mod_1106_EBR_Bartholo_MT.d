@@ -41,9 +41,15 @@ instance Mod_1106_EBR_Bartholo_MT (Npc_Default)
 	
 
 	//------------- ai -------------
-	daily_routine	=	Rtn_start_1106;
+	daily_routine	=	Rtn_PreStart_1106;
 	fight_tactic	=	FAI_HUMAN_MASTER;
 	senses			=	SENSE_SEE|SENSE_HEAR|SENSE_SMELL;
+};
+
+FUNC VOID Rtn_PreStart_1106 ()
+{
+	TA_Stand_WP		(07,35,21,10,"OCC_BARONS_DOOR");
+	TA_Stand_WP		(21,10,07,35,"OCC_BARONS_DOOR");
 };
 
 FUNC VOID Rtn_start_1106 ()
