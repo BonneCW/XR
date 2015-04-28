@@ -70,7 +70,7 @@ FUNC VOID B_GiveDeathRandomGuertel (var C_NPC slf)
 
 	if (rnd == 0)
 	{
-		CreateInvItems	(slf, ItBe_Dornenguertel, 1);
+		//CreateInvItems	(slf, ItBe_Dornenguertel, 1);
 	};
 };
 
