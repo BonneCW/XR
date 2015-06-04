@@ -18,6 +18,20 @@ func void ZS_Smalltalk ()
 		B_SetSchwierigkeit();
 	};
 
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1871_TPL_GorKaranto_MT)) {
+		Npc_PerceiveAll (self);
+	
+		if (Wld_DetectItem (self, ITEM_KAT_NF)) {
+			if (Hlp_IsValidItem (item) && Npc_GetDistToItem(self, item) < 750) {
+				if (Npc_GetDistToItem (self, item) > 500) {
+					AI_GotoItem (self, item);
+				};
+
+				AI_TakeItem (self, item);
+			};
+		};
+	};
+
 	AI_SetWalkmode 	(self,NPC_WALK);
 	 	
 	if (Npc_GetDistToWP (self,self.wp) > TA_DIST_SELFWP_MAX) 

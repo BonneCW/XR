@@ -15,8 +15,8 @@ instance Mod_1872_NONE_Unbekannt_MT (Npc_Default)
 	//-------- abilities --------	
 	B_SetAttributesToChapter (self, 2);
 	attribute[ATR_STRENGTH] 	= 140;
-	attribute[ATR_HITPOINTS_MAX]= 750;
-	attribute[ATR_HITPOINTS] 	= 750;
+	attribute[ATR_HITPOINTS_MAX]= 1500;
+	attribute[ATR_HITPOINTS] 	= 1500;
 
 	//-------- visuals --------
 	// 			animations

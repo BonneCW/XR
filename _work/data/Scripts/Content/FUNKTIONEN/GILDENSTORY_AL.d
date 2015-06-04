@@ -3,7 +3,6 @@ FUNC VOID GILDENSTORY_AL()
 	if (CurrentLevel == MINENTAL_ZEN)
 	{
 		// Altes Lager
-
 		if (Npc_IsInState(Mod_1871_TPL_GorKaranto_MT, ZS_Attack))
 		&& (Npc_IsInState(Mod_1872_NONE_Unbekannt_MT, ZS_Attack))
 		&& (Npc_KnowsInfo(PC_Hero, Info_Mod_Scatty_ArenaFight))

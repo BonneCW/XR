@@ -4,16 +4,30 @@
 
 func void ZS_Practice_Sword ()
 {
-    Perception_Set_Normal();
+	Perception_Set_Normal();
 	
 	B_UseHat (self);
     
-    B_ResetAll (self);
+	B_ResetAll (self);
 	
 	if (self.aivar[AIV_Schwierigkeitsgrad] < Mod_Schwierigkeit)
 	|| (self.aivar[AIV_Schwierigkeitsgrad] > Mod_Schwierigkeit)
 	{
 		B_SetSchwierigkeit();
+	};
+
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1871_TPL_GorKaranto_MT)) {
+		Npc_PerceiveAll (self);
+	
+		if (Wld_DetectItem (self, ITEM_KAT_NF)) {
+			if (Hlp_IsValidItem (item) && Npc_GetDistToItem(self, item) < 750) {
+				if (Npc_GetDistToItem (self, item) > 500) {
+					AI_GotoItem (self, item);
+				};
+
+				AI_TakeItem (self, item);
+			};
+		};
 	};
 
 	AI_SetWalkmode		(self,	NPC_WALK);	
