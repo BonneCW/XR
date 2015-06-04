@@ -331,7 +331,7 @@ func int B_AssessEnemy()
 	{
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Gormgniez_11007_FM))
 		{
-			return;
+			return FALSE;
 		};
 	};
 

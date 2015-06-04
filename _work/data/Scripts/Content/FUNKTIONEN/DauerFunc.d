@@ -36,6 +36,10 @@ FUNC VOID DAUERFUNC_01()
 		Offline_Modus = 1;
 	};
 
+	if (hero.attribute[ATR_HITPOINTS] == 0) {
+		ExitSession();
+	};
+
 	LogState_PosY = 0;
 
 	if (GetInput == 0)
