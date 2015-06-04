@@ -6267,6 +6267,8 @@ FUNC VOID INIT_Minental ()
 
 		AI_EquipArmor	(Mod_962_STT_Scatty_MT, TPL_ARMOR_M);
 
+		B_StartOtherRoutine	(Mod_962_STT_Scatty_MT, "SUMPFLAGER");
+
 		Wld_SetTime	(22,00);
 
 		PlayVideo	("OrcAttack.bik");
