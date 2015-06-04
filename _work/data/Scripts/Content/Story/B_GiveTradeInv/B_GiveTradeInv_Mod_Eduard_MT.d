@@ -32,11 +32,7 @@ FUNC VOID B_GiveTradeInv_Mod_Eduard_MT (var C_NPC slf)
 		CreateInvItems (slf, ItMw_2h_Bau_Axe, 1);
 		CreateInvItems (slf, ItMw_Richtstab, 1);
 
-		CreateInvItems	(slf, ItMw_1H_Mace_L_04, 1);
-		
-		// ------ Ringe / Amulette ------
-		
-		CreateInvItems (slf, ItBE_Addon_SLD_01, 1); 		 
+		CreateInvItems	(slf, ItMw_1H_Mace_L_04, 1);	 
 		
 				
 		Eduard_ItemsGiven_Chapter_1 = TRUE;
