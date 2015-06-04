@@ -15,6 +15,14 @@ func void B_AssessDamage ()
 		return;
 	};
 
+	if (CurrentLevel == FREEMINE_ZEN)
+	{
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Gormgniez_11007_FM))
+		{
+			return;
+		};
+	};
+
 	if (self.aivar[AIV_Damage] == self.attribute[ATR_HITPOINTS]+1)
 	{
 		self.attribute[ATR_HITPOINTS] += 1;

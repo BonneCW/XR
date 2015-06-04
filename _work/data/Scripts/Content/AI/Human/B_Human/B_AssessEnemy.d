@@ -327,6 +327,14 @@ func int B_AssessEnemy()
 		};
 	};
 
+	if (CurrentLevel == FREEMINE_ZEN)
+	{
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Gormgniez_11007_FM))
+		{
+			return;
+		};
+	};
+
 	if (self.guild == GIL_DRACONIAN)
 	&& (other.guild == GIL_SWAMPSHARK)
 	{

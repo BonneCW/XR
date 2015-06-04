@@ -41,6 +41,14 @@ func void B_AssessOthersDamage ()
 	{
 		return;
 	};
+
+	if (CurrentLevel == FREEMINE_ZEN)
+	{
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Gormgniez_11007_FM))
+		{
+			return;
+		};
+	};
 	
 	// ------ wenn ich zu weit weg bin ------	//wichtig für Aufruf über FIGHTSOUND aus ZS_MM_Rtn_Summoned
 	if (Npc_GetDistToNpc (self, victim) > PERC_DIST_INTERMEDIAT)

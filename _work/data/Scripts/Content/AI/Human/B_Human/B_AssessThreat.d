@@ -46,6 +46,14 @@ func void B_AssessThreat ()
 		};
 	};
 
+	if (CurrentLevel == FREEMINE_ZEN)
+	{
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Gormgniez_11007_FM))
+		{
+			return;
+		};
+	};
+
 	if (self.aivar[AIV_MM_REAL_ID] == ID_KOBOLD) {
 		return;
 	};
