@@ -65,6 +65,7 @@ var int Mod_Den_Problem;
 var int TimeSwitch;
 var int Mod_Aerwak;
 var int Mod_Eivar;
+var int Mod_Leichengase_InsertProbe;
 var int View_Time;
 var int transformCooldown;
 var int Mod_Regenerationstrank_Counter;

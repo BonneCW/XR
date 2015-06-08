@@ -348,6 +348,13 @@ FUNC VOID GILDENSTORY_SL()
 
 		// Leichengase
 
+		if (Mod_Leichengase_InsertProbe == 1)
+		&& (Mod_IstGolem == FALSE) {
+			CreateInvItems	(hero, ItMi_Sumpfhaiprobe, 1);
+
+			Mod_Leichengase_InsertProbe = 2;
+		};
+
 		if (Npc_KnowsInfo(hero, Info_Mod_Caine_Leichengase))
 		&& (Mod_Caine_Leichengase == 0)
 		{
@@ -356,13 +363,13 @@ FUNC VOID GILDENSTORY_SL()
 			{
 				if (Mod_IstGolem == TRUE)
 				{
-					CreateInvItems	(hero, ItMi_Sumpfhaiprobe, 1);
-
 					Print	("Sumpfhaiprobe erhalten");
 
 					B_LogEntry	(TOPIC_MOD_SL_LEICHENGASE, "Ich hab die Sumpfhaiprobe. Jetzt nichts wie zurück zu Baal Caine.");
 
 					Mod_Caine_Leichengase = 1;
+
+					Mod_Leichengase_InsertProbe = 1;
 				}
 				else
 				{
