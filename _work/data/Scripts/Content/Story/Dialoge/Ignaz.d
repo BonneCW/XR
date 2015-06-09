@@ -386,8 +386,9 @@ FUNC VOID Info_Mod_Ignaz_LearnScrolls_Info()
 	if (B_TeachPlayerTalentScrolls(self, hero, 1))
 	{
 		AI_Output(self, hero, "Info_Mod_Ignaz_LearnScrolls_14_00"); //Um eine Spruchrolle herzustellen benötigst du zunächst einmal einen Rune der jeweiligen Magierichtung.
-		AI_Output(self, hero, "Info_Mod_Ignaz_LearnScrolls_14_01"); //Die Wirkung der Rune übeträgt mittels Runenstein und der Zutaten des Zaubers auf ein Blatt Papier.
+		AI_Output(self, hero, "Info_Mod_Ignaz_LearnScrolls_14_01"); //Die Wirkung der Rune übeträgst du mittels Runenstein und der Zutaten des Zaubers auf ein Blatt Papier.
 		AI_Output(self, hero, "Info_Mod_Ignaz_LearnScrolls_14_02"); //Du kannst aber aus einer Rune nicht nur einen Zauber machen, sondern auch stärkere, jedoch brauchst du dafür das Rezept und auch alle Zutaten der einzelnen Zwischenschritte.
+		AI_Output(self, hero, "Info_Mod_Ignaz_LearnScrolls_14_03"); //Wenn du also eine Feuerballspruchrolle herstellen willst, benötigst du alles, was du für die Feuerballspruchrolle brauchst ebenso wie alles für einen Feuerpfeil.
 	};
 };
 
