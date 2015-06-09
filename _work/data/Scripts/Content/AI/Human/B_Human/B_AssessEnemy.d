@@ -20,6 +20,11 @@ func int B_AssessEnemy()
 		return FALSE;
 	};
 
+	if (self.guild == GIL_STRF)
+	&& (other.guild == GIL_STRF) {
+		return FALSE;
+	};
+
 	if (Wld_IsTime(21,00,05,00))
 	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
 	{
