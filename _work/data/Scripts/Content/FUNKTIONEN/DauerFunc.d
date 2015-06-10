@@ -1964,7 +1964,5 @@ FUNC VOID DAUERFUNC_01()
 		LastMobsi = PLAYER_MOBSI_PRODUCTION;
 	};
 
-	SetMagicDamage();
-
 	Wld_SendTrigger	("DAUERTRIGGER");
 };

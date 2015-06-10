@@ -57,7 +57,7 @@ INSTANCE ItRu_Thunderstorm (C_Item)
 	COUNT	[1]			=	SPL_Cost_Thunderstorm;
 	
 	TEXT	[2]			=	NAME_Damage;				
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_Thunderstorm;
+	COUNT	[2]			=	SPL_DAMAGE_Thunderstorm;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -125,7 +125,7 @@ INSTANCE ItRu_Geyser (C_Item)
 	COUNT	[1]			=	SPL_Cost_Geyser;
 	
 	TEXT	[2]			=	NAME_Damage;			
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_Geyser;
+	COUNT	[2]			=	SPL_DAMAGE_Geyser;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -191,7 +191,7 @@ INSTANCE ItRu_Waterfist	(C_Item)
 	COUNT	[1]			=	SPL_Cost_Waterfist;
 	
 	TEXT	[2]			=	NAME_Damage;			
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_Waterfist;
+	COUNT	[2]			=	SPL_DAMAGE_Waterfist;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -224,7 +224,7 @@ INSTANCE ItRu_Spucke	(C_Item)
 	COUNT	[1]			=	SPL_Cost_Waterfist;
 	
 	TEXT	[2]			=	NAME_Damage;			
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_Waterfist;
+	COUNT	[2]			=	SPL_DAMAGE_Waterfist;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -258,7 +258,7 @@ INSTANCE ItRu_Icelance	(C_Item)
 	COUNT	[1]			=	SPL_Cost_Icelance;
 	
 	TEXT	[2]			=	NAME_Damage;			
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_Icelance;
+	COUNT	[2]			=	SPL_DAMAGE_Icelance;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -331,7 +331,7 @@ INSTANCE ItRu_BeliarsRage	(C_Item)
 	COUNT	[1]			=	SPL_Cost_Energyball;
 	
 	TEXT	[2]			=	NAME_Damage;			
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_Energyball;
+	COUNT	[2]			=	SPL_DAMAGE_Energyball;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -365,7 +365,7 @@ INSTANCE ItRu_SuckEnergy	(C_Item)
 	COUNT	[1]			=	SPL_Cost_SuckEnergy;
 	
 	TEXT	[2]			=	NAME_Damage;			
-	COUNT	[2]			=	SPL_TEXT_SuckEnergy_Damage;
+	COUNT	[2]			=	SPL_SuckEnergy_Damage;
 	
 	TEXT	[3]			=	NAME_Sec_Duration;				
 	COUNT	[3]			=	SPL_TIME_SuckEnergy;
@@ -476,7 +476,7 @@ INSTANCE ItRu_Skull	(C_Item)
 	
 	
 	TEXT	[4]			=	NAME_Damage;			
-	COUNT	[4]			=	SPL_TEXT_Damage_Skull;		
+	COUNT	[4]			=	SPL_DAMAGE_Skull;		
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;

@@ -300,7 +300,7 @@ INSTANCE ItSc_PalHolyBolt (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;			
-	COUNT	[2]			=	SPL_TEXT_Damage_PalHolyBolt;
+	COUNT	[2]			=	SPL_DAMAGE_PalHolyBolt;
 	
 	TEXT	[5]			=	NAME_Value;				
 	COUNT	[5]			=	value;
@@ -422,7 +422,7 @@ INSTANCE ItSc_PalRepelEvil (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;				
-	COUNT	[2]			=	SPL_TEXT_Damage_PalRepelEvil;
+	COUNT	[2]			=	SPL_DAMAGE_PalRepelEvil;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -486,7 +486,7 @@ INSTANCE ItSc_PalDestroyEvil (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;				
-	COUNT	[2]			=	SPL_TEXT_Damage_PalDestroyEvil;
+	COUNT	[2]			=	SPL_DAMAGE_PalDestroyEvil;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -901,7 +901,7 @@ INSTANCE ItSc_Firebolt (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;			
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_FIREBOLT;
+	COUNT	[2]			=	SPL_DAMAGE_FIREBOLT;
 	
 	TEXT	[5]			=	NAME_Value;				
 	COUNT	[5]			=	value;
@@ -966,7 +966,7 @@ INSTANCE ItSc_Icebolt (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;				
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_Icebolt;
+	COUNT	[2]			=	SPL_DAMAGE_Icebolt;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -999,7 +999,7 @@ INSTANCE ItSc_Icebolt_Fake (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;				
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_Icebolt;
+	COUNT	[2]			=	SPL_DAMAGE_Icebolt;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -1189,7 +1189,7 @@ INSTANCE ItSc_InstantFireball (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;	
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_InstantFireball;
+	COUNT	[2]			=	SPL_DAMAGE_InstantFireball;
 	
 	TEXT	[5]			=	NAME_Value;									
 	COUNT	[5]			=	value;
@@ -1222,7 +1222,7 @@ INSTANCE ItSc_InstantIceball (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;	
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_InstantIceball;
+	COUNT	[2]			=	SPL_DAMAGE_InstantIceball;
 	
 	TEXT	[5]			=	NAME_Value;									
 	COUNT	[5]			=	value;
@@ -1254,7 +1254,7 @@ INSTANCE ItSc_Zap (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;			
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_ZAP;
+	COUNT	[2]			=	SPL_DAMAGE_ZAP;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -1905,7 +1905,7 @@ INSTANCE ItSc_LightningFlash (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;			
-	COUNT	[2]			=	SPL_TEXT_Damage_LightningFlash;
+	COUNT	[2]			=	SPL_DAMAGE_LightningFlash;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -1941,10 +1941,10 @@ INSTANCE ItSc_ChargeFireball (C_Item)
 	COUNT	[2]			=	SPL_COST_ChargeFireball;
 	
 	TEXT	[3]			=	NAME_Addon_Damage_Min;
-	count 	[3]			=   SPL_TEXT_Damage_ChargeFireball;
+	count 	[3]			=   SPL_DAMAGE_ChargeFireball;
 	
 	TEXT	[4]			=	NAME_Damage_Max;
-	COUNT	[4]			=	(SPL_TEXT_Damage_ChargeFireball*4);
+	COUNT	[4]			=	(SPL_DAMAGE_ChargeFireball*4);
 	
 	TEXT	[5]			=	NAME_Value;									
 	COUNT	[5]			=	value;
@@ -2183,10 +2183,10 @@ INSTANCE ItSc_ThunderBall (C_Item)
 	COUNT	[2]			=	SPL_COST_ChargeZap;
 	
 	TEXT	[3]			=	NAME_Addon_Damage_Min;
-	count 	[3]			=   SPL_TEXT_Damage_ChargeZap;
+	count 	[3]			=   SPL_DAMAGE_ChargeZap;
 	
 	TEXT	[4]			=	NAME_Damage_Max;
-	COUNT	[4]			=	(SPL_TEXT_Damage_ChargeZap*4);
+	COUNT	[4]			=	(SPL_DAMAGE_ChargeZap*4);
 	
 	TEXT	[5]			=	NAME_Value;									
 	COUNT	[5]			=	value;
@@ -2464,10 +2464,10 @@ INSTANCE ItSc_Pyrokinesis (C_Item)
 	COUNT	[2]			=	SPL_COST_Firestorm;
 	
 	TEXT	[3]			=	NAME_Addon_Damage_Min;
-	count 	[3]			=   SPL_TEXT_Damage_Firestorm;
+	count 	[3]			=   SPL_DAMAGE_Firestorm;
 	
 	TEXT	[4]			=	NAME_Damage_Max;
-	COUNT	[4]			=	(SPL_TEXT_Damage_Firestorm*4);
+	COUNT	[4]			=	(SPL_DAMAGE_Firestorm*4);
 	
 	TEXT	[5]			=	NAME_Value;									
 	COUNT	[5]			=	value;
@@ -2527,7 +2527,7 @@ INSTANCE ItSc_Firestorm (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;	
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_INSTANTFIRESTORM;
+	COUNT	[2]			=	SPL_DAMAGE_INSTANTFIRESTORM;
 	
 	TEXT	[5]			=	NAME_Value;									
 	COUNT	[5]			=	value;
@@ -2702,7 +2702,7 @@ INSTANCE ItSc_Firerain (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Fire;				
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_FIRERAIN;
+	COUNT	[2]			=	SPL_DAMAGE_FIRERAIN;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -2735,7 +2735,7 @@ INSTANCE ItSc_Icerain (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;				
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_IceRAIN;
+	COUNT	[2]			=	SPL_DAMAGE_IceRAIN;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -2800,7 +2800,7 @@ INSTANCE ItSc_BreathOfDeath (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarz
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;				
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_BREATHOFDEATH;
+	COUNT	[2]			=	SPL_DAMAGE_BREATHOFDEATH;
 
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -2832,7 +2832,7 @@ INSTANCE ItSc_MassDeath (C_Item)
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	NAME_Dam_Magic;				
-	COUNT	[2]			=	SPL_TEXT_DAMAGE_MASSDEATH;
+	COUNT	[2]			=	SPL_DAMAGE_MASSDEATH;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;

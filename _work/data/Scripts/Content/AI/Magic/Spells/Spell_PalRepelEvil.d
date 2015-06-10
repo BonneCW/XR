@@ -3,7 +3,7 @@
 // ****************
 
 const int SPL_Cost_PalRepelEvil 	= 15;
-const int SPL_TEXT_Damage_PalRepelEvil 	= 300;
+const int SPL_Damage_PalRepelEvil 	= 300;
 
 
 INSTANCE Spell_PalRepelEvil (C_Spell_Proto)

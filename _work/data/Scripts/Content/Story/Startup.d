@@ -73,8 +73,6 @@ func void INIT_GLOBAL()
 
 	MEM_SetShowDebug (1);
 
-	SetMagicDamage();
-
 	FixPlayerControllsTurnOnNpcAttackMoveBug();
 
 	ShowManabar(1);

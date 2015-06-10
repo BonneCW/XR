@@ -43,7 +43,7 @@ func int B_TeachPlayerTalentScrolls (var C_NPC slf, var C_NPC oth, var int spell
 	};
 	
 	Log_CreateTopic (TOPIC_TalentScrolls,LOG_NOTE);
-	B_LogEntry (TOPIC_TalentScrolls,"Um eine Spruchrolle herzustellen benötige ich als Grundlage eine Rune der Magierichtung, optimalerweise des Zaubers, den ich als Spruchrolle herstellen will, die Zutaten für die Spruchrolle, ein Blatt Papier und einen leeren Runenstein als Transfermedium. Will ich stärkere Spruchrollen herstellen, für die ich keine Rune besitze, so benötigte ich ebenfalls das Wissen und die Zutaten für die schwächeren Zauber, bis ich eine Rune habe.");
+	B_LogEntry (TOPIC_TalentScrolls,"Um eine Spruchrolle herzustellen benötige ich als Grundlage eine Rune der Magierichtung, optimalerweise des Zaubers, den ich als Spruchrolle herstellen will, die Zutaten für die Spruchrolle, ein Blatt Papier und einen leeren Runenstein als Transfermedium. Will ich stärkere Spruchrollen herstellen, für die ich keine Rune besitze, so benötigte ich ebenfalls das Wissen und die Zutaten für die schwächeren Zauber, bis ich eine Rune habe. So werden beispielsweise für einen Feuerball auch alle Zutaten für einen Feuerpfeil vorausgesetzt.");
 	
 	PrintScreen			(PRINT_LearnScrolls, -1, -1, FONT_Screen, 2);
 	

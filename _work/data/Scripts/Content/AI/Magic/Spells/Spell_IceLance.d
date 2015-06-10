@@ -3,7 +3,7 @@
 // *************
 
 const int SPL_Cost_Icelance		= 10;
-const int SPL_TEXT_Damage_Icelance	= 100;
+const int SPL_Damage_Icelance	= 100;
 
 
 INSTANCE Spell_Icelance		(C_Spell_Proto)

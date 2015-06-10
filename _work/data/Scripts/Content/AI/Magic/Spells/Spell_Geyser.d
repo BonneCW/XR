@@ -3,7 +3,7 @@
 // ******************
 
 const int SPL_Cost_Geyser 				= 80;
-const int SPL_TEXT_Damage_Geyser 			= 150; 
+const int SPL_Damage_Geyser 			= 150; 
 
 
 INSTANCE Spell_Geyser	(C_Spell_Proto)

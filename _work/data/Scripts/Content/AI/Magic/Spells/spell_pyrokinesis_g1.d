@@ -5,7 +5,7 @@
 // SPL_SENDSTOP			= 	3;		// Beende Zauber ohne Effekt
 // SPL_NEXTLEVEL		=	4;		// setze den Spruch auf den nächsten Level
 
-const int   SPL_TEXT_PYROKINESIS_DAMAGE_PER_SEC		=	50;	// Pyrokinesis
+const int   SPL_PYROKINESIS_DAMAGE_PER_SEC		=	50;	// Pyrokinesis
 
 INSTANCE Spell_Pyrokinesis_g1(C_Spell_Proto)
 {

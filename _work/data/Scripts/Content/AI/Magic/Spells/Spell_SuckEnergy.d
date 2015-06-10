@@ -3,7 +3,7 @@
 // **************
 
 const int SPL_Cost_SuckEnergy			= 30;
-const int SPL_TEXT_SuckEnergy_Damage			= 50;	
+const int SPL_SuckEnergy_Damage			= 50;	
 const int SPL_TIME_SuckEnergy			= 9;	
 
 instance Spell_SuckEnergy (C_Spell_Proto)

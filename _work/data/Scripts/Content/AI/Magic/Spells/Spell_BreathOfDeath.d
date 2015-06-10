@@ -3,7 +3,7 @@
 // *******************
 
 const int SPL_Cost_BreathOfDeath	= 100;
-const int SPL_TEXT_Damage_BreathOfDeath  = 666;
+const int SPL_DAMAGE_BreathOfDeath = 666;
 
 
 INSTANCE Spell_BreathOfDeath(C_Spell_Proto)

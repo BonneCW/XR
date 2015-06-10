@@ -3,7 +3,7 @@
 // ******************
 
 const int SPL_Cost_LightningFlash 		= 100; 
-const int SPL_TEXT_Damage_LightningFlash 	= 150; 
+const int SPL_Damage_LightningFlash 	= 150; 
 const int SPL_ZAPPED_DAMAGE_PER_SEC 	= 2;	
 const int SPL_TIME_SHORTZAPPED			= 2;
 

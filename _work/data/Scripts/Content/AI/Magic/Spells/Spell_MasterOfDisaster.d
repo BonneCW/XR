@@ -3,7 +3,7 @@
 // ********************
 
 const int SPL_Cost_MasterOfDisaster		= 100;
-const int SPL_TEXT_Damage_MasterOfDisaster	= 300;
+const int SPL_Damage_MasterOfDisaster	= 300;
 
 
 INSTANCE Spell_MasterOfDisaster	(C_Spell_Proto)

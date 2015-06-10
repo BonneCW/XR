@@ -159,6 +159,4 @@ FUNC VOID B_Göttergefallen (var int GefallenArt, var int GefallenCounter)
 			Npc_SetTalentSkill (hero, NPC_TALENT_GOTTSTATUS, 8);
 		};
 	};
-
-	SetMagicDamage();
 };

@@ -3,7 +3,7 @@
 // ***************
 
 const int SPL_Cost_PalHolyBolt	 = 5;
-const int SPL_TEXT_Damage_PalHolyBolt = 100;
+const int SPL_Damage_PalHolyBolt = 100;
 
 INSTANCE Spell_PalHolyBolt (C_Spell_Proto)
 {

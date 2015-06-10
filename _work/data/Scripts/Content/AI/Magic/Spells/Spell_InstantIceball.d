@@ -3,7 +3,7 @@
 // *******************
 
 const int SPL_Cost_InstantIceball			= 7;
-const int SPL_TEXT_Damage_InstantIceball 		= 75;
+const int SPL_Damage_InstantIceball 		= 75;
 
 
 INSTANCE Spell_InstantIceball (C_Spell_Proto)

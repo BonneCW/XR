@@ -4,7 +4,7 @@
 
 const int SPL_Cost_FireStorm		= 200; //4*50
 const int STEP_Firestorm			= 50;
-const int SPL_TEXT_Damage_FireStorm 		= 75;
+const int SPL_Damage_FireStorm 		= 75;
 
 	// obsolete:
 	const int SPL_PYRO_DAMAGE_PER_SEC = 20;	// wird in ZS_Pyro (Pyrokinese-Opfer) benutzt, dort KEIN Rüstungsschutz!

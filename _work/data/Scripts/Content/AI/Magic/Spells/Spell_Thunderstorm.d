@@ -3,7 +3,7 @@
 // ****************
 
 const int SPL_Cost_Thunderstorm 	= 100;
-const int SPL_TEXT_Damage_Thunderstorm 	= 200;
+const int SPL_Damage_Thunderstorm 	= 200;
 
 
 INSTANCE Spell_Thunderstorm  (C_Spell_Proto)

@@ -3,7 +3,7 @@
 // ************
 
 const int SPL_Cost_IceRain			= 200;
-const int SPL_TEXT_Damage_IceRain 		= 400;
+const int SPL_Damage_IceRain 		= 400;
 
 
 INSTANCE Spell_IceRain (C_Spell_Proto)

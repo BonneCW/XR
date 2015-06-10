@@ -3,7 +3,7 @@
 // *************
 
 const int SPL_Cost_Skull	= 250; 
-const int SPL_TEXT_Damage_Skull 	= 666; 
+const int SPL_Damage_Skull 	= 666; 
 
 
 INSTANCE Spell_Skull	(C_Spell_Proto)

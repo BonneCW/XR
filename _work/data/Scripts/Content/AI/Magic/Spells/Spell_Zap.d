@@ -3,7 +3,7 @@
 // ***********
 
 const int SPL_Cost_Zap		= 3;
-const int SPL_TEXT_Damage_Zap 	= 30;
+const int SPL_Damage_Zap 	= 30;
 
 
 INSTANCE Spell_Zap (C_Spell_Proto)

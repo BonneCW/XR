@@ -4,7 +4,7 @@
 
 const int SPL_Cost_ChargeFireball		= 160; //4*40
 const int STEP_ChargeFireball			= 40;
-const int SPL_TEXT_Damage_ChargeFireball 	= 75;
+const int SPL_Damage_ChargeFireball = 75;
 
 INSTANCE Spell_ChargeFireball (C_Spell_Proto)
 {

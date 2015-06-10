@@ -3,7 +3,7 @@
 // *************
 
 const int SPL_Cost_InstantFireStorm		= 50;
-const int SPL_TEXT_Damage_InstantFireStorm 	= 100;
+const int SPL_Damage_InstantFireStorm 	= 100;
 
 INSTANCE Spell_Firestorm (C_Spell_Proto)
 {

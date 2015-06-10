@@ -3,7 +3,7 @@
 // *************
 
 const int SPL_Cost_Waterfist	= 75;
-const int SPL_TEXT_Damage_Waterfist	= 125;
+const int SPL_Damage_Waterfist	= 125;
 
 
 INSTANCE Spell_Waterfist	(C_Spell_Proto)
