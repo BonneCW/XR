@@ -3217,9 +3217,25 @@ FUNC VOID INIT_AddonWorld ()
 		Wld_InsertNpc	(Alraune,	"FP_ROAM_BF_04");
 		Wld_InsertNpc	(Alraune,	"FP_ROAM_SHARK_08");
 
-		// Canyon - W?stenpirat
+		// Canyon - Wüstenpirat
 
 		Wld_InsertNpc	(Mod_7293_OUT_Brody_AW, "CANYONLIBRARY");
+
+		// Monster bei Wassermagiern
+
+		Wld_InsertNpc	(Demon,	"ADW_ENTRANCE_PLATEAU_05");
+
+		Wld_InsertNpc	(SkeletonMage,	"ADW_ENTRANCE_PLATEAU_03");
+		Wld_InsertNpc	(SkeletonMage,	"ADW_ENTRANCE_PLATEAU_07A");
+
+		Wld_InsertNpc	(Skeleton,	"ADW_ENTRANCE_02");
+		Wld_InsertNpc	(Skeleton,	"ADW_ENTRANCE_BUILDING2_01");
+		Wld_InsertNpc	(Skeleton,	"ADW_ENTRANCE_BUILDING2_02");
+		Wld_InsertNpc	(Skeleton,	"ADW_ENTRANCE_PLATEAU_04A");
+		Wld_InsertNpc	(Skeleton,	"ADW_ENTRANCE_PLATEAU_13");
+		Wld_InsertNpc	(Skeleton,	"ADW_ENTRANCE_PLATEAU_11");
+		Wld_InsertNpc	(Skeleton,	"ADW_ENTRANCE_PLATEAU_03");
+		Wld_InsertNpc	(Skeleton,	"ADW_ENTRANCE");
 
 		Mod_Enter_Addon_03 = True;
 	};
