@@ -379,8 +379,6 @@ FUNC VOID GILDENSTORY_BANDIT()
 		&& (!Npc_IsInState(Mod_948_BDT_Esteban_MT, ZS_Talk))
 		&& (!Mod_EstebanOschust) {
 			Mod_EstebanOschust = 1;
-
-			Wld_PlayEffect	("BLACK_SCREEN", hero, hero, 0, 0, 0, FALSE);
 		};
 	};
 

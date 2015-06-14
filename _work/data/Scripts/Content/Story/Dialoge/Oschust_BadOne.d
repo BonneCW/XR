@@ -18,6 +18,8 @@ FUNC VOID Info_Mod_Oschust_BadOne_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Oschust_BadOne_Hi_04_00"); //Ergebt euch, legt eure Waffen nieder! Ihr seid umzingelt und habt keine Chance gegen diese Übermacht.
 
 	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(Mod_948_BDT_Esteban_MT, "ATPLAYER");
 };
 
 INSTANCE Info_Mod_Oschust_BadOne_You (C_INFO)
@@ -40,18 +42,48 @@ FUNC INT Info_Mod_Oschust_BadOne_You_Condition()
 
 FUNC VOID Info_Mod_Oschust_BadOne_You_Info()
 {
+	Npc_ClearAIQueue	(Mod_948_BDT_Esteban_MT);
+	Npc_ClearAIQueue	(Mod_955_BDT_Juan_MT);
+	Npc_ClearAIQueue	(Mod_957_BDT_Logan_MT);
+	Npc_ClearAIQueue	(Mod_958_BDT_Miguel_MT);
+	Npc_ClearAIQueue	(Mod_964_BDT_Skinner_MT);
+	Npc_ClearAIQueue	(Mod_4074_BDT_Bandit_MT);
+	Npc_ClearAIQueue	(Mod_4075_BDT_Bandit_MT);
+	Npc_ClearAIQueue	(Mod_790_BDT_Morgahard_MT);
+
+	AI_StandUpQuick	(Mod_948_BDT_Esteban_MT);
 	AI_Teleport	(Mod_948_BDT_Esteban_MT, "TOT");
+	AI_StandUpQuick	(Mod_955_BDT_Juan_MT);
 	AI_Teleport	(Mod_955_BDT_Juan_MT, "TOT");
+	AI_StandUpQuick	(Mod_957_BDT_Logan_MT);
 	AI_Teleport	(Mod_957_BDT_Logan_MT, "TOT");
+	AI_StandUpQuick	(Mod_958_BDT_Miguel_MT);
 	AI_Teleport	(Mod_958_BDT_Miguel_MT, "TOT");
+	AI_StandUpQuick	(Mod_964_BDT_Skinner_MT);
 	AI_Teleport	(Mod_964_BDT_Skinner_MT, "TOT");
+	AI_StandUpQuick	(Mod_4074_BDT_Bandit_MT);
 	AI_Teleport	(Mod_4074_BDT_Bandit_MT, "TOT");
+	AI_StandUpQuick	(Mod_4075_BDT_Bandit_MT);
 	AI_Teleport	(Mod_4075_BDT_Bandit_MT, "TOT");
+	AI_StandUpQuick	(Mod_790_BDT_Morgahard_MT);
 	AI_Teleport	(Mod_790_BDT_Morgahard_MT, "TOT");
+
+	B_StartOtherRoutine	(Mod_948_BDT_Esteban_MT, "GEFANGEN");
+	B_StartOtherRoutine	(Mod_955_BDT_Juan_MT, "GEFANGEN");
+	B_StartOtherRoutine	(Mod_957_BDT_Logan_MT, "GEFANGEN");
+	B_StartOtherRoutine	(Mod_958_BDT_Miguel_MT, "GEFANGEN");
+	B_StartOtherRoutine	(Mod_964_BDT_Skinner_MT, "GEFANGEN");
+	B_StartOtherRoutine	(Mod_4074_BDT_Bandit_MT, "GEFANGEN");
+	B_StartOtherRoutine	(Mod_4075_BDT_Bandit_MT, "GEFANGEN");
+	B_StartOtherRoutine	(Mod_790_BDT_Morgahard_MT, "GEFANGEN");
 
 	AI_PlayAni	(hero, "T_SLEEPGROUND_2_STAND");
 
-	Wld_StopEffect	("BLACK_SCREEN");
+	AI_Output(self, hero, "Info_Mod_Oschust_BadOne_You_04_00"); //Führt sie ab!
+
+	AI_Wait	(self, 3.0);
+
+	AI_Function_S(self, Wld_StopEffect, "BLACK_SCREEN_LONG");
 
 	AI_Output(self, hero, "Info_Mod_Oschust_BadOne_You_04_01"); //So, und nun zu dir.
 

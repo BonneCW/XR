@@ -52,8 +52,8 @@ INSTANCE Mod_7175_BDT_Oschust_MT (Npc_Default)
 
 FUNC VOID Rtn_Start_7175 ()
 {	
-	TA_Stand_Guarding	(08,00,20,00,"PC_HERO");
-	TA_Stand_Guarding	(20,00,08,00,"PC_HERO");
+	TA_Follow_Player	(08,00,20,00,"WP_MT_ORKS_OSCHUST_03");
+	TA_Follow_Player	(20,00,08,00,"WP_MT_ORKS_OSCHUST_03");
 };
 
 FUNC VOID Rtn_Tot_7175 ()

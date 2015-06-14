@@ -9214,6 +9214,21 @@ INSTANCE BLACK_SCREEN(CFx_Base_Proto)
 	emFXLifeSpan    	= 2;						// Dauer is Sekunden (über timer skaliert)
 };
 
+INSTANCE BLACK_SCREEN_LONG(CFx_Base_Proto)
+{
+ 	// userstring 0: screenblend loop duration
+ 	// userstring 1: screenblend color
+ 	// userstring 2: screenblend in/out duration
+ 	// userstring 3: screenblend texture
+ 	// userstring 4: tex ani fps
+ 	visName_S      		= "screenblend.scx";
+ 	userString[0]     	= "100000000000";
+ 	userString[1]     	= "0 0 0 255";
+ 	userString[2]     	= "0";
+ 	visAlphaBlendFunc_S = "BLEND";
+	emFXLifeSpan    	= 200000;						// Dauer is Sekunden (über timer skaliert)
+};
+
 INSTANCE WHITE_SCREEN(CFx_Base_Proto)
 {
  	// userstring 0: screenblend loop duration

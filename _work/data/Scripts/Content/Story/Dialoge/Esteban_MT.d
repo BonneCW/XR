@@ -439,7 +439,7 @@ FUNC VOID Info_Mod_Esteban_SecondOrkWave_Info()
 
 	AI_Wait	(hero, 5);
 
-	Wld_InsertNpc	(Mod_7175_BDT_Oschust_MT, "OW_PATH_184");
+	Wld_InsertNpc	(Mod_7175_BDT_Oschust_MT, "WP_MT_ORKS_OSCHUST_03");
 
 	// + Orks
 
@@ -475,14 +475,7 @@ FUNC VOID Info_Mod_Esteban_Unterlegen_Info()
 	
 	AI_StopProcessInfos	(self);
 
-	B_StartOtherRoutine	(self, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_955_BDT_Juan_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_957_BDT_Logan_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_958_BDT_Miguel_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_964_BDT_Skinner_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_4074_BDT_Bandit_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_4075_BDT_Bandit_MT, "GEFANGEN");
-	B_StartOtherRoutine	(Mod_790_BDT_Morgahard_MT, "GEFANGEN");
+	Wld_PlayEffect	("BLACK_SCREEN_LONG", hero, hero, 0, 0, 0, FALSE);
 };
 
 INSTANCE Info_Mod_Esteban_FluchtHappy (C_INFO)
