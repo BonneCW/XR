@@ -7966,6 +7966,8 @@ FUNC VOID STARTUP_Eisgebiet()
 	// Monster in der Welt
 
 	Wld_InsertNpc	(Eislaeufer,	"FP_ROAM_EISLAEUFER_EIVAR");
+
+	ENTER_EVT_EISGEBIETMONSTER();
 };
 
 FUNC VOID INIT_Eisgebiet()
