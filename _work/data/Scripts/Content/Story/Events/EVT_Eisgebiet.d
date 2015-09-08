@@ -79,7 +79,7 @@ FUNC VOID ENTER_EVT_EISGEBIETMONSTER ()
                  // 
 
 
-  //Wld_InsertNpc (Meatbugzwerg,"FP_ROAM_EISGEBIET_MEATBUGZWERG");
+  Wld_InsertNpc (Meatbugzwerg,"FP_ROAM_EISGEBIET_MEATBUGZWERG");
 
 
 

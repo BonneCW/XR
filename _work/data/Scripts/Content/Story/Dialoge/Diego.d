@@ -828,6 +828,34 @@ FUNC VOID Info_Mod_Diego_Kristall_Info()
 	B_LogEntry	(TOPIC_MOD_DIEGO_KRISTALL, "Damit ich den Kristall nicht selber holen muss, bietet mir Diego seine Hilfe an. Er braucht jedoch fünf Dietriche und eine Ablösung. Ich sollte mal die anderen Mitglieder des Ring des Wassers oder die Wasser Novizen fragen.");
 };
 
+INSTANCE Info_Mod_Diego_JoeIsRelay (C_INFO)
+{
+	npc		= Mod_538_RDW_Diego_NW;
+	nr		= 1;
+	condition	= Info_Mod_Diego_JoeIsRelay_Condition;
+	information	= Info_Mod_Diego_JoeIsRelay_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Joe wird dich ablösen.";
+};
+
+FUNC INT Info_Mod_Diego_JoeIsRelay_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Joe_Diego))
+	&& (Mod_PalaKristall == 0)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Diego_JoeIsRelay_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Diego_JoeIsRelay_15_00"); //Joe wird dich ablösen.
+	AI_Output(self, hero, "Info_Mod_Diego_JoeIsRelay_11_01"); //Sehr gut, dann brauche ich nur noch die Dietriche von dir.
+
+	B_LogEntry	(TOPIC_MOD_DIEGO_KRISTALL, "Ich habe Diego informiert, dass Joe in ablösen wird. Jetzt braucht er nur noch die fünf Dietriche.");
+};
+
 INSTANCE Info_Mod_Diego_Joe (C_INFO)
 {
 	npc		= Mod_538_RDW_Diego_NW;
@@ -841,7 +869,7 @@ INSTANCE Info_Mod_Diego_Joe (C_INFO)
 
 FUNC INT Info_Mod_Diego_Joe_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Joe_Diego))
+	if (Npc_KnowsInfo(hero, Info_Mod_Diego_JoeIsRelay))
 	&& (Npc_HasItems(hero, ItKe_Lockpick) >= 5)
 	&& (Mod_PalaKristall == 0)
 	&& ((!Npc_KnowsInfo(hero, Info_Mod_Diego_Treffen))
