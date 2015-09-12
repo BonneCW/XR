@@ -278,6 +278,7 @@ FUNC VOID Info_Mod_Valentine_LosZuValentino_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "VALENTINO");
+	self.aivar[AIV_PARTYMEMBER] = TRUE;
 };
 
 INSTANCE Info_Mod_Valentine_FirstStop (C_INFO)
@@ -897,6 +898,7 @@ FUNC VOID Info_Mod_Valentine_ValentinoFrei_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "START");
+	self.aivar[AIV_PARTYMEMBER] = FALSE;
 };
 
 INSTANCE Info_Mod_Valentine_Pickpocket (C_INFO)
