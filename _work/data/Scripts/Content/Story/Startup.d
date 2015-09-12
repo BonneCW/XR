@@ -446,7 +446,6 @@ FUNC VOID STARTUP_ADDON_PART_PIRATESCAMP_01 ()
 	Wld_InsertNpc	(Mod_940_PIR_Samuel_AW,	"STRAND");
 	Wld_InsertNpc	(Mod_941_PIR_Angus_AW,	"STRAND");
 	Wld_InsertNpc	(Mod_942_PIR_Hank_AW,	"STRAND");
-	Wld_InsertNpc	(Mod_115_NONE_Eremit_AW,	"STRAND");
 
 
 	// Namenlose NPC's

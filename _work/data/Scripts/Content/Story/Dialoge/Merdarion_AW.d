@@ -234,7 +234,7 @@ FUNC VOID Info_Mod_Merdarion_AW_Gast_Info()
 
 		Mod_Saturas_Gast_Fortschritt = 1;
 
-		B_StartOtherRoutine	(Mod_115_NONE_Eremit_AW, "ATWMS");
+		Wld_InsertNpc	(Mod_115_NONE_Eremit_AW, "WP_TEMPEL_START_EREMIT_07");
 	}
 	else
 	{

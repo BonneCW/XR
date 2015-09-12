@@ -37,7 +37,7 @@ INSTANCE Mod_115_NONE_Eremit_AW (Npc_Default)
 	B_SetFightSkills (self, 50); 
 
 	// ------ TA anmelden ------
-	daily_routine 		= Rtn_Start_115;
+	daily_routine 		= Rtn_AtWMs_115;
 };
 
 FUNC VOID Rtn_Start_115 ()
