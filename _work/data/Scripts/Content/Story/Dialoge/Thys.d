@@ -246,7 +246,7 @@ FUNC VOID Info_Mod_Thys_Fisch_Info()
 FUNC VOID Info_Mod_Thys_Fisch_B()
 {
 	AI_Output(hero, self, "Info_Mod_Thys_Fisch_B_15_00"); //Vielen Dank. Ich mache mich auf den Weg.
-	AI_Output(self, hero, "Info_Mod_Thys_Fisch_B_07_01"); //Mach’s gut und danke für den Fisch!
+	AI_Output(self, hero, "Info_Mod_Thys_Fisch_B_07_01"); //Mach's gut und danke für den Fisch!
 
 	VMG_Second = 11;
 
