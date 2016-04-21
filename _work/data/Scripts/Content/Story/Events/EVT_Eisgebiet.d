@@ -1175,7 +1175,9 @@ FUNC INT B_NORDMINE_Bestimmung()
 INSTANCE Dragon_Ice_EISGEBIT	(Mst_Default_Dragon_Ice)
 {
 	name	=	"Winterdrache";
+	B_SetVisuals_Dragon_Ice();
 
+	Npc_SetToFistMode(self);
 };
 
 
