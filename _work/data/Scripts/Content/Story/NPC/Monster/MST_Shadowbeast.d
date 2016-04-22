@@ -278,7 +278,7 @@ INSTANCE Eislaeufer_FGE	(Mst_Default_Shadowbeast)
 {
 	name	= "Eisläufer";
 
-	aivar[AIV_MM_REAL_ID]			= 	ID_WATERSHADOWBEAST;
+	aivar[AIV_MM_REAL_ID]			= 	ID_ICESHADOWBEAST;
 
 	level	= 100;
 
@@ -310,7 +310,7 @@ INSTANCE Eislaeufer	(Mst_Default_Shadowbeast)
 {
 	name	= "Eisläufer";
 
-	aivar[AIV_MM_REAL_ID]			= 	ID_WATERSHADOWBEAST;
+	aivar[AIV_MM_REAL_ID]			= 	ID_ICESHADOWBEAST;
 
 	level	= 100;
 

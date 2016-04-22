@@ -1180,15 +1180,6 @@ INSTANCE Dragon_Ice_EISGEBIT	(Mst_Default_Dragon_Ice)
 	Npc_SetToFistMode(self);
 };
 
-
-
-
-
-
-
-
-
-
 func void B_SetVisuals_IcewolfEISGEBIET()
 {
 	Mdl_SetVisual			(self, "Wolf.mds");

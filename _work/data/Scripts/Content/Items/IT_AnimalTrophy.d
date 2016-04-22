@@ -1571,6 +1571,66 @@ INSTANCE ItAt_WaterShadowFur (C_Item)
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
+INSTANCE ItAt_IceShadowFur (C_Item)
+{
+	name 				=	"Fell eines Eisläufers";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_ShadowFur;
+
+	visual 				=	"ItAt_IceShadowFur.3DS";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+	TEXT[0]				= 	"";
+	TEXT[1]				= 	"";
+	TEXT[2]				= 	"";
+	TEXT[3]				= 	"";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
+INSTANCE ItAt_IceShadowFur_Rein (C_Item)
+{
+	name 				=	"unbeschädigtes Fell eines Eisläufers";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_ShadowFur_Rein;
+
+	visual 				=	"ItAt_IceShadowFur.3DS";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+	TEXT[0]				= 	"";
+	TEXT[1]				= 	"";
+	TEXT[2]				= 	"";
+	TEXT[3]				= 	"";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
+INSTANCE ItAt_IceShadowFur_Feuer (C_Item)
+{
+	name 				=	"versengtes Fell eines Eisläufers";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_ShadowFur_Feuer;
+
+	visual 				=	"ItAt_IceShadowFur.3DS";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+	TEXT[0]				= 	"";
+	TEXT[1]				= 	"";
+	TEXT[2]				= 	"";
+	TEXT[3]				= 	"";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
 INSTANCE ItAt_NightmareFur (C_Item)
 {
 	name 				=	"Fell eines Nachtmahrs";
