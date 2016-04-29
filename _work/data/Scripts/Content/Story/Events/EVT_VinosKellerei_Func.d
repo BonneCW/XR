@@ -10,3 +10,11 @@ func void EVT_VINOSKELLEREI_FUNC_S1 ()
 		B_GivePlayerXP (XP_FoundVinosKellerei);
 	};
 };
+
+func void EVT_VINOSKELLEREI_WINDE_S1 ()
+{
+	if (Kapitel < 3)
+	{
+		Print("Ich sollte es später nochmal versuchen!");
+	};
+};
