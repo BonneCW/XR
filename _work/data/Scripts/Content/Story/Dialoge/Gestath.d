@@ -91,6 +91,8 @@ FUNC VOID Info_Mod_Gestath_TrophaenHolen_Info()
 		Mod_EIS_Gestath_Flammenzunge = r_max(4);
 		Mod_EIS_Gestath_ShadowHorn = r_max(4);
 		Mod_EIS_Gestath_SharkTeeth = r_max(4);
+
+		Mod_EIS_Gestath = 1;
 	}
 	else
 	{
