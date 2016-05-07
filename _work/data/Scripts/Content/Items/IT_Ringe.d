@@ -1955,6 +1955,8 @@ INSTANCE ItRi_Willenskraft(C_Item)
 
 	description				= "Ring der Willenskraft";
 	
+	TEXT[1]					= "Regeneriert sekündlich 1 Mana";
+	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
 		
