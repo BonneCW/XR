@@ -154,7 +154,7 @@ INSTANCE Info_Mod_Darrion_Hueterklinge (C_INFO)
 	information	= Info_Mod_Darrion_Hueterklinge_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= "Schmiede mir einer Hüterklinge!";
+	description	= "Schmiede mir eine Hüterklinge!";
 };
 
 FUNC INT Info_Mod_Darrion_Hueterklinge_Condition()
@@ -168,7 +168,7 @@ FUNC INT Info_Mod_Darrion_Hueterklinge_Condition()
 
 FUNC VOID Info_Mod_Darrion_Hueterklinge_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Darrion_Hueterklinge_15_00"); //Schmiede mir einer Hüterklinge!
+	AI_Output(hero, self, "Info_Mod_Darrion_Hueterklinge_15_00"); //Schmiede mir eine Hüterklinge!
 	AI_Output(self, hero, "Info_Mod_Darrion_Hueterklinge_13_01"); //Hast du alle Zutaten?
 
 	Info_ClearChoices	(Info_Mod_Darrion_Hueterklinge);
