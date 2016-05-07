@@ -84,6 +84,8 @@ FUNC INT Info_Mod_Penner_Infos_Condition()
 	return 1;
 };
 
+var int Mod_Penner_HeardAboutJuliana = FALSE;
+
 FUNC VOID Info_Mod_Penner_Infos_Choices()
 {
 	Info_ClearChoices	(Info_Mod_Penner_Infos);
@@ -99,6 +101,7 @@ FUNC VOID Info_Mod_Penner_Infos_Choices()
 	if (Npc_KnowsInfo(hero, Info_Mod_Juliana_WasLos))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Wendel_Endres03))
 	&& (Npc_HasItems(hero, ItMi_Gold) >= 10)
+	&& (!Mod_Penner_HeardAboutJuliana)
 	{
 		Info_AddChoice	(Info_Mod_Penner_Infos, "Was kannst du mir über das Verschwinden von Julianas Mann erzählen? (10 Gold)", Info_Mod_Penner_Infos_E);
 	};
@@ -155,6 +158,8 @@ FUNC VOID Info_Mod_Penner_Infos_E()
 	AI_Output(hero, self, "Info_Mod_Penner_Infos_E_15_05"); //Du meinst, er ist abgehauen?
 	AI_Output(self, hero, "Info_Mod_Penner_Infos_E_27_06"); //Na ja, denk ich mal. Juliana ist schon ziemlich zickig, die würde ich auch nicht ewig aushalten.
 	AI_Output(self, hero, "Info_Mod_Penner_Infos_E_27_07"); //Aber 'ne Garantie, dass es so gewesen ist, hab ich nicht.
+
+	Mod_Penner_HeardAboutJuliana = TRUE;
 
 	Info_Mod_Penner_Infos_Choices();
 };
