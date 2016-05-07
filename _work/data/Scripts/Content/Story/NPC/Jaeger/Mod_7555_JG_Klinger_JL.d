@@ -15,7 +15,7 @@ INSTANCE Mod_7555_JG_Klinger_JL (Npc_Default)
 	fight_tactic 		= FAI_HUMAN_COWARD;
 	
 	// ------ Equippte Waffen ------																
-	EquipItem (self, ItMw_1h_Bau_Mace);
+	EquipItem (self, ItMw_1H_quantarie_Schwert_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
