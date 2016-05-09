@@ -21,7 +21,7 @@ instance Mod_7572_OUT_Vigonza_EIS (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_NormalBart06, BodyTex_N, ITAR_Vlk_L);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_NormalBart06, BodyTex_N, ITAR_Nrd_M);	
 	Mdl_SetModelFatness	(self,0);
 	
 	// ------ NSC-relevante Talente vergeben ------
