@@ -63,7 +63,7 @@ FUNC VOID Info_Mod_Samuel_Auftrag_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_SAMUEL_RUM, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_SAMUEL_RUM, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_SAMUEL_RUM, "Ich soll in der Stadt Khorinis 10 Gläser Melasse und 20 Flaschen Wasser besorgen.");
+	B_LogEntry	(TOPIC_MOD_SAMUEL_RUM, "Ich soll in der Stadt Khorinis 10 Gläser Melasse und 20 Flaschen Wasser für Samuel besorgen.");
 };
 
 INSTANCE Info_Mod_Samuel_HabZeug (C_INFO)
