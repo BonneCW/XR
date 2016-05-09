@@ -7,7 +7,7 @@ INSTANCE GigantDerVorzeit	(Mst_Default_Firegolem)
 	id = 7195;
 	Npc_SetToFistMode(self);
 
-	level							=	2000;
+	level							=	200;
 	
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	900;
@@ -20,8 +20,8 @@ INSTANCE GigantDerVorzeit	(Mst_Default_Firegolem)
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS];
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	250000;
-	protection	[PROT_EDGE]			=	250000;
+	protection	[PROT_BLUNT]		=	200000;
+	protection	[PROT_EDGE]			=	200000;
 	protection	[PROT_POINT]		=	-1;	
 	protection	[PROT_FIRE]			=	220;	
 	protection	[PROT_FLY]			=	-1;

@@ -7,7 +7,7 @@ INSTANCE Balrog_Plateau	(Mst_Default_Firegolem)
 	id = 7194;
 	Npc_SetToFistMode(self);
 
-	level							=	2000;
+	level							=	200;
 	
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	600;
