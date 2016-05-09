@@ -540,6 +540,11 @@ FUNC VOID Info_Mod_Bosper_LehrlingQuest2_Info()
 	Log_CreateTopic	(TOPIC_MOD_LEHRLING_BOSPER_TWO, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_LEHRLING_BOSPER_TWO, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_LEHRLING_BOSPER_TWO, "Bosper will, dass ich ihm drei unbeschädigte Schattenläuferfelle bringe, bevor er mich weiter unterweist.");
+
+	Wld_InsertNpc	(Shadowbeast,	"FP_ROAM_FARM1_FORREST_SHADOW_02");
+	Wld_InsertNpc	(Shadowbeast,	"NW_FARM4_WOOD_MONSTER_06");
+	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_CITYFOREST_CAVE_06_04");
+	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_FOREST_PATH_35_06_04");
 };
 
 INSTANCE Info_Mod_Bosper_LehrlingQuest3 (C_INFO)
@@ -1397,9 +1402,10 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 			B_GiveInvItems(hero, self, ItAt_OrcdogFur_Feuer, Npc_HasItems(other, ItAt_OrcdogFur_Feuer));
 		};
 		
-		if (Npc_HasItems(hero, ItAt_ShadowFur) > 0)
+		if (Npc_KnowsInfo(hero, Info_Mod_Bosper_LehrlingQuest3))
+		&& ((Npc_HasItems(hero, ItAt_ShadowFur) > 0)
 		|| (Npc_HasItems(hero, ItAt_ShadowFur_Rein) > 0)
-		|| (Npc_HasItems(hero, ItAt_ShadowFur_Feuer) > 0)
+		|| (Npc_HasItems(hero, ItAt_ShadowFur_Feuer) > 0))
 		{
 			AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_11_09"); //Ah, sogar das Fell eines Schattenläufers - ist 'ne Menge wert.
 
