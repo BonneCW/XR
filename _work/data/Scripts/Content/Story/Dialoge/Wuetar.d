@@ -61,8 +61,6 @@ FUNC VOID Info_Mod_Wuetar_Hi_A()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "START");
-
-	AI_GotoWP	(hero, "EIS_DORF_002");
 };
 
 INSTANCE Info_Mod_Wuetar_Snapperbogen (C_INFO)
