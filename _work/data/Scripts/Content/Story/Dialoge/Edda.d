@@ -454,20 +454,7 @@ FUNC INT Info_Mod_Edda_SuppeKochenLernen2_Condition()
 		Info_Mod_Edda_SuppeKochenLernen2.description = "Wie koche ich eine Suppe? (300 Gold)";
 	};
 
-	if (Mod_Edda_Lernen == 1)
-	{
-		if (Mod_Schwierigkeit != 4)
-		&& (hero.lp < 3)
-		{
-			return 0;
-		};
-
-		if (Mod_Schwierigkeit == 4)
-		&& (Npc_HasItems(hero, ItMi_Gold) < 300)
-		{
-			return 0;
-		};
-
+	if (Mod_Edda_Lernen == 1) {
 		return 1;
 	};
 };
@@ -476,21 +463,25 @@ FUNC VOID Info_Mod_Edda_SuppeKochenLernen2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Edda_SuppeKochenLernen2_15_00"); //Wie koche ich eine Suppe?
 
-	if (Mod_Schwierigkeit != 4)
-	{
-		hero.lp -= 3;
-	}
-	else
-	{
-		B_GiveInvItems	(hero, self, ItMi_Gold, 300);
+	if ((Mod_Schwierigkeit != 4)
+	&& (hero.lp < 3))
+	|| ((Mod_Schwierigkeit == 4)
+	&& (Npc_HasItems(hero, ItMi_Gold) < 300)) {
+		B_Say (self, hero, "$NOLEARNNOPOINTS");
+	} else {
+		if (Mod_Schwierigkeit != 4) {
+			hero.lp -= 3;
+		} else {
+			B_GiveInvItems	(hero, self, ItMi_Gold, 300);
+		};
+
+		AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_26_01"); //Die Grundlagen sind schnell erklärt: Du brauchst einen mit Wasser gefüllten Topf, unter dem du ein Feuer entfachst, und eine Rezeptur.
+		AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_26_02"); //Dem jeweiligen Rezept entnimmst du die Zutaten, die du unter ständigem Rühren in den Topf gibst.
+		AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_26_03"); //Damit die Suppe genießbar ist, darfst du das Würzen nicht vergessen.
+		AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_26_04"); //Sobald alles im Topf ist, dämpfst du das Feuer und lässt die Suppe mit geschlossenem Deckel eine Zeit lang köcheln.
+
+		Mod_Edda_Lernen = 2;
 	};
-
-	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_26_01"); //Die Grundlagen sind schnell erklärt: Du brauchst einen mit Wasser gefüllten Topf, unter dem du ein Feuer entfachst, und eine Rezeptur.
-	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_26_02"); //Dem jeweiligen Rezept entnimmst du die Zutaten, die du unter ständigem Rühren in den Topf gibst.
-	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_26_03"); //Damit die Suppe genießbar ist, darfst du das Würzen nicht vergessen.
-	AI_Output(self, hero, "Info_Mod_Edda_SuppeKochenLernen2_26_04"); //Sobald alles im Topf ist, dämpfst du das Feuer und lässt die Suppe mit geschlossenem Deckel eine Zeit lang köcheln.
-
-	Mod_Edda_Lernen = 2;
 };
 
 INSTANCE Info_Mod_Edda_Flugblaetter (C_INFO)
