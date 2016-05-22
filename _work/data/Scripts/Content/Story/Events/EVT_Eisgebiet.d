@@ -661,14 +661,6 @@ FUNC VOID ENTER_EVT_EISGEBIETMONSTER ()
 
                Wld_InsertNpc (Shadowbeast,"FP_ROAM_EINSIEDLERSCHATTENLEUFER_1");
 
-
-                 //****************************
-                 // 	Schattenleufer im Norden
-                 //
-
-               Wld_InsertNpc (Shadowbeast,"FP_ROAM_NORDSCHATTENLEUFER_1");
-               Wld_InsertNpc (Shadowbeast,"FP_ROAM_NORDSCHATTENLEUFER_3");
-
                  //****************************
                  // 	Schattenleufer 
                  //
