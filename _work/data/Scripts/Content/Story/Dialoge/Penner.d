@@ -84,7 +84,7 @@ FUNC INT Info_Mod_Penner_Infos_Condition()
 	return 1;
 };
 
-var int Mod_Penner_HeardAboutJuliana = FALSE;
+var int Mod_Penner_HeardAboutJuliana;
 
 FUNC VOID Info_Mod_Penner_Infos_Choices()
 {
