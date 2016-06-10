@@ -2075,7 +2075,7 @@ FUNC VOID HAUPTQUESTS()
 
 			AI_Output(hero, NULL, "Info_Mod_Hero_GDG_Plattform_15_00"); //Was für ein Glück, da ist ja schon die Plattform. Aber wo ist der dazugehörige Sockel? Mist.
 
-			B_LogEntry	(TOPIC_MOD_URIZIEL, "Na super. Zwar war die Plattform gleich in der Nähe, aber leider fehlt der Sockel. Ich werde mich als umschauen müssen.");
+			B_LogEntry	(TOPIC_MOD_URIZIEL, "Na super. Zwar war die Plattform gleich in der Nähe, aber leider fehlt der Sockel. Ich werde mich also umschauen müssen.");
 
 			Mod_GDG_Plattform = 1;
 		};
