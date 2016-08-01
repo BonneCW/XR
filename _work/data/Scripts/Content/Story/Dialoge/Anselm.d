@@ -1025,14 +1025,14 @@ FUNC VOID Info_Mod_Anselm_Buerger3_D4()
 {
 	AI_Output(hero, self, "Info_Mod_Anselm_Buerger3_D4_15_00"); //Sechs.
 
+	Mod_REL_BuergerFragen += 1;
+
 	Info_Mod_Anselm_Buerger3_D();
 };
 
 FUNC VOID Info_Mod_Anselm_Buerger3_D3()
 {
 	AI_Output(hero, self, "Info_Mod_Anselm_Buerger3_D3_15_00"); //Fünf.
-
-	Mod_REL_BuergerFragen += 1;
 
 	Info_Mod_Anselm_Buerger3_D();
 };
