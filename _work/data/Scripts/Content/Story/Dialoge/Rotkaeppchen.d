@@ -26,6 +26,8 @@ FUNC VOID Info_Mod_Rotkaeppchen_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_Rotkaeppchen_Hi_15_04"); //Ich werde mir den Wolf mal zur Brust nehmen.
 
 	Wld_InsertNpc	(Wolf_Rotkaeppchen,	"FP_SPAWN_ROTKAEPPCHENWOLF");
+	
+	B_LogEntry	(TOPIC_MOD_ROTKAEPPCHEN, "Ich habe Rotkäppchen gefunden. Doch sie wird von einem großen Wolf verfolgt und traut sich deswegen nicht zum Hof zurückzukehren.");
 };
 
 INSTANCE Info_Mod_Rotkaeppchen_Grossmutter (C_INFO)
@@ -92,6 +94,9 @@ FUNC VOID Info_Mod_Rotkaeppchen_WolfTot_Info()
 	B_StartOtherRoutine	(self, "HOF");
 
 	B_Göttergefallen(1, 1);
+	B_SetTopicStatus	(TOPIC_MOD_ROTKAEPPCHEN, LOG_SUCCESS);
+
+	CurrentNQ += 1;
 };
 
 INSTANCE Info_Mod_Rotkaeppchen_Pickpocket (C_INFO)

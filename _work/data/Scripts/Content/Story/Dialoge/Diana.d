@@ -23,6 +23,10 @@ FUNC VOID Info_Mod_Diana_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Diana_Hi_16_04"); //Nicht, dass sie nicht alt genug wäre, um selbst auf sich aufpassen zu können, aber es lässt mir doch keine Ruhe, nichts von ihr zu hören.
 	AI_Output(self, hero, "Info_Mod_Diana_Hi_16_05"); //Wenn du ihr begegnest, sag ihr ruhig Bescheid, dass sie sich langsam mal wieder auf den Rückweg machen könnte.
 	AI_Output(self, hero, "Info_Mod_Diana_Hi_16_06"); //Du kannst sie an ihrer eigenwilligen roten Mütze erkennen.
+	
+	Log_CreateTopic	(TOPIC_MOD_ROTKAEPPCHEN, LOG_MISSION);
+	B_SetTopicStatus	(TOPIC_MOD_ROTKAEPPCHEN, LOG_RUNNING);
+	B_LogEntry	(TOPIC_MOD_ROTKAEPPCHEN, "Diana vermisst ihre Tochter, die heute morgen zum Pilzesammeln aufgebrochen ist. Ich kann sie an ihrer roten Mütze erkennen.");
 };
 
 INSTANCE Info_Mod_Diana_Eintopf (C_INFO)
