@@ -108,43 +108,19 @@ FUNC VOID FRAMEFUNC ()
 		{
 			CurrentLevel = CurrentLevel2;
 
-			Offline_Modus = FALSE;
-			ValidateUserPasswort = 0;
+			// Sachen setzen
 
-			Mod_SavegameImport = STR_ToInt(MEM_GetGothOpt("XERES", "savegame"));
-
-			if (Mod_SavegameImport == 1)
-			{
-				// Sachen importieren
-
-				Mod_Import_Ghorim = SavegameImport ("\saves_Xeres\Import", "GHORIM_KICKHARLOK", 0, 0);
-				Mod_Import_Thorus = SavegameImport ("\saves_Xeres\Import", "THORUS_MORDRAGKO", 0, 0);
-				Mod_Import_Mordrag = SavegameImport ("\saves_Xeres\Import", "MORDRAGKO_HAUAB", 0, 0);
-				Mod_Import_Fremde = SavegameImport ("\saves_Xeres\Import", "RIDDLE6", 0, 0);
-				Mod_Import_Dusty = SavegameImport ("\saves_Xeres\Import", "BAALTONDRAL_GETNEWGUY", 0, 0);
-				Mod_Import_PDV = SavegameImport ("\saves_Xeres\Import", "LARES_BRINGLISTBACK", 0, 0);
-				Mod_Import_Dexter = SavegameImport ("\saves_Xeres\Import", "DEXTER_GETKALOMSRECIPE", 0, 0);
-				Mod_Import_Snaf = SavegameImport ("\saves_Xeres\Import", "SNAF_ZUTATEN", 0, 0);
-				Mod_Import_AL = SavegameImport ("\saves_Xeres\Import", "DIA_GOMEZ_DABEI", 1, 0);
-				Mod_Import_NL = SavegameImport ("\saves_Xeres\Import", "ORG_801_LARES_GOTOKALOM", 1, 0);
-				Mod_Import_SL = SavegameImport ("\saves_Xeres\Import", "GUR_1201_CORKALOM_JOINPSI2", 1, 0);
-			}
-			else
-			{
-				// Sachen setzen
-
-				Mod_Import_Ghorim = -1;
-				Mod_Import_Thorus = -1;
-				Mod_Import_Mordrag = -1;
-				Mod_Import_Fremde = -1;
-				Mod_Import_Dusty = -1;
-				Mod_Import_PDV = -1;
-				Mod_Import_Dexter = -1;
-				Mod_Import_Snaf = -1;
-				Mod_Import_AL = -1;
-				Mod_Import_NL = -1;
-				Mod_Import_SL = -1;
-			};
+			Mod_Import_Ghorim = -1;
+			Mod_Import_Thorus = -1;
+			Mod_Import_Mordrag = -1;
+			Mod_Import_Fremde = -1;
+			Mod_Import_Dusty = -1;
+			Mod_Import_PDV = -1;
+			Mod_Import_Dexter = -1;
+			Mod_Import_Snaf = -1;
+			Mod_Import_AL = -1;
+			Mod_Import_NL = -1;
+			Mod_Import_SL = -1;
 
 			// Erfolge einlesen
 
@@ -220,9 +196,6 @@ FUNC VOID FRAMEFUNC ()
 				Npc_RemoveInvItems	(PC_Hero, ItWr_Erfolge, 1);
 				CreateInvItems	(PC_Hero, ItWr_Erfolge, 1);
 			};
-
-			username = MEM_GetGothOpt("CLOCKWORK", "username");
-			passwort = MEM_GetGothOpt("CLOCKWORK", "passwort");
 		}
 		else if (CurrentLevel != CurrentLevel2) // Levelwechsel
 		{
@@ -230,21 +203,6 @@ FUNC VOID FRAMEFUNC ()
 		}
 		else	// Spielstand geladen
 		{
-			Offline_Modus = FALSE;
-			ValidateUserPasswort = 1;
-
-			Mod_OnlineMode = 0;
-
-			if (STR_ToInt(online_playtime_s) > 0)
-			{
-				CURL_Send(ConcatStrings(ConcatStrings(ConcatStrings("http://www.teutonicteam.de/gomon/tauschen/actualizePlaytime.php?name=", username), "&game=4&time="), online_playtime_s));
-			};
-
-			online_playtime = 0;
-
-			username = MEM_GetGothOpt("CLOCKWORK", "username");
-			passwort = MEM_GetGothOpt("CLOCKWORK", "passwort");
-
 			// Erfolge einlesen
 
 			if (Erfolg_EifrigerBuesser == 0) {
@@ -322,44 +280,6 @@ FUNC VOID FRAMEFUNC ()
 		};
 
 		CurrentLevel2 = 0;
-	};
-
-	if (GetInput)
-	{
-		if (MEM_KeyState(KEY_RETURN) == KEY_PRESSED)
-		{
-			B_EndEingabe();
-
-			if (STR_Len(username) == 0)
-			{
-				PrintScreen	("Bitte Username eingeben", -1, 45, FONT_SCREEN, 1);
-
-				username = eingabe;
-			}
-			else if (STR_Len(passwort) == 0)
-			{
-				PrintScreen	("Bitte Passwort eingeben", -1, 45, FONT_SCREEN, 1);
-
-				passwort = eingabe;
-			};
-		}
-		else
-		{
-			if (STR_Len(username) == 0)
-			{
-				PrintScreen	("Bitte Username eingeben", -1, 45, FONT_SCREEN, 1);
-
-				eingabe = B_GetEingabe(eingabe);
-			}
-			else if (STR_Len(passwort) == 0)
-			{
-				PrintScreen	("Bitte Passwort eingeben", -1, 45, FONT_SCREEN, 1);
-
-				eingabe = B_GetEingabe(eingabe);
-			};
-		};
-
-		PrintScreen	(eingabe, -1, -1, FONT_SCREENSMALL, 1);
 	};
 
 	ChangeStatusMenu ("MENU_ITEM_ARMOR_1", IntToString(hero.protection[PROT_BLUNT]/1000));

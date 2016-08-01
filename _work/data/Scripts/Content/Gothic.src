@@ -72,10 +72,7 @@ NEUERUNGEN\C_HeroAtLight.d
 FUNKTIONEN\ShowManabar.d
 FUNKTIONEN\Bars.d
 
-FUNKTIONEN\Curl.d
-FUNKTIONEN\SavegameImport.d
 FUNKTIONEN\STR_Tok.d
-FUNKTIONEN\B_GetEingabe.d
 FUNKTIONEN\FixPlayerControllsTurnOnNpcAttackMoveBug.d
 FUNKTIONEN\B_EndGame.d
 FUNKTIONEN\AlphaZeug.d
