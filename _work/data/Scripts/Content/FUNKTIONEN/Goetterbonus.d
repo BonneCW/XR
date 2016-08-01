@@ -12,6 +12,14 @@ var int Mod_GottInnos;
 var int Mod_GottBeliar;
 var int Segen_Handle;
 
+FUNC INT Min(VAR INT a, VAR INT b) {
+	if (a < b) {
+		return a;
+	} else {
+		return b;
+	};
+};
+
 FUNC VOID Goetterbonus()
 {
 	if (!Hlp_IsValidHandle(Segen_Handle))
@@ -30,11 +38,11 @@ FUNC VOID Goetterbonus()
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
-			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
-			hero.protection[PROT_BLUNT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_POINT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_MAGIC] -= Mod_GottProtection;
-			hero.protection[PROT_FIRE] -= Mod_GottProtection;
+			hero.protection[PROT_EDGE] -= Min(Mod_GottProtection*1000, hero.protection[PROT_EDGE]);
+			hero.protection[PROT_BLUNT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_BLUNT]);
+			hero.protection[PROT_POINT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_POINT]);
+			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
+			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
 			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
 			{
@@ -70,11 +78,11 @@ FUNC VOID Goetterbonus()
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
-			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
-			hero.protection[PROT_BLUNT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_POINT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_MAGIC] -= Mod_GottProtection;
-			hero.protection[PROT_FIRE] -= Mod_GottProtection;
+			hero.protection[PROT_EDGE] -= Min(Mod_GottProtection*1000, hero.protection[PROT_EDGE]);
+			hero.protection[PROT_BLUNT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_BLUNT]);
+			hero.protection[PROT_POINT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_POINT]);
+			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
+			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
 			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
 			{
@@ -240,11 +248,11 @@ FUNC VOID Goetterbonus()
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
-			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
-			hero.protection[PROT_BLUNT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_POINT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_MAGIC] -= Mod_GottProtection;
-			hero.protection[PROT_FIRE] -= Mod_GottProtection;
+			hero.protection[PROT_EDGE] -= Min(Mod_GottProtection*1000, hero.protection[PROT_EDGE]);
+			hero.protection[PROT_BLUNT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_BLUNT]);
+			hero.protection[PROT_POINT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_POINT]);
+			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
+			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
 			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
 			{
@@ -284,11 +292,11 @@ FUNC VOID Goetterbonus()
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
-			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
-			hero.protection[PROT_BLUNT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_POINT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_MAGIC] -= Mod_GottProtection;
-			hero.protection[PROT_FIRE] -= Mod_GottProtection;
+			hero.protection[PROT_EDGE] -= Min(Mod_GottProtection*1000, hero.protection[PROT_EDGE]);
+			hero.protection[PROT_BLUNT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_BLUNT]);
+			hero.protection[PROT_POINT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_POINT]);
+			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
+			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
 			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
 			{
@@ -324,11 +332,11 @@ FUNC VOID Goetterbonus()
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
-			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
-			hero.protection[PROT_BLUNT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_POINT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_MAGIC] -= Mod_GottProtection;
-			hero.protection[PROT_FIRE] -= Mod_GottProtection;
+			hero.protection[PROT_EDGE] -= Min(Mod_GottProtection*1000, hero.protection[PROT_EDGE]);
+			hero.protection[PROT_BLUNT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_BLUNT]);
+			hero.protection[PROT_POINT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_POINT]);
+			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
+			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
 			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
 			{
@@ -494,11 +502,11 @@ FUNC VOID Goetterbonus()
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
-			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
-			hero.protection[PROT_BLUNT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_POINT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_MAGIC] -= Mod_GottProtection;
-			hero.protection[PROT_FIRE] -= Mod_GottProtection;
+			hero.protection[PROT_EDGE] -= Min(Mod_GottProtection*1000, hero.protection[PROT_EDGE]);
+			hero.protection[PROT_BLUNT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_BLUNT]);
+			hero.protection[PROT_POINT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_POINT]);
+			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
+			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
 			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
 			{
@@ -537,11 +545,11 @@ FUNC VOID Goetterbonus()
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
-			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
-			hero.protection[PROT_BLUNT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_POINT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_MAGIC] -= Mod_GottProtection;
-			hero.protection[PROT_FIRE] -= Mod_GottProtection;
+			hero.protection[PROT_EDGE] -= Min(Mod_GottProtection*1000, hero.protection[PROT_EDGE]);
+			hero.protection[PROT_BLUNT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_BLUNT]);
+			hero.protection[PROT_POINT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_POINT]);
+			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
+			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
 			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
 			{
@@ -577,11 +585,11 @@ FUNC VOID Goetterbonus()
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
-			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
-			hero.protection[PROT_BLUNT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_POINT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_MAGIC] -= Mod_GottProtection;
-			hero.protection[PROT_FIRE] -= Mod_GottProtection;
+			hero.protection[PROT_EDGE] -= Min(Mod_GottProtection*1000, hero.protection[PROT_EDGE]);
+			hero.protection[PROT_BLUNT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_BLUNT]);
+			hero.protection[PROT_POINT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_POINT]);
+			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
+			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
 			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
 			{
@@ -747,11 +755,11 @@ FUNC VOID Goetterbonus()
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
 			hero.attribute[ATR_MANA_MAX] -= Mod_GottMana;
-			hero.protection[PROT_EDGE] -= Mod_GottProtection*1000;
-			hero.protection[PROT_BLUNT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_POINT] -= Mod_GottProtection*1000;
-			hero.protection[PROT_MAGIC] -= Mod_GottProtection;
-			hero.protection[PROT_FIRE] -= Mod_GottProtection;
+			hero.protection[PROT_EDGE] -= Min(Mod_GottProtection*1000, hero.protection[PROT_EDGE]);
+			hero.protection[PROT_BLUNT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_BLUNT]);
+			hero.protection[PROT_POINT] -= Min(Mod_GottProtection*1000, hero.protection[PROT_POINT]);
+			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
+			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
 			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
 			{
