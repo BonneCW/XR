@@ -494,6 +494,8 @@ FUNC VOID Info_Mod_Dragomir_HilfeII_Info()
 	B_StartOtherRoutine	(Mod_749_MIL_Ruga_NW, "KO");
 
 	B_KillNpc	(Mod_7413_JG_Wild_NW);
+	
+	B_GivePlayerXP(100);
 };
 
 INSTANCE Info_Mod_Dragomir_Untier (C_INFO)

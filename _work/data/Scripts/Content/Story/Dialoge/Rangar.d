@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Rangar_DragoHelp (C_INFO)
 	information	= Info_Mod_Rangar_DragoHelp_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Nanu Rangar! Was treibt dich hierher?";
+	description	= "Nanu, Rangar! Was treibt dich hierher?";
 };
 
 FUNC INT Info_Mod_Rangar_DragoHelp_Condition()
@@ -21,7 +21,7 @@ FUNC INT Info_Mod_Rangar_DragoHelp_Condition()
 
 FUNC VOID Info_Mod_Rangar_DragoHelp_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Rangar_DragoHelp_15_00"); //Nanu Rangar! Was treibt dich hierher?
+	AI_Output(hero, self, "Info_Mod_Rangar_DragoHelp_15_00"); //Nanu, Rangar! Was treibt dich hierher?
 	AI_Output(self, hero, "Info_Mod_Rangar_DragoHelp_07_01"); //Hör bloß auf! Da hat mich doch irgendein Strolch so bei Lord Andre angeschwärtzt, dass ich bei der Garde total unten durch war.
 	AI_Output(self, hero, "Info_Mod_Rangar_DragoHelp_07_02"); //Jeder hat mich rumgeschubst. Da bin ich einfach abgehauen.
 	AI_Output(hero, self, "Info_Mod_Rangar_DragoHelp_15_03"); //Und dann?
@@ -69,6 +69,8 @@ FUNC VOID Info_Mod_Rangar_DragoHelp_Info()
 	B_StartOtherRoutine	(self, "ATNANDOR");
 
 	B_SetTopicStatus	(TOPIC_MOD_JG_DRAGOMIRHILFE, LOG_SUCCESS);
+	
+	B_GivePlayerXP(100);
 };
 
 INSTANCE Info_Mod_Rangar_Lernen_Armbrust (C_INFO)
