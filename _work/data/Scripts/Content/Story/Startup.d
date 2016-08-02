@@ -8874,4 +8874,14 @@ FUNC VOID STARTUP_Relendel_Mine()
 FUNC VOID INIT_Relendel_Mine()
 {
 	OldLevel(RELENDELMINE_ZEN);
+	
+	if (Mod_Enter_Relendel_03) {
+		B_StartOtherRoutine(Mod_7477_OUT_Norman_REL, "TOT");
+		B_StartOtherRoutine(Mod_7479_OUT_Frazer_REL, "TOT");
+		B_StartOtherRoutine(Mod_7484_OUT_Schuerfer_REL, "TOT");
+		B_StartOtherRoutine(Mod_7485_OUT_Schuerfer_REL, "TOT");
+		B_StartOtherRoutine(Mod_7486_OUT_Schuerfer_REL, "TOT");
+		B_StartOtherRoutine(Mod_7487_OUT_Schuerfer_REL, "TOT");
+		B_StartOtherRoutine(Mod_7488_OUT_Schuerfer_REL, "TOT");
+	};
 };

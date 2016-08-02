@@ -39,3 +39,9 @@ FUNC VOID Rtn_Start_7485 ()
 	TA_Pick_Ore	(01,00,13,00,	"RM_26");
 	TA_Pick_Ore	(13,00,01,00,	"RM_26");
 };
+
+FUNC VOID Rtn_Tot_7485()
+{	
+	TA_Pick_ore		(05,30,11,35,"TOT");
+	TA_Pick_Ore	 	(11,35,05,30,"TOT");
+};

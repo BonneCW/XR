@@ -42,3 +42,9 @@ FUNC VOID Rtn_Start_7479()
 	TA_Stand_ArmsCrossed	(08,00,23,00,"RM_49");
 	TA_Stand_ArmsCrossed 	(23,00,08,00,"RM_49");
 };
+
+FUNC VOID Rtn_Tot_7479()
+{	
+	TA_Pick_ore		(05,30,11,35,"TOT");
+	TA_Pick_Ore	 	(11,35,05,30,"TOT");
+};

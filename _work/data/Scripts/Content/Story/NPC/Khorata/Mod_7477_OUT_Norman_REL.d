@@ -40,3 +40,9 @@ FUNC VOID Rtn_Start_7477()
 	TA_Pick_ore		(05,30,11,35,"RM_22");
 	TA_Pick_Ore	 	(11,35,05,30,"RM_22");
 };
+
+FUNC VOID Rtn_Tot_7477()
+{	
+	TA_Pick_ore		(05,30,11,35,"TOT");
+	TA_Pick_Ore	 	(11,35,05,30,"TOT");
+};
