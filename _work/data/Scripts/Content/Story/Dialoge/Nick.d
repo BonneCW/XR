@@ -198,7 +198,7 @@ FUNC VOID Info_Mod_Nick_Kopf_D()
 FUNC VOID Info_Mod_Nick_Kopf_E()
 {
 	AI_Output(hero, self, "Info_Mod_Nick_Kopf_E_15_00"); //Dann bekommst du halt deinen Kopf nicht zurück.
-	AI_Output(self, hero, "Info_Mod_Nick_Kopf_E_04_01"); //Na gut Fremder. Ich gebe dir eine Karte, auf der versteckte Schätze eingezeichnet sind.
+	AI_Output(self, hero, "Info_Mod_Nick_Kopf_E_04_01"); //Na gut Fremder. Ich gebe dir auch noch ein paar Erzbrocken.
 	AI_Output(hero, self, "Info_Mod_Nick_Kopf_E_15_02"); //Hier hast du den Kopf.
 
 	B_GiveInvItems	(hero, self, ItMi_NicksKopf, 1);
@@ -209,9 +209,9 @@ FUNC VOID Info_Mod_Nick_Kopf_E()
 	AI_Output(self, hero, "Info_Mod_Nick_Kopf_E_04_03"); //Danke. Endlich Ruhe.
 
 	CreateInvItems	(hero, ItMi_Gold, 250);
-	CreateInvItems	(hero, ItWr_NicksMap, 1);
+	CreateInvItems	(hero, ItMi_Nugget, 5);
 
-	B_ShowGivenThings	("250 Gold und Schatzkarte erhalten");
+	B_ShowGivenThings	("250 Gold und 5 Erzbrocken erhalten");
 
 	B_LogEntry	(TOPIC_MOD_ANOR_NICK, "Nick ist endlich erlöst. Ich sollte zurück zu Anor gehen und ihm Bericht erstatten, dass das Tiersterben aufgehört hat.");
 
