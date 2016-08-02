@@ -599,7 +599,7 @@ FUNC INT Info_Mod_Greg_Schatzaufteilung_Condition()
 FUNC VOID Info_Mod_Greg_Schatzaufteilung_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_00"); //Tatsächlich, du lebst noch! Ich hätte nicht gedacht dass jemand einen Schlag mit einer solchen Axt überleben kann!
-	AI_Output(hero, self, "Info_Mod_Greg_Schatzaufteilung_15_01"); //Ich hatte wohl Glück.
+	AI_Output(hero, self, "Info_Mod_Greg_Schatzaufteilung_15_01"); //Ich hatte wohl Glück. Ich kann mich nur an nichts mehr erinnern.
 	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_02"); //Glück hattest du, als Bill dich vom brennenden Schiff gezogen hat!
 	AI_Output(hero, self, "Info_Mod_Greg_Schatzaufteilung_15_03"); //Vom brennenden Schiff?
 	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_04"); //Jo! Diese Biester haben gemerkt, dass wir dran sind sie zu besiegen, deshalb haben die glatt ihr Schiff angezündet!

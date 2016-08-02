@@ -342,7 +342,7 @@ INSTANCE Info_Mod_Skip_Schatzaufteilung (C_INFO)
 
 FUNC INT Info_Mod_Skip_Schatzaufteilung_Condition()
 {
-	if (SchiffOrk_Counter == 18)
+	if (Npc_KnowsInfo(hero, Info_Mod_Skip_DI_ZumSchiff_02))
 	{
 		return 1;
 	};
