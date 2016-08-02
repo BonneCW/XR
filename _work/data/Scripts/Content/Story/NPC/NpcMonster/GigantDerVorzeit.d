@@ -10,22 +10,22 @@ INSTANCE GigantDerVorzeit	(Mst_Default_Firegolem)
 	level							=	200;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	900;
-	attribute	[ATR_DEXTERITY]		=	900;
-	attribute	[ATR_HITPOINTS_MAX]	=	2700;
-	attribute	[ATR_HITPOINTS]		=	2700;
+	attribute	[ATR_STRENGTH]		=	250;
+	attribute	[ATR_DEXTERITY]		=	90;
+	attribute	[ATR_HITPOINTS_MAX]	=	2200;
+	attribute	[ATR_HITPOINTS]		=	2200;
 	attribute	[ATR_MANA_MAX] 		=	1000;
 	attribute	[ATR_MANA] 			=	1000;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS];
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	200000;
-	protection	[PROT_EDGE]			=	200000;
+	protection	[PROT_BLUNT]		=	150000;
+	protection	[PROT_EDGE]			=	150000;
 	protection	[PROT_POINT]		=	-1;	
-	protection	[PROT_FIRE]			=	220;	
+	protection	[PROT_FIRE]			=	170;	
 	protection	[PROT_FLY]			=	-1;
-	protection	[PROT_MAGIC]		=	170;
+	protection	[PROT_MAGIC]		=	130;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_BLUNT|DAM_FLY;
