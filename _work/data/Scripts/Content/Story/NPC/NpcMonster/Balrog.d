@@ -2,10 +2,9 @@ INSTANCE Balrog_Plateau	(Mst_Default_Firegolem)
 {
 	name	=	"Balrog";
 	
-	guild							=	GIL_FIREGOLEM;
+	guild							=	GIL_TROLL;
 	aivar[AIV_MM_REAL_ID]			= 	ID_BALROG;
 	id = 7194;
-	Npc_SetToFistMode(self);
 
 	level							=	200;
 	
@@ -37,7 +36,7 @@ INSTANCE Balrog_Plateau	(Mst_Default_Firegolem)
 //	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf-Taktik ----
-	fight_tactic	=	FAI_STONEGOLEM;
+	fight_tactic	=	FAI_DEMON;
 	
 	//----- Senses & Ranges ----
 	senses			=	SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
@@ -49,8 +48,13 @@ INSTANCE Balrog_Plateau	(Mst_Default_Firegolem)
 	Mdl_SetVisual			(self,	"Balrog.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
 	Mdl_SetVisualBody		(self,	"Balrog_Body",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
-
-	daily_routine = Rtn_Start_7194;
+	
+	Npc_SetToFistMode(self);
+	
+	//----- Daily Routine ----
+	start_aistate				= ZS_MM_AllScheduler;
+	
+	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
 	
 };
 
