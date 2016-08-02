@@ -19,6 +19,16 @@ const int BUTTON_ACTIVE = 1;
 const int BUTTON_ENTERED = 2;
 
 //========================================
+// Aligns (benutzt in View)
+//========================================
+const int ALIGN_CENTER = 0;
+const int ALIGN_LEFT   = 1;
+const int ALIGN_RIGHT  = 2;
+const int ALIGN_TOP    = 3;
+const int ALIGN_BOTTOM = 4;
+
+
+//========================================
 // Interface
 //========================================
 //                        R           G          B          A           R G B
@@ -50,6 +60,7 @@ const int PS_VMax = 8192;
 const int Gamestate_NewGame     = 0;
 const int Gamestate_Loaded      = 1;
 const int Gamestate_WorldChange = 2;
+const int Gamestate_Saving      = 3;
 
 //========================================
 // Cursor

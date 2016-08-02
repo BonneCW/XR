@@ -70,9 +70,9 @@ func void ShowBars () {
 		if (other.aivar[AIV_Pflanzengift] > 0)
 		|| (other.aivar[AIV_Tiergift] > 0)
 		{
-			_View_SetTexture(bar_focus.value_bar, "BAR_POISON.TGA");
+			View_SetTexture(bar_focus.value_bar, "BAR_POISON.TGA");
 		} else {
-			_View_SetTexture(bar_focus.value_bar, "BAR_HEALTH.TGA");
+			View_SetTexture(bar_focus.value_bar, "BAR_HEALTH.TGA");
 		};
 	};
 
@@ -96,12 +96,12 @@ func void ShowBars () {
 	|| (GGD_Sumpfgolem_Time > 0)
 	|| (GGD_Sumpfdrache_Time > 0)
 	|| (GGD_Giftkrater_Time > 0) {
-		_View_SetTexture(bar_hp.value_bar, "BAR_POISON.TGA");
+		View_SetTexture(bar_hp.value_bar, "BAR_POISON.TGA");
 	} else if (BissDerFaeulnis_Time > 0)
 	|| (HauchDerPestilenz_Time > 0) {
-		_View_SetTexture(bar_hp.value_bar, "BAR_KRANK.TGA");
+		View_SetTexture(bar_hp.value_bar, "BAR_KRANK.TGA");
 	} else {
-		_View_SetTexture(bar_hp.value_bar, "BAR_HEALTH.TGA");
+		View_SetTexture(bar_hp.value_bar, "BAR_HEALTH.TGA");
 	};
 };
 

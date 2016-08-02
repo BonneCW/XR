@@ -10,6 +10,8 @@ class FFItem {
     var int next;
     var int delay;
     var int cycles;
+	var int data;
+	var int hasData;
 };
 instance FFItem@(FFItem);
 
@@ -20,6 +22,7 @@ func void FFItem_Archiver(var FFItem this) {
     if(this.cycles != -1) {
         PM_SaveInt("cycles", this.cycles);
     };
+	if (this.hasData) { PM_SaveInt("data", this.data); };
 };
 
 func void FFItem_Unarchiver(var FFItem this) {
@@ -32,6 +35,10 @@ func void FFItem_Unarchiver(var FFItem this) {
     else {
         this.cycles = -1;
     };
+	if (PM_Exists("data")) {
+		this.data = PM_Load("data");
+		this.hasData = 1;
+	};
 };
 
 var int _FF_Symbol;
@@ -39,6 +46,17 @@ var int _FF_Symbol;
 //========================================
 // Funktion hinzufügen
 //========================================
+func void FF_ApplyExtData(var func function, var int delay, var int cycles, var int data) {
+	var int hndl; hndl = new(FFItem@);
+    var FFItem itm; itm = get(hndl);
+    itm.fncID = MEM_GetFuncPtr(function);
+    itm.cycles = cycles;
+    itm.delay = delay;
+    itm.next = Timer() + itm.delay;
+	itm.data = data;
+	itm.hasData = 1;
+};
+
 func void FF_ApplyExt(var func function, var int delay, var int cycles) {
     var int hndl; hndl = new(FFItem@);
     var FFItem itm; itm = get(hndl);
@@ -109,6 +127,8 @@ func int _FF_RemoveL(var int hndl) {
 // [intern] Enginehook
 //========================================
 func void _FF_Hook() {
+	if(!Hlp_IsValidNpc(hero)) { return; };
+
     MEM_PushIntParam(FFItem@);
     MEM_GetFuncID(FrameFunctions);
     MEM_StackPos.position = foreachHndl_ptr;
@@ -120,6 +140,9 @@ func int FrameFunctions(var int hndl) {
 
     MEM_Label(0);
     if(t >= itm.next) {
+		if (itm.hasData) {
+			itm.data;
+		};
         MEM_CallByPtr(itm.fncID);
         if(itm.cycles != -1) {
             itm.cycles -= 1;
@@ -135,6 +158,101 @@ func int FrameFunctions(var int hndl) {
     };
 
     return rContinue;
+};
+
+
+
+/***********************************\
+	The following code has been supplied by
+	Frank-95 (https://forum.worldofplayers.de/forum/members/148085-Frank-95)
+\***********************************/
+
+//========================================
+// Remove FF with the specified data
+//========================================
+
+var int _FF_Data;
+
+func int _FF_RemoveLData(var int hndl)
+{
+    if(MEM_ReadInt(getPtr(hndl)) != _FF_Symbol)
+    {
+        return continue;
+    };
+    
+    var FFItem itm; itm = get(hndl);
+    if(itm.data != _FF_Data)
+    {
+        return continue;
+    }
+    else
+    {
+        delete(hndl);
+        return break;
+    };
+};
+
+func void FF_RemoveData(var func function, var int data)
+{
+    _FF_Data = data;
+    _FF_Symbol = MEM_GetFuncPtr(function);
+    foreachHndl(FFItem@, _FF_RemoveLData);
+};
+
+//=======================================================
+// Check whether FF with the specified data is active
+//=======================================================
+
+
+func int _FF_ActiveData(var int hndl)
+{
+    if(MEM_ReadInt(getPtr(hndl)) != _FF_Symbol)
+    {
+        return continue;
+    };
+    
+    var FFItem itm; itm = get(hndl);
+    if(itm.data != _FF_Data)
+    {
+        return continue;
+    }
+    else
+    {
+        _FF_Symbol = 0;
+        return break;
+    };
+};
+
+func int FF_ActiveData(var func function, var int data)
+{
+    _FF_Data = data;
+    _FF_Symbol = MEM_GetFuncPtr(function);
+    foreachHndl(FFItem@, _FF_ActiveData);
+    return !_FF_Symbol;
+};
+
+//========================================
+// More FFdata functions
+//========================================
+
+func void FF_ApplyData(var func function, var int data)
+{
+    FF_ApplyExtData(function, 0, -1, data);
+};
+
+func void FF_ApplyOnceExtData(var func function, var int delay, var int cycles, var int data)
+{
+    if(FF_ActiveData(function,data))
+    {
+        return;
+    };
+    
+    FF_ApplyExtData(function, delay, cycles, data);
+};
+
+func void FF_ApplyOnceData(var func function, var int data)
+{
+    FF_ApplyOnceExtData(function, 0, -1, data);
 };
 
 

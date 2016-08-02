@@ -14,6 +14,8 @@ const int Cursor_sX                                 = 9019720; //0x89A148
 const int Cursor_sY                                 = 9019724; //0x89A14C
 const int GetFileSize                               = 8079310; //0x7B47CE
 const int GetLastError                              = 8079394; //0x7B4822
+const int oCGame__changeLevel                       = 7107216; //0x6C7290 Hook: Saves
+const int oCGame__changeLevelEnd                    = 7109323; //0x6C7ACB Hook: Saves
 const int oCGame__Render                            = 7112352; //0x6C86A0 Hook: FrameFunctions
 const int oCGame__RenderX                           = 7112704; //0x6C8800 Hook: Quickslots
 const int oCGame__UpdateStatus                      = 7093113; //0x6C3B79 Hook: Focusnames
@@ -36,23 +38,24 @@ const int oCNpc__UseItem                            = 7584784; //0x73BC10
 const int oCSavegameManager__SetAndWriteSavegame    = 4428037; //0x439105 Hook: Saves
 const int parser                                    =11223232; //0xAB40C0
 const int ReadFile                                  = 8272388; //0x7E3A04
+const int screen                                     =11232360; //0xAB6468
 const int sysGetTimePtr                             = 5264000; //0x505280
 const int WriteFile                                 = 8079292; //0x7B47BC
 const int zCAICamera_StartDialogCam                 = 4923632; //0x4B20F0
 const int zCAICamera__current                       = 9235128; //0x8CEAB8
 const int zCAICamera__StartDialogCam                = 4923632; //0x4B20F0
+const int zCFontMan__GetFont                        = 7898288; //0x7884B0
+const int zCFontMan__Load                           = 7897808; //0x7882D0
 const int zCFont__GetFontName                       = 7902368; //0x7894A0
 const int zCFont__GetFontX                          = 7902448; //0x7894F0
 const int zCFont__GetFontY                          = 7902432; //0x7894E0
-const int zCFontMan__Load                           = 7897808; //0x7882D0
-const int zCFontMan__GetFont                        = 7898288; //0x7884B0
-const int zFontMan                                  =11221460; //0xAB39D4
 const int zCInput_Win32__GetMouseButtonPressedLeft  = 5068688; //0x4D5790
 const int zCInput_Win32__GetMouseButtonPressedMid   = 5068704; //0x4D57A0
 const int zCInput_Win32__GetMouseButtonPressedRight = 5068720; //0x4D57B0
 const int zCInput_Win32__GetMousePos                = 5068592; //0x4D5730
 const int zCParser__CreateInstance                  = 7942048; //0x792FA0
 const int zCParser__CreatePrototype                 = 7942288; //0x793090
+const int zCParser__DoStack                         = 7936352; //0x791960
 const int zCRenderer__DrawTile                      = 6110448; //0x5D3CF0
 const int zCTexture__Load                           = 6239904; //0x5F36A0
 const int zCView__@zCView                           = 8017856; //0x7A57C0
@@ -65,8 +68,14 @@ const int zCView__SetFontColor                      = 8034576; //0x7A9910
 const int zCView__SetSize                           = 8026016; //0x7A77A0
 const int zCView__zCView                            = 8017664; //0x7A5700
 const int zCWorld__zCWorld                          = 6421056; //0x61FA40
+const int zFontMan                                  =11221460; //0xAB39D4
 const int zParser__CallFunc                         = 7940592; //0x7929F0
 const int zrenderer_adr                             = 9973512; //0x982F08
+const int zRND_D3D__DrawLine                        = 6609120; //0x64D8E0
+const int zRND_D3D__DrawPolySimple                  = 6597680; //0x64AC30
+const int zRND_D3D__EndFrame                        = 6610720; //0X64DF20 Hook: Sprite
+const int zRND_D3D__SetAlphaBlendFunc               = 6628880; //0x652610
+const int zSinCosApprox                             = 6269632; //0x5FAAC0
 
 //========================================
 // Globale Flagvariable
@@ -123,11 +132,13 @@ func string Print_GetFontName(var int fontPtr) {
 //========================================
 // Breite eines Strings holen
 //========================================
-func int Print_GetStringWidth(var string s, var string font) {
-    var int adr; adr = Print_GetFontPtr(font);
+func int Print_GetStringWidthPtr(var string s, var int font) {
     CALL_zStringPtrParam(s);
-    CALL__Thiscall(adr, zCFont__GetFontX);
+    CALL__Thiscall(font, zCFont__GetFontX);
     return CALL_RetValAsInt();
+};
+func int Print_GetStringWidth(var string s, var string font) {
+    return Print_GetStringWidthPtr(s, Print_GetFontPtr(font));
 };
 
 //========================================
@@ -142,9 +153,13 @@ func int Print_GetFontHeight(var string font) {
 //========================================
 // Beliebigen Waypoint holen
 //========================================
-func string MEM_GetAnyWP() {
+func int MEM_GetAnyWPPtr() {
     var zCWaynet wayNet; wayNet = MEM_PtrToInst(MEM_World.wayNet);
-    var zCWaypoint wp;   wp = MEM_PtrToInst(MEM_ReadInt(wayNet.wplist_next+4));
+    return MEM_ReadInt(wayNet.wplist_next+4);
+};
+
+func string MEM_GetAnyWP() {
+    var zCWaypoint wp; wp = _^(MEM_GetAnyWPPtr());
     return wp.name;
 };
 
@@ -199,6 +214,9 @@ func void oCNpc_UnequipItem(var c_npc slf, var int oCItemPtr) {
 // Ein Item auf einem View rendern
 //========================================
 func void oCItem_Render(var int itm, var int wld, var int view, var int rot) {
+    var zCView v; v = _^(view);
+    if(v.vposy < 0||(v.vposy+v.vsizey) > 8192) { return; };
+    if(v.vposy < 0||(v.vposy+v.vsizey) > 8192) { return; };
     CALL_FloatParam(rot);
     CALL_PtrParam(view);
     CALL_PtrParam(wld);
@@ -239,3 +257,18 @@ func void oCNpc_Equip(var int npcPtr, var int itmPtr) {
     CALL_PtrParam(itmPtr);
     CALL__thiscall(npcPtr, oCNpc__Equip);
 };
+
+//========================================
+// Aktuelle Instanz bearbeiten
+//========================================
+func void MEM_SetUseInstance(var int inst) {
+    var int ptr; ptr = MEM_ReadIntArray (currSymbolTableAddress, inst);
+    MemoryProtectionOverride(11232304, 10);
+    MEM_WriteInt(11232304, ptr);
+    MEM_WriteInt(11232308, MEM_ReadInt(ptr+28));
+};
+
+func int MEM_GetUseInstance() {
+    return MEM_ReadInt(11232304);
+};
+

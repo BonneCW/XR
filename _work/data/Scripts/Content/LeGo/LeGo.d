@@ -13,30 +13,32 @@
 |*                              auf Ikarus                               *|
 |*                                                                       *|
 \*************************************************************************/
-const string LeGo_Version = "LeGo 2.2.1";
+const string LeGo_Version = "LeGo 2.3.4";
 
 const int LeGo_PrintS         = 1<<0;  // Interface.d
 const int LeGo_HookEngine     = 1<<1;  // HookEngine.d
 const int LeGo_AI_Function    = 1<<2;  // AI_Function.d
-const int LeGo_Trialoge       = 1<<2;  // Trialoge.d
-const int LeGo_Dialoggestures = 1<<2;  // Dialoggestures.d
-const int LeGo_FrameFunctions = 1<<3;  // FrameFunctions.d
-const int LeGo_Cursor         = 1<<3;  // Cursor.d
-const int LeGo_Focusnames     = 1<<4;  // Focusnames.d
-const int LeGo_Random         = 1<<5;  // Random.d
-const int LeGo_Bloodsplats    = 1<<6;  // Bloodsplats.d
-const int LeGo_Saves          = 1<<7;  // Saves.d
-const int LeGo_PermMem        = 1<<8;  // PermMemory.d
-const int LeGo_Anim8          = 1<<9;  // Anim8.d
-const int LeGo_View           = 1<<10; // View.d
-const int LeGo_Interface      = 1<<11; // Interface.d
-const int LeGo_Bars           = 1<<12; // Bars.d
-const int LeGo_Buttons        = 1<<13; // Buttons.d
-const int LeGo_Timer          = 1<<14; // Timer.d
-const int LeGo_EventHandler   = 1<<15; // EventHandler.d
-const int LeGo_Gamestate      = 1<<16; // Gamestate.d
+const int LeGo_Trialoge       = 1<<3;  // Trialoge.d
+const int LeGo_Dialoggestures = 1<<4;  // Dialoggestures.d
+const int LeGo_FrameFunctions = 1<<5;  // FrameFunctions.d
+const int LeGo_Cursor         = 1<<6;  // Cursor.d
+const int LeGo_Focusnames     = 1<<7;  // Focusnames.d
+const int LeGo_Random         = 1<<8;  // Random.d
+const int LeGo_Bloodsplats    = 1<<9;  // Bloodsplats.d
+const int LeGo_Saves          = 1<<10;  // Saves.d
+const int LeGo_PermMem        = 1<<11;  // PermMemory.d
+const int LeGo_Anim8          = 1<<12;  // Anim8.d
+const int LeGo_View           = 1<<13; // View.d
+const int LeGo_Interface      = 1<<14; // Interface.d
+const int LeGo_Bars           = 1<<15; // Bars.d
+const int LeGo_Buttons        = 1<<16; // Buttons.d
+const int LeGo_Timer          = 1<<17; // Timer.d
+const int LeGo_EventHandler   = 1<<18; // EventHandler.d
+const int LeGo_Gamestate      = 1<<19; // Gamestate.d
+const int LeGo_Sprite         = 1<<20; // Sprite.d
+const int LeGo_Render          = 1<<21; // Render.d
 
-const int LeGo_All            = (1<<17)-1; // Sämtliche Bibliotheken
+const int LeGo_All            = (1<<22)-1; // Sämtliche Bibliotheken
 
 //========================================
 // [intern] Variablen
@@ -48,17 +50,18 @@ var int _LeGo_Loaded;
 // [intern] Abhängigkeiten bestimmen
 //========================================
 func void LeGo_InitFlags(var int f) {
-    if(f & LeGo_Bloodsplats)    { f = f | LeGo_FrameFunctions | LeGo_HookEngine | LeGo_Random; };
+    if(f & LeGo_Bloodsplats)    { f = f | LeGo_FrameFunctions | LeGo_HookEngine | LeGo_Random | LeGo_Anim8; };
     if(f & LeGo_Gamestate)      { f = f | LeGo_EventHandler | LeGo_Saves; };
     if(f & LeGo_Cursor)         { f = f | LeGo_Interface | LeGo_View; };
     if(f & LeGo_PrintS)         { f = f | LeGo_AI_Function | LeGo_Anim8 | LeGo_Interface; };
     if(f & LeGo_Anim8)          { f = f | LeGo_PermMem | LeGo_FrameFunctions | LeGo_Timer; };
+    if(f & LeGo_Buttons)        { f = f | LeGo_PermMem | LeGo_View | LeGo_FrameFunctions; };
     if(f & LeGo_FrameFunctions) { f = f | LeGo_PermMem | LeGo_HookEngine | LeGo_Timer; };
-    if(f & LeGo_Buttons)        { f = f | LeGo_PermMem | LeGo_View; };
     if(f & LeGo_Bars)           { f = f | LeGo_PermMem | LeGo_View; };
     if(f & LeGo_EventHandler)   { f = f | LeGo_PermMem; };
     if(f & LeGo_View)           { f = f | LeGo_PermMem; };
     if(f & LeGo_Interface)      { f = f | LeGo_PermMem; };
+    if(f & LeGo_Sprite)         { f = f | LeGo_PermMem; };
     if(f & LeGo_PermMem)        { f = f | LeGo_Saves; };
     if(f & LeGo_Saves)          { f = f | LeGo_HookEngine; };
     _LeGo_Flags = f;
@@ -68,18 +71,34 @@ func void LeGo_InitFlags(var int f) {
 // [intern] Immer
 //========================================
 func void LeGo_InitAlways(var int f) {
-    if(f & LeGo_PermMem) {
-        if(Handles) {
-            // Weltenwechsel
-            HandlesObj = MEM_PtrToInst(Handles);
+    if (f & LeGo_Saves) {
+        if(_LeGo_IsLevelChange()) {
+
+            // During level change, LeGo_InitAlways is called twice!
+            _LeGo_LevelChangeCounter += 1;
+
+            // update gamestate status after the last call of _LeGo_IsLevelChange
+            // for avoiding duplicate user function calls (e.g. in startup)
+            if(_LeGo_Flags & LeGo_Gamestate && (_LeGo_LevelChangeCounter == 2)) {
+                _Gamestate_Init(Gamestate_WorldChange);
+            };            
         };
-        if((Handles)&&(!_LeGo_Loaded)) {
-            // Passiert bei 'Neues Spiel' -> 'Neues Spiel'
+    };
+	
+    if(f & LeGo_PermMem) {
+        if(HandlesPointer) {
+            // Weltenwechsel
+        };
+        if((_LeGo_Init)&&(!_LeGo_Loaded)) { // Aus einem Spiel heraus -> Neues Spiel
             _PM_Reset();
         };
     };
 
-    if(_LeGo_Loaded) {
+    if(f & LeGo_Timer) {
+        _Timer_Init();
+    };
+
+    if(_LeGo_Loaded && !_LeGo_IsLevelChange()) {
         // Wenn ein Spielstand geladen wird
         if(f & LeGo_Saves) {
             _BR_LoadGame();
@@ -107,10 +126,22 @@ func void LeGo_InitAlways(var int f) {
         if(f & LeGo_Cursor) {
             Cursor_Event = Event_Create();
         };
+
+        if (f & LeGo_Render) {
+            _render_list = new(zCList@);
+        };
+
     };
 
-    if(f & LeGo_Timer) {
-        _Timer_Init();
+    if (f & LeGo_Render) {
+        _Render_RestorePointer();
+        GameState_AddListener(_Render_RestorePointer_Listener);
+    };
+
+    if(f & LeGo_Interface) {
+        // TODO: Check whether this is working!
+        // TODO: Check whether log entries are invisible sometimes
+        Print_fixPS();
     };
 };
 
@@ -139,12 +170,19 @@ func void LeGo_InitGamestart(var int f) {
     };
 
     if(f & LeGo_Saves) {
+        HookEngineF(oCGame__changeLevel, 7, _LeGo_ChangeLevelHookBegin);
+        HookEngineF(oCGame__changeLevelEnd, 7, _LeGo_ChangeLevelHookEnd);
         HookEngineF(oCSavegameManager__SetAndWriteSavegame, 5, _BW_SAVEGAME);
     };
 
-    if (f & LeGo_Interface) {
-        Print_fixPS();
+    if(f & LeGo_Sprite) {
+        HookEngineF(zRND_D3D__EndFrame, 6, _Sprite_DoRender);
     };
+
+    if (f & LeGo_Render) {
+        _Render_Init();
+    };
+
 };
 
 //========================================
@@ -157,19 +195,17 @@ func void LeGo_Init(var int flags) {
     };
 
     MEM_InitAll();
-
     MEM_Info(ConcatStrings(LeGo_Version, " wird initialisiert."));
 
-    LeGo_InitFlags(flags | LeGo_Gamestate);
-
+    LeGo_InitFlags(flags);
     if(!_LeGo_Init) {
         LeGo_InitGamestart(_LeGo_Flags);
     };
-
     LeGo_InitAlways(_LeGo_Flags);
-
     _LeGo_Init = 1;
     _LeGo_Loaded = 1;
+
+    MEM_Info(ConcatStrings(LeGo_Version, " wurde erfolgreich initialisiert."));
 };
 
 
