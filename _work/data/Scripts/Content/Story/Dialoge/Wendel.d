@@ -724,7 +724,7 @@ INSTANCE Info_Mod_Wendel_Plagenquest (C_INFO)
 FUNC INT Info_Mod_Wendel_Plagenquest_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_August_Plagenquest))
-	&& (Mod_REL_Stadthalter == 3)
+	&& (Mod_REL_Stadthalter == 2)
 	{
 		return 1;
 	};
