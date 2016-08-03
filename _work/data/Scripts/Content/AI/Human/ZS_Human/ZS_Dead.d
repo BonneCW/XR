@@ -458,6 +458,7 @@ func void ZS_Dead ()
 	};
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1025_KGD_Cathran_MT))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Alissandro_GotoJackal))
 	{
 		B_LogEntry	(TOPIC_MOD_AL_KillMission, "Cathran ist tot.");
 	};
