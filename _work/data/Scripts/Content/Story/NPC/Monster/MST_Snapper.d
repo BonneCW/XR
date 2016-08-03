@@ -236,6 +236,7 @@ INSTANCE WasserSnapper	(Mst_Default_Snapper)
 INSTANCE WasserSnapper_Joe_01	(Mst_Default_Snapper)
 {
 	name	= "Wassersnapper";
+	guild = GIL_SHEEP;
 
 	level = 15;
 	effect	= "SPELLFX_ICEARMOR";
@@ -251,6 +252,7 @@ INSTANCE WasserSnapper_Joe_01	(Mst_Default_Snapper)
 INSTANCE WasserSnapper_Joe_02	(Mst_Default_Snapper)
 {
 	name	= "Wassersnapper";
+	guild = GIL_SHEEP;
 
 	level = 15;
 	effect	= "SPELLFX_ICEARMOR";
@@ -266,6 +268,7 @@ INSTANCE WasserSnapper_Joe_02	(Mst_Default_Snapper)
 INSTANCE WasserSnapper_Joe_03	(Mst_Default_Snapper)
 {
 	name	= "Wassersnapper";
+	guild = GIL_SHEEP;
 
 	level = 15;
 	effect	= "SPELLFX_ICEARMOR";
