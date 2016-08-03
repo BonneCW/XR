@@ -109,6 +109,11 @@ FUNC VOID Info_Mod_Miguel_Aufgabe2_Info()
 	Npc_SetRefuseTalk	(self, 240);
 
 	B_GivePlayerXP	(400);
+	
+	Npc_RemoveItems	(hero, ItPl_Mushroom_03, 3);
+	Npc_RemoveItems	(hero, ItAt_LurkerSkin_Young, 2);
+	
+	B_ShowGivenThings("3 Fliegenpilze und 2 Häute junger Lurker gegeben")
 
 	AI_StopProcessInfos	(self);
 
