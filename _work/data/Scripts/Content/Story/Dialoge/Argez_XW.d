@@ -173,6 +173,8 @@ FUNC VOID Info_Mod_Argez_XW_Ende_B()
 	Info_ClearChoices	(Info_Mod_Argez_XW_Ende);
 
 	AI_StopProcessInfos	(self);
+	
+	B_StartOtherRoutine(self, "RITUAL");
 
 	AI_Teleport	(Xeres_02, "TOT");
 	Wld_InsertNpc	(Xeres_03,	"ARENA_01");

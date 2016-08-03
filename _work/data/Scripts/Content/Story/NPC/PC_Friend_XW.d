@@ -51,6 +51,12 @@ FUNC VOID Rtn_Arena_1607()
 	TA_Stand_ArmsCrossed	(18,50,10,55,"ARENA_04");
 };
 
+FUNC VOID Rtn_Ritual_1607()
+{	
+	TA_Circle	(10,55,18,50,"ARENA_04");
+	TA_Circle	(18,50,10,55,"ARENA_04");
+};
+
 FUNC VOID Rtn_Flucht_1607()
 {	
 	TA_Guide_Player	(10,55,18,50,"PORTALGANG_050");
