@@ -10,12 +10,12 @@ FUNC INT C_Beklauen (var int TheftDex, var int TheftItem, var int TheftGold)
 
 	if (Npc_GetTalentSkill(other, NPC_TALENT_PICKPOCKET) == TRUE) 
 	&& (B_GetAivar(self, AIV_PlayerHasPickedMyPocket) == FALSE)
-	//&& (other.attribute[ATR_DEXTERITY]+bonusdex >= (TheftDex - Theftdiff))
+	&& (other.attribute[ATR_DEXTERITY] + bonusdex >= (TheftDex - Theftdiff))
 	{
 		if (Npc_IsInState (self, ZS_Talk))
 		{
-			TheftDexGlob = 10; //"Kinderspiel" klappt immer
-
+			TheftDexGlob = TheftDex;
+		
 			TheftItemGlob = TheftItem;
 
 			TheftGoldGlob = TheftGold;
@@ -39,7 +39,7 @@ FUNC INT B_Beklauen ()
 
 	bonusdex += 10 - r_max(20);
 
-	if (other.attribute[ATR_DEXTERITY]+bonusdex >= TheftDexGlob) // Diebstahl gelingt
+	if (other.attribute[ATR_DEXTERITY] + bonusdex >= TheftDexGlob) // Diebstahl gelingt
 	{
 		B_GiveInvItems (self, other, TheftItemGlob, TheftGoldGlob);
 
