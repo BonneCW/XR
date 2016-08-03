@@ -53,7 +53,7 @@ FUNC VOID Info_Mod_Hymir_MineLos_Info()
 	AI_Output(self, hero, "Info_Mod_Hymir_MineLos_08_01"); //Es liegt nun an dir diese zu vernichten und die Mine zu erschließen.
 	AI_Output(self, hero, "Info_Mod_Hymir_MineLos_08_02"); //Geh zu Granmar, er wartet in der Mine auf dich. Er wird dir bei deiner Aufgabe helfen.
 
-	B_LogEntry	(TOPIC_MOD_KG_STEINMONSTER, "Ich soll jetzt mit Granmar zusammen die Monster in der Mine beseitigen. Er wartet bereits in der Mine auf mich.");
+	B_LogEntry	(TOPIC_MOD_KG_STEINMONSTER, "Ich soll jetzt mit Granmar zusammen die Monster in der Mine beseitigen. Er wartet bereits in der Mine auf mich. Als Nahkampfwaffe sollte ich unbedingt meine erzüberzogene Keule dabei haben.");
 
 	B_RemoveNpc	(Mod_1017_KGD_Granmar_MT);
 
