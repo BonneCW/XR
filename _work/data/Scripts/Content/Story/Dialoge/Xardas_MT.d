@@ -255,7 +255,7 @@ FUNC VOID Info_Mod_Xardas_MT_HabSchwert_Info()
 	AI_Output(self, hero, "Info_Mod_Xardas_MT_HabSchwert_14_07"); //Dir werden schon andere Wege einfallen müsse, um an ihn heranzukommen, sei es Magie, Zaubertrank, oder Schwert.
 	AI_Output(self, hero, "Info_Mod_Xardas_MT_HabSchwert_14_08"); //Ich werde nun nach Khorinis zurückkehren. Beliar sei mit dir.
 
-	B_LogEntry_More	(TOPIC_MOD_XERES, TOPIC_MOD_ERSTEWAFFE, "Ich hab das Schwert und Xardas denkt, dass ich damit Xeres vernichten kann.", "Ich hab das Schwert und Xardas denkt, dass ich damit Xeres vernichten kann.");
+	B_LogEntry_More	(TOPIC_MOD_XERES, TOPIC_MOD_ERSTEWAFFE, "Ich hab das Schwert und Xardas denkt, dass ich damit Xeres vernichten kann. Zum Schutz vor Xeres' Fesselzauber hat er mir allerdings trotzdem noch ein Amulett gegeben, das ich unbedingt tragen sollte. Ich kann jetzt zu Xeres in der Orkstadt aufbrechen.", "Ich hab das Schwert und Xardas denkt, dass ich damit Xeres vernichten kann.");
 	B_SetTopicStatus	(TOPIC_MOD_ERSTEWAFFE, LOG_SUCCESS);
 
 	AI_StopProcessInfos	(self);
