@@ -289,10 +289,12 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 
 	if (Hlp_IsValidItem(rwp))
 	{
-		damage += B_BeliarsWeaponSpecialDamage	(taeter, opfer);
-		damage += B_UrizielsSpecialDamage	(taeter, opfer);
-		damage += B_AdanosStabSpecialDamage	(taeter, opfer);
-		damage += B_HolyHammerSpecialDamage	(taeter, opfer);
+		if (Kapitel >= 3) {
+			damage += B_BeliarsWeaponSpecialDamage	(taeter, opfer);
+			damage += B_UrizielsSpecialDamage	(taeter, opfer);
+			damage += B_AdanosStabSpecialDamage	(taeter, opfer);
+			damage += B_HolyHammerSpecialDamage	(taeter, opfer);
+		};
 		damage += B_Pfeile			(taeter, opfer);
 	};
 
@@ -832,6 +834,12 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 				{
 					damage += 30;
 				};
+			};
+
+			if (Hlp_IsItem(rwp, Holy_Hammer_MIS) == TRUE)
+			&& (Kapitel < 3)
+			{
+				damage = damage / 10;
 			};
 		};
 
