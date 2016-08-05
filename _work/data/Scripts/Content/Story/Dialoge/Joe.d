@@ -228,7 +228,7 @@ FUNC VOID Info_Mod_Joe_Wassersnapper3_Info()
 		AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper3_15_05"); //Ja, das Los, welches diesen Wilderern zustand, haben sie auch bekommen. Lass uns weitergehen.
 
 		AI_StopProcessInfos	(self);
-	}
+	};
 };
 
 INSTANCE Info_Mod_Joe_Wassersnapper4 (C_INFO)
