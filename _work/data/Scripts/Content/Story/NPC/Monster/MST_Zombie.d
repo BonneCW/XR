@@ -1846,6 +1846,9 @@ INSTANCE Zombie_OT		(Mst_Default_Zombie)
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 
+	aivar[AIV_MM_RestStart] 	= 0;
+	aivar[AIV_MM_RoamStart] 	= OnlyRoutine;
+
 	var int Randi;
 	Randi = Hlp_Random(8);
 
