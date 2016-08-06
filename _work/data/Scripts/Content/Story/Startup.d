@@ -7000,6 +7000,8 @@ FUNC VOID STARTUP_Xeres_Endlevel()
 FUNC VOID INIT_Xeres_Endlevel()
 {
 	OldLevel(XERESWELT_ZEN);
+	
+	ENTER_EVT_endlevelmonster();
 
 	if (Mod_XW_Kap6 == 1)
 	{

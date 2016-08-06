@@ -72,6 +72,10 @@ func int ZS_MM_Attack_Loop()
 {
 	Mod_KampfLaeuft = TRUE;
 	
+	if (CutsceneAn == TRUE) {
+		return LOOP_END;
+	};
+	
 	if (!Npc_GetTarget (self))
 	{
 		return LOOP_END;

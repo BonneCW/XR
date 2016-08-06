@@ -19,8 +19,11 @@ func void B_MM_AssessEnemy ()
 		return;
 	};
 
-	if (Npc_IsInState(other, ZS_Unconscious))
-	{
+	if (Npc_IsInState(other, ZS_Unconscious)) {
+		return;
+	};
+	
+	if (CutsceneAn == TRUE) {
 		return;
 	};
 
