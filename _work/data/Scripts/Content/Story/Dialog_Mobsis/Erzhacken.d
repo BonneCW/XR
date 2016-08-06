@@ -584,6 +584,46 @@ FUNC INT B_ErzMob_Bestimmung()
 	{
 		ErzMob_114_Amount = (ErzMob_114_Amount +1);
 		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "NW_ORE_001") && (ErzMob_115_Amount_MAX > ErzMob_115_Amount))
+	{
+		ErzMob_115_Amount = (ErzMob_115_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "NW_ORE_002") && (ErzMob_116_Amount_MAX > ErzMob_116_Amount))
+	{
+		ErzMob_116_Amount = (ErzMob_116_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "NW_ORE_003") && (ErzMob_117_Amount_MAX > ErzMob_117_Amount))
+	{
+		ErzMob_117_Amount = (ErzMob_117_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "NW_ORE_004") && (ErzMob_118_Amount_MAX > ErzMob_118_Amount))
+	{
+		ErzMob_118_Amount = (ErzMob_118_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "NW_ORE_005") && (ErzMob_119_Amount_MAX > ErzMob_119_Amount))
+	{
+		ErzMob_119_Amount = (ErzMob_119_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "NW_ORE_006") && (ErzMob_120_Amount_MAX > ErzMob_120_Amount))
+	{
+		ErzMob_120_Amount = (ErzMob_120_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "NW_ORE_007") && (ErzMob_121_Amount_MAX > ErzMob_121_Amount))
+	{
+		ErzMob_121_Amount = (ErzMob_121_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "NW_ORE_008") && (ErzMob_122_Amount_MAX > ErzMob_122_Amount))
+	{
+		ErzMob_122_Amount = (ErzMob_122_Amount + 1);
+		return TRUE;
 	};
 
 	return FALSE;

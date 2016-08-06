@@ -2088,6 +2088,22 @@ var int 	ErzMob_113_Amount;
 const int	ErzMob_113_Amount_MAX = 8;
 var int 	ErzMob_114_Amount;
 const int	ErzMob_114_Amount_MAX = 4;
+var int 	ErzMob_115_Amount;
+const int	ErzMob_115_Amount_MAX = 5;
+var int 	ErzMob_116_Amount;
+const int	ErzMob_116_Amount_MAX = 6;
+var int 	ErzMob_117_Amount;
+const int	ErzMob_117_Amount_MAX = 7;
+var int 	ErzMob_118_Amount;
+const int	ErzMob_118_Amount_MAX = 8;
+var int 	ErzMob_119_Amount;
+const int	ErzMob_119_Amount_MAX = 4;
+var int 	ErzMob_120_Amount;
+const int	ErzMob_120_Amount_MAX = 5;
+var int 	ErzMob_121_Amount;
+const int	ErzMob_121_Amount_MAX = 6;
+var int 	ErzMob_122_Amount;
+const int	ErzMob_122_Amount_MAX = 7;
 
 //Runenstein hacken
 var int 	RunenMob_01_Amount;
