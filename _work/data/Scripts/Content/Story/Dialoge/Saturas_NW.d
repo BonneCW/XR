@@ -1211,6 +1211,7 @@ INSTANCE Info_Mod_Saturas_AW_Member_26 (C_INFO)
 FUNC INT Info_Mod_Saturas_AW_Member_26_Condition()
 {
 	if (Mod_WM_CronosAttack >= 3)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_Member_25))
 	{
 		return 1;
 	};
