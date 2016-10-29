@@ -13,6 +13,7 @@ func void BR_Savegame() {
 
 };
 
+
 func void _LeGo_ChangeLevelHookBegin() {
     _LeGo_LevelChangeIsExecuted = TRUE;
 };
@@ -84,6 +85,12 @@ func void _BW_SaveGame() {
 //========================================
 func void _BR_LoadGame() {
     var int slot; slot = _BR_GetSelectedSlot();
+    if(slot == -1) {
+        if(_LeGo_Flags & LeGo_Gamestate) {
+            _Gamestate_Init(Gamestate_WorldChange);
+        };
+        return;
+    };
     if(BR_OpenFile(_BIN_GetSavefilePath(slot))) {
         if(_LeGo_Flags & LeGo_PermMem) {
             _PM_UnArchive();

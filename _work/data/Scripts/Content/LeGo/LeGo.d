@@ -13,7 +13,7 @@
 |*                              auf Ikarus                               *|
 |*                                                                       *|
 \*************************************************************************/
-const string LeGo_Version = "LeGo 2.3.4";
+const string LeGo_Version = "LeGo 2.3.5";
 
 const int LeGo_PrintS         = 1<<0;  // Interface.d
 const int LeGo_HookEngine     = 1<<1;  // HookEngine.d
@@ -36,9 +36,12 @@ const int LeGo_Timer          = 1<<17; // Timer.d
 const int LeGo_EventHandler   = 1<<18; // EventHandler.d
 const int LeGo_Gamestate      = 1<<19; // Gamestate.d
 const int LeGo_Sprite         = 1<<20; // Sprite.d
-const int LeGo_Render          = 1<<21; // Render.d
+const int LeGo_Names		  = 1<<21; // Names.d
+const int LeGo_Buffs          = 1<<22;
+const int LeGo_Render          = 1<<23; // Render.d
 
-const int LeGo_All            = (1<<22)-1; // Sämtliche Bibliotheken
+
+const int LeGo_All            = (1<<22)-1; // Sämtliche Bibliotheken // No Experimental
 
 //========================================
 // [intern] Variablen
@@ -46,11 +49,13 @@ const int LeGo_All            = (1<<22)-1; // Sämtliche Bibliotheken
 const int _LeGo_Init = 0;
 var int _LeGo_Loaded;
 
+
 //========================================
 // [intern] Abhängigkeiten bestimmen
 //========================================
 func void LeGo_InitFlags(var int f) {
     if(f & LeGo_Bloodsplats)    { f = f | LeGo_FrameFunctions | LeGo_HookEngine | LeGo_Random | LeGo_Anim8; };
+    if(f & LeGo_Buffs)          { f = f | LeGo_FrameFunctions | LeGo_PermMem | LeGo_View; };
     if(f & LeGo_Gamestate)      { f = f | LeGo_EventHandler | LeGo_Saves; };
     if(f & LeGo_Cursor)         { f = f | LeGo_Interface | LeGo_View; };
     if(f & LeGo_PrintS)         { f = f | LeGo_AI_Function | LeGo_Anim8 | LeGo_Interface; };
@@ -62,6 +67,7 @@ func void LeGo_InitFlags(var int f) {
     if(f & LeGo_View)           { f = f | LeGo_PermMem; };
     if(f & LeGo_Interface)      { f = f | LeGo_PermMem; };
     if(f & LeGo_Sprite)         { f = f | LeGo_PermMem; };
+	if(f & LeGo_Names)			{ f = f | LeGo_PermMem; }; 
     if(f & LeGo_PermMem)        { f = f | LeGo_Saves; };
     if(f & LeGo_Saves)          { f = f | LeGo_HookEngine; };
     _LeGo_Flags = f;
@@ -71,6 +77,15 @@ func void LeGo_InitFlags(var int f) {
 // [intern] Immer
 //========================================
 func void LeGo_InitAlways(var int f) {
+    if (!_LeGo_Loaded) {
+		// Nur beim ersten Spielstart, sonst wird es sowieso aus dem Savegame geladen
+		if (f & LeGo_PermMem) {
+			_PM_Reset();
+			HandlesPointer = _HT_Create();
+			HandlesInstance = _HT_Create();
+			_PM_CreateForeachTable();
+		}; 
+	};
     if (f & LeGo_Saves) {
         if(_LeGo_IsLevelChange()) {
 
@@ -82,15 +97,6 @@ func void LeGo_InitAlways(var int f) {
             if(_LeGo_Flags & LeGo_Gamestate && (_LeGo_LevelChangeCounter == 2)) {
                 _Gamestate_Init(Gamestate_WorldChange);
             };            
-        };
-    };
-	
-    if(f & LeGo_PermMem) {
-        if(HandlesPointer) {
-            // Weltenwechsel
-        };
-        if((_LeGo_Init)&&(!_LeGo_Loaded)) { // Aus einem Spiel heraus -> Neues Spiel
-            _PM_Reset();
         };
     };
 
@@ -106,7 +112,8 @@ func void LeGo_InitAlways(var int f) {
     };
 
     if(!_LeGo_Loaded) {
-        // Nur beim ersten Spielstart
+
+		
         if(f & LeGo_Gamestate) {
             _Gamestate_Init(Gamestate_NewGame);
         };
@@ -130,6 +137,13 @@ func void LeGo_InitAlways(var int f) {
         if (f & LeGo_Render) {
             _render_list = new(zCList@);
         };
+        if (f & LeGo_Buffs) {
+                Bufflist_Init();
+        };
+		
+		if (f & LeGo_Names) {
+			Talent_Names = TAL_CreateTalent();
+		};
 
     };
 
@@ -148,7 +162,10 @@ func void LeGo_InitAlways(var int f) {
 //========================================
 // [intern] Nur bei Spielstart
 //========================================
-func void LeGo_InitGamestart(var int f) {
+func void LeGo_InitGamestart(var int f) {	
+
+	/* ACHTUNG: Es steht kein new() zur Verfügung (aber create()) */
+	
     if(f & LeGo_Cursor) {
         HookEngineF(5062907, 5, _CURSOR_GETVAL);
     };
@@ -207,6 +224,3 @@ func void LeGo_Init(var int flags) {
 
     MEM_Info(ConcatStrings(LeGo_Version, " wurde erfolgreich initialisiert."));
 };
-
-
-
