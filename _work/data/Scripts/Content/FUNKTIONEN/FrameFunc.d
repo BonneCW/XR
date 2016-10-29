@@ -458,12 +458,13 @@ FUNC VOID FRAMEFUNC ()
 
 			DoForSphere(B_KillWithPrisma);
 
-			hero.attribute[ATR_HITPOINTS_MAX] += Mod_Prisma_Array[0] + Mod_Prisma_Array[1] + Mod_Prisma_Array[2] + Mod_Prisma_Array[3];
+			hero.attribute[ATR_HITPOINTS_MAX] += Mod_Prisma_Array[0] + Mod_Prisma_Array[1] + Mod_Prisma_Array[2];
 
 			Mod_Prisma_Array[0] = 0;
 			Mod_Prisma_Array[1] = 0;
 			Mod_Prisma_Array[2] = 0;
-			Mod_Prisma_Array[3] = 0;
+			
+			View_SetTexture(Mod_View_Prisma, "PRISMA_0.TGA");
 		};
 	};
 

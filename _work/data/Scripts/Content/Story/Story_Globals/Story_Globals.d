@@ -251,7 +251,7 @@ var int Mod_PrismaRitual_Counter;
 var int Mod_PrismaRitual_ZuLangsam;
 var int Mod_Prisma_TrollFokus;
 var int Mod_Prisma_KlosterFokus;
-var int Mod_Prisma_Array[4];
+var int Mod_Prisma_Array[3];
 var int Mod_Prisma_Start;
 var int Mod_Dieb_Verkleidung;
 var int Mod_Argez_Shrink;
@@ -1842,6 +1842,7 @@ var int GehtErstesMalInsMinental;
 var int Mod_Cords_Axt_Miliz;
 var int BeliarSchreibStadtPlus;
 var int Mod_Balthasar_Wolf;
+var int Mod_View_Prisma;
 
 var C_NPC NPC_Orkjaeger_01;
 var C_NPC NPC_Orkjaeger_02;

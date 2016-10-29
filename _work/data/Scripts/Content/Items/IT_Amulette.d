@@ -1338,12 +1338,33 @@ INSTANCE  ItMi_Magieprisma(C_Item)
 	
 };
 
+// original sizes 134 and 128, here multiplied with 0.75
+const int PRISMA_WIDTH = 100;
+const int PRISMA_HEIGHT = 96;
+
 FUNC VOID Equip_ItMi_Magieprisma ()
 {
 	Mod_PrismaAngelegt = TRUE;
+	
+	Print ("Amulett angelegt");
+	
+	Mod_View_Prisma = View_CreatePxl(Print_Screen[PS_X] / 2 - PRISMA_WIDTH / 2, Print_Screen[PS_Y] - PRISMA_HEIGHT - 10, Print_Screen[PS_X] / 2 + PRISMA_WIDTH / 2, Print_Screen[PS_Y] - 10);
+	View_SetTexture(Mod_View_Prisma, "PRISMA_0.TGA");
+	
+	if (Mod_Prisma_Array[2]) {
+		View_SetTexture(Mod_View_Prisma, "PRISMA_3.TGA");
+	} else if (Mod_Prisma_Array[1]) {
+		View_SetTexture(Mod_View_Prisma, "PRISMA_2.TGA");
+	} else if (Mod_Prisma_Array[0]) {
+		View_SetTexture(Mod_View_Prisma, "PRISMA_1.TGA");
+	};
+	View_Open(Mod_View_Prisma);
 };
 
 FUNC VOID UnEquip_ItMi_Magieprisma ()
 {
 	Mod_PrismaAngelegt = FALSE;
+	
+	View_Delete(Mod_View_Prisma);
+	Mod_View_Prisma = 0;
 };

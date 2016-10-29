@@ -15,15 +15,16 @@ FUNC VOID B_PrismaAdd(var int damage) {
 		return;
 	};
 
-	if (Mod_Prisma_Array[3] == 0) {
+	if (Mod_Prisma_Array[2] == 0) {
 		if (Mod_Prisma_Array[0] == 0) {
 			Mod_Prisma_Array[0] = damage;
+			View_SetTexture(Mod_View_Prisma, "PRISMA_1.TGA");
 		} else if (Mod_Prisma_Array[1] == 0) {
 			Mod_Prisma_Array[1] = damage;
+			View_SetTexture(Mod_View_Prisma, "PRISMA_2.TGA");
 		} else if (Mod_Prisma_Array[2] == 0) {
 			Mod_Prisma_Array[2] = damage;
-		} else if (Mod_Prisma_Array[3] == 0) {
-			Mod_Prisma_Array[3] = damage;
+			View_SetTexture(Mod_View_Prisma, "PRISMA_3.TGA");
 		};
 
 		if (Mod_Prisma_Start == FALSE) {
@@ -56,5 +57,5 @@ FUNC VOID B_KillWithPrisma(var C_NPC slf)
 		return;
 	};
 
-	B_MagicHurtNpc (hero, slf, Mod_Prisma_Array[0] + Mod_Prisma_Array[1] + Mod_Prisma_Array[2] + Mod_Prisma_Array[3]);
+	B_MagicHurtNpc (hero, slf, Mod_Prisma_Array[0] + Mod_Prisma_Array[1] + Mod_Prisma_Array[2]);
 };
