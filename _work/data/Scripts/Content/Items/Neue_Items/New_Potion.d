@@ -184,6 +184,8 @@ INSTANCE ItPo_Tiergift (C_Item)
 	description			= "Tiergift";
 	TEXT[1]				= "kann zum Vergiften von Pfeilen und Waffen genutzt werden";
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+	
+	inv_roty = 360;
 };
 
 INSTANCE ItPo_Pflanzengift (C_Item)
@@ -201,4 +203,6 @@ INSTANCE ItPo_Pflanzengift (C_Item)
 	description			= "Pflanzengift";
 	TEXT[1]				= "kann zum Vergiften von Pfeilen und Waffen genutzt werden";
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+	
+	inv_roty = 360;
 };
