@@ -419,6 +419,39 @@ FUNC VOID Use_CantharZettel_Valentino()
 	};
 };
 
+INSTANCE ItWr_TofuRezept (C_ITEM)
+{
+	name		=	"Rezept";
+
+	mainflag	=	ITEM_KAT_DOCS;
+	flags		=	ITEM_MISSION;
+
+	value		=	0;
+
+	visual		=	"ItWr_Scroll_01.3DS";
+	material	=	MAT_LEATHER;
+	on_state[0]	=	Use_TofuRezept;
+	scemeName	=	"MAP";
+	description	=	name;
+	TEXT[2]		=	"Rezept für To-Fu";
+};
+
+FUNC VOID Use_TofuRezept()
+{
+	var int nDocID;
+	nDocID	=	Doc_Create();
+		Doc_SetPages	( nDocID, 1);
+		Doc_SetPage	( nDocID, 0, "letters.TGA" , 0	);
+		Doc_SetFont 	( nDocID, -1, FONT_Book		   		); 	
+		Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1	);
+		Doc_PrintLine	( nDocID, 0, ""		);
+		Doc_PrintLine	( nDocID, 0, "To-Fu-Rezept"		);
+		Doc_PrintLine	( nDocID, 0, ""		);
+		Doc_PrintLines	( nDocID, 0, "Für normale Portion man sammeln 30 Schoten von So-Ja-Pflanze. Aus den Schoten man nehmen die Bohnen heraus und tun sie kurz in Wasser, dann alles auspressen. In den ausgepressten Saft man schütten Salz, dann in So-Ja-Presse pressen. So man erhalten To-Fu."			);
+		Doc_PrintLine	( nDocID, 0, ""		);
+		Doc_Show	( nDocID );
+};
+
 INSTANCE ItWr_SoerensPBrief (C_ITEM)
 {
 	name		=	"Zettel";

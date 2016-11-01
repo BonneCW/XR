@@ -191,6 +191,7 @@ CONST STRING MOBNAME_Werkbank		= "Werkbank";
 CONST STRING MOBNAME_Shrine		= "Schrein";
 CONST STRING MOBNAME_Trinkfass		= "Trinkfass";
 CONST STRING MOBNAME_SANTINOSTRUHE	= "Santinos Truhe";
+CONST STRING MOBNAME_SOJA	= "Sojapflanze";
 
 // XR - Ladenschilder
 

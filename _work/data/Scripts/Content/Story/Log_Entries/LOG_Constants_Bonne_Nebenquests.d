@@ -129,3 +129,4 @@ const string TOPIC_MOD_GRAVO_MUSIK	= "Lagermusik";
 const string TOPIC_MOD_OT_GEHEIMKAMMER	= "Die Geheimkammer";
 const string TOPIC_MOD_ALAX_ZUTATEN	= "13 mal die 6";
 const string TOPIC_MOD_ROTKAEPPCHEN	= "Rotkäppchen";
+const string TOPIC_MOD_BIFTEK_FLEISCHERSATZ	=	"Fleischersatz";

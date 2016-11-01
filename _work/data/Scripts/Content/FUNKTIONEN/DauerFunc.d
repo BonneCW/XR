@@ -183,6 +183,7 @@ FUNC VOID DAUERFUNC_01()
 	Mod_Maussteuerung = STR_ToInt(MEM_GetGothOpt("XERES", "enableMouse"));
 	Mod_Bloodsplats = STR_ToInt(MEM_GetGothOpt("XERES", "bloodsplats"));
 	Mod_PrismaKey = MEM_GetGothOpt("KEYS", "keyUsePrisma");
+	Mod_ActionKey = MEM_GetGothOpt("KEYS", "keyAction");
 	Mod_Respawn = STR_ToInt(MEM_GetGothOpt("XERES", "respawn"));
 
 	if (Mod_Maussteuerung == 0)

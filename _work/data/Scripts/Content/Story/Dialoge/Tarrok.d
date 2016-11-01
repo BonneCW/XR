@@ -5,7 +5,8 @@ INSTANCE Info_Mod_Tarrok_Hi (C_INFO)
 	condition	= Info_Mod_Tarrok_Hi_Condition;
 	information	= Info_Mod_Tarrok_Hi_Info;
 	permanent	= 0;
-	important	= 1;
+	important	= 0;
+	description	= "Schön, dich gesund zu sehen.";
 };
 
 FUNC INT Info_Mod_Tarrok_Hi_Condition()
@@ -15,9 +16,10 @@ FUNC INT Info_Mod_Tarrok_Hi_Condition()
 
 FUNC VOID Info_Mod_Tarrok_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Tarrok_Hi_18_00"); //Was wollen Fremder hier?
-	AI_Output(self, hero, "Info_Mod_Tarrok_Hi_18_01"); //Oh, du nicht Fremder sein. Du Freund. Du mir geholfen hast in Mine von Menschen.
-	AI_Output(self, hero, "Info_Mod_Tarrok_Hi_18_02"); //Ich dir immer noch sehr dankbar sein.
+	AI_Output(hero, self, "Info_Mod_Tarrok_Hi_15_00"); //Schön, dich gesund zu sehen.
+	AI_Output(self, hero, "Info_Mod_Tarrok_Hi_18_01"); //Tarrok eben wollen das Gleiche sagen.
+	AI_Output(hero, self, "Info_Mod_Tarrok_Hi_15_02"); //Ur Shak hat mir schon erzählt, was passiert ist.
+	AI_Output(self, hero, "Info_Mod_Tarrok_Hi_18_03"); //Dann Tarrok nicht müssen wiederholen. Sprache von Menschen zu viele Wörter für Geschmack von Tarrok.
 };
 
 INSTANCE Info_Mod_Tarrok_AtStonehenge (C_INFO)
@@ -78,7 +80,7 @@ FUNC VOID Info_Mod_Tarrok_Fokussuche_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Tarrok_Fokussuche_15_00"); //Ich brauche wieder ein Ulu-Mulu.
 	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_18_01"); //Freund brauchen wieder Ulu-Mulu? Aber Freund sehen schwach aus, zu schwach zu besorgen Sachen für Ulu-Mulu.
-	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_18_05"); //Aber es keinen anderen weg geben, du müssen suchen Sachen. Freund noch wissen, was Tarrok brauchen für Ulu-Mulu?
+	AI_Output(self, hero, "Info_Mod_Tarrok_Fokussuche_18_02"); //Aber es keinen anderen weg geben, du müssen suchen Sachen. Freund noch wissen, was Tarrok brauchen für Ulu-Mulu?
 
 	Info_ClearChoices	(Info_Mod_Tarrok_Fokussuche);
 
@@ -205,6 +207,59 @@ FUNC VOID Info_Mod_Tarrok_UluMulu_Fertig_Info()
 	AI_Teleport	(Mod_10006_Orc_Ranad_MT, "TOT");
 	B_StartOtherRoutine	(Mod_10006_Orc_Ranad_MT, "TOT");
 	AI_Teleport	(Mod_10006_Orc_Ranad_MT, "TOT");
+};
+
+INSTANCE Info_Mod_Tarrok_WasVor (C_INFO)
+{
+	npc		= Mod_10000_Orc_Tarrok_MT;
+	nr		= 1;
+	condition	= Info_Mod_Tarrok_WasVor_Condition;
+	information	= Info_Mod_Tarrok_WasVor_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Was habt ihr nun mit eurer kleinen Truppe hier vor?";
+};
+
+FUNC INT Info_Mod_Tarrok_WasVor_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Tarrok_AtStonehenge))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Tarrok_WasVor_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Tarrok_WasVor_15_00"); //Was habt ihr nun mit eurer kleinen Truppe hier vor?
+	AI_Output(self, hero, "Info_Mod_Tarrok_WasVor_18_01"); //Erstes Ziel zu überzeugen restliche Orks, dass Krushak böse. Nicht einfach, weil Orks nicht wollen reden mit Ausgestoßenen.
+	AI_Output(self, hero, "Info_Mod_Tarrok_WasVor_18_02"); //Als nächstes müssen Festung herrichten. In altem Lager Orks nicht können bleiben, zu viele schlechte Erinnerungen an Krushak.
+	AI_Output(self, hero, "Info_Mod_Tarrok_WasVor_18_03"); //Deshalb hier müssen neues Leben beginnen und wieder zu alten Göttern beten.
+};
+
+INSTANCE Info_Mod_Tarrok_Hilfe (C_INFO)
+{
+	npc		= Mod_10000_Orc_Tarrok_MT;
+	nr		= 1;
+	condition	= Info_Mod_Tarrok_Hilfe_Condition;
+	information	= Info_Mod_Tarrok_Hilfe_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Brauchst du Hilfe?";
+};
+
+FUNC INT Info_Mod_Tarrok_Hilfe_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Tarrok_AtStonehenge))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Tarrok_Hilfe_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Tarrok_Hilfe_15_00"); //Brauchst du Hilfe?
+	AI_Output(self, hero, "Info_Mod_Tarrok_Hilfe_18_01"); //Mensch leider können nicht helfen, Orks in Lager zu überzeugen. Orks nicht würden auf ihn hören.
+	AI_Output(self, hero, "Info_Mod_Tarrok_Hilfe_18_02"); //Aber hier in Festung genug Probleme. Tarrok hören, dass Streit zwischen Neuankömmlingen. Vielleicht Mensch können schlichten.
 };
 
 INSTANCE Info_Mod_Tarrok_Lehrer (C_INFO)

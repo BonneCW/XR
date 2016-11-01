@@ -198,6 +198,110 @@ FUNC VOID Info_Mod_UrShak_Karte_Info()
 	AI_Output(self, hero, "Info_Mod_UrShak_Karte_18_01"); //Jetzt Karte sein ganz.
 };
 
+INSTANCE Info_Mod_UrShak_Biftek (C_INFO)
+{
+	npc		= Mod_10001_Orc_UrShak_MT;
+	nr		= 1;
+	condition	= Info_Mod_UrShak_Biftek_Condition;
+	information	= Info_Mod_UrShak_Biftek_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Du weißt von Bifteks Problem?";
+};
+
+FUNC INT Info_Mod_UrShak_Biftek_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_UrShak_Hi))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Biftek_Mager))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_UrShak_Biftek_Info()
+{
+	AI_Output(hero, self, "Info_Mod_UrShak_Biftek_15_00"); //Du weißt von Bifteks Problem?
+	AI_Output(self, hero, "Info_Mod_UrShak_Biftek_18_01"); //Ja. Aber jeder Ork können sich gewöhnen an Kräuter und Pilze, er nur nicht wollen.
+	AI_Output(hero, self, "Info_Mod_UrShak_Biftek_15_02"); //Gibt es keinen Weg, ihm Pflanzen schmackhaft zu machen? Esst ihr Orks sonst auch nur Fleisch?
+	AI_Output(self, hero, "Info_Mod_UrShak_Biftek_18_03"); //(überlegt) Ur Shak da fallen ein altes Rezept herzustellen einen Ersatz für Fleisch. Orks nennen es To-Fu.
+	AI_Output(hero, self, "Info_Mod_UrShak_Biftek_15_04"); //Was heißt das?
+	AI_Output(self, hero, "Info_Mod_UrShak_Biftek_18_05"); //Heißen nichts, ist Name.
+	AI_Output(hero, self, "Info_Mod_UrShak_Biftek_15_06"); //Und wie bereitet man dieses To-Fu zu?
+	AI_Output(self, hero, "Info_Mod_UrShak_Biftek_18_07"); //Ur Shak müssen schauen in seinen Zetteln. (sucht)
+	
+	AI_PlayAni(self, "r_Roam1");
+	
+	AI_Output(self, hero, "Info_Mod_UrShak_Biftek_18_08"); //Da, er haben sogar Rezept Mensch können verstehen.
+	
+	B_GiveInvItems(self, hero, ItWr_TofuRezept, 1);
+	
+	AI_Output(self, hero, "Info_Mod_UrShak_Biftek_18_09"); //Mensch müssen suchen So-Ja-Pflanze und ernten ihre Schoten. In den Schoten er finden kleine Bohnen. Ur Shak nicht wissen, ob auch hier So-Ja-Pflanzen wachsen, aber in Gebiet von Orks auf jeden Fall.
+	AI_Output(self, hero, "Info_Mod_UrShak_Biftek_18_10"); //In Rezept stehen, man müssen nehmen So-Ja-Presse herzustellen To-Fu. Aber Mensch können auch nutzen Alchemietisch.
+	AI_Output(self, hero, "Info_Mod_UrShak_Biftek_18_11"); //Wenn fertig, sagen Biftek, dass Fleisch für ihn haben, und er keinen Unterschied wird merken.
+	AI_Output(hero, self, "Info_Mod_UrShak_Biftek_15_12"); //Danke, das klingt doch nach einem Plan.
+	
+	B_LogEntry	(TOPIC_MOD_BIFTEK_FLEISCHERSATZ, "Ur Shak schlägt vor, Biftek ein gewisses To-Fu zuzubereiten. Gewonnen wird es aus der So-Ja-Pflanze, die eigentlich überall im Minental wachsen sollte, besonders aber im Orkgebiet. Alle Angaben zur Zubereitung finde ich in dem Rezept, das mir Ur Shak anvertraut hat. Herstellen kann ich das To-Fu anscheinend an jedem Alchemietisch.");
+	
+	Mod_Soja_01 = 0;
+	Mod_Soja_02 = 0;
+	Mod_Soja_03 = 0;
+	Mod_Soja_04 = 0;
+	Mod_Soja_05 = 0;
+	Mod_Soja_06 = 0;
+	Mod_Soja_07 = 0;
+	Mod_Soja_08 = 0;
+	Mod_Soja_09 = 0;
+	Mod_Soja_010 = 0;
+	Mod_Soja_011 = 0;
+	Mod_Soja_012 = 0;
+	Mod_Soja_013 = 0;
+	Mod_Soja_014 = 0;
+	Mod_Soja_015 = 0;
+	Mod_Soja_016 = 0;
+	Mod_Soja_017 = 0;
+	Mod_Soja_018 = 0;
+	Mod_Soja_019 = 0;
+	Mod_Soja_020 = 0;
+	Mod_Soja_021 = 0;
+	Mod_Soja_022 = 0;
+	Mod_Soja_023 = 0;
+	Mod_Soja_024 = 0;
+	Mod_Soja_025 = 0;
+	Mod_Soja_026 = 0;
+	Mod_Soja_027 = 0;
+	Mod_Soja_028 = 0;
+	Mod_Soja_029 = 0;
+	Mod_Soja_030 = 0;
+};
+
+INSTANCE Info_Mod_UrShak_Biftek2 (C_INFO)
+{
+	npc		= Mod_10001_Orc_UrShak_MT;
+	nr		= 1;
+	condition	= Info_Mod_UrShak_Biftek2_Condition;
+	information	= Info_Mod_UrShak_Biftek2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Biftek ist auch mit To-Fu zufrieden.";
+};
+
+FUNC INT Info_Mod_UrShak_Biftek2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Biftek_Mager2))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_UrShak_Biftek2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_UrShak_Biftek2_15_00"); //Biftek ist auch mit To-Fu zufrieden.
+	AI_Output(self, hero, "Info_Mod_UrShak_Biftek2_18_01"); //Ur Shak sein überrascht. Er erwarten größere Probleme.
+	AI_Output(hero, self, "Info_Mod_UrShak_Biftek2_15_02"); //Nichts, was nicht zu lösen war. Bald sollte er wieder gestärkt sein und mit anpacken können.
+	AI_Output(self, hero, "Info_Mod_UrShak_Biftek2_18_03"); //Sein dankbar für Hilfe von Mensch!
+	AI_Output(hero, self, "Info_Mod_UrShak_Biftek2_15_04"); //Kein Ding.
+};
+
 INSTANCE Info_Mod_UrShak_EXIT (C_INFO)
 {
 	npc		= Mod_10001_Orc_UrShak_MT;

@@ -245,3 +245,37 @@ INSTANCE ItFo_Poekelfleisch_Skip (C_Item)
 	TEXT[5]				= 	NAME_Value;		COUNT[5]	= value;
 
 };
+
+INSTANCE ItFo_Tofu (C_Item)
+{	
+	name 				=	"To-Fu";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+	
+	value 				=	70;
+	
+	visual 				=	"ItFoMuttonRaw.3DS";
+	material 			=	MAT_LEATHER;
+	scemeName			=	"MEAT";
+	on_state[0]			=	Use_Tofu;
+
+	description			= 	name;
+	
+	TEXT[1]				= 	NAME_Bonus_HP;	
+	COUNT[1]			= 	100;	
+	TEXT[5]				= 	NAME_Value;			
+	COUNT[5]			= 	value;
+
+};
+
+	FUNC VOID Use_Tofu()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	100);
+
+		self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS];
+
+		B_SetEsspunkte	(35);
+
+		B_HealGift (0, 12);
+	};
