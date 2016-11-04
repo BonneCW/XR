@@ -4454,6 +4454,9 @@ FUNC VOID STARTUP_MinentalSurface ()
 	Wld_InsertNpc	(Mod_10006_Orc_Ranad_MT,	"OC1");
 	Wld_InsertNpc	(Mod_4021_Orc_Gobshak_MT,	"OC1");
 	Wld_InsertNpc	(Mod_4022_Orc_Grubuz_MT,	"OC1");
+	Wld_InsertNpc	(Mod_10047_Orc_Biftek_MT,	"OC1");
+	Wld_InsertNpc	(Mod_10048_Orc_Poloch_MT,	"OC1");
+	Wld_InsertNpc	(Mod_10049_Orc_Tretor_MT,	"OC1");
 
 	// Mensch in Stollen in Felsenfestung
 

@@ -3529,6 +3529,27 @@ FUNC VOID NEBENQUESTS()
 				B_StartOtherRoutine	(Mod_1469_BUD_Graham_MT, "AUFTRITT");
 			};
 		};
+
+		// Fight against Poloch and Tretor
+
+		if (Mod_PolochTretor == 1)
+		&& (!Npc_IsInState(Mod_10048_Orc_Poloch_MT, ZS_Talk))
+		&& (!Npc_IsInState(Mod_10049_Orc_Tretor_MT, ZS_Talk))
+		{
+			Mod_PolochTretor = 2;
+			
+			B_Attack(Mod_10048_Orc_Poloch_MT, hero, AR_NONE, 0);
+			B_Attack(Mod_10049_Orc_Tretor_MT, hero, AR_NONE, 0);
+		};
+
+		if (Mod_PolochTretor == 4)
+		&& (!Npc_IsInState(Mod_10048_Orc_Poloch_MT, ZS_Talk))
+		&& (!Npc_IsInState(Mod_10049_Orc_Tretor_MT, ZS_Talk))
+		{
+			Mod_PolochTretor = 5;
+			
+			B_StartOtherRoutine(Mod_10048_Orc_Poloch_MT, "AWAY");
+		};
 	};
 
 	// Eisgebiet

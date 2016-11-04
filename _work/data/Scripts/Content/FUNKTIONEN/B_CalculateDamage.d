@@ -988,7 +988,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			taeter.attribute[ATR_HITPOINTS] += damage / 20; // 5% des Schadens kommen an HP dazu
 		};
-	};	
+	};
 
 	B_MagicHurtNpc	(taeter, opfer, damage);
 };

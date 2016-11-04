@@ -118,6 +118,8 @@ FUNC VOID Info_Mod_Biftek_Mager2_Info()
 	B_GivePlayerXP(350);
 
 	B_SetTopicStatus	(TOPIC_MOD_BIFTEK_FLEISCHERSATZ, LOG_SUCCESS);
+
+	CurrentNQ += 1;
 	
 	Mod_Biftek_Day = Wld_GetDay();
 };

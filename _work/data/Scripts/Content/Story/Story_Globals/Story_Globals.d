@@ -1874,6 +1874,9 @@ var int Mod_Soja_027;
 var int Mod_Soja_028;
 var int Mod_Soja_029;
 var int Mod_Soja_030;
+var int Mod_PolochTretor;
+var int Mod_Poloch_Beat;
+var int Mod_Tretor_Beat;
 
 var C_NPC NPC_Orkjaeger_01;
 var C_NPC NPC_Orkjaeger_02;

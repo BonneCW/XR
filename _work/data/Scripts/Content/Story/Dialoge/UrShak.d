@@ -302,6 +302,36 @@ FUNC VOID Info_Mod_UrShak_Biftek2_Info()
 	AI_Output(hero, self, "Info_Mod_UrShak_Biftek2_15_04"); //Kein Ding.
 };
 
+INSTANCE Info_Mod_UrShak_PolochTretor (C_INFO)
+{
+	npc		= Mod_10001_Orc_UrShak_MT;
+	nr		= 1;
+	condition	= Info_Mod_UrShak_PolochTretor_Condition;
+	information	= Info_Mod_UrShak_PolochTretor_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_UrShak_PolochTretor_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Poloch_Won))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Poloch_Lost))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_UrShak_PolochTretor_Info()
+{
+	AI_Output(self, hero, "Info_Mod_UrShak_PolochTretor_18_00"); //Ur Shak hören, Tretor und Poloch jetzt beste Freunde, und Mensch haben seine Finger im Spiel.
+	AI_Output(hero, self, "Info_Mod_UrShak_PolochTretor_15_01"); //Ja, auf Kosten ein paar blauer Flecke.
+	AI_Output(self, hero, "Info_Mod_UrShak_PolochTretor_18_02"); //Mensch nehmen, was Ur Shak finden in Bergfestung. Orks nicht können gebrauchen.
+	
+	B_GiveInvItems(self, hero, ItMi_Gold, 150);
+	
+	AI_Output(hero, self, "Info_Mod_UrShak_PolochTretor_15_03"); //Danke.
+};
+
 INSTANCE Info_Mod_UrShak_EXIT (C_INFO)
 {
 	npc		= Mod_10001_Orc_UrShak_MT;

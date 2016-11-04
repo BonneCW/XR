@@ -200,6 +200,42 @@ func int C_DropUnconscious2(var C_NPC slf, var C_NPC oth)
 		Npc_RemoveInvItems	(slf, ItFo_MuttonRaw, Npc_HasItems(slf, ItFo_MuttonRaw));
 		return TRUE;
 	};
+	
+	if (Mod_PolochTretor == 2)
+	&& (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_10048_Orc_Poloch_MT))
+	{
+		Npc_ClearAIQueue	(slf);
+		AI_StandUPQuick	(slf);
+		
+		Mod_Poloch_Beat = TRUE;
+		
+		if (Mod_Tretor_Beat) {
+			Mod_PolochTretor = 3;
+		};
+		
+		return TRUE;
+	};
+	if (Mod_PolochTretor == 2)
+	&& (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_10049_Orc_Tretor_MT))
+	{
+		Npc_ClearAIQueue	(slf);
+		AI_StandUPQuick	(slf);
+		
+		Mod_Tretor_Beat = TRUE;
+		
+		if (Mod_Poloch_Beat) {
+			Mod_PolochTretor = 3;
+		};
+		
+		return TRUE;
+	};
+	if (Mod_PolochTretor == 2)
+	&& (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(hero))
+	{
+		Mod_PolochTretor = 3;
+		
+		return TRUE;
+	};
 
 	if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(oth))
 	{
