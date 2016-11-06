@@ -45,14 +45,14 @@ FUNC VOID Rtn_Start_7567()
 
 FUNC VOID Rtn_Friedhof_7567()
 {	
-	TA_Guide_Player		(00,15,07,15,"NORTDGEBIET_91");
-	TA_Guide_Player		(07,15,00,15,"NORTDGEBIET_91");
+	TA_Guide_Player		(00,15,07,15,"FRIEDHOFF_3");
+	TA_Guide_Player		(07,15,00,15,"FRIEDHOFF_3");
 };
 
 FUNC VOID Rtn_Friedhof2_7567()
 {	
-	TA_Guide_Player		(00,15,07,15,"NORTDGEBIET_92");
-	TA_Guide_Player		(07,15,00,15,"NORTDGEBIET_92");
+	TA_Guide_Player		(00,15,07,15,"FRIEDHOFF_6");
+	TA_Guide_Player		(07,15,00,15,"FRIEDHOFF_6");
 };
 
 FUNC VOID Rtn_PilarsBruder_7567()

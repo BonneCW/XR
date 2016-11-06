@@ -113,7 +113,7 @@ INSTANCE Info_Mod_Luis_AtFriedhof (C_INFO)
 FUNC INT Info_Mod_Luis_AtFriedhof_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Luis_Vigonza))
-	&& (Npc_GetDistToWP(self, "NORTDGEBIET_91") < 500)
+	&& (Npc_GetDistToWP(self, "FRIEDHOFF_3") < 500)
 	{
 		return 1;
 	};
@@ -142,7 +142,7 @@ INSTANCE Info_Mod_Luis_AtFriedhof2 (C_INFO)
 FUNC INT Info_Mod_Luis_AtFriedhof2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Luis_AtFriedhof))
-	&& (Npc_GetDistToWP(self, "NORTDGEBIET_92") < 500)
+	&& (Npc_GetDistToWP(self, "FRIEDHOFF_6") < 500)
 	{
 		return 1;
 	};
@@ -155,12 +155,12 @@ FUNC VOID Info_Mod_Luis_AtFriedhof2_Info()
 
 	AI_StopProcessInfos	(self);
 
-	Wld_InsertNpc	(Gobbo_Warrior, "NORTDGEBIET_91");
-	Wld_InsertNpc	(Gobbo_Warrior, "NORTDGEBIET_91");
-	Wld_InsertNpc	(Gobbo_Warrior, "NORTDGEBIET_91");
-	Wld_InsertNpc	(Gobbo_Warrior, "NORTDGEBIET_91");
-	Wld_InsertNpc	(Gobbo_Warrior, "NORTDGEBIET_91");
-	Wld_InsertNpc	(Gobbo_Warrior, "NORTDGEBIET_91");
+	Wld_InsertNpc	(Gobbo_Warrior, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Warrior, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Warrior, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Warrior, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Warrior, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Warrior, "FRIEDHOFF_7");
 };
 
 INSTANCE Info_Mod_Luis_AtFriedhof3 (C_INFO)
