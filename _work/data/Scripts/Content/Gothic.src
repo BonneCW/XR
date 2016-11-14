@@ -53,6 +53,7 @@ NEUERUNGEN\Minispiel\B_MG_Spielfigur_Funktionen.d
 NEUERUNGEN\Minispiel\B_MG_InitialiseFeld.d
 NEUERUNGEN\Minispiel\B_MG_WalkToBestPossibility.d
 NEUERUNGEN\Minispiel\B_MG_ResetWalks.d
+NEUERUNGEN\Minispiel\B_MG_MarkToWalk.d
 NEUERUNGEN\Minispiel\B_MG_Cleanup.d
 NEUERUNGEN\Minispiel\B_MG_GameLoop.d
 

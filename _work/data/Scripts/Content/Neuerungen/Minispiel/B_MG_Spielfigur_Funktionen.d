@@ -658,6 +658,10 @@ FUNC VOID C_MG_SPIELFIGUR_WalkToField(var C_MG_SPIELFIGUR sf, var int field)
 
 	MEM_WriteStatArr(MG_Spielfeld, sf.field, 0);
 	MEM_WriteStatArr(MG_Spielfeld_Figur, sf.field, 0);
+	
+	var int fieldPtr;
+	fieldPtr = MEM_ReadStatArr(MG_Spielfeld_Texturen, sf.field);
+	View_SetTexture (fieldPtr, "MG_SPIELFELD.TGA");
 
 	sf.field = field;
 

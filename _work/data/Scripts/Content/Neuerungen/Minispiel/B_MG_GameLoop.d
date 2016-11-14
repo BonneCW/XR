@@ -45,9 +45,7 @@ FUNC VOID B_MG_GameLoop()
 	else if (MG_GameState == 3) // Figuren setzen (Loop)
 	{
 		if (MG_Spieler01 == TRUE)
-		{
-			// ToDo: Setzen der Figuren und switchen
-			
+		{			
 			if (MEM_KeyState(MOUSE_BUTTONLEFT) == KEY_PRESSED)
 			{
 				// Koordinaten ermitteln
@@ -279,8 +277,6 @@ FUNC VOID B_MG_GameLoop()
 	{
 		if (MG_Spieler01 == TRUE)
 		{
-			// ToDo: Alle Figuren verrutschen, also prüfen, welche noch nicht gerutscht sind und so und bei allen dann switchen
-
 			if (MEM_KeyState(MOUSE_BUTTONLEFT) == KEY_PRESSED)
 			{
 				if (tempFigur != 0)
@@ -824,6 +820,7 @@ FUNC VOID B_MG_GameLoop()
 				MG_Spieler01 = TRUE;
 				MG_Spieler02 = FALSE;
 
+				B_MG_MarkToWalk();
 				B_MG_ResetWalks(1);
 			};
 		};
