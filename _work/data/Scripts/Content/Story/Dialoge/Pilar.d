@@ -76,6 +76,13 @@ FUNC VOID Info_Mod_Pilar_AtHut_Info()
 	Wld_InsertNpc	(Eisgoblin, "EIS_415");
 	Wld_InsertNpc	(Eisgoblin, "EIS_415");
 	Wld_InsertNpc	(Eisgoblin, "EIS_415");
+	
+	Wld_SendTrigger("CHAD_BLOOD_01");
+	Wld_SendTrigger("CHAD_BLOOD_02");
+	Wld_SendTrigger("CHAD_BLOOD_03");
+	Wld_SendTrigger("CHAD_BLOOD_04");
+	Wld_SendTrigger("CHAD_BLOOD_05");
+	Wld_SendTrigger("CHAD_BLOOD_06");
 };
 
 INSTANCE Info_Mod_Pilar_AtHut2 (C_INFO)
