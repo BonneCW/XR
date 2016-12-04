@@ -4466,6 +4466,15 @@ FUNC VOID STARTUP_MinentalSurface ()
 
 	Wld_InsertNpc	(Mod_10003_Orc_Masshak_MT,	"OC1");
 	Wld_InsertNpc	(Mod_10004_Orc_Ashrak_MT,	"OC1");
+	Wld_InsertNpc	(Mod_10050_ORC_Elite_MT,	"OC1");
+	Wld_InsertNpc	(Mod_10051_ORC_Elite_MT,	"OC1");
+	Wld_InsertNpc	(Mod_10052_ORC_Scout_MT,	"OC1");
+	Wld_InsertNpc	(Mod_10053_ORC_Scout_MT,	"OC1");
+	Wld_InsertNpc	(Mod_10054_Orc_Warrior_MT,	"OC1");
+	Wld_InsertNpc	(Mod_10055_Orc_Schamane_MT,	"OC1");
+	Wld_InsertNpc	(Mod_10056_Orc_Warrior_MT,	"OC1");
+	Wld_InsertNpc	(Mod_10057_Orc_Warrior_MT,	"OC1");
+	Wld_InsertNpc	(Mod_10058_Orc_Schamane_MT,	"OC1");
 
 	// Bergfestung der Beliar-Anhänger
 
