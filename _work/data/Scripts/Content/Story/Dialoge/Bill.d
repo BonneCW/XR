@@ -25,7 +25,7 @@ INSTANCE Info_Mod_Bill_Rezept (C_INFO)
 	npc		= Mod_929_PIR_Bill_AW;
 	nr		= 1;
 	condition	= Info_Mod_Bill_Rezept_Condition;
-	information	= Info_Mod_BIll_Rezept_Info;
+	information	= Info_Mod_Bill_Rezept_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ich hab hier was von dir.";

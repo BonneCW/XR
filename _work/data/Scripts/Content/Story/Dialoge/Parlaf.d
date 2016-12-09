@@ -36,7 +36,7 @@ INSTANCE Info_Mod_Parlaf_HaradLehrling (C_INFO)
 	npc		= Mil_309_Stadtwache;
 	nr		= 1;
 	condition	= Info_Mod_Parlaf_HaradLehrling_Condition;
-	information	= Info_MoD_Parlaf_HaradLehrling_Info;
+	information	= Info_Mod_Parlaf_HaradLehrling_Info;
 	permanent	= 0;
 	important	= 1;
 };
@@ -71,7 +71,7 @@ INSTANCE Info_Mod_Parlaf_Randolph (C_INFO)
 	npc		= Mil_309_Stadtwache;
 	nr		= 1;
 	condition	= Info_Mod_Parlaf_Randolph_Condition;
-	information	= Info_MoD_Parlaf_Randolph_Info;
+	information	= Info_Mod_Parlaf_Randolph_Info;
 	permanent	= 0;
 	important	= 1;
 };
@@ -99,7 +99,7 @@ INSTANCE Info_Mod_Parlaf_RandolphWeg (C_INFO)
 	npc		= Mil_309_Stadtwache;
 	nr		= 1;
 	condition	= Info_Mod_Parlaf_RandolphWeg_Condition;
-	information	= Info_MoD_Parlaf_RandolphWeg_Info;
+	information	= Info_Mod_Parlaf_RandolphWeg_Info;
 	permanent	= 0;
 	important	= 1;
 };
@@ -128,7 +128,7 @@ INSTANCE Info_Mod_Parlaf_Rasend (C_INFO)
 	npc		= Mil_309_Stadtwache;
 	nr		= 1;
 	condition	= Info_Mod_Parlaf_Rasend_Condition;
-	information	= Info_MoD_Parlaf_Rasend_Info;
+	information	= Info_Mod_Parlaf_Rasend_Info;
 	permanent	= 0;
 	important	= 1;
 };
@@ -152,7 +152,7 @@ INSTANCE Info_Mod_Parlaf_Hi (C_INFO)
 	npc		= Mil_309_Stadtwache;
 	nr		= 1;
 	condition	= Info_Mod_Parlaf_Hi_Condition;
-	information	= Info_MoD_Parlaf_Hi_Info;
+	information	= Info_Mod_Parlaf_Hi_Info;
 	permanent	= 0;
 	important	= 1;
 };
@@ -224,7 +224,7 @@ INSTANCE Info_Mod_Parlaf_DunklerPilger (C_INFO)
 	npc		= Mil_309_Stadtwache;
 	nr		= 1;
 	condition	= Info_Mod_Parlaf_DunklerPilger_Condition;
-	information	= Info_MoD_Parlaf_DunklerPilger_Info;
+	information	= Info_Mod_Parlaf_DunklerPilger_Info;
 	permanent	= 0;
 	important	= 0;
 	description	= "Ist hier vor kurzem ein Pilger in schwarzem Gewand vorbeigekommen?";
@@ -250,7 +250,7 @@ INSTANCE Info_Mod_Parlaf_Daemonisch (C_INFO)
 	npc		= Mil_309_Stadtwache;
 	nr		= 1;
 	condition	= Info_Mod_Parlaf_Daemonisch_Condition;
-	information	= Info_MoD_Parlaf_Daemonisch_Info;
+	information	= Info_Mod_Parlaf_Daemonisch_Info;
 	permanent	= 1;
 	important	= 1;
 };

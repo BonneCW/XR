@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Mud_ShutUp (C_INFO)
 	information	= Info_Mod_Mud_ShutUp_Info;
 	permanent	= 1;
 	description	= "Kannst du mal BITTE einen Moment die Klappe halten?";
-};                       
+};
 
 FUNC INT Info_Mod_Mud_ShutUp_Condition()
 {

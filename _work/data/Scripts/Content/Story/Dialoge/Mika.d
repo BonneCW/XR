@@ -237,7 +237,7 @@ INSTANCE Info_Mod_Mika_Randolph (C_INFO)
 	npc		= Mod_598_MIL_Mika_NW;
 	nr		= 1;
 	condition	= Info_Mod_Mika_Randolph_Condition;
-	information	= Info_MoD_Mika_Randolph_Info;
+	information	= Info_Mod_Mika_Randolph_Info;
 	permanent	= 0;
 	important	= 1;
 };
@@ -265,7 +265,7 @@ INSTANCE Info_Mod_Mika_RandolphWeg (C_INFO)
 	npc		= Mod_598_MIL_Mika_NW;
 	nr		= 1;
 	condition	= Info_Mod_Mika_RandolphWeg_Condition;
-	information	= Info_MoD_Mika_RandolphWeg_Info;
+	information	= Info_Mod_Mika_RandolphWeg_Info;
 	permanent	= 0;
 	important	= 1;
 };
@@ -294,7 +294,7 @@ INSTANCE Info_Mod_Mika_Dokumente (C_INFO)
 	npc		= Mod_598_MIL_Mika_NW;
 	nr		= 1;
 	condition	= Info_Mod_Mika_Dokumente_Condition;
-	information	= Info_MoD_Mika_Dokumente_Info;
+	information	= Info_Mod_Mika_Dokumente_Info;
 	permanent	= 1;
 	important	= 0;
 	description	= "Du hast die Zettel von Baltram konfisziert?";
@@ -397,7 +397,7 @@ INSTANCE Info_Mod_Mika_VinoBrennerei (C_INFO)
 	npc		= Mod_598_MIL_Mika_NW;
 	nr		= 1;
 	condition	= Info_Mod_Mika_VinoBrennerei_Condition;
-	information	= Info_MoD_Mika_VinoBrennerei_Info;
+	information	= Info_Mod_Mika_VinoBrennerei_Info;
 	permanent	= 0;
 	important	= 1;
 };
@@ -438,7 +438,7 @@ INSTANCE Info_Mod_Mika_AndreVermaechtnis (C_INFO)
 	npc		= Mod_598_MIL_Mika_NW;
 	nr		= 1;
 	condition	= Info_Mod_Mika_AndreVermaechtnis_Condition;
-	information	= Info_MoD_Mika_AndreVermaechtnis_Info;
+	information	= Info_Mod_Mika_AndreVermaechtnis_Info;
 	permanent	= 0;
 	important	= 1;
 };
@@ -465,7 +465,7 @@ INSTANCE Info_Mod_Mika_AndreVermaechtnis2 (C_INFO)
 	npc		= Mod_598_MIL_Mika_NW;
 	nr		= 1;
 	condition	= Info_Mod_Mika_AndreVermaechtnis2_Condition;
-	information	= Info_MoD_Mika_AndreVermaechtnis2_Info;
+	information	= Info_Mod_Mika_AndreVermaechtnis2_Info;
 	permanent	= 0;
 	important	= 1;
 };
@@ -497,7 +497,7 @@ INSTANCE Info_Mod_Mika_Pflanzensammler (C_INFO)
 	npc		= Mod_598_MIL_Mika_NW;
 	nr		= 1;
 	condition	= Info_Mod_Mika_Pflanzensammler_Condition;
-	information	= Info_MoD_Mika_Pflanzensammler_Info;
+	information	= Info_Mod_Mika_Pflanzensammler_Info;
 	permanent	= 0;
 	important	= 1;
 };
