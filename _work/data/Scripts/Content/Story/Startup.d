@@ -5389,6 +5389,44 @@ FUNC VOID STARTUP_MinentalSurface ()
 	Wld_InsertNpc	(Gobbo_Skeleton, "WP_OM_HOEHLE_08");
 	Wld_InsertNpc	(Gobbo_Skeleton, "WP_OM_HOEHLE_10");
 	Wld_InsertNpc	(Gobbo_Skeleton, "WP_OM_HOEHLE_11");
+
+	// Orks in Orkgebiet
+
+	Wld_InsertNpc	(OrcBiter, "OW_PATH_BLACKWOLF07_SPAWN01");
+	Wld_InsertNpc	(OrcBiter, "OW_PATH_BLACKWOLF07_SPAWN01");
+	
+	Wld_InsertNpc	(OrcWarrior_Roam, "OW_PATH_104");
+	Wld_InsertNpc	(Orcdog, "OW_PATH_104");
+	
+	Wld_InsertNpc	(OrcWarrior_Roam, "CASTLE_4");
+	Wld_InsertNpc	(OrcWarrior_Roam, "CASTLE_4");
+	
+	Wld_InsertNpc	(OrcWarrior_Roam, "OW_PATH_SNAPPER02_SPAWN02");
+	Wld_InsertNpc	(Orcdog, "OW_PATH_SNAPPER02_SPAWN02");
+	Wld_InsertNpc	(OrcShaman_Sit, "OW_PATH_SNAPPER02_SPAWN02");
+	
+	Wld_InsertNpc	(OrcBiter, "SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
+	Wld_InsertNpc	(OrcBiter, "SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
+	Wld_InsertNpc	(OrcBiter, "SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
+	
+	Wld_InsertNpc	(OrcWarrior_Sit, "SPAWN_OW_SNAPPER_INCAVE_DM2");
+	
+	Wld_InsertNpc	(OrcWarrior_Roam, "SPAWN_OW_WARAN_ORC_01");
+	Wld_InsertNpc	(Orcdog, "SPAWN_OW_WARAN_ORC_01");
+	
+	Wld_InsertNpc	(OrcBiter, "SPAWN_OW_MOLERAT_ORC_04");
+	Wld_InsertNpc	(OrcBiter, "SPAWN_OW_MOLERAT_ORC_04");
+	
+	Wld_InsertNpc	(OrcElite_Roam, "OW_PATH_195");
+	Wld_InsertNpc	(OrcWarrior_Roam, "OW_PATH_195");
+	
+	Wld_InsertNpc	(OrcElite_Roam, "OW_PATH_3_05");
+	Wld_InsertNpc	(OrcElite_Roam, "OW_PATH_3_05");
+	
+	Wld_InsertNpc	(OrcBiter, "OW_PATH_162");
+	Wld_InsertNpc	(OrcBiter, "OW_PATH_162");
+	Wld_InsertNpc	(OrcBiter, "OW_PATH_162");
+	Wld_InsertNpc	(OrcBiter, "OW_PATH_162");
 };
 
 FUNC VOID INIT_MinentalSurface ()
