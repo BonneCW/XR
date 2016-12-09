@@ -504,6 +504,48 @@ FUNC VOID HAUPTQUESTS()
 			AI_Teleport	(PC_Friend_AW, "PC_HERO");
 			B_StartOtherRoutine	(PC_Friend_AW, "BACK");
 		};
+		
+		// Puzzlespiel bei Argez
+		
+		if (Npc_KnowsInfo(hero, Info_Mod_Argez_AW_Stab2))
+		&& (Mod_Argez_Puzzle == 0)
+		&& (!Npc_IsInState(PC_Friend_AW, ZS_Talk)) {
+			Mod_Argez_Puzzle = 1;
+			
+			Mod_Uriziel_Background = View_CreatePxl(0, 0, Print_Screen[PS_X], Print_Screen[PS_Y]);
+			View_SetTexture(Mod_Uriziel_Background, "WHITE.TGA");
+			View_Open(Mod_Uriziel_Background);
+			Mod_Uriziel_Frame = View_CreatePxl(Print_Screen[PS_X] / 2 - 119, Print_Screen[PS_Y] / 2 - 411, Print_Screen[PS_X] / 2 - 119 + 238, Print_Screen[PS_Y] / 2 - 411 + 821);
+			View_SetTexture(Mod_Uriziel_Frame, "BORDER.TGA");
+			View_Open(Mod_Uriziel_Frame);
+			
+			Mod_Uriziel_Piece1 = Button_CreatePxl(r_Max(Print_Screen[PS_X] - 121), r_Max(Print_Screen[PS_Y] - 178), 121, 178, "P1.TGA", Button_Null, Button_Null, PuzzleButton_Click);
+			Button_Show(Mod_Uriziel_Piece1);
+			
+			Mod_Uriziel_Piece2 = Button_CreatePxl(r_Max(Print_Screen[PS_X] - 126), r_Max(Print_Screen[PS_Y] - 318), 126, 318, "P2.TGA", Button_Null, Button_Null, PuzzleButton_Click);
+			Button_Show(Mod_Uriziel_Piece2);
+			
+			Mod_Uriziel_Piece3 = Button_CreatePxl(r_Max(Print_Screen[PS_X] - 138), r_Max(Print_Screen[PS_Y] - 205), 138, 205, "P3.TGA", Button_Null, Button_Null, PuzzleButton_Click);
+			Button_Show(Mod_Uriziel_Piece3);
+			
+			Mod_Uriziel_Piece4 = Button_CreatePxl(r_Max(Print_Screen[PS_X] - 113), r_Max(Print_Screen[PS_Y] - 186), 113, 186, "P4.TGA", Button_Null, Button_Null, PuzzleButton_Click);
+			Button_Show(Mod_Uriziel_Piece4);
+			
+			Mod_Uriziel_Piece5 = Button_CreatePxl(r_Max(Print_Screen[PS_X] - 174), r_Max(Print_Screen[PS_Y] - 304), 174, 304, "P5.TGA", Button_Null, Button_Null, PuzzleButton_Click);
+			Button_Show(Mod_Uriziel_Piece5);
+			
+			Mod_Uriziel_Piece6 = Button_CreatePxl(r_Max(Print_Screen[PS_X] - 65), r_Max(Print_Screen[PS_Y] - 190), 65, 190, "P6.TGA", Button_Null, Button_Null, PuzzleButton_Click);
+			Button_Show(Mod_Uriziel_Piece6);
+			
+			Mod_Uriziel_Piece7 = Button_CreatePxl(r_Max(Print_Screen[PS_X] - 64), r_Max(Print_Screen[PS_Y] - 158), 64, 158, "P7.TGA", Button_Null, Button_Null, PuzzleButton_Click);
+			Button_Show(Mod_Uriziel_Piece7);
+			
+			Mod_Uriziel_Piece8 = Button_CreatePxl(r_Max(Print_Screen[PS_X] - 33), r_Max(Print_Screen[PS_Y] - 153), 33, 153, "P8.TGA", Button_Null, Button_Null, PuzzleButton_Click);
+			Button_Show(Mod_Uriziel_Piece8);
+			
+			Cursor_Show();
+			Cursor_NoEngine = 1;
+		};
 	};
 
 	if (CurrentLevel == NEWWORLD_ZEN)

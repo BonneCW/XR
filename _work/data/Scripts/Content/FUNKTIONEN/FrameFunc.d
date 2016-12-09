@@ -761,6 +761,10 @@ FUNC VOID FRAMEFUNC ()
 
 		Wld_PlayEffect ("SPELLFX_PRISMA", ItMi_Magieprisma_Fake, ItMi_Magieprisma_Fake, 0, 0, 0, FALSE);
 	};
+	
+	if (Mod_Argez_Puzzle == 1) {
+		Puzzle_Tick();
+	};
 
 	ObserveConsole();
 	ShowBars();

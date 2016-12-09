@@ -388,8 +388,8 @@ INSTANCE Info_Mod_Argez_AW_Stab3 (C_INFO)
 
 FUNC INT Info_Mod_Argez_AW_Stab3_Condition()
 {
-	// TODO: Richtige Bedingung ergänzen, sobald Minispiel fertig ist
 	if (Npc_KnowsInfo(hero, Info_Mod_Argez_AW_Stab2))
+	&& (Mod_Argez_Puzzle == 2)
 	{
 		return 1;
 	};

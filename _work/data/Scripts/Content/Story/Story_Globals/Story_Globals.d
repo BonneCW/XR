@@ -43,7 +43,17 @@ const int TARGET_RIGHTLEG = 6;
 
 var int Bosskampf_Pass_NW;
 
-
+var int Mod_Uriziel_Background;
+var int Mod_Uriziel_Frame;
+var int Mod_Uriziel_Piece1;
+var int Mod_Uriziel_Piece2;
+var int Mod_Uriziel_Piece3;
+var int Mod_Uriziel_Piece4;
+var int Mod_Uriziel_Piece5;
+var int Mod_Uriziel_Piece6;
+var int Mod_Uriziel_Piece7;
+var int Mod_Uriziel_Piece8;
+var int Mod_Argez_Puzzle;
 var int View_GomezTimer;
 var int View_GomezKillsIch;
 var int View_GomezKills;
