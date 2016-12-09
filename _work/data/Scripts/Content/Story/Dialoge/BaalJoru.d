@@ -18,6 +18,139 @@ FUNC VOID Info_Mod_Joru_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Joru_Hi_07_00"); //Oh, du bist zurück? Hier hat sich einiges getan, seit du das letzte Mal da warst.
 };
 
+INSTANCE Info_Mod_Joru_Sumpfmensch (C_INFO)
+{
+	npc		= Mod_2013_PSINOV_Joru_MT;
+	nr		= 1;
+	condition	= Info_Mod_Joru_Sumpfmensch_Condition;
+	information	= Info_Mod_Joru_Sumpfmensch_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Joru_Sumpfmensch_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Balor_Sumpfmensch2))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Joru_Sumpfmensch_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch_07_00"); //Da bist du ja! Sieh dir nur diesen Schlamassel an!!!
+	AI_Output(hero, self, "Info_Mod_Joru_Sumpfmensch_15_01"); //Was ist denn los?
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch_07_02"); //Es wurde gestorben und der Templer hier war involviert! Vielmehr weiß ich auch noch nicht! Die Leute hier sprechen alle von dem "heulenden Sumpfmenschen".
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch_07_03"); //Und dann schreien sie mir ins Ohr! Was soll das alles überhaupt? Und ich hab' heute noch nicht einmal einen Stängel geraucht. Als wegen des "Heulenden Sumpfmenschen".
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch_07_04"); //VERDAMMT! Ich brauch jetzt unbedingt etwas Sumpfkraut, das hält ja der sturste Steintroll nicht aus!
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch_07_05"); //Kümmer dich doch bitte um diese unschöne Sache, ja?
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "START");
+};
+
+INSTANCE Info_Mod_Joru_Sumpfmensch2 (C_INFO)
+{
+	npc		= Mod_2013_PSINOV_Joru_MT;
+	nr		= 1;
+	condition	= Info_Mod_Joru_Sumpfmensch2_Condition;
+	information	= Info_Mod_Joru_Sumpfmensch2_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Joru_Sumpfmensch2_Condition()
+{
+	if (Mod_Darrion_Sumpfmensch == 3)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Joru_Sumpfmensch2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Joru_Sumpfmensch2_15_00"); //...und dann habe ich ihn hierher gebracht.
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch2_07_01"); //Das wird ja immer verworrener und verwirrender, da schlägt meine Migräne wieder zu... Aus Darrion werden wir wohl in naher Zukunft nichts raus kriegen.
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch2_07_02"); //Diesen Schlüssel hat er verloren. Vielleicht hilft er dir bei deiner Suche nach Informationen.
+	
+	B_GiveInvItems(self, hero, ItKe_Darrion, 1);
+	
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch2_07_03"); //Am besten versuchst du ein paar seiner Freunde zu befragen, während ich mich um diesen fürchterlichen Migräneanfall kümmere.
+	
+	B_UseItem(self, ItMi_Joint);
+
+	AI_StopProcessInfos	(self);
+
+	B_StartOtherRoutine	(self, "START");
+	
+	B_LogEntry	(TOPIC_MOD_SL_SUMPFMENSCH, "Darrion ist im Sumpf K.O. gegangen. Ich sollte mich ein wenig mich ein wenig umhören. Vielleicht hat Fortuno noch ein paar Informationen über Darrion.");
+};
+
+INSTANCE Info_Mod_Joru_Sumpfmensch3 (C_INFO)
+{
+	npc		= Mod_2013_PSINOV_Joru_MT;
+	nr		= 1;
+	condition	= Info_Mod_Joru_Sumpfmensch3_Condition;
+	information	= Info_Mod_Joru_Sumpfmensch3_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Joru_Sumpfmensch3_Condition()
+{
+	if (Mod_Darrion_Sumpfmensch == 6)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Joru_Sumpfmensch3_Info()
+{
+	var c_npc Joru; Joru = Hlp_GetNpc(Mod_2013_PSINOV_Joru_MT);
+	var c_npc Darrion; Darrion = Hlp_GetNpc(Mod_2014_PSINOV_Darrion_MT);
+
+	TRIA_Invite(Darrion);
+	TRIA_Start();
+
+	TRIA_Next(Joru);
+	
+	AI_Output(hero, self, "Info_Mod_Joru_Sumpfmensch3_15_00"); //... und wir sind mit dem Golem hierhergekommen um dir Bericht zu erstatten.
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch3_07_01"); //Soso, verzwickt, verzwackt, verzwuckt, die ganze Geschichte, aber durchaus spannend mit der einen oder anderen Wendung.
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch3_07_02"); //Aber Fakt ist, dass das hier ein Sumpfgolem ist. Ein Monster. Wir müssen es töten. Wobei... eine Frage habe ich noch. Warum heult das Ding überhaupt?
+	
+	TRIA_Next(Darrion);
+	
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch3_11_03"); //Naja... als ich mit ihm Freundschaft geschlossen habe, habe ich ihm einen Namen gegeben... den meines alten Captains.
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch3_11_04"); //Und Ich glaube, er hat versucht, diesen Namen auszusprechen... mehr als Heulen ist aber nie daraus geworden...
+
+	TRIA_Next(Joru);
+	
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch3_07_05"); //WAS? Das Ding hat einen Namen? Wie heißt es?
+	
+	TRIA_Next(Darrion);
+	
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch3_11_06"); //Roger...
+
+	TRIA_Next(Joru);
+	
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch3_07_07"); //Soso... Fakt ist, das Ding hat einen Namen, es heißt Roger... das heißt, ich kann nicht mehr Monster zu ihm sagen... Roger zu töten wäre eine bodenlose Gemeinheit... da gibt es nur ein Problem...
+	AI_Output(hero, self, "Info_Mod_Joru_Sumpfmensch3_15_08"); //Welches?
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch3_07_09"); //Ich glaube nicht, dass wir eine Novizenrobe in seiner Größe haben.
+	
+	TRIA_Next(Darrion);
+	
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch3_11_10"); //Du meinst, Roger kann bleiben und ihr werdet ihm nichts tun?
+
+	TRIA_Next(Joru);
+	
+	AI_Output(self, hero, "Info_Mod_Joru_Sumpfmensch3_07_11"); //Natürlich nicht! Er muss uns vor den Monstern beschützten. ER MUSS DIE MONSTER TÖTEN! DIE MOOOOOOOOONSTER TÖÖÖÖTEN!
+
+	TRIA_Finish();
+
+	AI_StopProcessInfos	(self);
+};
+
 INSTANCE Info_Mod_Joru_GotoTempel (C_INFO)
 {
 	npc		= Mod_2013_PSINOV_Joru_MT;

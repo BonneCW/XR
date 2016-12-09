@@ -240,6 +240,30 @@ INSTANCE SwampGolem_Schlacht_25	(Mst_Default_Addon_SwampGolem)
 	Npc_SetToFistMode	(self);
 };
 
+INSTANCE SwampGolem_Sumpfmensch_01	(Mst_Default_Addon_SwampGolem)
+{
+	B_SetVisuals_Swampgolem();
+	Npc_SetToFistMode	(self);
+};
+
+INSTANCE SwampGolem_Sumpfmensch_02	(Mst_Default_Addon_SwampGolem)
+{
+	B_SetVisuals_Swampgolem();
+	Npc_SetToFistMode	(self);
+};
+
+INSTANCE SwampGolem_Sumpfmensch_03	(Mst_Default_Addon_SwampGolem)
+{
+	B_SetVisuals_Swampgolem();
+	Npc_SetToFistMode	(self);
+};
+
+INSTANCE SwampGolem_Sumpfmensch_04	(Mst_Default_Addon_SwampGolem)
+{
+	B_SetVisuals_Swampgolem();
+	Npc_SetToFistMode	(self);
+};
+
 //******************
 //	SwampGolem_Valley
 //******************

@@ -202,3 +202,45 @@ FUNC VOID Rtn_ToGorNaRan_2014 ()
 	TA_Guide_Player		(00,00,12,00,"PSI_GUARD3");
 	TA_Guide_Player		(12,00,24,00,"PSI_GUARD3");
 };
+
+FUNC VOID Rtn_GuideToJoru_2014 ()
+{
+	TA_Guide_Player 	(08,00,20,00,"PATH_AROUND_PSI07");
+	TA_Guide_Player 	(20,00,08,00,"PATH_AROUND_PSI07");
+};
+
+FUNC VOID Rtn_Sumpfmensch_2014 ()
+{
+	TA_RunToWP		(10,00,22,00,"PATH_TAKE_HERB_024");
+	TA_RunToWP		(22,00,10,00,"PATH_TAKE_HERB_024");
+};
+
+FUNC VOID Rtn_KO_2014 ()
+{
+	TA_Totstellen		(10,00,22,00,"PATH_TAKE_HERB_024");
+	TA_Totstellen		(22,00,10,00,"PATH_TAKE_HERB_024");
+};
+
+FUNC VOID Rtn_KOATHOME_2014 ()
+{
+	TA_Sleep		(10,00,22,00,"PSI_26_HUT_IN");
+	TA_Sleep		(22,00,10,00,"PSI_26_HUT_IN");
+};
+
+FUNC VOID Rtn_Wach_2014 ()
+{
+	TA_Sit_Chair		(10,00,22,00,"PSI_26_HUT_IN");
+	TA_Sit_Chair		(22,00,10,00,"PSI_26_HUT_IN");
+};
+
+FUNC VOID Rtn_GuideToFlower_2014 ()
+{
+	TA_Guide_Player		(10,00,22,00,"OW_PATH_BLOODFLY11_SPAWN01");
+	TA_Guide_Player		(22,00,10,00,"OW_PATH_BLOODFLY11_SPAWN01");
+};
+
+FUNC VOID Rtn_AtJoru_2014 ()
+{
+	TA_Stand_ArmsCrossed		(10,00,22,00,"PSI_11_HUT_EX");
+	TA_Stand_ArmsCrossed		(22,00,10,00,"PSI_11_HUT_EX");
+};

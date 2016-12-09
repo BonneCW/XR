@@ -1080,6 +1080,46 @@ FUNC VOID Info_Mod_Greg_Todesangst_Info()
 	B_LogEntry	(TOPIC_MOD_ASS_HEIMWEH, "Unglaublich! Der Kapitän glaubt doch tatsächlich den Sprüchen eines dahergelaufenen Lumpen. Wahrsager, dass ich nicht lache! Das kann eigentlich nur der Eremit vom Tal sein. Was der wohl bezweckt hat? Jedenfalls muss ich Bericht erstatten. Den Rat wird's nicht erfreuen ...");
 };
 
+INSTANCE Info_Mod_Greg_Sumpfmensch (C_INFO)
+{
+	npc		= Mod_764_PIR_Greg_AW;
+	nr		= 1;
+	condition	= Info_Mod_Greg_Sumpfmensch_Condition;
+	information	= Info_Mod_Greg_Sumpfmensch_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich wollte dich etwas wegen eines ehemaligen Piraten fragen.";
+};
+
+FUNC INT Info_Mod_Greg_Sumpfmensch_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Fortuno_Sumpfmensch2))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Greg_Sumpfmensch_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Greg_Sumpfmensch_15_00"); //Ich wollte dich etwas wegen eines ehemaligen Piraten fragen.
+	AI_Output(self, hero, "Info_Mod_Greg_Sumpfmensch_01_01"); //Ehemaliger Pirat? Sowas gibt's doch garnicht! Einmal Pirat, immer Pirat, das ist die Devise!
+	AI_Output(hero, self, "Info_Mod_Greg_Sumpfmensch_15_02"); //Es handelt sich dabei um Darrion.
+	AI_Output(self, hero, "Info_Mod_Greg_Sumpfmensch_01_03"); //WAS?! Dieser Sohn einer räudigen Hündin? Sag bloß der alte Dreckskerl lebt noch?!
+	AI_Output(hero, self, "Info_Mod_Greg_Sumpfmensch_15_04"); //Er ist mittlerweile einer Sumpfgemeinschaft beigetreten und hat dort bis vor kurzem ein ruhiges Leben geführt.
+	AI_Output(self, hero, "Info_Mod_Greg_Sumpfmensch_01_05"); //Zur Ruhe gesetzt hat er sich also? Dass ich das noch erleben darf.
+	AI_Output(hero, self, "Info_Mod_Greg_Sumpfmensch_15_06"); //So ruhig hatte er es in letzter Zeit nicht. Er hat sich vor kurzem mit einem Sumpfmonster angelegt und das ist nicht so gut für ihn ausgegangen. So schnell wird er wohl nicht wieder aufwachen.
+	AI_Output(self, hero, "Info_Mod_Greg_Sumpfmensch_01_07"); //Was sagst du da? Ein Monster, das es mit dem alten Darrion aufnehmen kann? Geht da ein verdammter Drache in dem Sumpf um oder was?
+	AI_Output(hero, self, "Info_Mod_Greg_Sumpfmensch_15_08"); //Was auch immer es ist, es ist gefährlich. Und ich glaube, Darrion weiß mehr über das Monster, als er sagen wollte. Kannst du dir einen Reim darauf machen?
+	AI_Output(self, hero, "Info_Mod_Greg_Sumpfmensch_01_09"); //Tut mir Leid, min Jung, aber aus seinen Angelegenheiten hab' ich mich immer schön rausgehalten.
+	AI_Output(self, hero, "Info_Mod_Greg_Sumpfmensch_01_10"); //Darrion und ich waren die beiden Entertruppführer unter unsrem vorherigen Captain. Als er mich zu seinem Nachfolger ernannte, hat Darrion uns nur noch sporadisch aufgesucht.
+	AI_Output(self, hero, "Info_Mod_Greg_Sumpfmensch_01_11"); //Der hat die meiste Zeit beim alten Turm in der Nähe des Lagers verbracht. Ist nur hin und wieder Mal vorbeigekommen, um etwas zu handeln und hin und wieder die Frischlinge untern Tisch zu saufen!
+	AI_Output(self, hero, "Info_Mod_Greg_Sumpfmensch_01_12"); //Sprich doch mal mit Skip, vielleicht hat der 'ne Info für dich.
+	AI_Output(hero, self, "Info_Mod_Greg_Sumpfmensch_15_13"); //Mach ich. Danke.
+	AI_Output(self, hero, "Info_Mod_Greg_Sumpfmensch_01_14"); //Kein Ding, min Jung!
+
+	B_LogEntry	(TOPIC_MOD_SL_SUMPFMENSCH, "Greg hat erzählt, dass Darrion sich viel beim alten Turm in der Nähe des Piratenlagers aufgehalten hat. Skip hat vielleicht noch weitere Informationen für mich.");
+};
+
 INSTANCE Info_Mod_Greg_Steg (C_INFO)
 {
 	npc		= Mod_764_PIR_Greg_AW;

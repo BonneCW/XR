@@ -148,6 +148,101 @@ FUNC VOID Info_Mod_Balor_Sumpfmensch_Info()
 	B_StartOtherRoutine	(Mod_1338_PSINOV_Novize_MT, "SUMPFMENSCH");
 };
 
+INSTANCE Info_Mod_Balor_Sumpfmensch2 (C_INFO)
+{
+	npc		= Mod_3001_PSINOV_Balor_MT;
+	nr		= 1;
+	condition	= Info_Mod_Balor_Sumpfmensch2_Condition;
+	information	= Info_Mod_Balor_Sumpfmensch2_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Balor_Sumpfmensch2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Darrion_Sumpfmensch))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Balor_Sumpfmensch2_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Balor_Sumpfmensch2_01_00"); //Schnell, Baal Joru sucht dich überall, komm mit!
+	
+	AI_StopProcessInfos(self);
+	
+	B_StartOtherRoutine(self, "GUIDETOJORU");
+	B_StartOtherRoutine(Mod_2014_PSINOV_Darrion_MT, "GUIDETOJORU");
+	B_StartOtherRoutine(Mod_2013_PSINOV_Joru_MT, "SUMPFMENSCH");
+	B_StartOtherRoutine(Mod_1924_TPL_GorNaMon_MT, "SUMPFMENSCH");
+	
+	Wld_InsertNpc(Mod_70000_TPL_Templer_MT, "OC1");
+	B_KillNpc(Mod_70000_TPL_Templer_MT);
+};
+
+INSTANCE Info_Mod_Balor_Sumpfmensch3 (C_INFO)
+{
+	npc		= Mod_3001_PSINOV_Balor_MT;
+	nr		= 1;
+	condition	= Info_Mod_Balor_Sumpfmensch3_Condition;
+	information	= Info_Mod_Balor_Sumpfmensch3_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Balor_Sumpfmensch3_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Darrion_Sumpfmensch2))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Balor_Sumpfmensch3_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Balor_Sumpfmensch3_01_00"); //Nimm's dem alten Darrion nicht übel. Der ist nur total zerstreut, seit er diesem Sumpfmenschen begegnet ist.
+	AI_Output(self, hero, "Info_Mod_Balor_Sumpfmensch3_01_01"); //Der traut sich nachts nichtmal mehr aus seiner Hütte raus. Außer natürlich für seine allnächtlichen... nennen wir's mal "Sitzung" im Sumpf. (lacht)
+	
+	AI_StopProcessInfos(self);
+	
+	B_StartOtherRoutine(self, "START");
+	
+	B_LogEntry	(TOPIC_MOD_SL_SUMPFMENSCH, "Darrion geht jede Nacht in den Sumpf. Ich sollte mich mal an seine Fersen heften.");
+};
+
+INSTANCE Info_Mod_Balor_Sumpfmensch4 (C_INFO)
+{
+	npc		= Mod_3001_PSINOV_Balor_MT;
+	nr		= 1;
+	condition	= Info_Mod_Balor_Sumpfmensch4_Condition;
+	information	= Info_Mod_Balor_Sumpfmensch4_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Balor_Sumpfmensch4_Condition()
+{
+	if (Mod_Darrion_Sumpfmensch == 4)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Balor_Sumpfmensch4_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Balor_Sumpfmensch4_01_00"); //Da bist ja. Darrion hat nach dir gesucht.
+	AI_Output(hero, self, "Info_Mod_Balor_Sumpfmensch4_15_01"); //Er ist wieder aufgewacht?
+	AI_Output(self, hero, "Info_Mod_Balor_Sumpfmensch4_01_02"); //Das oder er ist ein ziemlich gesprächiger Schläfer...
+	
+	AI_StopProcessInfos(self);
+	
+	B_StartOtherRoutine(self, "START");
+	B_StartOtherRoutine(Mod_2014_PSINOV_Darrion_MT, "WACH");
+	
+	B_LogEntry	(TOPIC_MOD_SL_SUMPFMENSCH, "Darrion ist wieder aufgewacht. Ich sollte mit ihm sprechen.");
+};
+
 INSTANCE Info_Mod_Balor_Woher (C_INFO)
 {
 	npc		= Mod_3001_PSINOV_Balor_MT;

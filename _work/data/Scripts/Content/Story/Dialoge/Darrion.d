@@ -457,6 +457,8 @@ FUNC VOID Info_Mod_Darrion_Sumpfmensch_B()
 	Info_ClearChoices	(Info_Mod_Darrion_Sumpfmensch);
 
 	AI_StopProcessInfos	(self);
+	
+	B_StartOtherRoutine(Mod_3001_PSINOV_Balor_MT, "ATDARRION");
 };
 
 FUNC VOID Info_Mod_Darrion_Sumpfmensch_A()
@@ -464,6 +466,153 @@ FUNC VOID Info_Mod_Darrion_Sumpfmensch_A()
 	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch_A_15_00"); //Was für spezielles Sumpfkraut hast du da gepflanzt?
 	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_A_11_01"); //Das war ganz was Feines, das hab ich aus dem großen Sumpf der ein bisschen von der Piratenbucht entfernt liegt ausgegraben und mitgebracht.
 	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch_A_11_02"); //Musste ein paar ziemlich hässliche Viecher umhaun' um da dran zu kommen.
+};
+
+INSTANCE Info_Mod_Darrion_Sumpfmensch2 (C_INFO)
+{
+	npc		= Mod_2014_PSINOV_Darrion_MT;
+	nr		= 1;
+	condition	= Info_Mod_Darrion_Sumpfmensch2_Condition;
+	information	= Info_Mod_Darrion_Sumpfmensch2_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Darrion_Sumpfmensch2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_GorNaMon_Sumpfmensch))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Darrion_Sumpfmensch2_Info()
+{
+	AI_TurnAway(self, hero);
+	
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch2_11_00"); //(zu sich selbst) Kann es sein, dass er...? Nein nein nein, vollkommen ausgeschlossen, ganz unmöglich!!! Er würde nie... aber was wenn doch? Kann es sein, dass er...?
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch2_15_01"); //Warum so nervös?
+	
+	AI_TurnToNpc(self, hero);
+	
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch2_11_02"); //Was?! Achso, äh... nervös? Wie kommst du den darauf? (Gezwungenes Lachen)
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch2_15_03"); //Was ist los?
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch2_11_04"); //Was los ist? Was soll los sein? (Gezwungenes Lachen) Garnichts, garnichts, aber mir fällt gerade ein, dass ich den Tee noch am Feuer stehen habe, ich sollte mich besser beeilen!
+	
+	AI_StopProcessInfos(self);
+
+	B_StartOtherRoutine	(self, "START");
+};
+
+INSTANCE Info_Mod_Darrion_Sumpfmensch3 (C_INFO)
+{
+	npc		= Mod_2014_PSINOV_Darrion_MT;
+	nr		= 1;
+	condition	= Info_Mod_Darrion_Sumpfmensch3_Condition;
+	information	= Info_Mod_Darrion_Sumpfmensch3_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Na. Ausgeschlafen?";
+};
+
+FUNC INT Info_Mod_Darrion_Sumpfmensch3_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Balor_Sumpfmensch4))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Darrion_Sumpfmensch3_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch3_15_00"); //Na. Ausgeschlafen?
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch3_11_01"); //Ich habe gehört, du warst bei den Piraten...
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch3_15_02"); //Ja. Und bei denen habe ich so einige interessante Sachen erfahren.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch3_11_03"); //Da ich meinen alten Schlüssel nirgendwo mehr finde, hast du wohl ziemlich viel erfahren, wie?
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch3_15_04"); //Genug auf jeden Fall. Ich weiß, dass du nur hierhergekommen bist, um einen guten Platz für dein Kraut zu finden.
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch3_15_05"); //Und ich vermute mal, die Blätter auf die du es abgesehen hast waren nicht das einzige, das aus der Pflanze gewachsen ist, stimmt's?
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch3_11_06"); //(seufzt tief) Ja, du hast Recht. Der heulende Sumpfmensch ist in Wirklichkeit ein Sumpfgolem. Er ist an der Pflanze getrieben.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch3_11_07"); //Zuerst habe ich ihn nur für eine seltsame Wurzel gehalten, irgendwann stand plötzlich der kleine Golem vor mir und sah mich mit großen, angsterfüllten Augen an.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch3_11_08"); //Ich weiß, ich hätte das Biest direkt abschlachten sollen, aber ich hab's nicht über mein salzwassergetränktes Herz gebracht.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch3_11_09"); //Ich hab den Kleinen laufen lassen, aber er ist mir im Sumpf nicht mehr von der Seite gewichen. Irgendwann hab ich mich damit abgefunden.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch3_11_10"); //Es mag seltsam klingen, aber wir haben wohl so etwas wie Freundschaft geschlossen.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch3_11_11"); //Ich wusste, dass die Templer diesen Golem bei erstem Kontakt niedermetzeln würden, also habe ich allen die Geschichte vom heulenden Sumpfmenschen erzählt, um sie vom Sumpf fern zu halten.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch3_11_12"); //Aber dann hat er plötzlich begonnen, Leute anzugreifen. Als ich in den Sumpf wollte, um zu sehen was mit ihm los ist, hat er mich einfach umgehauen... und wie ich gehört habe, hast du dann das gleiche mit ihm gemacht.
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch3_15_13"); //Da wär ich mir nicht sicher. Ich war auch bei dem Eremiten, der dir das Buch übersetzt hat.
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch3_15_14"); //Er hat mich gebeten, dir mitzuteilen, dass die Pflanze in irgendeinem Zusammenhang mit fünf Sumpfriesen stehen soll.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch3_11_15"); //Du glaubst... das heißt... das heißt es gibt mehr Golems als nur meinen?!
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch3_15_16"); //Genau das wird es wohl heißen. Und vermutlich waren es die anderen vier, die die Leute und dich angegriffen haben.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch3_11_17"); //Fünf Sumpfriesen... einen davon hast du schon platt gemacht und einer ist harmlos. Dann bleiben noch drei Stück übrig. Die werd' ich erledigen!
+	AI_Output(hero, self, "Info_Mod_Darrion_Sumpfmensch3_15_18"); //Ich komme mit dir.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch3_11_19"); //Ich schulde dir was.
+	
+	AI_StopProcessInfos(self);
+
+	B_StartOtherRoutine	(self, "GUIDETOFLOWER");
+	B_StartOtherRoutine(Mod_2013_PSINOV_Joru_MT, "START");
+	
+	Wld_InsertNpc(SwampGolem_Sumpfmensch_02, "PATH_TAKE_HERB_022");
+};
+
+INSTANCE Info_Mod_Darrion_Sumpfmensch4 (C_INFO)
+{
+	npc		= Mod_2014_PSINOV_Darrion_MT;
+	nr		= 1;
+	condition	= Info_Mod_Darrion_Sumpfmensch4_Condition;
+	information	= Info_Mod_Darrion_Sumpfmensch4_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Darrion_Sumpfmensch4_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Darrion_Sumpfmensch3))
+	&& (Npc_GetDistToWP(hero, "OW_PATH_BLOODFLY11_SPAWN01") < 500)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Darrion_Sumpfmensch4_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch4_11_00"); //Das hier ist die Pflanze. Wir sollten uns wohl trennen. Geh du weiter geradeaus, ich werde die Umgebung hier erkunden.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch4_11_01"); //Ist gut.
+	
+	AI_StopProcessInfos(self);
+	
+	Wld_InsertNpc(SwampGolem_Sumpfmensch_03, "FP_ROAM_OW_BLOODFLY_12_02");
+};
+
+INSTANCE Info_Mod_Darrion_Sumpfmensch5 (C_INFO)
+{
+	npc		= Mod_2014_PSINOV_Darrion_MT;
+	nr		= 1;
+	condition	= Info_Mod_Darrion_Sumpfmensch5_Condition;
+	information	= Info_Mod_Darrion_Sumpfmensch5_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Darrion_Sumpfmensch5_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Joru_Sumpfmensch3))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Darrion_Sumpfmensch5_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch5_11_00"); //Danke. ich stehe tief in deiner Schuld. (Roger heult) Darrion lacht. Ja und Roger natürlich auch.
+	AI_Output(self, hero, "Info_Mod_Darrion_Sumpfmensch5_11_01"); //Hier. Es ist nicht viel, aber lass es mich dir zum Zeichen meiner Dankbarkeit geben. Es ist der Tabak aus dem letzten Blatt der Golempflanze. Vielleicht kannst du ja was damit anfangen.
+	
+	B_GiveInvItems(self, hero, ItMi_SumpfTabak, 1);
+	
+	AI_StopProcessInfos(self);
+	
+	B_GivePlayerXP(500);
+	
+	B_SetTopicStatus(TOPIC_MOD_SL_SUMPFMENSCH, LOG_SUCCESS);
 };
 
 INSTANCE Info_Mod_Darrion_Trade (C_INFO)

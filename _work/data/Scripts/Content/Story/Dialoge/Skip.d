@@ -455,6 +455,53 @@ FUNC VOID Info_Mod_Skip_Befreiung2_Info()
 	B_GivePlayerXP	(450);
 };
 
+INSTANCE Info_Mod_Skip_Sumpfmensch (C_INFO)
+{
+	npc		= Mod_775_PIR_Skip_AW;
+	nr		= 1;
+	condition	= Info_Mod_Skip_Sumpfmensch_Condition;
+	information	= Info_Mod_Skip_Sumpfmensch_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Greg meinte, du könntest mir vielleicht helfen.";
+};
+
+FUNC INT Info_Mod_Skip_Sumpfmensch_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Greg_Sumpfmensch))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Skip_Sumpfmensch_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Skip_Sumpfmensch_15_00"); //Greg meinte, du könntest mir vielleicht helfen.
+	AI_Output(self, hero, "Info_Mod_Skip_Sumpfmensch_08_01"); //Na klar, was gibt's?
+	AI_Output(hero, self, "Info_Mod_Skip_Sumpfmensch_15_02"); //Was weißt du über Darrion?
+	AI_Output(self, hero, "Info_Mod_Skip_Sumpfmensch_08_03"); //Darrion... du meinst den alten Entertruppführer? Nicht viel, um ehrlich zu sein. Niemand weiß viel über ihn.
+	AI_Output(self, hero, "Info_Mod_Skip_Sumpfmensch_08_03"); //Der hat schon als aktiver Entertruppführer nicht viel von sich erzählt und als Greg zum Captain ernannt wurde, war das einzige, das man aus ihm rausbekam hin und wieder die letzten paar Becher, wenn er es mit dem Grog mal wieder übertrieben hat.
+	AI_Output(self, hero, "Info_Mod_Skip_Sumpfmensch_08_03"); //Zu mir ist er nur gekommen, um zu handeln.
+	AI_Output(hero, self, "Info_Mod_Skip_Sumpfmensch_15_04"); //Irgendwas bestimmtes?
+	AI_Output(self, hero, "Info_Mod_Skip_Sumpfmensch_08_05"); //Das übliche. Grog, Waffen, Sumpfkraut; der hatte ein bisschen einen Faible für solche Drogen.
+	AI_Output(self, hero, "Info_Mod_Skip_Sumpfmensch_08_05"); //Ach ja, und ein paar Wochen bevor er verschwunden ist, hat er mir den gesamten Salpetervorrat abgekauft!
+	AI_Output(self, hero, "Info_Mod_Skip_Sumpfmensch_08_05"); //Frag mich nicht, was der damit vorhatte. Ich dachte schon, der wolle den Turm da oben sprengen. Geknallt hat's aber nie.
+	AI_Output(hero, self, "Info_Mod_Skip_Sumpfmensch_15_04"); //Okay. Danke.
+	
+	AI_TurnAway(hero, self);
+	
+	AI_Output(self, hero, "Info_Mod_Skip_Sumpfmensch_08_01"); //Warte! Da fällt mir noch was ein.
+	
+	AI_TurnToNpc(hero, self);
+	
+	AI_Output(self, hero, "Info_Mod_Skip_Sumpfmensch_08_01"); //Ich musste für ihn so einen Stinkekäse auftreiben.
+	AI_Output(self, hero, "Info_Mod_Skip_Sumpfmensch_08_01"); //Er hat gemeint, er brauche ihn für einen Einsiedler, der irgendwo hier 'ne  Hütte hat. Vielleicht weiß der Typ ja mehr über Darrion.
+
+	AI_StopProcessInfos	(self);
+
+	B_LogEntry	(TOPIC_MOD_SL_SUMPFMENSCH, "Skip hat erzählt, dass Darrion jede Menge Salpeter gekauft hat und damit in dem Turm verschwunden ist. Außerdem hat er Stinkekäse für den Einsiedler gebraucht. Vielleicht komme ich damit weiter?");
+};
+
 INSTANCE Info_Mod_Skip_Trade (C_INFO)
 {
 	npc		= Mod_775_PIR_Skip_AW;

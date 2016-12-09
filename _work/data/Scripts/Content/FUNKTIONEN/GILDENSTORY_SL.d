@@ -491,6 +491,66 @@ FUNC VOID GILDENSTORY_SL()
 				FortunoSumpfmensch_Scene();
 			};
 		};
+		
+		if (Mod_Darrion_Sumpfmensch == 0)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Balor_Sumpfmensch3))
+		&& (Wld_IsTime(22,00,04,00))
+		&& (Npc_GetDistToNpc(hero, Mod_2014_PSINOV_Darrion_MT) < 1000) {
+			Mod_Darrion_Sumpfmensch = 1;
+			B_StartOtherRoutine(Mod_2014_PSINOV_Darrion_MT, "SUMPFMENSCH");
+			Wld_InsertNpc(SwampGolem_Sumpfmensch_01, "PATH_TAKE_HERB_024");
+		};
+		
+		if (Mod_Darrion_Sumpfmensch == 1)
+		&& (Npc_IsInState(SwampGolem_Sumpfmensch_01, ZS_MM_Attack))
+		&& (Mod_2014_PSINOV_Darrion_MT.attribute[ATR_HITPOINTS] < Mod_2014_PSINOV_Darrion_MT.attribute[ATR_HITPOINTS_MAX]) {
+			Mod_Darrion_Sumpfmensch = 2;
+			Npc_ClearAIQueue(Mod_2014_PSINOV_Darrion_MT);
+			AI_StandUp(Mod_2014_PSINOV_Darrion_MT);
+			B_StartOtherRoutine(Mod_2014_PSINOV_Darrion_MT, "KO");
+		};
+		
+		if (Mod_Darrion_Sumpfmensch == 2)
+		&& (Npc_IsDead(SwampGolem_Sumpfmensch_01)) {
+			Mod_Darrion_Sumpfmensch = 3;
+			
+			AI_Teleport(hero, "PSI_26_HUT_IN");
+			
+			B_StartOtherRoutine(Mod_2014_PSINOV_Darrion_MT, "KOATHOME");
+			B_StartOtherRoutine(Mod_2013_PSINOV_Joru_MT, "ATDARRION");
+			
+			PrintScreen ("Etwas später...", -1, YPOS_LevelUp, FONT_Screen, 2);
+			Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);
+		};
+		
+		if (Mod_Darrion_Sumpfmensch == 3)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Eremit_Sumpfmensch2)) {
+			Mod_Darrion_Sumpfmensch = 4;
+			
+			B_StartOtherRoutine(Mod_3001_PSINOV_Balor_MT, "ATEINGANG");
+		};
+		
+		if (Mod_Darrion_Sumpfmensch == 4)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Darrion_Sumpfmensch4))
+		&& (Npc_IsDead(SwampGolem_Sumpfmensch_03)) {
+			Mod_Darrion_Sumpfmensch = 5;
+			
+			Wld_InsertNpc(SwampGolem_Sumpfmensch_04, "OW_PATH_BLOODFLY11_SPAWN01");
+			Wld_InsertNpc(SwampGolem_100001_MT, "OW_PATH_BLOODFLY11_SPAWN01");
+		};
+		
+		if (Mod_Darrion_Sumpfmensch == 5)
+		&& (Npc_IsDead(SwampGolem_Sumpfmensch_04)) {
+			Mod_Darrion_Sumpfmensch = 6;
+			
+			AI_Teleport(hero, "PSI_11_HUT_EX");
+			
+			B_StartOtherRoutine(Mod_2014_PSINOV_Darrion_MT, "ATJORU");
+			B_StartOtherRoutine(SwampGolem_100001_MT, "ATJORU");
+			
+			PrintScreen ("Etwas später...", -1, YPOS_LevelUp, FONT_Screen, 2);
+			Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);
+		};
 	};
 
 	if (Mod_Leichengase_Kraut == 0)

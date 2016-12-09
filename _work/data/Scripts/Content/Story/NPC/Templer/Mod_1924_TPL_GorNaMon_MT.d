@@ -67,3 +67,9 @@ FUNC VOID Rtn_StayAtOC_1924 ()
 	TA_Stand_ArmsCrossed	(18,00,06,00,"OCC_BARONS_RIGHT_ROOM_BACK");	
 };
 
+FUNC VOID Rtn_Sumpfmensch_1924 ()
+{
+	TA_Stand_Guarding 	(08,00,20,00,"PATH_AROUND_PSI07");
+	TA_Stand_Guarding 	(20,00,08,00,"PATH_AROUND_PSI07");
+};
+

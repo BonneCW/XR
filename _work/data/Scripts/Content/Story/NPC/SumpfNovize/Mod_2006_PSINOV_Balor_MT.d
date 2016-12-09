@@ -46,6 +46,24 @@ FUNC VOID Rtn_start_3001 () //Sumpfkraut-Sammler-Chef 2
 	TA_Pick_FP		(19,00,07,00,"PATH_TAKE_HERB_06");
 };
 
+FUNC VOID Rtn_AtDarrion_3001 ()
+{
+	TA_Follow_Player 	(08,00,20,00,"PSI_SMITH_03");
+	TA_Follow_Player 	(20,00,08,00,"PSI_SMITH_03");
+};
+
+FUNC VOID Rtn_GuideToJoru_3001 ()
+{
+	TA_Guide_Player 	(08,00,20,00,"PATH_AROUND_PSI07");
+	TA_Guide_Player 	(20,00,08,00,"PATH_AROUND_PSI07");
+};
+
+FUNC VOID Rtn_AtEingang_3001 ()
+{
+	TA_Stand_ArmsCrossed 	(08,00,20,00,"PSI_START");
+	TA_Stand_ArmsCrossed 	(20,00,08,00,"PSI_START");
+};
+
 FUNC VOID Rtn_Tot_3001 ()
 {
 	TA_Stand_WP 	(08,00,20,00,"TOT");

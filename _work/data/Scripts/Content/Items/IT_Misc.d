@@ -172,6 +172,24 @@ INSTANCE ItMi_Paddel (C_Item)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
+INSTANCE ItMi_StinkeCheese (C_Item)
+{	
+	name 				=	"Stinkekäse";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MISSION;
+	
+	value 				=	0;
+	
+	visual 				=	"ItFo_Cheese.3DS";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+
+	TEXT[5]				= 	NAME_Value;		COUNT[5]	= 0;
+
+};
+
 INSTANCE ItMi_UrizielKaputt (C_Item)
 {
 	name 				=	"Ein Bruchstück von Uriziel";

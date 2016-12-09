@@ -53,6 +53,18 @@ FUNC VOID Rtn_Tempel_2013 ()
 	TA_Pray_Sleeper_FP 	(20,00,08,00,"PSI_TEMPLE_NOVIZE_PR6");
 };
 
+FUNC VOID Rtn_Sumpfmensch_2013 ()
+{
+	TA_Stand_Guarding 	(08,00,20,00,"PATH_AROUND_PSI07");
+	TA_Stand_Guarding 	(20,00,08,00,"PATH_AROUND_PSI07");
+};
+
+FUNC VOID Rtn_AtDarrion_2013 ()
+{
+	TA_Stand_WP		(10,00,22,00,"PSI_26_HUT_IN");
+	TA_Stand_WP		(22,00,10,00,"PSI_26_HUT_IN");
+};
+
 FUNC VOID Rtn_Tot_2013 ()
 {
 	TA_Stand_WP 	(08,00,20,00,"TOT");

@@ -882,6 +882,85 @@ FUNC VOID Info_Mod_Eremit_Zeremoniendolch5_Info()
 	AI_Output(self, hero, "Info_Mod_Eremit_Zeremoniendolch5_04_04"); //Möge dir die Sonne den Weg weisen. Alter Spruch.
 };
 
+INSTANCE Info_Mod_Eremit_Sumpfmensch (C_INFO)
+{
+	npc		= Mod_115_NONE_Eremit_AW;
+	nr		= 1;
+	condition	= Info_Mod_Eremit_Sumpfmensch_Condition;
+	information	= Info_Mod_Eremit_Sumpfmensch_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Eremit_Sumpfmensch_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Skip_Sumpfmensch))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Eremit_Sumpfmensch_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch_04_00"); //Was willst du?
+	AI_Output(hero, self, "Info_Mod_Eremit_Sumpfmensch_15_01"); //Kennst du einen Piraten namens Darrion?
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch_04_02"); //Darrion? Den kenn' ich ja.
+	AI_Output(hero, self, "Info_Mod_Eremit_Sumpfmensch_15_03"); //Du hast ihm ein Buch übersetzt.
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch_04_04"); //Und wenn es so wäre? Ich wüsste nicht was dich das angeht!
+	AI_Output(hero, self, "Info_Mod_Eremit_Sumpfmensch_15_05"); //Er ist verletzt, er...
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch_04_06"); //Das ist mir egal! Mach, dass du weiter kommst, und lass mich in Ruhe.
+	
+	AI_StopProcessInfos(self);
+};
+
+INSTANCE Info_Mod_Eremit_Sumpfmensch2 (C_INFO)
+{
+	npc		= Mod_115_NONE_Eremit_AW;
+	nr		= 1;
+	condition	= Info_Mod_Eremit_Sumpfmensch2_Condition;
+	information	= Info_Mod_Eremit_Sumpfmensch2_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Eremit_Sumpfmensch2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Eremit_Sumpfmensch))
+	&& (Npc_HasItems(hero, ItMi_StinkeCheese) == 1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Eremit_Sumpfmensch2_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch2_04_00"); //Warte mal! Dieser Geruch... dieser betörende Duft... hast du etwas Schimmelkäse bei dir?!
+	AI_Output(hero, self, "Info_Mod_Eremit_Sumpfmensch2_15_01"); //Und wenn dem so wäre?
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch2_04_02"); //Äh... ich muss mich für meine Unhöflichkeit entschuldigen, das war doch nicht so gemeint. Du wolltest doch etwas über Darrion wissen, oder?
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch2_04_03"); //Er ist mit einem Buch zu mir gekommen, es war in der alten Schrift dieses Landes verfasst. Er hat sich besonders für die Beschreibung einer Blume interessiert.
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch2_04_04"); //Ich hab ihm die Seite übersetzt und er ist wieder verschwunden.
+	AI_Output(hero, self, "Info_Mod_Eremit_Sumpfmensch2_15_05"); //Und sonst?
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch2_04_06"); //Ich hab ihn seitdem nicht mehr gesehen.
+	AI_Output(hero, self, "Info_Mod_Eremit_Sumpfmensch2_15_07"); //Na gut. Hier.
+	
+	B_GiveInvItems(hero, self, ItMi_StinkeCheese, 1);
+	
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch2_04_08"); //Oh ja! Vielen Dank!
+	
+	B_UseItem(self, ItFo_Cheese);
+	
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch2_04_09"); //(mit vollem Mund) Ach ja, sag Darrion, fals du ihn siehst, er soll die Pflanze auf keinen Fall einsetzen.
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch2_04_10"); //Im Buch ist beschrieben, dass die Pflanze irgendwie im Zusammenhang mit irgendwelchen Monstern steht.
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch2_04_11"); //Genau hab ich es nicht verstanden, aber der Autor stellt irgendeine Beziehung zwischen einer dieser Pflanzen und fünf "Sumpfriesen" her.
+	AI_Output(hero, self, "Info_Mod_Eremit_Sumpfmensch2_15_12"); //Und warum hast du Darrion das nicht gesagt?!
+	AI_Output(self, hero, "Info_Mod_Eremit_Sumpfmensch2_04_13"); //Das stand auf der nächsten Seite, die hatte ich damals noch nicht übersetzt...
+	AI_Output(hero, self, "Info_Mod_Eremit_Sumpfmensch2_15_14"); //Oh Mann...
+	
+	AI_StopProcessInfos(self);
+
+	B_LogEntry	(TOPIC_MOD_SL_SUMPFMENSCH, "Der Eremit hat von einer Pflanze erzählt, die Darrion interessiert hat. Sie steht nach Aussage des Eremiten im Zusammenhang mit fünf Sumpfriesen. Eventuell hat Darrion diese Pflanze entdeckt und im Sumpf eingepflanzt? Ich sollte zum Sumpflager zurückkehren und Baal Joru meine Erkenntnisse berichten.");
+};
+
 INSTANCE Info_Mod_Eremit_NettHier (C_INFO)
 {
 	npc		= Mod_115_NONE_Eremit_AW;

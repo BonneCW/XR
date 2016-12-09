@@ -7079,6 +7079,54 @@ INSTANCE ItWr_AxtAlmanach_06 (C_ITEM)
 			B_LogEntry_More	(TOPIC_MOD_BEL_RAETSEL, TOPIC_MOD_BEL_FIVEKNIGHTS, "Die letzte Ruhestätte von Inubis? Wo das wohl sein mag. Jedenfalls werde ich dort die Axt finden, wenn mir Frowin nicht zuvor kommt.", "Frowin ist entkommen. Ich muss ihn schnell finden.");
 		};
 };
+
+INSTANCE ItWr_DarrionTagebuch (C_ITEM)
+{
+	name 					=	"Darrions Tagebuch";
+
+	mainflag 				=	ITEM_KAT_DOCS;
+	flags 					=	ITEM_SHOW;
+
+	value 					=	100;
+
+	visual 					=	"ItWr_Book_02_05.3ds"; 
+	material 				=	MAT_LEATHER;
+
+	scemeName				=	"MAP";
+	description				= 	name;
+	TEXT[5]					= 	NAME_Value;
+	COUNT[5]				= 	value;
+	on_state[0]				=	UseDarrionTagebuch;
+};
+
+	FUNC VOID UseDarrionTagebuch()
+	{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		()			  ;								// DocManager
+					Doc_SetPages	( nDocID,  2 );                         //wieviel Pages
+
+					Doc_SetPage 	( nDocID,  0, "Book_Brown_L.tga"  , 0 	); // VARIATIONEN: BOOK_BROWN_L.tga , BOOK_MAGE_L.tga , BOOK_RED_L.tga
+					Doc_SetPage 	( nDocID,  1, "Book_Brown_R.tga" , 0	); // VARIATIONEN: BOOK_BROWN_R.tga , BOOK_MAGE_R.tga , BOOK_RED_R.tga
+
+					//1.Seite
+
+ 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
+					Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
+ 					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Es ist soweit, der alte Seebär hat dem Meer endgültig den Rücken gekehrt. Ich habe so lange auf diesen Moment gewartet. Ich bin des Wassers satt. Greg soll die Truppe übernehmen, das alte Versprechen, das mich an das Schiff gebunden hat, ist endlich eingelöst.");
+ 					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Ich habe es mir im alten Turm, nahe der Bucht gemütlich gemacht. So lange lebe ich jetzt schon an diesem Strand, und doch ist mir diese Insel noch fast unbekannt. Noch. Wenigstens muss ich mir dank der vielen Jahre auf See keine Angst mehr vor den Viechern haben, die hier herumstreunen.");
+ 					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Es gibt viele alte Tempel auf dieser Insel. In einem großen Sumpf bin ich auf einige reptilienartige Wesen gestoßen. Kämpfen wie der Teufel und schmecken wie fauler Fisch. Außerdem habe ich eine seltsame Pflanze gefunden, die nachts strahlend rot leuchtet. Vielleicht ist das Ding ja was wert.");
+					Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Ich habe heute in einem Tempel ein altes Buch gefunden, in welchem ich eine Abbildung dieser Pflanze gefunden habe. Ich habe kein Wort lesen können, nachdem ich dem Einwanderer, den ich vor kurzem getroffen habe, etwas schimmligen Käse gegeben habe, hat der mir das Ganze übersetzt. Anscheinend sind die Blätter dieser Blume in Tabak gemischt eine unglaubliche Droge. Das klingt doch mal interessant."					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Ich habe die Pflanze im Tal nahe der Piratenbucht gepflanzt, aber sie will und will einfach nicht treiben. Nicht mal der Salpeter, mit dem ich sie Dünge, scheint zu wirken. Der Eremit hat gemeint, im Buch steht, dass diese Pflanze nur im tiefen Sumpf wachsen kann. Mich täglich durch diese Echsenbiester zu metzeln, kann ich jedoch vergessen. Es ist ohnehin höchste Zeit für mich dieses Land zu verlassen. Irgendwo werd‘ ich schon wieder ein nettes Plätzchen finden."					);
+					
+					Doc_Show		( nDocID );
+};
 //////////////////////////////////////////////////////////////////////////////
 //
 //	MAPS

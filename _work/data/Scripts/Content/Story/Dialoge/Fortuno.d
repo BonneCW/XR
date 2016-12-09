@@ -53,6 +53,35 @@ FUNC VOID Info_Mod_Fortuno_Sumpfmensch_Info()
 	B_LogEntry	(TOPIC_MOD_SL_SUMPFMENSCH, "Offenbar hat bisher nur Darrion den Sumpfmensch gesehen. Ich sollte mal mit ihm sprechen.");
 };
 
+INSTANCE Info_Mod_Fortuno_Sumpfmensch2 (C_INFO)
+{
+	npc		= Mod_951_PSINOV_Fortuno_MT;
+	nr		= 1;
+	condition	= Info_Mod_Fortuno_Sumpfmensch2_Condition;
+	information	= Info_Mod_Fortuno_Sumpfmensch2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Hey, weißt du irgendwas über Darrion?";
+};
+
+FUNC INT Info_Mod_Fortuno_Sumpfmensch2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Mod_2013_PSINOV_Joru_MT))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Fortuno_Sumpfmensch2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Fortuno_Sumpfmensch2_15_00"); //Hey, weißt du irgendwas über Darrion?
+	AI_Output(self, hero, "Info_Mod_Fortuno_Sumpfmensch2_13_01"); //Niemand hier weiß wirklich etwas über ihn. Vielleicht solltest du mal bei seinen ehemaligen Arbeitsgebern vorbeischauen.
+	AI_Output(hero, self, "Info_Mod_Fortuno_Sumpfmensch2_15_02"); //Wen meinst du?
+	AI_Output(self, hero, "Info_Mod_Fortuno_Sumpfmensch2_13_03"); //Die Piraten natürlich. Das einzige, was man über ihn weiß, ist, dass er früher ein Pirat war. Vielleicht weiß einer von denen was über ihn.
+
+	B_LogEntry	(TOPIC_MOD_SL_SUMPFMENSCH, "Darrion war früher Pirat. Ich sollte wohl mal bei den Piraten vorbei schauen, um mehr Informationen über ihn zu erhalten.");
+};
+
 INSTANCE Info_Mod_Fortuno_Woher (C_INFO)
 {
 	npc		= Mod_951_PSINOV_Fortuno_MT;
