@@ -6996,6 +6996,62 @@ FUNC VOID INIT_DieInsel()
 FUNC VOID STARTUP_OrcCity()
 {
 	CurrentLevel3 = ORCCITY_ZEN;
+	
+	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_206");
+	
+	Wld_InsertNpc(OrcPeasantEatAndDrink, "WP_OCC_209");
+	
+	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_217");
+	
+	Wld_InsertNpc(OrcShaman_Pray, "WP_OCC_226");
+	
+	Wld_InsertNpc(OrcDog, "WP_OCC_202");
+	
+	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_56");
+	Wld_InsertNpc(OrcDog, "WP_OCC_56");
+	
+	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_163");
+	
+	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_171");
+	Wld_InsertNpc(OrcDog, "WP_OCC_171");
+	
+	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_147");
+	
+	Wld_InsertNpc(OrcPeasantEatAndDrink, "WP_OCC_154");
+	
+	Wld_InsertNpc(OrcDog, "WP_OCC_129");
+	
+	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_131");
+	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_135");
+	
+	Wld_InsertNpc(OrcShaman_Pray, "WP_OCC_105");
+	
+	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_110");
+	Wld_InsertNpc(OrcDog, "WP_OCC_110");
+	
+	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_113");
+	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_117");
+	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_120");
+	
+	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_99");
+	
+	Wld_InsertNpc(OrcDog, "WP_OCC_88");
+	
+	Wld_InsertNpc(OrcShaman_Sit, "WP_OCC_86");
+	
+	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_77");
+	
+	Wld_InsertNpc(OrcPeasantEatAndDrink, "WP_OCC_64");
+	
+	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_21");
+	
+	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_04");
+	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_05");
+	
+	Wld_InsertNpc(OrcPeasantEatAndDrink, "WP_OCC_14");
+	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_17");
+	
+	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_24");
 
 	NameAllFires();
 };
