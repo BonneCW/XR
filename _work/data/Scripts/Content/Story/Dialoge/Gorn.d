@@ -302,25 +302,114 @@ FUNC INT Info_Mod_Gorn_Treffen_Condition()
 
 FUNC VOID Info_Mod_Gorn_Treffen_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_12_00"); //Gut das du kommst, wir haben ein paar Infos für dich.
-	AI_Output(hero, self, "Info_Mod_Gorn_Treffen_15_01"); //Erzähl.
-	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_12_02"); //Gut. Also Diego wird vorerst in Khorinis bleiben und den Wassermagiern helfen.
-	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_12_03"); //Lester wird wahrscheinlich bald zurück ins Minental gehen.
-	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_12_04"); //Milten bleibt im Kloster, um ein wenig Magie zu lernen, im Minental kann ihm schließlich keiner mehr was beibringen.
-	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_12_05"); //Ich werde zurück zu Lares und den anderen gehen.
+	var c_npc Gorn; Gorn = Hlp_GetNpc(Mod_533_SLD_Gorn_NW);
+	var c_npc Diego; Diego = Hlp_GetNpc(Mod_538_RDW_Diego_NW);
+	var c_npc Lester; Lester = Hlp_GetNpc(Mod_557_PSINOV_Lester_NW);
+	var c_npc Milten; Milten = Hlp_GetNpc(Mod_534_KDF_Milten_NW);
+
+	TRIA_Invite(Diego);
+	TRIA_Invite(Lester);
+	TRIA_Invite(Milten);
+	TRIA_Start();
+
+	TRIA_Next(Gorn);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_12_00"); //Schön, dass ihr alle gekommen seid. Ich fand die Zeit reif für ein neues Treffen. Wie ist es euch ergangen?
+
+	TRIA_Next(Lester);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_13_01"); //Die letzten Wochen habe ich einsam in einer Höhle verbracht. Nur unser Freund hier kam mich besuchen. Mir ist nach etwas Neuem zumute.
+
+	TRIA_Next(Milten);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_03_02"); //Ich fühle mich bei den Feuermagiern wohl. Allerdings gibt es nicht viele Möglichkeiten, den Klostermauern zu entkommen, deshalb bin ich schlecht informiert über alles, was sich außerhalb abspielt.
+
+	TRIA_Next(Diego);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_11_03"); //Es mehren sich die Vorzeichen, dass uns allen Schlimmes bevorsteht.
+
+	TRIA_Next(Gorn);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_12_04"); //(lacht) Seit wann versuchst du dich als Prophet, Diego?
+	AI_Output(hero, self, "Info_Mod_Gorn_Treffen_15_05"); //Er könnte recht haben. Auch Xardas ist beunruhigt. Mit dem Tod des Schläfers haben wir nicht alles Unheil aus der Welt geschafft.
+
+	TRIA_Next(Milten);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_03_06"); //Was erwartet uns?
+	AI_Output(hero, self, "Info_Mod_Gorn_Treffen_15_07"); //Das liegt noch im Dunkeln. Aber es wird sich schon früh genug zeigen.
+
+	TRIA_Next(Gorn);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_12_08"); //Es soll nur kommen! Ich kann mir nichts vorstellen, dem wir nicht gewachsen sind.
+
+	TRIA_Next(Diego);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_11_09"); //Um deine Vorstellungskraft war es noch nie so gut bestellt ...
+
+	TRIA_Next(Lester);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_13_10"); //Das klingt tatsächlich nicht, als wäre uns unsere verdiente Ruhe vergönnt.
+
+	TRIA_Next(Milten);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_03_11"); //(zum Helden) Gib's zu, du steckst doch schon wieder mittendrin.
+	AI_Output(hero, self, "Info_Mod_Gorn_Treffen_15_12"); //Sieht ganz danach aus. Ich habe wohl mehr Feinde als beabsichtigt.
+
+	TRIA_Next(Gorn);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_12_13"); //Du weißt hoffentlich, dass du das nicht allein durchstehen musst. Auf uns kannst du zählen, und wenn wir alle dabei draufgehen sollten.
+
+	TRIA_Next(Milten);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_03_14"); //So drastisch hättest du es nicht ausdrücken müssen.
+
+	TRIA_Next(Lester);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_13_15"); //Und bis es so weit ist?
+
+	TRIA_Next(Diego);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_11_16"); //Wir warten ab und halten die Augen offen.
+
+	TRIA_Next(Gorn);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_12_17"); //Und die Axt bereit.
+
+	TRIA_Next(Milten);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_03_18"); //Und die Zauber frisch im Gedächtnis.
+	AI_Output(hero, self, "Info_Mod_Gorn_Treffen_15_19"); //Ich bin gerührt. Sollen wir unsere Freundschaft jetzt noch feierlich mit einem Eid beschwören oder so?
+
+	TRIA_Next(Diego);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_11_20"); //(lacht) Lass mal gut sein. Ich hasse Verträge, auch mit meinen besten Freunden.
+
+	TRIA_Next(Lester);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_13_21"); //Dann verbleiben wir so: Wenn wir Hilfe brauchen, sind wir füreinander da.
+
+	TRIA_Next(Gorn);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_12_22"); //Aye.
+
+	TRIA_Next(Milten);
+	
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_03_23"); //Klar. Gern. Und wenn sich unsere Gefahr offen zeigt, wüsste ich gern Bescheid. Im Kloster erfährt man nicht als Erstes, was in der Welt vor sich geht.
+	AI_Output(hero, self, "Info_Mod_Gorn_Treffen_15_24"); //In Ordnung. (Pause) Ja, äh, dann macht es mal gut, fürs Erste. Man sieht sich und so.
+
+	TRIA_Finish();
 
 	B_LogEntry	(TOPIC_MOD_TREFFEN, "Das Treffen ist vorbei und folgende Sachen haben sich ergeben: Diego bleibt in Khorinis, Lester geht wahrscheinlich bald zurück ins Minental, Milten bleibt im Kloster und Gorn geht zurück zu Lares auf Onars Hof.");
 
 	B_GivePlayerXP	(400);
 
-	AI_StopProcessInfos	(self);
+	AI_StopProcessInfos	(hero);
 
-	B_StartOtherRoutine	(self, "START");
-	B_StartOtherRoutine	(Mod_534_KDF_Milten_NW, "START");
-	B_StartOtherRoutine	(Mod_538_RDW_Diego_NW, "START");
-	B_StartOtherRoutine	(Mod_557_PSINOV_Lester_NW, "START");
-
-	AI_Teleport	(Mod_534_KDF_Milten_NW, "KLOSTER");
+	AI_Function_IS(hero, B_StartOtherRoutine, Gorn, "START");
+	AI_Function_IS(hero, B_StartOtherRoutine, Mod_534_KDF_Milten_NW, "START");
+	AI_Function_IS(hero, B_StartOtherRoutine, Mod_538_RDW_Diego_NW, "START");
+	AI_Function_IS(hero, B_StartOtherRoutine, Mod_557_PSINOV_Lester_NW, "START");
+	AI_Function_IS(hero, B_StartOtherRoutine, Mod_534_KDF_Milten_NW, "KLOSTER");
 
 	B_SetTopicStatus	(TOPIC_MOD_TREFFEN, LOG_SUCCESS);
 

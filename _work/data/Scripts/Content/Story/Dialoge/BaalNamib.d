@@ -296,7 +296,7 @@ FUNC VOID Info_Mod_Namib_AtTempel_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Namib_AtTempel_02_00"); //Ah, da bist du ja.
 	AI_Output(hero, self, "Info_Mod_Namib_AtTempel_15_01"); //Was geschieht jetzt?
-	AI_Output(self, hero, "Info_Mod_Namib_AtTempel_02_02"); //Du weiß doch, dass die Schwarzmagier in ihrem Tal Untote beschworen haben, die für sie den schwarzen Turm, die Beliarkirche und ihr ganzes Lager aufgebaut haben.
+	AI_Output(self, hero, "Info_Mod_Namib_AtTempel_02_02"); //Du weißt doch, dass die Schwarzmagier in ihrem Tal Untote beschworen haben, die für sie den schwarzen Turm aufgebaut haben.
 	AI_Output(self, hero, "Info_Mod_Namib_AtTempel_02_03"); //Und wie du durch Lester weißt, hat dies den Boden insofern beeinflusst, dass das Sumpfkraut dort hervorragend gedeiht.
 	AI_Output(self, hero, "Info_Mod_Namib_AtTempel_02_04"); //Wir haben sie gebeten, das Selbe hier im Sumpf zu machen, um die Qualität unseres Sumpfkrautes noch weiter zu steigern, du verstehst?
 	AI_Output(hero, self, "Info_Mod_Namib_AtTempel_15_05"); //Äh ...

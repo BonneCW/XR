@@ -15,13 +15,17 @@ FUNC INT Info_Mod_Lester_Hi_Condition()
 
 FUNC VOID Info_Mod_Lester_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lester_Hi_13_00"); //Meine Güte, du lebst noch!
-	AI_Output(hero, self, "Info_Mod_Lester_Hi_15_01"); //Sieht so aus.
-	AI_Output(self, hero, "Info_Mod_Lester_Hi_13_02"); //Du hast es also geschafft den Schläfer zu besiegen?
-	AI_Output(hero, self, "Info_Mod_Lester_Hi_15_03"); //Ja, ich habe den Schläfer dahin geschickt, wo er herkommt.
-	AI_Output(hero, self, "Info_Mod_Lester_Hi_15_04"); //Aber was machst du hier in dieser Höhle?
-	AI_Output(self, hero, "Info_Mod_Lester_Hi_13_05"); //Ich bin im Auftrag von Baal Namib hier, um mit dem Sumpfkraut in dieser Höhle zu experimentieren.
-	AI_Output(self, hero, "Info_Mod_Lester_Hi_13_06"); //Durch die Zauber der Schwarzmagier scheint der Boden hier besonders gut geeignet zu sein.
+	AI_Output(self, hero, "Info_Mod_Lester_Hi_13_00"); //Beim Schläfer! Das ist ja eine Überraschung!
+	AI_Output(hero, self, "Info_Mod_Lester_Hi_15_01"); //Lester! Wie kommst du hierher?
+	AI_Output(self, hero, "Info_Mod_Lester_Hi_13_02"); //Das Gleiche wollte ich gerade dich fragen. Im einen Moment glaube ich dich noch verschüttet im Schläfertempel - im nächsten stehst du schon vor mir.
+	AI_Output(self, hero, "Info_Mod_Lester_Hi_13_03"); //Was ist passiert?
+	AI_Output(hero, self, "Info_Mod_Lester_Hi_15_04"); //Du hast es eigentlich ganz gut zusammengefasst. Ich muss mich erst wieder an die frische Luft gewöhnen.
+	AI_Output(self, hero, "Info_Mod_Lester_Hi_13_05"); //Dann hat doch sicher Xardas seine Finger im Spiel. Ihm gehört doch der Turm, oder? Sein düsterer Stil ist unverkennbar.
+	AI_Output(hero, self, "Info_Mod_Lester_Hi_15_06"); //Auch das ist ganz richtig. Aber was machst du hier?
+	AI_Output(self, hero, "Info_Mod_Lester_Hi_13_07"); //Ich merk schon, du bist immer noch nicht der große Erzähler geworden.
+	AI_Output(self, hero, "Info_Mod_Lester_Hi_13_08"); //Was mich betrifft, bin ich mit einem Auftrag Baal Namibs gelandet, eben wegen des dunklen Turms.
+	AI_Output(self, hero, "Info_Mod_Lester_Hi_13_09"); //Es gibt anscheinend einen Zusammenhang zwischen dem Wachstum des Sumpfkrauts und der Präsenz schwarzer Magie, den ich zu ergründen suche.
+	AI_Output(self, hero, "Info_Mod_Lester_Hi_13_10"); //Aber es ist noch zu früh, mehr darüber zu spekulieren. Ich beobachte. Und rauche ab und an mal eine.
 };
 
 INSTANCE Info_Mod_Lester_Goetterwaffen (C_INFO)
@@ -524,6 +528,59 @@ FUNC VOID Info_Mod_Lester_ZeichenDerBruderschaft_Info()
 	AI_Output(self, hero, "Info_Mod_Lester_ZeichenDerBruderschaft_13_01"); //Unter der Bruderschaft gibt es nämlich immer noch vereinzelte Fanatiker, die es als Provokation ansehen könnten, wenn du dieses Zeichen bei dir trägst.
 
 	B_GivePlayerXP	(150);
+};
+
+INSTANCE Info_Mod_Lester_WillstMitMir (C_INFO)
+{
+	npc		= Mod_557_PSINOV_Lester_NW;
+	nr		= 1;
+	condition	= Info_Mod_Lester_WillstMitMir_Condition;
+	information	= Info_Mod_Lester_WillstMitMir_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Willst du nicht mit mir mitkommen?";
+};
+
+FUNC INT Info_Mod_Lester_WillstMitMir_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Lester_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Lester_WillstMitMir_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Lester_WillstMitMir_15_00"); //Willst du nicht mit mir mitkommen?
+	AI_Output(self, hero, "Info_Mod_Lester_WillstMitMir_13_01"); //Der Auftrag ist für das Sumpflager extrem wichtig, davon kann ich mich nicht ohne Weiteres lossagen. Wenn es was Dringendes gibt, stehe ich dir natürlich zur Seite.
+};
+
+INSTANCE Info_Mod_Lester_GornDiegoMilten (C_INFO)
+{
+	npc		= Mod_557_PSINOV_Lester_NW;
+	nr		= 1;
+	condition	= Info_Mod_Lester_GornDiegoMilten_Condition;
+	information	= Info_Mod_Lester_GornDiegoMilten_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Was ist aus Gorn, Diego und Milten geworden?";
+};
+
+FUNC INT Info_Mod_Lester_GornDiegoMilten_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Lester_Hi))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Lester_GornDiegoMilten_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Lester_GornDiegoMilten_15_00"); //Was ist aus Gorn, Diego und Milten geworden?
+	AI_Output(self, hero, "Info_Mod_Lester_GornDiegoMilten_13_01"); //Nach dem Fall der Barriere haben wir uns beraten, was zu tun sei. Milten hat vorgeschlagen, dass wir eine eigene Gruppierung gründen könnten, die sich als Mittler zwischen den Sträflingen aus dem Minental und den Gilden in Khorinis ansieht.
+	AI_Output(self, hero, "Info_Mod_Lester_GornDiegoMilten_13_02"); //Na ja, manchmal ist er eben doch ein wenig naiv. Diego hat es ihm gleich ausgeredet, und wir haben beschlossen, dass jeder fürs Erste selbst sein Glück suchen soll.
+	AI_Output(self, hero, "Info_Mod_Lester_GornDiegoMilten_13_03"); //Und so ist es dann gekommen: Milten wollte zu den Feuermagiern, Gorn hat sich einigen seiner Freunde angeschlossen, um sich als Söldner zu verdingen, und Diego hat mich nach Khorinis begleitet.
+	AI_Output(self, hero, "Info_Mod_Lester_GornDiegoMilten_13_04"); //Nach meinem letzten Stand ist er da auch geblieben.
 };
 
 INSTANCE Info_Mod_Lester_DefenseBreak (C_INFO)

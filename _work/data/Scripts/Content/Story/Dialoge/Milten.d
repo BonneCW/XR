@@ -15,9 +15,40 @@ FUNC INT Info_Mod_Milten_Hi_Condition()
 
 FUNC VOID Info_Mod_Milten_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_00"); //Du lebst ja noch?
-	AI_Output(hero, self, "Info_Mod_Milten_Hi_15_01"); //Sieht so aus.
-	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_02"); //Was kann ich für dich tun?
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_00"); //(erstaunt) DU?! Warte mal ... jetzt schuldest du mir aber Antworten!
+	AI_Output(hero, self, "Info_Mod_Milten_Hi_15_01"); //Ich weiß. Ja, ich habe den Schläfer getötet, und ja, ich bin dabei gestorben. Eigentlich. Aber jetzt stehe ich hier.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_02"); //Die Fakten sehe ich vor mir – aber wie zum Henker?!
+	AI_Output(hero, self, "Info_Mod_Milten_Hi_15_03"); //Xardas.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_04"); //(lacht) Alles klar, dann weiß ich Bescheid. Tut auf jeden Fall gut, dich hier zu wissen.
+	AI_Output(hero, self, "Info_Mod_Milten_Hi_15_05"); //Du hast dich ja auch erstaunlich schnell wieder gemacht. Bist du nun offiziell in die Gemeinschaft der Feuermagier aufgenommen worden?
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_06"); //Das schon, aber es hat viel Überzeugungsarbeit gekostet. Na ja, ich hatte keine Fürsprecher, keine anständige Ausbildung. Aber im Zaubern schlage ich sie hier alle, das haben sie schnell begriffen.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_07"); //So konnte ich mir die Novizenrobe gleich sparen.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_08"); //Und bei dir? Wie sehen deine Pläne aus?
+	
+	Info_ClearChoices(Info_Mod_Milten_Hi);
+	
+	Info_AddChoice(Info_Mod_Milten_Hi, "Die Feuermagier interessieren mich.", Info_Mod_Milten_Hi_B);
+	Info_AddChoice(Info_Mod_Milten_Hi, "Das muss ich selbst noch herausfinden.", Info_Mod_Milten_Hi_A);
+};
+
+FUNC VOID Info_Mod_Milten_Hi_B()
+{
+	AI_Output(hero, self, "Info_Mod_Milten_Hi_B_15_00"); //Die Feuermagier interessieren mich.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_B_03_01"); //Glückwunsch, dann bist du richtig im Kloster! Würde mich natürlich freuen, wenn du uns beitrittst.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_B_03_02"); //Wie sieht es mit deinen Fertigkeiten aus?
+	AI_Output(hero, self, "Info_Mod_Milten_Hi_B_15_03"); //Schlecht. Ich muss alles neu lernen.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_B_03_04"); //Oh je, dann wird für dich kein Weg am Novizendasein vorbeiführen. Aber keine Sorge, auch das geht vorüber.
+	
+	Info_ClearChoices(Info_Mod_Milten_Hi);
+};
+
+FUNC VOID Info_Mod_Milten_Hi_A()
+{
+	AI_Output(hero, self, "Info_Mod_Milten_Hi_A_15_00"); //Das muss ich selbst noch herausfinden.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_A_03_01"); //Kein Wunder nach dem, was du durchgemacht hast. Nimm dir etwas Zeit.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_A_03_02"); //Vielleicht bekommst du ja am Ende sogar Lust, im Klosterm mitzumachen. Würde mich freuen.
+	
+	Info_ClearChoices(Info_Mod_Milten_Hi);
 };
 
 INSTANCE Info_Mod_Milten_Daemonisch (C_INFO)
