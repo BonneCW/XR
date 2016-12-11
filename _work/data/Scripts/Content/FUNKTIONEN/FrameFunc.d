@@ -278,6 +278,7 @@ FUNC VOID FRAMEFUNC ()
 				CreateInvItems	(PC_Hero, ItWr_Erfolge, 1);
 			};
 		};
+		CheckRespawns();
 
 		CurrentLevel2 = 0;
 	};

@@ -878,6 +878,8 @@ func void ZS_Dead ()
 	{
 		Wld_InsertNpc(Nightmare_Skeleton,	Npc_GetNearestWP(self));
 	};
+	
+	AddToRespawnArray(self);
 };
 
 func int ZS_Dead_loop ()
