@@ -664,8 +664,6 @@ FUNC VOID Info_Mod_Dragomir_Bosper_Info()
 	AI_Output(self, hero, "Info_Mod_Dragomir_Bosper_12_03"); //Sag ihm, wir rechnen ab, wenn ich in die Stadt komme.
 	AI_Output(hero, self, "Info_Mod_Dragomir_Bosper_15_04"); //Bin schon unterwegs.
 
-	Log_CreateTopic	(TOPIC_MOD_BOSPER_FELLLIEFERUNG, LOG_MISSION);
-	B_SetTopicStatus	(TOPIC_MOD_BOSPER_FELLLIEFERUNG, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_BOSPER_FELLLIEFERUNG, "Ich soll die Felle von Dragomir dem Bosper bringen. Das bringt sicher Punkte für die Aufnahme.");
 };
 

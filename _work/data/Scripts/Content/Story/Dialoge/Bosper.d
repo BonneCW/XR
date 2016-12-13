@@ -1124,6 +1124,10 @@ FUNC VOID Info_Mod_Bosper_OtherHunters_Info()
 	AI_Output(self, hero, "Info_Mod_Bosper_OtherHunters_11_02"); //Da in der Nähe ist das Jägerlager. Der Anführer heißt Dragomir.
 	AI_Output(self, hero, "Info_Mod_Bosper_OtherHunters_11_03"); //Ihm kannst du einen schönen Gruß ausrichten, ich brauche wieder Felle. Jetzt zum Winter hin steigt die Nachfrage.
 	AI_Output(hero, self, "Info_Mod_Bosper_OtherHunters_15_04"); //Mach ich doch.
+	
+	Log_CreateTopic	(TOPIC_MOD_BOSPER_FELLLIEFERUNG, LOG_MISSION);
+	B_SetTopicStatus	(TOPIC_MOD_BOSPER_FELLLIEFERUNG, LOG_RUNNING);
+	B_LogEntry	(TOPIC_MOD_BOSPER_FELLLIEFERUNG, "Sollte ich beim Jägerlager in der Nähe von Orlans Taverne vorbeikommen und Dragomir ausrichten, dass Bosper wieder eine Felllieferung gebrauchen könnte.");
 };
 
 INSTANCE Info_Mod_Bosper_Anschlagtafel (C_INFO)
