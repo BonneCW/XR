@@ -1962,7 +1962,7 @@ INSTANCE Info_Mod_Andre_Knast (C_INFO)
 
 FUNC INT Info_Mod_Andre_Knast_Condition()
 {
-	if (Npc_KnowsInfo(hero, DIA_Mil_305_Torwache_ToHagen))
+	if (Npc_KnowsInfo(hero, Info_Mod_Engor_ToHagen))
 	{
 		return 1;
 	};
