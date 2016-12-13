@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Malcom_NW_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Malcom_NW_Hi_30_00"); //He - was willst du?
 	AI_Output(hero, self, "Info_Mod_Malcom_NW_Hi_15_01"); //Du siehst ja geradezu verdächtig nach einem Pirat aus.
 	AI_Output(self, hero, "Info_Mod_Malcom_NW_Hi_30_02"); //Ich bin auch einer, bei meiner einbeinigen Großmutter! Grimmig und gefährlich!
-	AI_Output(hero, self, "Info_Mod_Malcom_NW_Hi_15_03"); //Aber ganz allein...
+	AI_Output(hero, self, "Info_Mod_Malcom_NW_Hi_15_03"); //Aber ganze ohne Schiff...
 	AI_Output(self, hero, "Info_Mod_Malcom_NW_Hi_30_04"); //Ja, verdammich! Ich bin vor ein paar Tagen bei einem Sturm gekentert. Jetzt liegt mein Boot da drüben auf dem Strand, bei meiner einäugigen Tante!
 
 	Log_CreateTopic	(TOPIC_MOD_MALCOM_GOLD, LOG_MISSION);
