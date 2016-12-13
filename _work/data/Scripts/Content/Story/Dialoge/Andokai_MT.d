@@ -48,7 +48,7 @@ FUNC VOID Info_Mod_Andokai_Hi_A()
 	AI_Output(hero, self, "Info_Mod_Andokai_Hi_A_15_13"); //Alles klar. Werde ich denn einfach so ins Kloster gelassen?
 	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_14"); //Nein. Nur Innosgläubige können das Eingangstor passieren. Es gibt aber rechts neben dem Eingang eine niedrige Mauer, über die du ins Klosterinnere kommst.
 	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_15"); //Um aber nicht aufzufallen, musst du eine Novizenrobe tragen. Wir haben ein grobes Imitat, mit dem du kaum jemanden beeindrucken wirst.
-	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_16"); //Aber die alten Augen von Gorax werden keinen Unterschied feststellen.
+	AI_Output(self, hero, "Info_Mod_Andokai_Hi_A_12_16"); //Aber die alten Augen von Gorax werden keinen Unterschied feststellen. Vielleicht lässt sich auch die Pforte damit durchschreiten, jedoch ist es ein riskanter Versuch.
 
 	CreateInvItems	(self, ITAR_FAKE_NOV_L, 1);
 	B_GiveInvItems	(self, hero, ITAR_FAKE_NOV_L, 1);
