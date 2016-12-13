@@ -98,22 +98,22 @@ FUNC VOID Info_Mod_Monty_KeinInteresse_E()
 		B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
 		B_RaiseHandelsgeschick (2);
+
+		B_GivePlayerXP	(50);
+
+		B_LogEntry	(TOPIC_MOD_MONTY_KONKURRENZKAMPF, "Ich lasse Monty seine Geschichte weitererzählen. Ich halte mich da raus.");
+		B_SetTopicStatus	(TOPIC_MOD_MONTY_KONKURRENZKAMPF, LOG_SUCCESS);
+
+		Mod_MontyFake = 1;
+
+		CurrentNQ += 1;
+
+		Info_ClearChoices	(Info_Mod_Monty_KeinInteresse);
 	}
 	else
 	{
 		AI_Output(self, hero, "Info_Mod_Monty_KeinInteresse_E_31_02"); //So viel habe ich leider nicht.
 	};
-
-	B_GivePlayerXP	(50);
-
-	B_LogEntry	(TOPIC_MOD_MONTY_KONKURRENZKAMPF, "Ich lasse Monty seine Geschichte weitererzählen. Ich halte mich da raus.");
-	B_SetTopicStatus	(TOPIC_MOD_MONTY_KONKURRENZKAMPF, LOG_SUCCESS);
-
-	Mod_MontyFake = 1;
-
-	CurrentNQ += 1;
-
-	Info_ClearChoices	(Info_Mod_Monty_KeinInteresse);
 };
 
 FUNC VOID Info_Mod_Monty_KeinInteresse_D()
