@@ -4472,7 +4472,7 @@ INSTANCE ItMi_Orkstatuette(C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	0;
+	value 				=	50;
 
 	visual 				=	"KleineOrkstatur.3DS";
 	material 			=	MAT_LEATHER;
