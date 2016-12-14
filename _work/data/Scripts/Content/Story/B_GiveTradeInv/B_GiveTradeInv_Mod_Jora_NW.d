@@ -40,6 +40,8 @@ FUNC VOID B_GiveTradeInv_Mod_Jora_NW (var C_NPC slf)
 		CreateInvItems (slf, ItMw_Stabkeule, 1);
 		
 		CreateInvItems (slf,ItAm_Prot_Point_01 , 1);
+		
+		CreateInvItems (slf,ItRi_Str_02 , 1);
 				
 		Jora_ItemsGiven_Chapter_1 = TRUE;
 	};
