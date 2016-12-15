@@ -612,7 +612,7 @@ INSTANCE Info_Mod_Dragomir_MitmachenPre (C_INFO)
 	nr		= 1;
 	condition	= Info_Mod_Dragomir_MitmachenPre_Condition;
 	information	= Info_Mod_Dragomir_MitmachenPre_Info;
-	permanent	= 0;
+	permanent	= 1;
 	important	= 0;
 	description	= "Kann ich mich den Jägern anschließen?";
 };
@@ -620,6 +620,7 @@ INSTANCE Info_Mod_Dragomir_MitmachenPre (C_INFO)
 FUNC INT Info_Mod_Dragomir_MitmachenPre_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Dragomir_WhoAreYou))
+	&& (Kapitel == 1)
 	{
 		return 1;
 	};
@@ -628,9 +629,8 @@ FUNC INT Info_Mod_Dragomir_MitmachenPre_Condition()
 FUNC VOID Info_Mod_Dragomir_MitmachenPre_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Dragomir_MitmachenPre_15_00"); //Kann ich mich den Jägern anschließen?
-	AI_Output(self, hero, "Info_Mod_Dragomir_MitmachenPre_12_01"); //Gehörst du einer Gilde an?
-	AI_Output(hero, self, "Info_Mod_Dragomir_MitmachenPre_15_02"); //Bis jetzt noch nicht.
-	AI_Output(self, hero, "Info_Mod_Dragomir_MitmachenPre_12_03"); //Dann komm wieder, wenn du Mitglied einer Gilde bist. Hast ja noch nichts auf den Rippen. Bei uns geht's manchmal ruppig zu.
+	AI_Output(self, hero, "Info_Mod_Dragomir_MitmachenPre_12_01"); //Du bist noch etwas zu schwach. Hast ja noch nichts auf den Rippen. Bei uns geht's manchmal ruppig zu.
+	AI_Output(self, hero, "Info_Mod_Dragomir_MitmachenPre_12_02"); //Komm später wieder.
 };
 
 INSTANCE Info_Mod_Dragomir_Bosper (C_INFO)
