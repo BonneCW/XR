@@ -1387,6 +1387,22 @@ FUNC VOID NEBENQUESTS()
 				Mod_Miliz_Armbrust = TRUE;
 			};
 		};
+		
+		// Das Treffen
+		
+		if (Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen))
+		&& (Mod_Treffen_Ende == FALSE)
+		&& (!Npc_IsInState(Mod_533_SLD_Gorn_NW, ZS_Talk))
+		&& (!Npc_IsInState(Mod_538_RDW_Diego_NW, ZS_Talk))
+		&& (!Npc_IsInState(Mod_557_PSINOV_Lester_NW, ZS_Talk))
+		&& (!Npc_IsInState(Mod_534_KDF_Milten_NW, ZS_Talk)) {
+			Mod_Treffen_Ende = TRUE;
+
+			B_StartOtherRoutine(Mod_533_SLD_Gorn_NW, "START");
+			B_StartOtherRoutine(Mod_534_KDF_Milten_NW, "START");
+			B_StartOtherRoutine(Mod_538_RDW_Diego_NW, "START");
+			B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "START");
+		};
 	};
 
 	if (CurrentLevel == ADDONWORLD_ZEN)

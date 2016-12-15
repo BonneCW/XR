@@ -43,6 +43,7 @@ const int TARGET_RIGHTLEG = 6;
 
 var int Bosskampf_Pass_NW;
 
+var int Mod_Treffen_Ende;
 var int Mod_Uriziel_Background;
 var int Mod_Uriziel_Frame;
 var int Mod_Uriziel_Piece1;

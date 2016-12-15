@@ -405,12 +405,6 @@ FUNC VOID Info_Mod_Gorn_Treffen_Info()
 
 	AI_StopProcessInfos	(hero);
 
-	AI_Function_IS(hero, B_StartOtherRoutine, Gorn, "START");
-	AI_Function_IS(hero, B_StartOtherRoutine, Mod_534_KDF_Milten_NW, "START");
-	AI_Function_IS(hero, B_StartOtherRoutine, Mod_538_RDW_Diego_NW, "START");
-	AI_Function_IS(hero, B_StartOtherRoutine, Mod_557_PSINOV_Lester_NW, "START");
-	AI_Function_IS(hero, B_StartOtherRoutine, Mod_534_KDF_Milten_NW, "KLOSTER");
-
 	B_SetTopicStatus	(TOPIC_MOD_TREFFEN, LOG_SUCCESS);
 
 	CurrentNQ += 1;
