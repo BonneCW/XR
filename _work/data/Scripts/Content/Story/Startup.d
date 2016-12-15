@@ -8478,6 +8478,8 @@ FUNC VOID STARTUP_Relendel()
 
 	Wld_InsertNpc	(Waran,	"FP_ROAM_PASS_TO_MOOR_032");
 	Wld_InsertNpc	(Waran,	"FP_ROAM_PASS_TO_MOOR_032");
+	
+	ENTER_EVT_RELENDEL_SURVACE_MONSTER();
 };
 
 FUNC VOID INIT_Relendel()

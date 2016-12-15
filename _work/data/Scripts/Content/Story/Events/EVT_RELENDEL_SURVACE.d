@@ -5,9 +5,14 @@
 
 
 var int RELENDEL_SURVACE;
+var int Relendel_Spawned;
 
 FUNC VOID ENTER_EVT_RELENDEL_SURVACE_MONSTER ()
 {
+	if (Relendel_Spawned) {
+		return;
+	};
+	Relendel_Spawned = TRUE;
                  //****************************
                  // 	Waran
                  // 
