@@ -63,10 +63,11 @@ FUNC VOID Info_Mod_Rupert_Hi_A()
 FUNC VOID Info_Mod_Rupert_Hi_E()
 {
 	AI_Output(hero, self, "Info_Mod_Rupert_Hi_E_15_00"); //Du hast es so gewollt!
+	AI_Output(self, hero, "DEFAULT"); //
 
 	Info_ClearChoices	(Info_Mod_Rupert_Hi);
 
-	AI_StopProcessInfos	(hero);
+	AI_StopProcessInfos	(self);
 
 	B_Attack	(self, hero, AR_None, 0);
 };
