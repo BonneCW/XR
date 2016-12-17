@@ -265,7 +265,7 @@ FUNC VOID Info_Mod_Wilfried_Thilo_Info()
 	Info_ClearChoices	(Info_Mod_Wilfried_Thilo);
 
 	Info_AddChoice	(Info_Mod_Wilfried_Thilo, "Thilo ist der Dieb, er hat mir gestanden!", Info_Mod_Wilfried_Thilo_Dieb);
-	Info_AddChoice	(Info_Mod_Wilfried_Thilo, "Wie lautet die ganze Geschichte hinter dem Diebstahl deines Beutels?", Info_Mod_Wilfried_Thilo_Wahrheit);
+	Info_AddChoice	(Info_Mod_Wilfried_Thilo, "Wie lautet die ganze Geschichte hinter dem Diebstahl?", Info_Mod_Wilfried_Thilo_Wahrheit);
 };
 
 FUNC VOID Info_Mod_Wilfried_Thilo_Dieb()

@@ -211,7 +211,7 @@ INSTANCE Info_Mod_Dusty_BosperFelle (C_INFO)
 	information	= Info_Mod_Dusty_BosperFelle_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Du hast nicht zufällig ein paar schöne Wolfsfelle, die du nicht mehr brauchst?";
+	description	= "Du hast nicht zufällig ein paar schöne Wolfsfelle?";
 };
 
 FUNC INT Info_Mod_Dusty_BosperFelle_Condition()

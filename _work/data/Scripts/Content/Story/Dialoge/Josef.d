@@ -50,7 +50,7 @@ INSTANCE Info_Mod_Josef_Crawlersekret (C_INFO)
 	information	= Info_Mod_Josef_Crawlersekret_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Kennst du einen Ort, an dem ich ein starkes Minecrawler-Sekret bekommen kann?";
+	description	= "Kennst du einen Ort...";
 };
 
 FUNC INT Info_Mod_Josef_Crawlersekret_Condition()

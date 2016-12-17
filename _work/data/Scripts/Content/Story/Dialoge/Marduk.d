@@ -28,7 +28,7 @@ INSTANCE Info_Mod_Marduk_Aufgabe (C_INFO)
 	information	= Info_Mod_Marduk_Aufgabe_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich möchte Novize werden und wollte dich daher um eine Aufgabe bitten.";
+	description	= "Ich möchte Novize werden.";
 };
 
 FUNC INT Info_Mod_Marduk_Aufgabe_Condition()

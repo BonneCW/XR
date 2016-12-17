@@ -1394,7 +1394,7 @@ INSTANCE Info_Mod_Diego_GeschickteFinger (C_INFO)
 	information	= Info_Mod_Diego_GeschickteFinger_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Meine Dietriche brechen immer ab - hast du da einen Tipp für mich?";
+	description	= "Meine Dietriche brechen immer ab...";
 };
 
 FUNC INT Info_Mod_Diego_GeschickteFinger_Condition()

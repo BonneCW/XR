@@ -110,14 +110,15 @@ FUNC VOID Info_Mod_Thilo_Wilfried_Tell()
 {
 	AI_Output(hero, self, "Info_Mod_Thilo_Wilfried_Tell_15_00"); //Erzähl schon.
 	AI_Output(self, hero, "Info_Mod_Thilo_Wilfried_Tell_01_01"); //Wie du sicher weißt, verkauft Wilfried seltene und wertvolle Schmuckstücke. Zum Geburtstag wollte ich meiner Liebsten ein teures Amulett schenken, und so ging ich zu ihm und ließ mich von ihm beraten.
-	AI_Output(self, hero, "Info_Mod_Thilo_Wilfried_Tell_01_02"); //Er zeigte mir Zeichnungen von Amuletten, die er nicht bei sich hatte, aber von denen er angeblich wusste, wo er sie beschaffen konnte, und ich entschied mich für eines von diesen. Das Gold musste ich auf der Stelle bezahlen, und das Amulett sollte ich eine Woche später abholen.
-	AI_Output(self, hero, "Info_Mod_Thilo_Wilfried_Tell_01_03"); //Als ich nach der verabredeten Zeit kam, gab Wilfried plötzlich vor, dass ich gar keine Bestellung aufgegeben hätte und setzte mich vor die Tür.
-	AI_Output(hero, self, "Info_Mod_Thilo_Wilfried_Tell_15_04"); //Habt ihr eure Abmachung nicht schriftlich festgehalten?
-	AI_Output(self, hero, "Info_Mod_Thilo_Wilfried_Tell_01_05"); //Das ist ja der Knackpunkt! Darüber hatte ich gar nicht nachgedacht, schließlich kann man den meisten Menschen vertrauen - dachte ich jedenfalls. So hatte ich aber nichts gegen Wilfried in der Hand, keine Beweise, gar nichts. Ich konnte ihm nichts anhängen.
-	AI_Output(hero, self, "Info_Mod_Thilo_Wilfried_Tell_15_06"); //Aber das Gold wolltest du trotzdem zurück haben...
-	AI_Output(self, hero, "Info_Mod_Thilo_Wilfried_Tell_01_07"); //(niedergeschlagen) Ja, das stimmt. Ich weiß, dass es nicht vollkommen korrekt war,...
-	AI_Output(hero, self, "Info_Mod_Thilo_Wilfried_Tell_15_08"); //(ironisch) Das ist leicht untertrieben...
-	AI_Output(self, hero, "Info_Mod_Thilo_Wilfried_Tell_01_09"); //... aber ich sah keine andere Möglichkeit, wieder an mein Gold zu kommen. Ich habe lediglich eine Ungerechtigkeit ausgeglichen.
+	AI_Output(self, hero, "Info_Mod_Thilo_Wilfried_Tell_01_02"); //Er zeigte mir Zeichnungen von Amuletten, die er nicht bei sich hatte, aber von denen er angeblich wusste, wo er sie beschaffen konnte, und ich entschied mich für eines von diesen.
+	AI_Output(self, hero, "Info_Mod_Thilo_Wilfried_Tell_01_03"); //Das Gold musste ich auf der Stelle bezahlen, und das Amulett sollte ich eine Woche später abholen.
+	AI_Output(self, hero, "Info_Mod_Thilo_Wilfried_Tell_01_04"); //Als ich nach der verabredeten Zeit kam, gab Wilfried plötzlich vor, dass ich gar keine Bestellung aufgegeben hätte und setzte mich vor die Tür.
+	AI_Output(hero, self, "Info_Mod_Thilo_Wilfried_Tell_15_05"); //Habt ihr eure Abmachung nicht schriftlich festgehalten?
+	AI_Output(self, hero, "Info_Mod_Thilo_Wilfried_Tell_01_06"); //Das ist ja der Knackpunkt! Darüber hatte ich gar nicht nachgedacht, schließlich kann man den meisten Menschen vertrauen - dachte ich jedenfalls. So hatte ich aber nichts gegen Wilfried in der Hand, keine Beweise, gar nichts. Ich konnte ihm nichts anhängen.
+	AI_Output(hero, self, "Info_Mod_Thilo_Wilfried_Tell_15_07"); //Aber das Gold wolltest du trotzdem zurück haben...
+	AI_Output(self, hero, "Info_Mod_Thilo_Wilfried_Tell_01_08"); //(niedergeschlagen) Ja, das stimmt. Ich weiß, dass es nicht vollkommen korrekt war,...
+	AI_Output(hero, self, "Info_Mod_Thilo_Wilfried_Tell_15_09"); //(ironisch) Das ist leicht untertrieben...
+	AI_Output(self, hero, "Info_Mod_Thilo_Wilfried_Tell_01_10"); //... aber ich sah keine andere Möglichkeit, wieder an mein Gold zu kommen. Ich habe lediglich eine Ungerechtigkeit ausgeglichen.
 
 	Info_ClearChoices	(Info_Mod_Thilo_Wilfried);
 
