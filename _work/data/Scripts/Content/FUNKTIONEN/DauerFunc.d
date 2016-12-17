@@ -60,34 +60,6 @@ FUNC VOID DAUERFUNC_01()
 		};
 	};
 
-	var int lastFocusItem;
-
-	if (C_BodyStateContains (hero, BS_DIVE))
-	{
-		var oCNpc her;
-		her = Hlp_GetNpc (hero);
-		
-		if (her.focus_vob && her.focus_vob != lastFocusItem)
-		{
-			lastFocusItem = her.focus_vob;
-			var oCItem her_focusItem;
-			MEM_AssignInst (her_focusItem, her.focus_vob);
-			
-			if (Hlp_IsValidItem (her_focusItem))
-			{
-				if (Npc_GetDistToItem (hero, her_focusItem) < 170)
-				{
-					CreateInvItems (hero, her_focusItem.instanz, her_focusItem.amount); //amount beachten
-					Wld_RemoveItem (her_focusItem);
-					
-					var string str;	str = ConcatStrings (her_focusItem.name, " aufgehoben!");
-					PrintScreen (str, -1, -1, FONT_SCREENSMALL, 3);
-				};
-			};
-		};
-	};
-
-
 	FrameCounter = 0;
 
 	if (TimeCounter_Real%30 == 0)
