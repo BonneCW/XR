@@ -483,6 +483,8 @@ FUNC VOID Info_Mod_Harad_Aufnahme_A()
 
 	AI_Output(self, hero, "Info_Mod_Harad_Aufnahme_A_09_08"); //Das war's schon, glaube ich.
 
+	Info_ClearChoices	(Info_Mod_Harad_Aufnahme);
+
 	Mod_IstLehrling	= 1;
 
 	Mod_LehrlingBei = 5;
@@ -501,8 +503,6 @@ FUNC VOID Info_Mod_Harad_Aufnahme_A()
 	Wld_AssignRoomToGuild ("schmied",	GIL_NONE);
 
 	CurrentNQ += 1;
-
-	Info_ClearChoices	(Info_Mod_Matteo_Aufnahme);
 };
 
 INSTANCE Info_Mod_Harad_Job (C_INFO)
