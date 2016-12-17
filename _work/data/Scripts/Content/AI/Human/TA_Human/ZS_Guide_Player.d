@@ -64,6 +64,7 @@ func void ZS_Guide_Player ()
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1082_BAU_Rufus_MT))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1621_EBR_Velaya_MT))	
+	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_595_MIL_Mario_NW))
 	{
 		self.senses_range = 1000;
 	};
