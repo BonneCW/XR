@@ -70,6 +70,8 @@ FUNC VOID GILDENSTORY_DIEBE()
 			B_StartOtherRoutine	(Mod_7704_OUT_Jesper_REL, "SCHATZKAMMER");
 			B_StartOtherRoutine	(Mod_7708_OUT_Ramirez_REL, "SCHATZKAMMER");
 			B_StartOtherRoutine	(Mod_7709_OUT_Attila_REL, "SCHATZKAMMER");
+			
+			MEM_RemoveVob("THIEF_WALL");
 		};
 
 		if (Mod_Diebe_Brunnen == 2)
