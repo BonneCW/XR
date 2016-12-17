@@ -131,7 +131,8 @@ FUNC VOID DAUERFUNC_01()
 		{
 			if (!Hlp_IsValidHandle(View_Time))
 			{
-				View_Time = View_CreatePxl	(Print_Screen[PS_X]-120, 20, Print_Screen[PS_X]-20, 50);
+				var int length; length = Print_LongestLineLength("00:00:00", FONT_Screen);
+				View_Time = Print_ExtPxl(Print_Screen[PS_X] - length - 10, 20, Print_Screen[PS_X] - 10, 20 + Print_GetFontHeight(FONT_Screen));
 			};
 
 			View_Open	(View_Time);
@@ -141,6 +142,7 @@ FUNC VOID DAUERFUNC_01()
 			if (Hlp_IsValidHandle(View_Time))
 			{
 				View_Close	(View_Time);
+				View_Time = 0;
 			};
 		};
 
