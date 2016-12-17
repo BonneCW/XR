@@ -495,7 +495,7 @@ instance ItRw_Addon_MagicCrossbow (C_Item)
 	name 				=	"Magische Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
-	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
+	flags 				=	ITEM_CROSSBOW;
 	material 			=	MAT_WOOD;
 
 	wear				=	WEAR_EFFECT;

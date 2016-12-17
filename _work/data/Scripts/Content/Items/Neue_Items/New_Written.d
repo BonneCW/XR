@@ -819,6 +819,7 @@ INSTANCE XardasLetterForSaturas (C_ITEM)
 	scemeName	=	"MAPSEALED";
 	description	=	name;
 	TEXT[2]		=	"Diese Botschaft wurde sorgfältig versiegelt.";
+	TEXT[3]		=	"Ich soll sie Saturas überbringen.";
 };
 var int Use_XardasLetterForSaturas_OneTime;
 FUNC VOID Use_XardasLetterForSaturas()
