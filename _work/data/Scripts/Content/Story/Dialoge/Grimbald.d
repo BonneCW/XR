@@ -91,6 +91,8 @@ FUNC VOID Info_Mod_Grimbald_Dragomir_Info()
 	AI_Output(hero, self, "Info_Mod_Grimbald_Dragomir_15_09"); //Danke, ich geh dann weiter.
 
 	B_LogEntry	(TOPIC_MOD_JG_JAGDGEBIETE, "Grimbald hat ein gutes Jagdgebiet gefunden, welches allerdings durch den scharzen Troll und die Magier, die gelegentlich vorbeikommen, etwas gestört wird.");
+	
+	B_StartOtherRoutine(self, "FOLLOW");
 };
 
 INSTANCE Info_Mod_Grimbald_Erzbrocken (C_INFO)
@@ -126,6 +128,8 @@ FUNC VOID Info_Mod_Grimbald_Erzbrocken_Info()
 	B_LogEntry	(TOPIC_MOD_JG_JAGDGEBIETE, "Grimbald hat mir noch einen merkwürdigen Erzbrocken für Dragomir mitgegeben, den er bei den aggressiven Snappern gefunden hat.");
 
 	AI_StopProcessInfos	(self);
+	
+	B_StartOtherRoutine(self, "START");
 };
 
 INSTANCE Info_Mod_Grimbald_NandorGrom (C_INFO)

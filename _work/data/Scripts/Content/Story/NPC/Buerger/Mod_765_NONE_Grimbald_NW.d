@@ -43,6 +43,12 @@ FUNC VOID Rtn_Start_765 ()
     TA_Stand_Guarding	(23,00,08,00,"NW_TROLLAREA_PATH_79");
 };
 
+FUNC VOID Rtn_Follow_765 ()
+{	
+	TA_Follow_Player 	(08,00,23,00,"NW_TROLLAREA_PATH_79"); 
+    TA_Follow_Player	(23,00,08,00,"NW_TROLLAREA_PATH_79");
+};
+
 FUNC VOID Rtn_Relendel_765 ()
 {	
 	TA_Guide_Player 	(08,00,23,00,"TO_REL_05"); 
