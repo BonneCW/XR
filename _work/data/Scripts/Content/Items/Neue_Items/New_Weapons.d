@@ -1349,7 +1349,7 @@ INSTANCE ItMw_BennetGreg (C_Item)
 	name 				=	"Bennets spezielles Schwert ";
 
 	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_2HD_SWD;	
+	flags 				=	ITEM_2HD_SWD | ITEM_SHOW;	
 	material 			=	MAT_METAL;
 
 	value 				=	5000;

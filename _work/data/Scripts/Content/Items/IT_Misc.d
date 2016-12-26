@@ -292,7 +292,7 @@ INSTANCE ItMi_EimerW (C_Item)
 	name 				=	"Eimer voller Wasser";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags				=	ITEM_MULTI;
+	flags				=	ITEM_MULTI | ITEM_SHOW;
 
 	value 				=	Value_Stomper;
 
@@ -308,7 +308,7 @@ INSTANCE ItMi_Eimer (C_Item)
 	name 				=	"leerer Eimer";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags				=	ITEM_MULTI;
+	flags				=	ITEM_MULTI | ITEM_SHOW;
 
 	value 				=	Value_Stomper;
 
@@ -542,7 +542,7 @@ INSTANCE ItMi_Feldraeubereier (C_Item)
 	name 				=	"Eimer mit Feldräubereiern";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags				=	ITEM_MULTI;
+	flags				=	ITEM_MULTI | ITEM_SHOW;
 
 	value 				=	30;
 
@@ -598,7 +598,7 @@ INSTANCE ItMi_RuneBlank_Greg (C_Item)
 	name 				=	"Gregs Runenstein";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags				=	ITEM_MULTI;
+	flags				=	ITEM_MULTI | ITEM_SHOW;
 
 	value 				=	Value_RuneBlank;
 
@@ -2992,7 +2992,7 @@ INSTANCE ItMi_JeweleryChest_Greg (C_Item)
 	name 				=	"Gregs Juwelenschatulle";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI | ITEM_SHOW;
 
 	value 				=	Value_JeweleryChest;
 
@@ -3464,7 +3464,7 @@ INSTANCE ItMi_Sextant_Greg (C_Item)
 	name 				=	"Gregs Sextant";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI | ITEM_SHOW;
 
 	value 				=	Value_Sextant;
 
@@ -3981,7 +3981,7 @@ INSTANCE ItMi_DarkPearl_Greg (C_Item)
 	name 				=	"Gregs schwarze Perle";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI|ITEM_SHOW;
+	flags 				=	ITEM_MULTI | ITEM_SHOW;
 
 	value 				=	Value_DarkPearl;
 

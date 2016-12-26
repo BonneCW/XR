@@ -2638,7 +2638,7 @@ INSTANCE ItMw_Piratensaebel_Greg (C_Item)
 	name 				=	"Gregs alter Piratensäbel";  
 
 	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_SWD;	
+	flags 				=	ITEM_SWD | ITEM_SHOW;	
 	material 			=	MAT_METAL;
 
 	value 				=	Value_Piratensaebel / 2;
