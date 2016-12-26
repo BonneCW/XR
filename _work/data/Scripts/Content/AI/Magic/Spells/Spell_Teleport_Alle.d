@@ -788,7 +788,9 @@ func void Spell_Cast_Teleport_Pat_02()
 
 func int Spell_Logic_TeleportBergwelt (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
+	if (CurrentLevel != ADDONWORLD_ZEN) {
+		return SPL_SENDSTOP;
+	} else if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
 	}
