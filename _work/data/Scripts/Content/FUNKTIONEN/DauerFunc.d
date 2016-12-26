@@ -132,7 +132,7 @@ FUNC VOID DAUERFUNC_01()
 			if (!Hlp_IsValidHandle(View_Time))
 			{
 				var int length; length = Print_LongestLineLength("00:00:00", FONT_Screen);
-				View_Time = Print_ExtPxl(Print_Screen[PS_X] - length - 10, 20, Print_Screen[PS_X] - 10, 20 + Print_GetFontHeight(FONT_Screen));
+				View_Time = Print_ExtPxl(Print_Screen[PS_X] - length - 10, 20, "00:00:00", FONT_Screen, RGBA(255, 255, 255, 0), -1);
 			};
 
 			View_Open	(View_Time);

@@ -777,17 +777,17 @@ FUNC VOID FRAMEFUNC ()
 		if (her.focus_vob && her.focus_vob != lastFocusItem)
 		{
 			lastFocusItem = her.focus_vob;
-			var oCItem her_focusItem;
-			MEM_AssignInst (her_focusItem, her.focus_vob);
+			var oCItem her_focusItem2;
+			MEM_AssignInst (her_focusItem2, her.focus_vob);
 			
-			if (Hlp_IsValidItem (her_focusItem))
+			if (Hlp_IsValidItem (her_focusItem2))
 			{
-				if (Npc_GetDistToItem (hero, her_focusItem) < 200)
+				if (Npc_GetDistToItem (hero, her_focusItem2) < 200)
 				{
-					CreateInvItems (hero, her_focusItem.instanz, her_focusItem.amount); //amount beachten
-					Wld_RemoveItem (her_focusItem);
+					CreateInvItems (hero, her_focusItem2.instanz, her_focusItem2.amount); //amount beachten
+					Wld_RemoveItem (her_focusItem2);
 					
-					var string str;	str = ConcatStrings (her_focusItem.name, " aufgehoben!");
+					var string str;	str = ConcatStrings (her_focusItem2.name, " aufgehoben!");
 					PrintScreen (str, -1, -1, FONT_SCREENSMALL, 3);
 				};
 			};
