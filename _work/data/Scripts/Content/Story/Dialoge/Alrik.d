@@ -204,6 +204,7 @@ FUNC VOID Info_Mod_Alrik_Schaukampf_Info()
 	AI_Output(hero, self, "Info_Mod_Alrik_Schaukampf_15_00"); //Ich fordere dich heraus.
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 100);
+	Npc_RemoveInvItems(self, ItMi_Gold, 100);
 
 	if (Kapitel == 1)
 	{
