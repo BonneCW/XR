@@ -115,7 +115,7 @@ FUNC VOID Info_Mod_Skip_Francis_Info()
 	AI_Output(hero, self, "Info_Mod_Skip_Francis_15_16"); //Du kennst diese ganzen Leute?
 	AI_Output(self, hero, "Info_Mod_Skip_Francis_08_17"); //Gewiss. Bin doch regelmäßig mit dem Boot in Khorinis gewesen. Verkleidet natürlich.
 	AI_Output(self, hero, "Info_Mod_Skip_Francis_08_18"); //Hier gibt's doch nichts außer Fleisch und Wasser.
-	AI_Output(hero, self, "Info_Mod_Skip_Francis_15_19"); //Und eure Schäpse ...
+	AI_Output(hero, self, "Info_Mod_Skip_Francis_15_19"); //Und eure Schnäpse ...
 	AI_Output(self, hero, "Info_Mod_Skip_Francis_08_20"); //Auch beigeschafft. Oder siehst du hier irgendwo ein Zuckerrohrfeld oder einen Kartoffelacker?
 	AI_Output(hero, self, "Info_Mod_Skip_Francis_15_21"); //Hast recht.
 	AI_Output(hero, self, "Info_Mod_Skip_Francis_08_22"); //Bin schon wieder so gut wie zurück.
