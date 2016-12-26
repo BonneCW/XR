@@ -618,26 +618,6 @@ func int MapRespawnInstance(var int id) {
 	return inst;
 };
 
-func void AddToRespawnArray(var c_npc slf) {
-	if (!MeetsRespawnCondition(slf)) {
-		return;
-	};
-	if (nextRespawnIndex == MAX_RESPAWN) {
-		return;
-	};
-	var int hndl; hndl = new(RespawnObject@);
-	MEM_WriteStatArr(RespawnArray, nextRespawnIndex, hndl); // RespawnArray[nextRespawnIndex] = hndl;
-	nextRespawnIndex += 1; // Beim nächsten Mal in den nächsten Index schreiben
-	
-	var RespawnObject myRespawnObject; myRespawnObject = get(hndl);
-	var int inst; inst = Hlp_GetInstanceID(slf);
-	var int id; id = MapRespawnInstanceToID(inst);
-	myRespawnObject.id = id;
-	myRespawnObject.wp = slf.spawnPoint;
-	myRespawnObject.chapter = Kapitel;
-	myRespawnObject.area = CurrentLevel;
-};
-
 func void RemoveRespawnObject(var int hndl, var int i) {
 	if (nextRespawnIndex == 0) { // Das Array ist leer.
 		return;
@@ -662,10 +642,14 @@ func void CheckRespawns() {
 		var int hndl; hndl = MEM_ReadStatArr(RespawnArray, i); // hndl = RespawnArray[i];
 		var RespawnObject myRespawnObject; myRespawnObject = get(hndl);
 		PrintDebug(ConcatStrings("Respawn: Check i = ", IntToString(i)));
+		PrintDebug(ConcatStrings("Respawn: id = ", IntToString(myRespawnObject.id)));
+		PrintDebug(ConcatStrings("Respawn: wp = ", myRespawnObject.wp));
+		PrintDebug(ConcatStrings("Respawn: length = ", IntToString(STR_Len(myRespawnObject.wp))));
 		
 		//Jetzt haben wir unser Objekt!
-		
-		if (myRespawnObject.chapter < Kapitel && myRespawnObject.area == CurrentLevel) {
+		if (STR_Len(myRespawnObject.wp) == 0) {
+			RemoveRespawnObject(hndl, i);
+		} else if (myRespawnObject.chapter < Kapitel && myRespawnObject.area == CurrentLevel) {
 			var int newInst; newInst = myRespawnObject.id;
 			newInst = MapRespawnInstance(newInst);
 			if (newInst != -1) {
@@ -679,4 +663,32 @@ func void CheckRespawns() {
 		return;
 	};
 	MEM_StackPos.position = pos;
+};
+
+func void AddToRespawnArray(var c_npc slf) {
+	PrintDebug("Respawn: Adding Respawner");
+	if (!MeetsRespawnCondition(slf)) {
+		PrintDebug("Respawn: Skipped Add Because of no respawner");
+		return;
+	};
+	if (nextRespawnIndex == MAX_RESPAWN) {
+		PrintDebug("Respawn: Skipped Add Because of Too many");
+		return;
+	};
+	var int hndl; hndl = new(RespawnObject@);
+	MEM_WriteStatArr(RespawnArray, nextRespawnIndex, hndl); // RespawnArray[nextRespawnIndex] = hndl;
+	nextRespawnIndex += 1; // Beim nächsten Mal in den nächsten Index schreiben
+	
+	var RespawnObject myRespawnObject; myRespawnObject = get(hndl);
+	var int inst; inst = Hlp_GetInstanceID(slf);
+	var int id; id = MapRespawnInstanceToID(inst);
+	myRespawnObject.id = id;
+	myRespawnObject.wp = slf.wp;
+	myRespawnObject.chapter = Kapitel;
+	myRespawnObject.area = CurrentLevel;
+	PrintDebug(ConcatStrings("Respawn: wp = ", slf.wp));
+	
+	if (STR_Len(myRespawnObject.wp) == 0) {
+		RemoveRespawnObject(hndl, nextRespawnIndex - 1);
+	};
 };
