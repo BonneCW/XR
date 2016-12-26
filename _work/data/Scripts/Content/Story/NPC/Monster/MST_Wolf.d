@@ -366,6 +366,9 @@ INSTANCE Summoned_Wolf	(Mst_Default_Wolf)
 	
 	start_aistate = ZS_MM_Rtn_Summoned;
 	
+	Npc_RemoveInvItems (self, ItAt_GoblinBone, Npc_HasItems(self, ItAt_GoblinBone));
+	Npc_RemoveInvItems (self, ItFo_MuttonRaw, Npc_HasItems(self, ItFo_MuttonRaw));
+	
 	B_SetVisuals_Wolf();
 	Npc_SetToFistMode(self);
 };

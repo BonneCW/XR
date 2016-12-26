@@ -375,6 +375,10 @@ INSTANCE Summoned_BlackWolf	(Mst_Default_Warg)
 	aivar[AIV_PARTYMEMBER] = TRUE;
 	B_SetAttitude (self, ATT_FRIENDLY); 
 	
+	Npc_RemoveInvItems (self, ItAt_GoblinBone, Npc_HasItems(self, ItAt_GoblinBone));
+	Npc_RemoveInvItems (self, ItAt_SkeletonBone, Npc_HasItems(self, ItAt_SkeletonBone));
+	Npc_RemoveInvItems (self, ItFo_MuttonRaw, Npc_HasItems(self, ItFo_MuttonRaw));
+	
 	start_aistate = ZS_MM_Rtn_Summoned;
 	
 	B_SetVisuals_BlackWolf();
