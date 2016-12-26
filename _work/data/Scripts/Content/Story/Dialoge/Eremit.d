@@ -243,6 +243,9 @@ FUNC INT Info_Mod_Eremit_Prisma2_Condition()
 FUNC VOID Info_Mod_Eremit_Prisma2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Eremit_Prisma2_15_00"); //Ich bin da und bereit.
+	
+	B_GiveInvItems(hero, self, ItMi_DarkPearl, 1);
+	
 	AI_Output(self, hero, "Info_Mod_Eremit_Prisma2_04_01"); //(kindlich) Und du hast sogar deine Freunde zum Spielen mitgebracht?
 	AI_Output(hero, self, "Info_Mod_Eremit_Prisma2_15_02"); //(irritiert) Welche Freunde?
 
