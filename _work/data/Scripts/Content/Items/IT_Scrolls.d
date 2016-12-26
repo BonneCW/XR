@@ -1627,7 +1627,7 @@ INSTANCE ItSc_Teleport_Eisgebiet (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
-	description			=	"Teleport";
+	description			=	"Teleport nach Gelato";
 	
 	TEXT	[0]			=	"";
 	
