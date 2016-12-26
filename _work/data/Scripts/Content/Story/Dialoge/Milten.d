@@ -671,7 +671,7 @@ FUNC VOID Info_Mod_Milten_MardukAufgabe_Info()
 	AI_Output(self, hero, "Info_Mod_Milten_MardukAufgabe_03_01"); //Na, du musst ja einen schönen Eindruck bei ihm hinterlassen haben.
 	AI_Output(self, hero, "Info_Mod_Milten_MardukAufgabe_03_02"); //Ihm dürfte genauso klar sein wie mir, dass du das aus eigener Kraft, ohne die Unterstützung eines Magiers, niemals schaffen kannst ...
 	AI_Output(hero, self, "Info_Mod_Milten_MardukAufgabe_15_03"); //Deshalb frage ich ja dich.
-	AI_Output(self, hero, "Info_Mod_Milten_MardukAufgabe_03_04"); //Also gut, ich helfe dir dabei… aber das bleibt unter uns, klar?
+	AI_Output(self, hero, "Info_Mod_Milten_MardukAufgabe_03_04"); //Also gut, ich helfe dir dabei... aber das bleibt unter uns, klar?
 	AI_Output(self, hero, "Info_Mod_Milten_MardukAufgabe_03_05"); //Ich brauche einen Runenstein, Pech und eine Feuerball-Spruchrolle.
 
 	B_LogEntry	(TOPIC_MOD_MARDUK_FEUERBALL, "Milten hat sich bereit erklärt mir bei der Herstellung der Rune zu helfen. Dafür benötigt er folgende Zutaten: ein Runenstein, Pech und eine Feuerball-Spruchrolle.");
@@ -757,7 +757,7 @@ FUNC VOID Info_Mod_Milten_RuneFertig_Info()
 	B_GiveInvItems	(self, hero, ItRu_InstantFireball, 1);
 
 	AI_Output(hero, self, "Info_Mod_Milten_RuneFertig_15_02"); //Vielen Dank.
-	AI_Output(self, hero, "Info_Mod_Milten_RuneFertig_03_03"); //Aber wie gesagt bleibt das unter uns. (grinst) Ich bin nur zu neugierig auf Marduk’s Gesichtsausdruck, wenn du ihm die Rune bringst.
+	AI_Output(self, hero, "Info_Mod_Milten_RuneFertig_03_03"); //Aber wie gesagt bleibt das unter uns. (grinst) Ich bin nur zu neugierig auf Marduks Gesichtsausdruck, wenn du ihm die Rune bringst.
 
 	B_GivePlayerXP	(100);
 
@@ -786,7 +786,7 @@ FUNC VOID Info_Mod_Milten_MardukRune_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Milten_MardukRune_03_00"); //(grinst) Marduks Reaktion hat meine Erwartungen übertroffen.
 	AI_Output(hero, self, "Info_Mod_Milten_MardukRune_15_01"); //Milten?
-	AI_Output(self, hero, "Info_Mod_Milten_MardukRune_03_02"); //Ich habe doch gesagt, ich lasse mir das nicht entgehen. Es war ein bisschen wie in alten Zeiten, als Marduk rot anlief, wenn du verstehst ...
+	AI_Output(self, hero, "Info_Mod_Milten_MardukRune_03_02"); //Ich habe doch gesagt, ich lasse mir das nicht entgehen. Es war ein bisschen wie in alten Zeiten, als Saturas rot anlief, wenn du verstehst ...
 	AI_Output(hero, self, "Info_Mod_Milten_MardukRune_15_03"); //Hmm ... wütender Magier ... Erzhaufen?
 	AI_Output(self, hero, "Info_Mod_Milten_MardukRune_03_04"); //Genau.
 	AI_Output(hero, self, "Info_Mod_Milten_MardukRune_15_05"); //Und ich war wieder froh dich dabei zu haben.
