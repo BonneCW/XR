@@ -234,7 +234,7 @@ FUNC VOID Info_Mod_Namib_DuengerVerteilt_Info()
 
 	AI_Output(self, hero, "Info_Mod_Namib_DuengerVerteilt_02_03"); //Und auf deinem Rückweg kannst du Lester wieder mitnehmen!
 
-	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Ich soll einen Brief und ein Paket Sumpfkraut zu den Schwarzmagiern bringen. Auf dem Weg zurück ins Minental soll ich außerdem Lester mitnehmen.");
+	B_LogEntry	(TOPIC_MOD_SEKTE_AUFNAHME, "Ich soll einen Brief und ein Paket Sumpfkraut zu den Schwarzmagiern bringen. Am besten wäre es wohl, wenn ich zu Xardas ginge. Auf dem Weg zurück ins Minental soll ich außerdem Lester mitnehmen.");
 };
 
 INSTANCE Info_Mod_Namib_KarrasDa (C_INFO)
