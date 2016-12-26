@@ -1092,6 +1092,8 @@ FUNC VOID Info_Mod_Gorn_Standfest2_Info()
 	};
 };
 
+var int Mod_Gorn_Help_Paladine;
+
 INSTANCE Info_Mod_Gorn_Hilfe (C_INFO)
 {
 	npc		= Mod_533_SLD_Gorn_NW;
@@ -1133,6 +1135,7 @@ FUNC VOID Info_Mod_Gorn_Hilfe_Info()
 	};
 	if (Npc_KnowsInfo(hero, Info_Mod_Torlof_Auftrag))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Torlof_Kristall))
+	&& (!Mod_Gorn_Help_Paladine)
 	{
 		Info_AddChoice	(Info_Mod_Gorn_Hilfe, "Ich muss irgendetwas in der Stadt finden, womit sich die Paladine erpressen lassen.", Info_Mod_Gorn_Hilfe_Kristall);
 	};
@@ -1152,6 +1155,8 @@ FUNC VOID Info_Mod_Gorn_Hilfe_Kristall()
 	AI_Output(self, hero, "Info_Mod_Gorn_Hilfe_Kristall_12_04"); //Bei ihm könntest du vielleicht etwas erfahren.
 
 	B_LogEntry	(TOPIC_MOD_TORLOFSPIONAGE, "Von Gorn konnte ich erfahren, dass Paladin Lothar im oberen Viertel eine schwäche für Alkohol und eine große Klappe hat.");
+	
+	Mod_Gorn_Help_Paladine = TRUE;
 };
 
 FUNC VOID Info_Mod_Gorn_Hilfe_MinecrawlerSekret()
