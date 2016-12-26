@@ -1396,7 +1396,7 @@ FUNC VOID Info_Mod_Constantino_Mitgift_Info()
 	AI_Output(self, hero, "Info_Mod_Constantino_Mitgift_10_11"); //Für die Herstellung des Giftes bräuchte ich aber zumindest einen Blufliegenstachel und eine Minecrawlerzange.
 	AI_Output(self, hero, "Info_Mod_Constantino_Mitgift_10_12"); //Vielleicht wirst du bei dem alten Zausel im Hafenviertel fündig.
 
-	B_LogEntry	(TOPIC_MOD_NEORAS_MITGIFT, "Constantino könnte mir Tiergift herstellen, bräuchte dafür aber einen Blutfliegenstacheln und eine Minecrawlerzange.");
+	B_LogEntry	(TOPIC_MOD_NEORAS_MITGIFT, "Constantino könnte mir Tiergift herstellen, bräuchte dafür aber einen Blutfliegenstachel und eine Minecrawlerzange.");
 };
 
 INSTANCE Info_Mod_Constantino_Mitgift2 (C_INFO)
