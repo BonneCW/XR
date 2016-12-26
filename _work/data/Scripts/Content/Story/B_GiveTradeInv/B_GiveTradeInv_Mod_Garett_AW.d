@@ -23,6 +23,9 @@ FUNC VOID B_GiveTradeInv_Mod_Garett_AW (var C_NPC slf)
 		CreateInvItems (slf, ItMW_Addon_Hacker_2h_02, 1);
 		CreateInvItems (slf, ItMw_Addon_PIR2hAxe, 1);
 		CreateInvItems (slf, ItMw_Addon_PIR2hSword, 1);
+		
+		CreateInvItems (slf, ItRw_Arrow, 100);
+		CreateInvItems (slf, ItRw_Bolt, 100);
 			
 		// ------ Ringe / Amulette ------
 		CreateInvItems (slf, ItAm_Prot_Fire_01,1);
@@ -42,6 +45,9 @@ FUNC VOID B_GiveTradeInv_Mod_Garett_AW (var C_NPC slf)
 		CreateInvItems	(slf, ItMw_Piratensaebel, 1);
 		CreateInvItems	(slf, ItMw_Schwert3, 1);
 		CreateInvItems	(slf, ItMw_Doppelaxt, 1);
+		
+		CreateInvItems (slf, ItRw_Arrow, 100);
+		CreateInvItems (slf, ItRw_Bolt, 100);
 
 		CreateInvItems	(slf, ItMW_Addon_Hacker_2h_01, 1);
 				
@@ -56,6 +62,9 @@ FUNC VOID B_GiveTradeInv_Mod_Garett_AW (var C_NPC slf)
 		CreateInvItems	(slf, ItMW_Addon_Hacker_1h_01, 1);
 
 		CreateInvItems	(slf, ItMW_Addon_Keule_2h_01, 1);
+		
+		CreateInvItems (slf, ItRw_Arrow, 100);
+		CreateInvItems (slf, ItRw_Bolt, 100);
 
 		Garett_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -69,6 +78,9 @@ FUNC VOID B_GiveTradeInv_Mod_Garett_AW (var C_NPC slf)
 
 		CreateInvItems	(slf, ItMw_Krummschwert, 1);
 		
+		CreateInvItems (slf, ItRw_Arrow, 100);
+		CreateInvItems (slf, ItRw_Bolt, 100);
+		
 		Garett_ItemsGiven_Chapter_4 = TRUE;
 	};
 
@@ -76,6 +88,9 @@ FUNC VOID B_GiveTradeInv_Mod_Garett_AW (var C_NPC slf)
 	&& (Garett_ItemsGiven_Chapter_5 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 200); 
+		
+		CreateInvItems (slf, ItRw_Arrow, 100);
+		CreateInvItems (slf, ItRw_Bolt, 100);
 	
 		Garett_ItemsGiven_Chapter_5 = TRUE;
 	};
