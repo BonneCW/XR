@@ -163,6 +163,7 @@ FUNC VOID Info_Mod_Wilfried_HabBeutel_Info()
 	AI_Output(hero, self, "Info_Mod_Wilfried_HabBeutel_15_01"); //Wie man's nimmt. Den Geldbeutel habe ich gefunden, aber ... sieh selbst.
 
 	B_GiveInvItems	(hero, self, ItSe_WilfriedsBeutel, 1);
+	Npc_RemoveInvItems(self, ItSe_WilfriedsBeutel, 1);
 
 	AI_Output(self, hero, "Info_Mod_Wilfried_HabBeutel_08_02"); //(entsetzt) Nein! Das kann nicht dein Ernst sein... du hast es gestohlen!
 
