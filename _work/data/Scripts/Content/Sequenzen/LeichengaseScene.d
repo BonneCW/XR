@@ -11,18 +11,34 @@ FUNC VOID LeichengaseScene()
 
 	if (Mod_LeichengaseScene_Counter == 2)
 	{
-		AI_AimAt	(Mod_1218_TPL_Templer_MT, Mod_1322_PSINOV_Novize_MT);
-		AI_AimAt	(Mod_1219_TPL_Templer_MT, Mod_1324_PSINOV_Novize_MT);
-		AI_AimAt	(Mod_1221_TPL_Templer_MT, Mod_1325_PSINOV_Novize_MT);
-		AI_AimAt	(Mod_1226_TPL_Templer_MT, Mod_1326_PSINOV_Novize_MT);
+		if (Hlp_IsValidNpc(Mod_1218_TPL_Templer_MT)) {
+			AI_AimAt	(Mod_1218_TPL_Templer_MT, Mod_1322_PSINOV_Novize_MT);
+		};
+		if (Hlp_IsValidNpc(Mod_1219_TPL_Templer_MT)) {
+			AI_AimAt	(Mod_1219_TPL_Templer_MT, Mod_1324_PSINOV_Novize_MT);
+		};
+		if (Hlp_IsValidNpc(Mod_1221_TPL_Templer_MT)) {
+			AI_AimAt	(Mod_1221_TPL_Templer_MT, Mod_1325_PSINOV_Novize_MT);
+		};
+		if (Hlp_IsValidNpc(Mod_1226_TPL_Templer_MT)) {
+			AI_AimAt	(Mod_1226_TPL_Templer_MT, Mod_1326_PSINOV_Novize_MT);
+		};
 	};
 
 	if (Mod_LeichengaseScene_Counter == 4)
 	{
-		AI_ShootAt	(Mod_1218_TPL_Templer_MT, Mod_1322_PSINOV_Novize_MT);
-		AI_ShootAt	(Mod_1219_TPL_Templer_MT, Mod_1324_PSINOV_Novize_MT);
-		AI_ShootAt	(Mod_1221_TPL_Templer_MT, Mod_1325_PSINOV_Novize_MT);
-		AI_ShootAt	(Mod_1226_TPL_Templer_MT, Mod_1326_PSINOV_Novize_MT);
+		if (Hlp_IsValidNpc(Mod_1218_TPL_Templer_MT)) {
+			AI_ShootAt	(Mod_1218_TPL_Templer_MT, Mod_1322_PSINOV_Novize_MT);
+		};
+		if (Hlp_IsValidNpc(Mod_1219_TPL_Templer_MT)) {
+			AI_ShootAt	(Mod_1219_TPL_Templer_MT, Mod_1324_PSINOV_Novize_MT);
+		};
+		if (Hlp_IsValidNpc(Mod_1221_TPL_Templer_MT)) {
+			AI_ShootAt	(Mod_1221_TPL_Templer_MT, Mod_1325_PSINOV_Novize_MT);
+		};
+		if (Hlp_IsValidNpc(Mod_1226_TPL_Templer_MT)) {
+			AI_ShootAt	(Mod_1226_TPL_Templer_MT, Mod_1326_PSINOV_Novize_MT);
+		};
 	};
 
 	if (Mod_LeichengaseScene_Counter == 5)
@@ -34,11 +50,19 @@ FUNC VOID LeichengaseScene()
 	};
 
 	if (Mod_LeichengaseScene_Counter == 6)
-	{		
-		AI_StopAim	(Mod_1218_TPL_Templer_MT);
-		AI_StopAim	(Mod_1219_TPL_Templer_MT);
-		AI_StopAim	(Mod_1221_TPL_Templer_MT);
-		AI_StopAim	(Mod_1226_TPL_Templer_MT);
+	{
+		if (Hlp_IsValidNpc(Mod_1218_TPL_Templer_MT)) {
+			AI_StopAim	(Mod_1218_TPL_Templer_MT);
+		};
+		if (Hlp_IsValidNpc(Mod_1219_TPL_Templer_MT)) {
+			AI_StopAim	(Mod_1219_TPL_Templer_MT);
+		};
+		if (Hlp_IsValidNpc(Mod_1221_TPL_Templer_MT)) {
+			AI_StopAim	(Mod_1221_TPL_Templer_MT);
+		};
+		if (Hlp_IsValidNpc(Mod_1226_TPL_Templer_MT)) {
+			AI_StopAim	(Mod_1226_TPL_Templer_MT);
+		};
 	};
 
 	if (Mod_LeichengaseScene_Counter == 7)
