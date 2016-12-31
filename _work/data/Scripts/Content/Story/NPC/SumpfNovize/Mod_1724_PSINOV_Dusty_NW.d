@@ -5,7 +5,7 @@ instance Mod_1724_PSINOV_Dusty_NW (Npc_Default)
 	guild 		= GIL_OUT;
 	id 			= 1724;
 	voice 		= 14;
-	flags       = 0;	//Sterblich, optionaler Captain im Kapitel 5!																
+	flags       = 2; // #594													
 	npctype		= NPCTYPE_MAIN;
 	
 	//-----------AIVARS----------------
