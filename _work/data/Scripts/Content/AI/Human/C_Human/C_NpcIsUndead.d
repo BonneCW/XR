@@ -16,6 +16,7 @@ func int C_NpcIsUndead(var C_NPC slf)
      || (slf.guild == GIL_UNDEADORC)
      || (slf.npctype == Npctype_UNTOTERNOVIZE)
      || (slf.npctype == Npctype_UNTOTERMAGIER)
+	 || (slf.aivar[AIV_MM_REAL_ID] == ID_UNDEADSWAMPSHARK)
      //|| (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_UNDEAD) // wegen Untote vernichten
      {
      	return TRUE;
