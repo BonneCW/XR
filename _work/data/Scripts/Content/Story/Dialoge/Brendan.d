@@ -26,6 +26,8 @@ FUNC VOID Info_Mod_Brendan_Hi_Info()
 	B_LogEntry	(TOPIC_MOD_EIS_RAUESCHNEIDE, "Am Turm war nur noch Brendan am Leben. Ich muss ihn schleunigst zum Kommander zurückbringen.");
 
 	B_StartOtherRoutine	(self, "FOLLOW");
+	
+	self.aivar[AIV_PARTYMEMBER] = TRUE;
 };
 
 INSTANCE Info_Mod_Brendan_RaueSchneide (C_INFO)
@@ -59,6 +61,8 @@ FUNC VOID Info_Mod_Brendan_RaueSchneide_Info()
 	};
 
 	AI_StopProcessInfos	(self);
+	
+	self.aivar[AIV_PARTYMEMBER] = FALSE;
 
 	B_StartOtherRoutine	(self, "DORF");
 };
