@@ -5,7 +5,7 @@ instance PC_Friend_XW (Npc_Default)
 	guild 		= GIL_OUT;
 	id 			= 1607;
 	voice 		= 1;
-	flags       = 0;																
+	flags       = 2;																
 	npctype		= NPCTYPE_FRIEND;
 	
 	// ------ AIVARs ------
