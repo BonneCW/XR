@@ -290,7 +290,9 @@ INSTANCE Info_Mod_Anor_Trade (C_INFO)
 
 FUNC INT Info_Mod_Anor_Trade_Condition()
 {
-	return 1;
+	if (Mod_VMG_Dabei) {
+		return 1;
+	};
 };
 
 FUNC VOID Info_Mod_Anor_Trade_Info()
