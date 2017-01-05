@@ -275,7 +275,9 @@ func void ZS_Dead ()
 		Wld_SendTrigger	("SIGNALFEUER_01_01");
 		Wld_SendTrigger	("SIGNALFEUER_01_02");
 
-		Mod_EchsenQuest_02 += 1;
+		if (Mod_EchsenQuest_02 < 5) {
+			Mod_EchsenQuest_02 += 1;
+		};
 
 		if (Mod_EchsenQuest_02 == 5)
 		{
@@ -296,7 +298,9 @@ func void ZS_Dead ()
 		Wld_SendTrigger	("SIGNALFEUER_02_01");
 		Wld_SendTrigger	("SIGNALFEUER_02_02");
 
-		Mod_EchsenQuest_02 += 1;
+		if (Mod_EchsenQuest_02 < 5) {
+			Mod_EchsenQuest_02 += 1;
+		};
 
 		if (Mod_EchsenQuest_02 == 5)
 		{
@@ -317,7 +321,9 @@ func void ZS_Dead ()
 		Wld_SendTrigger	("SIGNALFEUER_03_01");
 		Wld_SendTrigger	("SIGNALFEUER_03_02");
 
-		Mod_EchsenQuest_02 += 1;
+		if (Mod_EchsenQuest_02 < 5) {
+			Mod_EchsenQuest_02 += 1;
+		};
 
 		if (Mod_EchsenQuest_02 == 5)
 		{
@@ -338,7 +344,9 @@ func void ZS_Dead ()
 		Wld_SendTrigger	("SIGNALFEUER_04_01");
 		Wld_SendTrigger	("SIGNALFEUER_04_02");
 
-		Mod_EchsenQuest_02 += 1;
+		if (Mod_EchsenQuest_02 < 5) {
+			Mod_EchsenQuest_02 += 1;
+		};
 
 		if (Mod_EchsenQuest_02 == 5)
 		{
