@@ -1865,10 +1865,13 @@ FUNC VOID PC_BolzenMachen_Komplett_Info ()
 		CreateInvItems	(hero, ItRw_Bolt, 1);
 
 		Print	("Bolzen hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Pfeilschaft und Bolzenspitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Bolzenspitze fehlt");
 	};
 };
 
@@ -1918,10 +1921,13 @@ FUNC VOID PC_BolzenMachen_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Bolzen hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Pfeilschaft und Bolzenspitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Bolzenspitze fehlt");
 	};
 };
 
@@ -1959,10 +1965,13 @@ FUNC VOID PC_BolzenMachen_Widerhaken_Komplett_Info ()
 		CreateInvItems	(hero, ItRw_WiderhakenBolt, 1);
 
 		Print	("Bolzen mit Widerhaken hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Pfeilschaft und Bolzenspitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Bolzenspitze fehlt");
 	};
 };
 
@@ -2013,10 +2022,13 @@ FUNC VOID PC_BolzenMachen_Widerhaken_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Bolzen mit Widerhaken hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Pfeilschaft und Bolzenspitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Bolzenspitze fehlt");
 	};
 };
 
@@ -2057,10 +2069,13 @@ FUNC VOID PC_BolzenMachen_Sprengstoff_Komplett_Info ()
 		CreateInvItems	(hero, ItRw_SprengstoffBolt, 1);
 
 		Print	("Explosionsbolzen hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Pfeilschaft und Bolzenspitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Bolzenspitze fehlt");
 	};
 };
 
@@ -2161,10 +2176,13 @@ FUNC VOID PC_BolzenMachen_Sprengstoff_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Explosionsbolzen hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Pfeilschaft und Bolzenspitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Bolzenspitze fehlt");
 	};
 };
 
@@ -2202,10 +2220,13 @@ FUNC VOID PC_BolzenMachen_Praezision_Komplett_Info ()
 		CreateInvItems	(hero, ItRw_PraezisionsBolt, 1);
 
 		Print	("Präzisionsbolzen hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Pfeilschaft und Bolzenspitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Bolzenspitze fehlt");
 	};
 };
 
@@ -2256,10 +2277,13 @@ FUNC VOID PC_BolzenMachen_Praezision_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Präzisionsbolzen hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Pfeilschaft und Bolzenspitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, BolzenSpitze) == 0) {
+		Print	("Bolzenspitze fehlt");
 	};
 };
 
@@ -2296,10 +2320,13 @@ FUNC VOID PC_BolzenMachen_Schmetter_Komplett_Info ()
 		CreateInvItems	(hero, ItRw_SchmetterBolt, 1);
 
 		Print	("Schmetterbolzen hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, SchmetterBolzenSpitze) == 0) {
+		Print	("Pfeilschaft und Schmetterbolzenspitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, SchmetterBolzenSpitze) == 0) {
+		Print	("Schmetterbolzenspitze fehlt");
 	};
 };
 
@@ -2349,10 +2376,13 @@ FUNC VOID PC_BolzenMachen_Schmetter_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Bolzen hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, SchmetterBolzenSpitze) == 0) {
+		Print	("Pfeilschaft und Schmetterbolzenspitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, SchmetterBolzenSpitze) == 0) {
+		Print	("Schmetterbolzenspitze fehlt");
 	};
 };
 
@@ -2390,10 +2420,13 @@ FUNC VOID PC_BolzenMachen_GoldErz_Komplett_Info ()
 		CreateInvItems	(hero, ItRw_GoldErzBolt, 1);
 
 		Print	("Bolzen aus Gold-Erz-Legierung hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, BolzenSpitze_GoldErz) == 0) {
+		Print	("Pfeilschaft und Bolzenspitze aus Gold-Erz-Legierung fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, BolzenSpitze_GoldErz) == 0) {
+		Print	("Bolzenspitze aus Gold-Erz-Legierung fehlt");
 	};
 };
 
@@ -2444,10 +2477,13 @@ FUNC VOID PC_BolzenMachen_GoldErz_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Bolzen aus Erz-Gold-Legierung hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, BolzenSpitze_GoldErz) == 0) {
+		Print	("Pfeilschaft und Bolzenspitze aus Gold-Erz-Legierung fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, BolzenSpitze_GoldErz) == 0) {
+		Print	("Bolzenspitze aus Gold-Erz-Legierung fehlt");
 	};
 };
 
@@ -2485,10 +2521,13 @@ FUNC VOID PC_BolzenMachen_GoldErzBlut_Komplett_Info ()
 		CreateInvItems	(hero, ItRw_GoldErzBlutBolt, 1);
 
 		Print	("Bolzen aus Gold-Erz-Blut-Legierung hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, BolzenSpitze_GoldErzBlut) == 0) {
+		Print	("Pfeilschaft und Bolzenspitze aus Gold-Erz-Blut-Legierung fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, BolzenSpitze_GoldErzBlut) == 0) {
+		Print	("Bolzenspitze aus Gold-Erz-Blut-Legierung fehlt");
 	};
 };
 
@@ -2539,10 +2578,13 @@ FUNC VOID PC_BolzenMachen_GoldErzBlut_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Bolzen aus Gold-Erz-Blut-Legierung hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, BolzenSpitze_GoldErzBlut) == 0) {
+		Print	("Pfeilschaft und Bolzenspitze aus Gold-Erz-Blut-Legierung fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, BolzenSpitze_GoldErzBlut) == 0) {
+		Print	("Bolzenspitze aus Gold-Erz-Blut-Legierung fehlt");
 	};
 };
 
@@ -2795,17 +2837,19 @@ FUNC INT PC_PfeileMachen_Komplett_Condition()
 FUNC VOID PC_PfeileMachen_Komplett_Info ()
 {
 	if (Npc_HasItems(hero, PfeilStab) > 0)
-	&& (Npc_HasItems(hero, PfeilSpitze) > 0)
-	{
+	&& (Npc_HasItems(hero, PfeilSpitze) > 0) {
 		Npc_RemoveInvItems	(hero, PfeilStab, 1);
 		Npc_RemoveInvItems	(hero, PfeilSpitze, 1);
 		CreateInvItems	(hero, ItRw_Arrow, 1);
 
 		Print	("Pfeil hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilschaft und -spitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilspitze fehlt");
 	};
 };
 
@@ -2835,18 +2879,14 @@ FUNC INT PC_PfeileMachen_Komplett_Alle_Condition()
 FUNC VOID PC_PfeileMachen_Komplett_Alle_Info ()
 {
 	if (Npc_HasItems(hero, PfeilStab) > 0)
-	&& (Npc_HasItems(hero, PfeilSpitze) > 0)
-	{
-		if (Npc_HasItems(hero, PfeilStab) > Npc_HasItems(hero, PfeilSpitze))
-		{
+	&& (Npc_HasItems(hero, PfeilSpitze) > 0) {
+		if (Npc_HasItems(hero, PfeilStab) > Npc_HasItems(hero, PfeilSpitze)) {
 			Mod_PfeilCounter = Npc_HasItems(hero, PfeilSpitze);
 
 			Npc_RemoveInvItems	(hero, PfeilStab, Npc_HasItems(hero, PfeilSpitze));
 			CreateInvItems	(hero, ItRw_Arrow, Npc_HasItems(hero, PfeilSpitze));
 			Npc_RemoveInvItems	(hero, PfeilSpitze, Npc_HasItems(hero, PfeilSpitze));
-		}
-		else
-		{
+		} else {
 			Mod_PfeilCounter = Npc_HasItems(hero, PfeilStab);
 
 			Npc_RemoveInvItems	(hero, PfeilSpitze, Npc_HasItems(hero, PfeilStab));
@@ -2855,10 +2895,13 @@ FUNC VOID PC_PfeileMachen_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Pfeile hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilschaft und -spitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilspitze fehlt");
 	};
 };
 
@@ -2896,10 +2939,13 @@ FUNC VOID PC_PfeileMachen_Widerhaken_Komplett_Info ()
 		CreateInvItems	(hero, ItRw_WiderhakenArrow, 1);
 
 		Print	("Pfeil mit Widerhaken hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilschaft und -spitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilspitze fehlt");
 	};
 };
 
@@ -2950,10 +2996,13 @@ FUNC VOID PC_PfeileMachen_Widerhaken_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Pfeile mit Widerhaken hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilschaft und -spitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilspitze fehlt");
 	};
 };
 
@@ -2991,10 +3040,13 @@ FUNC VOID PC_PfeileMachen_Praezision_Komplett_Info ()
 		CreateInvItems	(hero, ItRw_PraezisionsArrow, 1);
 
 		Print	("Präzisionspfeil hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilschaft und -spitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilspitze fehlt");
 	};
 };
 
@@ -3045,10 +3097,13 @@ FUNC VOID PC_PfeileMachen_Praezision_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Präzisionspfeile hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilschaft und -spitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilspitze fehlt");
 	};
 };
 
@@ -3085,10 +3140,13 @@ FUNC VOID PC_PfeileMachen_Schmetterpfeile_Komplett_Info ()
 		CreateInvItems	(hero, ItRw_SchmetterArrow, 1);
 
 		Print	("Schmetterpfeil hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, SchmetterPfeilSpitze) == 0) {
+		Print	("Pfeilschaft und Schmetterpfeilspitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, SchmetterPfeilSpitze) == 0) {
+		Print	("Schmetterpfeilspitze fehlt");
 	};
 };
 
@@ -3138,10 +3196,13 @@ FUNC VOID PC_PfeileMachen_Schmetterpfeile_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Schmetterpfeile hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, SchmetterPfeilSpitze) == 0) {
+		Print	("Pfeilschaft und Schmetterpfeilspitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, SchmetterPfeilSpitze) == 0) {
+		Print	("Schmetterpfeilspitze fehlt");
 	};
 };
 
@@ -3179,10 +3240,13 @@ FUNC VOID PC_PfeileMachen_GoldErz_Komplett_Info ()
 		CreateInvItems	(hero, ItRw_GoldErzArrow, 1);
 
 		Print	("Pfeil aus Gold-Erz-Legierung hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, PfeilSpitze_GoldErz) == 0) {
+		Print	("Pfeilschaft und -spitze aus Gold-Erz-Legierung fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, PfeilSpitze_GoldErz) == 0) {
+		Print	("Pfeilspitze aus Gold-Erz-Legierung fehlt");
 	};
 };
 
@@ -3233,10 +3297,13 @@ FUNC VOID PC_PfeileMachen_GoldErz_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Pfeile aus Gold-Erz-Legierung hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, PfeilSpitze_GoldErz) == 0) {
+		Print	("Pfeilschaft und -spitze aus Gold-Erz-Legierung fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, PfeilSpitze_GoldErz) == 0) {
+		Print	("Pfeilspitze aus Gold-Erz-Legierung fehlt");
 	};
 };
 
@@ -3274,10 +3341,13 @@ FUNC VOID PC_PfeileMachen_GoldErzBlut_Komplett_Info ()
 		CreateInvItems	(hero, ItRw_GoldErzBlutArrow, 1);
 
 		Print	("Pfeil aus Gold-Erz-Blut-Legierung hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, PfeilSpitze_GoldErzBlut) == 0) {
+		Print	("Pfeilschaft und -spitze aus Gold-Erz-Blut-Legierung fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, PfeilSpitze_GoldErzBlut) == 0) {
+		Print	("Pfeilspitze aus Gold-Erz-Blut-Legierung fehlt");
 	};
 };
 
@@ -3328,10 +3398,13 @@ FUNC VOID PC_PfeileMachen_GoldErzBlut_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Pfeile aus Gold-Erz-Blut-Legierung hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, PfeilSpitze_GoldErzBlut) == 0) {
+		Print	("Pfeilschaft und -spitze aus Gold-Erz-Blut-Legierung fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, PfeilSpitze_GoldErzBlut) == 0) {
+		Print	("Pfeilspitze aus Gold-Erz-Blut-Legierung fehlt");
 	};
 };
 
@@ -3372,10 +3445,13 @@ FUNC VOID PC_PfeileMachen_Sprengstoff_Komplett_Info ()
 		CreateInvItems	(hero, ItRw_SprengstoffArrow, 1);
 
 		Print	("Explosionspfeil hergestellt!");
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilschaft und -spitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilspitze fehlt");
 	};
 };
 
@@ -3476,10 +3552,13 @@ FUNC VOID PC_PfeileMachen_Sprengstoff_Komplett_Alle_Info ()
 		};
 
 		Print	(ConcatStrings(IntToString(Mod_PfeilCounter), " Explosionspfeile hergestellt!"));
-	}
-	else
-	{
-		Print	(PRINT_ProdItemsMissing);
+	} else if (Npc_HasItems(hero, PfeilStab) == 0)
+	&& (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilschaft und -spitze fehlen");
+	} else if (Npc_HasItems(hero, PfeilStab) == 0) {
+		Print	("Pfeilschaft fehlt");
+	} else if (Npc_HasItems(hero, PfeilSpitze) == 0) {
+		Print	("Pfeilspitze fehlt");
 	};
 };
 
