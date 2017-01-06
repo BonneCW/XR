@@ -17,6 +17,8 @@ instance Mod_7362_OUT_Buff_TUG (Npc_Default)
 	// ------ Equippte Waffen ------																		
 	EquipItem (self, ItRw_Bow_L_03); 
 	
+	aivar[AIV_PARTYMEMBER] = TRUE;
+	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 		

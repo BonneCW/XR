@@ -11,6 +11,8 @@ INSTANCE Mod_7361_OUT_Setta_TUG (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;
 
 	EquipItem (self, ItMw_1H_quantarie_Schwert_01);
+	
+	aivar[AIV_PARTYMEMBER] = TRUE;
 
 	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe", FaceBabe_N_Blondie, BodyTexBabe_N, ITAR_Buergerinkleid8);
 	Mdl_SetModelFatness	(self,0);

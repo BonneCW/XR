@@ -61,6 +61,8 @@ FUNC VOID Info_Mod_Buff_TUG_Trador_Info()
 	AI_Output(self, hero, "Info_Mod_Buff_TUG_Trador_06_10"); //Wie kann ich mich erkenntlich zeigen?
 
 	Mod_VMG_WSTrador += 1;
+	
+	self.aivar[AIV_PARTYMEMBER] = FALSE;
 
 	if (Mod_VMG_WSTrador == 6)
 	{

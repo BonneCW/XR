@@ -57,6 +57,8 @@ FUNC VOID Info_Mod_Setta_TUG_Trador_Info()
 	AI_Output(self, hero, "Info_Mod_Setta_TUG_Trador_16_07"); //Vielen Dank! Was soll deine Belohnung sein?
 
 	Mod_VMG_WSTrador += 1;
+	
+	self.aivar[AIV_PARTYMEMBER] = FALSE;
 
 	if (Mod_VMG_WSTrador == 6)
 	{
