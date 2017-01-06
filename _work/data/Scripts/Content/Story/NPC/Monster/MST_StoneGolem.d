@@ -395,7 +395,7 @@ INSTANCE Golem_Trador_01	(Mst_Default_StoneGolem)
 	B_SetVisuals_StoneGolem();
 	Npc_SetToFistMode	(self);
 
-	attribute	[ATR_STRENGTH]		=	95;
+	attribute	[ATR_STRENGTH]		=	75;
 	attribute	[ATR_DEXTERITY]		=	10;
 	attribute	[ATR_HITPOINTS_MAX]	=	150;
 	attribute	[ATR_HITPOINTS]		=	150;
@@ -416,7 +416,7 @@ INSTANCE Golem_Trador_02	(Mst_Default_StoneGolem)
 	B_SetVisuals_StoneGolem();
 	Npc_SetToFistMode	(self);
 
-	attribute	[ATR_STRENGTH]		=	95;
+	attribute	[ATR_STRENGTH]		=	75;
 	attribute	[ATR_DEXTERITY]		=	10;
 	attribute	[ATR_HITPOINTS_MAX]	=	150;
 	attribute	[ATR_HITPOINTS]		=	150;
@@ -437,7 +437,7 @@ INSTANCE Golem_Trador_03	(Mst_Default_StoneGolem)
 	B_SetVisuals_StoneGolem();
 	Npc_SetToFistMode	(self);
 
-	attribute	[ATR_STRENGTH]		=	95;
+	attribute	[ATR_STRENGTH]		=	75;
 	attribute	[ATR_DEXTERITY]		=	10;
 	attribute	[ATR_HITPOINTS_MAX]	=	150;
 	attribute	[ATR_HITPOINTS]		=	150;
