@@ -236,8 +236,8 @@ FUNC VOID Info_Mod_Angar_Namib_Armbrust()
 	AI_Output(hero, self, "Info_Mod_Angar_Namib_Armbrust_15_00"); //Armbrust.
 	AI_Output(self, hero, "Info_Mod_Angar_Namib_Armbrust_34_01"); //Gut, hier nimm diese Armbrust und ein paar Bolzen dazu.
 
-	CreateInvItems	(self, ItRw_Mil_Crossbow, 1);
-	B_GiveInvItems	(self, hero, ItRw_Mil_Crossbow, 1);
+	CreateInvItems	(self, ItRw_Crossbow_M_01, 1);
+	B_GiveInvItems	(self, hero, ItRw_Crossbow_M_01, 1);
 
 	CreateInvItems	(hero, ItRw_SchmetterBolt, 100);
 	
