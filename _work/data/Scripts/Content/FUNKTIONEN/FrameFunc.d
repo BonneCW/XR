@@ -774,7 +774,7 @@ FUNC VOID FRAMEFUNC ()
 		var oCNpc her;
 		her = Hlp_GetNpc (hero);
 		
-		if (her.focus_vob && her.focus_vob != lastFocusItem)
+		if (her.focus_vob)
 		{
 			lastFocusItem = her.focus_vob;
 			var oCItem her_focusItem2;
