@@ -309,7 +309,6 @@ func void B_AssessMagic ()
 		
 };
 
-
 // ***************************************************
 // Anmeldung der AssessMagic-Wahrnehmung beim Spieler
 // (auch wenn der Spieler NICHT zustandsgesteuert ist)
@@ -317,8 +316,3 @@ func void B_AssessMagic ()
 // ***************************************************
 
 const func PLAYER_PERC_ASSESSMAGIC = B_AssessMagic; 	
-
-
-	
-
-
