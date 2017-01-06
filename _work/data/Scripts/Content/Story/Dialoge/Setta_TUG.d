@@ -18,6 +18,8 @@ FUNC INT Info_Mod_Setta_TUG_Hi_Condition()
 
 FUNC VOID Info_Mod_Setta_TUG_Hi_Info()
 {
+	AI_TurnToNPC(self, Mod_7352_OUT_Trador_TUG);
+	
 	AI_Output(self, hero, "Info_Mod_Setta_TUG_Hi_16_00"); //Ich habe mich wieder erinnert, habe ich. Nur deinetwegen waren wir in dem Tal!
 
 	AI_StopProcessInfos	(self);

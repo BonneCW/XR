@@ -18,6 +18,8 @@ FUNC INT Info_Mod_Buff_TUG_Hi_Condition()
 
 FUNC VOID Info_Mod_Buff_TUG_Hi_Info()
 {
+	AI_TurnToNPC(self, Mod_7352_OUT_Trador_TUG);
+	
 	AI_Output(self, hero, "Info_Mod_Buff_TUG_Hi_06_00"); //Das stimmt. Wir sind euch auf die Schliche gekommen.
 	AI_Output(self, hero, "Info_Mod_Buff_TUG_Hi_06_01"); //Dieser Mann hat uns die Hoffnung wiedergegeben. Wir sind ihm durch den Teleporter gefolgt.
 
