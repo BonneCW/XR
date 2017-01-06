@@ -328,11 +328,6 @@ FUNC VOID NEBENQUESTS()
 		{
 			Mod_Randolph_Started += 1;
 
-			if (Mod_Randolph_Started < 10)
-			{
-				AI_SetWalkMode (hero, NPC_WALK);
-			};
-
 			if (Mod_Randolph_Started == 10)
 			{
 				B_StartOtherRoutine	(Mod_906_BAU_Randolph_NW, "TOT");
