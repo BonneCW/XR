@@ -87,17 +87,19 @@ func void B_GetBeliarsGold (var int Kohle)
 	AI_PrintScreen	(concatText2, -1, YPOS_GoldTaken, FONT_ScreenSmall, 2);
 };
 
-FUNC VOID B_CheckAllTeleports()
+FUNC VOID B_CheckAllTeleports(var int unlock)
 {
 	var int newXP;
-	newXP = 20;
+	if (unlock) {
+		newXP = 20;
+	};
 
 	if (Mod_BeliarSchreine == 0)
 	{
 		if (Mod_BeliarStatue_Bibliothek_Dabei)
 		&& (Mod_BeliarStatue_Eisgebiet_Dabei)
 		&& (Mod_BeliarStatue_City_Dabei)
-		&& (Mod_BeliarStatue_Oldmine_Dabei && Jäger_Dabei)
+		&& ((Mod_BeliarStatue_Oldmine_Dabei && Jäger_Dabei) || (!Mod_BeliarStatue_Oldmine_Dabei && !Jäger_Dabei && Mod_AnzahlNebengilden == MaxNebengilden))
 		&& (Mod_BeliarStatue_OldDementower_Dabei)
 		&& (Mod_BeliarStatue_Banditenlager_Dabei)
 		&& (Mod_BeliarStatue_Bergfestung_Dabei)
@@ -105,7 +107,7 @@ FUNC VOID B_CheckAllTeleports()
 		&& (Mod_BeliarStatue_Canyon_Dabei)
 		&& (Mod_BeliarStatue_Strand_Dabei)
 		&& (Mod_BeliarStatue_Eremit_Dabei)
-		&& (Mod_BeliarStatue_Kanalisation_Dabei && Diebe_Dabei)
+		&& ((Mod_BeliarStatue_Kanalisation_Dabei && Diebe_Dabei) || (!Mod_BeliarStatue_Kanalisation_Dabei && !Diebe_Dabei && Mod_AnzahlNebengilden == MaxNebengilden))
 		{
 			Mod_BeliarSchreine = 1;
 
@@ -259,7 +261,7 @@ FUNC VOID PC_PrayIdol_TeleportPlusBibliothek_Info()
 {
 	Mod_BeliarStatue_Bibliothek_Dabei = 1;
 
-	B_CheckAllTeleports();
+	B_CheckAllTeleports(TRUE);
 };
 
 INSTANCE PC_PrayIdol_TeleportPlusCity (C_INFO)
@@ -286,7 +288,7 @@ FUNC VOID PC_PrayIdol_TeleportPlusCity_Info()
 {
 	Mod_BeliarStatue_City_Dabei	=	1;
 
-	B_CheckAllTeleports();
+	B_CheckAllTeleports(TRUE);
 };
 
 INSTANCE PC_PrayIdol_TeleportPlusOldmine (C_INFO)
@@ -313,7 +315,7 @@ FUNC VOID PC_PrayIdol_TeleportPlusOldmine_Info()
 {
 	Mod_BeliarStatue_Oldmine_Dabei	=	1;
 
-	B_CheckAllTeleports();
+	B_CheckAllTeleports(TRUE);
 };
 
 INSTANCE PC_PrayIdol_TeleportPlusOldDementower (C_INFO)
@@ -340,7 +342,7 @@ FUNC VOID PC_PrayIdol_TeleportPlusOldDementower_Info()
 {
 	Mod_BeliarStatue_OldDementower_Dabei	=	1;
 
-	B_CheckAllTeleports();
+	B_CheckAllTeleports(TRUE);
 };
 
 INSTANCE PC_PrayIdol_TeleportPlusBanditenlager (C_INFO)
@@ -367,7 +369,7 @@ FUNC VOID PC_PrayIdol_TeleportPlusBanditenlager_Info()
 {
 	Mod_BeliarStatue_Banditenlager_Dabei	=	1;
 
-	B_CheckAllTeleports();
+	B_CheckAllTeleports(TRUE);
 };
 
 INSTANCE PC_PrayIdol_TeleportPlusBergfestung (C_INFO)
@@ -394,7 +396,7 @@ FUNC VOID PC_PrayIdol_TeleportPlusBergfestung_Info()
 {
 	Mod_BeliarStatue_Bergfestung_Dabei	=	1;
 
-	B_CheckAllTeleports();
+	B_CheckAllTeleports(TRUE);
 };
 
 INSTANCE PC_PrayIdol_TeleportPlusOrkstadt (C_INFO)
@@ -421,7 +423,7 @@ FUNC VOID PC_PrayIdol_TeleportPlusOrkstadt_Info()
 {
 	Mod_BeliarStatue_Orkstadt_Dabei	=	1;
 
-	B_CheckAllTeleports();
+	B_CheckAllTeleports(TRUE);
 };
 
 INSTANCE PC_PrayIdol_TeleportPlusCanyon (C_INFO)
@@ -448,7 +450,7 @@ FUNC VOID PC_PrayIdol_TeleportPlusCanyon_Info()
 {
 	Mod_BeliarStatue_Canyon_Dabei	=	1;
 
-	B_CheckAllTeleports();
+	B_CheckAllTeleports(TRUE);
 };
 
 INSTANCE PC_PrayIdol_TeleportPlusStrand (C_INFO)
@@ -475,7 +477,7 @@ FUNC VOID PC_PrayIdol_TeleportPlusStrand_Info()
 {
 	Mod_BeliarStatue_Strand_Dabei	=	1;
 
-	B_CheckAllTeleports();
+	B_CheckAllTeleports(TRUE);
 };
 
 INSTANCE PC_PrayIdol_TeleportPlusEremit (C_INFO)
@@ -502,7 +504,7 @@ FUNC VOID PC_PrayIdol_TeleportPlusEremit_Info()
 {
 	Mod_BeliarStatue_Eremit_Dabei	=	1;
 
-	B_CheckAllTeleports();
+	B_CheckAllTeleports(TRUE);
 };
 
 INSTANCE PC_PrayIdol_TeleportPlusEisgebiet (C_INFO)
@@ -529,7 +531,7 @@ FUNC VOID PC_PrayIdol_TeleportPlusEisgebiet_Info()
 {
 	Mod_BeliarStatue_Eisgebiet_Dabei	=	1;
 
-	B_CheckAllTeleports();
+	B_CheckAllTeleports(TRUE);
 };
 
 INSTANCE PC_PrayIdol_TeleportPlusKanalisation (C_INFO)
@@ -556,7 +558,7 @@ FUNC VOID PC_PrayIdol_TeleportPlusKanalisation_Info()
 {
 	Mod_BeliarStatue_Kanalisation_Dabei	=	1;
 
-	B_CheckAllTeleports();
+	B_CheckAllTeleports(TRUE);
 };
 
 INSTANCE PC_PrayIdol_Teleport (C_INFO)
@@ -574,6 +576,8 @@ FUNC INT PC_PrayIdol_Teleport_Condition()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYIDOL)
 	{
+		B_CheckAllTeleports(FALSE);
+		
 		if ((Npc_KnowsInfo(hero, Info_Mod_Raven_Belagerung))
 		&& (!Npc_KnowsInfo(hero, PC_PrayIdol_SteinEinfuegen))
 		&& (Npc_GetDistToWP(hero, "BELIARSCHREIN_FESTUNG") < 1000))
