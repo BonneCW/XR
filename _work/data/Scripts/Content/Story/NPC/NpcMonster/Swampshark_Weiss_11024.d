@@ -30,7 +30,7 @@ INSTANCE Swampshark_Weiss (Npc_Default)
 	aivar[AIV_FightDistCancel] = FIGHT_DIST_CANCEL;
 
 	senses			=	SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
-	senses_range	=	PERC_DIST_MONSTER_ACTIVE_MAX;
+	senses_range	=	0;
 
 	aivar[AIV_MM_FollowTime]	= FOLLOWTIME_MEDIUM;
 	aivar[AIV_MM_FollowInWater] = TRUE;

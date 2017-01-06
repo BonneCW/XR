@@ -1417,7 +1417,8 @@ FUNC VOID NEBENQUESTS()
 		// Einen weiﬂen Sumpfhai finden
 
 		if (Mod_EchsenQuest_03 == 6)
-		&& (Npc_GetDistToWP(hero, "ADW_SHARK_09") < 1000)
+		&& (Hlp_IsValidNpc(Swampshark_Weiss))
+		&& (Npc_GetDistToNpc(hero, Swampshark_Weiss) < 1500)
 		{
 			Mod_EchsenQuest_03 = 7;
 
