@@ -35,12 +35,24 @@ FUNC VOID PC_WaterpipeAbuyin_Tabak_Info()
 	
 	Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, DIALOG_BACK, PC_WaterpipeAbuyin_Tabak_BACK);	
 	
-	Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, "Pilztabak (250 Gold)", PC_WaterpipeAbuyin_Tabak_Mushroom_01);
-	Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, "Krauttabak (250 Gold)", PC_WaterpipeAbuyin_Tabak_Swampherb);
-	Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, "Honigtabak (250 Gold)", PC_WaterpipeAbuyin_Tabak_Honey);
-	if (Kapitel >= 3)
+	if (Npc_HasItems (hero, ItMi_HonigTabak) >= 1) {
+		Info_AddChoice 	(PC_Waterpipe_Tabak, "Honigtabak", PC_Waterpipe_Tabak_Honey);
+	} else {
+		Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, "Honigtabak (250 Gold)", PC_WaterpipeAbuyin_Tabak_Honey);
+	};
+	if (Npc_HasItems (hero, ItMi_SumpfTabak) >= 1) {
+		Info_AddChoice 	(PC_Waterpipe_Tabak, "Krauttabak", PC_Waterpipe_Tabak_Swampherb);
+	} else {
+		Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, "Krauttabak (250 Gold)", PC_WaterpipeAbuyin_Tabak_Swampherb);
+	};
+	if (Npc_HasItems (hero, ItMi_PilzTabak) >= 1) {
+		Info_AddChoice 	(PC_Waterpipe_Tabak, "Pilztabak", PC_Waterpipe_Tabak_Mushroom_01);
+	} else {
+		Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, "Pilztabak (250 Gold)", PC_WaterpipeAbuyin_Tabak_Mushroom_01);
+	};
+	if (Npc_HasItems (hero, ItMi_Apfeltabak) >= 1)
 	{
-		//Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, "Doppeltabak", PC_WaterpipeAbuyin_Tabak_Doppel);
+		Info_AddChoice 	(PC_Waterpipe_Tabak, "Apfeltabak", PC_Waterpipe_Tabak_Apple);
 	};
 	Info_AddChoice 	(PC_WaterpipeAbuyin_Tabak, "Apfeltabak (250 Gold)", PC_WaterpipeAbuyin_Tabak_Apple);
 };
