@@ -39,6 +39,10 @@ func int B_AssessDrawWeapon()
 			return FALSE;
 		};
 	};
+	
+	if (self.guild == GIL_FRIENDLY_ORC) {
+		return FALSE;
+	};
 
 	if (self.aivar[AIV_MM_REAL_ID] == ID_KOBOLD) {
 		return FALSE;
