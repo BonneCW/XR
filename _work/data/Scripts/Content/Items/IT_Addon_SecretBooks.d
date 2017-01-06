@@ -16,9 +16,6 @@ const int XPMultiplier	= 5;
 //---------------------------------------------------------------------------------------------------------------------------
 FUNC VOID UseLPBook(var int constanze)
 	{
-			var int Wert;
-			Wert = constanze;
-			
 			if Npc_IsPlayer (self)
 			{
 				B_Say_Overlay 	(self,self,"$VERSTEHE");
@@ -36,19 +33,10 @@ FUNC VOID UseLPBook(var int constanze)
 //---------------------------------------------------------------------------------------------------------------------------
 FUNC VOID UseXPBook(var int constanze)
 	{
-			var int Wert;
-			Wert = constanze;
-			
 			if Npc_IsPlayer (self)
 			{
 				B_Say_Overlay 	(self,self,"$VERSTEHE");
-				Snd_Play("Levelup");
-				self.exp = self.exp + constanze; 
-				
-				var string ConcatText;
-				ConcatText = ConcatStrings (PRINT_XPGained,IntToString (constanze));
-				
-				Print (ConcatText);
+				B_GivePlayerXP(constanze);
 		};
 	};
 	
