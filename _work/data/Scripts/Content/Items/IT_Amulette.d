@@ -1334,7 +1334,7 @@ INSTANCE  ItMi_Magieprisma(C_Item)
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 	
-	//INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
 	
 };
 
