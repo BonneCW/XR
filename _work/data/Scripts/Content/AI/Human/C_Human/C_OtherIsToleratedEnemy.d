@@ -11,6 +11,10 @@ func int C_OtherIsToleratedEnemy(var C_NPC slf, var C_NPC oth)
 		var C_ITEM			weapon;
 		var int				weaponInstance;
 		weapon = 			Npc_GetReadiedWeapon(oth);
+		
+		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_10005_Orc_HoshPak_OC) && Npc_KnowsInfo(hero, Info_Mod_HoshPak_OC_Hi)) {
+			return FALSE;
+		};
 
 		if (Hlp_IsValidItem(weapon))
 		{

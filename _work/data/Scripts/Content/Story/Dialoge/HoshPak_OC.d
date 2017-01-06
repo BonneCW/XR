@@ -26,5 +26,5 @@ FUNC VOID Info_Mod_HoshPak_OC_Hi_Info()
 
 	Npc_SetTarget		(self, hero);
 
-	AI_StartState	(self, ZS_Attack, 0, "");
+	AI_StartState	(self, ZS_MM_Attack, 0, "");
 };

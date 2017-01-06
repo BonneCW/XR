@@ -321,36 +321,31 @@ func void B_MM_AssessEnemy ()
 	|| (self.aivar[AIV_MM_REAL_ID] == ID_ORCDOG)
 	|| (self.aivar[AIV_MM_REAL_ID] == ID_ORCBITER))
 	{
-		if (C_ScHasEquippedUluMulu())
-		{
-			if (self.aivar[AIV_OrkUluMulu] == FALSE)
+		if (Hlp_GetInstanceID(self) != Hlp_GetInstanceID(Mod_10005_Orc_HoshPak_OC) || !Npc_KnowsInfo(hero, Info_Mod_HoshPak_OC_Hi)) {
+			if (C_ScHasEquippedUluMulu())
 			{
-				AI_TurnToNpc(self, other);
-				AI_PlayAni	(self, "T_ANGRY");
+				if (self.aivar[AIV_OrkUluMulu] == FALSE)
+				{
+					AI_TurnToNpc(self, other);
+					AI_PlayAni	(self, "T_ANGRY");
 
-				self.aivar[AIV_OrkUluMulu] = TRUE;
+					self.aivar[AIV_OrkUluMulu] = TRUE;
+				};
+
+				return;
 			};
-
-			return;
-		};
-	};
-
-	if (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(PC_Hero))
-	&& ((self.guild	==	GIL_ORC)
-	|| (self.aivar[AIV_MM_REAL_ID] == ID_ORCDOG)
-	|| (self.aivar[AIV_MM_REAL_ID] == ID_ORCBITER))
-	{
-		if (C_ScHasReadiedUluMulu())
-		{
-			if (self.aivar[AIV_OrkUluMulu] == FALSE)
+			if (C_ScHasReadiedUluMulu())
 			{
-				AI_TurnToNpc(self, other);
-				AI_PlayAni	(self, "T_ANGRY");
+				if (self.aivar[AIV_OrkUluMulu] == FALSE)
+				{
+					AI_TurnToNpc(self, other);
+					AI_PlayAni	(self, "T_ANGRY");
 
-				self.aivar[AIV_OrkUluMulu] = TRUE;
+					self.aivar[AIV_OrkUluMulu] = TRUE;
+				};
+
+				return;
 			};
-
-			return;
 		};
 	};
 	
