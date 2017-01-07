@@ -149,3 +149,7 @@ var int Mod_ItFo_Mutton_Right;
 var int Mod_ItFo_Mutton_Anzahl;
 var int Mod_ItFo_LammPoekelfleisch_Right;
 var int Mod_ItFo_LammPoekelfleisch_Anzahl;
+var int Mod_ItPl_Sumpfbeeren_XR_Right;
+var int Mod_ItPl_Sumpfbeeren_XR_Anzahl;
+var int Mod_ItPl_Mondauge_XR_Right;
+var int Mod_ItPl_Mondauge_XR_Anzahl;
