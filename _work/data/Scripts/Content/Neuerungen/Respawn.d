@@ -188,7 +188,7 @@ func int MeetsRespawnCondition(var c_npc slf) {
 		|| Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Molerat_RELENDEL)
 		|| Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Lurker_RELENDEL)
 		|| Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Wolf_RELENDEL));
-	canRespawn = canRespawn && slf.guild > GIL_SEPERATOR_HUM && isValidInstance;
+	canRespawn = canRespawn && slf.guild > GIL_SEPERATOR_HUM && isValidInstance && !Hlp_StrCmp(slf.wp, "TOT");
 	return canRespawn;
 };
 

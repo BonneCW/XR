@@ -6436,6 +6436,39 @@ FUNC VOID INIT_Minental ()
 
 		Mod_Kap4_KGOrks = 4;
 	};
+	
+	var zCListSort liste;
+	var int loopStart;
+	var C_Npc temp;
+	var int npcPtr;
+	
+	MEM_INFO("LIST: Check NPC-List");
+	
+	MEM_AssignInst(liste, MEM_World.voblist_npcs);
+
+	loopStart = MEM_StackPos.position;
+	if (true) {
+		npcPtr = liste.data;
+		MEM_AssignInst (temp, npcPtr);
+
+		if (Hlp_IsValidNpc(temp)) {
+			MEM_INFO(ConcatStrings("LIST: Checking ", temp.name));
+			if (Hlp_StrCmp(temp.wp, "PALTOBURGKNAST_4"))
+			&& (temp.guild > GIL_SEPERATOR_HUM)
+			{
+				MEM_INFO("LIST: Removing");
+				temp.wp = "TOT";
+				B_RemoveNpc(temp);
+			};
+		};
+
+		MEM_AssignInst (liste, liste.next);
+
+		if (liste.next != 0)
+		{
+			MEM_StackPos.position = loopStart;
+		};
+	};
 };
 
 FUNC VOID STARTUP_OrcTempel ()
