@@ -1438,7 +1438,7 @@ INSTANCE ItPl_Speed_Herb_01(C_Item)
 	if (Mod_ItPl_Speed_Herb_01_Right == 1)
 	{
 		TEXT[3]				= 	NAME_Sec_Duration;	
-		COUNT[3]			= 	Speed_Boost;
+		COUNT[3]			= 	Speed_Boost / 1000;
 	}
 	else
 	{
