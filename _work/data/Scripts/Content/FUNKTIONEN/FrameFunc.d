@@ -38,10 +38,6 @@ FUNC VOID ChangeStatusMenu (var string field, var string text)
 		{
 			PrintDebug ("no inner Window"); //tritt auf, falls das Charaktermenü gerade nicht offen ist.
 		};
-	}
-	else
-	{
-		PrintDebug ("no Item"); //tritt auf, falls das Charaktermenü noch nicht offen war.
 	};
 };
 

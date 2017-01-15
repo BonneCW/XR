@@ -21,79 +21,83 @@ FUNC VOID GILDENSTORY_BELIAR()
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Drach_WerBistDu))
-		&& (GardeBeliars_1989_Drach.attribute[ATR_HITPOINTS] < (GardeBeliars_1989_Drach.attribute[ATR_HITPOINTS_MAX]/2))
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Drach_AtAlmanach))
 		{
-			AI_StandUp	(GardeBeliars_1989_Drach);
+			if (GardeBeliars_1989_Drach.attribute[ATR_HITPOINTS] < (GardeBeliars_1989_Drach.attribute[ATR_HITPOINTS_MAX] / 2)) {
+				AI_StandUp	(GardeBeliars_1989_Drach);
 
-			GardeBeliars_1989_Drach.attribute[ATR_HITPOINTS] = GardeBeliars_1989_Drach.attribute[ATR_HITPOINTS_MAX];
+				GardeBeliars_1989_Drach.attribute[ATR_HITPOINTS] = GardeBeliars_1989_Drach.attribute[ATR_HITPOINTS_MAX];
 
-			GardeBeliars_1989_Drach.aivar[AIV_Damage] = GardeBeliars_1989_Drach.attribute[ATR_HITPOINTS_MAX];
+				GardeBeliars_1989_Drach.aivar[AIV_Damage] = GardeBeliars_1989_Drach.attribute[ATR_HITPOINTS_MAX];
 
-			Npc_ClearAIQueue	(GardeBeliars_1989_Drach);
+				Npc_ClearAIQueue	(GardeBeliars_1989_Drach);
 
-			AI_StandUp	(GardeBeliars_1989_Drach);
+				AI_StandUp	(GardeBeliars_1989_Drach);
 
-			AI_RemoveWeapon	(GardeBeliars_1989_Drach);
+				AI_RemoveWeapon	(GardeBeliars_1989_Drach);
 
-			Npc_ClearAIQueue	(hero);
-			AI_StandUp	(hero);
+				Npc_ClearAIQueue	(hero);
+				AI_StandUp	(hero);
 
-			AI_RemoveWeapon	(hero);
+				AI_RemoveWeapon	(hero);
 
-			GardeBeliars_1989_Drach.aivar[AIV_AttackReason] = 0;
-			GardeBeliars_1989_Drach.aivar[AIV_LastTarget] = 0;
-			GardeBeliars_1989_Drach.aivar[AIV_Partymember] = TRUE;
+				GardeBeliars_1989_Drach.aivar[AIV_AttackReason] = 0;
+				GardeBeliars_1989_Drach.aivar[AIV_LastTarget] = 0;
+				GardeBeliars_1989_Drach.aivar[AIV_Partymember] = TRUE;
 
-			Npc_SendSinglePerc (hero, GardeBeliars_1989_Drach, PERC_ASSESSPLAYER);
+				Npc_SendSinglePerc (hero, GardeBeliars_1989_Drach, PERC_ASSESSPLAYER);
+			};
 		};
 
-		if (Npc_GetDistToWP(GardeBeliars_1994_Frowin, "NW_CITYFOREST_CAVE_A06") > 1000)
-		&& (Npc_KnowsInfo(hero, Info_Mod_Frowin_Hi))
+		if (Npc_KnowsInfo(hero, Info_Mod_Frowin_Hi))
 		&& (SchattisBeiFrowin == FALSE)
 		{
-			SchattisBeiFrowin = TRUE;
+			if (Npc_GetDistToWP(GardeBeliars_1994_Frowin, "NW_CITYFOREST_CAVE_A06") > 1000) {
+				SchattisBeiFrowin = TRUE;
 
-			Wld_InsertNpc	(Skeleton,	"FP_ROAM_NW_CITYFOREST_CAVE_A06_01");
-			Wld_InsertNpc	(Skeleton,	"FP_ROAM_NW_CITYFOREST_CAVE_A06_03");
-			Wld_InsertNpc	(Skeleton,	"FP_ROAM_NW_CITYFOREST_CAVE_A06_02");
+				Wld_InsertNpc	(Skeleton,	"FP_ROAM_NW_CITYFOREST_CAVE_A06_01");
+				Wld_InsertNpc	(Skeleton,	"FP_ROAM_NW_CITYFOREST_CAVE_A06_03");
+				Wld_InsertNpc	(Skeleton,	"FP_ROAM_NW_CITYFOREST_CAVE_A06_02");
 
-			AI_UnequipWeapons	(GardeBeliars_1994_Frowin);
+				AI_UnequipWeapons	(GardeBeliars_1994_Frowin);
 
-			Npc_RemoveInvItems	(GardeBeliars_1994_Frowin, ItMw_Zweihaender2, 1);
+				Npc_RemoveInvItems	(GardeBeliars_1994_Frowin, ItMw_Zweihaender2, 1);
 
-			CreateInvItems	(GardeBeliars_1994_Frowin, ItMw_AxtDesUntergangs, 1);
+				CreateInvItems	(GardeBeliars_1994_Frowin, ItMw_AxtDesUntergangs, 1);
 
-			AI_EquipBestMeleeWeapon	(GardeBeliars_1994_Frowin);
+				AI_EquipBestMeleeWeapon	(GardeBeliars_1994_Frowin);
+			};
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Ignaz_Amulett))
-		&& (!Npc_IsInState(Mod_584_NONE_Ignaz_NW, ZS_Talk))
 		&& (IgnazDead == FALSE)
 		{
-			IgnazDead = TRUE;
+			if (!Npc_IsInState(Mod_584_NONE_Ignaz_NW, ZS_Talk)) {
+				IgnazDead = TRUE;
 
-			Mod_584_NONE_Ignaz_NW.attribute[ATR_HITPOINTS] = 0;
-			AI_PlayAni	(Mod_584_NONE_Ignaz_NW, "T_DEAD");
+				Mod_584_NONE_Ignaz_NW.attribute[ATR_HITPOINTS] = 0;
+				AI_PlayAni	(Mod_584_NONE_Ignaz_NW, "T_DEAD");
 
-			AI_GotoNpc	(hero, Mod_584_NONE_Ignaz_NW);
+				AI_GotoNpc	(hero, Mod_584_NONE_Ignaz_NW);
 
-			B_TransferInventory_All (Mod_584_NONE_Ignaz_NW, Cheater);
+				B_TransferInventory_All (Mod_584_NONE_Ignaz_NW, Cheater);
 
-			AI_PlayAni	(hero, "T_PLUNDER");
+				AI_PlayAni	(hero, "T_PLUNDER");
 
-			AI_StandUp	(hero);
+				AI_StandUp	(hero);
 
-			AI_Output(hero, NULL, "Info_Mod_Hero_IgnazDead_15_00"); //Verdammt, er ist tot! Wo soll ich diese Novizen suchen? An welchem Steinkreis?
+				AI_Output(hero, NULL, "Info_Mod_Hero_IgnazDead_15_00"); //Verdammt, er ist tot! Wo soll ich diese Novizen suchen? An welchem Steinkreis?
+			};
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_UntoterNovize_01_Hi))
-		&& (!Npc_IsInState(Mod_1995_UntoterNovize_01_NW, ZS_Talk))
 		&& (KnowsComeback == FALSE)
 		{
-			KnowsComeback = TRUE;
+			if (!Npc_IsInState(Mod_1995_UntoterNovize_01_NW, ZS_Talk)) {
+				KnowsComeback = TRUE;
 
-			B_InitMonsterAttitudes();
+				B_InitMonsterAttitudes();
+			};
 		};
 
 		if (GardeAnfangCutscene == FALSE)
@@ -289,22 +293,24 @@ FUNC VOID GILDENSTORY_BELIAR()
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Angus_Befreiung))
-		&& (!Npc_IsInState(Mod_941_PIR_Angus_AW, ZS_Talk))
 		&& (Mod_PIR_AngusHank_Kampf == 0)
 		{
-			Mod_PIR_AngusHank_Kampf = 1;
+			if (!Npc_IsInState(Mod_941_PIR_Angus_AW, ZS_Talk)) {
+				Mod_PIR_AngusHank_Kampf = 1;
 
-			B_Attack	(Mod_941_PIR_Angus_AW, hero, AR_None, 0);
-			B_Attack	(Mod_942_PIR_Hank_AW, hero, AR_None, 0);
+				B_Attack	(Mod_941_PIR_Angus_AW, hero, AR_None, 0);
+				B_Attack	(Mod_942_PIR_Hank_AW, hero, AR_None, 0);
+			};
 		};
 
-		if (Npc_IsDead(Mod_7300_Artefakt_AW))
-		&& (Barriere_Down == FALSE)
+		if (Barriere_Down == FALSE)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Greg_ArtefaktAttacke))
 		{
-			Barriere_Down = TRUE;
+			if (Npc_IsDead(Mod_7300_Artefakt_AW)) {
+				Barriere_Down = TRUE;
 
-			Wld_SendTrigger	("EVT_AW_BEL_BARRIERE");
+				Wld_SendTrigger	("EVT_AW_BEL_BARRIERE");
+			};
 		};
 
 		// In der Bibliothek
@@ -351,11 +357,12 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 		// Aktivierung des Portals
 
-		if (Npc_GetDistToNpc(hero, Mod_7314_Ziel_AW) < 600)
-		&& (!Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_PortalZauberFertig))
+		if (!Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_PortalZauberFertig))
 		&& (!Npc_IsInFightmode(hero, FMODE_NONE))
 		{
-			Mod_7314_Ziel_AW.noFocus = TRUE;
+			if (Npc_GetDistToNpc(hero, Mod_7314_Ziel_AW) < 600) {
+				Mod_7314_Ziel_AW.noFocus = TRUE;
+			};
 		}
 		else
 		{
@@ -409,13 +416,14 @@ FUNC VOID GILDENSTORY_BELIAR()
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Bshydal_Hi))
-		&& (!Npc_IsInState(Mod_7315_BK_Bshydal_AW, ZS_Talk))
 		&& (Mod_BEL_Bshydal == 0)
 		{
-			Mod_BEL_Bshydal = 1;
+			if (!Npc_IsInState(Mod_7315_BK_Bshydal_AW, ZS_Talk)) {
+				Mod_BEL_Bshydal = 1;
 
-			Wld_InsertNpc	(Blutgolem_02, "WP_AW_BEL_07");
-			Wld_InsertNpc	(Blutgolem_03, "WP_AW_BEL_07");
+				Wld_InsertNpc	(Blutgolem_02, "WP_AW_BEL_07");
+				Wld_InsertNpc	(Blutgolem_03, "WP_AW_BEL_07");
+			};
 		};
 
 		if (Mod_BEL_Bshydal == 2)
@@ -428,26 +436,28 @@ FUNC VOID GILDENSTORY_BELIAR()
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Bshydal_NichtTot))
-		&& (!Npc_IsInState(Mod_7316_BK_Bshydal_AW, ZS_Talk))
 		&& (Mod_BEL_Bshydal == 3)
 		{
-			Mod_BEL_Bshydal = 4;
+			if (!Npc_IsInState(Mod_7316_BK_Bshydal_AW, ZS_Talk)) {
+				Mod_BEL_Bshydal = 4;
 
-			Mdl_SetModelScale(Mod_7316_BK_Bshydal_AW, 3.0, 3.0, 3.0);
+				Mdl_SetModelScale(Mod_7316_BK_Bshydal_AW, 3.0, 3.0, 3.0);
+			};
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Greg_Beerdigung))
-		&& (!Npc_IsInState(Mod_764_PIR_Greg_AW, ZS_Talk))
 		&& (Mod_BEL_AJ == 0)
 		{
-			Mod_BEL_AJ = 1;
+			if (!Npc_IsInState(Mod_764_PIR_Greg_AW, ZS_Talk)) {
+				Mod_BEL_AJ = 1;
 
-			Wld_InsertNpc	(Mod_928_PIR_AlligatorJack_AW, "ADW_PIRATECAMP_TRAIN_01");
+				Wld_InsertNpc	(Mod_928_PIR_AlligatorJack_AW, "ADW_PIRATECAMP_TRAIN_01");
 
-			B_StartOtherRoutine	(Mod_928_PIR_AlligatorJack_AW, "BEERDIGUNG");
+				B_StartOtherRoutine	(Mod_928_PIR_AlligatorJack_AW, "BEERDIGUNG");
 
-			Wld_InsertNpc	(Rabbit, "ADW_PIRATECAMP_TRAIN_01");
-			Wld_InsertNpc	(Rabbit, "ADW_PIRATECAMP_TRAIN_01");
+				Wld_InsertNpc	(Rabbit, "ADW_PIRATECAMP_TRAIN_01");
+				Wld_InsertNpc	(Rabbit, "ADW_PIRATECAMP_TRAIN_01");
+			};
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Greg_AJAlive3))
@@ -486,35 +496,38 @@ FUNC VOID GILDENSTORY_BELIAR()
 		// Plattform anquatschen
 
 		if (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)
-		&& (Npc_GetDistToNpc(hero, Mod_7314_Ziel_AW) <= 300)
 		&& ((!Npc_KnowsInfo(hero, Info_Mod_PlattformAWBeliar_Erzbrocken))
 		|| (!Npc_KnowsInfo(hero, Info_Mod_PlattformAWBeliar_Weihwasser)))
 		{
-			Npc_SendPassivePerc(hero, PERC_ASSESSTALK, Mod_7314_Ziel_AW, Mod_7314_Ziel_AW);
+			if (Npc_GetDistToNpc(hero, Mod_7314_Ziel_AW) <= 300) {
+				Npc_SendPassivePerc(hero, PERC_ASSESSTALK, Mod_7314_Ziel_AW, Mod_7314_Ziel_AW);
+			};
 		};
 
 		// Hank greift in den Kampf erst nach dem Gespräch ein
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Angus_Befreiung))
-		&& (!Npc_IsInState(Mod_941_PIR_Angus_AW, ZS_Talk))
 		&& (Mod_BEL_AngusHank_Angriff == FALSE)
 		{
-			Mod_BEL_AngusHank_Angriff = TRUE;
+			if (!Npc_IsInState(Mod_941_PIR_Angus_AW, ZS_Talk)) {
+				Mod_BEL_AngusHank_Angriff = TRUE;
 
-			B_Attack	(Mod_942_PIR_Hank_AW, hero, AR_None, 0);
+				B_Attack	(Mod_942_PIR_Hank_AW, hero, AR_None, 0);
+			};
 		};
 
 		// Sequenz Greg - Owen vor Angriff auf die Untoten vor dem Piratenlager
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Greg_Befreiung3))
-		&& (!Npc_IsInState(Mod_764_PIR_Greg_AW, ZS_Talk))
 		&& (Mod_BEL_GregOwen == 0)
 		{
-			Mod_BEL_GregOwen = 1;
+			if (!Npc_IsInState(Mod_764_PIR_Greg_AW, ZS_Talk)) {
+				Mod_BEL_GregOwen = 1;
 
-			Wld_SendTrigger	("EVT_BEL_GREGOWEN_CAM");
+				Wld_SendTrigger	("EVT_BEL_GREGOWEN_CAM");
 
-			CutsceneAn = TRUE;
+				CutsceneAn = TRUE;
+			};
 		};
 
 		if (Mod_BEL_GregOwen == 1)
@@ -824,32 +837,36 @@ FUNC VOID GILDENSTORY_BELIAR()
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Raven_SoeldnerDabei))
-		&& (!Npc_IsInState(Mod_520_DMR_Raven_MT, ZS_Talk))
 		&& (Beliar_TalkesselSchlacht == 0)
 		{
-			Beliar_TalkesselSchlacht = 1;
+			if (!Npc_IsInState(Mod_520_DMR_Raven_MT, ZS_Talk)) {
+				Beliar_TalkesselSchlacht = 1;
 
-			Wld_SetTime	(23,59);
+				Wld_SetTime	(23,59);
 
-			AI_Teleport	(hero, "OW_PATH_3001_01");
+				AI_Teleport	(hero, "OW_PATH_3001_01");
+			};
 		};
 
 		// Besessener Novize taucht nicht korrekt auf
 
-		if (!Npc_IsDead(Mod_4015_SNOV_BesessenerNovize_MT))
-		&& (!Npc_KnowsInfo(hero, Info_Mod_BesessenerNovize_Hi))
+		if (!Npc_KnowsInfo(hero, Info_Mod_BesessenerNovize_Hi))
 		{
-			if (Wld_IsTime(01,00,03,00))
-			&& (Npc_GetDistToWP(Mod_4015_SNOV_BesessenerNovize_MT, "PALTOBURG_5") > 2000)
-			{
-				AI_Teleport	(Mod_4015_SNOV_BesessenerNovize_MT, "PALTOBURG_5");
-				AI_Teleport	(Mod_4015_SNOV_BesessenerNovize_MT, "PALTOBURG_5");
-			}
-			else if (Wld_IsTime(03,00,01,00))
-			&& (Npc_GetDistToWP(Mod_4015_SNOV_BesessenerNovize_MT, "PALTOBURG_5") <= 2000)
-			{
-				AI_Teleport	(Mod_4015_SNOV_BesessenerNovize_MT, "TOT");
-				AI_Teleport	(Mod_4015_SNOV_BesessenerNovize_MT, "TOT");
+			if (Hlp_IsValidNpc(Mod_4015_SNOV_BesessenerNovize_MT)) {
+				if (!Npc_IsDead(Mod_4015_SNOV_BesessenerNovize_MT)) {
+					if (Wld_IsTime(01,00,03,00))
+					&& (Npc_GetDistToWP(Mod_4015_SNOV_BesessenerNovize_MT, "PALTOBURG_5") > 2000)
+					{
+						AI_Teleport	(Mod_4015_SNOV_BesessenerNovize_MT, "PALTOBURG_5");
+						AI_Teleport	(Mod_4015_SNOV_BesessenerNovize_MT, "PALTOBURG_5");
+					}
+					else if (Wld_IsTime(03,00,01,00))
+					&& (Npc_GetDistToWP(Mod_4015_SNOV_BesessenerNovize_MT, "PALTOBURG_5") <= 2000)
+					{
+						AI_Teleport	(Mod_4015_SNOV_BesessenerNovize_MT, "TOT");
+						AI_Teleport	(Mod_4015_SNOV_BesessenerNovize_MT, "TOT");
+					};
+				};
 			};
 		};
 
@@ -889,18 +906,19 @@ FUNC VOID GILDENSTORY_BELIAR()
 			BeliarBibScene();
 		};
 
-		if (Mod_BeliarBibScene == 3)
-		&& (Npc_IsDead(RazorSkelett_Bib_01))
-		&& (Npc_IsDead(RazorSkelett_Bib_02))
-		&& (Npc_IsDead(RazorSkelett_Bib_03))
-		&& (Npc_IsDead(RazorSkelett_Bib_04))
-		&& (Npc_IsDead(RazorSkelett_Bib_05))
-		&& (Npc_IsDead(RazorSkelett_Bib_06))
-		&& (Npc_IsDead(RazorSkelett_Bib_07))
-		{
-			Mod_BeliarBibScene = 4;
+		if (Mod_BeliarBibScene == 3) {
+			if (Npc_IsDead(RazorSkelett_Bib_01))
+			&& (Npc_IsDead(RazorSkelett_Bib_02))
+			&& (Npc_IsDead(RazorSkelett_Bib_03))
+			&& (Npc_IsDead(RazorSkelett_Bib_04))
+			&& (Npc_IsDead(RazorSkelett_Bib_05))
+			&& (Npc_IsDead(RazorSkelett_Bib_06))
+			&& (Npc_IsDead(RazorSkelett_Bib_07))
+			{
+				Mod_BeliarBibScene = 4;
 
-			B_LogEntry	(TOPIC_MOD_BELIAR_UNGEHEUER, "Die Bibliothek sollte wieder gesäubert sein. Andokai sollte davon erfahren.");
+				B_LogEntry	(TOPIC_MOD_BELIAR_UNGEHEUER, "Die Bibliothek sollte wieder gesäubert sein. Andokai sollte davon erfahren.");
+			};
 		};
 	};
 };

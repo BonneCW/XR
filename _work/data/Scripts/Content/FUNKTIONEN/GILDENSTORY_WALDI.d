@@ -61,26 +61,36 @@ FUNC VOID GILDENSTORY_WALDI()
 
 	if (CurrentLevel == MINENTAL_ZEN)
 	{
-		if (Mod_Drago == 5)
-		&& (Npc_GetDistToNpc(hero, Mod_1964_JG_Jaeger_MT) < 500)
-		&& (Npc_GetDistToNpc(hero, Mod_1965_JG_Jaeger_MT) < 500)
-		&& (Npc_GetDistToNpc(hero, Mod_1966_GRD_Gardist_MT) < 500)
-		{
-			Mod_Drago = 6;
+		if (Mod_Drago == 5) {
+			if (Npc_GetDistToNpc(hero, Mod_1964_JG_Jaeger_MT) < 500)
+			&& (Npc_GetDistToNpc(hero, Mod_1965_JG_Jaeger_MT) < 500)
+			&& (Npc_GetDistToNpc(hero, Mod_1966_GRD_Gardist_MT) < 500)
+			{
+				Mod_Drago = 6;
 
-			B_LogEntry	(TOPIC_MOD_JG_TORGANSINFOS, "Die Späher sind tot und bei ihnen liegt die Leiche eines Gardisten. Ich sollte das schnell Torgan berichten.");
+				B_LogEntry	(TOPIC_MOD_JG_TORGANSINFOS, "Die Späher sind tot und bei ihnen liegt die Leiche eines Gardisten. Ich sollte das schnell Torgan berichten.");
+			};
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Hecta_Hi))
-		&& ((Npc_IsDead(Mod_1972_GRD_Hecta_MT))
-		|| (Mod_1973_GRD_Achil_MT.attribute[ATR_HITPOINTS] <= Mod_1973_GRD_Achil_MT.attribute[ATR_HITPOINTS_MAX]/2))
 		&& (Mod_AchilFliegt == 0)
 		{
-			Npc_ClearAIQueue	(Mod_1973_GRD_Achil_MT);
+			var int Mod_AchilShouldFlee; Mod_AchilShouldFlee = FALSE;
+			if (Hlp_IsValidNpc(Mod_1972_GRD_Hecta_MT)) {
+				if ((Npc_IsDead(Mod_1972_GRD_Hecta_MT))
+				|| (Mod_1973_GRD_Achil_MT.attribute[ATR_HITPOINTS] <= Mod_1973_GRD_Achil_MT.attribute[ATR_HITPOINTS_MAX]/2)) {
+					Mod_AchilShouldFlee = TRUE;
+				};
+			} else {
+				Mod_AchilShouldFlee = TRUE;
+			};
+			if (Mod_AchilShouldFlee) {
+				Npc_ClearAIQueue	(Mod_1973_GRD_Achil_MT);
 
-			B_StartOtherRoutine	(Mod_1973_GRD_Achil_MT, "FLUCHT");
+				B_StartOtherRoutine	(Mod_1973_GRD_Achil_MT, "FLUCHT");
 
-			Mod_AchilFliegt = 1;
+				Mod_AchilFliegt = 1;
+			};
 		};
 
 		// Dem Mörder auf der Spur
@@ -131,13 +141,14 @@ FUNC VOID GILDENSTORY_WALDI()
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Orun_Cyrco))
-		&& (Mod_7435_NOV_Novize_MT.attribute[ATR_HITPOINTS] < Mod_7435_NOV_Novize_MT.attribute[ATR_HITPOINTS_MAX])
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Novize_JG_Pass_Hi))
 		{
-			AI_StandUPQuick (Mod_7435_NOV_Novize_MT);
-			Npc_ClearAIQueue	(Mod_7435_NOV_Novize_MT);
+			if (Mod_7435_NOV_Novize_MT.attribute[ATR_HITPOINTS] < Mod_7435_NOV_Novize_MT.attribute[ATR_HITPOINTS_MAX]) {
+				AI_StandUPQuick (Mod_7435_NOV_Novize_MT);
+				Npc_ClearAIQueue	(Mod_7435_NOV_Novize_MT);
 
-			Npc_SendSinglePerc(hero, Mod_7435_NOV_Novize_MT, PERC_ASSESSTALK);
+				Npc_SendSinglePerc(hero, Mod_7435_NOV_Novize_MT, PERC_ASSESSTALK);
+			};
 		};
 
 		// Der Turm an der See
@@ -162,23 +173,25 @@ FUNC VOID GILDENSTORY_WALDI()
 		// Hinweis, dass man nach Suchenden-Gespräch noch etwas finden muss
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Suchender_Hi))
-		&& (!Npc_IsInState(Mod_7434_DMT_Suchender_MT, ZS_Talk))
 		&& (Mod_SuchenderZettelHinweis == 0)
 		{
-			B_Say_Overlay	(hero, NULL, "$LOOKFORSOMETHING");
+			if (!Npc_IsInState(Mod_7434_DMT_Suchender_MT, ZS_Talk)) {
+				B_Say_Overlay	(hero, NULL, "$LOOKFORSOMETHING");
 
-			Mod_SuchenderZettelHinweis = 1;
+				Mod_SuchenderZettelHinweis = 1;
+			};
 		};
 
 		// Hero wieder aufstehen lassen, sobald Suchender weg ist
 
 		if (Mod_HeroSuchenderLiegt == 0)
-		&& (Npc_KnowsInfo(hero, Info_Mod_Suchender_Turm))
-		&& (!Npc_IsInState(Mod_7434_DMT_Suchender_MT, ZS_Talk))
-		{
-			Mod_HeroSuchenderLiegt = 1;
+		&& (Npc_KnowsInfo(hero, Info_Mod_Suchender_Turm)) {
+			if (!Npc_IsInState(Mod_7434_DMT_Suchender_MT, ZS_Talk))
+			{
+				Mod_HeroSuchenderLiegt = 1;
 
-			AI_PlayAni	(hero, "T_VICTIM_SLE_2_STAND");
+				AI_PlayAni	(hero, "T_VICTIM_SLE_2_STAND");
+			};
 		};
 	};
 
@@ -219,16 +232,17 @@ FUNC VOID GILDENSTORY_WALDI()
 		// Wenn Suchender tot, dann beim ersten Mal zu den Waldis teleportieren
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Drache_Drachendurst04))
-		&& (Npc_IsDead(Mod_7543_DMT_Suchender_DT))
 		&& (CurrentLevel == DRACHENTAL_ZEN)
 		&& (Mod_JG_SuchenderDT == 0)
 		{
-			Mod_JG_SuchenderDT = 1;
+			if (Npc_IsDead(Mod_7543_DMT_Suchender_DT)) {
+				Mod_JG_SuchenderDT = 1;
 
-			AI_Teleport	(hero, "GOTOWALDIS");
+				AI_Teleport	(hero, "GOTOWALDIS");
 
-			B_LogEntry	(TOPIC_MOD_JG_SUCHENDER, "So. Dieser Finsterling ist Geschichte. Hetzt niemand mehr gegen friedliche Leute auf. Wenn ich gerade hier bin, sollte ich Cyrco Bericht erstatten. Und vielleicht hat er noch Tipp's für mich.");
-			B_SetTopicStatus	(TOPIC_MOD_JG_SUCHENDER, LOG_SUCCESS);
+				B_LogEntry	(TOPIC_MOD_JG_SUCHENDER, "So. Dieser Finsterling ist Geschichte. Hetzt niemand mehr gegen friedliche Leute auf. Wenn ich gerade hier bin, sollte ich Cyrco Bericht erstatten. Und vielleicht hat er noch Tipp's für mich.");
+				B_SetTopicStatus	(TOPIC_MOD_JG_SUCHENDER, LOG_SUCCESS);
+			};
 		};
 
 		if (Mod_JG_Drachental == 1)
@@ -260,17 +274,18 @@ FUNC VOID GILDENSTORY_WALDI()
 
 		// Monolog für Khorgor
 
-		if (Npc_IsDead(Mod_7554_OUT_Khorgor_DT))
-		&& (Npc_HasItems(hero, ItAt_KhorgorKopf) == 1)
+		if (Npc_HasItems(hero, ItAt_KhorgorKopf) == 1)
 		&& (Mod_JG_Khorgor == 0)
 		{
-			Mod_JG_Khorgor = 1;
+			if (Npc_IsDead(Mod_7554_OUT_Khorgor_DT)) {
+				Mod_JG_Khorgor = 1;
 
-			AI_StandUp	(hero);
+				AI_StandUp	(hero);
 
-			AI_Output(hero, NULL, "Info_Mod_Hero_Khorgor_15_00"); //Der Kopf des Irren! Cyrco wird zufrieden sein.
+				AI_Output(hero, NULL, "Info_Mod_Hero_Khorgor_15_00"); //Der Kopf des Irren! Cyrco wird zufrieden sein.
 
-			B_LogEntry	(TOPIC_MOD_JG_DRACHENTAL, "Khorgor ist erledigt. Jetzt muss ich nur noch aus diesem Tal verschwinden.");
+				B_LogEntry	(TOPIC_MOD_JG_DRACHENTAL, "Khorgor ist erledigt. Jetzt muss ich nur noch aus diesem Tal verschwinden.");
+			};
 		};
 	};
 };

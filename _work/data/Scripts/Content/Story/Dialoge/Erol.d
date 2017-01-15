@@ -377,7 +377,7 @@ FUNC VOID Info_Mod_Erol_Fahrender6_Info()
 	AI_Output(self, hero, "Info_Mod_Erol_Fahrender6_10_01"); //Das kannst du glauben! Hocherfreut warn sie. Aber geheimnisvoll haben sie auch getan.
 	AI_Output(self, hero, "Info_Mod_Erol_Fahrender6_10_02"); //Jedenfalls haben sie mich reichlicht belohnt.
 	AI_Output(hero, self, "Info_Mod_Erol_Fahrender6_15_03"); //Das heißt?
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender6_10_04"); //2500 Gold hat Pyrikar rausgerückt. Hier 2000 für dich. Da hast ja die Arbeit gemacht.
+	AI_Output(self, hero, "Info_Mod_Erol_Fahrender6_10_04"); //2500 Gold hat Pyrokar rausgerückt. Hier 2000 für dich. Da hast ja die Arbeit gemacht.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 2000);
 
@@ -461,7 +461,7 @@ INSTANCE Info_Mod_Erol_Fahrender8 (C_INFO)
 	information	= Info_Mod_Erol_Fahrender8_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "So, das war´s dann. Ich mach mich fort.";
+	description	= "So, das war's dann. Ich mach mich fort.";
 };
 
 FUNC INT Info_Mod_Erol_Fahrender8_Condition()
@@ -474,7 +474,7 @@ FUNC INT Info_Mod_Erol_Fahrender8_Condition()
 
 FUNC VOID Info_Mod_Erol_Fahrender8_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Erol_Fahrender8_15_00"); //So, das war´s dann. Ich mach mich fort.
+	AI_Output(hero, self, "Info_Mod_Erol_Fahrender8_15_00"); //So, das war's dann. Ich gehe jetzt.
 	AI_Output(self, hero, "Info_Mod_Erol_Fahrender8_10_01"); //Danke erst mal.
 
 	AI_StopProcessInfos	(self);
@@ -509,7 +509,7 @@ FUNC INT Info_Mod_Erol_Fahrender9_Condition()
 FUNC VOID Info_Mod_Erol_Fahrender9_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Erol_Fahrender9_15_00"); //Na, hat es geklappt?
-	AI_Output(self, hero, "Info_Mod_Erol_Fahrender9_10_01"); //Jo. Aber was hat es mit dem leuchtenden Tor auf sich, Wollte mir keiner verraten.
+	AI_Output(self, hero, "Info_Mod_Erol_Fahrender9_10_01"); //Jo. Aber was hat es mit dem leuchtenden Tor auf sich, wollte mir keiner verraten.
 	AI_Output(hero, self, "Info_Mod_Erol_Fahrender9_15_02"); //Dann sag ich dir auch nichts. Und?
 	AI_Output(self, hero, "Info_Mod_Erol_Fahrender9_10_03"); //Was und?
 	AI_Output(hero, self, "Info_Mod_Erol_Fahrender9_15_04"); //Du schuldest mir was.

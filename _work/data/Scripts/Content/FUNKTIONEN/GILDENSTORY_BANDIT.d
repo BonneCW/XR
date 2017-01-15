@@ -33,18 +33,19 @@ FUNC VOID GILDENSTORY_BANDIT()
 			B_SetTopicStatus	(TOPIC_MOD_BDT_ESTEBAN, LOG_FAILED);
 		};
 
-		if (Mod_Banditenueberfall_Esteban == 4)
-		&& (Npc_GetDistToWP(Mod_4076_VLK_Haendler_MT, "OW_PATH_1_15") < 300)
-		&& (Npc_GetDistToWP(Mod_4077_VLK_Haendler_MT, "OW_PATH_1_15") < 300)
-		{
-			B_StartOtherRoutine	(Mod_4076_VLK_Haendler_MT, "END");
-			B_StartOtherRoutine	(Mod_4077_VLK_Haendler_MT, "END");
-			B_StartOtherRoutine	(Mod_4078_GRD_Gardist_MT, "END");
-			B_StartOtherRoutine	(Mod_4079_GRD_Gardist_MT, "END");
-			B_StartOtherRoutine	(Mod_4080_GRD_Gardist_MT, "END");
-			B_StartOtherRoutine	(Mod_4081_GRD_Gardist_MT, "END");
+		if (Mod_Banditenueberfall_Esteban == 4) {
+			if (Npc_GetDistToWP(Mod_4076_VLK_Haendler_MT, "OW_PATH_1_15") < 300)
+			&& (Npc_GetDistToWP(Mod_4077_VLK_Haendler_MT, "OW_PATH_1_15") < 300)
+			{
+				B_StartOtherRoutine	(Mod_4076_VLK_Haendler_MT, "END");
+				B_StartOtherRoutine	(Mod_4077_VLK_Haendler_MT, "END");
+				B_StartOtherRoutine	(Mod_4078_GRD_Gardist_MT, "END");
+				B_StartOtherRoutine	(Mod_4079_GRD_Gardist_MT, "END");
+				B_StartOtherRoutine	(Mod_4080_GRD_Gardist_MT, "END");
+				B_StartOtherRoutine	(Mod_4081_GRD_Gardist_MT, "END");
 
-			Mod_Banditenueberfall_Esteban = 5;
+				Mod_Banditenueberfall_Esteban = 5;
+			};
 		};
 
 		if (Mod_Banditenueberfall_Esteban == 6)
@@ -58,23 +59,24 @@ FUNC VOID GILDENSTORY_BANDIT()
 			Mod_Banditenueberfall_Esteban = 7;
 		};
 
-		if (Mod_Banditenueberfall_Esteban == 10)
-		&& (!Npc_IsInState(Mod_948_BDT_Esteban_MT, ZS_Talk))
-		&& (Mod_BDT_Esteban_RacheAngriff == 0)
-		{
-			Mod_BDT_Esteban_RacheAngriff = 1;
+		if (Mod_Banditenueberfall_Esteban == 10) {
+			if (!Npc_IsInState(Mod_948_BDT_Esteban_MT, ZS_Talk))
+			&& (Mod_BDT_Esteban_RacheAngriff == 0)
+			{
+				Mod_BDT_Esteban_RacheAngriff = 1;
 
-			B_Attack	(Mod_948_BDT_Esteban_MT, hero, AR_None, 0);
-			B_Attack	(Mod_4072_BDT_Bandit_MT, hero, AR_None, 0);
-			B_Attack	(Mod_4073_BDT_Bandit_MT, hero, AR_None, 0);
-			B_Attack	(Mod_4074_BDT_Bandit_MT, hero, AR_None, 0);
-			B_Attack	(Mod_4075_BDT_Bandit_MT, hero, AR_None, 0);
+				B_Attack	(Mod_948_BDT_Esteban_MT, hero, AR_None, 0);
+				B_Attack	(Mod_4072_BDT_Bandit_MT, hero, AR_None, 0);
+				B_Attack	(Mod_4073_BDT_Bandit_MT, hero, AR_None, 0);
+				B_Attack	(Mod_4074_BDT_Bandit_MT, hero, AR_None, 0);
+				B_Attack	(Mod_4075_BDT_Bandit_MT, hero, AR_None, 0);
 
-			Npc_SetTempAttitude (Mod_948_BDT_Esteban_MT, ATT_HOSTILE);
-			Npc_SetTempAttitude (Mod_4072_BDT_Bandit_MT, ATT_HOSTILE);
-			Npc_SetTempAttitude (Mod_4073_BDT_Bandit_MT, ATT_HOSTILE);
-			Npc_SetTempAttitude (Mod_4074_BDT_Bandit_MT, ATT_HOSTILE);
-			Npc_SetTempAttitude (Mod_4075_BDT_Bandit_MT, ATT_HOSTILE);
+				Npc_SetTempAttitude (Mod_948_BDT_Esteban_MT, ATT_HOSTILE);
+				Npc_SetTempAttitude (Mod_4072_BDT_Bandit_MT, ATT_HOSTILE);
+				Npc_SetTempAttitude (Mod_4073_BDT_Bandit_MT, ATT_HOSTILE);
+				Npc_SetTempAttitude (Mod_4074_BDT_Bandit_MT, ATT_HOSTILE);
+				Npc_SetTempAttitude (Mod_4075_BDT_Bandit_MT, ATT_HOSTILE);
+			};
 		};
 
 		if (Mod_Orks_Morgahard == 1)
@@ -101,44 +103,50 @@ FUNC VOID GILDENSTORY_BANDIT()
 
 		if (Mod_Orks_Morgahard >= 1)
 		{
-			if (Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_01))
-			&& (Wld_IsTime(22,00,04,00))
-			{
-				AI_UnequipWeapons	(OrkScout_BDTPatroullie_01);
+			if (Hlp_IsValidNpc(OrkScout_BDTPatroullie_01)) {
+				if (Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_01))
+				&& (Wld_IsTime(22,00,04,00))
+				{
+					AI_UnequipWeapons	(OrkScout_BDTPatroullie_01);
 
-				Npc_RemoveInvItems	(OrkScout_BDTPatroullie_01, ItMw_2H_OrcAxe_01, 1);
-			}
-			else if (!Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_01))
-			&& (Wld_IsTime(04,00,22,00))
-			{
-				CreateInvItems	(OrkScout_BDTPatroullie_01, ItMw_2H_OrcAxe_01, 1);
-				AI_EquipBestMeleeWeapon (OrkScout_BDTPatroullie_01);
+					Npc_RemoveInvItems	(OrkScout_BDTPatroullie_01, ItMw_2H_OrcAxe_01, 1);
+				}
+				else if (!Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_01))
+				&& (Wld_IsTime(04,00,22,00))
+				{
+					CreateInvItems	(OrkScout_BDTPatroullie_01, ItMw_2H_OrcAxe_01, 1);
+					AI_EquipBestMeleeWeapon (OrkScout_BDTPatroullie_01);
+				};
 			};
-			if (Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_02))
-			&& (Wld_IsTime(22,00,04,00))
-			{
-				AI_UnequipWeapons	(OrkScout_BDTPatroullie_02);
+			if (Hlp_IsValidNpc(OrkScout_BDTPatroullie_02)) {
+				if (Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_02))
+				&& (Wld_IsTime(22,00,04,00))
+				{
+					AI_UnequipWeapons	(OrkScout_BDTPatroullie_02);
 
-				Npc_RemoveInvItems	(OrkScout_BDTPatroullie_02, ItMw_2H_OrcAxe_01, 1);
-			}
-			else if (!Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_02))
-			&& (Wld_IsTime(04,00,22,00))
-			{
-				CreateInvItems	(OrkScout_BDTPatroullie_02, ItMw_2H_OrcAxe_01, 1);
-				AI_EquipBestMeleeWeapon (OrkScout_BDTPatroullie_02);
+					Npc_RemoveInvItems	(OrkScout_BDTPatroullie_02, ItMw_2H_OrcAxe_01, 1);
+				}
+				else if (!Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_02))
+				&& (Wld_IsTime(04,00,22,00))
+				{
+					CreateInvItems	(OrkScout_BDTPatroullie_02, ItMw_2H_OrcAxe_01, 1);
+					AI_EquipBestMeleeWeapon (OrkScout_BDTPatroullie_02);
+				};
 			};
-			if (Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_03))
-			&& (Wld_IsTime(22,00,04,00))
-			{
-				AI_UnequipWeapons	(OrkScout_BDTPatroullie_03);
+			if (Hlp_IsValidNpc(OrkScout_BDTPatroullie_03)) {
+				if (Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_03))
+				&& (Wld_IsTime(22,00,04,00))
+				{
+					AI_UnequipWeapons	(OrkScout_BDTPatroullie_03);
 
-				Npc_RemoveInvItems	(OrkScout_BDTPatroullie_03, ItMw_2H_OrcAxe_01, 1);
-			}
-			else if (!Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_03))
-			&& (Wld_IsTime(04,00,22,00))
-			{
-				CreateInvItems	(OrkScout_BDTPatroullie_03, ItMw_2H_OrcAxe_01, 1);
-				AI_EquipBestMeleeWeapon (OrkScout_BDTPatroullie_03);
+					Npc_RemoveInvItems	(OrkScout_BDTPatroullie_03, ItMw_2H_OrcAxe_01, 1);
+				}
+				else if (!Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_03))
+				&& (Wld_IsTime(04,00,22,00))
+				{
+					CreateInvItems	(OrkScout_BDTPatroullie_03, ItMw_2H_OrcAxe_01, 1);
+					AI_EquipBestMeleeWeapon (OrkScout_BDTPatroullie_03);
+				};
 			};
 		};
 
@@ -206,25 +214,27 @@ FUNC VOID GILDENSTORY_BANDIT()
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Oschust_BadOne_You))
-		&& (C_NpcIsDown(Mod_7175_BDT_Oschust_MT))
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Esteban_FluchtHappy))
 		{
-			AI_Teleport	(Mod_7175_BDT_Oschust_MT, "TOT");
+			if (C_NpcIsDown(Mod_7175_BDT_Oschust_MT)) {
+				AI_Teleport	(Mod_7175_BDT_Oschust_MT, "TOT");
+			};
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Dexter_AngriffVorbei))
-		&& (Mod_AlbertTransforms == 8)
-		&& (!Npc_IsInState(Mod_761_BDT_Dexter_MT, ZS_Talk))
-		{
-			PrintScreen ("Eine durchzechte Nacht später", -1, YPOS_LevelUp, FONT_Screen, 2);
+		&& (Mod_AlbertTransforms == 8) {
+			if (!Npc_IsInState(Mod_761_BDT_Dexter_MT, ZS_Talk))
+			{
+				PrintScreen ("Eine durchzechte Nacht später", -1, YPOS_LevelUp, FONT_Screen, 2);
 
-			Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);
+				Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);
 
-			AI_Teleport	(hero, "LOCATION_11_12");
+				AI_Teleport	(hero, "LOCATION_11_12");
 
-			PC_Sleep (7);
+				PC_Sleep (7);
 
-			Mod_AlbertTransforms = 10;
+				Mod_AlbertTransforms = 10;
+			};
 		};
 
 		if (Mod_CrazyRabbit == 1)
@@ -313,72 +323,89 @@ FUNC VOID GILDENSTORY_BANDIT()
 
 		// Händler verschwinden nicht korrekt
 
-		if (!Npc_IsDead(Mod_4076_VLK_Haendler_MT))
-		&& (Npc_KnowsInfo(hero, Info_Mod_Esteban_AtVM3))
-		{
-			if (Npc_GetDistToWP(Mod_4076_VLK_Haendler_MT, "TOT") > 1000)
+		if (Hlp_IsValidNpc(Mod_4076_VLK_Haendler_MT)) {
+			PrintDebug("First valid");
+			if (!Npc_IsDead(Mod_4076_VLK_Haendler_MT))
+			&& (Npc_KnowsInfo(hero, Info_Mod_Esteban_AtVM3))
 			{
-				AI_Teleport	(Mod_4076_VLK_Haendler_MT, "TOT");
-				B_StartOtherRoutine	(Mod_4076_VLK_Haendler_MT, "TOT");
-			}
-			else if (Npc_GetDistToWP(Mod_4076_VLK_Haendler_MT, "TOT") <= 1000)
-			{
-				B_RemoveNpc	(Mod_4076_VLK_Haendler_MT);
+				PrintDebug("First not dead");
+				if (Npc_GetDistToWP(Mod_4076_VLK_Haendler_MT, "TOT") > 1000)
+				{
+					AI_Teleport	(Mod_4076_VLK_Haendler_MT, "TOT");
+					B_StartOtherRoutine	(Mod_4076_VLK_Haendler_MT, "TOT");
+					B_RemoveNpc(Mod_4076_VLK_Haendler_MT);
+					PrintDebug("First TeleportKill");
+				}
+				else if (Npc_GetDistToWP(Mod_4076_VLK_Haendler_MT, "TOT") <= 1000)
+				{
+					B_RemoveNpc	(Mod_4076_VLK_Haendler_MT);
+					PrintDebug("First Kill");
+				};
 			};
 		};
 
-		if (!Npc_IsDead(Mod_4077_VLK_Haendler_MT))
-		&& (Npc_KnowsInfo(hero, Info_Mod_Esteban_AtVM3))
-		{
-			if (Npc_GetDistToWP(Mod_4077_VLK_Haendler_MT, "TOT") > 1000)
+		if (Hlp_IsValidNpc(Mod_4077_VLK_Haendler_MT)) {
+			PrintDebug("Second valid");
+			if (!Npc_IsDead(Mod_4077_VLK_Haendler_MT))
+			&& (Npc_KnowsInfo(hero, Info_Mod_Esteban_AtVM3))
 			{
-				AI_Teleport	(Mod_4077_VLK_Haendler_MT, "TOT");
-				B_StartOtherRoutine	(Mod_4077_VLK_Haendler_MT, "TOT");
-			}
-			else if (Npc_GetDistToWP(Mod_4077_VLK_Haendler_MT, "TOT") <= 1000)
-			{
-				B_RemoveNpc	(Mod_4077_VLK_Haendler_MT);
+				PrintDebug("Second not dead");
+				if (Npc_GetDistToWP(Mod_4077_VLK_Haendler_MT, "TOT") > 1000)
+				{
+					AI_Teleport	(Mod_4077_VLK_Haendler_MT, "TOT");
+					B_StartOtherRoutine	(Mod_4077_VLK_Haendler_MT, "TOT");
+					B_RemoveNpc(Mod_4077_VLK_Haendler_MT);
+					PrintDebug("Second TeleportKill");
+				}
+				else if (Npc_GetDistToWP(Mod_4077_VLK_Haendler_MT, "TOT") <= 1000)
+				{
+					B_RemoveNpc	(Mod_4077_VLK_Haendler_MT);
+					PrintDebug("Second Kill");
+				};
 			};
 		};
 
 		// Oschust Ork-Attack
 
-		if (!Npc_IsInState(Mod_7175_BDT_Oschust_MT, ZS_Talk))
-		&& ((Npc_KnowsInfo(hero, Info_Mod_Oschust_BadOne_Trophies))
+		if ((Npc_KnowsInfo(hero, Info_Mod_Oschust_BadOne_Trophies))
 		|| (Npc_KnowsInfo(hero, Info_Mod_Oschust_BadOne_Gnade))
 		|| (Npc_KnowsInfo(hero, Info_Mod_Oschust_BadOne_Plan)))
 		&& (Mod_Oschust_OrkAttack == 0)
 		{
-			Mod_Oschust_OrkAttack = 1;
+			if (!Npc_IsInState(Mod_7175_BDT_Oschust_MT, ZS_Talk)) {
+				Mod_Oschust_OrkAttack = 1;
 
-			B_Attack	(Mod_10021_ORC_Elite_MT, hero, AR_Kill, 0);
-			B_Attack	(Mod_10022_ORC_Elite_MT, hero, AR_Kill, 0);
-			B_Attack	(Mod_10029_Orc_Warrior_MT, hero, AR_Kill, 0);
-			B_Attack	(Mod_10030_Orc_Warrior_MT, hero, AR_Kill, 0);
-			B_Attack	(Mod_10031_Orc_Warrior_MT, hero, AR_Kill, 0);
+				B_Attack	(Mod_10021_ORC_Elite_MT, hero, AR_Kill, 0);
+				B_Attack	(Mod_10022_ORC_Elite_MT, hero, AR_Kill, 0);
+				B_Attack	(Mod_10029_Orc_Warrior_MT, hero, AR_Kill, 0);
+				B_Attack	(Mod_10030_Orc_Warrior_MT, hero, AR_Kill, 0);
+				B_Attack	(Mod_10031_Orc_Warrior_MT, hero, AR_Kill, 0);
+			};
 		};
 
 		// Nicht bewegen, bevor Esteban nicht sein GO gibt
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Esteban_AtVM2))
-		&& (!Npc_IsInState(Mod_948_BDT_Esteban_MT, ZS_Talk))
 		&& (Mod_WarteAufUeberfall == 0)
 		{
-			Mod_WarteAufUeberfall = 1;
+			if (!Npc_IsInState(Mod_948_BDT_Esteban_MT, ZS_Talk)) {
+				Mod_WarteAufUeberfall = 1;
 
-			AI_GotoWP	(hero, "OW_VM_ENTRANCE");
+				AI_GotoWP	(hero, "OW_VM_ENTRANCE");
 
-			AI_AlignToWP	(hero);
+				AI_AlignToWP	(hero);
 
-			AI_Wait	(hero, 5);
+				AI_Wait	(hero, 5);
+			};
 		};
 
 		// Blackscreen for Hero during Talk between Oschust and Esteban
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Esteban_SecondOrkWave))
-		&& (!Npc_IsInState(Mod_948_BDT_Esteban_MT, ZS_Talk))
 		&& (!Mod_EstebanOschust) {
-			Mod_EstebanOschust = 1;
+			if (!Npc_IsInState(Mod_948_BDT_Esteban_MT, ZS_Talk)) {
+				Mod_EstebanOschust = 1;
+			};
 		};
 	};
 
@@ -438,10 +465,6 @@ FUNC VOID GILDENSTORY_BANDIT()
 
 			AI_Teleport	(hero, "WP_WW_TO_MT");
 		};
-	};
-
-	if (CurrentLevel == NEWWORLD_ZEN)
-	{
 	};
 
 	// Eduard nur auf fehlendes Gold ansprechen können bis max. 1h nach Gespräch
@@ -545,25 +568,27 @@ FUNC VOID GILDENSTORY_BANDIT()
 			Mod_BDT_AlterWaldMann = 6;
 		};
 
-		if (Mod_BDT_AlterWaldMann == 9)
-		&& (Npc_IsDead(Mod_7530_JG_Wilderer_NW))
-		&& (Npc_IsDead(Mod_7531_JG_Wilderer_REL))
-		&& (Npc_IsDead(Mod_7532_JG_Wilderer_REL))
-		{
-			AI_Teleport	(Mod_7529_OUT_AlterMann_REL, "START");
-			B_StartOtherRoutine	(Mod_7529_OUT_AlterMann_REL, "START");
+		if (Mod_BDT_AlterWaldMann == 9) {
+			if (Npc_IsDead(Mod_7530_JG_Wilderer_NW))
+			&& (Npc_IsDead(Mod_7531_JG_Wilderer_REL))
+			&& (Npc_IsDead(Mod_7532_JG_Wilderer_REL))
+			{
+				AI_Teleport	(Mod_7529_OUT_AlterMann_REL, "START");
+				B_StartOtherRoutine	(Mod_7529_OUT_AlterMann_REL, "START");
 
-			Mod_BDT_AlterWaldMann = 6;
+				Mod_BDT_AlterWaldMann = 6;
+			};
 		};
 
-		if (Npc_KnowsInfo(hero, Info_Mod_AlterWaldMann_AtMine))
-		&& (Npc_IsInState(Mod_7582_OUT_Buddler_REL, ZS_Attack))
-		&& (Npc_IsInState(Mod_7583_OUT_Wache_REL, ZS_Attack))
-		&& (Npc_IsInState(Mod_7584_OUT_Wache_REL, ZS_Attack))
-		{
-			B_KillNpc	(Mod_7582_OUT_Buddler_REL);
-			B_KillNpc	(Mod_7583_OUT_Wache_REL);
-			B_KillNpc	(Mod_7584_OUT_Wache_REL);
+		if (Npc_KnowsInfo(hero, Info_Mod_AlterWaldMann_AtMine)) {
+			if (Npc_IsInState(Mod_7582_OUT_Buddler_REL, ZS_Attack))
+			&& (Npc_IsInState(Mod_7583_OUT_Wache_REL, ZS_Attack))
+			&& (Npc_IsInState(Mod_7584_OUT_Wache_REL, ZS_Attack))
+			{
+				B_KillNpc	(Mod_7582_OUT_Buddler_REL);
+				B_KillNpc	(Mod_7583_OUT_Wache_REL);
+				B_KillNpc	(Mod_7584_OUT_Wache_REL);
+			};
 		};
 
 		if (Mod_BDT_AlterWaldMann == 10)

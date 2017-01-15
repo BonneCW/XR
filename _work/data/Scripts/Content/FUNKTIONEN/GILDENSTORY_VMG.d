@@ -36,31 +36,40 @@ FUNC VOID GILDENSTORY_VMG()
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Grubuz_Emerin))
 		&& (Mod_Hermy_KnowsQuest == 8)
-		&& (Npc_IsDead(Mod_4022_Orc_Grubuz_MT))
 		&& (Npc_HasItems(hero, ItSc_TrfHarpie) > 0)
 		{
-			B_LogEntry	(TOPIC_MOD_FAICE_HARPIE, "Ich habe die Spruchrolle 'Verwandlung Harpie'. Jetzt sollte ich damit zu Hermy gehen.");
+			if (Npc_IsDead(Mod_4022_Orc_Grubuz_MT)) {
+				B_LogEntry	(TOPIC_MOD_FAICE_HARPIE, "Ich habe die Spruchrolle 'Verwandlung Harpie'. Jetzt sollte ich damit zu Hermy gehen.");
 
-			Mod_Hermy_KnowsQuest = 9;
+				Mod_Hermy_KnowsQuest = 9;
+			};
 		};
 
 		if (Mod_Brad_Quest < 2)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Brad_Hi))
-		&& (Npc_IsDead(Mod_10016_MIN_Brad_MT))
 		&& (Npc_HasItems(hero, ItMi_NicksKopf) == 1)
 		{
-			Mod_Brad_Quest = 2;
+			if (Hlp_IsValidNpc(Mod_10016_MIN_Brad_MT)) {
+				if (Npc_IsDead(Mod_10016_MIN_Brad_MT)) {
+					Mod_Brad_Quest = 2;
 
-			B_LogEntry	(TOPIC_MOD_ANOR_NICK, "Ich habe den Minotauren Brad umgebracht und ihm den Kopf abgenommen. Ich sollte jetzt zu Nick zurückkehren.");
+					B_LogEntry	(TOPIC_MOD_ANOR_NICK, "Ich habe den Minotauren Brad umgebracht und ihm den Kopf abgenommen. Ich sollte jetzt zu Nick zurückkehren.");
+				};
+			} else {
+				Mod_Brad_Quest = 2;
+
+				B_LogEntry	(TOPIC_MOD_ANOR_NICK, "Ich habe den Minotauren Brad umgebracht und ihm den Kopf abgenommen. Ich sollte jetzt zu Nick zurückkehren.");
+			};
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Nick_Kopf))
-		&& (Mod_Brad_Quest == 2)
-		&& (!Npc_IsInState(Mod_7050_ZOM_Nick_MT, ZS_Talk))
-		{
-			Mod_7050_ZOM_Nick_MT.attribute[ATR_HITPOINTS] = 0;
+		&& (Mod_Brad_Quest == 2) {
+			if (!Npc_IsInState(Mod_7050_ZOM_Nick_MT, ZS_Talk))
+			{
+				Mod_7050_ZOM_Nick_MT.attribute[ATR_HITPOINTS] = 0;
 
-			Mod_Brad_Quest = 3;
+				Mod_Brad_Quest = 3;
+			};
 		};
 
 		// Quest: Teleport
