@@ -7013,6 +7013,16 @@ FUNC VOID STARTUP_DieInsel()
 	Wld_InsertNpc	(Zombie_Pirat,		"FP_ROAM_DI_HOEHLE_02_ZOMBIE_06");
 	Wld_InsertNpc	(Zombie_Pirat,		"FP_ROAM_DI_HOEHLE_02_ZOMBIE_07");
 	Wld_InsertNpc	(Zombie_Pirat,		"FP_ROAM_DI_HOEHLE_02_ZOMBIE_09");
+	
+	Wld_InsertNpc	(Scavenger,		"FP_ROAM_SCAVENGER_14");
+	Wld_InsertNpc	(Scavenger,		"FP_ROAM_SCAVENGER_14");
+	Wld_InsertNpc	(Scavenger,		"FP_ROAM_SCAVENGER_14");
+	Wld_InsertNpc	(Scavenger,		"FP_ROAM_SCAVENGER_14");
+	Wld_InsertNpc	(Scavenger,		"FP_ROAM_SCAVENGER_14");
+		
+	Wld_InsertNpc	(Gobbo_Warrior,		"FP_ROAM_SKELET_03");
+	Wld_InsertNpc	(Gobbo_Black,		"FP_ROAM_SKELET_03");
+	Wld_InsertNpc	(Gobbo_Black,		"FP_ROAM_SKELET_03");
 };
 
 FUNC VOID INIT_DieInsel()
