@@ -177,13 +177,15 @@ FUNC VOID PC_PotionAlchemy_CoragonDaemonisch2_Info()
 	CreateInvItems	(hero, ItMi_CoragonDaemonisch2, 1);
 };
 
+var int Mod_Tofu_Hergestellt;
+
 INSTANCE PC_PotionAlchemy_Tofu (C_Info)
 {
 	npc				= PC_Hero;
 	nr				= 1;
 	condition		= PC_PotionAlchemy_Tofu_Condition;
 	information		= PC_PotionAlchemy_Tofu_Info;
-	permanent		= 0;
+	permanent		= 1;
 	description		= "To-Fu herstellen"; 
 };
 
@@ -191,6 +193,7 @@ FUNC INT PC_PotionAlchemy_Tofu_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
 	&& (Npc_KnowsInfo(hero, Info_Mod_UrShak_Biftek))
+	&& (!Mod_Tofu_Hergestellt)
 	{	
 		return TRUE;
 	};
@@ -207,6 +210,8 @@ FUNC VOID PC_PotionAlchemy_Tofu_Info()
 		Npc_RemoveInvItems	(hero, ItMi_SalzNugget, 1);
 
 		CreateInvItems	(hero, ItFo_Tofu, 1);
+		
+		Mod_Tofu_Hergestellt = TRUE;
 	};
 };
 
