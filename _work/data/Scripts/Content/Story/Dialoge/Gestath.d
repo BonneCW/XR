@@ -307,7 +307,7 @@ INSTANCE Info_Mod_Gestath_Trade (C_INFO)
 
 FUNC INT Info_Mod_Gestath_Trade_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Gestath_TrophaenGeben))
+	if (Mod_EIS_Gestath_Day > 0)
 	{
 		return 1;
 	};
