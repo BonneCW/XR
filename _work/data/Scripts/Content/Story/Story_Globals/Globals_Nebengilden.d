@@ -23,5 +23,5 @@ var int Erzbaron_Dabei;
 var int KG_Dabei;
 var int Assassinen_Dabei;
 
-const int MaxNebengilden = 5;
+const int MaxNebengilden = 4;
 var int Mod_AnzahlNebengilden;
