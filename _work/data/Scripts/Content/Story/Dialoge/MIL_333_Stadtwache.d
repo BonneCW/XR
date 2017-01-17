@@ -532,6 +532,7 @@ FUNC INT DIA_Mil_333_Stadtwache_PERM_Condition()
 {	
 	if (self.aivar[AIV_PASSGATE] == TRUE)
 	&& (Npc_IsInState(self, ZS_Talk))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Mario_Hilfe8) || Npc_KnowsInfo(hero, Info_Mod_Mil_333_Mario))
 	{
 		return TRUE;
 	};
