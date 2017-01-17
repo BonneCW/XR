@@ -16,6 +16,10 @@ func void B_AssessTalk ()
 	{
 		return;
 	};
+	
+	if (Mod_Argez_Puzzle == 1) {
+		return;
+	};
 
 	if (Npc_GetDistToNpc(self, other) > 500)
 	&& (Hlp_GetInstanceID(self) != Hlp_GetInstanceID(PC_Friend_XW))
