@@ -442,7 +442,7 @@ FUNC VOID GILDENSTORY_SL()
 
 				Wld_InsertNpc	(Krauttroll,	"LOCATION_12_01");
 
-				Mod_Leichengase_Kraut = 5;
+				Mod_Leichengase_Kraut = 3;
 			};
 		};
 
