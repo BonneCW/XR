@@ -2888,6 +2888,16 @@ FUNC VOID NEBENQUESTS()
 			B_LogEntry	(TOPIC_MOD_SLD_JEREMIAHLURKER, "So, das sollten alle gewesen sein. Damit ist der See um eine Art ärmer ...");
 		};
 
+		// Morastwürmer und Sumpfkrabben
+
+		if (Mod_NL_JeremiahHasEier == 4)
+		&& (Npc_HasItems(hero, ItMi_LurkerEgg_MIS) == 3)
+		{
+			Mod_NL_JeremiahHasEier = 5;
+
+			B_LogEntry	(TOPIC_MOD_NL_PLAGE, "Ich habe drei Eier. Jetzt nur noch ins Neue Lager damit.");
+		};
+
 		if (Mod_NL_JeremiahHasEier == 5)
 		&& (Npc_HasItems(hero, ItMi_LurkerEgg_MIS) == 3)
 		&& (Npc_GetDistToWP(hero, "WP_MT_IMLURKERNEST") < 500)

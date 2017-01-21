@@ -876,16 +876,6 @@ FUNC VOID GILDENSTORY_NL ()
 			B_LogEntry	(TOPIC_MOD_NL_MOORHEXE, "So was. Hier und da etwas magisches Erz eingearbeitet, aber sonst ein schlichter Kamm. Nie wäre jemand auf den Gedanken gekommen, dieser Gegenstand könnte die Lebenskraft des Untoten in sich bergen. Nun brauche ich ihn nur noch zu vernichten. Das Feuer eines Schmiedeofens dürfte diesen Zweck erfüllen.");
 		};
 
-		// Morastwürmer und Sumpfkrabben
-
-		if (Mod_NL_JeremiahHasEier == 4)
-		&& (Npc_HasItems(hero, ItMi_LurkerEgg_MIS) == 3)
-		{
-			Mod_NL_JeremiahHasEier = 5;
-
-			B_LogEntry	(TOPIC_MOD_NL_PLAGE, "Ich habe drei Eier. Jetzt nur noch ins Neue Lager damit.");
-		};
-
 		if ((Mod_NL_Grimbald == 3)
 		|| (Mod_NL_Grimbald == 4))
 		&& (Npc_KnowsInfo(hero, Info_Mod_Moorhexe_Hi))
