@@ -113,8 +113,7 @@ INSTANCE Info_Mod_Gestath_TrophaenGeben (C_INFO)
 
 FUNC INT Info_Mod_Gestath_TrophaenGeben_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Gestath_TrophaenHolen))
-	&& (Mod_EIS_Gestath == 1)
+	if (Mod_EIS_Gestath == 1)
 	&& (Npc_HasItems(hero, ItAt_DrgSnapperHorn) >= Mod_EIS_Gestath_DragonsnapperHorn)
 	&& (Npc_HasItems(hero, ItAt_LurkerClaw) >= Mod_EIS_Gestath_LurkerClaw)
 	&& (Npc_HasItems(hero, ItAt_Keilerhauer) >= Mod_EIS_Gestath_Keilerhauer)
