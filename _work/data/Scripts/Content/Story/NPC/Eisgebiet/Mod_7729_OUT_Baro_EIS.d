@@ -9,7 +9,7 @@ INSTANCE Mod_7729_OUT_Baro_EIS (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);															
+	B_SetAttributesToChapter (self, 4);															
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	

@@ -12,7 +12,7 @@ instance Mod_7567_OUT_Luis_EIS (Npc_Default)
 	aivar[AIV_ToughGuy] = TRUE; 
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);															
+	B_SetAttributesToChapter (self, 6);															
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	

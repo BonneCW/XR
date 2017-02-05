@@ -9,7 +9,7 @@ instance Mod_7752_OUT_Marcus_EIS (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);																	
+	B_SetAttributesToChapter (self, 6);																	
 	aivar[AIV_ToughGuy]		= TRUE;		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
