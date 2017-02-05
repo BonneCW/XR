@@ -90,7 +90,7 @@ FUNC VOID Info_Mod_Kimon_REL_Freudenspender2_Info()
 	AI_Output(self, hero, "Info_Mod_Kimon_REL_Freudenspender2_34_04"); //Hier hast du's zurück und noch mal 350 für deine Mühe.
 	AI_Output(hero, self, "Info_Mod_Kimon_REL_Freudenspender2_15_05"); //Bis ein andermal.
 
-	B_SetTopicStatus	(TOPIC_MOD_KIMON_FREUDENSPENDER, LOG_RUNNING);
+	B_SetTopicStatus	(TOPIC_MOD_KIMON_FREUDENSPENDER, LOG_SUCCESS);
 
 	CurrentNQ += 1;
 

@@ -29,7 +29,7 @@ FUNC VOID Info_Mod_Falin_Hi_Info()
 
 	B_GiveInvItems	(self, hero, ItMi_PaketFalin, 1);
 
-	B_LogEntry	(TOPIC_MOD_JG_NAHKAMPF, "Möglicherweise habe ich schon einen Söldner gefunden, jetzt mal in Khorinis nachfragen. Ach ja. Und das Paket für's Kloster ...");
+	B_LogEntry	(TOPIC_MOD_JG_NAHKAMPF, "Möglicherweise habe ich schon einen Söldner gefunden, jetzt mal in Khorinis nachfragen. Ach ja. Und das Paket fürs Kloster ...");
 
 	AI_StopProcessInfos	(self);
 
