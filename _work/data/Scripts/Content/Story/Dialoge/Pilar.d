@@ -160,16 +160,16 @@ FUNC VOID Info_Mod_Pilar_AtHut3_Info()
 
 	B_LogEntry	(TOPIC_MOD_EIS_FRIEDHOF, "Pilar wird in die Stadt gehen und Verstärkung holen. Währenddessen werde ich auf dem Friedhof nach dem Rechten sehen.");
 
-	Wld_InsertNpc	(Gobbo_Skeleton, "NORTDGEBIET_92");
-	Wld_InsertNpc	(Gobbo_Skeleton, "NORTDGEBIET_92");
-	Wld_InsertNpc	(Gobbo_Skeleton, "NORTDGEBIET_92");
-	Wld_InsertNpc	(Gobbo_Skeleton, "NORTDGEBIET_92");
-	Wld_InsertNpc	(Gobbo_Skeleton, "NORTDGEBIET_92");
-	Wld_InsertNpc	(Gobbo_Skeleton, "NORTDGEBIET_92");
-	Wld_InsertNpc	(Gobbo_Skeleton, "NORTDGEBIET_92");
-	Wld_InsertNpc	(Gobbo_Skeleton, "NORTDGEBIET_92");
-	Wld_InsertNpc	(Gobbo_Skeleton, "NORTDGEBIET_92");
-	Wld_InsertNpc	(Gobbo_Skeleton_Eis, "NORTDGEBIET_92");
+	Wld_InsertNpc	(Gobbo_Skeleton, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Skeleton, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Skeleton, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Skeleton, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Skeleton, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Skeleton, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Skeleton, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Skeleton, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Skeleton, "FRIEDHOFF_7");
+	Wld_InsertNpc	(Gobbo_Skeleton_Eis, "FRIEDHOFF_7");
 };
 
 INSTANCE Info_Mod_Pilar_Pickpocket (C_INFO)
