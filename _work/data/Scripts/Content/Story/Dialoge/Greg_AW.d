@@ -600,13 +600,12 @@ FUNC VOID Info_Mod_Greg_Schatzaufteilung_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_00"); //Tatsächlich, du lebst noch! Ich hätte nicht gedacht dass jemand einen Schlag mit einer solchen Axt überleben kann!
 	AI_Output(hero, self, "Info_Mod_Greg_Schatzaufteilung_15_01"); //Ich hatte wohl Glück. Ich kann mich nur an nichts mehr erinnern.
-	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_02"); //Glück hattest du, als Bill dich vom brennenden Schiff gezogen hat!
-	AI_Output(hero, self, "Info_Mod_Greg_Schatzaufteilung_15_03"); //Vom brennenden Schiff?
-	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_04"); //Jo! Diese Biester haben gemerkt, dass wir dran sind sie zu besiegen, deshalb haben die glatt ihr Schiff angezündet!
-	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_05"); //Wollten es lieber verbrennen als es uns zu überlassen! Naja auf ein Orkschiff hätt’ ich mich ohnehin nicht verlassen!
-	AI_Output(hero, self, "Info_Mod_Greg_Schatzaufteilung_15_06"); //Was ist mit dem Schatz?
-	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_07"); //Was soll damit sein? Niemand hat ihn angerührt. Obwohl ich es erlaubt habe! Alle wollten sie auf dich warten.
-	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_08"); //Damit darfst du dir deinen Teil aussuchen!
+	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_02"); //Jo! Während der Überfahrt wurden wir von einer orkischen Galeere überfallen. Sie haben dich heimlich ausgeschalten, als du geschlafen hast.
+	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_03"); //War ein kräftiger Schlag, denn er war so laut, dass wir dadurch bemerkt haben, dass diese Biester unser Schiff geentert haben.
+	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_04"); //Danach haben wir sie zurückgeschlagen. Du jedoch warst bis vor kurzem bewusstlos.
+	AI_Output(hero, self, "Info_Mod_Greg_Schatzaufteilung_15_05"); //Was ist mit dem Schatz?
+	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_06"); //Was soll damit sein? Niemand hat ihn angerührt. Obwohl ich es erlaubt habe! Alle wollten sie auf dich warten.
+	AI_Output(self, hero, "Info_Mod_Greg_Schatzaufteilung_01_07"); //Damit darfst du dir deinen Teil aussuchen!
 
 	Info_ClearChoices	(Info_Mod_Greg_Schatzaufteilung);
 
