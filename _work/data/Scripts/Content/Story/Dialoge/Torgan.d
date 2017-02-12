@@ -817,6 +817,261 @@ FUNC VOID Info_Mod_Torgan_Wegschauen_Info()
 	AI_Output(self, hero, "Info_Mod_Torgan_Wegschauen_13_02"); //Bei Dragomir in Khorinis findest du eigentlich immer genug.
 };
 
+INSTANCE Info_Mod_Torgan_Lernen (C_INFO)
+{
+	npc		= Mod_1963_JG_Torgan_MT;
+	nr          	= 1;
+	condition	= Info_Mod_Torgan_Lernen_Condition;
+	information	= Info_Mod_Torgan_Lernen_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Was kannst du mir beibringen?";
+};
+
+FUNC INT Info_Mod_Torgan_Lernen_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Dusty_Hi))
+	{
+		return 1;
+	};
+};
+
+var int Mod_Torgan_Lehrer;
+
+FUNC VOID Info_Mod_Torgan_Lernen_ShowOptions()
+{
+	Info_ClearChoices	(Info_Mod_Torgan_Lernen);
+
+	Info_AddChoice	(Info_Mod_Torgan_Lernen, DIALOG_BACK, Info_Mod_Torgan_Lernen_BACK);
+
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Teeth] == FALSE)
+	{ 
+		Info_AddChoice	(Info_Mod_Torgan_Lernen, B_BuildLearnString ("Zähne reissen",B_GetLearnCostTalent (hero,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Teeth)), Info_Mod_Torgan_Lernen_Teeth);
+	};
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Claws] == FALSE)
+	{ 
+		Info_AddChoice	(Info_Mod_Torgan_Lernen, B_BuildLearnString ("Klauen hacken",B_GetLearnCostTalent (hero,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Claws)), Info_Mod_Torgan_Lernen_Claws);
+	};
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFSting] == FALSE)
+	{ 
+		Info_AddChoice	(Info_Mod_Torgan_Lernen, B_BuildLearnString("Fliegenstachel", B_GetLearnCostTalent (hero,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFSting)), Info_Mod_Torgan_Lernen_BFSting);
+	};
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Fur] == FALSE)
+	{ 
+		Info_AddChoice	(Info_Mod_Torgan_Lernen, B_BuildLearnString ("Fell abziehen",B_GetLearnCostTalent (hero,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Fur)), Info_Mod_Torgan_Lernen_Fur);
+	};
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_TrollTeeth] == FALSE)
+	{ 
+		Info_AddChoice	(Info_Mod_Torgan_Lernen, B_BuildLearnString ("Trollhauer reissen",B_GetLearnCostTalent (hero,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_TrollTeeth)), Info_Mod_Torgan_Lernen_TrollTeeth);
+	};
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_SwampSharkTeeth] == FALSE)
+	{ 
+		Info_AddChoice	(Info_Mod_Torgan_Lernen, B_BuildLearnString ("Sumpfhaizähne ziehen",B_GetLearnCostTalent (hero,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_SwampSharkTeeth)), Info_Mod_Torgan_Lernen_SwampsharkTeeth);
+	};
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_ReptileSkin] == FALSE)
+	{ 
+		Info_AddChoice	(Info_Mod_Torgan_Lernen, B_BuildLearnString ("Häuten von Reptilien",B_GetLearnCostTalent (hero,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_ReptileSkin)), Info_Mod_Torgan_Lernen_ReptileSkin);
+	};
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Heart] == FALSE)
+	{ 
+		Info_AddChoice	(Info_Mod_Torgan_Lernen, B_BuildLearnString ("Herzen nehmen",B_GetLearnCostTalent (hero,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Heart)), Info_Mod_Torgan_Lernen_Heart);
+	};
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_ShadowHorn] == FALSE)
+	{ 
+		Info_AddChoice	(Info_Mod_Torgan_Lernen, B_BuildLearnString ("Schattenläuferhörner nehmen",B_GetLearnCostTalent (hero,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_ShadowHorn)), Info_Mod_Torgan_Lernen_ShadowHorn);
+	};
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_FireTongue] == FALSE)
+	{ 
+		Info_AddChoice	(Info_Mod_Torgan_Lernen, B_BuildLearnString ("Feuerzungen reißen",B_GetLearnCostTalent (hero,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_FireTongue)), Info_Mod_Torgan_Lernen_FireTongue);
+	};
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFWing] == FALSE)
+	{ 
+		Info_AddChoice	(Info_Mod_Torgan_Lernen, B_BuildLearnString ("Flügel nehmen",B_GetLearnCostTalent (hero,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFWing)), Info_Mod_Torgan_Lernen_BFWing);
+	};
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Mandibles] == FALSE)
+	{ 
+		Info_AddChoice	(Info_Mod_Torgan_Lernen, B_BuildLearnString ("Klauen nehmen",B_GetLearnCostTalent (hero,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Mandibles)), Info_Mod_Torgan_Lernen_Mandibles);
+	};
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DrgSnapperHorn] == FALSE)
+	{ 
+		Info_AddChoice	(Info_Mod_Torgan_Lernen, B_BuildLearnString ("Drachensnapperhorn nehmen",B_GetLearnCostTalent (hero,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DrgSnapperHorn)), Info_Mod_Torgan_Lernen_DrgSnapperHorn);
+	};
+};
+
+FUNC VOID Info_Mod_Torgan_Lernen_Info()
+{
+	if (Mod_Torgan_Lehrer == FALSE) {
+		Mod_Torgan_Lehrer = TRUE;
+		
+		Log_CreateTopic	(TOPIC_MOD_LEHRER_WALDIS, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_LEHRER_WALDIS, "Torgan kann mich das Nehmen verschiedener Jagdtrophäen lehren.");
+	};
+	AI_Output(hero, self, "Info_Mod_Torgan_Lernen_15_00"); //Was kannst du mir beibringen?
+
+	if ((PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Claws] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Fur] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Teeth] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFSting] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_TrollTeeth] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_SwampSharkTeeth] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_ReptileSkin] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Heart] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_ShadowHorn] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_FireTongue] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFWing] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Mandibles] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DrgSnapperHorn] == FALSE))
+	{
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_13_01"); //Kommt darauf an, was du wissen willst.
+
+		Info_Mod_Torgan_Lernen_ShowOptions();
+	}
+	else
+	{
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_13_02"); //Ich kann dir im Moment nicht mehr beibringen, als du ohnehin schon weißt. Tut mir Leid.
+	};
+};
+
+FUNC void Info_Mod_Torgan_Lernen_BACK()
+{
+	Info_ClearChoices (Info_Mod_Torgan_Lernen);
+};
+
+FUNC void Info_Mod_Torgan_Lernen_Claws()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_Claws))
+	{
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_Claws_13_00"); //Tiere geben ihre Klauen nicht sehr gerne her. Du musst schon sehr genau den Punkt treffen, an dem du mit deinem Messer ansetzt.
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_Claws_13_01"); //Die Haltung deiner Hand sollte etwas verschränkt sein. Mit einem kräftigen Ruck trennst du dann die Klaue ab.
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_Claws_13_02"); //Klauen sind immer ein begehrtes Zahlungsmittel bei einem Händler.
+	};
+
+	Info_Mod_Torgan_Lernen_ShowOptions();
+		
+};
+
+FUNC void Info_Mod_Torgan_Lernen_Teeth()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_Teeth))
+	{
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_Teeth_13_00"); //Das einfachste, was du Tieren entnehmen kannst, sind seine Zähne. Du fährst mit deinem Messer in seinem Maul um das Gebiss.
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_Teeth_13_01"); //Dann trennst es geschickt mit einem Ruck vom Schädel des Tieres.
+	};
+
+	Info_Mod_Torgan_Lernen_ShowOptions();
+};
+
+FUNC void Info_Mod_Torgan_Lernen_BFSting()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_BFSting))
+	{
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_BFSting_13_00"); //Die Fliege hat am Rücken eine weiche Stelle.
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_BFSting_13_01"); //Wenn du dort mit der Hand gegen drückst, fährt der Stachel sehr weit aus und du kannst ihn mit dem Messer abtrennen.
+	};
+
+	Info_Mod_Torgan_Lernen_ShowOptions();
+};
+
+FUNC void Info_Mod_Torgan_Lernen_Fur()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_Fur))
+	{
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_Fur_13_00"); //Felle ziehst du am besten ab, indem du einen tiefen Schnitt an den Hinterläufen des Tieres vornimmst.
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_Fur_13_01"); //Dann kannst du das Fell von vorne nach hinten eigentlich immer sehr leicht abziehen.
+	};
+
+	Info_Mod_Torgan_Lernen_ShowOptions();
+};
+
+FUNC void Info_Mod_Torgan_Lernen_TrollTeeth()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_TrollTeeth))
+	{
+	};
+
+	Info_Mod_Torgan_Lernen_ShowOptions();
+};
+
+FUNC void Info_Mod_Torgan_Lernen_SwampSharkTeeth()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_SwampSharkTeeth))
+	{
+	};
+
+	Info_Mod_Torgan_Lernen_ShowOptions();
+};
+
+FUNC void Info_Mod_Torgan_Lernen_ReptileSkin()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_ReptileSkin))
+	{
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_ReptileSkin_13_00"); //Wenn du die Haut an den Seiten anschneidest, löst sie sich wie von selbst. Du solltest ab jetzt kein Problem mehr haben, Echsen zu häuten.
+	};
+
+	Info_Mod_Torgan_Lernen_ShowOptions();
+};
+
+FUNC void Info_Mod_Torgan_Lernen_Heart()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_Heart))
+	{
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_Heart_13_00"); //Ein Herz entfernst du dem Tier mit einem gekonnten Schnitt in die Brust. Lohnt sich aber häufig nur bei besonderen Tieren oder magischen Wesen.
+	};
+
+	Info_Mod_Torgan_Lernen_ShowOptions();
+};
+
+FUNC void Info_Mod_Torgan_Lernen_ShadowHorn()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_ShadowHorn))
+	{
+	};
+
+	Info_Mod_Torgan_Lernen_ShowOptions();
+};
+
+FUNC void Info_Mod_Torgan_Lernen_FireTongue()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_FireTongue))
+	{
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_FireTongue_13_00"); //Die Zunge von einem Feuerwaran schlägst du mit einem Messerhieb aus dem Maul, während du sie mit der anderen Hand festhältst.
+	};
+
+	Info_Mod_Torgan_Lernen_ShowOptions();
+};
+
+FUNC void Info_Mod_Torgan_Lernen_BFWing()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_BFWing))
+	{
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_BFWing_13_00"); //Die Flügel einer Fliege entfernst du am besten mit einem Hieb einer scharfen Klinge sehr nah am Körper der Fliege.
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_BFWing_13_01"); //Du musst nur darauf achten, dass du das feine Gewebe der Flügel nicht verletzt. Sie sind nichts mehr wert, wenn du es nicht vorsichtig machst.
+	};
+
+	Info_Mod_Torgan_Lernen_ShowOptions();
+};
+
+FUNC void Info_Mod_Torgan_Lernen_Mandibles()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_Mandibles))
+	{
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_Mandibles_13_00"); //Klar, nachdem du das Vieh getötet hast, packst du es an den Beißzangen und reißt sie gerade heraus. Dann kommt die Sekretdrüse mit raus, ohne zu zerreißen.
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_Mandibles_13_01"); //Ich habe übrigens gehört, dass das so auch mit Feldräubern klappen soll.
+	};
+
+	Info_Mod_Torgan_Lernen_ShowOptions();
+};
+
+FUNC void Info_Mod_Torgan_Lernen_DrgSnapperHorn()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_DrgSnapperHorn))
+	{
+		AI_Output(self, hero, "Info_Mod_Torgan_Lernen_DrgSnapperHorn_13_00"); //Am Stirnansatz des Drachensnappers ist die beste Stelle, ihm das Horn mit einem stabilen Messer aus dem Schädel zu trennen.
+	};
+
+	Info_Mod_Torgan_Lernen_ShowOptions();
+};
+
 INSTANCE Info_Mod_Torgan_Pickpocket (C_INFO)
 {
 	npc		= Mod_1963_JG_Torgan_MT;
