@@ -4929,24 +4929,6 @@ FUNC VOID STARTUP_MinentalSurface ()
 
 	// Bergfestung
 
-	// Weg Kastell -> Bergfestung
-
-	Wld_InsertNpc	(Bloodhound,	"PLATEAU_ROUND03");
-	Wld_InsertNpc	(Bloodhound,	"PLATEAU_ROUND03");
-
-	Wld_InsertNpc	(Bloodhound,	"PLATEAU_ROUND02_CAVE");
-	Wld_InsertNpc	(Bloodhound,	"PLATEAU_ROUND02_CAVE");
-
-	Wld_InsertNpc	(Bloodhound,	"PLATEAU_ROUND02_CAVE_MOVE");
-
-	Wld_InsertNpc	(Bloodhound,	"PLATEAU_ROUND01");
-
-	Wld_InsertNpc	(Bloodhound,	"PATH_TO_PLATEAU04_BRIDGE");
-	Wld_InsertNpc	(Bloodhound,	"PATH_TO_PLATEAU04_BRIDGE");
-
-	Wld_InsertNpc	(Bloodhound,	"PATH_TO_PLATEAU04_RIGHT");
-	Wld_InsertNpc	(Bloodhound,	"PATH_TO_PLATEAU04_RIGHT");
-
 	// Wiese Bergfestung <-> Orkfriedhof
 
 	Wld_InsertNpc	(Snapper,	"SPAWN_OW_WARAN_EBENE_02_05");
@@ -6078,6 +6060,24 @@ FUNC VOID INIT_Minental ()
 			B_StartOtherRoutine	(Mod_7433_JG_Zelar_MT, "KAPTHREE");
 			B_StartOtherRoutine	(Mod_7431_JG_Baldur_MT, "KAPTHREE");
 		};
+
+		// Weg Kastell -> Bergfestung
+
+		Wld_InsertNpc	(Bloodhound,	"PLATEAU_ROUND03");
+		Wld_InsertNpc	(Bloodhound,	"PLATEAU_ROUND03");
+
+		Wld_InsertNpc	(Bloodhound,	"PLATEAU_ROUND02_CAVE");
+		Wld_InsertNpc	(Bloodhound,	"PLATEAU_ROUND02_CAVE");
+
+		Wld_InsertNpc	(Bloodhound,	"PLATEAU_ROUND02_CAVE_MOVE");
+
+		Wld_InsertNpc	(Bloodhound,	"PLATEAU_ROUND01");
+
+		Wld_InsertNpc	(Bloodhound,	"PATH_TO_PLATEAU04_BRIDGE");
+		Wld_InsertNpc	(Bloodhound,	"PATH_TO_PLATEAU04_BRIDGE");
+
+		Wld_InsertNpc	(Bloodhound,	"PATH_TO_PLATEAU04_RIGHT");
+		Wld_InsertNpc	(Bloodhound,	"PATH_TO_PLATEAU04_RIGHT");
 
 		Mod_Enter_Minental_03 = True;
 	};
