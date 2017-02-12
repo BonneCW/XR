@@ -182,7 +182,6 @@ FUNC VOID GILDENSTORY_PIR ()
 		if (Mod_Piraten_Aufbruch == 0)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Greg_Kompass))
 		&& (Kapitel >= 4)
-		&& (Npc_GetDistToWP(hero, "STRAND") > 10000)
 		&& ((!Npc_KnowsInfo(hero, Info_Mod_Myxir_Amulett))
 		|| (Npc_KnowsInfo(hero, Info_Mod_Greg_AJAlive)))
 		{
