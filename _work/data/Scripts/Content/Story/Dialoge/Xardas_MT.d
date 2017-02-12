@@ -144,6 +144,12 @@ FUNC INT Info_Mod_Xardas_MT_RiddleHelper_Condition()
 	};
 };
 
+var int riddle1Hint;
+var int riddle2Hint;
+var int riddle3Hint;
+var int riddle4Hint;
+var int riddle5Hint;
+
 FUNC VOID Info_Mod_Xardas_MT_RiddleHelper_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Xardas_MT_RiddleHelper_15_00"); //Ich habe ein Buch mit Hinweisen gefunden.
@@ -152,6 +158,12 @@ FUNC VOID Info_Mod_Xardas_MT_RiddleHelper_Info()
 	{
 		AI_Output(hero, self, "Info_Mod_Xardas_MT_RiddleHelper_15_01"); //In diesem Text steht, dass ich jemanden, oder etwas an dem Ort finden werde, wo alles begann ...
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_02"); //Ist es mit deinem Verstand schon so weit her, dass du dich nicht mal mehr an den Ort erinnerst, an welchem du den ersten Hinweis fandest?!
+		
+		if (!riddle5Hint) {
+			B_LogEntry(TOPIC_MOD_THERIDDLE, "Ich soll an den Ort zurückkehren, wo ich das erste Buch fand. Das war im Nebelturm.");
+			
+			riddle5Hint = TRUE;
+		};
 	}
 	else if (riddle4 == TRUE)
 	{
@@ -159,17 +171,35 @@ FUNC VOID Info_Mod_Xardas_MT_RiddleHelper_Info()
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_04"); //Überflüssig zu erwähnen, dass wohl von einem Schiff die Rede ist.
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_05"); //Und aus dem Text kann man eigentlich schließen, dass ihm durch widrige Umstände unsanft die Seetauglichkeit genommen wurde.
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_06"); //Soll ich jetzt vielleicht noch darauf verweisen, an welchen Orten du ein solches finden könntes!?
+		
+		if (!riddle4Hint) {
+			B_LogEntry(TOPIC_MOD_THERIDDLE, "Ich muss ein Schiffswrack finden. Das werde ich wohl an der Küste vom Minental finden.");
+			
+			riddle4Hint = TRUE;
+		};
 	}
 	else if (riddle3 == TRUE)
 	{
 		AI_Output(hero, self, "Info_Mod_Xardas_MT_RiddleHelper_15_07"); //Ich soll nun jenen Ort finden, an dem ein kluger Fischer sein Netz nicht auswerfen würde, so heißt es.
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_08"); //Nun, wenn der Verstand es gebietet in klaren Gewässern zu fischen ... schaue dich im Osten der Kolonie um ...
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_09"); //(trocken) Mehr Hinweise sollte es kaum benötigen.
+		
+		if (!riddle3Hint) {
+			B_LogEntry(TOPIC_MOD_THERIDDLE, "Xardas gab mir den Hinweis, dass kluge Fischer in klaren Gewässern fischen. Welches Wasser im Minental ist denn nicht klar?");
+			
+			riddle3Hint = TRUE;
+		};
 	}
 	else if (riddle2 == TRUE)
 	{
 		AI_Output(hero, self, "Info_Mod_Xardas_MT_RiddleHelper_15_10"); //Diesmal soll ich einen Ort finden, der fast voll Wasser ist, aber dennoch genug Luft zum Atmen bietet.
-		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_11"); //Wenn du dich nördlich vom Alten Lager umsiehst, müsstest du den gesuchten ort Finden ... wobei ich mit "umsehen" nicht nur den oberflächlichen Gebrauch deiner Augen meine ...
+		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_11"); //Wenn du dich nördlich vom Alten Lager umsiehst, müsstest du den gesuchten Ort finden ... wobei ich mit "umsehen" nicht nur den oberflächlichen Gebrauch deiner Augen meine ...
+		
+		if (!riddle2Hint) {
+			B_LogEntry(TOPIC_MOD_THERIDDLE, "Der gesuchte Ort soll sich nördlich vom Alten Lager befinden. Ich sollte aber nicht nur oberflächlichen Gebrauch meiner Augen machen...");
+			
+			riddle2Hint = TRUE;
+		};
 	}
 	else if (riddle1 == TRUE)
 	{
@@ -177,6 +207,12 @@ FUNC VOID Info_Mod_Xardas_MT_RiddleHelper_Info()
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_13"); //Nun, dann bist du hier sicherlich nicht völlig fehl am Platz.
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_14"); //In unmittelbarer Nähe habe ich gerade erst das Erstehen einer magischen Aura gespürt.
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_15"); //Schaue dich nur gründlich um, und du wirst finden, wonach du gesucht hast.
+		
+		if (!riddle1Hint) {
+			B_LogEntry(TOPIC_MOD_THERIDDLE, "Xardas meint, ich bin hier in der Bergfestung nicht verkehrt und er habe in unmittelbarer Nähe eine magische Aura gespürt. Ich sollte mich hier in der Festung einmal umsehen.");
+			
+			riddle1Hint = TRUE;
+		};
 	};
 };
 
