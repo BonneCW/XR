@@ -350,7 +350,6 @@ FUNC INT Info_Mod_Penner_NochDa_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Penner_Hi))
 	&& (Npc_KnowsInfo(hero, Info_Mod_August_Penner2))
-	&& (Npc_RefuseTalk(self))
 	&& (Npc_HasItems(hero, ItMi_BrokenRune01) == 1)
 	{
 		return 1;
