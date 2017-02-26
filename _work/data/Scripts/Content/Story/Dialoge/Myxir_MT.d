@@ -246,7 +246,7 @@ INSTANCE Info_Mod_Myxir_HabDieKraeuter (C_INFO)
 FUNC INT Info_Mod_Myxir_HabDieKraeuter_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Bodo_Krautlieferung))
-	&& (Npc_HasItems(hero, MyxirsGiftpflanze) >= 20)
+	&& (Npc_HasItems(hero, MyxirsGiftpflanze) > 0)
 	{
 		return 1;
 	};
@@ -256,7 +256,10 @@ FUNC VOID Info_Mod_Myxir_HabDieKraeuter_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Myxir_HabDieKraeuter_15_00"); //Mit freundlichen Grüßen von Bodo.
 
-	B_GiveInvItems	(hero, self, MyxirsGiftpflanze, 20);
+	var int kraeuter;
+	kraeuter = Npc_HasItems(hero, MyxirsGiftpflanze);
+	
+	B_GiveInvItems	(hero, self, MyxirsGiftpflanze, Npc_HasItems(hero, MyxirsGiftpflanze));
 
 	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_28_01"); //Die kann er sich sparen! Hauptsache, er hat alles gefunden, was ich brauche.
 	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_28_02"); //(kurze Pause, zornig) Hab ich's mir doch gedacht! Dieser Faulenzer hat es sich wieder leicht gemacht!
@@ -268,9 +271,9 @@ FUNC VOID Info_Mod_Myxir_HabDieKraeuter_Info()
 	AI_Output(hero, self, "Info_Mod_Myxir_HabDieKraeuter_15_08"); //So lautete unsere Abmachung aber nicht.
 	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_28_09"); //Was interessiert mich irgendeine Abmachung, hä?
 
-	B_GivePlayerXP	(100);
+	B_GivePlayerXP	(5 * kraeuter);
 
-	Npc_RemoveInvItems	(self, MyxirsGiftpflanze, 20);
+	Npc_RemoveInvItems	(self, MyxirsGiftpflanze, Npc_HasItems(hero, MyxirsGiftpflanze));
 
 	B_LogEntry	(TOPIC_MOD_GIFTPFLANZEN, "Bodo hat bei der Pflanzenlieferung ordentlich geschlampt. Myxir fehlen noch 10 Heilknospen und 5 Zwillingsdorne, damit er (hoffentlich) in eine gnädigere Stimmung versetzt wird.");
 
