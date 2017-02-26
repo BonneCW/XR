@@ -2835,11 +2835,11 @@ INSTANCE ITAR_DJG_Crawler (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	150000;
-	protection [PROT_BLUNT] = 	150000;
-	protection [PROT_POINT] = 	150000;
-	protection [PROT_FIRE] 	= 	75;
-	protection [PROT_MAGIC] = 	50;
+	protection [PROT_EDGE]	=	65000;
+	protection [PROT_BLUNT] = 	65000;
+	protection [PROT_POINT] = 	65000;
+	protection [PROT_FIRE] 	= 	45;
+	protection [PROT_MAGIC] = 	30;
 
 	value 					=	VALUE_ITAR_DJG_Crawler;
 
