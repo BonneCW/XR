@@ -53,7 +53,7 @@ INSTANCE PC_BierfassOrlan_Daemonisch2 (C_INFO)
 	information	= PC_BierfassOrlan_Daemonisch2_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Klosterwein ins Bier mischen";
+	description	= "Trank gegen Besessenheit ins Bier mischen";
 };
 
 FUNC INT PC_BierfassOrlan_Daemonisch2_Condition()
