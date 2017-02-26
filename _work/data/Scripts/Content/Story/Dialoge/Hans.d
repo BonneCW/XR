@@ -134,6 +134,66 @@ FUNC VOID Info_Mod_Hans_Nagelnachschub3_Info()
 	B_GiveInvItems	(self, hero, ItMi_Freudenspender, 1);
 };
 
+INSTANCE Info_Mod_Hans_BuergerKhoratas (C_INFO)
+{
+	npc		= Mod_7377_OUT_Hans_REL;
+	nr		= 1;
+	condition	= Info_Mod_Hans_BuergerKhoratas_Condition;
+	information	= Info_Mod_Hans_BuergerKhoratas_Info;
+	permanent	= 0;
+	important	= 0;
+	description 	= "Wie viele Handelsstände hat der Marktplatz eigentlich?";
+};                       
+
+FUNC INT Info_Mod_Hans_BuergerKhoratas_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Anselm_Buerger2))
+	&& (Mod_REL_Buerger == 0)
+	{
+		return TRUE;
+	};
+};
+
+FUNC VOID Info_Mod_Hans_BuergerKhoratas_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Hans_BuergerKhoratas_15_00"); //Wie viele Handelsstände hat der Marktplatz eigentlich?
+	AI_Output(self, hero, "Info_Mod_Hans_BuergerKhoratas_06_01"); //Hast du wohl zu viel Freudenspender genommen? Was soll die Frage?
+	AI_Output(hero, self, "Info_Mod_Hans_BuergerKhoratas_15_02"); //Ich nicht, aber Anselm ... Er möchte die korrekte Anzahl wissen.
+	AI_Output(self, hero, "Info_Mod_Hans_BuergerKhoratas_06_03"); //Dann ist mir alles klar. Er benutzt dich, um herauszufinden, ob Melvin schon wieder versucht, ganz offiziell Diebesgut loszuwerden.
+	AI_Output(hero, self, "Info_Mod_Hans_BuergerKhoratas_15_04"); //Das könnte Anselm doch selbst herausfinden. Wir befinden uns schließlich direkt vor seiner Tür.
+	AI_Output(self, hero, "Info_Mod_Hans_BuergerKhoratas_06_05"); //Stimmt. Vielleicht wollte er dich auch einfach loswerden.
+	AI_Output(hero, self, "Info_Mod_Hans_BuergerKhoratas_15_06"); //Und wie viele Stände sind es nun?
+	AI_Output(self, hero, "Info_Mod_Hans_BuergerKhoratas_06_07"); //Lass mich zählen ... 1 ... 2 ... 3 ... 4. Und mich. Also fünf.
+	AI_Output(hero, self, "Info_Mod_Hans_BuergerKhoratas_15_08"); //Besten Dank.
+};
+
+INSTANCE Info_Mod_Hans_BuergerKhoratas2 (C_INFO)
+{
+	npc		= Mod_7377_OUT_Hans_REL;
+	nr		= 1;
+	condition	= Info_Mod_Hans_BuergerKhoratas2_Condition;
+	information	= Info_Mod_Hans_BuergerKhoratas2_Info;
+	permanent	= 1;
+	important	= 0;
+	description 	= "Wie viele Handelsstände am Marktplatz waren es noch gleich?";
+};                       
+
+FUNC INT Info_Mod_Hans_BuergerKhoratas2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Anselm_Buerger2))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Hans_BuergerKhoratas))
+	&& (Mod_REL_Buerger == 0)
+	{
+		return TRUE;
+	};
+};
+
+FUNC VOID Info_Mod_Hans_BuergerKhoratas2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Hans_BuergerKhoratas2_15_00"); //Wie viele Handelsstände am Marktplatz waren es noch gleich?
+	AI_Output(self, hero, "Info_Mod_Hans_BuergerKhoratas2_06_01"); //Herrje, du hast es nicht so mit dem Zählen, wie? Fünf Stände, hatte ich gesagt.
+};
+
 INSTANCE Info_Mod_Hans_Buerger (C_INFO)
 {
 	npc		= Mod_7377_OUT_Hans_REL;
