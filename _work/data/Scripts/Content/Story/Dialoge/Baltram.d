@@ -246,7 +246,7 @@ INSTANCE Info_Mod_Baltram_Daemonisch (C_INFO)
 	information	= Info_Mod_Baltram_Daemonisch_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Hey, ich komme von Baltram und soll das Paket mit Pökelfleisch abholen.";
+	description	= "Hey, ich komme von Coragon und soll das Paket mit Pökelfleisch abholen.";
 };
 
 FUNC INT Info_Mod_Baltram_Daemonisch_Condition()
