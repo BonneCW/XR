@@ -1113,7 +1113,7 @@ func int Spell_Logic_TeleportObelisk (var int manaInvested)
 	|| (CurrentLevel == ADDONWORLD_ZEN)
 	|| (CurrentLevel == PATHERION_ZEN)
 	|| (CurrentLevel == RELENDEL_ZEN)
-	|| (CurrentLevel == EISGEBIET_ZEN)
+	|| (CurrentLevel == EISGEBIET_ZEN))
 	&& (Npc_GetDistToWP(hero, "NW_CANTHARINSEL_08") > 10000)
 	{
 		return SPL_SENDCAST;

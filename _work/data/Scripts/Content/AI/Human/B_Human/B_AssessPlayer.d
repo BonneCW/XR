@@ -51,6 +51,11 @@ func void B_AssessPlayer ()
 	{
 		return;
 	};
+	
+	if (CurrentLevel == HALLUZINATION_ZEN)
+	&& (self.guild > GIL_SEPERATOR_HUM)	{
+		return;
+	};
 		
 	var C_Item itm;
 	var C_Item Weapon;

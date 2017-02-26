@@ -26,6 +26,10 @@ func void B_MM_AssessEnemy ()
 	if (CutsceneAn == TRUE) {
 		return;
 	};
+	
+	if (CurrentLevel == HALLUZINATION_ZEN) {
+		return;
+	};
 
 	if (Wld_IsTime(21,00,05,00))
 	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))

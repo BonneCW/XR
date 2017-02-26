@@ -24,6 +24,11 @@ func int B_AssessEnemy()
 	&& (other.guild == GIL_STRF) {
 		return FALSE;
 	};
+	
+	if (CurrentLevel == HALLUZINATION_ZEN)
+	&& (self.guild > GIL_SEPERATOR_HUM) {
+		return FALSE;
+	};
 
 	if (Wld_IsTime(21,00,05,00))
 	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))

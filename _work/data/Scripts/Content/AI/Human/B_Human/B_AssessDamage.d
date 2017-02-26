@@ -14,6 +14,11 @@ func void B_AssessDamage ()
 	{
 		return;
 	};
+	
+	if (CurrentLevel == HALLUZINATION_ZEN)
+	&& (self.guild > GIL_SEPERATOR_HUM) {
+		return;
+	};
 
 	if (CurrentLevel == FREEMINE_ZEN)
 	{
