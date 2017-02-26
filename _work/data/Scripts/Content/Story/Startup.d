@@ -34,6 +34,8 @@ func void INIT_GLOBAL()
 	gameloaded = Hlp_GetNpc(0);
 
 	LeGo_Init(LeGo_All & ~LeGo_Focusnames);
+	
+	Spine_Init(SPINE_MODULE_ACHIEVEMENTS);
 
 	if (CurrentLevel == SCHIFFSCHLACHT_ZEN)
 	{
