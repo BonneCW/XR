@@ -120,33 +120,33 @@ FUNC VOID OldLevel(var int newlevel)
 //------------------------------------------------------------
 func void STARTUP_ADDON_PART_ADANOSTEMPLE_01 ()
 {
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADATMPL_ENTR_STONEGD_01");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADATMPL_ENTR_STONEGD_02");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADATMPL_ENTR_STONEGD_03");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADATMPL_ENTR_STONEGD_04");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADATMPL_ENTR_STONEGD_01");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADATMPL_ENTR_STONEGD_02");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADATMPL_ENTR_STONEGD_03");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADATMPL_ENTR_STONEGD_04");
 
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_09C");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_09A");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_09B");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_09F");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_09D");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_09E");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_09C");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_09A");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_09B");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_09F");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_09D");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_09E");
 
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_05C");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_05A");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_05B");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_05F");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_05D");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_05E");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_05C");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_05A");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_05B");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_05F");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_05D");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_05E");
 
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_14C");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_14A");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_14B");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_14F");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_14D");
-	Wld_InsertNpc	(ErzGuardian,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_14E");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_14C");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_14A");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_14B");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_14F");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_14D");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_ROAM_ADW_ADANOSTEMPEL_TREASUREPITS_14E");
 
-	Wld_InsertNpc	(ErzGuardian,	"FP_PRAY_RAVEN");
+	Wld_InsertNpc	(Stoneguardian_AdanosTempel,	"FP_PRAY_RAVEN");
 };
 
 func void INIT_ADDON_PART_ADANOSTEMPLE_01 ()

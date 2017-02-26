@@ -107,6 +107,29 @@ INSTANCE Stoneguardian	(Mst_Addon_Stoneguardian)
 	B_SetVisuals_Stoneguardian ();
 };
 
+INSTANCE Stoneguardian_AdanosTempel	(Mst_Addon_Stoneguardian)
+{
+	//----- Attribute ----	
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(101) + 200;	// 200 - 300
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(26);		// 0 - 25
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(201) + 500;	// 500 - 700
+	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 		=	0;
+
+	//----- Protection ----
+	protection	[PROT_BLUNT]		= Hlp_Random(61)*1000 + 40000;		// 40 - 100
+	protection	[PROT_EDGE]		= Hlp_Random(101)*1000 + 130000;	// 130 - 230
+	protection	[PROT_POINT]		= Hlp_Random(101)*1000 + 130000; 	// 130 - 230
+	protection	[PROT_FIRE]		= Hlp_Random(101) + 130;		// 130 - 230
+	protection	[PROT_FLY]		= 150;
+	protection	[PROT_MAGIC]		= Hlp_Random(61) + 100;			// 100 - 160
+
+	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
+	
+	B_SetVisuals_Stoneguardian ();
+};
+
 INSTANCE Stoneguardian_Bergwelt	(Mst_Addon_Stoneguardian)
 {
 	B_SetVisuals_Stoneguardian ();
