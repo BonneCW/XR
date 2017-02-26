@@ -913,7 +913,7 @@ FUNC VOID HAUPTQUESTS()
 				{
 					Wld_InsertNpc	(Zombie_SP_01, "NW_BIGFARM_LAKE_CAVE_03");
 				}
-				else if (Mod_HQ_Daemonisch_SP_02 == 0)
+				else if (Mod_HQ_Daemonisch_SP_02 == 0 && hero.guild != GIL_PAL)
 				{
 					Wld_InsertNpc	(Zombie_SP_02, "NW_BIGFARM_FOREST_03_NAVIGATION");
 				}
