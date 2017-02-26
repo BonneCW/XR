@@ -91,6 +91,8 @@ FUNC VOID GILDENSTORY_FM()
 			B_RemoveNpc	(Mod_7794_KDS_SchwarzerMagier_PAT);
 
 			Mod_FM_Foki = 1;
+			
+			B_LogEntry(TOPIC_MOD_FM_FOKI, "Ich habe alle fünf Foki. Jetzt sollte ich zurück zu Nagon gehen.");
 		};
 
 		if (Mod_FM_Foki == 1)
@@ -100,6 +102,8 @@ FUNC VOID GILDENSTORY_FM()
 			AI_Output(hero, NULL, "Info_Mod_Hero_Beschwoerer_15_00"); //Ich sollte mal mit Tojan sprechen.
 
 			Mod_FM_Foki = 2;
+			
+			B_LogEntry(TOPIC_MOD_FM_FOKI, "Ich sollte mal mit Tojan sprechen.");
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Aaron_Hi))
