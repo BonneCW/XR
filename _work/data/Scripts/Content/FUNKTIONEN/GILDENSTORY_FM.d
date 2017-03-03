@@ -166,6 +166,7 @@ FUNC VOID GILDENSTORY_FM()
 
 		if (Mod_1855_PAL_Paladin_PAT.attribute[ATR_HITPOINTS] < Mod_1855_PAL_Paladin_PAT.attribute[ATR_HITPOINTS_MAX])
 		&& (!Npc_IsDead(Mod_1855_PAL_Paladin_PAT))
+		&& (Mod_1855_PAL_Paladin_PAT.attribute[ATR_HITPOINTS_MAX] > 0)
 		{
 			HP_Reg_Mod_1855_PAL_Paladin_PAT = ((Mod_1855_PAL_Paladin_PAT.attribute[ATR_STRENGTH]+Mod_1855_PAL_Paladin_PAT.attribute[ATR_DEXTERITY])*Mod_1855_PAL_Paladin_PAT.level);
 
@@ -205,6 +206,7 @@ FUNC VOID GILDENSTORY_FM()
 
 		if (Mod_1855_PAL_Paladin_PAT.attribute[ATR_MANA] < Mod_1855_PAL_Paladin_PAT.attribute[ATR_MANA_MAX])
 		&& (!Npc_IsDead(Mod_1855_PAL_Paladin_PAT))
+		&& (Mod_1855_PAL_Paladin_PAT.attribute[ATR_MANA_MAX] > 0)
 		{
 			Mana_Reg_Mod_1855_PAL_Paladin_PAT = Mod_1855_PAL_Paladin_PAT.attribute[ATR_MANA_MAX]*((Mod_1855_PAL_Paladin_PAT.level));
 
@@ -242,6 +244,7 @@ FUNC VOID GILDENSTORY_FM()
 
 		if (Mod_1856_PAL_Paladin_PAT.attribute[ATR_HITPOINTS] < Mod_1856_PAL_Paladin_PAT.attribute[ATR_HITPOINTS_MAX])
 		&& (!Npc_IsDead(Mod_1856_PAL_Paladin_PAT))
+		&& (Mod_1856_PAL_Paladin_PAT.attribute[ATR_HITPOINTS_MAX] > 0)
 		{
 			HP_Reg_Mod_1856_PAL_Paladin_PAT = ((Mod_1856_PAL_Paladin_PAT.attribute[ATR_STRENGTH]+Mod_1856_PAL_Paladin_PAT.attribute[ATR_DEXTERITY])*Mod_1856_PAL_Paladin_PAT.level);
 
@@ -281,6 +284,7 @@ FUNC VOID GILDENSTORY_FM()
 
 		if (Mod_1856_PAL_Paladin_PAT.attribute[ATR_MANA] < Mod_1856_PAL_Paladin_PAT.attribute[ATR_MANA_MAX])
 		&& (!Npc_IsDead(Mod_1856_PAL_Paladin_PAT))
+		&& (Mod_1856_PAL_Paladin_PAT.attribute[ATR_MANA_MAX] > 0)
 		{
 			Mana_Reg_Mod_1856_PAL_Paladin_PAT = Mod_1856_PAL_Paladin_PAT.attribute[ATR_MANA_MAX]*((Mod_1856_PAL_Paladin_PAT.level));
 
@@ -318,6 +322,7 @@ FUNC VOID GILDENSTORY_FM()
 
 		if (Mod_1857_KDF_Magier_PAT.attribute[ATR_HITPOINTS] < Mod_1857_KDF_Magier_PAT.attribute[ATR_HITPOINTS_MAX])
 		&& (!Npc_IsDead(Mod_1857_KDF_Magier_PAT))
+		&& (Mod_1857_KDF_Magier_PAT.attribute[ATR_HITPOINTS_MAX] > 0)
 		{
 			HP_Reg_Mod_1857_KDF_Magier_PAT = ((Mod_1857_KDF_Magier_PAT.attribute[ATR_STRENGTH]+Mod_1857_KDF_Magier_PAT.attribute[ATR_DEXTERITY])*Mod_1857_KDF_Magier_PAT.level);
 
@@ -357,6 +362,7 @@ FUNC VOID GILDENSTORY_FM()
 
 		if (Mod_1857_KDF_Magier_PAT.attribute[ATR_MANA] < Mod_1857_KDF_Magier_PAT.attribute[ATR_MANA_MAX])
 		&& (!Npc_IsDead(Mod_1857_KDF_Magier_PAT))
+		&& (Mod_1857_KDF_Magier_PAT.attribute[ATR_MANA_MAX] > 0)
 		{
 			Mana_Reg_Mod_1857_KDF_Magier_PAT = Mod_1857_KDF_Magier_PAT.attribute[ATR_MANA_MAX]*((Mod_1857_KDF_Magier_PAT.level));
 
@@ -394,6 +400,7 @@ FUNC VOID GILDENSTORY_FM()
 
 		if (Mod_7333_KDS_SchwarzerMagier_PAT.attribute[ATR_HITPOINTS] < Mod_7333_KDS_SchwarzerMagier_PAT.attribute[ATR_HITPOINTS_MAX])
 		&& (!Npc_IsDead(Mod_7333_KDS_SchwarzerMagier_PAT))
+		&& (Mod_7333_KDS_SchwarzerMagier_PAT.attribute[ATR_HITPOINTS_MAX] > 0)
 		{
 			HP_Reg_Mod_7333_KDS_SchwarzerMagier_PAT = ((Mod_7333_KDS_SchwarzerMagier_PAT.attribute[ATR_STRENGTH]+Mod_7333_KDS_SchwarzerMagier_PAT.attribute[ATR_DEXTERITY])*Mod_7333_KDS_SchwarzerMagier_PAT.level);
 
@@ -433,6 +440,7 @@ FUNC VOID GILDENSTORY_FM()
 
 		if (Mod_7333_KDS_SchwarzerMagier_PAT.attribute[ATR_MANA] < Mod_7333_KDS_SchwarzerMagier_PAT.attribute[ATR_MANA_MAX])
 		&& (!Npc_IsDead(Mod_7333_KDS_SchwarzerMagier_PAT))
+		&& (Mod_7333_KDS_SchwarzerMagier_PAT.attribute[ATR_MANA_MAX] > 0)
 		{
 			Mana_Reg_Mod_7333_KDS_SchwarzerMagier_PAT = Mod_7333_KDS_SchwarzerMagier_PAT.attribute[ATR_MANA_MAX]*((Mod_7333_KDS_SchwarzerMagier_PAT.level));
 
@@ -470,6 +478,7 @@ FUNC VOID GILDENSTORY_FM()
 
 		if (Mod_7332_SMK_SchwarzerKrieger_PAT.attribute[ATR_HITPOINTS] < Mod_7332_SMK_SchwarzerKrieger_PAT.attribute[ATR_HITPOINTS_MAX])
 		&& (!Npc_IsDead(Mod_7332_SMK_SchwarzerKrieger_PAT))
+		&& (Mod_7332_SMK_SchwarzerKrieger_PAT.attribute[ATR_HITPOINTS_MAX] > 0)
 		{
 			HP_Reg_Mod_7332_SMK_SchwarzerKrieger_PAT = ((Mod_7332_SMK_SchwarzerKrieger_PAT.attribute[ATR_STRENGTH]+Mod_7332_SMK_SchwarzerKrieger_PAT.attribute[ATR_DEXTERITY])*Mod_7332_SMK_SchwarzerKrieger_PAT.level);
 
@@ -509,6 +518,7 @@ FUNC VOID GILDENSTORY_FM()
 
 		if (Mod_7332_SMK_SchwarzerKrieger_PAT.attribute[ATR_MANA] < Mod_7332_SMK_SchwarzerKrieger_PAT.attribute[ATR_MANA_MAX])
 		&& (!Npc_IsDead(Mod_7332_SMK_SchwarzerKrieger_PAT))
+		&& (Mod_7332_SMK_SchwarzerKrieger_PAT.attribute[ATR_MANA_MAX] > 0)
 		{
 			Mana_Reg_Mod_7332_SMK_SchwarzerKrieger_PAT = Mod_7332_SMK_SchwarzerKrieger_PAT.attribute[ATR_MANA_MAX]*((Mod_7332_SMK_SchwarzerKrieger_PAT.level));
 

@@ -13,10 +13,10 @@ FUNC VOID PerkSchleife()
 		HP_Reg = HP_Reg / 8000;
 
 		if (HP_Reg < 1) {
+			HP_Reg = 1;
 			if (TimeCounter_Real % (8000 / HP_Reg) == 0) {
 				hero.attribute[ATR_HITPOINTS] += 1;
 			};
-			HP_Reg = 1;
 		} else {
 			hero.attribute[ATR_HITPOINTS] += HP_Reg;
 		};
@@ -36,6 +36,7 @@ FUNC VOID PerkSchleife()
 		Mana_Reg = hero.attribute[ATR_MANA_MAX]*((hero.level));
 
 		if (Mana_Reg / 4000 < 1) {
+			Mana_Reg = 1;
 			if (TimeCounter_Real % (4000 / Mana_Reg) == 0) {
 				hero.attribute[ATR_MANA] += 1;
 			};

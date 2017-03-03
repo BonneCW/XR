@@ -142,7 +142,11 @@ FUNC VOID Goetterbonus()
 					Mod_GottDamage = 20;
 				};
 
-				Mod_GottHP = 2000/hero.attribute[ATR_HITPOINTS_MAX];
+				if (hero.attribute[ATR_HITPOINTS_MAX] > 0) {
+					Mod_GottHP = 2000 / hero.attribute[ATR_HITPOINTS_MAX];
+				} else {
+					Mod_GottHP = 0;
+				};
 				Mod_GottProtection = 20;
 				Mod_GottBeliar = 20;
 			}
@@ -168,7 +172,11 @@ FUNC VOID Goetterbonus()
 					Mod_GottDamage = 15;
 				};
 
-				Mod_GottHP = 1500/hero.attribute[ATR_HITPOINTS_MAX];
+				if (hero.attribute[ATR_HITPOINTS_MAX] > 0) {
+					Mod_GottHP = 1500 / hero.attribute[ATR_HITPOINTS_MAX];
+				} else {
+					Mod_GottHP = 0;
+				};
 				Mod_GottProtection = 15;
 				Mod_GottBeliar = 15;
 			}
@@ -194,7 +202,11 @@ FUNC VOID Goetterbonus()
 					Mod_GottDamage = 10;
 				};
 
-				Mod_GottHP = 1000/hero.attribute[ATR_HITPOINTS_MAX];
+				if (hero.attribute[ATR_HITPOINTS_MAX] > 0) {
+					Mod_GottHP = 1000 / hero.attribute[ATR_HITPOINTS_MAX];
+				} else {
+					Mod_GottHP = 0;
+				};
 				Mod_GottProtection = 10;
 				Mod_GottBeliar = 10;
 			}
@@ -220,7 +232,11 @@ FUNC VOID Goetterbonus()
 					Mod_GottDamage = 5;
 				};
 
-				Mod_GottHP = 500/hero.attribute[ATR_HITPOINTS_MAX];
+				if (hero.attribute[ATR_HITPOINTS_MAX] > 0) {
+					Mod_GottHP = 500 / hero.attribute[ATR_HITPOINTS_MAX];
+				} else {
+					Mod_GottHP = 0;
+				};
 				Mod_GottProtection = 5;
 				Mod_GottBeliar = 5;
 			};
@@ -396,7 +412,11 @@ FUNC VOID Goetterbonus()
 					Mod_GottDamage = 20;
 				};
 
-				Mod_GottHP = 2000/hero.attribute[ATR_HITPOINTS_MAX];
+				if (hero.attribute[ATR_HITPOINTS_MAX] > 0) {
+					Mod_GottHP = 2000 / hero.attribute[ATR_HITPOINTS_MAX];
+				} else {
+					Mod_GottHP = 0;
+				};
 				Mod_GottProtection = 20;
 				Mod_GottInnos = 20;
 			}
@@ -422,7 +442,11 @@ FUNC VOID Goetterbonus()
 					Mod_GottDamage = 15;
 				};
 
-				Mod_GottHP = 1500/hero.attribute[ATR_HITPOINTS_MAX];
+				if (hero.attribute[ATR_HITPOINTS_MAX] > 0) {
+					Mod_GottHP = 1500 / hero.attribute[ATR_HITPOINTS_MAX];
+				} else {
+					Mod_GottHP = 0;
+				};
 				Mod_GottProtection = 15;
 				Mod_GottInnos = 15;
 			}
@@ -448,7 +472,11 @@ FUNC VOID Goetterbonus()
 					Mod_GottDamage = 10;
 				};
 
-				Mod_GottHP = 1000/hero.attribute[ATR_HITPOINTS_MAX];
+				if (hero.attribute[ATR_HITPOINTS_MAX] > 0) {
+					Mod_GottHP = 1000 / hero.attribute[ATR_HITPOINTS_MAX];
+				} else {
+					Mod_GottHP = 0;
+				};
 				Mod_GottProtection = 10;
 				Mod_GottInnos = 10;
 			}
@@ -474,7 +502,11 @@ FUNC VOID Goetterbonus()
 					Mod_GottDamage = 5;
 				};
 
-				Mod_GottHP = 500/hero.attribute[ATR_HITPOINTS_MAX];
+				if (hero.attribute[ATR_HITPOINTS_MAX] > 0) {
+					Mod_GottHP = 500 / hero.attribute[ATR_HITPOINTS_MAX];
+				} else {
+					Mod_GottHP = 0;
+				};
 				Mod_GottProtection = 5;
 				Mod_GottInnos = 5;
 			};
@@ -648,7 +680,11 @@ FUNC VOID Goetterbonus()
 					Mod_GottDamage = 20;
 				};
 
-				Mod_GottHP = 2000/hero.attribute[ATR_HITPOINTS_MAX];
+				if (hero.attribute[ATR_HITPOINTS_MAX] > 0) {
+					Mod_GottHP = 2000 / hero.attribute[ATR_HITPOINTS_MAX];
+				} else {
+					Mod_GottHP = 0;
+				};
 				Mod_GottProtection = 20;
 				Mod_GottAdanos = 20;
 			}
@@ -674,7 +710,11 @@ FUNC VOID Goetterbonus()
 					Mod_GottDamage = 15;
 				};
 
-				Mod_GottHP = 1500/hero.attribute[ATR_HITPOINTS_MAX];
+				if (hero.attribute[ATR_HITPOINTS_MAX] > 0) {
+					Mod_GottHP = 1500 / hero.attribute[ATR_HITPOINTS_MAX];
+				} else {
+					Mod_GottHP = 0;
+				};
 				Mod_GottProtection = 15;
 				Mod_GottAdanos = 15;
 			}
@@ -700,7 +740,11 @@ FUNC VOID Goetterbonus()
 					Mod_GottDamage = 10;
 				};
 
-				Mod_GottHP = 1000/hero.attribute[ATR_HITPOINTS_MAX];
+				if (hero.attribute[ATR_HITPOINTS_MAX] > 0) {
+					Mod_GottHP = 1000 / hero.attribute[ATR_HITPOINTS_MAX];
+				} else {
+					Mod_GottHP = 0;
+				};
 				Mod_GottProtection = 10;
 				Mod_GottAdanos = 10;
 			}
@@ -726,7 +770,11 @@ FUNC VOID Goetterbonus()
 					Mod_GottDamage = 5;
 				};
 
-				Mod_GottHP = 500/hero.attribute[ATR_HITPOINTS_MAX];
+				if (hero.attribute[ATR_HITPOINTS_MAX] > 0) {
+					Mod_GottHP = 500 / hero.attribute[ATR_HITPOINTS_MAX];
+				} else {
+					Mod_GottHP = 0;
+				};
 				Mod_GottProtection = 5;
 				Mod_GottAdanos = 5;
 			};

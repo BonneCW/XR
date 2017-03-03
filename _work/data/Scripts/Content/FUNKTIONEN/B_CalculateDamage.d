@@ -47,7 +47,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			if (rwp.cond_atr[2] == ATR_DEXTERITY)
 			{
-				damage += (taeter.attribute[ATR_DEXTERITY]+taeter.attribute[ATR_STRENGTH])/2;
+				damage += (taeter.attribute[ATR_DEXTERITY] + taeter.attribute[ATR_STRENGTH]) / 2;
 			}
 			else
 			{
@@ -58,7 +58,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			if (C_ItmHasFlag(rwp, ITEM_CROSSBOW))
 			{
-				damage += (taeter.attribute[ATR_DEXTERITY]+taeter.attribute[ATR_STRENGTH])/2;
+				damage += (taeter.attribute[ATR_DEXTERITY] + taeter.attribute[ATR_STRENGTH]) / 2;
 			}
 			else
 			{
@@ -171,7 +171,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			critChance = 1;
 		}
-		else if (r_max(99) < (taeter.HitChance[NPC_TALENT_1H]+taeter.HitChance[NPC_TALENT_2H])/2+bonusCrit)
+		else if (r_max(99) < (taeter.HitChance[NPC_TALENT_1H] + taeter.HitChance[NPC_TALENT_2H]) / 2 + bonusCrit)
 		&& (taeter.guild < GIL_SEPERATOR_HUM)
 		{
 			critChance = 1;
@@ -198,7 +198,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	{
 		if (opfer.protection[PROT_BLUNT] != -1)
 		{
-			armor = opfer.protection[PROT_BLUNT]/1000;
+			armor = opfer.protection[PROT_BLUNT] / 1000;
 		}
 		else
 		{
@@ -209,7 +209,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	{
 		if (opfer.protection[PROT_EDGE] != -1)
 		{
-			armor = opfer.protection[PROT_EDGE]/1000;
+			armor = opfer.protection[PROT_EDGE] / 1000;
 		}
 		else
 		{
@@ -220,7 +220,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	{
 		if (opfer.protection[PROT_POINT] != -1)
 		{
-			armor = opfer.protection[PROT_POINT]/1000;
+			armor = opfer.protection[PROT_POINT] / 1000;
 		}
 		else
 		{
@@ -372,7 +372,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 
 		if (Npc_GetDistToNpc(taeter, opfer) < 1000)
 		{
-			chancebonus += (10-(Npc_GetDistToNpc(taeter, opfer)/100))*4;
+			chancebonus += (10-(Npc_GetDistToNpc(taeter, opfer) / 100)) * 4;
 		};
 
 		if (rwp.munition == ItRw_SprengstoffArrow)
@@ -430,7 +430,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 
 				if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(PC_Hero))
 				{
-					opfer.attribute[ATR_STRENGTH] -= opfer.attribute[ATR_STRENGTH]/10;
+					opfer.attribute[ATR_STRENGTH] -= opfer.attribute[ATR_STRENGTH] / 10;
 				};
 			};
 		}
