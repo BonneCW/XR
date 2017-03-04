@@ -35,7 +35,7 @@ INSTANCE Info_Mod_Alchemist01_MangelQuest (C_INFO)
 	information	= Info_Mod_Alchemist01_MangelQuest_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= "Ist hier ein seltsamer Magier gewesen?";
+	description	= "Ich habe Kräuter für dich.";
 };
 
 FUNC INT Info_Mod_Alchemist01_MangelQuest_Condition()
@@ -51,7 +51,7 @@ FUNC VOID Info_Mod_Alchemist01_MangelQuest_Choices()
 {
 	Info_ClearChoices	(Info_Mod_Alchemist01_MangelQuest);
 
-	Info_AddChoice	(Info_Mod_Alchemist01_MangelQuest, "", Info_Mod_Alchemist01_MangelQuest_BACK);
+	Info_AddChoice	(Info_Mod_Alchemist01_MangelQuest, "Zurück", Info_Mod_Alchemist01_MangelQuest_BACK);
 
 	if (Mod_Pat_Winterrute == 0)
 	&& (Npc_HasItems(hero, ItPl_Winterrute) >= 12)
@@ -97,6 +97,8 @@ FUNC VOID Info_Mod_Alchemist01_MangelQuest_Choices()
 
 FUNC VOID Info_Mod_Alchemist01_MangelQuest_Info()
 {
+	AI_Output(hero, self, "Info_Mod_Alchemist01_MangelQuest_15_00"); //Ich habe Kräuter für dich.
+	
 	Info_Mod_Alchemist01_MangelQuest_Choices();
 };
 
