@@ -195,6 +195,7 @@ INSTANCE Info_Mod_Henry_SamuelWeg (C_INFO)
 FUNC INT Info_Mod_Henry_SamuelWeg_Condition()
 {
 	if (Mod_SamuelIstWeg == 1)
+	&& (Mod_InEntertrupp == 0)
 	{
 		return 1;
 	};
@@ -230,6 +231,7 @@ FUNC INT Info_Mod_Henry_HierGrog_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Henry_SamuelWeg))
 	&& (Mod_QuatschGrog == 0)
+	&& (Mod_InEntertrupp == 0)
 	{
 		return 1;
 	};
@@ -340,6 +342,15 @@ FUNC VOID Info_Mod_Henry_InEntertrupp_Info()
 	Mod_InEntertrupp = 1;
 
 	B_Göttergefallen(2, 1);
+	
+	if (Npc_KnowsInfo(hero, Info_Mod_Morgan_Entertrupp))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Morgan_HierKrallen)) {
+		B_SetTopicStatus(TOPIC_MOD_MORGAN_ENTERTRUPP, LOG_FAILED);
+	};
+	if (Npc_KnowsInfo(hero, Info_Mod_Francis_Entertrupp))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Francis_Skip)) {
+		B_SetTopicStatus(TOPIC_MOD_FRANCIS_ENTERTRUPP, LOG_FAILED);
+	};
 };
 
 INSTANCE Info_Mod_Henry_Befreiung (C_INFO)

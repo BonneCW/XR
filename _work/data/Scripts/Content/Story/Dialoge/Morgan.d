@@ -131,6 +131,7 @@ INSTANCE Info_Mod_Morgan_HierKrallen (C_INFO)
 FUNC INT Info_Mod_Morgan_HierKrallen_Condition()
 {
 	if (Npc_HasItems(hero, ItAt_AlligatorClaw) > 3)
+	&& (Mod_InEntertrupp == 0)
 	{
 		return 1;
 	};
@@ -196,6 +197,15 @@ FUNC VOID Info_Mod_Morgan_InEntertrupp_Info()
 	Mod_InEntertrupp = 1;
 
 	B_Göttergefallen(2, 1);
+	
+	if (Npc_KnowsInfo(hero, Info_Mod_Morgan_Entertrupp))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Morgan_HierKrallen)) {
+		B_SetTopicStatus(TOPIC_MOD_MORGAN_ENTERTRUPP, LOG_FAILED);
+	};
+	if (Npc_KnowsInfo(hero, Info_Mod_Henry_Entertrupp))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Henry_HierGrog)) {
+		B_SetTopicStatus(TOPIC_MOD_HENRY_ENTERTRUPP, LOG_FAILED);
+	};
 };
 
 INSTANCE Info_Mod_Morgan_Lehrer (C_INFO)

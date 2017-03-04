@@ -146,13 +146,13 @@ FUNC VOID Info_Mod_Parlan_Ring_Info()
 	AI_Output(self, hero, "Info_Mod_Parlan_Ring_05_00"); //Du musst mir helfen.
 	AI_Output(hero, self, "Info_Mod_Parlan_Ring_15_01"); //Was ist denn passiert?
 	AI_Output(self, hero, "Info_Mod_Parlan_Ring_05_02"); //Der Novize Pedro hat mir meinen Feuerring gestohlen und ist aus dem Kloster geflohen.
-	AI_Output(self, hero, "Info_Mod_Parlan_Ring_05_03"); //Du musst mir unbedingt den Ring zurückbringen. Am besten fragst du ein paar Leute ob sie ihn gesehen haben.
+	AI_Output(self, hero, "Info_Mod_Parlan_Ring_05_03"); //Du musst mir unbedingt den Ring zurückbringen. Am besten fragst du ein paar Leute, ob sie ihn gesehen haben.
 
 	Npc_ExchangeRoutine	(Mod_7037_NOV_Pedro_NW,	"FEUERRING");
 
 	Log_CreateTopic	(TOPIC_MOD_PARLAN_FEUERRING, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_PARLAN_FEUERRING, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Der Novize Pedro hat dem Magier Parlan seinen Feuerring gestohlen und ich soll ihm den Ring wiederbeschaffen. Ich soll ein paar Leute fragen wohin er gerannt ist.");
+	B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Der Novize Pedro hat dem Magier Parlan seinen Feuerring gestohlen und ich soll ihm den Ring wiederbeschaffen. Ich soll ein paar Leute fragen, wohin er gerannt ist.");
 };
 
 INSTANCE Info_Mod_Parlan_Ring_Zurueck (C_INFO)

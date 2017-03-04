@@ -69,6 +69,7 @@ INSTANCE Info_Mod_Francis_Skip (C_INFO)
 FUNC INT Info_Mod_Francis_Skip_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Skip_Geld))
+	&& (Mod_InEntertrupp == 0)
 	{
 		return 1;
 	};
@@ -132,6 +133,15 @@ FUNC VOID Info_Mod_Francis_InEntertrupp_Info()
 	Mod_InEntertrupp = 1;
 
 	B_Göttergefallen(2, 1);
+	
+	if (Npc_KnowsInfo(hero, Info_Mod_Morgan_Entertrupp))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Morgan_HierKrallen)) {
+		B_SetTopicStatus(TOPIC_MOD_MORGAN_ENTERTRUPP, LOG_FAILED);
+	};
+	if (Npc_KnowsInfo(hero, Info_Mod_Henry_Entertrupp))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Henry_HierGrog)) {
+		B_SetTopicStatus(TOPIC_MOD_HENRY_ENTERTRUPP, LOG_FAILED);
+	};
 };
 
 INSTANCE Info_Mod_Francis_Befreiung (C_INFO)
