@@ -3765,3 +3765,8 @@ const int XP_STUNTBONUS		= 100;
 const int XP_EXPLOITBONUS	= -100;
 const int XP_OpenSecretLibrary	= 1000;
 const int XP_FoundVinosKellerei	= 400; 	//Moleratefett anngewendet und VinosKellerei geöffnet
+
+var int Mod_Seelenstein_Urnol;
+var int Mod_Seelenstein_Formwandler;
+var int Mod_Seelenstein_UD;
+var int Mod_Seelenstein_Complete;

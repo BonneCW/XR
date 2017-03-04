@@ -2288,4 +2288,24 @@ FUNC VOID HAUPTQUESTS()
 			};
 		};
 	};
+	
+	if (Npc_HasItems(hero, ItAt_SoulStone_Urnol) && Mod_Seelenstein_Urnol == FALSE) {
+		Mod_Seelenstein_Urnol = TRUE;
+	};
+	
+	if (Npc_HasItems(hero, ItAt_SoulStone_Formwandler) && Mod_Seelenstein_Formwandler == FALSE) {
+		Mod_Seelenstein_Formwandler = TRUE;
+	};
+	
+	if (Npc_HasItems(hero, ItAt_SoulStone_UD) && Mod_Seelenstein_UD == FALSE) {
+		Mod_Seelenstein_UD = TRUE;
+	};
+	
+	if (Mod_Seelenstein_Complete == FALSE) {
+		if (Mod_Seelenstein_Urnol && Mod_Seelenstein_Formwandler && Mod_Seelenstein_UD) {
+			Mod_Seelenstein_Complete = TRUE;
+			
+			B_LogEntry(TOPIC_MOD_URIZIEL, "Ich habe alle Seelensteine gefunden. Jetzt sollte ich wohl mit Trimedron sprechen...");
+		};
+	};
 };

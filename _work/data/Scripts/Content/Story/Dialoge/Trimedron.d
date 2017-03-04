@@ -176,7 +176,7 @@ INSTANCE Info_Mod_Trimedron_SeelensteinFormwandler (C_INFO)
 	information	= Info_Mod_Trimedron_SeelensteinFormwandler_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Die wandelbare Gestalt des Formenwandlers vermochte ihn nicht zu vor seiner Vernichtung zu bewahren.";
+	description	= "Die wandelbare Gestalt des Formenwandlers ...";
 };
 
 FUNC INT Info_Mod_Trimedron_SeelensteinFormwandler_Condition()
