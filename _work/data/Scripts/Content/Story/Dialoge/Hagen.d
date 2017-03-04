@@ -1415,10 +1415,10 @@ FUNC VOID Info_Mod_Hagen_AndreVermaechtnis8_Info()
 	AI_Output(self, hero, "Info_Mod_Hagen_AndreVermaechtnis8_36_13"); //Ich glaube dennoch, oder gerade deshalb wirst du unserer Stadt und der Insel besonders gut dienen.
 	AI_Output(self, hero, "Info_Mod_Hagen_AndreVermaechtnis8_36_14"); //Dass du ihr Schicksal bislang schon entscheidend zum Guten bestimmt hast, steht außer Frage.
 	AI_Output(self, hero, "Info_Mod_Hagen_AndreVermaechtnis8_36_15"); //Wir werden das schon irgendwie hinbekommen ...
-	AI_Output(self, hero, "Info_Mod_Hagen_AndreVermaechtnis8_36_16"); //Wie dem auch sei, hier sind die Rüstung und das Schwert eines Paladins.
+	// this dialog is wrong, player got armor and weapon already from Lord Andre AI_Output(self, hero, "Info_Mod_Hagen_AndreVermaechtnis8_36_16"); //Wie dem auch sei, hier sind die Rüstung und das Schwert eines Paladins.
 	AI_Output(self, hero, "Info_Mod_Hagen_AndreVermaechtnis8_36_17"); //Willkommen in unseren Reihen.
-
-	B_StartOtherRoutine	(self, "RAT");
+	
+	Mod_Gilde = 3;
 };
 
 INSTANCE Info_Mod_Hagen_AndreVermaechtnis9 (C_INFO)
@@ -1638,6 +1638,8 @@ FUNC VOID Info_Mod_Hagen_AndreVermaechtnis12_Info()
 	B_GivePlayerXP	(400);
 
 	B_SetTopicStatus	(TOPIC_MOD_MILIZ_TREUE, LOG_SUCCESS);
+
+	B_StartOtherRoutine	(self, "RAT");
 };
 
 INSTANCE Info_Mod_Hagen_Siegelring (C_INFO)
