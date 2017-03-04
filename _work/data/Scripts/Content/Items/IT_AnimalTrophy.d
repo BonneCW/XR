@@ -28,6 +28,9 @@ const int	Value_ReptileSkin			=	25;
 const int 	Value_WargFur				=	25;
 const int 	Value_WargFur_Rein			=	33;
 const int 	Value_WargFur_Feuer			=	8;
+const int 	Value_BlackwolfFur				=	15;
+const int 	Value_BlackwolfFur_Rein			=	23;
+const int 	Value_BlackwolfFur_Feuer			=	5;
 const int	Value_DrgSnapperHorn		=	100;
 const int	Value_CrawlerPlate			=	50;
 const int	Value_ShadowFur				=	250;
@@ -1099,6 +1102,66 @@ INSTANCE ItAt_WargFur_Feuer (C_Item)
 	flags 				=	ITEM_MULTI;
 
 	value 				=	Value_WargFur_Feuer;
+
+	visual 				=	"ItAt_WargFur.3DS";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+	TEXT[0]				= 	"";
+	TEXT[1]				= 	"";
+	TEXT[2]				= 	"";
+	TEXT[3]				= 	"";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+/******************************************************************************************/
+INSTANCE ItAt_BlackwolfFur (C_Item)
+{
+	name 				=	"Schwarzes Wolfsfell";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_BlackwolfFur;
+
+	visual 				=	"ItAt_WargFur.3DS";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+	TEXT[0]				= 	"";
+	TEXT[1]				= 	"";
+	TEXT[2]				= 	"";
+	TEXT[3]				= 	"";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+/******************************************************************************************/
+INSTANCE ItAt_BlackwolfFur_Rein (C_Item)
+{
+	name 				=	"unbeschädigtes schwarzes Wolfsfell";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_BlackwolfFur_Rein;
+
+	visual 				=	"ItAt_WargFur.3DS";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+	TEXT[0]				= 	"";
+	TEXT[1]				= 	"";
+	TEXT[2]				= 	"";
+	TEXT[3]				= 	"";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+/******************************************************************************************/
+INSTANCE ItAt_BlackwolfFur_Feuer (C_Item)
+{
+	name 				=	"versengtes schwarzes Wolfsfell";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_BlackwolfFur_Feuer;
 
 	visual 				=	"ItAt_WargFur.3DS";
 	material 			=	MAT_LEATHER;
