@@ -976,7 +976,7 @@ INSTANCE ItMi_MagischePfanne (C_Item)
 	name 				=	"Pfanne";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI | ITEM_SHOW;
 
 	value 				=	Value_Pan;
 

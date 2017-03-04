@@ -326,7 +326,7 @@ instance ItRi_Licht(C_Item)
 	name 					=	NAME_Ring;
 
 	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	flags 					=	ITEM_RING | ITEM_SHOW;
 
 	value 					=	Value_Ri_ProtFire;
 

@@ -1045,7 +1045,7 @@ INSTANCE ItMw_FeurigerHammer (C_Item)
 	name 				=	"Feuriger Hammer";  
 
 	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_AXE;	
+	flags 				=	ITEM_AXE | ITEM_SHOW;	
 	material 			=	MAT_METAL;
 
 	value 				=	Value_Schmiedehammer;
