@@ -171,7 +171,7 @@ FUNC VOID Info_Mod_Xardas_NW_WasFuerGilden_Info()
 
 	B_LogEntry_NS	(TOPIC_MOD_MILIZ, "Ich kann mich der Miliz in der Stadt anschlieﬂen.");
 	B_LogEntry_NS	(TOPIC_MOD_S÷LDNER, "Die Sˆldner finde ich auf einem Bauernhof. Xardas meint, dass ich sie kenne.");
-	B_LogEntry_NS	(TOPIC_MOD_DAEMONENBESCHWOERER, "Bei Xardas kann mich den schwarzen Novizen anschlieﬂen.");
+	B_LogEntry_NS	(TOPIC_MOD_DAEMONENBESCHWOERER, "Bei Xardas kann ich mich den schwarzen Novizen anschlieﬂen.");
 	B_LogEntry_NS	(TOPIC_MOD_FEUERMAGIER, "In einem Kloster auf der Insel leben die Feuermagier, denen ich mich anschlieﬂen kann.");
 	B_LogEntry_NS	(TOPIC_MOD_WASSERMAGIER, "Die Wassermagier sind in einer alten Ruine im Norden der Insel. Jedoch soll einer in der Stadt Khorinis zu finden sein.");
 
