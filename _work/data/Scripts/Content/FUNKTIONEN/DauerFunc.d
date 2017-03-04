@@ -440,14 +440,14 @@ FUNC VOID DAUERFUNC_01()
 		&& (Mod_Irdorath == 1)
 		{
 			B_StartOtherRoutine	(Mod_513_DMB_Xardas_NW, "TOT");
-			B_RemoveNpc	(Mod_592_PAL_Hagen_NW);
-			B_RemoveNpc	(Mod_527_SLD_Torlof_NW);
-			B_RemoveNpc	(Mod_674_SLD_Lee_NW);
-			B_RemoveNpc	(Mod_551_KDF_Pyrokar_NW);
-			B_RemoveNpc	(Mod_774_KDW_Saturas_NW);
-			B_RemoveNpc	(Mod_553_KDF_Ulthar_NW);
-			B_RemoveNpc	(Mod_524_KDW_Vatras_NW);
-			B_RemoveNpc	(Mod_552_KDF_Serpentes_NW);
+			B_StartOtherRoutine	(Mod_592_PAL_Hagen_NW, "TOT");
+			B_StartOtherRoutine	(Mod_527_SLD_Torlof_NW, "TOT");
+			B_StartOtherRoutine	(Mod_674_SLD_Lee_NW, "TOT");
+			B_StartOtherRoutine	(Mod_551_KDF_Pyrokar_NW, "TOT");
+			B_StartOtherRoutine	(Mod_774_KDW_Saturas_NW, "TOT");
+			B_StartOtherRoutine	(Mod_553_KDF_Ulthar_NW, "TOT");
+			B_StartOtherRoutine	(Mod_524_KDW_Vatras_NW, "TOT");
+			B_StartOtherRoutine	(Mod_552_KDF_Serpentes_NW, "TOT");
 
 			AUFSUCHENACHSEELENSTEINE = 2;
 		};

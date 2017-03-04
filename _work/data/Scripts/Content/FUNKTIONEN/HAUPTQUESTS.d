@@ -1718,6 +1718,14 @@ FUNC VOID HAUPTQUESTS()
 				Mod_Xardas_Ende = 1;
 
 				B_StartOtherRoutine	(Mod_513_DMB_Xardas_NW, "START");
+				B_StartOtherRoutine	(Mod_592_PAL_Hagen_NW, "START");
+				B_StartOtherRoutine	(Mod_527_SLD_Torlof_NW, "START");
+				B_StartOtherRoutine	(Mod_674_SLD_Lee_NW, "START");
+				B_StartOtherRoutine	(Mod_551_KDF_Pyrokar_NW, "START");
+				B_StartOtherRoutine	(Mod_774_KDW_Saturas_NW, "START");
+				B_StartOtherRoutine	(Mod_553_KDF_Ulthar_NW, "START");
+				B_StartOtherRoutine	(Mod_524_KDW_Vatras_NW, "START");
+				B_StartOtherRoutine	(Mod_552_KDF_Serpentes_NW, "START");
 
 				B_StartOtherRoutine	(Mod_533_SLD_Gorn_NW, "ATXARDAS");
 				B_StartOtherRoutine	(Mod_557_PSINOV_Lester_NW, "ATXARDAS");
