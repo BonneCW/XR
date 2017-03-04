@@ -9,7 +9,7 @@
 // ------ Stadt ------
 const int VALUE_ITAR_Governor	= 1100;
 const int VALUE_ITAR_Judge		= 0;
-const int VALUE_ITAR_Smith		= 0;
+const int VALUE_ITAR_Smith		= 150;
 const int VALUE_ITAR_Barkeeper	= 0;
 const int VALUE_ITAR_Vlk_L		= 120;
 const int VALUE_ITAR_Vlk_M		= 120;
