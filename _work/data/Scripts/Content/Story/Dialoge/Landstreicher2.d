@@ -1,3 +1,5 @@
+var int Mod_LandstreicherAttack;
+
 INSTANCE Info_Mod_Landstreicher2_Hi (C_INFO)
 {
 	npc		= Mod_7745_BDT_Landstreicher_NW;
@@ -11,6 +13,7 @@ INSTANCE Info_Mod_Landstreicher2_Hi (C_INFO)
 FUNC INT Info_Mod_Landstreicher2_Hi_Condition()
 {
 	if (Npc_RefuseTalk(self) == FALSE)
+	&& (!Mod_LandstreicherAttack)
 	{
 		return 1;
 	};
@@ -36,6 +39,8 @@ FUNC VOID Info_Mod_Landstreicher2_Hi_B()
 	AI_Output(self, hero, "Info_Mod_Landstreicher2_Hi_B_07_01"); //Dann muss ich das Gold aus dir herausprügeln.
 
 	Info_ClearChoices	(Info_Mod_Landstreicher2_Hi);
+	
+	Mod_LandstreicherAttack = TRUE;
 
 	AI_StopProcessInfos	(self);
 
