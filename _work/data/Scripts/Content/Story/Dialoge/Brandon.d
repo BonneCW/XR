@@ -139,6 +139,7 @@ INSTANCE Info_Mod_Brandon_Schatzsuche2 (C_INFO)
 FUNC INT Info_Mod_Brandon_Schatzsuche2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Brandon_Schatzsuche))
+	&& (Npc_HasItems(hero, ItMi_Enterhaken) == 1)
 	{
 		return 1;
 	};
