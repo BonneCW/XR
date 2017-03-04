@@ -212,6 +212,8 @@ FUNC VOID Info_Mod_Cyrco_MinenPart_Info()
 	AI_Output(hero, self, "Info_Mod_Cyrco_MinenPart_15_10"); //Bin schon unterwegs.
 
 	B_LogEntry	(TOPIC_MOD_JG_GARDISTEN, "Noch mal zum Mitschreiben: Ich soll je einen groﬂen und einen kleinen Knochen und einen Tropfen eigenes Blut beim Beliarschrein ablegen. Dann funktiniert die Rune wieder und ich kann mit ihr weiter. Das funktioniert aber wohl nur nahe der Plattform. Mal sehen ...");
+	
+	Npc_RemoveInvItems(hero, ItAm_CyrcoMinenAmulett, 1);
 };
 
 INSTANCE Info_Mod_Cyrco_SuchenderZettel (C_INFO)
