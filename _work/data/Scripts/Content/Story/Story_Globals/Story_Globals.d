@@ -3770,3 +3770,4 @@ var int Mod_Seelenstein_Urnol;
 var int Mod_Seelenstein_Formwandler;
 var int Mod_Seelenstein_UD;
 var int Mod_Seelenstein_Complete;
+var int Mod_DickeLuft_Running;

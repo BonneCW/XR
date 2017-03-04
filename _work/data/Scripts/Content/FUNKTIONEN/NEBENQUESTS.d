@@ -2650,6 +2650,11 @@ FUNC VOID NEBENQUESTS()
 
 			B_StartOtherRoutine	(Mod_7723_OUT_Hedwig_REL, "ZIMMER");
 		};
+		
+		if (Kapitel >= 3 && !Npc_KnowsInfo(hero, Info_Mod_Irmgard_Kneipe2) && Npc_KnowsInfo(hero, Info_Mod_Ditmar_Hi) && Mod_DickeLuft_Running == TRUE) {
+			Mod_DickeLuft_Running = FALSE;
+			B_SetTopicStatus(TOPIC_MOD_DITMAR_DICKELUFT, LOG_FAILED);
+		};
 
 		// Der Siegelring
 
