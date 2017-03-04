@@ -62,7 +62,7 @@ FUNC VOID Info_Mod_HofstaatGleichgewichtsminister_Drogenminister_Info()
 	AI_Output(self, hero, "Info_Mod_HofstaatGleichgewichtsminister_Drogenminister_01_06"); //Das ist gut. Dann nimm jetzt dein Ziel in die Augen und ...
 	AI_Output(hero, self, "Info_Mod_HofstaatGleichgewichtsminister_Drogenminister_15_07"); //Geh über das Seil?
 	AI_Output(self, hero, "Info_Mod_HofstaatGleichgewichtsminister_Drogenminister_01_08"); //UM HIMMELS WILLEN BLOß NICHT! Da brichst du dir ja den Hals.
-	AI_Output(self, hero, "Info_Mod_HofstaatGleichgewichtsminister_Drogenminister_01_09"); //Hier, der Schlüssel für die Treppe. Die Tür ist am Fuß des andren Hügels.
+	AI_Output(self, hero, "Info_Mod_HofstaatGleichgewichtsminister_Drogenminister_01_09"); //Hier, der Schlüssel für die Leiter. Die Tür ist am Fuß des andren Hügels.
 
 	B_GiveInvItems	(self, hero, ItKe_HSDM, 1);
 
@@ -73,7 +73,7 @@ FUNC VOID Info_Mod_HofstaatGleichgewichtsminister_Drogenminister_Info()
 
 	B_StartOtherRoutine	(self, "START");
 
-	B_LogEntry	(TOPIC_MOD_SEKTE_ENTSCHEIDUNG, "Der Gleichgewichtsminister hat mir den Schlüssel zu einer Tür im gegenüberliegenden Berg gegeben, in welchem sich eine Treppe befinden soll, die zum Drogenminister hinauf führt.");
+	B_LogEntry	(TOPIC_MOD_SEKTE_ENTSCHEIDUNG, "Der Gleichgewichtsminister hat mir den Schlüssel zu einer Tür im gegenüberliegenden Berg gegeben, in welchem sich eine Leiter befinden soll, die zum Drogenminister hinauf führt.");
 };
 
 INSTANCE Info_Mod_HofstaatGleichgewichtsminister_Pickpocket (C_INFO)
