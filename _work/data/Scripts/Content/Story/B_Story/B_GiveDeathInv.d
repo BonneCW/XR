@@ -288,7 +288,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	&& (Hlp_GetInstanceID(slf) != Hlp_GetInstanceID(WasserSnapper))
 	&& (Hlp_GetInstanceID(slf) != Hlp_GetInstanceID(SchattenSnapper))
 	{
-		if (slf.aivar[AIV_MM_REAL_ID] == ID_LURKER)		{	CreateInvItems (slf, itat_LurkerSkin, 1);	};
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_LURKER && Hlp_GetInstanceID(slf) != Hlp_GetInstanceID(Lurker_Young))		{	CreateInvItems (slf, itat_LurkerSkin, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_SNAPPER)		{	CreateInvItems (slf, itat_LurkerSkin, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_RAZOR)		{	CreateInvItems (slf, itat_LurkerSkin, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGONSNAPPER)	{	CreateInvItems (slf, itat_LurkerSkin, 1);	};
