@@ -34,7 +34,7 @@ FUNC VOID PC_Schmelze_Rohstahl_Info()
 {
 	CreateInvItems	(hero, ItMiSwordRawHot, Npc_HasItems(hero, ItMiSwordRaw)+1);
 	
-	Print (ConcatStrings(IntToString(Npc_HasItems(hero, ItMiSwordRaw)), " Rohstahl erhitzt"));
+	Print (ConcatStrings(IntToString(Npc_HasItems(hero, ItMiSwordRaw) + 1), " Rohstahl erhitzt"));
 
 	Npc_RemoveInvItems	(hero, ItMiSwordRaw, Npc_HasItems(hero, ItMiSwordRaw));
 };
