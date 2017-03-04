@@ -243,6 +243,29 @@ func int Spine_Init(var int modules) {
 			Spine_GetPlayerUsernameFunc = 0;
 		};
 		
+		if (modules & SPINE_MODULE_OVERALLSAVE) {
+			MEM_Info("Spine: Loading setOverallSaveValue function");
+			Spine_OverallSaveSetStringFunc = GetProcAddress(Spine_Dll, "setOverallSaveValue");
+			
+			if (!Spine_OverallSaveSetStringFunc) {
+				MEM_Info("Spine: setOverallSaveValue function not found");
+				FreeLibrary(Spine_Dll);
+				return FALSE;
+			};
+			
+			MEM_Info("Spine: Loading getOverallSaveValue function");
+			Spine_OverallSaveGetStringFunc = GetProcAddress(Spine_Dll, "getOverallSaveValue");
+			
+			if (!Spine_OverallSaveGetStringFunc) {
+				MEM_Info("Spine: getOverallSaveValue function not found");
+				FreeLibrary(Spine_Dll);
+				return FALSE;
+			};
+		} else {
+			Spine_OverallSaveSetStringFunc = 0;
+			Spine_OverallSaveGetStringFunc = 0;
+		};
+		
 		MEM_Info("Spine: Calling init function");
 		CALL_IntParam(modules);
 		CALL__cdecl(Spine_InitFunc);
