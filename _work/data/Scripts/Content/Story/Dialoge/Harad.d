@@ -1367,7 +1367,7 @@ INSTANCE Info_Mod_Harad_AndreVermaechtnis3 (C_INFO)
 FUNC INT Info_Mod_Harad_AndreVermaechtnis3_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Harad_AndreVermaechtnis2))
-	&& (Mod_AndreSchwert_Tag-2 > Wld_GetDay())
+	&& (Mod_AndreSchwert_Tag-2 < Wld_GetDay())
 	{
 		return 1;
 	};
