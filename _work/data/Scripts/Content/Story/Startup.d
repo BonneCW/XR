@@ -1149,20 +1149,15 @@ func void INIT_NewWorld_Part_City_01()
 		};
 		
 		//Türme
-		Wld_AssignRoomToGuild ("turmsued01",	GIL_MIL);
-		Wld_AssignRoomToGuild ("turmsued02",	GIL_MIL);
-		Wld_AssignRoomToGuild ("turmost01",		GIL_MIL);
-		Wld_AssignRoomToGuild ("turmost02",		GIL_MIL);
-		Wld_AssignRoomToGuild ("turmschmied",	GIL_MIL);
-		Wld_AssignRoomToGuild ("turmbogner",	GIL_MIL);
-		
-		//Kaserne 
-		Wld_AssignRoomToGuild ("andre",			GIL_PUBLIC);
-		Wld_AssignRoomToGuild ("waffenkammer",	GIL_PUBLIC);
-		Wld_AssignRoomToGuild ("barracke",		GIL_MIL);
+		Wld_AssignRoomToGuild ("turmsued01",	GIL_PAL);
+		Wld_AssignRoomToGuild ("turmsued02",	GIL_PAL);
+		Wld_AssignRoomToGuild ("turmost01",		GIL_PAL);
+		Wld_AssignRoomToGuild ("turmost02",		GIL_PAL);
+		Wld_AssignRoomToGuild ("turmschmied",	GIL_PAL);
+		Wld_AssignRoomToGuild ("turmbogner",	GIL_PAL);
 		
 		//Oberes Viertel
-		Wld_AssignRoomToGuild ("nwcityrich01", 	GIL_MIL);
+		Wld_AssignRoomToGuild ("nwcityrich01", 	GIL_PAL);
 		Wld_AssignRoomToGuild ("rathaus",		GIL_PUBLIC);
 		Wld_AssignRoomToGuild ("reich01",		GIL_PAL);
 		Wld_AssignRoomToGuild	("reich02", GIL_PUBLIC);
@@ -1172,10 +1167,20 @@ func void INIT_NewWorld_Part_City_01()
 		|| (Mod_Gilde == 3)
 		{
 			Wld_AssignRoomToGuild ("reich04",		GIL_NONE);
+		
+			//Kaserne 
+			Wld_AssignRoomToGuild ("andre",			GIL_NONE);
+			Wld_AssignRoomToGuild ("waffenkammer",	GIL_NONE);
+			Wld_AssignRoomToGuild ("barracke",		GIL_NONE);
 		}
 		else
 		{
 			Wld_AssignRoomToGuild ("reich04",		GIL_PAL);
+		
+			//Kaserne 
+			Wld_AssignRoomToGuild ("andre",			GIL_PUBLIC);
+			Wld_AssignRoomToGuild ("waffenkammer",	GIL_PUBLIC);
+			Wld_AssignRoomToGuild ("barracke",		GIL_PAL);
 		};
 		Wld_AssignRoomToGuild ("reich05",		GIL_PAL);
 		Wld_AssignRoomToGuild ("reich06",		GIL_PUBLIC); //Salandril Alchemist -> Wegen Mission!!!
