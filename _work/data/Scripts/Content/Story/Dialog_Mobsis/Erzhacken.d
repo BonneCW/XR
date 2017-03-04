@@ -709,28 +709,6 @@ FUNC VOID PC_Erzhacken_Hacken_Info()
 	{
 		B_Upgrade_ErzHackChance (5);
 	};
-
-	
-	var int Abnutzung;
-	Abnutzung	=	r_max(99);
-	
-	if (Abnutzung	<=	20)
-	{
-		SpitzhackenAbnutzung	=	SpitzhackenAbnutzung + 1;
-	
-		if (SpitzhackenAbnutzung	==	40)
-		{
-			B_ENDPRODUCTIONDIALOG();
-
-			AI_UseMob		(hero,"ORE",-1);
-
-			AI_UnequipWeapons	(hero);
-
-			Npc_RemoveInvItems	(hero, ItMw_2H_Axe_L_01, 1);
-		
-			SpitzhackenAbnutzung	=	0;
-		};
-	};
 };
 
 INSTANCE PC_Erzhacken_TSchlag (C_Info)

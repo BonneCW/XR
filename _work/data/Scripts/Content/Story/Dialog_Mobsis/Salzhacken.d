@@ -109,28 +109,6 @@ FUNC VOID PC_Salzhacken_Hacken_Info()
 		PrintScreen ("Hier gibt's Nichts mehr zu holen.", -1, -1, FONT_ScreenSmall, 2);	
 		B_ENDPRODUCTIONDIALOG ();
 	};
-
-	
-	var int Abnutzung;
-	Abnutzung	=	Hlp_Random(100);
-	
-	if (Abnutzung	<=	20)
-	{
-		SpitzhackenAbnutzung	=	SpitzhackenAbnutzung + 1;
-	
-		if (SpitzhackenAbnutzung	==	40)
-		{
-			B_ENDPRODUCTIONDIALOG();
-
-			AI_UseMob		(hero,"ORE",-1);
-
-			AI_UnequipWeapons	(hero);
-
-			Npc_RemoveInvItems	(hero, ItMw_2H_Axe_L_01, 1);
-		
-			SpitzhackenAbnutzung	=	0;
-		};
-	};
 };
 
 INSTANCE PC_Salzhacken_Chance (C_Info)
