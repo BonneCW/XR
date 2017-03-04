@@ -122,6 +122,8 @@ FUNC VOID Info_Mod_Lehrling_Dokumente_Info()
 
 	B_LogEntry	(TOPIC_MOD_KHORATA_DOKUMENTE, "Der Lehrling hat seinen Besitz wieder.");
 	B_SetTopicStatus	(TOPIC_MOD_KHORATA_DOKUMENTE, LOG_SUCCESS);
+	
+	B_GivePlayerXP(150);
 
 	CurrentNQ += 1;
 
