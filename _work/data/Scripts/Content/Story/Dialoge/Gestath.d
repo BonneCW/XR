@@ -145,6 +145,11 @@ FUNC VOID Info_Mod_Gestath_TrophaenGeben_Info()
 
 	Mod_EIS_Gestath = 0;
 
+	if (Mod_EIS_Gestath_Day == 0) {
+		Log_CreateTopic(TOPIC_MOD_HAENDLER_EISGEBIET, LOG_NOTE);
+		B_LogEntry(TOPIC_MOD_HAENDLER_EISGEBIET, "Gestath handelt jetzt mit mir und verkauft Jagdtrophäen.");
+	};
+	
 	Mod_EIS_Gestath_Day = Wld_GetDay() + 5;
 };
 
