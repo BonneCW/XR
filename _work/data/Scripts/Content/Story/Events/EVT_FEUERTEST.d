@@ -331,7 +331,7 @@ FUNC VOID EVT_FEUERTEST_TOR_01 ()
 
 FUNC VOID EVT_FEUERTEST_TOR_02 ()
 {
-	if (Npc_HasItems(hero, ItMi_OrnamentEffekt_BIGFARM_Addon) == 3)
+	if (Npc_HasItems(hero, ItMi_OrnamentEffekt_BIGFARM_Addon) >= 3)
 	{
 		Wld_SendTrigger	("LANGEHALLE_GOLEMKAMPF");
 	};
