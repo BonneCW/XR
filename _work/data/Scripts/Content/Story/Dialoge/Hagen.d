@@ -1120,10 +1120,8 @@ FUNC VOID Info_Mod_Hagen_AndreVermaechtnis2_Info()
 	B_StartOtherRoutine	(Mod_744_MIL_Pablo_NW, "NASE");
 	B_StartOtherRoutine	(Mod_968_MIL_Bilgot_NW, "NASE");
 
-	AI_UnequipArmor	(Mod_541_NONE_Till_NW);
-
 	CreateInvItems	(Mod_541_NONE_Till_NW, ItAr_MIL_M, 1);
-
+	AI_UnequipArmor	(Mod_541_NONE_Till_NW);
 	AI_EquipArmor	(Mod_541_NONE_Till_NW, ItAr_MIL_M);
 
 	B_GivePlayerXP	(300);
