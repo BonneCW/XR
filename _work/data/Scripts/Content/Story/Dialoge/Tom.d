@@ -183,6 +183,8 @@ FUNC VOID Info_Mod_Tom_Krautquest2_Info()
 	AI_Output(self, hero, "Info_Mod_Tom_Krautquest2_11_09"); //Da fällt mir ein, dass ich mal ein Kraut gesehen habe, dass Sumpfkraut sehr ähnlich sah ... aber es war eben kein Sumpfkraut.
 
 	AI_StopProcessInfos	(self);
+
+	B_LogEntry	(TOPIC_MOD_TOM_KRAUT, "Tom hat ein anderes Kraut erwähnt, das Sumpfkraut sehr ähnlich sieht... Wenn ich das Sumpfkraut in der Truhe damit vertauschen würde...");
 };
 
 INSTANCE Info_Mod_Tom_Krautquest3 (C_INFO)

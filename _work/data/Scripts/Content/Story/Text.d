@@ -178,6 +178,7 @@ const string MOBNAME_XR_TRUEMMER	= "Trümmer";
 const string MOBNAME_XR_ERZGRUEN	= "grüne Erzader";
 const string MOBNAME_XR_STEINSCHALE	= "Steinschale";
 CONST STRING MOBNAME_STEINSARGALT	= "Steinsarg";					//Kisten
+CONST STRING MOBNAME_ANDRETRUHE	= "Lord Andres Truhe";
 CONST STRING MOBNAME_ASSERVATENTRUHE	= "Asservatentruhe";				//Kisten
 CONST STRING MOBNAME_ANSCHLAGTAFEL	= "Anschlagtafel";
 CONST STRING MOBNAME_ANschlag 		= "Anschlagtafel"; 
