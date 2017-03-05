@@ -322,6 +322,8 @@ func void NL_STEINKREIS_03_S1 ()
 			AI_GotoWP	(hero, "NW_FOREST_PATH_66");
 
 			B_StartOtherRoutine	(Mod_513_DMB_Xardas_NW, "DRACHEN");
+			
+			MEM_RemoveVob("STEINKREISMITTE_03");
 		};
 	}
 	else if (Mod_NL_Siegelbuch == 2)
@@ -391,6 +393,8 @@ func void NL_STEINKREIS_03_S0 ()
 			AI_GotoWP	(hero, "NW_FOREST_PATH_66");
 
 			B_StartOtherRoutine	(Mod_513_DMB_Xardas_NW, "DRACHEN");
+			
+			MEM_RemoveVob("STEINKREISMITTE_03");
 
 			Mod_SiegelEffekt = 1;
 		};
