@@ -3149,9 +3149,9 @@ func void UseEchsenQuest_01 ()
 					Doc_PrintLines	( nDocID,  0, "Füttere die Weibchen"					);
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "a.) Junge weibchen: Töte fünf Sumpfhaie und schmeiß ihr Fleisch ins Grenzgebiet."					);
-					Doc_PrintLines	( nDocID,  0, "b.) Alte weibchen: Schwäche fünf Sumpfhaie bis auf die Hälfte ihrer Energie, danach Locke sie ins Grenzgebiet."					);
-					Doc_PrintLines	( nDocID,  0, "c.) Starke weibchen: Locke fünf gesunde Sumpfhaie ins Grenzgebiet"					);
+					Doc_PrintLines	( nDocID,  0, "a.) Junge Weibchen: Töte fünf Sumpfhaie und schmeiß ihr Fleisch ins Grenzgebiet."					);
+					Doc_PrintLines	( nDocID,  0, "b.) Alte Weibchen: Schwäche fünf Sumpfhaie bis auf die Hälfte ihrer Energie, danach Locke sie ins Grenzgebiet."					);
+					Doc_PrintLines	( nDocID,  0, "c.) Starke Weibchen: Locke fünf gesunde Sumpfhaie ins Grenzgebiet"					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Anmerkung: Die Sumpfhaifarm ist aus der Stadt kommend rechts in einem Talkessel. Das Grenzgebiet ist der Steg, der die Stadt und den Eingang in den Sumpf verbindet. Das Fleisch muss im Grenzgebiet benutzt werden und zwar streng der Hierarchie nach."					);
 
@@ -3170,6 +3170,17 @@ func void UseEchsenQuest_01 ()
 		Wld_InsertNpc	(Swampshark_Fuetterung_01,	"ADW_BANDIT_VP3_03");
 		Wld_InsertNpc	(Swampshark_Fuetterung_01,	"ADW_SHARK_02");
 		Wld_InsertNpc	(Swampshark_Fuetterung_01,	"ADW_SHARK_01");
+
+		Wld_InsertNpc	(Swampshark,	"FP_ROAM_SHARK_30");
+		Wld_InsertNpc	(Swampshark,	"FP_ROAM_SHARK_27");
+		Wld_InsertNpc	(Swampshark,	"FP_ROAM_SHARK_24");
+		Wld_InsertNpc	(Swampshark,	"FP_ROAM_SHARK_04");
+		Wld_InsertNpc	(Swampshark,	"FP_ROAM_DANGER_28");
+		Wld_InsertNpc	(Swampshark,	"FP_ROAM_SHARK_SPECIAL_02");
+		Wld_InsertNpc	(Swampshark,	"FP_STAND_LOGAN");
+		Wld_InsertNpc	(Swampshark,	"FP_ROAM_BL_FLIES_07");
+		Wld_InsertNpc	(Swampshark,	"FP_ROAM_SHARK_24");
+		Wld_InsertNpc	(Swampshark,	"FP_ROAM_BL_FLIES_07");
 	};
 
 };
