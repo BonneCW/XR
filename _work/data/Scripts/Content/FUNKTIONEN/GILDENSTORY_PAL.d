@@ -855,6 +855,7 @@ FUNC VOID GILDENSTORY_PAL()
 
 		if (Mod_PAL_HeroBotFollow == 2)
 		&& (Npc_GetDistToWP(hero, "REL_CITY_002") < 1000)
+		&& (Mod_PAL_HeroBot == 4)
 		{
 			Mod_PAL_HeroBot = 5;
 

@@ -3269,12 +3269,12 @@ FUNC VOID NEBENQUESTS()
 
 			if (Hlp_Random(2) == 0)
 			{
-				Wld_InsertNpc	(Mod_7746_OUT_Dubios_REL, "REL_CITY_001");
-				Wld_InsertNpc	(Mod_7747_OUT_Dubios_REL, "REL_CITY_001");
+				Wld_InsertNpc	(Mod_7750_OUT_Dubios_MT, "OC1");
+				Wld_InsertNpc	(Mod_7751_OUT_Dubios_MT, "OC1");
 			}
 			else
 			{
-				Wld_InsertNpc	(Mod_7746_OUT_Dubios_REL, "REL_CITY_001");
+				Wld_InsertNpc	(Mod_7750_OUT_Dubios_MT, "OC1");
 			};
 		};
 
