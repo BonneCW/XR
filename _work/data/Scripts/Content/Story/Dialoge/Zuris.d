@@ -60,6 +60,8 @@ FUNC VOID Info_Mod_Zuris_Scorpio_Info()
 	AI_Output(self, hero, "Info_Mod_Zuris_Scorpio_30_03"); //Dafür gibt es heute einen erlesenen Heiltrank gratis!
 	
 	B_GiveInvItems	(self, hero, ItPo_Health_03, 1);
+	
+	B_StartOtherRoutine(self, "START");
 };
 
 INSTANCE Info_Mod_Zuris_Blutkelch (C_INFO)

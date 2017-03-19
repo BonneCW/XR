@@ -63,7 +63,6 @@ func void INIT_GLOBAL()
 	totaldivingtime = divetime;	// 60 Sekunden nach dem Trank
 	her.divetime = mkf(totaldivingtime);
 
-
 	Autosave_Blocker = 120;	// nach dem Laden eines Spielstandes wird 2 Minuten nicht automatisch gespeichert
 
 	Mod_KG_TrentLicht = 0;

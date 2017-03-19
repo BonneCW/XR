@@ -73,7 +73,7 @@ FUNC VOID Info_Mod_Ingmar_Innosklinge_Info()
 
 	CreateInvItems	(hero, ItWr_DominiquesRuf, 1);
 
-	AI_Output(self, hero, "Info_Mod_Ingmar_Innosklinge_06_19"); //Gerne. Es freut mich immer, wenn jemand die lyrischen Schriften der Streiter Innosë zu sch‰tzen weiﬂ.
+	AI_Output(self, hero, "Info_Mod_Ingmar_Innosklinge_06_19"); //Gerne. Es freut mich immer, wenn jemand die lyrischen Schriften der Streiter Innos' zu sch‰tzen weiﬂ.
 
 	B_GivePlayerXP	(200);
 
