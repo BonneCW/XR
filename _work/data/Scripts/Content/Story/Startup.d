@@ -33,9 +33,11 @@ func void INIT_GLOBAL()
 
 	gameloaded = Hlp_GetNpc(0);
 
+	MEM_SetShowDebug (1);
+
 	LeGo_Init(LeGo_All & ~LeGo_Focusnames);
 	
-	Spine_Init(SPINE_MODULE_ACHIEVEMENTS);
+	Spine_Init(SPINE_MODULE_ACHIEVEMENTS | SPINE_MODULE_OVERALLSAVE);
 
 	if (CurrentLevel == SCHIFFSCHLACHT_ZEN)
 	{
@@ -71,8 +73,6 @@ func void INIT_GLOBAL()
 
 	Wld_SendTrigger	("FRAMETRIGGER");
 	Wld_SendTrigger ("DAUERTRIGGER");
-
-	MEM_SetShowDebug (1);
 
 	FixPlayerControllsTurnOnNpcAttackMoveBug();
 

@@ -308,6 +308,47 @@ func int Spine_IsAchievementUnlocked(var int identifier) {
 	return FALSE;
 };
 
+// private, don't call from outside
+func void Spine_ShowAchievementView(var int identifier) {
+	var int startPosX;
+	var int startPosY;
+	var zCView screen; screen = _^(MEM_Game._zCSession_viewport);
+	if (SPINE_ACHIEVEMENTORIENTATION == SPINE_TOPLEFT) {
+		startPosX = 0;
+		startPosY = 0;
+	} else if (SPINE_ACHIEVEMENTORIENTATION == SPINE_TOPRIGHT) {
+		startPosX = screen.psizex - SPINE_ACHIEVEMENT_WIDTH;
+		startPosY = 0;
+	} else if (SPINE_ACHIEVEMENTORIENTATION == SPINE_BOTTOMLEFT) {
+		startPosX = 0;
+		startPosY = screen.psizey - SPINE_ACHIEVEMENT_HEIGHT;
+	} else if (SPINE_ACHIEVEMENTORIENTATION == SPINE_BOTTOMRIGHT) {
+		startPosX = screen.psizex - SPINE_ACHIEVEMENT_WIDTH;
+		startPosY = screen.psizey - SPINE_ACHIEVEMENT_HEIGHT;
+	};
+	Spine_AchievementView = View_CreatePxl(startPosX, startPosY, startPosX + SPINE_ACHIEVEMENT_WIDTH, startPosY + SPINE_ACHIEVEMENT_HEIGHT);
+	View_SetTexture(Spine_AchievementView, "ACHIEVEMENT_BACKGROUND.TGA");
+	View_Open(Spine_AchievementView);
+	
+	var int imageStartPosX;
+	var int imageStartPosY;
+	var int imageOffset;
+	imageOffset = (SPINE_ACHIEVEMENT_HEIGHT - SPINE_ACHIEVEMENT_IMAGE_HEIGHT) / 2;
+	imageStartPosX = startPosX + imageOffset;
+	imageStartPosY = startPosY + imageOffset;
+	Spine_AchievementImageView = View_CreatePxl(imageStartPosX, imageStartPosY, imageStartPosX + SPINE_ACHIEVEMENT_IMAGE_WIDTH, imageStartPosY + SPINE_ACHIEVEMENT_IMAGE_HEIGHT);
+	var string achievementTexture;
+	achievementTexture = MEM_ReadStatStringArr(SPINE_ACHIEVEMENT_TEXTURES, identifier);
+	View_SetTexture(Spine_AchievementImageView, achievementTexture);
+	View_Open(Spine_AchievementImageView);
+	
+	var string achievementName;
+	achievementName = MEM_ReadStatStringArr(SPINE_ACHIEVEMENT_NAMES, identifier);
+	View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset, SPINE_ACHIEVEMENT_HEIGHT), achievementName, FONT_SCREENSMALL);
+	
+	FF_ApplyOnceExt(Spine_RemoveAchievementView, SPINE_ACHIEVEMENT_DISPLAY_TIME, 1);
+};
+
 // unlocks achievement for this mod for given id
 // contact Bonne to get your achievements on the server
 // will also automatically create a view informing about unlocking the achievement
@@ -320,43 +361,7 @@ func void Spine_UnlockAchievement(var int identifier) {
 			CALL__cdecl(Spine_UnlockAchievementFunc);
 			
 			if (Spine_AchievementView == 0) {
-				var int startPosX;
-				var int startPosY;
-				var zCView screen; screen = _^(MEM_Game._zCSession_viewport);
-				if (SPINE_ACHIEVEMENTORIENTATION == SPINE_TOPLEFT) {
-					startPosX = 0;
-					startPosY = 0;
-				} else if (SPINE_ACHIEVEMENTORIENTATION == SPINE_TOPRIGHT) {
-					startPosX = screen.psizex - SPINE_ACHIEVEMENT_WIDTH;
-					startPosY = 0;
-				} else if (SPINE_ACHIEVEMENTORIENTATION == SPINE_BOTTOMLEFT) {
-					startPosX = 0;
-					startPosY = screen.psizey - SPINE_ACHIEVEMENT_HEIGHT;
-				} else if (SPINE_ACHIEVEMENTORIENTATION == SPINE_BOTTOMRIGHT) {
-					startPosX = screen.psizex - SPINE_ACHIEVEMENT_WIDTH;
-					startPosY = screen.psizey - SPINE_ACHIEVEMENT_HEIGHT;
-				};
-				Spine_AchievementView = View_CreatePxl(startPosX, startPosY, startPosX + SPINE_ACHIEVEMENT_WIDTH, startPosY + SPINE_ACHIEVEMENT_HEIGHT);
-				View_SetTexture(Spine_AchievementView, "ACHIEVEMENT_BACKGROUND.TGA");
-				View_Open(Spine_AchievementView);
-				
-				var int imageStartPosX;
-				var int imageStartPosY;
-				var int imageOffset;
-				imageOffset = (SPINE_ACHIEVEMENT_HEIGHT - SPINE_ACHIEVEMENT_IMAGE_HEIGHT) / 2;
-				imageStartPosX = startPosX + imageOffset;
-				imageStartPosY = startPosY + imageOffset;
-				Spine_AchievementImageView = View_CreatePxl(imageStartPosX, imageStartPosY, imageStartPosX + SPINE_ACHIEVEMENT_IMAGE_WIDTH, imageStartPosY + SPINE_ACHIEVEMENT_IMAGE_HEIGHT);
-				var string achievementTexture;
-				achievementTexture = MEM_ReadStatStringArr(SPINE_ACHIEVEMENT_TEXTURES, identifier);
-				View_SetTexture(Spine_AchievementImageView, achievementTexture);
-				View_Open(Spine_AchievementImageView);
-				
-				var string achievementName;
-				achievementName = MEM_ReadStatStringArr(SPINE_ACHIEVEMENT_NAMES, identifier);
-				View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset, SPINE_ACHIEVEMENT_HEIGHT), achievementName, FONT_SCREENSMALL);
-				
-				FF_ApplyOnceExt(Spine_RemoveAchievementView, SPINE_ACHIEVEMENT_DISPLAY_TIME, 1);
+				Spine_ShowAchievementView(identifier);
 			} else {
 				var int i; i = 0;
 				var int pos; pos = MEM_StackPos.position;
@@ -435,6 +440,7 @@ func string Spine_GetUsernameForRank(var int identifier, var int rank) {
 	return "";
 };
 
+// private, don't call from outside
 func void Spine_RemoveAchievementView() {
 	if (Hlp_IsValidHandle(Spine_AchievementView)) {
 		View_Close(Spine_AchievementView);
@@ -452,15 +458,14 @@ func void Spine_RemoveAchievementView() {
 
 		var int hndl; hndl = MEM_ReadStatArr(SPINE_ACHIEVEMENTSQUEUE, i);
 		
-		if (hndl == -1) {
+		if (hndl != -1) {
 			MEM_WriteStatArr(SPINE_ACHIEVEMENTSQUEUE, i, MEM_ReadStatArr(SPINE_ACHIEVEMENTSQUEUE, i + 1));
-		} else {
 			i += 1;
 			if (i < 9) {
 				MEM_StackPos.position = pos;
 			};
 		};
 		MEM_WriteStatArr(SPINE_ACHIEVEMENTSQUEUE, i, -1);
-		Spine_UnlockAchievement(identifier);
+		FF_ApplyOnceExtData(Spine_ShowAchievementView, 0, 1, identifier);
 	};
 };
