@@ -5,7 +5,7 @@ INSTANCE ItMw_2H_Axe_L_01 (C_Item)
 	name 				=	"Spitzhacke";
 
 	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_2HD_AXE;
+	flags 				=	ITEM_2HD_AXE | ITEM_NSPLIT;
 	material 			=	MAT_METAL;
 
 	value 				=	50;
