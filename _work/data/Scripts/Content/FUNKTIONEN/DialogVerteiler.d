@@ -51,6 +51,11 @@ FUNC VOID DialogVerteiler()
 		Info_Mod_Torlof_Lernen.npc	= Mod_527_SLD_Torlof_NW;
 		Info_Mod_Torlof_EXIT.npc	= Mod_527_SLD_Torlof_NW;
 
+		// Vatras
+
+		Info_Mod_Vatras_Kreis5.npc	= Mod_524_KDW_Vatras_NW;
+		Info_Mod_Vatras_Kreis6.npc	= Mod_524_KDW_Vatras_NW;
+
 		// Xardas
 
 		Info_Mod_Xardas_NW_Lich.npc		= Mod_513_DMB_Xardas_NW;
@@ -99,6 +104,11 @@ FUNC VOID DialogVerteiler()
 
 		Info_Mod_Torlof_Lernen.npc	= Mod_7442_SLD_Torlof_GDG;
 		Info_Mod_Torlof_EXIT.npc	= Mod_7442_SLD_Torlof_GDG;
+
+		// Vatras
+
+		Info_Mod_Vatras_Kreis5.npc	= Mod_6010_KDW_Vatras_GDG;
+		Info_Mod_Vatras_Kreis6.npc	= Mod_6010_KDW_Vatras_GDG;
 	}
 	else if (CurrentLevel == RELENDEL_ZEN)
 	{
