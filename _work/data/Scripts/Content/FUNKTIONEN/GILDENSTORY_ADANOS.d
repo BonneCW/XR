@@ -834,6 +834,7 @@ FUNC VOID GILDENSTORY_ADANOS()
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_Member_26))
 		&& (Npc_IsDead(Balrog_Plateau))
 		&& (Npc_IsDead(GigantDerVorzeit))
+		&& (Mod_WM_CronosAttack < 3)
 		{
 			Mod_WM_CronosAttack = 3;
 
