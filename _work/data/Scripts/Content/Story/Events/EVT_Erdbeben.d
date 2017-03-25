@@ -86,6 +86,8 @@ FUNC VOID ENTER_EVT_ORKTEMPEL_WANDTEIL ()
 	Wld_SendTrigger	("WANDTEIL");
 
 	Wld_SendTrigger	("PFX_ERDBEBEN_12");
+	
+	Mod_ChangeCollision_Temple = 4;
 };
 
 FUNC VOID ENTER_EVT_ORKTEMPEL_BODENPLATTE ()

@@ -867,6 +867,15 @@ FUNC VOID DAUERFUNC_01()
 				Print	("Ich kann die Rüstung nicht ablegen. Sie haftet an mir, wie eine zweite Haut.");
 			};
 		};
+		
+		if (Mod_ChangeCollision_Temple > 0) {
+			Mod_ChangeCollision_Temple -= 1;
+			if (Mod_ChangeCollision_Temple == 1) {
+				var int wallPtr; wallPtr = MEM_SearchVobByName ("TEMPELWALLCLIPPINGBUG");
+				var zCVob buggyWall; buggyWall = MEM_PtrToInst(wallPtr);
+				buggyWall.bitfield[0] = buggyWall.bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
+			};
+		};
 	};
 
 	if (CurrentLevel == MINENTAL_ZEN)

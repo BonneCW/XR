@@ -3774,3 +3774,4 @@ var int Mod_DickeLuft_Running;
 
 var int Mod_AddedSonorAtLares;
 var int Mod_Removed_Sonor;
+var int Mod_ChangeCollision_Temple;
