@@ -29,6 +29,14 @@ func int B_AssessEnemy()
 	&& (self.guild > GIL_SEPERATOR_HUM) {
 		return FALSE;
 	};
+	
+	if (CurrentLevel == EISGEBIET_ZEN) {
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7643_HEX_Griselda_EIS))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
+		&& (playerIsTransformed) {
+			return FALSE;
+		};
+	};
 
 	if (Wld_IsTime(21,00,05,00))
 	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))

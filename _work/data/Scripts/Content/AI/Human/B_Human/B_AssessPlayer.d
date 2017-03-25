@@ -56,6 +56,14 @@ func void B_AssessPlayer ()
 	&& (self.guild > GIL_SEPERATOR_HUM)	{
 		return;
 	};
+	
+	if (CurrentLevel == EISGEBIET_ZEN) {
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7643_HEX_Griselda_EIS))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
+		&& (playerIsTransformed) {
+			return;
+		};
+	};
 		
 	var C_Item itm;
 	var C_Item Weapon;
