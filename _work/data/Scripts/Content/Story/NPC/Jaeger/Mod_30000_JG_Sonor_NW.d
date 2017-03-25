@@ -1,9 +1,9 @@
-instance Mod_7432_JG_Sonor_MT (Npc_Default)
+instance Mod_30000_JG_Sonor_NW (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Sonor"; 
 	guild 		= GIL_OUT;
-	id 			= 7432;
+	id 			= 30000;
 	voice 		= 6;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
@@ -33,23 +33,11 @@ instance Mod_7432_JG_Sonor_MT (Npc_Default)
 	B_SetFightSkills (self, 50); 
 
 	// ------ TA anmelden ------
-	daily_routine 		= Rtn_Start_7432;
+	daily_routine 		= Rtn_Start_30000;
 };
 
-FUNC VOID Rtn_Start_7432()
+FUNC VOID Rtn_Start_30000()
 {	
-	TA_Sit_Campfire		(06,05,20,15,"WP_MT_JAEGERLAGER_04");
-	TA_Sit_Campfire		(20,15,06,05,"WP_MT_JAEGERLAGER_04"); 
-};
-
-FUNC VOID Rtn_Mine_7432()
-{	
-	TA_Follow_Player		(06,05,20,15,"WP_MT_JAEGERLAGER_04");
-	TA_Follow_Player		(20,15,06,05,"WP_MT_JAEGERLAGER_04"); 
-};
-
-FUNC VOID Rtn_Tot_7432()
-{	
-	TA_Sit_Campfire		(06,05,20,15,"TOT");
-	TA_Sit_Campfire		(20,15,06,05,"TOT"); 
+	TA_Stand_Drinking		(06,05,20,15,"NW_BIGFARM_KITCHEN_03");
+	TA_Sleep				(20,15,06,05,"NW_BIGFARM_HOUSE_SLD_SLEEP"); 
 };

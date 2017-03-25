@@ -2992,6 +2992,12 @@ FUNC VOID INIT_NewWorld()
 
 		Wld_InsertNpc	(Schattensnapper,	"NW_PASS_06");
 	};
+	
+	if (!Mod_AddedSonorAtLares)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Cyrco_Nahkampf)) {
+		Mod_AddedSonorAtLares = TRUE;
+		Wld_InsertNpc(Mod_30000_JG_Sonor_NW, "BIGFARM");
+	};
 
 	OldLevel(NEWWORLD_ZEN);
 };
@@ -6441,6 +6447,12 @@ FUNC VOID INIT_Minental ()
 		B_StartOtherRoutine	(Mod_1016_KGD_Hymir_MT, "START");
 
 		Mod_Kap4_KGOrks = 4;
+	};
+	
+	if (!Mod_Removed_Sonor)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Cyrco_Nahkampf)) {
+		Mod_Removed_Sonor = TRUE;
+		B_RemoveNpc(Mod_7432_JG_Sonor_MT);
 	};
 	
 	var zCListSort liste;
