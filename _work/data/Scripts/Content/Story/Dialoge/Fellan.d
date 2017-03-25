@@ -150,6 +150,7 @@ FUNC INT Info_Mod_Fellan_NochAmHaemmern_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Fellan_HabHammer))
 	&& (Npc_RefuseTalk(self) == FALSE)
 	&& (Kapitel >= 2)
+	&& (Mod_WilfriedsQuest >= 7)
 	{
 		return 1;
 	};
