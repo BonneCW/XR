@@ -13,17 +13,17 @@ PROTOTYPE Mst_Default_Scavenger(C_Npc)
 	level							=	7;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	35;
+	attribute	[ATR_STRENGTH]		=	30;
 	attribute	[ATR_DEXTERITY]		=	5;
-	attribute	[ATR_HITPOINTS_MAX]	=	70;
-	attribute	[ATR_HITPOINTS]		=	70;
+	attribute	[ATR_HITPOINTS_MAX]	=	60;
+	attribute	[ATR_HITPOINTS]		=	60;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	35000;
-	protection	[PROT_EDGE]			=	35000;
+	protection	[PROT_BLUNT]		=	30000;
+	protection	[PROT_EDGE]			=	30000;
 	protection	[PROT_POINT]		=	15000;
-	protection	[PROT_FIRE]			=	35;
-	protection	[PROT_FLY]			=	35;
+	protection	[PROT_FIRE]			=	30;
+	protection	[PROT_FLY]			=	30;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

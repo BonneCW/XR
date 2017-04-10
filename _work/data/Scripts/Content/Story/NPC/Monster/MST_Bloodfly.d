@@ -11,19 +11,19 @@ PROTOTYPE Mst_Default_Bloodfly(C_Npc)
 	level							=	5;
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	Hlp_Random(21) + 10;	// 10 - 30
-	attribute	[ATR_DEXTERITY]		=	Hlp_Random(11);		// 0 - 10
-	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(41) + 20; 	// 20 - 60
+	attribute	[ATR_STRENGTH]		=	Hlp_Random(16) + 10;	// 10 - 25
+	attribute	[ATR_DEXTERITY]		=	Hlp_Random(6);		// 0 - 5
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(31) + 20; 	// 20 - 50
 	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 		=	0;
 	
 	//----- Ptotection ----
-	protection	[PROT_BLUNT]		=	Hlp_Random(21)*1000 + 10000;	// 10 - 30
-	protection	[PROT_EDGE]		=	Hlp_Random(21)*1000 + 10000;	// 10 - 30
-	protection	[PROT_POINT]		=	Hlp_Random(21)*1000 + 10000;	// 10 - 30
-	protection	[PROT_FIRE]		=	Hlp_Random(21) + 10;		// 10 - 30
-	protection	[PROT_FLY]		=	20;
+	protection	[PROT_BLUNT]		=	Hlp_Random(11)*1000 + 10000;	// 10 - 20
+	protection	[PROT_EDGE]		=	Hlp_Random(11)*1000 + 10000;	// 10 - 20
+	protection	[PROT_POINT]		=	Hlp_Random(11)*1000 + 10000;	// 10 - 20
+	protection	[PROT_FIRE]		=	Hlp_Random(11) + 10;		// 10 - 20
+	protection	[PROT_FLY]		=	10;
 	protection	[PROT_MAGIC]		=	Hlp_Random(6);
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];

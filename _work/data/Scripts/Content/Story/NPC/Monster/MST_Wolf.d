@@ -11,19 +11,19 @@ PROTOTYPE Mst_Default_Wolf(C_Npc)
 	level							=	6;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	30;
-	attribute	[ATR_DEXTERITY]		=	5;
-	attribute	[ATR_HITPOINTS_MAX]	=	60;
-	attribute	[ATR_HITPOINTS]		=	60;
+	attribute	[ATR_STRENGTH]		=	25;
+	attribute	[ATR_DEXTERITY]		=	4;
+	attribute	[ATR_HITPOINTS_MAX]	=	55;
+	attribute	[ATR_HITPOINTS]		=	55;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	30000;
-	protection	[PROT_EDGE]			=	30000;
+	protection	[PROT_BLUNT]		=	25000;
+	protection	[PROT_EDGE]			=	25000;
 	protection	[PROT_POINT]		=	1000;
-	protection	[PROT_FIRE]			=	30;
-	protection	[PROT_FLY]			=	30;
+	protection	[PROT_FIRE]			=	25;
+	protection	[PROT_FLY]			=	250;
 	protection	[PROT_MAGIC]		=	0;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
