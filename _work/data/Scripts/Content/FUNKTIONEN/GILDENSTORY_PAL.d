@@ -865,13 +865,17 @@ FUNC VOID GILDENSTORY_PAL()
 		if (Mod_PAL_HeroBot == 5)
 		&& (Npc_GetDistToWP(hero, "REL_CITY_085") < 300)
 		{
-			AI_ProcessInfos	(hero);
-
+			Npc_ClearAIQueue(Mod_7240_PAL_Andre_REL);
+			AI_StandUp(Mod_7240_PAL_Andre_REL);
 			B_Attack	(Mod_7240_PAL_Andre_REL, hero, AR_None, 0);
 
 			Mod_PAL_HeroBot = 6;
 
-			Wld_SendTrigger	("EVT_OFENKLAPPEN");
+			var int mvrPtr; mvrPtr = MEM_SearchVobByName("EVT_OFENKLAPPEN");
+			var zCMover mvr; mvr = MEM_PtrToInst(mvrPtr);
+			if (mvr.actKeyframe == 0) {
+				Wld_SendTrigger	("EVT_OFENKLAPPEN");
+			};
 
 			Mdl_RemoveOverlayMDS	(hero, "HUMANS_SPRINT.MDS");
 		};
@@ -927,8 +931,8 @@ FUNC VOID GILDENSTORY_PAL()
 		};
 
 		if (Mod_PAL_HeroBot == 15)
-		&& (Npc_GetDistToWP(HeroBot_REL, "REL_CITY_338") < 200)
-		&& (Npc_GetDistToWP(Mod_7240_PAL_Andre_REL, "REL_CITY_338") < 200)
+		&& (Npc_GetDistToWP(HeroBot_REL, "REL_CITY_338") < 250)
+		&& (Npc_GetDistToWP(Mod_7240_PAL_Andre_REL, "REL_CITY_338") < 250)
 		{
 			Wld_PlayEffect	("spellFX_Firestorm_SPREAD", Mod_7240_PAL_Andre_REL, Mod_7240_PAL_Andre_REL, 0, 0, 0, FALSE);
 
