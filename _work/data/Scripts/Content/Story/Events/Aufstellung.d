@@ -6,3 +6,10 @@ FUNC VOID AUFSTELLUNG()
 		Mod_AufstellungAktiviert = 1;
 	};
 };
+
+FUNC VOID BELIARGATETRIGGER() {
+	if (Kapitel == 1) {
+		AI_StandUp(hero);
+		AI_GotoWp(hero, "PALTOBURG_3");
+	};
+};
