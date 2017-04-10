@@ -82,7 +82,7 @@ FUNC INT Info_Mod_Riddler_Schwert_Condition()
 FUNC VOID Info_Mod_Riddler_Schwert_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Riddler_Schwert_15_00"); //Was ist mit dem Schwert geschehen?
-	AI_Output(self, hero, "Info_Mod_Riddler_Schwert_09_01"); //Die dunkle Magie manifestierte sich zu finsteren Wesen, welche es an sich nahmen. Eines von ihnen hat das Schwert weggebracht. Wahrscheinlich liegt es noch irgendwo hier unten.
+	AI_Output(self, hero, "Info_Mod_Riddler_Schwert_09_01"); //Die dunkle Magie manifestierte sich zu finsteren Wesen, welche es an sich nahmen. Eines von ihnen hat das Schwert weggebracht. Wahrscheinlich liegt es noch irgendwo in den Höhlen unter dem Turm.
 	AI_Output(self, hero, "Info_Mod_Riddler_Schwert_09_02"); //Da du bei deiner Suche allen Hindernissen trotztest, hast du dich als würdig erwiesen. Du sollst das Schwert behalten, wenn du es findest.
 	AI_Output(self, hero, "Info_Mod_Riddler_Schwert_09_03"); //Ich war nicht derjenige, für den es bestimmt war und werde mich in Zukunft vor Mächten hüten, denen ich nicht gewachsen bin.
 	AI_Output(self, hero, "Info_Mod_Riddler_Schwert_09_04"); //Daher kann ich dir bei deiner Suche mit nicht viel helfen, außer einem Teil meiner Macht.

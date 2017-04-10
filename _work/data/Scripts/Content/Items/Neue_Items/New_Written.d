@@ -1485,9 +1485,14 @@ INSTANCE theriddle6(C_Item)
 						B_GivePlayerXP (1000);
 						B_LogEntry			(TOPIC_MOD_THERIDDLE,		"Der geheimnisvolle Fremde ist tot. Diese Dämonen haben ihn getötet. Irgendetwas scheint ihn mit diesen Geschöpfen der Hölle verbunden zu haben. Sonst wäre er sicher nicht an diesen gottverlassenen Ort zurückgekehrt. Das Geheimnis, das er mit mir teilen wollte, hat er mit ins Grab genommen."); 
 						B_SetTopicStatus	(TOPIC_MOD_THERIDDLE,		LOG_SUCCESS);
-						Snd_Play 		("FoundRiddler");					
-						AI_Teleport	(Bau_989_Riddler, "OW_FOGDUNGEON_36_MOVEMENT");
+						Snd_Play 		("FoundRiddler");
+						
+						if (!Hlp_IsValidNpc(Bau_989_Riddler)) {
+							Wld_InsertNpc(Bau_989_Riddler, "PC_HERO");
+						};
+						AI_Teleport	(Bau_989_Riddler, "PC_HERO");
 						Npc_ChangeAttribute	(Bau_989_Riddler, ATR_HITPOINTS, +Bau_989_Riddler.attribute[ATR_HITPOINTS_MAX]);
+						Wld_PlayEffect("SFX_Circle",  Bau_989_Riddler, Bau_989_Riddler, 0, 0, 0, FALSE);
 
 						riddle6 = TRUE;
 					
