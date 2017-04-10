@@ -42,7 +42,12 @@ FUNC VOID Rtn_Start_594 ()
 	TA_Sit_Bench 		(18,00,20,00,"NW_CITY_UPTOWN_PATH_27");
 	TA_Sit_Bench 		(20,00,00,00,"NW_CITY_UPTOWN_PATH_27");
 	TA_Sleep			(00,00,08,00,"NW_CITY_UPTOWN_HUT_05_IN");
+};
 
+FUNC VOID Rtn_Trading_594()
+{	
+	TA_Stand_Guarding	(08,00,20,00,"WP_LUTERO_TRADING");
+    TA_Stand_Guarding	(20,00,08,00,"WP_LUTERO_TRADING");
 };
 
 FUNC VOID Rtn_Brief_594()

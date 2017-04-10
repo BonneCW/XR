@@ -166,7 +166,7 @@ FUNC VOID GILDENSTORY_PAL()
 				Mod_MitLawrenceGesprochen = 7;
 
 				B_StartOtherRoutine	(Mod_591_NONE_Larius_NW, "TREFFEN");
-				B_StartOtherRoutine	(Mod_594_NONE_Lutero_NW, "START");
+				B_StartOtherRoutine	(Mod_594_NONE_Lutero_NW, "TRADING");
 			};
 		
 			Mod_LuteroLiestBrief += 1;
