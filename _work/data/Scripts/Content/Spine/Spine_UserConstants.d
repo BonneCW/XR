@@ -1,16 +1,48 @@
 const int SPINE_ACHIEVEMENTORIENTATION = SPINE_BOTTOMRIGHT;
-const int SPINE_SHOWACHIEVEMENTS = TRUE;
 const int SPINE_ACHIEVEMENT_DISPLAY_TIME = 5000;
 
-const int SPINE_ACHIEVEMENT_01 = 0;
-const int SPINE_ACHIEVEMENT_02 = 1;
-const int SPINE_ACHIEVEMENT_03 = 2;
-const int SPINE_ACHIEVEMENT_04 = 3;
-const int SPINE_ACHIEVEMENT_05 = 4;
-const int SPINE_ACHIEVEMENT_06 = 5;
-const int SPINE_ACHIEVEMENT_07 = 6;
+const int SPINE_ACHIEVEMENT_1 = 0;
+const int SPINE_ACHIEVEMENT_2 = 1;
+const int SPINE_ACHIEVEMENT_3 = 2;
+const int SPINE_ACHIEVEMENT_4 = 3;
+const int SPINE_ACHIEVEMENT_5 = 4;
+const int SPINE_ACHIEVEMENT_6 = 5;
+const int SPINE_ACHIEVEMENT_7 = 6;
+const int SPINE_ACHIEVEMENT_8 = 7;
+const int SPINE_ACHIEVEMENT_9 = 8;
+const int SPINE_ACHIEVEMENT_10 = 9;
+const int SPINE_ACHIEVEMENT_11 = 10;
+const int SPINE_ACHIEVEMENT_12 = 11;
+const int SPINE_ACHIEVEMENT_13 = 12;
+const int SPINE_ACHIEVEMENT_14 = 13;
+const int SPINE_ACHIEVEMENT_15 = 14;
+const int SPINE_ACHIEVEMENT_16 = 15;
+const int SPINE_ACHIEVEMENT_17 = 16;
+const int SPINE_ACHIEVEMENT_18 = 17;
+const int SPINE_ACHIEVEMENT_19 = 18;
+const int SPINE_ACHIEVEMENT_20 = 19;
+const int SPINE_ACHIEVEMENT_21 = 20;
+const int SPINE_ACHIEVEMENT_22 = 21;
+const int SPINE_ACHIEVEMENT_23 = 22;
+const int SPINE_ACHIEVEMENT_24 = 23;
+const int SPINE_ACHIEVEMENT_25 = 24;
+const int SPINE_ACHIEVEMENT_26 = 25;
+const int SPINE_ACHIEVEMENT_27 = 26;
+const int SPINE_ACHIEVEMENT_28 = 27;
+const int SPINE_ACHIEVEMENT_29 = 28;
+const int SPINE_ACHIEVEMENT_30 = 29;
+const int SPINE_ACHIEVEMENT_31 = 30;
+const int SPINE_ACHIEVEMENT_32 = 31;
+const int SPINE_ACHIEVEMENT_33 = 32;
+const int SPINE_ACHIEVEMENT_34 = 33;
+const int SPINE_ACHIEVEMENT_35 = 34;
+const int SPINE_ACHIEVEMENT_36 = 35;
+const int SPINE_ACHIEVEMENT_37 = 36;
+const int SPINE_ACHIEVEMENT_38 = 37;
+const int SPINE_ACHIEVEMENT_39 = 38;
+const int SPINE_ACHIEVEMENT_40 = 39;
 
-const int MAX_ACHIEVEMENTS = 7;
+const int MAX_ACHIEVEMENTS = 40;
 
 const string SPINE_ACHIEVEMENT_NAMES[MAX_ACHIEVEMENTS] = {
 	"Untot?",
@@ -19,7 +51,40 @@ const string SPINE_ACHIEVEMENT_NAMES[MAX_ACHIEVEMENTS] = {
 	"Xeres",
 	"Die Macht der 3 Götter",
 	"Uriziel",
-	"???"
+	"Die Arena",
+	"Auf Entzug",
+	"Wissen um das alte Volk",
+	"Erkenntnis um die Schöpfung",
+	"Helferlein",
+	"Leidensfähigkeit",
+	"Rattenjäger",
+	"Selbstlosigkeit",
+	"Trampel",
+	"MAD",
+	"Frauen an Bord",
+	"Freund der Echsen",
+	"Feind der Echsen",
+	"Junkie",
+	"Bürger Khoratas",
+	"Seelenjäger",
+	"Monsterjäger",
+	"Rübenzieher",
+	"Aufgetaut",
+	"Meister der Verwandlung",
+	"Hobbygärtner",
+	"Feuerfest",
+	"13 Mal die 6",
+	"Deja-Vu",
+	"Voll vernetzt",
+	"Der Schläfer erwache",
+	"Echte Freundschaft",
+	"Chromanin",
+	"Perlentaucher",
+	"Spieler",
+	"Erfahren",
+	"Casanova",
+	"Samariter",
+	"Walking Dead"
 };
 
 const string SPINE_ACHIEVEMENT_DESCRIPTIONS[MAX_ACHIEVEMENTS] = {
@@ -29,10 +94,76 @@ const string SPINE_ACHIEVEMENT_DESCRIPTIONS[MAX_ACHIEVEMENTS] = {
 	"Kapitel 3 abgeschlossen",
 	"Kapitel 4 abgeschlossen",
 	"Kapitel 5 abgeschlossen",
-	"Kapitel 6 abgeschlossen"
+	"Kapitel 6 abgeschlossen",
+	"Alle Vanillepakete gefunden",
+	"8 Buchpulte zur Hintergrundgeschichte gelesen",
+	"18 Buchpulte zur Hintergrundgeschichte gelesen",
+	"80% aller Nebenquests erfüllt",
+	"Die Stadtführung mit Hubert durchgeführt",
+	"Mehr als 20 Ratten im Wettstreit in Khorata getötet",
+	"Rotkäppchen gerettet, indem man sich selbst geopfert hat",
+	"100 Fleischwanzen zertreten",
+	"Rätsel im Schläfertempel gelöst",
+	"Alle möglichen Frauen an Bord nach Irdorath",
+	"Alle Echsenquests erfolgreich beendet",
+	"Alle Echsen ausgelöscht",
+	"Alle Halluzinationen abgeschlossen",
+	"Als Bürger Khoratas anerkannt worden",
+	"Alle drei Seelensteine erhalten",
+	"Jedes Monster mindestens einmal getötet",
+	"Rüben für Lobart gezogen",
+	"Den Eisriesen im Eisgebiet besiegt",
+	"Griseldas Turnier gewonnen",
+	"Quest &quot;Wertvolle Dokumente&quot; abgeschlossen",
+	"Die Prüfung des Feuers bestanden",
+	"Die Quest &quot;13 Mal die 6&quot; abgeschlossen",
+	"Die Crawlerrüstung erhalten",
+	"Alle Beliarschreine aktiviert",
+	"Die Schläfermaske entdeckt",
+	"Die Quest &quot;Das Treffen&quot; abgeschlossen",
+	"Das Chromanin-Rätsel gelöst",
+	"Die Riesenperle vor Khorinis gefunden",
+	"Eine Runde Schagby gewonnen",
+	"Set der Ehre vervollständigt",
+	"Mit allen möglichen Frauen geschlafen",
+	"Akils Hof gerettet",
+	"Akils Hof nicht gerettet"
 };
 
 const string SPINE_ACHIEVEMENT_TEXTURES[MAX_ACHIEVEMENTS] = {
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
 	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
 	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
 	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
@@ -49,6 +180,39 @@ const string SPINE_ACHIEVEMENT_LOCKED[MAX_ACHIEVEMENTS] = {
 	"",
 	"",
 	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
 	""
 };
 
@@ -59,6 +223,81 @@ const string SPINE_ACHIEVEMENT_HIDDEN[MAX_ACHIEVEMENTS] = {
 	"TRUE",
 	"TRUE",
 	"TRUE",
-	"TRUE"
+	"TRUE",
+	"FALSE",
+	"FALSE",
+	"FALSE",
+	"FALSE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"FALSE",
+	"TRUE",
+	"FALSE",
+	"FALSE",
+	"FALSE",
+	"FALSE",
+	"FALSE",
+	"TRUE",
+	"FALSE",
+	"TRUE",
+	"FALSE",
+	"FALSE",
+	"TRUE",
+	"TRUE",
+	"FALSE",
+	"FALSE",
+	"FALSE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"FALSE",
+	"FALSE",
+	"TRUE",
+	"FALSE"
 };
 
+const string SPINE_ACHIEVEMENT_PROGRESS[MAX_ACHIEVEMENTS] = {
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"13",
+	"8",
+	"18",
+	"0",
+	"0",
+	"0",
+	"0",
+	"100",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"3",
+	"100",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"13",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0"
+};
