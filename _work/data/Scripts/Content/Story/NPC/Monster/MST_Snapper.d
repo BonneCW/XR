@@ -11,19 +11,19 @@ PROTOTYPE Mst_Default_Snapper(C_Npc)
 	level							=	12;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	90;
+	attribute	[ATR_STRENGTH]		=	100;
 	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	120;
-	attribute	[ATR_HITPOINTS]		=	120;
+	attribute	[ATR_HITPOINTS_MAX]	=	140;
+	attribute	[ATR_HITPOINTS]		=	140;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	60000;
-	protection	[PROT_EDGE]			=	60000;
-	protection	[PROT_POINT]		=	60000;		
-	protection	[PROT_FIRE]			=	60;
-	protection	[PROT_FLY]			=	60;
+	protection	[PROT_BLUNT]		=	70000;
+	protection	[PROT_EDGE]			=	70000;
+	protection	[PROT_POINT]		=	70000;		
+	protection	[PROT_FIRE]			=	70;
+	protection	[PROT_FLY]			=	70;
 	protection	[PROT_MAGIC]		=	15;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];

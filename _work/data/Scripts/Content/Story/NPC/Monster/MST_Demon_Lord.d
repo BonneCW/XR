@@ -13,7 +13,7 @@ PROTOTYPE Mst_Default_DemonLord(C_Npc)
 	//------ Attribute ----	
 	attribute	[ATR_STRENGTH]		= Hlp_Random(101) + 150;	// 150 - 250
 	attribute	[ATR_DEXTERITY]		= Hlp_Random(21) + 30;		// 30 - 50
-	attribute	[ATR_HITPOINTS_MAX]	= Hlp_Random(201) + 450;	// 450 - 650
+	attribute	[ATR_HITPOINTS_MAX]	= Hlp_Random(201) + 650;	// 650 - 850
 	attribute	[ATR_HITPOINTS]		= attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		= 200;
 	attribute	[ATR_MANA] 		= 200;

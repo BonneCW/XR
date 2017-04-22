@@ -13,8 +13,8 @@ PROTOTYPE Mst_Default_Shadowbeast(C_Npc)
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	270;
 	attribute	[ATR_DEXTERITY]		=	25;
-	attribute	[ATR_HITPOINTS_MAX]	=	300;
-	attribute	[ATR_HITPOINTS]		=	300;
+	attribute	[ATR_HITPOINTS_MAX]	=	350;
+	attribute	[ATR_HITPOINTS]		=	350;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 

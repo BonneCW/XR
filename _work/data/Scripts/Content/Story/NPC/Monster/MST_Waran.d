@@ -11,19 +11,19 @@ PROTOTYPE Mst_Default_Waran(C_Npc)
 	level							=	12;
 	
 	//----- Attributes ----
-	attribute	[ATR_STRENGTH]		=	80;
+	attribute	[ATR_STRENGTH]		=	90;
 	attribute	[ATR_DEXTERITY]		=	5;
-	attribute	[ATR_HITPOINTS_MAX]	=	120;
-	attribute	[ATR_HITPOINTS]		=	120;
+	attribute	[ATR_HITPOINTS_MAX]	=	130;
+	attribute	[ATR_HITPOINTS]		=	130;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	100000;
-	protection	[PROT_EDGE]			=	100000;
-	protection	[PROT_POINT]		=	100000;
-	protection	[PROT_FIRE]			=	100;
-	protection	[PROT_FLY]			=	100;
+	protection	[PROT_BLUNT]		=	110000;
+	protection	[PROT_EDGE]			=	110000;
+	protection	[PROT_POINT]		=	110000;
+	protection	[PROT_FIRE]			=	110;
+	protection	[PROT_FLY]			=	110;
 	protection	[PROT_MAGIC]		=	20;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];

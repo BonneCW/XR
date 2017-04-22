@@ -13,7 +13,7 @@ PROTOTYPE Mst_Default_Demon(C_Npc)
 	//----- Attribute ----	
 	attribute	[ATR_STRENGTH]		=	Hlp_Random(101) + 100;	// 100 - 200
 	attribute	[ATR_DEXTERITY]		=	Hlp_Random(21) + 20;	// 20 - 40
-	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(151) + 275;	// 275 - 425
+	attribute	[ATR_HITPOINTS_MAX]	=	Hlp_Random(151) + 375;	// 375 - 525
 	attribute	[ATR_HITPOINTS]		=	attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		=	200;
 	attribute	[ATR_MANA] 		=	200;

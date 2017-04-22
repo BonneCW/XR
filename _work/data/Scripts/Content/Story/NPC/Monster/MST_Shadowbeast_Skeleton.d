@@ -13,8 +13,8 @@ PROTOTYPE Mst_Default_Shadowbeast_Skeleton(C_Npc)
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	200;
 	attribute	[ATR_DEXTERITY]		=	25;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
+	attribute	[ATR_HITPOINTS_MAX]	=	450;
+	attribute	[ATR_HITPOINTS]		=	450;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 

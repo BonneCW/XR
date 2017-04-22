@@ -13,15 +13,15 @@ PROTOTYPE Mst_Default_MinecrawlerWarrior(C_Npc)
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	90;
 	attribute	[ATR_DEXTERITY]		=	20;
-	attribute	[ATR_HITPOINTS_MAX]	=	180;
-	attribute	[ATR_HITPOINTS]		=	180;
+	attribute	[ATR_HITPOINTS_MAX]	=	210;
+	attribute	[ATR_HITPOINTS]		=	210;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	90000;
-	protection	[PROT_EDGE]			=	90000;
-	protection	[PROT_POINT]		=	90000;
+	protection	[PROT_BLUNT]		=	110000;
+	protection	[PROT_EDGE]			=	110000;
+	protection	[PROT_POINT]		=	110000;
 	protection	[PROT_FIRE]			=	90;
 	protection	[PROT_FLY]			=	90;
 	protection	[PROT_MAGIC]		=	30;

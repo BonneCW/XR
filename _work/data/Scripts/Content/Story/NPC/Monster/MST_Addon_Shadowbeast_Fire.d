@@ -16,9 +16,9 @@ PROTOTYPE Mst_Default_Shadowbeast_Addon_Fire (C_Npc)
 	effect	= "SPELLFX_FIREARMOR";
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		= Hlp_Random(101) + 100;	// 100 - 200
+	attribute	[ATR_STRENGTH]		= Hlp_Random(101) + 150;	// 150 - 250
 	attribute	[ATR_DEXTERITY]		= Hlp_Random(21) + 5;		// 5 - 25
-	attribute	[ATR_HITPOINTS_MAX]	= Hlp_Random(301) + 150;	// 150 - 450
+	attribute	[ATR_HITPOINTS_MAX]	= Hlp_Random(301) + 250;	// 250 - 550
 	attribute	[ATR_HITPOINTS]		= attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		= 0;
 	attribute	[ATR_MANA] 		= 0;
