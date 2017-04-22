@@ -1,4 +1,4 @@
-const string SPINE_VERSION_STRING = "1.2.0";
+const string SPINE_VERSION_STRING = "1.4.0";
 
 // Spine modules
 
@@ -24,3 +24,5 @@ const int SPINE_ACHIEVEMENT_IMAGE_HEIGHT = 64;
 const int SPINE_MESSAGETYPE_BASE = 0;
 const int SPINE_MESSAGETYPE_INT = 1;
 const int SPINE_MESSAGETYPE_STRING = 2;
+
+var int SPINE_SHOWACHIEVEMENTS; // show achievement (you can set this to FALSE to disable the achievement widget, but internally the achievement will be unlocked, so you still can see it in Spine), configured in Spine GUI

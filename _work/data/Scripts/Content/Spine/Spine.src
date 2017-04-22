@@ -1,6 +1,8 @@
 Spine_Constants.d
 Spine_UserConstants.d
 Spine_Message.d
+Spine_Achievements.d
 Spine_OverallSave.d
+Spine_Scores.d
 Spine_API.d
 Spine_Multiplayer.d
