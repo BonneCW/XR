@@ -24,6 +24,7 @@ PROTOTYPE Mst_Default_Scavenger(C_Npc)
 	protection	[PROT_POINT]		=	15000;
 	protection	[PROT_FIRE]			=	30;
 	protection	[PROT_FLY]			=	30;
+	protection	[PROT_MAGIC]		=	5;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_Gobbo_Skeleton(C_NPC)
 	protection	[PROT_POINT]		=	-1;
 	protection	[PROT_FIRE]			=	0;
 	protection	[PROT_FLY]			=	75;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_MAGIC]		=	20;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_Zombie(C_Npc)
 	protection	[PROT_POINT]		=	50000;	
 	protection	[PROT_FIRE]			=	50;
 	protection	[PROT_FLY]			=	50;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_MAGIC]		=	20;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

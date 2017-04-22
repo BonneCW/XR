@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_Giant_Rat(C_Npc)
 	protection	[PROT_POINT]		=	15000;
 	protection	[PROT_FIRE]			=	15;
 	protection	[PROT_FLY]			=	15;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_MAGIC]		=	5;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

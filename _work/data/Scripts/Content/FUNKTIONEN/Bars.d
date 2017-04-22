@@ -47,7 +47,7 @@ func void ShowBars () {
 		bar_mana.zCView_vposx = 80;
 		bar_mana.zCView_vposy = 7572;
 	} else if ((Mod_Balken == 2)
-	&& (hero.attribute[ATR_HITPOINTS] == hero.attribute[ATR_HITPOINTS_MAX])) {
+	&& (hero.attribute[ATR_MANA] == hero.attribute[ATR_MANA_MAX])) {
 		bar_mana.zCView_vposx = 8200;
 		bar_mana.zCView_vposy = 8200;
 	};

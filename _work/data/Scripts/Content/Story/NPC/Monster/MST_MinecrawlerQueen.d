@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_MinecrawlerQueen(C_Npc)
 	protection	[PROT_POINT]		=	120000;
 	protection	[PROT_FIRE]			=	120;
 	protection	[PROT_FLY]			=	1000;
-	protection	[PROT_MAGIC]		=	60;
+	protection	[PROT_MAGIC]		=	80;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 //------------------------------------------------------

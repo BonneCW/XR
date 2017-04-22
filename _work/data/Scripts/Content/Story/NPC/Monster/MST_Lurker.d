@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_Lurker(C_Npc)
 	protection	[PROT_POINT]		=	60000;
 	protection	[PROT_FIRE]			=	60;
 	protection	[PROT_FLY]			=	60;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_MAGIC]		=	25;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

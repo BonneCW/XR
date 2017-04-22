@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_Giant_Bug(C_Npc)
 	protection	[PROT_POINT]		=	40000;
 	protection	[PROT_FIRE]			=	40;
 	protection	[PROT_FLY]			=	40;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_MAGIC]		=	10;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

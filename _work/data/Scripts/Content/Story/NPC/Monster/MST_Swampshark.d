@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_Swampshark(C_Npc)
 	protection	[PROT_POINT]		=	100000;
 	protection	[PROT_FIRE]			=	100;
 	protection	[PROT_FLY]			=	100;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_MAGIC]		=	25;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

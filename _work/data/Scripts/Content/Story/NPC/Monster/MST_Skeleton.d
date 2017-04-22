@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_Skeleton(C_Npc)
 	protection	[PROT_POINT]		=	-1; 
 	protection	[PROT_FIRE]			=	125;
 	protection	[PROT_FLY]			=	125;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_MAGIC]		=	15;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 		

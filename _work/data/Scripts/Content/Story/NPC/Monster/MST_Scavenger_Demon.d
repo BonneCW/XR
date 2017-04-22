@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_Scavenger_Demon(C_Npc)
 	protection	[PROT_POINT]		=	10000;
 	protection	[PROT_FIRE]			=	60;
 	protection	[PROT_FLY]			=	60;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_MAGIC]		=	20;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

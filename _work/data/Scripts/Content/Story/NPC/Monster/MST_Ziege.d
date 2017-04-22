@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_Ziege(C_Npc)
 	protection	[PROT_POINT]		=	75000;
 	protection	[PROT_FIRE]			=	125;
 	protection	[PROT_FLY]			=	125;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_MAGIC]		=	30;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 

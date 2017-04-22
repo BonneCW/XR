@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_Molerat(C_Npc)
 	protection	[PROT_POINT]		=	25000;	
 	protection	[PROT_FIRE]			=	25;
 	protection	[PROT_FLY]			=	25;	
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_MAGIC]		=	10;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 	

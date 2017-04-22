@@ -20,7 +20,7 @@ prototype Mst_Default_Gobbo_Neu (C_NPC)
 	protection	[PROT_POINT]		=	20000;
 	protection	[PROT_FIRE]			=	20;
 	protection	[PROT_FLY]			=	20;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_MAGIC]		=	5;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 
