@@ -103,6 +103,7 @@ INSTANCE Info_Mod_Jackal_HabTabak (C_INFO)
 
 FUNC INT Info_Mod_Jackal_HabTabak_Condition()
 {
+	Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_8, Npc_HasItems(hero, ItMi_JackalTabak));
 	if (Npc_HasItems(hero, ItMi_JackalTabak) > 0)
 	{
 		return 1;

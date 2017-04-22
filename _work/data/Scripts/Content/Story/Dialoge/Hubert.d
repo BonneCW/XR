@@ -276,6 +276,8 @@ FUNC VOID Info_Mod_Hubert_CityGuide06_Info()
 	B_StartOtherRoutine	(self, "GASTHAUS");
 
 	B_GivePlayerXP	(50);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_12);
 };
 
 INSTANCE Info_Mod_Hubert_Freudenspender (C_INFO)

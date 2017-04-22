@@ -1,426 +1,159 @@
-FUNC VOID Erfolge_Func ()
-{
+FUNC VOID CheckHalluAchievement() {
+	if (Spine_OverallSaveGetInt("HalluHS") == 1 && Spine_OverallSaveGetInt("Wolkenwelt") == 1) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_20);
+	};
+};
+
+FUNC VOID CheckSexAchievement() {
+	if (Spine_OverallSaveGetInt("JudithSex") == 1 && Spine_OverallSaveGetInt("HexeSex") == 1 && Spine_OverallSaveGetInt("SonjaSex") == 1) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_38);
+	};
+};
+
+FUNC VOID CheckMonsterHunterAchievement() {
+	var int amount; amount = 0;
+	amount += Spine_OverallSaveGetInt("UndeadOrcWarrior");
+	amount += Spine_OverallSaveGetInt("UndeadOrcPriest");
+	amount += Spine_OverallSaveGetInt("WaterOrc");
+	amount += Spine_OverallSaveGetInt("OrcWarrior");
+	amount += Spine_OverallSaveGetInt("OrcShaman");
+	amount += Spine_OverallSaveGetInt("OrcElite");
+	amount += Spine_OverallSaveGetInt("Stoneguardian");
+	amount += Spine_OverallSaveGetInt("Erzguardian");
+	amount += Spine_OverallSaveGetInt("Shadowbeast_Fire");
+	amount += Spine_OverallSaveGetInt("Razor");
+	amount += Spine_OverallSaveGetInt("OrcBiter");
+	amount += Spine_OverallSaveGetInt("Keiler");
+	amount += Spine_OverallSaveGetInt("Riesenkeiler");
+	amount += Spine_OverallSaveGetInt("Icewolf");
+	amount += Spine_OverallSaveGetInt("Gobbo_Warrior");
+	amount += Spine_OverallSaveGetInt("Giant_DesertRat");
+	amount += Spine_OverallSaveGetInt("Bloodhound");
+	amount += Spine_OverallSaveGetInt("Blattcrawler");
+	amount += Spine_OverallSaveGetInt("Erznager");
+	amount += Spine_OverallSaveGetInt("Insect");
+	amount += Spine_OverallSaveGetInt("Alligator");
+	amount += Spine_OverallSaveGetInt("Zombie");
+	amount += Spine_OverallSaveGetInt("Ziege");
+	amount += Spine_OverallSaveGetInt("Wolf");
+	amount += Spine_OverallSaveGetInt("Riesenwolf");
+	amount += Spine_OverallSaveGetInt("Wisp");
+	amount += Spine_OverallSaveGetInt("Warg");
+	amount += Spine_OverallSaveGetInt("BlackWolf");
+	amount += Spine_OverallSaveGetInt("Waran");
+	amount += Spine_OverallSaveGetInt("Truhe");
+	amount += Spine_OverallSaveGetInt("Troll_Black");
+	amount += Spine_OverallSaveGetInt("Troll_Silber");
+	amount += Spine_OverallSaveGetInt("Troll");
+	amount += Spine_OverallSaveGetInt("Tiger_White");
+	amount += Spine_OverallSaveGetInt("Swampshark");
+	amount += Spine_OverallSaveGetInt("Swampshark_Undead");
+	amount += Spine_OverallSaveGetInt("Lindwurm");
+	amount += Spine_OverallSaveGetInt("Wurm");
+	amount += Spine_OverallSaveGetInt("StoneGolem");
+	amount += Spine_OverallSaveGetInt("ErzGolem");
+	amount += Spine_OverallSaveGetInt("EisenGolem");
+	amount += Spine_OverallSaveGetInt("Spider");
+	amount += Spine_OverallSaveGetInt("Spider_Big");
+	amount += Spine_OverallSaveGetInt("Spider_Queen");
+	amount += Spine_OverallSaveGetInt("Dalma");
+	amount += Spine_OverallSaveGetInt("Snapper");
+	amount += Spine_OverallSaveGetInt("FeuerSnapper");
+	amount += Spine_OverallSaveGetInt("WasserSnapper");
+	amount += Spine_OverallSaveGetInt("SchattenSnapper");
+	amount += Spine_OverallSaveGetInt("Sleeper");
+	amount += Spine_OverallSaveGetInt("SkeletonMage");
+	amount += Spine_OverallSaveGetInt("Skeleton_Lord");
+	amount += Spine_OverallSaveGetInt("Skeleton_Lord_Ghost");
+	amount += Spine_OverallSaveGetInt("Skeleton");
+	amount += Spine_OverallSaveGetInt("SkeletonWarrior");
+	amount += Spine_OverallSaveGetInt("Lesser_Skeleton");
+	amount += Spine_OverallSaveGetInt("Sheep");
+	amount += Spine_OverallSaveGetInt("Hammel");
+	amount += Spine_OverallSaveGetInt("Shadowbeast_Skeleton");
+	amount += Spine_OverallSaveGetInt("Nightmare_Skeleton");
+	amount += Spine_OverallSaveGetInt("Shadowbeast");
+	amount += Spine_OverallSaveGetInt("Feuerlaeufer");
+	amount += Spine_OverallSaveGetInt("Wasserlaeufer");
+	amount += Spine_OverallSaveGetInt("Eislaeufer");
+	amount += Spine_OverallSaveGetInt("Nightmare");
+	amount += Spine_OverallSaveGetInt("Scavenger_Ice");
+	amount += Spine_OverallSaveGetInt("Scavenger_Demon");
+	amount += Spine_OverallSaveGetInt("Scavenger");
+	amount += Spine_OverallSaveGetInt("Rabbit");
+	amount += Spine_OverallSaveGetInt("Orcdog");
+	amount += Spine_OverallSaveGetInt("Molerat");
+	amount += Spine_OverallSaveGetInt("Minotaurus");
+	amount += Spine_OverallSaveGetInt("MinecrawlerWarrior");
+	amount += Spine_OverallSaveGetInt("MinecrawlerWarrior_Undead");
+	amount += Spine_OverallSaveGetInt("RedCrab");
+	amount += Spine_OverallSaveGetInt("MinecrawlerQueen");
+	amount += Spine_OverallSaveGetInt("ErznagerQueen");
+	amount += Spine_OverallSaveGetInt("Minecrawler");
+	amount += Spine_OverallSaveGetInt("Kristallcrawler");
+	amount += Spine_OverallSaveGetInt("Meatbug");
+	amount += Spine_OverallSaveGetInt("Lurker");
+	amount += Spine_OverallSaveGetInt("Kobold");
+	amount += Spine_OverallSaveGetInt("IceGolem");
+	amount += Spine_OverallSaveGetInt("Harpie");
+	amount += Spine_OverallSaveGetInt("Gobbo_Skeleton");
+	amount += Spine_OverallSaveGetInt("Gobbo_Green");
+	amount += Spine_OverallSaveGetInt("Gobbo_Black");
+	amount += Spine_OverallSaveGetInt("Giant_Rat");
+	amount += Spine_OverallSaveGetInt("Rat");
+	amount += Spine_OverallSaveGetInt("Giant_Bug");
+	amount += Spine_OverallSaveGetInt("FireWaran");
+	amount += Spine_OverallSaveGetInt("EisWaran");
+	amount += Spine_OverallSaveGetInt("FireGolem");
+	amount += Spine_OverallSaveGetInt("Erdgigant");
+	amount += Spine_OverallSaveGetInt("Eisdrachensnapper");
+	amount += Spine_OverallSaveGetInt("DungeonHarpie");
+	amount += Spine_OverallSaveGetInt("DragonSnapper");
+	amount += Spine_OverallSaveGetInt("RazorSkelett");
+	amount += Spine_OverallSaveGetInt("DemonLord");
+	amount += Spine_OverallSaveGetInt("DemonHigh");
+	amount += Spine_OverallSaveGetInt("Demon");
+	amount += Spine_OverallSaveGetInt("LessDemon");
+	amount += Spine_OverallSaveGetInt("Blutgolem");
+	amount += Spine_OverallSaveGetInt("Bloodfly");
+	amount += Spine_OverallSaveGetInt("Balrog");
+	amount += Spine_OverallSaveGetInt("Alraune");
+	amount += Spine_OverallSaveGetInt("Swamprat");
+	amount += Spine_OverallSaveGetInt("SwampGolem");
+	amount += Spine_OverallSaveGetInt("SwampDrone");
+	amount += Spine_OverallSaveGetInt("Puma");
+	amount += Spine_OverallSaveGetInt("StonePuma");
+	amount += Spine_OverallSaveGetInt("Apfelbaum");
+	amount += Spine_OverallSaveGetInt("StoneGolemerz");
+	amount += Spine_OverallSaveGetInt("Kristallgolem");
+	amount += Spine_OverallSaveGetInt("UndeadOrcWarriorHorn");
+	amount += Spine_OverallSaveGetInt("Hauertroll");
+	amount += Spine_OverallSaveGetInt("Schattenwark");
+	amount += Spine_OverallSaveGetInt("Zombie_Eisschnee");
+	amount += Spine_OverallSaveGetInt("SchneeHase");
+	Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_23, amount);
+};
+
+FUNC VOID Erfolge_Func() {
 	// Erfolge auswerten
-
-	if (Mod_SaveOther == 0)	// Nicht während Gesprächen
-	{
-		// Eifriger Büßer
-
-		if (Erfolg_EifrigerBuesser == 0)
-		&& (Mod_CountSpende >= 100000)
-		{
-			Erfolg_EifrigerBuesser = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Eifriger Büßer");
-
-			MEM_SetGothOpt ("XERES", "acheb", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Eiserne Konstitution
-
-		if (Erfolg_EiserneKonstitution == 0)
-		&& (Mod_CountGifte >= 200)
-		{
-			Erfolg_EiserneKonstitution = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Eiserne Konstitution");
-
-			MEM_SetGothOpt ("XERES", "achek", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Erkenntnis um die Schöpfung
-
-		if (Erfolg_Backgroundstory2 == 0)
-		&& (BackGroundCounter == 18)
-		{
-			Erfolg_Backgroundstory2 = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Erkenntnis um die Schöpfung");
-
-			MEM_SetGothOpt ("XERES", "achbgs2", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Flinker Lehrling
-
-		if (Erfolg_FLehrling == 0)
-		&& (Mod_IstLehrling == 1)
-		&& (TimeCounter_Real < 7200)
-		{
-			Erfolg_FLehrling = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Flinker Lehrling");
-
-			MEM_SetGothOpt ("XERES", "achfl", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Helferlein
-
-		if (Erfolg_Helferlein == 0)
-		&& (CurrentNQ >= ((80*MaxNQ)/100))
-		{
-			Erfolg_Helferlein = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Helferlein");
-
-			MEM_SetGothOpt ("XERES", "achh", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Kiffer
-
-		if (Erfolg_Kiffer == 0)
-		&& (Mod_JointCounter == 100)
-		{
-			Erfolg_Kiffer = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Kettenraucher");
-
-			MEM_SetGothOpt ("XERES", "achk", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Lange Finger
-
-		if (Erfolg_LangeFinger == 0)
-		&& (Mod_CountTaschendiebstahl >= 300)
-		{
-			Erfolg_LangeFinger = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Lange Finger");
-
-			MEM_SetGothOpt ("XERES", "achlf", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Leidensfähigkeit
-
-		if (Erfolg_Leidensfaehigkeit == 0)
-		&& (Npc_KnowsInfo(hero, Info_Mod_Hubert_CityGuide06))
-		{
-			Erfolg_Leidensfaehigkeit = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Leidensfähigkeit");
-
-			MEM_SetGothOpt ("XERES", "achlf", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Levelmeister
-
-		if (Erfolg_MaxLevel == 0)
-		&& (hero.level == 50)
-		{
-			Erfolg_MaxLevel = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Levelmeister");
-
-			MEM_SetGothOpt ("XERES", "achlm", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Magersüchtiger
-
-		if (Erfolg_Magersucht == 0)
-		&& (Mod_EssKo >= 5)
-		{
-			Erfolg_Magersucht = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Magersüchtiger");
-
-			MEM_SetGothOpt ("XERES", "achms", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Monsterjäger
-
-		if (Erfolg_MonsterHunter == 0)
-		&& (Mod_MonsterGekillt >= 2000)
-		{
-			Erfolg_MonsterHunter = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Monsterjäger");
-
-			MEM_SetGothOpt ("XERES", "achmj", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Rattenjäger
-
-		if (Erfolg_Rattenjaeger == 0)
-		&& (Mod_REL_Wettstreit_Hero > 20)
-		{
-			Erfolg_Rattenjaeger = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Rattenjäger");
-
-			MEM_SetGothOpt ("XERES", "achrj", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Seepferdchen
-
-		if (Erfolg_Seepferdchen == 0)
-		&& (Mod_SchwimmTauchCounter >= 1800)
-		{
-			Erfolg_Seepferdchen = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Seepferdchen");
-
-			MEM_SetGothOpt ("XERES", "achsp", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Selbstlosigkeit
-
-		if (Erfolg_Selbstlosigkeit == 0)
-		&& (Npc_KnowsInfo(hero, Info_Mod_Wolf_Rotkaeppchen_NimmMich))
-		{
-			Erfolg_Selbstlosigkeit = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Selbstlosigkeit");
-
-			MEM_SetGothOpt ("XERES", "achsl", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Sparschwein
-
-		if (Erfolg_Sparschwein == 0)
-		&& (Npc_HasItems(hero, ItMi_Gold) >= 100000)
-		{
-			Erfolg_Sparschwein = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Sparschwein");
-
-			MEM_SetGothOpt ("XERES", "achss", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Trampel
-
-		if (Erfolg_Trampel == 0)
-		&& (Fleischwanzen_Zertrampelt >= 100)
-		{
-			Erfolg_Trampel = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Trampel");
-
-			MEM_SetGothOpt ("XERES", "achtr", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Wandlungskünstler
-
-		if (Erfolg_Wandlungskuenstler == 0)
-		&& (Mod_CountVerwandlungen >= 50)
-		{
-			Erfolg_Wandlungskuenstler = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Wandlungskünstler");
-
-			MEM_SetGothOpt ("XERES", "achwk", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Wissen um das alte Volk
-
-		if (Erfolg_Backgroundstory == 0)
-		&& (BackGroundCounter == 8)
-		{
-			Erfolg_Backgroundstory = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Wissen um das alte Volk");
-
-			MEM_SetGothOpt ("XERES", "achbgs1", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
-		};
-
-		// Zeitspiel
-
-		if (Erfolg_Zeitspiel == 0)
-		&& (TimeCounter_Real >= 360000)
-		{
-			Erfolg_Zeitspiel = 1;
-
-			CurrentErfolge += 1;
-
-			ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100)/MaxErfolge), "% aller Erfolge erreicht");
-
-			Npc_RemoveInvItems	(hero, ItWr_Erfolge, 1);
-			CreateInvItems	(hero, ItWr_Erfolge, 1);
-
-			B_GivePlayerXP	(50);
-
-			B_PrintErfolg ("Zeitspiel");
-
-			MEM_SetGothOpt ("XERES", "achzs", "1");
-			MEM_SetGothOpt ("XERES", "ach", IntToString(CurrentErfolge));
+	// Helferlein
+	if (CurrentNQ >= ((80 * MaxNQ) / 100)) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_11);
+	};
+	// Rattenjäger
+	if (Mod_REL_Wettstreit_Hero > 20) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_13);
+	};
+	if (Npc_HasItems(hero, ItMi_GreatPearl)) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_35);
+	};
+	if (Npc_HasItems(hero, ItBe_GuertelDerEhre) && Npc_HasItems(hero, ItAm_HalskettederEhre)) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_37);
+	};
+	
+	if (CurrentLevel == BERGWELT_ZEN) {
+		if (Npc_HasItems(hero, ITAR_SleeperMask)) {
+			Spine_UnlockAchievement(SPINE_ACHIEVEMENT_32);
 		};
 	};
 };

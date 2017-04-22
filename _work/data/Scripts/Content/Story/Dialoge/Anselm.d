@@ -1066,6 +1066,8 @@ FUNC VOID Info_Mod_Anselm_Buerger3_E()
 
 		B_LogEntry	(TOPIC_MOD_KHORATA_BUERGER, "Ich bin nun ein Bürger Khoratas.");
 		B_SetTopicStatus	(TOPIC_MOD_KHORATA_BUERGER, LOG_SUCCESS);
+		
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_21);
 
 		CurrentNQ += 1;
 	}

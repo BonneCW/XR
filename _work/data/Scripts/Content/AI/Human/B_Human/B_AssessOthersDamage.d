@@ -25,6 +25,10 @@ func void B_AssessOthersDamage ()
 			return;
 		};
 	};
+	
+	if (Kapitel >= 6 && Hlp_GetInstanceID(self) == Hlp_GetInstanceID(PC_Friend_XW)) {
+		return;
+	};
 
 	if (C_NpcIsHero(other))
 	&& (Unsichtbarkeitsperk == TRUE)

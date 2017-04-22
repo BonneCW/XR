@@ -326,6 +326,8 @@ FUNC VOID GILDENSTORY_SL()
 		&& (!Npc_IsInState(Mod_7330_Meer_HAL, ZS_Talk))
 		{
 			AI_Teleport	(hero, "HALU_04");
+			Spine_OverallSaveSetInt("HalluHS", 1);
+			CheckHalluAchievement();
 		};
 	};
 

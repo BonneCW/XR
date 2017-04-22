@@ -408,6 +408,8 @@ FUNC VOID Info_Mod_Gorn_Treffen_Info()
 	B_SetTopicStatus	(TOPIC_MOD_TREFFEN, LOG_SUCCESS);
 
 	CurrentNQ += 1;
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_33);
 };
 
 INSTANCE Info_Mod_Gorn_Hexen_04 (C_INFO)

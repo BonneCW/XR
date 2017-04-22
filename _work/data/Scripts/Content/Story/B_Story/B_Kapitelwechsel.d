@@ -15,6 +15,7 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	{
 		// ------ Bild einblenden ------
 		IntroduceChapter (KapWechsel_1,"Die Bedrohung","chapter1.tga","chapter_01.wav", 6000);
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_1);
 	}
 	
 	//***************************************************************************
@@ -24,6 +25,7 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	{
 		// ------ Bild einblenden ------
 		IntroduceChapter (KapWechsel_2,"Die Foki","chapter2.tga","chapter_01.wav", 6000);
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_2);
 	}
 	
 	//***************************************************************************
@@ -33,6 +35,7 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	{	
 		// ------ Bild einblenden ------
 		IntroduceChapter (KapWechsel_3,"Xeres","chapter3.tga","chapter_01.wav", 6000);
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_3);
 	}
 	
 	//***************************************************************************
@@ -42,6 +45,7 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	{
 		// ------ Bild einblenden ------
 		IntroduceChapter (KapWechsel_4,"Die Macht der 3 Götter","chapter4.tga","chapter_01.wav", 6000);
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_4);
 	}
 	
 	//***************************************************************************
@@ -51,6 +55,7 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	{		
 		// ------ Bild einblenden ------
 		IntroduceChapter (KapWechsel_5,"Uriziel","chapter5.tga","chapter_01.wav", 6000);
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_5);
 	}
 	
 	//***************************************************************************
@@ -60,6 +65,7 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	{
 		// ------ Bild einblenden ------
 		IntroduceChapter (KapWechsel_6,"Die Arena","chapter6.tga","chapter_01.wav", 6000);
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_6);
 	};
 	
 	//***************************************************************************

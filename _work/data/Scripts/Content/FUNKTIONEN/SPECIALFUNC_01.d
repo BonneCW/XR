@@ -1843,6 +1843,8 @@ FUNC VOID SPECIALFUNC()
 				B_LogEntry	(TOPIC_MOD_RUEBENZIEHEN, "Ich habe endlich alle Rüben. Jetzt muss ich sie nur noch bei Lobart abliefern.");
 
 				B_RaiseAttribute_Rest (hero, ATR_STRENGTH, 1);
+				
+				Spine_UnlockAchievement(SPINE_ACHIEVEMENT_24);
 			};
 		};
 	};

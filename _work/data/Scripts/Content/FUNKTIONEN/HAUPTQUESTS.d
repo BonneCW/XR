@@ -2213,21 +2213,21 @@ FUNC VOID HAUPTQUESTS()
 				Mod_XW_Kap6 = 5;
 
 				Wld_InsertNpc	(Hauertroll_XW_03, "ARENA_05");
-				Wld_InsertNpc	(Hauertroll_XW_04, "ARENA_05");
-				Wld_InsertNpc	(Schattenwark_XW_07, "ARENA_05");
-				Wld_InsertNpc	(Schattenwark_XW_08, "ARENA_05");
+				Wld_InsertNpc	(Hauertroll_XW_04, "ARENA_04");
+				Wld_InsertNpc	(Schattenwark_XW_07, "ARENA_26");
+				Wld_InsertNpc	(Schattenwark_XW_08, "ARENA_27");
 				Wld_InsertNpc	(Schattenwark_XW_09, "ARENA_05");
-				Wld_InsertNpc	(Schattenwark_XW_10, "ARENA_05");
-				Wld_InsertNpc	(Schattenwark_XW_11, "ARENA_05");
-				Wld_InsertNpc	(Schattenwark_XW_12, "ARENA_05");
+				Wld_InsertNpc	(Schattenwark_XW_10, "ARENA_04");
+				Wld_InsertNpc	(Schattenwark_XW_11, "ARENA_26");
+				Wld_InsertNpc	(Schattenwark_XW_12, "ARENA_27");
 				Wld_InsertNpc	(Dragonsnapper_XW_06, "ARENA_05");
-				Wld_InsertNpc	(Dragonsnapper_XW_07, "ARENA_05");
-				Wld_InsertNpc	(Dragonsnapper_XW_08, "ARENA_05");
-				Wld_InsertNpc	(Dragonsnapper_XW_09, "ARENA_05");
+				Wld_InsertNpc	(Dragonsnapper_XW_07, "ARENA_04");
+				Wld_InsertNpc	(Dragonsnapper_XW_08, "ARENA_26");
+				Wld_InsertNpc	(Dragonsnapper_XW_09, "ARENA_27");
 				Wld_InsertNpc	(Dragonsnapper_XW_10, "ARENA_05");
-				Wld_InsertNpc	(Riesenspinne_XW_02, "ARENA_05");
-				Wld_InsertNpc	(Riesenspinne_XW_03, "ARENA_05");
-				Wld_InsertNpc	(Riesenspinne_XW_04, "ARENA_05");
+				Wld_InsertNpc	(Riesenspinne_XW_02, "ARENA_04");
+				Wld_InsertNpc	(Riesenspinne_XW_03, "ARENA_26");
+				Wld_InsertNpc	(Riesenspinne_XW_04, "ARENA_27");
 			};
 		};
 
@@ -2299,14 +2299,17 @@ FUNC VOID HAUPTQUESTS()
 	
 	if (Npc_HasItems(hero, ItAt_SoulStone_Urnol) && Mod_Seelenstein_Urnol == FALSE) {
 		Mod_Seelenstein_Urnol = TRUE;
+		Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_22, Mod_Seelenstein_Urnol + Mod_Seelenstein_Formwandler + Mod_Seelenstein_UD);
 	};
 	
 	if (Npc_HasItems(hero, ItAt_SoulStone_Formwandler) && Mod_Seelenstein_Formwandler == FALSE) {
 		Mod_Seelenstein_Formwandler = TRUE;
+		Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_22, Mod_Seelenstein_Urnol + Mod_Seelenstein_Formwandler + Mod_Seelenstein_UD);
 	};
 	
 	if (Npc_HasItems(hero, ItAt_SoulStone_UD) && Mod_Seelenstein_UD == FALSE) {
 		Mod_Seelenstein_UD = TRUE;
+		Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_22, Mod_Seelenstein_Urnol + Mod_Seelenstein_Formwandler + Mod_Seelenstein_UD);
 	};
 	
 	if (Mod_Seelenstein_Complete == FALSE) {

@@ -81,7 +81,7 @@ func void B_SetVisuals_Tiger_Weiﬂ()
 //	Weiﬂer Tiger    	
 //************
 
-INSTANCE Tiger_Weiﬂ	(Mst_Default_Tiger_Weiﬂ)
+INSTANCE Tiger_White	(Mst_Default_Tiger_Weiﬂ)
 {
 	B_SetVisuals_Tiger_Weiﬂ();
 	Npc_SetToFistMode(self);

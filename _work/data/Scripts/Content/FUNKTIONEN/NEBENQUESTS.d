@@ -3663,6 +3663,8 @@ FUNC VOID NEBENQUESTS()
 			B_KillNpc	(Mod_7647_OUT_Strewak_EIS);
 
 			Mod_7647_OUT_Strewak_EIS.nofocus = 0;
+			
+			Spine_UnlockAchievement(SPINE_ACHIEVEMENT_25);
 		};
 
 		if (!Npc_IsInState(Mod_7646_DMR_Geist_EIS, ZS_Talk))

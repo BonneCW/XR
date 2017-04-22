@@ -281,6 +281,8 @@ FUNC VOID Info_Mod_Ruediger_Spielende01_Info()
 		B_GivePlayerXP	(100);
 
 		MG_Ruediger_Runde = 1;
+		
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_36);
 	};
 
 	MG_SiegState = 0;

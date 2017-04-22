@@ -318,6 +318,8 @@ FUNC VOID OTGEHEIMKAMMER03()
 		Mod_OT_Geheimkammer = 2;
 
 		B_SetTopicStatus	(TOPIC_MOD_OT_GEHEIMKAMMER, LOG_SUCCESS);
+		
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_16);
 
 		B_GivePlayerXP	(200);
 

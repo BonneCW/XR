@@ -346,11 +346,11 @@ INSTANCE SYS_Loading		(C_MUSICTHEME_DEF)
 // ################################################################################################
 
 		INSTANCE XW_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "endlevel.sgt";		};
-		INSTANCE XW_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "action_endlevel.sgt";		};
-		INSTANCE XW_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "action_endlevel.sgt";		};
+		INSTANCE XW_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "action_exploring_master.sgt";		};
+		INSTANCE XW_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "action_exploring_master.sgt";		};
 		INSTANCE XW_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "endlevel.sgt";		};
-		INSTANCE XW_Ngt_Thr	(C_MUSICTHEME_THREAT)		{	file			= "action_endlevel.sgt";		};
-		INSTANCE XW_Ngt_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "action_endlevel.sgt";		};
+		INSTANCE XW_Ngt_Thr	(C_MUSICTHEME_THREAT)		{	file			= "action_exploring_master.sgt";		};
+		INSTANCE XW_Ngt_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "action_exploring_master.sgt";		};
 
 // ################################################################################################
 // ####### FI - FliegendeInsel ####################################################################

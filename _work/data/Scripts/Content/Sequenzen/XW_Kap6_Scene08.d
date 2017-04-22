@@ -8,6 +8,7 @@ FUNC VOID XW_Kap6_Scene08()
 
 		AI_Teleport	(hero, "ARENA_12");
 		AI_Teleport	(Xeres_02, "ARENA_18");
+		AI_Teleport	(Mod_7763_RDW_Diego_XW, Mod_7763_RDW_Diego_XW.wp);
 	};
 
 	if (Mod_XW_Kap6_Scene08_Counter == 1)
@@ -52,7 +53,9 @@ FUNC VOID XW_Kap6_Scene08()
 
 	if (Mod_XW_Kap6_Scene08_Counter == 35)
 	{
-		AI_PlayAni	(Xeres_02, "t_MagRun_2_FibShoot");
+		Wld_PlayEffect("FX_EarthQuake", Xeres_02, Xeres_02, 0, 0, 0, FALSE);
+		Wld_PlayEffect("spellFX_INCOVATION_RED", Xeres_02, Xeres_02, 0, 0, 0, FALSE);
+		AI_PlayAni (Xeres_02, "T_PRACTICEMAGIC5");
 	};
 
 	if (Mod_XW_Kap6_Scene08_Counter == 37)

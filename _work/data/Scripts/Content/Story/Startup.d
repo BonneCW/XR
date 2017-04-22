@@ -6937,10 +6937,10 @@ FUNC VOID STARTUP_GdG_World()
 
 	// Wei?e Tiger
 
-	Wld_InsertNpc	(Tiger_Weiﬂ,	"WIL_AUSSEN_04");
-	Wld_InsertNpc	(Tiger_Weiﬂ,	"WIL_AUSSEN_01");
-	Wld_InsertNpc	(Tiger_Weiﬂ,	"WIL_NACHRICHT_04");
-	Wld_InsertNpc	(Tiger_Weiﬂ,	"WIL_SCAVANGER_09");
+	Wld_InsertNpc	(Tiger_White,	"WIL_AUSSEN_04");
+	Wld_InsertNpc	(Tiger_White,	"WIL_AUSSEN_01");
+	Wld_InsertNpc	(Tiger_White,	"WIL_NACHRICHT_04");
+	Wld_InsertNpc	(Tiger_White,	"WIL_SCAVANGER_09");
 
 	// Silbertrolle
 
@@ -7490,6 +7490,9 @@ FUNC VOID INIT_DragonIsland()
 		Wld_InsertNpc	(Mod_7468_BAU_Velaya_IR, "SHIP");
 
 		Mod_VelayaDabei = 2;
+	};
+	if (Mod_SagittaDabei == 2 && Mod_CassiaDabei == 2 && Mod_UrielaDabei == 2 && Mod_VelayaDabei == 2) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_17);
 	};
 
 	if (Mod_Irdorath == 0)

@@ -29,12 +29,9 @@ FUNC VOID XW_Kap6_Scene06()
 
 	if (Mod_XW_Kap6_Scene06_Counter == 15)
 	{
-		AI_PlayAni	(Xeres_02, "t_MagRun_2_FeaShoot");
-	};
-
-	if (Mod_XW_Kap6_Scene06_Counter == 20)
-	{
-		AI_PlayAni	(Xeres_02, "t_FeaShoot_2_Stand");
+		Wld_PlayEffect("FX_EarthQuake", Xeres_02, Xeres_02, 0, 0, 0, FALSE);
+		Wld_PlayEffect("spellFX_INCOVATION_RED", Xeres_02, Xeres_02, 0, 0, 0, FALSE);
+		AI_PlayAni (Xeres_02, "T_PRACTICEMAGIC5");
 	};
 
 	if (Mod_XW_Kap6_Scene06_Counter == 21)
@@ -45,6 +42,8 @@ FUNC VOID XW_Kap6_Scene06()
 
 	if (Mod_XW_Kap6_Scene06_Counter == 22)
 	{
+		Wld_PlayEffect("spellFX_Blutopfer_KEY_COLLIDE",  Mod_7766_KDF_Milten_XW, Mod_7766_KDF_Milten_XW, 0, 0, 0, FALSE );
+		
 		Mod_7766_KDF_Milten_XW.attribute[ATR_HITPOINTS] = 0;
 
 		AI_PlayAni	(Mod_7766_KDF_Milten_XW, "T_DEAD");

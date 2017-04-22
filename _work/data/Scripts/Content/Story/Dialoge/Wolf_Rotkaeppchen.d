@@ -56,6 +56,8 @@ FUNC VOID Info_Mod_Wolf_Rotkaeppchen_NimmMich_Info()
 	AI_Output(self, hero, "Info_Mod_Wolf_Rotkaeppchen_NimmMich_18_02"); //Ich werde also zuerst dich fressen, und dann vielleicht das Mädchen verschonen.
 
 	AI_StopProcessInfos	(self);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_14);
 };
 
 INSTANCE Info_Mod_Wolf_Rotkaeppchen_NimmSie (C_INFO)

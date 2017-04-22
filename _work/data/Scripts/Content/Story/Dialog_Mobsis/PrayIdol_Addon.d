@@ -110,6 +110,8 @@ FUNC VOID B_CheckAllTeleports(var int unlock)
 		&& ((Mod_BeliarStatue_Kanalisation_Dabei && Diebe_Dabei) || (!Mod_BeliarStatue_Kanalisation_Dabei && !Diebe_Dabei && Mod_AnzahlNebengilden == MaxNebengilden))
 		{
 			Mod_BeliarSchreine = 1;
+			
+			Spine_UnlockAchievement(SPINE_ACHIEVEMENT_31);
 
 			B_LogEntry	(TOPIC_MOD_BELIAR_SCHREINE, "Ich habe alle Schreine aktiviert. Mal schauen, was meine Belohnung sein wird.");
 

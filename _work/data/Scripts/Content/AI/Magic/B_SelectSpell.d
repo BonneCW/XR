@@ -1558,10 +1558,10 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 
 				if (Mod_XW_Kap6 == 9)
 				{
-					if (Npc_GetDistToWP(hero, "ARENA_01") < 200)
+					/*if (Npc_GetDistToWP(hero, "ARENA_01") < 200)
 					{
 						AI_PlayAni	(hero, "T_EXPLOSION");
-					};
+					};*/
 
 					B_ReadySpell (slf, SPL_Giftteppich, SPL_Cost_Giftteppich);
 					return TRUE;

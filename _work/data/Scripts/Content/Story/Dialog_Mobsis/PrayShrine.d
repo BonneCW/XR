@@ -806,6 +806,8 @@ FUNC VOID PC_PrayShrine_BlessSword_Info()
 	B_LogEntry	(TOPIC_MOD_MILIZ_INNOSKLINGE, "Das Schwert wurde geweiht.");
 
 	AI_Teleport	(hero, "HALLE1_ANKUNFT");
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_28);
 }; 
 
 INSTANCE PC_PrayShrine_BlessSword_01 (C_Info)

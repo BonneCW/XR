@@ -24,6 +24,8 @@ FUNC VOID Info_Mod_Riddler_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Riddler_Hi_09_02"); //Hat Chromanin mich verlassen?
 
 	B_SetTopicStatus	(TOPIC_MOD_THERIDDLE, LOG_SUCCESS);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_34);
 };
 
 INSTANCE Info_Mod_Riddler_Chromanin (C_INFO)

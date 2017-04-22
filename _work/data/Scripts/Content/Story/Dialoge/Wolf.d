@@ -171,6 +171,8 @@ FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung4_Info()
 	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung4_31_01"); //Viel Spaﬂ damit.
 
 	B_GivePlayerXP	(200);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_30);
 };
 
 INSTANCE Info_Mod_Wolf_MinecrawlerRuestung5 (C_INFO)

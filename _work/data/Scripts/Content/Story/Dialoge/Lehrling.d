@@ -128,6 +128,8 @@ FUNC VOID Info_Mod_Lehrling_Dokumente_Info()
 	CurrentNQ += 1;
 
 	Mod_REL_QuestCounter += 1;
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_27);
 };
 
 INSTANCE Info_Mod_Lehrling_Cutter (C_INFO)

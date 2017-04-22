@@ -206,6 +206,8 @@ FUNC VOID Info_Mod_Telbor_Gerettet_Info()
 	B_SetTopicStatus	(TOPIC_MOD_AKILSHOF, LOG_SUCCESS);
 
 	CurrentNQ += 1;
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_39);
 };
 
 INSTANCE Info_Mod_Telbor_AllDead (C_INFO)
@@ -236,6 +238,8 @@ FUNC VOID Info_Mod_Telbor_AllDead_Info()
 
 	B_LogEntry	(TOPIC_MOD_AKILSHOF, "Da habe ich mir wohl zu viel Zeit gelassen. Die Erkrankten weilen nicht mehr unter uns.");
 	B_SetTopicStatus	(TOPIC_MOD_AKILSHOF, LOG_SUCCESS);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_40);
 };
 
 INSTANCE Info_Mod_Telbor_AllZombies (C_INFO)

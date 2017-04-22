@@ -18,19 +18,24 @@ FUNC VOID XW_Kap6_Scene05()
 
 	if (Mod_XW_Kap6_Scene05_Counter == 3)
 	{
-		AI_PlayAni	(Xeres_02, "t_MagRun_2_FeaShoot");
+		Wld_PlayEffect("FX_EarthQuake", Xeres_02, Xeres_02, 0, 0, 0, FALSE);
+		Wld_PlayEffect("spellFX_INCOVATION_RED", Xeres_02, Xeres_02, 0, 0, 0, FALSE);
+		AI_PlayAni (Xeres_02, "T_PRACTICEMAGIC5");
 	};
 
 	if (Mod_XW_Kap6_Scene05_Counter == 8)
 	{
-		AI_PlayAni	(Xeres_02, "t_FeaShoot_2_Stand");
-
+		if (!Hlp_IsValidNpc(Monster_11074_Leprechaun_XW)) {
+			Wld_InsertNpc(Monster_11074_Leprechaun_XW, "ARENA_02");
+		};
 		AI_Teleport	(Monster_11074_Leprechaun_XW, "ARENA_02");
 		B_StartOtherRoutine	(Monster_11074_Leprechaun_XW, "ARENA");
 	};
 
 	if (Mod_XW_Kap6_Scene05_Counter == 10)
 	{
+		Wld_PlayEffect("spellFX_Blutopfer_KEY_COLLIDE",  Monster_11074_Leprechaun_XW, Monster_11074_Leprechaun_XW, 0, 0, 0, FALSE );
+		
 		Monster_11074_Leprechaun_XW.attribute[ATR_HITPOINTS] = 0;
 
 		AI_PlayAni	(Monster_11074_Leprechaun_XW, "T_DEAD");

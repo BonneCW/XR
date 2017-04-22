@@ -111,6 +111,8 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Verteiler()
 
 	Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, DIALOG_BACK, Info_Mod_Alax_AlchemieLehrer2_BACK);
 
+	Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_29, Mod_Alax_Zutaten);
+	
 	if (Mod_Alax_Zutaten < 13)
 	{
 		if (!Mod_Alax_Zutat_Zwillingsdorn)

@@ -67,6 +67,9 @@ FUNC VOID Info_Mod_RosaHase_HabKamm_Info()
 	B_Göttergefallen(3, 1);
 
 	Mod_CrazyRabbit = 3;
+		
+	Spine_OverallSaveSetInt("Wolkenwelt", 1);
+	CheckHalluAchievement();
 };
 
 INSTANCE Info_Mod_RosaHase_EXIT (C_INFO)

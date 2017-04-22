@@ -196,6 +196,8 @@ FUNC VOID B_Vergiftet(var C_NPC slf)
 		B_MagicHurtNpc	(hero, slf, 9999);
 
 		Fleischwanzen_Zertrampelt += 1;
+		
+		Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_15, Spine_GetAchievementProgress(SPINE_ACHIEVEMENT_15) + 1);
 	};	
 
 	if ((Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Swampshark_Fuetterung_02_01))

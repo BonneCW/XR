@@ -923,6 +923,8 @@ FUNC VOID Info_Mod_Albi_Geheimnis5_Info()
 
 	B_LogEntry	(TOPIC_MOD_ECHSIS_EIERSUCHE, "Das Problem mit den Golems ist beseitigt und ich bin jetzt ein Kriegsführer der Echsen. Ich kann jetzt jederzeit auf die Jagd nach Golems gehen, wenn mir danach ist.");
 	B_SetTopicStatus	(TOPIC_MOD_ECHSIS_EIERSUCHE, LOG_SUCCESS);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_18);
 
 	B_GivePlayerXP	(2500);
 };

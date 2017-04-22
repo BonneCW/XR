@@ -142,6 +142,9 @@ FUNC VOID Info_Mod_Judith_Pavillon2_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "RUPRECHT");
+	
+	Spine_OverallSaveSetInt("JudithSex", 1);
+	CheckSexAchievement();
 };
 
 INSTANCE Info_Mod_Judith_Pickpocket (C_INFO)

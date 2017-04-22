@@ -41,6 +41,10 @@ func int B_AssessEnemy()
 	if (Mod_XW_Kap6_Scene01_Counter > 0 && Mod_XW_Kap6_Scene01_Counter < 45) {
 		return FALSE;
 	};
+	
+	if (Kapitel >= 6 && Hlp_GetInstanceID(self) == Hlp_GetInstanceID(PC_Friend_XW)) {
+		return FALSE;
+	};
 
 	if (Wld_IsTime(21,00,05,00))
 	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))

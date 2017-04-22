@@ -38,20 +38,20 @@ FUNC VOID XW_Kap6_Scene02()
 		Wld_SendUnTrigger	("KAP6SCENE01A");
 
 		Wld_InsertNpc	(Hauertroll_XW_02, "ARENA_05");
-		Wld_InsertNpc	(Shadowbeast_XW_02, "ARENA_05");
-		Wld_InsertNpc	(Shadowbeast_XW_03, "ARENA_05");
-		Wld_InsertNpc	(Schattenwark_XW_01, "ARENA_05");
+		Wld_InsertNpc	(Shadowbeast_XW_02, "ARENA_04");
+		Wld_InsertNpc	(Shadowbeast_XW_03, "ARENA_26");
+		Wld_InsertNpc	(Schattenwark_XW_01, "ARENA_27");
 		Wld_InsertNpc	(Schattenwark_XW_02, "ARENA_05");
-		Wld_InsertNpc	(Schattenwark_XW_03, "ARENA_05");
-		Wld_InsertNpc	(Schattenwark_XW_04, "ARENA_05");
-		Wld_InsertNpc	(Schattenwark_XW_05, "ARENA_05");
+		Wld_InsertNpc	(Schattenwark_XW_03, "ARENA_04");
+		Wld_InsertNpc	(Schattenwark_XW_04, "ARENA_26");
+		Wld_InsertNpc	(Schattenwark_XW_05, "ARENA_27");
 		Wld_InsertNpc	(Schattenwark_XW_06, "ARENA_05");
-		Wld_InsertNpc	(Dragonsnapper_XW_01, "ARENA_05");
-		Wld_InsertNpc	(Dragonsnapper_XW_02, "ARENA_05");
-		Wld_InsertNpc	(Dragonsnapper_XW_03, "ARENA_05");
+		Wld_InsertNpc	(Dragonsnapper_XW_01, "ARENA_04");
+		Wld_InsertNpc	(Dragonsnapper_XW_02, "ARENA_26");
+		Wld_InsertNpc	(Dragonsnapper_XW_03, "ARENA_27");
 		Wld_InsertNpc	(Dragonsnapper_XW_04, "ARENA_05");
-		Wld_InsertNpc	(Dragonsnapper_XW_05, "ARENA_05");
-		Wld_InsertNpc	(Riesenspinne_XW_01, "ARENA_05");
+		Wld_InsertNpc	(Dragonsnapper_XW_05, "ARENA_04");
+		Wld_InsertNpc	(Riesenspinne_XW_01, "ARENA_26");
 
 		CutsceneAn = FALSE;
 	};

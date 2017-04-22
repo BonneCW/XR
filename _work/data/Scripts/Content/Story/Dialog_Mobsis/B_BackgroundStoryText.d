@@ -1,5 +1,8 @@
 FUNC VOID B_ShowBackground_Story(var int pos)
 {
+	Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_9, pos);
+	Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_10, pos);
+
 	StPl_nDocID = Doc_Create		() ;							// DocManager
 	Doc_SetPages	( StPl_nDocID,  2 );                         
 	Doc_SetPage 	( StPl_nDocID,  0, "Book_MayaRead_L.tga", 	0 	);  

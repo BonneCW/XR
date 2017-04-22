@@ -151,6 +151,11 @@ FUNC VOID XW_Kap6_Scene03()
 		Wld_InsertNpc	(Xeres_02, "ARENA_05");
 	};
 
+	if (Mod_XW_Kap6_Scene03_Counter == 82)
+	{
+		Wld_PlayEffect("spellFX_SummonGolem",  Xeres_02, Xeres_02, 0, 0, 0, FALSE );
+	};
+
 	if (Mod_XW_Kap6_Scene03_Counter == 85)
 	{
 		Mod_XW_Kap6 = 6;

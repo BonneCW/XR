@@ -128,7 +128,6 @@ INSTANCE Summoned_Skeleton_Lord_Ghost_Xeres	(Mst_Skeleton_Lord)
 	name							=	"Geist eines Schattenkriegers";
 
 	flags = NPC_FLAG_GHOST;
-	effect							=	"spellfx_undead_skeletonlord";
 	aivar[AIV_MM_REAL_ID]			= 	ID_GEISTERKRIEGER;
 
 	level							=	75;

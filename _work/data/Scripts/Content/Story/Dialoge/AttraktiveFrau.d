@@ -131,4 +131,7 @@ FUNC VOID Info_Mod_AttraktiveFrau_Sex_Info()
 	};
 
 	B_LogEntry	(TOPIC_MOD_ADANOS_UNHEIL, "Ich sollte auf jeden Fall einen heilkundigen Magier aufsuchen und danach Saturas davon berichten.");
+		
+	Spine_OverallSaveSetInt("HexeSex", 1);
+	CheckSexAchievement();
 };

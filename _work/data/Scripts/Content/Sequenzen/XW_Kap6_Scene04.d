@@ -7,6 +7,7 @@ FUNC VOID XW_Kap6_Scene04()
 		DoForAll(B_RemoveDeadBodies);
 
 		AI_Teleport	(hero, "ARENA_01");
+		AI_Teleport	(Mod_7764_PSINOV_Lester_XW, Mod_7764_PSINOV_Lester_XW.wp);
 	};
 
 	if (Mod_XW_Kap6_Scene04_Counter == 1)
@@ -18,12 +19,9 @@ FUNC VOID XW_Kap6_Scene04()
 
 	if (Mod_XW_Kap6_Scene04_Counter == 3)
 	{
-		AI_PlayAni	(Xeres_02, "t_MagRun_2_FeaShoot");
-	};
-
-	if (Mod_XW_Kap6_Scene04_Counter == 8)
-	{
-		AI_PlayAni	(Xeres_02, "t_FeaShoot_2_Stand");
+		Wld_PlayEffect("FX_EarthQuake", Xeres_02, Xeres_02, 0, 0, 0, FALSE);
+		Wld_PlayEffect("spellFX_INCOVATION_RED", Xeres_02, Xeres_02, 0, 0, 0, FALSE);
+		AI_PlayAni (Xeres_02, "T_PRACTICEMAGIC5");
 	};
 
 	if (Mod_XW_Kap6_Scene04_Counter == 9)
@@ -34,6 +32,8 @@ FUNC VOID XW_Kap6_Scene04()
 
 	if (Mod_XW_Kap6_Scene04_Counter == 10)
 	{
+		Wld_PlayEffect("spellFX_Blutopfer_KEY_COLLIDE",  Mod_7764_PSINOV_Lester_XW, Mod_7764_PSINOV_Lester_XW, 0, 0, 0, FALSE );
+		
 		Mod_7764_PSINOV_Lester_XW.attribute[ATR_HITPOINTS] = 0;
 
 		AI_PlayAni	(Mod_7764_PSINOV_Lester_XW, "T_DEAD");

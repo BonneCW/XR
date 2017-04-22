@@ -138,6 +138,9 @@ FUNC VOID Info_Mod_Sonja_SexLos_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "START");
+	
+	Spine_OverallSaveSetInt("SonjaSex", 1);
+	CheckSexAchievement();
 };
 
 INSTANCE Info_Mod_Sonja_Bartok (C_INFO)
