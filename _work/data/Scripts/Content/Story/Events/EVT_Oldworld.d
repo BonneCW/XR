@@ -356,7 +356,7 @@ INSTANCE Schattenwark	(Mst_Default_StonePuma)
 
 
 	//----- Monster ----
-	name							=	"Schattenwark";
+	name							=	"Schattenwarg";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -386,7 +386,7 @@ INSTANCE Schattenwark_XW_01	(Mst_Default_StonePuma)
 	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 
 	//----- Monster ----
-	name							=	"Schattenwark";
+	name							=	"Schattenwarg";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -418,7 +418,7 @@ INSTANCE Schattenwark_XW_02	(Mst_Default_StonePuma)
 	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 
 	//----- Monster ----
-	name							=	"Schattenwark";
+	name							=	"Schattenwarg";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -450,7 +450,7 @@ INSTANCE Schattenwark_XW_03	(Mst_Default_StonePuma)
 	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 
 	//----- Monster ----
-	name							=	"Schattenwark";
+	name							=	"Schattenwarg";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -482,7 +482,7 @@ INSTANCE Schattenwark_XW_04	(Mst_Default_StonePuma)
 	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 
 	//----- Monster ----
-	name							=	"Schattenwark";
+	name							=	"Schattenwarg";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -514,7 +514,7 @@ INSTANCE Schattenwark_XW_05	(Mst_Default_StonePuma)
 	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 
 	//----- Monster ----
-	name							=	"Schattenwark";
+	name							=	"Schattenwarg";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -546,7 +546,7 @@ INSTANCE Schattenwark_XW_06	(Mst_Default_StonePuma)
 	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 
 	//----- Monster ----
-	name							=	"Schattenwark";
+	name							=	"Schattenwarg";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -578,7 +578,7 @@ INSTANCE Schattenwark_XW_07	(Mst_Default_StonePuma)
 	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 
 	//----- Monster ----
-	name							=	"Schattenwark";
+	name							=	"Schattenwarg";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -610,7 +610,7 @@ INSTANCE Schattenwark_XW_08	(Mst_Default_StonePuma)
 	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 
 	//----- Monster ----
-	name							=	"Schattenwark";
+	name							=	"Schattenwarg";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -642,7 +642,7 @@ INSTANCE Schattenwark_XW_09	(Mst_Default_StonePuma)
 	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 
 	//----- Monster ----
-	name							=	"Schattenwark";
+	name							=	"Schattenwarg";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -674,7 +674,7 @@ INSTANCE Schattenwark_XW_10	(Mst_Default_StonePuma)
 	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 
 	//----- Monster ----
-	name							=	"Schattenwark";
+	name							=	"Schattenwarg";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -706,7 +706,7 @@ INSTANCE Schattenwark_XW_11	(Mst_Default_StonePuma)
 	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 
 	//----- Monster ----
-	name							=	"Schattenwark";
+	name							=	"Schattenwarg";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -738,7 +738,7 @@ INSTANCE Schattenwark_XW_12	(Mst_Default_StonePuma)
 	CreateInvItems	(self, ItFo_MuttonRaw, 2);
 
 	//----- Monster ----
-	name							=	"Schattenwark";
+	name							=	"Schattenwarg";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -815,6 +815,7 @@ INSTANCE Hauertroll_XW_01	(Mst_Default_Troll)
 	guild							=	GIL_TROLL;
 	aivar[AIV_MM_REAL_ID]			= 	ID_TROLL;
 	level							=	50; //30
+	flags = 2;
 	
 	//----- Attribute ----	
 	attribute	[ATR_STRENGTH]		=	350;	//FlyDamage

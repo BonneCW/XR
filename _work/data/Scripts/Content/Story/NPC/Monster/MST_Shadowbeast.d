@@ -133,6 +133,7 @@ INSTANCE Shadowbeast	(Mst_Default_Shadowbeast)
 
 INSTANCE Shadowbeast_XW_01	(Mst_Default_Shadowbeast)
 {
+	flags = 2;
 	B_SetVisuals_Shadowbeast();
 	Npc_SetToFistMode(self);
 };

@@ -143,8 +143,8 @@ INSTANCE Summoned_Skeleton_Lord_Ghost_Xeres	(Mst_Skeleton_Lord)
 
 	//----- Protection ----
 	protection	[PROT_BLUNT]		=	50000; //hat RS!
-	protection	[PROT_EDGE]			=	-1;
-	protection	[PROT_POINT]		=	-1; 
+	protection	[PROT_EDGE]			=	50000;
+	protection	[PROT_POINT]		=	50000; 
 	protection	[PROT_FIRE]			=	140;
 	protection	[PROT_FLY]			=	140;
 	protection	[PROT_MAGIC]		=	50;	//so lassen!

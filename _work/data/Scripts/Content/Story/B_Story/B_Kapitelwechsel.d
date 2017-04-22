@@ -59,7 +59,7 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	else if (neues_Kapitel == 6)
 	{
 		// ------ Bild einblenden ------
-		IntroduceChapter (KapWechsel_6,"???","chapter6.tga","chapter_01.wav", 6000);
+		IntroduceChapter (KapWechsel_6,"Die Arena","chapter6.tga","chapter_01.wav", 6000);
 	};
 	
 	//***************************************************************************

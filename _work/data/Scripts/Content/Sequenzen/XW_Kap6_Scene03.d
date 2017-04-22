@@ -68,6 +68,11 @@ FUNC VOID XW_Kap6_Scene03()
 		AI_TurnToNpc	(Mod_7763_RDW_Diego_XW, Monster_11075_Daemonenfuerst_XW);
 	};
 
+	if (Mod_XW_Kap6_Scene03_Counter == 36)
+	{
+		AI_ReadyRangedWeapon(Mod_7763_RDW_Diego_XW);
+	};
+
 	if (Mod_XW_Kap6_Scene03_Counter == 39)
 	{
 		Wld_SendTrigger	("KAP6SCENE01A");
@@ -95,6 +100,8 @@ FUNC VOID XW_Kap6_Scene03()
 		Monster_11075_Daemonenfuerst_XW.attribute[ATR_HITPOINTS] = 0;
 
 		AI_PlayAni	(Monster_11075_Daemonenfuerst_XW, "T_DEAD");
+		
+		AI_RemoveWeapon(Mod_7763_RDW_Diego_XW);
 	};
 
 	if (Mod_XW_Kap6_Scene03_Counter == 47)

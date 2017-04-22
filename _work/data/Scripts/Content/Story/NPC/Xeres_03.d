@@ -18,11 +18,11 @@ INSTANCE Xeres_03	(Npc_Default)
 	attribute	[ATR_MANA] 			=	200;
 
 	//----- Protection ----
-	protection	[PROT_BLUNT]		=	100; //hat RS!
-	protection	[PROT_EDGE]			=	100;
-	protection	[PROT_POINT]		=	100; 
-	protection	[PROT_FIRE]			=	100;
-	protection	[PROT_FLY]			=	100;
+	protection	[PROT_BLUNT]		=	0; //hat RS!
+	protection	[PROT_EDGE]			=	0;
+	protection	[PROT_POINT]		=	0; 
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	0;
 	protection	[PROT_MAGIC]		=	0;	//so lassen!
 		
 	//----- Damage Types ----

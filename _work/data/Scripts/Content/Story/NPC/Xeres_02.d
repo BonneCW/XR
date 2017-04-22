@@ -12,17 +12,17 @@ INSTANCE Xeres_02	(Npc_Default)
 	//----- Attribute ----	
 	attribute	[ATR_STRENGTH]		=	250; //+ 105 Waffe
 	attribute	[ATR_DEXTERITY]		=	100;
-	attribute	[ATR_HITPOINTS_MAX]	=	40000;
-	attribute	[ATR_HITPOINTS]		=	40000;
+	attribute	[ATR_HITPOINTS_MAX]	=	20000;
+	attribute	[ATR_HITPOINTS]		=	20000;
 	attribute	[ATR_MANA_MAX] 		=	200;
 	attribute	[ATR_MANA] 			=	200;
 
 	//----- Protection ----
-	protection	[PROT_BLUNT]		=	100; //hat RS!
-	protection	[PROT_EDGE]			=	100;
-	protection	[PROT_POINT]		=	100; 
-	protection	[PROT_FIRE]			=	100;
-	protection	[PROT_FLY]			=	100;
+	protection	[PROT_BLUNT]		=	0; //hat RS!
+	protection	[PROT_EDGE]			=	0;
+	protection	[PROT_POINT]		=	0; 
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	0;
 	protection	[PROT_MAGIC]		=	0;	//so lassen!
 		
 	//----- Damage Types ----

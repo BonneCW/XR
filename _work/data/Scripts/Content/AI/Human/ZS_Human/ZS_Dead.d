@@ -44,14 +44,15 @@ func void ZS_Dead ()
 			Mod_Xeres_Geister_Tot += 1;
 		};
 
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(DemonLord_Xeres))
-		&& (Mod_XW_Kap6 == 12)
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Balrog_Xeres))
+		&& (Mod_XW_Kap6 == 14)
 		{
-			Mod_XW_Kap6 = 13;
+			Mod_XW_Kap6 = 15;
 
 			AI_Teleport	(self, "TOT");
 
-			Wld_InsertNpc	(Minotaurus_Xeres, "ARENA_01");
+			AI_Teleport	(Xeres_02, "ARENA_01");
+			B_StartOtherRoutine	(Xeres_02, "START");
 		};
 
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Minotaurus_Xeres))
@@ -64,15 +65,14 @@ func void ZS_Dead ()
 			Wld_InsertNpc	(Balrog_Xeres, "ARENA_01");
 		};
 
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Balrog_Xeres))
-		&& (Mod_XW_Kap6 == 14)
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(DemonLord_Xeres))
+		&& (Mod_XW_Kap6 == 12)
 		{
-			Mod_XW_Kap6 = 15;
+			Mod_XW_Kap6 = 13;
 
 			AI_Teleport	(self, "TOT");
 
-			AI_Teleport	(Xeres_02, "ARENA_01");
-			B_StartOtherRoutine	(Xeres_02, "START");
+			Wld_InsertNpc	(Minotaurus_Xeres, "ARENA_01");
 		};
 	};
 
