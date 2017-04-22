@@ -109,12 +109,37 @@ FUNC INT Info_Mod_Wendel_Endres02_Condition()
 FUNC VOID Info_Mod_Wendel_Endres02_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Wendel_Endres02_15_00"); //Ich habe das Trollfett.
-	AI_Output(self, hero, "Info_Mod_Wendel_Endres02_01_01"); //Sehr gut! Und nun gieß es in den Abort in dem Haus gegenüber des Gerichts.
-	AI_Output(self, hero, "Info_Mod_Wendel_Endres02_01_02"); //Er ist hinter der Wand verborgen, weist aber den kürzesten Weg zur verstopften Stelle auf.
+	AI_Output(self, hero, "Info_Mod_Wendel_Endres02_01_01"); //Sehr gut! Und nun gieß es in den Abort im Haus der Feuermagier.
 
 	B_GivePlayerXP	(50);
 
-	B_LogEntry	(TOPIC_MOD_KHORATA_WASSERWERK, "Ich soll das Trollfett in den Abort des Hauses gegenüber des Gerichts in Khorata kippen ...");
+	B_LogEntry	(TOPIC_MOD_KHORATA_WASSERWERK, "Ich soll das Trollfett in den Abort des Hauses der Feuermagier kippen ...");
+};
+
+INSTANCE Info_Mod_Wendel_Endres02_Optional (C_INFO)
+{
+	npc		= Mod_7480_OUT_Wendel_REL;
+	nr		= 1;
+	condition	= Info_Mod_Wendel_Endres02_Optional_Condition;
+	information	= Info_Mod_Wendel_Endres02_Optional_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wo ist denn das Haus der Feuermagier?";
+};
+
+FUNC INT Info_Mod_Wendel_Endres02_Optional_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Wendel_Endres02))
+	&& (Npc_HasItems(hero, ItMi_Trollfett) == 0)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Wendel_Endres02_Optional_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Wendel_Endres02_Optional_15_00"); //Wo ist denn das Haus der Feuermagier?
+	AI_Output(self, hero, "Info_Mod_Wendel_Endres02_Optional_01_01"); //Es liegt in der gleichen Straße wie Peters Gasthaus und die Brauerei. Nun aber los!
 };
 
 INSTANCE Info_Mod_Wendel_Endres03 (C_INFO)
