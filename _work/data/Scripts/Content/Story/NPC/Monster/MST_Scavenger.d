@@ -196,6 +196,8 @@ INSTANCE Scavenger_Gaan_01	(Mst_Default_Scavenger)
 	B_SetVisual_Scav();
 
 	Npc_SetToFistMode(self);
+	
+	Npc_RemoveInvItems(self, ItFo_MuttonRaw, Npc_HasItems(self, ItFo_MuttonRaw));
 };
 
 INSTANCE Scavenger_Gaan_02	(Mst_Default_Scavenger)
@@ -203,6 +205,8 @@ INSTANCE Scavenger_Gaan_02	(Mst_Default_Scavenger)
 	B_SetVisual_Scav();
 
 	Npc_SetToFistMode(self);
+	
+	Npc_RemoveInvItems(self, ItFo_MuttonRaw, Npc_HasItems(self, ItFo_MuttonRaw));
 };
 
 INSTANCE Scavenger_Gaan_03	(Mst_Default_Scavenger)
@@ -210,6 +214,8 @@ INSTANCE Scavenger_Gaan_03	(Mst_Default_Scavenger)
 	B_SetVisual_Scav();
 
 	Npc_SetToFistMode(self);
+	
+	Npc_RemoveInvItems(self, ItFo_MuttonRaw, Npc_HasItems(self, ItFo_MuttonRaw));
 };
 
 INSTANCE Scavenger_Gaan	(Mst_Default_Scavenger)
@@ -218,6 +224,8 @@ INSTANCE Scavenger_Gaan	(Mst_Default_Scavenger)
 
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItMi_Ornament_Heiler, 1);
+	
+	Npc_RemoveInvItems(self, ItFo_MuttonRaw, Npc_HasItems(self, ItFo_MuttonRaw));
 };
 
 INSTANCE Scavenger_Breed	(Mst_Default_Scavenger)
