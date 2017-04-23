@@ -553,6 +553,7 @@ INSTANCE ItMi_Feldraeubereier (C_Item)
 	material 			=	MAT_WOOD ;
 
 	description			= 	name;
+	TEXT[1]				= "In der Höhle benutzen";
 	TEXT[5]				= 	NAME_Value;	COUNT[5] 	= 	value;
 };
 
