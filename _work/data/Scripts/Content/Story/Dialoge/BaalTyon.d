@@ -32,7 +32,7 @@ INSTANCE Info_Mod_Tyon_Woher (C_INFO)
 	nr		= 1;
 	condition	= Info_Mod_Tyon_Woher_Condition;
 	information	= Info_Mod_Tyon_Woher_Info;
-	permanent	= 1;
+	permanent	= 0;
 	important	= 0;
 	description	= "Wo kommst du her?";
 };

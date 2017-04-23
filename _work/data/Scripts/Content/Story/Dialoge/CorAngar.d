@@ -575,7 +575,7 @@ INSTANCE Info_Mod_Angar_Woher (C_INFO)
 	nr		= 1;
 	condition	= Info_Mod_Angar_Woher_Condition;
 	information	= Info_Mod_Angar_Woher_Info;
-	permanent	= 1;
+	permanent	= 0;
 	important	= 0;
 	description	= "Wieso warst du eigentlich in der Kolonie?";
 };

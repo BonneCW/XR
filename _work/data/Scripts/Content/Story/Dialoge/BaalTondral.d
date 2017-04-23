@@ -196,7 +196,7 @@ INSTANCE Info_Mod_Tondral_Woher (C_INFO)
 	nr		= 1;
 	condition	= Info_Mod_Tondral_Woher_Condition;
 	information	= Info_Mod_Tondral_Woher_Info;
-	permanent	= 1;
+	permanent	= 0;
 	important	= 0;
 	description	= "Erzähl mir was von deiner Geschichte?";
 };

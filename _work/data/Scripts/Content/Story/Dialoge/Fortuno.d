@@ -88,7 +88,7 @@ INSTANCE Info_Mod_Fortuno_Woher (C_INFO)
 	nr		= 1;
 	condition	= Info_Mod_Fortuno_Woher_Condition;
 	information	= Info_Mod_Fortuno_Woher_Info;
-	permanent	= 1;
+	permanent	= 0;
 	important	= 0;
 	description	= "Wieso bist du in diesem Lager?";
 };

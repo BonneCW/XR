@@ -118,7 +118,7 @@ INSTANCE Info_Mod_Orun_Woher (C_INFO)
 	nr		= 1;
 	condition	= Info_Mod_Orun_Woher_Condition;
 	information	= Info_Mod_Orun_Woher_Info;
-	permanent	= 1;
+	permanent	= 0;
 	important	= 0;
 	description	= "Wie bist du zur Sekte gekommen?";
 };
