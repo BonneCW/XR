@@ -55,10 +55,11 @@ FUNC VOID Info_Mod_Xardas_NW_Hallo_Info()
 	B_LogEntry	(TOPIC_MOD_ANFANG, "Ich habe Xardas gefunden und ihm meine Geschichte erzählt. Jetzt werde ich hoffentlich erfahren, wie es weitergeht.");
 	B_SetTopicStatus	(TOPIC_MOD_ANFANG, LOG_SUCCESS);
 
-	if (Mod_OT_Geheimkammer == 1)
-	{
+	if (Mod_OT_Geheimkammer == 1) {
 		B_SetTopicStatus	(TOPIC_MOD_OT_GEHEIMKAMMER, LOG_FAILED);
 	};
+
+	Mod_BeliarStatue_Krieger_Dabei = 1;
 };
 
 INSTANCE Info_Mod_Xardas_NW_WasJetzt (C_INFO)
@@ -2342,8 +2343,6 @@ FUNC VOID Info_Mod_Xardas_NW_WoSindAndere_Info()
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_WoSindAndere_14_06"); //Mein Schrein ist bisher nur mit dem der Festung verbunden. Du kannst sie also gar nicht verfehlen.
 
 	B_LogEntry	(TOPIC_MOD_DAEMONENBESCHWOERER, "Die Festung der Beliaranhänger erreiche ich über den Beliarschrein in Xardas' Turm, der gleichzeitig als Teleporter funktioniert.");
-
-	Mod_BeliarStatue_Krieger_Dabei = 1;
 };
 
 INSTANCE Info_Mod_Xardas_NW_VonWemKannIchLernen (C_INFO)
