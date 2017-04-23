@@ -330,6 +330,8 @@ INSTANCE Info_Mod_Saturas_AW_Magieschranke (C_INFO)
 FUNC INT Info_Mod_Saturas_AW_Magieschranke_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Eremit_Prisma3))
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	{
 		return 1;
 	};
@@ -365,6 +367,8 @@ FUNC INT Info_Mod_Saturas_AW_HabFoki_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_Fokusplatz))
 	&& (Mod_Fokus_Alle == 1)
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	{
 		return 1;
 	};
@@ -455,6 +459,8 @@ FUNC INT Info_Mod_Saturas_AW_Member_01_Condition()
 	&& ((Wld_GetDay()-2 >= Mod_Saturas_KDW_Geblubber)
 	|| ((FokiEingesetzt == 2)
 	&& (FokusBlockade == TRUE)))
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	{
 		return 1;
 	};
@@ -486,6 +492,8 @@ FUNC INT Info_Mod_Saturas_AW_Member_02_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_Member_01))
 	&& (FokiEingesetzt == 2)
 	&& (FokusBlockade == TRUE)
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	{
 		return 1;
 	};
@@ -548,6 +556,8 @@ INSTANCE Info_Mod_Saturas_AW_Member_03 (C_INFO)
 FUNC INT Info_Mod_Saturas_AW_Member_03_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_Member_02))
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	{
 		return 1;
 	};
@@ -592,6 +602,8 @@ INSTANCE Info_Mod_Saturas_AW_Member_04 (C_INFO)
 FUNC INT Info_Mod_Saturas_AW_Member_04_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Merdarion_AW_Nefarius))
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	&& (Mod_WM_Boeden < 7)
 	{
 		return 1;
@@ -643,6 +655,8 @@ INSTANCE Info_Mod_Saturas_AW_Member_05 (C_INFO)
 FUNC INT Info_Mod_Saturas_AW_Member_05_Condition()
 {
 	if (Mod_WM_Boeden >= 7)
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	{
 		return 1;
 	};
@@ -675,6 +689,8 @@ FUNC INT Info_Mod_Saturas_AW_Member_06_Condition()
 	if (Mod_Wm_Boeden == 7)
 	&& (FokiEingesetzt == 4)
 	&& (FokusBlockade == TRUE)
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	{
 		return 1;
 	};
@@ -728,6 +744,8 @@ FUNC INT Info_Mod_Saturas_AW_Member_07_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_Member_06))
 	&& (Mod_WM_Boeden < 9)
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	{
 		return 1;
 	};
@@ -778,6 +796,8 @@ INSTANCE Info_Mod_Saturas_AW_PortalInnosSchwert (C_INFO)
 FUNC INT Info_Mod_Saturas_AW_PortalInnosSchwert_Condition()
 {
 	if (Mod_BEL_FirstPortal == 1)
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	{
 		return 1;
 	};
@@ -822,6 +842,8 @@ FUNC INT Info_Mod_Saturas_AW_PortalZauberFertig_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_PortalInnosSchwert))
 	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	{
 		return 1;
 	};
@@ -854,6 +876,8 @@ INSTANCE Info_Mod_Saturas_AW_Bshydal (C_INFO)
 FUNC INT Info_Mod_Saturas_AW_Bshydal_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_AW_Bshydal))
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	{
 		return 1;
 	};
@@ -891,6 +915,8 @@ INSTANCE Info_Mod_Saturas_AW_Fokussteine (C_INFO)
 FUNC INT Info_Mod_Saturas_AW_Fokussteine_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_Fokusplatz))
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	{
 		return 1;
 	};
@@ -916,6 +942,8 @@ INSTANCE Info_Mod_Saturas_AW_FokusSockel (C_INFO)
 FUNC INT Info_Mod_Saturas_AW_FokusSockel_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_HabFoki))
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	&& (Kapitel == 2)
 	{
 		return 1;
@@ -946,6 +974,8 @@ INSTANCE Info_Mod_Saturas_AW_WofuerGut (C_INFO)
 FUNC INT Info_Mod_Saturas_AW_WofuerGut_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_HabFoki))
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	&& (Kapitel == 2)
 	{
 		return 1;
@@ -975,6 +1005,8 @@ FUNC INT Info_Mod_Saturas_AW_WiesoFoki_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_HabFoki))
 	&& (Kapitel == 2)
+	&& (!(Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_UngebeterBesucher3)))
 	{
 		return 1;
 	};
