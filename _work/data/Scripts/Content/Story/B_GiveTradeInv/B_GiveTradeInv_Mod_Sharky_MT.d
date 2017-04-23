@@ -19,6 +19,9 @@ FUNC VOID B_GiveTradeInv_Mod_Sharky_MT (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Pan, 1); 
 		CreateInvItems (slf, ItMi_Scoop, 1); 
 		CreateInvItems (slf, ItMi_Salpeter, 2); 
+
+		CreateInvItems (slf, ItRw_Arrow, 25); 
+		CreateInvItems (slf, ItRw_Bolt, 25);
 		
 		Sharky_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -37,6 +40,9 @@ FUNC VOID B_GiveTradeInv_Mod_Sharky_MT (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Scoop, 1); 
 		CreateInvItems (slf, ItMi_Salpeter, 2); 
 
+		CreateInvItems (slf, ItRw_Arrow, 25); 
+		CreateInvItems (slf, ItRw_Bolt, 25);
+
 		Sharky_ItemsGiven_Chapter_2 = TRUE;
 	};
 
@@ -54,6 +60,9 @@ FUNC VOID B_GiveTradeInv_Mod_Sharky_MT (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Scoop, 1); 
 		CreateInvItems (slf, ItMi_Salpeter, 2); 
 
+		CreateInvItems (slf, ItRw_Arrow, 25); 
+		CreateInvItems (slf, ItRw_Bolt, 25);
+
 		Sharky_ItemsGiven_Chapter_3 = TRUE;
 	};
 
@@ -70,6 +79,9 @@ FUNC VOID B_GiveTradeInv_Mod_Sharky_MT (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Pan, 1); 
 		CreateInvItems (slf, ItMi_Scoop, 1); 
 		CreateInvItems (slf, ItMi_Salpeter, 2); 
+
+		CreateInvItems (slf, ItRw_Arrow, 25); 
+		CreateInvItems (slf, ItRw_Bolt, 25);
 		
 		Sharky_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -87,6 +99,9 @@ FUNC VOID B_GiveTradeInv_Mod_Sharky_MT (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Pan, 1); 
 		CreateInvItems (slf, ItMi_Scoop, 1); 
 		CreateInvItems (slf, ItMi_Salpeter, 2); 
+
+		CreateInvItems (slf, ItRw_Arrow, 25); 
+		CreateInvItems (slf, ItRw_Bolt, 25);
 
 		Sharky_ItemsGiven_Chapter_5 = TRUE;
 	};

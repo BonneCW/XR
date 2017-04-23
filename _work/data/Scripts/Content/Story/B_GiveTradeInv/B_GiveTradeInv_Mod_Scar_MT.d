@@ -10,8 +10,8 @@ FUNC VOID B_GiveTradeInv_Mod_Scar_MT (var C_NPC slf)
 	&& (Scar_ItemsGiven_Chapter_1 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 80); 
-		CreateInvItems (slf, ItRw_Arrow, 25);
-		CreateInvItems (slf, ItRw_Bolt,  25);
+		CreateInvItems (slf, ItRw_Arrow, 100);
+		CreateInvItems (slf, ItRw_Bolt,  100);
 		
 		// ------ Waffen ------
 		CreateInvItems	(slf, ItRw_Crossbow_L_01, 1);

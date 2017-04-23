@@ -11,6 +11,8 @@ FUNC VOID B_GiveTradeInv_Mod_Thofeistos_MT (var C_NPC slf)
 	{
 		CreateInvItems (slf, ItMi_Gold, 100); 
 		CreateInvItems (slf, ItMiSwordraw, 3); 
+		CreateInvItems (slf, ItRw_Arrow, 100);
+		CreateInvItems (slf, ItRw_Bolt,  100);
 		
 		// ------ Waffen ------
 		CreateInvItems (slf, ItMw_Nagelkeule2, 1);
