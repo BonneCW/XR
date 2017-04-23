@@ -1403,7 +1403,7 @@ INSTANCE theriddle5(C_Item)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLines	( nDocID,  1, "Dort, wo alles begann, sollst du mich finden.");
+					Doc_PrintLines	( nDocID,  1, "Dort, wo deine Suche begann, sollst du mich finden.");
 					Doc_Show		( nDocID );
 
 
@@ -1412,7 +1412,7 @@ INSTANCE theriddle5(C_Item)
 					if (riddle5 == FALSE)
 					{
 						B_GivePlayerXP (850);
-						B_LogEntry			(TOPIC_MOD_THERIDDLE,		"Dies scheint das letzte zu sein. Bin gespannt zu erfahren, wem ich gegenüber stehen werde ... Dort, wo alles begann, sollst du mich finden ..."); 
+						B_LogEntry			(TOPIC_MOD_THERIDDLE,		"Dies scheint das letzte zu sein. Bin gespannt zu erfahren, wem ich gegenüber stehen werde ... Dort, wo alles begann, sollst du mich finden ... Also muss ich wieder in die Höhlen unter dem Nebelturm..."); 
 						Snd_Play 		("FoundRiddlersBook");				
 						Wld_InsertNpc				(Bau_989_Riddler,"");
 						var C_NPC riddler; riddler = Hlp_GetNpc(Bau_989_Riddler);
