@@ -295,7 +295,7 @@ FUNC VOID Info_Mod_Penner_Kimon3_Info()
 	AI_Output(hero, self, "Info_Mod_Penner_Kimon3_15_05"); //Ich denke ja.
 	AI_Output(self, hero, "Info_Mod_Penner_Kimon3_27_06"); //Also, du gehst links rum, immer an der Felswand lang. Da kommst du zu der Höhle, wo mein Alter haust.
 
-	B_LogEntry	(TOPIC_MOD_KIMON_FREUDENSPENDER, "Der Penner erzählt von seinem Vater, der unverständlich redet. Er haust in einer Höhle in der Felswand links vom Taleingang. Mal schaun ...");
+	B_LogEntry	(TOPIC_MOD_KIMON_FREUDENSPENDER, "Der Penner erzählt von seinem Vater, der unverständlich redet. Er haust in einer Höhle in der Felswand links vom Taleingang, wenn man durch die Höhle von Khorinis kommt. Mal schaun ...");
 };
 
 INSTANCE Info_Mod_Penner_Hi (C_INFO)
