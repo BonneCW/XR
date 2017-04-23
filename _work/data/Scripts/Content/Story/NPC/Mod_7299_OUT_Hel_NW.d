@@ -12,7 +12,7 @@ INSTANCE Mod_7299_OUT_Hel_NW (Npc_Default)
 	aivar[AIV_ToughGuy] = TRUE; 
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 5);
+	B_SetAttributesToChapter (self, 6);
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;
