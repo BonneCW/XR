@@ -117,81 +117,6 @@ FUNC VOID FRAMEFUNC ()
 			Mod_Import_AL = -1;
 			Mod_Import_NL = -1;
 			Mod_Import_SL = -1;
-
-			// Erfolge einlesen
-
-			if (Erfolg_EifrigerBuesser == 0) {
-				Erfolg_EifrigerBuesser = STR_ToInt(MEM_GetGothOpt("XERES", "acheb"));
-			};
-			if (Erfolg_EiserneKonstitution == 0) {
-				Erfolg_EiserneKonstitution = STR_ToInt(MEM_GetGothOpt("XERES", "achek"));
-			};
-			if (Erfolg_Backgroundstory2 == 0) {
-				Erfolg_Backgroundstory2 = STR_ToInt(MEM_GetGothOpt("XERES", "achbgs2"));
-			};
-			if (Erfolg_FLehrling == 0) {
-				Erfolg_FLehrling = STR_ToInt(MEM_GetGothOpt("XERES", "achfl"));
-			};
-			if (Erfolg_Helferlein == 0) {
-				Erfolg_Helferlein = STR_ToInt(MEM_GetGothOpt("XERES", "achh"));
-			};
-			if (Erfolg_Kiffer == 0) {
-				Erfolg_Kiffer = STR_ToInt(MEM_GetGothOpt("XERES", "achk"));
-			};
-			if (Erfolg_LangeFinger == 0) {
-				Erfolg_LangeFinger = STR_ToInt(MEM_GetGothOpt("XERES", "achlf"));
-			};
-			if (Erfolg_Leidensfaehigkeit == 0) {
-				Erfolg_Leidensfaehigkeit = STR_ToInt(MEM_GetGothOpt("XERES", "achlf"));
-			};
-			if (Erfolg_MaxLevel == 0) {
-				Erfolg_MaxLevel = STR_ToInt(MEM_GetGothOpt("XERES", "achlm"));
-			};
-			if (Erfolg_Magersucht == 0) {
-				Erfolg_Magersucht = STR_ToInt(MEM_GetGothOpt("XERES", "achms"));
-			};
-			if (Erfolg_MonsterHunter == 0) {
-				Erfolg_MonsterHunter = STR_ToInt(MEM_GetGothOpt("XERES", "achmj"));
-			};
-			if (Erfolg_Rattenjaeger == 0) {
-				Erfolg_Rattenjaeger = STR_ToInt(MEM_GetGothOpt("XERES", "achrj"));
-			};
-			if (Erfolg_Seepferdchen == 0) {
-				Erfolg_Seepferdchen = STR_ToInt(MEM_GetGothOpt("XERES", "achsp"));
-			};
-			if (Erfolg_Selbstlosigkeit == 0) {
-				Erfolg_Selbstlosigkeit = STR_ToInt(MEM_GetGothOpt("XERES", "achsl"));
-			};
-			if (Erfolg_Sparschwein == 0) {
-				Erfolg_Sparschwein = STR_ToInt(MEM_GetGothOpt("XERES", "achss"));
-			};
-			if (Erfolg_Trampel == 0) {
-				Erfolg_Trampel = STR_ToInt(MEM_GetGothOpt("XERES", "achtr"));
-			};
-			if (Erfolg_Wandlungskuenstler == 0) {
-				Erfolg_Wandlungskuenstler = STR_ToInt(MEM_GetGothOpt("XERES", "achwk"));
-			};
-			if (Erfolg_Backgroundstory == 0) {
-				Erfolg_Backgroundstory = STR_ToInt(MEM_GetGothOpt("XERES", "achbgs1"));
-			};
-			if (Erfolg_Zeitspiel == 0) {
-				Erfolg_Zeitspiel = STR_ToInt(MEM_GetGothOpt("XERES", "achzs"));
-			};
-
-			if (CurrentErfolge == 0) {
-				CurrentErfolge = STR_ToInt(MEM_GetGothOpt("XERES", "ach"));
-
-				if (CurrentErfolge > 0) {
-					Mod_GiveErfolgXP = 1;
-				};
-			} else {
-				CurrentErfolge = STR_ToInt(MEM_GetGothOpt("XERES", "ach"));
-
-				ErfolgText = ConcatStrings(IntToString((CurrentErfolge * 100) / MaxErfolge), "% aller Erfolge erreicht");
-
-				Npc_RemoveInvItems	(PC_Hero, ItWr_Erfolge, 1);
-				CreateInvItems	(PC_Hero, ItWr_Erfolge, 1);
-			};
 		}
 		else if (CurrentLevel != CurrentLevel2) // Levelwechsel
 		{
@@ -199,80 +124,6 @@ FUNC VOID FRAMEFUNC ()
 		}
 		else	// Spielstand geladen
 		{
-			// Erfolge einlesen
-
-			if (Erfolg_EifrigerBuesser == 0) {
-				Erfolg_EifrigerBuesser = STR_ToInt(MEM_GetGothOpt("XERES", "acheb"));
-			};
-			if (Erfolg_EiserneKonstitution == 0) {
-				Erfolg_EiserneKonstitution = STR_ToInt(MEM_GetGothOpt("XERES", "achek"));
-			};
-			if (Erfolg_Backgroundstory2 == 0) {
-				Erfolg_Backgroundstory2 = STR_ToInt(MEM_GetGothOpt("XERES", "achbgs2"));
-			};
-			if (Erfolg_FLehrling == 0) {
-				Erfolg_FLehrling = STR_ToInt(MEM_GetGothOpt("XERES", "achfl"));
-			};
-			if (Erfolg_Helferlein == 0) {
-				Erfolg_Helferlein = STR_ToInt(MEM_GetGothOpt("XERES", "achh"));
-			};
-			if (Erfolg_Kiffer == 0) {
-				Erfolg_Kiffer = STR_ToInt(MEM_GetGothOpt("XERES", "achk"));
-			};
-			if (Erfolg_LangeFinger == 0) {
-				Erfolg_LangeFinger = STR_ToInt(MEM_GetGothOpt("XERES", "achlf"));
-			};
-			if (Erfolg_Leidensfaehigkeit == 0) {
-				Erfolg_Leidensfaehigkeit = STR_ToInt(MEM_GetGothOpt("XERES", "achlf"));
-			};
-			if (Erfolg_MaxLevel == 0) {
-				Erfolg_MaxLevel = STR_ToInt(MEM_GetGothOpt("XERES", "achlm"));
-			};
-			if (Erfolg_Magersucht == 0) {
-				Erfolg_Magersucht = STR_ToInt(MEM_GetGothOpt("XERES", "achms"));
-			};
-			if (Erfolg_MonsterHunter == 0) {
-				Erfolg_MonsterHunter = STR_ToInt(MEM_GetGothOpt("XERES", "achmj"));
-			};
-			if (Erfolg_Rattenjaeger == 0) {
-				Erfolg_Rattenjaeger = STR_ToInt(MEM_GetGothOpt("XERES", "achrj"));
-			};
-			if (Erfolg_Seepferdchen == 0) {
-				Erfolg_Seepferdchen = STR_ToInt(MEM_GetGothOpt("XERES", "achsp"));
-			};
-			if (Erfolg_Selbstlosigkeit == 0) {
-				Erfolg_Selbstlosigkeit = STR_ToInt(MEM_GetGothOpt("XERES", "achsl"));
-			};
-			if (Erfolg_Sparschwein == 0) {
-				Erfolg_Sparschwein = STR_ToInt(MEM_GetGothOpt("XERES", "achss"));
-			};
-			if (Erfolg_Trampel == 0) {
-				Erfolg_Trampel = STR_ToInt(MEM_GetGothOpt("XERES", "achtr"));
-			};
-			if (Erfolg_Wandlungskuenstler == 0) {
-				Erfolg_Wandlungskuenstler = STR_ToInt(MEM_GetGothOpt("XERES", "achwk"));
-			};
-			if (Erfolg_Backgroundstory == 0) {
-				Erfolg_Backgroundstory = STR_ToInt(MEM_GetGothOpt("XERES", "achbgs1"));
-			};
-			if (Erfolg_Zeitspiel == 0) {
-				Erfolg_Zeitspiel = STR_ToInt(MEM_GetGothOpt("XERES", "achzs"));
-			};
-
-			if (CurrentErfolge == 0) {
-				CurrentErfolge = STR_ToInt(MEM_GetGothOpt("XERES", "ach"));
-
-				if (CurrentErfolge > 0) {
-					Mod_GiveErfolgXP = 1;
-				};
-			} else {
-				CurrentErfolge = STR_ToInt(MEM_GetGothOpt("XERES", "ach"));
-
-				ErfolgText = ConcatStrings(IntToString((CurrentErfolge * 100) / MaxErfolge), "% aller Erfolge erreicht");
-
-				Npc_RemoveInvItems	(PC_Hero, ItWr_Erfolge, 1);
-				CreateInvItems	(PC_Hero, ItWr_Erfolge, 1);
-			};
 		};
 		CheckRespawns();
 
@@ -710,44 +561,49 @@ FUNC VOID FRAMEFUNC ()
 		Wld_InsertItem	(ItMi_Focus_Troll, "FP_ITEM_FOKUS_TROLL");
 	};
 
-	if (Npc_HasItems(hero, ItMi_Focus_Pat_01) == 1)
-	&& (Mod_PAT_Focus_01 == 0)
-	{
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_01) == 1) {
 		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_01, 1);
-
-		Wld_InsertItem	(ItMi_Focus_Pat_01, "FP_ITEM_FOKUS_01");
+		if (Mod_PAT_Focus_01 == 0) {
+			Wld_InsertItem	(ItMi_Focus_Pat_01, "FP_ITEM_FOKUS_01");
+		} else {
+			CreateInvItems(hero, ItMi_Focus_Pat, 1);
+		};
 	};
 
-	if (Npc_HasItems(hero, ItMi_Focus_Pat_02) == 1)
-	&& (Mod_PAT_Focus_02 == 0)
-	{
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_02) == 1) {
 		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_02, 1);
-
-		Wld_InsertItem	(ItMi_Focus_Pat_02, "FP_ITEM_FOKUS_02");
+		if (Mod_PAT_Focus_02 == 0) {
+			Wld_InsertItem	(ItMi_Focus_Pat_02, "FP_ITEM_FOKUS_02");
+		} else {
+			CreateInvItems(hero, ItMi_Focus_Pat, 1);
+		};
 	};
 
-	if (Npc_HasItems(hero, ItMi_Focus_Pat_03) == 1)
-	&& (Mod_PAT_Focus_03 == 0)
-	{
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_03) == 1) {
 		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_03, 1);
-
-		Wld_InsertItem	(ItMi_Focus_Pat_03, "FP_ITEM_FOKUS_03");
+		if (Mod_PAT_Focus_03 == 0) {
+			Wld_InsertItem	(ItMi_Focus_Pat_03, "FP_ITEM_FOKUS_03");
+		} else {
+			CreateInvItems(hero, ItMi_Focus_Pat, 1);
+		};
 	};
 
-	if (Npc_HasItems(hero, ItMi_Focus_Pat_04) == 1)
-	&& (Mod_PAT_Focus_04 == 0)
-	{
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_04) == 1) {
 		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_04, 1);
-
-		Wld_InsertItem	(ItMi_Focus_Pat_04, "FP_ITEM_FOKUS_04");
+		if (Mod_PAT_Focus_04 == 0) {
+			Wld_InsertItem	(ItMi_Focus_Pat_04, "FP_ITEM_FOKUS_04");
+		} else {
+			CreateInvItems(hero, ItMi_Focus_Pat, 1);
+		};
 	};
 
-	if (Npc_HasItems(hero, ItMi_Focus_Pat_05) == 1)
-	&& (Mod_PAT_Focus_05 == 0)
-	{
+	if (Npc_HasItems(hero, ItMi_Focus_Pat_05) == 1) {
 		Npc_RemoveInvItems	(hero, ItMi_Focus_Pat_05, 1);
-
-		Wld_InsertItem	(ItMi_Focus_Pat_05, "FP_ITEM_FOKUS_05");
+		if (Mod_PAT_Focus_05 == 0) {
+			Wld_InsertItem	(ItMi_Focus_Pat_05, "FP_ITEM_FOKUS_05");
+		} else {
+			CreateInvItems(hero, ItMi_Focus_Pat, 1);
+		};
 	};
 
 	if (Npc_HasItems(hero, ItMi_Magieprisma_Fake) == 1)

@@ -69,6 +69,8 @@ INSTANCE Info_Mod_Velario_MangelQuest2 (C_INFO)
 
 FUNC INT Info_Mod_Velario_MangelQuest2_Condition()
 {
+	B_StopMangel();
+	
 	if (Npc_KnowsInfo(hero, Info_Mod_Velario_MangelQuest))
 	&& (Npc_HasItems(hero, ItWr_ZombieToHuman) == 1)
 	{
@@ -101,8 +103,6 @@ FUNC VOID Info_Mod_Velario_MangelQuest2_Info()
 	B_GivePlayerXP	(500);
 
 	B_LogEntry	(TOPIC_MOD_FM_MANGEL, "Velario war über das Buch mehr als nur glücklich.");
-
-	B_StopMangel();
 
 	Mod_PAT_VelarioDay = Wld_GetDay();
 };

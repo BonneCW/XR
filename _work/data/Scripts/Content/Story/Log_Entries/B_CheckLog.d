@@ -20,6 +20,14 @@ FUNC VOID B_StartMangel()
 
 FUNC VOID B_StopMangel()
 {
+	PrintDebug(ConcatStrings("Mangel: ", IntToString(Mod_Pat_MangelStarted)));
+	PrintDebug(ConcatStrings("Mangel: ", IntToString(Npc_KnowsInfo(hero, Info_Mod_Faros_MangelQuest2))));
+	PrintDebug(ConcatStrings("Mangel: ", IntToString(Npc_KnowsInfo(hero, Info_Mod_Furgas_MangelQuest2))));
+	PrintDebug(ConcatStrings("Mangel: ", IntToString(Mod_Pat_FlaemarKraut >= 15)));
+	PrintDebug(ConcatStrings("Mangel: ", IntToString(Mod_Pat_FlaemarAlkohol >= 15)));
+	PrintDebug(ConcatStrings("Mangel: ", IntToString(Mod_Pat_PflanzenCount == 5)));
+	PrintDebug(ConcatStrings("Mangel: ", IntToString(Npc_KnowsInfo(hero, Info_Mod_Nagon_MangelQuest2))));
+	PrintDebug(ConcatStrings("Mangel: ", IntToString(Npc_KnowsInfo(hero, Info_Mod_Velario_MangelQuest2))));
 	if (Mod_Pat_MangelStarted == 1)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Faros_MangelQuest2))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Furgas_MangelQuest2))
