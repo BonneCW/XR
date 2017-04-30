@@ -48,7 +48,7 @@ FUNC VOID Info_Mod_Sonor_CyrcoMine_Info()
 	AI_Output(self, hero, "Info_Mod_Sonor_CyrcoMine_06_01"); //Aber ja doch. Bin noch warm von vorhin. Denen haben wir's gezeigt. Was liegt jetzt an?
 	AI_Output(hero, self, "Info_Mod_Sonor_CyrcoMine_15_02"); //Wir müssen zur Alten Mine. Irgendeine Höhle. Mehr weiß ich auch noch nicht.
 	AI_Output(self, hero, "Info_Mod_Sonor_CyrcoMine_06_03"); //Nur zu. Sag Bescheid, wenn's losgeht.
-	AI_Output(hero, self, "Info_Mod_Sonor_CyrcoMine_15_04"); //Ei gewiss doch.
+	AI_Output(hero, self, "Info_Mod_Sonor_CyrcoMine_15_04"); //Mach ich.
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Zelar_CyrcoMine))
 	{
