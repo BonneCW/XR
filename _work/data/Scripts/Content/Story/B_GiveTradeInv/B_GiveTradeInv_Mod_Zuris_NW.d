@@ -6,6 +6,10 @@ var int Zuris_ItemsGiven_Chapter_5;
 
 FUNC VOID B_GiveTradeInv_Mod_Zuris_NW (var C_NPC slf)
 {
+	if (Npc_HasItems(slf, ItMi_Flask) < 10) {
+		CreateInvItems(slf, ItMi_Flask, 10 - Npc_HasItems(slf, ItMi_Flask));
+	};
+
 	if ((Kapitel >= 1)
 	&& (Zuris_ItemsGiven_Chapter_1 == FALSE))
 	{

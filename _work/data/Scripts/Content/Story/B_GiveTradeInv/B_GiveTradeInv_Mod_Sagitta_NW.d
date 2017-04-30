@@ -6,6 +6,10 @@ var int Sagitta_ItemsGiven_Chapter_5;
 
 FUNC VOID B_GiveTradeInv_Mod_Sagitta_NW (var C_NPC slf)
 {
+	if (Npc_HasItems(slf, ItMi_Flask) < 20) {
+		CreateInvItems(slf, ItMi_Flask, 20 - Npc_HasItems(slf, ItMi_Flask));
+	};
+	
 	if ((Kapitel >= 1)
 	&& (Sagitta_ItemsGiven_Chapter_1 == FALSE))
 	{

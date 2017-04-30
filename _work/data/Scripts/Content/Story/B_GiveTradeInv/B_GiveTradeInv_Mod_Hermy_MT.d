@@ -6,6 +6,10 @@ var int Hermy_ItemsGiven_Chapter_5;
 
 FUNC VOID B_GiveTradeInv_Mod_Hermy_MT (var C_NPC slf)
 {
+	if (Npc_HasItems(slf, ItMi_Flask) < 10) {
+		CreateInvItems(slf, ItMi_Flask, 10 - Npc_HasItems(slf, ItMi_Flask));
+	};
+	
 	if ((Kapitel >= 1)
 	&& (Hermy_ItemsGiven_Chapter_1 == FALSE))
 	{

@@ -6,6 +6,10 @@ var int Mufid_ItemsGiven_Chapter_5;
 
 FUNC VOID B_GiveTradeInv_Mod_Mufid_NW (var C_NPC slf)
 {
+	if (Npc_HasItems(slf, ItMi_Flask) < 15) {
+		CreateInvItems(slf, ItMi_Flask, 15 - Npc_HasItems(slf, ItMi_Flask));
+	};
+	
 	if ((Kapitel >= 1)
 	&& (Mufid_ItemsGiven_Chapter_1 == FALSE))
 	{
