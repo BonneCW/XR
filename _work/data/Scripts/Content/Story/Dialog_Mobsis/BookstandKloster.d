@@ -180,14 +180,6 @@ FUNC VOID Use_Bookstand_Kreise_01_S1()
 					Doc_PrintLine	( nDocID,  0, "Schwefel");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Kleiner Blitz");
-					Doc_PrintLine	( nDocID,  0, "Bergkristall");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					Doc_PrintLine	( nDocID,  0, "Goblin Skelett");
-					Doc_PrintLine	( nDocID,  0, "Knochen eines Goblins");
-					Doc_PrintLine	( nDocID,  0, "");
-					
 					Doc_PrintLine	( nDocID,  0, "Leichte Wunden heilen");
 					Doc_PrintLine	( nDocID,  0, "Heilpflanze");
 					Doc_PrintLine	( nDocID,  0, "");
@@ -232,24 +224,6 @@ FUNC VOID Use_Bookstand_Kreise_02_S1()
 					
 					Doc_PrintLine	( nDocID,  0, "Feuerball");
 					Doc_PrintLine	( nDocID,  0, "Pech");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					
-					Doc_PrintLine	( nDocID,  0, "Eispfeil");
-					Doc_PrintLine	( nDocID,  0, "Gletscher Quartz");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					
-					Doc_PrintLine	( nDocID,  0, "Wolf rufen");
-					Doc_PrintLine	( nDocID,  0, "Wolfsfell");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					Doc_PrintLine	( nDocID,  0, "Windfaust");
-					Doc_PrintLine	( nDocID,  0, "Kohle");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					Doc_PrintLine	( nDocID,  0, "Schlaf");
-					Doc_PrintLine	( nDocID,  0, "Sumpfkraut");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
@@ -300,31 +274,6 @@ FUNC VOID Use_Bookstand_Kreise_03_S1()
 					Doc_PrintLine	( nDocID,  0, "Pech");
 					Doc_PrintLine	( nDocID,  0, "Schwefel");
 					Doc_PrintLine	( nDocID,  0, "");
-					
-					Doc_PrintLine	( nDocID,  0, "Skelett erschaffen");
-					Doc_PrintLine	( nDocID,  0, "Knochen eines Skeletts");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					Doc_PrintLine	( nDocID,  0, "Furcht");
-					Doc_PrintLine	( nDocID,  0, "Schwarze Perle");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					Doc_PrintLine	( nDocID,  0, "Eisblock");
-					Doc_PrintLine	( nDocID,  0, "Gletscher Quartz");
-					Doc_PrintLine	( nDocID,  0, "Aquamarin");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					Doc_PrintLine	( nDocID,  0, "Kugelblitz");
-					Doc_PrintLine	( nDocID,  0, "Bergkristall");
-					Doc_PrintLine	( nDocID,  0, "Schwefel");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					
-					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
-					Doc_PrintLine	( nDocID,  0, "Feuerball");
-					Doc_PrintLine	( nDocID,  0, "Pech");
-					Doc_PrintLine	( nDocID,  0, "Schwefel");
-					Doc_PrintLine	( nDocID,  0, "");
 			
 					Doc_PrintLines	( nDocID,  1, "Für die Herstellung einer Rune ist jeweils EINE der aufgeführten Ingredenzien erforderlich."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
@@ -364,15 +313,6 @@ FUNC VOID Use_Bookstand_Kreise_04_S1()
 					Doc_PrintLine	( nDocID,  0, "Grosser Feuerball");
 					Doc_PrintLine	( nDocID,  0, "Schwefel");
 					Doc_PrintLine	( nDocID,  0, "Pech");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					Doc_PrintLine	( nDocID,  0, "Blitzschlag");
-					Doc_PrintLine	( nDocID,  0, "Bergkristall");
-					Doc_PrintLine	( nDocID,  0, "Gletscher Quartz");
-					Doc_PrintLine	( nDocID,  0, "");				
-					
-					Doc_PrintLine	( nDocID,  0, "Golem erwecken");
-					Doc_PrintLine	( nDocID,  0, "Herz eines Steingolems");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					Doc_PrintLine	( nDocID,  0, "Untote vernichten");
@@ -422,19 +362,10 @@ FUNC VOID Use_Bookstand_Kreise_05_S1()
 					Doc_PrintLine	( nDocID,  0, ""	);
 					Doc_PrintLine	( nDocID,  0, ""	);
 					
-					Doc_PrintLine	( nDocID,  0, "Eiswelle");
-					Doc_PrintLine	( nDocID,  0, "Gletscher Quartz");
-					Doc_PrintLine	( nDocID,  0, "Aquamarin");
-					Doc_PrintLine	( nDocID,  0, "");
-					
 					
 					Doc_PrintLine	( nDocID,  0, "Grosser Feuersturm");
 					Doc_PrintLine	( nDocID,  0, "Schwefel");
 					Doc_PrintLine	( nDocID,  0, "Flammenzunge");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					Doc_PrintLine	( nDocID,  0, "Dämon beschwören");
-					Doc_PrintLine	( nDocID,  0, "Herz eines Dämonen");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					Doc_PrintLine	( nDocID,  0, "Schwere Wunden heilen");
@@ -484,23 +415,6 @@ FUNC VOID Use_Bookstand_Kreise_06_S1()
 					Doc_PrintLine	( nDocID,  0, "Pech");
 					Doc_PrintLine	( nDocID,  0, "Schwefel");
 					Doc_PrintLine	( nDocID,  0, "Flammenzunge");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					Doc_PrintLine	( nDocID,  0, "Todeshauch");
-					Doc_PrintLine	( nDocID,  0, "Kohle");
-					Doc_PrintLine	( nDocID,  0, "Schwarze Perle");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					Doc_PrintLine	( nDocID,  0, "Todeswelle");
-					Doc_PrintLine	( nDocID,  0, "Knochen eines Skeletts");
-					Doc_PrintLine	( nDocID,  0, "Schwarze Perle");
-					Doc_PrintLine	( nDocID,  0, "");
-					
-					Doc_PrintLine	( nDocID,  0, "Armee der Finsternis");
-					Doc_PrintLine	( nDocID,  0, "Knochen eines Skeletts");
-					Doc_PrintLine	( nDocID,  0, "Schwarze Perle");
-					Doc_PrintLine	( nDocID,  0, "Herz eines Steingolems");
-					Doc_PrintLine	( nDocID,  0,  "Herz eines Dämonen");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					
