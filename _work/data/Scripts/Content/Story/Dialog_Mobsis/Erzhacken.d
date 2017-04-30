@@ -624,6 +624,141 @@ FUNC INT B_ErzMob_Bestimmung()
 	{
 		ErzMob_122_Amount = (ErzMob_122_Amount + 1);
 		return TRUE;
+	}	
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_2") && (ErzMob_123_Amount_MAX > ErzMob_123_Amount))
+	{
+		ErzMob_123_Amount = (ErzMob_123_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_60") && (ErzMob_124_Amount_MAX > ErzMob_124_Amount))
+	{
+		ErzMob_124_Amount = (ErzMob_124_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_59") && (ErzMob_125_Amount_MAX > ErzMob_125_Amount))
+	{
+		ErzMob_125_Amount = (ErzMob_125_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_58") && (ErzMob_126_Amount_MAX > ErzMob_126_Amount))
+	{
+		ErzMob_126_Amount = (ErzMob_126_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_57") && (ErzMob_127_Amount_MAX > ErzMob_127_Amount))
+	{
+		ErzMob_127_Amount = (ErzMob_127_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_56") && (ErzMob_128_Amount_MAX > ErzMob_128_Amount))
+	{
+		ErzMob_128_Amount = (ErzMob_128_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_55") && (ErzMob_129_Amount_MAX > ErzMob_129_Amount))
+	{
+		ErzMob_129_Amount = (ErzMob_129_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_52") && (ErzMob_130_Amount_MAX > ErzMob_130_Amount))
+	{
+		ErzMob_130_Amount = (ErzMob_130_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_50") && (ErzMob_131_Amount_MAX > ErzMob_131_Amount))
+	{
+		ErzMob_131_Amount = (ErzMob_131_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_51") && (ErzMob_132_Amount_MAX > ErzMob_132_Amount))
+	{
+		ErzMob_132_Amount = (ErzMob_132_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_49") && (ErzMob_133_Amount_MAX > ErzMob_133_Amount))
+	{
+		ErzMob_133_Amount = (ErzMob_133_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_48") && (ErzMob_134_Amount_MAX > ErzMob_134_Amount))
+	{
+		ErzMob_134_Amount = (ErzMob_134_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_47") && (ErzMob_135_Amount_MAX > ErzMob_135_Amount))
+	{
+		ErzMob_135_Amount = (ErzMob_135_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_46") && (ErzMob_136_Amount_MAX > ErzMob_136_Amount))
+	{
+		ErzMob_136_Amount = (ErzMob_136_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_45") && (ErzMob_137_Amount_MAX > ErzMob_137_Amount))
+	{
+		ErzMob_137_Amount = (ErzMob_137_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_44") && (ErzMob_138_Amount_MAX > ErzMob_138_Amount))
+	{
+		ErzMob_138_Amount = (ErzMob_138_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_43") && (ErzMob_139_Amount_MAX > ErzMob_139_Amount))
+	{
+		ErzMob_139_Amount = (ErzMob_139_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_42") && (ErzMob_140_Amount_MAX > ErzMob_140_Amount))
+	{
+		ErzMob_140_Amount = (ErzMob_140_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_41") && (ErzMob_141_Amount_MAX > ErzMob_141_Amount))
+	{
+		ErzMob_141_Amount = (ErzMob_141_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_40") && (ErzMob_142_Amount_MAX > ErzMob_142_Amount))
+	{
+		ErzMob_142_Amount = (ErzMob_142_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_39") && (ErzMob_143_Amount_MAX > ErzMob_143_Amount))
+	{
+		ErzMob_143_Amount = (ErzMob_143_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_38") && (ErzMob_144_Amount_MAX > ErzMob_144_Amount))
+	{
+		ErzMob_144_Amount = (ErzMob_144_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_31") && (ErzMob_145_Amount_MAX > ErzMob_145_Amount))
+	{
+		ErzMob_145_Amount = (ErzMob_145_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_32") && (ErzMob_146_Amount_MAX > ErzMob_146_Amount))
+	{
+		ErzMob_146_Amount = (ErzMob_146_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_33") && (ErzMob_147_Amount_MAX > ErzMob_147_Amount))
+	{
+		ErzMob_147_Amount = (ErzMob_147_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_34") && (ErzMob_148_Amount_MAX > ErzMob_148_Amount))
+	{
+		ErzMob_148_Amount = (ErzMob_148_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "SUEDMINE_35") && (ErzMob_149_Amount_MAX > ErzMob_149_Amount))
+	{
+		ErzMob_149_Amount = (ErzMob_149_Amount + 1);
+		return TRUE;
 	};
 
 	return FALSE;

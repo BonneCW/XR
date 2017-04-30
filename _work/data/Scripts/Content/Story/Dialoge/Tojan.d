@@ -105,9 +105,6 @@ FUNC VOID Info_Mod_Tojan_Magier_Info()
 
 	B_Göttergefallen(1, 1);
 
-	//Wld_InsertNpc	(Troll_s_Pat,	"FP_TROLL_BAD");
-	//Wld_InsertNpc	(Mod_1771_KDF_Aaron_PAT,	"WP_PAT_WEG_60");
-
 	Log_CreateTopic	(TOPIC_MOD_FM_VERRAT, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_FM_VERRAT, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_FM_VERRAT, "Der Schwarzmagier hat angedeutet, dass sich ein weiterer Schwarzmagier in unseren Reihen befindet. Tojan hat mich damit beauftragt ihn zu finden.");
@@ -121,12 +118,13 @@ INSTANCE Info_Mod_Tojan_Beschwoerer (C_INFO)
 	information	= Info_Mod_Tojan_Beschwoerer_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich glaube, ich weiss, wer der Verräter ist.";
+	description	= "Ich glaube, ich weiß, wer der Verräter ist.";
 };
 
 FUNC INT Info_Mod_Tojan_Beschwoerer_Condition()
 {
 	if (Mod_FM_Foki == 2)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Aaron_Hi))
 	{
 		return 1;
 	};

@@ -244,7 +244,7 @@ FUNC VOID Info_Mod_Aaron_BarriereWeg_Info()
 
 	B_StartOtherRoutine	(self, "ARBEIT");
 
-	B_LogEntry	(TOPIC_MOD_FM_VERRAT, "Es ist vollbracht und die Barriere ist zerstört. Ich kann nun nach Khorinis zurückkehren.");
+	B_LogEntry	(TOPIC_MOD_FM_VERRAT, "Es ist vollbracht und die Barriere ist zerstört. Ich kann nun nach Khorinis zurückkehren und sollte Pyrokar informieren.");
 	B_SetTopicStatus	(TOPIC_MOD_FM_VERRAT, LOG_SUCCESS);
 };
 
