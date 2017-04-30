@@ -28,7 +28,7 @@ INSTANCE Info_Mod_Gaan_Dragomir (C_INFO)
 	information	= Info_Mod_Gaan_Dragomir_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich nehme an du bist Gaan?";
+	description	= "Dragomir schickt mich.";
 };
 
 FUNC INT Info_Mod_Gaan_Dragomir_Condition()
@@ -42,15 +42,13 @@ FUNC INT Info_Mod_Gaan_Dragomir_Condition()
 
 FUNC VOID Info_Mod_Gaan_Dragomir_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Gaan_Dragomir_15_00"); //Ich nehme an du bist Gaan?
-	AI_Output(self, hero, "Info_Mod_Gaan_Dragomir_03_01"); //Da hast du richtig angenommen. Woher kennst du meinen Name?
-	AI_Output(hero, self, "Info_Mod_Gaan_Dragomir_15_02"); //Dragomir hat ihn mir gesagt.
-	AI_Output(self, hero, "Info_Mod_Gaan_Dragomir_03_03"); //Achso, dann nehme ich an, dass Dragomir wissen will, was ich herausgefunden habe?
-	AI_Output(hero, self, "Info_Mod_Gaan_Dragomir_15_04"); //Richtig.
-	AI_Output(self, hero, "Info_Mod_Gaan_Dragomir_03_05"); //Also bisher ist mir nichts auff‰lliges untergekommen. Auﬂerdem ist es hier ein feines Jagdgebiet und man hat von beinahe jedem Punkt aus einen perfekten Blick auf den Pass.
-	AI_Output(self, hero, "Info_Mod_Gaan_Dragomir_03_06"); //Da f‰llt mir gerade ein: Letzte Nacht habe ich ein Rudel Snapper dadurch kommen sehen.
-	AI_Output(hero, self, "Info_Mod_Gaan_Dragomir_15_07"); //Und was ist daran besonders?
-	AI_Output(self, hero, "Info_Mod_Gaan_Dragomir_03_08"); //Nichts.
+	AI_Output(hero, self, "Info_Mod_Gaan_Dragomir_15_00"); //Dragomir schickt mich.
+	AI_Output(self, hero, "Info_Mod_Gaan_Dragomir_03_01"); //Dann nehme ich an, dass er wissen will, was ich herausgefunden habe?
+	AI_Output(hero, self, "Info_Mod_Gaan_Dragomir_15_02"); //Richtig.
+	AI_Output(self, hero, "Info_Mod_Gaan_Dragomir_03_03"); //Also bisher ist mir nichts auff‰lliges untergekommen. Auﬂerdem ist es hier ein feines Jagdgebiet und man hat von beinahe jedem Punkt aus einen perfekten Blick auf den Pass.
+	AI_Output(self, hero, "Info_Mod_Gaan_Dragomir_03_04"); //Da f‰llt mir gerade ein: Letzte Nacht habe ich ein Rudel Snapper dadurch kommen sehen.
+	AI_Output(hero, self, "Info_Mod_Gaan_Dragomir_15_05"); //Und was ist daran besonders?
+	AI_Output(self, hero, "Info_Mod_Gaan_Dragomir_03_06"); //Nichts.
 
 	B_LogEntry	(TOPIC_MOD_JG_JAGDGEBIETE, "Gaan sagt, dass beim Pass ein gutes Jagdgebiet ist.");
 };
