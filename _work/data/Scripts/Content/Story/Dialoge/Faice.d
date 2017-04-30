@@ -263,6 +263,7 @@ FUNC VOID Info_Mod_Faice_Aufnahme_Info()
 
 	B_GivePlayerXP	(450);
 
+	AI_Teleport(self, "VMG_19");
 	B_StartOtherRoutine	(self, "RITUAL");
 	B_StartOtherRoutine	(Mod_4020_VMG_Hermy_MT, "RITUAL");
 	B_StartOtherRoutine	(Mod_1626_VMG_Furt_MT, "RITUAL");
