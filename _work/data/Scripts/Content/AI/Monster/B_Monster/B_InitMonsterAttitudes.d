@@ -588,7 +588,7 @@ func void B_InitMonsterAttitudes ()
 	B_SetMonsterAttitude	(GIL_WOLF,	ATT_NEUTRAL,	GIL_BLOODFLY				);
 	B_SetMonsterAttitude	(GIL_WOLF,	ATT_NEUTRAL,	GIL_WARAN					);	// Waren / Feuerwaran	
 	B_SetMonsterAttitude	(GIL_WOLF,	ATT_FRIENDLY,	GIL_WOLF					);	// Wolf / Warg	
-	B_SetMonsterAttitude	(GIL_WOLF,	ATT_NEUTRAL,	GIL_SUMMONED_WOLF			);
+	B_SetMonsterAttitude	(GIL_WOLF,	ATT_HOSTILE,	GIL_SUMMONED_WOLF			);
 	B_SetMonsterAttitude	(GIL_WOLF,	ATT_NEUTRAL,	GIL_MINECRAWLER				);	// Minecrawler / Minecrawler Warrior
 	B_SetMonsterAttitude	(GIL_WOLF,	ATT_NEUTRAL,	GIL_LURKER					);
 	B_SetMonsterAttitude	(GIL_WOLF,	ATT_NEUTRAL,	GIL_SKELETON				);
@@ -635,7 +635,7 @@ func void B_InitMonsterAttitudes ()
 	B_SetMonsterAttitude	(GIL_SUMMONED_WOLF	,	ATT_HOSTILE,	GIL_GIANT_BUG				);
 	B_SetMonsterAttitude	(GIL_SUMMONED_WOLF	,	ATT_HOSTILE,	GIL_BLOODFLY				);
 	B_SetMonsterAttitude	(GIL_SUMMONED_WOLF	,	ATT_HOSTILE,	GIL_WARAN					);	// Waren / Feuerwaran	
-	B_SetMonsterAttitude	(GIL_SUMMONED_WOLF	,	ATT_NEUTRAL,	GIL_WOLF					);	// Wolf / Warg	
+	B_SetMonsterAttitude	(GIL_SUMMONED_WOLF	,	ATT_HOSTILE,	GIL_WOLF					);	// Wolf / Warg	
 	B_SetMonsterAttitude	(GIL_SUMMONED_WOLF	,	ATT_NEUTRAL,	GIL_SUMMONED_WOLF			);
 	B_SetMonsterAttitude	(GIL_SUMMONED_WOLF	,	ATT_HOSTILE,	GIL_MINECRAWLER				);	// Minecrawler / Minecrawler Warrior
 	B_SetMonsterAttitude	(GIL_SUMMONED_WOLF	,	ATT_HOSTILE,	GIL_LURKER					);
