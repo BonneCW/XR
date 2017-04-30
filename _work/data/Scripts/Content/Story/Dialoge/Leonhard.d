@@ -374,7 +374,7 @@ FUNC VOID Info_Mod_Leonhard_Bierhexen_Info()
 	Info_ClearChoices	(Info_Mod_Leonhard_Bierhexen);
 
 	Info_AddChoice	(Info_Mod_Leonhard_Bierhexen, "Das wird Konsequenzen haben!", Info_Mod_Leonhard_Bierhexen_B);
-	Info_AddChoice	(Info_Mod_Leonhard_Bierhexen, "Was gibst du mir dafür, dass ich es dem Braumeister nicht erzähle?", Info_Mod_Leonhard_Bierhexen_A);
+	Info_AddChoice	(Info_Mod_Leonhard_Bierhexen, "Was gibst du mir dafür, dass ich es dem Braumeister nicht sage?", Info_Mod_Leonhard_Bierhexen_A);
 };
 
 FUNC VOID Info_Mod_Leonhard_Bierhexen_B()

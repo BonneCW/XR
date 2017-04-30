@@ -35,7 +35,7 @@ FUNC VOID Info_Mod_Esteban_Hi_Info()
 	Info_ClearChoices	(Info_Mod_Esteban_Hi);
 
 	Info_AddChoice	(Info_Mod_Esteban_Hi, "Nein, Ich überfalle doch keine wehrlosen Händler.", Info_Mod_Esteban_Hi_B);
-	Info_AddChoice	(Info_Mod_Esteban_Hi, "Selbstverständlich. Das Gold und den Spaß lasse ich mir nicht entgehen.", Info_Mod_Esteban_Hi_A);
+	Info_AddChoice	(Info_Mod_Esteban_Hi, "Selbstverständlich. Das Gold und den Spaß lasse ich mir (...)", Info_Mod_Esteban_Hi_A);
 };
 
 FUNC VOID Info_Mod_Esteban_Hi_B()

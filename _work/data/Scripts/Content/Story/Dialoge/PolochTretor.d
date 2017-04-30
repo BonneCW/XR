@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Poloch_Hi (C_INFO)
 	information	= Info_Mod_Poloch_Hi_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Gibt es ein Problem bei euch? Ihr blickt nicht gerade zufrieden drein.";
+	description	= "Gibt es ein Problem bei euch?";
 };
 
 FUNC INT Info_Mod_Poloch_Hi_Condition()
@@ -162,7 +162,7 @@ INSTANCE Info_Mod_Poloch_Noobs (C_INFO)
 	information	= Info_Mod_Poloch_Noobs_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ihr Schwächlinge seid nur ganz kleine Töne im Konzert der Großen.";
+	description	= "Ihr Schwächlinge seid nur ganz kleine Töne im Konzert (...)";
 };
 
 FUNC INT Info_Mod_Poloch_Noobs_Condition()

@@ -853,7 +853,7 @@ INSTANCE Info_Mod_Thorben_LauteMaterialien (C_INFO)
 	information	= Info_Mod_Thorben_LauteMaterialien_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich habe alle benötigten Materialien für die Laute besorgen können.";
+	description	= "Ich habe alle benötigten Materialien für die Laute (...)";
 };
 
 FUNC INT Info_Mod_Thorben_LauteMaterialien_Condition()

@@ -236,7 +236,7 @@ INSTANCE Info_Mod_Elvira_Dorn2 (C_INFO)
 	information	= Info_Mod_Elvira_Dorn2_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Anselm fordert eine Tributzahlung von euch im Gegenzug für seine Hilfe.";
+	description	= "Anselm fordert eine Tributzahlung von euch (...)";
 };
 
 FUNC INT Info_Mod_Elvira_Dorn2_Condition()

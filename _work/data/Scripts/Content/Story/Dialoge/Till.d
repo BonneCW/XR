@@ -92,7 +92,7 @@ INSTANCE Info_Mod_Till_Bronko03 (C_INFO)
 	information	= Info_Mod_Till_Bronko03_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Bronko hat eins und eins zusammengezählt und elf herausbekommen.";
+	description	= "Bronko hat eins und eins zusammengezählt (...)";
 };
 
 FUNC INT Info_Mod_Till_Bronko03_Condition()

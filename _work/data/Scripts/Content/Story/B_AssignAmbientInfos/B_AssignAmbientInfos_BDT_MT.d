@@ -46,7 +46,7 @@ FUNC VOID DIA_BDT_MT_Orkjagd_Info()
 	
 	Info_ClearChoices	(DIA_BDT_MT_Orkjagd);
 
-	Info_AddChoice	(DIA_BDT_MT_Orkjagd, "Halt einfach die klappe und komm heute Nacht vors Lager. Befehl von Morgahard.", DIA_BDT_MT_Orkjagd_B);
+	Info_AddChoice	(DIA_BDT_MT_Orkjagd, "Halt einfach die klappe und komm heute Nacht vors Lager.", DIA_BDT_MT_Orkjagd_B);
 	Info_AddChoice	(DIA_BDT_MT_Orkjagd, "Wir gehen auf Orkjagd.", DIA_BDT_MT_Orkjagd_A);
 };
 

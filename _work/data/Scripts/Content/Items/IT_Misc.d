@@ -4005,7 +4005,7 @@ INSTANCE ItMi_Seide (C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	300;
+	value 				=	100;
 
 	visual 				=	"Spindel.3ds";
 	material 			=	MAT_STONE;

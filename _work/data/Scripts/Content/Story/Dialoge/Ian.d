@@ -128,7 +128,7 @@ INSTANCE Info_Mod_Ian_AlteMine4 (C_INFO)
 	information	= Info_Mod_Ian_AlteMine4_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich sehe hier gar keinen Trupp, der unterwegs ist, die Mine zurückzuerobern.";
+	description	= "Ich sehe hier gar keinen Trupp, der unterwegs ist, die Mine (...)";
 };
 
 FUNC INT Info_Mod_Ian_AlteMine4_Condition()

@@ -230,7 +230,7 @@ FUNC VOID Info_Mod_Saturas_AW_UngebeterBesucher2_Info()
 
 	if (Mod_Verhandlungsgeschick > 0)
 	{
-		Info_AddChoice	(Info_Mod_Saturas_AW_UngebeterBesucher2, "(Feilschen) Die Sachen ersetze ich ... aber das Gold muss nicht sein.", Info_Mod_Saturas_AW_UngebeterBesucher2_B);
+		Info_AddChoice	(Info_Mod_Saturas_AW_UngebeterBesucher2, "(Feilschen) Die Sachen ersetze ich ... aber das Gold nicht (...)", Info_Mod_Saturas_AW_UngebeterBesucher2_B);
 	};
 
 	Info_AddChoice	(Info_Mod_Saturas_AW_UngebeterBesucher2, "Ich werde alles zurückbringen.", Info_Mod_Saturas_AW_UngebeterBesucher2_A);

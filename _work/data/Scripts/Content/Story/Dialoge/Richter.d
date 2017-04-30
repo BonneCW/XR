@@ -204,6 +204,8 @@ FUNC VOID Info_Mod_Richter_Unfrieden_Info()
 
 	B_GiveInvItems	(hero, self, ItWr_LeonhardRichter, 1);
 
+	AI_Output(self, hero, "DEFAULT"); //
+	
 	B_UseFakeScroll ();
 
 	AI_Output(self, hero, "Info_Mod_Richter_Unfrieden_10_01"); //O Adanos, beschütze Uns! Das kann doch nicht sein Ernst sein!

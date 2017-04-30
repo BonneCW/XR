@@ -33,7 +33,7 @@ INSTANCE Info_Mod_DMRMinenwache_GoIn2 (C_INFO)
 	information	= Info_Mod_DMRMinenwache_GoIn2_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Und könntest du nur kurz vom Eingang weggehen, wenn mir ein Beutel (...)";
+	description	= "Und könntest du nur kurz vom Eingang weggehen (...)";
 };
 
 FUNC INT Info_Mod_DMRMinenwache_GoIn2_Condition()
@@ -91,7 +91,7 @@ INSTANCE Info_Mod_DMRMinenwache_GoIn4 (C_INFO)
 	information	= Info_Mod_DMRMinenwache_GoIn4_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Mir in den Arsch zu treten? Das glaube ich erst, wenn ich es gesehen habe ...";
+	description	= "Mir in den Arsch zu treten? Das glaube ich erst (...)";
 };
 
 FUNC INT Info_Mod_DMRMinenwache_GoIn4_Condition()

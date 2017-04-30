@@ -4,7 +4,7 @@ INSTANCE Mod_7612_PSINOV_Lester_REL (Npc_Default)
 	guild 		= GIL_OUT;
 	id 		= 7612;
 	voice 		= 13;
-	flags           = 0;
+	flags           = 2;
 	npctype		= NPCTYPE_FRIEND;
 
 	B_SetAttributesToChapter (self, 6);																

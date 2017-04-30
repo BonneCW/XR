@@ -469,7 +469,7 @@ FUNC VOID Info_Mod_Lobart_AlwinScene_Info()
 
 	if (Npc_HasItems(hero, ItMi_Gold) >= 300)
 	{
-		Info_AddChoice	(Info_Mod_Lobart_AlwinScene, "Es ist möglich, dass ich für den Tod einiger Schafe verantwortlich bin.", Info_Mod_Lobart_AlwinScene_A);
+		Info_AddChoice	(Info_Mod_Lobart_AlwinScene, "Es ist möglich, dass ich für den Tod einiger Schafe (...)", Info_Mod_Lobart_AlwinScene_A);
 	};
 };
 

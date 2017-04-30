@@ -276,6 +276,7 @@ FUNC VOID Info_Mod_Thofeistos_Urs_Info()
 	AI_Output(self, hero, "Info_Mod_Thofeistos_Urs_29_01"); //(euphorisch) Was, der magische Hammer?! Gib schon her, ich muss ihn gleich ausprobieren.
 
 	B_GiveInvItems	(hero, self, ItMw_FeurigerHammer, 1);
+	Npc_RemoveInvItems(self, ItMw_FeurigerHammer, 1);
 
 	AI_UseMob	(self, "ANVIL", 1);
 	AI_UseMob	(self, "ANVIL", -1);

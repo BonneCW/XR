@@ -107,6 +107,8 @@ FUNC VOID Info_Mod_Henker_LetsFight_Info()
 	AI_Output(hero, self, "Info_Mod_Henker_LetsFight_15_00"); //Lass uns beginnen!
 
 	AI_UnequipWeapons	(hero);
+	
+	AI_Output(self, hero, "DEFAULT"); //
 
 	Mod_REL_HenkerKampf = 2;
 

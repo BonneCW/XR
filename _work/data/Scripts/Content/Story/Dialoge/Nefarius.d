@@ -92,7 +92,7 @@ INSTANCE Info_Mod_Nefarius_VierErbauer (C_INFO)
 	information	= Info_Mod_Nefarius_VierErbauer_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Steht in den Schriften denn noch irgendwas über die genauen Orte (...)";
+	description	= "Steht in den Schriften denn noch irgendwas (...)";
 };
 
 FUNC INT Info_Mod_Nefarius_VierErbauer_Condition()

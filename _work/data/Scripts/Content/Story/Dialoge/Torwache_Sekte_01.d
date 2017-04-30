@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Torwache_Sekte_01_GardistenInfos (C_INFO)
 	information	= Info_Mod_Torwache_Sekte_01_GardistenInfos_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Habt ihr in den letzten Tagen irgendwelche Gardisten hier in der Nähe gesehen?";
+	description	= "Habt ihr in den letzten Tagen irgendwelche Gardisten gesehen?";
 };
 
 FUNC INT Info_Mod_Torwache_Sekte_01_GardistenInfos_Condition()
@@ -26,7 +26,7 @@ FUNC VOID Info_Mod_Torwache_Sekte_01_GardistenInfos_Info()
 
 	Info_ClearChoices	(Info_Mod_Torwache_Sekte_01_GardistenInfos);
 	
-	Info_AddChoice	(Info_Mod_Torwache_Sekte_01_GardistenInfos, "Ich bin ein paar Gardisten begegnet, die ich hier bisher noch nie gesehen hatte.", Info_Mod_Torwache_Sekte_01_GardistenInfos_D);
+	Info_AddChoice	(Info_Mod_Torwache_Sekte_01_GardistenInfos, "Ich bin ein paar Gardisten begegnet (...)", Info_Mod_Torwache_Sekte_01_GardistenInfos_D);
 	Info_AddChoice	(Info_Mod_Torwache_Sekte_01_GardistenInfos, "Das geht dich nichts an.", Info_Mod_Torwache_Sekte_01_GardistenInfos_C);
 	Info_AddChoice	(Info_Mod_Torwache_Sekte_01_GardistenInfos, "Mich haben auf dem Weg hierher ein paar Gardisten angefallen.", Info_Mod_Torwache_Sekte_01_GardistenInfos_B);
 	Info_AddChoice	(Info_Mod_Torwache_Sekte_01_GardistenInfos, "Die Waldläufer hatten einige Probleme mit ihnen gehabt.", Info_Mod_Torwache_Sekte_01_GardistenInfos_A);

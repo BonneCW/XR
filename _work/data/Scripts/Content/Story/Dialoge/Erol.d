@@ -33,7 +33,7 @@ INSTANCE Info_Mod_Erol_DunklerPilger (C_INFO)
 	information	= Info_Mod_Erol_DunklerPilger_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Hast du zufällig in letzter Zeit einen dunklen Pilger vorbeikommen sehen?";
+	description	= "Hast du zufällig in letzter Zeit einen dunklen Pilger gesehen?";
 };
 
 FUNC INT Info_Mod_Erol_DunklerPilger_Condition()

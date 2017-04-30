@@ -190,7 +190,7 @@ FUNC VOID Info_Mod_Moe_Geruechte3_D()
 	
 	Info_ClearChoices	(Info_Mod_Moe_Geruechte3);
 
-	Info_AddChoice	(Info_Mod_Moe_Geruechte3, "Soll Canthar doch kommen, für Valentino setze ich mein Leben nicht auf's Spiel.", Info_Mod_Moe_Geruechte3_F);
+	Info_AddChoice	(Info_Mod_Moe_Geruechte3, "Soll Canthar doch kommen, für Valentino setze ich mein Leben (...)", Info_Mod_Moe_Geruechte3_F);
 	Info_AddChoice	(Info_Mod_Moe_Geruechte3, "Wo wird Valentino festgehalten?", Info_Mod_Moe_Geruechte3_E);
 };
 
@@ -231,7 +231,7 @@ FUNC VOID Info_Mod_Moe_Geruechte3_E()
 	
 	Info_ClearChoices	(Info_Mod_Moe_Geruechte3);
 
-	Info_AddChoice	(Info_Mod_Moe_Geruechte3, "Woher weißt du das alles über Canthar und sein Verhältnis zu mir?", Info_Mod_Moe_Geruechte3_H);
+	Info_AddChoice	(Info_Mod_Moe_Geruechte3, "Woher weißt du das alles über Canthar (...)", Info_Mod_Moe_Geruechte3_H);
 	Info_AddChoice	(Info_Mod_Moe_Geruechte3, "Danke für die Informationen. Du bist eine echte Hilfe.", Info_Mod_Moe_Geruechte3_G);
 };
 

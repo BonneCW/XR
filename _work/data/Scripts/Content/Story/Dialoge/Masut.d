@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Masut_Hi (C_INFO)
 	information	= Info_Mod_Masut_Hi_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Hallo! Ich hab mich bei den Gaunern bewährt und möchte nun zu den Kriegern aufsteigen.";
+	description	= "Hallo! Ich hab mich bei den Gaunern bewährt (...)";
 };
 
 FUNC INT Info_Mod_Masut_Hi_Condition()

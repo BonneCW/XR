@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Ferd_Hi (C_INFO)
 	information	= Info_Mod_Ferd_Hi_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Du bist einer der Jäger, die das Lager hier mit Fleisch und Fellen versorgen?";
+	description	= "Du bist einer der Jäger, die das Lager hier mit Fleisch (...)";
 };
 
 FUNC INT Info_Mod_Ferd_Hi_Condition()

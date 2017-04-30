@@ -1139,7 +1139,7 @@ FUNC VOID Info_Mod_Gorn_Hilfe_Info()
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Torlof_Kristall))
 	&& (!Mod_Gorn_Help_Paladine)
 	{
-		Info_AddChoice	(Info_Mod_Gorn_Hilfe, "Ich muss irgendetwas in der Stadt finden, womit sich die Paladine erpressen lassen.", Info_Mod_Gorn_Hilfe_Kristall);
+		Info_AddChoice	(Info_Mod_Gorn_Hilfe, "Ich muss irgendetwas in der Stadt finden (...)", Info_Mod_Gorn_Hilfe_Kristall);
 	};
 };
 

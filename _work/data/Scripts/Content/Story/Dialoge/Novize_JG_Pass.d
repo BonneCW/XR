@@ -32,8 +32,8 @@ FUNC VOID Info_Mod_Novize_JG_Pass_Hi_B()
 
 	Info_ClearChoices	(Info_Mod_Novize_JG_Pass_Hi);
 
-	Info_AddChoice	(Info_Mod_Novize_JG_Pass_Hi, "Vor deinem Tod hättest du wenigstens dein Gewissen erleichtern können. Stirb.", Info_Mod_Novize_JG_Pass_Hi_D);
-	Info_AddChoice	(Info_Mod_Novize_JG_Pass_Hi, "Gut, ich werde dir nichts mehr tun. Nun sage mir, wer dein Meister ist.", Info_Mod_Novize_JG_Pass_Hi_C);
+	Info_AddChoice	(Info_Mod_Novize_JG_Pass_Hi, "Vor deinem Tod hättest du wenigstens dein Gewissen (...)", Info_Mod_Novize_JG_Pass_Hi_D);
+	Info_AddChoice	(Info_Mod_Novize_JG_Pass_Hi, "Gut, ich werde dir nichts mehr tun. Nun sage mir, (...)", Info_Mod_Novize_JG_Pass_Hi_C);
 };
 
 FUNC VOID Info_Mod_Novize_JG_Pass_Hi_D()

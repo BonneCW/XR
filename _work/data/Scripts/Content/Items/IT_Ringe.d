@@ -1358,7 +1358,7 @@ INSTANCE ItRi_Ruprecht (C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ruprecht's Ring";
+	description				= "Ruprechts Ring";
 	
 	TEXT[2]					= NAME_Bonus_Str;
 	COUNT[2]				= 5;

@@ -160,7 +160,7 @@ FUNC VOID Info_Mod_Anselm_LandvermessungVerarsche_Info()
 	Info_ClearChoices	(Info_Mod_Anselm_LandvermessungVerarsche);
 
 	Info_AddChoice	(Info_Mod_Anselm_LandvermessungVerarsche, "Na gut ...", Info_Mod_Anselm_LandvermessungVerarsche_B);
-	Info_AddChoice	(Info_Mod_Anselm_LandvermessungVerarsche, "Ich glaube, es ist Zeit für eine Tracht Prügel, meinst du nicht auch?", Info_Mod_Anselm_LandvermessungVerarsche_A);
+	Info_AddChoice	(Info_Mod_Anselm_LandvermessungVerarsche, "Ich glaube, es ist Zeit für eine Tracht Prügel (...)", Info_Mod_Anselm_LandvermessungVerarsche_A);
 };
 
 FUNC VOID Info_Mod_Anselm_LandvermessungVerarsche_B()

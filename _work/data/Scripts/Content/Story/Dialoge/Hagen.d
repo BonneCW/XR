@@ -119,7 +119,7 @@ FUNC VOID Info_Mod_Hagen_Asylanten_Info()
 	&& (Mod_Hagen_KG == 0)
 	{
 		Info_AddChoice	(Info_Mod_Hagen_Asylanten, "(lügen) Am Pass ist weit und breit keine Gruppierung zu sehen.", Info_Mod_Hagen_Asylanten_D2);
-		Info_AddChoice	(Info_Mod_Hagen_Asylanten, "Der König hat einen eigenen Trupp geschickt, um den Pass zu bewachen.", Info_Mod_Hagen_Asylanten_D1);
+		Info_AddChoice	(Info_Mod_Hagen_Asylanten, "Der König hat einen eigenen Trupp geschickt, um den Pass (...)", Info_Mod_Hagen_Asylanten_D1);
 	};
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Torgan_Asylanten))

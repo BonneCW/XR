@@ -246,7 +246,7 @@ INSTANCE Info_Mod_Skinner_Orkjagd (C_INFO)
 	information	= Info_Mod_Skinner_Orkjagd_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Es gibt was zu tun. Komm heute Nacht um Mitternacht vors Lager.";
+	description	= "Es gibt was zu tun. Komm heute um Mitternacht vors Lager.";
 };
 
 FUNC INT Info_Mod_Skinner_Orkjagd_Condition()

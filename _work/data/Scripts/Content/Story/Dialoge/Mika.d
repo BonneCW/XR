@@ -522,7 +522,7 @@ FUNC VOID Info_Mod_Mika_Pflanzensammler_Info()
 
 	Info_ClearChoices	(Info_Mod_Mika_Pflanzensammler);
 
-	Info_AddChoice	(Info_Mod_Mika_Pflanzensammler, "Das ist Erpressung. Niemand kann mir das Kräutersammeln verbieten!", Info_Mod_Mika_Pflanzensammler_B);
+	Info_AddChoice	(Info_Mod_Mika_Pflanzensammler, "Das ist Erpressung. (...)", Info_Mod_Mika_Pflanzensammler_B);
 	Info_AddChoice	(Info_Mod_Mika_Pflanzensammler, "Also schön. Ich hoffe, es hilft.", Info_Mod_Mika_Pflanzensammler_A);
 };
 

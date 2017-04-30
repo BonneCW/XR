@@ -507,7 +507,7 @@ INSTANCE Info_Mod_Myxir_Schattenlaeuferhorn (C_INFO)
 	information	= Info_Mod_Myxir_Schattenlaeuferhorn_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Du erwähntest früher mal, dass die Versorgung des Klosters stockt.";
+	description	= "Du erwähntest früher mal, dass die Versorgung des Klosters (...)";
 };
 
 FUNC INT Info_Mod_Myxir_Schattenlaeuferhorn_Condition()

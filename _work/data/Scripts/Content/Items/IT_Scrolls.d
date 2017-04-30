@@ -1053,7 +1053,7 @@ INSTANCE ItSc_SumGobSkel (C_Item)
 
 	spell				= 	SPL_SummonGoblinSkeleton;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonGoblinSkeleton / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1063,7 +1063,7 @@ INSTANCE ItSc_SumGobSkel (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonGoblinSkeleton / 2;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -1084,7 +1084,7 @@ INSTANCE ItSc_SumCrawler (C_Item)
 
 	spell				= 	SPL_SummonCrawler;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonCrawler / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1094,7 +1094,7 @@ INSTANCE ItSc_SumCrawler (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonCrawler / 2;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -1115,7 +1115,7 @@ INSTANCE ItSc_SumGobKrieger (C_Item)
 
 	spell				= 	SPL_SummonGoblinKrieger;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonGoblinKrieger / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1125,7 +1125,7 @@ INSTANCE ItSc_SumGobKrieger (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonGoblinKrieger / 2;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -1146,7 +1146,7 @@ INSTANCE ItSc_SumGobEis (C_Item)
 
 	spell				= 	SPL_SummonEisGoblin;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonEisgoblin / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1156,7 +1156,7 @@ INSTANCE ItSc_SumGobEis (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonEisgoblin / 2;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -1274,7 +1274,7 @@ INSTANCE ItSc_SumWolf (C_Item)
 
 	spell				= 	SPL_SummonWolf;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonWolf / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1284,7 +1284,7 @@ INSTANCE ItSc_SumWolf (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonWolf / 2;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -1304,7 +1304,7 @@ INSTANCE ItSc_SumRabbit (C_Item)
 
 	spell				= 	SPL_SummonRabbit;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonRabbit / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1314,7 +1314,7 @@ INSTANCE ItSc_SumRabbit (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonRabbit / 2;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -1334,7 +1334,7 @@ INSTANCE ItSc_SummonRats (C_Item)
 
 	spell				= 	SPL_SummonRats;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonRats / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1344,7 +1344,7 @@ INSTANCE ItSc_SummonRats (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonRats / 2;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -1964,7 +1964,7 @@ INSTANCE ItSc_SumSkel (C_Item)
 
 	spell				= 	SPL_SUMMONSKELETON;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonSkeleton / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1974,7 +1974,7 @@ INSTANCE ItSc_SumSkel (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonSkeleton / 2;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -2206,7 +2206,7 @@ INSTANCE ItSc_SumGol (C_Item)
 
 	spell				= 	SPL_SUMMONGOLEM;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonGolem / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -2216,7 +2216,7 @@ INSTANCE ItSc_SumGol (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonGolem / 2;
 	
 	TEXT	[5]			=	NAME_Value;				
 	COUNT	[5]			=	value;
@@ -2236,7 +2236,7 @@ INSTANCE ItSc_SumFireGol (C_Item)
 
 	spell				= 	SPL_SUMMONFireGOLEM;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonFireGolem / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -2246,7 +2246,7 @@ INSTANCE ItSc_SumFireGol (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonFireGolem / 2;
 	
 	TEXT	[5]			=	NAME_Value;				
 	COUNT	[5]			=	value;
@@ -2266,7 +2266,7 @@ INSTANCE ItSc_SumSwampGolem (C_Item)
 
 	spell				= 	SPL_SUMSWAMPGOLEM;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonSwampGolem / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -2276,7 +2276,7 @@ INSTANCE ItSc_SumSwampGolem (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonSwampGolem / 2;
 	
 	TEXT	[5]			=	NAME_Value;				
 	COUNT	[5]			=	value;
@@ -2296,7 +2296,7 @@ INSTANCE ItSc_SumUDSwampshark (C_Item)
 
 	spell				= 	SPL_SUMMONUDSwampshark;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonUDSwampshark / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -2306,7 +2306,7 @@ INSTANCE ItSc_SumUDSwampshark (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonUDSwampshark / 2;
 	
 	TEXT	[5]			=	NAME_Value;				
 	COUNT	[5]			=	value;
@@ -2326,7 +2326,7 @@ INSTANCE ItSc_SumKrautschaf (C_Item)
 
 	spell				= 	SPL_SUMMONKRAUTSCHAF;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonKrautschaf / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -2336,7 +2336,7 @@ INSTANCE ItSc_SumKrautschaf (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonKrautschaf / 2;
 	
 	TEXT	[5]			=	NAME_Value;				
 	COUNT	[5]			=	value;
@@ -2356,7 +2356,7 @@ INSTANCE ItSc_SumIceGol (C_Item)
 
 	spell				= 	SPL_SUMMONICEGOLEM;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_SummonIceGolem / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -2366,7 +2366,7 @@ INSTANCE ItSc_SumIceGol (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonIceGolem / 2;
 	
 	TEXT	[5]			=	NAME_Value;				
 	COUNT	[5]			=	value;
@@ -2625,7 +2625,7 @@ INSTANCE ItSc_SumDemon (C_Item)
 
 	spell				= 	SPL_SUMMONDEMON;
 	cond_atr[2]   			=	ATR_MANA_MAX;
-	cond_value[2]  			=	SPL_Cost_Scroll;
+	cond_value[2]  			=	SPL_Cost_SummonDemon / 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -2635,7 +2635,7 @@ INSTANCE ItSc_SumDemon (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_SummonDemon / 2;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;

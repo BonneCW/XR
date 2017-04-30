@@ -49,7 +49,7 @@ INSTANCE Info_Mod_Lee_WieStehts (C_INFO)
 	information	= Info_Mod_Lee_WieStehts_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Wie sieht es hier im Lager eigentlich aus nach dem Fall der Barriere?";
+	description	= "Wie sieht es hier im Lager eigentlich aus (...)";
 };
 
 FUNC INT Info_Mod_Lee_WieStehts_Condition()

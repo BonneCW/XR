@@ -466,7 +466,7 @@ FUNC VOID Info_Mod_Brahim_Flora_B()
 
 	Info_ClearChoices	(Info_Mod_Brahim_Flora);
 
-	Info_AddChoice	(Info_Mod_Brahim_Flora, "Vielleicht hilft ja eine Tracht Prügel deinem Gedächtnis auf die Sprünge ...", Info_Mod_Brahim_Flora_D);
+	Info_AddChoice	(Info_Mod_Brahim_Flora, "Vielleicht hilft ja eine Tracht Prügel deinem Gedächtnis (...)", Info_Mod_Brahim_Flora_D);
 	Info_AddChoice	(Info_Mod_Brahim_Flora, "Muss ich erst anfangen zu drohen?", Info_Mod_Brahim_Flora_C);
 };
 

@@ -172,7 +172,7 @@ INSTANCE Info_Mod_Eremit_Prisma (C_INFO)
 	information	= Info_Mod_Eremit_Prisma_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich bräuchte da Hilfe bei der Herstellung eines magischen Prismas.";
+	description	= "Ich bräuchte da Hilfe bei der Herstellung eines Prismas.";
 };
 
 FUNC INT Info_Mod_Eremit_Prisma_Condition()

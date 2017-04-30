@@ -144,7 +144,7 @@ FUNC VOID Info_Mod_Torgan_SpaeherTot_Info()
 
 	Info_ClearChoices	(Info_Mod_Torgan_SpaeherTot);
 
-	Info_AddChoice	(Info_Mod_Torgan_SpaeherTot, "Sie sind tot. Ich habe aber die Leiche eines Gardisten bei ihnen gesehen.", Info_Mod_Torgan_SpaeherTot_B);
+	Info_AddChoice	(Info_Mod_Torgan_SpaeherTot, "Sie sind tot. Ich habe aber die Leiche eines Gardisten (...)", Info_Mod_Torgan_SpaeherTot_B);
 	Info_AddChoice	(Info_Mod_Torgan_SpaeherTot, "Nichts, sie waren stumm wie eine Leiche.", Info_Mod_Torgan_SpaeherTot_A);
 };
 
@@ -797,7 +797,7 @@ INSTANCE Info_Mod_Torgan_Wegschauen (C_INFO)
 	information	= Info_Mod_Torgan_Wegschauen_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Könntest du nicht eine kleine Ausnahme machen und kurz in eine Andere Richtung schaun?";
+	description	= "Könntest du nicht eine kleine Ausnahme machen (...)";
 };
 
 FUNC INT Info_Mod_Torgan_Wegschauen_Condition()

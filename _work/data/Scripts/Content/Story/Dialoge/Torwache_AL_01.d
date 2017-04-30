@@ -31,7 +31,7 @@ FUNC VOID Info_Mod_Torwache_AL_01_Halt_Info()
 
 	Info_AddChoice	(Info_Mod_Torwache_AL_01_Halt, "Kennst du sie zufällig?", Info_Mod_Torwache_AL_01_Halt_D);
 	Info_AddChoice	(Info_Mod_Torwache_AL_01_Halt, "Was machen die dort draußen eigentlich?", Info_Mod_Torwache_AL_01_Halt_C);
-	Info_AddChoice	(Info_Mod_Torwache_AL_01_Halt, "Ein paar eurer Gardisten haben einige Waldläufer überfallen und getötet.", Info_Mod_Torwache_AL_01_Halt_B);
+	Info_AddChoice	(Info_Mod_Torwache_AL_01_Halt, "Ein paar eurer Gardisten haben einige Waldläufer überfallen (...)", Info_Mod_Torwache_AL_01_Halt_B);
 	Info_AddChoice	(Info_Mod_Torwache_AL_01_Halt, "Ich wurde in den Wäldern von diesen Gardisten überfallen.", Info_Mod_Torwache_AL_01_Halt_A);
 };
 

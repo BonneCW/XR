@@ -51,7 +51,7 @@ INSTANCE Info_Mod_Penner_WarumArm (C_INFO)
 	information	= Info_Mod_Penner_WarumArm_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Wie hast du es geschafft, in einer so reichen Stadt arm zu werden?";
+	description	= "Wie hast du es geschafft, in einer so reichen Stadt (...)";
 };
 
 FUNC INT Info_Mod_Penner_WarumArm_Condition()
@@ -103,7 +103,7 @@ FUNC VOID Info_Mod_Penner_Infos_Choices()
 	&& (Npc_HasItems(hero, ItMi_Gold) >= 10)
 	&& (!Mod_Penner_HeardAboutJuliana)
 	{
-		Info_AddChoice	(Info_Mod_Penner_Infos, "Was kannst du mir über das Verschwinden von Julianas Mann erzählen? (10 Gold)", Info_Mod_Penner_Infos_E);
+		Info_AddChoice	(Info_Mod_Penner_Infos, "Was weißt du über das Verschwinden von Julianas Mann? (10 Gold)", Info_Mod_Penner_Infos_E);
 	};
 	if (Npc_KnowsInfo(hero, Info_Mod_Anselm_Buerger2))
 	&& (Mod_REL_Buerger == 0)

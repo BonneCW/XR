@@ -30,7 +30,7 @@ FUNC VOID Info_Mod_PriesterRyan_Hi_B()
 
 	Info_ClearChoices	(Info_Mod_PriesterRyan_Hi);
 
-	Info_AddChoice	(Info_Mod_PriesterRyan_Hi, "(Feilschen) Gibst du ihn mir freiwillig oder muss ich ihn holen kommen?", Info_Mod_PriesterRyan_Hi_D);
+	Info_AddChoice	(Info_Mod_PriesterRyan_Hi, "(Feilschen) Gibst du ihn mir freiwillig (...)", Info_Mod_PriesterRyan_Hi_D);
 	Info_AddChoice	(Info_Mod_PriesterRyan_Hi, "Der Zahnstocher wird sich gut in meiner Sammlung machen.", Info_Mod_PriesterRyan_Hi_C);
 };
 

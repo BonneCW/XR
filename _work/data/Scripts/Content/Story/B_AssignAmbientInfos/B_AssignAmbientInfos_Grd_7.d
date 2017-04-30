@@ -37,7 +37,7 @@ INSTANCE Info_grd_7_EinerVonEuchWerden (C_INFO) // E1
 	condition	= Info_grd_7_EinerVonEuchWerden_Condition;
 	information	= Info_grd_7_EinerVonEuchWerden_Info;
 	permanent	= 1;
-	description = "Was muﬂ ich tun, um bei Thorus' Gardisten aufgenommen zu werden?";
+	description = "Was muﬂ ich tun, um bei Thorus' Gardisten (...)";
 };                       
 
 FUNC INT Info_grd_7_EinerVonEuchWerden_Condition()

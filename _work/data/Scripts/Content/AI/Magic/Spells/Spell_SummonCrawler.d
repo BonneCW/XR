@@ -13,7 +13,7 @@ INSTANCE Spell_SummonCrawler (C_Spell_Proto)
 
 func int Spell_Logic_SummonCrawler(var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
+	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_SummonCrawler / 2))
 	&& (Npc_GetDistToWP(hero, "REL_HS_007") < 500)
 	{	
 		return SPL_SENDCAST;
@@ -32,7 +32,7 @@ func void Spell_Cast_SummonCrawler()
 {
 	if (Npc_GetActiveSpellIsScroll(self))
 	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
+		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_SummonCrawler / 2;
 	}
 	else
 	{

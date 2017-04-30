@@ -359,7 +359,7 @@ INSTANCE Info_Mod_Vatras_RealInfos (C_INFO)
 	information	= Info_Mod_Vatras_RealInfos_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich habe nun die Gewissheit, dass die Dämonenkrieger hinter allem stecken.";
+	description	= "Ich habe nun die Gewissheit (...)";
 };
 
 FUNC INT Info_Mod_Vatras_RealInfos_Condition()

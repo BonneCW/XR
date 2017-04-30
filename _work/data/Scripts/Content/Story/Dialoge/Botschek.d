@@ -199,7 +199,7 @@ INSTANCE Info_Mod_Botschek_Ritualdolch (C_INFO)
 	information	= Info_Mod_Botschek_Ritualdolch_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Für einen Verrückten hatte er aber recht viel Gold bei sich ... und dann noch diesen Dolch.";
+	description	= "Für einen Verrückten hatte er aber recht viel Gold bei sich (...)";
 };
 
 FUNC INT Info_Mod_Botschek_Ritualdolch_Condition()
@@ -330,7 +330,7 @@ INSTANCE Info_Mod_Botschek_Ritualdolch4 (C_INFO)
 	information	= Info_Mod_Botschek_Ritualdolch4_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Im Moor bin ich einer dämonischen Gestalt begegnet, die einen weiteren Dolch bei sich trug.";
+	description	= "Im Moor bin ich einer dämonischen Gestalt begegnet (...)";
 };
 
 FUNC INT Info_Mod_Botschek_Ritualdolch4_Condition()

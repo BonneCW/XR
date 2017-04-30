@@ -249,7 +249,7 @@ INSTANCE Info_Mod_Wendel_Endres06 (C_INFO)
 	information	= Info_Mod_Wendel_Endres06_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Was hast du gemacht, bevor Endres' Leiche im Wasserversorgungssystem landete?";
+	description	= "Was hast du gemacht, bevor Endres' Leiche (...)";
 };
 
 FUNC INT Info_Mod_Wendel_Endres06_Condition()

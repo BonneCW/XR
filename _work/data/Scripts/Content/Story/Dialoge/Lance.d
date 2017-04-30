@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Lance_Kristall (C_INFO)
 	information	= Info_Mod_Lance_Kristall_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich möchte den Magiern des Wassers diesen magischen Kristall überbringen.";
+	description	= "Ich möchte den Magiern des Wassers (...)";
 };
 
 FUNC INT Info_Mod_Lance_Kristall_Condition()

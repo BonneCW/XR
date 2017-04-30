@@ -13,7 +13,7 @@ INSTANCE Spell_SummonEisgoblin (C_Spell_Proto)	//ehem. Spell_Skeleton
 
 func int Spell_Logic_SummonEisgoblin (var int manaInvested)
 {	
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
+	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_SummonEisgoblin / 2))
 	{	
 		return SPL_SENDCAST;
 	}
@@ -31,7 +31,7 @@ func void Spell_Cast_SummonEisgoblin()
 {
 	if (Npc_GetActiveSpellIsScroll(self))
 	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
+		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_SummonEisgoblin / 2;
 	}
 	else
 	{

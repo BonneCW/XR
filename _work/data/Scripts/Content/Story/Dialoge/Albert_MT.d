@@ -468,7 +468,7 @@ INSTANCE Info_Mod_Albert_Skinner (C_INFO)
 	information	= Info_Mod_Albert_Skinner_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich bringe die Spruchrollen, die ihr wolltet, Magus der Gestaltenwandlung.";
+	description	= "Ich bringe die Spruchrollen, die ihr wolltet (...)";
 };
 
 FUNC INT Info_Mod_Albert_Skinner_Condition()

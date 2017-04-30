@@ -211,7 +211,7 @@ INSTANCE Info_Mod_Ramsi_JaegerTot (C_INFO)
 	information	= Info_Mod_Ramsi_JaegerTot_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich habe den Dieb gefasst und obendrein auch noch einen weiteren Jäger töten können.";
+	description	= "Ich habe den Dieb gefasst und obendrein auch noch (...)";
 };
 
 FUNC INT Info_Mod_Ramsi_JaegerTot_Condition()

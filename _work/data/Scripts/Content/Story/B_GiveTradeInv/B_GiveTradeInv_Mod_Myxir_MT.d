@@ -19,6 +19,7 @@ FUNC VOID B_GiveTradeInv_Mod_Myxir_MT (var C_NPC slf)
 		CreateInvItems   (slf, ItSc_Light,	5);
 		CreateInvItems   (slf, ItSc_LightHeal,5);
 		CreateInvItems   (slf, ItSc_SumGobSkel, 5);
+		CreateInvItems   (slf, ItSc_SuckEnergy, 5);
 		
 		CreateInvItems   (slf, ItFo_Wine,	3);
 		
@@ -48,6 +49,7 @@ FUNC VOID B_GiveTradeInv_Mod_Myxir_MT (var C_NPC slf)
 		CreateInvItems   (slf, ItPo_Mana_01,	14);//Joly:hab ich schon verdoppelt nach version 1.26e
 
 		CreateInvItems   (slf, ItSc_SumWolf, 5);
+		CreateInvItems   (slf, ItSc_SuckEnergy, 5);
 		
 		CreateInvItems   (slf, ItAm_Prot_Edge_01, 1);
 		
@@ -78,6 +80,7 @@ FUNC VOID B_GiveTradeInv_Mod_Myxir_MT (var C_NPC slf)
 
 		CreateInvItems   (slf, ItSc_MediumHeal,	5);
 		CreateInvItems   (slf, ItSc_SumSkel,3);
+		CreateInvItems   (slf, ItSc_SuckEnergy, 5);
 		
 	 
 		//Joly: RUNENROHLING!!  NICHT ZU VIELE !!!

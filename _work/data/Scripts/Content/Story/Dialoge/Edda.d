@@ -144,7 +144,7 @@ FUNC VOID Info_Mod_Edda_Problem_Info()
 
 	Info_ClearChoices	(Info_Mod_Edda_Problem);
 
-	Info_AddChoice	(Info_Mod_Edda_Problem, "Ich werde mich davor hüten, mit Fleischwanzen in Berührung zu kommen.", Info_Mod_Edda_Problem_Nein);
+	Info_AddChoice	(Info_Mod_Edda_Problem, "Ich werde mich davor hüten, mit Fleischwanzen in Berührung (...)", Info_Mod_Edda_Problem_Nein);
 	Info_AddChoice	(Info_Mod_Edda_Problem, "Das wird kurz und schmerzlos erledigt.", Info_Mod_Edda_Problem_Ja);
 };
 

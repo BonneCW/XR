@@ -34,7 +34,7 @@ INSTANCE Info_Mod_Zelar_CyrcoMine (C_INFO)
 	information	= Info_Mod_Zelar_CyrcoMine_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Tag, Waldläufer. Du siehst so aufgeräumt aus. Interesse an einem Auslug?";
+	description	= "Du siehst so aufgeräumt aus. Interesse an einem Auslug?";
 };
 
 FUNC INT Info_Mod_Zelar_CyrcoMine_Condition()

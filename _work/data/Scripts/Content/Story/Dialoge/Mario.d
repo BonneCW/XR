@@ -402,7 +402,7 @@ FUNC VOID Info_Mod_Mario_Hilfe7_Info()
 	Info_ClearChoices	(Info_Mod_Mario_Hilfe7);
 
 	Info_AddChoice	(Info_Mod_Mario_Hilfe7, "Es erscheint mir auch klüger, sie nicht weiter zu reizen.", Info_Mod_Mario_Hilfe7_B);
-	Info_AddChoice	(Info_Mod_Mario_Hilfe7, "Du kannst doch jetzt nach deinem Sieg über die Paladine nicht kapitulieren!", Info_Mod_Mario_Hilfe7_A);
+	Info_AddChoice	(Info_Mod_Mario_Hilfe7, "Du kannst doch jetzt nicht kapitulieren!", Info_Mod_Mario_Hilfe7_A);
 };
 
 FUNC VOID Info_Mod_Mario_Hilfe7_B()

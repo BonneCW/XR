@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Patient_Endres (C_INFO)
 	information	= Info_Mod_Patient_Endres_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Stimmt es, dass der Heiler bei dir war, als Endres ermordet wurde?";
+	description	= "Stimmt es, dass der Heiler bei dir war, als Endres ermordet (...)";
 };
 
 FUNC INT Info_Mod_Patient_Endres_Condition()

@@ -14,7 +14,7 @@ INSTANCE Spell_SummonFireGolem (C_Spell_Proto)	//ehem. Spell_Golem
 
 func int Spell_Logic_SummonFireGolem (var int manaInvested)
 {	
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
+	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_SummonFireGolem / 2))
 	{	
 		return SPL_SENDCAST;
 	}
@@ -48,7 +48,7 @@ func void Spell_Cast_SummonFireGolem()
 {
 	if (Npc_GetActiveSpellIsScroll(self))
 	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
+		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_SummonFireGolem / 2;
 	}
 	else
 	{

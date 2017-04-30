@@ -13,7 +13,7 @@ INSTANCE Spell_SummonKrautschaf (C_Spell_Proto)
 
 func int Spell_Logic_SummonKrautschaf (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))	
+	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_SummonKrautschaf / 2))	
 	&& (Npc_GetDistToWP(hero, "SPAWNOW_PATH_190_MOVMENT") < 500)
 	{	
 		return SPL_SENDCAST;
@@ -33,7 +33,7 @@ func void Spell_Cast_SummonKrautschaf()
 {
 	if (Npc_GetActiveSpellIsScroll(self))
 	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
+		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_SummonKrautschaf / 2;
 	}
 	else
 	{
