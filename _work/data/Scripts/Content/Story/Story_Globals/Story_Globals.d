@@ -2260,6 +2260,10 @@ var int 	AngelMob_03_Amount;
 const int	AngelMob_03_Amount_MAX = 2;
 var int 	AngelMob_04_Amount;
 const int	AngelMob_04_Amount_MAX = 1;
+var int 	AngelMob_05_Amount;
+const int	AngelMob_05_Amount_MAX = 2;
+var int 	AngelMob_06_Amount;
+const int	AngelMob_06_Amount_MAX = 1;
 
 
 // ------ Teacher MAX Werte ------

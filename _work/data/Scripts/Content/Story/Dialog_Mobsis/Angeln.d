@@ -30,6 +30,16 @@ FUNC INT B_AngelMob_Bestimmung()
 	{
 		AngelMob_04_Amount = (AngelMob_04_Amount + 1);
 		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "FISCHER_6") && (AngelMob_05_Amount_MAX > AngelMob_05_Amount)
+	{
+		AngelMob_05_Amount = (AngelMob_05_Amount + 1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "FISCHER_7") && (AngelMob_06_Amount_MAX > AngelMob_06_Amount)
+	{
+		AngelMob_06_Amount = (AngelMob_06_Amount + 1);
+		return TRUE;
 	};
 
 	return FALSE;
