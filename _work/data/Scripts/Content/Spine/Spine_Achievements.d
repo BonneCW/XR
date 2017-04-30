@@ -57,7 +57,42 @@ func void Spine_ShowAchievementView(var int identifier) {
 	
 	var string achievementName;
 	achievementName = MEM_ReadStatStringArr(SPINE_ACHIEVEMENT_NAMES, identifier);
-	View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset, SPINE_ACHIEVEMENT_HEIGHT), achievementName, FONT_SCREENSMALL);
+	var int textLength; textLength = Print_GetStringWidth(achievementName, FONT_SCREENSMALL);
+	if (textLength <= SPINE_ACHIEVEMENT_WIDTH - (SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 3)) {
+		View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset, SPINE_ACHIEVEMENT_HEIGHT), achievementName, FONT_SCREENSMALL);
+	} else { // Text is too long for the field
+		var int height; height = 0;
+		var int splitCount; splitCount = STR_SplitCount(achievementName, " ");
+		var int i; i = 0;
+		var string currentLine; currentLine = "";
+		var int pos; pos = MEM_StackPos.position;
+		if (i < splitCount) {
+			var string currentLineTest;
+			if (STR_Len(currentLine) > 0) {
+				currentLine = ConcatStrings(currentLine, " ");
+			};
+			currentLineTest = ConcatStrings(currentLine, STR_Split(achievementName, " ", i));
+			textLength = Print_GetStringWidth(currentLineTest, FONT_SCREENSMALL);
+			if (textLength > SPINE_ACHIEVEMENT_WIDTH - (SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 3)) {
+				if (STR_Len(currentLine) == 0) {
+					View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset + height, SPINE_ACHIEVEMENT_HEIGHT), currentLineTest, FONT_SCREENSMALL);
+					currentLine = "";
+					currentLineTest = "";
+				} else {
+					View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset + height, SPINE_ACHIEVEMENT_HEIGHT), currentLine, FONT_SCREENSMALL);
+					currentLine = STR_Split(achievementName, " ", i);
+					currentLineTest = "";
+				};
+				height += Print_GetFontHeight(FONT_SCREENSMALL);
+			} else {
+				currentLine = currentLineTest;
+			};
+			MEM_StackPos.position = pos;
+		};
+		if (STR_Len(currentLine) > 0) {
+			View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset + height, SPINE_ACHIEVEMENT_HEIGHT), currentLine, FONT_SCREENSMALL);
+		};
+	};
 	
 	FF_ApplyOnceExt(Spine_RemoveAchievementView, SPINE_ACHIEVEMENT_DISPLAY_TIME, 1);
 };

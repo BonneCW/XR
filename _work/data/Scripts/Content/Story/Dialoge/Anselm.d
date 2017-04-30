@@ -1345,7 +1345,7 @@ FUNC VOID Info_Mod_Anselm_DickeLuft2_Info()
 
 	B_GivePlayerXP	(250);
 
-	B_LogEntry	(TOPIC_MOD_DITMAR_DICKELUFT, "Ich habe Hedwig zu Anselm gelockt und es gab eine Aussprache. Na ja, so eine Art. Jedenfalls sollte sie jetzt nicht mehr ins Gasthaus zurückkehren. Das wird Irmgard sicher freuen zu erfahren.");
+	B_LogEntry	(TOPIC_MOD_DITMAR_DICKELUFT, "Ich habe Hedwig zu Anselm gelockt und es gab eine Aussprache. Na ja, so eine Art. Jedenfalls sollte sie jetzt nicht mehr ins Gasthaus zurückkehren. Das wird Irmgard und Ditmar sicher freuen zu erfahren.");
 };
 
 INSTANCE Info_Mod_Anselm_WoHubert (C_INFO)

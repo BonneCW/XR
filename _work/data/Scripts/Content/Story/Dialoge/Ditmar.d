@@ -69,6 +69,40 @@ FUNC VOID Info_Mod_Ditmar_Hi_A()
 	Info_Mod_Ditmar_Hi_D();
 };
 
+INSTANCE Info_Mod_Ditmar_DickeLuft (C_INFO)
+{
+	npc		= Mod_7722_OUT_Ditmar_REL;
+	nr		= 1;
+	condition	= Info_Mod_Ditmar_DickeLuft_Condition;
+	information	= Info_Mod_Ditmar_DickeLuft_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wie ich höre, ist das Leben zurückgekehrt.";
+};
+
+FUNC INT Info_Mod_Ditmar_DickeLuft_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Anselm_DickeLuft2))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Ditmar_DickeLuft_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Ditmar_DickeLuft_15_00"); //Wie ich höre, ist das Leben zurückgekehrt.
+	AI_Output(self, hero, "Info_Mod_Ditmar_DickeLuft_26_01"); //Du sagst es! Gute Gäste waren sie ja, die drei. Aber Frauen in der Wirtschaft? Es wird noch Jahrhunderte dauern, bis das normal wird.
+	AI_Output(self, hero, "Info_Mod_Ditmar_DickeLuft_26_02"); //Lass uns auf deine Rettung anstoßen!
+	
+	CreateInvItems(self, ItFo_Beer_Khorata, 2);
+	B_GiveInvItems(self, hero, ItFo_Beer_Khorata, 1);
+	
+	B_UseItem(self, ItFo_Beer_Khorata);
+	B_UseItem(hero, ItFo_Beer_Khorata);
+	
+	B_GivePlayerXP(250);
+};
+
 INSTANCE Info_Mod_Ditmar_DeinLaden (C_INFO)
 {
 	npc		= Mod_7722_OUT_Ditmar_REL;

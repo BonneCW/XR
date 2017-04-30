@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Aaron_Hi (C_INFO)
 	information	= Info_Mod_Aaron_Hi_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Na, feliﬂig am Beten?";
+	description	= "Na, fleiﬂig am Beten?";
 };
 
 FUNC INT Info_Mod_Aaron_Hi_Condition()
