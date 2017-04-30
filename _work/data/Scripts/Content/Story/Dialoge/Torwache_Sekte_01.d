@@ -153,10 +153,13 @@ FUNC INT Info_Mod_Torwache_Sekte_01_ZuGuru_Condition()
 	};
 };
 
+var int Mod_SektenKorbKram;
+
 FUNC VOID Info_Mod_Torwache_Sekte_01_ZuGuru_Info()
 {
 	if (Guru_Dabei == TRUE)
 	|| (Templer_Dabei == TRUE)
+	|| (Npc_KnowsInfo(hero, Info_Mod_Namib_Hi))
 	{
 		AI_Output(self, hero, "Info_Mod_Torwache_Sekte_01_ZuGuru_13_00"); //Aha. Du schon wieder.
 		AI_Output(hero, self, "Info_Mod_Torwache_Sekte_01_ZuGuru_15_01"); //Ja. Habe hier noch was zu erledigen.
@@ -194,6 +197,8 @@ FUNC VOID Info_Mod_Torwache_Sekte_01_ZuGuru_Info()
 
 		AI_Teleport	(Mod_2012_PSINOV_Talas_MT, "PSI_BRIDGE_1");
 		B_StartOtherRoutine	(Mod_2012_PSINOV_Talas_MT, "BEINAMIB");
+		
+		Mod_SektenKorbKram = TRUE;
 	};
 };
 
@@ -231,6 +236,7 @@ FUNC INT Info_Mod_Torwache_Sekte_01_VonGuru_Condition()
 	&& (Guru_Dabei == FALSE)
 	&& (Templer_Dabei == FALSE)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Orun_Cyrco))
+	&& (Mod_SektenKorbKram)
 	{
 		return 1;
 	};
