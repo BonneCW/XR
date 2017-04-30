@@ -462,7 +462,6 @@ FUNC VOID Info_Mod_Greg_Vorbereitungen_Info()
 			Mod_VorbereitungenFertig = 1;
 
 			B_LogEntry	(TOPIC_MOD_PIRATEN_SCHATZSUCHE, "Die Vorbereitungen sind getroffen und die Schatzsuche kann losgehen.");
-			B_SetTopicStatus	(TOPIC_MOD_PIRATEN_SCHATZSUCHE, LOG_SUCCESS);
 
 			B_Göttergefallen(2, 1);
 		};
@@ -576,6 +575,7 @@ FUNC VOID Info_Mod_Greg_Kompass_Info()
 	//Mod_VorbereitungenFertig = 5;
 
 	B_SetTopicStatus	(TOPIC_MOD_GREG_KOMPASS, LOG_SUCCESS);
+	B_LogEntry	(TOPIC_MOD_PIRATEN_SCHATZSUCHE, "Leider herrscht gerade eine Flaute, so dass wir noch nicht zu unserer Schatzsuche aufbrechen können. Ich soll später wiederkommen.");
 };
 
 INSTANCE Info_Mod_Greg_Schatzaufteilung (C_INFO)

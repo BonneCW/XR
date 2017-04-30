@@ -380,6 +380,8 @@ FUNC VOID Info_Mod_Skip_AufbruchSchatzsuche_Info()
 	AI_StopProcessInfos	(self);
 
 	Mod_VorbereitungenFertig = 5;
+	
+	B_SetTopicStatus	(TOPIC_MOD_PIRATEN_SCHATZSUCHE, LOG_SUCCESS);
 };
 
 INSTANCE Info_Mod_Skip_Schatzaufteilung (C_INFO)
