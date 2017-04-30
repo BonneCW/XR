@@ -30,6 +30,9 @@ func void ZS_Hasenjagd_Loop()
 		Npc_SetTarget (self, other);
 		B_Attack	(self, other, AR_NONE, 0);
 		
+	} else {
+		var string randomFP; randomFP = ConcatStrings("FP_ROAM_RABBITS_GOMEZ_0", IntToString(r_MinMax(1, 9)));
+		AI_GotoFP 		(self, "RITUAL");
 	};
 };
 
