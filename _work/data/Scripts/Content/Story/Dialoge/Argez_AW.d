@@ -75,6 +75,26 @@ FUNC VOID Info_Mod_Argez_AW_Magiespur_Info()
 	B_LogEntry	(TOPIC_MOD_MAGISCHEMARKIERUNG, "Argez hat tatsächlich eine Markierung bei mir festgestellt. Er will sie aber umleiten können, wenn ich ihm ein geschrumpftes Tier bringe.");
 
 	Mod_Argez_Shrink = 1;
+	
+	// Tempelvorplatz
+
+	Wld_InsertNpc	(Blattcrawler,	"ADW_ENTRANCE_2_VALLEY_10");
+
+	Wld_InsertNpc	(Blattcrawler,	"ADW_ENTRANCE_2_VALLEY_02A");
+
+	Wld_InsertNpc	(Blattcrawler,	"ADW_ENTRANCE_2_VALLEY_05");
+
+	Wld_InsertNpc	(Blattcrawler,	"ADW_ENTRANCE_2_VALLEY_08");
+
+	Wld_InsertNpc	(Blattcrawler,	"ADW_ENTRANCE_2_VALLEY_02B");
+
+	Wld_InsertNpc	(Blattcrawler,	"ADW_ENTRANCE_2_VALLEY_11");
+
+	Wld_InsertNpc	(Blattcrawler,	"ADW_ENTRANCE_BEHINDAKROPOLIS_04");
+
+	Wld_InsertNpc	(Waran,	"ADW_ENTRANCE_PATH2BANDITS_03");
+
+	Wld_InsertNpc	(Blattcrawler,	"ADW_ENTRANCE_PATH2BANDITS_05P");
 };
 
 INSTANCE Info_Mod_Argez_AW_Magiespur2 (C_INFO)
