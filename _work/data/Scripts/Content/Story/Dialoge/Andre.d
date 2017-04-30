@@ -1035,6 +1035,7 @@ FUNC VOID Info_Mod_Andre_Erfahrung_Fanatiker_Info()
 	AI_Output(hero, self, "Info_Mod_Andre_Erfahrung_Fanatiker_15_04"); //Ich habe dort eine Pergamenthälfte gefunden.
 	AI_Output(self, hero, "Info_Mod_Andre_Erfahrung_Fanatiker_08_05"); //Hm, wir müssen aufpassen ...
 
+	B_LogEntry	(TOPIC_MOD_MILIZ_GIDAN, "Ich sollte versuchen die zwei Pergamenthälften zusammenzusetzen. Vielleicht kann Xardas mir dabei helfen...");
 	B_SetTopicStatus	(TOPIC_MOD_MILIZ_SEKTENSPINNER, LOG_SUCCESS);
 
 	B_GivePlayerXP	(500);
