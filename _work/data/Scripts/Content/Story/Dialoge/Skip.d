@@ -206,6 +206,56 @@ FUNC VOID Info_Mod_Skip_Schatzsuche_Info()
 	Log_CreateTopic	(TOPIC_MOD_SKIP_VORRÄTE, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_SKIP_VORRÄTE, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_SKIP_VORRÄTE, "Ich soll Skip 30 Stück rohes Fleisch bringen.");
+
+	Wld_InsertNpc	(Giant_DesertRat,	"FP_ROAM_CANYON_MONSTER_36A");
+	Wld_InsertNpc	(Giant_DesertRat,	"FP_ROAM_CANYON_MONSTER_36");
+
+	Wld_InsertNpc	(Giant_DesertRat,	"FP_ROAM_CANYON_MONSTER_31");
+	Wld_InsertNpc	(Giant_DesertRat,	"FP_ROAM_CANYON_MONSTER_33");
+
+	Wld_InsertNpc	(Giant_DesertRat,	"FP_ROAM_CANYON_MONSTER_30");
+	Wld_InsertNpc	(Giant_DesertRat,	"FP_ROAM_CANYON_MONSTER_29");
+
+	Wld_InsertNpc	(Giant_DesertRat,	"FP_ROAM_CANYON_MONSTER_07");
+	Wld_InsertNpc	(Giant_DesertRat,	"FP_ROAM_CANYON_MONSTER_70");
+
+	Wld_InsertNpc	(Giant_DesertRat,	"FP_ROAM_CANYON_MONSTER_04");
+	Wld_InsertNpc	(Giant_DesertRat,	"FP_ROAM_CANYON_MONSTER_06");
+
+	Wld_InsertNpc	(Giant_DesertRat,	"FP_ROAM_CANYON_MONSTER_57");
+	Wld_InsertNpc	(Giant_DesertRat,	"FP_ROAM_CANYON_MONSTER_59");
+	
+	// Canyonziegen
+
+	Wld_InsertNpc	(Canyon_Ziege,	"ADW_CANYON_PATH_TO_BANDITS_36");
+	Wld_InsertNpc	(Canyon_Ziege,	"ADW_CANYON_PATH_TO_BANDITS_36");
+	Wld_InsertNpc	(Canyon_Ziege,	"ADW_CANYON_PATH_TO_BANDITS_36");
+
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_ENTRANCE_2_PIRATECAMP_05");
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_ENTRANCE_2_PIRATECAMP_05");
+
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_045");
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_045");
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_045");
+
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_043");
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_043");
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_043");
+
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_038_J");
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_038_J");
+
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_038_E");
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_038_E");
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_038_E");
+
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_032_G");
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_032_G");
+
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_116_A");
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_116_A");
+
+	Wld_InsertNpc	(Scavenger_Demon,	"ADW_VALLEY_PATH_110");
 };
 
 INSTANCE Info_Mod_Skip_Fleisch (C_INFO)

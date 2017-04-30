@@ -355,7 +355,7 @@ FUNC VOID Info_Mod_Fuego_FireMage_A()
 	AI_Output(hero, self, "Info_Mod_Fuego_FireMage_A_15_00"); //Ich gebe mir Mühe. Versprochen.
 	AI_Output(self, hero, "Info_Mod_Fuego_FireMage_A_32_01"); //Dann nimm das mit auf deine Reisen, in Innos' Namen!
 	
-	B_GiveInvItems(self, hero, ItPo_Mana_02);
+	B_GiveInvItems(self, hero, ItPo_Mana_02, 1);
 	
 	Info_ClearChoices(Info_Mod_Fuego_FireMage);
 };
