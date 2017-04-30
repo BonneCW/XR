@@ -109,6 +109,8 @@ func void INIT_GLOBAL()
 	MoreAlphaPolys(16384 * 2); //normal: 2048
 
 	B_AutoGeneratePicklockKombos();
+	
+	AxtUpgrade = 0;
 };
 
 FUNC VOID OldLevel(var int newlevel)
