@@ -1329,7 +1329,7 @@ INSTANCE ItPl_Health_Herb_03(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Dex_Herb_01(C_Item)
 {	
-	name 				=	"Goblin-Beeren";
+	name 				=	"Goblinbeeren";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	

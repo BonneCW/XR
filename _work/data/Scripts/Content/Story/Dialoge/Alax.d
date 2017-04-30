@@ -120,6 +120,16 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Verteiler()
 		{
 			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Zwillingsdorn geben", Info_Mod_Alax_AlchemieLehrer2_Zwillingsdorn);
 		};
+		if (!Mod_Alax_Zutat_Weidenbeere)
+		&& (Npc_HasItems(hero, ItPl_Planeberry) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Weidenbeere geben", Info_Mod_Alax_AlchemieLehrer2_Weidenbeere);
+		};
+		if (!Mod_Alax_Zutat_Waldbeere)
+		&& (Npc_HasItems(hero, ItPl_Forestberry) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Waldbeere geben", Info_Mod_Alax_AlchemieLehrer2_Waldbeere);
+		};
 		if (!Mod_Alax_Zutat_LeichtesMana)
 		&& (Npc_HasItems(hero, ItPo_Mana_06) >= 6)
 		{
@@ -129,6 +139,16 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Verteiler()
 		&& (Npc_HasItems(hero, ItPo_Health_05) >= 6)
 		{
 			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Trank der schnellen Heilung geben", Info_Mod_Alax_AlchemieLehrer2_SchnelleHeilung);
+		};
+		if (!Mod_Alax_Zutat_Sumpfkraut)
+		&& (Npc_HasItems(hero, ItPl_SwampHerb) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Sumpfkraut geben", Info_Mod_Alax_AlchemieLehrer2_Sumpfkraut);
+		};
+		if (!Mod_Alax_Zutat_Snapperkraut)
+		&& (Npc_HasItems(hero, ItPl_Speed_Herb_01) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Snapperkraut geben", Info_Mod_Alax_AlchemieLehrer2_Snapperkraut);
 		};
 		if (!Mod_Alax_Zutat_Schwefel)
 		&& (Npc_HasItems(hero, ItMi_Sulfur) >= 6)
@@ -225,10 +245,30 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Verteiler()
 		{
 			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Elixier der Heilung geben", Info_Mod_Alax_AlchemieLehrer2_ElixierDerHeilung);
 		};
+		if (!Mod_Alax_Zutat_Fliegenpilz)
+		&& (Npc_HasItems(hero, ItPl_Mushroom_03) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Fliegenpilz geben", Info_Mod_Alax_AlchemieLehrer2_Fliegenpilz);
+		};
 		if (!Mod_Alax_Zutat_Feuerkraut)
 		&& (Npc_HasItems(hero, ItPl_Mana_Herb_02) >= 6)
 		{
 			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Feuerkraut geben", Info_Mod_Alax_AlchemieLehrer2_Feuerkraut);
+		};
+		if (!Mod_Alax_Zutat_Dunkelpilz)
+		&& (Npc_HasItems(hero, ItPl_Mushroom_01) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Dunkelpilz geben", Info_Mod_Alax_AlchemieLehrer2_Dunkelpilz);
+		};
+		if (!Mod_Alax_Zutat_Buddlerfleisch)
+		&& (Npc_HasItems(hero, ItPl_Mushroom_02) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Buddlerfleisch geben", Info_Mod_Alax_AlchemieLehrer2_Buddlerfleisch);
+		};
+		if (!Mod_Alax_Zutat_Blauflieder)
+		&& (Npc_HasItems(hero, ItPl_Blueplant) >= 6)
+		{
+			Info_AddChoice	(Info_Mod_Alax_AlchemieLehrer2, "6x Blauflieder geben", Info_Mod_Alax_AlchemieLehrer2_Blauflieder);
 		};
 		if (!Mod_Alax_Zutat_Bergkristall)
 		&& (Npc_HasItems(hero, ItMi_Rockcrystal) >= 6)
@@ -278,6 +318,32 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Zwillingsdorn()
 	Mod_Alax_Zutat_Zwillingsdorn = TRUE;
 	
 	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Zwillingsdorn gebracht.");
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Weidenbeere()
+{
+	B_GiveInvItems	(hero, self, ItPl_Planeberry, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_Weidenbeere = TRUE;
+	
+	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Weidenbeere gebracht.");
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Waldbeere()
+{
+	B_GiveInvItems	(hero, self, ItPl_Forestberry, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_Waldbeere = TRUE;
+	
+	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Waldbeere gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -590,6 +656,84 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Aquamarin()
 	Mod_Alax_Zutat_Aquamarin = TRUE;
 	
 	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Aquamarin gebracht.");
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Buddlerfleisch()
+{
+	B_GiveInvItems	(hero, self, ItPl_Mushroom_02, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_Buddlerfleisch = TRUE;
+	
+	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Buddlerfleisch gebracht.");
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Dunkelpilz()
+{
+	B_GiveInvItems	(hero, self, ItPl_Mushroom_01, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_Dunkelpilz = TRUE;
+	
+	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Dunkelpilz gebracht.");
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Fliegenpilz()
+{
+	B_GiveInvItems	(hero, self, ItPl_Mushroom_03, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_Fliegenpilz = TRUE;
+	
+	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Fliegenpilz gebracht.");
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Blauflieder()
+{
+	B_GiveInvItems	(hero, self, ItPl_Blueplant, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_Blauflieder = TRUE;
+	
+	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Blauflieder gebracht.");
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Sumpfkraut()
+{
+	B_GiveInvItems	(hero, self, ItPl_SwampHerb, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_Sumpfkraut = TRUE;
+	
+	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Sumpfkraut gebracht.");
+
+	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
+};
+
+FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Snapperkraut()
+{
+	B_GiveInvItems	(hero, self, ItPl_Speed_Herb_01, 6);
+
+	Mod_Alax_Zutaten += 1;
+
+	Mod_Alax_Zutat_Snapperkraut = TRUE;
+	
+	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Snapperkraut gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
