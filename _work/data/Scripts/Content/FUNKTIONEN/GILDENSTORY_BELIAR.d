@@ -641,9 +641,10 @@ FUNC VOID GILDENSTORY_BELIAR()
 		{
 			if (!Hlp_IsValidHandle(View_GomezTimer))
 			{
-				View_GomezTimer = View_CreatePxl	(Print_Screen[PS_X] - 170, 50, Print_Screen[PS_X] - 20, 80);
-				View_GomezKillsIch = View_CreatePxl	(Print_Screen[PS_X] - 170, 80, Print_Screen[PS_X] - 20, 110);
-				View_GomezKills = View_CreatePxl	(Print_Screen[PS_X] - 170, 110, Print_Screen[PS_X] - 20, 140);
+				var int fontHeight; fontHeight = Print_GetFontHeight(FONT_Screen) + 10;
+				View_GomezTimer = View_CreatePxl	(Print_Screen[PS_X] - 170, 50, Print_Screen[PS_X] - 20, 50 + fontHeight);
+				View_GomezKillsIch = View_CreatePxl	(Print_Screen[PS_X] - 170, 50 + fontHeight, Print_Screen[PS_X] - 20, 50 + 2 * fontHeight);
+				View_GomezKills = View_CreatePxl	(Print_Screen[PS_X] - 170, 50 + 2 * fontHeight, Print_Screen[PS_X] - 20, 50 + 3 * fontHeight);
 
 				View_Open	(View_GomezTimer);
 				View_Open	(View_GomezKillsIch);
