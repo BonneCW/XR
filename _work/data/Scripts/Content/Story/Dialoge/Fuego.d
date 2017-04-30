@@ -311,6 +311,55 @@ FUNC VOID Info_Mod_Fuego_Freudenspender_Info()
 	Mod_Freudenspender	+= 1;
 };
 
+INSTANCE Info_Mod_Fuego_FireMage (C_INFO)
+{
+	npc		= Mod_7425_KDF_Fuego_REL;
+	nr		= 1;
+	condition	= Info_Mod_Fuego_FireMage_Condition;
+	information	= Info_Mod_Fuego_FireMage_Info;
+	permanent	= 0;
+	important	= 1;
+};                       
+
+FUNC INT Info_Mod_Fuego_FireMage_Condition()
+{
+	if (hero.guild == GIL_VLK)
+	{
+		return TRUE;
+	};
+};
+
+FUNC VOID Info_Mod_Fuego_FireMage_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Fuego_FireMage_32_00"); //Schön, mal auf einen Gleichgesinnten zu treffen. Kommst du aus Khorinis?
+	AI_Output(hero, self, "Info_Mod_Fuego_FireMage_15_01"); //Nicht direkt. Aber tun wir mal so, als ob. Ihr habt wohl einen schweren Stand in Khorata?
+	AI_Output(self, hero, "Info_Mod_Fuego_FireMage_32_02"); //Das kann man so sagen. Innos verzeihe mir, aber dies ist ein gottloses Fleckchen Erde. Die Menschen glauben hier an ihren Besitz und Reichtum, sonst nichts.
+	AI_Output(hero, self, "Info_Mod_Fuego_FireMage_15_03"); //Klingt nach einem Haufen Arbeit ...
+	AI_Output(self, hero, "Info_Mod_Fuego_FireMage_32_04"); //Wo immer du die Möglichkeit siehst, hier den rechten Glauben oder zumindest etwas Anstand zu lehren, bitte ich dich, tätig zu werden. Du würdest unsere schwere Prüfung von Innos etwas leichter machen.
+	
+	Info_ClearChoices(Info_Mod_Fuego_FireMage);
+	
+	Info_AddChoice(Info_Mod_Fuego_FireMage, "Mal schauen. Eigentlich gefällt es mir gut, wie es ist.", Info_Mod_Fuego_FireMage_B);
+	Info_AddChoice(Info_Mod_Fuego_FireMage, "Ich gebe mir Mühe. Versprochen.", Info_Mod_Fuego_FireMage_A);
+};
+
+FUNC VOID Info_Mod_Fuego_FireMage_B()
+{
+	AI_Output(hero, self, "Info_Mod_Fuego_FireMage_B_15_00"); //Mal schauen. Eigentlich gefällt es mir gut, wie es ist.
+	
+	Info_ClearChoices(Info_Mod_Fuego_FireMage);
+};
+
+FUNC VOID Info_Mod_Fuego_FireMage_A()
+{
+	AI_Output(hero, self, "Info_Mod_Fuego_FireMage_A_15_00"); //Ich gebe mir Mühe. Versprochen.
+	AI_Output(self, hero, "Info_Mod_Fuego_FireMage_A_32_01"); //Dann nimm das mit auf deine Reisen, in Innos' Namen!
+	
+	B_GiveInvItems(self, hero, ItPo_Mana_02);
+	
+	Info_ClearChoices(Info_Mod_Fuego_FireMage);
+};
+
 INSTANCE Info_Mod_Fuego_Lernen (C_INFO)
 {
 	npc		= Mod_7425_KDF_Fuego_REL;
