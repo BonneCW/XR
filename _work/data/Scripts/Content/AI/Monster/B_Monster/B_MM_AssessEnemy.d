@@ -129,6 +129,13 @@ func void B_MM_AssessEnemy ()
 			Npc_SendSinglePerc(hero, self, PERC_ASSESSTALK);
 			return;
 		};
+		
+		if (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_7657_OUT_Suchender_REL))
+		|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_7656_OUT_Suchender_REL))
+		|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_7651_OUT_Suchender_REL))
+		|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_7658_OUT_Suchender_REL)) {
+			return;
+		};
 	};
 
 	if (other.guild == GIL_DRACONIAN)
