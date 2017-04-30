@@ -376,12 +376,12 @@ func void UsePassierschein ()
 //****************************************************************************
 INSTANCE ItMi_HerbPaket(C_Item)
 {
-	name 				=	"Kraut- Paket";
+	name 				=	"Krautpaket";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MISSION;
+	flags 				=	ITEM_MISSION | ITEM_SHOW;
 
-	value 				=	0;
+	value 				=	200;
 
 	visual 				=	"ItMi_Packet.3ds";
 	
@@ -401,7 +401,7 @@ INSTANCE ItMi_HerbPaket(C_Item)
 //****************************************************************************
 INSTANCE ItKe_Storage(C_Item)
 {
-	name 				=	"Lagerhaus- Schlüssel";
+	name 				=	"Lagerhausschlüssel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MISSION;
