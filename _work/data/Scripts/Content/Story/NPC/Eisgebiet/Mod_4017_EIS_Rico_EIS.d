@@ -19,6 +19,8 @@ instance Mod_4017_EIS_Rico_EIS (Npc_Default)
 		
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
+	
+	aivar[AIV_TOUGHGUY] = TRUE;
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Normal06, BodyTex_N, ITAR_Eisgebiet_02);	
