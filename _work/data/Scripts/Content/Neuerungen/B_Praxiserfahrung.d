@@ -7,129 +7,84 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 	};
 
 	if (Hlp_GetInstanceID(oth) != Hlp_GetInstanceID(PC_Hero))
+	|| ((oth.aivar[AIV_Partymember] == TRUE)
+	&& (oth.guild <= GIL_SEPERATOR_HUM)))
 	{
 		return;
+	};
+	
+	if ((oth.aivar[AIV_Partymember] == TRUE)
+	&& (oth.guild > GIL_SEPERATOR_HUM))) // summoned monster
+	{
+		if (Mod_Mana_Praxis_Next == 0) {
+			Mod_Mana_Praxis_Next = 100;
+		};
+		if (Mod_Schwierigkeit != 4) {
+			Mod_Mana_Praxis += 3;
+		} else {
+			Mod_Mana_Praxis += 6;
+		};
 	};
 
 	if (Hlp_GetInstanceID(oth) == Hlp_GetInstanceID(PC_Hero))
 	&& (!playerIsTransformed)
 	{
-		if (Mod_Staerke_Praxis_Next == 0)
-		{
+		if (Mod_Staerke_Praxis_Next == 0) {
 			Mod_Staerke_Praxis_Next = 100;
 		};
 
-		if (Mod_Geschick_Praxis_Next == 0)
-		{
+		if (Mod_Geschick_Praxis_Next == 0) {
 			Mod_Geschick_Praxis_Next = 100;
 		};
 
-		if (Mod_Mana_Praxis_Next == 0)
-		{
+		if (Mod_Mana_Praxis_Next == 0) {
 			Mod_Mana_Praxis_Next = 100;
 		};
 
-		if (Mod_Einhand_Praxis_Next == 0)
-		{
+		if (Mod_Einhand_Praxis_Next == 0) {
 			Mod_Einhand_Praxis_Next = 100;
 		};
 
-		if (Mod_Zweihand_Praxis_Next == 0)
-		{
+		if (Mod_Zweihand_Praxis_Next == 0) {
 			Mod_Zweihand_Praxis_Next = 100;
 		};
 
-		if (Mod_Bogen_Praxis_Next == 0)
-		{
+		if (Mod_Bogen_Praxis_Next == 0) {
 			Mod_Bogen_Praxis_Next = 100;
 		};
 
-		if (Mod_Armbrust_Praxis_Next == 0)
-		{
+		if (Mod_Armbrust_Praxis_Next == 0) {
 			Mod_Armbrust_Praxis_Next = 100;
 		};
 
-		if (Npc_IsInFightMode (hero, FMODE_MELEE))
-		{
-			if (Mod_Schwierigkeit != 4)
-			{
+		if (Npc_IsInFightMode (hero, FMODE_MELEE)) {
+			if (Mod_Schwierigkeit != 4) {
 				Mod_Staerke_Praxis += 3;
-			}
-			else
-			{
+			} else {
 				Mod_Staerke_Praxis += 6;
 				Mod_Geschick_Praxis += 2;
 			};
-		}
-		else if (Npc_IsInFightMode (hero, FMODE_FAR))
-		{
-			if (Mod_Schwierigkeit != 4)
-			{
+		} else if (Npc_IsInFightMode (hero, FMODE_FAR)) {
+			if (Mod_Schwierigkeit != 4) {
 				Mod_Geschick_Praxis += 3;
-			}
-			else
-			{
+			} else {
 				Mod_Geschick_Praxis += 6;
 				Mod_Staerke_Praxis += 2;
 			};
-		}
-		else if (Npc_IsInFightMode (hero, FMODE_MAGIC))
-		{
-			if (Mod_Schwierigkeit != 4)
-			{
+		} else if (Npc_IsInFightMode (hero, FMODE_MAGIC)) {
+			if (Mod_Schwierigkeit != 4) {
 				Mod_Mana_Praxis += 3;
-			}
-			else
-			{
+			} else {
 				Mod_Mana_Praxis += 6;
 			};
-		}
-		else if (Npc_IsInFightMode (hero, FMODE_FIST))
-		{
-			if (Mod_Schwierigkeit != 4)
-			{
+		} else if (Npc_IsInFightMode (hero, FMODE_FIST)) {
+			if (Mod_Schwierigkeit != 4) {
 				Mod_Staerke_Praxis += 5;
-			}
-			else
-			{
+			} else {
 				Mod_Staerke_Praxis += 10;
 			};
 		};
-				
-		if (Mod_Geschick_Praxis >= Mod_Geschick_Praxis_Next)
-		{
-			Mod_Geschick_Praxis_Level += 1;
-
-			hero.attribute[ATR_DEXTERITY] += 1;
-
-			AI_PrintScreen	("+1 Geschick durch Praxiserfahrung", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
-
-			Mod_Geschick_Praxis -= Mod_Geschick_Praxis_Next;
-			Mod_Geschick_Praxis_Next += 50;
-		}
-		else if (Mod_Staerke_Praxis >= Mod_Staerke_Praxis_Next)
-		{
-			Mod_Staerke_Praxis_Level += 1;
-
-			hero.attribute[ATR_STRENGTH] += 1;
-
-			AI_PrintScreen	("+1 Stärke durch Praxiserfahrung", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
-
-			Mod_Staerke_Praxis -= Mod_Staerke_Praxis_Next;
-			Mod_Staerke_Praxis_Next += 50;
-		}
-		else if (Mod_Mana_Praxis >= Mod_Mana_Praxis_Next)
-		{
-			Mod_Mana_Praxis_Level += 1;
-
-			hero.attribute[ATR_MANA_MAX] += 2;
-
-			AI_PrintScreen	("+2 Mana durch Praxiserfahrung", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
-
-			Mod_Mana_Praxis -= Mod_Mana_Praxis_Next;
-			Mod_Mana_Praxis_Next += 50;
-		};
-
+		
 		if (Mod_Schwierigkeit == 4)
 		{
 			var C_Item CW;
@@ -199,5 +154,34 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 				Mod_Armbrust_Praxis_Next += 50;
 			};
 		};
+	};
+	
+	if (Mod_Geschick_Praxis >= Mod_Geschick_Praxis_Next) {
+		Mod_Geschick_Praxis_Level += 1;
+
+		hero.attribute[ATR_DEXTERITY] += 1;
+
+		AI_PrintScreen	("+1 Geschick durch Praxiserfahrung", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
+
+		Mod_Geschick_Praxis -= Mod_Geschick_Praxis_Next;
+		Mod_Geschick_Praxis_Next += 50;
+	} else if (Mod_Staerke_Praxis >= Mod_Staerke_Praxis_Next) {
+		Mod_Staerke_Praxis_Level += 1;
+
+		hero.attribute[ATR_STRENGTH] += 1;
+
+		AI_PrintScreen	("+1 Stärke durch Praxiserfahrung", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
+
+		Mod_Staerke_Praxis -= Mod_Staerke_Praxis_Next;
+		Mod_Staerke_Praxis_Next += 50;
+	} else if (Mod_Mana_Praxis >= Mod_Mana_Praxis_Next) {
+		Mod_Mana_Praxis_Level += 1;
+
+		hero.attribute[ATR_MANA_MAX] += 2;
+
+		AI_PrintScreen	("+2 Mana durch Praxiserfahrung", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
+
+		Mod_Mana_Praxis -= Mod_Mana_Praxis_Next;
+		Mod_Mana_Praxis_Next += 50;
 	};
 };
