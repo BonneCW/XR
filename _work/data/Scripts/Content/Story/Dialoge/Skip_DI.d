@@ -68,8 +68,8 @@ FUNC VOID Info_Mod_Skip_DI_Brunhild_Info()
 	AI_StopProcessInfos	(self);
 
 	AI_Teleport	(Mod_7642_OUT_Brunhild_DI, "WP_DI_BRANDON_SLEEP");
-
 	B_StartOtherRoutine	(Mod_7642_OUT_Brunhild_DI, "KUECHE");
+	AI_Teleport	(Mod_7642_OUT_Brunhild_DI, "WP_DI_BRANDON_SLEEP");
 	B_StartOtherRoutine	(Mod_1549_PIR_Malcom_DI, "START");
 
 	PrintScreen ("Einige Zeit später", -1, YPOS_LevelUp, FONT_Screen, 2);
@@ -204,6 +204,12 @@ FUNC VOID Info_Mod_Skip_DI_ZumStrand_Info()
 	PrintScreen ("Eine ereignislose Überfahrt später", -1, YPOS_LevelUp, FONT_Screen, 2);
 
 	Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);
+	
+	if (Hlp_IsValidNpc(Mod_7642_OUT_Brunhild_DI)) {
+		if (Mod_7642_OUT_Brunhild_DI.aivar[AIV_PARTYMEMBER]) {
+			AI_Teleport	(Mod_7642_OUT_Brunhild_DI, "WP_DI_SKIPKOMMTANLAND");
+		};
+	};
 };
 
 INSTANCE Info_Mod_Skip_DI_EXIT (C_INFO)
