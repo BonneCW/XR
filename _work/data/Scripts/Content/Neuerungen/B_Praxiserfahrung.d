@@ -8,13 +8,13 @@ FUNC VOID B_Praxiserfahrung(var C_NPC oth, var C_NPC slf)
 
 	if (Hlp_GetInstanceID(oth) != Hlp_GetInstanceID(PC_Hero))
 	|| ((oth.aivar[AIV_Partymember] == TRUE)
-	&& (oth.guild <= GIL_SEPERATOR_HUM)))
+	&& (oth.guild <= GIL_SEPERATOR_HUM))
 	{
 		return;
 	};
 	
 	if ((oth.aivar[AIV_Partymember] == TRUE)
-	&& (oth.guild > GIL_SEPERATOR_HUM))) // summoned monster
+	&& (oth.guild > GIL_SEPERATOR_HUM)) // summoned monster
 	{
 		if (Mod_Mana_Praxis_Next == 0) {
 			Mod_Mana_Praxis_Next = 100;

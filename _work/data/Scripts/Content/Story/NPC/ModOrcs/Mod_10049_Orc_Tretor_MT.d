@@ -31,6 +31,8 @@ INSTANCE Mod_10049_Orc_Tretor_MT (Npc_Default)
 	HitChance	[NPC_TALENT_BOW]		= 60;
 	HitChance	[NPC_TALENT_CROSSBOW]	= 60;
 	
+	aivar[AIV_Damage] = attribute[ATR_HITPOINTS_MAX];
+	
 	//----- Damage Types ----	
 	damagetype 						=	DAM_EDGE;
 

@@ -995,6 +995,45 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 			};
 		};
 	};
+	if (damage >= opfer.attribute[ATR_HITPOINTS]) {
+		if (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(hero)) {
+			if (Mod_PolochTretor == 2)
+			&& (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Mod_10048_Orc_Poloch_MT)) {
+				Npc_ClearAIQueue	(opfer);
+				AI_StandUPQuick	(opfer);
+				opfer.flags = 2;
+				
+				Mod_Poloch_Beat = TRUE;
+				
+				if (Mod_Tretor_Beat) {
+					Mod_PolochTretor = 3;
+				};
+				damage = 0;
+			};
+			if (Mod_PolochTretor == 2)
+			&& (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Mod_10049_Orc_Tretor_MT)) {
+				Npc_ClearAIQueue	(opfer);
+				AI_StandUPQuick	(opfer);
+				opfer.flags = 2;
+				
+				Mod_Tretor_Beat = TRUE;
+				
+				if (Mod_Poloch_Beat) {
+					Mod_PolochTretor = 3;
+				};
+				damage = 0;
+			};
+		} else if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(hero)) {
+			if (Mod_PolochTretor >= 2)
+			&& (Mod_PolochTretor <= 3) {
+				if (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(Mod_10048_Orc_Poloch_MT))
+				|| (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(Mod_10049_Orc_Tretor_MT)) {
+					Mod_PolochTretor = 3;
+					damage = 0;
+				};
+			};
+		};
+	};
 
 	B_MagicHurtNpc	(taeter, opfer, damage);
 };

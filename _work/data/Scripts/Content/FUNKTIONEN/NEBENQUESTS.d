@@ -3565,8 +3565,21 @@ FUNC VOID NEBENQUESTS()
 		{
 			Mod_PolochTretor = 2;
 			
+			Mod_10048_Orc_Poloch_MT.flags = 0;
+			Mod_10049_Orc_Tretor_MT.flags = 0;
 			B_Attack(Mod_10048_Orc_Poloch_MT, hero, AR_NONE, 0);
 			B_Attack(Mod_10049_Orc_Tretor_MT, hero, AR_NONE, 0);
+		};
+		
+		if (Mod_PolochTretor == 2) {
+			if (!Npc_IsInState(Mod_10048_Orc_Poloch_MT, ZS_Attack))
+			&& (!Mod_Poloch_Beat) {
+				B_Attack(Mod_10048_Orc_Poloch_MT, hero, AR_NONE, 0);
+			};
+			if (!Npc_IsInState(Mod_10049_Orc_Tretor_MT, ZS_Attack))
+			&& (!Mod_Tretor_Beat) {
+				B_Attack(Mod_10049_Orc_Tretor_MT, hero, AR_NONE, 0);
+			};
 		};
 
 		if (Mod_PolochTretor == 4)

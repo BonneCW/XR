@@ -150,6 +150,20 @@ func int ZS_Attack_Loop()
 	 		B_SoulTalk();
 		}; 
 	};
+	
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_10048_Orc_Poloch_MT)) {
+		if (Mod_PolochTretor == 3)
+		|| (Mod_Poloch_Beat) {
+			return LOOP_END;
+		};
+	};
+	
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_10049_Orc_Tretor_MT)) {
+		if (Mod_PolochTretor == 3)
+		|| (Mod_Tretor_Beat) {
+			return LOOP_END;
+		};
+	};
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7352_OUT_Trador_TUG))
 	&& (other.guild == GIL_STONEGOLEM)

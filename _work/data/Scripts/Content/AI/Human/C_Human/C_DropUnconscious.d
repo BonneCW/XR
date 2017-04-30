@@ -13,6 +13,11 @@ func int C_DropUnconscious()
 		Npc_RemoveInvItems	(self, ItFo_MuttonRaw, Npc_HasItems(self, ItFo_MuttonRaw));
 		return TRUE;
 	};
+	if (Mod_PolochTretor == 2)
+	&& (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(hero))
+	{		
+		return TRUE;
+	};
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7189_OUT_Antonius_MT))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7190_OUT_Hortensius_MT))
@@ -204,40 +209,9 @@ func int C_DropUnconscious2(var C_NPC slf, var C_NPC oth)
 		Npc_RemoveInvItems	(slf, ItFo_MuttonRaw, Npc_HasItems(slf, ItFo_MuttonRaw));
 		return TRUE;
 	};
-	
-	if (Mod_PolochTretor == 2)
-	&& (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_10048_Orc_Poloch_MT))
-	{
-		Npc_ClearAIQueue	(slf);
-		AI_StandUPQuick	(slf);
-		
-		Mod_Poloch_Beat = TRUE;
-		
-		if (Mod_Tretor_Beat) {
-			Mod_PolochTretor = 3;
-		};
-		
-		return TRUE;
-	};
-	if (Mod_PolochTretor == 2)
-	&& (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_10049_Orc_Tretor_MT))
-	{
-		Npc_ClearAIQueue	(slf);
-		AI_StandUPQuick	(slf);
-		
-		Mod_Tretor_Beat = TRUE;
-		
-		if (Mod_Poloch_Beat) {
-			Mod_PolochTretor = 3;
-		};
-		
-		return TRUE;
-	};
 	if (Mod_PolochTretor == 2)
 	&& (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(hero))
-	{
-		Mod_PolochTretor = 3;
-		
+	{		
 		return TRUE;
 	};
 
