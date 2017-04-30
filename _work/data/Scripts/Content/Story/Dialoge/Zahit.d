@@ -1,3 +1,30 @@
+INSTANCE Info_Mod_Zahit_Kill (C_INFO)
+{
+	npc		= Mod_7100_ASS_Zahit_NW;
+	nr		= 1;
+	condition	= Info_Mod_Zahit_Kill_Condition;
+	information	= Info_Mod_Zahit_Kill_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Zahit_Kill_Condition()
+{
+	if (!Npc_KnowsInfo(hero, Info_Mod_Amir_AtVersteck))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Zahit_Kill_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Zahit_Kill_13_00"); //Du wärst besser nicht hierher gekommen!
+	
+	AI_StopProcessInfos(self);
+	
+	B_Attack(self, hero, AR_KILL, 0);
+};
+
 INSTANCE Info_Mod_Zahit_Amir (C_INFO)
 {
 	npc		= Mod_7100_ASS_Zahit_NW;
