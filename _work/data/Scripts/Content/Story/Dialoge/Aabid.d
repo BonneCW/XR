@@ -33,7 +33,7 @@ INSTANCE Info_Mod_Aabid_Aufgabe (C_INFO)
 	information	= Info_Mod_Aabid_Aufgabe_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Soll ich dir die Sumpfkrautpakte bringen?";
+	description	= "Soll ich dir die Sumpfkrautpakete bringen?";
 };
 
 FUNC INT Info_Mod_Aabid_Aufgabe_Condition()
@@ -47,7 +47,7 @@ FUNC INT Info_Mod_Aabid_Aufgabe_Condition()
 
 FUNC VOID Info_Mod_Aabid_Aufgabe_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Aabid_Aufgabe_15_00"); //Soll ich dir die Sumpfkrautpakte bringen?
+	AI_Output(hero, self, "Info_Mod_Aabid_Aufgabe_15_00"); //Soll ich dir die Sumpfkrautpakete bringen?
 	AI_Output(self, hero, "Info_Mod_Aabid_Aufgabe_09_01"); //Das wäre wirklich gut, wenn du das machen würdest. Aber warum willst du das machen?
 	AI_Output(hero, self, "Info_Mod_Aabid_Aufgabe_15_02"); //Ich möchte mich den Gaunern anschließen. Dazu brauche ich jedoch eure Stimmen.
 	AI_Output(hero, self, "Info_Mod_Aabid_Aufgabe_15_03"); //Würdest du mir nach dieser Aufgabe eventuell deine Stimme geben.
@@ -91,6 +91,7 @@ FUNC VOID Info_Mod_Aabid_HabPakete_Info()
 	AI_Output(hero, self, "Info_Mod_Aabid_HabPakete_15_02"); //Nein, hier sind sie.
 
 	B_GiveInvItems	(hero, self, ItMi_HerbPaket, 3);
+	Npc_RemoveInvItems(self, ItMi_HerbPaket, 3);
 
 	AI_Output(self, hero, "Info_Mod_Aabid_HabPakete_09_04"); //Das sind tatsächlich alle, wie hast du das nur gemacht?
 	AI_Output(hero, self, "Info_Mod_Aabid_HabPakete_15_05"); //Reine Intuition, würde ich sagen.
@@ -104,6 +105,8 @@ FUNC VOID Info_Mod_Aabid_HabPakete_Info()
 	B_SetTopicStatus	(TOPIC_MOD_ASS_AABID_PAKET, LOG_SUCCESS);
 
 	B_GivePlayerXP	(200);
+	
+	CreateInvItems(self, ItMi_Joint, 50);
 };
 
 INSTANCE Info_Mod_Aabid_Trade (C_INFO)
