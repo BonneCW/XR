@@ -38,7 +38,6 @@ INSTANCE Info_Mod_Woron_Trade (C_INFO)
 FUNC INT Info_Mod_Woron_Trade_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Woron_Hey))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Cyrco_BaalOrun))
 	{
 		return 1;
 	};

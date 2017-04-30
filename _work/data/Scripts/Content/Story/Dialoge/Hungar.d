@@ -28,11 +28,6 @@ FUNC VOID Info_Mod_Hungar_Hey_Info()
 	AI_Output(self, hero, "Info_Mod_Hungar_Hey_08_09"); //Gewiss. War einer der Ersten im Lager. Vor der Barriere. So wahr ich Hungar heiﬂe.
 	AI_Output(hero, self, "Info_Mod_Hungar_Hey_15_10"); //Dann zeig mal, was du alles hast ...
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Cyrco_BaalOrun))
-	{
-		AI_Output(self, hero, "Info_Mod_Hungar_Hey_08_11"); //Tut mir Leid, aber ich werde erst mit dir Handeln, wenn du ein Waldl‰ufer bist.
-	};
-
 	Log_CreateTopic	(TOPIC_MOD_HAENDLER_WALDIS, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_HAENDLER_WALDIS, "Hungar scheint Lebensmittel an die Waldl‰ufer zu verkaufen.");
 };
@@ -52,7 +47,6 @@ INSTANCE Info_Mod_Hungar_Trade (C_INFO)
 FUNC INT Info_Mod_Hungar_Trade_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Hungar_Hey))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Cyrco_BaalOrun))
 	{
 		return 1;
 	};

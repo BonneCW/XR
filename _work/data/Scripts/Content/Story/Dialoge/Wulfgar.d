@@ -593,7 +593,6 @@ INSTANCE Info_Mod_Wulfgar_Trade (C_INFO)
 FUNC INT Info_Mod_Wulfgar_Trade_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Wulfgar_Hey))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Cyrco_BaalOrun))
 	{
 		return 1;
 	};
