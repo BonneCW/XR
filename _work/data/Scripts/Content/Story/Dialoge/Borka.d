@@ -211,51 +211,7 @@ FUNC VOID Info_Mod_Borka_Lucy_Info()
 	AI_Output(hero, self, "Info_Mod_Borka_Lucy_15_00"); //Du verkaufst Sumpfkraut?
 	AI_Output(self, hero, "Info_Mod_Borka_Lucy_11_01"); //Wer sagt das?
 	AI_Output(hero, self, "Info_Mod_Borka_Lucy_15_02"); //Ich habe Gold.
-	AI_Output(self, hero, "Info_Mod_Borka_Lucy_11_03"); //Hm ... ich hab zur Zeit fast kein Sumpfkraut mehr. Wenn du mir ein paar Stängel bringst, dann kann ich dir auch welche verkaufen.
-	AI_Output(hero, self, "Info_Mod_Borka_Lucy_15_04"); //Wie viele brauchst du denn?
-	AI_Output(self, hero, "Info_Mod_Borka_Lucy_11_05"); //20 sollten vorerst reichen.
-
-	Log_CreateTopic	(TOPIC_MOD_BORKA_SUMPFKRAUT, LOG_MISSION);
-	B_SetTopicStatus	(TOPIC_MOD_BORKA_SUMPFKRAUT, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_BORKA_SUMPFKRAUT, "Borka handelt mit Sumpfkraut, hat aber fast nichts mehr auf Lager. Ich soll ihm 20 Stängel bringen, dann wird er mir in Zukunft auch Stängel verkaufen.");
-};
-
-INSTANCE Info_Mod_Borka_HabKraut (C_INFO)
-{
-	npc		= Mod_563_NONE_Borka_NW;
-	nr		= 1;
-	condition	= Info_Mod_Borka_HabKraut_Condition;
-	information	= Info_Mod_Borka_HabKraut_Info;
-	permanent	= 0;
-	important	= 0;
-	description	= "Ich hab die Stängel.";
-};
-
-FUNC INT Info_Mod_Borka_HabKraut_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Borka_Lucy))
-	&& (Npc_HasItems(hero, ItMi_Joint) >= 20)
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Borka_HabKraut_Info()
-{
-	AI_Output(hero, self, "Info_Mod_Borka_HabKraut_15_00"); //Ich hab die Stängel.
-
-	B_GiveInvItems	(hero, self, ItMi_Joint, 20);
-
-	AI_Output(self, hero, "Info_Mod_Borka_HabKraut_11_01"); //Gut, danke. Ich hab jetzt auch noch ein paar Stängel von meinen Lieferanten bekommen.
-	AI_Output(hero, self, "Info_Mod_Borka_HabKraut_15_02"); //Also kann ich jetzt bei dir Sumpfkraut kaufen?
-	AI_Output(self, hero, "Info_Mod_Borka_HabKraut_11_03"); //Ja.
-
-	B_GivePlayerXP	(200);
-
-	B_LogEntry	(TOPIC_MOD_BORKA_SUMPFKRAUT, "Ich hab Borka die Stängel gebracht. Jetzt wird er mir auch welche verkaufen.");
-	B_SetTopicStatus	(TOPIC_MOD_BORKA_SUMPFKRAUT, LOG_SUCCESS);
-
-	CurrentNQ += 1;
+	AI_Output(self, hero, "Info_Mod_Borka_Lucy_11_03"); //Wenn das so ist ...
 };
 
 INSTANCE Info_Mod_Borka_Skinner (C_INFO)
@@ -311,7 +267,7 @@ INSTANCE Info_Mod_Borka_Trade (C_INFO)
 
 FUNC INT Info_Mod_Borka_Trade_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Borka_HabKraut))
+	if (Npc_KnowsInfo(hero, Info_Mod_Borka_Lucy))
 	{
 		return 1;
 	};

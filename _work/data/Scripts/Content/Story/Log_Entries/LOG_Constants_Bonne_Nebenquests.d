@@ -20,7 +20,6 @@ const string TOPIC_MOD_HILDA_WEIN	= "Wein für Hilda";
 const string TOPIC_MOD_MALETH_WOLFSPLAGE	= "Wolfsplage";
 const string TOPIC_MOD_LOBART_HUND	= "Finde den Schäferhund";
 const string TOPIC_MOD_CORAGON_WACHOLDER	=	"Der gestohlene Wacholder";
-const string TOPIC_MOD_BORKA_SUMPFKRAUT	=	"Sumpfkraut für Borka";
 const string TOPIC_MOD_FELLAN_REGEN	=	"Der ratlose Fellan";
 const string TOPIC_MOD_MOE_PORT	=	"Der Schatz von Johannes Port";
 const string TOPIC_MOD_CANTHAR_GESCHAEFTE	=	"Canthars Geschäfte";
