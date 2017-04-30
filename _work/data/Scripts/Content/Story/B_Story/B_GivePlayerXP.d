@@ -32,6 +32,24 @@ func void B_GivePlayerXP (var int add_xp)
 		bonuspercent += 2;
 	};
 
+	// +2% für Linker Ring der Ehre
+
+	if (Mod_LinkerRingDerEhre == 1)
+	{
+		bonuspercent += 2;
+	};
+
+	// +2% für Rechter Ring der Ehre
+
+	if (Mod_RechterRingDerEhre == 1)
+	{
+		bonuspercent += 2;
+	};
+	
+	if (Mod_HalsketteDerEhre && Mod_GuertelDerEhre && Mod_LinkerRingDerEhre && Mod_RechterRingDerEhre) {
+		bonuspercent += 8;
+	};
+
 	// +10% für Ring des Bücherwurms
 
 	if (Mod_BuecherwurmRing == 1)

@@ -348,7 +348,11 @@ FUNC VOID Info_Mod_Dragomir_EimerLeer_Info()
 
 	B_SetTopicStatus	(TOPIC_MOD_JG_BUGS, LOG_SUCCESS);
 
-	B_Göttergefallen(2, 1);	
+	B_Göttergefallen(2, 1);
+	
+	Wld_InsertNpc(YGiant_Bug, "FP_STAND_WASILI_VERBANNT_02");
+	Wld_InsertNpc(YGiant_Bug, "FP_STAND_NW_BIGFARM_FELDREUBER4");
+	Wld_InsertNpc(YGiant_Bug, "FP_ROAM_NW_BIGFARM_FELDREUBER10");
 };
 
 INSTANCE Info_Mod_Dragomir_BurnedLager (C_INFO)

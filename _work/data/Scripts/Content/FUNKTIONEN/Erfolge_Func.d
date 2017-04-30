@@ -147,7 +147,7 @@ FUNC VOID Erfolge_Func() {
 	if (Npc_HasItems(hero, ItMi_GreatPearl)) {
 		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_35);
 	};
-	if (Npc_HasItems(hero, ItBe_GuertelDerEhre) && Npc_HasItems(hero, ItAm_HalskettederEhre)) {
+	if (Npc_HasItems(hero, ItBe_GuertelDerEhre) && Npc_HasItems(hero, ItAm_HalskettederEhre) && Npc_HasItems(hero, ItRi_LinkerRingDerEhre) && Npc_HasItems(hero, ItRi_RechterRingDerEhre)) {
 		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_37);
 	};
 	

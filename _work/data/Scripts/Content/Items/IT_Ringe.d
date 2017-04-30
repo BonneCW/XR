@@ -183,6 +183,86 @@ instance ItRi_WaermeRing(C_Item) //in einem von Halvors Fischen
 		Mod_SLD_WaermeRing = 0;
 	};
 	
+instance ItRi_LinkerRingDerEhre(C_Item) //in einem von Halvors Fischen
+{
+	name 					=	NAME_Ring;
+
+	mainflag 				=	ITEM_KAT_MAGIC;
+	flags 					=	ITEM_RING;
+
+	value 					=	Value_Ri_ProtFire;
+
+	visual 					=	"ItRi_Prot_Fire_01.3ds";
+
+	visual_skin 			=	0;
+	material 				=	MAT_METAL;
+	on_equip				=	Equip_ItRi_LinkerRingDerEhre;
+	on_unequip				=	UnEquip_ItRi_LinkerRingDerEhre;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
+
+	description				= "Linker Ring der Ehre";
+	
+	TEXT[5]					= NAME_Value;
+	COUNT[5]				= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	
+};
+
+	FUNC VOID Equip_ItRi_LinkerRingDerEhre()
+	{
+		Mod_LinkerRingDerEhre = 1;
+	};
+
+	FUNC VOID UnEquip_ItRi_LinkerRingDerEhre()
+	{
+		Mod_LinkerRingDerEhre = 0;
+	};
+	
+instance ItRi_RechterRingDerEhre(C_Item) //in einem von Halvors Fischen
+{
+	name 					=	NAME_Ring;
+
+	mainflag 				=	ITEM_KAT_MAGIC;
+	flags 					=	ITEM_RING;
+
+	value 					=	Value_Ri_ProtFire;
+
+	visual 					=	"ItRi_Prot_Fire_01.3ds";
+
+	visual_skin 			=	0;
+	material 				=	MAT_METAL;
+	on_equip				=	Equip_ItRi_RechterRingDerEhre;
+	on_unequip				=	UnEquip_ItRi_RechterRingDerEhre;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
+
+	description				= "Rechter Ring der Ehre";
+	
+	TEXT[5]					= NAME_Value;
+	COUNT[5]				= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	
+};
+
+	FUNC VOID Equip_ItRi_RechterRingDerEhre()
+	{
+		Mod_RechterRingDerEhre = 1;
+	};
+
+	FUNC VOID UnEquip_ItRi_RechterRingDerEhre()
+	{
+		Mod_RechterRingDerEhre = 0;
+	};
+	
 instance ItRi_Alchemist(C_Item) //in einem von Halvors Fischen
 {
 	name 					=	NAME_Ring;
