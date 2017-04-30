@@ -35,6 +35,16 @@ func int ZS_Ritual_VM_Loop ()
 
 	randyKDW = Hlp_Random (2500);
 	randyKDW_Lightstar= Hlp_Random (2);
+	
+	if (!Npc_IsOnFP(self, "RITUAL"))
+	&& (Wld_IsFPAvailable(self, "RITUAL"))
+	{
+		AI_GotoFP 		(self, "RITUAL");
+		AI_StandUp (self);
+		AI_AlignToFP 	(self);
+
+		Npc_SetStateTime (self,0);
+	};
 			
 	if (Npc_GetStateTime(self) > randyKDW)
 	{
