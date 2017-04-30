@@ -56,12 +56,35 @@ FUNC VOID Info_Mod_Ramsi_Aufgabe_Info()
 	AI_Output(hero, self, "Info_Mod_Ramsi_Aufgabe_15_07"); //Nun, ich möchte mich den Gaunern anschließen, dafür brauche ich aber eure Stimmen.
 	AI_Output(self, hero, "Info_Mod_Ramsi_Aufgabe_08_08"); //(schmunzelt) So ist das also? Na meinetwegen.
 	AI_Output(self, hero, "Info_Mod_Ramsi_Aufgabe_08_09"); //Wenn du mit mir zehn Keiler erlegst und zusiehst, dass niemand stirbt, werde ich dir meine Stimme geben. Also bereit loszulegen?
-	AI_Output(hero, self, "Info_Mod_Ramsi_Aufgabe_15_10"); //Aber immer doch.
-	AI_Output(self, hero, "Info_Mod_Ramsi_Aufgabe_08_11"); //Dann folge mir.
 
 	Log_CreateTopic	(TOPIC_MOD_ASS_RAMSI_JAGD, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_ASS_RAMSI_JAGD, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_ASS_RAMSI_JAGD, "Der Gauner Ramsi kümmert sich mit zwei anderen Gaunern um die Besorgung von Fleisch, was nur durch die Jagd erbracht werden kann. Da die Jagd wegen Monstern und und ein paar verrückten Jägern immer gefährlicher wird, soll ich mit Ramsi auf die Jagd gehen. Wenn wir zehn Keiler erlegt und deren Fleisch ins Lager transportiert haben, wird Ramsi mir seine Stimme geben.");
+};
+
+INSTANCE Info_Mod_Ramsi_AufgabeLos (C_INFO)
+{
+	npc		= Mod_7106_ASS_Ramsi_NW;
+	nr		= 1;
+	condition	= Info_Mod_Ramsi_AufgabeLos_Condition;
+	information	= Info_Mod_Ramsi_AufgabeLos_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Ich bin bereit.";
+};
+
+FUNC INT Info_Mod_Ramsi_AufgabeLos_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Ramsi_Aufgabe))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Ramsi_AufgabeLos_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Ramsi_AufgabeLos_15_00"); //Ich bin bereit.
+	AI_Output(self, hero, "Info_Mod_Ramsi_AufgabeLos_08_01"); //Dann folge mir.
 
 	AI_StopProcessInfos	(self);
 
