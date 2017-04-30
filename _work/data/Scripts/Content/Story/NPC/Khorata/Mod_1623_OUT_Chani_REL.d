@@ -20,7 +20,7 @@ instance Mod_1623_OUT_Chani_REL (Npc_Default)
 
 	//-------- visuals --------
 
-	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe1", 227, 30, NO_ARMOR);	
+	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe1", 142, 30, NO_ARMOR);	
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds");
 
 
