@@ -29,9 +29,6 @@ FUNC VOID SPECIALFUNC()
 			Wld_InsertNpc	(Kleindrache, "FP_ROAM_KLEINDRACHE_02");
 			Wld_InsertNpc	(Kleindrache, "FP_ROAM_KLEINDRACHE_03");
 			Wld_InsertNpc	(Kleindrache, "FP_ROAM_KLEINDRACHE_04");
-			Wld_InsertNpc	(Kleindrache, "FP_ROAM_KLEINDRACHE_05");
-			Wld_InsertNpc	(Kleindrache, "FP_ROAM_KLEINDRACHE_06");
-			Wld_InsertNpc	(Kleindrache, "FP_ROAM_KLEINDRACHE_07");
 			Wld_InsertNpc	(Kleindrache, "FP_ROAM_KLEINDRACHE_08");
 
 			// Kobolde bei Dragon
@@ -44,8 +41,6 @@ FUNC VOID SPECIALFUNC()
 			Wld_InsertNpc	(Kobold, "FP_ROAM_KOBOLDE_06");
 			Wld_InsertNpc	(Kobold, "FP_ROAM_KOBOLDE_07");
 			Wld_InsertNpc	(Kobold, "FP_ROAM_KOBOLDE_08");
-			Wld_InsertNpc	(Kobold, "FP_ROAM_KOBOLDE_09");
-			Wld_InsertNpc	(Kobold, "FP_ROAM_KOBOLDE_10");
 			Wld_InsertNpc	(Kobold, "FP_ROAM_KOBOLDE_11");
 			Wld_InsertNpc	(Kobold, "FP_ROAM_KOBOLDE_12");
 			Wld_InsertNpc	(Kobold, "FP_ROAM_KOBOLDE_13");
