@@ -3331,7 +3331,7 @@ INSTANCE ItSc_TrfSheep (C_Item)
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Sc_TrfAll;
+	value 				=	100;
 
 	visual				=	"ItSc_TrfSheep.3DS";
 	material			=	MAT_LEATHER;

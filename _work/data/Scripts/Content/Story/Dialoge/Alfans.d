@@ -54,13 +54,14 @@ FUNC VOID Info_Mod_Alfans_Aufgabe_Info()
 	AI_Output(self, hero, "Info_Mod_Alfans_Aufgabe_01_05"); //Es geht um den Einsiedler Halfmar. Bislang kam er selten, jedoch regelmäßig ins unser Dorf und überbrachte mir Kräuter und Pflanzen welche er in der Wildnis fand.
 	AI_Output(self, hero, "Info_Mod_Alfans_Aufgabe_01_06"); //Sein letzter Besuch liegt jedoch weit länger zurück, als es üblich ist.
 	AI_Output(self, hero, "Info_Mod_Alfans_Aufgabe_01_07"); //Und ich beginne mir Sorgen zu machen ... (nachgeschoben) selbstverständlich nicht nur meiner Waren wegen.
-	AI_Output(self, hero, "Info_Mod_Alfans_Aufgabe_01_08"); //Er lebt fernab von hier im Süden. Ich wäre dir über die Maßen dankbar, wenn du nach dem Rechten sehen könntest.
+	AI_Output(self, hero, "Info_Mod_Alfans_Aufgabe_01_08"); //Er lebt fernab von hier im Südwesten. Ich wäre dir über die Maßen dankbar, wenn du nach dem Rechten sehen könntest.
 	AI_Output(hero, self, "Info_Mod_Alfans_Aufgabe_15_09"); //Nun, ich schaue, was sich machen lässt.
 	AI_Output(self, hero, "Info_Mod_Alfans_Aufgabe_01_10"); //Hab Dank. Es soll dir auch nicht zum Nachteil gedeihen.
+	AI_Output(self, hero, "Info_Mod_Alfans_Aufgabe_01_11"); //Wenn du den Gleisen folgst, kommst du irgendwann an seiner Hütte vorbei.
 
 	Log_CreateTopic	(TOPIC_MOD_ALFANS_HALFMAR, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_ALFANS_HALFMAR, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_ALFANS_HALFMAR, "Alfans bat mich darum nach dem Einsiedler Halfmar im Süden zu sehen. Dieser bringt Alfans für gewöhnlich Kräuter und Pflanzen, die er in der Wildnis findet. Sein letzter Besuch steht jedoch schon lange aus.");
+	B_LogEntry	(TOPIC_MOD_ALFANS_HALFMAR, "Alfans bat mich darum nach dem Einsiedler Halfmar im Süden zu sehen. Dieser bringt Alfans für gewöhnlich Kräuter und Pflanzen, die er in der Wildnis findet. Sein letzter Besuch steht jedoch schon lange aus. Ich finde seine Hütte im Südwesten. Wenn ich den Gleisen folge, kann ich sie angeblich nicht verfehlen.");
 
 	Mod_AlfansQuest_Tag = Wld_GetDay();
 };

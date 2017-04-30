@@ -101,6 +101,7 @@ FUNC VOID Info_Mod_Ivan_Hasenfuss2_B()
 FUNC VOID Info_Mod_Ivan_Hasenfuss2_A()
 {
 	AI_Output(hero, self, "Info_Mod_Ivan_Hasenfuss2_A_15_00"); //Klar, komm mit.
+	AI_Output(self, hero, "DEFAULT"); //
 
 	Info_ClearChoices	(Info_Mod_Ivan_Hasenfuss2);
 
