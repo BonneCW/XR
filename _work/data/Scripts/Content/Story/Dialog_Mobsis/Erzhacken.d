@@ -759,6 +759,61 @@ FUNC INT B_ErzMob_Bestimmung()
 	{
 		ErzMob_149_Amount = (ErzMob_149_Amount + 1);
 		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "WP_ORE_ORC_MT_01") && (ErzMob_150_Amount_MAX > ErzMob_150_Amount))
+	{
+		ErzMob_150_Amount = (ErzMob_150_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "WP_ORE_ORC_MT_02") && (ErzMob_151_Amount_MAX > ErzMob_151_Amount))
+	{
+		ErzMob_151_Amount = (ErzMob_151_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "WP_ORE_ORC_MT_03") && (ErzMob_152_Amount_MAX > ErzMob_152_Amount))
+	{
+		ErzMob_152_Amount = (ErzMob_152_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "WP_ORE_ORC_MT_04") && (ErzMob_153_Amount_MAX > ErzMob_153_Amount))
+	{
+		ErzMob_153_Amount = (ErzMob_153_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "WP_ORE_ORC_MT_05") && (ErzMob_154_Amount_MAX > ErzMob_154_Amount))
+	{
+		ErzMob_154_Amount = (ErzMob_154_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "WP_ORE_ORC_MT_06") && (ErzMob_155_Amount_MAX > ErzMob_155_Amount))
+	{
+		ErzMob_155_Amount = (ErzMob_155_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "WP_ORE_ORC_MT_07") && (ErzMob_156_Amount_MAX > ErzMob_156_Amount))
+	{
+		ErzMob_156_Amount = (ErzMob_156_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "WP_ORE_ORC_MT_08") && (ErzMob_157_Amount_MAX > ErzMob_157_Amount))
+	{
+		ErzMob_157_Amount = (ErzMob_157_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "WP_ORE_ORC_MT_09") && (ErzMob_158_Amount_MAX > ErzMob_158_Amount))
+	{
+		ErzMob_158_Amount = (ErzMob_158_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "WP_ORE_ORC_MT_10") && (ErzMob_159_Amount_MAX > ErzMob_159_Amount))
+	{
+		ErzMob_159_Amount = (ErzMob_159_Amount + 1);
+		return TRUE;
+	}
+	else if (Hlp_StrCmp (Npc_GetNearestWP (self), "WP_ORE_ORC_MT_11") && (ErzMob_160_Amount_MAX > ErzMob_160_Amount))
+	{
+		ErzMob_160_Amount = (ErzMob_160_Amount + 1);
+		return TRUE;
 	};
 
 	return FALSE;
