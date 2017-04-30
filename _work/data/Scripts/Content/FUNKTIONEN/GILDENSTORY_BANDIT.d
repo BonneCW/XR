@@ -109,7 +109,7 @@ FUNC VOID GILDENSTORY_BANDIT()
 				{
 					AI_UnequipWeapons	(OrkScout_BDTPatroullie_01);
 
-					Npc_RemoveInvItems	(OrkScout_BDTPatroullie_01, ItMw_2H_OrcAxe_01, 1);
+					Npc_RemoveInvItems	(OrkScout_BDTPatroullie_01, ItMw_2H_OrcAxe_01, Npc_HasItems(OrkScout_BDTPatroullie_01, ItMw_2H_OrcAxe_01));
 				}
 				else if (!Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_01))
 				&& (Wld_IsTime(04,00,22,00))
@@ -124,7 +124,7 @@ FUNC VOID GILDENSTORY_BANDIT()
 				{
 					AI_UnequipWeapons	(OrkScout_BDTPatroullie_02);
 
-					Npc_RemoveInvItems	(OrkScout_BDTPatroullie_02, ItMw_2H_OrcAxe_01, 1);
+					Npc_RemoveInvItems	(OrkScout_BDTPatroullie_02, ItMw_2H_OrcAxe_01, Npc_HasItems(OrkScout_BDTPatroullie_02, ItMw_2H_OrcAxe_01));
 				}
 				else if (!Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_02))
 				&& (Wld_IsTime(04,00,22,00))
@@ -139,7 +139,7 @@ FUNC VOID GILDENSTORY_BANDIT()
 				{
 					AI_UnequipWeapons	(OrkScout_BDTPatroullie_03);
 
-					Npc_RemoveInvItems	(OrkScout_BDTPatroullie_03, ItMw_2H_OrcAxe_01, 1);
+					Npc_RemoveInvItems	(OrkScout_BDTPatroullie_03, ItMw_2H_OrcAxe_01, Npc_HasItems(OrkScout_BDTPatroullie_03, ItMw_2H_OrcAxe_01));
 				}
 				else if (!Npc_HasEquippedWeapon(OrkScout_BDTPatroullie_03))
 				&& (Wld_IsTime(04,00,22,00))
