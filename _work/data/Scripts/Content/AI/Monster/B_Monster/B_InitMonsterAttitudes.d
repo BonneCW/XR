@@ -609,7 +609,7 @@ func void B_InitMonsterAttitudes ()
 	B_SetMonsterAttitude	(GIL_WOLF,	ATT_NEUTRAL,	GIL_SWAMPSHARK				);
 	B_SetMonsterAttitude	(GIL_WOLF,	ATT_NEUTRAL,	GIL_DRAGON					);	// Feuerdrache / Eisdrache / Felsdrache / Sumpfdrache / Untoter Drache
 	B_SetMonsterAttitude	(GIL_WOLF,	ATT_HOSTILE,	GIL_MOLERAT					);	
-	B_SetMonsterAttitude	(GIL_WOLF,	ATT_NEUTRAL,	GIL_ORC						);	// Ork-Krieger / Ork-Shamane / Ork-Elite
+	B_SetMonsterAttitude	(GIL_WOLF,	ATT_FRIENDLY,	GIL_ORC						);	// Ork-Krieger / Ork-Shamane / Ork-Elite
 	B_SetMonsterAttitude	(GIL_WOLF,	ATT_NEUTRAL,	GIL_FRIENDLY_ORC			);	
 	B_SetMonsterAttitude	(GIL_WOLF,	ATT_NEUTRAL,	GIL_UNDEADORC				);	// Ork-Sklave / Ur-Shak	
 	B_SetMonsterAttitude	(GIL_WOLF,	ATT_NEUTRAL,	GIL_DRACONIAN				);
@@ -1635,7 +1635,7 @@ func void B_InitMonsterAttitudes ()
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_GIANT_BUG				);
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_BLOODFLY				);
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_WARAN					);	// Waren / Feuerwaran	
-	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_WOLF					);	// Wolf / Warg	
+	B_SetMonsterAttitude	(GIL_ORC,	ATT_FRIENDLY,	GIL_WOLF					);	// Wolf / Warg	
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_SUMMONED_WOLF			);
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_MINECRAWLER				);	// Minecrawler / Minecrawler Warrior
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_LURKER					);
