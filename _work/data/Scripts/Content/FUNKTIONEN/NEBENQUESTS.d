@@ -1562,14 +1562,14 @@ FUNC VOID NEBENQUESTS()
 
 		if (Mod_AnnaQuest == 8)
 		{
-			if (!C_NpcIsDown(Mod_7370_OUT_Ulrich_REL))
+			if (!Npc_IsDead(Mod_7370_OUT_Ulrich_REL))
 			&& (!Npc_IsInState(Mod_7370_OUT_Ulrich_REL, ZS_Attack))
 			{
 				if (Npc_IsDead(Mod_7373_OUT_Schoeppe_REL))
 				{
 					if (Npc_IsDead(Mod_7372_OUT_Schoeppe_REL))
 					{
-						if (C_NpcIsDown(Mod_7371_OUT_Richter_REL))
+						if (Npc_IsDead(Mod_7371_OUT_Richter_REL))
 						{
 							if (Npc_IsDead(Mod_7374_OUT_Gerichtswache_01))
 							|| (Mod_AnnaQuest_WachenWeg == 1)
@@ -1604,22 +1604,22 @@ FUNC VOID NEBENQUESTS()
 				};
 			};
 
-			if (!C_NpcIsDown(Mod_7373_OUT_Schoeppe_REL))
-			&& (!C_NpcIsDown(Mod_7370_OUT_Ulrich_REL))
+			if (!Npc_IsDead(Mod_7373_OUT_Schoeppe_REL))
+			&& (!Npc_IsDead(Mod_7370_OUT_Ulrich_REL))
 			&& (!Npc_IsInState(Mod_7373_OUT_Schoeppe_REL, ZS_Attack))
 			{
 				B_Attack	(Mod_7373_OUT_Schoeppe_REL, Mod_7370_OUT_Ulrich_REL, AR_NONE, 0);
 			};
 
-			if (!C_NpcIsDown(Mod_7372_OUT_Schoeppe_REL))
-			&& (!C_NpcIsDown(Mod_7370_OUT_Ulrich_REL))
+			if (!Npc_IsDead(Mod_7372_OUT_Schoeppe_REL))
+			&& (!Npc_IsDead(Mod_7370_OUT_Ulrich_REL))
 			&& (!Npc_IsInState(Mod_7372_OUT_Schoeppe_REL, ZS_Attack))
 			{
 				B_Attack	(Mod_7372_OUT_Schoeppe_REL, Mod_7370_OUT_Ulrich_REL, AR_NONE, 0);
 			};
 
-			if (!C_NpcIsDown(Mod_7371_OUT_Richter_REL))
-			&& (!C_NpcIsDown(Mod_7370_OUT_Ulrich_REL))
+			if (!Npc_IsDead(Mod_7371_OUT_Richter_REL))
+			&& (!Npc_IsDead(Mod_7370_OUT_Ulrich_REL))
 			&& (!Npc_IsInState(Mod_7371_OUT_Richter_REL, ZS_Attack))
 			{
 				B_StartOtherRoutine	(Mod_7371_OUT_Richter_REL, "START");
@@ -1627,23 +1627,23 @@ FUNC VOID NEBENQUESTS()
 				B_Attack	(Mod_7371_OUT_Richter_REL, Mod_7370_OUT_Ulrich_REL, AR_NONE, 0);
 			};
 
-			if (!C_NpcIsDown(Mod_7375_OUT_Gerichtswache_02))
-			&& (!C_NpcIsDown(Mod_7370_OUT_Ulrich_REL))
+			if (!Npc_IsDead(Mod_7375_OUT_Gerichtswache_02))
+			&& (!Npc_IsDead(Mod_7370_OUT_Ulrich_REL))
 			&& (!Npc_IsInState(Mod_7375_OUT_Gerichtswache_02, ZS_Attack))
 			&& (Mod_AnnaQuest_WachenWeg == 0)
 			{
 				B_Attack	(Mod_7375_OUT_Gerichtswache_02, Mod_7370_OUT_Ulrich_REL, AR_NONE, 0);
 			};
 
-			if (!C_NpcIsDown(Mod_7374_OUT_Gerichtswache_01))
-			&& (!C_NpcIsDown(Mod_7370_OUT_Ulrich_REL))
+			if (!Npc_IsDead(Mod_7374_OUT_Gerichtswache_01))
+			&& (!Npc_IsDead(Mod_7370_OUT_Ulrich_REL))
 			&& (!Npc_IsInState(Mod_7374_OUT_Gerichtswache_01, ZS_Attack))
 			&& (Mod_AnnaQuest_WachenWeg == 0)
 			{
 				B_Attack	(Mod_7374_OUT_Gerichtswache_01, Mod_7370_OUT_Ulrich_REL, AR_NONE, 0);
 			};
 
-			if (C_NpcIsDown(Mod_7370_OUT_Ulrich_REL))
+			if (Npc_IsDead(Mod_7370_OUT_Ulrich_REL))
 			{
 				Mod_AnnaQuest = 10;
 
@@ -1654,7 +1654,7 @@ FUNC VOID NEBENQUESTS()
 
 				B_StartOtherRoutine	(Mod_7371_OUT_Richter_REL, "START");
 			};
-			if (C_NpcIsDown(Mod_7371_OUT_Richter_REL))
+			if (Npc_IsDead(Mod_7371_OUT_Richter_REL))
 			&& (Npc_IsDead(Mod_7372_OUT_Schoeppe_REL))
 			&& (Npc_IsDead(Mod_7373_OUT_Schoeppe_REL))
 			{

@@ -988,6 +988,12 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			taeter.attribute[ATR_HITPOINTS] += damage / 20; // 5% des Schadens kommen an HP dazu
 		};
+		
+		if (Mod_AnnaQuest == 8) {
+			if (Hlp_GetInstanceID(taeter) != Hlp_GetInstanceID(hero)) {
+				damage = 1; // Richter, Schoeppe and Co. shouldn't deal much damage, player decides who will die
+			};
+		};
 	};
 
 	B_MagicHurtNpc	(taeter, opfer, damage);

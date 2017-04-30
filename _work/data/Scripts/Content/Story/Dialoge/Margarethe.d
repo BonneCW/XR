@@ -11,7 +11,9 @@ INSTANCE Info_Mod_Margarethe_Hi (C_INFO)
 
 FUNC INT Info_Mod_Margarethe_Hi_Condition()
 {
-	return 1;
+	if (Kapitel >= 2) {
+		return 1;
+	};
 };
 
 FUNC VOID Info_Mod_Margarethe_Hi_Info()
