@@ -40,7 +40,7 @@ FUNC VOID Info_Mod_Brad_Hi_H()
 	AI_Output(hero, self, "Info_Mod_Brad_Hi_H_15_02"); //Ich könnte dir Gold geben. Willst du Gold?
 	AI_Output(self, hero, "Info_Mod_Brad_Hi_H_18_03"); //(lacht) Brauche ich Gold? Nein! Meine Schatzkammern sind voll davon!
 	AI_Output(hero, self, "Info_Mod_Brad_Hi_H_15_04"); //Suchst du etwas bestimmtes?
-	AI_Output(self, hero, "Info_Mod_Brad_Hi_H_18_05"); //Hm, da fällt mir ein, es wird langsam kalt hier drinnen. Das Männlein könnte mir Wolfsfelle besorgen, damit mir wärmer ist. Zwanzig wären schon ganz gut.
+	AI_Output(self, hero, "Info_Mod_Brad_Hi_H_18_05"); //Hm, da fällt mir ein, es wird langsam kalt hier drinnen. Das Männlein könnte mir Wolfsfelle besorgen, damit mir wärmer ist. Zehn wären schon ganz gut.
 
 	Info_ClearChoices	(Info_Mod_Brad_Hi);
 
@@ -198,7 +198,7 @@ FUNC INT Info_Mod_Brad_Wolfsfelle_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Brad_Hi))
 	&& (Mod_Brad_Quest == 1)
-	&& (Npc_HasItems(hero, ItAt_WolfFur) + Npc_HasItems(hero, ItAt_WolfFur_Rein) >= 20)
+	&& (Npc_HasItems(hero, ItAt_WolfFur) + Npc_HasItems(hero, ItAt_WolfFur_Rein) >= 10)
 	{
 		return 1;
 	};
@@ -237,11 +237,12 @@ FUNC VOID Info_Mod_Brad_Wolfsfelle_B()
 
 	var int hlp;
 	hlp = Npc_HasItems(hero, ItAt_WolfFur);
+	hlp = min(hlp, 10);
 
 	Npc_RemoveInvItems	(hero, ItAt_WolfFur, hlp);
-	Npc_RemoveInvItems	(hero, ItAt_WolfFur_Rein, 20 - hlp);
+	Npc_RemoveInvItems	(hero, ItAt_WolfFur_Rein, 10 - hlp);
 
-	B_ShowGivenThings	("20 Wolfsfelle gegeben");
+	B_ShowGivenThings	("10 Wolfsfelle gegeben");
 
 	Info_Mod_Brad_Wolfsfelle_C();
 };
@@ -286,11 +287,12 @@ FUNC VOID Info_Mod_Brad_Wolfsfelle_D()
 
 	var int hlp;
 	hlp = Npc_HasItems(hero, ItAt_WolfFur);
+	hlp = min(hlp, 10);
 
 	Npc_RemoveInvItems	(hero, ItAt_WolfFur, hlp);
-	Npc_RemoveInvItems	(hero, ItAt_WolfFur_Rein, 20 - hlp);
+	Npc_RemoveInvItems	(hero, ItAt_WolfFur_Rein, 10 - hlp);
 
-	B_ShowGivenThings	("20 Wolfsfelle gegeben");
+	B_ShowGivenThings	("10 Wolfsfelle gegeben");
 
 	Info_Mod_Brad_Wolfsfelle_C();
 };
