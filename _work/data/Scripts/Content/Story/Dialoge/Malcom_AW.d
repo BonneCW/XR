@@ -113,8 +113,7 @@ INSTANCE Info_Mod_Malcom_AW_Schatzsuche2 (C_INFO)
 	condition	= Info_Mod_Malcom_AW_Schatzsuche2_Condition;
 	information	= Info_Mod_Malcom_AW_Schatzsuche2_Info;
 	permanent	= 0;
-	important	= 0;
-	description	= "Greg will auslaufen. Wir sollen die Vorbereitungen treffen.";
+	important	= 1;
 };
 
 FUNC INT Info_Mod_Malcom_AW_Schatzsuche2_Condition()
@@ -152,13 +151,6 @@ FUNC VOID Info_Mod_Malcom_AW_Schatzsuche2_Info()
 	AI_Output(self, hero, "Info_Mod_Malcom_AW_Schatzsuche2_30_02"); //Alles mir nach.
 
 	TRIA_Finish();
-
-	AI_StopProcessInfos	(self);
-
-	B_StartOtherRoutine	(Malcom, "TOCANYON");
-	B_StartOtherRoutine	(Jack, "TOCANYON");
-
-	Wld_InsertItem	(ItMi_Talisman_Piraten, "FP_ITEM_CANYON_10");
 };
 
 INSTANCE Info_Mod_Malcom_AW_Schatzsuche3 (C_INFO)

@@ -1,3 +1,5 @@
+var int Mod_AJDabei;
+
 FUNC VOID GILDENSTORY_PIR ()
 {
 	if (CurrentLevel == ADDONWORLD_ZEN)
@@ -175,6 +177,19 @@ FUNC VOID GILDENSTORY_PIR ()
 			Mod_SamuelIstWeg = 1;
 
 			B_LogEntry	(TOPIC_MOD_HENRY_ENTERTRUPP, "Hm ... es scheint so, als wäre Samuel verschwunden. Ich sollte mich mal in seiner Höhle umsehen ...");
+		};
+		
+		// Aberglaube
+		
+		if (!Mod_AJDabei && Npc_KnowsInfo(hero, Info_Mod_Malcom_AW_Schatzsuche2) && !Npc_IsInState(Mod_935_PIR_Malcom_AW, ZS_Talk)) {
+			Mod_AJDabei = TRUE;
+			
+			Npc_ClearAIQueue(Mod_928_PIR_AlligatorJack_AW);
+			AI_StandUp(Mod_928_PIR_AlligatorJack_AW);
+			B_StartOtherRoutine	(Mod_928_PIR_AlligatorJack_AW, "TOCANYON");
+			B_StartOtherRoutine	(Mod_935_PIR_Malcom_AW, "TOCANYON");
+
+			Wld_InsertItem	(ItMi_Talisman_Piraten, "FP_ITEM_CANYON_10");
 		};
 
 		// Piraten aus Lager entfernen, wenn bereit zu Schatzsuche
