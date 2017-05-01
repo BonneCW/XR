@@ -1978,117 +1978,112 @@ FUNC VOID HAUPTQUESTS()
 				Mod_IR_Bridge = 3;
 
 				Wld_SendUnTrigger	("EVT_IRRLICHT_PFX");
-			};
-
 			
-			if (Mod_IR_Randolph == 2)
-			{
-				Mod_IR_Randolph = 0;
+				if (Mod_IR_Randolph == 2)
+				{
+					Mod_IR_Randolph = 0;
 
-				B_StartOtherRoutine	(Mod_7527_BAU_Randolph_IR, "START");
-			};
-			if (Mod_IR_Diego == 2)
-			{
-				Mod_IR_Diego = 0;
+					B_StartOtherRoutine	(Mod_7527_BAU_Randolph_IR, "START");
+				};
+				if (Mod_IR_Diego == 2)
+				{
+					Mod_IR_Diego = 0;
 
-				B_StartOtherRoutine	(Mod_7442_RDW_Diego_IR, "START");
-			};
-			if (Mod_IR_Ethan == 2)
-			{
-				Mod_IR_Ethan = 0;
+					B_StartOtherRoutine	(Mod_7442_RDW_Diego_IR, "START");
+				};
+				if (Mod_IR_Ethan == 2)
+				{
+					Mod_IR_Ethan = 0;
 
-				B_StartOtherRoutine	(Mod_7450_HTR_Ethan_IR, "START");
-			};
-			if (Mod_IR_Milten == 2)
-			{
-				Mod_IR_Milten = 3;
+					B_StartOtherRoutine	(Mod_7450_HTR_Ethan_IR, "START");
+				};
+				if (Mod_IR_Milten == 2)
+				{
+					Mod_IR_Milten = 3;
 
-				B_StartOtherRoutine	(Mod_7443_KDF_Milten_IR, "START");
-			};
-			if (Mod_IR_Gorn == 2)
-			{
-				Mod_IR_Gorn = 0;
+					B_StartOtherRoutine	(Mod_7443_KDF_Milten_IR, "START");
+				};
+				if (Mod_IR_Gorn == 2)
+				{
+					Mod_IR_Gorn = 0;
 
-				B_StartOtherRoutine	(Mod_7444_SLD_Gorn_IR, "START");
-			};
-			if (Mod_IR_Lester == 2)
-			{
-				Mod_IR_Lester = 0;
+					B_StartOtherRoutine	(Mod_7444_SLD_Gorn_IR, "START");
+				};
+				if (Mod_IR_Lester == 2)
+				{
+					Mod_IR_Lester = 0;
 
-				B_StartOtherRoutine	(Mod_7445_PSINOV_Lester_IR, "START");
-			};
-			if (Mod_IR_Myxir == 2)
-			{
-				Mod_IR_Myxir = 0;
+					B_StartOtherRoutine	(Mod_7445_PSINOV_Lester_IR, "START");
+				};
+				if (Mod_IR_Myxir == 2)
+				{
+					Mod_IR_Myxir = 0;
 
-				B_StartOtherRoutine	(Mod_7448_KDS_Myxir_IR, "START");
-			};
-			if (Mod_IR_Tengron == 2)
-			{
-				Mod_IR_Tengron = 0;
+					B_StartOtherRoutine	(Mod_7448_KDS_Myxir_IR, "START");
+				};
+				if (Mod_IR_Tengron == 2)
+				{
+					Mod_IR_Tengron = 0;
 
-				B_StartOtherRoutine	(Mod_7451_RIT_Tengron_IR, "START");
-			};
-			if (Mod_IR_Cord == 2)
-			{
-				Mod_IR_Cord = 0;
+					B_StartOtherRoutine	(Mod_7451_RIT_Tengron_IR, "START");
+				};
+				if (Mod_IR_Cord == 2)
+				{
+					Mod_IR_Cord = 0;
 
-				B_StartOtherRoutine	(Mod_7452_SLD_Cord_IR, "START");
-			};
-			if (Mod_IR_Angar == 2)
-			{
-				Mod_IR_Angar = 0;
+					B_StartOtherRoutine	(Mod_7452_SLD_Cord_IR, "START");
+				};
+				if (Mod_IR_Angar == 2)
+				{
+					Mod_IR_Angar = 0;
 
-				B_StartOtherRoutine	(Mod_7455_TPL_Angar_IR, "START");
-			};
-			if (Mod_IR_Uriela == 2)
-			{
-				Mod_IR_Uriela = 0;
+					B_StartOtherRoutine	(Mod_7455_TPL_Angar_IR, "START");
+				};
+				if (Mod_IR_Uriela == 2)
+				{
+					Mod_IR_Uriela = 0;
 
-				B_StartOtherRoutine	(Mod_7467_HEX_Uriela_IR, "START");
-			};
-			if (Mod_IR_Cassia == 2)
-			{
-				Mod_IR_Cassia = 0;
+					B_StartOtherRoutine	(Mod_7467_HEX_Uriela_IR, "START");
+				};
+				if (Mod_IR_Cassia == 2)
+				{
+					Mod_IR_Cassia = 0;
 
-				B_StartOtherRoutine	(Mod_7465_NONE_Cassia_IR, "START");
-			};
-			if (Mod_IR_Velaya == 2)
-			{
-				Mod_IR_Velaya = 0;
+					B_StartOtherRoutine	(Mod_7465_NONE_Cassia_IR, "START");
+				};
+				if (Mod_IR_Velaya == 2)
+				{
+					Mod_IR_Velaya = 0;
 
-				B_StartOtherRoutine	(Mod_7468_BAU_Velaya_IR, "START");
-			};
-			if (Mod_IR_Keroloth == 2)
-			{
-				Mod_IR_Keroloth = 0;
+					B_StartOtherRoutine	(Mod_7468_BAU_Velaya_IR, "START");
+				};
+				if (Mod_IR_Keroloth == 2)
+				{
+					Mod_IR_Keroloth = 0;
 
-				B_StartOtherRoutine	(Mod_7463_RIT_Keroloth_IR, "START");
-			};
-			if (Mod_IR_Marcos == 2)
-			{
-				Mod_IR_Marcos = 0;
+					B_StartOtherRoutine	(Mod_7463_RIT_Keroloth_IR, "START");
+				};
+				if (Mod_IR_Marcos == 2)
+				{
+					Mod_IR_Marcos = 0;
 
-				B_StartOtherRoutine	(Mod_7461_RIT_Marcos_IR, "START");
-			};
-			if (Mod_IR_Gerold == 2)
-			{
-				Mod_IR_Gerold = 0;
+					B_StartOtherRoutine	(Mod_7461_RIT_Marcos_IR, "START");
+				};
+				if (Mod_IR_Gerold == 2)
+				{
+					Mod_IR_Gerold = 0;
 
-				B_StartOtherRoutine	(Mod_7462_RIT_Gerold_IR, "START");
-			};
+					B_StartOtherRoutine	(Mod_7462_RIT_Gerold_IR, "START");
+				};
 
-			B_StartOtherRoutine	(PC_Friend_IR, "WAITING");
-
-			Mod_IR_Argez = 2;
-
-			if (Mod_JackDabei > 0)
-			{
-				B_StartOtherRoutine	(Mod_7458_NONE_Jack_IR, "WAITING");
-			};
-			if (Mod_CedricDabei > 0)
-			{
-				B_StartOtherRoutine	(Mod_7460_RIT_Cedric_IR, "WAITING");
+				if (Mod_JackDabei > 0)
+				{
+					B_StartOtherRoutine	(Mod_7458_NONE_Jack_IR, "WAITING");
+				};
+				if (Mod_CedricDabei > 0)
+				{
+					B_StartOtherRoutine	(Mod_7460_RIT_Cedric_IR, "WAITING");
+				};
 			};
 		};
 
@@ -2100,6 +2095,10 @@ FUNC VOID HAUPTQUESTS()
 			Mod_IR_Bridge = 4;
 
 			Wld_SendTrigger	("ISLE_BIGBRIDGE_01");
+
+			B_StartOtherRoutine	(PC_Friend_IR, "WAITING");
+
+			Mod_IR_Argez = 2;
 		};
 
 		// Argez ist auf dem Schiff
