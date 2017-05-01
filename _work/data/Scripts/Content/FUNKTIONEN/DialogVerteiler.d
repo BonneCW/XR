@@ -41,6 +41,8 @@ FUNC VOID DialogVerteiler()
 		Info_Mod_Lester_DefenseBreak2.npc	= Mod_557_PSINOV_Lester_NW;
 		Info_Mod_Lester_Fanatiker.npc	= Mod_557_PSINOV_Lester_NW;
 		Info_Mod_Lester_ZeichenDerBruderschaft.npc	= Mod_557_PSINOV_Lester_NW;
+		Info_Mod_Lester_Treffen.npc	= Mod_557_PSINOV_Lester_NW;
+		Info_Mod_Lester_Crawlersekret.npc	= Mod_557_PSINOV_Lester_NW;
 
 		// Ramirez
 
@@ -131,6 +133,8 @@ FUNC VOID DialogVerteiler()
 		Info_Mod_Lester_DefenseBreak2.npc	= Mod_7612_PSINOV_Lester_REL;
 		Info_Mod_Lester_Fanatiker.npc	= Mod_7612_PSINOV_Lester_REL;
 		Info_Mod_Lester_ZeichenDerBruderschaft.npc	= Mod_7612_PSINOV_Lester_REL;
+		Info_Mod_Lester_Treffen.npc	= Mod_7612_PSINOV_Lester_REL;
+		Info_Mod_Lester_Crawlersekret.npc	= Mod_7612_PSINOV_Lester_REL;
 
 		// Ramirez
 

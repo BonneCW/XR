@@ -1396,7 +1396,12 @@ FUNC VOID NEBENQUESTS()
 			B_StartOtherRoutine(Mod_533_SLD_Gorn_NW, "START");
 			B_StartOtherRoutine(Mod_534_KDF_Milten_NW, "START");
 			B_StartOtherRoutine(Mod_538_RDW_Diego_NW, "START");
-			B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "START");
+			
+			if (Kapitel == 1 && Mod_LesterInRelendel) {
+				B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "TOT");
+			} else {
+				B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "START");
+			};
 		};
 	};
 

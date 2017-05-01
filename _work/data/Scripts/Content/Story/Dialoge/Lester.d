@@ -436,7 +436,11 @@ FUNC VOID Info_Mod_Lester_Treffen_Info()
 
 	AI_StopProcessInfos	(self);
 
-	Npc_ExchangeRoutine	(self, "TREFFEN");
+	if (CurrentLevel == RELENDEL_ZEN) {
+		B_StartOtherRoutine	(self, "TOT");
+	} else {
+		B_StartOtherRoutine	(self, "TREFFEN");
+	};
 };
 
 INSTANCE Info_Mod_Lester_Karras (C_INFO)

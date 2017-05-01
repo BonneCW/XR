@@ -3004,6 +3004,18 @@ FUNC VOID INIT_NewWorld()
 		Mod_AddedSonorAtLares = TRUE;
 		Wld_InsertNpc(Mod_30000_JG_Sonor_NW, "BIGFARM");
 	};
+	
+	if (Kapitel == 1 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == 0 && (!Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen) || Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen))) {
+		B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "TOT");
+	};
+	
+	if (Kapitel >= 2 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == 0 && !Npc_KnowsInfo(hero, Info_Mod_Lester_Karras)) {
+		B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "START");
+	};
+	
+	if (Kapitel == 1 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") && Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen) && !Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen)) {
+		B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "TREFFEN");
+	};
 
 	OldLevel(NEWWORLD_ZEN);
 };
@@ -8792,19 +8804,30 @@ FUNC VOID INIT_Relendel()
 
 	// Lester f?r Ornamentsuche spawnen
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Nefarius_VierErbauer))
-	&& ((!Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen))
+	if ((!Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen)))
 	&& (Mod_LesterInRelendel == FALSE)
+	&& (Kapitel == 1)
 	{
 		Mod_LesterInRelendel = TRUE;
 
 		Wld_InsertNpc	(Mod_7612_PSINOV_Lester_REL,	"REL_001");
 	};
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Namib_Aufnehmen))
-	|| (Kapitel >= 4)
-	&& (Mod_LesterInRelendel >= 1)
+	if (Kapitel == 1 && Mod_LesterInRelendel >= 1 && Mod_LesterInRelendel <= 2)
+	{
+		if (Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen))
+		&& (!Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen)) {
+			B_StartOtherRoutine(Mod_7612_PSINOV_Lester_REL, "TOT"); // Lester at Treffen
+		} else if (!Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen))
+		|| (Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen)) {
+			if (Hlp_StrCmp(Mod_7612_PSINOV_Lester_REL.wp, "TOT")) {
+				B_StartOtherRoutine(Mod_7612_PSINOV_Lester_REL, "MARKT");
+			};
+		};
+	};
+
+	if (Kapitel >= 2 && Mod_LesterInRelendel >= 1 && Mod_LesterInRelendel <= 2)
 	{
 		B_RemoveNpc	(Mod_7612_PSINOV_Lester_REL);
 	};
