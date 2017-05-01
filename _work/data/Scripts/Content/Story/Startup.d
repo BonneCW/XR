@@ -1160,6 +1160,8 @@ func void INIT_NewWorld_Part_City_01()
 		//Oberes Viertel
 		Wld_AssignRoomToGuild ("nwcityrich01", 	GIL_PAL);
 		Wld_AssignRoomToGuild ("rathaus",		GIL_PUBLIC);
+		Wld_AssignRoomToGuild ("rathaus02",		GIL_PUBLIC);
+		Wld_AssignRoomToGuild ("rathaus03",		GIL_PUBLIC);
 		Wld_AssignRoomToGuild ("reich01",		GIL_PAL);
 		Wld_AssignRoomToGuild	("reich02", GIL_PUBLIC);
 		Wld_AssignRoomToGuild ("reich03",		GIL_PUBLIC);
