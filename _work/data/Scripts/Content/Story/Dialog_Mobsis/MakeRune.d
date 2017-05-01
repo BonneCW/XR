@@ -3363,6 +3363,8 @@ FUNC VOID PC_Verbessern_Robe_DMB ()
 	Npc_RemoveInvItems	(hero, ItAr_XARDAS, 1);
 	Npc_RemoveInvItems	(hero, ItAt_Lindwurmhaut, 3);
 	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_49);
+	
 	B_ENDPRODUCTIONDIALOG ();
 };
 
@@ -3375,6 +3377,8 @@ FUNC VOID PC_Verbessern_Robe_KDF ()
 	Npc_RemoveInvItems	(hero, ItAr_KDF_H, 1);
 	Npc_RemoveInvItems	(hero, ItAt_TigerFur, 3);
 	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_49);
+	
 	B_ENDPRODUCTIONDIALOG ();
 };
 
@@ -3386,6 +3390,8 @@ FUNC VOID PC_Verbessern_Robe_KDW ()
 	CreateInvItems 	    (hero, ItAr_KDW_M,  1); 
 	Npc_RemoveInvItems	(hero, ItAr_KDW_H, 1);
 	Npc_RemoveInvItems	(hero, ItAt_WaterorcFur, 3);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_49);
 	
 	B_ENDPRODUCTIONDIALOG ();
 };

@@ -25,5 +25,9 @@ var int CurrentErfolge;			// Aktuelle Anzahl an erreichten Erfolgen (wichtig für
 
 var string ErfolgText;			// Text beim Buch (wie viel Prozent wurden erreicht?)
 
+var int Erfolg_OpenQuests;
+var int Erfolg_ClosedQuestsToday;
+var int Erfolg_ClosedQuestsDay;
+
 var int CurrentNQ;
 const int MaxNQ = 125;

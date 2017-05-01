@@ -827,6 +827,8 @@ FUNC VOID Info_Mod_Constantino_LehrlingQuest8_Info()
 	AI_PlayAni	(self, "T_MAGRUN_2_HEASHOOT");
 
 	AI_StopProcessInfos	(self);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_47);
 };
 
 INSTANCE Info_Mod_Constantino_LehrlingQuest9 (C_INFO)

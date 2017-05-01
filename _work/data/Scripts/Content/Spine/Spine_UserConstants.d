@@ -41,8 +41,18 @@ const int SPINE_ACHIEVEMENT_37 = 36;
 const int SPINE_ACHIEVEMENT_38 = 37;
 const int SPINE_ACHIEVEMENT_39 = 38;
 const int SPINE_ACHIEVEMENT_40 = 39;
+const int SPINE_ACHIEVEMENT_41 = 40;
+const int SPINE_ACHIEVEMENT_42 = 41;
+const int SPINE_ACHIEVEMENT_43 = 42;
+const int SPINE_ACHIEVEMENT_44 = 43;
+const int SPINE_ACHIEVEMENT_45 = 44;
+const int SPINE_ACHIEVEMENT_46 = 45;
+const int SPINE_ACHIEVEMENT_47 = 46;
+const int SPINE_ACHIEVEMENT_48 = 47;
+const int SPINE_ACHIEVEMENT_49 = 48;
+const int SPINE_ACHIEVEMENT_50 = 49;
 
-const int MAX_ACHIEVEMENTS = 40;
+const int MAX_ACHIEVEMENTS = 50;
 
 const string SPINE_ACHIEVEMENT_NAMES[MAX_ACHIEVEMENTS] = {
 	"Untot?",
@@ -84,7 +94,17 @@ const string SPINE_ACHIEVEMENT_NAMES[MAX_ACHIEVEMENTS] = {
 	"Erfahren",
 	"Casanova",
 	"Samariter",
-	"Walking Dead"
+	"Walking Dead",
+	"Faultier",
+	"Weltenbummler",
+	"Arbeitstier",
+	"Hammerfaust",
+	"Pelzjäger",
+	"Verhandlungsmeister",
+	"Der Stein der Weisen",
+	"Meistertischler",
+	"Hart wie Stein",
+	"Eigenständig"
 };
 
 const string SPINE_ACHIEVEMENT_DESCRIPTIONS[MAX_ACHIEVEMENTS] = {
@@ -127,10 +147,30 @@ const string SPINE_ACHIEVEMENT_DESCRIPTIONS[MAX_ACHIEVEMENTS] = {
 	"Set der Ehre vervollständigt",
 	"Mit allen möglichen Frauen geschlafen",
 	"Akils Hof gerettet",
-	"Akils Hof nicht gerettet"
+	"Akils Hof nicht gerettet",
+	"100 offene Quests",
+	"Jede Welt betreten",
+	"10 Quests am gleichen Ingametag abgeschlossen",
+	"Lehre bei Harad abgeschlossen",
+	"Lehre bei Bosper abgeschlossen",
+	"Lehre bei Matteo abgeschlossen",
+	"Lehre bei Constantino abgeschlossen",
+	"Lehre bei Thorben abgeschlossen",
+	"Maximale Gildenrüstung erhalten",
+	"Den Paladinkristall ohne Hilfe beschafft"
 };
 
 const string SPINE_ACHIEVEMENT_TEXTURES[MAX_ACHIEVEMENTS] = {
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
 	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
 	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
 	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
@@ -213,6 +253,16 @@ const string SPINE_ACHIEVEMENT_LOCKED[MAX_ACHIEVEMENTS] = {
 	"",
 	"",
 	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
 	""
 };
 
@@ -256,7 +306,17 @@ const string SPINE_ACHIEVEMENT_HIDDEN[MAX_ACHIEVEMENTS] = {
 	"FALSE",
 	"FALSE",
 	"TRUE",
-	"FALSE"
+	"FALSE",
+	"TRUE",
+	"FALSE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"FALSE",
+	"TRUE"
 };
 
 const string SPINE_ACHIEVEMENT_PROGRESS[MAX_ACHIEVEMENTS] = {
@@ -292,6 +352,16 @@ const string SPINE_ACHIEVEMENT_PROGRESS[MAX_ACHIEVEMENTS] = {
 	"0",
 	"0",
 	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"25",
 	"0",
 	"0",
 	"0",

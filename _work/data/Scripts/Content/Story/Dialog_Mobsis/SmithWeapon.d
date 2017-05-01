@@ -4115,6 +4115,8 @@ FUNC VOID PC_Verbessern_Pala_Info ()
 	Npc_RemoveInvItems	(hero, ItAr_Pal_H, 1);
 	Npc_RemoveInvItems	(hero, ItAt_TigerFur, 3);
 	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_49);
+	
 	B_ENDPRODUCTIONDIALOG ();
 	Verbessern = FALSE;
 };
@@ -4227,6 +4229,8 @@ FUNC VOID PC_Verbessern_DJG_Info ()
 	CreateInvItems 	    (hero, ItAr_Drachentroll,  1); 
 	Npc_RemoveInvItems	(hero, ItAr_djg_H, 1);
 	Npc_RemoveInvItems	(hero, ItAt_TrollSilberFur, 3);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_49);
 
 	AI_EquipBestArmor	(hero);
 	
@@ -4262,6 +4266,8 @@ FUNC VOID PC_Verbessern_DMR_Info ()
 	CreateInvItems 	    (hero, ItAr_DMR_M,  1); 
 	Npc_RemoveInvItems	(hero, ItAr_Raven_Addon, 1);
 	Npc_RemoveInvItems	(hero, ItAt_Lindwurmhaut, 3);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_49);
 
 	AI_EquipBestArmor	(hero);
 	
@@ -4297,6 +4303,8 @@ FUNC VOID PC_Verbessern_HTR_Info ()
 	CreateInvItems 	    (hero, ItAr_Hueter_s,  1); 
 	Npc_RemoveInvItems	(hero, ItAr_Hueter, 1);
 	Npc_RemoveInvItems	(hero, ItAt_WaterorcFur, 3);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_49);
 
 	AI_EquipBestArmor	(hero);
 	

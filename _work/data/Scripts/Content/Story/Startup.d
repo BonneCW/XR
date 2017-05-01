@@ -2387,6 +2387,9 @@ FUNC VOID STARTUP_NewWorld()
 
 FUNC VOID INIT_NewWorld()
 {
+	Spine_OverallSaveSetInt("KhorinisVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	if (Npc_KnowsInfo(hero, Info_Mod_Dragomir_BurnedLager))
 	{
 		Wld_SendUntrigger	("DRAGOMIRSFEUER");
@@ -3041,6 +3044,9 @@ FUNC VOID STARTUP_AddonWorld ()
 
 FUNC VOID INIT_AddonWorld ()
 {
+	Spine_OverallSaveSetInt("JharkendarVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_XeresLebt))
 	&& (Mod_HS_XardasRat == 1)
 	&& (SaturasNichtInJharki == FALSE)
@@ -5688,6 +5694,9 @@ FUNC VOID STARTUP_Minental ()
 
 FUNC VOID INIT_Minental ()
 {
+	Spine_OverallSaveSetInt("MinentalVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	// Morgens
 
 	Wld_SetMobRoutine(05, 10, "LIGHTSPAWNERONE", 1);
@@ -6547,6 +6556,9 @@ FUNC VOID STARTUP_OrcTempel ()
 
 FUNC VOID INIT_OrcTempel ()
 {
+	Spine_OverallSaveSetInt("OrctempelVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Rat_Ende))
 	&& (UrnolWeg == 0)
 	{
@@ -6621,6 +6633,9 @@ FUNC VOID STARTUP_AbandonedMine ()
 
 FUNC VOID INIT_AbandonedMine ()
 {
+	Spine_OverallSaveSetInt("AbandonedMineVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(ABANDONEDMINE_ZEN);
 
 	if (Mod_KG_MineSpawn == FALSE)
@@ -6721,6 +6736,9 @@ FUNC VOID STARTUP_OldMine ()
 
 FUNC VOID INIT_OldMine ()
 {
+	Spine_OverallSaveSetInt("OldMineVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(OLDMINE_ZEN);
 
 	if (Mod_Schwierigkeit > 0)
@@ -6862,6 +6880,9 @@ FUNC VOID STARTUP_OrcGraveyard()
 
 FUNC VOID INIT_OrcGraveyard ()
 {
+	Spine_OverallSaveSetInt("OrcGraveyardVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(ORCGRAVEYARD_ZEN);
 
 	if (Mod_Schwierigkeit > 0)
@@ -6935,6 +6956,9 @@ FUNC VOID STARTUP_FreeMine()
 
 FUNC VOID INIT_FreeMine()
 {
+	Spine_OverallSaveSetInt("FreeMineVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(FREEMINE_ZEN);
 };
 
@@ -6979,6 +7003,9 @@ var int Monster_GDG_Spawned;
 
 FUNC VOID INIT_GdG_World()
 {
+	Spine_OverallSaveSetInt("RitualinselVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	if (Monster_GDG_Spawned == FALSE)
 	{
 		Monster_GDG_Spawned = TRUE;
@@ -7063,6 +7090,9 @@ FUNC VOID STARTUP_DieInsel()
 
 FUNC VOID INIT_DieInsel()
 {
+	Spine_OverallSaveSetInt("SchatzinselVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(DIEINSEL_ZEN);
 
 	if (Mod_Schwierigkeit > 0)
@@ -7137,6 +7167,9 @@ FUNC VOID STARTUP_OrcCity()
 
 FUNC VOID INIT_OrcCity()
 {
+	Spine_OverallSaveSetInt("OrcCityVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	if (Mod_HoshPakInOC == 0)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Ranad_WasHier))
 	{
@@ -7184,6 +7217,9 @@ FUNC VOID STARTUP_Xeres_Endlevel()
 
 FUNC VOID INIT_Xeres_Endlevel()
 {
+	Spine_OverallSaveSetInt("XeresFortressVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(XERESWELT_ZEN);
 	
 	ENTER_EVT_endlevelmonster();
@@ -7366,6 +7402,9 @@ FUNC VOID STARTUP_DragonIsland()
 
 FUNC VOID INIT_DragonIsland()
 {
+	Spine_OverallSaveSetInt("IrdorathVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(DRAGONISLAND_ZEN); 
 
 	// Crew spawnen
@@ -7836,6 +7875,9 @@ FUNC VOID STARTUP_PATHERION()
 
 FUNC VOID INIT_PATHERION()
 {
+	Spine_OverallSaveSetInt("PatherionVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	INIT_FEUERMAGIER_SURFACE();
 	INIT_FEUERMAGIER_TEMPEL();
 
@@ -7997,7 +8039,7 @@ FUNC VOID STARTUP_Bergwelt()
 
 	NameAllFires();
 
-        Wld_InsertNpc	(DragonSnapper_Bergwelt,	"FP_ROAM_DRAGONSNAPPER_01");
+    Wld_InsertNpc	(DragonSnapper_Bergwelt,	"FP_ROAM_DRAGONSNAPPER_01");
 	Wld_InsertNpc	(DragonSnapper_Bergwelt,	"FP_ROAM_DRAGONSNAPPER_02");
 	Wld_InsertNpc	(DragonSnapper_Bergwelt,	"FP_ROAM_DRAGONSNAPPER_03");
 	Wld_InsertNpc	(DragonSnapper_Bergwelt,	"FP_ROAM_DRAGONSNAPPER_04");
@@ -8011,6 +8053,9 @@ FUNC VOID STARTUP_Bergwelt()
 
 FUNC VOID INIT_Bergwelt()
 {
+	Spine_OverallSaveSetInt("BergweltVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(BERGWELT_ZEN); 
 };
 
@@ -8075,6 +8120,9 @@ FUNC VOID STARTUP_Tugettso()
 
 FUNC VOID INIT_Tugettso()
 {
+	Spine_OverallSaveSetInt("TugettsoVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	if (Npc_KnowsInfo(hero, Info_Mod_Thorge_KommMit))
 	&& (Mod_Thorge_Dabei == FALSE)
 	{
@@ -8189,6 +8237,9 @@ FUNC VOID STARTUP_Eisgebiet()
 
 FUNC VOID INIT_Eisgebiet()
 {
+	Spine_OverallSaveSetInt("GelatoVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	//---Laternen---
 	Wld_SetMobRoutine (00,00, "FIREPLACE", 1);
 	Wld_SetMobRoutine (20,00, "FIREPLACE", 1);
@@ -8263,6 +8314,9 @@ FUNC VOID STARTUP_FliegendeInsel()
 
 FUNC VOID INIT_FliegendeInsel()
 {
+	Spine_OverallSaveSetInt("FlyingIsleVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(FLIEGENDEINSEL_ZEN);
 };
 
@@ -8606,6 +8660,9 @@ FUNC VOID STARTUP_Relendel()
 
 FUNC VOID INIT_Relendel()
 {
+	Spine_OverallSaveSetInt("RelendelVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	// Laternen in der Stadt
 
 	Wld_SetMobRoutine (00,00,"FIREPLACE",1);
@@ -8919,7 +8976,10 @@ FUNC VOID STARTUP_Jaegerlager()
 };
 
 FUNC VOID INIT_Jaegerlager()
-{	
+{
+	Spine_OverallSaveSetInt("HunterCampVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	Wld_SetMobRoutine (00,00,"FIREPLACE",1);
 	Wld_SetMobRoutine (20,00,"FIREPLACE",1);
 	Wld_SetMobRoutine (06,00,"FIREPLACE",0);
@@ -8963,6 +9023,9 @@ FUNC VOID STARTUP_Wolkenwelt()
 
 FUNC VOID INIT_Wolkenwelt()
 {
+	Spine_OverallSaveSetInt("CloudWorldVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(WOLKENWELT_ZEN);
 };
 
@@ -8997,6 +9060,9 @@ FUNC VOID STARTUP_Halluzination()
 
 FUNC VOID INIT_Halluzination()
 {
+	Spine_OverallSaveSetInt("HalluzinationVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(HALLUZINATION_ZEN);
 };
 
@@ -9037,6 +9103,9 @@ FUNC VOID STARTUP_Wald_Schlucht()
 
 FUNC VOID INIT_Wald_Schlucht()
 {
+	Spine_OverallSaveSetInt("WaldschluchtVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(WALDSCHLUCHT_ZEN);
 };
 
@@ -9071,6 +9140,9 @@ FUNC VOID STARTUP_Drachental()
 
 FUNC VOID INIT_Drachental()
 {
+	Spine_OverallSaveSetInt("DrachentalVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(DRACHENTAL_ZEN);
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Drache_Drachendurst04))
@@ -9116,6 +9188,9 @@ FUNC VOID STARTUP_Relendel_Mine()
 
 FUNC VOID INIT_Relendel_Mine()
 {
+	Spine_OverallSaveSetInt("RelendelMineVisited", 1);
+	CheckWorldTravelerAchievement();
+	
 	OldLevel(RELENDELMINE_ZEN);
 	
 	if (Mod_Enter_Relendel_03) {

@@ -57,24 +57,41 @@ func void B_LogEntry_NS (var string topic, var string entry)
 
 FUNC VOID B_SucceedTopic (var string topic)
 {
+	Erfolg_OpenQuests -= 1;
 	PrintScreen		(ConcatStrings("Quest erfüllt: ", topic), -1, YPOS_LOGENTRY+3+LogState_PosY, FONT_ScreenSmall_Green, 4);
 
 	LogState_PosY += 3;
 
 	Log_SetTopicStatus	(topic, LOG_SUCCESS);
+	
+	if (Erfolg_ClosedQuestsDay != Wld_GetDay()) {
+		Erfolg_ClosedQuestsDay = Wld_GetDay();
+		Erfolg_ClosedQuestsToday = 1;
+	} else {
+		Erfolg_ClosedQuestsToday += 1;
+		if (Erfolg_ClosedQuestsToday >= 10) {
+			Spine_UnlockAchievement(SPINE_ACHIEVEMENT_43);
+		};
+	};
 };
 
 FUNC VOID B_StartTopic (var string topic)
 {
+	Erfolg_OpenQuests += 1;
 	PrintScreen		(ConcatStrings("Neue Quest: ", topic), -1, YPOS_LOGENTRY+3+LogState_PosY, FONT_ScreenSmall, 4);
 
 	LogState_PosY += 3;
 
 	Log_SetTopicStatus	(topic, LOG_RUNNING);
+	
+	if (Erfolg_OpenQuests >= 100) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_41);
+	};
 };
 
 FUNC VOID B_FailTopic (var string topic)
 {
+	Erfolg_OpenQuests -= 1;
 	PrintScreen		(ConcatStrings("Quest gescheitert: ", topic), -1, YPOS_LOGENTRY+3+LogState_PosY, FONT_ScreenSmall_Red, 4);
 
 	LogState_PosY += 3;

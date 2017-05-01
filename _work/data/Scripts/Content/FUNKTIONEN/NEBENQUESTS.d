@@ -675,6 +675,8 @@ FUNC VOID NEBENQUESTS()
 			Mod_KristallDiego = 1;
 
 			CurrentNQ += 1;
+			
+			Spine_UnlockAchievement(SPINE_ACHIEVEMENT_50);
 		};
 
 		// Handwerker und Alchemist für Jack

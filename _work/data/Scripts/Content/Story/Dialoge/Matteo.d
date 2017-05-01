@@ -920,6 +920,8 @@ FUNC VOID Info_Mod_Matteo_LehrlingQuest7_Info()
 	B_GivePlayerXP	(1000);
 
 	B_SetTopicStatus	(TOPIC_MOD_LEHRLING_MATTEO_THREE, LOG_SUCCESS);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_46);
 };
 
 INSTANCE Info_Mod_Matteo_LehrlingQuest8 (C_INFO)

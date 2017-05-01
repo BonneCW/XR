@@ -1146,6 +1146,8 @@ FUNC VOID Info_Mod_Harad_LehrlingQuest9_Info()
 	AI_Output(self, hero, "Info_Mod_Harad_LehrlingQuest9_09_07"); //(giftig) Ja, vergiss nur, von wem du all deine Kenntnisse hast! Lass mich nur im Stich!
 
 	B_StartOtherRoutine	(Mod_980_MIL_Olav_NW, "START");
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_44);
 
 	B_LogEntry	(TOPIC_MOD_LEHRLING_HARAD_FOUR, "Da ich von Harad überhaupt keine Mithilfe erwarten kann, habe ich entschieden, ihn dort zu lassen, wo er ist. Ich sollte den Paladinen oder den Söldnern selbst meine Hilfe anbieten.");
 };

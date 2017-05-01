@@ -748,6 +748,8 @@ FUNC VOID Info_Mod_Thorben_LehrlingQuest7_Info()
 	Mod_Thorben_Geschenk_Tag = Wld_GetDay();
 
 	B_SetTopicStatus	(TOPIC_MOD_LEHRLING_THORBEN_FOUR, LOG_SUCCESS);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_48);
 };
 
 INSTANCE Info_Mod_Thorben_LehrlingQuest8 (C_INFO)

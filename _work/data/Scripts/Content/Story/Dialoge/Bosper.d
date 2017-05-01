@@ -920,6 +920,8 @@ FUNC VOID Info_Mod_Bosper_LehrlingQuest12_Info()
 	CurrentNQ += 1;
 
 	B_GivePlayerXP	(1000);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_45);
 };
 
 INSTANCE Info_Mod_Bosper_LehrlingQuest13 (C_INFO)

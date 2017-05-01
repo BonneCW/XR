@@ -134,6 +134,36 @@ FUNC VOID CheckMonsterHunterAchievement() {
 	Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_23, amount);
 };
 
+FUNC VOID CheckWorldTravelerAchievement() {
+	var int amount; amount = 0;
+	amount += Spine_OverallSaveGetInt("JharkendarVisited");
+	amount += Spine_OverallSaveGetInt("KhorinisVisited");
+	amount += Spine_OverallSaveGetInt("MinentalVisited");
+	amount += Spine_OverallSaveGetInt("OrctempelVisited");
+	amount += Spine_OverallSaveGetInt("AbandonedMineVisited");
+	amount += Spine_OverallSaveGetInt("OldMineVisited");
+	amount += Spine_OverallSaveGetInt("OrcGraveyardVisited");
+	amount += Spine_OverallSaveGetInt("FreeMineVisited");
+	amount += Spine_OverallSaveGetInt("RitualinselVisited");
+	amount += Spine_OverallSaveGetInt("SchatzinselVisited");
+	amount += Spine_OverallSaveGetInt("OrcCityVisited");
+	amount += Spine_OverallSaveGetInt("XeresFortressVisited");
+	amount += Spine_OverallSaveGetInt("IrdorathVisited");
+	amount += Spine_OverallSaveGetInt("PatherionVisited");
+	amount += Spine_OverallSaveGetInt("BergweltVisited");
+	amount += Spine_OverallSaveGetInt("TugettsoVisited");
+	amount += Spine_OverallSaveGetInt("GelatoVisited");
+	amount += Spine_OverallSaveGetInt("FlyingIsleVisited");
+	amount += Spine_OverallSaveGetInt("RelendelVisited");
+	amount += Spine_OverallSaveGetInt("HunterCampVisited");
+	amount += Spine_OverallSaveGetInt("CloudWorldVisited");
+	amount += Spine_OverallSaveGetInt("HalluzinationVisited");
+	amount += Spine_OverallSaveGetInt("WaldschluchtVisited");
+	amount += Spine_OverallSaveGetInt("DrachentalVisited");
+	amount += Spine_OverallSaveGetInt("RelendelMineVisited");
+	Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_42, amount);
+};
+
 FUNC VOID Erfolge_Func() {
 	// Erfolge auswerten
 	// Helferlein
