@@ -8183,6 +8183,18 @@ FUNC VOID INIT_Eisgebiet()
 	Wld_SetMobRoutine(19, 30, "LIGHTSPAWNERTEN", 0);
 	Wld_SetMobRoutine(19, 30, "LIGHTSPAWNERELEVEN", 1);
 	Wld_SetMobRoutine(20, 10, "LIGHTSPAWNERELEVEN", 0);
+	
+	Wld_AssignRoomToGuild ("haus",	GIL_PUBLIC);
+	Wld_AssignRoomToGuild ("haus2",	GIL_PUBLIC);
+	Wld_AssignRoomToGuild ("haus3",	GIL_PUBLIC);
+	Wld_AssignRoomToGuild ("haus4",	GIL_PUBLIC);
+	Wld_AssignRoomToGuild ("haus5",	GIL_PUBLIC);
+	Wld_AssignRoomToGuild ("haus6",	GIL_PUBLIC);
+	Wld_AssignRoomToGuild ("haus7",	GIL_PUBLIC);
+	Wld_AssignRoomToGuild ("haus8",	GIL_PUBLIC);
+	Wld_AssignRoomToGuild ("haus9",	GIL_PUBLIC);
+	Wld_AssignRoomToGuild ("haus10",	GIL_PUBLIC);
+	Wld_AssignRoomToGuild ("haus11",	GIL_PUBLIC);
 
 	OldLevel(EISGEBIET_ZEN);
 
