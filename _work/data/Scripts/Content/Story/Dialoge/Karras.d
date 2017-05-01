@@ -78,7 +78,7 @@ FUNC VOID Info_Mod_Karras_HastDuAuftrag_2_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_KARRAS_BOTE, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_KARRAS_BOTE, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_KARRAS_BOTE, "Die Feuermagier scheinen etwas zu planen. Ich soll ihren Boten abfangen und seine Informationen zu Karras bringen. Mittags befindet er sich immer in der Taverne vor dem Kloster.");
+	B_LogEntry	(TOPIC_MOD_KARRAS_BOTE, "Die Feuermagier scheinen etwas zu planen. Ich soll ihren Boten abfangen und seine Informationen zu Karras bringen. Mittags befindet er sich immer in der Taverne vor dem Kloster. Ich sollte aber nicht in meiner Robe dort auftauchen.");
 };
 
 INSTANCE Info_Mod_Karras_Bote (C_INFO)

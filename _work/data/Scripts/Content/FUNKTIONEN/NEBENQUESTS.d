@@ -83,7 +83,7 @@ FUNC VOID NEBENQUESTS()
 		if (Npc_KnowsInfo(hero, Info_Mod_Mattheus_Alk))
 		&& (!Npc_IsInState(Mod_724_NOV_Mattheus_NW, ZS_Talk))
 		&& (!Npc_IsDead(Mod_724_NOV_Mattheus_NW))
-		{
+		&& (!Npc_GetDistToWP(Mod_724_NOV_Mattheus_NW, "NW_TAVERNE_05") < 500) {
 			AI_StandUP	(Mod_724_NOV_Mattheus_NW);
 			Npc_ClearAIQueue	(Mod_724_NOV_Mattheus_NW);
 			B_KillNpc	(Mod_724_NOV_Mattheus_NW);

@@ -44,9 +44,9 @@ FUNC INT Info_Mod_Mattheus_Bote_Condition()
 FUNC VOID Info_Mod_Mattheus_Bote_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Mattheus_Bote_15_00"); //Was sind das für Botschaften?
-	AI_Output(self, hero, "Info_Mod_Mattheus_Bote_09_01"); //So dies und das, lauter wichtige Sachen. Ich darf dir aber nichts sagen, was da drin steht.
+	AI_Output(self, hero, "Info_Mod_Mattheus_Bote_09_01"); //So dies und das, lauter wichtige Sachen. Ich darf dir aber nicht sagen, was da drin steht.
 	
-	B_LogEntry	(TOPIC_MOD_KARRAS_BOTE, "Mattheus will mir nicht verraten was das für Botschaften sind. Vielleicht sollte ich ihm noch ein bisschen mehr zu trinken geben.");
+	B_LogEntry	(TOPIC_MOD_KARRAS_BOTE, "Mattheus will mir nicht verraten was das für Botschaften sind. Vielleicht sollte ich ihm noch ein bisschen mehr zu trinken geben. Mit ein klein wenig Gift versetzt ...");
 };
 
 INSTANCE Info_Mod_Mattheus_Alk (C_INFO)
@@ -64,6 +64,7 @@ FUNC INT Info_Mod_Mattheus_Alk_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Mattheus_Bote))
 	&& (Npc_HasItems(hero, ItFo_Beer) >= 1)
+	&& (Npc_HasItems(hero, ItPo_Gift) >= 1)
 	{
 		return 1;
 	};
@@ -73,11 +74,17 @@ FUNC VOID Info_Mod_Mattheus_Alk_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Mattheus_Alk_15_00"); //Nimm dieses Bier.
 
+	Npc_RemoveInvItems(hero, ItPo_Gift, 1);
+	
 	B_GiveInvItems	(hero, self, ItFo_Beer, 1);
 
 	B_UseItem	(self, ItFo_Beer);
+	
+	AI_Output(self, hero, "Info_Mod_Mattheus_Alk_09_01"); //Ah, wie wird mir ...
 
 	AI_StopProcessInfos	(self);
+	
+	B_StartOtherRoutine(self, "DIE");
 
 	B_Göttergefallen(3, 1);
 };
