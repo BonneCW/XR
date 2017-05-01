@@ -7199,6 +7199,11 @@ FUNC VOID INIT_Xeres_Endlevel()
 
 		Wld_InsertNpc	(Hauertroll_XW_01,	"ARENA_04");
 		Wld_InsertNpc	(Shadowbeast_XW_01,	"ARENA_04");
+		
+		Wld_SendTrigger("ARENAGATE_01");
+		Wld_SendTrigger("ARENAGATE_02");
+		Wld_SendTrigger("ARENAGATE_03");
+		Wld_SendTrigger("ARENAGATE_04");
 	};
 };
 
