@@ -7602,6 +7602,29 @@ FUNC VOID STARTUP_FEUERMAGIER_SURFACE()
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_SCAV_17");
 
 	Wld_InsertNpc	(Wisp,	"FP_ROAM_IRRLICHT_01");
+	
+	Wld_InsertNpc	(Hauertroll, "FP_ROAM_PAT_001");
+	
+	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_002");
+	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_003");
+	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_004");
+	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_005");
+	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_006");
+	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_007");
+	
+	Wld_InsertNpc	(Demon, "FP_ROAM_PAT_008");
+	
+	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_009");
+	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_010");
+	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_011");
+	
+	Wld_InsertNpc	(Wisp, "FP_ROAM_PAT_014");
+	
+	Wld_InsertNpc	(Shadowbeast, "FP_ROAM_PAT_015");
+	
+	Wld_InsertNpc	(Riesenkeiler, "FP_ROAM_PAT_016");
+	Wld_InsertNpc	(Riesenkeiler, "FP_ROAM_PAT_017");
+	Wld_InsertNpc	(Riesenkeiler, "FP_ROAM_PAT_018");
 
 	// Höhle
 	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_24");
