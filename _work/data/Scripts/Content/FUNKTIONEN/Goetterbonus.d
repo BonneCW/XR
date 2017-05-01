@@ -12,14 +12,6 @@ var int Mod_GottInnos;
 var int Mod_GottBeliar;
 var int Segen_Handle;
 
-FUNC INT Min(VAR INT a, VAR INT b) {
-	if (a < b) {
-		return a;
-	} else {
-		return b;
-	};
-};
-
 FUNC VOID Goetterbonus()
 {
 	if (!Hlp_IsValidHandle(Segen_Handle))

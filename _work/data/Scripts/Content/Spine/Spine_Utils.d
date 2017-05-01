@@ -1,4 +1,4 @@
-var int min(var int a, var int b) {
+func int min(var int a, var int b) {
 	if (a < b) {
 		return a;
 	} else {
@@ -6,7 +6,7 @@ var int min(var int a, var int b) {
 	};
 };
 
-var int max(var int a, var int b) {
+func int max(var int a, var int b) {
 	if (a > b) {
 		return a;
 	} else {
