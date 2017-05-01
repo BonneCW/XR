@@ -88,8 +88,16 @@ class RespawnObject {
 };
 
 const int MAX_RESPAWN = 2000; // Wir definieren diese Konstante, um unser System leicher anpassen zu können, z.B. bei vielen Monstern. Außerdem ist das schöner.
-var int RespawnArray[MAX_RESPAWN];
-var int nextRespawnIndex;
+var int RespawnArray1[MAX_RESPAWN];
+var int RespawnArray2[MAX_RESPAWN];
+var int RespawnArray3[MAX_RESPAWN];
+var int RespawnArray4[MAX_RESPAWN];
+var int RespawnArray5[MAX_RESPAWN];
+var int nextRespawnIndex1;
+var int nextRespawnIndex2;
+var int nextRespawnIndex3;
+var int nextRespawnIndex4;
+var int nextRespawnIndex5;
 
 const string RespawnObject_Struct = "auto|4";
 
@@ -618,66 +626,131 @@ func int MapRespawnInstance(var int id) {
 	return inst;
 };
 
-func void RemoveRespawnObject(var int hndl, var int i) {
-	if (nextRespawnIndex == 0) { // Das Array ist leer.
-		return;
-	};
+func void RemoveRespawnObject(var int hndl, var int array, var int i) {
+	var int h;
+	if (array == 0) {
+		if (nextRespawnIndex1 == 0) { // Das Array ist leer.
+			return;
+		};
 
-	delete(hndl); // Hier erledigen wir den PM-Teil unseres Destruktors, alles weitere macht PM dann selber. Unter anderem wird versucht, Respawn_Object_Delete() aufzurufen, allerdings gibt es diese Funktion nicht (sie ist optional)
-	
-	var int h; h = MEM_ReadStatArr(RespawnArray, i); //[I]// h = RespawnArray;
-	MEM_WriteStatArr(RespawnArray, i, MEM_ReadStatArr(RespawnArray, nextRespawnIndex - 1)); // Alte Referenz mit der letzten Referenz überschreiben
-	MEM_WriteStatArr(RespawnArray, nextRespawnIndex - 1, 0); // Letzte Referenz gleich 0 setzen
-	nextRespawnIndex -= 1; // Unseren Zähler dekrementieren
-	return; // Mehr wollen wir nicht machen.	
+		delete(hndl); // Hier erledigen wir den PM-Teil unseres Destruktors, alles weitere macht PM dann selber. Unter anderem wird versucht, Respawn_Object_Delete() aufzurufen, allerdings gibt es diese Funktion nicht (sie ist optional)
+		
+		h = MEM_ReadStatArr(RespawnArray1, i); //[I]// h = RespawnArray;
+		MEM_WriteStatArr(RespawnArray1, i, MEM_ReadStatArr(RespawnArray1, nextRespawnIndex1 - 1)); // Alte Referenz mit der letzten Referenz überschreiben
+		MEM_WriteStatArr(RespawnArray1, nextRespawnIndex1 - 1, 0); // Letzte Referenz gleich 0 setzen
+		nextRespawnIndex1 -= 1; // Unseren Zähler dekrementieren
+	} else if (array == 1) {
+		if (nextRespawnIndex2 == 0) { // Das Array ist leer.
+			return;
+		};
+
+		delete(hndl); // Hier erledigen wir den PM-Teil unseres Destruktors, alles weitere macht PM dann selber. Unter anderem wird versucht, Respawn_Object_Delete() aufzurufen, allerdings gibt es diese Funktion nicht (sie ist optional)
+		
+		h = MEM_ReadStatArr(RespawnArray2, i); //[I]// h = RespawnArray;
+		MEM_WriteStatArr(RespawnArray2, i, MEM_ReadStatArr(RespawnArray2, nextRespawnIndex2 - 1)); // Alte Referenz mit der letzten Referenz überschreiben
+		MEM_WriteStatArr(RespawnArray2, nextRespawnIndex2 - 1, 0); // Letzte Referenz gleich 0 setzen
+		nextRespawnIndex2 -= 1; // Unseren Zähler dekrementieren
+	} else if (array == 2) {
+		if (nextRespawnIndex3 == 0) { // Das Array ist leer.
+			return;
+		};
+
+		delete(hndl); // Hier erledigen wir den PM-Teil unseres Destruktors, alles weitere macht PM dann selber. Unter anderem wird versucht, Respawn_Object_Delete() aufzurufen, allerdings gibt es diese Funktion nicht (sie ist optional)
+		
+		h = MEM_ReadStatArr(RespawnArray3, i); //[I]// h = RespawnArray;
+		MEM_WriteStatArr(RespawnArray3, i, MEM_ReadStatArr(RespawnArray3, nextRespawnIndex3 - 1)); // Alte Referenz mit der letzten Referenz überschreiben
+		MEM_WriteStatArr(RespawnArray3, nextRespawnIndex3 - 1, 0); // Letzte Referenz gleich 0 setzen
+		nextRespawnIndex3 -= 1; // Unseren Zähler dekrementieren
+	} else if (array == 3) {
+		if (nextRespawnIndex4 == 0) { // Das Array ist leer.
+			return;
+		};
+
+		delete(hndl); // Hier erledigen wir den PM-Teil unseres Destruktors, alles weitere macht PM dann selber. Unter anderem wird versucht, Respawn_Object_Delete() aufzurufen, allerdings gibt es diese Funktion nicht (sie ist optional)
+		
+		h = MEM_ReadStatArr(RespawnArray4, i); //[I]// h = RespawnArray;
+		MEM_WriteStatArr(RespawnArray4, i, MEM_ReadStatArr(RespawnArray4, nextRespawnIndex4 - 1)); // Alte Referenz mit der letzten Referenz überschreiben
+		MEM_WriteStatArr(RespawnArray4, nextRespawnIndex4 - 1, 0); // Letzte Referenz gleich 0 setzen
+		nextRespawnIndex4 -= 1; // Unseren Zähler dekrementieren
+	} else if (array == 4) {
+		if (nextRespawnIndex5 == 0) { // Das Array ist leer.
+			return;
+		};
+
+		delete(hndl); // Hier erledigen wir den PM-Teil unseres Destruktors, alles weitere macht PM dann selber. Unter anderem wird versucht, Respawn_Object_Delete() aufzurufen, allerdings gibt es diese Funktion nicht (sie ist optional)
+		
+		h = MEM_ReadStatArr(RespawnArray5, i); //[I]// h = RespawnArray;
+		MEM_WriteStatArr(RespawnArray5, i, MEM_ReadStatArr(RespawnArray5, nextRespawnIndex5 - 1)); // Alte Referenz mit der letzten Referenz überschreiben
+		MEM_WriteStatArr(RespawnArray5, nextRespawnIndex5 - 1, 0); // Letzte Referenz gleich 0 setzen
+		nextRespawnIndex5 -= 1; // Unseren Zähler dekrementieren
+	};
 };
 
 func void CheckRespawns() {
-	if (nextRespawnIndex == 0) { // Das Array ist leer.
+	if (nextRespawnIndex1 == 0 && nextRespawnIndex2 == 0 && nextRespawnIndex3 == 0 && nextRespawnIndex4 == 0 && nextRespawnIndex5 == 0) { // Das Array ist leer.
 		return;
 	};
-	var int i; i = 0; // Das mag verwirren, aber ich baue bloß eine Schleife in Daedalus. Mit dem neuen Ikarus-Release geht das auch wesentlich schöner. 
-	var int pos; pos = MEM_StackPos.position; // Stellt euch einfach vor, das hier wäre eine While(1)-Schleife. Zur Übersicht habe ich eingerückt.
-	
-		var int hndl; hndl = MEM_ReadStatArr(RespawnArray, i); // hndl = RespawnArray[i];
-		var RespawnObject myRespawnObject; myRespawnObject = get(hndl);
-		PrintDebug(ConcatStrings("Respawn: Check i = ", IntToString(i)));
-		PrintDebug(ConcatStrings("Respawn: id = ", IntToString(myRespawnObject.id)));
-		PrintDebug(ConcatStrings("Respawn: wp = ", myRespawnObject.wp));
-		PrintDebug(ConcatStrings("Respawn: length = ", IntToString(STR_Len(myRespawnObject.wp))));
+	var int array; array = 0;
+	var int arrayPos; arrayPos = MEM_StackPos.position;
+		var int nextRespawnIndex;
+		if (array == 0) {
+			nextRespawnIndex = nextRespawnIndex1;
+		} else if (array == 1) {
+			nextRespawnIndex = nextRespawnIndex2;
+		} else if (array == 2) {
+			nextRespawnIndex = nextRespawnIndex3;
+		} else if (array == 3) {
+			nextRespawnIndex = nextRespawnIndex4;
+		} else if (array == 4) {
+			nextRespawnIndex = nextRespawnIndex5;
+		};
+		var int i; i = 0; // Das mag verwirren, aber ich baue bloß eine Schleife in Daedalus. Mit dem neuen Ikarus-Release geht das auch wesentlich schöner. 
+		var int pos; pos = MEM_StackPos.position; // Stellt euch einfach vor, das hier wäre eine While(1)-Schleife. Zur Übersicht habe ich eingerückt.
 		
-		//Jetzt haben wir unser Objekt!
-		if (STR_Len(myRespawnObject.wp) == 0) {
-			RemoveRespawnObject(hndl, i);
-		} else if (myRespawnObject.chapter < Kapitel && myRespawnObject.area == CurrentLevel) {
-			var int newInst; newInst = myRespawnObject.id;
-			newInst = MapRespawnInstance(newInst);
-			if (newInst != -1) {
-				Wld_InsertNpc(newInst, myRespawnObject.wp);
+			var int hndl;
+			if (array == 0) {
+				hndl = MEM_ReadStatArr(RespawnArray1, i); // hndl = RespawnArray[i];
+			} else if (array == 1) {
+				hndl = MEM_ReadStatArr(RespawnArray2, i); // hndl = RespawnArray[i];
+			} else if (array == 2) {
+				hndl = MEM_ReadStatArr(RespawnArray3, i); // hndl = RespawnArray[i];
+			} else if (array == 3) {
+				hndl = MEM_ReadStatArr(RespawnArray4, i); // hndl = RespawnArray[i];
+			} else if (array == 4) {
+				hndl = MEM_ReadStatArr(RespawnArray5, i); // hndl = RespawnArray[i];
 			};
-			RemoveRespawnObject(hndl, i);
-		} else {
-			i += 1; // Falls ich ein Objekt gelöscht habe, muss ich den selben Index nochmal lesen.
-		};	
-	if (i >= nextRespawnIndex) { // Wenn i größer oder gleich dem nextRespawnIndex ist, haben wir das Array komplett durchlaufen.
-		return;
+			var RespawnObject myRespawnObject; myRespawnObject = get(hndl);
+			
+			//Jetzt haben wir unser Objekt!
+			if (STR_Len(myRespawnObject.wp) == 0) {
+				RemoveRespawnObject(hndl, array, i);
+			} else if (myRespawnObject.chapter < Kapitel && myRespawnObject.area == CurrentLevel) {
+				var int newInst; newInst = myRespawnObject.id;
+				newInst = MapRespawnInstance(newInst);
+				if (newInst != -1) {
+					Wld_InsertNpc(newInst, myRespawnObject.wp);
+				};
+				RemoveRespawnObject(hndl, array, i);
+			} else {
+				i += 1; // Falls ich ein Objekt gelöscht habe, muss ich den selben Index nochmal lesen.
+			};	
+		if (i < nextRespawnIndex) { // Wenn i größer oder gleich dem nextRespawnIndex ist, haben wir das Array komplett durchlaufen.
+			MEM_StackPos.position = pos;
+		};
+	array += 1;
+	if (array < 5) {
+		MEM_StackPos.position = arrayPos;
 	};
-	MEM_StackPos.position = pos;
 };
 
 func void AddToRespawnArray(var c_npc slf) {
-	PrintDebug("Respawn: Adding Respawner");
 	if (!MeetsRespawnCondition(slf)) {
-		PrintDebug("Respawn: Skipped Add Because of no respawner");
 		return;
 	};
-	if (nextRespawnIndex == MAX_RESPAWN) {
-		PrintDebug("Respawn: Skipped Add Because of Too many");
+	if (nextRespawnIndex1 == MAX_RESPAWN && nextRespawnIndex2 == MAX_RESPAWN && nextRespawnIndex3 == MAX_RESPAWN && nextRespawnIndex4 == MAX_RESPAWN && nextRespawnIndex5 == MAX_RESPAWN) {
 		return;
 	};
 	var int hndl; hndl = new(RespawnObject@);
-	MEM_WriteStatArr(RespawnArray, nextRespawnIndex, hndl); // RespawnArray[nextRespawnIndex] = hndl;
-	nextRespawnIndex += 1; // Beim nächsten Mal in den nächsten Index schreiben
 	
 	var RespawnObject myRespawnObject; myRespawnObject = get(hndl);
 	var int inst; inst = Hlp_GetInstanceID(slf);
@@ -689,6 +762,24 @@ func void AddToRespawnArray(var c_npc slf) {
 	PrintDebug(ConcatStrings("Respawn: wp = ", slf.wp));
 	
 	if (STR_Len(myRespawnObject.wp) == 0) {
-		RemoveRespawnObject(hndl, nextRespawnIndex - 1);
+		delete(hndl);
+		return;
+	};
+	
+	if (nextRespawnIndex1 < MAX_RESPAWN) {
+		MEM_WriteStatArr(RespawnArray1, nextRespawnIndex1, hndl); // RespawnArray[nextRespawnIndex] = hndl;
+		nextRespawnIndex1 += 1; // Beim nächsten Mal in den nächsten Index schreiben
+	} else if (nextRespawnIndex2 < MAX_RESPAWN) {
+		MEM_WriteStatArr(RespawnArray2, nextRespawnIndex2, hndl); // RespawnArray[nextRespawnIndex] = hndl;
+		nextRespawnIndex2 += 1; // Beim nächsten Mal in den nächsten Index schreiben
+	} else if (nextRespawnIndex3 < MAX_RESPAWN) {
+		MEM_WriteStatArr(RespawnArray3, nextRespawnIndex3, hndl); // RespawnArray[nextRespawnIndex] = hndl;
+		nextRespawnIndex3 += 1; // Beim nächsten Mal in den nächsten Index schreiben
+	} else if (nextRespawnIndex4 < MAX_RESPAWN) {
+		MEM_WriteStatArr(RespawnArray4, nextRespawnIndex4, hndl); // RespawnArray[nextRespawnIndex] = hndl;
+		nextRespawnIndex4 += 1; // Beim nächsten Mal in den nächsten Index schreiben
+	} else if (nextRespawnIndex5 < MAX_RESPAWN) {
+		MEM_WriteStatArr(RespawnArray5, nextRespawnIndex5, hndl); // RespawnArray[nextRespawnIndex] = hndl;
+		nextRespawnIndex5 += 1; // Beim nächsten Mal in den nächsten Index schreiben
 	};
 };
