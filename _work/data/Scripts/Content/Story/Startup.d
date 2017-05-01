@@ -2153,6 +2153,8 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 FUNC VOID INIT_NewWorld_Part_Forest_01 ()
 {
 	Wld_AssignRoomToNpc	("forestherberge01",	Mod_776_NONE_Orlan_NW);
+	
+	Wld_AssignRoomToGuild ("XRNWHOEHLE01",	GIL_PUBLIC);
 };
 	
 //------- Troll Area ---------------------------
