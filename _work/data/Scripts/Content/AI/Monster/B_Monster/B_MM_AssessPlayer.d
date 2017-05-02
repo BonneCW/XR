@@ -11,9 +11,12 @@ func void B_MM_AssessPlayer()
 
 	B_Vergiftet (self);
 
-	if (Npc_IsInState(other, ZS_Unconscious))
-	{
+	if (Npc_IsInState(other, ZS_Unconscious)) {
 		return;
+	};
+	
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Krauttroll) && Mod_Leichengase_Kraut < 7) {
+		return:
 	};
 
 	if (Wld_IsTime(21,00,05,00))
