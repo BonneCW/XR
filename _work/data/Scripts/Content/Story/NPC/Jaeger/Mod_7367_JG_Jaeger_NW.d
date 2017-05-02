@@ -37,6 +37,6 @@ instance Mod_7367_JG_Jaeger_NW (Npc_Default)
 
 FUNC VOID Rtn_Start_7367()
 {	
-	TA_Stand_Guarding	(06,05,20,15,"NW_FOREST_PATH_35_06");
-	TA_Stand_Guarding	(20,15,06,05,"NW_FOREST_PATH_35_06"); 
+	TA_Stand_Guarding	(06,05,20,15,"NW_FOREST_PATH_35_09");
+	TA_Stand_Guarding	(20,15,06,05,"NW_FOREST_PATH_35_09"); 
 };
