@@ -320,12 +320,12 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{			
 			if (damage < 0)
 			{
-				damage = 0;
+				damage = -1;
 			};
 		}
 		else
 		{
-			damage = 0;
+			damage = -1;
 		};
 	}
 	else
@@ -333,7 +333,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		if (taeterMonster && damage < (taeter.attribute[ATR_STRENGTH] * 15) / 100 && armor != -1) {
 			damage = (taeter.attribute[ATR_STRENGTH] * 15) / 100;
 		} else if (damage < 0 && armor != -1) {
-			damage = 0;
+			damage = -1;
 		};
 	};
 
@@ -389,7 +389,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			if (r_max(99) < (10-chanceBonus))
 			{
-				damage = 0;
+				damage = -1;
 			}
 			else
 			{
@@ -405,7 +405,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			if (r_max(99) < (40 - chanceBonus))
 			{
-				damage = 0;
+				damage = -1;
 			}
 			else
 			{
@@ -422,7 +422,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			if (r_max(99) < (40 - chanceBonus))
 			{
-				damage = 0;
+				damage = -1;
 			}
 			else
 			{
@@ -438,7 +438,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			if (r_max(99) < (60 - chanceBonus) / (1 + Mod_KritischerTrefferRing))
 			{
-				damage = 0;
+				damage = -1;
 			}
 			else
 			{
@@ -908,7 +908,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	{
 		if (B_HolyHammerSpecialDamage (taeter, opfer) == 0)
 		{
-			damage = 0;
+			damage = -1;
 		};
 	};
 
@@ -916,7 +916,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	{
 		if (B_AdanosStabSpecialDamage (taeter, opfer) == 0)
 		{
-			damage = 0;
+			damage = -1;
 		};
 	};
 
@@ -924,7 +924,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	{
 		if (B_BeliarsWeaponSpecialDamage (taeter, opfer) == 0)
 		{
-			damage = 0;
+			damage = -1;
 		};
 	};
 
@@ -936,12 +936,12 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 			if (Hlp_IsItem(rwp, ItMw_GranmarKeule) == FALSE)
 			&& (Hlp_IsItem(rwp, ItMw_ErzKeule) == FALSE)
 			{
-				damage = 0;
+				damage = -1;
 			};
 		}
 		else
 		{
-			damage = 0;
+			damage = -1;
 		};
 	};
 
@@ -954,7 +954,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	if (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(PC_Hero))
 	&& (opfer.aivar[AIV_Partymember] == TRUE)
 	{
-		damage = 0;
+		damage = -1;
 	};
 
 	if (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(Xeres_01))
@@ -1008,7 +1008,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 				if (Mod_Tretor_Beat) {
 					Mod_PolochTretor = 3;
 				};
-				damage = 0;
+				damage = -1;
 			};
 			if (Mod_PolochTretor == 2)
 			&& (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Mod_10049_Orc_Tretor_MT)) {
@@ -1021,7 +1021,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 				if (Mod_Poloch_Beat) {
 					Mod_PolochTretor = 3;
 				};
-				damage = 0;
+				damage = -1;
 			};
 		} else if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(hero)) {
 			if (Mod_PolochTretor >= 2)
@@ -1029,10 +1029,16 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 				if (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(Mod_10048_Orc_Poloch_MT))
 				|| (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(Mod_10049_Orc_Tretor_MT)) {
 					Mod_PolochTretor = 3;
-					damage = 0;
+					damage = -1;
 				};
 			};
 		};
+	};
+	
+	if (damage == -1) { // damage == -1 means explicit no damage
+		damage = 0;
+	} else if (damage < 5) { // min damage
+		damage = 5;
 	};
 
 	B_MagicHurtNpc	(taeter, opfer, damage);

@@ -9,7 +9,7 @@ instance Mod_7367_JG_Jaeger_NW (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);															
+	B_SetAttributesToChapter (self, 2);															
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	

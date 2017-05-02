@@ -9,7 +9,7 @@ instance Mod_7368_JG_Jaeger_NW (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);	
+	B_SetAttributesToChapter (self, 2);	
 	aivar[AIV_ToughGuy] 			= TRUE;
 	aivar[AIV_ToughGuyNewsOverride] = TRUE;
 	aivar[AIV_IGNORE_Murder]		= TRUE;
