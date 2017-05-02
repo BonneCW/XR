@@ -1,6 +1,10 @@
 var int Mod_SaveOther;
 var C_Npc Mod_SaveNpc;
 
+FUNC VOID TryRemoveDementorEffect() {
+	Wld_StopEffect("DEMENTOR_FX");
+};
+
 FUNC VOID DAUERFUNC_01()
 {
 	var int concatTextInt;
@@ -1778,6 +1782,7 @@ FUNC VOID DAUERFUNC_01()
 
 	if (LastMobsi != PLAYER_MOBSI_PRODUCTION) {
 		if (LastMobsi == MOBSI_PrayIdol) {
+			FF_ApplyOnceExt(TryRemoveDementorEffect, 2000, 5);
 			Wld_StopEffect("DEMENTOR_FX");
 		};
 

@@ -169,6 +169,8 @@ FUNC VOID PC_PrayIdol_End_Info()
 {
 	B_ENDPRODUCTIONDIALOG ();
  	Wld_StopEffect("DEMENTOR_FX");
+ 	Wld_StopEffect("DEMENTOR_FX");
+ 	Wld_StopEffect("DEMENTOR_FX");
 }; 
 //*******************************************************
 //	Beten
