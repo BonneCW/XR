@@ -926,6 +926,8 @@ func void ZS_Dead ()
 
 	if (self.npctype == NPCTYPE_PAT_HEXE)
 	{
+		self.npctype = NPCTYPE_MAIN;
+		
 		var string Hexentext;
 
 		Mod_FM_Hexencounter -= 1;
@@ -943,6 +945,8 @@ func void ZS_Dead ()
 		else
 		{
 			Hexentext = "Alle Hexen erledigt!";
+			Mod_FM_Hexencounter = 0;
+			B_LogEntry	(TOPIC_MOD_FM_HEXEN, "Ich sollte jetzt zurück zu Garan gehen und ihm Bericht erstatten.");
 		};
 
 		AI_PrintScreen	(Hexentext, -1, YPOS_GOLDGIVEN, FONT_ScreenSmall, 2);

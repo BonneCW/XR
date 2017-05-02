@@ -140,7 +140,7 @@ INSTANCE Info_Mod_Torwache_NL_01_Hi (C_INFO)
 	information	= Info_Mod_Torwache_NL_01_Hi_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= "Gibts was neues?";
+	description	= "Gibt's was Neues?";
 };
 
 FUNC INT Info_Mod_Torwache_NL_01_Hi_Condition()
@@ -150,8 +150,32 @@ FUNC INT Info_Mod_Torwache_NL_01_Hi_Condition()
 
 FUNC VOID Info_Mod_Torwache_NL_01_Hi_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Torwache_NL_01_Hi_15_00"); //Gibts was neues?
+	AI_Output(hero, self, "Info_Mod_Torwache_NL_01_Hi_15_00"); //Gibt's was Neues?
 	AI_Output(self, hero, "Info_Mod_Torwache_NL_01_Hi_06_01"); //Nein, in letzter Zeit ist alles ruhig.
+};
+
+INSTANCE Info_Mod_Torwache_NL_01_WarumHier (C_INFO)
+{
+	npc		= Mod_1318_SLD_Organisator_MT;
+	nr		= 1;
+	condition	= Info_Mod_Torwache_NL_01_WarumHier_Condition;
+	information	= Info_Mod_Torwache_NL_01_WarumHier_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Wieso bewacht ihr das Tor hier?";
+};
+
+FUNC INT Info_Mod_Torwache_NL_01_WarumHier_Condition()
+{
+	return 1;
+};
+
+FUNC VOID Info_Mod_Torwache_NL_01_WarumHier_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Torwache_NL_01_WarumHier_15_00"); //Wieso bewacht ihr das Tor hier?
+	AI_Output(self, hero, "Info_Mod_Torwache_NL_01_WarumHier_06_01"); //Im Grunde bewachen wir hier gar nichts. Ab und zu erwischen wir einen Orkspäher, der aus den Bergen kommt, aber die sind keine Gefahr für uns.
+	AI_Output(hero, self, "Info_Mod_Torwache_NL_01_WarumHier_15_02"); //Und was ist mit dem Zugang über den Fluss?
+	AI_Output(self, hero, "Info_Mod_Torwache_NL_01_WarumHier_06_03"); //Der Zugang ist nicht besonders gefährdet. Außerdem gibt es im Lager ja noch ein Tor und die Bauern als Vorhut.
 };
 
 INSTANCE Info_Mod_Torwache_NL_01_Pickpocket (C_INFO)
