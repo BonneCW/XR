@@ -16,7 +16,7 @@ func void B_MM_AssessPlayer()
 	};
 	
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Krauttroll) && Mod_Leichengase_Kraut < 7) {
-		return:
+		return;
 	};
 
 	if (Wld_IsTime(21,00,05,00))

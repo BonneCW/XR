@@ -20,7 +20,7 @@ func void B_MM_AssessEnemy ()
 	};
 	
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Krauttroll) && Mod_Leichengase_Kraut < 7) {
-		return:
+		return;
 	};
 
 	if (Npc_IsInState(other, ZS_Unconscious)) {

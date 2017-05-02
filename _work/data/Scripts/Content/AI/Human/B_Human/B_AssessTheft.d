@@ -9,6 +9,8 @@
 func void B_AssessTheft ()
 {
 	// EXIT IF...
+	
+	PrintDebug("Theft: 1");
 
 	B_Vergiftet (self);
 
@@ -45,11 +47,13 @@ func void B_AssessTheft ()
 			};
 		};
 	};
+	PrintDebug("Theft: 2");
 
 	
 	var C_NPC portalowner; portalowner = Wld_GetPlayerPortalOwner();
 
-	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(portalowner))
+	if ((Hlp_GetInstanceID(self) == Hlp_GetInstanceID(portalowner))
+	|| (CurrentLevel == RELENDELMINE_ZEN))
 	&& (Npc_CanSeeNpc(self, other))
 	&& (Npc_GetHeightToNpc(self, other) <= PERC_DIST_INDOOR_HEIGHT)
 	{
