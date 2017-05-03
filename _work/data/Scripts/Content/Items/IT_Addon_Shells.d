@@ -12,7 +12,7 @@ FUNC VOID B_OpenShell()
 	//Muschel zerbricht beim Öffnen --> keine leere Muschel 
 	
 	var int shellomizer;
-	shellomizer = Hlp_Random (100);
+	shellomizer = r_max(101);
 	
 	Shell_Opener  = (Shell_Opener + 1);
 	

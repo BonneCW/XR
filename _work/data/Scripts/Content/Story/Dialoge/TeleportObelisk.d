@@ -96,7 +96,7 @@ INSTANCE Info_Mod_TeleportObelisk_FromPatherion (C_INFO)
 	information	= Info_Mod_TeleportObelisk_FromPatherion_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= "zur Kloster in Khorinis";
+	description	= "zum Kloster in Khorinis";
 };
 
 FUNC INT Info_Mod_TeleportObelisk_FromPatherion_Condition()

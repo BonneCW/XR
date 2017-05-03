@@ -335,7 +335,7 @@ FUNC VOID Info_Mod_Diego_Daemonisch_Info()
 	AI_Output(hero, self, "Info_Mod_Diego_Daemonisch_15_01"); //Ja, das übliche ... im Moment aber eher auf der Jagd nach Informationen.
 	AI_Output(hero, self, "Info_Mod_Diego_Daemonisch_15_02"); //Vielleicht kannst du mir ja erzählen, ob du etwas gehört hast, da du schon den Tag in der Kneipe verbringst.
 	AI_Output(self, hero, "Info_Mod_Diego_Daemonisch_11_03"); //Naja, es ist eben wenig los am Hafen, nicht viel, was ich im Auge behalten müsste.
-	AI_Output(self, hero, "Info_Mod_Diego_Daemonisch_11_04"); //Dafür soll  bei den Stadttoren allerlei vorgefallen sein. Habe nur Waages gehört.
+	AI_Output(self, hero, "Info_Mod_Diego_Daemonisch_11_04"); //Dafür soll  bei den Stadttoren allerlei vorgefallen sein. Habe nur Vages gehört.
 	AI_Output(self, hero, "Info_Mod_Diego_Daemonisch_11_05"); //Ziemlich viele Leute gehen Zurzeit aus und ein - vor allem beim Osttor - und andere wollen dunkle Erscheinungen gesichtet haben.
 	AI_Output(self, hero, "Info_Mod_Diego_Daemonisch_11_06"); //Du solltest dich am besten Vorort umschauen, wenn du mehr erfahren willst.
 	AI_Output(self, hero, "Info_Mod_Diego_Daemonisch_11_07"); //Achja, und in der Taverne ’Zur fröhlichen Mastsau’ tummeln sich ebenfalls viele Leute Zurzeit.
