@@ -2188,6 +2188,49 @@ FUNC VOID Info_Mod_Xardas_NW_Moorhexe_Info()
 	B_LogEntry	(TOPIC_MOD_NL_MOORHEXE, "Xardas versucht mit Andokai einige Zauber der Verwandlungsmagier zu Plagen-Zaubern umsetzen. Er verwies mich daher wegen meiner restlichen Fragen an die Bibliothek der Schwarzmagier.");
 };
 
+INSTANCE Info_Mod_Xardas_NW_Moorhexe2 (C_INFO)
+{
+	npc		= Mod_513_DMB_Xardas_NW;
+	nr		= 1;
+	condition	= Info_Mod_Xardas_NW_Moorhexe2_Condition;
+	information	= Info_Mod_Xardas_NW_Moorhexe2_Info;
+	permanent	= 0;
+	important	= 0;
+	description	= "Der Drache hat noch etwas erwähnt...";
+};
+
+FUNC INT Info_Mod_Xardas_NW_Moorhexe2_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Moorhexe))
+	&& (Mod_Moorhexe == 0)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Xardas_NW_Moorhexe2_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_Moorhexe2_15_00"); //Der Drache hat noch etwas erwähnt...
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Moorhexe2_14_01"); //Ja?
+	AI_Output(hero, self, "Info_Mod_Xardas_NW_Moorhexe2_15_02"); //Er sprach davon, dass sich das, was immer sich im Moor aufhält, vor den Mächtigen verbirgt.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Moorhexe2_14_03"); //Hm, das könnte dein Unterfangen erschweren.
+	AI_Output(self, hero, "Info_Mod_Xardas_NW_Moorhexe2_14_04"); //Vielleicht offenbart sich des Rätsels Lösung nur, wenn du eine schwache Gestalt annimmst.
+	
+	if (Npc_KnowsInfo(hero, Info_Mod_Andokai_Moorhexe)) {
+		AI_Output(self, hero, "Info_Mod_Xardas_NW_Moorhexe2_14_05"); //Wie ich hörte, warst du bereits bei Andokai.
+		if (Npc_KnowsInfo(hero, Info_Mod_Andokai_PyrmansStab)) {
+			AI_Output(self, hero, "Info_Mod_Xardas_NW_Moorhexe2_14_06"); //Er wird dir sicherlich einen nützlichen Zauber gegeben haben.
+			B_LogEntry	(TOPIC_MOD_NL_MOORHEXE, "Möglicherweise wird sich mir das Geheimnis des Moors nicht offenbaren, wenn ich dort in meiner Gestalt herumlaufe. Xardas empfahl mir eine schwache Gestalt. Ich sollte den Verwandlungszauber von Andokai verwenden.");
+		} else {
+			AI_Output(self, hero, "Info_Mod_Xardas_NW_Moorhexe2_14_07"); //Er wird sicherlich etwas nützliches für dich haben, wenn du ihm gebracht hast, wonach er verlangt.
+			B_LogEntry	(TOPIC_MOD_NL_MOORHEXE, "Möglicherweise wird sich mir das Geheimnis des Moors nicht offenbaren, wenn ich dort in meiner Gestalt herumlaufe. Xardas empfahl mir eine schwache Gestalt. Andokai wird etwas für mich haben, wenn ich seinen Auftrag erfüllt habe.");
+		};
+	} else {
+		AI_Output(self, hero, "Info_Mod_Xardas_NW_Moorhexe2_14_08"); //Andokai wird dir dabei behilflich sein können.
+		B_LogEntry	(TOPIC_MOD_NL_MOORHEXE, "Möglicherweise wird sich mir das Geheimnis des Moors nicht offenbaren, wenn ich dort in meiner Gestalt herumlaufe. Xardas empfahl mir eine schwache Gestalt. Andokai sollte mir weiterhelfen können.");
+	};
+};
+
 INSTANCE Info_Mod_Xardas_NW_WasMussIchTun (C_INFO)
 {
 	npc		= Mod_513_DMB_Xardas_NW;

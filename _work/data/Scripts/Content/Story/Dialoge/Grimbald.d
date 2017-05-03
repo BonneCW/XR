@@ -298,8 +298,6 @@ FUNC VOID Info_Mod_Grimbald_Moor_C()
 {
 	AI_Output(self, hero, "Info_Mod_Grimbald_Moor_C_07_00"); //Viele Glücksritter haben bereits versucht die Schätze des Moores zu bergen und alle bezahlten es mit dem Leben.
 	AI_Output(self, hero, "Info_Mod_Grimbald_Moor_C_07_01"); //Giftige Dämpfe und Moorleichen sollen jedem Eindringling einen grausamen Tot bereiten, so sagt man ... bedenke, worauf du dich da einlässt.
-
-	Info_ClearChoices	(Info_Mod_Grimbald_Moor);
 };
 
 FUNC VOID Info_Mod_Grimbald_Moor_B()

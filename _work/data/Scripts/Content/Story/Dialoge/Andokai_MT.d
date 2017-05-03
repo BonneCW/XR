@@ -246,7 +246,7 @@ FUNC VOID Info_Mod_Andokai_Moorhexe_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_NL_STAB, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_NL_STAB, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_NL_STAB, "Andokai wollte mir nur unter der Bedingung Verwandlungsspruchrollen überlassen,  wenn ich ihm den 'Stab Pyrmans' besorge. Dieser wurde bei dem Überfall dem Kloster der Feuermagier geraubt.");
+	B_LogEntry	(TOPIC_MOD_NL_STAB, "Andokai wollte mir nur unter der Bedingung Verwandlungsspruchrollen überlassen, wenn ich ihm den 'Stab Pyrmans' besorge. Dieser wurde bei dem Überfall dem Kloster der Feuermagier geraubt.");
 
 	B_StartOtherRoutine	(Kobold_11010_NW, "TOT");
 };

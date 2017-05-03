@@ -1,3 +1,5 @@
+var int Mod_Moorhexe_Hint;
+
 FUNC VOID GILDENSTORY_NL ()
 {
 	// NL-Story
@@ -861,11 +863,15 @@ FUNC VOID GILDENSTORY_NL ()
 		&& (Mod_Moorhexe == 0)
 		&& ((Npc_GetDistToWP(hero, "REL_MOOR_131") < 1000)
 		|| (Npc_GetDistToWP(hero, "REL_MOOR_131") < 1000))
-		&& (playerIsTransformed == TRUE)
 		{
-			Mod_Moorhexe = 1;
+			if (playerIsTransformed == TRUE) {
+				Mod_Moorhexe = 1;
 
-			Wld_InsertNpc	(Mod_7295_OUT_Moorhexe_REL,	"REL_MOOR_131");
+				Wld_InsertNpc	(Mod_7295_OUT_Moorhexe_REL,	"REL_MOOR_131");
+			} else if (Mod_Moorhexe_Hint == FALSE) {
+				Mod_Moorhexe_Hint = TRUE;
+				B_LogEntry	(TOPIC_MOD_NL_MOORHEXE, "Ich spüre eine Präsenz an diesem Ort, allerdings kann ich nichts sehen. Ich sollte mich jetzt verwandeln.");
+			};
 		};
 
 		if (Mod_NL_HasKamm == 0)
