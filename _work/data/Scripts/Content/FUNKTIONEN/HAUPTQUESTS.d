@@ -543,6 +543,15 @@ FUNC VOID HAUPTQUESTS()
 			Mod_Uriziel_Piece8 = Button_CreatePxl(r_Max(Print_Screen[PS_X] - 33), r_Max(Print_Screen[PS_Y] - 153), 33, 153, "P8.TGA", Button_Null, Button_Null, PuzzleButton_Click);
 			Button_Show(Mod_Uriziel_Piece8);
 			
+			var string descriptionText1; descriptionText1 = "Verschiebe die Teile mit der Maus an ihren Platz.";
+			var string descriptionText2; descriptionText2 = "Ein Mausklick hebt ein Teil auf, ein weiterer legt es wieder ab.";
+			Mod_Uriziel_PuzzleDescription1 = View_CreatePxl(0, 0, Print_Screen[PS_X], Print_Screen[PS_Y]);
+			Mod_Uriziel_PuzzleDescription2 = View_CreatePxl(0, 50, Print_Screen[PS_X], Print_Screen[PS_Y] - 50);
+			View_AddText(Mod_Uriziel_PuzzleDescription1, 0, 0, descriptionText1, FONT_ScreenSmall);
+			View_AddText(Mod_Uriziel_PuzzleDescription2, 0, 0, descriptionText2, FONT_ScreenSmall);
+			View_Open(Mod_Uriziel_PuzzleDescription1);
+			View_Open(Mod_Uriziel_PuzzleDescription2);
+			
 			Cursor_Show();
 			Cursor_NoEngine = 1;
 		};

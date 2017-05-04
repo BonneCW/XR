@@ -127,6 +127,8 @@ FUNC VOID Puzzle_Tick() {
 		B_GivePlayerXP(500);
 		View_Delete(Mod_Uriziel_Background);
 		View_Delete(Mod_Uriziel_Frame);
+		View_Delete(Mod_Uriziel_PuzzleDescription1);
+		View_Delete(Mod_Uriziel_PuzzleDescription2);
 		Button_Delete(Mod_Uriziel_Piece1);
 		Button_Delete(Mod_Uriziel_Piece2);
 		Button_Delete(Mod_Uriziel_Piece3);

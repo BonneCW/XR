@@ -55,6 +55,8 @@ var int Mod_Uriziel_Piece5;
 var int Mod_Uriziel_Piece6;
 var int Mod_Uriziel_Piece7;
 var int Mod_Uriziel_Piece8;
+var int Mod_Uriziel_PuzzleDescription1;
+var int Mod_Uriziel_PuzzleDescription2;
 var int Mod_Argez_Puzzle;
 var int View_GomezTimer;
 var int View_GomezKillsIch;
