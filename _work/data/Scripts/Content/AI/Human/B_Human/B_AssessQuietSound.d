@@ -12,7 +12,7 @@ func void B_AssessQuietSound ()
 
 	B_Vergiftet (self);
 
-	if (Wld_IsTime(21,00,05,00))
+	/*if (Wld_IsTime(21,00,05,00))
 	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
 	{
 		if (!HeroAtLight)
@@ -40,11 +40,12 @@ func void B_AssessQuietSound ()
 			{
 				if (Npc_GetDistToNpc(self, hero) > 400)
 				{
+					Print("Skipped Player Perception");
 					return;
 				};
 			};
 		};
-	};
+	};*/
 
 	if (C_NpcIsHero(other))
 	&& (Unsichtbarkeitsperk == TRUE)
