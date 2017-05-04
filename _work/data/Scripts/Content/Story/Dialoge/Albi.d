@@ -233,6 +233,7 @@ FUNC INT Info_Mod_Albi_AtHut_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_Wuerdebewiesen))
 	&& (Npc_GetDistToWP(self, "BL_BLOODWYN_BOOK") < 1000)
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -278,6 +279,7 @@ FUNC INT Info_Mod_Albi_KeyGefunden_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_AtHut))
 	&& (Npc_HasItems(hero, ItKe_EchsenKey) == 1)
 	&& (Npc_HasItems(hero, ItAr_Echsi_01) == 1)
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -329,6 +331,7 @@ INSTANCE Info_Mod_Albi_FokusEinsetzen (C_INFO)
 FUNC INT Info_Mod_Albi_FokusEinsetzen_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_KeyGefunden))
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -372,6 +375,7 @@ FUNC INT Info_Mod_Albi_VertrauenGewonnen_Condition()
 {
 	if (Mod_EchsenQuest == 1)
 	&& (Npc_HasItems(hero, ItMi_Focus_Kloster) == 1)
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -414,6 +418,7 @@ FUNC INT Info_Mod_Albi_Kap4Stab_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_VertrauenGewonnen))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_UrizielKaputt))
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -456,6 +461,7 @@ FUNC INT Info_Mod_Albi_Schlacht_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_Kap4Stab))
 	&& (Npc_HasItems(hero, ItAt_Wirbelsaeule) == 1)
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -492,6 +498,7 @@ FUNC INT Info_Mod_Albi_Schlacht2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_Schlacht))
 	&& (Mod_ECHSI_SumpfhaiZaehne == 5)
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -543,6 +550,7 @@ FUNC INT Info_Mod_Albi_Schlacht3_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_Schlacht2))
 	&& (Mod_HQ_AlraunenTor == 3)
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -579,6 +587,7 @@ FUNC INT Info_Mod_Albi_Mutantengolem_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_Schlacht3))
 	&& (Mod_Mutantengolem == 4)
 	&& (Npc_IsDead(Monster_11057_Mutantengolem_AW))
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -643,6 +652,7 @@ FUNC INT Info_Mod_Albi_Geheimnis_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_Mutantengolem))
 	&& (Wld_GetDay() > Mod_Echsis_Geheimnis_Tag)
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -695,6 +705,7 @@ INSTANCE Info_Mod_Albi_Geheimnis2 (C_INFO)
 FUNC INT Info_Mod_Albi_Geheimnis2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_EchseWache_05_Eier))
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -760,6 +771,7 @@ INSTANCE Info_Mod_Albi_Geheimnis3 (C_INFO)
 FUNC INT Info_Mod_Albi_Geheimnis3_Condition()
 {
 	if (Mod_Echsis_Geheimnis == 1)
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -856,6 +868,7 @@ FUNC INT Info_Mod_Albi_Geheimnis4_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_Geheimnis3))
 	&& (Npc_GetDistToWP(self, "BL_ENTRANCE_04_B") < 500)
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -909,6 +922,7 @@ FUNC INT Info_Mod_Albi_Geheimnis5_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_Geheimnis4))
 	&& (Mod_AlraunenFalle == 2)
 	&& (Npc_IsDead(Alraune_Echsis))
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -943,6 +957,7 @@ INSTANCE Info_Mod_Albi_Unbewaffnet (C_INFO)
 FUNC INT Info_Mod_Albi_Unbewaffnet_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_AtHut))
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -974,6 +989,7 @@ INSTANCE Info_Mod_Albi_EigeneSachen (C_INFO)
 FUNC INT Info_Mod_Albi_EigeneSachen_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_AtHut))
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -999,6 +1015,7 @@ INSTANCE Info_Mod_Albi_Schluessel (C_INFO)
 FUNC INT Info_Mod_Albi_Schluessel_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_AtHut))
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};
@@ -1025,6 +1042,7 @@ INSTANCE Info_Mod_Albi_WarumNichtSelbst (C_INFO)
 FUNC INT Info_Mod_Albi_WarumNichtSelbst_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Albi_Schlacht2))
+	&& (Mod_Echsis > 1)
 	{
 		return 1;
 	};

@@ -269,7 +269,7 @@ FUNC VOID HAUPTQUESTS()
 
 			Snd_Play	("GOL_STEPBOOM");
 
-			B_LogEntry	(TOPIC_MOD_ECHSEN_SCHLACHT, "Das war eine ziemlich groﬂe Gruppe an Golems, die mich hie umgerannt hat. Ich sollte schleunigst zu den Echsen und ihnen bei der Schlacht helfen.");
+			B_LogEntry	(TOPIC_MOD_ECHSEN_SCHLACHT, "Das war eine ziemlich groﬂe Gruppe an Golems, die mich hier umgerannt hat. Ich sollte schleunigst zu den Echsen und ihnen bei der Schlacht helfen.");
 
 			// Echsen vor Stadt wegen Schlacht
 

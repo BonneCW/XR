@@ -348,7 +348,7 @@ FUNC VOID Info_Mod_Aaron_Hexen_Info()
 	
 	Log_CreateTopic	(TOPIC_MOD_FM_HEXENQUEEN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_FM_HEXENQUEEN, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_FM_HEXENQUEEN, "Aaron hat mich damit beauftragt, die Hexenkönigin zu töten. Sie hält sich im alten Turm auf.");
+	B_LogEntry	(TOPIC_MOD_FM_HEXENQUEEN, "Garan hat mich damit beauftragt, die Hexenkönigin zu töten. Sie hält sich im alten Turm auf.");
 };
 
 INSTANCE Info_Mod_Aaron_Door (C_INFO)
