@@ -5,8 +5,6 @@ func void ZS_Sleeper()	// Immobile
 {
 	Perception_Set_Monster_Rtn();
 	
-	B_UseHat (self);
-	
 	if (self.aivar[AIV_Schwierigkeitsgrad] < Mod_Schwierigkeit)
 	|| (self.aivar[AIV_Schwierigkeitsgrad] > Mod_Schwierigkeit)
 	{

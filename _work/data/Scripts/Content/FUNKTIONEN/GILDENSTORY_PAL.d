@@ -765,7 +765,7 @@ FUNC VOID GILDENSTORY_PAL()
 
 			if (FI_Rede == 122)
 			{
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_22"); //Da hast du deinen Schläfer, du Idiot. SCHLÄFER1.0 ANGRIFF INITIALISIEREN
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_22"); //Da hast du deinen Schläfer, du Idiot. SCHLÄFER1.0 ANGRIFF INITIALISIEREN!
 
 				B_Attack	(Sleeper, Gidan_FI, AR_None, 0);
 			};
