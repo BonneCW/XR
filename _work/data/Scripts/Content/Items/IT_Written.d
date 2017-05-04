@@ -664,7 +664,7 @@ func void UseErolNotiz1 ()
 
 INSTANCE ItWr_ErolNotiz2		(C_Item)
 {
-	name 				=	"Notiz";
+	name 				=	"Notiz aus Xardas' altem Turm";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION|ITEM_SHOW;
@@ -708,7 +708,7 @@ func void UseErolNotiz2 ()
 
 INSTANCE ItWr_ErolNotiz3		(C_Item)
 {
-	name 				=	"Notiz";
+	name 				=	"Notiz aus dem Buchregal";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION|ITEM_SHOW;
@@ -752,7 +752,7 @@ func void UseErolNotiz3 ()
 
 INSTANCE ItWr_ErolNotiz4		(C_Item)
 {
-	name 				=	"Notiz";
+	name 				=	"Notiz aus dem Buchregal";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION|ITEM_SHOW;
