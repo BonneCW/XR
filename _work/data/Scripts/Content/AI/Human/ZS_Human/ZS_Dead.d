@@ -988,9 +988,7 @@ func void ZS_Dead ()
 		B_LogEntry	(TOPIC_MOD_XERES, "Xeres ist besiegt und das Übel damit beseitigt.");
 		B_SetTopicStatus	(TOPIC_MOD_XERES, LOG_SUCCESS);
 		
-		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_7);
-
-		ExitSession();
+		B_EndGame();
 	};
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Xeres_03))
@@ -1001,9 +999,7 @@ func void ZS_Dead ()
 		B_LogEntry	(TOPIC_MOD_XERES, "Xeres ist am Boden und ich werde mich mit Argez zurückziehen.");
 		B_SetTopicStatus	(TOPIC_MOD_XERES, LOG_SUCCESS);
 		
-		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_7);
-
-		ExitSession();
+		B_EndGame();
 	};
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7315_BK_Bshydal_AW))

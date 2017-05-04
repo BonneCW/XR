@@ -2846,6 +2846,10 @@ FUNC VOID Info_Mod_Xardas_NW_Aufnahme_Nein()
 
 FUNC VOID Info_Mod_Xardas_NW_Aufnahme_Ja()
 {
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_53);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_55);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_60);
+	
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_Aufnahme_Ja_15_00"); //Ja.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Aufnahme_Ja_14_01"); //Dann darf ich dich hiermit stellvertretend für Andokai willkommen heißen!
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Aufnahme_Ja_14_02"); //Er wird es mir schon nicht übelnehmen, wenn ich dir deine Rüstung und die traditionelle Waffe übergebe.

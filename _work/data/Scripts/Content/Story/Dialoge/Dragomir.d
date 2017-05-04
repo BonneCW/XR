@@ -237,6 +237,9 @@ FUNC VOID Info_Mod_Dragomir_Aufnahme_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_NEBENGILDEN, LOG_NOTE);
 	B_LogEntry_NS	(TOPIC_MOD_NEBENGILDEN, "Ich bin jetzt ein Mitglied der Waldläufer.");
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_54);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_62);
 };
 
 INSTANCE Info_Mod_Dragomir_ToDoChapter1 (C_INFO)

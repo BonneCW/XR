@@ -430,7 +430,7 @@ INSTANCE Info_Mod_Vatras_Aufnahme (C_INFO)
 FUNC INT Info_Mod_vatras_Aufnahme_Condition()
 {
 	if (Mod_Gilde == 0)
-	&& ((Npc_KnowsInfo(hero, Info_Mod_vatras_RealInfos))
+	&& ((Npc_KnowsInfo(hero, Info_Mod_Vatras_RealInfos))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Vatras_Kristall)))
 	{
 		return 1;
@@ -482,6 +482,15 @@ FUNC VOID Info_Mod_vatras_Aufnahme_Nein()
 
 FUNC VOID Info_Mod_vatras_Aufnahme_Ja()
 {
+	if (Npc_KnowsInfo(hero, Info_Mod_Vatras_Kristall))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Vatras_RealInfos)) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_52);
+	} else {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_53);
+	};
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_55);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_61);
+	
 	AI_Output(hero, self, "Info_Mod_vatras_Aufnahme_Ja_15_00"); //Ich will mich euch anschlieﬂen.
 	AI_Output(self, hero, "Info_Mod_vatras_Aufnahme_Ja_05_01"); //Gut. Hier ist deine Robe.
 

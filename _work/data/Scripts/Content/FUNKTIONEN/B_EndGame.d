@@ -1,7 +1,3 @@
-FUNC VOID B_EndGame()
-{
-};
-
 FUNC VOID B_OpenInventory()
 {
 	Inventory_Open = TRUE;

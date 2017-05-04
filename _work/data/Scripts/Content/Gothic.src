@@ -377,6 +377,7 @@ STORY\Npc_Scripts\B_SetNpcVisual.d
 STORY\Npc_Scripts\Npc_Default.d
 
 NEUERUNGEN\ItRi_Wechsel.d
+NEUERUNGEN\B_EndGame.d
 
 STORY\NPC\*.d
 STORY\NPC\Koenigsgarde\*.d

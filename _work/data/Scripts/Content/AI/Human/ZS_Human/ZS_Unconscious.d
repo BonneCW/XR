@@ -114,6 +114,11 @@ func void ZS_Unconscious ()
 
 	// ------ XP ------
 	
+	if (self.guild < GIL_SEPERATOR_HUM)
+	&& (C_NpcIsHero(other)) {
+		Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_51, Spine_GetAchievementProgress(SPINE_ACHIEVEMENT_51) + 1);
+	};
+	
 	B_EXPVerteiler (self, other);
 
 	B_GiveDeathInv(self);

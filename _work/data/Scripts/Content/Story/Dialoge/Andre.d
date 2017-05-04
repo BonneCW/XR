@@ -508,8 +508,6 @@ FUNC VOID Info_Mod_Andre_Turnier3_Info()
 		if (Assassinen_Dabei == 0)
 		{
 			B_LogEntry	(TOPIC_MOD_MILIZTURNIER, "Ich habe auch Alrik besiegt. Lord Andre sagt, dass ich jetzt nur noch einen Kampf vor mir habe.");
-
-			//B_SetTopicStatus	(TOPIC_MOD_MILIZTURNIER, LOG_SUCCESS);
 		};
 
 		B_StartOtherRoutine	(Mod_1176_MIL_Miliz_NW, "KAMPF");
@@ -713,6 +711,16 @@ FUNC VOID Info_Mod_Andre_Aufnahme_Nein()
 
 FUNC VOID Info_Mod_Andre_Aufnahme_Ja()
 {
+	if (Npc_KnowsInfo(hero, Info_Mod_Andre_Kristall))
+	&& (Mod_MilizTurnier != 13)
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Mortis_OK)) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_52);
+	} else {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_53);
+	};
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_55);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_57);
+	
 	AI_Output(hero, self, "Info_Mod_Andre_Aufnahme_Ja_15_00"); //Ich will mich euch anschließen.
 	AI_Output(self, hero, "Info_Mod_Andre_Aufnahme_Ja_08_01"); //Gut. Hier ist deine Rüstung.
 

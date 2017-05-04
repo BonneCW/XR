@@ -333,6 +333,15 @@ FUNC VOID Info_Mod_Pyrokar_Aufnahme_Nein()
 
 FUNC VOID Info_Mod_Pyrokar_Aufnahme_Ja()
 {
+	if (Npc_KnowsInfo(hero, Info_Mod_Pyrokar_Kristall))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Pyrokar_Geholfen)) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_52);
+	} else {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_53);
+	};
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_55);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_59);
+	
 	AI_Output(hero, self, "Info_Mod_Pyrokar_Aufnahme_Ja_15_00"); //Ich will mich euch anschlieﬂen.
 	AI_Output(self, hero, "Info_Mod_Pyrokar_Aufnahme_Ja_11_01"); //Gut. Hier ist deine Novizenrobe.
 

@@ -221,6 +221,9 @@ FUNC INT Info_Mod_Thorus_Aufnahme_Condition()
 
 FUNC VOID Info_Mod_Thorus_Aufnahme_Info()
 {
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_54);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_65);
+	
 	AI_Output(hero, self, "Info_Mod_Thorus_Aufnahme_15_00"); //Ich will Gardist werden.
 	AI_Output(self, hero, "Info_Mod_Thorus_Aufnahme_12_01"); //Dann willkommen bei der Garde. Hier hast du deine Rüstung.
 

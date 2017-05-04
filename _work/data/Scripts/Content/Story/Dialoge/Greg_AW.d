@@ -209,6 +209,9 @@ FUNC VOID Info_Mod_Greg_Aufnahme_Info()
 	Mod_AnzahlNebengilden += 1;
 
 	Piraten_Dabei = 1;
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_54);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_69);
 
 	B_GivePlayerXP	(400);
 

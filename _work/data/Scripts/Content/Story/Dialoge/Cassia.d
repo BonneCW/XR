@@ -215,6 +215,9 @@ FUNC VOID Info_Mod_Cassia_Aufnahme_Ja()
 	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_Ja_16_03"); //Ich werde dir den Taschendiebstahl lehren. Dann mach ich dich mit denn anderen Dieben vertraut.
 
 	Mod_AnzahlNebengilden += 1;
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_54);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_63);
 
 	Diebe_Dabei = TRUE;
 

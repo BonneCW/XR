@@ -265,6 +265,9 @@ FUNC VOID Info_Mod_Shakir_GaunerWerden3_Info()
 	Mod_AnzahlNebengilden += 1;
 
 	Assassinen_Dabei = TRUE;
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_54);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_70);
 };
 
 INSTANCE Info_Mod_Shakir_Assassinengold (C_INFO)

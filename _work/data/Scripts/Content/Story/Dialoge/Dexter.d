@@ -92,6 +92,9 @@ FUNC VOID Info_Mod_Dexter_Aufnahme_Info()
 	B_Göttergefallen(3, 2);
 
 	Mod_AnzahlNebengilden += 1;
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_54);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_64);
 };
 
 INSTANCE Info_Mod_Dexter_WhatToDo (C_INFO)

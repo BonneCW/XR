@@ -51,8 +51,28 @@ const int SPINE_ACHIEVEMENT_47 = 46;
 const int SPINE_ACHIEVEMENT_48 = 47;
 const int SPINE_ACHIEVEMENT_49 = 48;
 const int SPINE_ACHIEVEMENT_50 = 49;
+const int SPINE_ACHIEVEMENT_51 = 50;
+const int SPINE_ACHIEVEMENT_52 = 51;
+const int SPINE_ACHIEVEMENT_53 = 52;
+const int SPINE_ACHIEVEMENT_54 = 53;
+const int SPINE_ACHIEVEMENT_55 = 54;
+const int SPINE_ACHIEVEMENT_56 = 55;
+const int SPINE_ACHIEVEMENT_57 = 56;
+const int SPINE_ACHIEVEMENT_58 = 57;
+const int SPINE_ACHIEVEMENT_59 = 58;
+const int SPINE_ACHIEVEMENT_60 = 59;
+const int SPINE_ACHIEVEMENT_61 = 60;
+const int SPINE_ACHIEVEMENT_62 = 61;
+const int SPINE_ACHIEVEMENT_63 = 62;
+const int SPINE_ACHIEVEMENT_64 = 63;
+const int SPINE_ACHIEVEMENT_65 = 64;
+const int SPINE_ACHIEVEMENT_66 = 65;
+const int SPINE_ACHIEVEMENT_67 = 66;
+const int SPINE_ACHIEVEMENT_68 = 67;
+const int SPINE_ACHIEVEMENT_69 = 68;
+const int SPINE_ACHIEVEMENT_70 = 69;
 
-const int MAX_ACHIEVEMENTS = 50;
+const int MAX_ACHIEVEMENTS = 70;
 
 const string SPINE_ACHIEVEMENT_NAMES[MAX_ACHIEVEMENTS] = {
 	"Untot?",
@@ -104,7 +124,27 @@ const string SPINE_ACHIEVEMENT_NAMES[MAX_ACHIEVEMENTS] = {
 	"Der Stein der Weisen",
 	"Meistertischler",
 	"Hart wie Stein",
-	"Eigenständig"
+	"Eigenständig",
+	"Alte Schule",
+	"Der einfache Weg",
+	"Der schwierige Weg",
+	"Nebenjob",
+	"Berufung",
+	"Vielseitig",
+	"Miliz",
+	"Söldner",
+	"Innosanhänger",
+	"Beliaranhänger",
+	"Adanosanhänger",
+	"Jäger",
+	"Dieb",
+	"Bandit",
+	"Schatten",
+	"Königsgardist",
+	"Verwandlungsmagier",
+	"Sumpfi",
+	"Pirat",
+	"Assassine"
 };
 
 const string SPINE_ACHIEVEMENT_DESCRIPTIONS[MAX_ACHIEVEMENTS] = {
@@ -157,10 +197,50 @@ const string SPINE_ACHIEVEMENT_DESCRIPTIONS[MAX_ACHIEVEMENTS] = {
 	"Lehre bei Constantino abgeschlossen",
 	"Lehre bei Thorben abgeschlossen",
 	"Maximale Gildenrüstung erhalten",
-	"Den Paladinkristall ohne Hilfe beschafft"
+	"Den Paladinkristall ohne Hilfe beschafft",
+	"",
+	"Gildenaufnahme durch Paladinkristall",
+	"Gildenaufnahme durch Quest",
+	"Einer Nebengilde beigetreten",
+	"Einer Hauptgilde angeschlossen",
+	"Mit jeder Gilde durchgespielt",
+	"Der Miliz beigetreten",
+	"Den Söldnern beigetreten",
+	"Dem Kloster Innos’ beigetreten",
+	"Xardas angeschlossen",
+	"Saturas und seinem Ring des Wassers angeschlossen",
+	"Den Jägern angeschlossen",
+	"Den Dieben angeschlossen",
+	"Den Banditen angeschlossen",
+	"Dem Alten Lager angeschlossen",
+	"Der Königlichen Garde angeschlossen",
+	"Den Verwandlungsmagiern angeschlossen",
+	"Dem Sumpflager angeschlossen",
+	"Den Piraten angeschlossen",
+	"Den Assassinen angeschlossen"
 };
 
 const string SPINE_ACHIEVEMENT_TEXTURES[MAX_ACHIEVEMENTS] = {
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
 	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
 	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
 	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
@@ -263,6 +343,26 @@ const string SPINE_ACHIEVEMENT_LOCKED[MAX_ACHIEVEMENTS] = {
 	"",
 	"",
 	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
 	""
 };
 
@@ -306,16 +406,36 @@ const string SPINE_ACHIEVEMENT_HIDDEN[MAX_ACHIEVEMENTS] = {
 	"FALSE",
 	"FALSE",
 	"TRUE",
-	"FALSE",
-	"TRUE",
-	"FALSE",
-	"TRUE",
-	"TRUE",
-	"TRUE",
-	"TRUE",
 	"TRUE",
 	"TRUE",
 	"FALSE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"FALSE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"FALSE",
+	"FALSE",
+	"FALSE",
+	"FALSE",
+	"FALSE",
+	"FALSE",
+	"FALSE",
+	"FALSE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
+	"TRUE",
 	"TRUE"
 };
 
@@ -362,6 +482,26 @@ const string SPINE_ACHIEVEMENT_PROGRESS[MAX_ACHIEVEMENTS] = {
 	"0",
 	"0",
 	"25",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"20",
+	"0",
+	"0",
+	"0",
+	"0",
+	"5",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
+	"0",
 	"0",
 	"0",
 	"0",

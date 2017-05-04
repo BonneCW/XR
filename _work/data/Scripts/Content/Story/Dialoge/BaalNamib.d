@@ -399,6 +399,8 @@ FUNC VOID Info_Mod_Namib_SUDD_Guru()
 	Mod_1210_TPL_Templer_MT.aivar[AIV_PASSGATE] = TRUE;
 
 	Guru_Dabei = 1;
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_54);
 
 	Info_ClearChoices	(Info_Mod_Namib_SUDD);
 };
@@ -419,6 +421,9 @@ FUNC VOID Info_Mod_Namib_SUDD_Templer()
 	Mod_1210_TPL_Templer_MT.aivar[AIV_PASSGATE] = TRUE;
 
 	Templer_Dabei = 1;
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_54);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_68);
 
 	Info_ClearChoices	(Info_Mod_Namib_SUDD);
 };

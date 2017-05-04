@@ -77,6 +77,9 @@ FUNC VOID Info_Mod_Ole_WarBeiAndre_Info()
 		KG_Dabei = 1;
 
 		Mod_AnzahlNebengilden += 1;
+		
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_54);
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_66);
 
 		Log_CreateTopic	(TOPIC_MOD_NEBENGILDEN, LOG_NOTE);
 		B_LogEntry	(TOPIC_MOD_NEBENGILDEN, "Ole hat mich bei der königlichen Garde aufgenommen.");

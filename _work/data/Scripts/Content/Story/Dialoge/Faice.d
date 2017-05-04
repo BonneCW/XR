@@ -262,6 +262,9 @@ FUNC VOID Info_Mod_Faice_Aufnahme_Info()
 	Mod_AnzahlNebengilden += 1;
 
 	B_GivePlayerXP	(450);
+	
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_54);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_67);
 
 	AI_Teleport(self, "VMG_19");
 	B_StartOtherRoutine	(self, "RITUAL");
