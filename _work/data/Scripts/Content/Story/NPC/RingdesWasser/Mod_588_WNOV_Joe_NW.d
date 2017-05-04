@@ -22,7 +22,7 @@ instance Mod_588_WNOV_Joe_NW (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																
-	//EquipItem	(self, ItMw_1h_VLK_Sword); 
+	EquipItem	(self, ItMw_AdanosKurzschwert); 
 	
 	
 	// ------ Inventory ------

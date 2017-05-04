@@ -1896,6 +1896,7 @@ var int Mod_PolochTretor;
 var int Mod_Poloch_Beat;
 var int Mod_Tretor_Beat;
 var int Mod_Darrion_Sumpfmensch;
+var int Mod_BDS_FightStart;
 
 var C_NPC NPC_Orkjaeger_01;
 var C_NPC NPC_Orkjaeger_02;

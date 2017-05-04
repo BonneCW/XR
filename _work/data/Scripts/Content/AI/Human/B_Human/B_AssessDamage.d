@@ -63,6 +63,13 @@ func void B_AssessDamage ()
 			};
 		};
 	};
+	
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7587_OUT_Wilderer_NW))
+	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7588_OUT_Wilderer_NW)) {
+		if (self.aivar[AIV_PARTYMEMBER]) {
+			self.aivar[AIV_PARTYMEMBER] = FALSE;
+		};
+	};
 
 	if (C_NpcIsHero(other))
 	&& (Unsichtbarkeitsperk == TRUE)

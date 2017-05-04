@@ -178,7 +178,6 @@ FUNC VOID Info_Mod_Joe_Wassersnapper2_Info()
 	Wld_InsertNpc	(Wassersnapper_Joe_02,	"NW_TROLLAREA_PATH_76");
 	Wld_InsertNpc	(Wassersnapper_Joe_03,	"NW_TROLLAREA_PATH_76");
 
-	Wld_InsertNpc	(Mod_7586_OUT_Wilderer_NW,	"NW_TROLLAREA_PATH_13");
 	Wld_InsertNpc	(Mod_7587_OUT_Wilderer_NW,	"NW_TROLLAREA_PATH_13");
 	Wld_InsertNpc	(Mod_7588_OUT_Wilderer_NW,	"NW_TROLLAREA_PATH_13");
 };
@@ -196,8 +195,6 @@ INSTANCE Info_Mod_Joe_Wassersnapper3 (C_INFO)
 FUNC INT Info_Mod_Joe_Wassersnapper3_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Joe_Wassersnapper2))
-	&& (Npc_KnowsInfo(hero, Info_Mod_Wilderer_Hi))
-	&& (Npc_IsDead(Mod_7586_OUT_Wilderer_NW))
 	&& (Npc_IsDead(Mod_7587_OUT_Wilderer_NW))
 	&& (Npc_IsDead(Mod_7588_OUT_Wilderer_NW))
 	{

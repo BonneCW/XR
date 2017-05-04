@@ -1011,6 +1011,15 @@ FUNC VOID GILDENSTORY_ADANOS()
 
 			AI_Output(hero, NULL, "Info_Mod_Hero_HexenSpruch_15_00"); //Verdammt, ich fühle mich gar nicht gut.
 		};
+		
+		if (Npc_KnowsInfo(hero, Info_Mod_Wilderer_Hi))
+		&& (!Npc_IsInState(Mod_7588_OUT_Wilderer_NW, ZS_Talk))
+		&& (!Mod_BDS_FightStart) {
+			Mod_BDS_FightStart = TRUE;
+
+			Mod_7588_OUT_Wilderer_NW.aivar[AIV_Partymember] = FALSE;
+			Mod_7587_OUT_Wilderer_NW.aivar[AIV_Partymember] = FALSE;
+		};
 	};
 
 	// Aura des Berserkers - Wirkung

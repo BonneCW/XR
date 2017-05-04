@@ -24,8 +24,4 @@ FUNC VOID Info_Mod_Wilderer_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Wilderer_Hi_08_03"); //Dumm?! Dumm ist deine Fresse. Los Jungs, heute haben wir das groﬂe Los gezogen.
 
 	AI_StopProcessInfos	(self);
-
-	self.aivar[AIV_Partymember] = FALSE;
-	Mod_7586_OUT_Wilderer_NW.aivar[AIV_Partymember] = FALSE;
-	Mod_7587_OUT_Wilderer_NW.aivar[AIV_Partymember] = FALSE;
 };

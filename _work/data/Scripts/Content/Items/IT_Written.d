@@ -7213,6 +7213,7 @@ instance ItWr_Map_Eisgebiet (C_Item)
 		Document =	Doc_CreateMap		();
 					Doc_SetPages		(Document, 1);
 					Doc_SetPage 		(Document, 0, "Map_Eisgebiet.tga", TRUE);  // TRUE = scale to fullscreen
+					Doc_SetLevel		(Document, "Zafiron\Eisgebiet.zen");
 					Doc_Show			(Document);
 	};
 
