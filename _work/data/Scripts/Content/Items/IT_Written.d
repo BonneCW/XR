@@ -6303,6 +6303,7 @@ INSTANCE ItWr_Innosklinge (C_ITEM)
 			Mod_AndreSchwert_Test = 2;
 
 			B_LogEntry	(TOPIC_MOD_MILIZ_INNOSKLINGE, "Hmm, sehr Rätselhaft. 'Der den Ruf des Kriegers vernimmt, auf den Pfaden seines Herrn wandeln möge'. Vielleicht fällt Harad was dazu ein.");
+			B_LogEntry(TOPIC_MOD_MILIZ_INNOSKLINGE, "An den Stätten des Gebets lasse er ihn wiederhallen, wenn die Sonne am hellsten strahlt... Das wird bedeuten, dass ich um die Mittagszeit an den Schrein muss. Das Licht, die flammende Kugel, den feurigen Sturm, den Diener aus Feuer und den versengend Regen soll er ihm als Opfer dar geben... Ob damit Zauber gemeint sind?");
 		};
 };
 

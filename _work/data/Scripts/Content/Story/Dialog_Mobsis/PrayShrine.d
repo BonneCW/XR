@@ -18,6 +18,107 @@ var int ShrineIsObsessed_NW_BIGMILL_MALAKSVERSTECK_02;
 var int ShrineIsObsessed_NW_FARM3_BIGWOOD_02;
 var int ShrineIsObsessed_NW_SHRINE_01;
 
+var int ShrineWeihe_01;
+var int ShrineWeihe_02;
+var int ShrineWeihe_03;
+var int ShrineWeihe_04;
+var int ShrineWeihe_05;
+var int ShrineWeihe_06;
+var int ShrineWeihe_07;
+var int ShrineWeihe_08;
+var int ShrineWeihe_09;
+var int ShrineWeihe_10;
+var int ShrineWeihe_11;
+var int ShrineWeihe_12;
+var int ShrineWeihe_13;
+
+FUNC INT C_IsShrineReadyForWeihe() {
+	if (Npc_GetDistToWP(hero, "NW_FARM1_CONNECT_XARDAS") < 2000)
+	&& (ShrineWeihe_01 == FALSE) {
+		return TRUE;
+	} else if (Npc_GetDistToWP(hero, "WP_NW_SHRINE_01") < 2000)
+	&& (ShrineWeihe_02 == FALSE) {
+		return TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_FOREST_PATH_80_1_MOVEMENT16") < 2000)
+	&& (ShrineWeihe_03 == FALSE) {
+		return TRUE;
+	} else if (Npc_GetDistToWP(hero, "WP_NW_SHRINE_02") < 2000)
+	&& (ShrineWeihe_04 == FALSE) {
+		return TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_TAVERNE_TROLLAREA_11_A") < 2000)
+	&& (ShrineWeihe_05 == FALSE) {
+		return TRUE;
+	} else if (Npc_GetDistToWP(hero, "WP_NW_SHRINE_03") < 2000)
+	&& (ShrineWeihe_06 == FALSE) {
+		return TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_BIGMILL_MALAKSVERSTECK_02") < 2000)
+	&& (ShrineWeihe_07 == FALSE) {
+		return TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_MONASTERY_CHAPELL_02") < 2000)
+	&& (ShrineWeihe_08 == FALSE) {
+		return TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_SHRINE_01") < 2000)
+	&& (ShrineWeihe_09 == FALSE) {
+		return TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_TROLLAREA_PATH_04") < 2000)
+	&& (ShrineWeihe_10 == FALSE) {
+		return TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_TROLLAREA_PATH_66_MONSTER") < 2000)
+	&& (ShrineWeihe_11 == FALSE) {
+		return TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_TROLLAREA_PATH_37") < 2000)
+	&& (ShrineWeihe_12 == FALSE) {
+		return TRUE;
+	} else if (Npc_GetDistToWP(hero, "REL_129") < 2000)
+	&& (ShrineWeihe_13 == FALSE) {
+		return TRUE;
+	};
+	return FALSE;
+};
+
+FUNC VOID B_UsedShrineForWeihe() {
+	if (Npc_GetDistToWP(hero, "NW_FARM1_CONNECT_XARDAS") < 2000)
+	&& (ShrineWeihe_01 == FALSE) {
+		ShrineWeihe_01 = TRUE;
+	} else if (Npc_GetDistToWP(hero, "WP_NW_SHRINE_01") < 2000)
+	&& (ShrineWeihe_02 == FALSE) {
+		ShrineWeihe_02 = TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_FOREST_PATH_80_1_MOVEMENT16") < 2000)
+	&& (ShrineWeihe_03 == FALSE) {
+		ShrineWeihe_03 = TRUE;
+	} else if (Npc_GetDistToWP(hero, "WP_NW_SHRINE_02") < 2000)
+	&& (ShrineWeihe_04 == FALSE) {
+		ShrineWeihe_04 = TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_TAVERNE_TROLLAREA_11_A") < 2000)
+	&& (ShrineWeihe_05 == FALSE) {
+		ShrineWeihe_05 = TRUE;
+	} else if (Npc_GetDistToWP(hero, "WP_NW_SHRINE_03") < 2000)
+	&& (ShrineWeihe_06 == FALSE) {
+		ShrineWeihe_06 = TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_BIGMILL_MALAKSVERSTECK_02") < 2000)
+	&& (ShrineWeihe_07 == FALSE) {
+		ShrineWeihe_07 = TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_MONASTERY_CHAPELL_02") < 2000)
+	&& (ShrineWeihe_08 == FALSE) {
+		ShrineWeihe_08 = TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_SHRINE_01") < 2000)
+	&& (ShrineWeihe_09 == FALSE) {
+		ShrineWeihe_09 = TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_TROLLAREA_PATH_04") < 2000)
+	&& (ShrineWeihe_10 == FALSE) {
+		ShrineWeihe_10 = TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_TROLLAREA_PATH_66_MONSTER") < 2000)
+	&& (ShrineWeihe_11 == FALSE) {
+		ShrineWeihe_11 = TRUE;
+	} else if (Npc_GetDistToWP(hero, "NW_TROLLAREA_PATH_37") < 2000)
+	&& (ShrineWeihe_12 == FALSE) {
+		ShrineWeihe_12 = TRUE;
+	} else if (Npc_GetDistToWP(hero, "REL_129") < 2000)
+	&& (ShrineWeihe_13 == FALSE) {
+		ShrineWeihe_13 = TRUE;
+	};
+};
+
 FUNC VOID C_IsShrineObsessed (var C_NPC slf)
 {
 	if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(hero))
@@ -765,7 +866,7 @@ INSTANCE PC_PrayShrine_BlessSword (C_Info)
 FUNC INT PC_PrayShrine_BlessSword_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
-	&& (Npc_GetDistToWP (hero,"FEUERSCHREIN") <= 5000)
+	&& (Npc_GetDistToWP (hero, "FEUERSCHREIN") <= 5000)
 	&& ((Npc_HasItems (hero,ItMw_1H_Blessed_01) >= 1)
 	|| (Npc_HasItems (hero,ItMw_2H_Blessed_01) >= 1))
 	&& (Npc_HasItems(hero, ItMi_OrnamentEffekt_BIGFARM_Addon) == 4)
@@ -827,7 +928,8 @@ FUNC INT PC_PrayShrine_BlessSword_01_Condition ()
 	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Harad_AndreVermaechtnis6))
 	&& (Npc_HasItems(hero, ItSc_Light) >= 1)
-	&& (Wld_IsTime(11,30,12,30))
+	&& (Wld_IsTime(11,00,13,00))
+	&& (C_IsShrineReadyForWeihe())
 	{	
 		return TRUE;
 	};
@@ -843,6 +945,8 @@ FUNC VOID PC_PrayShrine_BlessSword_01_Info()
 	Snd_Play ("MFX_TELEPORT_CAST");
 
 	Npc_RemoveInvItems  (hero, ItSc_Light, 1);
+	
+	B_UsedShrineForWeihe();
 }; 
 
 INSTANCE PC_PrayShrine_BlessSword_02 (C_Info)
@@ -862,7 +966,8 @@ FUNC INT PC_PrayShrine_BlessSword_02_Condition ()
 	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1))
 	&& (Npc_KnowsInfo(hero, PC_PrayShrine_BlessSword_01))
 	&& (Npc_HasItems(hero, ItSc_InstantFireball) >= 1)
-	&& (Wld_IsTime(11,30,12,30))
+	&& (Wld_IsTime(11,00,13,00))
+	&& (C_IsShrineReadyForWeihe())
 	{	
 		return TRUE;
 	};
@@ -878,6 +983,8 @@ FUNC VOID PC_PrayShrine_BlessSword_02_Info()
 	Snd_Play ("MFX_TELEPORT_CAST");
 
 	Npc_RemoveInvItems  (hero, ItSc_InstantFireball, 1);
+	
+	B_UsedShrineForWeihe();
 }; 
 
 INSTANCE PC_PrayShrine_BlessSword_03 (C_Info)
@@ -897,7 +1004,8 @@ FUNC INT PC_PrayShrine_BlessSword_03_Condition ()
 	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1))
 	&& (Npc_KnowsInfo(hero, PC_PrayShrine_BlessSword_02))
 	&& (Npc_HasItems(hero, ItSc_Firestorm) >= 1)
-	&& (Wld_IsTime(11,30,12,30))
+	&& (Wld_IsTime(11,00,13,00))
+	&& (C_IsShrineReadyForWeihe())
 	{	
 		return TRUE;
 	};
@@ -913,6 +1021,8 @@ FUNC VOID PC_PrayShrine_BlessSword_03_Info()
 	Snd_Play ("MFX_TELEPORT_CAST");
 
 	Npc_RemoveInvItems  (hero, ItSc_Firestorm, 1);
+	
+	B_UsedShrineForWeihe();
 }; 
 
 INSTANCE PC_PrayShrine_BlessSword_04 (C_Info)
@@ -932,7 +1042,8 @@ FUNC INT PC_PrayShrine_BlessSword_04_Condition ()
 	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1))
 	&& (Npc_KnowsInfo(hero, PC_PrayShrine_BlessSword_03))
 	&& (Npc_HasItems(hero, ItSc_SumGol) >= 1)
-	&& (Wld_IsTime(11,30,12,30))
+	&& (Wld_IsTime(11,00,13,00))
+	&& (C_IsShrineReadyForWeihe())
 	{	
 		return TRUE;
 	};
@@ -948,6 +1059,8 @@ FUNC VOID PC_PrayShrine_BlessSword_04_Info()
 	Snd_Play ("MFX_TELEPORT_CAST");
 
 	Npc_RemoveInvItems  (hero, ItSc_SumGol, 1);
+	
+	B_UsedShrineForWeihe();
 }; 
 
 INSTANCE PC_PrayShrine_BlessSword_05 (C_Info)
@@ -967,7 +1080,8 @@ FUNC INT PC_PrayShrine_BlessSword_05_Condition ()
 	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1))
 	&& (Npc_KnowsInfo(hero, PC_PrayShrine_BlessSword_04))
 	&& (Npc_HasItems(hero, ItSc_Firerain) >= 1)
-	&& (Wld_IsTime(11,30,12,30))
+	&& (Wld_IsTime(11,00,13,00))
+	&& (C_IsShrineReadyForWeihe())
 	{	
 		return TRUE;
 	};
@@ -1004,6 +1118,8 @@ FUNC VOID PC_PrayShrine_BlessSword_05_Info()
 
 		B_Göttergefallen(1, 5);
 	};
+	
+	B_UsedShrineForWeihe();
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_INNOSKLINGE, "Es ist geschafft. Und das Schwert ist tatsächlich noch mächtiger geworden.");
 }; 
