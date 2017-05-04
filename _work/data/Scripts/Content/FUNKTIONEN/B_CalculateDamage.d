@@ -495,9 +495,12 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Warg_Atalante))
 			{
-				B_RemoveNpc	(Warg_Atalante);
-
-				Wld_InsertNpc	(Mod_7678_OUT_Atalante_NW, "NW_FOREST_PATH_31_NAVIGATION3");
+				Wld_InsertNpc	(Mod_7678_OUT_Atalante_NW, "WARG_ATALANTE");
+				Npc_ClearAIQueue(Warg_Atalante);
+				AI_StandUP(Warg_Atalante);
+				AI_Teleport(Warg_Atalante, "TOT");
+				//B_RemoveNpc	(Warg_Atalante);
+				return;
 			};
 		};
 

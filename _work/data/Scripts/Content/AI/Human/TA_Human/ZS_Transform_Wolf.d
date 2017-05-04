@@ -42,11 +42,11 @@ func void zs_Transform_Wolf_end()
 
 		Npc_ClearAIQueue	(self);
 		AI_StandUP	(self);
+		AI_StandUPQuick	(self);
 
 		AI_Teleport (self, "TOT");
 		Npc_ExchangeRoutine (self, "TOT");
 		AI_Teleport (self, "TOT");
-		//Npc_ChangeAttribute (self, ATR_HITPOINTS, -self.attribute[ATR_HITPOINTS_MAX]);
 
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_104_BAU_Rega_NW))
 		{
@@ -62,7 +62,7 @@ func void zs_Transform_Wolf_end()
 		}
 		else if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7678_OUT_Atalante_NW))
 		{
-			Wld_InsertNpc (Warg_Atalante2, wp);
+			Wld_InsertNpc (Warg_Atalante2, "MOD_7678_OUT_ATALANTE_NW");
 		};
 	};
 };

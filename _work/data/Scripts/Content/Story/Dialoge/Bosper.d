@@ -239,8 +239,6 @@ FUNC VOID Info_Mod_Bosper_Felle_Info()
 
 	B_GivePlayerXP	(200);
 
-	//Mod_LehrlingsStimmen	=	Mod_LehrlingsStimmen + 1;
-
 	CurrentNQ += 1;
 };
 

@@ -692,48 +692,56 @@ func void CheckRespawns() {
 	};
 	var int array; array = 0;
 	var int arrayPos; arrayPos = MEM_StackPos.position;
-		var int nextRespawnIndex;
-		if (array == 0) {
-			nextRespawnIndex = nextRespawnIndex1;
-		} else if (array == 1) {
-			nextRespawnIndex = nextRespawnIndex2;
-		} else if (array == 2) {
-			nextRespawnIndex = nextRespawnIndex3;
-		} else if (array == 3) {
-			nextRespawnIndex = nextRespawnIndex4;
-		} else if (array == 4) {
-			nextRespawnIndex = nextRespawnIndex5;
-		};
 		var int i; i = 0; // Das mag verwirren, aber ich baue bloß eine Schleife in Daedalus. Mit dem neuen Ikarus-Release geht das auch wesentlich schöner. 
 		var int pos; pos = MEM_StackPos.position; // Stellt euch einfach vor, das hier wäre eine While(1)-Schleife. Zur Übersicht habe ich eingerückt.
 		
-			var int hndl;
+			var int nextRespawnIndex;
 			if (array == 0) {
-				hndl = MEM_ReadStatArr(RespawnArray1, i); // hndl = RespawnArray[i];
+				nextRespawnIndex = nextRespawnIndex1;
 			} else if (array == 1) {
-				hndl = MEM_ReadStatArr(RespawnArray2, i); // hndl = RespawnArray[i];
+				nextRespawnIndex = nextRespawnIndex2;
 			} else if (array == 2) {
-				hndl = MEM_ReadStatArr(RespawnArray3, i); // hndl = RespawnArray[i];
+				nextRespawnIndex = nextRespawnIndex3;
 			} else if (array == 3) {
-				hndl = MEM_ReadStatArr(RespawnArray4, i); // hndl = RespawnArray[i];
+				nextRespawnIndex = nextRespawnIndex4;
 			} else if (array == 4) {
-				hndl = MEM_ReadStatArr(RespawnArray5, i); // hndl = RespawnArray[i];
+				nextRespawnIndex = nextRespawnIndex5;
 			};
-			var RespawnObject myRespawnObject; myRespawnObject = get(hndl);
-			
-			//Jetzt haben wir unser Objekt!
-			if (STR_Len(myRespawnObject.wp) == 0) {
-				RemoveRespawnObject(hndl, array, i);
-			} else if (myRespawnObject.chapter < Kapitel && myRespawnObject.area == CurrentLevel) {
-				var int newInst; newInst = myRespawnObject.id;
-				newInst = MapRespawnInstance(newInst);
-				if (newInst != -1) {
-					Wld_InsertNpc(newInst, myRespawnObject.wp);
+			if (nextRespawnIndex > 0) {
+				var int hndl;
+				if (array == 0) {
+					hndl = MEM_ReadStatArr(RespawnArray1, i); // hndl = RespawnArray[i];
+				} else if (array == 1) {
+					hndl = MEM_ReadStatArr(RespawnArray2, i); // hndl = RespawnArray[i];
+				} else if (array == 2) {
+					hndl = MEM_ReadStatArr(RespawnArray3, i); // hndl = RespawnArray[i];
+				} else if (array == 3) {
+					hndl = MEM_ReadStatArr(RespawnArray4, i); // hndl = RespawnArray[i];
+				} else if (array == 4) {
+					hndl = MEM_ReadStatArr(RespawnArray5, i); // hndl = RespawnArray[i];
 				};
-				RemoveRespawnObject(hndl, array, i);
-			} else {
-				i += 1; // Falls ich ein Objekt gelöscht habe, muss ich den selben Index nochmal lesen.
-			};	
+				if (Hlp_IsValidHandle(hndl)) {
+					PrintDebug("CheckRespawns Valid");
+					var RespawnObject myRespawnObject; myRespawnObject = get(hndl);
+					
+					//Jetzt haben wir unser Objekt!
+					if (STR_Len(myRespawnObject.wp) == 0) {
+						RemoveRespawnObject(hndl, array, i);
+					} else if (myRespawnObject.chapter < Kapitel && myRespawnObject.area == CurrentLevel) {
+						var int newInst; newInst = myRespawnObject.id;
+						newInst = MapRespawnInstance(newInst);
+						if (newInst != -1) {
+							Wld_InsertNpc(newInst, myRespawnObject.wp);
+						};
+						RemoveRespawnObject(hndl, array, i);
+					} else {
+						i += 1; // Falls ich ein Objekt gelöscht habe, muss ich den selben Index nochmal lesen.
+					};
+				} else {
+					PrintDebug("CheckRespawns Invalid");
+					RemoveRespawnObject(hndl, array, i);
+				};
+			};
 		if (i < nextRespawnIndex) { // Wenn i größer oder gleich dem nextRespawnIndex ist, haben wir das Array komplett durchlaufen.
 			MEM_StackPos.position = pos;
 		};
@@ -759,7 +767,6 @@ func void AddToRespawnArray(var c_npc slf) {
 	myRespawnObject.wp = slf.wp;
 	myRespawnObject.chapter = Kapitel;
 	myRespawnObject.area = CurrentLevel;
-	PrintDebug(ConcatStrings("Respawn: wp = ", slf.wp));
 	
 	if (STR_Len(myRespawnObject.wp) == 0) {
 		delete(hndl);
