@@ -174,7 +174,7 @@ INSTANCE Bolzenspitze_GoldErzBlut(C_Item)
 
 INSTANCE Pfeilstab(C_Item)
 {	
-	name 					=	"Pfeilstab";
+	name 					=	"Pfeilschaft";
 	
 	mainflag 				=	ITEM_KAT_NONE;
 	flags 					=	ITEM_MISSION|ITEM_MULTI;	

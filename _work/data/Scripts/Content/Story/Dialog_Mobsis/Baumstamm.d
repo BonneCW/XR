@@ -226,6 +226,7 @@ FUNC INT PC_Baumstamm_SchwererAst_Condition()
 {
 	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Baumstamm)
 	&& (Saegen == FALSE)
+	&& (Npc_HasItems(hero, ItMw_1h_Bau_Mace) > 0)
 	{
 		return 1;
 	};
@@ -252,7 +253,7 @@ INSTANCE PC_Baumstamm_Pfeile (C_INFO)
 	information	= PC_Baumstamm_Pfeile_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= "Pfeilstab schnitzen";
+	description	= "Pfeilschaft schnitzen";
 };
 
 FUNC INT PC_Baumstamm_Pfeile_Condition()
@@ -260,6 +261,7 @@ FUNC INT PC_Baumstamm_Pfeile_Condition()
 	if (PLAYER_MOBSI_PRODUCTION == MOBSI_Baumstamm)
 	&& (Saegen == FALSE)
 	&& (Mod_PfeileSchnitzen	== 1)
+	&& (Npc_HasItems(hero, ItMi_Ast) > 0)
 	{
 		return 1;
 	};
@@ -273,7 +275,7 @@ FUNC VOID PC_Baumstamm_Pfeile_Info()
 	Npc_RemoveInvItems	(hero, ItMi_Ast, AstAnzahl);
 	CreateInvItems	(hero, Pfeilstab, AstAnzahl);
 
-	Print (ConcatStrings(IntToString(AstAnzahl), " Pfeilstäbe geschnitzt!"));
+	Print (ConcatStrings(IntToString(AstAnzahl), " Pfeilschäfte geschnitzt!"));
 
 	B_ENDPRODUCTIONDIALOG();
 };

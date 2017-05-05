@@ -492,7 +492,7 @@ FUNC VOID Info_Mod_Bosper_LehrlingQuest_Info()
 	CurrentNQ += 1;
 
 	Log_CreateTopic	(TOPIC_MOD_PFEILE, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_PFEILE, "Ich kann jetzt aus einer Pfeilspitze und einem Pfeilstab einen Pfeil mit Widerhaken herstellen. Dieser Pfeil trifft nicht so häufig, reißt aber dafür tiefere Wunden.");
+	B_LogEntry	(TOPIC_MOD_PFEILE, "Ich kann jetzt aus einer Pfeilspitze und einem Pfeilschaft einen Pfeil mit Widerhaken herstellen. Dieser Pfeil trifft nicht so häufig, reißt aber dafür tiefere Wunden.");
 
 	B_SetTopicStatus	(TOPIC_MOD_LEHRLING_BOSPER_ONE, LOG_SUCCESS);
 };
@@ -1069,7 +1069,7 @@ FUNC VOID Info_Mod_Bosper_Schnitzen_Info()
 	Mod_PfeileSchnitzen	=	1;
 
 	Log_CreateTopic	(TOPIC_MOD_PFEILE, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_PFEILE, "Um Pfeile herzustellen benötige ich Pfeilstäbe. Diese kann ich mir aus Ästen zurechtsägen.");
+	B_LogEntry	(TOPIC_MOD_PFEILE, "Um Pfeile herzustellen benötige ich Pfeilschäfte. Diese kann ich mir aus Ästen zurechtsägen. Danach muss ich sie am Amboss mit Pfeilspitzen kombinieren. Selbes gilt für Bolzen.");
 };
 
 INSTANCE Info_Mod_Bosper_Spitzen (C_INFO)
