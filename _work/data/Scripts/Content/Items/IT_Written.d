@@ -4251,7 +4251,26 @@ INSTANCE ItWr_KimonsBeleg		(C_Item)
 
 	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
 	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseKimonsBeleg;
+	scemeName			=	"MAP";
 	description			= 	"Beleg von Kimon";
+};
+func void UseKimonsBeleg ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		()			  ;							// DocManager
+					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline  			); 	// -1 -> all pages
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLines	( nDocID,  0, "Beleg über den Verkauf von 50 Weintrauben zu einem Stückpreis von 20 Goldmünzen. Gesamtpreis entspricht 1.000 Goldmünzen. Zu Zahlen von Feuermagier Serpentes."					);
+
+					Doc_Show		( nDocID );
+
 };
 
 INSTANCE AL_PfeilNachricht		(C_Item)
