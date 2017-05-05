@@ -143,6 +143,7 @@ func int C_DropUnconscious()
 	&& (Mod_Mario == 6))
 	|| ((Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7654_OUT_Alkor_REL))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Alkor_Wasserleichen)))
+	|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(GardeBeliars_1989_Drach))
 	{
 		return FALSE;
 	};
@@ -344,6 +345,7 @@ func int C_DropUnconscious2(var C_NPC slf, var C_NPC oth)
 	&& (Mod_Mario == 6))
 	|| ((Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_7654_OUT_Alkor_REL))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Alkor_Wasserleichen)))
+	|| (Hlp_GetInstanceID(oth) == Hlp_GetInstanceID(GardeBeliars_1989_Drach))
 	{
 		return FALSE;
 	};

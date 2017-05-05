@@ -1036,6 +1036,10 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 				};
 			};
 		};
+		if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(GardeBeliars_1989_Drach))
+		&& (!Npc_KnowsInfo(hero, Info_Mod_Drach_AtAlmanach)) {
+			damage = opfer.attribute[ATR_HITPOINTS] - 10;
+		};
 	};
 	
 	if (damage == -1) { // damage == -1 means explicit no damage
