@@ -931,6 +931,7 @@ FUNC VOID NEBENQUESTS()
 			CreateInvItems	(Mod_595_MIL_Mario_NW, ItAr_PAL_M, 1);
 
 			AI_EquipArmor	(Mod_595_MIL_Mario_NW, ItAr_Pal_M);
+			AI_EquipBestArmor	(Mod_595_MIL_Mario_NW);
 
 			B_StartOtherRoutine	(Mod_595_MIL_Mario_NW, "RITTER");
 			B_StartOtherRoutine	(Mod_500_PAL_Garond_NW, "MARIO");
