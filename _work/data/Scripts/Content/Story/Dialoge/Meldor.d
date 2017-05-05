@@ -78,6 +78,9 @@ FUNC VOID Info_Mod_Meldor_Hilfe_Ja()
 	Info_ClearChoices	(Info_Mod_Meldor_Hilfe);
 
 	AI_StopProcessInfos	(self);
+	
+	B_StartOtherRoutine(self, "MILIZ");
+	B_StartOtherRoutine(Mod_543_MIL_Picasso_NW, "MILIZ");
 };
 
 FUNC VOID Info_Mod_Meldor_Hilfe_Nein()
@@ -85,9 +88,14 @@ FUNC VOID Info_Mod_Meldor_Hilfe_Nein()
 	AI_Output(hero, self, "Info_Mod_Meldor_Hilfe_Nein_15_00"); //Nein, mach dein Zeug alleine!
 	AI_Output(self, hero, "Info_Mod_Meldor_Hilfe_Nein_07_01"); //Wie du meinst, aber du hast dir gerade eine groﬂe Chance entgehen lassen.
 
+	CreateInvItems	(self, ItMi_HerbPaket, 1);
+
 	Info_ClearChoices	(Info_Mod_Meldor_Hilfe);
 
 	AI_StopProcessInfos	(self);
+	
+	B_StartOtherRoutine(self, "MILIZ");
+	B_StartOtherRoutine(Mod_543_MIL_Picasso_NW, "MILIZ");
 };
 
 INSTANCE Info_Mod_Meldor_PaketSicher (C_INFO)

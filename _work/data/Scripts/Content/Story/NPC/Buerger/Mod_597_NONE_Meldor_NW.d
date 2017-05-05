@@ -59,3 +59,9 @@ FUNC VOID Rtn_LobartAlwin_597 ()
 	TA_Smalltalk_Plaudern	(08,00,20,00,"WP_ALWIN_SEQUENZ");
 	TA_Smalltalk_Plaudern	(20,00,08,00,"WP_ALWIN_SEQUENZ");
 };
+
+FUNC VOID Rtn_Miliz_597 ()
+{
+	TA_Smalltalk	(08,00,20,00,"WP_CITY_MELDOR");
+	TA_Smalltalk	(20,00,08,00,"WP_CITY_MELDOR");
+};

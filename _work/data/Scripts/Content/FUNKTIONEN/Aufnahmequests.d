@@ -255,6 +255,28 @@ FUNC VOID Aufnahmequests ()
 			B_StartOtherRoutine	(Mod_1194_NOV_Novize_NW, "START");
 			B_StartOtherRoutine	(Mod_1195_NOV_Novize_NW, "START");
 		};
+		
+		// Meldors Sumpfkrautpaket
+		
+		if (Npc_KnowsInfo(hero, Info_Mod_Meldor_Hilfe))
+		&& (Mob_HasItems("CHEST_ANDRE_WAREHOUSE_PACKET", ItMi_HerbPaket) == 1)
+		&& (!Mod_Meldor_Save) {
+			Mod_Meldor_Save = TRUE;
+			
+			B_StartOtherRoutine(Mod_597_NONE_Meldor_NW, "START");
+			B_StartOtherRoutine(Mod_543_MIL_Picasso_NW, "START");
+		};
+		
+		if (Npc_KnowsInfo(hero, Info_Mod_Meldor_Hilfe))
+		&& (Npc_HasItems(Mod_597_NONE_Meldor_NW, ItMi_HerbPaket) == 1)
+		&& (Npc_GetDistToWP(hero, "WP_CITY_MELDOR") < 3000)
+		&& (!Mod_MeldorVerpfiffen) {			
+			Mod_MeldorVerpfiffen = 1;
+
+			AI_Teleport	(Mod_597_NONE_Meldor_NW, "NW_CITY_HABOUR_KASERN_HALVOR");
+
+			B_StartOtherRoutine	(Mod_597_NONE_Meldor_NW, "GEFANGEN");
+		};
 	};
 
 	// Schrein entweihen

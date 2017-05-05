@@ -30,3 +30,9 @@ FUNC VOID Rtn_Start_543()
 	TA_Stand_Drinking	(12,30,13,00,"NW_CITY_HABOUR_KASERN_18");
 	TA_Stand_Guarding	(13,00,01,00,"NW_CITY_HABOUR_KASERN_18");
 };
+
+FUNC VOID Rtn_Miliz_543()
+{
+	TA_Smalltalk	(08,00,20,00,"WP_CITY_MELDOR");
+	TA_Smalltalk  	(20,00,08,30,"WP_CITY_MELDOR");
+};

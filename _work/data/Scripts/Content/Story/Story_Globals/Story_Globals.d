@@ -45,6 +45,7 @@ var int Bosskampf_Pass_NW;
 
 var int Mod_SleeperHint;
 var int Mod_Treffen_Ende;
+var int Mod_Meldor_Save;
 var int Mod_Uriziel_Background;
 var int Mod_Uriziel_Frame;
 var int Mod_Uriziel_Piece1;
