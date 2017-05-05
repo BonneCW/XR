@@ -1047,6 +1047,13 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	} else if (damage < 5) { // min damage
 		damage = 5;
 	};
+	
+	if (damage > 0) {
+		if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(hero))
+		&& (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(Mod_1872_NONE_Unbekannt_MT)) {
+			damage = 1;
+		};
+	};
 
 	B_MagicHurtNpc	(taeter, opfer, damage);
 };
