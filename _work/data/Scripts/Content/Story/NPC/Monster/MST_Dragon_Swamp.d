@@ -84,3 +84,14 @@ INSTANCE Dragon_Swamp	(Mst_Default_Dragon_Swamp)
 
 	bodyStateInterruptableOverride = TRUE;
 };
+
+INSTANCE SwampDragon	(Mst_Default_Dragon_Swamp)
+{
+	name		=	"Sumpfdrache";
+	//flags				   			= 	NPC_FLAG_IMMORTAL;
+	fight_tactic	=	FAI_DRAGON;
+	B_SetVisuals_Dragon_Swamp();
+	Npc_SetToFistMode(self);
+
+	bodyStateInterruptableOverride = TRUE;
+};

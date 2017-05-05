@@ -8531,46 +8531,46 @@ FUNC VOID STARTUP_Relendel()
 
 	// Moor
 
-	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_054");
+	Wld_InsertNpc	(SwampZombie_Moor2,	"REL_MOOR_054");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_041");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_046");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_026");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_037");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_059");
-	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_064");
+	Wld_InsertNpc	(SwampZombie_Moor2,	"REL_MOOR_064");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_068");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_072");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_077");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_082");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_117");
-	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_123");
+	Wld_InsertNpc	(SwampZombie_Moor2,	"REL_MOOR_123");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_127");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_087");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_091");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_095");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_057");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_039");
-	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_085");
+	Wld_InsertNpc	(SwampZombie_Moor2,	"REL_MOOR_085");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_054");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_041");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_046");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_026");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_037");
-	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_059");
+	Wld_InsertNpc	(SwampZombie_Moor2,	"REL_MOOR_059");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_064");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_068");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_072");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_077");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_082");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_117");
-	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_123");
+	Wld_InsertNpc	(SwampZombie_Moor2,	"REL_MOOR_123");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_127");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_087");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_091");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_095");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_057");
 	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_039");
-	Wld_InsertNpc	(SwampZombie_Moor,	"REL_MOOR_085");
+	Wld_InsertNpc	(SwampZombie_Moor2,	"REL_MOOR_085");
 
 	Wld_InsertNpc	(WilderApfelbaum,	"FP_ROAM_MOOR_WILDERAPFELBAUM_01");
 	Wld_InsertNpc	(WilderApfelbaum,	"FP_ROAM_MOOR_WILDERAPFELBAUM_02");
@@ -8596,6 +8596,19 @@ FUNC VOID STARTUP_Relendel()
 	Wld_InsertNpc	(Alraune_Moor,	"FP_ROAM_ALRAUNE_LOMAR_01");
 	Wld_InsertNpc	(Alraune_Moor,	"FP_ROAM_ALRAUNE_LOMAR_02");
 	Wld_InsertNpc	(Alraune_Moor,	"FP_ROAM_ALRAUNE_LOMAR_03");
+
+	Wld_InsertNpc	(SwampDragon,	"FP_SWAMPDRAGON_01");
+
+	Wld_InsertNpc	(Skeleton_Lord_Ghost,	"FP_GHOST_01");
+	Wld_InsertNpc	(Skeleton_Lord_Ghost,	"FP_GHOST_02");
+	Wld_InsertNpc	(Skeleton_Lord_Ghost,	"FP_GHOST_03");
+	Wld_InsertNpc	(Skeleton_Lord_Ghost,	"FP_GHOST_04");
+	Wld_InsertNpc	(Skeleton_Lord_Ghost,	"FP_GHOST_05");
+	Wld_InsertNpc	(Skeleton_Lord_Ghost,	"FP_GHOST_06");
+	Wld_InsertNpc	(Skeleton_Lord_Ghost,	"FP_GHOST_07");
+	Wld_InsertNpc	(Skeleton_Lord_Ghost,	"FP_GHOST_08");
+	
+	Wld_InsertNpc	(SwampGolem,	"REL_MOOR_119");
 
 	// Rechts vom Pass bis zum Durchgang zum Moor
 

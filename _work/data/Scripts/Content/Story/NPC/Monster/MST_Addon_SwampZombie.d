@@ -51,6 +51,8 @@ PROTOTYPE Mst_Default_SwampZombie(C_Npc)
 	start_aistate				= ZS_MM_AllScheduler;
 
 	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
+
+	CreateInvItems	(self, ItFoMuttonZombie, 1);
 };
 
 
@@ -72,6 +74,17 @@ func void B_SetVisuals_SwampZombie()
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
 	Mdl_SetVisualBody 		(self,	"Zom_Body",		1,			rnd,			"Zom_Head", 5+rnd2,  		DEFAULT,	-1);
 };
+func void B_SetVisuals_SwampZombie2()
+{
+	var int rnd;
+	rnd = Hlp_Random(2);
+	var int rnd2;
+	rnd2 = Hlp_Random(2) + 2*rnd;
+
+	Mdl_SetVisual			(self,	"SwampZombie.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody 		(self,	"Zom_Body",		1,			rnd,			"Zom_Head", 5+rnd2,  		DEFAULT,	ItAr_Hum_Dht2S_Armor);
+};
 
 //***********
 //	Zombie01   
@@ -86,5 +99,11 @@ INSTANCE SwampZombie		(Mst_Default_SwampZombie)
 INSTANCE SwampZombie_Moor		(Mst_Default_SwampZombie)
 {
 	B_SetVisuals_SwampZombie();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE SwampZombie_Moor2		(Mst_Default_SwampZombie)
+{
+	B_SetVisuals_SwampZombie2();
 	Npc_SetToFistMode(self);
 };
