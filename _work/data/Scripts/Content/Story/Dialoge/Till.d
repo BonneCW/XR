@@ -242,6 +242,11 @@ FUNC INT Info_Mod_Till_InnosNase3_Condition()
 	&& (Npc_RefuseTalk(self) == FALSE)
 	&& (Npc_GetDistToWP(hero, "NW_CITY_CONNECT_FOREST") > 1500)
 	&& (Npc_GetDistToWP(hero, "WP_ASSASSINE_03") > 1500)
+	&& (Npc_GetDistToWP(hero, "WP_ASSASSINE_01") > 1500)
+	&& (Npc_GetDistToWP(hero, "NW_CITY_TO_LIGHTHOUSE_04") > 1500)
+	&& (Npc_GetDistToWP(hero, "NW_CITY_TO_LIGHTHOUSE_03") > 1500)
+	&& (Npc_GetDistToWP(hero, "NW_CITY_TO_LIGHTHOUSE_02") > 1500)
+	&& (Npc_GetDistToWP(hero, "NW_CITY_TO_LIGHTHOUSE_01") > 1500)
 	{
 		return 1;
 	};
