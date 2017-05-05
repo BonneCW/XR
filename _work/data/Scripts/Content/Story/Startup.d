@@ -3352,6 +3352,13 @@ FUNC VOID INIT_AddonWorld ()
 		B_Kapitelwechsel (2, ADDONWORLD_ZEN);
 		B_StartOtherRoutine	(Mod_1723_MIL_Gidan_NW, "ANDRE");
 	};
+	
+	if (Npc_KnowsInfo(hero, Info_Mod_Brunhild_DI_Hi))
+	&& (!Mod_Brunhild_AW) {
+		Mod_Brunhild_AW = TRUE;
+		
+		Wld_InsertNpc(Mod_100000_OUT_Brunhild_AW, "STRAND");
+	};
 	// ------ INITS der Unter-Parts ------ 
 
 	OldLevel(ADDONWORLD_ZEN);
