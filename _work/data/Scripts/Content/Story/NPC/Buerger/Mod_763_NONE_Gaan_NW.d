@@ -40,17 +40,23 @@ instance Mod_763_NONE_Gaan_NW (Npc_Default)
 FUNC VOID Rtn_PreStart_763 ()
 {	
 	TA_Stand_ArmsCrossed 		 (08,00,22,00,"NW_FARM3_PATH_LEVELCHANGE_02");	 
-    	TA_Stand_ArmsCrossed		 (22,00,08,00,"NW_FARM3_PATH_LEVELCHANGE_02");
+    TA_Stand_ArmsCrossed		 (22,00,08,00,"NW_FARM3_PATH_LEVELCHANGE_02");
 };
 
 FUNC VOID Rtn_Ornament_763 ()
 {	
 	TA_Stand_ArmsCrossed 		 (08,00,22,00,"NW_PASS_GATE_01");	 
-    	TA_Stand_ArmsCrossed		 (22,00,08,00,"NW_PASS_GATE_01");
+    TA_Stand_ArmsCrossed		 (22,00,08,00,"NW_PASS_GATE_01");
+};
+
+FUNC VOID Rtn_Unheil_763 ()
+{	
+	TA_Stand_Drinking 		 (08,00,22,00,"NW_TAVERNE_IN_01");	 
+    TA_Stand_Drinking		 (22,00,08,00,"NW_TAVERNE_IN_01");
 };
 
 FUNC VOID Rtn_Snapper_763 ()
 {	
 	TA_RunToWP 		 (08,00,22,00,"NW_PASS_06");	 
-    	TA_RunToWP		 (22,00,08,00,"NW_PASS_06");
+    TA_RunToWP		 (22,00,08,00,"NW_PASS_06");
 };

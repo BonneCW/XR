@@ -1218,7 +1218,10 @@ FUNC INT Info_Mod_Saturas_AW_Member_26_Condition()
 };
 
 FUNC VOID Info_Mod_Saturas_AW_Member_26_Info()
-{
+{			
+	B_StartOtherRoutine	(Mod_763_NONE_Gaan_NW, "PRESTART");
+	B_StartOtherRoutine	(Mod_4026_NONE_Kuno_NW, "START");
+	
 	if (Mod_WM_CronosAttack == 3)
 	{
 		AI_Output(self, hero, "Info_Mod_Saturas_AW_Member_26_14_00"); //Unglaublich. Die Bedrohung ist tatsächlich gebannt. Monstern und Ungetümen hast du getrotzt und die Stirn geboten.

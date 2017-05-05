@@ -39,9 +39,15 @@ INSTANCE Mod_4026_NONE_Kuno_NW (Npc_Default)
 FUNC VOID Rtn_Start_4026 ()
 {	
 	TA_Stand_Eating		(08,00,09,00,"WAY_PASS_MILL_07");
-    	TA_Angeln		(09,00,11,30,"WAY_PASS_MILL_05");	
+    TA_Angeln			(09,00,11,30,"WAY_PASS_MILL_05");	
 	TA_Stand_Eating		(11,30,12,00,"WAY_PASS_MILL_07");
 	TA_Stand_Drinking	(12,00,12,30,"WAY_PASS_MILL_07");
-    	TA_Angeln		(12,30,22,00,"WAY_PASS_MILL_05");			
-	TA_Sleep		(22,00,08,00,"WAY_PASS_MILL_08");
+    TA_Angeln			(12,30,22,00,"WAY_PASS_MILL_05");			
+	TA_Sleep			(22,00,08,00,"WAY_PASS_MILL_08");
+};
+
+FUNC VOID Rtn_Unheil_4026 ()
+{	
+	TA_Stand_Drinking 	(08,00,22,00,"NW_TAVERNE_IN_01");	 
+    TA_Stand_Drinking	(22,00,08,00,"NW_TAVERNE_IN_01");
 };

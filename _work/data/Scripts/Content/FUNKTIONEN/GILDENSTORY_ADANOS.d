@@ -355,6 +355,9 @@ FUNC VOID GILDENSTORY_ADANOS()
 
 				B_StartOtherRoutine	(Mod_1420_BAU_Bauer_NW, "KAMERATALK");
 				B_StartOtherRoutine	(Mod_1421_BAU_Bauer_NW, "KAMERATALK");
+				
+				B_StartOtherRoutine	(Mod_763_NONE_Gaan_NW, "UNHEIL");
+				B_StartOtherRoutine	(Mod_4026_NONE_Kuno_NW, "UNHEIL");
 
 				Wld_InsertNpc	(Balrog_Plateau, "WP_ADANOS_BALROG");
 
