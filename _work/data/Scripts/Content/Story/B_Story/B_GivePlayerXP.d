@@ -67,6 +67,10 @@ func void B_GivePlayerXP (var int add_xp)
 	// Bonus-EXP dazuzählen
 
 	add_xp += (bonuspercent * add_xp) / 100;
+	
+	if (add_xp <= 0) {
+		return;
+	};
 
 	//----------------------------------------------------------------------------
 	hero.exp = hero.exp + add_xp;
