@@ -9,7 +9,7 @@ instance Mod_924_RIT_Sergio_NW (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);																	
+	B_SetAttributesToChapter (self, 4);																	
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
