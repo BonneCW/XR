@@ -423,6 +423,8 @@ FUNC VOID Info_Mod_Eremit_Prisma6_Info()
 	Wld_InsertItem	(ItMi_Magieprisma_Fake, "FP_ITEM_MAGIEPRISMA");
 
 	Wld_PlayEffect ("SPELLFX_PRISMA", ItMi_Magieprisma_Fake, ItMi_Magieprisma_Fake, 0, 0, 0, FALSE);
+	
+	Wld_SendTrigger("PRSIMAMOVER");
 };
 
 INSTANCE Info_Mod_Eremit_Prisma7 (C_INFO)
@@ -585,6 +587,8 @@ FUNC VOID Info_Mod_Eremit_Prisma9_Info()
 	B_StartOtherRoutine	(self, "START");
 
 	self.aivar[AIV_Partymember] = FALSE;
+	
+	Wld_SendUnTrigger("PRSIMAMOVER");
 };
 
 INSTANCE Info_Mod_Eremit_ScrollJG (C_INFO)
