@@ -10,7 +10,7 @@ instance Mod_7450_HTR_Ethan_IR (Npc_Default)
 	aivar[AIV_Partymember] 		= TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);																	
+	B_SetAttributesToChapter (self, 5);																	
 	aivar[AIV_ToughGuy]		= TRUE;
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	

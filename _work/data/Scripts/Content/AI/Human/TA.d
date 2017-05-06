@@ -146,6 +146,7 @@ func void TA_Smalltalk_Witze			(var int start_h, var int start_m, var int stop_h
 func void TA_Turn_Harpie			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Turn_Harpie,				waypoint);};
 func void TA_Eingefroren			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Eingefroren,				waypoint);};
 func void TA_Practice_Bow			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Practice_Bow,				waypoint);};
+func void TA_Practice_CrossBow			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Practice_CrossBow,				waypoint);};
 func void TA_Stand_Torch			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Stand_Torch,				waypoint);};
 func void TA_Eremit_Kichern			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Eremit_Kichern,				waypoint);};
 func void TA_Holzspalten			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Holzspalten,				waypoint);};

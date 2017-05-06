@@ -1,8 +1,4 @@
-// **********************
-// NSC macht Bogentraining
-// **********************
-
-func void ZS_Practice_Bow() {
+func void ZS_Practice_CrossBow() {
 	Perception_Set_Normal();
 	
 	B_UseHat (self);
@@ -21,11 +17,9 @@ func void ZS_Practice_Bow() {
 	};
 	
 	self.aivar[AIV_TAPOSITION] = NOTINPOS_WALK;
-	
-	CreateInvItems (self, ItRw_Arrow, 5);
 };
 
-func int ZS_Practice_Bow_loop() {
+func int ZS_Practice_CrossBow_loop() {
 	if (self.aivar[AIV_TAPOSITION] != ISINPOS) {
 		if (Npc_IsOnFP (self, "PRACTICEBOW")) {	
 			AI_AlignToFP (self);
@@ -52,24 +46,25 @@ func int ZS_Practice_Bow_loop() {
 					
 			self.aivar[AIV_TAPOSITION] = ISINPOS;
 		};
-
-		CreateInvItems (self, ItRw_Arrow, 5);
+		   
+	    CreateInvItems (self, ItRw_Bolt, 5);
+		
 		return LOOP_CONTINUE;
 	};
-	
+	        
 	AI_ReadyRangedWeapon (self);
 	AI_Wait(self,3.0);
-	AI_PlayAni		(self,"T_BOWAIM_2_BOWSHOOT");
-	AI_PlayAni		(self,"T_BOWRELOAD");
+	AI_PlayAni		(self,"T_CBOWAIM_2_CBOWSHOOT");
+	AI_PlayAni		(self,"T_CBOWRELOAD");
 	AI_Wait(self,3.0);
-	AI_PlayAni		(self,"T_BOWAIM_2_BOWSHOOT");
-	AI_PlayAni		(self,"T_BOWRELOAD");
+	AI_PlayAni		(self,"T_CBOWAIM_2_CBOWSHOOT");
+	AI_PlayAni		(self,"T_CBOWRELOAD");
 	AI_Wait(self,3.0);
-	AI_PlayAni		(self,"T_BOWAIM_2_BOWSHOOT");
-	AI_PlayAni		(self,"T_BOWRELOAD");
+	AI_PlayAni		(self,"T_CBOWAIM_2_CBOWSHOOT");
+	AI_PlayAni		(self,"T_CBOWRELOAD");
 	AI_Wait(self,3.0);
-	AI_PlayAni		(self,"T_BOWAIM_2_BOWSHOOT");
-	AI_PlayAni		(self,"T_BOWRELOAD");
+	AI_PlayAni		(self,"T_CBOWAIM_2_CBOWSHOOT");
+	AI_PlayAni		(self,"T_CBOWRELOAD");
 	AI_GotoWP		(self, self.wp);
 	AI_AlignToWP    (self);
 	AI_ReadyRangedWeapon (self);
@@ -81,11 +76,11 @@ func int ZS_Practice_Bow_loop() {
 	AI_Wait(self,3.0);
 	AI_GotoWP		(self, self.wp);
 	AI_AlignToWP    (self);
-	        
+
 	return LOOP_CONTINUE;
 };
 
-func void ZS_Practice_Bow_end() {
+func void ZS_Practice_CrossBow_end() {
 	AI_StandUp (self);
-	AI_RemoveWeapon (self);
-};	
+	AI_RemoveWeapon (self); 
+};
