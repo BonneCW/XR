@@ -54,8 +54,8 @@ FUNC VOID Info_Mod_Hyglas_FeuerGegenEis_Info()
 
 	B_KillNpc	(Mod_7786_NOV_Novize_NW);
 
-	Wld_InsertNpc	(IceGolem_FeuerGegenEis_05,	"WP_EISHOEHLE_01");
-	Wld_InsertNpc	(IceGolem_FeuerGegenEis_06,	"WP_EISHOEHLE_01");
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_05,	"WP_EISHOEHLE_05");
+	Wld_InsertNpc	(IceGolem_FeuerGegenEis_06,	"WP_EISHOEHLE_06");
 
 	Wld_InsertNpc	(IceGolem_FeuerGegenEis_07,	"WP_EISHOEHLE_04");
 

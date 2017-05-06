@@ -496,6 +496,7 @@ FUNC VOID Info_Mod_Pyrokar_FeuerGegenEis2_Info()
 	B_StartOtherRoutine	(self, "START");
 	B_StartOtherRoutine	(Mod_552_KDF_Serpentes_NW, "START");
 	B_StartOtherRoutine	(Mod_553_KDF_Ulthar_NW, "START");
+	B_StartOtherRoutine	(Mod_924_RIT_Sergio_NW, "START");
 
 	Npc_SetRefuseTalk	(self, 240);
 

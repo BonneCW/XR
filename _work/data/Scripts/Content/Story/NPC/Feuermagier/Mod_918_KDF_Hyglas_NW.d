@@ -5,11 +5,11 @@ INSTANCE Mod_918_KDF_Hyglas_NW (Npc_Default)
 	guild 		= GIL_VLK;
 	id 			= 918;
 	voice 		= 14;
-	flags       = 0;																	
+	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 5);																
+	B_SetAttributesToChapter (self, 6);																
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;																	
