@@ -451,6 +451,9 @@ FUNC VOID Info_Mod_Pyrokar_FeuerGegenEis_Info()
 	Log_CreateTopic	(TOPIC_MOD_FM_FEUEREIS, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_FM_FEUEREIS, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_FM_FEUEREIS, "Da steh ich also mit Hyglas. Von Sekobs Hof aus strömen durch ein mysteriöses Portal immer mehr Eiswesen nach Khorinis und unsere Jungs sind am See mit ihnen in Kämpfe verwickelt. Es bleibt keine Zeit zu verlieren ihnen zu Hilfe zu eilen.");
+	
+	B_StartOtherRoutine(Mod_104_BAU_Rega_NW, "FEUERGEGENEIS");
+	B_StartOtherRoutine(Mod_1412_BAU_Bauer_NW, "FEUERGEGENEIS");
 };
 
 INSTANCE Info_Mod_Pyrokar_FeuerGegenEis2 (C_INFO)
@@ -497,6 +500,9 @@ FUNC VOID Info_Mod_Pyrokar_FeuerGegenEis2_Info()
 	B_StartOtherRoutine	(Mod_552_KDF_Serpentes_NW, "START");
 	B_StartOtherRoutine	(Mod_553_KDF_Ulthar_NW, "START");
 	B_StartOtherRoutine	(Mod_924_RIT_Sergio_NW, "START");
+	
+	B_StartOtherRoutine(Mod_104_BAU_Rega_NW, "START");
+	B_StartOtherRoutine(Mod_1412_BAU_Bauer_NW, "START");
 
 	Npc_SetRefuseTalk	(self, 240);
 

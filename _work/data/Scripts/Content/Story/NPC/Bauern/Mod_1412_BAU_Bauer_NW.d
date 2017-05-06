@@ -41,3 +41,9 @@ FUNC VOID Rtn_Start_1412 ()
 	TA_Pick_FP			(08,00,22,00,"NW_FARM4_FIELD_02");
     TA_Sit_Campfire		(22,00,08,00,"NW_FARM4_REST_01");
 };
+
+FUNC VOID Rtn_FeuerGegenEis_1412 ()
+{	
+	TA_Sit_Campfire		(08,00,22,00,"NW_FARM4_REST_01");
+    TA_Sit_Campfire		(22,00,08,00,"NW_FARM4_REST_01");
+};

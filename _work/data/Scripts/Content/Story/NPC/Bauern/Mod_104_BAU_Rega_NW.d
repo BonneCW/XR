@@ -77,3 +77,9 @@ FUNC VOID Rtn_Tot_104 ()
 	TA_Stand_WP		(07,00,20,00,"TOT");
 	TA_Stand_WP		(20,00,07,00,"TOT");
 };
+
+FUNC VOID Rtn_FeuerGegenEis_104 ()
+{	
+	TA_Sit_Campfire		(08,00,22,00,"NW_FARM4_REST_02");
+    TA_Sit_Campfire		(22,00,08,00,"NW_FARM4_REST_02");
+};
