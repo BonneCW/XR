@@ -360,13 +360,46 @@ FUNC INT Info_Mod_Melvin_Bierhexen_Condition()
 
 FUNC VOID Info_Mod_Melvin_Bierhexen_Info()
 {
+	var C_NPC Melvin; Melvin = Hlp_GetNpc(Mod_7505_BDT_Melvin_REL);
+	var C_NPC Raeuber01; Raeuber01 = Hlp_GetNpc(Mod_7510_OUT_Raeuber_REL);
+	var C_NPC Raeuber02; Raeuber02 = Hlp_GetNpc(Mod_7511_OUT_Raeuber_REL);
+	var C_NPC Raeuber03; Raeuber03 = Hlp_GetNpc(Mod_7512_OUT_Raeuber_REL);
+
+	TRIA_Invite(Raeuber01);
+	TRIA_Invite(Raeuber02);
+	TRIA_Invite(Raeuber03);
+	TRIA_Start();
+	
 	AI_Output(hero, self, "Info_Mod_Melvin_Bierhexen_15_00"); //Ich hätte da eine kurze Frage an dich.
+
+	TRIA_Next(Melvin);
+	
 	AI_Output(self, hero, "Info_Mod_Melvin_Bierhexen_29_01"); //Na klar, äh, wenn's schnell geht.
 	AI_Output(hero, self, "Info_Mod_Melvin_Bierhexen_15_02"); //Hat einer von euch auf Erhards Gerste gepinkelt?
 	AI_Output(self, hero, "Info_Mod_Melvin_Bierhexen_29_03"); //Hä? Ich will das doch klauen, wieso sollte ich dann draufpinkeln?
 	AI_Output(hero, self, "Info_Mod_Melvin_Bierhexen_15_04"); //Keine Ahnung. Irgendeiner hat's jedenfalls getan.
 	AI_Output(hero, self, "Info_Mod_Melvin_Bierhexen_15_05"); //Und der Braumeister hat aus dem Korn Bier gebraut.
 	AI_Output(self, hero, "Info_Mod_Melvin_Bierhexen_29_06"); //Ist ja eklig! Hey, Jungs, hat einer von euch auf die Gerste vom Braumeister gepisst?
+
+	TRIA_Next(Raeuber01);
+	
+	AI_Output(self, hero, "Info_Mod_Raeuber01_Bierhexen_08_07"); //Ich war's nicht!
+
+	TRIA_Next(Raeuber02);
+	
+	AI_Output(self, hero, "Info_Mod_Raeuber02_Bierhexen_06_08"); //Bist du dumm?
+
+	TRIA_Next(Raeuber03);
+	
+	AI_Output(self, hero, "Info_Mod_Raeuber03_Bierhexen_06_09"); //Das war doch Leonhard.
+	AI_Output(hero, self, "Info_Mod_Raeuber03_Bierhexen_15_10"); //Leonhard?
+	AI_Output(self, hero, "Info_Mod_Raeuber03_Bierhexen_06_11"); //Hat's mir jedenfalls stolz erzählt. Als ob das so was Besonderes wäre.
+	AI_Output(hero, self, "Info_Mod_Raeuber03_Bierhexen_15_12"); //Wo finde ich Leonhard?
+	AI_Output(self, hero, "Info_Mod_Raeuber03_Bierhexen_06_13"); //Der lungert in den Gassen von Khorata rum. Hat halt nicht so ein tolles Versteck wie wir.
+
+	B_LogEntry	(TOPIC_MOD_KHORATA_BIERHEXEN, "Nach Angaben eines Kumpanen von Melvin ist Leonhard in Khorata der Übeltäter.");
+
+	TRIA_Finish();
 
 	AI_StopProcessInfos	(self);
 };

@@ -69,35 +69,6 @@ FUNC VOID Info_Mod_Raeuber03_Frauenkleider_Info()
 	AI_StopProcessInfos	(self);
 };
 
-INSTANCE Info_Mod_Raeuber03_Bierhexen (C_INFO)
-{
-	npc		= Mod_7512_OUT_Raeuber_REL;
-	nr		= 1;
-	condition	= Info_Mod_Raeuber03_Bierhexen_Condition;
-	information	= Info_Mod_Raeuber03_Bierhexen_Info;
-	permanent	= 0;
-	important	= 1;
-};
-
-FUNC INT Info_Mod_Raeuber03_Bierhexen_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Raeuber02_Bierhexen))
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Raeuber03_Bierhexen_Info()
-{
-	AI_Output(self, hero, "Info_Mod_Raeuber03_Bierhexen_06_00"); //Das war doch Leonhard.
-	AI_Output(hero, self, "Info_Mod_Raeuber03_Bierhexen_15_01"); //Leonhard?
-	AI_Output(self, hero, "Info_Mod_Raeuber03_Bierhexen_06_02"); //Hat's mir jedenfalls stolz erzählt. Als ob das so was Besonderes wäre.
-	AI_Output(hero, self, "Info_Mod_Raeuber03_Bierhexen_15_03"); //Wo finde ich Leonhard?
-	AI_Output(self, hero, "Info_Mod_Raeuber03_Bierhexen_06_04"); //Der lungert in den Gassen von Khorata rum. Hat halt nicht so ein tolles Versteck wie wir.
-
-	B_LogEntry	(TOPIC_MOD_KHORATA_BIERHEXEN, "Nach Angaben eines Kumpanen von Melvin ist Leonhard in Khorata der Übeltäter.");
-};
-
 INSTANCE Info_Mod_Raeuber03_Pickpocket (C_INFO)
 {
 	npc		= Mod_7512_OUT_Raeuber_REL;

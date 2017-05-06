@@ -67,31 +67,6 @@ FUNC VOID Info_Mod_Raeuber02_Frauenkleider_Info()
 	AI_StopProcessInfos	(self);
 };
 
-INSTANCE Info_Mod_Raeuber02_Bierhexen (C_INFO)
-{
-	npc		= Mod_7511_OUT_Raeuber_REL;
-	nr		= 1;
-	condition	= Info_Mod_Raeuber02_Bierhexen_Condition;
-	information	= Info_Mod_Raeuber02_Bierhexen_Info;
-	permanent	= 0;
-	important	= 1;
-};
-
-FUNC INT Info_Mod_Raeuber02_Bierhexen_Condition()
-{
-	if (Npc_KnowsInfo(hero, Info_Mod_Raeuber01_Bierhexen))
-	{
-		return 1;
-	};
-};
-
-FUNC VOID Info_Mod_Raeuber02_Bierhexen_Info()
-{
-	AI_Output(self, hero, "Info_Mod_Raeuber02_Bierhexen_06_00"); //Bist du dumm?
-
-	AI_StopProcessInfos	(self);
-};
-
 INSTANCE Info_Mod_Raeuber02_Pickpocket (C_INFO)
 {
 	npc		= Mod_7511_OUT_Raeuber_REL;

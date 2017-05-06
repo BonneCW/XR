@@ -349,7 +349,7 @@ INSTANCE Info_Mod_Leonhard_Bierhexen (C_INFO)
 
 FUNC INT Info_Mod_Leonhard_Bierhexen_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Raeuber03_Bierhexen))
+	if (Npc_KnowsInfo(hero, Info_Mod_Melvin_Bierhexen))
 	{
 		return 1;
 	};

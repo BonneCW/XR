@@ -515,7 +515,7 @@ FUNC VOID HAUPTQUESTS()
 			Mod_Uriziel_Background = View_CreatePxl(0, 0, Print_Screen[PS_X], Print_Screen[PS_Y]);
 			View_SetTexture(Mod_Uriziel_Background, "WHITE.TGA");
 			View_Open(Mod_Uriziel_Background);
-			Mod_Uriziel_Frame = View_CreatePxl(Print_Screen[PS_X] / 2 - 119, Print_Screen[PS_Y] / 2 - 411, Print_Screen[PS_X] / 2 - 119 + 238, Print_Screen[PS_Y] / 2 - 411 + 821);
+			Mod_Uriziel_Frame = View_CreatePxl(Print_Screen[PS_X] / 2 - 119, Print_Screen[PS_Y] / 2 - 411, Print_Screen[PS_X] / 2 - 119 + 237, Print_Screen[PS_Y] / 2 - 411 + 821);
 			View_SetTexture(Mod_Uriziel_Frame, "BORDER.TGA");
 			View_Open(Mod_Uriziel_Frame);
 			
