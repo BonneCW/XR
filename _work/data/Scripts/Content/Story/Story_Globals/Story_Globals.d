@@ -2287,19 +2287,6 @@ const int T_HIGH = 120;
 const int T_MED = 90;
 const int T_LOW = 60;
 
-//**************
-//	ADDON
-//**************
-var int Saturas_KlaueInsMeer;
-var int Saturas_AboutWilliam;
-var int MIS_Eremit_Klamotten;
-var int Diego_angekommen;
-var int Diego_IsDead;
-var int PlayerTalkedToSkipNW;
-var int PlayerTalkedToGregNW;
-//---------------------------------------------------
-// ITEMS 
-
 //----- Artefakt Set der Bauern (HP)-----------------
 var int	HP_Ring_1_Equipped;		
 var int	HP_Ring_2_Equipped;	  
@@ -3624,124 +3611,8 @@ var int Ignaz_TeachAlchemy;			//Health_01, Mana_01, Speed, Perm_DEX
  SPL_Charm		
 */
 
-//----------------------
-//BigFarm - ab Kapitel 1
-//----------------------
-//STR
-
-//var int 
-var int Torlof_TeachSTR;			//STR - bis 100
-var int Torlof_TeachDEX;			//DEX - bis 100
-//DEX
-//var int 
-
-//var int 
-//MAN
-var int XXX_TeachMANA;				//Mana - 50
-//1H
-var int Buster_Teach1H;				//???
-//var int 
-//var int 
-//2H
-//var int 
-var int Rod_Teach2H;				//2H bis 30
-var int Cord_Teach2H;				//1H und 2H - 60 für SLD
-var int Lee_Teach2H;				//2H - 100 für SLD und DJG - Meister, ab 90% (wer tot???)
-
-var int Wolf_TeachBow;
-//Bow
-//var int 
-//var int 
-//var int 
-//Crossbow
-//var int 
-//var int 
-//var int 
-//Sonstige Talente
 var int Bennet_TeachCommon;
-var int Bennet_TeachSmith; 			//wenn Spieler ihm Common-Waffe zeigt
-	//Kapitel 2	oder 1+SLD		//WEAPON_1H_Special_01, WEAPON_2H_Special_01
-	//Kapitel 3					//WEAPON_1H_Special_02, WEAPON_2H_Special_02	
-	//Kapitel 4					//WEAPON_1H_Special_03, WEAPON_2H_Special_03	
-	//Kapitel 5					//WEAPON_1H_Special_04, WEAPON_2H_Special_04
-
-//-------------------------------
-//NewWorld Surface - ab Kapitel 1
-//-------------------------------
-var int Sagitta_TeachAlchemy;		//Health_01 _02 _03, Mana_01_02_03, Perm_Mana, Perm_Health
-
-//Animaltrophy
-/*
-	TROPHY_Claws			 
- 	TROPHY_Fur				
- 	TROPHY_Heart			 Golem/Dämon
- 	TROPHY_ShadowHorn 		
- 	TROPHY_FireTongue		 
- 	TROPHY_BFWing			 
- 	TROPHY_BFSting			
- 	TROPHY_Mandibles		 
- 	TROPHY_CrawlerPlate	 
- 	TROPHY_DrgSnapperHorn	 
- 	TROPHY_DragonScale		
- 	TROPHY_DragonBlood		
-*/
-
-var int Gaan_TeachAnimalTrophy;		//TROPHY_Claws, TROPHY_Fur, TROPHY_BFSting, TROPHY_BFWing, TROPHY_Teeth, TROPHY_DrgSnapperHorn
-var int Grom_TeachAnimalTrophy;  	//TROPHY_Fur, TROPHY_Teeth, TROPHY_Heart, TROPHY_Mandibles, TROPHY_ShadowHorn
-var int Grimbald_TeachAnimalTrophy; //TROPHY_BFSting, TROPHY_BFWing, TROPHY_Claws, TROPHY_Mandibles, TROPHY_CrawlerPlate
-var int Gestath_TeachAnimalTrophy; 	//TROPHY_FireTongue, TROPHY_CrawlerPlate, TROPHY_Mandibles, TROPHY_DrgSnapperHorn, TROPHY_DragonScale, TROPHY_DragonBlood
-var int Godar_TeachAnimalTrophy; 	//NPC_TALENT_SNEAK, TROPHY_Teeth, TROPHY_BFSting, TROPHY_BFWing, TROPHY_DragonScale, TROPHY_DragonBlood
-var int Talbin_TeachAnimalTrophy; 	//TROPHY_Fur, TROPHY_Claws, TROPHY_Heart, TROPHY_ShadowHorn
-
-//--------------------
-//Kloster ab Kapitel 1
-//--------------------
-//KREISE
-//	Ulthar 		Kreis 1-3 		
-//	Serpentes 	Kreis 1-5		//Wenn Ultar tot ODER Kreis 3 erreicht 
-//	Pyrokar 	Kreis 1-6		//Wenn Serpentes tot oder Kreis 5 erreicht
-//MANA
-var int Parlan_TeachMANA; 		//Mana - 100, wenn GIL_KdF
-var int Pyrokar_TeachMANA;		//Mana - 250, wenn von Parlan geschickt (schickt nur KdF)
-//STR
-var int Opolos_TeachSTR;		//STR - 50
-//2H
-var int XXX_Teach2H;			//2H - 70 für Nov/KdF
-//PalRunes
-var int Ulthar_TeachPalRunes;	//PalLightHeal, PalMediumHeal, PalFullHeal
-var int Pyrokar_TeachPalRunes;	//PalLight
-var int Serpentes_TeachPalRunes;//PalHolyBolt, PalRepelEvil, PalDestroyEvil
-//Runes
-var int Hyglas_TeachRunes; 		//Firebolt (Aufnahme), ***InstantFireball2***, ChargeFireball3, Pyrokinesis4, Firestorm5, FireRain6
-var int Karras_TeachRunes; 		//SummonGoblinSkeleton1, SummonWolf2, SummonSkeleton3, SummonGolem4, SummonDemon5, ArmyOfDarkness6
-var int Parlan_TeachRunes;		//LightHeal1, Light1, Windfist2, Sleep2, MediumHeal3, Fear3, DestroyUndead4, FullHeal5, Shrink6
-var int Marduk_TeachRunes;		//IceBolt1, Zap2, LightningFlash3, IceCube3, Thunderball4, IceWave5
-//*** BIBLIOTHEK - BreathOfDeath6, MassDeath6 ***
-//Alchemy
-var int Neoras_TeachAlchemy;	//Health_01, Health_02, Mana_01 _02 _03, Perm_Mana, Perm_STR (für Magier und Paladine)
-var int Babo_TeachPlayer;		//1H + 2H - 70 für Nov/KdF
-
-// ------ Scroll-Händler -------
-
-// *** wo Runen-Scrolls kaufen ??? ***
-
-//--------------------
-//Oldcamp ab Kapitel 2
-//--------------------
-var int	Dobar_Learnsmith;		//(Common) Schmied Burg im Minental
-var int Keroloth_TeachPlayer; 	//1-Hand Lehrer Burg im Minental (bis 60) 
-var int Udar_TeachPlayer;		//Armbrustlehrer Burg im Minental (bis 30) 
-var int Brutus_TeachSTR;		//Stärke Lehrer bis 75
-//-----------------------------
-//Oldworld Surface ab Kapitel 2
-//-----------------------------
-
-//-----------------------------
-//Oldworld Surface ab Kapitel 4
-//-----------------------------
-var int Godar_TeachPlayer;		//Zähne, BFSting, BFWing, Schleichen, - DJG - OW Anfang, später Djg-Lager
-var int Jan_TeachPlayer;		//Schmieden, Common, Special 1 beide, Special 2 beide. im OC
-var int Hokurn_TeachPlayer;		//Kampflehrer bis 100 - DJG - OW Anfang, später Djg-Lager
+var int Bennet_TeachSmith;
 
 //-------------  Sonstige Variablen -------------------------------------
 var int Apple_Bonus;
@@ -3757,74 +3628,7 @@ var int GoblinGreen_Randomizer;
 var int GoblinBlack_Randomizer;
 var int Orc_Randomizer;
 
-var int CurrentLevel; 	//Newworld_zen, Oldworld_Zen, Dragonisland_zen -> Level in dem sich der Player befindet!
-
-//--------------------
-//DragonIsland Kapitel 6
-//--------------------
-
-	/*		
-	
-	//Kapitäne:
-	
-	Jack
-	Torlof			STR
-	Jorgen
-	
-	//Crew
-	
-	Lee				1H + 2H 
-	Girion			1H + 2H
-	Milten			Mana Runen
-	Lester			
-	Gorn			2H
-	Diego			Bow + Lockpick + Dex
-	Angar			
-	Bennet			Schmieden + STR
-	Biff
-	Wolf			Bow + Crossbow
-	Lares			Dex + 1H
-	Mario			
-	Vatras			Alchemy + Kreise
-	
-	*/	
-
-
-var int Kapitel01_Inventar;
-var int Kapitel01_Gold;
-var int Kapitel01_Erfahrung;
-var int Kapitel01_Level;
-var int Kapitel01_Zeit;
-
-var int Kapitel02_Inventar;
-var int Kapitel02_Gold;
-var int Kapitel02_Erfahrung;
-var int Kapitel02_Level;
-var int Kapitel02_Zeit;
-
-var int Kapitel03_Inventar;
-var int Kapitel03_Gold;
-var int Kapitel03_Erfahrung;
-var int Kapitel03_Level;
-var int Kapitel03_Zeit;
-
-var int Kapitel04_Inventar;
-var int Kapitel04_Gold;
-var int Kapitel04_Erfahrung;
-var int Kapitel04_Level;
-var int Kapitel04_Zeit;
-
-var int Kapitel05_Inventar;
-var int Kapitel05_Gold;
-var int Kapitel05_Erfahrung;
-var int Kapitel05_Level;
-var int Kapitel05_Zeit;
-
-var int Kapitel06_Inventar;
-var int Kapitel06_Gold;
-var int Kapitel06_Erfahrung;
-var int Kapitel06_Level;
-var int Kapitel06_Zeit;
+var int CurrentLevel;
 
 // Vob-Platzhalter
 
