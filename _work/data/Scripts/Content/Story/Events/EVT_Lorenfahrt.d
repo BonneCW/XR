@@ -1,3 +1,18 @@
+FUNC VOID LoreWP(var string wp) {
+	VAR oCNpc her;
+    her = Hlp_GetNpc (PC_HERO);
+    VAR zCWaypoint meinWp;
+    MEM_AssignInst (meinWp, SearchWaypointByName(wp));
+    her._zCVob_trafoObjToWorld[3] = meinWp.pos[0];
+    her._zCVob_trafoObjToWorld[7] = mkf(roundf(meinWp.pos[1]) + 200);
+    her._zCVob_trafoObjToWorld[11] = meinWp.pos[2];
+	
+	hero.wp = wp;
+	AI_AlignToWp(hero);
+
+	AI_PlayAni	(hero, "T_STAND_2_SIT");
+};
+
 FUNC VOID LORERELS ()
 {
 	if (LoreRelendel == 1)
@@ -28,9 +43,7 @@ FUNC VOID LOREREL_LETSGO_S0 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		AI_GotoWP	(hero, "LORENFAHRT_01");
-
-		AI_PlayAni	(hero, "T_STAND_2_SIT");
+		LoreWP	("LORENFAHRT_01");
 
 		LoreRelendel = 1;
 	};
@@ -42,9 +55,7 @@ FUNC VOID LOREREL_LETSGO_S1 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		AI_GotoWP	(hero, "LORENFAHRT_01");
-
-		AI_PlayAni	(hero, "T_STAND_2_SIT");
+		LoreWP	("LORENFAHRT_01");
 
 		LoreRelendel = 1;
 	};
@@ -56,9 +67,7 @@ FUNC VOID LOREKHO_LETSGO_S0 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		AI_GotoWP	(hero, "LORENFAHRT_01");
-
-		AI_PlayAni	(hero, "T_STAND_2_SIT");
+		LoreWP	("LORENFAHRT_01");
 
 		LoreKhorinis = 1;
 	};
@@ -70,9 +79,7 @@ FUNC VOID LOREKHO_LETSGO_S1 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		AI_GotoWP	(hero, "LORENFAHRT_01");
-
-		AI_PlayAni	(hero, "T_STAND_2_SIT");
+		LoreWP	("LORENFAHRT_01");
 
 		LoreKhorinis = 1;
 	};
@@ -96,9 +103,7 @@ FUNC VOID LOREEISMINE01_LETSGO_S0 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		AI_GotoWP	(hero, "LORE_MINE_01");
-
-		AI_PlayAni	(hero, "T_STAND_2_SIT");
+		LoreWP	("LORE_MINE_01");
 
 		LoreEisgebietMine01 = 1;
 	};
@@ -110,9 +115,7 @@ FUNC VOID LOREEISMINE01_LETSGO_S1 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		AI_GotoWP	(hero, "LORE_MINE_01");
-
-		AI_PlayAni	(hero, "T_STAND_2_SIT");
+		LoreWP	("LORE_MINE_01");
 
 		LoreEisgebietMine01 = 1;
 	};
@@ -136,9 +139,7 @@ FUNC VOID LOREEISMINE02_LETSGO_S0 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		AI_GotoWP	(hero, "LORE_MINE_03");
-
-		AI_PlayAni	(hero, "T_STAND_2_SIT");
+		LoreWP	("LORE_MINE_03");
 
 		LoreEisgebietMine01 = 4;
 	};
@@ -150,9 +151,7 @@ FUNC VOID LOREEISMINE02_LETSGO_S1 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		AI_GotoWP	(hero, "LORE_MINE_03");
-
-		AI_PlayAni	(hero, "T_STAND_2_SIT");
+		LoreWP	("LORE_MINE_03");
 
 		LoreEisgebietMine01 = 4;
 	};
@@ -176,9 +175,7 @@ FUNC VOID LOREEISSW01_LETSGO_S0 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		AI_GotoWP	(hero, "LORE_SW_01");
-
-		AI_PlayAni	(hero, "T_STAND_2_SIT");
+		LoreWP	("LORE_SW_01");
 
 		LoreEisgebietSW01 = 1;
 	};
@@ -190,9 +187,7 @@ FUNC VOID LOREEISSW01_LETSGO_S1 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		AI_GotoWP	(hero, "LORE_SW_01");
-
-		AI_PlayAni	(hero, "T_STAND_2_SIT");
+		LoreWP	("LORE_SW_01");
 
 		LoreEisgebietSW01 = 1;
 	};
@@ -216,9 +211,7 @@ FUNC VOID LOREEISSW02_LETSGO_S0 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		AI_GotoWP	(hero, "LORE_SW_03");
-
-		AI_PlayAni	(hero, "T_STAND_2_SIT");
+		LoreWP	("LORE_SW_03");
 
 		LoreEisgebietSW01 = 4;
 	};
@@ -230,9 +223,7 @@ FUNC VOID LOREEISSW02_LETSGO_S1 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		AI_GotoWP	(hero, "LORE_SW_03");
-
-		AI_PlayAni	(hero, "T_STAND_2_SIT");
+		LoreWP	("LORE_SW_03");
 
 		LoreEisgebietSW01 = 4;
 	};
