@@ -588,6 +588,64 @@ INSTANCE ItRw_Mil_Crossbow(C_Item)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
+INSTANCE ItRw_Holzarmbrust(C_Item)
+{
+	name 				=	"Holzarmbrust";
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
+	material 			=	MAT_WOOD;
+
+	value 				=	Value_Holzarmbrust;
+
+	damageTotal			= 	Damage_Holzarmbrust;
+	damagetype			=	DAM_POINT;
+	munition			=	ItRw_Bolt;
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Holzarmbrust;
+	visual 				=	"ITRW_CROSSBOW_SLD_01.mms";
+
+	range		= 2500;
+	
+	on_equip	=	munichange_cb;
+	on_unequip	=	munichange_cb_e;
+
+	description			= name;
+	TEXT[1]				= NAME_Range;					COUNT[1]	= range/100;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+INSTANCE ItRw_Goldarmbrust(C_Item)
+{
+	name 				=	"Goldarmbrust";
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
+	material 			=	MAT_WOOD;
+
+	value 				=	Value_Goldarmbrust;
+
+	damageTotal			= 	Damage_Goldarmbrust;
+	damagetype			=	DAM_POINT;
+	munition			=	ItRw_Bolt;
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Goldarmbrust;
+	visual 				=	"ITRW_GOLDARMBRUST_L.mms";
+
+	range		= 2500;
+	
+	on_equip	=	munichange_cb;
+	on_unequip	=	munichange_cb_e;
+
+	description			= name;
+	TEXT[1]				= NAME_Range;					COUNT[1]	= range/100;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
 INSTANCE ItRw_EchsenArmbrust (C_Item)
 {
 	name 				=	"Echsenarmbrust";

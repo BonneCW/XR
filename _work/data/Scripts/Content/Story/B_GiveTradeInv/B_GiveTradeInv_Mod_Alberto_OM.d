@@ -25,6 +25,7 @@ FUNC VOID B_GiveTradeInv_Mod_Alberto_OM (var C_NPC slf)
 		
 		// ------ Waffen ------
 		CreateInvItems	(slf, ItRw_Crossbow_L_01, 1);
+		CreateInvItems	(slf, ItRw_Holzarmbrust, 1);
 
 		CreateInvItems	(slf, ItRw_Bow_L_02, 1);
 
@@ -55,6 +56,7 @@ FUNC VOID B_GiveTradeInv_Mod_Alberto_OM (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Bolt,  60);
 
 		CreateInvItems	(slf, ItRw_Bow_M_02, 1);
+		CreateInvItems	(slf, ItRw_Goldarmbrust, 1);
 
 		CreateInvItems	(slf, ItMw_Schwert, 1);
 		CreateInvItems	(slf, ItMw_Spicker, 1);

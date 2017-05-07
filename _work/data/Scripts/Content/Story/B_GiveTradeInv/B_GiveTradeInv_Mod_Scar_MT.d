@@ -16,6 +16,7 @@ FUNC VOID B_GiveTradeInv_Mod_Scar_MT (var C_NPC slf)
 		// ------ Waffen ------
 		CreateInvItems	(slf, ItRw_Crossbow_L_01, 1);
 		CreateInvItems	(slf, ItRw_Crossbow_L_02, 1);
+		CreateInvItems	(slf, ItRw_Holzarmbrust, 1);
 
 		CreateInvItems	(slf, ItRw_Bow_L_01, 1);
 		CreateInvItems	(slf, ItRw_Bow_L_02, 1);
@@ -53,6 +54,7 @@ FUNC VOID B_GiveTradeInv_Mod_Scar_MT (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Bolt,  100);
 
 		CreateInvItems	(slf, ItRw_Crossbow_M_01, 1);
+		CreateInvItems	(slf, ItRw_Goldarmbrust, 1);
 
 		CreateInvItems	(slf, ItRw_Bow_M_02, 1);
 

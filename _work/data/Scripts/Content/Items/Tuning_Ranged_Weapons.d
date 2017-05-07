@@ -72,11 +72,19 @@ const int Value_Drachenbogen		= 1600;
 const int Damage_Jagdarmbrust		= 30;
 const int Condition_Jagdarmbrust	= 20; 
 const int Value_Jagdarmbrust		= 500;	
+                                        	     	
+const int Damage_Holzarmbrust		= 45;
+const int Condition_Holzarmbrust	= 30; 
+const int Value_Holzarmbrust		= 750;	
 
-//Kapitel 2                                                                         	     	
+//Kapitel 2 
 const int Damage_LeichteArmbrust	= 60; 	
 const int Condition_LeichteArmbrust	= 40;
 const int Value_LeichteArmbrust		= 900; 	
+
+const int Damage_GoldArmbrust	= 75; 	
+const int Condition_GoldArmbrust	= 50;
+const int Value_GoldArmbrust		= 1050; 	
 
 //Kapitel 3                                                                         	     	
 const int Damage_Armbrust			= 90; 	

@@ -19,6 +19,7 @@ FUNC VOID B_GiveTradeInv_Mod_Bernd_MT (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Bolt,  30);
 		
 		// ------ Waffen ------
+		CreateInvItems	(slf, ItRw_Holzarmbrust, 1);
 		CreateInvItems	(slf, ItRw_Crossbow_L_01, 1);
 		CreateInvItems	(slf, ItRw_Crossbow_L_02, 1);
 
@@ -58,6 +59,7 @@ FUNC VOID B_GiveTradeInv_Mod_Bernd_MT (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Arrow, 60);
 		CreateInvItems (slf, ItRw_Bolt,  60);
 
+		CreateInvItems	(slf, ItRw_Goldarmbrust, 1);
 		CreateInvItems	(slf, ItRw_Crossbow_M_01, 1);
 
 		CreateInvItems	(slf, ItRw_Bow_M_01, 1);
