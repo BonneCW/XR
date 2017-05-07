@@ -32,7 +32,7 @@ FUNC VOID XW_Kap6_Scene04()
 
 	if (Mod_XW_Kap6_Scene04_Counter == 10)
 	{
-		Wld_PlayEffect("spellFX_Blutopfer_KEY_COLLIDE",  Mod_7764_PSINOV_Lester_XW, Mod_7764_PSINOV_Lester_XW, 0, 0, 0, FALSE );
+		Wld_PlayEffect("spellFX_DEATHWAVE_EXPLOSION",  Mod_7764_PSINOV_Lester_XW, Mod_7764_PSINOV_Lester_XW, 0, 0, 0, FALSE );
 		
 		Mod_7764_PSINOV_Lester_XW.attribute[ATR_HITPOINTS] = 0;
 

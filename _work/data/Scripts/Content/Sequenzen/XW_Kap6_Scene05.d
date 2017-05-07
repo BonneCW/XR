@@ -34,7 +34,7 @@ FUNC VOID XW_Kap6_Scene05()
 
 	if (Mod_XW_Kap6_Scene05_Counter == 10)
 	{
-		Wld_PlayEffect("spellFX_Blutopfer_KEY_COLLIDE",  Monster_11074_Leprechaun_XW, Monster_11074_Leprechaun_XW, 0, 0, 0, FALSE );
+		Wld_PlayEffect("spellFX_DEATHWAVE_EXPLOSION",  Monster_11074_Leprechaun_XW, Monster_11074_Leprechaun_XW, 0, 0, 0, FALSE );
 		
 		Monster_11074_Leprechaun_XW.attribute[ATR_HITPOINTS] = 0;
 

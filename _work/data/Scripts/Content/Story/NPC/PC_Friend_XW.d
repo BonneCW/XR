@@ -47,8 +47,8 @@ FUNC VOID Rtn_Start_1607()
 
 FUNC VOID Rtn_Arena_1607()
 {	
-	TA_Stand_ArmsCrossed	(10,55,18,50,"ARENA_04");
-	TA_Stand_ArmsCrossed	(18,50,10,55,"ARENA_04");
+	TA_Follow_Player	(10,55,18,50,"ARENA_04");
+	TA_Follow_Player	(18,50,10,55,"ARENA_04");
 };
 
 FUNC VOID Rtn_Ritual_1607()

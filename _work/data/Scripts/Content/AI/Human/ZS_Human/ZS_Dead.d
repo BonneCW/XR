@@ -992,7 +992,7 @@ func void ZS_Dead ()
 	};
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Xeres_03))
-	&& (Mod_Xeres_Ende == 0)
+	&& (Mod_Xeres_Ende == 1)
 	{
 		Mod_Xeres_Ende = 4;
 

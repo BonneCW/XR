@@ -51,3 +51,9 @@ FUNC VOID Rtn_Tribuene_7765 ()
 	TA_RunToWP		(08,00,20,00,"ARENA_12");
 	TA_RunToWP		(20,00,08,00,"ARENA_12");
 };
+
+FUNC VOID Rtn_Controlled_7765 ()
+{	
+	TA_RunToWP		(08,00,20,00,"ARENA_01");
+	TA_RunToWP		(20,00,08,00,"ARENA_01");
+};

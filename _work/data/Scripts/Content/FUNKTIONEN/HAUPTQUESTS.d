@@ -2290,10 +2290,7 @@ FUNC VOID HAUPTQUESTS()
 
 		if (Mod_XW_Kap6 == 10)
 		{
-			if (Npc_GetDistToWP(hero, "ARENA_12") < 1000)
-			{
-				XW_Kap6_Scene07();
-			};
+			XW_Kap6_Scene07();
 		};
 
 		if (Mod_XW_Kap6 == 11)

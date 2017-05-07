@@ -7220,6 +7220,23 @@ FUNC VOID STARTUP_Xeres_Endlevel()
 
 	Wld_InsertNpc	(PC_Friend_XW, "TOT");
 	Wld_InsertNpc	(Monster_11075_Daemonenfuerst_XW, "TOT");
+	
+	Wld_InsertNpc(Demon, "FP_ARENA_VISITOR_01");
+	Wld_InsertNpc(Skeleton_Lord_Ghost, "FP_ARENA_VISITOR_02");
+	Wld_InsertNpc(SkeletonMage, "FP_ARENA_VISITOR_03");
+	Wld_InsertNpc(Demon, "FP_ARENA_VISITOR_04");
+	Wld_InsertNpc(Minotaurus, "FP_ARENA_VISITOR_05");
+	Wld_InsertNpc(SkeletonMage, "FP_ARENA_VISITOR_06");
+	Wld_InsertNpc(Demon, "FP_ARENA_VISITOR_07");
+	Wld_InsertNpc(Skeleton_Lord_Ghost, "FP_ARENA_VISITOR_08");
+	Wld_InsertNpc(Demon, "FP_ARENA_VISITOR_09");
+	Wld_InsertNpc(Minotaurus, "FP_ARENA_VISITOR_10");
+	Wld_InsertNpc(SkeletonMage, "FP_ARENA_VISITOR_11");
+	Wld_InsertNpc(Demon, "FP_ARENA_VISITOR_12");
+	Wld_InsertNpc(Demon, "FP_ARENA_VISITOR_13");
+	Wld_InsertNpc(Skeleton_Lord_Ghost, "FP_ARENA_VISITOR_14");
+	Wld_InsertNpc(Minotaurus, "FP_ARENA_VISITOR_15");
+	Wld_InsertNpc(Demon, "FP_ARENA_VISITOR_16");
 };
 
 FUNC VOID INIT_Xeres_Endlevel()
