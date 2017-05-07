@@ -34,6 +34,12 @@ func void B_MM_AssessEnemy ()
 	if (CurrentLevel == HALLUZINATION_ZEN) {
 		return;
 	};
+	
+	if (CurrentLevel == XERESWELT_ZEN) {
+		if (Kapitel == 6 && Npc_GetHeightToNpc(self, other) > 1000) {
+			return;
+		};
+	};
 
 	if (Wld_IsTime(21,00,05,00))
 	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))

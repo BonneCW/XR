@@ -52,6 +52,12 @@ func void B_MM_AssessPlayer()
 			};
 		};
 	};
+	
+	if (CurrentLevel == XERESWELT_ZEN) {
+		if (Kapitel == 6 && Npc_GetHeightToNpc(self, other) > 1000) {
+			return;
+		};
+	};
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Rabbit))
 	{
