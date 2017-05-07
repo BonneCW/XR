@@ -272,7 +272,9 @@ FUNC INT B_UrizielsSpecialDamage (var C_NPC oth, var C_NPC slf)
 			return 9999;
 		};
 		
-		AI_StartState	(slf, ZS_MagicFreeze, 0, "");
+		if (Hlp_GetInstanceID(slf) != Hlp_GetInstanceID(Xeres_02)) {
+			AI_StartState	(slf, ZS_MagicFreeze, 0, "");
+		};
 
 		return 200;	
 	};
