@@ -414,7 +414,7 @@ FUNC VOID Info_Mod_Aaron_DoorIn_Info()
 
 	B_StartOtherRoutine	(self, "TREPPE");
 
-	Wld_InsertNpc	(Mod_1858_KDF_Aaron_PAT, "WP_PAT_TURMWEG_01");
+	Wld_InsertNpc	(Mod_1858_KDF_Aaron_PAT, "WP_PAT_TURMWEG_04");
 };
 
 INSTANCE Info_Mod_Aaron_Blut (C_INFO)

@@ -877,6 +877,7 @@ func void ZS_Dead ()
 	{
 		Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);
 
+		AI_Teleport(Mod_1771_KDF_Aaron_PAT, "WP_PAT_WEG_183");
 		B_StartOtherRoutine	(Mod_1771_KDF_Aaron_PAT, "BOSS");
 
 		Mod_FM_AtHexe = 4;
