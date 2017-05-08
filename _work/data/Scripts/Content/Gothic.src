@@ -48,7 +48,6 @@ STORY\Log_Entries\Log_Constants_*.d
 STORY\Story_Globals\*.d
 STORY\NPC_Globals.d
 STORY\SVM\SVM.d
-STORY\SVM\SVM_*.d
 STORY\Text.d
 STORY\B_Story\SetGuild.d
 
