@@ -28,6 +28,7 @@ func string Spine_OverallSaveGetString(var string key) {
 	if (Spine_Initialized && Spine_OverallSaveGetStringFunc) {
 		const string STR_BUFFER = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 
+		CALL_cStringPtrParam(STR_BUFFER);
 		CALL_cStringPtrParam(key);
 		CALL__cdecl(Spine_OverallSaveGetStringFunc);
 		
@@ -40,7 +41,11 @@ func string Spine_OverallSaveGetString(var string key) {
 func int Spine_OverallSaveGetInt(var string key) {
 	if (Spine_Initialized && Spine_OverallSaveGetStringFunc) {
 		var string value; value = Spine_OverallSaveGetString(key);
-		return STR_ToInt(value);
+		if (STR_Len(value) > 0) {
+			return STR_ToInt(value);
+		} else {
+			return 0;
+		};
 	};
 	return -1;
 };
