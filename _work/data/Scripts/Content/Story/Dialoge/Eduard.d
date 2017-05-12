@@ -67,6 +67,9 @@ FUNC VOID Info_Mod_Eduard_Haendler_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Eduard_Haendler_15_00"); //Verkaufst du auch Schmiedezubehör?
 	AI_Output(self, hero, "Info_Mod_Eduard_Haendler_32_01"); //Ein bisschen kann ich dir von meinen Sachen verkaufen, aber nicht alles. Nachschub ist immer teuer und kommt nur stockend.
+
+	Log_CreateTopic	(TOPIC_MOD_HAENDLER_BELIARFESTUNG, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_HAENDLER_BELIARFESTUNG, "Eduard wird mir einiges an Schmiedezubehör und Waffen verkaufen.");
 };
 
 INSTANCE Info_Mod_Eduard_Belagerung (C_INFO)
