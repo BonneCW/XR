@@ -69,7 +69,7 @@ INSTANCE Info_Mod_Maleth_Neuankoemmlinge (C_INFO)
 	information	= Info_Mod_Maleth_Neuankoemmlinge_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Du klingst, als könntest du auf die ganzen Neuankömmlinge verzichten.";
+	description	= "Du klingst, als könntest du auf die ganzen Neuankömmlinge (...)";
 };
 
 FUNC INT Info_Mod_Maleth_Neuankoemmlinge_Condition()

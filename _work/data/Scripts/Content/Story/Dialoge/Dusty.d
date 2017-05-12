@@ -185,7 +185,7 @@ INSTANCE Info_Mod_Dusty_Bruderschaft (C_INFO)
 	information	= Info_Mod_Dusty_Bruderschaft_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Was ist nach dem Fall der Barriere mit der Bruderschaft passiert?";
+	description	= "Was ist nach dem Fall der Barriere mit der Bruderschaft (...)";
 };
 
 FUNC INT Info_Mod_Dusty_Bruderschaft_Condition()
