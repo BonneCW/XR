@@ -33,7 +33,7 @@ func void INIT_GLOBAL()
 
 	gameloaded = Hlp_GetNpc(0);
 
-	MEM_SetShowDebug (1);
+	MEM_SetShowDebug (0);
 
 	LeGo_Init(LeGo_All & ~LeGo_Focusnames);
 	
