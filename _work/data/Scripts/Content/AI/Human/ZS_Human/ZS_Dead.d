@@ -273,7 +273,7 @@ func void ZS_Dead ()
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Gobbo_Skeleton)) {
 			Spine_OverallSaveSetInt("Gobbo_Skeleton", 1);
 		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Gobbo_Green)) {
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Gobbo_Green) || Hlp_GetInstanceID(self) == Hlp_GetInstanceID(YGobbo_Green)) {
 			Spine_OverallSaveSetInt("Gobbo_Green", 1);
 		};
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Gobbo_Matrone_01) || Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Gobbo_Matrone_02) || Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Gobbo_Matrone_03) || Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Gobbo_Matrone_04)) {
