@@ -110,6 +110,8 @@ func void INIT_GLOBAL()
 	B_AutoGeneratePicklockKombos();
 	
 	AxtUpgrade = 0;
+	
+	Mod_LastLoaded = TimeCounter_Real;
 };
 
 FUNC VOID OldLevel(var int newlevel)
