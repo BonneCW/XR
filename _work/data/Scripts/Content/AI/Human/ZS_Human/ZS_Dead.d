@@ -87,7 +87,7 @@ func void ZS_Dead ()
 		if (self.aivar[AIV_MM_REAL_ID] == ID_ZIEGE) {
 			Spine_OverallSaveSetInt("Ziege", 1);
 		};
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Wolf)) {
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Wolf) || Hlp_GetInstanceID(self) == Hlp_GetInstanceID(YWolf)) {
 			Spine_OverallSaveSetInt("Wolf", 1);
 		};
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Riesenwolf)) {
