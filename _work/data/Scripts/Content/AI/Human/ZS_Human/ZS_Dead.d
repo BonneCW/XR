@@ -30,13 +30,6 @@ func void ZS_Dead ()
 		Mod_GeisterpiratWurdeGekillt = 1;
 	};
 
-	if (self.guild == GIL_DRACONIAN)
-	&& (C_NpcIsHero(other))
-	&& (Mod_Echsis != 1)
-	{
-		Mod_Echsis = 1;
-	};
-
 	if (CurrentLevel == XERESWELT_ZEN)
 	{
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Summoned_Skeleton_Lord_Ghost_Xeres))
@@ -100,12 +93,6 @@ func void ZS_Dead ()
 		Mod_LobartsSchafeTot += 1;
 	};
 
-	if (C_NpcIsHero(other))
-	&& (self.guild > GIL_SEPERATOR_HUM)
-	{
-		Mod_MonsterGekillt += 1;
-	};
-
 	if (self.aivar[AIV_MM_REAL_ID] == ID_SWAMPGOLEM)
 	{
 		Mod_Echsis_GolemKiller += 1;
@@ -119,22 +106,6 @@ func void ZS_Dead ()
 			Wld_SendTrigger	("BOSSKAMPF_PASS");
 
 			Bosskampf_Pass_NW = 0;
-		};
-	};
-
-	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Giant_Rat_Friedel))
-	{
-		if (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_7519_OUT_Tyrus_REL))
-		{
-			Mod_REL_Wettstreit_Tyrus += 1;
-		}
-		else if (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_7518_OUT_Davon_REL))
-		{
-			Mod_REL_Wettstreit_Davon += 1;
-		}
-		else
-		{
-			Mod_REL_Wettstreit_Hero += 1;
 		};
 	};
 
@@ -403,23 +374,6 @@ func void ZS_Dead ()
 		B_LogEntry	(TOPIC_MOD_URIZIEL, "Ein untoter Drache ... jetzt ist er tot. Nur noch den Seelenstein mitnehmen und es kann weitergehen.");
 	};
 
-	if (self.guild < GIL_SEPERATOR_HUM)
-	&& (C_NpcIsHero(other))
-	&& (Piratenhut_Equipped == 1)
-	{
-		var int BlackbartsRandi;
-		BlackbartsRandi = Hlp_Random(21);
-
-		if (BlackbartsRandi == 0)
-		{
-			CreateInvItems	(self, ItMi_GoldRing, 1);
-		}
-		else
-		{
-			CreateInvItems	(self, ItMi_Gold, BlackbartsRandi);
-		};
-	};
-
 	if (Seele_unterwegs == TRUE)
 	&& (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(PC_SEELE))
 	{
@@ -444,21 +398,6 @@ func void ZS_Dead ()
 	{
 		Wld_PlayEffect ("MFX_engel_HEAVENLIGHT2", self, self, 0, 0, 0, FALSE);
 		B_RemoveNpc(self);
-	};
-		
-	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1082_BAU_Rufus_MT))
-	&& (C_NpcIsHero(other))
-	{
-		Mod_SLD_Rufus = 5;
-	};
-
-	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Swampshark_Undead))
-	&& (Npc_HasItems(hero, ItMi_SumpfhaiStein) == 1)
-	&& ((C_NpcIsHero(other))
-	|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_1219_TPL_Templer_MT))
-	|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_1218_TPL_Templer_MT)))
-	{
-		Mod_Sekte_UDS_Stein += 1;
 	};
 
 	if (Parasit_Perk == TRUE)
@@ -545,18 +484,6 @@ func void ZS_Dead ()
 		self.wp = "TOT";
 		AI_Teleport	(self, "TOT");
 		B_RemoveNpc	(self);
-	};
-
-	var C_ITEM AxtTest;
-
-	AxtTest = Npc_GetReadiedWeapon(other);
-
-	if (Hlp_IsItem(AxtTest, ItMw_AxtDesUntergangs))
-	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(PC_Hero))
-	{
-		AxtDamage += 2;
-
-		AxtUpgrade = 0;
 	};
 
 	if (self.npctype == NPCTYPE_PAT_HEXE)
@@ -668,101 +595,9 @@ func void ZS_Dead ()
 			B_StartOtherRoutine	(Mod_101_BAU_Balthasar_NW, "START");
 		};
 	};
-
-	if (other.guild == GIL_DRACONIAN)
-	&& (self.guild == GIL_SWAMPGOLEM)
-	{
-		other.exp += 1;
-
-		B_EchsenBody(other);
-	};
 	
 	// ------ XP ------
 	B_EXPVerteiler (self, other);
-
-	// ------ Greg ------
-
-	var int GiftChance;
-	GiftChance = 0;
-	
-	// ------ Sumpfdrohne -------
-	if (self.aivar[AIV_MM_REAL_ID] == ID_SWAMPDRONE)
-	&& (GGD_Sumpfgasdrohne_Time == 0)
-	{
-		if (Npc_GetDistToNpc(self, other) < 300)
-		{
-			//other.attribute[ATR_HITPOINTS] -= 50;
-			//Npc_ChangeAttribute(other, ATR_HITPOINTS, -50);
-
-			// Wahrscheinlichkeit, eine Vergiftung zu erleiden
-
-			if (Gift == 0)
-			{
-				GiftChance = 100; //100%
-			}
-			else if (Gift == 1)
-			{
-				GiftChance = 85; //- 15%
-			}
-			else if (Gift == 2)
-			{
-				GiftChance = 72; //nochmal -15% vom Rest
-			}
-			else if (Gift == 3)
-			{
-				GiftChance = 61; //nochmal -15% vom Rest
-			};
-
-			if (Hlp_Random(100) < GiftChance)
-			{
-				// Zeit erhöhen
-
-				if (Giftdampf == 0)
-				{
-					GGD_Sumpfgasdrohne_Time += 10;
-				}
-				else if (Giftdampf == 1) // 20% weniger
-				{
-					GGD_Sumpfgasdrohne_Time += 8;
-				}
-				else if (Giftdampf == 2) // 40% weniger
-				{
-					GGD_Sumpfgasdrohne_Time += 6;
-				}
-				else if (Giftdampf == 3) // 60% weniger
-				{
-					GGD_Sumpfgasdrohne_Time += 4;
-				}
-				else if (Giftdampf == 4) // 80% weniger
-				{
-					GGD_Sumpfgasdrohne_Time += 2;
-				};
-
-				// neuer Schaden
-
-				if (Giftdampf == 0)
-				{
-					GGD_Sumpfgasdrohne_Damage = 20;
-				}
-				else if (Giftdampf == 1) // 10% weniger
-				{
-					GGD_Sumpfgasdrohne_Damage = 18;
-				}
-				else if (Giftdampf == 2) // noch mal 10% weniger
-				{
-					GGD_Sumpfgasdrohne_Damage += 16;
-				}
-				else if (Giftdampf == 3) // und noch mal 10% weniger
-				{
-					GGD_Sumpfgasdrohne_Damage = 14;
-				}
-				else if (Giftdampf == 4) // und noch mal 10% weniger
-				{
-					GGD_Sumpfgasdrohne_Damage = 13;
-				};
-			};
-		};
-	};
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Lich_11008_NW))
 	&& (Mod_NL_HasKamm < 2)
@@ -772,6 +607,7 @@ func void ZS_Dead ()
 		B_RemoveNpc (self);
 
 		Wld_InsertNpc	(Lich_11008_NW, "LICH");
+		return;
 	};
 
 	if (CurrentLevel == RELENDEL_ZEN)
@@ -784,89 +620,6 @@ func void ZS_Dead ()
 	};
 	
 	// ------ Sumpfdrohne -------
-	if (self.aivar[AIV_MM_REAL_ID] == ID_SWAMPGOLEM)
-	&& (GGD_Sumpfgolem_Time == 0)
-	{
-		if (Npc_GetDistToNpc(self, other) < 300)
-		&& (Mod_TrfSkeleton2 == 0)
-		{
-			//other.attribute[ATR_HITPOINTS] -= 50;
-			//Npc_ChangeAttribute(other, ATR_HITPOINTS, -50);
-
-			// Wahrscheinlichkeit, eine Vergiftung zu erleiden
-
-			if (Gift == 0)
-			{
-				GiftChance = 100; //100%
-			}
-			else if (Gift == 1)
-			{
-				GiftChance = 85; //- 15%
-			}
-			else if (Gift == 2)
-			{
-				GiftChance = 72; //nochmal -15% vom Rest
-			}
-			else if (Gift == 3)
-			{
-				GiftChance = 61; //nochmal -15% vom Rest
-			};
-
-			if (Hlp_Random(100) < GiftChance)
-			{
-				// Zeit erhöhen
-
-				if (Giftdampf == 0)
-				{
-					GGD_Sumpfgolem_Time += 10;
-				}
-				else if (Giftdampf == 1) // 20% weniger
-				{
-					GGD_Sumpfgolem_Time += 8;
-				}
-				else if (Giftdampf == 2) // 40% weniger
-				{
-					GGD_Sumpfgolem_Time += 6;
-				}
-				else if (Giftdampf == 3) // 60% weniger
-				{
-					GGD_Sumpfgolem_Time += 4;
-				}
-				else if (Giftdampf == 4) // 80% weniger
-				{
-					GGD_Sumpfgolem_Time += 2;
-				};
-
-				// neuer Schaden
-
-				if (Giftdampf == 0)
-				{
-					GGD_Sumpfgolem_Damage = 20;
-				}
-				else if (Giftdampf == 1) // 10% weniger
-				{
-					GGD_Sumpfgolem_Damage = 18;
-				}
-				else if (Giftdampf == 2) // noch mal 10% weniger
-				{
-					GGD_Sumpfgolem_Damage = 16;
-				}
-				else if (Giftdampf == 3) // und noch mal 10% weniger
-				{
-					GGD_Sumpfgolem_Damage = 14;
-				}
-				else if (Giftdampf == 4) // und noch mal 10% weniger
-				{
-					GGD_Sumpfgolem_Damage = 13;
-				};
-			};
-		};
-	};
-	
-	if (Npc_IsPlayer(other))
-	{
-		self.aivar[AIV_KilledByPlayer] = TRUE;		
-	};
 		
 	// ------ weil sonst Händler bevor man zum ersten Mal TRADE gewählt hat nix haben ------
 	B_GiveTradeInv(self);//Joly:	STEHEN LASSEN!!!!!!!!!!!!!!!
