@@ -950,7 +950,7 @@ FUNC VOID Use_MatteoFlugblatt()
 
 INSTANCE Mod_ConstantinosZutatenliste (C_ITEM)
 {
-	name		=	"Constantino's Zutatenliste";
+	name		=	"Constantinos Zutatenliste";
 
 	mainflag	=	ITEM_KAT_DOCS;
 	flags		=	ITEM_MISSION|ITEM_MULTI;
