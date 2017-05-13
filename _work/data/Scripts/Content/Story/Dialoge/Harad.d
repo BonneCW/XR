@@ -290,7 +290,7 @@ INSTANCE Info_Mod_Harad_Lehrling (C_INFO)
 	information	= Info_Mod_Harad_Lehrling_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Matteo sagt, ich bräuchte deine Zustimmung, um Lehrling werden zu können.";
+	description	= "Matteo sagt, ich bräuchte deine Zustimmung, (...).";
 };
 
 FUNC INT Info_Mod_Harad_Lehrling_Condition()

@@ -167,7 +167,7 @@ INSTANCE Info_Mod_Thorben_Irdorath (C_INFO)
 	information	= Info_Mod_Thorben_Irdorath_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich muss eine Seereise unternehmen und brauche jemanden, der über handwerkliches Geschick verfügt ...";
+	description	= "Ich muss eine Seereise unternehmen und brauche jemanden (...)";
 };
 
 FUNC INT Info_Mod_Thorben_Irdorath_Condition()
@@ -200,7 +200,7 @@ INSTANCE Info_Mod_Thorben_Lehrling (C_INFO)
 	information	= Info_Mod_Thorben_Lehrling_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich möchte Bürger der Stadt werden. Gibst du mir deine Zustimmung?";
+	description	= "Ich möchte Bürger der Stadt werden. (...)";
 };
 
 FUNC INT Info_Mod_Thorben_Lehrling_Condition()
