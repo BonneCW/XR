@@ -4,7 +4,7 @@ INSTANCE Mod_7783_OUT_Schmuggler_NW (Npc_Default)
 	name 		= "Schmuggler"; 
 	guild 		= GIL_OUT;
 	id 			= 7783;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN; //plündert nicht!!! (und ein Freischlag)
 	

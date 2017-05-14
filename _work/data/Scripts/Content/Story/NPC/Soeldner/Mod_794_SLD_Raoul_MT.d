@@ -4,7 +4,7 @@ instance Mod_794_SLD_Raoul_MT (Npc_Default)
 	name 		= "Raoul"; 
 	guild 		= GIL_MIL;
 	id 			= 794;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

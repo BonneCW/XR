@@ -4,7 +4,7 @@ instance Mod_7410_OUT_Frau_EIS (Npc_Default)
 	name 		= "Frau";	//Halvors Frau
 	guild 		= GIL_OUT;
 	id 			= 7410;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

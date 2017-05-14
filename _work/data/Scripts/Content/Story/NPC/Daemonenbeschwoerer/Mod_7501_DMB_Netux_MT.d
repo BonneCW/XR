@@ -4,7 +4,7 @@ instance Mod_7501_DMB_Netux_MT (Npc_Default)
 	name 		= "Dämonenbeschwörer"; 
 	guild 		= GIL_KDF;
 	id 			= 7501;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

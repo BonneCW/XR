@@ -4,7 +4,7 @@ instance Mod_742_MIL_Mortis_NW (Npc_Default)
 	name 		= "Mortis";	
 	guild 		= GIL_PAL;
 	id 			= 742;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

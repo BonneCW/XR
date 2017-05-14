@@ -4,7 +4,7 @@ INSTANCE Mod_674_SLD_Lee_NW (Npc_Default)
 	name 		= "Lee";
 	guild 		= GIL_DMT;
 	id 			= 674;
-	voice 		= 4;																		//NPC_FLAG_IMMORTAL oder 0
+	voice		= 0;																		//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_FRIEND;
 	
 	// ------ AIVARS ------

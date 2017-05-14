@@ -6,7 +6,7 @@ instance Mod_4084_UntoterEliteNovize_NW (Npc_Default)
 	guild 		=		GIL_STRF;
 	level 		=		50;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		4084;
 		
 	//-------- abilities --------

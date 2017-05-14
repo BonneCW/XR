@@ -6,7 +6,7 @@ instance Mod_1909_SMK_SchwarzerKrieger_OM (Npc_Default)
 	npctype		= 	NPCTYPE_om_schwarzerkrieger;
 	guild 		=	GIL_kdf;
 	level 		=	10;
-	voice 		=	13;
+	voice		= 0;
 	id 			=	1909;
 		
 	//-------- abilities --------

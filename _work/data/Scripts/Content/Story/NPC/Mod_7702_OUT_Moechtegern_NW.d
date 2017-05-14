@@ -4,7 +4,7 @@ INSTANCE Mod_7702_OUT_Moechtegern_NW (Npc_Default)
 	name 		= "Möchtegern"; 
 	guild 		= GIL_DMT;
 	id 			= 7702;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

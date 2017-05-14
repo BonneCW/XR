@@ -4,7 +4,7 @@ instance Mod_501_RIT_Gerold_NW  (Npc_Default)
 	name 		= "Gerold";
 	guild 		= GIL_PAL;
 	id 			= 501;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

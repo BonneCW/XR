@@ -8,7 +8,7 @@ instance Mod_7231_SLD_Organisator_MT (Npc_Default)
 	level =					4;
 
 	
-	voice =					8;
+	voice		= 0;
 	id =					7231;
 
 

@@ -4,7 +4,7 @@ instance Mod_7679_SLD_Falin_JL (Npc_Default) //Türwache Onars Haus
 	name 		= "Falin"; 
 	guild 		= GIL_OUT;
 	id 			= 7679;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

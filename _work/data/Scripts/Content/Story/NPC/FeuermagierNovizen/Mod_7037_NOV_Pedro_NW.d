@@ -4,7 +4,7 @@ INSTANCE Mod_7037_NOV_Pedro_NW (Npc_Default)
 	name 		= "Pedro";
 	guild 		= GIL_VLK;
 	id 			= 7037;
-	voice 		= 9;
+	voice		= 0;
 	flags       = NPC_FLAG_IMMORTAL;	//Joly: HAUPTSTORY: NOV_600_Pedro ist erst noch immortel -> Pedro klaut das Auge Innos im Kapitel 3, ist später Knacki auf der Dracheninsel																	
 	npctype		= NPCTYPE_MAIN;
 	

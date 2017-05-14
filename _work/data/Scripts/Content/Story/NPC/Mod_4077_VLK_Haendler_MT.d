@@ -4,7 +4,7 @@ instance Mod_4077_VLK_Haendler_MT (Npc_Default)
 	name 		= "Händler"; 
 	guild 		= GIL_NONE;
 	id 			= 4077;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

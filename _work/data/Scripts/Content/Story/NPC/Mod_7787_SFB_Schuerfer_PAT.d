@@ -8,7 +8,7 @@ instance Mod_7787_SFB_Schuerfer_PAT (Npc_Default)
 	level =					6;
 	flags =					0;
 	
-	voice =					5;
+	voice		= 0;
 	id =					7787;
 
 	//-------- abilities --------

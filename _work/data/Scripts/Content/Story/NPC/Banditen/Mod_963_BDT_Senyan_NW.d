@@ -4,7 +4,7 @@ instance Mod_963_BDT_Senyan_NW (Npc_Default)
 	name 		= "Senyan";
 	guild 		= GIL_OUT;
 	id 			= 963;
-	voice 		= 12;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

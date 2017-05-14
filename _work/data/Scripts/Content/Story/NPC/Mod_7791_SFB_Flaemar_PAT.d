@@ -8,7 +8,7 @@ instance Mod_7791_SFB_Flaemar_PAT (Npc_Default)
 	level =					6;
 	flags =					0;
 	
-	voice =					2;
+	voice		= 0;
 	id =					7791;
 
 

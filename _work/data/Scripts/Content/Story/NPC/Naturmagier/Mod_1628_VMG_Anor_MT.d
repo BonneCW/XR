@@ -8,7 +8,7 @@ instance Mod_1628_VMG_Anor_MT (Npc_Default)
 	level =							5;
 	
 	
-	voice =							2;
+	voice		= 0;
 	id =							1628;
 
 

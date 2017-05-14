@@ -6,7 +6,7 @@ instance Mod_1087_BAU_Jeremiah_MT (Npc_Default)
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_MIL;      
 	level 		=	7;
-	voice 		=	4;
+	voice		= 0;
 	id 			=	1087;
 
 	//-------- abilities --------

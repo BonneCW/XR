@@ -4,7 +4,7 @@ instance Mod_7015_HS_Bauer_REL (Npc_Default)
 	name 		= "Bauer";
 	guild 		= GIL_OUT;
 	id 			= 7015;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

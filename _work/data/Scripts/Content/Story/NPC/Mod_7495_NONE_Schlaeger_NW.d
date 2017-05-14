@@ -4,7 +4,7 @@ INSTANCE Mod_7495_NONE_Schlaeger_NW (Npc_Default)
 	name 		= "Schläger"; 
 	guild 		= GIL_OUT;
 	id 			= 7495;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

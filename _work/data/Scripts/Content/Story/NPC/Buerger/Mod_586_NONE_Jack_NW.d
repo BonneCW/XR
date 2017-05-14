@@ -4,7 +4,7 @@ instance Mod_586_NONE_Jack_NW (Npc_Default)
 	name 		= "Jack"; 
 	guild 		= GIL_NONE;
 	id 			= 586;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 2;	//Sterblich, optionaler Captain im Kapitel 5!																
 	npctype		= NPCTYPE_MAIN;
 	

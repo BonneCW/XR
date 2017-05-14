@@ -4,7 +4,7 @@ instance Mod_1965_JG_Jaeger_MT (Npc_Default)
 	name 		= NAME_JAEGER; 
 	guild 		= GIL_OUT;
 	id 			= 1965;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

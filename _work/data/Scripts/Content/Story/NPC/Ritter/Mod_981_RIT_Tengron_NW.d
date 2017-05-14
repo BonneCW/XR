@@ -4,7 +4,7 @@ instance Mod_981_RIT_Tengron_NW (Npc_Default)
 	name 		= "Tengron";
 	guild 		= GIL_PAL;
 	id 			= 981;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

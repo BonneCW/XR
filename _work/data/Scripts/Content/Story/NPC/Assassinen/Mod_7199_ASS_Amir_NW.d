@@ -4,7 +4,7 @@ INSTANCE Mod_7199_ASS_Amir_NW (Npc_Default)
 	name 		= "Amir"; 
 	guild 		= GIL_OUT;
 	id 			= 7199;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

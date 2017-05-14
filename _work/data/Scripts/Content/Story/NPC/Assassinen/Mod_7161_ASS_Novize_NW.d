@@ -4,7 +4,7 @@ INSTANCE Mod_7161_ASS_Novize_NW (Npc_Default)
 	name 		= "Novize"; 
 	guild 		= GIL_OUT;
 	id 			= 7161;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

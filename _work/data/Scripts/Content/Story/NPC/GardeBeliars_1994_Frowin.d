@@ -4,7 +4,7 @@ INSTANCE GardeBeliars_1994_Frowin	(Npc_Default)
 	name							=	"Frowin";
 	guild							=	GIL_DMT;
 	id			= 	1994;
-	voice			=	14;
+	voice		= 0;
 	level							=	40;
 	npctype		= NPCTYPE_MAIN;
 

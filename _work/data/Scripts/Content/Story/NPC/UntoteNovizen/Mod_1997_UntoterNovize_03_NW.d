@@ -6,7 +6,7 @@ instance Mod_1997_UntoterNovize_03_NW (Npc_Default)
 	guild 		=		GIL_DMT;
 	level 		=		20;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		1997;
 		
 	//-------- abilities --------

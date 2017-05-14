@@ -4,7 +4,7 @@ INSTANCE Mod_7593_OUT_Handlanger_TUG (Npc_Default)
 	name 		= "Handlanger";
 	guild 		= GIL_OUT;
 	id 			= 7593;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

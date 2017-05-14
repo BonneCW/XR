@@ -4,7 +4,7 @@ INSTANCE Mod_1955_VMG_Turendil_MT (Npc_Default)
 	name 		= "Turendil";
 	guild 		= GIL_OUT;
 	id 			= 1955;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

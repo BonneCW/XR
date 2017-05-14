@@ -4,7 +4,7 @@ instance Mod_7389_Signalfeuer_AW (NPC_DEFAULT)
 	name 		= "Signalfeuer";
 	guild		= GIL_NONE;
 	id			= 7389;
-	voice = 1;
+	voice		= 0;
 	level		= 0;
 	Npctype		= NPCTYPE_MAIN;
 	flags = 0;

@@ -4,7 +4,7 @@ instance Mod_118_MIL_Rumbold_NW (Npc_Default)
 	name 		= "Rumbold";	
 	guild 		= GIL_PAL;	
 	id 			= 118;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

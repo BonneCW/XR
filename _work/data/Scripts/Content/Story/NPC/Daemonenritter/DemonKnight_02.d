@@ -4,7 +4,7 @@ instance DemonKnight_02 (Npc_Default)
 	name 		= "Dämonenritter";	
 	guild 		= GIL_OUT;
 	id 			= 1940;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_main;
 	

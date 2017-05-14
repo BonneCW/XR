@@ -4,7 +4,7 @@ instance Mod_7744_OUT_Dieb_NW (Npc_Default)
 	name 		= "Dieb"; 
 	guild 		= GIL_STRF;
 	id 			= 7744;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

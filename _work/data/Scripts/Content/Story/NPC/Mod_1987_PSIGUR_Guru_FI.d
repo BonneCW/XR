@@ -6,7 +6,7 @@ instance Mod_1987_PSIGUR_Guru_FI (Npc_Default)
 	guild 		=		GIL_DMT;
 	level 		=		28;
 	
-	voice 		=		12;
+	voice		= 0;
 	id 			=		1987;
 		
 	///-------- abilities --------

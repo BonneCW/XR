@@ -4,7 +4,7 @@ INSTANCE Mod_1611_PIR_Henry_SS (Npc_Default)
 	name 		= "Henry";
 	guild 		= GIL_out;
 	id 			= 1611;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 2;												
 	npctype		= NPCTYPE_MAIN;
 	

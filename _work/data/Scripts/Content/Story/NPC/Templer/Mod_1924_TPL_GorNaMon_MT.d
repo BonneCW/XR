@@ -6,7 +6,7 @@ instance Mod_1924_TPL_GorNaMon_MT (Npc_Default)
 	guild =							GIL_out;
 	level =							17;
 	
-	voice =							13;
+	voice		= 0;
 	id =							1924;
 		
 	//-------- abilities --------

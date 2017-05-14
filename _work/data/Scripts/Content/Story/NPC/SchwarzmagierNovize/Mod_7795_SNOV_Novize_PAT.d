@@ -4,7 +4,7 @@ instance Mod_7795_SNOV_Novize_PAT (Npc_Default)
 	name 		= Name_Novize;	
 	guild 		= GIL_OUT;
 	id 			= 7795;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

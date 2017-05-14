@@ -4,7 +4,7 @@ instance Mod_7571_OUT_Bandit_EIS (Npc_Default)
 	name 		= "Fremder"; 
 	guild 		= GIL_STRF;
 	id 			= 7571;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_AMBIENT;
 	

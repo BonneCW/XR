@@ -4,7 +4,7 @@ INSTANCE Mod_7119_ASS_Masut_NW (Npc_Default)
 	name 		= "Masut"; 
 	guild 		= GIL_OUT;
 	id 			= 7119;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

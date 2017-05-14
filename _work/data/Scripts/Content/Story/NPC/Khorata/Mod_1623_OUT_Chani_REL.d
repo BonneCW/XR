@@ -6,7 +6,7 @@ instance Mod_1623_OUT_Chani_REL (Npc_Default)
 	npctype		= 	npctype_main;
 	guild 		=	GIL_out;
 	level 		=	1;
-	voice 		=	16;
+	voice		= 0;
 	id 			=	1623;
 	flags      	=   NPC_FLAG_IMMORTAL; // wichtig, weil man sie nicht finishen kann!
 

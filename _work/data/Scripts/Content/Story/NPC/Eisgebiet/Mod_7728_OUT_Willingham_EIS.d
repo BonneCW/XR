@@ -4,7 +4,7 @@ INSTANCE Mod_7728_OUT_Willingham_EIS (Npc_Default)
 	name 		= "Kommander Willingham";	
 	guild 		= GIL_OUT;
 	id 			= 7728;
-	voice 		= 8;
+	voice		= 0;
 	flags       = NPC_FLAG_IMMORTAL;	//Joly: NPC_FLAG_IMMORTAL																	
 	npctype		= NPCTYPE_MAIN;
 	

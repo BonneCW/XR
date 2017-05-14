@@ -4,7 +4,7 @@ instance Mod_788_SLD_Khaled_MT (Npc_Default)
 	name 		= "Khaled"; 
 	guild 		= GIL_MIL;
 	id 			= 788;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

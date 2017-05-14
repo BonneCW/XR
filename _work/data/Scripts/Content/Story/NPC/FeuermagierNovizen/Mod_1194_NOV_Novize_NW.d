@@ -4,7 +4,7 @@ INSTANCE Mod_1194_NOV_Novize_NW (Npc_Default)
 	name 		= Name_Novize;
 	guild 		= GIL_vlk;
 	id 			= 1194;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_nw_feuernovize;
 	

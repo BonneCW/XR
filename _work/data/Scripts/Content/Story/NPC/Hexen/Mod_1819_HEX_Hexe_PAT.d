@@ -4,7 +4,7 @@ instance Mod_1819_HEX_Hexe_PAT (Npc_Default)
 	name 		= NAME_hexe;	
 	guild 		= GIL_strf;
 	id 			= 1819;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_pat_hexe;
 	

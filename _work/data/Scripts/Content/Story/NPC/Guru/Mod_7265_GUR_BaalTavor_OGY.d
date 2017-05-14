@@ -5,7 +5,7 @@ instance Mod_7265_GUR_BaalTavor_OGY (Npc_Default)
 	Npctype 	=		NPCTYPE_Main;
 	guild 		=		GIL_OUT;
 	level 		=		28;
-	voice 		=		12;
+	voice		= 0;
 	id 			=		7265;
 		
 	///-------- abilities --------

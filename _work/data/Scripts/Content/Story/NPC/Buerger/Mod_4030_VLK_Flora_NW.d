@@ -4,7 +4,7 @@ instance Mod_4030_VLK_Flora_NW (Npc_Default)
 	name 		= "Flora";	
 	guild 		= GIL_PAL;
 	id 			= 4030;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

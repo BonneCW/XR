@@ -4,7 +4,7 @@ INSTANCE Mod_766_NONE_Grom_NW (Npc_Default)
 	name 		= "Grom";
 	guild 		= GIL_OUT;
 	id 			= 766;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

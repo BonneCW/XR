@@ -7,7 +7,7 @@ instance Mod_1774_KDF_Orakel_PAT (Npc_Default)
 	flags       = NPC_FLAG_GHOST|NPC_FLAG_IMMORTAL;	
 	guild 		=	GIL_VLK;
 	level 		=	36;
-	voice 		=	7;
+	voice		= 0;
 	id 			=	1774;
 		
 	//-------- abilities --------

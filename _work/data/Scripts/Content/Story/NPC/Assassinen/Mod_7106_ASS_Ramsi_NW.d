@@ -4,7 +4,7 @@ INSTANCE Mod_7106_ASS_Ramsi_NW (Npc_Default)
 	name 		= "Ramsi"; 
 	guild 		= GIL_OUT;
 	id 			= 7106;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -3,7 +3,7 @@ instance Mod_555_MIL_Pig_NW (Npc_Default)
 	name 		= "Pig";
 	guild 		= GIL_PAL;
 	id 		= 555;
-	voice 	        = 12;
+	voice		= 0;
 	flags           = 0;
 	npctype		= NPCTYPE_MAIN;
 

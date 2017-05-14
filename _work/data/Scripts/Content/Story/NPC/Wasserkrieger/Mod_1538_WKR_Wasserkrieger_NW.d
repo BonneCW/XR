@@ -4,7 +4,7 @@ instance Mod_1538_WKR_Wasserkrieger_NW (Npc_Default)
 	name 		= NAME_Wasserkrieger; 	
 	guild 		= GIL_nov;
 	id 			= 1538;
-	voice 		= 3;																
+	voice		= 0;																
 	npctype		= NPCTYPE_nw_wasserkrieger;
 	
 	// ------ Aivars ------

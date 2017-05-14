@@ -6,7 +6,7 @@ instance GardeInnos_4050_Argibast (Npc_Default)
 	guild 		=		GIL_NONE;
 	level 		=		80;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		4050;
 		
 	//-------- abilities --------

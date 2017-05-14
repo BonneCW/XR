@@ -7,7 +7,7 @@ instance Mod_2006_GUR_BaalTyon_MT (Npc_Default)
 	level 		=		28;
 	flags 		=		NPC_FLAG_IMMORTAL;
 	
-	voice 		=		11;
+	voice		= 0;
 	id 			=		2006;
 		
 	//-------- abilities --------

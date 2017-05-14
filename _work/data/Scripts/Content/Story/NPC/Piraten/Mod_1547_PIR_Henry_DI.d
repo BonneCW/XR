@@ -4,7 +4,7 @@ INSTANCE Mod_1547_PIR_Henry_DI (Npc_Default)
 	name 		= "Henry";
 	guild 		= GIL_out;
 	id 			= 1547;
-	voice 		= 4;
+	voice		= 0;
 	flags       = FALSE;												
 	npctype		= NPCTYPE_MAIN;
 	

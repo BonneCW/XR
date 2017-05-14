@@ -6,7 +6,7 @@ instance Mod_7205_GUR_BaalNetbek_AW (Npc_Default)
 	guild 		=		GIL_OUT;
 	level 		=		28;
 	flags       = NPC_FLAG_GHOST|NPC_FLAG_IMMORTAL;		
-	voice 		=		12;
+	voice		= 0;
 	id 			=		7205;
 		
 	///-------- abilities --------

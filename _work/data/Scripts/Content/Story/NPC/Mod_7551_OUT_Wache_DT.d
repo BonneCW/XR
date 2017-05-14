@@ -4,7 +4,7 @@ instance Mod_7551_OUT_Wache_DT (Npc_Default)
 	name 		= "Wache"; 
 	guild 		= GIL_STRF;
 	id 			= 7551;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_AMBIENT;
 	

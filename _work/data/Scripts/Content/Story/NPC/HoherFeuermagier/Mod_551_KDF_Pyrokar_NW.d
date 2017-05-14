@@ -4,7 +4,7 @@ INSTANCE Mod_551_KDF_Pyrokar_NW (Npc_Default)
 	name 		= "Pyrokar";
 	guild 		= GIL_DMT;
 	id 		= 551;
-	voice 		= 11;
+	voice		= 0;
 	flags           = 0;
 	npctype		= NPCTYPE_MAIN;
 

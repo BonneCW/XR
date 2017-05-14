@@ -4,7 +4,7 @@ INSTANCE Mod_7149_ASS_Mufid_NW (Npc_Default)
 	name 		= "Mufid"; 
 	guild 		= GIL_OUT;
 	id 			= 7149;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

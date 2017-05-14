@@ -6,7 +6,7 @@ instance Mod_1162_STT_Schatten_MT (Npc_Default)
 	guild 		=		GIL_out;
 	level 		=		5;
 	
-	voice 		=		12;
+	voice		= 0;
 	id 			=		1162;
 		
 	//-------- abilities --------

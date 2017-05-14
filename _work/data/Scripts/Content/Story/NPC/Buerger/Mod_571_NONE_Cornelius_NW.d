@@ -4,7 +4,7 @@ instance Mod_571_NONE_Cornelius_NW (Npc_Default)
 	name 		= "Cornelius";
 	guild 		= GIL_NONE;		//Hoshi:Ich muss ihn umhauen können, ohne das mir die PALs auf den Sack gehen.
 	id 			= 571;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0; //Joly: immortal Hauptstory																
 	npctype		= NPCTYPE_MAIN;
 	

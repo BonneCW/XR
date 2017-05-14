@@ -4,7 +4,7 @@ instance Mod_951_PSINOV_Fortuno_MT (Npc_Default)
 	name 		= "Fortuno";
 	guild 		= GIL_OUT;
 	id 			= 951;
-	voice 		= 13;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_Main;
 	

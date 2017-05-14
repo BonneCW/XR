@@ -4,7 +4,7 @@ instance Mod_503_PAL_Oric_NW (Npc_Default)
 	name 		= "Oric";
 	guild 		= GIL_PAL;
 	id 			= 503;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

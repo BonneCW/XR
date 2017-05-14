@@ -4,7 +4,7 @@ instance Mod_7775_BDT_Bandit_NW (Npc_Default)
 	name 		= "Räuber";
 	guild 		= GIL_STRF;
 	id 			= 7775;
-	voice 		= 13;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

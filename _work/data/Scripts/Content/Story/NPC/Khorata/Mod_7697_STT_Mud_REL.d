@@ -8,7 +8,7 @@ instance Mod_7697_STT_Mud_REL (Npc_Default)
 	level =							0;
 	
 	
-	voice =							3;
+	voice		= 0;
 	id =							7697;
 	flags = 2;
 

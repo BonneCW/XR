@@ -4,7 +4,7 @@ instance Mod_786_BAU_Hodges_NW (Npc_Default)
 	name 		= "Hodges";
 	guild 		= GIL_NONE;
 	id 			= 786;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

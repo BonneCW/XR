@@ -4,7 +4,7 @@ INSTANCE Mod_7763_RDW_Diego_XW (Npc_Default)
 	name 		= "Diego";
 	guild 		= GIL_OUT;
 	id 			= 7763;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_FRIEND;
 	

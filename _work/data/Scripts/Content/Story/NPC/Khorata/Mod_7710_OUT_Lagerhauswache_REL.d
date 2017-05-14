@@ -4,7 +4,7 @@ instance Mod_7710_OUT_Lagerhauswache_REL (Npc_Default)
 	name 		= "Lagerhauswache";
 	guild 		= GIL_OUT;
 	id 			= 7710;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

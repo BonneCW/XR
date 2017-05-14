@@ -5,7 +5,7 @@ instance Mod_7672_OUT_Paul_REL (Npc_Default)
 	guild					=	GIL_SUMMONED_SKELETON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_SKELETON;
 	id 			= 7672;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

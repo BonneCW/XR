@@ -4,7 +4,7 @@ instance Mod_7292_PAL_Porthos_NW (Npc_Default)
 	name 		= "Porthos";
 	guild 		= GIL_pal;
 	id 			= 7292;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_747_MIL_Rangar_NW (Npc_Default)
 	name 		= "Rangar";	
 	guild 		= GIL_OUT;
 	id 			= 747;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

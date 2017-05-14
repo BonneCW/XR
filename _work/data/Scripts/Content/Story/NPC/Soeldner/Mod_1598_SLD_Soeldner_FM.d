@@ -6,7 +6,7 @@ instance Mod_1598_SLD_Soeldner_FM (Npc_Default)
 	guild 		=	GIL_mil;
 	npctype		=	npctype_fm_soeldner;
 	level 		=	30;
-	voice		=	9;
+	voice		= 0;
 	id 			=	1598;
 		
 	//-------- abilities --------

@@ -4,7 +4,7 @@ instance PC_Friend_Dummy (Npc_Default)
 	name 		= "Argez"; 
 	guild 		= GIL_DMT;
 	id 			= 7624;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_FRIEND;
 	

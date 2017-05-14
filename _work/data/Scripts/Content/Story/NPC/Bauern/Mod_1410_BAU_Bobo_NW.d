@@ -4,7 +4,7 @@ instance Mod_1410_BAU_Bobo_NW (Npc_Default)
 	name 		= "Bobo";
 	guild 		= GIL_out;
 	id 			= 1410;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_517_DMR_Gomez_MT (Npc_Default)
 	name 		= "Gomez";
 	guild 		= GIL_DMT;
 	id 			= 517;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_FRIEND;
 	aivar[AIV_IGNORE_Murder]		= TRUE;

@@ -4,7 +4,7 @@ INSTANCE GardeBeliars_1991_Fantrek	(Npc_Default)
 	name							=	"Fantrek";
 	guild							=	GIL_DMT;
 	id			= 	1991;
-	voice			=	14;
+	voice		= 0;
 	level							=	40;
 	npctype		= NPCTYPE_MAIN;
 

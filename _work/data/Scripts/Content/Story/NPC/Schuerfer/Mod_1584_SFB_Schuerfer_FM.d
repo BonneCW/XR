@@ -7,7 +7,7 @@ instance Mod_1584_SFB_Schuerfer_FM (Npc_Default)
 	guild =							GIL_mil;      
 	level =							3;	
 	
-	voice =							10;
+	voice		= 0;
 	id =							1584;
 
 

@@ -4,7 +4,7 @@ instance Mod_7347_OUT_Buerger_REL (Npc_Default)
 	name 		= "Bürger";
 	guild 		= GIL_OUT;
 	id 			= 7347;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_REL_BUERGER;
 	

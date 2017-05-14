@@ -4,7 +4,7 @@ INSTANCE Mod_4018_EIS_Buck_EIS (Npc_Default)
 	name 		= "Buck"; 
 	guild 		= GIL_OUT;
 	id 			= 4018;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN; //plündert nicht!!! (und ein Freischlag)
 	

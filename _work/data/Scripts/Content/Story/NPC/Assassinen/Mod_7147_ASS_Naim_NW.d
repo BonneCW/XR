@@ -4,7 +4,7 @@ INSTANCE Mod_7147_ASS_Naim_NW (Npc_Default)
 	name 		= "Na'im"; 
 	guild 		= GIL_OUT;
 	id 			= 7147;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

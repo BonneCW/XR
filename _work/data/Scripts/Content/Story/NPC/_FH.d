@@ -7,7 +7,7 @@ INSTANCE FH (NPC_DEFAULT)
 	Npctype			= NPCTYPE_FRIEND;
 	guild			= GIL_NONE;
 	level			= 999;			// real 15, aber 999 damit er nicht vor dem Brückegolem flieht!
-	voice			= 5;
+	voice		= 0;
 	id				= 1311;
 	flags			= 0;
 

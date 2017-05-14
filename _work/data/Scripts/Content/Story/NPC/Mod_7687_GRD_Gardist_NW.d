@@ -6,7 +6,7 @@ instance Mod_7687_GRD_Gardist_NW (Npc_Default)
 	npctype		= 	npctype_mt_gardist;
 	guild 		=	GIL_OUT;
 	level 		=	10;
-	voice 		=	6;
+	voice		= 0;
 	id 			=	7687;
 		
 	//-------- abilities --------

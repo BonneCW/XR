@@ -4,7 +4,7 @@ instance Mod_7451_RIT_Tengron_IR (Npc_Default)
 	name 		= "Tengron";
 	guild 		= GIL_OUT;
 	id 			= 7451;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	aivar[AIV_Partymember] 		= TRUE;

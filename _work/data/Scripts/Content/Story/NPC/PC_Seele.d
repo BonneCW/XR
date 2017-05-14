@@ -4,7 +4,7 @@ instance PC_Seele (NPC_DEFAULT)
 	name 		= "Seele";
 	guild		= GIL_NONE;
 	id			= 4023;
-	voice		= 15;
+	voice		= 0;
 	level		= 1;
 	flags       = NPC_FLAG_GHOST;	
 	Npctype		= NPCTYPE_MAIN;

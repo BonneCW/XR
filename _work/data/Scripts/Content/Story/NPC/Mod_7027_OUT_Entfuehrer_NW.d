@@ -4,7 +4,7 @@ instance Mod_7027_OUT_Entfuehrer_NW (Npc_Default)
 	name 		= "Entführer"; 
 	guild 		= GIL_OUT;
 	id 			= 7027;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

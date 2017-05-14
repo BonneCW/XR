@@ -4,7 +4,7 @@ INSTANCE Mod_4020_VMG_Hermy_MT (Npc_Default)
 	name 		= "Hermy";	
 	guild 		= GIL_OUT;
 	id 			= 4020;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

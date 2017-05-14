@@ -4,7 +4,7 @@ instance Mod_7556_OUT_Rotkaeppchen_REL (Npc_Default)
 	name 		= "Rotkäppchen";
 	guild 		= GIL_OUT;
 	id 			= 7556;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

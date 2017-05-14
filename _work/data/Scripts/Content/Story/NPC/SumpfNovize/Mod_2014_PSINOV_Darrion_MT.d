@@ -4,7 +4,7 @@ instance Mod_2014_PSINOV_Darrion_MT (Npc_Default)
 	name 		=		"Darrion";
 	Npctype 	=		Npctype_Main;
 	guild 		=		GIL_OUT;	
-	voice 		=		11;
+	voice		= 0;
 	id 		=		2014;
 		
 	//-------- abilities --------

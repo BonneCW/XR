@@ -4,7 +4,7 @@ instance Mod_7622_KDF_Elvira_PAT (Npc_Default)
 	name 		= "Elvira";	//Frau vom 'Säger' 453
 	guild 		= GIL_VLK;
 	id 			= 7622;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_954_STT_Huno_MT (Npc_Default)
 	name 		= "Huno";
 	guild 		= GIL_OUT;
 	id 			= 954;
-	voice 		= 6;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_main;
 	

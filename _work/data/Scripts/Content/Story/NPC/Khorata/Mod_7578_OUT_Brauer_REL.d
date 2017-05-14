@@ -4,7 +4,7 @@ instance Mod_7578_OUT_Brauer_REL (Npc_Default)
 	name 		= "Brauer"; 
 	guild 		= GIL_OUT;
 	id 			= 7578;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

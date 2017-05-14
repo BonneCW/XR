@@ -4,7 +4,7 @@ instance Mod_911_BAU_Maleth_NW (Npc_Default)
 	name 		= "Maleth";
 	guild 		= GIL_OUT;
 	id 			= 911;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

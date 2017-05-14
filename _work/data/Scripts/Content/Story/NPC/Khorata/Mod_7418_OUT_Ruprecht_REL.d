@@ -4,7 +4,7 @@ INSTANCE Mod_7418_OUT_Ruprecht_REL (Npc_Default)
 	name 		= "Ruprecht"; 
 	guild 		= GIL_OUT;
 	id 			= 7418;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

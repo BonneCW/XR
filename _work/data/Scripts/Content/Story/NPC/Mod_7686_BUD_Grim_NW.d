@@ -8,7 +8,7 @@ instance Mod_7686_BUD_Grim_NW (Npc_Default)
 	level =							5;
 	
 	
-	voice =							6;
+	voice		= 0;
 	id =							7686;
 
 

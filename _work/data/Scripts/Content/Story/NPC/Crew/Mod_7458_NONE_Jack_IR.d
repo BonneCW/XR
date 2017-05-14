@@ -4,7 +4,7 @@ instance Mod_7458_NONE_Jack_IR (Npc_Default)
 	name 		= "Jack"; 
 	guild 		= GIL_OUT;
 	id 			= 7458;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 0;	//Sterblich, optionaler Captain im Kapitel 5!																
 	npctype		= NPCTYPE_MAIN;
 	

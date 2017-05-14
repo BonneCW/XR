@@ -4,7 +4,7 @@ instance Mod_796_SLD_Sentenza_MT (Npc_Default)
 	name 		= "Sentenza";
 	guild 		= GIL_MIL;
 	id 			= 796;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

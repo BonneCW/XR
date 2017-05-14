@@ -6,7 +6,7 @@ instance Mod_7456_GUR_BaalNamib_NW (Npc_Default)
 	guild 		=	GIL_OUT;
 	level 		=	29;
 	flags		= 	NPC_FLAG_IMMORTAL;
-	voice 		=	2;
+	voice		= 0;
 	id 			=	7456;
 			
 	///-------- abilities --------

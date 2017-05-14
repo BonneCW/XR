@@ -4,7 +4,7 @@ INSTANCE Mod_7409_OUT_Richard_EIS (Npc_Default) //Metzger
 	name 		= "Richard";	
 	guild 		= GIL_DMT;
 	id 			= 7409;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

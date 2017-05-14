@@ -4,7 +4,7 @@ instance Mod_1237_RIT_Torwache_NW (Npc_Default)
 	name 		= NAME_Torwache;
 	guild 		= GIL_PAL;
 	id 			= 1237;
-	voice 		= 12;
+	voice		= 0;
 	flags       = NPC_FLAG_IMMORTAL;																
 	npctype		= NPCTYPE_MAIN;
 	

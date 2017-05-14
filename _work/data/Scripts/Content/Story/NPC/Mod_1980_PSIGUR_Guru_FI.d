@@ -6,7 +6,7 @@ instance Mod_1980_PSIGUR_Guru_FI (Npc_Default)
 	guild 		=		GIL_strf;
 	level 		=		28;
 	
-	voice 		=		12;
+	voice		= 0;
 	id 			=		1980;
 		
 	///-------- abilities --------

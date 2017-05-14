@@ -4,7 +4,7 @@ instance Mod_7408_OUT_Burl_EIS (Npc_Default)
 	name 		= "Burl"; 
 	guild 		= GIL_OUT;
 	id 			= 7408;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

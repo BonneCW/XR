@@ -6,7 +6,7 @@ instance Mod_1117_PSINOV_BaalKagan_MT (Npc_Default)
 	guild 		=		GIL_OUT;
 	level 		=		9;
 	
-	voice 		=		13;
+	voice		= 0;
 	id 			=		1117;
 		
 	//-------- abilities --------

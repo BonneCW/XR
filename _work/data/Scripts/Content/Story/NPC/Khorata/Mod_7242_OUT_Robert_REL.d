@@ -7,7 +7,7 @@ instance Mod_7242_OUT_Robert_REL (Npc_Default)
 	level 		=		7;
 
 	
-	voice 		=		5;
+	voice		= 0;
 	id 			=		7242;
 		
 	//-------- abilities --------

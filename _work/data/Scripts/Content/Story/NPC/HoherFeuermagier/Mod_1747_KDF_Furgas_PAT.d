@@ -4,7 +4,7 @@ instance Mod_1747_KDF_Furgas_PAT (Npc_Default)
 	name 		= "Furgas";
 	guild 		= GIL_VLK;
 	id 			= 1747;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_main;
 	

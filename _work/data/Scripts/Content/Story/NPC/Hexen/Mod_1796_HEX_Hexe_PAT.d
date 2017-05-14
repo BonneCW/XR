@@ -4,7 +4,7 @@ instance Mod_1796_HEX_Hexe_PAT (Npc_Default)
 	name 		= Name_hexe;	//Frau vom 'Säger' 453
 	guild 		= GIL_strf;
 	id 			= 1796;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_pat_hexe;
 	

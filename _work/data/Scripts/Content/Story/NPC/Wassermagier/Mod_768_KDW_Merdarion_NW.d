@@ -4,7 +4,7 @@ INSTANCE Mod_768_KDW_Merdarion_NW (Npc_Default)
 	name 		= "Merdarion";
 	guild 		= GIL_NOV; 
 	id 			= 768;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

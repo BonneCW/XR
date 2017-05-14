@@ -4,7 +4,7 @@ INSTANCE Mod_1618_PIR_Samuel_SS (Npc_Default)
 	name 		= "Samuel";
 	guild 		= GIL_out;
 	id 			= 1618;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 2;											
 	npctype		= NPCTYPE_MAIN;
 	

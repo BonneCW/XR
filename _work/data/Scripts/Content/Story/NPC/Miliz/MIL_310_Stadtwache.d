@@ -5,7 +5,7 @@ instance Mil_310_Stadtwache (Npc_Default)
 	name 		= NAME_Stadtwache;	
 	guild 		= GIL_PAL;
 	id 			= 310;
-	voice 		= 7;
+	voice		= 0;
 	flags       = NPC_FLAG_IMMORTAL;																
 	npctype		= NPCTYPE_MAIN;
 	

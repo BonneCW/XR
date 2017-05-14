@@ -4,7 +4,7 @@ instance Mod_1874_HMG_Makanius_MT (Npc_Default)
 	name 		= "Makanius";	
 	guild 		= GIL_OUT;
 	id 			= 1874;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

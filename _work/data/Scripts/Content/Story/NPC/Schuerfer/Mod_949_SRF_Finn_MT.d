@@ -4,7 +4,7 @@ instance Mod_949_SRF_Finn_MT (Npc_Default)
 	name 		= "Finn";
 	guild 		= GIL_NONE;
 	id 			= 949;
-	voice 		= 7;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

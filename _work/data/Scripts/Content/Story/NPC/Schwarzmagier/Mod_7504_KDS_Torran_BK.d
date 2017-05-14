@@ -4,7 +4,7 @@ instance Mod_7504_KDS_Torran_MT (Npc_Default)
 	name 		= "Schwarzmagier"; 
 	guild 		= GIL_KDF;
 	id 			= 7504;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -7,7 +7,7 @@ instance Mod_2003_GUR_BaalTondral_MT (Npc_Default)
 	level 		=		28;
 	flags 		=		0;
 	
-	voice 		=		13;
+	voice		= 0;
 	id 			=		2003;
 		
 	//-------- abilities --------

@@ -4,7 +4,7 @@ INSTANCE Mod_7489_OUT_Wache_REL (Npc_Default)
 	name 		= "Minenwache"; 
 	guild 		= GIL_OUT;
 	id 			= 7489;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

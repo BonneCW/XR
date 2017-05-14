@@ -4,7 +4,7 @@ INSTANCE Mod_6009_KDF_Ulthar_GDG (Npc_Default)
 	name 		= "Ulthar";
 	guild 		= GIL_OUT;
 	id 			= 6009;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 0;
 	npctype		= NPCTYPE_MAIN;
 

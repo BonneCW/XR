@@ -4,7 +4,7 @@ instance Mod_579_RIT_Girion_NW (Npc_Default)
 	name 		= "Girion";
 	guild 		= GIL_PAL;
 	id 			= 579;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

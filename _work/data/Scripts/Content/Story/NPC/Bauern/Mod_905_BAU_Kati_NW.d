@@ -4,7 +4,7 @@ instance Mod_905_BAU_Kati_NW (Npc_Default)
 	name 		= "Kati";
 	guild 		= GIL_NONE;
 	id 			= 905;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;	//Joly:nur solange Alnveres da ist!																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_7282_OUT_Buerger_REL (Npc_Default)
 	name 		= "Bürger";	
 	guild 		= GIL_OUT;
 	id 			= 7282;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_REL_BUERGER;
 	

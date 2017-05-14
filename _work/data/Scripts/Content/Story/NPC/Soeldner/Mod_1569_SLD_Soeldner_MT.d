@@ -7,7 +7,7 @@ instance Mod_1569_SLD_Soeldner_MT (Npc_Default)
 	guild =							GIL_mil;       
 	level =							16;
 	
-	voice =							11;
+	voice		= 0;
 	id =							1569;
 
 

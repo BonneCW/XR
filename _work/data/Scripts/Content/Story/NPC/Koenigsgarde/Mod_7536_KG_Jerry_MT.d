@@ -4,7 +4,7 @@ INSTANCE Mod_7536_KG_Jerry_MT (Npc_Default)
 	name 		= "Jerry"; 
 	guild 		= GIL_OUT;
 	id 			= 7536;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

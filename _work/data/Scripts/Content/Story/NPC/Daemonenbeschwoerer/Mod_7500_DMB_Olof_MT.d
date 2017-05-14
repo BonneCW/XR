@@ -4,7 +4,7 @@ instance Mod_7500_DMB_Olof_MT (Npc_Default)
 	name 		= "Dämonenbeschwörer"; 
 	guild 		= GIL_KDF;
 	id 			= 7500;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_958_BDT_Miguel_MT (Npc_Default)
 	name 		= "Miguel";
 	guild 		= GIL_OUT;
 	id 			= 958;
-	voice 		= 11;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_7673_MIL_Miliz_REL (Npc_Default)
 	name 		= "Bote";	
 	guild 		= GIL_OUT;
 	id 			= 7673;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_nw_miliz;
 	

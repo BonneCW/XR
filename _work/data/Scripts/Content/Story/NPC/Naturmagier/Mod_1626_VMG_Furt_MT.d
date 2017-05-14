@@ -8,7 +8,7 @@ instance Mod_1626_VMG_Furt_MT (Npc_Default)
 	level =							3;
 	flags	= 2;
 	
-	voice =							3;
+	voice		= 0;
 	id =							1626;
 
 

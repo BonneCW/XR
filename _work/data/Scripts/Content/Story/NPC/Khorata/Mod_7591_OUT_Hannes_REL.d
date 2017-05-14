@@ -4,7 +4,7 @@ instance Mod_7591_OUT_Hannes_REL (Npc_Default)
 	name 		= "Hannes";
 	guild 		= GIL_out;
 	id 			= 7591;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

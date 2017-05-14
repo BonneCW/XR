@@ -4,7 +4,7 @@ instance Mod_1178_MIL_Jason_NW (Npc_Default)
 	name 		= "Jason";	
 	guild 		= GIL_PAL;
 	id 			= 1178;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_9000_KDW_Saturas_AW (Npc_Default)
 	name 		= "Saturas";
 	guild 		= GIL_NOV; 
 	id 			= 9000;
-	voice 		= 14;
+	voice		= 0;
 	flags       = NPC_FLAG_IMMORTAL;																	
 	npctype		= NPCTYPE_MAIN;
 	

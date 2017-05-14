@@ -4,7 +4,7 @@ instance Mod_7351_OUT_Ranck_REL (Npc_Default)
 	name 		= "Ranck";
 	guild 		= GIL_OUT;
 	id 			= 7351;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

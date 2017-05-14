@@ -4,7 +4,7 @@ INSTANCE Mod_544_NONE_Wilfried_NW (Npc_Default)
 	name 		= "Wilfried";
 	guild 		= GIL_OUT; // Damit er nicht auf Söldnerrüstung und dergleichen reagiert
 	id 		= 544;
-	voice 		= 8;
+	voice		= 0;
 	flags           = 0;
 	npctype		= NPCTYPE_MAIN;
 

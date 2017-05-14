@@ -4,7 +4,7 @@ INSTANCE Mod_7289_HS_Jaeger_REL (Npc_Default)
 	name 		= "Königlicher Jäger";
 	guild 		= GIL_OUT;
 	id 			= 7289;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

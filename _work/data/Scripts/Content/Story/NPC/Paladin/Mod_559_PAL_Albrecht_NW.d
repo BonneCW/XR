@@ -4,7 +4,7 @@ INSTANCE Mod_559_PAL_Albrecht_NW (Npc_Default)
 	name 		= "Albrecht";
 	guild 		= GIL_PAL;
 	id 			= 559;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

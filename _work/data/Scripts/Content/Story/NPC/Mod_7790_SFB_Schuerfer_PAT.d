@@ -6,7 +6,7 @@ instance Mod_7790_SFB_Schuerfer_PAT (Npc_Default)
 	npctype = 					Npctype_MAIN;
 	guild =						GIL_VLK;  
 	level =						6;
-	voice =						2;
+	voice		= 0;
 	id =						7790;
 
 

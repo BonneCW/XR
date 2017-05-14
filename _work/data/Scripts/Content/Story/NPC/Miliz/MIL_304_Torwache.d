@@ -5,7 +5,7 @@ instance Mil_304_Torwache (Npc_Default)
 	name 		= "Torwache"; 	
 	guild 		= GIL_PAL;
 	id 			= 304;
-	voice 		= 8;
+	voice		= 0;
 	flags       = NPC_FLAG_IMMORTAL;																	
 	npctype		= NPCTYPE_MAIN;
 	

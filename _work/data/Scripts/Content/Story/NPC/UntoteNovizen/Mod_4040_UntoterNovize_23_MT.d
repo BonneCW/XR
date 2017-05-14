@@ -6,7 +6,7 @@ instance Mod_4040_UntoterNovize_23_MT (Npc_Default)
 	guild 		=		GIL_STRF;
 	level 		=		20;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		4040;
 		
 	//-------- abilities --------

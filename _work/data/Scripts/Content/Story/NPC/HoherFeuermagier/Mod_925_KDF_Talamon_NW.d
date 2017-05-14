@@ -4,7 +4,7 @@ INSTANCE Mod_925_KDF_Talamon_NW (Npc_Default)
 	name 		= "Talamon";
 	guild 		= GIL_VLK;
 	id 			= 925;
-	voice 		= 38;
+	voice 		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

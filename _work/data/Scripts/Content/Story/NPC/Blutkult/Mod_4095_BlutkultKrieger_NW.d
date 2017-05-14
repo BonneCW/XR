@@ -6,7 +6,7 @@ instance Mod_4095_BlutkultKrieger_NW (Npc_Default)
 	guild 		=		GIL_DMT;
 	level 		=		60;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		4095;
 		
 	//-------- abilities --------

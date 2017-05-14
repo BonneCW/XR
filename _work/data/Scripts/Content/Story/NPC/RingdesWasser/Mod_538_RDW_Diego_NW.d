@@ -4,7 +4,7 @@ INSTANCE Mod_538_RDW_Diego_NW (Npc_Default)
 	name 		= "Diego";
 	guild 		= GIL_OUT;
 	id 			= 538;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_FRIEND;
 	

@@ -5,7 +5,7 @@ instance Mod_2009_TPL_GorNaRan_MT (Npc_Default)
 	npctype =						npctype_Main;
 	guild =							GIL_OUT;
 	flags =							0;	
-	voice =							13;
+	voice		= 0;
 	id =							2009;
 		
 	

@@ -4,7 +4,7 @@ instance Mod_7352_OUT_Trador_TUG (Npc_Default)
 	name 		= "Trador";
 	guild 		= GIL_DMT;
 	id 			= 7352;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

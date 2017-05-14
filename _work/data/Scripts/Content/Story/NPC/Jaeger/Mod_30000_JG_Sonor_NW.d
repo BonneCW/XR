@@ -4,7 +4,7 @@ instance Mod_30000_JG_Sonor_NW (Npc_Default)
 	name 		= "Sonor"; 
 	guild 		= GIL_OUT;
 	id 			= 30000;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

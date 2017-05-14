@@ -4,7 +4,7 @@ INSTANCE Mod_7655_OUT_Abenteurer_REL (Npc_Default)
 	name 		= "Abenteurer";	
 	guild 		= GIL_OUT;
 	id 			= 7655;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

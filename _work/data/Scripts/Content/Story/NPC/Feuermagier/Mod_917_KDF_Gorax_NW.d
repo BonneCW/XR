@@ -4,7 +4,7 @@ INSTANCE Mod_917_KDF_Gorax_NW (Npc_Default)
 	name 		= "Gorax";
 	guild 		= GIL_VLK;
 	id 			= 917;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

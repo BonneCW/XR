@@ -4,7 +4,7 @@ INSTANCE Mod_7138_ASS_Azhar_NW (Npc_Default)
 	name 		= "Azhar"; 
 	guild 		= GIL_OUT;
 	id 			= 7138;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

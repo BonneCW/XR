@@ -6,7 +6,7 @@ instance Mod_7315_BK_Bshydal_AW (Npc_Default)
 	guild 		=		GIL_OUT;
 	level 		=		60;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		7315;
 		
 	//-------- abilities --------

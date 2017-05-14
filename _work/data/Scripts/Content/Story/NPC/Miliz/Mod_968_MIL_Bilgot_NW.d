@@ -4,7 +4,7 @@ instance Mod_968_MIL_Bilgot_NW (Npc_Default)
 	name 		= "Bilgot";
 	guild 		= GIL_PAL;
 	id 			= 968;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 0;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

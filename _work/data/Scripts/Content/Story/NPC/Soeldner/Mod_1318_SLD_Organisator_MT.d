@@ -7,7 +7,7 @@ instance Mod_1318_SLD_Organisator_MT (Npc_Default)
 	guild =							GIL_mil;       
 	level =							4;
 	
-	voice =							6;
+	voice		= 0;
 	id =							1318;
 
 

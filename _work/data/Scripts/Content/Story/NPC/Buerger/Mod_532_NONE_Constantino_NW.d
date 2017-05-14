@@ -4,7 +4,7 @@ INSTANCE Mod_532_NONE_Constantino_NW (Npc_Default)
 	name 		= "Constantino";	
 	guild 		= GIL_NONE;
 	id 			= 532;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

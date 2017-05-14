@@ -4,7 +4,7 @@ instance Mod_907_BAU_Tonak_NW (Npc_Default)
 	name 		= "Tonak"; 
 	guild 		= GIL_NONE;
 	id 			= 907;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;							
 	npctype		= NPCTYPE_MAIN;
 	

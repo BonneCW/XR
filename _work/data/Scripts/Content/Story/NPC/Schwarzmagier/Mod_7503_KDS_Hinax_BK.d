@@ -4,7 +4,7 @@ instance Mod_7503_KDS_Hinax_MT (Npc_Default)
 	name 		= "Schwarzmagier"; 
 	guild 		= GIL_KDF;
 	id 			= 7503;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

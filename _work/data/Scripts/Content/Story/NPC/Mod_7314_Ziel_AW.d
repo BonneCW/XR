@@ -4,7 +4,7 @@ instance Mod_7314_Ziel_AW (NPC_DEFAULT)
 	name 		= "Plattform";
 	guild		= GIL_NONE;
 	id			= 7314;
-	voice = 1;
+	voice		= 0;
 	level		= 0;
 	Npctype		= NPCTYPE_MAIN;
 	flags = 2;

@@ -4,7 +4,7 @@ instance Mod_550_NONE_Josef_NW (Npc_Default)
 	name 		= "Josef";
 	guild 		= GIL_NONE;
 	id 		= 550;
-	voice 		= 13;
+	voice		= 0;
 	flags           = 0;
 	npctype		= NPCTYPE_MAIN;
 	

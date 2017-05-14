@@ -4,7 +4,7 @@ instance Mod_4017_EIS_Rico_EIS (Npc_Default)
 	name 		= "Rico";
 	guild 		= GIL_OUT;
 	id 			= 4017;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

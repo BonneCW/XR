@@ -4,7 +4,7 @@ INSTANCE Mod_9002_KDW_Nefarius_AW (Npc_Default)
 	name 		= "Nefarius";
 	guild 		= GIL_NOV; 
 	id 			= 9002;
-	voice 		= 5;
+	voice		= 0;
 	flags       = NPC_FLAG_IMMORTAL;																	
 	npctype		= NPCTYPE_MAIN;
 	

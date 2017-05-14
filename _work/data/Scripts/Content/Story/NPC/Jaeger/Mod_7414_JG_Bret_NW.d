@@ -4,7 +4,7 @@ instance Mod_7414_JG_Bret_NW (Npc_Default)
 	name 		= "Bret"; 
 	guild 		= GIL_OUT;
 	id 			= 7414;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

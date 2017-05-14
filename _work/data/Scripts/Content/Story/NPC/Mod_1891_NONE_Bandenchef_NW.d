@@ -4,7 +4,7 @@ instance Mod_1891_NONE_Bandenchef_NW (Npc_Default)
 	name 		= "Bandenchef";	
 	guild 		= GIL_OUT;
 	id 			= 1891;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

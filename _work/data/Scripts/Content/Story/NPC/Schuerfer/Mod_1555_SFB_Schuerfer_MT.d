@@ -6,7 +6,7 @@ instance Mod_1555_SFB_Schuerfer_MT (Npc_Default)
 	npctype = 					Npctype_mt_schuerfer;
 	guild =						GIL_mil;      
 	level =						6;
-	voice =						2;
+	voice		= 0;
 	id =						1555;
 
 

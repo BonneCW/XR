@@ -6,7 +6,7 @@ instance Mod_1084_BAU_Bauer_MT (Npc_Default)
 	npctype = NPCTYPE_MT_REISBAUER;
 	guild 		=	GIL_MIL;      
 	level 		=	2;
-	voice 		=	2;
+	voice		= 0;
 	id 			=	1084;
 
 

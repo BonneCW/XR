@@ -4,7 +4,7 @@ instance Mod_7367_JG_Jaeger_NW (Npc_Default)
 	name 		= NAME_JAEGER; 
 	guild 		= GIL_STRF;
 	id 			= 7367;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

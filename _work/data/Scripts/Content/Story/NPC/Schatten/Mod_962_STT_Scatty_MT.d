@@ -4,7 +4,7 @@ instance Mod_962_STT_Scatty_MT (Npc_Default)
 	name 		= "Scatty";
 	guild 		= GIL_OUT;
 	id 			= 962;
-	voice 		= 1;
+	voice		= 0;
 	flags      	= 2;
 	npctype		= NPCTYPE_main;
 	

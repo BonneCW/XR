@@ -4,7 +4,7 @@ instance Mod_1954_EIS_Thys_EIS (Npc_Default)
 	name 		= "Thys";	
 	guild 		= GIL_OUT;
 	id 			= 1954;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

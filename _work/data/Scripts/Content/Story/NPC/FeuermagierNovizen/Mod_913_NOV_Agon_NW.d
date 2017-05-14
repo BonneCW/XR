@@ -4,7 +4,7 @@ INSTANCE Mod_913_NOV_Agon_NW (Npc_Default)
 	name 		= Name_Novize;
 	guild 		= GIL_VLK;
 	id 			= 913;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_nw_feuernovize;
 	

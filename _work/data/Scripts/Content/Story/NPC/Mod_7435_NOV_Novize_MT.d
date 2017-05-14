@@ -4,7 +4,7 @@ INSTANCE Mod_7435_NOV_Novize_MT (Npc_Default)
 	name 		= Name_Novize;
 	guild 		= GIL_DMT;
 	id 			= 7435;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

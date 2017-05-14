@@ -4,7 +4,7 @@ instance Mod_7356_VMG_Fore_TUG (Npc_Default)
 	name 		= "Fore";
 	guild 		= GIL_out;
 	id 			= 7356;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

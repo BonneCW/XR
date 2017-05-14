@@ -4,7 +4,7 @@ instance Mod_1537_WKR_Vanas_NW (Npc_Default)
 	name 		= "Vanas";	
 	guild 		= GIL_nov;
 	id 			= 1537;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

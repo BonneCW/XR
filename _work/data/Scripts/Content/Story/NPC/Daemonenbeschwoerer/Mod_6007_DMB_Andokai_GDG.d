@@ -4,7 +4,7 @@ INSTANCE Mod_6007_DMB_Andokai_GDG (Npc_Default)
 	name 		= "Andokai";
 	guild 		= GIL_OUT;
 	id 			= 6007;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	aivar[AIV_IGNORE_Murder]		= TRUE;

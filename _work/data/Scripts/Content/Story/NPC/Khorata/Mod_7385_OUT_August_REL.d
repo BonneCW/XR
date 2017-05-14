@@ -4,7 +4,7 @@ instance Mod_7385_OUT_August_REL (Npc_Default)
 	name 		= "August";
 	guild 		= GIL_OUT;
 	id 			= 7385;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_7193_NOV_Novize_NW (Npc_Default)
 	name 		= Name_Novize;
 	guild 		= GIL_VLK;
 	id 			= 7193;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

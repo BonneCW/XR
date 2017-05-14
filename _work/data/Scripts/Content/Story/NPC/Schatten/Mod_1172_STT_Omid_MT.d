@@ -7,7 +7,7 @@ instance Mod_1172_STT_Omid_MT (Npc_Default)
 	level 		=		3;
 	
 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		1172;
 		
 	//-------- abilities --------

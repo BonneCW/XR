@@ -4,7 +4,7 @@ INSTANCE Mod_7022_BDT_Oschust_MT (Npc_Default)
 	name 		= "Oschust";
 	guild 		= GIL_OUT;
 	id 			= 7022;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 

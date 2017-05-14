@@ -7,7 +7,7 @@ instance Mod_7296_DJG_Drachenjaeger_NW (Npc_Default)
 	guild =					GIL_mil;      
 	level =					11;
 	
-	voice =					8;
+	voice		= 0;
 	id =					7296;
 
 

@@ -4,7 +4,7 @@ instance Mod_978_RIT_Marcos_NW  (Npc_Default)
 	name 		= "Marcos";
 	guild 		= GIL_PAL;
 	id 			= 978;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

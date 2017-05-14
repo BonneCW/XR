@@ -7,7 +7,7 @@ instance Mod_1297_SLD_Wedge_REL (Npc_Default)
 	guild =					GIL_mil;      
 	level =					11;
 	
-	voice =					5;
+	voice		= 0;
 	id =					1297;
 
 

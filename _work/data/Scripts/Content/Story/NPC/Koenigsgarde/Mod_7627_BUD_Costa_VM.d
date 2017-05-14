@@ -8,7 +8,7 @@ instance Mod_7627_BUD_Costa_VM (Npc_Default)
 	level =							2;
 
 	
-	voice =							3;
+	voice		= 0;
 	id =							7627;
 
 

@@ -4,7 +4,7 @@ instance Mod_904_SLD_Engardo_MT (Npc_Default)
 	name 		= "Engardo"; 
 	guild 		= GIL_MIL;
 	id 			= 904;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;						
 	npctype		= NPCTYPE_MAIN;
 	

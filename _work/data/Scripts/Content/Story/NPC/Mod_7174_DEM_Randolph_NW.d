@@ -4,7 +4,7 @@ instance Mod_7174_DEM_Randolph_NW (Npc_Default)
 	name 		= "Halbinfernalischer Randolph";
 	guild 		= GIL_DMT;
 	id 			= 7174;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

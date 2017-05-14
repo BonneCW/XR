@@ -5,7 +5,7 @@ INSTANCE Monster_11066_Hase_TUG (Npc_Default)
 	guild							=	GIL_SHEEP;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Rabbit;
 	id 			= 11066;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	level = 1;

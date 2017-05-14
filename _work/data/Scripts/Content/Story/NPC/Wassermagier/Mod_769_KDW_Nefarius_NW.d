@@ -4,7 +4,7 @@ INSTANCE Mod_769_KDW_Nefarius_NW (Npc_Default)
 	name 		= "Nefarius";
 	guild 		= GIL_NOV; 
 	id 			= 769;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

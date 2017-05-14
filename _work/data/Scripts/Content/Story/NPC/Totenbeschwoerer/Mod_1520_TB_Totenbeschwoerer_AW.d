@@ -4,7 +4,7 @@ INSTANCE Mod_1520_TB_Totenbeschwoerer_AW (Npc_Default)
 	name 		= "Totenbeschwörer"; 
 	guild 		= GIL_DMT;
 	id 			= 1520;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																
 	
 	// ------ AIVARs ------

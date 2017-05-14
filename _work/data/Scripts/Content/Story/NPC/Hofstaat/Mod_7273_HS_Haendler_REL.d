@@ -4,7 +4,7 @@ instance Mod_7273_HS_Haendler_REL (Npc_Default)
 	name 		= "Königlicher Händler"; 
 	guild 		= GIL_OUT;
 	id 			= 7273;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_1960_VMG_Thorge_TUG (Npc_Default)
 	name 		= "Thorge";
 	guild 		= GIL_out;
 	id 			= 1960;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 

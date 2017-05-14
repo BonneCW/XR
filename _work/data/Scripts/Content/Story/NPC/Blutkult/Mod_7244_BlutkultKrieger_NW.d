@@ -6,7 +6,7 @@ instance Mod_7244_BlutkultKrieger_NW (Npc_Default)
 	guild 		=		GIL_DMT;
 	level 		=		60;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		7244;
 		
 	//-------- abilities --------

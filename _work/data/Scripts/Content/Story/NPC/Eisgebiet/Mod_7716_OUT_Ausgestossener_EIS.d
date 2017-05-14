@@ -4,7 +4,7 @@ INSTANCE Mod_7716_OUT_Ausgestossener_EIS (Npc_Default)
 	name 		= "Ausgestoﬂener";
 	guild 		= GIL_OUT;
 	id 			= 7716;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_nw_bandit;
 	

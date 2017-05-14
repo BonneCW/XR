@@ -4,7 +4,7 @@ instance Mod_100_BAU_Wasili_NW (Npc_Default)
 	name 		= "Wasili";
 	guild 		= GIL_NONE;
 	id 			= 100;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

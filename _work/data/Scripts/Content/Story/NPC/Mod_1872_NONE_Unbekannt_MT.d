@@ -6,7 +6,7 @@ instance Mod_1872_NONE_Unbekannt_MT (Npc_Default)
 	npctype		= 	npctype_friend;
 	guild 		=	GIL_OUT;
 	level 		=	10;
-	voice		=	5;
+	voice		= 0;
 	id 			=	1872;
 
 	aivar[AIV_ToughGuy] 			= TRUE;

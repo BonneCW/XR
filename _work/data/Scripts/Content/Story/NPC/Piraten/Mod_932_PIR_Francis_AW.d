@@ -4,7 +4,7 @@ INSTANCE Mod_932_PIR_Francis_AW (Npc_Default)
 	name 		= "Francis";
 	guild 		= GIL_OUT;
 	id 			= 932;
-	voice 		= 13;
+	voice		= 0;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

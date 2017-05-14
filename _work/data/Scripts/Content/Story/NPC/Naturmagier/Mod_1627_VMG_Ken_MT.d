@@ -6,7 +6,7 @@ instance Mod_1627_VMG_Ken_MT (Npc_Default)
 	npctype =						npctype_main;
 	guild =							GIL_out;      
 		
-	voice =							3;
+	voice		= 0;
 	id =							1627;
 
 

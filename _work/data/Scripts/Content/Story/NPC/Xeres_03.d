@@ -4,7 +4,7 @@ INSTANCE Xeres_03	(Npc_Default)
 	name							=	"Xeres";
 	guild							=	GIL_STRF;
 	id			= 	1608;
-	voice			=	14;
+	voice		= 0;
 	level							=	10000;
 	npctype		= NPCTYPE_MAIN;
 	flags       = 0;

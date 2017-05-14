@@ -4,7 +4,7 @@ INSTANCE Mod_936_PIR_Matt_AW (Npc_Default)
 	name 		= "Matt";
 	guild 		= GIL_NONE;
 	id 			= 936;
-	voice 		= 10;
+	voice		= 0;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

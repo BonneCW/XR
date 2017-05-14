@@ -4,7 +4,7 @@ instance Mod_945_SRF_Crimson_MT (Npc_Default)
 	name 		= "Crimson";
 	guild 		= GIL_NONE;
 	id 			= 945;
-	voice 		= 10;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

@@ -6,7 +6,7 @@ instance Mod_7306_UntoterKrieger_AW (Npc_Default)
 	guild 		=		GIL_STRF;
 	level 		=		40;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		7306;
 		
 	//-------- abilities --------

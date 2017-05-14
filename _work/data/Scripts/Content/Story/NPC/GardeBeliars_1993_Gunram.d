@@ -4,7 +4,7 @@ INSTANCE GardeBeliars_1993_Gunram	(Npc_Default)
 	name							=	"Gunram";
 	guild							=	GIL_NONE;
 	id			= 	1993;
-	voice			=	14;
+	voice		= 0;
 	level							=	40;
 	npctype		= NPCTYPE_MAIN;
 

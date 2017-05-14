@@ -5,7 +5,7 @@ instance Mod_1290_SLD_Roscoe_MT (Npc_Default)
 	name =					"Roscoe";
 	Npctype =				Npctype_Main;
 	guild =					GIL_mil;   	
-	voice =					10;
+	voice		= 0;
 	id =					1290;
 
 

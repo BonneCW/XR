@@ -4,7 +4,7 @@ instance Mod_1062_VLK_Bernd_NW (Npc_Default)
 	name 		= "Bernd"; 
 	guild 		= GIL_PAL;
 	id 			= 1062;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

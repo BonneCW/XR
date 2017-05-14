@@ -7,7 +7,7 @@ instance Mod_7690_STT_Schatten_NW (Npc_Default)
 	level 		=		5;
 	
 	
-	voice 		=		10;
+	voice		= 0;
 	id 			=		7690;
 		
 	//-------- abilities --------

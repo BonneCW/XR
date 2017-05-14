@@ -4,7 +4,7 @@ INSTANCE Mod_1553_PIR_GEISTERPIRAT_DI (Npc_Default)
 	name 		= "Käptn Silver";
 	guild 		= GIL_STRF;
 	id 			= 1553;
-	voice 		= 7;
+	voice		= 0;
 	flags       = NPC_FLAG_GHOST|NPC_FLAG_IMMORTAL;															
 	npctype		= NPCTYPE_MAIN;
 	

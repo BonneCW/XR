@@ -8,7 +8,7 @@ instance Mod_1539_WKR_Wasserkrieger_NW (Npc_Default)
 	level =							2;
 	
 	
-	voice =							2;
+	voice		= 0;
 	id =							1539;
 
 

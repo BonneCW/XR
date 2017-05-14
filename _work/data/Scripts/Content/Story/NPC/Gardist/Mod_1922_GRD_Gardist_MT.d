@@ -6,7 +6,7 @@ instance Mod_1922_GRD_Gardist_MT (Npc_Default)
 	npctype		= 	npctype_main;
 	guild 		=	GIL_out;
 	level 		=	10;
-	voice 		=	4;
+	voice		= 0;
 	id 			=	1922;
 		
 	//-------- abilities --------

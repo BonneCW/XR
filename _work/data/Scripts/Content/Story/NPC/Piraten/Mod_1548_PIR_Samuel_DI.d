@@ -4,7 +4,7 @@ INSTANCE Mod_1548_PIR_Samuel_DI (Npc_Default)
 	name 		= "Samuel";
 	guild 		= GIL_out;
 	id 			= 1548;
-	voice 		= 14;
+	voice		= 0;
 	flags       = FALSE;											
 	npctype		= NPCTYPE_MAIN;
 	

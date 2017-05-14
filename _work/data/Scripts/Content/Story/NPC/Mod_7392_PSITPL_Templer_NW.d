@@ -4,7 +4,7 @@ instance Mod_7392_PSITPL_Templer_NW (Npc_Default)
 	name 		= "Fanatischer Templer"; 
 	guild 		= GIL_strf;
 	id 			= 7392;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_NW_fanatiker;
 	

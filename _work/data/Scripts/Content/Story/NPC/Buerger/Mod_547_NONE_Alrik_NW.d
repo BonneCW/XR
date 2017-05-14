@@ -4,7 +4,7 @@ INSTANCE Mod_547_NONE_Alrik_NW (Npc_Default)
 	name 		= "Alrik"; 
 	guild 		= GIL_NONE;
 	id 			= 547;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_FRIEND; //plündert nicht!!! (und ein Freischlag)
 	

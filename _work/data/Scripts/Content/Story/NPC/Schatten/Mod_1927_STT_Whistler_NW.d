@@ -7,7 +7,7 @@ instance Mod_1927_STT_Whistler_NW (Npc_Default)
 	level 		=		5;
 	
 	
-	voice 		=		11;
+	voice		= 0;
 	id 			=		1927;
 		
 	//-------- abilities --------

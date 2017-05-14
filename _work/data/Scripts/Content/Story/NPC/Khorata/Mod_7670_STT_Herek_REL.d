@@ -6,7 +6,7 @@ instance Mod_7670_STT_Herek_REL (Npc_Default)
 	npctype =						npctype_main;
 	guild =							GIL_OUT;      
 	level =							2;	
-	voice =							1;
+	voice		= 0;
 	id =							7670;
 
 	//-------- abilities --------

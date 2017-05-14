@@ -4,7 +4,7 @@ instance Mod_1181_MIL_Tuerwache_NW (Npc_Default)
 	name 		= "Richterhaus-Wache"; 	
 	guild 		= GIL_pal;
 	id 			= 1181;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_nw_miliz;
 	

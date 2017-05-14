@@ -7,7 +7,7 @@ instance Mod_1122_SLD_Mordrag_MT (Npc_Default)
 	guild =					GIL_OUT;      
 	level =					10;
 	
-	voice =					11;
+	voice		= 0;
 	id =					1122;
 
 

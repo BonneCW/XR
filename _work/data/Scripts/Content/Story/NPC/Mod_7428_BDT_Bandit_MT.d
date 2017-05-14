@@ -4,7 +4,7 @@ INSTANCE Mod_7428_BDT_Bandit_MT (Npc_Default)
 	name 		= "Räuber";
 	guild 		= GIL_STRF;
 	id 			= 7428;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_mt_bandit;
 	

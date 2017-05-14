@@ -4,7 +4,7 @@ INSTANCE Mod_565_NONE_Brahim_NW (Npc_Default)
 	name 		= "Brahim"; 
 	guild 		= GIL_PAL;
 	id 			= 565;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

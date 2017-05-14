@@ -6,7 +6,7 @@ instance Mod_7312_UntoterNovize_AW (Npc_Default)
 	guild 		=		GIL_STRF;
 	level 		=		20;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		7312;
 		
 	//-------- abilities --------

@@ -4,7 +4,7 @@ instance Mod_502_RIT_Keroloth_NW  (Npc_Default)
 	name 		= "Keroloth";
 	guild 		= GIL_PAL;
 	id 			= 502;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

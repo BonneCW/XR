@@ -4,7 +4,7 @@ INSTANCE Mod_7126_ASS_Krieger_NW (Npc_Default)
 	name 		= "Assassinenkrieger"; 
 	guild 		= GIL_OUT;
 	id 			= 7126;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

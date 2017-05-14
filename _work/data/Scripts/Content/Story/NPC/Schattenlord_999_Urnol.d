@@ -4,7 +4,7 @@ INSTANCE Schattenlord_999_Urnol	(Npc_Default)
 	name							=	"Schattenlord Urnol";
 	guild							=	GIL_DMT;
 	id			= 	999;
-	voice			=	14;
+	voice		= 0;
 	level							=	100;
 	npctype		= NPCTYPE_MAIN;
 	flags       = 0;

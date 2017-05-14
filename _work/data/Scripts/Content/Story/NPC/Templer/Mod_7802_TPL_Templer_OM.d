@@ -7,7 +7,7 @@ instance Mod_7802_TPL_Templer_OM (Npc_Default)
 	level =							17;
 	flags =							0;
 	
-	voice =							8;
+	voice		= 0;
 	id =							7802;
 		
 	//-------- abilities --------

@@ -6,7 +6,7 @@ instance Mod_7021_GUR_CorKalom_OT (Npc_Default)
 	guild 		=		GIL_DMT;
 	level 		=		28;
 	
-	voice 		=		12;
+	voice		= 0;
 	id 			=		7021;
 	flags = NPC_FLAG_GHOST|2;
 

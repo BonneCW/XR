@@ -4,7 +4,7 @@ instance Mod_7589_OUT_Will_REL (Npc_Default)
 	name 		= "Will";	
 	guild 		= GIL_Out;
 	id 			= 7589;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

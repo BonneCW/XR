@@ -4,7 +4,7 @@ instance Mod_1260_RIT_Neron_NW (Npc_Default)
 	name 		= "Neron";
 	guild 		= GIL_PAL;
 	id 			= 1260;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

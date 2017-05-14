@@ -4,7 +4,7 @@ instance Mod_7678_OUT_Atalante_NW (Npc_Default)
 	name 		= "Atalante"; 
 	guild 		= GIL_DMT;
 	id 			= 7678;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

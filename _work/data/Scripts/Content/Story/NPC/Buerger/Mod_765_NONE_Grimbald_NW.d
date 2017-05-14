@@ -4,7 +4,7 @@ INSTANCE Mod_765_NONE_Grimbald_NW (Npc_Default)
 	name 		= "Grimbald";
 	guild 		= GIL_NONE;
 	id 			= 765;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

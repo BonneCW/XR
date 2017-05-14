@@ -4,7 +4,7 @@ instance Mod_7574_OUT_Lehrling_REL (Npc_Default)
 	name 		= "Bäckerlehrling"; 
 	guild 		= GIL_OUT;
 	id 			= 7574;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

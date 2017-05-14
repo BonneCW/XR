@@ -4,7 +4,7 @@ instance Mod_965_STT_Snaf_MT (Npc_Default)
 	name 		= "Snaf";
 	guild 		= GIL_OUT;
 	id 			= 965;
-	voice 		= 1;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_main;
 	

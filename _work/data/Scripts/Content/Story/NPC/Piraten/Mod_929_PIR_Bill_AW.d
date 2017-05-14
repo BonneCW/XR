@@ -4,7 +4,7 @@ INSTANCE Mod_929_PIR_Bill_AW (Npc_Default)
 	name 		= "Bill";
 	guild 		= GIL_OUT;
 	id 			= 929;
-	voice 		= 3;
+	voice		= 0;
 	flags       = FALSE;													
 	npctype		= NPCTYPE_MAIN;
 	

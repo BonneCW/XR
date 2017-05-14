@@ -4,7 +4,7 @@ instance Mod_7272_HS_Trunkenbold_REL (Npc_Default)
 	name 		= "Trunkenbold"; 
 	guild 		= GIL_OUT;
 	id 			= 7272;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

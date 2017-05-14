@@ -4,7 +4,7 @@ instance Mod_7016_HS_Bauer_REL (Npc_Default)
 	name 		= "Bauer"; 
 	guild 		= GIL_OUT;
 	id 			= 7016;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

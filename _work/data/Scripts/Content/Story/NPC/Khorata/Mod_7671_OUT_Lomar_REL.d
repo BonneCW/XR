@@ -4,7 +4,7 @@ INSTANCE Mod_7671_OUT_Lomar_REL (Npc_Default)
 	name 		= "Lomar";
 	guild 		= GIL_DMT;
 	id 			= 7671;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 

@@ -4,7 +4,7 @@ instance Mod_7569_OUT_Randi_EIS (Npc_Default)
 	name 		= "Randi"; 
 	guild 		= GIL_OUT;
 	id 			= 7569;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_AMBIENT;
 	

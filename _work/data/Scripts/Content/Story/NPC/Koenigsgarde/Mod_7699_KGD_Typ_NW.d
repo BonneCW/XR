@@ -6,7 +6,7 @@ instance Mod_7699_KGD_Typ_NW (Npc_Default)
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_OUT;
 	level 		=	20;
-	voice 		=	9;
+	voice		= 0;
 	id 			=	7699;
 
 	//-------- visuals --------

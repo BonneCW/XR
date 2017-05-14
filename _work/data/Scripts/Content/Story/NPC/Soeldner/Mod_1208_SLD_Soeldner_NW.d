@@ -4,7 +4,7 @@ instance Mod_1208_SLD_Soeldner_NW (Npc_Default)
 	name 		= NAME_SOELDNER; 
 	guild 		= GIL_mil;
 	id 			= 1208;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_nw_soeldner;
 	

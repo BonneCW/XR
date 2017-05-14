@@ -7,7 +7,7 @@ instance Mod_7023_BDT_Quentin_MT (Npc_Default)
 	guild =					GIL_OUT;     
 	level =					12;
 	
-	voice =					7;
+	voice		= 0;
 	id =					7023;
 
 	//-------- abilities --------

@@ -4,7 +4,7 @@ instance Mod_976_NONE_Jergan_MT (Npc_Default)
 	name 		= "Jergan";
 	guild 		= GIL_NONE;
 	id 			= 976;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;							
 	npctype		= NPCTYPE_MAIN;
 	

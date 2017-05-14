@@ -4,7 +4,7 @@ instance Mod_1533_WKR_Salvador_NW (Npc_Default)
 	name 		= "Salvador";	
 	guild 		= GIL_nov;
 	id 			= 1533;
-	voice 		= 4;
+	voice		= 0;
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------

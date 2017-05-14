@@ -7,7 +7,7 @@ instance Mod_7256_TPL_Templer_MT (Npc_Default)
 	level =							17;
 	
 	
-	voice =							13;
+	voice		= 0;
 	id =							7256;
 		
 	//-------- abilities --------

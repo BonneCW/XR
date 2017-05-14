@@ -4,7 +4,7 @@ instance Mod_762_NONE_Farim_NW (Npc_Default)
 	name 		= "Farim"; 
 	guild 		= GIL_NONE;
 	id 			= 762;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;	//Joly: HauptstoryCharakter Addon															
 	npctype		= NPCTYPE_MAIN;
 	

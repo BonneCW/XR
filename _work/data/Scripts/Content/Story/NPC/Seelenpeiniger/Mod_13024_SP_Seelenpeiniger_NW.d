@@ -6,7 +6,7 @@ instance Mod_13024_SP_Seelenpeiniger_NW (Npc_Default)
 	npctype		= 	npctype_main;
 	guild 		=	GIL_DMT;
 	level 		=	25;
-	voice		=	5;
+	voice		= 0;
 	id 			=	13024;
 	flags       = NPC_FLAG_GHOST;
 		

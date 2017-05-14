@@ -7,7 +7,7 @@ instance Mod_1292_SLD_Shrike_MT (Npc_Default)
 	guild =					GIL_mil;      
 	level =					6;
 	
-	voice =					7;
+	voice		= 0;
 	id =					1292;
 
 

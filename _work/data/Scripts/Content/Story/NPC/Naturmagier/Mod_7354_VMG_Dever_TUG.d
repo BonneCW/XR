@@ -4,7 +4,7 @@ instance Mod_7354_VMG_Dever_TUG (Npc_Default)
 	name 		= "Dever";
 	guild 		= GIL_out;
 	id 			= 7354;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_785_BAU_Gunnar_NW (Npc_Default)
 	name 		= "Gunnar";
 	guild 		= GIL_NONE;
 	id 			= 785;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

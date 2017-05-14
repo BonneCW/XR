@@ -4,7 +4,7 @@ instance Mod_745_MIL_Peck_NW (Npc_Default)
 	name 		= "Peck";	
 	guild 		= GIL_PAL;
 	id 			= 745;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

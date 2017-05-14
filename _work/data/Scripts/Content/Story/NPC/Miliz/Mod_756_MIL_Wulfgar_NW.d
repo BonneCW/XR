@@ -4,7 +4,7 @@ instance Mod_756_MIL_Wulfgar_NW (Npc_Default)
 	name 		= "Wulfgar";	
 	guild 		= GIL_PAL;
 	id 			= 756;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

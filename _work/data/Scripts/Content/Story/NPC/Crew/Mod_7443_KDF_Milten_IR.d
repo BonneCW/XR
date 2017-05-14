@@ -4,7 +4,7 @@ INSTANCE Mod_7443_KDF_Milten_IR (Npc_Default)
 	name 		= "Milten";
 	guild 		= GIL_OUT;
 	id 			= 7443;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_FRIEND;
 	

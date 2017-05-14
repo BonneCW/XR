@@ -4,7 +4,7 @@ instance Mod_900_BAU_Akil_NW (Npc_Default)
 	name 		= "Akil";
 	guild 		= GIL_NONE;
 	id 			= 900;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;		//Joly:nur solange Alnveres da ist!																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_1875_GRD_Botschafter_MT (Npc_Default)
 	name 		= "Botschafter";
 	guild 		= GIL_OUT;
 	id 			= 1875;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;							
 	npctype		= NPCTYPE_MAIN;
 	

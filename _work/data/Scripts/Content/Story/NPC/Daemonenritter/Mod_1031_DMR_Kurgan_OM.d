@@ -4,7 +4,7 @@ instance Mod_1031_DMR_Kurgan_OM (Npc_Default)
 	name 		= "Kurgan";
 	guild 		= GIL_KDF;
 	id 			= 1031;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_FRIEND;
 	

@@ -4,7 +4,7 @@ instance Mod_7462_RIT_Gerold_IR  (Npc_Default)
 	name 		= "Gerold";
 	guild 		= GIL_OUT;
 	id 			= 7462;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

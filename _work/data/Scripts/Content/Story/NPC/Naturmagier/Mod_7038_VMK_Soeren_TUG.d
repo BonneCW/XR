@@ -4,7 +4,7 @@ instance Mod_7038_VMK_Soeren_TUG (Npc_Default)
 	name 		= "Sören";
 	guild 		= GIL_OUT;
 	id 			= 7038;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

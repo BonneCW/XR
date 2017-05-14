@@ -4,7 +4,7 @@ INSTANCE Kakos_11006_NW (Npc_Default)
 	name 		= "Kakos";	
 	guild 		= GIL_OUT;
 	id 			= 11006;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	level = 400;

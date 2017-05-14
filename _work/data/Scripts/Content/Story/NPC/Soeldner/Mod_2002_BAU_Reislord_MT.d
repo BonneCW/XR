@@ -6,7 +6,7 @@ instance Mod_2002_BAU_Ricelord_MT (Npc_Default)
 	npctype 	=	NPCTYPE_MAIN;	
 	guild 		=	GIL_MIL;      
 	level 		=	10;
-	voice 		=	12;
+	voice		= 0;
 	id 			=	2002; 
 
 	//-------- abilities --------

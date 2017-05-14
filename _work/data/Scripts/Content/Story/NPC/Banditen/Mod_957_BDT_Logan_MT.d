@@ -4,7 +4,7 @@ instance Mod_957_BDT_Logan_MT (Npc_Default)
 	name 		= "Logan";
 	guild 		= GIL_OUT;
 	id 			= 957;
-	voice 		= 10;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

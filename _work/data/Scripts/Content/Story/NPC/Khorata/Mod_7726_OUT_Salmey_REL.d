@@ -4,7 +4,7 @@ instance Mod_7726_OUT_Salmey_REL (Npc_Default)
 	name 		= "Salmey";	
 	guild 		= GIL_OUT;
 	id 			= 7726;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

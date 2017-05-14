@@ -4,7 +4,7 @@ instance Mod_1530_WKR_Everaldo_NW (Npc_Default)
 	name 		= "Everaldo"; 
 	guild 		= GIL_NOV;
 	id 			= 1530;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;							
 	npctype		= NPCTYPE_MAIN;
 	

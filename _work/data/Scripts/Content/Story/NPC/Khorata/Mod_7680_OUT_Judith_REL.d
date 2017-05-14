@@ -4,7 +4,7 @@ instance Mod_7680_OUT_Judith_REL (Npc_Default)
 	name 		= "Judith";	
 	guild 		= GIL_OUT;
 	id 			= 7680;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

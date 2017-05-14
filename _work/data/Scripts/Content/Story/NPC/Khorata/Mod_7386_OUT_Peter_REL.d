@@ -4,7 +4,7 @@ instance Mod_7386_OUT_Peter_REL (Npc_Default)
 	name 		= "Peter";
 	guild 		= GIL_OUT;
 	id 			= 7386;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_7024_OUT_Sabitsch_MT (Npc_Default)
 	name 		= "Sabitsch";
 	guild 		= GIL_OUT;
 	id 			= 7024;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

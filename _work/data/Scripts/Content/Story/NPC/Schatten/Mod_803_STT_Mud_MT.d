@@ -8,7 +8,7 @@ instance Mod_803_STT_Mud_MT (Npc_Default)
 	level =							0;
 	
 	
-	voice =							3;
+	voice		= 0;
 	id =							803;
 	flags = 2;
 

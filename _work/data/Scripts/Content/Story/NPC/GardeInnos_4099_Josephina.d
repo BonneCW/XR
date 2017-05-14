@@ -8,7 +8,7 @@ instance GardeInnos_4099_Josephina (Npc_Default)
 
 	flags	= 2;
 	 	
-	voice 		=		17;
+	voice		= 0;
 	id 			=		4099;
 		
 	//-------- abilities --------

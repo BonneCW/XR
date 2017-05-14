@@ -4,7 +4,7 @@ INSTANCE GardeBeliars_1992_Reinhold	(Npc_Default)
 	name							=	"Reinhold";
 	guild							=	GIL_NONE;
 	id			= 	1992;
-	voice			=	14;
+	voice		= 0;
 	level							=	40;
 	npctype		= NPCTYPE_MAIN;
 

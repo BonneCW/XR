@@ -4,7 +4,7 @@ instance Mod_777_NONE_Rukhar_NW (Npc_Default)
 	name 		= "Rukhar";
 	guild 		= GIL_NONE;
 	id 			= 777;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_767_BAU_Malak_NW (Npc_Default)
 	name 		= "Schäfer";
 	guild 		= GIL_OUT;
 	id 			= 767;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

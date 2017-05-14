@@ -4,7 +4,7 @@ instance Mod_7762_OUT_Ruediger_REL (Npc_Default)
 	name 		= "Rüdiger"; 
 	guild 		= GIL_OUT;
 	id 			= 7762;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

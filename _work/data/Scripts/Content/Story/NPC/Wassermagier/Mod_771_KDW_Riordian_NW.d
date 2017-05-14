@@ -4,7 +4,7 @@ INSTANCE Mod_771_KDW_Riordian_NW (Npc_Default)
 	name 		= "Riordian";
 	guild 		= GIL_NOV; 
 	id 			= 771;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 	

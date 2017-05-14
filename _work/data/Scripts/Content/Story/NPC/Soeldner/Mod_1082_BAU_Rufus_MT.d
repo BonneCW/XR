@@ -6,7 +6,7 @@ instance Mod_1082_BAU_Rufus_MT (Npc_Default)
 	npctype		=	npctype_main;
 	guild 		=	GIL_MIL;      
 	level 		=	4;
-	voice 		=	2;
+	voice		= 0;
 	id 			=	1082;
 
 	//-------- abilities --------

@@ -4,7 +4,7 @@ INSTANCE Mod_518_SMK_Scar_MT (Npc_Default)
 	name 		= "Scar";
 	guild 		= GIL_KDF;
 	id 			= 518;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	aivar[AIV_IGNORE_Murder]		= TRUE;

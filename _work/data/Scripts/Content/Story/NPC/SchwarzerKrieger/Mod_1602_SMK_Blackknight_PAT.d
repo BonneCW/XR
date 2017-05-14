@@ -8,7 +8,7 @@ instance Mod_1602_SMK_Blackknight_PAT (Npc_Default)
 	level =							5;
 	
 	
-	voice =							1;
+	voice		= 0;
 	id =							1602;
 
 

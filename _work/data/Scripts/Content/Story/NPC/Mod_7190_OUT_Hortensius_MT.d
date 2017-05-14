@@ -4,7 +4,7 @@ instance Mod_7190_OUT_Hortensius_MT (Npc_Default)
 	name 		= "Hortensius"; 
 	guild 		= GIL_OUT;
 	id 			= 7190;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

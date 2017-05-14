@@ -8,7 +8,7 @@ instance Mod_1582_SFB_Bert_FM (Npc_Default)
 	level =							3;
 	flags	=	2;						
 	
-	voice =							10;
+	voice		= 0;
 	id =							1582;
 
 

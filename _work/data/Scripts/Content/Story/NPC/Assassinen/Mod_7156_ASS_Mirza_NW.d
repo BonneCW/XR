@@ -4,7 +4,7 @@ INSTANCE Mod_7156_ASS_Mirza_NW (Npc_Default)
 	name 		= "Mirza"; 
 	guild 		= GIL_OUT;
 	id 			= 7156;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -8,7 +8,7 @@ instance Mod_1498_BUD_Grimes_OM (Npc_Default)
 	level =							5;
 	
 	
-	voice =							4;
+	voice =							0;
 	id =							1498;
 
 

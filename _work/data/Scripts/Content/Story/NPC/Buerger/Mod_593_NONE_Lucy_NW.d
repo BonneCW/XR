@@ -4,7 +4,7 @@ instance Mod_593_NONE_Lucy_NW (Npc_Default)
 	name 		= "Lucy"; //Alwins Frau
 	guild 		= GIL_PAL;
 	id 			= 593;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

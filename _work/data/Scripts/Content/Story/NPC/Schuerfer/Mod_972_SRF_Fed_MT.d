@@ -4,7 +4,7 @@ instance Mod_972_SRF_Fed_MT (Npc_Default)
 	name 		= "Fed";
 	guild 		= GIL_NONE;
 	id 			= 972;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

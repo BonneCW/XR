@@ -4,7 +4,7 @@ INSTANCE Mod_520_DMR_Raven_MT (Npc_Default)
 	name 		= "Raven";
 	guild 		= GIL_DMT;
 	id 			= 520;
-	voice 		= 10;
+	voice		= 0;
 	flags      	= 2;
 	npctype		= NPCTYPE_MAIN;
 	

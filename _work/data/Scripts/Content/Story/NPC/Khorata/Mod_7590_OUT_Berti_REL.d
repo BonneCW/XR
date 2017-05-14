@@ -4,7 +4,7 @@ instance Mod_7590_OUT_Berti_REL (Npc_Default)
 	name 		= "Berti";
 	guild 		= GIL_out;
 	id 			= 7590;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

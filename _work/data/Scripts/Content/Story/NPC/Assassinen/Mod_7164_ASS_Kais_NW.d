@@ -4,7 +4,7 @@ INSTANCE Mod_7164_ASS_Kais_NW (Npc_Default)
 	name 		= "Kais"; 
 	guild 		= GIL_OUT;
 	id 			= 7164;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_7807_OUT_Aerwak_EIS (Npc_Default)
 	name 		= "Ärwak"; 
 	guild 		= GIL_OUT;
 	id 			= 7807;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

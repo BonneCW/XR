@@ -6,7 +6,7 @@ instance Mod_1106_EBR_Bartholo_MT (Npc_Default)
 	npctype 	= 	npctype_main;
    	guild 		=	GIL_OUT;      
 	level 		=	70;
-	voice 		=	12;
+	voice		= 0;
 	id 			=	1106;
 	flags = 2;
 

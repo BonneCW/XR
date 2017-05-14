@@ -4,7 +4,7 @@ instance Mod_7460_RIT_Cedric_IR (Npc_Default)
 	name 		= "Cedric";
 	guild 		= GIL_OUT;
 	id 			= 7460;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

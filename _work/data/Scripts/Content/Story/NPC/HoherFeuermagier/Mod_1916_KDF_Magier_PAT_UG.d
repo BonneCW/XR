@@ -4,7 +4,7 @@ instance Mod_1916_KDF_Magier_PAT_UG (Npc_Default)
 	name 		= "Schwarzmagier";
 	guild 		= GIL_VLK;
 	id 			= 1916;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;							
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_7446_DMR_Raven_IR (Npc_Default)
 	name 		= "Raven";
 	guild 		= GIL_OUT;
 	id 			= 7446;
-	voice 		= 10;
+	voice		= 0;
 	flags      	= 2;
 	npctype		= NPCTYPE_MAIN;
 	

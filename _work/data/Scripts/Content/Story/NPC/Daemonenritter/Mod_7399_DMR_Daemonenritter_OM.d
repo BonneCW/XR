@@ -4,7 +4,7 @@ instance Mod_7399_DMR_Daemonenritter_OM (Npc_Default)
 	name 		= "Dämonenritter"; 
 	guild 		= GIL_KDF;
 	id 			= 7399;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

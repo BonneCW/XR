@@ -4,7 +4,7 @@ instance Mod_590_NONE_Kardif_NW (Npc_Default)
 	name 		= "Kardif"; 
 	guild 		= GIL_PAL;
 	id 			= 590;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -8,7 +8,7 @@ instance Mod_1562_SFB_Schuerfer_MT (Npc_Default)
 	level =							6;
 	flags =							0;
 	
-	voice =							2;
+	voice		= 0;
 	id =							1562;
 
 

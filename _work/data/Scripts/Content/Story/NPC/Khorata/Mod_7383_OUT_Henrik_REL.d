@@ -4,7 +4,7 @@ instance Mod_7383_OUT_Henrik_REL (Npc_Default)
 	name 		= "Henrik"; 
 	guild 		= GIL_OUT;
 	id 			= 7383;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

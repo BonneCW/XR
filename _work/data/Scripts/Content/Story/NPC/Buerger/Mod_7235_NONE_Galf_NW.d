@@ -4,7 +4,7 @@ instance Mod_7235_NONE_Galf_NW (Npc_Default)
 	name 		= "Galf"; 
 	guild 		= GIL_PAL;
 	id 			= 7235;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_1064_VLK_Jana_NW (Npc_Default)
 	name 		= "Jana";	
 	guild 		= GIL_PAL;
 	id 			= 1064;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

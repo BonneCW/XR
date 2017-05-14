@@ -4,7 +4,7 @@ INSTANCE Mod_7111_ASS_Yasin_NW (Npc_Default)
 	name 		= "Yasin"; 
 	guild 		= GIL_OUT;
 	id 			= 7111;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

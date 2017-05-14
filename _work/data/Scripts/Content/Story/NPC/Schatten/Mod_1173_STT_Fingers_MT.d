@@ -7,7 +7,7 @@ instance Mod_1173_STT_Fingers_MT (Npc_Default)
 	level 			=		7;
 	
 	
-	voice 			=		5;
+	voice		= 0;
 	id 				=		1173;
 		
 	//-------- abilities --------

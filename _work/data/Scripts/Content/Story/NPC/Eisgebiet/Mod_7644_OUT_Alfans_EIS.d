@@ -4,7 +4,7 @@ INSTANCE Mod_7644_OUT_Alfans_EIS (Npc_Default)
 	name 		= "Alfans";
 	guild 		= GIL_OUT;
 	id 			= 7644;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

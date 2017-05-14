@@ -4,7 +4,7 @@ instance Mod_7045_RIT_Ritter_MT (Npc_Default)
 	name 		= NAME_Ritter;
 	guild 		= GIL_PAL;
 	id 			= 7045;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

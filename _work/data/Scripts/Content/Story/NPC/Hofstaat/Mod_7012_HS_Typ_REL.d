@@ -4,7 +4,7 @@ instance Mod_7012_HS_Typ_REL (Npc_Default)
 	name 		= "Typ";
 	guild 		= GIL_OUT;
 	id 			= 7012;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

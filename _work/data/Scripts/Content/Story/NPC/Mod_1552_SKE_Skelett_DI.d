@@ -4,7 +4,7 @@ instance Mod_1552_SKE_Skelett_DI2 (Npc_Default)
 	name 		= "Zombie";
 	guild 		= GIL_zombie;
 	id 			= 1552;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;
 	level	= 34;			
 	

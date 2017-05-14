@@ -4,7 +4,7 @@ instance Mod_7267_VLK_Joseppe_NW (Npc_Default)
 	name 		= "Joseppe"; 
 	guild 		= GIL_PAL;
 	id 			= 7267;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

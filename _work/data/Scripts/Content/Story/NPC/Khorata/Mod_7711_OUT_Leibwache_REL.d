@@ -4,7 +4,7 @@ instance Mod_7711_OUT_Leibwache_REL (Npc_Default)
 	name 		= "Leibwache";
 	guild 		= GIL_OUT;
 	id 			= 7711;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

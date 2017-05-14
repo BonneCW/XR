@@ -4,7 +4,7 @@ instance Mod_7287_HS_Gleichgewichtsminister_REL (Npc_Default)
 	name 		= "Königlicher Gleichgewichtsminister"; 
 	guild 		= GIL_OUT;
 	id 			= 7287;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -8,7 +8,7 @@ instance Mod_7714_BUD_Viper_OM (Npc_Default)
 	level =							3;
 	
 	
-	voice =							2;
+	voice		= 0;
 	id =							7714;
 
 	//-------- visuals --------

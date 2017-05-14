@@ -4,7 +4,7 @@ INSTANCE Mod_916_NOV_Garwig_NW (Npc_Default)
 	name 		= "Garwig";
 	guild 		= GIL_VLK;
 	id 			= 916;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

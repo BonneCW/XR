@@ -6,7 +6,7 @@ instance Mod_2015_PSINOV_Harlok_REL (Npc_Default)
 	guild 		=		GIL_OUT;
 	level 		=		3;
 	 	
-	voice 		=		1;
+	voice		= 0;
 	id 			=		2015;
 		
 	//-------- abilities --------

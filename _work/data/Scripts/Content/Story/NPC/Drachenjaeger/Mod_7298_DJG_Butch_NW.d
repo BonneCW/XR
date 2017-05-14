@@ -7,7 +7,7 @@ instance Mod_7298_DJG_Butch_NW (Npc_Default)
 	guild =							GIL_mil;      
 	level =							15;
 	
-	voice =							13;
+	voice		= 0;
 	id =							7298;
 
 

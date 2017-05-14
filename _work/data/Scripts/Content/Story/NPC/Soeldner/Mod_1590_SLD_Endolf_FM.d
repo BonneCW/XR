@@ -6,7 +6,7 @@ instance Mod_1590_SLD_Endolf_FM (Npc_Default)
 	guild 		=	GIL_mil;
 	npctype		=	npctype_MAIN;
 	level 		=	30;
-	voice		=	9;
+	voice		= 0;
 	id 			=	1590;
 		
 	//-------- abilities --------

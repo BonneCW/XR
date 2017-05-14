@@ -4,7 +4,7 @@ instance Mod_7370_OUT_Ulrich_REL (Npc_Default)
 	name 		= "Ulrich"; 
 	guild 		= GIL_OUT;
 	id 			= 7370;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

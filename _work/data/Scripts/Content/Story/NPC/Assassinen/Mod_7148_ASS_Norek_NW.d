@@ -4,7 +4,7 @@ INSTANCE Mod_7148_ASS_Norek_NW (Npc_Default)
 	name 		= "Norek"; 
 	guild 		= GIL_OUT;
 	id 			= 7148;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_583_NONE_Hanna_NW (Npc_Default)
 	name 		= "Hanna";
 	guild 		= GIL_PAL;
 	id 			= 583;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

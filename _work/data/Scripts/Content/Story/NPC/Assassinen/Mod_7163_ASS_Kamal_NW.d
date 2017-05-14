@@ -4,7 +4,7 @@ INSTANCE Mod_7163_ASS_Kamal_NW (Npc_Default)
 	name 		= "Kamal"; 
 	guild 		= GIL_OUT;
 	id 			= 7163;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

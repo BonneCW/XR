@@ -4,7 +4,7 @@ INSTANCE Mod_1936_DMR_Daemonenritter_MT (Npc_Default)
 	name 		= "Dämonenritter";
 	guild 		= GIL_STRF;
 	id 			= 1936;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -8,7 +8,7 @@ instance Mod_1496_BUD_Glen_OM (Npc_Default)
 	level =							5;
 	
 	
-	voice =							2;
+	voice =							0;
 	id =							1496;
 
 

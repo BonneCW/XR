@@ -4,7 +4,7 @@ instance Mod_589_NONE_Jora_NW (Npc_Default)
 	name 		= "Jora";
 	guild 		= GIL_PAL;
 	id 			= 589;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

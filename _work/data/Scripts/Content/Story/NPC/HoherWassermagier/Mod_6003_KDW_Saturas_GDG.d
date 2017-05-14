@@ -4,7 +4,7 @@ INSTANCE Mod_6003_KDW_Saturas_GDG (Npc_Default)
 	name 		= "Saturas";
 	guild 		= GIL_KDW; 
 	id 			= 6003;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -12,7 +12,7 @@ instance PIR_1391_Addon_InExtremo_TheFlail(Npc_Default)
 	level =					4;
 	flags =					0;
 	
-	voice =					3;
+	voice		= 0;
 	id =					1391;
 	flags      					 =   NPC_FLAG_IMMORTAL;
 

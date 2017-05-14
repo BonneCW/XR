@@ -4,7 +4,7 @@ instance Mod_7735_BDT_Aslan_EIS (Npc_Default)
 	name 		= "Aslan"; 
 	guild 		= GIL_STRF;
 	id 			= 7735;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;								
 	npctype		= NPCTYPE_MAIN;
 	

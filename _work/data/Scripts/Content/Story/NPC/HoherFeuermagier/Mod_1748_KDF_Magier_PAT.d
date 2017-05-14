@@ -4,7 +4,7 @@ instance Mod_1748_KDF_Magier_PAT (Npc_Default)
 	name 		= NAME_ordenspriester;
 	guild 		= GIL_vlk;
 	id 			= 1748;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_pat_ordenspriester_mauer;
 	

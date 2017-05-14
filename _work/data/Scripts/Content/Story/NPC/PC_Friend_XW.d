@@ -4,7 +4,7 @@ instance PC_Friend_XW (Npc_Default)
 	name 		= "Argez"; 
 	guild 		= GIL_OUT;
 	id 			= 1607;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_FRIEND;
 	

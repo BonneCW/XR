@@ -4,7 +4,7 @@ instance Mod_980_MIL_Olav_NW (Npc_Default)
 	name 		= "Olav"; 
 	guild 		= GIL_PAL;
 	id 			= 980;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;							
 	npctype		= NPCTYPE_MAIN;
 	

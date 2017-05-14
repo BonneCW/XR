@@ -5,7 +5,7 @@ instance Mod_1020_KGD_Heidrek_MT (Npc_Default)
 	name 		=	"Heidrek";
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_OUT;
-	voice 		=	4;
+	voice		= 0;
 	id 			=	1020;
 		
 	//-------- abilities --------

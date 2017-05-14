@@ -4,7 +4,7 @@ instance Mod_783_BAU_Elena_NW (Npc_Default)
 	name 		= "Elena";
 	guild 		= GIL_DMT;
 	id 			= 783;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

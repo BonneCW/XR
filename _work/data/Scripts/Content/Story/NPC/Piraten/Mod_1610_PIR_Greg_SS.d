@@ -4,7 +4,7 @@ instance Mod_1610_PIR_Greg_SS (Npc_Default)
 	name 		= "Greg";
 	guild 		= GIL_out;
 	id 			= 1610;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 2;															
 	npctype		= NPCTYPE_MAIN;
 

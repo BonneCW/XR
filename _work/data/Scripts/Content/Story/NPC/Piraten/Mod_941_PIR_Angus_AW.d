@@ -4,7 +4,7 @@ INSTANCE Mod_941_PIR_Angus_AW (Npc_Default)
 	name 		= "Angus";
 	guild 		= GIL_NONE;
 	id 			= 941;
-	voice 		= 6;
+	voice		= 0;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

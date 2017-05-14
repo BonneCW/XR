@@ -4,7 +4,7 @@ instance Mod_7642_OUT_Brunhild_DI (Npc_Default)
 	name 		= "Brunhild";	
 	guild 		= GIL_OUT;
 	id 			= 7642;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

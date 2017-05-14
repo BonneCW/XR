@@ -4,7 +4,7 @@ INSTANCE Mod_919_NOV_Igaraz_NW (Npc_Default)
 	name 		= "Igaraz";
 	guild 		= GIL_VLK;
 	id 			= 919;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

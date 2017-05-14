@@ -4,7 +4,7 @@ instance Mod_7391_OUT_Henker_REL (Npc_Default)
 	name 		= "Henker"; 
 	guild 		= GIL_OUT;
 	id 			= 7391;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

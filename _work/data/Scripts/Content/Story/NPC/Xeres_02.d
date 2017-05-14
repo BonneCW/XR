@@ -5,7 +5,7 @@ INSTANCE Xeres_02	(Npc_Default)
 	guild							=	GIL_DMT;
 	id			= 	1560;
 	level							=	10000;
-	voice		= 14;
+	voice		= 0;
 	npctype		= NPCTYPE_MAIN;
 	flags       = 0;
 

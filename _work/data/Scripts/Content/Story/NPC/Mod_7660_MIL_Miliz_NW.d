@@ -4,7 +4,7 @@ instance Mod_7660_MIL_Miliz_NW (Npc_Default)
 	name 		= "aufgebrachte Miliz";	
 	guild 		= GIL_STRF;
 	id 			= 7660;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_nw_miliz;
 	

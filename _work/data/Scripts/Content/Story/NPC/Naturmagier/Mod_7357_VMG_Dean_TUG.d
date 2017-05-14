@@ -4,7 +4,7 @@ instance Mod_7357_VMG_Dean_TUG (Npc_Default)
 	name 		= "Dean";
 	guild 		= GIL_out;
 	id 			= 7357;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

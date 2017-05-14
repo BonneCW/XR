@@ -4,7 +4,7 @@ instance Mod_1735_STRF_Straefling_MT (Npc_Default)
 	name 		= NAME_STRAEFLING; 
 	guild 		= GIL_out;
 	id 			= 1735;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_mt_straefling;
 	

@@ -4,7 +4,7 @@ INSTANCE Schattenlord_542_Urnol	(Npc_Default)
 	name							=	"Schattenlord Urnol";
 	guild							=	GIL_NONE;
 	id			= 	542;
-	voice			=	14;
+	voice		= 0;
 	level							=	40;
 	npctype		= NPCTYPE_MAIN;
 	flags       = 2;

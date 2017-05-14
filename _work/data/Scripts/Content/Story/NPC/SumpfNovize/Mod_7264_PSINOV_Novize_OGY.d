@@ -6,7 +6,7 @@ instance Mod_7264_PSINOV_Novize_OGY (Npc_Default)
 	guild 		=		GIL_out;
 	level 		=		9;
 	
-	voice 		=		3;
+	voice		= 0;
 	id 			=		7264;
 		
 	//-------- abilities --------

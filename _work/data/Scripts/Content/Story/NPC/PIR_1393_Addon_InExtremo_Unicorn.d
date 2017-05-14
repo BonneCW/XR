@@ -12,7 +12,7 @@ instance PIR_1393_Addon_InExtremo_Unicorn(Npc_Default)
 	level =					4;
 	flags =					0;
 	
-	voice =					4;
+	voice		= 0;
 	id =					1393;
 	flags      					 =   NPC_FLAG_IMMORTAL;
 

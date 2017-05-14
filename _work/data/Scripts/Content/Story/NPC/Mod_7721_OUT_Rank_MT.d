@@ -7,7 +7,7 @@ instance Mod_7721_OUT_Rank_MT (Npc_Default)
 	guild =							GIL_OUT;      
 	level =							3;
 	
-	voice =							6;
+	voice		= 0;
 	id =							7721;
 
 	//-------- abilities --------

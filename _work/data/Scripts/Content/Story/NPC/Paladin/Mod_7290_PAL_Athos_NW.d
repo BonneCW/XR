@@ -4,7 +4,7 @@ instance Mod_7290_PAL_Athos_NW (Npc_Default)
 	name 		= "Athos";
 	guild 		= GIL_pal;
 	id 			= 7290;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

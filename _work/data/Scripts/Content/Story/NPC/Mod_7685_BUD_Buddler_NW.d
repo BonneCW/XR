@@ -7,7 +7,7 @@ instance Mod_7685_BUD_Buddler_NW (Npc_Default)
 	guild =							GIL_out;      
 	level =							2;
 
-	voice =							2;
+	voice		= 0;
 	id =							7685;
 
 

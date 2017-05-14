@@ -4,7 +4,7 @@ INSTANCE Monster_11060_Leitwolf_TUG (Npc_Default)
 	name 		= "Leitwolf";	
 	guild 		= GIL_WOLF;
 	id 			= 11060;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	level = 9;

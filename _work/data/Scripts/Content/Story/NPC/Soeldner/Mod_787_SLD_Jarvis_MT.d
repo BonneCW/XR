@@ -4,7 +4,7 @@ instance Mod_787_SLD_Jarvis_MT (Npc_Default)
 	name 		= "Jarvis";
 	guild 		= GIL_MIL;
 	id 			= 787;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

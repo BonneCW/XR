@@ -6,7 +6,7 @@ instance Mod_2011_TPL_GorNaDrak_MT (Npc_Default)
 	guild =							GIL_OUT;
 	level =							21;
 	
-	voice =							9;
+	voice		= 0;
 	id =							2011;
 		
 	//-------- abilities --------

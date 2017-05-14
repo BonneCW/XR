@@ -4,7 +4,7 @@ INSTANCE Mod_7466_PIR_Bones_NW (Npc_Default)
 	name 		= "Bones";
 	guild 		= GIL_OUT;
 	id 			= 7466;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;															
 	npctype		= NPCTYPE_MAIN;
 	

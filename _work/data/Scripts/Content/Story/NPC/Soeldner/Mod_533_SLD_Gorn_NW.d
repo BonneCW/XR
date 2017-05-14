@@ -4,7 +4,7 @@ INSTANCE Mod_533_SLD_Gorn_NW (Npc_Default)
 	name 		= "Gorn";
 	guild 		= GIL_OUT;
 	id 			= 533;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_FRIEND;
 	

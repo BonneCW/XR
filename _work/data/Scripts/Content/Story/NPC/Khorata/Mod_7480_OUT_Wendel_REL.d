@@ -4,7 +4,7 @@ instance Mod_7480_OUT_Wendel_REL (Npc_Default)
 	name 		= "Wendel"; 
 	guild 		= GIL_OUT;
 	id 			= 7480;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -7,7 +7,7 @@ instance Mod_2010_TPL_GorNaToth_MT (Npc_Default)
 	level =							21;
 	
 	
-	voice =							11;
+	voice		= 0;
 	id =							2010;
 		
 	//-------- abilities --------

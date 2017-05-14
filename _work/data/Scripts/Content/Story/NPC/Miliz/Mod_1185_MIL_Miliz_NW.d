@@ -4,7 +4,7 @@ instance Mod_1185_MIL_Miliz_NW (Npc_Default)
 	name 		= Name_Miliz;	
 	guild 		= GIL_pal;
 	id 			= 1185;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_nw_miliz;
 	

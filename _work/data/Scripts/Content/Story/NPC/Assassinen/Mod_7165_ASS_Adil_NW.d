@@ -4,7 +4,7 @@ INSTANCE Mod_7165_ASS_Adil_NW (Npc_Default)
 	name 		= "Adil"; 
 	guild 		= GIL_OUT;
 	id 			= 7165;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

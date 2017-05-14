@@ -4,7 +4,7 @@ INSTANCE Mod_931_PIR_Brandon_AW (Npc_Default)
 	name 		= "Brandon";
 	guild 		= GIL_NONE;
 	id 			= 931;
-	voice 		= 4;
+	voice		= 0;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

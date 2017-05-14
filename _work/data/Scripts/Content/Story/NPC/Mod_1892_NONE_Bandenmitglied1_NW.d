@@ -4,7 +4,7 @@ instance Mod_1892_NONE_Bandenmitglied1_NW (Npc_Default)
 	name 		= "Bandenmitglied";	
 	guild 		= GIL_OUT;
 	id 			= 1892;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_main;
 	

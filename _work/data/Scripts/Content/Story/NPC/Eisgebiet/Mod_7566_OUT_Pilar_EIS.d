@@ -4,7 +4,7 @@ instance Mod_7566_OUT_Pilar_EIS (Npc_Default)
 	name 		= "Pilar"; 
 	guild 		= GIL_OUT;
 	id 			= 7566;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

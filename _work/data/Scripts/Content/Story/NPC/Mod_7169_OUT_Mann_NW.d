@@ -4,7 +4,7 @@ instance Mod_7169_OUT_Mann_NW (Npc_Default)
 	name 		= "Mann";
 	guild 		= GIL_OUT;
 	id 			= 7169;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

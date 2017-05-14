@@ -4,7 +4,7 @@ instance Mod_7189_OUT_Antonius_MT (Npc_Default)
 	name 		= "Antonius"; 
 	guild 		= GIL_OUT;
 	id 			= 7189;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_7014_HS_Wache_REL (Npc_Default)
 	name 		= "Wache";
 	guild 		= GIL_OUT;
 	id 			= 7014;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_751_NONE_Salandril_NW (Npc_Default)
 	name 		= "Salandril"; 
 	guild 		= GIL_NONE;
 	id 			= 751;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

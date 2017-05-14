@@ -6,7 +6,7 @@ instance Mod_1128_GRD_Torwache_MT (Npc_Default)
 	npctype		=	npctype_main;
 	guild 		=	GIL_OUT;
 	level 		=	15;
-	voice 		=	7;
+	voice		= 0;
 	id 			=	1128;
 		
 	//-------- abilities --------

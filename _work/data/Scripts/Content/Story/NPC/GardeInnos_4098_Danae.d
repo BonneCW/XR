@@ -6,7 +6,7 @@ instance GardeInnos_4098_Danae (Npc_Default)
 	guild 		=		GIL_NONE;
 	level 		=		80;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		4098;
 		
 	//-------- abilities --------

@@ -4,7 +4,7 @@ INSTANCE Mod_7729_OUT_Baro_EIS (Npc_Default)
 	name 		= "Baro"; 
 	guild 		= GIL_OUT;
 	id 			= 7729;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

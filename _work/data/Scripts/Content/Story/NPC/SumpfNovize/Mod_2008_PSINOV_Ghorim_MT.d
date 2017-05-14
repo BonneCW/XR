@@ -6,7 +6,7 @@ instance Mod_2008_PSINOV_Ghorim_MT (Npc_Default)
 	guild 		=		GIL_OUT;
 	level 		=		9;
 
-	voice 		=		2;
+	voice		= 0;
 	id 			=		2008;
 		
 	//-------- abilities --------

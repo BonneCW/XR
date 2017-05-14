@@ -4,7 +4,7 @@ instance Mod_7582_OUT_Buddler_REL (Npc_Default)
 	name 		= NAME_BUDDLER; 
 	guild 		= GIL_out;
 	id 			= 7582;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 2;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_724_NOV_Mattheus_NW (Npc_Default)
 	name 		= "Mattheus";
 	guild 		= GIL_VLK;
 	id 			= 724;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;	//Joly: HAUPTSTORY: NOV_600_Pedro ist erst noch immortel -> Pedro klaut das Auge Innos im Kapitel 3, ist später Knacki auf der Dracheninsel																	
 	npctype		= NPCTYPE_MAIN;
 	

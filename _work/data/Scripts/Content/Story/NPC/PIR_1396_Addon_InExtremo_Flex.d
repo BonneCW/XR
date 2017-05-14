@@ -11,7 +11,7 @@ instance PIR_1396_Addon_InExtremo_Flex(Npc_Default)
 	level =					4;
 	flags =					0;
 	
-	voice =					13;
+	voice		= 0;
 	id =					1396;
 	flags      					 =   NPC_FLAG_IMMORTAL;
 

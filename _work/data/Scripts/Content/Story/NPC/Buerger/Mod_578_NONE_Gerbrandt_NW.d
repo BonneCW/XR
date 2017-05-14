@@ -4,7 +4,7 @@ instance Mod_578_NONE_Gerbrandt_NW (Npc_Default)
 	name 		= "Gerbrandt"; 
 	guild 		= GIL_NONE;
 	id 			= 578;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_7421_OUT_Philipp_REL (Npc_Default)
 	name 		= "Philipp"; 
 	guild 		= GIL_OUT;
 	id 			= 7421;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

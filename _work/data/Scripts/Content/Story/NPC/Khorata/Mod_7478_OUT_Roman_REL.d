@@ -4,7 +4,7 @@ instance Mod_7478_OUT_Roman_REL (Npc_Default)
 	name 		= "Roman"; 
 	guild 		= GIL_OUT;
 	id 			= 7478;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

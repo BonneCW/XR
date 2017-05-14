@@ -4,7 +4,7 @@ INSTANCE Mod_7034_OUT_Bruno_NW (Npc_Default)
 	name 		= "Bruno"; 
 	guild 		= GIL_OUT;
 	id 			= 7034;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

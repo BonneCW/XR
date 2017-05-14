@@ -4,7 +4,7 @@ instance Mod_7260_SLD_Orkjaeger_OGY (Npc_Default)
 	name 		= NAME_ORKJAEGER; 
 	guild 		= GIL_OUT;
 	id 			= 7260;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MT_ORKJAEGER;
 	

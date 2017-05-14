@@ -4,7 +4,7 @@ instance Mod_7674_OUT_Aldaro_EIS (Npc_Default)
 	name 		= "Aldaro"; 
 	guild 		= GIL_OUT;
 	id 			= 7674;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

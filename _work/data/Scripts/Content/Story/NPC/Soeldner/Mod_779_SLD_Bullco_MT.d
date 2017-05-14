@@ -4,7 +4,7 @@ instance Mod_779_SLD_Bullco_MT (Npc_Default)
 	name 		= "Bullco";
 	guild 		= GIL_MIL;
 	id 			= 779;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

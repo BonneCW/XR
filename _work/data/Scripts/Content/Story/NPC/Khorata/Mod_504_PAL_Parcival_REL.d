@@ -4,7 +4,7 @@ instance Mod_504_PAL_Parcival_REL (Npc_Default)
 	name 		= "Parcival";
 	guild 		= GIL_OUT;
 	id 			= 504;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

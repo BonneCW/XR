@@ -4,7 +4,7 @@ instance Mod_7371_OUT_Richter_REL (Npc_Default)
 	name 		= "Richter";
 	guild 		= GIL_DMT;
 	id 			= 7371;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

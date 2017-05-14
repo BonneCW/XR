@@ -5,7 +5,7 @@ instance ENGEL (Npc_Default)
 	guild 		= GIL_OUT;
 	level		=1;
 	id 			= 4024;
-	//voice 		= 16;
+	//voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	effect= "SPELLFX_FEAR_WINGS";

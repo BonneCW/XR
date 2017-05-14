@@ -7,7 +7,7 @@ instance Mod_1170_STT_Schatten_MT (Npc_Default)
 	level 		=		7;
 	
 	
-	voice 		=		10;
+	voice		= 0;
 	id 			=		1170;
 		
 	//-------- abilities --------

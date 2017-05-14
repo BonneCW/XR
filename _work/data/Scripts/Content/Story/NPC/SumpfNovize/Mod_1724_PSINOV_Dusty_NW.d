@@ -4,7 +4,7 @@ instance Mod_1724_PSINOV_Dusty_NW (Npc_Default)
 	name 		= "Dusty"; 
 	guild 		= GIL_OUT;
 	id 			= 1724;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 2; // #594													
 	npctype		= NPCTYPE_MAIN;
 	

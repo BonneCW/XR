@@ -4,7 +4,7 @@ instance Mod_1536_WKR_Roka_NW (Npc_Default)
 	name 		= "Roka";	
 	guild 		= GIL_nov;
 	id 			= 1536;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

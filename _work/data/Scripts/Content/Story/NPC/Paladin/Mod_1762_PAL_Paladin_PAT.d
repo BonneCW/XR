@@ -4,7 +4,7 @@ instance Mod_1762_PAL_Paladin_PAT (Npc_Default)
 	name 		= NAME_Paladin;
 	guild 		= GIL_pal;
 	id 			= 1762;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_pat_Paladin_mauer;
 	

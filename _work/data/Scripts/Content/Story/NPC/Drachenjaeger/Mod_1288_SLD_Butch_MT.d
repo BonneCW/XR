@@ -7,7 +7,7 @@ instance Mod_1288_SLD_Butch_MT (Npc_Default)
 	guild =							GIL_mil;      
 	level =							15;
 	
-	voice =							13;
+	voice		= 0;
 	id =							1288;
 
 

@@ -4,7 +4,7 @@ INSTANCE Mod_7150_ASS_Mahamad_NW (Npc_Default)
 	name 		= "Mahamad"; 
 	guild 		= GIL_OUT;
 	id 			= 7150;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

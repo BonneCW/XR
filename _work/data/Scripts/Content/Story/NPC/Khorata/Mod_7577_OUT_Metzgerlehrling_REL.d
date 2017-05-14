@@ -4,7 +4,7 @@ instance Mod_7577_OUT_Metzgerlehrling_REL (Npc_Default)
 	name 		= "Metzgerlehrling"; 
 	guild 		= GIL_OUT;
 	id 			= 7577;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

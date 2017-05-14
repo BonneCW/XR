@@ -4,7 +4,7 @@ instance Mod_1931_DJG_Lost_MT (Npc_Default)
      name        = "Lost";
      guild       = GIL_MIL;
      id          = 1931;
-     voice       = 7;
+     voice		= 0;
      flags       = 0;
      npctype     = NPCTYPE_MAIN;
 

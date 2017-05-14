@@ -4,7 +4,7 @@ instance Mod_7481_OUT_Monteur_REL (Npc_Default)
 	name 		= "Monteur"; 
 	guild 		= GIL_OUT;
 	id 			= 7481;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

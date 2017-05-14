@@ -4,7 +4,7 @@ instance Mod_748_NONE_Rengaru_NW (Npc_Default)
 	name 		= "Rengaru"; 
 	guild 		= GIL_OUT;
 	id 			= 748;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -3,7 +3,7 @@ INSTANCE Mod_7612_PSINOV_Lester_REL (Npc_Default)
 	name 		= "Lester";
 	guild 		= GIL_OUT;
 	id 		= 7612;
-	voice 		= 13;
+	voice		= 0;
 	flags           = 2;
 	npctype		= NPCTYPE_FRIEND;
 

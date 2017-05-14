@@ -4,7 +4,7 @@ INSTANCE Mod_7294_OUT_Grimbald_REL (Npc_Default)
 	name 		= "Grimbald";
 	guild 		= GIL_OUT;
 	id 			= 7294;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

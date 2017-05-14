@@ -8,7 +8,7 @@ instance Charlotte (Npc_Default)
 	npctype						= 	npctype_main;
 	guild 						=	GIL_OUT;
 	level 						=	1;
-	voice 						=	16;
+	voice		= 0;
 	id 							=	1897;
 	flags      					=   NPC_FLAG_IMMORTAL;
 
@@ -51,7 +51,7 @@ instance IEFan1 (Npc_Default)
 	npctype =						NPCTYPE_MAIN;
 	guild =							GIL_OUT;      
 	level =							5;	
-	voice =							2;
+	voice		= 0;
 	id =							1898;
 
 
@@ -102,7 +102,7 @@ instance IEFan2 (Npc_Default)
 	npctype =						NPCTYPE_MAIN;
 	guild =							GIL_OUT;      
 	level =							5;	
-	voice =							2;
+	voice		= 0;
 	id =							1899;
 
 
@@ -151,7 +151,7 @@ instance IEFan3 (Npc_Default)
 	npctype =						NPCTYPE_MAIN;
 	guild =							GIL_OUT;      
 	level =							5;	
-	voice =							2;
+	voice		= 0;
 	id =							1900;
 
 
@@ -201,7 +201,7 @@ instance IEFan4 (Npc_Default)
 	npctype =						NPCTYPE_MAIN;
 	guild =							GIL_OUT;      
 	level =							5;	
-	voice =							2;
+	voice		= 0;
 	id =							1901;
 
 

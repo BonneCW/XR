@@ -7,7 +7,7 @@ instance Mod_1161_STT_Whistler_MT (Npc_Default)
 	level 		=		5;
 	
 	
-	voice 		=		11;
+	voice		= 0;
 	id 			=		1161;
 		
 	//-------- abilities --------

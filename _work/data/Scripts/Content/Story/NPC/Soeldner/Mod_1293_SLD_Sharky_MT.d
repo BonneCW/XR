@@ -7,7 +7,7 @@ instance Mod_1293_SLD_Sharky_MT (Npc_Default)
 	guild =			GIL_mil;      
 	level =			8;
 	
-	voice =			10;
+	voice		= 0;
 	id =			1293;
 
 

@@ -7,7 +7,7 @@ instance Mod_1083_BAU_Bauer_MT (Npc_Default)
 	level =							2;
 	flags =							0;
 	
-	voice =							9;
+	voice		= 0;
 	id =							1083;
 
 	npctype = NPCTYPE_MT_REISBAUER;

@@ -4,7 +4,7 @@ INSTANCE Mod_4015_SNOV_BesessenerNovize_MT (Npc_Default)
 	name 		= "Besessener schwarzer Novize";
 	guild 		= GIL_OUT;
 	id 			= 4015;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 	

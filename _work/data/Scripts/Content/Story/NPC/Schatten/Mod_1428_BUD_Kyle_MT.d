@@ -8,7 +8,7 @@ instance Mod_1428_BUD_Kyle_MT (Npc_Default)
 	level =							3;
 	
 	
-	voice =							10;
+	voice		= 0;
 	id =							1428;
 
 

@@ -5,7 +5,7 @@ instance Mod_1016_KGD_Hymir_MT (Npc_Default)
 	name 		=	"Hymir";
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_OUT;
-	voice 		=	8;
+	voice		= 0;
 	id 			=	1016;
 		
 	//-------- abilities --------

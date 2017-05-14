@@ -4,7 +4,7 @@ instance PC_Itemholder (NPC_DEFAULT)
 	name 		= "Itembewahrer";
 	guild		= GIL_NONE;
 	id			= 7188;
-	voice		= 15;
+	voice		= 0;
 	level		= 1;
 	flags       = NPC_FLAG_GHOST;	
 	Npctype		= NPCTYPE_MAIN;

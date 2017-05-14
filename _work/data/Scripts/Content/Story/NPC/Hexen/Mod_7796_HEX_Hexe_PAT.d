@@ -4,7 +4,7 @@ instance Mod_7796_HEX_Hexe_PAT (Npc_Default)
 	name 		= NAME_hexe;	
 	guild 		= GIL_OUT;
 	id 			= 7796;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_pat_hexe;
 	

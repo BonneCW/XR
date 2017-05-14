@@ -4,7 +4,7 @@ instance Mod_7530_JG_Wilderer_NW (Npc_Default)
 	name 		= "Wilderer"; 
 	guild 		= GIL_STRF;
 	id 			= 7530;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_942_PIR_Hank_AW (Npc_Default)
 	name 		= "Hank";
 	guild 		= GIL_NONE;
 	id 			= 942;
-	voice 		= 6;
+	voice		= 0;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

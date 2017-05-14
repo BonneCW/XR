@@ -6,7 +6,7 @@ instance Mod_2001_BAU_Horatio_MT (Npc_Default)
 	npctype	 	=	npctype_main;
 	guild 		=	GIL_MIL;      
 	level 		=	8;
-	voice 		= 	9;
+	voice		= 0;
 	id 			=	2001;
 
 	//-------- abilities --------

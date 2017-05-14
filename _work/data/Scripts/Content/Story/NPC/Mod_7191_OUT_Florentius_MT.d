@@ -4,7 +4,7 @@ instance Mod_7191_OUT_Florentius_MT (Npc_Default)
 	name 		= "Florentius"; 
 	guild 		= GIL_OUT;
 	id 			= 7191;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

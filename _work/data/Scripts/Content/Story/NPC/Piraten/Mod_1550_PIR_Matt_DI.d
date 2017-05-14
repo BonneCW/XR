@@ -4,7 +4,7 @@ INSTANCE Mod_1550_PIR_Matt_DI (Npc_Default)
 	name 		= "Matt";
 	guild 		= GIL_out;
 	id 			= 1550;
-	voice 		= 10;
+	voice		= 0;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

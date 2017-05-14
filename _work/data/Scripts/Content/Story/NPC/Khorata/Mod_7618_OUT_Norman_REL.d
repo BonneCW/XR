@@ -4,7 +4,7 @@ instance Mod_7618_OUT_Norman_REL (Npc_Default)
 	name 		= "Norman"; 
 	guild 		= GIL_OUT;
 	id 			= 7618;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

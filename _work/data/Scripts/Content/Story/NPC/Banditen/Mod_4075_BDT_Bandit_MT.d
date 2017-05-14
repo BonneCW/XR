@@ -4,7 +4,7 @@ instance Mod_4075_BDT_Bandit_MT (Npc_Default)
 	name 		= NAME_Bandit; 
 	guild 		= GIL_OUT;
 	id 			= 4075;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MT_BANDIT;
 	

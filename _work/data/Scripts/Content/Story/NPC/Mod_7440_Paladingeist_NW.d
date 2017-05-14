@@ -4,7 +4,7 @@ instance Mod_7440_Paladingeist_NW (Npc_Default)
 	name 		= "Paladingeist";
 	guild 		= GIL_NONE;
 	id 			= 7440;
-	voice 		= 13;
+	voice		= 0;
 	flags       = NPC_FLAG_GHOST|2;																	
 	npctype		= NPCTYPE_MAIN;			
 	

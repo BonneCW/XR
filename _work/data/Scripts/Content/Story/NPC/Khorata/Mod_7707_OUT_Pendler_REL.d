@@ -4,7 +4,7 @@ instance Mod_7707_OUT_Pendler_REL (Npc_Default)
 	name 		= "Pendler"; 
 	guild 		= GIL_OUT;
 	id 			= 7707;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

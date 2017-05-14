@@ -4,7 +4,7 @@ instance Mod_576_NONE_Fernando_NW (Npc_Default)
 	name 		= "Fernando"; 
 	guild 		= GIL_PAL;
 	id 			= 576;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

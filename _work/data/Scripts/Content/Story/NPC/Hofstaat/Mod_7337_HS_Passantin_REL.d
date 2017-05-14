@@ -4,7 +4,7 @@ instance Mod_7337_HS_Passantin_REL (Npc_Default)
 	name 		= "Passantin"; 
 	guild 		= GIL_OUT;
 	id 			= 7337;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -6,7 +6,7 @@ instance Mod_7434_DMT_Suchender_MT (Npc_Default)
 	npctype		= 	npctype_main;
 	guild 		=	GIL_DMT;
 	level 		=	10;
-	voice		=	5;
+	voice		= 0;
 	id 			=	7434;
 	flags = 2;
 		

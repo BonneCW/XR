@@ -4,7 +4,7 @@ instance Mod_1966_GRD_Gardist_MT (Npc_Default)
 	name 		= NAME_GARDIST; 
 	guild 		= GIL_OUT;
 	id 			= 1966;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MT_GARDIST;
 	

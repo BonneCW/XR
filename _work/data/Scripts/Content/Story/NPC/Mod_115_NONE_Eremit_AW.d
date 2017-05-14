@@ -4,7 +4,7 @@ INSTANCE Mod_115_NONE_Eremit_AW (Npc_Default)
 	name 		= "Eremit";
 	guild 		= GIL_OUT;
 	id 			= 115;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 	

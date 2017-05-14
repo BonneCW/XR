@@ -4,7 +4,7 @@ instance Mod_7575_OUT_Baeckerfrau_REL (Npc_Default)
 	name 		= "Frau des Bäckers";	
 	guild 		= GIL_OUT;
 	id 			= 7575;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_AMBIENT;
 	

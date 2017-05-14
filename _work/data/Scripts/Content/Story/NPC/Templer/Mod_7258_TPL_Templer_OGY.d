@@ -7,7 +7,7 @@ instance Mod_7258_TPL_Templer_OGY (Npc_Default)
 	level =							17;
 	
 	
-	voice =							13;
+	voice		= 0;
 	id =							7258;
 		
 	//-------- abilities --------

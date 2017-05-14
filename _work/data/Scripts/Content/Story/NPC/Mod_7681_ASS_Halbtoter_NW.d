@@ -4,7 +4,7 @@ INSTANCE Mod_7681_ASS_Halbtoter_NW (Npc_Default)
 	name 		= "Halbtoter"; 
 	guild 		= GIL_OUT;
 	id 			= 7681;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE GardeBeliars_1990_Jorjo	(Npc_Default)
 	name							=	"Jorjo";
 	guild							=	GIL_NONE;
 	id			= 	1990;
-	voice			=	14;
+	voice		= 0;
 	level							=	40;
 	npctype		= NPCTYPE_MAIN;
 

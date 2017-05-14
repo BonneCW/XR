@@ -4,7 +4,7 @@ INSTANCE Mod_1619_PIR_Malcom_SS (Npc_Default)
 	name 		= "Malcom";
 	guild 		= GIL_out;
 	id 			= 1619;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 2;															
 	npctype		= NPCTYPE_MAIN;
 		

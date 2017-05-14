@@ -4,7 +4,7 @@ instance Mod_7238_OUT_Herold_NW (Npc_Default)
 	name 		= "Herold";
 	guild 		= GIL_PAL;
 	id 			= 7238;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

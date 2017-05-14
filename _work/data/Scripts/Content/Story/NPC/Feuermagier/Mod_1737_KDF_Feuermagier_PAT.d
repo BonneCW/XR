@@ -4,7 +4,7 @@ instance Mod_1737_KDF_Feuermagier_PAT (Npc_Default)
 	name 		= Name_firemage;	
 	guild 		= GIL_vlk;
 	id 			= 1737;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_pat_feuermagier;
 	

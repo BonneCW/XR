@@ -4,7 +4,7 @@ INSTANCE DienerDesBoesen_02	(Npc_Default)
 	name							=	"Diener des Bösen";
 	guild							=	GIL_DEMON;
 	id			= 	7197;
-	voice			=	14;
+	voice		= 0;
 	level							=	100;
 	npctype		= NPCTYPE_MAIN;
 

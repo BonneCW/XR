@@ -6,7 +6,7 @@ instance Mod_1949_Waechter_07_NW (Npc_Default)
 	guild 		=		GIL_out;
 	level 		=		20;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		1949;
 		
 	//-------- abilities --------

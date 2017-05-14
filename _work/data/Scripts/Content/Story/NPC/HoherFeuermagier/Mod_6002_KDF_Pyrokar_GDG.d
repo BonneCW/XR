@@ -4,7 +4,7 @@ INSTANCE Mod_6002_KDF_Pyrokar_GDG (Npc_Default)
 	name 		= "Pyrokar";
 	guild 		= GIL_OUT;
 	id 		= 6002;
-	voice 		= 11;
+	voice		= 0;
 	flags           = 0;
 	npctype		= NPCTYPE_MAIN;
 

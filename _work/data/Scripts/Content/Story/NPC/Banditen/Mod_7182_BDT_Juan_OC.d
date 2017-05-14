@@ -4,7 +4,7 @@ instance Mod_7182_BDT_Juan_OC (Npc_Default)
 	name 		= "Juan";
 	guild 		= GIL_OUT;
 	id 			= 7182;
-	voice 		= 13;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

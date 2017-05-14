@@ -4,7 +4,7 @@ instance Mod_7463_RIT_Keroloth_IR  (Npc_Default)
 	name 		= "Keroloth";
 	guild 		= GIL_OUT;
 	id 			= 7463;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	aivar[AIV_Partymember] 		= TRUE;

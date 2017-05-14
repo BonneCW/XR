@@ -4,7 +4,7 @@ instance Mod_1962_OUT_Lorforn_TUG (Npc_Default)
 	name 		= "Lorforn";
 	guild 		= GIL_OUT;
 	id 			= 1962;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

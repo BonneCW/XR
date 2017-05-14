@@ -4,7 +4,7 @@ instance Mod_7595_OUT_Verwandlungskrieger_TUG (Npc_Default)
 	name 		= "Verwandlungskrieger"; 
 	guild 		= GIL_OUT;
 	id 			= 7595;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

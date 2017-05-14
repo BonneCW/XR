@@ -4,7 +4,7 @@ instance Mod_1961_VMK_Struk_TUG (Npc_Default)
 	name 		= "Struk";	
 	guild 		= GIL_out;
 	id 			= 1961;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -6,7 +6,7 @@ instance Mod_7607_STT_Schatten_NW (Npc_Default)
 	guild 		=		GIL_STRF;
 	level 		=		7;
 	
-	voice	 	=		12;
+	voice		= 0;
 	id 			=		7607;
 		
 	//-------- abilities --------

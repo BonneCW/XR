@@ -4,7 +4,7 @@ instance Mod_7523_JG_Ferros_JL (Npc_Default)
 	name 		= "Ferros"; 
 	guild 		= GIL_OUT;
 	id 			= 7523;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

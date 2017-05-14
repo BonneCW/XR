@@ -4,7 +4,7 @@ instance Mod_7636_MIL_Miliz_MT (Npc_Default)
 	name 		= Name_Miliz;	
 	guild 		= GIL_OUT;
 	id 			= 7636;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_nw_miliz;
 	

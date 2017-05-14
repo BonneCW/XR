@@ -8,7 +8,7 @@ instance PIR_1390_Addon_InExtremo_DrPymonte (Npc_Default)
    	npctype						= 	npctype_main;
    	guild 						=	GIL_NONE;
 	level 						=	4;
-	voice						=	12; 
+	voice		= 0; 
 	id 							=	1390;
 	flags      					 =   NPC_FLAG_IMMORTAL;
 	

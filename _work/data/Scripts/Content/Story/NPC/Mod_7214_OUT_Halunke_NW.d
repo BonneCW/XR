@@ -4,7 +4,7 @@ instance Mod_7214_OUT_Halunke_NW (Npc_Default)
 	name 		= "Halunke"; 
 	guild 		= GIL_OUT;
 	id 			= 7214;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_AMBIENT;
 	

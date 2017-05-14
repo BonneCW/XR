@@ -4,7 +4,7 @@ INSTANCE Mod_7491_OUT_Patient_REL (Npc_Default)
 	name 		= "Patient"; 
 	guild 		= GIL_OUT;
 	id 			= 7491;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_749_MIL_Ruga_NW (Npc_Default)
 	name 		= "Ruga";	
 	guild 		= GIL_OUT;
 	id 			= 749;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -6,7 +6,7 @@ instance Mod_7403_SMK_SchwarzerKrieger_MT (Npc_Default)
 	npctype		= 	NPCTYPE_MAIN;
 	guild 		=	GIL_kdf;
 	level 		=	10;
-	voice 		=	13;
+	voice		= 0;
 	id 			=	7403;
 		
 	//-------- abilities --------

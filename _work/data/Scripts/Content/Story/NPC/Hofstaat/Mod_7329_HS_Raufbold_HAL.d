@@ -4,7 +4,7 @@ INSTANCE Mod_7329_HS_Raufbold_HAL (Npc_Default)
 	name 		= "Königlicher Ritter von und zu Raufbold"; 
 	guild 		= GIL_OUT;
 	id 			= 7329;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

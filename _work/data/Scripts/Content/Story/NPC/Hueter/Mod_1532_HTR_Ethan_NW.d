@@ -4,7 +4,7 @@ instance Mod_1532_HTR_Ethan_NW (Npc_Default)
 	name 		= "Ethan";	
 	guild 		= GIL_nov;
 	id 			= 1532;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

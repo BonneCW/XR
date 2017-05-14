@@ -6,7 +6,7 @@ instance Mod_4083_UntoterKrieger_NW (Npc_Default)
 	guild 		=		GIL_STRF;
 	level 		=		40;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		4083;
 		
 	//-------- abilities --------

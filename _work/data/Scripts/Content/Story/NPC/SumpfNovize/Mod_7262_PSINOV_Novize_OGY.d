@@ -6,7 +6,7 @@ instance Mod_7262_PSINOV_Novize_OGY (Npc_Default)
 	guild 		=		GIL_out;
 	level 		=		9;
 	
-	voice 		=		3;
+	voice		= 0;
 	id 			=		7262;
 		
 	//-------- abilities --------

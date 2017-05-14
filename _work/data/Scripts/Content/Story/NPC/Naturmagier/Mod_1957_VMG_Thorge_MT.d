@@ -4,7 +4,7 @@ instance Mod_1957_VMG_Thorge_MT (Npc_Default)
 	name 		= "Thorge";
 	guild 		= GIL_out;
 	id 			= 1957;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

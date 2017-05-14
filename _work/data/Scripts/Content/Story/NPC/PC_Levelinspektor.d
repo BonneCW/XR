@@ -6,7 +6,7 @@ INSTANCE PC_Levelinspektor(NPC_DEFAULT)
 	flags			= NPC_FLAG_GHOST;
 	guild			= GIL_NONE;
 	level			= 30;
-	voice			= 15;
+	voice		= 0;
 	id				= 0;
 
 	//--------- abilities --------

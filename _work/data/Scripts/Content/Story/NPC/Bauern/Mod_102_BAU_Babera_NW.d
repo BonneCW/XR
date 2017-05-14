@@ -4,7 +4,7 @@ instance Mod_102_BAU_Babera_NW (Npc_Default)
 	name 		= "Babera";
 	guild 		= GIL_NONE;
 	id 			= 102;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

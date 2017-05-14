@@ -6,7 +6,7 @@ instance Mod_3001_PSINOV_Balor_MT (Npc_Default)
 	guild 		=		GIL_OUT;
 	level 		=		15;
 	
-	voice 		=		1;
+	voice		= 0;
 	id 			=		3001;
 		
 	

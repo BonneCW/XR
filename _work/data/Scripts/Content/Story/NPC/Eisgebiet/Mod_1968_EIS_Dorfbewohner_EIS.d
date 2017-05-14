@@ -4,7 +4,7 @@ instance Mod_1968_EIS_Dorfbewohner_EIS (Npc_Default)
 	name 		= "Dorfbewohner";	
 	guild 		= GIL_out;
 	id 			= 1968;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_EIS_BEWOHNER;
 	

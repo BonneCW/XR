@@ -4,7 +4,7 @@ INSTANCE Mod_6001_DMR_Raven_GDG (Npc_Default)
 	name 		= "Raven";
 	guild 		= GIL_OUT;
 	id 			= 6001;
-	voice 		= 10;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

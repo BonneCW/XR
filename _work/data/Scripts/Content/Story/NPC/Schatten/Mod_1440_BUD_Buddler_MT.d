@@ -7,7 +7,7 @@ instance Mod_1440_BUD_Buddler_MT (Npc_Default)
 	guild =							GIL_out;      
 	level =							2;
 	flags = 2;	
-	voice =							3;
+	voice		= 0;
 	id =							1440;
 
 

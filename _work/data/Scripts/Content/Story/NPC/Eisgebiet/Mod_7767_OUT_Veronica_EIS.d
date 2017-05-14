@@ -4,7 +4,7 @@ instance Mod_7767_OUT_Veronica_EIS (Npc_Default)
 	name 		= "Veronica"; 
 	guild 		= GIL_OUT;
 	id 			= 7767;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

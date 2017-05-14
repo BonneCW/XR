@@ -4,7 +4,7 @@ instance Mod_105_BAU_Sekob_NW (Npc_Default)
 	name 		= "Sekob";
 	guild 		= GIL_NONE;
 	id 			= 105;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0; 															//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

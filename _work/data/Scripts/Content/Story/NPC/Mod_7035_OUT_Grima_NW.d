@@ -4,7 +4,7 @@ INSTANCE Mod_7035_OUT_Grima_NW (Npc_Default)
 	name 		= "Grima";
 	guild 		= GIL_OUT;
 	id 			= 7035;
-	voice 		= 11;
+	voice		= 0;
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------

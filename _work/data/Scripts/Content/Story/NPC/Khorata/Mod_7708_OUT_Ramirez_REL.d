@@ -4,7 +4,7 @@ instance Mod_7708_OUT_Ramirez_REL (Npc_Default)
 	name 		= "Ramirez"; 
 	guild 		= GIL_OUT;
 	id 			= 7708;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_7122_ASS_Maysara_NW (Npc_Default)
 	name 		= "Maysara"; 
 	guild 		= GIL_OUT;
 	id 			= 7122;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

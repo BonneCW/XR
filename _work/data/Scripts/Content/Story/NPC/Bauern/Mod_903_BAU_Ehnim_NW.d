@@ -4,7 +4,7 @@ instance Mod_903_BAU_Ehnim_NW (Npc_Default)
 	name 		= "Ehnim";
 	guild 		= GIL_NONE;
 	id 			= 903;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

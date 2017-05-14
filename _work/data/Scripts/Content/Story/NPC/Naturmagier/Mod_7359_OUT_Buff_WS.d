@@ -4,7 +4,7 @@ instance Mod_7359_OUT_Buff_WS (Npc_Default)
 	name 		= "Buff"; 
 	guild 		= GIL_DMT;
 	id 			= 7359;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

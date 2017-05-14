@@ -4,7 +4,7 @@ INSTANCE Xeres_01	(Npc_Default)
 	name							=	"Xeres";
 	guild							=	GIL_DMT;
 	id			= 	1234;
-	voice			=	14;
+	voice		= 0;
 	level							=	40;
 	npctype		= NPCTYPE_FRIEND;
 	flags       = 2;

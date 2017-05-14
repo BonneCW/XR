@@ -6,7 +6,7 @@ instance Mod_7304_HoherUntoterMagier_NW (Npc_Default)
 	guild 		=		GIL_STRF;
 	level 		=		80;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		7304;
 		
 	//-------- abilities --------

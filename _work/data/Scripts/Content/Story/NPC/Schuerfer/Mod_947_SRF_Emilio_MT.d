@@ -4,7 +4,7 @@ instance Mod_947_SRF_Emilio_MT (Npc_Default)
 	name 		= "Emilio";
 	guild 		= GIL_NONE;
 	id 			= 947;
-	voice 		= 10;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

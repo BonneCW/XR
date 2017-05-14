@@ -4,7 +4,7 @@ instance Mod_792_SLD_Patrick_MT (Npc_Default)
 	name 		= "Patrick"; 
 	guild 		= GIL_MIL;
 	id 			= 792;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;							
 	npctype		= NPCTYPE_MAIN;
 	

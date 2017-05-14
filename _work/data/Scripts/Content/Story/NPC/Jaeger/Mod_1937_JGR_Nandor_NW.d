@@ -8,7 +8,7 @@ instance Mod_1937_JGR_Nandor_NW (Npc_Default)
 	level =							2;
 	
 	
-	voice =							3;
+	voice		= 0;
 	id =							1937;
 
 

@@ -4,7 +4,7 @@ INSTANCE Mod_7157_ASS_Mourad_NW (Npc_Default)
 	name 		= "Mourad"; 
 	guild 		= GIL_OUT;
 	id 			= 7157;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

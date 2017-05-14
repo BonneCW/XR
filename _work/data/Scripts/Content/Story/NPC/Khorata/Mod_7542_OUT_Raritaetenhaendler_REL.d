@@ -4,7 +4,7 @@ instance Mod_7542_OUT_Raritaetenhaendler_REL (Npc_Default)
 	name 		= "Finder";
 	guild 		= GIL_OUT;
 	id 			= 7542;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

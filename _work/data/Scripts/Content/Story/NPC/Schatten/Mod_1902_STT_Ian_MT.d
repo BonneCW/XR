@@ -7,7 +7,7 @@ instance Mod_1902_STT_Ian_MT (Npc_Default)
 	level 		=		13;
 	flags 		=		0;
 	
-	voice 		=		13;
+	voice		= 0;
 	id 			=		1902;
 		
 	//-------- abilities --------

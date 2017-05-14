@@ -8,7 +8,7 @@ instance Mod_1430_BUD_Gravo_MT (Npc_Default)
 	level =							4;
 	
 	
-	voice =							4;
+	voice		= 0;
 	id =							1430;
 
 

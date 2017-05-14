@@ -4,7 +4,7 @@ instance Mod_7402_OUT_Fed_OM (Npc_Default)
 	name 		= "Fed";
 	guild 		= GIL_OUT;
 	id 			= 7402;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

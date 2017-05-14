@@ -5,7 +5,7 @@ instance Mod_1024_KGD_Melcador_MT (Npc_Default)
 	name 		=	"Melcador";
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_NONE;
-	voice 		=	6;
+	voice		= 0;
 	id 			=	1024;
 		
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_7405_OUT_Cirio_REL (Npc_Default)
 	name 		= "Cirio";
 	guild 		= GIL_DMT;
 	id 			= 7405;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_7424_OUT_Narkomane_REL (Npc_Default)
 	name 		= "Narkomane";
 	guild 		= GIL_OUT;
 	id 			= 7424;
-	voice 		= 8;
+	voice		= 0;
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------

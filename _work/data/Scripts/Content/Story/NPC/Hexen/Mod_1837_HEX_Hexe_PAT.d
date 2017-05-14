@@ -4,7 +4,7 @@ instance Mod_1837_HEX_Hexe_PAT (Npc_Default)
 	name 		= NAME_hexe; //Coragons Frau / Magd / Bedienung
 	guild 		= GIL_STRF;
 	id 			= 1837;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_pat_hexe;
 	

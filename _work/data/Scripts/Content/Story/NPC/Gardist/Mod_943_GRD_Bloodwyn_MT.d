@@ -4,7 +4,7 @@ instance Mod_943_GRD_Bloodwyn_MT (Npc_Default)
 	name 		= "Bloodwyn";
 	guild 		= GIL_OUT;
 	id 			= 943;
-	voice 		= 4;//Stimme Lee
+	voice		= 0;//Stimme Lee
 	flags      	= 2;
 	npctype		= NPCTYPE_main;
 	

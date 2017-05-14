@@ -4,7 +4,7 @@ instance Mod_537_NONE_Lehmar_NW (Npc_Default)
 	name 		= "Lehmar"; 
 	guild 		= GIL_pal;
 	id 			= 537;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

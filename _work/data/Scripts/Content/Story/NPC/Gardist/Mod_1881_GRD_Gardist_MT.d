@@ -7,7 +7,7 @@ instance Mod_1881_GRD_Gardist_MT (Npc_Default)
 	flags		=	0;	// weil Windenwache !!! wird in Kapitel 4 gelöscht!
 	guild 		=	GIL_out;
 	level 		=	15;
-	voice 		=	7;
+	voice		= 0;
 	id 			=	1881;
 	
 	//-------- abilities --------

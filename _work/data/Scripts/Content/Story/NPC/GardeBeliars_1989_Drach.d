@@ -4,7 +4,7 @@ INSTANCE GardeBeliars_1989_Drach	(Npc_Default)
 	name							=	"Drach";
 	guild							=	GIL_NONE;
 	id			= 	1989;
-	voice			=	14;
+	voice		= 0;
 	level							=	40;
 	npctype		= NPCTYPE_MAIN;
 	flags       = 0;

@@ -4,7 +4,7 @@ instance Mod_7701_PAL_Paladin_MT (Npc_Default)
 	name 		= "Paladin";
 	guild 		= GIL_OUT;
 	id 			= 7701;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

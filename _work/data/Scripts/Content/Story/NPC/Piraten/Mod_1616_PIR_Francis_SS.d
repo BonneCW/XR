@@ -4,7 +4,7 @@ INSTANCE Mod_1616_PIR_Francis_SS (Npc_Default)
 	name 		= "Francis";
 	guild 		= GIL_out;
 	id 			= 1616;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 2;															
 	npctype		= NPCTYPE_MAIN;
 	

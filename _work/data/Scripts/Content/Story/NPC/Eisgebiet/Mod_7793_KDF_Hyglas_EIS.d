@@ -4,7 +4,7 @@ INSTANCE Mod_7793_KDF_Hyglas_EIS (Npc_Default)
 	name 		= "Hyglas";
 	guild 		= GIL_VLK;
 	id 			= 7793;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

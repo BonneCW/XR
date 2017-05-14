@@ -7,7 +7,7 @@ instance Mod_1508_SLD_Soeldner_MT (Npc_Default)
 	flags		=	NPC_FLAG_IMMORTAL;	// weil Windenwache !!! wird in Kapitel 4 gelöscht!
 	guild 		=	GIL_mil;
 	level 		=	20;
-	voice 		=	6;
+	voice		= 0;
 	id 			=	1508;
 		
 	//-------- abilities --------

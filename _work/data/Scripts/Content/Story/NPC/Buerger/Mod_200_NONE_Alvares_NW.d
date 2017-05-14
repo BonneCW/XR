@@ -4,7 +4,7 @@ instance Mod_200_NONE_Alvares_NW (Npc_Default)
 	name 		= "Alvares"; 
 	guild 		= GIL_NONE;
 	id 			= 200;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;						
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_1180_MIL_Torwache_NW (Npc_Default)
 	name 		= "Türwache";	
 	guild 		= GIL_PAL;
 	id 			= 1180;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

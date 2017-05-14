@@ -4,7 +4,7 @@ INSTANCE Mod_4019_VMG_Faice_MT (Npc_Default)
 	name 		= "Faice";
 	guild 		= GIL_OUT;
 	id 			= 4019;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -6,7 +6,7 @@ instance Mod_800_GRD_Stone_MT (Npc_Default)
 	npctype		= 	npctype_main;
 	guild 		=	GIL_OUT;
 	level 		=	15;
-	voice 		=	6;
+	voice		= 0;
 	id 			=	800;
 	flags       =   0;	
 		

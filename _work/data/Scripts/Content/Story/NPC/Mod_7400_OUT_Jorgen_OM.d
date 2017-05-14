@@ -4,7 +4,7 @@ instance Mod_7400_OUT_Jorgen_OM (Npc_Default)
 	name 		= "Jorgen";
 	guild 		= GIL_OUT;
 	id 			= 7400;
-	voice 		= 7;
+	voice		= 0;
 	flags       = NPC_FLAG_IMMORTAL;	//Joly: Immortal Kapitän fürs Schiff im Kapitel 5! Mortal, Optionale Kapitäne: Torlof und Jack!!!!!!!!!						
 	npctype		= NPCTYPE_MAIN;
 	

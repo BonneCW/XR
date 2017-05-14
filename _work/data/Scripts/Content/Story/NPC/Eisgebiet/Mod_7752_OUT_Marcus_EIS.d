@@ -4,7 +4,7 @@ instance Mod_7752_OUT_Marcus_EIS (Npc_Default)
 	name 		= "Marcus";	
 	guild 		= GIL_OUT;
 	id 			= 7752;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_7050_ZOM_Nick_MT (Npc_Default)
 	name 		= "Nick";
 	guild 		= GIL_OUT;
 	id 			= 7050;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;
 	level	= 34;			
 	

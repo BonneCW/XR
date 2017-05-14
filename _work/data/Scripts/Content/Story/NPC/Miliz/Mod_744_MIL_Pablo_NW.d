@@ -4,7 +4,7 @@ instance Mod_744_MIL_Pablo_NW (Npc_Default)
 	name 		= "Pablo";	
 	guild 		= GIL_PAL;
 	id 			= 744;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

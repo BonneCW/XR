@@ -4,7 +4,7 @@ INSTANCE Mod_1772_KDF_Gizar_PAT (Npc_Default)
 	name 		= "Gizar";
 	guild 		= GIL_VLK;
 	id 			= 1772;
-	voice 		= 10;
+	voice		= 0;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

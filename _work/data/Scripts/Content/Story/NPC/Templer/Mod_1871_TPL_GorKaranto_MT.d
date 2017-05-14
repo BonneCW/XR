@@ -5,7 +5,7 @@ instance Mod_1871_TPL_GorKaranto_MT (Npc_Default)
 	npctype =						npctype_main;
 	guild =							GIL_OUT;
 	
-	voice =							8;
+	voice		= 0;
 	id =							1871;
 		
 	//-------- abilities --------	

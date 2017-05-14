@@ -4,7 +4,7 @@ INSTANCE Mod_556_NOV_Theodor_NW (Npc_Default)
 	name 		= "Novize";
 	guild 		= GIL_VLK;
 	id 		= 556;
-	voice 		= 13;
+	voice		= 0;
 	flags           = 0;
 	npctype		= NPCTYPE_nw_feuernovize;
 	

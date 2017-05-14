@@ -4,7 +4,7 @@ instance Mod_7431_JG_Baldur_MT (Npc_Default)
 	name 		= "Baldur"; 
 	guild 		= GIL_OUT;
 	id 			= 7431;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

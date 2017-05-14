@@ -4,7 +4,7 @@ instance Mod_7442_SLD_Torlof_GDG (Npc_Default)
 	name 		= "Torlof";
 	guild 		= GIL_NONE;
 	id 			= 7442;
-	voice 		= 1;
+	voice		= 0;
 	flags = 2;
 	npctype		= NPCTYPE_MAIN;
 	

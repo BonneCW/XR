@@ -6,7 +6,7 @@ instance Mod_7798_SMK_Drake_OM (Npc_Default)
 	npctype		=	npctype_main;
 	guild 		=	GIL_OUT;
 	level 		= 	50;		// wegen XP!
-	voice 		=	11;
+	voice		= 0;
 	id 			=	7798;
 		
 	//-------- abilities --------

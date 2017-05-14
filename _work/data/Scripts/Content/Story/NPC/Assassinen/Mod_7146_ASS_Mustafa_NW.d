@@ -4,7 +4,7 @@ INSTANCE Mod_7146_ASS_Mustafa_NW (Npc_Default)
 	name 		= "Mustafa"; 
 	guild 		= GIL_OUT;
 	id 			= 7146;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

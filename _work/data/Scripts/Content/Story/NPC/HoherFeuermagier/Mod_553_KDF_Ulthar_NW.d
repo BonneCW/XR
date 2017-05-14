@@ -4,7 +4,7 @@ INSTANCE Mod_553_KDF_Ulthar_NW (Npc_Default)
 	name 		= "Ulthar";
 	guild 		= GIL_VLK;
 	id 			= 553;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 0;
 	npctype		= NPCTYPE_MAIN;
 

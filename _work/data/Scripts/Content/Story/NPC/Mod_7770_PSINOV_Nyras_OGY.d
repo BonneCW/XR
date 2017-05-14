@@ -6,7 +6,7 @@ instance Mod_7770_PSINOV_Nyras_OGY (Npc_Default)
 	guild 		=		GIL_DMT;
 	level 		=		3;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		7770;
 		
 	//-------- abilities --------

@@ -4,7 +4,7 @@ instance Mod_7327_VLK_Haendler_MT (Npc_Default)
 	name 		= "Händler"; 
 	guild 		= GIL_ORC;
 	id 			= 7327;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

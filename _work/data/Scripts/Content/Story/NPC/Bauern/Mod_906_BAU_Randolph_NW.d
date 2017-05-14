@@ -4,7 +4,7 @@ instance Mod_906_BAU_Randolph_NW (Npc_Default)
 	name 		= "Randolph";
 	guild 		= GIL_DMT;
 	id 			= 906;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;	//Joly:nur solange Alnveres da ist!																
 	npctype		= NPCTYPE_MAIN;
 	

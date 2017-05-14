@@ -4,7 +4,7 @@ instance Mod_7558_STRF_Straefling_NW (Npc_Default)
 	name 		= "Sträfling"; 
 	guild 		= GIL_STRF;
 	id 			= 7558;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_AMBIENT;
 	

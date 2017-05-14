@@ -4,7 +4,7 @@ INSTANCE Mod_7647_OUT_Strewak_EIS (Npc_Default)
 	name 		= "gefrorener Leichnam"; 
 	guild 		= GIL_NONE;
 	id 			= 7647;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_FRIEND; //plündert nicht!!! (und ein Freischlag)
 	nofocus = 1;

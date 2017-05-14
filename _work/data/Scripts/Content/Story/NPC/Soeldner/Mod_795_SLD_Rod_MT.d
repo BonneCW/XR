@@ -4,7 +4,7 @@ instance Mod_795_SLD_Rod_MT (Npc_Default)
 	name 		= "Rod";
 	guild 		= GIL_MIL;
 	id 			= 795;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

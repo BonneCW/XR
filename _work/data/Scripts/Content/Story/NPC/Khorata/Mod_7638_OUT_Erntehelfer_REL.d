@@ -4,7 +4,7 @@ instance Mod_7638_OUT_Erntehelfer_REL (Npc_Default)
 	name 		= "Erntehelfer"; 
 	guild 		= GIL_OUT;
 	id 			= 7638;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

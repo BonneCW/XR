@@ -4,7 +4,7 @@ instance Mod_6007_SLD_Lares_GDG (Npc_Default)
 	name 		= "Lares"; 
 	guild 		= GIL_NONE;
 	id 			= 6007;
-	voice 		= 9;																	
+	voice		= 0;																	
 	npctype		= NPCTYPE_FRIEND;
 	
 	// ------ aivars ------

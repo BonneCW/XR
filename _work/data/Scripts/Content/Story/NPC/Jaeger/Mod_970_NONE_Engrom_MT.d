@@ -4,7 +4,7 @@ instance Mod_970_NONE_Engrom_MT (Npc_Default)
 	name 		= "Engrom";
 	guild 		= GIL_NONE;
 	id 			= 970;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

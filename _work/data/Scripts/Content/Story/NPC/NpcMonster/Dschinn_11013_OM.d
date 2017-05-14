@@ -4,7 +4,7 @@ INSTANCE Dschinn_11013_OM (Npc_Default)
 	name 		= "Dschinn";	
 	guild 		= GIL_SKELETON_MAGE;
 	id 			= 11013;
-	voice 		= 10;
+	voice		= 0;
 	flags       = NPC_FLAG_GHOST;																	
 	npctype		= NPCTYPE_MAIN;
 	level = 400;

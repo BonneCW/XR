@@ -9,7 +9,7 @@ instance PIR_1395_Addon_InExtremo_Lutter(Npc_Default)
    	npctype		= 	npctype_main;
    	guild =					GIL_NONE;
 	level =					4;
-	voice =					7;
+	voice		= 0;
 	id =					1395;
 	flags      				=   NPC_FLAG_IMMORTAL;
 

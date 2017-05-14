@@ -8,7 +8,7 @@ instance Mod_1463_BUD_Buddler_MT (Npc_Default)
 	level =							3;
 	
 	
-	voice =							3;
+	voice		= 0;
 	id =							1463;
 
 

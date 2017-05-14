@@ -4,7 +4,7 @@ instance Mod_7450_HTR_Ethan_IR (Npc_Default)
 	name 		= "Ethan";	
 	guild 		= GIL_OUT;
 	id 			= 7450;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	aivar[AIV_Partymember] 		= TRUE;

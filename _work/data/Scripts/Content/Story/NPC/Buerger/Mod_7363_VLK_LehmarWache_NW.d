@@ -4,7 +4,7 @@ instance Mod_7363_VLK_LehmarWache_NW (Npc_Default)
 	name 		= "Lehmars Wache"; 
 	guild 		= GIL_PAL;
 	id 			= 7363;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

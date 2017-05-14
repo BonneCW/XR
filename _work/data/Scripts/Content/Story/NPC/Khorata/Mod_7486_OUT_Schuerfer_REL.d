@@ -8,7 +8,7 @@ instance Mod_7486_OUT_Schuerfer_REL (Npc_Default)
 	level =							6;
 	flags =							0;
 	
-	voice =							1;
+	voice		= 0;
 	id =							7486;
 
 

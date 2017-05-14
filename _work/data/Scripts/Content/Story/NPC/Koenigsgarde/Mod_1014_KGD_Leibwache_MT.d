@@ -5,7 +5,7 @@ instance Mod_1014_KGD_Leibwache_MT (Npc_Default)
 	name 		=	"Leibwache";
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_OUT;
-	voice 		=	6;
+	voice		= 0;
 	id 			=	1014;
 		
 	//-------- abilities --------

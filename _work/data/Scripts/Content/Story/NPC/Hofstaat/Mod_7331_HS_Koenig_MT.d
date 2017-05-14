@@ -4,7 +4,7 @@ instance Mod_7331_HS_Koenig_MT (Npc_Default)
 	name 		= "König"; 
 	guild 		= GIL_OUT;
 	id 			= 7331;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

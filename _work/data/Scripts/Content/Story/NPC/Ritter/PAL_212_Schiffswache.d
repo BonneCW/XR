@@ -4,7 +4,7 @@ INSTANCE Pal_212_Schiffswache (Npc_Default)
 	name 		= NAME_Schiffswache;
 	guild 		= GIL_PAL;
 	id 			= 212;
-	voice 		= 8;
+	voice		= 0;
 	flags       = NPC_FLAG_IMMORTAL;	//Joly: NPC_FLAG_IMMORTAL															
 	npctype		= NPCTYPE_MAIN;
 	

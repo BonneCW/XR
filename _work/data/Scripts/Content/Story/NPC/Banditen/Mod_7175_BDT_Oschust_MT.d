@@ -11,7 +11,7 @@ INSTANCE Mod_7175_BDT_Oschust_MT (Npc_Default)
 		guild		= GIL_ORC;
 	};
 	id 			= 7175;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 

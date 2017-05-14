@@ -13,7 +13,7 @@ INSTANCE Mod_1771_KDF_Aaron_PAT (Npc_Default)
 	flags = 2;
 	guild 		= GIL_VLK;
 	id 			= 1771;
-	voice 		= 11;
+	voice		= 0;
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------

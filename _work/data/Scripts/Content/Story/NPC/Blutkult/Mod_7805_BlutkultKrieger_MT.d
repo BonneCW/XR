@@ -6,7 +6,7 @@ instance Mod_7805_BlutkultKrieger_MT (Npc_Default)
 	guild 		=		GIL_STRF;
 	level 		=		60;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		7805;
 		
 	//-------- abilities --------

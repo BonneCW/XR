@@ -4,7 +4,7 @@ instance Mod_7353_VMG_Per_TUG (Npc_Default)
 	name 		= "Per";
 	guild 		= GIL_out;
 	id 			= 7353;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_7407_OUT_Wirt_EIS (Npc_Default)
 	name 		= "Wirt";
 	guild 		= GIL_OUT;
 	id 			= 7407;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

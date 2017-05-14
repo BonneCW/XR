@@ -4,7 +4,7 @@ instance Mod_7521_JG_Woron_JL (Npc_Default)
 	name 		= "Woron"; 
 	guild 		= GIL_OUT;
 	id 			= 7521;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

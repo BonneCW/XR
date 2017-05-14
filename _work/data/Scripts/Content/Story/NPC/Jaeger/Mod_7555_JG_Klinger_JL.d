@@ -4,7 +4,7 @@ INSTANCE Mod_7555_JG_Klinger_JL (Npc_Default)
 	name 		= "Klinger";
 	guild 		= GIL_OUT;
 	id 			= 7555;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

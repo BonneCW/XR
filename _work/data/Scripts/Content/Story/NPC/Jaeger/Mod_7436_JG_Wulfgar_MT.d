@@ -4,7 +4,7 @@ instance Mod_7436_JG_Wulfgar_MT (Npc_Default)
 	name 		= "Wulfgar";	
 	guild 		= GIL_OUT;
 	id 			= 7436;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

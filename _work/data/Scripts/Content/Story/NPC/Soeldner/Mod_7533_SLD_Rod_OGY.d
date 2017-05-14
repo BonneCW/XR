@@ -4,7 +4,7 @@ instance Mod_7533_SLD_Rod_OGY (Npc_Default)
 	name 		= "Rod";
 	guild 		= GIL_OUT;
 	id 			= 7533;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

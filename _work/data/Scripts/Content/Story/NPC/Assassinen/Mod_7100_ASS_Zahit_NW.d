@@ -4,7 +4,7 @@ INSTANCE Mod_7100_ASS_Zahit_NW (Npc_Default)
 	name 		= "Zahit"; 
 	guild 		= GIL_OUT;
 	id 			= 7100;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

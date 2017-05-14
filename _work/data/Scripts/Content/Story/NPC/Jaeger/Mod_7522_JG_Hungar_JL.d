@@ -4,7 +4,7 @@ instance Mod_7522_JG_Hungar_JL (Npc_Default)
 	name 		= "Hungar"; 
 	guild 		= GIL_OUT;
 	id 			= 7522;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

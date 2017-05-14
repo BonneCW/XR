@@ -8,7 +8,7 @@ instance Mod_1705_SMK_SchwarzerKrieger_PAT (Npc_Default)
 	level =							4;
 	
 	
-	voice =							3;
+	voice		= 0;
 	id =							1705;
 
 

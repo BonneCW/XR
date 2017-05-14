@@ -6,7 +6,7 @@ instance Mod_1108_GRD_Bullit_MT (Npc_Default)
 	npctype		=	npctype_main;
 	guild 		=	GIL_OUT;
 	level 		=	10;
-	voice 		=	6;
+	voice		= 0;
 	id 			=	1108;
 		
 	//-------- abilities --------

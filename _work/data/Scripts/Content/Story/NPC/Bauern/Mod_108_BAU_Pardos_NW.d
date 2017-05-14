@@ -4,7 +4,7 @@ instance Mod_108_BAU_Pardos_NW (Npc_Default)
 	name 		= "Pardos"; 
 	guild 		= GIL_NONE;
 	id 			= 108;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;							
 	npctype		= NPCTYPE_MAIN;
 	

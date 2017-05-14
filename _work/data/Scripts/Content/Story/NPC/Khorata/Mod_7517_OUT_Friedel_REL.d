@@ -4,7 +4,7 @@ instance Mod_7517_OUT_Friedel_REL (Npc_Default)
 	name 		= "Friedel"; 
 	guild 		= GIL_OUT;
 	id 			= 7517;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

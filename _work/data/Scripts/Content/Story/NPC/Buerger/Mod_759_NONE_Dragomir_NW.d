@@ -4,7 +4,7 @@ INSTANCE Mod_759_NONE_Dragomir_NW (Npc_Default)
 	name 		= "Dragomir";
 	guild 		= GIL_NONE;
 	id 			= 759;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 	

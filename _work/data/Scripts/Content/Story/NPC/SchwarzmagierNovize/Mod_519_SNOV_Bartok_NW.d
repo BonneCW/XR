@@ -4,7 +4,7 @@ INSTANCE Mod_519_SNOV_Bartok_NW (Npc_Default)
 	name 		= "Bartok"; 
 	guild 		= GIL_OUT;
 	id 			= 519;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	aivar[AIV_IGNORE_Murder]		= TRUE;

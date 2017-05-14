@@ -4,7 +4,7 @@ INSTANCE Mod_7782_ASS_Assassine_NW (Npc_Default)
 	name 		= "Assassine"; 
 	guild 		= GIL_OUT;
 	id 			= 7782;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

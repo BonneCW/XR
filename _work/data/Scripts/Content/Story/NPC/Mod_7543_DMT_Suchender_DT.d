@@ -6,7 +6,7 @@ instance Mod_7543_DMT_Suchender_DT (Npc_Default)
 	npctype		= 	npctype_main;
 	guild 		=	GIL_DMT;
 	level 		=	10;
-	voice		=	5;
+	voice		= 0;
 	id 			=	7543;
 		
 	//-------- abilities --------	

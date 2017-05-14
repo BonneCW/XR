@@ -4,7 +4,7 @@ instance Mod_107_BAU_Bengar_NW (Npc_Default)
 	name 		= "Bengar";
 	guild 		= GIL_NONE;
 	id 			= 107;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;													//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

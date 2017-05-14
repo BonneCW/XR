@@ -6,7 +6,7 @@ instance Mod_1930_GRD_Gardist_NW (Npc_Default)
 	npctype		= 	npctype_nw_gardist;
 	guild 		=	GIL_OUT;
 	level 		=	10;
-	voice 		=	7;
+	voice		= 0;
 	id 			=	1930;
 		
 	//-------- abilities --------

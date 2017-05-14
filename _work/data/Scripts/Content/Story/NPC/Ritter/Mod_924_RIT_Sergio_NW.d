@@ -4,7 +4,7 @@ instance Mod_924_RIT_Sergio_NW (Npc_Default)
 	name 		= "Sergio";
 	guild 		= GIL_OUT;
 	id 			= 924;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

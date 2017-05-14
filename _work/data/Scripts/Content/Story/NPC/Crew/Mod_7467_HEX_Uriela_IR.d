@@ -4,7 +4,7 @@ instance Mod_7467_HEX_Uriela_IR (Npc_Default)
 	name 		= "Uriela";	
 	guild 		= GIL_OUT;
 	id 			= 7467;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

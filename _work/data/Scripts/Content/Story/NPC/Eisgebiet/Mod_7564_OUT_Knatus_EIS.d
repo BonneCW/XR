@@ -4,7 +4,7 @@ INSTANCE Mod_7564_OUT_Knatus_EIS (Npc_Default)
 	name 		= "Knatus"; 	
 	guild 		= GIL_OUT;
 	id 			= 7564;
-	voice 		= 3;																
+	voice		= 0;																
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Aivars ------

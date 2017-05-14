@@ -7,7 +7,7 @@ instance Mod_1291_SLD_Silas_MT (Npc_Default)
 	guild =					GIL_mil;      
 	level =					15;
 	
-	voice =					6;
+	voice		= 0;
 	id =					1291;
 
 

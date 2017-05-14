@@ -4,7 +4,7 @@ instance Mod_1534_WKR_Wasserkrieger_NW (Npc_Default)
 	name 		= NAME_Wasserkrieger;
 	guild 		= GIL_nov;
 	id 			= 1534;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_nw_wasserkrieger;
 	

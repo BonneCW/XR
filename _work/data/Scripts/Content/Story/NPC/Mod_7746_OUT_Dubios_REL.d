@@ -4,7 +4,7 @@ instance Mod_7746_OUT_Dubios_REL (Npc_Default)
 	name 		= "Dubiose Gestalt"; 
 	guild 		= GIL_OUT;
 	id 			= 7746;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_7792_OUT_Anglar_EIS (Npc_Default)
 	name 		= "Anglar"; 
 	guild 		= GIL_OUT;
 	id 			= 7792;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

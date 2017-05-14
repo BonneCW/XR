@@ -4,7 +4,7 @@ instance Mod_7703_OUT_Froppi_REL (Npc_Default)
 	name 		= "Froppi"; 
 	guild 		= GIL_OUT;
 	id 			= 7703;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

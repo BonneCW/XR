@@ -4,7 +4,7 @@ instance Mod_7754_OUT_Melchior_EIS (Npc_Default)
 	name 		= "Melchior";	
 	guild 		= GIL_OUT;  
 	id 			= 7754;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

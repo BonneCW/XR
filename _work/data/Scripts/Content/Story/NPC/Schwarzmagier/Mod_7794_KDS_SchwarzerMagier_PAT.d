@@ -8,7 +8,7 @@ instance Mod_7794_KDS_SchwarzerMagier_PAT (Npc_Default)
 	level =							5;
 	flags	=	2;
 	
-	voice =							3;
+	voice		= 0;
 	id =							7794;
 
 

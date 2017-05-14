@@ -4,7 +4,7 @@ instance Mod_7502_KDS_Alax_MT (Npc_Default)
 	name 		= "Alax"; 
 	guild 		= GIL_KDF;
 	id 			= 7502;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

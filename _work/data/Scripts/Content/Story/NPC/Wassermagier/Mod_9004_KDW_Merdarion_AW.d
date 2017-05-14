@@ -4,7 +4,7 @@ INSTANCE Mod_9004_KDW_Merdarion_AW (Npc_Default)
 	name 		= "Merdarion";
 	guild 		= GIL_NOV; 
 	id 			= 9004;
-	voice 		= 6;
+	voice		= 0;
 	flags       = NPC_FLAG_IMMORTAL;																	
 	npctype		= NPCTYPE_MAIN;
 	

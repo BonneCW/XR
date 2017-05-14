@@ -4,7 +4,7 @@ instance Mod_7362_OUT_Buff_TUG (Npc_Default)
 	name 		= "Buff"; 
 	guild 		= GIL_OUT;
 	id 			= 7362;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

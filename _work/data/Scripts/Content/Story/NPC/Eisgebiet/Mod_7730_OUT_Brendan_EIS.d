@@ -4,7 +4,7 @@ instance Mod_7730_OUT_Brendan_EIS (Npc_Default)
 	name 		= "Brendan";	
 	guild 		= GIL_OUT;
 	id 			= 7730;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

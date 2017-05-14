@@ -7,7 +7,7 @@ instance Mod_7803_TPL_GorNaKosh_OM (Npc_Default)
 	level =							17;
 	flags =							0;
 	
-	voice =							13;
+	voice		= 0;
 	id =							7803;
 		
 	//-------- abilities --------

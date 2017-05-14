@@ -4,7 +4,7 @@ instance Mod_1034_VLK_Richter_NW (Npc_Default)
 	name 		= "Richter";
 	guild 		= GIL_PAL;
 	id 			= 1034;
-	voice 		= 10;
+	voice		= 0;
 	flags       = NPC_FLAG_IMMORTAL;																
 	npctype		= NPCTYPE_MAIN;
 	

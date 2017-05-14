@@ -4,7 +4,7 @@ instance Mod_1830_HEX_Hexe_PAT (Npc_Default)
 	name 		= NAME_hexe;
 	guild 		= GIL_strf;
 	id 			= 1830;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_pat_hexe;
 	

@@ -6,7 +6,7 @@ instance Mod_185_NONE_Alvro_NW (Npc_Default)
 	npctype	 	=	npctype_main;
 	guild 		=	GIL_OUT;      
 	level 		=	8;
-	voice 		= 	2;
+	voice		= 0;
 	id 			=	185;
 
 	//-------- abilities --------

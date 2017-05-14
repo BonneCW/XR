@@ -8,7 +8,7 @@ instance Mod_7508_BUD_Sterling_MT (Npc_Default)
 	level =							2;
 	
 	
-	voice =							2;
+	voice		= 0;
 	id =							7508;
 
 

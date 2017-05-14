@@ -6,7 +6,7 @@ instance Mod_7800_SMK_Alberto_OM (Npc_Default)
 	npctype		=	npctype_main;
 	guild 		=	GIL_OUT;
 	level 		= 	50;		// wegen XP!
-	voice 		=	12;
+	voice		= 0;
 	id 			=	7800;
 		
 	//-------- abilities --------

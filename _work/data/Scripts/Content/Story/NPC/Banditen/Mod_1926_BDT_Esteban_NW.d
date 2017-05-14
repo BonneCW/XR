@@ -4,7 +4,7 @@ instance Mod_1926_BDT_Esteban_NW (Npc_Default)
 	name 		= "Esteban";
 	guild 		= GIL_OUT;
 	id 			= 1926;
-	voice 		= 7;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

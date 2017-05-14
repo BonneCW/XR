@@ -4,7 +4,7 @@ instance Mod_7732_OUT_Wache_EIS (Npc_Default)
 	name 		= "Wache";	
 	guild 		= GIL_OUT;  
 	id 			= 7732;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

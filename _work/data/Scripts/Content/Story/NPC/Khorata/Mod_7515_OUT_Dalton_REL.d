@@ -4,7 +4,7 @@ instance Mod_7515_OUT_Dalton_REL (Npc_Default)
 	name 		= "Dalton"; 
 	guild 		= GIL_OUT;
 	id 			= 7515;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_main;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_7281_OUT_Felicita_REL (Npc_Default)
 	name 		= "Felicita"; 
 	guild 		= GIL_OUT;
 	id 			= 7281;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

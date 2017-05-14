@@ -4,7 +4,7 @@ instance Mod_7804_VLK_Spieler_NW (Npc_Default)
 	name 		= "Spieler"; 
 	guild 		= GIL_PAL;
 	id 			= 7804;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

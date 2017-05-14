@@ -8,7 +8,7 @@ instance Mod_1432_BUD_Buddler_MT (Npc_Default)
 	level =							2;
 	
 	
-	voice =							4;
+	voice		= 0;
 	id =							1432;
 
 	//-------- abilities --------              

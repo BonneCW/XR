@@ -7,7 +7,7 @@ instance Mod_1266_SLD_Orik_MT (Npc_Default)
 	guild =					GIL_mil;
 	level =					18;
 	
-	voice =					8;
+	voice		= 0;
 	id =					1266;
 
 

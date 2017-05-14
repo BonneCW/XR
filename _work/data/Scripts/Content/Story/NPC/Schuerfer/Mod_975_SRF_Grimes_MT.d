@@ -4,7 +4,7 @@ instance Mod_975_SRF_Grimes_MT (Npc_Default)
 	name 		= "Grimes";
 	guild 		= GIL_NONE;
 	id 			= 975;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 0;							
 	npctype		= NPCTYPE_MAIN;
 	

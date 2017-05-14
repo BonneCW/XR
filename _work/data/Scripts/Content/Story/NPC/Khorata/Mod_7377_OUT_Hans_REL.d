@@ -4,7 +4,7 @@ instance Mod_7377_OUT_Hans_REL (Npc_Default)
 	name 		= "Hans"; 
 	guild 		= GIL_OUT;
 	id 			= 7377;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

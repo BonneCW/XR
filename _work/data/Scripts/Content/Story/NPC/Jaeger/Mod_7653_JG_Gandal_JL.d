@@ -4,7 +4,7 @@ instance Mod_7653_JG_Gandal_JL (Npc_Default)
 	name 		= "Gandal";
 	guild 		= GIL_OUT;
 	id 			= 7653;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

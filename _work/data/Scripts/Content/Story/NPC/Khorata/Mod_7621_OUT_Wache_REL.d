@@ -4,7 +4,7 @@ instance Mod_7621_OUT_Wache_REL (Npc_Default)
 	name 		= "Wache";	
 	guild 		= GIL_OUT;
 	id 			= 7621;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

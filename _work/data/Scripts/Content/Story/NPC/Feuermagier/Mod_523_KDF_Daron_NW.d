@@ -4,7 +4,7 @@ INSTANCE Mod_523_KDF_Daron_NW (Npc_Default)
 	name 		= "Daron";
 	guild 		= GIL_VLK;
 	id 			= 523;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

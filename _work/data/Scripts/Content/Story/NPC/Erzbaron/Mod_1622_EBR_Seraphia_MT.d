@@ -6,7 +6,7 @@ instance Mod_1622_EBR_Seraphia_MT (Npc_Default)
 	npctype		= 	npctype_main;
 	guild 		=	GIL_OUT;
 	level 		=   1;
-	voice 		=	16;
+	voice		= 0;
 	id 			=	1622; 
 	flags      	=   0; // wichtig, weil man sie nicht finishen kann!
 

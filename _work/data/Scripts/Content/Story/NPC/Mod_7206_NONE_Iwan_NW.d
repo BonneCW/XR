@@ -4,7 +4,7 @@ INSTANCE Mod_7206_NONE_Iwan_NW (Npc_Default)
 	name 		= "Iwan"; 
 	guild 		= GIL_NONE;
 	id 			= 7206;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

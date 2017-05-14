@@ -4,7 +4,7 @@ instance Mod_772_BAU_Rosi_NW  (Npc_Default)
 	name 		= "Rosi";
 	guild 		= GIL_NONE;
 	id 			= 772;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -8,7 +8,7 @@ instance Mod_1775_DMB_Beschwoerer_PAT (Npc_Default)
 	level =							50;
 	
 	
-	voice =							2;
+	voice		= 0;
 	id =							1775;
 	
 	aivar[AIV_MagicUser] = MAGIC_ALWAYS;

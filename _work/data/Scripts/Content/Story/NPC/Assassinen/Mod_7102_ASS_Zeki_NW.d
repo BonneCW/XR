@@ -4,7 +4,7 @@ INSTANCE Mod_7102_ASS_Zeki_NW (Npc_Default)
 	name 		= "Zeki"; 
 	guild 		= GIL_OUT;
 	id 			= 7102;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_7142_ASS_Elite_NW (Npc_Default)
 	name 		= "Elite-Assassine"; 
 	guild 		= GIL_OUT;
 	id 			= 7142;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

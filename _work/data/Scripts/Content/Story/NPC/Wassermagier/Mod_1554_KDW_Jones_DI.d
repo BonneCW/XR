@@ -4,7 +4,7 @@ instance Mod_1554_KDW_Jones_DI (Npc_Default)
 	name 		= "Jones";
 	guild 		= GIL_nov;
 	id 			= 1554;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

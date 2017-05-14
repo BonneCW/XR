@@ -11,7 +11,7 @@ instance PIR_1392_Addon_InExtremo_ThomasTheForger (Npc_Default)
 	level =					4;
 	flags =					0;
 	
-	voice =					8;
+	voice		= 0;
 	id =					1392;
 	flags      					 =   NPC_FLAG_IMMORTAL;
 

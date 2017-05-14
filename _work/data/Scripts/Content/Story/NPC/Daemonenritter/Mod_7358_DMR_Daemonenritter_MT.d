@@ -4,7 +4,7 @@ instance Mod_7358_DMR_Daemonenritter_MT (Npc_Default)
 	name 		= "Minenwache"; 
 	guild 		= GIL_KDF;
 	id 			= 7358;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

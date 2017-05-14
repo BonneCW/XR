@@ -4,7 +4,7 @@ instance Mod_778_NONE_Talbin_NW (Npc_Default)
 	name 		= "Talbin";
 	guild 		= GIL_NONE;
 	id 			= 778;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_545_NONE_Gildo_NW (Npc_Default)
    	level = 5;
    	guild = GIL_OUT;
    	id = 545;
-   	voice = 7;
+   	voice		= 0;
    	flags = 0;
    	npctype = NPCTYPE_NW_BAUER;
 

@@ -4,7 +4,7 @@ instance Mod_1856_PAL_Paladin_PAT (Npc_Default)
 	name 		= NAME_Paladin;
 	guild 		= GIL_pal;
 	id 			= 1856;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_main;
 	

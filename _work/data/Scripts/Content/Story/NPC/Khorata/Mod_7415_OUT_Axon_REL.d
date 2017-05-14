@@ -4,7 +4,7 @@ INSTANCE Mod_7415_OUT_Axon_REL (Npc_Default)
 	name 		= "Axon";
 	guild 		= GIL_OUT;
 	id 			= 7415;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;	//Joly: NPC_FLAG_IMMORTAL	wegen Kapitel 3 Schmied der das Auge Innos repariert!		//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_598_MIL_Mika_NW (Npc_Default)
 	name 		= "Mika";	
 	guild 		= GIL_PAL;	//Joly: Wenn GIL_OUT Probleme macht, bitte mir Bescheid geben!!!  Björn
 	id 			= 598;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

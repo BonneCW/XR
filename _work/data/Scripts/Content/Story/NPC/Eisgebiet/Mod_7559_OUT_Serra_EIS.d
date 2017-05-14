@@ -4,7 +4,7 @@ instance Mod_7559_OUT_Serra_EIS (Npc_Default)
 	name 		= "Serra";	
 	guild 		= GIL_OUT;
 	id 			= 7559;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

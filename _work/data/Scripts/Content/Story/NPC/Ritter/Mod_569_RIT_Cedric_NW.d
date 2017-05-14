@@ -4,7 +4,7 @@ instance Mod_569_RIT_Cedric_NW (Npc_Default)
 	name 		= "Cedric";
 	guild 		= GIL_PAL;
 	id 			= 569;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 	

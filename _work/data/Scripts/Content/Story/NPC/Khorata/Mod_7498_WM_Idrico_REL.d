@@ -4,7 +4,7 @@ instance Mod_7498_WM_Idrico_REL (Npc_Default)
 	name 		= "Idrico";
 	guild 		= GIL_OUT;
 	id 			= 7498;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	aivar[AIV_MagicUser] = MAGIC_ALWAYS;

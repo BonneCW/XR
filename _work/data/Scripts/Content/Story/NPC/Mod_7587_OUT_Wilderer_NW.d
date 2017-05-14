@@ -7,7 +7,7 @@ instance Mod_7587_OUT_Wilderer_NW (Npc_Default)
 	guild =					GIL_STRF;       
 	level =					16;
 	
-	voice =					8;
+	voice		= 0;
 	id =					7587;
 
 	aivar[AIV_Partymember] = TRUE;

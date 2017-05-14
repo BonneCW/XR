@@ -4,7 +4,7 @@ instance Mod_7769_OUT_Wuetar_EIS (Npc_Default)
 	name 		= "Wütar"; 
 	guild 		= GIL_OUT;
 	id 			= 7769;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_1740_KDF_Ordenspriester_PAT (Npc_Default)
 	name 		= Name_ordenspriester;	
 	guild 		= GIL_vlk;
 	id 			= 1740;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_pat_ordenspriester;
 	

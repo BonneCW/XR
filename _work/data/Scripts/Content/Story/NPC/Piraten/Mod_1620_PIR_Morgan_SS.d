@@ -4,7 +4,7 @@ INSTANCE Mod_1620_PIR_Morgan_SS (Npc_Default)
 	name 		= "Morgan";
 	guild 		= GIL_out;
 	id 			= 1620;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 2;															
 	npctype		= NPCTYPE_MAIN;
 	

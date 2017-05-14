@@ -6,7 +6,7 @@ instance Mod_7658_OUT_Suchender_REL (Npc_Default)
 	npctype		= 	npctype_main;
 	guild 		=	GIL_STRF;
 	level 		=	10;
-	voice		=	5;
+	voice		= 0;
 	id 			=	7658;
 	flags = 0;
 		

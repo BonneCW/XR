@@ -4,7 +4,7 @@ INSTANCE Mod_7152_ASS_Aiman_NW (Npc_Default)
 	name 		= "Aiman"; 
 	guild 		= GIL_OUT;
 	id 			= 7152;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

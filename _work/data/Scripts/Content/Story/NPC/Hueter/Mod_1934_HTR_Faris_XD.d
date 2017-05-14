@@ -4,7 +4,7 @@ instance Mod_1934_HTR_Faris_XD (Npc_Default)
 	name 		= "Faris";	
 	guild 		= GIL_nov;
 	id 			= 1934;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_main;
 	

@@ -4,7 +4,7 @@ instance Mod_7572_OUT_Vigonza_EIS (Npc_Default)
 	name 		= "Vigonza"; 
 	guild 		= GIL_OUT;
 	id 			= 7572;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 2;
 	npctype		= NPCTYPE_MAIN;
 	

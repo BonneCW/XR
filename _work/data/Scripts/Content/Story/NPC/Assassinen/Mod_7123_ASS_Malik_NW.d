@@ -4,7 +4,7 @@ INSTANCE Mod_7123_ASS_Malik_NW (Npc_Default)
 	name 		= "Malik"; 
 	guild 		= GIL_OUT;
 	id 			= 7123;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

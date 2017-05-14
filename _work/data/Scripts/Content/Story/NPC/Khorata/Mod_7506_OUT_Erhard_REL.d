@@ -4,7 +4,7 @@ instance Mod_7506_OUT_Erhard_REL (Npc_Default)
 	name 		= "Erhard"; 
 	guild 		= GIL_OUT;
 	id 			= 7506;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

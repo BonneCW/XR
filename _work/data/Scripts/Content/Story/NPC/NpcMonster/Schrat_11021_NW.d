@@ -4,7 +4,7 @@ INSTANCE Schrat_11021_NW (Npc_Default)
 	name 		= "Dämonenschrat";	
 	guild 		= GIL_DMT;
 	id 			= 11021;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	level = 40;

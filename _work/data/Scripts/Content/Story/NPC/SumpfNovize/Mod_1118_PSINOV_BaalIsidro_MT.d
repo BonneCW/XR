@@ -6,7 +6,7 @@ instance Mod_1118_PSINOV_BaalIsidro_MT (Npc_Default)
 	guild 		=		GIL_OUT;
 	level 		=		9;
 	
-	voice 		=		3;
+	voice		= 0;
 	id 			=		1118;
 		
 	//-------- abilities --------

@@ -4,7 +4,7 @@ INSTANCE Mod_7382_OUT_Theodorus_REL (Npc_Default)
 	name 		= "Theodorus"; 
 	guild 		= GIL_OUT;
 	id 			= 7382;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_FRIEND; //plündert nicht!!! (und ein Freischlag)
 	

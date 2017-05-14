@@ -6,7 +6,7 @@ instance Mod_1013_KGD_Hrungir_MT (Npc_Default)
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_NONE;
 	level 		=	22;
-	voice 		=	7;
+	voice		= 0;
 	id 		=	1013;
 		
 	//-------- abilities --------

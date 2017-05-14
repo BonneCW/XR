@@ -4,7 +4,7 @@ INSTANCE Mod_7780_SNOV_Novize_NW (Npc_Default)
 	name 		= Name_Novize;
 	guild 		= GIL_OUT;
 	id 			= 7780;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

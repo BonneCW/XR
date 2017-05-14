@@ -4,7 +4,7 @@ INSTANCE Mod_1770_KDF_Faros_PAT (Npc_Default)
 	name 		= "Faros";
 	guild 		= GIL_VLK;
 	id 			= 1770;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

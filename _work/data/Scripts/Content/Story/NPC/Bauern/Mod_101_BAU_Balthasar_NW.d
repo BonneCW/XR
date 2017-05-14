@@ -4,7 +4,7 @@ instance Mod_101_BAU_Balthasar_NW (Npc_Default)
 	name 		= "Balthasar";
 	guild 		= GIL_NONE;
 	id 			= 101;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

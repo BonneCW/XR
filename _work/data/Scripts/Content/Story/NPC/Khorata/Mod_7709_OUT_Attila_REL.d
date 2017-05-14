@@ -4,7 +4,7 @@ instance Mod_7709_OUT_Attila_REL (Npc_Default)
 	name 		= "Attila";
 	guild 		= GIL_OUT;
 	id 			= 7709;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;									//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

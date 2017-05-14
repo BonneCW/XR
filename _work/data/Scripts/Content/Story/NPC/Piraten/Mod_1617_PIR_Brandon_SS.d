@@ -4,7 +4,7 @@ INSTANCE Mod_1617_PIR_Brandon_SS (Npc_Default)
 	name 		= "Brandon";
 	guild 		= GIL_out;
 	id 			= 1617;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 2;															
 	npctype		= NPCTYPE_MAIN;
 	

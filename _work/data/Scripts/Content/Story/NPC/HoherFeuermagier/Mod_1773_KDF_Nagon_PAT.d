@@ -4,7 +4,7 @@ instance Mod_1773_KDF_Nagon_PAT (Npc_Default)
 	name 		= "Nagon";
 	guild 		= GIL_VLK;
 	id 			= 1773;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;	//Joly: NPC_FLAG_IMMORTAL																	
 	npctype		= NPCTYPE_MAIN;
 	

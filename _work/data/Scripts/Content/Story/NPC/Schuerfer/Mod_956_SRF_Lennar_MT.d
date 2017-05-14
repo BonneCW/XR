@@ -4,7 +4,7 @@ instance Mod_956_SRF_Lennar_MT (Npc_Default)
 	name 		= "Lennar";
 	guild 		= GIL_NONE;
 	id 			= 956;
-	voice 		= 1;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

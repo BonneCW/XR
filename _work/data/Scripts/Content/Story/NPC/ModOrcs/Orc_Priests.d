@@ -6,7 +6,7 @@ instance ORC_Priest_1 (Npc_Default)
 	guild 		=		GIL_ORC;
 	level 		=		800;
 	 	
-	voice 		=		17;
+	voice		= 0;
 	id 			=		2995;
 	
 	//-------- visuals --------
@@ -59,7 +59,7 @@ instance ORC_Priest_2 (Npc_Default)
 	guild 		=		GIL_ORC;
 	level 		=		800;
 	 	
-	voice 		=		17;
+	voice		= 0;
 	id 			=		2996;
 		
 	//-------- visuals --------
@@ -109,7 +109,7 @@ instance ORC_Priest_3 (Npc_Default)
 	guild 		=		GIL_ORC;
 	level 		=		800;
 	 	
-	voice 		=		17;
+	voice		= 0;
 	id 			=		2997;
 
 	//-------- visuals --------
@@ -163,7 +163,7 @@ instance ORC_Priest_4 (Npc_Default)
 	guild 		=		GIL_ORC;
 	level 		=		800;
 	 	
-	voice 		=		17;
+	voice		= 0;
 	id 			=		2998;
 
 	//-------- visuals --------
@@ -214,7 +214,7 @@ instance ORC_Priest_5 (Npc_Default)
 	guild 		=		GIL_ORC;
 	level 		=		1000;
 	 	
-	voice 		=		17;
+	voice		= 0;
 	id 			=		2999;
 	
 	//-------- visuals --------

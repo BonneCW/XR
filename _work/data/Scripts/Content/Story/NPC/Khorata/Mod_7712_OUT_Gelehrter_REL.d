@@ -4,7 +4,7 @@ INSTANCE Mod_7712_OUT_Gelehrter_REL (Npc_Default)
 	name 		= "Gelehrter";	
 	guild 		= GIL_OUT;
 	id 			= 7712;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

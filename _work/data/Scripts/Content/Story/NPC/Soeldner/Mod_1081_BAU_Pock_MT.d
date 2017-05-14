@@ -6,7 +6,7 @@ instance Mod_1081_BAU_Pock_MT (Npc_Default)
 	npctype		=	npctype_main;
 	guild 		=	GIL_MIL;    
 	level 		=	4;
-	voice 		=	4;
+	voice		= 0;
 	id 			=	1081; 
 
 	//-------- abilities --------

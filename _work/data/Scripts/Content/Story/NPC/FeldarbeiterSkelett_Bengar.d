@@ -4,7 +4,7 @@ instance FeldarbeiterSkelett_Bengar (Npc_Default)
 	name 		= "Skelett";
 	guild 		= GIL_SUMMONED_SKELETON;
 	id 			= 7171;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_7529_OUT_AlterMann_REL (Npc_Default)
 	name 		= "Alter Mann des Waldes";
 	guild 		= GIL_DMT;
 	id 		= 7529;
-	voice 		= 11;
+	voice		= 0;
 	flags           = 0;
 	npctype		= NPCTYPE_MAIN;
 

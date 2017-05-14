@@ -7,7 +7,7 @@ instance Mod_1296_SLD_Schlaeger_MT (Npc_Default)
 	guild =			GIL_mil;       
 	level =			4;
 	
-	voice =			7;
+	voice		= 0;
 	id =			1296;
 
 

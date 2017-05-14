@@ -6,7 +6,7 @@ instance Mod_1023_KGD_Turmwache_MT (Npc_Default)
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_NONE;
 	level 		=	20;
-	voice 		=	3;
+	voice		= 0;
 	id 			=	1023;
 
 	//-------- visuals --------

@@ -4,7 +4,7 @@ instance Mod_966_GRD_Thorus_MT (Npc_Default)
 	name 		= "Thorus";
 	guild 		= GIL_OUT;
 	id 			= 966;
-	voice 		= 12;
+	voice		= 0;
 	flags      	= 2;
 	npctype		= NPCTYPE_main;
 	

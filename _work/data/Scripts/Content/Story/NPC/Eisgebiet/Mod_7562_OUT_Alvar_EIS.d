@@ -4,7 +4,7 @@ instance Mod_7562_OUT_Alvar_EIS (Npc_Default)
 	name 		= "Alvar"; 
 	guild 		= GIL_OUT;
 	id 			= 7562;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

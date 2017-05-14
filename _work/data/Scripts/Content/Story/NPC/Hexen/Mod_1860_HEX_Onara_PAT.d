@@ -4,7 +4,7 @@ instance Mod_1860_HEX_Onara_PAT (Npc_Default)
 	name 		= "Onara";	//Halvors Frau
 	guild 		= GIL_out;
 	id 			= 1860;
-	voice 		= 17;
+	voice		= 0;
 	flags       = NPC_FLAG_GHOST;																
 	npctype		= NPCTYPE_MAIN;
 	

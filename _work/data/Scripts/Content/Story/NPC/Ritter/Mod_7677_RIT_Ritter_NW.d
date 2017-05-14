@@ -4,7 +4,7 @@ instance Mod_7677_RIT_Ritter_NW (Npc_Default)
 	name 		= NAME_Ritter;
 	guild 		= GIL_OUT;
 	id 			= 7677;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_nw_paladin;
 	

@@ -4,7 +4,7 @@ instance Mod_1035_VLK_Gaertner_NW (Npc_Default)
 	name 		= "Gärtner";
 	guild 		= GIL_PAL;
 	id 			= 1035;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

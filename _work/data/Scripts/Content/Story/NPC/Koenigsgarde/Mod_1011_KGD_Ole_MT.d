@@ -5,7 +5,7 @@ instance Mod_1011_KGD_Ole_MT (Npc_Default)
 	name 		=	"Ole";
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_OUT;
-	voice 		=	2;
+	voice		= 0;
 	id 		=	1011;
 		
 	//-------- abilities --------

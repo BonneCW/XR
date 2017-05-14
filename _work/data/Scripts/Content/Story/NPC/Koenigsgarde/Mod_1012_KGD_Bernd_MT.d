@@ -5,7 +5,7 @@ instance Mod_1012_KGD_Bernd_MT (Npc_Default)
 	name 		=	"Bernd";
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_OUT;
-	voice 		=	1;
+	voice		= 0;
 	id 		=	1012;
 		
 	//-------- abilities --------

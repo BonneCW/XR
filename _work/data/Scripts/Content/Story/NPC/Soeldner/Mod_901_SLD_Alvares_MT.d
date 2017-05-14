@@ -4,7 +4,7 @@ instance Mod_901_SLD_Alvares_MT (Npc_Default)
 	name 		= "Alvares"; 
 	guild 		= GIL_MIL;
 	id 			= 901;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;						
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_7745_BDT_Landstreicher_NW (Npc_Default)
 	name 		= "Landstreicher"; 
 	guild 		= GIL_OUT;
 	id 			= 7745;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

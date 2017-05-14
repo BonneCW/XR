@@ -4,7 +4,7 @@ instance Mod_7652_OUT_Fremder_REL (Npc_Default)
 	name 		= "Fremder"; 
 	guild 		= GIL_STRF;
 	id 			= 7652;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 

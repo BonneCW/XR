@@ -4,7 +4,7 @@ INSTANCE Mod_7133_ASS_Sinbad_NW (Npc_Default)
 	name 		= "Sinbad"; 
 	guild 		= GIL_OUT;
 	id 			= 7133;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

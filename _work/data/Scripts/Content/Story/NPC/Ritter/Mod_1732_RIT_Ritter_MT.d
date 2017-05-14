@@ -4,7 +4,7 @@ instance Mod_1732_RIT_Ritter_MT (Npc_Default)
 	name 		= NAME_RITTER; 
 	guild 		= GIL_PAL;
 	id 			= 1732;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

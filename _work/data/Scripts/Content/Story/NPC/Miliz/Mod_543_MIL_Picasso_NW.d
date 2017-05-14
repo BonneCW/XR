@@ -3,7 +3,7 @@ INSTANCE Mod_543_MIL_Picasso_NW (Npc_Default)
 	name 		= "Picasso";
 	guild 		= GIL_PAL;
 	id 		= 543;
-	voice 		= 12;
+	voice		= 0;
 	flags           = 0;
 	npctype		= NPCTYPE_MAIN;
 	aivar[AIV_ToughGuy]		= TRUE;

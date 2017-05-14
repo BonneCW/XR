@@ -4,7 +4,7 @@ instance Mod_971_RIT_Fajeth_NW (Npc_Default)
 	name 		= "Fajeth";
 	guild 		= GIL_PAL;
 	id 			= 971;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

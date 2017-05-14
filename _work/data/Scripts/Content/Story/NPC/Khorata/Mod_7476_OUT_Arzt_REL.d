@@ -4,7 +4,7 @@ INSTANCE Mod_7476_OUT_Arzt_REL (Npc_Default)
 	name 		= "Heiler";	
 	guild 		= GIL_OUT;
 	id 			= 7476;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

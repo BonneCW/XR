@@ -4,7 +4,7 @@ INSTANCE Mod_1959_VMG_Genn_TUG (Npc_Default)
 	name 		= "Genn"; 
 	guild 		= GIL_OUT;
 	id 			= 1959;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN; //plündert nicht!!! (und ein Freischlag)
 	

@@ -4,7 +4,7 @@ instance Mod_750_NONE_Rupert_NW (Npc_Default)
 	name 		= "Rupert"; 
 	guild 		= GIL_DMT;
 	id 			= 750;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

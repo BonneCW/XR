@@ -6,7 +6,7 @@ instance Mod_7008_UntoterEliteNovize_AW (Npc_Default)
 	guild 		=		GIL_STRF;
 	level 		=		50;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		7008;
 		
 	//-------- abilities --------

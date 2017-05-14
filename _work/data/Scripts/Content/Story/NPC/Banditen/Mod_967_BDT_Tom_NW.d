@@ -4,7 +4,7 @@ instance Mod_967_BDT_Tom_NW (Npc_Default)
 	name 		= "Tom";
 	guild 		= GIL_OUT;
 	id 			= 967;
-	voice 		= 11;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

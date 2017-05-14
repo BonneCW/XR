@@ -6,7 +6,7 @@ instance Mod_4048_UntoterMagier_07_MT (Npc_Default)
 	guild 		=		GIL_STRF;
 	level 		=		20;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		4048;
 		
 	//-------- abilities --------

@@ -4,7 +4,7 @@ INSTANCE Mod_775_PIR_Skip_AW (Npc_Default)
 	name 		= "Skip";
 	guild 		= GIL_NONE;
 	id 			= 775;
-	voice 		= 8;
+	voice		= 0;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

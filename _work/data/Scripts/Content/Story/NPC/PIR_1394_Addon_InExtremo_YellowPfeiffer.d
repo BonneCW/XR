@@ -11,7 +11,7 @@ instance PIR_1394_Addon_InExtremo_YellowPfeiffer (Npc_Default)
 	level =					4;
 	flags =					0;
 	
-	voice =					9;
+	voice		= 0;
 	id =					1394;
 	flags      					 =   NPC_FLAG_IMMORTAL;
 

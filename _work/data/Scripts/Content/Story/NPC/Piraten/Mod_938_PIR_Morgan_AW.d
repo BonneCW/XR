@@ -4,7 +4,7 @@ INSTANCE Mod_938_PIR_Morgan_AW (Npc_Default)
 	name 		= "Morgan";
 	guild 		= GIL_OUT;
 	id 			= 938;
-	voice 		= 7;
+	voice		= 0;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

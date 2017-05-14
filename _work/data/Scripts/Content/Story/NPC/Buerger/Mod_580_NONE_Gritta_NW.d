@@ -4,7 +4,7 @@ instance Mod_580_NONE_Gritta_NW (Npc_Default)
 	name 		= "Gritta";	
 	guild 		= GIL_NONE;
 	id 			= 580;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

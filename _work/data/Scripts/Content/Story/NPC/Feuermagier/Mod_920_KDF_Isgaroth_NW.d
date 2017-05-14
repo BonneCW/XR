@@ -4,7 +4,7 @@ INSTANCE Mod_920_KDF_Isgaroth_NW (Npc_Default)
 	name 		= "Isgaroth";
 	guild 		= GIL_VLK;
 	id 			= 920;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -7,7 +7,7 @@ instance Mod_7715_STT_Balam_REL (Npc_Default)
 	level 		=		3;
 	
 	
-	voice 		=		4;
+	voice		= 0;
 	id 			=		7715;
 		
 	//-------- abilities --------

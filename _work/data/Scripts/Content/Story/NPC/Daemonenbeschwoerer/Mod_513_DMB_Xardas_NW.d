@@ -4,7 +4,7 @@ INSTANCE Mod_513_DMB_Xardas_NW (Npc_Default)
 	name 		= "Xardas";
 	guild 		= GIL_DMT;
 	id 			= 513;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_FRIEND;
 	

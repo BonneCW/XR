@@ -4,7 +4,7 @@ INSTANCE Mod_7646_DMR_Geist_EIS (Npc_Default)
 	name 		= "Geist";
 	guild 		= GIL_DMT;
 	id 			= 7646;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 2|NPC_FLAG_GHOST;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_FRIEND;
 	aivar[AIV_IGNORE_Murder]		= TRUE;

@@ -4,7 +4,7 @@ instance Mod_585_RIT_Ingmar_NW (Npc_Default)
 	name 		= "Ingmar";
 	guild 		= GIL_PAL;
 	id 			= 585;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

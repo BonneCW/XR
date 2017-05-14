@@ -4,7 +4,7 @@ INSTANCE Mod_1998_SNOV_Novize_NW (Npc_Default)
 	name 		= Name_Novize;
 	guild 		= GIL_kdf;
 	id 			= 1998;
-	voice 		= 11;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_nw_schwarzernovize;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_7036_NONE_Pilger_NW (Npc_Default)
 	name 		= "Dunkler Pilger";
 	guild 		= GIL_DMT;
 	id 			= 7036;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 	

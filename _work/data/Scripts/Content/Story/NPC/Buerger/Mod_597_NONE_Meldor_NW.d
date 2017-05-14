@@ -4,7 +4,7 @@ instance Mod_597_NONE_Meldor_NW (Npc_Default)
 	name 		= "Meldor";
 	guild 		= GIL_PAL;
 	id 			= 597;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

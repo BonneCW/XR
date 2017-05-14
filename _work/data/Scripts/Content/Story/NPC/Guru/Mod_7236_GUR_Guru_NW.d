@@ -7,7 +7,7 @@ instance Mod_7236_GUR_Guru_NW (Npc_Default)
 	level 		=		28;
 	flags 		=		0;
 	
-	voice 		=		11;
+	voice		= 0;
 	id 			=		7236;
 		
 	//-------- abilities --------

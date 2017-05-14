@@ -6,7 +6,7 @@ instance Mod_1343_PSINOV_Novize_MT (Npc_Default)
 	guild 		=		GIL_out;
 	level 		=		9;
 	
-	voice 		=		3;
+	voice		= 0;
 	id 			=		1343;
 		
 	//-------- abilities --------

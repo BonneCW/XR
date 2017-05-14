@@ -4,7 +4,7 @@ instance Mod_7623_KDF_Fuego_PAT (Npc_Default)
 	name 		= "Fuego";
 	guild 		= GIL_VLK;
 	id 			= 7623;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

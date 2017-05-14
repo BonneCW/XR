@@ -4,7 +4,7 @@ INSTANCE Mod_7125_ASS_Karim_NW (Npc_Default)
 	name 		= "Karim"; 
 	guild 		= GIL_OUT;
 	id 			= 7125;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

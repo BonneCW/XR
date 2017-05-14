@@ -4,7 +4,7 @@ INSTANCE Mod_1190_NOV_Katar_NW (Npc_Default)
 	name 		= "Katar";
 	guild 		= GIL_vlk;
 	id 			= 1190;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

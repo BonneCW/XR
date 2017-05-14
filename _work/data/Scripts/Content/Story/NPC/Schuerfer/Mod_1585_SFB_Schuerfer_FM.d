@@ -8,7 +8,7 @@ instance Mod_1585_SFB_Schuerfer_FM (Npc_Default)
 	level =							3;
 	
 	
-	voice =							14;
+	voice		= 0;
 	id =							1585;
 
 

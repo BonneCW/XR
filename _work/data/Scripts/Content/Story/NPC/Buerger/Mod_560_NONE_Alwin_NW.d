@@ -4,7 +4,7 @@ INSTANCE Mod_560_NONE_Alwin_NW (Npc_Default) //Metzger
 	name 		= "Alwin";	
 	guild 		= GIL_PAL;
 	id 			= 560;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

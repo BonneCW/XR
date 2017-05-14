@@ -6,7 +6,7 @@ instance Mod_4028_Schlaeger_01_NW (Npc_Default)
 	guild 		=		GIL_STRF;
 	level 		=		20;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		4028;
 		
 	//-------- abilities --------

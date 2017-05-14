@@ -7,7 +7,7 @@ instance Mod_1925_TPL_GorNaKar_MT (Npc_Default)
 	level =							12;
 	
 	
-	voice =							8;
+	voice		= 0;
 	id =							1925;
 		
 	//-------- abilities --------

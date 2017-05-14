@@ -7,7 +7,7 @@ instance Mod_1359_PSINOV_Novize_MT (Npc_Default)
 	level 		=		20;
 	flags 		=		0;
 	
-	voice 		=		3;
+	voice		= 0;
 	id 			=		1359;
 		
 	//-------- abilities --------

@@ -4,7 +4,7 @@ instance Mod_4078_GRD_Gardist_MT (Npc_Default)
 	name 		= "Gardist"; 
 	guild 		= GIL_NONE;
 	id 			= 4078;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_926_RDW_Lance_NW (Npc_Default)
 	name 		= "Lance";
 	guild 		= GIL_NOV;
 	id 			= 926;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

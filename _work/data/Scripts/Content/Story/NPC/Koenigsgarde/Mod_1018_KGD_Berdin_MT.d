@@ -5,7 +5,7 @@ instance Mod_1018_KGD_Berdin_MT (Npc_Default)
 	name 		=	"Berdin";
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_OUT;
-	voice 		=	7;
+	voice		= 0;
 	id 			=	1018;
 		
 	//-------- abilities --------

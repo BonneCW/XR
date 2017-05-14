@@ -4,7 +4,7 @@ INSTANCE Mod_7585_PIR_PIRAT_NW (Npc_Default)
 	name 		= NAME_Addon_PIRAT;
 	guild 		= GIL_OUT;
 	id 			= 7585;
-	voice 		= 7;
+	voice		= 0;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

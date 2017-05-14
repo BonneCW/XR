@@ -4,7 +4,7 @@ INSTANCE Mod_1915_KDF_Tojan_PAT_UG (Npc_Default)
 	name 		= "Tojan";
 	guild 		= GIL_VLK;
 	id 			= 1915;
-	voice 		= 15;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

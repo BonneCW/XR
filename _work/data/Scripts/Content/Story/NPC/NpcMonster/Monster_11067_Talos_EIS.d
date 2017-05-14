@@ -4,7 +4,7 @@ INSTANCE Monster_11067_Talos_EIS (Npc_Default)
 	name 		= "Talos";	
 	guild							=	GIL_STRF;
 	id 			= 11067;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	level = 400;

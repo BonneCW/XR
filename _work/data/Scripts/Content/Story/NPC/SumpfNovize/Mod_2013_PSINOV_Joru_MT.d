@@ -7,7 +7,7 @@ instance Mod_2013_PSINOV_Joru_MT (Npc_Default)
 	level 		=		9;
 	flags 		=		0;
 	
-	voice 		=		7;
+	voice		= 0;
 	id 			=		2013;
 		
 	//-------- abilities --------

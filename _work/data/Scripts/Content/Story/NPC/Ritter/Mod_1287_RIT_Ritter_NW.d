@@ -4,7 +4,7 @@ instance Mod_1287_RIT_Ritter_NW (Npc_Default)
 	name 		= NAME_Ritter;
 	guild 		= GIL_PAL;
 	id 			= 1287;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_nw_paladin ;
 	

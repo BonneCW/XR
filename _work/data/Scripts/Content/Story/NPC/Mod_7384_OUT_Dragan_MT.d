@@ -4,7 +4,7 @@ instance Mod_7384_OUT_Dragan_MT (Npc_Default)
 	name 		= "Dragan";
 	guild 		= GIL_OUT;
 	id 			= 7384;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_main;
 	

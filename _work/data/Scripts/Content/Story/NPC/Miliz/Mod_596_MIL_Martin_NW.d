@@ -4,7 +4,7 @@ instance Mod_596_MIL_Martin_NW (Npc_Default)
 	name 		= "Martin";	
 	guild 		= GIL_PAL;//wegen Rangermeeting
 	id 			= 596;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

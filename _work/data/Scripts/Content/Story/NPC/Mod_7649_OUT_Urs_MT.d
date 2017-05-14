@@ -4,7 +4,7 @@ instance Mod_7649_OUT_Urs_MT (Npc_Default)
 	name 		= "Urs";
 	guild 		= GIL_OUT;
 	id 			= 7649;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 2;															
 	npctype		= NPCTYPE_MAIN;
 	

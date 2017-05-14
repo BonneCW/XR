@@ -4,7 +4,7 @@ instance Mod_7461_RIT_Marcos_IR  (Npc_Default)
 	name 		= "Marcos";
 	guild 		= GIL_OUT;
 	id 			= 7461;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

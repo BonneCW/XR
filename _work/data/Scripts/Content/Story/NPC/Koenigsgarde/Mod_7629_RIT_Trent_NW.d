@@ -6,7 +6,7 @@ instance Mod_7629_RIT_Trent_NW (Npc_Default)
 	npctype		=	NPCTYPE_MAIN;
 	guild 		=	GIL_OUT;
 	level 		=	63;
-	voice 		=	6;
+	voice		= 0;
 	id 			=	7629;
 		
 	

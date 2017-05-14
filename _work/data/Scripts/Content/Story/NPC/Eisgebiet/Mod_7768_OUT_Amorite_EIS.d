@@ -4,7 +4,7 @@ instance Mod_7768_OUT_Amorite_EIS (Npc_Default)
 	name 		= "Amorite";	//Halvors Frau
 	guild 		= GIL_OUT;
 	id 			= 7768;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

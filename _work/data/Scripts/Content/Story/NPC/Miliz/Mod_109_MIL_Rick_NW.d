@@ -4,7 +4,7 @@ instance Mod_109_MIL_Rick_NW (Npc_Default)
 	name 		= "Rick";	
 	guild 		= GIL_PAL;  
 	id 			= 109;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_7576_OUT_Metzger_REL (Npc_Default)
 	name 		= "Metzger"; 
 	guild 		= GIL_OUT;
 	id 			= 7576;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

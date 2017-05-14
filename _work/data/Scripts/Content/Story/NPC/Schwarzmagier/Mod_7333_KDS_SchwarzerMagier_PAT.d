@@ -8,7 +8,7 @@ instance Mod_7333_KDS_SchwarzerMagier_PAT (Npc_Default)
 	level =							5;
 	
 	
-	voice =							3;
+	voice		= 0;
 	id =							7333;
 
 

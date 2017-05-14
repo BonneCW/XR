@@ -4,7 +4,7 @@ INSTANCE Mod_7538_OUT_Trimedron_GDG (Npc_Default)
 	name 		= "Trimedron";
 	guild 		= GIL_out;
 	id 			= 7538;
-	voice 		= 7;
+	voice		= 0;
 	flags       = NPC_FLAG_GHOST|NPC_FLAG_IMMORTAL;															
 	npctype		= NPCTYPE_MAIN;
 	

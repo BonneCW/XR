@@ -6,7 +6,7 @@ instance Mod_7600_GRD_Scorpio_NW (Npc_Default)
 	npctype		=	npctype_main;
 	guild 		=	GIL_STRF;
 	level 		=	15;
-	voice 		=	13;
+	voice		= 0;
 	id 			=	7600;
 		
 	//-------- abilities --------

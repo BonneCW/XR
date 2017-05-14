@@ -4,7 +4,7 @@ INSTANCE Gnom_11005_NW (Npc_Default)
 	name 		= "Betrunkener Gnom";
 	guild 		= GIL_OUT;
 	id 			= 11005;
-	voice 		= 11;
+	voice		= 0;
 	flags = 2;
 	npctype		= NPCTYPE_MAIN;
 	

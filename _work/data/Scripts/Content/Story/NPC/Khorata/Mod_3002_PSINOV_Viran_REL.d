@@ -6,7 +6,7 @@ instance Mod_3002_PSINOV_Viran_REL (Npc_Default)
 	guild 		=		GIL_OUT;
 	level 		=		15;
 	
-	voice 		=		7;
+	voice		= 0;
 	id 			=		3002;
 		
 	

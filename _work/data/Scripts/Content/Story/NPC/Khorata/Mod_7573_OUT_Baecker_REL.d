@@ -4,7 +4,7 @@ instance Mod_7573_OUT_Baecker_REL (Npc_Default)
 	name 		= "Bäcker"; 
 	guild 		= GIL_OUT;
 	id 			= 7573;
-	voice 		= 1;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_7483_OUT_Endres_REL (Npc_Default)
 	name 		= "Endres"; 
 	guild 		= GIL_OUT;
 	id 			= 7483;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_7740_BDT_Bandit_EIS (Npc_Default)
 	name 		= "Bandit";
 	guild 		= GIL_STRF;
 	id 			= 7740;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 

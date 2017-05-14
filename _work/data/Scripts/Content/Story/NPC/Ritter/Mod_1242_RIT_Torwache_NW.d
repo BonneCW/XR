@@ -4,7 +4,7 @@ instance Mod_1242_RIT_Torwache_NW (Npc_Default)
 	name 		= NAME_RITTER;
 	guild 		= GIL_PAL;
 	id 			= 1242;
-	voice 		= 12;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_nw_paladin;
 	

@@ -4,7 +4,7 @@ instance Mod_7494_OUT_Glenn_MT (Npc_Default)
 	name 		= "Glenn"; 
 	guild 		= GIL_OUT;
 	id 			= 7494;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

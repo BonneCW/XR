@@ -4,7 +4,7 @@ instance Mod_7413_JG_Wild_NW (Npc_Default)
 	name 		= "Wild"; 
 	guild 		= GIL_OUT;
 	id 			= 7413;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

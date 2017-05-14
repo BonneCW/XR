@@ -4,7 +4,7 @@ instance Mod_1204_SLD_Soeldner_NW (Npc_Default) //Türwache Onars Haus
 	name 		= NAME_SOELDNER; 
 	guild 		= GIL_mil;
 	id 			= 1204;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;							//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

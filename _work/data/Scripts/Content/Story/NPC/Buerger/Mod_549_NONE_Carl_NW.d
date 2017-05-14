@@ -4,7 +4,7 @@ instance Mod_549_NONE_Carl_NW (Npc_Default)
 	name 		= "Carl"; 
 	guild 		= GIL_NONE;
 	id 			= 549;
-	voice 		= 5;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

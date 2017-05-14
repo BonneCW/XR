@@ -4,7 +4,7 @@ INSTANCE Mod_7134_ASS_Anwaerter_NW (Npc_Default)
 	name 		= "Anwärter"; 
 	guild 		= GIL_OUT;
 	id 			= 7134;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

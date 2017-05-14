@@ -4,7 +4,7 @@ instance Mod_1183_MIL_Kasernenwache_NW (Npc_Default)
 	name 		= Name_Miliz;	// Kasernenwache
 	guild 		= GIL_pal;
 	id 			= 1183;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_nw_miliz;
 	

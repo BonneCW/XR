@@ -4,7 +4,7 @@ INSTANCE Mod_7375_OUT_Gerichtswache_02 (Npc_Default)
 	name 		= "Gerichtswache"; 
 	guild 		= GIL_OUT;
 	id 			= 7375;
-	voice 		= 7;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

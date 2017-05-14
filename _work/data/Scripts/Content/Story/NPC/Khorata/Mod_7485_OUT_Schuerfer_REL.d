@@ -7,7 +7,7 @@ instance Mod_7485_OUT_Schuerfer_REL (Npc_Default)
 	guild =							GIL_OUT;      
 	level =							6;
 	flags =							0;	
-	voice =							1;
+	voice		= 0;
 	id =							7485;
 
 

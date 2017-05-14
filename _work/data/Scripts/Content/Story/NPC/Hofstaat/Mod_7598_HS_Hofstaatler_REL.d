@@ -4,7 +4,7 @@ instance Mod_7598_HS_Hofstaatler_REL (Npc_Default)
 	name 		= "Hofstaatler"; 
 	guild 		= GIL_OUT;
 	id 			= 7598;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

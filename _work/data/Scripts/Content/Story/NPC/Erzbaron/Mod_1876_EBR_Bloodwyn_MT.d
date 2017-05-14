@@ -4,7 +4,7 @@ instance Mod_1876_EBR_Bloodwyn_MT (Npc_Default)
 	name 		= "Bloodwyn";
 	guild 		= GIL_OUT;
 	id 			= 1876;
-	voice 		= 4;//Stimme Lee
+	voice		= 0;//Stimme Lee
 	flags      	= 0;
 	npctype		= NPCTYPE_main;
 	

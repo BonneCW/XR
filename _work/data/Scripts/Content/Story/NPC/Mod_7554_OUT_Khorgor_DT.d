@@ -4,7 +4,7 @@ instance Mod_7554_OUT_Khorgor_DT (Npc_Default)
 	name 		= "Khorgor";	
 	guild 		= GIL_OUT;
 	id 			= 7554;
-	voice 		= 4;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

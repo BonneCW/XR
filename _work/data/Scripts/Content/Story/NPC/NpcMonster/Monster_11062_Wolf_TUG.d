@@ -4,7 +4,7 @@ INSTANCE Monster_11062_Wolf_TUG (Npc_Default)
 	name 		= "Wolf";	
 	guild 		= GIL_WOLF;
 	id 			= 11062;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	level = 6;

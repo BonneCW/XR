@@ -4,7 +4,7 @@ instance Mod_789_BAU_Maria_NW (Npc_Default)
 	name 		= "Maria";
 	guild 		= GIL_NONE;
 	id 			= 789;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

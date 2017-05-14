@@ -4,7 +4,7 @@ instance Mod_1768_KDF_Magier_PAT (Npc_Default)
 	name 		= "Ordenspriester";
 	guild 		= GIL_VLK;
 	id 			= 1768;
-	voice 		= 13;
+	voice		= 0;
 	flags       = 0;							
 	npctype		= NPCTYPE_MAIN;
 	

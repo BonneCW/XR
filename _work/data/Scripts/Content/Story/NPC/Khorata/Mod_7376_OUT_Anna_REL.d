@@ -4,7 +4,7 @@ instance Mod_7376_OUT_Anna_REL (Npc_Default)
 	name 		= "Anna";	
 	guild 		= GIL_OUT;
 	id 			= 7376;
-	voice 		= 16;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_1080_PIR_PIRAT_AW (Npc_Default)
 	name 		= "Koch";
 	guild 		= GIL_PIR;
 	id 			= 1080;
-	voice 		= 6;
+	voice		= 0;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

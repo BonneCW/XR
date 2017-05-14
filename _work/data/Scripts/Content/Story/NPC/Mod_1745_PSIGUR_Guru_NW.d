@@ -7,7 +7,7 @@ instance Mod_1745_PSIGUR_Guru_NW (Npc_Default)
 	level 		=		28;
 	flags = 2;
 	
-	voice 		=		12;
+	voice		= 0;
 	id 			=		1745;
 
 	//-------- visuals --------

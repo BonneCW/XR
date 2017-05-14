@@ -4,7 +4,7 @@ INSTANCE Mod_4072_BDT_Bandit_MT (Npc_Default)
 	name 		= Name_Bandit;
 	guild 		= GIL_out;
 	id 			= 4072;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_mt_bandit;
 	

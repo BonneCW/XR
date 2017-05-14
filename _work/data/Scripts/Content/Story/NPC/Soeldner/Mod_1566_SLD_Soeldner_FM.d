@@ -7,7 +7,7 @@ instance Mod_1566_SLD_Soeldner_FM (Npc_Default)
 	level 		=		7;
 
 	
-	voice 		=		5;
+	voice		= 0;
 	id 			=		1566;
 		
 	//-------- abilities --------

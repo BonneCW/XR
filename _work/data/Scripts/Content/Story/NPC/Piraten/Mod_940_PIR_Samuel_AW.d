@@ -4,7 +4,7 @@ INSTANCE Mod_940_PIR_Samuel_AW (Npc_Default)
 	name 		= "Samuel";
 	guild 		= GIL_OUT;
 	id 			= 940;
-	voice 		= 14;
+	voice		= 0;
 	flags       = FALSE;											
 	npctype		= NPCTYPE_MAIN;
 	

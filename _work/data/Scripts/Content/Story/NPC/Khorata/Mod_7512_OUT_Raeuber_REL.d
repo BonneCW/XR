@@ -4,7 +4,7 @@ instance Mod_7512_OUT_Raeuber_REL (Npc_Default)
 	name 		= "Räuber"; 
 	guild 		= GIL_OUT;
 	id 			= 7512;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

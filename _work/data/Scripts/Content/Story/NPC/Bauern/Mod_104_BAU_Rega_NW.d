@@ -4,7 +4,7 @@ instance Mod_104_BAU_Rega_NW  (Npc_Default)
 	name 		= "Rega";
 	guild 		= GIL_DMT;
 	id 			= 104;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

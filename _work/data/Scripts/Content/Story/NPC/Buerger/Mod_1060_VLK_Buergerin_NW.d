@@ -4,7 +4,7 @@ instance Mod_1060_VLK_Buergerin_NW (Npc_Default)
 	name 		= NAME_Buergerin; //Brahims Frau
 	guild 		= GIL_PAL;
 	id 			= 1060;
-	voice 		= 17;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_AMBIENT;
 	

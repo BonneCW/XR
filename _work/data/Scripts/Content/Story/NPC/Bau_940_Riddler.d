@@ -6,7 +6,7 @@ instance Bau_989_Riddler (Npc_Default)
 	npctype	 	=	npctype_main;
 	guild 		=	GIL_OUT;      
 	level 		=	8;
-	voice 		= 	9;
+	voice		= 0;
 	id 			=	989;
 
 	//-------- abilities --------

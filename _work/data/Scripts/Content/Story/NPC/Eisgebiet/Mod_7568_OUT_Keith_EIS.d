@@ -4,7 +4,7 @@ instance Mod_7568_OUT_Keith_EIS (Npc_Default)
 	name 		= "Keith"; 
 	guild 		= GIL_OUT;
 	id 			= 7568;
-	voice 		= 8;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

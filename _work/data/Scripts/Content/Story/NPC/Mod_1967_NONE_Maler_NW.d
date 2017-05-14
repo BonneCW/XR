@@ -4,7 +4,7 @@ instance Mod_1967_NONE_Maler_NW (Npc_Default)
 	name 		= "Maler";	
 	guild 		= GIL_pal;
 	id 			= 1967;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_main;
 	

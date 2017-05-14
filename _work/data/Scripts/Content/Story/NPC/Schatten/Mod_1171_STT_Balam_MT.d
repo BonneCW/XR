@@ -7,7 +7,7 @@ instance Mod_1171_STT_Balam_MT (Npc_Default)
 	level 		=		3;
 	
 	
-	voice 		=		4;
+	voice		= 0;
 	id 			=		1171;
 		
 	//-------- abilities --------

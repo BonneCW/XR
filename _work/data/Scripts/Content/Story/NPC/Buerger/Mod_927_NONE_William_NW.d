@@ -4,7 +4,7 @@ INSTANCE Mod_927_NONE_William_NW (Npc_Default)
 	name 		= "William";
 	guild 		= GIL_NONE;
 	id 			= 927;
-	voice 		= 6;
+	voice		= 0;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

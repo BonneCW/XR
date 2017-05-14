@@ -6,7 +6,7 @@ instance Mod_7602_GRD_Gardist_NW (Npc_Default)
 	npctype		= 	npctype_mt_gardist;
 	guild 		=	GIL_STRF;
 	level 		=	20;
-	voice		=	7;
+	voice		= 0;
 	id 			=	7602;
 		
 	//-------- abilities --------

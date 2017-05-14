@@ -4,7 +4,7 @@ INSTANCE Lich_11008_NW (Npc_Default)
 	name 		= "Lich";	
 	guild 		= GIL_DMT;
 	id 			= 11008;
-	voice 		= 10;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	level = 50;

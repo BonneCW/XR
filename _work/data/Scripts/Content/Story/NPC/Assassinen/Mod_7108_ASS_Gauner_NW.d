@@ -4,7 +4,7 @@ INSTANCE Mod_7108_ASS_Gauner_NW (Npc_Default)
 	name 		= "Gauner"; 
 	guild 		= GIL_OUT;
 	id 			= 7108;
-	voice 		= 3;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

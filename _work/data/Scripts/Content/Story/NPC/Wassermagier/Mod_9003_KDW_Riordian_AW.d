@@ -4,7 +4,7 @@ INSTANCE Mod_9003_KDW_Riordian_AW (Npc_Default)
 	name 		= "Riordian";
 	guild 		= GIL_NOV; 
 	id 			= 9003;
-	voice 		= 10;
+	voice		= 0;
 	flags       = NPC_FLAG_IMMORTAL;																	
 	npctype		= NPCTYPE_MAIN;
 	

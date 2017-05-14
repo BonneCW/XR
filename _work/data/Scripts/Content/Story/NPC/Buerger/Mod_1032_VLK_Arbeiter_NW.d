@@ -4,7 +4,7 @@ instance Mod_1032_VLK_Arbeiter_NW (Npc_Default)
 	name 		= NAME_Arbeiter; 
 	guild 		= GIL_PAL;
 	id 			= 1032;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_AMBIENT;
 	

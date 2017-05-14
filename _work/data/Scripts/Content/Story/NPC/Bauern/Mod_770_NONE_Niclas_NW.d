@@ -4,7 +4,7 @@ INSTANCE Mod_770_NONE_Niclas_NW (Npc_Default)
 	name 		= "Niclas";
 	guild 		= GIL_OUT;
 	id 			= 770;
-	voice 		= 15;
+	voice		= 0;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

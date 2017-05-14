@@ -4,7 +4,7 @@ instance Mod_7369_WNOV_Neku_AW (Npc_Default)
 	name 		= "Neku"; 
 	guild 		= GIL_NOV;
 	id 			= 7369;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

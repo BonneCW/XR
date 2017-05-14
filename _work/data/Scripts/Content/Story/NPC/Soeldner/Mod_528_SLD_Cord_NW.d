@@ -4,7 +4,7 @@ INSTANCE Mod_528_SLD_Cord_NW (Npc_Default)
 	name 		= "Cord";
 	guild 		= GIL_MIL;
 	id 			= 528;
-	voice 		= 14;
+	voice		= 0;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

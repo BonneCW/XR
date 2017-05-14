@@ -3,7 +3,7 @@ INSTANCE Mod_7637_OUT_Diana_REL (Npc_Default)
 	name 		= "Diana";
 	guild 		= GIL_OUT;
 	id 		= 7637;
-	voice 		= 16;
+	voice		= 0;
 	flags           = 0;
 	npctype		= NPCTYPE_MAIN;
 

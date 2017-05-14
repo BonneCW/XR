@@ -6,7 +6,7 @@ instance Mod_1729_PSINOV_Novize_NW (Npc_Default)
 	guild 		=		GIL_strf;
 	level 		=		3;
 	 	
-	voice 		=		2;
+	voice		= 0;
 	id 			=		1729;
 		
 	//-------- abilities --------

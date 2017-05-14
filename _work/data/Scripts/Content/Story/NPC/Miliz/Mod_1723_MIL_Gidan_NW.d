@@ -4,7 +4,7 @@ instance Mod_1723_MIL_Gidan_NW (Npc_Default)
 	name 		= "Gidan";
 	guild 		= GIL_PAL;
 	id 			= 1723;
-	voice 		= 13;
+	voice		= 0;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

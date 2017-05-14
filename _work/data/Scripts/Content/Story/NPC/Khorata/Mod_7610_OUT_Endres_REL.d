@@ -4,7 +4,7 @@ INSTANCE Mod_7610_OUT_Endres_REL (Npc_Default)
 	name 		= "Endres"; 
 	guild 		= GIL_OUT;
 	id 			= 7610;
-	voice 		= 13;
+	voice		= 0;
 	flags       = NPC_FLAG_GHOST|NPC_FLAG_IMMORTAL;																
 	npctype		= NPCTYPE_MAIN;
 	

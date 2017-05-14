@@ -4,7 +4,7 @@ instance Mod_7626_OUT_Glenn_VM (Npc_Default)
 	name 		= "Glenn"; 
 	guild 		= GIL_OUT;
 	id 			= 7626;
-	voice 		= 6;
+	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

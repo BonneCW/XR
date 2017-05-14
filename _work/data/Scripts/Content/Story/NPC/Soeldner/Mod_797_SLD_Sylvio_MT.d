@@ -4,7 +4,7 @@ instance Mod_797_SLD_Sylvio_MT (Npc_Default)
 	name 		= "Sylvio";
 	guild 		= GIL_MIL;
 	id 			= 797;
-	voice 		= 9;
+	voice		= 0;
 	flags       = 0;	//Joly:Drachenjägeranführer. Muß leben																//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	
