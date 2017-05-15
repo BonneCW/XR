@@ -1,27 +1,8 @@
-func void FreeLibrary (var int ptr) {
-	var int freelib;
-	freelib = FindKernelDllFunction("FreeLibrary");
-
-	if (!freelib) {
-		return;
-	};
-
-	CALL_PtrParam(ptr);
-	CALL__stdcall(freelib);
-};
-
 var string Spine_FirstStart;
 var int Spine_Initialized;
 var int Spine_Dll;
 var int Spine_InitFunc;
 var int Spine_GetUsernameFunc;
-var int Spine_SearchMatchFunc;
-var int Spine_IsInMatchFunc;
-var int Spine_CreateMessageFunc;
-var int Spine_SendMessageFunc;
-var int Spine_ReceiveMessageFunc;
-var int Spine_GetPlayerCountFunc;
-var int Spine_GetPlayerUsernameFunc;
 
 func int Spine_Init(var int modules) {
 	if (Hlp_IsValidHandle(Spine_AchievementView)) {
@@ -114,6 +95,15 @@ func int Spine_Init(var int modules) {
 			return FALSE;
 		};
 		
+		MEM_Info("Spine: Loading getScoreForUsername function");
+		Spine_GetScoreForUsernameFunc = GetProcAddress(Spine_Dll, "getScoreForUsername");
+		
+		if (!Spine_GetScoreForUsernameFunc) {
+			MEM_Info("Spine: getScoreForUsername function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+		
 		MEM_Info("Spine: Loading getUsernameForRank function");
 		Spine_GetUsernameForRankFunc = GetProcAddress(Spine_Dll, "getUsernameForRank");
 		
@@ -202,6 +192,15 @@ func int Spine_Init(var int modules) {
 			return FALSE;
 		};
 		
+		MEM_Info("Spine: Loading deleteMessage function");
+		Spine_DeleteMessageFunc = GetProcAddress(Spine_Dll, "deleteMessage");
+		
+		if (!Spine_DeleteMessageFunc) {
+			MEM_Info("Spine: deleteMessage function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+		
 		MEM_Info("Spine: Loading sendMessage function");
 		Spine_SendMessageFunc = GetProcAddress(Spine_Dll, "sendMessage");
 		
@@ -252,6 +251,15 @@ func int Spine_Init(var int modules) {
 		
 		if (!Spine_GetPlayerUsernameFunc) {
 			MEM_Info("Spine: getPlayerUsername function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+		
+		MEM_Info("Spine: Loading setHostname function");
+		Spine_SetHostnameFunc = GetProcAddress(Spine_Dll, "setHostname");
+		
+		if (!Spine_SetHostnameFunc) {
+			MEM_Info("Spine: setHostname function not found");
 			FreeLibrary(Spine_Dll);
 			return FALSE;
 		};
@@ -307,8 +315,86 @@ func int Spine_Init(var int modules) {
 		Spine_OverallSaveGetIntFunc = 0;
 	};
 	
+	if (modules & SPINE_MODULE_GAMEPAD) {
+		MEM_Info("Spine: Loading vibrateGamepad function");
+		Spine_VibrateGamepadFunc = GetProcAddress(Spine_Dll, "vibrateGamepad");
+		
+		if (!Spine_VibrateGamepadFunc) {
+			MEM_Info("Spine: vibrateGamepad function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+		
+		MEM_Info("Spine: Loading isGamepadEnabled function");
+		Spine_IsGamepadEnabledFunc = GetProcAddress(Spine_Dll, "isGamepadEnabled");
+		
+		if (!Spine_IsGamepadEnabledFunc) {
+			MEM_Info("Spine: isGamepadEnabled function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+		
+		MEM_Info("Spine: Loading isGamepadActive function");
+		Spine_IsGamepadActiveFunc = GetProcAddress(Spine_Dll, "isGamepadActive");
+		
+		if (!Spine_IsGamepadActiveFunc) {
+			MEM_Info("Spine: isGamepadActive function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+		
+		MEM_Info("Spine: Loading getGamepadButtonState function");
+		Spine_GetGamepadButtonStateFunc = GetProcAddress(Spine_Dll, "getGamepadButtonState");
+		
+		if (!Spine_GetGamepadButtonStateFunc) {
+			MEM_Info("Spine: getGamepadButtonState function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+		
+		MEM_Info("Spine: Loading getGamepadTriggerState function");
+		Spine_GetGamepadTriggerStateFunc = GetProcAddress(Spine_Dll, "getGamepadTriggerState");
+		
+		if (!Spine_GetGamepadTriggerStateFunc) {
+			MEM_Info("Spine: getGamepadTriggerState function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+		
+		MEM_Info("Spine: Loading getGamepadStickState function");
+		Spine_GetGamepadStickStateFunc = GetProcAddress(Spine_Dll, "getGamepadStickState");
+		
+		if (!Spine_GetGamepadStickStateFunc) {
+			MEM_Info("Spine: getGamepadStickState function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+		
+		MEM_Info("Spine: Loading changeGamepadMode function");
+		Spine_ChangeRawModeFunc = GetProcAddress(Spine_Dll, "changeGamepadMode");
+		
+		if (!Spine_ChangeRawModeFunc) {
+			MEM_Info("Spine: changeGamepadMode function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+	} else {
+		Spine_VibrateGamepadFunc = 0;
+		Spine_IsGamepadEnabledFunc = 0;
+		Spine_IsGamepadActiveFunc = 0;
+		Spine_GetGamepadButtonStateFunc = 0;
+		Spine_GetGamepadTriggerStateFunc = 0;
+		Spine_GetGamepadStickStateFunc = 0;
+		Spine_ChangeRawModeFunc = 0;
+	};
+	
 	if (STR_Len(Spine_FirstStart) == 0) {
 		Spine_FirstStart = "Initialized";
+		
+		if (modules & SPINE_MODULE_GAMEPAD) {
+			Spine_InitEarthquakeHooks();
+		};
+		
 		MEM_Info("Spine: Calling init function");
 		CALL_IntParam(modules);
 		CALL__cdecl(Spine_InitFunc);
@@ -322,9 +408,10 @@ func int Spine_Init(var int modules) {
 	} else {
 		Spine_Initialized = TRUE;
 	};
-	
+		
 	CALL__cdecl(Spine_GetShowAchievementsFunc);
 	SPINE_SHOWACHIEVEMENTS = CALL_RetValAsInt();
+	
 	return Spine_Initialized;
 };
 

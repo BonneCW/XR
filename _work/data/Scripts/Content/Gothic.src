@@ -104,6 +104,10 @@ NEUERUNGEN\Puzzle.d
 
 NEUERUNGEN\B_OpenChest.d
 
+AI\HUMAN\C_Human\C_NpcIsHero.d
+
+STORY\NPC\Echsis\B_EchsenBody.d
+
 NEUERUNGEN\B_EXPVerteiler.d
 
 FUNKTIONEN\Mod_Funktionen.d
@@ -273,7 +277,6 @@ AI\HUMAN\C_Human\C_WantToRansack.d
 AI\HUMAN\C_Human\C_NpcHasAttackReasonToKill.d
 AI\HUMAN\C_Human\C_NpcBelongsTo.d
 AI\HUMAN\C_Human\C_NpcRansacksAlways.d
-AI\HUMAN\C_Human\C_NpcIsHero.d
 AI\HUMAN\C_Human\C_NpcIsEvil.d
 AI\HUMAN\C_Human\C_NpcIsSeelenpeiniger.d
 AI\HUMAN\C_Human\C_RefuseTalk.d

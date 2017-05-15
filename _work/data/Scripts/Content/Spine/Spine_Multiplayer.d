@@ -1,3 +1,24 @@
+var int Spine_SetHostnameFunc;
+var int Spine_SearchMatchFunc;
+var int Spine_IsInMatchFunc;
+var int Spine_CreateMessageFunc;
+var int Spine_DeleteMessageFunc;
+var int Spine_SendMessageFunc;
+var int Spine_ReceiveMessageFunc;
+var int Spine_GetPlayerCountFunc;
+var int Spine_GetPlayerUsernameFunc;
+
+// sets a hostname used for the MP
+// overrides general server for own multiplayers
+// server has to implement the server API
+// TODO: create open source server API
+func void Spine_SetHostname(var string hostname) {
+	if (Spine_Initialized && Spine_SetHostnameFunc) {
+		CALL_cStringPtrParam(hostname);
+		CALL__cdecl(Spine_SetHostnameFunc);
+	};
+};
+
 // searches for a multiplayer match
 // numPlayers specifies the amount of players for this match
 // identifier is the identifier for the mode/level or anything else specific for the modification
@@ -31,7 +52,19 @@ func int Spine_CreateMessage(var int messageType) {
 	return 0;
 };
 
+// deletes a message. Call this only for received messages after you handled your stuff with it
+func int Spine_DeleteMessage(var int messagePtr) {
+	if (Spine_Initialized && Spine_DeleteMessageFunc) {
+		CALL_PtrParam(messagePtr);
+		CALL__cdecl(Spine_DeleteMessageFunc);
+		
+		return CALL_RetValAsPtr();
+	};
+	return 0;
+};
+
 // sends a message created with Spine_CreateMessage to all connected players
+// messagePtr is invalid after this call!
 func void Spine_SendMessage(var int messagePtr) {
 	if (Spine_Initialized && Spine_SendMessageFunc) {
 		CALL_PtrParam(messagePtr);
