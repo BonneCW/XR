@@ -721,7 +721,7 @@ FUNC VOID Info_Mod_Vatras_NovizenTrank_Info()
 	AI_Output(hero, self, "Info_Mod_Vatras_NovizenTrank_15_00"); //Ich soll eine Medizin für die Feuer Novizen abholen.
 	AI_Output(self, hero, "Info_Mod_Vatras_NovizenTrank_05_01"); //Eine Medizin für die Feuer Novizen? Welches Leiden gilt es zu kurieren?
 	AI_Output(hero, self, "Info_Mod_Vatras_NovizenTrank_15_02"); //Es scheint ein starkes Fieber im Kloster umzugehen, welches die Novizen befallen hat.
-	AI_Output(hero, self, "Info_Mod_Vatras_NovizenTrank_15_03"); //Die Magie Innos reicht nicht aus, die Novizen zu heilen, deshalb wird deine Heilkunst benötigt.
+	AI_Output(hero, self, "Info_Mod_Vatras_NovizenTrank_15_03"); //Die Magie Innos' reicht nicht aus, die Novizen zu heilen, deshalb wird deine Heilkunst benötigt.
 	AI_Output(self, hero, "Info_Mod_Vatras_NovizenTrank_05_04"); //Ah, das schwarze Fieber. Nimm diesen Trank, er sollte helfen.
 
 	B_GiveInvItems	(self, hero, VatrasNovizenTrunk, 1);

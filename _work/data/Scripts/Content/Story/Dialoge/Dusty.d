@@ -35,11 +35,7 @@ INSTANCE Info_Mod_Dusty_Lehrer (C_INFO)
 
 FUNC INT Info_Mod_Dusty_Lehrer_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Angar_Fanatiker))
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Andre_Erfahrung_Fanatiker))
-	{
-		return 1;
-	};
+	return 1;
 };
 
 FUNC VOID Info_Mod_Dusty_Lehrer_Info()
@@ -185,7 +181,7 @@ INSTANCE Info_Mod_Dusty_Bruderschaft (C_INFO)
 	information	= Info_Mod_Dusty_Bruderschaft_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Was ist nach dem Fall der Barriere mit der Bruderschaft passiert?";
+	description	= "Was ist nach dem Fall der Barriere mit der Bruderschaft (...)";
 };
 
 FUNC INT Info_Mod_Dusty_Bruderschaft_Condition()
@@ -249,7 +245,7 @@ INSTANCE Info_Mod_Dusty_Lernen (C_INFO)
 
 FUNC INT Info_Mod_Dusty_Lernen_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Dusty_Hi))
+	if (Npc_KnowsInfo(hero, Info_Mod_Dusty_Lehrer))
 	{
 		return 1;
 	};

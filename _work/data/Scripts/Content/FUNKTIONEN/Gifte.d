@@ -1935,8 +1935,12 @@ FUNC VOID Gifte ()
 
 			// Neue Sachen abziehen
 
-			hero.attribute[ATR_HITPOINTS] -= hero.attribute[ATR_HITPOINTS]/10;
+			hero.attribute[ATR_HITPOINTS] -= hero.attribute[ATR_HITPOINTS] / 10;
 			hero.attribute[ATR_HITPOINTS_MAX] -= BissDerFaeulnis_Stufe02_HP;
+			
+			if (hero.attribute[ATR_HITPOINTS] > hero.attribute[ATR_HITPOINTS_MAX]) {
+				hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
+			};
 
 			hero.attribute[ATR_MANA] -= BissDerFaeulnis_Stufe02_MANA;
 			hero.attribute[ATR_MANA_MAX] -= BissDerFaeulnis_Stufe02_MANA;
@@ -1963,8 +1967,12 @@ FUNC VOID Gifte ()
 
 			// Neue Sachen abziehen
 
-			hero.attribute[ATR_HITPOINTS] -= hero.attribute[ATR_HITPOINTS]/5;
+			hero.attribute[ATR_HITPOINTS] -= hero.attribute[ATR_HITPOINTS] / 5;
 			hero.attribute[ATR_HITPOINTS_MAX] -= BissDerFaeulnis_Stufe03_HP;
+			
+			if (hero.attribute[ATR_HITPOINTS] > hero.attribute[ATR_HITPOINTS_MAX]) {
+				hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
+			};
 
 			hero.attribute[ATR_MANA] -= BissDerFaeulnis_Stufe03_MANA;
 			hero.attribute[ATR_MANA_MAX] -= BissDerFaeulnis_Stufe03_MANA;
@@ -2060,8 +2068,12 @@ FUNC VOID Gifte ()
 
 			// Neue Sachen abziehen
 
-			hero.attribute[ATR_HITPOINTS] -= hero.attribute[ATR_HITPOINTS]/5;
+			hero.attribute[ATR_HITPOINTS] -= hero.attribute[ATR_HITPOINTS] / 5;
 			hero.attribute[ATR_HITPOINTS_MAX] -= HauchDerPestilenz_Stufe02_HP;
+			
+			if (hero.attribute[ATR_HITPOINTS] > hero.attribute[ATR_HITPOINTS_MAX]) {
+				hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
+			};
 
 			hero.attribute[ATR_MANA] -= HauchDerPestilenz_Stufe02_MANA;
 			hero.attribute[ATR_MANA_MAX] -= HauchDerPestilenz_Stufe02_MANA;
@@ -2088,8 +2100,12 @@ FUNC VOID Gifte ()
 
 			// Neue Sachen abziehen
 
-			hero.attribute[ATR_HITPOINTS] -= (hero.attribute[ATR_HITPOINTS]*2)/5;
+			hero.attribute[ATR_HITPOINTS] -= (hero.attribute[ATR_HITPOINTS] * 2) / 5;
 			hero.attribute[ATR_HITPOINTS_MAX] -= HauchDerPestilenz_Stufe03_HP;
+			
+			if (hero.attribute[ATR_HITPOINTS] > hero.attribute[ATR_HITPOINTS_MAX]) {
+				hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
+			};
 
 			hero.attribute[ATR_MANA] -= HauchDerPestilenz_Stufe03_MANA;
 			hero.attribute[ATR_MANA_MAX] -= HauchDerPestilenz_Stufe03_MANA;

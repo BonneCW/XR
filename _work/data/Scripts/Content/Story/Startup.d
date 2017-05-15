@@ -33,7 +33,7 @@ func void INIT_GLOBAL()
 
 	gameloaded = Hlp_GetNpc(0);
 
-	MEM_SetShowDebug (1);
+	MEM_SetShowDebug (0);
 
 	LeGo_Init(LeGo_All & ~LeGo_Focusnames);
 	
@@ -80,7 +80,6 @@ func void INIT_GLOBAL()
 
 	if (!Hlp_StrCmp(GOTHIC_RESTART, "Y"))
 	{
-		HookEngine (4349731, 7, "B_ENDGAME");
 		HookEngine (7742032, 6, "B_OPENINVENTORY");
 		HookEngine (7742480, 9, "B_CLOSEINVENTORY");
 		HookEngine (7487221, 5, "B_OPENCHEST");		// 0x723EF5
@@ -111,6 +110,8 @@ func void INIT_GLOBAL()
 	B_AutoGeneratePicklockKombos();
 	
 	AxtUpgrade = 0;
+	
+	Mod_LastLoaded = TimeCounter_Real;
 };
 
 FUNC VOID OldLevel(var int newlevel)

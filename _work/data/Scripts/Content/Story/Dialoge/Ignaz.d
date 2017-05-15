@@ -63,7 +63,7 @@ FUNC VOID Info_Mod_Ignaz_Hi_D()
 	AI_Output(self, hero, "Info_Mod_Ignaz_Hi_D_14_11"); //Constantino, der fahrende Reisende ... der reisende Fahrer? Hoffentlich gibt's Klopse dazu.
 	AI_Output(hero, self, "Info_Mod_Ignaz_Hi_D_15_12"); //Constantino ist dein Bruder?!
 	AI_Output(self, hero, "Info_Mod_Ignaz_Hi_D_14_13"); //Ein Zwillingsgestirn, sagen die Grubenarbeiter.
-	AI_Output(hero, self, "Info_Mod_Ignaz_Hi_D_15_14"); //Und was meinst damit, dass er in den Abgrund läuft?
+	AI_Output(hero, self, "Info_Mod_Ignaz_Hi_D_15_14"); //Und was meinst du damit, dass er in den Abgrund läuft?
 	AI_Output(self, hero, "Info_Mod_Ignaz_Hi_D_14_15"); //Ballspielen macht Spaß.
 	AI_Output(hero, self, "Info_Mod_Ignaz_Hi_D_15_16"); //Die unendliche Weisheit scheint dich ziemlich zu überfordern.
 	AI_Output(self, hero, "Info_Mod_Ignaz_Hi_D_14_17"); //Für mich und meine drei Katzen ist das kein Problem.

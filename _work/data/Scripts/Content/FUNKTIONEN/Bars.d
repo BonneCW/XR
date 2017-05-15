@@ -97,8 +97,8 @@ func void ShowBars () {
 	|| (GGD_Sumpfdrache_Time > 0)
 	|| (GGD_Giftkrater_Time > 0) {
 		ViewPtr_SetTexture(bar_hp.value_bar, "BAR_POISON.TGA");
-	} else if (BissDerFaeulnis_Time > 0)
-	|| (HauchDerPestilenz_Time > 0) {
+	} else if (BissDerFaeulnis_Stufe > 0)
+	|| (HauchDerPestilenz_Stufe > 0) {
 		ViewPtr_SetTexture(bar_hp.value_bar, "BAR_KRANK.TGA");
 	} else {
 		ViewPtr_SetTexture(bar_hp.value_bar, "BAR_HEALTH.TGA");

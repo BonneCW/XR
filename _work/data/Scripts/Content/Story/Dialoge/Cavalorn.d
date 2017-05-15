@@ -222,7 +222,7 @@ INSTANCE Info_Mod_Cavalorn_DunklerPilger (C_INFO)
 	information	= Info_Mod_Cavalorn_DunklerPilger_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Was ist mit diesem dunklen Wanderer, der vorher an dir vorbeigekommen ist?";
+	description	= "Was ist mit diesem dunklen Wanderer (...)";
 };
 
 FUNC INT Info_Mod_Cavalorn_DunklerPilger_Condition()

@@ -63,7 +63,7 @@ INSTANCE Info_Mod_Baltram_Warentransporte (C_INFO)
 	information	= Info_Mod_Baltram_Warentransporte_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ich könnte mich um die zurückgehaltenen Warentransporte kümmern.";
+	description	= "Ich könnte mich um die zurückgehaltenen Warentransporte (...)";
 };
 
 FUNC INT Info_Mod_Baltram_Warentransporte_Condition()
@@ -148,7 +148,7 @@ INSTANCE Info_Mod_Baltram_MatteoLehrling1 (C_INFO)
 	information	= Info_Mod_Baltram_MatteoLehrling1_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Hat sich da unter deinem Stand gerade etwas bewegt? (Apfel platzieren)";
+	description	= "Hat sich da unter deinem Stand (...) (Apfel platzieren)";
 };
 
 FUNC INT Info_Mod_Baltram_MatteoLehrling1_Condition()

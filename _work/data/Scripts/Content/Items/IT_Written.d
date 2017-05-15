@@ -325,7 +325,7 @@ func void UseGarpNotiz ()
 
 INSTANCE ItWr_OTGeheimkammer01		(C_Item)
 {
-	name 				=	"Zettelteil";
+	name 				=	"Zettelteil 1";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION|ITEM_SHOW;
@@ -338,6 +338,7 @@ INSTANCE ItWr_OTGeheimkammer01		(C_Item)
 	scemeName			=	"MAP";
 	description			= 	name;
 	TEXT[0]				=	"Hinweis zur Geheimkammer";
+	TEXT[1]				=	"Oberes Drittel";
 };
 
 func void UseOTGeheimkammer01 ()
@@ -366,7 +367,7 @@ func void UseOTGeheimkammer01 ()
 
 INSTANCE ItWr_OTGeheimkammer02		(C_Item)
 {
-	name 				=	"Zettelteil";
+	name 				=	"Zettelteil 2";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION|ITEM_SHOW;
@@ -379,6 +380,7 @@ INSTANCE ItWr_OTGeheimkammer02		(C_Item)
 	scemeName			=	"MAP";
 	description			= 	name;
 	TEXT[0]				=	"Hinweis zur Geheimkammer";
+	TEXT[1]				=	"Mittleres Drittel";
 };
 
 func void UseOTGeheimkammer02 ()
@@ -415,7 +417,7 @@ func void UseOTGeheimkammer02 ()
 
 INSTANCE ItWr_OTGeheimkammer03		(C_Item)
 {
-	name 				=	"Zettelteil";
+	name 				=	"Zettelteil 3";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION|ITEM_SHOW;
@@ -428,6 +430,7 @@ INSTANCE ItWr_OTGeheimkammer03		(C_Item)
 	scemeName			=	"MAP";
 	description			= 	name;
 	TEXT[0]				=	"Hinweis zur Geheimkammer";
+	TEXT[1]				=	"Unteres Drittel";
 };
 
 func void UseOTGeheimkammer03 ()

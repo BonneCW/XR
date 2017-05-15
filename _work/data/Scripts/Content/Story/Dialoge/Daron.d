@@ -51,14 +51,14 @@ FUNC VOID Info_Mod_Daron_ZugangZumKloster_Info()
 	if (Npc_KnowsInfo(hero, Info_Mod_Andokai_Hi))
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Andokai_Hammer))
 	{
-		Info_AddChoice	(Info_Mod_Daron_ZugangZumKloster, "Ich soll für die Dämonenbeschwörer euren Heiligen Hammer stehlen.", Info_Mod_Daron_ZugangZumKloster_Witz);
+		Info_AddChoice	(Info_Mod_Daron_ZugangZumKloster, "Ich soll für die Dämonenbeschwörer den Heiligen Hammer stehlen.", Info_Mod_Daron_ZugangZumKloster_Witz);
 	};
 	Info_AddChoice	(Info_Mod_Daron_ZugangZumKloster, "Ich will ein Feuer Novize werden.", Info_Mod_Daron_ZugangZumKloster_Novize);
 };
 
 FUNC VOID Info_Mod_Daron_ZugangZumKloster_Witz()
 {
-	AI_Output(hero, self, "Info_Mod_Daron_ZugangZumKloster_Witz_15_00"); //Ich soll für die Dämonenbeschwörer euren Heiligen Hammer stehlen.
+	AI_Output(hero, self, "Info_Mod_Daron_ZugangZumKloster_Witz_15_00"); //Ich soll für die Dämonenbeschwörer den Heiligen Hammer stehlen.
 	AI_Output(self, hero, "Info_Mod_Daron_ZugangZumKloster_Witz_10_01"); //Wie ich sehe hast du Humor. Aber wir Magier sind ernste Leute und wollen nicht lachen.
 	AI_Output(self, hero, "Info_Mod_Daron_ZugangZumKloster_Witz_10_02"); //Nun sage mir weshalb du Einlass in unser Kloster erbittest.
 };

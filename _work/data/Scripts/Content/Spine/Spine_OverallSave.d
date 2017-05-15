@@ -1,5 +1,7 @@
 var int Spine_OverallSaveSetStringFunc;
 var int Spine_OverallSaveGetStringFunc;
+var int Spine_OverallSaveSetIntFunc;
+var int Spine_OverallSaveGetIntFunc;
 
 // saves a string value for the given key
 // can be retrieved again using Spine_OverallSaveGetString(var string key)
@@ -7,7 +9,7 @@ func void Spine_OverallSaveSetString(var string key, var string value) {
 	if (Spine_Initialized && Spine_OverallSaveSetStringFunc) {
 		CALL_cStringPtrParam(value);
 		CALL_cStringPtrParam(key);
-		CALL__cdecl(Spine_OverallSaveSetStringFunc);		
+		CALL__cdecl(Spine_OverallSaveSetStringFunc);
 		return;
 	};
 	return;
@@ -17,7 +19,9 @@ func void Spine_OverallSaveSetString(var string key, var string value) {
 // can be retrieved again using Spine_OverallSaveGetInt(var string key)
 func void Spine_OverallSaveSetInt(var string key, var int value) {
 	if (Spine_Initialized && Spine_OverallSaveSetStringFunc) {
-		Spine_OverallSaveSetString(key, IntToString(value));		
+		CALL_IntParam(value);
+		CALL_cStringPtrParam(key);
+		CALL__cdecl(Spine_OverallSaveSetIntFunc);	
 		return;
 	};
 	return;
@@ -40,12 +44,9 @@ func string Spine_OverallSaveGetString(var string key) {
 // returns -1 if not initialized or key not found, otherwise the value stored for the key
 func int Spine_OverallSaveGetInt(var string key) {
 	if (Spine_Initialized && Spine_OverallSaveGetStringFunc) {
-		var string value; value = Spine_OverallSaveGetString(key);
-		if (STR_Len(value) > 0) {
-			return STR_ToInt(value);
-		} else {
-			return 0;
-		};
+		CALL_cStringPtrParam(key);
+		CALL__cdecl(Spine_OverallSaveGetIntFunc);
+		return CALL_RetValAsInt();
 	};
 	return -1;
 };

@@ -107,6 +107,15 @@ func void Spell_Cast_TeleportOT()
 	//Npc_RemoveInvItems	(hero, ItWr_ZombieToHuman, 1);
 	Npc_RemoveInvItems	(hero, ItFoMuttonZombie, Npc_HasItems(hero, ItFoMuttonZombie));
 	Npc_RemoveInvItems	(hero, ItLsTorch, Npc_HasItems(hero, ItLsTorch));
+	Npc_RemoveInvItems	(hero, ItWr_OTGeheimkammer01, 1);
+	Npc_RemoveInvItems	(hero, ItWr_OTGeheimkammer02, 1);
+	Npc_RemoveInvItems	(hero, ItWr_OTGeheimkammer03, 1);
+	Npc_RemoveInvItems	(hero, ItWr_OTGeheimkammer04, 1);
+	Npc_RemoveInvItems	(hero, ItMi_Gold, Npc_HasItems(hero, ItMi_Gold));
+	Npc_RemoveInvItems	(hero, ItMi_Nugget, Npc_HasItems(hero, ItMi_Nugget));
+	Npc_RemoveInvItems	(hero, ItMi_OldCoin, Npc_HasItems(hero, ItMi_OldCoin));
+	Npc_RemoveInvItems	(hero, ItMi_RockCrystal, Npc_HasItems(hero, ItMi_RockCrystal));
+	Npc_RemoveInvItems	(hero, ItAt_SkeletonBone, Npc_HasItems(hero, ItAt_SkeletonBone));
 
 	AI_Teleport		(self, "OT2NW");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );

@@ -136,7 +136,8 @@ FUNC VOID DAUERFUNC_01()
 			if (!Hlp_IsValidHandle(View_Time))
 			{
 				var int length; length = Print_LongestLineLength("00:00:00", FONT_Screen);
-				View_Time = View_CreatePxl      (Print_Screen[PS_X] - length - 20, 20, Print_Screen[PS_X] - 10, 50);
+				var int height; height = Print_GetFontHeight(FONT_Screen);
+				View_Time = View_CreatePxl      (Print_Screen[PS_X] - length - 20, 20, Print_Screen[PS_X] - 10, 30 + height);
 			};
 
 			View_Open	(View_Time);
@@ -171,21 +172,6 @@ FUNC VOID DAUERFUNC_01()
 	else
 	{
 		Cursor_NoEngine = 0;
-	};
-
-	// Erfahrung für alte Erfolge verteilen
-
-	if (Mod_GiveErfolgXP == 1)
-	&& (TimeCounter_Real > 3)
-	&& (MaxErfolge > 0)
-	{
-		Mod_GiveErfolgXP = 0;
-
-		B_GivePlayerXP	(50*CurrentErfolge);
-
-		ErfolgText = ConcatStrings(IntToString((CurrentErfolge*100) / MaxErfolge), "% aller Erfolge erreicht");
-
-		CreateInvItems	(hero, ItWr_Erfolge, 1);
 	};
 
 	// Mord erst nach ein paar Sekunden wieder registrieren für Beliar-Gesinnung

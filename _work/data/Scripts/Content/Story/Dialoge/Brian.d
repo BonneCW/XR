@@ -167,6 +167,8 @@ FUNC VOID Info_Mod_Brian_Daemonisch_Info()
 	B_StartOtherRoutine	(Mod_1250_RIT_Ritter_NW, "DAEMONISCH");
 };
 
+var int Mod_Brian_Trader;
+
 INSTANCE Info_Mod_Brian_Trade (C_INFO)
 {
 	npc		= Mod_566_NONE_Brian_NW;
@@ -189,6 +191,13 @@ FUNC INT Info_Mod_Brian_Trade_Condition()
 
 FUNC VOID Info_Mod_Brian_Trade_Info()
 {
+	if (!Mod_Brian_Trader) {
+		Mod_Brian_Trader = TRUE;
+		
+		Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Brian kann mir etwas Schmiedezubehör verkaufen.");
+	};
+	
 	Backup_Questitems();
 
 	B_GiveTradeInv (self);

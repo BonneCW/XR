@@ -57,6 +57,8 @@ FUNC VOID Info_Mod_Herold_Flugblaetter_Info()
 	AI_Output(self, hero, "Info_Mod_Herold_Flugblaetter_04_02"); //Matteo hat Käse im Angebot? Nun gut, ich werde das Angebot eine Weile verkünden.
 
 	Mod_Flugblaetter += 1;
+	
+	B_GivePlayerXP(50);
 };
 
 INSTANCE Info_Mod_Herold_Verbrecher (C_INFO)

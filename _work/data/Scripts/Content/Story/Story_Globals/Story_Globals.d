@@ -12,6 +12,8 @@ var int Mod_PlayerIstVampir;
 var int Mod_HeroIstInRaum;
 var int SchutzVorSonne;
 
+var int Mod_LastLoaded;
+
 // Tränke brauen
 
 var int Mod_TrankFirstStep;

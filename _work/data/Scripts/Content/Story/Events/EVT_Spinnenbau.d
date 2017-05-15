@@ -306,6 +306,9 @@ INSTANCE Apfelbaum_Botschek_03	(Mst_Addon_Stoneguardian)
 	CreateInvItems	(self, ItFo_Apple, 6);
 };
 
+var int Mod_ItPl_AlterPilz_Right;
+var int Mod_ItPl_AlterPilz_Anzahl;
+
 /******************************************************************************************/
 /************Besondere Pilze im Spnnenbau***************/
 /******************************************************************************************/
@@ -340,6 +343,16 @@ INSTANCE ItPl_AlterPilz (C_Item)
 		self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 
 		B_SetEsspunkte	(25);
+
+		if (Mod_ItPl_AlterPilz_Right == 0)
+		&& (Npc_IsPlayer(self))
+		{
+			Mod_ItPl_AlterPilz_Right = 1;
+
+			Mod_ItPl_AlterPilz_Anzahl = Npc_HasItems(hero, ItPl_AlterPilz);
+			Npc_RemoveInvItems (hero, ItPl_AlterPilz, Mod_ItPl_AlterPilz_Anzahl);
+			CreateInvItems	(hero, ItPl_AlterPilz, Mod_ItPl_AlterPilz_Anzahl);
+		};
 	};
 
 

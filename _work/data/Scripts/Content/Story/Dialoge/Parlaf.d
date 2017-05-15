@@ -227,7 +227,7 @@ INSTANCE Info_Mod_Parlaf_DunklerPilger (C_INFO)
 	information	= Info_Mod_Parlaf_DunklerPilger_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Ist hier vor kurzem ein Pilger in schwarzem Gewand vorbeigekommen?";
+	description	= "Ist hier vor kurzem ein Pilger in schwarzem Gewand (...)";
 };
 
 FUNC INT Info_Mod_Parlaf_DunklerPilger_Condition()

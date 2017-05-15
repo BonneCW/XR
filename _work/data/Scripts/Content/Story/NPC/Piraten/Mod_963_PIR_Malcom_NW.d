@@ -38,7 +38,7 @@ INSTANCE Mod_963_PIR_Malcom_NW (Npc_Default)
 FUNC VOID Rtn_PreStart_963 ()
 {	
 	TA_Sit_Campfire (06,00,22,00,"NW_CITY_PIRATESCAMP_04");
-	TA_Sleep (22,00,06,00,"NW_CITY_PIRATESCAMP_04");
+	TA_Sleep (22,00,06,00,"NW_CITY_PIRATESCAMP_07");
 };
 
 FUNC VOID Rtn_Sammeln_963 ()
