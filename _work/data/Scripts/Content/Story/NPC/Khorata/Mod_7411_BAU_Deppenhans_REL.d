@@ -4,7 +4,7 @@ instance Mod_7411_BAU_Deppenhans_REL (Npc_Default)
 	name 		= "Deppenhans";
 	guild 		= GIL_out;
 	id 			= 7411;
-	voice 		= 31;
+	voice 		= 1;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

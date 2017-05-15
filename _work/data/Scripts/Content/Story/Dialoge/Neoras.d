@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Neoras_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
 
-	AI_Output(self, hero, "Info_Mod_Neoras_Hi_01_01"); //Ich bin Neoras, der Meister der Tränke.
+	AI_Output(self, hero, "Info_Mod_Neoras_Hi_04_01"); //Ich bin Neoras, der Meister der Tränke.
 };
 
 INSTANCE Info_Mod_Neoras_Aufgabe (C_INFO)
@@ -44,7 +44,7 @@ FUNC INT Info_Mod_Neoras_Aufgabe_Condition()
 FUNC VOID Info_Mod_Neoras_Aufgabe_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Neoras_Aufgabe_15_00"); //Kann ich dir irgendwie behilflich sein?
-	AI_Output(self, hero, "Info_Mod_Neoras_Aufgabe_01_01"); //Ich brauche keine Hilfe. Geh zu den anderen Magiern, vielleicht haben die was für dich zu tun.
+	AI_Output(self, hero, "Info_Mod_Neoras_Aufgabe_04_01"); //Ich brauche keine Hilfe. Geh zu den anderen Magiern, vielleicht haben die was für dich zu tun.
 };
 
 INSTANCE Info_Mod_Neoras_HabTrank (C_INFO)
@@ -74,9 +74,9 @@ FUNC VOID Info_Mod_Neoras_HabTrank_Info()
 
 	B_GiveInvItems	(hero, self, NeorasTrankVonMilten, 1);
 
-	AI_Output(self, hero, "Info_Mod_Neoras_HabTrank_01_01"); //Auf diesen Trank warte ich schon lange. Woher hast du ihn?
+	AI_Output(self, hero, "Info_Mod_Neoras_HabTrank_04_01"); //Auf diesen Trank warte ich schon lange. Woher hast du ihn?
 	AI_Output(hero, self, "Info_Mod_Neoras_HabTrank_15_02"); //Ich habe Milten geholfen ihn herzustellen.
-	AI_Output(self, hero, "Info_Mod_Neoras_HabTrank_01_03"); //Damit hast du mir bewiesen, dass du würdig bist ein Novize zu werden. Nimm dieses Gold als Belohnung.
+	AI_Output(self, hero, "Info_Mod_Neoras_HabTrank_04_03"); //Damit hast du mir bewiesen, dass du würdig bist ein Novize zu werden. Nimm dieses Gold als Belohnung.
 
 	B_LogEntry_More	(TOPIC_MOD_FEUERMAGIER, TOPIC_MOD_NEORAS_TRANK, "Neoras hält mich für würdig ein Novize zu werden.", "Ich habe Neoras den Trank gebracht.");
 	B_SetTopicStatus	(TOPIC_MOd_NEORAS_TRANK, LOG_SUCCESS);
@@ -109,19 +109,19 @@ FUNC INT Info_Mod_Neoras_Mitgift_Condition()
 
 FUNC VOID Info_Mod_Neoras_Mitgift_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_01_00"); //Du bist doch der Novize, der mir diesen Trank gebracht hat.
-	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_01_01"); //Ich hätte vielleicht noch eine Aufgabe für jemanden mit deinen Fähigkeiten.
+	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_04_00"); //Du bist doch der Novize, der mir diesen Trank gebracht hat.
+	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_04_01"); //Ich hätte vielleicht noch eine Aufgabe für jemanden mit deinen Fähigkeiten.
 	AI_Output(hero, self, "Info_Mod_Neoras_Mitgift_15_02"); //Ich bin ganz Ohr.
-	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_01_03"); //Wie dir vielleicht schon aufgefallen ist, stellen wir hier im Kloster Gegengifte her.
-	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_01_04"); //Das ist notwendig, da es da draußen viel giftiges Getier und Gewächs gibt.
+	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_04_03"); //Wie dir vielleicht schon aufgefallen ist, stellen wir hier im Kloster Gegengifte her.
+	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_04_04"); //Das ist notwendig, da es da draußen viel giftiges Getier und Gewächs gibt.
 	AI_Output(hero, self, "Info_Mod_Neoras_Mitgift_15_05"); //Ja, damit hatte auch ich schon Bekanntschaft gemacht.
-	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_01_06"); //Genau. Du begreifst also ihren Zweck, so weit so gut.
-	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_01_07"); //Aber in letzter Zeit gab es auf Khorinis immer häufiger Todesfälle durch schwere Vergiftungen.
-	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_01_08"); //Jedoch wurden diese nicht etwa durch Tiere, oder Pflanzen hervorgerufen, sondern durch von Menschenhand geschaffene Waffen ... Schwerter und Pfeile.
-	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_01_09"); //Es scheint gedungene Mörder zu geben, die ihre Klingen und Spitzen damit bestreichen, um ihre Opfer damit einem erbarmungslosen Tode zuzuführen.
-	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_01_10"); //Dafür scheinen sie besonders konzentrierte Gifte zu verwenden.
-	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_01_11"); //Ich möchte dich nun darum bitten, mir je ein Fläschchen tierisches und pflanzliches Gift zu beschaffen, damit ich meine Forschungen auf dem Gebiet intensivieren kann.
-	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_01_12"); //Begib dich dafür am besten zu Alchemisten oder Kräuterkundigen. Dort könntest du mit etwas Glück fündig werden.
+	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_04_06"); //Genau. Du begreifst also ihren Zweck, so weit so gut.
+	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_04_07"); //Aber in letzter Zeit gab es auf Khorinis immer häufiger Todesfälle durch schwere Vergiftungen.
+	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_04_08"); //Jedoch wurden diese nicht etwa durch Tiere, oder Pflanzen hervorgerufen, sondern durch von Menschenhand geschaffene Waffen ... Schwerter und Pfeile.
+	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_04_09"); //Es scheint gedungene Mörder zu geben, die ihre Klingen und Spitzen damit bestreichen, um ihre Opfer damit einem erbarmungslosen Tode zuzuführen.
+	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_04_10"); //Dafür scheinen sie besonders konzentrierte Gifte zu verwenden.
+	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_04_11"); //Ich möchte dich nun darum bitten, mir je ein Fläschchen tierisches und pflanzliches Gift zu beschaffen, damit ich meine Forschungen auf dem Gebiet intensivieren kann.
+	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift_04_12"); //Begib dich dafür am besten zu Alchemisten oder Kräuterkundigen. Dort könntest du mit etwas Glück fündig werden.
 
 	Log_CreateTopic	(TOPIC_MOD_NEORAS_MITGIFT, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_NEORAS_MITGIFT, LOG_RUNNING);
@@ -164,8 +164,8 @@ FUNC VOID Info_Mod_Neoras_Mitgift2_Info()
 		AI_Output(hero, self, "Info_Mod_Neoras_Mitgift2_15_01"); //Mit schönen Grüßen von Constantino.
 	};
 
-	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift2_01_02"); //Ahh, vortrefflich. Das ist erst mal genügend Material für meine Forschungen. Du hast deine Aufgabe wieder einmal gut gemacht.
-	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift2_01_03"); //Hier, nimm etwas Gold für deine Aufwendungen und einige Gegengifte.
+	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift2_04_02"); //Ahh, vortrefflich. Das ist erst mal genügend Material für meine Forschungen. Du hast deine Aufgabe wieder einmal gut gemacht.
+	AI_Output(self, hero, "Info_Mod_Neoras_Mitgift2_04_03"); //Hier, nimm etwas Gold für deine Aufwendungen und einige Gegengifte.
 
 	CreateInvItems	(hero, ItMi_Gold, 200);
 	CreateInvItems	(hero, ItPo_Gegengift, 3);
@@ -207,7 +207,7 @@ FUNC VOID Info_Mod_Neoras_Lehrer_Info()
 	|| (Mod_Gilde == 7)
 	|| (Mod_Gilde == 8)
 	{
-		AI_Output (self, hero, "Info_Mod_Neoras_Lehrer_01_01"); //Ich werde dich in die Geheimnisse der Alchemie einweihen.
+		AI_Output (self, hero, "Info_Mod_Neoras_Lehrer_04_01"); //Ich werde dich in die Geheimnisse der Alchemie einweihen.
 		
 		if (!Npc_KnowsInfo(hero, Info_Mod_Neoras_Lehrer))
 		{

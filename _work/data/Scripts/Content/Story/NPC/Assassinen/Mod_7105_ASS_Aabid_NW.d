@@ -4,7 +4,7 @@ INSTANCE Mod_7105_ASS_Aabid_NW (Npc_Default)
 	name 		= "Aabid"; 
 	guild 		= GIL_OUT;
 	id 			= 7105;
-	voice		= 0;
+	voice		= 1;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

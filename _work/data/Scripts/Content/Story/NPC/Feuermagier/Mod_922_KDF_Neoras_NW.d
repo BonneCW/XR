@@ -4,7 +4,7 @@ INSTANCE Mod_922_KDF_Neoras_NW (Npc_Default)
 	name 		= "Neoras";
 	guild 		= GIL_VLK;
 	id 			= 922;
-	voice		= 0;
+	voice		= 4;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

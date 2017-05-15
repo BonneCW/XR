@@ -6,7 +6,7 @@ instance Mod_1110_GRD_Cutter_MT (Npc_Default)
 	npctype 	= 	npctype_main;
 	guild 		=	GIL_OUT;
 	level 		=	20;
-	voice 		=	30;
+	voice 		=	6;
 	id 			=	1110;
 	flags = 2;
 		

@@ -4,7 +4,7 @@ INSTANCE Mod_930_PIR_Bones_AW (Npc_Default)
 	name 		= "Bones";
 	guild 		= GIL_NONE;
 	id 			= 930;
-	voice		= 0;
+	voice		= 4;
 	flags       = 0;															
 	npctype		= NPCTYPE_MAIN;
 	

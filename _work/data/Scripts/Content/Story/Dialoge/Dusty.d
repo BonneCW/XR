@@ -15,11 +15,11 @@ FUNC INT Info_Mod_Dusty_Hi_Condition()
 
 FUNC VOID Info_Mod_Dusty_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Dusty_Hi_14_00"); //Du hier? Es hieß, du wärst im Schläfertempel verschüttet ...
+	AI_Output(self, hero, "Info_Mod_Dusty_Hi_24_00"); //Du hier? Es hieß, du wärst im Schläfertempel verschüttet ...
 	AI_Output(hero, self, "Info_Mod_Dusty_Hi_15_01"); //Eine lange, nicht sehr erfreuliche Geschichte. Aber wieso bist du hier?
-	AI_Output(self, hero, "Info_Mod_Dusty_Hi_14_02"); //Ich wollte eigentlich rüber aufs Festland, Familie und so. (lacht gequält)
-	AI_Output(self, hero, "Info_Mod_Dusty_Hi_14_03"); //Problem ist nur, dass momentan kein Schiff im Hafen liegt, das in nächster Zeit dorthin auslaufen wird.
-	AI_Output(self, hero, "Info_Mod_Dusty_Hi_14_04"); //Und weil die Paladine selbst im Hafenviertel Stress machen, bin ich wieder raus und verdinge mich als Jäger.
+	AI_Output(self, hero, "Info_Mod_Dusty_Hi_24_02"); //Ich wollte eigentlich rüber aufs Festland, Familie und so. (lacht gequält)
+	AI_Output(self, hero, "Info_Mod_Dusty_Hi_24_03"); //Problem ist nur, dass momentan kein Schiff im Hafen liegt, das in nächster Zeit dorthin auslaufen wird.
+	AI_Output(self, hero, "Info_Mod_Dusty_Hi_24_04"); //Und weil die Paladine selbst im Hafenviertel Stress machen, bin ich wieder raus und verdinge mich als Jäger.
 };
 
 INSTANCE Info_Mod_Dusty_Lehrer (C_INFO)
@@ -45,7 +45,7 @@ FUNC INT Info_Mod_Dusty_Lehrer_Condition()
 FUNC VOID Info_Mod_Dusty_Lehrer_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Dusty_Lehrer_15_00"); //Hast du als Jäger vielleicht ein paar Tipps für mich auf Lager?
-	AI_Output(self, hero, "Info_Mod_Dusty_Lehrer_14_01"); //Die Grundlagen kann ich dir auf jeden Fall zeigen. Du hast mir in der Kolonie ja auch geholfen.
+	AI_Output(self, hero, "Info_Mod_Dusty_Lehrer_24_01"); //Die Grundlagen kann ich dir auf jeden Fall zeigen. Du hast mir in der Kolonie ja auch geholfen.
 
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_KHORINIS, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_LEHRER_KHORINIS, "Dusty kann mir beibringen, wie ich an Jagdtrophäen komme.");
@@ -74,11 +74,11 @@ FUNC INT Info_Mod_Dusty_Infos_Condition()
 FUNC VOID Info_Mod_Dusty_Infos_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Dusty_Infos_15_00"); //Weißt du was über die Schläferanhänger hier in der Gegend?
-	AI_Output(self, hero, "Info_Mod_Dusty_Infos_14_01"); //Ja, ich hab ein paar gesehen. Es waren zwei kleine Gruppen.
+	AI_Output(self, hero, "Info_Mod_Dusty_Infos_24_01"); //Ja, ich hab ein paar gesehen. Es waren zwei kleine Gruppen.
 	AI_Output(hero, self, "Info_Mod_Dusty_Infos_15_02"); //Wo kann ich sie finden?
-	AI_Output(self, hero, "Info_Mod_Dusty_Infos_14_03"); //Weißt du was? Ich bin schon seit Tagen auf Entzug. Da arbeitet mein Gehirn nicht mehr so schnell, wenn du verstehst, was ich meine.
+	AI_Output(self, hero, "Info_Mod_Dusty_Infos_24_03"); //Weißt du was? Ich bin schon seit Tagen auf Entzug. Da arbeitet mein Gehirn nicht mehr so schnell, wenn du verstehst, was ich meine.
 	AI_Output(hero, self, "Info_Mod_Dusty_Infos_15_04"); //Du brauchst mal wieder eine Dosis Sumpfkraut?
-	AI_Output(self, hero, "Info_Mod_Dusty_Infos_14_05"); //(wollüstig) Oh ja! Wenn du mir einen ordentlichen Stängel bringst, ordnen sich meine Gedanken auch wieder.
+	AI_Output(self, hero, "Info_Mod_Dusty_Infos_24_05"); //(wollüstig) Oh ja! Wenn du mir einen ordentlichen Stängel bringst, ordnen sich meine Gedanken auch wieder.
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_SEKTENSPINNER, "Bevor Dusty mir sagen kann, wo sich die Schläferanhänger aufhalten, soll ich ihm einen Sumpfkrautstängel bringen.");
 };
@@ -111,11 +111,11 @@ FUNC VOID Info_Mod_Dusty_Kippe_Info()
 
 	B_UseItem	(self, ItMi_Joint);
 
-	AI_Output(self, hero, "Info_Mod_Dusty_Kippe_14_01"); //Ah, sehr schön. Mein Blick wird wieder klar.
+	AI_Output(self, hero, "Info_Mod_Dusty_Kippe_24_01"); //Ah, sehr schön. Mein Blick wird wieder klar.
 	AI_Output(hero, self, "Info_Mod_Dusty_Kippe_15_02"); //Dann sag mir, wo ich die Fanatiker finde.
-	AI_Output(self, hero, "Info_Mod_Dusty_Kippe_14_03"); //Die eine Gruppe hat sich beim Leuchtturm niedergelassen. Das ist die größere Gruppe. Wenn du dort hingehst, musst du sehr vorsichtig sein.
-	AI_Output(self, hero, "Info_Mod_Dusty_Kippe_14_04"); //Die andere Gruppe ist in einer Höhle im Wald südlich der Stadt. Dort solltest du zuerst vorbeischauen.
-	AI_Output(self, hero, "Info_Mod_Dusty_Kippe_14_05"); //Den Leuchtturm lässt du besser mal noch bleiben, bevor du mehr herausgefunden hast.
+	AI_Output(self, hero, "Info_Mod_Dusty_Kippe_24_03"); //Die eine Gruppe hat sich beim Leuchtturm niedergelassen. Das ist die größere Gruppe. Wenn du dort hingehst, musst du sehr vorsichtig sein.
+	AI_Output(self, hero, "Info_Mod_Dusty_Kippe_24_04"); //Die andere Gruppe ist in einer Höhle im Wald südlich der Stadt. Dort solltest du zuerst vorbeischauen.
+	AI_Output(self, hero, "Info_Mod_Dusty_Kippe_24_05"); //Den Leuchtturm lässt du besser mal noch bleiben, bevor du mehr herausgefunden hast.
 
 	B_GivePlayerXP	(50);
 
@@ -146,8 +146,8 @@ FUNC INT Info_Mod_Dusty_Crawlersekret_Condition()
 FUNC VOID Info_Mod_Dusty_Crawlersekret_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Dusty_Crawlersekret_15_00"); //Woher könnte ich starkes Minecrawler-Sekret bekommen?
-	AI_Output(self, hero, "Info_Mod_Dusty_Crawlersekret_14_01"); //Ich habe von den anderen Jägern gehört, dass im Norden Minecrawler gesichtet wurden.
-	AI_Output(self, hero, "Info_Mod_Dusty_Crawlersekret_14_02"); //Wenn du Glück hast, dann gibt es dort auch eine Königin, deren Eier du stehlen kannst, um daraus das Sekret zu gewinnen.
+	AI_Output(self, hero, "Info_Mod_Dusty_Crawlersekret_24_01"); //Ich habe von den anderen Jägern gehört, dass im Norden Minecrawler gesichtet wurden.
+	AI_Output(self, hero, "Info_Mod_Dusty_Crawlersekret_24_02"); //Wenn du Glück hast, dann gibt es dort auch eine Königin, deren Eier du stehlen kannst, um daraus das Sekret zu gewinnen.
 };
 
 INSTANCE Info_Mod_Dusty_OtherHunters (C_INFO)
@@ -173,7 +173,7 @@ FUNC INT Info_Mod_Dusty_OtherHunters_Condition()
 FUNC VOID Info_Mod_Dusty_OtherHunters_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Dusty_OtherHunters_15_00"); //Kannst du mir sagen, wo ich noch andere Jäger finde?
-	AI_Output(self, hero, "Info_Mod_Dusty_OtherHunters_14_01"); //Bei der Taverne "Zur toten Harpie" nordöstlich von hier ist ein großes Lager, an dem ich vorbeigekommen bin. Ob es noch andere Treffpunkte gibt, weiß ich nicht.
+	AI_Output(self, hero, "Info_Mod_Dusty_OtherHunters_24_01"); //Bei der Taverne "Zur toten Harpie" nordöstlich von hier ist ein großes Lager, an dem ich vorbeigekommen bin. Ob es noch andere Treffpunkte gibt, weiß ich nicht.
 	AI_Output(hero, self, "Info_Mod_Dusty_OtherHunters_15_02"); //Danke, das hilft mir schon weiter.
 };
 
@@ -199,8 +199,8 @@ FUNC INT Info_Mod_Dusty_Bruderschaft_Condition()
 FUNC VOID Info_Mod_Dusty_Bruderschaft_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Dusty_Bruderschaft_15_00"); //Was ist nach dem Fall der Barriere mit der Bruderschaft passiert?
-	AI_Output(self, hero, "Info_Mod_Dusty_Bruderschaft_14_01"); //Keine Ahnung, es gab keine große Aufbruchstimmung oder so. Die meisten haben sich im Lager ein neues Leben aufgebaut und wollen gar nicht mehr weg.
-	AI_Output(self, hero, "Info_Mod_Dusty_Bruderschaft_14_02"); //Dass der Schläfer ein Erzdämon war, mussten natürlich einige erst mal verdauen, aber ob sie sich jetzt einen Ersatz gesucht haben oder nur noch Sumpfkraut rauchen, weiß ich nicht.
+	AI_Output(self, hero, "Info_Mod_Dusty_Bruderschaft_24_01"); //Keine Ahnung, es gab keine große Aufbruchstimmung oder so. Die meisten haben sich im Lager ein neues Leben aufgebaut und wollen gar nicht mehr weg.
+	AI_Output(self, hero, "Info_Mod_Dusty_Bruderschaft_24_02"); //Dass der Schläfer ein Erzdämon war, mussten natürlich einige erst mal verdauen, aber ob sie sich jetzt einen Ersatz gesucht haben oder nur noch Sumpfkraut rauchen, weiß ich nicht.
 };
 
 INSTANCE Info_Mod_Dusty_BosperFelle (C_INFO)
@@ -227,13 +227,13 @@ FUNC INT Info_Mod_Dusty_BosperFelle_Condition()
 FUNC VOID Info_Mod_Dusty_BosperFelle_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Dusty_BosperFelle_15_00"); //Du hast nicht zufällig ein paar schöne Wolfsfelle, die du nicht mehr brauchst?
-	AI_Output(self, hero, "Info_Mod_Dusty_BosperFelle_14_01"); //Wölfe habe ich schon ein paar erlegt, auch wenn die verdammt gefährlich sind.
-	AI_Output(self, hero, "Info_Mod_Dusty_BosperFelle_14_02"); //Aber das Fell hab ich nicht allen abgezogen. Wart mal ... (Suchgeräusch) Zwei unbeschädigte Felle hätte ich. Interesse?
+	AI_Output(self, hero, "Info_Mod_Dusty_BosperFelle_24_01"); //Wölfe habe ich schon ein paar erlegt, auch wenn die verdammt gefährlich sind.
+	AI_Output(self, hero, "Info_Mod_Dusty_BosperFelle_24_02"); //Aber das Fell hab ich nicht allen abgezogen. Wart mal ... (Suchgeräusch) Zwei unbeschädigte Felle hätte ich. Interesse?
 	AI_Output(hero, self, "Info_Mod_Dusty_BosperFelle_15_03"); //Nur her damit. Wie kann ich dir danken?
 
 	B_GiveInvItems	(self, hero, ItAt_WolfFur_Rein, 2);
 
-	AI_Output(self, hero, "Info_Mod_Dusty_BosperFelle_14_04"); //Du hast die Barriere beseitigt. Mehr brauchst du nicht für mich tun.
+	AI_Output(self, hero, "Info_Mod_Dusty_BosperFelle_24_04"); //Du hast die Barriere beseitigt. Mehr brauchst du nicht für mich tun.
 };
 
 INSTANCE Info_Mod_Dusty_Lernen (C_INFO)
@@ -263,7 +263,7 @@ FUNC VOID Info_Mod_Dusty_Lernen_Info()
 	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Fur] == FALSE)
 	|| (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Teeth] == FALSE))
 	{
-		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_14_01"); //Kommt darauf an, was du wissen willst.
+		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_24_01"); //Kommt darauf an, was du wissen willst.
 
 		Info_ClearChoices	(Info_Mod_Dusty_Lernen);
 
@@ -288,7 +288,7 @@ FUNC VOID Info_Mod_Dusty_Lernen_Info()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_14_02"); //Ich kann dir im Moment nicht mehr beibringen, als du ohnehin schon weißt. Tut mir Leid.
+		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_24_02"); //Ich kann dir im Moment nicht mehr beibringen, als du ohnehin schon weißt. Tut mir Leid.
 	};
 };
 
@@ -301,9 +301,9 @@ FUNC void Info_Mod_Dusty_Lernen_Claws()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_Claws))
 	{
-		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Claws_14_00"); //Tiere geben ihre Klauen nicht sehr gerne her. Du musst schon sehr genau den Punkt treffen, an dem du mit deinem Messer ansetzt.
-		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Claws_14_01"); //Die Haltung deiner Hand sollte etwas verschränkt sein. Mit einem kräftigen Ruck trennst du dann die Klaue ab.
-		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Claws_14_02"); //Klauen sind immer ein begehrtes Zahlungsmittel bei einem Händler.
+		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Claws_24_00"); //Tiere geben ihre Klauen nicht sehr gerne her. Du musst schon sehr genau den Punkt treffen, an dem du mit deinem Messer ansetzt.
+		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Claws_24_01"); //Die Haltung deiner Hand sollte etwas verschränkt sein. Mit einem kräftigen Ruck trennst du dann die Klaue ab.
+		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Claws_24_02"); //Klauen sind immer ein begehrtes Zahlungsmittel bei einem Händler.
 	};
 
 	Info_ClearChoices	(Info_Mod_Dusty_Lernen);
@@ -333,8 +333,8 @@ FUNC void Info_Mod_Dusty_Lernen_Teeth()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_Teeth))
 	{
-		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Teeth_14_00"); //Das einfachste, was du Tieren entnehmen kannst, sind seine Zähne. Du fährst mit deinem Messer in seinem Maul um das Gebiss.
-		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Teeth_14_01"); //Dann trennst es geschickt mit einem Ruck vom Schädel des Tieres.
+		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Teeth_24_00"); //Das einfachste, was du Tieren entnehmen kannst, sind seine Zähne. Du fährst mit deinem Messer in seinem Maul um das Gebiss.
+		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Teeth_24_01"); //Dann trennst es geschickt mit einem Ruck vom Schädel des Tieres.
 	};
 
 	Info_ClearChoices	(Info_Mod_Dusty_Lernen);
@@ -393,8 +393,8 @@ FUNC void Info_Mod_Dusty_Lernen_Fur()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy(self, hero, TROPHY_Fur))
 	{
-		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Fur_14_00"); //Felle ziehst du am besten ab, indem du einen tiefen Schnitt an den Hinterläufen des Tieres vornimmst.
-		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Fur_14_01"); //Dann kannst du das Fell von vorne nach hinten eigentlich immer sehr leicht abziehen.
+		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Fur_24_00"); //Felle ziehst du am besten ab, indem du einen tiefen Schnitt an den Hinterläufen des Tieres vornimmst.
+		AI_Output(self, hero, "Info_Mod_Dusty_Lernen_Fur_24_01"); //Dann kannst du das Fell von vorne nach hinten eigentlich immer sehr leicht abziehen.
 	};
 
 	Info_ClearChoices	(Info_Mod_Dusty_Lernen);

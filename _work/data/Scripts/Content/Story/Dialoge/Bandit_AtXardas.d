@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Bandit_AtXardas_Hi_Condition()
 
 FUNC VOID Info_Mod_Bandit_AtXardas_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Bandit_AtXardas_Hi_08_00"); //He! Seit wann verirren sich Schwächlinge hierher?
+	AI_Output(self, hero, "Info_Mod_Bandit_AtXardas_Hi_06_00"); //He! Seit wann verirren sich Schwächlinge hierher?
 };
 
 INSTANCE Info_Mod_Bandit_AtXardas_Bereuen (C_INFO)
@@ -40,7 +40,7 @@ FUNC INT Info_Mod_Bandit_AtXardas_Bereuen_Condition()
 FUNC VOID Info_Mod_Bandit_AtXardas_Bereuen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bandit_AtXardas_Bereuen_15_00"); //Du wirst gleich bereuen, was du gesagt hast.
-	AI_Output(self, hero, "Info_Mod_Bandit_AtXardas_Bereuen_08_01"); //(lacht) Das will ich ja sehen.
+	AI_Output(self, hero, "Info_Mod_Bandit_AtXardas_Bereuen_06_01"); //(lacht) Das will ich ja sehen.
 
 	AI_StopProcessInfos	(self);
 
@@ -72,7 +72,7 @@ FUNC INT Info_Mod_Bandit_AtXardas_WiesoHier_Condition()
 FUNC VOID Info_Mod_Bandit_AtXardas_WiesoHier_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bandit_AtXardas_WiesoHier_15_00"); //Wieso seid ihr hier?
-	AI_Output(self, hero, "Info_Mod_Bandit_AtXardas_WiesoHier_08_01"); //Mann, was ist das für 'ne Frage? Das ist unser Lager. Und jetzt erzähl mal schnell, was du hier suchst, bevor ich dich einen Kopf kürzer mache.
+	AI_Output(self, hero, "Info_Mod_Bandit_AtXardas_WiesoHier_06_01"); //Mann, was ist das für 'ne Frage? Das ist unser Lager. Und jetzt erzähl mal schnell, was du hier suchst, bevor ich dich einen Kopf kürzer mache.
 };
 
 INSTANCE Info_Mod_Bandit_AtXardas_Anschluss (C_INFO)
@@ -97,9 +97,9 @@ FUNC INT Info_Mod_Bandit_AtXardas_Anschluss_Condition()
 FUNC VOID Info_Mod_Bandit_AtXardas_Anschluss_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bandit_AtXardas_Anschluss_15_00"); //Kann ich mich euch anschließen?
-	AI_Output(self, hero, "Info_Mod_Bandit_AtXardas_Anschluss_08_01"); //Nein. Wir nehmen hier keine Windelträger auf, kapiert?
+	AI_Output(self, hero, "Info_Mod_Bandit_AtXardas_Anschluss_06_01"); //Nein. Wir nehmen hier keine Windelträger auf, kapiert?
 	AI_Output(hero, self, "Info_Mod_Bandit_AtXardas_Anschluss_15_02"); //Na gut, dann gehe ich eben wieder...
-	AI_Output(self, hero, "Info_Mod_Bandit_AtXardas_Anschluss_08_03"); //Dafür ist es zu spät Freundchen. Ich werde mir jetzt mal anschauen, ob du nicht doch was Wertvolles dabei hast.
+	AI_Output(self, hero, "Info_Mod_Bandit_AtXardas_Anschluss_06_03"); //Dafür ist es zu spät Freundchen. Ich werde mir jetzt mal anschauen, ob du nicht doch was Wertvolles dabei hast.
 
 	AI_StopProcessInfos	(self);
 

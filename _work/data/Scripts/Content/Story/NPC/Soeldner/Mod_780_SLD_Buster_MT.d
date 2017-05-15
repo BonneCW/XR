@@ -4,7 +4,7 @@ instance Mod_780_SLD_Buster_MT (Npc_Default)
 	name 		= "Buster";
 	guild 		= GIL_MIL;
 	id 			= 780;
-	voice		= 0;
+	voice		= 6;
 	flags       = 0;										//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

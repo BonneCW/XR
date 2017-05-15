@@ -4,7 +4,7 @@ INSTANCE Mod_7772_BDT_Bandit_NW (Npc_Default)
 	name 		= "Räuber";
 	guild 		= GIL_out;
 	id 			= 7772;
-	voice		= 0;
+	voice		= 6;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_1615_PIR_Bones_SS (Npc_Default)
 	name 		= "Bones";
 	guild 		= GIL_out;
 	id 			= 1615;
-	voice		= 0;
+	voice		= 4;
 	flags       = 2;															
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_7698_PAL_Hagen_MT (Npc_Default)
 	name 		= "Lord Hagen";
 	guild 		= GIL_OUT;
 	id 			= 7698;
-	voice 		= 36;
+	voice 		= 6;
 	flags       = 0;	//Joly: NPC_FLAG_IMMORTAL																
 	npctype		= NPCTYPE_MAIN;
 	

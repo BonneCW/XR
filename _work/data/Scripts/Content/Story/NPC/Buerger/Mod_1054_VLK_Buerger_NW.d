@@ -4,7 +4,7 @@ instance Mod_1054_VLK_Nimius_NW (Npc_Default)
 	name 		= "Nimius"; 
 	guild 		= GIL_PAL;
 	id 			= 1054;
-	voice		= 0;
+	voice		= 1;
 	flags       = 0;																
 	npctype		= NPCTYPE_main;
 	

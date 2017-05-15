@@ -15,42 +15,42 @@ FUNC INT Info_Mod_August_Hi_Condition()
 
 FUNC VOID Info_Mod_August_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_August_Hi_13_00"); //Halt! Deine Fresse kenn ich nicht.
-	AI_Output(self, hero, "Info_Mod_August_Hi_13_01"); //Das bedeutet, ich hab dir die Regeln der Stadt noch nicht vorgelesen - oder du hast dich von 'nem Schattenläufer "umoperieren" lassen. (lacht merkwürdig)
-	AI_Output(self, hero, "Info_Mod_August_Hi_13_02"); //Ich kann den bescheuerten Text immer noch nicht auswendig, also muss ich zwischendurch mal aufs Papier gucken, wenn es dir nichts ausmacht.
+	AI_Output(self, hero, "Info_Mod_August_Hi_04_00"); //Halt! Deine Fresse kenn ich nicht.
+	AI_Output(self, hero, "Info_Mod_August_Hi_04_01"); //Das bedeutet, ich hab dir die Regeln der Stadt noch nicht vorgelesen - oder du hast dich von 'nem Schattenläufer "umoperieren" lassen. (lacht merkwürdig)
+	AI_Output(self, hero, "Info_Mod_August_Hi_04_02"); //Ich kann den bescheuerten Text immer noch nicht auswendig, also muss ich zwischendurch mal aufs Papier gucken, wenn es dir nichts ausmacht.
 
 	B_UseFakeScroll ();
 
-	AI_Output(self, hero, "Info_Mod_August_Hi_13_03"); //(liest stockend) Die vier Gebote für Stadtfremde.
-	AI_Output(self, hero, "Info_Mod_August_Hi_13_04"); //Erstens: Der Gebrauch von Freudenspender innerhalb der Stadtmauern ist untersagt.
-	AI_Output(self, hero, "Info_Mod_August_Hi_13_05"); //Haha, gilt wenigstens nur für euch Fremde.
+	AI_Output(self, hero, "Info_Mod_August_Hi_04_03"); //(liest stockend) Die vier Gebote für Stadtfremde.
+	AI_Output(self, hero, "Info_Mod_August_Hi_04_04"); //Erstens: Der Gebrauch von Freudenspender innerhalb der Stadtmauern ist untersagt.
+	AI_Output(self, hero, "Info_Mod_August_Hi_04_05"); //Haha, gilt wenigstens nur für euch Fremde.
 
 	B_UseFakeScroll ();
 
-	AI_Output(self, hero, "Info_Mod_August_Hi_13_06"); //Zweitens: Den drei gezähmten Ratten des Stadthalters soll gehuldigt werden.
-	AI_Output(self, hero, "Info_Mod_August_Hi_13_07"); //Das hat sich übrigens erledigt, die sind gestorben.
+	AI_Output(self, hero, "Info_Mod_August_Hi_04_06"); //Zweitens: Den drei gezähmten Ratten des Stadthalters soll gehuldigt werden.
+	AI_Output(self, hero, "Info_Mod_August_Hi_04_07"); //Das hat sich übrigens erledigt, die sind gestorben.
 
 	B_UseFakeScroll ();
 
-	AI_Output(self, hero, "Info_Mod_August_Hi_13_08"); //Drittens: Jegliche Anwendung von Gewalt ist untersagt.
+	AI_Output(self, hero, "Info_Mod_August_Hi_04_08"); //Drittens: Jegliche Anwendung von Gewalt ist untersagt.
 
 	B_UseFakeScroll ();
 
-	AI_Output(self, hero, "Info_Mod_August_Hi_13_09"); //Viertens: Die Huldigung Beliars und Ausübung von Gräueln in seinem Namen können mit dem Feuertod bestraft werden.
+	AI_Output(self, hero, "Info_Mod_August_Hi_04_09"); //Viertens: Die Huldigung Beliars und Ausübung von Gräueln in seinem Namen können mit dem Feuertod bestraft werden.
 
 	if (Mod_Gottstatus == 1)
 	|| (Mod_Gottstatus == 2)
 	|| (Mod_Gottstatus == 3)
 	|| (Mod_Gottstatus == 4)
 	{
-		AI_Output(self, hero, "Info_Mod_August_Hi_13_10"); //Oh ja, das könnte ganz besonders für dich interessant sein.
+		AI_Output(self, hero, "Info_Mod_August_Hi_04_10"); //Oh ja, das könnte ganz besonders für dich interessant sein.
 	};
 
-	AI_Output(self, hero, "Info_Mod_August_Hi_13_11"); //Das war's. Noch irgendwelche Fragen?
+	AI_Output(self, hero, "Info_Mod_August_Hi_04_11"); //Das war's. Noch irgendwelche Fragen?
 
 	AI_PlayAni	(self, "T_HUNGER");
 
-	AI_Output(self, hero, "Info_Mod_August_Hi_13_12"); //(murmelt) Ich könnte auch mal wieder was zum Beißen vertragen ...
+	AI_Output(self, hero, "Info_Mod_August_Hi_04_12"); //(murmelt) Ich könnte auch mal wieder was zum Beißen vertragen ...
 
 	B_StartOtherRoutine	(self, "START");
 };
@@ -77,8 +77,8 @@ FUNC INT Info_Mod_August_Essenholen_Condition()
 FUNC VOID Info_Mod_August_Essenholen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_August_Essenholen_15_00"); //Soll ich dir was Essbares besorgen?
-	AI_Output(self, hero, "Info_Mod_August_Essenholen_13_01"); //Oh ja! Ich hätte so richtig Hunger auf eine Spezialität des Gasthauses, das gepökelte Lammfleisch.
-	AI_Output(self, hero, "Info_Mod_August_Essenholen_13_02"); //Zwei Rationen, und das Geld geb ich dir natürlich wieder.
+	AI_Output(self, hero, "Info_Mod_August_Essenholen_04_01"); //Oh ja! Ich hätte so richtig Hunger auf eine Spezialität des Gasthauses, das gepökelte Lammfleisch.
+	AI_Output(self, hero, "Info_Mod_August_Essenholen_04_02"); //Zwei Rationen, und das Geld geb ich dir natürlich wieder.
 
 	Log_CreateTopic	(TOPIC_MOD_KHORATA_FRISCHFLEISCH, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_KHORATA_FRISCHFLEISCH, LOG_RUNNING);
@@ -111,7 +111,7 @@ FUNC VOID Info_Mod_August_EssenGeholt_Info()
 
 	B_GiveInvItems	(hero, self, ItFo_LammPoekelfleisch, 2);
 
-	AI_Output(self, hero, "Info_Mod_August_EssenGeholt_13_01"); //Dank dir! Nimm das!
+	AI_Output(self, hero, "Info_Mod_August_EssenGeholt_04_01"); //Dank dir! Nimm das!
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
@@ -145,7 +145,7 @@ FUNC VOID Info_Mod_August_EssenGeholt_A()
 
 	if (self.aivar[AIV_Verhandlung] == TRUE)
 	{
-		AI_Output(self, hero, "Info_Mod_August_EssenGeholt_A_13_01"); //Hast Recht, hast mehr verdient.
+		AI_Output(self, hero, "Info_Mod_August_EssenGeholt_A_04_01"); //Hast Recht, hast mehr verdient.
 
 		B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 	
@@ -155,7 +155,7 @@ FUNC VOID Info_Mod_August_EssenGeholt_A()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_August_EssenGeholt_A_13_02"); //Du machst Späße!
+		AI_Output(self, hero, "Info_Mod_August_EssenGeholt_A_04_02"); //Du machst Späße!
 	};
 
 	Info_ClearChoices	(Info_Mod_August_EssenGeholt);
@@ -184,7 +184,7 @@ FUNC VOID Info_Mod_August_Plagenquest_Info()
 {
 	if (Mod_REL_Stadthalter == 1)
 	{
-		AI_Output(self, hero, "Info_Mod_August_Plagenquest_13_00"); //Verdammt, hoffentlich findet Theodorus bald etwas heraus.
+		AI_Output(self, hero, "Info_Mod_August_Plagenquest_04_00"); //Verdammt, hoffentlich findet Theodorus bald etwas heraus.
 
 		Log_CreateTopic	(TOPIC_MOD_ADANOS_DRECKSVIECHER, LOG_MISSION);
 		B_SetTopicStatus	(TOPIC_MOD_ADANOS_DRECKSVIECHER, LOG_RUNNING);
@@ -192,7 +192,7 @@ FUNC VOID Info_Mod_August_Plagenquest_Info()
 	}
 	else if (Mod_REL_Stadthalter == 2)
 	{
-		AI_Output(self, hero, "Info_Mod_August_Plagenquest_13_01"); //Verdammt, hoffentlich findet Wendel bald etwas heraus.
+		AI_Output(self, hero, "Info_Mod_August_Plagenquest_04_01"); //Verdammt, hoffentlich findet Wendel bald etwas heraus.
 
 		Log_CreateTopic	(TOPIC_MOD_ADANOS_DRECKSVIECHER, LOG_MISSION);
 		B_SetTopicStatus	(TOPIC_MOD_ADANOS_DRECKSVIECHER, LOG_RUNNING);
@@ -200,14 +200,14 @@ FUNC VOID Info_Mod_August_Plagenquest_Info()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_August_Plagenquest_13_02"); //Verdammt, hoffentlich findet Lukas bald etwas heraus.
+		AI_Output(self, hero, "Info_Mod_August_Plagenquest_04_02"); //Verdammt, hoffentlich findet Lukas bald etwas heraus.
 
 		Log_CreateTopic	(TOPIC_MOD_ADANOS_DRECKSVIECHER, LOG_MISSION);
 		B_SetTopicStatus	(TOPIC_MOD_ADANOS_DRECKSVIECHER, LOG_RUNNING);
 		B_LogEntry	(TOPIC_MOD_ADANOS_DRECKSVIECHER, "Khorata scheint ein Problem mit Insekten zu haben. Lukas wird hoffentlich mehr dazu sagen können.");
 	};
 
-	AI_Output(self, hero, "Info_Mod_August_Plagenquest_13_03"); //Die ganzen Scheißviecher ... erinnert mich an meinen bisher übelsten Trip, den ich hatte.
+	AI_Output(self, hero, "Info_Mod_August_Plagenquest_04_03"); //Die ganzen Scheißviecher ... erinnert mich an meinen bisher übelsten Trip, den ich hatte.
 };
 
 INSTANCE Info_Mod_August_Zurechtfinden (C_INFO)
@@ -232,10 +232,10 @@ FUNC INT Info_Mod_August_Zurechtfinden_Condition()
 FUNC VOID Info_Mod_August_Zurechtfinden_Info()
 {
 	AI_Output(hero, self, "Info_Mod_August_Zurechtfinden_15_00"); //Wie finde ich mich hier zurecht?
-	AI_Output(self, hero, "Info_Mod_August_Zurechtfinden_13_01"); //Das ist gar nicht so schwierig. Einfach die Hauptstraße hier geradeaus, und du kommst zum Marktplatz.
-	AI_Output(self, hero, "Info_Mod_August_Zurechtfinden_13_02"); //Links davon geht eine Straße ab, die führt dich geradewegs zum Gericht.
-	AI_Output(self, hero, "Info_Mod_August_Zurechtfinden_13_03"); //Und von dort nochmal links und du landest beim Gasthaus. Das sollte fürs Erste genügen.
-	AI_Output(self, hero, "Info_Mod_August_Zurechtfinden_13_04"); //Wenn du geführt werden willst, frag doch Hubert, der lungert häufig hier beim Tor herum.
+	AI_Output(self, hero, "Info_Mod_August_Zurechtfinden_04_01"); //Das ist gar nicht so schwierig. Einfach die Hauptstraße hier geradeaus, und du kommst zum Marktplatz.
+	AI_Output(self, hero, "Info_Mod_August_Zurechtfinden_04_02"); //Links davon geht eine Straße ab, die führt dich geradewegs zum Gericht.
+	AI_Output(self, hero, "Info_Mod_August_Zurechtfinden_04_03"); //Und von dort nochmal links und du landest beim Gasthaus. Das sollte fürs Erste genügen.
+	AI_Output(self, hero, "Info_Mod_August_Zurechtfinden_04_04"); //Wenn du geführt werden willst, frag doch Hubert, der lungert häufig hier beim Tor herum.
 };
 
 INSTANCE Info_Mod_August_KhorataOrganisation (C_INFO)
@@ -261,10 +261,10 @@ FUNC INT Info_Mod_August_KhorataOrganisation_Condition()
 FUNC VOID Info_Mod_August_KhorataOrganisation_Info()
 {
 	AI_Output(hero, self, "Info_Mod_August_KhorataOrganisation_15_00"); //Wie ist Khorata organisiert?
-	AI_Output(self, hero, "Info_Mod_August_KhorataOrganisation_13_01"); //Kann ich dir auch nicht ganz genau erklären.
-	AI_Output(self, hero, "Info_Mod_August_KhorataOrganisation_13_02"); //Unser Stadthalter Anselm kümmert sich um die ganzen Vorschriften und neuen Gesetze, der Richter und seine zwei Schöppen leiten das Gericht, und wir Wachen sorgen dafür, dass alles ruhig bleibt.
-	AI_Output(self, hero, "Info_Mod_August_KhorataOrganisation_13_03"); //Durch den Handel mit Freudenspender macht Khorata ganz ordentlich Gewinn, und was die Händler dafür alles kaufen!
-	AI_Output(self, hero, "Info_Mod_August_KhorataOrganisation_13_04"); //Schleppen ganz schön viel Zeug rein in die Stadt, ich bekomm's ja hier mit.
+	AI_Output(self, hero, "Info_Mod_August_KhorataOrganisation_04_01"); //Kann ich dir auch nicht ganz genau erklären.
+	AI_Output(self, hero, "Info_Mod_August_KhorataOrganisation_04_02"); //Unser Stadthalter Anselm kümmert sich um die ganzen Vorschriften und neuen Gesetze, der Richter und seine zwei Schöppen leiten das Gericht, und wir Wachen sorgen dafür, dass alles ruhig bleibt.
+	AI_Output(self, hero, "Info_Mod_August_KhorataOrganisation_04_03"); //Durch den Handel mit Freudenspender macht Khorata ganz ordentlich Gewinn, und was die Händler dafür alles kaufen!
+	AI_Output(self, hero, "Info_Mod_August_KhorataOrganisation_04_04"); //Schleppen ganz schön viel Zeug rein in die Stadt, ich bekomm's ja hier mit.
 };
 
 INSTANCE Info_Mod_August_Buerger (C_INFO)
@@ -291,12 +291,12 @@ FUNC INT Info_Mod_August_Buerger_Condition()
 FUNC VOID Info_Mod_August_Buerger_Info()
 {
 	AI_Output(hero, self, "Info_Mod_August_Buerger_15_00"); //Du hattest doch mal die drei Ratten von Anselm erwähnt ...
-	AI_Output(self, hero, "Info_Mod_August_Buerger_13_01"); //Die toten Drecksviecher, genau. Was ist mit denen?
+	AI_Output(self, hero, "Info_Mod_August_Buerger_04_01"); //Die toten Drecksviecher, genau. Was ist mit denen?
 	AI_Output(hero, self, "Info_Mod_August_Buerger_15_02"); //Kennst du ihre Namen?
-	AI_Output(self, hero, "Info_Mod_August_Buerger_13_03"); //Türlich. Damals, als die noch gelebt haben, mussten wir von der Wache ihnen täglich huldigen.
-	AI_Output(self, hero, "Info_Mod_August_Buerger_13_04"); //Oleg, Pinky und Fievel. Haha, echt kranke Namen für so olle Ratten, oder?
+	AI_Output(self, hero, "Info_Mod_August_Buerger_04_03"); //Türlich. Damals, als die noch gelebt haben, mussten wir von der Wache ihnen täglich huldigen.
+	AI_Output(self, hero, "Info_Mod_August_Buerger_04_04"); //Oleg, Pinky und Fievel. Haha, echt kranke Namen für so olle Ratten, oder?
 	AI_Output(hero, self, "Info_Mod_August_Buerger_15_05"); //Stimmt. Dank dir für die Information.
-	AI_Output(self, hero, "Info_Mod_August_Buerger_13_06"); //Nix zu danken.
+	AI_Output(self, hero, "Info_Mod_August_Buerger_04_06"); //Nix zu danken.
 };
 
 INSTANCE Info_Mod_August_Buerger2 (C_INFO)
@@ -319,7 +319,7 @@ FUNC INT Info_Mod_August_Buerger2_Condition()
 
 FUNC VOID Info_Mod_August_Buerger2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_August_Buerger2_13_00"); //Na, die Stadtsbürgerschaft hast du gekriegt? Meinen Glückwunsch, bist ein guter Mann.
+	AI_Output(self, hero, "Info_Mod_August_Buerger2_04_00"); //Na, die Stadtsbürgerschaft hast du gekriegt? Meinen Glückwunsch, bist ein guter Mann.
 };
 
 INSTANCE Info_Mod_August_Unruhen (C_INFO)
@@ -342,21 +342,21 @@ FUNC INT Info_Mod_August_Unruhen_Condition()
 
 FUNC VOID Info_Mod_August_Unruhen_Info()
 {
-	AI_Output(self, hero, "Info_Mod_August_Unruhen_13_00"); //(grimmig) Kein guter Zeitpunkt, um hier anzukommen, fürchte ich.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen_04_00"); //(grimmig) Kein guter Zeitpunkt, um hier anzukommen, fürchte ich.
 	AI_Output(hero, self, "Info_Mod_August_Unruhen_15_01"); //Was ist passiert?
-	AI_Output(self, hero, "Info_Mod_August_Unruhen_13_02"); //Lauter Scheiße. Es begann damit, dass die Buddler in unserer Mine mehr Lohn und bessere Arbeitsbedingungen forderten.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen_13_03"); //Aber Anselm ließ nicht mit sich reden.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen_13_04"); //Daraufhin haben die Bergleute sich geweigert, weiterzuarbeiten, und dazu haben sie ihren Aufseher Frazer überwältigt und gefesselt.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen_13_05"); //Anselm hat Tyrus und Dalton geschickt, um die Buddler wieder zum Arbeiten zu bringen.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen_13_06"); //Scheiße! Gerade Tyrus und Dalton, die beiden Hitzköpfe.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen_13_07"); //Natürlich ist der Streit eskaliert, und dann kamen die Spitzhacken ins Spiel.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen_13_08"); //Wir haben uns noch nicht getraut, die beiden Leichen vor der Mine wegzuholen.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen_04_02"); //Lauter Scheiße. Es begann damit, dass die Buddler in unserer Mine mehr Lohn und bessere Arbeitsbedingungen forderten.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen_04_03"); //Aber Anselm ließ nicht mit sich reden.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen_04_04"); //Daraufhin haben die Bergleute sich geweigert, weiterzuarbeiten, und dazu haben sie ihren Aufseher Frazer überwältigt und gefesselt.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen_04_05"); //Anselm hat Tyrus und Dalton geschickt, um die Buddler wieder zum Arbeiten zu bringen.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen_04_06"); //Scheiße! Gerade Tyrus und Dalton, die beiden Hitzköpfe.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen_04_07"); //Natürlich ist der Streit eskaliert, und dann kamen die Spitzhacken ins Spiel.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen_04_08"); //Wir haben uns noch nicht getraut, die beiden Leichen vor der Mine wegzuholen.
 	AI_Output(hero, self, "Info_Mod_August_Unruhen_15_09"); //Klingt nach einem gewaltigen Problem.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen_13_10"); //Wenn das nur alles wäre! Anselm hat sich aus dem Staub gemacht, und wir haben keinen Stadthalter mehr!
-	AI_Output(self, hero, "Info_Mod_August_Unruhen_13_11"); //Und ohne einen verdammten Anführer will sich niemand um die Verhandlungen mit den Buddlern kümmern.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen_13_12"); //Du hast nicht zufällig Lust auf das Amt?
+	AI_Output(self, hero, "Info_Mod_August_Unruhen_04_10"); //Wenn das nur alles wäre! Anselm hat sich aus dem Staub gemacht, und wir haben keinen Stadthalter mehr!
+	AI_Output(self, hero, "Info_Mod_August_Unruhen_04_11"); //Und ohne einen verdammten Anführer will sich niemand um die Verhandlungen mit den Buddlern kümmern.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen_04_12"); //Du hast nicht zufällig Lust auf das Amt?
 	AI_Output(hero, self, "Info_Mod_August_Unruhen_15_13"); //Tut mir Leid, aber das entspricht nicht meiner Vorstellung der Zukunft.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen_13_14"); //(verzweifelt) Könntest du dich dann wenigstens um einen Nachfolger für Anselm kümmern?
+	AI_Output(self, hero, "Info_Mod_August_Unruhen_04_14"); //(verzweifelt) Könntest du dich dann wenigstens um einen Nachfolger für Anselm kümmern?
 
 	B_StartOtherRoutine	(self, "START");
 };
@@ -383,10 +383,10 @@ FUNC INT Info_Mod_August_Unruhen2_Condition()
 FUNC VOID Info_Mod_August_Unruhen2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_August_Unruhen2_15_00"); //In Ordnung, ich mache mich auf die Suche.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen2_13_01"); //In meinen Augen gibt's drei geeignete Kandidaten: Lukas, Wendel und Theodorus.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen2_13_02"); //Sprich mit ihnen und versuch sie zu überzeugen.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen2_13_03"); //Wenn du sie alle angehört hast, entscheide dich und berichte mir.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen2_13_04"); //Wir vertrauen auf dich.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen2_04_01"); //In meinen Augen gibt's drei geeignete Kandidaten: Lukas, Wendel und Theodorus.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen2_04_02"); //Sprich mit ihnen und versuch sie zu überzeugen.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen2_04_03"); //Wenn du sie alle angehört hast, entscheide dich und berichte mir.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen2_04_04"); //Wir vertrauen auf dich.
 
 	Log_CreateTopic	(TOPIC_MOD_KHORATA_UNRUHEN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_KHORATA_UNRUHEN, LOG_RUNNING);
@@ -416,7 +416,7 @@ FUNC INT Info_Mod_August_Unruhen3_Condition()
 FUNC VOID Info_Mod_August_Unruhen3_Info()
 {
 	AI_Output(hero, self, "Info_Mod_August_Unruhen3_15_00"); //Ich habe mich entschieden.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen3_13_01"); //Spuck's aus.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen3_04_01"); //Spuck's aus.
 
 	Info_ClearChoices	(Info_Mod_August_Unruhen3);
 
@@ -437,8 +437,8 @@ FUNC VOID Info_Mod_August_Unruhen3_BACK()
 FUNC VOID Info_Mod_August_Unruhen3_C()
 {
 	AI_Output(hero, self, "Info_Mod_August_Unruhen3_C_15_00"); //Lukas soll neuer Stadthalter werden.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen3_C_13_01"); //Ja, der gute Lukas wird's richten.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen3_C_13_02"); //Geh zu ihm und richte ihm die freudige Botschaft aus, ich kümmere mich darum, dass die ganze Stadt davon erfährt.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen3_C_04_01"); //Ja, der gute Lukas wird's richten.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen3_C_04_02"); //Geh zu ihm und richte ihm die freudige Botschaft aus, ich kümmere mich darum, dass die ganze Stadt davon erfährt.
 
 	Mod_REL_Kandidat = 4;
 
@@ -450,8 +450,8 @@ FUNC VOID Info_Mod_August_Unruhen3_C()
 FUNC VOID Info_Mod_August_Unruhen3_B()
 {
 	AI_Output(hero, self, "Info_Mod_August_Unruhen3_B_15_00"); //Wendel soll neuer Stadthalter werden.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen3_B_13_01"); //Dann lass uns hoffen, dass Wendel genug Biss hat.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen3_B_13_02"); //Teil ihm die Neuigkeiten mit, ich werde sie in der Stadt bekannt machen.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen3_B_04_01"); //Dann lass uns hoffen, dass Wendel genug Biss hat.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen3_B_04_02"); //Teil ihm die Neuigkeiten mit, ich werde sie in der Stadt bekannt machen.
 
 	Mod_REL_Kandidat = 3;
 
@@ -463,9 +463,9 @@ FUNC VOID Info_Mod_August_Unruhen3_B()
 FUNC VOID Info_Mod_August_Unruhen3_A()
 {
 	AI_Output(hero, self, "Info_Mod_August_Unruhen3_A_15_00"); //Theodorus soll neuer Stadthalter werden.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen3_A_13_01"); //Eine ... ungewöhnliche Wahl. Na gut, du wirst schon wissen, was du da sagst.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen3_A_13_02"); //Ich werde es der restlichen Bevölkerung mitteilen.
-	AI_Output(self, hero, "Info_Mod_August_Unruhen3_A_13_03"); //Du solltest Theodorus in die Stadt führen und ihm seine neue Behausung zeigen.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen3_A_04_01"); //Eine ... ungewöhnliche Wahl. Na gut, du wirst schon wissen, was du da sagst.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen3_A_04_02"); //Ich werde es der restlichen Bevölkerung mitteilen.
+	AI_Output(self, hero, "Info_Mod_August_Unruhen3_A_04_03"); //Du solltest Theodorus in die Stadt führen und ihm seine neue Behausung zeigen.
 
 	Mod_REL_Kandidat = 2;
 
@@ -498,7 +498,7 @@ FUNC INT Info_Mod_August_Freudenspender_Condition()
 FUNC VOID Info_Mod_August_Freudenspender_Info()
 {
 	AI_Output(hero, self, "Info_Mod_August_Freudenspender_15_00"); //Ich hab hier Freudenspender ...
-	AI_Output(self, hero, "Info_Mod_August_Freudenspender_13_01"); //... den du nicht in der Stadt konsumieren darfst, genau. Halt dich dran.
+	AI_Output(self, hero, "Info_Mod_August_Freudenspender_04_01"); //... den du nicht in der Stadt konsumieren darfst, genau. Halt dich dran.
 };
 
 INSTANCE Info_Mod_August_Penner (C_INFO)
@@ -521,28 +521,28 @@ FUNC INT Info_Mod_August_Penner_Condition()
 
 FUNC VOID Info_Mod_August_Penner_Info()
 {
-	AI_Output(self, hero, "Info_Mod_August_Penner_13_00"); //Schau her! Ein neues Gesich ... Nein. Dich hab ich schon mal gesehen.
+	AI_Output(self, hero, "Info_Mod_August_Penner_04_00"); //Schau her! Ein neues Gesich ... Nein. Dich hab ich schon mal gesehen.
 	AI_Output(hero, self, "Info_Mod_August_Penner_15_01"); //Wohl wahr.
 
 	if (Npc_KnowsInfo(hero, Info_Mod_August_EssenGeholt))
 	{
 		AI_Output(hero, self, "Info_Mod_August_Penner_15_02"); //Ich habe dir das Frühstück gebracht.
-		AI_Output(self, hero, "Info_Mod_August_Penner_13_03"); //(eifrig) Genau! Das gepökelte Lamm. Für den großen Hunger. Würdest du ...
+		AI_Output(self, hero, "Info_Mod_August_Penner_04_03"); //(eifrig) Genau! Das gepökelte Lamm. Für den großen Hunger. Würdest du ...
 		AI_Output(hero, self, "Info_Mod_August_Penner_15_04"); //Ich verstehe. Noch eine Portion ...
-		AI_Output(self, hero, "Info_Mod_August_Penner_13_05"); //Genau! Und ein Fladenbrot vom Bäcker dazu, wenn's recht ist, und ein Dunkelbier aus der Brauerei.
-		AI_Output(self, hero, "Info_Mod_August_Penner_13_06"); //Das Lamm vom Fleischer ist fast noch besser, als das von Peter. So drei Keulen dürfen's sein.
+		AI_Output(self, hero, "Info_Mod_August_Penner_04_05"); //Genau! Und ein Fladenbrot vom Bäcker dazu, wenn's recht ist, und ein Dunkelbier aus der Brauerei.
+		AI_Output(self, hero, "Info_Mod_August_Penner_04_06"); //Das Lamm vom Fleischer ist fast noch besser, als das von Peter. So drei Keulen dürfen's sein.
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_August_Penner_13_07"); //Könntest du mir einen Gefallen tun?
+		AI_Output(self, hero, "Info_Mod_August_Penner_04_07"); //Könntest du mir einen Gefallen tun?
 		AI_Output(hero, self, "Info_Mod_August_Penner_15_08"); //Sicher, was gibt's?
-		AI_Output(self, hero, "Info_Mod_August_Penner_13_09"); //Könntest du mir eine Portion gepökeltes Lammfleisch von Peter oder dem Metzger, ein Fladenbrot vom Bäcker und ein Dunkelbier vom Brauer besorgen?
+		AI_Output(self, hero, "Info_Mod_August_Penner_04_09"); //Könntest du mir eine Portion gepökeltes Lammfleisch von Peter oder dem Metzger, ein Fladenbrot vom Bäcker und ein Dunkelbier vom Brauer besorgen?
 	};
 
 	AI_Output(hero, self, "Info_Mod_August_Penner_15_10"); //Alkohol im Dienst? Wenn ich das dem Stadthalter sage ...
-	AI_Output(self, hero, "Info_Mod_August_Penner_13_11"); //Sagst du nicht. Dann würdest du nämlich bekommen, was ich zu geben habe ...
+	AI_Output(self, hero, "Info_Mod_August_Penner_04_11"); //Sagst du nicht. Dann würdest du nämlich bekommen, was ich zu geben habe ...
 	AI_Output(hero, self, "Info_Mod_August_Penner_15_12"); //So? Was denn?
-	AI_Output(self, hero, "Info_Mod_August_Penner_13_13"); //Erst den Happen.
+	AI_Output(self, hero, "Info_Mod_August_Penner_04_13"); //Erst den Happen.
 
 	Log_CreateTopic	(TOPIC_MOD_JG_AUGUST, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_JG_AUGUST, LOG_RUNNING);
@@ -583,20 +583,20 @@ FUNC VOID Info_Mod_August_Penner2_Info()
 
 	B_ShowGivenThings	("3 gepökeltes Lammfleisch, Fladenbrot und Dunkelbier gegeben");
 
-	AI_Output(self, hero, "Info_Mod_August_Penner2_13_01"); //Gib schon her. Mittlerweile schieb ich ordentlich Kohldampf.
+	AI_Output(self, hero, "Info_Mod_August_Penner2_04_01"); //Gib schon her. Mittlerweile schieb ich ordentlich Kohldampf.
 	AI_Output(hero, self, "Info_Mod_August_Penner2_15_02"); //Was ist es, was du mir geben wolltest?
-	AI_Output(self, hero, "Info_Mod_August_Penner2_13_03"); //Also letztens hatte ich Dienst auf dem Wachturm am Pass.
-	AI_Output(self, hero, "Info_Mod_August_Penner2_13_04"); //Wie ich so den Hang hochlaufe, stolpere ich doch über dieses Ding hier. Ist garantiert wertvoll, das Teil.
+	AI_Output(self, hero, "Info_Mod_August_Penner2_04_03"); //Also letztens hatte ich Dienst auf dem Wachturm am Pass.
+	AI_Output(self, hero, "Info_Mod_August_Penner2_04_04"); //Wie ich so den Hang hochlaufe, stolpere ich doch über dieses Ding hier. Ist garantiert wertvoll, das Teil.
 	AI_Output(hero, self, "Info_Mod_August_Penner2_15_05"); //Zeig her.
-	AI_Output(self, hero, "Info_Mod_August_Penner2_13_06"); //Hier.
+	AI_Output(self, hero, "Info_Mod_August_Penner2_04_06"); //Hier.
 
 	B_GiveInvItems	(self, hero, ItMi_Brokenrune01, 1);
 
 	AI_Output(hero, self, "Info_Mod_August_Penner2_15_07"); //Aha. Eine kaputte Rune. Hast du auch die andere Hälfte?
-	AI_Output(self, hero, "Info_Mod_August_Penner2_13_08"); //Nee. Hab lange gesucht, aber nichts mehr gefunden.
+	AI_Output(self, hero, "Info_Mod_August_Penner2_04_08"); //Nee. Hab lange gesucht, aber nichts mehr gefunden.
 	AI_Output(hero, self, "Info_Mod_August_Penner2_15_09"); //Na gut. Vielleicht ist sie noch zu gebrauchen.
 	AI_Output(hero, self, "Info_Mod_August_Penner2_15_10"); //Hast mich aber ganz schön angeschmiert. Ich bekomme noch 50 Gold fürs Essen.
-	AI_Output(self, hero, "Info_Mod_August_Penner2_13_11"); //Natürlich, hier. Und sicher findet sich das andere Stück noch.
+	AI_Output(self, hero, "Info_Mod_August_Penner2_04_11"); //Natürlich, hier. Und sicher findet sich das andere Stück noch.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 

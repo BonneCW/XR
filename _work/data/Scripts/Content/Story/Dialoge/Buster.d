@@ -18,9 +18,9 @@ FUNC INT Info_Mod_Buster_Hi_Condition()
 
 FUNC VOID Info_Mod_Buster_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Buster_Hi_13_00"); //Hey, du siehst aber wieder ziemlich ungelenkig aus, als hättest du deine Gliedmaßen lange nicht ausgestreckt.
+	AI_Output(self, hero, "Info_Mod_Buster_Hi_06_00"); //Hey, du siehst aber wieder ziemlich ungelenkig aus, als hättest du deine Gliedmaßen lange nicht ausgestreckt.
 	AI_Output(hero, self, "Info_Mod_Buster_Hi_15_01"); //Ja, so ein paar Wochen unter Steinen ...
-	AI_Output(self, hero, "Info_Mod_Buster_Hi_13_02"); //Ich könnte dir helfen, deine Beweglichkeit wieder auf Vordermann zu bringen.
+	AI_Output(self, hero, "Info_Mod_Buster_Hi_06_02"); //Ich könnte dir helfen, deine Beweglichkeit wieder auf Vordermann zu bringen.
 
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_SOELDNER, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_LEHRER_SOELDNER, "Buster kann mir beibringen, mich besser zu bewegen.");
@@ -54,9 +54,9 @@ FUNC VOID Info_Mod_Buster_Lernen_Info()
 
 	if (B_TeachThiefTalent (self, hero, NPC_TALENT_ACROBAT))
 	{
-		AI_Output(self, hero, "Info_Mod_Buster_Lernen_13_01"); //Wenn du deinen Körper beherrschst, bist du in der Lage viel weiter zu springen.
-		AI_Output(self, hero, "Info_Mod_Buster_Lernen_13_02"); //Du lernst dich richtig abzurollen und aus dem Fall heraus richtig zu landen. Aber denk daran, du bist nicht unsterblich!
-		AI_Output(self, hero, "Info_Mod_Buster_Lernen_13_03"); //Auch im Kampf ist Akrobatik sehr hilfreich. Du kannst deinen Abstand zum Gegner sehr schnell verändern. Viel Glück!
+		AI_Output(self, hero, "Info_Mod_Buster_Lernen_06_01"); //Wenn du deinen Körper beherrschst, bist du in der Lage viel weiter zu springen.
+		AI_Output(self, hero, "Info_Mod_Buster_Lernen_06_02"); //Du lernst dich richtig abzurollen und aus dem Fall heraus richtig zu landen. Aber denk daran, du bist nicht unsterblich!
+		AI_Output(self, hero, "Info_Mod_Buster_Lernen_06_03"); //Auch im Kampf ist Akrobatik sehr hilfreich. Du kannst deinen Abstand zum Gegner sehr schnell verändern. Viel Glück!
 	};
 };
 

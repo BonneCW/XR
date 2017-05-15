@@ -18,7 +18,7 @@ FUNC INT Info_Mod_Gerichtswache_01_AnnaProzess_Condition()
 
 FUNC VOID Info_Mod_Gerichtswache_01_AnnaProzess_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Gerichtswache_01_AnnaProzess_11_00"); //Was habt ihr hier zu suchen?
+	AI_Output(self, hero, "Info_Mod_Gerichtswache_01_AnnaProzess_06_00"); //Was habt ihr hier zu suchen?
 
 	B_StartOtherRoutine	(Mod_7370_OUT_Ulrich_REL, "ATPROZESS");
 
@@ -38,7 +38,7 @@ FUNC VOID Info_Mod_Gerichtswache_01_AnnaProzess_Info()
 FUNC VOID Info_Mod_Gerichtswache_01_AnnaProzess_C()
 {
 	AI_Output(hero, self, "Info_Mod_Gerichtswache_01_AnnaProzess_C_15_00"); //Ich soll Ulrich des versuchten Mordes überführen.
-	AI_Output(self, hero, "Info_Mod_Gerichtswache_01_AnnaProzess_C_11_01"); //In Ordnung. Das wollte uns der Richter wohl sagen mit seiner, äh, komischen Ausdrucksweise.
+	AI_Output(self, hero, "Info_Mod_Gerichtswache_01_AnnaProzess_C_06_01"); //In Ordnung. Das wollte uns der Richter wohl sagen mit seiner, äh, komischen Ausdrucksweise.
 
 	Info_ClearChoices	(Info_Mod_Gerichtswache_01_AnnaProzess);
 };
@@ -46,7 +46,7 @@ FUNC VOID Info_Mod_Gerichtswache_01_AnnaProzess_C()
 FUNC VOID Info_Mod_Gerichtswache_01_AnnaProzess_B()
 {
 	AI_Output(hero, self, "Info_Mod_Gerichtswache_01_AnnaProzess_B_15_00"); //Jemand ist in den See gefallen und ruft um Hilfe!
-	AI_Output(self, hero, "Info_Mod_Gerichtswache_01_AnnaProzess_B_11_01"); //Na und? Dafür verlasse ich nicht meinen Posten.
+	AI_Output(self, hero, "Info_Mod_Gerichtswache_01_AnnaProzess_B_06_01"); //Na und? Dafür verlasse ich nicht meinen Posten.
 
 	Info_ClearChoices	(Info_Mod_Gerichtswache_01_AnnaProzess);
 };
@@ -54,7 +54,7 @@ FUNC VOID Info_Mod_Gerichtswache_01_AnnaProzess_B()
 FUNC VOID Info_Mod_Gerichtswache_01_AnnaProzess_A()
 {
 	AI_Output(hero, self, "Info_Mod_Gerichtswache_01_AnnaProzess_A_15_00"); //Am Stadttor ist eine Unruhe entstanden!
-	AI_Output(self, hero, "Info_Mod_Gerichtswache_01_AnnaProzess_A_11_01"); //Scheiße, was ist denn dort nun schon wieder los?
+	AI_Output(self, hero, "Info_Mod_Gerichtswache_01_AnnaProzess_A_06_01"); //Scheiße, was ist denn dort nun schon wieder los?
 
 	Info_ClearChoices	(Info_Mod_Gerichtswache_01_AnnaProzess);
 

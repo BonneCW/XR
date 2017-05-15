@@ -4,7 +4,7 @@ instance Mod_7011_HS_Alex_REL (Npc_Default)
 	name 		= "Alex"; 
 	guild 		= GIL_OUT;
 	id 			= 7011;
-	voice		= 0;
+	voice		= 1;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

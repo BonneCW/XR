@@ -4,7 +4,7 @@ INSTANCE Mod_10001_Orc_UrShak_MT (Npc_Default)
 	name							=	"Ur Shak";
 	guild							=	GIL_FRIENDLY_ORC;
 	id			= 	10001;
-	voice							=	18;
+	voice							=	4;
 	level							=	30;
 	Npctype 	=		NPCTYPE_MAIN;
 

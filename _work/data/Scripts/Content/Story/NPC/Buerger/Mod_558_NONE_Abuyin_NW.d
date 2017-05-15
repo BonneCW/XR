@@ -4,7 +4,7 @@ INSTANCE MOD_558_NONE_Abuyin_NW (Npc_Default)
 	name 		= "Abuyin"; 
 	guild 		= GIL_NONE;
 	id 			= 558;
-	voice 		= 31;
+	voice 		= 6;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	
