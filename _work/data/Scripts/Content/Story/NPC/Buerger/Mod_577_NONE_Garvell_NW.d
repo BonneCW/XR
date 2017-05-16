@@ -4,7 +4,7 @@ instance Mod_577_NONE_Garvell_NW (Npc_Default)
 	name 		= "Garvell"; 
 	guild 		= GIL_OUT;
 	id 			= 577;
-	voice		= 0;
+	voice		= 5;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

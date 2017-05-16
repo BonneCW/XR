@@ -4,7 +4,7 @@ instance Mod_7020_HS_Tuersteher_REL (Npc_Default)
 	name 		= "Türsteher";	
 	guild 		= GIL_OUT;
 	id 			= 7020;
-	voice 		= 29;
+	voice 		= 5;
 	flags       = 0;																
 	npctype		= NPCTYPE_main;
 	

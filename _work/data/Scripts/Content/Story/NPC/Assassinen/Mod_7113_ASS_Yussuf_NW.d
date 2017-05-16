@@ -4,7 +4,7 @@ INSTANCE Mod_7113_ASS_Yussuf_NW (Npc_Default)
 	name 		= "Yussuf"; 
 	guild 		= GIL_OUT;
 	id 			= 7113;
-	voice		= 0;
+	voice		= 5;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

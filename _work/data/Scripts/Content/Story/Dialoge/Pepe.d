@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Pepe_Hallo_Info ()
 {
 	B_Say	(hero, self, "$WASMACHSTDUHIER");
 
-	AI_Output (self, hero, "Info_Mod_Pepe_Hallo_28_01"); //(gelangweilt) Schafe hüten! (seufzt) Und wenn es geht, allem Ärger aus dem Weg gehen.
+	AI_Output (self, hero, "Info_Mod_Pepe_Hallo_02_01"); //(gelangweilt) Schafe hüten! (seufzt) Und wenn es geht, allem Ärger aus dem Weg gehen.
 };
 
 INSTANCE Info_Mod_Pepe_Daemonisch (C_INFO)
@@ -41,21 +41,21 @@ FUNC INT Info_Mod_Pepe_Daemonisch_Condition()
 
 FUNC VOID Info_Mod_Pepe_Daemonisch_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_28_00"); //(panisch) Was macht du hier, was willst du? Bist du auch einer der schwarzen Schatten?
+	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_02_00"); //(panisch) Was macht du hier, was willst du? Bist du auch einer der schwarzen Schatten?
 	AI_Output(hero, self, "Info_Mod_Pepe_Daemonisch_15_01"); //Jetzt beruhige dich erst mal. Was meinst du mit schwarzen Schatten?
-	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_28_02"); //(verstört) Ich meine die Ungeheuer, die nachts die Söldner im Wald gepackt haben.
-	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_28_03"); //Sie tauchten aus dem Nichts mit einer Art ... grellem Kreischen auf.
-	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_28_04"); //Die Söldner zogen ihre Waffen und wollten gegen sie anstürmen.
-	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_28_05"); //Doch sie wurden alle von ihnen gepackt und von ihnen durchdrungen.
-	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_28_06"); //Sie brüllten, schrien und warfen sich zu Boden.
-	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_28_07"); //Einer von ihnen durchbohrte sich sogar mit seiner eigenen Waffe.
-	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_28_08"); //Ich ... ich konnte mich nicht rühren und blieb völlig regungslos beim Feuer sitzen, sah dem schrecklichen Schauspiel hilflos zu.
-	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_28_09"); //Auch, als schon alle am Boden lagen und keiner mehr eine Bewegung tat, war ich wie gelähmt ... viele Stunden.
-	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_28_10"); //Doch dann fingen sie plötzlich alle an zu zucken und zu ächzen.
-	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_28_11"); //Mich hielt nichts mehr und ich ergriff panisch die Flucht. Und seit dem verstecke ich mich hier.
+	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_02_02"); //(verstört) Ich meine die Ungeheuer, die nachts die Söldner im Wald gepackt haben.
+	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_02_03"); //Sie tauchten aus dem Nichts mit einer Art ... grellem Kreischen auf.
+	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_02_04"); //Die Söldner zogen ihre Waffen und wollten gegen sie anstürmen.
+	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_02_05"); //Doch sie wurden alle von ihnen gepackt und von ihnen durchdrungen.
+	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_02_06"); //Sie brüllten, schrien und warfen sich zu Boden.
+	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_02_07"); //Einer von ihnen durchbohrte sich sogar mit seiner eigenen Waffe.
+	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_02_08"); //Ich ... ich konnte mich nicht rühren und blieb völlig regungslos beim Feuer sitzen, sah dem schrecklichen Schauspiel hilflos zu.
+	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_02_09"); //Auch, als schon alle am Boden lagen und keiner mehr eine Bewegung tat, war ich wie gelähmt ... viele Stunden.
+	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_02_10"); //Doch dann fingen sie plötzlich alle an zu zucken und zu ächzen.
+	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_02_11"); //Mich hielt nichts mehr und ich ergriff panisch die Flucht. Und seit dem verstecke ich mich hier.
 	AI_Output(hero, self, "Info_Mod_Pepe_Daemonisch_15_12"); //Hmm, das ist sehr interessant, was du mir berichtest.
 	AI_Output(hero, self, "Info_Mod_Pepe_Daemonisch_15_13"); //Du tust, glaube ich, auch gut daran, dich hier noch ein Weilchen zu verstecken.
-	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_28_14"); //(etwas ruhiger) Ja ... ja, das werde ich.
+	AI_Output(self, hero, "Info_Mod_Pepe_Daemonisch_02_14"); //(etwas ruhiger) Ja ... ja, das werde ich.
 
 	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Pepe hält sich versteckt und fürchtet um sein Leben. Nach seiner Aussage wurden sie nachts von schwarzen Schatten überfallen und alle Söldner zu Boden gerissen. Einer soll sich mit seiner eigenen Waffe durchbohrt haben. Pepe blieb paralysiert am Lagerfeuer sitzen und ergriff erst die Flucht, als die Söldner sich nach vielen Stunden zuckend wieder erhoben.");
 
@@ -85,11 +85,11 @@ FUNC INT Info_Mod_Pepe_Unheil_Condition()
 FUNC VOID Info_Mod_Pepe_Unheil_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Pepe_Unheil_15_00"); //Ist dir in letzter Zeit Merkwürdiges widerfahren, Außergewöhnliches aufgefallen – von den Ungetümen in der Umgebung abgesehen?
-	AI_Output(self, hero, "Info_Mod_Pepe_Unheil_28_01"); //Ja, allerdings. Dieses Rudel schwarzer Wölfe macht mir natürlich Kopfzerbrechen. Die Söldner hatten bereits im Wald nach ihnen gesucht, konnten aber nichts finden.
-	AI_Output(self, hero, "Info_Mod_Pepe_Unheil_28_02"); //Und dann noch die gesundheitlichen Leiden meiner Schafe.
-	AI_Output(self, hero, "Info_Mod_Pepe_Unheil_28_03"); //Irgendetwas scheint sie auch immer aufzuschrecken, wenn sie am Rande des Waldes an der Biegung zum Jäger Grom grasen.
-	AI_Output(self, hero, "Info_Mod_Pepe_Unheil_28_04"); //Ich konnte bislang noch nichts entdecken, hatte aber einmal den Eindruck, als würde ich ein leises Ächzen von den Felsen über ihnen hören.
-	AI_Output(self, hero, "Info_Mod_Pepe_Unheil_28_05"); //Hmm, ansonsten schien es mir so, als hätte ich einige Male abends Gestalten in den Wald gehen sehen. Sehr unheimlich.
+	AI_Output(self, hero, "Info_Mod_Pepe_Unheil_02_01"); //Ja, allerdings. Dieses Rudel schwarzer Wölfe macht mir natürlich Kopfzerbrechen. Die Söldner hatten bereits im Wald nach ihnen gesucht, konnten aber nichts finden.
+	AI_Output(self, hero, "Info_Mod_Pepe_Unheil_02_02"); //Und dann noch die gesundheitlichen Leiden meiner Schafe.
+	AI_Output(self, hero, "Info_Mod_Pepe_Unheil_02_03"); //Irgendetwas scheint sie auch immer aufzuschrecken, wenn sie am Rande des Waldes an der Biegung zum Jäger Grom grasen.
+	AI_Output(self, hero, "Info_Mod_Pepe_Unheil_02_04"); //Ich konnte bislang noch nichts entdecken, hatte aber einmal den Eindruck, als würde ich ein leises Ächzen von den Felsen über ihnen hören.
+	AI_Output(self, hero, "Info_Mod_Pepe_Unheil_02_05"); //Hmm, ansonsten schien es mir so, als hätte ich einige Male abends Gestalten in den Wald gehen sehen. Sehr unheimlich.
 };
 
 INSTANCE Info_Mod_Pepe_Hexen (C_INFO)
@@ -112,8 +112,8 @@ FUNC INT Info_Mod_Pepe_Hexen_Condition()
 
 FUNC VOID Info_Mod_Pepe_Hexen_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Pepe_Hexen_28_00"); //Diese scheußlichen Untiere haben mir meine gesamte Herde umgebracht, und um ein Haar hätte auch ich dran glauben müssen.
-	AI_Output(self, hero, "Info_Mod_Pepe_Hexen_28_01"); //Wie soll ich das nur Onar erklären? Wo ist Innos’ Segen, wenn man ihn mal braucht?!
+	AI_Output(self, hero, "Info_Mod_Pepe_Hexen_02_00"); //Diese scheußlichen Untiere haben mir meine gesamte Herde umgebracht, und um ein Haar hätte auch ich dran glauben müssen.
+	AI_Output(self, hero, "Info_Mod_Pepe_Hexen_02_01"); //Wie soll ich das nur Onar erklären? Wo ist Innos’ Segen, wenn man ihn mal braucht?!
 };
 
 INSTANCE Info_Mod_Pepe_PICKPOCKET (C_INFO)

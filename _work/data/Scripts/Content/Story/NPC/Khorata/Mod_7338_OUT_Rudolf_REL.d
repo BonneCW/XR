@@ -4,7 +4,7 @@ instance Mod_7338_OUT_Lebensmittelhaendler_REL (Npc_Default)
 	name 		= "Rudolf"; 
 	guild 		= GIL_OUT;
 	id 			= 7338;
-	voice		= 0;
+	voice		= 5;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

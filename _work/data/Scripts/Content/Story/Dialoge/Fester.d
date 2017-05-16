@@ -20,9 +20,9 @@ FUNC INT Info_Mod_Fester_Hi_Condition()
 FUNC VOID Info_Mod_Fester_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Fester_Hi_15_00"); //Hallo.
-	AI_Output(self, hero, "Info_Mod_Fester_Hi_31_01"); //Hey, du bist doch neu im Lager. Du willst doch bestimmt schnell aufsteigen und es bei uns zu was bringen.
+	AI_Output(self, hero, "Info_Mod_Fester_Hi_05_01"); //Hey, du bist doch neu im Lager. Du willst doch bestimmt schnell aufsteigen und es bei uns zu was bringen.
 	AI_Output(hero, self, "Info_Mod_Fester_Hi_15_02"); //Sicher, warum nicht.
-	AI_Output(self, hero, "Info_Mod_Fester_Hi_31_03"); //Sehr gut. Dann müsstest du nur mich und zwei andere Jungs auf die Jagd begleiten, paar Molerat und Scavenger erlegen, gar nicht schwer. Was sagst du?
+	AI_Output(self, hero, "Info_Mod_Fester_Hi_05_03"); //Sehr gut. Dann müsstest du nur mich und zwei andere Jungs auf die Jagd begleiten, paar Molerat und Scavenger erlegen, gar nicht schwer. Was sagst du?
 
 	Info_ClearChoices	(Info_Mod_Fester_Hi);
 
@@ -33,7 +33,7 @@ FUNC VOID Info_Mod_Fester_Hi_Info()
 FUNC VOID Info_Mod_Fester_Hi_B()
 {
 	AI_Output(hero, self, "Info_Mod_Fester_Hi_B_15_00"); //Nö, ist mir zu öde.
-	AI_Output(self, hero, "Info_Mod_Fester_Hi_B_31_01"); //So, so, aber bestimmt der Erste, der herumjammert, wenn es nichts im Lager zu essen gibt. Tse, tse, tse, so ein Taugenichts.
+	AI_Output(self, hero, "Info_Mod_Fester_Hi_B_05_01"); //So, so, aber bestimmt der Erste, der herumjammert, wenn es nichts im Lager zu essen gibt. Tse, tse, tse, so ein Taugenichts.
 	
 	Info_ClearChoices	(Info_Mod_Fester_Hi);
 };
@@ -41,7 +41,7 @@ FUNC VOID Info_Mod_Fester_Hi_B()
 FUNC VOID Info_Mod_Fester_Hi_A()
 {
 	AI_Output(hero, self, "Info_Mod_Fester_Hi_A_15_00"); //Klar, bin dabei.
-	AI_Output(self, hero, "Info_Mod_Fester_Hi_A_31_01"); //Fantastisch. Engardo und Nodrak sollten eigentlich schon losgelaufen sein und vor dem Lager auf uns warten. Los geht’s.
+	AI_Output(self, hero, "Info_Mod_Fester_Hi_A_05_01"); //Fantastisch. Engardo und Nodrak sollten eigentlich schon losgelaufen sein und vor dem Lager auf uns warten. Los geht’s.
 	
 	Info_ClearChoices	(Info_Mod_Fester_Hi);
 
@@ -81,7 +81,7 @@ FUNC INT Info_Mod_Fester_VorLager_Condition()
 
 FUNC VOID Info_Mod_Fester_VorLager_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Fester_VorLager_31_00"); //Auf geht’s.
+	AI_Output(self, hero, "Info_Mod_Fester_VorLager_05_00"); //Auf geht’s.
 
 	AI_StopProcessInfos	(self);
 
@@ -115,17 +115,17 @@ FUNC INT Info_Mod_Fester_AtSmallCave_Condition()
 
 FUNC VOID Info_Mod_Fester_AtSmallCave_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Fester_AtSmallCave_31_00"); //Ahh, hier ist ein gutes Plätzchen.
+	AI_Output(self, hero, "Info_Mod_Fester_AtSmallCave_05_00"); //Ahh, hier ist ein gutes Plätzchen.
 	AI_Output(hero, self, "Info_Mod_Fester_AtSmallCave_15_01"); //Hä, wollen wir uns hier auf die Lauer legen?
-	AI_Output(self, hero, "Info_Mod_Fester_AtSmallCave_31_02"); //Ähh, ja, so ähnlich.
+	AI_Output(self, hero, "Info_Mod_Fester_AtSmallCave_05_02"); //Ähh, ja, so ähnlich.
 
 	CreateInvItems	(self, ItMi_Joint, 1);
 
 	B_UseItem	(self, ItMi_Joint);
 
-	AI_Output(self, hero, "Info_Mod_Fester_AtSmallCave_31_03"); //Ahh, herrlich.
+	AI_Output(self, hero, "Info_Mod_Fester_AtSmallCave_05_03"); //Ahh, herrlich.
 	AI_Output(hero, self, "Info_Mod_Fester_AtSmallCave_15_04"); //Ähh, was ist nun ...
-	AI_Output(self, hero, "Info_Mod_Fester_AtSmallCave_31_05"); //Ach so, die Jagd. Tja, siehst du die wohlgenährten Scavenger und Molerats dort hinten? Erlege sie und bringe mir jeweils zehn Scavenger- und Moleratkeulen. Noch Fragen?
+	AI_Output(self, hero, "Info_Mod_Fester_AtSmallCave_05_05"); //Ach so, die Jagd. Tja, siehst du die wohlgenährten Scavenger und Molerats dort hinten? Erlege sie und bringe mir jeweils zehn Scavenger- und Moleratkeulen. Noch Fragen?
 
 	AI_StopProcessInfos	(self);
 
@@ -186,8 +186,8 @@ FUNC VOID Info_Mod_Fester_HabFleisch_Info()
 
 	Npc_RemoveInvItems	(hero, ItFo_MuttonRaw, 20);
 
-	AI_Output(self, hero, "Info_Mod_Fester_HabFleisch_31_01"); //(benommen) Wäs? Ach so, das Fleisch. Gut gemacht, Jungchen.
-	AI_Output(self, hero, "Info_Mod_Fester_HabFleisch_31_02"); //Nun gehen wir noch ein Stückchen weiter, um etwas anderes in einer Höhle zu erlegen.
+	AI_Output(self, hero, "Info_Mod_Fester_HabFleisch_05_01"); //(benommen) Wäs? Ach so, das Fleisch. Gut gemacht, Jungchen.
+	AI_Output(self, hero, "Info_Mod_Fester_HabFleisch_05_02"); //Nun gehen wir noch ein Stückchen weiter, um etwas anderes in einer Höhle zu erlegen.
 
 	AI_StopProcessInfos	(self);
 
@@ -220,8 +220,8 @@ FUNC INT Info_Mod_Fester_AtGreatCave_Condition()
 FUNC VOID Info_Mod_Fester_AtGreatCave_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Fester_AtGreatCave_15_00"); //Ähh, und was wollen wir hier erlegen?
-	AI_Output(self, hero, "Info_Mod_Fester_AtGreatCave_31_01"); //(bekifft) Habe ich erlegen gesagt? Ich meinte selbstverständlich erledigen.
-	AI_Output(self, hero, "Info_Mod_Fester_AtGreatCave_31_02"); //Ähh, aber einen Augenblick mal. Da haben sich einige riesenfette Orks in der Höhle eingenistet. Geh rein und erledige sie.
+	AI_Output(self, hero, "Info_Mod_Fester_AtGreatCave_05_01"); //(bekifft) Habe ich erlegen gesagt? Ich meinte selbstverständlich erledigen.
+	AI_Output(self, hero, "Info_Mod_Fester_AtGreatCave_05_02"); //Ähh, aber einen Augenblick mal. Da haben sich einige riesenfette Orks in der Höhle eingenistet. Geh rein und erledige sie.
 	AI_Output(hero, self, "Info_Mod_Fester_AtGreatCave_15_03"); //Ähh, sieht mir mehr nach einigen jungen Goblins aus ... ach, egal.
 	
 	AI_StopProcessInfos	(self);
@@ -260,7 +260,7 @@ FUNC INT Info_Mod_Fester_GobbosTot_Condition()
 
 FUNC VOID Info_Mod_Fester_GobbosTot_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Fester_GobbosTot_31_00"); //Seeehr gut, jetzt können wir etwas Sumpfkraut herstell ... ähh, uns in der Alchemie üben. Warte ne Minute, bis wie fertig sind.
+	AI_Output(self, hero, "Info_Mod_Fester_GobbosTot_05_00"); //Seeehr gut, jetzt können wir etwas Sumpfkraut herstell ... ähh, uns in der Alchemie üben. Warte ne Minute, bis wie fertig sind.
 
 	AI_StopProcessInfos	(self);
 
@@ -291,7 +291,7 @@ FUNC INT Info_Mod_Fester_PotionReady_Condition()
 
 FUNC VOID Info_Mod_Fester_PotionReady_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Fester_PotionReady_31_00"); //So, jetzt kann’s zurückgehen. Geh vor, wie folgen dir.
+	AI_Output(self, hero, "Info_Mod_Fester_PotionReady_05_00"); //So, jetzt kann’s zurückgehen. Geh vor, wie folgen dir.
 
 	AI_StopProcessInfos	(self);
 
@@ -327,8 +327,8 @@ FUNC INT Info_Mod_Fester_BackAtCamp_Condition()
 
 FUNC VOID Info_Mod_Fester_BackAtCamp_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Fester_BackAtCamp_31_00"); //Hey, du hast deine Sache echt gut gemacht ... für einen Neuling. Werde Lee und Sylvio davon berichten, dass du dich einigermaßen gut angestellt hast.
-	AI_Output(self, hero, "Info_Mod_Fester_BackAtCamp_31_01"); //Hier hast du etwas Sumpfkraut und Erz zur Belohnung.
+	AI_Output(self, hero, "Info_Mod_Fester_BackAtCamp_05_00"); //Hey, du hast deine Sache echt gut gemacht ... für einen Neuling. Werde Lee und Sylvio davon berichten, dass du dich einigermaßen gut angestellt hast.
+	AI_Output(self, hero, "Info_Mod_Fester_BackAtCamp_05_01"); //Hier hast du etwas Sumpfkraut und Erz zur Belohnung.
 
 	B_ShowGivenThings	("4 Stängel Sumpfkraut und 3 Erz erhalten");
 
@@ -372,13 +372,13 @@ FUNC INT Info_Mod_Fester_KesselProblem_Condition()
 FUNC VOID Info_Mod_Fester_KesselProblem_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Fester_KesselProblem_15_00"); //Hallo, Fester. Heute Abend wieder einen Spaziergang?
-	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_31_01"); //(beunruhigt) Was ...?! Wer bist du denn und was willst du?
+	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_05_01"); //(beunruhigt) Was ...?! Wer bist du denn und was willst du?
 	AI_Output(hero, self, "Info_Mod_Fester_KesselProblem_15_02"); //Die Frage ist, was du mir zu sagen hast ... über deine kleinen Geschäfte.
-	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_31_03"); //(erschrocken) Was ...?! Verdammt! Hey, Mann, mach mir bloß keinen Ärger.
-	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_31_04"); //Ich habe bloß ein paar Sachen gegen Erz getauscht.
+	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_05_03"); //(erschrocken) Was ...?! Verdammt! Hey, Mann, mach mir bloß keinen Ärger.
+	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_05_04"); //Ich habe bloß ein paar Sachen gegen Erz getauscht.
 	AI_Output(hero, self, "Info_Mod_Fester_KesselProblem_15_05"); //Paar Sachen?
-	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_31_06"); //Ja, gut, etwas Sumpfkraut. Mann, was ist schon dabei.
-	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_31_07"); //Das meiste habe ich ja mit anderem Krempel verdient, zum Beispiel diesem Schattenläuferfell, das er haben wollte.
+	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_05_06"); //Ja, gut, etwas Sumpfkraut. Mann, was ist schon dabei.
+	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_05_07"); //Das meiste habe ich ja mit anderem Krempel verdient, zum Beispiel diesem Schattenläuferfell, das er haben wollte.
 
 	AI_TurnAway	(hero, self);
 
@@ -386,8 +386,8 @@ FUNC VOID Info_Mod_Fester_KesselProblem_Info()
 
 	AI_TurnToNpc	(hero, self);
 
-	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_31_09"); //Hey, komm. Erzähl das mit dem Sumpfkraut bloß nicht herum.
-	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_31_10"); //Wenn du dicht hältst, wirst du es auch nicht bereuen.
+	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_05_09"); //Hey, komm. Erzähl das mit dem Sumpfkraut bloß nicht herum.
+	AI_Output(self, hero, "Info_Mod_Fester_KesselProblem_05_10"); //Wenn du dicht hältst, wirst du es auch nicht bereuen.
 
 	if (Npc_HasItems(hero, ItWr_KesselProblem) == 0)
 	{
@@ -421,9 +421,9 @@ FUNC VOID Info_Mod_Fester_KesselProblem2_Info()
 {
 	if (Mod_NL_TalkesselProblem == 5)
 	{
-		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_31_00"); //Puh, vielen Dank, dass du Lee nichts von dem Kraut erzählt hast.
-		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_31_01"); //Da bin ich gerade noch mit einem blauen Auge davongekommen.
-		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_31_02"); //Naja, in nächster Zeit muss ich etwas vorsichtiger sein. Daher ... hier, nimm das Kraut.
+		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_05_00"); //Puh, vielen Dank, dass du Lee nichts von dem Kraut erzählt hast.
+		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_05_01"); //Da bin ich gerade noch mit einem blauen Auge davongekommen.
+		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_05_02"); //Naja, in nächster Zeit muss ich etwas vorsichtiger sein. Daher ... hier, nimm das Kraut.
 
 		B_ShowGivenThings	("2 schwarzer Weise, 2 grüne Novizen, 1 Traumruf und 5 Stängel erhalten");
 
@@ -432,17 +432,17 @@ FUNC VOID Info_Mod_Fester_KesselProblem2_Info()
 		CreateInvItems	(hero, ItMi_Addon_Joint_02, 2);
 		CreateInvItems	(hero, ItMi_Traumruf, 1);
 
-		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_31_03"); //Und ... ähh ... noch ein kleines Rezept.
+		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_05_03"); //Und ... ähh ... noch ein kleines Rezept.
 
 		B_GiveInvItems	(self, hero, ItWr_Weisenchronik, 1);
 
-		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_31_04"); //Am besten vor dem Schlafen ... dann wirst du eine superentspannte Nacht haben und am nächsten Morgen gut drauf sein.
-		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_31_05"); //Viel Spaß damit. Aber nicht übertreiben, hähä.
+		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_05_04"); //Am besten vor dem Schlafen ... dann wirst du eine superentspannte Nacht haben und am nächsten Morgen gut drauf sein.
+		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_05_05"); //Viel Spaß damit. Aber nicht übertreiben, hähä.
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_31_06"); //(verärgert) Super, wegen dir darf ich jetzt die nächsten Wochen von früh bis spät schuften.
-		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_31_07"); //Hast du wirklich großartig gemacht ... Mistkerl!
+		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_05_06"); //(verärgert) Super, wegen dir darf ich jetzt die nächsten Wochen von früh bis spät schuften.
+		AI_Output(self, hero, "Info_Mod_Fester_KesselProblem2_05_07"); //Hast du wirklich großartig gemacht ... Mistkerl!
 	};
 };
 

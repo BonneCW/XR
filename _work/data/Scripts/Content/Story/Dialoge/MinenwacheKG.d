@@ -15,13 +15,13 @@ func int Info_Mod_MinenwacheKG_Hi_Condition()
 
 func void Info_Mod_MinenwacheKG_Hi_Info()
 {
-	AI_Output (self, hero, "Info_Mod_MinenwacheKG_Hi_07_00"); //Halt! Niemand darf in die Mine außer mit ausdrücklicher Erlaubnis von Hymir.
+	AI_Output (self, hero, "Info_Mod_MinenwacheKG_Hi_05_00"); //Halt! Niemand darf in die Mine außer mit ausdrücklicher Erlaubnis von Hymir.
 	AI_Output (hero, self, "Info_Mod_MinenwacheKG_Hi_15_01"); //Warum darf denn noch keiner in die Mine?
-	AI_Output (self, hero, "Info_Mod_MinenwacheKG_Hi_07_02"); //Es ist zum eigenen Schutz. In der Mine befinden sich Monster, über die noch nichts bekannt ist, und wenn du mich fragst waren sie damals für den Einsturz der Mine verantwortlich.
+	AI_Output (self, hero, "Info_Mod_MinenwacheKG_Hi_05_02"); //Es ist zum eigenen Schutz. In der Mine befinden sich Monster, über die noch nichts bekannt ist, und wenn du mich fragst waren sie damals für den Einsturz der Mine verantwortlich.
 	AI_Output (hero, self, "Info_Mod_MinenwacheKG_Hi_15_03"); //Was sollen das denn für Monster sein, etwa eine Art Minecrawler?
-	AI_Output (self, hero, "Info_Mod_MinenwacheKG_Hi_07_04"); //Was sich tiefer in der Mine befindet wissen wir nicht.
-	AI_Output (self, hero, "Info_Mod_MinenwacheKG_Hi_07_05"); //Bernd schätzt, dass die Steinmonster, die uns am Eindringen in die Mine gehindert haben, vor irgendetwas fliehen.
-	AI_Output (self, hero, "Info_Mod_MinenwacheKG_Hi_07_06"); //Ich für meinen Teil glaube, dass die Steinmonster einen magischen Ursprung haben, ansonsten hätten wir mit ihnen keine Probleme gehabt.
+	AI_Output (self, hero, "Info_Mod_MinenwacheKG_Hi_05_04"); //Was sich tiefer in der Mine befindet wissen wir nicht.
+	AI_Output (self, hero, "Info_Mod_MinenwacheKG_Hi_05_05"); //Bernd schätzt, dass die Steinmonster, die uns am Eindringen in die Mine gehindert haben, vor irgendetwas fliehen.
+	AI_Output (self, hero, "Info_Mod_MinenwacheKG_Hi_05_06"); //Ich für meinen Teil glaube, dass die Steinmonster einen magischen Ursprung haben, ansonsten hätten wir mit ihnen keine Probleme gehabt.
 };
 
 const string MinenwacheKG_Checkpoint	= "WP_MINENWACHE";	//WP hinter City-Tor vom Spielstart aus!
@@ -57,7 +57,7 @@ func int Info_Mod_MinenwacheKG_FirstWarn_Condition()
 
 func void Info_Mod_MinenwacheKG_FirstWarn_Info()
 {
-	AI_Output (self, hero,"Info_Mod_MinenwacheKG_FirstWarn_07_00"); //HALT! Niemand darf die Mine zur Zeit betreten.
+	AI_Output (self, hero,"Info_Mod_MinenwacheKG_FirstWarn_05_00"); //HALT! Niemand darf die Mine zur Zeit betreten.
 
 	hero.aivar[AIV_LastDistToWP] = Npc_GetDistToWP(hero, MinenwacheKG_Checkpoint);
 	self.aivar[AIV_Guardpassage_Status] = GP_FirstWarnGiven;
@@ -90,7 +90,7 @@ FUNC INT Info_Mod_MinenwacheKG_SecondWarn_Condition()
 
 func void Info_Mod_MinenwacheKG_SecondWarn_Info()
 {
-	AI_Output (self, hero,"Info_Mod_MinenwacheKG_SecondWarn_07_00"); //Ich sag's dir zum letzten Mal. Einen Schritt weiter und du begibst dich in die Welt des Schmerzes!
+	AI_Output (self, hero,"Info_Mod_MinenwacheKG_SecondWarn_05_00"); //Ich sag's dir zum letzten Mal. Einen Schritt weiter und du begibst dich in die Welt des Schmerzes!
 
 	hero.aivar[AIV_LastDistToWP] = Npc_GetDistToWP (hero,MinenwacheKG_Checkpoint);
 	self.aivar[AIV_Guardpassage_Status] = GP_SecondWarnGiven;	
@@ -128,7 +128,7 @@ func void Info_Mod_MinenwacheKG_Attack_Info()
 	hero.aivar[AIV_LastDistToWP] = 0;
 	self.aivar[AIV_Guardpassage_Status] = GP_NONE;						//wird auch in ZS_Attack resettet
 	
-	AI_Output (self, hero,"Info_Mod_MinenwacheKG_Attack_07_00"); //Du hast es so gewollt ...
+	AI_Output (self, hero,"Info_Mod_MinenwacheKG_Attack_05_00"); //Du hast es so gewollt ...
 
 	AI_StopProcessInfos	(self);	
 

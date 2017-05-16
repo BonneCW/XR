@@ -4,7 +4,7 @@ instance Mod_793_BAU_Pepe_NW (Npc_Default)
 	name 		= "Pepe";
 	guild 		= GIL_NONE;
 	id 			= 793;
-	voice 		= 28;
+	voice 		= 2;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	
