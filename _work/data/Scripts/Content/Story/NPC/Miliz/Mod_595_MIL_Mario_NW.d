@@ -4,7 +4,7 @@ instance Mod_595_MIL_Mario_NW (Npc_Default)
 	name 		= "Mario";
 	guild 		= GIL_PAL;
 	id 			= 595;
-	voice		= 0;
+	voice		= 8;
 	flags       = 0;	//Joly: NPC_FLAG_IMMORTAL	sonst Plottkiller Kapitel 5																//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

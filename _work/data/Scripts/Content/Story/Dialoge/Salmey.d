@@ -17,8 +17,8 @@ FUNC INT Info_Mod_Salmey_Hi_Condition()
 FUNC VOID Info_Mod_Salmey_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Salmey_Hi_15_00"); //Was gibt es denn hier für Bier?
-	AI_Output(self, hero, "Info_Mod_Salmey_Hi_16_01"); //Restbestände vom Khorataer Lagerbier. Unser Brauer hat gerade Probleme, will aber bald wieder liefern.
-	AI_Output(self, hero, "Info_Mod_Salmey_Hi_16_02"); //Ansonsten reichlich herkömmliches Klosterbier, mit frischem Quellwasser verdünnt.
+	AI_Output(self, hero, "Info_Mod_Salmey_Hi_12_01"); //Restbestände vom Khorataer Lagerbier. Unser Brauer hat gerade Probleme, will aber bald wieder liefern.
+	AI_Output(self, hero, "Info_Mod_Salmey_Hi_12_02"); //Ansonsten reichlich herkömmliches Klosterbier, mit frischem Quellwasser verdünnt.
 
 	Log_CreateTopic	(TOPIC_MOD_HAENDLER_KHORATA, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_HAENDLER_KHORATA, "Salmey in der Kneipe kann mir Bier verkaufen.");

@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Fellan_Hi_Condition()
 FUNC VOID Info_Mod_Fellan_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
-	AI_Output(self, hero, "Info_Mod_Fellan_Hi_06_01"); //Stör mich nicht. Ich muss mir überlegen, wie ich verhindern kann, dass es in mein Haus regnet.
+	AI_Output(self, hero, "Info_Mod_Fellan_Hi_08_01"); //Stör mich nicht. Ich muss mir überlegen, wie ich verhindern kann, dass es in mein Haus regnet.
 };
 
 INSTANCE Info_Mod_Fellan_Regenproblem (C_INFO)
@@ -42,7 +42,7 @@ FUNC INT Info_Mod_Fellan_Regenproblem_Condition()
 FUNC VOID Info_Mod_Fellan_Regenproblem_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Fellan_Regenproblem_15_00"); //Es regnet in dein Haus?
-	AI_Output(self, hero, "Info_Mod_Fellan_Regenproblem_06_01"); //Ja. Es scheint so, als wäre irgendwo ein Loch. Was soll ich jetzt bloß machen?
+	AI_Output(self, hero, "Info_Mod_Fellan_Regenproblem_08_01"); //Ja. Es scheint so, als wäre irgendwo ein Loch. Was soll ich jetzt bloß machen?
 
 	Info_ClearChoices	(Info_Mod_Fellan_Regenproblem);
 
@@ -53,7 +53,7 @@ FUNC VOID Info_Mod_Fellan_Regenproblem_Info()
 FUNC VOID Info_Mod_Fellan_Regenproblem_B()
 {
 	AI_Output(hero, self, "Info_Mod_Fellan_Regenproblem_B_15_00"); //Da kann ich dir auch nicht helfen.
-	AI_Output(self, hero, "Info_Mod_Fellan_Regenproblem_B_06_01"); //(seufzt) Was soll ich nur machen?
+	AI_Output(self, hero, "Info_Mod_Fellan_Regenproblem_B_08_01"); //(seufzt) Was soll ich nur machen?
 
 	Info_ClearChoices	(Info_Mod_Fellan_Regenproblem);
 };
@@ -61,9 +61,9 @@ FUNC VOID Info_Mod_Fellan_Regenproblem_B()
 FUNC VOID Info_Mod_Fellan_Regenproblem_A()
 {
 	AI_Output(hero, self, "Info_Mod_Fellan_Regenproblem_A_15_00"); //Schon mal von Brettern und Nägeln gehört?
-	AI_Output(self, hero, "Info_Mod_Fellan_Regenproblem_A_06_01"); //Äh ... jetzt, wo du es sagst ...
+	AI_Output(self, hero, "Info_Mod_Fellan_Regenproblem_A_08_01"); //Äh ... jetzt, wo du es sagst ...
 	AI_Output(hero, self, "Info_Mod_Fellan_Regenproblem_A_15_02"); //Einen Hammer brauchst du dann auch noch.
-	AI_Output(self, hero, "Info_Mod_Fellan_Regenproblem_A_06_03"); //Wo bekomm ich denn den wieder her?
+	AI_Output(self, hero, "Info_Mod_Fellan_Regenproblem_A_08_03"); //Wo bekomm ich denn den wieder her?
 
 	Info_ClearChoices	(Info_Mod_Fellan_Regenproblem);
 
@@ -74,7 +74,7 @@ FUNC VOID Info_Mod_Fellan_Regenproblem_A()
 FUNC VOID Info_Mod_Fellan_Regenproblem_D()
 {
 	AI_Output(hero, self, "Info_Mod_Fellan_Regenproblem_D_15_00"); //Das ist dein Problem.
-	AI_Output(self, hero, "Info_Mod_Fellan_Regenproblem_D_06_01"); //(seufzt) Ich werde wahrscheinlich in meinem eigenen Haus ertrinken.
+	AI_Output(self, hero, "Info_Mod_Fellan_Regenproblem_D_08_01"); //(seufzt) Ich werde wahrscheinlich in meinem eigenen Haus ertrinken.
 
 	Info_ClearChoices	(Info_Mod_Fellan_Regenproblem);
 };
@@ -82,7 +82,7 @@ FUNC VOID Info_Mod_Fellan_Regenproblem_D()
 FUNC VOID Info_Mod_Fellan_Regenproblem_C()
 {
 	AI_Output(hero, self, "Info_Mod_Fellan_Regenproblem_C_15_00"); //Ich besorg dir einen.
-	AI_Output(self, hero, "Info_Mod_Fellan_Regenproblem_C_06_01"); //Wirklich? Das wäre toll.
+	AI_Output(self, hero, "Info_Mod_Fellan_Regenproblem_C_08_01"); //Wirklich? Das wäre toll.
 
 	Log_CreateTopic	(TOPIC_MOD_FELLAN_REGEN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_FELLAN_REGEN, LOG_RUNNING);
@@ -120,7 +120,7 @@ FUNC VOID Info_Mod_Fellan_HabHammer_Info()
 
 	B_GiveInvItems	(hero, self, ItMi_Hammer, 1);
 
-	AI_Output(self, hero, "Info_Mod_Fellan_HabHammer_06_01"); //Danke, dann werd ich mich jetzt mal daran machen, dieses Loch zu schließen.
+	AI_Output(self, hero, "Info_Mod_Fellan_HabHammer_08_01"); //Danke, dann werd ich mich jetzt mal daran machen, dieses Loch zu schließen.
 
 	B_LogEntry	(TOPIC_MOD_FELLAN_REGEN, "Fellan hat jetzt einen Hammer und will sich jetzt daran machen, das Loch zu schließen.");
 	B_SetTopicStatus	(TOPIC_MOD_FELLAN_REGEN, LOG_SUCCESS);
@@ -159,9 +159,9 @@ FUNC INT Info_Mod_Fellan_NochAmHaemmern_Condition()
 FUNC VOID Info_Mod_Fellan_NochAmHaemmern_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Fellan_NochAmHaemmern_15_00"); //Bist du etwa immer noch nicht fertig mit dem Reparieren?
-	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern_06_01"); //Ach, es ist zum Verzweifeln. Mal schlage ich daneben, dann verbiegt sich der Nagel.
-	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern_06_02"); //Mal schlage ich zu hart, dann brechen die umliegenden Bretter ebenfalls.
-	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern_06_03"); //Ich kann von Glück sagen, dass dieses morsche Gebilde, das mein Haus sein will, überhaupt noch steht.
+	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern_08_01"); //Ach, es ist zum Verzweifeln. Mal schlage ich daneben, dann verbiegt sich der Nagel.
+	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern_08_02"); //Mal schlage ich zu hart, dann brechen die umliegenden Bretter ebenfalls.
+	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern_08_03"); //Ich kann von Glück sagen, dass dieses morsche Gebilde, das mein Haus sein will, überhaupt noch steht.
 
 	Info_ClearChoices	(Info_Mod_Fellan_NochAmHaemmern);
 
@@ -179,9 +179,9 @@ FUNC VOID Info_Mod_Fellan_NochAmHaemmern_B()
 FUNC VOID Info_Mod_Fellan_NochAmHaemmern_A()
 {
 	AI_Output(hero, self, "Info_Mod_Fellan_NochAmHaemmern_A_15_00"); //Ich wüsste da eins.
-	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern_A_06_01"); //Ach ja, und wo?
+	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern_A_08_01"); //Ach ja, und wo?
 	AI_Output(hero, self, "Info_Mod_Fellan_NochAmHaemmern_A_15_02"); //Auf der anderen Seite des Hafens. Früher hat dort Wilfried gewohnt, aber der ist ... gestorben.
-	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern_A_06_03"); //Na, vielen Dank für den Tipp. Da muss ich mich doch glatt mal umhören.
+	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern_A_08_03"); //Na, vielen Dank für den Tipp. Da muss ich mich doch glatt mal umhören.
 
 	B_GivePlayerXP	(50);
 
@@ -212,8 +212,8 @@ FUNC INT Info_Mod_Fellan_NochAmHaemmern2_Condition()
 
 FUNC VOID Info_Mod_Fellan_NochAmHaemmern2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern2_06_00"); //Tja, Scheiße. Letzte Nacht hat's hier schon reingeregnet.
-	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern2_06_01"); //Anscheinend ist das Hämmern bis ans Ende meiner Tage meine Bestimmung.
+	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern2_08_00"); //Tja, Scheiße. Letzte Nacht hat's hier schon reingeregnet.
+	AI_Output(self, hero, "Info_Mod_Fellan_NochAmHaemmern2_08_01"); //Anscheinend ist das Hämmern bis ans Ende meiner Tage meine Bestimmung.
 };
 
 INSTANCE Info_Mod_Fellan_Flugblaetter (C_INFO)
@@ -245,11 +245,11 @@ FUNC VOID Info_Mod_Fellan_Flugblaetter_Info()
 
 	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_Fellan_Flugblaetter_06_01"); //Oh danke. Mal sehen ...
+	AI_Output(self, hero, "Info_Mod_Fellan_Flugblaetter_08_01"); //Oh danke. Mal sehen ...
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_Fellan_Flugblaetter_06_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
+	AI_Output(self, hero, "Info_Mod_Fellan_Flugblaetter_08_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
 
 	Mod_Flugblaetter += 1;
 };

@@ -4,7 +4,7 @@ INSTANCE Mod_1540_PIR_Skip_DI (Npc_Default)
 	name 		= "Skip";
 	guild 		= GIL_out;
 	id 			= 1540;
-	voice		= 0;
+	voice		= 8;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

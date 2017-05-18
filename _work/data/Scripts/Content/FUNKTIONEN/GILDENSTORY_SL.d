@@ -19,7 +19,7 @@ FUNC VOID GILDENSTORY_SL()
 			{
 				AI_TurnToNpc	(Mod_7011_HS_Alex_REL, hero);
 
-				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_08_00"); //Halt!
+				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_01_00"); //Halt!
 			};
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 5)
@@ -34,7 +34,7 @@ FUNC VOID GILDENSTORY_SL()
 			{
 				AI_TurnToNpc	(Mod_7011_HS_Alex_REL, hero);
 
-				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_08_02"); //Hier unten!
+				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_01_02"); //Hier unten!
 			};
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 15)
@@ -44,7 +44,7 @@ FUNC VOID GILDENSTORY_SL()
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 20)
 			{
-				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_08_04"); //Sieht man das nicht? Ich buddle!
+				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_01_04"); //Sieht man das nicht? Ich buddle!
 			};
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 25)
@@ -54,7 +54,7 @@ FUNC VOID GILDENSTORY_SL()
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 30)
 			{
-				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_08_06"); //Jop.
+				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_01_06"); //Jop.
 			};
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 35)
@@ -64,7 +64,7 @@ FUNC VOID GILDENSTORY_SL()
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 40)
 			{
-				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_08_08"); //Naja, ich bin der königliche Lochgräber.
+				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_01_08"); //Naja, ich bin der königliche Lochgräber.
 			};
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 45)
@@ -74,7 +74,7 @@ FUNC VOID GILDENSTORY_SL()
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 50)
 			{
-				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_08_10"); //Königlicher Lochgräber!
+				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_01_10"); //Königlicher Lochgräber!
 			};
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 55)
@@ -84,7 +84,7 @@ FUNC VOID GILDENSTORY_SL()
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 60)
 			{
-				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_08_12"); //Wie du siehst ist das Loch hier sehr tief.
+				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_01_12"); //Wie du siehst ist das Loch hier sehr tief.
 			};
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 65)
@@ -94,7 +94,7 @@ FUNC VOID GILDENSTORY_SL()
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 70)
 			{
-				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_08_14"); //Nein.
+				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_01_14"); //Nein.
 			};
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 75)
@@ -104,7 +104,7 @@ FUNC VOID GILDENSTORY_SL()
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 80)
 			{
-				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_08_16"); //Ich wollte dir nur mein Loch zeigen.
+				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_01_16"); //Ich wollte dir nur mein Loch zeigen.
 			};
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 85)
@@ -114,7 +114,7 @@ FUNC VOID GILDENSTORY_SL()
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 90)
 			{
-				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_08_18"); //Bis später.
+				AI_Output(Mod_7011_HS_Alex_REL, NULL, "Info_Mod_Alex_Hofstaat_Intro_01_18"); //Bis später.
 			};
 
 			if (Mod_Hofstaat_Alex_Intro_Counter == 95)

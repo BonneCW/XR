@@ -4,7 +4,7 @@ instance Mod_7378_OUT_Daniel_REL (Npc_Default)
 	name 		= "Daniel"; 
 	guild 		= GIL_OUT;
 	id 			= 7378;
-	voice		= 0;
+	voice		= 8;
 	flags       = 0;						
 	npctype		= NPCTYPE_MAIN;
 	

@@ -15,13 +15,13 @@ FUNC INT Info_Mod_Lukor_Hi_Condition()
 
 FUNC VOID Info_Mod_Lukor_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lukor_Hi_31_00"); //Da ist ja der ungläubige Narr, der meinen Meister verbannt hat.
+	AI_Output(self, hero, "Info_Mod_Lukor_Hi_08_00"); //Da ist ja der ungläubige Narr, der meinen Meister verbannt hat.
 	AI_Output(hero, self, "Info_Mod_Lukor_Hi_15_01"); //Was, du lebst auch noch?
-	AI_Output(self, hero, "Info_Mod_Lukor_Hi_31_02"); //(irre) Verbannt magst du ihn haben. Aber vorher wurde mir noch ein Teil seiner Macht übertragen.
+	AI_Output(self, hero, "Info_Mod_Lukor_Hi_08_02"); //(irre) Verbannt magst du ihn haben. Aber vorher wurde mir noch ein Teil seiner Macht übertragen.
 	AI_Output(hero, self, "Info_Mod_Lukor_Hi_15_03"); //Was, wovon sprichst du?
-	AI_Output(self, hero, "Info_Mod_Lukor_Hi_31_04"); //(durchgeknallt) Lauter ungläubige Narren, alle folgen sie fremden Götzen, Göttern oder dem schlichten Mammon. Sie alle werden büßen, mit ihrem Blute.
+	AI_Output(self, hero, "Info_Mod_Lukor_Hi_08_04"); //(durchgeknallt) Lauter ungläubige Narren, alle folgen sie fremden Götzen, Göttern oder dem schlichten Mammon. Sie alle werden büßen, mit ihrem Blute.
 	AI_Output(hero, self, "Info_Mod_Lukor_Hi_15_05"); //(leise zu sich selbst) Kommt mir irgendwie bekannt vor.
-	AI_Output(self, hero, "Info_Mod_Lukor_Hi_31_06"); //(wie besessen) Ich währenddessen habe meditiert, Tage und Wochen, unaufhörlich, und gelernt, Mächte freizusetzen und zu nutzen, die weit über die eines gewöhnlichen Magiers oder gar Kämpfers hinausgehen.
+	AI_Output(self, hero, "Info_Mod_Lukor_Hi_08_06"); //(wie besessen) Ich währenddessen habe meditiert, Tage und Wochen, unaufhörlich, und gelernt, Mächte freizusetzen und zu nutzen, die weit über die eines gewöhnlichen Magiers oder gar Kämpfers hinausgehen.
 
 	Info_ClearChoices	(Info_Mod_Lukor_Hi);
 
@@ -32,9 +32,9 @@ FUNC VOID Info_Mod_Lukor_Hi_Info()
 
 FUNC VOID Info_Mod_Lukor_Hi_D()
 {
-	AI_Output(self, hero, "Info_Mod_Lukor_Hi_D_31_00"); //(ohne die Worte zu beachten) Und nun traf ich endlich auf Verbündete, Diener, die ihrem Meister und Schöpfer auch weiterhin treu ergeben sind.
-	AI_Output(self, hero, "Info_Mod_Lukor_Hi_D_31_01"); //(verwirrt) Ja, mein Meister ... (überrascht feststellend) Und hier der Ungläubige, der ihn verbannte ...
-	AI_Output(self, hero, "Info_Mod_Lukor_Hi_D_31_02"); //(im Wahn) Mit deinem Blute werde ich den Altar nun tränken. Stirb!
+	AI_Output(self, hero, "Info_Mod_Lukor_Hi_D_08_00"); //(ohne die Worte zu beachten) Und nun traf ich endlich auf Verbündete, Diener, die ihrem Meister und Schöpfer auch weiterhin treu ergeben sind.
+	AI_Output(self, hero, "Info_Mod_Lukor_Hi_D_08_01"); //(verwirrt) Ja, mein Meister ... (überrascht feststellend) Und hier der Ungläubige, der ihn verbannte ...
+	AI_Output(self, hero, "Info_Mod_Lukor_Hi_D_08_02"); //(im Wahn) Mit deinem Blute werde ich den Altar nun tränken. Stirb!
 	
 	Info_ClearChoices	(Info_Mod_Lukor_Hi);
 

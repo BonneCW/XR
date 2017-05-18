@@ -17,12 +17,12 @@ FUNC INT Info_Mod_Mario_Hi_Condition()
 FUNC VOID Info_Mod_Mario_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Hi_15_00"); //Was machst du hier so allein?
-	AI_Output(self, hero, "Info_Mod_Mario_Hi_07_01"); //Ich stürze ein Bier nach dem anderen hinunter. Hilft tatsächlich gegen Frust.
+	AI_Output(self, hero, "Info_Mod_Mario_Hi_08_01"); //Ich stürze ein Bier nach dem anderen hinunter. Hilft tatsächlich gegen Frust.
 	AI_Output(hero, self, "Info_Mod_Mario_Hi_15_02"); //Welcher Frust?
-	AI_Output(self, hero, "Info_Mod_Mario_Hi_07_03"); //Den ewigen Milizen nennen sie mich. Seit Jahren versuche ich, ein Paladin zu werden, aber oben an der Befehlskette habe ich keine Freunde, sondern eher Feinde.
-	AI_Output(self, hero, "Info_Mod_Mario_Hi_07_04"); //Deshalb werde ich bloß von einer Aufgabe, in der ich mich beweisen soll, zur nächsten geschickt.
-	AI_Output(self, hero, "Info_Mod_Mario_Hi_07_05"); //Zweiundzwanzig habe ich bisher absolviert. Manche schaffen es ganz ohne Aufnahmeprüfung.
-	AI_Output(self, hero, "Info_Mod_Mario_Hi_07_06"); //Und jetzt haben sie mir eine Aufgabe gestellt, die ich nicht lösen kann.
+	AI_Output(self, hero, "Info_Mod_Mario_Hi_08_03"); //Den ewigen Milizen nennen sie mich. Seit Jahren versuche ich, ein Paladin zu werden, aber oben an der Befehlskette habe ich keine Freunde, sondern eher Feinde.
+	AI_Output(self, hero, "Info_Mod_Mario_Hi_08_04"); //Deshalb werde ich bloß von einer Aufgabe, in der ich mich beweisen soll, zur nächsten geschickt.
+	AI_Output(self, hero, "Info_Mod_Mario_Hi_08_05"); //Zweiundzwanzig habe ich bisher absolviert. Manche schaffen es ganz ohne Aufnahmeprüfung.
+	AI_Output(self, hero, "Info_Mod_Mario_Hi_08_06"); //Und jetzt haben sie mir eine Aufgabe gestellt, die ich nicht lösen kann.
 };
 
 INSTANCE Info_Mod_Mario_WarumFeinde (C_INFO)
@@ -47,9 +47,9 @@ FUNC INT Info_Mod_Mario_WarumFeinde_Condition()
 FUNC VOID Info_Mod_Mario_WarumFeinde_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_WarumFeinde_15_00"); //Warum hast du Feinde unter den Paladinen?
-	AI_Output(self, hero, "Info_Mod_Mario_WarumFeinde_07_01"); //Ich habe nie einen Hehl daraus gemacht, dass ich schwul bin.
-	AI_Output(self, hero, "Info_Mod_Mario_WarumFeinde_07_02"); //Da hört dann die Nächstenliebe bei den Paladinen auf. Die nettesten gucken mich nur komisch an.
-	AI_Output(self, hero, "Info_Mod_Mario_WarumFeinde_07_03"); //"Ein schwuler Paladin? Da muss doch Innos selbst Einhalt gebieten!"
+	AI_Output(self, hero, "Info_Mod_Mario_WarumFeinde_08_01"); //Ich habe nie einen Hehl daraus gemacht, dass ich schwul bin.
+	AI_Output(self, hero, "Info_Mod_Mario_WarumFeinde_08_02"); //Da hört dann die Nächstenliebe bei den Paladinen auf. Die nettesten gucken mich nur komisch an.
+	AI_Output(self, hero, "Info_Mod_Mario_WarumFeinde_08_03"); //"Ein schwuler Paladin? Da muss doch Innos selbst Einhalt gebieten!"
 };
 
 INSTANCE Info_Mod_Mario_Aufgabe (C_INFO)
@@ -74,9 +74,9 @@ FUNC INT Info_Mod_Mario_Aufgabe_Condition()
 FUNC VOID Info_Mod_Mario_Aufgabe_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Aufgabe_15_00"); //Was ist das für eine unlösbare Aufgabe?
-	AI_Output(self, hero, "Info_Mod_Mario_Aufgabe_07_01"); //In dem großen Wald vor der Stadt sollen sich zwei Snapper aufhalten.
-	AI_Output(self, hero, "Info_Mod_Mario_Aufgabe_07_02"); //Anstatt einen Trupp loszuschicken, der sich um die Viecher kümmert, wird der ganze Dreck mir aufgehalst.
-	AI_Output(self, hero, "Info_Mod_Mario_Aufgabe_07_03"); //Würde den Obersten wohl gut in den Kram passen, wenn ich dort Snapperfraß würde.
+	AI_Output(self, hero, "Info_Mod_Mario_Aufgabe_08_01"); //In dem großen Wald vor der Stadt sollen sich zwei Snapper aufhalten.
+	AI_Output(self, hero, "Info_Mod_Mario_Aufgabe_08_02"); //Anstatt einen Trupp loszuschicken, der sich um die Viecher kümmert, wird der ganze Dreck mir aufgehalst.
+	AI_Output(self, hero, "Info_Mod_Mario_Aufgabe_08_03"); //Würde den Obersten wohl gut in den Kram passen, wenn ich dort Snapperfraß würde.
 };
 
 INSTANCE Info_Mod_Mario_Hilfe (C_INFO)
@@ -101,10 +101,10 @@ FUNC INT Info_Mod_Mario_Hilfe_Condition()
 FUNC VOID Info_Mod_Mario_Hilfe_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe_15_00"); //Ich könnte dir bei den Snappern helfen.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe_07_01"); //Du, ein schwächlicher Sträfling?
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe_08_01"); //Du, ein schwächlicher Sträfling?
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe_15_02"); //Snapper sind eine meiner Spezialitäten.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe_07_03"); //Einen Versuch ist es wert. Selbst deine Begleitung wird mich im Ansehen der anderen nicht weiter sinken lassen.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe_07_04"); //Wollen wir sofort aufbrechen? Ich kenne den Weg.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe_08_03"); //Einen Versuch ist es wert. Selbst deine Begleitung wird mich im Ansehen der anderen nicht weiter sinken lassen.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe_08_04"); //Wollen wir sofort aufbrechen? Ich kenne den Weg.
 
 	Log_CreateTopic	(TOPIC_MOD_MARIO_UPGRADE, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_MARIO_UPGRADE, LOG_RUNNING);
@@ -133,7 +133,7 @@ FUNC INT Info_Mod_Mario_Hilfe2_Condition()
 FUNC VOID Info_Mod_Mario_Hilfe2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe2_15_00"); //Ja, los geht's.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe2_07_01"); //Folge mir.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe2_08_01"); //Folge mir.
 
 	self.aivar[AIV_PARTYMEMBER] = TRUE;
 
@@ -167,11 +167,11 @@ FUNC INT Info_Mod_Mario_Hilfe3_Condition()
 
 FUNC VOID Info_Mod_Mario_Hilfe3_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe3_07_00"); //Das ist ja gerade noch mal geglückt. Jedenfalls danke ich dir für deine Unterstützung.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe3_07_01"); //Ich werde Garond Bescheid sagen, dass ich auch diese Prüfung bestanden habe.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe3_07_02"); //Und dann sehe ich weiter, was mich als nächstes erwartet ...
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe3_08_00"); //Das ist ja gerade noch mal geglückt. Jedenfalls danke ich dir für deine Unterstützung.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe3_08_01"); //Ich werde Garond Bescheid sagen, dass ich auch diese Prüfung bestanden habe.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe3_08_02"); //Und dann sehe ich weiter, was mich als nächstes erwartet ...
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe3_15_03"); //Sag Bescheid, wenn du noch mal meine Hilfe brauchst.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe3_07_04"); //Ist ja nicht unwahrscheinlich. Aber danke für das Angebot.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe3_08_04"); //Ist ja nicht unwahrscheinlich. Aber danke für das Angebot.
 
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 
@@ -209,9 +209,9 @@ FUNC INT Info_Mod_Mario_Hilfe4_Condition()
 FUNC VOID Info_Mod_Mario_Hilfe4_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe4_15_00"); //Du wurdest immer noch nicht als Paladin zugelassen?
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe4_07_01"); //So sieht's aus. Sie haben mich wieder mit einer neuen Aufgabe abgewiegelt, und diesmal bin ich wirklich ratlos.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe4_08_01"); //So sieht's aus. Sie haben mich wieder mit einer neuen Aufgabe abgewiegelt, und diesmal bin ich wirklich ratlos.
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe4_15_02"); //Worum geht's denn?
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe4_07_03"); //Es geht um eine wahre Horde gut ausgerüsteter Goblins, die in den letzten Wochen immer wieder für Scharmützel gesorgt haben. Neben euch Verbrechern.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe4_08_03"); //Es geht um eine wahre Horde gut ausgerüsteter Goblins, die in den letzten Wochen immer wieder für Scharmützel gesorgt haben. Neben euch Verbrechern.
 
 	Info_ClearChoices	(Info_Mod_Mario_Hilfe4);
 
@@ -222,7 +222,7 @@ FUNC VOID Info_Mod_Mario_Hilfe4_Info()
 FUNC VOID Info_Mod_Mario_Hilfe4_B()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe4_B_15_00"); //Diesmal kannst du nicht auf meine Hilfe zählen.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe4_B_07_01"); //Ich hatte auch gar nicht darum gebeten.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe4_B_08_01"); //Ich hatte auch gar nicht darum gebeten.
 
 	B_SetTopicStatus	(TOPIC_MOD_MARIO_UPGRADE, LOG_FAILED);
 
@@ -232,11 +232,11 @@ FUNC VOID Info_Mod_Mario_Hilfe4_B()
 FUNC VOID Info_Mod_Mario_Hilfe4_A()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe4_A_15_00"); //Schaffen wir's zu zweit?
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe4_A_07_01"); //Kaum. Wir bräuchten noch mindestens einen Mitstreiter. Einen geübten Fernkämpfer.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe4_A_08_01"); //Kaum. Wir bräuchten noch mindestens einen Mitstreiter. Einen geübten Fernkämpfer.
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe4_A_15_02"); //Ich könnte Diego fragen. Der hat gerade nichts zu tun. Und gut ist er auch.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe4_A_07_03"); //Diego? Ist das nicht auch ein ehemaliger Häftling?
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe4_A_08_03"); //Diego? Ist das nicht auch ein ehemaliger Häftling?
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe4_A_15_04"); //Ja. Ist das ein Problem für dich?
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe4_A_07_05"); //(seufzt) Nein, bin ja froh, dass überhaupt jemand auf meiner Seite steht. Frag ihn ruhig und bring ihn her.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe4_A_08_05"); //(seufzt) Nein, bin ja froh, dass überhaupt jemand auf meiner Seite steht. Frag ihn ruhig und bring ihn her.
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe4_A_15_06"); //Bis später.
 
 	Mod_Mario = 1;
@@ -268,7 +268,7 @@ FUNC INT Info_Mod_Mario_Hilfe5_Condition()
 FUNC VOID Info_Mod_Mario_Hilfe5_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe5_15_00"); //Diego ist dabei. Zeig uns die Goblins.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe5_07_01"); //Alles klar. Sie sind gar nicht so weit entfernt.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe5_08_01"); //Alles klar. Sie sind gar nicht so weit entfernt.
 
 	self.aivar[AIV_PARTYMEMBER] = TRUE;
 
@@ -324,12 +324,12 @@ FUNC INT Info_Mod_Mario_Hilfe6_Condition()
 
 FUNC VOID Info_Mod_Mario_Hilfe6_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe6_07_00"); //Ein hartes Stück Arbeit. Teile deine Belohnung mit Diego.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe6_08_00"); //Ein hartes Stück Arbeit. Teile deine Belohnung mit Diego.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 300);
 
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe6_07_01"); //Ich bin wirklich gespannt, ob sich Garond noch eine schwierigere Prüfung ausdenken kann.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe6_07_02"); //Aber auch wenn es mit seiner Fantasie nicht gut bestellt ist, fürchte ich, dass er das schafft.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe6_08_01"); //Ich bin wirklich gespannt, ob sich Garond noch eine schwierigere Prüfung ausdenken kann.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe6_08_02"); //Aber auch wenn es mit seiner Fantasie nicht gut bestellt ist, fürchte ich, dass er das schafft.
 
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 
@@ -350,7 +350,7 @@ FUNC VOID Info_Mod_Mario_Hilfe6_Info()
 FUNC VOID Info_Mod_Mario_Hilfe6_B()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe6_B_15_00"); //Von nun an bist du allein. Mir reicht's.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe6_B_07_01"); //Schade, aber ich kann dich nicht zwingen.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe6_B_08_01"); //Schade, aber ich kann dich nicht zwingen.
 
 	Mod_Mario = 0;
 
@@ -362,7 +362,7 @@ FUNC VOID Info_Mod_Mario_Hilfe6_B()
 FUNC VOID Info_Mod_Mario_Hilfe6_A()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe6_A_15_00"); //Mit mir kannst du rechnen.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe6_A_07_01"); //Ich danke dir.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe6_A_08_01"); //Ich danke dir.
 
 	Info_ClearChoices	(Info_Mod_Mario_Hilfe6);
 };
@@ -391,11 +391,11 @@ FUNC INT Info_Mod_Mario_Hilfe7_Condition()
 FUNC VOID Info_Mod_Mario_Hilfe7_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe7_15_00"); //Immer noch nicht Paladin?
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_07_01"); //Ich kann jetzt aufgenommen werden.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_08_01"); //Ich kann jetzt aufgenommen werden.
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe7_15_02"); //Glückwunsch! Freust du dich denn gar nicht?
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_07_03"); //In den letzten Tagen haben mich die Zweifel eingeholt, ob es wirklich richtig für mich wäre, Paladin zu werden.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_07_04"); //Ich weiß jetzt, dass ich unter ihnen kaum Freunde finden würde. Andererseits war es mein Wunsch, seit ich ein kleiner Junge war.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_07_05"); //Was meinst du?
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_08_03"); //In den letzten Tagen haben mich die Zweifel eingeholt, ob es wirklich richtig für mich wäre, Paladin zu werden.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_08_04"); //Ich weiß jetzt, dass ich unter ihnen kaum Freunde finden würde. Andererseits war es mein Wunsch, seit ich ein kleiner Junge war.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_08_05"); //Was meinst du?
 
 	CurrentNQ += 1;
 
@@ -408,10 +408,10 @@ FUNC VOID Info_Mod_Mario_Hilfe7_Info()
 FUNC VOID Info_Mod_Mario_Hilfe7_B()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe7_B_15_00"); //Es erscheint mir auch klüger, sie nicht weiter zu reizen.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_B_07_01"); //(erleichtert) Genau das habe ich auch gedacht.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_B_07_02"); //Wer weiß, welche Regeln dieser Verein sich ausdenken würde, um mich weiter schikanieren zu können!
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_B_07_03"); //Mit den anderen Milizionären verstehe ich mich gut. Da sollte ich lieber kein Risiko eingehen.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_B_07_04"); //Hab Dank für deinen Rat und deine Hilfe. Ohne dich wäre wahrscheinlich Coragons Bier mein bester Freund geworden ...
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_B_08_01"); //(erleichtert) Genau das habe ich auch gedacht.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_B_08_02"); //Wer weiß, welche Regeln dieser Verein sich ausdenken würde, um mich weiter schikanieren zu können!
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_B_08_03"); //Mit den anderen Milizionären verstehe ich mich gut. Da sollte ich lieber kein Risiko eingehen.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_B_08_04"); //Hab Dank für deinen Rat und deine Hilfe. Ohne dich wäre wahrscheinlich Coragons Bier mein bester Freund geworden ...
 
 	B_GivePlayerXP	(50);
 
@@ -427,9 +427,9 @@ FUNC VOID Info_Mod_Mario_Hilfe7_B()
 FUNC VOID Info_Mod_Mario_Hilfe7_A()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe7_A_15_00"); //Du kannst doch jetzt nach deinem Sieg über die Paladine nicht kapitulieren!
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_A_07_01"); //Ich denke, du hast Recht. Es würde so aussehen, als würde mich im letzten Augenblick mein ganzer Mumm verlassen.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_A_07_02"); //Also gut, ich werde mich nachher bei Garond melden.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_A_07_03"); //Und du, hab vielen Dank für deine tatkräftige Unterstützung. Ohne dich wäre wahrscheinlich Coragons Bier mein bester Freund geworden ...
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_A_08_01"); //Ich denke, du hast Recht. Es würde so aussehen, als würde mich im letzten Augenblick mein ganzer Mumm verlassen.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_A_08_02"); //Also gut, ich werde mich nachher bei Garond melden.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe7_A_08_03"); //Und du, hab vielen Dank für deine tatkräftige Unterstützung. Ohne dich wäre wahrscheinlich Coragons Bier mein bester Freund geworden ...
 
 	B_GivePlayerXP	(50);
 
@@ -462,7 +462,7 @@ FUNC INT Info_Mod_Mario_Hilfe8_Condition()
 
 FUNC VOID Info_Mod_Mario_Hilfe8_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_07_00"); //(leise) Du musst mir noch mal helfen, bitte!
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_08_00"); //(leise) Du musst mir noch mal helfen, bitte!
 
 	Info_ClearChoices	(Info_Mod_Mario_Hilfe8);
 
@@ -480,19 +480,19 @@ FUNC VOID Info_Mod_Mario_Hilfe8_B()
 FUNC VOID Info_Mod_Mario_Hilfe8_A()
 {
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe8_A_15_00"); //Was hast du diesmal?
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_07_01"); //Vor einiger Zeit habe ich Wachdienst im Gefängnis gehabt.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_07_02"); //Dort habe ich jemanden kennen gelernt, der so ist wie ich. Ich habe mich in ihn verliebt.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_08_01"); //Vor einiger Zeit habe ich Wachdienst im Gefängnis gehabt.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_08_02"); //Dort habe ich jemanden kennen gelernt, der so ist wie ich. Ich habe mich in ihn verliebt.
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe8_A_15_03"); //Lass mich raten: Du willst den Gefangenen befreien.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_07_04"); //Er hat mir erzählt, dass er dort wegen seiner Neigungen gelandet ist. Weil seine Nachbarn ihn loswerden wollten. Er ist kein Verbrecher.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_07_05"); //Wir haben vor, Khorinis zu verlassen. Dies ist ein Ort der Unterdrückung.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_07_06"); //Wir werden uns auf die Suche nach einem besseren Zuhause machen.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_07_07"); //Vom Gefängnis bis zu den Stadttoren stehen allerdings einige Wachen der Miliz, die uns sicher nicht so einfach gehe lassen würden.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_08_04"); //Er hat mir erzählt, dass er dort wegen seiner Neigungen gelandet ist. Weil seine Nachbarn ihn loswerden wollten. Er ist kein Verbrecher.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_08_05"); //Wir haben vor, Khorinis zu verlassen. Dies ist ein Ort der Unterdrückung.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_08_06"); //Wir werden uns auf die Suche nach einem besseren Zuhause machen.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_08_07"); //Vom Gefängnis bis zu den Stadttoren stehen allerdings einige Wachen der Miliz, die uns sicher nicht so einfach gehe lassen würden.
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe8_A_15_08"); //Und worin besteht meine Aufgabe?
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_07_09"); //Während ich zum Gefängnis gehe, kümmerst du dich um die beiden Torwachen beim Marktplatz. Lock sie einfach irgendwo hin.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_07_10"); //Schick auch Olav weg, er steht auf dem Weg von der Kaserne zum Stadttor.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_07_11"); //Um die Milizionäre im Gefängnis kümmere ich mich selbst.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_08_09"); //Während ich zum Gefängnis gehe, kümmerst du dich um die beiden Torwachen beim Marktplatz. Lock sie einfach irgendwo hin.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_08_10"); //Schick auch Olav weg, er steht auf dem Weg von der Kaserne zum Stadttor.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_08_11"); //Um die Milizionäre im Gefängnis kümmere ich mich selbst.
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe8_A_15_12"); //Gut, ich fange gleich an.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_07_13"); //Ich gehe jetzt los. Bitte versag nicht!
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe8_A_08_13"); //Ich gehe jetzt los. Bitte versag nicht!
 
 	Mod_Mario = 9;
 
@@ -527,13 +527,13 @@ FUNC INT Info_Mod_Mario_Hilfe9_Condition()
 
 FUNC VOID Info_Mod_Mario_Hilfe9_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe9_07_00"); //Ich stehe in deiner Schuld. Aber ich habe eine kleine Entschädigung für dich.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe9_07_01"); //Diese Geschwindigkeitstränke hätten wir benutzt, wenn du uns nicht geholfen hättest.
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe9_07_02"); //Jetzt haben wir keine Verwendung mehr für sie.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe9_08_00"); //Ich stehe in deiner Schuld. Aber ich habe eine kleine Entschädigung für dich.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe9_08_01"); //Diese Geschwindigkeitstränke hätten wir benutzt, wenn du uns nicht geholfen hättest.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe9_08_02"); //Jetzt haben wir keine Verwendung mehr für sie.
 
 	B_GiveInvItems	(self, hero, ItPo_Speed, 2);
 
-	AI_Output(self, hero, "Info_Mod_Mario_Hilfe9_07_03"); //Nun müssen wir aber aufbrechen. Ich wünsche dir alles Gute.
+	AI_Output(self, hero, "Info_Mod_Mario_Hilfe9_08_03"); //Nun müssen wir aber aufbrechen. Ich wünsche dir alles Gute.
 	AI_Output(hero, self, "Info_Mod_Mario_Hilfe9_15_04"); //Macht's gut.
 
 	B_SetTopicStatus	(TOPIC_MOD_MARIO_FLUCHTHILFE, LOG_SUCCESS);

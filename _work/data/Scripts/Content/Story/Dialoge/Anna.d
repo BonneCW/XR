@@ -20,8 +20,8 @@ FUNC INT Info_Mod_Anna_Hi_Condition()
 FUNC VOID Info_Mod_Anna_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Anna_Hi_15_00"); //Wie geht es dir?
-	AI_Output(self, hero, "Info_Mod_Anna_Hi_16_01"); //Es geht schon. Danke, dass du mir geholfen hast.
-	AI_Output(self, hero, "Info_Mod_Anna_Hi_16_02"); //Wenn du die Fähigkeiten einer Hexe in Anspruch nehmen magst, komm in Zukunft zu mir, ja?
+	AI_Output(self, hero, "Info_Mod_Anna_Hi_12_01"); //Es geht schon. Danke, dass du mir geholfen hast.
+	AI_Output(self, hero, "Info_Mod_Anna_Hi_12_02"); //Wenn du die Fähigkeiten einer Hexe in Anspruch nehmen magst, komm in Zukunft zu mir, ja?
 
 	B_GivePlayerXP	(50);
 

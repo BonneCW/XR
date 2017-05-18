@@ -4,7 +4,7 @@ INSTANCE Mod_1609_PIR_Skip_SS (Npc_Default)
 	name 		= "Skip";
 	guild 		= GIL_out;
 	id 			= 1609;
-	voice		= 0;
+	voice		= 8;
 	flags       = 2;															
 	npctype		= NPCTYPE_MAIN;
 	

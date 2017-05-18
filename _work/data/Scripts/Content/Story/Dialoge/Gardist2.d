@@ -18,7 +18,7 @@ FUNC INT Info_Mod_Gardist2_Hi_Condition()
 
 FUNC VOID Info_Mod_Gardist2_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Gardist2_Hi_13_00"); //Ha, hab ich es doch gewusst, dass ihr verdammten Ratten wieder dorthin zurückkehrt, wo wir den alten Mann gefangen haben.
+	AI_Output(self, hero, "Info_Mod_Gardist2_Hi_08_00"); //Ha, hab ich es doch gewusst, dass ihr verdammten Ratten wieder dorthin zurückkehrt, wo wir den alten Mann gefangen haben.
 	
 	AI_StopProcessInfos	(self);
 };
@@ -44,7 +44,7 @@ FUNC INT Info_Mod_Gardist2_Jackal_Condition()
 
 FUNC VOID Info_Mod_Gardist2_Jackal_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Gardist2_Jackal_13_00"); //Ja, und das werde ich auch mit euch machen und das Kopfgeld einstreichen, denn Bartholo wollte Alissandro persönlich öffentlich hinrichten, um euch darf ich mich kümmern.
+	AI_Output(self, hero, "Info_Mod_Gardist2_Jackal_08_00"); //Ja, und das werde ich auch mit euch machen und das Kopfgeld einstreichen, denn Bartholo wollte Alissandro persönlich öffentlich hinrichten, um euch darf ich mich kümmern.
 	
 	AI_StopProcessInfos	(self);
 
