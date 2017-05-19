@@ -21,6 +21,8 @@ instance Mod_980_MIL_Olav_NW (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	CreateInvItems (self,ItSe_Olav,1);
+	
+	EquipItem(self, ItMw_ShortSword1);
 		
 	// ------ visuals ------																			
 	
