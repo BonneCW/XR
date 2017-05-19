@@ -18,8 +18,8 @@ FUNC INT Info_Mod_Reislord_Hi_Condition()
 
 FUNC VOID Info_Mod_Reislord_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Reislord_Hi_12_00"); //Ahh, ich habe gehört, dass du uns geholfen hast. Ich werde ein gutes Wort bei Sylvio für dich einlegen. Dann bringst du es irgendwann zum Orkjäger.
-	AI_Output(self, hero, "Info_Mod_Reislord_Hi_12_01"); //Und hier, nimm das Gold.
+	AI_Output(self, hero, "Info_Mod_Reislord_Hi_11_00"); //Ahh, ich habe gehört, dass du uns geholfen hast. Ich werde ein gutes Wort bei Sylvio für dich einlegen. Dann bringst du es irgendwann zum Orkjäger.
+	AI_Output(self, hero, "Info_Mod_Reislord_Hi_11_01"); //Und hier, nimm das Gold.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 300);
 
@@ -53,16 +53,16 @@ FUNC INT Info_Mod_Reislord_RufusDa_Condition()
 
 FUNC VOID Info_Mod_Reislord_RufusDa_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Reislord_RufusDa_12_00"); //Hey, du bist doch der Kerl, der Rufus dazu gebracht hat zurückzukommen. Die Bauern werden sich nun ein zweites mal überlegen abzuhauen.
-	AI_Output(self, hero, "Info_Mod_Reislord_RufusDa_12_01"); //Hier, nimm dieses Gold und Erz.
+	AI_Output(self, hero, "Info_Mod_Reislord_RufusDa_11_00"); //Hey, du bist doch der Kerl, der Rufus dazu gebracht hat zurückzukommen. Die Bauern werden sich nun ein zweites mal überlegen abzuhauen.
+	AI_Output(self, hero, "Info_Mod_Reislord_RufusDa_11_01"); //Hier, nimm dieses Gold und Erz.
 
 	if (hero.guild == GIL_MIL)
 	{
-		AI_Output(self, hero, "Info_Mod_Reislord_RufusDa_12_02"); //Sylvio wird nur Gutes über dich zu hören bekommen.
+		AI_Output(self, hero, "Info_Mod_Reislord_RufusDa_11_02"); //Sylvio wird nur Gutes über dich zu hören bekommen.
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Reislord_RufusDa_12_03"); //Gute Arbeit.
+		AI_Output(self, hero, "Info_Mod_Reislord_RufusDa_11_03"); //Gute Arbeit.
 	};
 
 	CreateInvItems	(hero, ItMi_Gold, 300);
@@ -106,22 +106,22 @@ FUNC INT Info_Mod_Reislord_RufusTot_Condition()
 FUNC VOID Info_Mod_Reislord_RufusTot_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Reislord_RufusTot_15_00"); //Ich wollte berichten, dass Rufus tot ist.
-	AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_12_01"); //Wirklich?! Wie ist das passiert?
+	AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_11_01"); //Wirklich?! Wie ist das passiert?
 
 	if (Mod_SLD_Rufus == 5)
 	{
 		AI_Output(hero, self, "Info_Mod_Reislord_RufusTot_15_02"); //Ich habe ihn getötet.
-		AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_12_03"); //Naja, besser als wenn er geflohen wäre.
+		AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_11_03"); //Naja, besser als wenn er geflohen wäre.
 
 		if (hero.guild == GIL_MIL)
 		{
-			AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_12_04"); //Sylvio wird es außerordentlich gefallen, davon zu hören.
-			AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_12_05"); //Und die Bauern werden keine Flucht mehr wagen. Hier, nimm das Gold.
+			AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_11_04"); //Sylvio wird es außerordentlich gefallen, davon zu hören.
+			AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_11_05"); //Und die Bauern werden keine Flucht mehr wagen. Hier, nimm das Gold.
 		}
 		else
 		{
-			AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_12_06"); //Ausgezeichnete Arbeit. Die Bauern werden keine Flucht mehr wagen.
-			AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_12_07"); //Hier, nimm das Gold.
+			AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_11_06"); //Ausgezeichnete Arbeit. Die Bauern werden keine Flucht mehr wagen.
+			AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_11_07"); //Hier, nimm das Gold.
 		};
 
 		CreateInvItems	(hero, ItMi_Gold, 300);
@@ -134,13 +134,13 @@ FUNC VOID Info_Mod_Reislord_RufusTot_Info()
 	else
 	{
 		AI_Output(hero, self, "Info_Mod_Reislord_RufusTot_15_08"); //Er wurde von wilden Tieren zerrissen.
-		AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_12_09"); //Gut. Sein Schicksal wird den anderen Bauern eine Warnung sein. Hier, nimm das Gold als Belohnung.
+		AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_11_09"); //Gut. Sein Schicksal wird den anderen Bauern eine Warnung sein. Hier, nimm das Gold als Belohnung.
 
 		B_GiveInvItems	(self, hero, ItMi_Gold, 250);
 
 		if (hero.guild == GIL_MIL)
 		{
-			AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_12_10"); //Sylvio wird nur Gutes über dich zu hören bekommen.
+			AI_Output(self, hero, "Info_Mod_Reislord_RufusTot_11_10"); //Sylvio wird nur Gutes über dich zu hören bekommen.
 		};
 
 		B_GivePlayerXP	(300);
@@ -177,11 +177,11 @@ FUNC INT Info_Mod_Reislord_OJGBoss_Condition()
 
 FUNC VOID Info_Mod_Reislord_OJGBoss_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_12_00"); //(übertrieben freundlich) Ahh, da bist du ja. Es freut mich, dass du es so weit gebracht hast und Anführer der Orkjäger bist.
-	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_12_01"); //Sofort als ich dich gesehen habe wusste ich, das ist ein richtiger Haudegen ...
+	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_11_00"); //(übertrieben freundlich) Ahh, da bist du ja. Es freut mich, dass du es so weit gebracht hast und Anführer der Orkjäger bist.
+	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_11_01"); //Sofort als ich dich gesehen habe wusste ich, das ist ein richtiger Haudegen ...
 	AI_Output(hero, self, "Info_Mod_Reislord_OJGBoss_15_02"); //(unterbricht trocken) Komm endlich zur Sache.
-	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_12_03"); //(unterwürfig) Jaja, sofort.
-	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_12_04"); //(listig) Naja, da du jetzt Sylvios Platz eingenommen, steht dir jetzt der Anteil an, ähh, unseren Einnahmen zu. Gold, Erz und auch was gutes zur Verpflegung.
+	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_11_03"); //(unterwürfig) Jaja, sofort.
+	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_11_04"); //(listig) Naja, da du jetzt Sylvios Platz eingenommen, steht dir jetzt der Anteil an, ähh, unseren Einnahmen zu. Gold, Erz und auch was gutes zur Verpflegung.
 
 	Info_ClearChoices	(Info_Mod_Reislord_OJGBoss);
 
@@ -192,10 +192,10 @@ FUNC VOID Info_Mod_Reislord_OJGBoss_Info()
 FUNC VOID Info_Mod_Reislord_OJGBoss_B()
 {
 	AI_Output(hero, self, "Info_Mod_Reislord_OJGBoss_B_15_00"); //Was meinst du mit Einnahmen?
-	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_B_12_01"); //Naja, ... ähh ... für die Arbeit, die wir hier leisten bekommen wir unseren Anteil an Erz, Gold und Waren von draußen.
-	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_B_12_02"); //(höhnisch) Aber so ein Bauer ist ja eigentlich recht genügsam und braucht nicht so viel.
-	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_B_12_03"); //Und davon nehmen wir dann eben auch unseren bescheidenen Anteil.
-	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_B_12_04"); //Und dir in deiner wichtigen Position im Lager steht selbstverständlich ein würdiger Teil davon zu.
+	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_B_11_01"); //Naja, ... ähh ... für die Arbeit, die wir hier leisten bekommen wir unseren Anteil an Erz, Gold und Waren von draußen.
+	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_B_11_02"); //(höhnisch) Aber so ein Bauer ist ja eigentlich recht genügsam und braucht nicht so viel.
+	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_B_11_03"); //Und davon nehmen wir dann eben auch unseren bescheidenen Anteil.
+	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_B_11_04"); //Und dir in deiner wichtigen Position im Lager steht selbstverständlich ein würdiger Teil davon zu.
 
 	Info_ClearChoices	(Info_Mod_Reislord_OJGBoss);
 
@@ -206,10 +206,10 @@ FUNC VOID Info_Mod_Reislord_OJGBoss_B()
 FUNC VOID Info_Mod_Reislord_OJGBoss_C()
 {
 	AI_Output(hero, self, "Info_Mod_Reislord_OJGBoss_C_15_00"); //Weißt du was ... du gibst den Bauern jetzt den Anteil, der ihnen wirklich zusteht.
-	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_C_12_01"); //(verdutzt) Ähh, was ... wie ...
+	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_C_11_01"); //(verdutzt) Ähh, was ... wie ...
 	AI_Output(hero, self, "Info_Mod_Reislord_OJGBoss_C_15_02"); //Und von der letzten und der nächsten Lieferung gibst du den Bauern zum Ausgleich für ihre Ausfälle den Anteil, der dir und deinen Jungs normalerweise zustünde.
 	AI_Output(hero, self, "Info_Mod_Reislord_OJGBoss_C_15_03"); //Haben wir uns verstanden?
-	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_C_12_04"); //(paralysiert) Ähh, ähh ... ja.
+	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_C_11_04"); //(paralysiert) Ähh, ähh ... ja.
 
 	B_GivePlayerXP	(200);
 
@@ -222,7 +222,7 @@ FUNC VOID Info_Mod_Reislord_OJGBoss_C()
 FUNC VOID Info_Mod_Reislord_OJGBoss_A()
 {
 	AI_Output(hero, self, "Info_Mod_Reislord_OJGBoss_A_15_00"); //Da sage ich bestimmt nicht nein. Meine Taschen fühlen sich so leer an und etwas funkelndes Metall in ihnen wäre bestimmt nicht verfehlt.
-	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_A_12_01"); //Natürlich, wie es dir auch zusteht. Ich merke, mit dir wird auch weiterhin alles so laufen, wie es soll, hehe. Hier bitte. Viel Spaß damit.
+	AI_Output(self, hero, "Info_Mod_Reislord_OJGBoss_A_11_01"); //Natürlich, wie es dir auch zusteht. Ich merke, mit dir wird auch weiterhin alles so laufen, wie es soll, hehe. Hier bitte. Viel Spaß damit.
 
 	B_ShowGivenThings	("230 Gold, 17 Erz, 2 Wein und Schinken erhalten");
 

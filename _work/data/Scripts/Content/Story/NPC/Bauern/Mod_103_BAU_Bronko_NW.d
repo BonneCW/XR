@@ -4,7 +4,7 @@ instance Mod_103_BAU_Bronko_NW (Npc_Default)
 	name 		= "Bronko";
 	guild 		= GIL_NONE;
 	id 			= 103;
-	voice		= 0;
+	voice		= 11;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

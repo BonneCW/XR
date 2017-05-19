@@ -4,7 +4,7 @@ INSTANCE Mod_7278_OUT_Bibliothekar_REL (Npc_Default)
 	name 		= "Bibliothekar";
 	guild 		= GIL_OUT;
 	id 			= 7278;
-	voice		= 0;
+	voice		= 11;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

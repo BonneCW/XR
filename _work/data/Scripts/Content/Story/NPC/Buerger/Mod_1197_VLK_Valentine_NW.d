@@ -4,7 +4,7 @@ instance Mod_1197_VLK_Valentine_NW (Npc_Default)
 	name 		= "Valentine";	
 	guild 		= GIL_pal;
 	id 			= 1197;
-	voice		= 0;
+	voice		= 12;
 	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 	

@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Nick_Hi_Condition()
 
 FUNC VOID Info_Mod_Nick_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Nick_Hi_04_00"); //Du bist keins von diesen Tieren, was machst du hier?
+	AI_Output(self, hero, "Info_Mod_Nick_Hi_01_00"); //Du bist keins von diesen Tieren, was machst du hier?
 	
 	Info_ClearChoices	(Info_Mod_Nick_Hi);
 
@@ -26,15 +26,15 @@ FUNC VOID Info_Mod_Nick_Hi_Info()
 
 FUNC VOID Info_Mod_Nick_Hi_E()
 {
-	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_04_00"); //Eins von diesen Biestern hat meinen Kopf gefressen und ist abgehauen!
-	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_04_01"); //Ich kann 	nicht genau sagen, wie es aussah, aber ich bin mir sicher, dass es zwei Beine und keine Arme hatte.
-	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_04_02"); //Mittlerweile glaube ich aber nicht mehr, dass es hier ist.
+	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_01_00"); //Eins von diesen Biestern hat meinen Kopf gefressen und ist abgehauen!
+	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_01_01"); //Ich kann 	nicht genau sagen, wie es aussah, aber ich bin mir sicher, dass es zwei Beine und keine Arme hatte.
+	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_01_02"); //Mittlerweile glaube ich aber nicht mehr, dass es hier ist.
 	AI_Output(hero, self, "Info_Mod_Nick_Hi_E_15_03"); //Soll ich dir deinen Kopf zurückbringen?
-	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_04_04"); //Das wäre wunderbar.
-	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_04_05"); //Das Letzte, woran ich mich erinnere ist, dass ich an der Kreuzung einer alten Ruine und einer alten ... hm ... vielleicht Bibliothek von zweibeinigen Tieren angefallen wurde.
-	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_04_06"); //Am besten suchst du dort zuerst.
+	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_01_04"); //Das wäre wunderbar.
+	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_01_05"); //Das Letzte, woran ich mich erinnere ist, dass ich an der Kreuzung einer alten Ruine und einer alten ... hm ... vielleicht Bibliothek von zweibeinigen Tieren angefallen wurde.
+	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_01_06"); //Am besten suchst du dort zuerst.
 	AI_Output(hero, self, "Info_Mod_Nick_Hi_E_15_07"); //Ich werde dort suchen. Bis später.
-	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_04_08"); //Ich freue mich schon auf unser Wiedersehen. Ich verspreche, bis dahin keines dieser Tiere mehr zu töten.
+	AI_Output(self, hero, "Info_Mod_Nick_Hi_E_01_08"); //Ich freue mich schon auf unser Wiedersehen. Ich verspreche, bis dahin keines dieser Tiere mehr zu töten.
 
 	B_LogEntry	(TOPIC_MOD_ANOR_NICK, "An der Kreuzung des Kastells und der Felsenfestung ist Nick von Scavengern oder womöglich von Snappern angefallen worden. Ich werde mich dort mal umsehen.");
 
@@ -57,7 +57,7 @@ FUNC VOID Info_Mod_Nick_Hi_E()
 FUNC VOID Info_Mod_Nick_Hi_C()
 {
 	AI_Output(hero, self, "Info_Mod_Nick_Hi_C_15_00"); //Du kannst sprechen?
-	AI_Output(self, hero, "Info_Mod_Nick_Hi_C_04_01"); //Ich brauche keine Stimmbänder und keinen Mund. Außerdem bin ich Bauchredner.
+	AI_Output(self, hero, "Info_Mod_Nick_Hi_C_01_01"); //Ich brauche keine Stimmbänder und keinen Mund. Außerdem bin ich Bauchredner.
 
 	Info_ClearChoices	(Info_Mod_Nick_Hi);
 
@@ -68,7 +68,7 @@ FUNC VOID Info_Mod_Nick_Hi_C()
 FUNC VOID Info_Mod_Nick_Hi_A()
 {
 	AI_Output(hero, self, "Info_Mod_Nick_Hi_A_15_00"); //Ich möchte wissen, warum du all diese Tiere umbringst.
-	AI_Output(self, hero, "Info_Mod_Nick_Hi_A_04_01"); //Warum?
+	AI_Output(self, hero, "Info_Mod_Nick_Hi_A_01_01"); //Warum?
 
 	Info_Mod_Nick_Hi_E();
 };
@@ -76,7 +76,7 @@ FUNC VOID Info_Mod_Nick_Hi_A()
 FUNC VOID Info_Mod_Nick_Hi_B()
 {
 	AI_Output(hero, self, "Info_Mod_Nick_Hi_B_15_00"); //Ich bin hier, um dich zu töten.
-	AI_Output(self, hero, "Info_Mod_Nick_Hi_B_04_01"); //Du willst mich töten? Du kannst mich nicht töten. Ich bin nämlich schon tot. (Lacht leise) Warum willst du mich denn loswerden?
+	AI_Output(self, hero, "Info_Mod_Nick_Hi_B_01_01"); //Du willst mich töten? Du kannst mich nicht töten. Ich bin nämlich schon tot. (Lacht leise) Warum willst du mich denn loswerden?
 
 	Info_ClearChoices	(Info_Mod_Nick_Hi);
 
@@ -87,7 +87,7 @@ FUNC VOID Info_Mod_Nick_Hi_B()
 FUNC VOID Info_Mod_Nick_Hi_F()
 {
 	AI_Output(hero, self, "Info_Mod_Nick_Hi_F_15_00"); //Das ist mein Auftrag.
-	AI_Output(self, hero, "Info_Mod_Nick_Hi_F_04_01"); //Vergiss es. Du wirst mich nur los, wenn du mir hilfst.
+	AI_Output(self, hero, "Info_Mod_Nick_Hi_F_01_01"); //Vergiss es. Du wirst mich nur los, wenn du mir hilfst.
 	AI_Output(hero, self, "Info_Mod_Nick_Hi_F_15_02"); //Wie kann ich dir helfen?
 
 	Info_Mod_Nick_Hi_E();
@@ -120,9 +120,9 @@ FUNC INT Info_Mod_Nick_Kopf_Condition()
 
 FUNC VOID Info_Mod_Nick_Kopf_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Nick_Kopf_04_00"); //Und? Wie ist es dir auf der Suche ergangen?
+	AI_Output(self, hero, "Info_Mod_Nick_Kopf_01_00"); //Und? Wie ist es dir auf der Suche ergangen?
 	AI_Output(hero, self, "Info_Mod_Nick_Kopf_15_01"); //Es waren Snapper, die dir den Kopf abgebissen haben. Anscheinend hat ein Minotaurus sie umgebracht und den Kopf an sich gebracht. Ich habe den Kopf jedoch inzwischen.
-	AI_Output(self, hero, "Info_Mod_Nick_Kopf_04_02"); //Gibst du ihn mir dann wieder?
+	AI_Output(self, hero, "Info_Mod_Nick_Kopf_01_02"); //Gibst du ihn mir dann wieder?
 	
 	Info_ClearChoices	(Info_Mod_Nick_Kopf);
 
@@ -139,7 +139,7 @@ FUNC VOID Info_Mod_Nick_Kopf_A()
 
 	Mdl_SetVisualBody 		(self,	"Zom_Body",		0,			1,			"ZOM_HEAD", 0,  		DEFAULT,	ITAR_Pir_Zombie);
 
-	AI_Output(self, hero, "Info_Mod_Nick_Kopf_A_04_01"); //Vielen Dank, Fremder! Hier hast du mein letztes Gold, ich brauche es jetzt sowieso nicht mehr.
+	AI_Output(self, hero, "Info_Mod_Nick_Kopf_A_01_01"); //Vielen Dank, Fremder! Hier hast du mein letztes Gold, ich brauche es jetzt sowieso nicht mehr.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 
@@ -150,7 +150,7 @@ FUNC VOID Info_Mod_Nick_Kopf_A()
 
 FUNC VOID Info_Mod_Nick_Kopf_G()
 {
-	AI_Output(self, hero, "Info_Mod_Nick_Kopf_G_04_00"); //Vielen Dank, Fremder!
+	AI_Output(self, hero, "Info_Mod_Nick_Kopf_G_01_00"); //Vielen Dank, Fremder!
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 
@@ -162,8 +162,8 @@ FUNC VOID Info_Mod_Nick_Kopf_G()
 FUNC VOID Info_Mod_Nick_Kopf_B()
 {
 	AI_Output(hero, self, "Info_Mod_Nick_Kopf_B_15_00"); //Was bekomme ich dafür?
-	AI_Output(self, hero, "Info_Mod_Nick_Kopf_B_04_01"); //Ich werde aufhören, unschuldige Tiere zu töten. Außerdem müsste ich auch viele Menschen auf der Suche nach dir umbringen.
-	AI_Output(self, hero, "Info_Mod_Nick_Kopf_B_04_02"); //Und du kannst Gold haben. Ich brauche es nicht mehr, wenn ich meinen Kopf zurück habe.
+	AI_Output(self, hero, "Info_Mod_Nick_Kopf_B_01_01"); //Ich werde aufhören, unschuldige Tiere zu töten. Außerdem müsste ich auch viele Menschen auf der Suche nach dir umbringen.
+	AI_Output(self, hero, "Info_Mod_Nick_Kopf_B_01_02"); //Und du kannst Gold haben. Ich brauche es nicht mehr, wenn ich meinen Kopf zurück habe.
 
 	Info_ClearChoices	(Info_Mod_Nick_Kopf);
 
@@ -174,7 +174,7 @@ FUNC VOID Info_Mod_Nick_Kopf_B()
 FUNC VOID Info_Mod_Nick_Kopf_F()
 {
 	AI_Output(hero, self, "Info_Mod_Nick_Kopf_F_15_00"); //Das reicht mir nicht.
-	AI_Output(self, hero, "Info_Mod_Nick_Kopf_F_04_01"); //Ich kann dir nicht mehr geben.
+	AI_Output(self, hero, "Info_Mod_Nick_Kopf_F_01_01"); //Ich kann dir nicht mehr geben.
 	AI_Output(hero, self, "Info_Mod_Nick_Kopf_F_15_02"); //Wie kann ich dir helfen?
 
 	Info_ClearChoices	(Info_Mod_Nick_Kopf);
@@ -198,7 +198,7 @@ FUNC VOID Info_Mod_Nick_Kopf_D()
 FUNC VOID Info_Mod_Nick_Kopf_E()
 {
 	AI_Output(hero, self, "Info_Mod_Nick_Kopf_E_15_00"); //Dann bekommst du halt deinen Kopf nicht zurück.
-	AI_Output(self, hero, "Info_Mod_Nick_Kopf_E_04_01"); //Na gut Fremder. Ich gebe dir auch noch ein paar Erzbrocken.
+	AI_Output(self, hero, "Info_Mod_Nick_Kopf_E_01_01"); //Na gut Fremder. Ich gebe dir auch noch ein paar Erzbrocken.
 	AI_Output(hero, self, "Info_Mod_Nick_Kopf_E_15_02"); //Hier hast du den Kopf.
 
 	B_GiveInvItems	(hero, self, ItMi_NicksKopf, 1);
@@ -206,7 +206,7 @@ FUNC VOID Info_Mod_Nick_Kopf_E()
 
 	Mdl_SetVisualBody 		(self,	"Zom_Body",		0,			1,			"ZOM_HEAD", 0,  		DEFAULT,	ITAR_Pir_Zombie);
 
-	AI_Output(self, hero, "Info_Mod_Nick_Kopf_E_04_03"); //Danke. Endlich Ruhe.
+	AI_Output(self, hero, "Info_Mod_Nick_Kopf_E_01_03"); //Danke. Endlich Ruhe.
 
 	CreateInvItems	(hero, ItMi_Gold, 250);
 	CreateInvItems	(hero, ItMi_Nugget, 5);

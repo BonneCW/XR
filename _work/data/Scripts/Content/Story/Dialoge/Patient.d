@@ -20,8 +20,8 @@ FUNC INT Info_Mod_Patient_Endres_Condition()
 FUNC VOID Info_Mod_Patient_Endres_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Patient_Endres_15_00"); //Stimmt es, dass der Heiler bei dir war, als Endres ermordet wurde?
-	AI_Output(self, hero, "Info_Mod_Patient_Endres_04_01"); //Ich kann es nicht genau sagen. An dem Tag bin ich komischerweise mittags eingeschlafen und erst abends wieder aufgewacht.
-	AI_Output(self, hero, "Info_Mod_Patient_Endres_04_02"); //Aber der Heiler war da, bevor ich eingeschlafen und nachdem ich aufgewacht bin.
+	AI_Output(self, hero, "Info_Mod_Patient_Endres_01_01"); //Ich kann es nicht genau sagen. An dem Tag bin ich komischerweise mittags eingeschlafen und erst abends wieder aufgewacht.
+	AI_Output(self, hero, "Info_Mod_Patient_Endres_01_02"); //Aber der Heiler war da, bevor ich eingeschlafen und nachdem ich aufgewacht bin.
 
 	B_LogEntry	(TOPIC_MOD_KHORATA_ENDRES, "Der Patient hat einen Großteil des Tages 'komischerweise' verschlafen. Das Alibi des Heilers ist also löchrig.");
 };
@@ -45,7 +45,7 @@ FUNC INT Info_Mod_Patient_WasFehlt_Condition()
 FUNC VOID Info_Mod_Patient_WasFehlt_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Patient_WasFehlt_15_00"); //Na, woran fehlt es uns denn?
-	AI_Output(self, hero, "Info_Mod_Patient_WasFehlt_04_01"); //Am Betäubungsmittel. Hast du vielleicht was Hochprozentiges dabei?
+	AI_Output(self, hero, "Info_Mod_Patient_WasFehlt_01_01"); //Am Betäubungsmittel. Hast du vielleicht was Hochprozentiges dabei?
 
 	Info_ClearChoices	(Info_Mod_Patient_WasFehlt);
 
@@ -69,7 +69,7 @@ FUNC VOID Info_Mod_Patient_WasFehlt_B()
 FUNC VOID Info_Mod_Patient_WasFehlt_A()
 {
 	AI_Output(hero, self, "Info_Mod_Patient_WasFehlt_A_15_00"); //Na sicher.
-	AI_Output(self, hero, "Info_Mod_Patient_WasFehlt_A_04_01"); //Was denn?
+	AI_Output(self, hero, "Info_Mod_Patient_WasFehlt_A_01_01"); //Was denn?
 
 	Info_ClearChoices	(Info_Mod_Patient_WasFehlt);
 
@@ -91,14 +91,14 @@ FUNC VOID Info_Mod_Patient_WasFehlt_F(var C_Item itm)
 {
 	B_GiveInvItems	(hero, self, itm, 1);
 
-	AI_Output(self, hero, "Info_Mod_Patient_WasFehlt_F_04_00"); //Danke, Mann.
+	AI_Output(self, hero, "Info_Mod_Patient_WasFehlt_F_01_00"); //Danke, Mann.
 
 	B_UseItem	(self, itm);
 
-	AI_Output(self, hero, "Info_Mod_Patient_WasFehlt_F_04_01"); //Diese verfluchten Brustoperationen gehen mir echt an die Nieren.
+	AI_Output(self, hero, "Info_Mod_Patient_WasFehlt_F_01_01"); //Diese verfluchten Brustoperationen gehen mir echt an die Nieren.
 	AI_Output(hero, self, "Info_Mod_Patient_WasFehlt_F_15_02"); //Welche Brustoperationen?
-	AI_Output(self, hero, "Info_Mod_Patient_WasFehlt_F_04_03"); //Meine Leber scheint schlapp zu machen. Sagt jedenfalls der Heiler.
-	AI_Output(self, hero, "Info_Mod_Patient_WasFehlt_F_04_04"); //Aber mir ging's besser, als ich noch nicht hier lag.
+	AI_Output(self, hero, "Info_Mod_Patient_WasFehlt_F_01_03"); //Meine Leber scheint schlapp zu machen. Sagt jedenfalls der Heiler.
+	AI_Output(self, hero, "Info_Mod_Patient_WasFehlt_F_01_04"); //Aber mir ging's besser, als ich noch nicht hier lag.
 
 	B_GivePlayerXP	(50);
 

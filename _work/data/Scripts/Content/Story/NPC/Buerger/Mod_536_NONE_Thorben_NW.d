@@ -4,7 +4,7 @@ INSTANCE Mod_536_NONE_Thorben_NW (Npc_Default)
 	name 		= "Thorben";
 	guild 		= GIL_PAL;
 	id 			= 536;
-	voice		= 0;
+	voice		= 11;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

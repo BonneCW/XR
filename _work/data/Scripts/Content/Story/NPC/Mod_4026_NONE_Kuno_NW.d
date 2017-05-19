@@ -4,7 +4,7 @@ INSTANCE Mod_4026_NONE_Kuno_NW (Npc_Default)
 	name 		= "Kuno";
 	guild 		= GIL_OUT;
 	id 			= 4026;
-	voice		= 0;
+	voice		= 11;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

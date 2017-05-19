@@ -4,7 +4,7 @@ INSTANCE Mod_974_OUT_Gestath_EIS (Npc_Default)
 	name 		= "Gestath";
 	guild 		= GIL_OUT;
 	id 			= 974;
-	voice		= 0;
+	voice		= 11;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	
