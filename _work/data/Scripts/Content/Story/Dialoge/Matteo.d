@@ -960,7 +960,7 @@ INSTANCE Info_Mod_Matteo_Einschaetzung (C_INFO)
 	information	= Info_Mod_Matteo_Einschaetzung_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= "Kannst mein Verhandlungsgeschick einschätzen?";
+	description	= "Kannst du mein Verhandlungsgeschick einschätzen?";
 };
 
 FUNC INT Info_Mod_Matteo_Einschaetzung_Condition()
@@ -973,7 +973,7 @@ FUNC INT Info_Mod_Matteo_Einschaetzung_Condition()
 
 FUNC VOID Info_Mod_Matteo_Einschaetzung_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Matteo_Einschaetzung_15_00"); //Kannst mein Verhandlungsgeschick einschätzen?
+	AI_Output(hero, self, "Info_Mod_Matteo_Einschaetzung_15_00"); //Kannst du mein Verhandlungsgeschick einschätzen?
 	AI_Output(self, hero, "Info_Mod_Matteo_Einschaetzung_36_01"); //Klar. Also ich würde sagen ...
 
 	if (Mod_Verhandlungsgeschick	<	30)
