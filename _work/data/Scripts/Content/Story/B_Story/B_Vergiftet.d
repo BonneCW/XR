@@ -192,6 +192,7 @@ FUNC VOID B_Vergiftet(var C_NPC slf)
 	&& (Npc_GetDistToNpc(hero, slf) <= 120)
 	&& (C_BodyStateContains(hero, BS_RUN))
 	&& (slf.flags == 0)
+	&& (slf.attribute[ATR_HITPOINTS] > 0)
 	{
 		B_MagicHurtNpc	(hero, slf, 9999);
 
