@@ -1,25 +1,4 @@
-// ************************************************************
-// 			  				   EXIT 
-// ************************************************************
-INSTANCE DIA_Rumbold_EXIT (C_INFO)
-{
-	npc			= Mod_118_MIL_Rumbold_NW;
-	nr			= 999;
-	condition	= DIA_Rumbold_EXIT_Condition;
-	information	= DIA_Rumbold_EXIT_Info;
-	permanent	= TRUE;
-	description	= DIALOG_ENDE;
-};        
-         
-FUNC INT DIA_Rumbold_EXIT_Condition()
-{	
-	return TRUE;
-};
-
-FUNC VOID DIA_Rumbold_EXIT_Info()
-{
-	AI_StopProcessInfos	(self);
-};
+const string Rumbold_Checkpoint	= "NW_CITY_MERCHANT_PATH_03";	//WP hinter City-Tor vom Spielstart aus!
 
 INSTANCE DIA_Rumbold_Attack (C_INFO)
 {
@@ -33,7 +12,7 @@ INSTANCE DIA_Rumbold_Attack (C_INFO)
 
 FUNC INT DIA_Rumbold_Attack_Condition()
 {
-	if (Npc_GetDistToWP(hero, "NW_CITY_MERCHANT_PATH_03") < 400)
+	if (Npc_GetDistToWP(hero, Rumbold_Checkpoint) < 400)
 	{
 		return TRUE;
 	};
@@ -41,12 +20,10 @@ FUNC INT DIA_Rumbold_Attack_Condition()
 
 func void DIA_Rumbold_Attack_Info()
 {	
-	AI_Output (self, other,"DIA_Rumbold_Attack_10_00"); //Weg da, Dieb!
+	AI_Output (self, other, "DIA_Rumbold_Attack_10_00"); //Weg da, Dieb!
 	AI_StopProcessInfos	(self);	
 	B_Attack (self, other, AR_GuardStopsIntruder, 0); 
 };
-
-const string Rumbold_Checkpoint	= "NW_CITY_MERCHANT_PATH_03";	//WP hinter City-Tor vom Spielstart aus!
 
 instance Info_Mod_Rumbold_FirstWarn (C_INFO)
 {
@@ -153,4 +130,24 @@ func void Info_Mod_Rumbold_Attack_Info()
 	AI_StopProcessInfos	(self);	
 
 	B_Attack (self, hero, AR_GuardStopsIntruder, 0); 
+};
+
+INSTANCE DIA_Rumbold_EXIT (C_INFO)
+{
+	npc			= Mod_118_MIL_Rumbold_NW;
+	nr			= 1;
+	condition	= DIA_Rumbold_EXIT_Condition;
+	information	= DIA_Rumbold_EXIT_Info;
+	permanent	= TRUE;
+	description	= DIALOG_ENDE;
+};        
+         
+FUNC INT DIA_Rumbold_EXIT_Condition()
+{	
+	return TRUE;
+};
+
+FUNC VOID DIA_Rumbold_EXIT_Info()
+{
+	AI_StopProcessInfos	(self);
 };
