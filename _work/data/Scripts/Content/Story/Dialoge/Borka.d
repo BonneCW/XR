@@ -253,6 +253,8 @@ FUNC VOID Info_Mod_Borka_Skinner_Info()
 	B_LogEntry	(TOPIC_MOD_BDT_SKINNER, "So, damit bin ich in der Stadt die ganzen grünen Novizen losgeworden.");
 };
 
+var int Mod_BorkaTrader;
+
 INSTANCE Info_Mod_Borka_Trade (C_INFO)
 {
 	npc		= Mod_563_NONE_Borka_NW;
@@ -275,6 +277,12 @@ FUNC INT Info_Mod_Borka_Trade_Condition()
 
 FUNC VOID Info_Mod_Borka_Trade_Info()
 {
+	if (!Mod_BorkaTrader) {
+		Mod_BorkaTrader = TRUE;
+		
+		Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
+		B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Borka handelt mit Sumpfkraut.");
+	};
 	Backup_Questitems();
 
 	B_GiveTradeInv (self);
