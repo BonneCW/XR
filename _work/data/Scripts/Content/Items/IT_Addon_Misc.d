@@ -154,7 +154,7 @@ func void Use_Addon_Joint_02()
 //****************************************************************************
 INSTANCE ItMi_BaltramPaket(C_Item)
 {
-	name 				=	"Baltram's Lieferung";
+	name 				=	"Baltrams Lieferung";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MISSION|ITEM_SHOW;

@@ -14,6 +14,8 @@ FUNC VOID B_GiveTradeInv_Mod_Harlok_REL (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Traumruf, 10); 
 		CreateInvItems (slf, ItMi_Addon_Joint_01, 15); 
 		CreateInvItems (slf, ItMi_Addon_Joint_02, 20);
+		CreateInvItems (slf, ItMi_SumpfTabak, 5); 
+		CreateInvItems (slf, ItPl_SwampHerb, 15); 
 		
 		Harlok_ItemsGiven_Chapter_1 = TRUE;
 	};

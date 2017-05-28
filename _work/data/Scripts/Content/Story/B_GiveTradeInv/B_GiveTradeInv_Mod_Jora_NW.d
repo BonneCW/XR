@@ -19,6 +19,10 @@ FUNC VOID B_GiveTradeInv_Mod_Jora_NW (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Bolt,  30);
 		CreateInvItems (slf, ItMi_Seide, 1);
 		CreateInvItems (slf, ItMi_Scoop, 1);
+		CreateInvItems (slf, ItMi_EimerW, 1);
+		CreateInvItems (slf, ItMi_Palette, 1);
+		CreateInvItems (slf, ItMi_Sprengstoff, 1);
+		CreateInvItems (slf, ItMi_Addon_WhitePearl, 1);
 
 		CreateInvItems (slf, ItRw_Arrow, 100); 
 		CreateInvItems (slf, ItRw_Bolt, 100); 

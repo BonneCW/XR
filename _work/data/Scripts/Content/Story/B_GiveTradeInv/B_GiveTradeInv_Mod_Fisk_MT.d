@@ -21,6 +21,8 @@ FUNC VOID B_GiveTradeInv_Mod_Fisk_MT (var C_NPC slf)
 		CreateInvItems (slf, ItMi_GoldNugget_Addon, 13); 
 		CreateInvItems (slf, ItMi_Joint, 15); 
 		
+		CreateInvItems (slf, ItMi_Ast, 20); 
+		
 		//Gürtel
 		CreateInvItems (slf, ItBE_Addon_Leather_01, 1); 
 

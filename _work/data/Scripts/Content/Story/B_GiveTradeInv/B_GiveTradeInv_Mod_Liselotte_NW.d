@@ -28,6 +28,10 @@ FUNC VOID B_GiveTradeInv_Mod_Liselotte_NW (var C_NPC slf)
 		
 		CreateInvItems (slf,ItRi_Hp_01, 1);
 		
+		CreateInvItems (slf,ItMi_DarkPearl, 1);
+		CreateInvItems (slf,ItMi_Orkstatuette, 1);
+		CreateInvItems (slf,ItMi_Stuff_Barbknife_01, 1);
+		
 		Liselotte_ItemsGiven_Chapter_1 = TRUE;
 	};
 	

@@ -26,7 +26,10 @@ FUNC VOID B_GiveTradeInv_Mod_Isgaroth_NW (var C_NPC slf)
 		CreateInvItems	(slf, ItMi_Runeblank, 1);
 		CreateInvItems   (slf, ItPo_Gegengift,		2);
 
-		CreateInvItems	(slf, ItWr_HeiligeWaffen, 1);
+		CreateInvItems	(slf, ItMi_Addon_WhitePearl, 1);
+		CreateInvItems	(slf, ItMi_Aquamarine, 1);
+		CreateInvItems	(slf, ItMi_InnosStatue, 1);
+		CreateInvItems	(slf, ItMi_ScavengerEgg, 1);
 
 		Isgaroth_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -74,6 +77,7 @@ FUNC VOID B_GiveTradeInv_Mod_Isgaroth_NW (var C_NPC slf)
 		
 		CreateInvItems   (slf, ItSc_Firestorm,	5);
 		CreateInvItems   (slf, ItPo_Gegengift,		2);
+		CreateInvItems   (slf, ItMi_Zeitspalt_Addon,		1);
 		
 		Isgaroth_ItemsGiven_Chapter_3 = TRUE;
 	};

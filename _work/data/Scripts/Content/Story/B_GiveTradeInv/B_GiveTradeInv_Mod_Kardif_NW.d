@@ -19,6 +19,8 @@ FUNC VOID B_GiveTradeInv_Mod_Kardif_NW (var C_NPC slf)
 		
 		CreateInvItems   (slf, ItFo_Wine,	13);
 		
+		CreateInvItems   (slf, ItMi_SumpfTabak,	2);
+		
 		Kardif_ItemsGiven_Chapter_1 = TRUE;
 	};
 

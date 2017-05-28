@@ -68,6 +68,15 @@ FUNC VOID B_GiveTradeInv_Mod_Ignaz_NW (var C_NPC slf)
 		CreateInvItems   (slf, ItPo_Gegengift,		2);
 		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
 		
+		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
+		CreateInvItems	(slf, ItPl_Heilknospe, 3);
+		CreateInvItems	(slf, ItPl_Rabenkraut, 1);
+		CreateInvItems	(slf, ItPl_Mondschatten, 1);
+		CreateInvItems	(slf, ItPl_Trollkirsche, 1);
+		CreateInvItems	(slf, GelberScherling, 1);
+		CreateInvItems	(slf, RoterBaron, 1);
+		CreateInvItems	(slf, ItPl_Winterrute, 1);
+		
 		Ignaz_ItemsGiven_Chapter_1 = TRUE;
 	};
 	
