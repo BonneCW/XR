@@ -4,7 +4,7 @@ instance Mod_763_NONE_Gaan_NW (Npc_Default)
 	name 		= "Gaan";
 	guild 		= GIL_NONE;
 	id 			= 763;
-	voice		= 0;
+	voice		= 7;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_588_WNOV_Joe_NW (Npc_Default)
 	name 		= "Joe"; 
 	guild 		= GIL_NOV;
 	id 			= 588;
-	voice		= 0;
+	voice		= 7;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

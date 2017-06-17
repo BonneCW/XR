@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Allievo_Hi_Condition()
 
 FUNC VOID Info_Mod_Allievo_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Allievo_Hi_13_00"); //(kühn) Was willst du von mir?
+	AI_Output(self, hero, "Info_Mod_Allievo_Hi_07_00"); //(kühn) Was willst du von mir?
 
 	Info_ClearChoices	(Info_Mod_Allievo_Hi);
 
@@ -26,8 +26,8 @@ FUNC VOID Info_Mod_Allievo_Hi_Info()
 FUNC VOID Info_Mod_Allievo_Hi_B()
 {
 	AI_Output(hero, self, "Info_Mod_Allievo_Hi_B_15_00"); //Falsche Frage. Was wollt ihr von mir?
-	AI_Output(self, hero, "Info_Mod_Allievo_Hi_B_13_01"); //(erkennend) Ahh... Mein Meister versprach mir, dass ich mit dir machen könnte, was ich wollte.
-	AI_Output(self, hero, "Info_Mod_Allievo_Hi_B_13_02"); //Unglücklicherweise bin ich gerade allein ...
+	AI_Output(self, hero, "Info_Mod_Allievo_Hi_B_07_01"); //(erkennend) Ahh... Mein Meister versprach mir, dass ich mit dir machen könnte, was ich wollte.
+	AI_Output(self, hero, "Info_Mod_Allievo_Hi_B_07_02"); //Unglücklicherweise bin ich gerade allein ...
 
 	Info_ClearChoices	(Info_Mod_Allievo_Hi);
 
@@ -38,7 +38,7 @@ FUNC VOID Info_Mod_Allievo_Hi_B()
 FUNC VOID Info_Mod_Allievo_Hi_A()
 {
 	AI_Output(hero, self, "Info_Mod_Allievo_Hi_A_15_00"); //Bist du etwa ganz allein?
-	AI_Output(self, hero, "Info_Mod_Allievo_Hi_A_13_01"); //Jetzt vielleicht schon, aber jeden Moment kommen meine Freunde zurück. Wart's nur ab!
+	AI_Output(self, hero, "Info_Mod_Allievo_Hi_A_07_01"); //Jetzt vielleicht schon, aber jeden Moment kommen meine Freunde zurück. Wart's nur ab!
 
 	Info_ClearChoices	(Info_Mod_Allievo_Hi);
 
@@ -49,9 +49,9 @@ FUNC VOID Info_Mod_Allievo_Hi_A()
 FUNC VOID Info_Mod_Allievo_Hi_D()
 {
 	AI_Output(hero, self, "Info_Mod_Allievo_Hi_D_15_00"); //Wer ist denn normalerweise sonst noch hier?
-	AI_Output(self, hero, "Info_Mod_Allievo_Hi_D_13_01"); //(redselig) Der Bruno, unser stiernackiger Tagedieb, und der gerissene Grima. Beides ausgezeichnete Leute.
-	AI_Output(self, hero, "Info_Mod_Allievo_Hi_D_13_02"); //Äh ... (Nachdenkpause) Sie sind gerade unterwegs, aber es wird noch gaaanz lange dauern, bis sie wieder hier sind.
-	AI_Output(self, hero, "Info_Mod_Allievo_Hi_D_13_03"); //Bis dahin sollte ich ein paar Pflanzen sammeln gehen, naja, du weißt schon, Heilkräuter und so einen Kram, was man halt so gebrauchen kann. (langgezogenes, mühsames Lachen)
+	AI_Output(self, hero, "Info_Mod_Allievo_Hi_D_07_01"); //(redselig) Der Bruno, unser stiernackiger Tagedieb, und der gerissene Grima. Beides ausgezeichnete Leute.
+	AI_Output(self, hero, "Info_Mod_Allievo_Hi_D_07_02"); //Äh ... (Nachdenkpause) Sie sind gerade unterwegs, aber es wird noch gaaanz lange dauern, bis sie wieder hier sind.
+	AI_Output(self, hero, "Info_Mod_Allievo_Hi_D_07_03"); //Bis dahin sollte ich ein paar Pflanzen sammeln gehen, naja, du weißt schon, Heilkräuter und so einen Kram, was man halt so gebrauchen kann. (langgezogenes, mühsames Lachen)
 
 	Info_ClearChoices	(Info_Mod_Allievo_Hi);
 
@@ -72,10 +72,10 @@ FUNC VOID Info_Mod_Allievo_Hi_C()
 FUNC VOID Info_Mod_Allievo_Hi_F()
 {
 	AI_Output(hero, self, "Info_Mod_Allievo_Hi_F_15_00"); //Wenn du schon so gern redest: Erzähl mir etwas über Canthar.
-	AI_Output(self, hero, "Info_Mod_Allievo_Hi_F_13_01"); //Wo soll ich anfangen? Also, er spricht im Schlaf. Deshalb weiß ich, dass er auf Sonja steht.
-	AI_Output(self, hero, "Info_Mod_Allievo_Hi_F_13_02"); //Und er behauptet manchmal, sein Ziel sei es, die Weltherrschaft zu erringen.
-	AI_Output(self, hero, "Info_Mod_Allievo_Hi_F_13_03"); //Aber das glaube ich nicht, was soll man schließlich damit? Ist doch nur zusätzlicher Ärger.
-	AI_Output(self, hero, "Info_Mod_Allievo_Hi_F_13_04"); //Äh ... (laut) Bruno, Grima, fasst ihn!
+	AI_Output(self, hero, "Info_Mod_Allievo_Hi_F_07_01"); //Wo soll ich anfangen? Also, er spricht im Schlaf. Deshalb weiß ich, dass er auf Sonja steht.
+	AI_Output(self, hero, "Info_Mod_Allievo_Hi_F_07_02"); //Und er behauptet manchmal, sein Ziel sei es, die Weltherrschaft zu erringen.
+	AI_Output(self, hero, "Info_Mod_Allievo_Hi_F_07_03"); //Aber das glaube ich nicht, was soll man schließlich damit? Ist doch nur zusätzlicher Ärger.
+	AI_Output(self, hero, "Info_Mod_Allievo_Hi_F_07_04"); //Äh ... (laut) Bruno, Grima, fasst ihn!
 
 	Info_ClearChoices	(Info_Mod_Allievo_Hi);
 

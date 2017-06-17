@@ -4,7 +4,7 @@ INSTANCE Mod_7033_OUT_Allievo_NW (Npc_Default)
 	name 		= "Allievo"; 
 	guild 		= GIL_OUT;
 	id 			= 7033;
-	voice		= 0;
+	voice		= 7;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -7,7 +7,7 @@ instance Mod_1121_BDT_Drax_MT (Npc_Default)
 	guild =							GIL_OUT;      
 	level =							3;
 	
-	voice =							30;
+	voice =							7;
 	id =							1121;
 
 	//-------- abilities --------

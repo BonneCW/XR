@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Joe_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
 
-	AI_Output(self, hero, "Info_Mod_Joe_Hi_10_01"); //Ich bin Joe.
+	AI_Output(self, hero, "Info_Mod_Joe_Hi_07_01"); //Ich bin Joe.
 };
 
 INSTANCE Info_Mod_Joe_Flugblaetter (C_INFO)
@@ -50,11 +50,11 @@ FUNC VOID Info_Mod_Joe_Flugblaetter_Info()
 
 	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_Joe_Flugblaetter_10_01"); //Oh danke. Mal sehen ...
+	AI_Output(self, hero, "Info_Mod_Joe_Flugblaetter_07_01"); //Oh danke. Mal sehen ...
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_Joe_Flugblaetter_10_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
+	AI_Output(self, hero, "Info_Mod_Joe_Flugblaetter_07_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
 
 	Mod_Flugblaetter += 1;
 };
@@ -82,7 +82,7 @@ FUNC INT Info_Mod_Joe_Diego_Condition()
 FUNC VOID Info_Mod_Joe_Diego_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Joe_Diego_15_00"); //Diego braucht eine Ablösung.
-	AI_Output(self, hero, "Info_Mod_Joe_Diego_10_01"); //Gut, ich mach mich sofort auf den Weg.
+	AI_Output(self, hero, "Info_Mod_Joe_Diego_07_01"); //Gut, ich mach mich sofort auf den Weg.
 
 	B_LogEntry	(TOPIC_MOD_DIEGO_KRISTALL, "Joe wird Diego ablösen, bis dieser den Kristall geborgen hat.");
 
@@ -112,26 +112,26 @@ FUNC INT Info_Mod_Joe_Wassersnapper_Condition()
 
 FUNC VOID Info_Mod_Joe_Wassersnapper_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_00"); //Sei gegrüßt. Was gibt es neues von dort draußen zu hören?
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_01"); //Mir kam zu Ohren, dass es auf dem Weidenplateau einiges Unheil gab ...
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_00"); //Sei gegrüßt. Was gibt es neues von dort draußen zu hören?
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_01"); //Mir kam zu Ohren, dass es auf dem Weidenplateau einiges Unheil gab ...
 	AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper_15_02"); //Ja, die Mächte der Finsternis sind stark zur Zeit. Die Gemeinschaft des Wassers hat alle Hände voll zu tun das Gleichgewicht zu erhalten.
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_03"); //Wohl war, ich spüre die Unruhe und Besorgnis in unseren Reihen.
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_04"); //Wie gerne würde auch ich meinen Teil dazu beitragen ... aber als einfacher Novize stehen mir solche Aufgaben leider noch nicht offen.
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_05"); //Und die Prüfung, die mir für eine schnelle Aufnahme bei den Wasserkriegern auferlegt wurde, lähmt mich vor Angst, ich könnte versagen.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_03"); //Wohl war, ich spüre die Unruhe und Besorgnis in unseren Reihen.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_04"); //Wie gerne würde auch ich meinen Teil dazu beitragen ... aber als einfacher Novize stehen mir solche Aufgaben leider noch nicht offen.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_05"); //Und die Prüfung, die mir für eine schnelle Aufnahme bei den Wasserkriegern auferlegt wurde, lähmt mich vor Angst, ich könnte versagen.
 	AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper_15_06"); //Worum geht es?
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_07"); //Ach, meine Aufgabe ist es, die Snapper des Wassers sicher nach Relendel zu geleiten.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_07"); //Ach, meine Aufgabe ist es, die Snapper des Wassers sicher nach Relendel zu geleiten.
 	AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper_15_08"); //Ein Rudel blutrünstiger Snapper begleiten? Da kann ich deine Besorgnis verstehen ...
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_09"); //Nein, darum geht es nicht. Es sind an und für sich friedliche Tiere, die mich umso weniger angreifen würden, da ich ihrem Schöpfer diene.
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_10"); //Alle 10 Jahre zu dieser Zeit erscheinen diese heiligen Geschöpfe am See zwischen Ausgrabungsstätte und schwarzem Troll.
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_11"); //Sie verweilen dort einige Zeit, lassen dem Ort ihre segnende Aura zuteil werden und begeben sich dann auf den Weg zum See in Relendel.
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_12"); //Und mir wurde die Aufgabe zu Teil sie sicher dorthin zu geleiten.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_09"); //Nein, darum geht es nicht. Es sind an und für sich friedliche Tiere, die mich umso weniger angreifen würden, da ich ihrem Schöpfer diene.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_10"); //Alle 10 Jahre zu dieser Zeit erscheinen diese heiligen Geschöpfe am See zwischen Ausgrabungsstätte und schwarzem Troll.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_11"); //Sie verweilen dort einige Zeit, lassen dem Ort ihre segnende Aura zuteil werden und begeben sich dann auf den Weg zum See in Relendel.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_12"); //Und mir wurde die Aufgabe zu Teil sie sicher dorthin zu geleiten.
 	AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper_15_13"); //Und was ist das Problem bei der Sache?
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_14"); //Nun, nachdem mir diese Prüfung auferlegt wurde, kamen mir Gerüchte zu Ohren, dass sich Wilderer hier herumtreiben sollen.
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_15"); //Sichtungen von geschossenem Wild, welche die Waldläufern gemacht haben, bestätigen dies und ein Händler in der Stadt soll erst vor kurzem Felle von seltenen und schwer zu jagenden Tieren erstanden haben.
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_16"); //Nun habe ich die Sorge, dass den Snappern  unterwegs etwas zustoßen könnte und ich nicht dazu in der Lage wäre, sie dann zu beschützen.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_14"); //Nun, nachdem mir diese Prüfung auferlegt wurde, kamen mir Gerüchte zu Ohren, dass sich Wilderer hier herumtreiben sollen.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_15"); //Sichtungen von geschossenem Wild, welche die Waldläufern gemacht haben, bestätigen dies und ein Händler in der Stadt soll erst vor kurzem Felle von seltenen und schwer zu jagenden Tieren erstanden haben.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_16"); //Nun habe ich die Sorge, dass den Snappern  unterwegs etwas zustoßen könnte und ich nicht dazu in der Lage wäre, sie dann zu beschützen.
 	AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper_15_17"); //Dann werde ich es mir zu Aufgabe machen, den Erfolg deiner Mission sicherzustellen.
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_18"); //Wirklich?! Damit würdest du mir einen unschätzbaren Dienst erweisen.
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_10_19"); //Nun kann ich mich beruhigt an den See begeben und dort auf dich warten. Hab vielen Dank.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_18"); //Wirklich?! Damit würdest du mir einen unschätzbaren Dienst erweisen.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper_07_19"); //Nun kann ich mich beruhigt an den See begeben und dort auf dich warten. Hab vielen Dank.
 
 	self.aivar[AIV_Partymember] = TRUE;
 
@@ -165,9 +165,9 @@ FUNC INT Info_Mod_Joe_Wassersnapper2_Condition()
 
 FUNC VOID Info_Mod_Joe_Wassersnapper2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper2_10_00"); //Ahh, da bist du ja.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper2_07_00"); //Ahh, da bist du ja.
 	AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper2_15_01"); //Wie sieht es aus?
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper2_10_02"); //Bislang ist alles ruhig. Vielleicht wird es doch alles ohne Komplikationen ablaufen.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper2_07_02"); //Bislang ist alles ruhig. Vielleicht wird es doch alles ohne Komplikationen ablaufen.
 	AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper2_15_03"); //Dann mal auf zum Pass.
 
 	AI_StopProcessInfos	(self);
@@ -207,7 +207,7 @@ FUNC VOID Info_Mod_Joe_Wassersnapper3_Info()
 	if (Npc_IsDead(Wassersnapper_Joe_01))
 	&& (Npc_IsDead(Wassersnapper_Joe_02))
 	&& (Npc_IsDead(Wassersnapper_Joe_03)) {
-		AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper3_10_00"); //Was für Frevler. Jetzt ist alles verloren.
+		AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper3_07_00"); //Was für Frevler. Jetzt ist alles verloren.
 		AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper3_15_01"); //Ja, wir konnten es leider nicht verhindern. Lass uns zurückkehren.
 
 		AI_StopProcessInfos	(self);
@@ -216,12 +216,12 @@ FUNC VOID Info_Mod_Joe_Wassersnapper3_Info()
 	} else if ((Npc_IsDead(Wassersnapper_Joe_01)))
 	|| (Npc_IsDead(Wassersnapper_Joe_02))
 	|| (Npc_IsDead(Wassersnapper_Joe_03)) {
-		AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper3_10_02"); //Was für Frevler. Nur Dank deiner Unterstützung wurde schlimmeres abgewendet.
+		AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper3_07_02"); //Was für Frevler. Nur Dank deiner Unterstützung wurde schlimmeres abgewendet.
 		AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper3_15_03"); //Ja, das Los, welches ihnen zustand, haben sie auch bekommen. Lass uns weitergehen.
 
 		AI_StopProcessInfos	(self);
 	} else {
-		AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper3_10_04"); //Was für Frevler. Nur Dank deiner Unterstützung konnten wir alle Snapper retten.
+		AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper3_07_04"); //Was für Frevler. Nur Dank deiner Unterstützung konnten wir alle Snapper retten.
 		AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper3_15_05"); //Ja, das Los, welches diesen Wilderern zustand, haben sie auch bekommen. Lass uns weitergehen.
 
 		AI_StopProcessInfos	(self);
@@ -249,7 +249,7 @@ FUNC INT Info_Mod_Joe_Wassersnapper4_Condition()
 
 FUNC VOID Info_Mod_Joe_Wassersnapper4_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper4_10_00"); //Da sind wir. Wir haben es tatsächlich geschafft. Ohne deine Hilfe wäre es niemals möglich gewesen. Ich weiß nicht, wie ich dir danken soll.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper4_07_00"); //Da sind wir. Wir haben es tatsächlich geschafft. Ohne deine Hilfe wäre es niemals möglich gewesen. Ich weiß nicht, wie ich dir danken soll.
 	AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper4_15_01"); //Passt schon. Ich denke ... was passiert ... mir ...
 
 	Wld_PlayEffect("spellFX_INCOVATION_BLUE",  Wassersnapper_Joe_01, Wassersnapper_Joe_01, 0, 0, 0, FALSE );
@@ -257,18 +257,18 @@ FUNC VOID Info_Mod_Joe_Wassersnapper4_Info()
 	Wld_PlayEffect("spellFX_INCOVATION_BLUE",  Wassersnapper_Joe_03, Wassersnapper_Joe_03, 0, 0, 0, FALSE );
 
 	AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper4_15_02"); //Was ist geschehen?
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper4_10_03"); //Ich ... mir scheint, die Snapper haben uns einen Teil ihrer Aura zukommen lassen.
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper4_10_04"); //Ich spüre, wie das Wissen und die magische Kraft in mir gewachsen sind.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper4_07_03"); //Ich ... mir scheint, die Snapper haben uns einen Teil ihrer Aura zukommen lassen.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper4_07_04"); //Ich spüre, wie das Wissen und die magische Kraft in mir gewachsen sind.
 	AI_Output(hero, self, "Info_Mod_Joe_Wassersnapper4_15_05"); //Sie sind verschwunden.
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper4_10_06"); //Ja, zu einem anderen Ort, welchem sie Adanos Segen zukommen lassen ... bis sie in zehn Jahren ihr Weg wieder hierher führt.
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper4_10_07"); //Und dies ist vor allem dir zu Verdanken. Achja, hier mein Dankeschön an dich.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper4_07_06"); //Ja, zu einem anderen Ort, welchem sie Adanos Segen zukommen lassen ... bis sie in zehn Jahren ihr Weg wieder hierher führt.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper4_07_07"); //Und dies ist vor allem dir zu Verdanken. Achja, hier mein Dankeschön an dich.
 
 	B_ShowGivenThings	("Kronstöckl und 2 Mana Elixiere erhalten");
 
 	CreateInvItems	(hero, ItPl_Perm_Herb, 1);
 	CreateInvItems	(hero, ItPo_Mana_03, 2);
 
-	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper4_10_08"); //Ich hoffe, du kannst es nutzen, auch, wenn es den wahren Wert deines Dienstes selbstverständlich nicht widerspiegeln kann.
+	AI_Output(self, hero, "Info_Mod_Joe_Wassersnapper4_07_08"); //Ich hoffe, du kannst es nutzen, auch, wenn es den wahren Wert deines Dienstes selbstverständlich nicht widerspiegeln kann.
 
 	AI_StopProcessInfos	(self);
 

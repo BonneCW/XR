@@ -4,7 +4,7 @@ instance Mod_782_SLD_Dar_MT (Npc_Default)
 	name 		= "Dar";
 	guild 		= GIL_MIL;
 	id 			= 782;
-	voice		= 0;
+	voice		= 7;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	
