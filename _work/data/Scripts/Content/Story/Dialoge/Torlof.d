@@ -515,7 +515,7 @@ INSTANCE Info_Mod_Torlof_HaradLehrling5 (C_INFO)
 	information	= Info_Mod_Torlof_HaradLehrling5_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Eine Waffenlieferung von Torlof.";
+	description	= "Eine Waffenlieferung von Harad.";
 };
 
 FUNC INT Info_Mod_Torlof_HaradLehrling5_Condition()
@@ -528,7 +528,7 @@ FUNC INT Info_Mod_Torlof_HaradLehrling5_Condition()
 
 FUNC VOID Info_Mod_Torlof_HaradLehrling5_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Torlof_HaradLehrling5_15_00"); //Eine Waffenlieferung von Torlof.
+	AI_Output(hero, self, "Info_Mod_Torlof_HaradLehrling5_15_00"); //Eine Waffenlieferung von Harad.
 	AI_Output(self, hero, "Info_Mod_Torlof_HaradLehrling5_01_01"); //Das wurde aber auch Zeit. Wir haben schon seit Tagen darauf gewartet.
 	AI_Output(hero, self, "Info_Mod_Torlof_HaradLehrling5_15_02"); //Die Paladine waren nicht damit einverstanden, dass Harad für euch arbeitet.
 	AI_Output(self, hero, "Info_Mod_Torlof_HaradLehrling5_01_03"); //(lacht) Das verstehe ich gut. Aber das Schlitzohr hat's dann ja doch geschafft.
