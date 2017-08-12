@@ -14,7 +14,7 @@ func void B_AssessTheft ()
 
 	B_Vergiftet (self);
 
-	if (Wld_IsTime(21,00,05,00))
+	/*if (Wld_IsTime(21,00,05,00))
 	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
 	{
 		if (!HeroAtLight)
@@ -46,7 +46,7 @@ func void B_AssessTheft ()
 				};
 			};
 		};
-	};
+	};*/
 	PrintDebug("Theft: 2");
 
 	
