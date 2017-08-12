@@ -10162,7 +10162,7 @@ INSTANCE SPELLFX_UNDEAD_DRAGON_KEY_CAST (C_PARTICLEFXEMITKEY)
 
 INSTANCE SPELLFX_UNDEAD_SKELETONLORD(CFX_BASE_PROTO)
 {
-     visname_s			= "UNDEAD_DRAGON";
+     visname_s			= "UNDEAD_SKELETON";
      visalpha			= 1;
      visalphablendfunc_s	= "ADD";
      emtrjmode_s		= "FIXED";
