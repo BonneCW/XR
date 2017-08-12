@@ -371,9 +371,9 @@ FUNC INT Info_Mod_Kardif_Paddel_Condition()
 FUNC VOID Info_Mod_Kardif_Paddel_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Kardif_Paddel_15_00"); //Hast du Paddel im Angebot?
-	AI_Output(self, hero, "Info_Mod_Kardif_Paddel_14_01"); //Wie kommst du da drauf? Ich handle doch nicht mit Restposten. Wieso frägst du nicht einen Fischer?
+	AI_Output(self, hero, "Info_Mod_Kardif_Paddel_14_01"); //Wie kommst du da drauf? Ich handle doch nicht mit Restposten. Wieso fragst du nicht einen Fischer?
 
-	B_LogEntry	(TOPIC_MOD_SKIP_PADDEL, "Kardif hat keine Paddel. Er erwähnte den Fischer ... ich sollte mal bei Farim vorbei sehen.");
+	B_LogEntry	(TOPIC_MOD_SKIP_PADDEL, "Kardif hat keine Paddel. Er erwähnte die Fischer ... ich sollte mal bei Farim vorbei sehen.");
 };
 
 INSTANCE Info_Mod_Kardif_NagurFrei (C_INFO)
