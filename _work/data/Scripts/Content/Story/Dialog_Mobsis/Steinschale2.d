@@ -10,7 +10,7 @@ FUNC VOID Steinschale2_S1 ()
 	};
 };
 
-FUNC VOID Steinschale2_S0 ()
+/*FUNC VOID Steinschale2_S0 ()
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
@@ -20,7 +20,7 @@ FUNC VOID Steinschale2_S0 ()
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_Steinschale2;
 		Ai_ProcessInfos (her);
 	};
-};
+};*/
 
 INSTANCE PC_Steinschale2_Rein (C_Info)
 {
