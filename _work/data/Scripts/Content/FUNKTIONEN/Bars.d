@@ -39,7 +39,7 @@ func void ShowBars () {
 	};
 
 	if (Mod_Balken == 0) {
-		bar_mana.zCView_vposx = 6246;
+		bar_mana.zCView_vposx = 8200 - 80 - bar.mana.zCView_vsizex;
 		bar_mana.zCView_vposy = 7872;
 	} else if (Mod_Balken == 1)
 	|| ((Mod_Balken == 2)
