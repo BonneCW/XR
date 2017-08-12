@@ -90,6 +90,7 @@ func void B_GetBeliarsGold (var int Kohle)
 FUNC VOID B_CheckAllTeleports(var int unlock)
 {
 	var int newXP;
+	newXP = 0;
 	if (unlock) {
 		newXP = 20;
 	};
@@ -119,7 +120,9 @@ FUNC VOID B_CheckAllTeleports(var int unlock)
 		};
 	};
 
-	B_GivePlayerXP	(newXP);
+	if (newXP > 0) {
+		B_GivePlayerXP	(newXP);
+	};
 };
 
 // ****************************************************
