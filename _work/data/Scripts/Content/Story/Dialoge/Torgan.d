@@ -396,7 +396,7 @@ FUNC VOID Info_Mod_Torgan_NochEinAuftrag_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_JG_GARDISTEN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_JG_GARDISTEN, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_JG_GARDISTEN, "Torgan will, dass ist mehr über die Gardisten rausfinde. Dazu soll ich die Torwächter der verschiedenen Lager hier im Minental nach Informationen befragen. Ich sollte mich aber beim alten Lager in Acht nehmen.");
+	B_LogEntry	(TOPIC_MOD_JG_GARDISTEN, "Torgan will, dass ich mehr über die Gardisten rausfinde. Dazu soll ich die Torwächter der verschiedenen Lager hier im Minental nach Informationen befragen. Ich sollte mich aber beim alten Lager in Acht nehmen.");
 };
 
 INSTANCE Info_Mod_Torgan_Scharmuetzel (C_INFO)
