@@ -620,6 +620,7 @@ FUNC VOID FRAMEFUNC ()
 	};
 
 	var int lastFocusItem;
+	var int lastDivePickupTime;
 
 	if (C_BodyStateContains (hero, BS_DIVE))
 	{
@@ -635,12 +636,15 @@ FUNC VOID FRAMEFUNC ()
 			if (Hlp_IsValidItem (her_focusItem2))
 			{
 				if (Npc_GetDistToItem (hero, her_focusItem2) < 200)
+				&& (lastDivePickupTime + 2 > TimeCounter_Real)
 				{
 					CreateInvItems (hero, her_focusItem2.instanz, her_focusItem2.amount); //amount beachten
 					Wld_RemoveItem (her_focusItem2);
 					
 					var string str;	str = ConcatStrings (her_focusItem2.name, " aufgehoben!");
 					PrintScreen (str, -1, -1, FONT_SCREENSMALL, 3);
+					
+					lastDivePickupTime = TimeCounter_Real;
 				};
 			};
 		};
