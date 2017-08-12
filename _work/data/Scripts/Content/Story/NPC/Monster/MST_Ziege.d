@@ -13,18 +13,18 @@ PROTOTYPE Mst_Default_Ziege(C_Npc)
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	150;
 	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	300;
-	attribute	[ATR_HITPOINTS]		=	300;
+	attribute	[ATR_HITPOINTS_MAX]	=	200;
+	attribute	[ATR_HITPOINTS]		=	200;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protection ----
-	protection	[PROT_BLUNT]		=	125000;
-	protection	[PROT_EDGE]			=	125000;
-	protection	[PROT_POINT]		=	75000;
-	protection	[PROT_FIRE]			=	125;
-	protection	[PROT_FLY]			=	125;
-	protection	[PROT_MAGIC]		=	30;
+	protection	[PROT_BLUNT]		=	75000;
+	protection	[PROT_EDGE]			=	75000;
+	protection	[PROT_POINT]		=	50000;
+	protection	[PROT_FIRE]			=	75;
+	protection	[PROT_FLY]			=	75;
+	protection	[PROT_MAGIC]		=	20;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 
