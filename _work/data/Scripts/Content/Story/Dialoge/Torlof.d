@@ -562,7 +562,10 @@ INSTANCE Info_Mod_Torlof_HaradLehrling6 (C_INFO)
 
 FUNC INT Info_Mod_Torlof_HaradLehrling6_Condition()
 {
-	if (Npc_HasItems(hero, ItMw_1H_Common_01) >= 3)
+	if ((Npc_HasItems(hero, ItMw_1H_Common_01_BonusMeisterschmied) >= 3)
+	|| (Npc_HasItems(hero, ItMw_1H_Common_01_Meisterschmied) >= 3)
+	|| (Npc_HasItems(hero, ItMw_1H_Common_01_Bonus) >= 3)
+	|| (Npc_HasItems(hero, ItMw_1H_Common_01) >= 3))
 	&& (Schaerfen_Perk == TRUE)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Harad_LehrlingQuest3))
 	{
@@ -574,7 +577,15 @@ FUNC VOID Info_Mod_Torlof_HaradLehrling6_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Torlof_HaradLehrling6_15_00"); //Hier sind die fehlenden Schwerter.
 
-	B_GiveInvItems	(hero, self, ItMw_1H_Common_01, 3);
+	if (Npc_HasItems(hero, ItMw_1H_Common_01) >= 3) {
+		B_GiveInvItems	(hero, self, ItMw_1H_Common_01, 3);
+	} else if (Npc_HasItems(hero, ItMw_1H_Common_01_Bonus) >= 3) {
+		B_GiveInvItems	(hero, self, ItMw_1H_Common_01_Bonus, 3);
+	} else if (Npc_HasItems(hero, ItMw_1H_Common_01_Meisterschmied) >= 3) {
+		B_GiveInvItems	(hero, self, ItMw_1H_Common_01_Meisterschmied, 3);
+	} else if (Npc_HasItems(hero, ItMw_1H_Common_01_BonusMeisterschmied) >= 3) {
+		B_GiveInvItems	(hero, self, ItMw_1H_Common_01_BonusMeisterschmied, 3);
+	};
 
 	AI_Output(self, hero, "Info_Mod_Torlof_HaradLehrling6_01_01"); //Du und dein Meister, ihr braucht immer ziemlich lang. Aber über die Qualität kann man sich nicht beschweren.
 
