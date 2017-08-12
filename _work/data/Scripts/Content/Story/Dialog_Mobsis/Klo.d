@@ -42,6 +42,10 @@ FUNC VOID PC_Klo_Trollfett_Info()
 
 	B_StartOtherRoutine	(Mod_7480_OUT_Wendel_REL, "ENDRES");
 	B_StartOtherRoutine	(Mod_7481_OUT_Monteur_REL, "ENDRES");
+	
+	var int platformPtr; platformPtr = MEM_SearchVobByName ("ENDRESPLATFORM");
+	var zCVob platform; platform = MEM_PtrToInst(platformPtr);
+	platform.bitfield[0] = platform.bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
 };
 
 INSTANCE PC_Klo_EXIT (C_INFO)

@@ -109,6 +109,10 @@ FUNC VOID Info_Mod_Juliana_Endres_C()
 	B_KillNpc	(Mod_7483_OUT_Endres_REL);
 
 	Info_ClearChoices	(Info_Mod_Juliana_Endres);
+	
+	var int platformPtr; platformPtr = MEM_SearchVobByName ("ENDRESPLATFORM");
+	var zCVob platform; platform = MEM_PtrToInst(platformPtr);
+	platform.bitfield[0] = platform.bitfield[0] & ~zCVob_bitfield0_collDetectionDynamic;
 };
 
 FUNC VOID Info_Mod_Juliana_Endres_B()
