@@ -11,7 +11,7 @@ FUNC VOID DAUERFUNC_01()
 	var string concatText;
 	var int XPOS_XPNEEDED;
 
-	if (hero.attribute[ATR_HITPOINTS] == 0) {
+	if (hero.attribute[ATR_HITPOINTS] == 0 && C_BodyStateContains(hero, BS_FALL)) {
 		ExitSession();
 	};
 
