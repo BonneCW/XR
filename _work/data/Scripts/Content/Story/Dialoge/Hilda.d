@@ -98,6 +98,7 @@ FUNC VOID Info_Mod_Hilda_Argez2_Info()
 
 	CurrentNQ += 1;
 
+		B_LogEntry	(TOPIC_MOD_HILDA_ARGEZ, "Ich habe Hilda berichtet, dass Argez nun in der Stadt ist. Sie sollte jetzt beruhigt sein.");
 	B_SetTopicStatus	(TOPIC_MOD_HILDA_ARGEZ, LOG_SUCCESS);
 };
 
