@@ -336,7 +336,9 @@ FUNC VOID FRAMEFUNC ()
 
 		if (her3.focus_vob)
 		{
-			if (Hlp_StrCmp(her_focusMob._zCObject_objectName, "MOBNAME_SOJA") == TRUE)
+			var oCMob her_focusMobSoja;
+			MEM_AssignInst (her_focusMobSoja, her3.focus_vob);
+			if (Hlp_StrCmp(her_focusMobSoja._zCObject_objectName, "MOBNAME_SOJA") == TRUE)
 			{
 				if (Hlp_StrCmp(Npc_GetNearestWP(hero), "SOJA_01") && Mod_Soja_01 == 0) {
 					AI_PlayAni(hero, "T_PLUNDER");
