@@ -108,7 +108,6 @@ func void B_MM_AssessEnemy ()
 	};
 
 	if (self.aivar[AIV_MM_REAL_ID] == ID_SCHAEFERHUND)
-	&& (Npc_GetDistToWP(self, self.wp) > 3000)
 	{
 		return;
 	};
