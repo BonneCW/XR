@@ -638,7 +638,7 @@ FUNC VOID FRAMEFUNC ()
 			if (Hlp_IsValidItem (her_focusItem2))
 			{
 				if (Npc_GetDistToItem (hero, her_focusItem2) < 200)
-				&& (lastDivePickupTime + 2 > TimeCounter_Real)
+				&& (lastDivePickupTime + 2 < TimeCounter_Real)
 				{
 					CreateInvItems (hero, her_focusItem2.instanz, her_focusItem2.amount); //amount beachten
 					Wld_RemoveItem (her_focusItem2);
