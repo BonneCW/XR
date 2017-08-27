@@ -104,6 +104,14 @@ FUNC VOID Info_Mod_Kyle_Lagermusik_Info()
 	AI_Output(self, hero, "Info_Mod_Kyle_Lagermusik_10_04"); //Hier mal meine nächste Voraussage: Gravo wird wieder wie früher tagtäglich durch meine Hütte latschen.
 	AI_Output(hero, self, "Info_Mod_Kyle_Lagermusik_15_05"); //Glaube ich kaum. Er will jetzt aufs Musikmachen umsteigen.
 	AI_Output(self, hero, "Info_Mod_Kyle_Lagermusik_10_06"); //Ja? Das wäre ja wirklich fantastisch. Hoffentlich schön weit weg von mir.
+
+	if (!Npc_KnowsInfo(hero, Info_Mod_Kyle_SchatzImSchlammsee))	{
+		B_GivePlayerXP	(100);
+
+		B_SetTopicStatus	(TOPIC_MOD_GRAVO_SCHATZ, LOG_SUCCESS);
+
+		CurrentNQ += 1;
+	};
 };
 
 INSTANCE Info_Mod_Kyle_KGBuddler (C_INFO)
