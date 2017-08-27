@@ -139,6 +139,14 @@ func void Spine_UpdateAchievementProgress(var int identifier, var int progress) 
 			CALL__cdecl(Spine_UpdateAchievementProgressFunc);
 			var int ret; ret = CALL_RetValAsInt();
 			
+			if (Spine_GetTestMode()) {
+				var string maxProgressString; maxProgressString = MEM_ReadStatStringArr(SPINE_ACHIEVEMENT_PROGRESS, identifier);
+				var int maxProgress; maxProgress = STR_ToInt(maxProgressString);
+				if (maxProgress <= progress) {
+					ret = TRUE;
+				};
+			};
+			
 			if (ret) {
 				if (Spine_AchievementView == 0) {
 					Spine_ShowAchievementView(identifier);
@@ -175,9 +183,15 @@ func int Spine_GetAchievementProgress(var int identifier) {
 // returns the maximum progress to reach of an achievement or 0 in case it is an achievement without progress
 func int Spine_GetAchievementMaxProgress(var int identifier) {
 	if (Spine_Initialized && Spine_GetAchievementMaxProgressFunc) {
-		CALL_IntParam(identifier);
-		CALL__cdecl(Spine_GetAchievementMaxProgressFunc);
-		return CALL_RetValAsInt();
+		if (Spine_GetTestMode()) {
+			var string maxProgressString; maxProgressString = MEM_ReadStatStringArr(SPINE_ACHIEVEMENT_PROGRESS, identifier);
+			var int maxProgress; maxProgress = STR_ToInt(maxProgressString);
+			return maxProgress;
+		} else {
+			CALL_IntParam(identifier);
+			CALL__cdecl(Spine_GetAchievementMaxProgressFunc);
+			return CALL_RetValAsInt();
+		};
 	};
 	return FALSE;
 };

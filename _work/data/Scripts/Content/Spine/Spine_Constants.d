@@ -1,4 +1,4 @@
-const string SPINE_VERSION_STRING = "1.7.0";
+const string SPINE_VERSION_STRING = "1.10.1";
 
 // Spine modules
 
@@ -8,8 +8,9 @@ const int SPINE_MODULE_SCORES				= 1<<2;
 const int SPINE_MODULE_MULTIPLAYER			= 1<<3;
 const int SPINE_MODULE_OVERALLSAVE			= 1<<4;
 const int SPINE_MODULE_GAMEPAD				= 1<<5;
+const int SPINE_MODULE_FRIENDS				= 1<<6;
 
-const int SPINE_ALL							= (1<<6) - 1;
+const int SPINE_ALL							= (1<<7) - 1;
 
 const int SPINE_TOPLEFT = 0;
 const int SPINE_TOPRIGHT = 1;

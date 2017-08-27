@@ -45,6 +45,15 @@ func int Spine_Init(var int modules) {
 		return FALSE;
 	};
 	
+	MEM_Info("Spine: Loading getTestMode function");
+	Spine_GetTestModeFunc = GetProcAddress(Spine_Dll, "getTestMode");
+	
+	if (!Spine_GetTestModeFunc) {
+		MEM_Info("Spine: getTestMode function not found");
+		FreeLibrary(Spine_Dll);
+		return FALSE;
+	};
+	
 	if (modules & SPINE_MODULE_GETCURRENTUSERNAME) {
 		MEM_Info("Spine: Loading getUsername function");
 		Spine_GetUsernameFunc = GetProcAddress(Spine_Dll, "getUsername");
@@ -228,6 +237,24 @@ func int Spine_Init(var int modules) {
 			return FALSE;
 		};
 		
+		MEM_Info("Spine: Loading searchMatchWithFriend function");
+		Spine_SearchMatchWithFriendFunc = GetProcAddress(Spine_Dll, "searchMatchWithFriend");
+		
+		if (!Spine_SearchMatchWithFriendFunc) {
+			MEM_Info("Spine: searchMatchWithFriend function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+		
+		MEM_Info("Spine: Loading stopSearchMatch function");
+		Spine_StopSearchMatchFunc = GetProcAddress(Spine_Dll, "stopSearchMatch");
+		
+		if (!Spine_StopSearchMatchFunc) {
+			MEM_Info("Spine: stopSearchMatch function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+		
 		MEM_Info("Spine: Loading isInMatch function");
 		Spine_IsInMatchFunc = GetProcAddress(Spine_Dll, "isInMatch");
 		
@@ -388,6 +415,29 @@ func int Spine_Init(var int modules) {
 		Spine_ChangeRawModeFunc = 0;
 	};
 	
+	if (modules & SPINE_MODULE_FRIENDS) {
+		MEM_Info("Spine: Loading getFriendCount function");
+		Spine_GetFriendCountFunc = GetProcAddress(Spine_Dll, "getFriendCount");
+		
+		if (!Spine_GetFriendCountFunc) {
+			MEM_Info("Spine: getFriendCount function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+		
+		MEM_Info("Spine: Loading getFriendName function");
+		Spine_GetFriendNameFunc = GetProcAddress(Spine_Dll, "getFriendName");
+		
+		if (!Spine_GetFriendNameFunc) {
+			MEM_Info("Spine: getFriendName function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
+	} else {
+		Spine_GetFriendCountFunc = 0;
+		Spine_GetFriendNameFunc = 0;
+	};
+	
 	if (STR_Len(Spine_FirstStart) == 0) {
 		Spine_FirstStart = "Initialized";
 		
@@ -408,9 +458,11 @@ func int Spine_Init(var int modules) {
 	} else {
 		Spine_Initialized = TRUE;
 	};
-		
-	CALL__cdecl(Spine_GetShowAchievementsFunc);
-	SPINE_SHOWACHIEVEMENTS = CALL_RetValAsInt();
+	
+	if (Spine_GetShowAchievementsFunc) {
+		CALL__cdecl(Spine_GetShowAchievementsFunc);
+		SPINE_SHOWACHIEVEMENTS = CALL_RetValAsInt();
+	};
 	
 	return Spine_Initialized;
 };

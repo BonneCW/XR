@@ -6560,6 +6560,9 @@ FUNC VOID STARTUP_OrcTempel ()
 	Wld_InsertNpc	(Mod_7797_PSINOV_Novize_OT, "TPL_386");
 
 	B_KillNpc	(Mod_7797_PSINOV_Novize_OT);
+	
+	stopAllSounds();
+	// Play Intro
 };
 
 FUNC VOID INIT_OrcTempel ()

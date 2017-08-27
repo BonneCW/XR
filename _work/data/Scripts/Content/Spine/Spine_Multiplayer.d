@@ -1,5 +1,7 @@
 var int Spine_SetHostnameFunc;
 var int Spine_SearchMatchFunc;
+var int Spine_SearchMatchWithFriendFunc;
+var int Spine_StopSearchMatchFunc;
 var int Spine_IsInMatchFunc;
 var int Spine_CreateMessageFunc;
 var int Spine_DeleteMessageFunc;
@@ -27,6 +29,23 @@ func void Spine_SearchMatch(var int numPlayers, var int identifier) {
 		CALL_IntParam(identifier);
 		CALL_IntParam(numPlayers);
 		CALL__cdecl(Spine_SearchMatchFunc);
+	};
+};
+
+// searches for a multiplayer match with a friend
+// identifier is the identifier for the mode/level or anything else specific for the modification
+func void Spine_SearchMatchWithFriend(var int identifier, var string friendName) {
+	if (Spine_Initialized && Spine_SearchMatchWithFriendFunc) {
+		CALL_cStringPtrParam(friendName);
+		CALL_IntParam(identifier);
+		CALL__cdecl(Spine_SearchMatchWithFriendFunc);
+	};
+};
+
+// stops the search for a match
+func void Spine_StopSearchMatch() {
+	if (Spine_Initialized && Spine_StopSearchMatchFunc) {
+		CALL__cdecl(Spine_StopSearchMatchFunc);
 	};
 };
 
