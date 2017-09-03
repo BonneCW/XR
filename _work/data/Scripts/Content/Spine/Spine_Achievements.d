@@ -23,6 +23,9 @@ func int Spine_IsAchievementUnlocked(var int identifier) {
 
 // private, don't call from outside
 func void Spine_ShowAchievementView(var int identifier) {
+	var zCPar_Symbol sym; sym = _^(MEMINT_SwitchG1G2(MEM_GetSymbol("_STR_FONT_ONSCREEN"), // Font constant G1
+                                                 MEM_GetSymbol("FONT_SCREENSMALL"))); // Font constant G2
+	var string Spine_Font; Spine_Font = MEM_ReadString(sym.content);
 	var int startPosX;
 	var int startPosY;
 	var zCView screen; screen = _^(MEM_Game._zCSession_viewport);
@@ -57,9 +60,9 @@ func void Spine_ShowAchievementView(var int identifier) {
 	
 	var string achievementName;
 	achievementName = MEM_ReadStatStringArr(SPINE_ACHIEVEMENT_NAMES, identifier);
-	var int textLength; textLength = Print_GetStringWidth(achievementName, FONT_SCREENSMALL);
+	var int textLength; textLength = Print_GetStringWidth(achievementName, Spine_Font);
 	if (textLength <= SPINE_ACHIEVEMENT_WIDTH - (SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 3)) {
-		View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset, SPINE_ACHIEVEMENT_HEIGHT), achievementName, FONT_SCREENSMALL);
+		View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset, SPINE_ACHIEVEMENT_HEIGHT), achievementName, Spine_Font);
 	} else { // Text is too long for the field
 		var int height; height = 0;
 		var int splitCount; splitCount = STR_SplitCount(achievementName, " ");
@@ -72,25 +75,25 @@ func void Spine_ShowAchievementView(var int identifier) {
 				currentLine = ConcatStrings(currentLine, " ");
 			};
 			currentLineTest = ConcatStrings(currentLine, STR_Split(achievementName, " ", i));
-			textLength = Print_GetStringWidth(currentLineTest, FONT_SCREENSMALL);
+			textLength = Print_GetStringWidth(currentLineTest, Spine_Font);
 			if (textLength > SPINE_ACHIEVEMENT_WIDTH - (SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 3)) {
 				if (STR_Len(currentLine) == 0) {
-					View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset + height, SPINE_ACHIEVEMENT_HEIGHT), currentLineTest, FONT_SCREENSMALL);
+					View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset + height, SPINE_ACHIEVEMENT_HEIGHT), currentLineTest, Spine_Font);
 					currentLine = "";
 					currentLineTest = "";
 				} else {
-					View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset + height, SPINE_ACHIEVEMENT_HEIGHT), currentLine, FONT_SCREENSMALL);
+					View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset + height, SPINE_ACHIEVEMENT_HEIGHT), currentLine, Spine_Font);
 					currentLine = STR_Split(achievementName, " ", i);
 					currentLineTest = "";
 				};
-				height += Print_GetFontHeight(FONT_SCREENSMALL);
+				height += Print_GetFontHeight(Spine_Font);
 			} else {
 				currentLine = currentLineTest;
 			};
 			MEM_StackPos.position = pos;
 		};
 		if (STR_Len(currentLine) > 0) {
-			View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset + height, SPINE_ACHIEVEMENT_HEIGHT), currentLine, FONT_SCREENSMALL);
+			View_AddText(Spine_AchievementView, Print_ToVirtual(SPINE_ACHIEVEMENT_IMAGE_WIDTH + imageOffset * 2, SPINE_ACHIEVEMENT_WIDTH), Print_ToVirtual(imageOffset + height, SPINE_ACHIEVEMENT_HEIGHT), currentLine, Spine_Font);
 		};
 	};
 	
@@ -199,11 +202,11 @@ func int Spine_GetAchievementMaxProgress(var int identifier) {
 // private, don't call from outside
 func void Spine_RemoveAchievementView() {
 	if (Hlp_IsValidHandle(Spine_AchievementView)) {
-		View_Close(Spine_AchievementView);
+		View_Delete(Spine_AchievementView);
 		Spine_AchievementView = 0;
 	};
 	if (Hlp_IsValidHandle(Spine_AchievementImageView)) {
-		View_Close(Spine_AchievementImageView);
+		View_Delete(Spine_AchievementImageView);
 		Spine_AchievementImageView = 0;
 	};
 	if (SPINE_ACHIEVEMENTSQUEUE[0] != -1) {

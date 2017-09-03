@@ -62,7 +62,8 @@ NEUERUNGEN\Minispiel\B_MG_ResetWalks.d
 NEUERUNGEN\Minispiel\B_MG_MarkToWalk.d
 NEUERUNGEN\Minispiel\B_MG_Cleanup.d
 NEUERUNGEN\Minispiel\B_MG_GameLoop.d
-NEUERUNGEN\Minispiel\StopAllSounds.d
+
+NEUERUNGEN\StopAllSounds.d
 
 STORY\B_Story\B_Inventar.d
 

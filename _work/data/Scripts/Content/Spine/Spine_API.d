@@ -6,11 +6,11 @@ var int Spine_GetUsernameFunc;
 
 func int Spine_Init(var int modules) {
 	if (Hlp_IsValidHandle(Spine_AchievementView)) {
-		View_Close(Spine_AchievementView);
+		View_Delete(Spine_AchievementView);
 		Spine_AchievementView = 0;
 	};
 	if (Hlp_IsValidHandle(Spine_AchievementImageView)) {
-		View_Close(Spine_AchievementImageView);
+		View_Delete(Spine_AchievementImageView);
 		Spine_AchievementImageView = 0;
 	};
 	SPINE_ACHIEVEMENTSQUEUE[0] = -1;
@@ -132,6 +132,9 @@ func int Spine_Init(var int modules) {
 	if (modules & SPINE_MODULE_ACHIEVEMENTS) {
 		if (!(_LeGo_Flags & LeGo_FrameFunctions) || !(_LeGo_Flags & LeGo_View)) {
 			MEM_ErrorBox("For Spine Achievement Module you need to initialize LeGo with both FrameFunctions and View");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+			
 		};
 		MEM_Info("Spine: Loading unlockAchievement function");
 		Spine_UnlockAchievementFunc = GetProcAddress(Spine_Dll, "unlockAchievement");
@@ -475,8 +478,6 @@ func string Spine_GetCurrentUsername() {
 
 		CALL_cStringPtrParam(STR_BUFFER);
 		CALL__cdecl(Spine_GetUsernameFunc);
-		
-		MEM_Info(ConcatStrings("Spine: Username is ", STR_BUFFER));
 		
 		return STR_BUFFER;
 	};

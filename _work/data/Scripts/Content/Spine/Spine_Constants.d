@@ -1,4 +1,4 @@
-const string SPINE_VERSION_STRING = "1.10.1";
+const string SPINE_VERSION_STRING = "1.10.2";
 
 // Spine modules
 
@@ -30,9 +30,14 @@ const int SPINE_MESSAGETYPE_INT4 = 3;
 
 var int SPINE_SHOWACHIEVEMENTS; // show achievement (you can set this to FALSE to disable the achievement widget, but internally the achievement will be unlocked, so you still can see it in Spine), configured in Spine GUI
 
-const int SPINE_ADDRESS_TRIGGEREARTHQUAKE = 6373264; // 0x00613F90
-const int SPINE_OFFSETT_TRIGGEREARTHQUAKE = 6;
-const int SPINE_ADDRESS_UNTRIGGEREARTHQUAKE = 6373344; // 0x00613FE0
-const int SPINE_OFFSETT_UNTRIGGEREARTHQUAKE = 6;
+const int SPINE_ADDRESS_TRIGGEREARTHQUAKE_G1 = 6189088; // 0x005E7020
+const int SPINE_LENGTH_TRIGGEREARTHQUAKE_G1 = 4;
+const int SPINE_ADDRESS_UNTRIGGEREARTHQUAKE_G1 = 6189168; // 0x005E7070
+const int SPINE_LENGTH_UNTRIGGEREARTHQUAKE_G1 = 4;
+
+const int SPINE_ADDRESS_TRIGGEREARTHQUAKE_G2 = 6373264; // 0x00613F90
+const int SPINE_LENGTH_TRIGGEREARTHQUAKE_G2 = 6;
+const int SPINE_ADDRESS_UNTRIGGEREARTHQUAKE_G2 = 6373344; // 0x00613FE0
+const int SPINE_LENGTH_UNTRIGGEREARTHQUAKE_G2 = 6;
 
 const int SPINE_GAME_DAMAGE_VIBRATION_TIME = 2000; // 2 seconds vibration for every hit?
