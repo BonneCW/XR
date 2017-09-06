@@ -3009,15 +3009,15 @@ FUNC VOID INIT_NewWorld()
 		Wld_InsertNpc(Mod_30000_JG_Sonor_NW, "BIGFARM");
 	};
 	
-	if (Kapitel == 1 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == 0 && (!Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen) || Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen))) {
+	if (Kapitel == 1 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == TRUE && (!Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen) || Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen))) {
 		B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "TOT");
 	};
 	
-	if (Kapitel >= 2 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == 0 && !Npc_KnowsInfo(hero, Info_Mod_Lester_Karras)) {
+	if (Kapitel >= 2 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == TRUE && !Npc_KnowsInfo(hero, Info_Mod_Lester_Karras)) {
 		B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "START");
 	};
 	
-	if (Kapitel == 1 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") && Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen) && !Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen)) {
+	if (Kapitel == 1 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == TRUE && Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen) && !Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen)) {
 		B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "TREFFEN");
 	};
 
