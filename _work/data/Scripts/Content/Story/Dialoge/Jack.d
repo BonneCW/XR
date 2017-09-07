@@ -423,7 +423,7 @@ FUnc VOID Info_Mod_Jack_Fanatiker_Info()
 	AI_Output(self, hero, "Info_Mod_Jack_Fanatiker_14_05"); //Aber dann hab ich mich lieber aus dem Staub gemacht.
 	AI_Output(self, hero, "Info_Mod_Jack_Fanatiker_14_06"); //Geh lieber nicht zum Leuchtturm.
 
-	B_LogEntry	(TOPIC_MOD_MILIZ_SEKTENSPINNER, "Jack hat erzählt, dass die Anhänger des Schläfers nach Khorinis gezogen sind. Einige sind bei seinem Leuchtturm, ein kleinerer Trupp wurde in den Wald vor Khorinis bei Lobart geschicht. Den Leuchtturm sollte ich lieber vorerst unberührt lassen.");
+	B_LogEntry	(TOPIC_MOD_MILIZ_SEKTENSPINNER, "Jack hat erzählt, dass die Anhänger des Schläfers nach Khorinis gezogen sind. Einige sind bei seinem Leuchtturm, ein kleinerer Trupp wurde in den Wald vor Khorinis bei Lobart gesichtet. Den Leuchtturm sollte ich lieber vorerst unberührt lassen.");
 };
 
 INSTANCE Info_Mod_Jack_Pickpocket (C_INFO)
