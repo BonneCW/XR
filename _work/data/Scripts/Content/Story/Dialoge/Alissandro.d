@@ -255,7 +255,7 @@ FUNC VOID Info_Mod_Alissandro_Botschafter_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_28_00"); //Es gibt ein Problem und ich will, dass du es löst.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Botschafter_15_01"); //Verstehe, was habe ich zu tun?
-	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_28_02"); //Wir haben Botschafter in alle Lager geschickt, um um Hilfe im Kampf gegen Bartholo zu bitten. Allerdings ist ein Botschafter nicht zurückgekommen.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_28_02"); //Wir haben Botschafter in alle Lager geschickt, um Hilfe im Kampf gegen Bartholo zu erbitten. Allerdings ist ein Botschafter nicht zurückgekommen.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Botschafter_15_03"); //Wo habt ihr ihn hingeschickt?
 	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_28_04"); //In das Lager der Banditen nahe der Trollschlucht.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Botschafter_15_05"); //Und da wundert ihr euch, dass er nicht zurückgekommen ist?
