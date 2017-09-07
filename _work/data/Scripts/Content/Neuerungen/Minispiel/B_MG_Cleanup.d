@@ -42,6 +42,8 @@ FUNC VOID B_MG_Cleanup()
 	};
 
 	View_Delete(MG_Spielbrett);
+	
+	Button_DeleteMouseover();
 
 	Cursor_Hide();
 };
