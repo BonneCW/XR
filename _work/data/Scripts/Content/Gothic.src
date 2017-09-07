@@ -307,6 +307,8 @@ AI\HUMAN\C_Human\C_WantToReactToSneaker.d
 AI\MAGIC\B_ReadySpell.d
 AI\MAGIC\B_SelectSpell.d
 
+NEUERUNGEN\B_AddIllness.d
+
 STORY\B_CONTENT\B_Golemschadensbedingung.d
 
 AI\HUMAN\B_Human\B_FinishingMove.d
