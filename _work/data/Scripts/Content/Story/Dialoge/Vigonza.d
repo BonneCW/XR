@@ -39,7 +39,7 @@ FUNC VOID Info_Mod_Vigonza_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Vigonza_Hi_08_18"); //Und seitdem habe ich versucht, meine Leute auf einen Angriff vorzubereiten. Aber ohne meinen besten Krieger hätten sie es warscheinlich nicht geschafft.
 	AI_Output(hero, self, "Info_Mod_Vigonza_Hi_15_19"); //Ich glaube euch. Hätte man das vorher klären können, wären eure Leute noch am Leben.
 	AI_Output(self, hero, "Info_Mod_Vigonza_Hi_08_20"); //Vielleicht war es Schicksal. Du siehst aus, als könntest du gut kämpfen, und vielleicht hast du mehr Chancen gegen das Monster, als alle meine Leute zusammen.
-	AI_Output(self, hero, "Info_Mod_Vigonza_Hi_08_21"); //Ich bitte dichh darum, mir im Kampf gegen die Dalma zur Seite zu stehen. Ich kann mich in meiner Heimat nicht ohne das Blut sehen lassen.
+	AI_Output(self, hero, "Info_Mod_Vigonza_Hi_08_21"); //Ich bitte dich darum, mir im Kampf gegen die Dalma zur Seite zu stehen. Ich kann mich in meiner Heimat nicht ohne das Blut sehen lassen.
 	AI_Output(hero, self, "Info_Mod_Vigonza_Hi_15_22"); //In Ordnung. Führe mich zu der Spinne und ich werde dir helfen.
 	AI_Output(self, hero, "Info_Mod_Vigonza_Hi_08_23"); //Folge mir!
 
