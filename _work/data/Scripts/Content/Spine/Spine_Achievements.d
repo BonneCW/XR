@@ -18,7 +18,7 @@ func int Spine_IsAchievementUnlocked(var int identifier) {
 		CALL__cdecl(Spine_IsAchievementUnlockedFunc);
 		return CALL_RetValAsInt();
 	};
-	return FALSE;
+	return TRUE;
 };
 
 // private, don't call from outside
@@ -97,6 +97,7 @@ func void Spine_ShowAchievementView(var int identifier) {
 		};
 	};
 	
+	FF_Remove(Spine_RemoveAchievementView);
 	FF_ApplyOnceExt(Spine_RemoveAchievementView, SPINE_ACHIEVEMENT_DISPLAY_TIME, 1);
 };
 
@@ -209,6 +210,7 @@ func void Spine_RemoveAchievementView() {
 		View_Delete(Spine_AchievementImageView);
 		Spine_AchievementImageView = 0;
 	};
+	FF_Remove(Spine_ShowAchievementView);
 	if (SPINE_ACHIEVEMENTSQUEUE[0] != -1) {
 		var int identifier;
 		identifier = SPINE_ACHIEVEMENTSQUEUE[0];

@@ -25,6 +25,9 @@ func int Spine_Init(var int modules) {
 	SPINE_ACHIEVEMENTSQUEUE[9] = -1;
 	SPINE_SHOWACHIEVEMENTS = TRUE;
 	
+	FF_Remove(Spine_ShowAchievementView);
+	FF_Remove(Spine_RemoveAchievementView);
+	
 	MEM_Info("Spine: Initializing");
 	Spine_Initialized = FALSE;
 	
