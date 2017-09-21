@@ -2142,7 +2142,7 @@ INSTANCE ItAt_StoneGolemHeart (C_Item)
 	name 				=	"Herz eines Steingolems";
 
 	mainflag 			=	ITEM_KAT_RUNE;
-	flags 				=	0;
+	flags 				=	ITEM_MULTI;
 	spell				= 	SPL_GOLEMWINDFIST;
 
 	value 				=	Value_StoneGolemHeart;
@@ -2164,7 +2164,7 @@ INSTANCE ItAt_FireGolemHeart (C_Item)
 	name 				=	"Herz eines Feuergolems";
 
 	mainflag 			=	ITEM_KAT_RUNE;
-	flags 				=	0;
+	flags 				=	ITEM_MULTI;
 	spell				= 	SPL_GolemChargeFIREBALL;
 
 	value 				=	Value_FireGolemHeart;
@@ -2248,7 +2248,7 @@ INSTANCE ItAt_IceGolemHeart (C_Item)
 	name 				=	"Herz eines Eisgolems";
 
 	mainflag 			=	ITEM_KAT_RUNE;
-	flags 				=	0;
+	flags 				=	ITEM_MULTI;
 	spell				= 	SPL_GolemICECUBE;
 
 	value 				=	Value_IceGolemHeart;
