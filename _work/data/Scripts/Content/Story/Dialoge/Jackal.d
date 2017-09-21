@@ -90,6 +90,8 @@ FUNC VOID Info_Mod_Jackal_WoProblem_A()
 	Wld_InsertItem	(ItMi_JackalTabak_13, "FP_ITEM_JACKALTABAK_13");
 };
 
+var int TabakReceived;
+
 INSTANCE Info_Mod_Jackal_HabTabak (C_INFO)
 {
 	npc		= Mod_1107_GRD_Jackal_MT;
@@ -103,7 +105,7 @@ INSTANCE Info_Mod_Jackal_HabTabak (C_INFO)
 
 FUNC INT Info_Mod_Jackal_HabTabak_Condition()
 {
-	Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_8, Npc_HasItems(self, ItMi_JackalTabak));
+	Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_8, TabakReceived);
 	if (Npc_HasItems(hero, ItMi_JackalTabak) > 0)
 	{
 		return 1;
@@ -112,14 +114,16 @@ FUNC INT Info_Mod_Jackal_HabTabak_Condition()
 
 FUNC VOID Info_Mod_Jackal_HabTabak_Info()
 {
-	var int goldamount; goldamount = Npc_HasItems(hero, ItMi_JackalTAbak);
+	var int goldamount; goldamount = Npc_HasItems(hero, ItMi_JackalTabak);
 	var int epamount; epamount = goldamount;
 
 	AI_Output(hero, self, "Info_Mod_Jackal_HabTabak_15_00"); //Ich habe hier etwas für dich ...
 
 	B_GiveInvItems	(hero, self, ItMi_JackalTabak, goldamount);
+	Npc_RemoveInvItems(self, ItMi_JackalTabak, Npc_HasItems(self, ItMi_JackalTabak));
+	TabakReceived += goldamount;
 
-	if (Npc_HasItems(self, ItMi_JackalTabak) == 13)
+	if (TabakReceived == 13)
 	{
 		AI_Output(self, hero, "Info_Mod_Jackal_HabTabak_07_01"); //Ich fass es nicht! Das Kästchen ist wieder voll! Du hast mir meinen ganzen Tabak zurückgebracht.
 		AI_Output(self, hero, "Info_Mod_Jackal_HabTabak_07_02"); //Ich ... weiß gar nicht, was ich sagen soll. Aber dafür lass ich noch was springen.
@@ -154,7 +158,7 @@ FUNC VOID Info_Mod_Jackal_HabTabak_Info()
 
 		B_SetTopicStatus	(TOPIC_MOD_JACKAL_TABAK, LOG_SUCCESS);
 	}
-	else if (Npc_HasItems(self, ItMi_JackalTabak) >= 7)
+	else if (TabakReceived >= 7)
 	&& (Mod_Jackal_Tabak_7 == FALSE)
 	{
 		AI_Output(self, hero, "Info_Mod_Jackal_HabTabak_07_03"); //Das müsste mittlerweile schon mehr als Hälfte des Tabaks sein. Gute Arbeit. Das gibt einen kleinen Bonus.
@@ -172,7 +176,7 @@ FUNC VOID Info_Mod_Jackal_HabTabak_Info()
 
 		Mod_Jackal_Tabak_7 = TRUE;
 	}
-	else if (Npc_HasItems(self, ItMi_JackalTabak) >= 1)
+	else if (TabakReceived >= 1)
 	&& (Mod_Jackal_Tabak_1 == FALSE)
 	{
 		AI_Output(self, hero, "Info_Mod_Jackal_HabTabak_07_04"); //Du hast ja tatsächlich was von meinem Tabak gefunden. Jetzt hab ich wenigstens ein bisschen zurück.
