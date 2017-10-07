@@ -1,4 +1,4 @@
-const string SPINE_VERSION_STRING = "1.10.2";
+const string SPINE_VERSION_STRING = "1.10.3";
 
 // Spine modules
 

@@ -32,7 +32,7 @@ INSTANCE Info_REL_Buerger_16_Rundschreiben (C_INFO) // E1
 FUNC INT Info_REL_Buerger_16_Rundschreiben_Condition()
 {
 	if (Npc_HasItems(hero, ItWr_AnselmRundschreiben) >= 1)
-	if (Npc_HasItems(self, ItWr_AnselmRundschreiben) == 0)
+	&& (Npc_HasItems(self, ItWr_AnselmRundschreiben) == 0)
 	{
 		return TRUE;
 	};
