@@ -90,6 +90,7 @@ func void Spine_ShowAchievementView(var int identifier) {
 			} else {
 				currentLine = currentLineTest;
 			};
+			i += 1;
 			MEM_StackPos.position = pos;
 		};
 		if (STR_Len(currentLine) > 0) {

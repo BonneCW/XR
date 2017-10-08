@@ -1151,6 +1151,8 @@ func void UseYasinNotiz ()
 
 };
 
+var int Mod_UrsNotiz_Gelesen;
+
 INSTANCE ItWr_UrsNotiz		(C_Item)
 {
 	name 				=	"Zettel";
@@ -1185,13 +1187,11 @@ func void UseUrsNotiz ()
 					
 					Doc_Show		( nDocID );
 
-	if (Mod_Urs_Hund == 1)
+	if (Mod_Urs_Hund == 1 && !Mod_UrsNotiz_Gelesen)
 	{
-		Mod_Urs_Hund = 2;
+		Mod_UrsNotiz_Gelesen = TRUE;
 
 		B_LogEntry	(TOPIC_MOD_URS_HUND, "Urs sucht Wally jetzt irgendwo hinter dem alten Lager beim Wald.");
-
-		B_StartOtherRoutine	(Mod_7649_OUT_Urs_MT,	"WALD");
 	};
 
 };

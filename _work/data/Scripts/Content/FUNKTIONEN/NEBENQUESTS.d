@@ -3125,6 +3125,12 @@ FUNC VOID NEBENQUESTS()
 			};
 		};
 
+		if (Mod_Urs_Hund == 1 && Mod_UrsNotiz_Gelesen) {
+			Mod_Urs_Hund = 2;
+
+			B_StartOtherRoutine	(Mod_7649_OUT_Urs_MT,	"WALD");
+		};
+
 		if (Mod_Urs_Hund == 3)
 		{
 			if (Mod_Urs_Hund_Counter == 0)

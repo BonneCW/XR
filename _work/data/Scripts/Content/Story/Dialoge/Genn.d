@@ -664,7 +664,7 @@ FUNC INT Info_Mod_Genn_Dean_Condition()
 FUNC VOID Info_Mod_Genn_Dean_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Genn_Dean_09_00"); //Und? Was hast du herausgefunden?
-	AI_Output(hero, self, "Info_Mod_Genn_Dean_15_01"); //Der getötete Magie heißt Dean.
+	AI_Output(hero, self, "Info_Mod_Genn_Dean_15_01"); //Der getötete Magier heißt Dean.
 	AI_Output(hero, self, "Info_Mod_Genn_Dean_15_02"); //Er wurde von einem Golem überfallen, als er sich auf den Weg gemacht hat, den alten Steinkreis zu untersuchen.
 	AI_Output(hero, self, "Info_Mod_Genn_Dean_15_03"); //Merkwürdigerweise hat aber niemand den Golem vorher gesehen.
 	AI_Output(self, hero, "Info_Mod_Genn_Dean_09_04"); //Dean also. Das ist schon ein Schlag.
