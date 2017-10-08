@@ -16,6 +16,7 @@ FUNC VOID B_GiveTradeInv_Mod_Botschek_REL (var C_NPC slf)
 		CreateInvItems (slf, ItFo_Fish, 4); 
 		CreateInvItems (slf, ItFo_Booze, 12); 
 		CreateInvItems (slf, ItFo_Beer, 14); 
+		CreateInvItems	(slf, ItMi_Salznugget, 1);	
 		
 		CreateInvItems   (slf, ItFo_Wine,	13);
 		

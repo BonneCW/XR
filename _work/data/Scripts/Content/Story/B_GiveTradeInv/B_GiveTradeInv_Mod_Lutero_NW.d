@@ -49,7 +49,8 @@ FUNC VOID B_GiveTradeInv_Mod_Lutero_NW (var C_NPC slf)
 		CreateInvItems (slf,ItPo_Speed, 2);
 		CreateInvItems (slf,ItWr_ZweihandBuch, 1);
 		CreateInvItems (slf,ItWr_EinhandBuch, 1);
-		CreateInvItems	(slf, ItAt_SharkTeeth, 2);			
+		CreateInvItems	(slf, ItAt_SharkTeeth, 2);		
+		CreateInvItems	(slf, ItMi_Salznugget, 1);	
 
 	
 		Lutero_ItemsGiven_Chapter_2 = TRUE;

@@ -21,6 +21,7 @@ FUNC VOID B_GiveTradeInv_Mod_Hungar_JL (var C_NPC slf)
 		CreateInvItems	(slf, ItFo_Milk, 8);
 		CreateInvItems	(slf, ItPl_Melone, 2);
 		CreateInvItems	(slf, ItMi_ScavengerEgg, 4);
+		CreateInvItems	(slf, ItMi_Salznugget, 1);	
 		
 		Hungar_ItemsGiven_Chapter_1 = TRUE;
 	};
