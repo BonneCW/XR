@@ -425,7 +425,7 @@ FUNC VOID Info_Mod_Alissandro_GotoJackal_Info()
 
 	B_StartOtherRoutine	(Mod_1874_HMG_Makanius_MT, "TREFFEN");
 	B_StartOtherRoutine	(Mod_1107_GRD_Jackal_MT, "WACHE");
-	B_StartOtherRoutine	(Mod_1113_GRD_Fletcher_MT, "KILLMISSION");
+	B_StartOtherRoutine	(Mod_1902_STT_Ian_MT, "KILLMISSION");
 	B_StartOtherRoutine	(Mod_1025_KGD_Cathran_MT, "KILLMISSION");
 
 	Log_CreateTopic	(TOPIC_MOD_AL_KillMission, LOG_MISSION);

@@ -407,7 +407,7 @@ FUNC VOID Info_Mod_Jackal_KillMission_Info()
 
 	B_LogEntry	(TOPIC_MOD_AL_KillMission, "Jackal hat mir Informationen zu den Ziele gegeben: Fletcher geht um 22 Uhr über den Innenring, da könnte ich ihn erwischen.");
 	B_LogEntry	(TOPIC_MOD_AL_KillMission, "Ian geht mittags zu den Arenakämpfen und kommt erst Abend wieder zurück. Ein guter Moment um ihn auszuschalten.");
-	B_LogEntry	(TOPIC_MOD_AL_KillMission, "Cathran kommt Morgens in das alte Lager und verlässt es Abends wieder, Abends dürfte eine gute Chance sein um ihn zu töten.");
+	B_LogEntry	(TOPIC_MOD_AL_KillMission, "Cathran kommt Morgens in das alte Lager und verlässt es Abends wieder. Abends dürfte eine gute Chance sein um ihn zu töten.");
 
 	Wld_SendTrigger	("EVT_OC_MAINGATE01_01");
 };
