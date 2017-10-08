@@ -1802,7 +1802,7 @@ FUNC VOID NEBENQUESTS()
 		{
 			Mod_Jim_FakeGeist = 1;
 
-			B_LogEntry	(TOPIC_MOD_JIM_SCHUTZ, "Von einer Seele ist auf dem Friedhof weit und breit nichts zu sehen. Ich sollte in einer anderen Nacht wiederkommen.");
+			B_LogEntry	(TOPIC_MOD_JIM_SCHUTZ, "Von einer Seele ist auf dem Friedhof weit und breit nichts zu sehen. Ich sollte in einer anderen Nacht wiederkommen, wenn jemand in Khorata gestorben ist.");
 		};
 
 		if (Mod_Jim_Schutz == 1)

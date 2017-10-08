@@ -237,6 +237,8 @@ FUNC VOID Info_Mod_Bloodwyn_EBR_Belauscht_Info()
 	AI_StopProcessInfos	(self);
 
 	AI_Teleport	(Mod_1440_BUD_Buddler_MT,	"OCC_BARONS_GREATHALL_CENTER_FRONT");
+	
+	Mod_1107_GRD_Jackal_MT.aivar[AIV_PARTYMEMBER] = TRUE;
 
 	B_StartOtherRoutine	(self, "GEFANGENNAHME");
 	B_StartOtherRoutine	(Mod_1107_GRD_Jackal_MT, "GEFANGENNAHME");

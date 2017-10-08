@@ -121,7 +121,7 @@ FUNC VOID GILDENSTORY_AL()
 
 			if (Mod_HeroFliegtAL == 6)
 			{
-				Wld_PlayEffect("BLACK_SCREEN", PC_Hero, PC_Hero, 0, 0, 0, TRUE);
+				Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);
 
 				Wld_InsertNpc	(Mod_1874_HMG_Makanius_MT, "OCC_MERCS_RIGHT_ROOM_BACK");
 			};
@@ -145,7 +145,7 @@ FUNC VOID GILDENSTORY_AL()
 			{
 				Npc_ClearAIQueue (hero);
 
-				AI_Teleport	(PC_Hero, "OCC_MERCS_RIGHT_ROOM_BACK");
+				AI_Teleport	(hero, "OCC_MERCS_RIGHT_ROOM_BACK");
 			};
 		};
 

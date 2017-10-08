@@ -5,7 +5,7 @@ instance Mod_1876_EBR_Bloodwyn_MT (Npc_Default)
 	guild 		= GIL_OUT;
 	id 			= 1876;
 	voice 		= 4;//Stimme Lee
-	flags      	= 0;
+	flags      	= 2;
 	npctype		= NPCTYPE_main;
 	
 	//aivars
@@ -57,8 +57,8 @@ FUNC VOID Rtn_Smalltalk_1876 ()
 
 FUNC VOID Rtn_Belauschen_1876 ()
 {
-	TA_Stand_WP	(08,00,20,00,"OCC_CHAPEL_HALL");
-	TA_Stand_WP	(20,00,08,00,"OCC_CHAPEL_HALL");
+	TA_Follow_Player	(08,00,20,00,"OCC_CHAPEL_HALL");
+	TA_Follow_Player	(20,00,08,00,"OCC_CHAPEL_HALL");
 };
 
 FUNC VOID Rtn_Gefangennahme_1876 ()

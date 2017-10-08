@@ -470,6 +470,8 @@ FUNC VOID Info_Mod_Jackal_AngriffBloodwyn_Info()
 	B_StartOtherRoutine	(Mod_1145_GRD_Gardist_MT, "FLUCHT");
 
 	AI_StopProcessInfos	(self);
+	
+	Mod_1876_EBR_Bloodwyn_MT.flags = 0;
 
 	B_Attack	(self, Mod_1876_EBR_Bloodwyn_MT, AR_Kill, 0);
 };

@@ -550,7 +550,7 @@ FUNC VOID Info_Mod_Alissandro_GotoZufluchten_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_AL_EROBERUNG, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_AL_EROBERUNG, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Alissandro hat mir den Auftrag gegeben, die Zufluchten unserer Leute aufzusuchen und sie zum Tempelvorplatz der Sekte zu schicken.");
+	B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Alissandro hat mir den Auftrag gegeben, die Zufluchten unserer Leute aufzusuchen und sie zum Tempelvorplatz der Sekte zu schicken. Auf der Karte sind 7 Positionen markiert.");
 
 	B_StartOtherRoutine	(Mod_1107_GRD_Jackal_MT, "INPSICAMP");
 	B_StartOtherRoutine	(Mod_761_BDT_Dexter_MT, "INPSICAMP");
