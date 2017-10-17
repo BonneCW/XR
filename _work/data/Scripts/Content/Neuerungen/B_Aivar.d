@@ -38,6 +38,13 @@ FUNC INT B_GetAivar (var C_NPC slf, var int aiv)
 	{
 		return slf.aivar[AIV_Multi01]-100000000*B_GetAivar(slf, AIV_LastFightAgainstPlayer)-10000000*B_GetAivar(slf, AIV_NpcSawPlayerCommit)-1000000*B_GetAivar(slf, AIV_NpcStartedTalk)-100000*B_GetAivar(slf, AIV_INVINCIBLE)-10000*B_GetAivar(slf, AIV_TalkedToPlayer)-1000*B_GetAivar(slf, AIV_PlayerHasPickedMyPocket)-100*B_GetAivar(slf, AIV_FernkampfHitZone)-10*B_GetAivar(slf, AIV_RANSACKED);
 	};
+	
+	// AIV_Multi02: AIV_BauerWentKo
+
+	if (aiv == AIV_BauerWentKo)
+	{
+		return slf.aivar[AIV_Multi02]/100000000;
+	};
 
 	return 0;
 };
@@ -99,5 +106,14 @@ FUNC VOID B_SetAivar (var C_NPC slf, var int aiv, var int value)
 		slf.aivar[AIV_Multi01] -= B_GetAivar(slf, AIV_DeathInvGiven);
 
 		slf.aivar[AIV_Multi01] += value;
+	};
+	
+	// AIV_Multi02: AIV_BauerWentKo
+
+	if (aiv == AIV_BauerWentKo)
+	{
+		slf.aivar[AIV_Multi01] -= B_GetAivar(slf, AIV_BauerWentKo)*100000000;
+
+		slf.aivar[AIV_Multi01] += value*100000000;
 	};
 };

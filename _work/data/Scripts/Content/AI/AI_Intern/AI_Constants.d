@@ -15,6 +15,7 @@ func void	B_FullStop(var C_NPC npc)
 // - News-Vergabe über Dialog-Module
 
 
+// AIV_Multi01
 const int	AIV_LastFightAgainstPlayer	= 100;
 const int 	AIV_NpcSawPlayerCommit		= 101;
 const int 	AIV_NpcStartedTalk		= 102; 	//wenn der NSC mit Important Info den SC anquatscht
@@ -24,6 +25,9 @@ const int 	AIV_PlayerHasPickedMyPocket	= 105;
 const int 	AIV_FernkampfHitZone		= 106;
 const int 	AIV_RANSACKED			= 107; 	//damit nur EIN NSC einen Body plündert
 const int 	AIV_DeathInvGiven		= 108;	// Für Mensch und Monster!
+
+// AIV_Multi02
+const int AIV_BauerWentKo	= 109;
 
 const int	HAI_DIST_GUARDPASSAGE_ATTENTION	= 1200;	
 const int	AIV_ISTINARENATOFIGHT	= 2;
@@ -431,7 +435,7 @@ const int AIV_TrankBekommen	= 94;
 const int AIV_Tiergift		= 95;
 const int AIV_Pflanzengift	= 96;
 const int AIV_Gifttime		= 97;
-const int AIV_BauerWentKo	= 98;
+const int AIV_Multi02	= 98;
 const int AIV_Damage		= 99;
 // ***************************************************
 // Globalvariablen für Petzen/Absolution/News - System

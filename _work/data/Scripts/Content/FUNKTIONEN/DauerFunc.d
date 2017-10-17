@@ -124,6 +124,10 @@ FUNC VOID DAUERFUNC_01()
 			{
 				HP_PER_LEVEL = 12;
 			};
+			
+			if (Mod_Schwierigkeit < SomeUnimportantRandomValue - 1 || SomeUnimportantRandomValue == 0) {
+				SomeUnimportantRandomValue = Mod_Schwierigkeit + 1;
+			};
 		};
 	};
 

@@ -86,11 +86,11 @@ func void ZS_Unconscious ()
 			};
 
 			if (self.npctype == NPCTYPE_MT_REISBAUER)
-			&& (self.aivar[AIV_BauerWentKo] == 0)
+			&& (B_GetAivar(self, AIV_BauerWentKo) == 0)
 			{
 				Mod_Lefty_Bauern_Down += 1;
 
-				self.aivar[AIV_BauerWentKo] = 1;
+				B_SetAivar(self, AIV_BauerWentKo, 1);
 			};
 
 			if (Mod_Lefty_Horatio_Down == 1)

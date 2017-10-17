@@ -20,6 +20,9 @@ var int Erfolg_Wandlungskuenstler;	// Wandlungskünstler
 var int Erfolg_BackgroundStory;		// Wissen um das alte Volk
 var int Erfolg_Zeitspiel;		// Zeitspiel
 
+var int Mod_Erfolg_Kontaktfreudig;
+var int SomeUnimportantRandomValue;
+
 const int MaxErfolge = 19;		// Maximale Anzahl an Erfolgen (aktueller Status, wichtig für Prozentangabe bei Buch)
 var int CurrentErfolge;			// Aktuelle Anzahl an erreichten Erfolgen (wichtig für Prozentangaben bei Buch)
 

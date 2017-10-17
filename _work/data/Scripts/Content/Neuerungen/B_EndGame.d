@@ -21,6 +21,17 @@ FUNC VOID B_EndGame() {
 	Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_56, amount);
 		
 	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_7);
+	
+	if (SomeUnimportantRandomValue == 1) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_72);
+	} else if (SomeUnimportantRandomValue == 2) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_72);
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_73);
+	} else if (SomeUnimportantRandomValue == 3) {
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_72);
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_73);
+		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_74);
+	};
 
 	ExitSession();
 };
