@@ -32,6 +32,8 @@ FUNC VOID B_EndGame() {
 		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_73);
 		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_74);
 	};
+	
+	PlayVideo("Xeres\Credits.bik");
 
 	ExitSession();
 };
