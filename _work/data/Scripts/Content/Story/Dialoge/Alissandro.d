@@ -650,6 +650,8 @@ FUNC VOID Info_Mod_Alissandro_Eroberung_10_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "GOTOTEMPELVORPLATZ");
+	
+	Wld_InsertNpc(Mod_9999_HMG_Heilungsmagier_MT, "PSI_TEMPLE_STAIRS_1");
 };
 
 INSTANCE Info_Mod_Alissandro_BeiBartholo (C_INFO)
