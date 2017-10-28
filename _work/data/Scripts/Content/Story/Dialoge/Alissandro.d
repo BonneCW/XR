@@ -684,6 +684,7 @@ FUNC VOID Info_Mod_Alissandro_BeiBartholo_Info()
 	
 	B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Wir sind nun bei Bartholo und Makanius hat das Signal für die Banditen und königlichen Gardisten gegeben, allerdings ist Bartholo geflohen und hat uns einen Gardisten auf den Hals gehetzt.");
 	
+	Mod_1106_EBR_Bartholo_MT.aivar[AIV_ToughGuy] = TRUE;
 	B_StartOtherRoutine	(Mod_1106_EBR_Bartholo_MT, "FLUCHTINKERKER");
 
 	Wld_SendTrigger	("EVT_KERKERGATE_01");
