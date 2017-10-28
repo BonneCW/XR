@@ -42,3 +42,9 @@ FUNC VOID Rtn_start_7600 ()
 	TA_Stand_ArmsCrossed	(07,25,20,00,"WP_JAEGERLAGER_12");
 	TA_Stand_ArmsCrossed	(20,00,07,25,"WP_JAEGERLAGER_12");
 };
+
+FUNC VOID Rtn_Zuris_7600 ()
+{
+	TA_Stand_ArmsCrossed		(08,00,19,00,"NW_TAVERN_TO_FOREST_04");
+	TA_Stand_ArmsCrossed		(19,00,08,00,"NW_TAVERN_TO_FOREST_04");
+};
