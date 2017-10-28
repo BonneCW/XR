@@ -45,8 +45,8 @@ instance Mod_1921_GRD_Gardist_MT (Npc_Default)
 
 FUNC VOID Rtn_start_1921 ()
 {
-	TA_Sit_Campfire	(06,00,21,00,"WP_MT_JAEGERLAGER_04");
-	TA_Sit_Campfire	(21,00,06,00,"WP_MT_JAEGERLAGER_04");	
+	TA_Sit_Campfire	(06,00,21,00,"OW_PATH_010");
+	TA_Sit_Campfire	(21,00,06,00,"OW_PATH_010");	
 };
 
 FUNC VOID Rtn_Psicamp_1921 ()

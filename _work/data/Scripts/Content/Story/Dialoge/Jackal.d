@@ -632,6 +632,8 @@ FUNC VOID Info_Mod_Jackal_AtOC_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "TOOLDCAMP");
+
+	B_LogEntry	(TOPIC_MOD_AL_WhereAlissandro, "Ich soll mit der Verwandlungsspruchrolle in einen Hasen durch das Tor huschen und dann das Tor öffnen, um Jackal herein zu lassen.");
 };
 
 INSTANCE Info_Mod_Jackal_ComeIn (C_INFO)
@@ -648,7 +650,7 @@ INSTANCE Info_Mod_Jackal_ComeIn (C_INFO)
 FUNC INT Info_Mod_Jackal_ComeIn_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Jackal_AtOC))
-	&& (Npc_GetDistToWP(self, "OC_ROUND_1") < 500)
+	&& (Npc_GetDistToWP(self, "OC_ROUND_1") < 2000)
 	&& (Mod_ALTor_01 == 0)
 	{
 		return 1;
