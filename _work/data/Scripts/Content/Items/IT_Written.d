@@ -4467,6 +4467,7 @@ INSTANCE ItWr_AL_Zufluchtsnotiz		(C_Item)
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   Use_AL_Zufluchtsnotiz;
 	scemeName			=	"MAP";
+	description			= 	"Zettel von Alissandro aus der Goblinhöhle";
 };
 func void Use_AL_Zufluchtsnotiz ()
 {

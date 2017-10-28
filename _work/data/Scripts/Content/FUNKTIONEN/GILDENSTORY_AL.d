@@ -1,3 +1,5 @@
+var int Mod_Bloodwyn_GuidePlayertoBartholo;
+
 FUNC VOID GILDENSTORY_AL()
 {
 	if (CurrentLevel == MINENTAL_ZEN)
@@ -258,6 +260,15 @@ FUNC VOID GILDENSTORY_AL()
 			B_LogEntry	(TOPIC_MOD_AL_WhereAlissandro, "Jackal konnte Alissandro befreien. Wir sollten jetzt zur Zuflucht gehen.");
 
 			Mod_AL_AlissandroBefreit = TRUE;
+		};
+		
+		if (Npc_KnowsInfo(hero, Info_Mod_Bloodwyn_EBR_Belauscht))
+		&& (Mod_Bloodwyn_GuidePlayertoBartholo == FALSE) {
+			if (!Npc_IsInState(Mod_1876_EBR_Bloodwyn_MT, ZS_Talk)) {
+				Mod_Bloodwyn_GuidePlayertoBartholo = TRUE;
+				
+				AI_GotoWP(hero, "OCC_BARONS_GREATHALL_CENTER_FRONT");
+			};
 		};
 
 		if (AustauschDialog_Demon == 1)

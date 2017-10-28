@@ -617,7 +617,7 @@ INSTANCE Info_Mod_Jackal_AtOC (C_INFO)
 FUNC INT Info_Mod_Jackal_AtOC_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Jackal_WeHaveToGoToOC))
-	&& (Npc_GetDistToWP(self, "OC_ROUND_1") < 1000)
+	&& (Npc_GetDistToWP(self, "OC_ROUND_1") < 2000)
 	{
 		return 1;
 	};
