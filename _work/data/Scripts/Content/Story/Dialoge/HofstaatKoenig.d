@@ -164,7 +164,7 @@ FUNC VOID Info_Mod_HofstaatKoenig_Loch_Info()
 	AI_Output(hero, self, "Info_Mod_HofstaatKoenig_Loch_15_01"); //Ja, habe ich, kommt mit.
 	AI_Output(self, hero, "Info_Mod_HofstaatKoenig_Loch_06_02"); //Wehe euch, er ist einem König nicht würdig!
 
-	B_LogEntry	(TOPIC_MOD_SEKTE_ENTSCHEIDUNG, "Der König ist beeindruckt von der Schönheit des Sumpfes. Er will jedoch eine Lösung des Transportproblemes. Ich sollte mich mal hier umhören, ob jemand etwas dazu weiß.");
+	B_LogEntry	(TOPIC_MOD_SEKTE_ENTSCHEIDUNG, "Ich hab dem König vom neuen Transportloch berichtet. Er hat sich sofort auf den Weg gemacht.");
 
 	Mod_SL_Meer = 8;
 

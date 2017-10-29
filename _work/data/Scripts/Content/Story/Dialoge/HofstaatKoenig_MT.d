@@ -23,6 +23,8 @@ FUNC VOID Info_Mod_HofstaatKoenig_MT_AtStrand_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "FEST");
+
+	B_LogEntry	(TOPIC_MOD_SEKTE_KING, "Der König ist begeistert und möchte ein Fest feiern. Ich soll nachts wieder kommen.");
 };
 
 INSTANCE Info_Mod_HofstaatKoenig_MT_Fest (C_INFO)
