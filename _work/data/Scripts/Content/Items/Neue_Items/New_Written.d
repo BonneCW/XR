@@ -9,7 +9,7 @@ INSTANCE ItWr_BookForFaris (C_ITEM)
 
 	value 					=	5000;
 
-	visual 					=	"ItWr_Book_02_03.3ds";  					
+	visual 					=	"NewBook_V1_5.3DS";  					
 	material 				=	MAT_LEATHER;
 
 	description				= 	"";
@@ -105,7 +105,7 @@ INSTANCE ItWr_GDG_Almanach (C_ITEM)
 
 	value 					=	5000;
 
-	visual 					=	"ItWr_Book_02_03.3ds";  					
+	visual 					=	"NewBook_V1_6.3DS";  					
 	material 				=	MAT_LEATHER;
 
 	description				= 	"";
@@ -125,7 +125,7 @@ INSTANCE ItWr_GDG_Almanach_Offen (C_ITEM)
 
 	value 					=	5000;
 
-	visual 					=	"ItWr_Book_02_03.3ds";  					
+	visual 					=	"NewBook_V1_6.3DS";  					
 	material 				=	MAT_LEATHER;
 
 	on_state[0]	=	Use_GDGAlmanach;
@@ -268,7 +268,7 @@ INSTANCE ItWr_ZombieToHuman (C_ITEM)
 
 	value 					=	500;
 
-	visual 					=	"ItWr_Book_02_03.3ds";  					
+	visual 					=	"NewBook_V2_1.3DS";  					
 	material 				=	MAT_LEATHER;
 
 	wear			= 	WEAR_EFFECT;
@@ -1036,7 +1036,7 @@ INSTANCE Mod_XardasZauberbuch (C_ITEM)
 
 	value		=	0;
 	
-	visual		=	"ItWr_Book_02_05.3ds";
+	visual		=	"NewBook_V2_2.3DS";
 	material	=	MAT_LEATHER;
 
 	description	=	name;
@@ -1060,7 +1060,7 @@ INSTANCE theriddle1(C_Item)
 
 	value 					=	50;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"NewBook_V2_4.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";	
@@ -1132,7 +1132,7 @@ INSTANCE theriddle2(C_Item)
 
 	value 					=	50;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"NewBook_V2_4.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";	
@@ -1200,7 +1200,7 @@ INSTANCE theriddle3(C_Item)
 
 	value 					=	50;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"NewBook_V2_4.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";	
@@ -1281,7 +1281,7 @@ INSTANCE theriddle4(C_Item)
 
 	value 					=	50;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"NewBook_V2_4.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";	
@@ -1359,7 +1359,7 @@ INSTANCE theriddle5(C_Item)
 
 	value 					=	50;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"NewBook_V2_4.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";	
@@ -1432,7 +1432,7 @@ INSTANCE theriddle6(C_Item)
 
 	value 					=	50;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"NewBook_V2_4.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";	
@@ -1508,7 +1508,7 @@ INSTANCE TondralsBuch_01(C_Item)
 
 	value 					=	50;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"NewBook_V2_5.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";	
@@ -1556,7 +1556,7 @@ INSTANCE TondralsBuch_02(C_Item)
 
 	value 					=	50;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"NewBook_V2_6.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";	
@@ -1600,7 +1600,7 @@ INSTANCE ItWr_HeiligeWaffen (C_Item)
 
 	value 					=	50;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"NewBook_V3_1.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";	
@@ -1649,7 +1649,7 @@ INSTANCE ItWr_Flueche (C_Item)
 
 	value 					=	50;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"NewBook_V3_2.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";	

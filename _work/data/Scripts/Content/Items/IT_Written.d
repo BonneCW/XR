@@ -4976,7 +4976,7 @@ INSTANCE StandardBuch (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_1.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -5057,7 +5057,7 @@ INSTANCE ItWr_KhorataGeschichte (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_2.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -5146,7 +5146,7 @@ INSTANCE ItWr_HofstaatGeschichte03 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_3.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -5198,7 +5198,7 @@ INSTANCE ItWr_BeliarBibGruss (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_4.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -5250,7 +5250,7 @@ INSTANCE ItWr_GeheimnisseDerJagd5 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_5.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -5292,7 +5292,7 @@ INSTANCE ItWr_StadthalterChroniken (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_6.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -5336,147 +5336,6 @@ INSTANCE ItWr_StadthalterChroniken (C_ITEM)
 		Doc_Show		( nDocID );
 };
 
-INSTANCE ItWr_Erfolge (C_ITEM)
-{
-	name 					=	"Erfolge";
-
-	mainflag 				=	ITEM_KAT_DOCS;
-	flags 					=	0;
-
-	value 					=	0;
-
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
-	material 				=	MAT_LEATHER;
-
-	scemeName				=	"MAP";
-	description				= 	"Enthält alle erreichten Erfolge";
-	TEXT[1]		= ErfolgText;
-
-	on_state[0]				=	UseItWr_Erfolge;
-};
-
-	FUNC VOID UseItWr_Erfolge()
-	{
-		var int nDocID;
-
-		nDocID = 	Doc_Create		()			  ;								// DocManager
-		Doc_SetPages	( nDocID,  2 );                         //wieviel Pages
-
-		Doc_SetPage 	( nDocID,  0, "Book_Brown_L.tga"  , 0 	); // VARIATIONEN: BOOK_BROWN_L.tga , BOOK_MAGE_L.tga , BOOK_RED_L.tga
-		Doc_SetPage 	( nDocID,  1, "Book_Brown_R.tga" , 0	); // VARIATIONEN: BOOK_BROWN_R.tga , BOOK_MAGE_R.tga , BOOK_RED_R.tga
-
-		//1.Seite
-
-		Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
-		Doc_SetFont	( nDocID,  0, FONT_Book);
-		Doc_PrintLine	( nDocID,  0, ""					);
-					
-		if (Erfolg_EifrigerBuesser == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Eifriger Büßer");
-		};
-					
-		if (Erfolg_EiserneKonstitution == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Eiserne Konstitution");
-		};
-					
-		if (Erfolg_BackgroundStory2 == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Erkenntnis um die Schöpfung");
-		};
-
-		if (Erfolg_FLehrling == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Flinker Lehrling");
-		};
-
-		if (Erfolg_Helferlein == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Helferlein");
-		};
-
-		if (Erfolg_Kiffer == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Kettenraucher");
-		};
-
-		if (Erfolg_LangeFinger == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Lange Finger");
-		};
-
-		if (Erfolg_Leidensfaehigkeit == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Leidensfähigkeit");
-		};
-
-		if (Erfolg_MaxLevel == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Levelmeister");
-		};
-
-		if (Erfolg_Magersucht == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Magersüchtiger");
-		};
-
-		if (Erfolg_MonsterHunter == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Monsterjäger");
-		};
-
-		if (Erfolg_Rattenjaeger == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Rattenjäger");
-		};
-
-		if (Erfolg_Seepferdchen == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Seepferdchen");
-		};
-
-		if (Erfolg_Selbstlosigkeit == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Selbstlosigkeit");
-		};
-
-		if (Erfolg_Sparschwein == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Sparschwein");
-		};
-
-		if (Erfolg_Trampel == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Trampel");
-		};
-
-		if (Erfolg_Wandlungskuenstler == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Wandlungskünstler");
-		};
-					
-		if (Erfolg_BackgroundStory == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Wissen um das alte Volk");
-		};
-
-		if (Erfolg_Zeitspiel == 1)
-		{
-			Doc_PrintLine	( nDocID,  0, "Zeitspiel");
-		};
-
-		Doc_PrintLines	( nDocID,  0, "");
-
-		//2.Seite
-		Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
-		Doc_PrintLine	( nDocID,  1, ""					);
-		Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 	// -1 -> all pages
-		Doc_PrintLine	( nDocID,  1, ""					);
-					
-		Doc_Show		( nDocID );
-};
-
 INSTANCE ItWr_BookLehmar (C_ITEM)
 {
 	name 					=	"Merkwürdiges Buch";
@@ -5486,7 +5345,7 @@ INSTANCE ItWr_BookLehmar (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V2_1.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	description = name;
@@ -5503,7 +5362,7 @@ INSTANCE ItWr_Siegelbuch (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V2_2.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	description = name;
@@ -5520,7 +5379,7 @@ INSTANCE ItWr_JuanBook (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V2_3.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -5567,7 +5426,7 @@ INSTANCE ItWr_Chromanin3 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V2_4.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -5608,7 +5467,7 @@ INSTANCE ItWr_AlvarTagebuch (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V2_5.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -5662,7 +5521,7 @@ INSTANCE ItWr_AlvarTagebuch2 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V2_6.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -5714,7 +5573,7 @@ INSTANCE ItWr_GorNaKoshsTagebuch1 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V3_1.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -5772,7 +5631,7 @@ INSTANCE ItWr_GorNaKoshsTagebuch2 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V3_2.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -5830,7 +5689,7 @@ INSTANCE ItWr_GorNaKoshsTagebuch3 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V3_3.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -5890,7 +5749,7 @@ INSTANCE Ryans_Almanach (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V3_4.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	description				= 	"Almanach aus Ryans Truhe";
@@ -5907,7 +5766,7 @@ INSTANCE ItWr_XardasAlmanach (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V3_5.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	description				= 	"Almanach von einem Ork";
@@ -5924,7 +5783,7 @@ INSTANCE ItWr_BeliarBook (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V3_6.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	description				= 	"Buch der Schwarzmagier";
@@ -5942,7 +5801,7 @@ INSTANCE ItWr_BookFromSkeleton (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_1.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6021,7 +5880,7 @@ INSTANCE ItWr_EmerinsTagebuch (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_2.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6072,7 +5931,7 @@ INSTANCE ItWr_MagicSecretsBand5 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_3.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6125,7 +5984,7 @@ INSTANCE ItWr_MagicSecretsBand6 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_4.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6176,7 +6035,7 @@ INSTANCE ItWr_MagicMonsterBand7 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_5.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6221,7 +6080,7 @@ INSTANCE ItWr_Buddlerbuch (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_6.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	description				= 	"von Costa";
@@ -6238,7 +6097,7 @@ INSTANCE ItWr_Milizregeln (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V2_1.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6291,7 +6150,7 @@ INSTANCE ItWr_Innosklinge (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V2_2.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6339,7 +6198,7 @@ INSTANCE ItWr_HSBook (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V2_3.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6390,7 +6249,7 @@ INSTANCE ItWr_HSBook2 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V2_4.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6441,7 +6300,7 @@ INSTANCE ItWr_Advent1 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V2_5.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6487,7 +6346,7 @@ INSTANCE ItWr_Advent2 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V2_6.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6533,7 +6392,7 @@ INSTANCE ItWr_Advent3 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V3_1.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6579,7 +6438,7 @@ INSTANCE ItWr_Advent4 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V3_2.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6628,7 +6487,7 @@ INSTANCE ItWr_ErisKult (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V3_3.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6736,7 +6595,7 @@ INSTANCE ItWr_AxtAlmanach_Pre (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V3_4.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6793,7 +6652,7 @@ INSTANCE ItWr_AxtAlmanach_01 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V3_5.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6848,7 +6707,7 @@ INSTANCE ItWr_AxtAlmanach_02 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V3_6.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6903,7 +6762,7 @@ INSTANCE ItWr_AxtAlmanach_03 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_1.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -6959,7 +6818,7 @@ INSTANCE ItWr_AxtAlmanach_04 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_2.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -7015,7 +6874,7 @@ INSTANCE ItWr_AxtAlmanach_05 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_3.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -7073,7 +6932,7 @@ INSTANCE ItWr_AxtAlmanach_06 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"NewBook_V1_4.3DS";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -7124,7 +6983,7 @@ INSTANCE ItWr_DarrionTagebuch (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds"; 
+	visual 					=	"NewBook_V1_5.3DS"; 
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -7636,7 +7495,7 @@ INSTANCE ItWr_EinhandBuch (C_ITEM)
 
 	value 					=	5000;
 
-	visual 					=	"ItWr_Book_02_04.3ds";  					
+	visual 					=	"NewBook_V1_6.3DS";  					
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -7703,7 +7562,7 @@ INSTANCE ItWr_ZweihandBuch (C_ITEM)
 
 	value 					=	5000;
 
-	visual 					=	"ItWr_Book_02_03.3ds";  					
+	visual 					=	"NewBook_V2_1.3DS";  					
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";

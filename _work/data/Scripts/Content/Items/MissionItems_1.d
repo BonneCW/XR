@@ -1528,7 +1528,7 @@ INSTANCE ItWr_Schuldenbuch (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					
+	visual 					=	"NewBook_V2_4.3DS";  					
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";

@@ -7,7 +7,7 @@ INSTANCE ItWr_GolemBook1(C_Item)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";
+	visual 					=	"NewBook_V1_3.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";	
@@ -54,7 +54,7 @@ INSTANCE ItWr_GolemBook2(C_Item)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_05.3ds";
+	visual 					=	"NewBook_V1_4.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";	
