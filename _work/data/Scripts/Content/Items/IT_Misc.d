@@ -3647,7 +3647,7 @@ INSTANCE ItMi_AlvarKristall (C_Item)
 	name 				=	"Kristall";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI | ITEM_SHOW;
 
 	value 				=	250;
 
@@ -3665,7 +3665,7 @@ INSTANCE ItMi_TraenenKristall (C_Item)
 	name 				=	"Tränenkristall";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI | ITEM_SHOW;
 
 	value 				=	250;
 
