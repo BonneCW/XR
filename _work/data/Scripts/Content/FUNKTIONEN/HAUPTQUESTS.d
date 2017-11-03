@@ -2153,6 +2153,7 @@ FUNC VOID HAUPTQUESTS()
 
 		if (!Npc_IsInState(Schattenlord_998_Urnol, ZS_Talk))
 		&& (!Npc_IsInState(PC_Friend_XW, ZS_Talk))
+		&& (Npc_KnowsInfo(hero, Info_Mod_Urnol_XW_Gefangen))
 		&& (Mod_XW_Startscene == 3)
 		{
 			Mod_XW_Startscene = 4;
@@ -2162,6 +2163,7 @@ FUNC VOID HAUPTQUESTS()
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Urnol_XW_Hi))
 		&& (!Npc_IsInState(Schattenlord_998_Urnol, ZS_Talk))
+		&& (Npc_KnowsInfo(hero, Info_Mod_Urnol_XW_Hi))
 		&& (Mod_XW_Startscene == 2)
 		{
 			Mod_XW_Startscene = 3;
