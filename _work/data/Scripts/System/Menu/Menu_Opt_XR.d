@@ -15,26 +15,20 @@ INSTANCE MENU_OPT_XR(C_MENU_DEF)
 	items[3]		= "MENUITEM_XR_BALKEN";	
 	items[4]		= "MENUITEM_XR_BALKEN_CHOICE";
 				
-	items[5]		= "MENUITEM_XR_ESSSYSTEM";	
-	items[6]		= "MENUITEM_XR_ESSSYSTEM_CHOICE";
+	items[5]		= "MENUITEM_XR_EXP";	
+	items[6]		= "MENUITEM_XR_EXP_CHOICE";
 				
-	items[7]		= "MENUITEM_XR_EXP";	
-	items[8]		= "MENUITEM_XR_EXP_CHOICE";
+	items[7]		= "MENUITEM_XR_DIFFICULTY";	
+	items[8]		= "MENUITEM_XR_DIFFICULTY_CHOICE";
 				
-	items[9]		= "MENUITEM_XR_ONLINE";	
-	items[10]		= "MENUITEM_XR_ONLINE_CHOICE";
+	items[9]		= "MENUITEM_XR_SPIELZEIT";	
+	items[10]		= "MENUITEM_XR_SPIELZEIT_CHOICE";
 				
-	items[11]		= "MENUITEM_XR_SAVEGAME";	
-	items[12]		= "MENUITEM_XR_SAVEGAME_CHOICE";
-				
-	items[13]		= "MENUITEM_XR_DIFFICULTY";	
-	items[14]		= "MENUITEM_XR_DIFFICULTY_CHOICE";
-				
-	items[15]		= "MENUITEM_XR_SPIELZEIT";	
-	items[16]		= "MENUITEM_XR_SPIELZEIT_CHOICE";
+	items[11]		= "MENUITEM_XR_BLOODSPLATS";	
+	items[12]		= "MENUITEM_XR_BLOODSPLATS_CHOICE";
 	
-	items[17]		= "MENUITEM_XR_BACK";
-	items[18]		= "MENUITEM_XR_NEXT";	
+	items[13]		= "MENUITEM_XR_BACK";
+	//items[14]		= "MENUITEM_XR_NEXT";	
 	
 	flags = flags | MENU_SHOW_INFO;
 };
@@ -171,7 +165,7 @@ INSTANCE MENUITEM_XR_EXP (C_MENU_ITEM_DEF)
 	text[0]		=	"EXP-Balken";
 	text[1]		= 	"Erfahrungsbalken (an/aus)"; // Kommentar
 	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*2;
+	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*1;
 	dimx		=	3000;	dimy		=	750;
 	// Aktionen
 	onSelAction[0]	= SEL_ACTION_UNDEF;
@@ -186,7 +180,7 @@ instance MENUITEM_XR_EXP_CHOICE(C_MENU_ITEM_DEF)
 	text[0]		= 	"aus|an";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
-	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*2 + MENU_CHOICE_YPLUS;
+	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*1 + MENU_CHOICE_YPLUS;
 	dimx = MENU_SLIDER_DX;	dimy 		= 	MENU_CHOICE_DY;
 	// Aktionen
 	onChgSetOption		= "erfahrung";
@@ -277,9 +271,9 @@ INSTANCE MENUITEM_XR_DIFFICULTY(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
 	text[0]		=	"Schwierigkeit";
-	text[1]		= 	"Schwierigkeitsgrad (Einfach, Normal, Schwer, Alternativ)"; // Kommentar
+	text[1]		= 	"Schwierigkeitsgrad (Einfach, Normal, Schwer)"; // Kommentar
 	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*5;
+	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*2;
 	dimx		=	3000;	dimy		=	750;
 	// Aktionen
 	onSelAction[0]	= SEL_ACTION_UNDEF;
@@ -291,10 +285,10 @@ instance MENUITEM_XR_DIFFICULTY_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"Einfach|Normal|Schwer|Alternativ";
+	text[0]		= 	"Einfach|Normal|Schwer";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
-	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*5 + MENU_CHOICE_YPLUS;
+	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*2 + MENU_CHOICE_YPLUS;
 	dimx = MENU_SLIDER_DX;	dimy 		= 	MENU_CHOICE_DY;
 	// Aktionen
 	onChgSetOption		= "difficulty";
@@ -315,7 +309,7 @@ INSTANCE MENUITEM_XR_SPIELZEIT (C_MENU_ITEM_DEF)
 	text[0]		=	"Spielzeit";
 	text[1]		= 	"Spielzeitanzeige (an/aus)"; // Kommentar
 	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*6;
+	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*3;
 	dimx		=	3000;	dimy		=	750;
 	// Aktionen
 	onSelAction[0]	= SEL_ACTION_UNDEF;
@@ -330,10 +324,46 @@ instance MENUITEM_XR_SPIELZEIT_CHOICE(C_MENU_ITEM_DEF)
 	text[0]		= 	"aus|an";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
-	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*6 + MENU_CHOICE_YPLUS;
+	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*3 + MENU_CHOICE_YPLUS;
 	dimx = MENU_SLIDER_DX;	dimy 		= 	MENU_CHOICE_DY;
 	// Aktionen
 	onChgSetOption		= "spielzeit";
+	onChgSetOptionSection 	= "XERES";
+	// Weitere Eigenschaften	
+	flags		= flags & ~IT_SELECTABLE;	
+	flags		= flags  | IT_TXT_CENTER;
+};
+
+
+//
+// Blutspritzer
+//
+
+INSTANCE MENUITEM_XR_BLOODSPLATS(C_MENU_ITEM_DEF)
+{
+	backpic		=	MENU_ITEM_BACK_PIC;
+	text[0]		=	"Blutspritzer";
+	text[1]		= 	"Blutspritzer (an/aus)"; // Kommentar
+	// Position und Dimension	
+	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*4;
+	dimx		=	3000;	dimy		=	750;
+	// Aktionen
+	onSelAction[0]	= SEL_ACTION_UNDEF;
+	// Weitere Eigenschaften
+	flags		= flags | IT_EFFECTS_NEXT;		
+};
+
+instance MENUITEM_XR_BLOODSPLATS_CHOICE(C_MENU_ITEM_DEF)
+{
+	backPic		=	MENU_CHOICE_BACK_PIC;
+	type		=	MENU_ITEM_CHOICEBOX;		
+	text[0]		= 	"an|aus";
+	fontName	=   MENU_FONT_SMALL;
+	// Position und Dimension	
+	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*4 + MENU_CHOICE_YPLUS;
+	dimx = MENU_SLIDER_DX;	dimy 		= 	MENU_CHOICE_DY;
+	// Aktionen
+	onChgSetOption		= "bloodsplats";
 	onChgSetOptionSection 	= "XERES";
 	// Weitere Eigenschaften	
 	flags		= flags & ~IT_SELECTABLE;	
