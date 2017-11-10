@@ -507,7 +507,7 @@ FUNC VOID HAUPTQUESTS()
 		
 		// Puzzlespiel bei Argez
 		
-		if (Npc_KnowsInfo(hero, Info_Mod_Argez_AW_Stab2))
+		if (Npc_KnowsInfo(hero, Info_Mod_Argez_AW_Stab))
 		&& (Mod_Argez_Puzzle == 0)
 		&& (!Npc_IsInState(PC_Friend_AW, ZS_Talk)) {
 			Mod_Argez_Puzzle = 1;
