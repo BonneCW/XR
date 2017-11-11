@@ -35,7 +35,7 @@ func void INIT_GLOBAL()
 	
 	LeGo_Init(LeGo_PrintS | LeGo_HookEngine | LeGo_AI_Function | LeGo_Trialoge | LeGo_FrameFunctions | LeGo_Cursor | LeGo_Random | LeGo_Bloodsplats | LeGo_Saves | LeGo_PermMem | LeGo_Anim8 | LeGo_View | LeGo_Interface | LeGo_Bars | LeGo_Buttons | LeGo_Timer);
 	
-	Spine_Init(SPINE_MODULE_ACHIEVEMENTS | SPINE_MODULE_OVERALLSAVE | SPINE_MODULE_MULTIPLAYER | SPINE_MODULE_GETCURRENTUSERNAME);
+	Spine_Init(SPINE_MODULE_ACHIEVEMENTS | SPINE_MODULE_OVERALLSAVE | SPINE_MODULE_MULTIPLAYER | SPINE_MODULE_GETCURRENTUSERNAME | SPINE_MODULE_GAMEPAD);
 
 	MEM_SetShowDebug (0);
 

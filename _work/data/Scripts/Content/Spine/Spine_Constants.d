@@ -41,4 +41,4 @@ const int SPINE_LENGTH_TRIGGEREARTHQUAKE_G2 = 6;
 const int SPINE_ADDRESS_UNTRIGGEREARTHQUAKE_G2 = 6373344; // 0x00613FE0
 const int SPINE_LENGTH_UNTRIGGEREARTHQUAKE_G2 = 6;
 
-const int SPINE_GAME_DAMAGE_VIBRATION_TIME = 2000; // 2 seconds vibration for every hit?
+const int SPINE_GAME_DAMAGE_VIBRATION_TIME = 1000; // 2 seconds vibration for every hit?

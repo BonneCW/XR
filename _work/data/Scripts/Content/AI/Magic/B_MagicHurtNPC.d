@@ -9,6 +9,7 @@ func void B_MagicHurtNpc (var C_NPC slf, var C_NPC oth, var int damage)
 	if (Hlp_GetInstanceID(oth) == Hlp_GetInstanceID(hero))
 	{
 		//Bloodsplat(damage);
+		Spine_DoDamageVibration(damage);
 	};
 
 	if (oth.flags != 2)

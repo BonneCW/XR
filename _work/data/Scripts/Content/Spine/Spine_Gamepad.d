@@ -154,6 +154,7 @@ func void Spine_InitEarthquakeHooks() {
 // internal function, don't call from outside
 func void Spine_Earthquake_Trigger() {
 	Spine_VibrateGamepad(SPINE_VIBRATION_MAXIMUM, SPINE_VIBRATION_MAXIMUM);
+	FF_ApplyOnceExt(Spine_Earthquake_Untrigger, 2000, 1);
 };
 
 // internal function, don't call from outside
