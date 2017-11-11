@@ -102,6 +102,15 @@ FUNC VOID B_MG_GameLoop() {
 						if (B_MG_FeldBesetzt(0, x, y)) {
 							return;
 						};
+						
+						var int placementMsgPtr; placementMsgPtr = Spine_CreateMessage(SPINE_MESSAGETYPE_INT3);
+						var Spine_Int3Message sendPlacementMsg; sendPlacementMsg = MEM_PtrToInst(placementMsgPtr);
+						sendPlacementMsg.userType = MSGTYPE_PLACEMENT;
+						sendPlacementMsg.param1 = x;
+						sendPlacementMsg.param2 = 9 - y;
+						sendPlacementMsg.param3 = tempFigur;
+						
+						Spine_SendMessage(placementMsgPtr);
 
 						if (tempFigur == MG_FIGUR_TROLL) {
 							C_MG_SPIELFIGUR_WalkToField(Hero_Troll, x+y*8);
@@ -163,77 +172,167 @@ FUNC VOID B_MG_GameLoop() {
 				B_MG_ResetStartReihe();
 			};
 		} else {
-			var int ptr; ptr = MEM_StackPos.position;
+			if (MG_CurrentOpp == MG_GEGNER_ONLINE) {
+				msg = Spine_ReceiveMessage();
 
-			y = 1;
-			x = r_max(7);
-
-			if (B_MG_FeldBesetzt(1, x, y)) {
-				MEM_StackPos.position = ptr;
-			};
-
-			if (MG_CurrentOpp == MG_GEGNER_RUEDIGER) {
-				if (MG_Opp_Counter == 0) {
-					tempFigur = MG_FIGUR_SCHAF;
-				} else if (MG_Opp_Counter == 1) {
-					tempFigur = MG_FIGUR_STONEGUARDIAN;
-				} else if (MG_Opp_Counter == 2) {
-					tempFigur = MG_FIGUR_HASE;
-				} else if (MG_Opp_Counter == 3) {
-					tempFigur = MG_FIGUR_BLOODFLY;
-				} else if (MG_Opp_Counter == 4) {
-					tempFigur = MG_FIGUR_TROLL;
+				if (MP_TimeOut >= 60) {
+					MG_CurrentOpp = MG_GEGNER_FALLBACK;
 				};
+
+				MP_TimeOut += 1;
+
+				if (msg > 0) {
+					smsg = MEM_PtrToInst(msg);
+					if (smsg.userType == MSGTYPE_PLACEMENT) {
+						var Spine_Int3Message placementMsg; placementMsg = MEM_PtrToInst(msg);
+						x = placementMsg.param1;
+						y = placementMsg.param2;
+						tempFigur = placementMsg.param3;
+
+						if (tempFigur == MG_FIGUR_TROLL) {
+							C_MG_SPIELFIGUR_WalkToField(Opp_Troll, x+y*8);
+
+							MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_TROLL);
+						} else if (tempFigur == MG_FIGUR_MINECRAWLERQUEEN) {
+							C_MG_SPIELFIGUR_WalkToField(Opp_MINECRAWLERQUEEN, x+y*8);
+
+							MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_MINECRAWLERQUEEN);
+						} else if (tempFigur == MG_FIGUR_SCHAF) {
+							C_MG_SPIELFIGUR_WalkToField(Opp_SCHAF, x+y*8);
+
+							MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_SCHAF);
+						} else if (tempFigur == MG_FIGUR_BALROG) {
+							C_MG_SPIELFIGUR_WalkToField(Opp_BALROG, x+y*8);
+
+							MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_BALROG);
+						} else if (tempFigur == MG_FIGUR_GOBLIN) {
+							C_MG_SPIELFIGUR_WalkToField(Opp_GOBLIN, x+y*8);
+
+							MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_GOBLIN);
+						} else if (tempFigur == MG_FIGUR_MEATBUG) {
+							C_MG_SPIELFIGUR_WalkToField(Opp_MEATBUG, x+y*8);
+
+							MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_MEATBUG);
+						} else if (tempFigur == MG_FIGUR_HASE) {
+							C_MG_SPIELFIGUR_WalkToField(Opp_HASE, x+y*8);
+
+							MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_HASE);
+						} else if (tempFigur == MG_FIGUR_SNAPPER) {
+							C_MG_SPIELFIGUR_WalkToField(Opp_SNAPPER, x+y*8);
+
+							MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_SNAPPER);
+						} else if (tempFigur == MG_FIGUR_BLOODFLY) {
+							C_MG_SPIELFIGUR_WalkToField(Opp_BLOODFLY, x+y*8);
+
+							MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_BLOODFLY);
+						} else if (tempFigur == MG_FIGUR_STONEGUARDIAN) {
+							C_MG_SPIELFIGUR_WalkToField(Opp_STONEGUARDIAN, x+y*8);
+
+							MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_STONEGUARDIAN);
+						};
+
+						MG_Opp_Counter += 1;
+
+						tempFigur = 0;
+
+						MG_Spieler01 = TRUE;
+						MG_Spieler02 = FALSE;
+
+						MP_TimeOut = 0;
+					};
+					Spine_DeleteMessage(msg);
+				};
+			} else {
+				var int ptr; ptr = MEM_StackPos.position;
+
+				y = 1;
+				x = r_max(7);
+
+				if (B_MG_FeldBesetzt(1, x, y)) {
+					MEM_StackPos.position = ptr;
+				};
+
+				if (MG_CurrentOpp == MG_GEGNER_RUEDIGER) {
+					if (MG_Opp_Counter == 0) {
+						tempFigur = MG_FIGUR_SCHAF;
+					} else if (MG_Opp_Counter == 1) {
+						tempFigur = MG_FIGUR_STONEGUARDIAN;
+					} else if (MG_Opp_Counter == 2) {
+						tempFigur = MG_FIGUR_HASE;
+					} else if (MG_Opp_Counter == 3) {
+						tempFigur = MG_FIGUR_BLOODFLY;
+					} else if (MG_Opp_Counter == 4) {
+						tempFigur = MG_FIGUR_TROLL;
+					};
+				} else if (MG_CurrentOpp == MG_GEGNER_SPIELER_ORLAN) {
+					if (MG_Opp_Counter == 0) {
+						tempFigur = MG_FIGUR_SCHAF;
+					} else if (MG_Opp_Counter == 1) {
+						tempFigur = MG_FIGUR_SNAPPER;
+					} else if (MG_Opp_Counter == 2) {
+						tempFigur = MG_FIGUR_HASE;
+					} else if (MG_Opp_Counter == 3) {
+						tempFigur = MG_FIGUR_BLOODFLY;
+					} else if (MG_Opp_Counter == 4) {
+						tempFigur = MG_FIGUR_MEATBUG;
+					};
+				} else if (MG_CurrentOpp == MG_GEGNER_FALLBACK) {
+					var int loop; loop = MEM_StackPos.position;
+					tempFigur = r_MinMax(1, 11);
+					if (IsFigureInUse(tempFigur)) {
+						MEM_StackPos.position = loop;
+					};
+				};
+
+				if (tempFigur == MG_FIGUR_TROLL) {
+					C_MG_SPIELFIGUR_WalkToField(Opp_Troll, x+y*8);
+
+					MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_TROLL);
+				} else if (tempFigur == MG_FIGUR_MINECRAWLERQUEEN) {
+					C_MG_SPIELFIGUR_WalkToField(Opp_MINECRAWLERQUEEN, x+y*8);
+
+					MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_MINECRAWLERQUEEN);
+				} else if (tempFigur == MG_FIGUR_SCHAF) {
+					C_MG_SPIELFIGUR_WalkToField(Opp_SCHAF, x+y*8);
+
+					MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_SCHAF);
+				} else if (tempFigur == MG_FIGUR_BALROG) {
+					C_MG_SPIELFIGUR_WalkToField(Opp_BALROG, x+y*8);
+
+					MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_BALROG);
+				} else if (tempFigur == MG_FIGUR_GOBLIN) {
+					C_MG_SPIELFIGUR_WalkToField(Opp_GOBLIN, x+y*8);
+
+					MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_GOBLIN);
+				} else if (tempFigur == MG_FIGUR_MEATBUG) {
+					C_MG_SPIELFIGUR_WalkToField(Opp_MEATBUG, x+y*8);
+
+					MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_MEATBUG);
+				} else if (tempFigur == MG_FIGUR_HASE) {
+					C_MG_SPIELFIGUR_WalkToField(Opp_HASE, x+y*8);
+
+					MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_HASE);
+				} else if (tempFigur == MG_FIGUR_SNAPPER) {
+					C_MG_SPIELFIGUR_WalkToField(Opp_SNAPPER, x+y*8);
+
+					MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_SNAPPER);
+				} else if (tempFigur == MG_FIGUR_BLOODFLY) {
+					C_MG_SPIELFIGUR_WalkToField(Opp_BLOODFLY, x+y*8);
+
+					MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_BLOODFLY);
+				} else if (tempFigur == MG_FIGUR_STONEGUARDIAN) {
+					C_MG_SPIELFIGUR_WalkToField(Opp_STONEGUARDIAN, x+y*8);
+
+					MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_STONEGUARDIAN);
+				};
+
+				MG_Opp_Counter += 1;
+
+				tempFigur = 0;
+
+				MG_Spieler01 = TRUE;
+				MG_Spieler02 = FALSE;
 			};
-
-			if (tempFigur == MG_FIGUR_TROLL) {
-				C_MG_SPIELFIGUR_WalkToField(Opp_Troll, x+y*8);
-
-				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_TROLL);
-			} else if (tempFigur == MG_FIGUR_MINECRAWLERQUEEN) {
-				C_MG_SPIELFIGUR_WalkToField(Opp_MINECRAWLERQUEEN, x+y*8);
-
-				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_MINECRAWLERQUEEN);
-			} else if (tempFigur == MG_FIGUR_SCHAF) {
-				C_MG_SPIELFIGUR_WalkToField(Opp_SCHAF, x+y*8);
-
-				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_SCHAF);
-			} else if (tempFigur == MG_FIGUR_BALROG) {
-				C_MG_SPIELFIGUR_WalkToField(Opp_BALROG, x+y*8);
-
-				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_BALROG);
-			} else if (tempFigur == MG_FIGUR_GOBLIN) {
-				C_MG_SPIELFIGUR_WalkToField(Opp_GOBLIN, x+y*8);
-
-				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_GOBLIN);
-			} else if (tempFigur == MG_FIGUR_MEATBUG) {
-				C_MG_SPIELFIGUR_WalkToField(Opp_MEATBUG, x+y*8);
-
-				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_MEATBUG);
-			} else if (tempFigur == MG_FIGUR_HASE) {
-				C_MG_SPIELFIGUR_WalkToField(Opp_HASE, x+y*8);
-
-				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_HASE);
-			} else if (tempFigur == MG_FIGUR_SNAPPER) {
-				C_MG_SPIELFIGUR_WalkToField(Opp_SNAPPER, x+y*8);
-
-				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_SNAPPER);
-			} else if (tempFigur == MG_FIGUR_BLOODFLY) {
-				C_MG_SPIELFIGUR_WalkToField(Opp_BLOODFLY, x+y*8);
-
-				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_BLOODFLY);
-			} else if (tempFigur == MG_FIGUR_STONEGUARDIAN) {
-				C_MG_SPIELFIGUR_WalkToField(Opp_STONEGUARDIAN, x+y*8);
-
-				MEM_WriteStatArr(MG_GegnerFiguren, MG_Opp_Counter, MG_FIGUR_STONEGUARDIAN);
-			};
-
-			MG_Opp_Counter += 1;
-
-			tempFigur = 0;
-
-			MG_Spieler01 = TRUE;
-			MG_Spieler02 = FALSE;
 		};
 
 		if (MG_Own_Counter == 5)

@@ -27,6 +27,7 @@ const int SPINE_MESSAGETYPE_BASE = 0;
 const int SPINE_MESSAGETYPE_INT = 1;
 const int SPINE_MESSAGETYPE_STRING = 2;
 const int SPINE_MESSAGETYPE_INT4 = 3;
+const int SPINE_MESSAGETYPE_INT3 = 4;
 
 var int SPINE_SHOWACHIEVEMENTS; // show achievement (you can set this to FALSE to disable the achievement widget, but internally the achievement will be unlocked, so you still can see it in Spine), configured in Spine GUI
 

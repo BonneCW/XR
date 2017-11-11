@@ -100,10 +100,16 @@ func void INIT_GLOBAL()
 		MEM_WriteByte(6276807, 144);
 		MEM_WriteByte(6276808, 144);
 		
+		// These two overrides skip ASSERT_FAIL in case VertexBuffer is not locked
 		MemoryProtectionOverride(/*0x5FCAA3*/ 6277795, 5);
 
 		MEM_WriteByte(/*0x5FCAA3*/ 6277795,   ASMINT_OP_jmp);
 		MEM_WriteInt (/*0x5FCAA3*/ 6277795+1, /*0x5FCB71-0x5FCAA3-5*/ 6278001-6277795-5);
+		
+		MemoryProtectionOverride(/*0x5FC638*/ 6276664, 5);
+
+		MEM_WriteByte(/*0x5FC638*/ 6276664,   ASMINT_OP_jmp);
+		MEM_WriteInt (/*0x5FC638*/ 6276664+1, /*0x5FC6E3-0x5FC638-5*/ 6276835-6276664-5);
 
 		GOTHIC_RESTART = "Y";
 	};

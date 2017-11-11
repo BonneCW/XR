@@ -713,3 +713,20 @@ FUNC VOID C_MG_SPIELFIGUR_WalkToField(var C_MG_SPIELFIGUR sf, var int field)
 
 	sf.walked = TRUE;
 };
+
+FUNC INT IsFigureInUse(var int figure) {
+	var int result; result = FALSE;
+	var int i; i = 0;
+	var int ptr; ptr = MEM_StackPos.position;
+	var int storedFigure;
+	storedFigure = MEM_ReadStatArr(MG_GegnerFiguren, i);
+	if (figure == storedFigure) {
+		result = TRUE;
+	} else {
+		i += 1;
+		if (i < MG_Opp_Counter) {
+			MEM_StackPos.position = ptr;
+		};
+	};
+	return result;
+};
