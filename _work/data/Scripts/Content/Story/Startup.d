@@ -32,12 +32,12 @@ func void INIT_GLOBAL()
 	B_InitNpcGlobals ();
 
 	gameloaded = Hlp_GetNpc(0);
-
-	MEM_SetShowDebug (0);
-
-	LeGo_Init(LeGo_PrintS | LeGo_HookEngine | LeGo_AI_Function | LeGo_Trialoge | LeGo_Dialoggestures | LeGo_FrameFunctions | LeGo_Cursor | LeGo_Random | LeGo_Bloodsplats | LeGo_Saves | LeGo_PermMem | LeGo_Anim8 | LeGo_View | LeGo_Interface | LeGo_Bars | LeGo_Buttons | LeGo_Timer | LeGo_EventHandler | LeGo_Gamestate | LeGo_Sprite | LeGo_Names | LeGo_ConsoleCommands);
+	
+	LeGo_Init(LeGo_PrintS | LeGo_HookEngine | LeGo_AI_Function | LeGo_Trialoge | LeGo_FrameFunctions | LeGo_Cursor | LeGo_Random | LeGo_Bloodsplats | LeGo_Saves | LeGo_PermMem | LeGo_Anim8 | LeGo_View | LeGo_Interface | LeGo_Bars | LeGo_Buttons | LeGo_Timer);
 	
 	Spine_Init(SPINE_MODULE_ACHIEVEMENTS | SPINE_MODULE_OVERALLSAVE | SPINE_MODULE_MULTIPLAYER | SPINE_MODULE_GETCURRENTUSERNAME);
+
+	MEM_SetShowDebug (0);
 
 	if (CurrentLevel == SCHIFFSCHLACHT_ZEN)
 	{
@@ -78,8 +78,7 @@ func void INIT_GLOBAL()
 
 	ShowManabar(1);
 
-	if (!Hlp_StrCmp(GOTHIC_RESTART, "Y"))
-	{
+	if (!Hlp_StrCmp(GOTHIC_RESTART, "Y")) {
 		HookEngine (7742032, 6, "B_OPENINVENTORY");
 		HookEngine (7742480, 9, "B_CLOSEINVENTORY");
 		HookEngine (7487221, 5, "B_OPENCHEST");		// 0x723EF5
@@ -100,6 +99,11 @@ func void INIT_GLOBAL()
 		MEM_WriteByte(6276806, 144);
 		MEM_WriteByte(6276807, 144);
 		MEM_WriteByte(6276808, 144);
+		
+		MemoryProtectionOverride(/*0x5FCAA3*/ 6277795, 5);
+
+		MEM_WriteByte(/*0x5FCAA3*/ 6277795,   ASMINT_OP_jmp);
+		MEM_WriteInt (/*0x5FCAA3*/ 6277795+1, /*0x5FCB71-0x5FCAA3-5*/ 6278001-6277795-5);
 
 		GOTHIC_RESTART = "Y";
 	};
