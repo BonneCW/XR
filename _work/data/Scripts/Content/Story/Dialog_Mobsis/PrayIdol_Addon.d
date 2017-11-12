@@ -172,8 +172,7 @@ FUNC VOID PC_PrayIdol_End_Info()
 {
 	B_ENDPRODUCTIONDIALOG ();
  	Wld_StopEffect("DEMENTOR_FX");
- 	Wld_StopEffect("DEMENTOR_FX");
- 	Wld_StopEffect("DEMENTOR_FX");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 }; 
 //*******************************************************
 //	Beten
@@ -678,6 +677,7 @@ FUNC VOID PC_PrayIdol_Teleport_Eisgebiet()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == EISGEBIET_ZEN)
 	{
@@ -696,6 +696,7 @@ FUNC VOID PC_PrayIdol_Teleport_City()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == NEWWORLD_ZEN)
 	{
@@ -714,6 +715,7 @@ FUNC VOID PC_PrayIdol_Teleport_Kanalisation()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == RELENDEL_ZEN)
 	{
@@ -732,6 +734,7 @@ FUNC VOID PC_PrayIdol_Teleport_OldDementower()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == MINENTAL_ZEN)
 	{
@@ -750,6 +753,7 @@ FUNC VOID PC_PrayIdol_Teleport_Oldmine()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == MINENTAL_ZEN)
 	{
@@ -768,6 +772,7 @@ FUNC VOID PC_PrayIdol_Teleport_Xardas()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == NEWWORLD_ZEN)
 	{
@@ -786,6 +791,7 @@ FUNC VOID PC_PrayIdol_Teleport_Krieger()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == MINENTAL_ZEN)
 	{
@@ -804,6 +810,7 @@ FUNC VOID PC_PrayIdol_Teleport_Bibliothek()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == MINENTAL_ZEN)
 	{
@@ -822,6 +829,7 @@ FUNC VOID PC_PrayIdol_Teleport_Banditenlager()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == MINENTAL_ZEN)
 	{
@@ -840,6 +848,7 @@ FUNC VOID PC_PrayIdol_Teleport_Bergfestung()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == MINENTAL_ZEN)
 	{
@@ -858,6 +867,7 @@ FUNC VOID PC_PrayIdol_Teleport_Orkstadt()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == MINENTAL_ZEN)
 	{
@@ -876,6 +886,7 @@ FUNC VOID PC_PrayIdol_Teleport_Canyon()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == ADDONWORLD_ZEN)
 	{
@@ -894,6 +905,7 @@ FUNC VOID PC_PrayIdol_Teleport_Strand()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == ADDONWORLD_ZEN)
 	{
@@ -912,6 +924,7 @@ FUNC VOID PC_PrayIdol_Teleport_Eremit()
 	B_ENDPRODUCTIONDIALOG();
 	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
+	Wld_StopEffect_Ext("DEMENTOR_FX", 0, hero, 0);
 
 	if (CurrentLevel == ADDONWORLD_ZEN)
 	{
