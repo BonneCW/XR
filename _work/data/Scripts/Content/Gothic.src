@@ -355,6 +355,10 @@ NEUERUNGEN\B_PrismaAdd.d
 
 AI\MAGIC\C_Spell_Proto.d
 
+AI\MONSTER\C_Monster\C_*.d
+
+AI\MONSTER\B_Monster\B_MM_AssessDamage.d
+
 AI\MAGIC\B_AssessMagic.d
 
 AI\MAGIC\ZS_Magic\ZS_BeliarCity.d
@@ -503,12 +507,9 @@ STORY\DIALOGE\*.d
 STORY\B_AssignAmbientInfos\B_*.d
 
 
-AI\MONSTER\C_Monster\C_*.d
-
 AI\MONSTER\B_Monster\B_SetMonsterAttitude.d
 AI\MONSTER\B_Monster\B_InitMonsterAttitudes.d
 AI\MONSTER\B_Monster\B_MM_AssessBody.d
-AI\MONSTER\B_Monster\B_MM_AssessDamage.d
 AI\MONSTER\B_Monster\B_MM_AssessEnemy.d
 AI\MONSTER\B_Monster\B_MM_AssessOthersDamage.d
 AI\MONSTER\B_Monster\B_MM_AssessPlayer.d

@@ -17,6 +17,15 @@
 func void B_AssessMagic ()
 {
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS];
+	
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(FireGolem_Griselda_01))
+	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(IceGolem_Griselda_01)) {
+		B_MM_AssessDamage();
+	};
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(IceGolem_Griselda_01))
+	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(FireGolem_Griselda_01)) {
+		B_MM_AssessDamage();
+	};
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7314_Ziel_AW))
 	{
