@@ -9,6 +9,7 @@ var int Spine_SendMessageFunc;
 var int Spine_ReceiveMessageFunc;
 var int Spine_GetPlayerCountFunc;
 var int Spine_GetPlayerUsernameFunc;
+var int Spine_IsOnlineFunc;
 
 // sets a hostname used for the MP
 // overrides general server for own multiplayers
@@ -122,4 +123,14 @@ func string Spine_GetPlayerUsername(var int position) {
 		return STR_BUFFER;
 	};
 	return "";
+};
+
+// returns TRUE if in online mode, otherwise FALSE
+func int Spine_IsOnline() {
+	if (Spine_Initialized && Spine_IsOnlineFunc) {
+		CALL__cdecl(Spine_IsOnlineFunc);
+		
+		return CALL_RetValAsInt();
+	};
+	return FALSE;
 };

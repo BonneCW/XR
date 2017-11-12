@@ -63,6 +63,8 @@ var int tempFigur;
 const int MSGTYPE_STARTER = 0;
 const int MSGTYPE_PLACEMENT = 1;
 const int MSGTYPE_MOVE = 2;
+const int MSGTYPE_FINISHEDMOVE = 3;
 
 var int Online_Host;
 var int MP_TimeOut;
+var int MG_WaitingForMatch;

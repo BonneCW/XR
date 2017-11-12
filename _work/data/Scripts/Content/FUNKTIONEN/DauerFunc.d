@@ -1778,6 +1778,34 @@ FUNC VOID DAUERFUNC_01()
 
 		LastMobsi = PLAYER_MOBSI_PRODUCTION;
 	};
+	
+	if (MG_WaitingForMatch) {
+		if (Spine_IsInMatch()) {
+			if (Mod_SaveOther == 0)				// Kein Gesprächspartner
+			&& (B_GetAivar(hero, AIV_INVINCIBLE) == FALSE)	// In keinem Gespräch
+			&& (Mod_QuatschtNichtCounter >= 3)		// Quatscht seit 5 Sekunden nicht (damit es nicht beim Beenden des Gespräches schon speichert)
+			&& (!Mod_KampfLaeuft)			// Nicht während Kämpfen
+			&& (!CutsceneAn)
+			&& (!playerIsTransformed)
+			&& (!Inventory_Open) {
+				MG_WaitingForMatch = FALSE;
+				
+				MG_CurrentOpp = MG_GEGNER_ONLINE;
+
+				FF_Apply(B_MG_GameLoop);
+			};
+		} else {
+			// add check if tavern was left
+			if (Npc_GetDistToWP(hero, "NW_CITY_HABOUR_TAVERN01_06") > 1000)
+			&& (Npc_GetDistToWP(hero, "NW_CITY_TAVERN_IN_04") > 1000)
+			&& (Npc_GetDistToWP(hero, "NW_BIGFARM_KITCHEN_09") > 1000)
+			&& (Npc_GetDistToWP(hero, "NC_TAVERN_BAR") > 2000)
+			&& (Npc_GetDistToWP(hero, "EIS_136") > 1500) {
+				Spine_StopSearchMatch();
+				MG_WaitingForMatch = FALSE;
+			};
+		};
+	};
 
 	Wld_SendTrigger	("DAUERTRIGGER");
 };

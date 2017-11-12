@@ -122,6 +122,8 @@ func void INIT_GLOBAL()
 	AxtUpgrade = 0;
 	
 	Mod_LastLoaded = TimeCounter_Real;
+	
+	MG_WaitingForMatch = FALSE;
 };
 
 FUNC VOID OldLevel(var int newlevel)
@@ -2376,6 +2378,10 @@ FUNC VOID STARTUP_NewWorld()
 	Wld_InsertNpc	(Rat_Sekob_01, "FP_ROAM_SEKOBSRATTE_01");
 	Wld_InsertNpc	(Rat_Sekob_02, "FP_ROAM_SEKOBSRATTE_04");
 	Wld_InsertNpc	(Rat_Sekob_03, "FP_ROAM_SEKOBSRATTE_07");
+	
+	Wld_InsertNpc(Mod_505_VLK_Spielleiter_NW, "MARKT");
+	Wld_InsertNpc(Mod_506_VLK_Spielleiter_NW, "MARKT");
+	Wld_InsertNpc(Mod_507_VLK_Spielleiter_NW, "MARKT");
 
 	// Sonstiges	
 
@@ -5698,6 +5704,7 @@ FUNC VOID STARTUP_Minental ()
 
 
 	// NPC's
+	Wld_InsertNpc(Mod_508_VLK_Spielleiter_MT, "OC1");
 
 
 	// Sonstiges
@@ -8229,6 +8236,7 @@ FUNC VOID STARTUP_Eisgebiet()
 	Wld_InsertNpc	(Mod_974_OUT_Gestath_EIS, "START_EISGEBIET");
 	Wld_InsertNpc	(Mod_7792_OUT_Anglar_EIS, "START_EISGEBIET");
 	Wld_InsertNpc	(Mod_7807_OUT_Aerwak_EIS, "START_EISGEBIET");
+	Wld_InsertNpc(Mod_509_VLK_Spielleiter_EIS, "START_EISGEBIET");
 
 	// Menschen in der Umgebung
 

@@ -296,6 +296,15 @@ func int Spine_Init(var int modules) {
 			FreeLibrary(Spine_Dll);
 			return FALSE;
 		};
+		
+		MEM_Info("Spine: Loading isOnline function");
+		Spine_IsOnlineFunc = GetProcAddress(Spine_Dll, "isOnline");
+		
+		if (!Spine_IsOnlineFunc) {
+			MEM_Info("Spine: isOnline function not found");
+			FreeLibrary(Spine_Dll);
+			return FALSE;
+		};
 	} else {
 		Spine_CreateMessageFunc = 0;
 		Spine_SendMessageFunc = 0;
