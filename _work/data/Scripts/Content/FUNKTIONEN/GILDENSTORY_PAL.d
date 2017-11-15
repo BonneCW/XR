@@ -510,7 +510,7 @@ FUNC VOID GILDENSTORY_PAL()
 	if (CurrentLevel == FLIEGENDEINSEL_ZEN)
 	{
 		if (Mod_FI_Quest == FALSE)
-		&& (Npc_GetDistToWP(hero, "FI_03") < 300)
+		&& (Npc_GetDistToWP(hero, "FI_03") < 1000)
 		{
 			Log_CreateTopic	(TOPIC_MOD_PAL_FI, LOG_MISSION);
 			B_SetTopicStatus	(TOPIC_MOD_PAL_FI, LOG_RUNNING);
