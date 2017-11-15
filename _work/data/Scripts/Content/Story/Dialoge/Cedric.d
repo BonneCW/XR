@@ -89,7 +89,7 @@ INSTANCE Info_Mod_Cedric_Irdorath2 (C_INFO)
 FUNC INT Info_Mod_Cedric_Irdorath2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Cedric_Irdorath))
-	&& (Npc_GetDistToWP(self, "SHIP_CREW_CAPTAIN") < 500)
+	&& (Npc_GetDistToWP(self, "SHIP_CREW_CAPTAIN") < 1000)
 	&& (Mod_MiltenDabei == 1)
 	{
 		return 1;
@@ -119,7 +119,7 @@ INSTANCE Info_Mod_Cedric_Irdorath4 (C_INFO)
 FUNC INT Info_Mod_Cedric_Irdorath4_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Cedric_Irdorath))
-	&& (Npc_GetDistToWP(self, "SHIP_CREW_CAPTAIN") < 500)
+	&& (Npc_GetDistToWP(self, "SHIP_CREW_CAPTAIN") < 1000)
 	&& (Mod_JackDabei == 1)
 	{
 		return 1;
@@ -197,7 +197,7 @@ INSTANCE Info_Mod_Cedric_Irdorath3 (C_INFO)
 FUNC INT Info_Mod_Cedric_Irdorath3_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Cedric_Irdorath2))
-	&& (Npc_GetDistToWP(self, "SHIP_CREW_CAPTAIN") < 500)
+	&& (Npc_GetDistToWP(self, "SHIP_CREW_CAPTAIN") < 1000)
 	&& (Mod_CedricLos == 2)
 	{
 		return 1;
