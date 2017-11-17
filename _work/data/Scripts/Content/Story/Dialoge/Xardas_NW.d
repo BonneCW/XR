@@ -425,7 +425,7 @@ FUNC VOID Info_Mod_Xardas_NW_XeresLebt_Info()
 
 			// ToDo
 
-			Wld_InsertNpc(Mod_520_DMR_Raven_NW, "BIGFARM");
+			Wld_InsertNpc(Mod_510_DMR_Raven_NW, "BIGFARM");
 			//B_StartOtherRoutine	(Mod_517_DMR_Gomez_NW, "RAT");
 			B_StartOtherRoutine	(Mod_551_KDF_Pyrokar_NW, "RAT");
 			B_StartOtherRoutine	(Mod_592_PAL_Hagen_NW, "RAT");
@@ -433,7 +433,7 @@ FUNC VOID Info_Mod_Xardas_NW_XeresLebt_Info()
 		}
 		else
 		{
-			Wld_InsertNpc(Mod_520_DMR_Raven_NW, "BIGFARM");
+			Wld_InsertNpc(Mod_510_DMR_Raven_NW, "BIGFARM");
 			//B_StartOtherRoutine	(Mod_517_DMR_Gomez_NW, "RAT");
 			B_StartOtherRoutine	(Mod_551_KDF_Pyrokar_NW, "RAT");
 			B_StartOtherRoutine	(Mod_774_KDW_Saturas_NW, "RAT");
@@ -488,7 +488,7 @@ FUNC VOID Info_Mod_Xardas_NW_PatherionOk_Info()
 	// ToDo
 
 	B_StartOtherRoutine	(self, "RAT");
-	Wld_InsertNpc(Mod_520_DMR_Raven_NW, "BIGFARM");
+	Wld_InsertNpc(Mod_510_DMR_Raven_NW, "BIGFARM");
 	//B_StartOtherRoutine	(Mod_517_DMR_Gomez_NW, "RAT");
 	B_StartOtherRoutine	(Mod_551_KDF_Pyrokar_NW, "RAT");
 	B_StartOtherRoutine	(Mod_592_PAL_Hagen_NW, "RAT");

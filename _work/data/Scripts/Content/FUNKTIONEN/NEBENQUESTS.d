@@ -613,6 +613,8 @@ FUNC VOID NEBENQUESTS()
 		if (Mod_CantharSelbstmord == 1)
 		&& (!Npc_IsInState(Mod_548_NONE_Canthar_NW, ZS_Talk))
 		{
+			Mod_CantharSelbstmord = 2;
+			
 			B_KillNpc	(Mod_548_NONE_Canthar_NW);
 
 			AI_PlayAni	(Mod_548_NONE_Canthar_NW, "T_DEADB");

@@ -1,4 +1,4 @@
-INSTANCE Mod_510_DMR_Raven_MT (Npc_Default)
+INSTANCE Mod_510_DMR_Raven_NW (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Raven";
@@ -47,7 +47,7 @@ INSTANCE Mod_510_DMR_Raven_MT (Npc_Default)
 	daily_routine 	= Rtn_Rat_510;
 };
 
-FUNC VOID Rtn_Rat_520()
+FUNC VOID Rtn_Rat_510()
 {
 	TA_Stand_Guarding		(08,00,20,00,"WP_KLOSTER_KELLER_RAT_XARDAS");
 	TA_Stand_Guarding		(20,00,08,00,"WP_KLOSTER_KELLER_RAT_XARDAS");
