@@ -533,7 +533,6 @@ func int Spell_Logic_TeleportOldcamp (var int manaInvested)
 
 func void Spell_Cast_TeleportOldcamp ()
 {
-	B_PrintTeleportTooFarAway (MINENTAL_ZEN);
 
 	if (Npc_GetActiveSpellIsScroll(self))
 	{
@@ -542,9 +541,17 @@ func void Spell_Cast_TeleportOldcamp ()
 	else
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
+		
+		B_PrintTeleportTooFarAway (MINENTAL_ZEN);
 	};
 
-	AI_Teleport		(self, "OCC_CHAPEL_UPSTAIRS");
+	if (CurrentLevel == MINENTAL_ZEN) {
+		AI_Teleport		(self, "OCC_CHAPEL_UPSTAIRS");
+	} else if (Npc_GetActiveSpellIsScroll(self)) {		
+		B_SetLevelchange ("Minental\Minental.zen", "DT_E3_03");
+
+		AI_Teleport	(hero, "OBELISKSCHREIN_WP");
+	};
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
 };
 func int Spell_Logic_TeleportNewcamp (var int manaInvested)
