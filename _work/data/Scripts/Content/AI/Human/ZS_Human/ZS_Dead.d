@@ -619,8 +619,8 @@ func void ZS_Dead ()
 		};
 	};
 	
-	if (Npc_HasItem(self, ItMw_2H_Axe_L_01) > 1) {
-		Npc_RemoveInvItems(self, ItMw_2H_Axe_L_01, Npc_HasItem(self, ItMw_2H_Axe_L_01) - 1);
+	if (Npc_HasItems(self, ItMw_2H_Axe_L_01) > 1) {
+		Npc_RemoveInvItems(self, ItMw_2H_Axe_L_01, Npc_HasItems(self, ItMw_2H_Axe_L_01) - 1);
 	};
 	
 	// ------ Sumpfdrohne -------

@@ -1,9 +1,9 @@
-INSTANCE Mod_520_DMR_Raven_MT (Npc_Default)
+INSTANCE Mod_510_DMR_Raven_MT (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Raven";
 	guild 		= GIL_DMT;
-	id 			= 520;
+	id 			= 510;
 	voice 		= 10;
 	flags      	= 2;
 	npctype		= NPCTYPE_MAIN;
@@ -44,39 +44,23 @@ INSTANCE Mod_520_DMR_Raven_MT (Npc_Default)
 	B_SetFightSkills (self, 100); 
 
 	// ------ TA anmelden ------
-	daily_routine 	= Rtn_Start_520;
+	daily_routine 	= Rtn_Rat_510;
 };
 
-FUNC VOID Rtn_Start_520()
+FUNC VOID Rtn_Rat_520()
 {
-	TA_Practice_Sword	(08,30,12,00,"PALTOBURG_4");
-	TA_Stand_Eating		(12,00,12,30,"PALTOBURG_4");
-	TA_Practice_Sword	(12,30,20,00,"PALTOBURG_4");
-	TA_Sit_Chair		(20,00,22,30,"PALTOBURGRECHTS_1_4");
-	TA_Sleep		(22,30,07,00,"PALTOBURGLINKSOBEN_45");
-	TA_Stand_Eating		(07,00,08,30,"PALTOBURG_4");
+	TA_Stand_Guarding		(08,00,20,00,"WP_KLOSTER_KELLER_RAT_XARDAS");
+	TA_Stand_Guarding		(20,00,08,00,"WP_KLOSTER_KELLER_RAT_XARDAS");
 };
 
-FUNC VOID Rtn_Tot_520()
+FUNC VOID Rtn_Tot_510()
 {
 	TA_Stand_WP		(08,00,20,00,"TOT");
 	TA_Stand_WP		(20,00,08,00,"TOT");
 };
 
-FUNC VOID Rtn_Aufstellung_520 ()
+FUNC VOID Rtn_Schiff_510()
 {
-	TA_Smalltalk_Plaudern 	(08,00,22,00,"OW_PATH_3001_MOVE5");
-	TA_Smalltalk_Plaudern	(22,00,08,00,"OW_PATH_3001_MOVE5");		
-};
-
-FUNC VOID Rtn_Angriff_520 ()
-{
-	TA_RunToWP 	(08,00,22,00,"OW_PATH_3001_05");
-	TA_RunToWP	(22,00,08,00,"OW_PATH_3001_05");		
-};
-
-FUNC VOID Rtn_AtAL_520()
-{
-	TA_Stand_Guarding		(08,00,20,00,"SPAWN_SIT_OW");
-	TA_Stand_Guarding		(20,00,08,00,"SPAWN_SIT_OW");
+	TA_Stand_Guarding		(08,00,20,00,"SHIP_CREW_04");
+	TA_Stand_Guarding		(20,00,08,00,"SHIP_CREW_04");
 };

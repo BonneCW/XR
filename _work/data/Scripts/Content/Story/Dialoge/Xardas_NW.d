@@ -410,7 +410,7 @@ FUNC VOID Info_Mod_Xardas_NW_XeresLebt_Info()
 
 		AI_Teleport	(self, "WP_KLOSTER_KELLER_RAT_VERTEILER");
 
-		Npc_ExchangeRoutine	(self, "RAT");
+		B_StartOtherRoutine	(self, "RAT");
 
 		if (hero.guild == GIL_MIL)
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Dragon_KlosterErfolg))
@@ -425,24 +425,24 @@ FUNC VOID Info_Mod_Xardas_NW_XeresLebt_Info()
 
 			// ToDo
 
-			//Npc_ExchangeRoutine	(Mod_520_DMR_Raven_NW, "RAT");
-			//Npc_ExchangeRoutine	(Mod_517_DMR_Gomez_NW, "RAT");
-			Npc_ExchangeRoutine	(Mod_551_KDF_Pyrokar_NW, "RAT");
-			Npc_ExchangeRoutine	(Mod_592_PAL_Hagen_NW, "RAT");
-			Npc_ExchangeRoutine	(Mod_925_KDF_Talamon_NW, "RAT");
+			Wld_InsertNpc(Mod_520_DMR_Raven_NW, "BIGFARM");
+			//B_StartOtherRoutine	(Mod_517_DMR_Gomez_NW, "RAT");
+			B_StartOtherRoutine	(Mod_551_KDF_Pyrokar_NW, "RAT");
+			B_StartOtherRoutine	(Mod_592_PAL_Hagen_NW, "RAT");
+			B_StartOtherRoutine	(Mod_925_KDF_Talamon_NW, "RAT");
 		}
 		else
 		{
-			//Npc_ExchangeRoutine	(Mod_520_DMR_Raven_NW, "RAT");
-			//Npc_ExchangeRoutine	(Mod_517_DMR_Gomez_NW, "RAT");
-			Npc_ExchangeRoutine	(Mod_551_KDF_Pyrokar_NW, "RAT");
-			Npc_ExchangeRoutine	(Mod_774_KDW_Saturas_NW, "RAT");
-			Npc_ExchangeRoutine	(Mod_527_SLD_Torlof_NW, "RAT");
-			Npc_ExchangeRoutine	(Mod_925_KDF_Talamon_NW, "RAT");
+			Wld_InsertNpc(Mod_520_DMR_Raven_NW, "BIGFARM");
+			//B_StartOtherRoutine	(Mod_517_DMR_Gomez_NW, "RAT");
+			B_StartOtherRoutine	(Mod_551_KDF_Pyrokar_NW, "RAT");
+			B_StartOtherRoutine	(Mod_774_KDW_Saturas_NW, "RAT");
+			B_StartOtherRoutine	(Mod_527_SLD_Torlof_NW, "RAT");
+			B_StartOtherRoutine	(Mod_925_KDF_Talamon_NW, "RAT");
 
 			if (hero.guild != GIL_PAL)
 			{
-				Npc_ExchangeRoutine	(Mod_592_PAL_Hagen_NW, "RAT");
+				B_StartOtherRoutine	(Mod_592_PAL_Hagen_NW, "RAT");
 			};
 		};
 	};
@@ -487,14 +487,14 @@ FUNC VOID Info_Mod_Xardas_NW_PatherionOk_Info()
 
 	// ToDo
 
-	Npc_ExchangeRoutine	(self, "RAT");
-	//Npc_ExchangeRoutine	(Mod_520_DMR_Raven_NW, "RAT");
-	//Npc_ExchangeRoutine	(Mod_517_DMR_Gomez_NW, "RAT");
-	Npc_ExchangeRoutine	(Mod_551_KDF_Pyrokar_NW, "RAT");
-	Npc_ExchangeRoutine	(Mod_592_PAL_Hagen_NW, "RAT");
-	Npc_ExchangeRoutine	(Mod_774_KDW_Saturas_NW, "RAT");
-	Npc_ExchangeRoutine	(Mod_527_SLD_Torlof_NW, "RAT");
-	Npc_ExchangeRoutine	(Mod_925_KDF_Talamon_NW, "RAT");
+	B_StartOtherRoutine	(self, "RAT");
+	Wld_InsertNpc(Mod_520_DMR_Raven_NW, "BIGFARM");
+	//B_StartOtherRoutine	(Mod_517_DMR_Gomez_NW, "RAT");
+	B_StartOtherRoutine	(Mod_551_KDF_Pyrokar_NW, "RAT");
+	B_StartOtherRoutine	(Mod_592_PAL_Hagen_NW, "RAT");
+	B_StartOtherRoutine	(Mod_774_KDW_Saturas_NW, "RAT");
+	B_StartOtherRoutine	(Mod_527_SLD_Torlof_NW, "RAT");
+	B_StartOtherRoutine	(Mod_925_KDF_Talamon_NW, "RAT");
 };
 
 INSTANCE Info_Mod_Xardas_NW_BshydalOk (C_INFO)
@@ -536,14 +536,14 @@ FUNC VOID Info_Mod_Xardas_NW_BshydalOk_Info()
 
 	// ToDo
 
-	Npc_ExchangeRoutine	(self, "RAT");
-	//Npc_ExchangeRoutine	(Mod_520_DMR_Raven_NW, "RAT");
-	//Npc_ExchangeRoutine	(Mod_517_DMR_Gomez_NW, "RAT");
-	Npc_ExchangeRoutine	(Mod_551_KDF_Pyrokar_NW, "RAT");
-	Npc_ExchangeRoutine	(Mod_592_PAL_Hagen_NW, "RAT");
-	Npc_ExchangeRoutine	(Mod_774_KDW_Saturas_NW, "RAT");
-	Npc_ExchangeRoutine	(Mod_527_SLD_Torlof_NW, "RAT");
-	Npc_ExchangeRoutine	(Mod_925_KDF_Talamon_NW, "RAT");
+	B_StartOtherRoutine	(self, "RAT");
+	//B_StartOtherRoutine	(Mod_520_DMR_Raven_NW, "RAT");
+	//B_StartOtherRoutine	(Mod_517_DMR_Gomez_NW, "RAT");
+	B_StartOtherRoutine	(Mod_551_KDF_Pyrokar_NW, "RAT");
+	B_StartOtherRoutine	(Mod_592_PAL_Hagen_NW, "RAT");
+	B_StartOtherRoutine	(Mod_774_KDW_Saturas_NW, "RAT");
+	B_StartOtherRoutine	(Mod_527_SLD_Torlof_NW, "RAT");
+	B_StartOtherRoutine	(Mod_925_KDF_Talamon_NW, "RAT");
 };
 
 INSTANCE Info_Mod_Xardas_NW_Rat_Dragon (C_INFO)
@@ -1289,7 +1289,7 @@ FUNC VOID Info_Mod_Xardas_NW_Goetterschwerter_Info()
 
 	if (Mod_Gilde == 2)
 	{
-		Npc_ExchangeRoutine (Mod_579_RIT_Girion_NW, "SLD");
+		B_StartOtherRoutine (Mod_579_RIT_Girion_NW, "SLD");
 
 		AI_UnequipArmor	(Mod_579_RIT_Girion_NW);
 		CreateInvItems	(Mod_579_RIT_Girion_NW, ItAr_Sld_M, 1);
@@ -1344,7 +1344,7 @@ FUNC VOID Info_Mod_Xardas_NW_Trimedron_Info()
 
 	if (Mod_Gilde == 2)
 	{
-		Npc_ExchangeRoutine (Mod_579_RIT_Girion_NW, "SLD");
+		B_StartOtherRoutine (Mod_579_RIT_Girion_NW, "SLD");
 
 		AI_UnequipArmor	(Mod_579_RIT_Girion_NW);
 		CreateInvItems	(Mod_579_RIT_Girion_NW, ItAr_Sld_M, 1);

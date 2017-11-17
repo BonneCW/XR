@@ -6507,6 +6507,13 @@ FUNC VOID INIT_Minental ()
 		B_RemoveNpc(Mod_7432_JG_Sonor_MT);
 	};
 	
+	if (Mod_HS_XardasRat > 0)
+	&& (!Mod_RavenGomezInNW) {
+		Mod_RavenGomezInNW = TRUE;
+		
+		B_RemoveNpc(Mod_520_DMR_Raven_MT);
+	};
+	
 	var zCListSort liste;
 	var int loopStart;
 	var C_Npc temp;

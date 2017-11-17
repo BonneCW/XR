@@ -49,6 +49,7 @@ var int Mod_SleeperHint;
 var int Mod_Treffen_Ende;
 var int Mod_Brunhild_AW;
 var int Mod_Meldor_Save;
+var int Mod_RavenGomezInNW;
 var int Mod_Uriziel_Background;
 var int Mod_Uriziel_Frame;
 var int Mod_Uriziel_Piece1;
