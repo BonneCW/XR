@@ -182,6 +182,9 @@ FUNC VOID Info_Mod_Till_InnosNase_Info()
 	B_StartOtherRoutine	(self, "ASSIS");
 	B_StartOtherRoutine	(Mod_744_MIL_Pablo_NW, "ASSIS");
 	B_StartOtherRoutine	(Mod_968_MIL_Bilgot_NW, "ASSIS");
+	
+	Mod_744_MIL_Pablo_NW.aivar[AIV_IGNORE_Theft] = TRUE;
+	Mod_968_MIL_Bilgot_NW.aivar[AIV_IGNORE_Theft] = TRUE;
 };
 
 INSTANCE Info_Mod_Till_InnosNase2 (C_INFO)
