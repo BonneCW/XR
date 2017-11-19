@@ -33,6 +33,12 @@ FUNC VOID B_EndGame() {
 		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_74);
 	};
 	
+	if (Mod_Xeres_Ende == 3) {
+		PlayVideo("Xeres\Extro_ArgezDead.bik");
+	} else if (Mod_Xeres_Ende == 4) {
+		PlayVideo("Xeres\Extro_ArgezAlive.bik");
+	};
+	
 	PlayVideo("Xeres\Credits.bik");
 
 	ExitSession();
