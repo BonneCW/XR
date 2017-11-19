@@ -1,6 +1,7 @@
 const int SPINE_ACHIEVEMENTORIENTATION = SPINE_BOTTOMRIGHT;
 const int SPINE_ACHIEVEMENT_DISPLAY_TIME = 5000;
 
+
 const int SPINE_EARTHQUAKE_VIBRATION = TRUE;
 
 const int SPINE_ACHIEVEMENT_1 = 0;
@@ -547,4 +548,12 @@ const string SPINE_ACHIEVEMENT_PROGRESS[MAX_ACHIEVEMENTS] = {
 	"0",
 	"0",
 	"0"
+};
+
+const int SPINE_SCORE_1 = 0;
+const int SPINE_SCORE_2 = 1;
+
+const string SPINE_SCORE_NAMES[2] = {
+	"Level",
+	"Gelöste Quests"
 };

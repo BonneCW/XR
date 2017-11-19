@@ -84,7 +84,11 @@ func void B_GivePlayerXP (var int add_xp)
 	//----------------------------------------------------------------------------
 	if ( hero.exp >= hero.exp_next ) // ( XP > (500*((hero.level+2)/2)*(hero.level+1)) )
 	{
-		hero.level = hero.level+1;
+		hero.level = hero.level + 1;
+		int oldScore = Spine_GetUserScore(SPINE_SCORE_1);
+		if (hero.level > oldScore) {
+			Spine_UpdateScore(SPINE_SCORE_1, hero.level);
+		};
 
 		EXP_LastLevel = hero.exp_next;
 		
