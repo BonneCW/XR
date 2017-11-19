@@ -211,7 +211,7 @@ FUNC VOID Info_Mod_Cedric_Irdorath3_Info()
 	if (Mod_BonesDabei > 0)
 	|| (Mod_CordDabei > 0)
 	|| (Mod_RavenDabei > 0)
-	|| (Mod_MyxirDabei > 0)
+	|| (Mod_MyxirDabei > 0 && Mod_MyxirDabei < 4)
 	|| (Mod_CassiaDabei > 0)
 	|| (Mod_SagittaDabei > 0)
 	{
@@ -232,7 +232,7 @@ FUNC VOID Info_Mod_Cedric_Irdorath3_Info()
 			AI_Output(self, hero, "Info_Mod_Cedric_Irdorath3_12_06"); //Söldner, delinquente Schläger aus der Kolonie, die immer noch dem König die Gefolgschaft verweigern.
 		};
 		if (Mod_RavenDabei > 0)
-		|| (Mod_MyxirDabei > 0)
+		|| (Mod_MyxirDabei > 0 && Mod_MyxirDabei < 4)
 		{
 			AI_Output(self, hero, "Info_Mod_Cedric_Irdorath3_12_07"); //Belianer, Diener des finsteren Gottes, bei denen man sich nicht einmal sicher sein kann, ob sie nicht mit dem Urheber des Unheils unter einer Decke stecken.
 		};

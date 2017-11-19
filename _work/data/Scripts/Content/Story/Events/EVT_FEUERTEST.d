@@ -339,7 +339,7 @@ FUNC VOID EVT_FEUERTEST_TOR_02 ()
 
 FUNC VOID EVT_FEUERTEST_TOR_03 ()
 {
-	if (Npc_HasItems(hero, ItMi_OrnamentEffekt_BIGFARM_Addon) == 4)
+	if (Npc_HasItems(hero, ItMi_OrnamentEffekt_BIGFARM_Addon) >= 4)
 	{
 		Wld_SendTrigger	("ENDHALLE1");
 	};
