@@ -7337,7 +7337,7 @@ instance ItWr_Map_OldWorld (C_Item)
 
 instance ItWr_Map_HagenAL (C_Item)
 {
-	name 		= "Landkarte Minental";
+	name 		= "Landkarte Khorinis";
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -7351,8 +7351,8 @@ instance ItWr_Map_HagenAL (C_Item)
 	on_state[0]	= Use_Map_HagenAL;
 
 	description	= name;
-	TEXT[0]		= "";
-	TEXT[1]		= "";
+	TEXT[0]		= "Lord Hagen hat die Stellen eingezeichnet,";
+	TEXT[1]		= "wo Sträflinge aus dem Minental sein sollen";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
 };
