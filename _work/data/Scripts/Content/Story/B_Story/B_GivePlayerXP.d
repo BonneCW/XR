@@ -4,10 +4,8 @@
 
 var int bonuspercent;
 
-func void B_GivePlayerXP (var int add_xp)
-{
-	if (hero.level == 0)
-	{
+func void B_GivePlayerXP (var int add_xp) {
+	if (hero.level == 0) {
 		hero.exp_next = 500;
 		EXP_LastLevel = 0;
 	};
@@ -20,29 +18,25 @@ func void B_GivePlayerXP (var int add_xp)
 
 	// +2% für Halskette der Ehre
 
-	if (Mod_HalsketteDerEhre == 1)
-	{
+	if (Mod_HalsketteDerEhre == 1) {
 		bonuspercent += 2;
 	};
 
 	// +2% für Gürtel der Ehre
 
-	if (Mod_GuertelDerEhre == 1)
-	{
+	if (Mod_GuertelDerEhre == 1) {
 		bonuspercent += 2;
 	};
 
 	// +2% für Linker Ring der Ehre
 
-	if (Mod_LinkerRingDerEhre == 1)
-	{
+	if (Mod_LinkerRingDerEhre == 1) {
 		bonuspercent += 2;
 	};
 
 	// +2% für Rechter Ring der Ehre
 
-	if (Mod_RechterRingDerEhre == 1)
-	{
+	if (Mod_RechterRingDerEhre == 1) {
 		bonuspercent += 2;
 	};
 	
@@ -52,15 +46,13 @@ func void B_GivePlayerXP (var int add_xp)
 
 	// +10% für Ring des Bücherwurms
 
-	if (Mod_BuecherwurmRing == 1)
-	{
+	if (Mod_BuecherwurmRing == 1) {
 		bonuspercent += 10;
 	};
 
 	// +5% für Krauttabak
 
-	if (Krauttabak_Bonus == 1)
-	{
+	if (Krauttabak_Bonus == 1) {
 		bonuspercent += 5;
 	};
 
@@ -82,10 +74,9 @@ func void B_GivePlayerXP (var int add_xp)
 	PrintScreen	(concatText, -1, YPOS_XPGained, FONT_ScreenSmall, 2);
 
 	//----------------------------------------------------------------------------
-	if ( hero.exp >= hero.exp_next ) // ( XP > (500*((hero.level+2)/2)*(hero.level+1)) )
-	{
+	if (hero.exp >= hero.exp_next) { // ( XP > (500*((hero.level+2)/2)*(hero.level+1)) )
 		hero.level = hero.level + 1;
-		int oldScore = Spine_GetUserScore(SPINE_SCORE_1);
+		var int oldScore; oldScore = Spine_GetUserScore(SPINE_SCORE_1);
 		if (hero.level > oldScore) {
 			Spine_UpdateScore(SPINE_SCORE_1, hero.level);
 		};
@@ -97,24 +88,20 @@ func void B_GivePlayerXP (var int add_xp)
 		hero.attribute[ATR_HITPOINTS_MAX] 	= hero.attribute[ATR_HITPOINTS_MAX]	+ HP_PER_LEVEL;
 		hero.attribute[ATR_HITPOINTS] 		= hero.attribute[ATR_HITPOINTS]		+ HP_PER_LEVEL;
 		
-		if (SchnellesLernen_Perk == TRUE)
-		{
+		if (SchnellesLernen_Perk == TRUE) {
 			hero.lp += 1;
 		};
 
 		HP_Heilknospe = hero.attribute[ATR_HITPOINTS_MAX] / 5;
 
-		if (Mod_Schwierigkeit < 4)
-		{
+		if (Mod_Schwierigkeit < 4) {
 			hero.LP += 10;
 		
-			if (Dummheit_Perk == TRUE)
-			{
+			if (Dummheit_Perk == TRUE) {
 				hero.lp -= 2;
 			};	
 		
-			if (Ueberschwaenglichkeit_Perk == TRUE)
-			{
+			if (Ueberschwaenglichkeit_Perk == TRUE) {
 				hero.lp -= 1;
 
 				hero.attribute[ATR_HITPOINTS] 		-= HP_PER_LEVEL/2;
@@ -139,4 +126,3 @@ func void B_GivePlayerXP (var int add_xp)
 		Snd_Play ("LevelUp");
 	};
 };
-

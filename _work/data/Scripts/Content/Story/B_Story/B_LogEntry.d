@@ -73,6 +73,13 @@ FUNC VOID B_SucceedTopic (var string topic)
 			Spine_UnlockAchievement(SPINE_ACHIEVEMENT_43);
 		};
 	};
+	
+	var int questAlreadySolvedBefore; questAlreadySolvedBefore = Spine_OverallSaveGetInt(topic);
+	if (questAlreadySolvedBefore != 1) {
+		Spine_OverallSaveSetInt(topic, 1);
+		var int oldScore; oldScore = Spine_GetUserScore(SPINE_SCORE_2);
+		Spine_UpdateScore(SPINE_SCORE_2, oldScore + 1);
+	};
 };
 
 FUNC VOID B_StartTopic (var string topic)
