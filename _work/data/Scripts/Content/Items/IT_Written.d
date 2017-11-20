@@ -1562,7 +1562,7 @@ INSTANCE ItWr_TheodorusBotschaft		(C_Item)
 	on_state[0]			=   UseTheodorusBotschaft;
 	scemeName			=	"MAP";
 	description			= 	name;
-	TEXT[0]		=	"soll ich auf dem Grüst am Marktplatz vorlesen";
+	TEXT[0]		=	"soll ich auf dem Gerüst am Marktplatz vorlesen";
 };
 func void UseTheodorusBotschaft ()
 {

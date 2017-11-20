@@ -11,9 +11,6 @@ class _Button {
 	var int posy;
 	var int posx2;
 	var int posy2;
-
-	var int width;
-	var int height;
 	
 	var int on_enter;
 	var int on_leave;
@@ -49,9 +46,6 @@ func int Button_Create(var int posx, var int posy, var int width, var int height
 	btn.posy = posy;
 	btn.posx2 = posx+width;
 	btn.posy2 = posy+height;
-
-	btn.width = width;
-	btn.height = height;
 	
 	btn.on_enter = MEM_GetFuncID(on_enter);
 	btn.on_leave = MEM_GetFuncID(on_leave);
@@ -168,8 +162,7 @@ func void Button_CreateMouseover(var string text, var string font) {
 	};
 	_Button_MO_Hi = hi*STR_SplitCount(text, Print_LineSeperator)+2;
 	
-	View_SetTexture(_BUTTON_MO, "WHITE.TGA");
-	View_SetColor(_BUTTON_MO, RGBA(0,0,0,255));
+	View_SetTexture(_BUTTON_MO, "MO_BG.TGA");
 	View_Open(_BUTTON_MO);
 
 	
@@ -215,12 +208,7 @@ func int Button_GetState(var int hndl) {
 func void Button_Move(var int hndl, var int nposx, var int nposy) {
 	var _Button btn; btn = get(hndl);
 	
-	View_MoveToPxl(btn.view, nposx, nposy);
-	
-	btn.posx = Print_ToVirtual(nposx, PS_X);
-	btn.posy = Print_ToVirtual(nposy, PS_Y);
-	btn.posx2 = Print_ToVirtual(nposx, PS_X) + btn.width;
-	btn.posy2 = Print_ToVirtual(nposy, PS_Y) + btn.height;
+	View_MovePxl(btn.view, nposx, nposy);
 };
 
 func int Button_GetViewHandle(var int hndl) {
