@@ -103,14 +103,16 @@ FUNC VOID B_MG_GameLoop() {
 							return;
 						};
 						
-						var int placementMsgPtr; placementMsgPtr = Spine_CreateMessage(SPINE_MESSAGETYPE_INT3);
-						var Spine_Int3Message sendPlacementMsg; sendPlacementMsg = MEM_PtrToInst(placementMsgPtr);
-						sendPlacementMsg.userType = MSGTYPE_PLACEMENT;
-						sendPlacementMsg.param1 = x;
-						sendPlacementMsg.param2 = 9 - y;
-						sendPlacementMsg.param3 = tempFigur;
-						
-						Spine_SendMessage(placementMsgPtr);
+						if (MG_CurrentOpp == MG_GEGNER_ONLINE) {
+							var int placementMsgPtr; placementMsgPtr = Spine_CreateMessage(SPINE_MESSAGETYPE_INT3);
+							var Spine_Int3Message sendPlacementMsg; sendPlacementMsg = MEM_PtrToInst(placementMsgPtr);
+							sendPlacementMsg.userType = MSGTYPE_PLACEMENT;
+							sendPlacementMsg.param1 = x;
+							sendPlacementMsg.param2 = 9 - y;
+							sendPlacementMsg.param3 = tempFigur;
+							
+							Spine_SendMessage(placementMsgPtr);
+						};
 
 						if (tempFigur == MG_FIGUR_TROLL) {
 							C_MG_SPIELFIGUR_WalkToField(Hero_Troll, x + y * 8);
@@ -364,14 +366,16 @@ FUNC VOID B_MG_GameLoop() {
 							return;
 						};
 						
-						var int movementMsgPtr; movementMsgPtr = Spine_CreateMessage(SPINE_MESSAGETYPE_INT3);
-						var Spine_Int3Message sendMovementMsg; sendMovementMsg = MEM_PtrToInst(movementMsgPtr);
-						sendMovementMsg.userType = MSGTYPE_MOVE;
-						sendMovementMsg.param1 = x;
-						sendMovementMsg.param2 = 9 - y;
-						sendMovementMsg.param3 = tempFigur;
-						
-						Spine_SendMessage(movementMsgPtr);
+						if (MG_CurrentOpp == MG_GEGNER_ONLINE) {
+							var int movementMsgPtr; movementMsgPtr = Spine_CreateMessage(SPINE_MESSAGETYPE_INT3);
+							var Spine_Int3Message sendMovementMsg; sendMovementMsg = MEM_PtrToInst(movementMsgPtr);
+							sendMovementMsg.userType = MSGTYPE_MOVE;
+							sendMovementMsg.param1 = x;
+							sendMovementMsg.param2 = 9 - y;
+							sendMovementMsg.param3 = tempFigur;
+							
+							Spine_SendMessage(movementMsgPtr);
+						};
 
 						if (tempFigur == MG_FIGUR_TROLL) {
 							C_MG_SPIELFIGUR_WalkToField(Hero_Troll, x+8*y);
@@ -411,12 +415,14 @@ FUNC VOID B_MG_GameLoop() {
 				MG_Spieler02 = TRUE;
 
 				B_MG_ResetWalks(0);
-						
-				var int finishedMovementMsgPtr; finishedMovementMsgPtr = Spine_CreateMessage(SPINE_MESSAGETYPE_BASE);
-				var Spine_Message sendFinishedMovementMsg; sendFinishedMovementMsg = MEM_PtrToInst(finishedMovementMsgPtr);
-				sendFinishedMovementMsg.userType = MSGTYPE_FINISHEDMOVE;
 				
-				Spine_SendMessage(finishedMovementMsgPtr);
+				if (MG_CurrentOpp == MG_GEGNER_ONLINE) {
+					var int finishedMovementMsgPtr; finishedMovementMsgPtr = Spine_CreateMessage(SPINE_MESSAGETYPE_BASE);
+					var Spine_Message sendFinishedMovementMsg; sendFinishedMovementMsg = MEM_PtrToInst(finishedMovementMsgPtr);
+					sendFinishedMovementMsg.userType = MSGTYPE_FINISHEDMOVE;
+					
+					Spine_SendMessage(finishedMovementMsgPtr);
+				};
 			};
 		} else {
 			if (MG_CurrentOpp == MG_GEGNER_ONLINE) {
