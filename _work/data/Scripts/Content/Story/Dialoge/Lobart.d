@@ -202,6 +202,7 @@ FUNC INT Info_Mod_Lobart_Rueben_Condition()
 {
 	if (Npc_HasItems(hero, ItPl_Beet) >= 20)
 	&& (Mod_LobartRuebinator == 2)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Lobart_SheromeDa))
 	{
 		return 1;
 	};

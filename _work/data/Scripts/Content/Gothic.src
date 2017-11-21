@@ -24,6 +24,7 @@ FUNKTIONEN\Erfolge_Func.d
 
 STORY\Events\B_AWAKE_STONEGUARDIAN.d
 
+NEUERUNGEN\Wld_StopEffect_Ext.d
 NEUERUNGEN\Respawn.d
 
 NEUERUNGEN\PortalRooms.d
@@ -62,6 +63,8 @@ NEUERUNGEN\Minispiel\B_MG_ResetWalks.d
 NEUERUNGEN\Minispiel\B_MG_MarkToWalk.d
 NEUERUNGEN\Minispiel\B_MG_Cleanup.d
 NEUERUNGEN\Minispiel\B_MG_GameLoop.d
+
+NEUERUNGEN\StopAllSounds.d
 
 STORY\B_Story\B_Inventar.d
 
@@ -305,6 +308,8 @@ AI\HUMAN\C_Human\C_WantToReactToSneaker.d
 AI\MAGIC\B_ReadySpell.d
 AI\MAGIC\B_SelectSpell.d
 
+NEUERUNGEN\B_AddIllness.d
+
 STORY\B_CONTENT\B_Golemschadensbedingung.d
 
 AI\HUMAN\B_Human\B_FinishingMove.d
@@ -349,6 +354,10 @@ NEUERUNGEN\B_PrismaAdd.d
 
 
 AI\MAGIC\C_Spell_Proto.d
+
+AI\MONSTER\C_Monster\C_*.d
+
+AI\MONSTER\B_Monster\B_MM_AssessDamage.d
 
 AI\MAGIC\B_AssessMagic.d
 
@@ -498,12 +507,9 @@ STORY\DIALOGE\*.d
 STORY\B_AssignAmbientInfos\B_*.d
 
 
-AI\MONSTER\C_Monster\C_*.d
-
 AI\MONSTER\B_Monster\B_SetMonsterAttitude.d
 AI\MONSTER\B_Monster\B_InitMonsterAttitudes.d
 AI\MONSTER\B_Monster\B_MM_AssessBody.d
-AI\MONSTER\B_Monster\B_MM_AssessDamage.d
 AI\MONSTER\B_Monster\B_MM_AssessEnemy.d
 AI\MONSTER\B_Monster\B_MM_AssessOthersDamage.d
 AI\MONSTER\B_Monster\B_MM_AssessPlayer.d

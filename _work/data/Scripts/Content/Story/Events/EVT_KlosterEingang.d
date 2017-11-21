@@ -1,10 +1,4 @@
-FUNC VOID EVT_KLOSTEREINGANG()
-{
-	if (Npc_GetDistToWP(hero, "NW_MONASTERY_ENTRY_02") > 200)
-	{
-		return;
-	};
-
+FUNC INT CheckKlosterPermission() {
 	var C_Item itm;
 	itm = Npc_GetEquippedArmor(hero);
 
@@ -21,7 +15,8 @@ FUNC VOID EVT_KLOSTEREINGANG()
 	|| (Mod_Gottstatus == 10)
 	|| (Mod_GottStatus == 11)
 	|| (Mod_Gottstatus == 12)))
-	{		
+	{
+		return TRUE;
 	}
 	else if (Hlp_IsItem(itm, ITAR_NOV_L) == FALSE)
 	&& (Hlp_IsItem(itm, ITAR_NOV_M) == FALSE)
@@ -40,6 +35,19 @@ FUNC VOID EVT_KLOSTEREINGANG()
 	|| (Mod_Gottstatus == 7)
 	|| (Mod_Gottstatus == 8))
 	{
+		return FALSE;
+	};
+	return TRUE;
+};
+
+FUNC VOID EVT_KLOSTEREINGANG()
+{
+	if (Npc_GetDistToWP(hero, "NW_MONASTERY_ENTRY_02") > 200)
+	{
+		return;
+	};
+
+	if (!CheckKlosterPermission()) {
 		hero.attribute[ATR_HITPOINTS] = 0;
 	};
 };
@@ -51,5 +59,12 @@ FUNC VOID EVT_KLOSTEREINGANG2()
 	&& (Mod_Gilde != 3))
 	{
 		hero.attribute[ATR_HITPOINTS] = 0;
+	};
+};
+
+FUNC VOID EVT_KLOSTEREINGANG_WARNING()
+{
+	if (!CheckKlosterPermission()) {
+		PrintScreen ("Du bist nicht würdig die Pforte zu durchschreiten. Kehre um!", -1, YPOS_LevelUp, FONT_Screen, 3);
 	};
 };

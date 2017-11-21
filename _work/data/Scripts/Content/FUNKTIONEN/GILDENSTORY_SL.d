@@ -398,7 +398,7 @@ FUNC VOID GILDENSTORY_SL()
 		{
 			if (Npc_GetDistToWP(hero, "SPAWNOW_PATH_190_MOVMENT") < 500)
 			{
-				B_LogEntry	(TOPIC_MOD_SL_LEICHENGASE, "Ich sollte jetzt die Spruchrolle benutzen.");
+				B_LogEntry	(TOPIC_MOD_SL_LEICHENGASE, "Ich sollte jetzt die Spruchrolle benutzen, um das Schaf für den Troll zu beschwören.");
 
 				Mod_Leichengase_Kraut = 4;
 			};

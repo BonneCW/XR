@@ -1230,7 +1230,7 @@ const string Print_BlessAdanosMana_Hit			= "Du fühlst dich wie neugeboren.";
 const string Print_BlessAdanosNone				= "Adanos dankt für dein Gebet.";
 
 const string Print_NotEnoughGold			= "Zu wenig Gold.";
-const string Bless_Sword					= "Schwert weihen (5000 Gold)";
+const string Bless_Sword					= "Schwert weihen";
 const string Bless_Sword2					= "Schwert weihen (Tränen Innos)";
 
 const string Pray_Paladin1					= "...Innos, halte deine schützende Hand über deine Streiter..." ;

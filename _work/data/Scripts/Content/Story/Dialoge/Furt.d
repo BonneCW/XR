@@ -390,6 +390,7 @@ INSTANCE Info_Mod_Furt_EXIT (C_INFO)
 FUNC INT Info_Mod_Furt_EXIT_Condition()
 {
 	if (Mod_VMG_FaiceGifty_Gift < 10)
+	|| (Mod_VMG_FaiceGifty_Gift > 10)
 	{
 		return 1;
 	};

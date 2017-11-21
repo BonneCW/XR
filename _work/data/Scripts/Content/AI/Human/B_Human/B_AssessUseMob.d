@@ -13,7 +13,7 @@ func void B_AssessUseMob ()
 
 	B_Vergiftet (self);
 
-	if (Wld_IsTime(21,00,05,00))
+	/*if (Wld_IsTime(21,00,05,00))
 	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
 	{
 		if (!HeroAtLight)
@@ -45,7 +45,7 @@ func void B_AssessUseMob ()
 				};
 			};
 		};
-	};
+	};*/
 	
 	// ------ other ist NICHT der Spieler ------
 	if (!Npc_IsPlayer (other)) 
@@ -128,7 +128,7 @@ func void B_AssessUseMob ()
 	};
 	
 	// ------ ignorieren, wenn NSC-Gilde freundlich zu Taeter-Gilde ------
-	if (Wld_GetGuildAttitude(self.guild,other.guild) == ATT_FRIENDLY)
+	if (Wld_GetGuildAttitude(self.guild, other.guild) == ATT_FRIENDLY)
 	{
 		if (Npc_IsDetectedMobOwnedByNpc(other, self))
 		{

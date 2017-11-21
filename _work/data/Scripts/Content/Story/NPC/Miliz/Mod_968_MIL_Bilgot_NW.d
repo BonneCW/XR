@@ -10,7 +10,7 @@ instance Mod_968_MIL_Bilgot_NW (Npc_Default)
 	
 	// ------ Attribute ------
 	B_SetAttributesToChapter (self, 1);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
-	aivar[AIV_ToughGuy]		= TRUE;	
+	aivar[AIV_ToughGuy]		= TRUE;																//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
 	

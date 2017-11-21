@@ -515,7 +515,7 @@ INSTANCE Info_Mod_Torlof_HaradLehrling5 (C_INFO)
 	information	= Info_Mod_Torlof_HaradLehrling5_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Eine Waffenlieferung von Torlof.";
+	description	= "Eine Waffenlieferung von Harad.";
 };
 
 FUNC INT Info_Mod_Torlof_HaradLehrling5_Condition()
@@ -528,7 +528,7 @@ FUNC INT Info_Mod_Torlof_HaradLehrling5_Condition()
 
 FUNC VOID Info_Mod_Torlof_HaradLehrling5_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Torlof_HaradLehrling5_15_00"); //Eine Waffenlieferung von Torlof.
+	AI_Output(hero, self, "Info_Mod_Torlof_HaradLehrling5_15_00"); //Eine Waffenlieferung von Harad.
 	AI_Output(self, hero, "Info_Mod_Torlof_HaradLehrling5_01_01"); //Das wurde aber auch Zeit. Wir haben schon seit Tagen darauf gewartet.
 	AI_Output(hero, self, "Info_Mod_Torlof_HaradLehrling5_15_02"); //Die Paladine waren nicht damit einverstanden, dass Harad für euch arbeitet.
 	AI_Output(self, hero, "Info_Mod_Torlof_HaradLehrling5_01_03"); //(lacht) Das verstehe ich gut. Aber das Schlitzohr hat's dann ja doch geschafft.
@@ -562,7 +562,10 @@ INSTANCE Info_Mod_Torlof_HaradLehrling6 (C_INFO)
 
 FUNC INT Info_Mod_Torlof_HaradLehrling6_Condition()
 {
-	if (Npc_HasItems(hero, ItMw_1H_Common_01) >= 3)
+	if ((Npc_HasItems(hero, ItMw_1H_Common_01_BonusMeisterschmied) >= 3)
+	|| (Npc_HasItems(hero, ItMw_1H_Common_01_Meisterschmied) >= 3)
+	|| (Npc_HasItems(hero, ItMw_1H_Common_01_Bonus) >= 3)
+	|| (Npc_HasItems(hero, ItMw_1H_Common_01) >= 3))
 	&& (Schaerfen_Perk == TRUE)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Harad_LehrlingQuest3))
 	{
@@ -574,7 +577,15 @@ FUNC VOID Info_Mod_Torlof_HaradLehrling6_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Torlof_HaradLehrling6_15_00"); //Hier sind die fehlenden Schwerter.
 
-	B_GiveInvItems	(hero, self, ItMw_1H_Common_01, 3);
+	if (Npc_HasItems(hero, ItMw_1H_Common_01) >= 3) {
+		B_GiveInvItems	(hero, self, ItMw_1H_Common_01, 3);
+	} else if (Npc_HasItems(hero, ItMw_1H_Common_01_Bonus) >= 3) {
+		B_GiveInvItems	(hero, self, ItMw_1H_Common_01_Bonus, 3);
+	} else if (Npc_HasItems(hero, ItMw_1H_Common_01_Meisterschmied) >= 3) {
+		B_GiveInvItems	(hero, self, ItMw_1H_Common_01_Meisterschmied, 3);
+	} else if (Npc_HasItems(hero, ItMw_1H_Common_01_BonusMeisterschmied) >= 3) {
+		B_GiveInvItems	(hero, self, ItMw_1H_Common_01_BonusMeisterschmied, 3);
+	};
 
 	AI_Output(self, hero, "Info_Mod_Torlof_HaradLehrling6_01_01"); //Du und dein Meister, ihr braucht immer ziemlich lang. Aber über die Qualität kann man sich nicht beschweren.
 

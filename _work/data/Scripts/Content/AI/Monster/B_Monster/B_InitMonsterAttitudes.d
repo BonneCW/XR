@@ -1191,7 +1191,7 @@ func void B_InitMonsterAttitudes ()
 	B_SetMonsterAttitude	(GIL_FIREGOLEM,	ATT_HOSTILE,	GIL_SEPERATOR_HUM			);
 	B_SetMonsterAttitude	(GIL_FIREGOLEM,	ATT_NEUTRAL,	GIL_DMT						);
 	B_SetMonsterAttitude	(GIL_FIREGOLEM,	ATT_NEUTRAL,	GIL_MEATBUG					);
-	B_SetMonsterAttitude	(GIL_FIREGOLEM,	ATT_NEUTRAL,	GIL_SHEEP					);
+	B_SetMonsterAttitude	(GIL_FIREGOLEM,	ATT_HOSTILE,	GIL_SHEEP					);
 	B_SetMonsterAttitude	(GIL_FIREGOLEM,	ATT_NEUTRAL,	GIL_GOBBO					);	// Green Goblin / Black Goblin
 	B_SetMonsterAttitude	(GIL_FIREGOLEM,	ATT_NEUTRAL,	GIL_GOBBO_SKELETON			);
 	B_SetMonsterAttitude	(GIL_FIREGOLEM,	ATT_HOSTILE,	GIL_SUMMONED_GOBBO_SKELETON	);
@@ -1238,7 +1238,7 @@ func void B_InitMonsterAttitudes ()
 	B_SetMonsterAttitude	(GIL_ICEGOLEM,	ATT_HOSTILE,	GIL_SEPERATOR_HUM			);
 	B_SetMonsterAttitude	(GIL_ICEGOLEM,	ATT_NEUTRAL,	GIL_DMT						);
 	B_SetMonsterAttitude	(GIL_ICEGOLEM,	ATT_NEUTRAL,	GIL_MEATBUG					);
-	B_SetMonsterAttitude	(GIL_ICEGOLEM,	ATT_NEUTRAL,	GIL_SHEEP					);
+	B_SetMonsterAttitude	(GIL_ICEGOLEM,	ATT_HOSTILE,	GIL_SHEEP					);
 	B_SetMonsterAttitude	(GIL_ICEGOLEM,	ATT_NEUTRAL,	GIL_GOBBO					);	// Green Goblin / Black Goblin
 	B_SetMonsterAttitude	(GIL_ICEGOLEM,	ATT_NEUTRAL,	GIL_GOBBO_SKELETON			);
 	B_SetMonsterAttitude	(GIL_ICEGOLEM,	ATT_HOSTILE,	GIL_SUMMONED_GOBBO_SKELETON	);

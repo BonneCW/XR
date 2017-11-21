@@ -246,6 +246,11 @@ FUNC INT PC_Fokus4_Einsetzen_Condition()
 FUNC VOID PC_Fokus4_Einsetzen_Info()
 {
 	Npc_RemoveInvItems	(hero, ItMi_Focus_Kloster, 1);
+	
+	if (Mod_Echsis > 1)
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Albi_VertrauenGewonnen)) {
+		Mod_Echsis = 1;
+	};
 
 	Wld_SendTrigger	("ADW_ADANOSTEMPEL_FOCUSTRIGGERLIST");
 	

@@ -182,6 +182,9 @@ FUNC VOID Info_Mod_Till_InnosNase_Info()
 	B_StartOtherRoutine	(self, "ASSIS");
 	B_StartOtherRoutine	(Mod_744_MIL_Pablo_NW, "ASSIS");
 	B_StartOtherRoutine	(Mod_968_MIL_Bilgot_NW, "ASSIS");
+	
+	Mod_744_MIL_Pablo_NW.aivar[AIV_IGNORE_Theft] = TRUE;
+	Mod_968_MIL_Bilgot_NW.aivar[AIV_IGNORE_Theft] = TRUE;
 };
 
 INSTANCE Info_Mod_Till_InnosNase2 (C_INFO)
@@ -242,6 +245,15 @@ FUNC INT Info_Mod_Till_InnosNase3_Condition()
 	&& (Npc_RefuseTalk(self) == FALSE)
 	&& (Npc_GetDistToWP(hero, "NW_CITY_CONNECT_FOREST") > 1500)
 	&& (Npc_GetDistToWP(hero, "WP_ASSASSINE_03") > 1500)
+	&& (Npc_GetDistToWP(hero, "WP_ASSASSINE_04") > 1500)
+	&& (Npc_GetDistToWP(hero, "WP_ASSASSINE_06") > 1500)
+	&& (Npc_GetDistToWP(hero, "WP_ASSASSINE_07") > 1500)
+	&& (Npc_GetDistToWP(hero, "WP_ASSASSINE_08") > 1500)
+	&& (Npc_GetDistToWP(hero, "WP_ASSASSINE_09") > 1500)
+	&& (Npc_GetDistToWP(hero, "WP_ASSASSINE_10") > 1500)
+	&& (Npc_GetDistToWP(hero, "WP_ASSASSINE_11") > 1500)
+	&& (Npc_GetDistToWP(hero, "WP_ASSASSINE_05") > 1500)
+	&& (Npc_GetDistToWP(hero, "WP_ASSASSINE_02") > 1500)
 	&& (Npc_GetDistToWP(hero, "WP_ASSASSINE_01") > 1500)
 	&& (Npc_GetDistToWP(hero, "NW_CITY_TO_LIGHTHOUSE_04") > 1500)
 	&& (Npc_GetDistToWP(hero, "NW_CITY_TO_LIGHTHOUSE_03") > 1500)

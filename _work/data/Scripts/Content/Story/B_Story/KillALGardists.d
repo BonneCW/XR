@@ -15,7 +15,6 @@ FUNC VOID KillALGardists()
 	B_KillNpc	(Mod_1146_GRD_Gardist_MT);
 	B_KillNpc	(Mod_1147_GRD_Gardist_MT);
 	B_KillNpc	(Mod_1153_GRD_Gardist_MT);
-	B_KillNpc	(Mod_1156_GRD_Gardist_MT);
 	B_KillNpc	(Mod_1157_GRD_Gardist_MT);
 	B_KillNpc	(Mod_1895_GRD_Gardist_MT);
 };

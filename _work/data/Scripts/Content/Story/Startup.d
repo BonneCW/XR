@@ -32,12 +32,12 @@ func void INIT_GLOBAL()
 	B_InitNpcGlobals ();
 
 	gameloaded = Hlp_GetNpc(0);
+	
+	LeGo_Init(LeGo_PrintS | LeGo_HookEngine | LeGo_AI_Function | LeGo_Trialoge | LeGo_FrameFunctions | LeGo_Cursor | LeGo_Random | LeGo_Bloodsplats | LeGo_Saves | LeGo_PermMem | LeGo_Anim8 | LeGo_View | LeGo_Interface | LeGo_Bars | LeGo_Buttons | LeGo_Timer);
+	
+	Spine_Init(SPINE_MODULE_GETCURRENTUSERNAME | SPINE_MODULE_ACHIEVEMENTS | SPINE_MODULE_SCORES | SPINE_MODULE_MULTIPLAYER | SPINE_MODULE_OVERALLSAVE | SPINE_MODULE_GAMEPAD);
 
 	MEM_SetShowDebug (0);
-
-	LeGo_Init(LeGo_All & ~LeGo_Focusnames);
-	
-	Spine_Init(SPINE_MODULE_ACHIEVEMENTS | SPINE_MODULE_OVERALLSAVE);
 
 	if (CurrentLevel == SCHIFFSCHLACHT_ZEN)
 	{
@@ -78,8 +78,7 @@ func void INIT_GLOBAL()
 
 	ShowManabar(1);
 
-	if (!Hlp_StrCmp(GOTHIC_RESTART, "Y"))
-	{
+	if (!Hlp_StrCmp(GOTHIC_RESTART, "Y")) {
 		HookEngine (7742032, 6, "B_OPENINVENTORY");
 		HookEngine (7742480, 9, "B_CLOSEINVENTORY");
 		HookEngine (7487221, 5, "B_OPENCHEST");		// 0x723EF5
@@ -100,6 +99,17 @@ func void INIT_GLOBAL()
 		MEM_WriteByte(6276806, 144);
 		MEM_WriteByte(6276807, 144);
 		MEM_WriteByte(6276808, 144);
+		
+		// These two overrides skip ASSERT_FAIL in case VertexBuffer is not locked
+		MemoryProtectionOverride(/*0x5FCAA3*/ 6277795, 5);
+
+		MEM_WriteByte(/*0x5FCAA3*/ 6277795,   ASMINT_OP_jmp);
+		MEM_WriteInt (/*0x5FCAA3*/ 6277795+1, /*0x5FCB71-0x5FCAA3-5*/ 6278001-6277795-5);
+		
+		MemoryProtectionOverride(/*0x5FC638*/ 6276664, 5);
+
+		MEM_WriteByte(/*0x5FC638*/ 6276664,   ASMINT_OP_jmp);
+		MEM_WriteInt (/*0x5FC638*/ 6276664+1, /*0x5FC6E3-0x5FC638-5*/ 6276835-6276664-5);
 
 		GOTHIC_RESTART = "Y";
 	};
@@ -112,6 +122,8 @@ func void INIT_GLOBAL()
 	AxtUpgrade = 0;
 	
 	Mod_LastLoaded = TimeCounter_Real;
+	
+	MG_WaitingForMatch = FALSE;
 };
 
 FUNC VOID OldLevel(var int newlevel)
@@ -2366,6 +2378,10 @@ FUNC VOID STARTUP_NewWorld()
 	Wld_InsertNpc	(Rat_Sekob_01, "FP_ROAM_SEKOBSRATTE_01");
 	Wld_InsertNpc	(Rat_Sekob_02, "FP_ROAM_SEKOBSRATTE_04");
 	Wld_InsertNpc	(Rat_Sekob_03, "FP_ROAM_SEKOBSRATTE_07");
+	
+	Wld_InsertNpc(Mod_505_VLK_Spielleiter_NW, "MARKT");
+	Wld_InsertNpc(Mod_506_VLK_Spielleiter_NW, "MARKT");
+	Wld_InsertNpc(Mod_507_VLK_Spielleiter_NW, "MARKT");
 
 	// Sonstiges	
 
@@ -3009,15 +3025,15 @@ FUNC VOID INIT_NewWorld()
 		Wld_InsertNpc(Mod_30000_JG_Sonor_NW, "BIGFARM");
 	};
 	
-	if (Kapitel == 1 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == 0 && (!Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen) || Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen))) {
+	if (Kapitel == 1 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == TRUE && (!Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen) || Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen))) {
 		B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "TOT");
 	};
 	
-	if (Kapitel >= 2 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == 0 && !Npc_KnowsInfo(hero, Info_Mod_Lester_Karras)) {
+	if (Kapitel >= 2 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == TRUE && !Npc_KnowsInfo(hero, Info_Mod_Lester_Karras)) {
 		B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "START");
 	};
 	
-	if (Kapitel == 1 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") && Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen) && !Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen)) {
+	if (Kapitel == 1 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == TRUE && Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen) && !Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen)) {
 		B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "TREFFEN");
 	};
 
@@ -5688,6 +5704,7 @@ FUNC VOID STARTUP_Minental ()
 
 
 	// NPC's
+	Wld_InsertNpc(Mod_508_VLK_Spielleiter_MT, "OC1");
 
 
 	// Sonstiges
@@ -6490,6 +6507,13 @@ FUNC VOID INIT_Minental ()
 		B_RemoveNpc(Mod_7432_JG_Sonor_MT);
 	};
 	
+	if (Mod_HS_XardasRat > 0)
+	&& (!Mod_RavenGomezInNW) {
+		Mod_RavenGomezInNW = TRUE;
+		
+		B_RemoveNpc(Mod_520_DMR_Raven_MT);
+	};
+	
 	var zCListSort liste;
 	var int loopStart;
 	var C_Npc temp;
@@ -6560,6 +6584,9 @@ FUNC VOID STARTUP_OrcTempel ()
 	Wld_InsertNpc	(Mod_7797_PSINOV_Novize_OT, "TPL_386");
 
 	B_KillNpc	(Mod_7797_PSINOV_Novize_OT);
+	
+	stopAllSounds();
+	// Play Intro
 };
 
 FUNC VOID INIT_OrcTempel ()
@@ -8216,6 +8243,7 @@ FUNC VOID STARTUP_Eisgebiet()
 	Wld_InsertNpc	(Mod_974_OUT_Gestath_EIS, "START_EISGEBIET");
 	Wld_InsertNpc	(Mod_7792_OUT_Anglar_EIS, "START_EISGEBIET");
 	Wld_InsertNpc	(Mod_7807_OUT_Aerwak_EIS, "START_EISGEBIET");
+	Wld_InsertNpc(Mod_509_VLK_Spielleiter_EIS, "START_EISGEBIET");
 
 	// Menschen in der Umgebung
 

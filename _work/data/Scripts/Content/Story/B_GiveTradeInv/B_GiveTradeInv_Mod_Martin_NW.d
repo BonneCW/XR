@@ -32,6 +32,8 @@ FUNC VOID B_GiveTradeInv_Mod_Martin_NW (var C_NPC slf)
 		
 		CreateInvItems (slf,ItRi_Mana_01, 1); 
 		
+		CreateInvItems (slf,ItMi_InnosStatue, 1); 
+		
 		Martin_ItemsGiven_Chapter_1 = TRUE;
 	};
 	

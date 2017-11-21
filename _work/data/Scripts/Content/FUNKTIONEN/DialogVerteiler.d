@@ -67,6 +67,8 @@ FUNC VOID DialogVerteiler()
 		Info_Mod_Xardas_NW_RandolphGeheilt.npc		= Mod_513_DMB_Xardas_NW;
 		Info_Mod_Xardas_NW_Gidan1.npc		= Mod_513_DMB_Xardas_NW;
 		Info_Mod_Xardas_NW_Gidan2.npc		= Mod_513_DMB_Xardas_NW;
+		Info_Mod_Xardas_NW_Trent.npc		= Mod_513_DMB_Xardas_NW;
+		Info_Mod_Xardas_NW_Trent2.npc		= Mod_513_DMB_Xardas_NW;
 	}
 	else if (CurrentLevel == ADDONWORLD_ZEN)
 	{
@@ -172,6 +174,8 @@ FUNC VOID DialogVerteiler()
 		Info_Mod_Xardas_NW_RandolphGeheilt.npc		= Mod_680_DMB_Xardas_MT;
 		Info_Mod_Xardas_NW_Gidan1.npc		= Mod_680_DMB_Xardas_MT;
 		Info_Mod_Xardas_NW_Gidan2.npc		= Mod_680_DMB_Xardas_MT;
+		Info_Mod_Xardas_NW_Trent.npc		= Mod_680_DMB_Xardas_MT;
+		Info_Mod_Xardas_NW_Trent2.npc		= Mod_680_DMB_Xardas_MT;
 	}
 	else if (CurrentLevel == DIEINSEL_ZEN)
 	{

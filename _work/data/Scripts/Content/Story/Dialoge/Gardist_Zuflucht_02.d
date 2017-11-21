@@ -26,9 +26,10 @@ FUNC VOID Info_Mod_Gardist_Zuflucht_02_Hi_Info()
 
 	Mod_AL_ZufluchtCounter += 1;
 
-	if (Mod_AL_ZufluchtCounter == 7)
-	{
+	if (Mod_AL_ZufluchtCounter == 7) {
 		B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Ich hab' alle Gardisten informiert. Jetzt sollte ich zum Sumpflager aufbrechen.");
+	} else {
+		B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Ich habe eine Zuflucht informiert. Auf zur nächsten.");
 	};
 };
 

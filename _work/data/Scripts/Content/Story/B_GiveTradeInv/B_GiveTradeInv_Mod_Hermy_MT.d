@@ -22,6 +22,12 @@ FUNC VOID B_GiveTradeInv_Mod_Hermy_MT (var C_NPC slf)
 		CreateInvItems (slf, ItSc_TrfKeiler, 3);
 		CreateInvItems (slf, ItSc_TrfSheep, 6);
 		CreateInvItems (slf, ItSc_TrfRabbit, 6);
+		
+		CreateInvItems (slf, ItMi_Nugget, 6);
+		CreateInvItems (slf, ItMi_Aquamarine, 2);
+		CreateInvItems (slf, ItPl_Mana_Herb_01, 3);
+		CreateInvItems (slf, ItPl_Mana_Herb_02, 5);
+		CreateInvItems (slf, ItPl_Health_Herb_02, 5);
 			
 		Hermy_ItemsGiven_Chapter_1 = TRUE;
 	};

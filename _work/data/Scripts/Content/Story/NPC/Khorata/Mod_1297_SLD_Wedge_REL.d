@@ -4,7 +4,7 @@ instance Mod_1297_SLD_Wedge_REL (Npc_Default)
 	
 	name =					"Wedge";
 	Npctype =				Npctype_Main;
-	guild =					GIL_mil;      
+	guild =					GIL_OUT;      
 	level =					11;
 	
 	voice		= 0;

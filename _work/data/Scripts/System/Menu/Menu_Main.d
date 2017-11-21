@@ -10,15 +10,14 @@ INSTANCE MENU_MAIN(C_MENU_DEF)
 	items[0]		= "MENUITEM_MAIN_HEADLINE";
 	items[1]		= "MENUITEM_MAIN_HEADLINE2";
 	items[2]		= "MENUITEM_MAIN_NEWGAME";
-	items[3]		= "MENUITEM_MAIN_SAVEGAME_LOAD";	
-	items[4]		= "MENUITEM_MAIN_SAVEGAME_SAVE";	
-	items[5]		= "MENUITEM_MAIN_RESUME"; 
+	items[3]		= "MENUITEM_MAIN_SAVEGAME_LOAD";
+	items[4]		= "MENUITEM_MAIN_SAVEGAME_SAVE";
+	items[5]		= "MENUITEM_MAIN_RESUME";
 	items[6]		= "MENUITEM_MAIN_OPTIONS";
 	//items[7]		= "MENUITEM_MAIN_INTRO";
-	items[7]		= "MENUITEM_MAIN_TEAM";
-	//items[8]		= "MENUITEM_MAIN_CREDITS";	
-	items[9]		= "MENUITEM_MAIN_EXIT"; 
-	items[7]		= "MENUITEM_MAIN_TEAM";
+	//items[7]		= "MENUITEM_MAIN_TEAM";
+	items[8]		= "MENUITEM_MAIN_CREDITS";
+	items[9]		= "MENUITEM_MAIN_EXIT";
 	
 	defaultOutGame	= 2;	// NEWGAME
 	defaultInGame	= 4;	// SAVEGAME
@@ -172,8 +171,8 @@ INSTANCE MENUITEM_MAIN_CREDITS(C_MENU_ITEM_DEF)
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*6;
 	dimx		= 8100;		dimy		=  750;	
 	// Aktionen
-	onSelAction[0]	= SEL_ACTION_STARTMENU;
-	onSelAction_S[0] = "MENU_CREDITS_01";
+	onSelAction[0]	= SEL_ACTION_UNDEF;
+	onEventAction[EVENT_EXECUTE] = ShowCredits;
 	// Weitere Eigenschaften
 	flags			= flags | IT_TXT_CENTER;
 };
@@ -250,13 +249,12 @@ INSTANCE MENUITEM_MAIN_HEADLINE(C_MENU_ITEM_DEF)
 
 func int ShowIntro()
 {
-	PlayVideo("intro.bik");
+	PlayVideo("Xeres\Intro.bik");
 	return 1;
 };
 
 func int ShowCredits()
 {
-	//PlayVideo("credits.bik");
-	PlayVideo("Xeres\CreditsVollversion.bik");
+	PlayVideo("Xeres\Credits.bik");
 	return 1;
 };

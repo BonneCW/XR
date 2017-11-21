@@ -83,6 +83,10 @@ FUNC VOID Zustaende()
 		&& (Erkaeltung == FALSE)
 		&& (Mod_SLD_WaermeRing == 0)
 		{
+			var C_Item itm; itm = Npc_GetEquippedArmor(hero);
+			if (!Hlp_IsValidItem(itm)) {
+				Spine_UnlockAchievement(SPINE_ACHIEVEMENT_71);
+			};
 			if (Eistaucher >= 5)
 			{
 				Eistaucher = 0;

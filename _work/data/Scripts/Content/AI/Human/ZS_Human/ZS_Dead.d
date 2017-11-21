@@ -619,6 +619,10 @@ func void ZS_Dead ()
 		};
 	};
 	
+	if (Npc_HasItems(self, ItMw_2H_Axe_L_01) > 1) {
+		Npc_RemoveInvItems(self, ItMw_2H_Axe_L_01, Npc_HasItems(self, ItMw_2H_Axe_L_01) - 1);
+	};
+	
 	// ------ Sumpfdrohne -------
 		
 	// ------ weil sonst Händler bevor man zum ersten Mal TRADE gewählt hat nix haben ------

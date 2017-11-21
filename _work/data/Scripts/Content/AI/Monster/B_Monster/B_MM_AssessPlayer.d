@@ -18,40 +18,6 @@ func void B_MM_AssessPlayer()
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Krauttroll) && Mod_Leichengase_Kraut < 7) {
 		return;
 	};
-
-	if (Wld_IsTime(21,00,05,00))
-	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
-	{
-		if (!HeroAtLight)
-		{
-			HeroAtLight = 1 + C_HeroAtLight(); // sekündlich checken, ob Held in der Nähe einer Lampe ist
-		};
-
-		if (HeroAtLight == 1)
-		{
-			if (Npc_GetWalkMode(hero) == NPC_SNEAK)
-			{
-				if (Npc_GetDistToNpc(self, hero) > 200)
-				{
-					return;
-				};
-			}
-			else if (Npc_GetWalkMode(hero) == NPC_WALK)
-			{
-				if (Npc_GetDistToNpc(self, hero) > 300)
-				{
-					return;
-				};
-			}
-			else
-			{
-				if (Npc_GetDistToNpc(self, hero) > 400)
-				{
-					return;
-				};
-			};
-		};
-	};
 	
 	if (CurrentLevel == XERESWELT_ZEN) {
 		if (Kapitel == 6 && Npc_GetHeightToNpc(self, other) > 1000) {
@@ -71,7 +37,7 @@ func void B_MM_AssessPlayer()
 	if (CurrentLevel == EISGEBIET_ZEN)
 	{
 		if (playerIsTransformed == TRUE)
-		&& (Npc_GetDistToWP(hero, "HEXE_ARENA") < 1000)
+		&& (Npc_GetDistToWP(other, "HEXE_ARENA") < 1000)
 		{
 			Npc_ClearAIQueue	(self);
 			Npc_SetTarget		(self, other);

@@ -212,11 +212,18 @@ func void View_Close(var int hndl) {
 // View löschen
 //========================================
 func void zCView_Delete(var zCView this) {
+	if (this == 0) {
+		return;
+	};
+	var int ptr; ptr = MEM_InstToPtr(this);
+	if (ptr <= 10000) {
+		return;
+	};
     if (this.textlines_next) {
         //free(this.textlines_next, zCList__zCViewText@);
         this.textlines_next = 0;
     };
-    CALL__thiscall(MEM_InstToPtr(this), zCView__@zCView);
+    CALL__thiscall(ptr, zCView__@zCView);
 };
 
 func void ViewPtr_Delete(var int ptr) {
@@ -341,9 +348,9 @@ func void View_DeleteText(var int hndl) {
 //========================================
 // Text hinzufügen
 //========================================
-func void ViewPtr_AddText(var int ptr, var int x, var int y, var string text, var string font) {
+func void ViewPtr_AddText(var int ptr, var int x, var int y, var string text, var string font, var int color) {
     var zCView v; v = _^(ptr);
-    var int field; field = Print_TextField(x, y, text, font, Print_ToVirtual(Print_GetFontHeight(font), v.pposy+v.psizey));
+    var int field; field = Print_TextFieldColored(x, y, text, font, Print_ToVirtual(Print_GetFontHeight(font), v.psizey), color);
     if(v.textLines_next) {
         List_Concat(v.textLines_next, field);
     }
@@ -352,7 +359,11 @@ func void ViewPtr_AddText(var int ptr, var int x, var int y, var string text, va
     };
 };
 func void View_AddText(var int hndl, var int x, var int y, var string text, var string font) {
-    ViewPtr_AddText(getPtr(hndl), x, y, text, font);
+    ViewPtr_AddText(getPtr(hndl), x, y, text, font, -1);
+};
+
+func void View_AddTextColored(var int hndl, var int x, var int y, var string text, var string font, var int color) {
+    ViewPtr_AddText(getPtr(hndl), x, y, text, font, color);
 };
 
 //========================================

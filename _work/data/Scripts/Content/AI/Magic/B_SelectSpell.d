@@ -1337,7 +1337,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 		}*/
 		else
 		{
-			B_ReadySpell (slf, SPL_Icelance, SPL_Cost_Icelance);
+			B_ReadySpell (slf, SPL_Icebolt, SPL_Cost_Icebolt);
 			return TRUE;
 		};
 	};

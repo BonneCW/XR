@@ -21,6 +21,8 @@ var int MG_Opp_Index;
 
 var int MG_Opp_Time;
 
+var int MG_Starter;
+
 const int MG_FIGUR_MINECRAWLERQUEEN	= 1;
 const int MG_FIGUR_TROLL		= 2;
 const int MG_FIGUR_HASE			= 3;
@@ -48,6 +50,8 @@ var int PlayerHas_Schaf;
 
 const int MG_GEGNER_RUEDIGER		= 1;
 const int MG_GEGNER_SPIELER_ORLAN	= 2;
+const int MG_GEGNER_ONLINE			= 3;
+const int MG_GEGNER_FALLBACK		= 4;
 
 var int MG_Ruediger_Runde;
 var int MG_Spieler_Orlan_Runde;
@@ -55,3 +59,12 @@ var int MG_Spieler_Orlan_Runde;
 var int MG_CurrentOpp;
 
 var int tempFigur;
+
+const int MSGTYPE_STARTER = 0;
+const int MSGTYPE_PLACEMENT = 1;
+const int MSGTYPE_MOVE = 2;
+const int MSGTYPE_FINISHEDMOVE = 3;
+
+var int Online_Host;
+var int MP_TimeOut;
+var int MG_WaitingForMatch;

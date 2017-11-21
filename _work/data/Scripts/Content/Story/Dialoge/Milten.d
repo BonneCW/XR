@@ -945,6 +945,11 @@ FUNC VOID Info_Mod_Milten_Leichengase_Info()
 	AI_Output(hero, self, "Info_Mod_Milten_Leichengase_15_04"); //Kannst du mir helfen oder nicht?
 	AI_Output(self, hero, "Info_Mod_Milten_Leichengase_03_05"); //Ich hätte da schon eine Idee.
 	AI_Output(self, hero, "Info_Mod_Milten_Leichengase_03_06"); //Geh zu Hyglas, er ist hier im Kloster für die Spruchrollen zuständig. Bitte ihn um Hilfe.
+	
+	if (hero.guild != GIL_VLK) {
+		AI_Output(self, hero, "Info_Mod_Milten_Leichengase_03_07"); //Hier hast du den Schlüssel zur Bibliothek.
+		B_GiveInvItems	(self, hero, ItKe_KlosterBibliothek, 1);
+	};
 
 	B_LogEntry	(TOPIC_MOD_SL_LEICHENGASE, "Milten hat mich an Hyglas verwiesen.");
 };

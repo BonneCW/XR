@@ -89,7 +89,7 @@ FUNC VOID Info_Mod_Skip_Francis_Info()
 	AI_Output(self, hero, "Info_Mod_Skip_Francis_08_02"); //Das trifft sich gut. Mit dem Boot brauch ich jedesmal 'nen halben Tag.
 	AI_Output(self, hero, "Info_Mod_Skip_Francis_08_03"); //Und das auch nur, wenn der Wind günstig steht.
 	AI_Output(hero, self, "Info_Mod_Skip_Francis_15_04"); //Francis hat mir gesagt, dass du nicht mehr mit seinem Entertrupp handelst.
-	AI_Output(self, hero, "Info_Mod_Skip_Francis_08_05"); //Beim Klabautermann! Diese Stroche haben doch meine Paddel verheizt. Zu faul, um Feuerholz zu besorgen.
+	AI_Output(self, hero, "Info_Mod_Skip_Francis_08_05"); //Beim Klabautermann! Diese Strolche haben doch meine Paddel verheizt. Zu faul, um Feuerholz zu besorgen.
 	AI_Output(self, hero, "Info_Mod_Skip_Francis_08_06"); //Und ohne Paddel lauf ich nicht aus. Was soll ich denn bei Windstille machen, eh?
 	AI_Output(hero, self, "Info_Mod_Skip_Francis_15_07"); //Kann ich das irgendwie wieder gut machen?
 	AI_Output(self, hero, "Info_Mod_Skip_Francis_08_08"); //Du könntest jetzt die Lieferung übernehmen, dann würde ich wieder mit Francis und seinen Jungs handeln.

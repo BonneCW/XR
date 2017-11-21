@@ -1,5 +1,7 @@
 var int Spine_SetHostnameFunc;
 var int Spine_SearchMatchFunc;
+var int Spine_SearchMatchWithFriendFunc;
+var int Spine_StopSearchMatchFunc;
 var int Spine_IsInMatchFunc;
 var int Spine_CreateMessageFunc;
 var int Spine_DeleteMessageFunc;
@@ -7,6 +9,7 @@ var int Spine_SendMessageFunc;
 var int Spine_ReceiveMessageFunc;
 var int Spine_GetPlayerCountFunc;
 var int Spine_GetPlayerUsernameFunc;
+var int Spine_IsOnlineFunc;
 
 // sets a hostname used for the MP
 // overrides general server for own multiplayers
@@ -27,6 +30,23 @@ func void Spine_SearchMatch(var int numPlayers, var int identifier) {
 		CALL_IntParam(identifier);
 		CALL_IntParam(numPlayers);
 		CALL__cdecl(Spine_SearchMatchFunc);
+	};
+};
+
+// searches for a multiplayer match with a friend
+// identifier is the identifier for the mode/level or anything else specific for the modification
+func void Spine_SearchMatchWithFriend(var int identifier, var string friendName) {
+	if (Spine_Initialized && Spine_SearchMatchWithFriendFunc) {
+		CALL_cStringPtrParam(friendName);
+		CALL_IntParam(identifier);
+		CALL__cdecl(Spine_SearchMatchWithFriendFunc);
+	};
+};
+
+// stops the search for a match
+func void Spine_StopSearchMatch() {
+	if (Spine_Initialized && Spine_StopSearchMatchFunc) {
+		CALL__cdecl(Spine_StopSearchMatchFunc);
 	};
 };
 
@@ -103,4 +123,14 @@ func string Spine_GetPlayerUsername(var int position) {
 		return STR_BUFFER;
 	};
 	return "";
+};
+
+// returns TRUE if in online mode, otherwise FALSE
+func int Spine_IsOnline() {
+	if (Spine_Initialized && Spine_IsOnlineFunc) {
+		CALL__cdecl(Spine_IsOnlineFunc);
+		
+		return CALL_RetValAsInt();
+	};
+	return FALSE;
 };

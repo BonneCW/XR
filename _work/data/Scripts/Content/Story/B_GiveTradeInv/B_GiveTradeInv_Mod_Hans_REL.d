@@ -7,6 +7,12 @@ var int Hans_ItemsGiven_Chapter_5;
 
 FUNC VOID B_GiveTradeInv_Mod_Hans_REL (var C_NPC slf)
 {
+	if (Npc_HasItems(slf, ItRw_Arrow) < 100) {
+		CreateInvItems(slf, ItRw_Arrow, 100 - Npc_HasItems(slf, ItRw_Arrow));
+	};
+	if (Npc_HasItems(slf, ItRw_Bolt) < 100) {
+		CreateInvItems(slf, ItRw_Bolt, 100 - Npc_HasItems(slf, ItRw_Bolt));
+	};
 	if ((Kapitel >= 1)
 	&& (Hans_ItemsGiven_Chapter_1 == FALSE))
 	{

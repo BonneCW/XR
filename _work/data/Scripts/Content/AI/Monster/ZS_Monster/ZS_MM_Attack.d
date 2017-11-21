@@ -10,6 +10,9 @@ func void B_MM_AssessSurprise()
 };
 
 
+var int IceGolem_Attacking_FireGolem;
+var int FireGolem_Attacking_IceGolem;
+
 func void ZS_MM_Attack ()
 {
 	B_ClearPerceptions(self);
@@ -146,6 +149,7 @@ func int ZS_MM_Attack_Loop()
 	};
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Icegolem_Griselda_01))
+	&& (!IceGolem_Attacking_FireGolem)
 	{
 		if (Npc_GetDistToNpc(self, hero) < Npc_GetDistToNpc(self, Firegolem_Griselda_01))
 		{
@@ -164,9 +168,12 @@ func int ZS_MM_Attack_Loop()
 			{
 				return LOOP_END;
 			};
+			
+			IceGolem_Attacking_FireGolem = TRUE;
 		};
 	};
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Firegolem_Griselda_01))
+	&& (!FireGolem_Attacking_IceGolem)
 	{
 		if (Npc_GetDistToNpc(self, hero) < Npc_GetDistToNpc(self, Icegolem_Griselda_01))
 		{
@@ -185,6 +192,8 @@ func int ZS_MM_Attack_Loop()
 			{
 				return LOOP_END;
 			};
+			
+			FireGolem_Attacking_IceGolem = TRUE;
 		};
 	};
 		

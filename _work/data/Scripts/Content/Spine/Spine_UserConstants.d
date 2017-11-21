@@ -74,8 +74,13 @@ const int SPINE_ACHIEVEMENT_67 = 66;
 const int SPINE_ACHIEVEMENT_68 = 67;
 const int SPINE_ACHIEVEMENT_69 = 68;
 const int SPINE_ACHIEVEMENT_70 = 69;
+const int SPINE_ACHIEVEMENT_71 = 70;
+const int SPINE_ACHIEVEMENT_72 = 71;
+const int SPINE_ACHIEVEMENT_73 = 72;
+const int SPINE_ACHIEVEMENT_74 = 73;
+const int SPINE_ACHIEVEMENT_75 = 74;
 
-const int MAX_ACHIEVEMENTS = 70;
+const int MAX_ACHIEVEMENTS = 75;
 
 const string SPINE_ACHIEVEMENT_NAMES[MAX_ACHIEVEMENTS] = {
 	"Untot?",
@@ -147,7 +152,12 @@ const string SPINE_ACHIEVEMENT_NAMES[MAX_ACHIEVEMENTS] = {
 	"Verwandlungsmagier",
 	"Sumpfi",
 	"Pirat",
-	"Assassine"
+	"Assassine",
+	"Kontaktfreudig",
+	"Eistaucher",
+	"Leicht",
+	"Mittel",
+	"Schwer"
 };
 
 const string SPINE_ACHIEVEMENT_DESCRIPTIONS[MAX_ACHIEVEMENTS] = {
@@ -220,10 +230,20 @@ const string SPINE_ACHIEVEMENT_DESCRIPTIONS[MAX_ACHIEVEMENTS] = {
 	"Den Verwandlungsmagiern angeschlossen",
 	"Dem Sumpflager angeschlossen",
 	"Den Piraten angeschlossen",
-	"Den Assassinen angeschlossen"
+	"Den Assassinen angeschlossen",
+	"Mit 700 unterschiedlichen NPCs gesprochen",
+	"Ohne Klamotten im Eiswasser gebadet",
+	"Auf Leicht oder höher abgeschlossen",
+	"Auf Mittel oder höher abeschlossen",
+	"Auf Schwer abgeschlossen"
 };
 
 const string SPINE_ACHIEVEMENT_TEXTURES[MAX_ACHIEVEMENTS] = {
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
+	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
 	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
 	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
 	"SPINE_ACHIEVEMENT_DEFAULT.TGA",
@@ -366,6 +386,11 @@ const string SPINE_ACHIEVEMENT_LOCKED[MAX_ACHIEVEMENTS] = {
 	"",
 	"",
 	"",
+	"",
+	"",
+	"",
+	"",
+	"",
 	""
 };
 
@@ -439,7 +464,12 @@ const string SPINE_ACHIEVEMENT_HIDDEN[MAX_ACHIEVEMENTS] = {
 	"TRUE",
 	"TRUE",
 	"TRUE",
-	"TRUE"
+	"TRUE",
+	"FALSE",
+	"TRUE",
+	"FALSE",
+	"FALSE",
+	"FALSE"
 };
 
 const string SPINE_ACHIEVEMENT_PROGRESS[MAX_ACHIEVEMENTS] = {
@@ -512,5 +542,18 @@ const string SPINE_ACHIEVEMENT_PROGRESS[MAX_ACHIEVEMENTS] = {
 	"0",
 	"0",
 	"0",
+	"0",
+	"700",
+	"0",
+	"0",
+	"0",
 	"0"
+};
+
+const int SPINE_SCORE_1 = 0;
+const int SPINE_SCORE_2 = 1;
+
+const string SPINE_SCORE_NAMES[2] = {
+	"Level",
+	"Gelöste Quests"
 };

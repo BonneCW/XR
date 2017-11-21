@@ -337,6 +337,8 @@ FUNC VOID Info_Mod_Makanius_Armor_Info()
 	B_LogEntry	(TOPIC_MOD_AL_LOCKVOGEL, "Ich habe die Rüstung. Nun muss ich Gomez dazu überreden das Lager zu verlassen ... wenn er noch immer so stur ist wie damals könnte das interessant werden.");
 
 	AI_StopProcessInfos	(self);
+	
+	B_StartOtherRoutine(Mod_9999_HMG_Heilungsmagier_MT, "OC");
 };
 
 INSTANCE Info_Mod_Makanius_Pickpocket (C_INFO)

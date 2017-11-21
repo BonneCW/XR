@@ -648,6 +648,12 @@ func void B_GiveDeathInv (var C_NPC slf)
 			CreateInvItems	(slf, ItPo_Tiergift, 1);
 		};
 	};
+	
+	if (slf.guild == GIL_SKELETON_MAGE) {
+		Npc_RemoveInvItems(slf, ItRu_Icebolt, Npc_HasItems(slf, ItRu_Icebolt));
+		Npc_RemoveInvItems(slf, ItRu_Icecube, Npc_HasItems(slf, ItRu_Icecube));
+	};
+	
 	//-------- AIV setzen, damit INV-Items nur EINMAL vergeben werden  --------
 	B_SetAivar(slf, AIV_DeathInvGiven, TRUE);
 };

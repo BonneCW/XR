@@ -58,7 +58,7 @@ PROTOTYPE ItWr_Addon_XPBook (C_ITEM)
 
 	
 
-	visual 					=	"ItWr_Book_02_01.3ds";  					
+	visual 					=	"NewBook_V2_2.3DS";  					
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAPSEALED";
@@ -117,7 +117,7 @@ PROTOTYPE ItWr_Addon_LPBook (C_ITEM)
 
 	
 
-	visual 					=	"ItWr_Book_02_02.3ds";  					
+	visual 					=	"NewBook_V2_3.3DS";  					
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAPSEALED";

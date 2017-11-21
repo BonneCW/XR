@@ -2,8 +2,7 @@
 //	1. Leeres Belegungsarray
 //	2. Felder alle erstellen
 
-FUNC VOID B_MG_InitialiseFeld()
-{
+FUNC VOID B_MG_InitialiseFeld() {
 	Print_GetScreenSize();
 
 	MG_Spielbrett = View_CreatePxl(0, 0, Print_Screen[PS_X], Print_Screen[PS_Y]);
@@ -13,8 +12,7 @@ FUNC VOID B_MG_InitialiseFeld()
 	var int i; i = 0;
 	var int ptr; ptr = MEM_StackPos.position;
 
-	if (i < 80)
-	{
+	if (i < 80) {
 		MEM_WriteStatArr(MG_Spielfeld, i, 0);
 		MEM_WriteStatArr(MG_Spielfeld_Texturen, i, 0);
 		MEM_WriteStatArr(MG_Spielfeld_Figur, i, 0);
@@ -45,17 +43,13 @@ FUNC VOID B_MG_InitialiseFeld()
 
 	ptr = MEM_StackPos.position;
 
-	if (i < 80)
-	{
+	if (i < 80) {
 		var int temp;
 		temp = View_CreatePxl(x, y, x+xy, y+xy);
 
-		if ((i < 8) || (i >= 72))
-		{
+		if ((i < 8) || (i >= 72)) {
 			View_SetTexture(temp, "MG_SPIELFELD_ZIEL.TGA");
-		}
-		else
-		{
+		} else {
 			View_SetTexture(temp, "MG_SPIELFELD.TGA");
 		};
 
@@ -65,8 +59,7 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		x += xy;
 
-		if ((i+1)%8 == 0)
-		{
+		if ((i+1)%8 == 0) {
 			x = Print_Screen[PS_X]/2-4*xy;
 
 			y += xy;
@@ -81,8 +74,7 @@ FUNC VOID B_MG_InitialiseFeld()
 
 	var int MyFigurHndl;
 
-	if (PlayerHas_MinecrawlerQueen)
-	{
+	if (PlayerHas_MinecrawlerQueen) {
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Hero_MinecrawlerQueen = get(MyFigurHndl);
@@ -92,8 +84,7 @@ FUNC VOID B_MG_InitialiseFeld()
 		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_MINECRAWLERQUEEN - 1, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_MINECRAWLERQUEEN - 1, MyFigurHndl);
 	};
-	if (PlayerHas_Troll)
-	{
+	if (PlayerHas_Troll) {
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Hero_Troll = get(MyFigurHndl);
@@ -103,8 +94,7 @@ FUNC VOID B_MG_InitialiseFeld()
 		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Troll - 1, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Troll - 1, MyFigurHndl);
 	};
-	if (PlayerHas_Schaf)
-	{
+	if (PlayerHas_Schaf) {
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Hero_Schaf = get(MyFigurHndl);
@@ -114,8 +104,7 @@ FUNC VOID B_MG_InitialiseFeld()
 		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Schaf - 1, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Schaf - 1, MyFigurHndl);
 	};
-	if (PlayerHas_Snapper)
-	{
+	if (PlayerHas_Snapper) {
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Hero_Snapper = get(MyFigurHndl);
@@ -125,8 +114,7 @@ FUNC VOID B_MG_InitialiseFeld()
 		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Snapper - 1, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Snapper - 1, MyFigurHndl);
 	};
-	if (PlayerHas_Goblin)
-	{
+	if (PlayerHas_Goblin) {
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Hero_Goblin = get(MyFigurHndl);
@@ -136,8 +124,7 @@ FUNC VOID B_MG_InitialiseFeld()
 		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Goblin - 1, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Goblin - 1, MyFigurHndl);
 	};
-	if (PlayerHas_Hase)
-	{
+	if (PlayerHas_Hase) {
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Hero_Hase = get(MyFigurHndl);
@@ -147,8 +134,7 @@ FUNC VOID B_MG_InitialiseFeld()
 		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Hase - 1, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Hase - 1, MyFigurHndl);
 	};
-	if (PlayerHas_Meatbug)
-	{
+	if (PlayerHas_Meatbug) {
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Hero_Meatbug = get(MyFigurHndl);
@@ -158,8 +144,7 @@ FUNC VOID B_MG_InitialiseFeld()
 		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Meatbug - 1, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Meatbug - 1, MyFigurHndl);
 	};
-	if (PlayerHas_Balrog)
-	{
+	if (PlayerHas_Balrog) {
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Hero_Balrog = get(MyFigurHndl);
@@ -169,8 +154,7 @@ FUNC VOID B_MG_InitialiseFeld()
 		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Balrog - 1, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Balrog - 1, MyFigurHndl);
 	};
-	if (PlayerHas_Bloodfly)
-	{
+	if (PlayerHas_Bloodfly) {
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Hero_Bloodfly = get(MyFigurHndl);
@@ -180,8 +164,7 @@ FUNC VOID B_MG_InitialiseFeld()
 		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Bloodfly - 1, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Bloodfly - 1, MyFigurHndl);
 	};
-	if (PlayerHas_Stoneguardian)
-	{
+	if (PlayerHas_Stoneguardian) {
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Hero_Stoneguardian = get(MyFigurHndl);
@@ -191,8 +174,7 @@ FUNC VOID B_MG_InitialiseFeld()
 		MEM_WriteStatArr(MG_EigeneFiguren2, MG_FIGUR_Stoneguardian - 1, 1);
 		MEM_WriteStatArr(MG_EigeneFiguren3, MG_FIGUR_Stoneguardian - 1, MyFigurHndl);
 	};
-	if (MG_CurrentOpp == MG_GEGNER_RUEDIGER)
-	{
+	if (MG_CurrentOpp == MG_GEGNER_RUEDIGER) {
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Bloodfly = get(MyFigurHndl);
@@ -227,9 +209,7 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		C_MG_SPIELFIGUR_SetType(Opp_Troll, MG_FIGUR_Troll, 1, MyFigurHndl);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 4, MyFigurHndl);
-	}
-	else if (MG_CurrentOpp == MG_GEGNER_SPIELER_ORLAN)
-	{
+	} else if (MG_CurrentOpp == MG_GEGNER_SPIELER_ORLAN) {
 		MyFigurHndl = new(C_MG_SPIELFIGUR@);
 
 		Opp_Bloodfly = get(MyFigurHndl);
@@ -264,5 +244,75 @@ FUNC VOID B_MG_InitialiseFeld()
 
 		C_MG_SPIELFIGUR_SetType(Opp_Snapper, MG_FIGUR_Snapper, 1, MyFigurHndl);
 		MEM_WriteStatArr(MG_GegnerFiguren3, 4, MyFigurHndl);
+	} else if (MG_CurrentOpp == MG_GEGNER_ONLINE) {
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Bloodfly = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Bloodfly, MG_FIGUR_Bloodfly, 1, MyFigurHndl);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 0, MyFigurHndl);
+
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Schaf = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Schaf, MG_FIGUR_Schaf, 1, MyFigurHndl);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 1, MyFigurHndl);
+
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Hase = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Hase, MG_FIGUR_Hase, 1, MyFigurHndl);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 2, MyFigurHndl);
+
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Meatbug = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Meatbug, MG_FIGUR_Meatbug, 1, MyFigurHndl);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 3, MyFigurHndl);
+
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Snapper = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Snapper, MG_FIGUR_Snapper, 1, MyFigurHndl);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 4, MyFigurHndl);
+
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_MinecrawlerQueen = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_MinecrawlerQueen, MG_FIGUR_MineCrawlerQueen, 1, MyFigurHndl);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 5, MyFigurHndl);
+
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Troll = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Troll, MG_FIGUR_Troll, 1, MyFigurHndl);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 6, MyFigurHndl);
+
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Stoneguardian = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Stoneguardian, MG_FIGUR_Stoneguardian, 1, MyFigurHndl);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 7, MyFigurHndl);
+
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Balrog = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Balrog, MG_FIGUR_Balrog, 1, MyFigurHndl);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 8, MyFigurHndl);
+
+		MyFigurHndl = new(C_MG_SPIELFIGUR@);
+
+		Opp_Goblin = get(MyFigurHndl);
+
+		C_MG_SPIELFIGUR_SetType(Opp_Goblin, MG_FIGUR_Goblin, 1, MyFigurHndl);
+		MEM_WriteStatArr(MG_GegnerFiguren3, 9, MyFigurHndl);
 	};
 };

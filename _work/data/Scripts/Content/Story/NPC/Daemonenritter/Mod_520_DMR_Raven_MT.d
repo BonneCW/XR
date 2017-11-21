@@ -57,12 +57,6 @@ FUNC VOID Rtn_Start_520()
 	TA_Stand_Eating		(07,00,08,30,"PALTOBURG_4");
 };
 
-FUNC VOID Rtn_Rat_520()
-{
-	TA_Stand_Guarding		(08,00,20,00,"WP_KLOSTER_KELLER_RAT_XARDAS");
-	TA_Stand_Guarding		(20,00,08,00,"WP_KLOSTER_KELLER_RAT_XARDAS");
-};
-
 FUNC VOID Rtn_Tot_520()
 {
 	TA_Stand_WP		(08,00,20,00,"TOT");
@@ -79,12 +73,6 @@ FUNC VOID Rtn_Angriff_520 ()
 {
 	TA_RunToWP 	(08,00,22,00,"OW_PATH_3001_05");
 	TA_RunToWP	(22,00,08,00,"OW_PATH_3001_05");		
-};
-
-FUNC VOID Rtn_Schiff_520()
-{
-	TA_Stand_Guarding		(08,00,20,00,"SHIP_CREW_04");
-	TA_Stand_Guarding		(20,00,08,00,"SHIP_CREW_04");
 };
 
 FUNC VOID Rtn_AtAL_520()

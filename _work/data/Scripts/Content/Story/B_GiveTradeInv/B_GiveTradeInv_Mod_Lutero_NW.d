@@ -22,6 +22,12 @@ FUNC VOID B_GiveTradeInv_Mod_Lutero_NW (var C_NPC slf)
 		CreateInvItems (slf,ItMi_ApfelTabak, 1);
 		CreateInvItems (slf,ItAt_CrawlerMandibles, 1);
 		CreateInvItems	(slf, ItMi_Seide, 1);
+		CreateInvItems	(slf, ItMi_AdanosStatue, 1);
+		CreateInvItems	(slf, ItMi_EimerW, 1);
+		CreateInvItems	(slf, ItMi_Feder, 1);
+		CreateInvItems	(slf, ItMi_Kerze, 1);
+		CreateInvItems	(slf, ItMi_Lute, 1);
+		CreateInvItems	(slf, ItMi_Stuff_Pipe_01, 1);
 
 		CreateInvItems   (slf, ItMi_Runeblank,		1);
 				
@@ -43,7 +49,8 @@ FUNC VOID B_GiveTradeInv_Mod_Lutero_NW (var C_NPC slf)
 		CreateInvItems (slf,ItPo_Speed, 2);
 		CreateInvItems (slf,ItWr_ZweihandBuch, 1);
 		CreateInvItems (slf,ItWr_EinhandBuch, 1);
-		CreateInvItems	(slf, ItAt_SharkTeeth, 2);			
+		CreateInvItems	(slf, ItAt_SharkTeeth, 2);		
+		CreateInvItems	(slf, ItMi_Salznugget, 1);	
 
 	
 		Lutero_ItemsGiven_Chapter_2 = TRUE;

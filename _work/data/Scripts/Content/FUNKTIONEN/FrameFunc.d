@@ -336,7 +336,9 @@ FUNC VOID FRAMEFUNC ()
 
 		if (her3.focus_vob)
 		{
-			if (Hlp_StrCmp(her_focusMob._zCObject_objectName, "MOBNAME_SOJA") == TRUE)
+			var oCMob her_focusMobSoja;
+			MEM_AssignInst (her_focusMobSoja, her3.focus_vob);
+			if (Hlp_StrCmp(her_focusMobSoja._zCObject_objectName, "MOBNAME_SOJA") == TRUE)
 			{
 				if (Hlp_StrCmp(Npc_GetNearestWP(hero), "SOJA_01") && Mod_Soja_01 == 0) {
 					AI_PlayAni(hero, "T_PLUNDER");
@@ -620,6 +622,7 @@ FUNC VOID FRAMEFUNC ()
 	};
 
 	var int lastFocusItem;
+	var int lastDivePickupTime;
 
 	if (C_BodyStateContains (hero, BS_DIVE))
 	{
@@ -635,12 +638,15 @@ FUNC VOID FRAMEFUNC ()
 			if (Hlp_IsValidItem (her_focusItem2))
 			{
 				if (Npc_GetDistToItem (hero, her_focusItem2) < 200)
+				&& (lastDivePickupTime + 2 < TimeCounter_Real)
 				{
 					CreateInvItems (hero, her_focusItem2.instanz, her_focusItem2.amount); //amount beachten
 					Wld_RemoveItem (her_focusItem2);
 					
 					var string str;	str = ConcatStrings (her_focusItem2.name, " aufgehoben!");
 					PrintScreen (str, -1, -1, FONT_SCREENSMALL, 3);
+					
+					lastDivePickupTime = TimeCounter_Real;
 				};
 			};
 		};

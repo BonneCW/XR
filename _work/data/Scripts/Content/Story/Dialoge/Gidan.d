@@ -238,7 +238,7 @@ FUNC VOID Info_Mod_Gidan_Golem_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Gidan_Golem_13_00"); //Du hast mir das Leben gerettet.
 	AI_Output(hero, self, "Info_Mod_Gidan_Golem_15_01"); //Sieht so aus.
-	AI_Output(self, hero, "Info_Mod_Gidan_Golem_13_02"); //Ich mag dich trotzdem nicht! Aber ich glaube ich, schulde dir was ...
+	AI_Output(self, hero, "Info_Mod_Gidan_Golem_13_02"); //Ich mag dich trotzdem nicht! Aber ich glaube ich schulde dir was ...
 	AI_Output(self, hero, "Info_Mod_Gidan_Golem_13_03"); //Sieh dir mal den Golem an. Hast du schon mal einen solchen Golem gesehen?
 	AI_Output(hero, self, "Info_Mod_Gidan_Golem_15_04"); //Du hast Recht. Ein Eisengolem ... Es gibt doch eigentlich nur Feuer, Eis, Stein und Sumpf.
 	AI_Output(self, hero, "Info_Mod_Gidan_Golem_13_05"); //Ja, dieser Golem da ist auch nur eine Maschine.
@@ -253,7 +253,7 @@ FUNC VOID Info_Mod_Gidan_Golem_Info()
 
 	B_StartOtherRoutine	(self, "UNTERWEGS");
 
-	B_LogEntry	(TOPIC_MOD_MILIZ_GIDAN, "Ein Eisengolem hat Gidan angegriffen ... sehr mysteriös. Gidan meinst, dass der Erfindern sicherlich beim Leuchtturm gefangen gehalten wird. Ich sollte dort mal vorbei sehen.");
+	B_LogEntry	(TOPIC_MOD_MILIZ_GIDAN, "Ein Eisengolem hat Gidan angegriffen ... sehr mysteriös. Gidan meint, dass der Erfindern sicherlich beim Leuchtturm gefangen gehalten wird. Ich sollte dort mal vorbei sehen.");
 };
 
 INSTANCE Info_Mod_Gidan_Pickpocket (C_INFO)

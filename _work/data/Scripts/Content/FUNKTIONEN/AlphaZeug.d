@@ -1,3 +1,8 @@
+// See https://forum.worldofplayers.de/forum/threads/1039918-Skript-Mehr-Alpha-Vobs-und-Alpha-Polys-in-Gothic-2
+// Made by Sektenspinner
+//
+// Gothic 2 only
+
 //************************************************
 //   Alpha-Vob Fix
 //************************************************
@@ -19,11 +24,11 @@ func void MoreAlphaVobs(var int newCount) {
     const int sizeOf_zCRndAlphaSortObject_Vob = 20;
     const int zCRndAlphaSortObject_Vob__vtbl = 8592292; //0x831BA4
     
-    const int newAlphaVobPool = 0; //wird jedes Laden zurückgesetzt
+    const int newAlphaVobPool = 0; //wird jedes Laden zur?ckgesetzt
     
     //nur fixen wenn noch nicht gefixt.
     if (!newAlphaVobPool) {
-        //neuer Pool der angegebenen Größe
+        //neuer Pool der angegebenen Grf?e
         newAlphaVobPool = MEM_Alloc(sizeOf_zCRndAlphaSortObject_Vob * newCount);
         
         //Neue Liste bauen, dabei _vtbl und vob initialsieren.
@@ -61,7 +66,7 @@ func void MoreAlphaVobs(var int newCount) {
 func void MoreAlphaPolys(var int newCount) {
     MEM_InitAll();
 
-    const int sizeOf_zD3D_alphaPoly = 260; //die Teile sind recht groß! Man kriegt nur 4000 pro MB
+    const int sizeOf_zD3D_alphaPoly = 260; //die Teile sind recht gro?! Man kriegt nur 4000 pro MB
     const int zD3D_alphaPoly__vtbl = 8631300; //0x83B404
     
     //nur anlegen wenn noch nicht geschehen.

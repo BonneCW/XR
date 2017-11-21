@@ -255,7 +255,7 @@ FUNC VOID Info_Mod_Alissandro_Botschafter_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_28_00"); //Es gibt ein Problem und ich will, dass du es löst.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Botschafter_15_01"); //Verstehe, was habe ich zu tun?
-	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_28_02"); //Wir haben Botschafter in alle Lager geschickt, um um Hilfe im Kampf gegen Bartholo zu bitten. Allerdings ist ein Botschafter nicht zurückgekommen.
+	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_28_02"); //Wir haben Botschafter in alle Lager geschickt, um Hilfe im Kampf gegen Bartholo zu erbitten. Allerdings ist ein Botschafter nicht zurückgekommen.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Botschafter_15_03"); //Wo habt ihr ihn hingeschickt?
 	AI_Output(self, hero, "Info_Mod_Alissandro_Botschafter_28_04"); //In das Lager der Banditen nahe der Trollschlucht.
 	AI_Output(hero, self, "Info_Mod_Alissandro_Botschafter_15_05"); //Und da wundert ihr euch, dass er nicht zurückgekommen ist?
@@ -425,7 +425,7 @@ FUNC VOID Info_Mod_Alissandro_GotoJackal_Info()
 
 	B_StartOtherRoutine	(Mod_1874_HMG_Makanius_MT, "TREFFEN");
 	B_StartOtherRoutine	(Mod_1107_GRD_Jackal_MT, "WACHE");
-	B_StartOtherRoutine	(Mod_1113_GRD_Fletcher_MT, "KILLMISSION");
+	B_StartOtherRoutine	(Mod_1902_STT_Ian_MT, "KILLMISSION");
 	B_StartOtherRoutine	(Mod_1025_KGD_Cathran_MT, "KILLMISSION");
 
 	Log_CreateTopic	(TOPIC_MOD_AL_KillMission, LOG_MISSION);
@@ -550,7 +550,7 @@ FUNC VOID Info_Mod_Alissandro_GotoZufluchten_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_AL_EROBERUNG, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_AL_EROBERUNG, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Alissandro hat mir den Auftrag gegeben, die Zufluchten unserer Leute aufzusuchen und sie zum Tempelvorplatz der Sekte zu schicken.");
+	B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Alissandro hat mir den Auftrag gegeben, die Zufluchten unserer Leute aufzusuchen und sie zum Tempelvorplatz der Sekte zu schicken. Auf der Karte sind 7 Positionen markiert.");
 
 	B_StartOtherRoutine	(Mod_1107_GRD_Jackal_MT, "INPSICAMP");
 	B_StartOtherRoutine	(Mod_761_BDT_Dexter_MT, "INPSICAMP");
@@ -650,6 +650,8 @@ FUNC VOID Info_Mod_Alissandro_Eroberung_10_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "GOTOTEMPELVORPLATZ");
+	
+	Wld_InsertNpc(Mod_9999_HMG_Heilungsmagier_MT, "PSI_TEMPLE_STAIRS_1");
 };
 
 INSTANCE Info_Mod_Alissandro_BeiBartholo (C_INFO)
@@ -682,6 +684,7 @@ FUNC VOID Info_Mod_Alissandro_BeiBartholo_Info()
 	
 	B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Wir sind nun bei Bartholo und Makanius hat das Signal für die Banditen und königlichen Gardisten gegeben, allerdings ist Bartholo geflohen und hat uns einen Gardisten auf den Hals gehetzt.");
 	
+	Mod_1106_EBR_Bartholo_MT.aivar[AIV_ToughGuy] = TRUE;
 	B_StartOtherRoutine	(Mod_1106_EBR_Bartholo_MT, "FLUCHTINKERKER");
 
 	Wld_SendTrigger	("EVT_KERKERGATE_01");

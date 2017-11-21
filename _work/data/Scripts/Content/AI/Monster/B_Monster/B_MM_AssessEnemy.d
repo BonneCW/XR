@@ -41,50 +41,29 @@ func void B_MM_AssessEnemy ()
 		};
 	};
 
-	if (Wld_IsTime(21,00,05,00))
-	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
-	{
-		if (!HeroAtLight)
-		{
-			HeroAtLight = 1 + C_HeroAtLight(); // sekündlich checken, ob Held in der Nähe einer Lampe ist
-		};
-
-		if (HeroAtLight == 1)
-		{
-			if (Npc_GetWalkMode(hero) == NPC_SNEAK)
-			{
-				if (Npc_GetDistToNpc(self, hero) > 200)
-				{
-					return;
-				};
-			}
-			else if (Npc_GetWalkMode(hero) == NPC_WALK)
-			{
-				if (Npc_GetDistToNpc(self, hero) > 300)
-				{
-					return;
-				};
-			}
-			else
-			{
-				if (Npc_GetDistToNpc(self, hero) > 400)
-				{
-					return;
-				};
-			};
-		};
-	};
-
-	if (CurrentLevel == EISGEBIET_ZEN)
-	{
+	if (CurrentLevel == EISGEBIET_ZEN) {
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Wolf_Griselda_01))
 		|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Blutfliege_Griselda_01))
 		|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Blutfliege_Griselda_02))
 		|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Spinne_Griselda_01))
 		|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Spinne_Griselda_02))
 		|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Swampgolem_Griselda_01))
-		&& (Npc_GetDistToWP(hero, "HEXE_ARENA") > 1000)
-		{
+		&& (Npc_GetDistToWP(other, "HEXE_ARENA") > 1000) {
+			return;
+		};
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Firegolem_Griselda_01))
+		|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Icegolem_Griselda_01))
+		&& (Npc_GetDistToWP(other, "HEXE_ARENA") > 500) {
+			if (IceGolem_Attacking_FireGolem == FALSE && FireGolem_Attacking_IceGolem == FALSE) {
+				return;
+			};
+		};
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Firegolem_Griselda_01))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Icegolem_Griselda_01)) {
+			return;
+		};
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Icegolem_Griselda_01))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Firegolem_Griselda_01)) {
 			return;
 		};
 	};
@@ -108,7 +87,6 @@ func void B_MM_AssessEnemy ()
 	};
 
 	if (self.aivar[AIV_MM_REAL_ID] == ID_SCHAEFERHUND)
-	&& (Npc_GetDistToWP(self, self.wp) > 3000)
 	{
 		return;
 	};

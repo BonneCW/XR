@@ -16990,6 +16990,40 @@ INSTANCE UNDEAD_DRAGON (C_PARTICLEFX)
      visalphastart = 255;
 };
 
+
+INSTANCE UNDEAD_SKELETON (C_PARTICLEFX)
+{
+     ppsvalue = 200;
+     ppsscalekeys_s = "1.0";
+     ppsislooping = 1;
+     ppsfps = 1;
+     shptype_s = "MESH";
+     shpfor_s = "OBJECT";
+     shpoffsetvec_s = "0 0 0";
+     shpdistribtype_s = "WALK";
+     shpdistribwalkspeed = 100;
+     shpdim_s = "7";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 2;
+     dirmode_s = "NONE";
+     velavg = 9.99999996e-012;
+     lsppartavg = 5000;
+     flygravity_s = "0 0.000 0";
+     visname_s = "DESTROYUNDEAD3.TGA";
+     visorientation_s = "VELO";
+     vistexisquadpoly = 1;
+     vistexanifps = 0;
+     vistexaniislooping = 2;
+     vistexcolorstart_s = "0 150 0";
+     vistexcolorend_s = "155 50 150";
+     vissizestart_s = "10 10";
+     vissizeendscale = 7;
+     visalphafunc_s = "ADD";
+     visalphastart = 255;
+};
+
         
         
 /*  backup 

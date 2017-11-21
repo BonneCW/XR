@@ -2,14 +2,14 @@ instance Mod_749_MIL_Ruga_NW (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Ruga";	
-	guild 		= GIL_OUT;
+	guild 		= GIL_PAL;
 	id 			= 749;
 	voice		= 0;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self,2);																	
+	B_SetAttributesToChapter (self, 2);																	
 	aivar[AIV_ToughGuy]		= TRUE;	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	

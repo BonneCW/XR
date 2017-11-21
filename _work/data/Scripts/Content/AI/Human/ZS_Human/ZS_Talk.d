@@ -175,7 +175,14 @@ func INT ZS_Talk_Loop ()
 		B_SetAivar(self, AIV_INVINCIBLE, FALSE);
 		B_SetAivar(other, AIV_INVINCIBLE, FALSE);
 		B_SetAivar(self, AIV_NpcStartedTalk, FALSE);
-		B_SetAivar(self, AIV_TalkedToPlayer, TRUE);
+		
+		if (B_GetAivar(self, AIV_TalkedToPlayer) == 0) {
+			B_SetAivar(self, AIV_TalkedToPlayer, TRUE);
+			
+			Mod_Erfolg_Kontaktfreudig += 1;
+			
+			Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_70, Mod_Erfolg_Kontaktfreudig);
+		};
 		
 		// ------ NUR bei Humans ------
 		if (self.guild < GIL_SEPERATOR_HUM)

@@ -89,7 +89,7 @@ INSTANCE Info_Mod_Cedric_Irdorath2 (C_INFO)
 FUNC INT Info_Mod_Cedric_Irdorath2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Cedric_Irdorath))
-	&& (Npc_GetDistToWP(self, "SHIP_CREW_CAPTAIN") < 500)
+	&& (Npc_GetDistToWP(self, "SHIP_CREW_CAPTAIN") < 1000)
 	&& (Mod_MiltenDabei == 1)
 	{
 		return 1;
@@ -119,7 +119,7 @@ INSTANCE Info_Mod_Cedric_Irdorath4 (C_INFO)
 FUNC INT Info_Mod_Cedric_Irdorath4_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Cedric_Irdorath))
-	&& (Npc_GetDistToWP(self, "SHIP_CREW_CAPTAIN") < 500)
+	&& (Npc_GetDistToWP(self, "SHIP_CREW_CAPTAIN") < 1000)
 	&& (Mod_JackDabei == 1)
 	{
 		return 1;
@@ -197,7 +197,7 @@ INSTANCE Info_Mod_Cedric_Irdorath3 (C_INFO)
 FUNC INT Info_Mod_Cedric_Irdorath3_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Cedric_Irdorath2))
-	&& (Npc_GetDistToWP(self, "SHIP_CREW_CAPTAIN") < 500)
+	&& (Npc_GetDistToWP(self, "SHIP_CREW_CAPTAIN") < 1000)
 	&& (Mod_CedricLos == 2)
 	{
 		return 1;
@@ -211,7 +211,7 @@ FUNC VOID Info_Mod_Cedric_Irdorath3_Info()
 	if (Mod_BonesDabei > 0)
 	|| (Mod_CordDabei > 0)
 	|| (Mod_RavenDabei > 0)
-	|| (Mod_MyxirDabei > 0)
+	|| (Mod_MyxirDabei > 0 && Mod_MyxirDabei < 4)
 	|| (Mod_CassiaDabei > 0)
 	|| (Mod_SagittaDabei > 0)
 	{
@@ -232,7 +232,7 @@ FUNC VOID Info_Mod_Cedric_Irdorath3_Info()
 			AI_Output(self, hero, "Info_Mod_Cedric_Irdorath3_12_06"); //Söldner, delinquente Schläger aus der Kolonie, die immer noch dem König die Gefolgschaft verweigern.
 		};
 		if (Mod_RavenDabei > 0)
-		|| (Mod_MyxirDabei > 0)
+		|| (Mod_MyxirDabei > 0 && Mod_MyxirDabei < 4)
 		{
 			AI_Output(self, hero, "Info_Mod_Cedric_Irdorath3_12_07"); //Belianer, Diener des finsteren Gottes, bei denen man sich nicht einmal sicher sein kann, ob sie nicht mit dem Urheber des Unheils unter einer Decke stecken.
 		};

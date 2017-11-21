@@ -33,6 +33,7 @@ FUNC VOID B_GiveTradeInv_Mod_Halvor_NW (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 100); 
 	
 		CreateInvItems (slf, ItFo_Fish, 4);
+		CreateInvItems (slf, ItMi_Addon_WhitePearl, 1);
 
 		Halvor_ItemsGiven_Chapter_3 = TRUE;
 	};

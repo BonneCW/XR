@@ -15,6 +15,7 @@ FUNC VOID B_GiveTradeInv_Mod_Elena_NW (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Cheese, 5); 
 		CreateInvItems (slf,ItFo_Bacon , 3); 
 		CreateInvItems (slf,ItFo_Milk , 5); 
+		CreateInvItems (slf,ItMi_Broom , 1); 
 		
 		Elena_ItemsGiven_Chapter_1 = TRUE;
 	};

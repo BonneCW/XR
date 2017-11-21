@@ -156,6 +156,7 @@ FUNC VOID Info_Mod_Bartholo_Sumpfkraut_Info()
 
 	AI_Teleport	(Mod_1156_GRD_Gardist_MT, "OCC_BARONS_RIGHT_ROOM_BACK");
 	B_StartOtherRoutine	(Mod_1156_GRD_Gardist_MT, "ANGRIFF");
+	Mod_1156_GRD_Gardist_MT.flags = 0;
 
 	KillALGardists	();
 };

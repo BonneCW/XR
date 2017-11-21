@@ -317,7 +317,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Zwillingsdorn()
 
 	Mod_Alax_Zutat_Zwillingsdorn = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Zwillingsdorn gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Zwillingsdorn gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -330,7 +330,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Weidenbeere()
 
 	Mod_Alax_Zutat_Weidenbeere = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Weidenbeere gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Weidenbeere gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -343,7 +343,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Waldbeere()
 
 	Mod_Alax_Zutat_Waldbeere = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Waldbeere gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Waldbeere gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -356,7 +356,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_ManaEssenz()
 
 	Mod_Alax_Zutat_ManaEssenz = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Mana Essenz gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Mana Essenz gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -369,7 +369,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_EssenzDerHeilung()
 
 	Mod_Alax_Zutat_EssenzDerHeilung = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Essenz der Heilung gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Essenz der Heilung gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -382,7 +382,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_ExtraktDerHeilung()
 
 	Mod_Alax_Zutat_ExtraktDerHeilung = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Extrakt der Heilung gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Extrakt der Heilung gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -395,7 +395,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_ElixierDerHeilung()
 
 	Mod_Alax_Zutat_ElixierDerHeilung = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Elixier der Heilung gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Elixier der Heilung gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -408,7 +408,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_SchnelleHeilung()
 
 	Mod_Alax_Zutat_SchnelleHeilung = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Trank der schnellen Heilung gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Trank der schnellen Heilung gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -421,7 +421,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_LeichteHeilung()
 
 	Mod_Alax_Zutat_LeichteHeilung = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Leichten Heiltrank gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Leichten Heiltrank gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -434,7 +434,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_ManaExtrakt()
 
 	Mod_Alax_Zutat_ManaExtrakt = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Mana Extrakt gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Mana Extrakt gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -447,7 +447,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_ManaElixier()
 
 	Mod_Alax_Zutat_ManaElixier = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Mana Elixier gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Mana Elixier gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -460,7 +460,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_LeichterManatrank()
 
 	Mod_Alax_Zutat_LeichterManatrank = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Leichten Manatrank gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Leichten Manatrank gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -473,7 +473,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_LeichtesMana()
 
 	Mod_Alax_Zutat_LeichtesMana = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Trank des leichten Manas gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Trank des leichten Manas gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -486,7 +486,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Schwefel()
 
 	Mod_Alax_Zutat_Schwefel = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Schwefel gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Schwefel gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -499,7 +499,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_SchwarzePerle()
 
 	Mod_Alax_Zutat_SchwarzePerle = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Schwarze Perle gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Schwarze Perle gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -512,7 +512,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Pech()
 
 	Mod_Alax_Zutat_Pech = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Pech gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Pech gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -525,7 +525,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Kohle()
 
 	Mod_Alax_Zutat_Kohle = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Kohle gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Kohle gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -538,7 +538,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Heilwurzel()
 
 	Mod_Alax_Zutat_Heilwurzel = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Heilwurzel gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Heilwurzel gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -551,7 +551,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Heilpflanze()
 
 	Mod_Alax_Zutat_Heilpflanze = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Heilpflanze gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Heilpflanze gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -564,7 +564,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Heilkraut()
 
 	Mod_Alax_Zutat_Heilkraut = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Heilkraut gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Heilkraut gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -577,7 +577,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Heilknospe()
 
 	Mod_Alax_Zutat_Heilknospe = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Heilknospe gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Heilknospe gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -590,7 +590,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_GletscherQuartz()
 
 	Mod_Alax_Zutat_GletscherQuartz = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Gletscher Quartz gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Gletscher Quartz gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -603,7 +603,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Feuerwurzel()
 
 	Mod_Alax_Zutat_Feuerwurzel = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Feuerwurzel gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Feuerwurzel gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -616,7 +616,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Feuernessel()
 
 	Mod_Alax_Zutat_Feuernessel = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Feuernessel gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Feuernessel gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -629,7 +629,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Feuerkraut()
 
 	Mod_Alax_Zutat_Feuerkraut = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Feuerkraut gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Feuerkraut gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -642,7 +642,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Bergkristall()
 
 	Mod_Alax_Zutat_Bergkristall = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Bergkristall gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Bergkristall gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -655,7 +655,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Aquamarin()
 
 	Mod_Alax_Zutat_Aquamarin = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Aquamarin gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Aquamarin gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -668,7 +668,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Buddlerfleisch()
 
 	Mod_Alax_Zutat_Buddlerfleisch = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Buddlerfleisch gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Buddlerfleisch gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -681,7 +681,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Dunkelpilz()
 
 	Mod_Alax_Zutat_Dunkelpilz = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Dunkelpilz gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Dunkelpilz gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -694,7 +694,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Fliegenpilz()
 
 	Mod_Alax_Zutat_Fliegenpilz = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Fliegenpilz gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Fliegenpilz gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -707,7 +707,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Blauflieder()
 
 	Mod_Alax_Zutat_Blauflieder = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Blauflieder gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Blauflieder gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -720,7 +720,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Sumpfkraut()
 
 	Mod_Alax_Zutat_Sumpfkraut = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Sumpfkraut gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Sumpfkraut gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };
@@ -733,7 +733,7 @@ FUNC VOID Info_Mod_Alax_AlchemieLehrer2_Snapperkraut()
 
 	Mod_Alax_Zutat_Snapperkraut = TRUE;
 	
-	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Ich habe Alax 6x Snapperkraut gebracht.");
+	B_LogEntry	(TOPIC_MOD_ALAX_ZUTATEN, "Ich habe Alax 6x Snapperkraut gebracht.");
 
 	Info_Mod_Alax_AlchemieLehrer2_Verteiler();
 };

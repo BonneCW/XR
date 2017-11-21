@@ -1,11 +1,11 @@
 instance Mod_1552_SKE_Skelett_DI2 (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Zombie";
+	name 		= "Sprechender Zombie";
 	guild 		= GIL_zombie;
 	id 			= 1552;
 	voice		= 0;
-	flags       = 0;
+	flags       = 2;
 	level	= 34;			
 	
 	// ------ Attribute ------

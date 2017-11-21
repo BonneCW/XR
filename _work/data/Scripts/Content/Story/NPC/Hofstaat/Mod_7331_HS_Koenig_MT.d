@@ -44,7 +44,7 @@ FUNC VOID Rtn_Start_7331()
 
 FUNC VOID Rtn_Fest_7331()
 {	
-	TA_Dance		(21,00,07,00,"PSI_TEMPLE_NOVIZE_PR3");
+	TA_Dance		(21,00,07,00,"PATH_TAKE_HERB_07");
 	TA_Dance		(07,00,21,00,"PATH_TAKE_HERB_07");
 };
 

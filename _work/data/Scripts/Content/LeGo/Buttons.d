@@ -11,9 +11,6 @@ class _Button {
 	var int posy;
 	var int posx2;
 	var int posy2;
-
-	var int width;
-	var int height;
 	
 	var int on_enter;
 	var int on_leave;
@@ -21,10 +18,13 @@ class _Button {
 
 	// intern
 	var int view; 	// zCView@
-	var int state; 	
+	var int state; 
+	
+	var int width;
+	var int height;
 
 };
-const string _BUTTON_STRUCT = "auto|10";
+const string _BUTTON_STRUCT = "auto|12";
 func void _Button_Delete(var _Button btn) {
 	View_Delete(btn.view);
 };
@@ -49,15 +49,13 @@ func int Button_Create(var int posx, var int posy, var int width, var int height
 	btn.posy = posy;
 	btn.posx2 = posx+width;
 	btn.posy2 = posy+height;
-
-	btn.width = width;
-	btn.height = height;
 	
 	btn.on_enter = MEM_GetFuncID(on_enter);
 	btn.on_leave = MEM_GetFuncID(on_leave);
 	btn.on_click = MEM_GetFuncID(on_click);
 	
-
+	btn.width = width;
+	btn.height = height;
 
 	// intern
 	btn.view = View_Create(posx, posy, posx+width, posy+height); // posy+height or posy-height???
@@ -170,6 +168,7 @@ func void Button_CreateMouseover(var string text, var string font) {
 	
 	View_SetTexture(_BUTTON_MO, "WHITE.TGA");
 	View_SetColor(_BUTTON_MO, RGBA(0,0,0,255));
+
 	View_Open(_BUTTON_MO);
 
 	
@@ -215,7 +214,7 @@ func int Button_GetState(var int hndl) {
 func void Button_Move(var int hndl, var int nposx, var int nposy) {
 	var _Button btn; btn = get(hndl);
 	
-	View_MoveToPxl(btn.view, nposx, nposy);
+	View_MovePxl(btn.view, nposx, nposy);
 	
 	btn.posx = Print_ToVirtual(nposx, PS_X);
 	btn.posy = Print_ToVirtual(nposy, PS_Y);

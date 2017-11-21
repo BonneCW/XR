@@ -450,6 +450,7 @@ FUNC INT Info_Mod_Cassia_Elvira2_Condition()
 {
 	if (Npc_HasItems(hero, ItMi_InnosStatue_REL) == 1)
 	&& (Npc_HasItems(hero, ItMi_Gold) >= 200)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Cassia_Elvira))
 	{
 		return 1;
 	};

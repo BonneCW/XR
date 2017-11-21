@@ -84,7 +84,7 @@ FUNC VOID Info_Mod_Parlan_Aufgabe_Fertig_Info()
 
 	B_GivePlayerXP	(100);
 
-	B_LogEntry_More	(TOPIC_MoD_FEUERMAGIER, TOPIC_MOD_PARLAN_MANA, "Parlan habe ich überzeugt.", "Parlan ist zufrieden mit mir. Ich habe genug für ihn getan.");
+	B_LogEntry_More	(TOPIC_MOD_FEUERMAGIER, TOPIC_MOD_PARLAN_MANA, "Parlan habe ich überzeugt.", "Parlan ist zufrieden mit mir. Ich habe genug für ihn getan.");
 	B_SetTopicStatus	(TOPIC_MOD_PARLAN_MANA, LOG_SUCCESS);
 
 	B_Göttergefallen(1, 1);

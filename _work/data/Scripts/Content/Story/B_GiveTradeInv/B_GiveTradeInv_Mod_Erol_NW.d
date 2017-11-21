@@ -17,6 +17,9 @@ FUNC VOID B_GiveTradeInv_Mod_Erol_NW (var C_NPC slf)
 		CreateInvItems (slf,ItPl_Temp_Herb, 1); 
 		CreateInvItems (slf,ItPo_Perm_Health, 1); 
 		CreateInvItems (slf,ItMi_Orkstatuette, 1); 
+		CreateInvItems (slf,ItMi_DarkPearl, 1); 
+		CreateInvItems (slf,ItMi_BeliarStatue, 1); 
+		CreateInvItems (slf,ItMi_RuneBlank, 1); 
 		
 		
 		CreateInvItems (slf, ItAm_Hast, 1);

@@ -33,6 +33,8 @@ FUNC VOID B_GiveTradeInv_Mod_Hakon_NW (var C_NPC slf)
 		CreateInvItems (slf, ItBE_Addon_MIL_01		, 1); 
 		CreateInvItems (slf, ItAm_Prot_Edge_01		, 1); 
 		
+		CreateInvItems (slf, ItMi_Metallblock		, 10); 
+		
 		Hakon_ItemsGiven_Chapter_1 = TRUE;
 	};
 	

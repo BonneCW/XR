@@ -1855,7 +1855,7 @@ INSTANCE ItMi_Erzkiste(C_Item)
 
 INSTANCE ItMi_OrlansSchnaps(C_Item)
 {
-	name 				=	"Paket mit Orlan's Schnaps";
+	name 				=	"Paket mit Orlans Schnaps";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	0;
@@ -2027,7 +2027,7 @@ INSTANCE ItMi_Weinlieferung(C_Item)
 
 INSTANCE ItMi_DuengerPaket(C_Item)
 {
-	name 				=	"Paket";
+	name 				=	"Düngerpaket";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	0;
@@ -3647,7 +3647,7 @@ INSTANCE ItMi_AlvarKristall (C_Item)
 	name 				=	"Kristall";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI | ITEM_SHOW;
 
 	value 				=	250;
 
@@ -3665,7 +3665,7 @@ INSTANCE ItMi_TraenenKristall (C_Item)
 	name 				=	"Tränenkristall";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI | ITEM_SHOW;
 
 	value 				=	250;
 

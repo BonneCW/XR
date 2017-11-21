@@ -112,15 +112,24 @@ func int B_WispDetectedItem ()
 			}
 			else
 			{
-				if (Npc_GetDistToNpc (self,hero) < 500)
-				{
-					self.aivar [AIV_TAPOSITION] = ISINPOS;
-				}
-				else
-				{
-					self.aivar [AIV_TAPOSITION] = NOTINPOS;
-					Npc_ClearAIQueue	(self);
-					AI_GotoNpc (self, hero);
+				if (WispSearching == WispSearch_QUEST)
+				&& (Hlp_IsValidItem(ItMi_AlvarKristall)) {
+					var int ptr; ptr = MEM_SearchVobByName("ITMI_ALVARKRISTALL");
+					if (ptr) {
+						MEM_AssignInst(item, ptr);
+					};
+					B_GetWispDetectedItem();
+				} else {
+					if (Npc_GetDistToNpc (self,hero) < 500)
+					{
+						self.aivar [AIV_TAPOSITION] = ISINPOS;
+					}
+					else
+					{
+						self.aivar [AIV_TAPOSITION] = NOTINPOS;
+						Npc_ClearAIQueue	(self);
+						AI_GotoNpc (self, hero);
+					};
 				};
 			};
 		}

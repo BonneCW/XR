@@ -33,6 +33,11 @@ FUNC VOID B_GiveTradeInv_Mod_Gorax_NW (var C_NPC slf)
 		
 		CreateInvItems 	 (slf, ItRi_Mana_01, 1);
 		CreateInvItems (slf, ItMi_Salpeter, 2); 
+		
+		CreateInvItems (slf, ItPl_Zwillingsdorn, 2); 
+		CreateInvItems (slf, ItPl_Heilknospe, 2); 
+		CreateInvItems (slf, ItPl_Mana_Herb_03, 1); 
+		CreateInvItems (slf, ItPl_Health_Herb_03, 1); 
 				
 		Gorax_ItemsGiven_Chapter_1 = TRUE;
 	};

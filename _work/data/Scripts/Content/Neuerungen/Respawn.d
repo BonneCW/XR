@@ -764,7 +764,11 @@ func void AddToRespawnArray(var c_npc slf) {
 	var int inst; inst = Hlp_GetInstanceID(slf);
 	var int id; id = MapRespawnInstanceToID(inst);
 	myRespawnObject.id = id;
-	myRespawnObject.wp = slf.wp;
+	if (STR_Len(slf.spawnpoint) == 0) {
+		myRespawnObject.wp = slf.wp;
+	} else {
+		myRespawnObject.wp = slf.spawnpoint;
+	};
 	myRespawnObject.chapter = Kapitel;
 	myRespawnObject.area = CurrentLevel;
 	
