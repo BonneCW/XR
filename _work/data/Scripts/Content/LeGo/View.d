@@ -212,11 +212,18 @@ func void View_Close(var int hndl) {
 // View löschen
 //========================================
 func void zCView_Delete(var zCView this) {
+	if (this == 0) {
+		return;
+	};
+	var int ptr; ptr = MEM_InstToPtr(this);
+	if (ptr <= 10000) {
+		return;
+	};
     if (this.textlines_next) {
         //free(this.textlines_next, zCList__zCViewText@);
         this.textlines_next = 0;
     };
-    CALL__thiscall(MEM_InstToPtr(this), zCView__@zCView);
+    CALL__thiscall(ptr, zCView__@zCView);
 };
 
 func void ViewPtr_Delete(var int ptr) {
