@@ -166,7 +166,9 @@ func void Button_CreateMouseover(var string text, var string font) {
 	};
 	_Button_MO_Hi = hi*STR_SplitCount(text, Print_LineSeperator)+2;
 	
-	View_SetTexture(_BUTTON_MO, "MO_BG.TGA");
+	View_SetTexture(_BUTTON_MO, "WHITE.TGA");
+	View_SetColor(_BUTTON_MO, RGBA(0,0,0,255));
+
 	View_Open(_BUTTON_MO);
 
 	
