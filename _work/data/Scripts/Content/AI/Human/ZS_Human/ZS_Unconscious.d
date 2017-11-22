@@ -115,7 +115,8 @@ func void ZS_Unconscious ()
 	// ------ XP ------
 	
 	if (self.guild < GIL_SEPERATOR_HUM)
-	&& (C_NpcIsHero(other)) {
+	&& (C_NpcIsHero(other))
+	&& (Npc_IsInFightMode(other, FMODE_FIST)) {
 		Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_51, Spine_GetAchievementProgress(SPINE_ACHIEVEMENT_51) + 1);
 	};
 	
