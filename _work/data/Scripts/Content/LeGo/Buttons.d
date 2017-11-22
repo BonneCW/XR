@@ -19,12 +19,9 @@ class _Button {
 	// intern
 	var int view; 	// zCView@
 	var int state; 
-	
-	var int width;
-	var int height;
 
 };
-const string _BUTTON_STRUCT = "auto|12";
+const string _BUTTON_STRUCT = "auto|10";
 func void _Button_Delete(var _Button btn) {
 	View_Delete(btn.view);
 };
@@ -53,9 +50,6 @@ func int Button_Create(var int posx, var int posy, var int width, var int height
 	btn.on_enter = MEM_GetFuncID(on_enter);
 	btn.on_leave = MEM_GetFuncID(on_leave);
 	btn.on_click = MEM_GetFuncID(on_click);
-	
-	btn.width = width;
-	btn.height = height;
 
 	// intern
 	btn.view = View_Create(posx, posy, posx+width, posy+height); // posy+height or posy-height???
@@ -213,13 +207,14 @@ func int Button_GetState(var int hndl) {
 };
 func void Button_Move(var int hndl, var int nposx, var int nposy) {
 	var _Button btn; btn = get(hndl);
-	
+	var int width; width = btn.posx2 - btn.posx;
+	var int height; height = btn.posy2 - btn.posy;
 	View_MovePxl(btn.view, nposx, nposy);
 	
 	btn.posx = Print_ToVirtual(nposx, PS_X);
 	btn.posy = Print_ToVirtual(nposy, PS_Y);
-	btn.posx2 = Print_ToVirtual(nposx, PS_X) + btn.width;
-	btn.posy2 = Print_ToVirtual(nposy, PS_Y) + btn.height;
+	btn.posx2 = btn.posx + btn.width;
+	btn.posy2 = btn.posy + btn.height;
 };
 
 func int Button_GetViewHandle(var int hndl) {

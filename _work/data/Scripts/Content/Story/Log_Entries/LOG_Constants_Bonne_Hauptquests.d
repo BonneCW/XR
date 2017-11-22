@@ -7,7 +7,6 @@ const string TOPIC_MOD_XERES	=	"Xeres";
 const string TOPIC_MOD_ERSTEWAFFE	=	"Magische Waffe";
 const string TOPIC_MOD_THERIDDLE	=	"Der Fremde";
 const string TOPIC_MOD_URIZIEL	=	"Uriziel";
-const string TOPIC_MOD_GDG_RITUAL	=	"Das Ritual";
 const string TOPIC_MOD_ANFANG	=	"Der Anfang";
 const string TOPIC_MOD_DUNKLERPILGER	=	"Der dunkle Pilger";
 const string TOPIC_MOD_ECHSEN	=	"Die Echsen im Sumpf";

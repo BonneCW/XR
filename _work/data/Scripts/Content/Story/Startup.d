@@ -7625,6 +7625,11 @@ FUNC VOID INIT_DragonIsland()
 		Wld_InsertItem	(IR_RedLight_07, "FP_ITEM_LIGHT_07");
 		Wld_InsertItem	(IR_RedLight_08, "FP_ITEM_LIGHT_08");
 	};
+	
+	if (Npc_KnowsInfo(hero, Info_Mod_Jack_Irdorath2))
+	&& (Mod_JackHW < 3 || Mod_JackAL < 3) {
+		B_SetTopicStatus(TOPIC_MOD_HQ_JACK, LOG_FAILED);
+	};
 };
 
 FUNC VOID STARTUP_Schiffschlacht()
