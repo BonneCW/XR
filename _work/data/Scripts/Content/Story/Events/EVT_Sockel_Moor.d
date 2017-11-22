@@ -1,4 +1,4 @@
-FUNC VOID EVT_SOCKEL_MOOR_S0()
+FUNC VOID EVT_SOCKEL_MOOR_S1()
 {
 	Npc_RemoveInvItems	(hero, ItMi_Focus_Moor, 1);
 
