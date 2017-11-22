@@ -213,8 +213,8 @@ func void Button_Move(var int hndl, var int nposx, var int nposy) {
 	
 	btn.posx = Print_ToVirtual(nposx, PS_X);
 	btn.posy = Print_ToVirtual(nposy, PS_Y);
-	btn.posx2 = btn.posx + btn.width;
-	btn.posy2 = btn.posy + btn.height;
+	btn.posx2 = btn.posx + width;
+	btn.posy2 = btn.posy + height;
 };
 
 func int Button_GetViewHandle(var int hndl) {
