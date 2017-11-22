@@ -199,7 +199,7 @@ FUNC VOID Info_Mod_Garvell_Fenia_C()
 
 	Log_CreateTopic	(TOPIC_MOD_GARVELL_FENIA, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_GARVELL_FENIA, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_GARVELL_FENIA, "Ich soll Fenia, der Händlerin, im Auftrag eines Bürgers den Büstenhalter mit Hilfe eines Telekinese-Spruches stehlen. Wie infantil!");
+	B_LogEntry	(TOPIC_MOD_GARVELL_FENIA, "Ich soll Fenia, der Händlerin, im Auftrag von Garvell den Büstenhalter mit Hilfe eines Telekinese-Spruches stehlen. Wie infantil!");
 
 	Mod_Garvell_Fenia = 1;
 
