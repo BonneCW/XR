@@ -345,6 +345,57 @@ FUNC VOID B_MG_GameLoop() {
 
 			B_MG_ResetWalks(0);
 			B_MG_ResetWalks(1);
+			
+			if (PlayerHas_MinecrawlerQueen) {
+				if (!IsOwnFigureInUse(MG_FIGUR_MINECRAWLERQUEEN)) {
+					Button_Hide(Hero_MinecrawlerQueen.button);
+				};
+			};
+			if (PlayerHas_Balrog) {
+				if (!IsOwnFigureInUse(MG_FIGUR_BALROG)) {
+					Button_Hide(Hero_Balrog.button);
+				};
+			};
+			if (PlayerHas_Schaf) {
+				if (!IsOwnFigureInUse(MG_FIGUR_SCHAF)) {
+					Button_Hide(Hero_Schaf.button);
+				};
+			};
+			if (PlayerHas_Hase) {
+				if (!IsOwnFigureInUse(MG_FIGUR_HASE)) {
+					Button_Hide(Hero_Hase.button);
+				};
+			};
+			if (PlayerHas_Snapper) {
+				if (!IsOwnFigureInUse(MG_FIGUR_SNAPPER)) {
+					Button_Hide(Hero_Snapper.button);
+				};
+			};
+			if (PlayerHas_StoneGuardian) {
+				if (!IsOwnFigureInUse(MG_FIGUR_STONEGUARDIAN)) {
+					Button_Hide(Hero_Stoneguardian.button);
+				};
+			};
+			if (PlayerHas_Meatbug) {
+				if (!IsOwnFigureInUse(MG_FIGUR_MEATBUG)) {
+					Button_Hide(Hero_Meatbug.button);
+				};
+			};
+			if (PlayerHas_Bloodfly) {
+				if (!IsOwnFigureInUse(MG_FIGUR_BLOODFLY)) {
+					Button_Hide(Hero_Bloodfly.button);
+				};
+			};
+			if (PlayerHas_Goblin) {
+				if (!IsOwnFigureInUse(MG_FIGUR_GOBLIN)) {
+					Button_Hide(Hero_Goblin.button);
+				};
+			};
+			if (PlayerHas_Troll) {
+				if (!IsOwnFigureInUse(MG_FIGUR_TROLL)) {
+					Button_Hide(Hero_Troll.button);
+				};
+			};
 		};
 	} else if (MG_GameState == 4) { // das eigentliche Spiel
 		if (MG_Spieler01 == TRUE) {

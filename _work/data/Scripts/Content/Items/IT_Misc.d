@@ -2501,7 +2501,7 @@ INSTANCE ItMi_Piratenschatz(C_Item)//steht drin, weil auch in Welt verteilt!!
 FUNC VOID UsePiratenschatz ()
 {
 		CreateInvItems (hero, ItMi_Gold, 2000);
-		CreateInvItems (hero, ItMi_Ore, 5);
+		CreateInvItems (hero, ItMi_Nugget, 5);
 		CreateInvItems (hero, ItMi_GoldRing, 1);
 		
 		Snd_Play ("Geldbeutel");
