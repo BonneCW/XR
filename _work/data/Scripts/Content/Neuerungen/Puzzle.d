@@ -29,7 +29,7 @@ FUNC VOID Puzzle_Tick() {
 	if (Puzzle_ActiveHndl != 0) {
 		if (Cursor_X != Puzzle_LastMouseX || Cursor_Y != Puzzle_LastMouseY) {
 			var _Button btn; btn = get(Puzzle_ActiveHndl);
-			Button_Move(Puzzle_ActiveHndl, Cursor_X - Puzzle_DiffFromMouseX, Cursor_Y - Puzzle_DiffFromMouseY);
+			Button_MoveTo(Puzzle_ActiveHndl, Cursor_X - Puzzle_DiffFromMouseX, Cursor_Y - Puzzle_DiffFromMouseY);
 			Puzzle_LastMouseX = Cursor_X;
 			Puzzle_LastMouseY = Cursor_Y;
 		};
