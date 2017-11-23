@@ -129,6 +129,8 @@ FUNC VOID Info_Mod_PennerVater_Aufgabe_Info()
 	Info_Mod_PennerVater_Schlusssatz();
 
 	B_LogEntry	(TOPIC_MOD_JG_PENNERSVATER, "Hm ... tiefes Wasser ... laut fallen ... von oben ... das Beste am Grund ... Wasser fallen ... Hm ...");
+	
+	Wld_InsertItem(ItMi_Piratenschatz, "FP_ITEM_PIRATENSCHATZ")
 };
 
 INSTANCE Info_Mod_PennerVater_Kimon (C_INFO)

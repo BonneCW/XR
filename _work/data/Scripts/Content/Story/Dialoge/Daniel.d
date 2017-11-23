@@ -105,7 +105,6 @@ FUNC VOID Info_Mod_Daniel_BrokenRune_Info()
 	Log_CreateTopic	(TOPIC_MOD_JG_RUNENZAUBER, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_JG_RUNENZAUBER, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_JG_RUNENZAUBER, "Es gibt zwei wichtige Magier hier in Khorata: Den Feuermagier Fuego im Magierhaus und einen Wassermagier im Armenviertel.");
-	B_SetTopicStatus	(TOPIC_MOD_JG_PENNERSVATER, LOG_SUCCESS);
 };
 
 INSTANCE Info_Mod_Daniel_BrokenRune2 (C_INFO)
