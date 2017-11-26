@@ -85,7 +85,7 @@ FUNC VOID Zustaende()
 		{
 			var C_Item itm; itm = Npc_GetEquippedArmor(hero);
 			if (!Hlp_IsValidItem(itm)) {
-				Spine_UnlockAchievement(SPINE_ACHIEVEMENT_71);
+				Spine_UnlockAchievement(SPINE_ACHIEVEMENT_72);
 			};
 			if (Eistaucher >= 5)
 			{
