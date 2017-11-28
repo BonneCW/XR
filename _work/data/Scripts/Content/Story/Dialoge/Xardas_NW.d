@@ -734,7 +734,7 @@ INSTANCE Info_Mod_Xardas_NW_WoTempel (C_INFO)
 	information	= Info_Mod_Xardas_NW_WoTempel_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Wo war doch gleih der Eingang zum Tempel?";
+	description	= "Wo war doch gleich der Eingang zum Tempel?";
 };
 
 FUNC INT Info_Mod_Xardas_NW_WoTempel_Condition()

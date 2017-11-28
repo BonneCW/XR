@@ -1492,7 +1492,7 @@ func void UsePetuniaZettel ()
 					Doc_PrintLines	( nDocID,  0, ""					);
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "Wenn ihr einen Anwärter seht, schlagt hin nieder und flößt ihm den beigelegten Trank ein. Er wird träumen, dass er das ach so tolle Blütenblatt dort finden wird, wo die Goblinmatronen waren. Dorthin müsst ihr das vorbereitete Blütenblatt bringen. Anschließend wird der Anwärter das Blatt zu seinem Auftraggeber bringen und wir wissen endlich, wer unser Hauptziel ist. Schaltet den Anwärter und den Auftraggeber aus und kehrt zu mir zurück."					);
+					Doc_PrintLines	( nDocID,  0, "Wenn ihr einen Anwärter seht, schlagt ihn nieder und flößt ihm den beigelegten Trank ein. Er wird träumen, dass er das ach so tolle Blütenblatt dort finden wird, wo die Goblinmatronen waren. Dorthin müsst ihr das vorbereitete Blütenblatt bringen. Anschließend wird der Anwärter das Blatt zu seinem Auftraggeber bringen und wir wissen endlich, wer unser Hauptziel ist. Schaltet den Anwärter und den Auftraggeber aus und kehrt zu mir zurück."					);
 					Doc_PrintLine	( nDocID,  0, "P."					);
 					
 					Doc_Show		( nDocID );
