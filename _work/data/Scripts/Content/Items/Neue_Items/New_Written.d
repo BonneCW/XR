@@ -577,10 +577,14 @@ FUNC VOID Use_OTZauberformel()
 		B_RemoveNpc	(Monster_11056_Skelett_OT);
 
 		Autosave_Counter = Mod_Autosave*600;
-	}
-	else
-	{
+	} else {
+		B_Say(hero, NULL, "$MISSINGITEM");
 		CreateInvItems	(hero, ItWr_OTZauberformel, 1);
+		if (Npc_HasItems(hero, ItRu_LightHeal) == 0) {
+			Print ("Heilrune fehlt.");
+		} else {
+			Print ("Erzrüstung fehlt.");
+		};
 	};
 };
 
