@@ -327,6 +327,13 @@ FUNC VOID GILDENSTORY_PAL()
 			B_KillNpc	(Mod_1178_MIL_Jason_NW);
 		};
 
+		if (FI_Story == 12)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Neron_Hi))
+		&& (!Npc_KnowsInfo(hero, Info_Mod_Andre_RLMord))
+		{
+			Info_Mod_Andre_RLMord.description = "Neron schickt mich.";
+		};
+
 		if (Mod_PAL_Galf == 0)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Galf_Hi))
 		&& (!Npc_IsInState(Mod_7235_NONE_Galf_NW, ZS_Talk))
