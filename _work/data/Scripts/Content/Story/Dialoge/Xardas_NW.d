@@ -1110,7 +1110,7 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch2_Info()
 
 	B_GivePlayerXP	(400);
 
-	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Xardas will, dass ich die Seelenpeiniger besiege und dabei gleich nach weiteren Hinweisen Ausschau halte. Schlieﬂlich treibt sich Urnol noch immer irgendwo hier herum.");
+	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Xardas will, dass ich die Seelenpeiniger besiege und dabei gleich nach weiteren Hinweisen Ausschau halte. Schlieﬂlich treibt sich Urnol noch immer irgendwo hier herum. Er gab mir den Hinweis, dass die Seelenpeiniger das Licht meiden. Das wird helfen.");
 
 	Mod_HQ_Daemonisch = 3;
 
