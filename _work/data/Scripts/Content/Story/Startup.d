@@ -21,6 +21,8 @@ func void INIT_GLOBAL()
 {
 	// wird fuer jede Welt aufgerufen (vor INIT_<LevelName>)
 	Game_InitGerman();
+			
+	RidingLorry = FALSE;
 
 	Cursor_Hndl = 0;
 

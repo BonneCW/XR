@@ -1493,6 +1493,8 @@ FUNC VOID DAUERFUNC_01()
 		&& (Npc_GetDistToWP(hero, "LORE_MINE") < 1000)
 		{
 			AI_PlayAni	(hero, "T_SIT_2_STAND");
+			
+			RidingLorry = FALSE;
 
 			LoreEisgebietMine01 = 3;
 		};
@@ -1530,6 +1532,8 @@ FUNC VOID DAUERFUNC_01()
 		&& (Npc_GetDistToWP(hero, "LORE_START") < 2000)
 		{
 			AI_PlayAni	(hero, "T_SIT_2_STAND");
+			
+			RidingLorry = FALSE;
 
 			LoreEisgebietMine01 = 0;
 		};
@@ -1551,6 +1555,8 @@ FUNC VOID DAUERFUNC_01()
 		&& (Npc_GetDistToWP(hero, "LORE_SW") < 1000)
 		{
 			AI_PlayAni	(hero, "T_SIT_2_STAND");
+			
+			RidingLorry = FALSE;
 
 			LoreEisgebietSW01 = 3;
 		};
@@ -1588,6 +1594,8 @@ FUNC VOID DAUERFUNC_01()
 		&& (Npc_GetDistToWP(hero, "LORE_START") < 3000)
 		{
 			AI_PlayAni	(hero, "T_SIT_2_STAND");
+			
+			RidingLorry = FALSE;
 
 			LoreEisgebietSW01 = 0;
 		};

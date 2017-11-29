@@ -1,3 +1,5 @@
+var int RidingLorry;
+
 FUNC VOID LoreWP(var string wp) {
 	VAR oCNpc her;
     her = Hlp_GetNpc (PC_HERO);
@@ -11,6 +13,8 @@ FUNC VOID LoreWP(var string wp) {
 	AI_AlignToWp(hero);
 
 	AI_PlayAni	(hero, "T_STAND_2_SIT");
+	
+	RidingLorry = TRUE;
 };
 
 FUNC VOID LORERELS ()
