@@ -186,6 +186,10 @@ FUNC VOID EVT_STEINSCRIPT05_S0 ()
 
 					Wld_SendTrigger	("EVT_RAETSELWAND_CAM");
 					Wld_SendTrigger	("EVT_RAETSELSTEINWAND");
+				} else if (Mod_JG_Raetselstein_Counter == 2) {
+					B_LogEntry	(TOPIC_MOD_JG_RAETSELWAND, "Einmal richtig. Das scheint aber noch nicht zu reichen...");
+				} else if (Mod_JG_Raetselstein_Counter == 3) {
+					B_LogEntry	(TOPIC_MOD_JG_RAETSELWAND, "Immer noch nicht richtig...");
 				};
 			}
 			else

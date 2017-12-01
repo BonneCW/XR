@@ -121,6 +121,38 @@ func void B_SetAttributesToChapter (var C_NPC slf, var int kap)
 		slf.attribute[ATR_HITPOINTS_MAX]	= 760;
 		slf.attribute[ATR_HITPOINTS] 		= 760;
 	};
+	
+	// ------ Kapitel 6 NSCs -------
+	if (kap >= 7)
+	{
+		slf.level = 65 + r_max(10);
+		
+		slf.attribute[ATR_STRENGTH] 		= 250;
+		slf.aivar[REAL_STRENGTH]			= 250;
+		slf.attribute[ATR_DEXTERITY] 		= 250;
+		slf.aivar[REAL_DEXTERITY]			= 250;
+		slf.attribute[ATR_MANA_MAX] 		= 1500;
+		slf.aivar[REAL_MANA_MAX]			= 1500;
+		slf.attribute[ATR_MANA] 			= 1500;
+		slf.attribute[ATR_HITPOINTS_MAX]	= 1250;
+		slf.attribute[ATR_HITPOINTS] 		= 1250;
+	};
+	
+	// ------ Kapitel 6 NSCs -------
+	if (kap >= 8)
+	{
+		slf.level = 75 + r_max(10);
+		
+		slf.attribute[ATR_STRENGTH] 		= 300;
+		slf.aivar[REAL_STRENGTH]			= 300;
+		slf.attribute[ATR_DEXTERITY] 		= 300;
+		slf.aivar[REAL_DEXTERITY]			= 300;
+		slf.attribute[ATR_MANA_MAX] 		= 2000;
+		slf.aivar[REAL_MANA_MAX]			= 2000;
+		slf.attribute[ATR_MANA] 			= 2000;
+		slf.attribute[ATR_HITPOINTS_MAX]	= 2000;
+		slf.attribute[ATR_HITPOINTS] 		= 2000;
+	};
 
 	slf.aivar[AIV_Damage] = slf.attribute[ATR_HITPOINTS_MAX];
 	

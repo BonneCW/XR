@@ -32,4 +32,6 @@ FUNC VOID Info_Mod_Khorgor_Hi_Info()
 	AI_StopProcessInfos	(hero);
 
 	B_Attack	(self, hero, AR_GuildEnemy, 0);
+
+	B_LogEntry	(TOPIC_MOD_JG_DRACHENTAL, "Ich habe Khorgor gefunden und er hat sich sofort auf mich gestürzt. Jetzt mach ich dem endlich ein Ende.");
 };

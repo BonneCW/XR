@@ -9,15 +9,12 @@ instance Mod_7554_OUT_Khorgor_DT (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 6);																	
+	B_SetAttributesToChapter (self, 8);																	
 	aivar[AIV_ToughGuy] 			= TRUE;
 	aivar[AIV_ToughGuyNewsOverride] = TRUE;
 	aivar[AIV_IGNORE_Murder]		= TRUE;
 	aivar[AIV_IGNORE_Theft] 		= TRUE;
 	aivar[AIV_IGNORE_Sheepkiller] 	= TRUE;
-
-	attribute[ATR_HITPOINTS_MAX] = 2000;
-	attribute[ATR_HITPOINTS] = 2000;
 			
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -27,7 +24,7 @@ instance Mod_7554_OUT_Khorgor_DT (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	CreateInvItems	(hero, ItAt_KhorgorKopf, 1);
+	CreateInvItems	(self, ItAt_KhorgorKopf, 1);
 
 		
 	// ------ visuals ------																			
