@@ -148,6 +148,7 @@ FUNC VOID FRAMEFUNC ()
 	{
 		if (Npc_IsAiming(hero, other))
 		&& (Npc_IsInFightMode(hero, FMODE_FAR))
+		&& (!GFA_INITIALIZED)
 		{
 			if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_RUMP)
 			{

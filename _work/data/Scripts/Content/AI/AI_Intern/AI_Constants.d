@@ -30,7 +30,7 @@ const int 	AIV_DeathInvGiven		= 108;	// Für Mensch und Monster!
 const int AIV_BauerWentKo	= 109;
 
 const int	HAI_DIST_GUARDPASSAGE_ATTENTION	= 1200;	
-const int	AIV_ISTINARENATOFIGHT	= 2;
+const int	AIV_LastHitZone	= 2;
 
 //Original
 

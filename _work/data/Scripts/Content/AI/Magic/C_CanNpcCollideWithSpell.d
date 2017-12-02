@@ -24,6 +24,10 @@ const int COLL_DONTKILL				= 1<<5;
 
 func int C_CanNpcCollideWithSpell(var int spellType)
 {
+	// Do not damage beyond maximum fighting range (AI does not react)
+	if (Npc_GetDistToNpc(self, other) > FIGHT_DIST_CANCEL) {
+		return COLL_DONOTHING;
+	};
 
 //#################
 //###	Addon	###

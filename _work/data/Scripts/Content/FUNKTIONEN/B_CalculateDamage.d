@@ -384,73 +384,98 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 				opfer.aivar[AIV_Trefferzone] = 2;
 			};
 		};
+		
+		if (GFA_INITIALIZED) {
+			if (opfer.aivar[AIV_LastHitZone] == TARGET_RUMP) {
+				if (r_max(99) < (10 - chanceBonus)) {
+					damage = -1;
+				} else {
+					if (opfer.guild > GIL_SEPERATOR_HUM)
+					&& (opfer.aivar[AIV_Trefferzone] == 0) {
+						opfer.aivar[AIV_Trefferzone] = 1;
+					};
+				};
+			} else if (opfer.aivar[AIV_LastHitZone] == TARGET_LEFTLEG) {
+				if (r_max(99) < (40 - chanceBonus)) {
+					damage = -1;
+				} else {
+					// Schaden bleibt, dafür langsamer
 
-		if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_RUMP)
-		{
-			if (r_max(99) < (10-chanceBonus))
-			{
-				damage = -1;
-			}
-			else
-			{
-				if (opfer.guild > GIL_SEPERATOR_HUM)
-				&& (opfer.aivar[AIV_Trefferzone] == 0)
-				{
-					opfer.aivar[AIV_Trefferzone] = 1;
+					Npc_ClearAIQueue	(opfer);
+					AI_StandUP	(opfer);
+
+					AI_StartState	(opfer, ZS_MagicMiniFreeze, 0, "");
+				};
+			} else if (opfer.aivar[AIV_LastHitZone] == TARGET_LEFTARM) {
+				if (r_max(99) < (40 - chanceBonus)) {
+					damage = -1;
+				} else {
+					// Schaden bleibt, dafür weniger Schaden
+
+					if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(PC_Hero)) {
+						opfer.attribute[ATR_STRENGTH] -= opfer.attribute[ATR_STRENGTH] / 10;
+					};
+				};
+			} else if (opfer.aivar[AIV_LastHitZone] == TARGET_HEAD) {
+				if (r_max(99) < (60 - chanceBonus) / (1 + Mod_KritischerTrefferRing)) {
+					damage = -1;
+				} else {
+					damage += (damage * 25) / 10;
+
+					if (opfer.guild > GIL_SEPERATOR_HUM)
+					&& (opfer.aivar[AIV_Trefferzone] == 0) {
+						opfer.aivar[AIV_Trefferzone] = 1;
+					};
 				};
 			};
-		}
-		else if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_LEFTLEG)
-		|| (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_RIGHTLEG)
-		{
-			if (r_max(99) < (40 - chanceBonus))
-			{
-				damage = -1;
-			}
-			else
-			{
-				// Schaden bleibt, dafür langsamer
-
-				Npc_ClearAIQueue	(opfer);
-				AI_StandUP	(opfer);
-
-				AI_StartState	(opfer, ZS_MagicMiniFreeze, 0, "");
-			};
-		}
-		else if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_RIGHTARM)
-		|| (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_LEFTARM)
-		{
-			if (r_max(99) < (40 - chanceBonus))
-			{
-				damage = -1;
-			}
-			else
-			{
-				// Schaden bleibt, dafür weniger Schaden
-
-				if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(PC_Hero))
-				{
-					opfer.attribute[ATR_STRENGTH] -= opfer.attribute[ATR_STRENGTH] / 10;
+			opfer.aivar[AIV_LastHitZone] = -1;
+		} else {
+			if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_RUMP) {
+				if (r_max(99) < (10-chanceBonus)) {
+					damage = -1;
+				} else {
+					if (opfer.guild > GIL_SEPERATOR_HUM)
+					&& (opfer.aivar[AIV_Trefferzone] == 0) {
+						opfer.aivar[AIV_Trefferzone] = 1;
+					};
 				};
-			};
-		}
-		else if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_HEAD)
-		{
-			if (r_max(99) < (60 - chanceBonus) / (1 + Mod_KritischerTrefferRing))
-			{
-				damage = -1;
-			}
-			else
-			{
-				damage += (damage * 25) / 10;
+			} else if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_LEFTLEG)
+			|| (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_RIGHTLEG) {
+				if (r_max(99) < (40 - chanceBonus)) {
+					damage = -1;
+				} else {
+					// Schaden bleibt, dafür langsamer
 
-				if (opfer.guild > GIL_SEPERATOR_HUM)
-				&& (opfer.aivar[AIV_Trefferzone] == 0)
-				{
-					opfer.aivar[AIV_Trefferzone] = 1;
+					Npc_ClearAIQueue	(opfer);
+					AI_StandUP	(opfer);
+
+					AI_StartState	(opfer, ZS_MagicMiniFreeze, 0, "");
+				};
+			} else if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_RIGHTARM)
+			|| (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_LEFTARM) {
+				if (r_max(99) < (40 - chanceBonus)) {
+					damage = -1;
+				} else {
+					// Schaden bleibt, dafür weniger Schaden
+
+					if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(PC_Hero)) {
+						opfer.attribute[ATR_STRENGTH] -= opfer.attribute[ATR_STRENGTH] / 10;
+					};
+				};
+			} else if (B_GetAivar(taeter, AIV_FernkampfHitZone) == TARGET_HEAD) {
+				if (r_max(99) < (60 - chanceBonus) / (1 + Mod_KritischerTrefferRing)) {
+					damage = -1;
+				} else {
+					damage += (damage * 25) / 10;
+
+					if (opfer.guild > GIL_SEPERATOR_HUM)
+					&& (opfer.aivar[AIV_Trefferzone] == 0) {
+						opfer.aivar[AIV_Trefferzone] = 1;
+					};
 				};
 			};
 		};
+
 
 		var int rangeBonus;
 		rangeBonus = 0;

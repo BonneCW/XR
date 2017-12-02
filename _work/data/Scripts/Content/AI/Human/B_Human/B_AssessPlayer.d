@@ -615,7 +615,6 @@ func void B_AssessPlayer ()
 	
 	// ------ SC hat irgendeine Waffe bereit -------
 	if (B_AssessDrawWeapon())
-	&& (other.aivar[AIV_ISTINARENATOFIGHT] == FALSE)
 	{
 		return;
 	}

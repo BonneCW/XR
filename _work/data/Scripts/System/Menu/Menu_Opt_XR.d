@@ -26,8 +26,11 @@ INSTANCE MENU_OPT_XR(C_MENU_DEF)
 				
 	items[11]		= "MENUITEM_XR_BLOODSPLATS";	
 	items[12]		= "MENUITEM_XR_BLOODSPLATS_CHOICE";
+				
+	items[13]		= "MENUITEM_OPT_GFA";	
+	items[14]		= "MENUITEM_OPT_GFA_CHOICE";
 	
-	items[13]		= "MENUITEM_XR_BACK";
+	items[15]		= "MENUITEM_XR_BACK";
 	//items[14]		= "MENUITEM_XR_NEXT";	
 	
 	flags = flags | MENU_SHOW_INFO;
@@ -184,78 +187,6 @@ instance MENUITEM_XR_EXP_CHOICE(C_MENU_ITEM_DEF)
 	dimx = MENU_SLIDER_DX;	dimy 		= 	MENU_CHOICE_DY;
 	// Aktionen
 	onChgSetOption		= "erfahrung";
-	onChgSetOptionSection 	= "XERES";
-	// Weitere Eigenschaften	
-	flags		= flags & ~IT_SELECTABLE;	
-	flags		= flags  | IT_TXT_CENTER;
-};
-
-
-//
-// Online-Modus
-//
-
-INSTANCE MENUITEM_XR_ONLINE (C_MENU_ITEM_DEF)
-{
-	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Online-Modus";
-	text[1]		= 	"Aktiviert Online-Features (aktiviert/deaktiviert)"; // Kommentar
-	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*3;
-	dimx		=	3000;	dimy		=	750;
-	// Aktionen
-	onSelAction[0]	= SEL_ACTION_UNDEF;
-	// Weitere Eigenschaften
-	flags		= flags | IT_EFFECTS_NEXT;		
-};
-
-instance MENUITEM_XR_ONLINE_CHOICE(C_MENU_ITEM_DEF)
-{
-	backPic		=	MENU_CHOICE_BACK_PIC;
-	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"aktiviert|deaktiviert";
-	fontName	=   MENU_FONT_SMALL;
-	// Position und Dimension	
-	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*3 + MENU_CHOICE_YPLUS;
-	dimx = MENU_SLIDER_DX;	dimy 		= 	MENU_CHOICE_DY;
-	// Aktionen
-	onChgSetOption		= "online";
-	onChgSetOptionSection 	= "XERES";
-	// Weitere Eigenschaften	
-	flags		= flags & ~IT_SELECTABLE;	
-	flags		= flags  | IT_TXT_CENTER;
-};
-
-
-//
-// Savegame-Import
-//
-
-INSTANCE MENUITEM_XR_SAVEGAME (C_MENU_ITEM_DEF)
-{
-	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Savegame-Import";
-	text[1]		= 	"aktiviert den Import von G1-Savegames (deaktiviert/aktiviert)"; // Kommentar
-	// Position und Dimension	
-	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*4;
-	dimx		=	3000;	dimy		=	750;
-	// Aktionen
-	onSelAction[0]	= SEL_ACTION_UNDEF;
-	// Weitere Eigenschaften
-	flags		= flags | IT_EFFECTS_NEXT;		
-};
-
-instance MENUITEM_XR_SAVEGAME_CHOICE(C_MENU_ITEM_DEF)
-{
-	backPic		=	MENU_CHOICE_BACK_PIC;
-	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"deaktiviert|aktiviert";
-	fontName	=   MENU_FONT_SMALL;
-	// Position und Dimension	
-	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*4 + MENU_CHOICE_YPLUS;
-	dimx = MENU_SLIDER_DX;	dimy 		= 	MENU_CHOICE_DY;
-	// Aktionen
-	onChgSetOption		= "savegame";
 	onChgSetOptionSection 	= "XERES";
 	// Weitere Eigenschaften	
 	flags		= flags & ~IT_SELECTABLE;	
