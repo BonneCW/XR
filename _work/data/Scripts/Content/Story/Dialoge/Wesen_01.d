@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Wesen_01_Hi_Condition()
 
 FUNC VOID Info_Mod_Wesen_01_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Wesen_01_Hi_18_00"); //Weiﬂt du, Kohlestaub, der in der Mittagssonne glitzert, ist heller als ein weiﬂes Blatt bei Vollmond.
+	AI_Output(self, hero, "Info_Mod_Wesen_01_Hi_10_00"); //Weiﬂt du, Kohlestaub, der in der Mittagssonne glitzert, ist heller als ein weiﬂes Blatt bei Vollmond.
 
 	AI_StopProcessInfos	(self);
 };

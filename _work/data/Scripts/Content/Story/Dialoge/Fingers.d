@@ -48,7 +48,7 @@ FUNC INT Info_Mod_Fingers_Nek_Condition()
 
 FUNC VOID Info_Mod_Fingers_Nek_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Fingers_Nek_15_00"); //Worum geht’s?
+	AI_Output(hero, self, "Info_Mod_Fingers_Nek_15_00"); //Worum geht's?
 	AI_Output(self, hero, "Info_Mod_Fingers_Nek_05_01"); //Nun, der Schatten Sly hat etwas in seinem Besitz, was ich gerne hätte ... ein Amulett.
 	AI_Output(hero, self, "Info_Mod_Fingers_Nek_15_02"); //Und ich soll es dir jetzt besorgen.
 	AI_Output(self, hero, "Info_Mod_Fingers_Nek_05_03"); //Genau. Er sollte es irgendwo in seiner Hütte versteckt haben. Das ist die erste Hütte mit einem Vordach, wenn du vom Haupttor aus nach rechts gehst.
@@ -208,7 +208,7 @@ FUNC VOID Info_Mod_Fingers_Kap4_Info()
 	AI_Output(self, hero, "Info_Mod_Fingers_Kap4_05_00"); //Sieh an ... ein Besucher.
 	AI_Output(hero, self, "Info_Mod_Fingers_Kap4_15_01"); //Fingers?
 	AI_Output(self, hero, "Info_Mod_Fingers_Kap4_05_02"); //Überrascht mich zu sehen?
-	AI_Output(self, hero, "Info_Mod_Fingers_Kap4_05_03"); //Nun, es hätte tatsächlich nicht viel gefehlt und die Orks hätte mich zu Frikassee verarbeitet.
+	AI_Output(self, hero, "Info_Mod_Fingers_Kap4_05_03"); //Nun, es hätte tatsächlich nicht viel gefehlt und die Orks hätten mich zu Frikassee verarbeitet.
 	AI_Output(self, hero, "Info_Mod_Fingers_Kap4_05_04"); //Aber ich habe einen kühlen Kopf bewahrt, als der Tumult mit den Orks im Lager losging und bin erst mal untergetaucht.
 	AI_Output(hero, self, "Info_Mod_Fingers_Kap4_15_05"); //Untergetaucht?
 	AI_Output(self, hero, "Info_Mod_Fingers_Kap4_05_06"); //Ja ... in einem Fass ... und das einen ganzen Tag, ehe ich mich nachts aus dem Lager schleichen konnte.

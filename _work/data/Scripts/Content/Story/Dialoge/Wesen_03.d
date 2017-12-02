@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Wesen_03_Hi_Condition()
 
 FUNC VOID Info_Mod_Wesen_03_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Wesen_03_Hi_18_00"); //Eine Herausforderung ist das, woran man am meisten wächst ... Wachse, junger Sprössling!
+	AI_Output(self, hero, "Info_Mod_Wesen_03_Hi_10_00"); //Eine Herausforderung ist das, woran man am meisten wächst ... Wachse, junger Sprössling!
 
 	AI_StopProcessInfos	(self);
 };

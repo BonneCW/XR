@@ -26,7 +26,7 @@ FUNC VOID Info_Mod_Jana_BerndTot_Info()
 	AI_Output(hero, self, "Info_Mod_Jana_BerndTot_15_05"); //Das war ein Milize?
 	AI_Output(self, hero, "Info_Mod_Jana_BerndTot_16_06"); //Ja, hörst du mir eigentlich nicht zu, dass du alles nochmal fragst? Das war so 'n dunkler Typ, der eine Milizuniform trug!
 	AI_Output(hero, self, "Info_Mod_Jana_BerndTot_15_07"); //Der ist einfach rein spaziert und hat Bernd niedergestreckt?
-	AI_Output(self, hero, "Info_Mod_Jana_BerndTot_16_08"); //Ja, glaubt du ich hätte mich ihm in den Weg gestellt? War ja selbst damit beschäftigt mich Bernd zu erwehren und der Typ sah um einiges gefährlicher aus.
+	AI_Output(self, hero, "Info_Mod_Jana_BerndTot_16_08"); //Ja, glaubst du ich hätte mich ihm in den Weg gestellt? War ja selbst damit beschäftigt mich Bernd zu erwehren und der Typ sah um einiges gefährlicher aus.
 	AI_Output(hero, self, "Info_Mod_Jana_BerndTot_15_09"); //Geht’s auch etwas genauer als "Dunkler Typ mit Milizuniform"?
 	AI_Output(self, hero, "Info_Mod_Jana_BerndTot_16_10"); //Nein, das ist alles was ich noch weiß, ich hätte ja beinahe 'nen Herzinfarkt bekommen.
 	AI_Output(hero, self, "Info_Mod_Jana_BerndTot_15_11"); //Na gut ... Ich werde dem Hauptmann Bescheid sagen. Kannst du dich sonst noch an etwas erinnern?

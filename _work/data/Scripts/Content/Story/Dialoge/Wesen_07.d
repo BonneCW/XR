@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Wesen_07_Hi_Condition()
 
 FUNC VOID Info_Mod_Wesen_07_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Wesen_07_Hi_18_00"); //Dieser Ort ... was soll das? Was ist das hier und wer bist du?
+	AI_Output(self, hero, "Info_Mod_Wesen_07_Hi_10_00"); //Dieser Ort ... was soll das? Was ist das hier und wer bist du?
 
 	AI_StopProcessInfos	(self);
 };

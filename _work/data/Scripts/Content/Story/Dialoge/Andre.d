@@ -1487,7 +1487,7 @@ FUNC VOID Info_Mod_Andre_Kerze_Info()
 	AI_Output(hero, self, "Info_Mod_Andre_Kerze_15_03"); //Ich habe mit Giselle gesprochen. Laut ihrer Aussage hat der Roboter etwas gesagt wie "Milizen ist es in ihrer Vorbildw ..."
 	AI_Output(self, hero, "Info_Mod_Andre_Kerze_08_04"); //(setzt in den Satz des Helden ein) "... es in ihrer Vorbildwirkung nicht erlaubt unlautere Taten auszuüben". Natürlich! Das sind alles Grundregeln der Milizenschule.
 	AI_Output(hero, self, "Info_Mod_Andre_Kerze_15_05"); //Milizenschule?
-	AI_Output(self, hero, "Info_Mod_Andre_Kerze_08_06"); //Der bist du entgangen will du das Turnier gewonnen hast, schon vergessen? Kolam muss den Roboter falsch Programmiert haben.
+	AI_Output(self, hero, "Info_Mod_Andre_Kerze_08_06"); //Der bist du entgangen weil du das Turnier gewonnen hast, schon vergessen? Kolam muss den Roboter falsch Programmiert haben.
 	AI_Output(self, hero, "Info_Mod_Andre_Kerze_08_07"); //Er hat nicht nur deinen Kampfstil aufgenommen sondern du hast vermutlich auch irgendeine Maxime der Miliz auf ihn übertragen. Und jetzt zerschlägt er Verbrechen und Unrecht.
 	AI_Output(hero, self, "Info_Mod_Andre_Kerze_15_08"); //Warum sollten wir dann etwas dagegen tun?
 	AI_Output(self, hero, "Info_Mod_Andre_Kerze_08_09"); //Sieh dir an was das bringt! Der Roboter geht über Leichen.

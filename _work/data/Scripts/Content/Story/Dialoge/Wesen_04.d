@@ -15,8 +15,8 @@ FUNC INT Info_Mod_Wesen_04_Hi_Condition()
 
 FUNC VOID Info_Mod_Wesen_04_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Wesen_04_Hi_18_00"); //Das Leben ist manchmal nicht mehr als ein bizarrer Traum.
-	AI_Output(self, hero, "Info_Mod_Wesen_04_Hi_18_01"); //Doch welcher Traum vermag es schon, bizarrer zu sein als das Leben?
+	AI_Output(self, hero, "Info_Mod_Wesen_04_Hi_10_00"); //Das Leben ist manchmal nicht mehr als ein bizarrer Traum.
+	AI_Output(self, hero, "Info_Mod_Wesen_04_Hi_10_01"); //Doch welcher Traum vermag es schon, bizarrer zu sein als das Leben?
 
 	AI_StopProcessInfos	(self);
 };

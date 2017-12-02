@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Wesen_08_Hi_Condition()
 
 FUNC VOID Info_Mod_Wesen_08_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Wesen_08_Hi_18_00"); //Bilder der Vergangenheit leuchten ... oder sind es Bilder der Zukunft?
+	AI_Output(self, hero, "Info_Mod_Wesen_08_Hi_10_00"); //Bilder der Vergangenheit leuchten ... oder sind es Bilder der Zukunft?
 
 	AI_StopProcessInfos	(self);
 };

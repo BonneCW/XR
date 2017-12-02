@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Wesen_09_Hi_Condition()
 
 FUNC VOID Info_Mod_Wesen_09_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Wesen_09_Hi_18_00"); //Warum sollte ich mit dir sprechen?
+	AI_Output(self, hero, "Info_Mod_Wesen_09_Hi_10_00"); //Warum sollte ich mit dir sprechen?
 
 	AI_StopProcessInfos	(self);
 };

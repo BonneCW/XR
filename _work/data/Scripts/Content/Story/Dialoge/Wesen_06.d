@@ -15,9 +15,9 @@ FUNC INT Info_Mod_Wesen_06_Hi_Condition()
 
 FUNC VOID Info_Mod_Wesen_06_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Wesen_06_Hi_18_00"); //Bin ich seltsam? Oder bist es du.
-	AI_Output(self, hero, "Info_Mod_Wesen_06_Hi_18_01"); //An diesem seltsamen Platz bin doch vielmehr ich normal als dass es du bist.
-	AI_Output(self, hero, "Info_Mod_Wesen_06_Hi_18_02"); //Du bist seltsam.
+	AI_Output(self, hero, "Info_Mod_Wesen_06_Hi_10_00"); //Bin ich seltsam? Oder bist es du?
+	AI_Output(self, hero, "Info_Mod_Wesen_06_Hi_10_01"); //An diesem seltsamen Platz bin doch vielmehr ich normal als dass es du bist.
+	AI_Output(self, hero, "Info_Mod_Wesen_06_Hi_10_02"); //Du bist seltsam.
 
 	AI_StopProcessInfos	(self);
 };

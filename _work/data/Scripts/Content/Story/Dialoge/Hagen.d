@@ -1045,7 +1045,7 @@ FUNC INT Info_Mod_Hagen_AndreVermaechtnis2_Condition()
 FUNC VOID Info_Mod_Hagen_AndreVermaechtnis2_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Hagen_AndreVermaechtnis2_06_00"); //Du bist zurück? Was hast du zu berichten?
-	AI_Output(hero, self, "Info_Mod_Hagen_AndreVermaechtnis2_15_01"); //Ich übergab Lares der Schreiben und er willigte in die Waffenruhe ein.
+	AI_Output(hero, self, "Info_Mod_Hagen_AndreVermaechtnis2_15_01"); //Ich übergab Lares das Schreiben und er willigte in die Waffenruhe ein.
 	AI_Output(self, hero, "Info_Mod_Hagen_AndreVermaechtnis2_06_02"); //Das ist gut. Damit hast du diese Aufgabe erwartungsgemäß erfüllt.
 	AI_Output(self, hero, "Info_Mod_Hagen_AndreVermaechtnis2_06_03"); //Da das Übel jedoch nie ruht, muss ich dich gleich zum nächsten Auftrag aussenden.
 	AI_Output(hero, self, "Info_Mod_Hagen_AndreVermaechtnis2_15_04"); //Um welche Bedrohung für die Stadt geht es?
