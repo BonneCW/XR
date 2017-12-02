@@ -10,7 +10,7 @@ INSTANCE Info_Mod_HofstaatDrogenminister_Hi (C_INFO)
 
 FUNC INT Info_Mod_HofstaatDrogenminister_Hi_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_HofstaatGleichgewichtsminister_Drogenminister))
+	if (Npc_KnowsInfo(hero, Info_Mod_HofstaatGGMinister_Drogenminister))
 	&& ((Npc_HasItems(hero, ItMi_FreudenspenderSporen) == 1)
 	|| (Npc_HasItems(hero, ItMi_FakeFreudenspenderSporen) == 1))
 	{
