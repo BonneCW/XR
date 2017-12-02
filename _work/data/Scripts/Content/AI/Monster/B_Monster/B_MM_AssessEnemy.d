@@ -66,6 +66,14 @@ func void B_MM_AssessEnemy ()
 		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Firegolem_Griselda_01)) {
 			return;
 		};
+		
+		if (RidingLorry == TRUE) {
+			Npc_ClearAIQueue(self);
+			Npc_SetTarget		(self, other);
+			B_ClearPerceptions	(self);
+			AI_StartState 		(self, ZS_MM_Flee, 0, "");
+			return;
+		};
 	};
 
 	// Tiere nehmen Gegner, die schleichen und nicht im Sichtfeld sind erst viel später wahr

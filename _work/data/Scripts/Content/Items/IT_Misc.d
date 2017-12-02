@@ -2479,6 +2479,36 @@ INSTANCE ItMi_JackalTabak_13 (C_Item)//steht drin, weil auch in Welt verteilt!!
 	TEXT[5]				= 	ConcatStrings(NAME_Value, "kein Wert");
 };
 
+INSTANCE ItMi_Piratenschatz(C_Item)//steht drin, weil auch in Welt verteilt!!
+{
+	name 				=	"Piratenschatz";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	0;
+
+	value 				=	10;
+
+	visual 				=	"ItMi_Pocket.3ds";
+	scemename			=	"MAPSEALED";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UsePiratenschatz;
+	description			= 	name;
+	TEXT[2]				= 	"Ein Schatz";
+	TEXT[3]				=   "Unter dem Wasserfall in Relendel gefunden";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
+FUNC VOID UsePiratenschatz ()
+{
+		CreateInvItems (hero, ItMi_Gold, 2000);
+		CreateInvItems (hero, ItMi_Nugget, 5);
+		CreateInvItems (hero, ItMi_GoldRing, 1);
+		
+		Snd_Play ("Geldbeutel");
+		
+		B_SetTopicStatus	(TOPIC_MOD_JG_PENNERSVATER, LOG_SUCCESS);
+};
+
 //******************************************************************************************
 //	Wertvolle Gegenstände
 //******************************************************************************************

@@ -181,7 +181,7 @@ func INT ZS_Talk_Loop ()
 			
 			Mod_Erfolg_Kontaktfreudig += 1;
 			
-			Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_70, Mod_Erfolg_Kontaktfreudig);
+			Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_71, Mod_Erfolg_Kontaktfreudig);
 		};
 		
 		// ------ NUR bei Humans ------

@@ -45,6 +45,14 @@ func void B_MM_AssessPlayer()
 			AI_StartState 		(self, ZS_MM_Attack, 0, "");
 			return;
 		};
+		
+		if (RidingLorry == TRUE) {
+			Npc_ClearAIQueue(self);
+			Npc_SetTarget		(self, other);
+			B_ClearPerceptions	(self);
+			AI_StartState 		(self, ZS_MM_Flee, 0, "");
+			return;
+		};
 	};
 
 	if (C_NpcIsHero(other))

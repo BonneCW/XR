@@ -211,7 +211,7 @@ const string SPINE_ACHIEVEMENT_DESCRIPTIONS[MAX_ACHIEVEMENTS] = {
 	"Lehre bei Thorben abgeschlossen",
 	"Maximale Gildenrüstung erhalten",
 	"Den Paladinkristall ohne Hilfe beschafft",
-	"",
+	"20 NPCs im Faustkampf besiegt",
 	"Gildenaufnahme durch Paladinkristall",
 	"Gildenaufnahme durch Quest",
 	"Einer Nebengilde beigetreten",

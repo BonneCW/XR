@@ -11,7 +11,7 @@ INSTANCE Info_Mod_Neron_Hi (C_INFO)
 
 FUNC INT Info_Mod_Neron_Hi_Condition()
 {
-	if (FI_Story == 11)
+	if (FI_Story == 12)
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Andre_RLMord))
 	{
 		return 1;
@@ -22,8 +22,6 @@ FUNC VOID Info_Mod_Neron_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Neron_Hi_15_00"); //Was ist denn hier los?
 	AI_Output(self, hero, "Info_Mod_Neron_Hi_04_01"); //Ach du bist's. Lord Andre sucht dich schon überall, melde dich am besten gleich bei ihm.
-
-	Info_Mod_Andre_RLMord.description = "Neron schickt mich.";
 };
 
 INSTANCE Info_Mod_Neron_Pickpocket (C_INFO)

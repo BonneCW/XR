@@ -734,7 +734,7 @@ INSTANCE Info_Mod_Xardas_NW_WoTempel (C_INFO)
 	information	= Info_Mod_Xardas_NW_WoTempel_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Wo war doch gleih der Eingang zum Tempel?";
+	description	= "Wo war doch gleich der Eingang zum Tempel?";
 };
 
 FUNC INT Info_Mod_Xardas_NW_WoTempel_Condition()
@@ -898,12 +898,15 @@ FUNC INT Info_Mod_Xardas_NW_Daemonisch_Condition()
 
 FUNC VOID Info_Mod_Xardas_NW_Daemonisch_Info()
 {
+	var int news; news = FALSE;
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_00"); //Ich habe Neues zu berichten.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Daemonisch_14_01"); //Ja, was hast du herausgefunden?
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Rosi_Daemonisch))
 	{
 		AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_02"); //Leute verändern sich schlagartig, wenn sie in der Dunkelheit unterwegs waren.
+		
+		news = TRUE;
 	};
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Babo_Daemonisch))
@@ -929,6 +932,8 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch_Info()
 		{
 			AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_11"); //Im Kloster sollen viele Novizen an Magenerkrankungen leiden und können keinen Klosterwein mehr genießen.
 		};
+		
+		news = TRUE;
 	};
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Thekla_Daemonisch))
@@ -937,6 +942,8 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch_Info()
 	{
 		AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_12"); //Es gibt zahlreiche Menschen, die ungewöhnlich viel essen.
 		AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_13"); //Und dennoch erscheinen sie alle ausgezehrt, verfallen körperlich zusehends.
+		
+		news = TRUE;
 	};
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Tengron_Daemonisch))
@@ -968,17 +975,23 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch_Info()
 		{
 			AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_20"); //Pepe hält sich versteckt und fürchtet um sein Leben.
 		};
+		
+		news = TRUE;
 	};
 
 	if (Mod_HQ_PaladineDaemonisch == TRUE)
 	{
 		AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_21"); //Ich sah untote Paladine nahe der Stadt, die nicht lange zuvor noch lebendig waren.
+		
+		news = TRUE;
 	};
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Tengron_Daemonisch))
 	|| (Npc_KnowsInfo(hero, Info_Mod_Pepe_Daemonisch))
 	{
 		AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_22"); //Manche sahen sogar, wie Menschen unter dem Einfluss der Schatten zu Boden sanken, zunächst wie leblos schienen und sich dann zuckend erhoben.
+		
+		news = TRUE;
 	};
 
 	if (Mod_HQ_SPGesehen == TRUE)
@@ -989,6 +1002,8 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch_Info()
 		{
 			AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_24"); //Der Bürger Rupert war es sogar, der mich zu ihnen lockte und davon sprach, ich würde ihnen beitreten, oder sterben.
 		};
+		
+		news = TRUE;
 	};
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Tengron_Daemonisch))
@@ -1055,7 +1070,12 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch_Info()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Xardas_NW_Daemonisch_14_50"); //Sehr mysteriös. Das könnten wichtige Anhaltspunkte sein. Versuch mehr herauszufinden.
+		if (news) {
+			AI_Output(self, hero, "Info_Mod_Xardas_NW_Daemonisch_14_50"); //Sehr mysteriös. Das könnten wichtige Anhaltspunkte sein. Versuch mehr herauszufinden.
+		} else {
+			AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_51"); //Noch nichts.
+			AI_Output(self, hero, "Info_Mod_Xardas_NW_Daemonisch_14_52"); //Dann mach dich wieder auf den Weg.
+		};
 	};
 };
 
@@ -1090,7 +1110,7 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch2_Info()
 
 	B_GivePlayerXP	(400);
 
-	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Xardas will, dass ich die Seelenpeiniger besiege und dabei gleich nach weiteren Hinweisen Ausschau halte. Schließlich treibt sich Urnol noch immer irgendwo hier herum.");
+	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Xardas will, dass ich die Seelenpeiniger besiege und dabei gleich nach weiteren Hinweisen Ausschau halte. Schließlich treibt sich Urnol noch immer irgendwo hier herum. Er gab mir den Hinweis, dass die Seelenpeiniger das Licht meiden. Das wird helfen.");
 
 	Mod_HQ_Daemonisch = 3;
 
