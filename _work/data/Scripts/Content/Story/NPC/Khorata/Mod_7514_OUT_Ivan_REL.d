@@ -4,7 +4,7 @@ instance Mod_7514_OUT_Ivan_REL (Npc_Default)
 	name 		= "Ivan"; 
 	guild 		= GIL_OUT;
 	id 			= 7514;
-	voice		= 0;
+	voice		= 9;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

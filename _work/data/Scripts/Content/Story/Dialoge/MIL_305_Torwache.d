@@ -44,10 +44,10 @@ FUNC INT Info_Mod_Engor_PassAsCitizen_Condition()
 FUNC VOID Info_Mod_Engor_PassAsCitizen_Info()
 {
 	AI_Output (hero, self, "Info_Mod_Engor_PassAsCitizen_15_00"); //Ich bin jetzt ein Bürger der Stadt. Darf ich vorbei?
-	AI_Output (self, hero, "Info_Mod_Engor_PassAsCitizen_03_01"); //Es gibt kein Gesetz, das das verbieten würde.
-	AI_Output (self, hero, "Info_Mod_Engor_PassAsCitizen_03_02"); //Aber sieh dich vor: Wenn du dich hier an fremdem Besitz oder im Ton vergreifst, werden die Vergeltungen empfindlich sein.
-	AI_Output (self, hero, "Info_Mod_Engor_PassAsCitizen_03_03"); //Wer im Oberen Viertel wohnt, hat meistens Einfluss genug, dass es nicht bei einer Geldstrafe bleiben wird.
-	AI_Output (self, hero, "Info_Mod_Engor_PassAsCitizen_03_04"); //Und nun rein in die gute Stube!
+	AI_Output (self, hero, "Info_Mod_Engor_PassAsCitizen_09_01"); //Es gibt kein Gesetz, das das verbieten würde.
+	AI_Output (self, hero, "Info_Mod_Engor_PassAsCitizen_09_02"); //Aber sieh dich vor: Wenn du dich hier an fremdem Besitz oder im Ton vergreifst, werden die Vergeltungen empfindlich sein.
+	AI_Output (self, hero, "Info_Mod_Engor_PassAsCitizen_09_03"); //Wer im Oberen Viertel wohnt, hat meistens Einfluss genug, dass es nicht bei einer Geldstrafe bleiben wird.
+	AI_Output (self, hero, "Info_Mod_Engor_PassAsCitizen_09_04"); //Und nun rein in die gute Stube!
 
 	self.aivar[AIV_PASSGATE] = TRUE;
 	Mil_305_schonmalreingelassen = TRUE;
@@ -107,33 +107,33 @@ func int Info_Mod_Engor_FirstWarn_Condition()
 
 func void Info_Mod_Engor_FirstWarn_Info()
 {
-	AI_Output (self, other,"Info_Mod_Engor_FirstWarn_03_00"); //HALT!
+	AI_Output (self, other,"Info_Mod_Engor_FirstWarn_09_00"); //HALT!
 
 	// ------ PETZMASTER LIGHT und Personal CRIMES -------
 	if (B_GetGreatestPetzCrime(self) >= CRIME_ATTACK)
 	{
 		if (B_GetGreatestPetzCrime(self) == CRIME_MURDER)
 		{
-			AI_Output (self, other,"Info_Mod_Engor_FirstWarn_03_01"); //Du wirst in der Stadt als Mörder gesucht! Bis die Sache geklärt ist, kann ich dich nicht ins obere Viertel lassen.
+			AI_Output (self, other,"Info_Mod_Engor_FirstWarn_09_01"); //Du wirst in der Stadt als Mörder gesucht! Bis die Sache geklärt ist, kann ich dich nicht ins obere Viertel lassen.
 		};
 	
 		if (B_GetGreatestPetzCrime(self) == CRIME_THEFT)
 		{
-			AI_Output (self, other,"Info_Mod_Engor_FirstWarn_03_02"); //Solange du des Diebstahls angeklagt bist, kannst du nicht in obere Viertel!
+			AI_Output (self, other,"Info_Mod_Engor_FirstWarn_09_02"); //Solange du des Diebstahls angeklagt bist, kannst du nicht in obere Viertel!
 		};
 	
 		if (B_GetGreatestPetzCrime(self) == CRIME_ATTACK)
 		{
-			AI_Output (self, other,"Info_Mod_Engor_FirstWarn_03_03"); //Einen Unruhestifter wie dich kann ich nicht ins obere Viertel lassen.
+			AI_Output (self, other,"Info_Mod_Engor_FirstWarn_09_03"); //Einen Unruhestifter wie dich kann ich nicht ins obere Viertel lassen.
 		};
 	
-		AI_Output (self, other,"Info_Mod_Engor_FirstWarn_03_04"); //Geh zu Lord Andre und regele die Sache!
+		AI_Output (self, other,"Info_Mod_Engor_FirstWarn_09_04"); //Geh zu Lord Andre und regele die Sache!
 	}
 	
 	// ------ normales Reinkommen ------
 	else 
 	{
-		AI_Output (self, other,"Info_Mod_Engor_FirstWarn_03_05"); //Nur Bürger der Stadt und Truppen des Königs kommen ins obere Viertel!
+		AI_Output (self, other,"Info_Mod_Engor_FirstWarn_09_05"); //Nur Bürger der Stadt und Truppen des Königs kommen ins obere Viertel!
 	};
 
 	other.aivar[AIV_LastDistToWP] 		= Npc_GetDistToWP(other,Mil_305_Checkpoint);
@@ -167,7 +167,7 @@ FUNC INT Info_Mod_Engor_SecondWarn_Condition()
 
 func void Info_Mod_Engor_SecondWarn_Info()
 {
-	AI_Output (self, other,"Info_Mod_Engor_SecondWarn_03_00"); //Ich sag's dir zum letzten Mal. Einen Schritt weiter und du begibst dich in die Welt des Schmerzes!
+	AI_Output (self, other,"Info_Mod_Engor_SecondWarn_09_00"); //Ich sag's dir zum letzten Mal. Einen Schritt weiter und du begibst dich in die Welt des Schmerzes!
 
 	other.aivar[AIV_LastDistToWP] 		= Npc_GetDistToWP (other,Mil_305_Checkpoint);
 	self.aivar[AIV_Guardpassage_Status]	= GP_SecondWarnGiven;	
@@ -205,7 +205,7 @@ func void Info_Mod_Engor_Attack_Info()
 	other.aivar[AIV_LastDistToWP] 			= 0;
 	self.aivar[AIV_Guardpassage_Status]	= GP_NONE;						//wird auch in ZS_Attack resettet
 	
-	AI_Output (self, other,"Info_Mod_Engor_Attack_03_00"); //Du hast es so gewollt ...
+	AI_Output (self, other,"Info_Mod_Engor_Attack_09_00"); //Du hast es so gewollt ...
 	AI_StopProcessInfos	(self);	
 	B_Attack (self, other, AR_GuardStopsIntruder, 0); 
 };
@@ -230,10 +230,10 @@ FUNC INT Info_Mod_Engor_ToHagen_Condition()
 
 func void Info_Mod_Engor_ToHagen_Info()
 {
-	AI_Output (self, other,"Info_Mod_Engor_ToHagen_03_00"); //Stop!
-	AI_Output (self, other,"Info_Mod_Engor_ToHagen_03_01"); //Der Bürger Bodo hat uns davon berichtet dass du ein gesuchter Bandit aus dem Minental bist.
+	AI_Output (self, other,"Info_Mod_Engor_ToHagen_09_00"); //Stop!
+	AI_Output (self, other,"Info_Mod_Engor_ToHagen_09_01"); //Der Bürger Bodo hat uns davon berichtet dass du ein gesuchter Bandit aus dem Minental bist.
 	AI_Output (hero, self,"Info_Mod_Engor_ToHagen_15_02"); //Was? Ich habe ein wichtiges Anliegen an die Paladine. Geh zu Lord Hagen und sag ihm, dass mich Alissandro geschickt hat, er wird mich sicher empfangen.
-	AI_Output (self, other,"Info_Mod_Engor_ToHagen_03_03"); //Oh nein, das werde ich nicht machen. Du wirst per Haftbefehl gesucht, Freundchen, und deshalb kommst du jetzt einmal schön mit.
+	AI_Output (self, other,"Info_Mod_Engor_ToHagen_09_03"); //Oh nein, das werde ich nicht machen. Du wirst per Haftbefehl gesucht, Freundchen, und deshalb kommst du jetzt einmal schön mit.
 
 	AI_StopProcessInfos	(self);	
 
@@ -275,8 +275,8 @@ func int Info_Mod_Engor_Ausnahme_Condition ()
 func void Info_Mod_Engor_Ausnahme_Info ()
 {
 	AI_Output (other, self, "Info_Mod_Engor_Ausnahme_15_00"); //Können wir nicht mal eine Ausnahme machen?
-	AI_Output (self, other, "Info_Mod_Engor_Ausnahme_03_01"); //(poltert) Was?! Es gibt Regeln in dieser Stadt! Regeln, die für ausnahmslos alle gelten!
-	AI_Output (self, other, "Info_Mod_Engor_Ausnahme_03_02"); //Wenn wir diese Regeln brechen, handeln wir ungerecht gegen alle, die sie einhalten.
+	AI_Output (self, other, "Info_Mod_Engor_Ausnahme_09_01"); //(poltert) Was?! Es gibt Regeln in dieser Stadt! Regeln, die für ausnahmslos alle gelten!
+	AI_Output (self, other, "Info_Mod_Engor_Ausnahme_09_02"); //Wenn wir diese Regeln brechen, handeln wir ungerecht gegen alle, die sie einhalten.
 };	
 
 INSTANCE Info_Mod_Engor_PERM (C_INFO)
@@ -304,19 +304,19 @@ FUNC VOID Info_Mod_Engor_PERM_Info()
 	
 	if (other.guild == GIL_PAL) 
 	{
-		AI_Output (self, other,"Info_Mod_Engor_PERM_03_01"); //Alles in Ordnung, Kamerad!
+		AI_Output (self, other,"Info_Mod_Engor_PERM_09_01"); //Alles in Ordnung, Kamerad!
 	}
 	else if (other.guild == GIL_VLK)
 	{
-		AI_Output (self, other,"Info_Mod_Engor_PERM_03_02"); //Wir erfüllen hier nur unsere Pflicht. Danke, dass du mich beachtet hast, Erwählter!
+		AI_Output (self, other,"Info_Mod_Engor_PERM_09_02"); //Wir erfüllen hier nur unsere Pflicht. Danke, dass du mich beachtet hast, Erwählter!
 	}
 	else if (other.guild == GIL_MIL)
 	{
-		AI_Output (self, other,"Info_Mod_Engor_PERM_03_03"); //Ich muss dich reinlassen, aber reden muss ich mit dir nicht!
+		AI_Output (self, other,"Info_Mod_Engor_PERM_09_03"); //Ich muss dich reinlassen, aber reden muss ich mit dir nicht!
 	}
 	else //GIL_None 
 	{
-		AI_Output (self, other,"Info_Mod_Engor_PERM_03_04"); //Was willst du?
+		AI_Output (self, other,"Info_Mod_Engor_PERM_09_04"); //Was willst du?
 	};
 	
 	AI_StopProcessInfos	(self);

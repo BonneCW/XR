@@ -6,7 +6,7 @@ instance Mod_1119_PSINOV_Shrat_MT (Npc_Default)
 	guild 		=		GIL_OUT;
 	level 		=		3;
 	 	
-	voice		= 0;
+	voice		= 9;
 	id 			=		1119;
 		
 	//-------- abilities --------

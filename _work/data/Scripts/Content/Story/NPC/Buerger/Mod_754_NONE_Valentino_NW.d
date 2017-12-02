@@ -4,7 +4,7 @@ instance Mod_754_NONE_Valentino_NW (Npc_Default)
 	name 		= "Valentino"; 
 	guild 		= GIL_PAL;
 	id 			= 754;
-	voice		= 0;
+	voice		= 9;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

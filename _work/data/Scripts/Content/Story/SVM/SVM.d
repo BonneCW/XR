@@ -3773,35 +3773,6 @@ instance SVM_9 (C_SVM)
 	TOUGHGUY_ATTACKLOST			= "SVM_9_TOUGHGUY_ATTACKLOST"		;//Gut - du hast gewonnen. Was willst du?
 	TOUGHGUY_ATTACKWON			= "SVM_9_TOUGHGUY_ATTACKWON"		;//(selbstgefällig) Ich denke, dir ist jetzt klar, wen du vor dir hast. Was willst du?
 	TOUGHGUY_PLAYERATTACK		= "SVM_9_TOUGHGUY_PLAYERATTACK"	;//Du schon wieder? Willst du dich noch mal mit mir anlegen oder was?
-	// ----------------------------------------------------------------------------------------------------------------------
-	GOLD_1000					= "SVM_9_GOLD_1000"				;//1000 Goldstücke.
-	GOLD_950					= "SVM_9_GOLD_950"					;//950 Goldstücke.
-	GOLD_900					= "SVM_9_GOLD_900"					;//900 Goldstücke.
-	GOLD_850					= "SVM_9_GOLD_850"					;//850 Goldstücke.
-	GOLD_800					= "SVM_9_GOLD_800"					;//800 Goldstücke.
-	GOLD_750					= "SVM_9_GOLD_750"					;//750 Goldstücke.
-	GOLD_700					= "SVM_9_GOLD_700"					;//700 Goldstücke.
-	GOLD_650					= "SVM_9_GOLD_650"					;//650 Goldstücke.
-	GOLD_600					= "SVM_9_GOLD_600"					;//600 Goldstücke.
-	GOLD_550					= "SVM_9_GOLD_550"					;//550 Goldstücke.
-	GOLD_500					= "SVM_9_GOLD_500"					;//500 Goldstücke.
-	GOLD_450					= "SVM_9_GOLD_450"					;//450 Goldstücke.
-	GOLD_400					= "SVM_9_GOLD_400"					;//400 Goldstücke.
-	GOLD_350					= "SVM_9_GOLD_350"					;//350 Goldstücke.
-	GOLD_300					= "SVM_9_GOLD_300"					;//300 Goldstücke.
-	GOLD_250					= "SVM_9_GOLD_250"					;//250 Goldstücke.
-	GOLD_200					= "SVM_9_GOLD_200"					;//200 Goldstücke.
-	GOLD_150					= "SVM_9_GOLD_150"					;//150 Goldstücke.
-	GOLD_100					= "SVM_9_GOLD_100"					;//100 Goldstücke.
-	GOLD_90						= "SVM_9_GOLD_90"					;//90 Goldstücke.
-	GOLD_80						= "SVM_9_GOLD_80"					;//80 Goldstücke.
-	GOLD_70						= "SVM_9_GOLD_70"					;//70 Goldstücke.
-	GOLD_60						= "SVM_9_GOLD_60"					;//60 Goldstücke.
-	GOLD_50						= "SVM_9_GOLD_50"					;//50 Goldstücke.
-	GOLD_40						= "SVM_9_GOLD_40"					;//40 Goldstücke.
-	GOLD_30						= "SVM_9_GOLD_30"					;//30 Goldstücke.
-	GOLD_20						= "SVM_9_GOLD_20"					;//20 Goldstücke.
-	GOLD_10						= "SVM_9_GOLD_10"					;//10 Goldstücke.
 	// -----------------------------------------------------------------------------------------------------------------------
 	Smalltalk01					= "SVM_9_Smalltalk01"				;//... ich kann das nicht glauben ...
 	Smalltalk02					= "SVM_9_Smalltalk02"				;//... ich wär mir da nicht so sicher ...
@@ -3937,117 +3908,13 @@ instance SVM_9 (C_SVM)
 	NoLearnOverPersonalMAX		= "SVM_9_NoLearnOverPersonalMAX"	;//Du verlangst mehr von mir als ich dir beibringen kann.
 	NoLearnYoureBetter			= "SVM_9_NoLearnYoureBetter"		;//Ich kann dir nichts mehr beibringen. Du bist schon zu gut.
 	YouLearnedSomething			= "SVM_9_YouLearnedSomething"		;//Siehst du, du bist schon besser geworden...
-	// ----------------------------------------------------------------------------------------------------------------------
-	UNTERSTADT					= "SVM_9_UNTERSTADT"				;//Du bist jetzt in der Unterstadt.
-	OBERSTADT					= "SVM_9_OBERSTADT"					;//Du bist jetzt in der Oberstadt.
-	TEMPEL						= "SVM_9_TEMPEL"					;//Du bist jetzt am Tempel.
-	MARKT						= "SVM_9_MARKT"						;//Du bist jetzt am Marktplatz.
-	GALGEN						= "SVM_9_GALGEN"					;//Du bist jetzt am Galgenplatz vor der Kaserne.
-	KASERNE						= "SVM_9_KASERNE"					;//Das hier ist die Kaserne.
-	HAFEN						= "SVM_9_HAFEN"						;//Du bist hier im Hafenviertel.
-	// -----------------------
-	WHERETO						= "SVM_9_WHERETO"					;//Wo willst du hin?
-	// -----------------------
-	OBERSTADT_2_UNTERSTADT		= "SVM_9_OBERSTADT_2_UNTERSTADT"	;//Geh von hier aus durch das innere Stadttor und du kommst in die Unterstadt.
-	UNTERSTADT_2_OBERSTADT		= "SVM_9_UNTERSTADT_2_OBERSTADT"	;//Am südlichen Stadttor gibt es eine Treppe, die zum inneren Stadttor hochführt. Dort beginnt die Oberstadt.
-	UNTERSTADT_2_TEMPEL			= "SVM_9_UNTERSTADT_2_TEMPEL"		;//Geh vom Schmied aus durch die Unterführung und du kommst zum Tempelplatz.
-	UNTERSTADT_2_HAFEN			= "SVM_9_UNTERSTADT_2_HAFEN"		;//Geh vom Schmied aus die Hafenstraße runter, dann kommst du zum Hafen.
-	TEMPEL_2_UNTERSTADT			= "SVM_9_TEMPEL_2_UNTERSTADT"		;//Vom Tempelplatz aus gibt es eine Unterführung, die in die Unterstadt führt.
-	TEMPEL_2_MARKT				= "SVM_9_TEMPEL_2_MARKT"			;//Wenn du vorm Tempel stehst, geh links hoch und an der Stadtmauer entlang, dann kommst du zum Markt.
-	TEMPEL_2_GALGEN				= "SVM_9_TEMPEL_2_GALGEN"			;//Wenn du vom Tempel aus gesehen links an der Kneipe vorbeigehst, kommst du zum Galgenplatz.
-	MARKT_2_TEMPEL				= "SVM_9_MARKT_2_TEMPEL"			;//Wenn du vom Marktplatz aus an der hohen Stadtmauer entlanggehst, kommst du zum Tempel.
-	MARKT_2_KASERNE				= "SVM_9_MARKT_2_KASERNE"			;//Die Kaserne ist das riesengroße Gebäude. Geh einfach die Treppen gegenüber dem Hotel rauf.
-	MARKT_2_GALGEN				= "SVM_9_MARKT_2_GALGEN"			;//Geh einfach an der großen Kaserne entlang und du kommst zum Galgenplatz.
-	GALGEN_2_TEMPEL				= "SVM_9_GALGEN_2_TEMPEL"			;//Geh vom Galgenplatz aus die Gasse runter und du kommst zum Tempelplatz.
-	GALGEN_2_MARKT				= "SVM_9_GALGEN_2_MARKT"			;//Geh einfach an der großen Kaserne entlang und du kommst zum Markt.
-	GALGEN_2_KASERNE			= "SVM_9_GALGEN_2_KASERNE"			;//Die Kaserne ist das riesengroße Gebäude. Geh einfach die Treppen rauf.
-	KASERNE_2_MARKT				= "SVM_9_KASERNE_2_MARKT"			;//Geh einfach die Treppe am Haupteingang links runter, und dann kommst du zum Marktplatz.
-	KASERNE_2_GALGEN			= "SVM_9_KASERNE_2_GALGEN"			;//Geh einfach die Treppe am Haupteingang rechts runter, dann kommst du zum Galgenplatz.
-	HAFEN_2_UNTERSTADT			= "SVM_9_HAFEN_2_UNTERSTADT"		;//Geh von der Kaimauer aus die Hafenstraße hoch, dann kommst du in die Unterstadt.
 	// -------------------------------------------------------------------------------------
 	Dead						= "SVM_9_Dead"						;//Aaaaaargl!
 	Aargh_1						= "SVM_9_Aargh_1"					;//Aargh
 	Aargh_2						= "SVM_9_Aargh_2"					;//Aargh
 	Aargh_3						= "SVM_9_Aargh_3"					;//Aargh
-	
-	//-------------------------------- Addon ------------------------------------------------
-	
-	ADDON_WRONGARMOR			= "SVM_9_Addon_WrongArmor";				//Was soll der Aufzug? Zieh dir was an, was zu dir passt.
-	ADDON_WRONGARMOR_SLD		= "SVM_9_ADDON_WRONGARMOR_SLD";			//Wie rennst du denn rum? Zieh dir gefälligst deine Rüstung an.
-	ADDON_WRONGARMOR_MIL		= "SVM_9_ADDON_WRONGARMOR_MIL";			//Du arbeitest für den König, also trägst du auch gefälligst seine Rüstung. Zieh dich um.
-	ADDON_WRONGARMOR_KDF		= "SVM_9_ADDON_WRONGARMOR_KDF";			//Deine Kleidung ist unserem Orden nicht angemessen. Zieh dich um.
-	ADDON_NOARMOR_BDT			= "SVM_9_ADDON_ADDON_NOARMOR_BDT";		//Hast ja noch nicht mal 'ne Rüstung. Verschwinde!
-
-	ADDON_DIEBANDIT				= "SVM_9_ADDON_DIEBANDIT";				//Jetzt bist du dran, Bandit!
-	ADDON_DIRTYPIRATE			= "SVM_9_ADDON_DIRTYPIRATE";			//Du hättest hier nicht auftauchen sollen, Pirat.
-
-	RELMINE01			= "SVM_9_RELMINE01";			//Ich halt das nicht mehr aus!
-	RELMINE02			= "SVM_9_RELMINE02";			//Wenn ich doch nur was zu essen hätte ...
-	RELMINE03			= "SVM_9_RELMINE03";			//Schlag auf Schlag, den ganzen Tag ...
-	RELMINE04			= "SVM_9_RELMINE04";			//Ein schwerer Brocken ist das.
-	RELMINE05			= "SVM_9_RELMINE05";			//Wann kommt die Ablösung endlich?
-	RELMINE06			= "SVM_9_RELMINE06";			//Die reinste Ausbeutung ist das!
-	RELMINE07			= "SVM_9_RELMINE07";			//Morgen komme ich nicht wieder, das versprech ich ...
-	RELMINE08			= "SVM_9_RELMINE08";			//So ein schönes Steinchen!
-	RELMINE09			= "SVM_9_RELMINE09";			//Meine Frau weiß schon gar nicht mehr, wie ich aussehe ...
-	RELMINE10			= "SVM_9_RELMINE10";			//'n Humpen wär jetzt das Richtige ...
-	RELMINE11			= "SVM_9_RELMINE11";			//Das soll wohl ein Ersatz für die Strafkolonie sein.
-	RELMINE12			= "SVM_9_RELMINE12";			//(summt) Nimm Freudenspender, dann ist es okay.
 
 	NoLearnGold			= "SVM_9_NoLearnGold"			;//Komm wieder, wenn du mehr Gold hast.
-
-	// Witze
-
-	WITZ_01_01			= "SVM_9_WITZ_01_01";			//Ein Jäger geht in den Wald.
-	WITZ_01_02			= "SVM_9_WITZ_01_02";			//Kommt ihm ein Ork mit einem Wildschwein auf der Schulter entgegen.
-	WITZ_01_03			= "SVM_9_WITZ_01_03";			//Ein paar Schritte weiter trifft er auf einen Söldner, der ebenfalls ein Wildschwein auf der Schulter trägt.
-	WITZ_01_04			= "SVM_9_WITZ_01_04";			//Und noch ein paar Meter weiter sieht er einen Goblin.
-	WITZ_01_05			= "SVM_9_WITZ_01_05";			//Frage ....... und was hat wohl der Goblin?
-	WITZ_01_06			= "SVM_9_WITZ_01_06";			//Zahnfleischbluten, denn jeder Dritte hat Zahnfleischbluten.
-
-	WITZ_02_01			= "SVM_9_WITZ_02_01";			//Kämpfen zwei Zombies um ihr Leben.
-
-	WITZ_03_01			= "SVM_9_WITZ_03_01";			//Was ist der unterschied zwischen Mud und 'ner Fleischwanze?
-	WITZ_03_02			= "SVM_9_WITZ_03_02";			//Fleischwanzen bringt 10 Erfahrung.
-
-	WITZ_04_01			= "SVM_9_WITZ_04_01";			//Ein Dieb bricht nachts in ein Haus ein.
-	WITZ_04_02			= "SVM_9_WITZ_04_02";			//Als er gerade durch das stockfinstere Wohnzimmer schleicht, hört er eine Stimme:
-	WITZ_04_03			= "SVM_9_WITZ_04_03";			//"Ich sehe dich und Innos sieht dich auch!"
-	WITZ_04_04			= "SVM_9_WITZ_04_04";			//Er erschrickt zu Tode und entzündet eine Kerze.
-	WITZ_04_05			= "SVM_9_WITZ_04_05";			//Er blickt auf und sieht auf einer Stange in der Ecke einen Papageien sitzen:
-	WITZ_04_06			= "SVM_9_WITZ_04_06";			//Meint der Einbrecher erleichtert:
-	WITZ_04_07			= "SVM_9_WITZ_04_07";			//"Hast Du mich aber erschreckt. Wie heißt Du denn ?"
-	WITZ_04_08			= "SVM_9_WITZ_04_08";			//"Mud!"
-	WITZ_04_09			= "SVM_9_WITZ_04_09";			//"Mud ist doch wohl wirklich ein selten blöder Name für einen Papagei!"
-	WITZ_04_10			= "SVM_9_WITZ_04_10";			//Grinst der Vogel: "Na und, Innos ist auch ein selten blöder Name für einen Warg."
-
-	WITZ_05_01			= "SVM_9_WITZ_05_01";			//Steigen zwei Skelette aus ihren Gräbern und klauen Pferde.
-	WITZ_05_02			= "SVM_9_WITZ_05_02";			//Packt das eine seinen Grabstein drauf.
-	WITZ_05_03			= "SVM_9_WITZ_05_03";			//Fragt das andere: "Wozu das?"
-	WITZ_05_04			= "SVM_9_WITZ_05_04";			//Sagt das andere: "Glaubst du ich fahr ohne Papiere"
-
-	WITZ_06_01			= "SVM_9_WITZ_06_01";			//Kommt ein Skelett während nem Sturm in Coragons Kneipe und sagt:
-	WITZ_06_02			= "SVM_9_WITZ_06_02";			//"Ich bin nass bis auf die Knochen"
-
-	WITZ_07_01			= "SVM_9_WITZ_07_01";			//Sagt die Snappermutter: "Kinder, heute gibt's frischen Paladin."
-	WITZ_07_02			= "SVM_9_WITZ_07_02";			//Sagt das Snapperkind: "Ich hasse Dosenfutter."
-
-	WITZ_08_01			= "SVM_9_WITZ_08_01";			//Was ist das für eine rote, glitschige Substanz zwischen den Flanken eines Sumpfhaies?
-	WITZ_08_02			= "SVM_9_WITZ_08_02";			//Langsamer Novize.
-
-	WITZ_09_01			= "SVM_9_WITZ_09_01";			//Was geht einem Ork als erstes durch den Kopf, wenn er ein Adanos-Kloster betritt?
-	WITZ_09_02			= "SVM_9_WITZ_09_02";			//Eine Eislanze.
-
-	WITZ_10_01			= "SVM_9_WITZ_10_01";			//Hör dir mal den an ...
-	WITZ_10_02			= "SVM_9_WITZ_10_02";			//Ja?
-	WITZ_10_03			= "SVM_9_WITZ_10_03";			//Also ...
-	WITZ_10_04			= "SVM_9_WITZ_10_04";			//Das Schaf Lisl vom Hirten Pepe ist krank.
-	WITZ_10_05			= "SVM_9_WITZ_10_05";			//Besorgt fragt er den Schäfer Balthasar:
-	WITZ_10_06			= "SVM_9_WITZ_10_06";			//"Was hast du denn damals deinem Schaf gegeben als sie so krank war?"
-	WITZ_10_07			= "SVM_9_WITZ_10_07";			//"Ich habe meiner Clara damals Lou’s doppelten Hammer gegeben", sagt dieser.
-	WITZ_10_08			= "SVM_9_WITZ_10_08";			//Gesagt, getan. Als Pepe zwei Tage später wieder Balthasar besucht, trauert er:
-	WITZ_10_09			= "SVM_9_WITZ_10_09";			//"Meine Lisl ist tot." Darauf Balthasar: "Meine Clara damals auch."
-	WITZ_10_10			= "SVM_9_WITZ_10_10";			//(belustigt) Ja, hähä. Wenn man den Viechern das Zeug zum Saufen gibt.
 
 	// Taschendiebstahl
 

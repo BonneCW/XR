@@ -18,15 +18,15 @@ FUNC INT Info_Mod_HofstaatNewHundefutter_Hi_Condition()
 
 FUNC VOID Info_Mod_HofstaatNewHundefutter_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_06_00"); //Da geht er hin ... eine Zierde seiner Zunft ... Ich werde wohl niemals auch nur annähernd so kross und saftig werden wie er ...
+	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_09_00"); //Da geht er hin ... eine Zierde seiner Zunft ... Ich werde wohl niemals auch nur annähernd so kross und saftig werden wie er ...
 	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_15_01"); //Du bist sein Nachfolger?
-	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_06_02"); //Jaja ... aber kein besonders guter.
+	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_09_02"); //Jaja ... aber kein besonders guter.
 	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_15_03"); //Vielleicht kann ich dir ja helfen?
-	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_06_04"); //Du willst mir helfen? Bist du Koch oder was?
+	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_09_04"); //Du willst mir helfen? Bist du Koch oder was?
 	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_15_05"); //Ich hab schon das eine oder andere Vieh geschlachtet.
-	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_06_06"); //Du bist Metzger?! Bitte hilf mir! Bitte, bitte, bitte, bitte!! Was soll ich tun?
+	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_09_06"); //Du bist Metzger?! Bitte hilf mir! Bitte, bitte, bitte, bitte!! Was soll ich tun?
 	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_15_07"); //Als Erstes kompletter Freudenspender-Entzug. Das macht dein Fleisch zäh.
-	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_06_08"); //Freudenspender ... ja, natürlich ... Fleisch locker ... klar ... Das mach ich! Vielen Dank, Herr Metzgermeister!
+	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_09_08"); //Freudenspender ... ja, natürlich ... Fleisch locker ... klar ... Das mach ich! Vielen Dank, Herr Metzgermeister!
 	AI_Output(self, hero, "Info_Mod_HofstaatNewHundefutter_Hi_15_09"); //Gern geschehen.
 
 	Mod_SL_PartFluffy_Day = Wld_GetDay();

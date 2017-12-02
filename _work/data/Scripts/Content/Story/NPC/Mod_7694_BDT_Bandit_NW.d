@@ -4,7 +4,7 @@ INSTANCE Mod_7694_BDT_Bandit_NW (Npc_Default)
 	name 		= "Landstreicher";
 	guild 		= GIL_out;
 	id 			= 7694;
-	voice 		= 03;
+	voice 		= 9;
 	flags       = 0;																	
 	npctype		= NPCTYPE_mt_bandit;
 	

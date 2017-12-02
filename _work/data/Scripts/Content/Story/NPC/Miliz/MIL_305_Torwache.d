@@ -4,7 +4,7 @@ instance Mil_305_Torwache (Npc_Default)
 	name 		= "Engor"; 	
 	guild 		= GIL_PAL;
 	id 			= 305;
-	voice		= 0;
+	voice		= 9;
 	flags       = NPC_FLAG_IMMORTAL;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Valentino_Hi_Info()
 {
 	B_Say (hero, self, "$WHOAREYOU");
 
-	AI_Output(self, hero, "Info_Mod_Valentino_Hi_03_01"); //Was willst DU denn von mir?
+	AI_Output(self, hero, "Info_Mod_Valentino_Hi_09_01"); //Was willst DU denn von mir?
 };
 
 INSTANCE Info_Mod_Valentino_Kidnapped (C_INFO)
@@ -43,7 +43,7 @@ FUNC INT Info_Mod_Valentino_Kidnapped_Condition()
 
 FUNC VOID Info_Mod_Valentino_Kidnapped_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Valentino_Kidnapped_03_00"); //(sarkastisch) Das hast du ja ganz toll hingekriegt. Glaubst du etwa, die Blutflecken gehen jemals raus?
+	AI_Output(self, hero, "Info_Mod_Valentino_Kidnapped_09_00"); //(sarkastisch) Das hast du ja ganz toll hingekriegt. Glaubst du etwa, die Blutflecken gehen jemals raus?
 
 	B_GivePlayerXP	(300);
 
@@ -118,7 +118,7 @@ FUNC INT Info_Mod_Valentino_Mitternachtsspuk_Condition()
 {
 	if (Mod_Fernando_Mitternachtsspuk == 1)
 	&& (Wld_IsTime(22,00,07,45))
-	&& (Npc_GetDistToWP(hero, "NW_CITY_UPTOWN_HUT_03_04") < 500)
+	&& (Npc_GetDistToWP(hero, "NW_CITY_UPTOWN_HUT_09_04") < 500)
 	{
 		return 1;
 	};
@@ -126,17 +126,17 @@ FUNC INT Info_Mod_Valentino_Mitternachtsspuk_Condition()
 
 FUNC VOID Info_Mod_Valentino_Mitternachtsspuk_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Valentino_Mitternachtsspuk_03_00"); //(erschrocken) Huch, was soll das werden?
+	AI_Output(self, hero, "Info_Mod_Valentino_Mitternachtsspuk_09_00"); //(erschrocken) Huch, was soll das werden?
 	AI_Output(hero, self, "Info_Mod_Valentino_Mitternachtsspuk_15_01"); //Da habe ich aber jemanden erwischt.
-	AI_Output(self, hero, "Info_Mod_Valentino_Mitternachtsspuk_03_02"); //(hochnäsig) Na und? Ist nichts Verbotenes.
+	AI_Output(self, hero, "Info_Mod_Valentino_Mitternachtsspuk_09_02"); //(hochnäsig) Na und? Ist nichts Verbotenes.
 	AI_Output(hero, self, "Info_Mod_Valentino_Mitternachtsspuk_15_03"); //Mal sehen, ob ihr Mann das auch meint.
-	AI_Output(self, hero, "Info_Mod_Valentino_Mitternachtsspuk_03_04"); //Scheiße, was willst du von mir?
+	AI_Output(self, hero, "Info_Mod_Valentino_Mitternachtsspuk_09_04"); //Scheiße, was willst du von mir?
 	AI_Output(hero, self, "Info_Mod_Valentino_Mitternachtsspuk_15_05"); //Trefft ihr euch häufiger nachts hier? Und geht es manchmal auch wild zu?
-	AI_Output(self, hero, "Info_Mod_Valentino_Mitternachtsspuk_03_06"); //Natürlich nicht!
+	AI_Output(self, hero, "Info_Mod_Valentino_Mitternachtsspuk_09_06"); //Natürlich nicht!
 	AI_Output(hero, self, "Info_Mod_Valentino_Mitternachtsspuk_15_07"); //Ich sag's auch nicht weiter. Aber Fernando schläft euretwegen schlecht.
-	AI_Output(self, hero, "Info_Mod_Valentino_Mitternachtsspuk_03_08"); //(lacht unsicher) Ja, wir sind schon ab und zu hier. Reicht das?
+	AI_Output(self, hero, "Info_Mod_Valentino_Mitternachtsspuk_09_08"); //(lacht unsicher) Ja, wir sind schon ab und zu hier. Reicht das?
 	AI_Output(hero, self, "Info_Mod_Valentino_Mitternachtsspuk_15_09"); //(genüsslich) Natürlich.
-	AI_Output(self, hero, "Info_Mod_Valentino_Mitternachtsspuk_03_10"); //Dann hau endlich ab!
+	AI_Output(self, hero, "Info_Mod_Valentino_Mitternachtsspuk_09_10"); //Dann hau endlich ab!
 
 	B_LogEntry	(TOPIC_MOD_FERNANDO_MITTERNACHTSSPUK, "Valentino und eine Bürgerin verursachen unfreiwillig Fernandos Alpträume.");
 };
@@ -164,9 +164,9 @@ FUNC INT Info_Mod_Valentino_SonjaFreier_Condition()
 FUNC VOID Info_Mod_Valentino_SonjaFreier_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Valentino_SonjaFreier_15_00"); //Hast du Sonja früher regelmäßig besucht?
-	AI_Output(self, hero, "Info_Mod_Valentino_SonjaFreier_03_01"); //(ungnädig) Was, diese Schlampe? Behauptet sie das etwa?
+	AI_Output(self, hero, "Info_Mod_Valentino_SonjaFreier_09_01"); //(ungnädig) Was, diese Schlampe? Behauptet sie das etwa?
 	AI_Output(hero, self, "Info_Mod_Valentino_SonjaFreier_15_02"); //Nein, reg dich ab.
-	AI_Output(self, hero, "Info_Mod_Valentino_SonjaFreier_03_03"); //Ich gehe nur mit gut situierten Bürgerinnen dieser Stadt aus. Meistens. Also lass mich in Ruhe mit dieser Hure!
+	AI_Output(self, hero, "Info_Mod_Valentino_SonjaFreier_09_03"); //Ich gehe nur mit gut situierten Bürgerinnen dieser Stadt aus. Meistens. Also lass mich in Ruhe mit dieser Hure!
 };
 
 INSTANCE Info_Mod_Valentino_Pickpocket (C_INFO)

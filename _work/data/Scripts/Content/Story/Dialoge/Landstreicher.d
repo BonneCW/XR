@@ -15,8 +15,8 @@ FUNC INT Info_Mod_Landstreicher_Hi_Condition()
 
 FUNC VOID Info_Mod_Landstreicher_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Landstreicher_Hi_03_00"); //Sieh an. Da haben wir uns überlegt den Hof auszunehmen und da kommt so’n Schnösel mit den Taschen voller Gold daher.
-	AI_Output(self, hero, "Info_Mod_Landstreicher_Hi_03_01"); //Na, Jungs, was meint ihr?
+	AI_Output(self, hero, "Info_Mod_Landstreicher_Hi_09_00"); //Sieh an. Da haben wir uns überlegt den Hof auszunehmen und da kommt so’n Schnösel mit den Taschen voller Gold daher.
+	AI_Output(self, hero, "Info_Mod_Landstreicher_Hi_09_01"); //Na, Jungs, was meint ihr?
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_FREUNDFEIND, "Ok, Wegelagerer bei Akil ... kurz und schmerzlos.");
 

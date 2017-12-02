@@ -4,7 +4,7 @@ instance Mod_7335_HS_Typ_REL (Npc_Default)
 	name 		= "Nächstes Königliches Hunderfutter";
 	guild 		= GIL_OUT;
 	id 			= 7335;
-	voice		= 0;
+	voice		= 9;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	
