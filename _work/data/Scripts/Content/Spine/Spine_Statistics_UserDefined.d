@@ -31,6 +31,14 @@ func void Spine_UpdateChapterStatistics(var C_NPC player, var int chapter) {
 	// Learnpoints
 	Spine_UpdateStatistic(chapter, player.guild, "Learnpoints", player.lp);
 	
+	// Protection
+	Spine_UpdateStatistic(chapter, player.guild, "ProtectionEdge", player.protection[PROT_EDGE] / 1000);
+	Spine_UpdateStatistic(chapter, player.guild, "ProtectionBlunt", player.protection[PROT_BLUNT] / 1000);
+	Spine_UpdateStatistic(chapter, player.guild, "ProtectionPoint", player.protection[PROT_POINT] / 1000);
+	Spine_UpdateStatistic(chapter, player.guild, "ProtectionMagic", player.protection[PROT_MAGIC]);
+	Spine_UpdateStatistic(chapter, player.guild, "ProtectionFire", player.protection[PROT_FIRE]);
+	
+	
 	// Fighting Skills
 	// 1H
 	Spine_UpdateStatistic(chapter, player.guild, "1H", player.hitChance[NPC_TALENT_1H]);
