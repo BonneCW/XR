@@ -2,8 +2,7 @@ var int InvValue;
 var int TempInvValue;
 var int i;
 
-FUNC INT HeroInventarWert()
-{
+FUNC INT HeroInventarWert() {
 	InvValue = 0;
 
 	if (Npc_GetInvItemBySlot(hero, 0, i) > 0) {

@@ -33,6 +33,8 @@ FUNC VOID B_EndGame() {
 		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_75);
 	};
 	
+	Spine_UpdateChapterStatistics(hero, Kapitel + 1);
+	
 	if (Mod_Xeres_Ende == 3) {
 		PlayVideo("Xeres\Extro_ArgezDead.bik");
 	} else if (Mod_Xeres_Ende == 4) {

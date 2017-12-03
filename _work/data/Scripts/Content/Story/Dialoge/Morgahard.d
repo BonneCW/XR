@@ -315,6 +315,8 @@ FUNC VOID Info_Mod_Morgahard_Lernen_Knockout_Info()
 		AI_Output(self, other, "Info_Mod_Morgahard_Lernen_Knockout_31_05"); //Das wirkt übrigens auch bei Schlafenden, bei Tieren, Orks und was sonst noch so kreucht und fleucht.
 
 		Knockout_Perk = TRUE;
+		
+		hero.lp -= 10;
 	}
 	else
 	{

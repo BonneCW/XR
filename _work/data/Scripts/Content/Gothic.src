@@ -20,6 +20,8 @@ AI\AI_INTERN\PrintPlus.d
 
 GFA\GFA_G2.src
 
+Neuerungen\HeroInventarWert.d
+
 Spine\Spine.src
 
 FUNKTIONEN\Erfolge_Func.d
@@ -116,7 +118,6 @@ NEUERUNGEN\B_EXPVerteiler.d
 
 FUNKTIONEN\Mod_Funktionen.d
 Neuerungen\B_Betrunken.d
-Neuerungen\HeroInventarWert.d
 Neuerungen\B_GetNextRuebe.d
 
 STORY\EVENTS\EVT_KLOSTEREINGANG.d

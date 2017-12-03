@@ -71,6 +71,8 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	//***************************************************************************
 	//	SONSTIGE
 	//***************************************************************************
+	
+	Spine_UpdateChapterStatistics(hero, Kapitel);
  
  	B_CheckLog ();
 	

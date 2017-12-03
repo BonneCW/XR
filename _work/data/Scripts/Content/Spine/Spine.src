@@ -8,5 +8,8 @@ Spine_Friends.d
 Spine_Gamepad.d
 Spine_OverallSave.d
 Spine_Scores.d
+Spine_Statistics.d
 Spine_Multiplayer.d
 Spine_API.d
+
+Spine_Statistics_UserDefined.d
