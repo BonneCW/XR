@@ -1369,7 +1369,7 @@ instance ItWr_StonePlate_Ritualinsel01 (C_Item)
 	
 	description			= 	name;
 	TEXT[2]				= 	"Enthält die Beschreibung eines Ortes";
-	TEXT[3]				=	"";
+	TEXT[3]				=	"Gefunden auf der Ritualinsel";
 	
 	TEXT[5]				= 	NAME_Value;		
 	COUNT[5]			= 	value_StonePlateCommon;
@@ -1430,7 +1430,7 @@ instance ItWr_StonePlate_Ritualinsel02 (C_Item)
 	
 	description			= 	name;
 	TEXT[2]				= 	"Enthält eine Formel";
-	TEXT[3]				=	"";
+	TEXT[3]				=	"Gefunden auf der Ritualinsel";
 	
 	TEXT[5]				= 	NAME_Value;		
 	COUNT[5]			= 	value_StonePlateCommon;

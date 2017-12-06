@@ -287,7 +287,7 @@ FUNC VOID Info_Mod_Hymir_Treue2_Info()
 
 	AI_StopProcessInfos	(self);
 
-	B_LogEntry	(TOPIC_MOD_MILIZ_TREUE, "Hymir hat sich mit Lord Hagen in die Stadt teleportiert. Ich sollte man bei Zeiten dort vorbeischauen.");
+	B_LogEntry	(TOPIC_MOD_MILIZ_TREUE, "Hymir hat sich mit Lord Hagen in die Stadt teleportiert. Ich sollte mal bei Zeiten dort vorbeischauen.");
 
 };
 

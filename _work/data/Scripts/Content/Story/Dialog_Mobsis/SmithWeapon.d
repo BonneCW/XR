@@ -4393,10 +4393,22 @@ FUNC VOID SMITHWEAPON_S1 ()
 		Ai_ProcessInfos (her);
 	};
 
-	PC_ItMw_1H_Common.description			= NAME_ItMw_1H_Common_01;                                            
+	PC_ItMw_1H_Common.description			= NAME_ItMw_1H_Common_01;
 	
 	PC_WEAPON_1H_Harad_01.description		= NAME_Addon_Harad_01;
 	PC_WEAPON_1H_Harad_02.description		= NAME_Addon_Harad_02;
 	PC_WEAPON_1H_Harad_03.description		= NAME_Addon_Harad_03;
 	PC_WEAPON_1H_Harad_04.description		= NAME_Addon_Harad_04;
+
+	PC_Stark_ItMw_1H_Common.description			= NAME_ItMw_1H_Common_01;
+	
+	PC_Stark_WEAPON_1H_Harad_01.description		= NAME_Addon_Harad_01;
+	PC_Stark_WEAPON_1H_Harad_02.description		= NAME_Addon_Harad_02;
+	PC_Stark_WEAPON_1H_Harad_03.description		= NAME_Addon_Harad_03;
+	PC_Stark_WEAPON_1H_Harad_04.description		= NAME_Addon_Harad_04;
+	
+	PC_ItMw_1H_Special_01.description		= NAME_ItMw_1H_Special_01;
+	PC_ItMw_1H_Special_02.description		= NAME_ItMw_1H_Special_02;
+	PC_ItMw_2H_Special_01.description		= NAME_ItMw_2H_Special_01;
+	PC_ItMw_2H_Special_02.description		= NAME_ItMw_2H_Special_02;
 }; 

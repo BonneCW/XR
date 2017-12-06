@@ -1951,7 +1951,7 @@ INSTANCE Info_Mod_Harad_Verkaufen (C_INFO)
 FUNC INT Info_Mod_Harad_Verkaufen_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Harad_Job))
-	{
+	&& (Mod_HaradLehrling_Kap4 == 0) {
 		return 1;
 	};
 };
@@ -1968,7 +1968,13 @@ FUNC VOID Info_Mod_Harad_Verkaufen_Info()
 	var int anzahl_rubinklinge; anzahl_rubinklinge = Npc_HasItems (hero, ItMw_Rubinklinge);
 	var int anzahl_elbastardo; anzahl_elbastardo = Npc_HasItems (hero, ItMw_ElBastardo);
 	
-	var int gesamt; gesamt = (anzahl_common + anzahl_schwert1 + anzahl_schwert4 + anzahl_rubinklinge + anzahl_elbastardo);
+	var int anzahl_common_stark; anzahl_common = Npc_HasItems (hero, ItMw_1H_Common_01_Stark);
+	var int anzahl_schwert1_stark; anzahl_schwert1 = Npc_HasItems (hero, ItMw_Schwert1_Stark);
+	var int anzahl_schwert4_stark; anzahl_schwert4 = Npc_HasItems (hero, ItMw_Schwert4_Stark);
+	var int anzahl_rubinklinge_stark; anzahl_rubinklinge = Npc_HasItems (hero, ItMw_Rubinklinge_Stark);
+	var int anzahl_elbastardo_stark; anzahl_elbastardo = Npc_HasItems (hero, ItMw_ElBastardo_Stark);
+	
+	var int gesamt; gesamt = (anzahl_common + anzahl_schwert1 + anzahl_schwert4 + anzahl_rubinklinge + anzahl_elbastardo + anzahl_common_stark + anzahl_schwert1_stark + anzahl_schwert4_stark + anzahl_rubinklinge_stark + anzahl_elbastardo_stark);
 	
 	if (gesamt == 0)
 	{
@@ -1984,13 +1990,19 @@ FUNC VOID Info_Mod_Harad_Verkaufen_Info()
 		Npc_RemoveInvItems (hero, ItMw_Rubinklinge, anzahl_Rubinklinge);
 		Npc_RemoveInvItems (hero, ItMw_ElBastardo, anzahl_ElBastardo);
 		
+		Npc_RemoveInvItems (hero, ItMw_1H_Common_01_Stark, anzahl_common_stark);
+		Npc_RemoveInvItems (hero, ItMw_Schwert1_Stark, anzahl_Schwert1_stark);
+		Npc_RemoveInvItems (hero, ItMw_Schwert4_Stark, anzahl_Schwert4_stark);
+		Npc_RemoveInvItems (hero, ItMw_Rubinklinge_Stark, anzahl_Rubinklinge_stark);
+		Npc_RemoveInvItems (hero, ItMw_ElBastardo_Stark, anzahl_ElBastardo_stark);
+		
 		var string concatText;
 		concatText = ConcatStrings(IntToString(gesamt), PRINT_ItemsGegeben);		// "x Gegenstände gegeben"
 		AI_PrintScreen (concatText, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 				
 		AI_Output (self, hero, "Info_Mod_Harad_Verkaufen_28_03"); //So, und hier hast du deinen Lohn.
 		var int lohn;
-		lohn = (anzahl_common * Value_Common1) + (anzahl_schwert1 * Value_Schwert1) + (anzahl_schwert4 * Value_Schwert4) + (anzahl_rubinklinge * Value_Rubinklinge) + (anzahl_elbastardo * Value_ElBastardo);
+		lohn = ((anzahl_common + anzahl_common_stark) * Value_Common1) + ((anzahl_schwert1 + anzahl_schwert1_stark) * Value_Schwert1) + ((anzahl_schwert4 + anzahl_schwert4_stark) * Value_Schwert4) + ((anzahl_rubinklinge + anzahl_rubinklinge) * Value_Rubinklinge) + ((anzahl_elbastardo + anzahl_elbastardo) * Value_ElBastardo);
 				
 		lohn = (lohn / 3);
 		
