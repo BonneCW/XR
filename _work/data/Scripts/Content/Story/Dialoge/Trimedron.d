@@ -1,3 +1,5 @@
+var int Trimedron_Attacking;
+
 INSTANCE Info_Mod_Trimedron_Hi (C_INFO)
 {
 	npc		= Mod_7538_OUT_Trimedron_GDG;
@@ -10,23 +12,22 @@ INSTANCE Info_Mod_Trimedron_Hi (C_INFO)
 
 FUNC INT Info_Mod_Trimedron_Hi_Condition()
 {
-	if (Mod_GDG_RitualTafel02 == 1)
-	{
+	if (Mod_GDG_RitualTafel02 == 1) {
 		self.aivar[AIV_AttackReason] = 0;
 		self.aivar[AIV_LastPlayerAR] = 0;
 		B_SetAttitude (self, ATT_FRIENDLY);
 		return 0;
-	}
-	else
-	{
+	} else {
+		if (!Trimedron_Attacking) {
+			B_LogEntry(TOPIC_MOD_URIZIEL, "Ich habe den Geist Trimedron entdeckt, der mich jedoch unverzüglich attackiert hat. Ob ich wohl einen Weg finden kann, ihn zu besänftigen. Vielleicht gibt es eine Beschwörungsformel ...");
+			Trimedron_Attacking = TRUE;
+		};
 		B_Attack	(self, hero, AR_None, 0);
 		return 0;
 	};
 };
 
-FUNC VOID Info_Mod_Trimedron_Hi_Info()
-{
-	
+FUNC VOID Info_Mod_Trimedron_Hi_Info() {
 };
 
 INSTANCE Info_Mod_Trimedron_Formel (C_INFO)
