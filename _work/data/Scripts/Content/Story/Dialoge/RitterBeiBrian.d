@@ -29,8 +29,8 @@ FUNC VOID Info_Mod_RitterBeiBrian_Daemonisch_Info()
 
 	Info_ClearChoices	(Info_Mod_RitterBeiBrian_Daemonisch);
 
-	Info_AddChoice	(Info_Mod_RitterBeiBrian_Daemonisch, "Nein, ich habe ihn hier gefunden, dann seid ihr gleich aufgetaucht.", Info_Mod_RitterBeiBrian_Daemonisch_B);
-	Info_AddChoice	(Info_Mod_RitterBeiBrian_Daemonisch, "Er wollte etwas von der Stadt erzählen, und sagte mir, ich solle mich vor der Finsternis hüten.", Info_Mod_RitterBeiBrian_Daemonisch_A);
+	Info_AddChoice	(Info_Mod_RitterBeiBrian_Daemonisch, "Nein, ich habe ihn hier gefunden (...)", Info_Mod_RitterBeiBrian_Daemonisch_B);
+	Info_AddChoice	(Info_Mod_RitterBeiBrian_Daemonisch, "Er wollte etwas von der Stadt erzählen (...)", Info_Mod_RitterBeiBrian_Daemonisch_A);
 };
 
 FUNC VOID Info_Mod_RitterBeiBrian_Daemonisch_B()

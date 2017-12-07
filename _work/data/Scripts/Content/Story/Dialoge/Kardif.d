@@ -45,13 +45,13 @@ FUNC INT Info_Mod_Kardif_Daemonisch_Condition()
 FUNC VOID Info_Mod_Kardif_Daemonisch_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Kardif_Daemonisch_15_00"); //Und, wie läuft es in deiner Kneipe?
-	AI_Output(self, hero, "Info_Mod_Kardif_Daemonisch_14_01"); //Ach, mies. Ein großer teil meiner Kundschaft drückt sich nur noch in Coragorn’s Kneipe rum.
+	AI_Output(self, hero, "Info_Mod_Kardif_Daemonisch_14_01"); //Ach, mies. Ein großer teil meiner Kundschaft drückt sich nur noch in Coragons Kneipe rum.
 	AI_Output(hero, self, "Info_Mod_Kardif_Daemonisch_15_02"); //Wieso das? Schmeckt das Bier dort besser?
 	AI_Output(self, hero, "Info_Mod_Kardif_Daemonisch_14_03"); //Ach, ich geb dir gleich Bier. Wie ich gehört habe gehen sie dorthin um sich voll zustopfen mit Fleisch.
-	AI_Output(self, hero, "Info_Mod_Kardif_Daemonisch_14_04"); //Meine Gesöff ist doch tausendmal besser als das von diesem Aufschneider Coragorn.
+	AI_Output(self, hero, "Info_Mod_Kardif_Daemonisch_14_04"); //Meine Gesöff ist doch tausendmal besser als das von diesem Aufschneider Coragon.
 	AI_Output(self, hero, "Info_Mod_Kardif_Daemonisch_14_05"); //Aber das weiß ja keiner mehr zu schätzen ...
 
-	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Kardif hat sich darüber aufgeregt, dass ein großer Teil seiner Kundschaft nur noch ins Coragorn’s Kneipe rumsitzt und sich mit Fleisch voll stopft.");
+	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Kardif hat sich darüber aufgeregt, dass ein großer Teil seiner Kundschaft nur noch ins Coragons Kneipe rumsitzt und sich mit Fleisch voll stopft.");
 };
 
 INSTANCE Info_Mod_Kardif_WacholderDieb (C_INFO)

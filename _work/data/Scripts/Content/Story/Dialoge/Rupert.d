@@ -320,16 +320,6 @@ FUNC VOID Info_Mod_Rupert_Daemonisch3_Info()
 
 	B_StartOtherRoutine	(self, "TOT");
 	AI_Teleport	(self, "TOT");
-
-	Wld_InsertNpc	(Mod_13017_SP_Seelenpeiniger_NW, "NW_FARM1_CITYWALL_02_B");
-	Wld_InsertNpc	(Mod_13018_SP_Seelenpeiniger_NW, "NW_FARM1_CITYWALL_02_B");
-	Wld_InsertNpc	(Mod_13019_SP_Seelenpeiniger_NW, "NW_FARM1_CITYWALL_02_B");
-	Wld_InsertNpc	(Mod_13020_SP_Seelenpeiniger_NW, "NW_FARM1_CITYWALL_02_B");
-	Wld_InsertNpc	(Zombie_Rupert, "NW_FARM1_CITYWALL_02_B");
-
-	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Eine Falle! Ich bin mitten im Wald von Lauter schwarzer Schatten umgeben.");
-
-	B_GivePlayerXP	(300);
 };
 
 INSTANCE Info_Mod_Rupert_Trade (C_INFO)

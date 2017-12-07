@@ -160,6 +160,10 @@ func int C_DropUnconscious()
 		{
 			return FALSE;
 		};
+		if (self.id >= 13000)
+		&& (self.id < 14000) {
+			return FALSE;
+		};
 	};
 
 	if (CurrentLevel == MINENTAL_ZEN)
@@ -361,6 +365,10 @@ func int C_DropUnconscious2(var C_NPC slf, var C_NPC oth)
 		|| ((Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Mod_1403_BAU_Baeuerin_NW))
 		&& (Npc_GetDistToWP(slf, "NW_BIGFARM_FOREST_08") < 800))
 		{
+			return FALSE;
+		};
+		if (slf.id >= 13000)
+		&& (slf.id < 14000) {
 			return FALSE;
 		};
 	};

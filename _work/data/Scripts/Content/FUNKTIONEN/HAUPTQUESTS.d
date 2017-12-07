@@ -1753,6 +1753,22 @@ FUNC VOID HAUPTQUESTS()
 
 			Mod_XW_Kap6 = 1;
 		};
+		
+		if (Mod_RupertSpawnedSeelenpeiniger == FALSE)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Rupert_Daemonisch3))
+		&& (!Npc_IsInState(Mod_750_NONE_Rupert_NW, ZS_Talk)) {
+			Mod_RupertSpawnedSeelenpeiniger = TRUE;
+
+			Wld_InsertNpc	(Mod_13017_SP_Seelenpeiniger_NW, "NW_FARM1_CITYWALL_02_B");
+			Wld_InsertNpc	(Mod_13018_SP_Seelenpeiniger_NW, "NW_FARM1_CITYWALL_02_B");
+			Wld_InsertNpc	(Mod_13019_SP_Seelenpeiniger_NW, "NW_FARM1_CITYWALL_02_B");
+			Wld_InsertNpc	(Mod_13020_SP_Seelenpeiniger_NW, "NW_FARM1_CITYWALL_02_B");
+			Wld_InsertNpc	(Zombie_Rupert, "NW_FARM1_CITYWALL_02_B");
+
+			B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Eine Falle! Ich bin mitten im Wald von Lauter schwarzer Schatten umgeben.");
+
+			B_GivePlayerXP	(300);
+		};
 	};
 
 	// Tagebucheinträge, wenn man Ornamentstücke gefunden hat

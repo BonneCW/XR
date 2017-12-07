@@ -10,11 +10,11 @@ FUNC VOID B_Vergiftet(var C_NPC slf)
 		{
 			if (Mod_LichtAn_Pal > 0)
 			{
-				B_MagicHurtNpc	(hero, slf, 300);
+				B_MagicHurtNpc	(hero, slf, 150);
 			}
 			else if (Mod_LichtAn_Normal > 0)
 			{
-				B_MagicHurtNpc	(hero, slf, 100);
+				B_MagicHurtNpc	(hero, slf, 50);
 			};
 		};
 
