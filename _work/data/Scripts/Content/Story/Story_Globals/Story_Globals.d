@@ -45,6 +45,7 @@ const int TARGET_RIGHTLEG = 6;
 
 var int Bosskampf_Pass_NW;
 
+var int Mod_AMQ_DRM_Spawned;
 var int Mod_RupertSpawnedSeelenpeiniger;
 var int Mod_SleeperHint;
 var int Mod_Treffen_Ende;

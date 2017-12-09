@@ -223,7 +223,7 @@ INSTANCE Info_Mod_Scar_AlteMineQuest (C_INFO)
 FUNc INT Info_Mod_Scar_AlteMineQuest_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_AlteMineQuest))
-	&& (Npc_IsDead(Mod_7713_DMR_Daemonenritter_NW))
+	&& (Npc_IsDead(Mod_7713_DMR_Daemonenritter_MT))
 	{
 		return 1;
 	};

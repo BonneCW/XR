@@ -506,6 +506,7 @@ STORY\B_Content\B_Addon_PiratesGoHome.d
 
 
 STORY\DIALOGE\*.d
+STORY\DIALOGE\ToDo\*.d
 STORY\B_AssignAmbientInfos\B_*.d
 
 

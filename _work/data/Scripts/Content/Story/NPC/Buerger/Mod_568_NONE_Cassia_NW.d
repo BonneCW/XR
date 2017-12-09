@@ -4,7 +4,7 @@ instance Mod_568_NONE_Cassia_NW (Npc_Default)
 	name 		= "Cassia"; 
 	guild 		= GIL_OUT;
 	id 			= 568;
-	voice		= 0;
+	voice		= 17;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Cassia_Hi_Condition()
 
 FUNC VOID Info_Mod_Cassia_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Cassia_Hi_16_00"); //Was willst du hier?
+	AI_Output(self, hero, "Info_Mod_Cassia_Hi_17_00"); //Was willst du hier?
 };
 
 INSTANCE Info_Mod_Cassia_Irdorath (C_INFO)
@@ -43,12 +43,12 @@ FUNC VOID Info_Mod_Cassia_Irdorath_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cassia_Irdorath_15_00"); //Ich plane eine Seereise mit dem Schiff der Paladine zu einer Insel des üblen Magiers Xeres.
 	AI_Output(hero, self, "Info_Mod_Cassia_Irdorath_15_01"); //Zu diesem Anlass suche ich fähige Leute für meine Mannschaft und wollte fragen, ob du vielleicht dazu bereit wärest mitzukommen?
-	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath_16_02"); //Du eröffnest mir auf das Schiff der Paladine zu gehen, über das weite Meer zu segeln und die Exklave eines finsteren Magiers aufzusuchen?
+	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath_17_02"); //Du eröffnest mir auf das Schiff der Paladine zu gehen, über das weite Meer zu segeln und die Exklave eines finsteren Magiers aufzusuchen?
 	AI_Output(hero, self, "Info_Mod_Cassia_Irdorath_15_03"); //Nun, es war ja nur eine Fra ...
-	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath_16_04"); //(unterbricht) Und du sollst unter dem Schutz der hiesigen Magier stehen und damit auch deine Mission mit allen Beteiligten ...
-	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath_16_05"); //Hmm, es wäre in der Tat keine schlechte Gelegenheit um die finstere Kanalisation zu verlassen.
-	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath_16_06"); //Wenn du es wünscht, werde ich mit dir die Insel dieses gefährlichen Magiers aufzusuchen.
-	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath_16_07"); //(halblaut) Denn Gefahr verspricht in dem Fall auch Gewinn.
+	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath_17_04"); //(unterbricht) Und du sollst unter dem Schutz der hiesigen Magier stehen und damit auch deine Mission mit allen Beteiligten ...
+	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath_17_05"); //Hmm, es wäre in der Tat keine schlechte Gelegenheit um die finstere Kanalisation zu verlassen.
+	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath_17_06"); //Wenn du es wünscht, werde ich mit dir die Insel dieses gefährlichen Magiers aufzusuchen.
+	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath_17_07"); //(halblaut) Denn Gefahr verspricht in dem Fall auch Gewinn.
 };
 
 INSTANCE Info_Mod_Cassia_Irdorath2 (C_INFO)
@@ -74,7 +74,7 @@ FUNC INT Info_Mod_Cassia_Irdorath2_Condition()
 FUNC VOID Info_Mod_Cassia_Irdorath2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cassia_Irdorath2_15_00"); //Dann werde Mitglied meiner Crew und begleite mich auf dieser Reise.
-	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath2_16_01"); //Nichts lieber als das. Ich werde bei dem Schiff auf den Aufbruch unserer Exkursion warten.
+	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath2_17_01"); //Nichts lieber als das. Ich werde bei dem Schiff auf den Aufbruch unserer Exkursion warten.
 
 	Mod_CrewCount += 1;
 
@@ -114,7 +114,7 @@ FUNC INT Info_Mod_Cassia_Irdorath3_Condition()
 FUNC VOID Info_Mod_Cassia_Irdorath3_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cassia_Irdorath3_15_00"); //Tut mir leid, aber es scheint das wir zu viele sind. Ich kann dich doch nicht mitnehmen.
-	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath3_16_01"); //Schade. Ich gehe dann wieder zurück. Du weißt wo du mich findest, wenn doch noch ein Platz frei werden sollte.
+	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath3_17_01"); //Schade. Ich gehe dann wieder zurück. Du weißt wo du mich findest, wenn doch noch ein Platz frei werden sollte.
 
 	Mod_CassiaDabei = 0;
 
@@ -150,7 +150,7 @@ FUNC INT Info_Mod_Cassia_Irdorath4_Condition()
 FUNC VOID Info_Mod_Cassia_Irdorath4_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cassia_Irdorath4_15_00"); //Ich kann dich doch mitnehmen. Es hat sich noch ein Platz auf dem Schiff gefunden.
-	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath4_16_01"); //Sehr gut, ich bin dann wieder am Hafen.
+	AI_Output(self, hero, "Info_Mod_Cassia_Irdorath4_17_01"); //Sehr gut, ich bin dann wieder am Hafen.
 
 	Mod_CassiaDabei = 1;
 
@@ -183,19 +183,19 @@ FUNC INT Info_Mod_Cassia_Aufnahme_Condition()
 FUNC VOID Info_Mod_Cassia_Aufnahme_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cassia_Aufnahme_15_00"); //Na, wer bist du denn?
-	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_16_01"); //Ich? Ich bin die Chefin der Diebe. 
+	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_17_01"); //Ich? Ich bin die Chefin der Diebe. 
 	AI_Output(hero, self, "Info_Mod_Cassia_Aufnahme_15_02"); //Hier bin ich also gelandet.
-	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_16_03"); //Wieso bist du hier? Hanna würde niemals einem Fremden Zutritt gewähren.
+	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_17_03"); //Wieso bist du hier? Hanna würde niemals einem Fremden Zutritt gewähren.
 	AI_Output(hero, self, "Info_Mod_Cassia_Aufnahme_15_04"); //Sumpfkrautmeldor schickt mich, er meinte, ich sei ein anständiger Kerl und aus mir könnte noch was werden.
-	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_16_05"); //Hmm... Was hast du gemacht, um sein Vertrauen zu gewinnen? Normalerweise traut er niemandem über den Weg.
+	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_17_05"); //Hmm... Was hast du gemacht, um sein Vertrauen zu gewinnen? Normalerweise traut er niemandem über den Weg.
 	AI_Output(hero, self, "Info_Mod_Cassia_Aufnahme_15_06"); //Ich hab ihm den Knast erspart, indem ich sein Krautpäckchen versteckt habe, bevor sich die Miliz ihn vorgeknöpft hat.
-	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_16_07"); //Das wird immer schlimmer. Sehr schwer heutzutage als Dieb über die Runden zu kommen.
-	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_16_08"); //Jeder schaut dem anderen auf die Finger und dann rennen sie wegen den kleinsten Verdächten direkt zu Lord Andre.
+	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_17_07"); //Das wird immer schlimmer. Sehr schwer heutzutage als Dieb über die Runden zu kommen.
+	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_17_08"); //Jeder schaut dem anderen auf die Finger und dann rennen sie wegen den kleinsten Verdächten direkt zu Lord Andre.
 	AI_Output(hero, self, "Info_Mod_Cassia_Aufnahme_15_09"); //Was ist hier eigentlich los?
-	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_16_10"); //Bevor ich dir das erzähle muss ich wissen, ob ich dir vertrauen kann.
-	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_16_11"); //Willst du in meine Diebesgilde beitreten? Entscheide zwischen Reichtum und Tod.
+	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_17_10"); //Bevor ich dir das erzähle muss ich wissen, ob ich dir vertrauen kann.
+	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_17_11"); //Willst du in meine Diebesgilde beitreten? Entscheide zwischen Reichtum und Tod.
 	AI_Output(hero, self, "Info_Mod_Cassia_Aufnahme_15_12"); //Was? Du willst mich töten, wenn ich euch nicht beitrete?
-	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_16_13"); //Ja, mir wird keine andere Möglichkeit bleiben.
+	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_17_13"); //Ja, mir wird keine andere Möglichkeit bleiben.
 
 	Info_ClearChoices	(Info_Mod_Cassia_Aufnahme);
 	
@@ -210,9 +210,9 @@ FUNC VOID Info_Mod_Cassia_Aufnahme_Info()
 FUNC VOID Info_Mod_Cassia_Aufnahme_Ja()
 {
 	AI_Output(hero, self, "Info_Mod_Cassia_Aufnahme_Ja_15_00"); //Nun gut, ich wollt schon immer ein flinker Dieb werden.
-	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_Ja_16_01"); //Ich nehme dich herzlich in unseren Reihen auf.
-	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_Ja_16_02"); //Von einem flinken und guten Dieb bist du noch weit entfernt. Als erstes musst du dich beweisen, indem du mir 2000 Goldmünzen bringst.
-	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_Ja_16_03"); //Ich werde dir den Taschendiebstahl lehren. Dann mach ich dich mit denn anderen Dieben vertraut.
+	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_Ja_17_01"); //Ich nehme dich herzlich in unseren Reihen auf.
+	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_Ja_17_02"); //Von einem flinken und guten Dieb bist du noch weit entfernt. Als erstes musst du dich beweisen, indem du mir 2000 Goldmünzen bringst.
+	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_Ja_17_03"); //Ich werde dir den Taschendiebstahl lehren. Dann mach ich dich mit den anderen Dieben vertraut.
 
 	Mod_AnzahlNebengilden += 1;
 	
@@ -238,7 +238,7 @@ FUNC VOID Info_Mod_Cassia_Aufnahme_Ja()
 FUNC VOID Info_Mod_Cassia_Aufnahme_Nein()
 {
 	AI_Output(hero, self, "Info_Mod_Cassia_Aufnahme_Nein_15_00"); //Dann versuch's doch!
-	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_Nein_16_01"); //Meldor hat einen Fehler begangen und ich werde ihn jetzt ausbessern.
+	AI_Output(self, hero, "Info_Mod_Cassia_Aufnahme_Nein_17_01"); //Meldor hat einen Fehler begangen und ich werde ihn jetzt ausbessern.
 
 	Info_ClearChoices	(Info_Mod_Cassia_Aufnahme);
 
@@ -276,7 +276,7 @@ FUNC VOID Info_Mod_Cassia_Goldmuenzen_Info()
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 2000);
 
-	AI_Output(self, hero, "Info_Mod_Cassia_Goldmuenzen_16_01"); //Wahrhaftig, du bist besser, als ich angenommen hatte. Du hast nun das Recht alles zu wissen. Frag mich ruhig.
+	AI_Output(self, hero, "Info_Mod_Cassia_Goldmuenzen_17_01"); //Wahrhaftig, du bist besser, als ich angenommen hatte. Du hast nun das Recht alles zu wissen. Frag mich ruhig.
 
 	B_SetTopicStatus	(TOPIC_MOD_DIEB_GOLD, LOG_SUCCESS);
 
@@ -309,21 +309,21 @@ FUNC INT Info_Mod_Cassia_WasNun_Condition()
 FUNC VOID Info_Mod_Cassia_WasNun_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cassia_WasNun_15_00"); //Was nun?
-	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_16_01"); //Da du grad fragst, Attila wurde das letzte Mal von der Miliz geschnappt als er seinen Job machen wollte.
-	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_16_02"); //Wir müssen ihn da rausholen.
+	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_17_01"); //Da du grad fragst, Attila wurde das letzte Mal von der Miliz geschnappt als er seinen Job machen wollte.
+	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_17_02"); //Wir müssen ihn da rausholen.
 	AI_Output(hero, self, "Info_Mod_Cassia_WasNun_15_03"); //Und wie hast du dir das vorgestellt?
-	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_16_04"); //Wir schleusen dich in die Miliz ein. Du wirst Attila zur Flucht verhelfen und noch versuchen herauszufinden, wer die Miliz auf Meldor hetzt.
+	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_17_04"); //Wir schleusen dich in die Miliz ein. Du wirst Attila zur Flucht verhelfen und noch versuchen herauszufinden, wer die Miliz auf Meldor hetzt.
 	AI_Output(hero, self, "Info_Mod_Cassia_WasNun_15_05"); //Was? Das soll ich machen? Wenn die mich ertappen werden sie mich töten.
-	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_16_06"); //Ich weiß. Du hast diesen Weg gewählt, aber du hast eine Chance, da rauszukommen, und ohne Attila wird die Situation immer unerträglicher.
+	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_17_06"); //Ich weiß. Du hast diesen Weg gewählt, aber du hast eine Chance, da rauszukommen, und ohne Attila wird die Situation immer unerträglicher.
 	AI_Output(hero, self, "Info_Mod_Cassia_WasNun_15_07"); //Ich sehe ich hab schon wieder keine Wahl.
-	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_16_08"); //Du hattest die Wahl und hast dich für diesen Weg entschieden.
+	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_17_08"); //Du hattest die Wahl und hast dich für diesen Weg entschieden.
 	AI_Output(hero, self, "Info_Mod_Cassia_WasNun_15_09"); //Und wie soll ich in die Miliz reinkommen?
-	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_16_10"); //Mach dir darüber keine Sorgen, wir haben schon Vorgeplant. Ramirez ist ein gesuchter Dieb. Wenn du ihnen Ramirez bringst, werden sie dich sofort aufnehmen.
-	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_16_11"); //Bloß das Problem wäre, dass du schnell handeln musst. Sie werden ihn bestimmt nicht lange leben lassen.
+	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_17_10"); //Mach dir darüber keine Sorgen, wir haben schon Vorgeplant. Ramirez ist ein gesuchter Dieb. Wenn du ihnen Ramirez bringst, werden sie dich sofort aufnehmen.
+	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_17_11"); //Bloß das Problem wäre, dass du schnell handeln musst. Sie werden ihn bestimmt nicht lange leben lassen.
 	AI_Output(hero, self, "Info_Mod_Cassia_WasNun_15_12"); //Wenn ich es nicht schaffe?
-	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_16_13"); //Dann wirst du schuldig gesprochen für Attila's und Ramirez' Tod.
-	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_16_14"); //Bevor wir noch mehr Zeit verschwenden mach dich bereit und komm später nochmal her.
-	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_16_15"); //Dann wirst du mit Ramirez in die Kaserne gehen.	
+	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_17_13"); //Dann wirst du schuldig gesprochen für Attila's und Ramirez' Tod.
+	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_17_14"); //Bevor wir noch mehr Zeit verschwenden mach dich bereit und komm später nochmal her.
+	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_17_15"); //Dann wirst du mit Ramirez in die Kaserne gehen.	
 
 	Log_CreateTopic	(TOPIC_MOD_DIEB_ATTILA, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_DIEB_ATTILA, LOG_RUNNING);
@@ -352,9 +352,9 @@ FUNC INT Info_Mod_Cassia_WasNun_Ramirez_Condition()
 FUNC VOID Info_Mod_Cassia_WasNun_Ramirez_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cassia_WasNun_Ramirez_15_00"); //Ich bin bereit die Aufgabe anzunehmen.
-	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_Ramirez_16_01"); //Du überrascht mich schon wieder, aber leider haben wir Probleme.
-	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_Ramirez_16_02"); //Ramirez vertraut dir nicht. Er denkt du seist nicht gut genug, um diese Aufgabe zu meistern.
-	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_Ramirez_16_03"); //Am besten du redest mit ihm.
+	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_Ramirez_17_01"); //Du überrascht mich schon wieder, aber leider haben wir Probleme.
+	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_Ramirez_17_02"); //Ramirez vertraut dir nicht. Er denkt du seist nicht gut genug, um diese Aufgabe zu meistern.
+	AI_Output(self, hero, "Info_Mod_Cassia_WasNun_Ramirez_17_03"); //Am besten du redest mit ihm.
 
 	B_LogEntry	(TOPIC_MOD_DIEB_ATTILA, "Ich wollte den Auftrag von Cassia beginnen, doch sie hat mir mitgeteilt, dass Ramirez mir nicht vertraut. Ich muss ihn wohl erst überzeugen.");
 };
@@ -381,9 +381,9 @@ FUNC INT Info_Mod_Cassia_RamirezDabei_Condition()
 FUNC VOID Info_Mod_Cassia_RamirezDabei_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cassia_RamirezDabei_15_00"); //Ich konnte Ramirez überzeugen, indem ich Attila's Job übernommen und eine Bande im Hafenviertel ausgeschaltet habe.
-	AI_Output(self, hero, "Info_Mod_Cassia_RamirezDabei_16_01"); //Wenn du Attila's Job erfolgreich ausführen konntest, dann wirst du damit bestimmt keine Probleme haben.
+	AI_Output(self, hero, "Info_Mod_Cassia_RamirezDabei_17_01"); //Wenn du Attila's Job erfolgreich ausführen konntest, dann wirst du damit bestimmt keine Probleme haben.
 	AI_Output(hero, self, "Info_Mod_Cassia_RamirezDabei_15_02"); //Ich wollte dir Bescheid geben das wir gehen.
-	AI_Output(self, hero, "Info_Mod_Cassia_RamirezDabei_16_03"); //Gut, viel Glück!
+	AI_Output(self, hero, "Info_Mod_Cassia_RamirezDabei_17_03"); //Gut, viel Glück!
 
 	B_LogEntry	(TOPIC_MOD_DIEB_ATTILA, "Ich habe Cassia Bescheid gegeben. Dann nichts wie los. Ramirez wird jetzt mit mir zu Lord Andre gehen.");
 };
@@ -410,25 +410,25 @@ FUNC INT Info_Mod_Cassia_Elvira_Condition()
 
 FUNC VOID Info_Mod_Cassia_Elvira_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_00"); //Ahh, da bist du ja wieder ... gerade richtig für einen Auftrag.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_00"); //Ahh, da bist du ja wieder ... gerade richtig für einen Auftrag.
 	AI_Output(hero, self, "Info_Mod_Cassia_Elvira_15_01"); //Worum geht es? Wieder eine Truhe in Khorinis auszuräumen?
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_02"); //Nein, nach dem großen Coup von zuletzt müssen wir hier erst mal einige Zeit vorsichtiger sein, da die Wachen nun viel aufmerksamer sind ... zumindest die nächste Zeit über.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_02"); //Nein, nach dem großen Coup von zuletzt müssen wir hier erst mal einige Zeit vorsichtiger sein, da die Wachen nun viel aufmerksamer sind ... zumindest die nächste Zeit über.
 	AI_Output(hero, self, "Info_Mod_Cassia_Elvira_15_03"); //Was ist dann geplant?
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_04"); //Nun, wir haben unsere Fühler etwas ausgestreckt.
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_05"); //Jesper hat einen kleinen Ausflug nach Khorata gemacht und sich da ein bisschen umgehört.
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_06"); //Zwar scheint die Stadt ziemlich pleite zu sein ... die Leute sind jedoch sehr abergläubisch.
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_07"); //Und mit so etwas ist immer viel Geld zu machen.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_04"); //Nun, wir haben unsere Fühler etwas ausgestreckt.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_05"); //Jesper hat einen kleinen Ausflug nach Khorata gemacht und sich da ein bisschen umgehört.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_06"); //Zwar scheint die Stadt ziemlich pleite zu sein ... die Leute sind jedoch sehr abergläubisch.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_07"); //Und mit so etwas ist immer viel Geld zu machen.
 	AI_Output(hero, self, "Info_Mod_Cassia_Elvira_15_08"); //Soll ich sie etwa mit Gruselgeschichten erschrecken und ihnen damit ihr Gold abnehmen?
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_09"); //Nein, das brauchst du gar nicht ... das haben schon die Magier des Feuers für uns gemacht.
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_10"); //Das Gold ist schön in einer Truhe gelagert.
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_11"); //Diese ist jedoch leider durch ein gutes Schloss gesichert.
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_12"); //Wie Jesper herausbekommen hat, trägt die Feuermagierin Elvira den Schlüssel bei sich.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_09"); //Nein, das brauchst du gar nicht ... das haben schon die Magier des Feuers für uns gemacht.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_10"); //Das Gold ist schön in einer Truhe gelagert.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_11"); //Diese ist jedoch leider durch ein gutes Schloss gesichert.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_12"); //Wie Jesper herausbekommen hat, trägt die Feuermagierin Elvira den Schlüssel bei sich.
 	AI_Output(hero, self, "Info_Mod_Cassia_Elvira_15_13"); //Ok, und ich darf ihn ihr nun abnehmen.
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_14"); //Gut, so weit hast du also mitgedacht.
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_15"); //Ob es nun über Taschendiebstahl ist, oder über einen anderen Weg.
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_16"); //Es ist nie von Nachteil sich bei den richtigen Leuten nach Informationen umzuhören. Auch diese Tugend sollte ein Dieb stets pflegen.
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_17"); //Jedenfalls sind in der Truhe geschätzte 1000 Goldmünzen und eine wertvolle Innosstatue, die wir bestimmt zu einem guten Preis loswerden können.
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_16_18"); //Sobald du alles hast, meld dich bei mir.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_14"); //Gut, so weit hast du also mitgedacht.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_15"); //Ob es nun über Taschendiebstahl ist, oder über einen anderen Weg.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_16"); //Es ist nie von Nachteil sich bei den richtigen Leuten nach Informationen umzuhören. Auch diese Tugend sollte ein Dieb stets pflegen.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_17"); //Jedenfalls sind in der Truhe geschätzte 1000 Goldmünzen und eine wertvolle Innosstatue, die wir bestimmt zu einem guten Preis loswerden können.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira_17_18"); //Sobald du alles hast, meld dich bei mir.
 
 	Log_CreateTopic	(TOPIC_MOD_DIEB_ELVIRA, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_DIEB_ELVIRA, LOG_RUNNING);
@@ -462,7 +462,7 @@ FUNC VOID Info_Mod_Cassia_Elvira2_Info()
 
 	B_GiveInvItems	(hero, self, ItMi_InnosStatue_REL, 1);
 
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_16_02"); //Sehr schön. Und das Gold?
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_17_02"); //Sehr schön. Und das Gold?
 
 	Info_ClearChoices	(Info_Mod_Cassia_Elvira2);
 
@@ -486,28 +486,28 @@ FUNC VOID Info_Mod_Cassia_Elvira2_C()
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 200);
 
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_16_01"); //Willst du mich zum Narren halten? Da wollen wir doch gleich mal nachsehen, Bürschchen ...
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_17_01"); //Willst du mich zum Narren halten? Da wollen wir doch gleich mal nachsehen, Bürschchen ...
 
 	if (Npc_HasItems(hero, ItMi_Gold) >= 800)
 	{
-		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_16_02"); //Aha .. hab ich’s mir doch gedacht ... die Taschen voller Gold.
-		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_16_03"); //Die restlichen Münzen aus der Truhe nehm ich dann mal auch an mich.
+		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_17_02"); //Aha .. hab ich’s mir doch gedacht ... die Taschen voller Gold.
+		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_17_03"); //Die restlichen Münzen aus der Truhe nehm ich dann mal auch an mich.
 
 		B_GiveInvItems	(hero, self, ItMi_Gold, 800);
 
-		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_16_04"); //Achja, hier deine Belohnung.
+		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_17_04"); //Achja, hier deine Belohnung.
 
 		B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
-		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_16_05"); //Für deinen miserablen Versuch mich zu täuschen hast du wirklich nicht mehr verdient.
+		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_17_05"); //Für deinen miserablen Versuch mich zu täuschen hast du wirklich nicht mehr verdient.
 
 		B_GivePlayerXP	(400);
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_16_06"); //Was, kaum ein Goldstück in deinen Taschen?
-		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_16_07"); //Arme Wurst ... wann hast du das letzte Mal jemanden erfolgreich beklaut?
-		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_16_08"); //Na ja, hier paar Goldstücke für dich, damit du dir ein vergammeltes Stück Brot auf dem Markt kaufen kannst.
+		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_17_06"); //Was, kaum ein Goldstück in deinen Taschen?
+		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_17_07"); //Arme Wurst ... wann hast du das letzte Mal jemanden erfolgreich beklaut?
+		AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_C_17_08"); //Na ja, hier paar Goldstücke für dich, damit du dir ein vergammeltes Stück Brot auf dem Markt kaufen kannst.
 
 		B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
@@ -525,8 +525,8 @@ FUNC VOID Info_Mod_Cassia_Elvira2_B()
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 500);
 
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_B_16_01"); //(argwöhnisch) Nur 500 Goldstücke? Hmm, nun gut.
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_B_16_02"); //Hier hast du 200 Goldstücke für deine Mühen.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_B_17_01"); //(argwöhnisch) Nur 500 Goldstücke? Hmm, nun gut.
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_B_17_02"); //Hier hast du 200 Goldstücke für deine Mühen.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 200);
 
@@ -543,7 +543,7 @@ FUNC VOID Info_Mod_Cassia_Elvira2_A()
 
 	B_GiveInvItems	(hero, self, ItMi_Gold, 1000);
 
-	AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_A_16_01"); //Sehr schön. 600 Goldstücke bekommst du für deine gute Arbeit gleich wieder zurück, da uns die Statue beim richtigen Käufer ja auch noch einige Münzen einbringt ...
+	AI_Output(self, hero, "Info_Mod_Cassia_Elvira2_A_17_01"); //Sehr schön. 600 Goldstücke bekommst du für deine gute Arbeit gleich wieder zurück, da uns die Statue beim richtigen Käufer ja auch noch einige Münzen einbringt ...
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 600);
 
@@ -576,7 +576,7 @@ FUNC INT Info_Mod_Cassia_Meldor_Condition()
 FUNC VOID Info_Mod_Cassia_Meldor_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cassia_Meldor_15_00"); //Was macht eigentlich Meldor?
-	AI_Output(self, hero, "Info_Mod_Cassia_Meldor_16_01"); //Meldor ist der Sumpfkrauthändler. Zur Zeit kann er aber seinen Tätigkeiten nicht nachgehen, weil ihm die Miliz öfters auflauert.
+	AI_Output(self, hero, "Info_Mod_Cassia_Meldor_17_01"); //Meldor ist der Sumpfkrauthändler. Zur Zeit kann er aber seinen Tätigkeiten nicht nachgehen, weil ihm die Miliz öfters auflauert.
 };
 
 INSTANCE Info_Mod_Cassia_Mitglieder (C_INFO)
@@ -601,13 +601,13 @@ FUNC INT Info_Mod_Cassia_Mitglieder_Condition()
 FUNC VOID Info_Mod_Cassia_Mitglieder_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cassia_Mitglieder_15_00"); //Wer gehört alles zur Diebesgilde?
-	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_16_01"); //Ramirez und ich sind die Anführer der Gilde.
-	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_16_02"); //Kardif, Nagur, Meldor und Halvor besetzen das Hafenviertel.
-	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_16_03"); //Halvor kann deine gestohlenen Waren kaufen, zu einem viel besseren Preis als die anderen Händler es dir je abkaufen würden.
-	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_16_04"); //Rengaru ist momentan auf dem Marktplatz, um die Reichen zu bestehlen, und Joe beim Tempelplatz.
-	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_16_05"); //Unser Spion als Gärtner getarnt sitzt im oberen Viertel und spioniert dort die Paladine aus.
-	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_16_06"); //Hanna ist bloß unsere Türwache und keine richtige Diebin.
-	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_16_07"); //Und zu guter letzt Attila, unser Mann der unsere Problem beseitigt.
+	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_17_01"); //Ramirez und ich sind die Anführer der Gilde.
+	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_17_02"); //Kardif, Nagur, Meldor und Halvor besetzen das Hafenviertel.
+	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_17_03"); //Halvor kann deine gestohlenen Waren kaufen, zu einem viel besseren Preis als die anderen Händler es dir je abkaufen würden.
+	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_17_04"); //Rengaru ist momentan auf dem Marktplatz, um die Reichen zu bestehlen, und Joe beim Tempelplatz.
+	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_17_05"); //Unser Spion als Gärtner getarnt sitzt im oberen Viertel und spioniert dort die Paladine aus.
+	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_17_06"); //Hanna ist bloß unsere Türwache und keine richtige Diebin.
+	AI_Output(self, hero, "Info_Mod_Cassia_Mitglieder_17_07"); //Und zu guter letzt Attila, unser Mann der unsere Problem beseitigt.
 };
 
 INSTANCE Info_Mod_Cassia_AndreVermaechtnis (C_INFO)
@@ -630,14 +630,14 @@ FUNC INT Info_Mod_Cassia_AndreVermaechtnis_Condition()
 
 FUNC VOID Info_Mod_Cassia_AndreVermaechtnis_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Cassia_AndreVermaechtnis_16_00"); //He, sieh an wer hier einfach zu uns hineinspaziert kommt.
-	AI_Output(self, hero, "Info_Mod_Cassia_AndreVermaechtnis_16_01"); //Ich hatte eigentlich mit Jesper gerechnet ... und nicht mit unwillkommenen Gästen.
-	AI_Output(self, hero, "Info_Mod_Cassia_AndreVermaechtnis_16_02"); //So muss ich dich mit meinem Degen leider dieses Platzes verweisen.
+	AI_Output(self, hero, "Info_Mod_Cassia_AndreVermaechtnis_17_00"); //He, sieh an wer hier einfach zu uns hineinspaziert kommt.
+	AI_Output(self, hero, "Info_Mod_Cassia_AndreVermaechtnis_17_01"); //Ich hatte eigentlich mit Jesper gerechnet ... und nicht mit unwillkommenen Gästen.
+	AI_Output(self, hero, "Info_Mod_Cassia_AndreVermaechtnis_17_02"); //So muss ich dich mit meinem Degen leider dieses Platzes verweisen.
 
 	AI_ReadyMeleeWeapon	(self);
 
 	AI_Output(hero, self, "Info_Mod_Cassia_AndreVermaechtnis_15_03"); //Wohl eher meine ganze Mannschaft ...
-	AI_Output(self, hero, "Info_Mod_Cassia_AndreVermaechtnis_16_04"); //Was faselst ... (wird unterbrochen)
+	AI_Output(self, hero, "Info_Mod_Cassia_AndreVermaechtnis_17_04"); //Was faselst ... (wird unterbrochen)
 
 	AI_StopProcessInfos	(self);
 
@@ -679,28 +679,28 @@ FUNC VOID Info_Mod_Cassia_Lehrer_Info()
 
 	if (Mod_Schwierigkeit != 4)
 	{
-		AI_Output(self, hero, "Info_Mod_Cassia_Lehrer_16_01"); //Also ich könnte dir helfen geschickter zu werden.
+		AI_Output(self, hero, "Info_Mod_Cassia_Lehrer_17_01"); //Also ich könnte dir helfen geschickter zu werden.
 	};
 
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_PICKLOCK) == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Cassia_Lehrer_16_02"); //Ramirez ist der beste Schlösserknacker. Keine Truhe ist vor seinen Dietrichen sicher.
-		AI_Output(self, hero, "Info_Mod_Cassia_Lehrer_16_03"); //Aber auch Diego kann dir das Schlösserknacken zeigen.
+		AI_Output(self, hero, "Info_Mod_Cassia_Lehrer_17_02"); //Ramirez ist der beste Schlösserknacker. Keine Truhe ist vor seinen Dietrichen sicher.
+		AI_Output(self, hero, "Info_Mod_Cassia_Lehrer_17_03"); //Aber auch Diego kann dir das Schlösserknacken zeigen.
 	};
 
 	if (Mod_Schwierigkeit != 4)
 	{
-		AI_Output(self, hero, "Info_Mod_Cassia_Lehrer_16_04"); //Attila kann dich im Einhandkampf unterrichten.
+		AI_Output(self, hero, "Info_Mod_Cassia_Lehrer_17_04"); //Attila kann dich im Einhandkampf unterrichten.
 	};
 
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Cassia_Lehrer_16_05"); //Jesper ist der Meister des Schleichens.
+		AI_Output(self, hero, "Info_Mod_Cassia_Lehrer_17_05"); //Jesper ist der Meister des Schleichens.
 	};
 
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_ACROBAT) == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Cassia_Lehrer_16_06"); //Rengaru ist der Meister der Akrobatik.
+		AI_Output(self, hero, "Info_Mod_Cassia_Lehrer_17_06"); //Rengaru ist der Meister der Akrobatik.
 	};
 };
 
@@ -731,10 +731,10 @@ FUNC VOID Info_Mod_Cassia_Lernen_Info()
 	
 	if (B_TeachThiefTalent (self, hero, NPC_TALENT_PICKPOCKET))
 	{
-		AI_Output (self, hero, "Info_Mod_Cassia_Lernen_16_01");//Wenn du jemandem die Taschen ausleeren willst, lenke ihn ab. Quatsch ihn einfach an, sprich mit ihm.
-		AI_Output (self, hero, "Info_Mod_Cassia_Lernen_16_02");//Beim Gespräch guckst du dir ihn an. Achte auf ausgebeulte Taschen, Schmuck oder Lederschnüre am Hals. Und achte vor allem darauf, wie aufmerksam der Kerl ist.
-		AI_Output (self, hero, "Info_Mod_Cassia_Lernen_16_03");//Einen betrunkenen Tagelöhner auszurauben, ist was anderes, als einen wachsamen Händler, klar?
-		AI_Output (self, hero, "Info_Mod_Cassia_Lernen_16_04");//Wenn du dich natürlich ungeschickt anstellst, kriegt er's mit. Also immer ruhig bleiben.
+		AI_Output (self, hero, "Info_Mod_Cassia_Lernen_17_01");//Wenn du jemandem die Taschen ausleeren willst, lenke ihn ab. Quatsch ihn einfach an, sprich mit ihm.
+		AI_Output (self, hero, "Info_Mod_Cassia_Lernen_17_02");//Beim Gespräch guckst du dir ihn an. Achte auf ausgebeulte Taschen, Schmuck oder Lederschnüre am Hals. Und achte vor allem darauf, wie aufmerksam der Kerl ist.
+		AI_Output (self, hero, "Info_Mod_Cassia_Lernen_17_03");//Einen betrunkenen Tagelöhner auszurauben, ist was anderes, als einen wachsamen Händler, klar?
+		AI_Output (self, hero, "Info_Mod_Cassia_Lernen_17_04");//Wenn du dich natürlich ungeschickt anstellst, kriegt er's mit. Also immer ruhig bleiben.
 	};
 };
 
@@ -761,7 +761,7 @@ FUNC INT Info_Mod_Cassia_Lernen_DEX_Condition()
 FUNC VOID Info_Mod_Cassia_Lernen_DEX_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Cassia_Lernen_DEX_15_00"); //Bring mir was bei.
-	AI_Output(self, hero, "Info_Mod_Cassia_Lernen_DEX_16_01"); //Was willst du lernen?
+	AI_Output(self, hero, "Info_Mod_Cassia_Lernen_DEX_17_01"); //Was willst du lernen?
 
 	Info_ClearChoices	(Info_Mod_Cassia_Lernen_DEX);
 

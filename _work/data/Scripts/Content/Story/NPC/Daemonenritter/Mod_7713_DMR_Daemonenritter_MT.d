@@ -1,4 +1,4 @@
-instance Mod_7713_DMR_Daemonenritter_NW (Npc_Default)
+instance Mod_7713_DMR_Daemonenritter_MT (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Dämonenritter"; 
@@ -39,6 +39,6 @@ instance Mod_7713_DMR_Daemonenritter_NW (Npc_Default)
 
 FUNC VOID Rtn_Start_7713()
 {	
-	TA_Stand_WP	(08,00,23,00,"NW_CASTLEMINE_TOWER_STAND_02");
-	TA_Stand_WP 	(23,00,08,00,"NW_CASTLEMINE_TOWER_STAND_02");
+	TA_Stand_WP	(08,00,23,00,"PALTOBURG_3");
+	TA_Stand_WP (23,00,08,00,"PALTOBURG_3");
 };

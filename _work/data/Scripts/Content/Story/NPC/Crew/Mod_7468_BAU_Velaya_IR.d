@@ -6,7 +6,7 @@ instance Mod_7468_BAU_Velaya_IR (Npc_Default)
 	npctype		= 	npctype_main;
 	guild 		=	GIL_OUT;
 	level 		=	1;
-	voice		= 0;
+	voice		= 17;
 	id 			=	7468;
 	flags      	=   0; // wichtig, weil man sie nicht finishen kann!
 

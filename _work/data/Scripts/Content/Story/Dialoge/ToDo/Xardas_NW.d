@@ -2994,8 +2994,6 @@ FUNC VOID Info_Mod_Xardas_NW_AlteMineQuest_Info()
 	Log_CreateTopic	(TOPIC_MOD_XARDAS_ALTEMINE, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_XARDAS_ALTEMINE, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_XARDAS_ALTEMINE, "Xardas bat mich darum in der Alten Mine vorbeizuschauen. Scheinbar hat es dort einige ungewöhnliche Gewalttaten gegeben.");
-
-	Wld_InsertNpc	(Mod_7713_DMR_Daemonenritter_NW, "BIGFARM");
 };
 
 INSTANCE Info_Mod_Xardas_NW_AlteMineQuest2 (C_INFO)

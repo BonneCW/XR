@@ -6518,6 +6518,13 @@ FUNC VOID INIT_Minental ()
 		B_RemoveNpc(Mod_520_DMR_Raven_MT);
 	};
 	
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_AlteMineQuest))
+	&& (Mod_AMQ_DRM_Spawned == FALSE)	{
+		Mod_AMQ_DRM_Spawned = TRUE;
+		
+		Wld_InsertNpc(Mod_7713_DMR_Daemonenritter_MT, "OC1");
+	};
+	
 	var zCListSort liste;
 	var int loopStart;
 	var C_Npc temp;
