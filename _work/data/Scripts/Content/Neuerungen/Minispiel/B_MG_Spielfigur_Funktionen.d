@@ -406,25 +406,9 @@ FUNC VOID C_MG_SPIELFIGUR_WalkToField(var C_MG_SPIELFIGUR sf, var int field)
 
 			if (MEM_ReadStatArr(MG_Spielfeld_Figur, y*8+i) == MG_FIGUR_TROLL)
 			{
-				if (sf.type != MG_FIGUR_HASE)
-				{
-					B_MG_Schmeissen(sf.field, sf.owner);
+				B_MG_Schmeissen(sf.field, sf.owner);
 
-					return;
-				}
-				else
-				{
-					if (x > x_alt)
-					{
-						i += 1;
-					}
-					else
-					{
-						i -= 1;
-					};
-
-					MEM_StackPos.position = loop;
-				};
+				return;
 			};
 
 			B_MG_Schmeissen(y*8+i, (sf.owner+1)%2);
