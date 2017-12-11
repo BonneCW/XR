@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Hubert_Hi_Info()
 {
 	B_Say	(hero, self, "$WHOAREYOU");
 
-	AI_Output(self, hero, "Info_Mod_Hubert_Hi_06_01"); //H - (Schluckauf) hä?
+	AI_Output(self, hero, "Info_Mod_Hubert_Hi_28_01"); //H - (Schluckauf) hä?
 };
 
 INSTANCE Info_Mod_Hubert_Landvermessung (C_INFO)
@@ -46,9 +46,9 @@ FUNC VOID Info_Mod_Hubert_Landvermessung_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hubert_Landvermessung_15_00"); //Ich brauche deine Hilfe.
 	AI_Output(hero, self, "Info_Mod_Hubert_Landvermessung_15_01"); //Wie groß ist Khorata?
-	AI_Output(self, hero, "Info_Mod_Hubert_Landvermessung_06_02"); //H ... hm. Bring mir ersma n büschn neues Zeuchz. In meim nüchtern Zustand kannich ja noch kein klarn Gedankn nich fassn.
+	AI_Output(self, hero, "Info_Mod_Hubert_Landvermessung_28_02"); //H ... hm. Bring mir ersma n büschn neues Zeuchz. In meim nüchtern Zustand kannich ja noch kein klarn Gedankn nich fassn.
 	AI_Output(hero, self, "Info_Mod_Hubert_Landvermessung_15_03"); //Woher bekomme ich das "Zeuchz"?
-	AI_Output(self, hero, "Info_Mod_Hubert_Landvermessung_06_04"); //Immer gradeaus un dann rechts. Ah nee, geh ma besser zu die Tussi, wo Fusl ver, äh, veräußert. Müsste am Marktplatz rumstehn. (grunzt)
+	AI_Output(self, hero, "Info_Mod_Hubert_Landvermessung_28_04"); //Immer gradeaus un dann rechts. Ah nee, geh ma besser zu die Tussi, wo Fusl ver, äh, veräußert. Müsste am Marktplatz rumstehn. (grunzt)
 
 	B_LogEntry	(TOPIC_MOD_KHORATA_LANDVERMESSUNG, "Ich soll der Saufbirne Hubert seinen Alkohol von einer Händlerin am Marktplatz kaufen. Ob das moralisch noch zu rechtfertigen ist ...?");
 };
@@ -80,19 +80,19 @@ FUNC VOID Info_Mod_Hubert_LandvermessungAlk_Info()
 	B_GiveInvItems	(hero, self, ItFo_HubertBooze, 1);
 	Npc_RemoveInvItems	(self, ItFo_HubertBooze, 1);
 
-	AI_Output(self, hero, "Info_Mod_Hubert_LandvermessungAlk_06_01"); //Oh, gut!
+	AI_Output(self, hero, "Info_Mod_Hubert_LandvermessungAlk_28_01"); //Oh, gut!
 
 	CreateInvItems	(self, ItFo_Booze, 1);
 
 	B_UseItem	(self, ItFo_Booze);
 
-	AI_Output(self, hero, "Info_Mod_Hubert_LandvermessungAlk_06_02"); //Jetz gehts wieder besser. Mannomann! Ich hab inner Zwitschen ... Zwichen ..., äh, Zeit über deine Frage nachgedacht.
+	AI_Output(self, hero, "Info_Mod_Hubert_LandvermessungAlk_28_02"); //Jetz gehts wieder besser. Mannomann! Ich hab inner Zwitschen ... Zwichen ..., äh, Zeit über deine Frage nachgedacht.
 	AI_Output(hero, self, "Info_Mod_Hubert_LandvermessungAlk_15_03"); //Ja?
-	AI_Output(self, hero, "Info_Mod_Hubert_LandvermessungAlk_06_04"); //Jo!
+	AI_Output(self, hero, "Info_Mod_Hubert_LandvermessungAlk_28_04"); //Jo!
 	AI_Output(hero, self, "Info_Mod_Hubert_LandvermessungAlk_15_05"); //Und? Zu welchem Ergebnis bist du gekommen?
-	AI_Output(self, hero, "Info_Mod_Hubert_LandvermessungAlk_06_06"); //Siebn Stobbelfelder! Kho-ra-ra-ra-ta is so groß wie siebn Stobbelfelder nebneinander.
+	AI_Output(self, hero, "Info_Mod_Hubert_LandvermessungAlk_28_06"); //Siebn Stobbelfelder! Kho-ra-ra-ra-ta is so groß wie siebn Stobbelfelder nebneinander.
 	AI_Output(hero, self, "Info_Mod_Hubert_LandvermessungAlk_15_07"); //Umwerfend ...
-	AI_Output(self, hero, "Info_Mod_Hubert_LandvermessungAlk_06_08"); //Nich wahr?
+	AI_Output(self, hero, "Info_Mod_Hubert_LandvermessungAlk_28_08"); //Nich wahr?
 
 	B_GivePlayerXP	(50);
 
@@ -121,11 +121,11 @@ FUNC INT Info_Mod_Hubert_CityGuide01_Condition()
 FUNC VOID Info_Mod_Hubert_CityGuide01_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hubert_CityGuide01_15_00"); //Kannst du mir die Stadt zeigen?
-	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide01_06_01"); //(betrunken) Hu? Bis wohl neu hier?
+	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide01_28_01"); //(betrunken) Hu? Bis wohl neu hier?
 	AI_Output(hero, self, "Info_Mod_Hubert_CityGuide01_15_02"); //Du hast es erraten.
-	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide01_06_03"); //Also, das kannich schon machn ... wart mal, muss ebn meine Beine sortiern. (ächzt)
-	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide01_06_04"); //Immer schön hübsch freundlischein su den Fremden, ne?
-	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide01_06_05"); //Lauf mir einfach hinterher und sag, wenn ich su schnell bin.
+	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide01_28_03"); //Also, das kannich schon machn ... wart mal, muss ebn meine Beine sortiern. (ächzt)
+	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide01_28_04"); //Immer schön hübsch freundlischein su den Fremden, ne?
+	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide01_28_05"); //Lauf mir einfach hinterher und sag, wenn ich su schnell bin.
 
 	AI_StopProcessInfos	(self);
 
@@ -153,7 +153,7 @@ FUNC INT Info_Mod_Hubert_CityGuide02_Condition()
 
 FUNC VOID Info_Mod_Hubert_CityGuide02_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide02_06_00"); //Das is unser Rathaus. Da haust unser Oberfurzi drin. Kannst ja mal hallo sagn.
+	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide02_28_00"); //Das is unser Rathaus. Da haust unser Oberfurzi drin. Kannst ja mal hallo sagn.
 
 	AI_StopProcessInfos	(self);
 
@@ -181,7 +181,7 @@ FUNC INT Info_Mod_Hubert_CityGuide03_Condition()
 
 FUNC VOID Info_Mod_Hubert_CityGuide03_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide03_06_00"); //Hier kriegste alles zu trinken. Und wennde dich kloppen willst, kannste mal den Hans kenn ... n ... n lernen.
+	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide03_28_00"); //Hier kriegste alles zu trinken. Und wennde dich kloppen willst, kannste mal den Hans kenn ... n ... n lernen.
 
 	AI_StopProcessInfos	(self);
 
@@ -209,7 +209,7 @@ FUNC INT Info_Mod_Hubert_CityGuide04_Condition()
 
 FUNC VOID Info_Mod_Hubert_CityGuide04_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide04_06_00"); //In der Straße gehn sie alle penn ... n. Nix, wo du hinmusst.
+	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide04_28_00"); //In der Straße gehn sie alle penn ... n. Nix, wo du hinmusst.
 
 	AI_StopProcessInfos	(self);
 
@@ -237,9 +237,9 @@ FUNC INT Info_Mod_Hubert_CityGuide05_Condition()
 
 FUNC VOID Info_Mod_Hubert_CityGuide05_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide05_06_00"); //Da drin sind die Robenfurzis, wie ich sie nenn.
-	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide05_06_01"); //(lacht übertrieben) Die ham den einzign richtign Pott inner Stadt.
-	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide05_06_02"); //Naja, feine Ärsche ham die halt.
+	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide05_28_00"); //Da drin sind die Robenfurzis, wie ich sie nenn.
+	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide05_28_01"); //(lacht übertrieben) Die ham den einzign richtign Pott inner Stadt.
+	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide05_28_02"); //Naja, feine Ärsche ham die halt.
 
 	AI_StopProcessInfos	(self);
 
@@ -267,9 +267,9 @@ FUNC INT Info_Mod_Hubert_CityGuide06_Condition()
 
 FUNC VOID Info_Mod_Hubert_CityGuide06_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide06_06_00"); //Da musste hoffentlich nie rein, da ist nämlich der Richter. Is mir unheimlich, der Kerl.
-	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide06_06_01"); //Damit is die Führung fertich. Ich geh jetzt noch ins Gasthaus, neues Zeuchz holen.
-	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide06_06_02"); //Kannst mich ja begleiten, wennde willst.
+	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide06_28_00"); //Da musste hoffentlich nie rein, da ist nämlich der Richter. Is mir unheimlich, der Kerl.
+	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide06_28_01"); //Damit is die Führung fertich. Ich geh jetzt noch ins Gasthaus, neues Zeuchz holen.
+	AI_Output(self, hero, "Info_Mod_Hubert_CityGuide06_28_02"); //Kannst mich ja begleiten, wennde willst.
 
 	AI_StopProcessInfos	(self);
 
@@ -304,7 +304,7 @@ FUNC INT Info_Mod_Hubert_Freudenspender_Condition()
 FUNC VOID Info_Mod_Hubert_Freudenspender_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hubert_Freudenspender_15_00"); //Brauchst du Freudenspender?
-	AI_Output(self, hero, "Info_Mod_Hubert_Freudenspender_06_01"); //Nee, nee, mein Zeuchz reicht mir ...
+	AI_Output(self, hero, "Info_Mod_Hubert_Freudenspender_28_01"); //Nee, nee, mein Zeuchz reicht mir ...
 };
 
 INSTANCE Info_Mod_Hubert_Pickpocket (C_INFO)

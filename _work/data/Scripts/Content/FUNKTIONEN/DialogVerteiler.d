@@ -24,10 +24,6 @@ FUNC VOID DialogVerteiler()
 		Info_Mod_Diego_Lernen_DEX.npc	= Mod_538_RDW_Diego_NW;
 		Info_Mod_Diego_EXIT.npc		= Mod_538_RDW_Diego_NW;
 
-		// Ethan
-
-		Info_Mod_Ethan_EXIT.npc		= Mod_1532_HTR_Ethan_NW;
-
 		// Jesper
 
 		Info_Mod_Jesper_Lernen.npc		= Mod_587_NONE_Jesper_NW;
@@ -86,10 +82,6 @@ FUNC VOID DialogVerteiler()
 		Info_Mod_Diego_Lernen.npc	= Mod_7442_RDW_Diego_IR;
 		Info_Mod_Diego_Lernen_DEX.npc	= Mod_7442_RDW_Diego_IR;
 		Info_Mod_Diego_EXIT.npc		= Mod_7442_RDW_Diego_IR;
-
-		// Ethan
-
-		Info_Mod_Ethan_EXIT.npc		= Mod_7450_HTR_Ethan_IR;
 	}
 	else if (CurrentLevel == GDG_WORLD_ZEN)
 	{

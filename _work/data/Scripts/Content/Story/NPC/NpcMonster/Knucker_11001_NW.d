@@ -6,7 +6,7 @@ INSTANCE Knucker_11001_NW	(Mst_Default_Dragon_Fire)
 	aivar[AIV_MM_REAL_ID]			= 	ID_DRAGON_ROCK;
 	id = 11001;
 	Npc_SetToFistMode(self);
-	voice	= 21;
+	voice	= 22;
 	flags = 2;
 
 	level							=	500;

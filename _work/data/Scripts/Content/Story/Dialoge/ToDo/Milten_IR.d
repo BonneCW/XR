@@ -17,12 +17,12 @@ FUNC INT Info_Mod_Milten_IR_Hi_Condition()
 FUNC VOID Info_Mod_Milten_IR_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_IR_Hi_15_00"); //Und, was hältst du von der Sache bisher?
-	AI_Output(self, hero, "Info_Mod_Milten_IR_Hi_03_01"); //Nun, dieser finstere Ort macht dem Magier Xeres alle Ehre.
-	AI_Output(self, hero, "Info_Mod_Milten_IR_Hi_03_02"); //Innos erhellendes Feuer ist es, was diesem Ort schon lange gefehlt hat.
-	AI_Output(self, hero, "Info_Mod_Milten_IR_Hi_03_03"); //Sein Segen wird uns hoffentlich gute Dienste leisten, wenn es darum geht die dämonische Brut zu bannen, welche hier nistet.
+	AI_Output(self, hero, "Info_Mod_Milten_IR_Hi_28_01"); //Nun, dieser finstere Ort macht dem Magier Xeres alle Ehre.
+	AI_Output(self, hero, "Info_Mod_Milten_IR_Hi_28_02"); //Innos erhellendes Feuer ist es, was diesem Ort schon lange gefehlt hat.
+	AI_Output(self, hero, "Info_Mod_Milten_IR_Hi_28_03"); //Sein Segen wird uns hoffentlich gute Dienste leisten, wenn es darum geht die dämonische Brut zu bannen, welche hier nistet.
 	AI_Output(hero, self, "Info_Mod_Milten_IR_Hi_15_04"); //Ohh, ganz ungewohnte Töne. Du sprichst wie ein Feuermagier aus ganzem Willen.
-	AI_Output(self, hero, "Info_Mod_Milten_IR_Hi_03_05"); //Nunja, es ist sicher die Kälte und sie Finsternis, die mich Innos umso näher bringt.
-	AI_Output(self, hero, "Info_Mod_Milten_IR_Hi_03_06"); //Hier merke ich, was ich an ihm habe.
+	AI_Output(self, hero, "Info_Mod_Milten_IR_Hi_28_05"); //Nunja, es ist sicher die Kälte und sie Finsternis, die mich Innos umso näher bringt.
+	AI_Output(self, hero, "Info_Mod_Milten_IR_Hi_28_06"); //Hier merke ich, was ich an ihm habe.
 };
 
 INSTANCE Info_Mod_Milten_IR_Hebel (C_INFO)
@@ -50,7 +50,7 @@ FUNC VOID Info_Mod_Milten_IR_Hebel_Info()
 {
 	B_Say	(hero, self, "$IRDORATHHEBEL");
 
-	AI_Output(self, hero, "Info_Mod_Milten_IR_Hebel_03_00"); //Natürlich. Wenn wir dadurch vielleicht weiterkommen ...
+	AI_Output(self, hero, "Info_Mod_Milten_IR_Hebel_28_00"); //Natürlich. Wenn wir dadurch vielleicht weiterkommen ...
 
 	Mod_IR_Hebel = 1;
 
@@ -79,7 +79,7 @@ FUNC INT Info_Mod_Milten_IR_Ambient01_Condition()
 
 FUNC VOID Info_Mod_Milten_IR_Ambient01_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Milten_IR_Ambient01_03_00"); //Asche zu Asche, und Staub zu Staub. Innos Feuer führt die Gebeine dieser Untoten ihrer rechten Bestimmung zu.
+	AI_Output(self, hero, "Info_Mod_Milten_IR_Ambient01_28_00"); //Asche zu Asche, und Staub zu Staub. Innos Feuer führt die Gebeine dieser Untoten ihrer rechten Bestimmung zu.
 	AI_Output(hero, self, "Info_Mod_Milten_IR_Ambient01_15_01"); //Ja, das Feuer Innos leistet ganze Arbeit dabei, die vertrockneten Gebeine dieser Unholde in Asche zu verwandeln.
 
 	AI_StopProcessInfos	(hero);
@@ -112,7 +112,7 @@ FUNC VOID Info_Mod_Milten_IR_GehtLos_Info()
 {
 	B_Say	(hero, self, "$IRDORATHGEHTLOS");
 
-	AI_Output(self, hero, "Info_Mod_Milten_IR_GehtLos_03_00"); //Natürlich werde ich dich begleiten. Möge Innos Feuer den Unholden ordentlich einheizen.
+	AI_Output(self, hero, "Info_Mod_Milten_IR_GehtLos_28_00"); //Natürlich werde ich dich begleiten. Möge Innos Feuer den Unholden ordentlich einheizen.
 
 	Mod_IR_Dabei += 1;
 
@@ -148,7 +148,7 @@ FUNC VOID Info_Mod_Milten_IR_GehBack_Info()
 {
 	B_Say	(hero, self, "$IRDORATHGEHBACK");
 
-	AI_Output(self, hero, "Info_Mod_Milten_IR_GehBack_03_00"); //Gut, wenn du mich brauchst, weißt du ja, wo du mich findest.
+	AI_Output(self, hero, "Info_Mod_Milten_IR_GehBack_28_00"); //Gut, wenn du mich brauchst, weißt du ja, wo du mich findest.
 
 	Mod_IR_Dabei -= 1;
 
@@ -182,8 +182,8 @@ FUNC VOID Info_Mod_Milten_IR_Kram_Info()
 {
 	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
 
-	AI_Output(self, hero, "Info_Mod_Milten_IR_Kram_03_01"); //Ja, natürlich. Ich kann dich lehren deine magische Kraft zu steigern.
-	AI_Output(self, hero, "Info_Mod_Milten_IR_Kram_03_02"); //Außerdem habe ich noch einige Spruchrollen des Klosters bei mir, falls du mal einen Blick darauf werfen willst.
+	AI_Output(self, hero, "Info_Mod_Milten_IR_Kram_28_01"); //Ja, natürlich. Ich kann dich lehren deine magische Kraft zu steigern.
+	AI_Output(self, hero, "Info_Mod_Milten_IR_Kram_28_02"); //Außerdem habe ich noch einige Spruchrollen des Klosters bei mir, falls du mal einen Blick darauf werfen willst.
 };
 
 INSTANCE Info_Mod_Milten_IR_Lernen (C_INFO)

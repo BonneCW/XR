@@ -299,7 +299,7 @@ FUNC INT Info_Mod_Hans_Theodorus_Condition()
 
 FUNC VOID Info_Mod_Hans_Theodorus_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Hans_Theodorus_06_00"); //Was fällt dir bloß einen, diesen Schwafler, diesen Nichtsnutz als Stadthalter zu bestimmen?!
+	AI_Output(self, hero, "Info_Mod_Hans_Theodorus_06_00"); //Was fällt dir bloß ein, diesen Schwafler, diesen Nichtsnutz als Stadthalter zu bestimmen?!
 	AI_Output(self, hero, "Info_Mod_Hans_Theodorus_06_01"); //Und wieso durftest du das überhaupt entscheiden?
 	AI_Output(hero, self, "Info_Mod_Hans_Theodorus_15_02"); //Damit die Entscheidung nicht an Leuten wie dir hängt.
 	AI_Output(self, hero, "Info_Mod_Hans_Theodorus_06_03"); //(brüllt) Reiß dein Maul nicht so weit auf, kapiert? Wegen dir und solcher Besserwisser sitzen wir hier doch in der Scheiße!

@@ -20,7 +20,7 @@ FUNC INT Info_Mod_Blade_Hi_Condition()
 FUNC VOID Info_Mod_Blade_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Blade_Hi_15_00"); //Das Training wartet. Geh zu Patrick.
-	AI_Output(self, hero, "Info_Mod_Blade_Hi_11_01"); //Was? Man, ich bin doch sowieso schon einer der besten Schwertkämpfer.
+	AI_Output(self, hero, "Info_Mod_Blade_Hi_11_01"); //Was? Mann, ich bin doch sowieso schon einer der besten Schwertkämpfer.
 	AI_Output(hero, self, "Info_Mod_Blade_Hi_15_02"); //Regeln sind Regeln.
 	AI_Output(self, hero, "Info_Mod_Blade_Hi_11_03"); //Ja, ich mach mich ja schon auf die Socken.
 

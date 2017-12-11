@@ -18,7 +18,7 @@ FUNC VOID XW_Kap6_Scene02()
 
 	if (Mod_XW_Kap6_Scene02_Counter == 3)
 	{
-		AI_Output(Mod_7766_KDF_Milten_XW, NULL, "Info_Mod_Hero_XW_Kap6_Scene02_03_00"); //(ruft) Was machen wir jetzt?
+		AI_Output(Mod_7766_KDF_Milten_XW, NULL, "Info_Mod_Hero_XW_Kap6_Scene02_28_00"); //(ruft) Was machen wir jetzt?
 	};
 
 	if (Mod_XW_Kap6_Scene02_Counter == 9)

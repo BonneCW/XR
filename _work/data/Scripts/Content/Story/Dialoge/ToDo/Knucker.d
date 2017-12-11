@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Knucker_Hi_Condition()
 
 FUNC VOID Info_Mod_Knucker_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Knucker_Hi_21_00"); //He, Menschenwicht, was treibst du hier?
+	AI_Output(self, hero, "Info_Mod_Knucker_Hi_22_00"); //He, Menschenwicht, was treibst du hier?
 
 	Info_ClearChoices	(Info_Mod_Knucker_Hi);
 
@@ -26,7 +26,7 @@ FUNC VOID Info_Mod_Knucker_Hi_Info()
 
 FUNC VOID Info_Mod_Knucker_Hi_D()
 {
-	AI_Output(self, hero, "Info_Mod_Knucker_Hi_D_21_00"); //(desinteressiert) Jaja ... Menschenwicht, du kannst was für mich tun. Ich habe einen Pfeil in der Pfote stecken. Den sollst du mir herausziehen.
+	AI_Output(self, hero, "Info_Mod_Knucker_Hi_D_22_00"); //(desinteressiert) Jaja ... Menschenwicht, du kannst was für mich tun. Ich habe einen Pfeil in der Pfote stecken. Den sollst du mir herausziehen.
 
 	Info_ClearChoices	(Info_Mod_Knucker_Hi);
 
@@ -58,7 +58,7 @@ FUNC VOID Info_Mod_Knucker_Hi_A()
 FUNC VOID Info_Mod_Knucker_Hi_F()
 {
 	AI_Output(hero, self, "Info_Mod_Knucker_Hi_F_15_00"); //Nee, du kannst mich mal.
-	AI_Output(self, hero, "Info_Mod_Knucker_Hi_F_21_01"); //(faucht) Dann werde ich dich eben rösten und verspeisen.
+	AI_Output(self, hero, "Info_Mod_Knucker_Hi_F_22_01"); //(faucht) Dann werde ich dich eben rösten und verspeisen.
 
 	Info_ClearChoices	(Info_Mod_Knucker_Hi);
 
@@ -74,7 +74,7 @@ FUNC VOID Info_Mod_Knucker_Hi_E()
 
 	AI_PlayAni	(hero, "T_PLUNDER");
 
-	AI_Output(self, hero, "Info_Mod_Knucker_Hi_E_21_01"); //Ahh, gleich viel besser. Das hast du gut gemacht, Menschenwicht. Du kannst jetzt gehen.
+	AI_Output(self, hero, "Info_Mod_Knucker_Hi_E_22_01"); //Ahh, gleich viel besser. Das hast du gut gemacht, Menschenwicht. Du kannst jetzt gehen.
 
 	B_GivePlayerXP	(300);
 

@@ -4,7 +4,7 @@ instance Mod_7380_OUT_Hubert_REL (Npc_Default)
 	name 		= "Hubert"; 
 	guild 		= GIL_OUT;
 	id 			= 7380;
-	voice		= 0;
+	voice		= 28;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

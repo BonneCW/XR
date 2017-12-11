@@ -322,7 +322,7 @@ FUNC VOID Info_Mod_Gorn_Treffen_Info()
 
 	TRIA_Next(Milten);
 	
-	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_03_02"); //Ich fühle mich bei den Feuermagiern wohl. Allerdings gibt es nicht viele Möglichkeiten, den Klostermauern zu entkommen, deshalb bin ich schlecht informiert über alles, was sich außerhalb abspielt.
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_28_02"); //Ich fühle mich bei den Feuermagiern wohl. Allerdings gibt es nicht viele Möglichkeiten, den Klostermauern zu entkommen, deshalb bin ich schlecht informiert über alles, was sich außerhalb abspielt.
 
 	TRIA_Next(Diego);
 	
@@ -335,7 +335,7 @@ FUNC VOID Info_Mod_Gorn_Treffen_Info()
 
 	TRIA_Next(Milten);
 	
-	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_03_06"); //Was erwartet uns?
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_28_06"); //Was erwartet uns?
 	AI_Output(hero, self, "Info_Mod_Gorn_Treffen_15_07"); //Das liegt noch im Dunkeln. Aber es wird sich schon früh genug zeigen.
 
 	TRIA_Next(Gorn);
@@ -352,7 +352,7 @@ FUNC VOID Info_Mod_Gorn_Treffen_Info()
 
 	TRIA_Next(Milten);
 	
-	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_03_11"); //(zum Helden) Gib's zu, du steckst doch schon wieder mittendrin.
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_28_11"); //(zum Helden) Gib's zu, du steckst doch schon wieder mittendrin.
 	AI_Output(hero, self, "Info_Mod_Gorn_Treffen_15_12"); //Sieht ganz danach aus. Ich habe wohl mehr Feinde als beabsichtigt.
 
 	TRIA_Next(Gorn);
@@ -361,7 +361,7 @@ FUNC VOID Info_Mod_Gorn_Treffen_Info()
 
 	TRIA_Next(Milten);
 	
-	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_03_14"); //So drastisch hättest du es nicht ausdrücken müssen.
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_28_14"); //So drastisch hättest du es nicht ausdrücken müssen.
 
 	TRIA_Next(Lester);
 	
@@ -377,7 +377,7 @@ FUNC VOID Info_Mod_Gorn_Treffen_Info()
 
 	TRIA_Next(Milten);
 	
-	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_03_18"); //Und die Zauber frisch im Gedächtnis.
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_28_18"); //Und die Zauber frisch im Gedächtnis.
 	AI_Output(hero, self, "Info_Mod_Gorn_Treffen_15_19"); //Ich bin gerührt. Sollen wir unsere Freundschaft jetzt noch feierlich mit einem Eid beschwören oder so?
 
 	TRIA_Next(Diego);
@@ -394,7 +394,7 @@ FUNC VOID Info_Mod_Gorn_Treffen_Info()
 
 	TRIA_Next(Milten);
 	
-	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_03_23"); //Klar. Gern. Und wenn sich unsere Gefahr offen zeigt, wüsste ich gern Bescheid. Im Kloster erfährt man nicht als Erstes, was in der Welt vor sich geht.
+	AI_Output(self, hero, "Info_Mod_Gorn_Treffen_28_23"); //Klar. Gern. Und wenn sich unsere Gefahr offen zeigt, wüsste ich gern Bescheid. Im Kloster erfährt man nicht als Erstes, was in der Welt vor sich geht.
 	AI_Output(hero, self, "Info_Mod_Gorn_Treffen_15_24"); //In Ordnung. (Pause) Ja, äh, dann macht es mal gut, fürs Erste. Man sieht sich und so.
 
 	TRIA_Finish();

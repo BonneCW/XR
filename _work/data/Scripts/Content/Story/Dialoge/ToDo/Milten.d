@@ -15,15 +15,15 @@ FUNC INT Info_Mod_Milten_Hi_Condition()
 
 FUNC VOID Info_Mod_Milten_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_00"); //(erstaunt) DU?! Warte mal ... jetzt schuldest du mir aber Antworten!
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_28_00"); //(erstaunt) DU?! Warte mal ... jetzt schuldest du mir aber Antworten!
 	AI_Output(hero, self, "Info_Mod_Milten_Hi_15_01"); //Ich weiß. Ja, ich habe den Schläfer getötet, und ja, ich bin dabei gestorben. Eigentlich. Aber jetzt stehe ich hier.
-	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_02"); //Die Fakten sehe ich vor mir – aber wie zum Henker?!
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_28_02"); //Die Fakten sehe ich vor mir – aber wie zum Henker?!
 	AI_Output(hero, self, "Info_Mod_Milten_Hi_15_03"); //Xardas.
-	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_04"); //(lacht) Alles klar, dann weiß ich Bescheid. Tut auf jeden Fall gut, dich hier zu wissen.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_28_04"); //(lacht) Alles klar, dann weiß ich Bescheid. Tut auf jeden Fall gut, dich hier zu wissen.
 	AI_Output(hero, self, "Info_Mod_Milten_Hi_15_05"); //Du hast dich ja auch erstaunlich schnell wieder gemacht. Bist du nun offiziell in die Gemeinschaft der Feuermagier aufgenommen worden?
-	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_06"); //Das schon, aber es hat viel Überzeugungsarbeit gekostet. Na ja, ich hatte keine Fürsprecher, keine anständige Ausbildung. Aber im Zaubern schlage ich sie hier alle, das haben sie schnell begriffen.
-	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_07"); //So konnte ich mir die Novizenrobe gleich sparen.
-	AI_Output(self, hero, "Info_Mod_Milten_Hi_03_08"); //Und bei dir? Wie sehen deine Pläne aus?
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_28_06"); //Das schon, aber es hat viel Überzeugungsarbeit gekostet. Na ja, ich hatte keine Fürsprecher, keine anständige Ausbildung. Aber im Zaubern schlage ich sie hier alle, das haben sie schnell begriffen.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_28_07"); //So konnte ich mir die Novizenrobe gleich sparen.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_28_08"); //Und bei dir? Wie sehen deine Pläne aus?
 	
 	Info_ClearChoices(Info_Mod_Milten_Hi);
 	
@@ -34,10 +34,10 @@ FUNC VOID Info_Mod_Milten_Hi_Info()
 FUNC VOID Info_Mod_Milten_Hi_B()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_Hi_B_15_00"); //Die Feuermagier interessieren mich.
-	AI_Output(self, hero, "Info_Mod_Milten_Hi_B_03_01"); //Glückwunsch, dann bist du richtig im Kloster! Würde mich natürlich freuen, wenn du uns beitrittst.
-	AI_Output(self, hero, "Info_Mod_Milten_Hi_B_03_02"); //Wie sieht es mit deinen Fertigkeiten aus?
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_B_28_01"); //Glückwunsch, dann bist du richtig im Kloster! Würde mich natürlich freuen, wenn du uns beitrittst.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_B_28_02"); //Wie sieht es mit deinen Fertigkeiten aus?
 	AI_Output(hero, self, "Info_Mod_Milten_Hi_B_15_03"); //Schlecht. Ich muss alles neu lernen.
-	AI_Output(self, hero, "Info_Mod_Milten_Hi_B_03_04"); //Oh je, dann wird für dich kein Weg am Novizendasein vorbeiführen. Aber keine Sorge, auch das geht vorüber.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_B_28_04"); //Oh je, dann wird für dich kein Weg am Novizendasein vorbeiführen. Aber keine Sorge, auch das geht vorüber.
 	
 	Info_ClearChoices(Info_Mod_Milten_Hi);
 };
@@ -45,8 +45,8 @@ FUNC VOID Info_Mod_Milten_Hi_B()
 FUNC VOID Info_Mod_Milten_Hi_A()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_Hi_A_15_00"); //Das muss ich selbst noch herausfinden.
-	AI_Output(self, hero, "Info_Mod_Milten_Hi_A_03_01"); //Kein Wunder nach dem, was du durchgemacht hast. Nimm dir etwas Zeit.
-	AI_Output(self, hero, "Info_Mod_Milten_Hi_A_03_02"); //Vielleicht bekommst du ja am Ende sogar Lust, im Klosterm mitzumachen. Würde mich freuen.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_A_28_01"); //Kein Wunder nach dem, was du durchgemacht hast. Nimm dir etwas Zeit.
+	AI_Output(self, hero, "Info_Mod_Milten_Hi_A_28_02"); //Vielleicht bekommst du ja am Ende sogar Lust, im Klosterm mitzumachen. Würde mich freuen.
 	
 	Info_ClearChoices(Info_Mod_Milten_Hi);
 };
@@ -71,17 +71,17 @@ FUNC INT Info_Mod_Milten_Daemonisch_Condition()
 
 FUNC VOID Info_Mod_Milten_Daemonisch_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_03_00"); //Hallo, ich hoffe, ich habe euch nicht gerade unterbrochen ...
+	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_28_00"); //Hallo, ich hoffe, ich habe euch nicht gerade unterbrochen ...
 	AI_Output(hero, self, "Info_Mod_Milten_Daemonisch_15_01"); //Nein, nein, wird waren gerade fertig.
-	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_03_02"); //Scheint ja wieder sehr viel Geheimniskrämerei im Spiel zu sein, so, wie ihr euch von den anderen abgesetzt habt ... na ja, wie dem auch sei, ich komme von Lester.
+	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_28_02"); //Scheint ja wieder sehr viel Geheimniskrämerei im Spiel zu sein, so, wie ihr euch von den anderen abgesetzt habt ... na ja, wie dem auch sei, ich komme von Lester.
 	AI_Output(hero, self, "Info_Mod_Milten_Daemonisch_15_03"); //Lester? Was ist mit ihm?
-	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_03_04"); //Ich soll dir von ihm ausrichten, dass er einige Spruchrollen für dich modifiziert.
-	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_03_05"); //Sie könnten dir bei deiner Suche nach den Götterwaffen behilflich sein.
+	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_28_04"); //Ich soll dir von ihm ausrichten, dass er einige Spruchrollen für dich modifiziert.
+	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_28_05"); //Sie könnten dir bei deiner Suche nach den Götterwaffen behilflich sein.
 	AI_Output(hero, self, "Info_Mod_Milten_Daemonisch_15_06"); //Ok, danke. Dann werde ich mal bei ihm vorbeischauen.
-	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_03_07"); //Ja, mach das. Ich werde mich indes dem Zwischenfall mit dem verstorbenen Novizen annehmen.
+	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_28_07"); //Ja, mach das. Ich werde mich indes dem Zwischenfall mit dem verstorbenen Novizen annehmen.
 	AI_Output(hero, self, "Info_Mod_Milten_Daemonisch_15_08"); //Verstorbener Novize?!
-	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_03_09"); //Dyrian, er viel heute morgen ganz plötzlich tot um. Babo hat es mit angesehen.
-	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_03_10"); //Muss dem Armen ziemlich mitgenommen haben, da er seit dem kaum ein Wort herausbekommen hat.
+	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_28_09"); //Dyrian, er viel heute morgen ganz plötzlich tot um. Babo hat es mit angesehen.
+	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch_28_10"); //Muss dem Armen ziemlich mitgenommen haben, da er seit dem kaum ein Wort herausbekommen hat.
 
 	AI_StopProcessInfos	(self);
 
@@ -150,11 +150,11 @@ FUNC INT Info_Mod_Milten_Daemonisch2_Condition()
 FUNC VOID Info_Mod_Milten_Daemonisch2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_Daemonisch2_15_00"); //Ich würde gerne etwas wissen.
-	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch2_03_01"); //Ja, worum geht es?
+	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch2_28_01"); //Ja, worum geht es?
 	AI_Output(hero, self, "Info_Mod_Milten_Daemonisch2_15_02"); //Woraus besteht Klosterwein?
-	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch2_03_03"); //Hmm, ich weiß nicht, ob ich dir das sagen sollte. Eigentlich ist dieses Wissen nur Feuermagiern bestimmt.
+	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch2_28_03"); //Hmm, ich weiß nicht, ob ich dir das sagen sollte. Eigentlich ist dieses Wissen nur Feuermagiern bestimmt.
 	AI_Output(hero, self, "Info_Mod_Milten_Daemonisch2_15_04"); //Es könnte sich als wichtig erweisen.
-	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch2_03_05"); //Na gut. Also, man nehme fünf Flaschen ganz gewöhnlichen Wein, gehe damit zu einem Schrein Innos, weihe sie und verteile einen Trank zur Heilung von Besessenheit auf sie. Das war es auch schon.
+	AI_Output(self, hero, "Info_Mod_Milten_Daemonisch2_28_05"); //Na gut. Also, man nehme fünf Flaschen ganz gewöhnlichen Wein, gehe damit zu einem Schrein Innos, weihe sie und verteile einen Trank zur Heilung von Besessenheit auf sie. Das war es auch schon.
 
 	B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Für den Klosterwein nimmt man fünf normale Flaschen Wein, verteilt an einem Innosschrein eine Flasche Heilung der Besessenheit auf diese und segnet sie.");
 };
@@ -183,9 +183,9 @@ FUNC VOID Info_Mod_Milten_Irdorath_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_Irdorath_15_00"); //Wie du vermutlich weißt, muss ich zu der Insel aufbrechen.
 	AI_Output(hero, self, "Info_Mod_Milten_Irdorath_15_01"); //Fällt dir jemand ein, der mich begleiten könnte?
-	AI_Output(self, hero, "Info_Mod_Milten_Irdorath_03_02"); //Hmm, unter den Feuermagiern des Kloster hat jeder seine zugewiesenen Aufgaben.
-	AI_Output(self, hero, "Info_Mod_Milten_Irdorath_03_03"); //Da wird es nicht ganz einfach jemanden zu finden, der sich entbehren lässt ...
-	AI_Output(self, hero, "Info_Mod_Milten_Irdorath_03_04"); //Unter den Paladinen wirst du am ehesten noch auf Tengron als Begleiter zählen können, der schon bei der Bedrohung durch die Seelenpeiniger Gewissenhaftigkeit bewiesen hat und bestimmt für die Mission freigestellt wird ...
+	AI_Output(self, hero, "Info_Mod_Milten_Irdorath_28_02"); //Hmm, unter den Feuermagiern des Kloster hat jeder seine zugewiesenen Aufgaben.
+	AI_Output(self, hero, "Info_Mod_Milten_Irdorath_28_03"); //Da wird es nicht ganz einfach jemanden zu finden, der sich entbehren lässt ...
+	AI_Output(self, hero, "Info_Mod_Milten_Irdorath_28_04"); //Unter den Paladinen wirst du am ehesten noch auf Tengron als Begleiter zählen können, der schon bei der Bedrohung durch die Seelenpeiniger Gewissenhaftigkeit bewiesen hat und bestimmt für die Mission freigestellt wird ...
 
 	B_LogEntry	(TOPIC_MOD_HQ_CREW, "Milten meinte, dass sich vielleicht noch Paladin Tengron für die Reise gewinnen ließe.");
 };
@@ -213,9 +213,9 @@ FUNC INT Info_Mod_Milten_Irdorath2_Condition()
 FUNC VOID Info_Mod_Milten_Irdorath2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_Irdorath2_15_00"); //Und was ist mit dir?
-	AI_Output(self, hero, "Info_Mod_Milten_Irdorath2_03_01"); //Ich bin dem Kloster nicht verpflichtet. So wie du mich fragst, wird es mir eine Freude sein, dich auf dieses Abenteuer zu begleiten.
+	AI_Output(self, hero, "Info_Mod_Milten_Irdorath2_28_01"); //Ich bin dem Kloster nicht verpflichtet. So wie du mich fragst, wird es mir eine Freude sein, dich auf dieses Abenteuer zu begleiten.
 	AI_Output(hero, self, "Info_Mod_Milten_Irdorath2_15_02"); //Dann darf ich dich hiermit an Bord willkommen heißen. Wir sehen uns dann am Hafen.
-	AI_Output(self, hero, "Info_Mod_Milten_Irdorath2_03_03"); //Ausgezeichnet. Bis später.
+	AI_Output(self, hero, "Info_Mod_Milten_Irdorath2_28_03"); //Ausgezeichnet. Bis später.
 
 	B_LogEntry	(TOPIC_MOD_HQ_CREW, "Super, mit Milten hätte ich schon mal einen Magier des Feuers mit an Bord.");
 
@@ -259,7 +259,7 @@ FUNC INT Info_Mod_Milten_Irdorath3_Condition()
 FUNC VOID Info_Mod_Milten_Irdorath3_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_Irdorath3_15_00"); //Tut mir leid, aber es scheint das wir zu viele sind. Ich kann dich doch nicht mitnehmen.
-	AI_Output(self, hero, "Info_Mod_Milten_Irdorath3_03_01"); //Schade. Ich gehe dann wieder zurück. Du weißt wo du mich findest, wenn doch noch ein Platz frei werden sollte.
+	AI_Output(self, hero, "Info_Mod_Milten_Irdorath3_28_01"); //Schade. Ich gehe dann wieder zurück. Du weißt wo du mich findest, wenn doch noch ein Platz frei werden sollte.
 
 	Mod_MiltenDabei = 0;
 
@@ -294,7 +294,7 @@ FUNC INT Info_Mod_Milten_Irdorath4_Condition()
 FUNC VOID Info_Mod_Milten_Irdorath4_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_Irdorath4_15_00"); //Ich kann dich doch mitnehmen. Es hat sich noch ein Platz auf dem Schiff gefunden.
-	AI_Output(self, hero, "Info_Mod_Milten_Irdorath4_03_01"); //Sehr gut, ich bin dann wieder am Hafen.
+	AI_Output(self, hero, "Info_Mod_Milten_Irdorath4_28_01"); //Sehr gut, ich bin dann wieder am Hafen.
 
 	Mod_MiltenDabei = 1;
 
@@ -328,8 +328,8 @@ FUNC INT Info_Mod_Milten_Aufgabe_Condition()
 FUNC VOID Info_Mod_Milten_Aufgabe_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_Aufgabe_15_00"); //Hast du eine Aufgabe für mich? Pyrokar sagt ich muss für jeden Feuermagier etwas tun um aufgenommen zu werden.
-	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_03_01"); //Hmmm ...
-	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_03_02"); //Es gibt etwas wobei du mir helfen könntest. Das ist allerdings ziemlich gefährlich.
+	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_28_01"); //Hmmm ...
+	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_28_02"); //Es gibt etwas wobei du mir helfen könntest. Das ist allerdings ziemlich gefährlich.
 
 	Info_ClearChoices	(Info_Mod_Milten_Aufgabe);
 
@@ -339,8 +339,8 @@ FUNC VOID Info_Mod_Milten_Aufgabe_Info()
 FUNC VOID Info_Mod_Milten_Aufgabe_Wie()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_Aufgabe_Wie_15_00"); //Wie kann ich dir helfen?
-	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Wie_03_01"); //Mein Lehrer Neoras hat mich damit beauftragt einen Trank zu brauen.
-	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Wie_03_02"); //Doch man braucht dazu eine sehr seltene Pflanze und die ist nicht einfach zu beschaffen.
+	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Wie_28_01"); //Mein Lehrer Neoras hat mich damit beauftragt einen Trank zu brauen.
+	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Wie_28_02"); //Doch man braucht dazu eine sehr seltene Pflanze und die ist nicht einfach zu beschaffen.
 
 	Info_ClearChoices	(Info_Mod_Milten_Aufgabe);
 	
@@ -350,13 +350,13 @@ FUNC VOID Info_Mod_Milten_Aufgabe_Wie()
 FUNC VOID Info_Mod_Milten_Aufgabe_Pflanze()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_Aufgabe_Pflanze_15_00"); //Was für eine Pflanze ist das?
-	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Pflanze_03_01"); //Die Pflanze heißt Sonnenaloe und wächst nur in der Nähe von einem Schwarzen Troll.
+	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Pflanze_28_01"); //Die Pflanze heißt Sonnenaloe und wächst nur in der Nähe von einem Schwarzen Troll.
 	AI_Output(hero, self, "Info_Mod_Milten_Aufgabe_Pflanze_15_02"); //EINEM SCHWARZEN TROLL ???
-	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Pflanze_03_03"); //Ja, deswegen konnte ich den Trank bisher nicht fertig brauen. Alleine ist es für einen Magier wie mich unmöglich den Troll zu töten.
-	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Pflanze_03_04"); //Ich könnte dir ein wenig mit meiner Magie helfen und du schnappst dir dann schnell die Pflanze.
+	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Pflanze_28_03"); //Ja, deswegen konnte ich den Trank bisher nicht fertig brauen. Alleine ist es für einen Magier wie mich unmöglich den Troll zu töten.
+	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Pflanze_28_04"); //Ich könnte dir ein wenig mit meiner Magie helfen und du schnappst dir dann schnell die Pflanze.
 	AI_Output(hero, self, "Info_Mod_Milten_Aufgabe_Pflanze_15_05"); //Und wo ist dieser Troll?
-	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Pflanze_03_06"); //Er lebt in einer Höhle ganz im Norden der Insel. Ich kann uns ein Stück vom Weg ersparen indem ich uns aus dem Kloster teleportiere.
-	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Pflanze_03_07"); //Den Rest müssen wir dann zu Fuß zurücklegen. Sag Bescheid, wenn es losgehen kann.
+	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Pflanze_28_06"); //Er lebt in einer Höhle ganz im Norden der Insel. Ich kann uns ein Stück vom Weg ersparen indem ich uns aus dem Kloster teleportiere.
+	AI_Output(self, hero, "Info_Mod_Milten_Aufgabe_Pflanze_28_07"); //Den Rest müssen wir dann zu Fuß zurücklegen. Sag Bescheid, wenn es losgehen kann.
 
 	Info_ClearChoices	(Info_Mod_Milten_Aufgabe);
 
@@ -424,7 +424,7 @@ FUNC INT Info_Mod_Milten_Teleport_Da_Condition()
 
 FUNC VOID Info_Mod_Milten_Teleport_Da_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Milten_Teleport_Da_03_00"); //Ab hier müssen wir zu Fuß weiter, folge mir.
+	AI_Output(self, hero, "Info_Mod_Milten_Teleport_Da_28_00"); //Ab hier müssen wir zu Fuß weiter, folge mir.
 
 	AI_StopProcessInfos	(self);
 
@@ -454,7 +454,7 @@ FUNC INT Info_Mod_Milten_Station_Condition()
 
 FUNC VOID Info_Mod_Milten_Station_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Milten_Station_03_00"); //Wenn du hier den Weg verlässt kommst du zur Ausgrabungsstätte der Wassermagier. Aber die kannst du dir ja später mal anschauen.
+	AI_Output(self, hero, "Info_Mod_Milten_Station_28_00"); //Wenn du hier den Weg verlässt kommst du zur Ausgrabungsstätte der Wassermagier. Aber die kannst du dir ja später mal anschauen.
 
 	AI_StopProcessInfos	(self);
 
@@ -482,9 +482,9 @@ FUNC INT Info_Mod_Milten_AnSee_Condition()
 
 FUNC VOID Info_Mod_Milten_AnSee_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Milten_AnSee_03_00"); //Wir sind fast da. Auf der anderen Seite dieses Sees ist die Höhle.
+	AI_Output(self, hero, "Info_Mod_Milten_AnSee_28_00"); //Wir sind fast da. Auf der anderen Seite dieses Sees ist die Höhle.
 	AI_Output(hero, self, "Info_Mod_Milten_AnSee_15_01"); //Lass uns weitergehen.
-	AI_Output(self, hero, "Info_Mod_Milten_AnSee_03_02"); //Ok, folge mir.
+	AI_Output(self, hero, "Info_Mod_Milten_AnSee_28_02"); //Ok, folge mir.
 
 	AI_StopProcessInfos	(self);
 
@@ -512,8 +512,8 @@ FUNC INT Info_Mod_Milten_BeiTroll_Condition()
 
 FUNC VOID Info_Mod_Milten_BeiTroll_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Milten_BeiTroll_03_00"); //Da wären wir. Ich habe einen Trank für dich der dich schneller macht.
-	AI_Output(self, hero, "Info_Mod_Milten_BeiTroll_03_01"); //Du musst nur schnell die Pflanze holen und dann zu mir kommen. Ich werde uns ins Kloster zurück teleportieren.
+	AI_Output(self, hero, "Info_Mod_Milten_BeiTroll_28_00"); //Da wären wir. Ich habe einen Trank für dich der dich schneller macht.
+	AI_Output(self, hero, "Info_Mod_Milten_BeiTroll_28_01"); //Du musst nur schnell die Pflanze holen und dann zu mir kommen. Ich werde uns ins Kloster zurück teleportieren.
 	
 	CreateInvItems	(self, ItPo_Speed, 1);
 
@@ -585,13 +585,13 @@ FUNC INT Info_Mod_Milten_Fertig_Condition()
 
 FUNC VOID Info_Mod_Milten_Fertig_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Milten_Fertig_03_00"); //Endlich wieder hier.
+	AI_Output(self, hero, "Info_Mod_Milten_Fertig_28_00"); //Endlich wieder hier.
 	AI_Output(hero, self, "Info_Mod_Milten_Fertig_15_01"); //Hier ist die Sonnenaloe.
 
 	B_GiveInvItems	(hero, self, ItPl_Sagitta_Herb_MIS, 1);
 
-	AI_Output(self, hero, "Info_Mod_Milten_Fertig_03_02"); //Danke. Jetzt kann ich endlich den Trank für Meister Neoras fertigstellen.
-	AI_Output(self, hero, "Info_Mod_Milten_Fertig_03_03"); //Am besten gibts du ihm den Trank, dann kannst du auch ihn überzeugen. Komm morgen wieder, dann bin ich fertig.
+	AI_Output(self, hero, "Info_Mod_Milten_Fertig_28_02"); //Danke. Jetzt kann ich endlich den Trank für Meister Neoras fertigstellen.
+	AI_Output(self, hero, "Info_Mod_Milten_Fertig_28_03"); //Am besten gibts du ihm den Trank, dann kannst du auch ihn überzeugen. Komm morgen wieder, dann bin ich fertig.
 
 	MiltenBrautTrank = Wld_GetDay();
 
@@ -631,12 +631,12 @@ FUNC INT Info_Mod_Milten_HabTrank_Condition()
 FUNC VOID Info_Mod_Milten_HabTrank_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_HabTrank_15_00"); //Ist der Trank schon fertig?
-	AI_Output(self, hero, "Info_Mod_Milten_HabTrank_03_01"); //Ja, ich bin gerade fertig geworden.
-	AI_Output(self, hero, "Info_Mod_Milten_HabTrank_03_02"); //Hier ist er.
+	AI_Output(self, hero, "Info_Mod_Milten_HabTrank_28_01"); //Ja, ich bin gerade fertig geworden.
+	AI_Output(self, hero, "Info_Mod_Milten_HabTrank_28_02"); //Hier ist er.
 
 	B_GiveInvItems	(self, hero, NeorasTrankVonMilten, 1);
 
-	AI_Output(self, hero, "Info_Mod_Milten_HabTrank_03_03"); //Bring ihn zu Neoras, dann wird er von dir überzeugt sein.
+	AI_Output(self, hero, "Info_Mod_Milten_HabTrank_28_03"); //Bring ihn zu Neoras, dann wird er von dir überzeugt sein.
 	
 	B_LogEntry	(TOPIC_MOD_NEORAS_TRANK, "Milten hat mir den Trank gegeben.");
 
@@ -668,11 +668,11 @@ FUNC INT Info_Mod_Milten_MardukAufgabe_Condition()
 FUNC VOID Info_Mod_Milten_MardukAufgabe_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_MardukAufgabe_15_00"); //Meister Marduk trug mir auf ihm eine solche Rune zu besorgen.
-	AI_Output(self, hero, "Info_Mod_Milten_MardukAufgabe_03_01"); //Na, du musst ja einen schönen Eindruck bei ihm hinterlassen haben.
-	AI_Output(self, hero, "Info_Mod_Milten_MardukAufgabe_03_02"); //Ihm dürfte genauso klar sein wie mir, dass du das aus eigener Kraft, ohne die Unterstützung eines Magiers, niemals schaffen kannst ...
+	AI_Output(self, hero, "Info_Mod_Milten_MardukAufgabe_28_01"); //Na, du musst ja einen schönen Eindruck bei ihm hinterlassen haben.
+	AI_Output(self, hero, "Info_Mod_Milten_MardukAufgabe_28_02"); //Ihm dürfte genauso klar sein wie mir, dass du das aus eigener Kraft, ohne die Unterstützung eines Magiers, niemals schaffen kannst ...
 	AI_Output(hero, self, "Info_Mod_Milten_MardukAufgabe_15_03"); //Deshalb frage ich ja dich.
-	AI_Output(self, hero, "Info_Mod_Milten_MardukAufgabe_03_04"); //Also gut, ich helfe dir dabei... aber das bleibt unter uns, klar?
-	AI_Output(self, hero, "Info_Mod_Milten_MardukAufgabe_03_05"); //Ich brauche einen Runenstein, Pech und eine Feuerball-Spruchrolle.
+	AI_Output(self, hero, "Info_Mod_Milten_MardukAufgabe_28_04"); //Also gut, ich helfe dir dabei... aber das bleibt unter uns, klar?
+	AI_Output(self, hero, "Info_Mod_Milten_MardukAufgabe_28_05"); //Ich brauche einen Runenstein, Pech und eine Feuerball-Spruchrolle.
 
 	B_LogEntry	(TOPIC_MOD_MARDUK_FEUERBALL, "Milten hat sich bereit erklärt mir bei der Herstellung der Rune zu helfen. Dafür benötigt er folgende Zutaten: ein Runenstein, Pech und eine Feuerball-Spruchrolle.");
 };
@@ -704,22 +704,22 @@ FUNC INT Info_Mod_Milten_HabZutatenRune_Condition()
 FUNC VOID Info_Mod_Milten_HabZutatenRune_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_HabZutatenRune_15_00"); //Ich hab die Sachen.
-	AI_Output(self, hero, "Info_Mod_Milten_HabZutatenRune_03_01"); //Mal sehen. Als erstes einen Runenstein.
+	AI_Output(self, hero, "Info_Mod_Milten_HabZutatenRune_28_01"); //Mal sehen. Als erstes einen Runenstein.
 	AI_Output(hero, self, "Info_Mod_Milten_HabZutatenRune_15_02"); //Hier ist er.
 
 	B_GiveInvItems	(hero, self, ItMi_RuneBlank, 1);
 
-	AI_Output(self, hero, "Info_Mod_Milten_HabZutatenRune_03_03"); //Dann das Pech.
+	AI_Output(self, hero, "Info_Mod_Milten_HabZutatenRune_28_03"); //Dann das Pech.
 	AI_Output(hero, self, "Info_Mod_Milten_HabZutatenRune_15_04"); //Bitte schön.
 
 	B_GiveInvItems	(hero, self, ItMi_Pitch, 1);
 
-	AI_Output(self, hero, "Info_Mod_Milten_HabZutatenRune_03_05"); //Und eine Feuerball-Spruchrolle.
+	AI_Output(self, hero, "Info_Mod_Milten_HabZutatenRune_28_05"); //Und eine Feuerball-Spruchrolle.
 	AI_Output(hero, self, "Info_Mod_Milten_HabZutatenRune_15_06"); //Hab ich auch.
 
 	B_GiveInvItems	(hero, self, ItSc_InstantFireball, 1);
 
-	AI_Output(self, hero, "Info_Mod_Milten_HabZutatenRune_03_07"); //Gut, das ist alles. Komm morgen wieder, dann sollte die Rune fertig sein.
+	AI_Output(self, hero, "Info_Mod_Milten_HabZutatenRune_28_07"); //Gut, das ist alles. Komm morgen wieder, dann sollte die Rune fertig sein.
 
 	MiltenBautRune	=	Wld_GetDay();
 
@@ -752,12 +752,12 @@ FUNC INT Info_Mod_Milten_RuneFertig_Condition()
 FUNC VOID Info_Mod_Milten_RuneFertig_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_RuneFertig_15_00"); //Ist die Rune fertig?
-	AI_Output(self, hero, "Info_Mod_Milten_RuneFertig_03_01"); //Hier ist sie.
+	AI_Output(self, hero, "Info_Mod_Milten_RuneFertig_28_01"); //Hier ist sie.
 
 	B_GiveInvItems	(self, hero, ItRu_InstantFireball, 1);
 
 	AI_Output(hero, self, "Info_Mod_Milten_RuneFertig_15_02"); //Vielen Dank.
-	AI_Output(self, hero, "Info_Mod_Milten_RuneFertig_03_03"); //Aber wie gesagt bleibt das unter uns. (grinst) Ich bin nur zu neugierig auf Marduks Gesichtsausdruck, wenn du ihm die Rune bringst.
+	AI_Output(self, hero, "Info_Mod_Milten_RuneFertig_28_03"); //Aber wie gesagt bleibt das unter uns. (grinst) Ich bin nur zu neugierig auf Marduks Gesichtsausdruck, wenn du ihm die Rune bringst.
 
 	B_GivePlayerXP	(100);
 
@@ -784,13 +784,13 @@ FUNC INT Info_Mod_Milten_MardukRune_Condition()
 
 FUNC VOID Info_Mod_Milten_MardukRune_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Milten_MardukRune_03_00"); //(grinst) Marduks Reaktion hat meine Erwartungen übertroffen.
+	AI_Output(self, hero, "Info_Mod_Milten_MardukRune_28_00"); //(grinst) Marduks Reaktion hat meine Erwartungen übertroffen.
 	AI_Output(hero, self, "Info_Mod_Milten_MardukRune_15_01"); //Milten?
-	AI_Output(self, hero, "Info_Mod_Milten_MardukRune_03_02"); //Ich habe doch gesagt, ich lasse mir das nicht entgehen. Es war ein bisschen wie in alten Zeiten, als Saturas rot anlief, wenn du verstehst ...
+	AI_Output(self, hero, "Info_Mod_Milten_MardukRune_28_02"); //Ich habe doch gesagt, ich lasse mir das nicht entgehen. Es war ein bisschen wie in alten Zeiten, als Saturas rot anlief, wenn du verstehst ...
 	AI_Output(hero, self, "Info_Mod_Milten_MardukRune_15_03"); //Hmm ... wütender Magier ... Erzhaufen?
-	AI_Output(self, hero, "Info_Mod_Milten_MardukRune_03_04"); //Genau.
+	AI_Output(self, hero, "Info_Mod_Milten_MardukRune_28_04"); //Genau.
 	AI_Output(hero, self, "Info_Mod_Milten_MardukRune_15_05"); //Und ich war wieder froh dich dabei zu haben.
-	AI_Output(self, hero, "Info_Mod_Milten_MardukRune_03_06"); //Jederzeit wieder. Ich bin sicher, das war nicht unser letzter Streich. Bis dahin.
+	AI_Output(self, hero, "Info_Mod_Milten_MardukRune_28_06"); //Jederzeit wieder. Ich bin sicher, das war nicht unser letzter Streich. Bis dahin.
 
 	B_StartOtherRoutine	(self, "START");
 };
@@ -819,7 +819,7 @@ FUNC INT Info_Mod_Milten_Treffen_Condition()
 FUNC VOID Info_Mod_Milten_Treffen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_Treffen_15_00"); //Gorn schickt mich. Ich soll dir sagen, dass ihr euch in der Taverne 'Zur Toten Harpie'.
-	AI_Output(self, hero, "Info_Mod_Milten_Treffen_03_01"); //Gut, ich mach mich sofort auf den Weg.
+	AI_Output(self, hero, "Info_Mod_Milten_Treffen_28_01"); //Gut, ich mach mich sofort auf den Weg.
 
 	AI_StopProcessInfos	(self);
 
@@ -851,8 +851,8 @@ FUNC INT Info_Mod_Milten_HaveYouCrawlerEggs_Condition()
 FUNC VOID Info_Mod_Milten_HaveYouCrawlerEggs_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_HaveYouCrawlerEggs_15_00"); //Weißt du, woher ich Minecrawlereier bekomme?
-	AI_Output(self, hero, "Info_Mod_Milten_HaveYouCrawlerEggs_03_01"); //Gorn hat mir damals welche aus der freien Mine mitgebracht. Schöne Exemplare.
-	AI_Output(self, hero, "Info_Mod_Milten_HaveYouCrawlerEggs_03_02"); //Wusste gar nicht, dass in der freien Mine auch eine Königin war.
+	AI_Output(self, hero, "Info_Mod_Milten_HaveYouCrawlerEggs_28_01"); //Gorn hat mir damals welche aus der freien Mine mitgebracht. Schöne Exemplare.
+	AI_Output(self, hero, "Info_Mod_Milten_HaveYouCrawlerEggs_28_02"); //Wusste gar nicht, dass in der freien Mine auch eine Königin war.
 	
 	Mod_MinecrawlerEi = 2;
 };
@@ -879,7 +879,7 @@ FUNC INT Info_Mod_Milten_MinecrawlerEi_Condition()
 FUNC VOID Info_Mod_Milten_MinecrawlerEi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_MinecrawlerEi_15_00"); //Hast du die Minecrawlereier von Gorn noch?
-	AI_Output(self, hero, "Info_Mod_Milten_MinecrawlerEi_03_01"); //Eins hab ich schon verbraucht, aber das andere kannst du haben.
+	AI_Output(self, hero, "Info_Mod_Milten_MinecrawlerEi_28_01"); //Eins hab ich schon verbraucht, aber das andere kannst du haben.
 	
 	CreateInvItems	(self, ItAt_Crawlerqueen, 1);
 	B_GiveInvItems	(self, hero, ItAt_Crawlerqueen, 1);
@@ -907,10 +907,10 @@ FUNC INT Info_Mod_Milten_Drachen_Condition()
 
 FUNC VOID Info_Mod_Milten_Drachen_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Milten_Drachen_03_00"); //Hey, ich habe da vielleicht etwas für dich.
-	AI_Output(self, hero, "Info_Mod_Milten_Drachen_03_01"); //Nach dem Angriff dieser Feuerechsen habe ich in alten Schriften nachgeforscht.
-	AI_Output(self, hero, "Info_Mod_Milten_Drachen_03_02"); //In einem uralten stark verwitterten Buch stieß ich dabei auf dieses ominöse Rezept.
-	AI_Output(self, hero, "Info_Mod_Milten_Drachen_03_03"); //Vielleicht kannst du ja etwas damit anfangen.
+	AI_Output(self, hero, "Info_Mod_Milten_Drachen_28_00"); //Hey, ich habe da vielleicht etwas für dich.
+	AI_Output(self, hero, "Info_Mod_Milten_Drachen_28_01"); //Nach dem Angriff dieser Feuerechsen habe ich in alten Schriften nachgeforscht.
+	AI_Output(self, hero, "Info_Mod_Milten_Drachen_28_02"); //In einem uralten stark verwitterten Buch stieß ich dabei auf dieses ominöse Rezept.
+	AI_Output(self, hero, "Info_Mod_Milten_Drachen_28_03"); //Vielleicht kannst du ja etwas damit anfangen.
 
 	B_GiveInvItems	(self, hero, ItWr_DrachensudManaverbrennung, 1);
 };
@@ -939,15 +939,15 @@ FUNC INT Info_Mod_Milten_Leichengase_Condition()
 FUNC VOID Info_Mod_Milten_Leichengase_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Milten_Leichengase_15_00"); //Milten, ich brauche deine Hilfe!
-	AI_Output(self, hero, "Info_Mod_Milten_Leichengase_03_01"); //Klar, worum geht’s?
+	AI_Output(self, hero, "Info_Mod_Milten_Leichengase_28_01"); //Klar, worum geht’s?
 	AI_Output(hero, self, "Info_Mod_Milten_Leichengase_15_02"); //Ich muss einen Troll dazu bringen, diesen Sack voll Kräuter hier zu fressen.
-	AI_Output(self, hero, "Info_Mod_Milten_Leichengase_03_03"); //Was?! Naja du wirst schon deine Gründe haben.
+	AI_Output(self, hero, "Info_Mod_Milten_Leichengase_28_03"); //Was?! Naja du wirst schon deine Gründe haben.
 	AI_Output(hero, self, "Info_Mod_Milten_Leichengase_15_04"); //Kannst du mir helfen oder nicht?
-	AI_Output(self, hero, "Info_Mod_Milten_Leichengase_03_05"); //Ich hätte da schon eine Idee.
-	AI_Output(self, hero, "Info_Mod_Milten_Leichengase_03_06"); //Geh zu Hyglas, er ist hier im Kloster für die Spruchrollen zuständig. Bitte ihn um Hilfe.
+	AI_Output(self, hero, "Info_Mod_Milten_Leichengase_28_05"); //Ich hätte da schon eine Idee.
+	AI_Output(self, hero, "Info_Mod_Milten_Leichengase_28_06"); //Geh zu Hyglas, er ist hier im Kloster für die Spruchrollen zuständig. Bitte ihn um Hilfe.
 	
 	if (hero.guild != GIL_VLK) {
-		AI_Output(self, hero, "Info_Mod_Milten_Leichengase_03_07"); //Hier hast du den Schlüssel zur Bibliothek.
+		AI_Output(self, hero, "Info_Mod_Milten_Leichengase_28_07"); //Hier hast du den Schlüssel zur Bibliothek.
 		B_GiveInvItems	(self, hero, ItKe_KlosterBibliothek, 1);
 	};
 

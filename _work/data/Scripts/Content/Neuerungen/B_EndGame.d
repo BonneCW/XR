@@ -12,11 +12,11 @@ FUNC VOID B_EndGame() {
 	};
 	
 	var int amount; amount = 0;
-	amount += Spine_OverallSaveGetInt("PaladinEnde");
-	amount += Spine_OverallSaveGetInt("MerchantEnde");
-	amount += Spine_OverallSaveGetInt("InnosEnde");
-	amount += Spine_OverallSaveGetInt("AdanosEnde");
-	amount += Spine_OverallSaveGetInt("BeliarEnde");
+	amount += max(Spine_OverallSaveGetInt("PaladinEnde"), 0);
+	amount += max(Spine_OverallSaveGetInt("MerchantEnde"), 0);
+	amount += max(Spine_OverallSaveGetInt("InnosEnde"), 0);
+	amount += max(Spine_OverallSaveGetInt("AdanosEnde"), 0);
+	amount += max(Spine_OverallSaveGetInt("BeliarEnde"), 0);
 	
 	Spine_UpdateAchievementProgress(SPINE_ACHIEVEMENT_56, amount);
 		
