@@ -4,7 +4,7 @@ INSTANCE Mod_531_NONE_Bosper_NW (Npc_Default)
 	name 		= "Bosper";
 	guild 		= GIL_pal;
 	id 			= 531;
-	voice		= 0;
+	voice		= 16;
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------

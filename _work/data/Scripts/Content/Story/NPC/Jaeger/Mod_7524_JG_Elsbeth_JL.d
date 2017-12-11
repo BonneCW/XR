@@ -4,7 +4,7 @@ instance Mod_7524_JG_Elsbeth_JL (Npc_Default)
 	name 		= "Elsbeth";
 	guild 		= GIL_OUT;
 	id 			= 7524;
-	voice		= 0;
+	voice		= 19;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -236,7 +236,7 @@ func void B_Say_Smalltalk()
 		{
 			if (Npc_KnowsInfo(hero, Info_VLK_16_Rangar))
 			|| (Npc_KnowsInfo(hero, Info_VLK_8_Rangar))
-			|| (Npc_KnowsInfo(hero, Info_VLK_1_Rangar))
+			|| (Npc_KnowsInfo(hero, Info_VLK_19_Rangar))
 			{
 				B_Say		(self, self, "$SMALLTALKRANGAR01");
 			}

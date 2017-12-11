@@ -3,7 +3,7 @@ INSTANCE Mod_7360_OUT_Setta_WS (Npc_Default)
 	name 		= "Setta";
 	guild 		= GIL_DMT;
 	id 		= 7360;
-	voice		= 0;
+	voice		= 19;
 	flags           = 2;
 	npctype		= NPCTYPE_MAIN;
 

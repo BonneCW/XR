@@ -188,7 +188,7 @@ INSTANCE Info_VLK_8_Rangar (C_INFO) // E1
 FUNC INT Info_VLK_8_Rangar_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Den_Problem))
-	&& (!Npc_KnowsInfo(hero, Info_VLK_1_Rangar))
+	&& (!Npc_KnowsInfo(hero, Info_VLK_19_Rangar))
 	&& (!Npc_KnowsInfo(hero, Info_VLK_6_Rangar))
 	&& (!Npc_KnowsInfo(hero, Info_VLK_16_Rangar))
 	&& (!Npc_KnowsInfo(hero, Info_VLK_17_Rangar))

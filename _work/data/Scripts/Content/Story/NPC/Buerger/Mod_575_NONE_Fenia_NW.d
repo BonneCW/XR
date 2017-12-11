@@ -4,7 +4,7 @@ instance Mod_575_NONE_Fenia_NW (Npc_Default)
 	name 		= "Fenia";	//Halvors Frau
 	guild 		= GIL_PAL;
 	id 			= 575;
-	voice		= 0;
+	voice		= 19;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

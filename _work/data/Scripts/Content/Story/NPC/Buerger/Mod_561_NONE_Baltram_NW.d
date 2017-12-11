@@ -4,7 +4,7 @@ INSTANCE Mod_561_NONE_Baltram_NW (Npc_Default)
 	name 		= "Baltram";
 	guild 		= GIL_NONE;
 	id 			= 561;
-	voice		= 0;
+	voice		= 16;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

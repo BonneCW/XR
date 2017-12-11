@@ -4,7 +4,7 @@ instance Mod_7724_OUT_Berta_REL (Npc_Default)
 	name 		= "Berta"; 
 	guild 		= GIL_OUT;
 	id 			= 7724;
-	voice		= 0;
+	voice		= 19;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

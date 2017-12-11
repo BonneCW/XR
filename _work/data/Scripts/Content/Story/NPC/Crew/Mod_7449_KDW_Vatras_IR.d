@@ -4,7 +4,7 @@ INSTANCE Mod_7449_KDW_Vatras_IR (Npc_Default)
 	name 		= "Vatras"; 
 	guild 		= GIL_OUT;
 	id 			= 7449;
-	voice		= 0;
+	voice		= 16;
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ aivars ------

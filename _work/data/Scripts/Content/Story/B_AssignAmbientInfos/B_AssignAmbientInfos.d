@@ -11,11 +11,11 @@ FUNC VOID B_AssignAmbientInfos (var C_NPC slf)
 	if (slf.guild == GIL_PAL)	
 	&& (slf.npctype == NPCTYPE_AMBIENT)
 	{		
-		if (slf.voice == 1)		{	B_AssignAmbientInfos_Vlk_1 (slf);	};
 		if (slf.voice == 6)		{	B_AssignAmbientInfos_Vlk_6 (slf);	};	
 		if (slf.voice == 8) 	{	B_AssignAmbientInfos_Vlk_8 (slf);	};
 		if (slf.voice == 16)	{	B_AssignAmbientInfos_Vlk_16 (slf);	};
 		if (slf.voice == 17)	{	B_AssignAmbientInfos_Vlk_17 (slf);	};
+		if (slf.voice == 19)		{	B_AssignAmbientInfos_Vlk_19 (slf);	};
 	};
 
 	if (slf.npctype == NPCTYPE_MT_GARDIST)
@@ -174,10 +174,10 @@ FUNC VOID B_AssignAmbientInfos (var C_NPC slf)
 
 	if (slf.npctype == NPCTYPE_REL_BUERGER)
 	{		
-		if (slf.voice == 1)		{	B_AssignAmbientInfos_REL_Buerger_1 (slf);	};
 		if (slf.voice == 6)		{	B_AssignAmbientInfos_REL_Buerger_6 (slf);	};	
 		if (slf.voice == 8) 	{	B_AssignAmbientInfos_REL_Buerger_8 (slf);	};
 		if (slf.voice == 16)	{	B_AssignAmbientInfos_REL_Buerger_16 (slf);	};
 		if (slf.voice == 17)	{	B_AssignAmbientInfos_REL_Buerger_17 (slf);	};
+		if (slf.voice == 19)		{	B_AssignAmbientInfos_REL_Buerger_19 (slf);	};
 	};
 };

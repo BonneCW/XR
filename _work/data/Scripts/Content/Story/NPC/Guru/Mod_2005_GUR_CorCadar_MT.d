@@ -6,7 +6,7 @@ instance Mod_2005_GUR_CorCadar_MT (Npc_Default)
 	guild		=	GIL_OUT;
 	level 		=	28;
 	
-	voice		= 0;
+	voice		= 16;
 	id 			=	2005;
 		
 	///-------- abilities --------

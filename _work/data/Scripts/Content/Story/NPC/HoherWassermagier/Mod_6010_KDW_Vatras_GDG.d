@@ -4,7 +4,7 @@ INSTANCE Mod_6010_KDW_Vatras_GDG (Npc_Default)
 	name 		= "Vatras"; 
 	guild 		= GIL_NONE;
 	id 			= 6010;
-	voice		= 0;
+	voice		= 16;
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ aivars ------

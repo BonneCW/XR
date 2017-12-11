@@ -4,7 +4,7 @@ instance Mod_7192_VLK_Buergerin_NW (Npc_Default)
 	name 		= "aufgebrachte Frau";	
 	guild 		= GIL_PAL;
 	id 			= 7192;
-	voice		= 0;
+	voice		= 19;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	
