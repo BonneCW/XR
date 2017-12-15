@@ -22,7 +22,7 @@ FUNC INT Info_Mod_Raven_GDG_Lernen_Condition()
 FUNC VOID Info_Mod_Raven_GDG_Lernen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_GDG_Lernen_15_00"); //Ich will lernen.
-	AI_Output(self, hero, "Info_Mod_Raven_GDG_Lernen_10_01"); //Was willst du lernen?
+	AI_Output(self, hero, "Info_Mod_Raven_GDG_Lernen_03_01"); //Was willst du lernen?
 
 	Info_ClearChoices	(Info_Mod_Raven_GDG_Lernen);
 

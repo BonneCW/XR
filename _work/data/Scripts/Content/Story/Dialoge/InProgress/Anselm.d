@@ -1229,7 +1229,7 @@ FUNC VOID Info_Mod_Anselm_DickeLuft_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_01"); //(lautstark) Bis du Nichtsnutz endlich mal anfängst, mir bei der Hausarbeit unter die Arme zu greifen.
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_21_01"); //(lautstark) Bis du Nichtsnutz endlich mal anfängst, mir bei der Hausarbeit unter die Arme zu greifen.
 
 	TRIA_Next(Anselm);
 
@@ -1237,7 +1237,7 @@ FUNC VOID Info_Mod_Anselm_DickeLuft_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_03"); //Und, wie sieht es aus? Hast du langsam deine Meinung geändert?
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_21_03"); //Und, wie sieht es aus? Hast du langsam deine Meinung geändert?
 
 	TRIA_Next(Anselm);
 
@@ -1245,7 +1245,7 @@ FUNC VOID Info_Mod_Anselm_DickeLuft_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_05"); //Es macht dir wohl gar nichts aus, dass ich dort jeden störe?
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_21_05"); //Es macht dir wohl gar nichts aus, dass ich dort jeden störe?
 
 	TRIA_Next(Anselm);
 
@@ -1253,14 +1253,14 @@ FUNC VOID Info_Mod_Anselm_DickeLuft_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_07"); //Schön. Dann werde ich mir ein neues Druckmittel ausdenken müssen.
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_08"); //Wie wär's damit: Ich setze mich genau hier hin.
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_21_07"); //Schön. Dann werde ich mir ein neues Druckmittel ausdenken müssen.
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_21_08"); //Wie wär's damit: Ich setze mich genau hier hin.
 
 	AI_UseMob	(self, "THRONE", 1);
 
 	AI_TurnToNpc	(Anselm, self);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_09"); //Und niemand wird mich hier weg kriegen, solange du zu Hause keinen Finger krümmst!
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_21_09"); //Und niemand wird mich hier weg kriegen, solange du zu Hause keinen Finger krümmst!
 
 	TRIA_Next(Anselm);
 
@@ -1268,7 +1268,7 @@ FUNC VOID Info_Mod_Anselm_DickeLuft_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_11"); //Oh ja!
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_21_11"); //Oh ja!
 
 	TRIA_Next(Anselm);
 
@@ -1276,7 +1276,7 @@ FUNC VOID Info_Mod_Anselm_DickeLuft_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_26_13"); //(erbost) Ich warne dich!
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft_21_13"); //(erbost) Ich warne dich!
 
 	TRIA_Next(Anselm);
 
@@ -1324,7 +1324,7 @@ FUNC VOID Info_Mod_Anselm_DickeLuft2_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft2_16_01"); //Aber...!
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft2_21_01"); //Aber...!
 
 	TRIA_Next(Anselm);
 
@@ -1332,8 +1332,8 @@ FUNC VOID Info_Mod_Anselm_DickeLuft2_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft2_16_03"); //Das könnte dir so passen! Ich gehe jetzt und schließe mich ein, jawohl!
-	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft2_16_04"); //Ich will niemanden von euch mehr sehen!
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft2_21_03"); //Das könnte dir so passen! Ich gehe jetzt und schließe mich ein, jawohl!
+	AI_Output(self, hero, "Info_Mod_Anselm_DickeLuft2_21_04"); //Ich will niemanden von euch mehr sehen!
 
 	TRIA_Next(Anselm);
 

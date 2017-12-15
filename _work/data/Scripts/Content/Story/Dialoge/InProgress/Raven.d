@@ -17,9 +17,9 @@ FUNC INT Info_Mod_Raven_Hi_Condition()
 
 FUNC VOID Info_Mod_Raven_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Raven_Hi_10_00"); //Bei Beliars behaartem Hintern! Dich habe ich doch schon mal gesehen!
+	AI_Output(self, hero, "Info_Mod_Raven_Hi_03_00"); //Bei Beliars behaartem Hintern! Dich habe ich doch schon mal gesehen!
 	AI_Output(hero, self, "Info_Mod_Raven_Hi_15_01"); //(räuspert sich)
-	AI_Output(self, hero, "Info_Mod_Raven_Hi_10_02"); //Oder warum habe ich das dringende Bedürfnis, dir die Fresse zu polieren?
+	AI_Output(self, hero, "Info_Mod_Raven_Hi_03_02"); //Oder warum habe ich das dringende Bedürfnis, dir die Fresse zu polieren?
 };
 
 INSTANCE Info_Mod_Raven_WerBistDu (C_INFO)
@@ -44,7 +44,7 @@ FUNC INT Info_Mod_Raven_WerBistDu_Condition()
 FUNC VOID Info_Mod_Raven_WerBistDu_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_WerBistDu_15_00"); //Hallo, Rav... Äh, ich meine, wer bist du?
-	AI_Output(self, hero, "Info_Mod_Raven_WerBistDu_10_01"); //Ich bin Raven, der oberste der Dämonenritter. Und dich Bürschchen werde ich von nun an ganz besonders im Auge behalten.
+	AI_Output(self, hero, "Info_Mod_Raven_WerBistDu_03_01"); //Ich bin Raven, der oberste der Dämonenritter. Und dich Bürschchen werde ich von nun an ganz besonders im Auge behalten.
 };
 
 INSTANCE Info_Mod_Raven_WarumDaemonenritter (C_INFO)
@@ -69,9 +69,9 @@ FUNC INT Info_Mod_Raven_WarumDaemonenritter_Condition()
 FUNC VOID Info_Mod_Raven_WarumDaemonenritter_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_WarumDaemonenritter_15_00"); //Was ist so toll daran, Dämonenritter zu sein?
-	AI_Output(self, hero, "Info_Mod_Raven_WarumDaemonenritter_10_01"); //(lacht) Dass wir kleinen Würstchen wie dir das Maul stopfen können, wenn wir es wollen.
-	AI_Output(self, hero, "Info_Mod_Raven_WarumDaemonenritter_10_02"); //Wir sind Beliars Streitkräfte, mit den mächtigsten Waffen, Rüstungen, Sprüchen und der Zustimmung des dunklen Gottes ausgestattet.
-	AI_Output(self, hero, "Info_Mod_Raven_WarumDaemonenritter_10_03"); //In naher Zukunft wird unsere Armee unbezwingbar sein.
+	AI_Output(self, hero, "Info_Mod_Raven_WarumDaemonenritter_03_01"); //(lacht) Dass wir kleinen Würstchen wie dir das Maul stopfen können, wenn wir es wollen.
+	AI_Output(self, hero, "Info_Mod_Raven_WarumDaemonenritter_03_02"); //Wir sind Beliars Streitkräfte, mit den mächtigsten Waffen, Rüstungen, Sprüchen und der Zustimmung des dunklen Gottes ausgestattet.
+	AI_Output(self, hero, "Info_Mod_Raven_WarumDaemonenritter_03_03"); //In naher Zukunft wird unsere Armee unbezwingbar sein.
 };
 
 INSTANCE Info_Mod_Raven_Belagerung (C_INFO)
@@ -106,18 +106,18 @@ FUNC INT Info_Mod_Raven_Belagerung_Condition()
 FUNC VOID Info_Mod_Raven_Belagerung_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_Belagerung_15_00"); //Alles in Ordung?
-	AI_Output(self, hero, "Info_Mod_Raven_Belagerung_10_01"); //Ja, danke. Diese verdammten Innos-Bastarde. Was hat das zu bedeuten? Ich dachte es herrscht Frieden!
+	AI_Output(self, hero, "Info_Mod_Raven_Belagerung_03_01"); //Ja, danke. Diese verdammten Innos-Bastarde. Was hat das zu bedeuten? Ich dachte es herrscht Frieden!
 	AI_Output(hero, self, "Info_Mod_Raven_Belagerung_15_02"); //Dafür ist nicht das Kloster verantwortlich, sondern ein Amulett, in dem die sogenannte Garde Innos' gefangen war.
 	AI_Output(hero, self, "Info_Mod_Raven_Belagerung_15_03"); //Durch die Öffnung des Amuletts ist diese frei und bedroht nun unsere Gottheit. Ich bin hierher gekommen, um euch zu unterstützen.
-	AI_Output(self, hero, "Info_Mod_Raven_Belagerung_10_04"); //(wütend) Dieses Dreckspack. Wir sitzen hier fest, und du als Einziger willst uns helfen?
+	AI_Output(self, hero, "Info_Mod_Raven_Belagerung_03_04"); //(wütend) Dieses Dreckspack. Wir sitzen hier fest, und du als Einziger willst uns helfen?
 	AI_Output(hero, self, "Info_Mod_Raven_Belagerung_15_05"); //Das hatte ich vor.
-	AI_Output(self, hero, "Info_Mod_Raven_Belagerung_10_06"); //(seufzt) Nun gut, dann wartet eine Menge Arbeit auf dich!
+	AI_Output(self, hero, "Info_Mod_Raven_Belagerung_03_06"); //(seufzt) Nun gut, dann wartet eine Menge Arbeit auf dich!
 
 	B_Say	(hero, self, "$WASISTZUTUN");
 
-	AI_Output(self, hero, "Info_Mod_Raven_Belagerung_10_07"); //Nun, durch diesen Angriff sind wir arg geschwächt worden. Sprich mal mit den wichtigen Leuten hier, sie werden wohl genug zu tun haben für dich, um einen Gegenangriff zu starten.
-	AI_Output(self, hero, "Info_Mod_Raven_Belagerung_10_08"); //Ach ja, ich habe gehört, dass im Talkessel auf dem Weg zu Bengars Hof eine große Gruppe sein soll.
-	AI_Output(self, hero, "Info_Mod_Raven_Belagerung_10_09"); //Die solltest du meiden. Darum werden wir uns später kümmern.
+	AI_Output(self, hero, "Info_Mod_Raven_Belagerung_03_07"); //Nun, durch diesen Angriff sind wir arg geschwächt worden. Sprich mal mit den wichtigen Leuten hier, sie werden wohl genug zu tun haben für dich, um einen Gegenangriff zu starten.
+	AI_Output(self, hero, "Info_Mod_Raven_Belagerung_03_08"); //Ach ja, ich habe gehört, dass im Talkessel auf dem Weg zu Bengars Hof eine große Gruppe sein soll.
+	AI_Output(self, hero, "Info_Mod_Raven_Belagerung_03_09"); //Die solltest du meiden. Darum werden wir uns später kümmern.
 
 	B_LogEntry	(TOPIC_MOD_BEL_BELAGERUNG, "Wir haben die Angreifer abgewehrt, jedoch sind wir arg geschwächt worden. Raven meint, dass ich mich nützlich machen soll.");
 };
@@ -144,7 +144,7 @@ FUNC INT Info_Mod_Raven_BelagerungAufgabe_Condition()
 FUNC VOID Info_Mod_Raven_BelagerungAufgabe_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_BelagerungAufgabe_15_00"); //Was soll ich für dich tun?
-	AI_Output(self, hero, "Info_Mod_Raven_BelagerungAufgabe_10_01"); //Noch gar nichts! Hilf den anderen, damit wir uns auf einen Gegenangriff vorbereiten können. Dann sehen wir weiter.
+	AI_Output(self, hero, "Info_Mod_Raven_BelagerungAufgabe_03_01"); //Noch gar nichts! Hilf den anderen, damit wir uns auf einen Gegenangriff vorbereiten können. Dann sehen wir weiter.
 	AI_Output(hero, self, "Info_Mod_Raven_BelagerungAufgabe_15_02"); //Na schön.
 };
 
@@ -175,14 +175,14 @@ FUNC INT Info_Mod_Raven_BelagerungHilfe_Condition()
 FUNC VOID Info_Mod_Raven_BelagerungHilfe_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_BelagerungHilfe_15_00"); //Habe ich genug geholfen?
-	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_10_01"); //Du hast Scar geholfen, den Novizen neue Waffen zu besorgen. Du hast für Fahim den Beliarschrein repariert. Du hast den Dämonen getötet. Du hast Eduard geholfen, die Waffen unserer Novizen zu verstärken, und du hast einen Großteil der Untoten besiegt. Gut, das genügt!
+	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_03_01"); //Du hast Scar geholfen, den Novizen neue Waffen zu besorgen. Du hast für Fahim den Beliarschrein repariert. Du hast den Dämonen getötet. Du hast Eduard geholfen, die Waffen unserer Novizen zu verstärken, und du hast einen Großteil der Untoten besiegt. Gut, das genügt!
 	AI_Output(hero, self, "Info_Mod_Raven_BelagerungHilfe_15_02"); //Was sind nun die nächsten Schritte?
-	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_10_03"); //Wir müssen versuchen die Banditen zu überzeugen, die restlichen Untoten auf dem Plateau anzugreifen. Ohne Unterstützung schaffen wir das nicht.
-	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_10_04"); //Erst, wenn wir die Feinde getötet haben, können wir uns um die Garde Innos' selbst kümmern.
+	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_03_03"); //Wir müssen versuchen die Banditen zu überzeugen, die restlichen Untoten auf dem Plateau anzugreifen. Ohne Unterstützung schaffen wir das nicht.
+	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_03_04"); //Erst, wenn wir die Feinde getötet haben, können wir uns um die Garde Innos' selbst kümmern.
 	AI_Output(hero, self, "Info_Mod_Raven_BelagerungHilfe_15_05"); //Wie soll ich die Söldner überzeugen?
-	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_10_06"); //Du hast doch gute Kontakte zum Neuen Lager. Überzeuge sie, uns Männer zur Verfügung zu stellen!
+	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_03_06"); //Du hast doch gute Kontakte zum Neuen Lager. Überzeuge sie, uns Männer zur Verfügung zu stellen!
 	AI_Output(hero, self, "Info_Mod_Raven_BelagerungHilfe_15_07"); //Ich werde gleich aufbrechen.
-	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_10_08"); //Beeile dich. Die Zeit ist nicht unser Verbündeter! Im Lager vor der Freien Mine wirst du sicher ein paar Unterstützer finden.
+	AI_Output(self, hero, "Info_Mod_Raven_BelagerungHilfe_03_08"); //Beeile dich. Die Zeit ist nicht unser Verbündeter! Im Lager vor der Freien Mine wirst du sicher ein paar Unterstützer finden.
 
 	B_GivePlayerXP	(800);
 
@@ -217,15 +217,15 @@ FUNC INT Info_Mod_Raven_SoeldnerSold_Condition()
 FUNC VOID Info_Mod_Raven_SoeldnerSold_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_SoeldnerSold_15_00"); //Es gibt ein kleines Problem mit den Banditen.
-	AI_Output(self, hero, "Info_Mod_Raven_SoeldnerSold_10_01"); //Was ist denn los?
+	AI_Output(self, hero, "Info_Mod_Raven_SoeldnerSold_03_01"); //Was ist denn los?
 	AI_Output(hero, self, "Info_Mod_Raven_SoeldnerSold_15_02"); //Bullco hat gemeint, dass seine Leute nur mit 10.000 Goldstücken bereit wären, einen Kampf mit uns zu führen!
-	AI_Output(self, hero, "Info_Mod_Raven_SoeldnerSold_10_03"); //(ungläubig) Das ist ein Scherz, oder?
+	AI_Output(self, hero, "Info_Mod_Raven_SoeldnerSold_03_03"); //(ungläubig) Das ist ein Scherz, oder?
 	AI_Output(hero, self, "Info_Mod_Raven_SoeldnerSold_15_04"); //Keineswegs.
-	AI_Output(self, hero, "Info_Mod_Raven_SoeldnerSold_10_05"); //(wütend) Na gut. Hier hast du 10.000 Goldstücke.
+	AI_Output(self, hero, "Info_Mod_Raven_SoeldnerSold_03_05"); //(wütend) Na gut. Hier hast du 10.000 Goldstücke.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 10000);
 
-	AI_Output(self, hero, "Info_Mod_Raven_SoeldnerSold_10_06"); //Hoffentlich wollen die Söldner nicht mehr.
+	AI_Output(self, hero, "Info_Mod_Raven_SoeldnerSold_03_06"); //Hoffentlich wollen die Söldner nicht mehr.
 
 	B_LogEntry	(TOPIC_MOD_BEL_SOELDNER, "Raven hat mir das Gold gegeben. Jetzt sollte ich es zu Bullco bringen und dann kann die Schlacht beginnen.");
 };
@@ -252,7 +252,7 @@ FUNC INT Info_Mod_Raven_SoeldnerDabei_Condition()
 FUNC VOID Info_Mod_Raven_SoeldnerDabei_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_SoeldnerDabei_15_00"); //Die Banditen werden uns unterstützen. Heute Nacht werden sie angreifen. Wir sollen zum Talkessel kommen.
-	AI_Output(self, hero, "Info_Mod_Raven_SoeldnerDabei_10_01"); //Sehr gut, komme gegen Mitternacht zum Plateau, dort werden wir warten.
+	AI_Output(self, hero, "Info_Mod_Raven_SoeldnerDabei_03_01"); //Sehr gut, komme gegen Mitternacht zum Plateau, dort werden wir warten.
 	AI_Output(hero, self, "Info_Mod_Raven_SoeldnerDabei_15_02"); //In Ordnung.
 
 	B_GivePlayerXP	(250);
@@ -296,9 +296,9 @@ FUNC INT Info_Mod_Raven_ArgibastDead_Condition()
 
 FUNC VOID Info_Mod_Raven_ArgibastDead_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Raven_ArgibastDead_10_00"); //Es ist vollbracht, die Belagerung ist gebrochen.
+	AI_Output(self, hero, "Info_Mod_Raven_ArgibastDead_03_00"); //Es ist vollbracht, die Belagerung ist gebrochen.
 	AI_Output(hero, self, "Info_Mod_Raven_ArgibastDead_15_01"); //Es war nicht einfach.
-	AI_Output(self, hero, "Info_Mod_Raven_ArgibastDead_10_02"); //Da hast du Recht. Melde dich nun bei Xardas und gib ihm Bescheid.
+	AI_Output(self, hero, "Info_Mod_Raven_ArgibastDead_03_02"); //Da hast du Recht. Melde dich nun bei Xardas und gib ihm Bescheid.
 	AI_Output(hero, self, "Info_Mod_Raven_ArgibastDead_15_03"); //Das werde ich.
 
 	B_GivePlayerXP	(1000);
@@ -339,10 +339,10 @@ FUNC INT Info_Mod_Raven_SchwarzesErz_Condition()
 FUNC VOID Info_Mod_Raven_SchwarzesErz_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_SchwarzesErz_15_00"); //Ich komme, um deinen Rat zu ersuchen.
-	AI_Output(self, hero, "Info_Mod_Raven_SchwarzesErz_10_01"); //Um was geht es denn?
+	AI_Output(self, hero, "Info_Mod_Raven_SchwarzesErz_03_01"); //Um was geht es denn?
 	AI_Output(hero, self, "Info_Mod_Raven_SchwarzesErz_15_02"); //Fahim hat vor, den Beliarschrein zu reparieren. Jedoch ist dessen Quelle zerstört und der neue Stein, den ich gefunden habe, benötigt die Kraft von schwarzem Erz, um ihn anzutreiben, und somit auch den Beliarschrein.
 	AI_Output(hero, self, "Info_Mod_Raven_SchwarzesErz_15_03"); //Jedoch gibt es hier oben kein schwarzes Erz mehr. Wo kann ich welches herbekommen?
-	AI_Output(self, hero, "Info_Mod_Raven_SchwarzesErz_10_04"); //Ich kenne eine Methode, um normales Erz in schwarzes Erz umzuwandeln. Jedoch benötige ich zwei Brocken Erz, um daraus schwarzes Erz machen zu können.
+	AI_Output(self, hero, "Info_Mod_Raven_SchwarzesErz_03_04"); //Ich kenne eine Methode, um normales Erz in schwarzes Erz umzuwandeln. Jedoch benötige ich zwei Brocken Erz, um daraus schwarzes Erz machen zu können.
 
 	B_LogEntry	(TOPIC_MOD_BEL_BELIARSCHREIN, "Raven kann schwarzes Erz aus magischem Erz herstellen. Jetzt muss ich nur zwei Brocken davon auftreiben.");
 };
@@ -373,7 +373,7 @@ FUNC VOID Info_Mod_Raven_MagischesErz_Info()
 
 	B_GiveInvItems	(hero, self, ItMi_Nugget, 2);
 
-	AI_Output(self, hero, "Info_Mod_Raven_MagischesErz_10_01"); //Das ist gut. Komm morgen wieder und hol das schwarze Erz ab.
+	AI_Output(self, hero, "Info_Mod_Raven_MagischesErz_03_01"); //Das ist gut. Komm morgen wieder und hol das schwarze Erz ab.
 	
 	B_GivePlayerXP	(150);
 
@@ -405,13 +405,13 @@ FUNC INT Info_Mod_Raven_ErzFertig_Condition()
 FUNC VOID Info_Mod_Raven_ErzFertig_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_ErzFertig_15_00"); //Bist du fertig?
-	AI_Output(self, hero, "Info_Mod_Raven_ErzFertig_10_01"); //Ja, hier sind vier Brocken schwarzes Erz.
+	AI_Output(self, hero, "Info_Mod_Raven_ErzFertig_03_01"); //Ja, hier sind vier Brocken schwarzes Erz.
 
 	B_GiveInvItems	(self, hero, ItMi_Zeitspalt_Addon, 4);
 
-	AI_Output(self, hero, "Info_Mod_Raven_ErzFertig_10_02"); //Ich habe durch einen Vervielfältigungszauber die Menge verdoppeln können!
+	AI_Output(self, hero, "Info_Mod_Raven_ErzFertig_03_02"); //Ich habe durch einen Vervielfältigungszauber die Menge verdoppeln können!
 	AI_Output(hero, self, "Info_Mod_Raven_ErzFertig_15_03"); //Danke.
-	AI_Output(self, hero, "Info_Mod_Raven_ErzFertig_10_04"); //Gehe nun und verrichte weiter deine Aufgaben!
+	AI_Output(self, hero, "Info_Mod_Raven_ErzFertig_03_04"); //Gehe nun und verrichte weiter deine Aufgaben!
 	
 	B_LogEntry	(TOPIC_MOD_BEL_BELIARSCHREIN, "Ich hab jetzt das schwarze Erz. Jetzt auf zu Eduard.");
 };
@@ -438,18 +438,18 @@ FUNC INT Info_Mod_Raven_ToteNovizen_Condition()
 FUNC VOID Info_Mod_Raven_ToteNovizen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_ToteNovizen_15_00"); //Ich glaube, wir haben ein ernstes Problem.
-	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_10_01"); //Was ist los?
+	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_03_01"); //Was ist los?
 	AI_Output(hero, self, "Info_Mod_Raven_ToteNovizen_15_02"); //Ich glaube, ein Dämon hat die Morde begangen!
-	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_10_03"); //(ungläubig) Ein Dämon? Den hätten wir längst bemerkt! Außerdem haben Innos' Anhänger nichts mit Dämonen zu tun!
+	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_03_03"); //(ungläubig) Ein Dämon? Den hätten wir längst bemerkt! Außerdem haben Innos' Anhänger nichts mit Dämonen zu tun!
 	AI_Output(hero, self, "Info_Mod_Raven_ToteNovizen_15_04"); //Die Feuermagier lernen verbotenerweise Dämonen zu beschwören. Wieso sollten die Untoten das nicht können?
-	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_10_05"); //Selbst wenn, wir hätten die Anwesenheit eines Dämons schon längst bemerkt!
+	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_03_05"); //Selbst wenn, wir hätten die Anwesenheit eines Dämons schon längst bemerkt!
 	AI_Output(hero, self, "Info_Mod_Raven_ToteNovizen_15_06"); //Gibt es irgendeine Außnahme?
-	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_10_07"); //Ja, es gibt Diener des Bösen, die Metarmorphosen anwenden können. Die Kraft, sich in ein anderes Wesen zu verwandeln.
-	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_10_08"); //Der Dämon müsste sich in einem unserer Novizen eingenistet haben!
+	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_03_07"); //Ja, es gibt Diener des Bösen, die Metarmorphosen anwenden können. Die Kraft, sich in ein anderes Wesen zu verwandeln.
+	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_03_08"); //Der Dämon müsste sich in einem unserer Novizen eingenistet haben!
 	AI_Output(hero, self, "Info_Mod_Raven_ToteNovizen_15_09"); //Wie kann ich den Dämon erkennen?
-	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_10_10"); //Du müsstest ihm nachts auflauern und ihn töten.
+	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_03_10"); //Du müsstest ihm nachts auflauern und ihn töten.
 	AI_Output(hero, self, "Info_Mod_Raven_ToteNovizen_15_11"); //Dann werde ich das tun.
-	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_10_12"); //Gut, aber sei vorsichtig! Der Dämon ist sicher gerissen,
+	AI_Output(self, hero, "Info_Mod_Raven_ToteNovizen_03_12"); //Gut, aber sei vorsichtig! Der Dämon ist sicher gerissen,
 	
 	Wld_InsertNpc	(Mod_4015_SNOV_BesessenerNovize_MT, "TOT");
 
@@ -478,9 +478,9 @@ FUNC INT Info_Mod_Raven_Befoerderung_Condition()
 FUNC VOID Info_Mod_Raven_Befoerderung_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_Befoerderung_15_00"); //Ich will Schwarzer Krieger werden.
-	AI_Output(self, hero, "Info_Mod_Raven_Befoerderung_10_01"); //Du wählst also den Weg des Kampfes. Das war die richtige Entscheidung.
-	AI_Output(self, hero, "Info_Mod_Raven_Befoerderung_10_02"); //Ich werde dich in den Rang des Schwarzen Kriegers erheben.
-	AI_Output(self, hero, "Info_Mod_Raven_Befoerderung_10_03"); //Hier ist deine Rüstung.
+	AI_Output(self, hero, "Info_Mod_Raven_Befoerderung_03_01"); //Du wählst also den Weg des Kampfes. Das war die richtige Entscheidung.
+	AI_Output(self, hero, "Info_Mod_Raven_Befoerderung_03_02"); //Ich werde dich in den Rang des Schwarzen Kriegers erheben.
+	AI_Output(self, hero, "Info_Mod_Raven_Befoerderung_03_03"); //Hier ist deine Rüstung.
 
 	CreateInvItems	(self, ITAR_SMK_L, 1);
 	B_GiveInvItems	(self, hero, ITAR_SMK_L, 1);
@@ -518,7 +518,7 @@ FUNC INT Info_Mod_Raven_GomezLebenLassen_Condition()
 
 FUNC VOID Info_Mod_Raven_GomezLebenLassen_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Raven_GomezLebenLassen_10_00"); //Das stimmt. Lasst ihn am Leben. Ich werde den Truppen auch sofort befehlen euer Lager zu verlassen.
+	AI_Output(self, hero, "Info_Mod_Raven_GomezLebenLassen_03_00"); //Das stimmt. Lasst ihn am Leben. Ich werde den Truppen auch sofort befehlen euer Lager zu verlassen.
 
 	AI_StopProcessInfos	(self);
 };
@@ -546,7 +546,7 @@ FUNC VOID Info_Mod_Raven_Oric_Info()
 {
 	AI_TurnToNpc	(self, Mod_7039_PAL_Oric_MT);
 
-	AI_Output(self, hero, "Info_Mod_Raven_Oric_10_00"); //Halt's Maul
+	AI_Output(self, hero, "Info_Mod_Raven_Oric_03_00"); //Halt's Maul
 
 	AI_StopProcessInfos	(self);
 
@@ -576,12 +576,12 @@ FUNC VOID Info_Mod_Raven_GomezNervt_Info()
 {
 	AI_TurnToNpc	(self, Mod_517_DMR_Gomez_MT);
 
-	AI_Output(self, hero, "Info_Mod_Raven_GomezNervt_10_00"); //Ohne mich hätte dich hätte dich dieses Snapperrudel am Ausgang des Minentals doch zerfleischt und jetzt arbeitest du für mich.
+	AI_Output(self, hero, "Info_Mod_Raven_GomezNervt_03_00"); //Ohne mich hätte dich hätte dich dieses Snapperrudel am Ausgang des Minentals doch zerfleischt und jetzt arbeitest du für mich.
 
 	AI_TurnToNpc	(self, hero);
 
-	AI_Output(self, hero, "Info_Mod_Raven_GomezNervt_10_01"); //Als Entschädigung überreiche ich dir das Schwert namens Innos' Zorn, das Gomez zu Zeiten des alten Lagers benutzte.
-	AI_Output(self, hero, "Info_Mod_Raven_GomezNervt_10_02"); //Möge es in deinen Händen ein Zeichen für die strahlende Zukunft des Alten Lagers sein.
+	AI_Output(self, hero, "Info_Mod_Raven_GomezNervt_03_01"); //Als Entschädigung überreiche ich dir das Schwert namens Innos' Zorn, das Gomez zu Zeiten des alten Lagers benutzte.
+	AI_Output(self, hero, "Info_Mod_Raven_GomezNervt_03_02"); //Möge es in deinen Händen ein Zeichen für die strahlende Zukunft des Alten Lagers sein.
 
 	B_GiveInvItems	(self, hero, ItMw_1H_Blessed_03, 1);
 
@@ -615,8 +615,8 @@ FUNC VOID Info_Mod_Raven_Teacher_Info()
 {
 	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
 
-	AI_Output(self, hero, "Info_Mod_Raven_Teacher_10_01"); //Ja, ich kann dir zeigen wie du stärker wirst.
-	AI_Output(self, hero, "Info_Mod_Raven_Teacher_10_02"); //Außerdem kann ich dir den Umgang mit Zweihandwaffen beibringen.
+	AI_Output(self, hero, "Info_Mod_Raven_Teacher_03_01"); //Ja, ich kann dir zeigen wie du stärker wirst.
+	AI_Output(self, hero, "Info_Mod_Raven_Teacher_03_02"); //Außerdem kann ich dir den Umgang mit Zweihandwaffen beibringen.
 
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_BELIARFESTUNG, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_LEHRER_BELIARFESTUNG, "Raven kann mir beibringen wie ich stärker werde und wie ich mit Zweihandwaffen umgehe.");
@@ -648,7 +648,7 @@ FUNC INT Info_Mod_Raven_Lernen_Condition()
 FUNC VOID Info_Mod_Raven_Lernen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_Lernen_15_00"); //Ich will lernen.
-	AI_Output(self, hero, "Info_Mod_Raven_Lernen_10_01"); //Was willst du lernen?
+	AI_Output(self, hero, "Info_Mod_Raven_Lernen_03_01"); //Was willst du lernen?
 
 	Info_ClearChoices	(Info_Mod_Raven_Lernen);
 

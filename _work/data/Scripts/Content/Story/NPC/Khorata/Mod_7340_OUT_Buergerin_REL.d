@@ -4,7 +4,7 @@ instance Mod_7340_OUT_Buergerin_REL (Npc_Default)
 	name 		= NAME_Buergerin;
 	guild 		= GIL_OUT;
 	id 			= 7340;
-	voice		= 0;
+	voice		= 19;
 	flags       = 0;																
 	npctype		= NPCTYPE_REL_BUERGER;
 	

@@ -4,7 +4,7 @@ instance Mod_7499_KDF_Elvira_REL (Npc_Default)
 	name 		= "Elvira";
 	guild 		= GIL_OUT;
 	id 			= 7499;
-	voice		= 0;
+	voice		= 21;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

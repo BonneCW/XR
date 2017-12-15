@@ -4,7 +4,7 @@ instance Mod_7513_OUT_Buergerin_REL (Npc_Default)
 	name 		= Name_Buergerin;	//Frau von Dalton
 	guild 		= GIL_OUT;
 	id 			= 7513;
-	voice		= 0;
+	voice		= 21;
 	flags       = 0;																
 	npctype		= NPCTYPE_REL_BUERGER;
 	

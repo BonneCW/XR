@@ -15,10 +15,10 @@ FUNC INT Info_Mod_Elvira_Frauenkleider_Condition()
 
 FUNC VOID Info_Mod_Elvira_Frauenkleider_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider_17_00"); //(herrisch) Warte! Ich habe eine Aufgabe für dich!
+	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider_21_00"); //(herrisch) Warte! Ich habe eine Aufgabe für dich!
 	AI_Output(hero, self, "Info_Mod_Elvira_Frauenkleider_15_01"); //Ach ja?
-	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider_17_02"); //Ich bin auf meiner Reise nach Khorata überfallen und meiner Kleider beraubt worden.
-	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider_17_03"); //Du wirst sie mir wieder beschaffen!
+	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider_21_02"); //Ich bin auf meiner Reise nach Khorata überfallen und meiner Kleider beraubt worden.
+	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider_21_03"); //Du wirst sie mir wieder beschaffen!
 };
 
 INSTANCE Info_Mod_Elvira_Frauenkleider2 (C_INFO)
@@ -43,9 +43,9 @@ FUNC INT Info_Mod_Elvira_Frauenkleider2_Condition()
 FUNC VOID Info_Mod_Elvira_Frauenkleider2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Elvira_Frauenkleider2_15_00"); //Warum so unfreundlich?
-	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider2_17_01"); //Daran seid ihr Männer schon selbst Schuld!
-	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider2_17_02"); //Erst wird mir ein schlechtes Gewissen eingeredet, weil ich nicht männlich bin, und dann wird mir auch noch das Zeichen meiner Weiblichkeit gestohlen!
-	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider2_17_03"); //Was soll denn da noch übrig bleiben?
+	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider2_21_01"); //Daran seid ihr Männer schon selbst Schuld!
+	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider2_21_02"); //Erst wird mir ein schlechtes Gewissen eingeredet, weil ich nicht männlich bin, und dann wird mir auch noch das Zeichen meiner Weiblichkeit gestohlen!
+	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider2_21_03"); //Was soll denn da noch übrig bleiben?
 };
 
 INSTANCE Info_Mod_Elvira_Frauenkleider3 (C_INFO)
@@ -70,8 +70,8 @@ FUNC INT Info_Mod_Elvira_Frauenkleider3_Condition()
 FUNC VOID Info_Mod_Elvira_Frauenkleider3_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Elvira_Frauenkleider3_15_00"); //Wo genau wurdest du überfallen?
-	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider3_17_01"); //Ist das nicht egal? Die Räuber werden schon keine Spuren hinterlassen haben, schließlich haben sie nur meinen Kleiderkoffer mitgenommen.
-	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider3_17_02"); //Aber so viel von dem Lumpenpack kann es doch hier nicht geben, oder?
+	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider3_21_01"); //Ist das nicht egal? Die Räuber werden schon keine Spuren hinterlassen haben, schließlich haben sie nur meinen Kleiderkoffer mitgenommen.
+	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider3_21_02"); //Aber so viel von dem Lumpenpack kann es doch hier nicht geben, oder?
 
 	Info_ClearChoices	(Info_Mod_Elvira_Frauenkleider3);
 
@@ -82,7 +82,7 @@ FUNC VOID Info_Mod_Elvira_Frauenkleider3_Info()
 FUNC VOID Info_Mod_Elvira_Frauenkleider3_B()
 {
 	AI_Output(hero, self, "Info_Mod_Elvira_Frauenkleider3_B_15_00"); //Such doch allein.
-	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider3_B_17_01"); //(sarkastisch) Danke.
+	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider3_B_21_01"); //(sarkastisch) Danke.
 
 	Info_ClearChoices	(Info_Mod_Elvira_Frauenkleider3);
 };
@@ -90,7 +90,7 @@ FUNC VOID Info_Mod_Elvira_Frauenkleider3_B()
 FUNC VOID Info_Mod_Elvira_Frauenkleider3_A()
 {
 	AI_Output(hero, self, "Info_Mod_Elvira_Frauenkleider3_A_15_00"); //Ich werde mich umsehen.
-	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider3_A_17_01"); //Na, immerhin scheinst du ganz vernünftig zu sein.
+	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider3_A_21_01"); //Na, immerhin scheinst du ganz vernünftig zu sein.
 
 	Info_ClearChoices	(Info_Mod_Elvira_Frauenkleider3);
 
@@ -127,8 +127,8 @@ FUNC VOID Info_Mod_Elvira_Frauenkleider4_Info()
 
 	B_GiveInvItems	(hero, self, ItMi_Kleiderkoffer, 1);
 
-	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider4_17_01"); //Ja, das sind sie. Hätte nicht damit gerechnet, sie wiederzusehen.
-	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider4_17_02"); //Nimm diese Tränke als Dank.
+	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider4_21_01"); //Ja, das sind sie. Hätte nicht damit gerechnet, sie wiederzusehen.
+	AI_Output(self, hero, "Info_Mod_Elvira_Frauenkleider4_21_02"); //Nimm diese Tränke als Dank.
 
 	B_GiveInvItems	(self, hero, ItPo_Health_02, 3);
 
@@ -164,7 +164,7 @@ FUNC INT Info_Mod_Elvira_Dorn_Condition()
 FUNC VOID Info_Mod_Elvira_Dorn_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Elvira_Dorn_15_00"); //Wir müssen reden ...
-	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_17_01"); //Was gibt's denn?
+	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_21_01"); //Was gibt's denn?
 
 	Info_ClearChoices	(Info_Mod_Elvira_Dorn);
 
@@ -179,8 +179,8 @@ FUNC VOID Info_Mod_Elvira_Dorn_Info()
 FUNC VOID Info_Mod_Elvira_Dorn_C()
 {
 	AI_Output(hero, self, "Info_Mod_Elvira_Dorn_C_15_00"); //Wenn du nicht gehst, erzähl ich allen, was zwischen uns gelaufen ist.
-	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_C_17_01"); //Du verdammter Schuft ...
-	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_C_17_02"); //Dann habe ich wohl wirklich keine Wahl ... Hoffentlich bist du zufrieden mit dem, was du tust.
+	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_C_21_01"); //Du verdammter Schuft ...
+	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_C_21_02"); //Dann habe ich wohl wirklich keine Wahl ... Hoffentlich bist du zufrieden mit dem, was du tust.
 
 	Info_ClearChoices	(Info_Mod_Elvira_Dorn);
 
@@ -196,10 +196,10 @@ FUNC VOID Info_Mod_Elvira_Dorn_C()
 FUNC VOID Info_Mod_Elvira_Dorn_B()
 {
 	AI_Output(hero, self, "Info_Mod_Elvira_Dorn_B_15_00"); //Idrico will dich loswerden.
-	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_B_17_01"); //Dieser Penner, der mich immer schief anschaut? Meinst du, er könnte unangenehm werden?
+	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_B_21_01"); //Dieser Penner, der mich immer schief anschaut? Meinst du, er könnte unangenehm werden?
 	AI_Output(hero, self, "Info_Mod_Elvira_Dorn_B_15_02"); //Sein Geruch ist es schon. Der Fanatismus ist stark in ihm.
-	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_B_17_03"); //Wir sollten ihm eine Maulsperre verpassen.
-	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_B_17_04"); //Meinst du, du bekommst es hin, Anselm auf unsere Seite zu ziehen, damit er den Kerl ruhig stellt?
+	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_B_21_03"); //Wir sollten ihm eine Maulsperre verpassen.
+	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_B_21_04"); //Meinst du, du bekommst es hin, Anselm auf unsere Seite zu ziehen, damit er den Kerl ruhig stellt?
 	AI_Output(hero, self, "Info_Mod_Elvira_Dorn_B_15_05"); //Ich kann's versuchen.
 
 	Info_ClearChoices	(Info_Mod_Elvira_Dorn);
@@ -212,9 +212,9 @@ FUNC VOID Info_Mod_Elvira_Dorn_B()
 FUNC VOID Info_Mod_Elvira_Dorn_A()
 {
 	AI_Output(hero, self, "Info_Mod_Elvira_Dorn_A_15_00"); //Du musst die Stadt sofort verlassen.
-	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_A_17_01"); //Meine Tagesplanung sah eigentlich etwas anders aus. Was ist denn los?
+	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_A_21_01"); //Meine Tagesplanung sah eigentlich etwas anders aus. Was ist denn los?
 	AI_Output(hero, self, "Info_Mod_Elvira_Dorn_A_15_02"); //Du wirst hier nicht länger geduldet. Entweder gehst du freiwillig, oder ich helfe nach.
-	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_A_17_03"); //Hört sich an, als wäre es dir ernst. Ich bin gespannt, wie deine Hilfe aussieht.
+	AI_Output(self, hero, "Info_Mod_Elvira_Dorn_A_21_03"); //Hört sich an, als wäre es dir ernst. Ich bin gespannt, wie deine Hilfe aussieht.
 
 	Info_ClearChoices	(Info_Mod_Elvira_Dorn);
 
@@ -251,8 +251,8 @@ FUNC INT Info_Mod_Elvira_Dorn2_Condition()
 FUNC VOID Info_Mod_Elvira_Dorn2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Elvira_Dorn2_15_00"); //Anselm fordert eine Tributzahlung von euch im Gegenzug für seine Hilfe.
-	AI_Output(self, hero, "Info_Mod_Elvira_Dorn2_17_01"); //So ein Erpresser! Aber wenn es ihn zufriedenstellt ...
-	AI_Output(self, hero, "Info_Mod_Elvira_Dorn2_17_02"); //Ist mir immer noch lieber als Ärger mit so einer Matschbirne.
+	AI_Output(self, hero, "Info_Mod_Elvira_Dorn2_21_01"); //So ein Erpresser! Aber wenn es ihn zufriedenstellt ...
+	AI_Output(self, hero, "Info_Mod_Elvira_Dorn2_21_02"); //Ist mir immer noch lieber als Ärger mit so einer Matschbirne.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 500);
 
@@ -280,7 +280,7 @@ FUNC INT Info_Mod_Elvira_Dorn3_Condition()
 
 FUNC VOID Info_Mod_Elvira_Dorn3_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Elvira_Dorn3_17_01"); //Du hast Anselm nur 50 Goldmünzen angeboten? Mach, dass du wegkommst, Dieb!
+	AI_Output(self, hero, "Info_Mod_Elvira_Dorn3_21_01"); //Du hast Anselm nur 50 Goldmünzen angeboten? Mach, dass du wegkommst, Dieb!
 };
 
 INSTANCE Info_Mod_Elvira_Dorn4 (C_INFO)
@@ -306,7 +306,7 @@ FUNC INT Info_Mod_Elvira_Dorn4_Condition()
 FUNC VOID Info_Mod_Elvira_Dorn4_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Elvira_Dorn4_15_00"); //Die Angelegenheit um Idrico sollte bereinigt sein.
-	AI_Output(self, hero, "Info_Mod_Elvira_Dorn4_17_01"); //Schön, dass man sich auf dich verlassen kann. Hier hast du eine kleine Entschädigung.
+	AI_Output(self, hero, "Info_Mod_Elvira_Dorn4_21_01"); //Schön, dass man sich auf dich verlassen kann. Hier hast du eine kleine Entschädigung.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
@@ -342,9 +342,9 @@ FUNC INT Info_Mod_Elvira_DiebeKey_Condition()
 
 FUNC VOID Info_Mod_Elvira_DiebeKey_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Elvira_DiebeKey_17_00"); //Ohh, mir wird ganz anders. Alles so leicht und lustig es dreht sich.
-	AI_Output(self, hero, "Info_Mod_Elvira_DiebeKey_17_01"); //Und vor mir ... ohh ... dieser stattliche Bursche.
-	AI_Output(self, hero, "Info_Mod_Elvira_DiebeKey_17_02"); //Komm her, nicht so zögerlich, ich beiße auch nicht, es sei denn du willst ...
+	AI_Output(self, hero, "Info_Mod_Elvira_DiebeKey_21_00"); //Ohh, mir wird ganz anders. Alles so leicht und lustig es dreht sich.
+	AI_Output(self, hero, "Info_Mod_Elvira_DiebeKey_21_01"); //Und vor mir ... ohh ... dieser stattliche Bursche.
+	AI_Output(self, hero, "Info_Mod_Elvira_DiebeKey_21_02"); //Komm her, nicht so zögerlich, ich beiße auch nicht, es sei denn du willst ...
 
 	AI_StopProcessInfos	(self);
 };
@@ -376,12 +376,12 @@ FUNC VOID Info_Mod_Elvira_DiebeKey2_Info()
 
 	AI_TurnToNpc	(hero, self);
 
-	AI_Output(self, hero, "Info_Mod_Elvira_DiebeKey2_17_01"); //(verwirrt) Wie, was ist geschehen. Ich ... meine Robe.
+	AI_Output(self, hero, "Info_Mod_Elvira_DiebeKey2_21_01"); //(verwirrt) Wie, was ist geschehen. Ich ... meine Robe.
 
 	AI_EquipBestArmor	(self);
 
-	AI_Output(self, hero, "Info_Mod_Elvira_DiebeKey2_17_02"); //Ohh, nein, was habe ich getan.
-	AI_Output(self, hero, "Info_Mod_Elvira_DiebeKey2_17_03"); //Bei Innos. Ich habe mich aufs schwerste versündigt ... ich muss Buße tun.
+	AI_Output(self, hero, "Info_Mod_Elvira_DiebeKey2_21_02"); //Ohh, nein, was habe ich getan.
+	AI_Output(self, hero, "Info_Mod_Elvira_DiebeKey2_21_03"); //Bei Innos. Ich habe mich aufs schwerste versündigt ... ich muss Buße tun.
 
 	AI_StopProcessInfos	(self);
 
@@ -411,10 +411,10 @@ FUNC INT Info_Mod_Elvira_DickeLuft_Condition()
 FUNC VOID Info_Mod_Elvira_DickeLuft_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Elvira_DickeLuft_15_00"); //Ich würde mich gern in ein Schaf verwandeln.
-	AI_Output(self, hero, "Info_Mod_Elvira_DickeLuft_17_01"); //Das hättest du auch bitter nötig, wenn du bei den Frauen landen wolltest.
-	AI_Output(self, hero, "Info_Mod_Elvira_DickeLuft_17_02"); //Mit so einer plumpen Anmache wird das jedenfalls nichts!
+	AI_Output(self, hero, "Info_Mod_Elvira_DickeLuft_21_01"); //Das hättest du auch bitter nötig, wenn du bei den Frauen landen wolltest.
+	AI_Output(self, hero, "Info_Mod_Elvira_DickeLuft_21_02"); //Mit so einer plumpen Anmache wird das jedenfalls nichts!
 	AI_Output(hero, self, "Info_Mod_Elvira_DickeLuft_15_03"); //Du hast also keine entsprechende Spruchrolle?
-	AI_Output(self, hero, "Info_Mod_Elvira_DickeLuft_17_04"); //Nein. Verwandlungen sind nicht mein Spezialgebiet.
+	AI_Output(self, hero, "Info_Mod_Elvira_DickeLuft_21_04"); //Nein. Verwandlungen sind nicht mein Spezialgebiet.
 };
 
 INSTANCE Info_Mod_Elvira_Freudenspender (C_INFO)
@@ -441,7 +441,7 @@ FUNC INT Info_Mod_Elvira_Freudenspender_Condition()
 FUNC VOID Info_Mod_Elvira_Freudenspender_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Elvira_Freudenspender_15_00"); //Kannst du Freudenspender gebrauchen?
-	AI_Output(self, hero, "Info_Mod_Elvira_Freudenspender_17_01"); //Freudenspender verstößt gegen unseren Kodex. Also nein.
+	AI_Output(self, hero, "Info_Mod_Elvira_Freudenspender_21_01"); //Freudenspender verstößt gegen unseren Kodex. Also nein.
 };
 
 INSTANCE Info_Mod_Elvira_Pickpocket_Quest (C_INFO)

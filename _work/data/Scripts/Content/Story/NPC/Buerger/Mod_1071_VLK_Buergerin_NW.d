@@ -4,7 +4,7 @@ instance Mod_1071_VLK_Buergerin_NW (Npc_Default)
 	name 		= NAME_Magd; //Coragons Frau / Magd / Bedienung
 	guild 		= GIL_PAL;
 	id 			= 1071;
-	voice		= 0;
+	voice		= 19;
 	flags       = 0;																	
 	npctype		= NPCTYPE_AMBIENT;
 	

@@ -18,7 +18,7 @@ FUNC INT Info_Mod_HofstaatPassantin02_Fluffy_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin02_Fluffy_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin02_Fluffy_16_00"); //Stimmt genau. Ob jemand, der nicht mal einen Hund abrichten kann wirklich einen Staat leiten sollte? Ich weiß nicht ...
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin02_Fluffy_21_00"); //Stimmt genau. Ob jemand, der nicht mal einen Hund abrichten kann wirklich einen Staat leiten sollte? Ich weiß nicht ...
 
 	Mod_SL_PartFluffy = 5;
 
@@ -49,7 +49,7 @@ FUNC INT Info_Mod_HofstaatPassantin02_Lochgraeber_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin02_Lochgraeber_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin02_Lochgraeber_16_00"); //Was ist das für ein Königreich, das sich im internationalen Lochgräbervergleich nicht halten kann!
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin02_Lochgraeber_21_00"); //Was ist das für ein Königreich, das sich im internationalen Lochgräbervergleich nicht halten kann!
 
 	Mod_SL_PartLochgraeber = 4;
 
@@ -80,7 +80,7 @@ FUNC INT Info_Mod_HofstaatPassantin02_Geliebte_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin02_Geliebte_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin02_Geliebte_16_00"); //Was ist das für ein Königreich, das sich im internationalen Lochgräbervergleich nicht halten kann!
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin02_Geliebte_21_00"); //Was ist das für ein Königreich, das sich im internationalen Lochgräbervergleich nicht halten kann!
 
 	Mod_SL_PartGeliebte = 8;
 
@@ -111,7 +111,7 @@ FUNC INT Info_Mod_HofstaatPassantin02_Blind_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin02_Blind_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin02_Blind_16_00"); //Was ist das denn für ein Königreich, ohne Export! Das geht doch gar nicht!
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin02_Blind_21_00"); //Was ist das denn für ein Königreich, ohne Export! Das geht doch gar nicht!
 
 	Mod_SL_PartBlind = 5;
 
@@ -142,7 +142,7 @@ FUNC INT Info_Mod_HofstaatPassantin02_Brunnen_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin02_Brunnen_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin02_Brunnen_16_00"); //Da hast du recht! Was ist denn das für ein König, der in so einer Ruine lebt??
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin02_Brunnen_21_00"); //Da hast du recht! Was ist denn das für ein König, der in so einer Ruine lebt??
 
 	Mod_SL_PartBrunnen = 3;
 
@@ -173,7 +173,7 @@ FUNC INT Info_Mod_HofstaatPassantin02_Geschwaecht_Condition()
 
 FUNC VOID Info_Mod_HofstaatPassantin02_Geschwaecht_Info()
 {
-	AI_Output(self, hero, "Info_Mod_HofstaatPassantin02_Geschwaecht_16_00"); //Ja, du hast recht, ich fühle mich so ... geschwächt ... als wäre meine Motivation unterwandert und so.
+	AI_Output(self, hero, "Info_Mod_HofstaatPassantin02_Geschwaecht_21_00"); //Ja, du hast recht, ich fühle mich so ... geschwächt ... als wäre meine Motivation unterwandert und so.
 
 	Mod_SL_Schwaechen = 4;
 

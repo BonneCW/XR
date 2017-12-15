@@ -35,7 +35,7 @@ FUNC VOID Info_Mod_Hedwig_Hi_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_26_00"); //(resolut) Hoch die Tassen! Äh, hoch die Humpen!
+	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_21_00"); //(resolut) Hoch die Tassen! Äh, hoch die Humpen!
 
 	CreateInvItems	(self, ItFo_Beer, 10);
 
@@ -62,7 +62,7 @@ FUNC VOID Info_Mod_Hedwig_Hi_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_26_04"); //Darum geht's doch! Das ist der Sinn bei der ganzen Sache!
+	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_21_04"); //Darum geht's doch! Das ist der Sinn bei der ganzen Sache!
 
 	TRIA_Next(Irmgard);
 
@@ -76,7 +76,7 @@ FUNC VOID Info_Mod_Hedwig_Hi_Info()
 
 	AI_TurnToNpc	(Hedwig, Salmey);
 
-	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_26_06"); //(betont männlich) He, Salmey, bring noch 'ne Runde!
+	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_21_06"); //(betont männlich) He, Salmey, bring noch 'ne Runde!
 
 	TRIA_Next(Salmey);
 
@@ -97,7 +97,7 @@ FUNC VOID Info_Mod_Hedwig_Hi_Info()
 	B_UseItem	(self, ItFo_Beer);
 
 	AI_Output(hero, self, "Info_Mod_Hedwig_Hi_15_07"); //Darf ich fragen, was das hier für ein Treffen ist?
-	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_26_08"); //Na klar doch. Wir besaufen uns, bis wir beinahe besinnungslos sind, torkeln lautstark nach Hause und kotzen vors Bett.
+	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_21_08"); //Na klar doch. Wir besaufen uns, bis wir beinahe besinnungslos sind, torkeln lautstark nach Hause und kotzen vors Bett.
 
 	TRIA_Next(Irmgard);
 
@@ -105,7 +105,7 @@ FUNC VOID Info_Mod_Hedwig_Hi_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_26_10"); //Oh doch, das wirst du. Das ist dir in dem Moment so was von egal.
+	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_21_10"); //Oh doch, das wirst du. Das ist dir in dem Moment so was von egal.
 
 	TRIA_Next(Irmgard);
 
@@ -113,8 +113,8 @@ FUNC VOID Info_Mod_Hedwig_Hi_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_26_12"); //Du musst es ja auch nicht wegwischen.
-	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_26_13"); //(eindringlich) Du wirst es nicht wegwischen, verstanden? Und du auch, Berta?
+	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_21_12"); //Du musst es ja auch nicht wegwischen.
+	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_21_13"); //(eindringlich) Du wirst es nicht wegwischen, verstanden? Und du auch, Berta?
 
 	TRIA_Next(Berta);
 
@@ -126,7 +126,7 @@ FUNC VOID Info_Mod_Hedwig_Hi_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_26_15"); //(poltert) Zum Donnerwetter, das haben wir doch schon tausend Mal besprochen! Dein Mann macht diesmal den Dreck weg!
+	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_21_15"); //(poltert) Zum Donnerwetter, das haben wir doch schon tausend Mal besprochen! Dein Mann macht diesmal den Dreck weg!
 
 	TRIA_Next(Irmgard);
 
@@ -135,7 +135,7 @@ FUNC VOID Info_Mod_Hedwig_Hi_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_26_18"); //(streitlustig) Wir haben uns nun mal für diese Lösung entschieden.
+	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_21_18"); //(streitlustig) Wir haben uns nun mal für diese Lösung entschieden.
 
 	TRIA_Next(Irmgard);
 
@@ -143,7 +143,7 @@ FUNC VOID Info_Mod_Hedwig_Hi_Info()
 
 	TRIA_Next(Hedwig);
 
-	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_26_20"); //(giftig) Na und? Hast du etwa protestiert?
+	AI_Output(self, hero, "Info_Mod_Hedwig_Hi_21_20"); //(giftig) Na und? Hast du etwa protestiert?
 
 	TRIA_Next(Berta);
 
@@ -179,8 +179,8 @@ FUNC INT Info_Mod_Hedwig_Kneipe_Condition()
 FUNC VOID Info_Mod_Hedwig_Kneipe_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hedwig_Kneipe_15_00"); //Wie lange habt ihr noch vor zu bleiben?
-	AI_Output(self, hero, "Info_Mod_Hedwig_Kneipe_26_01"); //Netter Versuch, aber du kannst Ditmar sagen, dass wir die Stellung halten.
-	AI_Output(self, hero, "Info_Mod_Hedwig_Kneipe_26_02"); //Solange gewisse Herren der Schöpfung nicht zur Einsicht gelangen, ist unser Auftrag nicht beendet.
+	AI_Output(self, hero, "Info_Mod_Hedwig_Kneipe_21_01"); //Netter Versuch, aber du kannst Ditmar sagen, dass wir die Stellung halten.
+	AI_Output(self, hero, "Info_Mod_Hedwig_Kneipe_21_02"); //Solange gewisse Herren der Schöpfung nicht zur Einsicht gelangen, ist unser Auftrag nicht beendet.
 };
 
 INSTANCE Info_Mod_Hedwig_Kneipe2 (C_INFO)
@@ -206,7 +206,7 @@ FUNC INT Info_Mod_Hedwig_Kneipe2_Condition()
 FUNC VOID Info_Mod_Hedwig_Kneipe2_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hedwig_Kneipe2_15_00"); //Wer ist denn überhaupt dein Mann?
-	AI_Output(self, hero, "Info_Mod_Hedwig_Kneipe2_26_01"); //Na, du bist mir ja ein Spaßvogel! Kennst die Frau des Stadthalters nicht!
+	AI_Output(self, hero, "Info_Mod_Hedwig_Kneipe2_21_01"); //Na, du bist mir ja ein Spaßvogel! Kennst die Frau des Stadthalters nicht!
 	AI_Output(hero, self, "Info_Mod_Hedwig_Kneipe2_15_02"); //Oh. Aber wieso hat Anselm dich ... wieso hast du Anselm ... (überlegt) Obwohl ...
 };
 
@@ -233,7 +233,7 @@ FUNC INT Info_Mod_Hedwig_Kneipe3_Condition()
 FUNC VOID Info_Mod_Hedwig_Kneipe3_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hedwig_Kneipe3_15_00"); //Wieso redest du nicht einfach mit Anselm?
-	AI_Output(self, hero, "Info_Mod_Hedwig_Kneipe3_26_01"); //Das bringt nichts. Der soll jetzt mal am eigenen Leib spüren, wie es ist, nicht den ganzen Tag bemuttert zu werden.
+	AI_Output(self, hero, "Info_Mod_Hedwig_Kneipe3_21_01"); //Das bringt nichts. Der soll jetzt mal am eigenen Leib spüren, wie es ist, nicht den ganzen Tag bemuttert zu werden.
 };
 
 INSTANCE Info_Mod_Hedwig_Pickpocket (C_INFO)
@@ -369,7 +369,7 @@ FUNC INT Info_Mod_Hedwig_EXIT_Condition()
 
 FUNC VOID Info_Mod_Hedwig_EXIT_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Hedwig_EXIT_26_00"); //Wir sehen uns ... hoffentlich.
+	AI_Output(self, hero, "Info_Mod_Hedwig_EXIT_21_00"); //Wir sehen uns ... hoffentlich.
 
 	AI_StopProcessInfos	(self);
 };

@@ -752,7 +752,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 				AI_TurnToNpc	(Mod_520_DMR_Raven_MT, hero);
 				AI_TurnToNpc	(hero, Mod_520_DMR_Raven_MT);
 
-				AI_Output(Mod_520_DMR_Raven_MT, NULL, "Info_Mod_BS_Rede_10_00"); //Gut, dass du da bist. Ich muss dir noch etwas Dringendes mitteilen.
+				AI_Output(Mod_520_DMR_Raven_MT, NULL, "Info_Mod_BS_Rede_03_00"); //Gut, dass du da bist. Ich muss dir noch etwas Dringendes mitteilen.
 			};
 
 			if (Talkessel_Counter == 5)
@@ -762,7 +762,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 			if (Talkessel_Counter == 10)
 			{
-				AI_Output(Mod_520_DMR_Raven_MT, NULL, "Info_Mod_BS_Rede_10_02"); //Die Untoten werden von einem der sechs Gardisten Innos' angeführt. Diesen musst du besiegen.
+				AI_Output(Mod_520_DMR_Raven_MT, NULL, "Info_Mod_BS_Rede_03_02"); //Die Untoten werden von einem der sechs Gardisten Innos' angeführt. Diesen musst du besiegen.
 			};
 
 			if (Talkessel_Counter == 15)
@@ -772,7 +772,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 			if (Talkessel_Counter == 20)
 			{
-				AI_Output(Mod_520_DMR_Raven_MT, NULL, "Info_Mod_BS_Rede_10_04"); //Sei vorsichtig, die Garde Innos' ist sehr stark.
+				AI_Output(Mod_520_DMR_Raven_MT, NULL, "Info_Mod_BS_Rede_03_04"); //Sei vorsichtig, die Garde Innos' ist sehr stark.
 			};
 
 			if (Talkessel_Counter == 25)
@@ -808,7 +808,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 				AI_TurnToNpc	(Mod_520_DMR_Raven_MT, Mod_517_DMR_Gomez_MT);
 				AI_TurnToNpc	(hero, Mod_520_DMR_Raven_MT);
 
-				AI_Output(Mod_520_DMR_Raven_MT, NULL, "Info_Mod_BS_Rede_10_10"); //Der Zeitpunkt des Angriffes ist nun gekommen. Attacke!
+				AI_Output(Mod_520_DMR_Raven_MT, NULL, "Info_Mod_BS_Rede_03_10"); //Der Zeitpunkt des Angriffes ist nun gekommen. Attacke!
 			};
 
 			if (Talkessel_Counter == 55)

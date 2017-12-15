@@ -20,15 +20,15 @@ FUNC INT Info_Mod_Raven_Irdorath_Condition()
 FUNC VOID Info_Mod_Raven_Irdorath_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_Irdorath_15_00"); //Ich muss mit dem Schiff im Hafen zu einer Insel aufbrechen.
-	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_10_01"); //Und?
+	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_03_01"); //Und?
 	AI_Output(hero, self, "Info_Mod_Raven_Irdorath_15_02"); //Würdest du in meine Mannschaft kommen?
-	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_10_03"); //Was?! Warum sollte ich das bitte machen?!
-	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_10_04"); //Auf ein Schiff der Paladine und mir dann die ganze Seereise über die Seele aus dem Leib kotzen?!
-	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_10_05"); //Keine 10 Trolle kriegen mich da rauf.
-	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_10_06"); //Wie kommst du überhaupt auf den absurden Gedanken, ich könne mitkommen?
+	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_03_03"); //Was?! Warum sollte ich das bitte machen?!
+	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_03_04"); //Auf ein Schiff der Paladine und mir dann die ganze Seereise über die Seele aus dem Leib kotzen?!
+	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_03_05"); //Keine 10 Trolle kriegen mich da rauf.
+	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_03_06"); //Wie kommst du überhaupt auf den absurden Gedanken, ich könne mitkommen?
 	AI_Output(hero, self, "Info_Mod_Raven_Irdorath_15_07"); //Tja, ähh, also Xardas meinte ...
-	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_10_08"); //Was?! (halblaut) Verdammt, eine Anweisung von Xardas.
-	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_10_09"); //(widerwillig zum Helden) Also gut, wir sehen uns dann am Hafen.
+	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_03_08"); //Was?! (halblaut) Verdammt, eine Anweisung von Xardas.
+	AI_Output(self, hero, "Info_Mod_Raven_Irdorath_03_09"); //(widerwillig zum Helden) Also gut, wir sehen uns dann am Hafen.
 	AI_Output(hero, self, "Info_Mod_Raven_Irdorath_15_10"); //Na, das war ein schneller Stimmungswandel.
 
 	B_LogEntry	(TOPIC_MOD_HQ_CREW, "Trotz gewissem Widerstreben konnte ich Raven für die Reise 'gewinnen'.");
@@ -71,8 +71,8 @@ FUNC INT Info_Mod_Raven_Irdorath3_Condition()
 FUNC VOID Info_Mod_Raven_Irdorath3_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Raven_Irdorath3_15_00"); //Tut mir leid, aber es scheint, dass wir zu viele sind. Ich kann dich doch nicht mitnehmen.
-	AI_Output(self, hero, "Info_Mod_Raven_Irdorath3_10_01"); //Was?! Na dann nichts wie weg hier ...
-	AI_Output(self, hero, "Info_Mod_Raven_Irdorath3_10_02"); //(halblaut) Nicht, dass er es sich noch anders überlegt.
+	AI_Output(self, hero, "Info_Mod_Raven_Irdorath3_03_01"); //Was?! Na dann nichts wie weg hier ...
+	AI_Output(self, hero, "Info_Mod_Raven_Irdorath3_03_02"); //(halblaut) Nicht, dass er es sich noch anders überlegt.
 
 	Mod_RavenDabei = 0;
 

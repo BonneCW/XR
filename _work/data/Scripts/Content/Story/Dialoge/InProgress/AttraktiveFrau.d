@@ -15,8 +15,8 @@ FUNC INT Info_Mod_AttraktiveFrau_Hi_Condition()
 
 FUNC VOID Info_Mod_AttraktiveFrau_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_17_00"); //(verführerisch) Hallo, mein Schöner. Was macht ein prächtiger Kerl wie du ohne weibliche Begleitung in dieser Spelunke?
-	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_17_01"); //Willst du mir nicht etwas Gesellschaft leisten?
+	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_21_00"); //(verführerisch) Hallo, mein Schöner. Was macht ein prächtiger Kerl wie du ohne weibliche Begleitung in dieser Spelunke?
+	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_21_01"); //Willst du mir nicht etwas Gesellschaft leisten?
 
 	Info_ClearChoices	(Info_Mod_AttraktiveFrau_Hi);
 
@@ -26,8 +26,8 @@ FUNC VOID Info_Mod_AttraktiveFrau_Hi_Info()
 
 FUNC VOID Info_Mod_AttraktiveFrau_Hi_C()
 {
-	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_C_17_00"); //(verführerisch) Ich spüre, dass dich eine ganz besondere Aura umgibt.
-	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_C_17_01"); //(nachdenklich, sachlicher) Du bist kein gewöhnlicher Mann ... (hält kurz inne, wieder verführerisch) Wollen wir nicht aufs Zimmer gehen und uns etwas näher kennen lernen?
+	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_C_21_00"); //(verführerisch) Ich spüre, dass dich eine ganz besondere Aura umgibt.
+	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_C_21_01"); //(nachdenklich, sachlicher) Du bist kein gewöhnlicher Mann ... (hält kurz inne, wieder verführerisch) Wollen wir nicht aufs Zimmer gehen und uns etwas näher kennen lernen?
 	
 	Info_ClearChoices	(Info_Mod_AttraktiveFrau_Hi);
 
@@ -52,7 +52,7 @@ FUNC VOID Info_Mod_AttraktiveFrau_Hi_F()
 FUNC VOID Info_Mod_AttraktiveFrau_Hi_B()
 {
 	AI_Output(hero, self, "Info_Mod_AttraktiveFrau_Hi_B_15_00"); //Nein, ich habe zu tun und muss weiter.
-	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_B_17_01"); //Aber, aber, es gehört sich nicht, einer Frau so einen Gefallen abzuschlagen.
+	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_B_21_01"); //Aber, aber, es gehört sich nicht, einer Frau so einen Gefallen abzuschlagen.
 	
 	Info_Mod_AttraktiveFrau_Hi_C();
 };
@@ -67,7 +67,7 @@ FUNC VOID Info_Mod_AttraktiveFrau_Hi_A()
 FUNC VOID Info_Mod_AttraktiveFrau_Hi_E()
 {
 	AI_Output(hero, self, "Info_Mod_AttraktiveFrau_Hi_E_15_00"); //Nein, ich muss jetzt wirklich weiter.
-	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_E_17_01"); //(lächelnd) Ich höre doch an deiner Stimme, dass du nur mit mir spielst. Kommst du jetzt endlich?
+	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_E_21_01"); //(lächelnd) Ich höre doch an deiner Stimme, dass du nur mit mir spielst. Kommst du jetzt endlich?
 
 	Mod_AttraktiveFrau = 1;
 	
@@ -77,7 +77,7 @@ FUNC VOID Info_Mod_AttraktiveFrau_Hi_E()
 FUNC VOID Info_Mod_AttraktiveFrau_Hi_D()
 {
 	AI_Output(hero, self, "Info_Mod_AttraktiveFrau_Hi_D_15_00"); //Warum nicht, gehen wir.
-	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_D_17_01"); //Dann folge mir einfach.
+	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Hi_D_21_01"); //Dann folge mir einfach.
 
 	Mod_AttraktiveFrau = 2;
 	
@@ -105,7 +105,7 @@ FUNC INT Info_Mod_AttraktiveFrau_Sex_Condition()
 
 FUNC VOID Info_Mod_AttraktiveFrau_Sex_Info()
 {
-	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Sex_17_00"); //So, und nun entkleide dich. Es wird eine unvergessliche Nacht für dich werden.
+	AI_Output(self, hero, "Info_Mod_AttraktiveFrau_Sex_21_00"); //So, und nun entkleide dich. Es wird eine unvergessliche Nacht für dich werden.
 
 	Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);
 
