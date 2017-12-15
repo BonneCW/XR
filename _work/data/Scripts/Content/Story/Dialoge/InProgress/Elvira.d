@@ -386,6 +386,8 @@ FUNC VOID Info_Mod_Elvira_DiebeKey2_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "BUSSE");
+	
+	Spine_OverallSaveSetInt("ElviraSex", 1);
 };
 
 INSTANCE Info_Mod_Elvira_DickeLuft (C_INFO)

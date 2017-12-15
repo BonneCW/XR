@@ -284,7 +284,7 @@ FUNC VOID Info_Mod_VLK_21_Pickpocket_Herausreden()
 // *************************************************************************
 // -------------------------------------------------------------------------
 
-FUNC VOID B_AssignAmbientInfos_VLK_17 (var c_NPC slf)
+FUNC VOID B_AssignAmbientInfos_VLK_21 (var c_NPC slf)
 {
 	DIA_VLK_21_EXIT.npc					= Hlp_GetInstanceID(slf);
 	DIA_VLK_21_JOIN.npc					= Hlp_GetInstanceID(slf);

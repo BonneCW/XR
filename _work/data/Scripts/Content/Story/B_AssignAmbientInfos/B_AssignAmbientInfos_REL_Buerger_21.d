@@ -199,7 +199,7 @@ FUNC VOID Info_Mod_REL_Buerger_21_Pickpocket_Herausreden()
 // *************************************************************************
 // -------------------------------------------------------------------------
 
-FUNC VOID B_AssignAmbientInfos_REL_Buerger_17 (var c_NPC slf)
+FUNC VOID B_AssignAmbientInfos_REL_Buerger_21 (var c_NPC slf)
 {
 	DIA_REL_Buerger_21_EXIT.npc					= Hlp_GetInstanceID(slf);
 	Info_REL_Buerger_21_Rundschreiben.npc				= Hlp_GetInstanceID(slf);

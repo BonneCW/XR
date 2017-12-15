@@ -31,6 +31,8 @@ FUNC VOID Info_Mod_HofstaatGeliebte_Spezialtrunken_Info()
 	Mod_SL_PartGeliebte = 5;
 
 	AI_StopProcessInfos	(self);
+	
+	Spine_OverallSaveSetInt("GeliebteSex", 1);
 };
 
 INSTANCE Info_Mod_HofstaatGeliebte_Pickpocket (C_INFO)

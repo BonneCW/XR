@@ -240,7 +240,7 @@ func void B_Say_Smalltalk()
 			{
 				B_Say		(self, self, "$SMALLTALKRANGAR01");
 			}
-			else if (Npc_KnowsInfo(hero, Info_VLK_17_Rangar))
+			else if (Npc_KnowsInfo(hero, Info_VLK_21_Rangar))
 			|| (Npc_KnowsInfo(hero, Info_VLK_6_Rangar))
 			{
 				B_Say		(self, self, "$SMALLTALKRANGAR02");

@@ -191,7 +191,7 @@ FUNC INT Info_VLK_8_Rangar_Condition()
 	&& (!Npc_KnowsInfo(hero, Info_VLK_19_Rangar))
 	&& (!Npc_KnowsInfo(hero, Info_VLK_6_Rangar))
 	&& (!Npc_KnowsInfo(hero, Info_VLK_16_Rangar))
-	&& (!Npc_KnowsInfo(hero, Info_VLK_17_Rangar))
+	&& (!Npc_KnowsInfo(hero, Info_VLK_21_Rangar))
 	&& (Mod_DenVerpfiffen == 0)
 	&& (!Npc_KnowsInfo(hero, Info_Mod_Andre_Rangar))
 	{

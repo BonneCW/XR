@@ -5,7 +5,7 @@ FUNC VOID CheckHalluAchievement() {
 };
 
 FUNC VOID CheckSexAchievement() {
-	if (Spine_OverallSaveGetInt("JudithSex") == 1 && Spine_OverallSaveGetInt("HexeSex") == 1 && Spine_OverallSaveGetInt("SonjaSex") == 1) {
+	if (Spine_OverallSaveGetInt("JudithSex") == 1 && Spine_OverallSaveGetInt("HexeSex") == 1 && Spine_OverallSaveGetInt("SonjaSex") == 1 && Spine_OverallSaveGetInt("GeliebteSex") == 1 && Spine_OverallSaveGetInt("ElviraSex") == 1) {
 		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_38);
 	};
 };
