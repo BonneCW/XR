@@ -10,6 +10,9 @@ INSTANCE Spell_EnergyBall (C_Spell_Proto)
 	time_per_mana			= 0;
 	damage_per_level		= SPL_Damage_EnergyBall;
 	damageType				= DAM_MAGIC;	
+	targetCollectAlgo		= TARGET_COLLECT_FOCUS_FALLBACK_NONE;
+	canTurnDuringInvest     = TRUE;
+	canChangeTargetDuringInvest      = TRUE;
 };
 
 func int Spell_Logic_EnergyBall (var int manaInvested) //Parameter wird hier nicht gebraucht

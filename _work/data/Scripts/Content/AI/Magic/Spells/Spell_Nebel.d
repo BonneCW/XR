@@ -10,6 +10,7 @@ INSTANCE Spell_Nebel (C_Spell_Proto)
 	time_per_mana			= 0;
 	spelltype = SPELL_NEUTRAL;
 	targetCollectAlgo		= TARGET_COLLECT_NONE;
+	canTurnDuringInvest     = TRUE;
 };
 
 func int Spell_Logic_Nebel(var int manaInvested)

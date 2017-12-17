@@ -9,6 +9,8 @@ INSTANCE Spell_PalHolyBolt (C_Spell_Proto)
 {
 	time_per_mana			= 0;			//Spell wirkt Instant
 	damage_per_level 		= SPL_Damage_PalHolyBolt; //+
+	canTurnDuringInvest     = TRUE;
+	canChangeTargetDuringInvest      = TRUE;
 };
 
 func int Spell_Logic_PalHolyBolt (var int manaInvested)

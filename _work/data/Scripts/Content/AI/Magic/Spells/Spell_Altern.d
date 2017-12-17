@@ -4,7 +4,6 @@ INSTANCE Spell_Altern (C_Spell_Proto)
 {
 	time_per_mana	=	0;
 	spelltype	=	SPELL_NEUTRAL;
-	targetCollectAlgo	=	TARGET_COLLECT_FOCUS;
 	targetCollectRange	=	2000;
 };
 

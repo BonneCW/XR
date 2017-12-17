@@ -10,8 +10,9 @@ INSTANCE Spell_Engel (C_Spell_Proto)
 {
 	time_per_mana			= 0;
 	damage_per_level		= 0;							
-	damageType				= DAM_MAGIC;										
+	damageType				= DAM_MAGIC;			
 	targetCollectAlgo		= TARGET_COLLECT_NONE;
+	canTurnDuringInvest     = TRUE;
 };
 
 func int Spell_Logic_Engel	(var int manaInvested)

@@ -11,7 +11,9 @@ INSTANCE Spell_ModifiedZap  (C_Spell_Proto)
 	time_per_mana			= 0;
 	damage_per_level		= SPL_Damage_ModifiedZap; 							
 	damageType				= DAM_MAGIC;										
-	targetCollectAlgo		= TARGET_COLLECT_NONE;
+	targetCollectAlgo		= TARGET_COLLECT_FOCUS_FALLBACK_NONE;
+	canTurnDuringInvest     = TRUE;
+	canChangeTargetDuringInvest      = TRUE;
 };
 
 func int Spell_Logic_ModifiedZap	(var int manaInvested)

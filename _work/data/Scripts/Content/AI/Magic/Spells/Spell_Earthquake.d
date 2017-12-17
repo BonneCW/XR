@@ -12,6 +12,8 @@ INSTANCE Spell_EarthquakeNew(C_Spell_Proto)
 	damage_per_level		= SPL_Damage_EarthquakeNew;
 	damageType				= DAM_BLUNT;		
 	targetCollectRange		= 1000;
+	targetCollectAlgo		= TARGET_COLLECT_NONE;
+	canTurnDuringInvest     = TRUE;
 };
 
 func int Spell_Logic_EarthquakeNew(var int manaInvested)

@@ -10,7 +10,8 @@ instance Spell_Poison (C_Spell_Proto)
 {
 	time_per_mana			= 0;					//Wert wird nicht gebraucht - Spell wirkt INSTANT
 	spelltype 				= SPELL_NEUTRAL;
-	targetCollectAlgo		= TARGET_COLLECT_FOCUS;
+	canTurnDuringInvest     = TRUE;
+	canChangeTargetDuringInvest      = TRUE;
 };
 
 func int Spell_Logic_Poison (var int manaInvested) //Parameter manaInvested wird hier nicht benutzt

@@ -16,6 +16,7 @@ INSTANCE Spell_Pyrokinesis (C_Spell_Proto)
 	damage_per_level		= SPL_Damage_FireStorm;	
 	damageType				= DAM_Magic;				
 	canTurnDuringInvest     = TRUE;
+	canChangeTargetDuringInvest      = TRUE;
 };
 
 func int Spell_Logic_Pyrokinesis (var int manaInvested)

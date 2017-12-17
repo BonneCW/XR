@@ -11,6 +11,8 @@ instance Spell_Eisklinge (C_Spell_Proto)
 	time_per_mana			= 0;					//Wert wird nicht gebraucht - Spell wirkt INSTANT
 	spelltype 				= SPELL_NEUTRAL;
 	targetCollectAlgo		= TARGET_COLLECT_CASTER;
+	targetCollectAlgo		= TARGET_COLLECT_NONE;
+	canTurnDuringInvest     = TRUE;
 };
 
 func int Spell_Logic_Eisklinge (var int manaInvested) //Parameter manaInvested wird hier nicht benutzt

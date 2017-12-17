@@ -10,6 +10,8 @@ INSTANCE Spell_PalDestroyEvil (C_Spell_Proto)
 	time_per_mana			= 0;
 	damage_per_level 		= SPL_DAMAGE_PalDestroyEvil;
 	spelltype				= SPELL_NEUTRAL;
+	canTurnDuringInvest     = TRUE;
+	canChangeTargetDuringInvest      = TRUE;
 };
 
 func int Spell_Logic_PalDestroyEvil	(var int manaInvested)

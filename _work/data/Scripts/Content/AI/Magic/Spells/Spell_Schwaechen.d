@@ -4,7 +4,8 @@ INSTANCE Spell_Schwaechen (C_Spell_Proto)
 {
 	time_per_mana	=	0;
 	spelltype	=	SPELL_NEUTRAL;
-	targetCollectAlgo	=	TARGET_COLLECT_FOCUS;
+	canTurnDuringInvest     = TRUE;
+	canChangeTargetDuringInvest      = TRUE;
 	targetCollectRange	=	2000;
 };
 
