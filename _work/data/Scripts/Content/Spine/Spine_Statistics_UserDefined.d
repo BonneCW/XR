@@ -334,5 +334,5 @@ func void Spine_UpdateChapterStatistics(var C_NPC player, var int chapter) {
 	// Gold
 	Spine_UpdateStatistic(chapter, Mod_Gilde, "Gold", Npc_HasItems(player, ItMi_Gold));
 	// Inventory Value
-	Spine_UpdateStatistic(chapter, Mod_Gilde, "InventoryValue", HeroInventarWert());
+	//Spine_UpdateStatistic(chapter, Mod_Gilde, "InventoryValue", HeroInventarWert());
 };
