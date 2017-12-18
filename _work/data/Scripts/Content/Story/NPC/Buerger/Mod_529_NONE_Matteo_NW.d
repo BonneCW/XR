@@ -4,7 +4,7 @@ INSTANCE Mod_529_NONE_Matteo_NW (Npc_Default)
 	name 		= "Matteo";
 	guild 		= GIL_PAL;
 	id 			= 529;
-	voice 		= 36;
+	voice 		= 23;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

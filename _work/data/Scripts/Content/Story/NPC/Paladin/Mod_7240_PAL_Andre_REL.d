@@ -4,7 +4,7 @@ INSTANCE Mod_7240_PAL_Andre_REL (Npc_Default)
 	name 		= "Lord Andre";	
 	guild 		= GIL_DMT;
 	id 			= 7240;
-	voice		= 0;
+	voice		= 40;
 	flags       = NPC_FLAG_IMMORTAL;	//Joly: NPC_FLAG_IMMORTAL																	
 	npctype		= NPCTYPE_MAIN;
 	

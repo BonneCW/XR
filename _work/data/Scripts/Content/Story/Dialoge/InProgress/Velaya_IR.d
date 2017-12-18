@@ -15,10 +15,10 @@ FUNC INT Info_Mod_Velaya_IR_Hi_Condition()
 
 FUNC VOID Info_Mod_Velaya_IR_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Velaya_IR_Hi_17_00"); //(unzufrieden) Ach, so hatte ich mir die große weite Welt aber nicht vorgestellt.
-	AI_Output(self, hero, "Info_Mod_Velaya_IR_Hi_17_01"); //Erinnert mich entfernt an die kalten, feuchten Mauern in welche ich so lange gefangen war.
+	AI_Output(self, hero, "Info_Mod_Velaya_IR_Hi_39_00"); //(unzufrieden) Ach, so hatte ich mir die große weite Welt aber nicht vorgestellt.
+	AI_Output(self, hero, "Info_Mod_Velaya_IR_Hi_39_01"); //Erinnert mich entfernt an die kalten, feuchten Mauern in welche ich so lange gefangen war.
 	AI_Output(hero, self, "Info_Mod_Velaya_IR_Hi_15_02"); //Naja, wir wollen hier auch nicht allzu lange unsere Zelte aufschlagen.
-	AI_Output(self, hero, "Info_Mod_Velaya_IR_Hi_17_03"); //Ja, machen wir das, wofür wir hierher gekommen sind und dann nichts wie unter den freien Himmel so schnell es geht.
+	AI_Output(self, hero, "Info_Mod_Velaya_IR_Hi_39_03"); //Ja, machen wir das, wofür wir hierher gekommen sind und dann nichts wie unter den freien Himmel so schnell es geht.
 };
 
 INSTANCE Info_Mod_Velaya_IR_Hebel (C_INFO)
@@ -46,7 +46,7 @@ FUNC VOID Info_Mod_Velaya_IR_Hebel_Info()
 {
 	B_Say	(hero, self, "$IRDORATHHEBEL");
 
-	AI_Output(self, hero, "Info_Mod_Velaya_IR_Hebel_17_00"); //Natürlich. Wenn wir dadurch vielleicht weiterkommen ...
+	AI_Output(self, hero, "Info_Mod_Velaya_IR_Hebel_39_00"); //Natürlich. Wenn wir dadurch vielleicht weiterkommen ...
 
 	Mod_IR_Hebel = 1;
 
@@ -75,7 +75,7 @@ FUNC INT Info_Mod_Velaya_IR_Ambient01_Condition()
 
 FUNC VOID Info_Mod_Velaya_IR_Ambient01_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Velaya_IR_Ambient01_17_00"); //Nein, langweilig wird einem bei so vielen scheußlichen Viechern wirklich nicht.
+	AI_Output(self, hero, "Info_Mod_Velaya_IR_Ambient01_39_00"); //Nein, langweilig wird einem bei so vielen scheußlichen Viechern wirklich nicht.
 
 	AI_StopProcessInfos	(self);
 };
@@ -107,7 +107,7 @@ FUNC VOID Info_Mod_Velaya_IR_GehtLos_Info()
 {
 	B_Say	(hero, self, "$IRDORATHGEHTLOS");
 
-	AI_Output(self, hero, "Info_Mod_Velaya_IR_GehtLos_17_00"); //Naja, besser als mich hier an Bord zu langweilen ... sonst wäre die Reise ja umsonst gewesen.
+	AI_Output(self, hero, "Info_Mod_Velaya_IR_GehtLos_39_00"); //Naja, besser als mich hier an Bord zu langweilen ... sonst wäre die Reise ja umsonst gewesen.
 
 	Mod_IR_Dabei += 1;
 
@@ -143,7 +143,7 @@ FUNC VOID Info_Mod_Velaya_IR_GehBack_Info()
 {
 	B_Say	(hero, self, "$IRDORATHGEHBACK");
 
-	AI_Output(self, hero, "Info_Mod_Velaya_IR_GehBack_17_00"); //Gut, wenn du mich brauchst, weißt du ja, wo du mich findest.
+	AI_Output(self, hero, "Info_Mod_Velaya_IR_GehBack_39_00"); //Gut, wenn du mich brauchst, weißt du ja, wo du mich findest.
 
 	Mod_IR_Dabei -= 1;
 
@@ -178,8 +178,8 @@ FUNC VOID Info_Mod_Velaya_IR_Lehrer_Info()
 {
 	B_Say	(hero, self, "$KANNSTDUMIRWASBEIBRINGEN");
 
-	AI_Output(self, hero, "Info_Mod_Velaya_IR_Lehrer_17_01"); //Klar, ich trage den Bogen nicht zum Spaß um meine Schulter und den Degen an der Seite.
-	AI_Output(self, hero, "Info_Mod_Velaya_IR_Lehrer_17_02"); //Ich kann dir zeigen, wie du geschickter wirst und den Bogen richtig spannst.
+	AI_Output(self, hero, "Info_Mod_Velaya_IR_Lehrer_39_01"); //Klar, ich trage den Bogen nicht zum Spaß um meine Schulter und den Degen an der Seite.
+	AI_Output(self, hero, "Info_Mod_Velaya_IR_Lehrer_39_02"); //Ich kann dir zeigen, wie du geschickter wirst und den Bogen richtig spannst.
 };
 
 INSTANCE Info_Mod_Velaya_IR_Lernen_Bogen (C_INFO)

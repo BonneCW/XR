@@ -24,7 +24,7 @@ FUNC VOID Info_Mod_Velaya_Hi_Info()
 
 	B_GiveInvItems	(hero, self, ItAr_WomanCape, 1);
 
-	AI_Output(self, hero, "Info_Mod_Velaya_Hi_17_01"); //Endlich hier weg? Nichts lieber als das.
+	AI_Output(self, hero, "Info_Mod_Velaya_Hi_39_01"); //Endlich hier weg? Nichts lieber als das.
 
 	AI_EquipArmor	(self, ItAr_WomanCape);
 
@@ -62,7 +62,7 @@ FUNC VOID Info_Mod_Velaya_AusLager_Info()
 
 	Npc_RemoveInvItems	(self, ItAr_WomanCape, 1);
 
-	AI_Output(self, hero, "Info_Mod_Velaya_AusLager_17_00"); //(überglücklich) Endlich diesem verfluchten Lager entkommen, juchu, jippieh. Und jetzt dieses Tal verlassen.
+	AI_Output(self, hero, "Info_Mod_Velaya_AusLager_39_00"); //(überglücklich) Endlich diesem verfluchten Lager entkommen, juchu, jippieh. Und jetzt dieses Tal verlassen.
 	
 	Info_ClearChoices	(Info_Mod_Velaya_AusLager);
 
@@ -73,7 +73,7 @@ FUNC VOID Info_Mod_Velaya_AusLager_Info()
 FUNC VOID Info_Mod_Velaya_AusLager_B()
 {
 	AI_Output(hero, self, "Info_Mod_Velaya_AusLager_B_15_00"); //Selbstverständlich, gehen wir.
-	AI_Output(self, hero, "Info_Mod_Velaya_AusLager_B_17_01"); //Na dann los. Bleib aber in meiner Nähe.
+	AI_Output(self, hero, "Info_Mod_Velaya_AusLager_B_39_01"); //Na dann los. Bleib aber in meiner Nähe.
 
 	Info_ClearChoices	(Info_Mod_Velaya_AusLager);
 
@@ -87,7 +87,7 @@ FUNC VOID Info_Mod_Velaya_AusLager_B()
 FUNC VOID Info_Mod_Velaya_AusLager_A()
 {
 	AI_Output(hero, self, "Info_Mod_Velaya_AusLager_A_15_00"); //Nein, jetzt gehen wir ins Neue Lager.
-	AI_Output(self, hero, "Info_Mod_Velaya_AusLager_A_17_01"); //Was?! Auf keinen Fall.
+	AI_Output(self, hero, "Info_Mod_Velaya_AusLager_A_39_01"); //Was?! Auf keinen Fall.
 
 	Info_ClearChoices	(Info_Mod_Velaya_AusLager);
 
@@ -120,7 +120,7 @@ FUNC INT Info_Mod_Velaya_Umgehauen_Condition()
 
 FUNC VOID Info_Mod_Velaya_Umgehauen_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Velaya_Umgehauen_17_00"); //Du Schuft ...
+	AI_Output(self, hero, "Info_Mod_Velaya_Umgehauen_39_00"); //Du Schuft ...
 	AI_Output(hero, self, "Info_Mod_Velaya_Umgehauen_15_01"); //Na, immer noch bockig. Los, du folgst mir jetzt.
 
 	Mod_SLD_Velaya = 3;
@@ -168,7 +168,7 @@ FUNC VOID Info_Mod_Velaya_Unterwegs_Info()
 FUNC VOID Info_Mod_Velaya_Unterwegs_B()
 {
 	AI_Output(hero, self, "Info_Mod_Velaya_Unterwegs_B_15_00"); //Ich habe es mir anders überlegt. Wir gehen ins neue Lager.
-	AI_Output(self, hero, "Info_Mod_Velaya_Unterwegs_B_17_01"); //Niemals!
+	AI_Output(self, hero, "Info_Mod_Velaya_Unterwegs_B_39_01"); //Niemals!
 
 	Info_ClearChoices	(Info_Mod_Velaya_Unterwegs);
 
@@ -209,10 +209,10 @@ FUNC INT Info_Mod_Velaya_AtPass_Condition()
 
 FUNC VOID Info_Mod_Velaya_AtPass_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Velaya_AtPass_17_00"); //Ab hier schaffe ich es dann allein. Wie kann ich dir nur danken ... Aber halt, da fällt mir doch was ein.
-	AI_Output(self, hero, "Info_Mod_Velaya_AtPass_17_01"); //Seitdem irgendjemand alle Truhen im Haus der Erzbarone leer geräumt hat, wurden die Schätze und Reichtümer an verschiedenen geheimen Stellen im Haus deponiert.
-	AI_Output(self, hero, "Info_Mod_Velaya_AtPass_17_02"); //Eine davon – so habe ich einmal beobachtet – ist im Kamin von Bartholos Zimmer. Unterhalb der Asche ist ein kleines Versteck. Da solltest du fündig werden.
-	AI_Output(self, hero, "Info_Mod_Velaya_AtPass_17_03"); //Aber lass dich nicht erwischen. Und pass auf dich auf.
+	AI_Output(self, hero, "Info_Mod_Velaya_AtPass_39_00"); //Ab hier schaffe ich es dann allein. Wie kann ich dir nur danken ... Aber halt, da fällt mir doch was ein.
+	AI_Output(self, hero, "Info_Mod_Velaya_AtPass_39_01"); //Seitdem irgendjemand alle Truhen im Haus der Erzbarone leer geräumt hat, wurden die Schätze und Reichtümer an verschiedenen geheimen Stellen im Haus deponiert.
+	AI_Output(self, hero, "Info_Mod_Velaya_AtPass_39_02"); //Eine davon – so habe ich einmal beobachtet – ist im Kamin von Bartholos Zimmer. Unterhalb der Asche ist ein kleines Versteck. Da solltest du fündig werden.
+	AI_Output(self, hero, "Info_Mod_Velaya_AtPass_39_03"); //Aber lass dich nicht erwischen. Und pass auf dich auf.
 
 	B_GivePlayerXP	(450);
 

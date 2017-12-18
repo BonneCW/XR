@@ -4,7 +4,7 @@ INSTANCE Mod_6004_PAL_Andre_GDG (Npc_Default)
 	name 		= "Lord Andre";	
 	guild 		= GIL_OUT;
 	id 			= 6004;
-	voice		= 0;
+	voice		= 40;
 	flags       = NPC_FLAG_IMMORTAL;	//Joly: NPC_FLAG_IMMORTAL																	
 	npctype		= NPCTYPE_MAIN;
 	

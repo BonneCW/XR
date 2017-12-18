@@ -914,7 +914,7 @@ FUNC VOID GILDENSTORY_PAL()
 		{
 			AI_TurnToNpc	(Mod_7240_PAL_Andre_REL, hero);
 
-			AI_Output(Mod_7240_PAL_Andre_REL, NULL, "Info_Mod_Andre_REL_Sorry_08_00"); //Tut mir leid, Junge, das mit dem Ausgang hat nicht wirklich funktioniert.
+			AI_Output(Mod_7240_PAL_Andre_REL, NULL, "Info_Mod_Andre_REL_Sorry_40_00"); //Tut mir leid, Junge, das mit dem Ausgang hat nicht wirklich funktioniert.
 
 			Mod_PAL_HeroBot = 9;
 		};

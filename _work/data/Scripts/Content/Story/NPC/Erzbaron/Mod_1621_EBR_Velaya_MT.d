@@ -6,7 +6,7 @@ instance Mod_1621_EBR_Velaya_MT (Npc_Default)
 	npctype		= 	npctype_main;
 	guild 		=	GIL_OUT;
 	level 		=	1;
-	voice		= 17;
+	voice		= 39;
 	id 			=	1621;
 	flags      	=   0; // wichtig, weil man sie nicht finishen kann!
 
