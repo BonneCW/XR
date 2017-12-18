@@ -43,7 +43,7 @@ instance MENUITEM_MAIN_NEWGAME(C_MENU_ITEM_DEF)
 	dimx		= 8100;		dimy		=  750;
 	// Aktionen
 	onSelAction[0]	= SEL_ACTION_STARTMENU;
-	onSelAction_S[0]= "MENU_REALLY_NEWGAME";
+	onSelAction_S[0]= "MENU_NEWGAME";
 	// Weitere Eigenschaften
 	flags			= flags | IT_TXT_CENTER;
 };

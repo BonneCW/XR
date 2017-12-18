@@ -26,6 +26,7 @@ menu\menu_opt_ext.d
 menu\menu_opt_XR.d
 menu\menu_opt_XR2.d
 menu\menu_misc.d
+menu\menu_newgame.d
 menu\menu_savegame.d
 
 // Log-Screen
