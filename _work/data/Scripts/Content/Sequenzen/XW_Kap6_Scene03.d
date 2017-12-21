@@ -119,7 +119,7 @@ FUNC VOID XW_Kap6_Scene03()
 
 	if (Mod_XW_Kap6_Scene03_Counter == 54)
 	{
-		AI_Output(Mod_7765_SLD_Gorn_XW, NULL, "Info_Mod_Hero_XW_Kap6_Scene03_12_06"); //Ich hätte Lust, mir auf den Rängen etwas Luft zu verschaffen.
+		AI_Output(Mod_7765_SLD_Gorn_XW, NULL, "Info_Mod_Hero_XW_Kap6_Scene03_03_06"); //Ich hätte Lust, mir auf den Rängen etwas Luft zu verschaffen.
 	};
 
 	if (Mod_XW_Kap6_Scene03_Counter == 60)

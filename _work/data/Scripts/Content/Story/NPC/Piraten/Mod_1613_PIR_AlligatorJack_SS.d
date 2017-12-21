@@ -4,7 +4,7 @@ INSTANCE Mod_1613_PIR_AlligatorJack_SS (Npc_Default)
 	name 		= "Alligator Jack";
 	guild 		= GIL_out;
 	id 			= 1613;
-	voice		= 0;
+	voice		= 3;
 	flags       = 2;																
 	npctype		= NPCTYPE_MAIN;
 	

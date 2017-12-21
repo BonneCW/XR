@@ -623,7 +623,7 @@ FUNC VOID GILDENSTORY_PAL()
 				AI_TurnToNpc	(Gidan_FI, Kolam);
 				AI_TurnToNpc	(hero, Kolam);
 
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_00"); //Da bist du ja!
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_03_00"); //Da bist du ja!
 			};
 
 			if (FI_Rede == 5)
@@ -635,7 +635,7 @@ FUNC VOID GILDENSTORY_PAL()
 			{
 				AI_TurnToNpc	(Kolam, Gidan_FI);
 
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_02"); //Schweig! Ich begrüße gerade unseren Gast.
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_03_02"); //Schweig! Ich begrüße gerade unseren Gast.
 			};
 
 			if (FI_Rede == 15)
@@ -645,7 +645,7 @@ FUNC VOID GILDENSTORY_PAL()
 
 			if (FI_Rede == 20)
 			{
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_04"); //(lacht) Den Schläfer? SIEH IN DIR AN!
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_03_04"); //(lacht) Den Schläfer? SIEH IN DIR AN!
 			};
 
 			if (FI_Rede == 23)
@@ -685,7 +685,7 @@ FUNC VOID GILDENSTORY_PAL()
 			{
 				AI_TurnToNpc	(Kolam, Gidan_FI);
 
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_06"); //Halt's Maul!
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_03_06"); //Halt's Maul!
 			};
 
 			if (FI_Rede == 45)
@@ -695,7 +695,7 @@ FUNC VOID GILDENSTORY_PAL()
 
 			if (FI_Rede == 50)
 			{
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_08"); //Dass du Idiot deinen eigenen "Gott" nicht erkennst!
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_03_08"); //Dass du Idiot deinen eigenen "Gott" nicht erkennst!
 			};
 
 			if (FI_Rede == 55)
@@ -705,12 +705,12 @@ FUNC VOID GILDENSTORY_PAL()
 
 			if (FI_Rede == 60)
 			{
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_10"); //Das ist nur ein Roboter! Aber durch ihn konnte ich all diese dummen Sektenspinner kontrollieren!
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_03_10"); //Das ist nur ein Roboter! Aber durch ihn konnte ich all diese dummen Sektenspinner kontrollieren!
 			};
 
 			if (FI_Rede == 65)
 			{
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_11"); //Allerdings brauch ich die jetzt nicht mehr.
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_03_11"); //Allerdings brauch ich die jetzt nicht mehr.
 			};
 
 			if (FI_Rede == 70)
@@ -727,12 +727,12 @@ FUNC VOID GILDENSTORY_PAL()
 
 			if (FI_Rede == 77)
 			{
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_13"); //Du verstehst es nicht oder? Man kann den Schläfer nicht wiedererwecken. Er wurde verbannt! Der einzige der das könnte ist Beliar selbst!
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_03_13"); //Du verstehst es nicht oder? Man kann den Schläfer nicht wiedererwecken. Er wurde verbannt! Der einzige der das könnte ist Beliar selbst!
 			};
 
 			if (FI_Rede == 82)
 			{
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_14"); //Was du vor dir siehst ist ein Roboter!
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_03_14"); //Was du vor dir siehst ist ein Roboter!
 			};
 
 			if (FI_Rede == 87)
@@ -742,7 +742,7 @@ FUNC VOID GILDENSTORY_PAL()
 
 			if (FI_Rede == 92)
 			{
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_16"); //Haha ganz recht, der ominöse Erfinder.
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_03_16"); //Haha ganz recht, der ominöse Erfinder.
 			};
 
 			if (FI_Rede == 97)
@@ -752,7 +752,7 @@ FUNC VOID GILDENSTORY_PAL()
 
 			if (FI_Rede == 102)
 			{
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_18"); //Ja! Du bist doch genauso verrückt wie mein fehlgeleiteter Bruder!
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_03_18"); //Ja! Du bist doch genauso verrückt wie mein fehlgeleiteter Bruder!
 			};
 
 			if (FI_Rede == 107)
@@ -762,7 +762,7 @@ FUNC VOID GILDENSTORY_PAL()
 
 			if (FI_Rede == 112)
 			{
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_20"); //Stotter hier nicht rum!
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_03_20"); //Stotter hier nicht rum!
 			};
 
 			if (FI_Rede == 117)
@@ -772,7 +772,7 @@ FUNC VOID GILDENSTORY_PAL()
 
 			if (FI_Rede == 122)
 			{
-				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_02_22"); //Da hast du deinen Schläfer, du Idiot. SCHLÄFER1.0 ANGRIFF INITIALISIEREN!
+				AI_Output(Kolam, NULL, "Info_Mod_FI_Rede_03_22"); //Da hast du deinen Schläfer, du Idiot. SCHLÄFER1.0 ANGRIFF INITIALISIEREN!
 
 				B_Attack	(Sleeper, Gidan_FI, AR_None, 0);
 			};

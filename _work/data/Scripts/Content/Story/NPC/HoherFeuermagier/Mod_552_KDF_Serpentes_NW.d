@@ -4,7 +4,7 @@ INSTANCE Mod_552_KDF_Serpentes_NW (Npc_Default)
 	name 		= "Serpentes";
 	guild 		= GIL_VLK;
 	id 		= 552;
-	voice		= 0;
+	voice		= 3;
 	flags           = 0;
 	npctype		= NPCTYPE_MAIN;
 

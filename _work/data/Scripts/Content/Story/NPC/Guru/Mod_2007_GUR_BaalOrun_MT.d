@@ -6,7 +6,7 @@ instance Mod_2007_GUR_BaalOrun_MT (Npc_Default)
 	guild 		=		GIL_OUT;
 	level 		=		28;
 	
-	voice		= 0;
+	voice		= 3;
 	id 			=		2007;
 		
 	///-------- abilities --------

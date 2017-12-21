@@ -4,7 +4,7 @@ instance Mod_7291_PAL_Aramis_NW (Npc_Default)
 	name 		= "Aramis";
 	guild 		= GIL_pal;
 	id 			= 7291;
-	voice		= 0;
+	voice		= 3;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

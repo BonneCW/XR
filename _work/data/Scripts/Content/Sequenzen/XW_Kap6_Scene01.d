@@ -30,7 +30,7 @@ FUNC VOID XW_Kap6_Scene01()
 
 	if (Mod_XW_Kap6_Scene01_Counter == 3)
 	{
-		AI_Output(Mod_7765_SLD_Gorn_XW, NULL, "Info_Mod_Hero_XW_Kap6_Scene01_12_00"); //Heilige Scheiﬂe ...
+		AI_Output(Mod_7765_SLD_Gorn_XW, NULL, "Info_Mod_Hero_XW_Kap6_Scene01_03_00"); //Heilige Scheiﬂe ...
 	};
 
 	if (Mod_XW_Kap6_Scene01_Counter == 9)

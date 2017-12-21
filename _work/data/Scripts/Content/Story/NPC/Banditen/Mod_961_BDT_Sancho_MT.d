@@ -4,7 +4,7 @@ instance Mod_961_BDT_Sancho_MT (Npc_Default)
 	name 		= "Sancho";
 	guild 		= GIL_OUT;
 	id 			= 961;
-	voice 		= 32;
+	voice 		= 3;
 	flags      	= 0;
 	npctype		= NPCTYPE_MAIN;
 	

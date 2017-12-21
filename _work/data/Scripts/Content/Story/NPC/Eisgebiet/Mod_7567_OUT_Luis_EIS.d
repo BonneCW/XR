@@ -4,7 +4,7 @@ instance Mod_7567_OUT_Luis_EIS (Npc_Default)
 	name 		= "Luis"; 
 	guild 		= GIL_OUT;
 	id 			= 7567;
-	voice		= 0;
+	voice		= 28;
 	flags       = 0;																
 	npctype		= NPCTYPE_main;
 	

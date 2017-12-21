@@ -4,7 +4,7 @@ INSTANCE Mod_1858_KDF_Aaron_PAT (Npc_Default)
 	name 		= "Garan";
 	guild 		= GIL_VLK;
 	id 			= 1858;
-	voice		= 0;
+	voice		= 3;
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------

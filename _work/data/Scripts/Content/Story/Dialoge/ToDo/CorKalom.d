@@ -38,6 +38,7 @@ INSTANCE Info_Mod_Kalom_LeckMich (C_INFO)
 FUNC INT Info_Mod_Kalom_LeckMich_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Kalom_Hi))
+	&& (HeroIstKeinZombie == FALSE)
 	{
 		return 1;
 	};

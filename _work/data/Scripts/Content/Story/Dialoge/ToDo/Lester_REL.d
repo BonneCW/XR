@@ -17,16 +17,16 @@ FUNC INT Info_Mod_Lester_REL_Hi_Condition()
 FUNC VOID Info_Mod_Lester_REL_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Lester_REL_Hi_15_00"); //Du hier?
-	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_01"); //(bekifft) Bist du schon einmal zugedröhnt mit dieser Lore gefahren? Ich sag dir, das ist ein Erlebnis, das du nicht so schnell vergessen wirst.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_02"); //Ich glaube, ich fahr direkt noch mal zurück und wieder hin.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_41_01"); //(bekifft) Bist du schon einmal zugedröhnt mit dieser Lore gefahren? Ich sag dir, das ist ein Erlebnis, das du nicht so schnell vergessen wirst.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_41_02"); //Ich glaube, ich fahr direkt noch mal zurück und wieder hin.
 	AI_Output(hero, self, "Info_Mod_Lester_REL_Hi_15_03"); //Schön und gut, aber weshalb bist du eigentlich hier?
-	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_04"); //Hast du schon mal von Khorata gehört?
+	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_41_04"); //Hast du schon mal von Khorata gehört?
 	AI_Output(hero, self, "Info_Mod_Lester_REL_Hi_15_05"); //Nicht wirklich.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_06"); //Von allem, was ich gehört habe, ist die Stadt nah dran am Paradies.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_07"); //Jeder, der will, wird reingelassen und darf dort sein gemütliches Leben führen.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_08"); //Die Stadtverwaltung besteht aus einem einzigen Mann, der nur darauf achtet, dass das Chaos nicht überhandnimmt.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_09"); //In dem nahen Hofstaat wird etwas gewonnen, das sich Freudenspender nennt, und viel effektiver sein soll als Sumpfkraut.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_13_10"); //Das kann ich mir fast nicht vorstellen, aber ausprobieren schadet ja nicht.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_41_06"); //Von allem, was ich gehört habe, ist die Stadt nah dran am Paradies.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_41_07"); //Jeder, der will, wird reingelassen und darf dort sein gemütliches Leben führen.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_41_08"); //Die Stadtverwaltung besteht aus einem einzigen Mann, der nur darauf achtet, dass das Chaos nicht überhandnimmt.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_41_09"); //In dem nahen Hofstaat wird etwas gewonnen, das sich Freudenspender nennt, und viel effektiver sein soll als Sumpfkraut.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_Hi_41_10"); //Das kann ich mir fast nicht vorstellen, aber ausprobieren schadet ja nicht.
 };
 
 INSTANCE Info_Mod_Lester_REL_VonWem (C_INFO)
@@ -51,9 +51,9 @@ FUNC INT Info_Mod_Lester_REL_VonWem_Condition()
 FUNC VOID Info_Mod_Lester_REL_VonWem_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Lester_REL_VonWem_15_00"); //Von wem hast du das gehört?
-	AI_Output(self, hero, "Info_Mod_Lester_REL_VonWem_13_01"); //Ich hab's auf dem Marktplatz von Khorinis aufgeschnappt. Ich glaube, Baltram hat davon erzählt.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_VonWem_13_02"); //Der Bekanntheitsgrad von Khorata ist allerdings erstaunlich gering.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_VonWem_13_03"); //Es scheint niemand das Bedürfnis zu haben, die Vorteile an die große Glocke zu hängen. Kann mir nur recht sein.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_VonWem_41_01"); //Ich hab's auf dem Marktplatz von Khorinis aufgeschnappt. Ich glaube, Baltram hat davon erzählt.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_VonWem_41_02"); //Der Bekanntheitsgrad von Khorata ist allerdings erstaunlich gering.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_VonWem_41_03"); //Es scheint niemand das Bedürfnis zu haben, die Vorteile an die große Glocke zu hängen. Kann mir nur recht sein.
 };
 
 INSTANCE Info_Mod_Lester_REL_Zusammen (C_INFO)
@@ -79,7 +79,7 @@ FUNC INT Info_Mod_Lester_REL_Zusammen_Condition()
 FUNC VOID Info_Mod_Lester_REL_Zusammen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Lester_REL_Zusammen_15_00"); //Lass uns zusammen gehen.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_Zusammen_13_01"); //Ein andermal. Ich will erst noch unbedingt ein paar Fahrten mit dieser Lore unternehmen ...
+	AI_Output(self, hero, "Info_Mod_Lester_REL_Zusammen_41_01"); //Ein andermal. Ich will erst noch unbedingt ein paar Fahrten mit dieser Lore unternehmen ...
 };
 
 INSTANCE Info_Mod_Lester_REL_Gefallen (C_INFO)
@@ -105,9 +105,9 @@ FUNC INT Info_Mod_Lester_REL_Gefallen_Condition()
 FUNC VOID Info_Mod_Lester_REL_Gefallen_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Lester_REL_Gefallen_15_00"); //Wie gefällt es dir hier?
-	AI_Output(self, hero, "Info_Mod_Lester_REL_Gefallen_13_01"); //Der Freudenspender haut einen wirklich um. (lacht) Verflucht gutes Zeug. Aber Khorata ...
-	AI_Output(self, hero, "Info_Mod_Lester_REL_Gefallen_13_02"); //Ich hatte gedacht, eine freie Stadt vorzufinden, aber Khorata wird von Missgunst und Willkür regiert.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_Gefallen_13_03"); //Das größte Problem an jeder Gemeinschaft ist und bleibt der Mensch.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_Gefallen_41_01"); //Der Freudenspender haut einen wirklich um. (lacht) Verflucht gutes Zeug. Aber Khorata ...
+	AI_Output(self, hero, "Info_Mod_Lester_REL_Gefallen_41_02"); //Ich hatte gedacht, eine freie Stadt vorzufinden, aber Khorata wird von Missgunst und Willkür regiert.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_Gefallen_41_03"); //Das größte Problem an jeder Gemeinschaft ist und bleibt der Mensch.
 };
 
 INSTANCE Info_Mod_Lester_REL_FindeOrt (C_INFO)
@@ -133,7 +133,7 @@ FUNC INT Info_Mod_Lester_REL_FindeOrt_Condition()
 FUNC VOID Info_Mod_Lester_REL_FindeOrt_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Lester_REL_FindeOrt_15_00"); //Ich finde mich hier kaum zurecht.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_13_01"); //Was genau findest du nicht?
+	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_41_01"); //Was genau findest du nicht?
 
 	Info_ClearChoices	(Info_Mod_Lester_REL_FindeOrt);
 
@@ -176,9 +176,9 @@ FUNC VOID Info_Mod_Lester_REL_FindeOrt_BACK()
 FUNC VOID Info_Mod_Lester_REL_FindeOrt_D()
 {
 	AI_Output(hero, self, "Info_Mod_Lester_REL_FindeOrt_D_15_00"); //Ich suche einen Troll.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_D_13_01"); //(lacht) Normalerweise sucht man eher eine Möglichkeit, ihm aus dem Weg zu gehen.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_D_13_02"); //Aber ich habe von einem Händler des Hofstaats gehört, dass ein Troll den Pass dorthin unsicher machen soll.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_D_13_03"); //Brauchst du meine Hilfe?
+	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_D_41_01"); //(lacht) Normalerweise sucht man eher eine Möglichkeit, ihm aus dem Weg zu gehen.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_D_41_02"); //Aber ich habe von einem Händler des Hofstaats gehört, dass ein Troll den Pass dorthin unsicher machen soll.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_D_41_03"); //Brauchst du meine Hilfe?
 
 	Info_ClearChoices	(Info_Mod_Lester_REL_FindeOrt);
 
@@ -211,7 +211,7 @@ FUNC VOID Info_Mod_Lester_REL_FindeOrt_D1()
 FUNC VOID Info_Mod_Lester_REL_FindeOrt_C()
 {
 	AI_Output(hero, self, "Info_Mod_Lester_REL_FindeOrt_C_15_00"); //Ich suche die Mine.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_C_13_01"); //Kein Problem, die Mine ist von der Stadt aus ausgeschildert. Soll ich dich begleiten?
+	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_C_41_01"); //Kein Problem, die Mine ist von der Stadt aus ausgeschildert. Soll ich dich begleiten?
 
 	Info_ClearChoices	(Info_Mod_Lester_REL_FindeOrt);
 
@@ -244,8 +244,8 @@ FUNC VOID Info_Mod_Lester_REL_FindeOrt_C1()
 FUNC VOID Info_Mod_Lester_REL_FindeOrt_B()
 {
 	AI_Output(hero, self, "Info_Mod_Lester_REL_FindeOrt_B_15_00"); //Ich suche Banditen in Relendel.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_B_13_01"); //Der Bauer Erhard hat sich schon häufiger beschwert, dass Banditen in der Nähe seines Bauernhofes seien.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_B_13_02"); //Sie sollten nicht allzu schwierig zu finden sein. Sollen wir zusammen suchen gehen?
+	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_B_41_01"); //Der Bauer Erhard hat sich schon häufiger beschwert, dass Banditen in der Nähe seines Bauernhofes seien.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_B_41_02"); //Sie sollten nicht allzu schwierig zu finden sein. Sollen wir zusammen suchen gehen?
 
 	Info_ClearChoices	(Info_Mod_Lester_REL_FindeOrt);
 
@@ -278,9 +278,9 @@ FUNC VOID Info_Mod_Lester_REL_FindeOrt_B1()
 FUNC VOID Info_Mod_Lester_REL_FindeOrt_A()
 {
 	AI_Output(hero, self, "Info_Mod_Lester_REL_FindeOrt_A_15_00"); //Ich suche Vincent.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_A_13_01"); //Ja, über Vincent habe ich auch schon einiges gehört.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_A_13_02"); //Er soll sein Zelt irgendwo westlich des großen Sees in Relendel aufgeschlagen haben.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_A_13_03"); //Wenn du willst, können wir zusammen nachschauen.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_A_41_01"); //Ja, über Vincent habe ich auch schon einiges gehört.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_A_41_02"); //Er soll sein Zelt irgendwo westlich des großen Sees in Relendel aufgeschlagen haben.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_FindeOrt_A_41_03"); //Wenn du willst, können wir zusammen nachschauen.
 
 	Info_ClearChoices	(Info_Mod_Lester_REL_FindeOrt);
 
@@ -332,9 +332,9 @@ FUNC INT Info_Mod_Lester_REL_AtTroll_Condition()
 
 FUNC VOID Info_Mod_Lester_REL_AtTroll_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lester_REL_AtTroll_13_00"); //Na, wenn das mal kein Brocken ist. Bist du sicher, dass du den fällen willst?
+	AI_Output(self, hero, "Info_Mod_Lester_REL_AtTroll_41_00"); //Na, wenn das mal kein Brocken ist. Bist du sicher, dass du den fällen willst?
 	AI_Output(hero, self, "Info_Mod_Lester_REL_AtTroll_15_01"); //Wofür sind wir sonst den weiten Weg gelaufen?
-	AI_Output(self, hero, "Info_Mod_Lester_REL_AtTroll_13_02"); //Na schön. Zu zweit packen wir ihn.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_AtTroll_41_02"); //Na schön. Zu zweit packen wir ihn.
 
 	AI_StopProcessInfos	(self);
 };
@@ -361,7 +361,7 @@ FUNC INT Info_Mod_Lester_REL_AtTroll2_Condition()
 
 FUNC VOID Info_Mod_Lester_REL_AtTroll2_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lester_REL_AtTroll2_13_00"); //Das wäre geschafft.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_AtTroll2_41_00"); //Das wäre geschafft.
 
 	AI_StopProcessInfos	(self);
 
@@ -394,7 +394,7 @@ FUNC INT Info_Mod_Lester_REL_AtMine_Condition()
 
 FUNC VOID Info_Mod_Lester_REL_AtMine_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lester_REL_AtMine_13_00"); //Hier ist der Eingang der Mine. Viel Spaß dort drinnen.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_AtMine_41_00"); //Hier ist der Eingang der Mine. Viel Spaß dort drinnen.
 
 	AI_StopProcessInfos	(self);
 
@@ -427,7 +427,7 @@ FUNC INT Info_Mod_Lester_REL_AtMelvin_Condition()
 
 FUNC VOID Info_Mod_Lester_REL_AtMelvin_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lester_REL_AtMelvin_13_00"); //Da vorn sehe ich ein Lager mit mehreren Zelten. Das sollten die Banditen sein, die du suchst.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_AtMelvin_41_00"); //Da vorn sehe ich ein Lager mit mehreren Zelten. Das sollten die Banditen sein, die du suchst.
 
 	AI_StopProcessInfos	(self);
 
@@ -460,8 +460,8 @@ FUNC INT Info_Mod_Lester_REL_AtVincent_Condition()
 
 FUNC VOID Info_Mod_Lester_REL_AtVincent_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Lester_REL_AtVincent_13_00"); //Hier ist der große See, von dem ich gesprochen habe. Auf der gegenüberliegenden Seite solltest du Vincent finden.
-	AI_Output(self, hero, "Info_Mod_Lester_REL_AtVincent_13_01"); //Ich kehre jetzt zurück in die Stadt. Die Rennerei ist zu viel für mich.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_AtVincent_41_00"); //Hier ist der große See, von dem ich gesprochen habe. Auf der gegenüberliegenden Seite solltest du Vincent finden.
+	AI_Output(self, hero, "Info_Mod_Lester_REL_AtVincent_41_01"); //Ich kehre jetzt zurück in die Stadt. Die Rennerei ist zu viel für mich.
 
 	AI_StopProcessInfos	(self);
 

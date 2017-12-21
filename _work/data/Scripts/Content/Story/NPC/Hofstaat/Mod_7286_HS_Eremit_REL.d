@@ -4,7 +4,7 @@ instance Mod_7286_HS_Eremit_REL (Npc_Default)
 	name 		= "Königlicher Eremit"; 
 	guild 		= GIL_OUT;
 	id 			= 7286;
-	voice		= 0;
+	voice		= 3;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

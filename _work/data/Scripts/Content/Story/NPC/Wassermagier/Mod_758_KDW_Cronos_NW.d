@@ -4,7 +4,7 @@ INSTANCE Mod_758_KDW_Cronos_NW (Npc_Default)
 	name 		= "Cronos";
 	guild 		= GIL_NOV;
 	id 			= 758;
-	voice		= 0; 
+	voice		= 3; 
 	flags       = 2;																	
 	npctype		= NPCTYPE_MAIN;
 	

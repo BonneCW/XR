@@ -4,7 +4,7 @@ instance Mod_746_NONE_Ramirez_NW (Npc_Default)
 	name 		= "Ramirez"; 
 	guild 		= GIL_OUT;
 	id 			= 746;
-	voice		= 0;
+	voice		= 3;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

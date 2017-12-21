@@ -473,7 +473,7 @@ FUNC VOID Info_Mod_Torgan_Turm2_Info()
 	AI_Output(self, hero, "Info_Mod_Torgan_Turm2_23_02"); //Moment. Hörst du den Kerl da oben im Turm?
 	AI_Output(self, hero, "Info_Mod_Torgan_Turm2_23_03"); //Der schreit sich schier die Lunge aus dem Leib.
 	AI_Output(hero, self, "Info_Mod_Torgan_Turm2_15_04"); //Na und? Soll er doch. Ich muss ...
-	AI_Output(self, hero, "Info_Mod_Torgan_Turm2_23_05"); //Geh doch mal eben raus und frag, was er will. Hast auch was gut bei mit.
+	AI_Output(self, hero, "Info_Mod_Torgan_Turm2_23_05"); //Geh doch mal eben rauf und frag, was er will. Hast auch was gut bei mit.
 
 	Info_ClearChoices	(Info_Mod_Torgan_Turm2);
 

@@ -4,7 +4,7 @@ instance Mod_912_BAU_Vino_NW (Npc_Default)
 	name 		= "Vino";
 	guild 		= GIL_OUT;
 	id 			= 912;
-	voice		= 0;
+	voice		= 28;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

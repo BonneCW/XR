@@ -179,7 +179,7 @@ FUNC VOID GILDENSTORY_AL()
 
 			if (Mod_GespraechCounter_BB == 10)
 			{
-				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bloodwyn_Bartholo_Plan_12_02"); //Es gibt keinen Grund beunruhigt zu sein. Wir sind gut bewacht uns sie kennen die Stellungen der Gardisten nicht.
+				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bloodwyn_Bartholo_Plan_03_02"); //Es gibt keinen Grund beunruhigt zu sein. Wir sind gut bewacht uns sie kennen die Stellungen der Gardisten nicht.
 			};
 
 			if (Mod_GespraechCounter_BB == 15)
@@ -189,7 +189,7 @@ FUNC VOID GILDENSTORY_AL()
 
 			if (Mod_GespraechCounter_BB == 22)
 			{
-				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bloodwyn_Bartholo_Plan_12_04"); //Ich kann dir den Plan geben, es wird wohl wirklich Zeit, uns vorzubereiten.
+				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bloodwyn_Bartholo_Plan_03_04"); //Ich kann dir den Plan geben, es wird wohl wirklich Zeit, uns vorzubereiten.
 			};
 
 			if (Mod_GespraechCounter_BB == 27)
@@ -199,7 +199,7 @@ FUNC VOID GILDENSTORY_AL()
 
 			if (Mod_GespraechCounter_BB == 31)
 			{
-				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bloodwyn_Bartholo_Plan_12_06"); //Wo wirst du ihn aufbewahren?
+				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bloodwyn_Bartholo_Plan_03_06"); //Wo wirst du ihn aufbewahren?
 			};
 
 			if (Mod_GespraechCounter_BB == 36)
@@ -209,7 +209,7 @@ FUNC VOID GILDENSTORY_AL()
 
 			if (Mod_GespraechCounter_BB == 41)
 			{
-				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bloodwyn_Bartholo_Plan_12_08"); //Das dürfte es vermutlich, allerdings sind nachts keine Gardisten dort, die ihn bewachen könnten.
+				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bloodwyn_Bartholo_Plan_03_08"); //Das dürfte es vermutlich, allerdings sind nachts keine Gardisten dort, die ihn bewachen könnten.
 			};
 
 			if (Mod_GespraechCounter_BB == 46)
@@ -454,12 +454,12 @@ FUNC VOID GILDENSTORY_AL()
 
 			if (Mod_AL_BloodwynBartholoGefangen_Counter == 6)
 			{
-				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bartholo_WoQuartier_12_00"); //So, dann sind auch diese Ratten in die Falle gegangen. Ich könnte euch töten, wie den Buddler, ich könnte euch auch den Snappern zum Fraß vorwerfen, wie die Köche.
+				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bartholo_WoQuartier_03_00"); //So, dann sind auch diese Ratten in die Falle gegangen. Ich könnte euch töten, wie den Buddler, ich könnte euch auch den Snappern zum Fraß vorwerfen, wie die Köche.
 			};
 
 			if (Mod_AL_BloodwynBartholoGefangen_Counter == 11)
 			{
-				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bartholo_WoQuartier_12_01"); //Aber wenn ich schon mal so hohen Besuch habe, will ich euch einige Fragen stellen. Wo haben der alte Mann und seine Anhänger ihr Quartier?
+				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bartholo_WoQuartier_03_01"); //Aber wenn ich schon mal so hohen Besuch habe, will ich euch einige Fragen stellen. Wo haben der alte Mann und seine Anhänger ihr Quartier?
 			};
 
 			if (Mod_AL_BloodwynBartholoGefangen_Counter == 16)
@@ -469,12 +469,12 @@ FUNC VOID GILDENSTORY_AL()
 
 			if (Mod_AL_BloodwynBartholoGefangen_Counter == 21)
 			{
-				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bartholo_BloodwynGut_12_00"); //Gut Bloodwyn, nimm dir einen Gardisten und unsere zwei Freunde hier und geh zum Bergkastell, ich werde später Verstärkung nachschicken.
+				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bartholo_BloodwynGut_03_00"); //Gut Bloodwyn, nimm dir einen Gardisten und unsere zwei Freunde hier und geh zum Bergkastell, ich werde später Verstärkung nachschicken.
 			};
 
 			if (Mod_AL_BloodwynBartholoGefangen_Counter == 26)
 			{
-				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bartholo_BloodwynGut_12_01"); //Den beiden wird es sicher gefallen, bei der Vernichtung ihrer Kumpanen zu zu sehen.
+				AI_Output(Mod_1106_EBR_Bartholo_MT, NULL, "Info_Mod_Bartholo_BloodwynGut_03_01"); //Den beiden wird es sicher gefallen, bei der Vernichtung ihrer Kumpanen zu zu sehen.
 			};
 
 			if (Mod_AL_BloodwynBartholoGefangen_Counter == 31)

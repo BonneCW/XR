@@ -4,7 +4,7 @@ INSTANCE Mod_9001_KDW_Cronos_AW (Npc_Default)
 	name 		= "Cronos";
 	guild 		= GIL_NOV;
 	id 			= 9001;
-	voice		= 0; 
+	voice		= 3; 
 	flags       = NPC_FLAG_IMMORTAL;																	
 	npctype		= NPCTYPE_MAIN;
 	

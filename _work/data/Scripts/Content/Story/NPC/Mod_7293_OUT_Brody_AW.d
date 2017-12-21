@@ -4,7 +4,7 @@ INSTANCE Mod_7293_OUT_Brody_AW (Npc_Default)
 	name 		= "Brody";
 	guild 		= GIL_OUT;
 	id 			= 7293;
-	voice		= 0;
+	voice		= 3;
 	flags       = FALSE;															
 	npctype		= NPCTYPE_MAIN;
 	

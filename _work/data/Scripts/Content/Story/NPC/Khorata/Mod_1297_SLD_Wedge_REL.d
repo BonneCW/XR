@@ -7,7 +7,7 @@ instance Mod_1297_SLD_Wedge_REL (Npc_Default)
 	guild =					GIL_OUT;      
 	level =					11;
 	
-	voice		= 0;
+	voice		= 28;
 	id =					1297;
 
 

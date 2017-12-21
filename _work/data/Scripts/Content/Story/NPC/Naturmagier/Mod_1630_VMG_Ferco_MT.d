@@ -8,7 +8,7 @@ instance Mod_1630_VMG_Ferco_MT (Npc_Default)
 	level =							2;
 
 	
-	voice		= 0;
+	voice		= 3;
 	id =							1630;
 
 

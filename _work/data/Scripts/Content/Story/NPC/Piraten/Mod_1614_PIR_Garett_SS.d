@@ -4,7 +4,7 @@ INSTANCE Mod_1614_PIR_Garett_SS (Npc_Default)
 	name 		= "Garett";
 	guild 		= GIL_out;
 	id 			= 1614;
-	voice		= 0;
+	voice		= 28;
 	flags       = 2;													
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ INSTANCE Mod_530_NONE_Regis_NW (Npc_Default)
 	name 		= "Regis"; 
 	guild 		= GIL_NONE;
 	id 			= 530;
-	voice		= 0;
+	voice		= 3;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

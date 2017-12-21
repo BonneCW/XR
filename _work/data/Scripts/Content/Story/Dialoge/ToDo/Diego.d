@@ -592,11 +592,11 @@ FUNC VOID Info_Mod_Diego_Kap6_Info()
 
 	TRIA_Next(Gorn);
 
-	AI_Output(self, hero, "Info_Mod_Diego_Kap6_12_02"); //Dabei hab ich doch meine Axt gerade erst frisch geschliffen.
+	AI_Output(self, hero, "Info_Mod_Diego_Kap6_03_02"); //Dabei hab ich doch meine Axt gerade erst frisch geschliffen.
 
 	TRIA_Next(Milten);
 
-	AI_Output(self, hero, "Info_Mod_Diego_Kap6_03_03"); //Xardas hat uns erzählt, was du vorhast.
+	AI_Output(self, hero, "Info_Mod_Diego_Kap6_28_03"); //Xardas hat uns erzählt, was du vorhast.
 
 	TRIA_Next(Lester);
 
@@ -605,7 +605,7 @@ FUNC VOID Info_Mod_Diego_Kap6_Info()
 
 	TRIA_Next(Gorn);
 
-	AI_Output(self, hero, "Info_Mod_Diego_Kap6_12_06"); //Wenn du's nicht schaffst, gehen wir eh früher oder später drauf.
+	AI_Output(self, hero, "Info_Mod_Diego_Kap6_03_06"); //Wenn du's nicht schaffst, gehen wir eh früher oder später drauf.
 
 	TRIA_Next(Lester);
 
@@ -618,9 +618,9 @@ FUNC VOID Info_Mod_Diego_Kap6_Info()
 
 	TRIA_Next(Milten);
 
-	AI_Output(self, hero, "Info_Mod_Diego_Kap6_03_10"); //Ich glaube, Xardas wollte dich noch sprechen, bevor wir uns auf den Weg machen. Du musst dir noch deine Rune abholen.
+	AI_Output(self, hero, "Info_Mod_Diego_Kap6_28_10"); //Ich glaube, Xardas wollte dich noch sprechen, bevor wir uns auf den Weg machen. Du musst dir noch deine Rune abholen.
 	AI_Output(hero, self, "Info_Mod_Diego_Kap6_15_11"); //Meine Rune?
-	AI_Output(self, hero, "Info_Mod_Diego_Kap6_03_12"); //Na, mach schon.
+	AI_Output(self, hero, "Info_Mod_Diego_Kap6_28_12"); //Na, mach schon.
 
 	TRIA_Finish();
 

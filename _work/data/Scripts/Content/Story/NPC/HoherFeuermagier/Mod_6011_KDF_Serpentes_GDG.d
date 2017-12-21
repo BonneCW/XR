@@ -4,7 +4,7 @@ INSTANCE Mod_6011_KDF_Serpentes_GDG (Npc_Default)
 	name 		= "Serpentes";
 	guild 		= GIL_OUT;
 	id 		= 6011;
-	voice		= 0;
+	voice		= 3;
 	flags           = 0;
 	npctype		= NPCTYPE_MAIN;
 

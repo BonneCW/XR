@@ -4,7 +4,7 @@ instance Mod_7806_BDT_Dexter_NW (Npc_Default)
 	name 		= "Dexter"; 
 	guild 		= GIL_OUT;
 	id 			= 7806;
-	voice		= 0;
+	voice		= 28;
 	flags       = 2;								
 	npctype		= NPCTYPE_MAIN;
 	

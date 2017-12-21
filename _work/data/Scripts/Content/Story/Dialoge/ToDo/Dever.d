@@ -64,7 +64,7 @@ FUNC VOID Info_Mod_Dever_Dean_Info()
 	AI_Output(self, hero, "Info_Mod_Dever_Dean_11_00"); //Da bist du ja wieder. Was hast du herausgefunden?
 	AI_Output(hero, self, "Info_Mod_Dever_Dean_15_01"); //Dean wurde von einem Golem umgebracht, der von einem Betrüger namens Trador hierher gesendet wurde.
 	AI_Output(self, hero, "Info_Mod_Dever_Dean_11_02"); //Oh nein! Wie konnte das passieren? Ich habe gar keinen Golem gesehen.
-	AI_Output(self, hero, "Info_Mod_Dever_Dean_11_03"); //Du solltest Genn davon 	berichten.
+	AI_Output(self, hero, "Info_Mod_Dever_Dean_11_03"); //Du solltest Genn davon berichten.
 
 	if (!Npc_KnowsInfo(hero, Info_Mod_Per_Dean))
 	{

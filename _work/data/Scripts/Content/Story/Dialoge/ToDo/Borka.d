@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Borka_Hi_Condition()
 
 FUNC VOID Info_Mod_Borka_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Borka_Hi_11_00"); //Tritt ein Fremder, hier werden deine wildesten Träume und Phantasien erfüllt.
+	AI_Output(self, hero, "Info_Mod_Borka_Hi_42_00"); //Tritt ein Fremder, hier werden deine wildesten Träume und Phantasien erfüllt.
 };
 
 INSTANCE Info_Mod_Borka_Flugblaetter (C_INFO)
@@ -47,11 +47,11 @@ FUNC VOID Info_Mod_Borka_Flugblaetter_Info()
 
 	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_Borka_Flugblaetter_11_01"); //Oh danke. Mal sehen ...
+	AI_Output(self, hero, "Info_Mod_Borka_Flugblaetter_42_01"); //Oh danke. Mal sehen ...
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_Borka_Flugblaetter_11_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
+	AI_Output(self, hero, "Info_Mod_Borka_Flugblaetter_42_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
 
 	Mod_Flugblaetter += 1;
 };
@@ -79,16 +79,16 @@ FUNC INT Info_Mod_Borka_Aabid_Condition()
 FUNC VOID Info_Mod_Borka_Aabid_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Borka_Aabid_15_00"); //Ich komme von Aabid und ...
-	AI_Output(self, hero, "Info_Mod_Borka_Aabid_11_01"); //(seufzt) Der Kerl schon wieder.
+	AI_Output(self, hero, "Info_Mod_Borka_Aabid_42_01"); //(seufzt) Der Kerl schon wieder.
 	AI_Output(hero, self, "Info_Mod_Borka_Aabid_15_02"); //Was ist damit?
-	AI_Output(self, hero, "Info_Mod_Borka_Aabid_11_03"); //Dauernd will er, dass ich ihm sein Paket vor die Stadt bringe, aber ich habe keine Lust dazu. Kannst du ihm das mal ausrichten?
+	AI_Output(self, hero, "Info_Mod_Borka_Aabid_42_03"); //Dauernd will er, dass ich ihm sein Paket vor die Stadt bringe, aber ich habe keine Lust dazu. Kannst du ihm das mal ausrichten?
 	AI_Output(hero, self, "Info_Mod_Borka_Aabid_15_04"); //Ich bin eigentlich gekommen, um das Paket abzuholen.
-	AI_Output(self, hero, "Info_Mod_Borka_Aabid_11_05"); //(lacht) Aabid ist 'ne faule Sau. Hier hast du das Paket.
+	AI_Output(self, hero, "Info_Mod_Borka_Aabid_42_05"); //(lacht) Aabid ist 'ne faule Sau. Hier hast du das Paket.
 
 	B_GiveInvItems	(self, hero, ItMi_HerbPaket, 1);
 
 	AI_Output(hero, self, "Info_Mod_Borka_Aabid_15_06"); //(verwundert) Einfach so?
-	AI_Output(self, hero, "Info_Mod_Borka_Aabid_11_07"); //Es ist schon bezahlt worden. Bring Aabid das Paket und schöne Grüße, das nächste mal soll er selber kommen.
+	AI_Output(self, hero, "Info_Mod_Borka_Aabid_42_07"); //Es ist schon bezahlt worden. Bring Aabid das Paket und schöne Grüße, das nächste mal soll er selber kommen.
 	AI_Output(hero, self, "Info_Mod_Borka_Aabid_15_08"); //Na gut, werde ich machen.
 
 	B_LogEntry	(TOPIC_MOD_ASS_AABID_PAKET, "Das Paket von Borka habe ich bekommen, und das ohne bezahlen zu müssen.");
@@ -118,9 +118,9 @@ FUNC INT Info_Mod_Borka_SchutzgeldErpresser_Condition()
 
 FUNC VOID Info_Mod_Borka_SchutzgeldErpresser_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Borka_SchutzgeldErpresser_11_00"); //Hast du das Geld?
+	AI_Output(self, hero, "Info_Mod_Borka_SchutzgeldErpresser_42_00"); //Hast du das Geld?
 	AI_Output(hero, self, "Info_Mod_Borka_SchutzgeldErpresser_15_01"); //Vergiss es! Sag mir sofort, wer dich schickt, oder du wirst dir wünschen, deine Geburt nicht überlebt zu haben!
-	AI_Output(self, hero, "Info_Mod_Borka_SchutzgeldErpresser_11_02"); //Du willst Ärger? Den kannst du gerne bekommen.
+	AI_Output(self, hero, "Info_Mod_Borka_SchutzgeldErpresser_42_02"); //Du willst Ärger? Den kannst du gerne bekommen.
 
 	AI_StopProcessInfos	(self);
 
@@ -209,9 +209,9 @@ FUNC INT Info_Mod_Borka_Lucy_Condition()
 FUNC VOID Info_Mod_Borka_Lucy_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Borka_Lucy_15_00"); //Du verkaufst Sumpfkraut?
-	AI_Output(self, hero, "Info_Mod_Borka_Lucy_11_01"); //Wer sagt das?
+	AI_Output(self, hero, "Info_Mod_Borka_Lucy_42_01"); //Wer sagt das?
 	AI_Output(hero, self, "Info_Mod_Borka_Lucy_15_02"); //Ich habe Gold.
-	AI_Output(self, hero, "Info_Mod_Borka_Lucy_11_03"); //Wenn das so ist ...
+	AI_Output(self, hero, "Info_Mod_Borka_Lucy_42_03"); //Wenn das so ist ...
 };
 
 INSTANCE Info_Mod_Borka_Skinner (C_INFO)
