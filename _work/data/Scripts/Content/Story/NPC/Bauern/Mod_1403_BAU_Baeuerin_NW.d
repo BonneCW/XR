@@ -4,7 +4,7 @@ instance Mod_1403_BAU_Baeuerin_NW (Npc_Default)
 	name 		= NAME_MAGD;
 	guild 		= GIL_DMT;
 	id 			= 1403;
-	voice		= 0;
+	voice		= 43;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_nw_bauer;
 	

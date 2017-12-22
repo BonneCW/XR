@@ -4,7 +4,7 @@ instance Mod_7168_HEX_Hexe_NW (Npc_Default)
 	name 		= NAME_hexe;	
 	guild 		= GIL_OUT;
 	id 			= 7168;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	

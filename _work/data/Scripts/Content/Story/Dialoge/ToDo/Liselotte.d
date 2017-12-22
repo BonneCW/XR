@@ -17,24 +17,24 @@ FUNC INT Info_Mod_Liselotte_Trade1_Condition()
 FUNC VOID Info_Mod_Liselotte_TRADE1_Info()
 {
 	AI_Output (hero, self, "Info_Mod_Liselotte_Trade1_15_00"); //He, sag mal, du Händlerin, hast du vielleicht was für mich?
-	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_16_01"); //He, willst du mich hier anmachen?
+	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_43_01"); //He, willst du mich hier anmachen?
 	AI_Output (hero, self, "Info_Mod_Liselotte_Trade1_15_02"); //Oh, äh....
-	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_16_03"); //Sag jetzt nichts Falsches!
+	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_43_03"); //Sag jetzt nichts Falsches!
 	AI_Output (hero, self, "Info_Mod_Liselotte_Trade1_15_04"); //Ich ...
- 	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_16_05"); //... Denk es nicht einmal!
+ 	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_43_05"); //... Denk es nicht einmal!
 	AI_Output (hero, self, "Info_Mod_Liselotte_Trade1_15_06"); //ENTSCHULDIGUNG!
-	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_16_07"); //Angenommen - aber GERADESO!
+	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_43_07"); //Angenommen - aber GERADESO!
 	AI_Output (hero, self, "Info_Mod_Liselotte_Trade1_15_08"); //Ähm ...
-	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_16_09"); //Was willst du, verdammt nochmal?
+	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_43_09"); //Was willst du, verdammt nochmal?
 	AI_Output (hero, self, "Info_Mod_Liselotte_Trade1_15_10"); //Ich wollte dich fragen ... du als Händlerin ...
-	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_16_11"); //Red vernünftig mit mir!
+	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_43_11"); //Red vernünftig mit mir!
 	AI_Output (hero, self, "Info_Mod_Liselotte_Trade1_15_12"); //O.K., ähm, du als Händler verkaufst du Waren ...
-	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_16_13"); //Ja, das stimmt.
+	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_43_13"); //Ja, das stimmt.
 	AI_Output (hero, self, "Info_Mod_Liselotte_Trade1_15_14"); //Dürfte ich mir dann mal deine Ware anschauen?
-	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_16_15"); //Ich kann dir leider nichts anbieten, da ich mein Warenpaket auf dem Weg in die Stadt verloren habe.
-	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_16_19"); //Es muss irgendwo in der Nähe des Stadttores herumliegen, aber ich habe es nicht finden können.
+	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_43_15"); //Ich kann dir leider nichts anbieten, da ich mein Warenpaket auf dem Weg in die Stadt verloren habe.
+	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_43_19"); //Es muss irgendwo in der Nähe des Stadttores herumliegen, aber ich habe es nicht finden können.
 	AI_Output (hero, self, "Info_Mod_Liselotte_Trade1_15_16"); //Wenn ich es finde, werde ich es dir zukommen lassen.
-	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_16_17"); //Danke, du bist ein Schatz!
+	AI_Output (self, hero, "Info_Mod_Liselotte_Trade1_43_17"); //Danke, du bist ein Schatz!
 
 	B_GiveInvItems (self, hero, ItMi_Gold, 50);
 
@@ -71,13 +71,13 @@ FUNC VOID Info_Mod_Liselotte_Warenpaket_Info()
 
 	B_GiveInvItems	(hero, self, Packet_Lise, 1);
 
-	AI_Output(self, hero, "Info_Mod_Liselotte_Warenpaket_16_01"); //Ja, Danke.
+	AI_Output(self, hero, "Info_Mod_Liselotte_Warenpaket_43_01"); //Ja, Danke.
 	AI_Output(hero, self, "Info_Mod_Liselotte_Warenpaket_15_02"); //Ähm, bekomme ich jetzt eine Belohnung?
-	AI_Output(self, hero, "Info_Mod_Liselotte_Warenpaket_16_03"); //OK. Ich gebe dir 50 Gold.
+	AI_Output(self, hero, "Info_Mod_Liselotte_Warenpaket_43_03"); //OK. Ich gebe dir 50 Gold.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, 50);
 
-	AI_Output(self, hero, "Info_Mod_Liselotte_Warenpaket_16_04"); //Außerdem kannst du jetzt mit mir handeln.
+	AI_Output(self, hero, "Info_Mod_Liselotte_Warenpaket_43_04"); //Außerdem kannst du jetzt mit mir handeln.
 
 	B_LogEntry	(TOPIC_MOD_LISELOTTESBEUTEL, "Ich habe Liselottes Warenpaket gefunden und zurückgegeben.");
 	B_SetTopicStatus	(TOPIC_MOD_LISELOTTESBEUTEL, LOG_SUCCESS);
@@ -114,11 +114,11 @@ FUNC INT Info_Mod_Liselotte_Blutkelch_Condition()
 FUNC VOID Info_Mod_Liselotte_Blutkelch_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Liselotte_Blutkelch_15_00"); //Hallo, schönes Kind!
-	AI_Output(self, hero, "Info_Mod_Liselotte_Blutkelch_16_01"); //Ah, der Schmeichler. Was darf's sein?
+	AI_Output(self, hero, "Info_Mod_Liselotte_Blutkelch_43_01"); //Ah, der Schmeichler. Was darf's sein?
 	AI_Output(hero, self, "Info_Mod_Liselotte_Blutkelch_15_02"); //Ich suche einen Kelch. Einen Blutkelch.
-	AI_Output(self, hero, "Info_Mod_Liselotte_Blutkelch_16_03"); //Einen Kelch habe ich nicht. Schon gar keinen blutigen.
+	AI_Output(self, hero, "Info_Mod_Liselotte_Blutkelch_43_03"); //Einen Kelch habe ich nicht. Schon gar keinen blutigen.
 	AI_Output(hero, self, "Info_Mod_Liselotte_Blutkelch_15_04"); //Hätte ja sein können. Danke. Übrigens, was machst du nach Feierabend?
-	AI_Output(self, hero, "Info_Mod_Liselotte_Blutkelch_16_05"); //Schlafen gehen. Was sonst?
+	AI_Output(self, hero, "Info_Mod_Liselotte_Blutkelch_43_05"); //Schlafen gehen. Was sonst?
 	AI_Output(hero, self, "Info_Mod_Liselotte_Blutkelch_15_06"); //Nur so ...
 };
 

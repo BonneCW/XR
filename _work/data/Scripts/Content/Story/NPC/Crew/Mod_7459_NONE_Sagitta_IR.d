@@ -4,7 +4,7 @@ instance Mod_7459_NONE_Sagitta_IR (Npc_Default)
 	name 		= "Sagitta";
 	guild 		= GIL_OUT;
 	id 			= 7459;
-	voice 		= 26;
+	voice 		= 43;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

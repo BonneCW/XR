@@ -21,8 +21,8 @@ FUNC INT Info_Mod_Babera_Unheil_Condition()
 FUNC VOID Info_Mod_Babera_Unheil_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Babera_Unheil_15_00"); //Hallo schönes Kind.
-	AI_Output(self, hero, "Info_Mod_Babera_Unheil_16_01"); //Süßholzraspeln ist bei mir nicht. Schon gar nicht im Moment.
-	AI_Output(self, hero, "Info_Mod_Babera_Unheil_16_02"); //Ahh, diese verdammten Rückenschmerzen sind viel schlimmer geworden. Ich könnte die Wände hochlaufen ...
+	AI_Output(self, hero, "Info_Mod_Babera_Unheil_43_01"); //Süßholzraspeln ist bei mir nicht. Schon gar nicht im Moment.
+	AI_Output(self, hero, "Info_Mod_Babera_Unheil_43_02"); //Ahh, diese verdammten Rückenschmerzen sind viel schlimmer geworden. Ich könnte die Wände hochlaufen ...
 
 	B_LogEntry	(TOPIC_MOD_ADANOS_UNHEIL, "Babera hat starke Rückenschmerzen seit einiger Zeit.");
 

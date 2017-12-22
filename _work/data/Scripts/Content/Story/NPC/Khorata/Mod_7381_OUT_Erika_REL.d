@@ -4,7 +4,7 @@ instance Mod_7381_OUT_Erika_REL (Npc_Default)
 	name 		= "Erika"; 
 	guild 		= GIL_OUT;
 	id 			= 7381;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

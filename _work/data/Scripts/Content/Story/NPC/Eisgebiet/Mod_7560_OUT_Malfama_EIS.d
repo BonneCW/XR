@@ -4,7 +4,7 @@ instance Mod_7560_OUT_Malfama_EIS (Npc_Default)
 	name 		= "Malfama";	
 	guild 		= GIL_OUT;
 	id 			= 7560;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

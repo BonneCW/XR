@@ -15,7 +15,7 @@ FUNC INT Info_Mod_Veronica_Hi_Condition()
 
 FUNC VOID Info_Mod_Veronica_Hi_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Veronica_Hi_16_00"); //(erschrocken) Was, wer da? (wütend) Was fällt dir ein mich beim Baden zu beobachten, du Schuft.
+	AI_Output(self, hero, "Info_Mod_Veronica_Hi_43_00"); //(erschrocken) Was, wer da? (wütend) Was fällt dir ein mich beim Baden zu beobachten, du Schuft.
 	AI_Output(hero, self, "Info_Mod_Veronica_Hi_15_01"); //Ich ...
 	AI_Output(self, hero, "DEFAULT"); //
 

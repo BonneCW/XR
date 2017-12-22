@@ -4,7 +4,7 @@ instance Mod_7339_HS_Geliebte_REL (Npc_Default)
 	name 		= "Königliche Geliebte"; 
 	guild 		= GIL_OUT;
 	id 			= 7339;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

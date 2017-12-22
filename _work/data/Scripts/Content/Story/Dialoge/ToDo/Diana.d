@@ -17,12 +17,12 @@ FUNC INT Info_Mod_Diana_Hi_Condition()
 FUNC VOID Info_Mod_Diana_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Diana_Hi_15_00"); //Alles in Ordnung?
-	AI_Output(self, hero, "Info_Mod_Diana_Hi_16_01"); //Ich hoffe es, aber langsam mache ich mir Sorgen.
+	AI_Output(self, hero, "Info_Mod_Diana_Hi_43_01"); //Ich hoffe es, aber langsam mache ich mir Sorgen.
 	AI_Output(hero, self, "Info_Mod_Diana_Hi_15_02"); //Vermisst du jemanden?
-	AI_Output(self, hero, "Info_Mod_Diana_Hi_16_03"); //Unsere Tochter ist heute Morgen zum Pilzesammeln aufgebrochen, aber bisher nicht zurückgekehrt.
-	AI_Output(self, hero, "Info_Mod_Diana_Hi_16_04"); //Nicht, dass sie nicht alt genug wäre, um selbst auf sich aufpassen zu können, aber es lässt mir doch keine Ruhe, nichts von ihr zu hören.
-	AI_Output(self, hero, "Info_Mod_Diana_Hi_16_05"); //Wenn du ihr begegnest, sag ihr ruhig Bescheid, dass sie sich langsam mal wieder auf den Rückweg machen könnte.
-	AI_Output(self, hero, "Info_Mod_Diana_Hi_16_06"); //Du kannst sie an ihrer eigenwilligen roten Mütze erkennen.
+	AI_Output(self, hero, "Info_Mod_Diana_Hi_43_03"); //Unsere Tochter ist heute Morgen zum Pilzesammeln aufgebrochen, aber bisher nicht zurückgekehrt.
+	AI_Output(self, hero, "Info_Mod_Diana_Hi_43_04"); //Nicht, dass sie nicht alt genug wäre, um selbst auf sich aufpassen zu können, aber es lässt mir doch keine Ruhe, nichts von ihr zu hören.
+	AI_Output(self, hero, "Info_Mod_Diana_Hi_43_05"); //Wenn du ihr begegnest, sag ihr ruhig Bescheid, dass sie sich langsam mal wieder auf den Rückweg machen könnte.
+	AI_Output(self, hero, "Info_Mod_Diana_Hi_43_06"); //Du kannst sie an ihrer eigenwilligen roten Mütze erkennen.
 	
 	Log_CreateTopic	(TOPIC_MOD_ROTKAEPPCHEN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_ROTKAEPPCHEN, LOG_RUNNING);
@@ -48,8 +48,8 @@ FUNC INT Info_Mod_Diana_Eintopf_Condition()
 FUNC VOID Info_Mod_Diana_Eintopf_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Diana_Eintopf_15_00"); //Machst du auch leckere Eintöpfe?
-	AI_Output(self, hero, "Info_Mod_Diana_Eintopf_16_01"); //Sieh dir doch die gutgenährten Buben auf dem Hof an! Das Fleischwanzenragout reißen sie mir förmlich aus den Händen.
-	AI_Output(self, hero, "Info_Mod_Diana_Eintopf_16_02"); //(verschwörerisch) Mein Geheimnis sind kleine Melonenstückchen.
+	AI_Output(self, hero, "Info_Mod_Diana_Eintopf_43_01"); //Sieh dir doch die gutgenährten Buben auf dem Hof an! Das Fleischwanzenragout reißen sie mir förmlich aus den Händen.
+	AI_Output(self, hero, "Info_Mod_Diana_Eintopf_43_02"); //(verschwörerisch) Mein Geheimnis sind kleine Melonenstückchen.
 	AI_Output(hero, self, "Info_Mod_Diana_Eintopf_15_03"); //Aha. Ist ja interessant.
 };
 

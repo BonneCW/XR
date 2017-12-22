@@ -4,7 +4,7 @@ instance Mod_909_BAU_Hilda_NW (Npc_Default)
 	name 		= "Hilda";
 	guild 		= GIL_OUT;
 	id 			= 909;
-	voice 		= 26;
+	voice 		= 43;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

@@ -4,7 +4,7 @@ instance Mod_7423_OUT_Ursula_REL (Npc_Default)
 	name 		= "Ursula";
 	guild 		= GIL_OUT;
 	id 			= 7423;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

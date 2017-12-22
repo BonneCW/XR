@@ -20,7 +20,7 @@ FUNC INT Info_Mod_Seraphia_Hi_Condition()
 FUNC VOID Info_Mod_Seraphia_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Seraphia_Hi_15_00"); //Hey, willst du diesen Ort verlassen? Dann zieh dir das hier über und folge mir.
-	AI_Output(self, hero, "Info_Mod_Seraphia_Hi_16_01"); //Was willst du von mir? Geh weg, lass mich in Ruhe.
+	AI_Output(self, hero, "Info_Mod_Seraphia_Hi_43_01"); //Was willst du von mir? Geh weg, lass mich in Ruhe.
 };
 
 INSTANCE Info_Mod_Seraphia_Lagermusik (C_INFO)
@@ -45,8 +45,8 @@ FUNC INT Info_Mod_Seraphia_Lagermusik_Condition()
 FUNC VOID Info_Mod_Seraphia_Lagermusik_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Seraphia_Lagermusik_15_00"); //Willst du Gravos neue Musikgruppe unterstützen?
-	AI_Output(self, hero, "Info_Mod_Seraphia_Lagermusik_16_01"); //Wieso nicht? Thorus zeigt mir nur seine kalte Schulter, dieser verklemmte Typ, ich hab also nichts zu tun.
-	AI_Output(self, hero, "Info_Mod_Seraphia_Lagermusik_16_02"); //Und ein wenig Musik ist doch eine willkommene Abwechslung.
+	AI_Output(self, hero, "Info_Mod_Seraphia_Lagermusik_43_01"); //Wieso nicht? Thorus zeigt mir nur seine kalte Schulter, dieser verklemmte Typ, ich hab also nichts zu tun.
+	AI_Output(self, hero, "Info_Mod_Seraphia_Lagermusik_43_02"); //Und ein wenig Musik ist doch eine willkommene Abwechslung.
 
 	AI_StopProcessInfos	(self);
 

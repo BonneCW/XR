@@ -4,7 +4,7 @@ instance Mod_1859_HEX_Hexenqueen_PAT (Npc_Default)
 	name 		= "Hexenkönigin";	//Halvors Frau
 	guild 		= GIL_out;
 	id 			= 1859;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

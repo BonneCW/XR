@@ -4,7 +4,7 @@ instance Mod_1816_HEX_Hexe_PAT (Npc_Default)
 	name 		= Name_hexe;	//Carls Frau
 	guild 		= GIL_strf;
 	id 			= 1816;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;																
 	npctype		= NPCTYPE_pat_hexe;
 	

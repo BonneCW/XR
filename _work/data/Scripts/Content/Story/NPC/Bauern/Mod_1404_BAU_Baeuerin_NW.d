@@ -4,7 +4,7 @@ instance Mod_1404_BAU_Baeuerin_NW (Npc_Default)
 	name 		= NAME_BAEUERIN; 
 	guild 		= GIL_out;
 	id 			= 915;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_nw_bauer;
 	

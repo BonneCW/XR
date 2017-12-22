@@ -4,7 +4,7 @@ instance Mod_7271_OUT_HFFrau_REL (Npc_Default)
 	name 		= "Frau des Hundefutters"; 
 	guild 		= GIL_OUT;
 	id 			= 7271;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

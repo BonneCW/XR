@@ -4,7 +4,7 @@ instance Mod_1802_HEX_Hexe_PAT (Npc_Default)
 	name 		= name_hexe;
 	guild 		= GIL_strf;
 	id 			= 1802;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;	//Joly:nur solange Alnveres da ist!																	
 	npctype		= NPCTYPE_pat_hexe;
 	

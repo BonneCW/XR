@@ -22,7 +22,7 @@ FUNC VOID Info_Mod_HFFrau_Heiraten_01_Info()
 {
 	B_Say (hero, self, "$WANNAMARRY");
 
-	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_01_16_01"); //Nein.
+	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_01_43_01"); //Nein.
 };
 
 INSTANCE Info_Mod_HFFrau_Heiraten_02 (C_INFO)
@@ -51,17 +51,17 @@ FUNC INT Info_Mod_HFFrau_Heiraten_02_Condition()
 FUNC VOID Info_Mod_HFFrau_Heiraten_02_Info()
 {
 	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_02_15_00"); //Du bist die Frau des Hundefutters?
-	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_02_16_01"); //Ja ...
-	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_02_16_02"); //... das heißt, ich war es.
+	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_02_43_01"); //Ja ...
+	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_02_43_02"); //... das heißt, ich war es.
 	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_02_15_03"); //Dein Verlust tut mir schrecklich Leid. Willst du ein bisschen Freudenspender zum Trost.
-	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_02_16_04"); //Ja ... gerne.
+	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_02_43_04"); //Ja ... gerne.
 
 	B_GiveInvItems	(hero, self, ItFo_Trunken, 1);
 
 	B_UseItem	(self, ItFo_Trunken);
 
 	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_02_15_05"); //Jetzt, da du Single bist, würdest du mich gerne heiraten?
-	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_02_16_06"); //Heiraten? Ja ... aber ich heirate nur noch jemanden der seinen eigenen Grund besitzt ... Tust du das?
+	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_02_43_06"); //Heiraten? Ja ... aber ich heirate nur noch jemanden der seinen eigenen Grund besitzt ... Tust du das?
 };
 
 INSTANCE Info_Mod_HFFrau_Heiraten_03 (C_INFO)
@@ -92,7 +92,7 @@ FUNC INT Info_Mod_HFFrau_Heiraten_03_Condition()
 FUNC VOID Info_Mod_HFFrau_Heiraten_03_Info()
 {
 	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_03_15_00"); //Ich habe ein Haus.
-	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_03_16_01"); //Wunderbar, dann lass uns heiraten!
+	AI_Output(self, hero, "Info_Mod_HFFrau_Heiraten_03_43_01"); //Wunderbar, dann lass uns heiraten!
 
 	AI_StopProcessInfos	(self);
 

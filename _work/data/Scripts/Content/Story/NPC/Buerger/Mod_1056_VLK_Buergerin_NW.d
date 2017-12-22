@@ -4,7 +4,7 @@ instance Mod_1056_VLK_Buergerin_NW (Npc_Default)
 	name 		= Name_Buergerin;	
 	guild 		= GIL_PAL;
 	id 			= 1056;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;																
 	npctype		= NPCTYPE_AMBIENT;
 	

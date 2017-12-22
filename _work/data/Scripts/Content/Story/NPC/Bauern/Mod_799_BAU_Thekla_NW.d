@@ -4,7 +4,7 @@ instance Mod_799_BAU_Thekla_NW (Npc_Default)
 	name 		= "Thekla";
 	guild 		= GIL_NONE;
 	id 			= 799;
-	voice		= 0;
+	voice		= 43;
 	flags       = 2;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	

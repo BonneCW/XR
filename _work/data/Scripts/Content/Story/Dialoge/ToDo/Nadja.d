@@ -18,7 +18,7 @@ FUNC VOID Info_Mod_Nadja_Hi_Info()
 {
 	B_Say	(hero, self, "$WHOAREYOU");
 
-	AI_Output(self, hero, "Info_Mod_Nadja_Hi_16_00"); //Nadja.
+	AI_Output(self, hero, "Info_Mod_Nadja_Hi_43_00"); //Nadja.
 };
 
 INSTANCE Info_Mod_Nadja_LuteroHochzeit (C_INFO)
@@ -44,9 +44,9 @@ FUNC INT Info_Mod_Nadja_LuteroHochzeit_Condition()
 FUNC VOID Info_Mod_Nadja_LuteroHochzeit_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Nadja_LuteroHochzeit_15_00"); //Lutero hat dir versprochen, dich zu heiraten?
-	AI_Output(self, hero, "Info_Mod_Nadja_LuteroHochzeit_16_01"); //Mach dir darum mal keinen Kopf. Ich habe in meinem Leben schon Dutzende Heiratsanträge bekommen.
-	AI_Output(self, hero, "Info_Mod_Nadja_LuteroHochzeit_16_02"); //Es gibt Situationen, in denen Männer ihr gesamtes rationales Denken über Bord werfen.
-	AI_Output(self, hero, "Info_Mod_Nadja_LuteroHochzeit_16_03"); //Ich würde ja unglücklich werden, wenn ich all ihre Versprechungen für bare Münze nehmen würde.
+	AI_Output(self, hero, "Info_Mod_Nadja_LuteroHochzeit_43_01"); //Mach dir darum mal keinen Kopf. Ich habe in meinem Leben schon Dutzende Heiratsanträge bekommen.
+	AI_Output(self, hero, "Info_Mod_Nadja_LuteroHochzeit_43_02"); //Es gibt Situationen, in denen Männer ihr gesamtes rationales Denken über Bord werfen.
+	AI_Output(self, hero, "Info_Mod_Nadja_LuteroHochzeit_43_03"); //Ich würde ja unglücklich werden, wenn ich all ihre Versprechungen für bare Münze nehmen würde.
 };
 
 INSTANCE Info_Mod_Nadja_Pickpocket (C_INFO)

@@ -4,7 +4,7 @@ instance Mod_1777_HEX_Hexe_Pat (Npc_Default)
 	name 		= NAME_Hexe; //Zuris Frau
 	guild 		= GIL_STRF;
 	id 			= 1777;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;																	
 	npctype		= NPCTYPE_pat_hexe;
 	

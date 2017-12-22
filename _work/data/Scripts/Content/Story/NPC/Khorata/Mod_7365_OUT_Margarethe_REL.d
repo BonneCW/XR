@@ -4,7 +4,7 @@ instance Mod_7365_OUT_Margarethe_REL (Npc_Default)
 	name 		= "Margarethe";
 	guild 		= GIL_OUT;
 	id 			= 7365;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

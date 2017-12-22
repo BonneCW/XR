@@ -6,7 +6,7 @@ instance Mod_1624_GUR_Natalia_MT (Npc_Default)
 	npctype		= 	npctype_main;
 	guild 		=	GIL_out;      
 	level 		=	1;
-	voice		= 0;
+	voice		= 43;
 	id 			=	1624;
 	flags      	=   NPC_FLAG_IMMORTAL;
 

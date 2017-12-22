@@ -4,7 +4,7 @@ instance Mod_7580_OUT_Brauerfrau_REL (Npc_Default)
 	name 		= "Frau des Brauers";	//Frau vom 'Säger' 453
 	guild 		= GIL_OUT;
 	id 			= 7580;
-	voice		= 0;
+	voice		= 43;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

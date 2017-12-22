@@ -4,7 +4,7 @@ instance Mod_572_NONE_Edda_NW (Npc_Default)
 	name 		= "Edda";	
 	guild 		= GIL_NONE;
 	id 			= 572;
-	voice 		= 26;
+	voice 		= 43;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	

@@ -42,8 +42,8 @@ FUNC INT DIA_BAU_16_JOIN_Condition()
 
 FUNC VOID DIA_BAU_16_JOIN_Info()
 {	
-	AI_Output (hero, self, "DIA_BAU_16_JOIN_15_00"); //Ich will mehr über die Söldner wissen!
-	AI_Output (self, hero, "DIA_BAU_16_JOIN_16_01"); //Sie lungern den ganzen Tag auf dem Hof rum, prügeln sich hin und wieder mal und finden das auch noch lustig.
+	AI_Output (hero, self, "DIA_BAU_43_JOIN_15_00"); //Ich will mehr über die Söldner wissen!
+	AI_Output (self, hero, "DIA_BAU_43_JOIN_43_01"); //Sie lungern den ganzen Tag auf dem Hof rum, prügeln sich hin und wieder mal und finden das auch noch lustig.
 };
 
 // *************************************************************************
@@ -68,8 +68,8 @@ FUNC INT DIA_BAU_16_PEOPLE_Condition()
 
 FUNC VOID DIA_BAU_16_PEOPLE_Info()
 {	
-	AI_Output (hero, self, "DIA_BAU_16_PEOPLE_15_00"); //Wer hat hier das Sagen?
-	AI_Output (self, hero, "DIA_BAU_16_PEOPLE_16_01"); //Onar ist der Boss über die ganzen Höfe, aber jeder der kleinen Höfe hat nochmal einen Pächter, der dafür sorgt, dass auf seinem Hof alles funktioniert.
+	AI_Output (hero, self, "DIA_BAU_43_PEOPLE_15_00"); //Wer hat hier das Sagen?
+	AI_Output (self, hero, "DIA_BAU_43_PEOPLE_43_01"); //Onar ist der Boss über die ganzen Höfe, aber jeder der kleinen Höfe hat nochmal einen Pächter, der dafür sorgt, dass auf seinem Hof alles funktioniert.
 };
 
 // *************************************************************************
@@ -94,9 +94,9 @@ FUNC INT DIA_BAU_16_LOCATION_Condition()
 
 FUNC VOID DIA_BAU_16_LOCATION_Info()
 {	
-	AI_Output (hero, self, "DIA_BAU_16_LOCATION_15_00"); //Was kannst du mir über die Gegend hier erzählen?
-	AI_Output (self, hero, "DIA_BAU_16_LOCATION_16_01"); //Es gibt drei Höfe hier. Onars im Osten und Sekobs im Norden das Tals.
-	AI_Output (self, hero, "DIA_BAU_16_LOCATION_16_02"); //Im Südwesten gibt es einen Aufgang zur Hochebene. Dort liegt Bengars Hof.
+	AI_Output (hero, self, "DIA_BAU_43_LOCATION_15_00"); //Was kannst du mir über die Gegend hier erzählen?
+	AI_Output (self, hero, "DIA_BAU_43_LOCATION_43_01"); //Es gibt drei Höfe hier. Onars im Osten und Sekobs im Norden das Tals.
+	AI_Output (self, hero, "DIA_BAU_43_LOCATION_43_02"); //Im Südwesten gibt es einen Aufgang zur Hochebene. Dort liegt Bengars Hof.
 };
 
 INSTANCE Info_Mod_BAU_16_Pickpocket (C_INFO)
