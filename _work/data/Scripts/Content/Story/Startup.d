@@ -6597,7 +6597,8 @@ FUNC VOID STARTUP_OrcTempel ()
 	B_KillNpc	(Mod_7797_PSINOV_Novize_OT);
 	
 	stopAllSounds();
-	// Play Intro
+
+	PlayVideo	("Xeres\Intro.bik");
 };
 
 FUNC VOID INIT_OrcTempel ()
