@@ -4,3 +4,4 @@ Fixes:
 
 - Taking the focus at the troll without using the Prisma doesn't trigger log entry anymore
 - Fixed wrong naming of Hanna's dubbing (German dubbing)
+- Added SVM subtitles and TTS dubbing (German dubbing) for missing voices
