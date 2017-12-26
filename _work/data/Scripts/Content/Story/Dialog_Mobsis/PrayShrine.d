@@ -439,29 +439,7 @@ FUNC INT PC_PrayShrine_Heilung_Condition ()
 
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
 	&& (ShrineIsObsessed == FALSE)
-	&& ((hero.attribute[ATR_HITPOINTS] < hero.attribute[ATR_HITPOINTS_MAX])
-	|| (GGPf_Sumpfgolem_Time > 0)
-	|| (GGPi_Orkschamane_Time > 0)
-	|| (GGPf_Echsenmensch_Time > 0)
-	|| (GGPi_OrkkriegerArmbrust_Time > 0)
-	|| (GGPi_Fliegenpilz_Time > 0)
-	|| (GGPf_Echsenschwert_Time > 0)
-	|| (GGPf_Assassinenschwert_Time > 0)
-	|| (GGPi_Schamanenaxt_Time > 0)
-	|| (GTB_Blutfliege_Time > 0)
-	|| (GTS_Sumpfgasdrohne_Time > 0)
-	|| (GTM_Minecrawler_Time > 0)
-	|| (GTM_MinecrawlerWarrior_Time > 0)
-	|| (GTSu_Sumpfhai_Time > 0)
-	|| (GTS_Echsenschwert_Time > 0)
-	|| (GTB_Assassinenschwert_Time > 0)
-	|| (GTM_Schamanenaxt_Time > 0)
-	|| (GGD_Sumpfgasdrohne_Time > 0)
-	|| (GGD_Sumpfgolem_Time > 0)
-	|| (GGD_Sumpfdrache_Time > 0)
-	|| (GGD_Giftkrater_Time > 0)
-	|| (BissDerFaeulnis_Time > 0)
-	|| (HauchDerPestilenz_Time > 0))
+	&& (HealPrice > 0)
 	{	
 		return TRUE;
 	};
@@ -472,102 +450,6 @@ FUNC VOID PC_PrayShrine_Heilung_Info()
 	if (Npc_HasItems(hero, ItMi_Gold) >= HealPrice)
 	{
 		hero.attribute [ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
-
-		/*GGPf_Sumpfgolem_Time = 0;
-		GGPi_Orkschamane_Time = 0;
-		GGPf_Echsenmensch_Time = 0;
-		GGPi_OrkkriegerArmbrust_Time = 0;
-		GGPi_Fliegenpilz_Time = 0;
-		GGPf_Echsenschwert_Time = 0;
-		GGPf_Assassinenschwert_Time = 0;
-		GGPi_Schamanenaxt_Time = 0;
-		GTB_Blutfliege_Time = 0;
-		GTS_Sumpfgasdrohne_Time = 0;
-		GTM_Minecrawler_Time = 0;
-		GTM_MinecrawlerWarrior_Time = 0;
-		GTSu_Sumpfhai_Time = 0;
-		GTS_Echsenschwert_Time = 0;
-		GTB_Assassinenschwert_Time = 0;
-		GTM_Schamanenaxt_Time = 0;
-		GGD_Sumpfgasdrohne_Time = 0;
-		GGD_Sumpfgolem_Time = 0;
-		GGD_Sumpfdrache_Time = 0;
-		GGD_Giftkrater_Time = 0;
-
-		if (BissDerFaeulnis_Stufe == 1)
-		{
-			// Alte Sachen wieder drauf addieren
-
-			hero.attribute[ATR_HITPOINTS_MAX] += BissDerFaeulnis_Stufe01_HP;
-			hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
-			hero.attribute[ATR_MANA_MAX] += BissDerFaeulnis_Stufe01_MANA;
-			hero.attribute[ATR_MANA] += BissDerFaeulnis_Stufe01_MANA;
-			hero.attribute[ATR_STRENGTH] += BissDerFaeulnis_Stufe01_STR;
-			hero.attribute[ATR_DEXTERITY] += BissDerFaeulnis_Stufe01_DEX;
-		};
-
-		if (BissDerFaeulnis_Stufe == 2)
-		{
-			// Alte Sachen wieder drauf addieren
-
-			hero.attribute[ATR_HITPOINTS_MAX] += BissDerFaeulnis_Stufe02_HP;
-			hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
-			hero.attribute[ATR_MANA_MAX] += BissDerFaeulnis_Stufe02_MANA;
-			hero.attribute[ATR_MANA] += BissDerFaeulnis_Stufe02_MANA;
-			hero.attribute[ATR_STRENGTH] += BissDerFaeulnis_Stufe02_STR;
-			hero.attribute[ATR_DEXTERITY] += BissDerFaeulnis_Stufe02_DEX;
-		};
-
-		if (BissDerFaeulnis_Stufe == 3)
-		{
-			// Alte Sachen wieder drauf addieren
-
-			hero.attribute[ATR_HITPOINTS_MAX] += BissDerFaeulnis_Stufe03_HP;
-			hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
-			hero.attribute[ATR_MANA_MAX] += BissDerFaeulnis_Stufe03_MANA;
-			hero.attribute[ATR_STRENGTH] += BissDerFaeulnis_Stufe03_STR;
-			hero.attribute[ATR_DEXTERITY] += BissDerFaeulnis_Stufe03_DEX;
-		};
-
-		if (HauchDerPestilenz_Stufe == 1)
-		{
-			// Alte Sachen wieder drauf addieren
-
-			hero.attribute[ATR_HITPOINTS_MAX] += HauchDerPestilenz_Stufe01_HP;
-			hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
-			hero.attribute[ATR_MANA_MAX] += HauchDerPestilenz_Stufe01_MANA;
-			hero.attribute[ATR_MANA] += HauchDerPestilenz_Stufe01_MANA;
-			hero.attribute[ATR_STRENGTH] += HauchDerPestilenz_Stufe01_STR;
-			hero.attribute[ATR_DEXTERITY] += HauchDerPestilenz_Stufe01_DEX;
-		};
-
-		if (HauchDerPestilenz_Stufe == 2)
-		{
-			// Alte Sachen wieder drauf addieren
-
-			hero.attribute[ATR_HITPOINTS_MAX] += HauchDerPestilenz_Stufe02_HP;
-			hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
-			hero.attribute[ATR_MANA_MAX] += HauchDerPestilenz_Stufe02_MANA;
-			hero.attribute[ATR_MANA] += HauchDerPestilenz_Stufe02_MANA;
-			hero.attribute[ATR_STRENGTH] += HauchDerPestilenz_Stufe02_STR;
-			hero.attribute[ATR_DEXTERITY] += HauchDerPestilenz_Stufe02_DEX;
-		};
-
-		if (HauchDerPestilenz_Stufe == 3)
-		{
-			// Alte Sachen wieder drauf addieren
-
-			hero.attribute[ATR_HITPOINTS_MAX] += HauchDerPestilenz_Stufe03_HP;
-			hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
-			hero.attribute[ATR_MANA_MAX] += HauchDerPestilenz_Stufe03_MANA;
-			hero.attribute[ATR_STRENGTH] += HauchDerPestilenz_Stufe03_STR;
-			hero.attribute[ATR_DEXTERITY] += HauchDerPestilenz_Stufe03_DEX;
-		};
-
-		BissDerFaeulnis_Stufe = 0;
-		BissDerFaeulnis_Time = 0;
-		HauchDerPestilenz_Stufe = 0;
-		HauchDerPestilenz_Time = 0;*/
 
 		B_HealGift	(-1, 5000);
 
