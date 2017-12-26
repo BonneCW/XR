@@ -6,3 +6,4 @@ Fixes:
 - Fixed wrong naming of Hanna's dubbing (German dubbing)
 - Added SVM subtitles and TTS dubbing (German dubbing) for missing voices
 - Akahash now talks to hero in monastery even though Daron talked to him first
+- Nagur doesn't talk to player about Akahasch anymore without him having the quest
