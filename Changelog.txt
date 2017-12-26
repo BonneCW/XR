@@ -1,5 +1,9 @@
 1.0.1
 
+Enhancements:
+
+- translated more parts for English translation
+
 Fixes:
 
 - Taking the focus at the troll without using the Prisma doesn't trigger log entry anymore
@@ -10,3 +14,4 @@ Fixes:
 - Mana and HP reg now work again as expected
 - Mana for Parlan is improved now and also takes previously learned mana into account
 - Quest "Mitternachtsspuk" works now
+- increased effect of sleep on diseases
