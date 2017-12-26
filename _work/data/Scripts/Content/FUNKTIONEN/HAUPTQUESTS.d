@@ -31,6 +31,7 @@ FUNC VOID HAUPTQUESTS()
 		if (Npc_HasItems(hero, ItMi_Focus_Troll) == 1)
 		&& (Mod_Fokus_Troll == 0)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_Fokusplatz))
+		&& (Mod_Prisma_TrollFokus)
 		{
 			Mod_Fokus_Troll = 1;
 

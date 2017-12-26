@@ -1,0 +1,5 @@
+1.0.1
+
+Fixes:
+
+- Taking the focus at the troll without using the Prisma doesn't trigger log entry anymore
