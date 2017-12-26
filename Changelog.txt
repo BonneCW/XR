@@ -16,3 +16,4 @@ Fixes:
 - Quest "Mitternachtsspuk" works now
 - increased effect of sleep on diseases
 - Giving Andokai the Holy Hammer without having spoken to Gorax now fails the wine quest
+- In case the player got somehow more than 3 potions from Pyrokar for Akil the dialog at Akil still is possible
