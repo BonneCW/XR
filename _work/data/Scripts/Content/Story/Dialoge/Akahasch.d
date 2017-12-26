@@ -122,7 +122,8 @@ INSTANCE Info_Mod_Akahasch_AtKloster (C_INFO)
 FUNC INT Info_Mod_Akahasch_AtKloster_Condition()
 {
 	if (Mod_Akahasch_Guiding == 1)
-	&& (Npc_GetDistToWP(hero, "NW_MONASTERY_ENTRY_01") < 500)
+	&& ((Npc_GetDistToWP(hero, "NW_MONASTERY_ENTRY_01") < 500)
+	|| (Npc_KnowsInfo(hero, Info_Mod_Daron_Akahasch2)))
 	{
 		return 1;
 	};
