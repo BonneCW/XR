@@ -19,6 +19,7 @@ General Fixes:
 - Giving Andokai the Holy Hammer without having spoken to Gorax now fails the wine quest
 - In case the player got somehow more than 3 potions from Pyrokar for Akil the dialog at Akil still is possible
 - improved position of third piece of the note in orctempel so it's readability is improved
+- added log entry after second dialog with Garvell about Fenia
 
 Fixes for Khorinis if not entered before:
 
