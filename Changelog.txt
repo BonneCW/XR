@@ -4,7 +4,7 @@ Enhancements:
 
 - translated more parts for English translation
 
-Fixes:
+General Fixes:
 
 - Taking the focus at the troll without using the Prisma doesn't trigger log entry anymore
 - Fixed wrong naming of Hanna's dubbing (German dubbing)
@@ -17,3 +17,11 @@ Fixes:
 - increased effect of sleep on diseases
 - Giving Andokai the Holy Hammer without having spoken to Gorax now fails the wine quest
 - In case the player got somehow more than 3 potions from Pyrokar for Akil the dialog at Akil still is possible
+
+Fixes for Khorinis if not entered before:
+
+- Made it harder to pass blockade in sewer of Khorinis
+
+Fixes for Valley of Mines if not entered before:
+
+- Added missing focus name for a chest in Beliar library
