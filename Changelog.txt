@@ -3,6 +3,7 @@
 Enhancements:
 
 - translated more parts for English translation
+- note pieces for secret chamber now are combined after collecting more than one of them
 
 General Fixes:
 
@@ -17,6 +18,7 @@ General Fixes:
 - increased effect of sleep on diseases
 - Giving Andokai the Holy Hammer without having spoken to Gorax now fails the wine quest
 - In case the player got somehow more than 3 potions from Pyrokar for Akil the dialog at Akil still is possible
+- improved position of third piece of the note in orctempel so it's readability is improved
 
 Fixes for Khorinis if not entered before:
 
