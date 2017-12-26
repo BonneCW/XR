@@ -15,3 +15,4 @@ Fixes:
 - Mana for Parlan is improved now and also takes previously learned mana into account
 - Quest "Mitternachtsspuk" works now
 - increased effect of sleep on diseases
+- Giving Andokai the Holy Hammer without having spoken to Gorax now fails the wine quest
