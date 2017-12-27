@@ -194,6 +194,7 @@ CONST STRING MOBNAME_Trinkfass		= "Trinkfass";
 CONST STRING MOBNAME_SANTINOSTRUHE	= "Santinos Truhe";
 CONST STRING MOBNAME_SOJA	= "Sojapflanze";
 CONST STRING MOBNAME_PRISMA	= "Prisma";
+CONST STRING MOBNAME_NAGURVERSTECK	= "Nagurs Versteck";
 
 // XR - Ladenschilder
 

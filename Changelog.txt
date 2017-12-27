@@ -9,6 +9,7 @@ General Fixes:
 Fixes for Khorinis if not entered before:
 
 - Made it harder to pass blockade in sewer of Khorinis
+- Nagur's hiding spot now has a focus name
 
 Fixes for Valley of Mines if not entered before:
 
