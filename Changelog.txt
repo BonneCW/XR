@@ -40,4 +40,6 @@ General Fixes:
 - added log entry after second dialog with Garvell about Fenia
 - Sherome shouldn't have human SVMs anymore
 - Sherome will be ignored by monsters on his way home
-- Effect of Ghost of a Shadow Warrior reduced to increase performance
+- Effect of Ghost of a Shadow Warrior reduced to increase performance (and reduce potential crash on low-end hardware)
+- German dubbing (normal and TTS) now work with English and Polish version of the mod
+- Deutsch Patch now enabled for English players
