@@ -38,4 +38,5 @@ General Fixes:
 - improved position of third piece of the note in orctempel so it's readability is improved
 - added log entry after second dialog with Garvell about Fenia
 - Sherome shouldn't have human SVMs anymore
-- Sherome wird auf seinem Heimweg jetzt von anderen Monstern ignoriert
+- Sherome will be ignored by monsters on his way home
+- Effect of Ghost of a Shadow Warrior reduced to increase performance
