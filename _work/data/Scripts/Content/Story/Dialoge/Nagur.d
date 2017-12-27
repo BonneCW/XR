@@ -11,8 +11,6 @@ INSTANCE Info_Mod_Nagur_Hi (C_INFO)
 FUNC INT Info_Mod_Nagur_Hi_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Daron_HabTrank))
-	|| (Mod_IstLehrling > 0)
-	|| (Npc_KnowsInfo(hero, Info_Mod_Ulf_WieGehts))
 	{
 		return 1;
 	};
@@ -27,10 +25,7 @@ FUNC VOID Info_Mod_Nagur_Hi_Info()
 	AI_Output(self, hero, "Info_Mod_Nagur_Hi_37_04"); //Wenn ihm nun irgendwas zustieße, würde ich demjenigen, der mir den Inhalt seiner Taschen bringt, großzügig entlohnen.
 	AI_Output(self, hero, "Info_Mod_Nagur_Hi_37_05"); //(zu sich selbst) Das wäre den anderen eine Warnung, lieber rechtzeitig ihre Schulden zu begleichen.
 
-	if (Npc_KnowsInfo(hero, Info_Mod_Daron_HabTrank))
-	{
-		B_LogEntry	(TOPIC_MOD_ASS_AUFNAHME, "Vermutlich ist Akahasch rauf in Richtung Leuchtturm. Er scheint Schulden zu haben. Nagur wünscht seinen Tod und bietet für den Inhalt seiner Taschen eine Belohnung.");
-	};
+	B_LogEntry	(TOPIC_MOD_ASS_AUFNAHME, "Vermutlich ist Akahasch rauf in Richtung Leuchtturm. Er scheint Schulden zu haben. Nagur wünscht seinen Tod und bietet für den Inhalt seiner Taschen eine Belohnung.");
 
 	Wld_InsertNpc	(Mod_4016_NOV_Akahasch_NW, "LIGHTHOUSE");
 };

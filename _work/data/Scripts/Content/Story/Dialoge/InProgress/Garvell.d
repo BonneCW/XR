@@ -235,6 +235,8 @@ FUNC VOID Info_Mod_Garvell_Fenia2_Info()
 	AI_Output(self, hero, "Info_Mod_Garvell_Fenia2_05_05"); //Wa...?
 
 	AI_StopProcessInfos	(self);
+	
+	B_LogEntry	(TOPIC_MOD_GARVELL_FENIA, "Jetzt sollte ich die Spruchrolle mal bei Garvell selbst anwenden...");
 };
 
 INSTANCE Info_Mod_Garvell_Fenia3 (C_INFO)

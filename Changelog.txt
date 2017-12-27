@@ -1,0 +1,43 @@
+1.0.2
+
+General Fixes:
+
+- Fixed wrong naming of Hanna's dubbing (German dubbing)
+- Added SVM subtitles and TTS dubbing (German dubbing) for missing voices
+- Fixed missing take of Garond (German dubbing)
+
+Fixes for Khorinis if not entered before:
+
+- Made it harder to pass blockade in sewer of Khorinis
+- Nagur's hiding spot now has a focus name
+
+Fixes for Valley of Mines if not entered before:
+
+- Added missing focus name for a chest in Beliar library
+
+
+
+1.0.1
+
+Enhancements:
+
+- translated more parts for English translation
+- note pieces for secret chamber now are combined after collecting more than one of them
+- added hint sound and sentence of hero when combination for switches for secret chamber in orctempel is reset
+
+General Fixes:
+
+- Taking the focus at the troll without using the Prisma doesn't trigger log entry anymore
+- Akahash now talks to hero in monastery even though Daron talked to him first
+- Nagur doesn't talk to player about Akahasch anymore without him having the quest
+- Mana and HP reg now work again as expected
+- Mana for Parlan is improved now and also takes previously learned mana into account
+- Quest "Mitternachtsspuk" works now
+- increased effect of sleep on diseases
+- Giving Andokai the Holy Hammer without having spoken to Gorax now fails the wine quest
+- In case the player got somehow more than 3 potions from Pyrokar for Akil the dialog at Akil still is possible
+- improved position of third piece of the note in orctempel so it's readability is improved
+- added log entry after second dialog with Garvell about Fenia
+- Sherome shouldn't have human SVMs anymore
+- Sherome will be ignored by monsters on his way home
+- Effect of Ghost of a Shadow Warrior reduced to increase performance

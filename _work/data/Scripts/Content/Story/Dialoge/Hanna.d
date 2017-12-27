@@ -17,7 +17,7 @@ FUNC INT Info_Mod_Hanna_Hi_Condition()
 FUNC VOID Info_Mod_Hanna_Hi_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hanna_Hi_15_00"); //Wo bin ich hier?
-	AI_Output(self, hero, "Info_Mod_Hanna_Hi_17_01"); //In meinem Rasthaus. Wenn du eine Bleibe für die Nacht suchst, bist du herzlich willkommen.
+	AI_Output(self, hero, "Info_Mod_Hanna_Hi_21_01"); //In meinem Rasthaus. Wenn du eine Bleibe für die Nacht suchst, bist du herzlich willkommen.
 };
 
 INSTANCE Info_Mod_Hanna_Preis (C_INFO)
@@ -43,11 +43,11 @@ FUNC INT Info_Mod_Hanna_Preis_Condition()
 FUNC VOID Info_Mod_Hanna_Preis_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hanna_Preis_15_00"); //Je nachdem. Wie viel verlangst du?
-	AI_Output(self, hero, "Info_Mod_Hanna_Preis_17_01"); //Hmm... Du bist der Neue aus dem Minental und hast sicher keine vollen Taschen.
-	AI_Output(self, hero, "Info_Mod_Hanna_Preis_17_02"); //Wenn du friedlich bist und ein freies Bett findest, kannst du meinetwegen kostenlos übernachten.
+	AI_Output(self, hero, "Info_Mod_Hanna_Preis_21_01"); //Hmm... Du bist der Neue aus dem Minental und hast sicher keine vollen Taschen.
+	AI_Output(self, hero, "Info_Mod_Hanna_Preis_21_02"); //Wenn du friedlich bist und ein freies Bett findest, kannst du meinetwegen kostenlos übernachten.
 	AI_Output(hero, self, "Info_Mod_Hanna_Preis_15_03"); //Das ist eine angenehme Überraschung. Davon hatte ich in letzter Zeit wenige.
-	AI_Output(self, hero, "Info_Mod_Hanna_Preis_17_04"); //Ich kann auch nur so großzügig sein, weil ich finanziell nicht von dem Rasthaus abhängig bin.
-	AI_Output(self, hero, "Info_Mod_Hanna_Preis_17_05"); //(hintergründig) Aber davon dann ein andermal vielleicht mehr...
+	AI_Output(self, hero, "Info_Mod_Hanna_Preis_21_04"); //Ich kann auch nur so großzügig sein, weil ich finanziell nicht von dem Rasthaus abhängig bin.
+	AI_Output(self, hero, "Info_Mod_Hanna_Preis_21_05"); //(hintergründig) Aber davon dann ein andermal vielleicht mehr...
 };
 
 INSTANCE Info_Mod_Hanna_Gaeste (C_INFO)
@@ -73,8 +73,8 @@ FUNC INT Info_Mod_Hanna_Gaeste_Condition()
 FUNC VOID Info_Mod_Hanna_Gaeste_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hanna_Gaeste_15_00"); //Wer übernachtet sonst noch hier?
-	AI_Output(self, hero, "Info_Mod_Hanna_Gaeste_17_01"); //Eigentlich jeder, der von außerhalb kommt und keine Lust hat, sich in der Roten Laterne zu verausgaben.
-	AI_Output(self, hero, "Info_Mod_Hanna_Gaeste_17_02"); //Es kommt aber trotzdem sehr selten vor, dass ich meine Kundschaft nicht kenne. Es sind doch immer wieder dieselben Gesichter, die abends mehr oder weniger betrunken an mir vorbeitorkeln.
+	AI_Output(self, hero, "Info_Mod_Hanna_Gaeste_21_01"); //Eigentlich jeder, der von außerhalb kommt und keine Lust hat, sich in der Roten Laterne zu verausgaben.
+	AI_Output(self, hero, "Info_Mod_Hanna_Gaeste_21_02"); //Es kommt aber trotzdem sehr selten vor, dass ich meine Kundschaft nicht kenne. Es sind doch immer wieder dieselben Gesichter, die abends mehr oder weniger betrunken an mir vorbeitorkeln.
 };
 
 INSTANCE Info_Mod_Hanna_Rasthaus (C_INFO)
@@ -100,8 +100,8 @@ FUNC INT Info_Mod_Hanna_Rasthaus_Condition()
 FUNC VOID Info_Mod_Hanna_Rasthaus_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hanna_Rasthaus_15_00"); //Dein Rasthaus? Hast du keinen Mann?
-	AI_Output(self, hero, "Info_Mod_Hanna_Rasthaus_17_01"); //(spöttisch) Ich nehme mal an, dass du aus einem hinterwäldlerischen Landstrich stammst, wenn du es nicht für eine Frechheit hältst, so etwas zu fragen.
-	AI_Output(self, hero, "Info_Mod_Hanna_Rasthaus_17_02"); //Ich komme sehr gut allein zurecht, und für den Notfall weiß ich, wie ich Hilfe organisieren kann. Und für kleinere Probleme tut's auch immer der Prügel.
+	AI_Output(self, hero, "Info_Mod_Hanna_Rasthaus_21_01"); //(spöttisch) Ich nehme mal an, dass du aus einem hinterwäldlerischen Landstrich stammst, wenn du es nicht für eine Frechheit hältst, so etwas zu fragen.
+	AI_Output(self, hero, "Info_Mod_Hanna_Rasthaus_21_02"); //Ich komme sehr gut allein zurecht, und für den Notfall weiß ich, wie ich Hilfe organisieren kann. Und für kleinere Probleme tut's auch immer der Prügel.
 };
 
 INSTANCE Info_Mod_Hanna_ThorbenLehrling (C_INFO)
@@ -125,11 +125,11 @@ FUNC INT Info_Mod_Hanna_ThorbenLehrling_Condition()
 
 FUNC VOID Info_Mod_Hanna_ThorbenLehrling_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Hanna_ThorbenLehrling_17_00"); //Hallo. Ich würde gern Thorben sprechen.
+	AI_Output(self, hero, "Info_Mod_Hanna_ThorbenLehrling_21_00"); //Hallo. Ich würde gern Thorben sprechen.
 	AI_Output(hero, self, "Info_Mod_Hanna_ThorbenLehrling_15_01"); //Ich vertrete ihn heute. Möchtest du ein Möbelstück in Auftrag geben?
-	AI_Output(self, hero, "Info_Mod_Hanna_ThorbenLehrling_17_02"); //Du vermutest richtig. Ein betrunkener Gast hat meine Kommode für einen nächtlichen Angreifer gehalten und mit dem Degen schwer beschädigt.
+	AI_Output(self, hero, "Info_Mod_Hanna_ThorbenLehrling_21_02"); //Du vermutest richtig. Ein betrunkener Gast hat meine Kommode für einen nächtlichen Angreifer gehalten und mit dem Degen schwer beschädigt.
 	AI_Output(hero, self, "Info_Mod_Hanna_ThorbenLehrling_15_03"); //Wir werden uns um die Reparatur kümmern.
-	AI_Output(self, hero, "Info_Mod_Hanna_ThorbenLehrling_17_04"); //Gut. Ich erwarte euch in meinem Haus.
+	AI_Output(self, hero, "Info_Mod_Hanna_ThorbenLehrling_21_04"); //Gut. Ich erwarte euch in meinem Haus.
 };
 
 INSTANCE Info_Mod_Hanna_Meldor (C_INFO)
@@ -152,15 +152,15 @@ FUNC INT Info_Mod_Hanna_Meldor_Condition()
 
 FUNC VOID Info_Mod_Hanna_Meldor_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Hanna_Meldor_17_00"); //Was kann ich für dich tun?
+	AI_Output(self, hero, "Info_Mod_Hanna_Meldor_21_00"); //Was kann ich für dich tun?
 	AI_Output(hero, self, "Info_Mod_Hanna_Meldor_15_01"); //Sumpfkrautmeldor schickt mich.
-	AI_Output(self, hero, "Info_Mod_Hanna_Meldor_17_02"); //Oh, ein Neuer, was?
+	AI_Output(self, hero, "Info_Mod_Hanna_Meldor_21_02"); //Oh, ein Neuer, was?
 	AI_Output(hero, self, "Info_Mod_Hanna_Meldor_15_03"); //Was seid ihr überhaupt?
-	AI_Output(self, hero, "Info_Mod_Hanna_Meldor_17_04"); //Hier, nimm diesen Schlüssel und geh durch die Kellertür.
+	AI_Output(self, hero, "Info_Mod_Hanna_Meldor_21_04"); //Hier, nimm diesen Schlüssel und geh durch die Kellertür.
 
 	B_GiveInvItems	(self, hero, ItKe_ThiefGuildKey_Hotel_MIS, 1);
 
-	AI_Output(self, hero, "Info_Mod_Hanna_Meldor_17_05"); //Dort wirst du deine Antwort finden.
+	AI_Output(self, hero, "Info_Mod_Hanna_Meldor_21_05"); //Dort wirst du deine Antwort finden.
 
 	B_LogEntry	(TOPIC_MOD_MELDOR_HANNA, "Hanna hat mir einen Schlüssel gegeben, der die Tür zu ihrem Keller öffnet. Ich bin gespannt, was mich dort unten erwartet.");
 };
@@ -187,9 +187,9 @@ FUNC INT Info_Mod_Hanna_Keller_Condition()
 FUNC VOID Info_Mod_Hanna_Keller_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Hanna_Keller_15_00"); //Es gibt Probleme.
-	AI_Output(self, hero, "Info_Mod_Hanna_Keller_17_01"); //Was ist passiert?
+	AI_Output(self, hero, "Info_Mod_Hanna_Keller_21_01"); //Was ist passiert?
 	AI_Output(hero, self, "Info_Mod_Hanna_Keller_15_02"); //Einer der Händler hat nachts festgestellt, dass mehrere Gestalten aus dem Keller gekommen sind. Passt besser auf.
-	AI_Output(self, hero, "Info_Mod_Hanna_Keller_17_03"); //Danke, werden wir machen.
+	AI_Output(self, hero, "Info_Mod_Hanna_Keller_21_03"); //Danke, werden wir machen.
 
 	B_LogEntry	(TOPIC_MOD_DIEB_ANDRE_HANNA, "Ich habe Hanna gewarnt. Hoffentlich kommt so etwas nicht mehr vor.");
 };
@@ -223,11 +223,11 @@ FUNC VOID Info_Mod_Hanna_Flugblaetter_Info()
 
 	B_GiveInvItems	(hero, self, MatteoFlugblaetter, 1);
 
-	AI_Output(self, hero, "Info_Mod_Hanna_Flugblaetter_17_01"); //Oh danke. Mal sehen ...
+	AI_Output(self, hero, "Info_Mod_Hanna_Flugblaetter_21_01"); //Oh danke. Mal sehen ...
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_Hanna_Flugblaetter_17_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
+	AI_Output(self, hero, "Info_Mod_Hanna_Flugblaetter_21_02"); //Ah ja. Vielleicht werd ich mal bei Matteo vorbeischauen.
 
 	Mod_Flugblaetter += 1;
 };

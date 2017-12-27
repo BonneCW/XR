@@ -287,6 +287,7 @@ INSTANCE Schaeferhund_Lobart_01	(Mst_Default_Wolf)
 	guild							=	GIL_SUMMONED_WOLF;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SCHAEFERHUND;
 	id = 7173;
+	voice = 44;
 	Npc_SetToFistMode(self);
 
 	daily_routine = Rtn_Start_7173;

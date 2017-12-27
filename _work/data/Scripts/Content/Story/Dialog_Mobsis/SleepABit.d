@@ -27,11 +27,11 @@ func void PC_Sleep (var int t)
 
 	if (BissDerFaeulnis_Time > 0)
 	{
-		BissDerFaeulnis_Time += 300;
+		BissDerFaeulnis_Time += 600;
 	};
 	if (HauchDerPestilenz_Time > 0)
 	{
-		HauchDerPestilenz_Time += 300;
+		HauchDerPestilenz_Time += 600;
 	};
 
 	B_HealGift	(0, 60);

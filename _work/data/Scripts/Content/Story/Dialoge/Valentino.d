@@ -118,7 +118,7 @@ FUNC INT Info_Mod_Valentino_Mitternachtsspuk_Condition()
 {
 	if (Mod_Fernando_Mitternachtsspuk == 1)
 	&& (Wld_IsTime(22,00,07,45))
-	&& (Npc_GetDistToWP(hero, "NW_CITY_UPTOWN_HUT_09_04") < 500)
+	&& (Npc_GetDistToWP(hero, "NW_CITY_UPTOWN_HUT_03_04") < 500)
 	{
 		return 1;
 	};

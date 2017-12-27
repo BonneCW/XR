@@ -31,6 +31,7 @@ FUNC VOID HAUPTQUESTS()
 		if (Npc_HasItems(hero, ItMi_Focus_Troll) == 1)
 		&& (Mod_Fokus_Troll == 0)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_Fokusplatz))
+		&& (Mod_Prisma_TrollFokus)
 		{
 			Mod_Fokus_Troll = 1;
 
@@ -1802,6 +1803,56 @@ FUNC VOID HAUPTQUESTS()
 		&& (TooLessMana == 1)
 		{
 			OTTeleportScene();
+		};
+		
+		// Merge pieces of the note for the secret chamber
+		
+		if (Npc_HasItems(hero, ItWr_OTGeheimkammer01) == 1)
+		&& (Npc_HasItems(hero, ItWr_OTGeheimkammer02) == 1) {
+			CreateInvItems(hero, ItWr_OTGeheimkammer05, 1);
+			
+			Npc_RemoveInvItems(hero, ItWr_OTGeheimkammer01, 1);
+			Npc_RemoveInvItems(hero, ItWr_OTGeheimkammer02, 1);
+		};
+		
+		if (Npc_HasItems(hero, ItWr_OTGeheimkammer01) == 1)
+		&& (Npc_HasItems(hero, ItWr_OTGeheimkammer03) == 1) {
+			CreateInvItems(hero, ItWr_OTGeheimkammer06, 1);
+			
+			Npc_RemoveInvItems(hero, ItWr_OTGeheimkammer01, 1);
+			Npc_RemoveInvItems(hero, ItWr_OTGeheimkammer03, 1);
+		};
+		
+		if (Npc_HasItems(hero, ItWr_OTGeheimkammer02) == 1)
+		&& (Npc_HasItems(hero, ItWr_OTGeheimkammer03) == 1) {
+			CreateInvItems(hero, ItWr_OTGeheimkammer07, 1);
+			
+			Npc_RemoveInvItems(hero, ItWr_OTGeheimkammer02, 1);
+			Npc_RemoveInvItems(hero, ItWr_OTGeheimkammer03, 1);
+		};
+		
+		if (Npc_HasItems(hero, ItWr_OTGeheimkammer01) == 1)
+		&& (Npc_HasItems(hero, ItWr_OTGeheimkammer07) == 1) {
+			CreateInvItems(hero, ItWr_OTGeheimkammer08, 1);
+			
+			Npc_RemoveInvItems(hero, ItWr_OTGeheimkammer01, 1);
+			Npc_RemoveInvItems(hero, ItWr_OTGeheimkammer07, 1);
+		};
+		
+		if (Npc_HasItems(hero, ItWr_OTGeheimkammer02) == 1)
+		&& (Npc_HasItems(hero, ItWr_OTGeheimkammer06) == 1) {
+			CreateInvItems(hero, ItWr_OTGeheimkammer08, 1);
+			
+			Npc_RemoveInvItems(hero, ItWr_OTGeheimkammer02, 1);
+			Npc_RemoveInvItems(hero, ItWr_OTGeheimkammer06, 1);
+		};
+		
+		if (Npc_HasItems(hero, ItWr_OTGeheimkammer03) == 1)
+		&& (Npc_HasItems(hero, ItWr_OTGeheimkammer05) == 1) {
+			CreateInvItems(hero, ItWr_OTGeheimkammer08, 1);
+			
+			Npc_RemoveInvItems(hero, ItWr_OTGeheimkammer03, 1);
+			Npc_RemoveInvItems(hero, ItWr_OTGeheimkammer05, 1);
 		};
 	};
 

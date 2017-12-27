@@ -17009,7 +17009,7 @@ INSTANCE UNDEAD_SKELETON (C_PARTICLEFX)
      shpscalefps = 2;
      dirmode_s = "NONE";
      velavg = 9.99999996e-012;
-     lsppartavg = 5000;
+     lsppartavg = 1000;
      flygravity_s = "0 0.000 0";
      visname_s = "DESTROYUNDEAD3.TGA";
      visorientation_s = "VELO";

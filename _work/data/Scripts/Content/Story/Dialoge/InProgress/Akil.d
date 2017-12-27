@@ -62,7 +62,7 @@ FUNC INT Info_Mod_Akil_Heilung_Condition()
 
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Akil_Hi))
-	&& (Npc_HasItems(hero, ItPo_HealBesessenheit) == 3)
+	&& (Npc_HasItems(hero, ItPo_HealBesessenheit) >= 3)
 	{
 		return 1;
 	};
