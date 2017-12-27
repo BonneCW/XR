@@ -14573,10 +14573,15 @@ instance SVM_43 (C_SVM)
 	PICKPOCKET_HERAUSREDEN_01	=	"SVM_43_PICKPOCKET_HERAUSREDEN_01";	//Da hab ich mich wohl geirrt ...
 	PICKPOCKET_HERAUSREDEN_02	=	"SVM_43_PICKPOCKET_HERAUSREDEN_02";	//Du warst doch eindeutig an meiner Tasche ...
 };
+
+// Just for monsters without SVMs
+
+instance SVM_44 (C_SVM) {
+};
  
 
 // ***********************
 // 		Maximale SVMs
 // ***********************
 
-CONST INT SVM_MODULES =	44;
+CONST INT SVM_MODULES =	45;
