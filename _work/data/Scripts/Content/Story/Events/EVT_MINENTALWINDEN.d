@@ -274,13 +274,14 @@ FUNC VOID OTSCHALTER01_S1()
 	|| (Mod_OTSchalter == 4)
 	|| (Mod_OTSchalter == 8)
 	|| (Mod_OTSchalter == 11)
-	|| (Mod_OTSchalter == 12)
-	{
+	|| (Mod_OTSchalter == 12) {
 		Mod_OTSchalter += 1;
-	}
-	else
-	{
+	} else {
 		Mod_OTSchalter = 0;
+
+		Snd_Play	("TOUCHPLATE_STONE_BIG");
+
+		B_Say	(hero, NULL, "$PICKLOCKBROKEN");
 	};
 };
 
@@ -294,8 +295,7 @@ FUNC VOID OTSCHALTER02_S1()
 	|| (Mod_OTSchalter == 10)
 	|| (Mod_OTSchalter == 13)
 	|| (Mod_OTSchalter == 14)
-	|| (Mod_OTSchalter == 15)
-	{
+	|| (Mod_OTSchalter == 15) {
 		Mod_OTSchalter += 1;
 
 		if (Mod_OTSchalter == 16)
@@ -304,10 +304,12 @@ FUNC VOID OTSCHALTER02_S1()
 
 			Snd_Play	("THRILLJINGLE_01");
 		};
-	}
-	else
-	{
+	} else {
 		Mod_OTSchalter = 0;
+
+		Snd_Play	("TOUCHPLATE_STONE_BIG");
+
+		B_Say	(hero, NULL, "$PICKLOCKBROKEN");
 	};
 };
 

@@ -4,6 +4,7 @@ General Fixes:
 
 - Fixed wrong naming of Hanna's dubbing (German dubbing)
 - Added SVM subtitles and TTS dubbing (German dubbing) for missing voices
+- Fixed missing take of Garond (German dubbing)
 
 Fixes for Khorinis if not entered before:
 
@@ -21,6 +22,7 @@ Enhancements:
 
 - translated more parts for English translation
 - note pieces for secret chamber now are combined after collecting more than one of them
+- added hint sound and sentence of hero when combination for switches for secret chamber in orctempel is reset
 
 General Fixes:
 
