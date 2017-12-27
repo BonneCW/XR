@@ -5,6 +5,7 @@ General Fixes:
 - Fixed wrong naming of Hanna's dubbing (German dubbing)
 - Added SVM subtitles and TTS dubbing (German dubbing) for missing voices
 - Fixed missing take of Garond (German dubbing)
+- Switched SVM and take for picklock failure and broken picklock
 
 Fixes for Khorinis if not entered before:
 

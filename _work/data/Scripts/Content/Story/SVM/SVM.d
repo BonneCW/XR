@@ -6397,8 +6397,8 @@ INSTANCE SVM_15	(C_SVM)		//	PLAYER	trocken,ernst
 
 	// Schlösser knacken
 
-	PICKLOCKFAILURE	=	"SVM_15_PICKLOCKFAILURE";	//Mist, der ist abgebrochen ...
-	PICKLOCKBROKEN	=	"SVM_15_PICKLOCKBROKEN";	//Mist ... wieder von vorne.
+	PICKLOCKFAILURE	=	"SVM_15_PICKLOCKFAILURE";	//Mist ... wieder von vorne.
+	PICKLOCKBROKEN	=	"SVM_15_PICKLOCKBROKEN";	//Mist, der ist abgebrochen ...
 
 	// Bücher nicht lesen können
 
