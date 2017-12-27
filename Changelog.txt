@@ -1,3 +1,20 @@
+1.0.2
+
+General Fixes:
+
+- Fixed wrong naming of Hanna's dubbing (German dubbing)
+- Added SVM subtitles and TTS dubbing (German dubbing) for missing voices
+
+Fixes for Khorinis if not entered before:
+
+- Made it harder to pass blockade in sewer of Khorinis
+
+Fixes for Valley of Mines if not entered before:
+
+- Added missing focus name for a chest in Beliar library
+
+
+
 1.0.1
 
 Enhancements:
@@ -8,8 +25,6 @@ Enhancements:
 General Fixes:
 
 - Taking the focus at the troll without using the Prisma doesn't trigger log entry anymore
-- Fixed wrong naming of Hanna's dubbing (German dubbing)
-- Added SVM subtitles and TTS dubbing (German dubbing) for missing voices
 - Akahash now talks to hero in monastery even though Daron talked to him first
 - Nagur doesn't talk to player about Akahasch anymore without him having the quest
 - Mana and HP reg now work again as expected
@@ -20,11 +35,5 @@ General Fixes:
 - In case the player got somehow more than 3 potions from Pyrokar for Akil the dialog at Akil still is possible
 - improved position of third piece of the note in orctempel so it's readability is improved
 - added log entry after second dialog with Garvell about Fenia
-
-Fixes for Khorinis if not entered before:
-
-- Made it harder to pass blockade in sewer of Khorinis
-
-Fixes for Valley of Mines if not entered before:
-
-- Added missing focus name for a chest in Beliar library
+- Sherome shouldn't have human SVMs anymore
+- Sherome wird auf seinem Heimweg jetzt von anderen Monstern ignoriert

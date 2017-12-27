@@ -175,6 +175,14 @@ func void B_MM_AssessEnemy ()
 		{
 			return;
 		};
+
+		// Sherome should be ignored by monsters on his way home
+		if ((Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Schaeferhund_Lobart_01))
+		|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Schaeferhund_Lobart_01)))
+		&& (Npc_KnowsInfo(hero, Info_Mod_Schaeferhund_Lobart_Hi))
+		&& (!Npc_KnowsInfo(hero, Info_Mod_Lobart_SheromeDa)) {
+			return;
+		};
 	};
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Minenzwerg_01))
