@@ -32,6 +32,8 @@ General Fixes:
 - Fixed lost effects at map origin
 - Constantinos ingredients list now ends up correctly in log when reading it
 - Monsters now can't output SVMs anymore
+- tweaked Ghost of Shadow Warrior effect a little more
+- fixed wrong text when mining skill is raised
 
 
 

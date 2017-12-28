@@ -10145,7 +10145,7 @@ INSTANCE SPELLFX_DRAGONEYE_RIGHT(CFX_BASE_PROTO)
      emtrjnumkeys		= 10;
      emtrjloopmode_s		= "NONE";
      emtrjeasefunc_s		= "LINEAR";
-     emtrjdynupdatedelay	= 2000000;
+     emtrjdynupdatedelay	= 2000;
      emfxlifespan		= -1;
      emselfrotvel_s		= "0 0 0";
      secsperdamage		= -1;

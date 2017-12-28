@@ -1253,7 +1253,7 @@ const string DIALOG_ADDON_ATTENTAT_CONTRA 			= "Ich suche diese Typen, um gegen 
 const string DIALOG_ADDON_MINE_DESCRIPTION			= "Du wirst in der Mine gebraucht. (Roten Stein geben)";
 const string DIALOG_ADDON_GOLD_DESCRIPTION			= "Was muss ich über's Goldhacken wissen?";
 const string PRINT_ADDON_KNOWSBF					= "Wissen über Stachelgift gelernt";	
-const string PRINT_ADDON_HACKCHANCE					= "Wissen über Goldhacken gesteigert! (+ ";		
+const string PRINT_ADDON_HACKCHANCE					= "Wissen über Bergbau gesteigert! (+ ";		
 const string PRINT_ADDON_STUNTBONUS					= "Stunt Bonus";
 const string PRINT_ADDON_EXPLOITBONUS				= "Exploit Malus";	
 	
