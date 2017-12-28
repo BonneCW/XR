@@ -1,4 +1,4 @@
-1.0.2
+Future bigger update
 
 Enhancements:
 
@@ -10,9 +10,6 @@ General Fixes:
 - Added SVM subtitles and TTS dubbing (German dubbing) for missing voices
 - Fixed missing take of Garond (German dubbing)
 - Switched SVM and take for picklock failure and broken picklock
-- Bartok now gives the hero gold for his swamp herb instead of vice versa
-- HP regeneration really works now as expected
-- Fixed lost effects at map origin
 
 Fixes for Khorinis if not entered before:
 
@@ -22,6 +19,18 @@ Fixes for Khorinis if not entered before:
 Fixes for Valley of Mines if not entered before:
 
 - Added missing focus name for a chest in Beliar library
+
+
+
+1.0.2
+
+General Fixes:
+
+- Switched SVM and take for picklock failure and broken picklock
+- Bartok now gives the hero gold for his swamp herb instead of vice versa
+- HP regeneration really works now as expected
+- Fixed lost effects at map origin
+- Constantinos ingredients list now ends up correctly in log when reading it
 
 
 
