@@ -316,7 +316,7 @@ INSTANCE Info_Mod_Lester_REL_AtTroll (C_INFO)
 	nr		= 1;
 	condition	= Info_Mod_Lester_REL_AtTroll_Condition;
 	information	= Info_Mod_Lester_REL_AtTroll_Info;
-	permanent	= 1;
+	permanent	= 0;
 	important	= 1;
 };
 
@@ -345,7 +345,7 @@ INSTANCE Info_Mod_Lester_REL_AtTroll2 (C_INFO)
 	nr		= 1;
 	condition	= Info_Mod_Lester_REL_AtTroll2_Condition;
 	information	= Info_Mod_Lester_REL_AtTroll2_Info;
-	permanent	= 1;
+	permanent	= 0;
 	important	= 1;
 };
 

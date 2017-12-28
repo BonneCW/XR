@@ -39,6 +39,7 @@ General Fixes:
 - tweaked Ghost of Shadow Warrior effect a little more
 - fixed wrong text when mining skill is raised
 - Serpentes' wine thief quest improved by better log entries and better acting of the thief
+- Lester's dialog at the troll in Relendel isn't permanent anymore
 
 
 
