@@ -10,15 +10,16 @@ FUNC VOID PerkSchleife()
 	&& (!Npc_IsDead(hero)) {
 		HP_Reg = ((hero.attribute[ATR_STRENGTH] + hero.attribute[ATR_DEXTERITY]) * hero.level);
 
-		HP_Reg = HP_Reg / 8000;
+		var int dividedHPReg;
+		dividedHPReg = HP_Reg / 8000;
 
-		if (HP_Reg < 1) {
+		if (dividedHPReg < 1) {
 			HP_Reg = max(1, HP_Reg);
 			if (TimeCounter_Real % (8000 / HP_Reg) == 0) {
 				hero.attribute[ATR_HITPOINTS] += 1;
 			};
 		} else {
-			hero.attribute[ATR_HITPOINTS] += HP_Reg;
+			hero.attribute[ATR_HITPOINTS] += dividedHPReg;
 		};
 
 		hero.aivar[AIV_Damage] = hero.attribute[ATR_HITPOINTS];
@@ -35,13 +36,15 @@ FUNC VOID PerkSchleife()
 	&& (hero.attribute[ATR_MANA] < hero.attribute[ATR_MANA_MAX]) {
 		Mana_Reg = hero.attribute[ATR_MANA_MAX]*((hero.level));
 
-		if (Mana_Reg / 8000 < 1) {
+		var int dividedManaReg;
+		dividedManaReg = Mana_Reg / 8000;
+		if (dividedManaReg < 1) {
 			Mana_Reg = max(1, Mana_Reg);
 			if (TimeCounter_Real % (8000 / Mana_Reg) == 0) {
 				hero.attribute[ATR_MANA] += 1;
 			};
 		} else {
-			hero.attribute[ATR_MANA] += Mana_Reg / 8000;
+			hero.attribute[ATR_MANA] += dividedManaReg;
 		};
 
 		if (hero.attribute[ATR_MANA] > hero.attribute[ATR_MANA_MAX]) {
