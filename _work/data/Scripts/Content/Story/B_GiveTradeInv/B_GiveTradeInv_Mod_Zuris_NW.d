@@ -55,6 +55,7 @@ FUNC VOID B_GiveTradeInv_Mod_Zuris_NW (var C_NPC slf)
 		CreateInvItems (slf,ItAm_Hp_Mana_01 ,1);
 		CreateInvItems   (slf, ItPo_Gegengift,		2);
 		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
+		CreateInvItems	(slf, ItPl_Heilknospe, 3);
 			
 		Zuris_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -73,6 +74,7 @@ FUNC VOID B_GiveTradeInv_Mod_Zuris_NW (var C_NPC slf)
 		CreateInvItems (slf,ItPo_Perm_Str, 1); 
 		CreateInvItems   (slf, ItPo_Gegengift,		2);
 		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
+		CreateInvItems	(slf, ItPl_Heilknospe, 3);
 		
 		Zuris_ItemsGiven_Chapter_2 = TRUE;
 	};	

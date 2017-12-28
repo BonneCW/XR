@@ -59,6 +59,7 @@ FUNC VOID B_GiveTradeInv_Mod_Ignaz_NW (var C_NPC slf)
 		CreateInvItems	(slf, ItWr_Scroll_Skull, 1);	
 		CreateInvItems	(slf, ItWr_Scroll_BreathOfDeath, 1);	
 		CreateInvItems	(slf, ItWr_Paper, 15);	
+		CreateInvItems	(slf, ItPo_Gift, 1);
 		
 		// ------ Scrolls ------
 		CreateInvItems (slf,ITSC_Charm			,5);
@@ -131,6 +132,7 @@ FUNC VOID B_GiveTradeInv_Mod_Ignaz_NW (var C_NPC slf)
 		CreateInvItems	(slf, ItWr_Scroll_Skull, 1);	
 		CreateInvItems	(slf, ItWr_Scroll_BreathOfDeath, 1);	
 		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
+		CreateInvItems	(slf, ItPo_Gift, 1);
 		
 		Ignaz_ItemsGiven_Chapter_2 = TRUE;
 	};	

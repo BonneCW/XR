@@ -34,6 +34,7 @@ General Fixes:
 - Monsters now can't output SVMs anymore
 - tweaked Ghost of Shadow Warrior effect a little more
 - fixed wrong text when mining skill is raised
+- some traders now have also poisons and healing buds to make some quests easier
 
 
 

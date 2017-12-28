@@ -37,6 +37,8 @@ FUNC VOID B_GiveTradeInv_Mod_Sagitta_NW (var C_NPC slf)
 		
 		CreateInvItems (slf,ItFo_Addon_Pfeffer_01,1);//FÜR Mission fortuno
 		CreateInvItems	(slf, ItPl_Zwillingsdorn, 1);
+		CreateInvItems	(slf, ItPo_Gift, 1);
+		CreateInvItems	(slf, ItPl_Heilknospe, 3);
 
 		Sagitta_ItemsGiven_Chapter_1 = TRUE;
 	};

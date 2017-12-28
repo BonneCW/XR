@@ -20,6 +20,7 @@ FUNC VOID B_GiveTradeInv_Mod_Erol_NW (var C_NPC slf)
 		CreateInvItems (slf,ItMi_DarkPearl, 1); 
 		CreateInvItems (slf,ItMi_BeliarStatue, 1); 
 		CreateInvItems (slf,ItMi_RuneBlank, 1); 
+		CreateInvItems	(slf, ItPo_Gift, 1);
 		
 		
 		CreateInvItems (slf, ItAm_Hast, 1);
@@ -47,6 +48,7 @@ FUNC VOID B_GiveTradeInv_Mod_Erol_NW (var C_NPC slf)
 		CreateInvItems (slf,ItPl_Mana_Herb_02 , 3);
 		CreateInvItems (slf,ItPl_Health_Herb_02, 3); 
 		CreateInvItems (slf,ItPl_Temp_Herb, 2); 
+		CreateInvItems	(slf, ItPo_Gift, 1);
 
 		Erol_ItemsGiven_Chapter_2 = TRUE;
 	};
