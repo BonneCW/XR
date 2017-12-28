@@ -166,6 +166,8 @@ FUNC VOID Info_Mod_Friedel_Wettstreit2_Info()
 		B_GiveInvItems	(self, hero, ItMi_Gold, 100);
 
 		Mod_REL_Wettstreit = 3;
+		
+		B_LogEntry	(TOPIC_MOD_KHORATA_WETTSTREIT, "Ich habe meine Belohnung abgeholt. Dann kann ich jetzt wohl zurück zu Lukas.");
 	}
 	else
 	{

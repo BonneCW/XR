@@ -40,6 +40,7 @@ General Fixes:
 - fixed wrong text when mining skill is raised
 - Serpentes' wine thief quest improved by better log entries and better acting of the thief
 - Lester's dialog at the troll in Relendel isn't permanent anymore
+- added missing log entry at Friedel after competition so player knows that he has to go to Lukas again
 
 
 
