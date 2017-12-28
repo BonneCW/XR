@@ -151,15 +151,15 @@ FUNC VOID Info_Mod_Borka_Umgehauen_Info()
 	{
 		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
-			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_04_00"); //Mannomann! Du hast ja 'nen ganz schönen Schlag drauf.
+			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_42_00"); //Mannomann! Du hast ja 'nen ganz schönen Schlag drauf.
 			AI_Output(hero, self, "Info_Mod_Borka_Umgehauen_15_02"); //Willst du mir jetzt sagen, wer dich schickt?
-			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_04_03"); //Ist ja schon gut, keine Aufregung. Bromor schickt mich, er will, dass wir euren Laden zertrümmern und Geld von euch kassieren.
+			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_42_03"); //Ist ja schon gut, keine Aufregung. Bromor schickt mich, er will, dass wir euren Laden zertrümmern und Geld von euch kassieren.
 			AI_Output(hero, self, "Info_Mod_Borka_Umgehauen_15_04"); //Warum will er das?
-			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_04_05"); //Er mag die Sträflinge nicht und will sie deshalb nicht hier im Hafenviertel haben.
+			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_42_05"); //Er mag die Sträflinge nicht und will sie deshalb nicht hier im Hafenviertel haben.
 			AI_Output(hero, self, "Info_Mod_Borka_Umgehauen_15_06"); //So, das wird Lord Andre sicher interessieren.
-			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_04_07"); //Die Stadtwache interessiert sich nicht für eure Probleme.
+			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_42_07"); //Die Stadtwache interessiert sich nicht für eure Probleme.
 			AI_Output(hero, self, "Info_Mod_Borka_Umgehauen_15_08"); //Gut, dann weiß ich, was ich wissen wollte. Und jetzt verschwinde, bevor du noch eine aufs Maul bekommst.
-			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_04_09"); //Schon gut, schon gut, ich bin schon weg.
+			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_42_09"); //Schon gut, schon gut, ich bin schon weg.
 
 			AI_StopProcessInfos	(self);
 
@@ -171,7 +171,7 @@ FUNC VOID Info_Mod_Borka_Umgehauen_Info()
 		}
 		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
-			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_04_01"); //Tja, das war wohl nichts.
+			AI_Output(self, hero, "Info_Mod_Borka_Umgehauen_42_01"); //Tja, das war wohl nichts.
 
 			AI_StopProcessInfos	(self);
 
@@ -239,12 +239,12 @@ FUNC INT Info_Mod_Borka_Skinner_Condition()
 FUNC VOID Info_Mod_Borka_Skinner_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Borka_Skinner_15_00"); //Hast du Interesse an ein paar grünen Novizen?
-	AI_Output(self, hero, "Info_Mod_Borka_Skinner_07_01"); //Klar, ich nehm alles was du hast.
+	AI_Output(self, hero, "Info_Mod_Borka_Skinner_42_01"); //Klar, ich nehm alles was du hast.
 	AI_Output(hero, self, "Info_Mod_Borka_Skinner_15_02"); //Hier, nimm.
 
 	B_GiveInvItems	(hero, self, ItMi_Addon_Joint_01, Npc_HasItems(hero, ItMi_Addon_Joint_01));
 
-	AI_Output(self, hero, "Info_Mod_Borka_Skinner_07_03"); //Hier dein Gold.
+	AI_Output(self, hero, "Info_Mod_Borka_Skinner_42_03"); //Hier dein Gold.
 
 	B_GiveInvItems	(self, hero, ItMi_Gold, Npc_HasItems(self, ItMi_Addon_Joint_01)*20);
 
