@@ -24,6 +24,10 @@ Fixes for Valley of Mines if not entered before:
 
 1.0.2
 
+Enhancements:
+
+- some traders now have also poisons and healing buds to make some quests easier
+
 General Fixes:
 
 - Switched SVM and take for picklock failure and broken picklock
@@ -34,7 +38,7 @@ General Fixes:
 - Monsters now can't output SVMs anymore
 - tweaked Ghost of Shadow Warrior effect a little more
 - fixed wrong text when mining skill is raised
-- some traders now have also poisons and healing buds to make some quests easier
+- Serpentes' wine thief quest improved by better log entries and better acting of the thief
 
 
 

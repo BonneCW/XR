@@ -51,6 +51,8 @@ FUNC VOID Info_Mod_SchwarzerNovize_Weindieb_Hi_C()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "TOT");
+	
+	B_LogEntry	(TOPIC_MOD_SERPENTES_WEINDIEBE, "Ich hab den Wein und den Dieb laufen lassen. Das sollte Serpentes genügen.");
 };
 
 FUNC VOID Info_Mod_SchwarzerNovize_Weindieb_Hi_B()
@@ -63,6 +65,8 @@ FUNC VOID Info_Mod_SchwarzerNovize_Weindieb_Hi_B()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "FLUCHT");
+	
+	B_LogEntry	(TOPIC_MOD_SERPENTES_WEINDIEBE, "Der Weindieb versucht sich aus dem Staub zu machen. Den mach ich kalt!");
 };
 
 FUNC VOID Info_Mod_SchwarzerNovize_Weindieb_Hi_A()
@@ -75,6 +79,8 @@ FUNC VOID Info_Mod_SchwarzerNovize_Weindieb_Hi_A()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "FLUCHT");
+	
+	B_LogEntry	(TOPIC_MOD_SERPENTES_WEINDIEBE, "Der Weindieb versucht sich aus dem Staub zu machen. Den mach ich kalt!");
 };
 
 INSTANCE Info_Mod_SchwarzerNovize_Weindieb_EXIT (C_INFO)

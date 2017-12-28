@@ -660,6 +660,18 @@ FUNC VOID GILDENSTORY_FM()
 
 			B_StartOtherRoutine	(Mod_918_KDF_Hyglas_NW, "PREDIGER");
 		};
+		
+		// Weindiebe
+		
+		if (Npc_KnowsInfo(hero, Info_Mod_SchwarzerNovize_Weindieb_Hi))
+		&& (Hlp_IsValidNpc(Mod_7761_SNOV_Novize_NW)) {
+			if (Npc_HasItems(Mod_7761_SNOV_Novize_NW, ItFo_KWine) > 0)
+			&& (Mod_7761_SNOV_Novize_NW.guild == GIL_OUT)
+			&& (Npc_GetDistToWP(Mod_7761_SNOV_Novize_NW, "NW_PATH_TO_MONASTERY_01_02") > 10000) {
+				Mod_7761_SNOV_Novize_NW.guild = GIL_STRF;
+				Npc_SetTrueGuild(Mod_7761_SNOV_Novize_NW, GIL_STRF);
+			};
+		};
 	};
 
 	if (CurrentLevel == EISGEBIET_ZEN)
