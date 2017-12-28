@@ -128,6 +128,8 @@ func void INIT_GLOBAL()
 	Mod_LastLoaded = TimeCounter_Real;
 	
 	MG_WaitingForMatch = FALSE;
+	
+	RemoveWrongEffects();
 };
 
 FUNC VOID OldLevel(var int newlevel)
