@@ -1,11 +1,16 @@
 1.0.2
 
+Enhancements:
+
+- Added takes for: Bengar, Mine Guard (King's Guard), Court Bouncer, Garvell
+
 General Fixes:
 
 - Fixed wrong naming of Hanna's dubbing (German dubbing)
 - Added SVM subtitles and TTS dubbing (German dubbing) for missing voices
 - Fixed missing take of Garond (German dubbing)
 - Switched SVM and take for picklock failure and broken picklock
+- Bartok now gives the hero gold for his swamp herb instead of vice versa
 
 Fixes for Khorinis if not entered before:
 
