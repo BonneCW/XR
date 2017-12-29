@@ -33,8 +33,19 @@ func int GFA_GetUsedProjectileInstance(var int projectileInst, var C_Npc shooter
     var string instanceName; instanceName = MEM_ReadString(MEM_GetSymbolByIndex(projectileInst));
     if (Hlp_StrCmp(instanceName, "ITRW_ADDON_MAGICARROW")) // Strings for Gothic 1 compatibility
     || (Hlp_StrCmp(instanceName, "ITRW_ADDON_FIREARROW"))
-    || (Hlp_StrCmp(instanceName, "ITRW_ADDON_MAGICBOLT")) {
+    || (Hlp_StrCmp(instanceName, "ITRW_ADDON_MAGICBOLT"))
+    || (Hlp_StrCmp(instanceName, "ITRW_ADDON_ICEARROW"))
+    || (Hlp_StrCmp(instanceName, "ITRW_ADDON_FIREBOLT"))
+    || (Hlp_StrCmp(instanceName, "ITRW_ADDON_ICEBOLT")) {
         return 0;
+    };
+	
+	if (projectileInst == ITRW_TIERGIFTARROW)
+    || (projectileInst == ITRW_GEWAECHSGIFTARROW) {
+        projectileInst = ItRw_Arrow;
+    } else if (projectileInst == ITRW_TIERGIFTBOLT)
+    || (projectileInst == ITRW_GEWAECHSGIFTBOLT) {
+        projectileInst = ItRw_Bolt;
     };
 
     if (Hlp_IsValidNpc(inventoryNpc)) {
@@ -73,10 +84,33 @@ func int GFA_GetUsedProjectileInstance(var int projectileInst, var C_Npc shooter
         if (Hlp_Random(100) < 50) {
             return 0;
         }; */
+		
+		if (r_max(99) < 60) {
+			if (projectileInst == ITRW_ARROW)
+			|| (projectileInst == ITRW_SCHMETTERARROW)
+			|| (projectileInst == ITRW_WIDERHAKENARROW)
+			|| (projectileInst == ITRW_PRAEZISIONSARROW)
+			|| (projectileInst == ITRW_HOLYARROW)
+			|| (projectileInst == ITRW_GOLDERZARROW)
+			|| (projectileInst == ITRW_GOLDERZBLUTARROW) {
+				projectileInst = PfeilSpitze;
+			} else if (projectileInst == ITRW_BOLT)
+			|| (projectileInst == ITRW_SCHMETTERBOLT)
+			|| (projectileInst == ITRW_WIDERHAKENBOLT)
+			|| (projectileInst == ITRW_PRAEZISIONSBOLT)
+			|| (projectileInst == ITRW_HOLYBOLT)
+			|| (projectileInst == ITRW_GOLDERZBOLT)
+			|| (projectileInst == ITRW_GOLDERZBLUTBOLT) {
+				projectileInst = BolzenSpitze;
+			} else {
+				return 0;
+			};
+		} else {
+			return 0;
+		};
 
         // For now it is just preserved (is put in the inventory as is)
         return projectileInst;
-
     } else {
         // Projectile did not hit NPC, but landed in world
 
@@ -87,10 +121,40 @@ func int GFA_GetUsedProjectileInstance(var int projectileInst, var C_Npc shooter
         }; */
 
         // Do not accumulate too many projectiles from NPC shooters to prevent exploit of getting projectiles for free
-        if (!Npc_IsPlayer(shooter)) && (Hlp_Random(100) < 80) {
+        if (!Npc_IsPlayer(shooter)) && (r_max(99) < 80) {
             // Remove projectile 80% of the time
             return 0;
         };
+		
+		if (r_max(99) < 50) {
+			if (projectileInst == ITRW_ARROW)
+			|| (projectileInst == ITRW_SCHMETTERARROW)
+			|| (projectileInst == ITRW_WIDERHAKENARROW)
+			|| (projectileInst == ITRW_PRAEZISIONSARROW)
+			|| (projectileInst == ITRW_HOLYARROW)
+			|| (projectileInst == ITRW_GOLDERZARROW)
+			|| (projectileInst == ITRW_GOLDERZBLUTARROW) {
+				if (r_max(99) < 50) {
+					projectileInst = PfeilSpitze;
+				} else {
+					projectileInst = PfeilStab;
+				};
+			} else if (projectileInst == ITRW_BOLT)
+			|| (projectileInst == ITRW_SCHMETTERBOLT)
+			|| (projectileInst == ITRW_WIDERHAKENBOLT)
+			|| (projectileInst == ITRW_PRAEZISIONSBOLT)
+			|| (projectileInst == ITRW_HOLYBOLT)
+			|| (projectileInst == ITRW_GOLDERZBOLT)
+			|| (projectileInst == ITRW_GOLDERZBLUTBOLT) {
+				if (r_max(99) < 50) {
+					projectileInst = BolzenSpitze;
+				} else {
+					projectileInst = PfeilStab;
+				};
+			} else {
+				return 0;
+			};
+		};
 
         // For now it is just preserved (leave it in the world as is)
         return projectileInst;

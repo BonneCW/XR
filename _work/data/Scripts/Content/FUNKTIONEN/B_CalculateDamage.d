@@ -385,7 +385,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 			};
 		};
 		
-		if (GFA_INITIALIZED && GFA_ACTIVE) {
+		if (GFA_ACTIVE) {
 			if (opfer.aivar[AIV_LastHitZone] == TARGET_RUMP) {
 				if (opfer.guild > GIL_SEPERATOR_HUM)
 				&& (opfer.aivar[AIV_Trefferzone] == 0) {

@@ -148,7 +148,7 @@ FUNC VOID FRAMEFUNC ()
 	{
 		if (Npc_IsAiming(hero, other))
 		&& (Npc_IsInFightMode(hero, FMODE_FAR))
-		&& (!GFA_INITIALIZED)
+		&& (!GFA_ACTIVE)
 		{
 			if (B_GetAivar(hero, AIV_FernkampfHitZone) == TARGET_RUMP)
 			{
@@ -658,7 +658,7 @@ FUNC VOID FRAMEFUNC ()
 
 	// Pfeile bleiben in Welt stecken
 
-	ZaphodPfeilExchange();
+	//ZaphodPfeilExchange();
 
 	SPECIALFUNC();
 

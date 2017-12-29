@@ -45,6 +45,8 @@ General Fixes:
 - added missing log entry when hero got nail package from Erika
 - Matteo's apples can't be sold anymore
 - Fixed changing protection during transformation
+- fixed error with disabled free aim
+- small optimizations and fixes that are easier to do, nicer and have better performance with GFA
 
 
 
