@@ -44,6 +44,7 @@ General Fixes:
 - Quest "Halvor's fish delivery" can now also be completed in case William is already dead
 - added missing log entry when hero got nail package from Erika
 - Matteo's apples can't be sold anymore
+- Fixed changing protection during transformation
 
 
 

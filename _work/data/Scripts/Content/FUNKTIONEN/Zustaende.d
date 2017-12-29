@@ -39,6 +39,7 @@ FUNC VOID Zustaende()
 
 	if (Npc_HasEquippedArmor(hero))
 	&& (Mod_Nackt)
+	&& (!playerIsTransformed)
 	{
 		hero.protection[PROT_EDGE] -= 1000;
 		hero.protection[PROT_BLUNT] -= 1000;
@@ -49,6 +50,7 @@ FUNC VOID Zustaende()
 
 	if (!Npc_HasEquippedArmor(hero))
 	&& (!Mod_Nackt)
+	&& (!playerIsTransformed)
 	{
 		hero.protection[PROT_EDGE] += 1000;
 		hero.protection[PROT_BLUNT] += 1000;
