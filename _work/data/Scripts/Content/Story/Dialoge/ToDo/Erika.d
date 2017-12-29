@@ -158,6 +158,8 @@ FUNC VOID Info_Mod_Erika_Nagelnachschub2_Info()
 	B_GiveInvItems	(self, hero, ItMi_Nagelpaket, 1);
 
 	B_GivePlayerXP	(50);
+
+	B_LogEntry	(TOPIC_MOD_KHORATA_NAGELNACHSCHUB, "Erika hat mir die Nägel gegeben.");
 };
 
 INSTANCE Info_Mod_Erika_Kissen (C_INFO)

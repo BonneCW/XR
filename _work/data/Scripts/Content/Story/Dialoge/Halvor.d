@@ -116,7 +116,8 @@ INSTANCE Info_Mod_Halvor_HierSindFische (C_INFO)
 FUNC INT Info_Mod_Halvor_HierSindFische_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Farim_HalvorHolFische))
-	&& (Mod_HalvorHolFischeQuest == 2)
+	&& ((Mod_HalvorHolFischeQuest == 2)
+	|| (Npc_IsDead(Mod_927_NONE_William_NW)))
 	&& (Npc_HasItems(hero, ItFo_Fish) >= 20)
 	{
 		return 1;
