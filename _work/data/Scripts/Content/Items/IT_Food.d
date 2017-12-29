@@ -185,7 +185,7 @@ INSTANCE ItFo_Apple_Matteo (C_Item)
 	name 				=	"Apfel";
 
 	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI | ITEM_SHOW;
 	
 	value 				=	Value_Apple;
 	
@@ -204,7 +204,7 @@ INSTANCE ItFo_Apple_Matteo_Gut (C_Item)
 	name 				=	"knackiger Apfel";
 
 	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI | ITEM_SHOW;
 	
 	value 				=	Value_Apple;
 	
@@ -223,7 +223,7 @@ INSTANCE ItFo_Apple_Matteo_Schlecht (C_Item)
 	name 				=	"fauler Apfel";
 
 	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;
+	flags 				=	ITEM_MULTI | ITEM_SHOW;
 	
 	value 				=	Value_Apple;
 	

@@ -43,6 +43,7 @@ General Fixes:
 - added missing log entry at Friedel after competition so player knows that he has to go to Lukas again
 - Quest "Halvor's fish delivery" can now also be completed in case William is already dead
 - added missing log entry when hero got nail package from Erika
+- Matteo's apples can't be sold anymore
 
 
 
