@@ -47,6 +47,8 @@ General Fixes:
 - Fixed changing protection during transformation
 - fixed error with disabled free aim
 - small optimizations and fixes that are easier to do, nicer and have better performance with GFA
+- fixed missing Ornament at Onar for Polish and English version
+- Sword of the Militia now can be sharpened
 
 
 

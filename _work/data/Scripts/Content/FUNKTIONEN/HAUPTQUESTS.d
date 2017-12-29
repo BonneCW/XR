@@ -1169,6 +1169,12 @@ FUNC VOID HAUPTQUESTS()
 
 			B_LogEntry	(TOPIC_MOD_PORTAL, "Ich hab das Ornamentstück des Kriegers.");
 		};
+		
+		if (Mod_HatOrnamentKrieger == 0)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Nefarius_VierErbauer))
+		&& (Mob_HasItems("ONARSAHNENTRUHE", ItMi_Ornament_Krieger) == 0) {
+			Mob_CreateItems("ONARSAHNENTRUHE", ItMi_Ornament_Krieger, 1); // TODO: remove with one of the coming versions
+		};
 
 		if (Npc_HasItems(hero, ItMi_Ornament_Totenwaechter) == 1)
 		&& (Mod_HatOrnamentTotenwaechter == 0)

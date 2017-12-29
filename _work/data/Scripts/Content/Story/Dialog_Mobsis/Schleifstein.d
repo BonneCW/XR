@@ -3579,6 +3579,36 @@ FUNC VOID PC_Herd_Sharp_ItMw_Schwert_02_Info()
 	CreateInvItems	(hero, ItMw_Schwert_02_Geschaerft, 1);
 };
 
+// Schwert der Miliz
+
+INSTANCE PC_Herd_Sharp_ItMw_Milizschwert (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Milizschwert_Condition;
+	information	= PC_Herd_Sharp_ItMw_Milizschwert_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Schwert der Miliz schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Milizschwert_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Milizschwert)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Milizschwert_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Milizschwert, 1);
+
+	CreateInvItems	(hero, ItMw_Milizschwert_Geschaerft, 1);
+};
+
 // Schwert Neu
 
 INSTANCE PC_Herd_Sharp_ItMw_Schwert_Neu (C_INFO)
