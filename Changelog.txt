@@ -15,6 +15,7 @@ Fixes for Khorinis if not entered before:
 
 - Made it harder to pass blockade in sewer of Khorinis
 - Nagur's hiding spot now has a focus name
+- Switched name of the two chests at Lord Andre so it is correct
 
 Fixes for Valley of Mines if not entered before:
 
@@ -41,6 +42,7 @@ General Fixes:
 - Serpentes' wine thief quest improved by better log entries and better acting of the thief
 - Lester's dialog at the troll in Relendel isn't permanent anymore
 - added missing log entry at Friedel after competition so player knows that he has to go to Lukas again
+- fixed several problems with English and Polish translation as soon as Free Aiming was enabled
 - Quest "Halvor's fish delivery" can now also be completed in case William is already dead
 - added missing log entry when hero got nail package from Erika
 - Matteo's apples can't be sold anymore
