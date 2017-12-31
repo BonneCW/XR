@@ -19,7 +19,7 @@ FUNC INT Info_Mod_Attila_Hi_Condition()
 
 FUNC VOID Info_Mod_Attila_Hi_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Attila_Hi_15_00"); //Und froh das du aus dem Kerker bist?
+	AI_Output(hero, self, "Info_Mod_Attila_Hi_15_00"); //Und, froh das du aus dem Kerker bist?
 	AI_Output(self, hero, "Info_Mod_Attila_Hi_09_01"); //Die Frage bedarf wohl keiner Antwort, Sohn der Gerissenheit.
 	AI_Output(self, hero, "Info_Mod_Attila_Hi_09_02"); //Du hast deinen Anteil bei meiner Befreiung geleistet und dafür danke ich dir.
 	AI_Output(hero, self, "Info_Mod_Attila_Hi_15_03"); //Was hast du jetzt vor?

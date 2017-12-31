@@ -27,7 +27,7 @@ FUNC VOID Info_Mod_Bruce_KesselProblem_Info()
 	AI_Output(self, hero, "Info_Mod_Bruce_KesselProblem_06_06"); //Das Biest ... ähh, hat einen Schürfer gefressen, hähä. Aber ich war eben einfach zu gerissen.
 	AI_Output(self, hero, "Info_Mod_Bruce_KesselProblem_06_07"); //So hat jeder bekommen, was er verdient hat. (lacht dreckig)
 
-	B_LogEntry	(TOPIC_MOD_NL_TALKESSELPROB, "Am Eingang zum Talkessel habe ich Söldner Bruce angetroffen. Er scheint ziemlich betrunken zu sein und hat selbstgefällig mit dem Fell des Schattenläufers geprahlt, welcher den Schürfer gefressen haben soll. Er schien sehrt amüsiert.");
+	B_LogEntry	(TOPIC_MOD_NL_TALKESSELPROB, "Am Eingang zum Talkessel habe ich Söldner Bruce angetroffen. Er scheint ziemlich betrunken zu sein und hat selbstgefällig mit dem Fell des Schattenläufers geprahlt, welcher den Schürfer gefressen haben soll. Er schien sehr amüsiert.");
 };
 
 INSTANCE Info_Mod_Bruce_KesselProblem2 (C_INFO)
