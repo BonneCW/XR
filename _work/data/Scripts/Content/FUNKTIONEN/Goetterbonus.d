@@ -12,20 +12,20 @@ var int Mod_GottInnos;
 var int Mod_GottBeliar;
 var int Segen_Handle;
 
-FUNC VOID Goetterbonus()
-{
-	if (!Hlp_IsValidHandle(Segen_Handle))
-	{
+FUNC VOID Goetterbonus() {
+	if (playerIsTransformed) {
+		return;
+	};
+
+	if (!Hlp_IsValidHandle(Segen_Handle)) {
 		Segen_Handle = View_CreatePxl(Print_Screen[PS_X]-60, 50, Print_Screen[PS_X]-20, 90);
 		View_SetTexture(Segen_Handle, "SEGEN_INNOS.TGA");
 	};
 
 	if (Wld_IsTime(20,00,08,00))
 	&& (!Wld_IsRaining())
-	&& (Mod_GottCooldown == 0)
-	{
-		if (Mod_HatInnosBonus == TRUE)
-		{
+	&& (Mod_GottCooldown == 0) {
+		if (Mod_HatInnosBonus == TRUE) {
 			Mod_HatInnosBonus = FALSE;
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
@@ -36,14 +36,11 @@ FUNC VOID Goetterbonus()
 			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
 			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
-			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
-			{
+			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP) {
 				hero.attribute[ATR_HITPOINTS] -= Mod_GottHP;
 
 				hero.aivar[AIV_Damage] -= Mod_GottHP;
-			}
-			else
-			{
+			} else {
 				hero.attribute[ATR_HITPOINTS] = 1;
 
 				hero.aivar[AIV_Damage] = 1;
@@ -64,8 +61,7 @@ FUNC VOID Goetterbonus()
 			View_Close(Segen_Handle);
 		};
 
-		if (Mod_HatAdanosBonus == TRUE)
-		{
+		if (Mod_HatAdanosBonus == TRUE) {
 			Mod_HatAdanosBonus = FALSE;
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
@@ -76,14 +72,11 @@ FUNC VOID Goetterbonus()
 			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
 			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
-			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
-			{
+			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP) {
 				hero.attribute[ATR_HITPOINTS] -= Mod_GottHP;
 
 				hero.aivar[AIV_Damage] -= Mod_GottHP;
-			}
-			else
-			{
+			} else {
 				hero.attribute[ATR_HITPOINTS] = 1;
 
 				hero.aivar[AIV_Damage] = 1;
@@ -108,16 +101,13 @@ FUNC VOID Goetterbonus()
 		|| (Mod_Gottstatus == 2)
 		|| (Mod_Gottstatus == 3)
 		|| (Mod_Gottstatus == 4))
-		&& (Mod_HatBeliarBonus == FALSE)
-		{
+		&& (Mod_HatBeliarBonus == FALSE) {
 			Mod_HatBeliarBonus = TRUE;
 
-			if (Mod_Gottstatus == 1)
-			{
+			if (Mod_Gottstatus == 1) {
 				if (Mod_Gilde == 12)
 				|| (Mod_Gilde == 13)
-				|| (Mod_Gilde == 14)
-				{
+				|| (Mod_Gilde == 14) {
 					if (hero.attribute[ATR_MANA_MAX] > 0) {
 						Mod_GottMana = 4000 / hero.attribute[ATR_MANA_MAX];
 					} else {
@@ -129,8 +119,7 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 16)
 				|| (Mod_Gilde == 4)
 				|| (Mod_Gilde == 19)
-				|| (Mod_Gilde == 5)
-				{
+				|| (Mod_Gilde == 5) {
 					Mod_GottDamage = 20;
 				};
 
@@ -141,13 +130,10 @@ FUNC VOID Goetterbonus()
 				};
 				Mod_GottProtection = 20;
 				Mod_GottBeliar = 20;
-			}
-			else if (Mod_Gottstatus == 2)
-			{
+			} else if (Mod_Gottstatus == 2) {
 				if (Mod_Gilde == 12)
 				|| (Mod_Gilde == 13)
-				|| (Mod_Gilde == 14)
-				{
+				|| (Mod_Gilde == 14) {
 					if (hero.attribute[ATR_MANA_MAX] > 0) {
 						Mod_GottMana = 3000 / hero.attribute[ATR_MANA_MAX];
 					} else {
@@ -159,8 +145,7 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 16)
 				|| (Mod_Gilde == 4)
 				|| (Mod_Gilde == 19)
-				|| (Mod_Gilde == 5)
-				{
+				|| (Mod_Gilde == 5) {
 					Mod_GottDamage = 15;
 				};
 
@@ -171,13 +156,10 @@ FUNC VOID Goetterbonus()
 				};
 				Mod_GottProtection = 15;
 				Mod_GottBeliar = 15;
-			}
-			else if (Mod_Gottstatus == 3)
-			{
+			} else if (Mod_Gottstatus == 3) {
 				if (Mod_Gilde == 12)
 				|| (Mod_Gilde == 13)
-				|| (Mod_Gilde == 14)
-				{
+				|| (Mod_Gilde == 14) {
 					if (hero.attribute[ATR_MANA_MAX] > 0) {
 						Mod_GottMana = 2000 / hero.attribute[ATR_MANA_MAX];
 					} else {
@@ -189,8 +171,7 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 16)
 				|| (Mod_Gilde == 4)
 				|| (Mod_Gilde == 19)
-				|| (Mod_Gilde == 5)
-				{
+				|| (Mod_Gilde == 5) {
 					Mod_GottDamage = 10;
 				};
 
@@ -201,13 +182,10 @@ FUNC VOID Goetterbonus()
 				};
 				Mod_GottProtection = 10;
 				Mod_GottBeliar = 10;
-			}
-			else if (Mod_Gottstatus == 4)
-			{
+			} else if (Mod_Gottstatus == 4) {
 				if (Mod_Gilde == 12)
 				|| (Mod_Gilde == 13)
-				|| (Mod_Gilde == 14)
-				{
+				|| (Mod_Gilde == 14) {
 					if (hero.attribute[ATR_MANA_MAX] > 0) {
 						Mod_GottMana = 1000 / hero.attribute[ATR_MANA_MAX];
 					} else {
@@ -219,8 +197,7 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 16)
 				|| (Mod_Gilde == 4)
 				|| (Mod_Gilde == 19)
-				|| (Mod_Gilde == 5)
-				{
+				|| (Mod_Gilde == 5) {
 					Mod_GottDamage = 5;
 				};
 
@@ -248,10 +225,8 @@ FUNC VOID Goetterbonus()
 			View_SetTexture(Segen_Handle, "SEGEN_BELIAR.TGA");
 
 			View_Open(Segen_Handle);
-		}
-		else if (Mod_Gottstatus > 4)
-		&& (Mod_HatBeliarBonus == TRUE)
-		{
+		} else if (Mod_Gottstatus > 4)
+		&& (Mod_HatBeliarBonus == TRUE) {
 			Mod_HatBeliarBonus = FALSE;
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
@@ -262,14 +237,11 @@ FUNC VOID Goetterbonus()
 			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
 			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
-			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
-			{
+			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP) {
 				hero.attribute[ATR_HITPOINTS] -= Mod_GottHP;
 
 				hero.aivar[AIV_Damage] -= Mod_GottHP;
-			}
-			else
-			{
+			} else {
 				hero.attribute[ATR_HITPOINTS] = 1;
 
 				hero.aivar[AIV_Damage] = 1;
@@ -289,13 +261,10 @@ FUNC VOID Goetterbonus()
 
 			View_Close(Segen_Handle);
 		};
-	}
-	else if (Wld_IsTime(08,00,20,00))
+	} else if (Wld_IsTime(08,00,20,00))
 	&& (!Wld_IsRaining())
-	&& (Mod_GottCooldown == 0)
-	{
-		if (Mod_HatBeliarBonus == TRUE)
-		{
+	&& (Mod_GottCooldown == 0) {
+		if (Mod_HatBeliarBonus == TRUE) {
 			Mod_HatBeliarBonus = FALSE;
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
@@ -306,14 +275,11 @@ FUNC VOID Goetterbonus()
 			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
 			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
-			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
-			{
+			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP) {
 				hero.attribute[ATR_HITPOINTS] -= Mod_GottHP;
 
 				hero.aivar[AIV_Damage] -= Mod_GottHP;
-			}
-			else
-			{
+			} else {
 				hero.attribute[ATR_HITPOINTS] = 1;
 			};
 
@@ -334,8 +300,7 @@ FUNC VOID Goetterbonus()
 			View_Close(Segen_Handle);
 		};
 
-		if (Mod_HatAdanosBonus == TRUE)
-		{
+		if (Mod_HatAdanosBonus == TRUE) {
 			Mod_HatAdanosBonus = FALSE;
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
@@ -346,14 +311,11 @@ FUNC VOID Goetterbonus()
 			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
 			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
-			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
-			{
+			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP) {
 				hero.attribute[ATR_HITPOINTS] -= Mod_GottHP;
 
 				hero.aivar[AIV_Damage] -= Mod_GottHP;
-			}
-			else
-			{
+			} else {
 				hero.attribute[ATR_HITPOINTS] = 1;
 
 				hero.aivar[AIV_Damage] = 1;
@@ -378,16 +340,13 @@ FUNC VOID Goetterbonus()
 		|| (Mod_Gottstatus == 10)
 		|| (Mod_Gottstatus == 11)
 		|| (Mod_Gottstatus == 12))
-		&& (Mod_HatInnosBonus == FALSE)
-		{
+		&& (Mod_HatInnosBonus == FALSE) {
 			Mod_HatInnosBonus = TRUE;
 
-			if (Mod_Gottstatus == 9)
-			{
+			if (Mod_Gottstatus == 9) {
 				if (Mod_Gilde == 6)
 				|| (Mod_Gilde == 7)
-				|| (Mod_Gilde == 8)
-				{
+				|| (Mod_Gilde == 8) {
 					if (hero.attribute[ATR_MANA_MAX] > 0) {
 						Mod_GottMana = 4000 / hero.attribute[ATR_MANA_MAX];
 					} else {
@@ -399,8 +358,7 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 3)
 				|| (Mod_Gilde == 4)
 				|| (Mod_Gilde == 19)
-				|| (Mod_Gilde == 5)
-				{
+				|| (Mod_Gilde == 5) {
 					Mod_GottDamage = 20;
 				};
 
@@ -411,13 +369,10 @@ FUNC VOID Goetterbonus()
 				};
 				Mod_GottProtection = 20;
 				Mod_GottInnos = 20;
-			}
-			else if (Mod_Gottstatus == 10)
-			{
+			} else if (Mod_Gottstatus == 10) {
 				if (Mod_Gilde == 6)
 				|| (Mod_Gilde == 7)
-				|| (Mod_Gilde == 8)
-				{
+				|| (Mod_Gilde == 8) {
 					if (hero.attribute[ATR_MANA_MAX] > 0) {
 						Mod_GottMana = 3000 / hero.attribute[ATR_MANA_MAX];
 					} else {
@@ -429,8 +384,7 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 3)
 				|| (Mod_Gilde == 4)
 				|| (Mod_Gilde == 19)
-				|| (Mod_Gilde == 5)
-				{
+				|| (Mod_Gilde == 5) {
 					Mod_GottDamage = 15;
 				};
 
@@ -441,13 +395,10 @@ FUNC VOID Goetterbonus()
 				};
 				Mod_GottProtection = 15;
 				Mod_GottInnos = 15;
-			}
-			else if (Mod_Gottstatus == 11)
-			{
+			} else if (Mod_Gottstatus == 11) {
 				if (Mod_Gilde == 6)
 				|| (Mod_Gilde == 7)
-				|| (Mod_Gilde == 8)
-				{
+				|| (Mod_Gilde == 8) {
 					if (hero.attribute[ATR_MANA_MAX] > 0) {
 						Mod_GottMana = 2000 / hero.attribute[ATR_MANA_MAX];
 					} else {
@@ -459,8 +410,7 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 3)
 				|| (Mod_Gilde == 4)
 				|| (Mod_Gilde == 19)
-				|| (Mod_Gilde == 5)
-				{
+				|| (Mod_Gilde == 5) {
 					Mod_GottDamage = 10;
 				};
 
@@ -471,13 +421,10 @@ FUNC VOID Goetterbonus()
 				};
 				Mod_GottProtection = 10;
 				Mod_GottInnos = 10;
-			}
-			else if (Mod_Gottstatus == 12)
-			{
+			} else if (Mod_Gottstatus == 12) {
 				if (Mod_Gilde == 6)
 				|| (Mod_Gilde == 7)
-				|| (Mod_Gilde == 8)
-				{
+				|| (Mod_Gilde == 8) {
 					if (hero.attribute[ATR_MANA_MAX] > 0) {
 						Mod_GottMana = 1000 / hero.attribute[ATR_MANA_MAX];
 					} else {
@@ -489,8 +436,7 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 3)
 				|| (Mod_Gilde == 4)
 				|| (Mod_Gilde == 19)
-				|| (Mod_Gilde == 5)
-				{
+				|| (Mod_Gilde == 5) {
 					Mod_GottDamage = 5;
 				};
 
@@ -518,10 +464,8 @@ FUNC VOID Goetterbonus()
 			View_SetTexture(Segen_Handle, "SEGEN_INNOS.TGA");
 
 			View_Open(Segen_Handle);
-		}
-		else if (Mod_Gottstatus < 9)
-		&& (Mod_HatInnosBonus == TRUE)
-		{
+		} else if (Mod_Gottstatus < 9)
+		&& (Mod_HatInnosBonus == TRUE) {
 			Mod_HatInnosBonus = FALSE;
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
@@ -532,14 +476,11 @@ FUNC VOID Goetterbonus()
 			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
 			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
-			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
-			{
+			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP) {
 				hero.attribute[ATR_HITPOINTS] -= Mod_GottHP;
 
 				hero.aivar[AIV_Damage] -= Mod_GottHP;
-			}
-			else
-			{
+			} else {
 				hero.attribute[ATR_HITPOINTS] = 1;
 
 				hero.aivar[AIV_Damage] = 1;
@@ -559,12 +500,9 @@ FUNC VOID Goetterbonus()
 
 			View_Close(Segen_Handle);
 		};
-	}
-	else if (Wld_IsRaining())
-	&& (Mod_GottCooldown == 0)
-	{
-		if (Mod_HatBeliarBonus == TRUE)
-		{
+	} else if (Wld_IsRaining())
+	&& (Mod_GottCooldown == 0) {
+		if (Mod_HatBeliarBonus == TRUE) {
 			Mod_HatBeliarBonus = FALSE;
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
@@ -575,14 +513,11 @@ FUNC VOID Goetterbonus()
 			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
 			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
-			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
-			{
+			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP) {
 				hero.attribute[ATR_HITPOINTS] -= Mod_GottHP;
 
 				hero.aivar[AIV_Damage] -= Mod_GottHP;
-			}
-			else
-			{
+			} else {
 				hero.attribute[ATR_HITPOINTS] = 1;
 
 				hero.aivar[AIV_Damage] = 1;
@@ -603,8 +538,7 @@ FUNC VOID Goetterbonus()
 			View_Close(Segen_Handle);
 		};
 
-		if (Mod_HatInnosBonus == TRUE)
-		{
+		if (Mod_HatInnosBonus == TRUE) {
 			Mod_HatInnosBonus = FALSE;
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
@@ -615,14 +549,11 @@ FUNC VOID Goetterbonus()
 			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
 			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
-			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
-			{
+			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP) {
 				hero.attribute[ATR_HITPOINTS] -= Mod_GottHP;
 
 				hero.aivar[AIV_Damage] -= Mod_GottHP;
-			}
-			else
-			{
+			} else {
 				hero.attribute[ATR_HITPOINTS] = 1;
 
 				hero.aivar[AIV_Damage] = 1;
@@ -646,16 +577,13 @@ FUNC VOID Goetterbonus()
 		|| (Mod_Gottstatus == 6)
 		|| (Mod_Gottstatus == 7)
 		|| (Mod_Gottstatus == 8))
-		&& (Mod_HatAdanosBonus == FALSE)
-		{
+		&& (Mod_HatAdanosBonus == FALSE) {
 			Mod_HatAdanosBonus = TRUE;
 
-			if (Mod_Gottstatus == 5)
-			{
+			if (Mod_Gottstatus == 5) {
 				if (Mod_Gilde == 9)
 				|| (Mod_Gilde == 10)
-				|| (Mod_Gilde == 11)
-				{
+				|| (Mod_Gilde == 11) {
 					if (hero.attribute[ATR_MANA_MAX] > 0) {
 						Mod_GottMana = 4000 / hero.attribute[ATR_MANA_MAX];
 					} else {
@@ -667,8 +595,7 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 18)
 				|| (Mod_Gilde == 4)
 				|| (Mod_Gilde == 19)
-				|| (Mod_Gilde == 5)
-				{
+				|| (Mod_Gilde == 5) {
 					Mod_GottDamage = 20;
 				};
 
@@ -679,13 +606,10 @@ FUNC VOID Goetterbonus()
 				};
 				Mod_GottProtection = 20;
 				Mod_GottAdanos = 20;
-			}
-			else if (Mod_Gottstatus == 6)
-			{
+			} else if (Mod_Gottstatus == 6) {
 				if (Mod_Gilde == 9)
 				|| (Mod_Gilde == 10)
-				|| (Mod_Gilde == 11)
-				{
+				|| (Mod_Gilde == 11) {
 					if (hero.attribute[ATR_MANA_MAX] > 0) {
 						Mod_GottMana = 3000 / hero.attribute[ATR_MANA_MAX];
 					} else {
@@ -697,8 +621,7 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 18)
 				|| (Mod_Gilde == 4)
 				|| (Mod_Gilde == 19)
-				|| (Mod_Gilde == 5)
-				{
+				|| (Mod_Gilde == 5) {
 					Mod_GottDamage = 15;
 				};
 
@@ -709,13 +632,10 @@ FUNC VOID Goetterbonus()
 				};
 				Mod_GottProtection = 15;
 				Mod_GottAdanos = 15;
-			}
-			else if (Mod_Gottstatus == 7)
-			{
+			} else if (Mod_Gottstatus == 7) {
 				if (Mod_Gilde == 9)
 				|| (Mod_Gilde == 10)
-				|| (Mod_Gilde == 11)
-				{
+				|| (Mod_Gilde == 11) {
 					if (hero.attribute[ATR_MANA_MAX] > 0) {
 						Mod_GottMana = 2000 / hero.attribute[ATR_MANA_MAX];
 					} else {
@@ -727,8 +647,7 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 18)
 				|| (Mod_Gilde == 4)
 				|| (Mod_Gilde == 19)
-				|| (Mod_Gilde == 5)
-				{
+				|| (Mod_Gilde == 5) {
 					Mod_GottDamage = 10;
 				};
 
@@ -739,13 +658,10 @@ FUNC VOID Goetterbonus()
 				};
 				Mod_GottProtection = 10;
 				Mod_GottAdanos = 10;
-			}
-			else if (Mod_Gottstatus == 8)
-			{
+			} else if (Mod_Gottstatus == 8) {
 				if (Mod_Gilde == 9)
 				|| (Mod_Gilde == 10)
-				|| (Mod_Gilde == 11)
-				{
+				|| (Mod_Gilde == 11) {
 					if (hero.attribute[ATR_MANA_MAX] > 0) {
 						Mod_GottMana = 1000 / hero.attribute[ATR_MANA_MAX];
 					} else {
@@ -757,8 +673,7 @@ FUNC VOID Goetterbonus()
 				|| (Mod_Gilde == 18)
 				|| (Mod_Gilde == 4)
 				|| (Mod_Gilde == 19)
-				|| (Mod_Gilde == 5)
-				{
+				|| (Mod_Gilde == 5) {
 					Mod_GottDamage = 5;
 				};
 
@@ -786,11 +701,9 @@ FUNC VOID Goetterbonus()
 			View_SetTexture(Segen_Handle, "SEGEN_ADANOS.TGA");
 
 			View_Open(Segen_Handle);
-		}
-		else if ((Mod_Gottstatus < 5)
+		} else if ((Mod_Gottstatus < 5)
 		|| (Mod_GottStatus > 8))
-		&& (Mod_HatAdanosBonus == TRUE)
-		{
+		&& (Mod_HatAdanosBonus == TRUE) {
 			Mod_HatAdanosBonus = FALSE;
 
 			hero.attribute[ATR_MANA] -= Mod_GottMana;
@@ -801,14 +714,11 @@ FUNC VOID Goetterbonus()
 			hero.protection[PROT_MAGIC] -= Min(Mod_GottProtection, hero.protection[PROT_MAGIC]);
 			hero.protection[PROT_FIRE] -= Min(Mod_GottProtection, hero.protection[PROT_FIRE]);
 
-			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP)
-			{
+			if (hero.attribute[ATR_HITPOINTS] > Mod_GottHP) {
 				hero.attribute[ATR_HITPOINTS] -= Mod_GottHP;
 
 				hero.aivar[AIV_Damage] -= Mod_GottHP;
-			}
-			else
-			{
+			} else {
 				hero.attribute[ATR_HITPOINTS] = 1;
 
 				hero.aivar[AIV_Damage] = 1;
