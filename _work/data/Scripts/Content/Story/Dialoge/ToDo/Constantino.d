@@ -288,7 +288,7 @@ FUNC VOID Info_Mod_Constantino_Aufnahme_A()
 	AI_Output(self, hero, "Info_Mod_Constantino_Aufnahme_A_10_12"); //Andernfalls erhältst du wohlschmeckenden, aber wirkungslosen Tee.
 	AI_Output(self, hero, "Info_Mod_Constantino_Aufnahme_A_10_13"); //Den Sud erhitzt du dann bis zum Kochen über der Flamme und füllst ihn ab.
 	AI_Output(hero, self, "Info_Mod_Constantino_Aufnahme_A_15_14"); //Ich denke, ich hab's.
-	AI_Output(self, hero, "Info_Mod_Constantino_Aufnahme_A_10_15"); //Das wollen wir doch mal sehen. Du besorgst dir jetzt also die Zutaten und braust je fünf Heil- und Manaessenzen. Danach sprechen wir uns wieder.
+	AI_Output(self, hero, "Info_Mod_Constantino_Aufnahme_A_10_15"); //Das wollen wir doch mal sehen. Du besorgst dir jetzt also die Zutaten und braust je zwei Heil- und Manaessenzen. Danach sprechen wir uns wieder.
 
 	Mod_IstLehrling	= 1;
 
@@ -299,11 +299,11 @@ FUNC VOID Info_Mod_Constantino_Aufnahme_A()
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Torlof_Auftrag))
 	{
-		B_LogEntry_NMore	(TOPIC_MOD_BÜRGER, TOPIC_MOD_LEHRLING_CONSTANTINO_ONE, TOPIC_MOD_TORLOFSPIONAGE, "Constantino, der Alchemist, hat mich als seinen Lehrling aufgenommen. Dadurch bin ich jetzt ein Bürger der Stadt.", "Constantino gab mir die Aufgabe, fünf Mana- und Heilessenzen herzustellen. Dafür muss ich erst die nötigen Zutaten sammeln und diese dann am Alchemietisch in der richtigen Reihenfolge zusammenfügen. Hmm, wie war die noch mal?", "Da Constantino mich als seinen Lehrling aufgenommen hat ist es mir jetzt möglich das Obere Viertel zu betreten.");
+		B_LogEntry_NMore	(TOPIC_MOD_BÜRGER, TOPIC_MOD_LEHRLING_CONSTANTINO_ONE, TOPIC_MOD_TORLOFSPIONAGE, "Constantino, der Alchemist, hat mich als seinen Lehrling aufgenommen. Dadurch bin ich jetzt ein Bürger der Stadt.", "Constantino gab mir die Aufgabe, zwei Mana- und Heilessenzen herzustellen. Dafür muss ich erst die nötigen Zutaten sammeln und diese dann am Alchemietisch in der richtigen Reihenfolge zusammenfügen. Hmm, wie war die noch mal?", "Da Constantino mich als seinen Lehrling aufgenommen hat ist es mir jetzt möglich das Obere Viertel zu betreten.");
 	}
 	else
 	{
-		B_LogEntry_More	(TOPIC_MOD_BÜRGER, TOPIC_MOD_LEHRLING_CONSTANTINO_ONE, "Constantino, der Alchemist, hat mich als seinen Lehrling aufgenommen. Dadurch bin ich jetzt ein Bürger der Stadt.", "Constantino gab mir die Aufgabe, fünf Mana- und Heilessenzen herzustellen. Dafür muss ich erst die nötigen Zutaten sammeln und diese dann am Alchemietisch in der richtigen Reihenfolge zusammenfügen. Hmm, wie war die noch mal?");
+		B_LogEntry_More	(TOPIC_MOD_BÜRGER, TOPIC_MOD_LEHRLING_CONSTANTINO_ONE, "Constantino, der Alchemist, hat mich als seinen Lehrling aufgenommen. Dadurch bin ich jetzt ein Bürger der Stadt.", "Constantino gab mir die Aufgabe, zwei Mana- und Heilessenzen herzustellen. Dafür muss ich erst die nötigen Zutaten sammeln und diese dann am Alchemietisch in der richtigen Reihenfolge zusammenfügen. Hmm, wie war die noch mal?");
 	};
 
 	PLAYER_TALENT_ALCHEMY[POTION_Health_01] = TRUE;
@@ -380,10 +380,10 @@ INSTANCE Info_Mod_Constantino_LehrlingQuest (C_INFO)
 FUNC INT Info_Mod_Constantino_LehrlingQuest_Condition()
 {
 	if (Mod_LehrlingBei == 1)
-	&& (Npc_HasItems(hero, ItPo_Health_01) >= 5)
-	&& (Npc_HasItems(hero, ItPo_Mana_01) >= 5)
-	&& (Mod_Count_Health_01 >= 5)
-	&& (Mod_Count_Mana_01 >= 5)
+	&& (Npc_HasItems(hero, ItPo_Health_01) >= 2)
+	&& (Npc_HasItems(hero, ItPo_Mana_01) >= 2)
+	&& (Mod_Count_Health_01 >= 2)
+	&& (Mod_Count_Mana_01 >= 2)
 	{
 		return 1;
 	};
@@ -393,11 +393,11 @@ FUNC VOID Info_Mod_Constantino_LehrlingQuest_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Constantino_LehrlingQuest_15_00"); //Ich habe dir alle Tränke gebraut.
 
-	B_ShowGivenThings	("5 Essenzen der Heilung und 5 Manaessenzen gegeben");
+	B_ShowGivenThings	("2 Essenzen der Heilung und 2 Manaessenzen gegeben");
 
 	AI_Output(self, hero, "Info_Mod_Constantino_LehrlingQuest_10_01"); //(riecht) Das Gefühl eines Könners fehlt dir wahrlich. Aber immerhin werden sie mehr helfen als schaden.
 
-	B_ShowGivenThings	("5 Essenzen der Heilung und 5 Manaessenzen erhalten");
+	B_ShowGivenThings	("2 Essenzen der Heilung und 2 Manaessenzen erhalten");
 
 	AI_Output(hero, self, "Info_Mod_Constantino_LehrlingQuest_15_02"); //Willst du die Tränke nicht behalten?
 	AI_Output(self, hero, "Info_Mod_Constantino_LehrlingQuest_10_03"); //Ich habe in zwei Minuten bessere gebraut. Was soll ich also damit?

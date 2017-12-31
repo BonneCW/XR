@@ -36,6 +36,7 @@ General Fixes:
 - Weakened goats a little more
 - fixed ambient dialogs for nameless NPCs that aren't synchronized yet
 - added missing log entry at Hyglas in ice cave
+- Constantino now expects just two of each potion for his first quest when being is apprentice
 
 
 
