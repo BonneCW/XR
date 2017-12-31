@@ -226,7 +226,7 @@ FUNC VOID Info_Mod_Ramirez_WelcomeBack_Info()
 
 	Npc_RemoveInvItems	(hero, ItMi_Gold, 5000);
 
-	B_LogEntry	(TOPIC_MOD_DIEB_ATTILA, "Ramirez und Attila sind frei. Ich soll aber noch Lord Andre's Truhe plündern.");
+	B_LogEntry	(TOPIC_MOD_DIEB_ATTILA, "Ramirez und Attila sind frei. Ich soll aber noch Lord Andres Truhe plündern.");
 
 	AI_StopProcessInfos	(self);
 

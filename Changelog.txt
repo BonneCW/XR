@@ -23,6 +23,18 @@ Fixes for Valley of Mines if not entered before:
 
 
 
+1.0.3
+
+Enhancements:
+
+- 
+
+General Fixes:
+
+- not all weapons that should be sellable at Harad can be sold at Harad
+
+
+
 1.0.2
 
 Enhancements:

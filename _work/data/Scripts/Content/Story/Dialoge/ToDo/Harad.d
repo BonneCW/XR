@@ -1968,11 +1968,11 @@ FUNC VOID Info_Mod_Harad_Verkaufen_Info()
 	var int anzahl_rubinklinge; anzahl_rubinklinge = Npc_HasItems (hero, ItMw_Rubinklinge);
 	var int anzahl_elbastardo; anzahl_elbastardo = Npc_HasItems (hero, ItMw_ElBastardo);
 	
-	var int anzahl_common_stark; anzahl_common = Npc_HasItems (hero, ItMw_1H_Common_01_Stark);
-	var int anzahl_schwert1_stark; anzahl_schwert1 = Npc_HasItems (hero, ItMw_Schwert1_Stark);
-	var int anzahl_schwert4_stark; anzahl_schwert4 = Npc_HasItems (hero, ItMw_Schwert4_Stark);
-	var int anzahl_rubinklinge_stark; anzahl_rubinklinge = Npc_HasItems (hero, ItMw_Rubinklinge_Stark);
-	var int anzahl_elbastardo_stark; anzahl_elbastardo = Npc_HasItems (hero, ItMw_ElBastardo_Stark);
+	var int anzahl_common_stark; anzahl_common_stark = Npc_HasItems (hero, ItMw_1H_Common_01_Stark);
+	var int anzahl_schwert1_stark; anzahl_schwert1_stark = Npc_HasItems (hero, ItMw_Schwert1_Stark);
+	var int anzahl_schwert4_stark; anzahl_schwert4_stark = Npc_HasItems (hero, ItMw_Schwert4_Stark);
+	var int anzahl_rubinklinge_stark; anzahl_rubinklinge_stark = Npc_HasItems (hero, ItMw_Rubinklinge_Stark);
+	var int anzahl_elbastardo_stark; anzahl_elbastardo_stark = Npc_HasItems (hero, ItMw_ElBastardo_Stark);
 	
 	var int gesamt; gesamt = (anzahl_common + anzahl_schwert1 + anzahl_schwert4 + anzahl_rubinklinge + anzahl_elbastardo + anzahl_common_stark + anzahl_schwert1_stark + anzahl_schwert4_stark + anzahl_rubinklinge_stark + anzahl_elbastardo_stark);
 	
