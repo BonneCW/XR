@@ -32,6 +32,7 @@ Enhancements:
 General Fixes:
 
 - not all weapons that should be sellable at Harad can be sold at Harad
+- Added some log entries for quest "Key to Luck"
 
 
 
