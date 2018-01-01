@@ -1328,7 +1328,7 @@ INSTANCE ItMW_AxtDesUntergangs (C_Item)
 
 	value 				=	1000;
 
-	damageTotal  		= 	AxtDamage;
+	damageTotal  		= 	(AxtDamage - 10) / 4 + 10;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	125;		
 	
