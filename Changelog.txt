@@ -38,6 +38,7 @@ General Fixes:
 - added missing log entry at Hyglas in ice cave
 - Constantino now expects just two of each potion for his first quest when being is apprentice
 - Attitude bonus now isn't changed while player is transformed
+- weakened some monsters in Relendel and gave them a higher level
 
 
 

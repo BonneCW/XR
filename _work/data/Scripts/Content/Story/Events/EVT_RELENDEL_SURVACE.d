@@ -1,9 +1,6 @@
 //****************************
 // 	RELENDEL_SURVACE
 
-
-
-
 var int RELENDEL_SURVACE;
 var int Relendel_Spawned;
 
@@ -411,11 +408,11 @@ INSTANCE Scavenger_RELENDEL	(Mst_Default_Scavenger)
 	aivar[AIV_MM_REAL_ID]			= 	ID_SCAVENGER;
 	
 	//----- Attribute ----
-	level							=	7;
+	level							=	10;
 
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	55;
-	attribute	[ATR_DEXTERITY]		=	50;
+	attribute	[ATR_DEXTERITY]		=	10;
 	attribute	[ATR_HITPOINTS_MAX]	=	140;
 	attribute	[ATR_HITPOINTS]		=	140;
 	
@@ -452,11 +449,11 @@ INSTANCE Molerat_RELENDEL	(Mst_Default_Molerat)
 	name							=	"Alter Molerat";
 	guild							=	GIL_MOLERAT;
 	aivar[AIV_MM_REAL_ID]			= 	ID_MOLERAT;
-	level							=	5;
+	level							=	8;
 	
 	//----- Attribute ----	
 	attribute	[ATR_STRENGTH]		=	50;
-	attribute	[ATR_DEXTERITY]		=	50;
+	attribute	[ATR_DEXTERITY]		=	10;
 	attribute	[ATR_HITPOINTS_MAX]	=	100;
 	attribute	[ATR_HITPOINTS]		=	100;
 	attribute	[ATR_MANA_MAX] 		=	0;
@@ -488,11 +485,11 @@ INSTANCE Lurker_RELENDEL	(Mst_Default_Lurker)
 	name							=	"Lurker";
 	guild							=	GIL_LURKER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_LURKER;
-	level							=	12;
+	level							=	15;
 	
 	//----- Attributes ----
 	attribute	[ATR_STRENGTH]		=	220;
-	attribute	[ATR_DEXTERITY]		=	220;
+	attribute	[ATR_DEXTERITY]		=	12;
 	attribute	[ATR_HITPOINTS_MAX]	=	220;
 	attribute	[ATR_HITPOINTS]		=	220;
 	attribute	[ATR_MANA_MAX] 		=	0;
@@ -525,7 +522,7 @@ INSTANCE Troll_Black_RELENEDL	(Mst_Default_Troll_Black)
 	
 	//----- Attribute ----	
 	attribute	[ATR_STRENGTH]		=	300;
-	attribute	[ATR_DEXTERITY]		=	50;
+	attribute	[ATR_DEXTERITY]		=	20;
 	attribute	[ATR_HITPOINTS_MAX]	=	5000;
 	attribute	[ATR_HITPOINTS]		=	5000;
 	attribute	[ATR_MANA_MAX] 		=	0;
@@ -554,11 +551,11 @@ INSTANCE Wolf_RELENDEL	(Mst_Default_Wolf)
 	name							=	"Leitwolf";
 	guild							=	GIL_WOLF;
 	aivar[AIV_MM_REAL_ID]			= 	ID_WOLF;
-	level							=	6;
+	level							=	9;
 	
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	60;
-	attribute	[ATR_DEXTERITY]		=	50;
+	attribute	[ATR_DEXTERITY]		=	10;
 	attribute	[ATR_HITPOINTS_MAX]	=	200;
 	attribute	[ATR_HITPOINTS]		=	200;
 	attribute	[ATR_MANA_MAX] 		=	0;
