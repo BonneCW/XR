@@ -152,6 +152,10 @@ FUNC VOID Info_Mod_Ulrich_AnnaBefreit_Info()
 	B_StartOtherRoutine	(Mod_7365_OUT_Margarethe_REL, "START");
 	B_StartOtherRoutine	(Mod_7374_OUT_Gerichtswache_01, "START");
 	B_StartOtherRoutine	(Mod_7375_OUT_Gerichtswache_02, "START");
+	
+	if (!Npc_KnowsInfo(hero, Info_Mod_Richter_Endres)) {
+		B_SetTopicStatus(TOPIC_MOD_KHORATA_ENDRES, LOG_FAILED);
+	};
 };
 
 INSTANCE Info_Mod_Ulrich_Freudenspender (C_INFO)
