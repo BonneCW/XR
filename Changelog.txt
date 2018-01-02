@@ -2,14 +2,11 @@ Future bigger update
 
 Enhancements:
 
-- Added takes for: Bengar, Mine Guard (King's Guard), Court Bouncer, Garvell, Borka, Rudolf
+- 
 
 General Fixes:
 
-- Fixed wrong naming of Hanna's dubbing (German dubbing)
-- Added SVM subtitles and TTS dubbing (German dubbing) for missing voices
-- Fixed missing take of Garond (German dubbing)
-- Switched SVM and take for picklock failure and broken picklock
+- 
 
 Fixes for Khorinis if not entered before:
 
@@ -28,7 +25,7 @@ Fixes for Valley of Mines if not entered before:
 
 Enhancements:
 
-- 
+- Added takes for: Bengar, Mine Guard (King's Guard), Court Bouncer, Garvell, Borka, Rudolf, Akil, Baltram, Red Riding Hood
 
 General Fixes:
 
@@ -45,6 +42,10 @@ General Fixes:
 - Axe of Doom is weaker now (+2 damage per kill => +0.5 damage per kill)
 - Endres quest now fails when judge is killed during Ulrich's quest
 - Updated GFA to 1.0.1 for better hitchances
+- Fixed wrong naming of Hanna's dubbing (German dubbing)
+- Added SVM subtitles and TTS dubbing (German dubbing) for missing voices
+- Fixed missing take of Garond (German dubbing)
+- Switched SVM and take for picklock failure and broken picklock
 
 
 
