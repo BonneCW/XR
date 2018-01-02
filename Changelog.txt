@@ -44,6 +44,7 @@ General Fixes:
 - Axe of Doom shouldn't duplicate itself anymore
 - Axe of Doom is weaker now (+2 damage per kill => +0.5 damage per kill)
 - Endres quest now fails when judge is killed during Ulrich's quest
+- Updated GFA to 1.0.1 for better hitchances
 
 
 
