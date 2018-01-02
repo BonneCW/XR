@@ -46,6 +46,7 @@ General Fixes:
 - Added SVM subtitles and TTS dubbing (German dubbing) for missing voices
 - Fixed missing take of Garond (German dubbing)
 - Switched SVM and take for picklock failure and broken picklock
+- reduced loudness of Smalltalks for TTS
 
 
 
