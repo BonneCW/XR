@@ -2,7 +2,7 @@ Future bigger update
 
 Enhancements:
 
-- Added takes for: Bengar, Mine Guard (King's Guard), Court Bouncer, Garvell, Borka
+- Added takes for: Bengar, Mine Guard (King's Guard), Court Bouncer, Garvell, Borka, Rudolf
 
 General Fixes:
 
