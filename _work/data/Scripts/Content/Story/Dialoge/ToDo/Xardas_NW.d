@@ -1874,7 +1874,7 @@ FUNC VOID Info_Mod_Xardas_NW_Randolph_B()
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Randolph_B_14_02"); //Und selbst wenn noch ein Funken seines ursprünglichen Wesens in ihm existieren sollte, so würdest du ihn doch kaum dazu bewegen können Pyrokars Trank einzunehmen.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Randolph_B_14_03"); //Folglich wirst du dieses Wesen - auch wenn noch ein Rest Menschlichkeit ihn ihm sein sollte - vernichten müssen, da du nicht über die Mittel verfügst, selektiv das Dämonische aus ihm zu bannen.
 
-	B_LogEntry	(TOPIC_MOD_AKIL_RANDOLPH, "Xardas meint, ich solle Randoplh, oder das, wozu er geworden ist, vernichten. Wenn es denn keine andere Möglichkeit gibt ...");
+	B_LogEntry	(TOPIC_MOD_AKIL_RANDOLPH, "Xardas meint, ich solle Randolph, oder das, wozu er geworden ist, vernichten. Wenn es denn keine andere Möglichkeit gibt ...");
 
 	Info_ClearChoices	(Info_Mod_Xardas_NW_Randolph);
 };
@@ -1883,7 +1883,7 @@ FUNC VOID Info_Mod_Xardas_NW_Randolph_A()
 {
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_Randolph_A_15_00"); //Ok, das werde ich tun.
 
-	B_LogEntry	(TOPIC_MOD_AKIL_RANDOLPH, "Xardas meint, ich solle Randoplh, oder das, wozu er geworden ist, vernichten. Wenn es denn keine andere Möglichkeit gibt ...");
+	B_LogEntry	(TOPIC_MOD_AKIL_RANDOLPH, "Xardas meint, ich solle Randolph, oder das, wozu er geworden ist, vernichten. Wenn es denn keine andere Möglichkeit gibt ...");
 
 	Info_ClearChoices	(Info_Mod_Xardas_NW_Randolph);
 };
