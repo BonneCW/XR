@@ -20,6 +20,7 @@ Fixes for Khorinis if not entered before:
 Fixes for Valley of Mines if not entered before:
 
 - Added missing focus name for a chest in Beliar library
+- Fixed zero sight area near Beliar fortress
 
 
 
