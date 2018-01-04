@@ -21,6 +21,18 @@ Fixes for Valley of Mines if not entered before:
 
 
 
+1.0.4
+
+Enhancements:
+
+- 
+
+General Fixes:
+
+- Granmar's club wasn't treated as weapon
+
+
+
 1.0.3
 
 Enhancements:

@@ -854,7 +854,8 @@ INSTANCE ItMW_GranmarKeule (C_Item)//Sturmknecht 2h Holzkeule
 {	
 	name 				=	"erzübrzogener Sturmknecht";  
 
-	mainflag 			=	ITEM_KAT_NONE;	
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_AXE;	
 	material 			=	MAT_WOOD;
 
 	value 				=	Value_Sturmknecht;
@@ -879,7 +880,8 @@ INSTANCE ItMW_KGErzwaffe (C_Item)//Sturmknecht 2h Holzkeule
 {	
 	name 				=	"Königliche Erzwaffe";  
 
-	mainflag 			=	ITEM_KAT_NONE;	
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_AXE;	
 	material 			=	MAT_WOOD;
 
 	value 				=	Value_Sturmknecht;
