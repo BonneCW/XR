@@ -145,8 +145,11 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 
 	description			= 	"Stab der Feuermagier";
 
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[0]				= NAME_Damage;					COUNT[0]	= damageTotal;
+	
+	TEXT[2]				= NAME_Bonus_Mana;				COUNT[2]	= 20;//FIXME_FILLER
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 // *****************************************************
@@ -174,8 +177,11 @@ INSTANCE ItMW_BeliarStab (C_Item)
 
 	description			= 	"Stab der Schwarzmagier";
 
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[0]				= NAME_Damage;					COUNT[0]	= damageTotal;
+	
+	TEXT[2]				= NAME_Bonus_Mana;				COUNT[2]	= 20;//FIXME_FILLER
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 // *****************************************************
@@ -230,8 +236,11 @@ INSTANCE ItMW_Heilmagierstab (C_Item)
 
 	description			= 	"Stab der Heilmagier";
 
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[0]				= NAME_Damage;					COUNT[0]	= damageTotal;
+	
+	TEXT[2]				= NAME_Bonus_Mana;				COUNT[2]	= 20;//FIXME_FILLER
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 // *****************************************************
@@ -346,8 +355,11 @@ INSTANCE ItMW_Addon_Stab03 (C_Item)
 
 	description			= 	"Stab der Wassermagier";
 
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[0]				= NAME_Damage;					COUNT[0]	= damageTotal;
+	
+	TEXT[2]				= NAME_Bonus_Mana;				COUNT[2]	= 20;//FIXME_FILLER
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 // *****************************************************
