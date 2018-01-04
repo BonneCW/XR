@@ -1017,7 +1017,7 @@ INSTANCE ItMw_Addon_PIR2hAxe (C_Item)
 
 INSTANCE ItMw_BonesAxt (C_Item)
 {	
-	name 				=	"Bones Plankenbrecher";  
+	name 				=	"Bones' Plankenbrecher";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	

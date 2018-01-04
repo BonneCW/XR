@@ -186,7 +186,7 @@ FUNC VOID Info_Mod_Sabine_Heiraten_03_Info()
 
 	B_UseItem	(self, ItFo_Trunken);
 
-	AI_Output(hero, self, "Info_Mod_Sabine_Heiraten_03_15_02"); //Hast du eine Brieftaube Dabei? Ich habe nämlich meiner Mutter versprochen zu schreiben, sobald ich meine Traumfrau gefunden habe.
+	AI_Output(hero, self, "Info_Mod_Sabine_Heiraten_03_15_02"); //Hast du eine Brieftaube dabei? Ich habe nämlich meiner Mutter versprochen zu schreiben, sobald ich meine Traumfrau gefunden habe.
 	AI_Output(self, hero, "Info_Mod_Sabine_Heiraten_03_17_03"); //(kichert)
 	AI_Output(hero, self, "Info_Mod_Sabine_Heiraten_03_15_04"); //Du siehst meiner vierten Freundin ähnlich.
 	AI_Output(self, hero, "Info_Mod_Sabine_Heiraten_03_17_05"); //Oh, wie viele Freundinnen hattest du denn schon?
@@ -225,7 +225,7 @@ FUNC INT Info_Mod_Sabine_FreudenspenderVerkauft_Condition()
 
 FUNC VOID Info_Mod_Sabine_FreudenspenderVerkauft_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Sabine_FreudenspenderVerkauft_15_00"); //wo warst du so plötzlich?
+	AI_Output(hero, self, "Info_Mod_Sabine_FreudenspenderVerkauft_15_00"); //Wo warst du so plötzlich?
 	AI_Output(self, hero, "Info_Mod_Sabine_FreudenspenderVerkauft_17_01"); //Ich musste weg.
 	AI_Output(hero, self, "Info_Mod_Sabine_FreudenspenderVerkauft_15_02"); //Weg?
 	AI_Output(self, hero, "Info_Mod_Sabine_FreudenspenderVerkauft_17_03"); //Ja, weg. Wichtige Dinge und so.

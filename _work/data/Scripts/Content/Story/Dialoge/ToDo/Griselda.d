@@ -537,7 +537,7 @@ FUNC VOID Info_Mod_Griselda_Pruefung8_Info()
 	else
 	{
 		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_26_03"); //Erstaunlich, selbst dem Hauch der Pest wusstest du durch geschickte Wahl zu Widerstehen.
-		AI_Output(hero, self, "Info_Mod_Griselda_Pruefung8_15_04"); //So soll auch deine Widerstandskraft gegen Krankheiten wachsen.
+		AI_Output(self, hero, "Info_Mod_Griselda_Pruefung8_26_04"); //So soll auch deine Widerstandskraft gegen Krankheiten wachsen.
 
 		if (Krankheit < 4)
 		{
