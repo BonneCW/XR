@@ -34,6 +34,7 @@ General Fixes:
 - some magic staffs didn't show their mana bonus
 - "Helping the innocent" now progresses after the dialog with Brutus
 - player now can talk to Xardas regarding the package from Baal Namib also in chapter 3
+- improved first log entry for quest "Sword of Innos" to make it clearer what to do next
 
 
 

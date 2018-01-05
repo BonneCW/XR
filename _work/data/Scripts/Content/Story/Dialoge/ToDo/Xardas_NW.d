@@ -1780,7 +1780,7 @@ FUNC VOID Info_Mod_Xardas_NW_Argibast_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_BEL_INNOSSCHWERT, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_BEL_INNOSSCHWERT, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_BEL_INNOSSCHWERT, "Es scheint so, als würde die Garde Innos' nach dem mächtigen Schwert Innos' suchen. Ich muss das Schwert vor ihnen finden. Wo es zu finden ist, weiß jedoch nicht mal Xardas, allerdings gibt es Andeutungen auf Jharkendar.");
+	B_LogEntry	(TOPIC_MOD_BEL_INNOSSCHWERT, "Es scheint so, als würde die Garde Innos' nach dem mächtigen Schwert Innos' suchen. Ich muss das Schwert vor ihnen finden. Wo es zu finden ist, weiß jedoch nicht mal Xardas, allerdings gibt es Andeutungen auf Jharkendar. Ich sollte einen Abstecher in die Ausgrabungsstätte machen. Dort muss die Garde vorbei, um nach Jharkendar zu gelangen.");
 
 	Wld_InsertNpc	(Mod_4085_HoherUntoterMagier_NW,	"TAVERNE");
 	Wld_InsertNpc	(Mod_4084_UntoterEliteNovize_NW,	"TAVERNE");
