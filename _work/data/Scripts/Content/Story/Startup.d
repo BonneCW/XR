@@ -9018,6 +9018,16 @@ FUNC VOID INIT_Relendel()
 		B_RemoveNpc	(Mod_7241_OUT_Anselm_REL);
 
 		Mod_Enter_Relendel_03 = TRUE;
+		
+		if (Mod_Kneipe_Ditmar >= 1)
+		&& (!Npc_KnowsInfo(hero, Info_Mod_Anselm_DickeLuft2)) {
+			B_SetTopicStatus(TOPIC_MOD_DITMAR_DICKELUFT, LOG_FAILED);
+		};
+		
+		if (Mod_REL_Hasenfuss >= 1)
+		&& (!Npc_KnowsInfo(hero, Info_Mod_Dalton_Hasenfuss)) {
+			B_SetTopicStatus(TOPIC_MOD_KHORATA_HASENFUSS, LOG_FAILED);
+		};
 	};
 
 	if (Kapitel >= 5)
