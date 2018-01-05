@@ -10,8 +10,7 @@ INSTANCE Info_Mod_Knatus_AlvarKristall (C_INFO)
 
 FUNC INT Info_Mod_Knatus_AlvarKristall_Condition()
 {
-	if (Mod_AlvarKristall == 3)
-	&& (Npc_KnowsInfo(hero, Info_Mod_Brutus_AlvarKristall3))
+	if (Npc_KnowsInfo(hero, Info_Mod_Brutus_AlvarKristall3))
 	{
 		return 1;
 	};
@@ -24,6 +23,8 @@ FUNC VOID Info_Mod_Knatus_AlvarKristall_Info()
 	AI_StopProcessInfos	(self);
 
 	AI_Teleport	(hero, "EIS_40");
+	
+	Mod_AlvarKristall = 4;
 };
 
 INSTANCE Info_Mod_Knatus_Traenenkristall (C_INFO)

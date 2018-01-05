@@ -32,6 +32,7 @@ General Fixes:
 - Granmar's club wasn't treated as weapon
 - sentence of Griselda was spoken by hero
 - some magic staffs didn't show their mana bonus
+- "Helping the innocent" now progresses after the dialog with Brutus
 
 
 

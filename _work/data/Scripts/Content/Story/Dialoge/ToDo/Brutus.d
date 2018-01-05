@@ -109,8 +109,6 @@ FUNC VOID Info_Mod_Brutus_AlvarKristall3_Info()
 	AI_Output(hero, self, "Info_Mod_Brutus_AlvarKristall3_15_04"); //Ja, aber es zeigt doch eindeutig ...
 
 	AI_StopProcessInfos	(self);
-
-	Mod_AlvarKristall = 2;
 };
 
 INSTANCE Info_Mod_Brutus_AlvarKristall4 (C_INFO)
