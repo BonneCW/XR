@@ -36,6 +36,7 @@ General Fixes:
 - player now can talk to Xardas regarding the package from Baal Namib also in chapter 3
 - improved first log entry for quest "Sword of Innos" to make it clearer what to do next
 - player now can heat either one raw steel or all at once
+- fixed wrong subtitles when search for a Schagby player
 
 
 
