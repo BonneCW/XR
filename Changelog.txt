@@ -33,6 +33,7 @@ General Fixes:
 - sentence of Griselda was spoken by hero
 - some magic staffs didn't show their mana bonus
 - "Helping the innocent" now progresses after the dialog with Brutus
+- player now can talk to Xardas regarding the package from Baal Namib also in chapter 3
 
 
 
