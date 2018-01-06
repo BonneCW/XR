@@ -3364,8 +3364,8 @@ FUNC VOID NEBENQUESTS()
 		};
 
 		if (Mod_Sly_Arena == 4)
-		&& (Npc_GetDistToWP(Mod_801_STT_Sly_MT, "OCR_ARENABATTLE") < 500)
-		&& (Npc_GetDistToWP(Mod_1871_TPL_GorKaranto_MT, "OCR_ARENABATTLE") < 500)
+		&& (Npc_GetDistToWP(Mod_801_STT_Sly_MT, "OCR_ARENABATTLE") < 1000)
+		&& (Npc_GetDistToWP(Mod_1871_TPL_GorKaranto_MT, "OCR_ARENABATTLE") < 1000)
 		{
 			SlyKaranto_KampfScene();
 		};

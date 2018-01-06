@@ -2,11 +2,11 @@ Future bigger update
 
 Enhancements:
 
-- 
+- added takes for: Bosper
 
 General Fixes:
 
-- 
+- Fixed a take for Rudolf
 
 Fixes for Khorinis if not entered before:
 
@@ -39,6 +39,7 @@ General Fixes:
 - improved first log entry for quest "Sword of Innos" to make it clearer what to do next
 - player now can heat either one raw steel or all at once
 - fixed wrong subtitles when search for a Schagby player
+- camera at Sly's arena fight should be stopped now with a higher chance
 
 
 
