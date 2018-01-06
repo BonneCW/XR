@@ -1,3 +1,5 @@
+var int Mod_Mario_WachenWeg;
+
 FUNC VOID NEBENQUESTS()
 {
 	var zCListSort liste;
@@ -989,11 +991,12 @@ FUNC VOID NEBENQUESTS()
 			B_StartOtherRoutine	(Mod_595_MIL_Mario_NW, "PATROUILLE");
 		};
 
-		if (Mod_Mario == 8)
+		if (Mod_Mario == 9)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Mil_333_Mario))
 		&& (!Npc_IsInState(Mil_333_Stadtwache, ZS_Talk))
+		&& (!Mod_Mario_WachenWeg)
 		{
-			Mod_Mario = 10;
+			Mod_Mario_WachenWeg = TRUE;
 
 			B_StartOtherRoutine	(Mil_332_Stadtwache, "MAUER");
 			B_StartOtherRoutine	(Mil_333_Stadtwache, "MAUER");
