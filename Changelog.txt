@@ -41,6 +41,7 @@ General Fixes:
 - fixed wrong subtitles when search for a Schagby player
 - camera at Sly's arena fight should be stopped now with a higher chance
 - Guards now leave the gate during "Escape aid"
+- Wrong dialog at Flaemar in Patherion bringing him alcohol and joints
 
 
 

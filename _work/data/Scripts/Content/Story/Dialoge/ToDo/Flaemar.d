@@ -116,13 +116,10 @@ FUNC VOID Info_Mod_Flaemar_MangelQuest_D()
 
 	Mod_PAT_FlaemarKraut += 3;
 
-	if (Mod_PAT_FlaemarKraut < 15)
-	{
-		Info_Mod_Flaemar_MangelQuest_E();
-	}
-	else
-	{
+	if (Mod_PAT_FlaemarKraut < 15) {
 		Info_Mod_Flaemar_MangelQuest_F();
+	} else {
+		Info_Mod_Flaemar_MangelQuest_E();
 	};
 };
 
@@ -132,13 +129,10 @@ FUNC VOID Info_Mod_Flaemar_MangelQuest_C()
 
 	Mod_PAT_FlaemarKraut += 2;
 
-	if (Mod_PAT_FlaemarKraut < 15)
-	{
-		Info_Mod_Flaemar_MangelQuest_E();
-	}
-	else
-	{
+	if (Mod_PAT_FlaemarKraut < 15) {
 		Info_Mod_Flaemar_MangelQuest_F();
+	} else {
+		Info_Mod_Flaemar_MangelQuest_E();
 	};
 };
 
@@ -148,13 +142,10 @@ FUNC VOID Info_Mod_Flaemar_MangelQuest_B()
 
 	Mod_PAT_FlaemarKraut += 1;
 
-	if (Mod_PAT_FlaemarKraut < 15)
-	{
-		Info_Mod_Flaemar_MangelQuest_E();
-	}
-	else
-	{
+	if (Mod_PAT_FlaemarKraut < 15) {
 		Info_Mod_Flaemar_MangelQuest_F();
+	} else {
+		Info_Mod_Flaemar_MangelQuest_E();
 	};
 };
 
@@ -164,13 +155,10 @@ FUNC VOID Info_Mod_Flaemar_MangelQuest_A()
 
 	Mod_PAT_FlaemarKraut += 1;
 
-	if (Mod_PAT_FlaemarKraut < 15)
-	{
-		Info_Mod_Flaemar_MangelQuest_E();
-	}
-	else
-	{
+	if (Mod_PAT_FlaemarKraut < 15) {
 		Info_Mod_Flaemar_MangelQuest_F();
+	} else {
+		Info_Mod_Flaemar_MangelQuest_E();
 	};
 };
 
@@ -246,13 +234,10 @@ FUNC VOID Info_Mod_Flaemar_MangelQuest2_D()
 
 	Mod_PAT_FlaemarAlkohol += 2;
 
-	if (Mod_PAT_FlaemarAlkohol < 15)
-	{
-		Info_Mod_Flaemar_MangelQuest2_E();
-	}
-	else
-	{
+	if (Mod_PAT_FlaemarAlkohol < 15) {
 		Info_Mod_Flaemar_MangelQuest2_F();
+	} else {
+		Info_Mod_Flaemar_MangelQuest2_E();
 	};
 };
 
@@ -262,13 +247,10 @@ FUNC VOID Info_Mod_Flaemar_MangelQuest2_C()
 
 	Mod_PAT_FlaemarAlkohol += 2;
 
-	if (Mod_PAT_FlaemarAlkohol < 15)
-	{
-		Info_Mod_Flaemar_MangelQuest2_E();
-	}
-	else
-	{
+	if (Mod_PAT_FlaemarAlkohol < 15) {
 		Info_Mod_Flaemar_MangelQuest2_F();
+	} else {
+		Info_Mod_Flaemar_MangelQuest2_E();
 	};
 };
 
@@ -278,13 +260,10 @@ FUNC VOID Info_Mod_Flaemar_MangelQuest2_B()
 
 	Mod_PAT_FlaemarAlkohol += 1;
 
-	if (Mod_PAT_FlaemarAlkohol < 15)
-	{
-		Info_Mod_Flaemar_MangelQuest2_E();
-	}
-	else
-	{
+	if (Mod_PAT_FlaemarAlkohol < 15) {
 		Info_Mod_Flaemar_MangelQuest2_F();
+	} else {
+		Info_Mod_Flaemar_MangelQuest2_E();
 	};
 };
 
@@ -294,13 +273,10 @@ FUNC VOID Info_Mod_Flaemar_MangelQuest2_A()
 
 	Mod_PAT_FlaemarAlkohol += 1;
 
-	if (Mod_PAT_FlaemarAlkohol < 15)
-	{
-		Info_Mod_Flaemar_MangelQuest2_E();
-	}
-	else
-	{
+	if (Mod_PAT_FlaemarAlkohol < 15) {
 		Info_Mod_Flaemar_MangelQuest2_F();
+	} else {
+		Info_Mod_Flaemar_MangelQuest2_E();
 	};
 };
 
