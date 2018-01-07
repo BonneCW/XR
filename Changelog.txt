@@ -49,6 +49,7 @@ General Fixes:
 - talking to Patient after Endres quest was closed doesn't add new log entry anymore
 - Collecting Soja plants works now
 - Grom now performs his daily work
+- Axe of Doom now updates damage correctly again after loading a savegame
 
 
 
