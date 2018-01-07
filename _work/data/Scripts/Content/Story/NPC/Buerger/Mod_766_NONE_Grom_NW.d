@@ -38,13 +38,13 @@ INSTANCE Mod_766_NONE_Grom_NW (Npc_Default)
 
 FUNC VOID Rtn_Start_766 ()
 {	
-	TA_Stand_Eating		(08,00,23,00,"WP_STAND_GRIMBALD"); 
+	TA_Stand_Eating	(08,00,23,00,"WP_STAND_GRIMBALD"); 
 	TA_Sleep		(23,00,08,00,"NW_CASTLEMINE_TROLL_04_B");
 };
 
 FUNC VOID Rtn_AtLager_766 ()
 {	
-	TA_Saw	 		(08,00,20,00,"NW_CASTLEMINE_TROLL_04_B"); 
-	TA_Holzspalten 		(20,00,23,00,"NW_CASTLEMINE_TROLL_04_B"); 
+	TA_Saw	 		(08,00,20,00,"NW_CASTLEMINE_TROLL_04_A"); 
+	TA_Holzspalten 	(20,00,23,00,"NW_CASTLEMINE_TROLL_04"); 
 	TA_Sleep		(23,00,08,00,"NW_CASTLEMINE_TROLL_04_B");
 };

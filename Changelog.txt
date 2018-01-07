@@ -48,6 +48,7 @@ General Fixes:
 - removed effect of Ghost of Shadow Warrior
 - talking to Patient after Endres quest was closed doesn't add new log entry anymore
 - Collecting Soja plants works now
+- Grom now performs his daily work
 
 
 
