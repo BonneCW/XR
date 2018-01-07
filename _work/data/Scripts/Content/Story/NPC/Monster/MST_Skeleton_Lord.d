@@ -93,7 +93,7 @@ INSTANCE Skeleton_Lord_Ghost	(Mst_Skeleton_Lord)
 	name							=	"Geist eines Schattenkriegers";
 
 	flags = NPC_FLAG_GHOST;
-	effect							=	"spellfx_undead_skeletonlord";
+	//effect							=	"spellfx_undead_skeletonlord";
 	aivar[AIV_MM_REAL_ID]			= 	ID_GEISTERKRIEGER;
 
 	level							=	75;
@@ -158,7 +158,7 @@ INSTANCE Summoned_Skeleton_Lord_Ghost	(Mst_Skeleton_Lord)
 	name							=	"Geist eines Schattenkriegers";
 
 	flags = NPC_FLAG_GHOST;
-	effect							=	"spellfx_undead_skeletonlord";
+	//effect							=	"spellfx_undead_skeletonlord";
 	aivar[AIV_MM_REAL_ID]			= 	ID_GEISTERKRIEGER;
 
 	level							=	0;
