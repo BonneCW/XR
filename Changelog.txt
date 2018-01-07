@@ -43,6 +43,7 @@ General Fixes:
 - Guards now leave the gate during "Escape aid"
 - Wrong dialog at Flaemar in Patherion bringing him alcohol and joints
 - Kimon now gives hero gold for Freudenspender
+- Autosave now disabled when player is dead
 
 
 

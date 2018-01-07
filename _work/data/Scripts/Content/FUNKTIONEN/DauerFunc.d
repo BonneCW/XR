@@ -1751,6 +1751,7 @@ FUNC VOID DAUERFUNC_01()
 		&& (!Inventory_Open)
 		&& (!C_BodyStateContains(hero, BS_MOBINTERACT))
 		&& (!C_BodyStateContains(hero, BS_MOBINTERACT_INTERRUPT))
+		&& (hero.attribute[ATR_HITPOINTS] > 0)
 		{
 			B_Autosave();
 		};
