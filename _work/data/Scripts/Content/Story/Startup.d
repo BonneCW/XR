@@ -6537,16 +6537,18 @@ FUNC VOID INIT_Minental ()
 	loopStart = MEM_StackPos.position;
 	if (true) {
 		npcPtr = liste.data;
-		MEM_AssignInst (temp, npcPtr);
+		if (npcPtr) {
+			MEM_AssignInst (temp, npcPtr);
 
-		if (Hlp_IsValidNpc(temp)) {
-			MEM_INFO(ConcatStrings("LIST: Checking ", temp.name));
-			if (Hlp_StrCmp(temp.wp, "PALTOBURGKNAST_4"))
-			&& (temp.guild > GIL_SEPERATOR_HUM)
-			{
-				MEM_INFO("LIST: Removing");
-				temp.wp = "TOT";
-				B_RemoveNpc(temp);
+			if (Hlp_IsValidNpc(temp)) {
+				MEM_INFO(ConcatStrings("LIST: Checking ", temp.name));
+				if (Hlp_StrCmp(temp.wp, "PALTOBURGKNAST_4"))
+				&& (temp.guild > GIL_SEPERATOR_HUM)
+				{
+					MEM_INFO("LIST: Removing");
+					temp.wp = "TOT";
+					B_RemoveNpc(temp);
+				};
 			};
 		};
 
@@ -6567,12 +6569,14 @@ FUNC VOID INIT_Minental ()
 	loopStart = MEM_StackPos.position;
 	if (true) {
 		sojaPtr = liste.data;
-		var zCVob sojaVob;
-		MEM_AssignInst (sojaVob, sojaPtr);
-		
-		if (Hlp_StrCmp(sojaVob._zCObject_objectName, "MOBNAME_SOJA") == TRUE) {
-			MEM_AssignInst (sojaMob, sojaPtr);
-			sojaMob.conditionFunc = "COLLECTSOJA";
+		if (sojaPtr) {
+			var zCVob sojaVob;
+			MEM_AssignInst (sojaVob, sojaPtr);
+			
+			if (Hlp_StrCmp(sojaVob._zCObject_objectName, "MOBNAME_SOJA") == TRUE) {
+				MEM_AssignInst (sojaMob, sojaPtr);
+				sojaMob.conditionFunc = "COLLECTSOJA";
+			};
 		};
 
 		MEM_AssignInst (liste, liste.next);
