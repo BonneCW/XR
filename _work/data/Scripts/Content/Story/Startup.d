@@ -6557,6 +6557,30 @@ FUNC VOID INIT_Minental ()
 			MEM_StackPos.position = loopStart;
 		};
 	};
+	
+	
+	// fix condition func of soja plants
+	// TODO: remove for 1.1 release
+	MEM_AssignInst(liste, MEM_World.voblist);
+	var int sojaPtr;
+	var oCMobInter sojaMob;
+	loopStart = MEM_StackPos.position;
+	if (true) {
+		sojaPtr = liste.data;
+		var zCVob sojaVob;
+		MEM_AssignInst (sojaVob, sojaPtr);
+		
+		if (Hlp_StrCmp(sojaVob._zCObject_objectName, "MOBNAME_SOJA") == TRUE) {
+			MEM_AssignInst (sojaMob, sojaPtr);
+			sojaMob.conditionFunc = "COLLECTSOJA";
+		};
+
+		MEM_AssignInst (liste, liste.next);
+
+		if (liste.next != 0) {
+			MEM_StackPos.position = loopStart;
+		};
+	};
 };
 
 FUNC VOID STARTUP_OrcTempel ()
