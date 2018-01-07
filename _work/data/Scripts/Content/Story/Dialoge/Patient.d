@@ -23,7 +23,9 @@ FUNC VOID Info_Mod_Patient_Endres_Info()
 	AI_Output(self, hero, "Info_Mod_Patient_Endres_01_01"); //Ich kann es nicht genau sagen. An dem Tag bin ich komischerweise mittags eingeschlafen und erst abends wieder aufgewacht.
 	AI_Output(self, hero, "Info_Mod_Patient_Endres_01_02"); //Aber der Heiler war da, bevor ich eingeschlafen und nachdem ich aufgewacht bin.
 
-	B_LogEntry	(TOPIC_MOD_KHORATA_ENDRES, "Der Patient hat einen Großteil des Tages 'komischerweise' verschlafen. Das Alibi des Heilers ist also löchrig.");
+	if (!Npc_KnowsInfo(hero, Info_Mod_Richter_Endres02)) {
+		B_LogEntry	(TOPIC_MOD_KHORATA_ENDRES, "Der Patient hat einen Großteil des Tages 'komischerweise' verschlafen. Das Alibi des Heilers ist also löchrig.");
+	};
 };
 
 INSTANCE Info_Mod_Patient_WasFehlt (C_INFO)
