@@ -44,6 +44,7 @@ General Fixes:
 - Wrong dialog at Flaemar in Patherion bringing him alcohol and joints
 - Kimon now gives hero gold for Freudenspender
 - Autosave now disabled when player is dead
+- Player now needs to talk to Thofeistos before next stage of Urs' quest is triggered
 
 
 

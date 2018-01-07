@@ -3115,6 +3115,7 @@ FUNC VOID NEBENQUESTS()
 			&& (Npc_HasItems(hero, ItAt_WargFur) >= 2)
 			&& (Npc_HasItems(hero, ItAt_ShadowFur) >= 2)
 			&& (Npc_HasItems(hero, ItAt_TrollFur) >= 1)
+			&& (Npc_KnowsInfo(hero, Info_Mod_Thofeistos_Urs))
 			{
 				Mod_Urs_Hund = 1;
 
