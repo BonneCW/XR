@@ -42,6 +42,7 @@ General Fixes:
 - camera at Sly's arena fight should be stopped now with a higher chance
 - Guards now leave the gate during "Escape aid"
 - Wrong dialog at Flaemar in Patherion bringing him alcohol and joints
+- Kimon now gives hero gold for Freudenspender
 
 
 

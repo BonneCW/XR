@@ -88,6 +88,9 @@ FUNC VOID Info_Mod_Kimon_REL_Freudenspender2_Info()
 	AI_Output(self, hero, "Info_Mod_Kimon_REL_Freudenspender2_34_02"); //Fantastisch! Hattest du Auslagen?
 	AI_Output(hero, self, "Info_Mod_Kimon_REL_Freudenspender2_15_03"); //Ja, ungefähr 350 Gold.
 	AI_Output(self, hero, "Info_Mod_Kimon_REL_Freudenspender2_34_04"); //Hier hast du's zurück und noch mal 350 für deine Mühe.
+	
+	B_GiveInvItems (self, hero, ItMi_Gold, 700);
+	
 	AI_Output(hero, self, "Info_Mod_Kimon_REL_Freudenspender2_15_05"); //Bis ein andermal.
 
 	B_SetTopicStatus	(TOPIC_MOD_KIMON_FREUDENSPENDER, LOG_SUCCESS);
