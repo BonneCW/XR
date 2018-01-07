@@ -1607,7 +1607,7 @@ FUNC VOID HAUPTQUESTS()
 
 		if (Mod_Argez == 1)
 		{
-			if (Npc_GetDistToWP(hero, "WP_SEQUENZ_ARGEZ") < 500)
+			if (Npc_GetDistToWP(hero, "WP_SEQUENZ_ARGEZ") < 750)
 			&& (Mod_AnomalieAmulett == 1)
 			{
 				Mod_Argez = 2;

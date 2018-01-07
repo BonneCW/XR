@@ -50,6 +50,7 @@ General Fixes:
 - Collecting Soja plants works now
 - Grom now performs his daily work
 - Axe of Doom now updates damage correctly again after loading a savegame
+- Increased tolerance where video for "Dark magic" quest is triggered
 
 
 
