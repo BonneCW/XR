@@ -3705,9 +3705,9 @@ FUNC VOID Equip_ITAR_Leather_L()
 	
 		if (Leather01_Equipped == TRUE) //Ledergürtel
 		{
-			self.protection[PROT_EDGE] 	+= BA_Bonus01;
-			self.protection[PROT_BLUNT] += BA_Bonus01;
-			self.protection[PROT_POINT] += BA_Bonus01;
+			self.protection[PROT_EDGE] 	+= BA_Bonus01 * 1000;
+			self.protection[PROT_BLUNT] += BA_Bonus01 * 1000;
+			self.protection[PROT_POINT] += BA_Bonus01 * 1000;
 			self.protection[PROT_MAGIC] += BA_Bonus01;
 			self.protection[PROT_FIRE] 	+= BA_Bonus01;
 		};
@@ -3721,9 +3721,9 @@ FUNC VOID UnEquip_ITAR_Leather_L()
 	
 		if (Leather01_Equipped == TRUE) //Ledergürtel
 		{
-			self.protection[PROT_EDGE] 	-= BA_Bonus01;
-			self.protection[PROT_BLUNT] -= BA_Bonus01;
-			self.protection[PROT_POINT] -= BA_Bonus01;
+			self.protection[PROT_EDGE] 	-= BA_Bonus01 * 1000;
+			self.protection[PROT_BLUNT] -= BA_Bonus01 * 1000;
+			self.protection[PROT_POINT] -= BA_Bonus01 * 1000;
 			self.protection[PROT_MAGIC] -= BA_Bonus01;
 			self.protection[PROT_FIRE] 	-= BA_Bonus01;
 		};

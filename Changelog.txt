@@ -56,6 +56,7 @@ General Fixes:
 - Hakon's sword can't be sold anymore
 - Fixed potential bug in dialog with Katar when he should give the player the Necronomicum
 - Lich can't be exploited anymore
+- Unequipping leather armor before leather belt now decreases armor bonus correctly
 
 
 
