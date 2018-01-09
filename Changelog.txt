@@ -57,6 +57,7 @@ General Fixes:
 - Fixed potential bug in dialog with Katar when he should give the player the Necronomicum
 - Lich can't be exploited anymore
 - Unequipping leather armor before leather belt now decreases armor bonus correctly
+- Added fallback when talking to Argez about shrunk monster when loading a savegame inbetween
 
 
 

@@ -111,7 +111,7 @@ INSTANCE Info_Mod_Argez_AW_Magiespur2 (C_INFO)
 FUNC INT Info_Mod_Argez_AW_Magiespur2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Argez_AW_Magiespur))
-	&& (Hlp_IsValidNpc(Mod_Argez_ShrinkMonster))
+	&& (Mod_Argez_Shrink == 0)
 	{
 		return 1;
 	};
@@ -119,25 +119,31 @@ FUNC INT Info_Mod_Argez_AW_Magiespur2_Condition()
 
 FUNC VOID Info_Mod_Argez_AW_Magiespur2_Info()
 {
-	AI_Teleport	(Mod_Argez_ShrinkMonster, "PC_HERO");
+	if (Hlp_IsValidNpc(Mod_Argez_ShrinkMonster)) {
+		AI_Teleport	(Mod_Argez_ShrinkMonster, "PC_HERO");
+	};
 
 	AI_Output(hero, self, "Info_Mod_Argez_AW_Magiespur2_15_00"); //Hier ist das neue Ziel für die Markierung.
 
-	if (Mod_Argez_ShrinkMonster.guild == GIL_TROLL)
-	|| (Mod_Argez_ShrinkMonster.guild == GIL_STONEGOLEM)
-	{
-		AI_Output(self, hero, "Info_Mod_Argez_AW_Magiespur2_37_01"); //(lacht) Der ist ja putzig.
-	}
-	else if (Mod_Argez_ShrinkMonster.guild == GIL_MEATBUG)
-	{
-		AI_Output(self, hero, "Info_Mod_Argez_AW_Magiespur2_37_02"); //Wo denn? Ach, da unten!
+	if (Hlp_IsValidNpc(Mod_Argez_ShrinkMonster)) {
+		if (Mod_Argez_ShrinkMonster.guild == GIL_TROLL)
+		|| (Mod_Argez_ShrinkMonster.guild == GIL_STONEGOLEM)
+		{
+			AI_Output(self, hero, "Info_Mod_Argez_AW_Magiespur2_37_01"); //(lacht) Der ist ja putzig.
+		}
+		else if (Mod_Argez_ShrinkMonster.guild == GIL_MEATBUG)
+		{
+			AI_Output(self, hero, "Info_Mod_Argez_AW_Magiespur2_37_02"); //Wo denn? Ach, da unten!
+		};
 	};
 
 	AI_Output(self, hero, "Info_Mod_Argez_AW_Magiespur2_37_03"); //Perfekt, ich werde sofort beginnen.
 
 	// ToDo: Effekt auf Held und Monster rennt weg
 
-	AI_Flee	(Mod_Argez_ShrinkMonster);
+	if (Hlp_IsValidNpc(Mod_Argez_ShrinkMonster)) {
+		AI_Flee	(Mod_Argez_ShrinkMonster);
+	};
 
 	AI_Output(self, hero, "Info_Mod_Argez_AW_Magiespur2_37_04"); //Das sollte es schon gewesen sein. Hoffentlich war das Tier noch nah genug, dass die Übertragung geklappt hat. Lass mal nachsehen.
 
