@@ -54,6 +54,7 @@ General Fixes:
 - Beliar shrine teleport to Beliar fortress now is only unlocked after talking to Xardas about it
 - Disable Spine Gamepad module as it wasn't used by anyone and caused a potential crash when saving game while (multiple?) earthquakes are active
 - Hakon's sword can't be sold anymore
+- Fixed potential bug in dialog with Katar when he should give the player the Necronomicum
 
 
 

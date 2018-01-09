@@ -60,7 +60,7 @@ FUNC INT Info_Mod_Katar_Necronomicum_Condition()
 	&& (Npc_HasItems(hero, ItMi_HerbPaket) >= 1)
 	&& (Mod_Sekte_KatarDay < Wld_GetDay())
 	&& (Npc_HasItems(hero, ItWr_BeliarBook) == 0)
-	&& (!Npc_KnowsInfo(hero, ItWr_BeliarBook))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Karras_NamibHabBuch))
 	{
 		return 1;
 	};
