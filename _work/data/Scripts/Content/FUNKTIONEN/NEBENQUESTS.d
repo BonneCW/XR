@@ -900,7 +900,13 @@ FUNC VOID NEBENQUESTS()
 		&& (Mod_DiegoHoltKristall_Fertig == FALSE)
 		{
 			B_StartOtherRoutine	(Mod_538_RDW_Diego_NW, "START");
-			B_StartOtherRoutine	(Mod_588_WNOV_Joe_NW, "START");
+			
+			if (Npc_KnowsInfo(hero, Info_Mod_Joe_Wassersnapper))
+			&& (!Npc_KnowsInfo(hero, Info_Mod_Joe_Wassersnapper2)) {
+				B_StartOtherRoutine	(Mod_588_WNOV_Joe_NW, "SNAPPER");
+			} else {
+				B_StartOtherRoutine	(Mod_588_WNOV_Joe_NW, "START");
+			};
 
 			Mod_DiegoHoltKristall_Fertig = TRUE;
 		};

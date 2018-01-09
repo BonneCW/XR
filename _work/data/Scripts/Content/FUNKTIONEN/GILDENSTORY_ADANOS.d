@@ -767,7 +767,13 @@ FUNC VOID GILDENSTORY_ADANOS()
 			B_StartOtherRoutine	(Mod_1535_WKR_Wasserkrieger_NW, "START");
 			B_StartOtherRoutine	(Mod_1534_WKR_Wasserkrieger_NW, "START");
 			B_StartOtherRoutine	(Mod_1532_HTR_Ethan_NW, "START");
-			B_StartOtherRoutine	(Mod_588_WNOV_Joe_NW, "START");
+			
+			if (Npc_KnowsInfo(hero, Info_Mod_Joe_Wassersnapper))
+			&& (!Npc_KnowsInfo(hero, Info_Mod_Joe_Wassersnapper2)) {
+				B_StartOtherRoutine	(Mod_588_WNOV_Joe_NW, "SNAPPER");
+			} else {
+				B_StartOtherRoutine	(Mod_588_WNOV_Joe_NW, "START");
+			};
 		};
 
 		if (Mod_WM_Boeden >= 11)
@@ -856,8 +862,13 @@ FUNC VOID GILDENSTORY_ADANOS()
 			{
 				B_StartOtherRoutine	(Mod_538_RDW_Diego_NW, "START");
 			};
-
-			B_StartOtherRoutine	(Mod_588_WNOV_Joe_NW, "START");
+			
+			if (Npc_KnowsInfo(hero, Info_Mod_Joe_Wassersnapper))
+			&& (!Npc_KnowsInfo(hero, Info_Mod_Joe_Wassersnapper2)) {
+				B_StartOtherRoutine	(Mod_588_WNOV_Joe_NW, "SNAPPER");
+			} else {
+				B_StartOtherRoutine	(Mod_588_WNOV_Joe_NW, "START");
+			};
 
 			Mod_1538_WKR_Wasserkrieger_NW.aivar[AIV_PARTYMEMBER] = FALSE;
 			Mod_1530_WKR_Everaldo_NW.aivar[AIV_PARTYMEMBER] = FALSE;

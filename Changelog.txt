@@ -58,6 +58,7 @@ General Fixes:
 - Lich can't be exploited anymore
 - Unequipping leather armor before leather belt now decreases armor bonus correctly
 - Added fallback when talking to Argez about shrunk monster when loading a savegame inbetween
+- Joe should continue his correct TA now after the quests he changed positions
 
 
 
