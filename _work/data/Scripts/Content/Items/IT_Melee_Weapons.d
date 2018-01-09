@@ -2739,7 +2739,7 @@ INSTANCE ItMw_HakonSchwert_01 (C_Item)
 	name 				=	"Grobes Langschwert von Hakon";  
 
 	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_SWD;	
+	flags 				=	ITEM_SWD | ITEM_SHOW;	
 	material 			=	MAT_METAL;
 
 	value 				=	Value_Schwert;
