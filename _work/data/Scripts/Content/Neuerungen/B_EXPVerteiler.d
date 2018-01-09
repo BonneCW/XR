@@ -4,6 +4,11 @@ FUNC VOID B_EXPVerteiler (var C_NPC opfer, var C_NPC taeter)
 		return;
 	};
 	
+	if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Lich_11008_NW))
+	&& (Mod_NL_HasKamm < 2)) {
+		return;
+	};
+	
 	if (C_NpcIsHero(taeter)) {
 		if (opfer.aivar[AIV_MM_REAL_ID] == ID_UNDEADORCWARRIOR) {
 			if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(UndeadOrcWarrior)) {

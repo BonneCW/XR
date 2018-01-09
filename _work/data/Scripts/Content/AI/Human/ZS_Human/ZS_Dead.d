@@ -595,9 +595,6 @@ func void ZS_Dead ()
 			B_StartOtherRoutine	(Mod_101_BAU_Balthasar_NW, "START");
 		};
 	};
-	
-	// ------ XP ------
-	B_EXPVerteiler (self, other);
 
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Lich_11008_NW))
 	&& (Mod_NL_HasKamm < 2)
@@ -609,6 +606,9 @@ func void ZS_Dead ()
 		Wld_InsertNpc	(Lich_11008_NW, "LICH");
 		return;
 	};
+	
+	// ------ XP ------
+	B_EXPVerteiler (self, other);
 
 	if (CurrentLevel == RELENDEL_ZEN)
 	{
