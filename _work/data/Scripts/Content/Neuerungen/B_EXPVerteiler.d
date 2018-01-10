@@ -5,7 +5,7 @@ FUNC VOID B_EXPVerteiler (var C_NPC opfer, var C_NPC taeter)
 	};
 	
 	if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Lich_11008_NW))
-	&& (Mod_NL_HasKamm < 2)) {
+	&& (Mod_NL_HasKamm < 2) {
 		return;
 	};
 	
