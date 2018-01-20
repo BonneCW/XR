@@ -125,7 +125,7 @@ FUNC VOID Info_Mod_Skip_Francis_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_SKIP_PADDEL, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_SKIP_PADDEL, LOG_RUNNING);
-	B_LogEntry_More	(TOPIC_MOD_FRANCIS_ENTERTRUPP, TOPIC_MOD_SKIP_PADDEL, "Ich soll für Skip ein paar Sachen ausliefern: Ein Paket mit Rum für den Wirt im Hafenviertel von Khorinis, ein Paket voller Grog für einen der Söldner auf Onars Hof und ein Paket mit allen möglichen Sachen für Lehmar, den Geldverleiher.", "Ich soll Skip neue Paddel besorgen. Hm ... wer könnte sowas haben? Jemand im Hafen ...");
+	B_LogEntry_More	(TOPIC_MOD_FRANCIS_ENTERTRUPP, TOPIC_MOD_SKIP_PADDEL, "Ich soll für Skip ein paar Sachen ausliefern: Ein Paket mit Rum für den Wirt im Hafenviertel von Khorinis, ein Paket voller Grog für einen der Söldner auf Onars Hof und ein Paket mit allen möglichen Sachen für Lehmar, den Geldverleiher.", "Ich soll Skip neue Paddel besorgen. Hm ... wer könnte sowas haben? Jemand im Hafen ... Ach ja, und 1500 Gold soll ich auch noch mitbringen.");
 };
 
 INSTANCE Info_Mod_Skip_Geld (C_INFO)
