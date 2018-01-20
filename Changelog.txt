@@ -19,15 +19,22 @@ Fixes for Valley of Mines if not entered before:
 - Added missing focus name for a chest in Beliar library
 - Fixed zero sight area near Beliar fortress
 - Cathran now sits on his bench
-- Quests "Thick Air" and "Coward" now fail in chapter 3 if not finished before
 
 
 
-1.0.4
+1.0.5
 
 Enhancements:
 
 - 
+
+General Fixes:
+
+- Skip's quest now can be solved even though player already joined a boarding troop
+
+
+
+1.0.4
 
 General Fixes:
 

@@ -144,7 +144,6 @@ FUNC INT Info_Mod_Skip_Geld_Condition()
 	if (Npc_KnowsInfo(hero, Info_Mod_Skip_Francis))
 	&& (Npc_HasItems(hero, ItMi_Gold) >= 1500)
 	&& (Npc_HasItems(hero, ItMi_Paddel) >= 2)
-	&& (Mod_InEntertrupp == 0)
 	{
 		return 1;
 	};
