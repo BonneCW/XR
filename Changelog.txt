@@ -26,7 +26,7 @@ Fixes for Valley of Mines if not entered before:
 
 Enhancements:
 
-- 
+- Tailor in Khorata now has a name
 
 General Fixes:
 

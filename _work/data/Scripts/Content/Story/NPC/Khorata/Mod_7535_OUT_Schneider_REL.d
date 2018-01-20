@@ -1,7 +1,7 @@
 instance Mod_7535_OUT_Schneider_REL (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Schneider"; 
+	name 		= "Versage"; 
 	guild 		= GIL_OUT;
 	id 			= 7535;
 	voice 		= 31;
