@@ -574,6 +574,10 @@ FUNC VOID GILDENSTORY_FM()
 
 			B_LogEntry	(TOPIC_MOD_FM_FOKI, "Zwei Dämonen für einen Mann. Das sollte die Tugend Mut gewesen sein.");
 		};
+		
+		// Stop Mangel Quest
+		
+		B_StopMangel();
 	};
 
 	if (CurrentLevel == NEWWORLD_ZEN)

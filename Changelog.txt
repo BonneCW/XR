@@ -32,6 +32,7 @@ General Fixes:
 
 - Skip's quest now can be solved even though player already joined a boarding troop
 - Added missing log entry for Skip that he also wants 1500 gold and not just his paddles
+- Quest "Lack of everything" should correctly be closed now
 
 
 
