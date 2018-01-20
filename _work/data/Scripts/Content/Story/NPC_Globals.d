@@ -54,6 +54,7 @@ func void  B_InitNpcGlobals ()
 	// Randolph auf Irdorath nach Dialog im Halbinfernalischer ;)
 
 	if (Mod_RandolphIR_Demon == 1)
+	&& (Hlp_IsValidNpc(Mod_7527_BAU_Randolph_IR))
 	{
 		Mdl_SetVisualBody (Mod_7527_BAU_Randolph_IR, "hum_body_naked0", 17,				0,			"Hum_Head_Bald", 	206,	0, 			ItAr_BAU_L);
 	};
@@ -61,6 +62,7 @@ func void  B_InitNpcGlobals ()
 	// Rudolf mit Schnapsnase nach Dialog
 
 	if (Mod_RudolfSchnaps == 1)
+	&& (Hlp_IsValidNpc(Mod_7338_OUT_Lebensmittelhaendler_REL))
 	{
 		Mdl_SetVisualBody (Mod_7338_OUT_Lebensmittelhaendler_REL, "hum_body_naked0", BodyTex_N,				0,			"Hum_Head_FatBald", 	222,	0, KhorataHaendler_01);
 	};
