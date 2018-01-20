@@ -31,9 +31,9 @@ INSTANCE Info_Mod_Ferco_WerBistDu (C_INFO)
 
 FUNC INT Info_Mod_Ferco_WerBistDu_Condition()
 {
-	if ((Npc_KnowsInfo(hero, Info_Mod_Ferco_Hi))
-	&& (!Npc_KnowsInfo(hero, Info_Mod_Ferco_Einnehmen)))
-	|| (Npc_KnowsInfo(hero, Info_Mod_Ferco_Loser))
+	if (Npc_KnowsInfo(hero, Info_Mod_Ferco_Hi))
+	&& ((!Npc_KnowsInfo(hero, Info_Mod_Ferco_Einnehmen))
+	|| (Npc_KnowsInfo(hero, Info_Mod_Ferco_Loser)))
 	{
 		return 1;
 	};
