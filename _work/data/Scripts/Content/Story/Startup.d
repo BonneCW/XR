@@ -6407,6 +6407,11 @@ FUNC VOID INIT_Minental ()
 		Wld_SendUnTrigger	("INEXTREMO_MUSIK");
 
 		Mod_Enter_Minental_04 = True;
+		
+		if (Npc_KnowsInfo(hero, Info_Mod_Jackal_WoProblem))
+		&& (TabakReceived < 13) {
+			B_SetTopicStatus(TOPIC_MOD_JACKAL_TABAK, LOG_FAILED);
+		};
 	};
 
 	if (Kapitel >= 5)
