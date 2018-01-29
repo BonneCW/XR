@@ -1417,6 +1417,17 @@ FUNC VOID NEBENQUESTS()
 				B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "START");
 			};
 		};
+		
+		// Apprentice Quests
+		
+		if (Mod_LehrlingsStimmen < 4) {
+			if (Npc_KnowsInfo(hero, Info_Mod_Harad_Stimme))
+			&& (Npc_KnowsInfo(hero, Info_Mod_Constantino_Stimme))
+			&& (Npc_KnowsInfo(hero, Info_Mod_Matteo_Flugblaetter))
+			&& (Npc_KnowsInfo(hero, Info_Mod_Thorben_Stimme)) {
+				Mod_LehrlingsStimmen = 4;
+			};
+		};
 	};
 
 	if (CurrentLevel == ADDONWORLD_ZEN)

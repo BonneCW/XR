@@ -38,6 +38,7 @@ General Fixes:
 - fixed wrong condition for giving Harad the optional 5 pearls
 - fixed condition for Harad's prison dialog
 - fixed wrong name in log for quest "Witchcraft"
+- fixed weird error where apprentice quest couldn't be solved even though all conditions were met
 
 
 
