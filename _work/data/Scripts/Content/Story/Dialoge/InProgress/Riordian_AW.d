@@ -224,6 +224,11 @@ FUNC VOID Info_Mod_Riordian_AW_Plagegeister2_Info()
 	AI_Output (self, hero, "Info_Mod_Riordian_AW_Plagegeister2_23_03"); //Mögen sie dir auf deinen weiteren Wegen von Nutzen sein.
 
 	B_SetTopicStatus	(TOPIC_MOD_RIORDIAN_PLAGEGEISTER, LOG_SUCCESS);
+	
+	B_StartOtherRoutine	(Mod_9003_KDW_Riordian_AW, "START");
+	B_StartOtherRoutine	(Mod_9004_KDW_Merdarion_AW, "START");
+	B_StartOtherRoutine	(Mod_9001_KDW_Cronos_AW, "START");
+	B_StartOtherRoutine	(Mod_9002_KDW_Nefarius_AW, "START");
 
 	B_GivePlayerXP	(400);
 
