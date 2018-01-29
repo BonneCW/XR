@@ -39,6 +39,7 @@ General Fixes:
 - fixed condition for Harad's prison dialog
 - fixed wrong name in log for quest "Witchcraft"
 - fixed weird error where apprentice quest couldn't be solved even though all conditions were met
+- Quest 'Up to Relendel' now gets properly closed
 
 
 

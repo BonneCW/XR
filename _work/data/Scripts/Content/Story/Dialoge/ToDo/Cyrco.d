@@ -672,11 +672,15 @@ FUNC VOID Info_Mod_Cyrco_Drachental_Info()
 		AI_Output(hero, self, "Info_Mod_Cyrco_Drachental_15_07"); //Bevor du weiter fragst: Nur wenigen ist es erlaubt, dieses Gebiet zu betreten.
 		AI_Output(self, hero, "Info_Mod_Cyrco_Drachental_38_08"); //Nun gut. Und wie wirkt das Zeug?
 		AI_Output(hero, self, "Info_Mod_Cyrco_Drachental_15_09"); //Ähnlich wie Sumpfkraut. Nur viel intensiver. Und man wird abhängig davon.
+
+		B_GivePlayerXP(250);
 	}
 	else
 	{
 		AI_Output(hero, self, "Info_Mod_Cyrco_Drachental_15_10"); //Leider nein.
 		AI_Output(self, hero, "Info_Mod_Cyrco_Drachental_38_11"); //Hmm ... sehr schade.
+
+		B_GivePlayerXP(150);
 	};
 
 	AI_Output(hero, self, "Info_Mod_Cyrco_Drachental_15_12"); //Aber ist das alles, was du wissen willst?
@@ -696,7 +700,8 @@ FUNC VOID Info_Mod_Cyrco_Drachental_Info()
 	AI_Output(hero, self, "Info_Mod_Cyrco_Drachental_15_26"); //Na hoffentlich.
 	AI_Output(self, hero, "Info_Mod_Cyrco_Drachental_38_27"); //Viel Glück, Läufer!
 	AI_Output(hero, self, "Info_Mod_Cyrco_Drachental_15_28"); //Danke, Meister.
-
+	
+	B_SetTopicStatus	(TOPIC_MOD_JG_RELENDEL, LOG_SUCCESS);
 	B_LogEntry	(TOPIC_MOD_JG_DRACHENTAL, "Habe Cyrco Bericht erstattet. Er ernennt mich zum Ober-Waldläufer, wenn ich ihm Khorgors Kopf bringe. Und er hat mich an diese seltsame Quaderrune erinnert. Mal sehen.");
 };
 
