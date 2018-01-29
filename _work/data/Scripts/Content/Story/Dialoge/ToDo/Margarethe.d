@@ -58,7 +58,7 @@ FUNC VOID Info_Mod_Margarethe_Hi_D()
 	
 	Log_CreateTopic	(TOPIC_MOD_KHORATA_HEXENWAHN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_KHORATA_HEXENWAHN, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_KHORATA_HEXENWAHN, "Marias Schwester Anna ist bei den Bewohnern Khoratas als Hexe verschrien und deswegen gefänglich eingezogen worden. Maria hat mich gebeten, ihren Bruder Ulrich, der in der Nähe von Anna wohnt, davon zu berichten und einen Weg zu suchen, Anna zu helfen.");
+	B_LogEntry	(TOPIC_MOD_KHORATA_HEXENWAHN, "Margarethes Schwester Anna ist bei den Bewohnern Khoratas als Hexe verschrien und deswegen gefänglich eingezogen worden. Maria hat mich gebeten, ihren Bruder Ulrich, der in der Nähe von Anna wohnt, davon zu berichten und einen Weg zu suchen, Anna zu helfen.");
 
 	Info_ClearChoices	(Info_Mod_Margarethe_Hi);
 

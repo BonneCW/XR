@@ -2506,7 +2506,7 @@ FUNC VOID Info_Mod_Andre_HaradLehrling3_Info()
 	AI_Output(self, hero, "Info_Mod_Andre_HaradLehrling3_40_04"); //Ich beauftrage dich hiermit mit der Anfertigung von sieben Edlen Schwertern, fünf Edlen Langschwertern und drei Rubinklingen.
 	AI_Output(self, hero, "Info_Mod_Andre_HaradLehrling3_40_05"); //Die Waffen kannst du mir bringen, sobald sie fertig sind.
 
-	B_SetTopicStatus	(TOPIC_MOD_LEHRLING_HARAD_FOUR, LOG_SUCCESS);
+	B_LogEntry	(TOPIC_MOD_LEHRLING_HARAD_FOUR, "Lord Andre gab mir den Auftrag, sieben Edle Schwerter, fünf Edle Langschwerter und drei Rubinklingen zu schmieden. An die Arbeit!");
 };
 
 INSTANCE Info_Mod_Andre_HaradLehrling4 (C_INFO)
@@ -2642,7 +2642,7 @@ FUNC VOID Info_Mod_Andre_HaradLehrling4_Info()
 	AI_Output(self, hero, "Info_Mod_Andre_HaradLehrling4_40_03"); //Gerade nicht. Sollte sich etwas ergeben, werde ich dir aber wieder Bescheid geben.
 	AI_Output(self, hero, "Info_Mod_Andre_HaradLehrling4_40_04"); //Danke noch mal für deine Zusammenarbeit.
 
-	B_LogEntry	(TOPIC_MOD_LEHRLING_HARAD_FOUR, "Lord Andre gab mir den Auftrag, sieben Edle Schwerter, fünf Edle Langschwerter und drei Rubinklingen zu schmieden. An die Arbeit!");
+	B_SetTopicStatus	(TOPIC_MOD_LEHRLING_HARAD_FOUR, LOG_SUCCESS);
 
 	B_GivePlayerXP	(1000);
 

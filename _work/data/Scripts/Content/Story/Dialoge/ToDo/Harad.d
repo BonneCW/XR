@@ -904,7 +904,7 @@ FUNC VOID Info_Mod_Harad_LehrlingQuest5_Info()
 {
 	Info_ClearChoices	(Info_Mod_Harad_LehrlingQuest5);
 
-	if (Npc_HasItems(hero, ItMi_Addon_WhitePearl) >= 3)
+	if (Npc_HasItems(hero, ItMi_Addon_WhitePearl) >= 5)
 	{
 		Info_AddChoice	(Info_Mod_Harad_LehrlingQuest5, "Hier sind fünf Perlen.", Info_Mod_Harad_LehrlingQuest5_B);
 	};
@@ -1069,7 +1069,7 @@ INSTANCE Info_Mod_Harad_LehrlingQuest8 (C_INFO)
 
 FUNC INT Info_Mod_Harad_LehrlingQuest8_Condition()
 {
-	if (Npc_KnowsInfo(hero, Info_Mod_Olav_HaradLehrling))
+	if (Mod_HaradLehrling_Kap4 == 1)
 	{
 		return 1;
 	};

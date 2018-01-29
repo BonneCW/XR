@@ -66,7 +66,7 @@ INSTANCE Info_Mod_Fortuno_Sumpfmensch2 (C_INFO)
 
 FUNC INT Info_Mod_Fortuno_Sumpfmensch2_Condition()
 {
-	if (Npc_KnowsInfo(hero, Mod_2013_PSINOV_Joru_MT))
+	if (Npc_KnowsInfo(hero, Info_Mod_Joru_Sumpfmensch2))
 	{
 		return 1;
 	};

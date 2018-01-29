@@ -455,7 +455,7 @@ FUNC VOID Info_Mod_Angar_Hueterklinge3_Info()
 	else
 	{
 		AI_Output(hero, self, "Info_Mod_Angar_Hueterklinge3_15_05"); //Ich suche einen älteren Templer. du weißt nicht zufällig, wer da in Frage käme?
-		AI_Output(self, hero, "Info_Mod_Angar_Hueterklinge3_34_06"); //Du willst mich wohl für dumm verkaufen? Besorg dir gefälligst eine eigene Hüterlkinge!
+		AI_Output(self, hero, "Info_Mod_Angar_Hueterklinge3_34_06"); //Du willst mich wohl für dumm verkaufen? Besorg dir gefälligst eine eigene Hüterklinge!
 	};
 };
 
