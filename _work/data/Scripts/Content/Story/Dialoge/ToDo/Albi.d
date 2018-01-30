@@ -353,6 +353,10 @@ FUNC VOID Info_Mod_Albi_FokusEinsetzen_Info()
 	Log_CreateTopic	(TOPIC_MOD_ECHSEN_VERTRAUEN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_ECHSEN_VERTRAUEN, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_ECHSEN_VERTRAUEN, "Um in die obere Stadt der Echsen zu kommen, muss ich deren Vertrauen gewinnen. Morgen werden mir die Echsen, die eine Aufgabe für mich haben, einen Zettel geben. Habe ich genug Aufträge erfüllt, wird Albi mich erwarten.");
+	
+	if (Npc_HasItems(hero, ItMi_Focus_Kloster) == 0) {
+		B_LogEntry	(TOPIC_MOD_ECHSEN_VERTRAUEN, "Ich sollte nicht vergessen meine Sachen aus der Truhe zu holen. Besonders den Fokusstein brauche ich...");
+	};
 
 	Mod_Albi_VertrauensTag = Wld_GetDay();
 
