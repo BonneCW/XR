@@ -42,6 +42,7 @@ General Fixes:
 - Quest 'Up to Relendel' now gets properly closed
 - Water Mages perform their old work after 'Pest' quest
 - Jackal's Quest now fails in chapter 4 if not already completed
+- Loading of the magic stone for Karras when killing the swampsharks works now
 
 
 

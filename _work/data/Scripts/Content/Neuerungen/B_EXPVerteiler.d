@@ -429,9 +429,9 @@ FUNC VOID B_EXPVerteiler (var C_NPC opfer, var C_NPC taeter)
 
 	if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Swampshark_Undead))
 	&& (Npc_HasItems(hero, ItMi_SumpfhaiStein) == 1)
-	&& ((C_NpcIsHero(opfer))
-	|| (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Mod_1219_TPL_Templer_MT))
-	|| (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Mod_1218_TPL_Templer_MT)))
+	&& ((C_NpcIsHero(taeter))
+	|| (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(Mod_1219_TPL_Templer_MT))
+	|| (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(Mod_1218_TPL_Templer_MT)))
 	{
 		Mod_Sekte_UDS_Stein += 1;
 	};
