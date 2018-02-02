@@ -1143,7 +1143,7 @@ FUNC VOID GILDENSTORY_ADANOS()
 			Wld_InsertNpc	(Monster_11038_Shivar_REL, "REL_SURFACE_097");
 		};
 
-		if (Npc_GetDistToNpc(hero, Monster_11038_Shivar_REL) < 5000)
+		if (Npc_GetDistToWP(hero, "REL_SURFACE_097") < 5000)
 		&& (Mod_HeroIstDemon == FALSE)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Rasend02))
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Shivar_DemonsDead))
@@ -1173,7 +1173,7 @@ FUNC VOID GILDENSTORY_ADANOS()
 			Mod_HeroDemonCounter = 99999;
 		};
 
-		if (Npc_GetDistToNpc(hero, Monster_11038_Shivar_REL) > 5000)
+		if (Npc_GetDistToWP(hero, "REL_SURFACE_097") > 5000)
 		&& (Mod_HeroIstDemon == TRUE)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Rasend02))
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Saturas_NW_Rasend02))

@@ -46,6 +46,7 @@ General Fixes:
 - Saturas' dialog about Shivar should work better now
 - Backtransformation from skeleton now restores player guild correctly
 - Log entry for "Informations for Torgan" should be triggered correctly now
+- Transformation to Demon should be triggered correctly now
 
 
 
