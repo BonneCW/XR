@@ -1667,8 +1667,6 @@ FUNC VOID Info_Mod_Saturas_NW_Rasend02_Info()
 	};
 
 	B_SetTopicStatus	(TOPIC_MOD_ADANOS_RASEND, LOG_SUCCESS);
-
-	B_StartOtherRoutine	(self, "RAT");
 };
 
 INSTANCE Info_Mod_Saturas_NW_Sweetwater (C_INFO)

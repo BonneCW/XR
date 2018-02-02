@@ -10,6 +10,7 @@ var int changedOneHHero;
 var int changedTwoHHero;
 
 var int scriptPatchWeaponChange;
+var int playerGuild;
 
 
 func void B_MeleeWeaponChange(var int OneH, var int TwoH, var int ManaMax)
@@ -80,5 +81,7 @@ func void B_StopMagicTransform()
 		Mod_TrfSkeleton2 = 0;
 		Mod_IstGolem = 0;
 		Mod_IstSchaf = 0;
+		
+		hero.guild = playerGuild;
 	};
 };

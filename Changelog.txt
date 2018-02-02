@@ -43,6 +43,9 @@ General Fixes:
 - Water Mages perform their old work after 'Pest' quest
 - Jackal's Quest now fails in chapter 4 if not already completed
 - Loading of the magic stone for Karras when killing the swampsharks works now
+- Saturas' dialog about Shivar should work better now
+- Backtransformation from skeleton now restores player guild correctly
+- Log entry for "Informations for Torgan" should be triggered correctly now
 
 
 

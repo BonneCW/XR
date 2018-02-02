@@ -1,3 +1,5 @@
+var int Mod_SaturasAtRat;
+
 FUNC VOID GILDENSTORY_ADANOS()
 {
 	// WM-Story
@@ -1179,6 +1181,14 @@ FUNC VOID GILDENSTORY_ADANOS()
 			Mod_HeroDemonCounter = 0;
 
 			Wld_StopEffect	("INFERNALFIRE");
+		};
+		
+		if (Npc_KnowsInfo(hero, Info_Mod_Saturas_NW_Rasend02))
+		&& (!Npc_IsInState(, ZS_Talk))
+		&& (!Mod_SaturasAtRat) {
+			Mod_SaturasAtRat = TRUE;
+			
+			B_StartOtherRoutine	(Mod_774_KDW_Saturas_NW, "RAT");
 		};
 	};
 
