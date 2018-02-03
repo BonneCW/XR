@@ -21,7 +21,7 @@ const string TOPIC_MOD_NL_MOORHEXE	=	"Was sich nicht jedem offenbart ...";
 const string TOPIC_MOD_NL_STAB	=	"Stab gegen Spruchrollen";
 const string TOPIC_MOD_NL_GORN	=	"Abenteuer mit Gorn im dunklen Wald";
 const string TOPIC_MOD_NL_ERZKISTE	=	"Kiste Erz für Thofeistos";
-const string TOPIC_MOD_NL_KRISTALL	=	"Bote des Kristalles";
+const string TOPIC_MOD_NL_KRISTALL	=	"Bote des Kristalls";
 const string TOPIC_MOD_NL_PLAGE	=	"Morastwürmer und Sumpfkrabben";
 
 const string TOPIC_MOD_NL_DJGEQUIP	=	"Ausrüstung eines Drachenjägers";
