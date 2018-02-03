@@ -1070,6 +1070,7 @@ FUNC VOID NEBENQUESTS()
 			if (Npc_KnowsInfo(hero, Info_Mod_Senyan_HabSchwert))
 			&& (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Daemonisch3))
 			&& (Wld_GetDay()-1 > Mod_SenyanTom_Kraut_Tag)
+			&& (!Npc_IsDead(Mod_598_MIL_Mika_NW))
 			{
 				Mod_SenyanTom_Kraut = 1;
 
