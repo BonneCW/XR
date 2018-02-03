@@ -1184,7 +1184,7 @@ FUNC VOID GILDENSTORY_ADANOS()
 		};
 		
 		if (Npc_KnowsInfo(hero, Info_Mod_Saturas_NW_Rasend02))
-		&& (!Npc_IsInState(, ZS_Talk))
+		&& (!Npc_IsInState(Mod_774_KDW_Saturas_NW, ZS_Talk))
 		&& (!Mod_SaturasAtRat) {
 			Mod_SaturasAtRat = TRUE;
 			

@@ -47,6 +47,7 @@ General Fixes:
 - Backtransformation from skeleton now restores player guild correctly
 - Log entry for "Informations for Torgan" should be triggered correctly now
 - Transformation to Demon should be triggered correctly now
+- Blueprint for Chemo Club not removed from inventory anymore
 
 
 

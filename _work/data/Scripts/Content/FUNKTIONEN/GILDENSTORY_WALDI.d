@@ -62,10 +62,7 @@ FUNC VOID GILDENSTORY_WALDI()
 	if (CurrentLevel == MINENTAL_ZEN)
 	{
 		if (Mod_Drago == 5) {
-			if (Npc_GetDistToNpc(hero, Mod_1964_JG_Jaeger_MT) < 500)
-			&& (Npc_GetDistToNpc(hero, Mod_1965_JG_Jaeger_MT) < 500)
-			&& (Npc_GetDistToNpc(hero, Mod_1966_GRD_Gardist_MT) < 500)
-			&& (Npc_GetDistToWP(hero, OW_WOODRUIN_WOLF_SPAWN) < 500)
+			if (Npc_GetDistToWP(hero, "OW_WOODRUIN_WOLF_SPAWN") < 500)
 			{
 				Mod_Drago = 6;
 
