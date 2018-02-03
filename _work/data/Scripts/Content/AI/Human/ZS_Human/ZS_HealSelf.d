@@ -25,8 +25,13 @@ func int ZS_HealSelf_Loop ()
 	
 	// LOOP FUNC
 	
+	if (Npc_HasItems(self,ItPo_Health_Addon_04) >0)			
+	{
+		AI_UseItem (self, ItPo_Health_Addon_04);
+		return LOOP_CONTINUE;
+	}
 	// ------ Großen Heiltrank nehmen ------
-	if (Npc_HasItems(self,ItPo_Health_03) >0)			
+	else if (Npc_HasItems(self,ItPo_Health_03) >0)			
 	{
 		AI_UseItem (self, ItPo_Health_03);
 		return LOOP_CONTINUE;

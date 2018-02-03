@@ -537,6 +537,7 @@ FUNC VOID DAUERFUNC_01()
 				B_StartOtherRoutine	(Mod_7603_GRD_Gardist_NW,	"ZURIS");
 
 				B_StartOtherRoutine	(Mod_757_NONE_Zuris_NW,	"UEBERFALL");
+				CreateInvItems(Mod_757_NONE_Zuris_NW, ItPo_Health_Addon_04, 1);
 			};
 
 			Mod_Zuris_Ueberfall = 1;
