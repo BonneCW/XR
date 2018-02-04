@@ -120,20 +120,6 @@ FUNC VOID Info_Mod_Alissandro_ThorusTot_Info()
 
 	AI_StopProcessInfos	(self);
 
-	if (Mod_ALTor_01 == 0)
-	{
-		Wld_SendTrigger	("EVT_OC_MAINGATE01_01");
-
-		Mod_ALTor_01 = 1;
-	};
-
-	if (Mod_ALTor_03 == 0)
-	{
-		Wld_SendTrigger	("EVT_OC_MAINGATE02_02");
-
-		Mod_ALTor_03 = 1;
-	};
-
 	B_StartOtherRoutine	(self, "GUIDETOKASTELLPARTONE");
 };
 

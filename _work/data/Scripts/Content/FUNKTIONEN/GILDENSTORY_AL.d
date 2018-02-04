@@ -1,4 +1,6 @@
 var int Mod_Bloodwyn_GuidePlayertoBartholo;
+var int Mod_TriggerCloseALGate;
+var int Mod_TriggerOpenOMGate;
 
 FUNC VOID GILDENSTORY_AL()
 {
@@ -507,6 +509,32 @@ FUNC VOID GILDENSTORY_AL()
 			B_StartOtherRoutine	(Mod_517_DMR_Gomez_MT, "START");
 
 			AI_StartState	(Mod_517_DMR_Gomez_MT, ZS_MagicFreeze, 0, "");
+		};
+		
+		if (Mod_TriggerCloseALGate == FALSE)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Alissandro_ThorusTot)) {
+			if (Mod_ALTor_01 == 0) {
+				Wld_SendTrigger	("EVT_OC_MAINGATE01_01");
+
+				Mod_ALTor_01 = 1;
+			};
+
+			if (Mod_ALTor_03 == 0) {
+				Wld_SendTrigger	("EVT_OC_MAINGATE02_02");
+
+				Mod_ALTor_03 = 1;
+			};
+		
+			Mod_TriggerCloseALGate = TRUE;
+		};
+		
+		if (Mod_TriggerOpenOMGate == FALSE)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Alissandro_ThorusTot)) {
+			if (Mod_MinentalTor == 1) {
+				Wld_SendTrigger	("EVT_AM_LOB_GATE_BIG");
+			};
+		
+			Mod_TriggerOpenOMGate = TRUE;
 		};
 	};
 

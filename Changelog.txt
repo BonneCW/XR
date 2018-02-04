@@ -51,6 +51,8 @@ General Fixes:
 - "Nagur's Business" now triggers next event correct if not killing the rivals
 - Garond now can only be killed if player is not part of the assassin's or already completed quest with Yussuf
 - Made Ore Clubs better
+- Gate of Old Camp now gets closed correctly during the guild story
+- Gate of Old Mine now gets opened correctly during the guild story of the Old Camp
 
 
 

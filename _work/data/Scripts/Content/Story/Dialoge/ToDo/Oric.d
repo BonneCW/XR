@@ -90,11 +90,6 @@ FUNC VOID Info_Mod_Oric_AtAustausch_Info()
 	Mod_7040_RIT_Ritter_MT.aivar[AIV_PARTYMEMBER] = FALSE;
 	Mod_7041_RIT_Ritter_MT.aivar[AIV_PARTYMEMBER] = FALSE;
 
-	if (Mod_MinentalTor == 1)
-	{
-		Wld_SendTrigger	("EVT_AM_LOB_GATE_BIG");
-	};
-
 	B_LogEntry	(TOPIC_MOD_AL_ERSTERSCHRITT, "Der Austauschplatz ist unser. Nun soll ich mich unsichtbar in die Alte Mine schleichen und dort Kurgan, den Anführer, töten.");
 };
 
