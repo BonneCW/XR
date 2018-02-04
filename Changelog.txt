@@ -49,6 +49,7 @@ General Fixes:
 - Transformation to Demon should be triggered correctly now
 - Blueprint for Chemo Club not removed from inventory anymore
 - "Nagur's Business" now triggers next event correct if not killing the rivals
+- Garond now can only be killed if player is not part of the assassin's or already completed quest with Yussuf
 
 
 

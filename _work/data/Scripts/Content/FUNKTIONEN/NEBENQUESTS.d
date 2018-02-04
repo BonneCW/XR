@@ -931,8 +931,12 @@ FUNC VOID NEBENQUESTS()
 
 		if (Mod_Mario == 3)
 		&& (Wld_GetDay() > Mod_Mario_Day)
+		&& ((Mod_AnzahlNebengilden == 4 && (Assassinen_Dabei == FALSE || Npc_KnowsInfo(hero, Info_Mod_Yussuf_Blutkelch6)))
+		|| (hero.guild == GIL_PAL))
 		{
 			Mod_Mario = 4;
+			
+			Mod_Mario_Day = Wld_GetDay() - 1;
 
 			AI_UnequipArmor	(Mod_595_MIL_Mario_NW);
 
