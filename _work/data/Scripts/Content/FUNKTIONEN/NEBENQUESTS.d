@@ -1325,7 +1325,7 @@ FUNC VOID NEBENQUESTS()
 			B_LogEntry	(TOPIC_MOD_NAGUR_GESCHAEFT, "Ich kann jetzt Nagur davon berichten, dass seine Konkurrenten beseitigt wurden.");
 		};
 
-		if (Mod_Nagur_Geschaeft == 6)
+		if (Mod_Nagur_Geschaeft == 4)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Nagur_Geschaeft2))
 		&& (Wld_GetDay()-2 >= Mod_Nagur_Geschaeft_Tag)
 		{
