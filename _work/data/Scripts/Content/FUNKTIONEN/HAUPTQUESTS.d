@@ -790,145 +790,136 @@ FUNC VOID HAUPTQUESTS()
 			B_LogEntry	(TOPIC_MOD_DAEMONISCH, "So, das waren alle drei. Jetzt wieder zu Xardas.");
 		};
 
-		if (Mod_HQ_Daemonisch == 3)
-		{
-			if (Mod_HQ_Daemonisch_SP_01 == 0)
-			&& (((Npc_IsDead(Mod_13000_SP_Seelenpeiniger_NW))
-			&& (Npc_IsDead(Mod_13001_SP_Seelenpeiniger_NW))
-			&& (Npc_IsDead(Mod_13002_SP_Seelenpeiniger_NW))
-			&& (Npc_IsDead(Mod_13003_SP_Seelenpeiniger_NW))
-			&& (Npc_IsDead(Mod_13004_SP_Seelenpeiniger_NW))
-			&& (Npc_IsDead(Mod_13021_SP_Seelenpeiniger_NW))
-			&& (Npc_IsDead(Mod_13022_SP_Seelenpeiniger_NW)))
-			|| ((Npc_GetDistToWP(Mod_13000_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
-			&& (Npc_GetDistToWP(Mod_13001_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
-			&& (Npc_GetDistToWP(Mod_13002_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
-			&& (Npc_GetDistToWP(Mod_13003_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
-			&& (Npc_GetDistToWP(Mod_13004_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
-			&& (Npc_GetDistToWP(Mod_13021_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
-			&& (Npc_GetDistToWP(Mod_13022_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
-			&& (Npc_GetDistToWP(hero, "NW_BIGFARM_LAKE_CAVE_03") < 2000)
-			&& (Wld_IsTime(20,15,06,00))))
-			{
-				Mod_HQ_Daemonisch_SP_01 = 1;
+		if (Mod_HQ_Daemonisch == 3) {
+			if (Mod_HQ_Daemonisch_SP_01 == 0) {
+				if (Npc_IsDead(Mod_13000_SP_Seelenpeiniger_NW))
+				&& (Npc_IsDead(Mod_13001_SP_Seelenpeiniger_NW))
+				&& (Npc_IsDead(Mod_13002_SP_Seelenpeiniger_NW))
+				&& (Npc_IsDead(Mod_13003_SP_Seelenpeiniger_NW))
+				&& (Npc_IsDead(Mod_13004_SP_Seelenpeiniger_NW))
+				&& (Npc_IsDead(Mod_13021_SP_Seelenpeiniger_NW))
+				&& (Npc_IsDead(Mod_13022_SP_Seelenpeiniger_NW)) {
+					Mod_HQ_Daemonisch_SP_01 = 1;
 
-				Mod_HQ_Daemonisch_SP += 1;
+					Mod_HQ_Daemonisch_SP += 1;
 
-				if (Mod_HQ_Daemonisch_SP == 1)
-				{
-					B_LogEntry	(TOPIC_MOD_DAEMONISCH, "1. Lager erledigt.");
-				}
-				else if (Mod_HQ_Daemonisch_SP == 2)
-				{
-					B_LogEntry	(TOPIC_MOD_DAEMONISCH, "2. Lager erledigt.");
-				}
-				else
-				{
-					B_LogEntry	(TOPIC_MOD_DAEMONISCH, "3. Lager erledigt.");
+					if (Mod_HQ_Daemonisch_SP == 1) {
+						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "1. Lager erledigt.");
+					} else if (Mod_HQ_Daemonisch_SP == 2) {
+						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "2. Lager erledigt.");
+					} else {
+						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "3. Lager erledigt.");
+					};
+				} else if (Npc_GetDistToWP(Mod_13000_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
+				&& (Npc_GetDistToWP(Mod_13001_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
+				&& (Npc_GetDistToWP(Mod_13002_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
+				&& (Npc_GetDistToWP(Mod_13003_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
+				&& (Npc_GetDistToWP(Mod_13004_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
+				&& (Npc_GetDistToWP(Mod_13021_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
+				&& (Npc_GetDistToWP(Mod_13022_SP_Seelenpeiniger_NW, "NW_BIGFARM_LAKE_CAVE_03") > 5000)
+				&& (Npc_GetDistToWP(hero, "NW_BIGFARM_LAKE_CAVE_03") < 2000)
+				&& (Wld_IsTime(20,15,06,00)) {
+					Mod_HQ_Daemonisch_SP_01 = 1;
+
+					Mod_HQ_Daemonisch_SP += 1;
+
+					if (Mod_HQ_Daemonisch_SP == 1) {
+						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "1. Lager erledigt.");
+					} else if (Mod_HQ_Daemonisch_SP == 2) {
+						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "2. Lager erledigt.");
+					} else {
+						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "3. Lager erledigt.");
+					};
 				};
 			};
-			if (Mod_HQ_Daemonisch_SP_02 == 0)
-			{
+			if (Mod_HQ_Daemonisch_SP_02 == 0) {
 				if (Npc_IsDead(Mod_13009_SP_Seelenpeiniger_NW))
 				&& (Npc_IsDead(Mod_13010_SP_Seelenpeiniger_NW))
 				&& (Npc_IsDead(Mod_13011_SP_Seelenpeiniger_NW))
 				&& (Npc_IsDead(Mod_13012_SP_Seelenpeiniger_NW))
 				&& (Npc_IsDead(Mod_13023_SP_Seelenpeiniger_NW))
-				&& (Npc_IsDead(Mod_13024_SP_Seelenpeiniger_NW))
-				{
+				&& (Npc_IsDead(Mod_13024_SP_Seelenpeiniger_NW)) {
 					Mod_HQ_Daemonisch_SP_02 = 1;
 
 					Mod_HQ_Daemonisch_SP += 1;
 
-					if (Mod_HQ_Daemonisch_SP == 1)
-					{
+					if (Mod_HQ_Daemonisch_SP == 1) {
 						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "1. Lager erledigt.");
-					}
-					else if (Mod_HQ_Daemonisch_SP == 2)
-					{
+					} else if (Mod_HQ_Daemonisch_SP == 2) {
 						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "2. Lager erledigt.");
-					}
-					else
-					{
+					} else {
 						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "3. Lager erledigt.");
 					};
-				}
-				else if (Npc_GetDistToWP(Mod_13009_SP_Seelenpeiniger_NW, "NW_BIGFARM_FOREST_03_NAVIGATION") > 2000)
+				} else if (Npc_GetDistToWP(Mod_13009_SP_Seelenpeiniger_NW, "NW_BIGFARM_FOREST_03_NAVIGATION") > 2000)
 				&& (Npc_GetDistToWP(Mod_13010_SP_Seelenpeiniger_NW, "NW_BIGFARM_FOREST_03_NAVIGATION") > 2000)
 				&& (Npc_GetDistToWP(Mod_13011_SP_Seelenpeiniger_NW, "NW_BIGFARM_FOREST_03_NAVIGATION") > 2000)
 				&& (Npc_GetDistToWP(Mod_13012_SP_Seelenpeiniger_NW, "NW_BIGFARM_FOREST_03_NAVIGATION") > 2000)
 				&& (Npc_GetDistToWP(Mod_13023_SP_Seelenpeiniger_NW, "NW_BIGFARM_FOREST_03_NAVIGATION") > 2000)
 				&& (Npc_GetDistToWP(Mod_13024_SP_Seelenpeiniger_NW, "NW_BIGFARM_FOREST_03_NAVIGATION") > 2000)
 				&& (Npc_GetDistToWP(hero, "NW_BIGFARM_FOREST_03_NAVIGATION") < 2000)
-				&& (Wld_IsTime(20,15,06,00))
-				{
+				&& (Wld_IsTime(20,15,06,00)) {
 					Mod_HQ_Daemonisch_SP_02 = 1;
 
 					Mod_HQ_Daemonisch_SP += 1;
 
-					if (Mod_HQ_Daemonisch_SP == 1)
-					{
+					if (Mod_HQ_Daemonisch_SP == 1) {
 						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "1. Lager erledigt.");
-					}
-					else if (Mod_HQ_Daemonisch_SP == 2)
-					{
+					} else if (Mod_HQ_Daemonisch_SP == 2) {
 						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "2. Lager erledigt.");
-					}
-					else
-					{
+					} else {
 						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "3. Lager erledigt.");
 					};
 				};
 			};
-			if (Mod_HQ_Daemonisch_SP_03 == 0)
-			&& (((Npc_IsDead(Mod_13013_SP_Seelenpeiniger_NW))
-			&& (Npc_IsDead(Mod_13014_SP_Seelenpeiniger_NW))
-			&& (Npc_IsDead(Mod_13015_SP_Seelenpeiniger_NW))
-			&& (Npc_IsDead(Mod_13016_SP_Seelenpeiniger_NW))
-			&& (Npc_IsDead(Mod_13025_SP_Seelenpeiniger_NW))
-			&& (Npc_IsDead(Mod_13026_SP_Seelenpeiniger_NW)))
-			|| ((Npc_GetDistToWP(Mod_13013_SP_Seelenpeiniger_NW, "NW_CITY_SMFOREST_04") > 5000)
-			&& (Npc_GetDistToWP(Mod_13014_SP_Seelenpeiniger_NW, "NW_CITY_SMFOREST_04") > 5000)
-			&& (Npc_GetDistToWP(Mod_13015_SP_Seelenpeiniger_NW, "NW_CITY_SMFOREST_04") > 5000)
-			&& (Npc_GetDistToWP(Mod_13016_SP_Seelenpeiniger_NW, "NW_CITY_SMFOREST_04") > 5000)
-			&& (Npc_GetDistToWP(Mod_13025_SP_Seelenpeiniger_NW, "NW_CITY_SMFOREST_04") > 5000)
-			&& (Npc_GetDistToWP(Mod_13026_SP_Seelenpeiniger_NW, "NW_CITY_SMFOREST_04") > 5000)
-			&& (Npc_GetDistToWP(hero, "NW_BIGFARM_LAKE_CAVE_03") < 2000)
-			&& (Wld_IsTime(20,15,06,00))))
-			{
-				Mod_HQ_Daemonisch_SP_03 = 1;
+			if (Mod_HQ_Daemonisch_SP_03 == 0) {
+				if (Npc_IsDead(Mod_13013_SP_Seelenpeiniger_NW))
+				&& (Npc_IsDead(Mod_13014_SP_Seelenpeiniger_NW))
+				&& (Npc_IsDead(Mod_13015_SP_Seelenpeiniger_NW))
+				&& (Npc_IsDead(Mod_13016_SP_Seelenpeiniger_NW))
+				&& (Npc_IsDead(Mod_13025_SP_Seelenpeiniger_NW))
+				&& (Npc_IsDead(Mod_13026_SP_Seelenpeiniger_NW)) {
+					Mod_HQ_Daemonisch_SP_03 = 1;
 
-				Mod_HQ_Daemonisch_SP += 1;
+					Mod_HQ_Daemonisch_SP += 1;
 
-				if (Mod_HQ_Daemonisch_SP == 1)
-				{
-					B_LogEntry	(TOPIC_MOD_DAEMONISCH, "1. Lager erledigt.");
-				}
-				else if (Mod_HQ_Daemonisch_SP == 2)
-				{
-					B_LogEntry	(TOPIC_MOD_DAEMONISCH, "2. Lager erledigt.");
-				}
-				else
-				{
-					B_LogEntry	(TOPIC_MOD_DAEMONISCH, "3. Lager erledigt.");
+					if (Mod_HQ_Daemonisch_SP == 1) {
+						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "1. Lager erledigt.");
+					} else if (Mod_HQ_Daemonisch_SP == 2) {
+						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "2. Lager erledigt.");
+					} else {
+						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "3. Lager erledigt.");
+					};
+				} else if (Npc_GetDistToWP(Mod_13013_SP_Seelenpeiniger_NW, "NW_CITY_SMFOREST_04") > 5000)
+				&& (Npc_GetDistToWP(Mod_13014_SP_Seelenpeiniger_NW, "NW_CITY_SMFOREST_04") > 5000)
+				&& (Npc_GetDistToWP(Mod_13015_SP_Seelenpeiniger_NW, "NW_CITY_SMFOREST_04") > 5000)
+				&& (Npc_GetDistToWP(Mod_13016_SP_Seelenpeiniger_NW, "NW_CITY_SMFOREST_04") > 5000)
+				&& (Npc_GetDistToWP(Mod_13025_SP_Seelenpeiniger_NW, "NW_CITY_SMFOREST_04") > 5000)
+				&& (Npc_GetDistToWP(Mod_13026_SP_Seelenpeiniger_NW, "NW_CITY_SMFOREST_04") > 5000)
+				&& (Npc_GetDistToWP(hero, "NW_BIGFARM_LAKE_CAVE_03") < 2000)
+				&& (Wld_IsTime(20,15,06,00)) {
+					Mod_HQ_Daemonisch_SP_03 = 1;
+
+					Mod_HQ_Daemonisch_SP += 1;
+
+					if (Mod_HQ_Daemonisch_SP == 1) {
+						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "1. Lager erledigt.");
+					} else if (Mod_HQ_Daemonisch_SP == 2) {
+						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "2. Lager erledigt.");
+					} else {
+						B_LogEntry	(TOPIC_MOD_DAEMONISCH, "3. Lager erledigt.");
+					};
 				};
 			};
 
 			if (Mod_HQ_Daemonisch_SP == 2)
-			&& (Mod_HQ_Daemonisch_SPZ == 0)
-			{
+			&& (Mod_HQ_Daemonisch_SPZ == 0) {
 				Mod_HQ_Daemonisch_SPZ = 1;
 
-				if (Mod_HQ_Daemonisch_SP_01 == 0)
-				{
+				if (Mod_HQ_Daemonisch_SP_01 == 0) {
 					Wld_InsertNpc	(Zombie_SP_01, "NW_BIGFARM_LAKE_CAVE_03");
-				}
-				else if (Mod_HQ_Daemonisch_SP_02 == 0 && hero.guild != GIL_PAL)
-				{
+				} else if (Mod_HQ_Daemonisch_SP_02 == 0 && hero.guild != GIL_PAL) {
 					Wld_InsertNpc	(Zombie_SP_02, "NW_BIGFARM_FOREST_03_NAVIGATION");
-				}
-				else
-				{
+				} else {
 					Wld_InsertNpc	(Zombie_SP_03, "NW_CITY_SMFOREST_05");
 				};
 			};
@@ -937,8 +928,7 @@ FUNC VOID HAUPTQUESTS()
 		if (Mod_HQ_Daemonisch == 4)
 		&& ((Mod_HQ_Daemonisch_SP_01 == 2)
 		|| (Mod_HQ_Daemonisch_SP_02 == 2)
-		|| (Mod_HQ_Daemonisch_SP_03 == 2))
-		{
+		|| (Mod_HQ_Daemonisch_SP_03 == 2)) {
 			B_LogEntry	(TOPIC_MOD_DAEMONISCH, "Aha, Taverne ... nur welche?");
 
 			Mod_HQ_Daemonisch = 5;
@@ -946,8 +936,7 @@ FUNC VOID HAUPTQUESTS()
 
 		if ((Mod_HQ_Daemonisch == 7)
 		|| (Mod_HQ_Daemonisch == 6))
-		&& (Npc_GetDistToWP(hero, "NW_FARM1_BANDITS_CAVE_01") < 500)
-		{
+		&& (Npc_GetDistToWP(hero, "NW_FARM1_BANDITS_CAVE_01") < 500) {
 			Mod_HQ_Daemonisch = 8;
 
 			AI_GotoWP	(hero, "NW_FARM1_BANDITS_CAVE_01");

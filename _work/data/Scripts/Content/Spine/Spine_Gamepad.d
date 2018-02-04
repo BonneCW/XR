@@ -137,6 +137,9 @@ func void Spine_DoDamageVibration(var int dmg) {
 	};
 	dmg = max(dmg, oldDmg);
 	Spine_VibrateGamepad(clamp((dmg * SPINE_VIBRATION_MAXIMUM) / 100, 0, SPINE_VIBRATION_MAXIMUM), clamp((dmg * SPINE_VIBRATION_MAXIMUM) / 100, 0, SPINE_VIBRATION_MAXIMUM));
+	if (FF_Active(Spine_StopDamageVibration)) {
+		FF_Remove(Spine_StopDamageVibration);
+	};
 	FF_ApplyOnceExt(Spine_StopDamageVibration, SPINE_GAME_DAMAGE_VIBRATION_TIME, 1);
 };
 
@@ -154,6 +157,9 @@ func void Spine_InitEarthquakeHooks() {
 // internal function, don't call from outside
 func void Spine_Earthquake_Trigger() {
 	Spine_VibrateGamepad(SPINE_VIBRATION_MAXIMUM, SPINE_VIBRATION_MAXIMUM);
+	if (FF_Active(Spine_Earthquake_Untrigger)) {
+		FF_Remove(Spine_Earthquake_Untrigger);
+	};
 	FF_ApplyOnceExt(Spine_Earthquake_Untrigger, 2000, 1);
 };
 

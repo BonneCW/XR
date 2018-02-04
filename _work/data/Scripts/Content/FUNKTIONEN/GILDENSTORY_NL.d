@@ -668,20 +668,20 @@ FUNC VOID GILDENSTORY_NL ()
 
 		if (Mod_NL_HasKamm == 3)
 		&& ((Npc_KnowsInfo(hero, Info_Mod_Lich_Kamm))
-		|| (Npc_KnowsInfo(hero, Info_Mod_Dragon_Kamm)))
-		&& (!Npc_IsInState(Lich_11008_NW, ZS_Talk))
-		&& (!Npc_IsInState(Dragon_11009_NW, ZS_Talk))
-		{
-			Mod_NL_HasKamm = 4;
+		|| (Npc_KnowsInfo(hero, Info_Mod_Dragon_Kamm))) {
+			if (!Npc_IsInState(Lich_11008_NW, ZS_Talk))
+			&& (!Npc_IsInState(Dragon_11009_NW, ZS_Talk)) {
+				Mod_NL_HasKamm = 4;
 
-			Dragon_11009_NW.flags = 0;
-			Knucker_11001_NW.flags = 0;
-			Feuerdrache_11002_NW.flags = 0;
+				Dragon_11009_NW.flags = 0;
+				Knucker_11001_NW.flags = 0;
+				Feuerdrache_11002_NW.flags = 0;
 
-			B_KillNpc	(Lich_11008_NW);
+				B_KillNpc	(Lich_11008_NW);
 
-			B_SetMonsterAttitude	(GIL_SEPERATOR_HUM,	ATT_HOSTILE,	GIL_DRAGON);
-			B_SetMonsterAttitude	(GIL_DRAGON,	ATT_HOSTILE,	GIL_SEPERATOR_HUM);
+				B_SetMonsterAttitude	(GIL_SEPERATOR_HUM,	ATT_HOSTILE,	GIL_DRAGON);
+				B_SetMonsterAttitude	(GIL_DRAGON,	ATT_HOSTILE,	GIL_SEPERATOR_HUM);
+			};
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Sergio_Dragon))
