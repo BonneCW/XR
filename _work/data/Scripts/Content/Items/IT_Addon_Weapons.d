@@ -785,7 +785,7 @@ INSTANCE ItMW_ErzKeule (C_Item)
 
 	value 				=	Value_Windknecht;
 
-	damageTotal  		= 	Damage_Windknecht;
+	damageTotal  		= 	70;
 	damagetype 			=	DAM_BLUNT;
 	range    			=  	RANGE_Windknecht;	
 	
@@ -872,7 +872,7 @@ INSTANCE ItMW_GranmarKeule (C_Item)//Sturmknecht 2h Holzkeule
 
 	value 				=	Value_Sturmknecht;
 
-	damageTotal  		= 	Damage_Sturmknecht;
+	damageTotal  		= 	115;
 	damagetype 			=	DAM_BLUNT;
 	range    			=  	RANGE_Sturmknecht;	
 	
@@ -898,7 +898,7 @@ INSTANCE ItMW_KGErzwaffe (C_Item)//Sturmknecht 2h Holzkeule
 
 	value 				=	Value_Sturmknecht;
 
-	damageTotal  		= 	45;
+	damageTotal  		= 	95;
 	damagetype 			=	DAM_MAGIC;
 	range    			=  	RANGE_Sturmknecht;	
 	
