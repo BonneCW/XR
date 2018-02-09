@@ -374,6 +374,7 @@ FUNC VOID Info_Mod_Ferco_Crazy_C()
 	VMG_Second = 1;
 
 	Info_ClearChoices	(Info_Mod_Ferco_Crazy);
+	Info_ClearChoices	(Info_Mod_Ferco_CrazyTwo);
 };
 
 FUNC VOID Info_Mod_Ferco_Crazy_B()
@@ -400,6 +401,7 @@ FUNC VOID Info_Mod_Ferco_Crazy_A()
 	B_LogEntry_More	(TOPIC_MOD_VMG_AUFNAHME, TOPIC_MOD_FERCO_WANZE, "Hm, ich soll eine Spruchrolle 'Verwandlung Fleischwanze' finden. Mal sehen, wie mir Ken dabei helfen kann.", "Ferco meinte, ich solle mit Ken sprechen, um herauszufinden, wo das Gelato liegt, um dort den Verwandlungszauber Fleischwanze zu bergen.");
 
 	Info_ClearChoices	(Info_Mod_Ferco_Crazy);
+	Info_ClearChoices	(Info_Mod_Ferco_CrazyTwo);
 };
 
 INSTANCE Info_Mod_Ferco_CrazyTwo (C_INFO)

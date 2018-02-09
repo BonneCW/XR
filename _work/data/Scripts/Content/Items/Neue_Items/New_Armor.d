@@ -496,9 +496,9 @@ INSTANCE ItAr_Eisgebiet_01(C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	40000;
-	protection [PROT_BLUNT] = 	40000;
-	protection [PROT_POINT] = 	5000;
+	protection [PROT_EDGE]	=	80000;
+	protection [PROT_BLUNT] = 	80000;
+	protection [PROT_POINT] = 	20000;
 	protection [PROT_FIRE] 	= 	20;
 	protection [PROT_MAGIC] = 	0;
 
@@ -527,9 +527,9 @@ INSTANCE ItAr_Eisgebiet_02(C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	40000;
-	protection [PROT_BLUNT] = 	40000;
-	protection [PROT_POINT] = 	5000;
+	protection [PROT_EDGE]	=	80000;
+	protection [PROT_BLUNT] = 	80000;
+	protection [PROT_POINT] = 	20000;
 	protection [PROT_FIRE] 	= 	20;
 	protection [PROT_MAGIC] = 	0;
 
@@ -558,9 +558,9 @@ INSTANCE ItAr_Eisgebiet_03(C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	40000;
-	protection [PROT_BLUNT] = 	40000;
-	protection [PROT_POINT] = 	5000;
+	protection [PROT_EDGE]	=	80000;
+	protection [PROT_BLUNT] = 	80000;
+	protection [PROT_POINT] = 	20000;
 	protection [PROT_FIRE] 	= 	20;
 	protection [PROT_MAGIC] = 	0;
 
@@ -589,9 +589,9 @@ INSTANCE ItAr_Eisgebiet_04(C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	40000;
-	protection [PROT_BLUNT] = 	40000;
-	protection [PROT_POINT] = 	5000;
+	protection [PROT_EDGE]	=	80000;
+	protection [PROT_BLUNT] = 	80000;
+	protection [PROT_POINT] = 	20000;
 	protection [PROT_FIRE] 	= 	20;
 	protection [PROT_MAGIC] = 	0;
 

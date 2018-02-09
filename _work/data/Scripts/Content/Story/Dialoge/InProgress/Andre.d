@@ -2294,7 +2294,7 @@ FUNC VOID Info_Mod_Andre_TomKraut_Info()
 	AI_Output(self, hero, "Info_Mod_Andre_TomKraut_40_03"); //Die Sumpfkrautpflanzen, die er hier einschmuggeln wollte, sind nun endlich der handfeste Beweis seiner Verwicklungen ins kriminelle Milieu.
 	AI_Output(self, hero, "Info_Mod_Andre_TomKraut_40_04"); //Er wird hier seine Strafe absitzen, bis er schwarz wird. Und nun behellige mich nicht weiter damit.
 
-	B_LogEntry	(TOPIC_MOD_TOM_KRAUT, "Nun, dass sieht nicht gut aus. Andre ist fest entschlossen Tom im Gefängnis zu lassen. Ich sollte ihm die Situation erklären ...");
+	B_LogEntry	(TOPIC_MOD_TOM_KRAUT, "Nun, das sieht nicht gut aus. Andre ist fest entschlossen Tom im Gefängnis zu lassen. Ich sollte ihm die Situation erklären ...");
 };
 
 INSTANCE Info_Mod_Andre_TomKraut2 (C_INFO)

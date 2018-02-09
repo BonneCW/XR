@@ -53,6 +53,8 @@ General Fixes:
 - Made Ore Clubs better
 - Gate of Old Camp now gets closed correctly during the guild story
 - Gate of Old Mine now gets opened correctly during the guild story of the Old Camp
+- Aura of Flames ends now as expected
+- made armors of people in Gelato stronger
 
 
 
