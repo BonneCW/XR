@@ -2,6 +2,8 @@ var int Mod_SaveOther;
 var C_Npc Mod_SaveNpc;
 var int Mod_LastStatsChapter;
 
+instance platzhaltermover(zCMover);
+
 FUNC VOID DAUERFUNC_01()
 {
 	var int concatTextInt;
@@ -1506,6 +1508,13 @@ FUNC VOID DAUERFUNC_01()
 		{
 			LoreEisgebietMine01 = 0;
 
+			ptr = MEM_SearchVobByName("EVT_LORENFAHRT_MINE");
+
+			if (ptr > 0) {
+				MEM_AssignInst(platzhaltermover, ptr);
+				platzhaltermover.moveSpeed = mkf(100);
+				platzhaltermover._zCVob_bitfield[0] = platzhaltermover._zCVob_bitfield[0] & ~zCVob_bitfield0_collDetectionDynamic;
+			};
 			Wld_SendTrigger	("EVT_LORENFAHRT_MINE");
 		};
 
@@ -1514,6 +1523,13 @@ FUNC VOID DAUERFUNC_01()
 		{
 			LoreEisgebietMine01 = 3;
 
+			ptr = MEM_SearchVobByName("EVT_LORENFAHRT_MINE");
+
+			if (ptr > 0) {
+				MEM_AssignInst(platzhaltermover, ptr);
+				platzhaltermover.moveSpeed = mkf(100);
+				platzhaltermover._zCVob_bitfield[0] = platzhaltermover._zCVob_bitfield[0] & ~zCVob_bitfield0_collDetectionDynamic;
+			};
 			Wld_SendTrigger	("EVT_LORENFAHRT_MINE");
 		};
 
@@ -1568,6 +1584,14 @@ FUNC VOID DAUERFUNC_01()
 		{
 			LoreEisgebietSW01 = 0;
 
+			ptr = MEM_SearchVobByName("EVT_LORENFAHRT_SW");
+
+			if (ptr > 0) {
+				MEM_AssignInst(platzhaltermover, ptr);
+				platzhaltermover.moveSpeed = mkf(100);
+				platzhaltermover._zCVob_bitfield[0] = platzhaltermover._zCVob_bitfield[0] & ~zCVob_bitfield0_collDetectionDynamic;
+			};
+
 			Wld_SendTrigger	("EVT_LORENFAHRT_SW");
 		};
 
@@ -1575,6 +1599,14 @@ FUNC VOID DAUERFUNC_01()
 		&& (LoreEisgebietSW01 == 0)
 		{
 			LoreEisgebietSW01 = 3;
+
+			ptr = MEM_SearchVobByName("EVT_LORENFAHRT_SW");
+
+			if (ptr > 0) {
+				MEM_AssignInst(platzhaltermover, ptr);
+				platzhaltermover.moveSpeed = mkf(100);
+				platzhaltermover._zCVob_bitfield[0] = platzhaltermover._zCVob_bitfield[0] & ~zCVob_bitfield0_collDetectionDynamic;
+			};
 
 			Wld_SendTrigger	("EVT_LORENFAHRT_SW");
 		};

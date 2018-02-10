@@ -58,6 +58,7 @@ General Fixes:
 - thieves now talk with player in their dungeon in Khorata
 - Gelato quest with Serra and Malfama works now
 - Myxir now leaves pirates camp again after quest
+- crash connected to lorries in Gelato should be fixed
 
 
 
