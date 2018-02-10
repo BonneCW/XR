@@ -44,6 +44,8 @@ const int TARGET_RIGHTLEG = 6;
 // Mod-Variable
 
 var int Bosskampf_Pass_NW;
+var int Pickaxe_Fix;
+var int Pickaxe_Count;
 
 var int Mod_AMQ_DRM_Spawned;
 var int Mod_RupertSpawnedSeelenpeiniger;

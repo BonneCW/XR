@@ -14,6 +14,10 @@ FUNC VOID Erzhacken_S1 ()
 
 		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_Erzhacken;
+		
+		Pickaxe_Fix = TRUE;
+		Pickaxe_Count = Npc_HasItems(hero, ItMw_2H_Axe_L_01);
+		
 		Ai_ProcessInfos (her);
 	};
 }; 

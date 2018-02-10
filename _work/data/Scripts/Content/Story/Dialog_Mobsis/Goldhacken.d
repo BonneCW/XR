@@ -121,6 +121,10 @@ FUNC VOID Goldhacken_S1 ()
 
 		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_GOLDHACKEN;
+		
+		Pickaxe_Fix = TRUE;
+		Pickaxe_Count = Npc_HasItems(hero, ItMw_2H_Axe_L_01);
+		
 		Ai_ProcessInfos (her);
 	};
 }; 

@@ -60,6 +60,7 @@ General Fixes:
 - Myxir now leaves pirates camp again after quest
 - crash connected to lorries in Gelato should be fixed
 - fixed blocker in "Demonic" quest
+- Pickaxes shouldn't be removed after picking ore/gold etc.
 
 
 

@@ -1476,6 +1476,8 @@ FUNC VOID DAUERFUNC_01()
 			};
 		};
 	};
+	
+	var int ptr;
 
 	// Loren zurücksetzen
 
@@ -1839,6 +1841,17 @@ FUNC VOID DAUERFUNC_01()
 		Mod_LastStatsChapter = Kapitel;
 		
 		Spine_UpdateChapterStatistics(hero, Kapitel);
+	};
+	
+	if (Pickaxe_Fix) {
+		if (PLAYER_MOBSI_PRODUCTION == MOBSI_NONE)
+		&& (!C_BodyStateContains (hero, BS_MOBINTERACT)) {
+			Pickaxe_Fix = FALSE;
+			
+			if (Pickaxe_Count > Npc_HasItems(hero, ItMw_2H_Axe_L_01)) {
+				CreateInvItems(hero, ItMw_2H_Axe_L_01, Pickaxe_Count - Npc_HasItems(hero, ItMw_2H_Axe_L_01));
+			};
+		};
 	};
 
 	Wld_SendTrigger	("DAUERTRIGGER");
