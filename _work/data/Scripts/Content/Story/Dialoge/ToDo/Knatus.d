@@ -21,10 +21,6 @@ FUNC VOID Info_Mod_Knatus_AlvarKristall_Info()
 	AI_Output(self, hero, "Info_Mod_Knatus_AlvarKristall_03_00"); //Ja, weg mit dem Kerl, schmeiﬂt ihn hier raus.
 
 	AI_StopProcessInfos	(self);
-
-	AI_Teleport	(hero, "EIS_40");
-	
-	Mod_AlvarKristall = 4;
 };
 
 INSTANCE Info_Mod_Knatus_Traenenkristall (C_INFO)

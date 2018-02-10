@@ -1,4 +1,6 @@
 var int Mod_Mario_WachenWeg;
+var int Mod_UnschuldigeTeleport;
+var int Mod_MalfamaCast;
 
 FUNC VOID NEBENQUESTS()
 {
@@ -2772,6 +2774,14 @@ FUNC VOID NEBENQUESTS()
 
 			Wld_SendTrigger	("EVT_MESSAGE_ALVARKRISTALL");
 		};
+		
+		if (Npc_KnowsInfo(hero, Info_Mod_Knatus_AlvarKristall))
+		&& (Mod_UnschuldigeTeleport == FALSE)
+		&& (!Npc_IsInState(Mod_7564_OUT_Knatus_EIS, ZS_Talk)) {
+			Mod_UnschuldigeTeleport = TRUE;
+
+			AI_Teleport	(hero, "EIS_40");
+		};
 
 		// Wenn man in der Höhle den Kristall aufnimmt
 
@@ -2839,12 +2849,24 @@ FUNC VOID NEBENQUESTS()
 				Mod_AlvarKristall = 8;
 
 				Mod_7561_OUT_Alvar_EIS.name = "Unbekannter";
+				
+				Wld_SendUnTrigger	("EVT_TRAENENKRISTALL");
 			};
 
 			Mod_Traenenkristall_Sequenz += 1;
 		};
 
 		// Nach der Erkenntnis von Malfama, wenn die zwei ihren Zauber machen wollen
+
+		if (!Npc_IsInState(Mod_7560_OUT_Malfama_EIS, ZS_Talk))
+		&& (Mod_MalfamaCast == FALSE)
+		&& (Npc_KnowsInfo(hero, Info_Mod_Malfama_Traenenkristall))
+		{
+			Mod_MalfamaCast = TRUE;
+
+			B_StartOtherRoutine	(Mod_7560_OUT_Malfama_EIS, "HEXENMAGIE");
+			B_StartOtherRoutine	(Mod_7559_OUT_Serra_EIS, "HEXENMAGIE");
+		};
 
 		if (Npc_IsInState(Mod_7560_OUT_Malfama_EIS, ZS_Hexenmagie))
 		&& (Npc_IsInState(Mod_7559_OUT_Serra_EIS, ZS_Hexenmagie))
