@@ -457,6 +457,8 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 				Wld_InsertNpc	(Rabbit, "ADW_PIRATECAMP_TRAIN_01");
 				Wld_InsertNpc	(Rabbit, "ADW_PIRATECAMP_TRAIN_01");
+			
+				B_RemoveNpc(Mod_7000_KDS_Myxir_AW);
 			};
 		};
 

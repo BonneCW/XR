@@ -57,6 +57,7 @@ General Fixes:
 - made armors of people in Gelato stronger
 - thieves now talk with player in their dungeon in Khorata
 - Gelato quest with Serra and Malfama works now
+- Myxir now leaves pirates camp again after quest
 
 
 

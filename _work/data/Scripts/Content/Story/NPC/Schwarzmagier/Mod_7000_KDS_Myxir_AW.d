@@ -48,3 +48,9 @@ FUNC VOID Rtn_Start_7000()
 	TA_Stand_WP	(08,00,20,00,"ADW_PIRATECAMP_BEACH_14");
 	TA_Stand_WP	(20,00,08,00,"ADW_PIRATECAMP_BEACH_14");
 };
+
+FUNC VOID Rtn_Tot_7000()
+{
+	TA_Stand_WP	(08,00,20,00,"TOT");
+	TA_Stand_WP	(20,00,08,00,"TOT");
+};
