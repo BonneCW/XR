@@ -790,7 +790,8 @@ FUNC VOID HAUPTQUESTS()
 			B_LogEntry	(TOPIC_MOD_DAEMONISCH, "So, das waren alle drei. Jetzt wieder zu Xardas.");
 		};
 
-		if (Mod_HQ_Daemonisch == 3) {
+		if (Mod_HQ_Daemonisch == 3)
+		|| (Mod_HQ_Daemonisch == 4) {
 			if (Mod_HQ_Daemonisch_SP_01 == 0) {
 				if (Npc_IsDead(Mod_13000_SP_Seelenpeiniger_NW))
 				&& (Npc_IsDead(Mod_13001_SP_Seelenpeiniger_NW))

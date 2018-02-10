@@ -1,5 +1,7 @@
 var int RidingLorry;
 
+instance loremover(zCMover);
+
 FUNC VOID LoreWP(var string wp) {
 	VAR oCNpc her;
     her = Hlp_GetNpc (PC_HERO);
@@ -107,13 +109,12 @@ FUNC VOID LOREEISMINE01_LETSGO_S0 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		instance platzhaltermover(zCMover);
 		var int ptr; ptr = MEM_SearchVobByName("EVT_LORENFAHRT_MINE");
 
 		if (ptr > 0) {
-			MEM_AssignInst(platzhaltermover, ptr);
-			platzhaltermover.moveSpeed = mkf(1);
-			platzhaltermover._zCVob_bitfield[0] = platzhaltermover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
+			MEM_AssignInst(loremover, ptr);
+			loremover.moveSpeed = mkf(1);
+			loremover._zCVob_bitfield[0] = loremover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
 		};
 
 		LoreWP	("LORE_MINE_01");
@@ -128,13 +129,12 @@ FUNC VOID LOREEISMINE01_LETSGO_S1 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		instance platzhaltermover(zCMover);
 		var int ptr; ptr = MEM_SearchVobByName("EVT_LORENFAHRT_MINE");
 
 		if (ptr > 0) {
-			MEM_AssignInst(platzhaltermover, ptr);
-			platzhaltermover.moveSpeed = mkf(1);
-			platzhaltermover._zCVob_bitfield[0] = platzhaltermover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
+			MEM_AssignInst(loremover, ptr);
+			loremover.moveSpeed = mkf(1);
+			loremover._zCVob_bitfield[0] = loremover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
 		};
 
 		LoreWP	("LORE_MINE_01");
@@ -161,13 +161,12 @@ FUNC VOID LOREEISMINE02_LETSGO_S0 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		instance platzhaltermover(zCMover);
 		var int ptr; ptr = MEM_SearchVobByName("EVT_LORENFAHRT_MINE");
 
 		if (ptr > 0) {
-			MEM_AssignInst(platzhaltermover, ptr);
-			platzhaltermover.moveSpeed = mkf(1);
-			platzhaltermover._zCVob_bitfield[0] = platzhaltermover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
+			MEM_AssignInst(loremover, ptr);
+			loremover.moveSpeed = mkf(1);
+			loremover._zCVob_bitfield[0] = loremover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
 		};
 
 		LoreWP	("LORE_MINE_03");
@@ -182,13 +181,12 @@ FUNC VOID LOREEISMINE02_LETSGO_S1 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		instance platzhaltermover(zCMover);
 		var int ptr; ptr = MEM_SearchVobByName("EVT_LORENFAHRT_MINE");
 
 		if (ptr > 0) {
-			MEM_AssignInst(platzhaltermover, ptr);
-			platzhaltermover.moveSpeed = mkf(1);
-			platzhaltermover._zCVob_bitfield[0] = platzhaltermover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
+			MEM_AssignInst(loremover, ptr);
+			loremover.moveSpeed = mkf(1);
+			loremover._zCVob_bitfield[0] = loremover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
 		};
 
 		LoreWP	("LORE_MINE_03");
@@ -215,13 +213,12 @@ FUNC VOID LOREEISSW01_LETSGO_S0 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		instance platzhaltermover(zCMover);
 		var int ptr; ptr = MEM_SearchVobByName("EVT_LORENFAHRT_SW");
 
 		if (ptr > 0) {
-			MEM_AssignInst(platzhaltermover, ptr);
-			platzhaltermover.moveSpeed = mkf(1);
-			platzhaltermover._zCVob_bitfield[0] = platzhaltermover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
+			MEM_AssignInst(loremover, ptr);
+			loremover.moveSpeed = mkf(1);
+			loremover._zCVob_bitfield[0] = loremover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
 		};
 
 		LoreWP	("LORE_SW_01");
@@ -236,13 +233,12 @@ FUNC VOID LOREEISSW01_LETSGO_S1 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		instance platzhaltermover(zCMover);
 		var int ptr; ptr = MEM_SearchVobByName("EVT_LORENFAHRT_SW");
 
 		if (ptr > 0) {
-			MEM_AssignInst(platzhaltermover, ptr);
-			platzhaltermover.moveSpeed = mkf(1);
-			platzhaltermover._zCVob_bitfield[0] = platzhaltermover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
+			MEM_AssignInst(loremover, ptr);
+			loremover.moveSpeed = mkf(1);
+			loremover._zCVob_bitfield[0] = loremover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
 		};
 
 		LoreWP	("LORE_SW_01");
@@ -269,13 +265,12 @@ FUNC VOID LOREEISSW02_LETSGO_S0 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		instance platzhaltermover(zCMover);
 		var int ptr; ptr = MEM_SearchVobByName("EVT_LORENFAHRT_SW");
 
 		if (ptr > 0) {
-			MEM_AssignInst(platzhaltermover, ptr);
-			platzhaltermover.moveSpeed = mkf(1);
-			platzhaltermover._zCVob_bitfield[0] = platzhaltermover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
+			MEM_AssignInst(loremover, ptr);
+			loremover.moveSpeed = mkf(1);
+			loremover._zCVob_bitfield[0] = loremover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
 		};
 
 		LoreWP	("LORE_SW_03");
@@ -290,13 +285,12 @@ FUNC VOID LOREEISSW02_LETSGO_S1 ()
 	{
 		AI_UseMob	(hero, "VWHEEL", -1);
 
-		instance platzhaltermover(zCMover);
 		var int ptr; ptr = MEM_SearchVobByName("EVT_LORENFAHRT_SW");
 
 		if (ptr > 0) {
-			MEM_AssignInst(platzhaltermover, ptr);
-			platzhaltermover.moveSpeed = mkf(1);
-			platzhaltermover._zCVob_bitfield[0] = platzhaltermover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
+			MEM_AssignInst(loremover, ptr);
+			loremover.moveSpeed = mkf(1);
+			loremover._zCVob_bitfield[0] = loremover._zCVob_bitfield[0] | zCVob_bitfield0_collDetectionDynamic;
 		};
 
 		LoreWP	("LORE_SW_03");
