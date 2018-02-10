@@ -19,7 +19,14 @@ func void ZS_Unconscious ()
 		return;
 	};
 
-	self.attribute[ATR_HITPOINTS] = 1;
+	if (Npc_KnowsInfo(hero, Info_Mod_Xeres_Hi))
+	&& (Mod_Xeres_Kampf01 < 2) {
+		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS_MAX];
+		self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS];
+	} else {
+		self.attribute[ATR_HITPOINTS] = 1;
+		self.aivar[AIV_Damage] = 1;
+	};
 	
 	// FUNC
 	

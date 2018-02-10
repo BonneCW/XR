@@ -61,6 +61,7 @@ General Fixes:
 - crash connected to lorries in Gelato should be fixed
 - fixed blocker in "Demonic" quest
 - Pickaxes shouldn't be removed after picking ore/gold etc.
+- Hero can't die anymore when fighting against Xeres for the first time
 
 
 
