@@ -8839,7 +8839,7 @@ FUNC VOID INIT_Relendel()
 	Wld_AssignRoomToGuild("haus16" , GIL_PUBLIC);
 	Wld_AssignRoomToGuild("haus17" , GIL_PUBLIC);
 	Wld_AssignRoomToGuild("haus18" , GIL_OUT);
-	Wld_AssignRoomToGuild("haus19" , GIL_NONE); // Bibliothek, damit der nicht meckert, wenn man B?cher mitnimmt
+	Wld_AssignRoomToGuild("haus19" , GIL_NONE); // Bibliothek, damit der nicht meckert, wenn man Bücher mitnimmt
 	Wld_AssignRoomToGuild("haus20" , GIL_OUT);
 	Wld_AssignRoomToGuild("haus21" , GIL_OUT);
 	Wld_AssignRoomToGuild("haus22" , GIL_PUBLIC);
@@ -8853,7 +8853,7 @@ FUNC VOID INIT_Relendel()
 	Wld_AssignRoomToGuild("haus30" , GIL_PUBLIC);
 	Wld_AssignRoomToGuild("haus31" , GIL_PUBLIC);
 	Wld_AssignRoomToGuild("haus32" , GIL_PUBLIC);
-	Wld_AssignRoomToGuild("hauskeller"  , GIL_OUT);
+	Wld_AssignRoomToGuild("hauskeller"  , GIL_PUBLIC);
 	Wld_AssignRoomToGuild("hausfleisch" , GIL_PUBLIC);
 	Wld_AssignRoomToGuild("hausbaken"   , GIL_PUBLIC);
 	Wld_AssignRoomToGuild("brauerarbeit", GIL_PUBLIC);

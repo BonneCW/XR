@@ -55,6 +55,7 @@ General Fixes:
 - Gate of Old Mine now gets opened correctly during the guild story of the Old Camp
 - Aura of Flames ends now as expected
 - made armors of people in Gelato stronger
+- thieves now talk with player in their dungeon in Khorata
 
 
 
