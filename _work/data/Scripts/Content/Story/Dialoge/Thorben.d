@@ -705,8 +705,8 @@ FUNC INT Info_Mod_Thorben_LehrlingQuest7_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Gritta_ThorbenLehrling2))
 	&& ((Npc_HasItems(hero, ItMi_Schmuckkasten) == 1)
-	&& (Npc_HasItems(hero, ItMi_Bierkrug) == 1)
-	&& (Npc_HasItems(hero, ItMi_Karte) == 1))
+	|| (Npc_HasItems(hero, ItMi_Bierkrug) == 1)
+	|| (Npc_HasItems(hero, ItMi_Karte) == 1))
 	{
 		return 1;
 	};

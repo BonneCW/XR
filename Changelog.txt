@@ -22,6 +22,21 @@ Fixes for Valley of Mines if not entered before:
 
 
 
+1.0.6
+
+Enhancements:
+
+- 
+
+General Fixes:
+
+- Transforms don't reset player guild anymore
+- Thorben's apprentice quest line can be completed now
+- Constantino's last apprentice quest is closed now correctly
+- Richard's wife doesn't die anymore while player is in sight
+
+
+
 1.0.5
 
 Enhancements:

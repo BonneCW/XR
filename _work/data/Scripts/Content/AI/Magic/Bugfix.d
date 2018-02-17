@@ -11,6 +11,7 @@ var int changedTwoHHero;
 
 var int scriptPatchWeaponChange;
 var int playerGuild;
+var int restorePlayerGuild;
 
 
 func void B_MeleeWeaponChange(var int OneH, var int TwoH, var int ManaMax)
@@ -82,6 +83,9 @@ func void B_StopMagicTransform()
 		Mod_IstGolem = 0;
 		Mod_IstSchaf = 0;
 		
-		hero.guild = playerGuild;
+		if (restorePlayerGuild) {
+			hero.guild = playerGuild;
+			restorePlayerGuild = FALSE;
+		};
 	};
 };

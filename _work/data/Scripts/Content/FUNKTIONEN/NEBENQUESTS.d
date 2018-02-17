@@ -2891,7 +2891,7 @@ FUNC VOID NEBENQUESTS()
 		if (Npc_GetDistToWP(Mod_7410_OUT_Frau_EIS, "EIS_01") < 500)
 		&& (Npc_KnowsInfo(hero, Info_Mod_FrauRichard_AtSteinkreis))
 		&& (Mod_FrauRichard_Weg == 0)
-		{
+		&& (Npc_GetDistToWP(hero, "EIS_01") > 5000) {
 			Mod_FrauRichard_Weg = 1;
 
 			B_RemoveNpc	(Mod_7410_OUT_Frau_EIS);

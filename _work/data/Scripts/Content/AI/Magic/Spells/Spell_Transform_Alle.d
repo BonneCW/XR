@@ -165,6 +165,7 @@ func int Spell_Logic_TrfSkeleton2 (var int manaInvested)
 
 			playerGuild = hero.guild;
 			hero.guild = GIL_SKELETON;
+			restorePlayerGuild = TRUE;
 
 			if (Mod_TrfSkeleton2 == 0)
 			{

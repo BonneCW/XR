@@ -860,6 +860,8 @@ FUNC VOID Info_Mod_Constantino_LehrlingQuest9_Info()
 	AI_Output(self, hero, "Info_Mod_Constantino_LehrlingQuest9_10_05"); //Komm! Hüpf doch mit! (lacht irre)
 
 	AI_StopProcessInfos	(self);
+	
+	B_SetTopicStatus	(TOPIC_MOD_LEHRLING_CONSTANTINO_FOUR, LOG_SUCCESS);
 };
 
 INSTANCE Info_Mod_Constantino_LehrlingQuest10 (C_INFO)
