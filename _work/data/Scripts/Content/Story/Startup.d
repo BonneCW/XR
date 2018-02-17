@@ -128,6 +128,20 @@ func void INIT_GLOBAL()
 	MG_WaitingForMatch = FALSE;
 	
 	RemoveWrongEffects();
+	
+	if (Mod_Gilde > 0 && hero.guild == 0) {
+		if (Mod_Gilde >= 1 && Mod_Gilde <= 3) {
+			hero.guild = GIL_PAL;
+		} else if ((Mod_Gilde >= 4 && Mod_Gilde <= 5) || Mod_Gilde == 19) {
+			hero.guild = GIL_MIL;
+		} else if (Mod_Gilde >= 6 && Mod_Gilde <= 8) {
+			hero.guild = GIL_VLK;
+		} else if ((Mod_Gilde >= 9 && Mod_Gilde <= 11) || (Mod_Gilde >= 17 && Mod_Gilde <= 18)) {
+			hero.guild = GIL_NOV;
+		} else if (Mod_Gilde >= 12 && Mod_Gilde <= 16) {
+			hero.guild = GIL_KDF;
+		};
+	};
 };
 
 FUNC VOID OldLevel(var int newlevel)
