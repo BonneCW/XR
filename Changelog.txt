@@ -22,11 +22,19 @@ Fixes for Valley of Mines if not entered before:
 
 
 
-1.0.6
+1.0.7
 
 Enhancements:
 
 - 
+
+General Fixes:
+
+- Aldaro gives ring now directly after start of the Snow Ghost quest when his sickness was healed
+
+
+
+1.0.6
 
 General Fixes:
 

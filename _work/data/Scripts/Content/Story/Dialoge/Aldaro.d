@@ -131,8 +131,7 @@ INSTANCE Info_Mod_Aldaro_Schneegeister (C_INFO)
 
 FUNC INT Info_Mod_Aldaro_Schneegeister_Condition()
 {
-	if (Wld_GetDay()-1 > Mod_Thys_Schneegeister_Tag)
-	&& (Mod_Aldaro_Gift == 1)
+	if (Mod_Aldaro_Gift == 1)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Thys_Schneegeister))
 	{
 		return 1;
