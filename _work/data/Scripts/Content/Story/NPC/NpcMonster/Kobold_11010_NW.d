@@ -6,6 +6,7 @@ INSTANCE Kobold_11010_NW	(Mst_Default_Gobbo_Green)
 	aivar[AIV_MM_REAL_ID]			= 	ID_KOBOLD;
 	id = 11010;
 	voice = 20;
+	flags = 2;
 
 	level							=	10;
 	
