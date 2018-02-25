@@ -45,6 +45,8 @@ FUNC VOID Info_Mod_Naim_Hi_Info()
 		B_ShowGivenThings	("Assassinenrobe erhalten");
 
 		AI_Output(self, hero, "Info_Mod_Naim_Hi_13_06"); //Nun melde dich bei Kais. Er hat wohl ein Problem.
+
+		B_SetTopicStatus	(TOPIC_MOD_ASS_MAGIER, LOG_SUCCESS);
 	};
 
 	B_SetTopicStatus	(TOPIC_MOD_ASS_BLUTKELCH, LOG_SUCCESS);

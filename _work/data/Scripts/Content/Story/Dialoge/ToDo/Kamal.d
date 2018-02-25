@@ -166,6 +166,8 @@ FUNC VOID Info_Mod_Kamal_Zutaten2_Info()
 	AI_Output(self, hero, "Info_Mod_Kamal_Zutaten2_11_13"); //Er kann sich drauf verlassen.
 
 	B_SetTopicStatus	(TOPIC_MOD_ASS_KAMAL, LOG_SUCCESS);
+	
+	B_LogEntry	(TOPIC_MOD_ASS_MAGIER, "Ich habe Kamal geholfen. Jetzt soll ich zu Malek gehen.");
 
 	B_GivePlayerXP	(250);
 };

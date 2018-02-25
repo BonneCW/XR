@@ -92,6 +92,8 @@ FUNC VOID Info_Mod_Mirza_Amulett_Info()
 	B_GivePlayerXP	(100);
 
 	B_SetTopicStatus	(TOPIC_MOD_ASS_AMULETT, LOG_SUCCESS);
+	
+	B_LogEntry	(TOPIC_MOD_ASS_MAGIER, "Von Mirza zu Aiman... nimmt das denn nie ein Ende?");
 };
 
 INSTANCE Info_Mod_Mirza_Blutkelch (C_INFO)

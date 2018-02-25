@@ -36,6 +36,8 @@ FUNC VOID Info_Mod_Aadel_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_Aadel_Hi_15_14"); //Gewiss. Und wo soll ich anfangen?
 	AI_Output(self, hero, "Info_Mod_Aadel_Hi_02_15"); //Geh mal zu Kamal da hinten. Das ist der Quacksalber in unserem Verein. Der braucht immer was.
 	AI_Output(hero, self, "Info_Mod_Aadel_Hi_15_16"); //Wie ihr wünscht, Meister.
+	
+	B_LogEntry	(TOPIC_MOD_ASS_MAGIER, "Aadel hat mich für die Beförderung zum Magier zu Kamal geschickt.");
 };
 
 INSTANCE Info_Mod_Aadel_Later (C_INFO)

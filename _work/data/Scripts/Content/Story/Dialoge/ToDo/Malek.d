@@ -65,6 +65,8 @@ FUNC VOID Info_Mod_Malek_Manaextrakt_Info()
 	AI_Output(hero, self, "Info_Mod_Malek_Manaextrakt_15_06"); //Dann werde ich mal zu ihm gehen.
 
 	B_SetTopicStatus	(TOPIC_MOD_ASS_MANAEXTRAKT, LOG_SUCCESS);
+	
+	B_LogEntry	(TOPIC_MOD_ASS_MAGIER, "Auch Malek ist zufrieden mit mir. Als nächstes ist Mahamad an der Reihe.");
 
 	B_GivePlayerXP	(250);
 };
