@@ -103,7 +103,6 @@ const int zCConsole__Register                       = 7875296; //0x782AE0
 const int zCConsoleOutputOverwriteAddr              = 7142904; //0x6CFDF8 Hook: ConsoleCommands
 const int zCOption__ParmValue                       = 4608896; //0x465380
 const int zCOptions_dir_string_offset               = 124;     //0x7C     // The class zCOption is defined incorrectly in Ikarus for Gothic1!
-const int zCOption__ParmValue                       = 4586784; //0X45FD20 // G1 
 const int zCWorld__AdvanceClock                     = 6447328; //0x6260E0 Hook: Draw3D
 const int zlineCache                                = 9257720; //0x8D42F8
 const int zCLineCache__Line3D                       = 5289040; //0x50B450
