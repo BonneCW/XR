@@ -41,6 +41,7 @@ General Fixes:
 - Lord Hagen now given the right key to the hero when he shall eliminate the thieves
 - Foci at Nagon only can be delivered if quest already was given
 - Fixed corrupt savegames loading a quicksave under certain circumstances
+- Fixed wrong condition for last upgrade of Judge armor
 
 
 

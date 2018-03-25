@@ -3290,7 +3290,7 @@ FUNC VOID PC_Verbessern_Robe_Info()
 	{
 		Info_AddChoice 	  (PC_Verbessern_Robe,"Dämonenbeschwörerrobe",PC_Verbessern_Robe_DMB);
 	};
-	if (Mod_Gilde == 18)
+	if (Mod_Gilde == 11)
 	&& (Npc_HasItems(hero, ItAt_WaterorcFur) > 2)
 	&& (Npc_HasItems(hero, ItAr_KDW_H) == 1)
 	{
