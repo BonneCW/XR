@@ -422,6 +422,7 @@ FUNC VOID GILDENSTORY_PAL()
 		};
 
 		if (Mod_PAL_MikaHehler == 1)
+		&& (!Npc_KnowsInfo(hero, Info_Mod_Mika_AndreVermaechtnis2))
 		{
 			if (Npc_GetDistToNpc(hero, Mod_598_MIL_Mika_NW) >= 4000)
 			|| (Npc_GetDistToNpc(hero, Mod_587_NONE_Jesper_NW) >= 4000)

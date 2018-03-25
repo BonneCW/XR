@@ -107,7 +107,7 @@ FUNC INT Info_Mod_Maria_BelohnungOnar_Condition()
 FUNC VOID Info_Mod_Maria_BelohnungOnar_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Maria_BelohnungOnar_15_00"); //Ich war bei Onar. Er hat mir nur 200 Goldmünzen gegeben.
-	AI_Output(self, hero, "Info_Mod_Maria_BelohnungOnar_17_01"); //Ach, dieser alte Geizkragen. Hmm,… geh zu Wasili. Er soll dir die restlichen Goldmünzen geben.
+	AI_Output(self, hero, "Info_Mod_Maria_BelohnungOnar_17_01"); //Ach, dieser alte Geizkragen. Hmm ... geh zu Wasili. Er soll dir die restlichen Goldmünzen geben.
 };
 
 INSTANCE Info_Mod_Maria_BelohnungWasili (C_INFO)

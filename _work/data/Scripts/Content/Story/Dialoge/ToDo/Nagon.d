@@ -71,6 +71,7 @@ FUNC INT Info_Mod_Nagon_HabFoki_Condition()
 {
 	if (Npc_HasItems(hero, ItMi_Focus_Pat) == 5)
 	&& (Mod_FM_Foki >= 2)
+	&& (Npc_KnowsInfo(hero, Info_Mod_Nagon_Gizar))
 	{
 		return 1;
 	};

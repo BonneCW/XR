@@ -311,9 +311,9 @@ INSTANCE Itar_Maxim_Fake (C_Item)
 	mainflag 				=	ITEM_KAT_NONE;
 	flags 					=	ITEM_SHOW|ITEM_MISSION;
 
-	protection [PROT_EDGE]	=	10000;
-	protection [PROT_BLUNT] = 	10000;
-	protection [PROT_POINT] = 	10000;
+	protection [PROT_EDGE]	=	130000;
+	protection [PROT_BLUNT] = 	130000;
+	protection [PROT_POINT] = 	130000;
 	protection [PROT_FIRE] 	= 	170;
 	protection [PROT_MAGIC] = 	170;
 
