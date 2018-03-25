@@ -40,6 +40,7 @@ General Fixes:
 - Fixed wrong protection values of loot Ghost armor
 - Lord Hagen now given the right key to the hero when he shall eliminate the thieves
 - Foci at Nagon only can be delivered if quest already was given
+- Fixed corrupt savegames loading a quicksave under certain circumstances
 
 
 
