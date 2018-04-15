@@ -263,7 +263,7 @@ FUNC VOID GILDENSTORY_ASS ()
 		};
 
 		if (Mod_ASS_Assassinengold == 1)
-		&& (Npc_HasItems(hero, ItMi_GreenNugget) == 34)
+		&& (Npc_HasItems(hero, ItMi_GreenNugget) >= 34)
 		{
 			Mod_ASS_Assassinengold = 2;
 

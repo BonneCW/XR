@@ -45,6 +45,7 @@ General Fixes:
 - Backtransformation from Half Infernal can't kill player anymore
 - Bloodwyn now also takes teleport Obelisk from player
 - Now one can get quest "Parlan's Ring"
+- Player doesn't need exactly 34 green ore for assassin quest anymore
 
 
 
