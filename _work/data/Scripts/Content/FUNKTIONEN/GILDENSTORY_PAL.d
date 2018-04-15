@@ -986,6 +986,11 @@ FUNC VOID GILDENSTORY_PAL()
 			{
 				AI_Teleport	(Mod_1016_KGD_Hymir_MT, "TOT");
 				B_StartOtherRoutine	(Mod_1016_KGD_Hymir_MT, "TOT");
+				AI_Teleport	(Mod_1016_KGD_Hymir_MT, "TOT");
+				
+				AI_Teleport	(Mod_7698_PAL_Hagen_MT, "TOT");
+				B_StartOtherRoutine	(Mod_7698_PAL_Hagen_MT, "TOT");
+				AI_Teleport	(Mod_7698_PAL_Hagen_MT, "TOT");
 
 				B_RemoveNpc	(Mod_7698_PAL_Hagen_MT);
 
