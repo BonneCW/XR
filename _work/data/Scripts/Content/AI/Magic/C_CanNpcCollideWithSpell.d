@@ -59,6 +59,11 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		};
 	};
 
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(PC_Friend_XW))
+	{
+		return COLL_DONOTHING;
+	};
+
 	// Golem-Resistenzen
 
 	if (self.aivar[AIV_MM_REAL_ID] == ID_STONEGOLEM)

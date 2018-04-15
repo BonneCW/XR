@@ -47,6 +47,7 @@ General Fixes:
 - Now one can get quest "Parlan's Ring"
 - Player doesn't need exactly 34 green ore for assassin quest anymore
 - Reduced critical hit chance of some ice wolves in Gelato
+- Argez now should be immune against all spells
 
 
 
