@@ -38,6 +38,8 @@ PROTOTYPE Mst_Skeleton_Lord	(C_NPC)
 	fight_tactic	=	FAI_HUMAN_STRONG;	
 	
 	EquipItem	(self,ItMw_Zweihaender2);
+	
+	B_SetFightSkills	(self, 80);
 
 	//----- Senses & Ranges ----
 	senses			= 	SENSE_HEAR | SENSE_SEE | SENSE_SMELL;

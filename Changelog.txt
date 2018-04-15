@@ -49,6 +49,7 @@ General Fixes:
 - Reduced critical hit chance of some ice wolves in Gelato
 - Argez now should be immune against all spells
 - Lord Hagen and Hymir shouldn't die in front of Player anymore
+- Skeleton Lord and Ghost of a Skeleton Lord now have two hand skill and deal much more damage
 
 
 
