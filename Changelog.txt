@@ -44,6 +44,7 @@ General Fixes:
 - Fixed wrong condition for last upgrade of Judge armor
 - Backtransformation from Half Infernal can't kill player anymore
 - Bloodwyn now also takes teleport Obelisk from player
+- Now one can get quest "Parlan's Ring"
 
 
 

@@ -132,8 +132,8 @@ INSTANCE Info_Mod_Parlan_Ring (C_INFO)
 
 FUNC INT Info_Mod_Parlan_Ring_Condition()
 {
-	if (Mod_Gilde == 1)
-	&& (hero.guild == GIL_NOV)
+	if (hero.guild == GIL_PAL)
+	|| (hero.guild == GIL_VLK)
 	{
 		return 1;
 	};
