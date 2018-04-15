@@ -91,10 +91,14 @@ FUNC VOID PerkSchleife()
 
 			hero.attribute[ATR_STRENGTH] -= 100;
 			hero.attribute[ATR_DEXTERITY] += 70;
-			hero.attribute[ATR_HITPOINTS] -= 400;
+			if (hero.attribute[ATR_HITPOINTS] > 400) {
+				hero.attribute[ATR_HITPOINTS] -= 400;
+				hero.aivar[AIV_Damage] -= 400;
+			} else {
+				hero.attribute[ATR_HITPOINTS] = 1;
+				hero.aivar[AIV_Damage] = 1;
+			};
 			hero.attribute[ATR_HITPOINTS_MAX] -= 400;
-
-			hero.aivar[AIV_Damage] -= 400;
 
 			hero.protection[PROT_EDGE] -= 100000;
 			hero.protection[PROT_BLUNT] -= 100000;

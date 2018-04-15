@@ -42,6 +42,7 @@ General Fixes:
 - Foci at Nagon only can be delivered if quest already was given
 - Fixed corrupt savegames loading a quicksave under certain circumstances
 - Fixed wrong condition for last upgrade of Judge armor
+- Backtransformation from Half Infernal can't kill player anymore
 
 
 
