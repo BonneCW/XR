@@ -23,8 +23,6 @@ instance Mod_7767_OUT_Veronica_EIS (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	CreateInvItems (self,ITKE_Thiefguildkey_Hotel_MIS,1);
-	CreateInvItems (self,ItKe_ThiefTreasure	,1);
 	
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe", FaceBabe_N_BlackHair, BodyTexBabe_N, ItAr_Eisgebiet_03);		

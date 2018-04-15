@@ -3,8 +3,9 @@ var int Spine_Initialized;
 var int Spine_Dll;
 var int Spine_InitFunc;
 var int Spine_GetUsernameFunc;
+var int Spine_StartedWithoutSpine;
 
-func int Spine_Init(var int modules) {
+func void Spine_ResetBeforeInit() {
 	if (Hlp_IsValidHandle(Spine_AchievementView)) {
 		View_Delete(Spine_AchievementView);
 		Spine_AchievementView = 0;
@@ -28,17 +29,11 @@ func int Spine_Init(var int modules) {
 	FF_Remove(Spine_ShowAchievementView);
 	FF_Remove(Spine_RemoveAchievementView);
 	
-	MEM_Info("Spine: Initializing");
 	Spine_Initialized = FALSE;
-	
-	MEM_Info("Spine: Loading SpineAPI.dll");
-	Spine_Dll = LoadLibrary("SpineAPI.dll");
-	
-	if (!Spine_Dll) {
-		MEM_Info("Spine: SpineAPI.dll couldn't be loaded");
-		return FALSE;
-	};
-	
+	Spine_StartedWithoutSpine = FALSE;
+};
+
+func int Spine_InitWithDll(var int modules) {
 	MEM_Info("Spine: Loading init function");
 	Spine_InitFunc = GetProcAddress(Spine_Dll, "init");
 	
@@ -493,6 +488,91 @@ func int Spine_Init(var int modules) {
 	};
 	
 	return Spine_Initialized;
+};
+
+func int Spine_InitWithoutDll(var int modules) {
+	MEM_Info("Spine: Loading init function");
+	Spine_InitFunc = 0;
+	
+	Spine_GetTestModeFunc = 0;
+	Spine_GetUsernameFunc = 0;
+	
+	Spine_UpdateScoreFunc = 0;
+	Spine_GetUserScoreFunc = 0;
+	Spine_GetUserRankFunc = 0;
+	Spine_GetScoreForRankFunc = 0;
+	Spine_GetUsernameForRankFunc = 0;
+	
+	if (modules & SPINE_MODULE_ACHIEVEMENTS) {
+		if (!(_LeGo_Flags & LeGo_FrameFunctions) || !(_LeGo_Flags & LeGo_View)) {
+			MEM_ErrorBox("For Spine Achievement Module you need to initialize LeGo with both FrameFunctions and View");
+			return FALSE;
+			
+		};
+		
+		var int i; i = 0;
+		var int pos; pos = MEM_StackPos.position;
+		if (i < MAX_ACHIEVEMENTS) {
+			var int achievementUnlocked; achievementUnlocked = STR_ToInt(MEM_GetGothOpt("SPINE", ConcatStrings(ConcatStrings(SPINE_MODNAME, "_achievement_"), IntToString(i))));
+			MEM_WriteStatArr(SPINE_ACHIEVEMENTS_LOCAL_UNLOCKED, i, achievementUnlocked);
+			i += 1;
+			MEM_StackPos.position = pos;
+		};
+	};
+	Spine_UnlockAchievementFunc = 0;
+	Spine_IsAchievementUnlockedFunc = 0;
+	
+	Spine_CreateMessageFunc = 0;
+	Spine_SendMessageFunc = 0;
+	Spine_ReceiveMessageFunc = 0;
+	Spine_SearchMatchFunc = 0;
+	Spine_IsInMatchFunc = 0;
+	Spine_GetPlayerCountFunc = 0;
+	Spine_GetPlayerUsernameFunc = 0;
+	
+	Spine_OverallSaveSetStringFunc = 0;
+	Spine_OverallSaveGetStringFunc = 0;
+	Spine_OverallSaveSetIntFunc = 0;
+	Spine_OverallSaveGetIntFunc = 0;
+	
+	Spine_VibrateGamepadFunc = 0;
+	Spine_IsGamepadEnabledFunc = 0;
+	Spine_IsGamepadActiveFunc = 0;
+	Spine_GetGamepadButtonStateFunc = 0;
+	Spine_GetGamepadTriggerStateFunc = 0;
+	Spine_GetGamepadStickStateFunc = 0;
+	Spine_ChangeRawModeFunc = 0;
+	
+	Spine_GetFriendCountFunc = 0;
+	Spine_GetFriendNameFunc = 0;
+	
+	Spine_UpdateStatisticFunc = 0;
+	
+	if (STR_Len(Spine_FirstStart) == 0) {
+		Spine_FirstStart = "Initialized";
+	};
+	Spine_Initialized = TRUE;
+	Spine_StartedWithoutSpine = TRUE;
+	
+	SPINE_SHOWACHIEVEMENTS = STR_ToInt(MEM_GetGothOpt("SPINE", "showAchievements"));
+	
+	return Spine_Initialized;
+};
+
+func int Spine_Init(var int modules) {
+	Spine_ResetBeforeInit();
+	
+	MEM_Info("Spine: Initializing");
+	
+	MEM_Info("Spine: Loading SpineAPI.dll");
+	Spine_Dll = LoadLibrary("SpineAPI.dll");
+	
+	if (!Spine_Dll) {
+		MEM_Info("Spine: SpineAPI.dll couldn't be loaded");
+		return Spine_InitWithoutDll(modules);
+	};
+	
+	return Spine_InitWithDll(modules);
 };
 
 // returns the username of the user currently logged in
