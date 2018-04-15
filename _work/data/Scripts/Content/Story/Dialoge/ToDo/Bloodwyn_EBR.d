@@ -176,9 +176,19 @@ FUNC VOID Info_Mod_Bloodwyn_EBR_Belagerung_Info()
 		Mod_HeroHasRune += 1;
 	};
 
+	if (Npc_HasItems(hero, ItRu_TeleportObelisk) == 1)
+	{
+		Npc_RemoveInvItems	(hero, ItRu_TeleportObelisk, 1);
+		Mob_CreateItems	("TELEPORTRUNENTRUHE", ItRu_TeleportObelisk, 1);
+
+		Mod_HeroHasRune += 1;
+	};
+
 	if (Mod_HeroHasRune > 0)
 	{
 		AI_Output(self, hero, "Info_Mod_Bloodwyn_EBR_Belagerung_04_13"); //Wie ich sehe hast du Teleportrunen. Ich schätze du hast nichts dagegen, wenn ich sie mitnehme.
+		
+		B_LogEntry	(TOPIC_MOD_AL_BOTSCHAFTER, "Bloodwyn hat alle meine Teleportrunen an sich genommen. Ich muss die Truhe finden, in der er sie lagert. Vermutlich wird er sie hier im Lager gelagert haben.");
 	};
 
 	Wld_InsertNpc	(Mod_1879_GRD_Gardist_MT, "LOCATION_11_01");

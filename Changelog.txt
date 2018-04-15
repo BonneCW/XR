@@ -43,6 +43,7 @@ General Fixes:
 - Fixed corrupt savegames loading a quicksave under certain circumstances
 - Fixed wrong condition for last upgrade of Judge armor
 - Backtransformation from Half Infernal can't kill player anymore
+- Bloodwyn now also takes teleport Obelisk from player
 
 
 
