@@ -1089,7 +1089,7 @@ INSTANCE IcewolfEISGEBIET	(Mst_Default_Icewolf)
 	
 	//----- Attributes ----
 	attribute	[ATR_STRENGTH]		=	160;
-	attribute	[ATR_DEXTERITY]		=	160;
+	attribute	[ATR_DEXTERITY]		=	15;
 	attribute	[ATR_HITPOINTS_MAX]	=	400;	
 	attribute	[ATR_HITPOINTS]		=	400;
 	attribute	[ATR_MANA_MAX] 		=	0;
