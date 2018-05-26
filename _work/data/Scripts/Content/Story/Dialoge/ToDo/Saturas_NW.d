@@ -1607,9 +1607,9 @@ FUNC VOID Info_Mod_Saturas_NW_Rasend_Info()
 	AI_Output(hero, self, "Info_Mod_Saturas_NW_Rasend_15_06"); //Hmm, welchen Weg hat die Kreatur nach ihrem Unwesen hier eingeschlagen?
 	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_07"); //Er überflog die Gebirge Richtung Relendel.
 	AI_Output(hero, self, "Info_Mod_Saturas_NW_Rasend_15_08"); //Dann werde ich mal die Verfolgung aufnehmen.
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_09"); //Sei aber um Adanos’ Willen vorsichtig. Dieses Geschöpf ist unheimlich mächtig.
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_09"); //Sei aber um Adanos' Willen vorsichtig. Dieses Geschöpf ist unheimlich mächtig.
 	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_10"); //Außerdem solltest du dich vielleicht bei Zeiten auch bei Xardas erkundigen.
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_11"); //Als ein Diener Beliar’s wird er dir bestimmt auch manch Nützliches offen legen können ...
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_11"); //Als ein Diener Beliars wird er dir bestimmt auch manch Nützliches offen legen können ...
 	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_12"); //Adanos möge dich behüten.
 
 	B_LogEntry	(TOPIC_MOD_ADANOS_RASEND, "Auch die Ausgrabungsstätte blieb von den Angriffen des Dämons nicht verschont. Dieser hat sich anschließend nach Relendel begeben. Saturas riet mir dazu, Xardas aufzusuchen, um vielleicht mehr über dieses finstere Geschöpf zu erfahren.");

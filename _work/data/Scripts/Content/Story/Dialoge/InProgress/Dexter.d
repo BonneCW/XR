@@ -22,16 +22,12 @@ FUNC VOID Info_Mod_Dexter_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_Dexter_Hi_15_01"); //Ich bin gekommen um mich euch anzuschließen.
 
 	if (Gardist_Dabei == TRUE)
-	|| (Mod_AnzahlNebengilden >= MaxNebengilden)
-	{
+	|| (Mod_AnzahlNebengilden >= MaxNebengilden) {
 		AI_Output(self, hero, "Info_Mod_Dexter_Hi_28_02"); //Ok, du hast unser Losungswort.
 
-		if (Gardist_Dabei == TRUE)
-		{
+		if (Gardist_Dabei == TRUE) {
 			AI_Output(self, hero, "Info_Mod_Dexter_Hi_28_03"); //Mir ist aber zu Ohren gekommen, dass du schon Teil des Alten Lagers bist.
-		}
-		else
-		{
+		} else {
 			AI_Output(self, hero, "Info_Mod_Dexter_Hi_28_04"); //Mir ist aber zu Ohren gekommen, dass du schon Teil vieler anderer Lager bist.
 		};
 
@@ -40,9 +36,7 @@ FUNC VOID Info_Mod_Dexter_Hi_Info()
 		AI_Output(self, hero, "Info_Mod_Dexter_Hi_28_07"); //Mach aber keinen Ärger, ok?
 
 		B_SetTopicStatus	(TOPIC_MOD_AUFNAHME_BANDITEN, LOG_FAILED);
-	}
-	else
-	{
+	} else {
 		AI_Output(self, hero, "Info_Mod_Dexter_Hi_28_08"); //Wie es scheint hast du ja ein paar von uns bereits überzeugt, sonst wärst du hier gar nicht lebend reingekommen.
 		AI_Output(self, hero, "Info_Mod_Dexter_Hi_28_09"); //Wenn du willst, kannst du jetzt also einer von uns werden.
 
