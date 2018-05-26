@@ -53,6 +53,7 @@ General Fixes:
 - Plague quest of Saturas can't be skipped anymore
 - fixed three of the missing monsters for Monster Hunter achievement and cancelled the other missing three as they aren't implemented anywhere yet
 - People for attack on Old Camp (Hymir, Dexter, ...) now go back to their original work after quest is completed
+- respawning some Crystal Crawlers now for quest "Auras and Crystals"
 
 
 

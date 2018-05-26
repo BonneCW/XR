@@ -188,6 +188,12 @@ FUNC VOID Info_Mod_Velario_AurenUndKristalle2_Info()
 	B_LogEntry_NS (TOPIC_TalentAnimalTrophy, "... Kristallcrawlern Kristalle abnehmen.");
 
 	B_StartOtherRoutine	(self, "START");
+	
+	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_07");
+	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_06");
+	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_04");
+	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_02");
+	Wld_InsertNpc	(Kristallminecrawler, "FP_ROAM_CRAWLER_09");
 };
 
 INSTANCE Info_Mod_Velario_AurenUndKristalle3 (C_INFO)
