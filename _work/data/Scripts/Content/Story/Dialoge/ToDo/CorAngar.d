@@ -392,13 +392,20 @@ FUNC VOID Info_Mod_Angar_Hueterklinge_C()
 FUNC VOID Info_Mod_Angar_Hueterklinge_B()
 {
 	AI_Output(hero, self, "Info_Mod_Angar_Hueterklinge_B_15_00"); //Ich möchte ein Zweihandschwert.
-	AI_Output(self, hero, "Info_Mod_Angar_Hueterklinge_B_34_01"); //Für eine zweihändig führbare Hüterklinge brauchst du 8 Brocken magisches Erz, 6 tReisfressende Heilpflanzen vom Reislord, einen Dolch, der das Blut von 4 Königen getrunken hat und das Fleisch eines Scavangers, der nicht aus einem Ei geschlüpft ist.
+	AI_Output(self, hero, "Info_Mod_Angar_Hueterklinge_B_34_01"); //Für eine zweihändig führbare Hüterklinge brauchst du 8 Brocken magisches Erz, 6 reisfressende Heilpflanzen vom Reislord, einen Dolch, der das Blut von 4 Königen getrunken hat und das Fleisch eines Scavangers, der nicht aus einem Ei geschlüpft ist.
 
 	Log_CreateTopic	(TOPIC_MOD_SL_SCHMIEDEFEUERN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_SL_SCHMIEDEFEUERN, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_SL_SCHMIEDEFEUERN, "Für eine zweihändige Hüterklinge brauche ich 8 Brocken magisches Erz, 6 reisfressende Heilpflanzen vom Reislord, einen Dolch, der das Blut von 4 Königen getrunken hat und das Fleisch eines Scavengers, der nicht aus einem Ei geschlüpft ist. Die Sachen muss ich alle zu Darrion bringen. Um zu erfahren, wie ich an die Sachen komme, sollte ich mich bei den anderen Templern umhören.");
 
 	Mod_TPL_Hueterklinge_Art = 2;
+	
+	Wld_InsertItem(ItPl_Health_Herb_01_Reisfresser, "FP_PICKRICE_3_NC_11");
+	Wld_InsertItem(ItPl_Health_Herb_01_Reisfresser, "FP_PICKRICE_3_NC_25");
+	Wld_InsertItem(ItPl_Health_Herb_01_Reisfresser, "FP_PICKRICE_3_NC_13");
+	Wld_InsertItem(ItPl_Health_Herb_01_Reisfresser, "FP_PICKRICE_2_NC_14");
+	Wld_InsertItem(ItPl_Health_Herb_01_Reisfresser, "FP_PICKRICE_3_NC_17");
+	Wld_InsertItem(ItPl_Health_Herb_01_Reisfresser, "FP_PICKRICE_2_NC_16");
 
 	Info_Mod_Angar_Hueterklinge_C();
 };

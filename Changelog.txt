@@ -58,6 +58,7 @@ General Fixes:
 - maybe really fixed Wannabe being invincible sometimes
 - Quest of Esteban only available for bandits now
 - slightly reduced protection of lizards
+- spawned some rice-eating plants in New Camp
 
 
 
