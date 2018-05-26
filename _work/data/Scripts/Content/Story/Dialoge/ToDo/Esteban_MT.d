@@ -12,6 +12,7 @@ INSTANCE Info_Mod_Esteban_Hi (C_INFO)
 FUNC INT Info_Mod_Esteban_Hi_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Dexter_Hi))
+	&& (Banditen_Dabei)
 	{
 		return 1;
 	};
