@@ -55,6 +55,7 @@ General Fixes:
 - People for attack on Old Camp (Hymir, Dexter, ...) now go back to their original work after quest is completed
 - respawning some Crystal Crawlers now for quest "Auras and Crystals"
 - in case area at Bengar was cleaned without the help of Cronos the troops leave Orlan's tavern now
+- maybe really fixed Wannabe being invincible sometimes
 
 
 
