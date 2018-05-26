@@ -19,11 +19,11 @@ PROTOTYPE Mst_Default_Waran(C_Npc)
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	110000;
-	protection	[PROT_EDGE]			=	110000;
-	protection	[PROT_POINT]		=	110000;
-	protection	[PROT_FIRE]			=	110;
-	protection	[PROT_FLY]			=	110;
+	protection	[PROT_BLUNT]		=	90000;
+	protection	[PROT_EDGE]			=	90000;
+	protection	[PROT_POINT]		=	90000;
+	protection	[PROT_FIRE]			=	90;
+	protection	[PROT_FLY]			=	90;
 	protection	[PROT_MAGIC]		=	20;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];

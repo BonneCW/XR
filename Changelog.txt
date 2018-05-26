@@ -57,6 +57,7 @@ General Fixes:
 - in case area at Bengar was cleaned without the help of Cronos the troops leave Orlan's tavern now
 - maybe really fixed Wannabe being invincible sometimes
 - Quest of Esteban only available for bandits now
+- slightly reduced protection of lizards
 
 
 
