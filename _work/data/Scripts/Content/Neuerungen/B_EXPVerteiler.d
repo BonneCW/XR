@@ -18,6 +18,11 @@ FUNC VOID B_EXPVerteiler (var C_NPC opfer, var C_NPC taeter)
 				Spine_OverallSaveSetInt("UndeadOrcPriest", 1);
 			};
 		};
+		if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Mod_10033_ORC_UndeadShamane_OGY))
+		|| (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Mod_10032_ORC_UndeadShamane_MT))
+		|| (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Mod_10039_ORC_UndeadShamane_OT)) {
+			Spine_OverallSaveSetInt("UndeadOrcPriest", 1);
+		};
 		if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(WaterOrc)) {
 			Spine_OverallSaveSetInt("WaterOrc", 1);
 		};
@@ -36,7 +41,9 @@ FUNC VOID B_EXPVerteiler (var C_NPC opfer, var C_NPC taeter)
 		if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Erzguardian)) {
 			Spine_OverallSaveSetInt("Erzguardian", 1);
 		};
-		if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Shadowbeast_Fire)) {
+		if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Shadowbeast_Fire))
+		|| (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Shadowbeast_Addon_Fire_CanyonLib))
+		|| (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Feuerteufel_Balrog)) {
 			Spine_OverallSaveSetInt("Shadowbeast_Fire", 1);
 		};
 		if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Razor)) {
@@ -99,7 +106,8 @@ FUNC VOID B_EXPVerteiler (var C_NPC opfer, var C_NPC taeter)
 		if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Waran)) {
 			Spine_OverallSaveSetInt("Waran", 1);
 		};
-		if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Truhe)) {
+		if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Truhe))
+		|| (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Truhe_Deppenhans)) {
 			Spine_OverallSaveSetInt("Truhe", 1);
 		};
 		if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Troll_Black)) {

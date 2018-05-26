@@ -8904,7 +8904,7 @@ FUNC VOID INIT_Relendel()
 	};
 
 	if (Mod_WM_UnheilFertig == 1)
-	{
+	&& (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_KhorataPlage_01)) {
 		Mod_WM_UnheilFertig = 2;
 
 		Wld_InsertNpc	(Rabbit, "REL_SURFACE_107");
