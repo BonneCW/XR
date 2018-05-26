@@ -738,8 +738,14 @@ FUNC VOID Info_Mod_Alissandro_BartholoTot_Info()
 	
 	B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Ich habe Bartholo in den Kerkern gefunden und getötet. Nun soll ich am nächsten Tag in den Thronsaal kommen.");
 
-	B_StartOtherRoutine	(Mod_1874_HMG_Makanius_MT, "ALTESLAGER");
 	B_StartOtherRoutine	(self, "BOSS");
+	
+	B_StartOtherRoutine	(Mod_1874_HMG_Makanius_MT, "ALTESLAGER");
+	B_StartOtherRoutine	(Mod_1107_GRD_Jackal_MT, "START");
+	B_StartOtherRoutine	(Mod_761_BDT_Dexter_MT, "START");
+	B_StartOtherRoutine	(Mod_1016_KGD_Hymir_MT, "START");
+	B_StartOtherRoutine	(Mod_2005_GUR_CorCadar_MT, "START");
+	B_StartOtherRoutine	(Mod_106_TPL_Angar_MT, "START");
 
 	Mod_AL_BelohnungFuerEroberung = Wld_GetDay();
 };
