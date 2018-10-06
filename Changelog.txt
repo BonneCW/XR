@@ -10,19 +10,15 @@ General Fixes:
 
 Fixes for Khorinis if not entered before:
 
-- Made it harder to pass blockade in sewer of Khorinis
-- Nagur's hiding spot now has a focus name
-- Switched name of the two chests at Lord Andre so it is correct
+- 
 
 Fixes for Valley of Mines if not entered before:
 
-- Added missing focus name for a chest in Beliar library
-- Fixed zero sight area near Beliar fortress
-- Cathran now sits on his bench
+- 
 
 Fixes for Jharkendar if not entered before:
 
-- Fixed usage of bookstand about Zeremony dagger
+- 
 
 
 
@@ -30,7 +26,7 @@ Fixes for Jharkendar if not entered before:
 
 Enhancements:
 
-- 
+- added some takes
 
 General Fixes:
 
@@ -61,6 +57,14 @@ General Fixes:
 - spawned some rice-eating plants in New Camp
 - white lizards shouldn't attack player anymore when going to temple
 - Canthar quest now continues with the woman at market place even if previous quest isn't completed before chapter 5 started
+- added missing bookstand for last background story text *
+- Made it harder to pass blockade in sewer of Khorinis *
+- Nagur's hiding spot now has a focus name *
+- Switched name of the two chests at Lord Andre so it is correct *
+- Added missing focus name for a chest in Beliar library *
+- Fixed zero sight area near Beliar fortress *
+- Cathran now sits on his bench *
+- Fixed usage of bookstand about Zeremony dagger *
 
 
 
