@@ -59,6 +59,8 @@ General Fixes:
 - Quest of Esteban only available for bandits now
 - slightly reduced protection of lizards
 - spawned some rice-eating plants in New Camp
+- white lizards shouldn't attack player anymore when going to temple
+- Canthar quest now continues with the woman at market place even if previous quest isn't completed before chapter 5 started
 
 
 

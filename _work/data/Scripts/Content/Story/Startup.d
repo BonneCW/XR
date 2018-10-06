@@ -2786,7 +2786,7 @@ FUNC VOID INIT_NewWorld()
 		B_Kapitelwechsel	(6, NEWWORLD_ZEN);
 	};
 
-	if (Kapitel == 4)
+	if (Kapitel >= 4)
 	&& (Mod_MoeDontTalk == FALSE)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Moe_AllievoTot))
 	{

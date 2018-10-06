@@ -945,6 +945,9 @@ FUNC VOID Info_Mod_Albi_Geheimnis5_Info()
 	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_18);
 
 	B_GivePlayerXP	(2500);
+
+	Mod_12021_DRA_Albino_AW.aivar[AIV_Partymember] = FALSE;
+	Mod_12022_DRA_Albino_AW.aivar[AIV_Partymember] = FALSE;
 };
 
 INSTANCE Info_Mod_Albi_Unbewaffnet (C_INFO)

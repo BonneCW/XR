@@ -1539,9 +1539,6 @@ FUNC VOID NEBENQUESTS()
 			B_StartOtherRoutine	(Mod_12021_DRA_Albino_AW, "START");
 			B_StartOtherRoutine	(Mod_12022_DRA_Albino_AW, "START");
 
-			Mod_12021_DRA_Albino_AW.aivar[AIV_Partymember] = FALSE;
-			Mod_12022_DRA_Albino_AW.aivar[AIV_Partymember] = FALSE;
-
 			Mod_AlraunenFalle = 2;
 		};
 
