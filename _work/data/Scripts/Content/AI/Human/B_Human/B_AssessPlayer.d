@@ -63,6 +63,23 @@ func void B_AssessPlayer ()
 		&& (playerIsTransformed) {
 			return;
 		};
+
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Monster_11039_Shivar_EIS))
+		&& (other.guild == GIL_DEMON) {
+			B_Attack	(self, other, AR_None, 0);
+			return;
+		};
+
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Monster_11039_Shivar_EIS))
+		&& (C_NpcIsHero(other))
+		&& (Mod_HeroIstDemon == FALSE) {
+			B_Attack	(self, hero, AR_None, 0);
+			return;
+		} else if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Monster_11039_Shivar_EIS))
+		&& (C_NpcIsHero(other))
+		&& (Mod_HeroIstDemon == TRUE) {
+			Npc_SetTempAttitude (self, ATT_FRIENDLY);
+		};
 	};
 		
 	var C_Item itm;

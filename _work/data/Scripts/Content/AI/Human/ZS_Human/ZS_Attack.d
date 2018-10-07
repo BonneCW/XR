@@ -185,6 +185,14 @@ func int ZS_Attack_Loop()
 		return LOOP_END;
 	};
 
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Monster_11039_Shivar_EIS))
+	&& (C_NpcIsHero(other))
+	&& (Mod_HeroIstDemon == TRUE)
+	&& (self.aivar [AIV_ATTACKREASON] == AR_NONE)
+	{
+		return LOOP_END;
+	};
+
 	if ((Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Monster_11057_Mutantengolem_AW))
 	|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Monster_11057_Mutantengolem_AW)))
 	&& ((Mod_Mutantengolem == 2)
@@ -203,6 +211,13 @@ func int ZS_Attack_Loop()
 	// EXIT LOOP IF...
 	
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Monster_11038_Shivar_REL))
+	&& (C_NpcIsHero(other))
+	&& (Mod_ShivarLieb == 1)
+	{
+		return LOOP_END;
+	};
+	
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Monster_11039_Shivar_EIS))
 	&& (C_NpcIsHero(other))
 	&& (Mod_ShivarLieb == 1)
 	{

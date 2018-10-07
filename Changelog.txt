@@ -65,6 +65,7 @@ General Fixes:
 - Fixed zero sight area near Beliar fortress *
 - Cathran now sits on his bench *
 - Fixed usage of bookstand about Zeremony dagger *
+- Shivar in Gelato now talks to player correctly
 
 
 
