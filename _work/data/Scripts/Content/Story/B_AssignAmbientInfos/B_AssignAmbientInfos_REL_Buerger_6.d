@@ -12,7 +12,7 @@ INSTANCE DIA_REL_Buerger_6_EXIT(C_INFO)
 
 FUNC INT DIA_REL_Buerger_6_EXIT_Condition()
 {
-	return TRUE;
+	return self.npctype == NPCTYPE_REL_BUERGER;
 };
 
 FUNC VOID DIA_REL_Buerger_6_EXIT_Info()
@@ -22,7 +22,7 @@ FUNC VOID DIA_REL_Buerger_6_EXIT_Info()
 
 INSTANCE Info_REL_Buerger_6_Rundschreiben (C_INFO) // E1
 {
-	nr			= 5;
+	nr			= 0;
 	condition	= Info_REL_Buerger_6_Rundschreiben_Condition;
 	information	= Info_REL_Buerger_6_Rundschreiben_Info;
 	permanent	= 1;
@@ -64,6 +64,7 @@ FUNC INT Info_REL_Buerger_6_FreudenspenderMachtBlind_Condition()
 	if (Mod_SL_PartBlind == 1)
 	&& (self.aivar[AIV_FLUGBLATTVERTEILT] < Wld_GetDay())
 	&& (Npc_GetDistToWP(self, "REL_CITY_107") < 3500)
+	&& (self.npctype == NPCTYPE_REL_BUERGER)
 	{
 		return TRUE;
 	};
@@ -94,6 +95,9 @@ INSTANCE Info_Mod_REL_Buerger_6_Pickpocket (C_INFO)
 
 FUNC INT Info_Mod_REL_Buerger_6_Pickpocket_Condition()
 {
+	if (self.npctype != NPCTYPE_REL_BUERGER) {
+		return FALSE;
+	};
 	C_Beklauen	(60 + r_max(30), ItMi_Gold, 20 + r_max(10));
 };
 

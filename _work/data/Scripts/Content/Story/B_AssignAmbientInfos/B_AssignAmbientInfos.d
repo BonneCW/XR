@@ -173,4 +173,8 @@ FUNC VOID B_AssignAmbientInfos (var C_NPC slf)
 		if (slf.voice == 19)		{	B_AssignAmbientInfos_REL_Buerger_19 (slf);	};
 		if (slf.voice == 21 || slf.voice == 43)	{	B_AssignAmbientInfos_REL_Buerger_21 (slf);	};
 	};
+	
+	if (slf.npctype == NPCTYPE_MAIN && CurrentLevel == RELENDEL_ZEN) {
+		B_AssignAmbientInfos_REL_Buerger_6 (slf);
+	};
 };
