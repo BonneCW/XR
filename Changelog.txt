@@ -66,7 +66,8 @@ General Fixes:
 - Cathran now sits on his bench *
 - Fixed usage of bookstand about Zeremony dagger *
 - Shivar in Gelato now talks to player correctly
-- green ore now has always correct orientation
+- green ore now has always correct orientation *
+- fixed log entry for runes for Beliar mage
 
 
 

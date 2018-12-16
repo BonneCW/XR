@@ -168,7 +168,7 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 		if (Mod_Gilde == 14)
 		{
 			PrintScreen	(PRINT_LearnCircle_5, -1, -1, FONT_Screen, 2);
-			B_LogEntry (TOPIC_TalentMagicCircle,"Die Sprüche des 5. Kreises sind: Schrei der Toten, Dämon beschwören und schwere Wunden heilen.");
+			B_LogEntry (TOPIC_TalentMagicCircle,"Die Sprüche des 5. Kreises sind: Todeshauch, Dämon beschwören und schwere Wunden heilen.");
 			return TRUE;
 		}
 		else if (Mod_Gilde == 8)
@@ -191,7 +191,7 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 		if (Mod_Gilde == 14)
 		{
 			PrintScreen	(PRINT_LearnCircle_6, -1, -1, FONT_Screen, 2);
-			B_LogEntry (TOPIC_TalentMagicCircle,"Die Sprüche des 6. Kreises sind: Todeshauch und Armee der Finsternis.");
+			B_LogEntry (TOPIC_TalentMagicCircle,"Die Sprüche des 6. Kreises sind: Schrei der Toten und Armee der Finsternis.");
 			return TRUE;
 		}
 		else if (Mod_Gilde == 8)
