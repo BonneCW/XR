@@ -69,6 +69,7 @@ General Fixes:
 - green ore now has always correct orientation *
 - fixed log entry for runes for Beliar mage
 - NPCs with name in Khorata now can also be used for Anselm's newsletter
+- fixed bug in combination with 4GB patch
 
 
 
