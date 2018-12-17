@@ -70,7 +70,8 @@ General Fixes:
 - fixed log entry for runes for Beliar mage
 - NPCs with name in Khorata now can also be used for Anselm's newsletter
 - fixed bug in combination with 4GB patch
-- Ziegen sind jetzt normal besiegbar
+- goats now can be beaten like normal enemies
+- dialog with Saturas when finishing Rage quest works now as expected
 
 
 

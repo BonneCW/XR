@@ -323,7 +323,6 @@ FUNC VOID GILDENSTORY_ADANOS()
 		// Groﬂes Unheil
 
 		if (Mod_WM_Boeden == 9)
-		&& (CurrentLevel == NEWWORLD_ZEN)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Saturas_AW_Kap3))
 		{
 			Wld_SetTime(23,00);
@@ -1053,6 +1052,14 @@ FUNC VOID GILDENSTORY_ADANOS()
 			Mod_7588_OUT_Wilderer_NW.aivar[AIV_Partymember] = FALSE;
 			Mod_7587_OUT_Wilderer_NW.aivar[AIV_Partymember] = FALSE;
 		};
+		
+		if (Npc_KnowsInfo(hero, Info_Mod_Saturas_NW_Rasend02))
+		&& (!Npc_IsInState(Mod_774_KDW_Saturas_NW, ZS_Talk))
+		&& (!Mod_SaturasAtRat) {
+			Mod_SaturasAtRat = TRUE;
+			
+			B_StartOtherRoutine	(Mod_774_KDW_Saturas_NW, "RAT");
+		};
 	};
 
 	// Aura des Berserkers - Wirkung
@@ -1198,14 +1205,6 @@ FUNC VOID GILDENSTORY_ADANOS()
 			Mod_HeroDemonCounter = 0;
 
 			Wld_StopEffect	("INFERNALFIRE");
-		};
-		
-		if (Npc_KnowsInfo(hero, Info_Mod_Saturas_NW_Rasend02))
-		&& (!Npc_IsInState(Mod_774_KDW_Saturas_NW, ZS_Talk))
-		&& (!Mod_SaturasAtRat) {
-			Mod_SaturasAtRat = TRUE;
-			
-			B_StartOtherRoutine	(Mod_774_KDW_Saturas_NW, "RAT");
 		};
 	};
 
