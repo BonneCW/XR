@@ -1,6 +1,7 @@
 func void ZS_MM_Flee ()
 {
 	Npc_PercEnable	(self,	PERC_ASSESSMAGIC,	B_AssessMagic);	
+	Npc_PercEnable		(self, PERC_ASSESSDAMAGE		,	B_MM_AssessDamage);
 	
 	B_ValidateOther();
 
