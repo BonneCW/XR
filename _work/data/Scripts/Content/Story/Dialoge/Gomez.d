@@ -719,7 +719,7 @@ FUNC VOID Info_Mod_Gomez_AtAL_Info()
 {
 	AI_TurnToNpc	(self, Mod_7066_DMR_Daemonenritter_MT);
 
-	AI_Output(self, hero, "Info_Mod_Gomez_AtAL_16_00"); //Jemand, den ich mir anhören möchte, und jetzt halt deinen Mund, wenn ich dir nicht die Zunge rausschneiden soll.
+	AI_Output(self, hero, "Info_Mod_Gomez_AtAL_16_00"); //Jemand, den ich mir anhören möchte. Und jetzt halt deinen Mund, wenn ich dir nicht die Zunge rausschneiden soll.
 	
 	AI_StopProcessInfos	(self);
 };
