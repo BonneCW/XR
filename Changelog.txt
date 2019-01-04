@@ -72,6 +72,7 @@ General Fixes:
 - fixed bug in combination with 4GB patch
 - goats now can be beaten like normal enemies
 - dialog with Saturas when finishing Rage quest works now as expected
+- picking ore in hunter camp doesn't remove Pick Axe anymore
 
 
 
