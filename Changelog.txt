@@ -74,6 +74,7 @@ General Fixes:
 - dialog with Saturas when finishing Rage quest works now as expected
 - picking ore in hunter camp doesn't remove Pick Axe anymore
 - fixed value of an armor
+- fixed exploit that allowed to insert focus again and again for swamp in Relendel
 
 
 
