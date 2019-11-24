@@ -2891,7 +2891,7 @@ INSTANCE EBR_ARMOR_M(C_Item)
 	protection [PROT_FIRE] 	= 	10;
 	protection [PROT_MAGIC] = 	20;
 
-	value 					=	protection [PROT_EDGE] * 20;
+	value 					=	2000;
 
 	wear 					=	WEAR_TORSO;
 
