@@ -1,4 +1,4 @@
-const string SPINE_VERSION_STRING = "1.10.3";
+const string SPINE_VERSION_STRING = "1.14.13";
 
 // Spine modules
 
@@ -42,4 +42,4 @@ const int SPINE_LENGTH_TRIGGEREARTHQUAKE_G2 = 6;
 const int SPINE_ADDRESS_UNTRIGGEREARTHQUAKE_G2 = 6373344; // 0x00613FE0
 const int SPINE_LENGTH_UNTRIGGEREARTHQUAKE_G2 = 6;
 
-const int SPINE_GAME_DAMAGE_VIBRATION_TIME = 1000; // 2 seconds vibration for every hit?
+const int SPINE_GAME_DAMAGE_VIBRATION_TIME = 1000; // 1 seconds vibration for every hit?

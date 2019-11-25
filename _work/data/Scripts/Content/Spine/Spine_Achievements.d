@@ -49,7 +49,7 @@ func void Spine_ShowAchievementView(var int identifier) {
 		startPosY = screen.psizey - SPINE_ACHIEVEMENT_HEIGHT;
 	};
 	Spine_AchievementView = View_CreatePxl(startPosX, startPosY, startPosX + SPINE_ACHIEVEMENT_WIDTH, startPosY + SPINE_ACHIEVEMENT_HEIGHT);
-	View_SetTexture(Spine_AchievementView, "ACHIEVEMENT_BACKGROUND.TGA");
+	View_SetTexture(Spine_AchievementView, SPINE_ACHIEVEMENT_BACKGROUND);
 	View_Open(Spine_AchievementView);
 	
 	var int imageStartPosX;
@@ -188,6 +188,8 @@ func void Spine_UpdateAchievementProgress(var int identifier, var int progress) 
 				maxProgress = STR_ToInt(maxProgressString);
 				if (maxProgress <= progress) {
 					ret = TRUE;
+					
+					Spine_UnlockAchievement(identifier);
 				};
 			};
 			
@@ -258,7 +260,15 @@ func int Spine_GetAchievementMaxProgress(var int identifier) {
 	return FALSE;
 };
 
+// increased achievement progress by one
+// in case maximum achievement progress is reached, the achievement is displayed as unlocked automatically
+func void Spine_IncrementAchievementProgress(var int identifier) {
+	var int currentProgress; currentProgress = Spine_GetAchievementProgress(identifier);
+	Spine_UpdateAchievementProgress(identifier, currentProgress + 1);
+};
+
 // return TRUE or FALSE whether the achievement for the given id of another modification is already unlocked or not
+// this function shouldn't be called frequently in the game loop as it is slow
 func int Spine_IsAchievementOfOtherModUnlocked(var int modID, var int identifier) {
 	if (Spine_Initialized && Spine_IsAchievementOfOtherModUnlockedFunc) {
 		CALL_IntParam(identifier);
