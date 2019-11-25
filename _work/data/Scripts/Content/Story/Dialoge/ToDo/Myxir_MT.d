@@ -689,7 +689,9 @@ FUNC INT Info_Mod_Myxir_Blut_Condition()
 	&& (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Blood] == FALSE)
 	&& ((Mod_Gilde == 12)
 	|| (Mod_Gilde == 13)
-	|| (Mod_Gilde == 14))
+	|| (Mod_Gilde == 14)
+	|| (Mod_Gilde == 15)
+	|| (Mod_Gilde == 16))
 	{
 		return 1;
 	};

@@ -558,7 +558,9 @@ func int Info_Mod_Andokai_Runen_Condition ()
 	if (Npc_KnowsInfo(hero, Info_Mod_Andokai_Hi))
 	&& ((Mod_Gilde == 12)
 	|| (Mod_Gilde == 13)
-	|| (Mod_Gilde == 14))
+	|| (Mod_Gilde == 14)
+	|| (Mod_Gilde == 15)
+	|| (Mod_Gilde == 16))
 	&& (Npc_GetTalentSkill(hero, NPC_TALENT_MAGE) >= 1)
 	{
 		return 1;
