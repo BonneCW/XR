@@ -825,7 +825,7 @@ FUNC VOID Info_Mod_Saturas_AW_PortalInnosSchwert_Info()
 
 	AI_StopProcessInfos	(self);
 
-	Npc_SetRefuseTalk (self, 3600);
+	Npc_SetRefuseTalk (self, 60);
 };
 
 INSTANCE Info_Mod_Saturas_AW_PortalZauberFertig (C_INFO)
