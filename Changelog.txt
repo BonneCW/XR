@@ -76,6 +76,7 @@ General Fixes:
 - fixed value of an armor
 - fixed exploit that allowed to insert focus again and again for swamp in Relendel
 - fixed teachers not being available anymore in Beliar guild after decision in chapter 3
+- reduced damage of Axe of Doom:q
 
 
 
