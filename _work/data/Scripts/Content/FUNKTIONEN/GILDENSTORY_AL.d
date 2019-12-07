@@ -95,6 +95,8 @@ FUNC VOID GILDENSTORY_AL()
 			Wld_SendTrigger	("EVT_KERKERGATE_01");
 
 			B_LogEntry	(TOPIC_MOD_AL_SCHMUGGLER, "Cutter ist tot. Ich sollte Thorus davon berichten.");
+			
+			Wld_InsertItem(ItSc_TrfRabbit, "FP_ITEM_TRFSCROLL_CUTTER");
 
 			Mod_TemplerBeiThorus = 2;
 		};
