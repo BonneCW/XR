@@ -79,6 +79,7 @@ General Fixes:
 - reduced damage of Axe of Doom
 - improved getting Zap spell from Saturas for Beliar story
 - added transform to rabbit scroll to prison in Old Camp when looking for Cutter
+- fixed dialog with Whistler happening too early when chest was cleared before the quest
 
 
 

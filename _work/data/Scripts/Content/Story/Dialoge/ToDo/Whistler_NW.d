@@ -126,6 +126,7 @@ FUNC INT Info_Mod_Whistler_NW_HabSeinGold_Condition()
 {
 	if (Mob_HasItems("BROMORSTRUHE", Itmi_Gold) == 0)
 	&& (Wld_IsTime(05,00,10,00))
+	&& (Npc_KnowsInfo(hero, Info_Mod_Whistler_NW_BromorSchuld))
 	{
 		return 1;
 	};
