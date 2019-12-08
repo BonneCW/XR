@@ -17,6 +17,19 @@ func void B_PrintTeleportTooFarAway (var int Level)
 	};
 };
 
+FUNC INT CanTeleport() {
+	if (CurrentLevel != ADDONWORLD_ZEN) {
+		return TRUE;
+	};
+	
+	if (Npc_KnowsInfo(hero, Info_Mod_Myxir_AW_Hi))
+	&& (!Npc_KnowsInfo(hero, Info_Mod_Greg_ArtefaktTot)) {
+		return FALSE;
+	};
+	
+	return TRUE;
+};
+
 // ------ Instanz für alle Teleport-Spells ------
 INSTANCE Spell_Teleport (C_Spell_Proto)
 {
@@ -34,6 +47,10 @@ INSTANCE Spell_Teleport (C_Spell_Proto)
 // ------ zum Paladin-Secret ------
 func int Spell_Logic_PalTeleportSecret (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -68,6 +85,10 @@ var int TooLessMana;
 // ------ zum Paladin-Secret ------
 func int Spell_Logic_TeleportOT (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (HeroIstKeinZombie == TRUE)
 	{
@@ -125,6 +146,10 @@ func void Spell_Cast_TeleportOT()
 // ------ zur Hafen-Stadt ------
 func int Spell_Logic_TeleportSeaport (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (Npc_GetDistToWP(hero, "NW_CANTHARINSEL_08") > 10000)
 	{
@@ -159,6 +184,10 @@ func void Spell_Cast_TeleportSeaport()
 // ------ zum Kloster ------
 func int Spell_Logic_TeleportMonastery (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (Npc_GetDistToWP(hero, "NW_CANTHARINSEL_08") > 10000)
 	{
@@ -193,6 +222,10 @@ func void Spell_Cast_TeleportMonastery()
 // ------ zum Kloster ------
 func int Spell_Logic_Teleport_Pat (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (Npc_GetDistToWP(hero, "NW_CANTHARINSEL_08") > 10000)
 	{
@@ -227,6 +260,10 @@ func void Spell_Cast_Teleport_Pat()
 // ------ zum Bauernhof ------
 func int Spell_Logic_TeleportFarm (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (Npc_GetDistToWP(hero, "NW_CANTHARINSEL_08") > 10000)
 	{
@@ -261,6 +298,10 @@ func void Spell_Cast_TeleportFarm()
 // ------ zu Xardas ------
 func int Spell_Logic_TeleportXardas (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (Npc_GetDistToWP(hero, "NW_CANTHARINSEL_08") > 10000)
 	{
@@ -295,6 +336,10 @@ func void Spell_Cast_TeleportXardas()
 // ------ zum Pass in der NW ------
 func int Spell_Logic_TeleportPassNW (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (Npc_GetDistToWP(hero, "NW_CANTHARINSEL_08") > 10000)
 	{
@@ -329,6 +374,10 @@ func void Spell_Cast_TeleportPassNW()
 // ------ zum Pass in der OW ------
 func int Spell_Logic_TeleportPassOW (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -362,6 +411,10 @@ func void Spell_Cast_TeleportPassOW()
 // ------ zum Old Camp ------
 func int Spell_Logic_TeleportOC (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -394,6 +447,10 @@ func void Spell_Cast_TeleportOC()
 // ------ in den OW Dämonentower ------
 func int Spell_Logic_TeleportOWDemonTower (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -426,6 +483,10 @@ func void Spell_Cast_TeleportOWDemonTower()
 // ------ Zur Taverne ------
 func int Spell_Logic_TeleportTaverne (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (Npc_GetDistToWP(hero, "NW_CANTHARINSEL_08") > 10000)
 	{
@@ -458,6 +519,10 @@ func void Spell_Cast_TeleportTaverne ()
 };
 func int Spell_Logic_TeleportDemonTower (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -488,6 +553,10 @@ func void Spell_Cast_TeleportDemonTower ()
 };
 func int Spell_Logic_TeleportPsicamp (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -518,6 +587,10 @@ func void Spell_Cast_TeleportPsicamp ()
 };
 func int Spell_Logic_TeleportOldcamp (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -556,6 +629,10 @@ func void Spell_Cast_TeleportOldcamp ()
 };
 func int Spell_Logic_TeleportNewcamp (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -586,6 +663,10 @@ func void Spell_Cast_TeleportNewcamp ()
 };
 func int Spell_Logic_Teleport4 (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (Npc_GetDistToWP(self, "GRYD_060")>600)
 	{
@@ -618,6 +699,10 @@ func void Spell_Cast_Teleport4 ()
 };
 func int Spell_Logic_TeleportSektis (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (Npc_GetDistToWP(self, "NW_LIGHTHOUSE_IN_01A") < 300)
 	&& (CurrentLevel == NEWWORLD_ZEN)
@@ -673,6 +758,10 @@ func void Spell_Cast_TeleportSektis ()
 
 func int Spell_Logic_Teleport5 (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (Npc_GetDistToWP(hero, "NW_CANTHARINSEL_08") > 10000)
 	{
@@ -706,6 +795,10 @@ func void Spell_Cast_Teleport5 ()
 
 func int Spell_Logic_TeleportPatBack (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (Npc_GetDistToWP(self, "WP_PAT_START") < 1000)
 	{
@@ -740,6 +833,10 @@ func void Spell_Cast_TeleportPatBack ()
 // ------ zum Kloster ------
 func int Spell_Logic_Teleport_Pat_01 (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -773,6 +870,10 @@ func void Spell_Cast_Teleport_Pat_01()
 // ------ zum Kloster ------
 func int Spell_Logic_Teleport_Pat_02 (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -804,6 +905,10 @@ func void Spell_Cast_Teleport_Pat_02()
 
 func int Spell_Logic_TeleportBergwelt (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (CurrentLevel != ADDONWORLD_ZEN) {
 		return SPL_SENDSTOP;
 	} else if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
@@ -837,6 +942,10 @@ func void Spell_Cast_TeleportBergwelt()
 
 func int Spell_Logic_TeleportVorAL (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -868,6 +977,10 @@ func void Spell_Cast_TeleportVorAL()
 
 func int Spell_Logic_TeleportXD (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -899,6 +1012,10 @@ func void Spell_Cast_TeleportXD()
 
 func int Spell_Logic_Teleport_Eisgebiet (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (CurrentLevel == MINENTAL_ZEN)
 	{
@@ -932,6 +1049,10 @@ func void Spell_Cast_Teleport_Eisgebiet()
 
 func int Spell_Logic_TeleportEisSH (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -963,6 +1084,10 @@ func void Spell_Cast_TeleportEisSH()
 
 func int Spell_Logic_TeleportBeliarOut (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -996,6 +1121,10 @@ func void Spell_Cast_TeleportBeliarOut()
 
 func int Spell_Logic_TeleportBergfestung (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1027,6 +1156,10 @@ func void Spell_Cast_TeleportBergfestung()
 
 func int Spell_Logic_TeleportBeliarfestung (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1058,6 +1191,10 @@ func void Spell_Cast_TeleportBeliarfestung()
 
 func int Spell_Logic_TeleportKlosterruine (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1089,6 +1226,10 @@ func void Spell_Cast_TeleportKlosterruine()
 
 func int Spell_Logic_TeleportSonnenkreis (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (Npc_GetDistToWP(hero, "NW_CANTHARINSEL_08") > 10000)
 	{
@@ -1122,6 +1263,10 @@ func void Spell_Cast_TeleportSonnenkreis()
 
 func int Spell_Logic_TeleportObelisk (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self)
 	&& (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& ((CurrentLevel == NEWWORLD_ZEN)
@@ -1174,6 +1319,10 @@ func void Spell_Cast_TeleportObelisk()
 
 func int Spell_Logic_TeleportKhorata (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1216,6 +1365,10 @@ func void Spell_Cast_TeleportKhorata()
 
 func int Spell_Logic_TeleportTorgan (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1247,6 +1400,10 @@ func void Spell_Cast_TeleportTorgan()
 
 func int Spell_Logic_TeleportRELBauernhof (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1278,6 +1435,10 @@ func void Spell_Cast_TeleportRELBauernhof()
 
 func int Spell_Logic_TeleportRELPass (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1309,6 +1470,10 @@ func void Spell_Cast_TeleportRELPass()
 
 func int Spell_Logic_TeleportRELRaeuber (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1340,6 +1505,10 @@ func void Spell_Cast_TeleportRELRaeuber()
 
 func int Spell_Logic_TeleportRELSee (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1371,6 +1540,10 @@ func void Spell_Cast_TeleportRELSee()
 
 func int Spell_Logic_TeleportWaldis (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1402,6 +1575,10 @@ func void Spell_Cast_TeleportWaldis()
 
 func int Spell_Logic_TeleportWaldiPlattform (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	&& (Npc_GetDistToWP(hero, "WP_OM_HOEHLE_09") < 300)
 	{
@@ -1445,6 +1622,10 @@ func void Spell_Cast_TeleportWaldiPlattform()
 
 func int Spell_Logic_TeleportRELHofstaat (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1476,6 +1657,10 @@ func void Spell_Cast_TeleportRELHofstaat()
 
 func int Spell_Logic_TeleportOrkfriedhof (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1507,6 +1692,10 @@ func void Spell_Cast_TeleportOrkfriedhof()
 
 func int Spell_Logic_TeleportGenn (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1540,6 +1729,10 @@ func void Spell_Cast_TeleportGenn()
 
 func int Spell_Logic_TeleportRELMoor (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1571,6 +1764,10 @@ func void Spell_Cast_TeleportRELMoor()
 
 func int Spell_Logic_Teleport_Banditenlager (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1602,6 +1799,10 @@ func void Spell_Cast_Teleport_Banditenlager()
 
 func int Spell_Logic_Teleport_Gelato (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1633,6 +1834,10 @@ func void Spell_Cast_Teleport_Gelato()
 
 func int Spell_Logic_Teleport_UW (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1664,6 +1869,10 @@ func void Spell_Cast_Teleport_UW()
 
 func int Spell_Logic_TeleportGDG (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
 		return SPL_SENDCAST;
@@ -1695,6 +1904,10 @@ func void Spell_Cast_TeleportGDG()
 
 func int Spell_Logic_TeleportArgezToSaturas (var int manaInvested)
 {
+	if (!CanTeleport()) {
+		return SPL_SENDSTOP;
+	};
+	
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll) && Npc_GetDistToNpc(hero, PC_Friend_NW) < 1000 && Npc_KnowsInfo(hero, Info_Mod_Argez_NW_LosZuSaturas))
 	{
 		return SPL_SENDCAST;

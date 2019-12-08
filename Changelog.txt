@@ -80,6 +80,7 @@ General Fixes:
 - improved getting Zap spell from Saturas for Beliar story
 - added transform to rabbit scroll to prison in Old Camp when looking for Cutter
 - fixed dialog with Whistler happening too early when chest was cleared before the quest
+- disabled teleports in Jharkendar during Beliar story questline
 
 
 
