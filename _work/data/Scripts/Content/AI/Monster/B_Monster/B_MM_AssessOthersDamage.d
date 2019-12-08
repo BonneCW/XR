@@ -59,6 +59,24 @@ func void B_MM_AssessOthersDamage ()
 		};
 	};
 	
+	if (CurrentLevel == ADDONWORLD_ZEN) {		
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7315_BK_Bshydal_AW))
+		&& ((Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Blutgolem_02))
+		|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Blutgolem_03))) {
+			return;
+		};
+		
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7315_BK_Bshydal_AW))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Blutgolem_02)) {
+			return;
+		};
+		
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7315_BK_Bshydal_AW))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Blutgolem_03)) {
+			return;
+		};
+	};
+	
 	// ------ wenn ich zu weit weg bin ------	//wichtig für Aufruf über FIGHTSOUND aus ZS_MM_Rtn_Summoned
 	if (Npc_GetDistToNpc(self, victim) > PERC_DIST_INTERMEDIAT)
 	&& (Npc_GetDistToNpc(self, other) > PERC_DIST_INTERMEDIAT)

@@ -335,6 +335,22 @@ func int B_AssessEnemy()
 		{
 			return FALSE;
 		};
+		
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7315_BK_Bshydal_AW))
+		&& ((Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Blutgolem_02))
+		|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Blutgolem_03))) {
+			return FALSE;
+		};
+		
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7315_BK_Bshydal_AW))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Blutgolem_02)) {
+			return FALSE;
+		};
+		
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7315_BK_Bshydal_AW))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Blutgolem_03)) {
+			return FALSE;
+		};
 	};
 
 	if (CurrentLevel == RELENDEL_ZEN)

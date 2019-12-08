@@ -81,6 +81,7 @@ General Fixes:
 - added transform to rabbit scroll to prison in Old Camp when looking for Cutter
 - fixed dialog with Whistler happening too early when chest was cleared before the quest
 - disabled teleports in Jharkendar during Beliar story questline
+- Bshydal now will be ignored by his Blood Golems
 
 
 

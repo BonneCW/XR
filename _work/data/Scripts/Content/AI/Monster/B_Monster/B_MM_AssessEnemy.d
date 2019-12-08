@@ -227,6 +227,24 @@ func void B_MM_AssessEnemy ()
 			return;
 		};
 	};
+	
+	if (CurrentLevel == ADDONWORLD_ZEN) {		
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7315_BK_Bshydal_AW))
+		&& ((Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Blutgolem_02))
+		|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Blutgolem_03))) {
+			return;
+		};
+		
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7315_BK_Bshydal_AW))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Blutgolem_02)) {
+			return;
+		};
+		
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7315_BK_Bshydal_AW))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Blutgolem_03)) {
+			return;
+		};
+	};
 
 	if (self.guild == GIL_STONEGUARDIAN)
 	&& (Mod_BEL_Bshydal < 4)
