@@ -138,7 +138,7 @@ FUNC VOID GILDENSTORY_AL()
 
 				Npc_ClearAIQueue (hero);
 
-				AI_Teleport	(PC_Hero, "OCC_MERCS_RIGHT_ROOM_BACK");
+				AI_Teleport	(hero, "OCC_MERCS_RIGHT_ROOM_BACK");
 
 				hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
 
