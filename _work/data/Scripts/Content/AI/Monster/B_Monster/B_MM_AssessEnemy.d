@@ -85,11 +85,17 @@ func void B_MM_AssessEnemy ()
 		return;
 	};
 
-	if (CurrentLevel == MINENTAL_ZEN)
-	{
+	if (CurrentLevel == MINENTAL_ZEN) {
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Monster_11058_Demon_MT))
-		&& (!Npc_KnowsInfo(hero, Info_Mod_DemonChromanin_Hi))
-		{
+		&& (!Npc_KnowsInfo(hero, Info_Mod_DemonChromanin_Hi)) {
+			return;
+		};
+		
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1106_EBR_Bartholo_MT))
+		&& (Npc_IsPlayer(other))
+		&& (playerIsTransformed)
+		&& ((Mod_IsFleischwanze == 1)
+		|| (Mod_IsRabbit == 1)) {
 			return;
 		};
 	};

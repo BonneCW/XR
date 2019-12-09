@@ -82,6 +82,7 @@ General Fixes:
 - fixed dialog with Whistler happening too early when chest was cleared before the quest
 - disabled teleports in Jharkendar during Beliar story questline
 - Bshydal now will be ignored by his Blood Golems
+- Bartholo now ignores transformed player if Meatbug or Rabbit
 
 
 
