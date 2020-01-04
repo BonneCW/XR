@@ -895,6 +895,8 @@ FUNC VOID Info_Mod_Dragomir_Orlan_Info()
 
 	AI_StopProcessInfos	(self);
 	B_Attack	(self, hero, AR_NONE, 1);
+	
+	self.flags = 0;
 };
 
 INSTANCE Info_Mod_Dragomir_Niederlage (C_INFO)
@@ -940,7 +942,8 @@ FUNC VOID Info_Mod_Dragomir_Niederlage_Info()
 		// ------ AIVAR resetten! ------	
 		self.aivar[AIV_LastFightComment] = TRUE;
 	};
-		AI_StopProcessInfos	(self);
+	self.flags = 2;
+	AI_StopProcessInfos	(self);
 };
 
 INSTANCE Info_Mod_Dragomir_Plage (C_INFO)

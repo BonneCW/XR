@@ -21,6 +21,12 @@ Fixes for Jharkendar if not entered before:
 - 
 
 
+1.0.8
+
+Fixes:
+
+- Dragomir can't be beaten for quest 'Parlan's Ring'
+
 
 1.0.7
 
@@ -78,7 +84,7 @@ General Fixes:
 - fixed teachers not being available anymore in Beliar guild after decision in chapter 3
 - reduced damage of Axe of Doom
 - improved getting Zap spell from Saturas for Beliar story
-- added transform to rabbit scroll to prison in Old Camp when looking for Cutter
+- added transform to rabbit scroll to prison in Old Camp when looking for Cutter *
 - fixed dialog with Whistler happening too early when chest was cleared before the quest
 - disabled teleports in Jharkendar during Beliar story questline
 - Bshydal now will be ignored by his Blood Golems
