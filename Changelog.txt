@@ -26,6 +26,7 @@ Fixes for Jharkendar if not entered before:
 Fixes:
 
 - Dragomir can't be beaten for quest 'Parlan's Ring'
+- fixed crash in Irdorath
 
 
 1.0.7

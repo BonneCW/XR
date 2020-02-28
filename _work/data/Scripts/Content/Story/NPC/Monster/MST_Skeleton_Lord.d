@@ -39,7 +39,7 @@ PROTOTYPE Mst_Skeleton_Lord	(C_NPC)
 	
 	EquipItem	(self,ItMw_Zweihaender2);
 	
-	B_SetFightSkills	(self, 80);
+	B_RaiseFightTalent (self, NPC_TALENT_2H, 		80);
 
 	//----- Senses & Ranges ----
 	senses			= 	SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
