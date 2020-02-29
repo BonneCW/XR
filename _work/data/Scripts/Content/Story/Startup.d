@@ -35,6 +35,8 @@ func void INIT_GLOBAL()
 
 	gameloaded = Hlp_GetNpc(0);
 	
+	questitemliste = 0;
+	
 	LeGo_Init(LeGo_PrintS | LeGo_HookEngine | LeGo_AI_Function | LeGo_Trialoge | LeGo_FrameFunctions | LeGo_Cursor | LeGo_Random | LeGo_Bloodsplats | LeGo_Saves | LeGo_PermMem | LeGo_Anim8 | LeGo_View | LeGo_Interface | LeGo_Bars | LeGo_Buttons | LeGo_Timer | GFA_LEGO_FLAGS);
 	
 	Spine_Init(SPINE_MODULE_GETCURRENTUSERNAME | SPINE_MODULE_ACHIEVEMENTS | SPINE_MODULE_SCORES | SPINE_MODULE_MULTIPLAYER | SPINE_MODULE_OVERALLSAVE | SPINE_MODULE_STATISTICS);
