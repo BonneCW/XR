@@ -28,6 +28,7 @@ Fixes:
 - Dragomir can't be beaten for quest 'Parlan's Ring'
 - fixed crash in Irdorath
 - fixed error in dialogs with Water Mages/Warriors at certain point of the story
+- added hack to work around disappearing quest items
 
 
 1.0.7
