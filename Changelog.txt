@@ -21,6 +21,13 @@ Fixes for Jharkendar if not entered before:
 - 
 
 
+1.0.9
+
+Fixes:
+
+- fixed some not working Waterpipes
+
+
 1.0.8
 
 Fixes:
