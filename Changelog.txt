@@ -26,6 +26,7 @@ Fixes for Jharkendar if not entered before:
 Fixes:
 
 - fixed some not working Waterpipes
+- Liselotte's quest fails when opening her package
 
 
 1.0.8

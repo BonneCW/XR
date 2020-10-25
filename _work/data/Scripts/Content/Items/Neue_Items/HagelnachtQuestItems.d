@@ -19,14 +19,14 @@ INSTANCE Packet_Lise (C_Item)
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
-    FUNC VOID Use_Packet_Lise ()
-    {
-    
+FUNC VOID Use_Packet_Lise () {
 	CreateInvItems (hero,ItMi_Stuff_Idol_Sleeper_01 ,1);
 	CreateInvItems (hero,ItMi_Gold ,250);
 	CreateInvItems (hero,ItPl_Speed_Herb_01 ,3);
 	CreateInvItems (hero,ItWr_GolemBook1 ,1);
-    };
+	
+	B_SetTopicStatus(TOPIC_MOD_LISELOTTESBEUTEL, LOG_FAILED);
+};
 
 INSTANCE Mod_RumPaket (C_Item)
 {
