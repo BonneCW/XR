@@ -27,6 +27,7 @@ FUNC VOID Info_Mod_Ramirez_REL_InHaus_Info()
 	AI_StopProcessInfos	(self);
 
 	Wld_InsertNpc	(Mod_7709_OUT_Attila_REL, "REL_CITY_053");
+	Mod_RemoveAttilaFromKhorinis = TRUE;
 };
 
 INSTANCE Info_Mod_Ramirez_REL_Lagerhaus (C_INFO)
