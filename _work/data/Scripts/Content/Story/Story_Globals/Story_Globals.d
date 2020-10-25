@@ -304,6 +304,7 @@ var int fireplacenr;
 var int Mod_Diebe_FackelAn;
 var int Mod_Diebe_Weg;
 var int Mod_Diebe_Elvira;
+var int Mod_RemoveAttilaFromKhorinis;
 var int questitemliste;
 var int Mod_Diebe_Andre_Day;
 var int Mod_Leichengase_Day;
