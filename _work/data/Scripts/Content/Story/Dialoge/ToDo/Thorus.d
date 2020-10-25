@@ -1045,7 +1045,7 @@ func void Info_Mod_Thorus_CanYouTeach_info ()
 { 
 	AI_Output(hero, self, "Info_Mod_Thorus_CanYouTeach_15_00"); //Kannst du mich auch im Kampf unterrichten?
 
-	AI_Output(self, hero, "Info_Mod_Thorus_CanYouTeach_01_01"); //Ja. Ich kann dir zeigen, wie man mit Zweihändern kämpft. 
+	AI_Output(self, hero, "Info_Mod_Thorus_CanYouTeach_12_01"); //Ja. Ich kann dir zeigen, wie man mit Zweihändern kämpft. 
 
 	Log_CreateTopic	(TOPIC_MOD_LEHRER_OLDCAMP, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_LEHRER_OLDCAMP, "Thorus ist ein Meister des zweihändigen Kampfes. Er kann mir den Umgang mit Zweihändern beibringen.");
@@ -1083,7 +1083,7 @@ func void Info_Mod_Thorus_2HLernen_info ()
 
 	if (other.HitChance[NPC_TALENT_2H] >= 100)
 	{
-		AI_Output(self, hero, "Info_Mod_Thorus_2HLernen_01_01"); //Du hast bereits alles gelernt, was ich dir beibringen kann.
+		AI_Output(self, hero, "Info_Mod_Thorus_2HLernen_12_01"); //Du hast bereits alles gelernt, was ich dir beibringen kann.
 	}
 	else
 	{
@@ -1101,16 +1101,16 @@ FUNC VOID Info_Mod_Thorus_2HLernen_BACK()
 	Info_ClearChoices	(Info_Mod_Thorus_2HLernen);
 	if (other.HitChance[NPC_TALENT_2H] > Thorus_merke2H && other.HitChance[NPC_TALENT_2H] < 100)
 	{
-		AI_Output(self, other, "Info_Mod_Thorus_2HLernen_01_02"); //Du bist besser geworden, weiter so.
+		AI_Output(self, other, "Info_Mod_Thorus_2HLernen_12_02"); //Du bist besser geworden, weiter so.
 	}
 	if (other.HitChance[NPC_TALENT_2H] >= 100)
 	{
-		AI_Output (self ,other,"Info_Mod_Thorus_2HLernen_01_03"); //Du bist nun ein Meister im Umgang mit den Zweihändern. Ich bezweifle, dass du noch jemanden finden wirst, der dir etwas beibringen kann.
-		AI_Output (self ,other,"Info_Mod_Thorus_2HLernen_01_04"); //Nun kommt es nur noch auf deine Praxiserfahrung an. 
+		AI_Output (self ,other,"Info_Mod_Thorus_2HLernen_12_03"); //Du bist nun ein Meister im Umgang mit den Zweihändern. Ich bezweifle, dass du noch jemanden finden wirst, der dir etwas beibringen kann.
+		AI_Output (self ,other,"Info_Mod_Thorus_2HLernen_12_04"); //Nun kommt es nur noch auf deine Praxiserfahrung an. 
 	}
 	else
 	{
-		AI_Output (self ,other,"Info_Mod_Thorus_2HLernen_01_05"); //Komm wieder, wenn du mehr lernen willst.
+		AI_Output (self ,other,"Info_Mod_Thorus_2HLernen_12_05"); //Komm wieder, wenn du mehr lernen willst.
 	};
 };
 
