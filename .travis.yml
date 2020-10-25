@@ -1,2 +1,5 @@
 services:
   - docker
+
+script:
+  - docker run -v "$(pwd)":/usr/workspace dziejekhorinis/daedalus-compiler _work/data/Scripts/Content/Gothic.src
