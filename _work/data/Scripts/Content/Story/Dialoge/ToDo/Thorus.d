@@ -745,11 +745,11 @@ FUNC VOID Info_Mod_Thorus_PMSchulden_Info()
 	{
 		Info_ClearChoices  	(Info_Mod_Thorus_PMSchulden);
 		Info_ClearChoices  	(Info_Mod_Thorus_PETZMASTER);
-		Info_AddChoice		(Info_Mod_Thorus_PMSchulden,"Ich habe nicht genug Gold!",Info_Mod_Thorus_PETZMASTER_PayLater);
-		Info_AddChoice		(Info_Mod_Thorus_PMSchulden,"Wieviel war es nochmal?",Info_Mod_Thorus_PMSchulden_HowMuchAgain);
+		Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Ich habe nicht genug Gold!",Info_Mod_Thorus_PETZMASTER_PayLater);
+		Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Wieviel war es nochmal?",Info_Mod_Thorus_PMSchulden_HowMuchAgain);
 		if (Npc_HasItems(hero, itmi_gold) >= Thorus_Schulden)
 		{
-			Info_AddChoice 	(Info_Mod_Thorus_PMSchulden,"Ich will die Strafe zahlen.",Info_Mod_Thorus_PETZMASTER_PayNow);
+			Info_AddChoice 	(Info_Mod_Thorus_PMSchulden, "Ich will die Strafe zahlen.",Info_Mod_Thorus_PETZMASTER_PayNow);
 		};
 	};
 };
@@ -761,11 +761,11 @@ func void Info_Mod_Thorus_PMSchulden_HowMuchAgain()
 
 	Info_ClearChoices  	(Info_Mod_Thorus_PMSchulden);
 	Info_ClearChoices  	(Info_Mod_Thorus_PETZMASTER);
-	Info_AddChoice		(Info_Mod_Thorus_PMSchulden,"Ich habe nicht genug Gold!",Info_Mod_Thorus_PETZMASTER_PayLater);
-	Info_AddChoice		(Info_Mod_Thorus_PMSchulden,"Wieviel war es nochmal?",Info_Mod_Thorus_PMSchulden_HowMuchAgain);
+	Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Ich habe nicht genug Gold!",Info_Mod_Thorus_PETZMASTER_PayLater);
+	Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Wieviel war es nochmal?",Info_Mod_Thorus_PMSchulden_HowMuchAgain);
 	if (Npc_HasItems(hero, itmi_gold) >= Thorus_Schulden)
 	{
-		Info_AddChoice 	(Info_Mod_Thorus_PMSchulden,"Ich will die Strafe zahlen.",Info_Mod_Thorus_PETZMASTER_PayNow);
+		Info_AddChoice 	(Info_Mod_Thorus_PMSchulden, "Ich will die Strafe zahlen.",Info_Mod_Thorus_PETZMASTER_PayNow);
 	};
 };
 
@@ -861,10 +861,10 @@ FUNC VOID Info_Mod_Thorus_PETZMASTER_Info()
 	
 	Info_ClearChoices  	(Info_Mod_Thorus_PMSchulden);
 	Info_ClearChoices  	(Info_Mod_Thorus_PETZMASTER);
-	Info_AddChoice		(Info_Mod_Thorus_PETZMASTER,"Ich habe nicht genug Gold!",Info_Mod_Thorus_PETZMASTER_PayLater);
+	Info_AddChoice		(Info_Mod_Thorus_PETZMASTER, "Ich habe nicht genug Gold!",Info_Mod_Thorus_PETZMASTER_PayLater);
 	if (Npc_HasItems(hero, itmi_gold) >= Thorus_Schulden)
 	{
-		Info_AddChoice 	(Info_Mod_Thorus_PETZMASTER,"Ich will die Strafe zahlen.",Info_Mod_Thorus_PETZMASTER_PayNow);
+		Info_AddChoice 	(Info_Mod_Thorus_PETZMASTER, "Ich will die Strafe zahlen.",Info_Mod_Thorus_PETZMASTER_PayNow);
 	};
 };
 
@@ -1022,26 +1022,26 @@ FUNC VOID Info_Mod_Thorus_Lernen_STR_1()
 // 			  				CANYOUTEACH 
 // ------------------------------------------------------------ 
 
-instance Info_Mod_Thorus_CanYouTeach   (C_INFO) 
+INSTANCE Info_Mod_Thorus_CanYouTeach   (C_INFO) 
 { 
 	npc     	= Mod_966_GRD_Thorus_MT; 
 	nr          = 1; 
-	condition   = Info_Mod_Thorus_CanYouTeach_condition; 
-	information = Info_Mod_Thorus_CanYouTeach_info; 
+	condition   = Info_Mod_Thorus_CanYouTeach_Condition; 
+	information = Info_Mod_Thorus_CanYouTeach_Info; 
 	important   = FALSE; 
 	permanent   = FALSE; 
-	description = "Kannst du mich auch im Kampf unterrichten??"; 
+	description = "Kannst du mich auch im Kampf unterrichten?"; 
 }; 
  
-func int Info_Mod_Thorus_CanYouTeach_condition () 
+FUNC INT Info_Mod_Thorus_CanYouTeach_Condition () 
 { 
-    if (Npc_KnowsInfo(other,Info_Mod_Thorus_Lehrer)) 
+    if (Npc_KnowsInfo(hero, Info_Mod_Thorus_Lehrer)) 
     { 
   	 	return TRUE; 
     }; 
 }; 
  
-func void Info_Mod_Thorus_CanYouTeach_info () 
+FUNC VOID Info_Mod_Thorus_CanYouTeach_Info () 
 { 
 	AI_Output(hero, self, "Info_Mod_Thorus_CanYouTeach_15_00"); //Kannst du mich auch im Kampf unterrichten?
 
@@ -1056,61 +1056,61 @@ func void Info_Mod_Thorus_CanYouTeach_info ()
 // 			  				   LERNEN 
 // ------------------------------------------------------------ 
 
-var int Thorus_merke2H;
+var int Thorus_Merke2H;
 
-instance Info_Mod_Thorus_2HLernen   (C_INFO) 
+INSTANCE Info_Mod_Thorus_2HLernen   (C_INFO) 
 { 
 	npc     	= Mod_966_GRD_Thorus_MT; 
 	nr          = 1; 
-	condition   = Info_Mod_Thorus_2HLernen_condition; 
-	information = Info_Mod_Thorus_2HLernen_info; 
+	condition   = Info_Mod_Thorus_2HLernen_Condition; 
+	information = Info_Mod_Thorus_2HLernen_Info; 
 	important   = FALSE; 
 	permanent   = TRUE; 
 	description = "Ich möchte den Umgang mit dem Zweihänder lernen."; 
 }; 
  
-func int Info_Mod_Thorus_2HLernen_condition () 
+FUNC INT Info_Mod_Thorus_2HLernen_Condition () 
 { 
-    if (Npc_KnowsInfo(other,Info_Mod_Thorus_CanYouTeach)) 
+    if (Npc_KnowsInfo(hero, Info_Mod_Thorus_CanYouTeach)) 
     { 
   	 	return TRUE; 
     }; 
 }; 
  
-func void Info_Mod_Thorus_2HLernen_info () 
+FUNC VOID Info_Mod_Thorus_2HLernen_Info () 
 { 
 	AI_Output(hero, self, "Info_Mod_Thorus_2HLernen_15_00"); //Ich möchte den Umgang mit dem Zweihänder lernen.
 
-	if (other.HitChance[NPC_TALENT_2H] >= 100)
+	if (hero.HitChance[NPC_TALENT_2H] >= 100)
 	{
 		AI_Output(self, hero, "Info_Mod_Thorus_2HLernen_12_01"); //Du hast bereits alles gelernt, was ich dir beibringen kann.
 	}
 	else
 	{
-		Thorus_merke2H = other.HitChance[NPC_TALENT_2H];
+		Thorus_merke2H = hero.HitChance[NPC_TALENT_2H];
 
 		Info_ClearChoices	(Info_Mod_Thorus_2HLernen);
 		Info_AddChoice 		(Info_Mod_Thorus_2HLernen, DIALOG_BACK, Info_Mod_Thorus_2HLernen_Back);
-		Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H1,	 B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)),		Info_Mod_Thorus_2HLernen_2H_1);
-		Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H5,	 B_GetLearnCostTalent_New(other, NPC_TALENT_2H)),		Info_Mod_Thorus_2HLernen_2H_5);
+		Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H1,	 B_GetLearnCostTalent(hero, NPC_TALENT_2H, 1)),		Info_Mod_Thorus_2HLernen_2H_1);
+		Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H5,	 B_GetLearnCostTalent_New(hero, NPC_TALENT_2H)),		Info_Mod_Thorus_2HLernen_2H_5);
 	};
 }; 
 
 FUNC VOID Info_Mod_Thorus_2HLernen_BACK()
 {
 	Info_ClearChoices	(Info_Mod_Thorus_2HLernen);
-	if (other.HitChance[NPC_TALENT_2H] > Thorus_merke2H && other.HitChance[NPC_TALENT_2H] < 100)
+	if (hero.HitChance[NPC_TALENT_2H] > Thorus_merke2H && hero.HitChance[NPC_TALENT_2H] < 100)
 	{
-		AI_Output(self, other, "Info_Mod_Thorus_2HLernen_12_02"); //Du bist besser geworden, weiter so.
+		AI_Output(self, hero, "Info_Mod_Thorus_2HLernen_12_02"); //Du bist besser geworden, weiter so.
 	}
-	if (other.HitChance[NPC_TALENT_2H] >= 100)
+	if (hero.HitChance[NPC_TALENT_2H] >= 100)
 	{
-		AI_Output (self ,other,"Info_Mod_Thorus_2HLernen_12_03"); //Du bist nun ein Meister im Umgang mit den Zweihändern. Ich bezweifle, dass du noch jemanden finden wirst, der dir etwas beibringen kann.
-		AI_Output (self ,other,"Info_Mod_Thorus_2HLernen_12_04"); //Nun kommt es nur noch auf deine Praxiserfahrung an. 
+		AI_Output (self, hero, "Info_Mod_Thorus_2HLernen_12_03"); //Du bist nun ein Meister im Umgang mit den Zweihändern. Ich bezweifle, dass du noch jemanden finden wirst, der dir etwas beibringen kann.
+		AI_Output (self, hero, "Info_Mod_Thorus_2HLernen_12_04"); //Nun kommt es nur noch auf deine Praxiserfahrung an. 
 	}
 	else
 	{
-		AI_Output (self ,other,"Info_Mod_Thorus_2HLernen_12_05"); //Komm wieder, wenn du mehr lernen willst.
+		AI_Output (self, hero, "Info_Mod_Thorus_2HLernen_12_05"); //Komm wieder, wenn du mehr lernen willst.
 	};
 };
 
@@ -1120,8 +1120,8 @@ FUNC VOID Info_Mod_Thorus_2HLernen_2H_5()
 	
 	Info_ClearChoices	(Info_Mod_Thorus_2HLernen);
 	Info_AddChoice 		(Info_Mod_Thorus_2HLernen, DIALOG_BACK, Info_Mod_Thorus_2HLernen_Back);
-	Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H1,	 B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)),		Info_Mod_Thorus_2HLernen_2H_1);
-	Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H5,	 B_GetLearnCostTalent_New(other, NPC_TALENT_2H)),		Info_Mod_Thorus_2HLernen_2H_5);
+	Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H1,	 B_GetLearnCostTalent(hero, NPC_TALENT_2H, 1)),		Info_Mod_Thorus_2HLernen_2H_1);
+	Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H5,	 B_GetLearnCostTalent_New(hero, NPC_TALENT_2H)),		Info_Mod_Thorus_2HLernen_2H_5);
 	
 };
 
@@ -1131,8 +1131,8 @@ FUNC VOID Info_Mod_Thorus_2HLernen_2H_1()
 	
 	Info_ClearChoices	(Info_Mod_Thorus_2HLernen);
 	Info_AddChoice 		(Info_Mod_Thorus_2HLernen, DIALOG_BACK, Info_Mod_Thorus_2HLernen_Back);
-	Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H1,	 B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)),		Info_Mod_Thorus_2HLernen_2H_1);
-	Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H5,	 B_GetLearnCostTalent_New(other, NPC_TALENT_2H)),		Info_Mod_Thorus_2HLernen_2H_5);
+	Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H1,	 B_GetLearnCostTalent(hero, NPC_TALENT_2H, 1)),		Info_Mod_Thorus_2HLernen_2H_1);
+	Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H5,	 B_GetLearnCostTalent_New(hero, NPC_TALENT_2H)),		Info_Mod_Thorus_2HLernen_2H_5);
 
 };
 
