@@ -745,11 +745,11 @@ FUNC VOID Info_Mod_Thorus_PMSchulden_Info()
 	{
 		Info_ClearChoices  	(Info_Mod_Thorus_PMSchulden);
 		Info_ClearChoices  	(Info_Mod_Thorus_PETZMASTER);
-		Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Ich habe nicht genug Gold!",Info_Mod_Thorus_PETZMASTER_PayLater);
-		Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Wieviel war es nochmal?",Info_Mod_Thorus_PMSchulden_HowMuchAgain);
+		Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Ich habe nicht genug Gold!", Info_Mod_Thorus_PETZMASTER_PayLater);
+		Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Wieviel war es nochmal?", Info_Mod_Thorus_PMSchulden_HowMuchAgain);
 		if (Npc_HasItems(hero, itmi_gold) >= Thorus_Schulden)
 		{
-			Info_AddChoice 	(Info_Mod_Thorus_PMSchulden, "Ich will die Strafe zahlen.",Info_Mod_Thorus_PETZMASTER_PayNow);
+			Info_AddChoice 	(Info_Mod_Thorus_PMSchulden, "Ich will die Strafe zahlen.", Info_Mod_Thorus_PETZMASTER_PayNow);
 		};
 	};
 };
@@ -761,11 +761,11 @@ func void Info_Mod_Thorus_PMSchulden_HowMuchAgain()
 
 	Info_ClearChoices  	(Info_Mod_Thorus_PMSchulden);
 	Info_ClearChoices  	(Info_Mod_Thorus_PETZMASTER);
-	Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Ich habe nicht genug Gold!",Info_Mod_Thorus_PETZMASTER_PayLater);
-	Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Wieviel war es nochmal?",Info_Mod_Thorus_PMSchulden_HowMuchAgain);
+	Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Ich habe nicht genug Gold!", Info_Mod_Thorus_PETZMASTER_PayLater);
+	Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Wieviel war es nochmal?", Info_Mod_Thorus_PMSchulden_HowMuchAgain);
 	if (Npc_HasItems(hero, itmi_gold) >= Thorus_Schulden)
 	{
-		Info_AddChoice 	(Info_Mod_Thorus_PMSchulden, "Ich will die Strafe zahlen.",Info_Mod_Thorus_PETZMASTER_PayNow);
+		Info_AddChoice 	(Info_Mod_Thorus_PMSchulden, "Ich will die Strafe zahlen.", Info_Mod_Thorus_PETZMASTER_PayNow);
 	};
 };
 
@@ -861,10 +861,10 @@ FUNC VOID Info_Mod_Thorus_PETZMASTER_Info()
 	
 	Info_ClearChoices  	(Info_Mod_Thorus_PMSchulden);
 	Info_ClearChoices  	(Info_Mod_Thorus_PETZMASTER);
-	Info_AddChoice		(Info_Mod_Thorus_PETZMASTER, "Ich habe nicht genug Gold!",Info_Mod_Thorus_PETZMASTER_PayLater);
+	Info_AddChoice		(Info_Mod_Thorus_PETZMASTER, "Ich habe nicht genug Gold!", Info_Mod_Thorus_PETZMASTER_PayLater);
 	if (Npc_HasItems(hero, itmi_gold) >= Thorus_Schulden)
 	{
-		Info_AddChoice 	(Info_Mod_Thorus_PETZMASTER, "Ich will die Strafe zahlen.",Info_Mod_Thorus_PETZMASTER_PayNow);
+		Info_AddChoice 	(Info_Mod_Thorus_PETZMASTER, "Ich will die Strafe zahlen.", Info_Mod_Thorus_PETZMASTER_PayNow);
 	};
 };
 
