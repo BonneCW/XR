@@ -23,6 +23,10 @@ Fixes for Jharkendar if not entered before:
 
 1.0.9
 
+Enhancements:
+
+- added teachers for 1H and 2H to Old Camp
+
 Fixes:
 
 - fixed some not working Waterpipes
