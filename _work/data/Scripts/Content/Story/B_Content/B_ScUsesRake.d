@@ -50,7 +50,6 @@ FUNC VOID B_SCGetTreasure_S1()
 			//			ENTRANCE
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,						"ADW_ENTRANCE_RAKEPLACE_01"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[12]==FALSE)){
-				Wld_InsertItem 		(ItWr_StonePlateCommon_Addon,	"ADW_ENTRANCE_RAKEPLACE_01"	); 							 			 RAKEPLACE[12]=TRUE;
 				Wld_InsertItem 		(ItMi_SilverChalice, 			"ADW_ENTRANCE_RAKEPLACE_01"	); 							 			 
 				RakeTreasureSuccess (ItMi_SilverChalice);}
 				////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -86,14 +85,12 @@ FUNC VOID B_SCGetTreasure_S1()
 				////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,						"ADW_VALLEY_RAKEPLACE_02"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[18]==FALSE)){
 				Wld_InsertItem 		(ItPo_Health_Addon_04, 			"ADW_VALLEY_RAKEPLACE_02"	); 							 			 RAKEPLACE[18]=TRUE;
-				Wld_InsertItem 		(ItWr_StonePlateCommon_Addon, 	"ADW_VALLEY_RAKEPLACE_02"	); 							 			
 				Wld_InsertItem 		(ItSe_LockpickFisch, 			"ADW_VALLEY_RAKEPLACE_02"	); 							 			
 				RakeTreasureSuccess (ItSe_LockpickFisch);}
 				////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,						"ADW_VALLEY_RAKEPLACE_03"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[19]==FALSE)){
 				Wld_InsertItem 		(ItSc_Firerain, 				"ADW_VALLEY_RAKEPLACE_03"	); 							 			 RAKEPLACE[19]=TRUE;
 				Wld_InsertItem 		(ItSe_GoldPocket50, 			"ADW_VALLEY_RAKEPLACE_03"	); 							 			 	
-				Wld_InsertItem 		(ItWr_StonePlateCommon_Addon, 	"ADW_VALLEY_RAKEPLACE_03"	); 							 			 	
 				RakeTreasureSuccess (ItSe_GoldPocket50);}
 	
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -101,7 +98,6 @@ FUNC VOID B_SCGetTreasure_S1()
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,						"ADW_BANDITSCAMP_RAKEPLACE_01"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[20]==FALSE)){
 				Wld_InsertItem 		(ItMi_Honigtabak, 				"ADW_BANDITSCAMP_RAKEPLACE_01"	); 							 			 RAKEPLACE[20]=TRUE;
-				Wld_InsertItem 		(ItWr_StonePlateCommon_Addon, 	"ADW_BANDITSCAMP_RAKEPLACE_01"	); 							 			 
 				Wld_InsertItem 		(ItAm_Addon_MANA, 				"ADW_BANDITSCAMP_RAKEPLACE_01"	); 							 			 
 				RakeTreasureSuccess (ItAm_Addon_MANA);}
 				////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -116,7 +112,6 @@ FUNC VOID B_SCGetTreasure_S1()
 				RakeTreasureSuccess (ItSc_LightHeal);}
 				////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,						"ADW_BANDITSCAMP_RAKEPLACE_04"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[23]==FALSE)){
-				Wld_InsertItem 		(ItWr_StonePlateCommon_Addon,	"ADW_BANDITSCAMP_RAKEPLACE_04"	); 							 			 RAKEPLACE[23]=TRUE;
 				Wld_InsertItem 		(ItRi_HP_01, 					"ADW_BANDITSCAMP_RAKEPLACE_04"	); 							 			
 				RakeTreasureSuccess (ItRi_HP_01);}
 
