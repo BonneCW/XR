@@ -537,6 +537,123 @@ FUNC VOID Info_Mod_Scatty_Kap4_A()
 	Info_ClearChoices	(Info_Mod_Scatty_Kap4);
 };
 
+// ------------------------------------------------------------
+// 			  				CANYOUTEACH 
+// ------------------------------------------------------------ 
+
+INSTANCE Info_Mod_Scatty_CanYouTeach   (C_INFO) 
+{ 
+	npc     	= Mod_962_STT_Scatty_MT; 
+	nr          = 1; 
+	condition   = Info_Mod_Scatty_CanYouTeach_Condition; 
+	information = Info_Mod_Scatty_CanYouTeach_Info; 
+	important   = FALSE; 
+	permanent   = FALSE; 
+	description = "Trainierst du noch Kämpfer?"; 
+}; 
+ 
+FUNC INT Info_Mod_Scatty_CanYouTeach_Condition () 
+{ 
+	//Bedingung nochmal checken? Scatty_Start_DIA ist 5 wenn man zugesagt hat, zu helfen
+	if (Scatty_Start_DIA == 5)
+	{
+		return TRUE; 
+	}
+}; 
+ 
+FUNC VOID Info_Mod_Scatty_CanYouTeach_Info () 
+{ 
+	AI_Output(hero, self, "Info_Mod_Scatty_CanYouTeach_15_00"); //Trainierst du noch Kämpfer? 
+
+	AI_Output(self, hero, "Info_Mod_Scatty_CanYouTeach_01_01"); //Sicher. Ich kann dich im Einhandkampf unterrichten.
+	AI_Output(self, hero, "Info_Mod_Scatty_CanYouTeach_01_02"); //Wenn ich mich recht erinnere, habe ich dir damals schon das Kämpfen beigebracht. 
+
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_OLDCAMP, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_OLDCAMP, "Scatty kann mir den Umgang mit Einhändern beibringen.");
+}; 
+
+
+// ------------------------------------------------------------
+// 			  				   LERNEN 
+// ------------------------------------------------------------ 
+
+// fuer den "du bist schon besser geworden"-Dialog
+var int Scatty_Merke1H;
+
+INSTANCE Info_Mod_Scatty_Lernen   (C_INFO) 
+{ 
+	npc     	= Mod_962_STT_Scatty_MT; 
+	nr          = 1; 
+	condition   = Info_Mod_Scatty_Lernen_Condition; 
+	information = Info_Mod_Scatty_Lernen_Info; 
+	important   = FALSE; 
+	permanent   = TRUE; 
+	description = "Unterrichte mich!"; 
+}; 
+ 
+FUNC INT Info_Mod_Scatty_Lernen_Condition () 
+{ 
+    if (Npc_KnowsInfo(hero, Info_Mod_Scatty_CanYouTeach)) 
+    { 
+  	 	return TRUE; 
+    }; 
+}; 
+ 
+FUNC VOID Info_Mod_Scatty_Lernen_Info () 
+{ 
+	AI_Output(hero, self, "Info_Mod_Scatty_Lernen_15_00"); //Unterrichte mich!
+
+	if (hero.HitChance[NPC_TALENT_1H] >= 100)
+	{
+		AI_Output(self, hero, "Info_Mod_Scatty_Lernen_01_01"); //Ich kann dir nichts mehr beibringen. Du bist schon zu gut.
+	}
+	else
+	{
+		Scatty_Merke1H = hero.HitChance[NPC_TALENT_1H];
+
+		Info_ClearChoices	(Info_Mod_Scatty_Lernen);
+		Info_AddChoice 		(Info_Mod_Scatty_Lernen, DIALOG_BACK, Info_Mod_Scatty_Lernen_Back);
+		Info_AddChoice		(Info_Mod_Scatty_Lernen, B_BuildLearnString(PRINT_Learn1h1,	 B_GetLearnCostTalent(hero, NPC_TALENT_1H, 1)),		Info_Mod_Scatty_Lernen_1H_1);
+		Info_AddChoice		(Info_Mod_Scatty_Lernen, B_BuildLearnString(PRINT_Learn1h5,	 B_GetLearnCostTalent_New(hero, NPC_TALENT_1H)),		Info_Mod_Scatty_Lernen_1H_5);
+	};
+}; 
+
+FUNC VOID Info_Mod_Scatty_Lernen_BACK()
+{
+	Info_ClearChoices	(Info_Mod_Scatty_Lernen);
+	if (hero.HitChance[NPC_TALENT_1H] > scatty_merke1H && hero.HitChance[NPC_TALENT_1H] < 100)
+	{
+		AI_Output(self, hero, "Info_Mod_Scatty_Lernen_01_02"); //Du machst Fortschritte, sehr gut.
+	}
+	if (hero.HitChance[NPC_TALENT_1H] >= 100)
+	{
+		AI_Output(self, hero, "Info_Mod_Scatty_Lernen_01_03"); //Wenn du noch besser werden willst, musst du einen anderen Lehrer finden.
+		AI_Output(self, hero, "Info_Mod_Scatty_Lernen_01_04"); //Aber so gut, wie du mittlerweile bist, glaube ich nicht, dass du noch jemanden finden wirst. Ich kann dir zumindest nichts mehr beibringen.
+	};
+};
+
+FUNC VOID Info_Mod_Scatty_Lernen_1H_5()
+{
+	B_TeachFightTalentPercent_New(self, hero, NPC_TALENT_1H, 5, 100);
+	
+	Info_ClearChoices	(Info_Mod_Scatty_Lernen);
+	Info_AddChoice 		(Info_Mod_Scatty_Lernen, DIALOG_BACK, Info_Mod_Scatty_Lernen_Back);
+	Info_AddChoice		(Info_Mod_Scatty_Lernen, B_BuildLearnString(PRINT_Learn1h1,	 B_GetLearnCostTalent(hero, NPC_TALENT_1H, 1)),		Info_Mod_Scatty_Lernen_1H_1);
+	Info_AddChoice		(Info_Mod_Scatty_Lernen, B_BuildLearnString(PRINT_Learn1h5,	 B_GetLearnCostTalent_New(hero, NPC_TALENT_1H)),		Info_Mod_Scatty_Lernen_1H_5);
+	
+};
+
+FUNC VOID Info_Mod_Scatty_Lernen_1H_1()
+{
+	B_TeachFightTalentPercent_New(self, hero, NPC_TALENT_1H, 1, 100);
+	
+	Info_ClearChoices	(Info_Mod_Scatty_Lernen);
+	Info_AddChoice 		(Info_Mod_Scatty_Lernen, DIALOG_BACK, Info_Mod_Scatty_Lernen_Back);
+	Info_AddChoice		(Info_Mod_Scatty_Lernen, B_BuildLearnString(PRINT_Learn1h1,	 B_GetLearnCostTalent(hero, NPC_TALENT_1H, 1)),		Info_Mod_Scatty_Lernen_1H_1);
+	Info_AddChoice		(Info_Mod_Scatty_Lernen, B_BuildLearnString(PRINT_Learn1h5,	 B_GetLearnCostTalent_New(hero, NPC_TALENT_1H)),		Info_Mod_Scatty_Lernen_1H_5);
+
+};
+
 INSTANCE Info_Mod_Scatty_EXIT (C_INFO)
 {
 	npc		= Mod_962_STT_Scatty_MT;
