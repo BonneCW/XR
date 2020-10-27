@@ -592,6 +592,7 @@ var int Mod_Jim_FakeGeist;
 var int Mod_Jim_AnselmDay;
 var int Mod_LesterInRelendel;
 var int Mod_LesterRELGuide;
+var int Mod_LesterRELToMeeting;
 var int Mod_EndresGeist;
 var int Mod_Jim_Freudenspender;
 var int Mod_Mario;
