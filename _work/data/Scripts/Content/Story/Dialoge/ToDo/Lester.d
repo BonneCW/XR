@@ -432,12 +432,13 @@ FUNC VOID Info_Mod_Lester_Treffen_Info()
 	AI_Output(hero, self, "Info_Mod_Lester_Treffen_15_00"); //Gorn schickt mich. Ich soll dir sagen, dass ihr euch in der Taverne 'Zur Toten Harpie' trefft.
 	AI_Output(self, hero, "Info_Mod_Lester_Treffen_13_01"); //Oh, danke. Ich mach mich sofort auf den Weg. Du kannst doch auch vorbeikommen, du gehörst schließlich auch zu uns.
 
-	B_LogEntry	(TOPIC_MOD_TREFFEN, "Ich habe Lester vom Treffen bescheid gesagt, er wird sich sofort dorthin begeben.");
+	B_LogEntry	(TOPIC_MOD_TREFFEN, "Ich habe Lester vom Treffen Bescheid gesagt, er wird sich sofort dorthin begeben.");
 
 	AI_StopProcessInfos	(self);
 
 	if (CurrentLevel == RELENDEL_ZEN) {
 		B_StartOtherRoutine	(self, "TOT");
+		Mod_LesterRELToMeeting = 1;
 	} else {
 		B_StartOtherRoutine	(self, "TREFFEN");
 	};
