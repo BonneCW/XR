@@ -77,12 +77,9 @@ FUNC VOID B_SucceedTopic (var string topic)
 	var int questAlreadySolvedBefore; questAlreadySolvedBefore = Spine_OverallSaveGetInt(topic);
 	if (questAlreadySolvedBefore != 1) {
 		Spine_OverallSaveSetInt(topic, 1);
-		var int oldScore; oldScore = Spine_GetUserScore(SPINE_SCORE_2);
-		if (oldScore < 0) {
-			oldScore = 0;
-		};
-		Spine_UpdateScore(SPINE_SCORE_2, oldScore + 1);
 	};
+	
+	UpdateQuestScore();
 };
 
 FUNC VOID B_StartTopic (var string topic)
