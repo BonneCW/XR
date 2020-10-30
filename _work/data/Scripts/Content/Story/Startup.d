@@ -144,6 +144,8 @@ func void INIT_GLOBAL()
 			hero.guild = GIL_KDF;
 		};
 	};
+		
+	unblockAllPlayerInput();
 };
 
 FUNC VOID OldLevel(var int newlevel)

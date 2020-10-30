@@ -59,7 +59,7 @@ FUNC VOID Info_Mod_Ramirez_REL_Lagerhaus_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_DIEB_LAGERHAUS, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_DIEB_LAGERHAUS, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_DIEB_LAGERHAUS, "In Khorata werden t‰glich von morgens bis abends Vorr‰te in einem Lagerhaus verstaut. Ich soll versuchen, mir einen groﬂen Sack voll davon unter den Nagel zu reiﬂen. Ich muss nur aufpassen, dass mich die beiden Wachen nicht erwischen. Vielleicht habe ich ja auch eine Chance, sobald sie abends das Lager verlassen haben ...");
+	B_LogEntry	(TOPIC_MOD_DIEB_LAGERHAUS, "In Khorata werden t‰glich von morgens bis abends Vorr‰te in einem Lagerhaus verstaut. Ich soll versuchen, mir einen gro√üen Sack voll davon unter den Nagel zu rei√üen. Ich muss nur aufpassen, dass mich die beiden Wachen nicht erwischen. Vielleicht habe ich ja auch eine Chance, sobald sie abends das Lager verlassen haben ...");
 
 	Wld_InsertItem	(ItMi_Fresssack, "FP_ITEM_JIM_DROGEN");
 	Wld_InsertItem	(ItMi_Kiste, "FP_ITEM_LAGERKISTE");

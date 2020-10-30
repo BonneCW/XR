@@ -6,6 +6,7 @@ LeGo\Header.src
 
 NEUERUNGEN\NDC_SetInput.d
 NEUERUNGEN\SearchWaypointByName.d
+NEUERUNGEN\BlockUserInput.d
 
 AI\AI_INTERN\AI_CONSTANTS.D
 AI\AI_INTERN\BODYSTATES.D
@@ -26,6 +27,7 @@ FUNKTIONEN\Erfolge_Func.d
 STORY\Events\B_AWAKE_STONEGUARDIAN.d
 
 NEUERUNGEN\Respawn.d
+NEUERUNGEN\UpdateQuestScore.d
 
 NEUERUNGEN\PortalRooms.d
 

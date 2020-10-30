@@ -558,7 +558,7 @@ FUNC INT Info_Mod_Scatty_CanYouTeach_Condition ()
 	if (Scatty_Start_DIA == 5)
 	{
 		return TRUE; 
-	}
+	};
 }; 
  
 FUNC VOID Info_Mod_Scatty_CanYouTeach_Info () 
