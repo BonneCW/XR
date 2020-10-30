@@ -138,5 +138,7 @@ FUNC VOID Puzzle_Tick() {
 		Button_Delete(Mod_Uriziel_Piece7);
 		Button_Delete(Mod_Uriziel_Piece8);
 		Cursor_Hide();
+		
+		unblockAllPlayerInput();
 	};
 };

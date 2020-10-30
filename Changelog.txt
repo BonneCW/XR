@@ -33,6 +33,7 @@ Fixes:
 - Liselotte's quest fails when opening her package
 - fixed Attila still being in Khorinis as well when he moved to Khorata
 - fixed Lester being both in Relendel and Khorinis
+- blocking all user input now while Schagby and Puzzle are running
 
 
 1.0.8

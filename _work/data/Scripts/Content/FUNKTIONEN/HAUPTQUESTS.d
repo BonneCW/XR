@@ -555,6 +555,8 @@ FUNC VOID HAUPTQUESTS()
 			
 			Cursor_Show();
 			Cursor_NoEngine = 1;
+		
+			blockAllPlayerInput(FALSE);
 		};
 	};
 
