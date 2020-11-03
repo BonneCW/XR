@@ -670,7 +670,7 @@ FUNC VOID DAUERFUNC_01()
 		{
 			B_StartOtherRoutine (Mod_557_PSINOV_Lester_NW, "TREFFEN");
 			Mod_LesterRELToMeeting = 2;
-		}
+		};
 	};
 
 	// Spezielle Zustände: Hunger, Betrunken, Erkältung, Vergiftung
@@ -1287,7 +1287,7 @@ FUNC VOID DAUERFUNC_01()
 			{
 				B_StartOtherRoutine	(Mod_7612_PSINOV_Lester_REL,	"START");
 				Mod_LesterRELToMeeting = 3;
-			}
+			};
 		};
 
 		// Fake-Geisterrüstung durch richtige ersetzen
