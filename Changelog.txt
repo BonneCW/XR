@@ -37,6 +37,7 @@ Fixes:
 - fixed picking Salt for pirates removing pickaxe
 - fixed Parlan's Ring quest
 - added damage caps for Axe of Doom
+- all (non-Quest) weapons can be sharpend now
 
 
 1.0.8
