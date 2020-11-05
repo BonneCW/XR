@@ -45,7 +45,7 @@ FUNC VOID Info_Mod_Isgaroth_Pedro_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Isgaroth_Pedro_15_00"); //Ist hier ein Novize vorbeigekommen, der es ziemlich eilig hatte?
 	AI_Output(self, hero, "Info_Mod_Isgaroth_Pedro_01_01"); //Ja, vor einiger Zeit ist hier ein Novize vorbeigekommen. Er ist den Weg entlang gerannt.
-	AI_Output(self, hero, "Info_Mod_Isgaroth_Pedro_01_02"); //Frag mal Dragomir. Er hat ein kleines Lager in der Nähe der Taverne, von da aus dürfte er gesehen haben wohin der Novize gerannt ist.
+	AI_Output(self, hero, "Info_Mod_Isgaroth_Pedro_01_02"); //Frag mal Dragomir. Er hat ein kleines Lager in der Nähe der Taverne, von da aus dürfte er gesehen haben, wohin der Novize gerannt ist.
 
 	B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Isgaroth hat Pedro gesehen wie er den Weg entlang gerannt ist. Er sagt ich solle mich mal mit dem Jäger Dragomir unterhalten.");
 };

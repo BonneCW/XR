@@ -856,15 +856,15 @@ FUNC INT Info_Mod_Dragomir_Pedro_Condition()
 FUNC VOID Info_Mod_Dragomir_Pedro_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_00"); //Hast du einen Feuer Novizen gesehen?
-	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_01"); //Natürlich hab ich einen Feuer Novizen gesehen. Ich seh jeden Tag einen.
-	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_02"); //Hast du heute auch schon einen gesehen.
+	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_01"); //Natürlich hab ich einen Feuer Novizen gesehen. Ich seh' jeden Tag einen.
+	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_02"); //Hast du heute auch schon einen gesehen?
 	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_03"); //Klar, dich.
 	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_04"); //Und außer mir?
 	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_05"); //Ach ja, jetzt erinnere ich mich. Vorhin ist ein Novize in die Taverne gerannt. Er schien es ziemlich eilig zu haben.
 	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_06"); //Danke.
 	AI_output(self, hero, "Info_Mod_Dragomir_Pedro_12_07"); //Kein Problem.
 
-	B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Dragomir hat gesehen wie Pedro in die Taverne gerannt ist.");
+	B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Dragomir hat gesehen, wie Pedro in die Taverne gerannt ist.");
 };
 
 INSTANCE Info_Mod_Dragomir_Orlan (C_INFO)
@@ -925,15 +925,15 @@ FUNC VOID Info_Mod_Dragomir_Niederlage_Info()
 		{
 			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_00"); //Ok, Ok, ich hab gelogen.
 			AI_Output(hero, self, "Info_Mod_Dragomir_Niederlage_15_01"); //Also sagst du mir jetzt wo Pedro ist oder muss ich nochmal?
-			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_02"); //Jaja. Wenn du dem Weg hier folgst findest auf der rechten Seite etwas abgelegen ein Lager. Dort hält er sich versteckt.
+			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_02"); //Jaja. Wenn du dem Weg hier folgst, findest auf der rechten Seite etwas abgelegen ein Lager. Dort hält er sich versteckt.
 
-			B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Pedro hält sich in einem Lager versteckt, dass sich hinter dem Lager von Dragomir befindet.");
+			B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Pedro hält sich in einem Lager versteckt, das sich hinter dem Lager von Dragomir befindet.");
 
 			B_Göttergefallen(1, 1);
 		}
 		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
-			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_03"); //Das nächste mal solltest du es dir zweimal überlegen bevor du mich als Lügner bezeichnest.
+			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_03"); //Das nächste Mal solltest du es dir zweimal überlegen, bevor du mich als Lügner bezeichnest.
 		};
 							
 		// ------ In jedem Fall: Arena-Kampf abgeschlossen ------
