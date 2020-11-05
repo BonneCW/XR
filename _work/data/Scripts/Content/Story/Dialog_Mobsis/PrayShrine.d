@@ -747,10 +747,12 @@ INSTANCE PC_PrayShrine_BlessSword (C_Info)
 
 FUNC INT PC_PrayShrine_BlessSword_Condition ()
 {
-	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
+	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_PRAYSHRINE)
 	&& (Npc_GetDistToWP (hero, "FEUERSCHREIN") <= 5000)
-	&& ((Npc_HasItems (hero,ItMw_1H_Blessed_01) >= 1)
-	|| (Npc_HasItems (hero,ItMw_2H_Blessed_01) >= 1))
+	&& ((Npc_HasItems (hero, ItMw_1H_Blessed_01) >= 1)
+	|| (Npc_HasItems (hero, ItMw_1H_Blessed_01_Geschaerft) >= 1)
+	|| (Npc_HasItems (hero, ItMw_2H_Blessed_01) >= 1)
+	|| (Npc_HasItems (hero, ItMw_2H_Blessed_01_Geschaerft) >= 1))
 	&& (Npc_HasItems(hero, ItMi_OrnamentEffekt_BIGFARM_Addon) == 4)
 	{	
 		return TRUE;
@@ -760,31 +762,37 @@ FUNC INT PC_PrayShrine_BlessSword_Condition ()
 FUNC VOID PC_PrayShrine_BlessSword_Info()
 {
 	B_ENDPRODUCTIONDIALOG();
-	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
+	Wld_PlayEffect("spellFX_RedTeleport_RING", hero, hero, 0, 0, 0, FALSE);
 	Snd_Play ("MFX_TELEPORT_CAST");
 
 	Npc_RemoveInvItems  (hero, ItMi_OrnamentEffekt_BIGFARM_Addon, 4);
 			
-	if (Npc_HasItems (hero,ItMw_2H_Blessed_01) >= 1)		//2H-Waffe
+	if (Npc_HasItems (hero, ItMw_2H_Blessed_01) >= 1)		//2H-Waffe
 	{	
-		Npc_RemoveInvItems  (hero,ItMw_2H_Blessed_01, 1);
-		CreateInvItems 		(hero,ItMw_2H_Blessed_02, 1);
-		Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
-		Snd_Play ("MFX_Heal_Cast" );
-		B_GivePlayerXP (XP_SwordBlessed);
-
-		B_Göttergefallen(1, 5);
+		Npc_RemoveInvItems  (hero, ItMw_2H_Blessed_01, 1);
+		CreateInvItems 		(hero, ItMw_2H_Blessed_02, 1);
 	}
-	else	//1H-Waffe
+	else if (Npc_HasItems (hero, ItMw_2H_Blessed_01_Geschaerft) >= 1)		//2H-Waffe geschaerft
+	{	
+		Npc_RemoveInvItems  (hero, ItMw_2H_Blessed_01_Geschaerft, 1);
+		CreateInvItems 		(hero, ItMw_2H_Blessed_02, 1);
+	}
+	else if (Npc_HasItems (hero, ItMw_1H_Blessed_01) >= 1)		//1H-Waffe
 	{
-		Npc_RemoveInvItems  (hero,ItMw_1H_Blessed_01, 1);
-		CreateInvItems 		(hero,ItMw_1H_Blessed_02, 1);
-		Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
-		Snd_Play ("MFX_Heal_Cast" );
-		B_GivePlayerXP (XP_SwordBlessed);
-
-		B_Göttergefallen(1, 5);
+		Npc_RemoveInvItems  (hero, ItMw_1H_Blessed_01, 1);
+		CreateInvItems 		(hero, ItMw_1H_Blessed_02, 1);
+	}
+	else if (Npc_HasItems (hero, ItMw_1H_Blessed_01_Geschaerft) >= 1)		//1H-Waffe geschaerft
+	{
+		Npc_RemoveInvItems  (hero, ItMw_1H_Blessed_01_Geschaerft, 1);
+		CreateInvItems 		(hero, ItMw_1H_Blessed_02, 1);
 	};
+
+	Wld_PlayEffect("spellFX_PalHeal_ORIGIN", hero, hero, 0, 0, 0, FALSE);
+	Snd_Play ("MFX_Heal_Cast" );
+	B_GivePlayerXP (XP_SwordBlessed);
+
+	B_Göttergefallen(1, 5);
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_INNOSKLINGE, "Das Schwert wurde geweiht.");
 
@@ -807,7 +815,9 @@ FUNC INT PC_PrayShrine_BlessSword_01_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
 	&& ((Npc_HasItems (hero,ItMw_1H_Blessed_02) >= 1)
-	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1))
+	|| (Npc_HasItems (hero,ItMw_1H_Blessed_02_Geschaerft) >= 1)
+	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1)
+	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02_Geschaerft) >= 1))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Harad_AndreVermaechtnis6))
 	&& (Npc_HasItems(hero, ItSc_Light) >= 1)
 	&& (Wld_IsTime(11,00,13,00))
@@ -845,7 +855,9 @@ FUNC INT PC_PrayShrine_BlessSword_02_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
 	&& ((Npc_HasItems (hero,ItMw_1H_Blessed_02) >= 1)
-	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1))
+	|| (Npc_HasItems (hero,ItMw_1H_Blessed_02_Geschaerft) >= 1)
+	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1)
+	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02_Geschaerft) >= 1))
 	&& (Npc_KnowsInfo(hero, PC_PrayShrine_BlessSword_01))
 	&& (Npc_HasItems(hero, ItSc_InstantFireball) >= 1)
 	&& (Wld_IsTime(11,00,13,00))
@@ -883,7 +895,9 @@ FUNC INT PC_PrayShrine_BlessSword_03_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
 	&& ((Npc_HasItems (hero,ItMw_1H_Blessed_02) >= 1)
-	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1))
+	|| (Npc_HasItems (hero,ItMw_1H_Blessed_02_Geschaerft) >= 1)
+	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1)
+	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02_Geschaerft) >= 1))
 	&& (Npc_KnowsInfo(hero, PC_PrayShrine_BlessSword_02))
 	&& (Npc_HasItems(hero, ItSc_Firestorm) >= 1)
 	&& (Wld_IsTime(11,00,13,00))
@@ -921,7 +935,9 @@ FUNC INT PC_PrayShrine_BlessSword_04_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
 	&& ((Npc_HasItems (hero,ItMw_1H_Blessed_02) >= 1)
-	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1))
+	|| (Npc_HasItems (hero,ItMw_1H_Blessed_02_Geschaerft) >= 1)
+	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1)
+	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02_Geschaerft) >= 1))
 	&& (Npc_KnowsInfo(hero, PC_PrayShrine_BlessSword_03))
 	&& (Npc_HasItems(hero, ItSc_SumGol) >= 1)
 	&& (Wld_IsTime(11,00,13,00))
@@ -959,7 +975,9 @@ FUNC INT PC_PrayShrine_BlessSword_05_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
 	&& ((Npc_HasItems (hero,ItMw_1H_Blessed_02) >= 1)
-	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1))
+	|| (Npc_HasItems (hero,ItMw_1H_Blessed_02_Geschaerft) >= 1)
+	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1)
+	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02_Geschaerft) >= 1))
 	&& (Npc_KnowsInfo(hero, PC_PrayShrine_BlessSword_04))
 	&& (Npc_HasItems(hero, ItSc_Firerain) >= 1)
 	&& (Wld_IsTime(11,00,13,00))
@@ -975,32 +993,37 @@ FUNC VOID PC_PrayShrine_BlessSword_05_Info()
 	AI_Output(hero, self, "PC_PrayShrine_BlessSword_05_15_01"); //Vollstrecker seines Willens
 
 	B_ENDPRODUCTIONDIALOG();
-	Wld_PlayEffect("spellFX_RedTeleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
+	Wld_PlayEffect("spellFX_RedTeleport_RING", hero, hero, 0, 0, 0, FALSE);
 	Snd_Play ("MFX_TELEPORT_CAST");
 
 	Npc_RemoveInvItems  (hero, ItSc_Firerain, 1);
 			
-	if (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1)		//2H-Waffe
+	if (Npc_HasItems (hero, ItMw_2H_Blessed_02) >= 1)					//2H-Waffe
 	{	
-		Npc_RemoveInvItems  (hero,ItMw_2H_Blessed_02, 1);
-		CreateInvItems 		(hero,ItMw_2H_Blessed_03, 1);
-		Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
-		Snd_Play ("MFX_Heal_Cast" );
-		B_GivePlayerXP (5000);
-
-		B_Göttergefallen(1, 5);
+		Npc_RemoveInvItems  (hero, ItMw_2H_Blessed_02, 1);
+		CreateInvItems 		(hero, ItMw_2H_Blessed_03, 1);
 	}
-	else	//1H-Waffe
+	else if (Npc_HasItems (hero, ItMw_2H_Blessed_02_Geschaerft) >= 1)	//2H-Waffe geschaerft
+	{	
+		Npc_RemoveInvItems  (hero, ItMw_2H_Blessed_02_Geschaerft, 1);
+		CreateInvItems 		(hero, ItMw_2H_Blessed_03, 1);
+	}
+	else if (Npc_HasItems (hero, ItMw_1H_Blessed_02) >= 1)				//1H-Waffe
 	{
-		Npc_RemoveInvItems  (hero,ItMw_1H_Blessed_02, 1);
-		CreateInvItems 		(hero,ItMw_1H_Blessed_03, 1);
-		Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
-		Snd_Play ("MFX_Heal_Cast" );
-		B_GivePlayerXP (5000);
-
-		B_Göttergefallen(1, 5);
+		Npc_RemoveInvItems  (hero, ItMw_1H_Blessed_02, 1);
+		CreateInvItems 		(hero, ItMw_1H_Blessed_03, 1);
+	}
+	else if (Npc_HasItems (hero, ItMw_1H_Blessed_02_Geschaerft) >= 1)	//1H-Waffe geschaerft
+	{
+		Npc_RemoveInvItems  (hero, ItMw_1H_Blessed_02_Geschaerft, 1);
+		CreateInvItems 		(hero, ItMw_1H_Blessed_03, 1);
 	};
 	
+	Wld_PlayEffect("spellFX_PalHeal_ORIGIN", hero, hero, 0, 0, 0, FALSE);
+	Snd_Play ("MFX_Heal_Cast");
+	B_GivePlayerXP (5000);
+	B_Göttergefallen(1, 5);
+
 	B_UsedShrineForWeihe();
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_INNOSKLINGE, "Es ist geschafft. Und das Schwert ist tatsächlich noch mächtiger geworden.");
