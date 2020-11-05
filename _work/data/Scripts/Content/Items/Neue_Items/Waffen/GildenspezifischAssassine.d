@@ -35,7 +35,7 @@ INSTANCE ItMw_1h_Vlk_Dagger_Geschaerft (C_Item)
 
 	value 				=	Value_VLKDolch;
 
-	damageTotal  		= 	Damage_VLKDolch+10;
+	damageTotal  		= 	Damage_VLKDolch+SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_VLKDolch;		
 	
@@ -114,7 +114,7 @@ INSTANCE ItMw_Avaquar_Geschaerft (C_Item)
 
 	value 				=	800;
 
-	damageTotal			= 	70+10;
+	damageTotal			= 	70+SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	90;
 

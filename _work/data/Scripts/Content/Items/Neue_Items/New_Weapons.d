@@ -316,7 +316,7 @@ instance ITMW_Feuerschwert_Geschaerft(C_Item)
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 1500;
-	damageTotal = 140+10;
+	damageTotal = 140+SHARPENED;
 	damagetype = DAM_FIRE;
 	range = 85;
 	cond_atr[2] = ATR_STRENGTH;
@@ -364,7 +364,7 @@ instance ITMW_ICESWORD_Geschaerft(C_Item)
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 1500;
-	damageTotal = 140+10;
+	damageTotal = 140+SHARPENED;
 	damagetype = DAM_MAGIC;
 	range = 85;
 	cond_atr[2] = ATR_STRENGTH;
@@ -416,7 +416,7 @@ INSTANCE ItMW_Sense_02_Geschaerft (C_Item)
 
 	value 				=	1000;
 
-	damageTotal  		= 	100+10;
+	damageTotal  		= 	100+SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	200;	
 
@@ -467,7 +467,7 @@ INSTANCE ItMW_Sense_03_Geschaerft (C_Item)
 
 	value 				=	1000;
 
-	damageTotal  		= 	100+10;
+	damageTotal  		= 	100+SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	200;
 
@@ -621,7 +621,7 @@ INSTANCE Xeres_Schwert_Geschaerft (C_Item)
 
 	value 				=	500;
 
-	damageTotal			= 	250+10;
+	damageTotal			= 	250+SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	150;
 
@@ -671,7 +671,7 @@ INSTANCE ItMw_1H_Neok_Zeusschwert_01_Geschaerft (C_Item)
 
 	value 				=	104*10;
 
-	damageTotal			= 	115+10;
+	damageTotal			= 	115+SHARPENED;
 	damagetype 			= 	DAM_EDGE;
 	range    			=  	100;		
 
@@ -770,7 +770,7 @@ INSTANCE ItMw_1H_Neok_Athos_01_Geschaerft (C_Item)
 
 	value 				=	104*11;
 
-	damageTotal			= 	135+10;
+	damageTotal			= 	135+SHARPENED;
 	damagetype 			= 	DAM_EDGE;
 	range    			=  	100;		
 
@@ -844,7 +844,7 @@ INSTANCE ItMw_Schmetteraxt_Geschaerft (C_Item)
 
 	value 				=	150;//150;
 
-	damageTotal			= 	80+10;
+	damageTotal			= 	80+SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	130;		
 
@@ -893,7 +893,7 @@ INSTANCE ItMw_Truemmeraxt_Geschaerft (C_Item)
 
 	value 				=	150;//150;
 
-	damageTotal			= 	160+10;
+	damageTotal			= 	160+SHARPENED;
 	damagetype			=	DAM_BLUNT;
 	range    			=  	120;		
 
@@ -944,7 +944,7 @@ INSTANCE ItMW_Schaedelbrecher_Geschaerft (C_Item)
 
 	value 				=	1000;
 
-	damageTotal  		= 	120+10;
+	damageTotal  		= 	120+SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	200;		
 	
@@ -996,7 +996,7 @@ INSTANCE ItMW_Drachenaxt_Geschaerft (C_Item)
 
 	value 				=	1000;
 
-	damageTotal  		= 	150+10;
+	damageTotal  		= 	150+SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	125;		
 	
@@ -1047,7 +1047,7 @@ INSTANCE ItMw_1H_Eminem_Eisenklinge_02_Geschaerft (C_Item)
 
 	value 				=	500;
 
-	damageTotal			= 	180+10;
+	damageTotal			= 	180+SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	150;
 
@@ -1098,7 +1098,7 @@ INSTANCE ItMw_Gladius_Geschaerft (C_Item)
 
 	value 				=	500;
 
-	damageTotal			= 	50+10;
+	damageTotal			= 	50+SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	90;
 
@@ -1149,7 +1149,7 @@ INSTANCE ItMw_Kurzschwert_Geschaerft (C_Item)
 
 	value 				=	500;
 
-	damageTotal			= 	45+10;
+	damageTotal			= 	45+SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	90;
 
@@ -1200,7 +1200,7 @@ INSTANCE ItMw_Klingendolch_Geschaerft (C_Item)
 
 	value 				=	500;
 
-	damageTotal			= 	50+10;
+	damageTotal			= 	50+SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	90;
 
@@ -1251,7 +1251,7 @@ INSTANCE ItMw_Klauenschwert_Geschaerft (C_Item)
 
 	value 				=	4500;
 
-	damageTotal			= 	150+10;
+	damageTotal			= 	150+SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	100;
 
@@ -1302,7 +1302,7 @@ INSTANCE ItMw_Schuetterschwert_Geschaerft (C_Item)
 
 	value 				=	450;
 
-	damageTotal			= 	92+10;
+	damageTotal			= 	92+SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	100;
 
