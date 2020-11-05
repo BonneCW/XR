@@ -485,7 +485,13 @@ FUNC INT Info_Mod_Angar_Hueterklinge4_Condition()
 	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_2H) == 1)
 	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_1H) == 1)
 	|| (Npc_HasItems(hero, ItMw_Hueterklinge_2H) == 1)
-	|| (Npc_HasItems(hero, ItMw_Hueterklinge_1H) == 1))
+	|| (Npc_HasItems(hero, ItMw_Hueterklinge_1H) == 1)
+	|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_2H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_1H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_2H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_1H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_Hueterklinge_2H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_Hueterklinge_1H_Geschaerft) == 1))
 	{
 		return 1;
 	};
@@ -498,10 +504,16 @@ FUNC VOID Info_Mod_Angar_Hueterklinge4_Info()
 	if ((Npc_HasItems(hero, ItMw_AlteHueterklinge_2H) == 1)
 	|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_1H) == 1)
 	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_2H) == 1)
-	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_1H) == 1))
+	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_1H) == 1)
+	|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_2H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_1H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_2H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_1H_Geschaerft) == 1))
 	{
 		if (Npc_HasItems(hero, ItMw_AlteHueterklinge_2H) == 1)
 		|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_1H) == 1)
+		|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_2H_Geschaerft) == 1)
+		|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_1H_Geschaerft) == 1)
 		{
 			AI_Output(self, hero, "Info_Mod_Angar_Hueterklinge4_34_01"); //Die sieht mir aber ziemlich alt aus ...
 		}
