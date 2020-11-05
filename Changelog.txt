@@ -36,6 +36,7 @@ Fixes:
 - blocking all user input now while Schagby and Puzzle are running
 - fixed picking Salt for pirates removing pickaxe
 - fixed Parlan's Ring quest
+- added damage caps for Axe of Doom
 
 
 1.0.8
