@@ -34,7 +34,7 @@ INSTANCE ItMw_1h_MISC_Sword_Geschaerft (C_Item)
 
 	value 				=	Value_MiscSword;
 
-	damageTotal  		= 	Damage_MiscSword+SHARPENED;
+	damageTotal  		= 	Damage_MiscSword + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_MiscSword;		
 
@@ -85,7 +85,7 @@ INSTANCE ItMw_2H_Sword_M_01_Geschaerft (C_Item)
 
 	value 				=	Value_Misc2hSword;
 
-	damageTotal			= 	Damage_Misc2hSword+SHARPENED;
+	damageTotal			= 	Damage_Misc2hSword + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Misc2hSword;		
 

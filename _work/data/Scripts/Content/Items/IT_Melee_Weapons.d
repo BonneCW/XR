@@ -138,7 +138,7 @@ INSTANCE ItMw_1H_Sword_03_Geschaerft (C_Item)
 
 	value 				=	104*10;
 
-	damageTotal			= 	64+SHARPENED;
+	damageTotal			= 	64 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			= 	DAM_EDGE;
 	range    			=  	100;		
 
@@ -187,7 +187,7 @@ INSTANCE ItMw_1H_Sword_Long_04_Geschaerft (C_Item)
 
 	value 				=	860*10;//430;//214
 
-	damageTotal			= 	150+SHARPENED;
+	damageTotal			= 	150 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			= 	DAM_EDGE;
 	range    			=  	120;		
 
@@ -236,7 +236,7 @@ INSTANCE ItMw_1H_Sword_Long_05_Geschaerft (C_Item)
 
 	value 				=	920*10;//460;//232
 
-	damageTotal			= 	160+SHARPENED;
+	damageTotal			= 	160 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			= 	DAM_EDGE;
 	range    			=  	120;		
 
@@ -285,7 +285,7 @@ INSTANCE ItMw_1H_Sword_Broad_04_Geschaerft (C_Item)
 
 	value 				=	1400*4;//700;//349
 
-	damageTotal			= 	167+SHARPENED;
+	damageTotal			= 	167 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			= 	DAM_EDGE;
 	range    			=  	130;		
 
@@ -334,7 +334,7 @@ INSTANCE ItMw_1H_Sword_Bastard_03_Geschaerft (C_Item)
 
 	value 				=	1720*5;//860;//430
 
-	damageTotal			= 	170+SHARPENED;
+	damageTotal			= 	170 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			= 	DAM_EDGE;
 	range    			=  	130;		
 
@@ -383,7 +383,7 @@ INSTANCE ItMw_2H_Axe_Old_02_Geschaerft (C_Item)
 
 	value 				=	1840*4;//920;//466
 	
-	damageTotal			= 	167+SHARPENED;
+	damageTotal			= 	167 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	150;		
 
@@ -432,7 +432,7 @@ INSTANCE ItMw_2H_Sword_Light_02_Geschaerft (C_Item)
 
 	value 				=	1950;
 
-	damageTotal			= 	142+SHARPENED;
+	damageTotal			= 	142 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	150;		
 
@@ -481,7 +481,7 @@ INSTANCE ItMw_AlteHueterklinge_1H_Geschaerft (C_Item)
 
 	value 				=	1050;
 
-	damageTotal			= 	90+SHARPENED;
+	damageTotal			= 	90 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	120;		
 
@@ -530,7 +530,7 @@ INSTANCE ItMw_AlteHueterklinge_2H_Geschaerft (C_Item)
 
 	value 				=	1050;
 
-	damageTotal			= 	110+SHARPENED;
+	damageTotal			= 	110 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	120;		
 
@@ -579,7 +579,7 @@ INSTANCE ItMw_FalscheHueterklinge_1H_Geschaerft (C_Item)
 
 	value 				=	1550;
 
-	damageTotal			= 	120+SHARPENED;
+	damageTotal			= 	120 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	120;		
 
@@ -628,7 +628,7 @@ INSTANCE ItMw_FalscheHueterklinge_2H_Geschaerft (C_Item)
 
 	value 				=	1550;
 
-	damageTotal			= 	140+SHARPENED;
+	damageTotal			= 	140 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	120;		
 
@@ -677,7 +677,7 @@ INSTANCE ItMw_Hueterklinge_1H_Geschaerft (C_Item)
 
 	value 				=	1950;
 
-	damageTotal			= 	150+SHARPENED;
+	damageTotal			= 	150 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	120;		
 
@@ -726,7 +726,7 @@ INSTANCE ItMw_Hueterklinge_2H_Geschaerft (C_Item)
 
 	value 				=	1950;
 
-	damageTotal			= 	170+SHARPENED;
+	damageTotal			= 	170 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	120;		
 
@@ -827,7 +827,7 @@ INSTANCE ItMw_1H_Mace_L_01_Geschaerft (C_Item)
 
 	value 				=	Value_Schuerhaken;
 
-	damageTotal  		= 	Damage_Schuerhaken+SHARPENED;
+	damageTotal  		= 	Damage_Schuerhaken + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schuerhaken;		
 	
@@ -876,7 +876,7 @@ INSTANCE ItMw_1h_Bau_Axe_Geschaerft (C_Item)
 
 	value 				=	Value_BauAxe;
 
-	damageTotal  		= 	Damage_BauAxe+SHARPENED;
+	damageTotal  		= 	Damage_BauAxe + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_BauAxe;		
 
@@ -1000,7 +1000,7 @@ INSTANCE ItMw_1h_Vlk_Axe_Geschaerft (C_Item)
 
 	value 				=	Value_VLKAxe;
 
-	damageTotal  		= 	Damage_VLKAxe+SHARPENED;
+	damageTotal  		= 	Damage_VLKAxe + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_VLKAxe;		
 
@@ -1125,7 +1125,7 @@ INSTANCE ItMw_ShortSword1_Geschaerft (C_Item)
 
 	value 				=	Value_ShortSword1;
 
-	damageTotal  		= 	Damage_ShortSword1+SHARPENED;
+	damageTotal  		= 	Damage_ShortSword1 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword1;		
 
@@ -1223,7 +1223,7 @@ INSTANCE ItMw_1H_Sword_L_03_Geschaerft (C_Item)
 
 	value 				=	Value_Wolfsklinge;
 
-	damageTotal  		= 	Damage_Wolfsklinge+SHARPENED;
+	damageTotal  		= 	Damage_Wolfsklinge + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Wolfsklinge;		
 
@@ -1272,7 +1272,7 @@ INSTANCE ItMw_ShortSword2_Geschaerft (C_Item)
 
 	value 				=	Value_ShortSword2;
 
-	damageTotal  		= 	Damage_ShortSword2+SHARPENED;
+	damageTotal  		= 	Damage_ShortSword2 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword2;		
 
@@ -1346,7 +1346,7 @@ INSTANCE ItMw_Sense_Geschaerft (C_Item)
 
 	value 				=	Value_Sense;
 
-	damageTotal  		= 	Damage_Sense+SHARPENED;
+	damageTotal  		= 	Damage_Sense + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Sense;		
 
@@ -1447,7 +1447,7 @@ INSTANCE ItMw_2h_Bau_Axe_Geschaerft (C_Item)
 
 	value 				=	Value_Bau2hAxt;
 
-	damageTotal  		= 	Damage_Bau2hAxt+SHARPENED;
+	damageTotal  		= 	Damage_Bau2hAxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Bau2hAxt;		
 
@@ -1498,7 +1498,7 @@ INSTANCE ItMw_1h_Misc_Axe_Geschaerft (C_Item)
 
 	value 				=	Value_MiscAxe;
 
-	damageTotal  		= 	Damage_MiscAxe+SHARPENED;
+	damageTotal  		= 	Damage_MiscAxe + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_MiscAxe;		
 
@@ -1549,7 +1549,7 @@ INSTANCE ItMw_1h_Mil_Sword_Geschaerft (C_Item)
 
 	value 				=	Value_MilSchwert;
 
-	damageTotal  		= 	Damage_MilSchwert+SHARPENED;
+	damageTotal  		= 	Damage_MilSchwert + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_MilSchwert;		
 
@@ -1598,7 +1598,7 @@ INSTANCE ItMw_1h_Sld_Axe_Geschaerft (C_Item)
 
 	value 				=	Value_Sld1hAxt;
 
-	damageTotal  		= 	Damage_Sld1hAxt+SHARPENED;
+	damageTotal  		= 	Damage_Sld1hAxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Sld1hAxt;		
 
@@ -1647,7 +1647,7 @@ INSTANCE ItMw_1h_Sld_Sword_Geschaerft (C_Item)
 
 	value 				=	Value_Sld1hSchwert;
 
-	damageTotal  		= 	Damage_Sld1hSchwert+SHARPENED;
+	damageTotal  		= 	Damage_Sld1hSchwert + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Sld1hSchwert;		
 
@@ -1722,7 +1722,7 @@ INSTANCE ItMw_2h_Sld_Axe_Geschaerft (C_Item)
 
 	value 				=	Value_Sld2hAxe;
 
-	damageTotal  		= 	Damage_Sld2hAxe+SHARPENED;
+	damageTotal  		= 	Damage_Sld2hAxe + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Sld2hAxe;		
 
@@ -1771,7 +1771,7 @@ INSTANCE ItMw_2h_Sld_Sword_Geschaerft (C_Item)
 
 	value 				=	Value_Sld2hSchwert;
 
-	damageTotal  		= 	Damage_Sld2hSchwert+SHARPENED;
+	damageTotal  		= 	Damage_Sld2hSchwert + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Sld2hSchwert;		
 
@@ -1820,7 +1820,7 @@ INSTANCE ItMw_1h_Pal_Sword_Geschaerft (C_Item)
 
 	value 				=	Value_PalSchwert;
 
-	damageTotal  		= 	Damage_PalSchwert+SHARPENED;
+	damageTotal  		= 	Damage_PalSchwert + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_PalSchwert;		
 
@@ -1869,7 +1869,7 @@ INSTANCE ItMw_2h_Pal_Sword_Geschaerft (C_Item)
 
 	value 				=	Value_PalZweihaender;
 
-	damageTotal  		= 	Damage_PalZweihaender+SHARPENED;
+	damageTotal  		= 	Damage_PalZweihaender + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_PalZweihaender;		
 
@@ -1924,7 +1924,7 @@ INSTANCE ItMw_2H_OrcAxe_01_Geschaerft (C_Item)
 
 	value 				=	Value_Orkaxt_01;
 
-	damageTotal			= 	Damage_Orkaxt_01+SHARPENED;
+	damageTotal			= 	Damage_Orkaxt_01 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Orkaxt_01;		
 
@@ -1973,7 +1973,7 @@ INSTANCE ItMw_2H_OrcAxe_02_Geschaerft (C_Item)
 
 	value 				=	Value_Orkaxt_02;
 
-	damageTotal			= 	Damage_Orkaxt_02+SHARPENED;
+	damageTotal			= 	Damage_Orkaxt_02 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Orkaxt_02;		
 
@@ -2022,7 +2022,7 @@ INSTANCE ItMw_2H_OrcAxe_03_Geschaerft (C_Item)
 
 	value 				=	Value_Orkaxt_03;
 
-	damageTotal			= 	Damage_Orkaxt_03+SHARPENED;
+	damageTotal			= 	Damage_Orkaxt_03 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Orkaxt_03;		
 
@@ -2071,7 +2071,7 @@ INSTANCE ItMw_2H_OrcAxe_04_Geschaerft (C_Item)
 
 	value 				=	Value_Orkaxt_04;
 
-	damageTotal			= 	Damage_Orkaxt_04+SHARPENED;
+	damageTotal			= 	Damage_Orkaxt_04 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Orkaxt_04;		
 
@@ -2120,7 +2120,7 @@ INSTANCE ItMw_2H_OrcSword_01_Geschaerft (C_Item) // *** für Drakonier!!! ***
 
 	value 				=	Value_Orkschwert;
 
-	damageTotal			= 	Damage_Orkschwert+SHARPENED;
+	damageTotal			= 	Damage_Orkschwert + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Orkschwert;		
 
@@ -2169,7 +2169,7 @@ INSTANCE ItMw_2H_OrcSword_02_Geschaerft (C_Item) // *** für Orcritter!!! ***
 
 	value 				=	Value_Orkschwert_01;
 
-	damageTotal			= 	Damage_Orkschwert_01+SHARPENED;
+	damageTotal			= 	Damage_Orkschwert_01 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Orkschwert_01;		
 
@@ -2222,7 +2222,7 @@ INSTANCE ItMw_ShortSword3_Geschaerft (C_Item)
 
 	value 				=	Value_ShortSword3;
 
-	damageTotal  		= 	Damage_ShortSword3+SHARPENED;
+	damageTotal  		= 	Damage_ShortSword3 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword3;		
 
@@ -2296,7 +2296,7 @@ INSTANCE ItMw_ShortSword4_Geschaerft (C_Item)
 
 	value 				=	Value_ShortSword4;
 
-	damageTotal  		= 	Damage_ShortSword4+SHARPENED;
+	damageTotal  		= 	Damage_ShortSword4 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword4;		
 
@@ -2370,7 +2370,7 @@ INSTANCE ItMw_Richtstab_Geschaerft (C_Item)
 
 	value 				=	Value_Richtstab;
 
-	damageTotal  		= 	Damage_Richtstab+SHARPENED;
+	damageTotal  		= 	Damage_Richtstab + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Richtstab;		
 
@@ -2419,7 +2419,7 @@ INSTANCE ItMw_ShortSword5_Geschaerft (C_Item)
 
 	value 				=	Value_ShortSword5;
 
-	damageTotal  		= 	Damage_ShortSword5+SHARPENED;
+	damageTotal  		= 	Damage_ShortSword5 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword5;		
 
@@ -2493,7 +2493,7 @@ INSTANCE ItMw_Hellebarde_Geschaerft (C_Item)
 
 	value 				=	Value_Hellebarde;
 
-	damageTotal			= 	Damage_Hellebarde+SHARPENED;
+	damageTotal			= 	Damage_Hellebarde + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Hellebarde;		
 
@@ -2567,7 +2567,7 @@ INSTANCE ItMw_Schiffsaxt_Geschaerft (C_Item)
 
 	value 				=	Value_Schiffsaxt;
 
-	damageTotal  		= 	Damage_Schiffsaxt+SHARPENED;
+	damageTotal  		= 	Damage_Schiffsaxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schiffsaxt;		
 
@@ -2618,7 +2618,7 @@ INSTANCE ItMw_Piratensaebel_Geschaerft (C_Item)
 
 	value 				=	Value_Piratensaebel;
 
-	damageTotal  		= 	Damage_Piratensaebel+SHARPENED;
+	damageTotal  		= 	Damage_Piratensaebel + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Piratensaebel;		
 
@@ -2719,7 +2719,7 @@ INSTANCE ItMw_Schwert_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert;
 
-	damageTotal  		= 	Damage_Schwert+SHARPENED;
+	damageTotal  		= 	Damage_Schwert + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert;		
 
@@ -2824,7 +2824,7 @@ INSTANCE ItMw_1H_Common_01_Geschaerft (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	Damage_Common1+SHARPENED;
+	damageTotal			= 	Damage_Common1 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -2851,7 +2851,7 @@ INSTANCE ItMw_1H_Common_01_Stark (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	(Damage_Common1*3)/2;
+	damageTotal			= 	(Damage_Common1 * 3) / 2;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -2878,7 +2878,7 @@ INSTANCE ItMw_1H_Common_01_Stark_Geschaerft (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	((Damage_Common1*3)/2)+SHARPENED;
+	damageTotal			= 	((Damage_Common1 * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -2932,7 +2932,7 @@ INSTANCE ItMw_1H_Common_01_Bonus_Geschaerft (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	Damage_Common1+SHARPENED;
+	damageTotal			= 	Damage_Common1 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -2959,7 +2959,7 @@ INSTANCE ItMw_1H_Common_01_BonusMeisterschmied (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	Damage_Common1+20;
+	damageTotal			= 	Damage_Common1 + 20;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -2986,7 +2986,7 @@ INSTANCE ItMw_1H_Common_01_BonusMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	Damage_Common1+20+SHARPENED;
+	damageTotal			= 	Damage_Common1 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -3013,7 +3013,7 @@ INSTANCE ItMw_1H_Common_01_Meisterschmied (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	Damage_Common1+20;
+	damageTotal			= 	Damage_Common1 + 20;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -3040,7 +3040,7 @@ INSTANCE ItMw_1H_Common_01_Meisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	Damage_Common1+20+SHARPENED;
+	damageTotal			= 	Damage_Common1 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -3067,7 +3067,7 @@ INSTANCE ItMw_1H_Common_01_StarkBonus (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	(Damage_Common1*3)/2;
+	damageTotal			= 	(Damage_Common1 * 3) / 2;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -3094,7 +3094,7 @@ INSTANCE ItMw_1H_Common_01_StarkBonus_Geschaerft (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	((Damage_Common1*3)/2)+SHARPENED;
+	damageTotal			= 	((Damage_Common1 * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -3121,7 +3121,7 @@ INSTANCE ItMw_1H_Common_01_StarkBonusMeisterschmied (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	((Damage_Common1+20)*3)/2;
+	damageTotal			= 	((Damage_Common1 + 20) * 3) / 2;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -3148,7 +3148,7 @@ INSTANCE ItMw_1H_Common_01_StarkBonusMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	(((Damage_Common1+20)*3)/2)+SHARPENED;
+	damageTotal			= 	(((Damage_Common1 + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -3175,7 +3175,7 @@ INSTANCE ItMw_1H_Common_01_StarkMeisterschmied (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	((Damage_Common1+20)*3)/2;
+	damageTotal			= 	((Damage_Common1 + 20) * 3) / 2;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -3202,7 +3202,7 @@ INSTANCE ItMw_1H_Common_01_StarkMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	(((Damage_Common1+20)*3)/2)+SHARPENED;
+	damageTotal			= 	(((Damage_Common1 + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -3307,7 +3307,7 @@ INSTANCE ItMw_Zweihaender1_Geschaerft (C_Item)
 
 	value 				=	Value_Zweihaender1;
 
-	damageTotal			= 	Damage_Zweihaender1+SHARPENED;
+	damageTotal			= 	Damage_Zweihaender1 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Zweihaender1;		
 
@@ -3356,7 +3356,7 @@ INSTANCE ItMw_2H_Sword_Light_01_Geschaerft (C_Item)
 
 	value 				=	Value_Zweihaender1;
 
-	damageTotal			= 	Damage_Zweihaender1+SHARPENED;
+	damageTotal			= 	Damage_Zweihaender1 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Zweihaender1;		
 
@@ -3459,7 +3459,7 @@ INSTANCE ItMw_Streitaxt1_Geschaerft (C_Item)
 
 	value 				=	Value_Streitaxt1;
 
-	damageTotal			= 	Damage_Streitaxt1+SHARPENED;
+	damageTotal			= 	Damage_Streitaxt1 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Streitaxt1;		
 
@@ -3511,7 +3511,7 @@ INSTANCE ItMw_Schwert1_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	Damage_Schwert1+SHARPENED;
+	damageTotal  		= 	Damage_Schwert1 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3538,7 +3538,7 @@ INSTANCE ItMw_Schwert1_Stark (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	(Damage_Schwert1*3)/2;
+	damageTotal  		= 	(Damage_Schwert1 * 3) / 2;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3565,7 +3565,7 @@ INSTANCE ItMw_Schwert1_Stark_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	((Damage_Schwert1*3)/2)+SHARPENED;
+	damageTotal  		= 	((Damage_Schwert1 * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3619,7 +3619,7 @@ INSTANCE ItMw_Schwert1_Bonus_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	Damage_Schwert1+SHARPENED;
+	damageTotal  		= 	Damage_Schwert1 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3646,7 +3646,7 @@ INSTANCE ItMw_Schwert1_BonusMeisterschmied (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	Damage_Schwert1+20;
+	damageTotal  		= 	Damage_Schwert1 + 20;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3673,7 +3673,7 @@ INSTANCE ItMw_Schwert1_BonusMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	Damage_Schwert1+20+SHARPENED;
+	damageTotal  		= 	Damage_Schwert1 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3700,7 +3700,7 @@ INSTANCE ItMw_Schwert1_Meisterschmied (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	Damage_Schwert1+20;
+	damageTotal  		= 	Damage_Schwert1 + 20;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3727,7 +3727,7 @@ INSTANCE ItMw_Schwert1_Meisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	Damage_Schwert1+20+SHARPENED;
+	damageTotal  		= 	Damage_Schwert1 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3754,7 +3754,7 @@ INSTANCE ItMw_Schwert1_StarkBonus (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	Damage_Schwert1+20;
+	damageTotal  		= 	Damage_Schwert1 + 20;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3781,7 +3781,7 @@ INSTANCE ItMw_Schwert1_StarkBonus_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	Damage_Schwert1+20+SHARPENED;
+	damageTotal  		= 	Damage_Schwert1 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3808,7 +3808,7 @@ INSTANCE ItMw_Schwert1_StarkMeisterschmied (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	((Damage_Schwert1+20)*3)/2;
+	damageTotal  		= 	((Damage_Schwert1 + 20) * 3) / 2;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3835,7 +3835,7 @@ INSTANCE ItMw_Schwert1_StarkMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	(((Damage_Schwert1+20)*3)/2)+SHARPENED;
+	damageTotal  		= 	(((Damage_Schwert1 + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3862,7 +3862,7 @@ INSTANCE ItMw_Schwert1_StarkBonusMeisterschmied (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	((Damage_Schwert1+20)*3)/2;
+	damageTotal  		= 	((Damage_Schwert1 + 20) * 3) / 2;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3889,7 +3889,7 @@ INSTANCE ItMw_Schwert1_StarkBonusMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	(((Damage_Schwert1+20)*3)/2)+SHARPENED;
+	damageTotal  		= 	(((Damage_Schwert1 + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3943,7 +3943,7 @@ INSTANCE ItMw_Schwert2_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert2;
 
-	damageTotal  		= 	Damage_Schwert2+SHARPENED;
+	damageTotal  		= 	Damage_Schwert2 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert2;		
 
@@ -3996,7 +3996,7 @@ INSTANCE ItMw_Doppelaxt_Geschaerft (C_Item)
 
 	value 				=	Value_Doppelaxt;
 
-	damageTotal			= 	Damage_Doppelaxt+SHARPENED;
+	damageTotal			= 	Damage_Doppelaxt + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Doppelaxt;		
 
@@ -4049,7 +4049,7 @@ INSTANCE ItMw_Bartaxt_Geschaerft (C_Item)
 
 	value 				=	Value_Bartaxt;
 
-	damageTotal			= 	Damage_Bartaxt+SHARPENED;
+	damageTotal			= 	Damage_Bartaxt + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Bartaxt;		
 
@@ -4129,7 +4129,7 @@ INSTANCE ItMw_Schwert3_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert3;
 
-	damageTotal  		= 	Damage_Schwert3+SHARPENED;
+	damageTotal  		= 	Damage_Schwert3 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert3;		
 
@@ -4183,7 +4183,7 @@ INSTANCE ItMw_Schwert4_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	Damage_Schwert4+SHARPENED;
+	damageTotal  		= 	Damage_Schwert4 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4210,7 +4210,7 @@ INSTANCE ItMw_Schwert4_Stark (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	(Damage_Schwert4*3)/2;
+	damageTotal  		= 	(Damage_Schwert4 * 3) / 2;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4239,7 +4239,7 @@ INSTANCE ItMw_Schwert4_Stark_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	((Damage_Schwert4*3)/2)+SHARPENED;
+	damageTotal  		= 	((Damage_Schwert4 * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4297,7 +4297,7 @@ INSTANCE ItMw_Schwert4_Bonus_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	Damage_Schwert4+SHARPENED;
+	damageTotal  		= 	Damage_Schwert4 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4326,7 +4326,7 @@ INSTANCE ItMw_Schwert4_BonusMeisterschmied (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	Damage_Schwert4+20;
+	damageTotal  		= 	Damage_Schwert4 + 20;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4355,7 +4355,7 @@ INSTANCE ItMw_Schwert4_BonusMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	Damage_Schwert4+20+SHARPENED;
+	damageTotal  		= 	Damage_Schwert4 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4384,7 +4384,7 @@ INSTANCE ItMw_Schwert4_Meisterschmied (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	Damage_Schwert4+20;
+	damageTotal  		= 	Damage_Schwert4 + 20;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4413,7 +4413,7 @@ INSTANCE ItMw_Schwert4_Meisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	Damage_Schwert4+20+SHARPENED;
+	damageTotal  		= 	Damage_Schwert4 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4442,7 +4442,7 @@ INSTANCE ItMw_Schwert4_StarkBonus (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	(Damage_Schwert4*3)/2;
+	damageTotal  		= 	(Damage_Schwert4 * 3) / 2;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4471,7 +4471,7 @@ INSTANCE ItMw_Schwert4_StarkBonus_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	((Damage_Schwert4*3)/2)+SHARPENED;
+	damageTotal  		= 	((Damage_Schwert4 * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4500,7 +4500,7 @@ INSTANCE ItMw_Schwert4_StarkMeisterschmied (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	((Damage_Schwert4+20)*3)/2;
+	damageTotal  		= 	((Damage_Schwert4 + 20) * 3) / 2;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4529,7 +4529,7 @@ INSTANCE ItMw_Schwert4_StarkMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	(((Damage_Schwert4+20)*3)/2)+SHARPENED;
+	damageTotal  		= 	(((Damage_Schwert4 + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4558,7 +4558,7 @@ INSTANCE ItMw_Schwert4_StarkBonusMeisterschmied (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	((Damage_Schwert4+20)*3)/2;
+	damageTotal  		= 	((Damage_Schwert4 + 20) * 3) / 2;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4587,7 +4587,7 @@ INSTANCE ItMw_Schwert4_StarkBonusMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	(((Damage_Schwert4+20)*3)/2)+SHARPENED;
+	damageTotal  		= 	(((Damage_Schwert4 + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4648,7 +4648,7 @@ INSTANCE ItMw_1H_Special_01_Geschaerft (C_Item)
 
 	value 				=	Value_Special_1H_1;
 	
-	damageTotal			= 	Damage_Special_1H_1+SHARPENED;
+	damageTotal			= 	Damage_Special_1H_1 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Special_1H_1;	
 	
@@ -4707,7 +4707,7 @@ INSTANCE ItMw_2H_Special_01_Geschaerft (C_Item)
 
 	value 				=	Value_Special_2H_1;
 
-	damageTotal			= 	Damage_Special_2H_1+SHARPENED;
+	damageTotal			= 	Damage_Special_2H_1 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Special_2H_1;	
 	
@@ -4767,7 +4767,7 @@ INSTANCE ItMw_Rapier_Geschaerft (C_Item)
 
 	value 				=	Value_Rapier;
 
-	damageTotal			= 	Damage_Rapier+SHARPENED;
+	damageTotal			= 	Damage_Rapier + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rapier;	
 
@@ -4826,7 +4826,7 @@ INSTANCE ItMw_Rubinklinge_Geschaerft (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	Damage_Rubinklinge+SHARPENED;
+	damageTotal			= 	Damage_Rubinklinge + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -4855,7 +4855,7 @@ INSTANCE ItMw_Rubinklinge_Stark (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	(Damage_Rubinklinge*3)/2;
+	damageTotal			= 	(Damage_Rubinklinge * 3) / 2;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -4884,7 +4884,7 @@ INSTANCE ItMw_Rubinklinge_Stark_Geschaerft (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	((Damage_Rubinklinge*3)/2)+SHARPENED;
+	damageTotal			= 	((Damage_Rubinklinge * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -4942,7 +4942,7 @@ INSTANCE ItMw_Rubinklinge_Bonus_Geschaerft (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	Damage_Rubinklinge+SHARPENED;
+	damageTotal			= 	Damage_Rubinklinge + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -4971,7 +4971,7 @@ INSTANCE ItMw_Rubinklinge_BonusMeisterschmied (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	Damage_Rubinklinge+20;
+	damageTotal			= 	Damage_Rubinklinge + 20;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -5000,7 +5000,7 @@ INSTANCE ItMw_Rubinklinge_BonusMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	Damage_Rubinklinge+20+SHARPENED;
+	damageTotal			= 	Damage_Rubinklinge + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -5029,7 +5029,7 @@ INSTANCE ItMw_Rubinklinge_Meisterschmied (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	Damage_Rubinklinge+20;
+	damageTotal			= 	Damage_Rubinklinge + 20;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -5058,7 +5058,7 @@ INSTANCE ItMw_Rubinklinge_Meisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	Damage_Rubinklinge+20+SHARPENED;
+	damageTotal			= 	Damage_Rubinklinge + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -5087,7 +5087,7 @@ INSTANCE ItMw_Rubinklinge_StarkBonus (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	(Damage_Rubinklinge*3)/2;
+	damageTotal			= 	(Damage_Rubinklinge * 3) / 2;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -5116,7 +5116,7 @@ INSTANCE ItMw_Rubinklinge_StarkBonus_Geschaerft (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	((Damage_Rubinklinge*3)/2)+SHARPENED;
+	damageTotal			= 	((Damage_Rubinklinge * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -5145,7 +5145,7 @@ INSTANCE ItMw_Rubinklinge_StarkMeisterschmied (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	((Damage_Rubinklinge+20)*3)/2;
+	damageTotal			= 	((Damage_Rubinklinge + 20) * 3) / 2;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -5174,7 +5174,7 @@ INSTANCE ItMw_Rubinklinge_StarkMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	(((Damage_Rubinklinge+20)*3)/2)+SHARPENED;
+	damageTotal			= 	(((Damage_Rubinklinge + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -5203,7 +5203,7 @@ INSTANCE ItMw_Rubinklinge_StarkBonusMeisterschmied (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	((Damage_Rubinklinge+20)*3)/2;
+	damageTotal			= 	((Damage_Rubinklinge + 20) * 3) / 2;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -5232,7 +5232,7 @@ INSTANCE ItMw_Rubinklinge_StarkBonusMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	(((Damage_Rubinklinge+20)*3)/2)+SHARPENED;
+	damageTotal			= 	(((Damage_Rubinklinge + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -5345,7 +5345,7 @@ INSTANCE ItMw_Zweihaender2_Geschaerft (C_Item)
 
 	value 				=	Value_Zweihaender2;
 
-	damageTotal			= 	Damage_Zweihaender2+SHARPENED;
+	damageTotal			= 	Damage_Zweihaender2 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Zweihaender2;	
 
@@ -5398,7 +5398,7 @@ INSTANCE ItMw_Runenschwert_Geschaerft (C_Item)
 
 	value 				=	Value_Runenschwert;
 
-	damageTotal  		= 	Damage_Runenschwert+SHARPENED;
+	damageTotal  		= 	Damage_Runenschwert + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Runenschwert;		
 
@@ -5478,7 +5478,7 @@ INSTANCE ItMw_Schwert5_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert5;
 
-	damageTotal  		= 	Damage_Schwert5+SHARPENED;
+	damageTotal  		= 	Damage_Schwert5 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert5;		
 
@@ -5558,7 +5558,7 @@ INSTANCE ItMw_Streitaxt2_Geschaerft (C_Item)
 
 	value 				=	Value_Streitaxt2;
 
-	damageTotal  		= 	Damage_Streitaxt2+SHARPENED;
+	damageTotal  		= 	Damage_Streitaxt2 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Streitaxt2;		
 
@@ -5611,7 +5611,7 @@ INSTANCE ItMw_Zweihaender3_Geschaerft (C_Item)
 
 	value 				=	Value_Zweihaender3;
 
-	damageTotal  		= 	Damage_Zweihaender3+SHARPENED;
+	damageTotal  		= 	Damage_Zweihaender3 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Zweihaender3;		
 
@@ -5669,7 +5669,7 @@ INSTANCE ItMw_1H_Special_02_Geschaerft (C_Item)
 
 	value 				=	Value_Special_1H_2;
 
-	damageTotal			= 	Damage_Special_1H_2+SHARPENED;
+	damageTotal			= 	Damage_Special_1H_2 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Special_1H_2;	
 	
@@ -5725,7 +5725,7 @@ INSTANCE ItMw_2H_Special_02_Geschaerft (C_Item)
 
 	value 				=	Value_Special_2H_2;
 
-	damageTotal			= 	Damage_Special_2H_2+SHARPENED;
+	damageTotal			= 	Damage_Special_2H_2 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Special_2H_2;	
 	
@@ -5785,7 +5785,7 @@ INSTANCE ItMw_ElBastardo_Geschaerft (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	Damage_ElBastardo+SHARPENED;
+	damageTotal  		= 	Damage_ElBastardo + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -5814,7 +5814,7 @@ INSTANCE ItMw_ElBastardo_Stark (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	(Damage_ElBastardo*3)/2;
+	damageTotal  		= 	(Damage_ElBastardo * 3) / 2;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -5843,7 +5843,7 @@ INSTANCE ItMw_ElBastardo_Stark_Geschaerft (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	((Damage_ElBastardo*3)/2)+SHARPENED;
+	damageTotal  		= 	((Damage_ElBastardo * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -5901,7 +5901,7 @@ INSTANCE ItMw_ElBastardo_Bonus_Geschaerft (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	Damage_ElBastardo+SHARPENED;
+	damageTotal  		= 	Damage_ElBastardo + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -5930,7 +5930,7 @@ INSTANCE ItMw_ElBastardo_BonusMeisterschmied (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	Damage_ElBastardo+20;
+	damageTotal  		= 	Damage_ElBastardo + 20;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -5959,7 +5959,7 @@ INSTANCE ItMw_ElBastardo_BonusMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	Damage_ElBastardo+20+SHARPENED;
+	damageTotal  		= 	Damage_ElBastardo + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -5988,7 +5988,7 @@ INSTANCE ItMw_ElBastardo_StarkBonus (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	(Damage_ElBastardo*3)/2;
+	damageTotal  		= 	(Damage_ElBastardo * 3) / 2;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -6017,7 +6017,7 @@ INSTANCE ItMw_ElBastardo_StarkBonus_Geschaerft (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	((Damage_ElBastardo*3)/2)+SHARPENED;
+	damageTotal  		= 	((Damage_ElBastardo * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -6046,7 +6046,7 @@ INSTANCE ItMw_ElBastardo_StarkMeisterschmied (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	((Damage_ElBastardo+20)*3)/2;
+	damageTotal  		= 	((Damage_ElBastardo + 20) * 3) / 2;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -6075,7 +6075,7 @@ INSTANCE ItMw_ElBastardo_StarkMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	(((Damage_ElBastardo+20)*3)/2)+SHARPENED;
+	damageTotal  		= 	(((Damage_ElBastardo + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -6104,7 +6104,7 @@ INSTANCE ItMw_ElBastardo_StarkBonusMeisterschmied (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	((Damage_ElBastardo+20)*3)/2;
+	damageTotal  		= 	((Damage_ElBastardo + 20) * 3) / 2;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -6133,7 +6133,7 @@ INSTANCE ItMw_ElBastardo_StarkBonusMeisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	(((Damage_ElBastardo+20)*3)/2)+SHARPENED;
+	damageTotal  		= 	(((Damage_ElBastardo + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -6162,7 +6162,7 @@ INSTANCE ItMw_ElBastardo_Meisterschmied (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	Damage_ElBastardo+20;
+	damageTotal  		= 	Damage_ElBastardo + 20;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -6191,7 +6191,7 @@ INSTANCE ItMw_ElBastardo_Meisterschmied_Geschaerft (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	Damage_ElBastardo+20+SHARPENED;
+	damageTotal  		= 	Damage_ElBastardo + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -6274,7 +6274,7 @@ INSTANCE ItMw_Folteraxt_Geschaerft (C_Item)
 
 	value 				=	Value_Folteraxt;
 
-	damageTotal  		= 	Damage_Folteraxt+SHARPENED;
+	damageTotal  		= 	Damage_Folteraxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_Folteraxt;		
 
@@ -6327,7 +6327,7 @@ INSTANCE ItMw_Zweihaender4_Geschaerft (C_Item)
 
 	value 				=	Value_Zweihaender4;
 
-	damageTotal  		= 	Damage_Zweihaender4+SHARPENED;
+	damageTotal  		= 	Damage_Zweihaender4 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Zweihaender4;		
 
@@ -6380,7 +6380,7 @@ INSTANCE ItMw_Schlachtaxt_Geschaerft (C_Item)
 
 	value 				=	Value_Schlachtaxt;
 
-	damageTotal  		= 	Damage_Schlachtaxt+SHARPENED;
+	damageTotal  		= 	Damage_Schlachtaxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_Schlachtaxt;		
 
@@ -6433,7 +6433,7 @@ INSTANCE ItMw_Krummschwert_Geschaerft (C_Item)
 
 	value 				=	Value_Scimitar;
 
-	damageTotal  		= 	Damage_Scimitar+SHARPENED;
+	damageTotal  		= 	Damage_Scimitar + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Scimitar;		
 
@@ -6486,7 +6486,7 @@ INSTANCE ItMw_Barbarenstreitaxt_Geschaerft (C_Item)
 
 	value 				=	Value_Barbarenstreitaxt;
 
-	damageTotal  		= 	Damage_Barbarenstreitaxt+SHARPENED;
+	damageTotal  		= 	Damage_Barbarenstreitaxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_Barbarenstreitaxt;		
 
@@ -6548,7 +6548,7 @@ INSTANCE ItMw_Berserkeraxt_Geschaerft (C_Item)//Joly:Auf Dracheninsel beim Schwa
 
 	value 				=	Value_Berserkeraxt;
 
-	damageTotal  		= 	Damage_Berserkeraxt+SHARPENED;
+	damageTotal  		= 	Damage_Berserkeraxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_Berserkeraxt;		
 
@@ -6603,7 +6603,7 @@ INSTANCE ItMw_1H_Blessed_01_Geschaerft (C_Item)
 
 	value 				=	Value_Blessed_1H_1;
 
-	damageTotal			= 	Damage_Blessed_1H_1+SHARPENED;
+	damageTotal			= 	Damage_Blessed_1H_1 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Blessed_1H_1;	
 
@@ -6656,7 +6656,7 @@ INSTANCE ItMw_1H_Blessed_02_Geschaerft (C_Item)
 
 	value 				=	Value_Blessed_1H_2;
 
-	damageTotal			= 	Damage_Blessed_1H_2+SHARPENED;
+	damageTotal			= 	Damage_Blessed_1H_2 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Blessed_1H_2;	
 
@@ -6712,7 +6712,7 @@ INSTANCE ItMw_1H_Blessed_03_Geschaerft (C_Item)
 
 	value 				=	Value_Blessed_1H_3;
 
-	damageTotal			= 	Damage_Blessed_1H_3+SHARPENED;
+	damageTotal			= 	Damage_Blessed_1H_3 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Blessed_1H_3;	
 
@@ -6765,7 +6765,7 @@ INSTANCE ItMw_2H_Blessed_01_Geschaerft (C_Item)
 
 	value 				=	Value_Blessed_2H_1;
 
-	damageTotal			= 	Damage_Blessed_2H_1+SHARPENED;
+	damageTotal			= 	Damage_Blessed_2H_1 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Blessed_2H_1;
 
@@ -6818,7 +6818,7 @@ INSTANCE ItMw_2H_Blessed_02_Geschaerft (C_Item)
 
 	value 				=	Value_Blessed_2H_2;
 
-	damageTotal			= 	Damage_Blessed_2H_2+SHARPENED;
+	damageTotal			= 	Damage_Blessed_2H_2 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Blessed_2H_2;		
 
@@ -6873,7 +6873,7 @@ INSTANCE ItMw_2H_Blessed_03_Geschaerft (C_Item)
 
 	value 				=	Value_Blessed_2H_3;
 
-	damageTotal			= 	Damage_Blessed_2H_3+SHARPENED;
+	damageTotal			= 	Damage_Blessed_2H_3 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Blessed_2H_3;		
 
