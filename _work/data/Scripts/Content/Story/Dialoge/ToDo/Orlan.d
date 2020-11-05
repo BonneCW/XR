@@ -289,7 +289,7 @@ FUNC VOID Info_Mod_Orlan_Pedro_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Orlan_Pedro_15_00"); //Ist hier ein Novize reingekommen?
 	AI_Output(self, hero, "Info_Mod_Orlan_Pedro_32_01"); //Außer dir keiner.
-	AI_Output(hero, self, "Info_Mod_Orlan_Pedro_15_02"); //Der Jäger Dragomir behauptet er habe einen Novizen hier rein rennen sehen.
+	AI_Output(hero, self, "Info_Mod_Orlan_Pedro_15_02"); //Der Jäger Dragomir behauptet, er habe einen Novizen hier rein rennen sehen.
 	AI_Output(self, hero, "Info_Mod_Orlan_Pedro_32_03"); //Hier ist kein Novize. Du kannst ja die anderen Besucher hier befragen.
 
 	B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Orlan sagt, dass Pedro nicht in die Taverne gekommen ist. Ich sollte mal ein ernstes Wörtchen mit Dragomir reden.");
