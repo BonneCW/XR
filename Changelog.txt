@@ -35,6 +35,7 @@ Fixes:
 - fixed Lester being both in Relendel and Khorinis
 - blocking all user input now while Schagby and Puzzle are running
 - fixed picking Salt for pirates removing pickaxe
+- fixed Parlan's Ring quest
 
 
 1.0.8
