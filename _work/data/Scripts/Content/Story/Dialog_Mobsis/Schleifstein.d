@@ -700,6 +700,246 @@ FUNC VOID PC_Herd_Sharp_ItMw_ShortSword5_Info()
 	CreateInvItems	(hero, ItMw_ShortSword5_Geschaerft, 1);
 };
 
+// Schwert
+
+INSTANCE PC_Herd_Sharp_ItMw_1H_Common_01 (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_1H_Common_01_Condition;
+	information	= PC_Herd_Sharp_ItMw_1H_Common_01_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_1H_Common_01_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_1H_Common_01)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_1H_Common_01_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_1H_Common_01, 1);
+
+	CreateInvItems	(hero, ItMw_1H_Common_01_Geschaerft, 1);
+};
+
+// Schwert (Bonus)
+
+INSTANCE PC_Herd_Sharp_ItMw_1H_Common_01_Bonus (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_1H_Common_01_Bonus_Condition;
+	information	= PC_Herd_Sharp_ItMw_1H_Common_01_Bonus_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_1H_Common_01_Bonus_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_1H_Common_01_Bonus)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_1H_Common_01_Bonus_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_1H_Common_01_Bonus, 1);
+
+	CreateInvItems	(hero, ItMw_1H_Common_01_Bonus_Geschaerft, 1);
+};
+
+// Schwert (Stark)
+
+INSTANCE PC_Herd_Sharp_ItMw_1H_Common_01_Stark (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_1H_Common_01_Stark_Condition;
+	information	= PC_Herd_Sharp_ItMw_1H_Common_01_Stark_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_1H_Common_01_Stark_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_1H_Common_01_Stark)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_1H_Common_01_Stark_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_1H_Common_01_Stark, 1);
+
+	CreateInvItems	(hero, ItMw_1H_Common_01_Stark_Geschaerft, 1);
+};
+
+// Schwert (Meisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_1H_Common_01_Meisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_1H_Common_01_Meisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_1H_Common_01_Meisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_1H_Common_01_Meisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_1H_Common_01_Meisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_1H_Common_01_Meisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_1H_Common_01_Meisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_1H_Common_01_Meisterschmied_Geschaerft, 1);
+};
+
+// Schwert (StarkBonus)
+
+INSTANCE PC_Herd_Sharp_ItMw_1H_Common_01_StarkBonus (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_1H_Common_01_StarkBonus_Condition;
+	information	= PC_Herd_Sharp_ItMw_1H_Common_01_StarkBonus_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_1H_Common_01_StarkBonus_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_1H_Common_01_StarkBonus)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_1H_Common_01_StarkBonus_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_1H_Common_01_StarkBonus, 1);
+
+	CreateInvItems	(hero, ItMw_1H_Common_01_StarkBonus_Geschaerft, 1);
+};
+
+// Schwert (StarkMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_1H_Common_01_StarkMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_1H_Common_01_StarkMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_1H_Common_01_StarkMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_1H_Common_01_StarkMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_1H_Common_01_StarkMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_1H_Common_01_StarkMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_1H_Common_01_StarkMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_1H_Common_01_StarkMeisterschmied_Geschaerft, 1);
+};
+
+// Schwert (BonusMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_1H_Common_01_BonusMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_1H_Common_01_BonusMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_1H_Common_01_BonusMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_1H_Common_01_BonusMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_1H_Common_01_BonusMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_1H_Common_01_BonusMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_1H_Common_01_BonusMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_1H_Common_01_BonusMeisterschmied_Geschaerft, 1);
+};
+
+// Schwert (StarkBonusMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_1H_Common_01_StarkBonusMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_1H_Common_01_StarkBonusMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_1H_Common_01_StarkBonusMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_1H_Common_01_StarkBonusMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_1H_Common_01_StarkBonusMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_1H_Common_01_StarkBonusMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_1H_Common_01_StarkBonusMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_1H_Common_01_StarkBonusMeisterschmied_Geschaerft, 1);
+};
+
 // Edles Langschwert
 
 INSTANCE PC_Herd_Sharp_ItMw_Schwert4 (C_INFO)
@@ -730,6 +970,216 @@ FUNC VOID PC_Herd_Sharp_ItMw_Schwert4_Info()
 	CreateInvItems	(hero, ItMw_Schwert4_Geschaerft, 1);
 };
 
+// Edles Langschwert (Bonus)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert4_Bonus (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert4_Bonus_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert4_Bonus_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Langschwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert4_Bonus_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert4_Bonus)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert4_Bonus_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert4_Bonus, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert4_Bonus_Geschaerft, 1);
+};
+
+// Edles Langschwert (Stark)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert4_Stark (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert4_Stark_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert4_Stark_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Langschwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert4_Stark_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert4_Stark)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert4_Stark_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert4_Stark, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert4_Stark_Geschaerft, 1);
+};
+
+// Edles Langschwert (Meisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert4_Meisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert4_Meisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert4_Meisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Langschwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert4_Meisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert4_Meisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert4_Meisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert4_Meisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert4_Meisterschmied_Geschaerft, 1);
+};
+
+// Edles Langschwert (StarkBonus)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert4_StarkBonus (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert4_StarkBonus_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert4_StarkBonus_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Langschwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert4_StarkBonus_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert4_StarkBonus)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert4_StarkBonus_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert4_StarkBonus, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert4_StarkBonus_Geschaerft, 1);
+};
+
+// Edles Langschwert (StarkMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert4_StarkMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert4_StarkMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert4_StarkMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Langschwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert4_StarkMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert4_StarkMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert4_StarkMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert4_StarkMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert4_StarkMeisterschmied_Geschaerft, 1);
+};
+
+// Edles Langschwert (BonusMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert4_BonusMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert4_BonusMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert4_BonusMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Langschwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert4_BonusMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert4_BonusMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert4_BonusMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert4_BonusMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert4_BonusMeisterschmied_Geschaerft, 1);
+};
+
+// Edles Langschwert (BonusMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert4_StarkBonusMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert4_StarkBonusMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert4_StarkBonusMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Langschwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert4_StarkBonusMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert4_StarkBonusMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert4_StarkBonusMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert4_StarkBonusMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert4_StarkBonusMeisterschmied_Geschaerft, 1);
+};
+
 // Edles Schwert
 
 INSTANCE PC_Herd_Sharp_ItMw_Schwert1 (C_INFO)
@@ -758,6 +1208,216 @@ FUNC VOID PC_Herd_Sharp_ItMw_Schwert1_Info()
 	Npc_RemoveInvItems	(hero, ItMw_Schwert1, 1);
 
 	CreateInvItems	(hero, ItMw_Schwert1_Geschaerft, 1);
+};
+
+// Edles Schwert (Bonus)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert1_Bonus (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert1_Bonus_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert1_Bonus_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert1_Bonus_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert1_Bonus)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert1_Bonus_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert1_Bonus, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert1_Bonus_Geschaerft, 1);
+};
+
+// Edles Schwert (Stark)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert1_Stark (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert1_Stark_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert1_Stark_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert1_Stark_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert1_Stark)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert1_Stark_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert1_Stark, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert1_Stark_Geschaerft, 1);
+};
+
+// Edles Schwert (Meisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert1_Meisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert1_Meisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert1_Meisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert1_Meisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert1_Meisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert1_Meisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert1_Meisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert1_Meisterschmied_Geschaerft, 1);
+};
+
+// Edles Schwert (StarkBonus)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert1_StarkBonus (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert1_StarkBonus_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert1_StarkBonus_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert1_StarkBonus_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert1_StarkBonus)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert1_StarkBonus_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert1_StarkBonus, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert1_StarkBonus_Geschaerft, 1);
+};
+
+// Edles Schwert (StarkMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert1_StarkMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert1_StarkMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert1_StarkMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert1_StarkMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert1_StarkMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert1_StarkMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert1_StarkMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert1_StarkMeisterschmied_Geschaerft, 1);
+};
+
+// Edles Schwert (BonusMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert1_BonusMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert1_BonusMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert1_BonusMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert1_BonusMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert1_BonusMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert1_BonusMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert1_BonusMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert1_BonusMeisterschmied_Geschaerft, 1);
+};
+
+// Edles Schwert (StarkBonusMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_Schwert1_StarkBonusMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Schwert1_StarkBonusMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_Schwert1_StarkBonusMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Edles Schwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Schwert1_StarkBonusMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Schwert1_StarkBonusMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Schwert1_StarkBonusMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Schwert1_StarkBonusMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_Schwert1_StarkBonusMeisterschmied_Geschaerft, 1);
 };
 
 // Eisenklinge
@@ -880,6 +1540,216 @@ FUNC VOID PC_Herd_Sharp_ItMw_ElBastardo_Info()
 	CreateInvItems	(hero, ItMw_ElBastardo_Geschaerft, 1);
 };
 
+// El Bastardo (Bonus)
+
+INSTANCE PC_Herd_Sharp_ItMw_ElBastardo_Bonus (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_ElBastardo_Bonus_Condition;
+	information	= PC_Herd_Sharp_ItMw_ElBastardo_Bonus_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "El Bastardo schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_ElBastardo_Bonus_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_ElBastardo_Bonus)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_ElBastardo_Bonus_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_ElBastardo_Bonus, 1);
+
+	CreateInvItems	(hero, ItMw_ElBastardo_Bonus_Geschaerft, 1);
+};
+
+// El Bastardo (Meisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_ElBastardo_Meisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_ElBastardo_Meisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_ElBastardo_Meisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "El Bastardo schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_ElBastardo_Meisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_ElBastardo_Meisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_ElBastardo_Meisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_ElBastardo_Meisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_ElBastardo_Meisterschmied_Geschaerft, 1);
+};
+
+// El Bastardo (BonusMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_ElBastardo_BonusMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_ElBastardo_BonusMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_ElBastardo_BonusMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "El Bastardo schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_ElBastardo_BonusMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_ElBastardo_BonusMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_ElBastardo_BonusMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_ElBastardo_BonusMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_ElBastardo_BonusMeisterschmied_Geschaerft, 1);
+};
+
+// El Bastardo (StarkBonusMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_ElBastardo_StarkBonusMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_ElBastardo_StarkBonusMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_ElBastardo_StarkBonusMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "El Bastardo schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_ElBastardo_StarkBonusMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_ElBastardo_StarkBonusMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_ElBastardo_StarkBonusMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_ElBastardo_StarkBonusMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_ElBastardo_StarkBonusMeisterschmied_Geschaerft, 1);
+};
+
+// El Bastardo (StarkBonus)
+
+INSTANCE PC_Herd_Sharp_ItMw_ElBastardo_StarkBonus (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_ElBastardo_StarkBonus_Condition;
+	information	= PC_Herd_Sharp_ItMw_ElBastardo_StarkBonus_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "El Bastardo schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_ElBastardo_StarkBonus_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_ElBastardo_StarkBonus)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_ElBastardo_StarkBonus_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_ElBastardo_StarkBonus, 1);
+
+	CreateInvItems	(hero, ItMw_ElBastardo_StarkBonus_Geschaerft, 1);
+};
+
+// El Bastardo (StarkMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_ElBastardo_StarkMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_ElBastardo_StarkMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_ElBastardo_StarkMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "El Bastardo schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_ElBastardo_StarkMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_ElBastardo_StarkMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_ElBastardo_StarkMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_ElBastardo_StarkMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_ElBastardo_StarkMeisterschmied_Geschaerft, 1);
+};
+
+// El Bastardo (Stark)
+
+INSTANCE PC_Herd_Sharp_ItMw_ElBastardo_Stark (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_ElBastardo_Stark_Condition;
+	information	= PC_Herd_Sharp_ItMw_ElBastardo_Stark_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "El Bastardo schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_ElBastardo_Stark_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_ElBastardo_Stark)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_ElBastardo_Stark_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_ElBastardo_Stark, 1);
+
+	CreateInvItems	(hero, ItMw_ElBastardo_Stark_Geschaerft, 1);
+};
+
 // Enteraxt
 
 INSTANCE PC_Herd_Sharp_ItMw_Addon_PIR1hAxe (C_INFO)
@@ -968,6 +1838,126 @@ FUNC VOID PC_Herd_Sharp_ItMw_Addon_PIR2hSword_Info()
 	Npc_RemoveInvItems	(hero, ItMw_Addon_PIR2hSword, 1);
 
 	CreateInvItems	(hero, ItMw_Addon_PIR2hSword_Geschaerft, 1);
+};
+
+// Erz-Langschwert
+
+INSTANCE PC_Herd_Sharp_ItMw_1H_Special_01 (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_1H_Special_01_Condition;
+	information	= PC_Herd_Sharp_ItMw_1H_Special_01_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Erz-Langschwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_1H_Special_01_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_1H_Special_01)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_1H_Special_01_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_1H_Special_01, 1);
+
+	CreateInvItems	(hero, ItMw_1H_Special_01_Geschaerft, 1);
+};
+
+// Erz-Bastardschwert
+
+INSTANCE PC_Herd_Sharp_ItMw_1H_Special_02 (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_1H_Special_02_Condition;
+	information	= PC_Herd_Sharp_ItMw_1H_Special_02_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Erz-Bastardschwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_1H_Special_02_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_1H_Special_02)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_1H_Special_02_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_1H_Special_02, 1);
+
+	CreateInvItems	(hero, ItMw_1H_Special_02_Geschaerft, 1);
+};
+
+// Erz-Zweihaender
+
+INSTANCE PC_Herd_Sharp_ItMw_2H_Special_01 (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_2H_Special_01_Condition;
+	information	= PC_Herd_Sharp_ItMw_2H_Special_01_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Erz-Zweihänder schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_2H_Special_01_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_2H_Special_01)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_2H_Special_01_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_2H_Special_01, 1);
+
+	CreateInvItems	(hero, ItMw_2H_Special_01_Geschaerft, 1);
+};
+
+// Schwerer Erz-Zweihaender
+
+INSTANCE PC_Herd_Sharp_ItMw_2H_Special_02 (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_2H_Special_02_Condition;
+	information	= PC_Herd_Sharp_ItMw_2H_Special_02_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Schwerer Erz-Zweihänder schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_2H_Special_02_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_2H_Special_02)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_2H_Special_02_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_2H_Special_02, 1);
+
+	CreateInvItems	(hero, ItMw_2H_Special_02_Geschaerft, 1);
 };
 
 // Erz-Drachentöter
@@ -1810,6 +2800,66 @@ FUNC VOID PC_Herd_Sharp_ItMw_2h_Bau_Axe_Info()
 	CreateInvItems	(hero, ItMw_2h_Bau_Axe_Geschaerft, 1);
 };
 
+// Gesegnete Erzklinge
+
+INSTANCE PC_Herd_Sharp_ItMw_1H_Blessed_01 (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_1H_Blessed_01_Condition;
+	information	= PC_Herd_Sharp_ItMw_1H_Blessed_01_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Rohe Erzklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_1H_Blessed_01_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_1H_Blessed_01)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_1H_Blessed_01_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_1H_Blessed_01, 1);
+
+	CreateInvItems	(hero, ItMw_1H_Blessed_01_Geschaerft, 1);
+};
+
+// Gesegnete Erzklinge
+
+INSTANCE PC_Herd_Sharp_ItMw_1H_Blessed_02 (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_1H_Blessed_02_Condition;
+	information	= PC_Herd_Sharp_ItMw_1H_Blessed_02_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Gesegnete Erzklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_1H_Blessed_02_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_1H_Blessed_02)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_1H_Blessed_02_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_1H_Blessed_02, 1);
+
+	CreateInvItems	(hero, ItMw_1H_Blessed_02_Geschaerft, 1);
+};
+
 // Innos Zorn
 
 INSTANCE PC_Herd_Sharp_ItMw_1H_Blessed_03 (C_INFO)
@@ -1820,7 +2870,7 @@ INSTANCE PC_Herd_Sharp_ItMw_1H_Blessed_03 (C_INFO)
 	information	= PC_Herd_Sharp_ItMw_1H_Blessed_03_Info;
 	permanent	= 1;
 	important	= 0;
-	description	= "Innos Zorn schärfen";
+	description	= "Innos' Zorn schärfen";
 };
 
 FUNC INT PC_Herd_Sharp_ItMw_1H_Blessed_03_Condition()
@@ -1838,6 +2888,96 @@ FUNC VOID PC_Herd_Sharp_ItMw_1H_Blessed_03_Info()
 	Npc_RemoveInvItems	(hero, ItMw_1H_Blessed_03, 1);
 
 	CreateInvItems	(hero, ItMw_1H_Blessed_03_Geschaerft, 1);
+};
+
+// Heiliger Vollstrecker
+
+INSTANCE PC_Herd_Sharp_ItMw_2H_Blessed_03 (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_2H_Blessed_03_Condition;
+	information	= PC_Herd_Sharp_ItMw_2H_Blessed_03_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Heiliger Vollstrecker schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_2H_Blessed_03_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_2H_Blessed_03)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_2H_Blessed_03_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_2H_Blessed_03, 1);
+
+	CreateInvItems	(hero, ItMw_2H_Blessed_03_Geschaerft, 1);
+};
+
+// Ordensschwert
+
+INSTANCE PC_Herd_Sharp_ItMw_2H_Blessed_02 (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_2H_Blessed_02_Condition;
+	information	= PC_Herd_Sharp_ItMw_2H_Blessed_02_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Ordensschwert schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_2H_Blessed_02_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_2H_Blessed_02)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_2H_Blessed_02_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_2H_Blessed_02, 1);
+
+	CreateInvItems	(hero, ItMw_2H_Blessed_02_Geschaerft, 1);
+};
+
+// Rohe Erzklinge
+
+INSTANCE PC_Herd_Sharp_ItMw_2H_Blessed_01 (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_2H_Blessed_01_Condition;
+	information	= PC_Herd_Sharp_ItMw_2H_Blessed_01_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Rohe Erzklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_2H_Blessed_01_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_2H_Blessed_01)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_2H_Blessed_01_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_2H_Blessed_01, 1);
+
+	CreateInvItems	(hero, ItMw_2H_Blessed_01_Geschaerft, 1);
 };
 
 // Katana
@@ -3069,6 +4209,216 @@ FUNC VOID PC_Herd_Sharp_ItMw_Rubinklinge_Info()
 	CreateInvItems	(hero, ItMw_Rubinklinge_Geschaerft, 1);
 };
 
+// Rubinklinge (Bonus)
+
+INSTANCE PC_Herd_Sharp_ItMw_Rubinklinge_Bonus (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Rubinklinge_Bonus_Condition;
+	information	= PC_Herd_Sharp_ItMw_Rubinklinge_Bonus_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Rubinklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Rubinklinge_Bonus_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Rubinklinge_Bonus)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Rubinklinge_Bonus_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Rubinklinge_Bonus, 1);
+
+	CreateInvItems	(hero, ItMw_Rubinklinge_Bonus_Geschaerft, 1);
+};
+
+// Rubinklinge (Meisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_Rubinklinge_Meisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Rubinklinge_Meisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_Rubinklinge_Meisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Rubinklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Rubinklinge_Meisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Rubinklinge_Meisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Rubinklinge_Meisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Rubinklinge_Meisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_Rubinklinge_Meisterschmied_Geschaerft, 1);
+};
+
+// Rubinklinge (BonusMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_Rubinklinge_BonusMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Rubinklinge_BonusMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_Rubinklinge_BonusMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Rubinklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Rubinklinge_BonusMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Rubinklinge_BonusMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Rubinklinge_BonusMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Rubinklinge_BonusMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_Rubinklinge_BonusMeisterschmied_Geschaerft, 1);
+};
+
+// Rubinklinge (StarkBonusMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_Rubinklinge_StarkBonusMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Rubinklinge_StarkBonusMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_Rubinklinge_StarkBonusMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Rubinklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Rubinklinge_StarkBonusMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Rubinklinge_StarkBonusMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Rubinklinge_StarkBonusMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Rubinklinge_StarkBonusMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_Rubinklinge_StarkBonusMeisterschmied_Geschaerft, 1);
+};
+
+// Rubinklinge (StarkBonus)
+
+INSTANCE PC_Herd_Sharp_ItMw_Rubinklinge_StarkBonus (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Rubinklinge_StarkBonus_Condition;
+	information	= PC_Herd_Sharp_ItMw_Rubinklinge_StarkBonus_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Rubinklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Rubinklinge_StarkBonus_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Rubinklinge_StarkBonus)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Rubinklinge_StarkBonus_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Rubinklinge_StarkBonus, 1);
+
+	CreateInvItems	(hero, ItMw_Rubinklinge_StarkBonus_Geschaerft, 1);
+};
+
+// Rubinklinge (StarkMeisterschmied)
+
+INSTANCE PC_Herd_Sharp_ItMw_Rubinklinge_StarkMeisterschmied (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Rubinklinge_StarkMeisterschmied_Condition;
+	information	= PC_Herd_Sharp_ItMw_Rubinklinge_StarkMeisterschmied_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Rubinklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Rubinklinge_StarkMeisterschmied_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Rubinklinge_StarkMeisterschmied)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Rubinklinge_StarkMeisterschmied_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Rubinklinge_StarkMeisterschmied, 1);
+
+	CreateInvItems	(hero, ItMw_Rubinklinge_StarkMeisterschmied_Geschaerft, 1);
+};
+
+// Rubinklinge (Stark)
+
+INSTANCE PC_Herd_Sharp_ItMw_Rubinklinge_Stark (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Rubinklinge_Stark_Condition;
+	information	= PC_Herd_Sharp_ItMw_Rubinklinge_Stark_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Rubinklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Rubinklinge_Stark_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Rubinklinge_Stark)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Rubinklinge_Stark_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Rubinklinge_Stark, 1);
+
+	CreateInvItems	(hero, ItMw_Rubinklinge_Stark_Geschaerft, 1);
+};
+
 // Runen - Macht
 
 INSTANCE PC_Herd_Sharp_ItMw_Zweihaender3 (C_INFO)
@@ -3936,7 +5286,7 @@ FUNC VOID PC_Herd_Sharp_ItMw_1H_Sword_Long_05_Info()
 {
 	Npc_RemoveInvItems	(hero, ItMw_1H_Sword_Long_05, 1);
 
-	CreateInvItems	(hero, ItMw_1H_Sword_Long_05, 1);
+	CreateInvItems	(hero, ItMw_1H_Sword_Long_05_Geschaerft, 1);
 };
 
 // Trümmeraxt
@@ -4237,6 +5587,186 @@ FUNC VOID PC_Herd_Sharp_ItMw_Zweiklinge_Info()
 	Npc_RemoveInvItems	(hero, ItMw_Zweiklinge, 1);
 
 	CreateInvItems	(hero, ItMw_Zweiklinge_Geschaerft, 1);
+};
+
+// Hüterklinge 1H
+
+INSTANCE PC_Herd_Sharp_ItMw_Hueterklinge_1H (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Hueterklinge_1H_Condition;
+	information	= PC_Herd_Sharp_ItMw_Hueterklinge_1H_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Hüterklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Hueterklinge_1H_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Hueterklinge_1H)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Hueterklinge_1H_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Hueterklinge_1H, 1);
+
+	CreateInvItems	(hero, ItMw_Hueterklinge_1H_Geschaerft, 1);
+};
+
+// Hüterklinge 2H
+
+INSTANCE PC_Herd_Sharp_ItMw_Hueterklinge_2H (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_Hueterklinge_2H_Condition;
+	information	= PC_Herd_Sharp_ItMw_Hueterklinge_2H_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Hüterklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_Hueterklinge_2H_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_Hueterklinge_2H)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_Hueterklinge_2H_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_Hueterklinge_2H, 1);
+
+	CreateInvItems	(hero, ItMw_Hueterklinge_2H_Geschaerft, 1);
+};
+
+// Alte Hüterklinge 1H
+
+INSTANCE PC_Herd_Sharp_ItMw_AlteHueterklinge_1H (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_AlteHueterklinge_1H_Condition;
+	information	= PC_Herd_Sharp_ItMw_AlteHueterklinge_1H_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Alte Hüterklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_AlteHueterklinge_1H_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_AlteHueterklinge_1H)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_AlteHueterklinge_1H_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_AlteHueterklinge_1H, 1);
+
+	CreateInvItems	(hero, ItMw_AlteHueterklinge_1H_Geschaerft, 1);
+};
+
+// Alte Hüterklinge 2H
+
+INSTANCE PC_Herd_Sharp_ItMw_AlteHueterklinge_2H (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_AlteHueterklinge_2H_Condition;
+	information	= PC_Herd_Sharp_ItMw_AlteHueterklinge_2H_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Alte Hüterklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_AlteHueterklinge_2H_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_AlteHueterklinge_2H)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_AlteHueterklinge_2H_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_AlteHueterklinge_2H, 1);
+
+	CreateInvItems	(hero, ItMw_AlteHueterklinge_2H_Geschaerft, 1);
+};
+
+// Falsche Hüterklinge 1H
+
+INSTANCE PC_Herd_Sharp_ItMw_FalscheHueterklinge_1H (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_FalscheHueterklinge_1H_Condition;
+	information	= PC_Herd_Sharp_ItMw_FalscheHueterklinge_1H_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Falsche Hüterklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_FalscheHueterklinge_1H_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_FalscheHueterklinge_1H)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_FalscheHueterklinge_1H_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_FalscheHueterklinge_1H, 1);
+
+	CreateInvItems	(hero, ItMw_FalscheHueterklinge_1H_Geschaerft, 1);
+};
+
+// Hüterklinge 2H
+
+INSTANCE PC_Herd_Sharp_ItMw_FalscheHueterklinge_2H (C_INFO)
+{
+	npc		= PC_Hero;
+	nr		= 1;
+	condition	= PC_Herd_Sharp_ItMw_FalscheHueterklinge_2H_Condition;
+	information	= PC_Herd_Sharp_ItMw_FalscheHueterklinge_2H_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Falsche Hüterklinge schärfen";
+};
+
+FUNC INT PC_Herd_Sharp_ItMw_FalscheHueterklinge_2H_Condition()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_Schleifstein)
+	&& (Schaerfen_Perk == TRUE)
+	&& (Npc_HasItems(hero, ItMw_FalscheHueterklinge_2H)	>=	1)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID PC_Herd_Sharp_ItMw_FalscheHueterklinge_2H_Info()
+{
+	Npc_RemoveInvItems	(hero, ItMw_FalscheHueterklinge_2H, 1);
+
+	CreateInvItems	(hero, ItMw_FalscheHueterklinge_2H_Geschaerft, 1);
 };
 
 INSTANCE PC_Schleifstein_EXIT (C_INFO)

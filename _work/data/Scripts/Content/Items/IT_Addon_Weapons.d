@@ -76,7 +76,7 @@ INSTANCE ItMW_Addon_Knife01_Geschaerft (C_Item)
 
 	value 				=	Value_Wolfsmesser;
 
-	damageTotal  		= 	Damage_Wolfsmesser+10;
+	damageTotal  		= 	Damage_Wolfsmesser + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Wolfsmesser;		
 	
@@ -430,7 +430,7 @@ INSTANCE ItMW_Addon_Stab05_Geschaerft (C_Item)
 
 	value 				=	Value_Stab05;
 
-	damageTotal  		= 	Damage_Stab05+10;
+	damageTotal  		= 	Damage_Stab05 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_BLUNT;
 	range    			=  	RANGE_Stab05;		
 	
@@ -490,7 +490,7 @@ INSTANCE ItMW_Addon_Hacker_1h_01_Geschaerft (C_Item)
 
 	value 				=	Value_Machete;
 
-	damageTotal			= 	Damage_Machete+10;
+	damageTotal			= 	Damage_Machete + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Machete;	
 	
@@ -549,7 +549,7 @@ INSTANCE ItMW_Addon_Hacker_1h_02_Geschaerft (C_Item)
 
 	value 				=	Value_AltMachete;
 
-	damageTotal			= 	Damage_AltMachete+10;
+	damageTotal			= 	Damage_AltMachete + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_AltMachete;	
 	
@@ -608,7 +608,7 @@ INSTANCE ItMW_Addon_Hacker_2h_01_Geschaerft (C_Item)
 
 	value 				=	Value_Hacker;
 
-	damageTotal			= 	Damage_Hacker+10;
+	damageTotal			= 	Damage_Hacker + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Hacker;	
 	
@@ -667,7 +667,7 @@ INSTANCE ItMW_Addon_Hacker_2h_02_Geschaerft (C_Item)
 
 	value 				=	Value_AltHacker;
 
-	damageTotal			= 	Damage_AltHacker+10;
+	damageTotal			= 	Damage_AltHacker + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_AltHacker;	
 	
@@ -953,7 +953,7 @@ INSTANCE ItMw_FrancisDagger_Mis_Geschaerft (C_Item)
 
 	value 				=	0;
 
-	damageTotal  		= 	Damage_VLKDolch+10;
+	damageTotal  		= 	Damage_VLKDolch + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_VLKDolch;	
 	
@@ -1061,7 +1061,7 @@ INSTANCE ItMw_Addon_PIR2hAxe_Geschaerft (C_Item)
 
 	value 				=	Value_PIR2hAxe;
 
-	damageTotal  		= 	Damage_PIR2hAxe+10;
+	damageTotal  		= 	Damage_PIR2hAxe + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_PIR2hAxe;		
 
@@ -1110,7 +1110,7 @@ INSTANCE ItMw_Addon_PIR2hSword_Geschaerft (C_Item)
 
 	value 				=	Value_PIR2hSword;
 
-	damageTotal  		= 	Damage_PIR2hSword+10;
+	damageTotal  		= 	Damage_PIR2hSword + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_PIR2hAxe;		
 
@@ -1135,7 +1135,7 @@ INSTANCE ItMw_Addon_PIR1hAxe (C_Item)
 
 	value 				=	Value_PIR1hAxe;
 
-	damageTotal  		= 	Damage_PIR1hAxe+10;
+	damageTotal  		= 	Damage_PIR1hAxe + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_PIR1hAxe;		
 
@@ -1159,7 +1159,7 @@ INSTANCE ItMw_Addon_PIR1hAxe_Geschaerft (C_Item)
 
 	value 				=	Value_PIR1hAxe;
 
-	damageTotal  		= 	Damage_PIR1hAxe+10;
+	damageTotal  		= 	Damage_PIR1hAxe + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_PIR1hAxe;		
 
@@ -1208,7 +1208,7 @@ INSTANCE ItMw_Addon_PIR1hSword_Geschaerft (C_Item)
 
 	value 				=	Value_PIR1hSword;
 
-	damageTotal  		= 	Damage_PIR1hSword+10;
+	damageTotal  		= 	Damage_PIR1hSword + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_PIR1hSword;		
 
@@ -1261,7 +1261,7 @@ INSTANCE ItMw_Addon_BanditTrader_Geschaerft (C_Item)
 
 	value 				=	Value_BanditTrader;
 
-	damageTotal  		= 	Damage_VLKSchwert+10;
+	damageTotal  		= 	Damage_VLKSchwert + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_VLKSchwert;		
 
@@ -1317,7 +1317,7 @@ INSTANCE ItMw_Addon_Betty_Geschaerft (C_Item)
 
 	value 				=	Value_Betty;
 
-	damageTotal  		= 	Damage_Betty+10;
+	damageTotal  		= 	Damage_Betty + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 

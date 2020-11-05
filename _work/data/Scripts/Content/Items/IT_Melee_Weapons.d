@@ -138,7 +138,7 @@ INSTANCE ItMw_1H_Sword_03_Geschaerft (C_Item)
 
 	value 				=	104*10;
 
-	damageTotal			= 	64+10;
+	damageTotal			= 	64 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			= 	DAM_EDGE;
 	range    			=  	100;		
 
@@ -187,7 +187,7 @@ INSTANCE ItMw_1H_Sword_Long_04_Geschaerft (C_Item)
 
 	value 				=	860*10;//430;//214
 
-	damageTotal			= 	150+10;
+	damageTotal			= 	150 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			= 	DAM_EDGE;
 	range    			=  	120;		
 
@@ -236,7 +236,7 @@ INSTANCE ItMw_1H_Sword_Long_05_Geschaerft (C_Item)
 
 	value 				=	920*10;//460;//232
 
-	damageTotal			= 	160+10;
+	damageTotal			= 	160 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			= 	DAM_EDGE;
 	range    			=  	120;		
 
@@ -285,7 +285,7 @@ INSTANCE ItMw_1H_Sword_Broad_04_Geschaerft (C_Item)
 
 	value 				=	1400*4;//700;//349
 
-	damageTotal			= 	167+10;
+	damageTotal			= 	167 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			= 	DAM_EDGE;
 	range    			=  	130;		
 
@@ -334,7 +334,7 @@ INSTANCE ItMw_1H_Sword_Bastard_03_Geschaerft (C_Item)
 
 	value 				=	1720*5;//860;//430
 
-	damageTotal			= 	170+10;
+	damageTotal			= 	170 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			= 	DAM_EDGE;
 	range    			=  	130;		
 
@@ -383,7 +383,7 @@ INSTANCE ItMw_2H_Axe_Old_02_Geschaerft (C_Item)
 
 	value 				=	1840*4;//920;//466
 	
-	damageTotal			= 	167+10;
+	damageTotal			= 	167 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	150;		
 
@@ -432,7 +432,7 @@ INSTANCE ItMw_2H_Sword_Light_02_Geschaerft (C_Item)
 
 	value 				=	1950;
 
-	damageTotal			= 	142+10;
+	damageTotal			= 	142 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	150;		
 
@@ -481,7 +481,7 @@ INSTANCE ItMw_AlteHueterklinge_1H_Geschaerft (C_Item)
 
 	value 				=	1050;
 
-	damageTotal			= 	90;
+	damageTotal			= 	90 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	120;		
 
@@ -530,7 +530,7 @@ INSTANCE ItMw_AlteHueterklinge_2H_Geschaerft (C_Item)
 
 	value 				=	1050;
 
-	damageTotal			= 	110;
+	damageTotal			= 	110 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	120;		
 
@@ -579,7 +579,7 @@ INSTANCE ItMw_FalscheHueterklinge_1H_Geschaerft (C_Item)
 
 	value 				=	1550;
 
-	damageTotal			= 	120;
+	damageTotal			= 	120 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	120;		
 
@@ -628,7 +628,7 @@ INSTANCE ItMw_FalscheHueterklinge_2H_Geschaerft (C_Item)
 
 	value 				=	1550;
 
-	damageTotal			= 	140;
+	damageTotal			= 	140 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	120;		
 
@@ -677,7 +677,7 @@ INSTANCE ItMw_Hueterklinge_1H_Geschaerft (C_Item)
 
 	value 				=	1950;
 
-	damageTotal			= 	150;
+	damageTotal			= 	150 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	120;		
 
@@ -726,7 +726,7 @@ INSTANCE ItMw_Hueterklinge_2H_Geschaerft (C_Item)
 
 	value 				=	1950;
 
-	damageTotal			= 	170;
+	damageTotal			= 	170 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	120;		
 
@@ -827,7 +827,7 @@ INSTANCE ItMw_1H_Mace_L_01_Geschaerft (C_Item)
 
 	value 				=	Value_Schuerhaken;
 
-	damageTotal  		= 	Damage_Schuerhaken+10;
+	damageTotal  		= 	Damage_Schuerhaken + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schuerhaken;		
 	
@@ -876,7 +876,7 @@ INSTANCE ItMw_1h_Bau_Axe_Geschaerft (C_Item)
 
 	value 				=	Value_BauAxe;
 
-	damageTotal  		= 	Damage_BauAxe+10;
+	damageTotal  		= 	Damage_BauAxe + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_BauAxe;		
 
@@ -1000,7 +1000,7 @@ INSTANCE ItMw_1h_Vlk_Axe_Geschaerft (C_Item)
 
 	value 				=	Value_VLKAxe;
 
-	damageTotal  		= 	Damage_VLKAxe+10;
+	damageTotal  		= 	Damage_VLKAxe + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_VLKAxe;		
 
@@ -1125,7 +1125,7 @@ INSTANCE ItMw_ShortSword1_Geschaerft (C_Item)
 
 	value 				=	Value_ShortSword1;
 
-	damageTotal  		= 	Damage_ShortSword1+10;
+	damageTotal  		= 	Damage_ShortSword1 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword1;		
 
@@ -1223,7 +1223,7 @@ INSTANCE ItMw_1H_Sword_L_03_Geschaerft (C_Item)
 
 	value 				=	Value_Wolfsklinge;
 
-	damageTotal  		= 	Damage_Wolfsklinge+10;
+	damageTotal  		= 	Damage_Wolfsklinge + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Wolfsklinge;		
 
@@ -1272,7 +1272,7 @@ INSTANCE ItMw_ShortSword2_Geschaerft (C_Item)
 
 	value 				=	Value_ShortSword2;
 
-	damageTotal  		= 	Damage_ShortSword2+10;
+	damageTotal  		= 	Damage_ShortSword2 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword2;		
 
@@ -1346,7 +1346,7 @@ INSTANCE ItMw_Sense_Geschaerft (C_Item)
 
 	value 				=	Value_Sense;
 
-	damageTotal  		= 	Damage_Sense+10;
+	damageTotal  		= 	Damage_Sense + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Sense;		
 
@@ -1447,7 +1447,7 @@ INSTANCE ItMw_2h_Bau_Axe_Geschaerft (C_Item)
 
 	value 				=	Value_Bau2hAxt;
 
-	damageTotal  		= 	Damage_Bau2hAxt+10;
+	damageTotal  		= 	Damage_Bau2hAxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Bau2hAxt;		
 
@@ -1498,7 +1498,7 @@ INSTANCE ItMw_1h_Misc_Axe_Geschaerft (C_Item)
 
 	value 				=	Value_MiscAxe;
 
-	damageTotal  		= 	Damage_MiscAxe+10;
+	damageTotal  		= 	Damage_MiscAxe + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_MiscAxe;		
 
@@ -1549,7 +1549,7 @@ INSTANCE ItMw_1h_Mil_Sword_Geschaerft (C_Item)
 
 	value 				=	Value_MilSchwert;
 
-	damageTotal  		= 	Damage_MilSchwert+10;
+	damageTotal  		= 	Damage_MilSchwert + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_MilSchwert;		
 
@@ -1598,7 +1598,7 @@ INSTANCE ItMw_1h_Sld_Axe_Geschaerft (C_Item)
 
 	value 				=	Value_Sld1hAxt;
 
-	damageTotal  		= 	Damage_Sld1hAxt+10;
+	damageTotal  		= 	Damage_Sld1hAxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Sld1hAxt;		
 
@@ -1647,7 +1647,7 @@ INSTANCE ItMw_1h_Sld_Sword_Geschaerft (C_Item)
 
 	value 				=	Value_Sld1hSchwert;
 
-	damageTotal  		= 	Damage_Sld1hSchwert+10;
+	damageTotal  		= 	Damage_Sld1hSchwert + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Sld1hSchwert;		
 
@@ -1722,7 +1722,7 @@ INSTANCE ItMw_2h_Sld_Axe_Geschaerft (C_Item)
 
 	value 				=	Value_Sld2hAxe;
 
-	damageTotal  		= 	Damage_Sld2hAxe+10;
+	damageTotal  		= 	Damage_Sld2hAxe + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Sld2hAxe;		
 
@@ -1771,7 +1771,7 @@ INSTANCE ItMw_2h_Sld_Sword_Geschaerft (C_Item)
 
 	value 				=	Value_Sld2hSchwert;
 
-	damageTotal  		= 	Damage_Sld2hSchwert+10;
+	damageTotal  		= 	Damage_Sld2hSchwert + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Sld2hSchwert;		
 
@@ -1820,7 +1820,7 @@ INSTANCE ItMw_1h_Pal_Sword_Geschaerft (C_Item)
 
 	value 				=	Value_PalSchwert;
 
-	damageTotal  		= 	Damage_PalSchwert+10;
+	damageTotal  		= 	Damage_PalSchwert + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_PalSchwert;		
 
@@ -1869,7 +1869,7 @@ INSTANCE ItMw_2h_Pal_Sword_Geschaerft (C_Item)
 
 	value 				=	Value_PalZweihaender;
 
-	damageTotal  		= 	Damage_PalZweihaender+10;
+	damageTotal  		= 	Damage_PalZweihaender + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_PalZweihaender;		
 
@@ -1924,7 +1924,7 @@ INSTANCE ItMw_2H_OrcAxe_01_Geschaerft (C_Item)
 
 	value 				=	Value_Orkaxt_01;
 
-	damageTotal			= 	Damage_Orkaxt_01+10;
+	damageTotal			= 	Damage_Orkaxt_01 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Orkaxt_01;		
 
@@ -1973,7 +1973,7 @@ INSTANCE ItMw_2H_OrcAxe_02_Geschaerft (C_Item)
 
 	value 				=	Value_Orkaxt_02;
 
-	damageTotal			= 	Damage_Orkaxt_02+10;
+	damageTotal			= 	Damage_Orkaxt_02 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Orkaxt_02;		
 
@@ -2022,7 +2022,7 @@ INSTANCE ItMw_2H_OrcAxe_03_Geschaerft (C_Item)
 
 	value 				=	Value_Orkaxt_03;
 
-	damageTotal			= 	Damage_Orkaxt_03+10;
+	damageTotal			= 	Damage_Orkaxt_03 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Orkaxt_03;		
 
@@ -2071,7 +2071,7 @@ INSTANCE ItMw_2H_OrcAxe_04_Geschaerft (C_Item)
 
 	value 				=	Value_Orkaxt_04;
 
-	damageTotal			= 	Damage_Orkaxt_04+10;
+	damageTotal			= 	Damage_Orkaxt_04 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Orkaxt_04;		
 
@@ -2120,7 +2120,7 @@ INSTANCE ItMw_2H_OrcSword_01_Geschaerft (C_Item) // *** für Drakonier!!! ***
 
 	value 				=	Value_Orkschwert;
 
-	damageTotal			= 	Damage_Orkschwert+10;
+	damageTotal			= 	Damage_Orkschwert + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Orkschwert;		
 
@@ -2169,7 +2169,7 @@ INSTANCE ItMw_2H_OrcSword_02_Geschaerft (C_Item) // *** für Orcritter!!! ***
 
 	value 				=	Value_Orkschwert_01;
 
-	damageTotal			= 	Damage_Orkschwert_01+10;
+	damageTotal			= 	Damage_Orkschwert_01 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Orkschwert_01;		
 
@@ -2222,7 +2222,7 @@ INSTANCE ItMw_ShortSword3_Geschaerft (C_Item)
 
 	value 				=	Value_ShortSword3;
 
-	damageTotal  		= 	Damage_ShortSword3+10;
+	damageTotal  		= 	Damage_ShortSword3 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword3;		
 
@@ -2296,7 +2296,7 @@ INSTANCE ItMw_ShortSword4_Geschaerft (C_Item)
 
 	value 				=	Value_ShortSword4;
 
-	damageTotal  		= 	Damage_ShortSword4+10;
+	damageTotal  		= 	Damage_ShortSword4 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword4;		
 
@@ -2370,7 +2370,7 @@ INSTANCE ItMw_Richtstab_Geschaerft (C_Item)
 
 	value 				=	Value_Richtstab;
 
-	damageTotal  		= 	Damage_Richtstab+10;
+	damageTotal  		= 	Damage_Richtstab + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Richtstab;		
 
@@ -2419,7 +2419,7 @@ INSTANCE ItMw_ShortSword5_Geschaerft (C_Item)
 
 	value 				=	Value_ShortSword5;
 
-	damageTotal  		= 	Damage_ShortSword5+10;
+	damageTotal  		= 	Damage_ShortSword5 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword5;		
 
@@ -2493,7 +2493,7 @@ INSTANCE ItMw_Hellebarde_Geschaerft (C_Item)
 
 	value 				=	Value_Hellebarde;
 
-	damageTotal			= 	Damage_Hellebarde+10;
+	damageTotal			= 	Damage_Hellebarde + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Hellebarde;		
 
@@ -2567,7 +2567,7 @@ INSTANCE ItMw_Schiffsaxt_Geschaerft (C_Item)
 
 	value 				=	Value_Schiffsaxt;
 
-	damageTotal  		= 	Damage_Schiffsaxt+10;
+	damageTotal  		= 	Damage_Schiffsaxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schiffsaxt;		
 
@@ -2618,7 +2618,7 @@ INSTANCE ItMw_Piratensaebel_Geschaerft (C_Item)
 
 	value 				=	Value_Piratensaebel;
 
-	damageTotal  		= 	Damage_Piratensaebel+10;
+	damageTotal  		= 	Damage_Piratensaebel + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Piratensaebel;		
 
@@ -2719,7 +2719,7 @@ INSTANCE ItMw_Schwert_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert;
 
-	damageTotal  		= 	Damage_Schwert+10;
+	damageTotal  		= 	Damage_Schwert + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert;		
 
@@ -2778,7 +2778,7 @@ INSTANCE ItMw_HakonSchwert_02 (C_Item)
 	visual 				=	"ItMw_030_1h_sword_long_01.3DS";
 
 	description			= name;
-	//TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -2814,6 +2814,33 @@ INSTANCE ItMw_1H_Common_01 (C_Item)
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_05;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
+INSTANCE ItMw_1H_Common_01_Geschaerft (C_Item) 
+{	
+	name 				=	"Schwert (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Common1;
+
+	damageTotal			= 	Damage_Common1 + DAMAGE_BONUS_SHARPENED;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Common1;	
+
+	on_equip			=	Equip_1H_05;
+	on_unequip			=	UnEquip_1H_05;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Common1;
+	visual 				=	"ItMw_030_1h_Common_Sword_01.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_05;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
 INSTANCE ItMw_1H_Common_01_Stark (C_Item) 
 {	
 	name 				=	NAME_ItMw_1H_Common_01;
@@ -2824,7 +2851,34 @@ INSTANCE ItMw_1H_Common_01_Stark (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	(Damage_Common1*3)/2;
+	damageTotal			= 	(Damage_Common1 * 3) / 2;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Common1;	
+
+	on_equip			=	Equip_1H_05;
+	on_unequip			=	UnEquip_1H_05;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Common1;
+	visual 				=	"ItMw_030_1h_Common_Sword_01.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_05;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_1H_Common_01_Stark_Geschaerft (C_Item) 
+{	
+	name 				=	"Schwert (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Common1;
+
+	damageTotal			= 	((Damage_Common1 * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -2868,6 +2922,33 @@ INSTANCE ItMw_1H_Common_01_Bonus (C_Item)
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
+INSTANCE ItMw_1H_Common_01_Bonus_Geschaerft (C_Item) 
+{	
+	name 				=	"Schwert (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Common1;
+
+	damageTotal			= 	Damage_Common1 + DAMAGE_BONUS_SHARPENED;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Common1;	
+
+	on_equip			=	Equip_1H_10;
+	on_unequip			=	UnEquip_1H_10;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Common1;
+	visual 				=	"ItMw_030_1h_Common_Sword_01.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
 INSTANCE ItMw_1H_Common_01_BonusMeisterschmied (C_Item) 
 {	
 	name 				=	NAME_ItMw_1H_Common_01;
@@ -2878,7 +2959,34 @@ INSTANCE ItMw_1H_Common_01_BonusMeisterschmied (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	Damage_Common1+20;
+	damageTotal			= 	Damage_Common1 + 20;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Common1;	
+
+	on_equip			=	Equip_1H_10;
+	on_unequip			=	UnEquip_1H_10;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Common1;
+	visual 				=	"ItMw_030_1h_Common_Sword_01.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_1H_Common_01_BonusMeisterschmied_Geschaerft (C_Item) 
+{	
+	name 				=	"Schwert (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Common1;
+
+	damageTotal			= 	Damage_Common1 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -2905,7 +3013,34 @@ INSTANCE ItMw_1H_Common_01_Meisterschmied (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	Damage_Common1+20;
+	damageTotal			= 	Damage_Common1 + 20;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Common1;	
+
+	on_equip			=	Equip_1H_05;
+	on_unequip			=	UnEquip_1H_05;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Common1;
+	visual 				=	"ItMw_030_1h_Common_Sword_01.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_05;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_1H_Common_01_Meisterschmied_Geschaerft (C_Item) 
+{	
+	name 				=	"Schwert (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Common1;
+
+	damageTotal			= 	Damage_Common1 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -2932,7 +3067,34 @@ INSTANCE ItMw_1H_Common_01_StarkBonus (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	(Damage_Common1*3)/2;
+	damageTotal			= 	(Damage_Common1 * 3) / 2;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Common1;	
+
+	on_equip			=	Equip_1H_10;
+	on_unequip			=	UnEquip_1H_10;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Common1;
+	visual 				=	"ItMw_030_1h_Common_Sword_01.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_1H_Common_01_StarkBonus_Geschaerft (C_Item) 
+{	
+	name 				=	"Schwert (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Common1;
+
+	damageTotal			= 	((Damage_Common1 * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -2959,7 +3121,34 @@ INSTANCE ItMw_1H_Common_01_StarkBonusMeisterschmied (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	((Damage_Common1+20)*3)/2;
+	damageTotal			= 	((Damage_Common1 + 20) * 3) / 2;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Common1;	
+
+	on_equip			=	Equip_1H_10;
+	on_unequip			=	UnEquip_1H_10;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Common1;
+	visual 				=	"ItMw_030_1h_Common_Sword_01.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_1H_Common_01_StarkBonusMeisterschmied_Geschaerft (C_Item) 
+{	
+	name 				=	"Schwert (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Common1;
+
+	damageTotal			= 	(((Damage_Common1 + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -2986,7 +3175,34 @@ INSTANCE ItMw_1H_Common_01_StarkMeisterschmied (C_Item)
 
 	value 				=	Value_Common1;
 
-	damageTotal			= 	((Damage_Common1+20)*3)/2;
+	damageTotal			= 	((Damage_Common1 + 20) * 3) / 2;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Common1;	
+
+	on_equip			=	Equip_1H_05;
+	on_unequip			=	UnEquip_1H_05;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Common1;
+	visual 				=	"ItMw_030_1h_Common_Sword_01.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_05;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_1H_Common_01_StarkMeisterschmied_Geschaerft (C_Item) 
+{	
+	name 				=	"Schwert (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Common1;
+
+	damageTotal			= 	(((Damage_Common1 + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Common1;	
 
@@ -3091,7 +3307,7 @@ INSTANCE ItMw_Zweihaender1_Geschaerft (C_Item)
 
 	value 				=	Value_Zweihaender1;
 
-	damageTotal			= 	Damage_Zweihaender1+10;
+	damageTotal			= 	Damage_Zweihaender1 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Zweihaender1;		
 
@@ -3140,7 +3356,7 @@ INSTANCE ItMw_2H_Sword_Light_01_Geschaerft (C_Item)
 
 	value 				=	Value_Zweihaender1;
 
-	damageTotal			= 	Damage_Zweihaender1+10;
+	damageTotal			= 	Damage_Zweihaender1 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Zweihaender1;		
 
@@ -3243,7 +3459,7 @@ INSTANCE ItMw_Streitaxt1_Geschaerft (C_Item)
 
 	value 				=	Value_Streitaxt1;
 
-	damageTotal			= 	Damage_Streitaxt1+10;
+	damageTotal			= 	Damage_Streitaxt1 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Streitaxt1;		
 
@@ -3295,7 +3511,7 @@ INSTANCE ItMw_Schwert1_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	Damage_Schwert1+10;
+	damageTotal  		= 	Damage_Schwert1 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3322,7 +3538,34 @@ INSTANCE ItMw_Schwert1_Stark (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	(Damage_Schwert1*3)/2;
+	damageTotal  		= 	(Damage_Schwert1 * 3) / 2;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	Range_Schwert1;		
+
+	on_equip			=	Equip_1H_05;
+	on_unequip			=	UnEquip_1H_05;
+	
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert1;
+	visual 				=	"ItMw_035_1h_Sword_04.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_05;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Schwert1_Stark_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Schwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert1;
+
+	damageTotal  		= 	((Damage_Schwert1 * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3366,6 +3609,33 @@ INSTANCE ItMw_Schwert1_Bonus (C_Item)
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
+INSTANCE ItMw_Schwert1_Bonus_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Schwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert1;
+
+	damageTotal  		= 	Damage_Schwert1 + DAMAGE_BONUS_SHARPENED;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	Range_Schwert1;		
+
+	on_equip			=	Equip_1H_10;
+	on_unequip			=	UnEquip_1H_10;
+	
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert1;
+	visual 				=	"ItMw_035_1h_Sword_04.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
 INSTANCE ItMw_Schwert1_BonusMeisterschmied (C_Item)
 {	
 	name 				=	"Edles Schwert";  
@@ -3376,7 +3646,34 @@ INSTANCE ItMw_Schwert1_BonusMeisterschmied (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	Damage_Schwert1+20;
+	damageTotal  		= 	Damage_Schwert1 + 20;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	Range_Schwert1;		
+
+	on_equip			=	Equip_1H_10;
+	on_unequip			=	UnEquip_1H_10;
+	
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert1;
+	visual 				=	"ItMw_035_1h_Sword_04.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Schwert1_BonusMeisterschmied_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Schwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert1;
+
+	damageTotal  		= 	Damage_Schwert1 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3403,7 +3700,34 @@ INSTANCE ItMw_Schwert1_Meisterschmied (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	Damage_Schwert1+20;
+	damageTotal  		= 	Damage_Schwert1 + 20;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	Range_Schwert1;		
+
+	on_equip			=	Equip_1H_05;
+	on_unequip			=	UnEquip_1H_05;
+	
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert1;
+	visual 				=	"ItMw_035_1h_Sword_04.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_05;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Schwert1_Meisterschmied_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Schwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert1;
+
+	damageTotal  		= 	Damage_Schwert1 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3430,7 +3754,34 @@ INSTANCE ItMw_Schwert1_StarkBonus (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	Damage_Schwert1+20;
+	damageTotal  		= 	Damage_Schwert1 + 20;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	Range_Schwert1;		
+
+	on_equip			=	Equip_1H_10;
+	on_unequip			=	UnEquip_1H_10;
+	
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert1;
+	visual 				=	"ItMw_035_1h_Sword_04.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Schwert1_StarkBonus_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Schwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert1;
+
+	damageTotal  		= 	Damage_Schwert1 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3457,7 +3808,34 @@ INSTANCE ItMw_Schwert1_StarkMeisterschmied (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	((Damage_Schwert1+20)*3)/2;
+	damageTotal  		= 	((Damage_Schwert1 + 20) * 3) / 2;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	Range_Schwert1;		
+
+	on_equip			=	Equip_1H_05;
+	on_unequip			=	UnEquip_1H_05;
+	
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert1;
+	visual 				=	"ItMw_035_1h_Sword_04.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_05;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Schwert1_StarkMeisterschmied_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Schwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert1;
+
+	damageTotal  		= 	(((Damage_Schwert1 + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3484,7 +3862,34 @@ INSTANCE ItMw_Schwert1_StarkBonusMeisterschmied (C_Item)
 
 	value 				=	Value_Schwert1;
 
-	damageTotal  		= 	((Damage_Schwert1+20)*3)/2;
+	damageTotal  		= 	((Damage_Schwert1 + 20) * 3) / 2;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	Range_Schwert1;		
+
+	on_equip			=	Equip_1H_10;
+	on_unequip			=	UnEquip_1H_10;
+	
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert1;
+	visual 				=	"ItMw_035_1h_Sword_04.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Schwert1_StarkBonusMeisterschmied_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Schwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert1;
+
+	damageTotal  		= 	(((Damage_Schwert1 + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert1;		
 
@@ -3538,7 +3943,7 @@ INSTANCE ItMw_Schwert2_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert2;
 
-	damageTotal  		= 	Damage_Schwert2+10;
+	damageTotal  		= 	Damage_Schwert2 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert2;		
 
@@ -3591,7 +3996,7 @@ INSTANCE ItMw_Doppelaxt_Geschaerft (C_Item)
 
 	value 				=	Value_Doppelaxt;
 
-	damageTotal			= 	Damage_Doppelaxt+10;
+	damageTotal			= 	Damage_Doppelaxt + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Doppelaxt;		
 
@@ -3644,7 +4049,7 @@ INSTANCE ItMw_Bartaxt_Geschaerft (C_Item)
 
 	value 				=	Value_Bartaxt;
 
-	damageTotal			= 	Damage_Bartaxt+10;
+	damageTotal			= 	Damage_Bartaxt + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Bartaxt;		
 
@@ -3724,7 +4129,7 @@ INSTANCE ItMw_Schwert3_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert3;
 
-	damageTotal  		= 	Damage_Schwert3+10;
+	damageTotal  		= 	Damage_Schwert3 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert3;		
 
@@ -3778,7 +4183,7 @@ INSTANCE ItMw_Schwert4_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	Damage_Schwert4+10;
+	damageTotal  		= 	Damage_Schwert4 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -3805,7 +4210,36 @@ INSTANCE ItMw_Schwert4_Stark (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	(Damage_Schwert4*3)/2;
+	damageTotal  		= 	(Damage_Schwert4 * 3) / 2;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	RANGE_Schwert4;		
+
+	on_equip			=	Equip_1H_06;
+	on_unequip			=	UnEquip_1H_06;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert4;
+	visual 				=	"ItMw_045_1h_Sword_long_04.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_06;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Schwert4_Stark_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Langschwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert4;
+
+	damageTotal  		= 	((Damage_Schwert4 * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -3853,6 +4287,35 @@ INSTANCE ItMw_Schwert4_Bonus (C_Item)
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_11;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
+INSTANCE ItMw_Schwert4_Bonus_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Langschwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert4;
+
+	damageTotal  		= 	Damage_Schwert4 + DAMAGE_BONUS_SHARPENED;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	RANGE_Schwert4;		
+
+	on_equip			=	Equip_1H_11;
+	on_unequip			=	UnEquip_1H_11;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert4;
+	visual 				=	"ItMw_045_1h_Sword_long_04.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_11;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
 INSTANCE ItMw_Schwert4_BonusMeisterschmied (C_Item)
 {	
 	name 				=	"Edles Langschwert";  
@@ -3863,7 +4326,36 @@ INSTANCE ItMw_Schwert4_BonusMeisterschmied (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	Damage_Schwert4+20;
+	damageTotal  		= 	Damage_Schwert4 + 20;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	RANGE_Schwert4;		
+
+	on_equip			=	Equip_1H_11;
+	on_unequip			=	UnEquip_1H_11;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert4;
+	visual 				=	"ItMw_045_1h_Sword_long_04.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_11;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Schwert4_BonusMeisterschmied_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Langschwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert4;
+
+	damageTotal  		= 	Damage_Schwert4 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -3892,7 +4384,36 @@ INSTANCE ItMw_Schwert4_Meisterschmied (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	Damage_Schwert4+20;
+	damageTotal  		= 	Damage_Schwert4 + 20;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	RANGE_Schwert4;		
+
+	on_equip			=	Equip_1H_06;
+	on_unequip			=	UnEquip_1H_06;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert4;
+	visual 				=	"ItMw_045_1h_Sword_long_04.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_06;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Schwert4_Meisterschmied_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Langschwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert4;
+
+	damageTotal  		= 	Damage_Schwert4 + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -3921,7 +4442,36 @@ INSTANCE ItMw_Schwert4_StarkBonus (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	(Damage_Schwert4*3)/2;
+	damageTotal  		= 	(Damage_Schwert4 * 3) / 2;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	RANGE_Schwert4;		
+
+	on_equip			=	Equip_1H_11;
+	on_unequip			=	UnEquip_1H_11;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert4;
+	visual 				=	"ItMw_045_1h_Sword_long_04.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_11;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Schwert4_StarkBonus_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Langschwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert4;
+
+	damageTotal  		= 	((Damage_Schwert4 * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -3950,7 +4500,36 @@ INSTANCE ItMw_Schwert4_StarkMeisterschmied (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	((Damage_Schwert4+20)*3)/2;
+	damageTotal  		= 	((Damage_Schwert4 + 20) * 3) / 2;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	RANGE_Schwert4;		
+
+	on_equip			=	Equip_1H_06;
+	on_unequip			=	UnEquip_1H_06;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert4;
+	visual 				=	"ItMw_045_1h_Sword_long_04.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_06;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Schwert4_StarkMeisterschmied_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Langschwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert4;
+
+	damageTotal  		= 	(((Damage_Schwert4 + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -3979,7 +4558,36 @@ INSTANCE ItMw_Schwert4_StarkBonusMeisterschmied (C_Item)
 
 	value 				=	Value_Schwert4;
 
-	damageTotal  		= 	((Damage_Schwert4+20)*3)/2;
+	damageTotal  		= 	((Damage_Schwert4 + 20) * 3) / 2;
+	damagetype 			=	DAM_EDGE;
+	range    			=  	RANGE_Schwert4;		
+
+	on_equip			=	Equip_1H_11;
+	on_unequip			=	UnEquip_1H_11;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_Schwert4;
+	visual 				=	"ItMw_045_1h_Sword_long_04.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_11;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Schwert4_StarkBonusMeisterschmied_Geschaerft (C_Item)
+{	
+	name 				=	"Edles Langschwert (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Schwert4;
+
+	damageTotal  		= 	(((Damage_Schwert4 + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Schwert4;		
 
@@ -4025,11 +4633,42 @@ INSTANCE ItMw_1H_Special_01 (C_Item)
 
 	description			= name;
 	
-	TEXT[0]				= NAME_Damage;					COUNT[0]	= damageTotal;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[2]				= NAME_ADDON_BONUS_1H;			COUNT[2]	= Waffenbonus_10;
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
+INSTANCE ItMw_1H_Special_01_Geschaerft (C_Item) 
+{	
+	name 				=	"Erz-Langschwert (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Special_1H_1;
+	
+	damageTotal			= 	Damage_Special_1H_1 + DAMAGE_BONUS_SHARPENED;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Special_1H_1;	
+	
+	on_equip			=	Equip_1H_10;
+	on_unequip			=	UnEquip_1H_10;
+	
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Special_1H_1;
+	visual 				=	"ItMw_045_1h_Sword_smith_02.3DS";
+
+	description			= name;
+	
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+
+
 /********************************************************************************/
 INSTANCE ItMw_2H_Special_01 (C_Item) 
 {	
@@ -4055,7 +4694,34 @@ INSTANCE ItMw_2H_Special_01 (C_Item)
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[2]				= NAME_ADDON_BONUS_2H;			COUNT[2]	= Waffenbonus_10;
+	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_10;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_2H_Special_01_Geschaerft (C_Item) 
+{	
+	name 				=	"Erz-Zweihänder (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Special_2H_1;
+
+	damageTotal			= 	Damage_Special_2H_1 + DAMAGE_BONUS_SHARPENED;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Special_2H_1;	
+	
+	on_equip			=	Equip_2H_10;
+	on_unequip			=	UnEquip_2H_10;
+	
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Special_2H_1;
+	visual 				=	"ItMw_050_2h_Sword_smith_02.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_10;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 /********************************************************************************/
@@ -4101,7 +4767,7 @@ INSTANCE ItMw_Rapier_Geschaerft (C_Item)
 
 	value 				=	Value_Rapier;
 
-	damageTotal			= 	Damage_Rapier+10;
+	damageTotal			= 	Damage_Rapier + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rapier;	
 
@@ -4160,7 +4826,7 @@ INSTANCE ItMw_Rubinklinge_Geschaerft (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	Damage_Rubinklinge+10;
+	damageTotal			= 	Damage_Rubinklinge + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -4189,7 +4855,36 @@ INSTANCE ItMw_Rubinklinge_Stark (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	(Damage_Rubinklinge*3)/2;
+	damageTotal			= 	(Damage_Rubinklinge * 3) / 2;
+	damagetype			=	DAM_EDGE;		
+	range    			=  	Range_Rubinklinge;	
+
+	on_equip			=	Equip_1H_07;
+	on_unequip			=	UnEquip_1H_07;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;  
+	cond_value[2]  		= 	Condition_Rubinklinge;
+	visual 				=	"ItMw_050_1h_sword_05.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_07;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Rubinklinge_Stark_Geschaerft (C_Item) 
+{	
+	name 				=	"Rubinklinge (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Rubinklinge;
+
+	damageTotal			= 	((Damage_Rubinklinge * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -4237,6 +4932,35 @@ INSTANCE ItMw_Rubinklinge_Bonus (C_Item)
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_12;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
+INSTANCE ItMw_Rubinklinge_Bonus_Geschaerft (C_Item) 
+{	
+	name 				=	"Rubinklinge (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Rubinklinge;
+
+	damageTotal			= 	Damage_Rubinklinge + DAMAGE_BONUS_SHARPENED;
+	damagetype			=	DAM_EDGE;		
+	range    			=  	Range_Rubinklinge;	
+
+	on_equip			=	Equip_1H_12;
+	on_unequip			=	UnEquip_1H_12;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;  
+	cond_value[2]  		= 	Condition_Rubinklinge;
+	visual 				=	"ItMw_050_1h_sword_05.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_12;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
 INSTANCE ItMw_Rubinklinge_BonusMeisterschmied (C_Item) 
 {	
 	name 				=	"Rubinklinge";
@@ -4247,7 +4971,36 @@ INSTANCE ItMw_Rubinklinge_BonusMeisterschmied (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	Damage_Rubinklinge+20;
+	damageTotal			= 	Damage_Rubinklinge + 20;
+	damagetype			=	DAM_EDGE;		
+	range    			=  	Range_Rubinklinge;	
+
+	on_equip			=	Equip_1H_12;
+	on_unequip			=	UnEquip_1H_12;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;  
+	cond_value[2]  		= 	Condition_Rubinklinge;
+	visual 				=	"ItMw_050_1h_sword_05.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_12;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Rubinklinge_BonusMeisterschmied_Geschaerft (C_Item) 
+{	
+	name 				=	"Rubinklinge (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Rubinklinge;
+
+	damageTotal			= 	Damage_Rubinklinge + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -4276,7 +5029,36 @@ INSTANCE ItMw_Rubinklinge_Meisterschmied (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	Damage_Rubinklinge+20;
+	damageTotal			= 	Damage_Rubinklinge + 20;
+	damagetype			=	DAM_EDGE;		
+	range    			=  	Range_Rubinklinge;	
+
+	on_equip			=	Equip_1H_07;
+	on_unequip			=	UnEquip_1H_07;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;  
+	cond_value[2]  		= 	Condition_Rubinklinge;
+	visual 				=	"ItMw_050_1h_sword_05.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_07;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Rubinklinge_Meisterschmied_Geschaerft (C_Item) 
+{	
+	name 				=	"Rubinklinge (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Rubinklinge;
+
+	damageTotal			= 	Damage_Rubinklinge + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -4305,7 +5087,36 @@ INSTANCE ItMw_Rubinklinge_StarkBonus (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	(Damage_Rubinklinge*3)/2;
+	damageTotal			= 	(Damage_Rubinklinge * 3) / 2;
+	damagetype			=	DAM_EDGE;		
+	range    			=  	Range_Rubinklinge;	
+
+	on_equip			=	Equip_1H_12;
+	on_unequip			=	UnEquip_1H_12;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;  
+	cond_value[2]  		= 	Condition_Rubinklinge;
+	visual 				=	"ItMw_050_1h_sword_05.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_12;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Rubinklinge_StarkBonus_Geschaerft (C_Item) 
+{	
+	name 				=	"Rubinklinge (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Rubinklinge;
+
+	damageTotal			= 	((Damage_Rubinklinge * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -4334,7 +5145,36 @@ INSTANCE ItMw_Rubinklinge_StarkMeisterschmied (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	((Damage_Rubinklinge+20)*3)/2;
+	damageTotal			= 	((Damage_Rubinklinge + 20) * 3) / 2;
+	damagetype			=	DAM_EDGE;		
+	range    			=  	Range_Rubinklinge;	
+
+	on_equip			=	Equip_1H_07;
+	on_unequip			=	UnEquip_1H_07;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;  
+	cond_value[2]  		= 	Condition_Rubinklinge;
+	visual 				=	"ItMw_050_1h_sword_05.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_07;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Rubinklinge_StarkMeisterschmied_Geschaerft (C_Item) 
+{	
+	name 				=	"Rubinklinge (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Rubinklinge;
+
+	damageTotal			= 	(((Damage_Rubinklinge + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -4363,7 +5203,36 @@ INSTANCE ItMw_Rubinklinge_StarkBonusMeisterschmied (C_Item)
 
 	value 				=	Value_Rubinklinge;
 
-	damageTotal			= 	((Damage_Rubinklinge+20)*3)/2;
+	damageTotal			= 	((Damage_Rubinklinge + 20) * 3) / 2;
+	damagetype			=	DAM_EDGE;		
+	range    			=  	Range_Rubinklinge;	
+
+	on_equip			=	Equip_1H_12;
+	on_unequip			=	UnEquip_1H_12;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;  
+	cond_value[2]  		= 	Condition_Rubinklinge;
+	visual 				=	"ItMw_050_1h_sword_05.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_12;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_Rubinklinge_StarkBonusMeisterschmied_Geschaerft (C_Item) 
+{	
+	name 				=	"Rubinklinge (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Rubinklinge;
+
+	damageTotal			= 	(((Damage_Rubinklinge + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rubinklinge;	
 
@@ -4476,7 +5345,7 @@ INSTANCE ItMw_Zweihaender2_Geschaerft (C_Item)
 
 	value 				=	Value_Zweihaender2;
 
-	damageTotal			= 	Damage_Zweihaender2+10;
+	damageTotal			= 	Damage_Zweihaender2 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Zweihaender2;	
 
@@ -4529,7 +5398,7 @@ INSTANCE ItMw_Runenschwert_Geschaerft (C_Item)
 
 	value 				=	Value_Runenschwert;
 
-	damageTotal  		= 	Damage_Runenschwert+10;
+	damageTotal  		= 	Damage_Runenschwert + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Runenschwert;		
 
@@ -4609,7 +5478,7 @@ INSTANCE ItMw_Schwert5_Geschaerft (C_Item)
 
 	value 				=	Value_Schwert5;
 
-	damageTotal  		= 	Damage_Schwert5+10;
+	damageTotal  		= 	Damage_Schwert5 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Schwert5;		
 
@@ -4689,7 +5558,7 @@ INSTANCE ItMw_Streitaxt2_Geschaerft (C_Item)
 
 	value 				=	Value_Streitaxt2;
 
-	damageTotal  		= 	Damage_Streitaxt2+10;
+	damageTotal  		= 	Damage_Streitaxt2 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Streitaxt2;		
 
@@ -4742,7 +5611,7 @@ INSTANCE ItMw_Zweihaender3_Geschaerft (C_Item)
 
 	value 				=	Value_Zweihaender3;
 
-	damageTotal  		= 	Damage_Zweihaender3+10;
+	damageTotal  		= 	Damage_Zweihaender3 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Zweihaender3;		
 
@@ -4790,6 +5659,34 @@ INSTANCE ItMw_1H_Special_02 (C_Item)
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
+INSTANCE ItMw_1H_Special_02_Geschaerft (C_Item) 
+{	
+	name 				=	"Erz-Bastardschwert (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Special_1H_2;
+
+	damageTotal			= 	Damage_Special_1H_2 + DAMAGE_BONUS_SHARPENED;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Special_1H_2;	
+	
+	on_equip			=	Equip_1H_10;
+	on_unequip			=	UnEquip_1H_10;
+		
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Special_1H_2;
+	visual 				=	"ItMw_060_1h_Sword_smith_03.3DS";
+
+	description			= name;
+	
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
 /********************************************************************************/
 INSTANCE ItMw_2H_Special_02 (C_Item) 
 {	
@@ -4802,6 +5699,33 @@ INSTANCE ItMw_2H_Special_02 (C_Item)
 	value 				=	Value_Special_2H_2;
 
 	damageTotal			= 	Damage_Special_2H_2;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Special_2H_2;	
+	
+	on_equip			=	Equip_2H_10;
+	on_unequip			=	UnEquip_2H_10;
+	
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Special_2H_2;
+	visual 				=	"ItMw_070_2h_Sword_smith_03.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_10;	
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_2H_Special_02_Geschaerft (C_Item) 
+{	
+	name 				=	"Schwerer Erz-Zweihänder (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Special_2H_2;
+
+	damageTotal			= 	Damage_Special_2H_2 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Special_2H_2;	
 	
@@ -4861,7 +5785,7 @@ INSTANCE ItMw_ElBastardo_Geschaerft (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	Damage_ElBastardo+10;
+	damageTotal  		= 	Damage_ElBastardo + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -4890,7 +5814,36 @@ INSTANCE ItMw_ElBastardo_Stark (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	(Damage_ElBastardo*3)/2;
+	damageTotal  		= 	(Damage_ElBastardo * 3) / 2;
+	damagetype 			=	DAM_EDGE;	
+	range    			=  	Range_ElBastardo;		
+	
+	on_equip			=	Equip_1H_08;
+	on_unequip			=	UnEquip_1H_08;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_ElBastardo;
+	visual 				=	"ItMw_065_1h_sword_bastard_03.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_08;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_ElBastardo_Stark_Geschaerft (C_Item)
+{	
+	name 				=	"El Bastardo (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_ElBastardo;
+
+	damageTotal  		= 	((Damage_ElBastardo * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -4938,6 +5891,35 @@ INSTANCE ItMw_ElBastardo_Bonus (C_Item)
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_13;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
+INSTANCE ItMw_ElBastardo_Bonus_Geschaerft (C_Item)
+{	
+	name 				=	"El Bastardo (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_ElBastardo;
+
+	damageTotal  		= 	Damage_ElBastardo + DAMAGE_BONUS_SHARPENED;
+	damagetype 			=	DAM_EDGE;	
+	range    			=  	Range_ElBastardo;		
+	
+	on_equip			=	Equip_1H_13;
+	on_unequip			=	UnEquip_1H_13;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_ElBastardo;
+	visual 				=	"ItMw_065_1h_sword_bastard_03.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_13;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
 INSTANCE ItMw_ElBastardo_BonusMeisterschmied (C_Item)
 {	
 	name 				=	"El Bastardo";  
@@ -4948,7 +5930,36 @@ INSTANCE ItMw_ElBastardo_BonusMeisterschmied (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	Damage_ElBastardo+20;
+	damageTotal  		= 	Damage_ElBastardo + 20;
+	damagetype 			=	DAM_EDGE;	
+	range    			=  	Range_ElBastardo;		
+	
+	on_equip			=	Equip_1H_13;
+	on_unequip			=	UnEquip_1H_13;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_ElBastardo;
+	visual 				=	"ItMw_065_1h_sword_bastard_03.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_13;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_ElBastardo_BonusMeisterschmied_Geschaerft (C_Item)
+{	
+	name 				=	"El Bastardo (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_ElBastardo;
+
+	damageTotal  		= 	Damage_ElBastardo + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -4977,7 +5988,36 @@ INSTANCE ItMw_ElBastardo_StarkBonus (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	(Damage_ElBastardo*3)/2;
+	damageTotal  		= 	(Damage_ElBastardo * 3) / 2;
+	damagetype 			=	DAM_EDGE;	
+	range    			=  	Range_ElBastardo;		
+	
+	on_equip			=	Equip_1H_13;
+	on_unequip			=	UnEquip_1H_13;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_ElBastardo;
+	visual 				=	"ItMw_065_1h_sword_bastard_03.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_13;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_ElBastardo_StarkBonus_Geschaerft (C_Item)
+{	
+	name 				=	"El Bastardo (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_ElBastardo;
+
+	damageTotal  		= 	((Damage_ElBastardo * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -5006,7 +6046,36 @@ INSTANCE ItMw_ElBastardo_StarkMeisterschmied (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	((Damage_ElBastardo+20)*3)/2;
+	damageTotal  		= 	((Damage_ElBastardo + 20) * 3) / 2;
+	damagetype 			=	DAM_EDGE;	
+	range    			=  	Range_ElBastardo;		
+	
+	on_equip			=	Equip_1H_08;
+	on_unequip			=	UnEquip_1H_08;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_ElBastardo;
+	visual 				=	"ItMw_065_1h_sword_bastard_03.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_08;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_ElBastardo_StarkMeisterschmied_Geschaerft (C_Item)
+{	
+	name 				=	"El Bastardo (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_ElBastardo;
+
+	damageTotal  		= 	(((Damage_ElBastardo + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -5035,7 +6104,36 @@ INSTANCE ItMw_ElBastardo_StarkBonusMeisterschmied (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	((Damage_ElBastardo+20)*3)/2;
+	damageTotal  		= 	((Damage_ElBastardo + 20) * 3) / 2;
+	damagetype 			=	DAM_EDGE;	
+	range    			=  	Range_ElBastardo;		
+	
+	on_equip			=	Equip_1H_13;
+	on_unequip			=	UnEquip_1H_13;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_ElBastardo;
+	visual 				=	"ItMw_065_1h_sword_bastard_03.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_13;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_ElBastardo_StarkBonusMeisterschmied_Geschaerft (C_Item)
+{	
+	name 				=	"El Bastardo (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_ElBastardo;
+
+	damageTotal  		= 	(((Damage_ElBastardo + 20) * 3) / 2) + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -5064,7 +6162,36 @@ INSTANCE ItMw_ElBastardo_Meisterschmied (C_Item)
 
 	value 				=	Value_ElBastardo;
 
-	damageTotal  		= 	Damage_ElBastardo+20;
+	damageTotal  		= 	Damage_ElBastardo + 20;
+	damagetype 			=	DAM_EDGE;	
+	range    			=  	Range_ElBastardo;		
+	
+	on_equip			=	Equip_1H_08;
+	on_unequip			=	UnEquip_1H_08;
+
+	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_value[2]  		=	Condition_ElBastardo;
+	visual 				=	"ItMw_065_1h_sword_bastard_03.3DS";
+
+	value 				=	damageTotal*20 + (damageTotal-cond_Value[2])*20;
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_08;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_ElBastardo_Meisterschmied_Geschaerft (C_Item)
+{	
+	name 				=	"El Bastardo (geschärft)";  
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_ElBastardo;
+
+	damageTotal  		= 	Damage_ElBastardo + 20 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 	
@@ -5147,7 +6274,7 @@ INSTANCE ItMw_Folteraxt_Geschaerft (C_Item)
 
 	value 				=	Value_Folteraxt;
 
-	damageTotal  		= 	Damage_Folteraxt+10;
+	damageTotal  		= 	Damage_Folteraxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_Folteraxt;		
 
@@ -5200,7 +6327,7 @@ INSTANCE ItMw_Zweihaender4_Geschaerft (C_Item)
 
 	value 				=	Value_Zweihaender4;
 
-	damageTotal  		= 	Damage_Zweihaender4+10;
+	damageTotal  		= 	Damage_Zweihaender4 + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Zweihaender4;		
 
@@ -5253,7 +6380,7 @@ INSTANCE ItMw_Schlachtaxt_Geschaerft (C_Item)
 
 	value 				=	Value_Schlachtaxt;
 
-	damageTotal  		= 	Damage_Schlachtaxt+10;
+	damageTotal  		= 	Damage_Schlachtaxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_Schlachtaxt;		
 
@@ -5306,7 +6433,7 @@ INSTANCE ItMw_Krummschwert_Geschaerft (C_Item)
 
 	value 				=	Value_Scimitar;
 
-	damageTotal  		= 	Damage_Scimitar+10;
+	damageTotal  		= 	Damage_Scimitar + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Scimitar;		
 
@@ -5359,7 +6486,7 @@ INSTANCE ItMw_Barbarenstreitaxt_Geschaerft (C_Item)
 
 	value 				=	Value_Barbarenstreitaxt;
 
-	damageTotal  		= 	Damage_Barbarenstreitaxt+10;
+	damageTotal  		= 	Damage_Barbarenstreitaxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_Barbarenstreitaxt;		
 
@@ -5421,7 +6548,7 @@ INSTANCE ItMw_Berserkeraxt_Geschaerft (C_Item)//Joly:Auf Dracheninsel beim Schwa
 
 	value 				=	Value_Berserkeraxt;
 
-	damageTotal  		= 	Damage_Berserkeraxt+10;
+	damageTotal  		= 	Damage_Berserkeraxt + DAMAGE_BONUS_SHARPENED;
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_Berserkeraxt;		
 
@@ -5466,6 +6593,31 @@ INSTANCE ItMw_1H_Blessed_01 (C_Item)
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
+INSTANCE ItMw_1H_Blessed_01_Geschaerft (C_Item) 
+{	
+	name 				=	"Rohe Erzklinge (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD | ITEM_MISSION;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Blessed_1H_1;
+
+	damageTotal			= 	Damage_Blessed_1H_1 + DAMAGE_BONUS_SHARPENED;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Blessed_1H_1;	
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Blessed_1H_1;
+	visual 				=	"itmw_030_1h_PAL_sword_bastard_RAW_01.3ds";
+
+	description			= name;
+	TEXT[1]				= "Bonus gegen Dämonen und Untote";		COUNT[1]	= 30;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= NAME_OneHanded;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
 /********************************************************************************/
 INSTANCE ItMw_1H_Blessed_02 (C_Item) 
 {	
@@ -5494,10 +6646,37 @@ INSTANCE ItMw_1H_Blessed_02 (C_Item)
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
+INSTANCE ItMw_1H_Blessed_02_Geschaerft (C_Item) 
+{	
+	name 				=	"Gesegnete Erzklinge (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD | ITEM_MISSION;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Blessed_1H_2;
+
+	damageTotal			= 	Damage_Blessed_1H_2 + DAMAGE_BONUS_SHARPENED;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Blessed_1H_2;	
+
+	effect = "SPELLFX_MAGESTAFF2";
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Blessed_1H_2;
+	visual 				=	"ItMw_030_1h_PAL_sword_bastard_RAW_01.3DS";
+
+	description			= name;
+	TEXT[1]				= "Bonus gegen Dämonen und Untote";		COUNT[1]	= 40;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= NAME_OneHanded;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
 /********************************************************************************/
 INSTANCE ItMw_1H_Blessed_03 (C_Item) 
 {	
-	name 				=	"Gesegnete Erzklinge";
+	name 				=	"Innos' Zorn";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD | ITEM_MISSION;	
@@ -5525,7 +6704,7 @@ INSTANCE ItMw_1H_Blessed_03 (C_Item)
 /********************************************************************************/
 INSTANCE ItMw_1H_Blessed_03_Geschaerft (C_Item) 
 {	
-	name 				=	"Innos Zorn (geschärft)";
+	name 				=	"Innos' Zorn (geschärft)";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD | ITEM_MISSION;	
@@ -5533,7 +6712,7 @@ INSTANCE ItMw_1H_Blessed_03_Geschaerft (C_Item)
 
 	value 				=	Value_Blessed_1H_3;
 
-	damageTotal			= 	Damage_Blessed_1H_3+10;
+	damageTotal			= 	Damage_Blessed_1H_3 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Blessed_1H_3;	
 
@@ -5576,6 +6755,31 @@ INSTANCE ItMw_2H_Blessed_01 (C_Item)
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
+INSTANCE ItMw_2H_Blessed_01_Geschaerft (C_Item) 
+{	
+	name 				=	"Rohe Erzklinge (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Blessed_2H_1;
+
+	damageTotal			= 	Damage_Blessed_2H_1 + DAMAGE_BONUS_SHARPENED;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Blessed_2H_1;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Blessed_2H_1;
+	visual 				=	"ItMw_040_2h_PAL_sword_heavy_RAW_01.3DS";
+
+	description			= name;
+	TEXT[1]				= "Bonus gegen Dämonen und Untote";		COUNT[1]	= 30;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
 /********************************************************************************/
 INSTANCE ItMw_2H_Blessed_02 (C_Item) 
 {	
@@ -5604,6 +6808,33 @@ INSTANCE ItMw_2H_Blessed_02 (C_Item)
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
+INSTANCE ItMw_2H_Blessed_02_Geschaerft (C_Item) 
+{	
+	name 				=	"Ordensschwert (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Blessed_2H_2;
+
+	damageTotal			= 	Damage_Blessed_2H_2 + DAMAGE_BONUS_SHARPENED;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Blessed_2H_2;		
+
+	effect = "SPELLFX_MAGESTAFF2";
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Blessed_2H_2;
+	visual 				=	"ItMw_040_2h_PAL_sword_heavy_RAW_01.3DS";
+
+	description			= name;
+	TEXT[1]				= "Bonus gegen Dämonen und Untote";		COUNT[1]	= 40;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
 /********************************************************************************/
 INSTANCE ItMw_2H_Blessed_03 (C_Item) 
 {	
@@ -5616,6 +6847,33 @@ INSTANCE ItMw_2H_Blessed_03 (C_Item)
 	value 				=	Value_Blessed_2H_3;
 
 	damageTotal			= 	Damage_Blessed_2H_3;
+	damagetype			=	DAM_EDGE;
+	range    			=  	Range_Blessed_2H_3;		
+
+	effect = "SPELLFX_MAGESTAFF1";
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	Condition_Blessed_2H_3;
+	visual 				=	"ItMw_040_2h_PAL_sword_heavy_RAW_01.3DS";
+
+	description			= name;
+	TEXT[1]				= "Bonus gegen Dämonen und Untote";		COUNT[1]	= 50;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMw_2H_Blessed_03_Geschaerft (C_Item) 
+{	
+	name 				=	"Heiliger Vollstrecker (geschärft)";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	Value_Blessed_2H_3;
+
+	damageTotal			= 	Damage_Blessed_2H_3 + DAMAGE_BONUS_SHARPENED;
 	damagetype			=	DAM_EDGE;
 	range    			=  	Range_Blessed_2H_3;		
 

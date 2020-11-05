@@ -1464,6 +1464,11 @@ const int MAX_WEAPONS 					= 15;
 
 var int PLAYER_TALENT_SMITH[MAX_WEAPONS];
 
+// ***************
+// Bonusschaden für geschärfte Waffen
+// ***************
+const int DAMAGE_BONUS_SHARPENED		= 10;
+
 
 // ********************
 // AnimalTrophy-Talente
