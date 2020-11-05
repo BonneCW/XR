@@ -1467,7 +1467,7 @@ var int PLAYER_TALENT_SMITH[MAX_WEAPONS];
 // ***************
 // Bonusschaden für geschärfte Waffen
 // ***************
-const int SHARPENED 					= 10;
+const int DAMAGE_BONUS_SHARPENED		= 10;
 
 
 // ********************
