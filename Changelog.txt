@@ -38,6 +38,7 @@ Fixes:
 - fixed Parlan's Ring quest
 - added damage caps for Axe of Doom
 - all (non-Quest) weapons can be sharpend now
+- Brandon quest now also works when joining Xardas' guild
 
 
 1.0.8
