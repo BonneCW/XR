@@ -39,6 +39,8 @@ Fixes:
 - added damage caps for Axe of Doom
 - all (non-Quest) weapons can be sharpend now
 - Brandon quest now also works when joining Xardas' guild
+- fixed 'Ring des Künstlers'
+- fixed missing Krauttroll for 'Leichengase' quest
 
 
 1.0.8
