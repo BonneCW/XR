@@ -1892,18 +1892,6 @@ INSTANCE ItRi_Kuenstler(C_Item)
 	description				= "Ring des Künstlers";
 	
 	TEXT[0]					= "Wer Leier spielt und den Bogen spannt nimmt ungern ein Stück Metall in die Hand";
-
-	TEXT[1]		= NAME_Bonus_Str;
-	COUNT[1]	= -17;
-
-	TEXT[2]		= NAME_Bonus_Dex;
-	COUNT[2]	= -10;
-
-	TEXT[3]		= NAME_Bonus_Mana;
-	COUNT[3]	= -20;
-
-	TEXT[4]		= NAME_Bonus_HP;
-	COUNT[4]	= 20;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
@@ -1920,6 +1908,9 @@ FUNC VOID Equip_ItRi_Kuenstler()
 	self.attribute[ATR_DEXTERITY] += 15;
 	self.attribute[ATR_MANA] += 4;
 	self.attribute[ATR_MANA_MAX] += 4;
+	B_AddFightSkill (self, NPC_TALENT_1H, -6);
+	B_AddFightSkill (self, NPC_TALENT_2H, -6);
+	B_AddFightSkill (self, NPC_TALENT_BOW, 5);
 
 	Mod_KuenstlerRing = TRUE;
 };
@@ -1928,8 +1919,11 @@ FUNC VOID UnEquip_ItRi_Kuenstler()
 {
 	self.attribute[ATR_STRENGTH] += 17;
 	self.attribute[ATR_DEXTERITY] -= 15;
-	self.attribute[ATR_MANA] -= 20;
-	self.attribute[ATR_MANA_MAX] -= 20;
+	self.attribute[ATR_MANA] -= 4;
+	self.attribute[ATR_MANA_MAX] -= 4;
+	B_AddFightSkill (self, NPC_TALENT_1H, 6);
+	B_AddFightSkill (self, NPC_TALENT_2H, 6);
+	B_AddFightSkill (self, NPC_TALENT_BOW, -5);
 
 	Mod_KuenstlerRing = FALSE;
 };
