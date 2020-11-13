@@ -41,6 +41,7 @@ func void Spell_Cast_SummonKrautschaf()
 	};
 	
 	Wld_InsertNpc	(Krautschaf, "SPAWNOW_PATH_190_MOVMENT");
+	Wld_InsertNpc	(Krauttroll,	"LOCATION_12_01");
 
 	Mod_Leichengase_Kraut = 5;
 	
