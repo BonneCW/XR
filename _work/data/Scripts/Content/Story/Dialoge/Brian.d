@@ -198,8 +198,6 @@ FUNC VOID Info_Mod_Brian_Trade_Info()
 		B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Brian kann mir etwas Schmiedezubehör verkaufen.");
 	};
 	
-	Backup_Questitems();
-
 	B_GiveTradeInv (self);
 	B_Say (hero, self, "$TRADE_1");
 };

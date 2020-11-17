@@ -283,7 +283,6 @@ FUNC VOID Info_Mod_Borka_Trade_Info()
 		Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
 		B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Borka handelt mit Sumpfkraut.");
 	};
-	Backup_Questitems();
 
 	B_GiveTradeInv (self);
 	B_Say (hero, self, "$TRADE_1");

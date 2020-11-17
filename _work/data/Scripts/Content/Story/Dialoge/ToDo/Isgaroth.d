@@ -110,8 +110,6 @@ FUNC VOID Info_Mod_Isgaroth_Trade_Info()
 		Mod_IsgarothHaendler = 1;
 	};
 
-	Backup_Questitems();
-
 	B_GiveTradeInv (self);
 	B_Say (hero, self, "$TRADE_1");
 };

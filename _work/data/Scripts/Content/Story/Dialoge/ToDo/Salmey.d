@@ -46,8 +46,6 @@ FUNC INT Info_Mod_Salmey_Trade_Condition()
 
 FUNC VOID Info_Mod_Salmey_Trade_Info()
 {
-	Backup_Questitems();
-
 	//B_GiveTradeInv (self);
 	AI_Output(hero, self, "Info_Mod_Salmey_Trade_15_00"); //Dann lass mal das Angebot sehen.
 };
