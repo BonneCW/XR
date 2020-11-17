@@ -132,8 +132,6 @@ FUNC INT Info_Mod_Fortuno_Trade_Condition()
 
 FUNC VOID Info_Mod_Fortuno_Trade_Info()
 {
-	Backup_Questitems();
-
 	B_GiveTradeInv (self);
 	B_Say (hero, self, "$TRADE_1");
 };
