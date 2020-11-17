@@ -1876,10 +1876,6 @@ FUNC VOID DAUERFUNC_01()
 			};
 		};
 	};
-	
-	if (questitemliste > 0 && B_GetAivar(hero, AIV_INVINCIBLE) == FALSE) {
-		Restore_Questitems();
-	};
 
 	Wld_SendTrigger	("DAUERTRIGGER");
 };
