@@ -79,8 +79,11 @@ FUNC VOID Info_Mod_Fernando_BadSleep_A()
 
 	Mod_Fernando_Mitternachtsspuk = 1;
 
-	B_StartOtherRoutine	(Mod_754_NONE_Valentino_NW, "SPUK");
-	B_StartOtherRoutine	(Mod_1066_VLK_Buergerin_NW, "SPUK");
+	if (!Mod_Valentino_Kidnapped)
+	{
+		B_StartOtherRoutine	(Mod_754_NONE_Valentino_NW, "SPUK");
+		B_StartOtherRoutine	(Mod_1066_VLK_Buergerin_NW, "SPUK");
+	}
 
 	Info_ClearChoices	(Info_Mod_Fernando_BadSleep);
 };
