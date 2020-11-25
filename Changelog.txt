@@ -41,6 +41,9 @@ Fixes:
 - Brandon quest now also works when joining Xardas' guild
 - fixed 'Ring des Künstlers'
 - fixed missing Krauttroll for 'Leichengase' quest
+- improved code to forbid selling quest items
+- fixed Valentino being in city even though he should be kidnapped
+- fixed Bandits at Keith's hut going nuts
 
 
 1.0.8
