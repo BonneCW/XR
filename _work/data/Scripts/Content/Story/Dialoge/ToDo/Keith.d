@@ -11,6 +11,8 @@ INSTANCE Info_Mod_Keith_Hi (C_INFO)
 FUNC INT Info_Mod_Keith_Hi_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Luis_Hi))
+	&& (Npc_IsDead(Mod_7570_OUT_Bandit_EIS))
+	&& (Npc_IsDead(Mod_7571_OUT_Bandit_EIS))
 	{
 		return 1;
 	};
