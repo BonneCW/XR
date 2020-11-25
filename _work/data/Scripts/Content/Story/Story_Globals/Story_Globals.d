@@ -787,6 +787,7 @@ var int Mod_ASS_Schneider_Day;
 var int Mod_IR_Argez;
 var int Mod_JG_PennerDay;
 var int Mod_Fernando_Mitternachtsspuk;
+var int Mod_Valentino_Kidnapped;
 var int Mod_ASS_Yussuf;
 var int Mod_ASS_Gritta;
 var int Mod_ASS_ShakirGritta_Day;
