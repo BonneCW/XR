@@ -19,6 +19,8 @@ instance Mod_7568_OUT_Keith_EIS (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
+
+	CreateInvItems	(self, ItKe_Keith, 1);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Lefty, BodyTex_N, ITAR_Eisgebiet_01);
