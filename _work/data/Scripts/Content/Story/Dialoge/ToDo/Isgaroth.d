@@ -43,9 +43,9 @@ FUNC INT Info_Mod_Isgaroth_Pedro_Condition()
 
 FUNC VOID Info_Mod_Isgaroth_Pedro_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Isgaroth_Pedro_15_00"); //Did a novice pass by who was in a hurry?
-	AI_Output(self, hero, "Info_Mod_Isgaroth_Pedro_01_01"); //Yeah, a novice came by here some time ago. He ran down the path.
-	AI_Output(self, hero, "Info_Mod_Isgaroth_Pedro_01_02"); //Ask Dragomir. He has a small camp near the tavern, from there he must have seen where the novice ran to.
+	AI_Output(hero, self, "Info_Mod_Isgaroth_Pedro_15_00"); //
+	AI_Output(self, hero, "Info_Mod_Isgaroth_Pedro_01_01"); //
+	AI_Output(self, hero, "Info_Mod_Isgaroth_Pedro_01_02"); //
 
 	B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Isgaroth saw Pedro running down the path. He said I should have a talk with the hunter Dragomir.");
 };
@@ -109,8 +109,6 @@ FUNC VOID Info_Mod_Isgaroth_Trade_Info()
 
 		Mod_IsgarothHaendler = 1;
 	};
-
-	Backup_Questitems();
 
 	B_GiveTradeInv (self);
 	B_Say (hero, self, "$TRADE_1");

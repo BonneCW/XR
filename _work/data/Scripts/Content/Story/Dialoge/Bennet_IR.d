@@ -154,8 +154,6 @@ FUNC INT Info_Mod_Bennet_IR_Trade_Condition()
 
 FUNC VOID Info_Mod_Bennet_IR_Trade_Info()
 {
-	Backup_Questitems();
-
 	B_Say (hero, self, "$TRADE_1");
 };
 

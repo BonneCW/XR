@@ -2,7 +2,9 @@ var int ML_UTempel;      //Flag Magiclight im UTempel
 
 FUNC VOID EVT_FEUERTESTEINGANG() {
 	if (Npc_HasItems (hero,ItMw_1H_Blessed_01) >= 1)
-	|| (Npc_HasItems (hero,ItMw_2H_Blessed_01) >= 1) {
+	|| (Npc_HasItems (hero,ItMw_1H_Blessed_01_Geschaerft) >= 1)
+	|| (Npc_HasItems (hero,ItMw_2H_Blessed_01) >= 1)
+	|| (Npc_HasItems (hero,ItMw_2H_Blessed_01_Geschaerft) >= 1) {
 		Wld_SendTrigger("EVT_FEUERTESTEINGANG");
 	};
 };

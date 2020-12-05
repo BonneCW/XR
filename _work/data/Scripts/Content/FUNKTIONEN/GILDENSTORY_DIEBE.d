@@ -103,6 +103,12 @@ FUNC VOID GILDENSTORY_DIEBE()
 			B_StartOtherRoutine	(Mod_746_NONE_Ramirez_NW, "TOT");
 			B_StartOtherRoutine	(Mod_748_NONE_Rengaru_NW, "TOT");
 		};
+
+		if (Npc_KnowsInfo(hero, Info_Mod_Ramirez_REL_InHaus) && Mod_RemoveAttilaFromKhorinis == TRUE)
+		{
+			B_StartOtherRoutine (Mod_760_NONE_Attila_NW, "TOT");
+			Mod_RemoveAttilaFromKhorinis = FALSE;
+		};
 		
 		if (Hlp_IsValidNpc(Mod_7702_OUT_Moechtegern_NW)) {
 			if (!Npc_IsInState(Mod_7702_OUT_Moechtegern_NW, ZS_Talk)) {

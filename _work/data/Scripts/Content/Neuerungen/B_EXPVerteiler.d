@@ -451,9 +451,11 @@ FUNC VOID B_EXPVerteiler (var C_NPC opfer, var C_NPC taeter)
 	if (Hlp_IsItem(AxtTest, ItMw_AxtDesUntergangs))
 	&& (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(PC_Hero))
 	{
-		AxtDamage += 2;
+		if (AxtDamage < 4650) {
+			AxtDamage += 2;
 
-		AxtUpgrade = 0;
+			AxtUpgrade = 0;
+		};
 	};
 
 	if (taeter.guild == GIL_DRACONIAN)

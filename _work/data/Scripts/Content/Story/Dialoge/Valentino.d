@@ -79,6 +79,8 @@ FUNC VOID Info_Mod_Valentino_Kidnapped_B()
 		B_StartOtherRoutine	(self, "START");
 	};
 
+	Mod_Valentino_Kidnapped = 0;
+
 	AI_StopProcessInfos	(self);
 
 	B_Attack	(self, hero, AR_None, 1);
@@ -102,6 +104,8 @@ FUNC VOID Info_Mod_Valentino_Kidnapped_A()
 	{
 		B_StartOtherRoutine	(self, "START");
 	};
+
+	Mod_Valentino_Kidnapped = 0;
 };
 
 INSTANCE Info_Mod_Valentino_Mitternachtsspuk (C_INFO)

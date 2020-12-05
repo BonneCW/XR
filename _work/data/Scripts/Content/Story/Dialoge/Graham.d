@@ -140,8 +140,6 @@ FUNC INT Info_Mod_Graham_Trade_Condition()
 
 FUNC VOID Info_Mod_Graham_Trade_Info()
 {
-	Backup_Questitems();
-
 	B_Say (hero, self, "$TRADE_1");
 };
 

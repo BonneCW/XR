@@ -391,8 +391,8 @@ FUNC VOID Info_Mod_Angar_Hueterklinge_C()
 
 FUNC VOID Info_Mod_Angar_Hueterklinge_B()
 {
-	AI_Output(hero, self, "Info_Mod_Angar_Hueterklinge_B_15_00"); //I want a two-handed sword.
-	AI_Output(self, hero, "Info_Mod_Angar_Hueterklinge_B_34_01"); //For a two-handed guardian blade you need 8 lumps of magic ore, 6 tons of rice lord herbs, a dagger that drank the blood of 4 kings and the flesh of a scavanger that didn't hatch out of an egg.
+	AI_Output(hero, self, "Info_Mod_Angar_Hueterklinge_B_15_00"); //
+	AI_Output(self, hero, "Info_Mod_Angar_Hueterklinge_B_34_01"); //
 
 	Log_CreateTopic	(TOPIC_MOD_SL_SCHMIEDEFEUERN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_SL_SCHMIEDEFEUERN, LOG_RUNNING);
@@ -485,7 +485,13 @@ FUNC INT Info_Mod_Angar_Hueterklinge4_Condition()
 	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_2H) == 1)
 	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_1H) == 1)
 	|| (Npc_HasItems(hero, ItMw_Hueterklinge_2H) == 1)
-	|| (Npc_HasItems(hero, ItMw_Hueterklinge_1H) == 1))
+	|| (Npc_HasItems(hero, ItMw_Hueterklinge_1H) == 1)
+	|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_2H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_1H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_2H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_1H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_Hueterklinge_2H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_Hueterklinge_1H_Geschaerft) == 1))
 	{
 		return 1;
 	};
@@ -498,10 +504,16 @@ FUNC VOID Info_Mod_Angar_Hueterklinge4_Info()
 	if ((Npc_HasItems(hero, ItMw_AlteHueterklinge_2H) == 1)
 	|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_1H) == 1)
 	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_2H) == 1)
-	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_1H) == 1))
+	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_1H) == 1)
+	|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_2H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_1H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_2H_Geschaerft) == 1)
+	|| (Npc_HasItems(hero, ItMw_FalscheHueterklinge_1H_Geschaerft) == 1))
 	{
 		if (Npc_HasItems(hero, ItMw_AlteHueterklinge_2H) == 1)
 		|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_1H) == 1)
+		|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_2H_Geschaerft) == 1)
+		|| (Npc_HasItems(hero, ItMw_AlteHueterklinge_1H_Geschaerft) == 1)
 		{
 			AI_Output(self, hero, "Info_Mod_Angar_Hueterklinge4_34_01"); //She looks pretty old to me....
 		}

@@ -6,6 +6,7 @@ LeGo\Header.src
 
 NEUERUNGEN\NDC_SetInput.d
 NEUERUNGEN\SearchWaypointByName.d
+NEUERUNGEN\BlockUserInput.d
 
 AI\AI_INTERN\AI_CONSTANTS.D
 AI\AI_INTERN\BODYSTATES.D
@@ -26,6 +27,7 @@ FUNKTIONEN\Erfolge_Func.d
 STORY\Events\B_AWAKE_STONEGUARDIAN.d
 
 NEUERUNGEN\Respawn.d
+NEUERUNGEN\UpdateQuestScore.d
 
 NEUERUNGEN\PortalRooms.d
 
@@ -76,7 +78,7 @@ NEUERUNGEN\B_SetKrankheitswerte.d
 NEUERUNGEN\B_Autosave.d
 NEUERUNGEN\B_SetLevelchange.d
 NEUERUNGEN\Npc_GetWalkMode.d
-NEUERUNGEN\Backup_Questitems.d
+NEUERUNGEN\CheckSellingItems.d
 NEUERUNGEN\NameAllFires.d
 NEUERUNGEN\C_HeroAtLight.d
 

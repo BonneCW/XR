@@ -50,6 +50,8 @@ FUNC VOID Info_Mod_Pedro_Erwischt_Info()
 	AI_StopProcessInfos	(self);
 
 	B_Attack	(self, hero, AR_NONE, 1);
+
+	self.flags = 0;
 };
 
 INSTANCE Info_Mod_Pedro_Niederlage (C_INFO)
@@ -80,7 +82,7 @@ FUNC VOID Info_Mod_Pedro_Niederlage_Info()
 			AI_Output(hero, self, "Info_Mod_Pedro_Niederlage_15_01"); //Will you give me the ring now?
 			AI_Output(self, hero, "Info_Mod_Pedro_Niederlage_09_02"); //Here he is, sir.
 
-			B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "After I taught Pedro a lesson, he gave me the ring.");
+			B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "");
 
 			CreateInvItems	(self, ItRi_Feuerring_Parlan, 1);
 			B_GiveInvItems	(self, hero, ItRi_Feuerring_Parlan, 1);

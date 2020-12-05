@@ -183,6 +183,8 @@ FUNC VOID Info_Mod_Mahamad_Schlaufuchs_L()
 		Mod_ASS_MahamadRaetsel = 1;
 
 		B_SetTopicStatus	(TOPIC_MOD_ASS_SCHLAUFUCHS, LOG_SUCCESS);
+	
+		B_LogEntry	(TOPIC_MOD_ASS_MAGIER, "");
 	};
 
 	Info_ClearChoices	(Info_Mod_Mahamad_Schlaufuchs);

@@ -198,8 +198,6 @@ FUNC VOID Info_Mod_Brian_Trade_Info()
 		B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Brian can sell me some forging supplies.");
 	};
 	
-	Backup_Questitems();
-
 	B_GiveTradeInv (self);
 	B_Say (hero, self, "$TRADE_1");
 };

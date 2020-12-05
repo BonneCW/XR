@@ -73,3 +73,9 @@ FUNC VOID Rtn_ToLager_760()
 	TA_Guide_Player		(07,00,23,00,"NW_CITY_KANAL_ROOM_05_03");
 	TA_Guide_Player		(23,00,07,00,"NW_CITY_KANAL_ROOM_05_03");
 };
+
+FUNC VOID Rtn_Tot_760()
+{	
+	TA_Stand_Guarding 	(07,00,23,00,"TOT");
+	TA_Stand_Guarding	(23,00,07,00,"TOT");
+};

@@ -20,6 +20,8 @@ FUNC VOID B_MG_GameLoop() {
 
 		Cursor_Show();
 		Cursor_NoEngine = 1;
+		
+		blockAllPlayerInput(FALSE);
 
 		MG_GameState = 1;
 	} else if (MG_GameState == 1) { // auswürfeln, wer das Spiel beginnt
@@ -910,5 +912,7 @@ FUNC VOID B_MG_GameLoop() {
 		FF_Remove(B_MG_GameLoop);
 
 		MG_GameState = 0;
+		
+		unblockAllPlayerInput();
 	};
 };

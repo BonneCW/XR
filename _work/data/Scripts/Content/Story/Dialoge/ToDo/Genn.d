@@ -961,7 +961,6 @@ FUNC VOID Info_Mod_Genn_Trade_Info()
 		Log_CreateTopic	(TOPIC_MOD_HAENDLER_VM, LOG_NOTE);
 		B_LogEntry	(TOPIC_MOD_HAENDLER_VM, "Genn deals in magical accessories.");
 	};
-	Backup_Questitems();
 
 	B_GiveTradeInv (self);
 	B_Say (hero, self, "$TRADE_1");

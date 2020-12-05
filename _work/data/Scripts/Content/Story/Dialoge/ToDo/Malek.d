@@ -65,6 +65,8 @@ FUNC VOID Info_Mod_Malek_Manaextrakt_Info()
 	AI_Output(hero, self, "Info_Mod_Malek_Manaextrakt_15_06"); //I'm gonna go see him.
 
 	B_SetTopicStatus	(TOPIC_MOD_ASS_MANAEXTRAKT, LOG_SUCCESS);
+	
+	B_LogEntry	(TOPIC_MOD_ASS_MAGIER, "");
 
 	B_GivePlayerXP	(250);
 };

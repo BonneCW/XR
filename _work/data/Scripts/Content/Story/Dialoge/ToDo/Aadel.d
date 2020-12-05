@@ -36,6 +36,8 @@ FUNC VOID Info_Mod_Aadel_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_Aadel_Hi_15_14"); //Certainly. And where do I start?
 	AI_Output(self, hero, "Info_Mod_Aadel_Hi_02_15"); //Go to Kamal back there. This is the quack in our club. He always needs something.
 	AI_Output(hero, self, "Info_Mod_Aadel_Hi_15_16"); //As you wish, master.
+	
+	B_LogEntry	(TOPIC_MOD_ASS_MAGIER, "");
 };
 
 INSTANCE Info_Mod_Aadel_Later (C_INFO)

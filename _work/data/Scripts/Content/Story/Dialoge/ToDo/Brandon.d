@@ -10,10 +10,7 @@ INSTANCE Info_Mod_Brandon_Hi (C_INFO)
 
 FUNC INT Info_Mod_Brandon_Hi_Condition()
 {
-	if (hero.guild != GIL_KDF)
-	{
-		return 1;
-	};
+	return 1;
 };
 
 FUNC VOID Info_Mod_Brandon_Hi_Info()

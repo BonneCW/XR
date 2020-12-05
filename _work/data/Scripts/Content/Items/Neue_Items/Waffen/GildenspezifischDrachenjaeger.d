@@ -248,7 +248,7 @@ INSTANCE ItMw_1H_Special_04_Dex (C_Item)
 
 INSTANCE ItMw_1H_Special_04_Dex_Geschaerft (C_Item) 
 {	
-	name 				=	"Ore Dragonfighter (sharpened)";
+	name 				=	"";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	

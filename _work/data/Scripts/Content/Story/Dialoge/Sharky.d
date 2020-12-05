@@ -45,8 +45,6 @@ FUNC VOID Info_Mod_Sharky_Trade_Info()
 	AI_Output(hero, self, "Info_Mod_Sharky_Trade_15_00"); //Let's see what you have on offer.
 	AI_Output(self, hero, "Info_Mod_Sharky_Trade_01_01"); //Everything you need to survive.
 
-	Backup_Questitems();
-
 	B_GiveTradeInv (self);
 };
 

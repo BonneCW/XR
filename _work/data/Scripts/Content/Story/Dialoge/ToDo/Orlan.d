@@ -287,10 +287,10 @@ FUNC INT Info_Mod_Orlan_Pedro_Condition()
 
 FUNC VOID Info_Mod_Orlan_Pedro_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Orlan_Pedro_15_00"); //Did a novice come in here?
-	AI_Output(self, hero, "Info_Mod_Orlan_Pedro_32_01"); //Nobody but you.
-	AI_Output(hero, self, "Info_Mod_Orlan_Pedro_15_02"); //The hunter Dragomir claims he saw a novice running in here.
-	AI_Output(self, hero, "Info_Mod_Orlan_Pedro_32_03"); //There's no novice here. You can ask the other visitors here.
+	AI_Output(hero, self, "Info_Mod_Orlan_Pedro_15_00"); //
+	AI_Output(self, hero, "Info_Mod_Orlan_Pedro_32_01"); //
+	AI_Output(hero, self, "Info_Mod_Orlan_Pedro_15_02"); //
+	AI_Output(self, hero, "Info_Mod_Orlan_Pedro_32_03"); //
 
 	B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Orlan says Pedro didn't come to the tavern. I should have a serious talk with Dragomir.");
 };
@@ -562,8 +562,6 @@ FUNC INT Info_Mod_Orlan_Trade_Condition()
 
 FUNC VOID Info_Mod_Orlan_Trade_Info()
 {
-	Backup_Questitems();
-
 	B_GiveTradeInv (self);
 	B_Say (hero, self, "$TRADE_1");
 };

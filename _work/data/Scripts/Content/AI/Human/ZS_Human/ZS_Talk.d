@@ -218,8 +218,6 @@ FUNC VOID ZS_Talk_End ()
 		Npc_SetRefuseTalk(other, 10); //BEACHTEN: other ist Spieler!
 	};
 
-	Restore_Questitems();
-
 	// ------ wenn Spieler in meinem Raum ------
 	if (C_NpcIsBotheredByPlayerRoomGuild(self))
 	|| ( (Wld_GetPlayerPortalGuild() == GIL_PUBLIC) && (Npc_GetAttitude(self,other) != ATT_FRIENDLY) )
