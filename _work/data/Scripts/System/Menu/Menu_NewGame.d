@@ -39,8 +39,8 @@ INSTANCE MENUITEM_NEWGAME_HEADLINE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_NEWGAME_DIFFICULTY(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Poziom trudnoœci";
-	text[1]		= 	"Wybór poziomu trudnoœci (³atwy, œredni, trudny)"; // Kommentar
+	text[0]		=	"predykament";
+	text[1]		= 	"Stopien trudnosci (prosty, zwykly, normalny, trudny)"; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*1;
 	dimx		=	6192;	dimy		=	750;
@@ -54,7 +54,7 @@ instance MENUITEM_NEWGAME_DIFFICULTY_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"£atwy|Œredni|Trudny";
+	text[0]		= 	"Prosty, jJednostka normalna";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 1000;		posy		=	MENU_START_Y + MENU_DY*2;
@@ -73,7 +73,7 @@ instance MENUITEM_NEWGAME_DIFFICULTY_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_NEWGAME_START(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Start";
+	text[0]		=	"start";
 	// Position und Dimension	
 	posx		=	1000;		posy		=	MENU_START_Y + MENU_DY*3;
 	dimx		=	6192;		dimy		=	MENU_DY;

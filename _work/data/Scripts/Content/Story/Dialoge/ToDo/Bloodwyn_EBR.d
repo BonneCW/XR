@@ -187,6 +187,8 @@ FUNC VOID Info_Mod_Bloodwyn_EBR_Belagerung_Info()
 	if (Mod_HeroHasRune > 0)
 	{
 		AI_Output(self, hero, "Info_Mod_Bloodwyn_EBR_Belagerung_04_13"); //Widze, ze macie teleportrunki. Wydaje mi sie, ze nie przeszkadza ci, jesli ja zabiore.
+		
+		B_LogEntry	(TOPIC_MOD_AL_BOTSCHAFTER, "");
 	};
 
 	Wld_InsertNpc	(Mod_1879_GRD_Gardist_MT, "LOCATION_11_01");

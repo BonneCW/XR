@@ -2898,7 +2898,7 @@ INSTANCE ItMi_BloodCup_MIS (C_Item)
 	visual 				=	"ItMi_GoldCup.3DS";
 	material 			=	MAT_METAL;
 
-	description			= 	"Filizanka krwi";
+	description			= 	"23919";
 	
 	TEXT[5]				= 	NAME_Value;	
 	COUNT[5]			= 	value;
@@ -2916,7 +2916,7 @@ INSTANCE ItMi_BloodCup_Richter (C_Item)
 	visual 				=	"ItMi_GoldCup.3DS";
 	material 			=	MAT_METAL;
 
-	description			= 	"Filizanka krwi";
+	description			= 	"23919";
 	
 	TEXT[5]				= 	NAME_Value;	
 	COUNT[5]			= 	value;
@@ -2934,7 +2934,7 @@ INSTANCE ItMi_BloodCup_Canyon (C_Item)
 	visual 				=	"ItMi_GoldCup.3DS";
 	material 			=	MAT_METAL;
 
-	description			= 	"Filizanka krwi";
+	description			= 	"23919";
 	
 	TEXT[5]				= 	NAME_Value;	
 	COUNT[5]			= 	value;

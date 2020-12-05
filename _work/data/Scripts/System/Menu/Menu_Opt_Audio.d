@@ -43,7 +43,7 @@ const int MENU_SOUND_DY = 550;
 INSTANCE MENUITEM_AUDIO_HEADLINE(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "USTAWIENIA DèWI KU";
+	text[0]		= "AUDIO SETTINGS";
 	type		= MENU_ITEM_TEXT;
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_TITLE_Y;
@@ -62,7 +62,7 @@ INSTANCE MENUITEM_AUDIO_SFXVOL(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Efekty i mowa";
-	text[1]		= "G≥oúnoúÊ efektÛw düwiÍkowych i mowy."; // Kommentar
+	text[1]		= "Glosnosc efektÛw dzwiekowych i wyjscie mowy."; // Kommentar
 
 	// Position und Dimension
 	posx		= 1000;		posy		= MENU_START_SOUND_Y + MENU_SOUND_DY*0;
@@ -97,8 +97,8 @@ INSTANCE MENUITEM_AUDIO_SFXVOL_SLIDER(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_AUDIO_MUSICVOL(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "G≥oúnoúÊ muzyki";
-	text[1]		= "G≥oúnoúÊ muzyki w tle."; // Kommentar
+	text[0]		= "Luta muzyczna.";
+	text[1]		= "Sila dzwieku muzyki w tle."; // Kommentar
 
 	// Position und Dimension
 	posx		= 1000;		posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*1;
@@ -134,7 +134,7 @@ instance MENUITEM_AUDIO_MUSIC(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Muzyka";
-	text[1]		= "W≥πcza/wy≥πcza muzykÍ w tle."; // Kommentar
+	text[1]		= "Muzyka w tle odpowiednio wylaczyc."; // Kommentar
 
 	// Position und Dimension
 	posx		=	1000;	posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*2;
@@ -150,7 +150,7 @@ INSTANCE MENUITEM_AUDIO_MUSIC_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;
-	text[0]		=   "wy≥.|w≥.";
+	text[0]		=   "z|an";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension
 	posx		= 4300;		posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*2 + MENU_CHOICE_YPLUS;
@@ -176,8 +176,8 @@ INSTANCE MENUITEM_AUDIO_MUSIC_CHOICE(C_MENU_ITEM_DEF)
 instance MENUITEM_AUDIO_PROVIDER(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "èrÛd≥o düwiÍku";
-	text[1]		= "Zmiany uaktywniπ siÍ po ponownym uruchomieniu!"; // Kommentar
+	text[0]		= "zdrowy";
+	text[1]		= "Zmiana obowiazuje tylko przy ponownym uruchomieniu!"; // Kommentar
 
 	// Position und Dimension
 	posx		=	1000;	posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*3;
@@ -209,7 +209,7 @@ instance MENUITEM_AUDIO_PROVIDER_CHOICE(C_MENU_ITEM_DEF)
 instance MENUITEM_AUDIO_SPEEKER(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "G≥oúniki";
+	text[0]		= "glosnik";
 	text[1]		= ""; // Kommentar
 
 	// Position und Dimension
@@ -226,7 +226,7 @@ instance MENUITEM_AUDIO_SPEEKER_CHOICE(C_MENU_ITEM_DEF)
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;
 	// PATCH 1.30 - added 5.1 and 7.1 speaker system flags
-	text[0]		=   "2 g≥oúniki|S≥uchawki|Surround|4 g≥oúniki|G≥oúniki 5.1|G≥oúniki 7.1";
+	text[0]		=   "Dwie sluchawki glosnikowe naokolo glosnikÛw|4|5. Jeden glosnik 7. 1 glosnik";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension
 	posx		= 4300;		posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*4 + MENU_CHOICE_YPLUS;
@@ -242,8 +242,8 @@ instance MENUITEM_AUDIO_SPEEKER_CHOICE(C_MENU_ITEM_DEF)
 instance MENUITEM_AUDIO_REVERB(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Pog≥os";
-	text[1]		= "W≥πcza pog≥os w jaskiniach (wymaga ponownego uruchomienia)."; // Kommentar
+	text[0]		= "Efekt Hallla";
+	text[1]		= "Chcesz aktywowac efekty hallowe w jaskiniach?"; // Kommentar
 
 	// Position und Dimension
 	posx		=	1000;	posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*5;
@@ -258,7 +258,7 @@ instance MENUITEM_AUDIO_REVERB_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;
-	text[0]		=   "wy≥.|w≥.";
+	text[0]		=   "z|an";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension
 	posx		= 4300;		posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*5 + MENU_CHOICE_YPLUS;
@@ -275,8 +275,8 @@ instance MENUITEM_AUDIO_REVERB_CHOICE(C_MENU_ITEM_DEF)
 instance MENUITEM_AUDIO_REVERB_SPEECH(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Pog≥os mowy";
-	text[1]		= "W≥πcza pog≥os mowy w jaskiniach (wymaga ponownego uruchomienia).";
+	text[0]		= "Jezyk ojczysty";
+	text[1]		= "Chcesz aktywowac efekty poglosu dla wyjscia glosowego?";
 
 	// Position und Dimension
 	posx		=	1000;	posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*6;
@@ -291,7 +291,7 @@ instance MENUITEM_AUDIO_REVERB_SPEECH_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;
-	text[0]		=   "brak|ma≥y|duøy";
+	text[0]		=   "niewiele niewiele";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension
 	posx		= 4300;		posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*6 + MENU_CHOICE_YPLUS;
@@ -309,8 +309,8 @@ instance MENUITEM_AUDIO_REVERB_SPEECH_CHOICE(C_MENU_ITEM_DEF)
 instance MENUITEM_AUDIO_SAMPLERATE(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "PrÛbkowanie";
-	text[1]		= "Zmiany uaktywniπ siÍ po ponownym uruchomieniu!";  // Kommentar
+	text[0]		= "prÛbka";
+	text[1]		= "Zmiana obowiazuje tylko przy ponownym uruchomieniu!"; // Kommentar
 
 	// Position und Dimension
 	posx		=	1000;	posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*7;
@@ -342,7 +342,7 @@ instance MENUITEM_AUDIO_SAMPLERATE_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_AUDIO_BACK(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Wstecz";
+	text[0]		=	"Poprzedni";
 	// Position und Dimension
 	posx		=	1000;		posy		=	MENU_BACK_Y;
 	dimx		=	6192;		dimy		=	MENU_SOUND_DY;

@@ -265,8 +265,6 @@ FUNC INT Info_Mod_Sabine_Trade_Condition()
 
 FUNC VOID Info_Mod_Sabine_Trade_Info()
 {
-	Backup_Questitems();
-
 	B_Say (hero, self, "$TRADE_1");
 };
 

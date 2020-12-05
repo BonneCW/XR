@@ -1251,8 +1251,6 @@ FUNC VOID Info_Mod_Thorben_Trade_Info()
 		Mod_ThorbenTrader = 1;
 	};
 
-	Backup_Questitems();
-
 	B_Say (hero, self, "$TRADE_1");
 };
 

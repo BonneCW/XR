@@ -49,8 +49,8 @@ INSTANCE MENUITEM_GRA_HEADLINE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GRA_TEXQUAL(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Tekstury";
-	text[1]		= 	"Szczegó³owoœæ tekstur."; // Kommentar
+	text[0]		=	"Szczególy tekstury";
+	text[1]		= 	"Poziom szczególowosci tekstur."; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*0;
 	dimx		=	3000;	dimy		=	750;
@@ -84,8 +84,8 @@ INSTANCE MENUITEM_GRA_TEXQUAL_SLIDER(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GRA_MODEL_DETAIL(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Modele";
-	text[1]		= 	"Szczegó³owoœæ modeli 3D."; // Kommentar
+	text[0]		=	"Szczególy modelu";
+	text[1]		= 	"Poziom szczególowosci obiektów."; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*1;
 	dimx		=	3000;	dimy		=	750;
@@ -121,8 +121,8 @@ instance MENUITEM_GRA_MODEL_DETAIL_SLIDER(C_MENU_ITEM_DEF)
 instance MENUITEM_GRA_SIGHT(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Zasiêg widzenia";
-	text[1]		= "Wybór zasiêgu widzenia w procentach."; // Kommentar
+	text[0]		= "dostrzegalnosc";
+	text[1]		= "Dostosowanie widocznosci w procentach."; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*2;
 	dimx		=	3000;	dimy		=	750;
@@ -153,8 +153,8 @@ INSTANCE MENUITEM_GRA_SIGHT_CHOICE(C_MENU_ITEM_DEF)
 instance MENUITEM_VOB_SIGHT(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Zanikanie obiektów";
-	text[1]		= "Wybór zasiêgu, z jakiego widoczne bêd¹ obiekty."; // Kommentar
+	text[0]		= "Widocznosc Obj.";
+	text[1]		= "Kontrola widocznosci obiektu w procentach"; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*3;
 	dimx		=	3000;	dimy		=	750;
@@ -190,8 +190,8 @@ INSTANCE MENUITEM_VOB_SIGHT_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GRA_SKY_EFFECTS(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Niebo";
-	text[1]		= 	"Specjalne efekty nieba."; // Kommentar
+	text[0]		=	"boskie skutki";
+	text[1]		= 	"Niebieski wplyw odpowiednio na i poza wylaczyc."; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*4;
 	dimx		=	3000;	dimy		=	750;
@@ -205,7 +205,7 @@ instance MENUITEM_GRA_SKY_EFFECTS_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"wy³.|w³.";
+	text[0]		= 	"nie taniec";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*4 + MENU_CHOICE_YPLUS;
@@ -223,7 +223,7 @@ instance MENUITEM_GRA_SKY_EFFECTS_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GRA_BACK(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Wstecz";
+	text[0]		=	"Poprzedni";
 	// Position und Dimension	
 	posx		=	1000;		posy		=	MENU_BACK_Y + 300;
 	dimx		=	6192;		dimy		=	MENU_DY;

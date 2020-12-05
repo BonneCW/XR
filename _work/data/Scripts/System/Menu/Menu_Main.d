@@ -35,8 +35,8 @@ const int MENU_MAIN_Y = 2500;
 instance MENUITEM_MAIN_NEWGAME(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Nowa gra";
-	text[1]		= "Rozpocznij now¹ przygodê.";  // Kommentar
+	text[0]		= "Rozpoczecie gry";
+	text[1]		= "Rozpocznij nowa przygode.";  // Kommentar
 	
 	// Positionen  und Dimensionen	
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*0;
@@ -58,7 +58,7 @@ INSTANCE MENUITEM_MAIN_SAVEGAME_LOAD(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
 	text[0]		=	"Wczytaj";
-	text[1]		=	"Wczytaj zapisan¹ grê.";  // Kommentar
+	text[1]		=	"Wczytaj zapisany wynik.";  // Kommentar
 	
 	// Positionen  und Dimensionen	
 	posx		=  0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*1;
@@ -74,7 +74,7 @@ instance MENUITEM_MAIN_SAVEGAME_SAVE(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Zapisz";
-	text[1]		= "Zapisz bie¿¹c¹ grê.";  // Kommentar
+	text[1]		= "Zapisz aktualny wynik.";  // Kommentar
 	
 	// Positionen  und Dimensionen
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*2;
@@ -95,8 +95,8 @@ instance MENUITEM_MAIN_SAVEGAME_SAVE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_MAIN_RESUME(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Wznów";
-	text[1]		=   "Powrót do gry."; // Kommentar
+	text[0]		=	"dalszy";
+	text[1]		=   "Powrót do gry.";  // Kommentar
 	
 	// Position und Dimension
 	posx		=	0;		posy		=	MENU_MAIN_Y + MENU_MAIN_DY*3;
@@ -115,8 +115,8 @@ INSTANCE MENUITEM_MAIN_RESUME(C_MENU_ITEM_DEF)
 instance MENUITEM_MAIN_OPTIONS(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Opcje";
-	text[1]		= "Ustawienia dŸwiêku, grafiki i klawiatury."; // Kommentar
+	text[0]		= "nastawienia";
+	text[1]		= "Ustawienia gier, wideo, audio i klawiatury";  // Kommentar
 	
 	// Positionen  und Dimensionen	
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*4;
@@ -131,8 +131,8 @@ instance MENUITEM_MAIN_OPTIONS(C_MENU_ITEM_DEF)
 instance MENUITEM_MAIN_ZUSATZOPTIONS(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Dodatki";
-	text[1]		= "Specjalne urozmaicenia dla modyfikacji.";  // Kommentar
+	text[0]		= "dodatkowe ustawienia";
+	text[1]		= "Specjalnie dla ustawien rozszerzonych modemu";  // Kommentar
 	
 	// Positionen  und Dimensionen	
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*6;
@@ -149,7 +149,7 @@ instance MENUITEM_MAIN_INTRO(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Wprowadzenie";
-	text[1]		= "Odtwórz sekwencjê wprowadzaj¹c¹.";
+	text[1]		= "Ponownie odtwórz sekwencje intro.";
 	// Positionen  und Dimensione	
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*5;
 	dimx		= 8100;		dimy		=  750;
@@ -163,8 +163,8 @@ instance MENUITEM_MAIN_INTRO(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_MAIN_CREDITS(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Twórcy gry";
-	text[1]		= "Wyœwietl autorów gry.";  // Kommentar
+	text[0]		= "podziekowania";
+	text[1]		= "podziekowania";  // Kommentar
 	
 	// Positionen  und Dimensionen	
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*6;
@@ -184,8 +184,8 @@ INSTANCE MENUITEM_MAIN_CREDITS(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_MAIN_EXIT(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "WyjdŸ";
-	text[1]		= "Opuœæ Powrót Xeresa.";  // Kommentar
+	text[0]		= "Koniec koncówka";
+	text[1]		= "Zostaw swiat powrotu Xeres.";  // Kommentar
 	
 	// Positionen  und Dimensionen
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*7;	
@@ -201,8 +201,8 @@ INSTANCE MENUITEM_MAIN_EXIT(C_MENU_ITEM_DEF)
 instance MENUITEM_MAIN_TEAM(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Teutonic Team";
-	text[1]		= "Cz³onkowie Teutonic Team.";
+	text[0]		= "Druzyna Teutoniczna";
+	text[1]		= "Czlonkowie Druzyny Krzyzackiej";
 	// Positionen  und Dimensione	
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*5;
 	dimx		= 8100;		dimy		=  750;

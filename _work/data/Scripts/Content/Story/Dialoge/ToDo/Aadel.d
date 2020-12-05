@@ -36,6 +36,8 @@ FUNC VOID Info_Mod_Aadel_Hi_Info()
 	AI_Output(hero, self, "Info_Mod_Aadel_Hi_15_14"); //Oczywiscie. A od czego zaczac?
 	AI_Output(self, hero, "Info_Mod_Aadel_Hi_02_15"); //Wróc tam do Kamala. To jest karczma w naszym klubie. Zawsze czegos potrzebuje.
 	AI_Output(hero, self, "Info_Mod_Aadel_Hi_15_16"); //Na zyczenie, mistrz.
+	
+	B_LogEntry	(TOPIC_MOD_ASS_MAGIER, "");
 };
 
 INSTANCE Info_Mod_Aadel_Later (C_INFO)

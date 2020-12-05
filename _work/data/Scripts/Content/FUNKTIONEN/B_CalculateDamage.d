@@ -806,7 +806,9 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 			};
 
 			if (Hlp_IsItem(rwp, ItMw_1H_Blessed_01) == TRUE)
+			|| (Hlp_IsItem(rwp, ItMw_1H_Blessed_01_Geschaerft) == TRUE)
 			|| (Hlp_IsItem(rwp, ItMw_2H_Blessed_01) == TRUE)
+			|| (Hlp_IsItem(rwp, ItMw_2H_Blessed_01_Geschaerft) == TRUE)
 			{
 				if (opfer.guild == GIL_DEMON)
 				|| (C_NpcIsUndead(opfer))
@@ -816,7 +818,9 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 			};
 
 			if (Hlp_IsItem(rwp, ItMw_1H_Blessed_02) == TRUE)
+			|| (Hlp_IsItem(rwp, ItMw_1H_Blessed_02_Geschaerft) == TRUE)
 			|| (Hlp_IsItem(rwp, ItMw_2H_Blessed_02) == TRUE)
+			|| (Hlp_IsItem(rwp, ItMw_2H_Blessed_02_Geschaerft) == TRUE)
 			{
 				if (opfer.guild == GIL_DEMON)
 				|| (C_NpcIsUndead(opfer))
@@ -826,7 +830,9 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 			};
 
 			if (Hlp_IsItem(rwp, ItMw_1H_Blessed_03) == TRUE)
+			|| (Hlp_IsItem(rwp, ItMw_1H_Blessed_03_Geschaerft) == TRUE)
 			|| (Hlp_IsItem(rwp, ItMw_2H_Blessed_03) == TRUE)
+			|| (Hlp_IsItem(rwp, ItMw_2H_Blessed_03_Geschaerft) == TRUE)
 			{
 				if (opfer.guild == GIL_DEMON)
 				|| (C_NpcIsUndead(opfer))
@@ -837,6 +843,8 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 
 			if (Hlp_IsItem(rwp, ItMw_Hueterklinge_1H) == TRUE)
 			|| (Hlp_IsItem(rwp, ItMw_Hueterklinge_2H) == TRUE)
+			|| (Hlp_IsItem(rwp, ItMw_Hueterklinge_1H_Geschaerft) == TRUE)
+			|| (Hlp_IsItem(rwp, ItMw_Hueterklinge_2H_Geschaerft) == TRUE)
 			{
 				if (opfer.guild == GIL_SWAMPSHARK)
 				|| (opfer.guild == GIL_DRACONIAN)

@@ -98,7 +98,7 @@ FUNC INT DIA_BAU_13_LOCATION_Condition()
 FUNC VOID DIA_BAU_13_LOCATION_Info()
 {	
 	AI_Output (hero, self, "DIA_BAU_13_LOCATION_15_00"); //Co mozesz mi powiedziec o tej okolicy?
-	AI_Output (self, hero, "DIA_BAU_13_LOCATION_13_01"); //Sa tu trzy gospodarstwa rolne. Naars na wschodzie i Sekobs na pólnocy doliny.
+	AI_Output (self, hero, "DIA_BAU_13_LOCATION_13_01"); //75581
 	AI_Output (self, hero, "DIA_BAU_13_LOCATION_13_02"); //Na poludniowym zachodzie znajduje sie klatka schodowa do plaskowyzu. Znajduje sie tu gospodarstwo Bengara.
 };
 

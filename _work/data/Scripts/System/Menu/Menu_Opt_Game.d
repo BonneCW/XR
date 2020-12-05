@@ -40,7 +40,7 @@ INSTANCE MENU_OPT_GAME(C_MENU_DEF)
 
 INSTANCE MENUITEM_GAME_HEADLINE(C_MENU_ITEM_DEF) 
 {
-	text[0]		=	"USTAWIENIA GRY";
+	text[0]		=	"GAME SETTINGS";
 	type		=	MENU_ITEM_TEXT;
 	// Position und Dimension	
 	posx		=	0;		posy		=	MENU_TITLE_Y;
@@ -58,8 +58,8 @@ INSTANCE MENUITEM_GAME_HEADLINE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GAME_SUB_TITLES(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Podpisy";
-	text[1]		= 	"Wyœwietlanie tekstów dialogów.";  // Kommentar
+	text[0]		=	"napisy";
+	text[1]		= 	"Wizualne wyswietlanie dialogów."; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*0;
 	dimx		=	4000;	dimy		=	750;
@@ -73,7 +73,7 @@ instance MENUITEM_GAME_SUB_TITLES_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"nie|tak";
+	text[0]		= 	"nie taniec";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		=	MENU_START_Y + MENU_SOUND_DY*0 + MENU_CHOICE_YPLUS;
@@ -89,8 +89,8 @@ instance MENUITEM_GAME_SUB_TITLES_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GAME_POTIONKEYS(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Hotkeye";
-	text[1]		= 	"Zezwoliæ na korzystanie z hotkeyów pod H i P?"; // Kommentar
+	text[0]		=	"Dodatkowe klawisze funkcyjne";
+	text[1]		= 	"Uzywaj dodatkowych klawiszy funkcyjnych na klawiszach H i P?"; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*7;
 	dimx		=	4000;	dimy		=	750;
@@ -104,7 +104,7 @@ instance MENUITEM_GAME_POTIONKEYS_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"nie|tak";
+	text[0]		= 	"nie taniec";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		= MENU_START_Y + MENU_SOUND_DY*7 + MENU_CHOICE_YPLUS;
@@ -121,8 +121,8 @@ instance MENUITEM_GAME_POTIONKEYS_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GAME_FIGHTFOCUS(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Oznaczanie celów";
-	text[1]		= 	"w³./wy³. wyró¿niania bie¿¹cego celu w czasie walki.";// Kommentar
+	text[0]		=	"Zwalczanie ogniskowania uwagi";
+	text[1]		= 	"Stopien pokazania ognisk walki"; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*1;
 	dimx		=	4000;	dimy		=	750;
@@ -136,7 +136,7 @@ instance MENUITEM_GAME_FIGHTFOCUS_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	text[0]		= 	"Nie|Okienko|Podœwietlenie|Oba";
+	text[0]		= 	"nie mzadne nowe kwadraty nie powinny sie rozjasnic.";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		= MENU_START_Y + MENU_SOUND_DY*1 + MENU_CHOICE_YPLUS;
@@ -153,8 +153,8 @@ instance MENUITEM_GAME_FIGHTFOCUS_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GAME_INTERACTFOCUS(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Podœwietlanie obiektów";
-	text[1]		= 	"W³./wy³. podœwietlania przedmiotów w polu widzenia."; // Kommentar
+	text[0]		=	"Wspóldzialac. skupiac sie";
+	text[1]		= 	"Stopien wyswietlania orientacji interakcji"; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*2;
 	dimx		=	4000;	dimy		=	750;
@@ -168,7 +168,7 @@ instance MENUITEM_GAME_INTERACTFOCUS_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	text[0]		= 	"nie|tak";
+	text[0]		= 	"nie taniec";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		= MENU_START_Y + MENU_SOUND_DY*2 + MENU_CHOICE_YPLUS;
@@ -192,8 +192,8 @@ instance MENUITEM_GAME_INTERACTFOCUS_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GAME_LOOKAROUND_INVERSE(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Odwrócona kamera";
-	text[1]		= 	"Odwrócone sterowanie kamer¹.";  // Kommentar
+	text[0]		=	"spojrzenie";
+	text[1]		= 	"Odwrócic sterowanie kamery."; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*3;
 	dimx		=	4000;	dimy		=	750;
@@ -207,7 +207,7 @@ instance MENUITEM_GAME_LOOKAROUND_INVERSE_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"nie|tak";
+	text[0]		= 	"nie taniec";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		=	MENU_START_Y + MENU_SOUND_DY*3 + MENU_CHOICE_YPLUS;
@@ -228,8 +228,8 @@ instance MENUITEM_GAME_LOOKAROUND_INVERSE_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_M(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Mysz";
-	text[1]		= 	"Prze³¹cza sterowanie kamer¹ za pomoc¹ myszy."; // Kommentar
+	text[0]		=	"mysz";
+	text[1]		= 	"Aktywuje sterowanie myszka."; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*4;
 	dimx		=	4000;	dimy		=	750;
@@ -243,7 +243,7 @@ instance MENUITEM_M_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	text[0]		= 	"wy³.|w³.";
+	text[0]		= 	"z|an";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		= MENU_START_Y + MENU_SOUND_DY*4 + MENU_CHOICE_YPLUS;
@@ -264,7 +264,7 @@ instance MENUITEM_M_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_MSENSITIVITY(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Czu³oœæ myszy";
+	text[0]		=	"Czulosc myszy.";
 	text[1]		= 	""; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*5;
@@ -303,8 +303,8 @@ instance MENUITEM_MSENSITIVITY_SLIDER(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GAME_BLOOD(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Krew";
-	text[1]		= 	"Stopieñ prezentacji efektów krwi."; // Kommentar
+	text[0]		=	"Szczególy krwi";
+	text[1]		= 	"Stopien manifestacji efektów dzialania na krew."; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*7;
 	dimx		=	4000;	dimy		=	750;
@@ -318,7 +318,7 @@ instance MENUITEM_GAME_BLOOD_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	text[0]		= 	"brak|trochê|wiêcej|du¿o";
+	text[0]		= 	"nie|fewiewielkiej pzrowodnej pszczelejjkijjjmanijjjmany";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		= MENU_START_Y + MENU_SOUND_DY*7 + MENU_CHOICE_YPLUS;
@@ -338,8 +338,8 @@ instance MENUITEM_GAME_BLOOD_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GAME_OLDCONTROLS(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Sterowanie z Gothic 1";
-	text[1]		= 	"Wykorzystanie sposobu sterowania z Gothic 1."; // Kommentar
+	text[0]		=	"Gotycki 1 element sterujacy";
+	text[1]		= 	"Aktywuj stara kontrole nad walka."; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_SOUND_DY*6;
 	dimx		=	4000;	dimy		=	750;
@@ -353,7 +353,7 @@ INSTANCE MENUITEM_GAME_OLDCONTROLS_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;	
-	text[0]		= 	"wy³.|w³.";
+	text[0]		= 	"z|an";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		= MENU_START_Y + MENU_SOUND_DY*6 + MENU_CHOICE_YPLUS;
@@ -372,7 +372,7 @@ INSTANCE MENUITEM_GAME_OLDCONTROLS_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_GAME_BACK(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Wstecz";
+	text[0]		=	"Poprzedni";
 	// Position und Dimension	
 	posx		=	1000;		posy		=	MENU_START_Y + MENU_SOUND_DY*9;
 	dimx		=	6192;		dimy		=	MENU_SOUND_DY;

@@ -123,12 +123,12 @@ FUNC INT Info_Mod_Thorus_Diebe_Condition()
 
 FUNC VOID Info_Mod_Thorus_Diebe_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Thorus_Diebe_15_00"); //Wiem, kim sa zlodzieje.
-	AI_Output(self, hero, "Info_Mod_Thorus_Diebe_12_01"); //Kto?
-	AI_Output(hero, self, "Info_Mod_Thorus_Diebe_15_02"); //Krew okrada rzeczy, a Cuttera na czujce. Ale nie sadze, ze Cutter robi to dobrowolnie, poniewaz dal mi wskazówke, abym je odslonil.
-	AI_Output(self, hero, "Info_Mod_Thorus_Diebe_12_03"); //Masz jakies dowody?
-	AI_Output(hero, self, "Info_Mod_Thorus_Diebe_15_04"); //Nie, kupiec Fisk nie dalby mi dowodów, dopóki nie bylby bezpieczny przed zlodziejami.
-	AI_Output(self, hero, "Info_Mod_Thorus_Diebe_12_05"); //Wszystko w porzadku, obydwie one sie utrzymamy.
+	AI_Output(hero, self, "Info_Mod_Thorus_Diebe_15_00"); //
+	AI_Output(self, hero, "Info_Mod_Thorus_Diebe_12_01"); //
+	AI_Output(hero, self, "Info_Mod_Thorus_Diebe_15_02"); //
+	AI_Output(self, hero, "Info_Mod_Thorus_Diebe_12_03"); //
+	AI_Output(hero, self, "Info_Mod_Thorus_Diebe_15_04"); //
+	AI_Output(self, hero, "Info_Mod_Thorus_Diebe_12_05"); //
 
 	B_LogEntry	(TOPIC_MOD_PDV, "Cóz, zglosilem je Thorusowi. Bedzie ja trzymal az do momentu, kiedy bede mial dowód.");
 
@@ -165,20 +165,20 @@ FUNC INT Info_Mod_Thorus_Zettel_Condition()
 
 FUNC VOID Info_Mod_Thorus_Zettel_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Thorus_Zettel_15_00"); //Mam panstwa dowód.
+	AI_Output(hero, self, "Info_Mod_Thorus_Zettel_15_00"); //
 	
 	B_GiveInvItems	(hero, self, ItWr_FisksNotiz, 1);
 
 	B_UseFakeScroll();
 
-	AI_Output(self, hero, "Info_Mod_Thorus_Zettel_12_01"); //Cóz, w lochach sa Bloodwyn i Cutter. Mamy nadzieje, ze dowiemy sie, kim sa ich osoby kontaktowe.
+	AI_Output(self, hero, "Info_Mod_Thorus_Zettel_12_01"); //
 
 	if (Mod_AnzahlNebengilden < MaxNebengilden)
 	&& (Banditen_Dabei == FALSE)
 	&& (hero.guild != GIL_MIL)
 	&& (KG_Dabei == FALSE)
 	{
-		AI_Output(self, hero, "Info_Mod_Thorus_Zettel_12_02"); //No cóz, teraz pozostalo wiecej niz jedno miejsce z straznikami. Jesli chcesz, mozesz dolaczyc do nas.
+		AI_Output(self, hero, "Info_Mod_Thorus_Zettel_12_02"); //
 
 		B_LogEntry	(TOPIC_MOD_PDV, "Thorus zablokowal Cutter i Bloodwyn. Moge teraz zostac straznikiem.");
 
@@ -186,7 +186,7 @@ FUNC VOID Info_Mod_Thorus_Zettel_Info()
 	}
 	else
 	{
-		AI_Output(self, hero, "Info_Mod_Thorus_Zettel_12_03"); //Niestety, nie mozemy juz cie zabrac.
+		AI_Output(self, hero, "Info_Mod_Thorus_Zettel_12_03"); //
 	};
 
 	B_SetTopicStatus	(TOPIC_MOD_PDV, LOG_SUCCESS);
@@ -299,8 +299,8 @@ FUNC INT Info_Mod_Thorus_Verloren_Condition()
 
 FUNC VOID Info_Mod_Thorus_Verloren_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Thorus_Verloren_15_00"); //W walce z nieznanym nagle oslabilem sie, choc nie zaatakowal mnie.
-	AI_Output(self, hero, "Info_Mod_Thorus_Verloren_12_01"); //I co dobrego to ta gonna, która my mamy? Powiedzialbym, ze ogladasz tego faceta, a jesli on jest podejrzliwy, to dostajesz sie na jego dno.
+	AI_Output(hero, self, "Info_Mod_Thorus_Verloren_15_00"); //
+	AI_Output(self, hero, "Info_Mod_Thorus_Verloren_12_01"); //
 
 	B_LogEntry	(TOPIC_MOD_AL_ARENA, "Thorus nie dopomógl.");
 
@@ -445,9 +445,9 @@ FUNC INT Info_Mod_Thorus_OrikDabei_Condition()
 
 FUNC VOID Info_Mod_Thorus_OrikDabei_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Thorus_OrikDabei_15_00"); //Mamy Orika, ale podejrzewam, ze nowy obóz nie bedzie zadowolony.
-	AI_Output(self, hero, "Info_Mod_Thorus_OrikDabei_12_01"); //Tak, wiem. To nalezalo sie spodziewac. Mam jednak sytuacje pod kontrola. Zamkniemy obóz w przypadku ataku.
-	AI_Output(self, hero, "Info_Mod_Thorus_OrikDabei_12_02"); //Oto Twoja nagroda.
+	AI_Output(hero, self, "Info_Mod_Thorus_OrikDabei_15_00"); //
+	AI_Output(self, hero, "Info_Mod_Thorus_OrikDabei_12_01"); //
+	AI_Output(self, hero, "Info_Mod_Thorus_OrikDabei_12_02"); //
 
 	CreateInvItems	(hero, ItMi_Gold, 500);
 	CreateInvItems	(hero, GRD_ARMOR_M, 1);
@@ -501,15 +501,15 @@ FUNC INT Info_Mod_Thorus_Templer_Condition()
 
 FUNC VOID Info_Mod_Thorus_Templer_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Thorus_Templer_15_00"); //Kim jest templariusz?
-	AI_Output(self, hero, "Info_Mod_Thorus_Templer_12_01"); //Myslal, ze ma problem z kradzieza w swoim obozie.
-	AI_Output(self, hero, "Info_Mod_Thorus_Templer_12_02"); //I sa one przerazajaco podobne do kradziezy z naszego obozu.
-	AI_Output(hero, self, "Info_Mod_Thorus_Templer_15_03"); //Czy jest cos nowego?
-	AI_Output(self, hero, "Info_Mod_Thorus_Templer_12_04"); //Tak, Cutter powiedzial podczas przesluchania, ze moze podac nowe informacje, a Ty je wezmiesz.
+	AI_Output(hero, self, "Info_Mod_Thorus_Templer_15_00"); //
+	AI_Output(self, hero, "Info_Mod_Thorus_Templer_12_01"); //
+	AI_Output(self, hero, "Info_Mod_Thorus_Templer_12_02"); //
+	AI_Output(hero, self, "Info_Mod_Thorus_Templer_15_03"); //
+	AI_Output(self, hero, "Info_Mod_Thorus_Templer_12_04"); //
 
 	B_Say	(hero, self, "$WOFINDEICHIHN");
 
-	AI_Output(self, hero, "Info_Mod_Thorus_Templer_12_06"); //On jest w lochu, odnajdziesz go. Oto klucz.
+	AI_Output(self, hero, "Info_Mod_Thorus_Templer_12_06"); //
 
 	CreateInvItems	(self, DungeonKey, 1);
 	B_GiveInvItems	(self, hero, DungeonKey, 1);
@@ -745,11 +745,11 @@ FUNC VOID Info_Mod_Thorus_PMSchulden_Info()
 	{
 		Info_ClearChoices  	(Info_Mod_Thorus_PMSchulden);
 		Info_ClearChoices  	(Info_Mod_Thorus_PETZMASTER);
-		Info_AddChoice		(Info_Mod_Thorus_PMSchulden,"Nie mam wystarczajaco duzo zlota!",Info_Mod_Thorus_PETZMASTER_PayLater);
-		Info_AddChoice		(Info_Mod_Thorus_PMSchulden,"Ile to znów bylo?",Info_Mod_Thorus_PMSchulden_HowMuchAgain);
+		Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Nie mam wystarczajaco duzo zlota!", Info_Mod_Thorus_PETZMASTER_PayLater);
+		Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Ile to znów bylo?", Info_Mod_Thorus_PMSchulden_HowMuchAgain);
 		if (Npc_HasItems(hero, itmi_gold) >= Thorus_Schulden)
 		{
-			Info_AddChoice 	(Info_Mod_Thorus_PMSchulden,"Chce zaplacic grzywne.",Info_Mod_Thorus_PETZMASTER_PayNow);
+			Info_AddChoice 	(Info_Mod_Thorus_PMSchulden, "Chce zaplacic grzywne.", Info_Mod_Thorus_PETZMASTER_PayNow);
 		};
 	};
 };
@@ -761,11 +761,11 @@ func void Info_Mod_Thorus_PMSchulden_HowMuchAgain()
 
 	Info_ClearChoices  	(Info_Mod_Thorus_PMSchulden);
 	Info_ClearChoices  	(Info_Mod_Thorus_PETZMASTER);
-	Info_AddChoice		(Info_Mod_Thorus_PMSchulden,"Nie mam wystarczajaco duzo zlota!",Info_Mod_Thorus_PETZMASTER_PayLater);
-	Info_AddChoice		(Info_Mod_Thorus_PMSchulden,"Ile to znów bylo?",Info_Mod_Thorus_PMSchulden_HowMuchAgain);
+	Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Nie mam wystarczajaco duzo zlota!", Info_Mod_Thorus_PETZMASTER_PayLater);
+	Info_AddChoice		(Info_Mod_Thorus_PMSchulden, "Ile to znów bylo?", Info_Mod_Thorus_PMSchulden_HowMuchAgain);
 	if (Npc_HasItems(hero, itmi_gold) >= Thorus_Schulden)
 	{
-		Info_AddChoice 	(Info_Mod_Thorus_PMSchulden,"Chce zaplacic grzywne.",Info_Mod_Thorus_PETZMASTER_PayNow);
+		Info_AddChoice 	(Info_Mod_Thorus_PMSchulden, "Chce zaplacic grzywne.", Info_Mod_Thorus_PETZMASTER_PayNow);
 	};
 };
 
@@ -861,10 +861,10 @@ FUNC VOID Info_Mod_Thorus_PETZMASTER_Info()
 	
 	Info_ClearChoices  	(Info_Mod_Thorus_PMSchulden);
 	Info_ClearChoices  	(Info_Mod_Thorus_PETZMASTER);
-	Info_AddChoice		(Info_Mod_Thorus_PETZMASTER,"Nie mam wystarczajaco duzo zlota!",Info_Mod_Thorus_PETZMASTER_PayLater);
+	Info_AddChoice		(Info_Mod_Thorus_PETZMASTER, "Nie mam wystarczajaco duzo zlota!", Info_Mod_Thorus_PETZMASTER_PayLater);
 	if (Npc_HasItems(hero, itmi_gold) >= Thorus_Schulden)
 	{
-		Info_AddChoice 	(Info_Mod_Thorus_PETZMASTER,"Chce zaplacic grzywne.",Info_Mod_Thorus_PETZMASTER_PayNow);
+		Info_AddChoice 	(Info_Mod_Thorus_PETZMASTER, "Chce zaplacic grzywne.", Info_Mod_Thorus_PETZMASTER_PayNow);
 	};
 };
 
@@ -1016,6 +1016,124 @@ FUNC VOID Info_Mod_Thorus_Lernen_STR_1()
 	Info_AddChoice	(Info_Mod_Thorus_Lernen, B_BuildLearnString_New(PRINT_LearnDEX1, B_GetLearnCostAttribute(hero, ATR_DEXTERITY), ATR_DEXTERITY), Info_Mod_Thorus_Lernen_DEX_1);
 	Info_AddChoice	(Info_Mod_Thorus_Lernen, B_BuildLearnString_New(PRINT_LearnSTR5, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH), Info_Mod_Thorus_Lernen_STR_5);
 	Info_AddChoice	(Info_Mod_Thorus_Lernen, B_BuildLearnString_New(PRINT_LearnSTR1, B_GetLearnCostAttribute(hero, ATR_STRENGTH), ATR_STRENGTH), Info_Mod_Thorus_Lernen_STR_1);
+};
+
+// ------------------------------------------------------------
+// 			  				CANYOUTEACH 
+// ------------------------------------------------------------ 
+
+INSTANCE Info_Mod_Thorus_CanYouTeach   (C_INFO) 
+{ 
+	npc     	= Mod_966_GRD_Thorus_MT; 
+	nr          = 1; 
+	condition   = Info_Mod_Thorus_CanYouTeach_Condition; 
+	information = Info_Mod_Thorus_CanYouTeach_Info; 
+	important   = FALSE; 
+	permanent   = FALSE; 
+	description = ""; 
+}; 
+ 
+FUNC INT Info_Mod_Thorus_CanYouTeach_Condition () 
+{ 
+    if (Npc_KnowsInfo(hero, Info_Mod_Thorus_Lehrer)) 
+    { 
+  	 	return TRUE; 
+    }; 
+}; 
+ 
+FUNC VOID Info_Mod_Thorus_CanYouTeach_Info () 
+{ 
+	AI_Output(hero, self, "Info_Mod_Thorus_CanYouTeach_15_00"); //Kannst du mich auch im Kampf unterrichten?
+
+	AI_Output(self, hero, "Info_Mod_Thorus_CanYouTeach_12_01"); //Ja. Ich kann dir zeigen, wie man mit Zweihändern kämpft. 
+
+	Log_CreateTopic	(TOPIC_MOD_LEHRER_OLDCAMP, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_LEHRER_OLDCAMP, "");
+}; 
+
+
+// ------------------------------------------------------------
+// 			  				   LERNEN 
+// ------------------------------------------------------------ 
+
+var int Thorus_Merke2H;
+
+INSTANCE Info_Mod_Thorus_2HLernen   (C_INFO) 
+{ 
+	npc     	= Mod_966_GRD_Thorus_MT; 
+	nr          = 1; 
+	condition   = Info_Mod_Thorus_2HLernen_Condition; 
+	information = Info_Mod_Thorus_2HLernen_Info; 
+	important   = FALSE; 
+	permanent   = TRUE; 
+	description = ""; 
+}; 
+ 
+FUNC INT Info_Mod_Thorus_2HLernen_Condition () 
+{ 
+    if (Npc_KnowsInfo(hero, Info_Mod_Thorus_CanYouTeach)) 
+    { 
+  	 	return TRUE; 
+    }; 
+}; 
+ 
+FUNC VOID Info_Mod_Thorus_2HLernen_Info () 
+{ 
+	AI_Output(hero, self, "Info_Mod_Thorus_2HLernen_15_00"); //
+
+	if (hero.HitChance[NPC_TALENT_2H] >= 100)
+	{
+		AI_Output(self, hero, "Info_Mod_Thorus_2HLernen_12_01"); //
+	}
+	else
+	{
+		Thorus_merke2H = hero.HitChance[NPC_TALENT_2H];
+
+		Info_ClearChoices	(Info_Mod_Thorus_2HLernen);
+		Info_AddChoice 		(Info_Mod_Thorus_2HLernen, DIALOG_BACK, Info_Mod_Thorus_2HLernen_Back);
+		Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H1,	 B_GetLearnCostTalent(hero, NPC_TALENT_2H, 1)),		Info_Mod_Thorus_2HLernen_2H_1);
+		Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H5,	 B_GetLearnCostTalent_New(hero, NPC_TALENT_2H)),		Info_Mod_Thorus_2HLernen_2H_5);
+	};
+}; 
+
+FUNC VOID Info_Mod_Thorus_2HLernen_BACK()
+{
+	Info_ClearChoices	(Info_Mod_Thorus_2HLernen);
+	if (hero.HitChance[NPC_TALENT_2H] > Thorus_merke2H && hero.HitChance[NPC_TALENT_2H] < 100)
+	{
+		AI_Output(self, hero, "Info_Mod_Thorus_2HLernen_12_02"); //Du bist besser geworden, weiter so.
+	}
+	if (hero.HitChance[NPC_TALENT_2H] >= 100)
+	{
+		AI_Output (self, hero, "Info_Mod_Thorus_2HLernen_12_03"); //Du bist nun ein Meister im Umgang mit den Zweihändern. Ich bezweifle, dass du noch jemanden finden wirst, der dir etwas beibringen kann.
+		AI_Output (self, hero, "Info_Mod_Thorus_2HLernen_12_04"); //Nun kommt es nur noch auf deine Praxiserfahrung an. 
+	}
+	else
+	{
+		AI_Output (self, hero, "Info_Mod_Thorus_2HLernen_12_05"); //Komm wieder, wenn du mehr lernen willst.
+	};
+};
+
+FUNC VOID Info_Mod_Thorus_2HLernen_2H_5()
+{
+	B_TeachFightTalentPercent_New	(self, hero, NPC_TALENT_2H, 5, 100);
+	
+	Info_ClearChoices	(Info_Mod_Thorus_2HLernen);
+	Info_AddChoice 		(Info_Mod_Thorus_2HLernen, DIALOG_BACK, Info_Mod_Thorus_2HLernen_Back);
+	Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H1,	 B_GetLearnCostTalent(hero, NPC_TALENT_2H, 1)),		Info_Mod_Thorus_2HLernen_2H_1);
+	Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H5,	 B_GetLearnCostTalent_New(hero, NPC_TALENT_2H)),		Info_Mod_Thorus_2HLernen_2H_5);
+	
+};
+
+FUNC VOID Info_Mod_Thorus_2HLernen_2H_1()
+{
+	B_TeachFightTalentPercent_New	(self, hero, NPC_TALENT_2H, 1, 100);
+	
+	Info_ClearChoices	(Info_Mod_Thorus_2HLernen);
+	Info_AddChoice 		(Info_Mod_Thorus_2HLernen, DIALOG_BACK, Info_Mod_Thorus_2HLernen_Back);
+	Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H1,	 B_GetLearnCostTalent(hero, NPC_TALENT_2H, 1)),		Info_Mod_Thorus_2HLernen_2H_1);
+	Info_AddChoice		(Info_Mod_Thorus_2HLernen, B_BuildLearnString(PRINT_Learn2H5,	 B_GetLearnCostTalent_New(hero, NPC_TALENT_2H)),		Info_Mod_Thorus_2HLernen_2H_5);
+
 };
 
 INSTANCE Info_Mod_Thorus_Pickpocket (C_INFO)

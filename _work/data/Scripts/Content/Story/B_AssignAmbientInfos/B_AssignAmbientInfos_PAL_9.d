@@ -46,7 +46,7 @@ FUNC VOID DIA_PAL_9_JOIN_Info()
 {	
 	AI_Output (hero, self, "DIA_PAL_9_JOIN_15_00"); //Jak moge zostac Paladinem?
 	AI_Output (self, hero, "DIA_PAL_9_JOIN_09_01"); //Wybrani sa ci, którzy okaza sie godni poslugiwania Inno lub królowi!
-	AI_Output (self, hero, "DIA_PAL_9_JOIN_09_02"); //Innymi slowy, brane sa tylko najlepsze. Ale Ty jestes jeszcze daleko od tego, synu!
+	AI_Output (self, hero, "DIA_PAL_9_JOIN_09_02"); //62516
 };
 
 // *************************************************************************
@@ -71,7 +71,7 @@ FUNC INT DIA_PAL_9_PEOPLE_Condition()
 
 FUNC VOID DIA_PAL_9_PEOPLE_Info()
 {	
-	AI_Output (hero, self, "DIA_PAL_9_PEOPLE_15_00"); //Kto tu dowodzi?
+	AI_Output (hero, self, "DIA_PAL_9_PEOPLE_15_00"); //56133
 	AI_Output (self, hero, "DIA_PAL_9_PEOPLE_09_01"); //Lord Hagen.
 	AI_Output (hero, self, "DIA_PAL_9_PEOPLE_15_02"); //A co?
 	AI_Output (self, hero, "DIA_PAL_9_PEOPLE_09_03"); //I nikt inny. Lord Hagen jest dowódca na czele calej wyspy.

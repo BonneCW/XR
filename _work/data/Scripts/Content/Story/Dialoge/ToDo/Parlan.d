@@ -146,7 +146,7 @@ FUNC VOID Info_Mod_Parlan_Ring_Info()
 	AI_Output(self, hero, "Info_Mod_Parlan_Ring_05_02"); //Nowicjusz Pedro ukradl mi pierscien ognia i uciekl z klasztoru.
 	AI_Output(self, hero, "Info_Mod_Parlan_Ring_05_03"); //Naprawde potrzebuje pana, aby przywrócic pierscien. Lepiej zapytac niektórych ludzi, czy go widzieli.
 
-	Npc_ExchangeRoutine	(Mod_7037_NOV_Pedro_NW,	"FEUERRING");
+	Wld_InsertNpc	(Mod_7037_NOV_Pedro_NW, "NW_FARM4_WOOD_RANGERBANDITS_03");
 
 	Log_CreateTopic	(TOPIC_MOD_PARLAN_FEUERRING, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_PARLAN_FEUERRING, LOG_RUNNING);

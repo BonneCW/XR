@@ -36,6 +36,30 @@ func int B_AssessEnemy()
 		&& (playerIsTransformed) {
 			return FALSE;
 		};
+
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7568_OUT_Keith_EIS))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_7570_OUT_Bandit_EIS))
+		{
+			return FALSE;
+		};
+
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7568_OUT_Keith_EIS))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_7571_OUT_Bandit_EIS))
+		{
+			return FALSE;
+		};
+
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7570_OUT_Bandit_EIS))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_7568_OUT_Keith_EIS))
+		{
+			return FALSE;
+		};
+
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7571_OUT_Bandit_EIS))
+		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Mod_7568_OUT_Keith_EIS))
+		{
+			return FALSE;
+		};
 	};
 	
 	if (Mod_XW_Kap6_Scene01_Counter > 0 && Mod_XW_Kap6_Scene01_Counter < 45) {

@@ -166,6 +166,7 @@ FUNC VOID Info_Mod_Moe_Geruechte3_Info()
 	B_LogEntry_More	( TOPIC_MOD_CANTHAR_GESCHAEFTE, TOPIC_MOD_MOE_VALENTINO, "Canthar powrócil do mnie, jak zapowiedziano, by zemscic sie na mnie.", "Valentino zostalo porwane przez Canthara, który chce go dla mnie sprzedac. Lord Andre nie ma odwagi zrobic nic, wiec to od mnie zalezy zakonczenie sprawy.");
 
 	B_StartOtherRoutine	(Mod_754_NONE_Valentino_NW, "TOT");
+	Mod_Valentino_Kidnapped = 1;
 
 	if (Mod_Fernando_Mitternachtsspuk == 1)
 	{

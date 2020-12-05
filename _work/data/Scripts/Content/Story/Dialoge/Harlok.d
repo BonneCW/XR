@@ -105,8 +105,6 @@ FUNC INT Info_Mod_Harlok_Trade_Condition()
 
 FUNC VOID Info_Mod_Harlok_Trade_Info()
 {
-	Backup_Questitems();
-
 	B_GiveTradeInv	(self);
 };
 

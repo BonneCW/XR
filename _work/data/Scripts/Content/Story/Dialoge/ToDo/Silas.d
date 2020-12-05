@@ -123,8 +123,6 @@ FUNC VOID Info_Mod_Silas_Trade_Info()
 		B_LogEntry	(TOPIC_MOD_HAENDLER_SOELDNER, "Od Silasa moge kupowac wszelkiego rodzaju artykuly spozywcze.");
 	};
 
-	Backup_Questitems();
-
 	B_GiveTradeInv (self);
 	B_Say (hero, self, "$TRADE_1");
 };

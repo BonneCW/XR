@@ -1558,8 +1558,6 @@ FUNC INT Info_Mod_Bosper_Trade_Condition()
 
 FUNC VOID Info_Mod_Bosper_Trade_Info()
 {
-	Backup_Questitems();
-
 	Npc_RemoveInvItems	(self, ItRw_Arrow, 100);
 	Npc_RemoveInvItems	(self, ItRw_Bolt, 100);
 	

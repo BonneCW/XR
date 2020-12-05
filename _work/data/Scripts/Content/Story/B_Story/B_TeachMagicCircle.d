@@ -168,7 +168,7 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 		if (Mod_Gilde == 14)
 		{
 			PrintScreen	(PRINT_LearnCircle_5, -1, -1, FONT_Screen, 2);
-			B_LogEntry (TOPIC_TalentMagicCircle,"Mówienia 5. Kregi to: krzyk zmarlych, wzywanie demonów i gojenie ciezkich ran.");
+			B_LogEntry (TOPIC_TalentMagicCircle,"");
 			return TRUE;
 		}
 		else if (Mod_Gilde == 8)
@@ -191,7 +191,7 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 		if (Mod_Gilde == 14)
 		{
 			PrintScreen	(PRINT_LearnCircle_6, -1, -1, FONT_Screen, 2);
-			B_LogEntry (TOPIC_TalentMagicCircle,"Mówienia 6. Kregi to: Oddech smierci i wojna ciemnosci.");
+			B_LogEntry (TOPIC_TalentMagicCircle,"");
 			return TRUE;
 		}
 		else if (Mod_Gilde == 8)

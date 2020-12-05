@@ -855,16 +855,16 @@ FUNC INT Info_Mod_Dragomir_Pedro_Condition()
 
 FUNC VOID Info_Mod_Dragomir_Pedro_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_00"); //Widziales nowicjusza ognia?
-	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_01"); //Oczywiscie widzialem nowicjusza pozaru. Widze jeden raz dziennie.
-	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_02"); //Widziales go dzisiaj?
-	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_03"); //Oczywiscie, Ty.
-	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_04"); //A poza mna?
-	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_05"); //Ach, teraz pamietam. Nowicjusz wlasnie wbiegl do tawerny. Wydawalo mu sie, ze jest w pospiechu.
-	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_06"); //Dzieki.
-	AI_output(self, hero, "Info_Mod_Dragomir_Pedro_12_07"); //Bez problemu.
+	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_00"); //
+	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_01"); //
+	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_02"); //
+	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_03"); //
+	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_04"); //
+	AI_Output(self, hero, "Info_Mod_Dragomir_Pedro_12_05"); //
+	AI_Output(hero, self, "Info_Mod_Dragomir_Pedro_15_06"); //
+	AI_output(self, hero, "Info_Mod_Dragomir_Pedro_12_07"); //
 
-	B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Dragomir pilowal Pedro do tawerny.");
+	B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "");
 };
 
 INSTANCE Info_Mod_Dragomir_Orlan (C_INFO)
@@ -923,17 +923,17 @@ FUNC VOID Info_Mod_Dragomir_Niederlage_Info()
 	{
 		if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_LOST)
 		{
-			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_00"); //Dobrze, dobrze, klamalem.
-			AI_Output(hero, self, "Info_Mod_Dragomir_Niederlage_15_01"); //Wiec czy gonna powiedz mi, gdzie jest Pedro lub czy musze isc znowu?
-			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_02"); //Tak, tak, tak. Jesli podazasz ta sciezka, po prawej stronie znajdziecie zdalny obóz. Tam wlasnie ukrywa sie.
+			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_00"); //
+			AI_Output(hero, self, "Info_Mod_Dragomir_Niederlage_15_01"); //
+			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_02"); //
 
-			B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Pedro ukrywa sie w obozie za obozem Dragomira.");
+			B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "");
 
 			B_Göttergefallen(1, 1);
 		}
 		else if (B_GetAivar(self, AIV_LastFightAgainstPlayer) == FIGHT_WON)
 		{
-			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_03"); //Nastepnym razem, pomysl dwa razy zanim nazwij mnie klamca.
+			AI_Output(self, hero, "Info_Mod_Dragomir_Niederlage_12_03"); //
 		};
 							
 		// ------ In jedem Fall: Arena-Kampf abgeschlossen ------
@@ -942,7 +942,6 @@ FUNC VOID Info_Mod_Dragomir_Niederlage_Info()
 		// ------ AIVAR resetten! ------	
 		self.aivar[AIV_LastFightComment] = TRUE;
 	};
-	
 	self.flags = 2;
 	AI_StopProcessInfos	(self);
 };

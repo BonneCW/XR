@@ -52,7 +52,7 @@ INSTANCE MENU_OPT_EXT(C_MENU_DEF)
 
 INSTANCE MENUITEM_EXT_HEADLINE(C_MENU_ITEM_DEF) 
 {
-	text[0]		=	"Konfiguracja zaawansowana";
+	text[0]		=	"ERWEITERT";
 	type		=	MENU_ITEM_TEXT;
 	// Position und Dimension	
 	posx		=	0;		posy		=	MENU_TITLE_Y;
@@ -70,8 +70,8 @@ INSTANCE MENUITEM_EXT_HEADLINE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_EXT_FFT(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Fale";
-	text[1]		= 	"W³¹czenie/wy³¹czenie wyœwietlania fal."; // Kommentar
+	text[0]		=	"fale wodne";
+	text[1]		= 	"Wlaczanie/wylaczanie ruchów fali"; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*0;
 	dimx		=	3000;	dimy		=	750;
@@ -85,7 +85,7 @@ instance MENUITEM_EXT_FFT_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"nie|tak";
+	text[0]		= 	"nie taniec";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*0 + MENU_CHOICE_YPLUS;
@@ -101,8 +101,8 @@ instance MENUITEM_EXT_FFT_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_EXT_WATERFADE(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"PrzeŸroczystoœæ wody";
-	text[1]		= 	"W³¹czenie/wy³¹czenie przeŸroczystoœci tafli wody."; // Kommentar
+	text[0]		=	"blakniecie wody";
+	text[1]		= 	"Wlaczanie/wylaczanie blakniecie wody"; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*1;
 	dimx		=	3000;	dimy		=	750;
@@ -116,7 +116,7 @@ instance MENUITEM_EXT_WATERFADE_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"nie|tak";
+	text[0]		= 	"nie taniec";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*1 + MENU_CHOICE_YPLUS;
@@ -132,8 +132,8 @@ instance MENUITEM_EXT_WATERFADE_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_EXT_OBJWIND(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Wiatr";
-	text[1]		= 	"W³¹czenie/wy³¹czenie wp³ywu wiatru na obiekty."; // Kommentar
+	text[0]		=	"Obiekt wiatra";
+	text[1]		= 	"Obiekt Wiatry/wylaczenie"; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*2;
 	dimx		=	3000;	dimy		=	750;
@@ -147,7 +147,7 @@ instance MENUITEM_EXT_OBJWIND_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"nie|tak";
+	text[0]		= 	"nie taniec";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*2 + MENU_CHOICE_YPLUS;
@@ -197,8 +197,8 @@ instance MENUITEM_EXT_AMBIENTOBJ_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_EXT_CLOUDSHADOW(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Cienie chmur";
-	text[1]		= 	"W³¹czenie/wy³¹czenie cieni chmur."; // Kommentar
+	text[0]		=	"oblok";
+	text[1]		= 	"Cien deszczowy wlaczony/wylaczony"; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*3;
 	dimx		=	3500;	dimy		=	750;
@@ -212,7 +212,7 @@ instance MENUITEM_EXT_CLOUDSHADOW_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"nie|tak";
+	text[0]		= 	"nie taniec";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*3 + MENU_CHOICE_YPLUS;
@@ -229,8 +229,8 @@ instance MENUITEM_EXT_CLOUDSHADOW_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_EXT_AMBIENTPFX(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"DŸwiêki otoczenia";
-	text[1]		= 	"W³¹czenie/wy³¹czenie dodatkowych efektów dŸwiêkowych."; // Kommentar
+	text[0]		=	"DetailPfx";
+	text[1]		= 	"Czasteczki otoczenia wlaczone/wylaczone"; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*4;
 	dimx		=	3000;	dimy		=	750;
@@ -244,7 +244,7 @@ instance MENUITEM_EXT_AMBIENTPFX_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"nie|tak";
+	text[0]		= 	"nie taniec";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*4 + MENU_CHOICE_YPLUS;
@@ -261,8 +261,8 @@ instance MENUITEM_EXT_AMBIENTPFX_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_EXT_ENVMAP(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Odbicia";
-	text[1]		= 	"W³¹czenie/wy³¹czenie wyœwietlania odbiæ."; // Kommentar
+	text[0]		=	"efekty polysku";
+	text[1]		= 	"Wplyw polysku na/wyl."; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*5;
 	dimx		=	3000;	dimy		=	750;
@@ -276,7 +276,7 @@ instance MENUITEM_EXT_ENVMAP_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"nie|tak";
+	text[0]		= 	"nie taniec";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*5 + MENU_CHOICE_YPLUS;
@@ -293,8 +293,8 @@ instance MENUITEM_EXT_ENVMAP_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_EXT_RADIALFOG(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Mg³a";
-	text[1]		= 	"W³¹czenie/wy³¹czenie mg³y."; // Kommentar
+	text[0]		=	"mglawica promienista";
+	text[1]		= 	"Wlaczenie/wylaczenie mgly promieniowej"; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*6;
 	dimx		=	3000;	dimy		=	750;
@@ -308,7 +308,7 @@ instance MENUITEM_EXT_RADIALFOG_CHOICE(C_MENU_ITEM_DEF)
 {
 	backPic		=	MENU_CHOICE_BACK_PIC;
 	type		=	MENU_ITEM_CHOICEBOX;		
-	text[0]		= 	"nie|tak";
+	text[0]		= 	"nie taniec";
 	fontName	=   MENU_FONT_SMALL;
 	// Position und Dimension	
 	posx		= 5000;		posy		=	MENU_START_Y + MENU_DY*6 + MENU_CHOICE_YPLUS;
@@ -326,7 +326,7 @@ instance MENUITEM_EXT_RADIALFOG_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_EXT_BACK(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Wstecz";
+	text[0]		=	"Poprzedni";
 	// Position und Dimension	
 	posx		=	1000;		posy		=	MENU_BACK_Y;
 	dimx		=	6192;		dimy		=	MENU_DY;

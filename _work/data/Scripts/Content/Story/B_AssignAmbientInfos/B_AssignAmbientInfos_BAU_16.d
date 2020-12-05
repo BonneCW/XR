@@ -42,7 +42,7 @@ FUNC INT DIA_BAU_16_JOIN_Condition()
 
 FUNC VOID DIA_BAU_16_JOIN_Info()
 {	
-	AI_Output (hero, self, "DIA_BAU_43_JOIN_15_00"); //Chce wiedziec wiecej o najemnikach!
+	AI_Output (hero, self, "DIA_BAU_43_JOIN_15_00"); //69841
 	AI_Output (self, hero, "DIA_BAU_43_JOIN_43_01"); //Wisza na podwórku przez caly dzien, co jakis czas walcza i sa zabawni.
 };
 
@@ -95,7 +95,7 @@ FUNC INT DIA_BAU_16_LOCATION_Condition()
 FUNC VOID DIA_BAU_16_LOCATION_Info()
 {	
 	AI_Output (hero, self, "DIA_BAU_43_LOCATION_15_00"); //Co mozesz mi powiedziec o tej okolicy?
-	AI_Output (self, hero, "DIA_BAU_43_LOCATION_43_01"); //Sa tu trzy gospodarstwa rolne. Naars na wschodzie i Sekobs na pólnocy doliny.
+	AI_Output (self, hero, "DIA_BAU_43_LOCATION_43_01"); //75581
 	AI_Output (self, hero, "DIA_BAU_43_LOCATION_43_02"); //Na poludniowym zachodzie znajduje sie klatka schodowa do plaskowyzu. Znajduje sie tu gospodarstwo Bengara.
 };
 

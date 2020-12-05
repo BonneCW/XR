@@ -8,5 +8,5 @@ FUNC VOID B_Autosave()
 
 	Autosave_Blocker = 120;
 
-	Print	("Autosave!");
+	Print	("25275");
 };

@@ -44,7 +44,7 @@ INSTANCE MENUITEM_TEAM_ALBI(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Albi";
-	text[1]		= "Story- und Questwriter";  // Kommentar
+	text[1]		= "Autor opowiadan i pytan";  // Kommentar
 
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_TEAM_START_Y + MENU_TEAM_DY*0;
@@ -62,7 +62,7 @@ INSTANCE MENUITEM_TEAM_AMPROSIUS(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "AmProsius";
-	text[1]		= "Story- und Questwriter und 2D Artist";  // Kommentar
+	text[1]		= "Autor opowiadan i scenarzysta oraz 2D Artysta";  // Kommentar
 
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_TEAM_START_Y + MENU_TEAM_DY*1;
@@ -79,8 +79,8 @@ INSTANCE MENUITEM_TEAM_AMPROSIUS(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_TEAM_AXON(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "axon";
-	text[1]		= "Story- und Questwriter";  // Kommentar
+	text[0]		= "akson";
+	text[1]		= "Autor opowiadan i pytan";  // Kommentar
 
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_TEAM_START_Y + MENU_TEAM_DY*2;
@@ -97,8 +97,8 @@ INSTANCE MENUITEM_TEAM_AXON(C_MENU_ITEM_DEF)
 instance MENUITEM_TEAM_BONNE6(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		=	"Bonne";
-	text[1]		=	"Scripter und Spacerer";  // Kommentar
+	text[0]		=	"kostnia";
+	text[1]		=	"Skryptor i element dystansowy";  // Kommentar
 
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_TEAM_START_Y + MENU_TEAM_DY*3;
@@ -114,8 +114,8 @@ instance MENUITEM_TEAM_BONNE6(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_TEAM_HOW4RD(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "how4rd";
-	text[1]		= "2D Artist, Questwriter und Spacerer";  // Kommentar
+	text[0]		= "jak4";
+	text[1]		= "2D Artysta, Quest Writer i Spacer";  // Kommentar
 
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_TEAM_START_Y + MENU_TEAM_DY*4;
@@ -132,8 +132,8 @@ INSTANCE MENUITEM_TEAM_HOW4RD(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_TEAM_JIMHALWILSON(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Jim Hal Wilson";
-	text[1]		= "Music Artist, Spacerer und Questwriter";  // Kommentar
+	text[0]		= "Jim Hal Wilson.";
+	text[1]		= "Artysta muzyczny, Spacer i autor scenarzysta muzyki Quest Writer.";  // Kommentar
 
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_TEAM_START_Y + MENU_TEAM_DY*5;
@@ -150,8 +150,8 @@ INSTANCE MENUITEM_TEAM_JIMHALWILSON(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_TEAM_NATHAN(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Nathan der Weiße";
-	text[1]		= "Story- und Questwriter";  // Kommentar
+	text[0]		= "Nathan, Bialy Ojciec";
+	text[1]		= "Autor opowiadan i pytan";  // Kommentar
 
 	// Position und Dimension
 	posx		= 0;		posy		= MENU_TEAM_START_Y + MENU_TEAM_DY*6;
@@ -169,7 +169,7 @@ INSTANCE MENUITEM_TEAM_PHILIP(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Philip";
-	text[1]		= "Spacerer";  // Kommentar
+	text[1]		= "rozpórka";  // Kommentar
 
 	// Position und Dimension
 	posx		= 4096;		posy		= MENU_TEAM_START_Y + MENU_TEAM_DY*0;
@@ -186,8 +186,8 @@ INSTANCE MENUITEM_TEAM_PHILIP(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_TEAM_QUANTARIE(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "quantarie";
-	text[1]		= "3D Artist und Animator";  // Kommentar
+	text[0]		= "kwant";
+	text[1]		= "Artysta i animator 3D";  // Kommentar
 
 	// Position und Dimension
 	posx		= 4096;		posy		= MENU_TEAM_START_Y + MENU_TEAM_DY*1;
@@ -204,8 +204,8 @@ INSTANCE MENUITEM_TEAM_QUANTARIE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_TEAM_THOMASBAUSB (C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "ThomasBausB";
-	text[1]		= "Spacerer und 3D Artist";  // Kommentar
+	text[0]		= "TomaszBusB";
+	text[1]		= "Spacer i artysta 3D";  // Kommentar
 
 	// Position und Dimension
 	posx		= 4096;		posy		= MENU_TEAM_START_Y + MENU_TEAM_DY*2;
@@ -222,8 +222,8 @@ INSTANCE MENUITEM_TEAM_THOMASBAUSB (C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_TEAM_ZAFIRON(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Zafiron";
-	text[1]		= "Leveldesigner und 3D Artist";  // Kommentar
+	text[0]		= "zrono";
+	text[1]		= "Projektant poziomu i artysta 3D";  // Kommentar
 
 	// Position und Dimension
 	posx		= 4096;		posy		= MENU_TEAM_START_Y + MENU_TEAM_DY*3;
@@ -240,7 +240,7 @@ INSTANCE MENUITEM_TEAM_ZAFIRON(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_TEAM_BACK(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Wstecz";
+	text[0]		=	"Poprzedni";
 	// Position und Dimension
 	posx		=	0;		posy		=	MENU_TEAM_START_Y + MENU_TEAM_DY*8;
 	dimx		=	8192;		dimy		=	800;

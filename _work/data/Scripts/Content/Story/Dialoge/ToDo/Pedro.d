@@ -50,6 +50,8 @@ FUNC VOID Info_Mod_Pedro_Erwischt_Info()
 	AI_StopProcessInfos	(self);
 
 	B_Attack	(self, hero, AR_NONE, 1);
+
+	self.flags = 0;
 };
 
 INSTANCE Info_Mod_Pedro_Niederlage (C_INFO)
@@ -80,7 +82,7 @@ FUNC VOID Info_Mod_Pedro_Niederlage_Info()
 			AI_Output(hero, self, "Info_Mod_Pedro_Niederlage_15_01"); //Czy dasz mi teraz pierscionek?
 			AI_Output(self, hero, "Info_Mod_Pedro_Niederlage_09_02"); //Tutaj jest, Panie Panu.
 
-			B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "Po tym jak nauczylem Pedra lekcji, dal mi pierscionek.");
+			B_LogEntry	(TOPIC_MOD_PARLAN_FEUERRING, "");
 
 			CreateInvItems	(self, ItRi_Feuerring_Parlan, 1);
 			B_GiveInvItems	(self, hero, ItRi_Feuerring_Parlan, 1);

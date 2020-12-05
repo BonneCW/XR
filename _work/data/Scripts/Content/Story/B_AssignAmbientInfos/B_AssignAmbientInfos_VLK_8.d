@@ -231,7 +231,7 @@ FUNC INT DIA_VLK_8_PEOPLE_Condition()
 FUNC VOID DIA_VLK_8_PEOPLE_Info()
 {	
 	AI_Output (hero, self, "DIA_VLK_8_PEOPLE_15_00"); //Kim sa najwazniejsi mieszkancy tego miasta?
-	AI_Output (self, hero, "DIA_VLK_8_PEOPLE_08_01"); //Z wyjatkiem paladyn.... mistrzowie rzemieslnicy z dolnego miasta. Wszystkie sa wysoko cenione.
+	AI_Output (self, hero, "DIA_VLK_8_PEOPLE_08_01"); //65586
 };
 
 // *************************************************************************

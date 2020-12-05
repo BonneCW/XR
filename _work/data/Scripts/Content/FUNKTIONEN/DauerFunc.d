@@ -665,6 +665,12 @@ FUNC VOID DAUERFUNC_01()
 
 			B_StartOtherRoutine	(Mod_7115_NONE_Nadja_NW, "DEXTER");
 		};
+
+		if (Mod_LesterRELToMeeting == 1)
+		{
+			B_StartOtherRoutine (Mod_557_PSINOV_Lester_NW, "TREFFEN");
+			Mod_LesterRELToMeeting = 2;
+		};
 	};
 
 	// Spezielle Zustände: Hunger, Betrunken, Erkältung, Vergiftung
@@ -1275,6 +1281,13 @@ FUNC VOID DAUERFUNC_01()
 
 				B_StartOtherRoutine	(Mod_7612_PSINOV_Lester_REL,	"MARKT");
 			};
+
+			// Falls Lester bei seiner Startposition in Relendel zum Treffen der 4 Freunde geschickt wurde, aber der "hi"-Dialog noch nicht stattfand
+			if (!Npc_KnowsInfo(hero, Info_Mod_Lester_REL_Hi) && Mod_LesterRELToMeeting == 2)
+			{
+				B_StartOtherRoutine	(Mod_7612_PSINOV_Lester_REL,	"START");
+				Mod_LesterRELToMeeting = 3;
+			};
 		};
 
 		// Fake-Geisterrüstung durch richtige ersetzen
@@ -1862,10 +1875,6 @@ FUNC VOID DAUERFUNC_01()
 				CreateInvItems(hero, ItMw_2H_Axe_L_01, Pickaxe_Count - Npc_HasItems(hero, ItMw_2H_Axe_L_01));
 			};
 		};
-	};
-	
-	if (questitemliste > 0 && B_GetAivar(hero, AIV_INVINCIBLE) == FALSE) {
-		Restore_Questitems();
 	};
 
 	Wld_SendTrigger	("DAUERTRIGGER");

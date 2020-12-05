@@ -32,9 +32,9 @@
 
 
 const int    MENU_ID_GFA  = 5;                              // Next available Y-spot in the game menu
-const string MENU_GFA_LABEL   = "Wolne Celowanie";            // "Free aiming"
-const string MENU_GFA_CHOICES = "wy³.|w³.";                   // "off|on"
-const string MENU_GFA_DESCR   = "Sterowanie mysz¹"; // "Requires mouse controls"
+const string MENU_GFA_LABEL   = "Dowolny cel";            // "Free aiming"
+const string MENU_GFA_CHOICES = "z|an";                   // "off|on"
+const string MENU_GFA_DESCR   = "Wymaga sterowania myszka"; // "Requires mouse controls"
 
 
 INSTANCE MENUITEM_OPT_GFA(C_MENU_ITEM_DEF) {

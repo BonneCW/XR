@@ -692,7 +692,7 @@ instance SVM_0 (C_SVM)
 	Weather						= 	"SVM_0_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_0_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_0_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_0_DieEnemy"					;//29646
 	DieMonster					=	"SVM_0_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_0_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_0_HandsOff"					;//Zdejmij mi rece!
@@ -708,7 +708,7 @@ instance SVM_0 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_0_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_0_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_0_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_0_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_0_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	Berzerk						=	"SVM_0_Berzerk"						;//UUAARRGHHHHH!
 	rumfummlerDown				=	"SVM_0_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
@@ -743,7 +743,7 @@ instance SVM_0 (C_SVM)
 	// ------ ZS_RansackBody -----------------------------------------------------------------------------------------------
 	ITookYourGold				=	"SVM_0_ITookYourGold"				;//Zloto! To juz moja kopalnia.....
 	ShitNoGold					=	"SVM_0_ShitNoGold"					;//Syn suki nie ma nawet zlota.
-	ITakeYourWeapon				=	"SVM_0_ITakeYourWeapon"				;//Lepiej bym zabral ze soba bron.
+	ITakeYourWeapon				=	"SVM_0_ITakeYourWeapon"				;//29641
 	// ------ ZS_ReactToDamage ---------------------------------------------------------------------------------------------
 	WhatAreYouDoing				=	"SVM_0_WhatAreYouDoing"				;//Ostrzezenie) Hej! Uwazaj!
 	// ------ ZS_ReactToWeapon ---------------------------------------------------------------------------------------------
@@ -1066,7 +1066,7 @@ instance SVM_1 (C_SVM)
 	Weather						= 	"SVM_1_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_1_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_1_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_1_DieEnemy"					;//29646
 	DieMonster					=	"SVM_1_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_1_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_1_HandsOff"					;//Zdejmij mi rece!
@@ -1082,7 +1082,7 @@ instance SVM_1 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_1_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_1_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_1_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_1_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_1_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	Berzerk						=	"SVM_1_Berzerk"						;//UUAARRGHHHHH!
 	rumfummlerDown				=	"SVM_1_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
@@ -1117,7 +1117,7 @@ instance SVM_1 (C_SVM)
 	// ------ ZS_RansackBody -----------------------------------------------------------------------------------------------
 	ITookYourGold				=	"SVM_1_ITookYourGold"				;//Zloto! To juz moja kopalnia.....
 	ShitNoGold					=	"SVM_1_ShitNoGold"					;//Syn suki nie ma nawet zlota.
-	ITakeYourWeapon				=	"SVM_1_ITakeYourWeapon"				;//Lepiej bym zabral ze soba bron.
+	ITakeYourWeapon				=	"SVM_1_ITakeYourWeapon"				;//29641
 	// ------ ZS_ReactToDamage ---------------------------------------------------------------------------------------------
 	WhatAreYouDoing				=	"SVM_1_WhatAreYouDoing"				;//Ostrzezenie) Hej! Uwazaj!
 	// ------ ZS_ReactToWeapon ---------------------------------------------------------------------------------------------
@@ -1440,7 +1440,7 @@ INSTANCE SVM_2	(C_SVM)
 	Weather						= 	"SVM_2_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_2_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_2_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_2_DieEnemy"					;//29646
 	DieMonster					=	"SVM_2_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_2_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_2_HandsOff"					;//Zdejmij mi rece!
@@ -1456,7 +1456,7 @@ INSTANCE SVM_2	(C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_2_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_2_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_2_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_2_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_2_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	Berzerk						=	"SVM_2_Berzerk"						;//UUAARRGHHHHH!
 	rumfummlerDown				=	"SVM_2_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
@@ -1491,7 +1491,7 @@ INSTANCE SVM_2	(C_SVM)
 	// ------ ZS_RansackBody -----------------------------------------------------------------------------------------------
 	ITookYourGold				=	"SVM_2_ITookYourGold"				;//Zloto! To juz moja kopalnia.....
 	ShitNoGold					=	"SVM_2_ShitNoGold"					;//Syn suki nie ma nawet zlota.
-	ITakeYourWeapon				=	"SVM_2_ITakeYourWeapon"				;//Lepiej bym zabral ze soba bron.
+	ITakeYourWeapon				=	"SVM_2_ITakeYourWeapon"				;//29641
 	// ------ ZS_ReactToDamage ---------------------------------------------------------------------------------------------
 	WhatAreYouDoing				=	"SVM_2_WhatAreYouDoing"				;//Ostrzezenie) Hej! Uwazaj!
 	// ------ ZS_ReactToWeapon ---------------------------------------------------------------------------------------------
@@ -1830,7 +1830,7 @@ instance SVM_3 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_3_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_3_EnemyKilled"				;//Zaslugujecie na to, synu suki!
-	MonsterKilled				=	"SVM_3_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_3_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_3_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_3_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_3_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -2561,7 +2561,7 @@ instance SVM_5 (C_SVM)
 	Weather						= 	"SVM_5_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_5_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_5_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_5_DieEnemy"					;//29646
 	DieMonster					=	"SVM_5_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_5_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_5_HandsOff"					;//Zdejmij mi rece!
@@ -2577,7 +2577,7 @@ instance SVM_5 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_5_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_5_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_5_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_5_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_5_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_5_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	Berzerk						=	"SVM_5_Berzerk"						;//UUAARRGHHHHH!
@@ -2960,7 +2960,7 @@ instance SVM_6 (C_SVM)
 	NeverHitMeAgain				=	"SVM_6_NeverHitMeAgain"				;//Nie osmielisz sie zaatakowac mnie nigdy wiecej!
 	YouBetterShouldHaveListened	=	"SVM_6_YouBetterShouldHaveListened"	;//Ostrzegam cie!
 	GetUpAndBeGone				=	"SVM_6_GetUpAndBeGone"					;//Teraz wyjdz z tego miejsca!
-	NeverEnterRoomAgain			=	"SVM_6_NeverEnterRoomAgain"			;//Nie chce widziec cie tam juz nigdy wiecej, wszystko w porzadku?
+	NeverEnterRoomAgain			=	"SVM_6_NeverEnterRoomAgain"			;//20354
 	ThereIsNoFightingHere		=	"SVM_6_ThereIsNoFightingHere"			;//Nie ma tu walki, niech to bedzie dla ciebie lekcja.
 	// ------ C_WantToFlee -------------------------------------------------------------------------------------------------
 	RunAway						= 	"SVM_6_RunAway"						;//Jestem poza nia!
@@ -3697,7 +3697,7 @@ instance SVM_8 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_8_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_8_EnemyKilled"				;//Zaslugujecie na to, synu suki!
-	MonsterKilled				=	"SVM_8_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_8_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_8_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_8_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_8_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -4084,7 +4084,7 @@ instance SVM_9 (C_SVM)
 	NeverHitMeAgain				=	"SVM_9_NeverHitMeAgain"				;//Nie osmielisz sie zaatakowac mnie nigdy wiecej!
 	YouBetterShouldHaveListened	=	"SVM_9_YouBetterShouldHaveListened"	;//Ostrzegam cie!
 	GetUpAndBeGone				=	"SVM_9_GetUpAndBeGone"					;//Teraz wyjdz z tego miejsca!
-	NeverEnterRoomAgain			=	"SVM_9_NeverEnterRoomAgain"			;//Nie chce widziec cie tam juz nigdy wiecej, wszystko w porzadku?
+	NeverEnterRoomAgain			=	"SVM_9_NeverEnterRoomAgain"			;//20354
 	ThereIsNoFightingHere		=	"SVM_9_ThereIsNoFightingHere"			;//Nie ma tu walki, pamietaj, ze to!
 	// ------ C_WantToFlee -------------------------------------------------------------------------------------------------
 	RunAway						= 	"SVM_9_RunAway"						;//Jestem poza nia!
@@ -4684,7 +4684,7 @@ instance SVM_11 (C_SVM)
 	Weather						= 	"SVM_11_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_11_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_11_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_11_DieEnemy"					;//29646
 	DieMonster					=	"SVM_11_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_11_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_11_HandsOff"					;//Zdejmij mi rece!
@@ -4701,7 +4701,7 @@ instance SVM_11 (C_SVM)
 	KillEnemy					= 	"SVM_11_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_11_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
 	Berzerk						=	"SVM_11_Berzerk"						;//UUAARRGHHHHH!
-	MonsterKilled				=	"SVM_11_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_11_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_11_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_11_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_11_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -5452,7 +5452,7 @@ instance SVM_13 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_13_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_13_EnemyKilled"				;//Zaslugujecie na to, synu suki!
-	MonsterKilled				=	"SVM_13_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_13_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_13_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_13_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_13_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -5809,7 +5809,7 @@ instance SVM_14 (C_SVM)
 	Weather						= 	"SVM_14_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_14_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_14_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_14_DieEnemy"					;//29646
 	DieMonster					=	"SVM_14_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_14_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_14_HandsOff"					;//Zdejmij mi rece!
@@ -5826,7 +5826,7 @@ instance SVM_14 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_14_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_14_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_14_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_14_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_14_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_14_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_14_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -6434,7 +6434,7 @@ instance SVM_16 (C_SVM)
 	Weather						= 	"SVM_16_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_16_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_16_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_16_DieEnemy"					;//29646
 	DieMonster					=	"SVM_16_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_16_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_16_HandsOff"					;//Zdejmij mi rece!
@@ -6450,7 +6450,7 @@ instance SVM_16 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_16_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_16_EnemyKilled"				;//To dla ciebie, chlopak.
-	MonsterKilled				=	"SVM_16_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_16_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_16_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_16_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_16_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -6770,7 +6770,7 @@ instance SVM_17 (C_SVM)
 	Weather						= 	"SVM_17_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_17_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_17_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_17_DieEnemy"					;//29646
 	DieMonster					=	"SVM_17_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_17_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_17_HandsOff"					;//Zdejmij mi rece!
@@ -6786,7 +6786,7 @@ instance SVM_17 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_17_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_17_EnemyKilled"				;//To dla ciebie, chlopak.
-	MonsterKilled				=	"SVM_17_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_17_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_17_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_17_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_17_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -7109,7 +7109,7 @@ instance SVM_19 (C_SVM)
 	Weather						= 	"SVM_19_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_19_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_19_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_19_DieEnemy"					;//29646
 	DieMonster					=	"SVM_19_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_19_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_19_HandsOff"					;//Zdejmij mi rece!
@@ -7125,7 +7125,7 @@ instance SVM_19 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_19_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_19_EnemyKilled"				;//To dla ciebie, chlopak.
-	MonsterKilled				=	"SVM_19_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_19_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_19_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_19_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_19_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -7447,7 +7447,7 @@ instance SVM_20 (C_SVM)
 	Weather						= 	"SVM_20_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_20_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_20_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_20_DieEnemy"					;//29646
 	DieMonster					=	"SVM_20_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_20_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_20_HandsOff"					;//Zdejmij mi rece!
@@ -7463,7 +7463,7 @@ instance SVM_20 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_20_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_20_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_20_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_20_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_20_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_20_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	Berzerk						=	"SVM_20_Berzerk"						;//UUAARRGHHHHH!
@@ -7822,7 +7822,7 @@ instance SVM_21 (C_SVM)
 	Weather						= 	"SVM_21_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_21_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_21_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_21_DieEnemy"					;//29646
 	DieMonster					=	"SVM_21_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_21_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_21_HandsOff"					;//Zdejmij mi rece!
@@ -7838,7 +7838,7 @@ instance SVM_21 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_21_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_21_EnemyKilled"				;//To dla ciebie, chlopak.
-	MonsterKilled				=	"SVM_21_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_21_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_21_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_21_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_21_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -8175,7 +8175,7 @@ instance SVM_23 (C_SVM)
 	Weather						= 	"SVM_23_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_23_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_23_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_23_DieEnemy"					;//29646
 	DieMonster					=	"SVM_23_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_23_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_23_HandsOff"					;//Zdejmij mi rece!
@@ -8191,7 +8191,7 @@ instance SVM_23 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_23_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_23_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_23_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_23_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_23_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_23_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	Berzerk						=	"SVM_23_Berzerk"						;//UUAARRGHHHHH!
@@ -8550,7 +8550,7 @@ instance SVM_24 (C_SVM)
 	Weather						= 	"SVM_24_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_24_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_24_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_24_DieEnemy"					;//29646
 	DieMonster					=	"SVM_24_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_24_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_24_HandsOff"					;//Zdejmij mi rece!
@@ -8567,7 +8567,7 @@ instance SVM_24 (C_SVM)
 	KillEnemy					= 	"SVM_24_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_24_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
 	Berzerk						=	"SVM_24_Berzerk"						;//UUAARRGHHHHH!
-	MonsterKilled				=	"SVM_24_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_24_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_24_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_24_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_24_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -8940,7 +8940,7 @@ instance SVM_25 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_25_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_25_EnemyKilled"				;//Zaslugujecie na to, synu suki!
-	MonsterKilled				=	"SVM_25_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_25_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_25_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_25_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_25_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -9028,7 +9028,7 @@ instance SVM_26 (C_SVM)
 	Weather						= 	"SVM_26_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_26_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_26_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_26_DieEnemy"					;//29646
 	DieMonster					=	"SVM_26_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_26_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_26_HandsOff"					;//Zdejmij mi rece!
@@ -9044,7 +9044,7 @@ instance SVM_26 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_26_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_26_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_26_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_26_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_26_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	Berzerk						=	"SVM_26_Berzerk"						;//UUAARRGHHHHH!
 	rumfummlerDown				=	"SVM_26_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
@@ -9079,7 +9079,7 @@ instance SVM_26 (C_SVM)
 	// ------ ZS_RansackBody -----------------------------------------------------------------------------------------------
 	ITookYourGold				=	"SVM_26_ITookYourGold"				;//Zloto! To juz moja kopalnia.....
 	ShitNoGold					=	"SVM_26_ShitNoGold"					;//Syn suki nie ma nawet zlota.
-	ITakeYourWeapon				=	"SVM_26_ITakeYourWeapon"				;//Lepiej bym zabral ze soba bron.
+	ITakeYourWeapon				=	"SVM_26_ITakeYourWeapon"				;//29641
 	// ------ ZS_ReactToDamage ---------------------------------------------------------------------------------------------
 	WhatAreYouDoing				=	"SVM_26_WhatAreYouDoing"				;//Ostrzezenie) Hej! Uwazaj!
 	// ------ ZS_ReactToWeapon ---------------------------------------------------------------------------------------------
@@ -9572,7 +9572,7 @@ instance SVM_28 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_28_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_28_EnemyKilled"				;//Zaslugujecie na to, synu suki!
-	MonsterKilled				=	"SVM_28_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_28_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_28_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_28_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_28_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -9697,7 +9697,7 @@ instance SVM_29 (C_SVM)
 	Weather						= 	"SVM_29_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_29_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_29_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_29_DieEnemy"					;//29646
 	DieMonster					=	"SVM_29_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_29_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_29_HandsOff"					;//Zdejmij mi rece!
@@ -9713,7 +9713,7 @@ instance SVM_29 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_29_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_29_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_29_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_29_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_29_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_29_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	Berzerk						=	"SVM_29_Berzerk"						;//UUAARRGHHHHH!
@@ -9840,7 +9840,7 @@ instance SVM_30 (C_SVM)
 	Weather						= 	"SVM_30_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_30_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_30_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_30_DieEnemy"					;//29646
 	DieMonster					=	"SVM_30_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_30_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_30_HandsOff"					;//Zdejmij mi rece!
@@ -9857,7 +9857,7 @@ instance SVM_30 (C_SVM)
 	KillEnemy					= 	"SVM_30_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_30_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
 	Berzerk						=	"SVM_30_Berzerk"						;//UUAARRGHHHHH!
-	MonsterKilled				=	"SVM_30_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_30_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_30_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_30_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_30_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -10218,7 +10218,7 @@ instance SVM_31 (C_SVM)
 	Weather						= 	"SVM_31_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_31_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_31_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_31_DieEnemy"					;//29646
 	DieMonster					=	"SVM_31_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_31_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_31_HandsOff"					;//Zdejmij mi rece!
@@ -10234,7 +10234,7 @@ instance SVM_31 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_31_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_31_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_31_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_31_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_31_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_31_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	Berzerk						=	"SVM_31_Berzerk"						;//UUAARRGHHHHH!
@@ -10591,7 +10591,7 @@ instance SVM_32 (C_SVM)
 	Weather						= 	"SVM_32_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_32_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_32_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_32_DieEnemy"					;//29646
 	DieMonster					=	"SVM_32_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_32_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_32_HandsOff"					;//Zdejmij mi rece!
@@ -10607,7 +10607,7 @@ instance SVM_32 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_32_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_32_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_32_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_32_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_32_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_32_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	Berzerk						=	"SVM_32_Berzerk"						;//UUAARRGHHHHH!
@@ -10964,7 +10964,7 @@ instance SVM_34 (C_SVM)
 	Weather						= 	"SVM_34_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_34_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_34_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_34_DieEnemy"					;//29646
 	DieMonster					=	"SVM_34_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_34_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_34_HandsOff"					;//Zdejmij mi rece!
@@ -10981,7 +10981,7 @@ instance SVM_34 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_34_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_34_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_34_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_34_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_34_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_34_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_34_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -11337,7 +11337,7 @@ instance SVM_35 (C_SVM)
 	Weather						= 	"SVM_35_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_35_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_35_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_35_DieEnemy"					;//29646
 	DieMonster					=	"SVM_35_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_35_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_35_HandsOff"					;//Zdejmij mi rece!
@@ -11353,7 +11353,7 @@ instance SVM_35 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_35_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_35_EnemyKilled"				;//To dla ciebie, chlopak.
-	MonsterKilled				=	"SVM_35_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_35_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_35_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_35_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_35_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -11673,7 +11673,7 @@ instance SVM_36 (C_SVM)
 	Weather						= 	"SVM_36_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_36_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_36_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_36_DieEnemy"					;//29646
 	DieMonster					=	"SVM_36_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_36_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_36_HandsOff"					;//Zdejmij mi rece!
@@ -11689,7 +11689,7 @@ instance SVM_36 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_36_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_36_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_36_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_36_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_36_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	Berzerk						=	"SVM_36_Berzerk"						;//UUAARRGHHHHH!
 	rumfummlerDown				=	"SVM_36_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
@@ -11724,7 +11724,7 @@ instance SVM_36 (C_SVM)
 	// ------ ZS_RansackBody -----------------------------------------------------------------------------------------------
 	ITookYourGold				=	"SVM_36_ITookYourGold"				;//Zloto! To juz moja kopalnia.....
 	ShitNoGold					=	"SVM_36_ShitNoGold"					;//Syn suki nie ma nawet zlota.
-	ITakeYourWeapon				=	"SVM_36_ITakeYourWeapon"				;//Lepiej bym zabral ze soba bron.
+	ITakeYourWeapon				=	"SVM_36_ITakeYourWeapon"				;//29641
 	// ------ ZS_ReactToDamage ---------------------------------------------------------------------------------------------
 	WhatAreYouDoing				=	"SVM_36_WhatAreYouDoing"				;//Ostrzezenie) Hej! Uwazaj!
 	// ------ ZS_ReactToWeapon ---------------------------------------------------------------------------------------------
@@ -12047,7 +12047,7 @@ instance SVM_37 (C_SVM)
 	Weather						= 	"SVM_37_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_37_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_37_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_37_DieEnemy"					;//29646
 	DieMonster					=	"SVM_37_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_37_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_37_HandsOff"					;//Zdejmij mi rece!
@@ -12063,7 +12063,7 @@ instance SVM_37 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_37_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_37_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_37_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_37_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_37_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_37_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	Berzerk						=	"SVM_37_Berzerk"						;//UUAARRGHHHHH!
@@ -12420,7 +12420,7 @@ instance SVM_38 (C_SVM)
 	Weather						= 	"SVM_38_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_38_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_38_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_38_DieEnemy"					;//29646
 	DieMonster					=	"SVM_38_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_38_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_38_HandsOff"					;//Zdejmij mi rece!
@@ -12436,7 +12436,7 @@ instance SVM_38 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_38_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_38_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_38_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_38_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_38_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_38_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	Berzerk						=	"SVM_38_Berzerk"						;//UUAARRGHHHHH!
@@ -12793,7 +12793,7 @@ instance SVM_39 (C_SVM)
 	Weather						= 	"SVM_39_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_39_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_39_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_39_DieEnemy"					;//29646
 	DieMonster					=	"SVM_39_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_39_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_39_HandsOff"					;//Zdejmij mi rece!
@@ -12809,7 +12809,7 @@ instance SVM_39 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_39_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_39_EnemyKilled"				;//To dla ciebie, chlopak.
-	MonsterKilled				=	"SVM_39_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_39_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_39_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_39_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_39_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!
@@ -13129,7 +13129,7 @@ instance SVM_40 (C_SVM)
 	Weather						= 	"SVM_40_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_40_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_40_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_40_DieEnemy"					;//29646
 	DieMonster					=	"SVM_40_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_40_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_40_HandsOff"					;//Zdejmij mi rece!
@@ -13145,7 +13145,7 @@ instance SVM_40 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_40_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_40_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_40_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_40_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_40_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_40_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	Berzerk						=	"SVM_40_Berzerk"						;//UUAARRGHHHHH!
@@ -13502,7 +13502,7 @@ instance SVM_41 (C_SVM)
 	Weather						= 	"SVM_41_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_41_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_41_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_41_DieEnemy"					;//29646
 	DieMonster					=	"SVM_41_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_41_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_41_HandsOff"					;//Zdejmij mi rece!
@@ -13518,7 +13518,7 @@ instance SVM_41 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_41_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_41_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_41_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_41_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_41_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_41_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	Berzerk						=	"SVM_41_Berzerk"						;//UUAARRGHHHHH!
@@ -13875,7 +13875,7 @@ instance SVM_42 (C_SVM)
 	Weather						= 	"SVM_42_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_42_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_42_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_42_DieEnemy"					;//29646
 	DieMonster					=	"SVM_42_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_42_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_42_HandsOff"					;//Zdejmij mi rece!
@@ -13891,7 +13891,7 @@ instance SVM_42 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_42_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_42_EnemyKilled"					;//To jest wlasnie dla Ciebie, punk.
-	MonsterKilled				=	"SVM_42_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_42_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_42_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_42_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	Berzerk						=	"SVM_42_Berzerk"						;//UUAARRGHHHHH!
@@ -14248,7 +14248,7 @@ instance SVM_43 (C_SVM)
 	Weather						= 	"SVM_43_Weather"						;//Dam pogoda!
 	// ------ B_Say_AttackReason -----------------------------------------------------------------------------------------
 	IGetYouStill				= 	"SVM_43_IGetYouStill"				;//Moge Cie jeszcze dostac!
-	DieEnemy					=	"SVM_43_DieEnemy"					;//Teraz Twoja kolej!
+	DieEnemy					=	"SVM_43_DieEnemy"					;//29646
 	DieMonster					=	"SVM_43_DieMonster"					;//Jest jeszcze jeden z nich!
 	DirtyThief					=	"SVM_43_DirtyThief"					;//Czekaj, brudny zlodziej!
 	HandsOff					=	"SVM_43_HandsOff"					;//Zdejmij mi rece!
@@ -14264,7 +14264,7 @@ instance SVM_43 (C_SVM)
 	// ------ B_Say_AttackEND ---------------------------------------------------------------------------------------------
 	KillEnemy					= 	"SVM_43_KillEnemy"					;//Smierc, skumbag!
 	EnemyKilled					=	"SVM_43_EnemyKilled"				;//To dla ciebie, chlopak.
-	MonsterKilled				=	"SVM_43_MonsterKilled"				;//Mniej suki!
+	MonsterKilled				=	"SVM_43_MonsterKilled"				;//29644
 	ThiefDown					=	"SVM_43_ThiefDown"					;//Nie próbujesz odebrac mi mnie nigdy wiecej!
 	rumfummlerDown				=	"SVM_43_rumfummlerDown"				;//W przyszlosci trzymaj sie z dala od rzeczy, których nie masz w biznesie!
 	SheepAttackerDown			=	"SVM_43_SheepAttackerDown"			;//Nie rób tego nigdy wiecej! To sa nasze owce!

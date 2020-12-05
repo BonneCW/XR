@@ -1598,19 +1598,19 @@ FUNC INT Info_Mod_Saturas_NW_Rasend_Condition()
 
 FUNC VOID Info_Mod_Saturas_NW_Rasend_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_00"); //Przy Adanosie jestes. Jak widac, zdarzylo sie tutaj cos strasznego.....
-	AI_Output(hero, self, "Info_Mod_Saturas_NW_Rasend_15_01"); //Tak, juz wiem. To samo spotkalo miasto i klasztor.
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_02"); //Klasztor tez....? Diego juz nam opowiedzial o miescie.
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_03"); //Ale gdyby nawet klasztor zostal zaatakowany..... (rozwazane) wszystko to pokazuje wyrazny wzorzec....
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_04"); //Paladynowie, magicy ognia..... i my...... Demon zdaje sie byc skierowany przeciwko slugom Innosowi i Adanosowi.
-	AI_Output(hero, self, "Info_Mod_Saturas_NW_Rasend_15_05"); //Cóz, zly demon, stworzenie ciemnosci.... Nie wydaje sie to absurdalne.
-	AI_Output(hero, self, "Info_Mod_Saturas_NW_Rasend_15_06"); //Hmm, jaka droge wybrala istota po swoim zlosliwoscia?
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_07"); //Lecial nad górami w kierunku Relendel.
-	AI_Output(hero, self, "Info_Mod_Saturas_NW_Rasend_15_08"); //Jestem gonna scigac ich.
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_09"); //Uwazaj jednak na Adanosa. To stworzenie jest niesamowicie potezne.
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_10"); //Czasami warto tez sprawdzic sie z Xardasem.
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_11"); //Jako sluga Beliara z pewnoscia bedzie mógl ujawnic wam kilka przydatnych rzeczy....
-	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_12"); //Niech Adanos zapewni Ci bezpieczenstwo.
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_00"); //
+	AI_Output(hero, self, "Info_Mod_Saturas_NW_Rasend_15_01"); //
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_02"); //
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_03"); //
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_04"); //
+	AI_Output(hero, self, "Info_Mod_Saturas_NW_Rasend_15_05"); //
+	AI_Output(hero, self, "Info_Mod_Saturas_NW_Rasend_15_06"); //
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_07"); //
+	AI_Output(hero, self, "Info_Mod_Saturas_NW_Rasend_15_08"); //
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_09"); //
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_10"); //
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_11"); //
+	AI_Output(self, hero, "Info_Mod_Saturas_NW_Rasend_14_12"); //
 
 	B_LogEntry	(TOPIC_MOD_ADANOS_RASEND, "Równiez miejsce wykopaliska nie zostalo ocalone przed atakami demonów. Nastepnie udal sie do Relendel. Saturas poradzil mi odwiedzic Xardas, aby dowiedziec sie wiecej o tej zlowieszczej istocie.");
 };
