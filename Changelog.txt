@@ -10,15 +10,26 @@ General Fixes:
 
 Fixes for Khorinis if not entered before:
 
-- 
+-
 
 Fixes for Valley of Mines if not entered before:
 
-- 
+-
 
 Fixes for Jharkendar if not entered before:
 
-- 
+-
+
+
+1.0.10
+
+Enhancements:
+
+-
+
+Fixes:
+
+- fixed 'Reinigung der Böden' being able to enter invalid state when using Albi for the last focus
 
 
 1.0.9

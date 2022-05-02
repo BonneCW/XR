@@ -87,6 +87,7 @@ func void PC_Sleep (var int t)
 
 	if (Mod_EchsenQuest == 2)
 	&& (CurrentLevel == ADDONWORLD_ZEN)
+	&& (FocusBlockade == FALSE)
 	{
 		Wld_SendTrigger	("ADW_ADANOSTEMPEL_FOCUSTRIGGERLIST");
 
@@ -132,7 +133,7 @@ func void PC_Sleep (var int t)
 	{
 		Mod_Purpurmond_Intus = 0;
 		Mod_Purpurmond_Intus_Time = 0;
-		
+
 		hero.attribute[ATR_STRENGTH] += 10;
 		hero.attribute[ATR_DEXTERITY] += 10;
 		hero.attribute[ATR_MANA_MAX] += 10;
