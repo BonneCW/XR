@@ -32,6 +32,7 @@ Fixes:
 - fixed 'Reinigung der Böden' being able to enter invalid state when using Albi for the last focus
 - fixed picking gold in gold mine removing pick axes
 - fixed Wolf's crawler plate quest being available too early
+- added hack to fix level change to valley of mines in case it didn't work properly after Hagen dialog
 
 
 1.0.9

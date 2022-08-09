@@ -1,7 +1,7 @@
 // *******************************************************************
 // Startup und Init Funktionen der Level-zen-files
 // -----------------------------------------------
-// Die STARTUP-Funktionen werden NUR beim ersten Betreten eines Levels 
+// Die STARTUP-Funktionen werden NUR beim ersten Betreten eines Levels
 // (nach NewGame) aufgerufen, die INIT-Funktionen jedesmal
 // Die Funktionen müssen so heissen wie die zen-files
 // *******************************************************************
@@ -21,7 +21,7 @@ func void INIT_GLOBAL()
 {
 	// wird fuer jede Welt aufgerufen (vor INIT_<LevelName>)
 	Game_InitGerman();
-			
+
 	RidingLorry = FALSE;
 
 	Cursor_Hndl = 0;
@@ -34,11 +34,11 @@ func void INIT_GLOBAL()
 	B_InitNpcGlobals ();
 
 	gameloaded = Hlp_GetNpc(0);
-	
+
 	LeGo_Init(LeGo_PrintS | LeGo_HookEngine | LeGo_AI_Function | LeGo_Trialoge | LeGo_FrameFunctions | LeGo_Cursor | LeGo_Random | LeGo_Bloodsplats | LeGo_Saves | LeGo_PermMem | LeGo_Anim8 | LeGo_View | LeGo_Interface | LeGo_Bars | LeGo_Buttons | LeGo_Timer | GFA_LEGO_FLAGS);
-	
+
 	Spine_Init(SPINE_MODULE_GETCURRENTUSERNAME | SPINE_MODULE_ACHIEVEMENTS | SPINE_MODULE_SCORES | SPINE_MODULE_MULTIPLAYER | SPINE_MODULE_OVERALLSAVE | SPINE_MODULE_STATISTICS);
-	
+
 	GFA_Init(GFA_ALL);
 
 	MEM_SetShowDebug (0);
@@ -101,13 +101,13 @@ func void INIT_GLOBAL()
 		MEM_WriteByte(6276806, 144);
 		MEM_WriteByte(6276807, 144);
 		MEM_WriteByte(6276808, 144);
-		
+
 		// These two overrides skip ASSERT_FAIL in case VertexBuffer is not locked
 		MemoryProtectionOverride(/*0x5FCAA3*/ 6277795, 5);
 
 		MEM_WriteByte(/*0x5FCAA3*/ 6277795,   ASMINT_OP_jmp);
 		MEM_WriteInt (/*0x5FCAA3*/ 6277795+1, /*0x5FCB71-0x5FCAA3-5*/ 6278001-6277795-5);
-		
+
 		MemoryProtectionOverride(/*0x5FC638*/ 6276664, 5);
 
 		MEM_WriteByte(/*0x5FC638*/ 6276664,   ASMINT_OP_jmp);
@@ -120,15 +120,15 @@ func void INIT_GLOBAL()
 	MoreAlphaPolys(16384 * 2); //normal: 2048
 
 	B_AutoGeneratePicklockKombos();
-	
+
 	AxtUpgrade = 0;
-	
+
 	Mod_LastLoaded = TimeCounter_Real;
-	
+
 	MG_WaitingForMatch = FALSE;
-	
+
 	RemoveWrongEffects();
-	
+
 	if (Mod_Gilde > 0 && hero.guild == 0) {
 		if (Mod_Gilde >= 1 && Mod_Gilde <= 3) {
 			hero.guild = GIL_PAL;
@@ -142,7 +142,7 @@ func void INIT_GLOBAL()
 			hero.guild = GIL_KDF;
 		};
 	};
-		
+
 	unblockAllPlayerInput();
 
 	CheckSellingItems_Init();
@@ -310,7 +310,7 @@ func void STARTUP_ADDON_PART_CANYON_01 ()
 	Wld_InsertNpc	(Mod_10036_Orc_Warrior_AW,	"CANYONLIBRARY");
 	Wld_InsertNpc	(Mod_10037_Orc_Scout_AW,	"CANYONLIBRARY");
 	Wld_InsertNpc	(Mod_10038_Orc_Scout_AW,	"CANYONLIBRARY");
-	
+
 	// Canyonziegen
 
 	Wld_InsertNpc	(Canyon_Ziege,	"ADW_CANYON_PATH_TO_BANDITS_36");
@@ -959,13 +959,13 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc	(Mod_7675_RIT_Ritter_NW,	"NW_CITY_ENTRANCE_01");
 	Wld_InsertNpc	(Mod_7676_RIT_Ritter_NW,	"NW_CITY_ENTRANCE_01");
 	Wld_InsertNpc	(Mod_7677_RIT_Ritter_NW,	"NW_CITY_ENTRANCE_01");
-	
+
 
 	//---S?dtor--------------------
 	Wld_InsertNpc (Mil_309_Stadtwache	,"NW_CITY_ENTRANCE_01");	//Stadttorwache
 	Wld_InsertNpc (Mil_310_Stadtwache	,"NW_CITY_ENTRANCE_01");	//Stadttorwache Important
-	
-			
+
+
 	//---Osttor------------------------
 	Wld_InsertNpc (Mil_332_Stadtwache 	, "NW_CITY_ENTRANCE_01");	//Stadttorwache
 	Wld_InsertNpc (Mil_333_Stadtwache 	, "NW_CITY_ENTRANCE_01");	//Stadttorwache Important
@@ -976,7 +976,7 @@ func void STARTUP_NewWorld_Part_City_01()
 
 	//---Schiff--------------------
 	Wld_InsertNpc (Pal_212_Schiffswache, "NW_CITY_ENTRANCE_01"); 	//GateGuard, 24h
-	Wld_InsertNpc (Pal_213_Schiffswache, "NW_CITY_ENTRANCE_01"); 	//GateGuard, 24h 
+	Wld_InsertNpc (Pal_213_Schiffswache, "NW_CITY_ENTRANCE_01"); 	//GateGuard, 24h
 
 	//Namenlose NPC's
 	Wld_InsertNpc	(Mod_1032_VLK_Arbeiter_NW,	"NW_CITY_ENTRANCE_01");
@@ -1112,10 +1112,10 @@ func void INIT_NewWorld_Part_City_01()
 		//---Laternen---
 		Wld_SetMobRoutine (00,00, "FIREPLACE", 1);
 		Wld_SetMobRoutine (20,00, "FIREPLACE", 1);
-		Wld_SetMobRoutine (05,00, "FIREPLACE", 0);		
-		
-		//---------------- PORTALRÄUME ------------------------ 
-		
+		Wld_SetMobRoutine (05,00, "FIREPLACE", 0);
+
+		//---------------- PORTALRÄUME ------------------------
+
 		//Hafenviertel
 		Wld_AssignRoomToGuild ("hafen01",		GIL_PUBLIC); //Vermisstenliste
 		Wld_AssignRoomToGuild ("hafen02",		GIL_PAL);
@@ -1124,7 +1124,7 @@ func void INIT_NewWorld_Part_City_01()
 		Wld_AssignRoomToGuild ("hafen05",		GIL_PUBLIC); //Nimius
 		Wld_AssignRoomToGuild ("hafen06",		GIL_PAL);
 		Wld_AssignRoomToGuild ("hafen07",		GIL_PAL);
-		
+
 		Wld_AssignRoomToGuild ("hafen08",	GIL_NONE); //EDDA
 		Wld_AssignRoomToGuild ("hafen09",		GIL_PUBLIC); //Ignaz
 		Wld_AssignRoomToGuild ("hafen10",		GIL_NONE);
@@ -1135,7 +1135,7 @@ func void INIT_NewWorld_Part_City_01()
 		Wld_AssignRoomToGuild ("karten",		GIL_PUBLIC);
 		Wld_AssignRoomToGuild ("hafenkneipe",	GIL_NONE);
 		Wld_AssignRoomToGuild ("puff",			GIL_NONE);
-		
+
 		//Handwerker und Händler
 		if (Mod_LehrlingBei == 4)
 		{
@@ -1156,7 +1156,7 @@ func void INIT_NewWorld_Part_City_01()
 		Wld_AssignRoomToGuild ("hotel",			GIL_NONE);
 		Wld_AssignRoomToGuild ("stadtkneipe",	GIL_PUBLIC);
 		Wld_AssignRoomToGuild ("zuris",			GIL_PAL);
-		
+
 		if (Mod_LehrlingBei == 1)
 		{
 			Wld_AssignRoomToGuild ("alchemist",	GIL_NONE);
@@ -1165,7 +1165,7 @@ func void INIT_NewWorld_Part_City_01()
 		{
 			Wld_AssignRoomToGuild ("alchemist",	GIL_PUBLIC);
 		};
-		
+
 		if (Mod_LehrlingBei == 2)
 		{
 			Wld_AssignRoomToGuild ("gritta",	GIL_NONE);		// = BOSPER!
@@ -1174,7 +1174,7 @@ func void INIT_NewWorld_Part_City_01()
 		{
 			Wld_AssignRoomToGuild ("gritta",	GIL_PUBLIC); 	// = BOSPER!
 		};
-		
+
 		if (Mod_LehrlingBei == 5)
 		{
 			Wld_AssignRoomToGuild ("schmied",	GIL_NONE);
@@ -1183,7 +1183,7 @@ func void INIT_NewWorld_Part_City_01()
 		{
 			Wld_AssignRoomToGuild ("schmied",	GIL_PAL);
 		};
-		
+
 		//Türme
 		Wld_AssignRoomToGuild ("turmsued01",	GIL_PAL);
 		Wld_AssignRoomToGuild ("turmsued02",	GIL_PAL);
@@ -1191,7 +1191,7 @@ func void INIT_NewWorld_Part_City_01()
 		Wld_AssignRoomToGuild ("turmost02",		GIL_PAL);
 		Wld_AssignRoomToGuild ("turmschmied",	GIL_PAL);
 		Wld_AssignRoomToGuild ("turmbogner",	GIL_PAL);
-		
+
 		//Oberes Viertel
 		Wld_AssignRoomToGuild ("nwcityrich01", 	GIL_PAL);
 		Wld_AssignRoomToGuild ("rathaus",		GIL_PUBLIC);
@@ -1205,8 +1205,8 @@ func void INIT_NewWorld_Part_City_01()
 		|| (Mod_Gilde == 3)
 		{
 			Wld_AssignRoomToGuild ("reich04",		GIL_NONE);
-		
-			//Kaserne 
+
+			//Kaserne
 			Wld_AssignRoomToGuild ("andre",			GIL_NONE);
 			Wld_AssignRoomToGuild ("waffenkammer",	GIL_NONE);
 			Wld_AssignRoomToGuild ("barracke",		GIL_NONE);
@@ -1214,15 +1214,15 @@ func void INIT_NewWorld_Part_City_01()
 		else
 		{
 			Wld_AssignRoomToGuild ("reich04",		GIL_PAL);
-		
-			//Kaserne 
+
+			//Kaserne
 			Wld_AssignRoomToGuild ("andre",			GIL_PUBLIC);
 			Wld_AssignRoomToGuild ("waffenkammer",	GIL_PUBLIC);
 			Wld_AssignRoomToGuild ("barracke",		GIL_PAL);
 		};
 		Wld_AssignRoomToGuild ("reich05",		GIL_PAL);
 		Wld_AssignRoomToGuild ("reich06",		GIL_PUBLIC); //Salandril Alchemist -> Wegen Mission!!!
-		Wld_AssignRoomToGuild ("richter",		GIL_PUBLIC); //wegen SLD Mission Kap.3 
+		Wld_AssignRoomToGuild ("richter",		GIL_PUBLIC); //wegen SLD Mission Kap.3
 		Wld_AssignRoomToGuild ("leomar",		GIL_PUBLIC);
 };
 
@@ -1244,7 +1244,7 @@ func void STARTUP_NewWorld_Part_Farm_01()
 	Wld_InsertNpc		(Sheep_Lobart_05, 	"NW_FARM1_PATH_CITY_SHEEP_09");
 	Wld_InsertNpc		(Sheep_Lobart_06, 	"NW_FARM1_PATH_CITY_SHEEP_09");
 	Wld_InsertNpc		(Sheep_Lobart_07, 	"NW_FARM1_PATH_CITY_SHEEP_09");
-	
+
 	// Schafe auf dem Hof
 
 	Wld_InsertNpc		(Hammel_Lobart_03, 	"NW_FARM1_PATH_CITY_SHEEP_10");
@@ -1255,7 +1255,7 @@ func void STARTUP_NewWorld_Part_Farm_01()
 	Wld_InsertNpc		(Sheep_Lobart_11, 	"NW_FARM1_PATH_CITY_SHEEP_12");
 	Wld_InsertNpc		(Sheep_Lobart_12, 	"NW_FARM1_OUT_03");
 	Wld_InsertNpc		(Sheep_Lobart_13, 	"NW_FARM1_OUT_03");
-	
+
 	// Schafe bei der Windmühle
 
 	Wld_InsertNpc		(Sheep_Lobart_14, 	"NW_FARM1_MILL_01");
@@ -1330,18 +1330,18 @@ func void STARTUP_NewWorld_Part_Farm_01()
 	Wld_InsertItem	(ItPl_Beet_Lobart_19, "FP_ITEM_RUEBE_LOBART_19");
 	Wld_InsertItem	(ItPl_Beet_Lobart_20, "FP_ITEM_RUEBE_LOBART_20");
 };
-	
+
 func void INIT_NewWorld_Part_Farm_01()
 {
 	Wld_AssignRoomToGuild ("farm01", GIL_PUBLIC);	// Hildas Raum
-	Wld_AssignRoomToGuild ("farm02", GIL_PUBLIC);  	// Scheune 
+	Wld_AssignRoomToGuild ("farm02", GIL_PUBLIC);  	// Scheune
 
 	if (Lobart_Kleidung_Verkauft == TRUE)
 	{
 		Wld_AssignRoomToGuild ("farm03", GIL_NONE);  	// Schlafraum
 	}
 	else
-	{		
+	{
 		Wld_AssignRoomToGuild ("farm03", GIL_PUBLIC);  	// Schlafraum
 	};
 };
@@ -1403,10 +1403,10 @@ func void INIT_NewWorld_Part_Xardas_01()
 {
 	B_InitMonsterAttitudes ();
 	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();	
+	B_InitNpcGlobals ();
 };
 
-// KLOSTER 
+// KLOSTER
 FUNC VOID STARTUP_NewWorld_Part_Monastery_01 ()
 {
 	// NPC's
@@ -1453,8 +1453,8 @@ FUNC VOID INIT_NewWorld_Part_Monastery_01 ()
 {
 	Wld_AssignRoomToGuild ("kloster01",GIL_PUBLIC); //Kirche
 	Wld_AssignRoomToGuild ("kloster02",GIL_PUBLIC); //Bücherei
-	Wld_AssignRoomToGuild ("kloster03",GIL_PUBLIC); //Kapelle 
-		
+	Wld_AssignRoomToGuild ("kloster03",GIL_PUBLIC); //Kapelle
+
 	Wld_AssignRoomToGuild ("kloster11",GIL_PUBLIC); //Der Keller
 	Wld_AssignRoomToGuild ("kloster13",GIL_PUBLIC); //Weinkelterei
 
@@ -1466,7 +1466,7 @@ FUNC VOID INIT_NewWorld_Part_Monastery_01 ()
 		Wld_AssignRoomToGuild ("kloster05",GIL_PUBLIC); //Schlafraum Novizen
 		Wld_AssignRoomToGuild ("kloster10",GIL_PUBLIC); //Schlafraum Novizen
 		Wld_AssignRoomToGuild ("kloster12",GIL_PUBLIC); //Schlafraum Novizen
-	
+
 		Wld_AssignRoomToGuild ("kloster06",GIL_PUBLIC); //Schlafraum Magier
 		Wld_AssignRoomToGuild ("kloster07",GIL_PUBLIC); //Schlafraum Magier
 		Wld_AssignRoomToGuild ("kloster08",GIL_PUBLIC); //Schlafraum Magier
@@ -1478,7 +1478,7 @@ FUNC VOID INIT_NewWorld_Part_Monastery_01 ()
 		Wld_AssignRoomToGuild ("kloster05",GIL_VLK); //Schlafraum Novizen
 		Wld_AssignRoomToGuild ("kloster10",GIL_VLK); //Schlafraum Novizen
 		Wld_AssignRoomToGuild ("kloster12",GIL_VLK); //Schlafraum Novizen
-		
+
 		Wld_AssignRoomToGuild ("kloster06",GIL_VLK); //Schlafraum Magier
 		Wld_AssignRoomToGuild ("kloster07",GIL_VLK); //Schlafraum Magier
 		Wld_AssignRoomToGuild ("kloster08",GIL_VLK); //Schlafraum Magier
@@ -1503,7 +1503,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc	(Mod_952_BDT_Franco_NW,	"BIGFARM");
 	Wld_InsertNpc	(Mod_963_BDT_Senyan_NW,	"BIGFARM");
 	Wld_InsertNpc	(Mod_967_BDT_Tom_NW,	"BIGFARM");
-	
+
 	Wld_InsertNpc 	(Sheep, 		"NW_BIGFARM_SHEEP1_01");
 	Wld_InsertNpc 	(Sheep, 		"NW_BIGFARM_SHEEP1_01");
 	Wld_InsertNpc 	(Hammel, 		"NW_BIGFARM_SHEEP1_01");
@@ -1538,7 +1538,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(Sheep, 		"NW_BIGFARM_KITCHEN_OUT_02");
 	Wld_InsertNpc 	(Sheep, 		"NW_BIGFARM_KITCHEN_OUT_02");
 	Wld_InsertNpc 	(Hammel, 		"NW_BIGFARM_KITCHEN_OUT_02");
-	
+
 	Wld_InsertNpc 	(Sheep_Bengar_01, 		"FP_ROAM_NW_FARM3_OUT_05_01");
 	Wld_InsertNpc 	(Sheep_Bengar_02, 		"FP_ROAM_NW_FARM3_OUT_05_02");
 	Wld_InsertNpc 	(Hammel_Bengar_01, 		"FP_ROAM_NW_FARM3_OUT_05_03");
@@ -1869,13 +1869,13 @@ FUNC VOID INIT_NewWorld_Part_GreatPeasant_01 ()
 {
 	// ------- Sld-Vorposten -------
 	Wld_AssignRoomToGuild ("grpwaldhuette01",	GIL_PUBLIC);
-		
+
 	// ------ Onars Hof ------
 	Wld_AssignRoomToGuild ("grphaupthaus01",	GIL_PUBLIC);
 	Wld_AssignRoomToGuild ("grpschmiede01",		GIL_NONE);
 	Wld_AssignRoomToGuild ("grpscheune01",		GIL_PUBLIC);
 	Wld_AssignRoomToGuild ("grpkapelle01",		GIL_NONE);
-	
+
 	// ------ abgelegene Gruft ------
 	Wld_AssignRoomToGuild ("cementary01",		GIL_NONE);
 
@@ -1889,11 +1889,11 @@ FUNC VOID INIT_NewWorld_Part_GreatPeasant_01 ()
 		Wld_AssignRoomToGuild ("grpbauer01",		GIL_NONE);
 	};
 	Wld_AssignRoomToGuild ("grpbauerscheune01",	GIL_PUBLIC);
-		
+
 	// ------ Bengars Farm ------
 	Wld_AssignRoomToGuild ("grpbauer02",		GIL_PUBLIC);
 	Wld_AssignRoomToGuild ("grpbauerscheune02",	GIL_PUBLIC);
-	
+
 	// ------ Abenteuerspielplatz -------
 	Wld_AssignRoomToGuild ("grpturm02",			GIL_PUBLIC); //vorderer Turm
 	Wld_AssignRoomToGuild ("grpturm01",			GIL_PUBLIC); //hinterer Turm
@@ -1973,44 +1973,44 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 	// Waldgebiet mit Schattenl?uferh?hle
 
 	Wld_InsertNpc 	(Keiler,	"FP_ROAM_CITYFOREST_KAP3_38");
-	Wld_InsertNpc 	(Keiler,	"FP_ROAM_CITY_TO_FOREST_09");	
+	Wld_InsertNpc 	(Keiler,	"FP_ROAM_CITY_TO_FOREST_09");
 
 	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_23");
-	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_24");	
-	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_27");	
+	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_24");
+	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_27");
 
 	Wld_InsertNpc 	(Keiler,	"FP_ROAM_CITYFOREST_KAP3_34");
-	Wld_InsertNpc 	(Keiler,	"FP_ROAM_CITYFOREST_KAP3_35");	
+	Wld_InsertNpc 	(Keiler,	"FP_ROAM_CITYFOREST_KAP3_35");
 
 	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_11");
-	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_10");	
+	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_10");
 	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_09");
 
 	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_15");
-	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_17");	
-	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_14");	
+	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_17");
+	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_14");
 
 	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_01");
-	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_04");	
+	Wld_InsertNpc 	(Wolf,	"FP_ROAM_CITYFOREST_KAP3_04");
 	Wld_InsertNpc 	(Warg,	"FP_ROAM_DEMONFROMRANDOLPH_22");
 
-	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_CITYFOREST_KAP3_05");	
-	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_CITYFOREST_CAVE_A01_01");	
-	Wld_InsertNpc 	(Shadowbeast,	"FP_ITEM_FOREST_STPLATE_01");	
-	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_CITYFOREST_CAVE_04_02");	
-	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_CITYFOREST_CAVE_06_04");	
+	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_CITYFOREST_KAP3_05");
+	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_CITYFOREST_CAVE_A01_01");
+	Wld_InsertNpc 	(Shadowbeast,	"FP_ITEM_FOREST_STPLATE_01");
+	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_CITYFOREST_CAVE_04_02");
+	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_CITYFOREST_CAVE_06_04");
 	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_CITYFOREST_CAVE_06_02");
 
 	// Weg Stadttor bis Taverne
 
 	Wld_InsertNpc 	(Gobbo_Green,	"FP_ROAM_NW_CITY_TO_FOREST_04_01");
-	Wld_InsertNpc 	(Gobbo_Green,	"FP_ROAM_NW_CITY_TO_FOREST_04_02");	
+	Wld_InsertNpc 	(Gobbo_Green,	"FP_ROAM_NW_CITY_TO_FOREST_04_02");
 
 	Wld_InsertNpc 	(Gobbo_Green,	"FP_ROAM_CITY_TO_FOREST_21");
 	Wld_InsertNpc 	(Gobbo_Green,	"FP_ROAM_CITY_TO_FOREST_24");
 
-	Wld_InsertNpc 	(Rat,	"FP_ROAM_CITY_TO_FOREST_34");	
-	Wld_InsertNpc 	(Rat,	"FP_ROAM_CITY_TO_FOREST_17");	
+	Wld_InsertNpc 	(Rat,	"FP_ROAM_CITY_TO_FOREST_34");
+	Wld_InsertNpc 	(Rat,	"FP_ROAM_CITY_TO_FOREST_17");
 
 	Wld_InsertNpc 	(Meatbug,	"FP_ROAM_NW_CITY_TO_FOREST_04_05_2");
 	Wld_InsertNpc 	(Meatbug,	"FP_ROAM_NW_CITY_TO_FOREST_04_05_3");
@@ -2042,7 +2042,7 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 	Wld_InsertNpc 	(Wolf,	"FP_ROAM_NW_CITY_TO_LIGHTHOUSE_13_MONSTER8_02");
 	Wld_InsertNpc 	(BlackWolf,	"FP_ROAM_NW_CITY_TO_LIGHTHOUSE_13_MONSTER8_04");
 
-	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_FOREST_PATH_35_06_04");	
+	Wld_InsertNpc 	(Shadowbeast,	"FP_ROAM_NW_FOREST_PATH_35_06_04");
 
 	// Kleiner Wald mit Gruft bei der Taverne
 
@@ -2190,10 +2190,10 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 FUNC VOID INIT_NewWorld_Part_Forest_01 ()
 {
 	Wld_AssignRoomToNpc	("forestherberge01",	Mod_776_NONE_Orlan_NW);
-	
+
 	Wld_AssignRoomToGuild ("XRNWHOEHLE01",	GIL_PUBLIC);
 };
-	
+
 //------- Troll Area ---------------------------
 FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 {
@@ -2385,7 +2385,7 @@ FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 };
 
 FUNC VOID INIT_NewWorld_Part_TrollArea_01 ()
-{ 
+{
 };
 
 // ------ World -------
@@ -2400,14 +2400,14 @@ FUNC VOID STARTUP_NewWorld()
 	Wld_InsertNpc	(Rat_Sekob_01, "FP_ROAM_SEKOBSRATTE_01");
 	Wld_InsertNpc	(Rat_Sekob_02, "FP_ROAM_SEKOBSRATTE_04");
 	Wld_InsertNpc	(Rat_Sekob_03, "FP_ROAM_SEKOBSRATTE_07");
-	
+
 	Wld_InsertNpc(Mod_505_VLK_Spielleiter_NW, "MARKT");
 	Wld_InsertNpc(Mod_506_VLK_Spielleiter_NW, "MARKT");
 	Wld_InsertNpc(Mod_507_VLK_Spielleiter_NW, "MARKT");
 
-	// Sonstiges	
+	// Sonstiges
 
-	// ------ StartUps der Unter-Parts ------ 
+	// ------ StartUps der Unter-Parts ------
 	STARTUP_NewWorld_Part_City_01();
 	STARTUP_NewWorld_Part_Farm_01();
 	STARTUP_NewWorld_Part_Xardas_01();
@@ -2419,7 +2419,7 @@ FUNC VOID STARTUP_NewWorld()
 
 	// ------ INTRO - muss ganz am Ende der Startup stehen ------
 	Kapitel = 1; //Joly: Kann hier stehen bleiben!
-	
+
 	//-----Addon Talent Goldhacken---------
 	Hero_HackChance = 10;
 };
@@ -2428,13 +2428,13 @@ FUNC VOID INIT_NewWorld()
 {
 	Spine_OverallSaveSetInt("KhorinisVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	if (Npc_KnowsInfo(hero, Info_Mod_Dragomir_BurnedLager))
 	{
 		Wld_SendUntrigger	("DRAGOMIRSFEUER");
 		Wld_SendUntrigger	("DRAGOMIRSMOKE");
 	};
-	
+
 	if (Mod_Cronos_Artefakt == 1)
 	{
 		Wld_InsertNpc	(Bloodhound_Untier, "FP_ROAM_UNTIER_01");
@@ -2686,7 +2686,7 @@ FUNC VOID INIT_NewWorld()
 
 		B_StartOtherRoutine	(Mod_7416_BAU_Velaya_NW, "START");
 	};
-	
+
 	if (Kapitel == 3)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Xeres_Beliar))
 	{
@@ -2720,7 +2720,7 @@ FUNC VOID INIT_NewWorld()
 		B_KillNpc	(Mod_1057_VLK_Buergerin_NW);
 		B_KillNpc	(Mod_1059_VLK_Buerger_NW);
 		B_KillNpc	(Mod_1055_VLK_Buerger_NW);
-		
+
 		B_StartOtherRoutine	(Mod_596_MIL_Martin_NW, "RASEND");
 	};
 
@@ -2864,8 +2864,8 @@ FUNC VOID INIT_NewWorld()
 		Wld_InsertNpc	(Mod_7297_DJG_Drachenjaeger_NW, "BIGFARM");
 		Wld_InsertNpc	(Mod_7298_DJG_Butch_NW, "BIGFARM");
 	};
-	
-	// ------ INITS der Unter-Parts ------ 
+
+	// ------ INITS der Unter-Parts ------
 	INIT_NewWorld_Part_City_01();
 	INIT_NewWorld_Part_Farm_01();
 	INIT_NewWorld_Part_Xardas_01();
@@ -2874,7 +2874,7 @@ FUNC VOID INIT_NewWorld()
 	INIT_NewWorld_Part_TrollArea_01();
 	INIT_NewWorld_Part_Forest_01();
 	INIT_NewWorld_Part_Pass_To_OW_01();
-	
+
 	if (Mod_Gilde == 4)
 	&& (Mod_ErsteVerbesserung == TRUE)
 	&& (Mod_Orcdog_Insert == FALSE)
@@ -2941,7 +2941,7 @@ FUNC VOID INIT_NewWorld()
 
 		Mod_Enter_NewWorld_02 = True;
 	};
-	
+
 	if (Mod_Enter_NewWorld_03 == FALSE)
 	&& (Kapitel >= 3)
 	{
@@ -2983,7 +2983,7 @@ FUNC VOID INIT_NewWorld()
 
 		Mod_Enter_NewWorld_03 = True;
 	};
-	
+
 	if (Mod_Enter_NewWorld_04 == FALSE)
 	&& (Kapitel >= 4)
 	{
@@ -2999,7 +2999,7 @@ FUNC VOID INIT_NewWorld()
 
 		Wld_InsertItem	(ItKe_SekobScheune, "FP_ITEM_SEKOBSSCHEUNE_KEY");
 	};
-	
+
 	if (Mod_Enter_NewWorld_05 == FALSE)
 	&& (Kapitel >= 5)
 	{
@@ -3015,7 +3015,7 @@ FUNC VOID INIT_NewWorld()
 
 		Mod_Enter_NewWorld_05 = True;
 	};
-	
+
 	if (Mod_Enter_NewWorld_06 == FALSE)
 	&& (Kapitel >= 6)
 	{
@@ -3040,23 +3040,36 @@ FUNC VOID INIT_NewWorld()
 
 		Wld_InsertNpc	(Schattensnapper,	"NW_PASS_06");
 	};
-	
+
 	if (!Mod_AddedSonorAtLares)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Cyrco_Nahkampf)) {
 		Mod_AddedSonorAtLares = TRUE;
 		Wld_InsertNpc(Mod_30000_JG_Sonor_NW, "BIGFARM");
 	};
-	
+
 	if (Kapitel == 1 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == TRUE && (!Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen) || Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen))) {
 		B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "TOT");
 	};
-	
+
 	if (Kapitel >= 2 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == TRUE && !Npc_KnowsInfo(hero, Info_Mod_Lester_Karras)) {
 		B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "START");
 	};
-	
+
 	if (Kapitel == 1 && Mod_LesterInRelendel >= 1 && Hlp_StrCmp(Mod_557_PSINOV_Lester_NW.wp, "TOT") == TRUE && Npc_KnowsInfo(hero, Info_Mod_Lester_Treffen) && !Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen)) {
 		B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "TREFFEN");
+	};
+
+	if (Npc_KnowsInfo(hero, Info_Mod_Hagen_Hi)) {
+		var int hagenPtr;
+		hagenPtr = MEM_SearchVobByName("NW_2_OW_ORETRAIL");
+
+		if (hagenPtr > 0) {
+			var oCTriggerChangeLevel tcl;
+			MEM_AssignInst(tcl, hagenPtr);
+
+			tcl.levelname = "Minental\Minental.ZEN";
+			tcl.startvob = "WP_INTRO09";
+		};
 	};
 
 	OldLevel(NEWWORLD_ZEN);
@@ -3068,7 +3081,7 @@ FUNC VOID STARTUP_AddonWorld ()
 	CurrentLevel3 = ADDONWORLD_ZEN;
 
 	NameAllFires();
-	
+
 	STARTUP_ADDON_PART_BANDITSCAMP_01 ();
 	STARTUP_ADDON_PART_PIRATESCAMP_01 ();
 	STARTUP_ADDON_PART_ENTRANCE_01 ();
@@ -3076,8 +3089,8 @@ FUNC VOID STARTUP_AddonWorld ()
 	STARTUP_ADDON_PART_CANYON_01 ();
 	STARTUP_ADDON_PART_VALLEY_01 ();
 	STARTUP_ADDON_PART_ADANOSTEMPLE_01 ();
-		
-	// ------ StartUps der Unter-Parts ------ 
+
+	// ------ StartUps der Unter-Parts ------
 	ENTERED_ADDONWORLD = TRUE;
 };
 
@@ -3085,7 +3098,7 @@ FUNC VOID INIT_AddonWorld ()
 {
 	Spine_OverallSaveSetInt("JharkendarVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_XeresLebt))
 	&& (Mod_HS_XardasRat == 1)
 	&& (SaturasNichtInJharki == FALSE)
@@ -3204,15 +3217,15 @@ FUNC VOID INIT_AddonWorld ()
 		Wld_SendTrigger	("KAPFAKEHERO");
 
 		INSERT_FAKE_HERO_ONETIME = TRUE;
-	}; 
-	
+	};
+
 	INIT_ADDON_PART_BANDITSCAMP_01 ();
 	INIT_ADDON_PART_PIRATESCAMP_01 ();
  	INIT_ADDON_PART_ENTRANCE_01 ();
    	INIT_ADDON_PART_GOLDMINE_01 ();
    	INIT_ADDON_PART_CANYON_01 ();
    	INIT_ADDON_PART_VALLEY_01 ();
-   	INIT_ADDON_PART_ADANOSTEMPLE_01 ();	
+   	INIT_ADDON_PART_ADANOSTEMPLE_01 ();
 
 	if (Mod_Schwierigkeit > 0)
 	&& (Mod_Enter_Addon_01 == FALSE)
@@ -3391,20 +3404,20 @@ FUNC VOID INIT_AddonWorld ()
 		B_Kapitelwechsel (2, ADDONWORLD_ZEN);
 		B_StartOtherRoutine	(Mod_1723_MIL_Gidan_NW, "ANDRE");
 	};
-	
+
 	if (Npc_KnowsInfo(hero, Info_Mod_Brunhild_DI_Hi))
 	&& (!Mod_Brunhild_AW) {
 		Mod_Brunhild_AW = TRUE;
-		
+
 		Wld_InsertNpc(Mod_100000_OUT_Brunhild_AW, "STRAND");
 	};
-	// ------ INITS der Unter-Parts ------ 
+	// ------ INITS der Unter-Parts ------
 
 	OldLevel(ADDONWORLD_ZEN);
 };
 
 FUNC VOID STARTUP_MinentalNewCamp ()
-{	
+{
         Wld_InsertNpc	(Mod_525_SLD_Lee_MT,		"NC_DAM2");
 	Wld_InsertNpc	(Mod_781_SLD_Cipher_MT,		"NC_DAM2");
 	Wld_InsertNpc	(Mod_787_SLD_Jarvis_MT,		"NC_DAM2");
@@ -3506,7 +3519,7 @@ FUNC VOID INIT_MinentalNewCamp ()
 	Wld_SetObjectRoutine (00,00,"FIREPLACE_HIGH2_01",1);
 	Wld_SetObjectRoutine (20,00,"FIREPLACE_HIGH2_01",1);
 	Wld_SetObjectRoutine (05,00,"FIREPLACE_HIGH2_01",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"FIREPLACE_HIGH2_02",1);
 	Wld_SetObjectRoutine (20,00,"FIREPLACE_HIGH2_02",1);
 	Wld_SetObjectRoutine (05,00,"FIREPLACE_HIGH2_02",0);
@@ -3626,7 +3639,7 @@ FUNC VOID INIT_MinentalNewCamp ()
 	Wld_SetObjectRoutine (00,00,"NC_FIREPLACE_STONE_02",1);
 	Wld_SetObjectRoutine (20,00,"NC_FIREPLACE_STONE_02",1);
 	Wld_SetObjectRoutine (05,00,"NC_FIREPLACE_STONE_02",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"NC_FIREPLACE_GROUND",1);
 	Wld_SetObjectRoutine (20,00,"NC_FIREPLACE_GROUND",1);
 	Wld_SetObjectRoutine (05,00,"NC_FIREPLACE_GROUND",0);
@@ -3673,11 +3686,11 @@ FUNC VOID INIT_MinentalNewCamp ()
 	Wld_AssignRoomToGuild("MAGE04",GIL_PUBLIC);	//Bibliothek frei zug?nglich!
 	Wld_AssignRoomToGuild("MAGE05",GIL_PUBLIC);	//NC_KDW03_IN
 	Wld_AssignRoomToGuild("MAGE06",GIL_PUBLIC);	//NC_KDW02_IN
-	Wld_AssignRoomToGuild("MAGHO4",GIL_PUBLIC);	//Pentagrammh?hle frei zug?nglich	
+	Wld_AssignRoomToGuild("MAGHO4",GIL_PUBLIC);	//Pentagrammh?hle frei zug?nglich
 };
 
 FUNC VOID STARTUP_MinentalFreeMineCamp ()
-{	
+{
 	Wld_InsertNpc	(Mod_1550_SFB_Schuerfer_MT,	"FMC_ENTRANCE");
 	Wld_InsertNpc	(Mod_1551_SFB_Schuerfer_MT,	"FMC_ENTRANCE");
 	Wld_InsertNpc	(Mod_1568_SFB_Schuerfer_MT,	"FMC_ENTRANCE");
@@ -3705,16 +3718,16 @@ FUNC VOID STARTUP_MinentalFreeMineCamp ()
 	Wld_InsertNpc	(Mod_1578_SLD_Soeldner_MT,	"FMC_ENTRANCE");
 	Wld_InsertNpc	(Mod_1579_SLD_Soeldner_MT,	"FMC_ENTRANCE");
 	Wld_InsertNpc	(Mod_1580_SLD_Soeldner_MT,	"FMC_ENTRANCE");
-	Wld_InsertNpc	(Mod_1581_SLD_Soeldner_MT,	"FMC_ENTRANCE");	
+	Wld_InsertNpc	(Mod_1581_SLD_Soeldner_MT,	"FMC_ENTRANCE");
 };
 
 FUNC VOID INIT_MinentalFreeMineCamp ()
 {
-	Wld_AssignRoomToGuild("FMC01",GIL_MIL);     
-	Wld_AssignRoomToGuild("FMC03",GIL_MIL); 
+	Wld_AssignRoomToGuild("FMC01",GIL_MIL);
+	Wld_AssignRoomToGuild("FMC03",GIL_MIL);
 	Wld_AssignRoomToGuild("FMC04",GIL_MIL);
 	Wld_AssignRoomToGuild("FMC05",GIL_MIL);
-	Wld_AssignRoomToGuild("FMC06",GIL_MIL); 
+	Wld_AssignRoomToGuild("FMC06",GIL_MIL);
 	Wld_AssignRoomToGuild("FMC07",GIL_MIL);
 	Wld_AssignRoomToGuild("FMC08",GIL_MIL);
 	Wld_AssignRoomToGuild("FMC09",GIL_MIL);
@@ -3723,7 +3736,7 @@ FUNC VOID INIT_MinentalFreeMineCamp ()
 	Wld_AssignRoomToGuild("FMC12",GIL_MIL);
 	Wld_AssignRoomToGuild("FMC13",GIL_MIL);
 	Wld_AssignRoomToGuild("FMC14",GIL_MIL);
-	Wld_AssignRoomToGuild("FMC15",GIL_MIL);	
+	Wld_AssignRoomToGuild("FMC15",GIL_MIL);
 };
 
 FUNC VOID STARTUP_MinentalOldCamp ()
@@ -3839,7 +3852,7 @@ FUNC VOID STARTUP_MinentalOldCamp ()
 	Wld_InsertNpc	(Mod_4072_BDT_Bandit_MT,	"OC1");
 	Wld_InsertNpc	(Mod_4073_BDT_Bandit_MT,	"OC1");
 	Wld_InsertNpc	(Mod_4075_BDT_Bandit_MT,	"OC1");
-	
+
 	// Waldl?uferlager
 
 	Wld_InsertNpc	(Mod_7431_JG_Baldur_MT, "OC1");
@@ -3853,147 +3866,147 @@ FUNC VOID INIT_MinentalOldCamp ()
 	Wld_SetMobRoutine			(22,00, "FIREPLACE", 1);
 	Wld_SetMobRoutine			(05,00, "FIREPLACE", 0);
 	//------------------------------------------
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH_01",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH_01",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH_01",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH_02",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH_02",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH_02",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH_03",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH_03",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH_03",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH_04",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH_04",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH_04",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH_05",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH_05",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH_05",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH_06",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH_06",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH_06",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH_07",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH_07",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH_07",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH_08",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH_08",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH_08",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH_09",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH_09",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH_09",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_01",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_01",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_01",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_02",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_02",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_02",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_03",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_03",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_03",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_04",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_04",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_04",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_05",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_05",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_05",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_06",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_06",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_06",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_07",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_07",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_07",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_08",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_08",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_08",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_09",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_09",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_09",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_10",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_10",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_10",0);
-	
+
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_11",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_11",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_11",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_12",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_12",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_12",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_13",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_13",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_13",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_14",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_14",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_14",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_15",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_15",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_15",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_16",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_16",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_16",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_17",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_17",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_17",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_18",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_18",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_18",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_19",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_19",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_19",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_20",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_20",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_20",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_21",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_21",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_21",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_HIGH2_22",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_HIGH2_22",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_HIGH2_22",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_MIDDLE_01",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_MIDDLE_01",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_MIDDLE_01",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_MIDDLE_01",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_MIDDLE_01",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_MIDDLE_01",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_MIDDLE_02",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_MIDDLE_02",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_MIDDLE_02",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_MIDDLE_03",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_MIDDLE_03",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_MIDDLE_03",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OC_FIREPLACE_MIDDLE_04",1);
 	Wld_SetObjectRoutine (20,00,"OC_FIREPLACE_MIDDLE_04",1);
 	Wld_SetObjectRoutine (05,00,"OC_FIREPLACE_MIDDLE_04",0);
@@ -4003,17 +4016,17 @@ FUNC VOID INIT_MinentalOldCamp ()
 	Wld_AssignRoomToGuild("HH5",GIL_PUBLIC);	// Portalraum EBR-Bedroom
 	Wld_AssignRoomToGuild("HH4",GIL_PUBLIC);	// Portalraum EBR-Bedroom
 	Wld_AssignRoomToGuild("HH7",GIL_PUBLIC);	// Portalraum EBR-Bedroom
-	
+
 	Wld_AssignRoomToGuild("ocgateb",GIL_OUT);	//Wachraum am Haupteingang
 	Wld_AssignRoomToGuild("hütte1",GIL_OUT); //Diegos H?tte
-	Wld_AssignRoomToGuild("hütte2",GIL_OUT); 
-	Wld_AssignRoomToGuild("hütte3",GIL_OUT); 
+	Wld_AssignRoomToGuild("hütte2",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte3",GIL_OUT);
 	Wld_AssignRoomToGuild("hütte4",GIL_OUT);
 	Wld_AssignRoomToGuild("hütte5",GIL_OUT);
-	Wld_AssignRoomToGuild("hütte6",GIL_OUT); 
-	Wld_AssignRoomToGuild("hütte7",GIL_OUT); 
-	Wld_AssignRoomToGuild("hütte8",GIL_OUT); 
-	Wld_AssignRoomToGuild("hütte9",GIL_OUT); 
+	Wld_AssignRoomToGuild("hütte6",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte7",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte8",GIL_OUT);
+	Wld_AssignRoomToGuild("hütte9",GIL_OUT);
 	Wld_AssignRoomToGuild("hütte10",GIL_OUT);
 	Wld_AssignRoomToGuild("hütte11",GIL_OUT);
 	Wld_AssignRoomToGuild("hütte12",GIL_OUT);
@@ -4083,15 +4096,15 @@ FUNC VOID INIT_MinentalOldCamp ()
 	Wld_AssignRoomToGuild("hütte76",GIL_OUT);	//Grahams H?tte, abgesprochen mit Mike
 	Wld_AssignRoomToGuild("hütte77",GIL_OUT);
 
-	Wld_AssignRoomToGuild("HHMH1", GIL_PUBLIC);	// Portalraum EBR-Bedroom	
+	Wld_AssignRoomToGuild("HHMH1", GIL_PUBLIC);	// Portalraum EBR-Bedroom
 };
 
 FUNC VOID STARTUP_MinentalPsiCamp ()
-{	
+{
 	//Novizen
 	Wld_InsertNpc	(Mod_951_PSINOV_Fortuno_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_2008_PSINOV_Ghorim_MT,	"NC_DAM2");
-	Wld_InsertNpc	(Mod_2012_PSINOV_Talas_MT,	"NC_DAM2");	
+	Wld_InsertNpc	(Mod_2012_PSINOV_Talas_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_2013_PSINOV_Joru_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_2014_PSINOV_Darrion_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_3001_PSINOV_Balor_MT,	"NC_DAM2");
@@ -4145,9 +4158,9 @@ FUNC VOID STARTUP_MinentalPsiCamp ()
 	Wld_InsertNpc	(Mod_2005_GUR_CorCadar_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_2006_GUR_BaalTyon_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_2007_GUR_BaalOrun_MT,	"NC_DAM2");
-	
+
 	//Templer
-	Wld_InsertNpc	(Mod_106_TPL_Angar_MT,		"NC_DAM2");	
+	Wld_InsertNpc	(Mod_106_TPL_Angar_MT,		"NC_DAM2");
 	Wld_InsertNpc	(Mod_2009_TPL_GorNaRan_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_2010_TPL_GorNaToth_MT,	"NC_DAM2");
 	Wld_InsertNpc	(Mod_2011_TPL_GorNaDrak_MT,	"NC_DAM2");
@@ -4189,223 +4202,223 @@ FUNC VOID INIT_MinentalPsiCamp ()
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_01",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_01",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_01",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_02",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_02",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_02",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_03",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_03",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_03",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_04",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_04",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_04",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_05",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_05",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_05",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_06",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_06",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_06",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_07",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_07",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_07",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_08",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_08",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_08",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_09",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_09",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_09",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_10",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_10",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_10",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_11",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_11",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_11",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_12",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_12",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_12",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_13",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_13",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_13",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_14",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_14",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_14",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_15",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_15",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_15",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_16",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_16",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_16",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_17",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_17",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_17",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_18",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_18",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_18",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_19",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_19",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_19",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_20",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_20",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_20",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_21",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_21",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_21",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_22",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_22",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_22",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_23",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_23",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_23",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_24",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_24",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_24",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_25",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_25",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_25",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_26",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_26",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_26",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_27",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_27",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_27",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_28",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_28",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_28",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_29",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_29",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_29",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_30",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_30",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_30",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_31",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_31",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_31",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_32",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_32",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_32",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_33",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_33",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_33",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_34",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_34",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_34",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_35",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_35",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_35",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_36",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_36",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_36",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_37",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_37",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_37",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_38",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_38",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_38",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_39",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_39",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_39",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_40",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_40",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_40",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_41",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_41",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_41",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_42",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_42",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_42",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_43",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_43",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_43",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_44",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_44",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_44",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_45",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_45",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_45",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_46",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_46",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_46",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_47",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_47",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_47",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_48",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_48",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_48",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_49",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_49",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_49",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_50",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_50",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_50",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_51",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_51",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_51",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_52",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_52",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_52",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_53",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_53",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_53",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_54",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_54",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_54",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_55",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_55",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_55",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_56",1);
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_56",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_56",0);
@@ -4418,8 +4431,8 @@ FUNC VOID INIT_MinentalPsiCamp ()
 	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_58",1);
 	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_58",0);
 
-	Wld_AssignRoomToGuild("PSIH01",GIL_PUBLIC); //OK				nlhu01 - nlhu32                
-	Wld_AssignRoomToGuild("PSIH02",GIL_OUT); //defekt       
+	Wld_AssignRoomToGuild("PSIH01",GIL_PUBLIC); //OK				nlhu01 - nlhu32
+	Wld_AssignRoomToGuild("PSIH02",GIL_OUT); //defekt
 	Wld_AssignRoomToGuild("PSIH03",GIL_OUT); //defekt
 	Wld_AssignRoomToGuild("PSIH04",GIL_OUT);
 	Wld_AssignRoomToGuild("PSIH05",GIL_OUT);
@@ -4453,19 +4466,19 @@ FUNC VOID INIT_MinentalPsiCamp ()
 	Wld_AssignRoomToGuild("PSIH33",GIL_OUT);
 	Wld_AssignRoomToGuild("PSIH34",GIL_OUT);
 	Wld_AssignRoomToGuild("PSIH35",GIL_OUT);
-	Wld_AssignRoomToGuild("PSIH36",GIL_OUT);	
+	Wld_AssignRoomToGuild("PSIH36",GIL_OUT);
 };
 
 FUNC VOID STARTUP_MinentalDemontower ()
-{	
+{
 };
 
 FUNC VOID INIT_MinentalDemontower ()
-{	
+{
 };
 
 FUNC VOID STARTUP_MinentalSurface ()
-{	
+{
 	// Banditen im Banditenlager
 
 	Wld_InsertNpc	(Mod_964_BDT_Skinner_MT,	"OC1");
@@ -4480,7 +4493,7 @@ FUNC VOID STARTUP_MinentalSurface ()
 	Wld_InsertNpc	(Mod_7023_BDT_Quentin_MT,	"OC1");
 
 	// Königliche Garde in ihrem Lager
-	
+
 	Wld_InsertNpc	(Mod_1011_KGD_Ole_MT,		"OC1");
 	Wld_InsertNpc	(Mod_1012_KGD_Bernd_MT,		"OC1");
 	Wld_InsertNpc	(Mod_1013_KGD_Hrungir_MT,	"OC1");
@@ -4521,7 +4534,7 @@ FUNC VOID STARTUP_MinentalSurface ()
 	Wld_InsertNpc	(Mod_1958_VMG_Albert_MT, "OC1");
 	Wld_InsertNpc	(Mod_4019_VMG_Faice_MT,	"OC1");
 	Wld_InsertNpc	(Mod_4020_VMG_Hermy_MT,	"OC1");
-	
+
 	// Jäger
 
 	Wld_InsertNpc	(Mod_1963_JG_Torgan_MT, "OC1");
@@ -5458,35 +5471,35 @@ FUNC VOID STARTUP_MinentalSurface ()
 
 	Wld_InsertNpc	(OrcBiter, "OW_PATH_BLACKWOLF07_SPAWN01");
 	Wld_InsertNpc	(OrcBiter, "OW_PATH_BLACKWOLF07_SPAWN01");
-	
+
 	Wld_InsertNpc	(OrcWarrior_Roam, "OW_PATH_104");
 	Wld_InsertNpc	(Orcdog, "OW_PATH_104");
-	
+
 	Wld_InsertNpc	(OrcWarrior_Roam, "CASTLE_4");
 	Wld_InsertNpc	(OrcWarrior_Roam, "CASTLE_4");
-	
+
 	Wld_InsertNpc	(OrcWarrior_Roam, "OW_PATH_SNAPPER02_SPAWN02");
 	Wld_InsertNpc	(Orcdog, "OW_PATH_SNAPPER02_SPAWN02");
 	Wld_InsertNpc	(OrcShaman_Sit, "OW_PATH_SNAPPER02_SPAWN02");
-	
+
 	Wld_InsertNpc	(OrcBiter, "SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
 	Wld_InsertNpc	(OrcBiter, "SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
 	Wld_InsertNpc	(OrcBiter, "SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
-	
+
 	Wld_InsertNpc	(OrcWarrior_Sit, "SPAWN_OW_SNAPPER_INCAVE_DM2");
-	
+
 	Wld_InsertNpc	(OrcWarrior_Roam, "SPAWN_OW_WARAN_ORC_01");
 	Wld_InsertNpc	(Orcdog, "SPAWN_OW_WARAN_ORC_01");
-	
+
 	Wld_InsertNpc	(OrcBiter, "SPAWN_OW_MOLERAT_ORC_04");
 	Wld_InsertNpc	(OrcBiter, "SPAWN_OW_MOLERAT_ORC_04");
-	
+
 	Wld_InsertNpc	(OrcElite_Roam, "OW_PATH_195");
 	Wld_InsertNpc	(OrcWarrior_Roam, "OW_PATH_195");
-	
+
 	Wld_InsertNpc	(OrcElite_Roam, "OW_PATH_3_05");
 	Wld_InsertNpc	(OrcElite_Roam, "OW_PATH_3_05");
-	
+
 	Wld_InsertNpc	(OrcBiter, "OW_PATH_162");
 	Wld_InsertNpc	(OrcBiter, "OW_PATH_162");
 	Wld_InsertNpc	(OrcBiter, "OW_PATH_162");
@@ -5500,7 +5513,7 @@ FUNC VOID INIT_MinentalSurface ()
 	{
 
 		GehtErstesMalInsMinental = 1;
-	}; 
+	};
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_AW_Hi))
 	&& (Hoelle_First == 0)
@@ -5531,7 +5544,7 @@ FUNC VOID INIT_MinentalSurface ()
 	&& (Mod_Palamine_Leer == FALSE)
 	{
 		Mod_Palamine_Leer = TRUE;
-		
+
 		B_KillNpc	(Mod_1731_RIT_Ritter_MT);
 		B_KillNpc	(Mod_1732_RIT_Ritter_MT);
 		B_KillNpc	(Mod_1733_STRF_Straefling_MT);
@@ -5545,175 +5558,175 @@ FUNC VOID INIT_MinentalSurface ()
 		Wld_InsertNpc	(Mod_1744_PSITPL_Templer_MT,	"OC1");
 	};
 
-	
+
 
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_GROUND2_01",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_GROUND2_01",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_GROUND2_01",0);
-	
+
 	Wld_SetMobRoutine			(00,00, "FIREPLACE", 1);
 	Wld_SetMobRoutine			(22,00, "FIREPLACE", 1);
-	Wld_SetMobRoutine			(05,00, "FIREPLACE", 0);	
-	
+	Wld_SetMobRoutine			(05,00, "FIREPLACE", 0);
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH_01",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH_01",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH_01",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH_02",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH_02",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH_02",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH_03",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH_03",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH_03",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_01",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_01",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_01",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_02",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_02",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_02",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_03",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_03",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_03",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_04",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_04",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_04",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_05",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_05",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_05",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_06",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_06",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_06",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_07",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_07",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_07",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_08",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_08",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_08",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_09",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_09",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_09",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_10",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_10",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_10",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_11",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_11",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_11",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_12",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_12",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_12",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_13",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_13",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_13",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_14",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_14",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_14",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_15",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_15",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_15",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_16",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_16",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_16",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_17",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_17",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_17",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_18",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_18",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_18",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_19",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_19",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_19",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_20",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_20",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_20",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_21",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_21",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_21",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_22",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_22",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_22",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_23",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_23",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_23",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_24",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_24",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_24",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_25",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_25",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_25",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_26",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_26",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_26",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_27",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_27",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_27",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_28",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_28",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_28",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_29",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_29",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_29",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_HIGH2_30",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_HIGH2_30",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_HIGH2_30",0);
-		
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_PCHIGH2_01",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_PCHIGH2_01",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_PCHIGH2_01",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_PCHIGH2_02",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_PCHIGH2_02",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_PCHIGH2_02",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_PCHIGH2_03",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_PCHIGH2_03",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_PCHIGH2_03",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_PCHIGH2_04",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_PCHIGH2_04",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_PCHIGH2_04",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_PCHIGH2_05",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_PCHIGH2_05",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_PCHIGH2_05",0);
-	
+
 	Wld_SetObjectRoutine (00,00,"OW_FIREPLACE_PCHIGH2_06",1);
 	Wld_SetObjectRoutine (20,00,"OW_FIREPLACE_PCHIGH2_06",1);
 	Wld_SetObjectRoutine (05,00,"OW_FIREPLACE_PCHIGH2_06",0);
-	
+
 	// aus Orc-City
 	Wld_SetMobRoutine	(00,00, "FIREPLACE", 1);
-	
+
 };
 
 FUNC VOID STARTUP_Minental ()
@@ -5722,7 +5735,7 @@ FUNC VOID STARTUP_Minental ()
 
 	NameAllFires();
 
-	// Orks - Orks kriegen alle nen TA, ist dann cooler	
+	// Orks - Orks kriegen alle nen TA, ist dann cooler
 
 
 	// NPC's
@@ -5736,14 +5749,14 @@ FUNC VOID STARTUP_Minental ()
 	STARTUP_MinentalPsiCamp ();
 	STARTUP_MinentalNewCamp ();
 	STARTUP_MinentalFreeMineCamp ();
-	STARTUP_MinentalDemontower ();		
+	STARTUP_MinentalDemontower ();
 };
 
 FUNC VOID INIT_Minental ()
 {
 	Spine_OverallSaveSetInt("MinentalVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	// Morgens
 
 	Wld_SetMobRoutine(05, 10, "LIGHTSPAWNERONE", 1);
@@ -5819,7 +5832,7 @@ FUNC VOID INIT_Minental ()
 
 		Wld_InsertItem	(ItWr_MagicSecretsBand6,	"FP_ITEM_MAGICSECRETSBAND6");
 	};
-	
+
 	if (Mod_HQ_FokusZuXardas == 3)
 	&& (Kapitel == 2)
 	{
@@ -5907,7 +5920,7 @@ FUNC VOID INIT_Minental ()
 		B_RemoveNpc	(Mod_1235_TPL_Templer_MT);
 	};
 
-	// Tugettso Teleportplattform deaktivieren nach Laden	
+	// Tugettso Teleportplattform deaktivieren nach Laden
 
 	Wld_SendUnTrigger	("STAENDER_VMG_PFX");
 	Wld_SendUnTrigger	("PLATTFORM_VMG_PFX");
@@ -5936,7 +5949,7 @@ FUNC VOID INIT_Minental ()
 		Mod_KG_Glenn = 2;
 
 		Wld_InsertNpc	(Mod_7494_OUT_Glenn_MT, "OW_PATH_1_17");
-	};	
+	};
 
 	if (Mod_NamibDabei == 4)
 	{
@@ -6082,7 +6095,7 @@ FUNC VOID INIT_Minental ()
 	INIT_MinentalNewCamp ();
 	INIT_MinentalFreeMineCamp ();
 	INIT_MinentalDemontower ();
-	
+
 	OldLevel(MINENTAL_ZEN);
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Morgahard_NW_Hi))
@@ -6108,7 +6121,7 @@ FUNC VOID INIT_Minental ()
 
 		Wld_InsertNpc	(Mod_7508_BUD_Sterling_MT, "OC1");
 	};
-	
+
 	if (Mod_Enter_Minental_01 == FALSE)
 	&& (Mod_Schwierigkeit > 0)
 	{
@@ -6425,7 +6438,7 @@ FUNC VOID INIT_Minental ()
 		Wld_SendUnTrigger	("INEXTREMO_MUSIK");
 
 		Mod_Enter_Minental_04 = True;
-		
+
 		if (Npc_KnowsInfo(hero, Info_Mod_Jackal_WoProblem))
 		&& (TabakReceived < 13) {
 			B_SetTopicStatus(TOPIC_MOD_JACKAL_TABAK, LOG_FAILED);
@@ -6442,7 +6455,7 @@ FUNC VOID INIT_Minental ()
 			B_StartOtherRoutine	(Mod_7433_JG_Zelar_MT, "START");
 			B_StartOtherRoutine	(Mod_7431_JG_Baldur_MT, "START");
 		};
-		
+
 
 		Mod_Enter_Minental_05 = True;
 	};
@@ -6455,7 +6468,7 @@ FUNC VOID INIT_Minental ()
 		B_StartOtherRoutine	(Xeres_01,	"FLIEHT");
 
 		Mod_Enter_Minental_06 = True;
-	}; 
+	};
 
 	if (Mod_HoshPakInOC == 1)
 	{
@@ -6527,34 +6540,34 @@ FUNC VOID INIT_Minental ()
 
 		Mod_Kap4_KGOrks = 4;
 	};
-	
+
 	if (!Mod_Removed_Sonor)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Cyrco_Nahkampf)) {
 		Mod_Removed_Sonor = TRUE;
 		B_RemoveNpc(Mod_7432_JG_Sonor_MT);
 	};
-	
+
 	if (Mod_HS_XardasRat > 0)
 	&& (!Mod_RavenGomezInNW) {
 		Mod_RavenGomezInNW = TRUE;
-		
+
 		B_RemoveNpc(Mod_520_DMR_Raven_MT);
 	};
-	
+
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_AlteMineQuest))
 	&& (Mod_AMQ_DRM_Spawned == FALSE)	{
 		Mod_AMQ_DRM_Spawned = TRUE;
-		
+
 		Wld_InsertNpc(Mod_7713_DMR_Daemonenritter_MT, "OC1");
 	};
-	
+
 	var zCListSort liste;
 	var int loopStart;
 	var C_Npc temp;
 	var int npcPtr;
-	
+
 	MEM_INFO("LIST: Check NPC-List");
-	
+
 	MEM_AssignInst(liste, MEM_World.voblist_npcs);
 
 	loopStart = MEM_StackPos.position;
@@ -6582,8 +6595,8 @@ FUNC VOID INIT_Minental ()
 			MEM_StackPos.position = loopStart;
 		};
 	};
-	
-	
+
+
 	// fix condition func of soja plants
 	// TODO: remove for 1.1 release
 	MEM_AssignInst(liste, MEM_World.voblist);
@@ -6595,7 +6608,7 @@ FUNC VOID INIT_Minental ()
 		if (sojaPtr) {
 			var zCVob sojaVob;
 			MEM_AssignInst (sojaVob, sojaPtr);
-			
+
 			if (Hlp_StrCmp(sojaVob._zCObject_objectName, "MOBNAME_SOJA") == TRUE) {
 				MEM_AssignInst (sojaMob, sojaPtr);
 				sojaMob.conditionFunc = "COLLECTSOJA";
@@ -6646,7 +6659,7 @@ FUNC VOID STARTUP_OrcTempel ()
 	Wld_InsertNpc	(Mod_7797_PSINOV_Novize_OT, "TPL_386");
 
 	B_KillNpc	(Mod_7797_PSINOV_Novize_OT);
-	
+
 	stopAllSounds();
 
 	PlayVideo	("Xeres\Intro.bik");
@@ -6656,7 +6669,7 @@ FUNC VOID INIT_OrcTempel ()
 {
 	Spine_OverallSaveSetInt("OrctempelVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Rat_Ende))
 	&& (UrnolWeg == 0)
 	{
@@ -6669,16 +6682,16 @@ FUNC VOID INIT_OrcTempel ()
 
 	if (Mod_Schwierigkeit > 0)
 	&& (Mod_Enter_Orktempel_01 == FALSE)
-	{	
+	{
 		Mod_Enter_Orktempel_01 = TRUE;
 	};
 
 	if (Kapitel >= 4)
 	&& (Mod_Enter_Orktempel_04 == FALSE)
-	{	                                    
+	{
 		Mod_Enter_Orktempel_04 = TRUE;
-	}; 
-	
+	};
+
 };
 
 FUNC VOID STARTUP_AbandonedMine ()
@@ -6686,7 +6699,7 @@ FUNC VOID STARTUP_AbandonedMine ()
 	CurrentLevel3 = ABANDONEDMINE_ZEN;
 
 	NameAllFires();
-	
+
 	Wld_InsertNpc	(Lurker_Höhle,	"FP_ROAM_MONSTER_01");
 	Wld_InsertNpc	(Lurker_Höhle,	"FP_ROAM_MONSTER_02");
 
@@ -6726,14 +6739,14 @@ FUNC VOID STARTUP_AbandonedMine ()
 	Wld_InsertNpc	(Erznager,	"FP_ROAM_MONSTER_44");
 	Wld_InsertNpc	(Erznager,	"FP_ROAM_MONSTER_45");
 	Wld_InsertNpc	(ErznagerQueen,	"FP_ROAM_MONSTER_41");
-			
+
 };
 
 FUNC VOID INIT_AbandonedMine ()
 {
 	Spine_OverallSaveSetInt("AbandonedMineVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	OldLevel(ABANDONEDMINE_ZEN);
 
 	if (Mod_KG_MineSpawn == FALSE)
@@ -6779,7 +6792,7 @@ FUNC VOID STARTUP_OldMine ()
 	B_KillNpc	(Mod_1497_BUD_Aleph_OM);
 	B_KillNpc	(Mod_7801_TPL_GorNaBar_OM);
 	B_KillNpc	(Mod_7802_TPL_Templer_OM);
-	
+
 	Wld_InsertNpc	(Mod_1474_BUD_Buddler_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1475_BUD_Buddler_OM,	"OM_ENTRANCE");
 	Wld_InsertNpc	(Mod_1476_BUD_Buddler_OM,	"OM_ENTRANCE");
@@ -6836,14 +6849,14 @@ FUNC VOID INIT_OldMine ()
 {
 	Spine_OverallSaveSetInt("OldMineVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	OldLevel(OLDMINE_ZEN);
 
 	if (Mod_Schwierigkeit > 0)
 	&& (Mod_Enter_AM_01 == FALSE)
 	{
 		Mod_Enter_AM_01 = TRUE;
-	}; 
+	};
 
 	if (Mod_WM_KurganAlarm == 0)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Vatras_Fertig))
@@ -6915,12 +6928,12 @@ FUNC VOID STARTUP_OrcGraveyard()
 
 	Wld_InsertNpc	(Mod_10033_ORC_UndeadShamane_OGY, "GRYD_020");
 
-	Wld_InsertNpc	(Zombie_OGY_Templer_01, "GRYD_019");	
-	Wld_InsertNpc	(Zombie_OGY_01, "GRYD_019");	
-	Wld_InsertNpc	(Zombie_OGY_02, "GRYD_019");	
+	Wld_InsertNpc	(Zombie_OGY_Templer_01, "GRYD_019");
+	Wld_InsertNpc	(Zombie_OGY_01, "GRYD_019");
+	Wld_InsertNpc	(Zombie_OGY_02, "GRYD_019");
 
 	Wld_InsertNpc	(Zombie_OGY_Templer_01, "GRYD_019");
-	Wld_InsertNpc	(Zombie_OGY_Templer_02, "GRYD_019");	
+	Wld_InsertNpc	(Zombie_OGY_Templer_02, "GRYD_019");
 
 	Wld_InsertNpc	(UndeadOrcWarrior, "GRYD_019");
 	Wld_InsertNpc	(UndeadOrcWarrior, "GRYD_019");
@@ -6929,7 +6942,7 @@ FUNC VOID STARTUP_OrcGraveyard()
 
 	Wld_InsertNpc	(Zombie_OGY_Templer_01, "GRYD_025");
 	Wld_InsertNpc	(Zombie_OGY_Templer_03, "GRYD_025");
-	Wld_InsertNpc	(Zombie_OGY_Templer_04, "GRYD_025");	
+	Wld_InsertNpc	(Zombie_OGY_Templer_04, "GRYD_025");
 
 	Wld_InsertNpc	(UndeadOrcWarrior, "GRYD_025");
 	Wld_InsertNpc	(UndeadOrcWarrior, "GRYD_025");
@@ -6980,14 +6993,14 @@ FUNC VOID INIT_OrcGraveyard ()
 {
 	Spine_OverallSaveSetInt("OrcGraveyardVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	OldLevel(ORCGRAVEYARD_ZEN);
 
 	if (Mod_Schwierigkeit > 0)
 	&& (Mod_Enter_Orkfriedhof_01 == FALSE)
 	{
 		Mod_Enter_Orkfriedhof_01 = TRUE;
-	}; 
+	};
 };
 
 FUNC VOID STARTUP_FreeMine()
@@ -6998,7 +7011,7 @@ FUNC VOID STARTUP_FreeMine()
 
 	// S?ldner und Sch?rfer
 
-     	Wld_InsertNpc	(Mod_1565_SLD_Soeldner_FM,	"FM_RESCUE");	
+     	Wld_InsertNpc	(Mod_1565_SLD_Soeldner_FM,	"FM_RESCUE");
 	Wld_InsertNpc	(Mod_1566_SLD_Soeldner_FM,	"FM_RESCUE");
 	Wld_InsertNpc	(Mod_1567_SLD_Soeldner_FM,	"FM_RESCUE");
 	Wld_InsertNpc	(Mod_1582_SFB_Bert_FM,	"FM_RESCUE");
@@ -7056,7 +7069,7 @@ FUNC VOID INIT_FreeMine()
 {
 	Spine_OverallSaveSetInt("FreeMineVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	OldLevel(FREEMINE_ZEN);
 };
 
@@ -7103,7 +7116,7 @@ FUNC VOID INIT_GdG_World()
 {
 	Spine_OverallSaveSetInt("RitualinselVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	if (Monster_GDG_Spawned == FALSE)
 	{
 		Monster_GDG_Spawned = TRUE;
@@ -7120,7 +7133,7 @@ FUNC VOID INIT_GdG_World()
 		Wld_InsertNpc		(Mod_6003_KDW_Saturas_GDG,		"LGR_EINGANG_01");
 		Wld_InsertNpc		(Mod_6005_PAL_Hagen_GDG,		"LGR_EINGANG_01");
 		Wld_InsertNpc		(Mod_6006_SLD_Lee_GDG,			"LGR_EINGANG_01");
-		Wld_InsertNpc		(Mod_7442_SLD_Torlof_GDG,		"LGR_EINGANG_01");	
+		Wld_InsertNpc		(Mod_7442_SLD_Torlof_GDG,		"LGR_EINGANG_01");
 		Wld_InsertNpc		(Mod_6007_DMB_Andokai_GDG,		"LGR_EINGANG_01");
 		Wld_InsertNpc		(Mod_6008_DMB_Karras_GDG,		"LGR_EINGANG_01");
 		Wld_InsertNpc		(Mod_6010_KDW_Vatras_GDG,		"LGR_EINGANG_01");
@@ -7128,7 +7141,7 @@ FUNC VOID INIT_GdG_World()
 		Wld_InsertNpc		(Mod_6011_KDF_Serpentes_GDG,		"LGR_EINGANG_01");
 	};
 
-	OldLevel(GDG_WORLD_ZEN);	
+	OldLevel(GDG_WORLD_ZEN);
 };
 
 FUNC VOID STARTUP_DieInsel()
@@ -7174,13 +7187,13 @@ FUNC VOID STARTUP_DieInsel()
 	Wld_InsertNpc	(Zombie_Pirat,		"FP_ROAM_DI_HOEHLE_02_ZOMBIE_06");
 	Wld_InsertNpc	(Zombie_Pirat,		"FP_ROAM_DI_HOEHLE_02_ZOMBIE_07");
 	Wld_InsertNpc	(Zombie_Pirat,		"FP_ROAM_DI_HOEHLE_02_ZOMBIE_09");
-	
+
 	Wld_InsertNpc	(Scavenger,		"FP_ROAM_SCAVENGER_14");
 	Wld_InsertNpc	(Scavenger,		"FP_ROAM_SCAVENGER_14");
 	Wld_InsertNpc	(Scavenger,		"FP_ROAM_SCAVENGER_14");
 	Wld_InsertNpc	(Scavenger,		"FP_ROAM_SCAVENGER_14");
 	Wld_InsertNpc	(Scavenger,		"FP_ROAM_SCAVENGER_14");
-		
+
 	Wld_InsertNpc	(Gobbo_Warrior,		"FP_ROAM_SKELET_03");
 	Wld_InsertNpc	(Gobbo_Black,		"FP_ROAM_SKELET_03");
 	Wld_InsertNpc	(Gobbo_Black,		"FP_ROAM_SKELET_03");
@@ -7190,7 +7203,7 @@ FUNC VOID INIT_DieInsel()
 {
 	Spine_OverallSaveSetInt("SchatzinselVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	OldLevel(DIEINSEL_ZEN);
 
 	if (Mod_Schwierigkeit > 0)
@@ -7203,61 +7216,61 @@ FUNC VOID INIT_DieInsel()
 FUNC VOID STARTUP_OrcCity()
 {
 	CurrentLevel3 = ORCCITY_ZEN;
-	
+
 	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_206");
-	
+
 	Wld_InsertNpc(OrcPeasantEatAndDrink, "WP_OCC_209");
-	
+
 	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_217");
-	
+
 	Wld_InsertNpc(OrcShaman_Pray, "WP_OCC_226");
-	
+
 	Wld_InsertNpc(OrcDog, "WP_OCC_202");
-	
+
 	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_56");
 	Wld_InsertNpc(OrcDog, "WP_OCC_56");
-	
+
 	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_163");
-	
+
 	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_171");
 	Wld_InsertNpc(OrcDog, "WP_OCC_171");
-	
+
 	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_147");
-	
+
 	Wld_InsertNpc(OrcPeasantEatAndDrink, "WP_OCC_154");
-	
+
 	Wld_InsertNpc(OrcDog, "WP_OCC_129");
-	
+
 	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_131");
 	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_135");
-	
+
 	Wld_InsertNpc(OrcShaman_Pray, "WP_OCC_105");
-	
+
 	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_110");
 	Wld_InsertNpc(OrcDog, "WP_OCC_110");
-	
+
 	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_113");
 	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_117");
 	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_120");
-	
+
 	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_99");
-	
+
 	Wld_InsertNpc(OrcDog, "WP_OCC_88");
-	
+
 	Wld_InsertNpc(OrcShaman_Sit, "WP_OCC_86");
-	
+
 	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_77");
-	
+
 	Wld_InsertNpc(OrcPeasantEatAndDrink, "WP_OCC_64");
-	
+
 	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_21");
-	
+
 	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_04");
 	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_05");
-	
+
 	Wld_InsertNpc(OrcPeasantEatAndDrink, "WP_OCC_14");
 	Wld_InsertNpc(OrcWarrior_Roam, "WP_OCC_17");
-	
+
 	Wld_InsertNpc(OrcElite_Roam, "WP_OCC_24");
 
 	NameAllFires();
@@ -7267,7 +7280,7 @@ FUNC VOID INIT_OrcCity()
 {
 	Spine_OverallSaveSetInt("OrcCityVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	if (Mod_HoshPakInOC == 0)
 	&& (Npc_KnowsInfo(hero, Info_Mod_Ranad_WasHier))
 	{
@@ -7277,7 +7290,7 @@ FUNC VOID INIT_OrcCity()
 		Wld_InsertNpc	(Mod_10007_Orc_Ranad_OC,	"WP_OCC_35");
 	};
 
-	OldLevel(ORCCITY_ZEN); 
+	OldLevel(ORCCITY_ZEN);
 
 	if (Mod_AlbertTransforms == 1)
 	{
@@ -7311,7 +7324,7 @@ FUNC VOID STARTUP_Xeres_Endlevel()
 
 	Wld_InsertNpc	(PC_Friend_XW, "TOT");
 	Wld_InsertNpc	(Monster_11075_Daemonenfuerst_XW, "TOT");
-	
+
 	Wld_InsertNpc(Demon, "FP_ARENA_VISITOR_01");
 	Wld_InsertNpc(Skeleton_Lord_Ghost, "FP_ARENA_VISITOR_02");
 	Wld_InsertNpc(SkeletonMage, "FP_ARENA_VISITOR_03");
@@ -7334,9 +7347,9 @@ FUNC VOID INIT_Xeres_Endlevel()
 {
 	Spine_OverallSaveSetInt("XeresFortressVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	OldLevel(XERESWELT_ZEN);
-	
+
 	ENTER_EVT_endlevelmonster();
 
 	if (Mod_XW_Kap6 == 1)
@@ -7350,7 +7363,7 @@ FUNC VOID INIT_Xeres_Endlevel()
 
 		Wld_InsertNpc	(Hauertroll_XW_01,	"ARENA_04");
 		Wld_InsertNpc	(Shadowbeast_XW_01,	"ARENA_04");
-		
+
 		Wld_SendTrigger("ARENAGATE_01");
 		Wld_SendTrigger("ARENAGATE_02");
 		Wld_SendTrigger("ARENAGATE_03");
@@ -7519,8 +7532,8 @@ FUNC VOID INIT_DragonIsland()
 {
 	Spine_OverallSaveSetInt("IrdorathVisited", 1);
 	CheckWorldTravelerAchievement();
-	
-	OldLevel(DRAGONISLAND_ZEN); 
+
+	OldLevel(DRAGONISLAND_ZEN);
 
 	// Crew spawnen
 
@@ -7688,7 +7701,7 @@ FUNC VOID INIT_DragonIsland()
 		Wld_InsertItem	(IR_RedLight_07, "FP_ITEM_LIGHT_07");
 		Wld_InsertItem	(IR_RedLight_08, "FP_ITEM_LIGHT_08");
 	};
-	
+
 	if (Npc_KnowsInfo(hero, Info_Mod_Jack_Irdorath2))
 	&& (Mod_JackHW < 3 || Mod_JackAL < 3) {
 		B_SetTopicStatus(TOPIC_MOD_HQ_JACK, LOG_FAILED);
@@ -7778,26 +7791,26 @@ FUNC VOID STARTUP_FEUERMAGIER_SURFACE()
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_SCAV_17");
 
 	Wld_InsertNpc	(Wisp,	"FP_ROAM_IRRLICHT_01");
-	
+
 	Wld_InsertNpc	(Hauertroll, "FP_ROAM_PAT_001");
-	
+
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_002");
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_003");
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_004");
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_005");
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_006");
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_007");
-	
+
 	Wld_InsertNpc	(Demon, "FP_ROAM_PAT_008");
-	
+
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_009");
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_010");
 	Wld_InsertNpc	(Scavenger_Demon, "FP_ROAM_PAT_011");
-	
+
 	Wld_InsertNpc	(Wisp, "FP_ROAM_PAT_014");
-	
+
 	Wld_InsertNpc	(Shadowbeast, "FP_ROAM_PAT_015");
-	
+
 	Wld_InsertNpc	(Riesenkeiler, "FP_ROAM_PAT_016");
 	Wld_InsertNpc	(Riesenkeiler, "FP_ROAM_PAT_017");
 	Wld_InsertNpc	(Riesenkeiler, "FP_ROAM_PAT_018");
@@ -7916,7 +7929,7 @@ FUNC VOID STARTUP_FEUERMAGIER_TEMPEL()
 	Wld_InsertNpc	(Sheep,	"FP_PAT_ROAM_SHEEP_07");
 	Wld_InsertNpc	(Hammel, "FP_PAT_ROAM_SHEEP_08");
 	Wld_InsertNpc	(Hammel, "FP_PAT_ROAM_SHEEP_09");
-	
+
 };
 
 FUNC VOID INIT_FEUERMAGIER_TEMPEL()
@@ -7964,7 +7977,7 @@ FUNC VOID INIT_FEUERMAGIER_UNTERGRUND()
 	&& (Npc_KnowsInfo(hero, Info_Mod_Velario_Fake))
 	{
 		Wld_InsertNpc	(Mod_1916_KDF_Magier_PAT_UG, "WP_PAT_UNTERGRUND_06");
-		
+
 		Mod_SchwarzerVerraeterInsert = TRUE;
 	};
 
@@ -7997,7 +8010,7 @@ FUNC VOID INIT_PATHERION()
 {
 	Spine_OverallSaveSetInt("PatherionVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	INIT_FEUERMAGIER_SURFACE();
 	INIT_FEUERMAGIER_TEMPEL();
 
@@ -8006,7 +8019,7 @@ FUNC VOID INIT_PATHERION()
 	{
 		Wld_InsertNpc	(Troll_s_Pat,	"FP_TROLL_BAD");
 		Wld_InsertNpc	(Mod_1771_KDF_Aaron_PAT,	"WP_PAT_WEG_60");
-		
+
 		Mod_SchwarzerVerraeterInsert_02 = TRUE;
 	};
 
@@ -8036,7 +8049,7 @@ FUNC VOID INIT_PATHERION()
 		Wld_SendTrigger	("EVT_PAT_BARRIERE");
 
 		Mod_Enter_PAT_First = TRUE;
-	}; 
+	};
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Talamon_Patherion))
 	&& (Mod_Enter_PAT_Second == FALSE)
@@ -8175,8 +8188,8 @@ FUNC VOID INIT_Bergwelt()
 {
 	Spine_OverallSaveSetInt("BergweltVisited", 1);
 	CheckWorldTravelerAchievement();
-	
-	OldLevel(BERGWELT_ZEN); 
+
+	OldLevel(BERGWELT_ZEN);
 };
 
 FUNC VOID STARTUP_Tugettso()
@@ -8235,14 +8248,14 @@ FUNC VOID STARTUP_Tugettso()
 	Wld_InsertNpc	(Gobbo_Tugettso01,	"FP_ROAM_35");
 	Wld_InsertNpc	(Gobbo_Tugettso03,	"FP_ROAM_36");
 	Wld_InsertNpc	(Gobbo_Tugettso01,	"FP_ROAM_37");
-	
+
 };
 
 FUNC VOID INIT_Tugettso()
 {
 	Spine_OverallSaveSetInt("TugettsoVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	if (Npc_KnowsInfo(hero, Info_Mod_Thorge_KommMit))
 	&& (Mod_Thorge_Dabei == FALSE)
 	{
@@ -8278,7 +8291,7 @@ FUNC VOID INIT_Tugettso()
 
 	Npc_RemoveInvItems	(hero, ItMi_TugettsoStein, 1);
 
-	OldLevel(TUGETTSO_ZEN); 
+	OldLevel(TUGETTSO_ZEN);
 };
 
 FUNC VOID STARTUP_Eisgebiet()
@@ -8360,7 +8373,7 @@ FUNC VOID INIT_Eisgebiet()
 {
 	Spine_OverallSaveSetInt("GelatoVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	//---Laternen---
 	Wld_SetMobRoutine (00,00, "FIREPLACE", 1);
 	Wld_SetMobRoutine (20,00, "FIREPLACE", 1);
@@ -8399,7 +8412,7 @@ FUNC VOID INIT_Eisgebiet()
 	Wld_SetMobRoutine(19, 30, "LIGHTSPAWNERTEN", 0);
 	Wld_SetMobRoutine(19, 30, "LIGHTSPAWNERELEVEN", 1);
 	Wld_SetMobRoutine(20, 10, "LIGHTSPAWNERELEVEN", 0);
-	
+
 	Wld_AssignRoomToGuild ("haus",	GIL_PUBLIC);
 	Wld_AssignRoomToGuild ("haus2",	GIL_PUBLIC);
 	Wld_AssignRoomToGuild ("haus3",	GIL_PUBLIC);
@@ -8437,7 +8450,7 @@ FUNC VOID INIT_FliegendeInsel()
 {
 	Spine_OverallSaveSetInt("FlyingIsleVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	OldLevel(FLIEGENDEINSEL_ZEN);
 };
 
@@ -8572,7 +8585,7 @@ FUNC VOID STARTUP_Relendel()
 	Wld_InsertNpc	(Mod_7597_HS_Hofstaatler_REL,	"REL_001");
 	Wld_InsertNpc	(Mod_7598_HS_Hofstaatler_REL,	"REL_001");
 	Wld_InsertNpc	(Mod_7599_HS_Hofstaatler_REL,	"REL_001");
-	
+
 	Wld_InsertNpc	(Mod_7013_HS_Fluffy_REL,	"REL_252");
 
 	Wld_InsertNpc	(Scavenger,	"FP_ROAM_HOFSTAAT_035");
@@ -8728,7 +8741,7 @@ FUNC VOID STARTUP_Relendel()
 	Wld_InsertNpc	(Skeleton_Lord_Ghost,	"FP_GHOST_06");
 	Wld_InsertNpc	(Skeleton_Lord_Ghost,	"FP_GHOST_07");
 	Wld_InsertNpc	(Skeleton_Lord_Ghost,	"FP_GHOST_08");
-	
+
 	Wld_InsertNpc	(SwampGolem,	"REL_MOOR_119");
 
 	// Rechts vom Pass bis zum Durchgang zum Moor
@@ -8788,7 +8801,7 @@ FUNC VOID STARTUP_Relendel()
 
 	Wld_InsertNpc	(Waran,	"FP_ROAM_PASS_TO_MOOR_032");
 	Wld_InsertNpc	(Waran,	"FP_ROAM_PASS_TO_MOOR_032");
-	
+
 	ENTER_EVT_RELENDEL_SURVACE_MONSTER();
 };
 
@@ -8796,7 +8809,7 @@ FUNC VOID INIT_Relendel()
 {
 	Spine_OverallSaveSetInt("RelendelVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	// Laternen in der Stadt
 
 	Wld_SetMobRoutine (00,00,"FIREPLACE",1);
@@ -9069,12 +9082,12 @@ FUNC VOID INIT_Relendel()
 		B_RemoveNpc	(Mod_7241_OUT_Anselm_REL);
 
 		Mod_Enter_Relendel_03 = TRUE;
-		
+
 		if (Mod_Kneipe_Ditmar >= 1)
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Anselm_DickeLuft2)) {
 			B_SetTopicStatus(TOPIC_MOD_DITMAR_DICKELUFT, LOG_FAILED);
 		};
-		
+
 		if (Mod_REL_Hasenfuss >= 1)
 		&& (!Npc_KnowsInfo(hero, Info_Mod_Dalton_Hasenfuss)) {
 			B_SetTopicStatus(TOPIC_MOD_KHORATA_HASENFUSS, LOG_FAILED);
@@ -9116,14 +9129,14 @@ FUNC VOID STARTUP_Jaegerlager()
 	Wld_InsertNpc	(Mod_7524_JG_Elsbeth_JL,	"JL_01");
 	Wld_InsertNpc	(Mod_7555_JG_Klinger_JL,	"JL_01");
 	Wld_InsertNpc	(Mod_7653_JG_Gandal_JL,		"JL_01");
-	
+
 };
 
 FUNC VOID INIT_Jaegerlager()
 {
 	Spine_OverallSaveSetInt("HunterCampVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	Wld_SetMobRoutine (00,00,"FIREPLACE",1);
 	Wld_SetMobRoutine (20,00,"FIREPLACE",1);
 	Wld_SetMobRoutine (06,00,"FIREPLACE",0);
@@ -9162,14 +9175,14 @@ FUNC VOID STARTUP_Wolkenwelt()
 	Wld_InsertNpc	(Sheep, "WW_03");
 	Wld_InsertNpc	(Sheep, "WW_03");
 	Wld_InsertNpc	(Hammel_WW, "WW_03");
-	
+
 };
 
 FUNC VOID INIT_Wolkenwelt()
 {
 	Spine_OverallSaveSetInt("CloudWorldVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	OldLevel(WOLKENWELT_ZEN);
 };
 
@@ -9199,14 +9212,14 @@ FUNC VOID STARTUP_Halluzination()
 	Wld_InsertNpc	(Monster_11035_Wesen_HALU, "PSI_START");
 	Wld_InsertNpc	(Monster_11036_Wesen_HALU, "PSI_START");
 	Wld_InsertNpc	(Monster_11037_Wesen_HALU, "PSI_START");
-	
+
 };
 
 FUNC VOID INIT_Halluzination()
 {
 	Spine_OverallSaveSetInt("HalluzinationVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	OldLevel(HALLUZINATION_ZEN);
 };
 
@@ -9238,18 +9251,18 @@ FUNC VOID STARTUP_Wald_Schlucht()
 
 	// Drachensnapper & Razor zwischendrin
 
-	Wld_InsertNpc	(Razor,	"FP_ROAM_MONSTER_01");	
-	Wld_InsertNpc	(Dragonsnapper,	"FP_ROAM_MONSTER_02");	
-	Wld_InsertNpc	(Razor,	"FP_ROAM_MONSTER_03");	
-	Wld_InsertNpc	(Dragonsnapper,	"FP_ROAM_MONSTER_04");	
-	Wld_InsertNpc	(Razor,	"FP_ROAM_MONSTER_05");	
+	Wld_InsertNpc	(Razor,	"FP_ROAM_MONSTER_01");
+	Wld_InsertNpc	(Dragonsnapper,	"FP_ROAM_MONSTER_02");
+	Wld_InsertNpc	(Razor,	"FP_ROAM_MONSTER_03");
+	Wld_InsertNpc	(Dragonsnapper,	"FP_ROAM_MONSTER_04");
+	Wld_InsertNpc	(Razor,	"FP_ROAM_MONSTER_05");
 };
 
 FUNC VOID INIT_Wald_Schlucht()
 {
 	Spine_OverallSaveSetInt("WaldschluchtVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	OldLevel(WALDSCHLUCHT_ZEN);
 };
 
@@ -9279,14 +9292,14 @@ FUNC VOID STARTUP_Drachental()
 	// Khorgor
 
 	Wld_InsertNpc	(Mod_7554_OUT_Khorgor_DT, "DT_001");
-	
+
 };
 
 FUNC VOID INIT_Drachental()
 {
 	Spine_OverallSaveSetInt("DrachentalVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	OldLevel(DRACHENTAL_ZEN);
 
 	if (Npc_KnowsInfo(hero, Info_Mod_Drache_Drachendurst04))
@@ -9327,16 +9340,16 @@ FUNC VOID STARTUP_Relendel_Mine()
 	Wld_InsertNpc	(Mod_7488_OUT_Schuerfer_REL, "RM_01");
 	Wld_InsertNpc	(Mod_7489_OUT_Wache_REL, "RM_01");
 	Wld_InsertNpc	(Mod_7490_OUT_Wache_REL, "RM_01");
-	
+
 };
 
 FUNC VOID INIT_Relendel_Mine()
 {
 	Spine_OverallSaveSetInt("RelendelMineVisited", 1);
 	CheckWorldTravelerAchievement();
-	
+
 	OldLevel(RELENDELMINE_ZEN);
-	
+
 	if (Mod_Enter_Relendel_03) {
 		B_StartOtherRoutine(Mod_7477_OUT_Norman_REL, "TOT");
 		B_StartOtherRoutine(Mod_7479_OUT_Frazer_REL, "TOT");
