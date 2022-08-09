@@ -52,6 +52,7 @@ FUNC INT Info_Mod_Wolf_MinecrawlerRuestung_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_Hi))
 	&& (Npc_HasItems(hero, ItAt_CrawlerPlate) >= 3)
+	&& (Kapitel >= 3)
 	{
 		return 1;
 	};
@@ -153,7 +154,7 @@ INSTANCE Info_Mod_Wolf_MinecrawlerRuestung4 (C_INFO)
 FUNC INT Info_Mod_Wolf_MinecrawlerRuestung4_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Wolf_MinecrawlerRuestung3))
-	&& (Wld_GetDay()-2 > Mod_Wolf_MinecrawlerRuestung_Day)
+	&& (Wld_GetDay() - 2 > Mod_Wolf_MinecrawlerRuestung_Day)
 	&& (Kapitel >= 2)
 	{
 		return 1;
@@ -171,7 +172,7 @@ FUNC VOID Info_Mod_Wolf_MinecrawlerRuestung4_Info()
 	AI_Output(self, hero, "Info_Mod_Wolf_MinecrawlerRuestung4_31_01"); //Viel Spaß damit.
 
 	B_GivePlayerXP	(200);
-	
+
 	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_30);
 };
 
@@ -367,7 +368,7 @@ FUNC VOID Info_Mod_Wolf_Lernen_BACK()
 FUNC VOID Info_Mod_Wolf_Lernen_Geschick_5()
 {
 	B_TeachAttributePoints_New (self, hero, ATR_DEXTERITY, 5, 140);
-	
+
 	Info_ClearChoices	(Info_Mod_Wolf_Lernen);
 
 	Info_AddChoice 		(Info_Mod_Wolf_Lernen, DIALOG_BACK, Info_Mod_Wolf_Lernen_BACK);
@@ -378,7 +379,7 @@ FUNC VOID Info_Mod_Wolf_Lernen_Geschick_5()
 FUNC VOID Info_Mod_Wolf_Lernen_Geschick_1()
 {
 	B_TeachAttributePoints (self, hero, ATR_DEXTERITY, 1, 140);
-	
+
 	Info_ClearChoices	(Info_Mod_Wolf_Lernen);
 
 	Info_AddChoice 		(Info_Mod_Wolf_Lernen, DIALOG_BACK, Info_Mod_Wolf_Lernen_BACK);
@@ -415,7 +416,7 @@ FUNC VOID Info_Mod_Wolf_Lernen_Bogen_Info()
 	AI_Output(hero, self, "Info_Mod_Wolf_Lernen_Bogen_15_00"); //Bring mir Bogenschießen bei.
 
 	Info_ClearChoices	(Info_Mod_Wolf_Lernen_Bogen);
-	
+
 	Info_AddChoice	(Info_Mod_Wolf_Lernen_Bogen, "Zurück.", Info_Mod_Wolf_Lernen_Bogen_BACK);
 	Info_AddChoice	(Info_Mod_Wolf_Lernen_Bogen, B_BuildLearnString(PRINT_LearnBow5, B_GetLearnCostTalent_New(hero, NPC_TALENT_BOW)), Info_Mod_Wolf_Lernen_Bogen_5);
 	Info_AddChoice	(Info_Mod_Wolf_Lernen_Bogen, B_BuildLearnString(PRINT_LearnBow1, B_GetLearnCostTalent(hero, NPC_TALENT_BOW, 1)), Info_Mod_Wolf_Lernen_Bogen_1);
