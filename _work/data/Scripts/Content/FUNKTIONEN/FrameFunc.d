@@ -5,28 +5,28 @@ FUNC VOID ChangeStatusMenu (var string field, var string text)
 	//Ein Menüitem holen:
 	var zCMenuItem itm;
 	var int itmPtr; itmPtr = MEM_GetMenuItemByString (field);
-	
+
 	if (itmPtr)
 	{
 		//Menüitem gefunden.
 		MEM_AssignInst (itm, itmPtr);
-		
+
 		if (itm.m_pInnerWindow)
 		{
 			//Das Menüitem hat gerade ein InnerWindow (zeigt etwas an)
 			var zCView innerView;
 			MEM_AssignInst (innerView, itm.m_pInnerWindow);
-			
+
 			if (innerView.textLines_next)
 			{
 				//Das Innerwindow hat (mindestens) eine Zeile, nehme die erste.
 				var zCList listele;
 				MEM_AssignInst (listele, innerView.textLines_next);
-				
+
 				var zCViewText firstLine;
 				MEM_AssignInst (firstLine, listele.data);
-				
-				//Statt "gildenlos" steht in jedem Frame ein anderer Zufallsstring dort.	
+
+				//Statt "gildenlos" steht in jedem Frame ein anderer Zufallsstring dort.
 				firstLine.text = text;
 			}
 			else
@@ -312,7 +312,7 @@ FUNC VOID FRAMEFUNC ()
 			Mod_Prisma_Array[0] = 0;
 			Mod_Prisma_Array[1] = 0;
 			Mod_Prisma_Array[2] = 0;
-			
+
 			View_SetTexture(Mod_View_Prisma, "PRISMA_0.TGA");
 		};
 	};
@@ -418,7 +418,7 @@ FUNC VOID FRAMEFUNC ()
 
 		Wld_PlayEffect ("SPELLFX_PRISMA", ItMi_Magieprisma_Fake, ItMi_Magieprisma_Fake, 0, 0, 0, FALSE);
 	};
-	
+
 	if (Mod_Argez_Puzzle == 1) {
 		Puzzle_Tick();
 	};
@@ -430,13 +430,13 @@ FUNC VOID FRAMEFUNC ()
 	{
 		var oCNpc her;
 		her = Hlp_GetNpc (hero);
-		
+
 		if (her.focus_vob)
 		{
 			lastFocusItem = her.focus_vob;
 			var oCItem her_focusItem2;
 			MEM_AssignInst (her_focusItem2, her.focus_vob);
-			
+
 			if (Hlp_IsValidItem (her_focusItem2))
 			{
 				if (Npc_GetDistToItem (hero, her_focusItem2) < 200)
@@ -444,10 +444,10 @@ FUNC VOID FRAMEFUNC ()
 				{
 					CreateInvItems (hero, her_focusItem2.instanz, her_focusItem2.amount); //amount beachten
 					Wld_RemoveItem (her_focusItem2);
-					
+
 					var string str;	str = ConcatStrings (her_focusItem2.name, " aufgehoben!");
 					PrintScreen (str, -1, -1, FONT_SCREENSMALL, 3);
-					
+
 					lastDivePickupTime = TimeCounter_Real;
 				};
 			};
@@ -466,6 +466,6 @@ FUNC VOID FRAMEFUNC ()
 	// Triggerscript holen:
 	var int ptr; ptr = MEM_SearchVobByName ("FRAMETRIGGER");
 	MEM_AssignInst (Mein_Schleifen_Trigger, ptr);
-	
+
 	Mein_Schleifen_Trigger._zCVob_nextOnTimer = MEM_Timer.totalTimeFloat; //wäre eigentlich jetzt schon wieder dran, wird aber erst im nächsten Frame bemerkt
 };

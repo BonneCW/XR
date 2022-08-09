@@ -353,7 +353,7 @@ FUNC VOID Info_Mod_Albi_FokusEinsetzen_Info()
 	Log_CreateTopic	(TOPIC_MOD_ECHSEN_VERTRAUEN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_ECHSEN_VERTRAUEN, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_ECHSEN_VERTRAUEN, "Um in die obere Stadt der Echsen zu kommen, muss ich deren Vertrauen gewinnen. Morgen werden mir die Echsen, die eine Aufgabe für mich haben, einen Zettel geben. Habe ich genug Aufträge erfüllt, wird Albi mich erwarten.");
-	
+
 	if (Npc_HasItems(hero, ItMi_Focus_Kloster) == 0) {
 		B_LogEntry	(TOPIC_MOD_ECHSEN_VERTRAUEN, "Ich sollte nicht vergessen meine Sachen aus der Truhe zu holen. Besonders den Fokusstein brauche ich...");
 	};
@@ -941,7 +941,7 @@ FUNC VOID Info_Mod_Albi_Geheimnis5_Info()
 
 	B_LogEntry	(TOPIC_MOD_ECHSIS_EIERSUCHE, "Das Problem mit den Golems ist beseitigt und ich bin jetzt ein Kriegsführer der Echsen. Ich kann jetzt jederzeit auf die Jagd nach Golems gehen, wenn mir danach ist.");
 	B_SetTopicStatus	(TOPIC_MOD_ECHSIS_EIERSUCHE, LOG_SUCCESS);
-	
+
 	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_18);
 
 	B_GivePlayerXP	(2500);
