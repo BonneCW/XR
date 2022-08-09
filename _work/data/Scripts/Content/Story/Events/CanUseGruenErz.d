@@ -37,3 +37,13 @@ FUNC INT CANUSEGRUENERZ()
 		return FALSE;
 	};
 };
+
+FUNC INT CANUSEANDRESCHEST() {
+	if (Npc_KnowsInfo(hero, Info_Mod_Ramirez_Flucht)) {
+		return TRUE;
+	};
+
+	PrintScreen	("Kann ich jetzt noch nichts mit anfangen!", -1, -1, FONT_SCREEN, 2);
+
+	return FALSE;
+};

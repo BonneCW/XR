@@ -33,6 +33,8 @@ Fixes:
 - fixed picking gold in gold mine removing pick axes
 - fixed Wolf's crawler plate quest being available too early
 - added hack to fix level change to valley of mines in case it didn't work properly after Hagen dialog
+- fixed wrong long entry after rescuing Ramirez and Attila
+- fixed Andre's chest being lootable before it should be possible
 
 
 1.0.9

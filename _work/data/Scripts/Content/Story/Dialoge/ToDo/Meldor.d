@@ -78,7 +78,7 @@ FUNC VOID Info_Mod_Meldor_Hilfe_Ja()
 	Info_ClearChoices	(Info_Mod_Meldor_Hilfe);
 
 	AI_StopProcessInfos	(self);
-	
+
 	B_StartOtherRoutine(self, "MILIZ");
 	B_StartOtherRoutine(Mod_543_MIL_Picasso_NW, "MILIZ");
 };
@@ -93,7 +93,7 @@ FUNC VOID Info_Mod_Meldor_Hilfe_Nein()
 	Info_ClearChoices	(Info_Mod_Meldor_Hilfe);
 
 	AI_StopProcessInfos	(self);
-	
+
 	B_StartOtherRoutine(self, "MILIZ");
 	B_StartOtherRoutine(Mod_543_MIL_Picasso_NW, "MILIZ");
 };
@@ -180,7 +180,7 @@ FUNC VOID Info_Mod_Meldor_Mortis_Info()
 	AI_Output(self, hero, "Info_Mod_Meldor_Mortis_07_08"); //Ich hab momentan keine mehr, versuch irgendwo eins aufzutreiben.
 	AI_Output(hero, self, "Info_Mod_Meldor_Mortis_15_11"); //Ich werd mein Bestes geben.
 
-	B_LogEntry	(TOPIC_MOD_DIEB_ANDRE_MELDOR, "Ich habe Meldor gewarnt. Er will, dass ich Mortis ein Kraut - Paket unterjuble. Am besten lege ich es in seiner Truhe in der Milizschmiede ab.");
+	B_LogEntry	(TOPIC_MOD_DIEB_ANDRE_MELDOR, "Ich habe Meldor gewarnt. Er will, dass ich Mortis ein Kraut-Paket unterjuble. Am besten lege ich es in seiner Truhe in der Milizschmiede ab.");
 };
 
 INSTANCE Info_Mod_Meldor_WacholderDieb (C_INFO)

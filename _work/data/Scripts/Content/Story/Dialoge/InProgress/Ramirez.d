@@ -224,9 +224,10 @@ FUNC VOID Info_Mod_Ramirez_WelcomeBack_Info()
 	AI_Output(hero, self, "Info_Mod_Ramirez_WelcomeBack_15_01"); //Und was soll ich ihm erzählen?
 	AI_Output(self, hero, "Info_Mod_Ramirez_WelcomeBack_03_02"); //Denk dir was aus.
 
-	Npc_RemoveInvItems	(hero, ItMi_Gold, 5000);
+	B_GiveInvItems(hero, self, ItMi_Gold, 5000);
+	Npc_RemoveInvItems	(self, ItMi_Gold, 5000);
 
-	B_LogEntry	(TOPIC_MOD_DIEB_ATTILA, "Ramirez und Attila sind frei. Ich soll aber noch Lord Andres Truhe plündern.");
+	B_LogEntry	(TOPIC_MOD_DIEB_ATTILA, "Ich soll nochmal zu Lord Andre gehen und meinen Dienst quittieren.");
 
 	AI_StopProcessInfos	(self);
 
