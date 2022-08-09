@@ -30,6 +30,7 @@ Enhancements:
 Fixes:
 
 - fixed 'Reinigung der Böden' being able to enter invalid state when using Albi for the last focus
+- fixed picking gold in gold mine removing pick axes
 
 
 1.0.9
