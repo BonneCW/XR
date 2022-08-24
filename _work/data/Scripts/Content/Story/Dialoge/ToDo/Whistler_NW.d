@@ -208,6 +208,7 @@ FUNC VOID Info_Mod_Whistler_NW_NachtImPuff_Info()
 
 	B_LogEntry	(TOPIC_MOD_AL_LAGERHAUS, "Ich habe Whistler gesagt, dass Bromor aufgibt.");
 	B_SetTopicStatus	(TOPIC_MOD_AL_LAGERHAUS, LOG_SUCCESS);
+	B_SetTopicStatus	(TOPIC_MOD_AL_AUSBREITUNGK, LOG_SUCCESS);
 
 	B_Göttergefallen(2, 1);
 
