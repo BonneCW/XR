@@ -89,7 +89,7 @@ FUNC VOID Info_Mod_Esteban_NW_MorgahardDarfWieder_Info()
 	AI_Output(hero, self, "Info_Mod_Esteban_NW_MorgahardDarfWieder_15_00"); //Morgahard kann wieder in die Stadt.
 	AI_Output(self, hero, "Info_Mod_Esteban_NW_MorgahardDarfWieder_07_01"); //Gut, ich gehe wieder zurück ins Minental, wende dich ab jetzt an Morgahard.
 
-	B_LogEntry_More	(TOPIC_MOD_AL_MORGAHARD, TOPIC_MOD_AL_AUSBREITUNGK, "Esteban wird zurück ins Minental gehen. Ich soll mich jetzt an Morgahard halten.", "Morgahard darf wieder in die Stadt und ist nun meine Kontaktperson");
+	B_LogEntry_More	(TOPIC_MOD_AL_MORGAHARD, TOPIC_MOD_AL_AUSBREITUNGK, "Esteban wird zurück ins Minental gehen. Ich soll mich jetzt an Morgahard halten.", "Morgahard darf wieder in die Stadt und ist nun meine Kontaktperson.");
 	B_SetTopicStatus	(TOPIC_MOD_AL_MORGAHARD, LOG_SUCCESS);
 
 	B_GivePlayerXP	(500);

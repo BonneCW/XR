@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Morgahard_NW_Hi (C_INFO)
 	information	= Info_Mod_Morgahard_NW_Hi_Info;
 	permanent	= 0;
 	important	= 0;
-	description	= "Könntest du uns etwas organisieren?";
+	description	= "Konntest du uns etwas organisieren?";
 };
 
 FUNC INT Info_Mod_Morgahard_NW_Hi_Condition()
@@ -19,7 +19,7 @@ FUNC INT Info_Mod_Morgahard_NW_Hi_Condition()
 
 FUNC VOID Info_Mod_Morgahard_NW_Hi_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Morgahard_NW_Hi_15_00"); //Könntest du uns etwas organisieren?
+	AI_Output(hero, self, "Info_Mod_Morgahard_NW_Hi_15_00"); //Konntest du uns etwas organisieren?
 	AI_Output(self, hero, "Info_Mod_Morgahard_NW_Hi_31_01"); //Ja, ich habe uns ein Lagerhaus im Hafen besorgt. Komm, ich kann es dir zeigen.
 
 	B_StartOtherRoutine	(self, "GUIDETOLAGERHAUS");
