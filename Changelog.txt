@@ -35,6 +35,7 @@ Fixes:
 - added hack to fix level change to valley of mines in case it didn't work properly after Hagen dialog
 - fixed wrong long entry after rescuing Ramirez and Attila
 - fixed Andre's chest being lootable before it should be possible
+- fixed readability of Urs' first log entry
 
 
 1.0.9
