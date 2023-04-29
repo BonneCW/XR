@@ -87,7 +87,7 @@ func void PC_Sleep (var int t)
 
 	if (Mod_EchsenQuest == 2)
 	&& (CurrentLevel == ADDONWORLD_ZEN)
-	&& (FocusBlockade == FALSE)
+	&& (FokusBlockade == FALSE)
 	{
 		Wld_SendTrigger	("ADW_ADANOSTEMPEL_FOCUSTRIGGERLIST");
 
