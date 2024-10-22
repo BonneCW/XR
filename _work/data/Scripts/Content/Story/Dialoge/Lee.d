@@ -616,7 +616,7 @@ FUNC VOID Info_Mod_Lee_Orkfriedhof_Info()
 		B_LogEntry_More	(TOPIC_MOD_SLD_ORKJAEGER, TOPIC_MOD_SLD_FRIEDHOF, "Wenn ich Sylvio zum Wettstreit herausfordere und gewinnen, kann ich seine Position übernehmen und auf diesem Weg doch noch Orkjäger werden. Danach wird mir Lee erklären, was ich zu tun habe.", "Orkfriedhof?! Untote Orks?! Da muss der Schamane sein ... Ich erhalte jedoch erst Einlass in den Friedhof, wenn ich Orkjäger bin.");
 	};
 
-	AI_Output(self, hero, "Info_Mod_Lee_Orkfriedhof_04_15"); //Hier hab ich noch ein paar Teleport-Spruchrollen für dich. Haben dir Gurus vor einiger Zeit angefertigt ...
+	AI_Output(self, hero, "Info_Mod_Lee_Orkfriedhof_04_15"); //Hier hab ich noch ein paar Teleport-Spruchrollen für dich. Haben die Gurus vor einiger Zeit angefertigt ...
 
 	B_GiveInvItems	(self, hero, ItSc_TeleportOrkfriedhof, 3);
 };
