@@ -242,7 +242,7 @@ FUNC VOID Info_Mod_Thofeistos_DJGArmor_Info()
 	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_03"); //Mein ganzes Leben habe ich der Schmiedekunst verschrieben, formte Waffen, welche sonst keiner zu schmieden vermochte und erschuf Legierungen, deren Geheimnisse nur mir bekannt sind.
 	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_04"); //Ich habe Wissen, das aus uralten Quellen überliefert wurde und kann mich mit den besten Schmelzern und Schmieden Nordmars messen.
 	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_05"); //Doch du bist der Erste, der mir würdig erscheint, die tieferen Weihen der Erzverarbeitung zu erfahren.
-	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_06"); //Ja, auch wenn ich die meiste Zeit am Schmiedeoffen stehe, so erfahre ich doch einiges ...
+	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_06"); //Ja, auch wenn ich die meiste Zeit am Schmiedeofen stehe, so erfahre ich doch einiges ...
 	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_07"); //Mein ganzes Wissen um die Erzverarbeitung steht dir nun offen.
 	AI_Output(self, hero, "Info_Mod_Thofeistos_DJGArmor_29_08"); //Triff deine Wahl, aber sei dir auch bewusst, dass es viel Erfahrung erfordert, die Kunst in jeder der Disziplinen zu vervollkommnen.
 
