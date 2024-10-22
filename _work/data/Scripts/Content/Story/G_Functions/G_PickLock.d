@@ -1,4 +1,4 @@
-// ************* 
+// *************
 // G_PickLock
 // ----------
 // self = Player // stimmt nicht!!! immer hero benutzen
@@ -16,7 +16,7 @@ func void G_PickLock (var int bSuccess, var int bBrokenOpen)
 		else
 		{
 			Snd_Play3D 	(self, "PICKLOCK_UNLOCK");
-			Print (PRINT_PICKLOCK_UNLOCK);	
+			Print (PRINT_PICKLOCK_UNLOCK);
 		};
 	}
 	else
@@ -40,7 +40,7 @@ func void G_PickLock (var int bSuccess, var int bBrokenOpen)
 					AI_UseMob	(hero, "CHESTBIG", -1);
 					AI_UseMob	(hero, "DOOR", -1);
 				};
-			
+
 				var int rnd; rnd = r_max(99);
 				if (rnd < 50)
 				{
@@ -54,10 +54,6 @@ func void G_PickLock (var int bSuccess, var int bBrokenOpen)
 
 				B_Say	(hero, NULL, "$PICKLOCKFAILURE");
 			};
-		}
-		else
-		{
-			Print	("Sollte hier nie ankommen!!!");
 		};
 	};
 };
