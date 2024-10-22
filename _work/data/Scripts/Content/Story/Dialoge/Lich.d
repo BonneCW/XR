@@ -13,6 +13,16 @@ FUNC INT Info_Mod_Lich_Hi_Condition()
 	return 1;
 };
 
+FUNC VOID Lich_PalasAttackHero() {
+	Wld_InsertNpc	(Kobold, "NW_TROLLAREA_TROLLROCKCAVE_06");
+	Wld_InsertNpc	(Kobold, "NW_TROLLAREA_TROLLROCKCAVE_06");
+	Wld_InsertNpc	(Kobold, "NW_TROLLAREA_TROLLROCKCAVE_06");
+
+	B_Attack (Mod_7290_PAL_Athos_NW, hero, AR_Kill, 2);
+	B_Attack (Mod_7291_PAL_Aramis_NW, hero, AR_Kill, 2);
+	B_Attack (Mod_7292_PAL_Porthos_NW, hero, AR_Kill, 2);
+};
+
 FUNC VOID Info_Mod_Lich_Hi_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Lich_Hi_10_00"); //Hahaha, ein weiterer Besucher, der meiner Gefolgschaft aus Untoten beitreten kann.
@@ -34,9 +44,7 @@ FUNC VOID Info_Mod_Lich_Hi_Info()
 
 	Npc_SendPassivePerc	(hero, PERC_ASSESSPLAYER, hero, hero);
 
-	Wld_InsertNpc	(Kobold, "NW_TROLLAREA_TROLLROCKCAVE_06");
-	Wld_InsertNpc	(Kobold, "NW_TROLLAREA_TROLLROCKCAVE_06");
-	Wld_InsertNpc	(Kobold, "NW_TROLLAREA_TROLLROCKCAVE_06");
+	AI_Function(self, Lich_PalasAttackHero);
 };
 
 INSTANCE Info_Mod_Lich_PalasTot (C_INFO)

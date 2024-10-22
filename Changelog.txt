@@ -36,7 +36,8 @@ Fixes:
 - fixed wrong long entry after rescuing Ramirez and Attila
 - fixed Andre's chest being lootable before it should be possible
 - fixed readability of Urs' first log entry
-- fixed dialogue issues
+- fixed dialog issues
+- fixed undead paladins at Lich not attacking player on their own
 
 
 1.0.9
