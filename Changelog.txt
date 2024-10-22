@@ -36,6 +36,7 @@ Fixes:
 - fixed wrong long entry after rescuing Ramirez and Attila
 - fixed Andre's chest being lootable before it should be possible
 - fixed readability of Urs' first log entry
+- fixed dialogue issues
 
 
 1.0.9

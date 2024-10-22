@@ -1631,7 +1631,7 @@ FUNC VOID Info_Mod_Xardas_MT_Siegelbuch_03_Info()
 	AI_Output(hero, self, "Info_Mod_Xardas_MT_Siegelbuch_03_15_00"); //Hast du mittlerweile etwas herausgefunden?
 	AI_Output(self, hero, "Info_Mod_Xardas_MT_Siegelbuch_03_14_01"); //Ja, das habe ich, auch, wenn es nicht leicht war. Es scheint sich zu bestätigen, was ich bereits vermutet hatte.
 	AI_Output(self, hero, "Info_Mod_Xardas_MT_Siegelbuch_03_14_02"); //Der versiegelte Wälzer muss die magische Energie des Chromaninbuches absorbiert haben.
-	AI_Output(self, hero, "Info_Mod_Xardas_MT_Siegelbuch_03_14_03"); //Vermutlich hat der untote Orkschamene die Gefahr, welche das Chromanin für seinen Meister darstellt, erkannt und diesen Schritt vollzogen.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Siegelbuch_03_14_03"); //Vermutlich hat der untote Orkschamane die Gefahr, welche das Chromanin für seinen Meister darstellt, erkannt und diesen Schritt vollzogen.
 	AI_Output(hero, self, "Info_Mod_Xardas_MT_Siegelbuch_03_15_04"); //Was können wir in diesem Fall machen, um die Magie des Buches wiederherzustellen?
 	AI_Output(self, hero, "Info_Mod_Xardas_MT_Siegelbuch_03_14_05"); //Nun, aus den wenigen Quellen die ich fand konnte ich schließen, dass es sich um das "Buch des Pondaros" handeln könnte.
 	AI_Output(self, hero, "Info_Mod_Xardas_MT_Siegelbuch_03_14_06"); //Es ist uralt und soll eben diese Eigenschaften besessen haben, wie das Buch, welches du mir brachtest.
