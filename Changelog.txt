@@ -38,6 +38,7 @@ Fixes:
 - fixed readability of Urs' first log entry
 - fixed dialog issues
 - fixed undead paladins at Lich not attacking player on their own
+- fixed game freezing when getting killed by humanoid opponent while having ring of healing equipped
 
 
 1.0.9

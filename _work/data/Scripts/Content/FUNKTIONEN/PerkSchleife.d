@@ -72,7 +72,7 @@ FUNC VOID PerkSchleife()
 			AI_UnequipArmor	(hero);
 
 			Mdl_SetVisual (hero,"HUMANS.MDS");
-			// ------ Visual ------ "body_Mesh",		bodyTex			SkinColor	headMesh,			faceTex,		teethTex,	armorInstance	
+			// ------ Visual ------ "body_Mesh",		bodyTex			SkinColor	headMesh,			faceTex,		teethTex,	armorInstance
 			Mdl_SetVisualBody (hero, "hum_body_naked0", 1,				0,			"Hum_Head_Fighter", 	FACE_N_Player,	0, 			NO_Armor);
 
 			Mdl_RemoveOverlayMDS	(hero, "HUMANS_BABE.MDS");
@@ -113,7 +113,7 @@ FUNC VOID PerkSchleife()
 			Wld_StopEffect	("INFERNALFIRE");
 
 			Mdl_SetVisual (hero,"HUMANS.MDS");
-			// ------ Visual ------ "body_Mesh",		bodyTex			SkinColor	headMesh,			faceTex,		teethTex,	armorInstance	
+			// ------ Visual ------ "body_Mesh",		bodyTex			SkinColor	headMesh,			faceTex,		teethTex,	armorInstance
 			Mdl_SetVisualBody (hero, "hum_body_naked0", 1,				0,			"Hum_Head_Fighter", 	FACE_N_Player,	0, 			NO_Armor);
 		};
 	};
@@ -258,7 +258,7 @@ FUNC VOID PerkSchleife()
 
 	if (Mod_HeilungRing)
 	{
-		if (hero.attribute[ATR_HITPOINTS] < hero.attribute[ATR_HITPOINTS_MAX])
+		if (hero.attribute[ATR_HITPOINTS] < hero.attribute[ATR_HITPOINTS_MAX] && !Npc_IsDead(hero) && !C_NpcIsDown(hero))
 		{
 			hero.attribute[ATR_HITPOINTS] += 1;
 			hero.aivar[AIV_Damage] = hero.attribute[ATR_HITPOINTS];
