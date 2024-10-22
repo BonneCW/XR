@@ -158,10 +158,10 @@ FUNC VOID Info_Mod_Xardas_MT_RiddleHelper_Info()
 	{
 		AI_Output(hero, self, "Info_Mod_Xardas_MT_RiddleHelper_15_01"); //In diesem Text steht, dass ich jemanden, oder etwas an dem Ort finden werde, wo alles begann ...
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_02"); //Ist es mit deinem Verstand schon so weit her, dass du dich nicht mal mehr an den Ort erinnerst, an welchem du den ersten Hinweis fandest?!
-		
+
 		if (!riddle5Hint) {
 			B_LogEntry(TOPIC_MOD_THERIDDLE, "Ich soll an den Ort zurückkehren, wo ich das erste Buch fand. Das war im Nebelturm.");
-			
+
 			riddle5Hint = TRUE;
 		};
 	}
@@ -171,10 +171,10 @@ FUNC VOID Info_Mod_Xardas_MT_RiddleHelper_Info()
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_04"); //Überflüssig zu erwähnen, dass wohl von einem Schiff die Rede ist.
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_05"); //Und aus dem Text kann man eigentlich schließen, dass ihm durch widrige Umstände unsanft die Seetauglichkeit genommen wurde.
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_06"); //Soll ich jetzt vielleicht noch darauf verweisen, an welchen Orten du ein solches finden könntes!?
-		
+
 		if (!riddle4Hint) {
 			B_LogEntry(TOPIC_MOD_THERIDDLE, "Ich muss ein Schiffswrack finden. Das werde ich wohl an der Küste vom Minental finden.");
-			
+
 			riddle4Hint = TRUE;
 		};
 	}
@@ -183,10 +183,10 @@ FUNC VOID Info_Mod_Xardas_MT_RiddleHelper_Info()
 		AI_Output(hero, self, "Info_Mod_Xardas_MT_RiddleHelper_15_07"); //Ich soll nun jenen Ort finden, an dem ein kluger Fischer sein Netz nicht auswerfen würde, so heißt es.
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_08"); //Nun, wenn der Verstand es gebietet in klaren Gewässern zu fischen ... schaue dich im Osten der Kolonie um ...
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_09"); //(trocken) Mehr Hinweise sollte es kaum benötigen.
-		
+
 		if (!riddle3Hint) {
 			B_LogEntry(TOPIC_MOD_THERIDDLE, "Xardas gab mir den Hinweis, dass kluge Fischer in klaren Gewässern fischen. Welches Wasser im Minental ist denn nicht klar?");
-			
+
 			riddle3Hint = TRUE;
 		};
 	}
@@ -194,10 +194,10 @@ FUNC VOID Info_Mod_Xardas_MT_RiddleHelper_Info()
 	{
 		AI_Output(hero, self, "Info_Mod_Xardas_MT_RiddleHelper_15_10"); //Diesmal soll ich einen Ort finden, der fast voll Wasser ist, aber dennoch genug Luft zum Atmen bietet.
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_11"); //Wenn du dich nördlich vom Alten Lager umsiehst, müsstest du den gesuchten Ort finden ... wobei ich mit "umsehen" nicht nur den oberflächlichen Gebrauch deiner Augen meine ...
-		
+
 		if (!riddle2Hint) {
 			B_LogEntry(TOPIC_MOD_THERIDDLE, "Der gesuchte Ort soll sich nördlich vom Alten Lager befinden. Ich sollte aber nicht nur oberflächlichen Gebrauch meiner Augen machen...");
-			
+
 			riddle2Hint = TRUE;
 		};
 	}
@@ -207,10 +207,10 @@ FUNC VOID Info_Mod_Xardas_MT_RiddleHelper_Info()
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_13"); //Nun, dann bist du hier sicherlich nicht völlig fehl am Platz.
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_14"); //In unmittelbarer Nähe habe ich gerade erst das Erstehen einer magischen Aura gespürt.
 		AI_Output(self, hero, "Info_Mod_Xardas_MT_RiddleHelper_14_15"); //Schaue dich nur gründlich um, und du wirst finden, wonach du gesucht hast.
-		
+
 		if (!riddle1Hint) {
 			B_LogEntry(TOPIC_MOD_THERIDDLE, "Xardas meint, ich bin hier in der Bergfestung nicht verkehrt und er habe in unmittelbarer Nähe eine magische Aura gespürt. Ich sollte mich hier in der Festung einmal umsehen.");
-			
+
 			riddle1Hint = TRUE;
 		};
 	};
@@ -528,7 +528,7 @@ FUNC VOID Info_Mod_Xardas_MT_Orkfriedhof_Info()
 	AI_Output(hero, self, "Info_Mod_Xardas_MT_Orkfriedhof_15_00"); //Im Sumpf tauchte ein untoter Schamane der Orks auf und raubte ein Chromaninbuch.
 	AI_Output(hero, self, "Info_Mod_Xardas_MT_Orkfriedhof_15_01"); //Er sprach davon, sich an einen Ort toter Stille zurückziehen zu wollen.
 	AI_Output(self, hero, "Info_Mod_Xardas_MT_Orkfriedhof_14_02"); //Im Sumpf sagst du? Befindet sich nicht in unmittelbarer Nähe jener orkische Friedhof, welchen du zu Zeiten des Schläfers bereits aufsuchtest?
-	AI_Output(hero, self, "Info_Mod_Xardas_MT_Orkfriedhof_15_03"); //Dies wäre der nahe liegendste Ort für deine Suche ... darauf hättest du jedoch beileibe selbst stoßen können.
+	AI_Output(self, hero, "Info_Mod_Xardas_MT_Orkfriedhof_14_03"); //Dies wäre der nahe liegendste Ort für deine Suche ... darauf hättest du jedoch beileibe selbst stoßen können.
 
 	Mod_NL_UOS_Day = Wld_GetDay() - 1;
 };
@@ -577,14 +577,14 @@ FUNC VOID Info_Mod_Xardas_MT_UndeadOrk_B()
 	AI_Output(self, hero, "Info_Mod_Xardas_MT_UndeadOrk_B_14_04"); //Mit welchen Spruchrollen, musst du jedoch schon selbst entscheiden ... und besorgen musst du diese selbstverständlich auch.
 
 	Mod_NL_Xardas_ScrollCombiner = 1;
-	
+
 	Info_ClearChoices	(Info_Mod_Xardas_MT_UndeadOrk);
 };
 
 FUNC VOID Info_Mod_Xardas_MT_UndeadOrk_A()
 {
 	AI_Output(hero, self, "Info_Mod_Xardas_MT_UndeadOrk_A_15_00"); //Ok, verstanden.
-	
+
 	Info_ClearChoices	(Info_Mod_Xardas_MT_UndeadOrk);
 };
 
