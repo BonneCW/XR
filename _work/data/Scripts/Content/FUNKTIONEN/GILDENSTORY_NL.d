@@ -474,7 +474,7 @@ FUNC VOID GILDENSTORY_NL ()
 			};
 		};
 
-		// NL-Story: Held darf nicht in die Barriere	
+		// NL-Story: Held darf nicht in die Barriere
 
 		if (Mod_NL_UOS == 6)
 		&& (Npc_GetDistToWP(hero, "GRYD_054") < 500)
@@ -534,34 +534,6 @@ FUNC VOID GILDENSTORY_NL ()
 			Wld_SetTime	(24,00);
 
 			AI_GotoNpc	(Mod_776_NONE_Orlan_NW, hero);
-		};
-
-		if (Npc_GetDistToWP(hero, "LICH") < 500)
-		&& (Npc_KnowsInfo(hero, Info_Mod_Porthos_Hi))
-		&& (Mod_NL_PalasLich < 6)
-		&& (!Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Moorhexe))
-		{
-			if (Mod_NL_PalasLich == 0)
-			{
-				AI_StandUP	(hero);
-
-				AI_Output(hero, NULL, "Info_Mod_Hero_LichDungeon_15_00"); //Und, habt ihr den Finsterling erwischt und erledigt?
-			};
-
-			if (Mod_NL_PalasLich == 5)
-			{
-				B_SetNpcVisual 		(Mod_7290_PAL_Athos_NW, MALE, "Ske_Head", 0, 0, ITAR_PAL_SKEL);
-				B_SetNpcVisual 		(Mod_7291_PAL_Aramis_NW, MALE, "Ske_Head", 0, 0, ITAR_PAL_SKEL);
-				B_SetNpcVisual 		(Mod_7292_PAL_Porthos_NW, MALE, "Ske_Head", 0, 0, ITAR_PAL_SKEL);
-
-				Mod_7290_PAL_Athos_NW.flags = 0;
-				Mod_7291_PAL_Aramis_NW.flags = 0;
-				Mod_7292_PAL_Porthos_NW.flags = 0;
-
-				Wld_InsertNpc	(Lich_11008_NW, "NW_TROLLAREA_TROLLROCKCAVE_02");
-			};
-
-			Mod_NL_PalasLich += 1;
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Lich_Blutgolem))

@@ -26,6 +26,7 @@ Fixes for Jharkendar if not entered before:
 Enhancements:
 
 - added a few more picklocks to Thorben for chapter 1
+- improved Lich spawn
 
 Fixes:
 
