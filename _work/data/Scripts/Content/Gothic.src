@@ -256,8 +256,8 @@ AI\HUMAN\C_Human\C_OtherIsToleratedEnemy.d
 
 
 
-AI\HUMAN\B_Human\B_LookAtNpc.d 
-AI\HUMAN\B_Human\B_ResetAll.d 
+AI\HUMAN\B_Human\B_LookAtNpc.d
+AI\HUMAN\B_Human\B_ResetAll.d
 
 STORY\B_Story\B_UseItem.d
 
@@ -337,7 +337,7 @@ AI\HUMAN\B_Human\B_MoveMob.d
 
 AI\HUMAN\B_Human\B_RemoveWeapon.d
 
-STORY\B_Content\B_GiveThiefXP.d 
+STORY\B_Content\B_GiveThiefXP.d
 STORY\B_Story\B_GiveInvItems.d
 STORY\B_Content\B_Beklauen.d
 
@@ -506,8 +506,6 @@ STORY\B_Content\B_Addon_PiratesGoHome.d
 
 
 STORY\DIALOGE\*.d
-STORY\DIALOGE\InProgress\*.d
-STORY\DIALOGE\ToDo\*.d
 STORY\B_AssignAmbientInfos\B_*.d
 
 
