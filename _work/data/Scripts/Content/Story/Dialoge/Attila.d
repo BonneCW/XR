@@ -59,6 +59,10 @@ FUNC INT Info_Mod_Attila_Moechtegern_Condition()
 	};
 };
 
+FUNC VOID Attila_FixMoechtegern() {
+	Mod_7702_OUT_Moechtegern_NW.flags = 0;
+};
+
 FUNC VOID Info_Mod_Attila_Moechtegern_Info()
 {
 	var c_npc Attila; Attila = Hlp_GetNpc(Mod_760_NONE_Attila_NW);
@@ -90,16 +94,18 @@ FUNC VOID Info_Mod_Attila_Moechtegern_Info()
 
 	AI_Output(self, hero, "Info_Mod_Attila_Moechtegern_04_05"); //Besser du kriechst wieder unter deinen Stein oder du wirst mit deinem Freund den n‰chsten Tag nicht mehr erleben.
 
-	Moechtegern.guild = GIL_STRF;
-	Npc_SetTrueGuild	(Moechtegern, GIL_STRF);
-
 	TRIA_Next(Attila);
 
 	AI_Output(self, hero, "Info_Mod_Attila_Moechtegern_09_06"); //Richte der ewigen Finsternis meinen Gruﬂ aus. Beliar erwartet dich.
 
 	TRIA_Finish();
 
+	Moechtegern.guild = GIL_STRF;
+	Npc_SetTrueGuild	(Moechtegern, GIL_STRF);
+
 	AI_StopProcessInfos	(self);
+
+	AI_Function(self, Attila_FixMoechtegern);
 };
 
 INSTANCE Info_Mod_Attila_Moechtegern2 (C_INFO)
