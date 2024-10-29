@@ -41,6 +41,7 @@ Fixes:
 - fixed undead paladins at Lich not attacking player on their own
 - fixed game freezing when getting killed by humanoid opponent while having ring of healing equipped
 - fixed Xardas not talking about guild quest continuation while in valley of mines
+- fixed foki dialog with Nagon not being unlocked properly sometimes
 
 
 1.0.9
