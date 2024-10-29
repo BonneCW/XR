@@ -3072,6 +3072,8 @@ FUNC VOID INIT_NewWorld()
 		};
 	};
 
+	Xardas_SpawnOrcsForGuildQuest();
+
 	OldLevel(NEWWORLD_ZEN);
 };
 

@@ -117,7 +117,7 @@ FUNC VOID Info_Mod_Xardas_NW_Vorahnung_Info()
 
 	Log_CreateTopic	(TOPIC_MOD_DIEBEDROHUNG, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_DIEBEDROHUNG, LOG_RUNNING);
-	
+
 	Log_CreateTopic	(TOPIC_MOD_GILDENAUFNAHME, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_GILDENAUFNAHME, LOG_RUNNING);
 	B_LogEntry_More	(TOPIC_MOD_GILDENAUFNAHME, TOPIC_MOD_DIEBEDROHUNG, "Xardas hat gesagt ich solle zuerst Kräfte sammeln und mich dazu einer Gilde anschließen.", "Xardas hat in letzter Zeit einige Visionen gehabt. Eine dunkle Gestalt wird Unheil über Khorinis verbreiten. Xardas forscht derzeit in seinen Büchern noch Informationen. Bis er etwas neues herausgefunden hat soll ich mich einer Gilde anschließen.");
@@ -903,7 +903,7 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch_Info()
 	if (Npc_KnowsInfo(hero, Info_Mod_Rosi_Daemonisch))
 	{
 		AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_02"); //Leute verändern sich schlagartig, wenn sie in der Dunkelheit unterwegs waren.
-		
+
 		news = TRUE;
 	};
 
@@ -930,7 +930,7 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch_Info()
 		{
 			AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_11"); //Im Kloster sollen viele Novizen an Magenerkrankungen leiden und können keinen Klosterwein mehr genießen.
 		};
-		
+
 		news = TRUE;
 	};
 
@@ -940,7 +940,7 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch_Info()
 	{
 		AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_12"); //Es gibt zahlreiche Menschen, die ungewöhnlich viel essen.
 		AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_13"); //Und dennoch erscheinen sie alle ausgezehrt, verfallen körperlich zusehends.
-		
+
 		news = TRUE;
 	};
 
@@ -973,14 +973,14 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch_Info()
 		{
 			AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_20"); //Pepe hält sich versteckt und fürchtet um sein Leben.
 		};
-		
+
 		news = TRUE;
 	};
 
 	if (Mod_HQ_PaladineDaemonisch == TRUE)
 	{
 		AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_21"); //Ich sah untote Paladine nahe der Stadt, die nicht lange zuvor noch lebendig waren.
-		
+
 		news = TRUE;
 	};
 
@@ -988,7 +988,7 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch_Info()
 	|| (Npc_KnowsInfo(hero, Info_Mod_Pepe_Daemonisch))
 	{
 		AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_22"); //Manche sahen sogar, wie Menschen unter dem Einfluss der Schatten zu Boden sanken, zunächst wie leblos schienen und sich dann zuckend erhoben.
-		
+
 		news = TRUE;
 	};
 
@@ -1000,7 +1000,7 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch_Info()
 		{
 			AI_Output(hero, self, "Info_Mod_Xardas_NW_Daemonisch_15_24"); //Der Bürger Rupert war es sogar, der mich zu ihnen lockte und davon sprach, ich würde ihnen beitreten, oder sterben.
 		};
-		
+
 		news = TRUE;
 	};
 
@@ -1151,7 +1151,7 @@ FUNC VOID Info_Mod_Xardas_NW_Daemonisch3_Info()
 	CreateInvItems	(hero, ItSc_TeleportOldcamp, 1);
 	CreateInvItems	(hero, ItSc_TrfSkeleton, 2);
 
-	B_ShowGivenThings	("3 Spruchrollen erhalten");	
+	B_ShowGivenThings	("3 Spruchrollen erhalten");
 
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Daemonisch3_14_06"); //Viel Erfolg.
 
@@ -1516,6 +1516,26 @@ FUNC INT Info_Mod_Xardas_NW_NachAufnahmeQuest_Condition()
 	};
 };
 
+FUNC VOID Xardas_SpawnOrcsForGuildQuest() {
+	if (!Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_NachAufnahmeQuest)) {
+		return;
+	};
+
+	if (Mod_Xardas_OrcsForGuildQuestSpawned) {
+		return;
+	};
+
+	if (CurrentLevel != NEWWORLD_ZEN) {
+		return;
+	};
+
+	Mod_Xardas_OrcsForGuildQuestSpawned = TRUE;
+
+	Wld_InsertNpc	(OrcScout,	"FP_ROAM_FARM1_GOBBO_04");
+	Wld_InsertNpc	(OrcScout,	"FP_ROAM_FARM1_GOBBO_06");
+	Wld_InsertNpc	(OrcWarrior_Almanach,	"FP_ROAM_FARM1_GOBBO_02");
+};
+
 FUNC VOID Info_Mod_Xardas_NW_NachAufnahmeQuest_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_NachAufnahmeQuest_14_00"); //Du kommst mir genau richtig. Ich habe etwas entdeckt, was mit diesem Buch, welches du Ryan abgenommen hast, zu tun hat.
@@ -1525,16 +1545,6 @@ FUNC VOID Info_Mod_Xardas_NW_NachAufnahmeQuest_Info()
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_NachAufnahmeQuest_15_04"); //Was soll ich tun?
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_NachAufnahmeQuest_14_05"); //Das Buch kann nur durch einen passenden Bannbrecher geöffnet werden. Dazu fehlt mir aber hier das nötige Wissen.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_NachAufnahmeQuest_14_06"); //Ironischerweise befindet sich die Lösung, wie der Schutzzauber zu brechen ist, in einem weiteren Buch, einem Almanach.
-
-	AI_StopProcessInfos	(self);
-
-	Wld_InsertNpc	(OrcScout,	"FP_ROAM_FARM1_GOBBO_04");
-	Wld_InsertNpc	(OrcScout,	"FP_ROAM_FARM1_GOBBO_06");
-	Wld_InsertNpc	(OrcWarrior_Almanach,	"FP_ROAM_FARM1_GOBBO_02");
-
-	Log_CreateTopic	(TOPIC_MOD_BEL_ALMANACH, LOG_MISSION);
-	B_SetTopicStatus	(TOPIC_MOD_BEL_ALMANACH, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_BEL_ALMANACH, "Das Buch, welches ich bei meiner Aufnahmeprüfung Ryan abgenommen habe, ist magisch versiegelt. Um es zu öffnen, braucht Xardas einen Almanach, in dem der passende Bannbrecher steht. Dieses Buch wurde jedoch von Orks bei einem Überfall gestohlen. Die Orks sollen sich im Wald bei Lobarts Hof aufhalten.");
 
 	Info_ClearChoices	(Info_Mod_Xardas_NW_NachAufnahmeQuest);
 
@@ -1558,9 +1568,7 @@ FUNC VOID Info_Mod_Xardas_NW_NachAufnahmeQuest_B()
 
 	AI_StopProcessInfos	(self);
 
-	Wld_InsertNpc	(OrcScout,	"FP_ROAM_FARM1_GOBBO_04");
-	Wld_InsertNpc	(OrcScout,	"FP_ROAM_FARM1_GOBBO_06");
-	Wld_InsertNpc	(OrcWarrior_Almanach,	"FP_ROAM_FARM1_GOBBO_02");
+	Xardas_SpawnOrcsForGuildQuest();
 
 	Log_CreateTopic	(TOPIC_MOD_BEL_ALMANACH, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_BEL_ALMANACH, LOG_RUNNING);
@@ -2233,7 +2241,7 @@ FUNC VOID Info_Mod_Xardas_NW_Moorhexe2_Info()
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_Moorhexe2_15_02"); //Er sprach davon, dass sich das, was immer sich im Moor aufhält, vor den Mächtigen verbirgt.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Moorhexe2_14_03"); //Hm, das könnte dein Unterfangen erschweren.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Moorhexe2_14_04"); //Vielleicht offenbart sich des Rätsels Lösung nur, wenn du eine schwache Gestalt annimmst.
-	
+
 	if (Npc_KnowsInfo(hero, Info_Mod_Andokai_Moorhexe)) {
 		AI_Output(self, hero, "Info_Mod_Xardas_NW_Moorhexe2_14_05"); //Wie ich hörte, warst du bereits bei Andokai.
 		if (Npc_KnowsInfo(hero, Info_Mod_Andokai_PyrmansStab)) {
@@ -2827,11 +2835,11 @@ FUNC INT Info_Mod_Xardas_NW_Aufnahme_Condition()
 FUNC VOID Info_Mod_Xardas_NW_Aufnahme_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_Aufnahme_15_00"); //Ich möchte Schwarzer Novize werden.
-	
+
 	if (hero.level >= 5)
 	{
 		AI_Output(self, hero, "Info_Mod_Xardas_NW_Aufnahme_14_01"); //Du weißt, dass es kein Zurück gibt? Dass deine Entscheidung endgültig ist?
-		
+
 		if (Mod_HatPlayerNeutraleKlamotten())
 		{
 			if (Mod_Gottstatus > 4)
@@ -2869,7 +2877,7 @@ FUNC VOID Info_Mod_Xardas_NW_Aufnahme_Ja()
 	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_53);
 	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_55);
 	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_60);
-	
+
 	AI_Output(hero, self, "Info_Mod_Xardas_NW_Aufnahme_Ja_15_00"); //Ja.
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Aufnahme_Ja_14_01"); //Dann darf ich dich hiermit stellvertretend für Andokai willkommen heißen!
 	AI_Output(self, hero, "Info_Mod_Xardas_NW_Aufnahme_Ja_14_02"); //Er wird es mir schon nicht übelnehmen, wenn ich dir deine Rüstung und die traditionelle Waffe übergebe.
@@ -2901,7 +2909,7 @@ FUNC VOID Info_Mod_Xardas_NW_Aufnahme_Ja()
 	Info_ClearChoices	(Info_Mod_Xardas_NW_Aufnahme);
 
 	Monster_Max += 6;
-	
+
 	hero.guild = GIL_KDF;
 	Npc_SetTrueGuild	(hero, GIL_KDF);
 
@@ -3112,7 +3120,7 @@ INSTANCE Info_Mod_Xardas_PMSchulden (C_INFO)
 	condition   	= Info_Mod_Xardas_PMSchulden_Condition;
 	information 	= Info_Mod_Xardas_PMSchulden_Info;
 	permanent   	= 1;
-	important 	= 1; 
+	important 	= 1;
 };
 
 FUNC INT Info_Mod_Xardas_PMSchulden_Condition()
@@ -3138,16 +3146,16 @@ FUNC VOID Info_Mod_Xardas_PMSchulden_Info()
 		{
 			AI_Output (self, hero, "Info_Mod_Xardas_PMSchulden_14_03"); //Ich hatte dich gewarnt! Die Strafe, die du jetzt zahlen musst, ist höher!
 			AI_Output (hero, self, "Info_Mod_Xardas_PMAdd_15_00"); //Wieviel?
-			
+
 			var int diff; diff = (B_GetTotalPetzCounter(self) - Xardas_LastPetzCounter);
-		
+
 			if (diff > 0)
 			{
 				Xardas_Schulden = Xardas_Schulden + (diff * 50);
 			};
-		
+
 			if (Xardas_Schulden > 1000)	{	Xardas_Schulden = 1000;	};
-		
+
 			B_Say_Gold (self, hero, Xardas_Schulden);
 		}
 		else
@@ -3158,37 +3166,37 @@ FUNC VOID Info_Mod_Xardas_PMSchulden_Info()
 	else if (B_GetGreatestPetzCrime(self) < Xardas_LastPetzCrime)
 	{
 		AI_Output (self, hero, "Info_Mod_Xardas_PMSchulden_14_05"); //Es haben sich einige neue Dinge ergeben.
-		
+
 		if (Xardas_LastPetzCrime == CRIME_MURDER)
 		{
 			AI_Output (self, hero, "Info_Mod_Xardas_PMSchulden_14_06"); //Plötzlich gibt es niemanden mehr, der dich des Mordes bezichtigt.
 		};
-		
+
 		if (Xardas_LastPetzCrime == CRIME_THEFT)
 		|| ( (Xardas_LastPetzCrime > CRIME_THEFT) && (B_GetGreatestPetzCrime(self) < CRIME_THEFT) )
 		{
 			AI_Output (self, hero, "Info_Mod_Xardas_PMSchulden_14_07"); //Niemand erinnert sich mehr, dich bei einem Diebstahl gesehen zu haben.
 		};
-		
+
 		if (Xardas_LastPetzCrime == CRIME_ATTACK)
 		|| ( (Xardas_LastPetzCrime > CRIME_ATTACK) && (B_GetGreatestPetzCrime(self) < CRIME_ATTACK) )
 		{
 			AI_Output (self, hero, "Info_Mod_Xardas_PMSchulden_14_08"); //Es gibt keine Zeugen mehr dafür, dass du jemals in eine Schlägerei verwickelt warst.
 		};
-		
+
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
 		{
 			AI_Output (self, hero, "Info_Mod_Xardas_PMSchulden_14_09"); //Anscheinend haben sich alle Anklagen gegen dich in Wohlgefallen aufgelöst.
 		};
-		
+
 		AI_Output (self, hero, "Info_Mod_Xardas_PMSchulden_14_10"); //Ich weiß nicht, was da gelaufen ist, aber ich warne dich: Spiel keine Spielchen mit mir.
-				
+
 		// ------- Schulden erlassen oder trotzdem zahlen ------
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
 		{
 			AI_Output (self, hero, "Info_Mod_Xardas_PMSchulden_14_11"); //Ich habe mich jedenfalls entschieden, dir deine Schulden zu erlassen.
 			AI_Output (self, hero, "Info_Mod_Xardas_PMSchulden_14_12"); //Sieh zu, dass du nicht wieder in Schwierigkeiten kommst.
-	
+
 			Xardas_Schulden			= 0;
 			Xardas_LastPetzCounter 	= 0;
 			Xardas_LastPetzCrime		= CRIME_NONE;
@@ -3200,7 +3208,7 @@ FUNC VOID Info_Mod_Xardas_PMSchulden_Info()
 			AI_Output (self, hero, "Info_Mod_Xardas_PMSchulden_14_14"); //Also, was ist?
 		};
 	};
-	
+
 	// ------ Choices NUR, wenn noch Crime vorliegt ------
 	if (B_GetGreatestPetzCrime(self) != CRIME_NONE)
 	{
@@ -3250,9 +3258,9 @@ FUNC INT Info_Mod_Xardas_PETZMASTER_Condition()
 
 FUNC VOID Info_Mod_Xardas_PETZMASTER_Info()
 {
-	Xardas_Schulden = 0; //weil Funktion nochmal durchlaufen wird, wenn Crime höher ist...	
-	
-	if (B_GetGreatestPetzCrime(self) == CRIME_MURDER) 
+	Xardas_Schulden = 0; //weil Funktion nochmal durchlaufen wird, wenn Crime höher ist...
+
+	if (B_GetGreatestPetzCrime(self) == CRIME_MURDER)
 	{
 		AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_14_01"); //Gut, dass du zu mir kommst, bevor alles noch schlimmer für dich wird.
 		AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_14_02"); //Mord ist ein schweres Vergehen!
@@ -3270,8 +3278,8 @@ FUNC VOID Info_Mod_Xardas_PETZMASTER_Info()
 		AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_14_07"); //Aber es wird nicht leicht sein, die Leute wieder gnädig zu stimmen.
 		AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_14_08"); //Du könntest deine Reue zeigen, indem du eine Strafe zahlst - natürlich muss die Strafe angemessen hoch sein.
 	};
-		
-	if (B_GetGreatestPetzCrime(self) == CRIME_THEFT) 
+
+	if (B_GetGreatestPetzCrime(self) == CRIME_THEFT)
 	{
 		AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_14_09"); //Gut, dass du kommst! Du wirst des Diebstahls bezichtigt! Es gibt Zeugen!
 
@@ -3282,10 +3290,10 @@ FUNC VOID Info_Mod_Xardas_PETZMASTER_Info()
 
 		AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_14_11"); //Ich werde so ein Verhalten hier nicht dulden!
 		AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_14_12"); //Du wirst eine Strafe zahlen müssen, um dein Verbrechen wieder gutzumachen!
-		
+
 		Xardas_Schulden = (B_GetTotalPetzCounter(self) * 50); //Anzahl der Zeugen * 50
 	};
-	
+
 	if (B_GetGreatestPetzCrime(self) == CRIME_ATTACK)
 	{
 		AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_14_13"); //Wenn du dich mit der Miliz oder den Feuermagiern herumprügelst, ist das eine Sache ...
@@ -3298,26 +3306,26 @@ FUNC VOID Info_Mod_Xardas_PETZMASTER_Info()
 
 		AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_14_16"); //Wenn ich dir das durchgehen lasse, macht hier bald jeder, was er will.
 		AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_14_17"); //Also wirst du eine angemessene Strafe zahlen - und die Sache ist vergessen.
-		
+
 		Xardas_Schulden = (B_GetTotalPetzCounter(self) * 50); //Anzahl der Zeugen * 50
 	};
-	
+
 	// ------ Schaf getötet (nahezu uninteressant - in der City gibt es keine Schafe) ------
-	if (B_GetGreatestPetzCrime(self) == CRIME_SHEEPKILLER) 
+	if (B_GetGreatestPetzCrime(self) == CRIME_SHEEPKILLER)
 	{
 		AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_14_18"); //Mir ist zu Ohren gekommen, du hättest dich an unseren Schafen vergriffen.
 		AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_14_19"); //Dir ist klar, dass ich das nicht durchgehen lassen kann.
 		AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_14_20"); //Du wirst eine Entschädigung zahlen müssen!
-		
+
 		Xardas_Schulden = 100;
 	};
-	
+
 	AI_Output (hero, self, "Info_Mod_Xardas_PETZMASTER_15_21"); //Wie viel?
-	
+
 	if (Xardas_Schulden > 1000)	{	Xardas_Schulden = 1000;	};
-		
+
 	B_Say_Gold (self, hero, Xardas_Schulden);
-	
+
 	Info_ClearChoices  	(Info_Mod_Xardas_PMSchulden);
 	Info_ClearChoices  	(Info_Mod_Xardas_PETZMASTER);
 	Info_AddChoice		(Info_Mod_Xardas_PETZMASTER,"Ich habe nicht genug Gold!",Info_Mod_Xardas_PETZMASTER_PayLater);
@@ -3334,11 +3342,11 @@ func void Info_Mod_Xardas_PETZMASTER_PayNow()
 	AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_PayNow_14_01"); //Gut! Ich werde dafür sorgen, dass es jeder von uns erfährt - damit wäre dein Ruf einigermaßen wiederhergestellt.
 
 	B_GrantAbsolution (LOC_SMCAMP);
-	
+
 	Xardas_Schulden			= 0;
 	Xardas_LastPetzCounter 	= 0;
 	Xardas_LastPetzCrime		= CRIME_NONE;
-	
+
 	Info_ClearChoices  	(Info_Mod_Xardas_PETZMASTER);
 	Info_ClearChoices  	(Info_Mod_Xardas_PMSchulden);	//!!! Info-Choice wird noch von anderem Dialog angesteuert!
 };
@@ -3348,10 +3356,10 @@ func void Info_Mod_Xardas_PETZMASTER_PayLater()
 	AI_Output (hero, self, "Info_Mod_Xardas_PETZMASTER_PayLater_15_00"); //Ich habe nicht genug Gold!
 	AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_PayLater_14_01"); //Dann sieh zu, dass du das Gold so schnell wie möglich beschaffst.
 	AI_Output (self, hero, "Info_Mod_Xardas_PETZMASTER_PayLater_14_02"); //Und ich warne dich: Wenn du dir noch was zu schulden kommen lässt, wird die Sache noch schlimmer für dich!
-	
+
 	Xardas_LastPetzCounter 	= B_GetTotalPetzCounter(self);
 	Xardas_LastPetzCrime		= B_GetGreatestPetzCrime(self);
-	
+
 	AI_StopProcessInfos (self);
 };
 
@@ -3431,7 +3439,7 @@ INSTANCE Info_Mod_Xardas_NW_Lehrer (C_INFO)
 };
 
 FUNC INT Info_Mod_Xardas_NW_Lehrer_Condition()
-{	
+{
 	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_NW_Hallo))
 	&& ((Mod_Gilde == 12)
 	|| (Mod_Gilde == 13)
@@ -3439,14 +3447,14 @@ FUNC INT Info_Mod_Xardas_NW_Lehrer_Condition()
 	|| (Mod_Gilde == 15)
 	|| (Mod_Gilde == 16))
 	&& (Mod_IstLehrling == 1)
-	{	
+	{
 		return 1;
 	};
 };
 FUNC VOID Info_Mod_Xardas_NW_Lehrer_Info()
 {
 	AI_Output (hero, self, "Info_Mod_Xardas_NW_Lehrer_15_00"); //Kann ich bei dir lernen?
-	
+
 	if (Mod_Gilde == 12)
 	|| (Mod_Gilde == 13)
 	|| (Mod_Gilde == 14)
@@ -3454,7 +3462,7 @@ FUNC VOID Info_Mod_Xardas_NW_Lehrer_Info()
 	|| (Mod_Gilde == 16)
 	{
 		AI_Output (self, hero, "Info_Mod_Xardas_NW_Lehrer_14_01"); //Ich werde dich in die Geheimnisse der Alchemie einweihen.
-		
+
 		if (Mod_XardasAlchemie == FALSE)
 		{
 			Mod_XardasAlchemie = TRUE;
@@ -3465,25 +3473,25 @@ FUNC VOID Info_Mod_Xardas_NW_Lehrer_Info()
 
 		Info_ClearChoices 	(Info_Mod_Xardas_NW_Lehrer);
 		Info_AddChoice 		(Info_Mod_Xardas_NW_Lehrer,DIALOG_BACK,Info_Mod_Xardas_NW_Lehrer_BACK);
-	
+
 		if ( PLAYER_TALENT_ALCHEMY[POTION_Health_01] == FALSE)
 		&& (Mod_LehrlingBei != 1)
 		{
 			Info_AddChoice 		(Info_Mod_Xardas_NW_Lehrer,B_BuildLearnString ("Essenz der Heilung", B_GetLearnCostTalent (hero, NPC_TALENT_ALCHEMY, POTION_Health_01)),Info_Mod_Xardas_NW_Lehrer_HEALTH_01);
 		};
-		
+
 		if ( PLAYER_TALENT_ALCHEMY[POTION_Health_02] == FALSE)
 		&& ( PLAYER_TALENT_ALCHEMY[POTION_Health_01] == TRUE)
 		{
 			Info_AddChoice	  (Info_Mod_Xardas_NW_Lehrer, B_BuildLearnString ("Extrakt der Heilung", B_GetLearnCostTalent (hero, NPC_TALENT_ALCHEMY, POTION_Health_02)), Info_Mod_Xardas_NW_Lehrer_Health_02);
 		};
-		
+
 		if ( PLAYER_TALENT_ALCHEMY[POTION_Health_03] == FALSE)
 		&& ( PLAYER_TALENT_ALCHEMY[POTION_Health_02] == TRUE)
 		{
 			Info_AddChoice	  (Info_Mod_Xardas_NW_Lehrer, B_BuildLearnString ("Elixier der Heilung", B_GetLearnCostTalent (hero, NPC_TALENT_ALCHEMY, POTION_Health_03)), Info_Mod_Xardas_NW_Lehrer_Health_03);
 		};
-		
+
 		if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_Health] == FALSE)
 		&& ( PLAYER_TALENT_ALCHEMY[POTION_Health_03] == TRUE)
 		&& (Mod_LehrlingBei != 1)
@@ -3491,41 +3499,41 @@ FUNC VOID Info_Mod_Xardas_NW_Lehrer_Info()
 		{
 			Info_AddChoice	  (Info_Mod_Xardas_NW_Lehrer, B_BuildLearnString ("Elixier des Lebens", B_GetLearnCostTalent (hero, NPC_TALENT_ALCHEMY, POTION_Perm_Health)), Info_Mod_Xardas_NW_Lehrer_Perm_Health);
 		};
-		
+
 		if ( PLAYER_TALENT_ALCHEMY[POTION_Mana_01] == FALSE)
 		&& (Mod_LehrlingBei != 1)
 		{
 			Info_AddChoice	  (Info_Mod_Xardas_NW_Lehrer, B_BuildLearnString ("Mana Essenz", B_GetLearnCostTalent (hero, NPC_TALENT_ALCHEMY, POTION_Mana_01)), Info_Mod_Xardas_NW_Lehrer_Mana_01);
 		};
-		
+
 		if ( PLAYER_TALENT_ALCHEMY[POTION_Mana_02] == FALSE)
 		&& ( PLAYER_TALENT_ALCHEMY[POTION_Mana_01] == TRUE)
 		{
 			Info_AddChoice	  (Info_Mod_Xardas_NW_Lehrer, B_BuildLearnString ("Mana Extrakt", B_GetLearnCostTalent (hero, NPC_TALENT_ALCHEMY, POTION_Mana_02)), Info_Mod_Xardas_NW_Lehrer_Mana_02);
 		};
-		
+
 		if ( PLAYER_TALENT_ALCHEMY[POTION_Mana_03] == FALSE)
 		&& ( PLAYER_TALENT_ALCHEMY[POTION_Mana_02] == TRUE)
 		{
 			Info_AddChoice	  (Info_Mod_Xardas_NW_Lehrer, B_BuildLearnString ("Mana Elixier", B_GetLearnCostTalent (hero, NPC_TALENT_ALCHEMY, POTION_Mana_03)), Info_Mod_Xardas_NW_Lehrer_Mana_03);
 		};
-		
+
 		if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_Mana] == FALSE)
 		&& ( PLAYER_TALENT_ALCHEMY[POTION_Mana_03] == TRUE)
 		&& (Kapitel >= 4)
 		{
 			Info_AddChoice	  (Info_Mod_Xardas_NW_Lehrer, B_BuildLearnString ("Elixier des Geistes", B_GetLearnCostTalent (hero, NPC_TALENT_ALCHEMY, POTION_Perm_Mana)), Info_Mod_Xardas_NW_Lehrer_Perm_Mana);
-		};                                                                                                                                                                                   
-		if (PLAYER_TALENT_ALCHEMY[POTION_Perm_STR] == FALSE) 
+		};
+		if (PLAYER_TALENT_ALCHEMY[POTION_Perm_STR] == FALSE)
 		&& (Kapitel >= 4)
-		{                                                                                                                                                                                     
-			Info_AddChoice (Info_Mod_Xardas_NW_Lehrer, B_BuildLearnString ("Elixier der Stärke", B_GetLearnCostTalent (hero, NPC_TALENT_ALCHEMY, POTION_Perm_STR)), Info_Mod_Xardas_NW_Lehrer_PermSTR);               
+		{
+			Info_AddChoice (Info_Mod_Xardas_NW_Lehrer, B_BuildLearnString ("Elixier der Stärke", B_GetLearnCostTalent (hero, NPC_TALENT_ALCHEMY, POTION_Perm_STR)), Info_Mod_Xardas_NW_Lehrer_PermSTR);
 		};
 		if (PLAYER_TALENT_ALCHEMY[POTION_Perm_DEX] == FALSE)
 		&& (Kapitel >= 4)
 		{
 			Info_AddChoice (Info_Mod_Xardas_NW_Lehrer,B_BuildLearnString ("Elixier der Geschicklichkeit", B_GetLearnCostTalent (hero, NPC_TALENT_ALCHEMY, POTION_Perm_DEX)), Info_Mod_Xardas_NW_Lehrer_Perm_DEX);
-		};		
+		};
 	};
 };
 FUNC VOID Info_Mod_Xardas_NW_Lehrer_BACK()

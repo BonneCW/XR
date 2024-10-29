@@ -1730,6 +1730,7 @@ var int Mod_Poloch_Beat;
 var int Mod_Tretor_Beat;
 var int Mod_Darrion_Sumpfmensch;
 var int Mod_BDS_FightStart;
+var int Mod_Xardas_OrcsForGuildQuestSpawned;
 
 var C_NPC NPC_Orkjaeger_01;
 var C_NPC NPC_Orkjaeger_02;
@@ -2115,36 +2116,36 @@ const int T_MED = 90;
 const int T_LOW = 60;
 
 //----- Artefakt Set der Bauern (HP)-----------------
-var int	HP_Ring_1_Equipped;		
-var int	HP_Ring_2_Equipped;	  
-var int HP_Amulett_Equipped;     
-/*                              
-var int HP_Ring_Double_Bonus;	  
+var int	HP_Ring_1_Equipped;
+var int	HP_Ring_2_Equipped;
+var int HP_Amulett_Equipped;
+/*
+var int HP_Ring_Double_Bonus;
 var int HP_Amulett_EinRing_Bonus;
 */
-var int HP_Artefakt_Effekt;	  
+var int HP_Artefakt_Effekt;
 
 //----- Artefakt Set der Priester (Mana)-----------------
 
-var int	MA_Ring_1_Equipped;		
-var int	MA_Ring_2_Equipped;	  
-var int MA_Amulett_Equipped;     
-/*                              
-var int MA_Ring_Double_Bonus;	  
+var int	MA_Ring_1_Equipped;
+var int	MA_Ring_2_Equipped;
+var int MA_Amulett_Equipped;
+/*
+var int MA_Ring_Double_Bonus;
 var int MA_Amulett_EinRing_Bonus;
 */
-var int MA_Artefakt_Effekt;	  
+var int MA_Artefakt_Effekt;
 
 //----- Artefakt Set der Krieger (STR)-----------------
 
-var int	STR_Ring_1_Equipped;		
-var int	STR_Ring_2_Equipped;	  
-var int STR_Amulett_Equipped;     
- /*                             
-var int STR_Ring_Double_Bonus;	  
+var int	STR_Ring_1_Equipped;
+var int	STR_Ring_2_Equipped;
+var int STR_Amulett_Equipped;
+ /*
+var int STR_Ring_Double_Bonus;
 var int STR_Amulett_EinRing_Bonus;
 */
-var int STR_Artefakt_Effekt;	  
+var int STR_Artefakt_Effekt;
 
 //------------Rüstungen---------
 var int LeatherArmor_Equipped;
@@ -2196,7 +2197,7 @@ var int SCKnowsMissingPeopleAreInAddonWorld;	//= TRUE die Spur führt den SC zur 
 var int MIS_Addon_Vatras_WhereAreMissingPeople;	//Vatras will wissen, was mit den Vermissten passiert ist.
 var int MIS_LuciasLetter;						//= TRUE Elvrich hat den Abschiedsbrief von Lucia gelesen.
 
-//Ranger 
+//Ranger
 var int SC_KnowsRanger;							//= TRUE SC hat vom RING des Wassers gehört.
 var int SC_IsRanger;							//= TRUE  Name ist programm
 var int SCIsWearingRangerRing;					//= TRUE  Name ist programm
@@ -2229,13 +2230,13 @@ var int 	SC_Knows_WeaponInAdanosTempel;		//= TRUE SC weiß vom Schwert im Tempel
 var int		SC_SummonedAncientGhost;			//= TRUE Quarhodron ist erschienen.
 
 var int 	RavenIsInTempel;					//= TRUE Raven Video. Raven haut ab in den Temepl Adanos
-var int 	RavenIsDead;						//= TRUE Raven ist tot und das Hauptziel vom Addon erreicht. 
+var int 	RavenIsDead;						//= TRUE Raven ist tot und das Hauptziel vom Addon erreicht.
 var int  	BeliarsWeaponSpecialDamage;			//Grundwert für Speziellen Schaden Beliars Klaue
 var int  	BeliarDamageChance;					//Chance auf Extraschaden
 var int  	SC_FailedToEquipBeliarsWeapon;		//= TRUE SC hat versucht die Waffe anzulegen. -> Blitz in Arsch.
 var int  	BeliarsWeaponUpgrated;				//= TRUE SC hat die Waffe wenigstens einmal verbessert!
 
- 
+
 //--------------Banditenlager (Addonwelt)------------------
 var int 	Player_HasTalkedToBanditCamp;				//Spieler war schon mal im BDT Camp
 
@@ -2270,13 +2271,13 @@ var int		Green_Extrem;
 var int 	Hero_HackChance;
 var int 	Truemmer_Count;
 var int 	Knows_Truemmerschlag;
-var int 	Learn_by_doing; 
+var int 	Learn_by_doing;
 
 
-var int 	GoldMob_01_Amount;					
-var int 	GoldMob_02_Amount;					
-var int 	GoldMob_03_Amount;					
-var int 	GoldMob_04_Amount;					
+var int 	GoldMob_01_Amount;
+var int 	GoldMob_02_Amount;
+var int 	GoldMob_03_Amount;
+var int 	GoldMob_04_Amount;
 var int 	GoldMob_05_Amount;
 var int 	GoldMob_06_Amount;
 var int 	GoldMob_07_Amount;
@@ -2346,14 +2347,14 @@ var int Player_KnowsSchnellerHering;
 
 //--------------- SCHNAPSBRENNEN - Rezept Kenntnis -----------------------
 var int 	Knows_LousHammer;						//Lous Rezept
-var int 	Knows_Schlafhammer;						//erweitertes Rezept von Lou mit doppelter Menge Rum 
-var int 	Knows_SchnellerHering;					//verbesserte SpeedPotionSchnaps von Samuel 
- 
+var int 	Knows_Schlafhammer;						//erweitertes Rezept von Lou mit doppelter Menge Rum
+var int 	Knows_SchnellerHering;					//verbesserte SpeedPotionSchnaps von Samuel
+
 //---obligatorisch angelegt -----------------------------
 
 var int 	Knows_RuebenSchnaps;
 var int 	Knows_VinoSchnaps;
-var int 	Knows_PiratenSchnaps;	//Weißer Rum				
+var int 	Knows_PiratenSchnaps;	//Weißer Rum
 var int 	Knows_Magierschnaps;
 var int 	Knows_Sumpfkrautschnaps;
 
@@ -2393,7 +2394,7 @@ var int Thorus_Schulden;
 var int Richter_Schulden;
 
 // *************************
-// Globalvariablen für Diebstahl 
+// Globalvariablen für Diebstahl
 // *************************
 
 const int Theftdiff = 10; //DEX Diff Wert ab dem der Dialog erscheint
@@ -2417,7 +2418,7 @@ var int Lobart_Kleidung_Verkauft;
 
 //*********************
 //	Punkte für Aufnahme
-//********************* 
+//*********************
 
 
 //******************************
@@ -2482,7 +2483,7 @@ var int 	Mil_305_schonmalreingelassen;
 
 var int Sekob_RoomFree; //wenn Xardas dich zur Truhe schickt (für Portalraum)
 
-var int Sld_Duelle_gewonnen;	//In ZS_Unconscious 
+var int Sld_Duelle_gewonnen;	//In ZS_Unconscious
 var int SOLD;
 
 
@@ -2495,9 +2496,9 @@ const int 	Summe_Kloster = 1000;
 
 
 
-var	int		KNOWS_FIRE_CONTEST;			//Spieler kennt das alte Gesetz 
+var	int		KNOWS_FIRE_CONTEST;			//Spieler kennt das alte Gesetz
 
- 
+
 const int   CostRescueGorn  = 500;      //Preis für Gorns Freilassung für Garond!!!!
 
 
@@ -2513,7 +2514,7 @@ var int 	Hammer_Taken;				//Spieler hat Hammer Innos geklaut
 // ------ KAPITEL 2 ------
 
 
-const int 	Meat_Amount = 24;		// Burg im Minental Ambient Mission Kapitel 2 
+const int 	Meat_Amount = 24;		// Burg im Minental Ambient Mission Kapitel 2
 
 
 
@@ -2560,7 +2561,7 @@ var int B_Chapter4_OneTime;
 
 
 
-	
+
 
 
 
@@ -2633,19 +2634,19 @@ var int Albrecht_TeachMANA;			//MANA - 100 für Pal
 
 //Ignaz verkauft Scrolls...
 /*
- SPL_TrfSheep		
- SPL_TrfScavenger	
- SPL_TrfGiantRat	
- SPL_TrfGiantBug	
- SPL_TrfWolf		
- SPL_TrfWaran		
- SPL_TrfSnapper		
- SPL_TrfWarg		
- SPL_TrfFireWaran	
- SPL_TrfLurker		
- SPL_TrfShadowbeast	
+ SPL_TrfSheep
+ SPL_TrfScavenger
+ SPL_TrfGiantRat
+ SPL_TrfGiantBug
+ SPL_TrfWolf
+ SPL_TrfWaran
+ SPL_TrfSnapper
+ SPL_TrfWarg
+ SPL_TrfFireWaran
+ SPL_TrfLurker
+ SPL_TrfShadowbeast
  SPL_TrfDragonSnapper
- SPL_Charm		
+ SPL_Charm
 */
 
 var int Bennet_TeachCommon;
