@@ -68,21 +68,11 @@ FUNC VOID Info_Mod_Ole_WarBeiAndre_Info()
 	&& (Gardist_Dabei == FALSE)
 	{
 		AI_Output(self, hero, "Info_Mod_Ole_WarBeiAndre_02_04"); //Ah ... Jetzt hab ich's. Wie wäre es, wenn du für uns arbeitest.
-		AI_Output(hero, self, "Info_Mod_Ole_WarBeiAndre_15_05"); //Wenn die Bezahlung stimmt, bin ich dabei.
-		AI_Output(self, hero, "Info_Mod_Ole_WarBeiAndre_02_06"); //Keine Sorge, wenn die Mine erst mal wieder läuft, wirst du in Gold schwimmen.
-		AI_Output(self, hero, "Info_Mod_Ole_WarBeiAndre_02_07"); //Als Anzahlung kannst du ja diese Rüstung betrachten.
 
-		B_GiveInvItems	(self, hero, ItAr_KG_01, 1);
+		Info_ClearChoices (Info_Mod_Ole_WarBeiAndre);
 
-		KG_Dabei = 1;
-
-		Mod_AnzahlNebengilden += 1;
-		
-		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_54);
-		Spine_UnlockAchievement(SPINE_ACHIEVEMENT_66);
-
-		Log_CreateTopic	(TOPIC_MOD_NEBENGILDEN, LOG_NOTE);
-		B_LogEntry	(TOPIC_MOD_NEBENGILDEN, "Ole hat mich bei der königlichen Garde aufgenommen.");
+		Info_AddChoice(Info_Mod_Ole_WarBeiAndre, "Vielleicht später.", Info_Mod_Ole_WarBeiAndre_Nein);
+		Info_AddChoice(Info_Mod_Ole_WarBeiAndre, "Wenn die Bezahlung stimmt, bin ich dabei.", Info_Mod_Ole_WarBeiAndre_Ja);
 	}
 	else if (hero.guild == GIL_MIL)
 	{
@@ -100,6 +90,92 @@ FUNC VOID Info_Mod_Ole_WarBeiAndre_Info()
 	B_SetTopicStatus	(TOPIC_MOD_KG_OLEBRIEF, LOG_SUCCESS);
 
 	B_GivePlayerXP	(250);
+};
+
+FUNC VOID Info_Mod_Ole_WarBeiAndre_Nein() {
+	AI_Output(hero, self, "Info_Mod_Ole_WarBeiAndre_Nein_15_00"); //Vielleicht später.
+
+	Info_ClearChoices(Info_Mod_Ole_WarBeiAndre);
+};
+
+FUNC VOID Info_Mod_Ole_WarBeiAndre_Ja() {
+	AI_Output(hero, self, "Info_Mod_Ole_WarBeiAndre_Ja_15_00"); //Wenn die Bezahlung stimmt, bin ich dabei.
+	AI_Output(self, hero, "Info_Mod_Ole_WarBeiAndre_Ja_02_01"); //Keine Sorge, wenn die Mine erst mal wieder läuft, wirst du in Gold schwimmen.
+	AI_Output(self, hero, "Info_Mod_Ole_WarBeiAndre_Ja_02_02"); //Als Anzahlung kannst du ja diese Rüstung betrachten.
+
+	Info_ClearChoices(Info_Mod_Ole_WarBeiAndre);
+
+	B_GiveInvItems	(self, hero, ItAr_KG_01, 1);
+
+	KG_Dabei = 1;
+
+	Mod_AnzahlNebengilden += 1;
+
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_54);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_66);
+
+	Log_CreateTopic	(TOPIC_MOD_NEBENGILDEN, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_NEBENGILDEN, "Ole hat mich bei der königlichen Garde aufgenommen.");
+};
+
+INSTANCE Info_Mod_Ole_Beitritt (C_INFO)
+{
+	npc		= Mod_1011_KGD_Ole_MT;
+	nr		= 1;
+	condition	= Info_Mod_Ole_Beitritt_Condition;
+	information	= Info_Mod_Ole_Beitritt_Info;
+	permanent	= 1;
+	important	= 0;
+	description	= "Ich möchte der königlichen Garde beitreten.";
+};
+
+FUNC INT Info_Mod_Ole_Beitritt_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Ole_WarBeiAndre))
+	&& (KG_Dabei == 0)
+	&& (Mod_AnzahlNebengilden < MaxNebengilden)
+	&& (hero.guild != GIL_MIL)
+	&& (Gardist_Dabei == FALSE)
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Ole_Beitritt_Info()
+{
+	AI_Output(hero, self, "Info_Mod_Ole_Beitritt_15_00"); //Ich möchte der königlichen Garde beitreten.
+	AI_Output(self, hero, "Info_Mod_Ole_Beitritt_02_01"); //Gut. Aber du solltest wissen, dass diese Entscheidung endgültig ist. Einmal Mitglied der Garde, immer Mitglied der Garde.
+
+	Info_ClearChoices (Info_Mod_Ole_Beitritt);
+
+	Info_AddChoice(Info_Mod_Ole_Beitritt, "Ich hab's mir anders überlegt.", Info_Mod_Ole_Beitritt_Nein);
+	Info_AddChoice(Info_Mod_Ole_Beitritt, "Wenn die Bezahlung stimmt, bin ich dabei.", Info_Mod_Ole_Beitritt_Ja);
+};
+
+FUNC VOID Info_Mod_Ole_Beitritt_Nein() {
+	AI_Output(hero, self, "Info_Mod_Ole_Beitritt_Nein_15_00"); //Ich hab's mir anders überlegt.
+
+	Info_ClearChoices(Info_Mod_Ole_Beitritt);
+};
+
+FUNC VOID Info_Mod_Ole_Beitritt_Ja() {
+	AI_Output(hero, self, "Info_Mod_Ole_WarBeiAndre_Ja_15_00"); //Wenn die Bezahlung stimmt, bin ich dabei.
+	AI_Output(self, hero, "Info_Mod_Ole_WarBeiAndre_Ja_02_01"); //Keine Sorge, wenn die Mine erst mal wieder läuft, wirst du in Gold schwimmen.
+	AI_Output(self, hero, "Info_Mod_Ole_WarBeiAndre_Ja_02_02"); //Als Anzahlung kannst du ja diese Rüstung betrachten.
+
+	Info_ClearChoices(Info_Mod_Ole_Beitritt);
+
+	B_GiveInvItems	(self, hero, ItAr_KG_01, 1);
+
+	KG_Dabei = 1;
+
+	Mod_AnzahlNebengilden += 1;
+
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_54);
+	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_66);
+
+	Log_CreateTopic	(TOPIC_MOD_NEBENGILDEN, LOG_NOTE);
+	B_LogEntry	(TOPIC_MOD_NEBENGILDEN, "Ole hat mich bei der königlichen Garde aufgenommen.");
 };
 
 INSTANCE Info_Mod_Ole_Vorbereitungen (C_INFO)

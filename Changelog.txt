@@ -43,6 +43,7 @@ Fixes:
 - fixed Xardas not talking about guild quest continuation while in valley of mines
 - fixed foki dialog with Nagon not being unlocked properly sometimes
 - fixed maybe wannabe at Attila to be invincible
+- fixed automatic joining to king's guard after completing join quest
 
 
 1.0.9
