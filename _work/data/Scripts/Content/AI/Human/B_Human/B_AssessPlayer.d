@@ -1,7 +1,7 @@
 // *******************************************************
 // B_AssessPlayer
 // --------------
-// Aufgerufen durch aktive Wahrnehmung PERC_ASSESSPLAYER. 
+// Aufgerufen durch aktive Wahrnehmung PERC_ASSESSPLAYER.
 // Spieler wurde GESEHEN (Humans haben keinen sense_smell)
 // Reichweite: PERC_DIST_ACTIVE_MAX
 // *******************************************************
@@ -51,12 +51,12 @@ func void B_AssessPlayer ()
 	{
 		return;
 	};
-	
+
 	if (CurrentLevel == HALLUZINATION_ZEN)
 	&& (self.guild > GIL_SEPERATOR_HUM)	{
 		return;
 	};
-	
+
 	if (CurrentLevel == EISGEBIET_ZEN) {
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7643_HEX_Griselda_EIS))
 		&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
@@ -81,7 +81,7 @@ func void B_AssessPlayer ()
 			Npc_SetTempAttitude (self, ATT_FRIENDLY);
 		};
 	};
-		
+
 	var C_Item itm;
 	var C_Item Weapon;
 
@@ -394,7 +394,7 @@ func void B_AssessPlayer ()
 			B_SetAttitude (self, ATT_FRIENDLY);
 		};
 	};
-	
+
 	if (CurrentLevel == DIEINSEL_ZEN)
 	{
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1553_PIR_GEISTERPIRAT_DI))
@@ -420,6 +420,7 @@ func void B_AssessPlayer ()
 		};
 
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(PC_Friend_XW))
+		&& (Mod_Argez_PrepareToDie)
 		{
 			self.flags = 0;
 		};
@@ -436,19 +437,19 @@ func void B_AssessPlayer ()
 	{
 		return;
 	};
-	
+
 	// ------ SC im Dialog ------
-	if (B_GetAivar(other, AIV_INVINCIBLE) == TRUE) 
+	if (B_GetAivar(other, AIV_INVINCIBLE) == TRUE)
 	{
 		return;
 	};
-	
+
 	// ------ Ignorieren, wenn SC tot, ohnmächtig oder in magischem Schlaf ------
 	if (C_NpcIsDown (other))
 	{
 		return;
 	};
-	
+
 	itm = Npc_GetEquippedArmor(other);
 
 	if (self.guild == GIL_KDF)
@@ -477,7 +478,7 @@ func void B_AssessPlayer ()
 		|| (Hlp_IsItem(itm, ITAR_MIL_s2) == TRUE)))
 		{
 			// FUNC
-	
+
 			if (Mod_Spell_BeliarCity == FALSE)
 			{
 				B_Attack (self, other, AR_Kill, 0);
@@ -580,12 +581,12 @@ func void B_AssessPlayer ()
 		B_Attack (self, hero, AR_Kill, 0);
 		return;
 	};
-	
+
 	// ------ Spieler ist in ein Monster verwandelt ------
 	// ACHTUNG: NSCs haben noch Perm_Attitude zu verwandeltem Player, die Guild-Attitude overridet (d.h. sie sind i.d.R. neutral), weswegen AssessEnemy nicht greift
-	if (other.guild > GIL_SEPERATOR_HUM) 
+	if (other.guild > GIL_SEPERATOR_HUM)
 	{
-		if (C_NpcIsGateGuard (self)) //Wachen müssen auch freudliches/neutrales SC-Monster aufhalten 
+		if (C_NpcIsGateGuard (self)) //Wachen müssen auch freudliches/neutrales SC-Monster aufhalten
 		{
 			AI_StandUpQuick	(self);									//B_Attack hat nur normalen AI_StandUp
 			B_Attack (self, other, AR_MonsterCloseToGate, 0);		//angreifen oder fliehen
@@ -602,10 +603,10 @@ func void B_AssessPlayer ()
 			};
 		};
 	};
-	
+
 	// ------ Spieler ist Enemy ------
-	if (B_AssessEnemy())	
-	{ 
+	if (B_AssessEnemy())
+	{
 		return;
 	};
 	// -------- Spieler hat Banditen Rüstung an ------
@@ -614,22 +615,22 @@ func void B_AssessPlayer ()
 	{
 		B_Attack (self,other,AR_GuildEnemy,0);
 	};
-	
+
 	// ------ Spieler ist Mörder ------
 	if (B_GetPlayerCrime(self) == CRIME_MURDER)
 	&& (C_WantToAttackMurder(self, other))
 	&& (Npc_GetDistToNpc(self, other) <= PERC_DIST_INTERMEDIAT)
 	{
-		B_Attack (self, other, AR_HumanMurderedHuman, 0);	
+		B_Attack (self, other, AR_HumanMurderedHuman, 0);
 		return;
 	};
-	
+
 	// ------ SC ist in einem Portalraum, der mir oder meinen Freuden gehört ------
-	if (B_AssessEnterRoom())	
+	if (B_AssessEnterRoom())
 	{
 		return;
 	};
-	
+
 	// ------ SC hat irgendeine Waffe bereit -------
 	if (B_AssessDrawWeapon())
 	{
@@ -639,7 +640,7 @@ func void B_AssessPlayer ()
 	{
 		Player_DrawWeaponComment = FALSE;
 	};
-	
+
 	// ------ SC schleicht -------
 	if (C_BodyStateContains(other, BS_SNEAK))
 	{
@@ -659,19 +660,19 @@ func void B_AssessPlayer ()
 			Player_SneakerComment = FALSE;
 		};
 	};
-	
+
 	// FLAG freimachen
 	if (!C_BodyStateContains(other, BS_LIE))
 	{
 		Player_GetOutOfMyBedComment = FALSE;
 	};
-	
-	
+
+
 	// FUNC
-	
+
 	//------------------------------------
-	//Joly: ImportantInfos für AmbientDMT! 
-	
+	//Joly: ImportantInfos für AmbientDMT!
+
 	//------------------------------------
 
 	// ------ Hat NSC Important Info für Spieler? Auch GUARDPASSAGE ------
@@ -682,7 +683,7 @@ func void B_AssessPlayer ()
 		if (C_NpcIsGateGuard(self))
 		{
 			B_SetAivar(self, AIV_NpcStartedTalk, TRUE);
-			
+
 			B_AssessTalk();
 			return;
 		}
@@ -700,33 +701,33 @@ func void B_AssessPlayer ()
 			&& (C_PlayerHasFakeGuild (self,other) == FALSE)
 			{
 				B_SetAivar(self, AIV_NpcStartedTalk, TRUE);
-				
+
 				B_AssessTalk();
 				return;
 			};
 		};
-	};	
-	
+	};
+
 	// ------ sonst den Spieler einfach grüßen (wenn ich ihm entgegenkomme) ------
 	if (C_BodyStateContains(self, BS_WALK))
 	&& (Npc_GetDistToNpc(self,other) <= PERC_DIST_DIALOG)			// Npc_CanSeeNpc hier sowieso == TRUE; sonst keine ASSESSPLAYER-Wahrnehmung
 	&& (Npc_RefuseTalk(other) == FALSE)		//Damit kein Gruß-Maschinengewehr losgeht
 	&& (!C_NpcIsGateGuard (self))	//GateGuards benutzen RefuseTalk-Counter, um zu verhindern, daß der Spieler von hinten kommend auch angequatscht wird
-	&& (C_PlayerHasFakeGuild (self,other) == FALSE)			
+	&& (C_PlayerHasFakeGuild (self,other) == FALSE)
 	&& (!C_NpcIsSeelenpeiniger(self))
-	{	
+	{
 		B_LookAtNpc 			(self, other);
 		B_Say_GuildGreetings 	(self, other);
-		B_StopLookAt 			(self);		
+		B_StopLookAt 			(self);
 		Npc_SetRefuseTalk(other,20); //BEACHTEN: other ist Spieler!
 	};
-	
+
 	// ------ GuardPassage AIVAR des Spielers resetten ------
 	if (C_NpcIsGateGuard (self))
 	&& (Npc_GetDistToNpc (self, other) > PERC_DIST_DIALOG)
 	{
 		self.aivar[AIV_Guardpassage_Status] = GP_NONE;
 	};
-	
+
 	return;
 };

@@ -173,7 +173,7 @@ FUNC VOID Info_Mod_Argez_XW_Ende_B()
 	Info_ClearChoices	(Info_Mod_Argez_XW_Ende);
 
 	AI_StopProcessInfos	(self);
-	
+
 	B_StartOtherRoutine(self, "RITUAL");
 
 	AI_Teleport	(Xeres_02, "TOT");
@@ -190,6 +190,8 @@ FUNC VOID Info_Mod_Argez_XW_Ende_A()
 	AI_StopProcessInfos	(self);
 
 	self.flags = 0;
+
+	Mod_Argez_PrepareToDie = TRUE;
 
 	AI_UnequipArmor	(self);
 
