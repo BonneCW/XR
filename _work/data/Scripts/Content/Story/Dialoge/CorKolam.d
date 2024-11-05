@@ -75,8 +75,8 @@ FUNC VOID Info_Mod_Kolam_SleeperDead_Info()
 
 INSTANCE Info_Mod_Kolam_EXIT (C_INFO)
 {
-	npc		= Mod_1981_Kolam_FI;
-	nr		= 1;
+	npc			= Mod_1981_Kolam_FI;
+	nr			= 1;
 	condition	= Info_Mod_Kolam_EXIT_Condition;
 	information	= Info_Mod_Kolam_EXIT_Info;
 	permanent	= 1;

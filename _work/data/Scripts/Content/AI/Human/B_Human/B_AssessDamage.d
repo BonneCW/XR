@@ -14,7 +14,7 @@ func void B_AssessDamage ()
 	{
 		return;
 	};
-	
+
 	if (CurrentLevel == HALLUZINATION_ZEN)
 	&& (self.guild > GIL_SEPERATOR_HUM) {
 		return;
@@ -56,14 +56,14 @@ func void B_AssessDamage ()
 		else
 		{
 			self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS];
-			
+
 			if (self.flags != 2)
 			{
 				return;
 			};
 		};
 	};
-	
+
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7587_OUT_Wilderer_NW))
 	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7588_OUT_Wilderer_NW)) {
 		if (self.aivar[AIV_PARTYMEMBER]) {
@@ -73,7 +73,7 @@ func void B_AssessDamage ()
 
 	if (C_NpcIsHero(other))
 	&& (Unsichtbarkeitsperk == TRUE)
-	{		
+	{
 		hero.flags = 0;
 
 		Unsichtbarkeitsperk = FALSE;
@@ -130,7 +130,7 @@ func void B_AssessDamage ()
 		{
 			if (Hlp_Random(1000) > 100)
 			{
-				self.attribute[ATR_HitPoints] -= self.attribute[ATR_HitPoints_MAX] / 10; 
+				self.attribute[ATR_HitPoints] -= self.attribute[ATR_HitPoints_MAX] / 10;
 			}
 			else
 			{
@@ -189,7 +189,7 @@ func void B_AssessDamage ()
 			};
 
 			return;
-		};		
+		};
 
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Kobold_11010_NW))
 		{
@@ -297,8 +297,8 @@ func void B_AssessDamage ()
 		AI_StartState	(self, ZS_Knockout, 0, "");
 
 		return;
-	};	
-	
+	};
+
 	// AIVARS
 
 	if (CurrentLevel == XERESWELT_ZEN)
@@ -317,38 +317,38 @@ func void B_AssessDamage ()
 	{
 		self.aivar[AIV_ArenaFight] = AF_AFTER_PLUS_DAMAGE;
 	};
-	
+
 	if self.aivar [AIV_EnemyOverride] == TRUE
 	{
-		
+
 	};
 	// ------ Wenn NSC im ZS_Attack ------
 	if (Npc_IsInState(self,ZS_Attack))
 	{
 		// EXIT IF...
-		
+
 		// ------ Freunde ignorieren Treffer vom Spieler im Kampf ------
 		if (Npc_IsPlayer (other))
 		&& (self.npctype == NPCTYPE_FRIEND)
 		{
 			return;
 		};
-		
+
 		// ------ Partymember ignorieren Treffer vom Spieler im Kampf ------
 		if (Npc_IsPlayer (other))
 		&& (self.aivar[AIV_PARTYMEMBER] == TRUE)
 		{
 			return;
 		};
-		
+
 		// FUNC
-		
+
 		// ------ Wenn ich von jemand ANDEREM getroffen werde ------
 		if (Hlp_GetInstanceID (other) != self.aivar[AIV_LASTTARGET])
 		{
 			// ------ NEUER Angreifer ist NPC ODER zum zweiten MAl (von Hero) getroffen ------
 			if (self.aivar[AIV_HitByOtherNpc] == Hlp_GetInstanceID (other))
-			|| (Hlp_GetInstanceID(other) != Hlp_GetInstanceID(hero)) 
+			|| (Hlp_GetInstanceID(other) != Hlp_GetInstanceID(hero))
 			{
 				Npc_SetTarget (self, other); //Ziel wechseln
 			}
@@ -357,19 +357,19 @@ func void B_AssessDamage ()
 				self.aivar[AIV_HitByOtherNpc] = Hlp_GetInstanceID (other); //EIN Freischlag
 			};
 		};
-			
+
 		return;
 	};
-	
-	
+
+
 	// EXIT IF
-	
-	// ------ NSC ist ENEMY ----- 
+
+	// ------ NSC ist ENEMY -----
 	if (B_AssessEnemy())
 	{
 		return;
 	};
-	
+
 	// ------ Egill/Enim NSCs (Story-Angreifer) ------
 	if (!Npc_IsPlayer(other))
 	&& (other.aivar[AIV_ATTACKREASON] == AR_NONE)
@@ -377,7 +377,7 @@ func void B_AssessDamage ()
 		B_Attack (self, other, AR_NONE, 0);		//angreifen oder fliehen
 		return;
 	};
-		
+
 	// ------ Spieler hat mit NK-Waffe angegriffen ------
 	if (Npc_IsInFightMode (other, FMODE_MELEE))
 	|| (Npc_IsInFightMode (other, FMODE_FIST))
@@ -399,10 +399,10 @@ func void B_AssessDamage ()
 		};
 	};
 
-	Npc_SendPassivePerc	(self, PERC_ASSESSFIGHTSOUND, self, other);	
-	
+	Npc_SendPassivePerc	(self, PERC_ASSESSFIGHTSOUND, self, other);
+
 	// FUNC
-	
+
 	B_Attack (self, other, AR_ReactToDamage, 0);		//angreifen oder fliehen
 	return;
 };

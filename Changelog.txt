@@ -49,6 +49,7 @@ Fixes:
 - fixed getting less XP using Valentine for Valentino's rescue than doing it alone
 - fixed Gunnar's chest being empty
 - fixed key for storage in old camp cellar missing
+- fixed Gidan and Kolam not being invincible on flying island
 
 
 1.0.9
