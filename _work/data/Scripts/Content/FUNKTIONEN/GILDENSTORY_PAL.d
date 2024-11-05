@@ -10,7 +10,7 @@ FUNC VOID GILDENSTORY_PAL()
 		{
 			Mod_InErfinderhaus = TRUE;
 		};
-	
+
 		if (Mod_MitLawrenceGesprochen == 1)
 		&& (Npc_GetDistToWP(Mod_1730_MIL_Lawrence_NW, "NW_CITY_UPTOWN_PATH_12") < 1000)
 		{
@@ -101,7 +101,7 @@ FUNC VOID GILDENSTORY_PAL()
 
 				CutsceneAn = FALSE;
 			};
-			
+
 
 			Mod_MitLawrence_Counter += 1;
 		};
@@ -131,7 +131,7 @@ FUNC VOID GILDENSTORY_PAL()
 				B_StartOtherRoutine	(Mod_1730_MIL_Lawrence_NW, "NORMAL");
 				//B_StartOtherRoutine	(Mod_594_NONE_Lutero_NW, "BRIEF");
 			};
-		
+
 			Mod_LawrenceLegtBrief += 1;
 		};
 
@@ -168,7 +168,7 @@ FUNC VOID GILDENSTORY_PAL()
 				B_StartOtherRoutine	(Mod_591_NONE_Larius_NW, "TREFFEN");
 				B_StartOtherRoutine	(Mod_594_NONE_Lutero_NW, "TRADING");
 			};
-		
+
 			Mod_LuteroLiestBrief += 1;
 		};
 
@@ -285,7 +285,7 @@ FUNC VOID GILDENSTORY_PAL()
 				AI_Teleport	(Mod_7394_PSINOV_Novize_NW, "TOT");
 				AI_Teleport	(Mod_7395_PSINOV_Novize_NW, "TOT");
 				AI_Teleport	(Mod_7396_PSINOV_Novize_NW, "TOT");
-		
+
 				Mod_PalaKapitel3 = 4;
 
 				CutsceneAn = FALSE;
@@ -343,11 +343,11 @@ FUNC VOID GILDENSTORY_PAL()
 			PrintScreen ("Galf stürmt aus dem Zimmer", -1, YPOS_LevelUp, FONT_Screen, 2);
 
 			Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);
-		
+
 			AI_Teleport	(Mod_7235_NONE_Galf_NW, "NW_CITY_HABOUR_PUFF_IN_07");
 
 			B_StartOtherRoutine	(Mod_7235_NONE_Galf_NW, "KO");
-		
+
 			AI_Teleport	(Mod_7235_NONE_Galf_NW, "NW_CITY_HABOUR_PUFF_IN_07");
 		};
 
@@ -518,7 +518,6 @@ FUNC VOID GILDENSTORY_PAL()
 	if (CurrentLevel == FLIEGENDEINSEL_ZEN)
 	{
 		if (Mod_FI_Quest == FALSE)
-		&& (Npc_GetDistToWP(hero, "FI_03") < 1000)
 		{
 			Log_CreateTopic	(TOPIC_MOD_PAL_FI, LOG_MISSION);
 			B_SetTopicStatus	(TOPIC_MOD_PAL_FI, LOG_RUNNING);
@@ -987,7 +986,7 @@ FUNC VOID GILDENSTORY_PAL()
 				AI_Teleport	(Mod_1016_KGD_Hymir_MT, "TOT");
 				B_StartOtherRoutine	(Mod_1016_KGD_Hymir_MT, "TOT");
 				AI_Teleport	(Mod_1016_KGD_Hymir_MT, "TOT");
-				
+
 				AI_Teleport	(Mod_7698_PAL_Hagen_MT, "TOT");
 				B_StartOtherRoutine	(Mod_7698_PAL_Hagen_MT, "TOT");
 				AI_Teleport	(Mod_7698_PAL_Hagen_MT, "TOT");
