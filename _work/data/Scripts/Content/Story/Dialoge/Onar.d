@@ -216,11 +216,11 @@ FUNC VOID Info_Mod_Onar_Umgehauen_Info()
 		{
 			AI_Output(self, hero, "Info_Mod_Onar_Umgehauen_32_03"); //Tja, das war wohl nichts.
 		};
-							
+
 		// ------ In jedem Fall: Arena-Kampf abgeschlossen ------
 		self.aivar[AIV_ArenaFight] = AF_NONE;
-		
-		// ------ AIVAR resetten! ------	
+
+		// ------ AIVAR resetten! ------
 		self.aivar[AIV_LastFightComment] = TRUE;
 	};
 };
@@ -266,7 +266,7 @@ FUNC VOID Info_Mod_Onar_Wasili_02_B()
 	AI_Output(self, hero, "Info_Mod_Onar_Wasili_02_B_32_01"); //Was den Lump wieder zurück auf den Hof ...
 	AI_Output(hero, self, "Info_Mod_Onar_Wasili_02_C_15_02"); //Nun gut, dann eben nicht ...
 	AI_Output(self, hero, "Info_Mod_Onar_Wasili_02_B_32_03"); //Ist ja schon gut, er darf zurück. Und jetzt beeil dich.
-	
+
 	B_StartOtherRoutine	(Mod_100_BAU_Wasili_NW, "START");
 
 	Mod_WM_WasiliQuest = 4;
@@ -357,12 +357,13 @@ FUNC VOID Info_Mod_Onar_Dieb_Info()
 	AI_Output(self, hero, "Info_Mod_Onar_Dieb_32_02"); //Ich hab was zu tun für dich.
 	AI_Output(self, hero, "Info_Mod_Onar_Dieb_32_03"); //In letzter Zeit fehlen immer öfter Waren aus dem Lager.
 	AI_Output(self, hero, "Info_Mod_Onar_Dieb_32_04"); //Finde den Dieb und bring mir die Sachen zurück.
+	AI_Output(self, hero, "Info_Mod_Onar_Dieb_32_05"); //Es fehlen 20 Stücke rohes Fleisch, 6 Stücke Käse und 10 Flaschen Wasser.
 
 	Npc_ExchangeRoutine	(Mod_785_BAU_Gunnar_NW, "DIEB");
 
 	Log_CreateTopic	(TOPIC_MOD_BAUER_DIEB, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_BAUER_DIEB, LOG_RUNNING);
-	B_LogEntry	(TOPIC_MOD_BAUER_DIEB, "Einer der Bauern stiehlt Waren aus dem Lager von Onar. Ich soll ihn fassen und die Sachen zurückbringen.");
+	B_LogEntry	(TOPIC_MOD_BAUER_DIEB, "Einer der Bauern stiehlt Waren aus dem Lager von Onar. Ich soll ihn fassen und die Sachen zurückbringen.\nEs fehlen:\n- 20x rohes Fleisch\n- 6x Käse\n- 10x Wasser");
 };
 
 INSTANCE Info_Mod_Onar_Dieb_Erwischt (C_INFO)
@@ -390,7 +391,7 @@ FUNC INT Info_Mod_Onar_Dieb_Erwischt_Condition()
 
 FUNC VOID Info_Mod_Onar_Dieb_Erwischt_Info()
 {
-	AI_Output(hero, self, "Info_Mod_Onar_Dieb_Erwischt_15_00"); //Ich hab die Sachen.
+	AI_Output(hero, self, "Info_Mod_Onar_Dieb_Erwischt_15_00"); //Ich hab die Sachen. Gunnar war der Dieb.
 	AI_Output(self, hero, "Info_Mod_Onar_Dieb_Erwischt_32_01"); //Sehr gut. Gib sie mir.
 
 	Npc_RemoveInvItems	(hero, ItFo_MuttonRaw, 20);
