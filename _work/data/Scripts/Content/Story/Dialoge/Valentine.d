@@ -400,7 +400,7 @@ FUNC VOID Info_Mod_Valentine_Spy01_Info()
 
 	AI_GotoWP	(self, "NW_CITY_JAEGER_11");
 	AI_GotoWP	(self, "NW_CITY_JAEGER_08");
-	
+
 	AI_StopProcessInfos	(self);
 };
 
@@ -457,7 +457,7 @@ FUNC VOID Info_Mod_Valentine_Spy02_Info()
 
 	AI_GotoWP	(self, "NW_CITY_JAEGER_11");
 	AI_GotoWP	(self, "NW_CITY_JAEGER_08");
-	
+
 	AI_StopProcessInfos	(self);
 };
 
@@ -575,7 +575,7 @@ FUNC VOID Info_Mod_Valentine_Kill01_C()
 
 	AI_GotoWP	(self, "NW_CITY_JAEGER_18");
 	AI_GotoWP	(self, "NW_CITY_JAEGER_08");
-	
+
 	AI_StopProcessInfos	(self);
 };
 
@@ -593,7 +593,7 @@ FUNC VOID Info_Mod_Valentine_Kill01_B()
 
 	AI_GotoWP	(self, "NW_CITY_JAEGER_18");
 	AI_GotoWP	(self, "NW_CITY_JAEGER_08");
-	
+
 	AI_StopProcessInfos	(self);
 };
 
@@ -611,7 +611,7 @@ FUNC VOID Info_Mod_Valentine_Kill01_G()
 
 	AI_GotoWP	(self, "NW_CITY_JAEGER_18");
 	AI_GotoWP	(self, "NW_CITY_JAEGER_08");
-	
+
 	AI_StopProcessInfos	(self);
 };
 
@@ -629,7 +629,7 @@ FUNC VOID Info_Mod_Valentine_Kill01_F()
 
 	AI_GotoWP	(self, "NW_CITY_JAEGER_18");
 	AI_GotoWP	(self, "NW_CITY_JAEGER_08");
-	
+
 	AI_StopProcessInfos	(self);
 };
 
@@ -647,7 +647,7 @@ FUNC VOID Info_Mod_Valentine_Kill01_E()
 
 	AI_GotoWP	(self, "NW_CITY_JAEGER_18");
 	AI_GotoWP	(self, "NW_CITY_JAEGER_08");
-	
+
 	AI_StopProcessInfos	(self);
 };
 
@@ -665,7 +665,7 @@ FUNC VOID Info_Mod_Valentine_Kill01_A()
 
 	AI_GotoWP	(self, "NW_CITY_JAEGER_18");
 	AI_GotoWP	(self, "NW_CITY_JAEGER_08");
-	
+
 	AI_StopProcessInfos	(self);
 };
 
@@ -695,14 +695,15 @@ FUNC INT Info_Mod_Valentine_Kill01_Fertig_Condition()
 
 FUNC VOID Info_Mod_Valentine_Kill01_Fertig_Info()
 {
+
+	B_GivePlayerXP	(Mod_7032_OUT_Entfuehrer_NW.level * XP_PER_VICTORY);
+
 	if (Npc_HasItems(self, ItPo_Gift) >= 3)
 	|| (Npc_HasItems(self, ItPo_Pflanzengift) >= 1)
 	|| (Npc_HasItems(self, ItPo_Tiergift) >= 1)
 	|| (Npc_HasItems(self, ItPo_Mischgift) >= 1)
 	{
 		AI_Output(self, hero, "Info_Mod_Valentine_Kill01_Fertig_12_00"); //Der dürfte nie wieder aufstehen.
-
-		B_GivePlayerXP	(Mod_7032_OUT_Entfuehrer_NW.level/2);
 
 		B_KillNpc	(Mod_7032_OUT_Entfuehrer_NW);
 	}
@@ -754,7 +755,7 @@ FUNC VOID Info_Mod_Valentine_Kill02_Info()
 
 	AI_GotoWP	(self, "NW_CITY_JAEGER_18");
 	AI_GotoWP	(self, "NW_CITY_JAEGER_08");
-	
+
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(Mod_7031_OUT_Entfuehrer_NW, "KILLER");
@@ -810,7 +811,7 @@ FUNC VOID Info_Mod_Valentine_Kill03_Info()
 	AI_Output(hero, self, "Info_Mod_Valentine_Kill03_15_00"); //Ich kümmere mich mal kurz um den mit der schwachen Blase.
 
 	Mod_ValentineKill03 = 1;
-	
+
 	AI_StopProcessInfos	(self);
 };
 

@@ -46,6 +46,7 @@ Fixes:
 - fixed maybe wannabe at Attila to be invincible
 - fixed automatic joining to king's guard after completing join quest
 - fixed Argez dieing too early at game end when using magic
+- fixed getting less XP using Valentine for Valentino's rescue than doing it alone
 
 
 1.0.9
