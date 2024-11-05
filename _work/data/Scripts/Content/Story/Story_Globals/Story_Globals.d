@@ -1731,6 +1731,7 @@ var int Mod_Tretor_Beat;
 var int Mod_Darrion_Sumpfmensch;
 var int Mod_BDS_FightStart;
 var int Mod_Xardas_OrcsForGuildQuestSpawned;
+var int Mod_SwimBonusCounter;
 
 var C_NPC NPC_Orkjaeger_01;
 var C_NPC NPC_Orkjaeger_02;

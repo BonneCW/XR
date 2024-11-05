@@ -71,8 +71,11 @@ FUNC VOID Zustaende()
 		Mod_SchwimmTauchCounter += 1;
 
 		if (Mod_Schwimmpraxis == 500)
+		&& (Mod_SwimBonusCounter < 10)
 		{
 			hero.attribute[ATR_STRENGTH] += 1;
+
+			Mod_SwimBonusCounter += 1;
 
 			AI_PrintScreen	("+1 Stärke durch viel Schwimmen", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 
@@ -197,7 +200,7 @@ FUNC VOID Zustaende()
 				HatErstesMalNiesen = TRUE;
 
 				AI_StandUp (hero);
-	
+
 				Randomizer = Hlp_Random(2);
 
 				if (Randomizer == 1)
@@ -216,13 +219,13 @@ FUNC VOID Zustaende()
 				if (Randomizer == 184)
 				{
 					AI_StandUp (hero);
-	
+
 					AI_PlayAni	(hero, "T_NIESEN");
 				}
 				else if (Randomizer == 99)
 				{
 					AI_StandUp (hero);
-	
+
 					AI_PlayAni	(hero, "T_NIESEN2");
 				};
 			};
@@ -353,7 +356,7 @@ FUNC VOID Zustaende()
 		};
 
 	};
-	
+
 	// Betrunken
 
 	if (Mod_Betrunken == 1)
@@ -443,7 +446,7 @@ FUNC VOID Zustaende()
 				PrintScreen ("Es gibt sicherlich ein Gegengift bei einem Heiler oder einm Händler ...", -1, YPOS_LevelUp-5, FONT_Screen, 2);
 			};
 		};
-			
+
 		Mod_Fliegenpilzgift = 2;
 
 		if (Pilzgift == 0)
@@ -579,7 +582,7 @@ FUNC VOID Zustaende()
 		};
 	};
 
-	
+
 
 	// Rüstungscheck wegen Eiswelt
 

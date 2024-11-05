@@ -27,6 +27,7 @@ Enhancements:
 
 - added a few more picklocks to Thorben for chapter 1
 - improved Lich spawn
+- added limit for how often strength bonus for swimming is granted
 
 Fixes:
 
