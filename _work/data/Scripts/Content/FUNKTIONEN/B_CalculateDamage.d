@@ -317,7 +317,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(Monster_11067_Talos_EIS))
 	{
 		if (Npc_IsInFightMode(taeter, FMODE_FIST))
-		{			
+		{
 			if (damage < 0)
 			{
 				damage = -1;
@@ -384,7 +384,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 				opfer.aivar[AIV_Trefferzone] = 2;
 			};
 		};
-		
+
 		if (GFA_ACTIVE) {
 			if (opfer.aivar[AIV_LastHitZone] == TARGET_RUMP) {
 				if (opfer.guild > GIL_SEPERATOR_HUM)
@@ -508,6 +508,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 				Npc_ClearAIQueue(Warg_Atalante);
 				AI_StandUP(Warg_Atalante);
 				AI_Teleport(Warg_Atalante, "TOT");
+				B_RemoveNpc(Warg_Atalante);
 				//B_RemoveNpc	(Warg_Atalante);
 				return;
 			};
@@ -526,7 +527,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			damage += 50;
 		};
-				
+
 		if (opfer.guild > GIL_SEPERATOR_HUM)
 		&& (opfer.aivar[AIV_Trefferzone] == 0)
 		{
@@ -913,12 +914,12 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 	};
 
 	if (Mod_GottBeliar > 0)
-	&& ((taeter.guild == GIL_SUMMONED_GOBBO_SKELETON)	
-	|| (taeter.guild == GIL_SUMMONED_WOLF)	
-	|| (taeter.guild == GIL_SUMMONED_SKELETON)	
-	|| (taeter.guild == GIL_SUMMONED_GOLEM)	
-	|| (taeter.guild == GIL_SUMMONED_DEMON)	
-	|| (taeter.guild == GIL_SUMMONEDGUARDIAN)	
+	&& ((taeter.guild == GIL_SUMMONED_GOBBO_SKELETON)
+	|| (taeter.guild == GIL_SUMMONED_WOLF)
+	|| (taeter.guild == GIL_SUMMONED_SKELETON)
+	|| (taeter.guild == GIL_SUMMONED_GOLEM)
+	|| (taeter.guild == GIL_SUMMONED_DEMON)
+	|| (taeter.guild == GIL_SUMMONEDGUARDIAN)
 	|| (taeter.guild == GIL_SUMMONEDZOMBIE))
 	{
 		damage += Mod_GottBeliar;
@@ -1008,7 +1009,7 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 		{
 			taeter.attribute[ATR_HITPOINTS] += damage / 20; // 5% des Schadens kommen an HP dazu
 		};
-		
+
 		if (Mod_AnnaQuest == 8) {
 			if (Hlp_GetInstanceID(taeter) != Hlp_GetInstanceID(hero)) {
 				damage = 1; // Richter, Schoeppe and Co. shouldn't deal much damage, player decides who will die
@@ -1022,9 +1023,9 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 				Npc_ClearAIQueue	(opfer);
 				AI_StandUPQuick	(opfer);
 				opfer.flags = 2;
-				
+
 				Mod_Poloch_Beat = TRUE;
-				
+
 				if (Mod_Tretor_Beat) {
 					Mod_PolochTretor = 3;
 				};
@@ -1035,9 +1036,9 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 				Npc_ClearAIQueue	(opfer);
 				AI_StandUPQuick	(opfer);
 				opfer.flags = 2;
-				
+
 				Mod_Tretor_Beat = TRUE;
-				
+
 				if (Mod_Poloch_Beat) {
 					Mod_PolochTretor = 3;
 				};
@@ -1058,13 +1059,13 @@ FUNC VOID B_CalculateDamage (var C_NPC opfer, var C_NPC taeter)
 			damage = opfer.attribute[ATR_HITPOINTS] - 10;
 		};
 	};
-	
+
 	if (damage == -1) { // damage == -1 means explicit no damage
 		damage = 0;
 	} else if (damage < 5) { // min damage
 		damage = 5;
 	};
-	
+
 	if (damage > 0) {
 		if (Hlp_GetInstanceID(opfer) == Hlp_GetInstanceID(hero))
 		&& (Hlp_GetInstanceID(taeter) == Hlp_GetInstanceID(Mod_1872_NONE_Unbekannt_MT)) {

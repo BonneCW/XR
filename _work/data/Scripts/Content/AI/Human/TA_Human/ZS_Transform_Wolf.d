@@ -2,7 +2,7 @@
 func void zs_Transform_Wolf()
 {
 	B_ClearPerceptions (self);
-	
+
 	B_UseHat (self);
 
 	Npc_PercEnable (self, PERC_ASSESSMAGIC, B_AssessMagic);
@@ -63,6 +63,7 @@ func void zs_Transform_Wolf_end()
 		else if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7678_OUT_Atalante_NW))
 		{
 			Wld_InsertNpc (Warg_Atalante2, "MOD_7678_OUT_ATALANTE_NW");
+			B_RemoveNpc(Mod_7678_OUT_Atalante_NW);
 		};
 	};
 };

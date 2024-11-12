@@ -61,6 +61,7 @@ Fixes:
 - fixed Malcom not taking his money bag anymore when he's already in Jharkendar
 - fixed Ramirez complaining when stealing judge's clothes
 - fixed thieves in treasure chamber in Khorata complaining when hero takes something
+- fixed potential problems with Atalante's warg transformations
 
 
 1.0.9
