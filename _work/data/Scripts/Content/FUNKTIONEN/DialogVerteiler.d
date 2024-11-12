@@ -70,6 +70,10 @@ FUNC VOID DialogVerteiler()
 		Info_Mod_Xardas_NW_NachAufnahmeQuest.npc		= Mod_513_DMB_Xardas_NW;
 		Info_Mod_Xardas_MT_Befoerderung.npc		= Mod_513_DMB_Xardas_NW;
 		Info_Mod_Xardas_MT_BefoerderungKrieger.npc		= Mod_513_DMB_Xardas_NW;
+
+		// Malcom
+
+		Info_Mod_Malcom_NW_Beutel.npc = Mod_963_PIR_Malcom_NW;
 	}
 	else if (CurrentLevel == ADDONWORLD_ZEN)
 	{
@@ -78,6 +82,10 @@ FUNC VOID DialogVerteiler()
 		Info_Mod_Cronos_Hi.npc		= Mod_9001_KDW_Cronos_AW;
 		Info_Mod_Cronos_Trade.npc	= Mod_9001_KDW_Cronos_AW;
 		Info_Mod_Cronos_EXIT.npc	= Mod_9001_KDW_Cronos_AW;
+
+		// Malcom
+
+		Info_Mod_Malcom_NW_Beutel.npc = Mod_935_PIR_Malcom_AW;
 	}
 	else if (CurrentLevel == DRAGONISLAND_ZEN)
 	{

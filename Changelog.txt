@@ -58,6 +58,7 @@ Fixes:
 - fixed start sequence of guard of Innos quest at Xardas not triggering properly
 - fixed teleport at Josephina sometimes not directly triggering
 - fixed platform in Jharkendar for Beliar storyline only being triggerable with zap and not other lightning spells
+- fixed Malcom not taking his money bag anymore when he's already in Jharkendar
 
 
 1.0.9
