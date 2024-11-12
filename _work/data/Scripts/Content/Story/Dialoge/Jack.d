@@ -359,6 +359,7 @@ FUNC VOID Info_Mod_Jack_Masut_B()
 	AI_Output(hero, self, "Info_Mod_Jack_Masut_B_15_06"); //Dann gib mir deinen Degen. Ich brauch einen Beweis für deinen Tod.
 	AI_Output(self, hero, "Info_Mod_Jack_Masut_B_14_07"); //Hier.
 
+	AI_UnequipWeapons (self);
 	B_GiveInvItems	(self, hero, ItMw_Degen_Jack, 1);
 
 	AI_Output(hero, self, "Info_Mod_Jack_Masut_B_15_08"); //Das muss sein. Und lass deinen Kram hier. Nimm nur das Nötigste mit.

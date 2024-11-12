@@ -54,6 +54,7 @@ Fixes:
 - fixed potentially paying orc hunters twice
 - fixed promotion to black mage/warrior only working while Xardas is in valley of mines
 - fixed Myxir not having dialog about teaching taking blood when being black warrior
+- fixed Jack not having his proper weapon
 
 
 1.0.9
