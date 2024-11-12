@@ -68,6 +68,8 @@ FUNC VOID DialogVerteiler()
 		Info_Mod_Xardas_NW_Namib.npc		= Mod_513_DMB_Xardas_NW;
 		Info_Mod_Xardas_NW_Lernen_MANA.npc		= Mod_513_DMB_Xardas_NW;
 		Info_Mod_Xardas_NW_NachAufnahmeQuest.npc		= Mod_513_DMB_Xardas_NW;
+		Info_Mod_Xardas_MT_Befoerderung.npc		= Mod_513_DMB_Xardas_NW;
+		Info_Mod_Xardas_MT_BefoerderungKrieger.npc		= Mod_513_DMB_Xardas_NW;
 	}
 	else if (CurrentLevel == ADDONWORLD_ZEN)
 	{
@@ -174,6 +176,8 @@ FUNC VOID DialogVerteiler()
 		Info_Mod_Xardas_NW_Namib.npc		= Mod_680_DMB_Xardas_MT;
 		Info_Mod_Xardas_NW_Lernen_MANA.npc		= Mod_680_DMB_Xardas_MT;
 		Info_Mod_Xardas_NW_NachAufnahmeQuest.npc		= Mod_680_DMB_Xardas_MT;
+		Info_Mod_Xardas_MT_Befoerderung.npc		= Mod_680_DMB_Xardas_MT;
+		Info_Mod_Xardas_MT_BefoerderungKrieger.npc		= Mod_680_DMB_Xardas_MT;
 	}
 	else if (CurrentLevel == DIEINSEL_ZEN)
 	{

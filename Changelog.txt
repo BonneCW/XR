@@ -52,6 +52,7 @@ Fixes:
 - fixed Gidan and Kolam not being invincible on flying island
 - fixed flying island quest not being added to journal
 - fixed potentially paying orc hunters twice
+- fixed promotion to black mage/warrior only working while Xardas is in valley of mines
 
 
 1.0.9
