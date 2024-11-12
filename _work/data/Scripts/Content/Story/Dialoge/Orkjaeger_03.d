@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Orkjaeger_03_Condition()
 	&& (!Npc_IsDead(Mod_10013_ORC_Scout_MT))
 	&& (!Npc_IsDead(Mod_10014_ORC_Elite_MT))
 	&& (!Npc_IsDead(Mod_10015_ORC_Elite_MT))
+	&& (self.aivar[AIV_PARTYMEMBER] == FALSE)
 	{
 		return 1;
 	};

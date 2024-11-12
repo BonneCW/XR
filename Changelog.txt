@@ -51,6 +51,7 @@ Fixes:
 - fixed key for storage in old camp cellar missing
 - fixed Gidan and Kolam not being invincible on flying island
 - fixed flying island quest not being added to journal
+- fixed potentially paying orc hunters twice
 
 
 1.0.9

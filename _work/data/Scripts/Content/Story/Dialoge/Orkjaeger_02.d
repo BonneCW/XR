@@ -6,7 +6,7 @@ INSTANCE Info_Mod_Orkjaeger_02 (C_INFO)
 	information	= Info_Mod_Orkjaeger_02_Info;
 	permanent	= 1;
 	description 	= "Ich könnte etwas Unterstützung bei einem Orkproblem brauchen.";
-};                       
+};
 
 FUNC INT Info_Mod_Orkjaeger_02_Condition()
 {
@@ -17,6 +17,7 @@ FUNC INT Info_Mod_Orkjaeger_02_Condition()
 	&& (!Npc_IsDead(Mod_10013_ORC_Scout_MT))
 	&& (!Npc_IsDead(Mod_10014_ORC_Elite_MT))
 	&& (!Npc_IsDead(Mod_10015_ORC_Elite_MT))
+	&& (self.aivar[AIV_PARTYMEMBER] == FALSE)
 	{
 		return 1;
 	};
@@ -82,7 +83,7 @@ FUNC VOID Info_Mod_Orkjaeger_02_B()
 {
 	AI_Output(hero,self,"Info_Mod_Orkjaeger_02_B_15_00"); //Nein, das ist mir zu teuer.
 	AI_Output(self,hero,"Info_Mod_Orkjaeger_02_B_08_01"); //Falls es dir doch anders überlegst, weißt du, wo du mich findest.
-	
+
 	Info_ClearChoices	(Info_Mod_Orkjaeger_02);
 };
 
@@ -114,7 +115,7 @@ FUNC VOID Info_Mod_Orkjaeger_02_A()
 	B_GiveInvItems	(hero, self, ItMi_Gold, 250);
 
 	AI_Output(self, hero, "Info_Mod_Orkjaeger_02_A_08_01"); //Gut, wir sehen uns dann beim Durchgang vor dem Wald.
-	
+
 	Info_ClearChoices	(Info_Mod_Orkjaeger_02);
 
 	AI_StopProcessInfos	(self);
