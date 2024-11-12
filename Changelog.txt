@@ -60,6 +60,7 @@ Fixes:
 - fixed platform in Jharkendar for Beliar storyline only being triggerable with zap and not other lightning spells
 - fixed Malcom not taking his money bag anymore when he's already in Jharkendar
 - fixed Ramirez complaining when stealing judge's clothes
+- fixed thieves in treasure chamber in Khorata complaining when hero takes something
 
 
 1.0.9

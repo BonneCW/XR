@@ -66,6 +66,18 @@ func void B_AssessTheft ()
 		return;
 	};
 
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7709_OUT_Attila_REL)) {
+		return;
+	};
+
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7705_OUT_Cassia_REL)) {
+		return;
+	};
+
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7704_OUT_Jesper_REL)) {
+		return;
+	};
+
 	// ------ other ist NICHT der Spieler ------
 	if (!Npc_IsPlayer (other))
 	{
