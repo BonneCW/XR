@@ -258,7 +258,7 @@ FUNC VOID Info_Mod_Myxir_HabDieKraeuter_Info()
 
 	var int kraeuter;
 	kraeuter = Npc_HasItems(hero, MyxirsGiftpflanze);
-	
+
 	B_GiveInvItems	(hero, self, MyxirsGiftpflanze, Npc_HasItems(hero, MyxirsGiftpflanze));
 
 	AI_Output(self, hero, "Info_Mod_Myxir_HabDieKraeuter_28_01"); //Die kann er sich sparen! Hauptsache, er hat alles gefunden, was ich brauche.
@@ -581,7 +581,7 @@ FUNC VOID Info_Mod_Myxir_Ruestung_Info()
 	&& (Mod_Gilde == 13)
 	{
 		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_28_01"); //Ich hab gehört, dass auf dem Weg zur Ausgrabungsstätte der Wassermagier ein Nachtmahr sein soll. Mit dessen Fell könnte ich deine schwarze Magierrobe sicher ein wenig verbessern.
-	
+
 		Mod_ZweiteVerbesserung = TRUE;
 
 		Log_CreateTopic	(TOPIC_MOD_RUESTUNGSUPGADSE, LOG_NOTE);
@@ -613,7 +613,7 @@ FUNC VOID Info_Mod_Myxir_Ruestung_KDS_S ()
 		AI_Output(self, hero, "Info_Mod_Myxir_Ruestung_KDS_S_28_01"); //Alles klar.
 
 		Npc_RemoveInvItems	(hero, ItAt_NightmareFur, 1);
-		
+
 		AI_UnequipArmor	(hero);
 
 		Npc_RemoveInvItems	(hero, SChwarzmagierrobe, 1);
@@ -654,7 +654,9 @@ FUNC INT Info_Mod_Myxir_Lehrer_Condition()
 {
 	if ((Mod_Gilde == 12)
 	|| (Mod_Gilde == 13)
-	|| (Mod_Gilde == 14))
+	|| (Mod_Gilde == 14)
+	|| (Mod_Gilde == 15)
+	|| (Mod_Gilde == 16))
 	{
 		return 1;
 	};
