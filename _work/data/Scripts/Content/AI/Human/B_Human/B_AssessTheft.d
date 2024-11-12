@@ -9,7 +9,7 @@
 func void B_AssessTheft ()
 {
 	// EXIT IF...
-	
+
 	PrintDebug("Theft: 1");
 
 	B_Vergiftet (self);
@@ -49,7 +49,7 @@ func void B_AssessTheft ()
 	};*/
 	PrintDebug("Theft: 2");
 
-	
+
 	var C_NPC portalowner; portalowner = Wld_GetPlayerPortalOwner();
 
 	if ((Hlp_GetInstanceID(self) == Hlp_GetInstanceID(portalowner))
@@ -62,8 +62,12 @@ func void B_AssessTheft ()
 		return;
 	};
 
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_7708_OUT_Ramirez_REL)) {
+		return;
+	};
+
 	// ------ other ist NICHT der Spieler ------
-	if (!Npc_IsPlayer (other)) 
+	if (!Npc_IsPlayer (other))
 	{
 		return;
 	};
@@ -86,18 +90,18 @@ func void B_AssessTheft ()
 	{
 		return;
 	};
-	
+
 	// ------- Player im Haus und NSC in anderem Stockwerk ------
 	if (Wld_GetPlayerPortalGuild() >= GIL_NONE) //also NICHT Draussen (== -1)
 	&& (Npc_GetHeightToNpc(self, other) > PERC_DIST_INDOOR_HEIGHT)
 	{
 		return;
 	};
-	
+
 	// ------ ignorieren, wenn NSC-Gilde freundlich zu Taeter-Gilde ------
 	/*if (Wld_GetGuildAttitude(self.guild,other.guild) == ATT_FRIENDLY)
 	{
-		if (Hlp_IsValidItem(item)) 
+		if (Hlp_IsValidItem(item))
 		&& (Npc_OwnedByNpc(item, self))
 		{
 			//weiter (kein Abbruch bei persönlichem Besitz)
@@ -105,7 +109,7 @@ func void B_AssessTheft ()
 		else
 		{
 			return;
-		};		
+		};
 	};*/
 
 	// ------ Item gehörte mir nicht ------
@@ -113,7 +117,7 @@ func void B_AssessTheft ()
 	{
 		return;
 	};
-	
+
 	// ------ NSC kann Taeter NICHT sehen ------
 	if (!Npc_CanSeeNpc (self, other))
 	{
@@ -127,7 +131,7 @@ func void B_AssessTheft ()
 			return;
 		};
 	};
-	
+
 	// ------ ignore THEFT ------
 	if (!C_WantToAttackThief(self, other))
 	{
@@ -136,13 +140,13 @@ func void B_AssessTheft ()
 		{
 			B_MemorizePlayerCrime (self, other, CRIME_THEFT);
 		};
-		
+
 		return;
 	};
-	
-		
+
+
 	// FUNC
-	
+
 	B_Attack (self, other, AR_Theft, 0);						//angreifen oder fliehen
 
 	return;
