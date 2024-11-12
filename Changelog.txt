@@ -57,6 +57,7 @@ Fixes:
 - fixed Jack not having his proper weapon
 - fixed start sequence of guard of Innos quest at Xardas not triggering properly
 - fixed teleport at Josephina sometimes not directly triggering
+- fixed platform in Jharkendar for Beliar storyline only being triggerable with zap and not other lightning spells
 
 
 1.0.9
