@@ -274,6 +274,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 		&& (MyxirDa == FALSE)
 		&& (hero.attribute[ATR_HITPOINTS] <= 25)
 		{
+			AI_StandUp	(hero);
 			AI_Teleport	(hero, "ADW_PIRATECAMP_BEACH_16");
 			Wld_InsertNpc	(Mod_7000_KDS_Myxir_AW, "ADW_PIRATECAMP_BEACH_14");
 

@@ -56,6 +56,7 @@ Fixes:
 - fixed Myxir not having dialog about teaching taking blood when being black warrior
 - fixed Jack not having his proper weapon
 - fixed start sequence of guard of Innos quest at Xardas not triggering properly
+- fixed teleport at Josephina sometimes not directly triggering
 
 
 1.0.9
