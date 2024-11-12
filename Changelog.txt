@@ -55,6 +55,7 @@ Fixes:
 - fixed promotion to black mage/warrior only working while Xardas is in valley of mines
 - fixed Myxir not having dialog about teaching taking blood when being black warrior
 - fixed Jack not having his proper weapon
+- fixed start sequence of guard of Innos quest at Xardas not triggering properly
 
 
 1.0.9

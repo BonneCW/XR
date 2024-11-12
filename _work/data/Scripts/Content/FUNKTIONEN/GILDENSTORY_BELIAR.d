@@ -103,7 +103,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 		if (GardeAnfangCutscene == FALSE)
 		&& (Npc_GetDistToNpc(hero, Mod_513_DMB_Xardas_NW) < 500)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Myxir_Amulett))
-		&& (Npc_GetDistToWP(hero, "START") < 500)
+		&& (Npc_GetDistToWP(hero, "START") < 1500)
 		{
 			AI_GotoWP	(hero, "NW_XARDAS_TOWER_IN1_25");
 
@@ -238,7 +238,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 			if (GardeCutscene_Counter == 103)
 			{
-				B_SetLevelchange ("Minental\Minental.zen", "PALTOBURG_2");	
+				B_SetLevelchange ("Minental\Minental.zen", "PALTOBURG_2");
 
 				AI_Teleport	(hero, "OBELISKSCHREIN_WP");
 
@@ -457,7 +457,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 
 				Wld_InsertNpc	(Rabbit, "ADW_PIRATECAMP_TRAIN_01");
 				Wld_InsertNpc	(Rabbit, "ADW_PIRATECAMP_TRAIN_01");
-			
+
 				B_RemoveNpc(Mod_7000_KDS_Myxir_AW);
 			};
 		};
@@ -468,7 +468,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 		{
 			Mod_BEL_AJ = 2;
 
-			Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);	
+			Wld_PlayEffect("BLACK_SCREEN", hero, hero, 0, 0, 0, TRUE);
 
 			B_StartOtherRoutine	(Mod_764_PIR_Greg_AW, "START");
 			B_StartOtherRoutine	(Mod_928_PIR_AlligatorJack_AW, "START");
@@ -692,7 +692,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 			Wld_InsertNpc	(Mod_4008_UntoterMagier_03_MT,	"OC1");
 
 			// altes Lager von dem Jäger da unten ^^
-		
+
 			Wld_InsertNpc	(Mod_4031_UntoterNovize_16_MT, "OC1");
 			Wld_InsertNpc	(Mod_4032_UntoterNovize_17_MT, "OC1");
 			Wld_InsertNpc	(Mod_4033_UntoterNovize_18_MT, "OC1");
@@ -701,7 +701,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 			Wld_InsertNpc	(Mod_4036_UntoterMagier_05_MT, "OC1");
 
 			// Belagerer bei Onars Hof
-		
+
 			Wld_InsertNpc	(Mod_4037_UntoterNovize_20_MT, "OC1");
 			Wld_InsertNpc	(Mod_4038_UntoterNovize_21_MT, "OC1");
 			Wld_InsertNpc	(Mod_4039_UntoterNovize_22_MT, "OC1");
@@ -717,7 +717,7 @@ FUNC VOID GILDENSTORY_BELIAR()
 			Wld_InsertNpc	(Mod_4049_UntoterMagier_08_MT, "OC1");
 
 			// Talkessel für Finalschlacht
-			
+
 			Wld_InsertNpc	(Mod_4051_UntoterNovize_30_MT, "OC1");
 			Wld_InsertNpc	(Mod_4052_UntoterNovize_31_MT, "OC1");
 			Wld_InsertNpc	(Mod_4053_UntoterNovize_32_MT, "OC1");
