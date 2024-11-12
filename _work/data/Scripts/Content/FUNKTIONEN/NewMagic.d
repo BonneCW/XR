@@ -64,12 +64,17 @@ FUNC VOID NewMagic()
 			hero.aivar[AIV_Damage] = hero.attribute[ATR_HITPOINTS];
 		};
 
-		if (Mod_AuraFrost_Counter == 1)
+		if (Mod_AuraFrost_Counter <= 1)
 		{
 			Mod_AuraFrost = 0;
 		};
 
 		Mod_AuraFrost_Counter -= 1;
+	};
+
+	if (Mod_AuraFrost == 1)
+	&& (Mod_AuraFrost_Counter <= 0) {
+		Mod_AuraFrost = 0;
 	};
 
 	// Aura des Verbrennens
@@ -88,12 +93,17 @@ FUNC VOID NewMagic()
 			hero.aivar[AIV_Damage] = hero.attribute[ATR_HITPOINTS];
 		};
 
-		if (Mod_AuraFeuer_Counter == 1)
+		if (Mod_AuraFeuer_Counter <= 1)
 		{
 			Mod_AuraFeuer = 0;
 		};
 
 		Mod_AuraFeuer_Counter -= 1;
+	};
+
+	if (Mod_AuraFeuer == 1)
+	&& (Mod_AuraFeuer_Counter <= 0) {
+		Mod_AuraFeuer = 0;
 	};
 
 	// Aura der Flammen
@@ -105,12 +115,17 @@ FUNC VOID NewMagic()
 			Wld_PlayEffect("spellFX_RedGlow",  hero, hero, 0, 0, 0, FALSE );
 		};
 
-		if (Mod_AuraFlammen_Counter == 1)
+		if (Mod_AuraFlammen_Counter <= 1)
 		{
 			Mod_AuraFlammen = 0;
 		};
 
 		Mod_AuraFlammen_Counter -= 1;
+	};
+
+	if (Mod_AuraFlammen == 1)
+	&& (Mod_AuraFlammen_Counter <= 0) {
+		Mod_AuraFlammen = 0;
 	};
 
 	// Aura der Heilung
@@ -137,10 +152,15 @@ FUNC VOID NewMagic()
 			};
 		};
 
-		if (Mod_AuraHeilung_Counter == 1)
+		if (Mod_AuraHeilung_Counter <= 1)
 		{
 			Mod_AuraHeilung = 0;
 		};
 		Mod_AuraHeilung_Counter -= 1;
+	};
+
+	if (Mod_AuraHeilung == 1)
+	&& (Mod_AuraHeilung_Counter <= 0) {
+		Mod_AuraHeilung = 0;
 	};
 };
