@@ -67,6 +67,7 @@ Fixes:
 - fixed bonus for mushroom soup
 - fixed time restriction for blessing of Andre's sword being stupid
 - fixed maybe Hagen dieing in valley of mines instead of getting teleported properly
+- fixed dialog with Saturas freezing when completing the raging quest while waiting for Saturas to go to the council
 
 
 1.0.9

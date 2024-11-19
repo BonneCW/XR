@@ -874,7 +874,7 @@ FUNC VOID Info_Mod_Saturas_AW_Member_17_Info()
 	{
 		AI_Output(self, hero, "Info_Mod_Saturas_AW_Member_17_14_05"); //Damit ist also klar, dass sich Hexen in der Umgebung befinden.
 		AI_Output(hero, self, "Info_Mod_Saturas_AW_Member_17_15_06"); //Hexen?! Um was für Wesen handelt es sich genau?
-	
+
 		Info_Mod_Saturas_AW_HexenTalk();
 
 		B_GivePlayerXP	(250);
@@ -1135,7 +1135,7 @@ FUNC VOID Info_Mod_Saturas_AW_Member_24_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Saturas_AW_Member_24_14_01"); //Meine Kundschafter haben auf den Bauernhöfen Erkundigungen eingezogen und der Schluss liegt nahe, dass Hexen in der Umgebung sind.
 	AI_Output(hero, self, "Info_Mod_Saturas_AW_Member_24_15_00"); //Hexen?! Um was für Wesen handelt es sich genau?
-	
+
 	Info_Mod_Saturas_AW_HexenTalk();
 };
 
@@ -1176,7 +1176,7 @@ FUNC VOID Info_Mod_Saturas_AW_Member_25_Info()
 	};
 
 	AI_Output(self, hero, "Info_Mod_Saturas_AW_Member_25_14_06"); //Du kannst noch versuchen unsere Mitbrüder in der Stadt zu mobilisieren. Adanos möge euch behüten.
-	
+
 	B_LogEntry	(TOPIC_MOD_ADANOS_UNHEIL, "Der Moment, gegen die Ungetüme auf dem Weidenplateau loszuschlagen, scheint gekommen. Cronos und einige Wasserkrieger werden bei Orlan auf mich warten.");
 
 	B_GivePlayerXP	(1000);
@@ -1218,10 +1218,10 @@ FUNC INT Info_Mod_Saturas_AW_Member_26_Condition()
 };
 
 FUNC VOID Info_Mod_Saturas_AW_Member_26_Info()
-{			
+{
 	B_StartOtherRoutine	(Mod_763_NONE_Gaan_NW, "PRESTART");
 	B_StartOtherRoutine	(Mod_4026_NONE_Kuno_NW, "START");
-	
+
 	if (Mod_WM_CronosAttack == 3)
 	{
 		AI_Output(self, hero, "Info_Mod_Saturas_AW_Member_26_14_00"); //Unglaublich. Die Bedrohung ist tatsächlich gebannt. Monstern und Ungetümen hast du getrotzt und die Stirn geboten.
@@ -1667,6 +1667,8 @@ FUNC VOID Info_Mod_Saturas_NW_Rasend02_Info()
 	};
 
 	B_SetTopicStatus	(TOPIC_MOD_ADANOS_RASEND, LOG_SUCCESS);
+
+	AI_StopProcessInfos (self);
 };
 
 INSTANCE Info_Mod_Saturas_NW_Sweetwater (C_INFO)
@@ -1737,7 +1739,7 @@ INSTANCE Info_Mod_Saturas_PMSchulden (C_INFO)
 	condition   	= Info_Mod_Saturas_PMSchulden_Condition;
 	information 	= Info_Mod_Saturas_PMSchulden_Info;
 	permanent   	= 1;
-	important 	= 1; 
+	important 	= 1;
 };
 
 FUNC INT Info_Mod_Saturas_PMSchulden_Condition()
@@ -1763,16 +1765,16 @@ FUNC VOID Info_Mod_Saturas_PMSchulden_Info()
 		{
 			AI_Output (self, hero, "Info_Mod_Saturas_PMSchulden_14_03"); //Ich hatte dich gewarnt! Die Strafe, die du jetzt zahlen musst, ist höher!
 			AI_Output (hero, self, "Info_Mod_Saturas_PMAdd_15_00"); //Wieviel?
-			
+
 			var int diff; diff = (B_GetTotalPetzCounter(self) - Saturas_LastPetzCounter);
-		
+
 			if (diff > 0)
 			{
 				Saturas_Schulden = Saturas_Schulden + (diff * 50);
 			};
-		
+
 			if (Saturas_Schulden > 1000)	{	Saturas_Schulden = 1000;	};
-		
+
 			B_Say_Gold (self, hero, Saturas_Schulden);
 		}
 		else
@@ -1783,37 +1785,37 @@ FUNC VOID Info_Mod_Saturas_PMSchulden_Info()
 	else if (B_GetGreatestPetzCrime(self) < Saturas_LastPetzCrime)
 	{
 		AI_Output (self, hero, "Info_Mod_Saturas_PMSchulden_14_05"); //Es haben sich einige neue Dinge ergeben.
-		
+
 		if (Saturas_LastPetzCrime == CRIME_MURDER)
 		{
 			AI_Output (self, hero, "Info_Mod_Saturas_PMSchulden_14_06"); //Plötzlich gibt es niemanden mehr, der dich des Mordes bezichtigt.
 		};
-		
+
 		if (Saturas_LastPetzCrime == CRIME_THEFT)
 		|| ( (Saturas_LastPetzCrime > CRIME_THEFT) && (B_GetGreatestPetzCrime(self) < CRIME_THEFT) )
 		{
 			AI_Output (self, hero, "Info_Mod_Saturas_PMSchulden_14_07"); //Niemand erinnert sich mehr, dich bei einem Diebstahl gesehen zu haben.
 		};
-		
+
 		if (Saturas_LastPetzCrime == CRIME_ATTACK)
 		|| ( (Saturas_LastPetzCrime > CRIME_ATTACK) && (B_GetGreatestPetzCrime(self) < CRIME_ATTACK) )
 		{
 			AI_Output (self, hero, "Info_Mod_Saturas_PMSchulden_14_08"); //Es gibt keine Zeugen mehr dafür, dass du jemals in eine Schlägerei verwickelt warst.
 		};
-		
+
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
 		{
 			AI_Output (self, hero, "Info_Mod_Saturas_PMSchulden_14_09"); //Anscheinend haben sich alle Anklagen gegen dich in Wohlgefallen aufgelöst.
 		};
-		
+
 		AI_Output (self, hero, "Info_Mod_Saturas_PMSchulden_14_10"); //Ich weiß nicht, was da gelaufen ist, aber ich warne dich: Spiel keine Spielchen mit mir.
-				
+
 		// ------- Schulden erlassen oder trotzdem zahlen ------
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
 		{
 			AI_Output (self, hero, "Info_Mod_Saturas_PMSchulden_14_11"); //Ich habe mich jedenfalls entschieden, dir deine Schulden zu erlassen.
 			AI_Output (self, hero, "Info_Mod_Saturas_PMSchulden_14_12"); //Sieh zu, dass du nicht wieder in Schwierigkeiten kommst.
-	
+
 			Saturas_Schulden			= 0;
 			Saturas_LastPetzCounter 	= 0;
 			Saturas_LastPetzCrime		= CRIME_NONE;
@@ -1825,7 +1827,7 @@ FUNC VOID Info_Mod_Saturas_PMSchulden_Info()
 			AI_Output (self, hero, "Info_Mod_Saturas_PMSchulden_14_14"); //Also, was ist?
 		};
 	};
-	
+
 	// ------ Choices NUR, wenn noch Crime vorliegt ------
 	if (B_GetGreatestPetzCrime(self) != CRIME_NONE)
 	{
@@ -1876,8 +1878,8 @@ FUNC INT Info_Mod_Saturas_PETZMASTER_Condition()
 FUNC VOID Info_Mod_Saturas_PETZMASTER_Info()
 {
 	Saturas_Schulden = 0; //weil Funktion nochmal durchlaufen wird, wenn Crime höher ist...
-	
-	if (B_GetGreatestPetzCrime(self) == CRIME_MURDER) 
+
+	if (B_GetGreatestPetzCrime(self) == CRIME_MURDER)
 	{
 		AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_14_01"); //Gut, dass du zu mir kommst, bevor alles noch schlimmer für dich wird.
 		AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_14_02"); //Mord ist ein schweres Vergehen!
@@ -1895,8 +1897,8 @@ FUNC VOID Info_Mod_Saturas_PETZMASTER_Info()
 		AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_14_07"); //Aber es wird nicht leicht sein, die Leute wieder gnädig zu stimmen.
 		AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_14_08"); //Du könntest deine Reue zeigen, indem du eine Strafe zahlst - natürlich muss die Strafe angemessen hoch sein.
 	};
-		
-	if (B_GetGreatestPetzCrime(self) == CRIME_THEFT) 
+
+	if (B_GetGreatestPetzCrime(self) == CRIME_THEFT)
 	{
 		AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_14_09"); //Gut, dass du kommst! Du wirst des Diebstahls bezichtigt! Es gibt Zeugen!
 
@@ -1907,10 +1909,10 @@ FUNC VOID Info_Mod_Saturas_PETZMASTER_Info()
 
 		AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_14_11"); //Ich werde so ein Verhalten bei uns nicht dulden!
 		AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_14_12"); //Du wirst eine Strafe zahlen müssen, um dein Verbrechen wieder gutzumachen!
-		
+
 		Saturas_Schulden = (B_GetTotalPetzCounter(self) * 50); //Anzahl der Zeugen * 50
 	};
-	
+
 	if (B_GetGreatestPetzCrime(self) == CRIME_ATTACK)
 	{
 		AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_14_13"); //Wenn du dich mit dem Gesindel im Hafen herumprügelst, ist das eine Sache ...
@@ -1923,26 +1925,26 @@ FUNC VOID Info_Mod_Saturas_PETZMASTER_Info()
 
 		AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_14_16"); //Wenn ich dir das durchgehen lasse, macht hier bald jeder, was er will.
 		AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_14_17"); //Also wirst du eine angemessene Strafe zahlen - und die Sache ist vergessen.
-		
+
 		Saturas_Schulden = (B_GetTotalPetzCounter(self) * 50); //Anzahl der Zeugen * 50
 	};
-	
+
 	// ------ Schaf getötet (nahezu uninteressant - in der City gibt es keine Schafe) ------
-	if (B_GetGreatestPetzCrime(self) == CRIME_SHEEPKILLER) 
+	if (B_GetGreatestPetzCrime(self) == CRIME_SHEEPKILLER)
 	{
 		AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_14_18"); //Mir ist zu Ohren gekommen, du hättest dich an unseren Schafen vergriffen.
 		AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_14_19"); //Dir ist klar, dass ich das nicht durchgehen lassen kann.
 		AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_14_20"); //Du wirst eine Entschädigung zahlen müssen!
-		
+
 		Saturas_Schulden = 100;
 	};
-	
+
 	AI_Output (hero, self, "Info_Mod_Saturas_PETZMASTER_15_21"); //Wie viel?
-	
+
 	if (Saturas_Schulden > 1000)	{	Saturas_Schulden = 1000;	};
-		
+
 	B_Say_Gold (self, hero, Saturas_Schulden);
-	
+
 	Info_ClearChoices  	(Info_Mod_Saturas_PMSchulden);
 	Info_ClearChoices  	(Info_Mod_Saturas_PETZMASTER);
 	Info_AddChoice		(Info_Mod_Saturas_PETZMASTER,"Ich habe nicht genug Gold!",Info_Mod_Saturas_PETZMASTER_PayLater);
@@ -1959,11 +1961,11 @@ func void Info_Mod_Saturas_PETZMASTER_PayNow()
 	AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_PayNow_14_01"); //Gut! Ich werde dafür sorgen, dass es jeder von uns erfährt - damit wäre dein Ruf einigermaßen wiederhergestellt.
 
 	B_GrantAbsolution (LOC_WMCAMP);
-	
+
 	Saturas_Schulden			= 0;
 	Saturas_LastPetzCounter 	= 0;
 	Saturas_LastPetzCrime		= CRIME_NONE;
-	
+
 	Info_ClearChoices  	(Info_Mod_Saturas_PETZMASTER);
 	Info_ClearChoices  	(Info_Mod_Saturas_PMSchulden);	//!!! Info-Choice wird noch von anderem Dialog angesteuert!
 };
@@ -1973,10 +1975,10 @@ func void Info_Mod_Saturas_PETZMASTER_PayLater()
 	AI_Output (hero, self, "Info_Mod_Saturas_PETZMASTER_PayLater_15_00"); //Ich habe nicht genug Gold!
 	AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_PayLater_14_01"); //Dann sieh zu, dass du das Gold so schnell wie möglich beschaffst.
 	AI_Output (self, hero, "Info_Mod_Saturas_PETZMASTER_PayLater_14_02"); //Und ich warne dich: Wenn du dir noch was zu schulden kommen lässt, wird die Sache noch schlimmer für dich!
-	
+
 	Saturas_LastPetzCounter 	= B_GetTotalPetzCounter(self);
 	Saturas_LastPetzCrime		= B_GetGreatestPetzCrime(self);
-	
+
 	AI_StopProcessInfos (self);
 };
 
