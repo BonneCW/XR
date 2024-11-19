@@ -66,6 +66,7 @@ Fixes:
 - fixed poison brewing not working after learning it at Kamal
 - fixed bonus for mushroom soup
 - fixed time restriction for blessing of Andre's sword being stupid
+- fixed maybe Hagen dieing in valley of mines instead of getting teleported properly
 
 
 1.0.9

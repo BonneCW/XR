@@ -980,7 +980,7 @@ FUNC VOID GILDENSTORY_PAL()
 	{
 		if (Mod_Kap4_KGOrks == 1)
 		{
-			if (Npc_KnowsInfo(hero, Info_Mod_Hymir_Treue2))
+			if (Npc_KnowsInfo(hero, Info_Mod_Hymir_Treue3))
 			&& (!Npc_IsInState(Mod_1016_KGD_Hymir_MT, ZS_Talk))
 			{
 				AI_Teleport	(Mod_1016_KGD_Hymir_MT, "TOT");

@@ -147,7 +147,7 @@ INSTANCE Info_Mod_Hymir_Eroberung_06 (C_INFO)
 };
 
 FUNC INT Info_Mod_Hymir_Eroberung_06_Condition()
-{	
+{
 	if (Npc_KnowsInfo(hero, Info_Mod_Dexter_Eroberung_05))
 	&& (!Npc_IsInState(Mod_761_BDT_Dexter_MT, ZS_Talk))
 	{
@@ -211,7 +211,6 @@ FUNC VOID Info_Mod_Hymir_Treue_Info()
 	AI_Output(self, hero, "DEFAULT"); //
 
 	AI_StopProcessInfos	(self);
-
 };
 
 INSTANCE Info_Mod_Hymir_Treue2 (C_INFO)
@@ -281,14 +280,36 @@ FUNC VOID Info_Mod_Hymir_Treue2_Info()
 
 	TRIA_Next(Hymir);
 
-	AI_Output(self, hero, "Info_Mod_Hymir_Treue2_16_14"); //Gut ... zur weiteren Besprechung werde ich mich mit dir in die Stadt begeben.
-    
 	TRIA_Finish();
+
+	AI_StopProcessInfos	(self);
+};
+
+INSTANCE Info_Mod_Hymir_Treue3 (C_INFO)
+{
+	npc		= Mod_1016_KGD_Hymir_MT;
+	nr		= 1;
+	condition	= Info_Mod_Hymir_Treue3_Condition;
+	information	= Info_Mod_Hymir_Treue3_Info;
+	permanent	= 0;
+	important	= 1;
+};
+
+FUNC INT Info_Mod_Hymir_Treue3_Condition()
+{
+	if (Npc_KnowsInfo(hero, Info_Mod_Hymir_Treue2))
+	{
+		return 1;
+	};
+};
+
+FUNC VOID Info_Mod_Hymir_Treue3_Info()
+{
+	AI_Output(self, hero, "Info_Mod_Hymir_Treue3_16_00"); //Gut ... zur weiteren Besprechung werde ich mich mit dir in die Stadt begeben.
 
 	AI_StopProcessInfos	(self);
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_TREUE, "Hymir hat sich mit Lord Hagen in die Stadt teleportiert. Ich sollte mal bei Zeiten dort vorbeischauen.");
-
 };
 
 INSTANCE Info_Mod_Hymir_Pickpocket (C_INFO)
