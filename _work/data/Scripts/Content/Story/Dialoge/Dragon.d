@@ -246,7 +246,7 @@ FUNC INT Info_Mod_Dragon_SnorreTot_Condition()
 
 FUNC VOID Info_Mod_Dragon_SnorreTot_Info()
 {
-	AI_Output(self, hero, "Info_Mod_Dragon_SnorreTot_22_00"); //Hmm, ich spüre Snorress Aura nicht mehr. Ich darf daher davon ausgehen, dass du deine Aufgabe zu meiner äußersten Zufriedenheit erfüllt hast.
+	AI_Output(self, hero, "Info_Mod_Dragon_SnorreTot_22_00"); //Hmm, ich spüre Snorres' Aura nicht mehr. Ich darf daher davon ausgehen, dass du deine Aufgabe zu meiner äußersten Zufriedenheit erfüllt hast.
 	AI_Output(self, hero, "Info_Mod_Dragon_SnorreTot_22_01"); //Belohnt bist du ja durch die Schätze bereits mehr als zureichend.
 
 	B_GivePlayerXP	(200);
