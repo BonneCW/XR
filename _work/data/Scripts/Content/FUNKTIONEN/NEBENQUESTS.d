@@ -618,7 +618,7 @@ FUNC VOID NEBENQUESTS()
 		&& (!Npc_IsInState(Mod_548_NONE_Canthar_NW, ZS_Talk))
 		{
 			Mod_CantharSelbstmord = 2;
-			
+
 			B_KillNpc	(Mod_548_NONE_Canthar_NW);
 
 			AI_PlayAni	(Mod_548_NONE_Canthar_NW, "T_DEADB");
@@ -681,7 +681,7 @@ FUNC VOID NEBENQUESTS()
 			Mod_KristallDiego = 1;
 
 			CurrentNQ += 1;
-			
+
 			Spine_UnlockAchievement(SPINE_ACHIEVEMENT_50);
 		};
 
@@ -740,7 +740,7 @@ FUNC VOID NEBENQUESTS()
 		};
 
 		// Vertrauliche Informationen
-	
+
 		if (Mod_Cornelius_Overtalk == 2)
 		&& (Wld_GetDay()-10 >= Mod_Cornelius_Overtalk_Day)
 		{
@@ -748,7 +748,7 @@ FUNC VOID NEBENQUESTS()
 
 			B_StartOtherRoutine	(Mod_571_NONE_Cornelius_NW, "KNAST");
 		};
-	
+
 		if (Mod_Cornelius_Overtalk == 4)
 		&& (Wld_GetDay()-15 >= Mod_Cornelius_Overtalk_Day)
 		{
@@ -756,7 +756,7 @@ FUNC VOID NEBENQUESTS()
 
 			B_StartOtherRoutine	(Mod_571_NONE_Cornelius_NW, "AUFSTAND");
 		};
-	
+
 		if (Mod_Cornelius_Overtalk == 5)
 		&& (!Npc_IsInState(Mod_571_NONE_Cornelius_NW, ZS_Talk))
 		{
@@ -902,7 +902,7 @@ FUNC VOID NEBENQUESTS()
 		&& (Mod_DiegoHoltKristall_Fertig == FALSE)
 		{
 			B_StartOtherRoutine	(Mod_538_RDW_Diego_NW, "START");
-			
+
 			if (Npc_KnowsInfo(hero, Info_Mod_Joe_Wassersnapper))
 			&& (!Npc_KnowsInfo(hero, Info_Mod_Joe_Wassersnapper2)) {
 				B_StartOtherRoutine	(Mod_588_WNOV_Joe_NW, "SNAPPER");
@@ -938,7 +938,7 @@ FUNC VOID NEBENQUESTS()
 		|| (hero.guild == GIL_PAL))
 		{
 			Mod_Mario = 4;
-			
+
 			Mod_Mario_Day = Wld_GetDay() - 1;
 
 			AI_UnequipArmor	(Mod_595_MIL_Mario_NW);
@@ -1091,7 +1091,7 @@ FUNC VOID NEBENQUESTS()
 			if (Npc_KnowsInfo(hero, Info_Mod_Andre_TomKraut2))
 			&& (Npc_GetDistToWP(hero, "NW_CITY_HABOUR_KASERN_MAIN_ENTRY") < 300)
 			{
-				Mod_SenyanTom_Kraut = 2;				
+				Mod_SenyanTom_Kraut = 2;
 
 				PrintScreen ("Kurze Zeit später", -1, YPOS_LevelUp, FONT_Screen, 2);
 
@@ -1404,9 +1404,9 @@ FUNC VOID NEBENQUESTS()
 				Mod_Miliz_Armbrust = TRUE;
 			};
 		};
-		
+
 		// Das Treffen
-		
+
 		if (Npc_KnowsInfo(hero, Info_Mod_Gorn_Treffen))
 		&& (Mod_Treffen_Ende == FALSE)
 		&& (!Npc_IsInState(Mod_533_SLD_Gorn_NW, ZS_Talk))
@@ -1418,7 +1418,7 @@ FUNC VOID NEBENQUESTS()
 			B_StartOtherRoutine(Mod_533_SLD_Gorn_NW, "START");
 			B_StartOtherRoutine(Mod_534_KDF_Milten_NW, "START");
 			B_StartOtherRoutine(Mod_538_RDW_Diego_NW, "START");
-			
+
 			if (Kapitel == 1 && Mod_LesterInRelendel) {
 				Mod_LesterInRelendel = 1;
 				B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "TOT");
@@ -1426,9 +1426,9 @@ FUNC VOID NEBENQUESTS()
 				B_StartOtherRoutine(Mod_557_PSINOV_Lester_NW, "START");
 			};
 		};
-		
+
 		// Apprentice Quests
-		
+
 		if (Mod_LehrlingsStimmen < 4) {
 			if (Npc_KnowsInfo(hero, Info_Mod_Harad_Stimme))
 			&& (Npc_KnowsInfo(hero, Info_Mod_Constantino_Stimme))
@@ -2325,6 +2325,10 @@ FUNC VOID NEBENQUESTS()
 			Mod_REL_LukasS = 1;
 
 			B_LogEntry	(TOPIC_MOD_KHORATA_UNRUHEN, "Die Buddler eröffneten das Feuer. Alle niedergemacht.");
+
+			B_StartOtherRoutine	(Mod_7517_OUT_Friedel_REL, "START");
+			B_StartOtherRoutine	(Mod_7518_OUT_Davon_REL, "START");
+			B_StartOtherRoutine	(Mod_7391_OUT_Henker_REL, "START");
 		};
 
 		if (Npc_KnowsInfo(hero, Info_Mod_Fuego_Unruhen))
@@ -2686,7 +2690,7 @@ FUNC VOID NEBENQUESTS()
 
 			B_StartOtherRoutine	(Mod_7723_OUT_Hedwig_REL, "ZIMMER");
 		};
-		
+
 		if (Kapitel >= 3 && !Npc_KnowsInfo(hero, Info_Mod_Irmgard_Kneipe2) && Npc_KnowsInfo(hero, Info_Mod_Ditmar_Hi) && Mod_DickeLuft_Running == TRUE) {
 			Mod_DickeLuft_Running = FALSE;
 			B_SetTopicStatus(TOPIC_MOD_DITMAR_DICKELUFT, LOG_FAILED);
@@ -2772,7 +2776,7 @@ FUNC VOID NEBENQUESTS()
 
 			Wld_SendTrigger	("EVT_MESSAGE_ALVARKRISTALL");
 		};
-		
+
 		if (Npc_KnowsInfo(hero, Info_Mod_Knatus_AlvarKristall))
 		&& (Mod_UnschuldigeTeleport == FALSE)
 		&& (!Npc_IsInState(Mod_7564_OUT_Knatus_EIS, ZS_Talk)) {
@@ -2847,7 +2851,7 @@ FUNC VOID NEBENQUESTS()
 				Mod_AlvarKristall = 8;
 
 				Mod_7561_OUT_Alvar_EIS.name = "Unbekannter";
-				
+
 				Wld_SendUnTrigger	("EVT_TRAENENKRISTALL");
 			};
 
@@ -3627,13 +3631,13 @@ FUNC VOID NEBENQUESTS()
 		&& (!Npc_IsInState(Mod_10049_Orc_Tretor_MT, ZS_Talk))
 		{
 			Mod_PolochTretor = 2;
-			
+
 			Mod_10048_Orc_Poloch_MT.flags = 0;
 			Mod_10049_Orc_Tretor_MT.flags = 0;
 			B_Attack(Mod_10048_Orc_Poloch_MT, hero, AR_NONE, 0);
 			B_Attack(Mod_10049_Orc_Tretor_MT, hero, AR_NONE, 0);
 		};
-		
+
 		if (Mod_PolochTretor == 2) {
 			if (!Npc_IsInState(Mod_10048_Orc_Poloch_MT, ZS_Attack))
 			&& (!Mod_Poloch_Beat) {
@@ -3650,7 +3654,7 @@ FUNC VOID NEBENQUESTS()
 		&& (!Npc_IsInState(Mod_10049_Orc_Tretor_MT, ZS_Talk))
 		{
 			Mod_PolochTretor = 5;
-			
+
 			B_StartOtherRoutine(Mod_10048_Orc_Poloch_MT, "AWAY");
 		};
 	};
@@ -3739,7 +3743,7 @@ FUNC VOID NEBENQUESTS()
 			B_KillNpc	(Mod_7647_OUT_Strewak_EIS);
 
 			Mod_7647_OUT_Strewak_EIS.nofocus = 0;
-			
+
 			Spine_UnlockAchievement(SPINE_ACHIEVEMENT_25);
 		};
 

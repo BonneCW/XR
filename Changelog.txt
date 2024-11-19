@@ -62,6 +62,7 @@ Fixes:
 - fixed Ramirez complaining when stealing judge's clothes
 - fixed thieves in treasure chamber in Khorata complaining when hero takes something
 - fixed potential problems with Atalante's warg transformations
+- fixed Davon, Friedel and executioner in Khorata not going back to their old routine after defeating the people at the mine
 
 
 1.0.9
