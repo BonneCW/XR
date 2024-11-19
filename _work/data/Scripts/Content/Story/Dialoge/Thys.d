@@ -566,7 +566,7 @@ INSTANCE Info_Mod_Thys_Schneegeister2 (C_INFO)
 FUNC INT Info_Mod_Thys_Schneegeister2_Condition()
 {
 	if (Npc_KnowsInfo(hero, Info_Mod_Thys_Schneegeister))
-	&& (Mod_Thys_Schneegeister == 2)
+	&& (Mod_Thys_Schneegeister == 3)
 	&& (Npc_HasItems(hero, ItWr_Schneegeister) == 1)
 	{
 		return 1;

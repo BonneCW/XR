@@ -107,7 +107,7 @@ func void UseLandstreicherSiegelring ()
 
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Ps: Die Klamottn des Schnösels stehn mir ausgesprohhen gud, hähähä ..."					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -166,7 +166,7 @@ func void UseGestathTrophyList ()
 		{
 			Doc_PrintLines	( nDocID,  0, ConcatStrings(IntToString(Mod_EIS_Gestath_SharkTeeth), "x Zähne eines Sumpfhaies"));
 		};
-					
+
 		Doc_Show		( nDocID );
 
 };
@@ -204,7 +204,7 @@ func void UseKrautruestungListe ()
 					Doc_PrintLines	( nDocID,  0, "- 10 Reptilienhäute"					);
 					Doc_PrintLines	( nDocID,  0, "- 5 Stangen Rohstahl"					);
 					Doc_PrintLines	( nDocID,  0, "- 3 Skelettknochen"					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -240,7 +240,7 @@ func void UseEivarZettel ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Das hab ich nun von meiner Gier nach den Trophäen aus den ferneren Gebieten ... wollte das große Geld machen. Stattdessen sitze ich hier oben und krepiere an meiner Wunde. Wenn das verfluchte Biest endlich verschwinden würde könnte ich zumindest nach unten und sie notdürftig behandeln. Aber ich Narr musste ja alles im Baumstumpf verstecken ... als ob mich hier irgendjemand beklauen würde. Es geschieht mir fast recht ...");
 					Doc_PrintLines	( nDocID,  0, "Dem Jenseits entgegenblickend, Eivar");
-					
+
 					Doc_Show		( nDocID );
 
 	Mod_Eivar = 1;
@@ -277,7 +277,7 @@ func void UseTierZaehmung ()
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Wie alle Wesen auf Adanos' grüner Erde entstammten Mensch wie auch Tier der göttlichen Schöpfung. Es besteht eine Verbindung zwischen all diesen Geschöpfen. Ein kundiger Priester Adanos' vermag nun diese Bindung für sich zu nutzen und auch Tiere dem Menschen gewogen zu machen, die eigentlich wild und unzähmbar sind."					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -318,7 +318,7 @@ func void UseGarpNotiz ()
 					Doc_PrintLines	( nDocID,  0, "Tag 11: Verdammt, eines von den Biestern hat mich gebissen, als ich nach unten klettern wollte. Ich spüre wie das Gift meine Venen durchdringt ... ich mach es nicht mehr lange ..."					);
 					Doc_PrintLines	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Garp"					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -351,7 +351,7 @@ func void UseOTGeheimkammer01 ()
 					Doc_SetMargins	( nDocID, -1, 50, 20, 50, 50, 1   		);  //  0 -> margins are in pixels
 					Doc_SetFont 	( nDocID,  0, FONT_Handschrift		); 	// -1 -> all pages
 					Doc_PrintLines	( nDocID,  0, "Da die vermaledeite Kombination für die beiden Schalter nicht in deinen Kopf geht, habe ich sie dir hier aufgeschrieben. Aber komm ja nicht auf die Idee, den Zettel im Ganzen mit dir herumzutragen! Die Orks müssen nicht wissen, wo wir unsere Schätze gelagert haben. Teil ihn in drei Teile, und nur diesen hier behältst du bei dir - den Rest versteckst du und holst ihn nur bei Bedarf hervor, hast du verstanden?!"					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_OT_Geheimkammer == 0)
@@ -400,7 +400,7 @@ func void UseOTGeheimkammer02 ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Du öffnest die Kammer mit den beiden Schaltern, die mit Totenköpfen verziert sind. Du findest sie im rechten der beiden Gänge, die vom Raum mit der großen Schläferstatue abgehen. Die beiden Schalter musst du in der richtigen Kombination betätigen: Zuerst den linken zwei Mal, dann den rechten ein Mal, dann wieder den linken ..."					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_OT_Geheimkammer == 0)
@@ -458,7 +458,7 @@ func void UseOTGeheimkammer03 ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "... zwei Mal, den rechten drei Mal. Dann den linken ein Mal, den rechten zwei Mal, den linken zwei Mal. Und zum Abschluss den rechten (unleserlich) Mal. Im gegenüberliegenden Raum öffnet sich jetzt das Loch, das ihr schnell gehauen habt."					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_OT_Geheimkammer == 0)
@@ -502,7 +502,7 @@ func void UseOTGeheimkammer04 ()
 					Doc_SetFont 	( nDocID,  0, FONT_Handschrift		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Ich war schneller! Gez. M.A.D."					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -535,7 +535,7 @@ func void UseOTGeheimkammer05 ()
 					Doc_SetFont 	( nDocID,  0, FONT_Handschrift		); 	// -1 -> all pages
 					Doc_PrintLines	( nDocID,  0, "Da die vermaledeite Kombination für die beiden Schalter nicht in deinen Kopf geht, habe ich sie dir hier aufgeschrieben. Aber komm ja nicht auf die Idee, den Zettel im Ganzen mit dir herumzutragen! Die Orks müssen nicht wissen, wo wir unsere Schätze gelagert haben. Teil ihn in drei Teile, und nur diesen hier behältst du bei dir - den Rest versteckst du und holst ihn nur bei Bedarf hervor, hast du verstanden?!"					);
 					Doc_PrintLines	( nDocID,  0, "Du öffnest die Kammer mit den beiden Schaltern, die mit Totenköpfen verziert sind. Du findest sie im rechten der beiden Gänge, die vom Raum mit der großen Schläferstatue abgehen. Die beiden Schalter musst du in der richtigen Kombination betätigen: Zuerst den linken zwei Mal, dann den rechten ein Mal, dann wieder den linken ..."					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_OT_Geheimkammer == 0)
@@ -586,7 +586,7 @@ func void UseOTGeheimkammer06 ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "... zwei Mal, den rechten drei Mal. Dann den linken ein Mal, den rechten zwei Mal, den linken zwei Mal. Und zum Abschluss den rechten (unleserlich) Mal. Im gegenüberliegenden Raum öffnet sich jetzt das Loch, das ihr schnell gehauen habt."					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_OT_Geheimkammer == 0)
@@ -638,7 +638,7 @@ func void UseOTGeheimkammer07 ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Du öffnest die Kammer mit den beiden Schaltern, die mit Totenköpfen verziert sind. Du findest sie im rechten der beiden Gänge, die vom Raum mit der großen Schläferstatue abgehen. Die beiden Schalter musst du in der richtigen Kombination betätigen: Zuerst den linken zwei Mal, dann den rechten ein Mal, dann wieder den linken ..."					);
 					Doc_PrintLines	( nDocID,  0, "... zwei Mal, den rechten drei Mal. Dann den linken ein Mal, den rechten zwei Mal, den linken zwei Mal. Und zum Abschluss den rechten (unleserlich) Mal. Im gegenüberliegenden Raum öffnet sich jetzt das Loch, das ihr schnell gehauen habt."					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_OT_Geheimkammer == 0)
@@ -682,7 +682,7 @@ func void UseOTGeheimkammer08 ()
 					Doc_PrintLines	( nDocID,  0, "Da die vermaledeite Kombination für die beiden Schalter nicht in deinen Kopf geht, habe ich sie dir hier aufgeschrieben. Aber komm ja nicht auf die Idee, den Zettel im Ganzen mit dir herumzutragen! Die Orks müssen nicht wissen, wo wir unsere Schätze gelagert haben. Teil ihn in drei Teile, und nur diesen hier behältst du bei dir - den Rest versteckst du und holst ihn nur bei Bedarf hervor, hast du verstanden?!"					);
 					Doc_PrintLines	( nDocID,  0, "Du öffnest die Kammer mit den beiden Schaltern, die mit Totenköpfen verziert sind. Du findest sie im rechten der beiden Gänge, die vom Raum mit der großen Schläferstatue abgehen. Die beiden Schalter musst du in der richtigen Kombination betätigen: Zuerst den linken zwei Mal, dann den rechten ein Mal, dann wieder den linken ..."					);
 					Doc_PrintLines	( nDocID,  0, "... zwei Mal, den rechten drei Mal. Dann den linken ein Mal, den rechten zwei Mal, den linken zwei Mal. Und zum Abschluss den rechten (unleserlich) Mal. Im gegenüberliegenden Raum öffnet sich jetzt das Loch, das ihr schnell gehauen habt."					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_OT_Geheimkammer == 0)
@@ -728,7 +728,7 @@ func void UseAkahasch ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Grüße,"					);
 					Doc_PrintLines	( nDocID,  0, "Akahasch"					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -765,7 +765,7 @@ func void UseAkahaschNagur ()
 					Doc_PrintLines	( nDocID,  0, "War das deutlich? Also, in zwei Stunden mit dem Geld in der Taverne, sonst ..."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "N."					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -800,7 +800,7 @@ func void UseGoraxAndokai ()
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Geh zur Taverne 'Zur toten Harpie' und bringe dem Besitzer Orlan die Weinlieferung. Er soll dafür 250 Gold zahlen."					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -836,7 +836,7 @@ func void UseErolNotiz1 ()
 					Doc_PrintLines	( nDocID,  0, "Ich, Xardas, Oberhaupt der Schwarzmagier, habe meinen Turm verlassen und werde mir ein Domizil in Khorinis schaffen. So bin ich meinen Glaubensbrüdern und den Geschehnissen auf der Insel näher. Zurückgelassen habe ich einige Gegenstände, die jetzt nicht gebraucht, aber später vielleicht nützlich sein werden. Der findige Würdige wird erhalten, was er sucht ..."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Xardas"					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_Erol_Fahrender == 2)
@@ -880,7 +880,7 @@ func void UseErolNotiz2 ()
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Auch der belesenste weiß noch nicht alles. Doch sind Scharfsinn und Geduld Bestandteil seiner Würde."					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_Erol_Fahrender == 3)
@@ -924,7 +924,7 @@ func void UseErolNotiz3 ()
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Nicht alle Feuer sollen brennen."					);
-					
+
 					Doc_Show		( nDocID );
 
 	/*if (Mod_Erol_Fahrender == 3)
@@ -968,7 +968,7 @@ func void UseErolNotiz4 ()
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Die Zeit der Wandlung birgt Änderungen. Ändere das Symbol der Unendlichkeit und du hast den Schlüssel zur Macht."					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_Erol_Fahrender == 4)
@@ -1011,7 +1011,7 @@ func void UseJGSuchenderNotiz ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Bald ist es geschafft. Die, die sich für unantastbar halten werden aufgerüttelt und bringen Chaos über das Land. Die, die meinen, das Gleichgewicht zu verkörpern, werden schwanken. Ihre Macht wird schwinden und Gerechtigkeit wird wieder Einzug erhalten."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_JG_MinenPart == 3)
@@ -1053,7 +1053,7 @@ func void UseAndreAbschied ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Ergebenst,"					);
 					Doc_PrintLines	( nDocID,  0, "Hauptmann Andre"					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -1086,7 +1086,7 @@ func void UseBesaenftigungBeliars ()
 					Doc_PrintLines	( nDocID,  0, "Besänftigung Beliars"					);
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLines	( nDocID,  0, "So hatte Beliar in seinem Zorn das Dorf mit einem verheerenden Brand zerstört. Nach einiger Zeit machten sich die Menschen jedoch daran eine neue Siedlung zu errichten, welche teilweise auf den Überresten der alten erbaut wurde. Damit ihr jedoch nicht dasselbe Schicksal drohte, wie der vorigen, wurde unter den Würdenträgern ein geheimer Beschluss gefasst. Um den Gott der Finsternis zu besänftigen, sollte ihm von nun an immer im Abstand weniger Tage einer kleiner Betrag Goldes geopfert werden. Diesen warf der Halter der Stadt immer des Nachts in die Tiefe, wo sie Beliar einen Schrein geweiht hatten. In den nächsten Generationen wussten immer weniger der Nachfolger um die wahren Ursache des Goldopfers bescheid. Nicht jedem trauten die Stadtälteren zu mit dieser Wahrheit umzugehen, sodass es als ein Opfer an Adanos ausgegeben wurde ..."					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -1121,7 +1121,7 @@ func void UseKurganNotiz ()
 					Doc_PrintLines	( nDocID,  0, "Ausgezeichnet, mein Treuer Diener. Die Entführungen werden nicht nur die Spannungen zwischen den Dämonenbeschwörern und der Stadt weiter anheizen. Je zahlreicher sich ihre Leichname in der Finsternis stapeln, desto leichter wird es uns fallen die Mine unter unsere Kontrolle zu bringen, wenn der Zeitpunkt gekommen ist."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Urnol"					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -1166,7 +1166,7 @@ func void UseAndreSchwert ()
 					Doc_PrintLines	( nDocID,  0, "Nun, drängt die Zeit aber zum Aufbruch ..."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Innos sei mit dir auf deinen Wegen."					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_AndreSchwert == 0)
@@ -1216,7 +1216,7 @@ func void UseDominiquesRuf ()
 					Doc_PrintLines	( nDocID,  0, "wird durch meine Hand sterben"					);
 					Doc_PrintLines	( nDocID,  0, "denn ich bin ein Krieger Innos"					);
 					Doc_PrintLines	( nDocID,  0, "Vollstrecker seines Willens"					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -1255,7 +1255,7 @@ func void UseYasinErpresser ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "In lieben Grüße,"					);
 					Doc_PrintLines	( nDocID,  0, "dein M."					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -1332,7 +1332,7 @@ func void UseYasinNotiz ()
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Muss jemanden finden, der dieses Schwein beseitigt. Darf aber niemand sein, den er als einen von uns erkennen könnte. Sonst riecht er den Braten und ich bin endgültig geliefert."					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -1370,7 +1370,7 @@ func void UseUrsNotiz ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Hier konnte ich Wally leider nicht finden. Ich werde mich hinter dem Alten Lager beim Wald umschauen."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_Urs_Hund == 1 && !Mod_UrsNotiz_Gelesen)
@@ -1412,7 +1412,7 @@ func void UseSeraNotiz ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Sehr gut, meine Töchter. Mit eurer Gabe solltet ihr ohne Schwierigkeiten dazu in der Lage sein, die Bewohner des Gebietes eurem Willen zu unterwerfen. Ein gutes Stück nordöstlich von uns befindet sich ein Dorf. Dort sollt ihr eure Macht erproben."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -1447,7 +1447,7 @@ func void UseStrewak_01 ()
 					Doc_PrintLines	( nDocID,  0, "... schritt er ohne zu zögern zwischen die Kreaturen und schlachtete sie erbarmungslos ab. Keine noch so heftige Attacke schien ihn auch nur im Geringsten zu beeindrucken… als kenne er keinen Schmerz.");
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Als wir tiefer in den Tempel gingen, kamen wir zuletzt an eine lange Passage, die von Feuer durchzogen war. Mein Begleiter wandte sich zu mir und übergab mir einige Steintafeln und Spruchrollen. Er verwies mich darauf, dass ich sich mir vieles erschließen würde, wenn ich sie lese. Zuletzt sprach er etwas von dem Ziel seiner Reise und von Erlösung, die ihn nun erwartete, drehte sich dann um und schritt durch die Flammen, bis meine Augen ihn nicht mehr zu sehen vermochten."					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -1481,7 +1481,7 @@ func void UseStrewak_02 ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Ich blieb wie gebannt sitzen und mein Blick fiel auf die Tafel, die vor mir lag. Da war es, als sei ich auf einmal erfüllt von Wissen und die Tafel zerfiel. All die fremdartigen Hieroglyphen an den Wänden des Raumes vermochte ich zu verstehen, auch, wenn sie sehr Bruchstückhaft waren. Da entdeckte ich einen Text, der noch relativ vollständig war. Er berichtete davon, dass die Flammen magischer Natur seien und alles Leben verbrennen würden, dass sich ihnen nährte. Und er erzählte von einem Giganten aus Eis, dessen Herz die Flammen erlöschen lassen könnte ..."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -1516,7 +1516,7 @@ func void UseStrewak_03 ()
 					Doc_PrintLines	( nDocID,  0, "Die kalte Witterung ist erbarmungslos und meine Kräfte erschöpft. Ich werde bei meiner Familie im Dorf rasten, ehe ich den Weg fortsetze ..."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "... da hebt er vor mir empor, gewaltig, Erfurcht einflößend. Je näher ich im komme, desto gnadenloser umfängt mich die Kälte. Ich werde nun die Spruchrollen nutzen und hoffen, dass ich ihn damit bezwingen kann ..."					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -1561,7 +1561,7 @@ func void UseKesselProblem ()
 					Doc_PrintLine	( nDocID,  0, "Mittwochabend:"					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "10 Erz für 12 Stück."					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_NL_TalkesselProblem < 3)
@@ -1604,7 +1604,7 @@ func void UseLeeInKneipe ()
 					Doc_PrintLines	( nDocID,  0, "Dieser Mann hat sich im Lager als Schürfer verdient gemacht und seinen Anteil entrichtet."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Lee"					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -1645,7 +1645,7 @@ func void UseEremitEinkaufsliste ()
 					Doc_PrintLines	( nDocID,  0, "300 Pfeile");
 					Doc_PrintLines	( nDocID,  0, "2 Moleratfett");
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -1680,7 +1680,7 @@ func void UsePetuniaZettel ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Wenn ihr einen Anwärter seht, schlagt ihn nieder und flößt ihm den beigelegten Trank ein. Er wird träumen, dass er das ach so tolle Blütenblatt dort finden wird, wo die Goblinmatronen waren. Dorthin müsst ihr das vorbereitete Blütenblatt bringen. Anschließend wird der Anwärter das Blatt zu seinem Auftraggeber bringen und wir wissen endlich, wer unser Hauptziel ist. Schaltet den Anwärter und den Auftraggeber aus und kehrt zu mir zurück."					);
 					Doc_PrintLine	( nDocID,  0, "P."					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_VMG_Pruefung_Petunia == 4)
@@ -1722,14 +1722,14 @@ func void UseSchneegeister ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Fast ist es soweit."					);
 					Doc_PrintLines	( nDocID,  0, "Für das Ritual ist bereits alles gerichtet. Schon in Kürze werde auch ich mit den Sphären des Dämonischen verbunden sein und mich der Macht bedienen können ... so wie sie. Und die elendigen Bewohner des Dorfes sollen dann erschaudern ... bis in alle Zeiten."					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_Thys_Schneegeister == 1)
 	{
 		Mod_Thys_Schneegeister = 2;
 
-		B_LogEntry	(TOPIC_MOD_GELLIT_SCHNEEGEISTER, "Tja, scheinbar war er den finsteren Kräften nicht gewachsen.  Ich sollte Thys davon berichten.");
+		B_LogEntry	(TOPIC_MOD_GELLIT_SCHNEEGEISTER, "Tja, scheinbar war er den finsteren Kräften nicht gewachsen. Ich sollte Thys davon berichten.");
 	};
 
 };
@@ -1766,7 +1766,7 @@ func void UseTheodorusBotschaft ()
 	Doc_PrintLine	( nDocID,  0, ""					);
 	Doc_PrintLine	( nDocID,  0, "In Hochachtung,"					);
 	Doc_PrintLine	( nDocID,  0, "Theodorus"					);
-					
+
 	Doc_Show		( nDocID );
 };
 
@@ -1839,7 +1839,7 @@ func void UseRaetselWand ()
 					Doc_PrintLine	( nDocID,  0, "0010 = 2"					);
 					Doc_PrintLine	( nDocID,  0, "0100 = 4"					);
 					Doc_PrintLine	( nDocID,  0, "1000 = 8"					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_JG_Raetselwand == 0)
@@ -1883,7 +1883,7 @@ FUNC VOID UseOrktempelZettel1 ()
 	Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);
 	Doc_PrintLines	(nDocID,  0, "Dies sind meine letzten Atemzüge beim Licht einer kaum glimmenden Fackel. Cor Kalom hat uns alle ins Verderben geführt; er ist ein besessener Fanatiker. Hier unten habe ich gelernt, was es bedeutet, Angst zu haben. Angst, die mich von der Gruppe der Bruderschaft weg und in diesen schmalen Hohlraum hinein trieb, der nun mein Grab sein wird. Denn der Felsspalt, durch den ich hinein kletterte, ist durch eines dieser kleinen Erdbeben verschwunden; übrig nur der Hohlraum, in dem ich mich in Gesellschaft von Mumien befinde. Meine einzige Hoffnung ist ein zweites Erdbeben, mein einziger Wunsch ein Schluck Wasser ...");
 	Doc_PrintLines	(nDocID,  0, "");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -1917,7 +1917,7 @@ FUNC VOID UseOrktempelZettel2 ()
 	Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);
 	Doc_PrintLines	(nDocID,  0, "(unleserlich) ... seid ihr dazu bestimmt, den Tempel für den Meister Krushak zu errichten. Danach ... vielleicht Rückkehr nach Jharkendar erlauben ... zu fliehen, droht der sofortige Tod ... kein Erbarmen ... Wir ... Schamanen, werden eure Aufseher ... euch der Meister gnädig sein!");
 	Doc_PrintLines	(nDocID,  0, "");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -1951,7 +1951,7 @@ FUNC VOID UseOrktempelZettel3 ()
 	Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);
 	Doc_PrintLines	(nDocID,  0, "(Du kannst die Zeichen nicht lesen, aber die aggressive Schrift lässt auf keinen freundlichen Ton schließen. Es scheint, als würde im Text häufiger das Wort 'Krushak' vorkommen. Beim näheren Hinsehen fällt dir auf, dass die Schriftfarbe nicht schwarz wie Tinte ist, sondern bronzefarben wie von getrocknetem Blut...)");
 	Doc_PrintLines	(nDocID,  0, "");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -1990,7 +1990,7 @@ FUNC VOID UseBlutkelchZettel1 ()
 	Doc_PrintLines	(nDocID,  0, "");
 	Doc_PrintLines	(nDocID,  0, "MINEN");
 	Doc_PrintLines	(nDocID,  0, "");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -2029,7 +2029,7 @@ FUNC VOID UseBlutkelchZettel2 ()
 	Doc_PrintLines	(nDocID,  0, "");
 	Doc_PrintLines	(nDocID,  0, "NICHT");
 	Doc_PrintLines	(nDocID,  0, "");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -2068,7 +2068,7 @@ FUNC VOID UseBlutkelchZettel3 ()
 	Doc_PrintLines	(nDocID,  0, "");
 	Doc_PrintLines	(nDocID,  0, "TAL");
 	Doc_PrintLines	(nDocID,  0, "");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -2102,7 +2102,7 @@ FUNC VOID UseZeichnung_Stuhl ()
 	Doc_PrintLines	(nDocID,  0, "");
 	Doc_SetFont 	(nDocID,  0, FONT_Book);
 	Doc_PrintLines	(nDocID,  0, "");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -2136,7 +2136,7 @@ FUNC VOID UseZeichnung_Tisch ()
 	Doc_PrintLines	(nDocID,  0, "");
 	Doc_SetFont 	(nDocID,  0, FONT_Book);
 	Doc_PrintLines	(nDocID,  0, "");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -2170,7 +2170,7 @@ FUNC VOID UseZeichnung_Schmuckkasten ()
 	Doc_PrintLines	(nDocID,  0, "");
 	Doc_SetFont 	(nDocID,  0, FONT_Book);
 	Doc_PrintLines	(nDocID,  0, "");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -2204,7 +2204,7 @@ FUNC VOID UseZeichnung_Bierkrug ()
 	Doc_PrintLines	(nDocID,  0, "");
 	Doc_SetFont 	(nDocID,  0, FONT_Book);
 	Doc_PrintLines	(nDocID,  0, "");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -2238,7 +2238,7 @@ FUNC VOID UseZeichnung_Karte ()
 	Doc_PrintLines	(nDocID,  0, "");
 	Doc_SetFont 	(nDocID,  0, FONT_Book);
 	Doc_PrintLines	(nDocID,  0, "");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -2284,7 +2284,7 @@ FUNC VOID UseSteinDerWeisen ()
 	Doc_PrintLines	(nDocID,  0, "1 Geschicklichkeitstrank");
 	Doc_PrintLines	(nDocID,  0, "1 Elixier des Lebens");
 	Doc_PrintLines	(nDocID,  0, "2 Elixier des Geistes");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -2320,7 +2320,7 @@ FUNC VOID UseMahamadRaetsel1 ()
 	Doc_PrintLines	(nDocID,  0, "Für ein eine gute Flasche Wein zahlt man 100 Gold und dazu noch die Hälfte des Preises.");
 	Doc_PrintLine	(nDocID,  0, "");
 	Doc_PrintLines	(nDocID,  0, "Wieviel kostet der Wein also?");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -2354,7 +2354,7 @@ FUNC VOID UseMahamadRaetsel2 ()
 	Doc_PrintLines	(nDocID,  0, "");
 	Doc_SetFont 	(nDocID,  0, FONT_Book);
 	Doc_PrintLine	(nDocID,  0, "Zähle die Dreiecke");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -2391,7 +2391,7 @@ FUNC VOID UseMahamadRaetsel3 ()
 	Doc_PrintLine	(nDocID,  0, "");
 	Doc_PrintLine	(nDocID,  0, "21 18 16 13 11  8 . .");
 	Doc_PrintLine	(nDocID,  0, "12 14 13 15 14 16 . .");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -2427,7 +2427,7 @@ FUNC VOID UseMahamadRaetsel4 ()
 	Doc_PrintLines	(nDocID,  0, "Jemand ist krank und bekommt dafür drei Flaschen Heiltrank. Diese sollen in einem Abstand von 30 Minuten eingenommen werden.");
 	Doc_PrintLine	(nDocID,  0, "");
 	Doc_PrintLine	(nDocID,  0, "Wie lange dauert es, bis alle weg sind?");
-					
+
 	Doc_Show (nDocID);
 };
 
@@ -2463,7 +2463,7 @@ func void UseGnomZettel ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Ich bin ins Tal des Erzes aufgebrochen, um mir dort in einer der Minen die Taschen mit Erz zu füllen. Wir sehen uns bestimmt bald wieder, alter Freund."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (GnomZettel_Gelesen == 0)
@@ -2504,7 +2504,7 @@ func void UseBlutkultMage ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Verdammt ... es ist jemandem gelungen unsere Geschöpfe zu bannen. Wie ist dies möglich? Ich spüre, wie meine eigene Lebenskraft zu verlöschen beginnt, die an meine Kreaturen gebunden war. Ich muss es schaffen zu ... neeeiin ... verflucht sei Adanos ..."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -2537,7 +2537,7 @@ func void UseBlutkultMage2 ()
 					Doc_PrintLines	( nDocID,  0, "Oschustwor, meine Kräfte schwinden dahin und ich hinterlasse dir diese Nachricht, ehe ich wie unsere anderen Brüder vergehe."					);
 					Doc_PrintLines	( nDocID,  0, "Als ich unterwegs war, ist es den elenden Wassermagiern gelungen die Kreaturen zu bannen, welche wir auf dem Plateau herbeiriefen. Als ich zu unserer Wohnstätte zurückkehrte, lagen unsere Brüder bereits leblos am Boden. Auch mein Leben beginnt zu erlöschen ... ich ... verflucht sei Adan ..."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -2574,7 +2574,7 @@ func void UseTelborZettel ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Innos steh uns bei ..."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -2611,7 +2611,7 @@ func void UseHenkerRechnung ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Viel Spaß mit den Neuerwerbungen wünscht"					);
 					Doc_PrintLine	( nDocID,  0, "Hans"					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -2648,7 +2648,7 @@ func void UseFeuermagierMeditation ()
 					Doc_PrintLine	( nDocID,  0, "Gedanken auf die Innenseite der Augenlider richten"					);
 					Doc_PrintLine	( nDocID,  0, "Formen erkennen, interpretieren"					);
 					Doc_PrintLine	( nDocID,  0, "ca. 2 Stunden später: Aufwachen"					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -2685,7 +2685,7 @@ func void UseBibAusleihliste ()
 					Doc_PrintLines	( nDocID,  0, "Theodorus: Staatsysteme - Ihre Vor- und Nachteile"					);
 					Doc_PrintLines	( nDocID,  0, "Peter: Exotische Rezepte"					);
 					Doc_PrintLines	( nDocID,  0, "(Endres: So peppen Sie Ihr Liebesleben auf)"					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -2722,7 +2722,7 @@ func void UseFragebogen ()
 					Doc_PrintLines	( nDocID,  0, "4. Wie viele Händler haben ihren Stand am Marktplatz von Khorata?"					);
 					Doc_PrintLines	( nDocID,  0, "5. Wer hat dafür zu sorgen, dass die Wasserversorgung reibungslos läuft?"					);
 					Doc_PrintLines	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -2756,7 +2756,7 @@ func void UseErikaLiebesbrief ()
 					Doc_PrintLines	( nDocID,  0, "wer schaut dir sehnsüchtig nach, wenn du in aller Morgenfrische über den taunassen Rasen patrouillierst? Wessen schmachtende Blicke prallen von deinem kräftigen Rücken ab? (Ich bekomme eine Gänsehaut, wenn ich daran denke.) Oh wärst du doch nur bei deinem Rundgang allein unterwegs, was hätte ich für Möglichkeiten gehabt! Doch nun versuche ich es auf diesem Wege, in der Hoffnung, nicht abgewiesen zu werden. Meine Gedanken sind immer bei dir. Gib mir ein Zeichen."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "E."					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -2789,7 +2789,7 @@ func void UseLehrling01 ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Mit einer Schaufel die Erde in einem großzügigen Abstand um die Pflanze abtragen, damit die Haar- und Feinwurzeln keinen Schaden nehmen. Durch leichtes Ziehen die Lage der Hauptwurzel bestimmen und diese vorsichtig freilegen. Unbedingt Rücksicht auf die Hauptwurzel nehmen, Seitentriebe sind weitaus entbehrlicher! Nach einem halben Meter Tiefe eng am Hauptstrang graben, bis sich dieser einfach aus der Erde lösen lässt."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -2824,7 +2824,7 @@ func void UseLehrling02 ()
 					Doc_PrintLines	( nDocID,  0, "Eine Düngung im Quartal ist ausreichend! Häufigeres Düngen greift den Weizen an seiner Basis an und macht ihn anfällig für Käferbefall.");
 					Doc_PrintLines	( nDocID,  0, "In einem gemäßigten Klima benötigt T. aestivum keine zusätzliche Wasserzufuhr, lediglich in Trockenzeiten sollte bewässert werden.");
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -2857,7 +2857,7 @@ func void UseAnselmForFrazer ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Du kannst dem Buben vertrauen, Frazer ... Er ist ganz harmlos!"					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 };
 
@@ -2920,7 +2920,7 @@ func void UseNovizeJGPass ()
 					Doc_PrintLines	( nDocID,  0, "Verlasst die Gegend und begebt euch direkt ins Tal, eine neue Aufgabe erwartet Euch. Ein paar bestochene Banditen der Umgebung werden euch bei euren Aufgaben unterstützten. Wehe, du versagst ein weiteres Mal."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Khorgor"					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_JG_NovizeJGPass == 0)
@@ -2964,7 +2964,7 @@ func void UseDaemonisch ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Vielen Dank, du hattest nicht untertrieben. Bei unserem nächsten Treffen in der Taverne werde ich es dir mit ein paar Bier vergelten ... aber, was sind das für schwarze Schatt ..."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_HQ_Daemonisch == 3)
@@ -3008,7 +3008,7 @@ func void UseDaemonisch_SP_01 ()
 					Doc_PrintLines	( nDocID,  0, "Falls du mal abseits der Menschen einen Ort genießen möchtest, bei welchem du in stiller Andacht an Innos verharren kannst, so kann ich dir die Höhle beim See wärmstens ans Herz legen. Man hat einen herrlichen Blick auf den See von ihr aus und kann das Lichtspiel der Abendsonne und der Nachtsterne wunderbar verfolgen."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Ulf"					);
-					
+
 					Doc_Show		( nDocID );
 
 		if (Mod_HQ_Daemonisch_SP_01 == 1)
@@ -3054,7 +3054,7 @@ func void UseDaemonisch_SP_02 ()
 					Doc_PrintLines	( nDocID,  0, "Hey, das kleine Lager im Wald ist wirklich ideal um auszuruhen, abseits der ganzen Menschen. Kleingetier gibt es auch, wenn du deinem Steckenpferd - Jagen wieder mal nachgehen möchtest. Und der Nachthimmel ist wunderschön ..."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Till"					);
-					
+
 					Doc_Show		( nDocID );
 
 		if (Mod_HQ_Daemonisch_SP_02 == 1)
@@ -3099,7 +3099,7 @@ func void UseDaemonisch_SP_03 ()
 					Doc_PrintLines	( nDocID,  0, "In dem kleinen Tal gibt es allerlei seltene Kräuter und in der Höhle zudem auch außergewöhnliche Pilze. Ich bin mir sicher, dass manch Magier und Alchemist dich um diese beneiden würde. Spät abends kann man zudem seltsame Kristalle im Eingangsbereich der Höhle glänzen und leuchten sehen. Ein Besuch kann sich nur als lohnend erweisen ..."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Valentino"					);
-					
+
 					Doc_Show		( nDocID );
 
 		if (Mod_HQ_Daemonisch_SP_03 == 1)
@@ -3143,7 +3143,7 @@ func void UseDraalVermisstennotiz ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Die Arbeitsbedingungen sind unmenschlich. Ich weiß nicht, wie lange ich das noch aushalte. Meine Kräfte schwinden von Tag zu Tag. Nur trocken Brot und Wasser, kein Sonnenlicht ... ich weiß nicht einmal, wie lange ich schon hier bin. Sind es Wochen, oder gar schon Monate? Ich habe die Hoffnung aufgegeben, hier noch einmal je wieder raus zu kommen. Adanos steh mir bei ..."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_WM_KurganAlarm == 3)
@@ -3184,7 +3184,7 @@ func void UseCirioNotiz ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Ich habe denn Mann in die Höhle gebracht, er sollte uns keine Probleme mehr machen, unsere Freunde dort werden viel Spaß mit ihm haben. Falls du auf einen Bissen vorbei kommen willst, hab ich dir die Stelle auf der Karte eingezeichnet. Aber so wie ich dich kenne wirst du mit der Frau sicher auch viel Spaß haben. Ich warte derweil am Eingang zu Relendel auf neues Futter. Wir sehen uns dann später am Treffpunkt."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_RattenQuest == 1)
@@ -3225,7 +3225,7 @@ func void UseLeonhardRichter ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Weentder, Chamiel nud Lippphi isnd genmor derwie uaf emfrei Ufß, dero ihc lestel ide Denfreuderspen-Felierungen fortso ien!"					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 
 
@@ -3260,7 +3260,7 @@ func void UseAnselmRundschreiben ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Zu detaillierteren Informationen bitte das Blatt wenden."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 
 
@@ -3297,7 +3297,7 @@ func void UseCirioNotiz2 ()
 					Doc_PrintLine	( nDocID,  0, "Ich liebe dich!"					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "P.S. Wer das liest hat anscheinend meine Leiche gefunden. Bitte geben Sie diesen Brief meiner Frau. Ein Tipp: Es waren zwei Rattenmenschen, der eine hatte eine Fellrüstung an, warscheinlich kommt er aus einem sehr kalten Gebiet."					);
-					
+
 					Doc_Show		( nDocID );
 
 	if (Mod_RattenQuest == 2)
@@ -4091,7 +4091,7 @@ func void UseSnorresNotiz ()
 					Doc_PrintLines	( nDocID,  0, "dein allseits geschätzter Snorre ;O)"					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Ps: Hahaha, nenenene nene ..."					);
-					
+
 					Doc_Show		( nDocID );
 
 
@@ -5057,7 +5057,7 @@ func void UsePatherionNachricht1 ()
 					Doc_PrintLine	(nDocID, 0, "");
 					Doc_PrintLines	(nDocID, 0, "Heute kam Pyrokar zu mir. Er erzählte mir von Patherion. Eine alte Feuermagierhochburg, die jetzt unter Belagerung steht. Ich solle hingehen und ihnen eine Lieferung Tränke bringen damit sie das ganze überstehen.");
 					Doc_PrintLine	(nDocID, 0, "");
-					
+
 					Doc_Show		( nDocID );
 
 };
@@ -5144,8 +5144,8 @@ INSTANCE ItWr_SektisTeleport3		(C_Item)
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
 	description			=	NAME_SPL_TeleportSektis;
-	
-	TEXT	[1]			=	NAME_Mana_needed;		
+
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 };
 
@@ -5280,13 +5280,13 @@ INSTANCE ItWr_KhorataGeschichte (C_ITEM)
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_SetFont 	( nDocID,  1, FONT_BookHeadline	   			); 	// -1 -> all pages
  					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 
+					Doc_SetFont 	( nDocID,  1, FONT_Book	   			);
  					Doc_PrintLine	( nDocID,  1, ""					);	// -1 -> all pages
 					Doc_PrintLines	( nDocID,  1, "Nur wenige Jahrzehnte später war diese Siedlung auf eine erstaunliche Größe herangewachsen. Alte und Junge lebten ein harmonisches Leben, denn es fehlt ihnen an nichts, und es gab keinen Anlass zum Streit. Da stellte sie Beliar auf die Probe, indem er einen Brand entfachte und ihre Häuser verkohlte. Zutiefst schockiert über diese Bosheit, doch im Herzen noch immer voller Hoffnung, gründete die Gemeinschaft ein neues Dorf, das Khorata genannt wurde.");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLines	( nDocID,  1, "- Bitte neu aufschlagen, um umzublättern -");
 					Doc_Show		( nDocID );
-			
+
 
 			Mod_REL_KhorataGeschichte = 1;
 		}
@@ -5312,7 +5312,7 @@ INSTANCE ItWr_KhorataGeschichte (C_ITEM)
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_SetFont 	( nDocID,  1, FONT_BookHeadline	   			); 	// -1 -> all pages
  					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 
+					Doc_SetFont 	( nDocID,  1, FONT_Book	   			);
  					Doc_PrintLine	( nDocID,  1, ""					);	// -1 -> all pages
 					Doc_PrintLines	( nDocID,  1, "Khorata aber ist noch immer eine blühende Stadt. Allein durch Geschick und Fleiß ist es der Bevölkerung gelungen, nützliche Handelsverbindungen in alle Teile der Insel zu unterhalten. Mit Adanos' schützender Hand wird es Beliar nicht gelingen, die Gemeinschaft zu zerstören.");
 					Doc_PrintLine	( nDocID,  1, "");
@@ -5367,7 +5367,7 @@ INSTANCE ItWr_HofstaatGeschichte03 (C_ITEM)
 		Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 		Doc_SetFont 	( nDocID,  1, FONT_BookHeadline	   			); 	// -1 -> all pages
 		Doc_PrintLine	( nDocID,  1, ""					);
-		Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 
+		Doc_SetFont 	( nDocID,  1, FONT_Book	   			);
 		Doc_PrintLine	( nDocID,  1, ""					);	// -1 -> all pages
 		Doc_PrintLines	( nDocID,  1, "Am stärksten vom Freudenspender-Missbrauch beeinflusst ist sicherlich die Kleinstadt Khorata, die dem Hofstaat quasi vorgelagert ist. Der eigenen Geschichtsschreibung zufolge entstammen beide Siedlungen der gleichen Völkergruppe. Dies konnte bisher jedoch nicht verifiziert werden.");
 		Doc_PrintLine	( nDocID,  1, "");
@@ -5419,7 +5419,7 @@ INSTANCE ItWr_BeliarBibGruss (C_ITEM)
 		Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 		Doc_SetFont 	( nDocID,  1, FONT_BookHeadline	   			); 	// -1 -> all pages
 		Doc_PrintLine	( nDocID,  1, ""					);
-		Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 
+		Doc_SetFont 	( nDocID,  1, FONT_Book	   			);
 		Doc_PrintLine	( nDocID,  1, ""					);	// -1 -> all pages
 		Doc_PrintLines	( nDocID,  1, "");
 		Doc_PrintLine	( nDocID,  1, "");
@@ -5514,7 +5514,7 @@ INSTANCE ItWr_StadthalterChroniken (C_ITEM)
 		Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 		Doc_SetFont 	( nDocID,  1, FONT_BookHeadline	   			); 	// -1 -> all pages
 		Doc_PrintLine	( nDocID,  1, ""					);
-		Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 
+		Doc_SetFont 	( nDocID,  1, FONT_Book	   			);
 		Doc_PrintLine	( nDocID,  1, ""					);	// -1 -> all pages
 		Doc_PrintLines	( nDocID,  1, "Auch innerhalb der Stadtmauern gab es Unruhen, als die Münzpräger gegen einen Korruptionsvorwurf rebellierten und Aurelian mit Gold bewarfen, sodass dieser mehrere Beulen davontrug. Als Ausgleich ließ der Stadthalter die Rebellen foltern und langsam töten. Seitdem gibt es in Khorata keine Münzpräger mehr.");
 		Doc_PrintLine	( nDocID,  1, "");
@@ -5588,8 +5588,8 @@ INSTANCE ItWr_JuanBook (C_ITEM)
 					Doc_SetPage 	( nDocID,  0, "JuanBook01.TGA"  , 0 	); // VARIATIONEN: BOOK_BROWN_L.tga , BOOK_MAGE_L.tga , BOOK_RED_L.tga
 					Doc_SetPage 	( nDocID,  1, "JuanBook02.tga" , 0	); // VARIATIONEN: BOOK_BROWN_R.tga , BOOK_MAGE_R.tga , BOOK_RED_R.tga
 
-					Doc_Show		( nDocID );	
-	
+					Doc_Show		( nDocID );
+
 		}
 		else
 		{
@@ -5600,7 +5600,7 @@ INSTANCE ItWr_JuanBook (C_ITEM)
 			AI_PrintScreen	("Notiz erhalten", -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 		};
 
-		
+
 };
 
 INSTANCE ItWr_Chromanin3 (C_ITEM)
@@ -5632,8 +5632,8 @@ INSTANCE ItWr_Chromanin3 (C_ITEM)
 					Doc_SetPage 	( nDocID,  1, "Book_Brown_R.tga" , 0	); // VARIATIONEN: BOOK_BROWN_R.tga , BOOK_MAGE_R.tga , BOOK_RED_R.tga
 
 
-					Doc_Show		( nDocID );	
-	
+					Doc_Show		( nDocID );
+
 		if (Mod_NL_Chromanin == 0)
 		{
 			Mod_NL_Chromanin = 1;
@@ -5641,7 +5641,7 @@ INSTANCE ItWr_Chromanin3 (C_ITEM)
 			Log_CreateTopic	(TOPIC_MOD_NL_SIEGELBUCH, LOG_MISSION);
 			B_SetTopicStatus	(TOPIC_MOD_NL_SIEGELBUCH, LOG_RUNNING);
 			B_LogEntry	(TOPIC_MOD_NL_SIEGELBUCH, "Verdammt! Das Chromanin-Buch ist leer. Was Xardas dazu sagen wird?");
-		};		
+		};
 };
 
 INSTANCE ItWr_AlvarTagebuch (C_ITEM)
@@ -5688,14 +5688,14 @@ INSTANCE ItWr_AlvarTagebuch (C_ITEM)
 		Doc_PrintLines	( nDocID,  1, "Das Holz und die Felle gehen schnell zur neige. Bald werde ich wohl wieder in den Wald gehen müssen um neue zu beschaffen. Seit dem letzten Ärger will mir ja niemand mehr etwas verkaufen ...");
 
 
-		Doc_Show		( nDocID );	
-	
+		Doc_Show		( nDocID );
+
 		if (Mod_AlvarTagebuch == 1)
 		{
 			Mod_AlvarTagebuch = 2;
 
 			B_LogEntry	(TOPIC_MOD_EIS_UNSCHULDIG, "Hmm, auf den letzten Seiten kann ich nichts finden, was sich als Geständnis eigenen würde. Sera soll ich das Buch genauer ansehen.");
-		};		
+		};
 };
 
 INSTANCE ItWr_AlvarTagebuch2 (C_ITEM)
@@ -5741,13 +5741,13 @@ INSTANCE ItWr_AlvarTagebuch2 (C_ITEM)
 		Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 	// -1 -> all pages
 		Doc_PrintLines	( nDocID,  1, "");
 
-		Doc_Show		( nDocID );	
-	
+		Doc_Show		( nDocID );
+
 		if (Mod_AlvarDead == 2)
 		{
 			Mod_AlvarDead = 3;
 
-		};		
+		};
 };
 
 INSTANCE ItWr_GorNaKoshsTagebuch1 (C_ITEM)
@@ -5796,8 +5796,8 @@ INSTANCE ItWr_GorNaKoshsTagebuch1 (C_ITEM)
 		Doc_PrintLines	( nDocID,  1, "Ich habe heute mit Baal Ydran gesprochen. Er hat mir ein altes Buch gegeben, welches ein paar vage Andeutungen enthält. In der Nähe der Felsenfestung lebt angeblich ein Eremit, welcher mir bei meiner Suche helfen könnte.");
 
 
-		Doc_Show		( nDocID );	
-	
+		Doc_Show		( nDocID );
+
 		if (Mod_TPL_HK_Ydran == 1)
 		{
 			Mod_TPL_HK_Ydran = 2;
@@ -5805,7 +5805,7 @@ INSTANCE ItWr_GorNaKoshsTagebuch1 (C_ITEM)
 			B_LogEntry	(TOPIC_MOD_SL_SCHMIEDEFEUERN, "Gor Na Kosh scheint für die Suche nach seinen Zutaten zu einem Eremiten aufgebrochen zu sein, der in der Nähe der Felsenfestung leben soll.");
 
 			Wld_InsertItem	(ItWr_GorNaKoshsTagebuch2, "FP_ITEM_GORNAKOSH_BUCH2");
-		};		
+		};
 };
 
 INSTANCE ItWr_GorNaKoshsTagebuch2 (C_ITEM)
@@ -5852,8 +5852,8 @@ INSTANCE ItWr_GorNaKoshsTagebuch2 (C_ITEM)
 		Doc_PrintLines	( nDocID,  1, "Ich rannte zurück, war jedoch schon zu spät. Ein riesiger Schattenläufer beugte sich über den alten Mann und labte sich an seinen Innereien. Ich lief mit gezückter Waffe auf das Ungeheuer los und schaffte es, es zu vertreiben. Alles was ich noch für den Eremiten tun konnte, war ihn ordentlich zu begraben. Möge er in Frieden ruhen.");
 
 
-		Doc_Show		( nDocID );	
-	
+		Doc_Show		( nDocID );
+
 		if (Mod_TPL_HK_Ydran == 2)
 		{
 			Mod_TPL_HK_Ydran = 3;
@@ -5863,7 +5863,7 @@ INSTANCE ItWr_GorNaKoshsTagebuch2 (C_ITEM)
 			Wld_InsertItem	(ItWr_GorNaKoshsTagebuch3, "FP_ITEM_GORNAKOSH_BUCH3");
 
 			Npc_RemoveInvItems	(hero, ItWr_GorNaKoshsTagebuch1, 1);
-		};		
+		};
 };
 
 INSTANCE ItWr_GorNaKoshsTagebuch3 (C_ITEM)
@@ -5910,8 +5910,8 @@ INSTANCE ItWr_GorNaKoshsTagebuch3 (C_ITEM)
 		Doc_PrintLines	( nDocID,  1, "Sobald ich wieder ins Lager gehe, werde ich meine Hüterklinge geschmiedet bekommen. Vorher werde ich aber beim Grab des Eremiten vorbeigehen, um ihm meinen Dank zu erweisen.");
 
 
-		Doc_Show		( nDocID );	
-	
+		Doc_Show		( nDocID );
+
 		if (Mod_TPL_HK_Ydran == 3)
 		{
 			Mod_TPL_HK_Ydran = 4;
@@ -5923,7 +5923,7 @@ INSTANCE ItWr_GorNaKoshsTagebuch3 (C_ITEM)
 			Npc_RemoveInvItems	(hero, ItWr_GorNaKoshsTagebuch2, 1);
 
 			Wld_InsertNpc	(Shadowbeast_GorNaKosh, "FP_ROAM_GORNAKOSH_SHADOWBEAST");
-		};		
+		};
 };
 
 INSTANCE Ryans_Almanach (C_ITEM)
@@ -6814,7 +6814,7 @@ INSTANCE ItWr_AxtAlmanach_Pre (C_ITEM)
 					Doc_PrintLines	( nDocID,  0, "Nur wer in die Tiefe der blut'gen Höhle herabsteigt wird's erlangen!");
 					Doc_PrintLines	( nDocID,  0, "Nur wer die Läufer der Schatten überwindet wird's erlangen!");
 					Doc_PrintLines	( nDocID,  0, "Nur wer das Rätsel löst wird's erlangen!");
-					
+
 					Doc_Show		( nDocID );
 
 		if (Almanach_Pre_Gelesen == FALSE)
@@ -6867,7 +6867,7 @@ INSTANCE ItWr_AxtAlmanach_01 (C_ITEM)
 					Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 
 		if (Almanach_01_Gelesen == FALSE)
@@ -6922,7 +6922,7 @@ INSTANCE ItWr_AxtAlmanach_02 (C_ITEM)
 					Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
+
 					Doc_Show		( nDocID );
 
 		if (Almanach_02_Gelesen == FALSE)
@@ -6978,7 +6978,7 @@ INSTANCE ItWr_AxtAlmanach_03 (C_ITEM)
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Gehe dorthin wo Sand und Wasser aufeinander treffen!"					);
-					
+
 					Doc_Show		( nDocID );
 
 		if (Almanach_03_Gelesen == FALSE)
@@ -7034,7 +7034,7 @@ INSTANCE ItWr_AxtAlmanach_04 (C_ITEM)
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Begib dich in die Dunkelheit in der einst Erz geschürft wurde. Besiege die dunklen Diener und berge das fünfte Buch!"					);
-					
+
 					Doc_Show		( nDocID );
 
 		if (Almanach_04_Gelesen == FALSE)
@@ -7090,7 +7090,7 @@ INSTANCE ItWr_AxtAlmanach_05 (C_ITEM)
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Kehre zurück, zum ersten Ort, und beende die Suche, Suchender!"					);
-					
+
 					Doc_Show		( nDocID );
 
 		if (Almanach_05_Gelesen == FALSE)
@@ -7148,7 +7148,7 @@ INSTANCE ItWr_AxtAlmanach_06 (C_ITEM)
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Gehe hin zu Inubis letzter Ruhestätte und hebe das Grab aus. Besiege die dunklen Wächter und nimm die Axt an dich und nutze sie weise!"					);
-					
+
 					Doc_Show		( nDocID );
 
 		if (Almanach_06_Gelesen == FALSE)
@@ -7169,7 +7169,7 @@ INSTANCE ItWr_DarrionTagebuch (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"NewBook_V1_5.3DS"; 
+	visual 					=	"NewBook_V1_5.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -7204,7 +7204,7 @@ INSTANCE ItWr_DarrionTagebuch (C_ITEM)
 					Doc_PrintLines	( nDocID,  0, "Ich habe heute in einem Tempel ein altes Buch gefunden, in welchem ich eine Abbildung dieser Pflanze gefunden habe. Ich habe kein Wort lesen können, nachdem ich dem Einwanderer, den ich vor kurzem getroffen habe, etwas schimmligen Käse gegeben habe, hat der mir das Ganze übersetzt. Anscheinend sind die Blätter dieser Blume in Tabak gemischt eine unglaubliche Droge. Das klingt doch mal interessant."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Ich habe die Pflanze im Tal nahe der Piratenbucht gepflanzt, aber sie will und will einfach nicht treiben. Nicht mal der Salpeter, mit dem ich sie Dünge, scheint zu wirken. Der Eremit hat gemeint, im Buch steht, dass diese Pflanze nur im tiefen Sumpf wachsen kann. Mich täglich durch diese Echsenbiester zu metzeln, kann ich jedoch vergessen. Es ist ohnehin höchste Zeit für mich dieses Land zu verlassen. Irgendwo werd‘ ich schon wieder ein nettes Plätzchen finden."					);
-					
+
 					Doc_Show		( nDocID );
 };
 //////////////////////////////////////////////////////////////////////////////
@@ -7215,7 +7215,7 @@ INSTANCE ItWr_DarrionTagebuch (C_ITEM)
 
 instance ItWr_Map_NewWorld (C_Item)
 {
-	name 		= "Landkarte Khorinis";  // 
+	name 		= "Landkarte Khorinis";  //
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -7251,7 +7251,7 @@ instance ItWr_Map_NewWorld (C_Item)
 
 instance ItWr_Map_Eisgebiet (C_Item)
 {
-	name 		= "Landkarte Eisgebiet";  // 
+	name 		= "Landkarte Eisgebiet";  //
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -7288,7 +7288,7 @@ instance ItWr_Map_Eisgebiet (C_Item)
 
 instance ItWr_Map_Eisgebiet_Richard (C_Item)
 {
-	name 		= "Landkarte Eisgebiet";  // 
+	name 		= "Landkarte Eisgebiet";  //
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -7324,7 +7324,7 @@ instance ItWr_Map_Eisgebiet_Richard (C_Item)
 
 instance ItWr_Map_Eisgebiet_Keith (C_Item)
 {
-	name 		= "Landkarte Eisgebiet";  // 
+	name 		= "Landkarte Eisgebiet";  //
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -7360,7 +7360,7 @@ instance ItWr_Map_Eisgebiet_Keith (C_Item)
 
 instance ItWr_Map_Tugettso_Tempel (C_Item)
 {
-	name 		= "Landkarte Tugettso";  // 
+	name 		= "Landkarte Tugettso";  //
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -7396,7 +7396,7 @@ instance ItWr_Map_Tugettso_Tempel (C_Item)
 
 instance ItWr_LageplanOrks (C_Item)
 {
-	name 		= "Landkarte Khorinis";  // 
+	name 		= "Landkarte Khorinis";  //
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -7451,7 +7451,7 @@ instance ItWr_LageplanOrks (C_Item)
 
 instance ItWr_Map_NewWorld_City (C_Item)
 {
-	name 		= "Stadtkarte Khorinis";  // 
+	name 		= "Stadtkarte Khorinis";  //
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -7681,12 +7681,12 @@ INSTANCE ItWr_EinhandBuch (C_ITEM)
 
 	value 					=	5000;
 
-	visual 					=	"NewBook_V1_6.3DS";  					
+	visual 					=	"NewBook_V1_6.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	description				= 	"Die südländische Verteidigung";
-	
+
 	TEXT[2] 				=  "Ein Lehrbuch zum Kampf";
 	TEXT[3] 				=  "mit Einhandwaffen";
 	TEXT[5]					= 	NAME_Value;
@@ -7703,16 +7703,16 @@ INSTANCE ItWr_EinhandBuch (C_ITEM)
 			Lerne_Einhand = TRUE;
 			Snd_Play("Levelup");
 		};
-		
+
 		var int nDocID;
 
-		nDocID = 	Doc_Create		()			  ;								
-					Doc_SetPages	( nDocID,  2 );                        
+		nDocID = 	Doc_Create		()			  ;
+					Doc_SetPages	( nDocID,  2 );
 
-					Doc_SetPage 	( nDocID,  0, "Book_Red_L.tga"  , 0 	); 
-					Doc_SetPage 	( nDocID,  1, "Book_Red_R.tga" , 0	); 
+					Doc_SetPage 	( nDocID,  0, "Book_Red_L.tga"  , 0 	);
+					Doc_SetPage 	( nDocID,  1, "Book_Red_R.tga" , 0	);
 
-					
+
 
  					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
 					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline	   			); 	// -1 -> all pages
@@ -7721,10 +7721,10 @@ INSTANCE ItWr_EinhandBuch (C_ITEM)
 					Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Der Südländer kämpft nun mehr weniger mit der Kraft des Nordmannes, als mit seiner Behendigkeit. Denn im heißen Klima seiner Heimat, bevorzugt er leichte Rüstungen welche ihm mehr Beweglichkeit erlauben. Durch diesen Umstand hat der Südländer einen ihm angepassten Kampstil entwickelt, der sich auf fundamentale Weise von den uns bekannten unterscheidet. "					);
-					
-					
 
-					
+
+
+
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_SetFont 	( nDocID,  1, FONT_BookHeadline	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  1, ""					);
@@ -7732,8 +7732,8 @@ INSTANCE ItWr_EinhandBuch (C_ITEM)
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLines	( nDocID,  1, "Das wohl bekannnteste Manöver des Südländers ist wohl der einarmige Block mit rückwärtigen Ausfallschritt. Durch den Ausfallschritt gelingt es ihm, die Kraft des gegnerischen Angriffes zu mildern und so eine hervorragende Ausgangsposition zu erlangen, die zum direkten Gegenangriff genutzt werden kann."	);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					
-					
+
+
 					Doc_Show		( nDocID );
 };
 //---------------------------------------------------------------------------------------------------------------------------
@@ -7748,12 +7748,12 @@ INSTANCE ItWr_ZweihandBuch (C_ITEM)
 
 	value 					=	5000;
 
-	visual 					=	"NewBook_V2_1.3DS";  					
+	visual 					=	"NewBook_V2_1.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	description				= 	"Der Doppelblock";
-	
+
 	TEXT[2] 				=  "Ein Lehrbuch zum Kampf";
 	TEXT[3] 				=  "mit Zweihandwaffen";
 	TEXT[5]					= 	NAME_Value;
@@ -7775,10 +7775,10 @@ INSTANCE ItWr_ZweihandBuch (C_ITEM)
 		nDocID = 	Doc_Create		()			  ;								// DocManager
 					Doc_SetPages	( nDocID,  2 );                         //wieviel Pages
 
-					Doc_SetPage 	( nDocID,  0, "Book_Red_L.tga"  , 0 	); 
-					Doc_SetPage 	( nDocID,  1, "Book_Red_R.tga" , 0	); 
+					Doc_SetPage 	( nDocID,  0, "Book_Red_L.tga"  , 0 	);
+					Doc_SetPage 	( nDocID,  1, "Book_Red_R.tga" , 0	);
 
-				
+
 
  					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
 					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline	   			); 	// -1 -> all pages
@@ -7788,7 +7788,7 @@ INSTANCE ItWr_ZweihandBuch (C_ITEM)
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Das Abblocken der gegnerischen Klinge, mit einer beidhändig geführten Waffe, kann bei ausreichender Kraft dazu genutzt werden, sämtlichen Schwung des Angriffes aufzuhalten und den Gegner zu zwingen seien begonnene Kombination abrupt zu beenden. "					);
-					
+
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_SetFont 	( nDocID,  1, FONT_BookHeadline	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  1, ""					);
@@ -7797,6 +7797,6 @@ INSTANCE ItWr_ZweihandBuch (C_ITEM)
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLines	( nDocID,  1, "Die daraufhin meist folgende Stagnation des Gegners sollte entschlossen genutzt werden, um selbst die Initiative zu ergreifen und den Gegner mit gekonnten Schlägen in die Niederlage zu treiben.    "	);
-					
+
 					Doc_Show		( nDocID );
 };

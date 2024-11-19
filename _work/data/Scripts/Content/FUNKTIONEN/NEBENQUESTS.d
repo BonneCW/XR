@@ -3774,6 +3774,13 @@ FUNC VOID NEBENQUESTS()
 
 			B_Say_Overlay	(hero, NULL, "$READZETTEL");
 		};
+
+		if (Mod_Thys_Schneegeister == 2)
+		{
+			Mod_Thys_Schneegeister = 3;
+
+			AI_Teleport	(hero, "EIS_43");
+		};
 	};
 
 	if (CurrentLevel == OLDMINE_ZEN)

@@ -70,6 +70,7 @@ Fixes:
 - fixed dialog with Saturas freezing when completing the raging quest while waiting for Saturas to go to the council
 - fixed sleep spell not working on Naim
 - fixed green ore requiring two types of pick axe
+- fixed there being no way out of the ice temple
 
 
 1.0.9
