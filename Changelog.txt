@@ -63,6 +63,7 @@ Fixes:
 - fixed thieves in treasure chamber in Khorata complaining when hero takes something
 - fixed potential problems with Atalante's warg transformations
 - fixed Davon, Friedel and executioner in Khorata not going back to their old routine after defeating the people at the mine
+- fixed poison brewing not working after learning it at Kamal
 
 
 1.0.9

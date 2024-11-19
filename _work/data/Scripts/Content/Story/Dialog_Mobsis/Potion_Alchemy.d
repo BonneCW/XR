@@ -1,9 +1,9 @@
 FUNC VOID POTIONALCHEMY_S1 ()
 {
-	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
-	
+	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero);
+
 	if  (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))
-	{	
+	{
 		B_SetAivar(self, AIV_INVINCIBLE, TRUE);
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_POTIONALCHEMY;
 		Ai_ProcessInfos (her);
@@ -19,7 +19,7 @@ INSTANCE PC_PotionAlchemy_PermHealth_Oeffnen (C_Info)
 	condition		= PC_PotionAlchemy_PermHealth_Oeffnen_Condition;
 	information		= PC_PotionAlchemy_PermHealth_Oeffnen_Info;
 	permanent		= 1;
-	description		= "Flasche öffnen und Pflanzenreste entfernen"; 
+	description		= "Flasche öffnen und Pflanzenreste entfernen";
 };
 
 FUNC INT PC_PotionAlchemy_PermHealth_Oeffnen_Condition ()
@@ -27,7 +27,7 @@ FUNC INT PC_PotionAlchemy_PermHealth_Oeffnen_Condition ()
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
 	&& ((Npc_HasItems(hero, ItPo_PermHealth_Gut) == 1)
 	|| (Npc_HasItems(hero, ItPo_PermHealth_Schlecht) == 1))
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -62,7 +62,7 @@ INSTANCE PC_PotionAlchemy_Kakos (C_Info)
 	condition		= PC_PotionAlchemy_Kakos_Condition;
 	information		= PC_PotionAlchemy_Kakos_Info;
 	permanent		= 0;
-	description		= "Wacholder für Kakos vergiften"; 
+	description		= "Wacholder für Kakos vergiften";
 };
 
 FUNC INT PC_PotionAlchemy_Kakos_Condition ()
@@ -71,7 +71,7 @@ FUNC INT PC_PotionAlchemy_Kakos_Condition ()
 	&& (Mod_NL_Kakos == 1)
 	&& (Npc_HasItems(hero, ItFo_Booze) >= 1)
 	&& (Npc_HasItems(hero, ItPl_Mushroom_03) >= 3)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -93,7 +93,7 @@ INSTANCE PC_PotionAlchemy_Daemonisch (C_Info)
 	condition		= PC_PotionAlchemy_Daemonisch_Condition;
 	information		= PC_PotionAlchemy_Daemonisch_Info;
 	permanent		= 0;
-	description		= "Heilung der Besessenheit herstellen"; 
+	description		= "Heilung der Besessenheit herstellen";
 };
 
 FUNC INT PC_PotionAlchemy_Daemonisch_Condition ()
@@ -102,7 +102,7 @@ FUNC INT PC_PotionAlchemy_Daemonisch_Condition ()
 	&& (Mod_HQ_Daemonisch >= 1)
 	&& (Npc_HasItems(hero, ItMi_HolyWater) >= 3)
 	&& (Npc_HasItems(hero, ItPl_Temp_Herb) >= 1)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -126,7 +126,7 @@ INSTANCE PC_PotionAlchemy_CoragonDaemonisch (C_Info)
 	condition		= PC_PotionAlchemy_CoragonDaemonisch_Condition;
 	information		= PC_PotionAlchemy_CoragonDaemonisch_Info;
 	permanent		= 0;
-	description		= "Pökelfleisch mit Klosterwein behandeln"; 
+	description		= "Pökelfleisch mit Klosterwein behandeln";
 };
 
 FUNC INT PC_PotionAlchemy_CoragonDaemonisch_Condition ()
@@ -135,7 +135,7 @@ FUNC INT PC_PotionAlchemy_CoragonDaemonisch_Condition ()
 	&& (Npc_KnowsInfo(hero, Info_Mod_Coragon_Daemonisch2))
 	&& (Npc_HasItems(hero, ItFo_KWine) >= 1)
 	&& (Npc_HasItems(hero, ItMi_CoragonDaemonisch) >= 1)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -155,7 +155,7 @@ INSTANCE PC_PotionAlchemy_CoragonDaemonisch2 (C_Info)
 	condition		= PC_PotionAlchemy_CoragonDaemonisch2_Condition;
 	information		= PC_PotionAlchemy_CoragonDaemonisch2_Info;
 	permanent		= 0;
-	description		= "Pökelfleisch mit Trank 'Heilung der Besessenheit' behandeln"; 
+	description		= "Pökelfleisch mit Trank 'Heilung der Besessenheit' behandeln";
 };
 
 FUNC INT PC_PotionAlchemy_CoragonDaemonisch2_Condition ()
@@ -164,7 +164,7 @@ FUNC INT PC_PotionAlchemy_CoragonDaemonisch2_Condition ()
 	&& (Npc_KnowsInfo(hero, Info_Mod_Coragon_Daemonisch2))
 	&& (Npc_HasItems(hero, ItPo_HealBesessenheit) >= 1)
 	&& (Npc_HasItems(hero, ItMi_CoragonDaemonisch) >= 1)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -186,7 +186,7 @@ INSTANCE PC_PotionAlchemy_Tofu (C_Info)
 	condition		= PC_PotionAlchemy_Tofu_Condition;
 	information		= PC_PotionAlchemy_Tofu_Info;
 	permanent		= 1;
-	description		= "To-Fu herstellen"; 
+	description		= "To-Fu herstellen";
 };
 
 FUNC INT PC_PotionAlchemy_Tofu_Condition ()
@@ -194,7 +194,7 @@ FUNC INT PC_PotionAlchemy_Tofu_Condition ()
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
 	&& (Npc_KnowsInfo(hero, Info_Mod_UrShak_Biftek))
 	&& (!Mod_Tofu_Hergestellt)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -210,7 +210,7 @@ FUNC VOID PC_PotionAlchemy_Tofu_Info()
 		Npc_RemoveInvItems	(hero, ItMi_SalzNugget, 1);
 
 		CreateInvItems	(hero, ItFo_Tofu, 1);
-		
+
 		Mod_Tofu_Hergestellt = TRUE;
 	};
 };
@@ -224,7 +224,7 @@ INSTANCE PC_PotionAlchemy_Spezialtrunken (C_Info)
 	condition		= PC_PotionAlchemy_Spezialtrunken_Condition;
 	information		= PC_PotionAlchemy_Spezialtrunken_Info;
 	permanent		= 0;
-	description		= "Spezialtrunken herstellen"; 
+	description		= "Spezialtrunken herstellen";
 };
 
 FUNC INT PC_PotionAlchemy_Spezialtrunken_Condition ()
@@ -233,7 +233,7 @@ FUNC INT PC_PotionAlchemy_Spezialtrunken_Condition ()
 	&& (Mod_SL_PartGeliebte == 3)
 	&& (Npc_HasItems(hero, ItFo_Booze) >= 20)
 	&& (Npc_HasItems(hero, ItPl_Melone) >= 1)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -259,7 +259,7 @@ INSTANCE PC_PotionAlchemy_Health (C_Info)
 	condition		= PC_PotionAlchemy_Health_Condition;
 	information		= PC_PotionAlchemy_Health_Info;
 	permanent		= TRUE;
-	description		= "Heiltränke brauen"; 
+	description		= "Heiltränke brauen";
 };
 
 FUNC INT PC_PotionAlchemy_Health_Condition ()
@@ -270,7 +270,7 @@ FUNC INT PC_PotionAlchemy_Health_Condition ()
 	|| (PLAYER_TALENT_ALCHEMY[POTION_Health_06] == TRUE)
 	|| (PLAYER_TALENT_ALCHEMY[POTION_Health_05] == TRUE)
 	|| (Mod_Ring_Alchemist == TRUE))
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -331,7 +331,7 @@ FUNC VOID PC_PotionAlchemy_Health_Info()
 
 FUNC VOID PC_PotionAlchemy_Health_04_Alle ()
 {
-	if (Npc_HasItems (hero, ItPo_Health_01) >= 3) 
+	if (Npc_HasItems (hero, ItPo_Health_01) >= 3)
 	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
 	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
@@ -374,8 +374,8 @@ FUNC VOID PC_PotionAlchemy_Health_04_Alle ()
 		Npc_RemoveInvItems (hero, ItPo_Health_01, 3*MakePotion);
 		Npc_RemoveInvItems (hero, ItPl_Temp_Herb, MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Flask, MakePotion-1);
-		
-		CreateInvItems	   (hero, ItPo_Health_Addon_04, MakePotion);  
+
+		CreateInvItems	   (hero, ItPo_Health_Addon_04, MakePotion);
 
 		var string Meldung;
 
@@ -385,38 +385,38 @@ FUNC VOID PC_PotionAlchemy_Health_04_Alle ()
 
 		Print (Meldung);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Health_04 ()
 {
-	if (Npc_HasItems (hero, ItPo_Health_01) >= 3) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	  	>= 1) 
+	if (Npc_HasItems (hero, ItPo_Health_01) >= 3)
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	  	>= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPo_Health_01,3);
 		Npc_RemoveInvItems (hero,ItPl_Temp_Herb	  	,1);
-		
-		CreateInvItems	   (hero,ItPo_Health_Addon_04,1);  
+
+		CreateInvItems	   (hero,ItPo_Health_Addon_04,1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Health_03_Alle ()
 {
-	if (Npc_HasItems (hero, ItPl_Health_Herb_03) >= 2) 
+	if (Npc_HasItems (hero, ItPl_Health_Herb_03) >= 2)
 	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
 	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
@@ -459,8 +459,8 @@ FUNC VOID PC_PotionAlchemy_Health_03_Alle ()
 		Npc_RemoveInvItems (hero, ItPl_Health_Herb_03, 2*MakePotion);
 		Npc_RemoveInvItems (hero, ItPl_Temp_Herb, MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Flask, MakePotion-1);
-		
-		CreateInvItems	   (hero, ItPo_Health_03, MakePotion);  
+
+		CreateInvItems	   (hero, ItPo_Health_03, MakePotion);
 
 		var string Meldung;
 
@@ -470,38 +470,38 @@ FUNC VOID PC_PotionAlchemy_Health_03_Alle ()
 
 		Print (Meldung);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Health_03 ()
 {
-	if (Npc_HasItems (hero, ItPl_Health_Herb_03) >= 2) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	  	>= 1) 
+	if (Npc_HasItems (hero, ItPl_Health_Herb_03) >= 2)
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	  	>= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPl_Health_Herb_03,2);
 		Npc_RemoveInvItems (hero,ItPl_Temp_Herb	  	,1);
-		
-		CreateInvItems	   (hero,ItPo_Health_03,1);  
+
+		CreateInvItems	   (hero,ItPo_Health_03,1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	};	
+	};
 
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Health_02_Alle ()
 {
-	if (Npc_HasItems (hero, ItPl_Health_Herb_02) >= 2) 
+	if (Npc_HasItems (hero, ItPl_Health_Herb_02) >= 2)
 	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
 	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
@@ -544,8 +544,8 @@ FUNC VOID PC_PotionAlchemy_Health_02_Alle ()
 		Npc_RemoveInvItems (hero, ItPl_Health_Herb_02, 2*MakePotion);
 		Npc_RemoveInvItems (hero, ItPl_Temp_Herb, MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Flask, MakePotion-1);
-		
-		CreateInvItems	   (hero, ItPo_Health_02, MakePotion);  
+
+		CreateInvItems	   (hero, ItPo_Health_02, MakePotion);
 
 		var string Meldung;
 
@@ -555,38 +555,38 @@ FUNC VOID PC_PotionAlchemy_Health_02_Alle ()
 
 		Print (Meldung);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Health_02 ()
 {
-	if (Npc_HasItems (hero, ItPl_Health_Herb_02) >= 2) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	 >= 1) 
+	if (Npc_HasItems (hero, ItPl_Health_Herb_02) >= 2)
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	 >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPl_Health_Herb_02,2);
 		Npc_RemoveInvItems (hero,ItPl_Temp_Herb	  	,1);
-		
-		CreateInvItems	   (hero,ItPo_Health_02,1);  
+
+		CreateInvItems	   (hero,ItPo_Health_02,1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Health_01_Alle ()
 {
-	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 2) 
+	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 2)
 	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
 	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
@@ -629,7 +629,7 @@ FUNC VOID PC_PotionAlchemy_Health_01_Alle ()
 		Npc_RemoveInvItems (hero, ItPl_Health_Herb_01, 2*MakePotion);
 		Npc_RemoveInvItems (hero, ItPl_Temp_Herb, MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Flask, MakePotion-1);
-		
+
 		CreateInvItems	   (hero, ItPo_Health_01, MakePotion);
 
 		Mod_Count_Health_01 += MakePotion;
@@ -642,31 +642,31 @@ FUNC VOID PC_PotionAlchemy_Health_01_Alle ()
 
 		Print (Meldung);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Health_01 ()
 {
-	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 2) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	 >= 1) 
+	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 2)
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	 >= 1)
 	{
 		if (Mod_Darf_Health_01 == TRUE)
 		|| (Mod_LehrlingBei != 1)
 		{
 			Npc_RemoveInvItems (hero, ItPl_Health_Herb_01, 2);
 			Npc_RemoveInvItems (hero, ItPl_Temp_Herb, 1);
-		
-			CreateInvItem	   (hero,ItPo_Health_01);  
+
+			CreateInvItem	   (hero,ItPo_Health_01);
 			Print (PRINT_AlchemySuccess);
 
 			Mod_Count_Health_01 += 1;
-	
+
 			B_ENDPRODUCTIONDIALOG ();
 		}
 		else
@@ -680,11 +680,11 @@ FUNC VOID PC_PotionAlchemy_Health_01 ()
 			Info_AddChoice	(PC_PotionAlchemy_Health, "Feldknöterich in den Mörser geben", PC_PotionAlchemy_Health_01_A);
 		};
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
@@ -745,8 +745,8 @@ FUNC VOID PC_PotionAlchemy_Health_01_D ()
 	Info_ClearChoices	(PC_PotionAlchemy_Health);
 
 	if (Mod_TrankFirstStep == 1)
-	{		
-		CreateInvItem	   (hero, ItPo_Health_01);  
+	{
+		CreateInvItem	   (hero, ItPo_Health_01);
 		Print (PRINT_AlchemySuccess);
 
 		Mod_Darf_Health_01 = TRUE;
@@ -755,17 +755,17 @@ FUNC VOID PC_PotionAlchemy_Health_01_D ()
 		Mod_Count_Health_01 += 1;
 	}
 	else
-	{		
-		CreateInvItem	   (hero, ItFo_Tee);  
+	{
+		CreateInvItem	   (hero, ItFo_Tee);
 		Print (PRINT_AlchemySuccess);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Health_07_Alle ()
 {
-	if (Npc_HasItems (hero, ItPl_Health_Herb_02) >= 2) 
+	if (Npc_HasItems (hero, ItPl_Health_Herb_02) >= 2)
 	&& (Npc_HasItems (hero, ItFo_Booze) >= 1)
 	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
@@ -808,8 +808,8 @@ FUNC VOID PC_PotionAlchemy_Health_07_Alle ()
 		Npc_RemoveInvItems (hero, ItPl_Health_Herb_02, 2*MakePotion);
 		Npc_RemoveInvItems (hero, ItPl_Temp_Herb, MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Flask, MakePotion-1);
-		
-		CreateInvItems	   (hero, ItPo_Health_07, MakePotion);  
+
+		CreateInvItems	   (hero, ItPo_Health_07, MakePotion);
 
 		var string Meldung;
 
@@ -819,38 +819,38 @@ FUNC VOID PC_PotionAlchemy_Health_07_Alle ()
 
 		Print (Meldung);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Health_07 ()
 {
-	if (Npc_HasItems (hero, ItPl_Health_Herb_02) >= 2) 
-	&& (Npc_HasItems (hero, ItFo_Booze) 	 >= 1) 
+	if (Npc_HasItems (hero, ItPl_Health_Herb_02) >= 2)
+	&& (Npc_HasItems (hero, ItFo_Booze) 	 >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPl_Health_Herb_02, 2);
 		Npc_RemoveInvItems (hero,ItFo_Booze, 1);
-		
-		CreateInvItem	   (hero,ItPo_Health_07);  
+
+		CreateInvItem	   (hero,ItPo_Health_07);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Health_06_Alle ()
 {
-	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 4) 
+	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 4)
 	&& (Npc_HasItems (hero, ItFo_Booze) >= 1)
 	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
@@ -893,8 +893,8 @@ FUNC VOID PC_PotionAlchemy_Health_06_Alle ()
 		Npc_RemoveInvItems (hero, ItPl_Health_Herb_01, 4*MakePotion);
 		Npc_RemoveInvItems (hero, ItFo_Booze, MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Flask, MakePotion-1);
-		
-		CreateInvItems	   (hero, ItPo_Health_06, MakePotion);  
+
+		CreateInvItems	   (hero, ItPo_Health_06, MakePotion);
 
 		var string Meldung;
 
@@ -904,38 +904,38 @@ FUNC VOID PC_PotionAlchemy_Health_06_Alle ()
 
 		Print (Meldung);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Health_06 ()
 {
-	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 4) 
-	&& (Npc_HasItems (hero, ItFo_Booze) 	 >= 1) 
+	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 4)
+	&& (Npc_HasItems (hero, ItFo_Booze) 	 >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPl_Health_Herb_01, 4);
 		Npc_RemoveInvItems (hero,ItFo_Booze, 1);
-		
-		CreateInvItem	   (hero,ItPo_Health_06);  
+
+		CreateInvItem	   (hero,ItPo_Health_06);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Health_05_Alle ()
 {
-	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 3) 
+	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 3)
 	&& (Npc_HasItems (hero, ItFo_Water) >= 1)
 	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
@@ -978,8 +978,8 @@ FUNC VOID PC_PotionAlchemy_Health_05_Alle ()
 		Npc_RemoveInvItems (hero, ItPl_Health_Herb_01, 3*MakePotion);
 		Npc_RemoveInvItems (hero, ItFo_Water, MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Flask, MakePotion-1);
-		
-		CreateInvItems	   (hero, ItPo_Health_05, MakePotion);  
+
+		CreateInvItems	   (hero, ItPo_Health_05, MakePotion);
 
 		var string Meldung;
 
@@ -989,32 +989,32 @@ FUNC VOID PC_PotionAlchemy_Health_05_Alle ()
 
 		Print (Meldung);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Health_05 ()
 {
-	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 3) 
-	&& (Npc_HasItems (hero, ItFo_Water) 	 >= 1) 
+	if (Npc_HasItems (hero, ItPl_Health_Herb_01) >= 3)
+	&& (Npc_HasItems (hero, ItFo_Water) 	 >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPl_Health_Herb_01, 3);
 		Npc_RemoveInvItems (hero,ItFo_Water, 1);
-		
-		CreateInvItem	   (hero,ItPo_Health_05);  
+
+		CreateInvItem	   (hero,ItPo_Health_05);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
@@ -1032,7 +1032,7 @@ INSTANCE PC_PotionAlchemy_Mana (C_Info)
 	condition		= PC_PotionAlchemy_Mana_Condition;
 	information		= PC_PotionAlchemy_Mana_Info;
 	permanent		= TRUE;
-	description		= "Manatränke brauen"; 
+	description		= "Manatränke brauen";
 };
 
 FUNC INT PC_PotionAlchemy_Mana_Condition ()
@@ -1042,7 +1042,7 @@ FUNC INT PC_PotionAlchemy_Mana_Condition ()
 	|| (PLAYER_TALENT_ALCHEMY[POTION_Mana_05] == TRUE)
 	|| (PLAYER_TALENT_ALCHEMY[POTION_Mana_06] == TRUE)
 	|| (Mod_Ring_Alchemist == TRUE))
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -1097,7 +1097,7 @@ FUNC VOID PC_PotionAlchemy_Mana_Info()
 
 FUNC VOID PC_PotionAlchemy_Mana_04_Alle ()
 {
-	if (Npc_HasItems (hero, ItPo_Mana_01) >= 3) 
+	if (Npc_HasItems (hero, ItPo_Mana_01) >= 3)
 	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
 	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
@@ -1140,8 +1140,8 @@ FUNC VOID PC_PotionAlchemy_Mana_04_Alle ()
 		Npc_RemoveInvItems (hero, ItPo_Mana_01, 3*MakePotion);
 		Npc_RemoveInvItems (hero, ItPl_Temp_Herb, MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Flask, MakePotion-1);
-		
-		CreateInvItems	   (hero, ItPo_Mana_Addon_04, MakePotion);  
+
+		CreateInvItems	   (hero, ItPo_Mana_Addon_04, MakePotion);
 
 		var string Meldung;
 
@@ -1151,38 +1151,38 @@ FUNC VOID PC_PotionAlchemy_Mana_04_Alle ()
 
 		Print (Meldung);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Mana_04 ()
 {
-	if (Npc_HasItems (hero, ItPo_Mana_01) >= 3) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	  >= 1) 
+	if (Npc_HasItems (hero, ItPo_Mana_01) >= 3)
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	  >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPo_Mana_01,3);
 		Npc_RemoveInvItems (hero,ItPl_Temp_Herb	  ,1);
-		
-		CreateInvItems	   (hero,ItPo_Mana_Addon_04,1);  
+
+		CreateInvItems	   (hero,ItPo_Mana_Addon_04,1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Mana_03_Alle ()
 {
-	if (Npc_HasItems (hero, ItPl_Mana_Herb_03) >= 2) 
+	if (Npc_HasItems (hero, ItPl_Mana_Herb_03) >= 2)
 	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
 	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
@@ -1225,8 +1225,8 @@ FUNC VOID PC_PotionAlchemy_Mana_03_Alle ()
 		Npc_RemoveInvItems (hero, ItPl_Mana_Herb_03, 2*MakePotion);
 		Npc_RemoveInvItems (hero, ItPl_Temp_Herb, MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Flask, MakePotion-1);
-		
-		CreateInvItems	   (hero, ItPo_Mana_03, MakePotion);  
+
+		CreateInvItems	   (hero, ItPo_Mana_03, MakePotion);
 
 		var string Meldung;
 
@@ -1236,39 +1236,39 @@ FUNC VOID PC_PotionAlchemy_Mana_03_Alle ()
 
 		Print (Meldung);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Mana_03 ()
 {
-	if (Npc_HasItems (hero, ItPl_Mana_Herb_03) >= 2) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	  >= 1) 
+	if (Npc_HasItems (hero, ItPl_Mana_Herb_03) >= 2)
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	  >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPl_Mana_Herb_03,2);
 		Npc_RemoveInvItems (hero,ItPl_Temp_Herb	  ,1);
-		
-		CreateInvItems	   (hero,ItPo_Mana_03,1);  
+
+		CreateInvItems	   (hero,ItPo_Mana_03,1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	};	
+	};
 
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Mana_02_Alle ()
 {
-	if (Npc_HasItems (hero, ItPl_Mana_Herb_02) >= 2) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1) 
+	if (Npc_HasItems (hero, ItPl_Mana_Herb_02) >= 2)
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
 	{
 		if (Npc_HasItems(hero, ItPl_Mana_Herb_02)/2 >= Npc_HasItems(hero, ItPl_Temp_Herb))
 		&& (Npc_HasItems(hero, ItPl_Mana_Herb_02)/2 >= Npc_HasItems(hero, ItMi_Flask)-1)
@@ -1309,8 +1309,8 @@ FUNC VOID PC_PotionAlchemy_Mana_02_Alle ()
 		Npc_RemoveInvItems (hero, ItPl_Mana_Herb_02, 2*MakePotion);
 		Npc_RemoveInvItems (hero, ItPl_Temp_Herb, MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Flask, MakePotion-1);
-		
-		CreateInvItems	   (hero, ItPo_Mana_02, MakePotion);  
+
+		CreateInvItems	   (hero, ItPo_Mana_02, MakePotion);
 
 		var string Meldung;
 
@@ -1320,38 +1320,38 @@ FUNC VOID PC_PotionAlchemy_Mana_02_Alle ()
 
 		Print (Meldung);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Mana_02 ()
 {
-	if (Npc_HasItems (hero, ItPl_Mana_Herb_02) >= 2) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb)    >= 1) 
+	if (Npc_HasItems (hero, ItPl_Mana_Herb_02) >= 2)
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb)    >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPl_Mana_Herb_02,2);
 		Npc_RemoveInvItems (hero,ItPl_Temp_Herb	  ,1);
-		
-		CreateInvItems	   (hero,ItPo_Mana_02,1);  
+
+		CreateInvItems	   (hero,ItPo_Mana_02,1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Mana_01_Alle ()
 {
-	if (Npc_HasItems (hero, ItPl_Mana_Herb_01) >= 2) 
+	if (Npc_HasItems (hero, ItPl_Mana_Herb_01) >= 2)
 	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
 	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
@@ -1394,8 +1394,8 @@ FUNC VOID PC_PotionAlchemy_Mana_01_Alle ()
 		Npc_RemoveInvItems (hero, ItPl_Mana_Herb_01, 2*MakePotion);
 		Npc_RemoveInvItems (hero, ItPl_Temp_Herb, MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Flask, MakePotion-1);
-		
-		CreateInvItems	   (hero, ItPo_Mana_01, MakePotion);  
+
+		CreateInvItems	   (hero, ItPo_Mana_01, MakePotion);
 
 		Mod_Count_Mana_01 += MakePotion;
 
@@ -1407,31 +1407,31 @@ FUNC VOID PC_PotionAlchemy_Mana_01_Alle ()
 
 		Print (Meldung);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Mana_01 ()
 {
-	if (Npc_HasItems (hero, ItPl_Mana_Herb_01) >= 2) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	 >= 1) 
+	if (Npc_HasItems (hero, ItPl_Mana_Herb_01) >= 2)
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) 	 >= 1)
 	{
 		if (Mod_Darf_Mana_01 == TRUE)
 		|| (Mod_LehrlingBei != 1)
 		{
 			Npc_RemoveInvItems (hero, ItPl_Mana_Herb_01, 2);
 			Npc_RemoveInvItems (hero, ItPl_Temp_Herb, 1);
-		
-			CreateInvItem	   (hero,ItPo_Mana_01);  
+
+			CreateInvItem	   (hero,ItPo_Mana_01);
 			Print (PRINT_AlchemySuccess);
 
 			Mod_Count_Mana_01 += 1;
-	
+
 			B_ENDPRODUCTIONDIALOG ();
 		}
 		else
@@ -1445,11 +1445,11 @@ FUNC VOID PC_PotionAlchemy_Mana_01 ()
 			Info_AddChoice	(PC_PotionAlchemy_Mana, "Feldknöterich in den Mörser geben", PC_PotionAlchemy_Mana_01_A);
 		};
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
@@ -1510,8 +1510,8 @@ FUNC VOID PC_PotionAlchemy_Mana_01_D ()
 	Info_ClearChoices	(PC_PotionAlchemy_Mana);
 
 	if (Mod_TrankFirstStep == 1)
-	{		
-		CreateInvItem	   (hero, ItPo_Mana_01);  
+	{
+		CreateInvItem	   (hero, ItPo_Mana_01);
 		Print (PRINT_AlchemySuccess);
 
 		Mod_Darf_Mana_01 = TRUE;
@@ -1520,17 +1520,17 @@ FUNC VOID PC_PotionAlchemy_Mana_01_D ()
 		Mod_Count_Mana_01 += 1;
 	}
 	else
-	{		
-		CreateInvItem	   (hero, ItFo_Tee);  
+	{
+		CreateInvItem	   (hero, ItFo_Tee);
 		Print (PRINT_AlchemySuccess);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Mana_06_Alle ()
 {
-	if (Npc_HasItems (hero, ItPl_Mana_Herb_02) >= 2) 
+	if (Npc_HasItems (hero, ItPl_Mana_Herb_02) >= 2)
 	&& (Npc_HasItems (hero, ItMi_Alchemy_Alcohol_01) >= 1)
 	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
@@ -1573,8 +1573,8 @@ FUNC VOID PC_PotionAlchemy_Mana_06_Alle ()
 		Npc_RemoveInvItems (hero, ItPl_Mana_Herb_02, 2*MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Alchemy_Alcohol_01, MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Flask, MakePotion-1);
-		
-		CreateInvItems	   (hero, ItPo_Mana_06, MakePotion);  
+
+		CreateInvItems	   (hero, ItPo_Mana_06, MakePotion);
 
 		var string Meldung;
 
@@ -1584,38 +1584,38 @@ FUNC VOID PC_PotionAlchemy_Mana_06_Alle ()
 
 		Print (Meldung);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Mana_06 ()
 {
-	if (Npc_HasItems (hero, ItPl_Mana_Herb_02) >= 2) 
-	&& (Npc_HasItems (hero, ItMi_Alchemy_Alcohol_01)    >= 1) 
+	if (Npc_HasItems (hero, ItPl_Mana_Herb_02) >= 2)
+	&& (Npc_HasItems (hero, ItMi_Alchemy_Alcohol_01)    >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPl_Mana_Herb_02, 2);
 		Npc_RemoveInvItems (hero,ItMi_Alchemy_Alcohol_01, 1);
-		
-		CreateInvItems 	   (hero,ItPo_Mana_06, 1); 
+
+		CreateInvItems 	   (hero,ItPo_Mana_06, 1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Mana_05_Alle ()
 {
-	if (Npc_HasItems (hero, ItPl_Mana_Herb_01) >= 3) 
+	if (Npc_HasItems (hero, ItPl_Mana_Herb_01) >= 3)
 	&& (Npc_HasItems (hero, ItMi_Alchemy_Alcohol_01) >= 1)
 	&& (Npc_HasItems(hero, ItMi_Flask) >= 1)
 	{
@@ -1658,8 +1658,8 @@ FUNC VOID PC_PotionAlchemy_Mana_05_Alle ()
 		Npc_RemoveInvItems (hero, ItPl_Mana_Herb_01, 3*MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Alchemy_Alcohol_01, MakePotion);
 		Npc_RemoveInvItems (hero, ItMi_Flask, MakePotion-1);
-		
-		CreateInvItems	   (hero, ItPo_Mana_05, MakePotion);  
+
+		CreateInvItems	   (hero, ItPo_Mana_05, MakePotion);
 
 		var string Meldung;
 
@@ -1669,32 +1669,32 @@ FUNC VOID PC_PotionAlchemy_Mana_05_Alle ()
 
 		Print (Meldung);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Mana_05 ()
 {
-	if (Npc_HasItems (hero, ItPl_Mana_Herb_01) >= 3) 
-	&& (Npc_HasItems (hero, ItMi_Alchemy_Alcohol_01)    >= 1) 
+	if (Npc_HasItems (hero, ItPl_Mana_Herb_01) >= 3)
+	&& (Npc_HasItems (hero, ItMi_Alchemy_Alcohol_01)    >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPl_Mana_Herb_01, 3);
 		Npc_RemoveInvItems (hero,ItMi_Alchemy_Alcohol_01, 1);
-		
-		CreateInvItems 	   (hero,ItPo_Mana_05, 1); 
+
+		CreateInvItems 	   (hero,ItPo_Mana_05, 1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
@@ -1712,7 +1712,7 @@ INSTANCE PC_PotionAlchemy_Special (C_Info)
 	condition		= PC_PotionAlchemy_Special_Condition;
 	information		= PC_PotionAlchemy_Special_Info;
 	permanent		= TRUE;
-	description		= "Spezielle Tränke brauen"; 
+	description		= "Spezielle Tränke brauen";
 };
 
 FUNC INT PC_PotionAlchemy_Special_Condition ()
@@ -1735,7 +1735,7 @@ FUNC INT PC_PotionAlchemy_Special_Condition ()
 	|| (FolgsamkeitSnapper == TRUE)
 	|| (Weisenchronik == TRUE)
 	|| (Purpurmond == TRUE))
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -1826,7 +1826,7 @@ FUNC VOID PC_PotionAlchemy_Special_Info()
 		Info_AddChoice	(PC_PotionAlchemy_Special, "Trank der temporären Giftimmunität (3 Winterrute, 2 Heilknospe, 1 Zwillingsdorn)", PC_PotionAlchemy_Special_GiftNeutralisierer);
 	};
 
-	if (PLAYER_TALENT_ALCHEMY[POTION_AdanosWohltat] == TRUE)
+	if (PLAYER_TALENT_ALCHEMY[POTION_Gift] == TRUE)
 	{
 		Info_AddChoice	(PC_PotionAlchemy_Special, "Mischgift (5 Blutfliegenstachel, 5 Fliegenpilze, 5 Höllenpilze)", PC_PotionAlchemy_Special_Gift);
 	};
@@ -1834,32 +1834,32 @@ FUNC VOID PC_PotionAlchemy_Special_Info()
 
 FUNC VOID PC_PotionAlchemy_Special_GiftNeutralisierer ()
 {
-	if (Npc_HasItems(hero, ItPl_Winterrute) >= 3) 
-	&& (Npc_HasItems(hero, ItPl_Heilknospe) >= 2) 
+	if (Npc_HasItems(hero, ItPl_Winterrute) >= 3)
+	&& (Npc_HasItems(hero, ItPl_Heilknospe) >= 2)
 	&& (Npc_HasItems(hero, ItPl_Zwillingsdorn) >= 1)
 	{
 		Npc_RemoveInvItems (hero, ItPl_Winterrute, 3);
 		Npc_RemoveInvItems (hero, ItPl_Heilknospe, 2);
 		Npc_RemoveInvItems (hero, ItPl_Zwillingsdorn, 1);
-		
-		CreateInvItem	   (hero, ItPo_GiftNeutralisierer);  
+
+		CreateInvItem	   (hero, ItPo_GiftNeutralisierer);
 		Print (PRINT_AlchemySuccess);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
 
 FUNC VOID PC_PotionAlchemy_Special_Genesung ()
 {
-	if (Npc_HasItems(hero, ItPo_Health_02) >= 1) 
-	&& (Npc_HasItems(hero, ItFo_Booze) >= 1) 
+	if (Npc_HasItems(hero, ItPo_Health_02) >= 1)
+	&& (Npc_HasItems(hero, ItFo_Booze) >= 1)
 	&& (Npc_HasItems(hero, ItPl_Health_Herb_01) >= 4)
 	&& (Npc_HasItems(hero, ItPl_Temp_Herb) >= 1)
 	{
@@ -1867,179 +1867,179 @@ FUNC VOID PC_PotionAlchemy_Special_Genesung ()
 		Npc_RemoveInvItems (hero, ItFo_Booze, 1);
 		Npc_RemoveInvItems (hero, ItPl_Health_Herb_01, 4);
 		Npc_RemoveInvItems (hero, ItPl_Temp_Herb, 1);
-		
-		CreateInvItem	   (hero, ItPo_Genesung);  
+
+		CreateInvItem	   (hero, ItPo_Genesung);
 		Print (PRINT_AlchemySuccess);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
 
 FUNC VOID PC_PotionAlchemy_Special_Regeneration ()
 {
-	if (Npc_HasItems(hero, ItFo_Milk) >= 1) 
+	if (Npc_HasItems(hero, ItFo_Milk) >= 1)
 	&& (Npc_HasItems(hero, ItPl_Blueplant) >= 10)
 	{
 		Npc_RemoveInvItems (hero, ItFo_Milk, 1);
 		Npc_RemoveInvItems (hero, ItPl_Blueplant, 10);
-		
-		CreateInvItem	   (hero, ItPo_Regeneration);  
+
+		CreateInvItem	   (hero, ItPo_Regeneration);
 		Print (PRINT_AlchemySuccess);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
 
 FUNC VOID PC_PotionAlchemy_Special_Gegengift ()
 {
-	if (Npc_HasItems(hero, ItPo_Health_03) >= 1) 
+	if (Npc_HasItems(hero, ItPo_Health_03) >= 1)
 	&& (Npc_HasItems(hero, ItPl_Heilknospe) >= 1)
 	&& (Npc_HasItems(hero, ItPl_Temp_Herb) >= 2)
 	{
 		Npc_RemoveInvItems (hero, ItPo_Health_03, 1);
 		Npc_RemoveInvItems (hero, ItPl_Heilknospe, 1);
 		Npc_RemoveInvItems (hero, ItPl_Temp_Herb, 2);
-		
-		CreateInvItem	   (hero, ItPo_Gegengift);  
+
+		CreateInvItem	   (hero, ItPo_Gegengift);
 		Print (PRINT_AlchemySuccess);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
 
 FUNC VOID PC_PotionAlchemy_Special_Gift ()
 {
-	if (Npc_HasItems(hero, ItAt_Sting) >= 5) 
-	&& (Npc_HasItems(hero, ItPl_Mushroom_03) >= 5) 
+	if (Npc_HasItems(hero, ItAt_Sting) >= 5)
+	&& (Npc_HasItems(hero, ItPl_Mushroom_03) >= 5)
 	&& (Npc_HasItems(hero, ItFo_Plants_mushroom_01) >= 5)
 	{
 		Npc_RemoveInvItems (hero, ItAt_Sting, 5);
 		Npc_RemoveInvItems (hero, ItPl_Mushroom_03, 5);
 		Npc_RemoveInvItems (hero, ItFo_Plants_mushroom_01, 5);
-		
-		CreateInvItems	   (hero, ItPo_Mischgift, 2);  
+
+		CreateInvItems	   (hero, ItPo_Mischgift, 2);
 		Print (PRINT_AlchemySuccess);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
 
 FUNC VOID PC_PotionAlchemy_Special_Weisenchronik ()
 {
-	if (Npc_HasItems(hero, ItMi_Addon_Joint_02) >= 1) 
-	&& (Npc_HasItems(hero, ItMi_Traumruf) >= 1) 
+	if (Npc_HasItems(hero, ItMi_Addon_Joint_02) >= 1)
+	&& (Npc_HasItems(hero, ItMi_Traumruf) >= 1)
 	&& (Npc_HasItems(hero, ItFo_Booze) >= 1)
 	{
 		Npc_RemoveInvItems (hero, ItMi_Addon_Joint_02, 1);
 		Npc_RemoveInvItems (hero, ItMi_Traumruf, 1);
 		Npc_RemoveInvItems (hero, ItFo_Booze, 1);
-		
-		CreateInvItem	   (hero, ItPo_Weisenchronik);  
+
+		CreateInvItem	   (hero, ItPo_Weisenchronik);
 		Print (PRINT_AlchemySuccess);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
 
 FUNC VOID PC_PotionAlchemy_Special_FolgsamkeitSnapper ()
 {
-	if (Npc_HasItems(hero, ItAt_Menschenblut) >= 1) 
-	&& (Npc_HasItems(hero, ItAt_Hexenblut) >= 1) 
+	if (Npc_HasItems(hero, ItAt_Menschenblut) >= 1)
+	&& (Npc_HasItems(hero, ItAt_Hexenblut) >= 1)
 	&& (Npc_HasItems(hero, ItAt_DrgSnapperHorn) >= 3)
 	{
 		Npc_RemoveInvItems (hero, ItAt_Menschenblut, 1);
 		Npc_RemoveInvItems (hero, ItAt_Hexenblut, 1);
 		Npc_RemoveInvItems (hero, ItAt_DrgSnapperHorn, 3);
-		
-		CreateInvItems	   (hero, ItPo_FolgsamkeitSnapper, 1);  
+
+		CreateInvItems	   (hero, ItPo_FolgsamkeitSnapper, 1);
 		Print (PRINT_AlchemySuccess);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
 
 FUNC VOID PC_PotionAlchemy_Special_Purpurmond ()
 {
-	if (Npc_HasItems(hero, ItPl_Mushroom_03) >= 1) 
-	&& (Npc_HasItems(hero, ItPl_SwampHerb) >= 2) 
+	if (Npc_HasItems(hero, ItPl_Mushroom_03) >= 1)
+	&& (Npc_HasItems(hero, ItPl_SwampHerb) >= 2)
 	&& (Npc_HasItems(hero, ItFo_Milk) >= 3)
 	{
 		Npc_RemoveInvItems (hero, ItPl_Mushroom_03, 1);
 		Npc_RemoveInvItems (hero, ItPl_SwampHerb, 2);
 		Npc_RemoveInvItems (hero, ItFo_Milk, 3);
-		
-		CreateInvItems	   (hero, ItPo_Purpurmond, 1);  
+
+		CreateInvItems	   (hero, ItPo_Purpurmond, 1);
 		Print (PRINT_AlchemySuccess);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
 
 FUNC VOID PC_PotionAlchemy_Special_Speed ()
 {
-	if (Npc_HasItems (hero, ItPl_Speed_Herb_01) >= 1) 
-	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1) 
+	if (Npc_HasItems (hero, ItPl_Speed_Herb_01) >= 1)
+	&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= 1)
 	{
 		if (Mod_Darf_Speed == TRUE)
 		|| (Mod_LehrlingBei != 1)
 		{
 			Npc_RemoveInvItems (hero, ItPl_Speed_Herb_01, 1);
 			Npc_RemoveInvItems (hero, ItPl_Temp_Herb, 1);
-		
-			CreateInvItem	   (hero, ItPo_Speed);  
+
+			CreateInvItem	   (hero, ItPo_Speed);
 			Print (PRINT_AlchemySuccess);
 
 			Mod_Count_Speed += 1;
-	
+
 			B_ENDPRODUCTIONDIALOG ();
 		}
 		else
@@ -2055,11 +2055,11 @@ FUNC VOID PC_PotionAlchemy_Special_Speed ()
 			Info_AddChoice	(PC_PotionAlchemy_Special, "Snapperkraut über den Mörser hängen", PC_PotionAlchemy_Special_Speed_A);
 		};
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
@@ -2152,8 +2152,8 @@ FUNC VOID PC_PotionAlchemy_Special_Speed_F ()
 
 	if (Mod_TrankFirstStep == 2)
 	&& (Mod_TrankSecondStep == 1)
-	{		
-		CreateInvItem	   (hero, ItPo_Speed);  
+	{
+		CreateInvItem	   (hero, ItPo_Speed);
 		Print (PRINT_AlchemySuccess);
 
 		Mod_Darf_Speed = TRUE;
@@ -2161,90 +2161,90 @@ FUNC VOID PC_PotionAlchemy_Special_Speed_F ()
 		Mod_Count_Speed += 1;
 	}
 	else
-	{		
-		CreateInvItem	   (hero, ItFo_Bruehe);  
+	{
+		CreateInvItem	   (hero, ItFo_Bruehe);
 		Print (PRINT_AlchemySuccess);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Special_Str ()
 {
-	if (Npc_HasItems (hero, ItPl_Strength_Herb_01)    >= 1) 
-	&& (Npc_HasItems (hero, ItPl_Perm_Herb) 	   >= 1) 
+	if (Npc_HasItems (hero, ItPl_Strength_Herb_01)    >= 1)
+	&& (Npc_HasItems (hero, ItPl_Perm_Herb) 	   >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPl_Strength_Herb_01, 1);
 		Npc_RemoveInvItems (hero,ItPl_Perm_Herb	  ,1);
-		
-		CreateInvItems	   (hero,ItPo_Perm_STR,1);  
+
+		CreateInvItems	   (hero,ItPo_Perm_STR,1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Special_Dex ()
 {
-	if (Npc_HasItems (hero, ItPl_Dex_Herb_01) 		  >= 1) 
-	&& (Npc_HasItems (hero, ItPl_Perm_Herb) 	  >= 1) 
+	if (Npc_HasItems (hero, ItPl_Dex_Herb_01) 		  >= 1)
+	&& (Npc_HasItems (hero, ItPl_Perm_Herb) 	  >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPl_Dex_Herb_01	  , 1);
 		Npc_RemoveInvItems (hero,ItPl_Perm_Herb	  , 1);
-		
-		CreateInvItems	   (hero,ItPo_Perm_Dex,1);  
+
+		CreateInvItems	   (hero,ItPo_Perm_Dex,1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Special_PermMana ()
 {
-	if (Npc_HasItems (hero, ItPl_Mana_Herb_03) 	  >= 1) 
-	&& (Npc_HasItems (hero, ItPl_Perm_Herb) 	  >= 1) 
+	if (Npc_HasItems (hero, ItPl_Mana_Herb_03) 	  >= 1)
+	&& (Npc_HasItems (hero, ItPl_Perm_Herb) 	  >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPl_Mana_Herb_03,1);
 		Npc_RemoveInvItems (hero,ItPl_Perm_Herb	  ,1);
-		
-		CreateInvItems	   (hero,ItPo_Perm_Mana,1);  
+
+		CreateInvItems	   (hero,ItPo_Perm_Mana,1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	};	
+	};
 
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Special_PermHealth ()
 {
-	if (Npc_HasItems (hero, ItPl_Health_Herb_03) >= 1) 
-	&& (Npc_HasItems (hero, ItPl_Perm_Herb) >= 1) 
+	if (Npc_HasItems (hero, ItPl_Health_Herb_03) >= 1)
+	&& (Npc_HasItems (hero, ItPl_Perm_Herb) >= 1)
 	{
 		if (Mod_Darf_PermHealth == TRUE)
 		|| (Mod_LehrlingBei != 1)
 		{
 			Npc_RemoveInvItems (hero, ItPl_Health_Herb_03, 1);
 			Npc_RemoveInvItems (hero, ItPl_Perm_Herb, 1);
-		
-			CreateInvItem	   (hero, ItPo_Perm_Health);  
+
+			CreateInvItem	   (hero, ItPo_Perm_Health);
 			Print (PRINT_AlchemySuccess);
 
 			Mod_Count_PermHealth += 1;
-	
+
 			B_ENDPRODUCTIONDIALOG ();
 		}
 		else
@@ -2258,11 +2258,11 @@ FUNC VOID PC_PotionAlchemy_Special_PermHealth ()
 			Info_AddChoice	(PC_PotionAlchemy_Special, "Pflanzen in der Flasche erhitzen", PC_PotionAlchemy_Special_PermHealth_A);
 		};
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
-	
+
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
@@ -2334,7 +2334,7 @@ FUNC VOID PC_PotionAlchemy_Special_PermHealth_C ()
 	Info_ClearChoices	(PC_PotionAlchemy_Special);
 
 	if (Mod_PermHealth_Wrong == 0)
-	{		
+	{
 		CreateInvItem	   (hero, ItPo_PermHealth_Gut);
 
 		Mod_PermHealth_Zeit = B_GetHour();
@@ -2342,7 +2342,7 @@ FUNC VOID PC_PotionAlchemy_Special_PermHealth_C ()
 		Mod_PermHealth_Day = Wld_GetDay();
 	}
 	else
-	{		
+	{
 		CreateInvItem	   (hero, ItPo_PermHealth_Schlecht);
 
 		Mod_PermHealth_Zeit = B_GetHour();
@@ -2355,104 +2355,104 @@ FUNC VOID PC_PotionAlchemy_Special_PermHealth_C ()
 
 FUNC VOID PC_PotionAlchemy_Special_Geist ()
 {
-	if (Npc_HasItems (hero, ItAt_Sting) 		   >= 2) 
-	&& (Npc_HasItems (hero, ItPo_Mana_02) 	  	   >= 1) 
-	&& (Npc_HasItems (hero, ItPo_Health_01) 	   >= 1) 
-	&& (Npc_HasItems (hero, ItFo_Addon_Pfeffer_01) >= 1) 
+	if (Npc_HasItems (hero, ItAt_Sting) 		   >= 2)
+	&& (Npc_HasItems (hero, ItPo_Mana_02) 	  	   >= 1)
+	&& (Npc_HasItems (hero, ItPo_Health_01) 	   >= 1)
+	&& (Npc_HasItems (hero, ItFo_Addon_Pfeffer_01) >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItAt_Sting					,2);
 		Npc_RemoveInvItems (hero,ItPo_Mana_02	  			,1);
 		Npc_RemoveInvItems (hero,ItPo_Health_01	  			,1);
 		Npc_RemoveInvItems (hero,ItFo_Addon_Pfeffer_01	  	,1);
-		
+
 		if (Knows_Bloodfly == TRUE)
 		{
-			CreateInvItems	   (hero,ItPo_Addon_Geist_02,1);  
+			CreateInvItems	   (hero,ItPo_Addon_Geist_02,1);
 		}
 		else
 		{
-			CreateInvItems	   (hero,ItPo_Addon_Geist_01,1);  
+			CreateInvItems	   (hero,ItPo_Addon_Geist_01,1);
 		};
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Special_Drachensud ()
 {
-	if (Npc_HasItems (hero, ItAt_DragonEgg_Giftdrache) >= 4) 
-	&& (Npc_HasItems (hero, ItPl_Strength_Herb_01) >= 1) 
-	&& (Npc_HasItems (hero, ItAt_Dragonblood) >= 2) 
-	&& (Npc_HasItems (hero, ItAt_Dragonscale) >= 1) 
+	if (Npc_HasItems (hero, ItAt_DragonEgg_Giftdrache) >= 4)
+	&& (Npc_HasItems (hero, ItPl_Strength_Herb_01) >= 1)
+	&& (Npc_HasItems (hero, ItAt_Dragonblood) >= 2)
+	&& (Npc_HasItems (hero, ItAt_Dragonscale) >= 1)
 	{
 		Npc_RemoveInvItems (hero, ItAt_DragonEgg_Giftdrache, 4);
 		Npc_RemoveInvItems (hero, ItPl_Strength_Herb_01, 1);
 		Npc_RemoveInvItems (hero, ItAt_Dragonblood, 2);
 		Npc_RemoveInvItems (hero, ItAt_Dragonscale, 1);
-		
-		CreateInvItems 	   (hero,ItPo_Drachensud,1); 
+
+		CreateInvItems 	   (hero,ItPo_Drachensud,1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Special_MegaDrink ()
 {
-	if (Npc_HasItems (hero, ItAt_DragonEgg_MIS) >= 10) 
-	&& (Npc_HasItems (hero, ItMi_DarkPearl)    >= 1) 
-	&& (Npc_HasItems (hero, ItMi_Sulfur)    >= 1) 
+	if (Npc_HasItems (hero, ItAt_DragonEgg_MIS) >= 10)
+	&& (Npc_HasItems (hero, ItMi_DarkPearl)    >= 1)
+	&& (Npc_HasItems (hero, ItMi_Sulfur)    >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItAt_DragonEgg_MIS ,10);
 		Npc_RemoveInvItems (hero,ItMi_DarkPearl	  ,1);
 		Npc_RemoveInvItems (hero,ItMi_Sulfur	  ,1);
-		
-		CreateInvItems 	   (hero,ItPo_MegaDrink,1); 
+
+		CreateInvItems 	   (hero,ItPo_MegaDrink,1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
 FUNC VOID PC_PotionAlchemy_Special_AdanosWohltat ()
 {
-	if (Npc_HasItems (hero, ItRu_LightHeal) >= 1) 
-	&& (Npc_HasItems (hero, ItPl_Trollkirsche)    >= 1) 
-	&& (Npc_HasItems (hero, ItPl_Perm_Herb)    >= 1) 
-	&& (Npc_HasItems (hero, ItPl_Mana_Herb_01)    >= 5) 
-	&& (Npc_HasItems (hero, ItPl_Health_Herb_01)    >= 4) 
+	if (Npc_HasItems (hero, ItRu_LightHeal) >= 1)
+	&& (Npc_HasItems (hero, ItPl_Trollkirsche)    >= 1)
+	&& (Npc_HasItems (hero, ItPl_Perm_Herb)    >= 1)
+	&& (Npc_HasItems (hero, ItPl_Mana_Herb_01)    >= 5)
+	&& (Npc_HasItems (hero, ItPl_Health_Herb_01)    >= 4)
 	{
 		Npc_RemoveInvItems (hero, ItRu_LightHeal, 1);
 		Npc_RemoveInvItems (hero, ItPl_Trollkirsche, 1);
 		Npc_RemoveInvItems (hero, ItPl_Perm_Herb, 1);
 		Npc_RemoveInvItems (hero, ItPl_Mana_Herb_01, 5);
 		Npc_RemoveInvItems (hero, ItPl_Health_Herb_01, 4);
-		
-		CreateInvItems 	   (hero, ItPo_AdanosWohltat, 1); 
+
+		CreateInvItems 	   (hero, ItPo_AdanosWohltat, 1);
 		Print (PRINT_AlchemySuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
 	};
-	
+
 	B_ENDPRODUCTIONDIALOG ();
 };
 
@@ -2470,13 +2470,13 @@ INSTANCE PC_PotionAlchemy_Beer (C_Info)
 	condition		= PC_PotionAlchemy_Beer_Condition;
 	information		= PC_PotionAlchemy_Beer_Info;
 	permanent		= TRUE;
-	description		= "Bier brauen"; 
+	description		= "Bier brauen";
 };
 
 FUNC INT PC_PotionAlchemy_Beer_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -2507,7 +2507,7 @@ FUNC VOID PC_PotionAlchemy_Beer_Orkbier()
 		Npc_RemoveInvItems (self, ItFo_Beer, 1);
 		Npc_RemoveInvItems (self, ItFo_Booze, 1);
 		Npc_RemoveInvItems (self, ItPl_Mushroom_02, 1);
-		
+
 		Print (PRINT_AlchemySuccess);
 
 		CreateInvItems (self, ItFo_Orkbier, 1);
@@ -2515,7 +2515,7 @@ FUNC VOID PC_PotionAlchemy_Beer_Orkbier()
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);	
+		CreateInvItems (self, ItMi_Flask,1);
 	};
 
 	B_ENDPRODUCTIONDIALOG ();
@@ -2530,13 +2530,13 @@ INSTANCE PC_PotionAlchemy_Geschosse (C_Info)
 	condition		= PC_PotionAlchemy_Geschosse_Condition;
 	information		= PC_PotionAlchemy_Geschosse_Info;
 	permanent		= TRUE;
-	description		= "Geschosse präparieren"; 
+	description		= "Geschosse präparieren";
 };
 
 FUNC INT PC_PotionAlchemy_Geschosse_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -2598,7 +2598,7 @@ FUNC VOID PC_PotionAlchemy_Geschosse_HolyBolt()
 	{
 		Npc_RemoveInvItems (self, ItRw_Bolt, 50);
 		Npc_RemoveInvItems (self, ItMi_HolyWater2, 1);
-		
+
 		Print (PRINT_AlchemySuccess);
 
 		CreateInvItems (self, ItRw_HolyBolt, 50);
@@ -2606,7 +2606,7 @@ FUNC VOID PC_PotionAlchemy_Geschosse_HolyBolt()
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);	
+		CreateInvItems (self, ItMi_Flask,1);
 	};
 
 	B_ENDPRODUCTIONDIALOG ();
@@ -2619,7 +2619,7 @@ FUNC VOID PC_PotionAlchemy_Geschosse_HolyArrow()
 	{
 		Npc_RemoveInvItems (self, ItRw_Arrow, 50);
 		Npc_RemoveInvItems (self, ItMi_HolyWater2, 1);
-		
+
 		Print (PRINT_AlchemySuccess);
 
 		CreateInvItems (self, ItRw_HolyArrow, 50);
@@ -2627,7 +2627,7 @@ FUNC VOID PC_PotionAlchemy_Geschosse_HolyArrow()
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);	
+		CreateInvItems (self, ItMi_Flask,1);
 	};
 
 	B_ENDPRODUCTIONDIALOG ();
@@ -2639,7 +2639,7 @@ FUNC VOID PC_PotionAlchemy_Geschosse_RueckverwandlungsBolt()
 	&& (Npc_HasItems(hero, ItMi_Rueckverwandlungstinktur) >= 1)
 	{
 		Npc_RemoveInvItems (self, ItRw_Bolt, 1);
-		
+
 		Print ("Rückverwandlungsbolzen hergestellt");
 
 		CreateInvItems (self, ItRw_RueckverwandlungsBolt, 1);
@@ -2647,7 +2647,7 @@ FUNC VOID PC_PotionAlchemy_Geschosse_RueckverwandlungsBolt()
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);	
+		CreateInvItems (self, ItMi_Flask,1);
 	};
 
 	B_ENDPRODUCTIONDIALOG ();
@@ -2659,7 +2659,7 @@ FUNC VOID PC_PotionAlchemy_Geschosse_RueckverwandlungsArrow()
 	&& (Npc_HasItems(hero, ItMi_Rueckverwandlungstinktur) >= 1)
 	{
 		Npc_RemoveInvItems (self, ItRw_Arrow, 1);
-		
+
 		Print ("Rückverwandlungspfeil hergestellt");
 
 		CreateInvItems (self, ItRw_RueckverwandlungsArrow, 1);
@@ -2667,7 +2667,7 @@ FUNC VOID PC_PotionAlchemy_Geschosse_RueckverwandlungsArrow()
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);	
+		CreateInvItems (self, ItMi_Flask,1);
 	};
 
 	B_ENDPRODUCTIONDIALOG ();
@@ -2743,13 +2743,13 @@ INSTANCE PC_PotionAlchemy_Booze (C_Info)
 	condition		= PC_PotionAlchemy_Booze_Condition;
 	information		= PC_PotionAlchemy_Booze_Info;
 	permanent		= TRUE;
-	description		= "Schnaps brennen"; 
+	description		= "Schnaps brennen";
 };
 
 FUNC INT PC_PotionAlchemy_Booze_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -2800,14 +2800,14 @@ FUNC VOID PC_PotionAlchemy_Booze_SchnellerHering()
 		Npc_RemoveInvItems (self, ItPl_Speed_Herb_01,1);
 		Npc_RemoveInvItems (self, ItFo_Addon_Rum,1);
 		Npc_RemoveInvItems (self, ItFo_Fish,1);
-		
+
 		Print (PRINT_AlchemySuccess);
 		CreateInvItems (self, ItFo_Addon_SchnellerHering,1);
 	}
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);	
+		CreateInvItems (self, ItMi_Flask,1);
 	};
 
 	B_ENDPRODUCTIONDIALOG ();
@@ -2822,14 +2822,14 @@ FUNC VOID PC_PotionAlchemy_Booze_Rumtopf()
 		Npc_RemoveInvItems (self, ItPl_Forestberry,3);
 		Npc_RemoveInvItems (self, ItFo_Addon_Rum,1);
 		Npc_RemoveInvItems (self, ItFo_Addon_Zucker,1);
-		
+
 		Print (PRINT_AlchemySuccess);
 		CreateInvItems (self, ItFo_Rumtopf,1);
 	}
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);	
+		CreateInvItems (self, ItMi_Flask,1);
 	};
 
 	B_ENDPRODUCTIONDIALOG ();
@@ -2846,14 +2846,14 @@ FUNC VOID PC_PotionAlchemy_Booze_Schlaf()
 		Npc_RemoveInvItems (self, ItPl_Beet,2);
 		Npc_RemoveInvItems (self, ItAt_SharkTeeth,1);
 		Npc_RemoveInvItems (self, ItFo_Addon_Rum,2);
-		
+
 		Print (PRINT_AlchemySuccess);
 		CreateInvItems (self, ItFo_Addon_SchlafHammer,1);
 	}
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);	
+		CreateInvItems (self, ItMi_Flask,1);
 	};
 
 	B_ENDPRODUCTIONDIALOG ();
@@ -2870,18 +2870,18 @@ FUNC VOID PC_PotionAlchemy_Booze_Lou()
 		Npc_RemoveInvItems (self, ItPl_Beet,2);
 		Npc_RemoveInvItems (self, ItAt_SharkTeeth,1);
 		Npc_RemoveInvItems (self, ItFo_Addon_Rum,1);
-		
+
 		Print (PRINT_AlchemySuccess);
 		CreateInvItems (self, ItFo_Addon_LousHammer,1);
 	}
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);	
+		CreateInvItems (self, ItMi_Flask,1);
 	};
 
 	B_ENDPRODUCTIONDIALOG ();
-};	
+};
 
 FUNC VOID PC_PotionAlchemy_Booze_Grog()
 {
@@ -2892,14 +2892,14 @@ FUNC VOID PC_PotionAlchemy_Booze_Grog()
 		Npc_RemoveInvItems (self, ItFo_Addon_Zucker, 1);
 		Npc_RemoveInvItems (self, ItFo_Addon_Rum, 1);
 		Npc_RemoveInvItems (self, ItFo_Water, 1);
-		
+
 		Print (PRINT_AlchemySuccess);
 		CreateInvItems (self, Mod_RealGrog, 2);
 	}
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);	
+		CreateInvItems (self, ItMi_Flask,1);
 	};
 
 	B_ENDPRODUCTIONDIALOG ();
@@ -2983,7 +2983,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_SekretZange()
 {
 	Npc_RemoveInvItems	(hero, ItAt_CrawlerMandibles, 3);
 	CreateInvItems	(hero, ItFo_Potion_Elixier_Zange, 1);
-		
+
 	Print (PRINT_SekretSuccess);
 
 	PC_PotionAlchemy_Sekret_Info();
@@ -2993,7 +2993,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_SekretEi()
 {
 	Npc_RemoveInvItems	(hero, ItAt_Crawlerqueen, 1);
 	CreateInvItems	(hero, ItFo_Potion_Elixier_Egg, 2);
-		
+
 	Print (PRINT_SekretSuccess);
 
 	PC_PotionAlchemy_Sekret_Info();
@@ -3015,7 +3015,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_Blutfliege()
 {
 	Npc_RemoveInvItems	(hero, ItAt_Sting, 1);
 	CreateInvItems	(hero, ItFo_Potion_Blutfliege, 1);
-		
+
 	Print (PRINT_SekretSuccess);
 
 	PC_PotionAlchemy_Sekret_Info();
@@ -3025,7 +3025,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_SpinneTiergift()
 {
 	Npc_RemoveInvItems	(hero, ItAt_SpiderMandibles, 2);
 	CreateInvItems	(hero, ItPo_Tiergift, 1);
-		
+
 	Print (PRINT_TiergiftSuccess);
 
 	PC_PotionAlchemy_Sekret_Info();
@@ -3035,7 +3035,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_MinecrawlerTiergift()
 {
 	Npc_RemoveInvItems	(hero, ItAt_CrawlerMandibles, 2);
 	CreateInvItems	(hero, ItPo_Tiergift, 1);
-		
+
 	Print (PRINT_TiergiftSuccess);
 
 	PC_PotionAlchemy_Sekret_Info();
@@ -3045,7 +3045,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_BlutfliegeTiergift()
 {
 	Npc_RemoveInvItems	(hero, ItAt_Sting, 3);
 	CreateInvItems	(hero, ItPo_Tiergift, 1);
-		
+
 	Print (PRINT_TiergiftSuccess);
 
 	PC_PotionAlchemy_Sekret_Info();
@@ -3055,7 +3055,7 @@ FUNC VOID PC_PotionAlchemy_Sekret_FliegenpilzGewaechsgift()
 {
 	Npc_RemoveInvItems	(hero, ItPl_Mushroom_03, 2);
 	CreateInvItems	(hero, ItPo_Pflanzengift, 1);
-		
+
 	Print (PRINT_GewaechsgiftSuccess);
 
 	PC_PotionAlchemy_Sekret_Info();
@@ -3131,13 +3131,13 @@ INSTANCE PC_PotionAlchemy_Joint (C_Info)
 	condition		= PC_PotionAlchemy_Joint_Condition;
 	information		= PC_PotionAlchemy_Joint_Info;
 	permanent		= TRUE;
-	description		= "Stängel drehen"; 
+	description		= "Stängel drehen";
 };
 
 FUNC INT PC_PotionAlchemy_Joint_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -3181,11 +3181,11 @@ FUNC VOID PC_PotionAlchemy_Joint_Traumruf()
 		Npc_RemoveInvItems (hero,ItPl_Mushroom_02,1);
 		Npc_RemoveInvItems (hero, ItMi_Joint, 2);
 
-		CreateInvItems	   (hero,ItMi_Traumruf,1);  
-	
+		CreateInvItems	   (hero,ItMi_Traumruf,1);
+
 		Print (PRINT_Traumruf_Success);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
@@ -3202,11 +3202,11 @@ FUNC VOID PC_PotionAlchemy_Joint_Herkulesstengel()
 		Npc_RemoveInvItems (hero, ItPl_SwampHerb, 1);
 		Npc_RemoveInvItems (hero, ItPl_Herkuleskraut, 1);
 
-		CreateInvItems	   (hero, ItMi_Joint_Herkules, 1);  
-	
+		CreateInvItems	   (hero, ItMi_Joint_Herkules, 1);
+
 		Print (PRINT_Joint_Herkules_Success);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
@@ -3222,11 +3222,11 @@ FUNC VOID PC_PotionAlchemy_Joint_GrNovize()
 	{
 		Npc_RemoveInvItems (hero,ItPl_SwampHerb	 ,2);
 		Npc_RemoveInvItems (hero,ItPl_Temp_Herb	 ,1);
-		CreateInvItems	   (hero,ItMi_Addon_Joint_01,1);  
-	
+		CreateInvItems	   (hero,ItMi_Addon_Joint_01,1);
+
 		Print (PRINT_Addon_Joint_01_Success);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
@@ -3240,11 +3240,11 @@ FUNC VOID PC_PotionAlchemy_Joint_Normal()
 	if (Npc_HasItems (hero, ItPl_SwampHerb) >= 1)
 	{
 		Npc_RemoveInvItems (hero,ItPl_SwampHerb	 ,1);
-		CreateInvItems	   (hero,ItMi_Joint,1);  
-	
+		CreateInvItems	   (hero,ItMi_Joint,1);
+
 		Print (PRINT_JointSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
 		CreateInvItems (self, ItMi_Flask,1);
@@ -3262,14 +3262,14 @@ INSTANCE PC_PotionAlchemy_Tabak (C_Info)
 	condition		= PC_PotionAlchemy_Tabak_Condition;
 	information		= PC_PotionAlchemy_Tabak_Info;
 	permanent		= TRUE;
-	description		= "Tabak mischen"; 
+	description		= "Tabak mischen";
 };
 
 FUNC INT PC_PotionAlchemy_Tabak_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
 	&& (Npc_HasItems(hero, ItMi_ApfelTabak) >= 1)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -3277,7 +3277,7 @@ FUNC INT PC_PotionAlchemy_Tabak_Condition ()
 FUNC VOID PC_PotionAlchemy_Tabak_Info()
 {
 	Npc_RemoveInvItems (hero, ItMi_ApfelTabak, 1);
-	
+
 	Info_ClearChoices	(PC_PotionAlchemy_Tabak);
 
 	Info_AddChoice	(PC_PotionAlchemy_Tabak, DIALOG_BACK, PC_PotionAlchemy_Tabak_EXIT);
@@ -3339,13 +3339,13 @@ INSTANCE PC_PotionAlchemy_Tinktur (C_Info)
 	condition		= PC_PotionAlchemy_Tinktur_Condition;
 	information		= PC_PotionAlchemy_Tinktur_Info;
 	permanent		= TRUE;
-	description		= "Tinktur herstellen"; 
+	description		= "Tinktur herstellen";
 };
 
 FUNC INT PC_PotionAlchemy_Tinktur_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -3389,13 +3389,13 @@ INSTANCE PC_PotionAlchemy_End (C_Info)
 	condition		= PC_PotionAlchemy_End_Condition;
 	information		= PC_PotionAlchemy_End_Info;
 	permanent		= TRUE;
-	description		= DIALOG_ENDE; 
+	description		= DIALOG_ENDE;
 };
 
 FUNC INT PC_PotionAlchemy_End_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
-	{	
+	{
 		return TRUE;
 	};
 };
