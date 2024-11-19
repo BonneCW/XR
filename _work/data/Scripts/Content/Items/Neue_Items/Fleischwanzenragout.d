@@ -23,14 +23,14 @@ INSTANCE ItFo_Fleischwanzenragout (C_Item)
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS, 25);
 
 		self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS];
-		
+
 		if (Npc_IsPlayer (self))
 		{
 			B_SetEsspunkte	(16);
 
 			Dunkelpilz_Bonus = Dunkelpilz_Bonus + 2;
-		
-			if (Dunkelpilz_Bonus >= 100)  
+
+			if (Dunkelpilz_Bonus >= 100)
 			{
 				B_RaiseAttribute_Rest	(self, ATR_MANA_MAX, 1);
 				Npc_ChangeAttribute	(self, ATR_MANA, 1);
@@ -66,14 +66,14 @@ INSTANCE ItFo_Pilzsuppe (C_Item)
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS, 34);
 
 		self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS];
-		
+
 		if (Npc_IsPlayer (self))
 		{
 			B_SetEsspunkte	(14);
 
-			Dunkelpilz_Bonus = Dunkelpilz_Bonus + 2;
-		
-			if (Dunkelpilz_Bonus >= 100)  
+			Dunkelpilz_Bonus = Dunkelpilz_Bonus + 8;
+
+			if (Dunkelpilz_Bonus >= 100)
 			{
 				B_RaiseAttribute_Rest	(self, ATR_MANA_MAX, 1);
 				Npc_ChangeAttribute	(self, ATR_MANA, 1);

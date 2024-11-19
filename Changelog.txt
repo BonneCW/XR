@@ -64,6 +64,7 @@ Fixes:
 - fixed potential problems with Atalante's warg transformations
 - fixed Davon, Friedel and executioner in Khorata not going back to their old routine after defeating the people at the mine
 - fixed poison brewing not working after learning it at Kamal
+- fixed bonus for mushroom soup
 
 
 1.0.9
