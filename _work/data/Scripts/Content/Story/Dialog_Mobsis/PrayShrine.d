@@ -128,49 +128,49 @@ FUNC VOID C_IsShrineObsessed (var C_NPC slf)
 		if ((Npc_GetDistToWP(hero,"NW_TROLLAREA_PATH_37") < 2000)
 		&& (ShrineIsObsessed_NW_TROLLAREA_PATH_37 == TRUE))
 		{
-			
+
 		}
 		else if ((Npc_GetDistToWP(hero,"NW_FARM1_CONNECT_XARDAS")<2000)
 		&& (ShrineIsObsessed_NW_FARM1_CONNECT_XARDAS == TRUE))
 		{
-			
+
 		}
 		else if ((Npc_GetDistToWP(hero,"NW_TROLLAREA_PATH_66")<2000)
 		&& (ShrineIsObsessed_NW_TROLLAREA_PATH_66 == TRUE))
 		{
-			
+
 		}
-		else if ((Npc_GetDistToWP(hero,"NW_TROLLAREA_PATH_04")<2000) 
+		else if ((Npc_GetDistToWP(hero,"NW_TROLLAREA_PATH_04")<2000)
 		&& (ShrineIsObsessed_NW_TROLLAREA_PATH_04 == TRUE))
 		{
-			
+
 		}
-		else if ((Npc_GetDistToWP(hero,"SAGITTA")<2000) 
+		else if ((Npc_GetDistToWP(hero,"SAGITTA")<2000)
 		&& (ShrineIsObsessed_SAGITTA == TRUE))
 		{
-			
+
 		}
-		else if ((Npc_GetDistToWP(hero,"NW_BIGMILL_MALAKSVERSTECK_02")<2000) 
+		else if ((Npc_GetDistToWP(hero,"NW_BIGMILL_MALAKSVERSTECK_02")<2000)
 		&& (ShrineIsObsessed_NW_BIGMILL_MALAKSVERSTECK_02 == TRUE))
 		{
-			
+
 		}
-		else if ((Npc_GetDistToWP(hero,"NW_FARM3_BIGWOOD_02")<2000) 
+		else if ((Npc_GetDistToWP(hero,"NW_FARM3_BIGWOOD_02")<2000)
 		&& (ShrineIsObsessed_NW_FARM3_BIGWOOD_02 == TRUE))
 		{
-			
+
 		}
-		else if ((Npc_GetDistToWP(hero,"NW_SHRINE_01")<2000) 
+		else if ((Npc_GetDistToWP(hero,"NW_SHRINE_01")<2000)
 		&& (ShrineIsObsessed_NW_SHRINE_01 == TRUE))
 		{
-			
+
 		}
 		else
 		{
 			ShrineIsObsessed = FALSE;
-		};	
+		};
 	};
-}; 
+};
 
 
 var int SpecialBless; //RAUS
@@ -182,10 +182,10 @@ var int SpecialBless; //RAUS
 // *****************************************************
 FUNC VOID PrayShrine_S1 ()
 {
-	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
-	
+	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero);
+
 	if  (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))
-	{	
+	{
 		AI_Output(hero, hero, "Info_Mod_Hero_Altar_Innos_15_00"); //Innos!
 
 		C_IsShrineObsessed (self);
@@ -211,13 +211,13 @@ INSTANCE PC_PrayShrine_End (C_Info)
 	condition		= PC_PrayShrine_End_Condition;
 	information		= PC_PrayShrine_End_Info;
 	permanent		= TRUE;
-	description		= DIALOG_ENDE; 
+	description		= DIALOG_ENDE;
 };
 
 FUNC INT PC_PrayShrine_End_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -225,7 +225,7 @@ FUNC INT PC_PrayShrine_End_Condition ()
 FUNC VOID PC_PrayShrine_End_Info()
 {
 	B_ENDPRODUCTIONDIALOG ();
-}; 
+};
 
 INSTANCE PC_PrayShrine_Klosterwein (C_Info)
 {
@@ -234,7 +234,7 @@ INSTANCE PC_PrayShrine_Klosterwein (C_Info)
 	condition		= PC_PrayShrine_Klosterwein_Condition;
 	information		= PC_PrayShrine_Klosterwein_Info;
 	permanent		= TRUE;
-	description		= "Klosterwein herstellen"; 
+	description		= "Klosterwein herstellen";
 };
 
 FUNC INT PC_PrayShrine_Klosterwein_Condition ()
@@ -246,7 +246,7 @@ FUNC INT PC_PrayShrine_Klosterwein_Condition ()
 	&& ((Npc_KnowsInfo(hero, Info_Mod_Milten_Daemonisch2))
 	|| ((Npc_KnowsInfo(hero, Info_Mod_Ulthar_Daemonisch))
 	&& (hero.guild == GIL_VLK)))
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -257,7 +257,7 @@ FUNC VOID PC_PrayShrine_Klosterwein_Info()
 	Npc_RemoveInvItems	(hero, ItPo_HealBesessenheit, 1);
 
 	CreateInvItems	(hero, ItFo_KWine, 5);
-}; 
+};
 //*******************************************************
 //	Beten
 //*******************************************************
@@ -268,14 +268,14 @@ INSTANCE PC_PrayShrine_Pray (C_Info)
 	condition		= PC_PrayShrine_Pray_Condition;
 	information		= PC_PrayShrine_Pray_Info;
 	permanent		= TRUE;
-	description		= "Beten"; 
+	description		= "Beten";
 };
 
 FUNC INT PC_PrayShrine_Pray_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
 	&& (ShrineIsObsessed == FALSE)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -285,7 +285,7 @@ FUNC VOID PC_PrayShrine_Pray_Info()
 	Info_ClearChoices (PC_PrayShrine_Pray);
 	Info_AddChoice (PC_PrayShrine_Pray,Dialog_Back,PC_PrayShrine_Pray_Back);
 	Info_AddChoice (PC_PrayShrine_Pray,"Ich will beten und spende 0 Goldstücke.",PC_PrayShrine_Pray_NoPay);
-			
+
 	if (Npc_HasItems (hero,ItMi_Gold) >=10)
 	{
 		Info_AddChoice (PC_PrayShrine_Pray,"Ich will beten und spende 10 Goldstücke.",PC_PrayShrine_Pray_SmallPay);
@@ -298,7 +298,7 @@ FUNC VOID PC_PrayShrine_Pray_Info()
 	{
 		Info_AddChoice (PC_PrayShrine_Pray,"Ich will beten und spende 100 Goldstücke.",PC_PrayShrine_Pray_BigPay);
 	};
-}; 
+};
 
 FUNC VOID PC_PrayShrine_Pray_Back ()
 {
@@ -312,7 +312,7 @@ INSTANCE PC_PrayShrine_Heilung (C_Info)
 	condition		= PC_PrayShrine_Heilung_Condition;
 	information		= PC_PrayShrine_Heilung_Info;
 	permanent		= TRUE;
-	description		= "Komplette Heilung"; 
+	description		= "Komplette Heilung";
 };
 
 FUNC INT PC_PrayShrine_Heilung_Condition ()
@@ -440,7 +440,7 @@ FUNC INT PC_PrayShrine_Heilung_Condition ()
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
 	&& (ShrineIsObsessed == FALSE)
 	&& (HealPrice > 0)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -465,7 +465,7 @@ FUNC VOID PC_PrayShrine_Heilung_Info()
 	{
 		Print	(PRINT_NotEnoughGold);
 	};
-}; 
+};
 
 INSTANCE PC_PrayShrine_Reg (C_Info)
 {
@@ -474,7 +474,7 @@ INSTANCE PC_PrayShrine_Reg (C_Info)
 	condition		= PC_PrayShrine_Reg_Condition;
 	information		= PC_PrayShrine_Reg_Info;
 	permanent		= TRUE;
-	description		= "Regeneration erlangen"; 
+	description		= "Regeneration erlangen";
 };
 
 FUNC INT PC_PrayShrine_Reg_Condition ()
@@ -482,7 +482,7 @@ FUNC INT PC_PrayShrine_Reg_Condition ()
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
 	&& (HP_Perk == FALSE)
 	&& (ShrineIsObsessed == FALSE)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -491,7 +491,7 @@ FUNC VOID PC_PrayShrine_Reg_Info()
 {
 	Info_ClearChoices (PC_PrayShrine_Reg);
 	Info_AddChoice (PC_PrayShrine_Reg,Dialog_Back,PC_PrayShrine_Reg_Back);
-			
+
 	if (HP_Perk == FALSE)
 	{
 		if (Mod_Schwierigkeit == 4)
@@ -503,7 +503,7 @@ FUNC VOID PC_PrayShrine_Reg_Info()
 			Info_AddChoice (PC_PrayShrine_Reg,"Lebensregeneration (20 LP und 5000 Gold)",PC_PrayShrine_Reg_HP);
 		};
 	};
-}; 
+};
 
 FUNC VOID PC_PrayShrine_Reg_Back ()
 {
@@ -579,8 +579,8 @@ FUNC VOID PC_PrayShrine_Pray_NoPay ()
 {
 	var int zufall; zufall = Hlp_Random(100);
 
-	// ----- Heute Schon gebetet? -----	
-	if (PrayDay == Wld_GetDay())		
+	// ----- Heute Schon gebetet? -----
+	if (PrayDay == Wld_GetDay())
 	{
 		PrintScreen	(Print_BlessNone, -1, -1, FONT_SCREEN, 2);
 	}
@@ -596,7 +596,7 @@ FUNC VOID PC_PrayShrine_Pray_NoPay ()
 	B_MardukGebet();
 
 	B_Göttergefallen(1, 1);
-	
+
 	PrayDay = Wld_GetDay ();
 	Info_ClearChoices (PC_PrayShrine_Pray);
 };
@@ -607,8 +607,8 @@ FUNC VOID PC_PrayShrine_Pray_NoPay ()
 func VOID PC_PrayShrine_Pray_SmallPay ()
 {
 	Npc_RemoveInvItems  (hero,ItMi_Gold, 10);
-	
-	if (PrayDay == Wld_GetDay())		
+
+	if (PrayDay == Wld_GetDay())
 	{
 		PrintScreen	(Print_BlessNone, -1, -1, FONT_SCREEN, 2);
 	}
@@ -622,7 +622,7 @@ func VOID PC_PrayShrine_Pray_SmallPay ()
 	Mod_CountSpende += 10;
 
 	B_Göttergefallen(1, 1);
-	
+
 	PrayDay = Wld_GetDay ();
 	Info_ClearChoices (PC_PrayShrine_Pray);
 };
@@ -633,9 +633,9 @@ func VOID PC_PrayShrine_Pray_SmallPay ()
 FUNC VOID PC_PrayShrine_Pray_MediumPay ()
 {
 	Npc_RemoveInvItems  (hero, ItMi_Gold, 50);
-	
-	// ----- Heute Schon gebetet? -----	
-	if (PrayDay == Wld_GetDay())		
+
+	// ----- Heute Schon gebetet? -----
+	if (PrayDay == Wld_GetDay())
 	{
 		PrintScreen	(Print_BlessNone, -1, -1, FONT_SCREEN, 2);
 	}
@@ -649,7 +649,7 @@ FUNC VOID PC_PrayShrine_Pray_MediumPay ()
 	Mod_CountSpende += 50;
 
 	B_Göttergefallen(1, 2);
-	
+
 	PrayDay = Wld_GetDay ();
 	Info_ClearChoices (PC_PrayShrine_Pray);
 };
@@ -660,11 +660,11 @@ FUNC VOID PC_PrayShrine_Pray_MediumPay ()
 func VOID PC_PrayShrine_Pray_BigPay ()
 {
 	var int zufall;	zufall = r_max(99);
-	
+
 	Npc_RemoveInvItems  (hero, ItMi_Gold, 100);
-	
-	// ----- Heute Schon gebetet? -----	
-	if (PrayDay == Wld_GetDay())		
+
+	// ----- Heute Schon gebetet? -----
+	if (PrayDay == Wld_GetDay())
 	{
 		PrintScreen	(Print_BlessNone, -1, -1, FONT_SCREEN, 2);
 	}
@@ -698,7 +698,7 @@ func VOID PC_PrayShrine_Pray_BigPay ()
 	Mod_CountSpende += 100;
 
 	B_Göttergefallen(1, 3);
-	
+
 	PrayDay = Wld_GetDay ();
 	Info_ClearChoices (PC_PrayShrine_Pray);
 };
@@ -710,7 +710,7 @@ INSTANCE PC_PrayShrine_Chemo (C_Info)
 	condition		= PC_PrayShrine_Chemo_Condition;
 	information		= PC_PrayShrine_Chemo_Info;
 	permanent		= TRUE;
-	description		= "Chemische Keule weihen"; 
+	description		= "Chemische Keule weihen";
 };
 
 FUNC INT PC_PrayShrine_Chemo_Condition ()
@@ -718,7 +718,7 @@ FUNC INT PC_PrayShrine_Chemo_Condition ()
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
 	&& (Npc_HasItems (hero,ItMw_Chemo_Unloaded) >= 1)
 	&& (ShrineIsObsessed == FALSE)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -730,7 +730,7 @@ FUNC VOID PC_PrayShrine_Chemo_Info()
 	Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_Heal_Cast" );
 	B_GivePlayerXP (400);
-}; 
+};
 
 //*******************************************************
 //	SchwertWeihe
@@ -742,7 +742,7 @@ INSTANCE PC_PrayShrine_BlessSword (C_Info)
 	condition		= PC_PrayShrine_BlessSword_Condition;
 	information		= PC_PrayShrine_BlessSword_Info;
 	permanent		= 0;
-	description		= Bless_Sword; 
+	description		= Bless_Sword;
 };
 
 FUNC INT PC_PrayShrine_BlessSword_Condition ()
@@ -754,7 +754,7 @@ FUNC INT PC_PrayShrine_BlessSword_Condition ()
 	|| (Npc_HasItems (hero, ItMw_2H_Blessed_01) >= 1)
 	|| (Npc_HasItems (hero, ItMw_2H_Blessed_01_Geschaerft) >= 1))
 	&& (Npc_HasItems(hero, ItMi_OrnamentEffekt_BIGFARM_Addon) == 4)
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -766,14 +766,14 @@ FUNC VOID PC_PrayShrine_BlessSword_Info()
 	Snd_Play ("MFX_TELEPORT_CAST");
 
 	Npc_RemoveInvItems  (hero, ItMi_OrnamentEffekt_BIGFARM_Addon, 4);
-			
+
 	if (Npc_HasItems (hero, ItMw_2H_Blessed_01) >= 1)		//2H-Waffe
-	{	
+	{
 		Npc_RemoveInvItems  (hero, ItMw_2H_Blessed_01, 1);
 		CreateInvItems 		(hero, ItMw_2H_Blessed_02, 1);
 	}
 	else if (Npc_HasItems (hero, ItMw_2H_Blessed_01_Geschaerft) >= 1)		//2H-Waffe geschaerft
-	{	
+	{
 		Npc_RemoveInvItems  (hero, ItMw_2H_Blessed_01_Geschaerft, 1);
 		CreateInvItems 		(hero, ItMw_2H_Blessed_02, 1);
 	}
@@ -797,9 +797,9 @@ FUNC VOID PC_PrayShrine_BlessSword_Info()
 	B_LogEntry	(TOPIC_MOD_MILIZ_INNOSKLINGE, "Das Schwert wurde geweiht.");
 
 	AI_Teleport	(hero, "HALLE1_ANKUNFT");
-	
+
 	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_28);
-}; 
+};
 
 INSTANCE PC_PrayShrine_BlessSword_01 (C_Info)
 {
@@ -808,7 +808,7 @@ INSTANCE PC_PrayShrine_BlessSword_01 (C_Info)
 	condition		= PC_PrayShrine_BlessSword_01_Condition;
 	information		= PC_PrayShrine_BlessSword_01_Info;
 	permanent		= 0;
-	description		= Bless_Sword; 
+	description		= Bless_Sword;
 };
 
 FUNC INT PC_PrayShrine_BlessSword_01_Condition ()
@@ -820,9 +820,8 @@ FUNC INT PC_PrayShrine_BlessSword_01_Condition ()
 	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02_Geschaerft) >= 1))
 	&& (Npc_KnowsInfo(hero, Info_Mod_Harad_AndreVermaechtnis6))
 	&& (Npc_HasItems(hero, ItSc_Light) >= 1)
-	&& (Wld_IsTime(11,00,13,00))
 	&& (C_IsShrineReadyForWeihe())
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -837,9 +836,9 @@ FUNC VOID PC_PrayShrine_BlessSword_01_Info()
 	Snd_Play ("MFX_TELEPORT_CAST");
 
 	Npc_RemoveInvItems  (hero, ItSc_Light, 1);
-	
+
 	B_UsedShrineForWeihe();
-}; 
+};
 
 INSTANCE PC_PrayShrine_BlessSword_02 (C_Info)
 {
@@ -848,7 +847,7 @@ INSTANCE PC_PrayShrine_BlessSword_02 (C_Info)
 	condition		= PC_PrayShrine_BlessSword_02_Condition;
 	information		= PC_PrayShrine_BlessSword_02_Info;
 	permanent		= 0;
-	description		= Bless_Sword; 
+	description		= Bless_Sword;
 };
 
 FUNC INT PC_PrayShrine_BlessSword_02_Condition ()
@@ -860,9 +859,8 @@ FUNC INT PC_PrayShrine_BlessSword_02_Condition ()
 	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02_Geschaerft) >= 1))
 	&& (Npc_KnowsInfo(hero, PC_PrayShrine_BlessSword_01))
 	&& (Npc_HasItems(hero, ItSc_InstantFireball) >= 1)
-	&& (Wld_IsTime(11,00,13,00))
 	&& (C_IsShrineReadyForWeihe())
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -877,9 +875,9 @@ FUNC VOID PC_PrayShrine_BlessSword_02_Info()
 	Snd_Play ("MFX_TELEPORT_CAST");
 
 	Npc_RemoveInvItems  (hero, ItSc_InstantFireball, 1);
-	
+
 	B_UsedShrineForWeihe();
-}; 
+};
 
 INSTANCE PC_PrayShrine_BlessSword_03 (C_Info)
 {
@@ -888,7 +886,7 @@ INSTANCE PC_PrayShrine_BlessSword_03 (C_Info)
 	condition		= PC_PrayShrine_BlessSword_03_Condition;
 	information		= PC_PrayShrine_BlessSword_03_Info;
 	permanent		= 0;
-	description		= Bless_Sword; 
+	description		= Bless_Sword;
 };
 
 FUNC INT PC_PrayShrine_BlessSword_03_Condition ()
@@ -900,9 +898,8 @@ FUNC INT PC_PrayShrine_BlessSword_03_Condition ()
 	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02_Geschaerft) >= 1))
 	&& (Npc_KnowsInfo(hero, PC_PrayShrine_BlessSword_02))
 	&& (Npc_HasItems(hero, ItSc_Firestorm) >= 1)
-	&& (Wld_IsTime(11,00,13,00))
 	&& (C_IsShrineReadyForWeihe())
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -917,9 +914,9 @@ FUNC VOID PC_PrayShrine_BlessSword_03_Info()
 	Snd_Play ("MFX_TELEPORT_CAST");
 
 	Npc_RemoveInvItems  (hero, ItSc_Firestorm, 1);
-	
+
 	B_UsedShrineForWeihe();
-}; 
+};
 
 INSTANCE PC_PrayShrine_BlessSword_04 (C_Info)
 {
@@ -928,7 +925,7 @@ INSTANCE PC_PrayShrine_BlessSword_04 (C_Info)
 	condition		= PC_PrayShrine_BlessSword_04_Condition;
 	information		= PC_PrayShrine_BlessSword_04_Info;
 	permanent		= 0;
-	description		= Bless_Sword; 
+	description		= Bless_Sword;
 };
 
 FUNC INT PC_PrayShrine_BlessSword_04_Condition ()
@@ -940,9 +937,8 @@ FUNC INT PC_PrayShrine_BlessSword_04_Condition ()
 	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02_Geschaerft) >= 1))
 	&& (Npc_KnowsInfo(hero, PC_PrayShrine_BlessSword_03))
 	&& (Npc_HasItems(hero, ItSc_SumGol) >= 1)
-	&& (Wld_IsTime(11,00,13,00))
 	&& (C_IsShrineReadyForWeihe())
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -957,9 +953,9 @@ FUNC VOID PC_PrayShrine_BlessSword_04_Info()
 	Snd_Play ("MFX_TELEPORT_CAST");
 
 	Npc_RemoveInvItems  (hero, ItSc_SumGol, 1);
-	
+
 	B_UsedShrineForWeihe();
-}; 
+};
 
 INSTANCE PC_PrayShrine_BlessSword_05 (C_Info)
 {
@@ -968,7 +964,7 @@ INSTANCE PC_PrayShrine_BlessSword_05 (C_Info)
 	condition		= PC_PrayShrine_BlessSword_05_Condition;
 	information		= PC_PrayShrine_BlessSword_05_Info;
 	permanent		= 0;
-	description		= Bless_Sword; 
+	description		= Bless_Sword;
 };
 
 FUNC INT PC_PrayShrine_BlessSword_05_Condition ()
@@ -980,9 +976,8 @@ FUNC INT PC_PrayShrine_BlessSword_05_Condition ()
 	|| (Npc_HasItems (hero,ItMw_2H_Blessed_02_Geschaerft) >= 1))
 	&& (Npc_KnowsInfo(hero, PC_PrayShrine_BlessSword_04))
 	&& (Npc_HasItems(hero, ItSc_Firerain) >= 1)
-	&& (Wld_IsTime(11,00,13,00))
 	&& (C_IsShrineReadyForWeihe())
-	{	
+	{
 		return TRUE;
 	};
 };
@@ -997,14 +992,14 @@ FUNC VOID PC_PrayShrine_BlessSword_05_Info()
 	Snd_Play ("MFX_TELEPORT_CAST");
 
 	Npc_RemoveInvItems  (hero, ItSc_Firerain, 1);
-			
+
 	if (Npc_HasItems (hero, ItMw_2H_Blessed_02) >= 1)					//2H-Waffe
-	{	
+	{
 		Npc_RemoveInvItems  (hero, ItMw_2H_Blessed_02, 1);
 		CreateInvItems 		(hero, ItMw_2H_Blessed_03, 1);
 	}
 	else if (Npc_HasItems (hero, ItMw_2H_Blessed_02_Geschaerft) >= 1)	//2H-Waffe geschaerft
-	{	
+	{
 		Npc_RemoveInvItems  (hero, ItMw_2H_Blessed_02_Geschaerft, 1);
 		CreateInvItems 		(hero, ItMw_2H_Blessed_03, 1);
 	}
@@ -1018,7 +1013,7 @@ FUNC VOID PC_PrayShrine_BlessSword_05_Info()
 		Npc_RemoveInvItems  (hero, ItMw_1H_Blessed_02_Geschaerft, 1);
 		CreateInvItems 		(hero, ItMw_1H_Blessed_03, 1);
 	};
-	
+
 	Wld_PlayEffect("spellFX_PalHeal_ORIGIN", hero, hero, 0, 0, 0, FALSE);
 	Snd_Play ("MFX_Heal_Cast");
 	B_GivePlayerXP (5000);
@@ -1027,4 +1022,4 @@ FUNC VOID PC_PrayShrine_BlessSword_05_Info()
 	B_UsedShrineForWeihe();
 
 	B_LogEntry	(TOPIC_MOD_MILIZ_INNOSKLINGE, "Es ist geschafft. Und das Schwert ist tatsächlich noch mächtiger geworden.");
-}; 
+};
