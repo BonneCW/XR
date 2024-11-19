@@ -68,6 +68,7 @@ Fixes:
 - fixed time restriction for blessing of Andre's sword being stupid
 - fixed maybe Hagen dieing in valley of mines instead of getting teleported properly
 - fixed dialog with Saturas freezing when completing the raging quest while waiting for Saturas to go to the council
+- fixed sleep spell not working on Naim
 
 
 1.0.9
