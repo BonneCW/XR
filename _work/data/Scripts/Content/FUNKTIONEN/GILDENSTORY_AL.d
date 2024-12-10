@@ -95,7 +95,7 @@ FUNC VOID GILDENSTORY_AL()
 			Wld_SendTrigger	("EVT_KERKERGATE_01");
 
 			B_LogEntry	(TOPIC_MOD_AL_SCHMUGGLER, "Cutter ist tot. Ich sollte Thorus davon berichten.");
-			
+
 			Wld_InsertItem(ItSc_TrfRabbit, "FP_ITEM_TRFSCROLL_CUTTER");
 
 			Mod_TemplerBeiThorus = 2;
@@ -137,6 +137,7 @@ FUNC VOID GILDENSTORY_AL()
 				Mod_TemplerBeiThorus = 7;
 
 				Npc_ClearAIQueue (hero);
+				AI_StandUp	(hero);
 
 				AI_Teleport	(hero, "OCC_MERCS_RIGHT_ROOM_BACK");
 
@@ -150,6 +151,7 @@ FUNC VOID GILDENSTORY_AL()
 			&& (!Npc_KnowsInfo(hero, Info_Mod_Makanius_Hi))
 			{
 				Npc_ClearAIQueue (hero);
+				AI_StandUp	(hero);
 
 				AI_Teleport	(hero, "OCC_MERCS_RIGHT_ROOM_BACK");
 			};
@@ -265,12 +267,12 @@ FUNC VOID GILDENSTORY_AL()
 
 			Mod_AL_AlissandroBefreit = TRUE;
 		};
-		
+
 		if (Npc_KnowsInfo(hero, Info_Mod_Bloodwyn_EBR_Belauscht))
 		&& (Mod_Bloodwyn_GuidePlayertoBartholo == FALSE) {
 			if (!Npc_IsInState(Mod_1876_EBR_Bloodwyn_MT, ZS_Talk)) {
 				Mod_Bloodwyn_GuidePlayertoBartholo = TRUE;
-				
+
 				AI_GotoWP(hero, "OCC_BARONS_GREATHALL_CENTER_FRONT");
 			};
 		};
@@ -489,11 +491,13 @@ FUNC VOID GILDENSTORY_AL()
 			if (Mod_AL_BloodwynBartholoGefangen_Counter == 36)
 			{
 				B_LogEntry	(TOPIC_MOD_AL_KillMission, "Bartholo hat mich mit Jackal und einem Gardisten zum Kastell geschickt, er wird Verstärkung nachschicken.");
-	
+
 				B_StartOtherRoutine	(Mod_1106_EBR_Bartholo_MT, "BOSS");
 				B_StartOtherRoutine	(Mod_1876_EBR_Bloodwyn_MT, "GOTOBERGKASTELL");
 				B_StartOtherRoutine	(Mod_1145_GRD_Gardist_MT, "GOTOBERGKASTELL");
 				B_StartOtherRoutine	(Mod_1107_GRD_Jackal_MT, "FOLLOWTOBERGKASTELL");
+
+				Mod_1876_EBR_Bloodwyn_MT.flags = 0;
 
 				Mod_AL_BloodwynBartholoGefangen = 2;
 
@@ -512,7 +516,7 @@ FUNC VOID GILDENSTORY_AL()
 
 			AI_StartState	(Mod_517_DMR_Gomez_MT, ZS_MagicFreeze, 0, "");
 		};
-		
+
 		if (Mod_TriggerCloseALGate == FALSE)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Alissandro_ThorusTot)) {
 			if (Mod_ALTor_01 == 0) {
@@ -526,16 +530,16 @@ FUNC VOID GILDENSTORY_AL()
 
 				Mod_ALTor_03 = 1;
 			};
-		
+
 			Mod_TriggerCloseALGate = TRUE;
 		};
-		
+
 		if (Mod_TriggerOpenOMGate == FALSE)
 		&& (Npc_KnowsInfo(hero, Info_Mod_Alissandro_ThorusTot)) {
 			if (Mod_MinentalTor == 1) {
 				Wld_SendTrigger	("EVT_AM_LOB_GATE_BIG");
 			};
-		
+
 			Mod_TriggerOpenOMGate = TRUE;
 		};
 	};
@@ -557,7 +561,7 @@ FUNC VOID GILDENSTORY_AL()
 	if (CurrentLevel == OLDMINE_ZEN)
 	{
 		if (Mod_AL_Oric == 2)
-		&& (Npc_IsDead(Mod_1031_DMR_Kurgan_OM))	
+		&& (Npc_IsDead(Mod_1031_DMR_Kurgan_OM))
 		{
 			Mod_AL_Oric = 3;
 
@@ -589,4 +593,4 @@ FUNC VOID GILDENSTORY_AL()
 		Npc_RemoveInvItems	(hero, ItMi_DemonArmor, 1);
 		CreateInvItems	(hero, ItAr_Raven_Addon, 1);
 	};
-};	
+};

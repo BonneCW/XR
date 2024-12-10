@@ -287,7 +287,7 @@ FUNC INT Info_Mod_Andre_Kristall_Condition()
 FUNC VOID Info_Mod_Andre_Kristall_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Andre_Kristall_15_00"); //Lothar schickt mich. Ich soll dir den Kristall bringen.
-	
+
 	B_GiveInvItems	(hero, self, Mod_PaladinKristall, 1);
 
 	AI_Output(self, hero, "Info_Mod_Andre_Kristall_40_01"); //Wo hast du den Kristall her?
@@ -453,7 +453,7 @@ FUNC VOID Info_Mod_Andre_Turnier2_Info()
 		Mod_AndreTurnier = 2;
 
 		Mod_MilizErnst	=	r_max(99);
-		
+
 		if (Mod_MilizErnst	<=	25)
 		{
 			AI_Output(self, hero, "Info_Mod_Andre_Turnier2_40_05"); //Wenn du dich wirklich der Miliz anschließen willst, dann geh mal zu Mortis. Du findest ihn in der Kasernen-Schmiede.
@@ -504,7 +504,7 @@ FUNC VOID Info_Mod_Andre_Turnier3_Info()
 	{
 		AI_Output(self, hero, "Info_Mod_Andre_Turnier3_40_01"); //Glückwunsch, du hast ihn besiegt. Damit hast du jetzt du nur noch einen Kampf.
 		AI_Output(self, hero, "Info_Mod_Andre_Turnier3_40_06"); //Dein nächster Gegner ist Gidan. Viel Glück!
-		
+
 		if (Assassinen_Dabei == 0)
 		{
 			B_LogEntry	(TOPIC_MOD_MILIZTURNIER, "Ich habe auch Alrik besiegt. Lord Andre sagt, dass ich jetzt nur noch einen Kampf vor mir habe.");
@@ -529,7 +529,7 @@ FUNC VOID Info_Mod_Andre_Turnier3_Info()
 		Mod_AndreTurnier = 2;
 
 		Mod_MilizErnst	=	r_max(99);
-		
+
 		if (Mod_MilizErnst	<=	50)
 		{
 			AI_Output(self, hero, "Info_Mod_Andre_Turnier3_40_04"); //Wenn du dich wirklich der Miliz anschließen willst, dann geh mal zu Mortis. Du findest ihn in der Kasernen-Schmiede.
@@ -581,7 +581,7 @@ FUNC VOID Info_Mod_Andre_Turnier4_Info()
 		AI_Output(self, hero, "Info_Mod_Andre_Turnier4_40_01"); //Glückwunsch, du hast ihn besiegt. Damit hast du dir eine Aufnahme bei der Miliz verdient.
 
 		if (Mod_Gilde == 0)
-		{		
+		{
 			B_LogEntry	(TOPIC_MOD_MILIZTURNIER, "Ich habe auch Gidan besiegt. Lord Andre sagt, dass ich mich jetzt der Miliz anschließen kann.");
 		}
 		else
@@ -621,7 +621,7 @@ FUNC VOID Info_Mod_Andre_Turnier4_Info()
 			Mod_AndreTurnier = 2;
 
 			Mod_MilizErnst	=	r_max(99);
-		
+
 			if (Mod_MilizErnst	<=	75)
 			{
 				AI_Output(self, hero, "Info_Mod_Andre_Turnier4_40_04"); //Wenn du dich wirklich der Miliz anschließen willst, dann geh mal zu Mortis. Du findest ihn in der Kasernen-Schmiede.
@@ -665,13 +665,13 @@ FUNC INT Info_Mod_Andre_Aufnahme_Condition()
 FUNC VOID Info_Mod_Andre_Aufnahme_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Andre_Aufnahme_15_00"); //Ich bin bereit mich der Miliz anzuschließen.
-	
+
 	if (hero.level	>=	5)
 	&& (Diebe_Dabei == FALSE)
 	{
 		AI_Output(self, hero, "Info_Mod_Andre_Aufnahme_40_01"); //Du bist bereit dich der Miliz anzuschließen.
 		AI_Output(self, hero, "Info_Mod_Andre_Aufnahme_40_02"); //Doch wenn du einmal die Rüstung unserer Soldaten trägst, dann gibt es kein zurück mehr.
-		
+
 		if (Mod_HatPlayerNeutraleKlamotten())
 		{
 			if (Mod_Gottstatus <= 8)
@@ -720,7 +720,7 @@ FUNC VOID Info_Mod_Andre_Aufnahme_Ja()
 	};
 	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_55);
 	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_57);
-	
+
 	AI_Output(hero, self, "Info_Mod_Andre_Aufnahme_Ja_15_00"); //Ich will mich euch anschließen.
 	AI_Output(self, hero, "Info_Mod_Andre_Aufnahme_Ja_40_01"); //Gut. Hier ist deine Rüstung.
 
@@ -1170,7 +1170,7 @@ FUNC VOID Info_Mod_Andre_GidanBack_Info()
 
 		Log_CreateTopic	(TOPIC_MOD_MILIZ_GIDAN, LOG_MISSION);
 		B_SetTopicStatus	(TOPIC_MOD_MILIZ_GIDAN, LOG_RUNNING);
-		B_LogEntry	(TOPIC_MOD_MILIZ_GIDAN, "Gidan ist in einem Überwachungslager der Miliz in der Nähe der Taverne unter einer Brücke, welches Überfallen wurde. Ich sollte zu ihm gehen und sehen, was er herausgefunden hat.");		
+		B_LogEntry	(TOPIC_MOD_MILIZ_GIDAN, "Gidan ist in einem Überwachungslager der Miliz in der Nähe der Taverne unter einer Brücke, welches Überfallen wurde. Ich sollte zu ihm gehen und sehen, was er herausgefunden hat.");
 	};
 };
 
@@ -1835,7 +1835,7 @@ FUNC VOID Info_Mod_Andre_MortisBadGuy_Info()
 	AI_Output(self, hero, "Info_Mod_Andre_MortisBadGuy_40_01"); //Wir werden zum größten Gespött der Stadt. Zwei Schwerverbrecher sind uns entwischt, einer unserer eigenen Leute hat uns verraten und das gesamte Gold der Miliz ist verschwunden.
 	AI_Output(hero, self, "Info_Mod_Andre_MortisBadGuy_15_02"); //Da kann man nichts mehr ändern.
 	AI_Output(self, hero, "Info_Mod_Andre_MortisBadGuy_40_03"); //Was hast du nun vor? Dich als Gefängiswache werde ich niemals wieder nehmen.
-	
+
 	if (Mod_Gilde < 1)
 	|| (Mod_Gilde > 3)
 	{
@@ -1851,7 +1851,7 @@ FUNC VOID Info_Mod_Andre_MortisBadGuy_Info()
 	};
 
 	var C_Item itm;
-	
+
 	itm = Npc_GetEquippedArmor(hero);
 
 	if (Hlp_IsItem(itm, ITAR_MIL_L) == TRUE)
@@ -1980,7 +1980,7 @@ FUNC INT Info_Mod_Andre_Knast_Condition()
 FUNC VOID Info_Mod_Andre_Knast_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Andre_Knast_40_00"); //Du wurdest von einem angesehen Bürger als Verbrecher angezeigt. Was hast du zu dieser Anschuldigung zu sagen?
-	
+
 	Info_ClearChoices	(Info_Mod_Andre_Knast);
 
 	Info_AddChoice	(Info_Mod_Andre_Knast, "Gibt es irgendwelche Beweise gegen mich?", Info_Mod_Andre_Knast_C);
@@ -1991,7 +1991,7 @@ FUNC VOID Info_Mod_Andre_Knast_Info()
 FUNC VOID Info_Mod_Andre_Knast_Ok ()
 {
 	AI_Output(self, hero, "Info_Mod_Andre_Knast_Ok_40_00"); //Ich werde das nachprüfen. Danke für deine Antworten.
-	
+
 	Info_ClearChoices	(Info_Mod_Andre_Knast);
 
 	AI_StopProcessInfos	(self);
@@ -2003,7 +2003,7 @@ FUNC VOID Info_Mod_Andre_Knast_C ()
 {
 	AI_Output(hero, self, "Info_Mod_Andre_Knast_C_15_00"); //Gibt es irgendwelche Beweise gegen mich?
 	AI_Output(self, hero, "Info_Mod_Andre_Knast_C_40_01"); //Es ist nicht schwer eine Bestätigung dafür zu bekommen, dass du aus der Strafkolonie stammst, und die Mitglieder des Alten Lagers sind noch immer alles andere als seriöse Geschäftsleute, somit bist du nachweislich Mitglied einer kriminellen Vereinigung.
-	
+
 	Info_ClearChoices	(Info_Mod_Andre_Knast);
 
 	Info_AddChoice	(Info_Mod_Andre_Knast, "Ich wurde von Alissandro, einem Bekannten von Lord Hagen, geschickt.", Info_Mod_Andre_Knast_C_B);
@@ -2013,14 +2013,14 @@ FUNC VOID Info_Mod_Andre_Knast_C ()
 FUNC VOID Info_Mod_Andre_Knast_C_B ()
 {
 	AI_Output(hero, self, "Info_Mod_Andre_Knast_C_B_15_00"); //Ich wurde von Alissandro, einem Bekannten von Lord Hagen, geschickt.
-	
+
 	Info_Mod_Andre_Knast_Ok();
 };
 
 FUNC VOID Info_Mod_Andre_Knast_C_A ()
 {
 	AI_Output(hero, self, "Info_Mod_Andre_Knast_C_A_15_00"); //Bodo trägt die Waffe eines Dämonenritters.
-	
+
 	Info_Mod_Andre_Knast_Ok();
 };
 
@@ -2028,7 +2028,7 @@ FUNC VOID Info_Mod_Andre_Knast_B ()
 {
 	AI_Output(hero, self, "Info_Mod_Andre_Knast_B_15_00"); //Ich bin kein Verbrecher.
 	AI_Output(self, hero, "Info_Mod_Andre_Knast_B_40_01"); //Hast du dafür irgendwelche Beweise oder sind diese Behauptungen aus der Luft gegriffen?
-	
+
 	Info_ClearChoices	(Info_Mod_Andre_Knast);
 
 	Info_AddChoice	(Info_Mod_Andre_Knast, "Ich bin allerdings kein Verbrecher, Im Gegensatz zu Bodo.", Info_Mod_Andre_Knast_AB_C);
@@ -2040,7 +2040,7 @@ FUNC VOID Info_Mod_Andre_Knast_A ()
 {
 	AI_Output(hero, self, "Info_Mod_Andre_Knast_A_15_00"); //Dieser Bürger ist ein Betrüger.
 	AI_Output(self, hero, "Info_Mod_Andre_Knast_A_40_01"); //Hast du dafür irgendwelche Beweise oder sind diese Behauptungen aus der Luft gegriffen?
-	
+
 	Info_ClearChoices	(Info_Mod_Andre_Knast);
 
 	Info_AddChoice	(Info_Mod_Andre_Knast, "Ich bin allerdings kein Verbrecher, Im Gegensatz zu Bodo.", Info_Mod_Andre_Knast_AB_C);
@@ -2052,7 +2052,7 @@ FUNC VOID Info_Mod_Andre_Knast_AB_C ()
 {
 	AI_Output(hero, self, "Info_Mod_Andre_Knast_AB_C_15_00"); //Ich bin allerdings kein Verbrecher, Im Gegensatz zu Bodo.
 	AI_Output(self, hero, "Info_Mod_Andre_Knast_AB_C_40_01"); //Kannst du das beweisen?
-	
+
 	Info_ClearChoices	(Info_Mod_Andre_Knast);
 
 	Info_AddChoice	(Info_Mod_Andre_Knast, "Ich wurde von Alissandro, einem Bekannten von Lord Hagen, geschickt.", Info_Mod_Andre_Knast_C_B);
@@ -2078,15 +2078,16 @@ FUNC INT Info_Mod_Andre_Knast2_Condition()
 	};
 };
 
+FUNC VOID AndreOpenKnastDoor() {
+	Wld_SendTrigger("EVT_CITY_PRISON_03");
+};
+
 FUNC VOID Info_Mod_Andre_Knast2_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Andre_Knast2_40_00"); //Wir haben deine Aussagen überprüft und sie scheinen korrekt zu sein. Ich entschuldige mich für die Umstände die wir dir bereitet haben.
 	AI_Output(self, hero, "Info_Mod_Andre_Knast2_40_01"); //Lord Hagen wird dich empfangen, weiterhin weise ich dich daraufhin dass der Bürger Bodo die Stadt verlassen hat.
 
-	if (Wld_IsMobAvailable(self,"LEVER"))
-	{
-		AI_UseMob (self, "LEVER", 1);
-	};
+	AI_Function (self, AndreOpenKnastDoor);
 
 	B_LogEntry	(TOPIC_MOD_AL_FLUCHT, "Ich habe ihm alles erzählt und wurde wieder freigelassen. Lord Hagen empfängt mich nun.");
 
@@ -2698,7 +2699,7 @@ INSTANCE Info_Mod_Andre_PMSchulden (C_INFO)
 	condition   	= Info_Mod_Andre_PMSchulden_Condition;
 	information 	= Info_Mod_Andre_PMSchulden_Info;
 	permanent   	= 1;
-	important 	= 1; 
+	important 	= 1;
 };
 
 FUNC INT Info_Mod_Andre_PMSchulden_Condition()
@@ -2724,16 +2725,16 @@ FUNC VOID Info_Mod_Andre_PMSchulden_Info()
 		{
 			AI_Output (self, hero, "Info_Mod_Andre_PMSchulden_40_03"); //Ich hatte dich gewarnt! Die Strafe, die du jetzt zahlen musst, ist höher!
 			AI_Output (hero, self, "Info_Mod_Andre_PMAdd_15_00"); //Wieviel?
-			
+
 			var int diff; diff = (B_GetTotalPetzCounter(self) - Andre_LastPetzCounter);
-		
+
 			if (diff > 0)
 			{
 				Andre_Schulden = Andre_Schulden + (diff * 50);
 			};
-		
+
 			if (Andre_Schulden > 1000)	{	Andre_Schulden = 1000;	};
-		
+
 			B_Say_Gold (self, hero, Andre_Schulden);
 		}
 		else
@@ -2744,37 +2745,37 @@ FUNC VOID Info_Mod_Andre_PMSchulden_Info()
 	else if (B_GetGreatestPetzCrime(self) < Andre_LastPetzCrime)
 	{
 		AI_Output (self, hero, "Info_Mod_Andre_PMSchulden_40_05"); //Es haben sich einige neue Dinge ergeben.
-		
+
 		if (Andre_LastPetzCrime == CRIME_MURDER)
 		{
 			AI_Output (self, hero, "Info_Mod_Andre_PMSchulden_40_06"); //Plötzlich gibt es niemanden mehr, der dich des Mordes bezichtigt.
 		};
-		
+
 		if (Andre_LastPetzCrime == CRIME_THEFT)
 		|| ( (Andre_LastPetzCrime > CRIME_THEFT) && (B_GetGreatestPetzCrime(self) < CRIME_THEFT) )
 		{
 			AI_Output (self, hero, "Info_Mod_Andre_PMSchulden_40_07"); //Niemand erinnert sich mehr, dich bei einem Diebstahl gesehen zu haben.
 		};
-		
+
 		if (Andre_LastPetzCrime == CRIME_ATTACK)
 		|| ( (Andre_LastPetzCrime > CRIME_ATTACK) && (B_GetGreatestPetzCrime(self) < CRIME_ATTACK) )
 		{
 			AI_Output (self, hero, "Info_Mod_Andre_PMSchulden_40_08"); //Es gibt keine Zeugen mehr dafür, dass du jemals in eine Schlägerei verwickelt warst.
 		};
-		
+
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
 		{
 			AI_Output (self, hero, "Info_Mod_Andre_PMSchulden_40_09"); //Anscheinend haben sich alle Anklagen gegen dich in Wohlgefallen aufgelöst.
 		};
-		
+
 		AI_Output (self, hero, "Info_Mod_Andre_PMSchulden_40_10"); //Ich weiß nicht, was da gelaufen ist, aber ich warne dich: Spiel keine Spielchen mit mir.
-				
+
 		// ------- Schulden erlassen oder trotzdem zahlen ------
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
 		{
 			AI_Output (self, hero, "Info_Mod_Andre_PMSchulden_40_11"); //Ich habe mich jedenfalls entschieden, dir deine Schulden zu erlassen.
 			AI_Output (self, hero, "Info_Mod_Andre_PMSchulden_40_12"); //Sieh zu, dass du nicht wieder in Schwierigkeiten kommst.
-	
+
 			Andre_Schulden			= 0;
 			Andre_LastPetzCounter 	= 0;
 			Andre_LastPetzCrime		= CRIME_NONE;
@@ -2786,7 +2787,7 @@ FUNC VOID Info_Mod_Andre_PMSchulden_Info()
 			AI_Output (self, hero, "Info_Mod_Andre_PMSchulden_40_14"); //Also, was ist?
 		};
 	};
-	
+
 	// ------ Choices NUR, wenn noch Crime vorliegt ------
 	if (B_GetGreatestPetzCrime(self) != CRIME_NONE)
 	{
@@ -2837,14 +2838,14 @@ FUNC INT Info_Mod_Andre_PETZMASTER_Condition()
 FUNC VOID Info_Mod_Andre_PETZMASTER_Info()
 {
 	Andre_Schulden = 0; //weil Funktion nochmal durchlaufen wird, wenn Crime höher ist...
-	
+
 	// ------ SC hat mit Andre noch nicht gesprochen ------
 	if (B_GetAivar(self, AIV_TalkedToPlayer) == FALSE)
 	{
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_00"); //Du musst der Neue sein, der hier in der Stadt Ärger gemacht hat.
-	};	
-	
-	if (B_GetGreatestPetzCrime(self) == CRIME_MURDER) 
+	};
+
+	if (B_GetGreatestPetzCrime(self) == CRIME_MURDER)
 	{
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_01"); //Gut, dass du zu mir kommst, bevor alles noch schlimmer für dich wird.
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_02"); //Mord ist ein schweres Vergehen!
@@ -2864,8 +2865,8 @@ FUNC VOID Info_Mod_Andre_PETZMASTER_Info()
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_07"); //Aber es wird nicht leicht sein, die Leute wieder gnädig zu stimmen.
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_08"); //Du könntest deine Reue zeigen, indem du eine Strafe zahlst - natürlich muss die Strafe angemessen hoch sein.
 	};
-		
-	if (B_GetGreatestPetzCrime(self) == CRIME_THEFT) 
+
+	if (B_GetGreatestPetzCrime(self) == CRIME_THEFT)
 	{
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_09"); //Gut, dass du kommst! Du wirst des Diebstahls bezichtigt! Es gibt Zeugen!
 
@@ -2876,10 +2877,10 @@ FUNC VOID Info_Mod_Andre_PETZMASTER_Info()
 
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_11"); //Ich werde so ein Verhalten in der Stadt nicht dulden!
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_12"); //Du wirst eine Strafe zahlen müssen, um dein Verbrechen wieder gutzumachen!
-		
+
 		Andre_Schulden = (B_GetTotalPetzCounter(self) * 50); //Anzahl der Zeugen * 50
 	};
-	
+
 	if (B_GetGreatestPetzCrime(self) == CRIME_ATTACK)
 	{
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_13"); //Wenn du dich mit dem Gesindel im Hafen herumprügelst, ist das eine Sache ...
@@ -2892,26 +2893,26 @@ FUNC VOID Info_Mod_Andre_PETZMASTER_Info()
 
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_16"); //Wenn ich dir das durchgehen lasse, macht hier bald jeder, was er will.
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_17"); //Also wirst du eine angemessene Strafe zahlen - und die Sache ist vergessen.
-		
+
 		Andre_Schulden = (B_GetTotalPetzCounter(self) * 50); //Anzahl der Zeugen * 50
 	};
-	
+
 	// ------ Schaf getötet (nahezu uninteressant - in der City gibt es keine Schafe) ------
-	if (B_GetGreatestPetzCrime(self) == CRIME_SHEEPKILLER) 
+	if (B_GetGreatestPetzCrime(self) == CRIME_SHEEPKILLER)
 	{
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_18"); //Mir ist zu Ohren gekommen, du hättest dich an unseren Schafen vergriffen.
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_19"); //Dir ist klar, dass ich das nicht durchgehen lassen kann.
 		AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_40_20"); //Du wirst eine Entschädigung zahlen müssen!
-		
+
 		Andre_Schulden = 100;
 	};
-	
+
 	AI_Output (hero, self, "Info_Mod_Andre_PETZMASTER_15_21"); //Wie viel?
-	
+
 	if (Andre_Schulden > 1000)	{	Andre_Schulden = 1000;	};
-		
+
 	B_Say_Gold (self, hero, Andre_Schulden);
-	
+
 	Info_ClearChoices  	(Info_Mod_Andre_PMSchulden);
 	Info_ClearChoices  	(Info_Mod_Andre_PETZMASTER);
 	Info_AddChoice		(Info_Mod_Andre_PETZMASTER,"Ich habe nicht genug Gold!",Info_Mod_Andre_PETZMASTER_PayLater);
@@ -2928,11 +2929,11 @@ func void Info_Mod_Andre_PETZMASTER_PayNow()
 	AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_PayNow_40_01"); //Gut! Ich werde dafür sorgen, dass es jeder in der Stadt erfährt - damit wäre dein Ruf einigermaßen wiederhergestellt.
 
 	B_GrantAbsolution (LOC_CITY);
-	
+
 	Andre_Schulden			= 0;
 	Andre_LastPetzCounter 	= 0;
 	Andre_LastPetzCrime		= CRIME_NONE;
-	
+
 	Info_ClearChoices  	(Info_Mod_Andre_PETZMASTER);
 	Info_ClearChoices  	(Info_Mod_Andre_PMSchulden);	//!!! Info-Choice wird noch von anderem Dialog angesteuert!
 };
@@ -2942,10 +2943,10 @@ func void Info_Mod_Andre_PETZMASTER_PayLater()
 	AI_Output (hero, self, "Info_Mod_Andre_PETZMASTER_PayLater_15_00"); //Ich habe nicht genug Gold!
 	AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_PayLater_40_01"); //Dann sieh zu, dass du das Gold so schnell wie möglich beschaffst.
 	AI_Output (self, hero, "Info_Mod_Andre_PETZMASTER_PayLater_40_02"); //Und ich warne dich: Wenn du dir noch was zu schulden kommen lässt, wird die Sache noch schlimmer für dich!
-	
+
 	Andre_LastPetzCounter 	= B_GetTotalPetzCounter(self);
 	Andre_LastPetzCrime		= B_GetGreatestPetzCrime(self);
-	
+
 	AI_StopProcessInfos (self);
 };
 
@@ -2975,7 +2976,7 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Info()
 	Info_ClearChoices	(Info_Mod_Andre_Kopfgeld);
 
 	Info_AddChoice	(Info_Mod_Andre_Kopfgeld, "Zurück.", Info_Mod_Andre_Kopfgeld_Zurueck);
-	
+
 	if (Npc_KnowsInfo(hero, Info_Mod_Tom_Hi))
 	&& (Mod_Tom_Boese	==	TRUE)
 	{
@@ -3144,7 +3145,7 @@ FUNC VOID Info_Mod_Andre_Kopfgeld_Gerbrandt()
 	Mod_AL_Gebrandt_Gefangen = TRUE;
 
 	Mod_AlvaresAndre_Taeter = 1;
-	
+
 	B_StartOtherRoutine	(Mod_588_WNOV_Joe_NW, "DIEGO");
 };
 

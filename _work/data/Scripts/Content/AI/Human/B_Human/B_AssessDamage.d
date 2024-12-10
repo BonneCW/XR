@@ -121,6 +121,13 @@ func void B_AssessDamage ()
 		{
 			return;
 		};
+
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1106_EBR_Bartholo_MT))
+		&& (Npc_KnowsInfo(hero, Info_Mod_Alissandro_BeiBartholo))
+		&& (!Npc_KnowsInfo(hero, Info_Mod_Makanius_BartholosFlucht))
+		{
+			return;
+		};
 	};
 
 	if (CurrentLevel == DIEINSEL_ZEN)

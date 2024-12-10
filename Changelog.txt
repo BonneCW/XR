@@ -71,6 +71,7 @@ Fixes:
 - fixed sleep spell not working on Naim
 - fixed green ore requiring two types of pick axe
 - fixed there being no way out of the ice temple
+- fixed several issues during Old Camp storyline
 
 
 1.0.9

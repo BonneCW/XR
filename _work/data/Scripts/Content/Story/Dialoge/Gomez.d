@@ -228,7 +228,7 @@ FUNC VOID Info_Mod_Gomez_Jagd01_A()
 	Log_CreateTopic	(TOPIC_MOD_GOMEZHORN, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_GOMEZHORN, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_GOMEZHORN, "Gomez hat mich zu einer Jagd eingeladen - da konnte ich nicht nein sagen.");
-	
+
 	Mod_GomezHorn = 1;
 
 	Info_ClearChoices	(Info_Mod_Gomez_Jagd01);
@@ -720,7 +720,7 @@ FUNC VOID Info_Mod_Gomez_AtAL_Info()
 	AI_TurnToNpc	(self, Mod_7066_DMR_Daemonenritter_MT);
 
 	AI_Output(self, hero, "Info_Mod_Gomez_AtAL_16_00"); //Jemand, den ich mir anhören möchte. Und jetzt halt deinen Mund, wenn ich dir nicht die Zunge rausschneiden soll.
-	
+
 	AI_StopProcessInfos	(self);
 };
 
@@ -771,7 +771,7 @@ FUNC INT Info_Mod_Gomez_AtAL2_A_Condition()
 FUNC VOID Info_Mod_Gomez_AtAL2_A_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Gomez_AtAL2_A_15_00"); //Die Wachposten außerhalb des Lagers werden angegriffen. Wir brauchen dich persönlich.
-	AI_Output(self, hero, "Info_Mod_Gomez_AtAL2_A_16_01"); //wenn diese Versager nicht alleine damit fertig werden, ist es ihre Schuld ... solange im Lager niemand angreift kann mir das egal sein. Noch was?
+	AI_Output(self, hero, "Info_Mod_Gomez_AtAL2_A_16_01"); //Wenn diese Versager nicht alleine damit fertig werden, ist es ihre Schuld ... solange im Lager niemand angreift kann mir das egal sein. Noch was?
 };
 
 INSTANCE Info_Mod_Gomez_AtAL2_B (C_INFO)
@@ -865,7 +865,7 @@ FUNC VOID Info_Mod_Gomez_AtAL3_Info()
 
 	AI_Output(self, hero, "Info_Mod_Gomez_AtAL3_16_00"); //Was sollte das? Ihr wollt mir das Lager wieder nehmen? Du hast mir nicht's zu befehlen, Raven.
 	AI_Output(self, hero, "Info_Mod_Gomez_AtAL3_16_01"); //Früher war ich es, der dir die Befehle gab, und nur weil du Xardas in den Arsch kriechst, hast du nicht das Recht, solche Dinge zu bestimmen.
-	
+
 	AI_StopProcessInfos	(self);
 };
 

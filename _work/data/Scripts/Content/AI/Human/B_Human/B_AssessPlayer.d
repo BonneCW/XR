@@ -379,6 +379,14 @@ func void B_AssessPlayer ()
 
 			Mod_PDV_Fisk_Infos = 3;
 		};
+
+		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Mod_1106_EBR_Bartholo_MT))
+		&& (Npc_IsPlayer(other))
+		&& (playerIsTransformed)
+		&& ((Mod_IsFleischwanze == 1)
+		|| (Mod_IsRabbit == 1)) {
+			return;
+		};
 	};
 
 	if (C_IsBandit(self))

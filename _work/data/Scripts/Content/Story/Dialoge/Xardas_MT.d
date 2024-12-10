@@ -436,9 +436,15 @@ FUNC VOID Info_Mod_Xardas_MT_Angebot_Info()
 
 	B_LogEntry	(TOPIC_MOD_AL_MINE, "Ich habe im Lager der Dämonenritter Gomez getroffen, der mich angegriffen hat. Xardas konnte ihn lähmen und meinte, ich solle fliehen. Ich berichte besser Whistler, was geschehen ist.");
 
-	AI_Teleport	(self, "TOT");
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_HabSchwert)) {
+		AI_Teleport	(self, "TOT");
 
-	B_StartOtherRoutine	(self, "TOT");
+		B_StartOtherRoutine	(self, "TOT");
+	} else {
+		AI_Teleport	(self, "LOCATION_19_03_PATH_RUIN7");
+
+		B_StartOtherRoutine	(self, "START");
+	};
 };
 
 INSTANCE Info_Mod_Xardas_MT_Gomez (C_INFO)
@@ -493,15 +499,23 @@ FUNC VOID Info_Mod_Xardas_MT_Raven_Info()
 
 	AI_StopProcessInfos	(self);
 
-	B_StartOtherRoutine	(self, "TOT");
 	B_StartOtherRoutine	(Mod_517_DMR_Gomez_MT, "START");
 	B_StartOtherRoutine	(Mod_520_DMR_Raven_MT, "START");
 	B_StartOtherRoutine	(Mod_7066_DMR_Daemonenritter_MT, "TOT");
 
-	AI_Teleport	(self, "TOT");
 	AI_Teleport	(Mod_517_DMR_Gomez_MT, "TOT");
 	AI_Teleport	(Mod_520_DMR_Raven_MT, "TOT");
 	AI_Teleport	(Mod_7066_DMR_Daemonenritter_MT, "TOT");
+
+	if (Npc_KnowsInfo(hero, Info_Mod_Xardas_MT_HabSchwert)) {
+		AI_Teleport	(self, "TOT");
+
+		B_StartOtherRoutine	(self, "TOT");
+	} else {
+		AI_Teleport	(self, "LOCATION_19_03_PATH_RUIN7");
+
+		B_StartOtherRoutine	(self, "START");
+	};
 };
 
 INSTANCE Info_Mod_Xardas_MT_Orkfriedhof (C_INFO)

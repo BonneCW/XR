@@ -357,7 +357,7 @@ FUNC INT Info_Mod_Alissandro_HierPlan_Condition()
 FUNC VOID Info_Mod_Alissandro_HierPlan_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Alissandro_HierPlan_15_00"); //Ich habe den Plan.
-	
+
 	B_GiveInvItems	(hero, self, AL_Aufstellung, 1);
 
 	AI_Output(self, hero, "Info_Mod_Alissandro_HierPlan_23_01"); //Gut, dann werden wir das Lager bald angreifen können.
@@ -405,7 +405,7 @@ FUNC VOID Info_Mod_Alissandro_GotoJackal_Info()
 
 	B_GiveInvItems	(self, hero, ItRu_TeleportOldcamp, 1);
 
-	AI_Output(self, hero, "Info_Mod_Alissandro_GotoJackal_23_10"); //Außerdem bekommst du eine Liste mit den Leuten, die du töten sollst. 
+	AI_Output(self, hero, "Info_Mod_Alissandro_GotoJackal_23_10"); //Außerdem bekommst du eine Liste mit den Leuten, die du töten sollst.
 
 	B_GiveInvItems	(self, hero, ItWr_Alissandro_KillList, 1);
 
@@ -483,7 +483,7 @@ FUNC INT Info_Mod_Alissandro_ThanksForRettung_Condition()
 FUNC VOID Info_Mod_Alissandro_ThanksForRettung_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Alissandro_ThanksForRettung_23_00"); //Gut, dass ihr mir helfen konntet. Hier, du hast es verdient.
-	
+
 	CreateInvItems	(self, Grd_Armor_H, 1);
 	B_GiveInvItems	(self, hero, Grd_Armor_H, 1);
 
@@ -526,7 +526,7 @@ FUNC VOID Info_Mod_Alissandro_GotoZufluchten_Info()
 	AI_Output(self, hero, "Info_Mod_Alissandro_GotoZufluchten_23_01"); //Jackal wird in der Zeit die verbündeten Gilden aufsuchen und ihnen diese Botschaft überbringen.
 	AI_Output(hero, self, "Info_Mod_Alissandro_GotoZufluchten_15_02"); //Wo sind die anderen Zufluchten?
 	AI_Output(self, hero, "Info_Mod_Alissandro_GotoZufluchten_23_03"); //Du bekommst diese Karte von mir.
-	
+
 	CreateInvItems	(self, ItWrWorldmapZufluchten, 1);
 	B_GiveInvItems	(self, hero, ItWrWorldmapZufluchten, 1);
 
@@ -636,7 +636,7 @@ FUNC VOID Info_Mod_Alissandro_Eroberung_10_Info()
 	AI_StopProcessInfos	(self);
 
 	B_StartOtherRoutine	(self, "GOTOTEMPELVORPLATZ");
-	
+
 	Wld_InsertNpc(Mod_9999_HMG_Heilungsmagier_MT, "PSI_TEMPLE_STAIRS_1");
 };
 
@@ -667,9 +667,9 @@ FUNC VOID Info_Mod_Alissandro_BeiBartholo_Info()
 	AI_Output(self, hero, "Info_Mod_Alissandro_BeiBartholo_23_00"); //Angriff!
 
 	AI_StopProcessInfos	(self);
-	
+
 	B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Wir sind nun bei Bartholo und Makanius hat das Signal für die Banditen und königlichen Gardisten gegeben, allerdings ist Bartholo geflohen und hat uns einen Gardisten auf den Hals gehetzt.");
-	
+
 	Mod_1106_EBR_Bartholo_MT.aivar[AIV_ToughGuy] = TRUE;
 	B_StartOtherRoutine	(Mod_1106_EBR_Bartholo_MT, "FLUCHTINKERKER");
 
@@ -702,11 +702,12 @@ FUNC INT Info_Mod_Alissandro_WacheTotWoBartholo_Condition()
 FUNC VOID Info_Mod_Alissandro_WacheTotWoBartholo_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Alissandro_WacheTotWoBartholo_23_00"); //Jetzt müssen wir Bartholo suchen. Er kann das Lager nicht verlassen haben.
-	
+
 	B_StartOtherRoutine	(self, "GOTOMAKANIUS");
 	B_StartOtherRoutine	(Mod_1924_TPL_GorNaMon_MT, "STAYATOC");
 	B_StartOtherRoutine	(Mod_1925_TPL_GorNaKar_MT, "STAYATOC");
 	B_StartOtherRoutine	(Mod_1874_HMG_Makanius_MT, "WAITFORPLAYER");
+	B_StartOtherRoutine	(Mod_9999_HMG_Heilungsmagier_MT, "OC");
 };
 
 INSTANCE Info_Mod_Alissandro_BartholoTot (C_INFO)
@@ -735,11 +736,11 @@ FUNC VOID Info_Mod_Alissandro_BartholoTot_Info()
 	AI_Output(self, hero, "Info_Mod_Alissandro_BartholoTot_23_02"); //Komm morgen in den Thronsaal.
 
 	AI_StopProcessInfos	(self);
-	
+
 	B_LogEntry	(TOPIC_MOD_AL_EROBERUNG, "Ich habe Bartholo in den Kerkern gefunden und getötet. Nun soll ich am nächsten Tag in den Thronsaal kommen.");
 
 	B_StartOtherRoutine	(self, "BOSS");
-	
+
 	B_StartOtherRoutine	(Mod_1874_HMG_Makanius_MT, "ALTESLAGER");
 	B_StartOtherRoutine	(Mod_1107_GRD_Jackal_MT, "START");
 	B_StartOtherRoutine	(Mod_761_BDT_Dexter_MT, "START");
@@ -1134,7 +1135,7 @@ FUNC INT Info_Mod_Alissandro_Ende_Condition()
 FUNC VOID Info_Mod_Alissandro_Ende_Info()
 {
 	AI_Output(self, hero, "Info_Mod_Alissandro_Ende_23_00"); //Das wäre geschafft. Nun steht dem Lager nichts mehr im Wege. wir werden es in eine strahlende Zukunft führen!
-	
+
 	B_LogEntry	(TOPIC_MOD_AL_LOCKVOGEL, "Das Lager ist unser und bleibt es!");
 	B_SetTopicStatus	(TOPIC_MOD_AL_LOCKVOGEL, LOG_SUCCESS);
 
