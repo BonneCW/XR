@@ -74,6 +74,7 @@ Fixes:
 - fixed green ore requiring two types of pick axe
 - fixed there being no way out of the ice temple
 - fixed several issues during Old Camp storyline
+- fixed some sounds in Relenden being too loud
 
 
 1.0.9
