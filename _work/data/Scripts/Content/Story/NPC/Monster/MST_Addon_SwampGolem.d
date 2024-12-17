@@ -1,8 +1,8 @@
 //***************************
-//	Swampgolem Prototype			
+//	Swampgolem Prototype
 //***************************
 
-PROTOTYPE Mst_Default_Addon_SwampGolem(C_Npc)			
+PROTOTYPE Mst_Default_Addon_SwampGolem(C_Npc)
 {
 	//----- Monster ----
 	name							=	"Sumpfgolem";
@@ -17,17 +17,17 @@ PROTOTYPE Mst_Default_Addon_SwampGolem(C_Npc)
 	attribute	[ATR_HITPOINTS]		= attribute[ATR_HITPOINTS_MAX];
 	attribute	[ATR_MANA_MAX] 		= 0;
 	attribute	[ATR_MANA] 		= 0;
-	
+
 	//----- Protections ----
 	protection	[PROT_BLUNT]		= Hlp_Random(41)*1000 + 70000;	// 70 - 110
 	protection	[PROT_EDGE]		= Hlp_Random(41)*1000 + 70000;	// 70 - 110
 	protection	[PROT_POINT]		= -1;
-	protection	[PROT_FIRE]		= -1;
-	protection	[PROT_FLY]		= -1;	
-	protection	[PROT_MAGIC]		= -1;
+	protection	[PROT_FIRE]		= 60;
+	protection	[PROT_FLY]		= -1;
+	protection	[PROT_MAGIC]		= 60;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
-	
+
 	//---- Damage Types ----
 	damagetype 						=	DAM_BLUNT|DAM_FLY;
 	damage		[DAM_INDEX_BLUNT]	=	attribute[ATR_STRENGTH]-1;
@@ -39,14 +39,14 @@ PROTOTYPE Mst_Default_Addon_SwampGolem(C_Npc)
 
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_STONEGOLEM;
-	
+
 	//----- Senses & Ranges ----
 	senses			= 	SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
 	senses_range	=	PERC_DIST_MONSTER_ACTIVE_MAX;
-	
+
 	aivar[AIV_MM_FollowTime]	= FOLLOWTIME_MEDIUM;
 	aivar[AIV_MM_FollowInWater] = TRUE;
-	
+
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
 
@@ -303,19 +303,19 @@ INSTANCE Wurzelzwerg	(Mst_Default_Addon_SwampGolem)
 	attribute	[ATR_HITPOINTS]		= 100;
 	attribute	[ATR_MANA_MAX] 		= 0;
 	attribute	[ATR_MANA] 		= 0;
-	
+
 	//----- Protections ----
 	protection	[PROT_BLUNT]		= 40000;
 	protection	[PROT_EDGE]		= 40000;
 	protection	[PROT_POINT]		= 40000;
 	protection	[PROT_FIRE]		= 40;
-	protection	[PROT_FLY]		= 40;	
+	protection	[PROT_FLY]		= 40;
 	protection	[PROT_MAGIC]		= 40;
 
 	self.aivar[AIV_Damage] = self.attribute[ATR_HITPOINTS_MAX];
 
 	Mdl_SetModelScale(self, 0.6, 0.6, 0.6);
-	
+
 	//---- Damage Types ----
 	damagetype 						=	DAM_BLUNT;
 };
@@ -326,12 +326,12 @@ INSTANCE Summoned_SwampGolem (Mst_Default_Addon_SwampGolem)
 	guild							=	GIL_SUMMONED_GOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_GOLEM;
 	level							=	0;
-	
+
 	aivar[AIV_PARTYMEMBER] = TRUE;
-	B_SetAttitude (self, ATT_FRIENDLY); 
-	
+	B_SetAttitude (self, ATT_FRIENDLY);
+
 	start_aistate = ZS_MM_Rtn_Summoned;
-	
+
 	B_SetVisuals_Swampgolem();
 	Npc_SetToFistMode	(self);
 
