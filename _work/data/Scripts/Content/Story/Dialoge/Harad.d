@@ -1146,7 +1146,7 @@ FUNC VOID Info_Mod_Harad_LehrlingQuest9_Info()
 	AI_Output(self, hero, "Info_Mod_Harad_LehrlingQuest9_09_07"); //(giftig) Ja, vergiss nur, von wem du all deine Kenntnisse hast! Lass mich nur im Stich!
 
 	B_StartOtherRoutine	(Mod_980_MIL_Olav_NW, "START");
-	
+
 	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_44);
 
 	B_LogEntry	(TOPIC_MOD_LEHRLING_HARAD_FOUR, "Da ich von Harad überhaupt keine Mithilfe erwarten kann, habe ich entschieden, ihn dort zu lassen, wo er ist. Ich sollte den Paladinen oder den Söldnern selbst meine Hilfe anbieten.");
@@ -1549,7 +1549,7 @@ FUNC VOID Info_Mod_Harad_AndreVermaechtnis7_Info()
 	AI_PlayAni	(self, "T_1HSINSPECT");
 	AI_RemoveWeapon	(self);
 
-	AI_UnequipWeapons	(self);	
+	AI_UnequipWeapons	(self);
 
 	AI_Output(self, hero, "Info_Mod_Harad_AndreVermaechtnis7_28_03"); //Stimmt, das ist jetzt wirklich ein einmaliges Schwert. (schwärmerisch) Meine und Innos' Kräfte vereint in einer Klinge ...
 	AI_Output(hero, self, "Info_Mod_Harad_AndreVermaechtnis7_15_04"); //Schon gut. Danke auf jeden Fall für deine Hilfe.
@@ -1688,7 +1688,7 @@ func void Info_Mod_Harad_Staerke_1()
 func void Info_Mod_Harad_Staerke_5()
 {
 	B_TeachAttributePoints_New (self, other, ATR_STRENGTH, 5, 120);
-	
+
 	Info_ClearChoices	(Info_Mod_Harad_Staerke);
 	Info_AddChoice		(Info_Mod_Harad_Staerke, DIALOG_BACK, Info_Mod_Harad_Staerke_BACK);
 	Info_AddChoice		(Info_Mod_Harad_Staerke, B_BuildLearnString_New(PRINT_LearnSTR5	, B_GetLearnCostAttribute_New(hero, ATR_STRENGTH), ATR_STRENGTH)	,Info_Mod_Harad_Staerke_5);
@@ -1764,7 +1764,7 @@ FUNC VOID Info_Mod_Harad_Schmieden_Common()
 		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Common_28_02"); //Dann schlägst du am Amboss die Klinge zurecht.
 		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Common_28_03"); //Deine ersten Schwerter werden keine Meisterwerke sein, aber alles weitere kannst du ja noch später lernen.
 	};
-	
+
 	Info_ClearChoices (Info_Mod_Harad_Schmieden);
 	Info_AddChoice	(Info_Mod_Harad_Schmieden, DIALOG_BACK, Info_Mod_Harad_Schmieden_BACK);
 	if (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_04] == FALSE)
@@ -1800,7 +1800,7 @@ FUNC VOID Info_Mod_Harad_Schmieden_Harad01()
 		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad01_28_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
 		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad01_28_02"); //Dann schlägst du am Amboss die Klinge zurecht.
 	};
-	
+
 	Info_ClearChoices (Info_Mod_Harad_Schmieden);
 	Info_AddChoice	(Info_Mod_Harad_Schmieden, DIALOG_BACK, Info_Mod_Harad_Schmieden_BACK);
 	if (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_04] == FALSE)
@@ -1836,7 +1836,7 @@ FUNC VOID Info_Mod_Harad_Schmieden_Harad02()
 		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad02_28_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
 		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad02_28_02"); //Dann schlägst du am Amboss die Klinge zurecht.
 	};
-	
+
 	Info_ClearChoices (Info_Mod_Harad_Schmieden);
 	Info_AddChoice	(Info_Mod_Harad_Schmieden, DIALOG_BACK, Info_Mod_Harad_Schmieden_BACK);
 	if (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_04] == FALSE)
@@ -1872,7 +1872,7 @@ FUNC VOID Info_Mod_Harad_Schmieden_Harad03()
 		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad03_28_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
 		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad03_28_02"); //Dann schlägst du am Amboss die Klinge zurecht.
 	};
-	
+
 	Info_ClearChoices (Info_Mod_Harad_Schmieden);
 	Info_AddChoice	(Info_Mod_Harad_Schmieden, DIALOG_BACK, Info_Mod_Harad_Schmieden_BACK);
 	if (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_04] == FALSE)
@@ -1908,7 +1908,7 @@ FUNC VOID Info_Mod_Harad_Schmieden_Harad04()
 		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad04_28_01"); //Es ist ganz einfach, Junge. Besorge dir ein Stück Rohstahl, halte es ins Feuer, bis es glüht.
 		AI_Output (self, other, "Info_Mod_Harad_Schmieden_Harad04_28_02"); //Dann schlägst du am Amboss die Klinge zurecht.
 	};
-	
+
 	Info_ClearChoices (Info_Mod_Harad_Schmieden);
 	Info_AddChoice	(Info_Mod_Harad_Schmieden, DIALOG_BACK, Info_Mod_Harad_Schmieden_BACK);
 	if (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_04] == FALSE)
@@ -1959,125 +1959,125 @@ FUNC INT Info_Mod_Harad_Verkaufen_Condition()
 FUNC VOID Info_Mod_Harad_Verkaufen_Info()
 {
 	AI_Output (hero, self, "Info_Mod_Harad_Verkaufen_15_00"); //Ich will meine geschmiedeten Waffen verkaufen.
-	
+
 	AI_UnequipWeapons	(hero);
-	
+
 	var int anzahl_common; anzahl_common = Npc_HasItems (hero, ItMw_1H_Common_01);
 	var int anzahl_schwert1; anzahl_schwert1 = Npc_HasItems (hero, ItMw_Schwert1);
 	var int anzahl_schwert4; anzahl_schwert4 = Npc_HasItems (hero, ItMw_Schwert4);
 	var int anzahl_rubinklinge; anzahl_rubinklinge = Npc_HasItems (hero, ItMw_Rubinklinge);
 	var int anzahl_elbastardo; anzahl_elbastardo = Npc_HasItems (hero, ItMw_ElBastardo);
-	
+
 	var int anzahl_common_bonus; anzahl_common_bonus = Npc_HasItems (hero, ItMw_1H_Common_01_Bonus);
 	var int anzahl_schwert1_bonus; anzahl_schwert1_bonus = Npc_HasItems (hero, ItMw_Schwert1_Bonus);
 	var int anzahl_schwert4_bonus; anzahl_schwert4_bonus = Npc_HasItems (hero, ItMw_Schwert4_Bonus);
 	var int anzahl_rubinklinge_bonus; anzahl_rubinklinge_bonus = Npc_HasItems (hero, ItMw_Rubinklinge_Bonus);
 	var int anzahl_elbastardo_bonus; anzahl_elbastardo_bonus = Npc_HasItems (hero, ItMw_ElBastardo_Bonus);
-	
+
 	var int anzahl_common_meisterschmied; anzahl_common_meisterschmied = Npc_HasItems (hero, ItMw_1H_Common_01_meisterschmied);
 	var int anzahl_schwert1_meisterschmied; anzahl_schwert1_meisterschmied = Npc_HasItems (hero, ItMw_Schwert1_meisterschmied);
 	var int anzahl_schwert4_meisterschmied; anzahl_schwert4_meisterschmied = Npc_HasItems (hero, ItMw_Schwert4_meisterschmied);
 	var int anzahl_rubinklinge_meisterschmied; anzahl_rubinklinge_meisterschmied = Npc_HasItems (hero, ItMw_Rubinklinge_meisterschmied);
 	var int anzahl_elbastardo_meisterschmied; anzahl_elbastardo_meisterschmied = Npc_HasItems (hero, ItMw_ElBastardo_meisterschmied);
-	
+
 	var int anzahl_common_bonusmeisterschmied; anzahl_common_bonusmeisterschmied = Npc_HasItems (hero, ItMw_1H_Common_01_BonusMeisterschmied);
 	var int anzahl_schwert1_bonusmeisterschmied; anzahl_schwert1_bonusmeisterschmied = Npc_HasItems (hero, ItMw_Schwert1_BonusMeisterschmied);
 	var int anzahl_schwert4_bonusmeisterschmied; anzahl_schwert4_bonusmeisterschmied = Npc_HasItems (hero, ItMw_Schwert4_BonusMeisterschmied);
 	var int anzahl_rubinklinge_bonusmeisterschmied; anzahl_rubinklinge_bonusmeisterschmied = Npc_HasItems (hero, ItMw_Rubinklinge_BonusMeisterschmied);
 	var int anzahl_elbastardo_bonusmeisterschmied; anzahl_elbastardo_bonusmeisterschmied = Npc_HasItems (hero, ItMw_ElBastardo_BonusMeisterschmied);
-	
+
 	var int anzahl_common_stark; anzahl_common_stark = Npc_HasItems (hero, ItMw_1H_Common_01_Stark);
 	var int anzahl_schwert1_stark; anzahl_schwert1_stark = Npc_HasItems (hero, ItMw_Schwert1_Stark);
 	var int anzahl_schwert4_stark; anzahl_schwert4_stark = Npc_HasItems (hero, ItMw_Schwert4_Stark);
 	var int anzahl_rubinklinge_stark; anzahl_rubinklinge_stark = Npc_HasItems (hero, ItMw_Rubinklinge_Stark);
 	var int anzahl_elbastardo_stark; anzahl_elbastardo_stark = Npc_HasItems (hero, ItMw_ElBastardo_Stark);
-	
+
 	var int anzahl_common_starkbonus; anzahl_common_starkbonus = Npc_HasItems (hero, ItMw_1H_Common_01_StarkBonus);
 	var int anzahl_schwert1_starkbonus; anzahl_schwert1_starkbonus = Npc_HasItems (hero, ItMw_Schwert1_StarkBonus);
 	var int anzahl_schwert4_starkbonus; anzahl_schwert4_starkbonus = Npc_HasItems (hero, ItMw_Schwert4_StarkBonus);
 	var int anzahl_rubinklinge_starkbonus; anzahl_rubinklinge_starkbonus = Npc_HasItems (hero, ItMw_Rubinklinge_StarkBonus);
 	var int anzahl_elbastardo_starkbonus; anzahl_elbastardo_starkbonus = Npc_HasItems (hero, ItMw_ElBastardo_StarkBonus);
-	
+
 	var int anzahl_common_starkmeisterschmied; anzahl_common_starkmeisterschmied = Npc_HasItems (hero, ItMw_1H_Common_01_StarkMeisterschmied);
 	var int anzahl_schwert1_starkmeisterschmied; anzahl_schwert1_starkmeisterschmied = Npc_HasItems (hero, ItMw_Schwert1_StarkMeisterschmied);
 	var int anzahl_schwert4_starkmeisterschmied; anzahl_schwert4_starkmeisterschmied = Npc_HasItems (hero, ItMw_Schwert4_StarkMeisterschmied);
 	var int anzahl_rubinklinge_starkmeisterschmied; anzahl_rubinklinge_starkmeisterschmied = Npc_HasItems (hero, ItMw_Rubinklinge_StarkMeisterschmied);
 	var int anzahl_elbastardo_starkmeisterschmied; anzahl_elbastardo_starkmeisterschmied = Npc_HasItems (hero, ItMw_ElBastardo_StarkMeisterschmied);
-	
+
 	var int anzahl_common_starkbonusmeisterschmied; anzahl_common_starkbonusmeisterschmied = Npc_HasItems (hero, ItMw_1H_Common_01_StarkBonusMeisterschmied);
 	var int anzahl_schwert1_starkbonusmeisterschmied; anzahl_schwert1_starkbonusmeisterschmied = Npc_HasItems (hero, ItMw_Schwert1_StarkBonusMeisterschmied);
 	var int anzahl_schwert4_starkbonusmeisterschmied; anzahl_schwert4_starkbonusmeisterschmied = Npc_HasItems (hero, ItMw_Schwert4_StarkBonusMeisterschmied);
 	var int anzahl_rubinklinge_starkbonusmeisterschmied; anzahl_rubinklinge_starkbonusmeisterschmied = Npc_HasItems (hero, ItMw_Rubinklinge_StarkBonusMeisterschmied);
 	var int anzahl_elbastardo_starkbonusmeisterschmied; anzahl_elbastardo_starkbonusmeisterschmied = Npc_HasItems (hero, ItMw_ElBastardo_StarkBonusMeisterschmied);
-	
+
 	var int gesamt; gesamt = (anzahl_common + anzahl_schwert1 + anzahl_schwert4 + anzahl_rubinklinge + anzahl_elbastardo + anzahl_common_stark + anzahl_schwert1_stark + anzahl_schwert4_stark + anzahl_rubinklinge_stark + anzahl_elbastardo_stark);
 	gesamt = gesamt + (anzahl_common_bonus + anzahl_schwert1_bonus + anzahl_schwert4_bonus + anzahl_rubinklinge_bonus + anzahl_elbastardo_bonus + anzahl_common_starkbonus + anzahl_schwert1_starkbonus + anzahl_schwert4_starkbonus + anzahl_rubinklinge_starkbonus + anzahl_elbastardo_starkbonus);
 	gesamt = gesamt + (anzahl_common_meisterschmied + anzahl_schwert1_meisterschmied + anzahl_schwert4_meisterschmied + anzahl_rubinklinge_meisterschmied + anzahl_elbastardo_meisterschmied + anzahl_common_starkmeisterschmied + anzahl_schwert1_starkmeisterschmied + anzahl_schwert4_starkmeisterschmied + anzahl_rubinklinge_starkmeisterschmied + anzahl_elbastardo_starkmeisterschmied);
 	gesamt = gesamt + (anzahl_common_bonusmeisterschmied + anzahl_schwert1_bonusmeisterschmied + anzahl_schwert4_bonusmeisterschmied + anzahl_rubinklinge_bonusmeisterschmied + anzahl_elbastardo_bonusmeisterschmied + anzahl_common_starkbonusmeisterschmied + anzahl_schwert1_starkbonusmeisterschmied + anzahl_schwert4_starkbonusmeisterschmied + anzahl_rubinklinge_starkbonusmeisterschmied + anzahl_elbastardo_starkbonusmeisterschmied);
-	
+
 	if (gesamt == 0) {
 		AI_Output (self, hero, "Info_Mod_Harad_Verkaufen_28_01"); //Dann stell welche her! Ich nehme nur einfache Schwerter an.
 	} else {//(gesamt >= 1) - die verbeliebenden Klingen verkaufen ------
 		AI_Output (self, hero, "Info_Mod_Harad_Verkaufen_28_02"); //Gut - gib her.
-		
+
 		Npc_RemoveInvItems (hero, ItMw_1H_Common_01, anzahl_common);
 		Npc_RemoveInvItems (hero, ItMw_Schwert1, anzahl_Schwert1);
 		Npc_RemoveInvItems (hero, ItMw_Schwert4, anzahl_Schwert4);
 		Npc_RemoveInvItems (hero, ItMw_Rubinklinge, anzahl_Rubinklinge);
 		Npc_RemoveInvItems (hero, ItMw_ElBastardo, anzahl_ElBastardo);
-		
+
 		Npc_RemoveInvItems (hero, ItMw_1H_Common_01_Bonus, anzahl_common_bonus);
 		Npc_RemoveInvItems (hero, ItMw_Schwert1_Bonus, anzahl_Schwert1_bonus);
 		Npc_RemoveInvItems (hero, ItMw_Schwert4_Bonus, anzahl_Schwert4_bonus);
 		Npc_RemoveInvItems (hero, ItMw_Rubinklinge_Bonus, anzahl_Rubinklinge_bonus);
 		Npc_RemoveInvItems (hero, ItMw_ElBastardo_Bonus, anzahl_ElBastardo_bonus);
-		
+
 		Npc_RemoveInvItems (hero, ItMw_1H_Common_01_Meisterschmied, anzahl_common_meisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_Schwert1_Meisterschmied, anzahl_Schwert1_meisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_Schwert4_Meisterschmied, anzahl_Schwert4_meisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_Rubinklinge_Meisterschmied, anzahl_Rubinklinge_meisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_ElBastardo_Meisterschmied, anzahl_ElBastardo_meisterschmied);
-		
+
 		Npc_RemoveInvItems (hero, ItMw_1H_Common_01_BonusMeisterschmied, anzahl_common_bonusmeisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_Schwert1_BonusMeisterschmied, anzahl_Schwert1_bonusmeisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_Schwert4_BonusMeisterschmied, anzahl_Schwert4_bonusmeisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_Rubinklinge_BonusMeisterschmied, anzahl_Rubinklinge_bonusmeisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_ElBastardo_BonusMeisterschmied, anzahl_ElBastardo_bonusmeisterschmied);
-		
+
 		Npc_RemoveInvItems (hero, ItMw_1H_Common_01_Stark, anzahl_common_stark);
 		Npc_RemoveInvItems (hero, ItMw_Schwert1_Stark, anzahl_Schwert1_stark);
 		Npc_RemoveInvItems (hero, ItMw_Schwert4_Stark, anzahl_Schwert4_stark);
 		Npc_RemoveInvItems (hero, ItMw_Rubinklinge_Stark, anzahl_Rubinklinge_stark);
 		Npc_RemoveInvItems (hero, ItMw_ElBastardo_Stark, anzahl_ElBastardo_stark);
-		
+
 		Npc_RemoveInvItems (hero, ItMw_1H_Common_01_StarkBonus, anzahl_common_starkbonus);
 		Npc_RemoveInvItems (hero, ItMw_Schwert1_StarkBonus, anzahl_Schwert1_starkbonus);
 		Npc_RemoveInvItems (hero, ItMw_Schwert4_StarkBonus, anzahl_Schwert4_starkbonus);
 		Npc_RemoveInvItems (hero, ItMw_Rubinklinge_StarkBonus, anzahl_Rubinklinge_starkbonus);
 		Npc_RemoveInvItems (hero, ItMw_ElBastardo_StarkBonus, anzahl_ElBastardo_starkbonus);
-		
+
 		Npc_RemoveInvItems (hero, ItMw_1H_Common_01_StarkMeisterschmied, anzahl_common_starkmeisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_Schwert1_StarkMeisterschmied, anzahl_Schwert1_starkmeisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_Schwert4_StarkMeisterschmied, anzahl_Schwert4_starkmeisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_Rubinklinge_StarkMeisterschmied, anzahl_Rubinklinge_starkmeisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_ElBastardo_StarkMeisterschmied, anzahl_ElBastardo_starkmeisterschmied);
-		
+
 		Npc_RemoveInvItems (hero, ItMw_1H_Common_01_StarkBonusMeisterschmied, anzahl_common_starkbonusmeisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_Schwert1_StarkBonusMeisterschmied, anzahl_Schwert1_starkbonusmeisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_Schwert4_StarkBonusMeisterschmied, anzahl_Schwert4_starkbonusmeisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_Rubinklinge_StarkBonusMeisterschmied, anzahl_Rubinklinge_starkbonusmeisterschmied);
 		Npc_RemoveInvItems (hero, ItMw_ElBastardo_StarkBonusMeisterschmied, anzahl_ElBastardo_starkbonusmeisterschmied);
-		
+
 		var string concatText;
 		concatText = ConcatStrings(IntToString(gesamt), PRINT_ItemsGegeben);		// "x Gegenstände gegeben"
 		AI_PrintScreen (concatText, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
-				
+
 		AI_Output (self, hero, "Info_Mod_Harad_Verkaufen_28_03"); //So, und hier hast du deinen Lohn.
 		var int lohn;
 		lohn = ((anzahl_common + anzahl_common_bonus + anzahl_common_meisterschmied + anzahl_common_bonusmeisterschmied + anzahl_common_stark + anzahl_common_starkbonus + anzahl_common_starkmeisterschmied + anzahl_common_starkbonusmeisterschmied) * Value_Common1) + ((anzahl_schwert1 + anzahl_schwert1_bonus + anzahl_schwert1_meisterschmied + anzahl_schwert1_bonusmeisterschmied + anzahl_schwert1_stark + anzahl_schwert1_starkbonus + anzahl_schwert1_starkmeisterschmied + anzahl_schwert1_starkbonusmeisterschmied) * Value_Schwert1) + ((anzahl_schwert4 + anzahl_schwert4_bonus + anzahl_schwert4_meisterschmied + anzahl_schwert4_bonusmeisterschmied + anzahl_schwert4_stark + anzahl_schwert4_starkbonus + anzahl_schwert4_starkmeisterschmied + anzahl_schwert4_starkbonusmeisterschmied) * Value_Schwert4) + ((anzahl_rubinklinge + anzahl_rubinklinge_bonus + anzahl_rubinklinge_meisterschmied + anzahl_rubinklinge_bonusmeisterschmied + anzahl_rubinklinge_stark + anzahl_rubinklinge_starkbonus + anzahl_rubinklinge_starkmeisterschmied + anzahl_rubinklinge_starkbonusmeisterschmied) * Value_Rubinklinge) + ((anzahl_elbastardo + anzahl_elbastardo_bonus + anzahl_elbastardo_meisterschmied + anzahl_elbastardo_bonusmeisterschmied + anzahl_elbastardo_stark + anzahl_elbastardo_starkbonus + anzahl_elbastardo_starkmeisterschmied + anzahl_elbastardo_starkbonusmeisterschmied) * Value_ElBastardo);
-				
+
 		lohn = (lohn / 3);
-		
+
 		B_GiveInvItems (self, hero, ItMi_Gold, lohn);
 	};
 };
@@ -2150,7 +2150,7 @@ FUNC VOID Info_Mod_Harad_Spitzen_Info()
 		Mod_PfeileSpitzen = TRUE;
 
 		Log_CreateTopic	(TOPIC_MOD_PFEILE, LOG_NOTE);
-		B_LogEntry	(TOPIC_MOD_PFEILE, "Um Pfeile herzustellen, benötige ich Pfeilspitzen. Diese kann ich an einem Amboss aus Rohstahl gewinnen.");
+		B_LogEntry	(TOPIC_MOD_PFEILE, "Um Pfeile oder Bolzen herzustellen, benötige ich Pfeil- bzw. Bolzenspitzen. Diese kann ich an einem Amboss aus Rohstahl gewinnen.");
 
 		if (Mod_Schwierigkeit == 4)
 		{

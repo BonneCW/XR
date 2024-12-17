@@ -29,6 +29,7 @@ Enhancements:
 - improved Lich spawn
 - added limit for how often strength bonus for swimming is granted
 - slightly nerfed Swamp Golems for mages
+- extended arrow crafting entries to also mention bolts
 
 Fixes:
 

@@ -489,7 +489,7 @@ FUNC VOID Info_Mod_Wolf_Schnitzen_Info()
 		Mod_PfeileSchnitzen = 1;
 
 		Log_CreateTopic	(TOPIC_MOD_PFEILE, LOG_NOTE);
-		B_LogEntry	(TOPIC_MOD_PFEILE, "Um Pfeile herzustellen, benötige ich Pfeilstäbe. Diese kann ich mir aus Ästen zurechtsägen.");
+		B_LogEntry	(TOPIC_MOD_PFEILE, "Um Pfeile/Bolzen herzustellen, benötige ich Pfeil-/Bolzenstäbe. Diese kann ich mir aus Ästen zurechtsägen.");
 
 		if (Mod_Schwierigkeit == 4)
 		{
@@ -549,7 +549,7 @@ FUNC VOID Info_Mod_Wolf_Spitzen_Info()
 		Mod_PfeileSpitzen = 1;
 
 		Log_CreateTopic	(TOPIC_MOD_PFEILE, LOG_NOTE);
-		B_LogEntry	(TOPIC_MOD_PFEILE, "Um Pfeile herzustellen, benötige ich Pfeilspitzen. Diese kann ich an einem Amboss aus Rohstahl gewinnen.");
+		B_LogEntry	(TOPIC_MOD_PFEILE, "Um Pfeile/Bolzen herzustellen, benötige ich Pfeil-/Bolzenspitzen. Diese kann ich an einem Amboss aus Rohstahl gewinnen.");
 
 		if (Mod_Schwierigkeit == 4)
 		{

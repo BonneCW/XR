@@ -492,7 +492,7 @@ FUNC VOID Info_Mod_Bosper_LehrlingQuest_Info()
 	CurrentNQ += 1;
 
 	Log_CreateTopic	(TOPIC_MOD_PFEILE, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_PFEILE, "Ich kann jetzt aus einer Pfeilspitze und einem Pfeilschaft einen Pfeil mit Widerhaken herstellen. Dieser Pfeil trifft nicht so häufig, reißt aber dafür tiefere Wunden.");
+	B_LogEntry	(TOPIC_MOD_PFEILE, "Ich kann jetzt aus einer Pfeil-/Bolzenspitze und einem Pfeil-/Bolzenschaft einen Pfeil/Bolzen mit Widerhaken herstellen. Dieser Pfeil/Bolzen trifft nicht so häufig, reißt aber dafür tiefere Wunden.");
 
 	B_SetTopicStatus	(TOPIC_MOD_LEHRLING_BOSPER_ONE, LOG_SUCCESS);
 };
@@ -596,7 +596,7 @@ FUNC VOID Info_Mod_Bosper_LehrlingQuest3_Info()
 	B_GivePlayerXP	(200);
 
 	Log_CreateTopic	(TOPIC_MOD_PFEILE, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_PFEILE, "Ich kann jetzt aus einer Pfeilspitze und einem Pfeilstab einen Präzisionspfeil herstellen. Dieser Pfeil trifft häufiger und auf größere Entfernung, macht dafür aber etwas weniger Schaden.");
+	B_LogEntry	(TOPIC_MOD_PFEILE, "Ich kann jetzt aus einer Pfeil-/Bolzenspitze und einem Pfeil-/Bolzenstab einen Präzisionspfeil/-bolzen herstellen. Dieser Pfeil/Bolzen trifft häufiger und auf größere Entfernung, macht dafür aber etwas weniger Schaden.");
 
 	CurrentNQ += 1;
 };
@@ -679,7 +679,7 @@ FUNC VOID Info_Mod_Bosper_LehrlingQuest5_Info()
 	Log_CreateTopic	(TOPIC_MOD_PFEILE, LOG_NOTE);
 	Log_CreateTopic	(TOPIC_MOD_LEHRLING_BOSPER_THREE, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_LEHRLING_BOSPER_THREE, LOG_RUNNING);
-	B_LogEntry_More	(TOPIC_MOD_LEHRLING_BOSPER_THREE, TOPIC_MOD_PFEILE, "Mit Explosionspfeilen soll ich zwei Trolle töten und Bosper ihre Felle bringen.", "Ich kann jetzt aus einer Pfeilspitze, Sprengstoff und einem Pfeilstab einen Explosionspfeil herstellen. Dieser Pfeil trifft häufiger und macht viel mehr Schaden, hat aber eine sehr geringe Reichweite. Für den Sprengstoff benötige ich Kohle, Schwefel und Salpeter, welche ich an einem Alchemietisch vermengen muss.");
+	B_LogEntry_More	(TOPIC_MOD_LEHRLING_BOSPER_THREE, TOPIC_MOD_PFEILE, "Mit Explosionspfeilen/-bolzen soll ich zwei Trolle töten und Bosper ihre Felle bringen.", "Ich kann jetzt aus einer Pfeil-/Bolzenspitze, Sprengstoff und einem Pfeil-/Bolzenstab einen Explosionspfeil/-bolzen herstellen. Dieser Pfeil/Bolzen trifft häufiger und macht viel mehr Schaden, hat aber eine sehr geringe Reichweite. Für den Sprengstoff benötige ich Kohle, Schwefel und Salpeter, welche ich an einem Alchemietisch vermengen muss.");
 };
 
 INSTANCE Info_Mod_Bosper_LehrlingQuest6 (C_INFO)
@@ -918,7 +918,7 @@ FUNC VOID Info_Mod_Bosper_LehrlingQuest12_Info()
 	CurrentNQ += 1;
 
 	B_GivePlayerXP	(1000);
-	
+
 	Spine_UnlockAchievement(SPINE_ACHIEVEMENT_45);
 };
 
@@ -1069,7 +1069,7 @@ FUNC VOID Info_Mod_Bosper_Schnitzen_Info()
 	Mod_PfeileSchnitzen	=	1;
 
 	Log_CreateTopic	(TOPIC_MOD_PFEILE, LOG_NOTE);
-	B_LogEntry	(TOPIC_MOD_PFEILE, "Um Pfeile herzustellen benötige ich Pfeilschäfte. Diese kann ich mir aus Ästen zurechtsägen. Danach muss ich sie am Amboss mit Pfeilspitzen kombinieren. Selbes gilt für Bolzen.");
+	B_LogEntry	(TOPIC_MOD_PFEILE, "Um Pfeile/Bolzen herzustellen benötige ich Pfeil-/Bolzenschäfte. Diese kann ich mir aus Ästen zurechtsägen. Danach muss ich sie am Amboss mit Pfeil-/Bolzenspitzen kombinieren.");
 };
 
 INSTANCE Info_Mod_Bosper_Spitzen (C_INFO)
@@ -1124,7 +1124,7 @@ FUNC VOID Info_Mod_Bosper_OtherHunters_Info()
 	AI_Output(self, hero, "Info_Mod_Bosper_OtherHunters_16_02"); //Da in der Nähe ist das Jägerlager. Der Anführer heißt Dragomir.
 	AI_Output(self, hero, "Info_Mod_Bosper_OtherHunters_16_03"); //Ihm kannst du einen schönen Gruß ausrichten, ich brauche wieder Felle. Jetzt zum Winter hin steigt die Nachfrage.
 	AI_Output(hero, self, "Info_Mod_Bosper_OtherHunters_15_04"); //Mach ich doch.
-	
+
 	Log_CreateTopic	(TOPIC_MOD_BOSPER_FELLLIEFERUNG, LOG_MISSION);
 	B_SetTopicStatus	(TOPIC_MOD_BOSPER_FELLLIEFERUNG, LOG_RUNNING);
 	B_LogEntry	(TOPIC_MOD_BOSPER_FELLLIEFERUNG, "Sollte ich beim Jägerlager in der Nähe von Orlans Taverne vorbeikommen und Dragomir ausrichten, dass Bosper wieder eine Felllieferung gebrauchen könnte.");
@@ -1274,7 +1274,7 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 	|| (Npc_HasItems(hero, ItAt_StonePumaFur_Rein) > 0)
 	|| (Npc_HasItems(hero, ItAt_StonePumaFur_Feuer) > 0)
 	{
-		
+
 		if (Npc_HasItems(hero, ItAt_Addon_KeilerFur) > 0)
 		|| (Npc_HasItems(hero, ItAt_Addon_KeilerFur_Rein) > 0)
 		|| (Npc_HasItems(hero, ItAt_Addon_KeilerFur_Feuer) > 0)
@@ -1329,7 +1329,7 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(hero, ItAt_ZiegenFur_Feuer) * Value_ZiegenFur_Feuer) );
 			B_GiveInvItems(hero, self, ItAt_ZiegenFur_Feuer, Npc_HasItems(hero, ItAt_ZiegenFur_Feuer));
 		};
-		
+
 		if (Npc_HasItems(hero, ItAt_WolfFur) > 0)
 		|| (Npc_HasItems(hero, ItAt_WolfFur_Rein) > 0)
 		|| (Npc_HasItems(hero, ItAt_WolfFur_Feuer) > 0)
@@ -1345,7 +1345,7 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_WolfFur_Feuer) * Value_WolfFur_Feuer) );
 			B_GiveInvItems(hero, self, ItAt_WolfFur_Feuer, Npc_HasItems(other, ItAt_WolfFur_Feuer));
 		};
-		
+
 		if (Npc_HasItems(hero, ItAt_BlackwolfFur) > 0)
 		|| (Npc_HasItems(hero, ItAt_BlackwolfFur_Rein) > 0)
 		|| (Npc_HasItems(hero, ItAt_BlackwolfFur_Feuer) > 0)
@@ -1361,7 +1361,7 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_BlackwolfFur_Feuer) * Value_BlackwolfFur_Feuer) );
 			B_GiveInvItems(hero, self, ItAt_BlackwolfFur_Feuer, Npc_HasItems(other, ItAt_BlackwolfFur_Feuer));
 		};
-		
+
 		if (Npc_HasItems(hero, ItAt_WargFur) > 0)
 		|| (Npc_HasItems(hero, ItAt_WargFur_Rein) > 0)
 		|| (Npc_HasItems(hero, ItAt_WargFur_Feuer) > 0)
@@ -1377,7 +1377,7 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_WargFur_Feuer) * Value_WargFur_Feuer) );
 			B_GiveInvItems(hero, self, ItAt_WargFur_Feuer, Npc_HasItems(other, ItAt_WargFur_Feuer));
 		};
-		
+
 		if (Npc_HasItems(hero, ItAt_PumaFur) > 0)
 		|| (Npc_HasItems(hero, ItAt_PumaFur_Rein) > 0)
 		|| (Npc_HasItems(hero, ItAt_PumaFur_Feuer) > 0)
@@ -1408,7 +1408,7 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 			B_GiveInvItems(hero, self, ItAt_PumaFur_Feuer, Npc_HasItems(hero, ItAt_PumaFur_Feuer));
 			B_GiveInvItems(hero, self, ItAt_StonePumaFur_Feuer, Npc_HasItems(hero, ItAt_StonePumaFur_Feuer));
 		};
-		
+
 		if (Npc_HasItems(hero, ItAt_OrcdogFur) > 0)
 		|| (Npc_HasItems(hero, ItAt_OrcdogFur_Rein) > 0)
 		|| (Npc_HasItems(hero, ItAt_OrcdogFur_Feuer) > 0)
@@ -1424,7 +1424,7 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 			B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_OrcdogFur_Feuer) * Value_WargFur_Feuer) );
 			B_GiveInvItems(hero, self, ItAt_OrcdogFur_Feuer, Npc_HasItems(other, ItAt_OrcdogFur_Feuer));
 		};
-		
+
 		if (Npc_KnowsInfo(hero, Info_Mod_Bosper_LehrlingQuest3))
 		&& ((Npc_HasItems(hero, ItAt_ShadowFur) > 0)
 		|| (Npc_HasItems(hero, ItAt_ShadowFur_Rein) > 0)
@@ -1447,7 +1447,7 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 			B_GiveInvItems(self, hero, ItMi_Gold, (FellCounter * Value_ShadowFur_Feuer) );
 			B_GiveInvItems(hero, self, ItAt_ShadowFur_Feuer, Npc_HasItems(other, ItAt_ShadowFur_Feuer));
 		};
-		
+
 		if (Npc_HasItems(hero, ItAt_TrollFur) > 0)
 		|| (Npc_HasItems(hero, ItAt_TrollFur_Rein) > 0)
 		|| (Npc_HasItems(hero, ItAt_TrollFur_Feuer) > 0)
@@ -1468,7 +1468,7 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 				AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_16_14"); //Schon wieder so ein riesiges Trollfell ... machst du Jagd auf die Viecher?
 				AI_Output (hero, self, "Info_Mod_Bosper_MehrFelle_15_15"); //Wenn mir mal einer begegnet, nutze ich die Gelegenheit ...
 			};
-			
+
 			if (Npc_HasItems(hero, ItAt_TrollFur) > 0)
 			|| (Npc_HasItems(hero, ItAt_TrollFur_Rein) > 0)
 			|| (Npc_HasItems(hero, ItAt_TrollFur_Feuer) > 0)
@@ -1482,7 +1482,7 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 				B_GiveInvItems(self, hero, ItMi_Gold, (Npc_HasItems(other, ItAt_TrollFur_Feuer) * Value_TrollFur_Feuer) );
 				B_GiveInvItems(hero, self, ItAt_TrollFur_Feuer, Npc_HasItems(other, ItAt_TrollFur_Feuer));
 			};
-			
+
 			if (Npc_HasItems(hero, ItAt_TrollBlackFur) > 0)
 			|| (Npc_HasItems(hero, ItAt_TrollBlackFur_Rein) > 0)
 			|| (Npc_HasItems(hero, ItAt_TrollBlackFur_Feuer) > 0)
@@ -1499,7 +1499,7 @@ FUNC VOID Info_Mod_Bosper_MehrFelle_Info()
 				B_GiveInvItems(hero, self, ItAt_TrollBlackFur_Feuer, Npc_HasItems(other, ItAt_TrollBlackFur_Feuer));
 			};
 		};
-		
+
 		AI_Output (self, hero, "Info_Mod_Bosper_MehrFelle_16_17"); //Gute Arbeit. Wenn du mehr hast, komm zu mir zurück ...
 	}
 	else
@@ -1531,7 +1531,7 @@ FUNC VOID Info_Mod_Bosper_HandelstJetzt_Info()
 {
 	AI_Output(hero, self, "Info_Mod_Bosper_HandelstJetzt_15_00"); //Handelst du jetzt mit mir?
 	AI_Output(self, hero, "Info_Mod_Bosper_HandelstJetzt_16_01"); //Meinetwegen.
-	
+
 	Log_CreateTopic	(TOPIC_MOD_HAENDLER_STADT, LOG_NOTE);
 	B_LogEntry	(TOPIC_MOD_HAENDLER_STADT, "Bosper verkauft Bögen und Armbrüste.");
 };
@@ -1560,7 +1560,7 @@ FUNC VOID Info_Mod_Bosper_Trade_Info()
 {
 	Npc_RemoveInvItems	(self, ItRw_Arrow, 100);
 	Npc_RemoveInvItems	(self, ItRw_Bolt, 100);
-	
+
 	CreateInvItems	(self, ItRw_Arrow, 100);
 	CreateInvItems	(self, ItRw_Bolt, 100);
 
